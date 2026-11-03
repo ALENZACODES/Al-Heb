@@ -16,6 +16,12 @@ import { overlaySvg, GLYPHS, glyphFor, loadLettersJson } from '../tools/images/o
 import { LETTERS, letterToken, VOWELS } from '../tools/images/spec.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+
+/** Original draft opening prayer (author-approved wording lives in book/opening-prayer.txt; blank line = new stanza). Hebrew words italicised in the text are marked with *asterisks*. */
+function openingPrayerHtml() {
+  const txt = readFileSync(join(ROOT, 'book/opening-prayer.txt'), 'utf8').trim();
+  return txt.split(/\n\s*\n/).map((st) => '<p>' + esc(st).replace(/\*([^*]+)\*/g, '<em>$1</em>').replace(/\n/g, '<br/>') + '</p>').join('');
+}
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const he = (s, cls = '') => `<span class="he ${cls}" lang="he" dir="rtl">${s}</span>`;
 const readJson = (p) => { const f = join(ROOT, p); if (!existsSync(f)) return null; try { return JSON.parse(readFileSync(f, 'utf8')); } catch { return null; } };
@@ -109,7 +115,8 @@ export function buildHtml(o) {
 <p class="small" style="margin-top:3in">DRAFT PROOF &middot; placeholder art &middot; not for sale</p></div></section>`;
 
   const prayerTodo = `<section class="chapter front-page"><h2>Prayer for the One Who Begins</h2>
-<div class="todo"><b>TODO (author)</b><br/>Insert the author's original opening prayer here. The text was not available to the book builder; this block is intentionally empty.<br/>Slot: one page, centred, English and Hebrew side by side; Hebrew must be set RTL with niqqud.</div></section>`;
+<p class="small"><b>DRAFT &mdash; pending clergy/educator review.</b> Original text, not traditional liturgy.</p>
+<div class="opening-prayer">${openingPrayerHtml()}</div></section>`;
 
   const blessingPage = `<section class="chapter front-page"><h2>The Priestly Blessing</h2><p class="small">Numbers 6:24&ndash;26. Your first page of Hebrew: fifteen words, thirteen different letters.</p>
 <div class="blessing">${blessing.lines.map((l) => `<span class="line">${he(l)}</span>`).join('')}</div>

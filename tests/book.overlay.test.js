@@ -41,11 +41,11 @@ test('glyphFor uses letters.json record when valid, else built-in', () => {
   assert.equal(glyphFor('bet', [{ id: 'bet', he: 'ב' }]), 'ב');
   assert.equal(glyphFor('bet', [{ id: 'bet', he: 'x' }]), GLYPHS.bet);
 });
-test('book HTML: 27 letter pages, RTL Hebrew spans, TODO prayer block, URL map', () => {
+test('book HTML: 27 letter pages, RTL Hebrew spans, draft opening prayer block, URL map', () => {
   const html = buildHtml(parseArgs([]));
   assert.equal((html.match(/<section class="letter"/g) || []).length, 27);
   assert.match(html, /lang="he" dir="rtl"/);
-  assert.match(html, /Prayer for the One Who Begins/); assert.match(html, /TODO \(author\)/);
+  assert.match(html, /Prayer for the One Who Begins/); assert.match(html, /pending clergy\/educator review/); assert.match(html, /Hineni/);
   for (const id of LETTER_IDS) assert.ok(html.includes(letterUrl('alef.example.org', id)), id);
   assert.match(html, /Illustrations created with AI tools and edited by the author/);
   assert.throws(() => parseArgs(['--trim', '1x1']));

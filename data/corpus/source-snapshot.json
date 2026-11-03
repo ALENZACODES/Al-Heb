@@ -1,0 +1,560 @@
+{
+ "fetchedAt": "2026-11-03T23:45:12Z",
+ "note": "Raw strings exactly as served. Normalise with src/corpus/normalize.js.",
+ "items": {
+  "bless-priestly-1": {
+   "kind": "tanach-us",
+   "book": "Numbers",
+   "chapter": 6,
+   "verses": [
+    24,
+    24
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Numbers.xml",
+   "rawLines": [
+    "יְבָרֶכְךָ֥ יְהוָ֖ה וְיִשְׁמְרֶֽךָ׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Numbers 6:24",
+    "rawLines": [
+     "The LORD bless thee, and keep thee;"
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   }
+  },
+  "bless-priestly-2": {
+   "kind": "tanach-us",
+   "book": "Numbers",
+   "chapter": 6,
+   "verses": [
+    25,
+    25
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Numbers.xml",
+   "rawLines": [
+    "יָאֵ֨ר יְהוָ֧ה ׀ פָּנָ֛יו אֵלֶ֖יךָ וִֽיחֻנֶּֽךָּ׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Numbers 6:25",
+    "rawLines": [
+     "The LORD make His face to shine upon thee, and be gracious unto thee;"
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   }
+  },
+  "bless-priestly-3": {
+   "kind": "tanach-us",
+   "book": "Numbers",
+   "chapter": 6,
+   "verses": [
+    26,
+    26
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Numbers.xml",
+   "rawLines": [
+    "יִשָּׂ֨א יְהוָ֤ה ׀ פָּנָיו֙ אֵלֶ֔יךָ וְיָשֵׂ֥ם לְךָ֖ שָׁלֽוֹם׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Numbers 6:26",
+    "rawLines": [
+     "The LORD lift up His countenance upon thee, and give thee peace."
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   }
+  },
+  "shema-1": {
+   "kind": "tanach-us",
+   "book": "Deuteronomy",
+   "chapter": 6,
+   "verses": [
+    4,
+    4
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Deuteronomy.xml",
+   "rawLines": [
+    "שְׁמַ֖<s t=\"large\">ע</s><x>5</x> יִשְׂרָאֵ֑ל יְהוָ֥ה אֱלֹהֵ֖ינוּ יְהוָ֥ה ׀ אֶחָֽ<s t=\"large\">ד׃</s><x>5</x>"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Deuteronomy 6:4",
+    "rawLines": [
+     "HEAR, O ISRAEL: THE LORD OUR GOD, THE LORD IS ONE."
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   }
+  },
+  "vahavta-1": {
+   "kind": "tanach-us",
+   "book": "Deuteronomy",
+   "chapter": 6,
+   "verses": [
+    5,
+    5
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Deuteronomy.xml",
+   "rawLines": [
+    "וְאָ֣הַבְתָּ֔ אֵ֖ת יְהוָ֣ה אֱלֹהֶ֑יךָ בְּכָל־ לְבָבְךָ֥ וּבְכָל־ נַפְשְׁךָ֖ וּבְכָל־ מְאֹדֶֽךָ׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Deuteronomy 6:5",
+    "rawLines": [
+     "And thou shalt love the LORD thy God with all thy heart, and with all thy soul, and with all thy might."
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   }
+  },
+  "vahavta-2": {
+   "kind": "tanach-us",
+   "book": "Deuteronomy",
+   "chapter": 6,
+   "verses": [
+    6,
+    7
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Deuteronomy.xml",
+   "rawLines": [
+    "וְהָי֞וּ הַדְּבָרִ֣ים הָאֵ֗לֶּה אֲשֶׁ֨ר אָנֹכִ֧י מְצַוְּךָ֛ הַיּ֖וֹם עַל־ לְבָבֶֽךָ׃",
+    "וְשִׁנַּנְתָּ֣ם לְבָנֶ֔יךָ וְדִבַּרְתָּ֖ בָּ֑ם בְּשִׁבְתְּךָ֤ בְּבֵיתֶ֙ךָ֙ וּבְלֶכְתְּךָ֣ בַדֶּ֔רֶךְ וּֽבְשָׁכְבְּךָ֖ וּבְקוּמֶֽךָ׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Deuteronomy 6:6-7",
+    "rawLines": [
+     "And these words, which I command thee this day, shall be upon thy heart;",
+     "and thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thy house, and when thou walkest by the way, and when thou liest down, and when thou risest up."
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   }
+  },
+  "vahavta-full": {
+   "kind": "tanach-us",
+   "book": "Deuteronomy",
+   "chapter": 6,
+   "verses": [
+    5,
+    9
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Deuteronomy.xml",
+   "rawLines": [
+    "וְאָ֣הַבְתָּ֔ אֵ֖ת יְהוָ֣ה אֱלֹהֶ֑יךָ בְּכָל־ לְבָבְךָ֥ וּבְכָל־ נַפְשְׁךָ֖ וּבְכָל־ מְאֹדֶֽךָ׃",
+    "וְהָי֞וּ הַדְּבָרִ֣ים הָאֵ֗לֶּה אֲשֶׁ֨ר אָנֹכִ֧י מְצַוְּךָ֛ הַיּ֖וֹם עַל־ לְבָבֶֽךָ׃",
+    "וְשִׁנַּנְתָּ֣ם לְבָנֶ֔יךָ וְדִבַּרְתָּ֖ בָּ֑ם בְּשִׁבְתְּךָ֤ בְּבֵיתֶ֙ךָ֙ וּבְלֶכְתְּךָ֣ בַדֶּ֔רֶךְ וּֽבְשָׁכְבְּךָ֖ וּבְקוּמֶֽךָ׃",
+    "וּקְשַׁרְתָּ֥ם לְא֖וֹת עַל־ יָדֶ֑ךָ וְהָי֥וּ לְטֹטָפֹ֖ת בֵּ֥ין עֵינֶֽיךָ׃",
+    "וּכְתַבְתָּ֛ם עַל־ מְזוּזֹ֥ת בֵּיתֶ֖ךָ וּבִשְׁעָרֶֽיךָ׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Deuteronomy 6:5-9",
+    "rawLines": [
+     "And thou shalt love the LORD thy God with all thy heart, and with all thy soul, and with all thy might.",
+     "And these words, which I command thee this day, shall be upon thy heart;",
+     "and thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thy house, and when thou walkest by the way, and when thou liest down, and when thou risest up.",
+     "And thou shalt bind them for a sign upon thy hand, and they shall be for frontlets between thine eyes.",
+     "And thou shalt write them upon the door-posts of thy house, and upon thy gates."
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   }
+  },
+  "shema-vahavta": {
+   "kind": "tanach-us",
+   "book": "Deuteronomy",
+   "chapter": 6,
+   "verses": [
+    4,
+    9
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Deuteronomy.xml",
+   "rawLines": [
+    "שְׁמַ֖<s t=\"large\">ע</s><x>5</x> יִשְׂרָאֵ֑ל יְהוָ֥ה אֱלֹהֵ֖ינוּ יְהוָ֥ה ׀ אֶחָֽ<s t=\"large\">ד׃</s><x>5</x>",
+    "וְאָ֣הַבְתָּ֔ אֵ֖ת יְהוָ֣ה אֱלֹהֶ֑יךָ בְּכָל־ לְבָבְךָ֥ וּבְכָל־ נַפְשְׁךָ֖ וּבְכָל־ מְאֹדֶֽךָ׃",
+    "וְהָי֞וּ הַדְּבָרִ֣ים הָאֵ֗לֶּה אֲשֶׁ֨ר אָנֹכִ֧י מְצַוְּךָ֛ הַיּ֖וֹם עַל־ לְבָבֶֽךָ׃",
+    "וְשִׁנַּנְתָּ֣ם לְבָנֶ֔יךָ וְדִבַּרְתָּ֖ בָּ֑ם בְּשִׁבְתְּךָ֤ בְּבֵיתֶ֙ךָ֙ וּבְלֶכְתְּךָ֣ בַדֶּ֔רֶךְ וּֽבְשָׁכְבְּךָ֖ וּבְקוּמֶֽךָ׃",
+    "וּקְשַׁרְתָּ֥ם לְא֖וֹת עַל־ יָדֶ֑ךָ וְהָי֥וּ לְטֹטָפֹ֖ת בֵּ֥ין עֵינֶֽיךָ׃",
+    "וּכְתַבְתָּ֛ם עַל־ מְזוּזֹ֥ת בֵּיתֶ֖ךָ וּבִשְׁעָרֶֽיךָ׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Deuteronomy 6:4-9",
+    "rawLines": [
+     "HEAR, O ISRAEL: THE LORD OUR GOD, THE LORD IS ONE.",
+     "And thou shalt love the LORD thy God with all thy heart, and with all thy soul, and with all thy might.",
+     "And these words, which I command thee this day, shall be upon thy heart;",
+     "and thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thy house, and when thou walkest by the way, and when thou liest down, and when thou risest up.",
+     "And thou shalt bind them for a sign upon thy hand, and they shall be for frontlets between thine eyes.",
+     "And thou shalt write them upon the door-posts of thy house, and upon thy gates."
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   }
+  },
+  "mah-tovu-1": {
+   "kind": "tanach-us",
+   "book": "Numbers",
+   "chapter": 24,
+   "verses": [
+    5,
+    5
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Numbers.xml",
+   "rawLines": [
+    "מַה־ טֹּ֥בוּ אֹהָלֶ֖יךָ יַעֲקֹ֑ב מִשְׁכְּנֹתֶ֖יךָ יִשְׂרָאֵֽל׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Numbers 24:5",
+    "rawLines": [
+     "How goodly are thy tents, O Jacob, Thy dwellings, O Israel!"
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   }
+  },
+  "mi-chamocha-1": {
+   "kind": "tanach-us",
+   "book": "Exodus",
+   "chapter": 15,
+   "verses": [
+    11,
+    11
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Exodus.xml",
+   "rawLines": [
+    "מִֽי־ כָמֹ֤כָה בָּֽאֵלִם֙ יְהוָ֔ה מִ֥י כָּמֹ֖כָה נֶאְדָּ֣ר בַּקֹּ֑דֶשׁ נוֹרָ֥א תְהִלֹּ֖ת עֹ֥שֵׂה פֶֽלֶא׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Exodus 15:11",
+    "rawLines": [
+     "Who is like unto Thee, O LORD, among the mighty? Who is like unto Thee, glorious in holiness, Fearful in praises, doing wonders?"
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   }
+  },
+  "num-12-13": {
+   "kind": "tanach-us",
+   "book": "Numbers",
+   "chapter": 12,
+   "verses": [
+    13,
+    13
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Numbers.xml",
+   "rawLines": [
+    "וַיִּצְעַ֣ק מֹשֶׁ֔ה אֶל־ יְהוָ֖ה לֵאמֹ֑ר אֵ֕ל נָ֛א רְפָ֥א נָ֖א לָֽהּ׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Numbers 12:13",
+    "rawLines": [
+     "And Moses cried unto the LORD, saying: ‘Heal her now, O God, I beseech Thee.’"
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   }
+  },
+  "kiddush-gen-2-1-3": {
+   "kind": "tanach-us",
+   "book": "Genesis",
+   "chapter": 2,
+   "verses": [
+    1,
+    3
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Genesis.xml",
+   "rawLines": [
+    "וַיְכֻלּ֛וּ הַשָּׁמַ֥יִם וְהָאָ֖רֶץ וְכָל־ צְבָאָֽם׃",
+    "וַיְכַ֤ל אֱלֹהִים֙ בַּיּ֣וֹם הַשְּׁבִיעִ֔י מְלַאכְתּ֖וֹ אֲשֶׁ֣ר עָשָׂ֑ה וַיִּשְׁבֹּת֙ בַּיּ֣וֹם הַשְּׁבִיעִ֔י מִכָּל־ מְלַאכְתּ֖וֹ אֲשֶׁ֥ר עָשָֽׂה׃",
+    "וַיְבָ֤רֶךְ אֱלֹהִים֙ אֶת־ י֣וֹם הַשְּׁבִיעִ֔י וַיְקַדֵּ֖שׁ אֹת֑וֹ כִּ֣י ב֤וֹ שָׁבַת֙ מִכָּל־ מְלַאכְתּ֔וֹ אֲשֶׁר־ בָּרָ֥א אֱלֹהִ֖ים לַעֲשֽׂוֹת׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Genesis 2:1-3",
+    "rawLines": [
+     "And the heaven and the earth were finished, and all the host of them.",
+     "And on the seventh day God finished His work which He had made; and He rested on the seventh day from all His work which He had made.",
+     "And God blessed the seventh day, and hallowed it; because that in it He rested from all His work which God in creating had made."
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   }
+  },
+  "shema-2": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Shema",
+   "versionTitle": "The Metsudah siddur, 1981",
+   "license": "CC-BY",
+   "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
+   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Blessings_of_the_Shema%2C_Shema",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Blessings%20of%20the%20Shema%2C%20Shema?version=hebrew%7Call",
+   "lineIndexes": [
+    4
+   ],
+   "rawLines": [
+    "<small>בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד:</small>"
+   ]
+  },
+  "hamotzi": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Edot HaMizrach, Shabbat Evening, First Meal",
+   "versionTitle": "Shaliehsaboo Edition",
+   "license": "CC0",
+   "versionSource": "https://www.sefaria.org",
+   "url": "https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Shabbat_Evening%2C_First_Meal",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Edot%20HaMizrach%2C%20Shabbat%20Evening%2C%20First%20Meal?version=hebrew%7Call",
+   "lineIndexes": [
+    7
+   ],
+   "rawLines": [
+    "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, הַמּוֹצִיא לֶֽחֶם מִן הָאָֽרֶץ:"
+   ]
+  },
+  "candle-shabbat": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Sefard, Shabbat Candle Lighting",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Candle_Lighting",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Shabbat%20Candle%20Lighting?version=hebrew%7Call",
+   "lineIndexes": [
+    2
+   ],
+   "rawLines": [
+    "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת:"
+   ]
+  },
+  "kiddush-wine-1": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Sefard, Birchat HaMazon, Blessing on Foods",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Birchat_HaMazon%2C_Blessing_on_Foods",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Birchat%20HaMazon%2C%20Blessing%20on%20Foods?version=hebrew%7Call",
+   "lineIndexes": [
+    2
+   ],
+   "rawLines": [
+    "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן:"
+   ]
+  },
+  "torah-bless-1": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Edot HaMizrach, Preparatory Prayers, Torah Blessings",
+   "versionTitle": "Shaliehsaboo Edition",
+   "license": "CC0",
+   "versionSource": "https://www.sefaria.org",
+   "url": "https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Preparatory_Prayers%2C_Torah_Blessings",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Edot%20HaMizrach%2C%20Preparatory%20Prayers%2C%20Torah%20Blessings?version=hebrew%7Call",
+   "lineIndexes": [
+    3
+   ],
+   "rawLines": [
+    "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, אֲשֶׁר בָּחַר בָּנוּ מִכָּל־הָעַמִּים וְנָתַן לָנוּ אֶת־תּוֹרָתוֹ. בָּרוּךְ אַתָּה יְהֹוָה נוֹתֵן הַתּוֹרָה: "
+   ]
+  },
+  "torah-barchu": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Birkat HaTorah",
+   "versionTitle": "The Metsudah siddur, 1981",
+   "license": "CC-BY",
+   "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
+   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Birkat_HaTorah",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Torah%20Reading%2C%20Reading%20from%20Sefer%2C%20Birkat%20HaTorah?version=hebrew%7Call",
+   "lineIndexes": [
+    1,
+    3
+   ],
+   "rawLines": [
+    "בָּרְ֒כוּ אֶת יְהֹוָה הַמְּ֒בֹרָךְ:",
+    "בָּרוּךְ יְהֹוָה הַמְּ֒בֹרָךְ לְעוֹלָם וָעֶד:"
+   ]
+  },
+  "torah-bless-2": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Birkat HaTorah",
+   "versionTitle": "The Metsudah siddur, 1981",
+   "license": "CC-BY",
+   "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
+   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Birkat_HaTorah",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Torah%20Reading%2C%20Reading%20from%20Sefer%2C%20Birkat%20HaTorah?version=hebrew%7Call",
+   "lineIndexes": [
+    7
+   ],
+   "rawLines": [
+    "בָּרוּךְ אַתָּה יְהֹוָה אֱלֺהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר נָֽתַן לָֽנוּ תּוֹרַת אֱמֶת וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵֽנוּ: בָּרוּךְ אַתָּה יְהֹוָה נוֹתֵן הַתּוֹרָה:"
+   ]
+  },
+  "amidah-lips": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Edot HaMizrach, Weekday Shacharit, Amida",
+   "versionTitle": "Shaliehsaboo Edition",
+   "license": "CC0",
+   "versionSource": "https://www.sefaria.org",
+   "url": "https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Weekday_Shacharit%2C_Amida",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Edot%20HaMizrach%2C%20Weekday%20Shacharit%2C%20Amida?version=hebrew%7Call",
+   "lineIndexes": [
+    1
+   ],
+   "rawLines": [
+    "<b>אֲ֭דֹנָי</b> שְׂפָתַ֣י תִּפְתָּ֑ח וּ֝פִ֗י יַגִּ֥יד תְּהִלָּתֶֽךָ׃"
+   ]
+  },
+  "avot-1": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Edot HaMizrach, Weekday Shacharit, Amida",
+   "versionTitle": "Shaliehsaboo Edition",
+   "license": "CC0",
+   "versionSource": "https://www.sefaria.org",
+   "url": "https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Weekday_Shacharit%2C_Amida",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Edot%20HaMizrach%2C%20Weekday%20Shacharit%2C%20Amida?version=hebrew%7Call",
+   "lineIndexes": [
+    2
+   ],
+   "rawLines": [
+    "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה, אֱלֹהֵֽינוּ וֵֽאלֹהֵי אֲבוֹתֵֽינוּ, אֱלֹהֵי אַבְרָהָם, אֱלֹהֵי יִצְחָק, וֵֽאלֹהֵי יַעֲקֹב. הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא, אֵל עֶלְיוֹן, גּוֹמֵל חֲסָדִים טוֹבִים, קוֹנֵה הַכֹּל, וְזוֹכֵר חַסְדֵּי אָבוֹת, וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַֽעַן שְׁמוֹ בְּאַֽהֲבָה: <small><small>בעשרת ימי תשובה אומרים:</small> זָכְרֵנוּ לְחַיִּים, מֶלֶךְ חָפֵץ בַּחַיִּים, כָּתְבֵנוּ בְּסֵפֶר חַיִּים, לְמַעַנָךְ אֱלֹהִים חַיִּים.</small> מֶֽלֶךְ עוֹזֵר וּמוֹשִֽׁיעַ וּמָגֵן: בָּרוּךְ אַתָּה יַהַוַהַ, מָגֵן אַבְרָהָם:"
+   ]
+  },
+  "aleinu-1": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Edot HaMizrach, Weekday Shacharit, Alenu",
+   "versionTitle": "Shaliehsaboo Edition",
+   "license": "CC0",
+   "versionSource": "https://www.sefaria.org",
+   "url": "https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Weekday_Shacharit%2C_Alenu",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Edot%20HaMizrach%2C%20Weekday%20Shacharit%2C%20Alenu?version=hebrew%7Call",
+   "lineIndexes": [
+    1
+   ],
+   "rawLines": [
+    "<b>עָלֵֽינוּ</b> לְשַׁבֵּֽחַ לַֽאֲדוֹן הַכֹּל, לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית, שֶׁלֹּא עָשָֽׂנוּ כְּגוֹיֵי הָֽאֲרָצוֹת, וְלֹא שָׂמָֽנוּ כְּמִשְׁפְּחוֹת הָֽאֲדָמָה, שֶׁלֹּא שָׂם חֶלְקֵֽנוּ כָּהֶם וְגוֹרָלֵֽנוּ כְּכָל־הֲמוֹנָם, שֶׁהֵם מִשְׁתַּֽחֲוִים לָהֶֽבֶל וָרִיק, וּמִתְפַּלְּלִים אֶל־אֵל לֹֽא יוֹשִׁיעַ. וַֽאֲנַֽחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶֽלֶךְ מַלְכֵי הַֽמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא, שֶׁהוּא נוֹטֶה שָׁמַֽיִם וְיוֹסֵד אָֽרֶץ, וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַֽיִם מִמַּֽעַל, וּשְׁכִינַת עֻזּוֹ בְּגָבְהֵי מְרוֹמִים. הוּא אֱלֹהֵֽינוּ, וְאֵין עוֹד אַחֵר, אֱמֶת מַלְכֵּֽנוּ וְאֶֽפֶס זוּלָתוֹ. כַּכָּתוּב בַּתּוֹרָה. וְיָדַעְתָּ֣ הַיּ֗וֹם וַהֲשֵׁבֹתָ֮ אֶל־לְבָבֶךָ֒ כִּ֤י יְהֹוָה֙ ה֣וּא הָֽאֱלֹהִ֔ים בַּשָּׁמַ֣יִם מִמַּ֔עַל וְעַל־הָאָ֖רֶץ מִתָּ֑חַת אֵ֖ין עֽוֹד: "
+   ]
+  },
+  "modeh-ani-1": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Ashkenaz, Weekday, Shacharit, Preparatory Prayers, Modeh Ani",
+   "versionTitle": "The Metsudah siddur, 1981",
+   "license": "CC-BY",
+   "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
+   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Modeh_Ani",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Preparatory%20Prayers%2C%20Modeh%20Ani?version=hebrew%7Call",
+   "lineIndexes": [
+    0
+   ],
+   "rawLines": [
+    "<b>מוֹדֶה אֲנִי</b> לְפָנֶֽיךָ מֶֽלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַֽרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה, רַבָּה אֱמוּנָתֶֽךָ:"
+   ]
+  },
+  "adon-olam-1": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Ashkenaz, Weekday, Shacharit, Preparatory Prayers, Adon Olam",
+   "versionTitle": "The Metsudah siddur, 1981",
+   "license": "CC-BY",
+   "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
+   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Adon_Olam",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Preparatory%20Prayers%2C%20Adon%20Olam?version=hebrew%7Call",
+   "lineIndexes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "rawLines": [
+    "<b>אֲדוֹן עוֹלָם</b> אֲשֶׁר מָלַךְ, בְּטֶֽרֶם כָּל יְצִיר נִבְרָא:",
+    "לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל, אֲזַי מֶֽלֶךְ שְׁמוֹ נִקְרָא:",
+    "וְאַחֲרֵי כִּכְלוֹת הַכֹּל, לְבַדּוֹ יִמְלֹךְ נוֹרָא:",
+    "וְהוּא הָיָה וְהוּא הֹוֶה, וְהוּא יִהְיֶה בְּתִפְאָרָה:",
+    "וְהוּא אֶחָד וְאֵין שֵׁנִי, לְהַמְשִׁיל לוֹ לְהַחְבִּֽירָה:",
+    "בְּלִי רֵאשִׁית בְּלִי תַכְלִית, וְלוֹ הָעֹז וְהַמִּשְׂרָה:",
+    "וְהוּא אֵלִי וְחַי גּוֹאֲלִי, וְצוּר חֶבְלִי בְּעֵת צָרָה:",
+    "וְהוּא נִסִּי וּמָנוֹס לִי, מְנָת כּוֹסִי בְּיוֹם אֶקְרָא:",
+    "בְּיָדוֹ אַפְקִיד רוּחִי, בְּעֵת אִישַׁן וְאָעִֽירָה:",
+    "וְעִם רוּחִי גְּוִיָּתִי, יְהֹוָה לִי וְלֹא אִירָא:"
+   ]
+  },
+  "kaddish-1": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Ashkenaz, Weekday, Shacharit, Concluding Prayers, Mourner's Kaddish",
+   "versionTitle": "The Metsudah siddur, 1981",
+   "license": "CC-BY",
+   "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
+   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Concluding_Prayers%2C_Mourner%27s_Kaddish",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Concluding%20Prayers%2C%20Mourner%27s%20Kaddish?version=hebrew%7Call",
+   "lineIndexes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "rawLines": [
+    "<b>יִתְגַּדַּל</b> וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא (<b>אָמֵן</b>)",
+    "בְּעָלְ֒מָֽא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ <b>אָמֵן</b>:",
+    "<b>יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא</b>",
+    "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא <b>בְּרִיךְ הוּא</b>",
+    "לְעֵֽלָּא מִן־כָּל־ (<small>בעשי\"ת</small> לְעֵֽלָּא לְעֵֽלָּא מִכָּל) בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ <b>אָמֵן</b>:",
+    "יְהֵא שְׁלָמָֽא רַבָּֽא מִן־שְׁמַיָּֽא וְחַיִּים עָלֵֽינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ <b>אָמֵן</b>:",
+    "עוֹשֶׂה שָׁלוֹם (<small>בעשי\"ת</small> הַשָּׁלוֹם) בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ <b>אָמֵן</b>:"
+   ]
+  },
+  "birkat-hamazon-1": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Sefard, Birchat HaMazon, Birchat HaMazon",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Birchat_HaMazon%2C_Birchat_HaMazon",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Birchat%20HaMazon%2C%20Birchat%20HaMazon?version=hebrew%7Call",
+   "lineIndexes": [
+    36
+   ],
+   "rawLines": [
+    "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם. הַזָּן אֶת הָעוֹלָם כֻּלּוֹ. בְּטוּבוֹ בְּחֵן בְּחֶסֶד וּבְרַחֲמִים. הוּא נוֹתֵן לֶחֶם לְכָל בָּשָׂר. כִּי לְעוֹלָם חַסְדּוֹ: וּבְטוּבוֹ הַגָּדוֹל תָּמִיד לֹא חָסַר לָנוּ וְאַל יֶחְסַר לָנוּ מָזוֹן לְעוֹלָם וָעֶד. בַּעֲבוּר שְׁמוֹ הַגָּדוֹל. כִּי הוּא אֵל זָן וּמְפַרְנֵס לַכֹּל וּמֵטִיב לַכֹּל וּמֵכִין מָזוֹן לְכָל בְּרִיּוֹתָיו אֲשֶׁר בָּרָא. כָּאָמוּר פּוֹתֵחַ אֶת יָדֶךָ וּמַשְׂבִּיעַ לְכָל חַי רָצוֹן: בָּרוּךְ אַתָּה יְהֹוָה הַזָּן אֶת הַכֹּל:"
+   ]
+  }
+ }
+}

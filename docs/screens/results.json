@@ -1,5 +1,5 @@
 {
- "when": "2026-11-03T23:45:45.590Z",
+ "when": "2026-11-03T23:49:03.319Z",
  "offline": "ok: app shell loaded offline",
  "results": [
   {
@@ -62,7 +62,7 @@
    "status": "content",
    "heading": "Read",
    "unavailable": false,
-   "textLength": 4213,
+   "textLength": 4195,
    "focused": "view-title",
    "title": "Read - ALEF",
    "errors": [],
@@ -73,7 +73,7 @@
    "status": "content",
    "heading": "Read",
    "unavailable": false,
-   "textLength": 4213,
+   "textLength": 4195,
    "focused": "view-title",
    "title": "Read - ALEF",
    "errors": [],

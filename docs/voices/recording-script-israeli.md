@@ -80,21 +80,21 @@ Takes per clip: 3. Clips: 15.
 
 | id | file (under audio/<voice>/) | pointed Hebrew | IPA | direction |
 |---|---|---|---|---|
-| kamatz | israeli/vowel/kamatz.mp3 | אָ |  | ISOLATED VOWEL: the vowel sound alone on a soft onset (the carrier letter is silent), 0.6-1.0 s, level pitch. shva: record the pronounced shva as a very short e-like vowel; the director may ask for an extra "silent shva" demonstration. dagesh / shin-dot / sin-dot: say the sound the mark produces on its carrier (bet with dagesh "b", shin "sh", sin "s"). |
-| patach | israeli/vowel/patach.mp3 | אַ |  | (as above) |
-| tzere | israeli/vowel/tzere.mp3 | אֵ |  | (as above) |
-| segol | israeli/vowel/segol.mp3 | אֶ |  | (as above) |
-| chirik | israeli/vowel/chirik.mp3 | אִ |  | (as above) |
-| cholam | israeli/vowel/cholam.mp3 | אֹ |  | (as above) |
-| kubutz | israeli/vowel/kubutz.mp3 | אֻ |  | (as above) |
-| shuruk | israeli/vowel/shuruk.mp3 | וּ |  | (as above) |
-| shva | israeli/vowel/shva.mp3 | בְ |  | (as above) |
-| chataf-patach | israeli/vowel/chataf-patach.mp3 | אֲ |  | (as above) |
-| chataf-segol | israeli/vowel/chataf-segol.mp3 | אֱ |  | (as above) |
-| chataf-kamatz | israeli/vowel/chataf-kamatz.mp3 | אֳ |  | (as above) |
-| dagesh | israeli/vowel/dagesh.mp3 | בּ |  | (as above) |
-| shin-dot | israeli/vowel/shin-dot.mp3 | שׁ |  | (as above) |
-| sin-dot | israeli/vowel/sin-dot.mp3 | שׂ |  | (as above) |
+| kamatz | israeli/vowel/kamatz.mp3 | אָ | [a] | ISOLATED VOWEL: the vowel sound alone on a soft onset (the carrier letter is silent), 0.6-1.0 s, level pitch. shva: record the pronounced shva as a very short e-like vowel; the director may ask for an extra "silent shva" demonstration. dagesh / shin-dot / sin-dot: say the sound the mark produces on its carrier (bet with dagesh "b", shin "sh", sin "s"). |
+| patach | israeli/vowel/patach.mp3 | אַ | [a] | (as above) |
+| tzere | israeli/vowel/tzere.mp3 | אֵ | [e̞] | (as above) |
+| segol | israeli/vowel/segol.mp3 | אֶ | [e̞] | (as above) |
+| chirik | israeli/vowel/chirik.mp3 | אִ | [i] | (as above) |
+| cholam | israeli/vowel/cholam.mp3 | אֹ | [o̞] | (as above) |
+| kubutz | israeli/vowel/kubutz.mp3 | אֻ | [u] | (as above) |
+| shuruk | israeli/vowel/shuruk.mp3 | וּ | [u] | (as above) |
+| shva | israeli/vowel/shva.mp3 | בְ | [e̞] or ∅ (no vowel) | (as above) |
+| chataf-patach | israeli/vowel/chataf-patach.mp3 | אֲ | [a] | (as above) |
+| chataf-segol | israeli/vowel/chataf-segol.mp3 | אֱ | [e̞] | (as above) |
+| chataf-kamatz | israeli/vowel/chataf-kamatz.mp3 | אֳ | [o̞] | (as above) |
+| dagesh | israeli/vowel/dagesh.mp3 | בּ | hardens bet/kaf/pe to [b][k][p]; gemination absent | (as above) |
+| shin-dot | israeli/vowel/shin-dot.mp3 | שׁ | [ʃ] | (as above) |
+| sin-dot | israeli/vowel/sin-dot.mp3 | שׂ | [s] | (as above) |
 
 ## Syllable grid (22 letters x 5 vowel sounds)
 
@@ -215,15 +215,52 @@ Takes per clip: 2. Clips: 110.
 
 ## Words
 
-_No entries yet (source data from another lane not present when generated). Re-run after data lands._
+Takes per clip: 2. Clips: 1.
+
+| id | file (under audio/<voice>/) | pointed Hebrew | IPA | direction |
+|---|---|---|---|---|
+| undefined | israeli/word/undefined.mp3 | שָׁב |  | Natural Modern Israeli word, correct (usually final) stress, neutral conversational tone, one breath. |
 
 ## Lines and phrases
 
-_No entries yet (source data from another lane not present when generated). Re-run after data lands._
+Takes per clip: 2. Clips: 21.
+
+| id | file (under audio/<voice>/) | pointed Hebrew | IPA | direction |
+|---|---|---|---|---|
+| shema-1 | israeli/line/shema-1.mp3 | שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃ |  | Natural conversational delivery, Modern Israeli, as one would say it to a friend. No chant. |
+| vahavta-1 | israeli/line/vahavta-1.mp3 | וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃ |  | (as above) |
+| vahavta-2 | israeli/line/vahavta-2.mp3 | וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃ |  | (as above) |
+| vahavta-full | israeli/line/vahavta-full.mp3 | וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃ וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃ וּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃ וּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃ |  | (as above) |
+| shema-vahavta | israeli/line/shema-vahavta.mp3 | שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃ וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃ וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃ וּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃ וּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃ |  | (as above) |
+| shema-2 | israeli/line/shema-2.mp3 | בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃ |  | (as above) |
+| mah-tovu-1 | israeli/line/mah-tovu-1.mp3 | מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃ |  | (as above) |
+| mi-chamocha-1 | israeli/line/mi-chamocha-1.mp3 | מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃ |  | (as above) |
+| num-12-13 | israeli/line/num-12-13.mp3 | אֵל נָא רְפָא נָא לָהּ׃ |  | (as above) |
+| kiddush-gen-2-1-3 | israeli/line/kiddush-gen-2-1-3.mp3 | וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃ וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה׃ וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ שָׁבַת מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת׃ |  | (as above) |
+| kiddush-wine-1 | israeli/line/kiddush-wine-1.mp3 | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן׃ |  | (as above) |
+| hamotzi | israeli/line/hamotzi.mp3 | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ׃ |  | (as above) |
+| candle-shabbat | israeli/line/candle-shabbat.mp3 | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת׃ |  | (as above) |
+| torah-barchu | israeli/line/torah-barchu.mp3 | בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ׃ בָּרוּךְ יְהוָה הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃ |  | (as above) |
+| amidah-lips | israeli/line/amidah-lips.mp3 | אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ׃ |  | (as above) |
+| avot-1 | israeli/line/avot-1.mp3 | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא אֵל עֶלְיוֹן גּוֹמֵל חֲסָדִים טוֹבִים קוֹנֵה הַכֹּל וְזוֹכֵר חַסְדֵּי אָבוֹת וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַעַן שְׁמוֹ בְּאַהֲבָה׃ מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן׃ |  | (as above) |
+| aleinu-1 | israeli/line/aleinu-1.mp3 | עָלֵינוּ לְשַׁבֵּחַ לַאֲדוֹן הַכֹּל לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית שֶׁלֹּא עָשָׂנוּ כְּגוֹיֵי הָאֲרָצוֹת וְלֹא שָׂמָנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה שֶׁלֹּא שָׂם חֶלְקֵנוּ כָּהֶם וְגוֹרָלֵנוּ כְּכָל־הֲמוֹנָם שֶׁהֵם מִשְׁתַּחֲוִים לָהֶבֶל וָרִיק וּמִתְפַּלְּלִים אֶל־אֵל לֹא יוֹשִׁיעַ וַאֲנַחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא שֶׁהוּא נוֹטֶה שָׁמַיִם וְיוֹסֵד אָרֶץ וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַיִם מִמַּעַל וּשְׁכִינַת עֻזּוֹ בְּגָבְהֵי מְרוֹמִים הוּא אֱלֹהֵינוּ וְאֵין עוֹד אַחֵר אֱמֶת מַלְכֵּנוּ וְאֶפֶס זוּלָתוֹ כַּכָּתוּב בַּתּוֹרָה וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל־לְבָבֶךָ כִּי יְהוָה הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל־הָאָרֶץ מִתָּחַת אֵין עוֹד׃ |  | (as above) |
+| modeh-ani-1 | israeli/line/modeh-ani-1.mp3 | מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃ |  | (as above) |
+| adon-olam-1 | israeli/line/adon-olam-1.mp3 | אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃ לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃ וְאַחֲרֵי כִּכְלוֹת הַכֹּל לְבַדּוֹ יִמְלֹךְ נוֹרָא׃ וְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃ וְהוּא אֶחָד וְאֵין שֵׁנִי לְהַמְשִׁיל לוֹ לְהַחְבִּירָה׃ בְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה׃ וְהוּא אֵלִי וְחַי גּוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃ וְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃ בְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישַׁן וְאָעִירָה׃ וְעִם רוּחִי גְּוִיָּתִי יְהוָה לִי וְלֹא אִירָא׃ |  | (as above) |
+| kaddish-1 | israeli/line/kaddish-1.mp3 | יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא אָמֵן בְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן׃ יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא לְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחָמָתָא דַּאֲמִירָן בְּעָלְמָא וְאִמְרוּ אָמֵן׃ יְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃ עוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃ |  | (as above) |
+| birkat-hamazon-1 | israeli/line/birkat-hamazon-1.mp3 | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַזָּן אֶת הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ בְּחֵן בְּחֶסֶד וּבְרַחֲמִים הוּא נוֹתֵן לֶחֶם לְכָל בָּשָׂר כִּי לְעוֹלָם חַסְדּוֹ׃ |  | (as above) |
 
 ## Prayer lines
 
-_No entries yet (source data from another lane not present when generated). Re-run after data lands._
+Takes per clip: 3. Clips: 6.
+
+| id | file (under audio/<voice>/) | pointed Hebrew | IPA | direction |
+|---|---|---|---|---|
+| bless-priestly-1 | israeli/prayer/bless-priestly-1.mp3 | יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃ |  | Prayer line, Israeli pronunciation. Reverent, steady, unhurried, no sung cantillation. Beginner-followable pace. |
+| bless-priestly-2 | israeli/prayer/bless-priestly-2.mp3 | יָאֵר יְהוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃ |  | (as above) |
+| bless-priestly-3 | israeli/prayer/bless-priestly-3.mp3 | יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃ |  | (as above) |
+| bless-formula-1 | israeli/prayer/bless-formula-1.mp3 | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם |  | (as above) |
+| torah-bless-1 | israeli/prayer/torah-bless-1.mp3 | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל־הָעַמִּים וְנָתַן לָנוּ אֶת־תּוֹרָתוֹ בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה׃ |  | (as above) |
+| torah-bless-2 | israeli/prayer/torah-bless-2.mp3 | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר נָתַן לָנוּ תּוֹרַת אֱמֶת וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵנוּ׃ בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה׃ |  | (as above) |
 
 ## Minimal pairs and confusable letters
 
@@ -244,4 +281,4 @@ _Word-level minimal pairs from the pronunciation lane (data/pronunciation/drills
 
 ## Totals
 
-Takes to record per voice for this tradition: 434 (sum of clips x take count above).
+Takes to record per voice for this tradition: 496 (sum of clips x take count above).

@@ -1,0 +1,1125 @@
+{
+ "schemaVersion": 1,
+ "description": "Consonant sound records keyed by the 27 shared letter ids. changesSound marks the letters whose sound depends on dagesh/dots/tradition. verified=false records are standard values that were NOT in the fetched side-by-side table.",
+ "traditions": [
+  "israeli",
+  "sephardi",
+  "ashkenazi"
+ ],
+ "letters": {
+  "alef": {
+   "id": "alef",
+   "he": "א",
+   "name": "Alef",
+   "ipa": {
+    "israeli": "[ʔ] or ∅",
+    "sephardi": "[ʔ]",
+    "ashkenazi": "∅ (silent)"
+   },
+   "english": {
+    "israeli": "silent / a glottal stop between vowels (uh-oh)",
+    "sephardi": "silent / a glottal stop between vowels (uh-oh)",
+    "ashkenazi": "silent",
+    "american_synagogue": "silent / a glottal stop between vowels (uh-oh)"
+   },
+   "changesSound": false,
+   "notes": "Ashkenazi alef is silent at all times in most forms.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    }
+   ],
+   "verified": true
+  },
+  "bet": {
+   "id": "bet",
+   "he": "ב",
+   "name": "Bet / Vet",
+   "ipa": {
+    "israeli": "[b] with dagesh, [v] without",
+    "sephardi": "[b] / [v] (Spanish-Portuguese [b~β], declining)",
+    "ashkenazi": "[b] / [v]"
+   },
+   "english": {
+    "israeli": "b with dagesh, v without",
+    "sephardi": "b with dagesh, v without",
+    "ashkenazi": "b with dagesh, v without",
+    "american_synagogue": "b with dagesh, v without"
+   },
+   "changesSound": true,
+   "notes": "One of the three letters that still alternate in Modern Hebrew.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    }
+   ],
+   "verified": true,
+   "variants": [
+    {
+     "condition": "with dagesh",
+     "ipa": {
+      "israeli": "[b]",
+      "sephardi": "[b]",
+      "ashkenazi": "[b]"
+     },
+     "english": {
+      "israeli": "b as in boy",
+      "sephardi": "b as in boy",
+      "ashkenazi": "b as in boy",
+      "american_synagogue": "b as in boy"
+     }
+    },
+    {
+     "condition": "without dagesh",
+     "ipa": {
+      "israeli": "[v]",
+      "sephardi": "[v]",
+      "ashkenazi": "[v]"
+     },
+     "english": {
+      "israeli": "v as in very",
+      "sephardi": "v as in very",
+      "ashkenazi": "v as in very",
+      "american_synagogue": "v as in very"
+     }
+    }
+   ]
+  },
+  "gimel": {
+   "id": "gimel",
+   "he": "ג",
+   "name": "Gimel",
+   "ipa": {
+    "israeli": "[ɡ]",
+    "sephardi": "[ɡ] or [ɣ] in some communities",
+    "ashkenazi": "[ɡ]"
+   },
+   "english": {
+    "israeli": "hard g as in game, never soft",
+    "sephardi": "hard g as in game, never soft",
+    "ashkenazi": "hard g as in game, never soft",
+    "american_synagogue": "hard g as in game, never soft"
+   },
+   "changesSound": false,
+   "notes": "No alternation in Modern Hebrew. Jewfaq: always a hard g.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    },
+    {
+     "label": "Judaism 101: Guide to Transliteration",
+     "url": "https://jewfaq.org/translitguide.htm"
+    }
+   ],
+   "verified": true
+  },
+  "dalet": {
+   "id": "dalet",
+   "he": "ד",
+   "name": "Dalet",
+   "ipa": {
+    "israeli": "[d]",
+    "sephardi": "[d̪]~[ð] in some communities",
+    "ashkenazi": "[d]"
+   },
+   "english": {
+    "israeli": "d",
+    "sephardi": "d",
+    "ashkenazi": "d",
+    "american_synagogue": "d"
+   },
+   "changesSound": false,
+   "notes": "No alternation in Modern Hebrew.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    }
+   ],
+   "verified": true
+  },
+  "he": {
+   "id": "he",
+   "he": "ה",
+   "name": "He",
+   "ipa": {
+    "israeli": "[h]",
+    "sephardi": "[h]",
+    "ashkenazi": "[h]"
+   },
+   "english": {
+    "israeli": "h; silent at the end of a word unless it has mappiq",
+    "sephardi": "h; silent at the end of a word unless it has mappiq",
+    "ashkenazi": "h; silent at the end of a word unless it has mappiq",
+    "american_synagogue": "h; silent at the end of a word unless it has mappiq"
+   },
+   "changesSound": false,
+   "notes": "Final he without mappiq is a vowel letter. Fast-speech he-dropping is unsourced (see drills TODO).",
+   "sources": [
+    {
+     "label": "Wikipedia: Niqqud",
+     "url": "https://en.wikipedia.org/wiki/Niqqud"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    }
+   ],
+   "verified": true
+  },
+  "vav": {
+   "id": "vav",
+   "he": "ו",
+   "name": "Vav",
+   "ipa": {
+    "israeli": "[v] (loanwords [w])",
+    "sephardi": "[v] or [w]",
+    "ashkenazi": "[v]"
+   },
+   "english": {
+    "israeli": "v; also the vowel letter for o (cholam malei) and u (shuruk)",
+    "sephardi": "v; also the vowel letter for o (cholam malei) and u (shuruk)",
+    "ashkenazi": "v; also the vowel letter for o (cholam malei) and u (shuruk)",
+    "american_synagogue": "v; also the vowel letter for o (cholam malei) and u (shuruk)"
+   },
+   "changesSound": false,
+   "notes": "As a vowel letter see the cholam/shuruk records.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    }
+   ],
+   "verified": true
+  },
+  "zayin": {
+   "id": "zayin",
+   "he": "ז",
+   "name": "Zayin",
+   "ipa": {
+    "israeli": "[z]",
+    "sephardi": "[z]",
+    "ashkenazi": "[z]"
+   },
+   "english": {
+    "israeli": "z",
+    "sephardi": "z",
+    "ashkenazi": "z",
+    "american_synagogue": "z"
+   },
+   "changesSound": false,
+   "notes": "Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    }
+   ],
+   "verified": false,
+   "unverifiedReason": "not in the fetched table"
+  },
+  "chet": {
+   "id": "chet",
+   "he": "ח",
+   "name": "Chet",
+   "ipa": {
+    "israeli": "[χ] (merged with khaf)",
+    "sephardi": "[ħ] pharyngeal",
+    "ashkenazi": "[x] (pharyngeal \"seldom observed in practice\")"
+   },
+   "english": {
+    "israeli": "ch as in Bach / loch (back-of-throat, no English chair sound)",
+    "sephardi": "ch as in Bach / loch (back-of-throat, no English chair sound)",
+    "ashkenazi": "ch as in Bach / loch (back-of-throat, no English chair sound)",
+    "american_synagogue": "ch as in loch"
+   },
+   "changesSound": true,
+   "notes": "General Israeli: chet and khaf merged into one sound. Older Mizrahi speakers keep the pharyngeal. Strict liturgical usage asks for the pharyngeal but it is rarely observed.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Judaism 101: Guide to Transliteration",
+     "url": "https://jewfaq.org/translitguide.htm"
+    }
+   ],
+   "verified": true
+  },
+  "tet": {
+   "id": "tet",
+   "he": "ט",
+   "name": "Tet",
+   "ipa": {
+    "israeli": "[t]",
+    "sephardi": "[t] (emphatic in some traditional communities)",
+    "ashkenazi": "[t]"
+   },
+   "english": {
+    "israeli": "t",
+    "sephardi": "t",
+    "ashkenazi": "t",
+    "american_synagogue": "t"
+   },
+   "changesSound": false,
+   "notes": "General Israeli lost the emphatic sounds of Biblical Hebrew (Wikipedia). Which Sephardi/Mizrahi communities keep emphatic tet was not in our sources.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    }
+   ],
+   "verified": false,
+   "unverifiedReason": "emphasis claim only partly sourced"
+  },
+  "yod": {
+   "id": "yod",
+   "he": "י",
+   "name": "Yod",
+   "ipa": {
+    "israeli": "[j]",
+    "sephardi": "[j]",
+    "ashkenazi": "[j]"
+   },
+   "english": {
+    "israeli": "y as in yes; vowel letter for i/ei",
+    "sephardi": "y as in yes; vowel letter for i/ei",
+    "ashkenazi": "y as in yes; vowel letter for i/ei",
+    "american_synagogue": "y as in yes; vowel letter for i/ei"
+   },
+   "changesSound": false,
+   "notes": "Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    }
+   ],
+   "verified": false,
+   "unverifiedReason": "not in the fetched table"
+  },
+  "kaf": {
+   "id": "kaf",
+   "he": "כ",
+   "name": "Kaf / Khaf",
+   "ipa": {
+    "israeli": "[k] with dagesh, [χ] without",
+    "sephardi": "[k] / [x]",
+    "ashkenazi": "[k] / [x]"
+   },
+   "english": {
+    "israeli": "k with dagesh; kh (loch) without",
+    "sephardi": "k with dagesh; kh (loch) without",
+    "ashkenazi": "k with dagesh; kh (loch) without",
+    "american_synagogue": "k / kh (often softened)"
+   },
+   "changesSound": true,
+   "notes": "Khaf is the same sound as chet in General Israeli.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    },
+    {
+     "label": "Judaism 101: Guide to Transliteration",
+     "url": "https://jewfaq.org/translitguide.htm"
+    }
+   ],
+   "verified": true,
+   "variants": [
+    {
+     "condition": "with dagesh",
+     "ipa": {
+      "israeli": "[k]",
+      "sephardi": "[k]",
+      "ashkenazi": "[k]"
+     },
+     "english": {
+      "israeli": "k as in kite",
+      "sephardi": "k as in kite",
+      "ashkenazi": "k as in kite",
+      "american_synagogue": "k as in kite"
+     }
+    },
+    {
+     "condition": "without dagesh",
+     "ipa": {
+      "israeli": "[χ]",
+      "sephardi": "[x]",
+      "ashkenazi": "[x]"
+     },
+     "english": {
+      "israeli": "kh as in loch",
+      "sephardi": "kh as in loch",
+      "ashkenazi": "kh as in loch",
+      "american_synagogue": "kh as in loch"
+     }
+    }
+   ]
+  },
+  "kaf-final": {
+   "id": "kaf-final",
+   "he": "ך",
+   "name": "Final kaf",
+   "ipa": {
+    "israeli": "[χ] ([k] with dagesh)",
+    "sephardi": "[x] ([k] with dagesh)",
+    "ashkenazi": "[x] ([k] with dagesh)"
+   },
+   "english": {
+    "israeli": "kh as in loch (k with dagesh, as in the last word of the Priestly Blessing)",
+    "sephardi": "kh as in loch (k with dagesh, as in the last word of the Priestly Blessing)",
+    "ashkenazi": "kh as in loch (k with dagesh, as in the last word of the Priestly Blessing)",
+    "american_synagogue": "kh as in loch (k with dagesh, as in the last word of the Priestly Blessing)"
+   },
+   "changesSound": false,
+   "notes": "Same sounds as kaf; the Priestly Blessing ends one word with ךָּ (dagesh) so it is read k.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    }
+   ],
+   "verified": true
+  },
+  "lamed": {
+   "id": "lamed",
+   "he": "ל",
+   "name": "Lamed",
+   "ipa": {
+    "israeli": "[l]",
+    "sephardi": "[l]",
+    "ashkenazi": "[l]"
+   },
+   "english": {
+    "israeli": "l",
+    "sephardi": "l",
+    "ashkenazi": "l",
+    "american_synagogue": "l"
+   },
+   "changesSound": false,
+   "notes": "Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    }
+   ],
+   "verified": false,
+   "unverifiedReason": "not in the fetched table"
+  },
+  "mem": {
+   "id": "mem",
+   "he": "מ",
+   "name": "Mem",
+   "ipa": {
+    "israeli": "[m]",
+    "sephardi": "[m]",
+    "ashkenazi": "[m]"
+   },
+   "english": {
+    "israeli": "m",
+    "sephardi": "m",
+    "ashkenazi": "m",
+    "american_synagogue": "m"
+   },
+   "changesSound": false,
+   "notes": "Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    }
+   ],
+   "verified": false,
+   "unverifiedReason": "not in the fetched table"
+  },
+  "nun": {
+   "id": "nun",
+   "he": "נ",
+   "name": "Nun",
+   "ipa": {
+    "israeli": "[n]",
+    "sephardi": "[n]",
+    "ashkenazi": "[n]"
+   },
+   "english": {
+    "israeli": "n",
+    "sephardi": "n",
+    "ashkenazi": "n",
+    "american_synagogue": "n"
+   },
+   "changesSound": false,
+   "notes": "Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    }
+   ],
+   "verified": false,
+   "unverifiedReason": "not in the fetched table"
+  },
+  "samekh": {
+   "id": "samekh",
+   "he": "ס",
+   "name": "Samekh",
+   "ipa": {
+    "israeli": "[s]",
+    "sephardi": "[s]",
+    "ashkenazi": "[s]"
+   },
+   "english": {
+    "israeli": "s",
+    "sephardi": "s",
+    "ashkenazi": "s",
+    "american_synagogue": "s"
+   },
+   "changesSound": false,
+   "notes": "Chabad notes Ashkenazim read an unaccented tav like samekh (see tav).",
+   "sources": [
+    {
+     "label": "Chabad: The Difference Between Sepharadic and Ashkenazic Pronunciation",
+     "url": "https://www.chabad.org/library/article_cdo/aid/3549013/jewish/The-Difference-Between-Sepharadic-and-Ashkenazic-Pronunciation.htm"
+    },
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    }
+   ],
+   "verified": true
+  },
+  "ayin": {
+   "id": "ayin",
+   "he": "ע",
+   "name": "Ayin",
+   "ipa": {
+    "israeli": "[ʔ] or ∅ (merged with alef)",
+    "sephardi": "[ʕ] (Western Sephardim [ŋ])",
+    "ashkenazi": "∅ (silent); relic [ŋ] in Yiddish Yankev, mayse"
+   },
+   "english": {
+    "israeli": "silent / glottal stop; do not try a pharyngeal in Israel",
+    "sephardi": "silent / glottal stop; do not try a pharyngeal in Israel",
+    "ashkenazi": "silent",
+    "american_synagogue": "silent"
+   },
+   "changesSound": true,
+   "notes": "General Israeli ayin is absorbed by alef. A pharyngeal learned in shul can mark a speaker as an outsider in Israel.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    }
+   ],
+   "verified": true
+  },
+  "pe": {
+   "id": "pe",
+   "he": "פ",
+   "name": "Pe / Fe",
+   "ipa": {
+    "israeli": "[p] with dagesh, [f] without",
+    "sephardi": "[p] / [f]",
+    "ashkenazi": "[p] / [f]"
+   },
+   "english": {
+    "israeli": "p with dagesh, f without",
+    "sephardi": "p with dagesh, f without",
+    "ashkenazi": "p with dagesh, f without",
+    "american_synagogue": "p with dagesh, f without"
+   },
+   "changesSound": true,
+   "notes": "Aspiration of p/t/k compared with English is unsourced (see drills).",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    }
+   ],
+   "verified": true,
+   "variants": [
+    {
+     "condition": "with dagesh",
+     "ipa": {
+      "israeli": "[p]",
+      "sephardi": "[p]",
+      "ashkenazi": "[p]"
+     },
+     "english": {
+      "israeli": "p as in pie",
+      "sephardi": "p as in pie",
+      "ashkenazi": "p as in pie",
+      "american_synagogue": "p as in pie"
+     }
+    },
+    {
+     "condition": "without dagesh",
+     "ipa": {
+      "israeli": "[f]",
+      "sephardi": "[f]",
+      "ashkenazi": "[f]"
+     },
+     "english": {
+      "israeli": "f as in fun",
+      "sephardi": "f as in fun",
+      "ashkenazi": "f as in fun",
+      "american_synagogue": "f as in fun"
+     }
+    }
+   ]
+  },
+  "tsadi": {
+   "id": "tsadi",
+   "he": "צ",
+   "name": "Tsadi",
+   "ipa": {
+    "israeli": "[ts]",
+    "sephardi": "[ts] ([s] in some traditional communities)",
+    "ashkenazi": "[ts]"
+   },
+   "english": {
+    "israeli": "ts / tz as in cats",
+    "sephardi": "ts / tz as in cats",
+    "ashkenazi": "ts / tz as in cats",
+    "american_synagogue": "ts / tz as in cats"
+   },
+   "changesSound": false,
+   "notes": "",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    }
+   ],
+   "verified": true
+  },
+  "qof": {
+   "id": "qof",
+   "he": "ק",
+   "name": "Qof",
+   "ipa": {
+    "israeli": "[k]",
+    "sephardi": "[k] (some Mizrahi [q])",
+    "ashkenazi": "[k]"
+   },
+   "english": {
+    "israeli": "k",
+    "sephardi": "k",
+    "ashkenazi": "k",
+    "american_synagogue": "k"
+   },
+   "changesSound": false,
+   "notes": "",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    }
+   ],
+   "verified": true
+  },
+  "resh": {
+   "id": "resh",
+   "he": "ר",
+   "name": "Resh",
+   "ipa": {
+    "israeli": "[ʁ̞] uvular",
+    "sephardi": "alveolar trill or tap (like Spanish r)",
+    "ashkenazi": "alveolar or uvular, by regional dialect"
+   },
+   "english": {
+    "israeli": "back-of-the-throat r (like French or German r), not the English r",
+    "sephardi": "back-of-the-throat r (like French or German r), not the English r",
+    "ashkenazi": "back-of-the-throat r (like French or German r), not the English r",
+    "american_synagogue": "most Americans say English r as in rail"
+   },
+   "changesSound": true,
+   "notes": "Nearly all Israeli Jews use a uvular resh. Using the English [ɹ] is a leading outsider marker.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Judaism 101: Guide to Transliteration",
+     "url": "https://jewfaq.org/translitguide.htm"
+    }
+   ],
+   "verified": true
+  },
+  "shin": {
+   "id": "shin",
+   "he": "ש",
+   "name": "Shin / Sin",
+   "ipa": {
+    "israeli": "[ʃ] with right dot, [s] with left dot",
+    "sephardi": "[ʃ] / [s]",
+    "ashkenazi": "[ʃ] / [s]"
+   },
+   "english": {
+    "israeli": "sh with the right dot, s with the left dot",
+    "sephardi": "sh with the right dot, s with the left dot",
+    "ashkenazi": "sh with the right dot, s with the left dot",
+    "american_synagogue": "sh with the right dot, s with the left dot"
+   },
+   "changesSound": true,
+   "notes": "Lithuanian Ashkenazi historically merged both as [s] (historical).",
+   "sources": [
+    {
+     "label": "Wikipedia: Niqqud",
+     "url": "https://en.wikipedia.org/wiki/Niqqud"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    }
+   ],
+   "verified": true,
+   "variants": [
+    {
+     "condition": "with shin dot",
+     "ipa": {
+      "israeli": "[ʃ]",
+      "sephardi": "[ʃ]",
+      "ashkenazi": "[ʃ]"
+     },
+     "english": {
+      "israeli": "sh as in shoe",
+      "sephardi": "sh as in shoe",
+      "ashkenazi": "sh as in shoe",
+      "american_synagogue": "sh as in shoe"
+     }
+    },
+    {
+     "condition": "with sin dot",
+     "ipa": {
+      "israeli": "[s]",
+      "sephardi": "[s]",
+      "ashkenazi": "[s]"
+     },
+     "english": {
+      "israeli": "s as in sun",
+      "sephardi": "s as in sun",
+      "ashkenazi": "s as in sun",
+      "american_synagogue": "s as in sun"
+     }
+    }
+   ]
+  },
+  "tav": {
+   "id": "tav",
+   "he": "ת",
+   "name": "Tav",
+   "ipa": {
+    "israeli": "[t]",
+    "sephardi": "[t] (Greek/Iraqi/Yemenite [θ]; Spanish-Moroccan [d]/[ð])",
+    "ashkenazi": "[s] without dagesh, [t] with dagesh"
+   },
+   "english": {
+    "israeli": "t",
+    "sephardi": "t",
+    "ashkenazi": "s without dagesh (Shabbos), t with dagesh",
+    "american_synagogue": "t in prayer; s in Orthodox shuls and in English loanwords such as Shabbos"
+   },
+   "changesSound": true,
+   "notes": "The single most audible Ashkenazi/Sephardi switch (Yit-gadal vs Yis-gadal).",
+   "sources": [
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    },
+    {
+     "label": "Chabad: The Difference Between Sepharadic and Ashkenazic Pronunciation",
+     "url": "https://www.chabad.org/library/article_cdo/aid/3549013/jewish/The-Difference-Between-Sepharadic-and-Ashkenazic-Pronunciation.htm"
+    },
+    {
+     "label": "Judaism 101: Guide to Transliteration",
+     "url": "https://jewfaq.org/translitguide.htm"
+    }
+   ],
+   "verified": true,
+   "variants": [
+    {
+     "condition": "with dagesh",
+     "ipa": {
+      "israeli": "[t]",
+      "sephardi": "[t]",
+      "ashkenazi": "[t]"
+     },
+     "english": {
+      "israeli": "t",
+      "sephardi": "t",
+      "ashkenazi": "t",
+      "american_synagogue": "t"
+     }
+    },
+    {
+     "condition": "without dagesh",
+     "ipa": {
+      "israeli": "[t]",
+      "sephardi": "[t]",
+      "ashkenazi": "[s]"
+     },
+     "english": {
+      "israeli": "t",
+      "sephardi": "t",
+      "ashkenazi": "s",
+      "american_synagogue": "t"
+     }
+    }
+   ]
+  },
+  "mem-final": {
+   "id": "mem-final",
+   "he": "ם",
+   "name": "Final mem",
+   "ipa": {
+    "israeli": "[m]",
+    "sephardi": "[m]",
+    "ashkenazi": "[m]"
+   },
+   "english": {
+    "israeli": "m",
+    "sephardi": "m",
+    "ashkenazi": "m",
+    "american_synagogue": "m"
+   },
+   "changesSound": false,
+   "notes": "Same sound as the non-final form. Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    }
+   ],
+   "verified": false,
+   "unverifiedReason": "not in the fetched table"
+  },
+  "nun-final": {
+   "id": "nun-final",
+   "he": "ן",
+   "name": "Final nun",
+   "ipa": {
+    "israeli": "[n]",
+    "sephardi": "[n]",
+    "ashkenazi": "[n]"
+   },
+   "english": {
+    "israeli": "n",
+    "sephardi": "n",
+    "ashkenazi": "n",
+    "american_synagogue": "n"
+   },
+   "changesSound": false,
+   "notes": "Same sound as the non-final form. Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    }
+   ],
+   "verified": false,
+   "unverifiedReason": "not in the fetched table"
+  },
+  "pe-final": {
+   "id": "pe-final",
+   "he": "ף",
+   "name": "Final pe",
+   "ipa": {
+    "israeli": "[f] ([p] with dagesh)",
+    "sephardi": "[f] ([p] with dagesh)",
+    "ashkenazi": "[f] ([p] with dagesh)"
+   },
+   "english": {
+    "israeli": "f (p with dagesh)",
+    "sephardi": "f (p with dagesh)",
+    "ashkenazi": "f (p with dagesh)",
+    "american_synagogue": "f (p with dagesh)"
+   },
+   "changesSound": true,
+   "notes": "Same sound as the non-final form. Aspiration of p/t/k compared with English is unsourced (see drills).",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    }
+   ],
+   "verified": true
+  },
+  "tsadi-final": {
+   "id": "tsadi-final",
+   "he": "ץ",
+   "name": "Final tsadi",
+   "ipa": {
+    "israeli": "[ts]",
+    "sephardi": "[ts] ([s] in some traditional communities)",
+    "ashkenazi": "[ts]"
+   },
+   "english": {
+    "israeli": "ts / tz as in cats",
+    "sephardi": "ts / tz as in cats",
+    "ashkenazi": "ts / tz as in cats",
+    "american_synagogue": "ts / tz as in cats"
+   },
+   "changesSound": false,
+   "notes": "Same sound as the non-final form. ",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    }
+   ],
+   "verified": true
+  }
+ },
+ "features": [
+  {
+   "id": "bet-vet",
+   "letters": [
+    "bet"
+   ],
+   "summary": "Bet is b with dagesh and v without.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    }
+   ],
+   "verified": true
+  },
+  {
+   "id": "kaf-khaf",
+   "letters": [
+    "kaf",
+    "kaf-final"
+   ],
+   "summary": "Kaf is k with dagesh and kh (like loch) without.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    }
+   ],
+   "verified": true
+  },
+  {
+   "id": "pe-fe",
+   "letters": [
+    "pe",
+    "pe-final"
+   ],
+   "summary": "Pe is p with dagesh and f without.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    }
+   ],
+   "verified": true
+  },
+  {
+   "id": "shin-sin",
+   "letters": [
+    "shin"
+   ],
+   "summary": "The dot decides: right dot = sh, left dot = s.",
+   "sources": [
+    {
+     "label": "Wikipedia: Niqqud",
+     "url": "https://en.wikipedia.org/wiki/Niqqud"
+    }
+   ],
+   "verified": true
+  },
+  {
+   "id": "dagesh-kal-vs-chazak",
+   "letters": [
+    "bet",
+    "kaf",
+    "pe",
+    "tav",
+    "gimel",
+    "dalet"
+   ],
+   "summary": "Dagesh kal hardens begadkefat letters (only bet, kaf, pe change sound in Israeli Hebrew). Dagesh chazak (doubling) is not pronounced in Modern Hebrew.",
+   "sources": [
+    {
+     "label": "Wikipedia: Niqqud",
+     "url": "https://en.wikipedia.org/wiki/Niqqud"
+    },
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    }
+   ],
+   "verified": true
+  },
+  {
+   "id": "chet-khaf-merger",
+   "letters": [
+    "chet",
+    "kaf"
+   ],
+   "summary": "In General Israeli chet and khaf are one sound [χ]; older Mizrahi speakers keep the pharyngeal chet.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    }
+   ],
+   "verified": true
+  },
+  {
+   "id": "ayin",
+   "letters": [
+    "ayin",
+    "alef"
+   ],
+   "summary": "In General Israeli ayin is merged with alef. Pharyngeal ayin survives in Sephardi/Mizrahi tradition; Ashkenazi is silent.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    }
+   ],
+   "verified": true
+  },
+  {
+   "id": "uvular-resh",
+   "letters": [
+    "resh"
+   ],
+   "summary": "Nearly all Israeli Jews pronounce resh as a uvular fricative; the English r is the typical American carry-over.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Judaism 101: Guide to Transliteration",
+     "url": "https://jewfaq.org/translitguide.htm"
+    }
+   ],
+   "verified": true
+  },
+  {
+   "id": "tav-ashkenazi-s",
+   "letters": [
+    "tav"
+   ],
+   "summary": "Ashkenazi tav without dagesh is s (Shabbos); Sephardi and Israeli tav is always t.",
+   "sources": [
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Chabad: The Difference Between Sepharadic and Ashkenazic Pronunciation",
+     "url": "https://www.chabad.org/library/article_cdo/aid/3549013/jewish/The-Difference-Between-Sepharadic-and-Ashkenazic-Pronunciation.htm"
+    }
+   ],
+   "verified": true
+  }
+ ]
+}

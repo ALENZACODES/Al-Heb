@@ -1,0 +1,28 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Unit + integration tests (no dependencies to install)
+        run: node --test
+      - name: Precache manifest is current
+        run: node tools/build-precache.mjs && git diff --exit-code precache-manifest.js
+  smoke:
+    # Playwright browser smoke. Needs `npx playwright install chromium` on a stock runner, which downloads
+    # a browser (not a project dependency). UNTESTED in CI: written and run only locally against a preinstalled Playwright.
+    runs-on: ubuntu-latest
+    needs: test
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: npm install --no-save --no-package-lock playwright && npx playwright install --with-deps chromium
+      - run: node tools/smoke.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: screens, path: docs/screens }

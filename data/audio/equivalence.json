@@ -1,0 +1,4 @@
+{
+  "_note": "Human-reviewed rules saying one tradition's clip may stand in for another's (same voice, same kind/id). Empty on purpose: no equivalence has been verified by a native speaker or the talent. Rule shape: {\"from\":\"sephardi\",\"to\":\"israeli\",\"kinds\":[\"letter\"],\"ids\":[\"bet\"]} meaning the sephardi entry may use the israeli file.",
+  "rules": []
+}

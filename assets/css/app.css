@@ -1,0 +1,61 @@
+/* ALEF base styles. Logical properties throughout (RTL-aware). Local fonts only.
+   FONT PLAN (downloads are blocked here; none are bundled yet). Planned OFL self-hosted fonts:
+   FiraGO (UI/Hebrew sans), Ezra SIL (pointed prayer text), Gveret Levin (cursive).
+   Add @font-face rules in this file once the files are placed in assets/fonts/ and licences recorded.
+   Avoid Rubik and Noto Sans for pointed text (mark positioning). */
+:root {
+  --bg: #f6efe0; --fg: #1d2433; --muted: #5a6275; --card: #fffaf0; --border: #d9cdb3;
+  --accent: #1f3a5f; --accent-fg: #fffaf0; --focus: #b45309; --warn-bg: #fff1c2; --warn-fg: #5b4200;
+  --font-ui: "FiraGO", system-ui, -apple-system, "Segoe UI", "DejaVu Sans", sans-serif;
+  --font-he: "Ezra SIL", "SBL Hebrew", "FreeSerif", "DejaVu Sans", "Frank Ruehl CLM", serif;
+  --font-he-cursive: "Gveret Levin", "FreeSans", "DejaVu Sans", sans-serif;
+  --tap: 48px; --radius: 12px; --gap: 1rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #111722; --fg: #ece7da; --muted: #a3abbd; --card: #1a2231; --border: #2e3850; --accent: #8fb4ee; --accent-fg: #0d1420; --focus: #fbbf24; --warn-bg: #3d3210; --warn-fg: #f5d98a; }
+}
+:root[data-theme="dark"] { --bg: #111722; --fg: #ece7da; --muted: #a3abbd; --card: #1a2231; --border: #2e3850; --accent: #8fb4ee; --accent-fg: #0d1420; --focus: #fbbf24; --warn-bg: #3d3210; --warn-fg: #f5d98a; color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 1.0625rem/1.55 var(--font-ui); padding-block-end: env(safe-area-inset-bottom); }
+.he, [lang="he"] { font-family: var(--font-he); direction: rtl; unicode-bidi: isolate; font-size: 1.15em; }
+:root[data-script="cursive"] .he, :root[data-script="cursive"] [lang="he"] { font-family: var(--font-he-cursive); }
+bdi, .num { unicode-bidi: isolate; }
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+main:focus, h1:focus { outline: none; }
+h1[tabindex="-1"]:focus, h1[tabindex="-1"]:focus-visible { outline: none; }
+.skip-link { position: absolute; inset-inline-start: .5rem; inset-block-start: -4rem; background: var(--accent); color: var(--accent-fg); padding: .75rem 1rem; z-index: 100; border-radius: 8px; }
+.skip-link:focus { inset-block-start: .5rem; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.site-header { padding: .75rem 1rem; padding-inline: max(1rem, env(safe-area-inset-left)); display: flex; align-items: center; }
+.brand { font-weight: 700; font-size: 1.25rem; text-decoration: none; color: var(--fg); display: inline-flex; gap: .5rem; min-block-size: var(--tap); align-items: center; }
+.site-nav { border-block: 1px solid var(--border); background: var(--card); overflow-x: auto; }
+.site-nav ul { list-style: none; margin: 0; padding: 0 .5rem; display: flex; gap: .25rem; }
+.site-nav a { display: flex; flex-direction: column; align-items: center; justify-content: center; min-block-size: var(--tap); min-inline-size: var(--tap); padding: .25rem .75rem; text-decoration: none; color: var(--fg); border-radius: 8px; font-size: .9rem; line-height: 1.2; }
+.site-nav a[aria-current="page"] { background: var(--accent); color: var(--accent-fg); }
+.nav-he { font-size: .85em; opacity: .85; }
+main { max-inline-size: 46rem; margin-inline: auto; padding: 1rem; padding-inline: max(1rem, env(safe-area-inset-left)); }
+.stack > * + *, main > * + * { margin-block-start: var(--gap); }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; }
+h1 { font-size: 1.6rem; margin-block: 0 .5rem; line-height: 1.2; }
+h2 { font-size: 1.15rem; margin-block: 0 .5rem; }
+.muted { color: var(--muted); }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: .85rem; overflow-wrap: anywhere; }
+.draft-flag { background: var(--warn-bg); color: var(--warn-fg); padding: .5rem .75rem; border-radius: 8px; border-inline-start: 4px solid var(--focus); font-weight: 600; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-block-size: var(--tap); padding: .5rem 1.1rem; border-radius: 999px; border: 2px solid var(--accent); background: var(--accent); color: var(--accent-fg); font: inherit; font-weight: 600; text-decoration: none; cursor: pointer; }
+.btn.secondary { background: transparent; color: var(--accent); }
+.row { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.tiles { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr)); gap: .75rem; }
+.tile { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .15rem; min-block-size: 5rem; border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; color: var(--fg); font-weight: 600; background: var(--bg); }
+.field { border: 0; padding: 0; margin: 0 0 1.1rem; display: block; }
+.field legend { font-weight: 700; padding: 0; margin-block-end: .35rem; }
+.opt { display: flex; align-items: center; gap: .75rem; min-block-size: var(--tap); }
+.opt input { inline-size: 1.4rem; block-size: 1.4rem; flex: none; }
+input[type="number"] { font: inherit; min-block-size: var(--tap); inline-size: 100%; max-inline-size: 14rem; padding-inline: .5rem; background: var(--bg); color: var(--fg); border: 1px solid var(--border); border-radius: 8px; display: block; }
+input[aria-invalid="true"] { border-color: #b91c1c; }
+details summary { cursor: pointer; min-block-size: 2rem; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } .btn, .tile { transition: transform .12s ease; } .btn:active, .tile:active { transform: scale(.98); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+@media (forced-colors: active) { .btn, .tile, .card { border: 2px solid CanvasText; } }

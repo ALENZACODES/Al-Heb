@@ -13,7 +13,7 @@ try { ({ chromium } = require('playwright')); } catch { try { ({ chromium } = re
 
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 const outDir = join(root, 'docs', 'screens'); mkdirSync(outDir, { recursive: true });
-const ROUTES = ['/', '/learn', '/letters', '/letters/alef', '/sounds', '/read', '/read/priestly-blessing', '/scan', '/calendar', '/settings', '/about', '/nope'];
+const ROUTES = ['/', '/learn', '/letters', '/letters/alef', '/sounds', '/read', '/read/bless-priestly-1', '/scan', '/calendar', '/settings', '/about', '/nope'];
 
 const server = createAppServer(); await new Promise((r) => server.listen(0, r));
 const base = `http://localhost:${server.address().port}/`;
@@ -31,7 +31,7 @@ for (const r of ROUTES) {
   const info = await page.evaluate(() => {
     const main = document.getElementById('main');
     const heading = main.querySelector('h1')?.textContent?.trim() ?? '';
-    const unavailable = !!main.querySelector('.notice');
+    const unavailable = !!main.querySelector('.alef-unavailable');
     return { heading, unavailable, textLength: main.innerText.length, focused: document.activeElement?.id ?? document.activeElement?.tagName, title: document.title };
   });
   const name = r === '/' ? 'home' : r.slice(1).replace(/\//g, '_');

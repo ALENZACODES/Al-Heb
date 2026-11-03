@@ -1,0 +1,138 @@
+{
+ "when": "2026-11-03T23:45:45.590Z",
+ "offline": "ok: app shell loaded offline",
+ "results": [
+  {
+   "route": "/",
+   "status": "content",
+   "heading": "ALEF אלף",
+   "unavailable": false,
+   "textLength": 516,
+   "focused": "view-title",
+   "title": "ALEF",
+   "errors": [],
+   "consoleErrors": []
+  },
+  {
+   "route": "/learn",
+   "status": "content",
+   "heading": "Lessons",
+   "unavailable": false,
+   "textLength": 2891,
+   "focused": "",
+   "title": "Learn - ALEF",
+   "errors": [],
+   "consoleErrors": []
+  },
+  {
+   "route": "/letters",
+   "status": "content",
+   "heading": "",
+   "unavailable": false,
+   "textLength": 472,
+   "focused": "",
+   "title": "Letters - ALEF",
+   "errors": [],
+   "consoleErrors": []
+  },
+  {
+   "route": "/letters/alef",
+   "status": "content",
+   "heading": "",
+   "unavailable": false,
+   "textLength": 472,
+   "focused": "",
+   "title": "Letter - ALEF",
+   "errors": [],
+   "consoleErrors": []
+  },
+  {
+   "route": "/sounds",
+   "status": "content",
+   "heading": "",
+   "unavailable": false,
+   "textLength": 5884,
+   "focused": "",
+   "title": "Sounds - ALEF",
+   "errors": [],
+   "consoleErrors": []
+  },
+  {
+   "route": "/read",
+   "status": "content",
+   "heading": "Read",
+   "unavailable": false,
+   "textLength": 4213,
+   "focused": "view-title",
+   "title": "Read - ALEF",
+   "errors": [],
+   "consoleErrors": []
+  },
+  {
+   "route": "/read/bless-priestly-1",
+   "status": "content",
+   "heading": "Read",
+   "unavailable": false,
+   "textLength": 4213,
+   "focused": "view-title",
+   "title": "Read - ALEF",
+   "errors": [],
+   "consoleErrors": []
+  },
+  {
+   "route": "/scan",
+   "status": "content",
+   "heading": "",
+   "unavailable": false,
+   "textLength": 565,
+   "focused": "",
+   "title": "Scan - ALEF",
+   "errors": [],
+   "consoleErrors": []
+  },
+  {
+   "route": "/calendar",
+   "status": "content",
+   "heading": "Calendar",
+   "unavailable": false,
+   "textLength": 485,
+   "focused": "",
+   "title": "Calendar - ALEF",
+   "errors": [],
+   "consoleErrors": []
+  },
+  {
+   "route": "/settings",
+   "status": "content",
+   "heading": "Settings",
+   "unavailable": false,
+   "textLength": 377,
+   "focused": "view-title",
+   "title": "Settings - ALEF",
+   "errors": [],
+   "consoleErrors": []
+  },
+  {
+   "route": "/about",
+   "status": "content",
+   "heading": "About ALEF",
+   "unavailable": false,
+   "textLength": 460,
+   "focused": "view-title",
+   "title": "About - ALEF",
+   "errors": [],
+   "consoleErrors": []
+  },
+  {
+   "route": "/nope",
+   "status": "notfound",
+   "heading": "Page not found",
+   "unavailable": false,
+   "textLength": 27,
+   "focused": "view-title",
+   "title": "Page not found - ALEF",
+   "errors": [],
+   "consoleErrors": []
+  }
+ ]
+}

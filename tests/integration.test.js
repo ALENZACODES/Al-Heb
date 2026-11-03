@@ -76,7 +76,7 @@ test('store: export/import roundtrip, validation, newer schema rejected', () => 
 });
 test('i18n: t() interpolates and falls back to key', () => {
   assert.equal(t('home.due.count', { n: 3 }), '3 cards due');
-  const warn = console.warn; console.warn = () => {}; assert.equal(t('no.such.key'), 'no.such.key'); console.warn = warn;
+  const warn = console.warn; console.warn = () => {}; assert.equal(t('home.no.such'), 'home.no.such'); console.warn = warn;
 });
 test('manifest.webmanifest is valid and icons exist', () => {
   const m = json('manifest.webmanifest');
@@ -110,9 +110,11 @@ ifFile('data/letters/letters.json', (d) => {
   const arr = Array.isArray(d) ? d : d.letters;
   assert.deepEqual(arr.map((l) => l.id).sort(), [...LETTERS].sort());
 });
+const VOWELS = 'kamatz patach tzere segol chirik cholam kubutz shuruk shva chataf-patach chataf-segol chataf-kamatz dagesh shin-dot sin-dot'.split(' ');
 ifFile('data/pronunciation/niqqud.json', (d) => {
-  const arr = Array.isArray(d) ? d : (d.signs ?? d.niqqud ?? Object.values(d));
-  assert.ok(arr.length >= 14);
+  const arr = Array.isArray(d) ? d : d.records;
+  assert.deepEqual(arr.map((r) => r.id).sort(), [...VOWELS].sort());
+  assert.deepEqual([...d.traditions].sort(), ['ashkenazi', 'israeli', 'sephardi']);
 });
 ifFile('data/corpus/registry.json', (d) => {
   const arr = Array.isArray(d) ? d : (d.texts ?? d.entries ?? []);

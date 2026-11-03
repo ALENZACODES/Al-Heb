@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ALEF</title>
+  <meta name="description" content="ALEF: learn to read Hebrew aloud and speak it in Israel.">
+  <meta name="theme-color" content="#1f3a5f">
+  <meta name="color-scheme" content="light dark">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <a class="brand" href="#/" aria-label="ALEF home"><span>ALEF</span> <span lang="he" dir="rtl" class="he">אלף</span></a>
+  </header>
+  <nav class="site-nav" aria-label="Main"><ul id="nav"></ul></nav>
+  <main id="main" tabindex="-1" aria-live="off"><p class="muted">Loading ALEF…</p></main>
+  <div id="announcer" class="visually-hidden" role="status" aria-live="polite"></div>
+  <noscript><p class="card">ALEF needs JavaScript enabled.</p></noscript>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

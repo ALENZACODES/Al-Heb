@@ -3,10 +3,11 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "description": "ALEF Hebrew course - zero-dependency static PWA",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc --noEmit && vite build",
-    "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "node --test tests/",
+    "serve": "node tools/serve.mjs",
+    "smoke": "node tools/smoke.mjs",
+    "precache": "node tools/build-precache.mjs"
   }
 }

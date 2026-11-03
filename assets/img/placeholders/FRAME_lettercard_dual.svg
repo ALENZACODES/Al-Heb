@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 640" width="512" height="640" role="img" aria-label="placeholder for FRAME_lettercard_dual">
+<rect width="512" height="640" fill="#F6F1E7"/>
+<rect x="26" y="26" width="460" height="588" rx="14" fill="none" stroke="#1F3A5F" stroke-width="3" stroke-dasharray="10 8"/>
+<text x="256" y="316" text-anchor="middle" font-family="DejaVu Sans Mono, Menlo, Consolas, monospace" font-size="22" fill="#2B2B2B">FRAME_lettercard_dual</text>
+<text x="256" y="348" text-anchor="middle" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" letter-spacing="3" fill="#1F3A5F">PLACEHOLDER</text>
+</svg>

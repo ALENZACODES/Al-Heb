@@ -1,0 +1,3042 @@
+{
+ "version": 1,
+ "status": "draft-needs-native-review",
+ "note": "Pointing and glosses written by an AI agent; NOT reviewed by a native speaker. Prayer text lives in lane 5's registry; lessons only reference ids.",
+ "lessons": [
+  {
+   "id": "r01",
+   "track": "read",
+   "level": "white",
+   "title": "Shin and Bet: your first two letters",
+   "letters": [
+    "shin",
+    "bet"
+   ],
+   "vowels": [
+    "kamatz",
+    "patach",
+    "shin-dot"
+   ],
+   "words": [
+    {
+     "he": "שָׁב",
+     "en": "he returned",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Name and sound Shin (sh) and Bet (b)",
+    "Read the two 'ah' vowels (kamatz, patach) with them"
+   ],
+   "estMinutes": 20,
+   "prerequisites": []
+  },
+  {
+   "id": "r02",
+   "track": "read",
+   "level": "white",
+   "title": "Tav and the dot in Bet: Shabbat",
+   "letters": [
+    "tav"
+   ],
+   "vowels": [
+    "dagesh"
+   ],
+   "words": [
+    {
+     "he": "שַׁבָּת",
+     "en": "Sabbath",
+     "translit": null
+    },
+    {
+     "he": "בַּת",
+     "en": "daughter",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Read שַׁבָּת (Shabbat)",
+    "Know the dot inside Bet hardens it to 'b'"
+   ],
+   "estMinutes": 20,
+   "prerequisites": [
+    "r01"
+   ]
+  },
+  {
+   "id": "r03",
+   "track": "read",
+   "level": "white",
+   "title": "Lamed, final Mem and Vav: Shalom",
+   "letters": [
+    "lamed",
+    "mem-final",
+    "vav"
+   ],
+   "vowels": [
+    "cholam"
+   ],
+   "words": [
+    {
+     "he": "שָׁלוֹם",
+     "en": "peace; hello",
+     "translit": null
+    },
+    {
+     "he": "לוֹ",
+     "en": "to him",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Read שָׁלוֹם",
+    "Vav with a dot above = 'oh'",
+    "Recognise the final-mem shape"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r02"
+   ]
+  },
+  {
+   "id": "r04",
+   "track": "read",
+   "level": "white",
+   "title": "Shabbat Shalom: review",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "שַׁבָּת",
+     "en": "Sabbath",
+     "translit": null
+    },
+    {
+     "he": "שָׁלוֹם",
+     "en": "peace",
+     "translit": null
+    },
+    {
+     "he": "שַׁבָּת שָׁלוֹם",
+     "en": "a peaceful Sabbath (greeting)",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Read שַׁבָּת שָׁלוֹם smoothly without help",
+    "Pass the white-belt 1 check: 6 letters, 3 vowels"
+   ],
+   "estMinutes": 15,
+   "prerequisites": [
+    "r03"
+   ]
+  },
+  {
+   "id": "r05",
+   "track": "read",
+   "level": "white",
+   "title": "Meet the Priestly Blessing (listen and spot)",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "שָׁלוֹם",
+     "en": "peace",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "bless-priestly-1",
+    "bless-priestly-2",
+    "bless-priestly-3"
+   ],
+   "goals": [
+    "Hear the whole Priestly Blessing (Numbers 6:24-26)",
+    "Spot the letters you already know (Shin, Lamed, Mem, Vav) in the three lines",
+    "Understand this is the page-1 text you will fully decode by lesson 27"
+   ],
+   "estMinutes": 15,
+   "prerequisites": [
+    "r04"
+   ]
+  },
+  {
+   "id": "r06",
+   "track": "read",
+   "level": "white",
+   "title": "Yod and the 'ee' vowel",
+   "letters": [
+    "yod"
+   ],
+   "vowels": [
+    "chirik"
+   ],
+   "words": [
+    {
+     "he": "בִּי",
+     "en": "in me",
+     "translit": null
+    },
+    {
+     "he": "לִי",
+     "en": "to me",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Read chirik with and without yod as 'ee'"
+   ],
+   "estMinutes": 20,
+   "prerequisites": [
+    "r05"
+   ]
+  },
+  {
+   "id": "r07",
+   "track": "read",
+   "level": "white",
+   "title": "Alef and He",
+   "letters": [
+    "alef",
+    "he"
+   ],
+   "vowels": [],
+   "words": [
+    {
+     "he": "אַבָּא",
+     "en": "dad",
+     "translit": null
+    },
+    {
+     "he": "בָּא",
+     "en": "he came",
+     "translit": null
+    },
+    {
+     "he": "הָיָה",
+     "en": "he was",
+     "translit": null
+    },
+    {
+     "he": "לֹא",
+     "en": "no; not",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Know Alef is silent carrier of its vowel",
+    "Know final-He after kamatz is silent"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r06"
+   ]
+  },
+  {
+   "id": "r08",
+   "track": "read",
+   "level": "white",
+   "title": "Tzere: the 'ay' vowel",
+   "letters": [],
+   "vowels": [
+    "tzere"
+   ],
+   "words": [
+    {
+     "he": "אֵל",
+     "en": "God",
+     "translit": null
+    },
+    {
+     "he": "בֵּית",
+     "en": "house of",
+     "translit": null
+    },
+    {
+     "he": "לֵב",
+     "en": "heart",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Read tzere with and without yod as 'ay'"
+   ],
+   "estMinutes": 20,
+   "prerequisites": [
+    "r07"
+   ]
+  },
+  {
+   "id": "r09",
+   "track": "read",
+   "level": "white",
+   "title": "Resh and Mem",
+   "letters": [
+    "resh",
+    "mem"
+   ],
+   "vowels": [],
+   "words": [
+    {
+     "he": "שִׁיר",
+     "en": "song",
+     "translit": null
+    },
+    {
+     "he": "אִמָּא",
+     "en": "mom",
+     "translit": null
+    },
+    {
+     "he": "רֹאשׁ",
+     "en": "head",
+     "translit": null
+    },
+    {
+     "he": "רָם",
+     "en": "high",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Tell Resh from Dalet (later) by the rounded corner",
+    "Use medial vs final Mem correctly"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r08"
+   ]
+  },
+  {
+   "id": "r10",
+   "track": "read",
+   "level": "red",
+   "title": "Kaf, final Kaf, and a silent shva at word end",
+   "letters": [
+    "kaf",
+    "kaf-final"
+   ],
+   "vowels": [
+    "shva"
+   ],
+   "words": [
+    {
+     "he": "כִּי",
+     "en": "because",
+     "translit": null
+    },
+    {
+     "he": "לָךְ",
+     "en": "to you",
+     "translit": null
+    },
+    {
+     "he": "אַתָּה",
+     "en": "you (m.)",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Read Kaf with/without dagesh",
+    "Preview: a shva at the end of a word is silent"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r09"
+   ]
+  },
+  {
+   "id": "r11",
+   "track": "read",
+   "level": "red",
+   "title": "Segol: the 'eh' vowel",
+   "letters": [],
+   "vowels": [
+    "segol"
+   ],
+   "words": [
+    {
+     "he": "אֶת",
+     "en": "(object marker)",
+     "translit": null
+    },
+    {
+     "he": "מֶלֶךְ",
+     "en": "king",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Read segol as 'eh'",
+    "Hear the difference between tzere and segol in your tradition"
+   ],
+   "estMinutes": 20,
+   "prerequisites": [
+    "r10"
+   ]
+  },
+  {
+   "id": "r12",
+   "track": "read",
+   "level": "red",
+   "title": "Nun and final Nun",
+   "letters": [
+    "nun",
+    "nun-final"
+   ],
+   "vowels": [],
+   "words": [
+    {
+     "he": "בֵּן",
+     "en": "son",
+     "translit": null
+    },
+    {
+     "he": "שָׁנָה",
+     "en": "year",
+     "translit": null
+    },
+    {
+     "he": "אָנִי",
+     "en": "I",
+     "translit": null
+    },
+    {
+     "he": "אָמֵן",
+     "en": "amen",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Tell final Nun from Vav by the descending tail"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r11"
+   ]
+  },
+  {
+   "id": "r13",
+   "track": "read",
+   "level": "red",
+   "title": "Shuruk and Kubutz: the 'oo' vowels",
+   "letters": [],
+   "vowels": [
+    "shuruk",
+    "kubutz"
+   ],
+   "words": [
+    {
+     "he": "הוּא",
+     "en": "he",
+     "translit": null
+    },
+    {
+     "he": "שׁוּב",
+     "en": "again; return!",
+     "translit": null
+    },
+    {
+     "he": "כֻּלָּם",
+     "en": "all of them",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Read Vav+dot-inside as 'oo'",
+    "Read the three-dot kubutz as 'oo'"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r12"
+   ]
+  },
+  {
+   "id": "r14",
+   "track": "read",
+   "level": "red",
+   "title": "Shva at the start of a syllable",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "בְּרָכָה",
+     "en": "blessing",
+     "translit": null
+    },
+    {
+     "he": "בְּרֵאשִׁית",
+     "en": "in the beginning",
+     "translit": null
+    },
+    {
+     "he": "לְךָ",
+     "en": "to you",
+     "translit": null
+    },
+    {
+     "he": "וְאָנִי",
+     "en": "and I",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Read a shva at the start of a word as a quick 'e'",
+    "Start applying the shva rules (lane 3 drills)"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r13"
+   ]
+  },
+  {
+   "id": "r15",
+   "track": "read",
+   "level": "red",
+   "title": "Priestly Blessing, line 1",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "יְבָרֶכְךָ",
+     "en": "may He bless you",
+     "translit": null
+    },
+    {
+     "he": "יְהוָה",
+     "en": "the Name (read aloud as Adonai)",
+     "translit": null,
+     "note": "Never pronounce the four letters as written; say Adonai"
+    },
+    {
+     "he": "וְיִשְׁמְרֶךָ",
+     "en": "and keep you",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "bless-priestly-1"
+   ],
+   "goals": [
+    "Decode and read Numbers 6:24 aloud, 3 times"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r14"
+   ]
+  },
+  {
+   "id": "r16",
+   "track": "read",
+   "level": "red",
+   "title": "Pe and final Pe",
+   "letters": [
+    "pe",
+    "pe-final"
+   ],
+   "vowels": [],
+   "words": [
+    {
+     "he": "פֶּה",
+     "en": "mouth",
+     "translit": null
+    },
+    {
+     "he": "אַף",
+     "en": "also; nose",
+     "translit": null
+    },
+    {
+     "he": "פָּנָיו",
+     "en": "His face",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Tell Pe with dagesh 'p' from Pe without 'f'"
+   ],
+   "estMinutes": 20,
+   "prerequisites": [
+    "r15"
+   ]
+  },
+  {
+   "id": "r17",
+   "track": "read",
+   "level": "red",
+   "title": "Chet and the sneaky patach",
+   "letters": [
+    "chet"
+   ],
+   "vowels": [],
+   "words": [
+    {
+     "he": "חַי",
+     "en": "alive",
+     "translit": null
+    },
+    {
+     "he": "חָכָם",
+     "en": "wise",
+     "translit": null
+    },
+    {
+     "he": "רוּחַ",
+     "en": "spirit; wind",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Produce chet distinctly from kaf and he",
+    "Read a patach under final chet/ayin/he as 'ah' AFTER the consonant"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r16"
+   ]
+  },
+  {
+   "id": "r18",
+   "track": "read",
+   "level": "red",
+   "title": "Dalet and Gimel",
+   "letters": [
+    "dalet",
+    "gimel"
+   ],
+   "vowels": [],
+   "words": [
+    {
+     "he": "אֶחָד",
+     "en": "one",
+     "translit": null
+    },
+    {
+     "he": "גָּדוֹל",
+     "en": "big",
+     "translit": null
+    },
+    {
+     "he": "גַּן",
+     "en": "garden",
+     "translit": null
+    },
+    {
+     "he": "דֶּרֶךְ",
+     "en": "way",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Tell Dalet from Resh and Gimel from Nun"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r17"
+   ]
+  },
+  {
+   "id": "r19",
+   "track": "read",
+   "level": "red",
+   "title": "Ayin",
+   "letters": [
+    "ayin"
+   ],
+   "vowels": [],
+   "words": [
+    {
+     "he": "שְׁמַע",
+     "en": "hear!",
+     "translit": null
+    },
+    {
+     "he": "עַם",
+     "en": "people",
+     "translit": null
+    },
+    {
+     "he": "עוֹלָם",
+     "en": "world; forever",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Know Ayin is silent in the Ashkenazi/Israeli norm; note the tradition options"
+   ],
+   "estMinutes": 20,
+   "prerequisites": [
+    "r18"
+   ]
+  },
+  {
+   "id": "r20",
+   "track": "read",
+   "level": "orange",
+   "title": "Samekh and Sin",
+   "letters": [
+    "samekh"
+   ],
+   "vowels": [
+    "sin-dot"
+   ],
+   "words": [
+    {
+     "he": "סֵפֶר",
+     "en": "book",
+     "translit": null
+    },
+    {
+     "he": "יִשְׂרָאֵל",
+     "en": "Israel",
+     "translit": null
+    },
+    {
+     "he": "שִׂמְחָה",
+     "en": "joy",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Tell Samekh, Sin and Shin apart",
+    "Place the dot on the left of Sin and on the right of Shin"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r19"
+   ]
+  },
+  {
+   "id": "r21",
+   "track": "read",
+   "level": "orange",
+   "title": "Chataf vowels: the 'half' vowels",
+   "letters": [],
+   "vowels": [
+    "chataf-patach",
+    "chataf-segol",
+    "chataf-kamatz"
+   ],
+   "words": [
+    {
+     "he": "אֱלֹהִים",
+     "en": "God",
+     "translit": null
+    },
+    {
+     "he": "אֱמֶת",
+     "en": "truth",
+     "translit": null
+    },
+    {
+     "he": "אֲנִי",
+     "en": "I",
+     "translit": null
+    },
+    {
+     "he": "אֲדֹנָי",
+     "en": "my Lord (read in place of the Name)",
+     "translit": null
+    },
+    {
+     "he": "אֳנִיָּה",
+     "en": "ship",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Read chataf vowels as short versions of patach / segol / kamatz"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r20"
+   ]
+  },
+  {
+   "id": "r22",
+   "track": "read",
+   "level": "orange",
+   "title": "Shema, line 1",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "שְׁמַע",
+     "en": "hear!",
+     "translit": null
+    },
+    {
+     "he": "יִשְׂרָאֵל",
+     "en": "Israel",
+     "translit": null
+    },
+    {
+     "he": "אֱלֹהֵינוּ",
+     "en": "our God",
+     "translit": null
+    },
+    {
+     "he": "אֶחָד",
+     "en": "one",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "shema-1"
+   ],
+   "goals": [
+    "Decode and read Deuteronomy 6:4 aloud, 3 times"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r21"
+   ]
+  },
+  {
+   "id": "r23",
+   "track": "read",
+   "level": "orange",
+   "title": "Zayin and Tet",
+   "letters": [
+    "zayin",
+    "tet"
+   ],
+   "vowels": [],
+   "words": [
+    {
+     "he": "זֶה",
+     "en": "this",
+     "translit": null
+    },
+    {
+     "he": "טוֹב",
+     "en": "good",
+     "translit": null
+    },
+    {
+     "he": "זָהָב",
+     "en": "gold",
+     "translit": null
+    },
+    {
+     "he": "טַל",
+     "en": "dew",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Tell Zayin from Vav/Nun-final; Tet from Tav"
+   ],
+   "estMinutes": 20,
+   "prerequisites": [
+    "r22"
+   ]
+  },
+  {
+   "id": "r24",
+   "track": "read",
+   "level": "orange",
+   "title": "Tsadi, final Tsadi and Qof: the alphabet is done",
+   "letters": [
+    "tsadi",
+    "tsadi-final",
+    "qof"
+   ],
+   "vowels": [],
+   "words": [
+    {
+     "he": "צֶדֶק",
+     "en": "justice",
+     "translit": null
+    },
+    {
+     "he": "אֶרֶץ",
+     "en": "land",
+     "translit": null
+    },
+    {
+     "he": "קוֹל",
+     "en": "voice",
+     "translit": null
+    },
+    {
+     "he": "קָדוֹשׁ",
+     "en": "holy",
+     "translit": null
+    },
+    {
+     "he": "צְדָקָה",
+     "en": "charity; justice",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "All 27 letter shapes recognised",
+    "Pass the 'all letters' check"
+   ],
+   "estMinutes": 30,
+   "prerequisites": [
+    "r23"
+   ]
+  },
+  {
+   "id": "r25",
+   "track": "read",
+   "level": "yellow",
+   "title": "Priestly Blessing, line 2",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "יָאֵר",
+     "en": "may He shine",
+     "translit": null
+    },
+    {
+     "he": "פָּנָיו",
+     "en": "His face",
+     "translit": null
+    },
+    {
+     "he": "אֵלֶיךָ",
+     "en": "toward you",
+     "translit": null
+    },
+    {
+     "he": "וִיחֻנֶּךָּ",
+     "en": "and be gracious to you",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "bless-priestly-2"
+   ],
+   "goals": [
+    "Decode and read Numbers 6:25 aloud, 3 times",
+    "Read a dagesh in the middle of a word (doubled letter)"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r24"
+   ]
+  },
+  {
+   "id": "r26",
+   "track": "read",
+   "level": "yellow",
+   "title": "Priestly Blessing, line 3",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "יִשָּׂא",
+     "en": "may He lift",
+     "translit": null
+    },
+    {
+     "he": "וְיָשֵׂם",
+     "en": "and grant",
+     "translit": null
+    },
+    {
+     "he": "שָׁלוֹם",
+     "en": "peace",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "bless-priestly-3"
+   ],
+   "goals": [
+    "Decode and read Numbers 6:26 aloud, 3 times"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r25"
+   ]
+  },
+  {
+   "id": "r27",
+   "track": "read",
+   "level": "yellow",
+   "title": "The full Priestly Blessing, read straight through",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "בִּרְכַּת כֹּהֲנִים",
+     "en": "Priestly Blessing (title)",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "bless-priestly-1",
+    "bless-priestly-2",
+    "bless-priestly-3"
+   ],
+   "goals": [
+    "Read all three lines unaided",
+    "First timed read: record words per minute"
+   ],
+   "estMinutes": 20,
+   "prerequisites": [
+    "r26"
+   ]
+  },
+  {
+   "id": "r28",
+   "track": "read",
+   "level": "green",
+   "title": "The blessing formula",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "בָּרוּךְ",
+     "en": "blessed",
+     "translit": null
+    },
+    {
+     "he": "אַתָּה",
+     "en": "you",
+     "translit": null
+    },
+    {
+     "he": "אֱלֹהֵינוּ",
+     "en": "our God",
+     "translit": null
+    },
+    {
+     "he": "מֶלֶךְ",
+     "en": "king",
+     "translit": null
+    },
+    {
+     "he": "הָעוֹלָם",
+     "en": "the world",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "bless-formula-1"
+   ],
+   "goals": [
+    "Read the six-word formula 'Baruch atah Adonai Eloheinu melech ha'olam' fluently"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r27"
+   ]
+  },
+  {
+   "id": "r29",
+   "track": "read",
+   "level": "green",
+   "title": "Shva rules: sounded or silent",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "יִשְׁמְרֶךָ",
+     "en": "may He keep you",
+     "translit": null
+    },
+    {
+     "he": "מִשְׁפָּט",
+     "en": "justice",
+     "translit": null
+    },
+    {
+     "he": "תִּשְׁמְעוּ",
+     "en": "you will hear",
+     "translit": null
+    },
+    {
+     "he": "וּבְכָל",
+     "en": "and with all",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Apply the rule: shva after a short vowel closes the syllable; at word start it is sounded"
+   ],
+   "estMinutes": 30,
+   "prerequisites": [
+    "r28"
+   ]
+  },
+  {
+   "id": "r30",
+   "track": "read",
+   "level": "green",
+   "title": "Dagesh, rafe and mappiq",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "בָּרוּךְ",
+     "en": "blessed",
+     "translit": null
+    },
+    {
+     "he": "כָּתַב",
+     "en": "he wrote",
+     "translit": null
+    },
+    {
+     "he": "שְׁמֵהּ",
+     "en": "His name (Aramaic)",
+     "translit": null
+    },
+    {
+     "he": "כֻּלּוֹ",
+     "en": "all of it",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Tell dagesh kal (hard letter) from dagesh chazak (doubled)",
+    "Know mappiq in final He makes it sound"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r29"
+   ]
+  },
+  {
+   "id": "r31",
+   "track": "read",
+   "level": "green",
+   "title": "Stress and the silent letters",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "שָׁלוֹם",
+     "en": "peace",
+     "translit": null
+    },
+    {
+     "he": "בְּרֵאשִׁית",
+     "en": "in the beginning",
+     "translit": null
+    },
+    {
+     "he": "יִשְׂרָאֵל",
+     "en": "Israel",
+     "translit": null
+    },
+    {
+     "he": "אַתָּה",
+     "en": "you",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Place the stress on the last syllable by default",
+    "Know the common exceptions"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r30"
+   ]
+  },
+  {
+   "id": "r32",
+   "track": "read",
+   "level": "blue",
+   "title": "Kamatz katan: when kamatz sounds 'o'",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "כָּל",
+     "en": "all",
+     "translit": null
+    },
+    {
+     "he": "חָכְמָה",
+     "en": "wisdom",
+     "translit": null
+    },
+    {
+     "he": "קָדְשׁוֹ",
+     "en": "His holiness",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "vahavta-1"
+   ],
+   "goals": [
+    "Spot the closed unstressed syllable that turns kamatz into 'o'",
+    "Read Deuteronomy 6:5 (V'ahavta) with it"
+   ],
+   "estMinutes": 30,
+   "prerequisites": [
+    "r31"
+   ]
+  },
+  {
+   "id": "r33",
+   "track": "read",
+   "level": "blue",
+   "title": "Prefix letters: Vav, Bet, Lamed, Mem, Hey",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "וְהָיָה",
+     "en": "and it will be",
+     "translit": null
+    },
+    {
+     "he": "בַּבַּיִת",
+     "en": "in the house",
+     "translit": null
+    },
+    {
+     "he": "לַמֶּלֶךְ",
+     "en": "to the king",
+     "translit": null
+    },
+    {
+     "he": "מֵהָעוֹלָם",
+     "en": "from the world",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Peel off one-letter prefixes before decoding the root"
+   ],
+   "estMinutes": 30,
+   "prerequisites": [
+    "r32"
+   ]
+  },
+  {
+   "id": "r34",
+   "track": "read",
+   "level": "blue",
+   "title": "Final-letter and gershayim / abbreviation marks",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "יהוה",
+     "en": "the Name (unpointed) -> Adonai",
+     "translit": null
+    },
+    {
+     "he": "אדני",
+     "en": "Adonai (unpointed)",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Know how Adonai / Hashem are read when the Name is written",
+    "Recognise abbreviation marks in a siddur"
+   ],
+   "estMinutes": 20,
+   "prerequisites": [
+    "r33"
+   ]
+  },
+  {
+   "id": "r35",
+   "track": "read",
+   "level": "blue",
+   "title": "Reading with no help: unpointed words you already know",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "שלום",
+     "en": "peace",
+     "translit": null
+    },
+    {
+     "he": "שבת",
+     "en": "Sabbath",
+     "translit": null
+    },
+    {
+     "he": "ברוך",
+     "en": "blessed",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Read 10 unpointed familiar words (exploration; not required for synagogue reading)"
+   ],
+   "estMinutes": 20,
+   "prerequisites": [
+    "r34"
+   ]
+  },
+  {
+   "id": "r36",
+   "track": "read",
+   "level": "purple",
+   "title": "Shema in full: line 2 (Baruch shem)",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "בָּרוּךְ",
+     "en": "blessed",
+     "translit": null
+    },
+    {
+     "he": "שֵׁם",
+     "en": "name",
+     "translit": null
+    },
+    {
+     "he": "כְּבוֹד",
+     "en": "glory",
+     "translit": null
+    },
+    {
+     "he": "מַלְכוּתוֹ",
+     "en": "His kingdom",
+     "translit": null
+    },
+    {
+     "he": "לְעוֹלָם",
+     "en": "forever",
+     "translit": null
+    },
+    {
+     "he": "וָעֶד",
+     "en": "and ever",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "shema-1",
+    "shema-2"
+   ],
+   "goals": [
+    "Read the Shema and the line that follows it"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r35"
+   ]
+  },
+  {
+   "id": "r37",
+   "track": "read",
+   "level": "purple",
+   "title": "V'ahavta",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "וְאָהַבְתָּ",
+     "en": "and you shall love",
+     "translit": null
+    },
+    {
+     "he": "לְבָבְךָ",
+     "en": "your heart",
+     "translit": null
+    },
+    {
+     "he": "נַפְשְׁךָ",
+     "en": "your soul",
+     "translit": null
+    },
+    {
+     "he": "מְאֹדֶךָ",
+     "en": "your might",
+     "translit": null
+    },
+    {
+     "he": "וְשִׁנַּנְתָּם",
+     "en": "and you shall teach them",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "vahavta-1",
+    "vahavta-2"
+   ],
+   "goals": [
+    "Read Deuteronomy 6:5-7"
+   ],
+   "estMinutes": 35,
+   "prerequisites": [
+    "r36"
+   ]
+  },
+  {
+   "id": "r38",
+   "track": "read",
+   "level": "purple",
+   "title": "Blessings before and after the Torah reading",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "תּוֹרָה",
+     "en": "Torah",
+     "translit": null
+    },
+    {
+     "he": "בָּחַר",
+     "en": "He chose",
+     "translit": null
+    },
+    {
+     "he": "הָעַמִּים",
+     "en": "the peoples",
+     "translit": null
+    },
+    {
+     "he": "נָתַן",
+     "en": "He gave",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "torah-bless-1",
+    "torah-bless-2"
+   ],
+   "goals": [
+    "Read the aliyah blessings aloud"
+   ],
+   "estMinutes": 30,
+   "prerequisites": [
+    "r37"
+   ]
+  },
+  {
+   "id": "r39",
+   "track": "read",
+   "level": "purple",
+   "title": "Modeh Ani and the morning words",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "מוֹדֶה",
+     "en": "grateful (m.)",
+     "translit": null
+    },
+    {
+     "he": "מוֹדָה",
+     "en": "grateful (f.)",
+     "translit": null
+    },
+    {
+     "he": "נִשְׁמָתִי",
+     "en": "my soul",
+     "translit": null
+    },
+    {
+     "he": "בְּחֶמְלָה",
+     "en": "with compassion",
+     "translit": null
+    },
+    {
+     "he": "אֱמוּנָתֶךָ",
+     "en": "your faithfulness",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "modeh-ani-1"
+   ],
+   "goals": [
+    "Read Modeh Ani; unlocks the morning prompt in the calendar"
+   ],
+   "estMinutes": 20,
+   "prerequisites": [
+    "r38"
+   ]
+  },
+  {
+   "id": "r40",
+   "track": "read",
+   "level": "purple",
+   "title": "Mah Tovu",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "מַה",
+     "en": "how",
+     "translit": null
+    },
+    {
+     "he": "טֹּבוּ",
+     "en": "good are",
+     "translit": null
+    },
+    {
+     "he": "אֹהָלֶיךָ",
+     "en": "your tents",
+     "translit": null
+    },
+    {
+     "he": "יַעֲקֹב",
+     "en": "Jacob",
+     "translit": null
+    },
+    {
+     "he": "מִשְׁכְּנֹתֶיךָ",
+     "en": "your dwellings",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "mah-tovu-1"
+   ],
+   "goals": [
+    "Read Numbers 24:5 aloud"
+   ],
+   "estMinutes": 20,
+   "prerequisites": [
+    "r39"
+   ]
+  },
+  {
+   "id": "r41",
+   "track": "read",
+   "level": "purple",
+   "title": "Kiddush on Friday night: the wine blessing",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "בּוֹרֵא",
+     "en": "creator",
+     "translit": null
+    },
+    {
+     "he": "פְּרִי",
+     "en": "fruit of",
+     "translit": null
+    },
+    {
+     "he": "הַגָּפֶן",
+     "en": "the vine",
+     "translit": null
+    },
+    {
+     "he": "יַיִן",
+     "en": "wine",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "kiddush-wine-1",
+    "bless-formula-1"
+   ],
+   "goals": [
+    "Read the blessing over wine"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r40"
+   ]
+  },
+  {
+   "id": "r42",
+   "track": "read",
+   "level": "brown",
+   "title": "Avot: the ancestors",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "אֱלֹהֵי",
+     "en": "God of",
+     "translit": null
+    },
+    {
+     "he": "אַבְרָהָם",
+     "en": "Abraham",
+     "translit": null
+    },
+    {
+     "he": "יִצְחָק",
+     "en": "Isaac",
+     "translit": null
+    },
+    {
+     "he": "יַעֲקֹב",
+     "en": "Jacob",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "avot-1"
+   ],
+   "goals": [
+    "Read the opening of the Amidah"
+   ],
+   "estMinutes": 30,
+   "prerequisites": [
+    "r41"
+   ]
+  },
+  {
+   "id": "r43",
+   "track": "read",
+   "level": "brown",
+   "title": "Mi Chamocha",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "מִי",
+     "en": "who",
+     "translit": null
+    },
+    {
+     "he": "כָּמֹכָה",
+     "en": "like you",
+     "translit": null
+    },
+    {
+     "he": "נֶאְדָּר",
+     "en": "majestic",
+     "translit": null
+    },
+    {
+     "he": "בַּקֹּדֶשׁ",
+     "en": "in holiness",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "mi-chamocha-1"
+   ],
+   "goals": [
+    "Read the Song at the Sea verse"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r42"
+   ]
+  },
+  {
+   "id": "r44",
+   "track": "read",
+   "level": "brown",
+   "title": "Aleinu",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "עָלֵינוּ",
+     "en": "it is upon us",
+     "translit": null
+    },
+    {
+     "he": "לְשַׁבֵּחַ",
+     "en": "to praise",
+     "translit": null
+    },
+    {
+     "he": "לַאֲדוֹן",
+     "en": "to the Lord",
+     "translit": null
+    },
+    {
+     "he": "הַכֹּל",
+     "en": "the all",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "aleinu-1"
+   ],
+   "goals": [
+    "Read the first paragraph opening"
+   ],
+   "estMinutes": 30,
+   "prerequisites": [
+    "r43"
+   ]
+  },
+  {
+   "id": "r45",
+   "track": "read",
+   "level": "brown",
+   "title": "Kaddish",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "יִתְגַּדַּל",
+     "en": "may it be magnified",
+     "translit": null
+    },
+    {
+     "he": "וְיִתְקַדַּשׁ",
+     "en": "and sanctified",
+     "translit": null
+    },
+    {
+     "he": "שְׁמֵהּ",
+     "en": "His name",
+     "translit": null
+    },
+    {
+     "he": "רַבָּא",
+     "en": "great",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "kaddish-1"
+   ],
+   "goals": [
+    "Read the first lines of the Kaddish (Aramaic)"
+   ],
+   "estMinutes": 30,
+   "prerequisites": [
+    "r44"
+   ]
+  },
+  {
+   "id": "r46",
+   "track": "read",
+   "level": "brown",
+   "title": "Adon Olam",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "אֲדוֹן",
+     "en": "lord of",
+     "translit": null
+    },
+    {
+     "he": "עוֹלָם",
+     "en": "the world",
+     "translit": null
+    },
+    {
+     "he": "מָלַךְ",
+     "en": "He reigned",
+     "translit": null
+    },
+    {
+     "he": "בְּטֶרֶם",
+     "en": "before",
+     "translit": null
+    },
+    {
+     "he": "יְצִיר",
+     "en": "creature",
+     "translit": null
+    },
+    {
+     "he": "נִבְרָא",
+     "en": "was created",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "adon-olam-1"
+   ],
+   "goals": [
+    "Read the first lines"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r45"
+   ]
+  },
+  {
+   "id": "r47",
+   "track": "read",
+   "level": "brown",
+   "title": "Birkat Hamazon: the opening blessing",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "הַזָּן",
+     "en": "who feeds",
+     "translit": null
+    },
+    {
+     "he": "כֻּלּוֹ",
+     "en": "all of it",
+     "translit": null
+    },
+    {
+     "he": "בְּטוּבוֹ",
+     "en": "in His goodness",
+     "translit": null
+    },
+    {
+     "he": "חֵן",
+     "en": "grace",
+     "translit": null
+    },
+    {
+     "he": "חֶסֶד",
+     "en": "kindness",
+     "translit": null
+    },
+    {
+     "he": "וּבְרַחֲמִים",
+     "en": "and with mercy",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "birkat-hamazon-1"
+   ],
+   "goals": [
+    "Read the opening blessing of the grace after meals"
+   ],
+   "estMinutes": 30,
+   "prerequisites": [
+    "r46"
+   ]
+  },
+  {
+   "id": "r48",
+   "track": "read",
+   "level": "grey",
+   "title": "Timed reading 1: Priestly Blessing + Shema",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "בִּרְכַּת כֹּהֲנִים",
+     "en": "Priestly Blessing (title)",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "bless-priestly-1",
+    "bless-priestly-2",
+    "bless-priestly-3",
+    "shema-1",
+    "shema-2"
+   ],
+   "goals": [
+    "Read the five lines in the target time",
+    "Record words per minute; see belts.json"
+   ],
+   "estMinutes": 20,
+   "prerequisites": [
+    "r47"
+   ]
+  },
+  {
+   "id": "r49",
+   "track": "read",
+   "level": "grey",
+   "title": "Timed reading 2: V'ahavta and the blessing formula",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "וְאָהַבְתָּ",
+     "en": "and you shall love",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "vahavta-1",
+    "vahavta-2",
+    "bless-formula-1"
+   ],
+   "goals": [
+    "Read at the grey-belt proposed rate without errors"
+   ],
+   "estMinutes": 20,
+   "prerequisites": [
+    "r48"
+   ]
+  },
+  {
+   "id": "r50",
+   "track": "read",
+   "level": "grey",
+   "title": "Timed reading 3: new siddur page you have never seen",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "תְּפִלָּה",
+     "en": "prayer",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "avot-1",
+    "aleinu-1",
+    "kaddish-1"
+   ],
+   "goals": [
+    "Read an unseen pointed page aloud; note the speed and the mistakes"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "r49"
+   ]
+  },
+  {
+   "id": "r51",
+   "track": "read",
+   "level": "grey",
+   "title": "Grey-belt assessment",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "סִדּוּר",
+     "en": "prayer book",
+     "translit": null
+    }
+   ],
+   "prayerLines": [
+    "bless-priestly-1",
+    "shema-1",
+    "aleinu-1",
+    "adon-olam-1"
+   ],
+   "goals": [
+    "Pass the grey-belt gate in belts.json"
+   ],
+   "estMinutes": 30,
+   "prerequisites": [
+    "r50"
+   ]
+  },
+  {
+   "id": "il01",
+   "track": "israel",
+   "level": "A1",
+   "title": "Hello, thanks, sorry",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "שָׁלוֹם",
+     "en": "hello/peace",
+     "translit": null
+    },
+    {
+     "he": "תּוֹדָה",
+     "en": "thanks",
+     "translit": null
+    },
+    {
+     "he": "בְּבַקָּשָׁה",
+     "en": "please; you're welcome",
+     "translit": null
+    },
+    {
+     "he": "סְלִיחָה",
+     "en": "excuse me; sorry",
+     "translit": null
+    },
+    {
+     "he": "כֵּן",
+     "en": "yes",
+     "translit": null
+    },
+    {
+     "he": "לֹא",
+     "en": "no",
+     "translit": null
+    },
+    {
+     "he": "בֹּקֶר טוֹב",
+     "en": "good morning",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Greet and thank in Hebrew without switching to English"
+   ],
+   "estMinutes": 20,
+   "prerequisites": []
+  },
+  {
+   "id": "il02",
+   "track": "israel",
+   "level": "A1",
+   "title": "Fillers that make you sound local",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "יָאללָה",
+     "en": "come on; let's go",
+     "translit": null,
+     "note": "Slang; spelled יאללה, pointing not standardised"
+    },
+    {
+     "he": "נוּ",
+     "en": "well? so?",
+     "translit": null
+    },
+    {
+     "he": "סַבָּבָּה",
+     "en": "cool; fine",
+     "translit": null,
+     "note": "Slang; unpointed form סבבה"
+    },
+    {
+     "he": "בְּסֵדֶר",
+     "en": "OK; all right",
+     "translit": null
+    },
+    {
+     "he": "אַחְלָה",
+     "en": "great",
+     "translit": null,
+     "note": "Slang; unpointed אחלה"
+    },
+    {
+     "he": "וַואלָה",
+     "en": "really? wow",
+     "translit": null,
+     "note": "Slang; unpointed וואלה"
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Use 5 fillers at the right moments",
+    "Hear stress and rhythm rather than read letters"
+   ],
+   "estMinutes": 20,
+   "prerequisites": [
+    "il01"
+   ]
+  },
+  {
+   "id": "il03",
+   "track": "israel",
+   "level": "A1",
+   "title": "Introducing yourself",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "שְׁמִי",
+     "en": "my name is",
+     "translit": null
+    },
+    {
+     "he": "מַה שְׁמֶךָ",
+     "en": "what is your name (to a man)",
+     "translit": null
+    },
+    {
+     "he": "מַה שְׁמֵךְ",
+     "en": "what is your name (to a woman)",
+     "translit": null
+    },
+    {
+     "he": "אֲנִי מִ...",
+     "en": "I am from...",
+     "translit": null
+    },
+    {
+     "he": "נָעִים מְאֹד",
+     "en": "nice to meet you",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Say your name, where you are from and ask the same"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "il02"
+   ]
+  },
+  {
+   "id": "il04",
+   "track": "israel",
+   "level": "A1",
+   "title": "Numbers 1-10",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "אַחַת",
+     "en": "one (f., counting)",
+     "translit": null
+    },
+    {
+     "he": "שְׁתַּיִם",
+     "en": "two (f.)",
+     "translit": null
+    },
+    {
+     "he": "שָׁלוֹשׁ",
+     "en": "three (f.)",
+     "translit": null
+    },
+    {
+     "he": "אַרְבַּע",
+     "en": "four (f.)",
+     "translit": null
+    },
+    {
+     "he": "חָמֵשׁ",
+     "en": "five (f.)",
+     "translit": null
+    },
+    {
+     "he": "שֵׁשׁ",
+     "en": "six",
+     "translit": null
+    },
+    {
+     "he": "שֶׁבַע",
+     "en": "seven (f.)",
+     "translit": null
+    },
+    {
+     "he": "שְׁמוֹנֶה",
+     "en": "eight",
+     "translit": null
+    },
+    {
+     "he": "תֵּשַׁע",
+     "en": "nine (f.)",
+     "translit": null
+    },
+    {
+     "he": "עֶשֶׂר",
+     "en": "ten (f.)",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Count 1-10 and understand spoken prices"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "il03"
+   ]
+  },
+  {
+   "id": "il05",
+   "track": "israel",
+   "level": "A1",
+   "title": "Numbers 11-100 and shekel prices",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "עֶשְׂרִים",
+     "en": "twenty",
+     "translit": null
+    },
+    {
+     "he": "שְׁלוֹשִׁים",
+     "en": "thirty",
+     "translit": null
+    },
+    {
+     "he": "מֵאָה",
+     "en": "hundred",
+     "translit": null
+    },
+    {
+     "he": "שֶׁקֶל",
+     "en": "shekel",
+     "translit": null
+    },
+    {
+     "he": "כַּמָּה",
+     "en": "how much",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Say and understand prices up to 100 shekels"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "il04"
+   ]
+  },
+  {
+   "id": "il06",
+   "track": "israel",
+   "level": "A1",
+   "title": "Cafe: ordering a coffee",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "אֶפְשָׁר",
+     "en": "may I; is it possible",
+     "translit": null
+    },
+    {
+     "he": "קָפֶה",
+     "en": "coffee",
+     "translit": null
+    },
+    {
+     "he": "הָפוּךְ",
+     "en": "latte-style coffee",
+     "translit": null
+    },
+    {
+     "he": "מַיִם",
+     "en": "water",
+     "translit": null
+    },
+    {
+     "he": "לְהַזְמִין",
+     "en": "to order",
+     "translit": null
+    },
+    {
+     "he": "חֶשְׁבּוֹן",
+     "en": "the bill",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Order a drink politely and ask for the bill"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "il05"
+   ]
+  },
+  {
+   "id": "il07",
+   "track": "israel",
+   "level": "A1",
+   "title": "Cafe and menu words",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "אֹכֶל",
+     "en": "food",
+     "translit": null
+    },
+    {
+     "he": "לֶחֶם",
+     "en": "bread",
+     "translit": null
+    },
+    {
+     "he": "גְּבִינָה",
+     "en": "cheese",
+     "translit": null
+    },
+    {
+     "he": "בֵּיצָה",
+     "en": "egg",
+     "translit": null
+    },
+    {
+     "he": "סָלָט",
+     "en": "salad",
+     "translit": null
+    },
+    {
+     "he": "תֵּה",
+     "en": "tea",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Read a short menu by ear and by sight"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "il06"
+   ]
+  },
+  {
+   "id": "il08",
+   "track": "israel",
+   "level": "A1",
+   "title": "Shop: asking and paying",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "כַּמָּה זֶה עוֹלֶה",
+     "en": "how much does this cost",
+     "translit": null
+    },
+    {
+     "he": "יָקָר",
+     "en": "expensive",
+     "translit": null
+    },
+    {
+     "he": "זוֹל",
+     "en": "cheap",
+     "translit": null
+    },
+    {
+     "he": "אֲנִי רוֹצֶה",
+     "en": "I want (m.)",
+     "translit": null
+    },
+    {
+     "he": "יֵשׁ",
+     "en": "there is",
+     "translit": null
+    },
+    {
+     "he": "אֵין",
+     "en": "there isn't",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Ask the price, ask if something exists, say it is too expensive"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "il07"
+   ]
+  },
+  {
+   "id": "il09",
+   "track": "israel",
+   "level": "A1",
+   "title": "Paying, change and bags",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "מְזֻמָּן",
+     "en": "cash",
+     "translit": null
+    },
+    {
+     "he": "כַּרְטִיס אַשְׁרַאי",
+     "en": "credit card",
+     "translit": null
+    },
+    {
+     "he": "עוֹדֶף",
+     "en": "change",
+     "translit": null
+    },
+    {
+     "he": "שַׂקִּית",
+     "en": "bag",
+     "translit": null
+    },
+    {
+     "he": "קַבָּלָה",
+     "en": "receipt",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Handle the checkout exchange"
+   ],
+   "estMinutes": 20,
+   "prerequisites": [
+    "il08"
+   ]
+  },
+  {
+   "id": "il10",
+   "track": "israel",
+   "level": "A2",
+   "title": "Taxi and public transport",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "מוֹנִית",
+     "en": "taxi",
+     "translit": null
+    },
+    {
+     "he": "אוֹטוֹבּוּס",
+     "en": "bus",
+     "translit": null
+    },
+    {
+     "he": "רַכֶּבֶת",
+     "en": "train",
+     "translit": null
+    },
+    {
+     "he": "תַּחֲנָה",
+     "en": "station; stop",
+     "translit": null
+    },
+    {
+     "he": "כַּרְטִיס",
+     "en": "ticket",
+     "translit": null
+    },
+    {
+     "he": "נְסִיעָה",
+     "en": "ride; trip",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Say where you are going and ask the price or the stop"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "il09"
+   ]
+  },
+  {
+   "id": "il11",
+   "track": "israel",
+   "level": "A2",
+   "title": "Directions",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "יָמִינָה",
+     "en": "to the right",
+     "translit": null
+    },
+    {
+     "he": "שְׂמֹאלָה",
+     "en": "to the left",
+     "translit": null
+    },
+    {
+     "he": "יָשָׁר",
+     "en": "straight",
+     "translit": null
+    },
+    {
+     "he": "קָרוֹב",
+     "en": "near",
+     "translit": null
+    },
+    {
+     "he": "רָחוֹק",
+     "en": "far",
+     "translit": null
+    },
+    {
+     "he": "אֵיפֹה",
+     "en": "where",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Ask for and understand directions",
+    "Give a taxi driver a street and a number"
+   ],
+   "estMinutes": 30,
+   "prerequisites": [
+    "il10"
+   ]
+  },
+  {
+   "id": "il12",
+   "track": "israel",
+   "level": "A2",
+   "title": "Days, time and dates",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "הַיּוֹם",
+     "en": "today",
+     "translit": null
+    },
+    {
+     "he": "מָחָר",
+     "en": "tomorrow",
+     "translit": null
+    },
+    {
+     "he": "אֶתְמוֹל",
+     "en": "yesterday",
+     "translit": null
+    },
+    {
+     "he": "שָׁעָה",
+     "en": "hour; time",
+     "translit": null
+    },
+    {
+     "he": "יוֹם רִאשׁוֹן",
+     "en": "Sunday (first day)",
+     "translit": null
+    },
+    {
+     "he": "שַׁבָּת",
+     "en": "Saturday; Sabbath",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Tell the time and arrange to meet"
+   ],
+   "estMinutes": 30,
+   "prerequisites": [
+    "il11"
+   ]
+  },
+  {
+   "id": "il13",
+   "track": "israel",
+   "level": "A2",
+   "title": "Small talk: how are you",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "מַה נִּשְׁמָע",
+     "en": "what's up; how are you",
+     "translit": null
+    },
+    {
+     "he": "הַכֹּל בְּסֵדֶר",
+     "en": "everything's fine",
+     "translit": null
+    },
+    {
+     "he": "מַה קּוֹרֶה",
+     "en": "what's happening",
+     "translit": null
+    },
+    {
+     "he": "בְּרוּךְ הַשֵּׁם",
+     "en": "thank God (common reply)",
+     "translit": null
+    },
+    {
+     "he": "לֹא רַע",
+     "en": "not bad",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Open and keep a 3-turn chat"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "il12"
+   ]
+  },
+  {
+   "id": "il14",
+   "track": "israel",
+   "level": "A2",
+   "title": "Family and who you are",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "מִשְׁפָּחָה",
+     "en": "family",
+     "translit": null
+    },
+    {
+     "he": "אָח",
+     "en": "brother",
+     "translit": null
+    },
+    {
+     "he": "אָחוֹת",
+     "en": "sister",
+     "translit": null
+    },
+    {
+     "he": "יֶלֶד",
+     "en": "boy; child",
+     "translit": null
+    },
+    {
+     "he": "יַלְדָּה",
+     "en": "girl",
+     "translit": null
+    },
+    {
+     "he": "נָשׂוּי",
+     "en": "married (m.)",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Describe your family in 5 sentences"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "il13"
+   ]
+  },
+  {
+   "id": "il15",
+   "track": "israel",
+   "level": "A2",
+   "title": "Weather and seasons",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "חַם",
+     "en": "hot",
+     "translit": null
+    },
+    {
+     "he": "קַר",
+     "en": "cold",
+     "translit": null
+    },
+    {
+     "he": "גֶּשֶׁם",
+     "en": "rain",
+     "translit": null
+    },
+    {
+     "he": "שֶׁמֶשׁ",
+     "en": "sun",
+     "translit": null
+    },
+    {
+     "he": "מֶזֶג אֲוִיר",
+     "en": "weather",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Chat about the weather"
+   ],
+   "estMinutes": 20,
+   "prerequisites": [
+    "il14"
+   ]
+  },
+  {
+   "id": "il16",
+   "track": "israel",
+   "level": "A2",
+   "title": "Present tense: the verb that does the work",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "אֲנִי הוֹלֵךְ",
+     "en": "I go (m.)",
+     "translit": null
+    },
+    {
+     "he": "אֲנִי אוֹכֵל",
+     "en": "I eat (m.)",
+     "translit": null
+    },
+    {
+     "he": "אֲנִי לוֹמֵד",
+     "en": "I study (m.)",
+     "translit": null
+    },
+    {
+     "he": "אֲנִי כּוֹתֵב",
+     "en": "I write (m.)",
+     "translit": null
+    },
+    {
+     "he": "אֲנִי מְדַבֵּר",
+     "en": "I speak (m.)",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Conjugate five pa'al/pi'el verbs in the present (m./f./pl.)"
+   ],
+   "estMinutes": 35,
+   "prerequisites": [
+    "il15"
+   ]
+  },
+  {
+   "id": "il17",
+   "track": "israel",
+   "level": "A2",
+   "title": "Hotel and booking",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "חֶדֶר",
+     "en": "room",
+     "translit": null
+    },
+    {
+     "he": "הַזְמָנָה",
+     "en": "reservation",
+     "translit": null
+    },
+    {
+     "he": "לַיְלָה",
+     "en": "night",
+     "translit": null
+    },
+    {
+     "he": "מַפְתֵּחַ",
+     "en": "key",
+     "translit": null
+    },
+    {
+     "he": "אַרוּחַת בֹּקֶר",
+     "en": "breakfast",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Check in and ask about breakfast time"
+   ],
+   "estMinutes": 25,
+   "prerequisites": [
+    "il16"
+   ]
+  },
+  {
+   "id": "il18",
+   "track": "israel",
+   "level": "A2",
+   "title": "Help, health and not understanding",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "אֲנִי לֹא מֵבִין",
+     "en": "I don't understand (m.)",
+     "translit": null
+    },
+    {
+     "he": "אֶפְשָׁר לְדַבֵּר לְאַט",
+     "en": "can you speak slowly",
+     "translit": null
+    },
+    {
+     "he": "תַּגִּידוּ בְּאַנְגְּלִית",
+     "en": "say it in English",
+     "translit": null
+    },
+    {
+     "he": "רוֹפֵא",
+     "en": "doctor",
+     "translit": null
+    },
+    {
+     "he": "בֵּית מֶרְקַחַת",
+     "en": "pharmacy",
+     "translit": null
+    },
+    {
+     "he": "עֶזְרָה",
+     "en": "help",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Repair a conversation instead of switching language"
+   ],
+   "estMinutes": 30,
+   "prerequisites": [
+    "il17"
+   ]
+  },
+  {
+   "id": "il19",
+   "track": "israel",
+   "level": "B1",
+   "title": "Past tense (A2/B1 bridge)",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "הָלַכְתִּי",
+     "en": "I went",
+     "translit": null
+    },
+    {
+     "he": "אָכַלְתִּי",
+     "en": "I ate",
+     "translit": null
+    },
+    {
+     "he": "רָאִיתִי",
+     "en": "I saw",
+     "translit": null
+    },
+    {
+     "he": "אָמַרְתִּי",
+     "en": "I said",
+     "translit": null
+    },
+    {
+     "he": "הָיָה",
+     "en": "there was; he was",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Tell what you did yesterday in 5 sentences"
+   ],
+   "estMinutes": 35,
+   "prerequisites": [
+    "il18"
+   ]
+  },
+  {
+   "id": "il20",
+   "track": "israel",
+   "level": "B1",
+   "title": "Future tense and plans",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "אֲנִי אֵלֵךְ",
+     "en": "I will go",
+     "translit": null
+    },
+    {
+     "he": "אֲנִי אֹכַל",
+     "en": "I will eat",
+     "translit": null
+    },
+    {
+     "he": "נִתְרָאֶה",
+     "en": "we will see each other",
+     "translit": null
+    },
+    {
+     "he": "אוּלַי",
+     "en": "maybe",
+     "translit": null
+    },
+    {
+     "he": "בְּעוֹד שָׁבוּעַ",
+     "en": "in a week",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Make and confirm a plan for next week"
+   ],
+   "estMinutes": 35,
+   "prerequisites": [
+    "il19"
+   ]
+  },
+  {
+   "id": "il21",
+   "track": "israel",
+   "level": "B1",
+   "title": "Opinions and preferences",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "אֲנִי חוֹשֵׁב שֶׁ...",
+     "en": "I think that...",
+     "translit": null
+    },
+    {
+     "he": "לְדַעְתִּי",
+     "en": "in my opinion",
+     "translit": null
+    },
+    {
+     "he": "אֲנִי מַעֲדִיף",
+     "en": "I prefer (m.)",
+     "translit": null
+    },
+    {
+     "he": "מַסְכִּים",
+     "en": "I agree (m.)",
+     "translit": null
+    },
+    {
+     "he": "לֹא מַסְכִּים",
+     "en": "I disagree (m.)",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Give a reason and disagree politely"
+   ],
+   "estMinutes": 30,
+   "prerequisites": [
+    "il20"
+   ]
+  },
+  {
+   "id": "il22",
+   "track": "israel",
+   "level": "B1",
+   "title": "Phone, WhatsApp and appointments",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "הַלּוֹ",
+     "en": "hello (on the phone)",
+     "translit": null
+    },
+    {
+     "he": "לְהִתְקַשֵּׁר",
+     "en": "to get in touch",
+     "translit": null
+    },
+    {
+     "he": "פְּגִישָׁה",
+     "en": "meeting",
+     "translit": null
+    },
+    {
+     "he": "לְקַבֵּעַ",
+     "en": "to set (an appointment)",
+     "translit": null
+    },
+    {
+     "he": "הוֹדָעָה",
+     "en": "message",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Set up and move an appointment by phone or WhatsApp"
+   ],
+   "estMinutes": 30,
+   "prerequisites": [
+    "il21"
+   ]
+  },
+  {
+   "id": "il23",
+   "track": "israel",
+   "level": "B1",
+   "title": "Sound less like an outsider: pronunciation markers",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "רֹאשׁ",
+     "en": "head (uvular vs tapped resh)",
+     "translit": null
+    },
+    {
+     "he": "חַיִּים",
+     "en": "life (chet, not kaf)",
+     "translit": null
+    },
+    {
+     "he": "מַה שְׁלוֹמְךָ",
+     "en": "how are you (stress on last syllable)",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Run the lane 3 foreigner-marker drills for resh, chet and stress"
+   ],
+   "estMinutes": 30,
+   "prerequisites": [
+    "il22"
+   ]
+  },
+  {
+   "id": "il24",
+   "track": "israel",
+   "level": "B1",
+   "title": "Capstone: an A2-B1 conversation",
+   "letters": [],
+   "vowels": [],
+   "words": [
+    {
+     "he": "מַה קָרָה",
+     "en": "what happened",
+     "translit": null
+    },
+    {
+     "he": "תַּסְבִּיר לִי",
+     "en": "explain it to me",
+     "translit": null
+    },
+    {
+     "he": "בּוֹא נַחֲלִיט",
+     "en": "let's decide",
+     "translit": null
+    }
+   ],
+   "prayerLines": [],
+   "goals": [
+    "Hold a 5-minute conversation covering greetings, a purchase, directions and a plan"
+   ],
+   "estMinutes": 40,
+   "prerequisites": [
+    "il23"
+   ]
+  }
+ ]
+}

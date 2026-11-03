@@ -1,0 +1,401 @@
+{
+ "version": 1,
+ "status": "pointing recalled by an AI agent; NOT checked against a printed text or native speaker",
+ "glossPolicy": "English glosses are original wording, not a published translation",
+ "morning": [
+  {
+   "id": "m01",
+   "he": "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם, שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה, רַבָּה אֱמוּנָתֶךָ.",
+   "en": "I give thanks before You, living and enduring King, for returning my soul to me with compassion; great is Your faithfulness.",
+   "reflect": "Name one thing you are thankful to wake up to.",
+   "source": "Traditional morning liturgy (Modeh Ani); anonymous medieval text, public domain; verify against lane 5 registry",
+   "unlock": "r39",
+   "status": "transcribed-needs-check",
+   "heFemale": "מוֹדָה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם, שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה, רַבָּה אֱמוּנָתֶךָ.",
+   "unlockNote": "Shown as transliteration-free audio card until lesson r39 (Modeh Ani) is decoded."
+  },
+  {
+   "id": "m02",
+   "he": "זֶה הַיּוֹם עָשָׂה יְהוָה, נָגִילָה וְנִשְׂמְחָה בוֹ.",
+   "en": "This is the day the Eternal made; let us rejoice and be glad in it.",
+   "reflect": "What is one thing you want to enjoy today?",
+   "source": "Psalm 118:24 (Biblical Hebrew, public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "m03",
+   "he": "לִמְנוֹת יָמֵינוּ כֵּן הוֹדַע, וְנָבִא לְבַב חָכְמָה.",
+   "en": "Teach us to count our days so that we may gain a wise heart.",
+   "reflect": "What one thing will matter by tonight?",
+   "source": "Psalm 90:12 (public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "m04",
+   "he": "יְהוָה, בֹּקֶר תִּשְׁמַע קוֹלִי.",
+   "en": "Eternal One, in the morning You hear my voice.",
+   "reflect": "What do you want to say out loud this morning?",
+   "source": "Psalm 5:4 (public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "m05",
+   "he": "טוֹב לְהֹדוֹת לַיהוָה, וּלְזַמֵּר לְשִׁמְךָ עֶלְיוֹן.",
+   "en": "It is good to give thanks to the Eternal and to sing to Your name.",
+   "reflect": "Sing or hum one line before you leave the house.",
+   "source": "Psalm 92:2 (public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "m06",
+   "he": "הַשְׁמִיעֵנִי בַבֹּקֶר חַסְדֶּךָ.",
+   "en": "Let me hear Your kindness in the morning.",
+   "reflect": "Where will you look for kindness today?",
+   "source": "Psalm 143:8 (public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "m07",
+   "he": "וְלַבֹּקֶר רִנָּה.",
+   "en": "...and with the morning, a ringing joy.",
+   "reflect": "What would a good morning sound like?",
+   "source": "Psalm 30:6 (public domain, partial verse)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "m08",
+   "he": "חֲדָשִׁים לַבְּקָרִים, רַבָּה אֱמוּנָתֶךָ.",
+   "en": "New every morning; great is Your faithfulness.",
+   "reflect": "What is new today, even if small?",
+   "source": "Lamentations 3:23 (public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "m09",
+   "he": "עֲשׂוֹת מִשְׁפָּט וְאַהֲבַת חֶסֶד וְהַצְנֵעַ לֶכֶת עִם אֱלֹהֶיךָ.",
+   "en": "To do justice, to love kindness, and to walk humbly with your God.",
+   "reflect": "Which of the three will you practice first today?",
+   "source": "Micah 6:8 (public domain, partial verse)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "m10",
+   "he": "סוּר מֵרָע וַעֲשֵׂה טוֹב, בַּקֵּשׁ שָׁלוֹם וְרָדְפֵהוּ.",
+   "en": "Turn from evil and do good; seek peace and pursue it.",
+   "reflect": "Who could you make peace with today?",
+   "source": "Psalm 34:15 (public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "m11",
+   "he": "בְּכָל דְּרָכֶיךָ דָעֵהוּ, וְהוּא יְיַשֵּׁר אֹרְחֹתֶיךָ.",
+   "en": "In all your ways know Him, and He will make your paths straight.",
+   "reflect": "What path are you on this week?",
+   "source": "Proverbs 3:6 (public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "m12",
+   "he": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ.",
+   "en": "May the Eternal bless you and keep you.",
+   "reflect": "Whisper this blessing to someone or to yourself.",
+   "source": "Numbers 6:24 (public domain)",
+   "unlock": "r15",
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "m13",
+   "he": "הוֹדוּ לַיהוָה כִּי טוֹב, כִּי לְעוֹלָם חַסְדּוֹ.",
+   "en": "Give thanks to the Eternal, for He is good; His kindness is forever.",
+   "reflect": "Write down three thank-yous.",
+   "source": "Psalm 118:1 (public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "m14",
+   "he": "וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר, וַיְהִי אוֹר.",
+   "en": "God said, 'Let there be light,' and there was light.",
+   "reflect": "Open a window or turn on a light on purpose and notice it.",
+   "source": "Genesis 1:3 (public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "m15",
+   "he": "עִבְדוּ אֶת יְהוָה בְּשִׂמְחָה.",
+   "en": "Serve the Eternal with gladness.",
+   "reflect": "How can the work in front of you be done gladly?",
+   "source": "Psalm 100:2 (public domain, partial verse)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  }
+ ],
+ "evening": [
+  {
+   "id": "e01",
+   "he": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד.",
+   "en": "Hear, O Israel: the Eternal is our God, the Eternal is One.",
+   "reflect": "Say it slowly once, covering your eyes if you wish.",
+   "source": "Deuteronomy 6:4 (public domain)",
+   "unlock": "r22",
+   "status": "transcribed-needs-check",
+   "unlockNote": "Unlocks after the Shema is decoded (lesson r22); the night-time Shema prompt."
+  },
+  {
+   "id": "e02",
+   "he": "בְּשָׁלוֹם יַחְדָּו אֶשְׁכְּבָה וְאִישָׁן.",
+   "en": "In peace I will lie down and sleep.",
+   "reflect": "What can you put down before bed?",
+   "source": "Psalm 4:9 (public domain, partial verse)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "e03",
+   "he": "הִנֵּה לֹא יָנוּם וְלֹא יִישָׁן שׁוֹמֵר יִשְׂרָאֵל.",
+   "en": "Behold, the Guardian of Israel neither slumbers nor sleeps.",
+   "reflect": "What are you handing over for the night?",
+   "source": "Psalm 121:4 (public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "e04",
+   "he": "יְהוָה יִשְׁמָר צֵאתְךָ וּבוֹאֶךָ מֵעַתָּה וְעַד עוֹלָם.",
+   "en": "The Eternal will guard your going out and your coming in, now and forever.",
+   "reflect": "Where did you go today, and who did you meet?",
+   "source": "Psalm 121:8 (public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "e05",
+   "he": "יֹשֵׁב בְּסֵתֶר עֶלְיוֹן, בְּצֵל שַׁדַּי יִתְלוֹנָן.",
+   "en": "One who dwells in the shelter of the Most High abides in the shadow of the Almighty.",
+   "reflect": "Where did you feel safe today?",
+   "source": "Psalm 91:1 (public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "e06",
+   "he": "לְהַגִּיד בַּבֹּקֶר חַסְדֶּךָ, וֶאֱמוּנָתְךָ בַּלֵּילוֹת.",
+   "en": "To tell of Your kindness in the morning and Your faithfulness in the nights.",
+   "reflect": "Name one kindness you saw today.",
+   "source": "Psalm 92:3 (public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "e07",
+   "he": "וַיְהִי עֶרֶב וַיְהִי בֹקֶר, יוֹם אֶחָד.",
+   "en": "There was evening and there was morning, one day.",
+   "reflect": "What is finished? What carries over?",
+   "source": "Genesis 1:5 (public domain, partial verse)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "e08",
+   "he": "כִּי אֶרְאֶה שָׁמֶיךָ מַעֲשֵׂה אֶצְבְּעֹתֶיךָ, יָרֵחַ וְכוֹכָבִים אֲשֶׁר כּוֹנָנְתָּה.",
+   "en": "When I see Your heavens, the work of Your fingers, the moon and the stars You set in place...",
+   "reflect": "Step outside and look up for one minute.",
+   "source": "Psalm 8:4 (public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "e09",
+   "he": "הַשָּׁמַיִם מְסַפְּרִים כְּבוֹד אֵל.",
+   "en": "The heavens tell the glory of God.",
+   "reflect": "What did you notice in the sky or outdoors today?",
+   "source": "Psalm 19:2 (public domain, partial verse)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "e10",
+   "he": "גַּם כִּי אֵלֵךְ בְּגֵיא צַלְמָוֶת, לֹא אִירָא רָע, כִּי אַתָּה עִמָּדִי.",
+   "en": "Even if I walk through the valley of deepest darkness, I fear no evil, for You are with me.",
+   "reflect": "What are you worried about, and what helps?",
+   "source": "Psalm 23:4 (public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "e11",
+   "he": "אֲנִי שָׁכַבְתִּי וָאִישָׁנָה, הֱקִיצוֹתִי כִּי יְהוָה יִסְמְכֵנִי.",
+   "en": "I lay down and slept; I awoke, for the Eternal sustains me.",
+   "reflect": "What is one thing you trust will be there tomorrow?",
+   "source": "Psalm 3:6 (public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "e12",
+   "he": "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם.",
+   "en": "May the Eternal lift His face to you and grant you peace.",
+   "reflect": "Whisper this to end the day.",
+   "source": "Numbers 6:26 (public domain)",
+   "unlock": "r26",
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "e13",
+   "he": "יְהוָה עֹז לְעַמּוֹ יִתֵּן, יְהוָה יְבָרֵךְ אֶת עַמּוֹ בַשָּׁלוֹם.",
+   "en": "The Eternal gives strength to His people; the Eternal blesses His people with peace.",
+   "reflect": "Who needs peace tonight?",
+   "source": "Psalm 29:11 (public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "e14",
+   "he": "הִנֵּה בָּרְכוּ אֶת יְהוָה כָּל עַבְדֵי יְהוָה, הָעֹמְדִים בְּבֵית יְהוָה בַּלֵּילוֹת.",
+   "en": "Come, bless the Eternal, all servants of the Eternal who stand in the house of the Eternal by night.",
+   "reflect": "What would you say in thanks before sleep?",
+   "source": "Psalm 134:1 (public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "e15",
+   "he": "גַּם אֶל זִקְנָה וְשֵׂיבָה אֱלֹהִים אַל תַּעַזְבֵנִי.",
+   "en": "Even to old age and grey hair, God, do not forsake me.",
+   "reflect": "What do you hope to still be doing in twenty years?",
+   "source": "Psalm 71:18 (public domain, partial verse)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  }
+ ],
+ "shabbatEve": [
+  {
+   "id": "s01",
+   "he": "שַׁבָּת שָׁלוֹם.",
+   "en": "A peaceful Sabbath.",
+   "reflect": "Light the candles, pause, and say it out loud (your first words from lesson r04).",
+   "source": "Common greeting; original gloss",
+   "unlock": "r04",
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "s02",
+   "he": "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל צְבָאָם.",
+   "en": "The heavens and the earth and all their array were completed.",
+   "reflect": "What from the week do you leave unfinished on purpose?",
+   "source": "Genesis 2:1 (public domain)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  },
+  {
+   "id": "s03",
+   "he": "וַיְבָרֶךְ אֱלֹהִים אֶת יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ.",
+   "en": "God blessed the seventh day and made it holy.",
+   "reflect": "Who will you share a meal with tonight?",
+   "source": "Genesis 2:3 (public domain, partial verse)",
+   "unlock": null,
+   "status": "transcribed-needs-check"
+  }
+ ],
+ "holidays": {
+  "rosh-hashanah": [
+   {
+    "id": "h-rh",
+    "he": "הַיּוֹם הֲרַת עוֹלָם.",
+    "en": "Today the world is born anew.",
+    "reflect": "Name one habit you want to begin.",
+    "source": "Traditional liturgy (Rosh Hashanah Musaf line); wording recalled, NOT verified, provenance unchecked",
+    "unlock": null,
+    "status": "transcribed-needs-check"
+   }
+  ],
+  "yom-kippur": [
+   {
+    "id": "h-yk",
+    "he": "לִפְנֵי יְהוָה תִּטְהָרוּ.",
+    "en": "Before the Eternal you will be cleansed.",
+    "reflect": "Who will you ask forgiveness from?",
+    "source": "Leviticus 16:30 (public domain, partial verse)",
+    "unlock": null,
+    "status": "transcribed-needs-check"
+   }
+  ],
+  "sukkot": [
+   {
+    "id": "h-sk",
+    "he": "וּשְׂמַחְתֶּם לִפְנֵי יְהוָה אֱלֹהֵיכֶם שִׁבְעַת יָמִים.",
+    "en": "You shall rejoice before the Eternal your God seven days.",
+    "reflect": "Eat one meal outside this week.",
+    "source": "Leviticus 23:40 (public domain, partial verse)",
+    "unlock": null,
+    "status": "transcribed-needs-check"
+   }
+  ],
+  "hanukkah": [
+   {
+    "id": "h-hn",
+    "he": "לֹא בְחַיִל וְלֹא בְכֹחַ, כִּי אִם בְּרוּחִי.",
+    "en": "Not by might and not by power, but by My spirit.",
+    "reflect": "What small light can you add tonight?",
+    "source": "Zechariah 4:6 (public domain, partial verse)",
+    "unlock": null,
+    "status": "transcribed-needs-check"
+   }
+  ],
+  "tu-bishvat": [
+   {
+    "id": "h-tb",
+    "he": "וְהָיָה כְּעֵץ שָׁתוּל עַל פַּלְגֵי מָיִם.",
+    "en": "He shall be like a tree planted by streams of water.",
+    "reflect": "Plant, water or thank a tree.",
+    "source": "Psalm 1:3 (public domain, partial verse)",
+    "unlock": null,
+    "status": "transcribed-needs-check"
+   }
+  ],
+  "purim": [
+   {
+    "id": "h-pu",
+    "he": "וְנַהֲפוֹךְ הוּא.",
+    "en": "...and it was turned around.",
+    "reflect": "Do something kind and unexpected.",
+    "source": "Esther 9:1 (public domain, partial verse; wording recalled, verify)",
+    "unlock": null,
+    "status": "transcribed-needs-check"
+   }
+  ],
+  "pesach": [
+   {
+    "id": "h-ps",
+    "he": "וְהִגַּדְתָּ לְבִנְךָ בַּיּוֹם הַהוּא לֵאמֹר.",
+    "en": "You shall tell your child on that day.",
+    "reflect": "Tell one family story at the table.",
+    "source": "Exodus 13:8 (public domain, partial verse)",
+    "unlock": null,
+    "status": "transcribed-needs-check"
+   }
+  ],
+  "shavuot": [
+   {
+    "id": "h-sh",
+    "he": "עַמֵּךְ עַמִּי וֵאלֹהַיִךְ אֱלֹהָי.",
+    "en": "Your people shall be my people and your God my God.",
+    "reflect": "Who made you feel you belong?",
+    "source": "Ruth 1:16 (public domain, partial verse)",
+    "unlock": null,
+    "status": "transcribed-needs-check"
+   }
+  ]
+ }
+}

@@ -1,0 +1,93 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import { buildEntries } from '../tools/audio/build_manifest.mjs';
+import { LETTERS, FINAL_LETTERS, VOWELS } from '../tools/audio/hebrew_data.mjs';
+
+const manifest = JSON.parse(fs.readFileSync(new URL('../data/audio/manifest.json', import.meta.url), 'utf8'));
+
+test('committed manifest has contract fields, valid paths, hebrew code points', () => {
+  assert.ok(Array.isArray(manifest) && manifest.length > 1000);
+  const seen = new Set();
+  for (const e of manifest) {
+    assert.ok(['m', 'f'].includes(e.voice));
+    assert.ok(['israeli', 'sephardi', 'ashkenazi'].includes(e.tradition));
+    assert.ok(['letter', 'vowel', 'syllable', 'word', 'line', 'prayer'].includes(e.kind));
+    assert.equal(e.path, `audio/${e.voice}/${e.tradition}/${e.kind}/${e.id}.mp3`);
+    assert.match(e.id, /^[a-z0-9][a-z0-9._-]*$/);
+    assert.match(e.text, /[֐-׿]/);
+    assert.ok(['missing', 'tts', 'recorded'].includes(e.status));
+    assert.ok(typeof e.source === 'string');
+    assert.ok(!seen.has(e.path), `dup ${e.path}`); seen.add(e.path);
+  }
+});
+
+test('covers 27 letters, 15 vowels, 22x5 syllable grid for both voices and all traditions', () => {
+  const count = (kind, voice, trad) => manifest.filter((e) => e.kind === kind && e.voice === voice && e.tradition === trad);
+  for (const v of ['m', 'f']) for (const t of ['israeli', 'sephardi', 'ashkenazi']) {
+    const names = count('letter', v, t).filter((e) => !e.id.endsWith('-sound'));
+    assert.equal(names.length, LETTERS.length + FINAL_LETTERS.length);
+    assert.equal(names.length, 27);
+    assert.equal(count('letter', v, t).filter((e) => e.id.endsWith('-sound')).length, 22);
+    assert.equal(count('vowel', v, t).length, VOWELS.length);
+    assert.equal(count('vowel', v, t).length, 15);
+    assert.equal(count('syllable', v, t).length, 110);
+  }
+});
+
+test('no file exists in this repo yet, so everything is missing (never claims audio)', () => {
+  assert.equal(fs.existsSync(new URL('../audio', import.meta.url)), false);
+  assert.ok(manifest.every((e) => e.status === 'missing' && e.source === 'none'));
+});
+
+test('syllable text is a letter + vowel mark; bet/kaf/pe carry dagesh, shin carries shin dot', () => {
+  const t = (id) => manifest.find((e) => e.id === id && e.voice === 'm' && e.tradition === 'israeli').text;
+  assert.deepEqual([...t('bet-a')].map((c) => c.codePointAt(0).toString(16)).sort(), ['5b7', '5bc', '5d1']);
+  assert.ok(t('shin-o').includes('ׁ'));
+  assert.equal([...t('alef-u')].length, 2);
+  assert.equal(manifest.find((e) => e.id === 'bet-a' && e.tradition === 'israeli' && e.voice === 'f').ipa, 'ba');
+  assert.equal(manifest.find((e) => e.id === 'bet-a' && e.tradition === 'ashkenazi' && e.voice === 'f').ipa, undefined);
+});
+
+function tmpRoot(files) {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'alefm-'));
+  for (const [rel, content] of Object.entries(files)) { fs.mkdirSync(path.dirname(path.join(root, rel)), { recursive: true }); fs.writeFileSync(path.join(root, rel), content); }
+  return root;
+}
+
+test('status becomes recorded/tts only when a file exists; meta sidecar sets provenance', () => {
+  const root = tmpRoot({
+    'audio/m/israeli/letter/bet.mp3': 'x',
+    'audio/f/israeli/letter/bet.mp3': 'x',
+    'audio/f/israeli/letter/bet.mp3.meta.json': JSON.stringify({ status: 'tts', source: 'tts:azure' }),
+  });
+  const { entries } = buildEntries({ root });
+  const get = (v) => entries.find((e) => e.path === `audio/${v}/israeli/letter/bet.mp3`);
+  assert.equal(get('m').status, 'recorded'); assert.match(get('m').source, /unverified/);
+  assert.equal(get('f').status, 'tts'); assert.equal(get('f').source, 'tts:azure');
+  assert.equal(entries.filter((e) => e.status !== 'missing').length, 2);
+});
+
+test('reads other lanes when present: corpus, curriculum, niqqud; skips bad ids; applies equivalence rules', () => {
+  const root = tmpRoot({
+    'data/corpus/registry.json': JSON.stringify([
+      { id: 'Num-6:24', he: 'יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ', type: 'prayer' },
+      { id: 'shalom', he: 'שָׁלוֹם' },
+      { id: 'noheb', he: 'abc' },
+    ]),
+    'data/curriculum/lessons.json': JSON.stringify([{ id: 'l1', words: [{ id: 'todah', he: 'תּוֹדָה' }, 'shalom'], prayerLines: [] }]),
+    'data/pronunciation/niqqud.json': JSON.stringify([{ id: 'kamatz', ipa: { israeli: 'a', ashkenazi: 'ɔ' } }]),
+    'data/audio/equivalence.json': JSON.stringify({ rules: [{ from: 'sephardi', to: 'israeli', kinds: ['word'], ids: ['shalom'] }] }),
+  });
+  const { entries, warnings } = buildEntries({ root });
+  const f = (p) => entries.find((e) => e.path === p);
+  assert.equal(f('audio/m/israeli/prayer/num-6-24.mp3').kind, 'prayer');
+  assert.ok(f('audio/f/ashkenazi/word/shalom.mp3'));
+  assert.ok(f('audio/m/israeli/word/todah.mp3'));
+  assert.equal(f('audio/m/ashkenazi/vowel/kamatz.mp3').ipa, 'ɔ');
+  assert.deepEqual(f('audio/m/sephardi/word/shalom.mp3').equivalentTo, ['israeli']);
+  assert.equal(f('audio/m/israeli/word/shalom.mp3').equivalentTo, undefined);
+  assert.ok(warnings.some((w) => w.includes('noheb')));
+});

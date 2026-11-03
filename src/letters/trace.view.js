@@ -61,7 +61,7 @@ export function mount(root, ctx = {}) {
   const t = (key, fallback) => { try { const v = ctx.t && ctx.t(key); return v && v !== key ? v : fallback; } catch (e) { return fallback; } };
   const state = {
     letters: /** @type {any[]} */ ([]), confusables: null, keyboard: null,
-    tab: 'trace', letterId: 'alef', script: (ctx.settings && (ctx.settings.script === 'cursive' || ctx.settings.script === 'print')) ? ctx.settings.script : 'print',
+    tab: 'trace', letterId: (ctx.params && typeof ctx.params.id === 'string' && ctx.params.id) || 'alef', script: (ctx.settings && (ctx.settings.script === 'cursive' || ctx.settings.script === 'print')) ? ctx.settings.script : 'print',
     strict: false, outline: true
   };
   let tracer = null, keyHandler = null, unmounted = false, trainer = null;

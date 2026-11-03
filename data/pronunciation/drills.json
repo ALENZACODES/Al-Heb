@@ -1,0 +1,721 @@
+{
+ "schemaVersion": 1,
+ "description": "Foreigner-marker drills (ranked), the five-card tradition switch set, and same-word-two-traditions pairs. verified:false means the research notes list the claim as unverified or unsourced.",
+ "drills": [
+  {
+   "id": "resh",
+   "rank": 1,
+   "title": "Resh: back of the throat, not the English r",
+   "marker": "English [ɹ] (\"rail\") instead of the Israeli uvular [ʁ̞].",
+   "listenFor": "The tongue tip does nothing. The sound is made at the back of the mouth, like the r in French or German; HebrewPod101 compares it to gargling air at the back of your throat.",
+   "tryThis": "Say kar, rishon, horim, rekhev slowly, keeping the tongue tip down behind the lower teeth.",
+   "examples": [
+    {
+     "he": "קַר",
+     "translit": "kar",
+     "gloss": "cold",
+     "note": "gloss is lane-3; the word is HebrewPod101's"
+    },
+    {
+     "he": "רִאשׁוֹן",
+     "translit": "rishon",
+     "gloss": "first"
+    },
+    {
+     "he": "חוֹרִים",
+     "translit": "horim",
+     "gloss": "holes",
+     "note": "gloss is lane-3"
+    },
+    {
+     "he": "רֶכֶב",
+     "translit": "rekhev",
+     "gloss": "vehicle",
+     "note": "gloss is lane-3"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Judaism 101: Guide to Transliteration",
+     "url": "https://jewfaq.org/translitguide.htm"
+    },
+    {
+     "label": "HebrewPod101: Top 5 Hebrew mistakes",
+     "url": "https://www.hebrewpod101.com/lesson/ultimate-hebrew-pronunciation-guide-2-top-5-hebrew-mistakes-to-avoid"
+    }
+   ],
+   "verified": true
+  },
+  {
+   "id": "pure-vowels",
+   "rank": 2,
+   "title": "Five pure, short vowels: no glides",
+   "marker": "Diphthongised English vowels (sha-LOHM with an \"oh-oo\" glide).",
+   "listenFor": "Each vowel is one steady, short sound: a e i o u. Native Hebrew has only two true diphthongs, /aj/ and /ej/, and vowel length does not change meaning.",
+   "tryThis": "Say lo, bo, lu, li, la with no trailing w or y sound; clip them.",
+   "examples": [
+    {
+     "he": "שָׁלוֹם",
+     "translit": "shalom",
+     "gloss": "peace",
+     "note": "say the second vowel as a plain [o], not \"oh-oo\""
+    },
+    {
+     "he": "לֹא",
+     "translit": "lo",
+     "gloss": "no"
+    },
+    {
+     "he": "בֵּן",
+     "translit": "ben",
+     "gloss": "son"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Talkpal: Mastering the Hebrew Accent",
+     "url": "https://talkpal.ai/?p=1289028"
+    }
+   ],
+   "verified": true,
+   "note": "The Talkpal page is a low-authority learner site; the Wikipedia phonology claim (five vowels, length not contrastive) carries the drill."
+  },
+  {
+   "id": "milra-stress",
+   "rank": 3,
+   "title": "Stress usually falls on the last syllable (milra)",
+   "marker": "English-habit stress on the first or second syllable.",
+   "listenFor": "Most Hebrew words are stressed on the final syllable: begadIM, yaldA, lilmOD. Real exceptions exist (SEfer, medabEret, tapUach).",
+   "tryThis": "Clap the syllables and land the clap on the last one.",
+   "examples": [
+    {
+     "he": "בְּגָדִים",
+     "translit": "begadIM",
+     "gloss": "clothes"
+    },
+    {
+     "he": "יַלְדָּה",
+     "translit": "yaldA",
+     "gloss": "girl"
+    },
+    {
+     "he": "לִלְמֹד",
+     "translit": "lilmOD",
+     "gloss": "to study"
+    },
+    {
+     "he": "סֵפֶר",
+     "translit": "SEfer",
+     "gloss": "book",
+     "note": "exception (penultimate)"
+    },
+    {
+     "he": "מְדַבֶּרֶת",
+     "translit": "medabEret",
+     "gloss": "speaking (f.)",
+     "note": "exception (penultimate)"
+    },
+    {
+     "he": "תַּפּוּחַ",
+     "translit": "tapUach",
+     "gloss": "apple",
+     "note": "exception (penultimate)"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "HebrewPod101: Top 5 Hebrew mistakes",
+     "url": "https://www.hebrewpod101.com/lesson/ultimate-hebrew-pronunciation-guide-2-top-5-hebrew-mistakes-to-avoid"
+    }
+   ],
+   "verified": true,
+   "unverifiedExtras": [
+    {
+     "id": "stress-minimal-pairs",
+     "verified": false,
+     "text": "Stress minimal pairs bóker (morning) / bokér (cowboy) and yaldá (girl) / yálda (she gave birth) are lane-3 background knowledge, NOT from a fetched source. Confirm in a dictionary and with a native speaker before publishing.",
+     "examples": [
+      {
+       "he": "בֹּקֶר",
+       "translit": "BOker",
+       "gloss": "morning"
+      },
+      {
+       "he": "בּוֹקֵר",
+       "translit": "boKER",
+       "gloss": "cowboy / herder"
+      },
+      {
+       "he": "יַלְדָּה",
+       "translit": "yaldA",
+       "gloss": "girl"
+      },
+      {
+       "he": "יָלְדָה",
+       "translit": "YALda",
+       "gloss": "she gave birth"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "shva-clusters",
+   "rank": 4,
+   "title": "Silent shva makes consonant clusters",
+   "marker": "Inserting a short vowel in g-dola, k-tana, z-man.",
+   "listenFor": "Native speakers often say no vowel at all: gdola, ktana, zman. New speakers put a short vowel between the two consonants.",
+   "tryThis": "Say zman, then gdola, holding the two consonants together with no vowel between them.",
+   "examples": [
+    {
+     "he": "זְמַן",
+     "translit": "zman",
+     "gloss": "time"
+    },
+    {
+     "he": "גְּדוֹלָה",
+     "translit": "gdola",
+     "gloss": "big (f.)"
+    },
+    {
+     "he": "קְטַנָּה",
+     "translit": "ktana",
+     "gloss": "small (f.)"
+    },
+    {
+     "he": "גְּדוֹלִים",
+     "translit": "gdolim",
+     "gloss": "big (pl.)"
+    },
+    {
+     "he": "קְטַנִּים",
+     "translit": "ktanim",
+     "gloss": "small (pl.)"
+    },
+    {
+     "he": "בְּדִיחָה",
+     "translit": "bdicha",
+     "gloss": "joke",
+     "note": "name list is HebrewPod101's: b'dihah; gloss lane-3"
+    },
+    {
+     "he": "בְּחִילָה",
+     "translit": "bchila",
+     "gloss": "nausea"
+    },
+    {
+     "he": "תְּחִינָה",
+     "translit": "tchina",
+     "gloss": "plea"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "HebrewPod101: Top 5 Hebrew mistakes",
+     "url": "https://www.hebrewpod101.com/lesson/ultimate-hebrew-pronunciation-guide-2-top-5-hebrew-mistakes-to-avoid"
+    }
+   ],
+   "verified": true,
+   "note": "For prayer reading the historical shva rules apply instead (see src/pronunciation/shva.js); this drill is for spoken Israeli Hebrew. No corpus measures how often Israelis drop shva na."
+  },
+  {
+   "id": "no-pharyngeals",
+   "rank": 5,
+   "title": "Do not carry shul pharyngeals into Israeli speech",
+   "marker": "Pharyngeal chet and ayin (the strict synagogue sound).",
+   "listenFor": "Chet is the same sound as khaf (like the ch in Bach); ayin sounds like alef (a glottal stop or nothing). Only some older Mizrahi speakers keep the pharyngeals.",
+   "tryThis": "Say chet as a throat-clearing kh, and read ayin as if it were alef.",
+   "examples": [
+    {
+     "he": "חֶדֶר",
+     "translit": "cheder",
+     "gloss": "room"
+    },
+    {
+     "he": "חֲבֵרָה",
+     "translit": "chavera",
+     "gloss": "company / female friend"
+    },
+    {
+     "he": "בָּחַר",
+     "translit": "bachar",
+     "gloss": "he chose"
+    },
+    {
+     "he": "נוֹחַ",
+     "translit": "no'ach",
+     "gloss": "comfortable"
+    },
+    {
+     "he": "עַכְשָׁיו",
+     "translit": "achshav",
+     "gloss": "now",
+     "note": "ayin read as alef; gloss lane-3"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "HebrewPod101: The Hebrew consonants",
+     "url": "https://www.hebrewpod101.com/lesson/pronunciation-3-the-hebrew-consonants"
+    }
+   ],
+   "verified": true,
+   "unverifiedExtras": [
+    {
+     "id": "kar-char-har",
+     "verified": false,
+     "text": "A [k] / [χ] / [h] contrast set (kar / char / har type triples) was suggested in the notes as \"construct and verify\". The set below is hand-built, not minimal, and not checked by a native speaker.",
+     "examples": [
+      {
+       "he": "קַר",
+       "translit": "kar",
+       "gloss": "cold"
+      },
+      {
+       "he": "חַם",
+       "translit": "cham",
+       "gloss": "hot"
+      },
+      {
+       "he": "הַר",
+       "translit": "har",
+       "gloss": "mountain"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "stops-aspiration",
+   "rank": 6,
+   "title": "Less puff on p, t, k",
+   "marker": "Strongly aspirated English [pʰ tʰ kʰ].",
+   "listenFor": "Hebrew p, t, k are commonly described as less aspirated than English. The fetched phonology page does NOT state this.",
+   "tryThis": "Hold a hand in front of your mouth and say pita, toda, kafe with as little breath as you can.",
+   "examples": [
+    {
+     "he": "פִּיתָה",
+     "translit": "pita",
+     "gloss": "pita"
+    },
+    {
+     "he": "תּוֹדָה",
+     "translit": "toda",
+     "gloss": "thanks"
+    },
+    {
+     "he": "קָפֶה",
+     "translit": "kafe",
+     "gloss": "coffee"
+    }
+   ],
+   "sources": [],
+   "verified": false,
+   "unverifiedReason": "Not sourced in the research notes (listed as a gap). Needs a phonetics reference or a native speaker."
+  }
+ ],
+ "switchCards": [
+  {
+   "order": 1,
+   "id": "kamatz",
+   "title": "Kamatz: a becomes o",
+   "from": "a (father)",
+   "to": "o / aw (saw)",
+   "rule": "Where Israeli/Sephardi reads kamatz gadol as a, Ashkenazi reads it as o (aw). Patach stays a.",
+   "examples": [
+    {
+     "he": "בָּרוּךְ",
+     "translit": "Barukh / Bawrukh",
+     "gloss": "blessed"
+    },
+    {
+     "he": "שָׁלוֹם",
+     "translit": "shalom / sholom",
+     "gloss": "peace"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Chabad: The Difference Between Sepharadic and Ashkenazic Pronunciation",
+     "url": "https://www.chabad.org/library/article_cdo/aid/3549013/jewish/The-Difference-Between-Sepharadic-and-Ashkenazic-Pronunciation.htm"
+    },
+    {
+     "label": "Judaism 101: Guide to Transliteration",
+     "url": "https://jewfaq.org/translitguide.htm"
+    },
+    {
+     "label": "Pealim: Pronunciations of Hebrew",
+     "url": "https://www.pealim.com/articles/pronunciations-of-hebrew/"
+    }
+   ],
+   "verified": true
+  },
+  {
+   "order": 2,
+   "id": "cholam",
+   "title": "Cholam: o stays o, or becomes oy",
+   "from": "o (home)",
+   "to": "o (southern German, many US Ashkenazim) or oy (Polish/Chasidic)",
+   "rule": "Choose one value for your community. Most American Ashkenazi readers use o; oy is the Polish/Galician/Chasidic value.",
+   "examples": [
+    {
+     "he": "אֲדֹנָי",
+     "translit": "Adonai / Adonoy",
+     "gloss": "my Lord (the divine name is read this way)"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Judaism 101: Guide to Transliteration",
+     "url": "https://jewfaq.org/translitguide.htm"
+    },
+    {
+     "label": "Chabad: The Difference Between Sepharadic and Ashkenazic Pronunciation",
+     "url": "https://www.chabad.org/library/article_cdo/aid/3549013/jewish/The-Difference-Between-Sepharadic-and-Ashkenazic-Pronunciation.htm"
+    }
+   ],
+   "verified": true,
+   "note": "The o/oy choice per community is documented only qualitatively; the spelling \"Toyrah\" is unsourced in our notes."
+  },
+  {
+   "order": 3,
+   "id": "tzere",
+   "title": "Tzere: e becomes ei",
+   "from": "e (bed)",
+   "to": "ei (they); Polish often like eye",
+   "rule": "Ashkenazi tzere is a diphthong. Segol stays e.",
+   "examples": [
+    {
+     "he": "בֵּית",
+     "translit": "beit / beis",
+     "gloss": "house of"
+    },
+    {
+     "he": "אֱלֹהֵינוּ",
+     "translit": "Eloheinu",
+     "gloss": "our God",
+     "note": "same in both: the yod already spells ei"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Pealim: Pronunciations of Hebrew",
+     "url": "https://www.pealim.com/articles/pronunciations-of-hebrew/"
+    },
+    {
+     "label": "Chabad: The Difference Between Sepharadic and Ashkenazic Pronunciation",
+     "url": "https://www.chabad.org/library/article_cdo/aid/3549013/jewish/The-Difference-Between-Sepharadic-and-Ashkenazic-Pronunciation.htm"
+    }
+   ],
+   "verified": true
+  },
+  {
+   "order": 4,
+   "id": "tav",
+   "title": "Tav without dagesh: t becomes s",
+   "from": "t",
+   "to": "s",
+   "rule": "Only tav WITHOUT a dagesh changes. A tav with dagesh is t in every tradition.",
+   "examples": [
+    {
+     "he": "שַׁבָּת",
+     "translit": "Shabbat / Shabbos",
+     "gloss": "Sabbath"
+    },
+    {
+     "he": "יִתְגַּדַּל",
+     "translit": "Yitgadal / Yisgadal",
+     "gloss": "may it be magnified (Kaddish)"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Chabad: The Difference Between Sepharadic and Ashkenazic Pronunciation",
+     "url": "https://www.chabad.org/library/article_cdo/aid/3549013/jewish/The-Difference-Between-Sepharadic-and-Ashkenazic-Pronunciation.htm"
+    },
+    {
+     "label": "Judaism 101: Guide to Transliteration",
+     "url": "https://jewfaq.org/translitguide.htm"
+    }
+   ],
+   "verified": true
+  },
+  {
+   "order": 5,
+   "id": "stress",
+   "title": "Stress: last syllable becomes second-to-last",
+   "from": "final stress (milra)",
+   "to": "penultimate stress (mil-el)",
+   "rule": "Ashkenazi stress is historically penultimate (SHAB-bos, KID-dush). The sources do not say how consistently American prayer reading follows this; that part is inference.",
+   "examples": [
+    {
+     "he": "שַׁבָּת",
+     "translit": "shabBAT / SHABbos",
+     "gloss": "Sabbath"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Pealim: Pronunciations of Hebrew",
+     "url": "https://www.pealim.com/articles/pronunciations-of-hebrew/"
+    }
+   ],
+   "verified": true,
+   "note": "Penultimate stress in American prayer reading is lane-3 inference, not a sourced fact."
+  }
+ ],
+ "switchConsistency": {
+  "text": "If you change tradition, change all five switches together, including the divine name. All dialects of Hebrew are acceptable; consistency within the prayer is what matters.",
+  "sources": [
+   {
+    "label": "Chabad: The Difference Between Sepharadic and Ashkenazic Pronunciation",
+    "url": "https://www.chabad.org/library/article_cdo/aid/3549013/jewish/The-Difference-Between-Sepharadic-and-Ashkenazic-Pronunciation.htm"
+   }
+  ],
+  "verified": true,
+  "sameInBoth": "Alef/ayin silent, chet=khaf and the resh are the same in General Israeli and common Ashkenazi practice (per the notes), so they are not switches."
+ },
+ "pairs": [
+  {
+   "id": "shabbat",
+   "he": "שַׁבָּת",
+   "gloss": "Sabbath",
+   "israeli": "Shabbat",
+   "ashkenazi": "Shabbos",
+   "switches": [
+    "tav",
+    "kamatz",
+    "stress"
+   ],
+   "sources": [
+    {
+     "label": "My Jewish Learning: Why There Are Different Ways of Pronouncing Hebrew",
+     "url": "https://www.myjewishlearning.com/article/ashkenazic-and-sephardic-hebrew/"
+    },
+    {
+     "label": "Pealim: Pronunciations of Hebrew",
+     "url": "https://www.pealim.com/articles/pronunciations-of-hebrew/"
+    }
+   ],
+   "verified": true
+  },
+  {
+   "id": "brit",
+   "he": "בְּרִית",
+   "gloss": "covenant (brit milah)",
+   "israeli": "brit",
+   "ashkenazi": "bris",
+   "switches": [
+    "tav",
+    "tzere"
+   ],
+   "engineOptions": {
+    "shvaMode": "colloquial"
+   },
+   "sources": [
+    {
+     "label": "My Jewish Learning: Why There Are Different Ways of Pronouncing Hebrew",
+     "url": "https://www.myjewishlearning.com/article/ashkenazic-and-sephardic-hebrew/"
+    }
+   ],
+   "verified": true,
+   "note": "Both spoken forms drop the initial shva; the liturgical rule would give berit / beris."
+  },
+  {
+   "id": "adonai",
+   "he": "אֲדֹנָי",
+   "gloss": "the divine name as read aloud",
+   "israeli": "Adonai",
+   "ashkenazi": "Adonoy",
+   "switches": [
+    "kamatz",
+    "cholam"
+   ],
+   "sources": [
+    {
+     "label": "My Jewish Learning: Why There Are Different Ways of Pronouncing Hebrew",
+     "url": "https://www.myjewishlearning.com/article/ashkenazic-and-sephardic-hebrew/"
+    },
+    {
+     "label": "Chabad: The Difference Between Sepharadic and Ashkenazic Pronunciation",
+     "url": "https://www.chabad.org/library/article_cdo/aid/3549013/jewish/The-Difference-Between-Sepharadic-and-Ashkenazic-Pronunciation.htm"
+    }
+   ],
+   "verified": true
+  },
+  {
+   "id": "yitgadal",
+   "he": "יִתְגַּדַּל",
+   "gloss": "Kaddish, first word",
+   "israeli": "Yitgadal",
+   "ashkenazi": "Yisgadal",
+   "switches": [
+    "tav"
+   ],
+   "sources": [
+    {
+     "label": "Judaism 101: Guide to Transliteration",
+     "url": "https://jewfaq.org/translitguide.htm"
+    }
+   ],
+   "verified": true,
+   "note": "Jewfaq prints Yit'gadal / Yis'gadal; the apostrophe marks the silent shva."
+  },
+  {
+   "id": "bat",
+   "he": "בַּת",
+   "gloss": "daughter (bat mitzvah)",
+   "israeli": "bat",
+   "ashkenazi": "bas",
+   "switches": [
+    "tav"
+   ],
+   "sources": [
+    {
+     "label": "My Jewish Learning: Why There Are Different Ways of Pronouncing Hebrew",
+     "url": "https://www.myjewishlearning.com/article/ashkenazic-and-sephardic-hebrew/"
+    }
+   ],
+   "verified": true
+  },
+  {
+   "id": "emet",
+   "he": "אֱמֶת",
+   "gloss": "truth",
+   "israeli": "emet",
+   "ashkenazi": "emes",
+   "switches": [
+    "tav"
+   ],
+   "sources": [
+    {
+     "label": "My Jewish Learning: Why There Are Different Ways of Pronouncing Hebrew",
+     "url": "https://www.myjewishlearning.com/article/ashkenazic-and-sephardic-hebrew/"
+    }
+   ],
+   "verified": true
+  },
+  {
+   "id": "chatan",
+   "he": "חָתָן",
+   "gloss": "groom",
+   "israeli": "chatan",
+   "ashkenazi": "chosson",
+   "switches": [
+    "kamatz",
+    "tav",
+    "stress"
+   ],
+   "sources": [
+    {
+     "label": "Chabad: The Difference Between Sepharadic and Ashkenazic Pronunciation",
+     "url": "https://www.chabad.org/library/article_cdo/aid/3549013/jewish/The-Difference-Between-Sepharadic-and-Ashkenazic-Pronunciation.htm"
+    }
+   ],
+   "verified": true,
+   "note": "Ashkenazi chosson is printed with double s as an English spelling convention."
+  },
+  {
+   "id": "barukh",
+   "he": "בָּרוּךְ",
+   "gloss": "blessed",
+   "israeli": "Barukh",
+   "ashkenazi": "Bawrukh",
+   "switches": [
+    "kamatz"
+   ],
+   "engineOptions": {
+    "kamatz": "aw"
+   },
+   "sources": [
+    {
+     "label": "Judaism 101: Guide to Transliteration",
+     "url": "https://jewfaq.org/translitguide.htm"
+    }
+   ],
+   "verified": true
+  },
+  {
+   "id": "beit",
+   "he": "בֵּית",
+   "gloss": "house of",
+   "israeli": "beit",
+   "ashkenazi": "beis",
+   "switches": [
+    "tzere",
+    "tav"
+   ],
+   "sources": [
+    {
+     "label": "Pealim: Pronunciations of Hebrew",
+     "url": "https://www.pealim.com/articles/pronunciations-of-hebrew/"
+    }
+   ],
+   "verified": true,
+   "note": "Pealim gives Ashkenazi b-e-is, Sephardi b-et, modern Israeli beit or bet."
+  },
+  {
+   "id": "shalom",
+   "he": "שָׁלוֹם",
+   "gloss": "peace / hello",
+   "israeli": "shalom",
+   "ashkenazi": "sholom",
+   "switches": [
+    "kamatz",
+    "stress"
+   ],
+   "sources": [
+    {
+     "label": "Pealim: Pronunciations of Hebrew",
+     "url": "https://www.pealim.com/articles/pronunciations-of-hebrew/"
+    }
+   ],
+   "verified": true,
+   "note": "Pealim lists Ashkenazi shol-o-im (prayer) and sh-o-lem (greeting); the plain sholom is the lane-3 regularisation."
+  }
+ ],
+ "todo": [
+  "he-dropping in fast Tel Aviv speech, \"ma ze\", \"yesh li et ha-\", intonation and fillers (em, kaze, keilu, yalla, sababa): unsourced in the notes, deliberately NOT included.",
+  "Native-speaker review of every example gloss, stress mark and IPA value."
+ ]
+}

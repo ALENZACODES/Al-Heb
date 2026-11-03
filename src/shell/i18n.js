@@ -53,7 +53,7 @@ const warned = new Set();
 /** @param {string} key @param {Record<string,string|number>} [vars] */
 export function t(key, vars) {
   let s = en[key];
-  if (s === undefined) { if (!warned.has(key)) { warned.add(key); try { console.warn('[i18n] missing key', key); } catch {} } s = key; }
+  if (s === undefined) { if (/^(app|skip|nav|home|settings|unavailable|error|notfound|about)\./.test(key) && !warned.has(key)) { warned.add(key); try { console.warn('[i18n] missing key', key); } catch {} } s = key; }
   if (vars) s = s.replace(/\{(\w+)\}/g, (m, k) => (k in vars ? String(vars[k]) : m));
   return s;
 }

@@ -18,7 +18,7 @@ export function heSpan(text, cls = 'he') { return h('span', { lang: 'he', dir: '
 /** Card shown when a lane module is missing or throws. */
 export function unavailableCard(root, { title, t, module, error, kind = 'unavailable' }) {
   const body = kind === 'error' ? t('error.body') : t('unavailable.body');
-  root.replaceChildren(h('section', { class: 'card notice', 'aria-labelledby': 'view-title' },
+  root.replaceChildren(h('section', { class: 'card alef-unavailable', 'aria-labelledby': 'view-title' },
     h('h1', { id: 'view-title', tabindex: '-1' }, `${title}: ${kind === 'error' ? t('error.title') : t('unavailable.title')}`),
     h('p', {}, body),
     h('p', {}, h('a', { class: 'btn', href: '#/' }, t('nav.home'))),

@@ -2990,6 +2990,7 @@
   "kind": "vowel",
   "id": "kamatz",
   "text": "אָ",
+  "ipa": "[a]",
   "status": "missing",
   "source": "none"
  },
@@ -3000,6 +3001,7 @@
   "kind": "vowel",
   "id": "kamatz",
   "text": "אָ",
+  "ipa": "[a(ː)]",
   "status": "missing",
   "source": "none"
  },
@@ -3010,6 +3012,7 @@
   "kind": "vowel",
   "id": "kamatz",
   "text": "אָ",
+  "ipa": "[ɔ]",
   "status": "missing",
   "source": "none"
  },
@@ -3020,6 +3023,7 @@
   "kind": "vowel",
   "id": "kamatz",
   "text": "אָ",
+  "ipa": "[a]",
   "status": "missing",
   "source": "none"
  },
@@ -3030,6 +3034,7 @@
   "kind": "vowel",
   "id": "kamatz",
   "text": "אָ",
+  "ipa": "[a(ː)]",
   "status": "missing",
   "source": "none"
  },
@@ -3040,6 +3045,7 @@
   "kind": "vowel",
   "id": "kamatz",
   "text": "אָ",
+  "ipa": "[ɔ]",
   "status": "missing",
   "source": "none"
  },
@@ -3050,6 +3056,7 @@
   "kind": "vowel",
   "id": "patach",
   "text": "אַ",
+  "ipa": "[a]",
   "status": "missing",
   "source": "none"
  },
@@ -3060,6 +3067,7 @@
   "kind": "vowel",
   "id": "patach",
   "text": "אַ",
+  "ipa": "[a]",
   "status": "missing",
   "source": "none"
  },
@@ -3070,6 +3078,7 @@
   "kind": "vowel",
   "id": "patach",
   "text": "אַ",
+  "ipa": "[a]",
   "status": "missing",
   "source": "none"
  },
@@ -3080,6 +3089,7 @@
   "kind": "vowel",
   "id": "patach",
   "text": "אַ",
+  "ipa": "[a]",
   "status": "missing",
   "source": "none"
  },
@@ -3090,6 +3100,7 @@
   "kind": "vowel",
   "id": "patach",
   "text": "אַ",
+  "ipa": "[a]",
   "status": "missing",
   "source": "none"
  },
@@ -3100,6 +3111,7 @@
   "kind": "vowel",
   "id": "patach",
   "text": "אַ",
+  "ipa": "[a]",
   "status": "missing",
   "source": "none"
  },
@@ -3110,6 +3122,7 @@
   "kind": "vowel",
   "id": "tzere",
   "text": "אֵ",
+  "ipa": "[e̞]",
   "status": "missing",
   "source": "none"
  },
@@ -3120,6 +3133,7 @@
   "kind": "vowel",
   "id": "tzere",
   "text": "אֵ",
+  "ipa": "[e(ː)]",
   "status": "missing",
   "source": "none"
  },
@@ -3130,6 +3144,7 @@
   "kind": "vowel",
   "id": "tzere",
   "text": "אֵ",
+  "ipa": "[ej]",
   "status": "missing",
   "source": "none"
  },
@@ -3140,6 +3155,7 @@
   "kind": "vowel",
   "id": "tzere",
   "text": "אֵ",
+  "ipa": "[e̞]",
   "status": "missing",
   "source": "none"
  },
@@ -3150,6 +3166,7 @@
   "kind": "vowel",
   "id": "tzere",
   "text": "אֵ",
+  "ipa": "[e(ː)]",
   "status": "missing",
   "source": "none"
  },
@@ -3160,6 +3177,7 @@
   "kind": "vowel",
   "id": "tzere",
   "text": "אֵ",
+  "ipa": "[ej]",
   "status": "missing",
   "source": "none"
  },
@@ -3170,6 +3188,7 @@
   "kind": "vowel",
   "id": "segol",
   "text": "אֶ",
+  "ipa": "[e̞]",
   "status": "missing",
   "source": "none"
  },
@@ -3180,6 +3199,7 @@
   "kind": "vowel",
   "id": "segol",
   "text": "אֶ",
+  "ipa": "[e]",
   "status": "missing",
   "source": "none"
  },
@@ -3190,6 +3210,7 @@
   "kind": "vowel",
   "id": "segol",
   "text": "אֶ",
+  "ipa": "[e]",
   "status": "missing",
   "source": "none"
  },
@@ -3200,6 +3221,7 @@
   "kind": "vowel",
   "id": "segol",
   "text": "אֶ",
+  "ipa": "[e̞]",
   "status": "missing",
   "source": "none"
  },
@@ -3210,6 +3232,7 @@
   "kind": "vowel",
   "id": "segol",
   "text": "אֶ",
+  "ipa": "[e]",
   "status": "missing",
   "source": "none"
  },
@@ -3220,6 +3243,7 @@
   "kind": "vowel",
   "id": "segol",
   "text": "אֶ",
+  "ipa": "[e]",
   "status": "missing",
   "source": "none"
  },
@@ -3230,6 +3254,7 @@
   "kind": "vowel",
   "id": "chirik",
   "text": "אִ",
+  "ipa": "[i]",
   "status": "missing",
   "source": "none"
  },
@@ -3240,6 +3265,7 @@
   "kind": "vowel",
   "id": "chirik",
   "text": "אִ",
+  "ipa": "[i]",
   "status": "missing",
   "source": "none"
  },
@@ -3250,6 +3276,7 @@
   "kind": "vowel",
   "id": "chirik",
   "text": "אִ",
+  "ipa": "[i]",
   "status": "missing",
   "source": "none"
  },
@@ -3260,6 +3287,7 @@
   "kind": "vowel",
   "id": "chirik",
   "text": "אִ",
+  "ipa": "[i]",
   "status": "missing",
   "source": "none"
  },
@@ -3270,6 +3298,7 @@
   "kind": "vowel",
   "id": "chirik",
   "text": "אִ",
+  "ipa": "[i]",
   "status": "missing",
   "source": "none"
  },
@@ -3280,6 +3309,7 @@
   "kind": "vowel",
   "id": "chirik",
   "text": "אִ",
+  "ipa": "[i]",
   "status": "missing",
   "source": "none"
  },
@@ -3290,6 +3320,7 @@
   "kind": "vowel",
   "id": "cholam",
   "text": "אֹ",
+  "ipa": "[o̞]",
   "status": "missing",
   "source": "none"
  },
@@ -3300,6 +3331,7 @@
   "kind": "vowel",
   "id": "cholam",
   "text": "אֹ",
+  "ipa": "[o(ː)]",
   "status": "missing",
   "source": "none"
  },
@@ -3310,6 +3342,7 @@
   "kind": "vowel",
   "id": "cholam",
   "text": "אֹ",
+  "ipa": "[o]",
   "status": "missing",
   "source": "none"
  },
@@ -3320,6 +3353,7 @@
   "kind": "vowel",
   "id": "cholam",
   "text": "אֹ",
+  "ipa": "[o̞]",
   "status": "missing",
   "source": "none"
  },
@@ -3330,6 +3364,7 @@
   "kind": "vowel",
   "id": "cholam",
   "text": "אֹ",
+  "ipa": "[o(ː)]",
   "status": "missing",
   "source": "none"
  },
@@ -3340,6 +3375,7 @@
   "kind": "vowel",
   "id": "cholam",
   "text": "אֹ",
+  "ipa": "[o]",
   "status": "missing",
   "source": "none"
  },
@@ -3350,6 +3386,7 @@
   "kind": "vowel",
   "id": "kubutz",
   "text": "אֻ",
+  "ipa": "[u]",
   "status": "missing",
   "source": "none"
  },
@@ -3360,6 +3397,7 @@
   "kind": "vowel",
   "id": "kubutz",
   "text": "אֻ",
+  "ipa": "[u]",
   "status": "missing",
   "source": "none"
  },
@@ -3370,6 +3408,7 @@
   "kind": "vowel",
   "id": "kubutz",
   "text": "אֻ",
+  "ipa": "[u]",
   "status": "missing",
   "source": "none"
  },
@@ -3380,6 +3419,7 @@
   "kind": "vowel",
   "id": "kubutz",
   "text": "אֻ",
+  "ipa": "[u]",
   "status": "missing",
   "source": "none"
  },
@@ -3390,6 +3430,7 @@
   "kind": "vowel",
   "id": "kubutz",
   "text": "אֻ",
+  "ipa": "[u]",
   "status": "missing",
   "source": "none"
  },
@@ -3400,6 +3441,7 @@
   "kind": "vowel",
   "id": "kubutz",
   "text": "אֻ",
+  "ipa": "[u]",
   "status": "missing",
   "source": "none"
  },
@@ -3410,6 +3452,7 @@
   "kind": "vowel",
   "id": "shuruk",
   "text": "וּ",
+  "ipa": "[u]",
   "status": "missing",
   "source": "none"
  },
@@ -3420,6 +3463,7 @@
   "kind": "vowel",
   "id": "shuruk",
   "text": "וּ",
+  "ipa": "[u]",
   "status": "missing",
   "source": "none"
  },
@@ -3430,6 +3474,7 @@
   "kind": "vowel",
   "id": "shuruk",
   "text": "וּ",
+  "ipa": "[u]",
   "status": "missing",
   "source": "none"
  },
@@ -3440,6 +3485,7 @@
   "kind": "vowel",
   "id": "shuruk",
   "text": "וּ",
+  "ipa": "[u]",
   "status": "missing",
   "source": "none"
  },
@@ -3450,6 +3496,7 @@
   "kind": "vowel",
   "id": "shuruk",
   "text": "וּ",
+  "ipa": "[u]",
   "status": "missing",
   "source": "none"
  },
@@ -3460,6 +3507,7 @@
   "kind": "vowel",
   "id": "shuruk",
   "text": "וּ",
+  "ipa": "[u]",
   "status": "missing",
   "source": "none"
  },
@@ -3470,6 +3518,7 @@
   "kind": "vowel",
   "id": "shva",
   "text": "בְ",
+  "ipa": "[e̞] or ∅ (no vowel)",
   "status": "missing",
   "source": "none"
  },
@@ -3480,6 +3529,7 @@
   "kind": "vowel",
   "id": "shva",
   "text": "בְ",
+  "ipa": "[ɛ]~[e̞] when vocal, ∅ when silent",
   "status": "missing",
   "source": "none"
  },
@@ -3490,6 +3540,7 @@
   "kind": "vowel",
   "id": "shva",
   "text": "בְ",
+  "ipa": "∅ colloquially (zman); [e]/[ə] when read strictly in liturgy",
   "status": "missing",
   "source": "none"
  },
@@ -3500,6 +3551,7 @@
   "kind": "vowel",
   "id": "shva",
   "text": "בְ",
+  "ipa": "[e̞] or ∅ (no vowel)",
   "status": "missing",
   "source": "none"
  },
@@ -3510,6 +3562,7 @@
   "kind": "vowel",
   "id": "shva",
   "text": "בְ",
+  "ipa": "[ɛ]~[e̞] when vocal, ∅ when silent",
   "status": "missing",
   "source": "none"
  },
@@ -3520,6 +3573,7 @@
   "kind": "vowel",
   "id": "shva",
   "text": "בְ",
+  "ipa": "∅ colloquially (zman); [e]/[ə] when read strictly in liturgy",
   "status": "missing",
   "source": "none"
  },
@@ -3530,6 +3584,7 @@
   "kind": "vowel",
   "id": "chataf-patach",
   "text": "אֲ",
+  "ipa": "[a]",
   "status": "missing",
   "source": "none"
  },
@@ -3540,6 +3595,7 @@
   "kind": "vowel",
   "id": "chataf-patach",
   "text": "אֲ",
+  "ipa": "[a]",
   "status": "missing",
   "source": "none"
  },
@@ -3550,6 +3606,7 @@
   "kind": "vowel",
   "id": "chataf-patach",
   "text": "אֲ",
+  "ipa": "[a]",
   "status": "missing",
   "source": "none"
  },
@@ -3560,6 +3617,7 @@
   "kind": "vowel",
   "id": "chataf-patach",
   "text": "אֲ",
+  "ipa": "[a]",
   "status": "missing",
   "source": "none"
  },
@@ -3570,6 +3628,7 @@
   "kind": "vowel",
   "id": "chataf-patach",
   "text": "אֲ",
+  "ipa": "[a]",
   "status": "missing",
   "source": "none"
  },
@@ -3580,6 +3639,7 @@
   "kind": "vowel",
   "id": "chataf-patach",
   "text": "אֲ",
+  "ipa": "[a]",
   "status": "missing",
   "source": "none"
  },
@@ -3590,6 +3650,7 @@
   "kind": "vowel",
   "id": "chataf-segol",
   "text": "אֱ",
+  "ipa": "[e̞]",
   "status": "missing",
   "source": "none"
  },
@@ -3600,6 +3661,7 @@
   "kind": "vowel",
   "id": "chataf-segol",
   "text": "אֱ",
+  "ipa": "[e]",
   "status": "missing",
   "source": "none"
  },
@@ -3610,6 +3672,7 @@
   "kind": "vowel",
   "id": "chataf-segol",
   "text": "אֱ",
+  "ipa": "[e]",
   "status": "missing",
   "source": "none"
  },
@@ -3620,6 +3683,7 @@
   "kind": "vowel",
   "id": "chataf-segol",
   "text": "אֱ",
+  "ipa": "[e̞]",
   "status": "missing",
   "source": "none"
  },
@@ -3630,6 +3694,7 @@
   "kind": "vowel",
   "id": "chataf-segol",
   "text": "אֱ",
+  "ipa": "[e]",
   "status": "missing",
   "source": "none"
  },
@@ -3640,6 +3705,7 @@
   "kind": "vowel",
   "id": "chataf-segol",
   "text": "אֱ",
+  "ipa": "[e]",
   "status": "missing",
   "source": "none"
  },
@@ -3650,6 +3716,7 @@
   "kind": "vowel",
   "id": "chataf-kamatz",
   "text": "אֳ",
+  "ipa": "[o̞]",
   "status": "missing",
   "source": "none"
  },
@@ -3660,6 +3727,7 @@
   "kind": "vowel",
   "id": "chataf-kamatz",
   "text": "אֳ",
+  "ipa": "[ɔ]",
   "status": "missing",
   "source": "none"
  },
@@ -3670,6 +3738,7 @@
   "kind": "vowel",
   "id": "chataf-kamatz",
   "text": "אֳ",
+  "ipa": "[ɔ]",
   "status": "missing",
   "source": "none"
  },
@@ -3680,6 +3749,7 @@
   "kind": "vowel",
   "id": "chataf-kamatz",
   "text": "אֳ",
+  "ipa": "[o̞]",
   "status": "missing",
   "source": "none"
  },
@@ -3690,6 +3760,7 @@
   "kind": "vowel",
   "id": "chataf-kamatz",
   "text": "אֳ",
+  "ipa": "[ɔ]",
   "status": "missing",
   "source": "none"
  },
@@ -3700,6 +3771,7 @@
   "kind": "vowel",
   "id": "chataf-kamatz",
   "text": "אֳ",
+  "ipa": "[ɔ]",
   "status": "missing",
   "source": "none"
  },
@@ -3710,6 +3782,7 @@
   "kind": "vowel",
   "id": "dagesh",
   "text": "בּ",
+  "ipa": "hardens bet/kaf/pe to [b][k][p]; gemination absent",
   "status": "missing",
   "source": "none"
  },
@@ -3720,6 +3793,7 @@
   "kind": "vowel",
   "id": "dagesh",
   "text": "בּ",
+  "ipa": "hardens bet/kaf/pe to [b][k][p]; (gemination not covered by the sources fetched)",
   "status": "missing",
   "source": "none"
  },
@@ -3730,6 +3804,7 @@
   "kind": "vowel",
   "id": "dagesh",
   "text": "בּ",
+  "ipa": "hardens bet/kaf/pe to [b][k][p]; (gemination not covered by the sources fetched)",
   "status": "missing",
   "source": "none"
  },
@@ -3740,6 +3815,7 @@
   "kind": "vowel",
   "id": "dagesh",
   "text": "בּ",
+  "ipa": "hardens bet/kaf/pe to [b][k][p]; gemination absent",
   "status": "missing",
   "source": "none"
  },
@@ -3750,6 +3826,7 @@
   "kind": "vowel",
   "id": "dagesh",
   "text": "בּ",
+  "ipa": "hardens bet/kaf/pe to [b][k][p]; (gemination not covered by the sources fetched)",
   "status": "missing",
   "source": "none"
  },
@@ -3760,6 +3837,7 @@
   "kind": "vowel",
   "id": "dagesh",
   "text": "בּ",
+  "ipa": "hardens bet/kaf/pe to [b][k][p]; (gemination not covered by the sources fetched)",
   "status": "missing",
   "source": "none"
  },
@@ -3770,6 +3848,7 @@
   "kind": "vowel",
   "id": "shin-dot",
   "text": "שׁ",
+  "ipa": "[ʃ]",
   "status": "missing",
   "source": "none"
  },
@@ -3780,6 +3859,7 @@
   "kind": "vowel",
   "id": "shin-dot",
   "text": "שׁ",
+  "ipa": "[ʃ]",
   "status": "missing",
   "source": "none"
  },
@@ -3790,6 +3870,7 @@
   "kind": "vowel",
   "id": "shin-dot",
   "text": "שׁ",
+  "ipa": "[ʃ]",
   "status": "missing",
   "source": "none"
  },
@@ -3800,6 +3881,7 @@
   "kind": "vowel",
   "id": "shin-dot",
   "text": "שׁ",
+  "ipa": "[ʃ]",
   "status": "missing",
   "source": "none"
  },
@@ -3810,6 +3892,7 @@
   "kind": "vowel",
   "id": "shin-dot",
   "text": "שׁ",
+  "ipa": "[ʃ]",
   "status": "missing",
   "source": "none"
  },
@@ -3820,6 +3903,7 @@
   "kind": "vowel",
   "id": "shin-dot",
   "text": "שׁ",
+  "ipa": "[ʃ]",
   "status": "missing",
   "source": "none"
  },
@@ -3830,6 +3914,7 @@
   "kind": "vowel",
   "id": "sin-dot",
   "text": "שׂ",
+  "ipa": "[s]",
   "status": "missing",
   "source": "none"
  },
@@ -3840,6 +3925,7 @@
   "kind": "vowel",
   "id": "sin-dot",
   "text": "שׂ",
+  "ipa": "[s]",
   "status": "missing",
   "source": "none"
  },
@@ -3850,6 +3936,7 @@
   "kind": "vowel",
   "id": "sin-dot",
   "text": "שׂ",
+  "ipa": "[s]",
   "status": "missing",
   "source": "none"
  },
@@ -3860,6 +3947,7 @@
   "kind": "vowel",
   "id": "sin-dot",
   "text": "שׂ",
+  "ipa": "[s]",
   "status": "missing",
   "source": "none"
  },
@@ -3870,6 +3958,7 @@
   "kind": "vowel",
   "id": "sin-dot",
   "text": "שׂ",
+  "ipa": "[s]",
   "status": "missing",
   "source": "none"
  },
@@ -3880,6 +3969,7 @@
   "kind": "vowel",
   "id": "sin-dot",
   "text": "שׂ",
+  "ipa": "[s]",
   "status": "missing",
   "source": "none"
  },
@@ -10700,6 +10790,1686 @@
   "kind": "syllable",
   "id": "tav-u",
   "text": "תֻ",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/prayer/bless-priestly-1.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bless-priestly-1",
+  "text": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/prayer/bless-priestly-1.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "prayer",
+  "id": "bless-priestly-1",
+  "text": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bless-priestly-1.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bless-priestly-1",
+  "text": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/prayer/bless-priestly-1.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bless-priestly-1",
+  "text": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/prayer/bless-priestly-1.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "prayer",
+  "id": "bless-priestly-1",
+  "text": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bless-priestly-1.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bless-priestly-1",
+  "text": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/prayer/bless-priestly-2.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bless-priestly-2",
+  "text": "יָאֵר יְהוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/prayer/bless-priestly-2.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "prayer",
+  "id": "bless-priestly-2",
+  "text": "יָאֵר יְהוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bless-priestly-2.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bless-priestly-2",
+  "text": "יָאֵר יְהוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/prayer/bless-priestly-2.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bless-priestly-2",
+  "text": "יָאֵר יְהוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/prayer/bless-priestly-2.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "prayer",
+  "id": "bless-priestly-2",
+  "text": "יָאֵר יְהוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bless-priestly-2.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bless-priestly-2",
+  "text": "יָאֵר יְהוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/prayer/bless-priestly-3.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bless-priestly-3",
+  "text": "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/prayer/bless-priestly-3.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "prayer",
+  "id": "bless-priestly-3",
+  "text": "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bless-priestly-3.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bless-priestly-3",
+  "text": "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/prayer/bless-priestly-3.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bless-priestly-3",
+  "text": "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/prayer/bless-priestly-3.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "prayer",
+  "id": "bless-priestly-3",
+  "text": "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bless-priestly-3.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bless-priestly-3",
+  "text": "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/shema-1.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "shema-1",
+  "text": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/shema-1.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "shema-1",
+  "text": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/shema-1.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "shema-1",
+  "text": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/shema-1.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "shema-1",
+  "text": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/shema-1.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "shema-1",
+  "text": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/shema-1.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "shema-1",
+  "text": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/vahavta-1.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "vahavta-1",
+  "text": "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/vahavta-1.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "vahavta-1",
+  "text": "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/vahavta-1.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "vahavta-1",
+  "text": "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/vahavta-1.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "vahavta-1",
+  "text": "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/vahavta-1.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "vahavta-1",
+  "text": "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/vahavta-1.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "vahavta-1",
+  "text": "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/vahavta-2.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "vahavta-2",
+  "text": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃\nוְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/vahavta-2.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "vahavta-2",
+  "text": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃\nוְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/vahavta-2.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "vahavta-2",
+  "text": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃\nוְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/vahavta-2.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "vahavta-2",
+  "text": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃\nוְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/vahavta-2.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "vahavta-2",
+  "text": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃\nוְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/vahavta-2.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "vahavta-2",
+  "text": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃\nוְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/vahavta-full.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "vahavta-full",
+  "text": "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃\nוְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃\nוְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃\nוּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃\nוּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/vahavta-full.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "vahavta-full",
+  "text": "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃\nוְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃\nוְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃\nוּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃\nוּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/vahavta-full.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "vahavta-full",
+  "text": "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃\nוְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃\nוְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃\nוּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃\nוּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/vahavta-full.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "vahavta-full",
+  "text": "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃\nוְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃\nוְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃\nוּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃\nוּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/vahavta-full.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "vahavta-full",
+  "text": "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃\nוְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃\nוְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃\nוּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃\nוּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/vahavta-full.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "vahavta-full",
+  "text": "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃\nוְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃\nוְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃\nוּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃\nוּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/shema-vahavta.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "shema-vahavta",
+  "text": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃\nוְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃\nוְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃\nוְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃\nוּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃\nוּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/shema-vahavta.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "shema-vahavta",
+  "text": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃\nוְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃\nוְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃\nוְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃\nוּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃\nוּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/shema-vahavta.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "shema-vahavta",
+  "text": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃\nוְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃\nוְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃\nוְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃\nוּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃\nוּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/shema-vahavta.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "shema-vahavta",
+  "text": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃\nוְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃\nוְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃\nוְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃\nוּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃\nוּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/shema-vahavta.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "shema-vahavta",
+  "text": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃\nוְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃\nוְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃\nוְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃\nוּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃\nוּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/shema-vahavta.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "shema-vahavta",
+  "text": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃\nוְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃\nוְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃\nוְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃\nוּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃\nוּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/shema-2.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "shema-2",
+  "text": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/shema-2.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "shema-2",
+  "text": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/shema-2.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "shema-2",
+  "text": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/shema-2.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "shema-2",
+  "text": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/shema-2.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "shema-2",
+  "text": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/shema-2.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "shema-2",
+  "text": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/prayer/bless-formula-1.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bless-formula-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/prayer/bless-formula-1.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "prayer",
+  "id": "bless-formula-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bless-formula-1.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bless-formula-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/prayer/bless-formula-1.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bless-formula-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/prayer/bless-formula-1.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "prayer",
+  "id": "bless-formula-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bless-formula-1.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bless-formula-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/mah-tovu-1.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "mah-tovu-1",
+  "text": "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/mah-tovu-1.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "mah-tovu-1",
+  "text": "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/mah-tovu-1.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "mah-tovu-1",
+  "text": "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/mah-tovu-1.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "mah-tovu-1",
+  "text": "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/mah-tovu-1.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "mah-tovu-1",
+  "text": "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/mah-tovu-1.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "mah-tovu-1",
+  "text": "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/mi-chamocha-1.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "mi-chamocha-1",
+  "text": "מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/mi-chamocha-1.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "mi-chamocha-1",
+  "text": "מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/mi-chamocha-1.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "mi-chamocha-1",
+  "text": "מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/mi-chamocha-1.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "mi-chamocha-1",
+  "text": "מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/mi-chamocha-1.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "mi-chamocha-1",
+  "text": "מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/mi-chamocha-1.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "mi-chamocha-1",
+  "text": "מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/num-12-13.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "num-12-13",
+  "text": "אֵל נָא רְפָא נָא לָהּ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/num-12-13.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "num-12-13",
+  "text": "אֵל נָא רְפָא נָא לָהּ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/num-12-13.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "num-12-13",
+  "text": "אֵל נָא רְפָא נָא לָהּ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/num-12-13.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "num-12-13",
+  "text": "אֵל נָא רְפָא נָא לָהּ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/num-12-13.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "num-12-13",
+  "text": "אֵל נָא רְפָא נָא לָהּ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/num-12-13.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "num-12-13",
+  "text": "אֵל נָא רְפָא נָא לָהּ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/kiddush-gen-2-1-3.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "kiddush-gen-2-1-3",
+  "text": "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃\nוַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה׃\nוַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ שָׁבַת מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/kiddush-gen-2-1-3.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "kiddush-gen-2-1-3",
+  "text": "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃\nוַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה׃\nוַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ שָׁבַת מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/kiddush-gen-2-1-3.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "kiddush-gen-2-1-3",
+  "text": "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃\nוַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה׃\nוַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ שָׁבַת מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/kiddush-gen-2-1-3.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "kiddush-gen-2-1-3",
+  "text": "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃\nוַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה׃\nוַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ שָׁבַת מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/kiddush-gen-2-1-3.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "kiddush-gen-2-1-3",
+  "text": "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃\nוַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה׃\nוַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ שָׁבַת מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/kiddush-gen-2-1-3.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "kiddush-gen-2-1-3",
+  "text": "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃\nוַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה׃\nוַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ שָׁבַת מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/kiddush-wine-1.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "kiddush-wine-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/kiddush-wine-1.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "kiddush-wine-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/kiddush-wine-1.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "kiddush-wine-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/kiddush-wine-1.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "kiddush-wine-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/kiddush-wine-1.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "kiddush-wine-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/kiddush-wine-1.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "kiddush-wine-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/hamotzi.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "hamotzi",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/hamotzi.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "hamotzi",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/hamotzi.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "hamotzi",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/hamotzi.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "hamotzi",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/hamotzi.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "hamotzi",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/hamotzi.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "hamotzi",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/candle-shabbat.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "candle-shabbat",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/candle-shabbat.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "candle-shabbat",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/candle-shabbat.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "candle-shabbat",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/candle-shabbat.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "candle-shabbat",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/candle-shabbat.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "candle-shabbat",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/candle-shabbat.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "candle-shabbat",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/prayer/torah-bless-1.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "torah-bless-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל־הָעַמִּים וְנָתַן לָנוּ אֶת־תּוֹרָתוֹ בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/prayer/torah-bless-1.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "prayer",
+  "id": "torah-bless-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל־הָעַמִּים וְנָתַן לָנוּ אֶת־תּוֹרָתוֹ בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/torah-bless-1.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "torah-bless-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל־הָעַמִּים וְנָתַן לָנוּ אֶת־תּוֹרָתוֹ בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/prayer/torah-bless-1.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "torah-bless-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל־הָעַמִּים וְנָתַן לָנוּ אֶת־תּוֹרָתוֹ בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/prayer/torah-bless-1.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "prayer",
+  "id": "torah-bless-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל־הָעַמִּים וְנָתַן לָנוּ אֶת־תּוֹרָתוֹ בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/torah-bless-1.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "torah-bless-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל־הָעַמִּים וְנָתַן לָנוּ אֶת־תּוֹרָתוֹ בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/torah-barchu.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "torah-barchu",
+  "text": "בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ׃\nבָּרוּךְ יְהוָה הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/torah-barchu.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "torah-barchu",
+  "text": "בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ׃\nבָּרוּךְ יְהוָה הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/torah-barchu.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "torah-barchu",
+  "text": "בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ׃\nבָּרוּךְ יְהוָה הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/torah-barchu.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "torah-barchu",
+  "text": "בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ׃\nבָּרוּךְ יְהוָה הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/torah-barchu.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "torah-barchu",
+  "text": "בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ׃\nבָּרוּךְ יְהוָה הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/torah-barchu.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "torah-barchu",
+  "text": "בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ׃\nבָּרוּךְ יְהוָה הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/prayer/torah-bless-2.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "torah-bless-2",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר נָתַן לָנוּ תּוֹרַת אֱמֶת וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵנוּ׃ בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/prayer/torah-bless-2.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "prayer",
+  "id": "torah-bless-2",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר נָתַן לָנוּ תּוֹרַת אֱמֶת וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵנוּ׃ בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/torah-bless-2.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "torah-bless-2",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר נָתַן לָנוּ תּוֹרַת אֱמֶת וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵנוּ׃ בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/prayer/torah-bless-2.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "torah-bless-2",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר נָתַן לָנוּ תּוֹרַת אֱמֶת וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵנוּ׃ בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/prayer/torah-bless-2.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "prayer",
+  "id": "torah-bless-2",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר נָתַן לָנוּ תּוֹרַת אֱמֶת וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵנוּ׃ בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/torah-bless-2.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "torah-bless-2",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר נָתַן לָנוּ תּוֹרַת אֱמֶת וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵנוּ׃ בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/amidah-lips.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "amidah-lips",
+  "text": "אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/amidah-lips.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "amidah-lips",
+  "text": "אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/amidah-lips.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "amidah-lips",
+  "text": "אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/amidah-lips.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "amidah-lips",
+  "text": "אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/amidah-lips.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "amidah-lips",
+  "text": "אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/amidah-lips.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "amidah-lips",
+  "text": "אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/avot-1.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "avot-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא אֵל עֶלְיוֹן גּוֹמֵל חֲסָדִים טוֹבִים קוֹנֵה הַכֹּל וְזוֹכֵר חַסְדֵּי אָבוֹת וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַעַן שְׁמוֹ בְּאַהֲבָה׃ מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/avot-1.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "avot-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא אֵל עֶלְיוֹן גּוֹמֵל חֲסָדִים טוֹבִים קוֹנֵה הַכֹּל וְזוֹכֵר חַסְדֵּי אָבוֹת וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַעַן שְׁמוֹ בְּאַהֲבָה׃ מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/avot-1.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "avot-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא אֵל עֶלְיוֹן גּוֹמֵל חֲסָדִים טוֹבִים קוֹנֵה הַכֹּל וְזוֹכֵר חַסְדֵּי אָבוֹת וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַעַן שְׁמוֹ בְּאַהֲבָה׃ מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/avot-1.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "avot-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא אֵל עֶלְיוֹן גּוֹמֵל חֲסָדִים טוֹבִים קוֹנֵה הַכֹּל וְזוֹכֵר חַסְדֵּי אָבוֹת וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַעַן שְׁמוֹ בְּאַהֲבָה׃ מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/avot-1.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "avot-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא אֵל עֶלְיוֹן גּוֹמֵל חֲסָדִים טוֹבִים קוֹנֵה הַכֹּל וְזוֹכֵר חַסְדֵּי אָבוֹת וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַעַן שְׁמוֹ בְּאַהֲבָה׃ מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/avot-1.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "avot-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא אֵל עֶלְיוֹן גּוֹמֵל חֲסָדִים טוֹבִים קוֹנֵה הַכֹּל וְזוֹכֵר חַסְדֵּי אָבוֹת וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַעַן שְׁמוֹ בְּאַהֲבָה׃ מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/aleinu-1.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "aleinu-1",
+  "text": "עָלֵינוּ לְשַׁבֵּחַ לַאֲדוֹן הַכֹּל לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית שֶׁלֹּא עָשָׂנוּ כְּגוֹיֵי הָאֲרָצוֹת וְלֹא שָׂמָנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה שֶׁלֹּא שָׂם חֶלְקֵנוּ כָּהֶם וְגוֹרָלֵנוּ כְּכָל־הֲמוֹנָם שֶׁהֵם מִשְׁתַּחֲוִים לָהֶבֶל וָרִיק וּמִתְפַּלְּלִים אֶל־אֵל לֹא יוֹשִׁיעַ וַאֲנַחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא שֶׁהוּא נוֹטֶה שָׁמַיִם וְיוֹסֵד אָרֶץ וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַיִם מִמַּעַל וּשְׁכִינַת עֻזּוֹ בְּגָבְהֵי מְרוֹמִים הוּא אֱלֹהֵינוּ וְאֵין עוֹד אַחֵר אֱמֶת מַלְכֵּנוּ וְאֶפֶס זוּלָתוֹ כַּכָּתוּב בַּתּוֹרָה וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל־לְבָבֶךָ כִּי יְהוָה הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל־הָאָרֶץ מִתָּחַת אֵין עוֹד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/aleinu-1.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "aleinu-1",
+  "text": "עָלֵינוּ לְשַׁבֵּחַ לַאֲדוֹן הַכֹּל לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית שֶׁלֹּא עָשָׂנוּ כְּגוֹיֵי הָאֲרָצוֹת וְלֹא שָׂמָנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה שֶׁלֹּא שָׂם חֶלְקֵנוּ כָּהֶם וְגוֹרָלֵנוּ כְּכָל־הֲמוֹנָם שֶׁהֵם מִשְׁתַּחֲוִים לָהֶבֶל וָרִיק וּמִתְפַּלְּלִים אֶל־אֵל לֹא יוֹשִׁיעַ וַאֲנַחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא שֶׁהוּא נוֹטֶה שָׁמַיִם וְיוֹסֵד אָרֶץ וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַיִם מִמַּעַל וּשְׁכִינַת עֻזּוֹ בְּגָבְהֵי מְרוֹמִים הוּא אֱלֹהֵינוּ וְאֵין עוֹד אַחֵר אֱמֶת מַלְכֵּנוּ וְאֶפֶס זוּלָתוֹ כַּכָּתוּב בַּתּוֹרָה וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל־לְבָבֶךָ כִּי יְהוָה הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל־הָאָרֶץ מִתָּחַת אֵין עוֹד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/aleinu-1.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "aleinu-1",
+  "text": "עָלֵינוּ לְשַׁבֵּחַ לַאֲדוֹן הַכֹּל לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית שֶׁלֹּא עָשָׂנוּ כְּגוֹיֵי הָאֲרָצוֹת וְלֹא שָׂמָנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה שֶׁלֹּא שָׂם חֶלְקֵנוּ כָּהֶם וְגוֹרָלֵנוּ כְּכָל־הֲמוֹנָם שֶׁהֵם מִשְׁתַּחֲוִים לָהֶבֶל וָרִיק וּמִתְפַּלְּלִים אֶל־אֵל לֹא יוֹשִׁיעַ וַאֲנַחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא שֶׁהוּא נוֹטֶה שָׁמַיִם וְיוֹסֵד אָרֶץ וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַיִם מִמַּעַל וּשְׁכִינַת עֻזּוֹ בְּגָבְהֵי מְרוֹמִים הוּא אֱלֹהֵינוּ וְאֵין עוֹד אַחֵר אֱמֶת מַלְכֵּנוּ וְאֶפֶס זוּלָתוֹ כַּכָּתוּב בַּתּוֹרָה וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל־לְבָבֶךָ כִּי יְהוָה הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל־הָאָרֶץ מִתָּחַת אֵין עוֹד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/aleinu-1.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "aleinu-1",
+  "text": "עָלֵינוּ לְשַׁבֵּחַ לַאֲדוֹן הַכֹּל לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית שֶׁלֹּא עָשָׂנוּ כְּגוֹיֵי הָאֲרָצוֹת וְלֹא שָׂמָנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה שֶׁלֹּא שָׂם חֶלְקֵנוּ כָּהֶם וְגוֹרָלֵנוּ כְּכָל־הֲמוֹנָם שֶׁהֵם מִשְׁתַּחֲוִים לָהֶבֶל וָרִיק וּמִתְפַּלְּלִים אֶל־אֵל לֹא יוֹשִׁיעַ וַאֲנַחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא שֶׁהוּא נוֹטֶה שָׁמַיִם וְיוֹסֵד אָרֶץ וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַיִם מִמַּעַל וּשְׁכִינַת עֻזּוֹ בְּגָבְהֵי מְרוֹמִים הוּא אֱלֹהֵינוּ וְאֵין עוֹד אַחֵר אֱמֶת מַלְכֵּנוּ וְאֶפֶס זוּלָתוֹ כַּכָּתוּב בַּתּוֹרָה וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל־לְבָבֶךָ כִּי יְהוָה הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל־הָאָרֶץ מִתָּחַת אֵין עוֹד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/aleinu-1.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "aleinu-1",
+  "text": "עָלֵינוּ לְשַׁבֵּחַ לַאֲדוֹן הַכֹּל לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית שֶׁלֹּא עָשָׂנוּ כְּגוֹיֵי הָאֲרָצוֹת וְלֹא שָׂמָנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה שֶׁלֹּא שָׂם חֶלְקֵנוּ כָּהֶם וְגוֹרָלֵנוּ כְּכָל־הֲמוֹנָם שֶׁהֵם מִשְׁתַּחֲוִים לָהֶבֶל וָרִיק וּמִתְפַּלְּלִים אֶל־אֵל לֹא יוֹשִׁיעַ וַאֲנַחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא שֶׁהוּא נוֹטֶה שָׁמַיִם וְיוֹסֵד אָרֶץ וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַיִם מִמַּעַל וּשְׁכִינַת עֻזּוֹ בְּגָבְהֵי מְרוֹמִים הוּא אֱלֹהֵינוּ וְאֵין עוֹד אַחֵר אֱמֶת מַלְכֵּנוּ וְאֶפֶס זוּלָתוֹ כַּכָּתוּב בַּתּוֹרָה וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל־לְבָבֶךָ כִּי יְהוָה הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל־הָאָרֶץ מִתָּחַת אֵין עוֹד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/aleinu-1.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "aleinu-1",
+  "text": "עָלֵינוּ לְשַׁבֵּחַ לַאֲדוֹן הַכֹּל לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית שֶׁלֹּא עָשָׂנוּ כְּגוֹיֵי הָאֲרָצוֹת וְלֹא שָׂמָנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה שֶׁלֹּא שָׂם חֶלְקֵנוּ כָּהֶם וְגוֹרָלֵנוּ כְּכָל־הֲמוֹנָם שֶׁהֵם מִשְׁתַּחֲוִים לָהֶבֶל וָרִיק וּמִתְפַּלְּלִים אֶל־אֵל לֹא יוֹשִׁיעַ וַאֲנַחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא שֶׁהוּא נוֹטֶה שָׁמַיִם וְיוֹסֵד אָרֶץ וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַיִם מִמַּעַל וּשְׁכִינַת עֻזּוֹ בְּגָבְהֵי מְרוֹמִים הוּא אֱלֹהֵינוּ וְאֵין עוֹד אַחֵר אֱמֶת מַלְכֵּנוּ וְאֶפֶס זוּלָתוֹ כַּכָּתוּב בַּתּוֹרָה וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל־לְבָבֶךָ כִּי יְהוָה הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל־הָאָרֶץ מִתָּחַת אֵין עוֹד׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/modeh-ani-1.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "modeh-ani-1",
+  "text": "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/modeh-ani-1.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "modeh-ani-1",
+  "text": "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/modeh-ani-1.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "modeh-ani-1",
+  "text": "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/modeh-ani-1.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "modeh-ani-1",
+  "text": "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/modeh-ani-1.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "modeh-ani-1",
+  "text": "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/modeh-ani-1.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "modeh-ani-1",
+  "text": "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/adon-olam-1.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "adon-olam-1",
+  "text": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃\nלְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃\nוְאַחֲרֵי כִּכְלוֹת הַכֹּל לְבַדּוֹ יִמְלֹךְ נוֹרָא׃\nוְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃\nוְהוּא אֶחָד וְאֵין שֵׁנִי לְהַמְשִׁיל לוֹ לְהַחְבִּירָה׃\nבְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה׃\nוְהוּא אֵלִי וְחַי גּוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃\nוְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃\nבְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישַׁן וְאָעִירָה׃\nוְעִם רוּחִי גְּוִיָּתִי יְהוָה לִי וְלֹא אִירָא׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/adon-olam-1.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "adon-olam-1",
+  "text": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃\nלְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃\nוְאַחֲרֵי כִּכְלוֹת הַכֹּל לְבַדּוֹ יִמְלֹךְ נוֹרָא׃\nוְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃\nוְהוּא אֶחָד וְאֵין שֵׁנִי לְהַמְשִׁיל לוֹ לְהַחְבִּירָה׃\nבְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה׃\nוְהוּא אֵלִי וְחַי גּוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃\nוְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃\nבְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישַׁן וְאָעִירָה׃\nוְעִם רוּחִי גְּוִיָּתִי יְהוָה לִי וְלֹא אִירָא׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/adon-olam-1.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "adon-olam-1",
+  "text": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃\nלְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃\nוְאַחֲרֵי כִּכְלוֹת הַכֹּל לְבַדּוֹ יִמְלֹךְ נוֹרָא׃\nוְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃\nוְהוּא אֶחָד וְאֵין שֵׁנִי לְהַמְשִׁיל לוֹ לְהַחְבִּירָה׃\nבְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה׃\nוְהוּא אֵלִי וְחַי גּוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃\nוְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃\nבְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישַׁן וְאָעִירָה׃\nוְעִם רוּחִי גְּוִיָּתִי יְהוָה לִי וְלֹא אִירָא׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/adon-olam-1.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "adon-olam-1",
+  "text": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃\nלְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃\nוְאַחֲרֵי כִּכְלוֹת הַכֹּל לְבַדּוֹ יִמְלֹךְ נוֹרָא׃\nוְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃\nוְהוּא אֶחָד וְאֵין שֵׁנִי לְהַמְשִׁיל לוֹ לְהַחְבִּירָה׃\nבְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה׃\nוְהוּא אֵלִי וְחַי גּוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃\nוְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃\nבְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישַׁן וְאָעִירָה׃\nוְעִם רוּחִי גְּוִיָּתִי יְהוָה לִי וְלֹא אִירָא׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/adon-olam-1.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "adon-olam-1",
+  "text": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃\nלְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃\nוְאַחֲרֵי כִּכְלוֹת הַכֹּל לְבַדּוֹ יִמְלֹךְ נוֹרָא׃\nוְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃\nוְהוּא אֶחָד וְאֵין שֵׁנִי לְהַמְשִׁיל לוֹ לְהַחְבִּירָה׃\nבְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה׃\nוְהוּא אֵלִי וְחַי גּוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃\nוְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃\nבְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישַׁן וְאָעִירָה׃\nוְעִם רוּחִי גְּוִיָּתִי יְהוָה לִי וְלֹא אִירָא׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/adon-olam-1.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "adon-olam-1",
+  "text": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃\nלְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃\nוְאַחֲרֵי כִּכְלוֹת הַכֹּל לְבַדּוֹ יִמְלֹךְ נוֹרָא׃\nוְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃\nוְהוּא אֶחָד וְאֵין שֵׁנִי לְהַמְשִׁיל לוֹ לְהַחְבִּירָה׃\nבְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה׃\nוְהוּא אֵלִי וְחַי גּוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃\nוְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃\nבְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישַׁן וְאָעִירָה׃\nוְעִם רוּחִי גְּוִיָּתִי יְהוָה לִי וְלֹא אִירָא׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/kaddish-1.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "kaddish-1",
+  "text": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא אָמֵן\nבְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן׃\nיְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא\nיִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא\nלְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחָמָתָא דַּאֲמִירָן בְּעָלְמָא וְאִמְרוּ אָמֵן׃\nיְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃\nעוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/kaddish-1.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "kaddish-1",
+  "text": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא אָמֵן\nבְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן׃\nיְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא\nיִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא\nלְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחָמָתָא דַּאֲמִירָן בְּעָלְמָא וְאִמְרוּ אָמֵן׃\nיְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃\nעוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/kaddish-1.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "kaddish-1",
+  "text": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא אָמֵן\nבְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן׃\nיְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא\nיִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא\nלְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחָמָתָא דַּאֲמִירָן בְּעָלְמָא וְאִמְרוּ אָמֵן׃\nיְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃\nעוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/kaddish-1.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "kaddish-1",
+  "text": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא אָמֵן\nבְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן׃\nיְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא\nיִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא\nלְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחָמָתָא דַּאֲמִירָן בְּעָלְמָא וְאִמְרוּ אָמֵן׃\nיְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃\nעוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/kaddish-1.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "kaddish-1",
+  "text": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא אָמֵן\nבְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן׃\nיְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא\nיִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא\nלְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחָמָתָא דַּאֲמִירָן בְּעָלְמָא וְאִמְרוּ אָמֵן׃\nיְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃\nעוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/kaddish-1.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "kaddish-1",
+  "text": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא אָמֵן\nבְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן׃\nיְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא\nיִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא\nלְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחָמָתָא דַּאֲמִירָן בְּעָלְמָא וְאִמְרוּ אָמֵן׃\nיְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃\nעוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/line/birkat-hamazon-1.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "birkat-hamazon-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַזָּן אֶת הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ בְּחֵן בְּחֶסֶד וּבְרַחֲמִים הוּא נוֹתֵן לֶחֶם לְכָל בָּשָׂר כִּי לְעוֹלָם חַסְדּוֹ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/line/birkat-hamazon-1.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "birkat-hamazon-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַזָּן אֶת הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ בְּחֵן בְּחֶסֶד וּבְרַחֲמִים הוּא נוֹתֵן לֶחֶם לְכָל בָּשָׂר כִּי לְעוֹלָם חַסְדּוֹ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/line/birkat-hamazon-1.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "birkat-hamazon-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַזָּן אֶת הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ בְּחֵן בְּחֶסֶד וּבְרַחֲמִים הוּא נוֹתֵן לֶחֶם לְכָל בָּשָׂר כִּי לְעוֹלָם חַסְדּוֹ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/line/birkat-hamazon-1.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "line",
+  "id": "birkat-hamazon-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַזָּן אֶת הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ בְּחֵן בְּחֶסֶד וּבְרַחֲמִים הוּא נוֹתֵן לֶחֶם לְכָל בָּשָׂר כִּי לְעוֹלָם חַסְדּוֹ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/line/birkat-hamazon-1.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "line",
+  "id": "birkat-hamazon-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַזָּן אֶת הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ בְּחֵן בְּחֶסֶד וּבְרַחֲמִים הוּא נוֹתֵן לֶחֶם לְכָל בָּשָׂר כִּי לְעוֹלָם חַסְדּוֹ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/line/birkat-hamazon-1.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "line",
+  "id": "birkat-hamazon-1",
+  "text": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַזָּן אֶת הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ בְּחֵן בְּחֶסֶד וּבְרַחֲמִים הוּא נוֹתֵן לֶחֶם לְכָל בָּשָׂר כִּי לְעוֹלָם חַסְדּוֹ׃",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/israeli/word/undefined.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "undefined",
+  "text": "שָׁב",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/sephardi/word/undefined.mp3",
+  "voice": "m",
+  "tradition": "sephardi",
+  "kind": "word",
+  "id": "undefined",
+  "text": "שָׁב",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/m/ashkenazi/word/undefined.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "word",
+  "id": "undefined",
+  "text": "שָׁב",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/israeli/word/undefined.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "undefined",
+  "text": "שָׁב",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/sephardi/word/undefined.mp3",
+  "voice": "f",
+  "tradition": "sephardi",
+  "kind": "word",
+  "id": "undefined",
+  "text": "שָׁב",
+  "status": "missing",
+  "source": "none"
+ },
+ {
+  "path": "audio/f/ashkenazi/word/undefined.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "word",
+  "id": "undefined",
+  "text": "שָׁב",
   "status": "missing",
   "source": "none"
  }

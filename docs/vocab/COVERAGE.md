@@ -35,3 +35,33 @@ an exact lemma, so many gaps are phrases or alternative wordings rather than mis
 | Pronouns | 57 | 31 | 26 |
 | Numbers | 61 | 25 | 36 |
 | **Total** | 722 | 501 | 221 |
+
+## Round 2 note (quality pass)
+
+The table above was produced by round 1 and was NOT regenerated after round 2: the reference sheet is not stored in the repository and was not available in this session. Round 2 added 14 basic words, moved some entries between topics and made function words and forms discoverable, so some counts will differ (the sheet's Pronouns and Numbers gaps should shrink a little: הם, אנחנו, כל and the forms[] lists were added; feminine numerals are in `forms[]` and `coverage.py` does not read them yet). Re-run `python3 -I tools/vocab/coverage.py <sheet.csv> --write` to refresh it.
+
+### Quality counts (`python3 tools/vocab/quality.py`), before -> after round 2
+
+Same 5,000-slot list; "before" is the round-1 build, "after" the committed file. These are heuristic counts, and the "after" zeros are partly produced by rules written for those same checks, so they show the targeted defects are gone, not that the data is correct.
+
+| Check | Before | After |
+|---|---:|---:|
+| Gloss says form of / spelling of / alternative (gate) | 1 | 0 |
+| Gloss with wiki markup (gate) | 1 | 0 |
+| Gloss starts with a capital that is not a proper noun | 87 | 0 |
+| Verb gloss not "to ..." (2 left on purpose: forms of "to be") | 37 | 2 |
+| yes/no/not typed as adverb/adjective/noun | 3 | 0 |
+| Closed-class word not marked as function (gate) | 163 | 0 |
+| Function word filed under Misc Nouns / Adjectives without a function mark | 117 | 0 |
+| Noun contradicting the strict head-word table | 25 | 0 |
+| Religion / Jewish-life gloss with no tag | 62 | 0 |
+| Entries in Misc Nouns (all) | 1,157 (23%) | 878 (18%) |
+| Misc Nouns that are not function words | 1,063 | 759 |
+| Shared-spelling entries without cross-reference | 1,419 | 0 |
+| Entries typed as forms (`isForm`) | 0 | 3 |
+| Hand overrides (all still proofread:false) | 0 | 182 |
+| Function-flagged entries | 0 | 176 |
+| Gloss is an English plural of another noun entry (rough, false positives likely) | 7 | 8 |
+| Passive/stative verb glosses (informational) | 136 | 140 |
+
+Top 1,000 ranks: 159 hand overrides and 124 function words. Estimated residual error in ranks 1,001-5,000 is of the order of 10% (sample of 140, see METHOD.md). Still-unreliable areas: the tail, shared-spelling rank inflation, rare-sense glosses, topic of multi-sense nouns, Misc Nouns, and all of it unproofread.

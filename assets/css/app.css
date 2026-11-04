@@ -99,10 +99,18 @@ main { overflow-x: clip; } /* a stray wide table (Sound gap) must not widen the 
 
 /* QA round (lane 8/QA, 2026-11-04): fixes found by tools/qa/walk.mjs at 390px */
 /* radio/checkbox labels in the pronunciation views wrapped so the radio sat at the end of the previous line, apart from its text */
-main label:has(> input[type=radio], > input[type=checkbox]) { display: inline-flex; align-items: center; gap: .4rem; min-block-size: 44px; }
+main label:has(> input[type=radio], > input[type=checkbox]) { display: inline-flex; align-items: center; gap: .4rem; min-block-size: 44px; white-space: normal; }
 /* a long <option> text (Read: "The Priestly Blessing (Birkat Kohanim) (Numbers 6:24-26)") made the select wider than the phone and main{overflow-x:clip} cut it off */
 select { max-inline-size: 100%; min-block-size: 44px; }
 /* tap targets: 44px minimum for disclosure summaries, the sound-bar link and the pronunciation-screen buttons */
 main summary { padding-block: .6rem; min-block-size: 44px; box-sizing: border-box; display: list-item; }
 .sound-bar a { padding-block: .75rem; margin-block: -.75rem; }
 main .alef-r4 button { min-height: 44px; }
+/* Letters (trace) and Atlas ship their own fixed-colour CSS (text #1b1b1f, buttons #fff): in dark mode that was dark text on the dark page and white buttons with light, invisible glyphs.
+   Re-point their neutral surfaces at the theme variables; :where() keeps the specificity low so their own pressed/right/wrong/final states still win. */
+main .alef-trace, main .alef-atlas { color: var(--fg); }
+:where(main .alef-trace, main .alef-atlas) button:not([aria-pressed=true]):not([aria-selected=true]) { background: var(--card); color: var(--fg); border-color: var(--border); }
+main .alef-atlas .panel { background: var(--card); border-color: var(--border); }
+main .alef-atlas .tile .s, main .alef-atlas .muted, main .alef-trace .kb .k small { color: var(--muted); }
+main .alef-atlas .tile.final, main .alef-atlas .tile.wrong, main .alef-atlas .tile.right, main .alef-trace .kb .k.hit { color: #1b1b1f; }
+main .alef-trace .notice, main .alef-atlas .warn { color: #1b1b1f; }

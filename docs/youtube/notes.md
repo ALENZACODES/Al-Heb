@@ -22,6 +22,10 @@ Status: research notes, 2026-11-03. I read English captions only (see `top100.md
 
 **Hebrew For Beginners, "The Hebrew Alphabet FREE course - Lesson 1" (M9t_hqFDB6E), 121K views.** Tiny three-or-four-letter lessons, in order, one quirk per letter. The rest of this channel's alphabet, vowel and handwriting series is covered in `docs/resources/youtube-hfb-playlists.md`.
 
+**Hebrew Today, "Time to learn the Hebrew Nikud" (UbX1NrKvvHM), 277K views.** Frames the vowel marks as five sounds, each with several signs, and tells the learner flatly that the small differences between signs are no longer used, so any sign for a given sound is read the same. Demonstrates with one fixed carrier letter and swaps only the sign, which keeps the contrast clean. Shva gets one sentence (sometimes an e-like sound, sometimes nothing) with no rule. The reduced a-sign that is read as o in certain syllables is not mentioned. Fair for Israeli speech; thin for liturgical reading.
+
+**Hebrew Today, "Let's Learn the Hebrew Alphabet, part 1" (jcb-xAvJKqE), 260K views.** The first five letters with an English-sound anchor for each, a food or animal word with a cultural aside, the bet/vet dot explained when bet appears, and a write-along. Says there are no vowel letters in Hebrew and introduces the vowel marks as a punctuation system, which skips the vowel role of vav and yud.
+
 ## Phrase and conversation videos
 
 **HebrewPod101, "Learn Hebrew in 25 Minutes - ALL the Basics" (jvDCEXbxxL0), 3.3M views.** Stitched three-minute lessons: introductions, thanks, asking someone if they speak English. The teacher stops to show that a phrase changes with the gender of the speaker and listener, so most phrases have up to four forms. Claims there is no formal/informal split in Hebrew, which is a fair simplification for a beginner. Nothing on reading.
@@ -32,6 +36,8 @@ Status: research notes, 2026-11-03. I read English captions only (see `top100.md
 
 ## Prayer and Torah reading
 
+**The WORD in HEBREW, "The Shema Prayer in Hebrew" (LCRIPntvZzs), 234K views.** The best-structured prayer video I read: right-to-left stated, then a key to the Latin transliteration (how vowels, ts, kh and r are spelled, a slash between syllables, capitals on the stressed syllable), then each word said slowly by syllable and again whole while a cursor follows the Hebrew. Tells the learner to watch the transliteration, so the Latin key, not the letters, carries the sound. Explains why the divine name is replaced by a substitute word when reading aloud. Stress is marked here and in almost no other video.
+
 **BibleProject, "Shema - Listen" (6KQLOuIKaRA), 2.2M views.** A meaning-and-word-study video. No reading help for the prayer; it explains what the verb means in the Bible. Useful context for a gloss, not for reading skill.
 
 **My Jewish Learning, "Shema: How to Say This Jewish Prayer" (vB58oyck-C8), 387K views.** A rabbi talks through when and how to say the prayer (hands over eyes, quiet second line). The auto-captions of the chanted part are unreadable, so I cannot judge the reading method. Ritual and gesture are covered; the letters are not taught.
@@ -39,3 +45,5 @@ Status: research notes, 2026-11-03. I read English captions only (see `top100.md
 **Rabbi Hajioff, "Practice reading the Shema" (pKQFMy9-6IE), 376K views.** Reads the first paragraph line by line for the learner to follow, with a note on the oversized ayin and dalet in the first line (together spelling "witness"). Call-and-follow reading with a book; no letter or vowel teaching.
 
 **The YouTube Rabbi, "Mourner's Kaddish" (luk85AVuHCg), 597K views.** Captions hold about 13 words, so I could not read it. Listed as unusable.
+
+**Jewish Learning and Prayer, "Aleinu" (Lf0ZDAvYInU), 238K views.** Captions hold about 14 words, so I could not read it. Listed as unusable.

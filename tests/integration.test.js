@@ -257,6 +257,9 @@ test('precache: skips vendor, PDFs and files over the size limit', async () => {
   const { readFileSync } = await import('node:fs'); const { statSync } = await import('node:fs');
   const m = computeManifest();
   assert.ok(!m.files.some((f) => f.startsWith('assets/vendor/') || f.startsWith('assets/workbook/') || f.endsWith('.pdf') || f.startsWith('data/vocab/packs/')));
+  assert.ok(!m.files.some((f) => /^data\/audio\/manifest-words-/.test(f)), 'word shards are lazy + runtime-cached, not precached');
+  assert.ok(m.files.includes('data/audio/manifest.json'), 'core audio manifest stays precached');
+  assert.match(rd('sw.js'), /manifest-words-/, 'sw.js has a runtime rule for the shards');
   for (const f of m.files) assert.ok(statSync(join(root, f)).size <= MAX_FILE_BYTES, f);
   // compare the file LIST (not the content hash, which changes on every edit by any lane)
   const listed = JSON.parse(readFileSync(join(root, 'precache-manifest.js'), 'utf8').match(/ALEF_PRECACHE = (\[[\s\S]*?\]);/)[1]);
@@ -272,4 +275,49 @@ test('router: lane 1 sub-screens inject the query learn.view.js dispatches on', 
   assert.equal(matchRoute('#/dialogues/d-cafe').query.dialogue, 'd-cafe');
   assert.equal(matchRoute('#/letters/atlas').route.name, 'atlas');
   assert.equal(matchRoute('#/soundgap').route.name, 'soundgap');
+});
+
+test('shard loader: loads only the learner tradition, re-loads on change, falls back, handles offline', async () => {
+  const { createShardLoader, OFFLINE_NOTE } = await import('../src/shell/audio-shards.js');
+  const mk = (tradition, id) => [{ voice: 'f', tradition, kind: 'word', id, text: id, status: 'tts', path: `audio/f/${tradition}/word/${id}.mp3` }];
+  const shards = { israeli: mk('israeli', 'a'), ashkenazi: mk('ashkenazi', 'b') }; // no sephardi shard
+  const calls = []; let offline = false;
+  const fakeFetch = async (u) => {
+    calls.push(u);
+    if (offline) throw new TypeError('network');
+    const t = u.match(/manifest-words-(\w+)\.json/)[1];
+    return shards[t] ? { ok: true, status: 200, json: async () => shards[t] } : { ok: false, status: 404, json: async () => { throw new Error('x'); } };
+  };
+  const player = createAudio({ settings: { voice: 'f', congregation: 'ashkenazi' }, manifest: [], speech: null });
+  let cong = 'ashkenazi'; const subs = [];
+  const settings = { get: () => cong, subscribe: (f) => { subs.push(f); } };
+  const states = [];
+  const L = createShardLoader({ fetch: fakeFetch, audio: player, settings, onState: (s) => states.push(s.state) });
+  assert.equal(player.status('word', 'b').source, 'none', 'before the shard loads the word is unknown');
+  await L.load();
+  assert.deepEqual(calls, ['data/audio/manifest-words-ashkenazi.json'], 'only the learner shard is fetched');
+  assert.equal(player.status('word', 'b').source, 'file');
+  await L.load(); assert.equal(calls.length, 1, 'already loaded: no second fetch');
+  // setting change re-loads
+  L.watch(); cong = 'israeli'; subs[0](null, ['congregation']); await new Promise((r) => setTimeout(r, 0));
+  assert.equal(calls.at(-1), 'data/audio/manifest-words-israeli.json');
+  assert.equal(player.status('word', 'a', { tradition: 'israeli' }).source, 'file');
+  // sephardi: shard absent -> israeli shard already loaded, state fallback, no throw
+  cong = 'sephardi'; const r = await L.load();
+  assert.equal(r.state, 'fallback'); assert.equal(r.loaded, 'israeli');
+  // offline with nothing cached: graceful note, never throws
+  const L2 = createShardLoader({ fetch: fakeFetch, audio: createAudio({ settings: { voice: 'f' }, manifest: [], speech: null }), settings: { get: () => 'ashkenazi' } });
+  offline = true; const r2 = await L2.load();
+  assert.equal(r2.state, 'offline'); assert.equal(r2.note, OFFLINE_NOTE); assert.match(OFFLINE_NOTE, /unavailable offline/);
+  // an HTML offline page answering the JSON request is also "offline", not an error
+  offline = false;
+  const L3 = createShardLoader({ fetch: async () => ({ ok: true, status: 200, json: async () => { throw new SyntaxError('<'); } }), audio: player, settings: { get: () => 'ashkenazi' } });
+  assert.equal((await L3.load()).state, 'offline');
+  // a stale request does not win over a newer one
+  assert.ok(states.includes('loading'));
+});
+test('shell audio: setNote appends and clears a short note on the status line', () => {
+  const a = createShellAudio({ settings: { get: () => 'f' }, manifest: [], createAudio });
+  const base = a.state.text; a.setNote('audio info unavailable offline');
+  assert.match(a.state.text, /\(audio info unavailable offline\)$/); a.setNote(''); assert.equal(a.state.text, base);
 });

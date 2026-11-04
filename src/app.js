@@ -6,6 +6,7 @@ import { VIEW_FILES } from './shell/views.generated.js';
 import { t, tHe } from './shell/i18n.js';
 import { createStubAudio } from './shell/audio-stub.js';
 import { createShellAudio } from './shell/audio.js';
+import { createShardLoader } from './shell/audio-shards.js';
 import { h, heSpan, unavailableCard } from './shell/ui.js';
 
 const settings = createSettings(store);
@@ -23,6 +24,19 @@ function wireSoundStatus(audio) {
   if (!el) return;
   if (typeof audio.subscribe === 'function') audio.subscribe((s) => { el.textContent = s.text; el.dataset.mode = s.mode; });
   else { el.textContent = "Sound: your browser's text-to-speech voice (fallback player). No recordings."; el.dataset.mode = 'tts'; }
+}
+
+/** After first paint: lazily load the word-clip shard for the learner's congregation, and reload it when the setting changes. */
+function startShardLoading(audio) {
+  if (typeof audio.extend !== 'function') return; // stub player: nothing to extend
+  const loader = createShardLoader({
+    fetch: (u) => fetch(u), audio, settings,
+    onState: (s) => { audio.setNote?.(s.note); document.body.dataset.audioShard = s.state; },
+  });
+  loader.watch();
+  window.alefShards = loader;
+  const go = () => { loader.load(); };
+  requestAnimationFrame(() => setTimeout(() => ('requestIdleCallback' in window ? requestIdleCallback(go, { timeout: 2000 }) : go()), 0));
 }
 
 // Install prompt (Chromium). Not supported on iOS Safari (Add to Home Screen is manual).
@@ -141,6 +155,7 @@ async function boot() {
   router = createRouter((m) => { show(m, ctxBase); });
   window.alef = { settings, store, audio, router }; // debugging handle
   router.start();
+  startShardLoading(audio);
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
     navigator.serviceWorker.register('sw.js').catch((e) => console.warn('service worker not registered', e));
   }

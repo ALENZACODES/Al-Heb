@@ -48,13 +48,17 @@ export function createShellAudio({ settings, manifest = [], createAudio }) {
     ? { mode: 'idle', text: `Sound: ${summary.recorded} recorded and ${summary.tts} pre-rendered clips are listed; anything else uses your browser's voice.` }
     : { mode: 'idle', text: "Sound: no recordings exist yet. Audio uses your browser's Hebrew text-to-speech voice, if your device has one." };
   let state = initial;
-  const publish = (s) => { state = s; for (const f of subs) { try { f(state); } catch { /* ignore */ } } };
+  let note = '', raw = initial;
+  const compose = (s) => (note ? { ...s, text: `${s.text} (${note})` } : s);
+  const publish = (s) => { raw = s; state = compose(s); for (const f of subs) { try { f(state); } catch { /* ignore */ } } };
   const opts = (o = {}) => ({ allowMismatchedTts: !!settings.get('browserVoiceAnyway'), ...o });
 
   return {
     ...inner,
     summary,
     get state() { return state; },
+    /** short extra note appended to the sound-status line (e.g. 'audio info unavailable offline'); '' clears it */
+    setNote(n) { note = n || ''; publish(raw); },
     subscribe(fn) { subs.add(fn); fn(state); return () => subs.delete(fn); },
     status: (kind, id, o) => inner.status(kind, id, opts(o)),
     has: (kind, id, o) => inner.has(kind, id, opts(o)),

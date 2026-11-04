@@ -2,6 +2,8 @@
    (node tools/build-precache.mjs). Strategies:
    - navigation: network first, fall back to cached index.html, then offline.html
    - audio/images: cache first, filled at runtime (Range requests bypass the cache; see docs/ARCHITECTURE.md)
+   - data/audio/manifest-words-*.json (lazy per-tradition word shards, NOT precached): stale-while-revalidate into the runtime cache,
+     so the learner's own shard is available offline after first use; a plain network error when neither exists (never offline.html)
    - everything else same-origin: stale-while-revalidate */
 importScripts('precache-manifest.js');
 const VERSION = self.ALEF_VERSION || 'dev';
@@ -31,6 +33,14 @@ self.addEventListener('fetch', (event) => {
     event.respondWith((async () => {
       try { const res = await fetch(req); if (res.ok) return res; } catch { /* offline */ }
       return (await caches.match('index.html')) || (await caches.match('offline.html')) || Response.error();
+    })());
+    return;
+  }
+  if (/\/data\/audio\/manifest-words-[a-z]+\.json$/.test(url.pathname)) {
+    event.respondWith((async () => {
+      const hit = await caches.match(req);
+      const net = fetch(req).then(async (res) => { if (res.ok) { const c = await caches.open(RUNTIME); c.put(req, res.clone()); } return res; }).catch(() => null);
+      return hit || (await net) || Response.error();
     })());
     return;
   }

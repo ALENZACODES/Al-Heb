@@ -1,3 +1,9 @@
+## Audio shard lazy loading (lane 8, 2026-11-03)
+- Boot loads the core manifest only (1.29 MiB, precached). `src/shell/audio-shards.js` then fetches just the learner's `manifest-words-<congregation>.json` (0.81-0.83 MiB) after first paint and calls `player.extend`; re-loads when the congregation setting changes. Sephardi shard exists now; if absent, israeli shard is used. Offline/uncached: sound bar note "audio info unavailable offline", no error.
+- Precache skips the three shards; `sw.js` runtime-caches them (stale-while-revalidate). Precache is now 149 files.
+- Tests: precache skip rule asserted; new fake-fetch loader test (only learner shard fetched, no refetch, change reloads, sephardi fallback, offline, non-JSON answer); `setNote` test. Full `node --test`: 598 pass, 0 fail.
+- Checked in Chromium: `walk.mjs --quick` run to /tmp: hardFailures 0; own script on /read/ein-kamocha with ashkenazi and browserVoiceAnyway off: status `none/unknown-item` with the shard blocked (note shown), `none/tts-pronunciation-mismatch` once loaded; screenshot of the offline case viewed. Not verified: real offline reload serving a shard from the runtime cache (the cache rule is simple but not exercised in a browser), and every shard entry is currently status "missing" (no recordings exist), so no shard word plays a file yet.
+
 # ALEF status (lane 8, shell/QA-fix round, 2026-11-04)
 
 ## This round (lane 8)

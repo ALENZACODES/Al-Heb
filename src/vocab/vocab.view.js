@@ -10,6 +10,7 @@ import { transliterate } from '../pronunciation/transliterate.js';
 import { loadTier, TIER_BANDS } from './loader.js';
 import { TIER_LABEL, POS_LABEL, VOCAB_CARDS_KEY, filterEntries, stripPoints, addCards, cardId, CARD_PREFIX } from './model.js';
 import { isFunction } from './vocab.js';
+import { plural } from '../shell/plural.js';
 
 const PAGE = 40;          // cards rendered per page
 const ADD_LIMIT = 100;    // words added to reviews per click
@@ -138,7 +139,18 @@ export function mount(root, ctx) {
     return el('p', { class: 'vc-meta' }, `Transliteration (${TRAD[tradition()]}, approximate): `, tl ? el('i', {}, tl) : '(not available: this word has no vowel points yet)');
   };
   const known = new Map(); // id -> entry, for every tier loaded so far (cross-references)
-  const label = (e) => `${e.pointed || e.lemma} (${e.gloss})`;
+  /** Wrap runs of Hebrew letters (with points) inside an English string in lang=he spans. */
+  const HE_RUN = /[\u0590-\u05FF\uFB1D-\uFB4F]+(?:[\s\u05BE\u05F3\u05F4'\"-]+[\u0590-\u05FF\uFB1D-\uFB4F]+)*/g;
+  const glossNodes = (text) => {
+    const str = String(text ?? ''); const out = []; let last = 0;
+    for (const m of str.matchAll(HE_RUN)) {
+      if (m.index > last) out.push(str.slice(last, m.index));
+      out.push(el('span', { lang: 'he', dir: 'rtl' }, m[0])); last = m.index + m[0].length;
+    }
+    if (last < str.length) out.push(str.slice(last));
+    return out;
+  };
+  const label = (e) => [`${e.pointed || e.lemma} (`, ...glossNodes(e.gloss), ')'];
   const metaLine = (e) => {
     const kind = isFunction(e) ? `function word${e.fn ? ` (${e.fn})` : ''}` : e.topic;
     const extra = [];
@@ -155,7 +167,7 @@ export function mount(root, ctx) {
     if (e.isForm) {
       const base = known.get(e.formOf);
       out.push(el('p', { class: 'vc-meta' }, 'This is a form of another word: ',
-        base ? el('button', { type: 'button', class: 'btn secondary', 'aria-label': `Show the main word ${base.gloss}`, onclick: () => showWord(base) }, label(base)) : '(open "All 5,000 words" to see it).'));
+        base ? el('button', { type: 'button', class: 'btn secondary', 'aria-label': `Show the main word ${base.gloss}`, onclick: () => showWord(base) }, ...label(base)) : '(open "All 5,000 words" to see it).'));
     }
     if (Array.isArray(e.forms) && e.forms.length) {
       out.push(el('div', { class: 'vc-meta' }, el('span', {}, 'Forms (from Wiktionary, may be incomplete): '),
@@ -205,7 +217,7 @@ export function mount(root, ctx) {
         el('div', {}, el('label', { for: 'vc-topic' }, 'Topic'), topicSel),
         el('div', {}, el('label', { for: 'vc-tag' }, 'Kind of word'), tagSel),
         el('div', {}, el('label', { for: 'vc-search' }, 'Search (Hebrew with or without vowel points, or English)'), search)),
-      el('div', { class: 'vc-check' }, formsBox, el('label', { for: 'vc-forms' }, 'Show word forms (spellings that are only a form of another word)')),
+      el('div', { class: 'vc-check' }, el('label', { for: 'vc-forms' }, formsBox, ' Show word forms (spellings that are only a form of another word)')),
       status, addRow, heading, list, moreRow);
     let all = [], matches = [], shown = 0;
 
@@ -220,7 +232,7 @@ export function mount(root, ctx) {
       const add = el('button', { type: 'button', class: 'btn secondary', 'aria-label': inRev ? `${e.gloss}: already in reviews` : `Add ${e.gloss} to reviews`, ...(inRev ? { disabled: true } : {}),
         onclick: async () => { const r = addCards(cards, [e], Date.now()); await saveCards(r.cards); add.setAttribute('disabled', ''); add.textContent = 'In reviews'; add.setAttribute('aria-label', `${e.gloss}: already in reviews`); updateAdd(); } }, inRev ? 'In reviews' : 'Add to reviews');
       return el('li', { class: 'card vc-card', 'data-id': e.id },
-        heWord(e, 'vc-he'), el('p', { tabindex: '-1', class: 'vc-gloss' }, e.gloss), metaLine(e), ...noteLines(e), translitLine(e),
+        heWord(e, 'vc-he'), el('p', { tabindex: '-1', class: 'vc-gloss' }, ...glossNodes(e.gloss)), metaLine(e), ...noteLines(e), translitLine(e),
         el('div', { class: 'row' }, listenButton(e), add));
     };
     const updateAdd = () => {
@@ -233,7 +245,7 @@ export function mount(root, ctx) {
         fresh ? el('button', { type: 'button', class: 'btn', id: 'vc-add-all', onclick: async () => {
           const r = addCards(cards, eligible, Date.now(), ADD_LIMIT); await saveCards(r.cards);
           renderRows(true); updateAdd();
-          status.textContent = `Added ${r.added} word${r.added === 1 ? '' : 's'} to your reviews${fresh > r.added ? `; ${fresh - r.added} more can be added with another click` : ''}.`; } }, `Add ${Math.min(fresh, ADD_LIMIT)} of these ${eligible.length} words to reviews`)
+          status.textContent = `Added ${r.added} word${r.added === 1 ? '' : 's'} to your reviews${fresh > r.added ? `; ${fresh - r.added} more can be added with another click` : ''}.`; } }, `Add ${Math.min(fresh, ADD_LIMIT)} of ${eligible.length === 1 ? 'this 1 word' : `these ${eligible.length} words`} to reviews`)
           : el('p', { class: 'muted' }, 'All of these words are already in your reviews.'),
         el('span', { class: 'muted' }, `(${what}${sel.query ? ', matching your search' : ''})`),
         skipped ? el('p', { class: 'muted' }, `${skipped} word form${skipped === 1 ? '' : 's'} and rare-sense word${skipped === 1 ? '' : 's'} in this list are skipped here; use a card's own button to add one.`) : null].filter(Boolean));
@@ -247,7 +259,7 @@ export function mount(root, ctx) {
       moreRow.replaceChildren(...(shown < matches.length ? [el('button', { type: 'button', class: 'btn secondary', id: 'vc-more', onclick: () => {
         const from = shown; shown = Math.min(shown + PAGE, matches.length);
         list.append(...matches.slice(from, shown).map(cardItem));
-        status.textContent = `Showing ${shown} of ${matches.length} words.`;
+        status.textContent = `Showing ${shown} of ${matches.length} ${plural(matches.length, 'word')}.`;
         if (shown >= matches.length) moreRow.replaceChildren();
         focusNode(list.children?.[from]?.querySelector?.('.vc-gloss'));
       } }, `Show ${Math.min(PAGE, matches.length - shown)} more`)] : []));
@@ -297,7 +309,7 @@ export function mount(root, ctx) {
     const future = vocabCards().filter((c) => c.due > Date.now()).sort((a, b) => a.due - b.due)[0];
     body.replaceChildren(el('div', { class: 'card' }, el('h2', { tabindex: '-1', id: 'vc-done' }, n ? 'Session done' : 'Nothing due'),
       n ? el('p', {}, `${n} word${n === 1 ? '' : 's'} reviewed: ${s[1]} again, ${s[2]} hard, ${s[3]} good, ${s[4]} easy.`) : el('p', {}, 'No vocabulary reviews are due right now.'),
-      el('p', { class: 'muted' }, left ? `${left} still due.` : (future ? `Next one is due in about ${Math.max(1, Math.round((future.due - Date.now()) / MS_DAY))} day(s) (or minutes, for words rated Again).` : 'All caught up.')),
+      el('p', { class: 'muted' }, left ? `${left} still due.` : (future ? `Next one is due in about ${(() => { const d = Math.max(1, Math.round((future.due - Date.now()) / MS_DAY)); return `${d} ${plural(d, 'day')}`; })()} (or minutes, for words rated Again).` : 'All caught up.')),
       el('div', { class: 'row' }, left ? el('button', { type: 'button', class: 'btn', onclick: renderReview }, 'Keep reviewing') : null,
         el('button', { type: 'button', class: 'btn secondary', onclick: () => setMode('browse') }, 'Browse words'))));
     focusNode(body.querySelector?.('#vc-done'));
@@ -315,7 +327,7 @@ export function mount(root, ctx) {
   function showAnswer(prompt, reveal) {
     const e = rv.current; rv.revealed = true;
     reveal.remove?.();
-    const answer = el('div', { class: 'vc-answer', 'aria-live': 'polite' }, el('p', { class: 'vc-gloss', tabindex: '-1', id: 'vc-a' }, e.gloss), metaLine(e), ...noteLines(e), translitLine(e), el('div', { class: 'row' }, listenButton(e)));
+    const answer = el('div', { class: 'vc-answer', 'aria-live': 'polite' }, el('p', { class: 'vc-gloss', tabindex: '-1', id: 'vc-a' }, ...glossNodes(e.gloss)), metaLine(e), ...noteLines(e), translitLine(e), el('div', { class: 'row' }, listenButton(e)));
     const rate = el('div', { class: 'vc-rate', role: 'group', 'aria-label': 'How well did you remember it?' },
       ...RATINGS.map(([r, name, hint]) => el('button', { type: 'button', class: 'btn' + (r === 3 ? '' : ' secondary'), 'data-rating': String(r), 'aria-label': `${name} (${r}): ${hint}`, onclick: () => rate_(r) }, `${name} (${r})`)));
     prompt.append(answer); body.append(rate);

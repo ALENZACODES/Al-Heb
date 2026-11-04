@@ -17,6 +17,7 @@ export const en = {
   'home.due': 'Reviews due',
   'home.due.none': 'No reviews due.',
   'home.due.count': '{n} cards due',
+  'home.due.count.one': '{n} card due',
   'home.quick': 'Go to',
   'home.reflect': 'Morning and evening reflection',
   'home.reflect.link': 'Open today\'s prompt',

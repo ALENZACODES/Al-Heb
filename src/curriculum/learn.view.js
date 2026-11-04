@@ -10,6 +10,7 @@
  */
 import { lessons, belts } from "./lessons.js";
 import { due } from "./srs.js";
+import { plural } from "../shell/plural.js";
 import { el, heText, tr, replaceKeepingFocus } from "./dom.js";
 import { loadState, completeLesson } from "./actions.js";
 import { mountLesson } from "./lesson.view.js";
@@ -62,7 +63,7 @@ function mountMap(root, ctx) {
             onclick: () => { track = id; render(); } }, label))),
       el("p", { class: "alef-progress", role: "status" }, `${doneInTrack} / ${list.length} ${tr(ctx, "learn.lessonsDone", "lessons done")}`),
       el("p", { class: "alef-due", role: "status" }, dueCount
-        ? `${dueCount} ${tr(ctx, "learn.dueReviews", "reviews due")}`
+        ? dueCount === 1 ? "1 review due" : `${dueCount} ${tr(ctx, "learn.dueReviews", "reviews due")}`
         : tr(ctx, "learn.noDue", "No reviews due"), " ",
         dueCount ? el("a", { class: "btn", href: "#/learn?review=1" }, "Review now") : null),
       el("p", { class: "alef-streak" }, st.streak.count ? `Streak: ${st.streak.count} day${st.streak.count === 1 ? "" : "s"}${st.streak.activeToday ? "" : " (learn today to keep it)"}` : "No streak yet. Finish a lesson or review a card to start one."),

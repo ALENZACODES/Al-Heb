@@ -52,7 +52,7 @@ export function mount(root, ctx) {
     if (nexts.length) todayBody.replaceChildren(...nexts.map((l) => h('p', { class: 'next-lesson' }, h('strong', {}, l.title), ' ', h('a', { class: 'btn', href: `#/learn?lesson=${encodeURIComponent(l.id)}` }, t('home.today.start')))));
     else todayBody.replaceChildren(h('p', {}, 'All lessons in your track are complete. Use Review to keep them fresh.'));
     const n = srs?.due ? srs.due(Object.values(st.cards), new Date()).length : 0;
-    if (n > 0) dueBody.replaceChildren(h('a', { class: 'btn', href: '#/learn?review=1' }, t('home.due.count', { n })));
+    if (n > 0) dueBody.replaceChildren(h('a', { class: 'btn', href: '#/learn?review=1' }, t(n === 1 ? 'home.due.count.one' : 'home.due.count', { n })));
     if (st.streak.count > 0) streakBody.replaceChildren(h('strong', {}, `${st.streak.count} day${st.streak.count === 1 ? '' : 's'}`), st.streak.activeToday ? ' and counting. Done for today.' : '. Learn something today to keep it.');
   })();
   return () => { alive = false; };

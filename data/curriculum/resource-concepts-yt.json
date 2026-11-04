@@ -1,0 +1,395 @@
+{
+ "version": 1,
+ "generated": "2026-11-03",
+ "note": "Scores 0-1000 are the author's judgement of expected learner value, not measured outcomes. improvedScore equals score when no improvement was specced. riskAxis: higher is worse. Source: three public YouTube playlists by the Hebrew For Beginners channel, read through English auto-captions only (no video watched, no audio heard). Captions are machine-made and noisy. No text, video or audio is reused; ideas only.",
+ "axesKey": {
+  "r": "reading siddur or Torah aloud",
+  "i": "Israeli functional Hebrew",
+  "c": "beginner clarity",
+  "f": "fit with ALEF",
+  "risk": "originality risk, higher is worse"
+ },
+ "sources": {
+  "yt-alphabet": {
+   "name": "The Hebrew Alphabet FREE course (playlist PLs_960L8fsozkSpqNbEHOZ0iBa3ArWK0k)",
+   "videos": 7,
+   "captionsRead": 7,
+   "captionsMissing": [],
+   "licence": "Not stated in the data I could read (yt-dlp license field: NA). Treat as standard YouTube terms, all rights reserved."
+  },
+  "yt-vowels": {
+   "name": "Hebrew For Beginners vowel signs (playlist PLs_960L8fsow93QPN6hISr7v6PnlFLWEH)",
+   "videos": 7,
+   "captionsRead": 5,
+   "captionsMissing": [
+    "ZnFycQ-XVSo (i signs)",
+    "cdeCPo3K9uk (u signs)"
+   ],
+   "licence": "Same as above."
+  },
+  "yt-handwriting": {
+   "name": "Hebrew Handwriting (playlist PLs_960L8fsozA99DPz4HpVoJIyBgj2Oul)",
+   "videos": 5,
+   "captionsRead": 1,
+   "captionsMissing": [
+    "YAs1bIG22Uk (part 2)",
+    "940ZU8K6OOA (part 3)",
+    "SJXAyg9GTao (overview)"
+   ],
+   "captionsUnusable": [
+    "astrLZlyFEQ (part 4, garbled auto-captions)"
+   ],
+   "licence": "Same as above."
+  }
+ },
+ "concepts": [
+  {
+   "id": "yt-alphabet-01",
+   "source": "yt-alphabet",
+   "name": "Seven short lessons of three or four letters each, in alphabet order",
+   "what": "The alphabet playlist is seven videos of about 1.5 to 5 minutes. Each lesson takes a few letters in the traditional order and states one notable behaviour of each, so a lesson ends before attention drops.",
+   "axes": {
+    "r": 600,
+    "i": 500,
+    "c": 800,
+    "f": 700,
+    "risk": 100
+   },
+   "score": 640,
+   "improvedScore": 640,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read"
+  },
+  {
+   "id": "yt-alphabet-02",
+   "source": "yt-alphabet",
+   "name": "One special feature called out per letter as it is introduced",
+   "what": "Each letter gets a plain-language flag: aleph and ayin carry no sound of their own, final he is not pronounced, bet/kaf/pe change with a dot, final forms exist. The learner meets the exception at the moment of meeting the letter.",
+   "axes": {
+    "r": 760,
+    "i": 600,
+    "c": 800,
+    "f": 800,
+    "risk": 150
+   },
+   "score": 780,
+   "improvedScore": 880,
+   "improvedName": "Letter behaviour badges tied to the data",
+   "spec": {
+    "screen": "Letter card with a single highlighted badge row (silent carrier, dot changes sound, has final form, look-alike warning). Badge text is ALEF's own wording.",
+    "data": "badges[] per letter in data/letters/letters.json extension: {letterId, kind: silent|dagesh-pair|final|lookalike|loanword-mark, textKey}. Keys point to i18n strings, not copied captions.",
+    "interaction": "Tap a badge to open a 10 second demo (toggle dot, show final form, flash the look-alike). A later retrieval card asks which badge a letter carries.",
+    "test": "Unit: every one of the 27 letters has at least one badge, the badge kinds agree with letters.json fields (finalOf, confusableWith), and no badge text is shorter than 10 characters."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read",
+   "notes": "The lesson also says a final he is simply not read. That is a beginner shortcut: it is wrong for mappiq-he and for several Torah words. ALEF should say 'usually silent' and link to the exceptions later."
+  },
+  {
+   "id": "yt-alphabet-03",
+   "source": "yt-alphabet",
+   "name": "Same glyph with and without a dot, sounds compared back to back",
+   "what": "For bet, kaf and pe the instructor shows the dotted and undotted glyph and has the learner hear the two sounds in turn, then repeats the contrast on later letters so it becomes a pattern.",
+   "axes": {
+    "r": 850,
+    "i": 700,
+    "c": 850,
+    "f": 850,
+    "risk": 100
+   },
+   "score": 850,
+   "improvedScore": 960,
+   "improvedName": "Dot toggle tile with set-the-dot test",
+   "spec": {
+    "screen": "Two-state letter tile: one big glyph with a draggable or tappable dot. Left half shows plosive (dotted), right half shows fricative (plain), each with its sound button and a mouth-position hint drawn by ALEF.",
+    "data": "dageshPairs[] = {letterId, dotted: {sound, ipa}, plain: {sound, ipa}} for bet, kaf, pe; a tradition field so a pair can be dropped or re-labelled where a tradition has no audible contrast. Audio ids reuse letter and syllable manifest entries.",
+    "interaction": "Toggle the dot; the sound plays and the tile morphs. Then a 6 item test plays a sound and the learner must set the dot correctly. Mistakes feed the SRS card for that letter pair.",
+    "test": "Unit: exactly three pairs ship, each has audio ids that resolve in the manifest (or are flagged missing), and the test generator never produces an item whose answer is ambiguous under the selected tradition."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read",
+   "notes": "Israeli Hebrew merges several pairs (tav/tet, kaf/chet sounds), so the contrast must be tradition aware."
+  },
+  {
+   "id": "yt-alphabet-04",
+   "source": "yt-alphabet",
+   "name": "Verbal look-alike warnings (final nun versus vav, tav versus chet)",
+   "what": "When a new letter resembles an earlier one the instructor stops and asks the learner to look at the difference, naming the earlier letter. This is the only discrimination work in the playlist.",
+   "axes": {
+    "r": 800,
+    "i": 650,
+    "c": 800,
+    "f": 850,
+    "risk": 100
+   },
+   "score": 810,
+   "improvedScore": 930,
+   "improvedName": "Differing-stroke highlight pairs",
+   "spec": {
+    "screen": "Side by side pair tile with the differing stroke highlighted in a contrasting colour, 3 second pulse, then both glyphs in a text sample.",
+    "data": "Reuse confusableWith[] from letters.json; add diffNote i18n key per pair and a diffPath (SVG fragment of the distinguishing stroke).",
+    "interaction": "Learner taps the stroke that differs; then a speeded same/different task.",
+    "test": "Unit: every confusableWith entry is symmetric and has a diffNote key."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read"
+  },
+  {
+   "id": "yt-alphabet-05",
+   "source": "yt-alphabet",
+   "name": "Geresh letters (gimel, zayin, tsadi with a mark) taught inside the main alphabet lessons",
+   "what": "Loan-sound variants (j as in John, zh, ch) are given directly after the base letter. For a beginner this competes with the base letter just learned.",
+   "axes": {
+    "r": 250,
+    "i": 650,
+    "c": 500,
+    "f": 400,
+    "risk": 150
+   },
+   "score": 420,
+   "improvedScore": 420,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read",
+   "notes": "Useful for Israeli loanwords (jeans, chips) but not for siddur reading. Better as a separate later mini unit. The captions also tie the instructor's English-equivalent claims to American English, which I could not check."
+  },
+  {
+   "id": "yt-alphabet-06",
+   "source": "yt-alphabet",
+   "name": "English-equivalent letter per Hebrew letter as the main sound anchor",
+   "what": "Each letter is paired with an English letter that sounds similar (a, b, g...). Quick, but it hides sounds with no English match (chet, resh, tsadi).",
+   "axes": {
+    "r": 400,
+    "i": 450,
+    "c": 600,
+    "f": 400,
+    "risk": 100
+   },
+   "score": 430,
+   "improvedScore": 430,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read",
+   "notes": "The lesson on resh says the sound differs from English; it gives a throat-versus-tongue explanation without a recording drill in the captions."
+  },
+  {
+   "id": "yt-vowels-01",
+   "source": "yt-vowels",
+   "name": "Vowel signs grouped by the sound they make (a, e, i, o, u families) with several signs per family",
+   "what": "Instead of listing signs one at a time, the playlist makes five videos, one per vowel sound, and shows all the signs that give that sound, including vowel letters beside them. Learners see that many marks collapse to five sounds.",
+   "axes": {
+    "r": 930,
+    "i": 880,
+    "c": 850,
+    "f": 880,
+    "risk": 150
+   },
+   "score": 880,
+   "improvedScore": 965,
+   "improvedName": "Five-family vowel board that reads from niqqud.json",
+   "spec": {
+    "screen": "Five-column board, one column per vowel sound (a e i o u). Each column stacks the signs in that family, drawn on a neutral carrier, with count badges (3 signs for a, 3 for e, and so on). A tradition switch re-sorts any sign whose value differs (for example qamats in some Ashkenazi readings).",
+    "data": "vowelFamilies[] = {family: a|e|i|o|u, signs:[niqqudId...], variantByTradition:{israeli:[], sephardi:[], ashkenazi:[]}} generated from data/pronunciation/niqqud.json (single source), never hand copied.",
+    "interaction": "Drag each sign into its family column (self checking), then hear one example syllable per sign. A speeded round shows a pointed letter and asks for the family. Wrong answers return to SRS tagged by sign.",
+    "test": "Unit: every sign id from niqqud.json (except shva, dagesh and the dots) appears in exactly one family per tradition; family counts match the ipa values; drag test accepts only members; board renders in RTL without clipping."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read",
+   "notes": "The video series lumps shva in as a short e. That is a simplification that is wrong in silent-shva positions, so ALEF keeps shva in its own unit."
+  },
+  {
+   "id": "yt-vowels-02",
+   "source": "yt-vowels",
+   "name": "Recognise first, write later (explicit permission to not memorise how to draw the signs)",
+   "what": "The instructor says repeatedly that learners only need to recognise the signs, not write them, and promises that they will eventually read without the marks. It lowers early load and sets expectations.",
+   "axes": {
+    "r": 780,
+    "i": 800,
+    "c": 850,
+    "f": 800,
+    "risk": 100
+   },
+   "score": 790,
+   "improvedScore": 900,
+   "improvedName": "Read-first, write-optional unit tracks",
+   "spec": {
+    "screen": "Unit header chip: 'Read this unit' versus 'Write this unit'. Reading mode hides tracing and focuses on recognition; writing mode unlocks tracing for the same signs.",
+    "data": "unitMode in learner store: {unitId, readDone, writeDone}. Lesson graph lets 'read' complete a unit before 'write' is required.",
+    "interaction": "Learner may complete the read track and move on; write track stays as optional practice with a badge.",
+    "test": "Unit: completing read mode alone marks the unit as read but not as written; progression gates use read only."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read"
+  },
+  {
+   "id": "yt-vowels-03",
+   "source": "yt-vowels",
+   "name": "Vowel letters taught inside the vowel family (with or without the yud or vav)",
+   "what": "The e-family and o/u-family videos mention that a yud or vav after the letter gives the same sound, so the full spellings are shown as variants of one sound, not as new letters.",
+   "axes": {
+    "r": 880,
+    "i": 860,
+    "c": 800,
+    "f": 850,
+    "risk": 100
+   },
+   "score": 860,
+   "improvedScore": 955,
+   "improvedName": "Same-sound spelling variants inside the vowel board",
+   "spec": {
+    "screen": "In each family column of the vowel board a second row shows the 'full spelling' variants (sign alone, sign plus yud, sign plus vav) on the same carrier, with one audio per row that is identical.",
+    "data": "matresVariants[] = {family, forms:[{pointed, spelledFull}]} derived from niqqud.json and the word list; examples drawn from ALEF's own corpus.",
+    "interaction": "Learner taps 'same sound?' to see both forms play identically; later the unpointed-text round asks which family a plain vav or yud stands for in a real word.",
+    "test": "Unit: each variant pair has an identical audio id; corpus examples exist for every pair; unpointed reading round returns only answers consistent with the word's pointed form."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read",
+   "notes": "Concept confirmed from the o, e and u captions (the u caption set was unavailable, so u coverage is inferred from the overview)."
+  },
+  {
+   "id": "yt-vowels-04",
+   "source": "yt-vowels",
+   "name": "Per-sound practice word lists with matching audio",
+   "what": "Each video points to downloadable extra material: lists of words for that vowel and an mp3 for listening and repeating. The files are separate downloads that I did not open.",
+   "axes": {
+    "r": 780,
+    "i": 650,
+    "c": 700,
+    "f": 700,
+    "risk": 200
+   },
+   "score": 700,
+   "improvedScore": 700,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read; downloads not opened"
+  },
+  {
+   "id": "yt-vowels-05",
+   "source": "yt-vowels",
+   "name": "Shva shown as a separate short-e lesson",
+   "what": "The short e video says two dots under a letter give a short e. A beginner-friendly rule that is wrong whenever the shva is silent, which is common in prayers.",
+   "axes": {
+    "r": 300,
+    "i": 300,
+    "c": 500,
+    "f": 300,
+    "risk": 100
+   },
+   "score": 380,
+   "improvedScore": 380,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read",
+   "notes": "Counterexample for ALEF: the shva rules module in src/pronunciation/shva.js is the right treatment; do not copy this simplification."
+  },
+  {
+   "id": "yt-vowels-06",
+   "source": "yt-vowels",
+   "name": "Vowel overview recap with a mute-and-say prompt",
+   "what": "A closing overview revisits every family, asks the learner to say the sound before hearing it, and ends with an instruction to practise with the extra files. A retrieval pass before the next section.",
+   "axes": {
+    "r": 700,
+    "i": 650,
+    "c": 750,
+    "f": 800,
+    "risk": 100
+   },
+   "score": 720,
+   "improvedScore": 720,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read"
+  },
+  {
+   "id": "yt-handwriting-01",
+   "source": "yt-handwriting",
+   "name": "Handwriting as a bonus unit after reading print",
+   "what": "Cursive is taught only after the print alphabet and vowels, as a bonus with a notebook-copying instruction rather than a test. It keeps the reading path uncluttered.",
+   "axes": {
+    "r": 450,
+    "i": 800,
+    "c": 800,
+    "f": 850,
+    "risk": 100
+   },
+   "score": 740,
+   "improvedScore": 860,
+   "improvedName": "Track-aware handwriting path",
+   "spec": {
+    "screen": "Optional 'Handwriting' path that unlocks after the print alphabet, marked as bonus for the siddur track and as core for the Israel track.",
+    "data": "track flags on units: {cursive: required|bonus} per track in lesson metadata.",
+    "interaction": "Tracing view switches script from print to cursive; progress counted separately.",
+    "test": "Unit: the read track never blocks on cursive; the Israel track lists cursive units in its required set."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read"
+  },
+  {
+   "id": "yt-handwriting-02",
+   "source": "yt-handwriting",
+   "name": "Cursive introduced as a curlier version of the printed letter, with start points and arrows",
+   "what": "The instructor says a script letter is nearly the same as the print letter but curlier, shows the start point and the stroke arrow, and repeats it for each letter. The link to print is the teaching idea.",
+   "axes": {
+    "r": 450,
+    "i": 820,
+    "c": 800,
+    "f": 880,
+    "risk": 100
+   },
+   "score": 800,
+   "improvedScore": 930,
+   "improvedName": "Print-to-cursive morph slider",
+   "spec": {
+    "screen": "Morph slider on the tracing screen: drag between the print glyph and the cursive glyph; both shown with numbered stroke arrows at the same scale.",
+    "data": "morph pairs reuse print.strokes and cursive.strokes from letters.json; add correspondence[] mapping each print stroke to a cursive stroke when one exists.",
+    "interaction": "Learner drags the slider, then traces the cursive form with the print form as a faint underlay. Score uses scoreStroke with leniency set by script.",
+    "test": "Unit: every letter has both scripts; correspondence maps only existing stroke indices; slider endpoints render the exact print and cursive paths."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read",
+   "notes": "Part 4 auto-captions were unusable (garbled); parts 2, 3 and the overview captions were not retrieved because the video host rate-limited me. Part 1 and the claims above are from Part 1 only."
+  },
+  {
+   "id": "yt-handwriting-03",
+   "source": "yt-handwriting",
+   "name": "Notebook copying instruction: write each letter several times",
+   "what": "The only practice instruction is to copy each letter a few times in a notebook. Cheap, offline, and what the printable workbook already supports.",
+   "axes": {
+    "r": 400,
+    "i": 650,
+    "c": 700,
+    "f": 600,
+    "risk": 50
+   },
+   "score": 560,
+   "improvedScore": 560,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read"
+  }
+ ]
+}

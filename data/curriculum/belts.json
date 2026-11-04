@@ -2,7 +2,7 @@
   "version": 1,
   "sources": {
     "alephChampLadder": "competitor_teardown_pedagogy.md (research notes) citing Chabad SO 'Levels and Stripes' (https://www.chabadso.com/article.asp?aid=569858) and Chabad of Delta 'Champ at Home' (https://www.jewishdelta.com/templates/articlecco_cdo/aid/3737705/jewish/Champ-at-Home.htm)",
-    "verifiedFromNotes": "Aleph Champ ten levels: White = first 18 letters; Red = all 32 letters; Orange = first 3 vowels; Yellow = 6 vowels; Green = 9 vowels; Blue = all vowels + exceptions; Purple = basic prayers; Brown = higher-level tefillot; Grey = siddur reading within a time limit; Black = 80+ words per minute (one site says 100+).",
+    "verifiedFromNotes": "Aleph Champ ten levels: White = first 19 letters; last 13 letters at the red end (official site; which colour is which level is not stated there); Orange = first 3 vowels; Yellow = 6 vowels; Green = 9 vowels; Blue = all vowels + exceptions; Purple = basic prayers; Brown = higher-level tefillot; Grey = siddur reading within a time limit; top reading band is 50-53 words per minute on the official site; the 80+/100+ figures have no official support.",
     "caveat": "The notes were secondary (the program sites were reached only through those pages). Aleph Champ is a children's classroom programme and its order is letters-before-vowels; ALEF interleaves letters and vowels in primer order, so ALEF belts reuse the names and top-of-ladder wpm but the gates below are ALEF's own adaptation."
   },
   "belts": [
@@ -15,7 +15,7 @@
     { "id": "purple", "name": "Purple", "gate": "Basic prayers: Shema, V'ahavta, Torah blessings, Modeh Ani, Mah Tovu, Kiddush.", "lessons": "r36-r41", "wpmTarget": 50, "wpmStatus": "proposed by ALEF, not sourced" },
     { "id": "brown",  "name": "Brown",  "gate": "Higher prayers: Avot, Mi Chamocha, Aleinu, Kaddish, Adon Olam, Birkat Hamazon opener.", "lessons": "r42-r47", "wpmTarget": 60, "wpmStatus": "proposed by ALEF, not sourced" },
     { "id": "grey",   "name": "Grey",   "gate": "Siddur page read inside a time limit.", "lessons": "r48-r51", "wpmTarget": 70, "wpmStatus": "Aleph Champ states a time limit without a published number in our notes; 70 is ALEF's proposal" },
-    { "id": "black",  "name": "Black",  "gate": "Fluency target after the lesson graph ends; practice with timed reads.", "lessons": null, "wpmTarget": 80, "wpmStatus": "80+ from Aleph Champ (one site says 100+); the only sourced number" }
+    { "id": "black",  "name": "Black",  "gate": "Fluency target after the lesson graph ends; practice with timed reads.", "lessons": null, "wpmTarget": 80, "wpmStatus": "UNVERIFIED: official Aleph Champ top band is 50-53 wpm; 80 is ALEF's own proposal, not sourced" }
   ],
   "measurement": "Words per minute on POINTED siddur text read aloud, errors subtracted (counted words read correctly / minutes). Not yet automated: needs ASR from another lane or self-report."
 }

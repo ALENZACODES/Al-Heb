@@ -20,7 +20,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 
 export function parseArgs(argv) {
-  const o = { live: false, variants: 1, resume: true, delay: 1500, model: process.env.OPENAI_IMAGE_MODEL || 'gpt-image-2.5', quality: 'medium', out: 'assets/img/generated', log: 'data/images/gen-log.jsonl', limit: Infinity };
+  const o = { live: false, variants: 1, resume: true, delay: 1500, model: process.env.OPENAI_IMAGE_MODEL || 'gpt-image-2', quality: 'medium', out: 'assets/img/generated', log: 'data/images/gen-log.jsonl', limit: Infinity };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i], nx = () => argv[++i];
     if (a === '--live') o.live = true;

@@ -13,13 +13,7 @@ Severity: H = blocks or badly degrades a main task, M = visible or accessibility
 | F6 | M | Letters, Atlas (lane 2), shell | `aria-pressed`/`aria-selected` set to `true` rendered as `""` (invalid, state not announced); also the view's own `[aria-pressed=true]` lookup never matched, so the completed-letter badge did not appear until a re-render | boolean `aria-*` as "true"/"false" in the three `h()` helpers (trace, atlas, shell) |
 | F7 | L | Shell, pronunciation views | Tap targets under 44px: sound-bar link (21px), disclosure summaries (32-40px), selects, pronunciation buttons (40px), radio/checkbox labels | app.css |
 | F8 | L | QA tooling | Hidden file input and visually-hidden inputs counted as small | audit skips them |
+| F14 | H | Letters (lane 2), CSS by shell lane | Tracing canvas about 1660px down on a phone (was O1) | app.css phone rules: letter grid one-row strip, stage moved up (stage at about y=390 at 390x844); depends on lane 2's child order |
 
 ## Open
-| # | Sev | Where (owner) | Problem | Suggested fix |
-|---|---|---|---|---|
-| O1 | H | `#/letters`, `#/letters/:id` (lane 2, `src/letters/trace.view.js`) | On a 390x844 phone the tracing canvas starts about 1660px down the page (tabs, notice, 27-letter grid, toggles, letter card and the "Remember it" panel come first). A learner must scroll about two screens to reach the main interaction, and scrolling back to the grid to pick another letter. | Put the canvas above the memory-hook panel, collapse the letter grid into a picker, or make the grid horizontal-scroll |
-| O2 | M | `#/ladder` (lane 1, `src/curriculum/ladder.view.js`) | The `<progress>` bar overlaps its status line ("Level 1 of 20 ..."), the text is cut in half in the screenshot | give the progress element its own block or `vertical-align`/margin |
-| O3 | L | `#/vocab` (lane 9) | Glosses containing Hebrew letters (for example "to, for (prefix ...)") have no `lang=he` span | wrap the Hebrew run |
-| O4 | L | `#/letters/zzz`, `/letters/final-mem`, `/read/nonexistent` (lanes 2, 5) | Unknown ids silently show Alef or the default text instead of a not-found message; `?tab=drill` and `?tab=type` are ignored by the Letters view | show a message; read `ctx.query.tab` |
-| O5 | L | `#/fade/:id`, `#/scan`, `#/vocab` | Remaining small targets: fade range slider (16px), native file inputs on Scan, the "Show word forms" checkbox label (26px) | taller slider hit area, wrap in labels |
-| O6 | L | Copy (lanes 1, 9) | "1 reviews due", "Add 1 of these 1 words to reviews" | plural helper |
+None known from this walk. Not re-checked after these fixes: dark mode of the new not-found messages, the `/letters/final-mem` route (now "not found"; decide whether final forms should have their own pages).

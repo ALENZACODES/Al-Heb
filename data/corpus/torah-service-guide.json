@@ -1,0 +1,486 @@
+{
+ "schema": "alef-corpus-guide/1",
+ "id": "reading-a-torah-service",
+ "title": "Reading a Torah service",
+ "subtitle": "The order of a Shabbat morning service, with the prayers a first-year attendee will meet",
+ "note": "Written for ALEF by the model from general knowledge of the standard Ashkenazi Shabbat-morning order. It has NOT been reviewed by a rabbi, cantor or Hebrew educator. Orders and customs differ between Orthodox, Conservative, Reform, Sephardi and Mizrahi communities; each section has a \"howCongregationsDiffer\" line. Every prayer id is a record in registry.json; every gap id is in gaps.json.",
+ "approximateLength": "Orthodox about 3 hours, Conservative about 2 to 2.5 hours, Reform about 1 to 1.5 hours (typical ranges, not rules).",
+ "scrollNote": "The Torah scroll has no vowels and no cantillation marks. The registry contains the blessings around the reading, not the weekly portion.",
+ "sections": [
+  {
+   "order": 1,
+   "id": "opening",
+   "title": "Opening: Mah Tovu and the preparatory prayers",
+   "hebrewName": "מַה טֹּבוּ",
+   "whatHappens": "The service begins as people arrive, with a few short readings that set the mood. Services start at different points; arriving late is normal.",
+   "yourPart": "Listen and follow along. Nothing here needs to be said aloud with the group.",
+   "prayers": [
+    {
+     "id": "mah-tovu-1",
+     "role": "first line, often sung or said together"
+    },
+    {
+     "id": "modeh-ani-1",
+     "role": "said at home on waking; shown here so you can recognise it"
+    },
+    {
+     "id": "adon-olam-1",
+     "role": "hymn that some congregations sing here and nearly all sing at the end"
+    },
+    {
+     "id": "yigdal",
+     "role": "hymn in the Ashkenazi preparatory prayers; some sing it Friday night"
+    }
+   ],
+   "gaps": [],
+   "howCongregationsDiffer": "Orthodox and many Conservative services include a long preparatory section; many Reform services begin directly with a song and a Barchu."
+  },
+  {
+   "order": 2,
+   "id": "pesukei-dezimra",
+   "title": "Pesukei Dezimra: psalms of praise",
+   "hebrewName": "פְּסוּקֵי דְזִמְרָה",
+   "whatHappens": "A block of psalms and praise verses. The best-known piece is Ashrei, which is also said again later in the Shabbat service.",
+   "yourPart": "Read along; Ashrei is often said aloud by the room, line by line.",
+   "prayers": [
+    {
+     "id": "ashrei-84-5",
+     "role": "first line of Ashrei"
+    },
+    {
+     "id": "ashrei-144-15",
+     "role": "second line of Ashrei"
+    },
+    {
+     "id": "ashrei-145-1-3",
+     "role": "Psalm 145 begins"
+    },
+    {
+     "id": "ashrei-145-16",
+     "role": "the verse said with extra concentration"
+    }
+   ],
+   "gaps": [
+    "g-baruch-sheamar",
+    "g-yishtabach",
+    "g-ashrei-145-rest",
+    "g-psalms-pesukei"
+   ],
+   "howCongregationsDiffer": "Reform services usually shorten or skip this section."
+  },
+  {
+   "order": 3,
+   "id": "shema-and-blessings",
+   "title": "Barchu, Shema and its blessings",
+   "hebrewName": "שְׁמַע וּבִרְכוֹתֶיהָ",
+   "whatHappens": "The formal call to prayer (Barchu), then the Shema, the central statement of Jewish faith, with blessings before and after it.",
+   "yourPart": "Answer Barchu when the leader calls. Say the first line of the Shema aloud with the room. After it, \"Baruch shem\" is said quietly. The V'ahavta follows.",
+   "prayers": [
+    {
+     "id": "torah-barchu",
+     "role": "Barchu: leader calls, congregation answers (same words as before the Torah blessing)"
+    },
+    {
+     "id": "shema-1",
+     "role": "the first line, said aloud together"
+    },
+    {
+     "id": "shema-2",
+     "role": "\"Baruch shem kevod malchuto\", usually said quietly"
+    },
+    {
+     "id": "vahavta-full",
+     "role": "the V'ahavta paragraph"
+    },
+    {
+     "id": "vahavta-1",
+     "role": "the V'ahavta in parts: verse 1"
+    },
+    {
+     "id": "vahavta-2",
+     "role": "the V'ahavta in parts: verses 2-3"
+    },
+    {
+     "id": "shema-vahavta",
+     "role": "Shema and V'ahavta read as one passage"
+    },
+    {
+     "id": "mi-chamocha-1",
+     "role": "sung after the Shema, in the redemption blessing"
+    }
+   ],
+   "gaps": [
+    "g-yotzer-or",
+    "g-ahavat-olam",
+    "g-shema-paragraph-2-3",
+    "g-emet-veyatziv"
+   ],
+   "howCongregationsDiffer": "Some Reform books shorten the blessings around the Shema."
+  },
+  {
+   "order": 4,
+   "id": "amidah",
+   "title": "The Amidah (standing prayer)",
+   "hebrewName": "עֲמִידָה",
+   "whatHappens": "The main prayer, said standing and silently by each person; on Shabbat morning the leader then repeats part of it aloud (the Kedushah is the congregation's main response).",
+   "yourPart": "Stand, say the Amidah quietly at your own pace. During the leader's repetition, join the Kedushah responses and answer amen.",
+   "prayers": [
+    {
+     "id": "amidah-lips",
+     "role": "opening line, said before the first blessing"
+    },
+    {
+     "id": "avot-1",
+     "role": "first blessing"
+    },
+    {
+     "id": "avot-closing",
+     "role": "end of the first blessing"
+    },
+    {
+     "id": "kedushah-kadosh",
+     "role": "Kedushah verse 1"
+    },
+    {
+     "id": "kedushah-baruch",
+     "role": "Kedushah verse 2"
+    },
+    {
+     "id": "kedushah-yimloch",
+     "role": "Kedushah verse 3"
+    },
+    {
+     "id": "sim-shalom",
+     "role": "last blessing (morning peace blessing)"
+    },
+    {
+     "id": "amidah-yihyu",
+     "role": "closing verse"
+    },
+    {
+     "id": "amidah-elohai-netzor",
+     "role": "private closing prayer"
+    },
+    {
+     "id": "oseh-shalom",
+     "role": "last line, said while stepping back and bowing"
+    },
+    {
+     "id": "bless-priestly-1",
+     "role": "Priestly Blessing line 1 (leader's repetition or kohanim)"
+    },
+    {
+     "id": "bless-priestly-2",
+     "role": "line 2"
+    },
+    {
+     "id": "bless-priestly-3",
+     "role": "line 3"
+    }
+   ],
+   "gaps": [
+    "g-modim",
+    "g-shabbat-amidah-middle"
+   ],
+   "howCongregationsDiffer": "Reform and Conservative movement books add the matriarchs to the first blessing. Orthodox services read the full repetition; some Reform services read only parts of it aloud. The Priestly Blessing is performed by kohanim at Musaf on festivals in many Orthodox communities in the diaspora."
+  },
+  {
+   "order": 5,
+   "id": "torah-service-open",
+   "title": "Torah service: opening the ark",
+   "hebrewName": "הוֹצָאַת סֵפֶר תּוֹרָה",
+   "whatHappens": "The ark is opened, the congregation sings, and the scroll is taken out and carried through the room to the reading desk. This is a good place to follow along: nearly everything is sung.",
+   "yourPart": "Most congregations stand while the ark is open; follow the room. Join the singing; touch the Torah with a prayer book or tallit fringe as it passes if your community does.",
+   "prayers": [
+    {
+     "id": "ein-kamocha",
+     "role": "Ps 86:8, said when the ark is opened"
+    },
+    {
+     "id": "malchutcha",
+     "role": "Ps 145:13, continues Ein Kamocha"
+    },
+    {
+     "id": "adonai-oz",
+     "role": "Ps 29:11, ends Ein Kamocha"
+    },
+    {
+     "id": "vayehi-binsoa",
+     "role": "Numbers 10:35 and Isaiah 2:3, when the ark is opened"
+    },
+    {
+     "id": "brich-shmei",
+     "role": "Aramaic prayer when the ark is opened"
+    },
+    {
+     "id": "shema-1",
+     "role": "Shema, sung again as the Torah is lifted from the ark (Ashkenazi tradition)"
+    },
+    {
+     "id": "gadlu",
+     "role": "leader: magnify the LORD with me"
+    },
+    {
+     "id": "lecha-hashem",
+     "role": "congregation: yours, LORD, is the greatness"
+    }
+   ],
+   "gaps": [
+    "g-ein-kamocha-composite",
+    "g-echad-eloheinu",
+    "g-av-harachamim-torah"
+   ],
+   "howCongregationsDiffer": "Sephardi and Mizrahi services order the procession differently (the scroll is often carried before these passages). Many Reform services omit Brich Shmei and shorten the rest."
+  },
+  {
+   "order": 6,
+   "id": "torah-reading",
+   "title": "The Torah reading and blessings",
+   "hebrewName": "קְרִיאַת הַתּוֹרָה",
+   "whatHappens": "The weekly portion is read from a handwritten scroll, in sections called aliyot. A person is called up for each section and says a blessing before and after it. The scroll has no vowels and no cantillation marks; the reader chants from memory or from a practice text.",
+   "yourPart": "If you are called up (an aliyah): follow the person who guides you, say Barchu, then the blessing. The congregation answers \"Baruch Adonai hamevorach\" and \"Amen\". The reading itself is not in this registry (no pointed Torah text is included).",
+   "prayers": [
+    {
+     "id": "torah-barchu",
+     "role": "the person called up says Barchu; the congregation answers"
+    },
+    {
+     "id": "torah-bless-1",
+     "role": "blessing before the reading"
+    },
+    {
+     "id": "torah-bless-2",
+     "role": "blessing after the reading"
+    },
+    {
+     "id": "hagomel",
+     "role": "thanks blessing, if someone is saying it"
+    },
+    {
+     "id": "mi-sheberach-opening",
+     "role": "opening of the prayers said for people called up, for healing, or for a new baby"
+    }
+   ],
+   "gaps": [
+    "g-mi-sheberach-full",
+    "g-torah-reading-text"
+   ],
+   "howCongregationsDiffer": "The blessing words are the same in the three movements. The number of aliyot and who may be called up varies by movement and by congregation."
+  },
+  {
+   "order": 7,
+   "id": "hagbahah",
+   "title": "Lifting and dressing the Torah",
+   "hebrewName": "הַגְבָּהָה וּגְלִילָה",
+   "whatHappens": "After the reading, the scroll is lifted so the congregation can see the text, then rolled and dressed.",
+   "yourPart": "Stand, look at the text, and sing or say the line.",
+   "prayers": [
+    {
+     "id": "vezot-hatorah",
+     "role": "sung as the scroll is lifted"
+    }
+   ],
+   "gaps": [],
+   "howCongregationsDiffer": "Bowing or pointing toward the scroll as it is lifted is a custom in many congregations."
+  },
+  {
+   "order": 8,
+   "id": "haftarah",
+   "title": "Haftarah reading",
+   "hebrewName": "הַפְטָרָה",
+   "whatHappens": "A passage from the Prophets, linked to the week, is chanted with its own blessings.",
+   "yourPart": "Answer amen to the blessings. The haftarah itself is chanted by one person.",
+   "prayers": [
+    {
+     "id": "haftarah-before",
+     "role": "blessings before the reading"
+    },
+    {
+     "id": "haftarah-after",
+     "role": "blessings after the reading"
+    }
+   ],
+   "gaps": [
+    "g-haftarah-text"
+   ],
+   "howCongregationsDiffer": "Reform and Conservative books may shorten the closing blessings."
+  },
+  {
+   "order": 9,
+   "id": "community-prayers",
+   "title": "Prayers for the community and sermon",
+   "hebrewName": "תְּפִלּוֹת לַקָּהָל",
+   "whatHappens": "A short block of prayers for the congregation, for Israel and the country, often followed by the sermon.",
+   "yourPart": "Listen; join amen. Wording varies a lot.",
+   "prayers": [],
+   "gaps": [
+    "g-community-prayers"
+   ],
+   "howCongregationsDiffer": "These prayers are written by each community or movement and are mostly under copyright; they are not in the registry."
+  },
+  {
+   "order": 10,
+   "id": "returning-torah",
+   "title": "Returning the Torah to the ark",
+   "hebrewName": "הַכְנָסַת סֵפֶר תּוֹרָה",
+   "whatHappens": "The scroll is carried back with singing, while the congregation stands.",
+   "yourPart": "Join the singing; Hashivenu and Etz Chaim are often sung to well-known tunes.",
+   "prayers": [
+    {
+     "id": "yehalelu",
+     "role": "Psalm 148:13-14"
+    },
+    {
+     "id": "etz-chaim",
+     "role": "\"It is a tree of life\", sung as the scroll is returned"
+    },
+    {
+     "id": "hashivenu",
+     "role": "Lamentations 5:21, \"Return us to you, LORD\""
+    }
+   ],
+   "gaps": [],
+   "howCongregationsDiffer": "Many Reform services keep only Etz Chaim and Hashivenu."
+  },
+  {
+   "order": 11,
+   "id": "musaf",
+   "title": "Musaf Amidah",
+   "hebrewName": "מוּסָף",
+   "whatHappens": "On Shabbat and festivals a second Amidah is said. Orthodox and many Conservative services include it; most Reform services omit it.",
+   "yourPart": "Same as the morning Amidah: say it quietly; join the Kedushah.",
+   "prayers": [],
+   "gaps": [
+    "g-musaf-amidah"
+   ],
+   "howCongregationsDiffer": "Often omitted in Reform services."
+  },
+  {
+   "order": 12,
+   "id": "closing",
+   "title": "Closing prayers",
+   "hebrewName": "סִיּוּם",
+   "whatHappens": "The service ends with Aleinu, the Mourner's Kaddish, and a hymn.",
+   "yourPart": "Stand for Aleinu. Mourners say the Kaddish; the room answers amen and \"Yehei shmei rabba\".",
+   "prayers": [
+    {
+     "id": "aleinu-1",
+     "role": "Aleinu, first paragraph"
+    },
+    {
+     "id": "kaddish-1",
+     "role": "Mourner's Kaddish"
+    },
+    {
+     "id": "adon-olam-1",
+     "role": "closing hymn in many congregations"
+    },
+    {
+     "id": "oseh-shalom",
+     "role": "last line of Kaddish"
+    }
+   ],
+   "gaps": [
+    "g-ein-keloheinu",
+    "g-aleinu-second-paragraph"
+   ],
+   "howCongregationsDiffer": "Order and the choice of closing hymn vary."
+  },
+  {
+   "order": 13,
+   "id": "kiddush-lunch",
+   "title": "Kiddush and lunch",
+   "hebrewName": "קִדּוּשׁ",
+   "whatHappens": "After services most congregations hold a kiddush: wine or grape juice, then a meal that begins with the blessing over bread.",
+   "yourPart": "Answer amen. Hamotzi is said by one person at the table; everyone then eats.",
+   "prayers": [
+    {
+     "id": "kiddush-veshamru",
+     "role": "V'shamru, Shabbat-day Kiddush"
+    },
+    {
+     "id": "kiddush-zachor",
+     "role": "Zachor, Shabbat-day Kiddush"
+    },
+    {
+     "id": "kiddush-wine-1",
+     "role": "wine blessing"
+    },
+    {
+     "id": "hamotzi",
+     "role": "blessing over bread"
+    },
+    {
+     "id": "zimun-opening",
+     "role": "before Birkat Hamazon, if three eat together"
+    },
+    {
+     "id": "birkat-hamazon-1",
+     "role": "first blessing of the blessings after the meal"
+    }
+   ],
+   "gaps": [
+    "g-birkat-hamazon-rest"
+   ],
+   "howCongregationsDiffer": "Some communities say only V'shamru; some add Zachor."
+  }
+ ],
+ "otherOccasions": [
+  {
+   "id": "shabbat-evening",
+   "title": "Friday night: candles, Kabbalat Shabbat, Kiddush",
+   "prayers": [
+    "candle-shabbat",
+    "lecha-dodi-1",
+    "kiddush-gen-2-1-3",
+    "kiddush-wine-1",
+    "kiddush-shabbat-eve",
+    "hamotzi"
+   ],
+   "gaps": [
+    "g-kabbalat-shabbat-psalms",
+    "g-shalom-aleichem",
+    "g-eshet-chayil"
+   ]
+  },
+  {
+   "id": "havdalah",
+   "title": "Saturday night: Havdalah",
+   "prayers": [
+    "havdalah-opening",
+    "kiddush-wine-1",
+    "havdalah-spices",
+    "havdalah-flame",
+    "havdalah-hamavdil"
+   ],
+   "gaps": [
+    "g-havdalah-closing-songs"
+   ]
+  },
+  {
+   "id": "hanukkah",
+   "title": "Hanukkah candle lighting",
+   "prayers": [
+    "hanukkah-candle",
+    "hanukkah-nissim",
+    "shehecheyanu",
+    "hanerot-halalu",
+    "maoz-tzur-1"
+   ],
+   "gaps": []
+  },
+  {
+   "id": "meals",
+   "title": "Meals with bread",
+   "prayers": [
+    "hamotzi",
+    "shir-hamaalot",
+    "zimun-opening",
+    "birkat-hamazon-1"
+   ],
+   "gaps": [
+    "g-birkat-hamazon-rest"
+   ]
+  }
+ ]
+}

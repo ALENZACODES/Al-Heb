@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Builds data/images/prompt-groups.json and data/images/manifest.csv from tools/images/spec.mjs.
 // Usage: node tools/images/build_prompt_groups.mjs   (writes files)   |  import { buildGroups }
-import { writeFileSync, mkdirSync } from 'node:fs';
+import { writeFileSync, mkdirSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as S from './spec.mjs';
@@ -154,20 +154,43 @@ group(100, 'F', 'final_qa', 'Final QA and manifest', 'literal', {},
   'Review all sets produced. List every file that (a) contains any text or letter-like marks, (b) drifts from the style guide, or (c) shows Ari or Noa off-model, and regenerate each. Then print the complete manifest as one CSV code block with columns file, set, prompt, notes, and a count of files per block (expected: A 32, B 270, C 162, D 75, E 150, F 76 = 765 images, plus regenerations).',
   [], { textOutputs: ['QA list', 'full manifest CSV', 'per-block file counts'] });
 
+// ---------------- Block G (101): quirky mnemonic images, one per letter form (NOT in the doc) ----------------
+// Reads data/letters/mnemonics.json at build time (lane 2 may refine it; re-run this script to pick the change up).
+{
+  const mn = JSON.parse(readFileSync(join(ROOT, 'data/letters/mnemonics.json'), 'utf8')).letters;
+  const byId = new Map(mn.map((m) => [m.id, m]));
+  // 'a fence of letters' (lamed) would invite lettering into the picture: drawable stand-in instead. Any book/sign/page is told to stay blank by the addendum.
+  const idea = (m) => m.imageIdea.replace(/,?\s*no text\.?$/i, '').replace(/\b(fence )?of letters\b/i, 'fence of plain wooden planks').trim();
+  const forms = S.LETTERS.map((L) => {
+    const m = byId.get(L.id);
+    return { nn: L.nn, name: L.title, file: `L${L.nn}_${S.letterToken(L)}_quirky`, idea: idea(m), shape: m.shape, sound: m.sound, size: SQ };
+  });
+  for (const V of S.QUIRKY_VARIANTS) {
+    const L = S.LETTERS.find((x) => x.id === V.of);
+    forms.push({ nn: L.nn, name: V.title, file: `L${L.nn}_${S.letterToken(L)}_quirky_${V.token}`, idea: V.idea, shape: byId.get(V.of).shape, sound: V.sound, size: SQ });
+  }
+  forms.sort((a, b) => a.nn.localeCompare(b.nn) || a.file.length - b.file.length);
+  const cmd = `Make ${forms.length} quirky mnemonic images in STYLE GUIDE v1 plus this addendum: ${S.QUIRKY_ADDENDUM_SHORT} One image per letter form; the subject is the picture that carries the letter's sound and shape. ` +
+    forms.map((f) => `${f.nn} ${f.name}: ${f.idea}`).join('; ') + `. No text of any kind. Files ${forms[0].file} ... ${forms[forms.length - 1].file}.`;
+  group(101, 'G', 'quirky_mnemonics', 'Quirky mnemonic images (one per letter form)', 'literal', { count: forms.length, source: 'data/letters/mnemonics.json (imageIdea, shape); variants from S.QUIRKY_VARIANTS' }, cmd,
+    forms.map((f) => ({ file: f.file, size: f.size, prompt: `${S.STYLE_GUIDE} ${S.QUIRKY_STYLE} Hero subject: ${f.idea}. Let the subject's overall silhouette loosely echo this letter shape: ${f.shape} Sound it helps remember: ${f.sound}. ${NO_TEXT}` })));
+}
+
 export function buildGroups() {
-  const counts = { A: 0, B: 0, C: 0, D: 0, E: 0, F: 0 };
+  const counts = { A: 0, B: 0, C: 0, D: 0, E: 0, F: 0, G: 0 };
   for (const g of groups) counts[g.block] += g.rows.length;
   const total = Object.values(counts).reduce((a, b) => a + b, 0);
   const discrepancies = [];
   for (const b of Object.keys(counts)) {
-    if (counts[b] !== S.DOC_COUNTS[b]) discrepancies.push({ block: b, docStates: S.DOC_COUNTS[b], commandsYield: counts[b], note: DISC_NOTES[b] });
+    if (counts[b] !== (S.DOC_COUNTS[b] ?? 0)) discrepancies.push({ block: b, docStates: S.DOC_COUNTS[b] ?? null, commandsYield: counts[b], note: DISC_NOTES[b] });
   }
-  if (total !== S.DOC_COUNTS.total) discrepancies.push({ block: 'total', docStates: S.DOC_COUNTS.total, commandsYield: total, note: 'Net of the block discrepancies (A -1, F +2). The doc\'s six stated counts do add to 765; its commands yield 766.' });
+  const docCommandsTotal = total - counts.G; // what the doc's own commands 1-100 yield
+  if (total !== S.DOC_COUNTS.total) discrepancies.push({ block: 'total', docStates: S.DOC_COUNTS.total, commandsYield: total, note: `Net of the block differences (A -1, F +2, G +${counts.G} added by lane 7). The doc's six stated counts add to 765; its own commands 1-100 yield ${docCommandsTotal}; with block G the manifest has ${total} rows.` });
   return {
     meta: {
       source: 'Claude Doc d497130e-096d-494b-9242-461c91da56e1 ("100 ChatGPT commands for the Hebrew image lane"), read 2026-11-03',
       generatedBy: 'tools/images/build_prompt_groups.mjs',
-      docStatedCounts: S.DOC_COUNTS, computedCounts: { ...counts, total }, discrepancies,
+      docStatedCounts: S.DOC_COUNTS, computedCounts: { ...counts, total, docCommandsOnly: docCommandsTotal }, discrepancies,
       groups: groups.length,
       namingNotes: [
         'Doc command 9 states the pattern L<nn>_<letter>_<print|cursive>_<mnemonic|object|scene>.png but the letter templates (commands 11-64) use suffixes _mnemonic,_ari,_noa,_silhouette,_v1-3,_s1-3 (print) and _mnemonic,_ari,_noa,_silhouette,_trace,_postcard (cursive). The templates are followed (they are the commands actually sent); the command-9 suffix list is not.',
@@ -179,6 +202,7 @@ export function buildGroups() {
         'Command 8 scenes 8-10 of each letter set say "one of the BG_ scenes" without choosing; per-image refs rotate BG_jerusalem, BG_market, BG_telaviv (assumption).',
         'A few abstract vocabulary words were given a concrete drawable form (e.g. today -> sun and calendar day, yellow -> swatch, voice -> empty speech bubble); prompt text only, file names unaffected.',
         'The 27 REF_cursive_<name>.png silhouettes are inputs rendered by Claude from Gveret Levin before Block C; they are listed in each cursive group\'s inputs and are NOT manifest rows.',
+        'Block G / command 101 (L<nn>_<letter>_quirky[_vet|_khaf|_fe|_sin].png) is an addition after the doc and is reported as a discrepancy on purpose; DOC_COUNTS keeps the doc\'s own numbers. These supersede nothing: the older L<nn>_<letter>_print_mnemonic rows stay.',
         'ICON_* are 512x512 transparent PNGs per the doc; API image sizes are 1024-class, so tools/images/gen_via_api.mjs generates at the nearest supported size; resizing to the target dimensions is a separate human/ImageMagick step (not done here).',
       ],
     },
@@ -188,6 +212,7 @@ export function buildGroups() {
 
 const DISC_NOTES = {
   A: 'Commands 1-10 name 31 image files (cup sample 1, sheets 2, expressions 8, variants 4, mouths 6, frames 2, backgrounds 6, consistency tests 2); command 9 is text-only. The doc says 32.',
+  G: 'Not in the doc. Command 101 was added by lane 7: one quirky mnemonic image per letter form from data/letters/mnemonics.json (27 contract letters) plus 4 sound-variant forms (vet, khaf, fe, sin) = 31. Their ideas are written by lane 7 from the existing story text, not taken from mnemonics.json imageIdea. The Hebrew letter is overlaid as vector; the images must contain no text.',
   F: 'Commands 95-100 name 78 files (blessing 6, track 10, badges 8 + 8 locked, icons 40, brand 6), 79 if the optional icon grid image is counted. The doc says 76.',
 };
 

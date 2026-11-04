@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-const BLOCK_ACCENT = { A: '#1F3A5F', B: '#B0373B', C: '#6B7F3A', D: '#D9A441', E: '#1F3A5F', F: '#B0373B' };
+const BLOCK_ACCENT = { A: '#1F3A5F', B: '#B0373B', C: '#6B7F3A', D: '#D9A441', E: '#1F3A5F', F: '#B0373B', G: '#D9A441' };
 
 /** Pure: returns the SVG string for a manifest row. viewBox is the row's pixel size / 2 (small files, same aspect). */
 export function placeholderSvg(row) {

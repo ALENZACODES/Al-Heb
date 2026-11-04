@@ -3,6 +3,8 @@
 // Pure data + prompt templates. No I/O. Used by build_prompt_groups.mjs.
 
 export const DOC_COUNTS = { A: 32, B: 270, C: 162, D: 75, E: 150, F: 76, total: 765 };
+/** Block G is NOT in the doc: added by lane 7 (command 101). DOC_COUNTS above stays the doc's own numbers. */
+export const EXTRA_BLOCKS = { G: 'Quirky mnemonic images, one per letter form (added after the doc; not part of the doc\'s 765)' };
 
 export const STYLE_GUIDE =
   'STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), ' +
@@ -107,3 +109,22 @@ export const BRAND = [
   ['hero', 1792, 1024, 'a 1792x1024 website hero with the beach background and the two narrators'],
   ['ad', 1024, 1024, 'an ad tile of a finger tracing on a tablet'],
 ];
+
+/** Block G (command 101): quirky mnemonic style addendum, applied on top of STYLE_GUIDE. */
+export const QUIRKY_STYLE =
+  'QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), ' +
+  'a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, ' +
+  'subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank.';
+
+/**
+ * Sound-variant forms that have no record of their own in data/letters/mnemonics.json (it has 27 records, one per
+ * contract letter id). Each idea is taken from that letter's `story` field; ids are the file tokens.
+ * `of` = parent contract id, `story` = the sentence of the parent story it is drawn from.
+ */
+export const QUIRKY_VARIANTS = [
+  { of: 'bet', token: 'vet', title: 'Vet (bet without the dot)', sound: 'v', idea: 'the same cozy cartoon house with the ball gone, a startled cat peeking out and a vase on the windowsill', story: 'Take the ball out and the house goes Vvvvery quiet: V, like a Vase on the shelf.' },
+  { of: 'kaf', token: 'khaf', title: 'Khaf (kaf without the dot)', sound: 'kh', idea: 'a dog clearing its throat with a paw at its chest, a little dust cloud puffing out', story: 'Without the dot it clears its throat: Kh.' },
+  { of: 'pe', token: 'fe', title: 'Fe (pe without the dot)', sound: 'f', idea: 'a mouth with its tongue out softly blowing a feather away', story: 'Without the dot, the tongue falls out and the air leaks softly: Ffff! like blowing a feather.' },
+  { of: 'shin', token: 'sin', title: 'Sin (shin with the dot on the left)', sound: 's', idea: 'a cartoon person mid-sneeze beside a candle whose three flames lean away', story: 'The dot on the left means s (left side, like a Sneeze): Sin.' },
+];
+export const QUIRKY_ADDENDUM_SHORT = 'funny, slightly absurd flat-vector cartoons, one hero subject, same line weight and palette in every image, plain cream background, no letters or writing of any kind (the Hebrew letter is added later as vector).';

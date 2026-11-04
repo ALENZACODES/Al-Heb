@@ -18,7 +18,9 @@
    "D": 75,
    "E": 150,
    "F": 78,
-   "total": 766
+   "G": 31,
+   "total": 797,
+   "docCommandsOnly": 766
   },
   "discrepancies": [
    {
@@ -34,13 +36,19 @@
     "note": "Commands 95-100 name 78 files (blessing 6, track 10, badges 8 + 8 locked, icons 40, brand 6), 79 if the optional icon grid image is counted. The doc says 76."
    },
    {
+    "block": "G",
+    "docStates": null,
+    "commandsYield": 31,
+    "note": "Not in the doc. Command 101 was added by lane 7: one quirky mnemonic image per letter form from data/letters/mnemonics.json (27 contract letters) plus 4 sound-variant forms (vet, khaf, fe, sin) = 31. Their ideas are written by lane 7 from the existing story text, not taken from mnemonics.json imageIdea. The Hebrew letter is overlaid as vector; the images must contain no text."
+   },
+   {
     "block": "total",
     "docStates": 765,
-    "commandsYield": 766,
-    "note": "Net of the block discrepancies (A -1, F +2). The doc's six stated counts do add to 765; its commands yield 766."
+    "commandsYield": 797,
+    "note": "Net of the block differences (A -1, F +2, G +31 added by lane 7). The doc's six stated counts add to 765; its own commands 1-100 yield 766; with block G the manifest has 797 rows."
    }
   ],
-  "groups": 100,
+  "groups": 101,
   "namingNotes": [
    "Doc command 9 states the pattern L<nn>_<letter>_<print|cursive>_<mnemonic|object|scene>.png but the letter templates (commands 11-64) use suffixes _mnemonic,_ari,_noa,_silhouette,_v1-3,_s1-3 (print) and _mnemonic,_ari,_noa,_silhouette,_trace,_postcard (cursive). The templates are followed (they are the commands actually sent); the command-9 suffix list is not.",
    "Doc command 9 vowel pattern V<nn>_<vowel>_<mnemonic|mouth>.png also differs from the vowel template suffixes (_keyword,_ari,_noa,_position,_card); the template is followed.",
@@ -51,6 +59,7 @@
    "Command 8 scenes 8-10 of each letter set say \"one of the BG_ scenes\" without choosing; per-image refs rotate BG_jerusalem, BG_market, BG_telaviv (assumption).",
    "A few abstract vocabulary words were given a concrete drawable form (e.g. today -> sun and calendar day, yellow -> swatch, voice -> empty speech bubble); prompt text only, file names unaffected.",
    "The 27 REF_cursive_<name>.png silhouettes are inputs rendered by Claude from Gveret Levin before Block C; they are listed in each cursive group's inputs and are NOT manifest rows.",
+   "Block G / command 101 (L<nn>_<letter>_quirky[_vet|_khaf|_fe|_sin].png) is an addition after the doc and is reported as a discrepancy on purpose; DOC_COUNTS keeps the doc's own numbers. These supersede nothing: the older L<nn>_<letter>_print_mnemonic rows stay.",
    "ICON_* are 512x512 transparent PNGs per the doc; API image sizes are 1024-class, so tools/images/gen_via_api.mjs generates at the nearest supported size; resizing to the target dimensions is a separate human/ImageMagick step (not done here)."
   ]
  },
@@ -11925,6 +11934,365 @@
    ],
    "rows": [],
    "expectedFiles": []
+  },
+  {
+   "number": 101,
+   "block": "G",
+   "set": "quirky_mnemonics",
+   "title": "Quirky mnemonic images (one per letter form)",
+   "template": "literal",
+   "variables": {
+    "count": 31,
+    "source": "data/letters/mnemonics.json (imageIdea, shape); variants from S.QUIRKY_VARIANTS"
+   },
+   "prompt": "Make 31 quirky mnemonic images in STYLE GUIDE v1 plus this addendum: funny, slightly absurd flat-vector cartoons, one hero subject, same line weight and palette in every image, plain cream background, no letters or writing of any kind (the Hebrew letter is added later as vector). One image per letter form; the subject is the picture that carries the letter's sound and shape. 01 Alef: cartoon mime in a handstand with a finger to the lips, audience clapping; 02 Bet / Vet: a cozy cartoon bungalow with its front door open and a beach ball visible inside; 02 Vet (bet without the dot): the same cozy cartoon house with the ball gone, a startled cat peeking out and a vase on the windowsill; 03 Gimel: a grumpy camel stomping forward, one foot kicked out, wearing a tiny sweatband; 04 Dalet: a diving board sticking out from one wooden post over a pool; 05 He: a small hut with a hole in one wall and a person leaning out shouting; 06 Vav: a single straight vine dangling from a ceiling, with a small vacuum cleaner humming nearby; 07 Zayin: a small dagger stuck upright in the ground with a lightning zap around it; 08 Chet: a closed garden gate with an arched, hissing cat behind it; 09 Tet: a round teapot with its spout curling inward, steam rising; 10 Yod: a yo-yo on a string dangling from a tiny hand; 11 Kaf / Khaf: a wooden kitchen spoon holding one popcorn kernel; 11 Khaf (kaf without the dot): a dog clearing its throat with a paw at its chest, a little dust cloud puffing out; 12 Lamed: a tall lamp post with a bent arm lighting a row of short letters on a desk; 13 Mem: a small camping tent with its door flap open and a glass of water beside it; 14 Nun: a nun in a habit kneeling and bowing, side view, next to a lit candle; 15 Samekh: a round squishy cushion with a person sitting on it, air hissing out; 16 Ayin: a large cartoon eye winking, with a hand over its mouth; 17 Pe / Fe: a mouth blowing a bubble with a party horn, side view; 17 Fe (pe without the dot): a mouth with its tongue out softly blowing a feather away; 18 Tsadi: a small fly with wings up sitting on a slice of pizza; 19 Kof: a kooky monkey hanging by its tail from a branch; 20 Resh: a smooth round head in profile growling, with a ball rolling down a ramp behind; 21 Shin / Sin: a birthday cake with three candle flames and a finger to the lips; 21 Sin (shin with the dot on the left): a cartoon person mid-sneeze beside a candle whose three flames lean away; 22 Tav: a small table with one leg ending in a toe tapping the floor; 23 Khaf sofit: a king in a long robe whose cloak trails behind him on the floor; 24 Mem sofit: a tent zipped shut beside the sea; 25 Nun sofit: a nun standing straight in a garden beside a tall pole; 26 Fe sofit: a cartoon mouth with a long tongue blowing a feather off a spoon; 27 Tsadi sofit: a leafy tree with Y-shaped branches and a long straight trunk. No text of any kind. Files L01_alef_quirky ... L27_tsadi_final_quirky.",
+   "inputs": [],
+   "textOutputs": [],
+   "rows": [
+    {
+     "file": "L01_alef_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: cartoon mime in a handstand with a finger to the lips, audience clapping. Let the subject's overall silhouette loosely echo this letter shape: A diagonal stroke with an arm reaching up on the right and a foot at the lower left, like an acrobat mid-handstand. Sound it helps remember: silent letter that carries a vowel (like the tiny pause in 'uh-oh'). No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L02_bet_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a cozy cartoon bungalow with its front door open and a beach ball visible inside. Let the subject's overall silhouette loosely echo this letter shape: A house seen from the side: flat roof, back wall on the right, floor that sticks out past the wall, front door open on the left. Sound it helps remember: b as in 'boy' with a dot inside (bet); v without the dot (vet). No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L02_bet_quirky_vet.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: the same cozy cartoon house with the ball gone, a startled cat peeking out and a vase on the windowsill. Let the subject's overall silhouette loosely echo this letter shape: A house seen from the side: flat roof, back wall on the right, floor that sticks out past the wall, front door open on the left. Sound it helps remember: v. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L03_gimel_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a grumpy camel stomping forward, one foot kicked out, wearing a tiny sweatband. Let the subject's overall silhouette loosely echo this letter shape: An arched back on the right that runs down to a front leg, with a foot kicked out at the lower left. Sound it helps remember: g as in 'go'. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L04_dalet_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a diving board sticking out from one wooden post over a pool. Let the subject's overall silhouette loosely echo this letter shape: A flat board across the top that overhangs on the right, held up by one post. Sound it helps remember: d as in 'door'. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L05_he_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a small hut with a hole in one wall and a person leaning out shouting. Let the subject's overall silhouette loosely echo this letter shape: A roof and a right wall, with a short left wall that stops before the roof, leaving a gap. Sound it helps remember: h as in 'hello' (a breath). No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L06_vav_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a single straight vine dangling from a ceiling, with a small vacuum cleaner humming nearby. Let the subject's overall silhouette loosely echo this letter shape: One plain straight stroke, as tall as the letters beside it, like a nail or a pole. Sound it helps remember: v as in 'van'; also the vowels o and u when it carries them. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L07_zayin_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a small dagger stuck upright in the ground with a lightning zap around it. Let the subject's overall silhouette loosely echo this letter shape: A short bar across the top and a straight stem down, like a dagger stabbed into the ground or a tiny T. Sound it helps remember: z as in 'zoo'. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L08_chet_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a closed garden gate with an arched, hissing cat behind it. Let the subject's overall silhouette loosely echo this letter shape: A closed doorway: a roof joining a right leg and a left leg, with no gap. Sound it helps remember: a rough throat 'h', like the ch in 'Chanukah' or Scottish 'loch'. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L09_tet_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a round teapot with its spout curling inward, steam rising. Let the subject's overall silhouette loosely echo this letter shape: A round-bottomed bowl with the right side curling in at the top, like a teapot with its spout bent inward. Sound it helps remember: t as in 'top'. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L10_yod_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a yo-yo on a string dangling from a tiny hand. Let the subject's overall silhouette loosely echo this letter shape: The smallest letter: a tiny comma that floats at the top of the line. Sound it helps remember: y as in 'yes'. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L11_kaf_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a wooden kitchen spoon holding one popcorn kernel. Let the subject's overall silhouette loosely echo this letter shape: A backwards C: a rounded shape with the opening on the left, like a cupped hand or a spoon bowl. Sound it helps remember: k with a dot inside (kaf); kh like the letter chet, without the dot (khaf). No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L11_kaf_quirky_khaf.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a dog clearing its throat with a paw at its chest, a little dust cloud puffing out. Let the subject's overall silhouette loosely echo this letter shape: A backwards C: a rounded shape with the opening on the left, like a cupped hand or a spoon bowl. Sound it helps remember: kh. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L12_lamed_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a tall lamp post with a bent arm lighting a row of short letters on a desk. Let the subject's overall silhouette loosely echo this letter shape: The only letter that rises above the line: a hook on top, then a bar and a diagonal leg. Sound it helps remember: l as in 'lamp'. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L13_mem_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a small camping tent with its door flap open and a glass of water beside it. Let the subject's overall silhouette loosely echo this letter shape: A leaning left stroke and a box on the right whose bottom-left corner is open, like a tent with the door flap open. Sound it helps remember: m as in 'mom'. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L14_nun_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a nun in a habit kneeling and bowing, side view, next to a lit candle. Let the subject's overall silhouette loosely echo this letter shape: A bar on top, a stem on the right and a flat base going left: a figure kneeling and bowed over, facing right. Sound it helps remember: n as in 'no'. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L15_samekh_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a round squishy cushion with a person sitting on it, air hissing out. Let the subject's overall silhouette loosely echo this letter shape: A closed shape with soft rounded corners, like a ring or a cushion, sitting flat. Sound it helps remember: s as in 'sun'. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L16_ayin_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a large cartoon eye winking, with a hand over its mouth. Let the subject's overall silhouette loosely echo this letter shape: A curved cup on the right and a leaning stroke on the left, like a V-shaped eyelid with a lash. Sound it helps remember: silent in most Israeli speech, like alef; a deep throat sound in some traditions. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L17_pe_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a mouth blowing a bubble with a party horn, side view. Let the subject's overall silhouette loosely echo this letter shape: A rounded shape like kaf, with a curl tucked inside at the top left like a tongue behind the lips. Sound it helps remember: p as in 'pop' with a dot inside (pe); f without the dot (fe). No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L17_pe_quirky_fe.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a mouth with its tongue out softly blowing a feather away. Let the subject's overall silhouette loosely echo this letter shape: A rounded shape like kaf, with a curl tucked inside at the top left like a tongue behind the lips. Sound it helps remember: f. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L18_tsadi_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a small fly with wings up sitting on a slice of pizza. Let the subject's overall silhouette loosely echo this letter shape: A Y-shaped fork on top that slants down into a flat base, like a kneeling person with raised arms. Sound it helps remember: ts as in 'pizza'. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L19_qof_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a kooky monkey hanging by its tail from a branch. Let the subject's overall silhouette loosely echo this letter shape: Like kaf with a long left leg that drops below the line. Sound it helps remember: k as in 'kite' (same as kaf). No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L20_resh_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a smooth round head in profile growling, with a ball rolling down a ramp behind. Let the subject's overall silhouette loosely echo this letter shape: A flat top and a smoothly curved right shoulder with no corner, like a head seen from the side. Sound it helps remember: r (from the back of the throat in Israeli speech). No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L21_shin_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a birthday cake with three candle flames and a finger to the lips. Let the subject's overall silhouette loosely echo this letter shape: Three prongs rising from a curved base, like three candle flames or a trident. Sound it helps remember: sh as in 'shoe' with the dot on the right (shin); s as in 'sun' with the dot on the left (sin). No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L21_shin_quirky_sin.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a cartoon person mid-sneeze beside a candle whose three flames lean away. Let the subject's overall silhouette loosely echo this letter shape: Three prongs rising from a curved base, like three candle flames or a trident. Sound it helps remember: s. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L22_tav_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a small table with one leg ending in a toe tapping the floor. Let the subject's overall silhouette loosely echo this letter shape: A roof with a right leg and a short left leg kicked out at the bottom, like he but with a foot. Sound it helps remember: t as in 'top' (s in the Ashkenazi 'Shabbos'). No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L23_kaf_final_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a king in a long robe whose cloak trails behind him on the floor. Let the subject's overall silhouette loosely echo this letter shape: A bar and a rounded shoulder with a long straight tail dropping below the line. Sound it helps remember: kh (the chet sound), only at the end of a word. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L24_mem_final_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a tent zipped shut beside the sea. Let the subject's overall silhouette loosely echo this letter shape: A closed box with sharp corners. Sound it helps remember: m, only at the end of a word. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L25_nun_final_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a nun standing straight in a garden beside a tall pole. Let the subject's overall silhouette loosely echo this letter shape: One straight stroke that drops below the line, like a nail or a pole. Sound it helps remember: n, only at the end of a word. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L26_pe_final_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a cartoon mouth with a long tongue blowing a feather off a spoon. Let the subject's overall silhouette loosely echo this letter shape: The pe shape with its curl inside and a long right stem that drops below the line. Sound it helps remember: f, only at the end of a word. No text, letters or numerals anywhere in the image."
+    },
+    {
+     "file": "L27_tsadi_final_quirky.png",
+     "set": "quirky_mnemonics",
+     "command": 101,
+     "block": "G",
+     "width": 1024,
+     "height": 1024,
+     "status": "pending",
+     "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a leafy tree with Y-shaped branches and a long straight trunk. Let the subject's overall silhouette loosely echo this letter shape: A Y-shaped fork on top and one long straight stem dropping below the line. Sound it helps remember: ts, only at the end of a word. No text, letters or numerals anywhere in the image."
+    }
+   ],
+   "expectedFiles": [
+    "L01_alef_quirky.png",
+    "L02_bet_quirky.png",
+    "L02_bet_quirky_vet.png",
+    "L03_gimel_quirky.png",
+    "L04_dalet_quirky.png",
+    "L05_he_quirky.png",
+    "L06_vav_quirky.png",
+    "L07_zayin_quirky.png",
+    "L08_chet_quirky.png",
+    "L09_tet_quirky.png",
+    "L10_yod_quirky.png",
+    "L11_kaf_quirky.png",
+    "L11_kaf_quirky_khaf.png",
+    "L12_lamed_quirky.png",
+    "L13_mem_quirky.png",
+    "L14_nun_quirky.png",
+    "L15_samekh_quirky.png",
+    "L16_ayin_quirky.png",
+    "L17_pe_quirky.png",
+    "L17_pe_quirky_fe.png",
+    "L18_tsadi_quirky.png",
+    "L19_qof_quirky.png",
+    "L20_resh_quirky.png",
+    "L21_shin_quirky.png",
+    "L21_shin_quirky_sin.png",
+    "L22_tav_quirky.png",
+    "L23_kaf_final_quirky.png",
+    "L24_mem_final_quirky.png",
+    "L25_nun_final_quirky.png",
+    "L26_pe_final_quirky.png",
+    "L27_tsadi_final_quirky.png"
+   ]
   }
  ]
 }

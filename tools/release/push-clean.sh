@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Push the repo to the private GitHub remote with every commit attributed only to John Khan:
 # author and committer rewritten, and any "Co-Authored-By", "Claude-Session" or "Generated with" trailer lines removed.
+# Also drops the superseded lossless PNG import (assets/images/incoming) from the published history (web copies live in assets/img/gen).
 # The rewrite is deterministic (same input => same hashes), so repeated runs only add new commits.
 # Usage: tools/release/push-clean.sh [--force]    (--force only for the first run after the history was rewritten)
 set -euo pipefail
@@ -13,6 +14,7 @@ cd "$WORK/r"
 git checkout -q master
 export FILTER_BRANCH_SQUELCH_WARNING=1
 git filter-branch -f \
+  --index-filter 'git rm -r --cached --ignore-unmatch -q assets/images/incoming' \
   --env-filter "export GIT_AUTHOR_NAME='$NAME' GIT_AUTHOR_EMAIL='$EMAIL' GIT_COMMITTER_NAME='$NAME' GIT_COMMITTER_EMAIL='$EMAIL'" \
   --msg-filter "grep -viE '^(co-authored-by|claude-session):|generated with|claude\.ai|anthropic' | sed -e :a -e '/^\n*\$/{\$d;N;ba' -e '}'" \
   -- master >/dev/null 2>&1

@@ -4,7 +4,7 @@ import { readFileSync, existsSync, mkdtempSync, writeFileSync, rmSync } from 'no
 import { spawnSync } from 'node:child_process';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { buildHtml, parseArgs, letterUrl, readUrl, makeQrs } from '../book/build.mjs';
+import { buildHtml, parseArgs, letterUrl, readUrl, makeQrs, PRAYER_GROUPS } from '../book/build.mjs';
 import { vocabFor, wordPool, skeleton, registryEntries, phrasebook } from '../book/content.mjs';
 import { LETTERS } from '../tools/images/spec.mjs';
 
@@ -53,10 +53,15 @@ test('vocabulary: <=3 pointed words per letter taken from existing data, startin
 });
 
 test('every letter page has a sound panel and stroke diagrams; every vowel record and prayer is in the book', () => {
-  assert.equal((html.match(/class="sound-panel"/g) || []).length, 27);
+  assert.equal((html.match(/class="sound-panel"/g) || []).length, LETTERS.length);
   assert.equal((html.match(/id="vowel-/g) || []).length, 15);
   const reg = registryEntries().filter((e) => e.he);
-  assert.equal(reg.length, 27);
+  assert.ok(reg.length >= 27);
+  assert.equal((html.match(/class="pcard/g) || []).length, reg.length, 'one prayer card per registry text');
+  const assigned = PRAYER_GROUPS.flatMap((g) => g.ids), ids = new Set(reg.map((e) => e.id));
+  assert.equal(new Set(assigned).size, assigned.length, 'no id in two chapters');
+  for (const id of assigned) assert.ok(ids.has(id), `PRAYER_GROUPS names unknown id ${id}`);
+  assert.match(html, /id="ch-pg-torah-service"/);
   for (const e of reg) assert.ok(html.includes(`id="text-${e.id}"`) && html.includes(readUrl('alef.example.org', e.id)), e.id);
   assert.ok((html.match(/not proofread/g) || []).length >= reg.length);
   assert.match(html, /<li><a href="#ch-prayers"/);
@@ -88,26 +93,27 @@ test('print options: bleed/binding parse; bad binding rejected', () => {
   assert.match(h, /--page-w:8\.625in;--page-h:11\.25in/);
 });
 
-test('QR codes: 54 real segno SVGs (27 letters + 27 prayers) that decode back to their URLs', { skip: !(hasPy('segno') && hasPy('cv2')) && 'segno/opencv not installed (see docs/TOOLING.md)' }, () => {
+test('QR codes: one real segno SVG per letter and per registry text that decode back to their URLs', { skip: !(hasPy('segno') && hasPy('cv2')) && 'segno/opencv not installed (see docs/TOOLING.md)' }, () => {
   const dir = mkdtempSync(join(tmpdir(), 'alef-qr-'));
   try {
     const urls = {};
     for (const L of LETTERS) urls['letter_' + L.id] = letterUrl('alef.example.org', L.id);
     for (const e of registryEntries()) urls['text_' + e.id] = readUrl('alef.example.org', e.id);
     const svgs = makeQrs(urls, dir, true);
-    assert.equal(Object.keys(svgs).length, 54);
+    const nQr = LETTERS.length + registryEntries().length;
+    assert.equal(Object.keys(svgs).length, nQr);
     for (const s of Object.values(svgs)) assert.match(s, /^<svg [^>]*viewBox="0 0 \d+ \d+"/);
     const f = join(dir, 'urls.json'); writeFileSync(f, JSON.stringify(urls));
     const r = spawnSync('python3', [join(root, 'book/verify_qr.py'), dir, f], { encoding: 'utf8' });
     const out = JSON.parse(r.stdout);
-    assert.equal(out.ok, 54, r.stdout);
+    assert.equal(out.ok, nQr, r.stdout);
   } finally { rmSync(dir, { recursive: true, force: true }); }
 });
 
 test('book HTML with QR embeds one inline QR per letter page and per prayer', { skip: !hasPy('segno') && 'segno not installed' }, () => {
   const h = buildHtml(parseArgs([]));
-  assert.equal((h.match(/class="qr"><svg/g) || []).length, 27);
-  assert.equal((h.match(/class="pq"><svg/g) || []).length, 27);
+  assert.equal((h.match(/class="qr"><svg/g) || []).length, LETTERS.length);
+  assert.equal((h.match(/class="pq"><svg/g) || []).length, registryEntries().filter((e) => e.he).length);
 });
 
 test('pdf_tools: reverse puts the last page first and refuses odd page counts; pad-even adds one blank', { skip: !hasPy('pypdf') && 'pypdf not installed' }, () => {

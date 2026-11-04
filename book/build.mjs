@@ -33,6 +33,19 @@ function openingPrayerHtml() {
 
 export const TRIMS = { '8.5x11': [8.5, 11], '8x10': [8, 10], '8.5x8.5': [8.5, 8.5], '6x9': [6, 9] };
 
+/** Chapter plan for the registry texts (a first-year learner's order: the Shema and blessings first, then the services). Ids not listed fall into a final catch-all chapter. */
+export const PRAYER_GROUPS = [
+  { key: 'core', title: 'Shema, Blessing and daily words', intro: 'The texts that come first in a Hebrew-reading life: the Shema, the Priestly Blessing line by line, the V\u2019ahavta, and the short blessings said at home.',
+    ids: ['shema-1', 'shema-2', 'shema-vahavta', 'vahavta-1', 'vahavta-2', 'vahavta-full', 'bless-priestly-1', 'bless-priestly-2', 'bless-priestly-3', 'num-12-13', 'bless-formula-1', 'hamotzi', 'modeh-ani-1', 'shehecheyanu', 'mah-tovu-1', 'mi-chamocha-1'] },
+  { key: 'torah-service', title: 'The Torah service', intro: 'Everything said when the ark is opened, the Torah is carried, read and returned, plus the haftarah blessings, the blessing after surviving danger and the opening of the Mi sheberach. Practice-first: the short verses come before the long Aramaic and haftarah texts. Customs and wording vary by community; each footer says whose text it is.',
+    ids: ['ein-kamocha', 'malchutcha', 'adonai-oz', 'vayehi-binsoa', 'brich-shmei', 'gadlu', 'lecha-hashem', 'vezot-hatorah', 'torah-bless-1', 'torah-barchu', 'torah-bless-2', 'haftarah-before', 'haftarah-after', 'mi-sheberach-opening', 'hagomel', 'yehalelu', 'hashivenu', 'etz-chaim'] },
+  { key: 'amidah', title: 'The Amidah, Kedushah and closing prayers', intro: 'Pieces of the standing prayer, the Kedushah verses, and the prayers that close a service.',
+    ids: ['avot-1', 'avot-closing', 'amidah-lips', 'kedushah-kadosh', 'kedushah-baruch', 'kedushah-yimloch', 'sim-shalom', 'amidah-yihyu', 'amidah-elohai-netzor', 'oseh-shalom', 'aleinu-1', 'kaddish-1', 'adon-olam-1', 'yigdal'] },
+  { key: 'shabbat', title: 'Shabbat, Psalms and the table', intro: 'Friday night and Shabbat day, Havdalah, Ashrei, and the blessings around a meal.',
+    ids: ['lecha-dodi-1', 'kiddush-wine-1', 'kiddush-shabbat-eve', 'candle-shabbat', 'kiddush-gen-2-1-3', 'kiddush-veshamru', 'kiddush-zachor', 'havdalah-opening', 'havdalah-spices', 'havdalah-flame', 'havdalah-hamavdil', 'ashrei-84-5', 'ashrei-144-15', 'ashrei-145-1-3', 'ashrei-145-16', 'shir-hamaalot', 'zimun-opening', 'birkat-hamazon-1'] },
+  { key: 'hanukkah', title: 'Hanukkah', intro: 'The candle blessings and songs.', ids: ['hanukkah-candle', 'hanukkah-nissim', 'hanerot-halalu', 'maoz-tzur-1'] },
+];
+
 export function parseArgs(argv) {
   const o = { pdf: false, print: false, trim: '8.5x11', bleed: false, binding: 'ltr', host: process.env.ALEF_HOST || CONFIG.host, out: 'book/out', qr: true };
   for (let i = 0; i < argv.length; i++) {
@@ -160,7 +173,7 @@ export function buildHtml(o, pages = {}) {
 <p><b>Which pronunciation?</b> Hebrew is read differently in Israel, in Sephardi tradition and in Ashkenazi tradition. The next page explains the differences. The app lets you choose; American synagogues often use the Sephardi values.</p>
 <div class="slot"><b>Companion app.</b> The page for any letter is ${esc(letterUrl(o.host, '<letter>'))} and any prayer is ${esc(readUrl(o.host, '<text>'))}.${ph ? ` <b style="color:#B0373B">The host &ldquo;${esc(o.host)}&rdquo; is a PLACEHOLDER: those links do not work until a real domain is chosen (one value, book/config.json).</b>` : ''}</div>
 <h3 style="margin-top:.25in">Contents</h3><ul class="toc">
-${toc('ch-blessing', 'The Priestly Blessing')}${toc('ch-trad', 'Pronunciation traditions')}${toc('ch-alphabet', 'The alphabet at a glance')}${toc('letter-alef', 'The 27 letters (22 letters and 5 final forms)')}${toc('ch-remember', 'Remember every letter')}${toc('ch-vowels', 'The vowels')}${toc('ch-reading', 'Reading practice: syllables')}${toc('ch-practice', 'Reading practice: words')}${toc('ch-blessing-words', 'The Priestly Blessing, word by word')}${toc('ch-prayers', 'Prayers and verses')}${toc('ch-survival', 'Survival Hebrew')}${toc('ch-index', 'Index')}${toc('ch-colophon', 'Colophon, sources and statuses')}</ul></section>`;
+${toc('ch-blessing', 'The Priestly Blessing')}${toc('ch-trad', 'Pronunciation traditions')}${toc('ch-alphabet', 'The alphabet at a glance')}${toc('letter-alef', 'The 27 letters (22 letters and 5 final forms)')}${toc('ch-remember', 'Remember every letter')}${toc('ch-vowels', 'The vowels')}${toc('ch-reading', 'Reading practice: syllables')}${toc('ch-practice', 'Reading practice: words')}${toc('ch-blessing-words', 'The Priestly Blessing, word by word')}@@PRAYER_TOC@@${toc('ch-survival', 'Survival Hebrew')}${toc('ch-index', 'Index')}${toc('ch-colophon', 'Colophon, sources and statuses')}</ul></section>`;
 
   // ---- pronunciation traditions ----
   const dr = drills();
@@ -250,10 +263,24 @@ ${cons.map(([c, s]) => `<tr><th>${esc(s)}</th>${vws.map(([m, v]) => `<td class="
 <table class="grid"><thead><tr><th>Hebrew</th><th>Modern Israeli</th><th>Literal</th></tr></thead><tbody>${BLESSING_WORDS.map(([h, t, g]) => `<tr><td class="he" lang="he" dir="rtl">${h}</td><td>${esc(t)}</td><td>${esc(g)}</td></tr>`).join('')}</tbody></table>
 <p class="small">The divine name (three occurrences, spoken &ldquo;Adonai&rdquo;) is omitted from this table. Words and glosses come from a research note and are <b>not yet verified by a Hebrew teacher</b>.</p></section>`;
 
-  // ---- prayers: every registry text ----
-  const prayerCards = `<section class="chapter" id="ch-prayers"><h2>Prayers and verses</h2><p class="small">${regPrayers.length} texts from data/corpus/registry.json, each with its own code. Every text matches its cited source by machine comparison; <b>none has been proofread by a Hebrew educator</b>. The divine name appears as written in the sources and is read &ldquo;Adonai&rdquo;. Some texts overlap (the Shema appears alone, within the V&rsquo;ahavta and in the combined reading).</p>
-${regPrayers.map((e) => `<div class="pcard" id="text-${e.id}"><h3>${esc(e.title)} <span class="small">${esc(e.ref || '')}</span></h3><div class="he pheb" lang="he" dir="rtl">${esc(e.he).replace(/\n/g, '<br/>')}</div><div class="pbot">${qrBox('text_' + e.id, 'pq')}<div><div class="pen">${esc(e.english || '')}</div>
-<div class="pfoot"><b>Hebrew:</b> ${esc(e.source)} &middot; licence: ${esc(e.license)}. <b>English:</b> ${esc(e.englishSource ?? '')} (${esc(e.englishLicense ?? '')}). Status: ${esc(e.status)}${e.proofread ? '' : ' &middot; <span class="nf">not proofread</span>'}${ph ? '' : ''} &middot; ${esc(readUrl(o.host, e.id))}</div></div></div></div>`).join('')}</section>`;
+  // ---- prayers: every registry text, grouped into chapters (PRAYER_GROUPS); anything unassigned lands in "More prayers and verses" so new records never drop out ----
+  const byId = new Map(regPrayers.map((e) => [e.id, e]));
+  const groups = PRAYER_GROUPS.map((g) => ({ ...g, items: g.ids.map((id) => byId.get(id)).filter(Boolean) })).filter((g) => g.items.length);
+  const assigned = new Set(PRAYER_GROUPS.flatMap((g) => g.ids));
+  const rest = regPrayers.filter((e) => !assigned.has(e.id));
+  if (rest.length) groups.push({ key: 'more', title: 'More prayers and verses', intro: 'Texts added to the corpus that are not yet placed in a chapter.', items: rest });
+  const flag = (v) => (v === true ? 'yes' : v === false ? 'no' : 'not recorded');
+  const pcard = (e) => {
+    const len = (e.he || '').length;
+    const size = len > 700 ? 'pheb-xl' : len > 300 ? 'pheb-l' : '';
+    return `<div class="pcard${len > 300 ? ' long' : ''}" id="text-${e.id}"><h3>${esc(e.title)} <span class="small">${esc(e.ref || '')}</span></h3><div class="he pheb ${size}" lang="he" dir="rtl">${esc(e.he).replace(/\n/g, '<br/>')}</div><div class="pbot">${qrBox('text_' + e.id, 'pq')}<div><div class="pen">${esc(e.english || '')}</div>
+<div class="pfoot"><b>Hebrew:</b> ${esc(e.source)} &middot; licence: ${esc(e.license)}. <b>English:</b> ${esc(e.englishSource ?? '')} (${esc(e.englishLicense ?? '')}). Status: ${esc(e.status)}${e.proofread ? '' : ' &middot; <span class="nf">not proofread</span>'} &middot; proofread: ${flag(e.proofread)}, typed from memory: ${flag(e.typedFromMemory)}${e.nusach ? ` &middot; text tradition: ${esc(e.nusach)}` : ''} &middot; ${esc(readUrl(o.host, e.id))}</div></div></div></div>`;
+  };
+  const groupId = (g, i) => (i === 0 ? 'ch-prayers' : 'ch-pg-' + g.key);
+  const prayerCards = groups.map((g, i) => `<section class="chapter" id="${groupId(g, i)}"><h2>${i === 0 ? 'Prayers and verses: ' : ''}${esc(g.title)}</h2>
+${i === 0 ? `<p class="small">${regPrayers.length} texts from data/corpus/registry.json in ${groups.length} chapters (${groups.map((x) => esc(x.title)).join('; ')}), each text with its own code. Every text matches its cited source by machine comparison; <b>none has been proofread by a Hebrew educator</b>, and none was typed from memory. The divine name appears as written in the sources and is read &ldquo;Adonai&rdquo;. Some texts overlap (the Shema appears alone, within the V&rsquo;ahavta and in the combined reading). Texts differ by community: each footer names the text tradition (nusach) of its source.</p>` : ''}
+<p class="small">${esc(g.intro)}</p>${g.items.map(pcard).join('')}</section>`).join('');
+  const prayerToc = groups.map((g, i) => toc(groupId(g, i), i === 0 ? 'Prayers and verses: ' + esc(g.title) : esc(g.title))).join('');
 
   // ---- survival: whole phrasebook ----
   const pb = phrasebook();
@@ -283,7 +310,7 @@ ${letterPages}
 ${remember}
 ${vowelChapter}${reading}${practiceWords}${blessingWords}${prayerCards}${survival}${index}${colophon}
 </body></html>`;
-  return html;
+  return html.replace('@@PRAYER_TOC@@', () => prayerToc);
 }
 
 export async function renderPdf(htmlPath, pdfPath) {

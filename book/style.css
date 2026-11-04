@@ -154,3 +154,6 @@ td.he { font-size: 18pt; text-align: center; line-height: 1.6; }
 .mcard .anchor .aw { font-size: 14pt; line-height: 1.6; color: var(--blue); }
 .mcard .anchor i { color: var(--red); font-style: normal; font-weight: bold; }
 .mcard .body { grid-column: 1 / -1; }
+.pheb-l { font-size: 12.5pt; line-height: 1.65; }
+.pheb-xl { font-size: 10.5pt; line-height: 1.55; }
+.pcard.long .pq { width: .6in; height: .6in; }

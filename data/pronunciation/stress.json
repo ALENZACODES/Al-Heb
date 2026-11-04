@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "proofread": false,
+  "description": "Stress exceptions for the syllable chips. DRAFT, own knowledge, needs native review. Default rule: the last syllable is stressed (milra). A listed word is stressed on the syllable counted from the end (-2 = second to last, milel). Ashkenazi prayer-word stress is NOT stored here; it comes from prayerwords.json.",
+  "defaultRule": "last syllable (milra)",
+  "exceptions": [
+    {
+      "he": "יֶלֶד",
+      "fromEnd": -2,
+      "kind": "segolate",
+      "note": "two-syllable words ending in a segol are normally stressed on the first syllable"
+    },
+    {
+      "he": "לֶחֶם",
+      "fromEnd": -2,
+      "kind": "segolate",
+      "note": "segolate pattern"
+    },
+    {
+      "he": "בֹּקֶר",
+      "fromEnd": -2,
+      "kind": "segolate",
+      "note": "segolate pattern"
+    },
+    {
+      "he": "בַּיִת",
+      "fromEnd": -2,
+      "kind": "other",
+      "note": "stressed on the first syllable"
+    },
+    {
+      "he": "סֵפֶר",
+      "fromEnd": -2,
+      "kind": "segolate",
+      "note": "segolate pattern; the same example is in the photo lane's list"
+    },
+    {
+      "he": "מֶלֶךְ",
+      "fromEnd": -2,
+      "kind": "segolate",
+      "note": "segolate pattern; matches prayerwords.json (Israeli, first syllable)"
+    },
+    {
+      "he": "אֱלֹהֵינוּ",
+      "fromEnd": -2,
+      "kind": "other",
+      "note": "stress on the syllable before the last, matches prayerwords.json (Israeli)"
+    }
+  ]
+}

@@ -74,7 +74,8 @@ test('print records carry the font outline; stroke counts agree with research-co
   }
   const by = Object.fromEntries(letters.map(l => [l.id, l]));
   assert.equal(by.alef.cursive.strokes.length, 2);
-  assert.equal(by.mem.cursive.strokes.length, 3);
+  // cursive mem is DERIVED from the font as one N-shaped stroke; research text says 3 strokes: recorded as a doubt, not forced.
+  assert.equal(by.mem.cursive.strokeCountConfirmedByResearch, false);
 });
 
 test('sources file records the font and licence', () => {
@@ -82,10 +83,32 @@ test('sources file records the font and licence', () => {
   assert.match(src, /DejaVu Sans/);
   assert.match(src, /Bitstream Vera/);
   assert.match(src, /NOT derived from any copyrighted stroke diagram/);
+  assert.match(src, /Gveret Levin/);
+  assert.match(src, /SIL Open Font License/);
+  assert.match(src, /derivative/i);
 });
 
 test('confusables.json: nine research sets referencing known ids', () => {
   const c = read('confusables.json');
   assert.equal(c.sets.length, 9);
   for (const s of c.sets.concat(c.cursiveExtra)) for (const id of s.letters) assert.ok(IDS.includes(id), s.id + ':' + id);
+});
+
+test('cursive strokes are derived from Gveret Levin: outline + provenance + draft flags, stroke width and scale recorded', () => {
+  for (const l of letters) {
+    const c = l.cursive;
+    assert.match(c.outline, /^M/, l.id);
+    assert.match(c.outlineSource, /Gveret Levin/);
+    assert.match(c.strokeBasis, /skeletonised/);
+    assert.ok(c.fontScale > 0.5 && c.fontScale <= 1, l.id);
+    assert.ok(c.strokes.length <= 2, l.id + ' cursive strokes <= 2 after derivation');
+    for (const s of c.strokes) assert.ok(s.median.length >= 5, l.id + " median points");
+  }
+});
+
+test('REVIEW-LIST.md exists and lists every letter id for native teachers to tick', () => {
+  const r = readFileSync(new URL('../docs/letters/REVIEW-LIST.md', import.meta.url), 'utf8');
+  for (const id of IDS) assert.ok(r.includes('`' + id + '`'), id);
+  assert.match(r, /- \[ \]/);
+  assert.match(r, /NOT native-validated|not native-validated/i);
 });

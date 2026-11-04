@@ -15,3 +15,14 @@ Rules (also in tools/letters/author_strokes.py):
 Known doubts to put to the teacher: alef (3 strokes here, order unverified); mem and final mem (arc plus base vs separate base); tsadi and
 shin (stroke split); whether Israeli school print is written at all beyond recognition (research gap); every cursive shape.
 Preview images: docs/letters/preview-print.svg and preview-cursive.svg (start dot is numbered, arrow marks the end).
+
+## Cursive derivation (Round 2)
+Cursive strokes are no longer hand-drawn. tools/letters/derive_cursive.py:
+1. takes each glyph of Gveret Levin (OFL, assets/fonts), scales it uniformly (long side <= 760 box units, scale <= 1), centres it in the 0..1000 box;
+2. rasterises (rsvg-convert), skeletonises (scikit-image), prunes spurs shorter than ~1.3 stroke radii, builds a pixel graph (endpoints + junctions via crossing number);
+3. contracts junctions closer than 45 px, pairs edges through each junction by straightest continuation (turn <= ~110 degrees) => chains = candidate pen strokes;
+4. direction: a "flat" chain (width > 1.6 x height) starts at its right end (R1); every other chain starts at its top end (R2/R3); closed loops start at the top and go counter-clockwise (left first);
+5. order: chains sorted right to left by mean x (buckets of 120 box units), then top to bottom;
+6. per-letter corrections live in tools/letters/cursive_overrides.py (join / flip / order / custom splice: gimel, zayin, chet, tet, mem, tsadi, tav, pe-final) and each one is listed in REVIEW-LIST.md;
+7. smoothing (21-sample moving average), Ramer-Douglas-Peucker (6 units), Catmull-Rom path + dense median (geom.py).
+The font cannot tell where the pen lifts; stroke count/order are inferences, only partly cross-checked (docs/letters/REVIEW-LIST.md).

@@ -5,6 +5,8 @@
 // @ts-check
 import { createTracer, MODES } from './trace.js';
 import { createTrainer, keyboardRows, XKB_TO_DOM } from './typing.js';
+import { createProgress } from './progress.js';
+import { matchLetter } from './shapecheck.js';
 
 const DATA = (name) => new URL('../../data/letters/' + name, import.meta.url).href;
 
@@ -48,6 +50,9 @@ const CSS = `
 .alef-trace .kb .k{min-width:34px;min-height:44px;padding:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:1.2rem}
 .alef-trace .kb .k small{font-size:.6rem;color:#667}
 .alef-trace .kb .k.hit{background:#c8f0c8}.alef-trace .kb .k.want{outline:3px solid #e67e22}
+.alef-trace .grid button{position:relative}
+.alef-trace .badge{position:absolute;top:1px;right:3px;font-size:.7rem;color:#1a7f37;font-weight:bold}
+.alef-trace .chip{display:inline-block;background:#e3f6e8;color:#14582a;border:1px solid #9bd3ab;border-radius:999px;padding:1px 10px;font-size:.85rem;margin-inline-start:6px}
 .alef-trace .opts{display:flex;gap:10px;flex-wrap:wrap}
 .alef-trace .opts button{font-size:2.4rem;min-width:72px}
 `;
@@ -64,6 +69,8 @@ export function mount(root, ctx = {}) {
     tab: 'trace', letterId: (ctx.params && typeof ctx.params.id === 'string' && ctx.params.id) || 'alef', script: (ctx.settings && (ctx.settings.script === 'cursive' || ctx.settings.script === 'print')) ? ctx.settings.script : 'print',
     strict: false, outline: true
   };
+  const progress0 = createProgress(ctx.store);
+  let attempt = []; // raw learner strokes since the last reset, for the whole-shape fallback hint
   let tracer = null, keyHandler = null, unmounted = false, trainer = null;
   const cleanups = [];
 
@@ -113,7 +120,8 @@ export function mount(root, ctx = {}) {
   function picker(onPick, current) {
     const g = h('div', { class: 'grid', dir: 'rtl', role: 'group', 'aria-label': t('trace.letters', 'Letters') });
     for (const l of state.letters) {
-      g.appendChild(h('button', { dir: 'rtl', lang: 'he', 'aria-label': l.name, title: l.name, 'aria-pressed': l.id === current, onclick: () => onPick(l.id) }, l.he));
+      const done = progress0.isCompleted(l.id, state.script);
+      g.appendChild(h('button', { dir: 'rtl', lang: 'he', 'aria-label': l.name + (done ? ', ' + t('trace.completed', 'completed') : ''), title: l.name + (done ? ' (' + t('trace.completed', 'completed') + ')' : ''), 'data-completed': done ? '1' : false, 'aria-pressed': l.id === current, onclick: () => onPick(l.id) }, l.he, done ? h('span', { class: 'badge', 'aria-hidden': 'true' }, '\u2713') : null));
     }
     return g;
   }
@@ -129,7 +137,7 @@ export function mount(root, ctx = {}) {
     body.appendChild(toggle);
     body.appendChild(h('div', { class: 'row' },
       h('span', { class: 'big', dir: 'rtl', lang: 'he' }, letter.he),
-      h('div', {}, h('strong', {}, letter.name + ' '), he(letter.nameHe), h('br'), h('span', {}, '/' + letter.sound.ipa + '/  ' + letter.sound.en))));
+      h('div', {}, h('strong', {}, letter.name + ' '), he(letter.nameHe), progress0.isCompleted(letter.id, state.script) ? h('span', { class: 'chip', role: 'status' }, '\u2713 ' + t('trace.completed', 'completed') + ' (' + state.script + ')') : null, h('br'), h('span', {}, '/' + letter.sound.ipa + '/  ' + letter.sound.en))));
     const stage = h('div', { class: 'stage' });
     const fb = h('div', { class: 'feedback', role: 'status', 'aria-live': 'polite' }, t('trace.start', 'Press Animate to see the order, then trace it.'));
     body.appendChild(stage); body.appendChild(fb);
@@ -140,9 +148,23 @@ export function mount(root, ctx = {}) {
       tracer = createTracer(stage, letter, state.script, Object.assign({}, state.strict ? MODES.strict : MODES.forgiving, {
         showOutline: state.outline,
         onStrokeResult: r => { fb.textContent = r.forced ? t('trace.shown', 'Here is the correct stroke.') : t('trace.good', 'Good!'); setProgress(); },
-        onMistake: m => { fb.textContent = t(m.feedback.key, m.feedback.text); },
+        onUserStroke: pts => { attempt.push(pts); if (attempt.length > 6) attempt.shift(); },
+        onMistake: m => {
+          fb.textContent = t(m.feedback.key, m.feedback.text);
+          if (m.totalMistakes >= 2) { // fallback: does the overall shape look like this letter even though strokes are off?
+            try {
+              const r = matchLetter(attempt, state.letters, state.script, { targetId: letter.id, ignoreDirection: true });
+              if (r.looksLikeTarget) fb.textContent += ' ' + t('trace.shapeOk', 'Your overall shape looks like this letter; check the stroke order and direction (press Animate).');
+            } catch (e) { /* hint is optional */ }
+          }
+        },
         onComplete: c => {
           fb.textContent = (c.perfect ? t('trace.perfect', 'Perfect! ') : t('trace.done', 'Done. ')) + letter.name;
+          try {
+            progress0.record(letter.id, state.script, c); attempt = [];
+            const cur = body.querySelector('.grid button[aria-pressed=true]');
+            if (cur && !cur.querySelector('.badge')) { cur.setAttribute('data-completed', '1'); cur.appendChild(h('span', { class: 'badge', 'aria-hidden': 'true' }, '\u2713')); }
+          } catch (e) { /* progress is best-effort */ }
           try { const p = ctx.audio && ctx.audio.play && ctx.audio.play('letter', letter.id); if (p && p.catch) p.catch(() => {}); } catch (e) { /* audio is optional */ }
         }
       }));
@@ -153,7 +175,7 @@ export function mount(root, ctx = {}) {
     body.appendChild(h('div', { class: 'row' },
       h('button', { onclick: () => { fb.textContent = t('trace.animating', 'Watch the order...'); tracer.animate().then(() => { if (!unmounted) fb.textContent = t('trace.yourTurn', 'Your turn.'); }); } }, t('trace.animate', 'Animate')),
       h('button', { onclick: () => { tracer.hint(); } }, t('trace.hint', 'Hint')),
-      h('button', { onclick: () => { tracer.reset(); fb.textContent = t('trace.start', 'Press Animate to see the order, then trace it.'); setProgress(); } }, t('trace.reset', 'Start over'))));
+      h('button', { onclick: () => { attempt = []; tracer.reset(); fb.textContent = t('trace.start', 'Press Animate to see the order, then trace it.'); setProgress(); } }, t('trace.reset', 'Start over'))));
     body.appendChild(progress); setProgress();
     body.appendChild(h('p', { class: 'notice' }, (block.needsNativeReview ? t('trace.reviewFlag', 'Status: draft, needs native review. ') : '') + (block.quality ? '(' + block.quality + ')' : '')));
   }

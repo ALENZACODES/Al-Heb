@@ -11,11 +11,18 @@
 - No GPL fonts (Culmus, FreeSans/FreeSerif are GPL+font exception) were used. FreeSerif/FreeSans exist locally but were not used.
 - Outlines are scaled uniformly by 0.48 and positioned on baseline y=756 in the 0..1000 box (see the script).
 
-## Print and cursive stroke centerlines (`strokes[].median`, `strokes[].path`)
+## Cursive outlines and stroke centrelines (`cursive.*`) - Round 2
+- Font: **Gveret Levin** (Israeli handwriting style), Copyright 2024 The Gveret Levin Project Authors (https://github.com/AlefAlefAlef/gveret-levin), SIL Open Font License 1.1 (assets/fonts/gveretlevin-OFL.txt), fetched from github.com/google/fonts.
+- `cursive.outline` is the glyph outline (a modified copy of the font's shapes) and `cursive.strokes[].median/path` are skeletons computed from it by tools/letters/derive_cursive.py (docs/letters/STROKE-RULES.md). They are therefore a DERIVATIVE of an OFL font. Licence consequence, stated honestly: OFL 1.1 allows use, study, modification and redistribution of derivatives provided the copyright notice and licence travel with them, the derivative is under the same OFL, and "Reserved Font Names" are not used for modified versions (none are declared in the shipped OFL text; check it). Practically: keep the OFL text and the copyright line with data/letters/letters.json and anything that embeds these shapes (e.g. the app bundle, worksheets, book). This is not legal advice; confirm before commercial distribution. The OFL covers fonts "sold by themselves" restrictions only, not documents set in them.
+- Cursive stroke ORDER/DIRECTION and the per-letter overrides are the build agent's inferences, partly compared with one numbered reference (Abzug, viewed not copied; see docs/letters/REVIEW-LIST.md). Not validated by a native teacher.
+- The earlier hand-drawn cursive data was removed.
+
+## Print stroke centerlines (`print.strokes[].median`, `print.strokes[].path`)
 - Authored by hand (tools/letters/author_strokes.py). NOT derived from any copyrighted stroke diagram: the Hebrew4Christians, Abzug/JMU, ancient-hebrew.org and Akhlah diagrams were NOT viewed or copied (the PDFs were not reachable and are copyrighted).
 - Stroke counts consistent with research text: print vav/kaf/resh = 1; bet, dalet, zayin, samekh, ayin, tsadi, final mem = 2 (flag `strokeCountConfirmedByResearch`). Cursive alef = 2 and mem = 3 (Hebrew4Christians / HebrewPod101 text).
 - ORDER and DIRECTION are the author's convention (docs/letters/STROKE-RULES.md). Every record is `validated:false`, `needsNativeReview:true`, `quality:"draft"`.
-- Cursive: no OFL cursive font could be installed (Google Fonts unreachable), so shapes are simplified Israeli ktav yad drawn from verbal descriptions (Mezzoguild, Wikipedia: Cursive Hebrew). They have NOT been compared to a school model and may deviate.
+- Print strokes remain hand-authored over the DejaVu outline (no print font skeletonised; Frank Ruhl Libre, Alef and Heebo are in assets/fonts but not used for strokes).
+- Worksheets/workbooks use Frank Ruhl Libre (print) and Gveret Levin (cursive) as dotted guides (OFL 1.1).
 
 ## keyboard-si1452.json
 - Source: xkeyboard-config `symbols/il` ("basic", header: implementation of Israeli standard SI-1452 (2013)), as installed in `xkb-data 2.41`; permissive X11-style licence ("Permission to use, copy, modify, distribute, and sell this software ... for any purpose is hereby granted without fee", /usr/share/doc/xkb-data/copyright).

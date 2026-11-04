@@ -1,0 +1,5 @@
+{
+ "version": 1,
+ "note": "Default for every image is UNAPPROVED (absent). Edit with: node tools/images/ingest.mjs approve|reject <id...>",
+ "approvals": {}
+}

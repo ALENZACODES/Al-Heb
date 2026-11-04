@@ -4,6 +4,7 @@
 // Everything interpolated into HTML is escaped; data is embedded as JSON with "<" escaped.
 
 import { join } from 'node:path';
+import { existsSync, readFileSync } from 'node:fs';
 import { BLOCKS, loadApprovals, loadManifest, loadProvenance, makePaths, writeTextAtomic } from './ingest_lib.mjs';
 
 export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -19,6 +20,7 @@ main{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:
 .tile.approved{border-color:#6b7f3a}.tile.rejected{border-color:#b0373b;opacity:.65}.tile.flag{box-shadow:0 0 0 3px #d9a441}
 .tile.missing{border-style:dashed;color:#777}.tile h3{margin:0;font-size:12px;word-break:break-all}
 .badge{display:inline-block;background:#d9a441;border-radius:4px;padding:0 .35rem;font-size:11px;margin-right:.2rem}.badge.bad{background:#b0373b;color:#fff}
+.note{font-size:12px;background:#fbf3dc;border-radius:6px;padding:.3rem .4rem}.note b{color:#8a1f23}.note ul{margin:.2rem 0 0 1rem;padding:0}
 .btns{display:flex;gap:.4rem}.btns button{flex:1;border:1px solid #888;border-radius:6px;background:#fff;padding:.3rem;cursor:pointer;font:inherit}
 .btns .ok.on{background:#6b7f3a;color:#fff}.btns .no.on{background:#b0373b;color:#fff}
 details{font-size:12px}details p{margin:.3rem 0;white-space:pre-wrap}
@@ -42,7 +44,16 @@ document.getElementById('export').onclick=()=>{const out={approve:[],reject:[],r
 paint();
 `;
 
-function tile(row, rec, state) {
+/** Matcher / eye-check notes (data/images/review-notes.json), shown so the reviewer sees the known defects per image. */
+function noteBlock(n, rec) {
+  if (!n) return '';
+  const items = (n.defects ?? []).map((d) => `<li>${esc(d)}</li>`).join('');
+  const scene = n.sceneSeen && n.sceneExpected && n.sceneSeen !== n.sceneExpected ? `<div><b>Wrong backdrop:</b> ${esc(n.sceneSeen)} (prompt asked ${esc(n.sceneExpected)})</div>` : '';
+  const ocrFlag = rec.flags.includes('contains_text') ? `<div><b>OCR flagged text</b> (the eye check found none; zoom in; Approve is skipped on apply unless you use --force)</div>` : '';
+  return `<div class="note"><div>Matcher: ${esc(n.confidence)} confidence${n.matchNote ? ` (${esc(n.matchNote)})` : ''}</div>${scene}${items ? `<ul>${items}</ul>` : '<div>No known defects.</div>'}<div>Text in image: ${esc(n.textInImage ?? 'not checked')}</div>${ocrFlag}</div>`;
+}
+
+function tile(row, rec, state, note) {
   if (!rec) return `<div class="tile missing" data-miss="1"><h3>${esc(row.stem)}</h3><div>not generated yet (${row.width}x${row.height})</div><details><summary>prompt</summary><p>${esc(row.prompt)}</p></details></div>`;
   const flags = rec.flags.map((f) => `<span class="badge${['contains_text', 'aspect_mismatch_allowed'].includes(f) ? ' bad' : ''}">${esc(f)}</span>`).join('');
   const hit = rec.ocr?.blobs?.length ? `<div>OCR saw: ${esc(rec.ocr.blobs.map((b) => b.t).join(' | '))}</div>` : '';
@@ -50,14 +61,14 @@ function tile(row, rec, state) {
   const small = rec.variants[0];
   const cls = ['tile', state === 'approved' ? 'approved' : state === 'rejected' ? 'rejected' : '', rec.flags.some((f) => ['contains_text', 'possible_text', 'aspect_mismatch_allowed', 'not_transparent', 'low_resolution', 'unexpected_transparency'].includes(f)) ? 'flag' : ''].join(' ');
   return `<div class="${cls}" data-id="${esc(row.stem)}"><a href="../../../assets/img/gen/${esc(big.file)}" target="_blank" rel="noopener"><img loading="lazy" src="../../../assets/img/gen/${esc(small.file)}" alt="${esc(row.stem)}"></a>
-<h3>${esc(row.stem)}</h3><div>${rec.width}x${rec.height} (asked ${row.width}x${row.height}) ${flags}</div>${hit}
+<h3>${esc(row.stem)}</h3><div>${rec.width}x${rec.height} (asked ${row.width}x${row.height}) ${flags}</div>${hit}${noteBlock(note, rec)}
 <div class="btns"><button class="ok" data-act="ok" title="approve">Approve</button><button class="no" data-act="no" title="reject">Reject</button></div>
 <details><summary>prompt #${row.command}</summary><p>${esc(row.prompt)}</p></details></div>`;
 }
 
-export function sheetHtml(block, rows, prov, approvals) {
+export function sheetHtml(block, rows, prov, approvals, notes = {}) {
   const base = {};
-  const tiles = rows.map((r) => { const st = approvals.approvals[r.stem]?.status ?? 'unapproved'; if (prov.images[r.stem]) base[r.stem] = st; return tile(r, prov.images[r.stem], st); }).join('\n');
+  const tiles = rows.map((r) => { const st = approvals.approvals[r.stem]?.status ?? 'unapproved'; if (prov.images[r.stem]) base[r.stem] = st; return tile(r, prov.images[r.stem], st, notes[r.stem]); }).join('\n');
   const have = rows.filter((r) => prov.images[r.stem]).length;
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Block ${esc(block)} contact sheet</title><style>${CSS}</style></head><body>
 <header><a href="index.html">All blocks</a><strong>Block ${esc(block)}: ${have}/${rows.length} images</strong><span id="count"></span>
@@ -70,12 +81,14 @@ export function sheetHtml(block, rows, prov, approvals) {
 export function writeSheets({ root, paths, blocks }) {
   const p = paths ?? makePaths(root);
   const rows = loadManifest(p.manifest); const prov = loadProvenance(p); const ap = loadApprovals(p);
+  const notesPath = join(p.root, 'data/images/review-notes.json');
+  const notes = existsSync(notesPath) ? (JSON.parse(readFileSync(notesPath, 'utf8')).notes ?? {}) : {};
   const files = []; const links = [];
   for (const b of blocks ?? BLOCKS) {
     const br = rows.filter((r) => r.block === b);
     if (!br.length) continue;
     const f = join(p.sheets, `block-${b}.html`);
-    writeTextAtomic(f, sheetHtml(b, br, prov, ap)); files.push(f);
+    writeTextAtomic(f, sheetHtml(b, br, prov, ap, notes)); files.push(f);
     const have = br.filter((r) => prov.images[r.stem]).length;
     const ok = br.filter((r) => ap.approvals[r.stem]?.status === 'approved').length;
     links.push(`<li><a href="block-${esc(b)}.html">Block ${esc(b)}</a>: ${have}/${br.length} ingested, ${ok} approved</li>`);

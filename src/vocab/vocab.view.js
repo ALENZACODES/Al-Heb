@@ -229,14 +229,14 @@ export function mount(root, ctx) {
       const fresh = eligible.filter((e) => !cards[cardId(e)]).length;
       if (!matches.length) { addRow.replaceChildren(); return; }
       const what = sel.topic || (sel.tier === 'all' ? 'all tiers' : TIER_LABEL[sel.tier]);
-      addRow.replaceChildren(
+      addRow.replaceChildren(...[
         fresh ? el('button', { type: 'button', class: 'btn', id: 'vc-add-all', onclick: async () => {
           const r = addCards(cards, eligible, Date.now(), ADD_LIMIT); await saveCards(r.cards);
           renderRows(true); updateAdd();
           status.textContent = `Added ${r.added} word${r.added === 1 ? '' : 's'} to your reviews${fresh > r.added ? `; ${fresh - r.added} more can be added with another click` : ''}.`; } }, `Add ${Math.min(fresh, ADD_LIMIT)} of these ${eligible.length} words to reviews`)
           : el('p', { class: 'muted' }, 'All of these words are already in your reviews.'),
         el('span', { class: 'muted' }, `(${what}${sel.query ? ', matching your search' : ''})`),
-        skipped ? el('p', { class: 'muted' }, `${skipped} word form${skipped === 1 ? '' : 's'} and rare-sense word${skipped === 1 ? '' : 's'} in this list are skipped here; use a card's own button to add one.`) : null);
+        skipped ? el('p', { class: 'muted' }, `${skipped} word form${skipped === 1 ? '' : 's'} and rare-sense word${skipped === 1 ? '' : 's'} in this list are skipped here; use a card's own button to add one.`) : null].filter(Boolean));
     };
     const renderRows = (keep) => {
       const n = keep ? Math.max(shown, PAGE) : PAGE;
@@ -244,13 +244,13 @@ export function mount(root, ctx) {
       heading.textContent = sel.topic === FN_TOPIC || sel.tag === 'function' ? 'Function words (closed class; topic does not apply)' : '';
       list.replaceChildren(...matches.slice(0, shown).map(cardItem));
       status.textContent = matches.length ? `Showing ${shown} of ${matches.length} word${matches.length === 1 ? '' : 's'}.` : 'No words match. Try fewer letters, or another tier or topic.';
-      moreRow.replaceChildren(shown < matches.length ? el('button', { type: 'button', class: 'btn secondary', id: 'vc-more', onclick: () => {
+      moreRow.replaceChildren(...(shown < matches.length ? [el('button', { type: 'button', class: 'btn secondary', id: 'vc-more', onclick: () => {
         const from = shown; shown = Math.min(shown + PAGE, matches.length);
         list.append(...matches.slice(from, shown).map(cardItem));
         status.textContent = `Showing ${shown} of ${matches.length} words.`;
         if (shown >= matches.length) moreRow.replaceChildren();
         focusNode(list.children?.[from]?.querySelector?.('.vc-gloss'));
-      } }, `Show ${Math.min(PAGE, matches.length - shown)} more`) : null);
+      } }, `Show ${Math.min(PAGE, matches.length - shown)} more`)] : []));
     };
     const refilter = () => { matches = applyFilters(all, sel); renderRows(false); updateAdd(); };
     const reload = async () => {

@@ -1,0 +1,904 @@
+{
+ "schema": "alef-intermediate-index/1",
+ "version": 1,
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "note": "Intermediate lessons I-01..I-25, kept out of lessons.json until main registers them (see docs/curriculum/INTERMEDIATE.md). Every Hebrew string is a whole entry of, or a composition of whitespace tokens found in, data/vocab/words.json, data/corpus/*.json or data/service/*.json; tests/curriculum.intermediate.test.js enforces this. Glosses, exercise cues and notes are original English and unreviewed. No audio exists for any item.",
+ "sources": [
+  "data/vocab/words.json",
+  "data/corpus/registry.json",
+  "data/corpus/phrasebook.json",
+  "data/corpus/source-snapshot.json",
+  "data/corpus/prayer-meta.json",
+  "data/corpus/torah-service-guide.json",
+  "data/corpus/gaps.json",
+  "data/service/orders.json"
+ ],
+ "exerciseTypes": {
+  "recall": "Show he, learner recalls en (maps to a word: SRS card).",
+  "produce": "Show en, pick the Hebrew among options (answer is the index of the correct option).",
+  "match": "Match 3 to 5 he/en pairs.",
+  "order": "Put the whitespace tokens of he back in order; en is the gloss.",
+  "respond": "Call and response: cue (English situation), optional prompt {he,en}, learner says answer {he,en}.",
+  "gender": "Man/woman forms m and f of the same line (maps to gender pair cards).",
+  "dialogue": "2 to 5 lines {speaker, he, en}; task says which speaker the learner voices.",
+  "fade": "Fade-out recall of a registry line (line id; lineIndex for multi-line entries; maps to line: SRS cards).",
+  "spot": "Find target (a token of the registry line) in the line.",
+  "register": "Pick the register (formal/neutral/casual/slang) of a phrasebook line."
+ },
+ "units": {
+  "synagogue": [
+   {
+    "id": "I-01",
+    "file": "lessons-intermediate/I-01.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "Shema and its blessings: Barchu, Shema, Baruch shem, V'ahavta",
+    "prerequisites": [
+     "r51"
+    ],
+    "estMinutes": 30,
+    "words": 12,
+    "exercises": 16,
+    "prayerLines": [
+     "torah-barchu",
+     "shema-1",
+     "shema-2",
+     "vahavta-1"
+    ]
+   },
+   {
+    "id": "I-02",
+    "file": "lessons-intermediate/I-02.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "Amidah openings: open my lips, Avot, Kedushah responses",
+    "prerequisites": [
+     "I-01"
+    ],
+    "estMinutes": 35,
+    "words": 15,
+    "exercises": 17,
+    "prayerLines": [
+     "amidah-lips",
+     "avot-1",
+     "avot-closing",
+     "kedushah-kadosh",
+     "kedushah-baruch",
+     "kedushah-yimloch",
+     "oseh-shalom"
+    ]
+   },
+   {
+    "id": "I-03",
+    "file": "lessons-intermediate/I-03.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "Torah service responses: ark, aliyah blessings, returning the scroll",
+    "prerequisites": [
+     "I-01"
+    ],
+    "estMinutes": 40,
+    "words": 12,
+    "exercises": 18,
+    "prayerLines": [
+     "torah-barchu",
+     "torah-bless-1",
+     "torah-bless-2",
+     "ein-kamocha",
+     "gadlu",
+     "lecha-hashem",
+     "vezot-hatorah",
+     "etz-chaim",
+     "hashivenu",
+     "yehalelu"
+    ]
+   },
+   {
+    "id": "I-04",
+    "file": "lessons-intermediate/I-04.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "Kaddish responses: Amen, Yehei shmei raba, Brich hu",
+    "prerequisites": [
+     "I-01"
+    ],
+    "estMinutes": 30,
+    "words": 10,
+    "exercises": 15,
+    "prayerLines": [
+     "kaddish-1",
+     "oseh-shalom"
+    ]
+   },
+   {
+    "id": "I-05",
+    "file": "lessons-intermediate/I-05.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "Kiddush: candles, wine, bread and the Shabbat verses",
+    "prerequisites": [
+     "I-01"
+    ],
+    "estMinutes": 35,
+    "words": 13,
+    "exercises": 18,
+    "prayerLines": [
+     "candle-shabbat",
+     "kiddush-gen-2-1-3",
+     "kiddush-wine-1",
+     "kiddush-shabbat-eve",
+     "hamotzi",
+     "kiddush-veshamru",
+     "kiddush-zachor"
+    ]
+   },
+   {
+    "id": "I-06",
+    "file": "lessons-intermediate/I-06.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "Havdalah: wine, spices, flame and the separation blessing",
+    "prerequisites": [
+     "I-05"
+    ],
+    "estMinutes": 30,
+    "words": 11,
+    "exercises": 16,
+    "prayerLines": [
+     "havdalah-opening",
+     "kiddush-wine-1",
+     "havdalah-spices",
+     "havdalah-flame",
+     "havdalah-hamavdil"
+    ]
+   },
+   {
+    "id": "I-07",
+    "file": "lessons-intermediate/I-07.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "Hallel refrains: the lines the congregation sings back",
+    "prerequisites": [
+     "I-01"
+    ],
+    "estMinutes": 30,
+    "words": 11,
+    "exercises": 15,
+    "prayerLines": [
+     "birkat-hamazon-1",
+     "yehalelu",
+     "havdalah-opening"
+    ]
+   },
+   {
+    "id": "I-08",
+    "file": "lessons-intermediate/I-08.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "Aleinu: the closing prayer and where to bow",
+    "prerequisites": [
+     "I-02"
+    ],
+    "estMinutes": 30,
+    "words": 12,
+    "exercises": 14,
+    "prayerLines": [
+     "aleinu-1"
+    ]
+   },
+   {
+    "id": "I-09",
+    "file": "lessons-intermediate/I-09.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "Adon Olam: the closing hymn line by line",
+    "prerequisites": [
+     "I-02"
+    ],
+    "estMinutes": 30,
+    "words": 16,
+    "exercises": 16,
+    "prayerLines": [
+     "adon-olam-1",
+     "yigdal"
+    ]
+   },
+   {
+    "id": "I-10",
+    "file": "lessons-intermediate/I-10.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "Mi Shebeirach, healing and thanksgiving: the blessings said for people",
+    "prerequisites": [
+     "I-03"
+    ],
+    "estMinutes": 35,
+    "words": 12,
+    "exercises": 16,
+    "prayerLines": [
+     "mi-sheberach-opening",
+     "num-12-13",
+     "hagomel",
+     "shehecheyanu",
+     "bless-priestly-1",
+     "bless-priestly-2",
+     "bless-priestly-3"
+    ]
+   }
+  ],
+  "israel": [
+   {
+    "id": "I-11",
+    "file": "lessons-intermediate/I-11.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Bus and train: tickets, platforms and getting off",
+    "prerequisites": [
+     "il24"
+    ],
+    "estMinutes": 30,
+    "words": 12,
+    "exercises": 16,
+    "prayerLines": []
+   },
+   {
+    "id": "I-12",
+    "file": "lessons-intermediate/I-12.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Shuk bargaining: prices, discounts and 'I'll take it'",
+    "prerequisites": [
+     "I-11"
+    ],
+    "estMinutes": 30,
+    "words": 15,
+    "exercises": 16,
+    "prayerLines": []
+   },
+   {
+    "id": "I-13",
+    "file": "lessons-intermediate/I-13.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Cafe ordering: milk, sugar, sizes and the bill",
+    "prerequisites": [
+     "I-11"
+    ],
+    "estMinutes": 25,
+    "words": 14,
+    "exercises": 16,
+    "prayerLines": []
+   },
+   {
+    "id": "I-14",
+    "file": "lessons-intermediate/I-14.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Pharmacy: pain, fever, prescriptions and how often to take it",
+    "prerequisites": [
+     "I-11"
+    ],
+    "estMinutes": 30,
+    "words": 15,
+    "exercises": 16,
+    "prayerLines": []
+   },
+   {
+    "id": "I-15",
+    "file": "lessons-intermediate/I-15.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Directions: streets, corners and 'how do I get to'",
+    "prerequisites": [
+     "I-11"
+    ],
+    "estMinutes": 30,
+    "words": 16,
+    "exercises": 15,
+    "prayerLines": []
+   },
+   {
+    "id": "I-16",
+    "file": "lessons-intermediate/I-16.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Phone and SIM: numbers, messages, battery and signal",
+    "prerequisites": [
+     "I-11"
+    ],
+    "estMinutes": 30,
+    "words": 14,
+    "exercises": 15,
+    "prayerLines": []
+   },
+   {
+    "id": "I-17",
+    "file": "lessons-intermediate/I-17.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Apartment viewing: rooms, floor, rent and the landlord",
+    "prerequisites": [
+     "I-11"
+    ],
+    "estMinutes": 30,
+    "words": 14,
+    "exercises": 15,
+    "prayerLines": []
+   },
+   {
+    "id": "I-18",
+    "file": "lessons-intermediate/I-18.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Army slang basics: how soldiers and their friends talk",
+    "prerequisites": [
+     "I-11"
+    ],
+    "estMinutes": 25,
+    "words": 16,
+    "exercises": 16,
+    "prayerLines": []
+   },
+   {
+    "id": "I-19",
+    "file": "lessons-intermediate/I-19.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Shabbat invitation: being invited, what to bring, saying thanks",
+    "prerequisites": [
+     "I-13"
+    ],
+    "estMinutes": 25,
+    "words": 14,
+    "exercises": 16,
+    "prayerLines": []
+   },
+   {
+    "id": "I-20",
+    "file": "lessons-intermediate/I-20.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Hospital and clinic: doctor, appointment, insurance, 'where does it hurt'",
+    "prerequisites": [
+     "I-14"
+    ],
+    "estMinutes": 30,
+    "words": 13,
+    "exercises": 16,
+    "prayerLines": []
+   },
+   {
+    "id": "I-21",
+    "file": "lessons-intermediate/I-21.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Bank: accounts, cash machines, exchanging money and signing",
+    "prerequisites": [
+     "I-11"
+    ],
+    "estMinutes": 30,
+    "words": 14,
+    "exercises": 15,
+    "prayerLines": []
+   },
+   {
+    "id": "I-22",
+    "file": "lessons-intermediate/I-22.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Post office: parcels, letters, stamps and waiting your turn",
+    "prerequisites": [
+     "I-11"
+    ],
+    "estMinutes": 25,
+    "words": 13,
+    "exercises": 14,
+    "prayerLines": []
+   },
+   {
+    "id": "I-23",
+    "file": "lessons-intermediate/I-23.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Taxi: destination, meter, 'slower' and the receipt",
+    "prerequisites": [
+     "I-11"
+    ],
+    "estMinutes": 25,
+    "words": 13,
+    "exercises": 15,
+    "prayerLines": []
+   },
+   {
+    "id": "I-24",
+    "file": "lessons-intermediate/I-24.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Weather: hot, cold, rain, sun and what to take",
+    "prerequisites": [
+     "I-11"
+    ],
+    "estMinutes": 25,
+    "words": 15,
+    "exercises": 15,
+    "prayerLines": []
+   },
+   {
+    "id": "I-25",
+    "file": "lessons-intermediate/I-25.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Small talk: where you're from, how long you've been here, keeping in touch",
+    "prerequisites": [
+     "I-19"
+    ],
+    "estMinutes": 25,
+    "words": 15,
+    "exercises": 16,
+    "prayerLines": []
+   }
+  ]
+ },
+ "lessons": [
+  {
+   "id": "I-01",
+   "file": "lessons-intermediate/I-01.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "Shema and its blessings: Barchu, Shema, Baruch shem, V'ahavta",
+   "prerequisites": [
+    "r51"
+   ],
+   "estMinutes": 30,
+   "words": 12,
+   "exercises": 16,
+   "prayerLines": [
+    "torah-barchu",
+    "shema-1",
+    "shema-2",
+    "vahavta-1"
+   ]
+  },
+  {
+   "id": "I-02",
+   "file": "lessons-intermediate/I-02.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "Amidah openings: open my lips, Avot, Kedushah responses",
+   "prerequisites": [
+    "I-01"
+   ],
+   "estMinutes": 35,
+   "words": 15,
+   "exercises": 17,
+   "prayerLines": [
+    "amidah-lips",
+    "avot-1",
+    "avot-closing",
+    "kedushah-kadosh",
+    "kedushah-baruch",
+    "kedushah-yimloch",
+    "oseh-shalom"
+   ]
+  },
+  {
+   "id": "I-03",
+   "file": "lessons-intermediate/I-03.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "Torah service responses: ark, aliyah blessings, returning the scroll",
+   "prerequisites": [
+    "I-01"
+   ],
+   "estMinutes": 40,
+   "words": 12,
+   "exercises": 18,
+   "prayerLines": [
+    "torah-barchu",
+    "torah-bless-1",
+    "torah-bless-2",
+    "ein-kamocha",
+    "gadlu",
+    "lecha-hashem",
+    "vezot-hatorah",
+    "etz-chaim",
+    "hashivenu",
+    "yehalelu"
+   ]
+  },
+  {
+   "id": "I-04",
+   "file": "lessons-intermediate/I-04.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "Kaddish responses: Amen, Yehei shmei raba, Brich hu",
+   "prerequisites": [
+    "I-01"
+   ],
+   "estMinutes": 30,
+   "words": 10,
+   "exercises": 15,
+   "prayerLines": [
+    "kaddish-1",
+    "oseh-shalom"
+   ]
+  },
+  {
+   "id": "I-05",
+   "file": "lessons-intermediate/I-05.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "Kiddush: candles, wine, bread and the Shabbat verses",
+   "prerequisites": [
+    "I-01"
+   ],
+   "estMinutes": 35,
+   "words": 13,
+   "exercises": 18,
+   "prayerLines": [
+    "candle-shabbat",
+    "kiddush-gen-2-1-3",
+    "kiddush-wine-1",
+    "kiddush-shabbat-eve",
+    "hamotzi",
+    "kiddush-veshamru",
+    "kiddush-zachor"
+   ]
+  },
+  {
+   "id": "I-06",
+   "file": "lessons-intermediate/I-06.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "Havdalah: wine, spices, flame and the separation blessing",
+   "prerequisites": [
+    "I-05"
+   ],
+   "estMinutes": 30,
+   "words": 11,
+   "exercises": 16,
+   "prayerLines": [
+    "havdalah-opening",
+    "kiddush-wine-1",
+    "havdalah-spices",
+    "havdalah-flame",
+    "havdalah-hamavdil"
+   ]
+  },
+  {
+   "id": "I-07",
+   "file": "lessons-intermediate/I-07.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "Hallel refrains: the lines the congregation sings back",
+   "prerequisites": [
+    "I-01"
+   ],
+   "estMinutes": 30,
+   "words": 11,
+   "exercises": 15,
+   "prayerLines": [
+    "birkat-hamazon-1",
+    "yehalelu",
+    "havdalah-opening"
+   ]
+  },
+  {
+   "id": "I-08",
+   "file": "lessons-intermediate/I-08.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "Aleinu: the closing prayer and where to bow",
+   "prerequisites": [
+    "I-02"
+   ],
+   "estMinutes": 30,
+   "words": 12,
+   "exercises": 14,
+   "prayerLines": [
+    "aleinu-1"
+   ]
+  },
+  {
+   "id": "I-09",
+   "file": "lessons-intermediate/I-09.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "Adon Olam: the closing hymn line by line",
+   "prerequisites": [
+    "I-02"
+   ],
+   "estMinutes": 30,
+   "words": 16,
+   "exercises": 16,
+   "prayerLines": [
+    "adon-olam-1",
+    "yigdal"
+   ]
+  },
+  {
+   "id": "I-10",
+   "file": "lessons-intermediate/I-10.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "Mi Shebeirach, healing and thanksgiving: the blessings said for people",
+   "prerequisites": [
+    "I-03"
+   ],
+   "estMinutes": 35,
+   "words": 12,
+   "exercises": 16,
+   "prayerLines": [
+    "mi-sheberach-opening",
+    "num-12-13",
+    "hagomel",
+    "shehecheyanu",
+    "bless-priestly-1",
+    "bless-priestly-2",
+    "bless-priestly-3"
+   ]
+  },
+  {
+   "id": "I-11",
+   "file": "lessons-intermediate/I-11.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Bus and train: tickets, platforms and getting off",
+   "prerequisites": [
+    "il24"
+   ],
+   "estMinutes": 30,
+   "words": 12,
+   "exercises": 16,
+   "prayerLines": []
+  },
+  {
+   "id": "I-12",
+   "file": "lessons-intermediate/I-12.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Shuk bargaining: prices, discounts and 'I'll take it'",
+   "prerequisites": [
+    "I-11"
+   ],
+   "estMinutes": 30,
+   "words": 15,
+   "exercises": 16,
+   "prayerLines": []
+  },
+  {
+   "id": "I-13",
+   "file": "lessons-intermediate/I-13.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Cafe ordering: milk, sugar, sizes and the bill",
+   "prerequisites": [
+    "I-11"
+   ],
+   "estMinutes": 25,
+   "words": 14,
+   "exercises": 16,
+   "prayerLines": []
+  },
+  {
+   "id": "I-14",
+   "file": "lessons-intermediate/I-14.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Pharmacy: pain, fever, prescriptions and how often to take it",
+   "prerequisites": [
+    "I-11"
+   ],
+   "estMinutes": 30,
+   "words": 15,
+   "exercises": 16,
+   "prayerLines": []
+  },
+  {
+   "id": "I-15",
+   "file": "lessons-intermediate/I-15.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Directions: streets, corners and 'how do I get to'",
+   "prerequisites": [
+    "I-11"
+   ],
+   "estMinutes": 30,
+   "words": 16,
+   "exercises": 15,
+   "prayerLines": []
+  },
+  {
+   "id": "I-16",
+   "file": "lessons-intermediate/I-16.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Phone and SIM: numbers, messages, battery and signal",
+   "prerequisites": [
+    "I-11"
+   ],
+   "estMinutes": 30,
+   "words": 14,
+   "exercises": 15,
+   "prayerLines": []
+  },
+  {
+   "id": "I-17",
+   "file": "lessons-intermediate/I-17.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Apartment viewing: rooms, floor, rent and the landlord",
+   "prerequisites": [
+    "I-11"
+   ],
+   "estMinutes": 30,
+   "words": 14,
+   "exercises": 15,
+   "prayerLines": []
+  },
+  {
+   "id": "I-18",
+   "file": "lessons-intermediate/I-18.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Army slang basics: how soldiers and their friends talk",
+   "prerequisites": [
+    "I-11"
+   ],
+   "estMinutes": 25,
+   "words": 16,
+   "exercises": 16,
+   "prayerLines": []
+  },
+  {
+   "id": "I-19",
+   "file": "lessons-intermediate/I-19.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Shabbat invitation: being invited, what to bring, saying thanks",
+   "prerequisites": [
+    "I-13"
+   ],
+   "estMinutes": 25,
+   "words": 14,
+   "exercises": 16,
+   "prayerLines": []
+  },
+  {
+   "id": "I-20",
+   "file": "lessons-intermediate/I-20.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Hospital and clinic: doctor, appointment, insurance, 'where does it hurt'",
+   "prerequisites": [
+    "I-14"
+   ],
+   "estMinutes": 30,
+   "words": 13,
+   "exercises": 16,
+   "prayerLines": []
+  },
+  {
+   "id": "I-21",
+   "file": "lessons-intermediate/I-21.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Bank: accounts, cash machines, exchanging money and signing",
+   "prerequisites": [
+    "I-11"
+   ],
+   "estMinutes": 30,
+   "words": 14,
+   "exercises": 15,
+   "prayerLines": []
+  },
+  {
+   "id": "I-22",
+   "file": "lessons-intermediate/I-22.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Post office: parcels, letters, stamps and waiting your turn",
+   "prerequisites": [
+    "I-11"
+   ],
+   "estMinutes": 25,
+   "words": 13,
+   "exercises": 14,
+   "prayerLines": []
+  },
+  {
+   "id": "I-23",
+   "file": "lessons-intermediate/I-23.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Taxi: destination, meter, 'slower' and the receipt",
+   "prerequisites": [
+    "I-11"
+   ],
+   "estMinutes": 25,
+   "words": 13,
+   "exercises": 15,
+   "prayerLines": []
+  },
+  {
+   "id": "I-24",
+   "file": "lessons-intermediate/I-24.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Weather: hot, cold, rain, sun and what to take",
+   "prerequisites": [
+    "I-11"
+   ],
+   "estMinutes": 25,
+   "words": 15,
+   "exercises": 15,
+   "prayerLines": []
+  },
+  {
+   "id": "I-25",
+   "file": "lessons-intermediate/I-25.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Small talk: where you're from, how long you've been here, keeping in touch",
+   "prerequisites": [
+    "I-19"
+   ],
+   "estMinutes": 25,
+   "words": 15,
+   "exercises": 16,
+   "prayerLines": []
+  }
+ ]
+}

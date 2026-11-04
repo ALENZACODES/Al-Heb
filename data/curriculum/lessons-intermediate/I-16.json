@@ -1,0 +1,374 @@
+{
+ "id": "I-16",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Phone and SIM: numbers, messages, battery and signal",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "טֶלֶפוֹן",
+   "en": "phone",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "telefon"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he15e52d3"
+   }
+  },
+  {
+   "he": "מִסְפָּר",
+   "en": "number",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mispar"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hfa49d2fe"
+   }
+  },
+  {
+   "he": "מִסְפַּר טֶלֶפוֹן",
+   "en": "phone number",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mispar telefon"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "מִסְפַּר",
+     "טֶלֶפוֹן"
+    ]
+   }
+  },
+  {
+   "he": "הוֹדָעָה",
+   "en": "message",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hoda'ah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hff2f5141"
+   }
+  },
+  {
+   "he": "אִינְטֶרְנֶט",
+   "en": "internet",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ineternet"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h0e206323"
+   }
+  },
+  {
+   "he": "סִיסְמָה",
+   "en": "password",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "sisemah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hd6d93430"
+   }
+  },
+  {
+   "he": "סוֹלְלָה",
+   "en": "battery",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "solelah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h4429136c"
+   }
+  },
+  {
+   "he": "מִטְעָן",
+   "en": "charger",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mit'an"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hed3878d2"
+   }
+  },
+  {
+   "he": "לְהִתְקַשֵּׁר",
+   "en": "to call",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lehitkasher"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "ha42ef4a8#forms.infinitive"
+   }
+  },
+  {
+   "he": "לִשְׁלֹחַ",
+   "en": "to send",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lishlocha"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h059e9e22#forms.infinitive"
+   }
+  },
+  {
+   "he": "שׁוֹלֵחַ",
+   "en": "sending (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "sholecha"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h059e9e22#forms.present"
+   }
+  },
+  {
+   "he": "הַלּוֹ?",
+   "en": "hello? (on the phone)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "halo?"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "pdbacc95e"
+   }
+  },
+  {
+   "he": "רֶגַע",
+   "en": "one moment",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "rega"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h8f6944f1"
+   }
+  },
+  {
+   "he": "אֲנִי לֹא שׁוֹמֵעַ",
+   "en": "I can't hear (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ani lo shome'a"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "אֲנִי",
+     "לֹא",
+     "שׁוֹמֵעַ"
+    ]
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Ask for and give a phone number",
+  "Ask about internet, a password and a charger",
+  "Handle a bad line: 'one moment', 'I can't hear'"
+ ],
+ "estMinutes": 30,
+ "prerequisites": [
+  "I-11"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-16-e01",
+   "type": "produce",
+   "en": "what is your phone number?",
+   "options": [
+    "מָה מִסְפַּר הַטֶּלֶפוֹן שֶׁלְּךָ?",
+    "מָה הַשָּׁעָה?",
+    "מַה שִּׁמְךָ?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-16-e02",
+   "type": "order",
+   "he": "מָה מִסְפַּר הַטֶּלֶפוֹן שֶׁלְּךָ?",
+   "en": "What is your phone number?"
+  },
+  {
+   "id": "I-16-e03",
+   "type": "respond",
+   "cue": "Give your own number: start the sentence.",
+   "answer": {
+    "he": "הַטֶּלֶפוֹן שֶׁלִּי",
+    "en": "My phone (number is ...)"
+   }
+  },
+  {
+   "id": "I-16-e04",
+   "type": "respond",
+   "cue": "Ask whether there is internet here.",
+   "answer": {
+    "he": "יֵשׁ אִינְטֶרְנֶט?",
+    "en": "Is there internet?"
+   }
+  },
+  {
+   "id": "I-16-e05",
+   "type": "produce",
+   "en": "is there a password?",
+   "options": [
+    "יֵשׁ סִיסְמָה?",
+    "יֵשׁ אִינְטֶרְנֶט?",
+    "יֵשׁ הַנָּחָה?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-16-e06",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "סוֹלְלָה",
+     "en": "battery"
+    },
+    {
+     "he": "מִטְעָן",
+     "en": "charger"
+    },
+    {
+     "he": "הוֹדָעָה",
+     "en": "message"
+    },
+    {
+     "he": "סִיסְמָה",
+     "en": "password"
+    }
+   ]
+  },
+  {
+   "id": "I-16-e07",
+   "type": "respond",
+   "cue": "Your battery is dead. Ask for a charger.",
+   "answer": {
+    "he": "יֵשׁ לְךָ מִטְעָן?",
+    "en": "Do you have a charger?"
+   }
+  },
+  {
+   "id": "I-16-e08",
+   "type": "order",
+   "he": "אֵין לִי סוֹלְלָה",
+   "en": "I have no battery"
+  },
+  {
+   "id": "I-16-e09",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "הַלּוֹ?",
+     "en": "Hello?"
+    },
+    {
+     "speaker": "b",
+     "he": "שָׁלוֹם, זֶה דָּוִד. אַתָּה שׁוֹמֵעַ?",
+     "en": "Hi, it's David. Can you hear?"
+    },
+    {
+     "speaker": "a",
+     "he": "רֶגַע, אֲנִי לֹא שׁוֹמֵעַ.",
+     "en": "One moment, I can't hear."
+    },
+    {
+     "speaker": "b",
+     "he": "אֲנִי שׁוֹלֵחַ לְךָ הוֹדָעָה.",
+     "en": "I'm sending you a message."
+    }
+   ],
+   "task": "Say both lines of speaker A."
+  },
+  {
+   "id": "I-16-e10",
+   "type": "produce",
+   "en": "I'm sending you a message",
+   "options": [
+    "אֲנִי שׁוֹלֵחַ לְךָ הוֹדָעָה",
+    "אֲנִי לֹא שׁוֹמֵעַ",
+    "אֶפְשָׁר לְהִשְׁתַּמֵּשׁ בַּטֶּלֶפוֹן שֶׁלְּךָ?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-16-e11",
+   "type": "recall",
+   "he": "לְהִתְקַשֵּׁר",
+   "en": "to call"
+  },
+  {
+   "id": "I-16-e12",
+   "type": "produce",
+   "en": "can I use your phone?",
+   "options": [
+    "אֶפְשָׁר לְהִשְׁתַּמֵּשׁ בַּטֶּלֶפוֹן שֶׁלְּךָ?",
+    "אָבַד לִי הַטֶּלֶפוֹן",
+    "יֵשׁ לְךָ מִטְעָן?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-16-e13",
+   "type": "respond",
+   "cue": "You lost your phone. Say so.",
+   "answer": {
+    "he": "אָבַד לִי הַטֶּלֶפוֹן",
+    "en": "I lost my phone"
+   }
+  },
+  {
+   "id": "I-16-e14",
+   "type": "recall",
+   "he": "רֶגַע",
+   "en": "one moment"
+  },
+  {
+   "id": "I-16-e15",
+   "type": "produce",
+   "en": "my phone doesn't work",
+   "options": [
+    "הַטֶּלֶפוֹן שֶׁלִּי לֹא עוֹבֵד",
+    "הַטֶּלֶפוֹן שֶׁלִּי כָּאן",
+    "אֵין לִי טֶלֶפוֹן"
+   ],
+   "answer": 0
+  }
+ ],
+ "note": "The loanword 'SIM' and 'reception/signal' have no pointed token in the sources; the lesson covers the phone itself. 'David' is a name from the vocabulary file; the feminine 'shelach' (your, f) has no pointed token there."
+}

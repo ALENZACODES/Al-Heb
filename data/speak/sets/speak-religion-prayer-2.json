@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-religion-prayer-2",
+ "title": "Prayer and Jewish life 2",
+ "theme": "religion-prayer",
+ "level": "B1",
+ "track": "both",
+ "pack": "religion-prayer-2",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h050cbd4d",
+   "he": "גָּאַל",
+   "translit": "ga'al",
+   "en": "to redeem",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h81fd04d9",
+   "he": "חַג",
+   "translit": "chag",
+   "en": "holiday",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hbde2b0cf",
+   "he": "אָסַר",
+   "translit": "asar",
+   "en": "to bind, tie, join",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h70669df5",
+   "he": "בָּרוּךְ",
+   "translit": "barukh",
+   "en": "blessed",
+   "kind": "word",
+   "audioId": "r28-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0b68ab3e",
+   "he": "פֶּשַׁע",
+   "translit": "pesha",
+   "en": "felony, transgression",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb8d9fbf8",
+   "he": "הִתְפַּלֵּל",
+   "translit": "hitpalel",
+   "en": "to pray, to daven",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha17e21d4",
+   "he": "מְדִינָה",
+   "translit": "medinah",
+   "en": "state (sovereign polity)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc33a87c8",
+   "he": "הִתְחַתֵּן",
+   "translit": "hitchaten",
+   "en": "to marry, to get married, to wed",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc96c1062",
+   "he": "פָּדָה",
+   "translit": "padah",
+   "en": "to redeem, ransom",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h4299f50f",
+   "he": "יְשׁוּעָה",
+   "translit": "yeshu'ah",
+   "en": "salvation, help, rescue",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h536ff18e",
+   "he": "נִחַם",
+   "translit": "nicham",
+   "en": "to regret",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h3f14c01d",
+   "he": "גֵּרֵשׁ",
+   "translit": "geresh",
+   "en": "to expel, to drive out, to exile",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

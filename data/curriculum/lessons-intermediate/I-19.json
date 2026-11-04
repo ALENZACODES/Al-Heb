@@ -1,0 +1,398 @@
+{
+ "id": "I-19",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Shabbat invitation: being invited, what to bring, saying thanks",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "שַׁבָּת שָׁלוֹם",
+   "en": "Shabbat shalom",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shabat shalom"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p425f3263"
+   }
+  },
+  {
+   "he": "שָׁבוּעַ טוֹב",
+   "en": "a good week",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shavu'a tov"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p67242f56"
+   }
+  },
+  {
+   "he": "אֲרוּחָה",
+   "en": "meal",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "aruchah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h6b636d7b"
+   }
+  },
+  {
+   "he": "עֶרֶב",
+   "en": "evening",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "erev"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he074d347"
+   }
+  },
+  {
+   "he": "בְּשִׂמְחָה",
+   "en": "gladly, with pleasure",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "besimchah"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בְּשִׂמְחָה"
+    ]
+   }
+  },
+  {
+   "he": "לְהָבִיא",
+   "en": "to bring",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lehavi"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hbe6de4ee#forms.infinitive"
+   }
+  },
+  {
+   "he": "יַיִן",
+   "en": "wine",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yayin"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h03763c94"
+   }
+  },
+  {
+   "he": "קִנּוּחַ",
+   "en": "dessert",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kinucha"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hbfe184a6"
+   }
+  },
+  {
+   "he": "מָתַי לָבוֹא?",
+   "en": "when should I come?",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "matai lavo?"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "מָתַי",
+     "לָבוֹא"
+    ]
+   }
+  },
+  {
+   "he": "הַשָּׁעָה שֶׁבַע",
+   "en": "seven o'clock",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hasha'ah sheva"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַשָּׁעָה",
+     "שֶׁבַע"
+    ]
+   }
+  },
+  {
+   "he": "טָעִים מְאֹד",
+   "en": "very tasty",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ta'im me'od"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p189bffd6"
+   }
+  },
+  {
+   "he": "לְחַיִּים!",
+   "en": "cheers!",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lechayim!"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "pf3ba64a2"
+   }
+  },
+  {
+   "he": "תּוֹדָה רַבָּה",
+   "en": "thank you very much",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "todah rabah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "pb298d766"
+   }
+  },
+  {
+   "he": "לְהִתְרָאוֹת",
+   "en": "see you",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lehitra'ot"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hfa69f51c#forms.infinitive"
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Accept a Shabbat dinner invitation and ask what to bring",
+  "Ask what time and say Shabbat shalom on arrival",
+  "Compliment the food and thank the hosts"
+ ],
+ "estMinutes": 25,
+ "prerequisites": [
+  "I-13"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-19-e01",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "אַתָּה רוֹצֶה לָבוֹא לֶאֱכֹל בְּיוֹם שִׁשִּׁי?",
+     "en": "Do you want to come to eat on Friday (night)?"
+    },
+    {
+     "speaker": "b",
+     "he": "תּוֹדָה, בְּשִׂמְחָה!",
+     "en": "Thanks, gladly!"
+    }
+   ],
+   "task": "Accept the invitation."
+  },
+  {
+   "id": "I-19-e02",
+   "type": "gender",
+   "m": "אַתָּה רוֹצֶה לָבוֹא?",
+   "f": "אַתְּ רוֹצָה לָבוֹא?",
+   "en": "Do you want to come?"
+  },
+  {
+   "id": "I-19-e03",
+   "type": "produce",
+   "en": "gladly!",
+   "options": [
+    "בְּשִׂמְחָה!",
+    "בְּסֵדֶר",
+    "אוּלַי"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-19-e04",
+   "type": "respond",
+   "cue": "Ask what to bring.",
+   "answer": {
+    "he": "מָה לְהָבִיא?",
+    "en": "What should I bring?"
+   }
+  },
+  {
+   "id": "I-19-e05",
+   "type": "produce",
+   "en": "can I bring something?",
+   "options": [
+    "אֶפְשָׁר לְהָבִיא מַשֶּׁהוּ?",
+    "אֶפְשָׁר לְהַזְמִין?",
+    "אֶפְשָׁר לָשֶׁבֶת?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-19-e06",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "יַיִן",
+     "en": "wine"
+    },
+    {
+     "he": "קִנּוּחַ",
+     "en": "dessert"
+    },
+    {
+     "he": "אֲרוּחָה",
+     "en": "meal"
+    },
+    {
+     "he": "עֶרֶב",
+     "en": "evening"
+    }
+   ]
+  },
+  {
+   "id": "I-19-e07",
+   "type": "respond",
+   "cue": "Ask when to come.",
+   "answer": {
+    "he": "מָתַי לָבוֹא?",
+    "en": "When should I come?"
+   }
+  },
+  {
+   "id": "I-19-e08",
+   "type": "produce",
+   "en": "seven o'clock",
+   "options": [
+    "הַשָּׁעָה שֶׁבַע",
+    "הַשָּׁעָה שָׁלוֹשׁ",
+    "חֲצִי שָׁעָה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-19-e09",
+   "type": "order",
+   "he": "אֲנִי מֵבִיא יַיִן",
+   "en": "I'm bringing wine"
+  },
+  {
+   "id": "I-19-e10",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "b",
+     "he": "שַׁבָּת שָׁלוֹם!",
+     "en": "Shabbat shalom!"
+    },
+    {
+     "speaker": "a",
+     "he": "שַׁבָּת שָׁלוֹם! בָּרוּךְ הַבָּא.",
+     "en": "Shabbat shalom! Welcome."
+    }
+   ],
+   "task": "You arrive at the door. Say the guest's greeting."
+  },
+  {
+   "id": "I-19-e11",
+   "type": "produce",
+   "en": "welcome (to one person)",
+   "options": [
+    "בָּרוּךְ הַבָּא",
+    "בְּרוּכִים הַבָּאִים",
+    "שַׁבָּת שָׁלוֹם"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-19-e12",
+   "type": "produce",
+   "en": "cheers!",
+   "options": [
+    "לְחַיִּים!",
+    "בְּשִׂמְחָה!",
+    "מַזָּל טוֹב"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-19-e13",
+   "type": "respond",
+   "cue": "The food is excellent. Say so.",
+   "answer": {
+    "he": "טָעִים מְאֹד!",
+    "en": "Very tasty!"
+   }
+  },
+  {
+   "id": "I-19-e14",
+   "type": "order",
+   "he": "תּוֹדָה רַבָּה עַל הָעֶרֶב",
+   "en": "Thank you very much for the evening"
+  },
+  {
+   "id": "I-19-e15",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "b",
+     "he": "תּוֹדָה רַבָּה, הַכֹּל הָיָה טָעִים מְאֹד. לְהִתְרָאוֹת!",
+     "en": "Thank you very much, everything was very tasty. See you!"
+    },
+    {
+     "speaker": "a",
+     "he": "שָׁבוּעַ טוֹב!",
+     "en": "A good week!"
+    }
+   ],
+   "task": "Say the guest's goodbye, then answer as the host."
+  },
+  {
+   "id": "I-19-e16",
+   "type": "register",
+   "he": "בְּרוּכִים הַבָּאִים",
+   "en": "welcome (to several people)",
+   "answer": "neutral",
+   "options": [
+    "formal",
+    "neutral",
+    "casual",
+    "slang"
+   ]
+  }
+ ],
+ "note": "'kosher' and 'shomer Shabbat' have no pointed token in the sources and are not taught."
+}

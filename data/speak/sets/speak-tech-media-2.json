@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-tech-media-2",
+ "title": "Tech and media 2",
+ "theme": "tech-media",
+ "level": "B2",
+ "track": "israel",
+ "pack": "tech-media-2",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "he15e52d3",
+   "he": "טֶלֶפוֹן",
+   "translit": "telefon",
+   "en": "telephone, phone",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha7403fc6",
+   "he": "לָחַץ",
+   "translit": "lachatz",
+   "en": "to press, apply pressure, squeeze",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc972012f",
+   "he": "פָּרַץ",
+   "translit": "paratz",
+   "en": "to breach",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf3a8608b",
+   "he": "טָעַן",
+   "translit": "ta'an",
+   "en": "to load",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h725d19e2",
+   "he": "זִכָּרוֹן",
+   "translit": "zikaron",
+   "en": "memory",
+   "kind": "word",
+   "audioId": "kiddush-shabbat-eve-w17",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h655df18b",
+   "he": "צִלְצֵל",
+   "translit": "tziltzel",
+   "en": "chime, ring, sound",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0e206323",
+   "he": "אִינְטֶרְנֶט",
+   "translit": "ineternet",
+   "en": "an internet",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h130a0158",
+   "he": "קָרַס",
+   "translit": "karas",
+   "en": "collapse",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h2ca0fe16",
+   "he": "דֹּק",
+   "translit": "dok",
+   "en": "film, sheet",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hd46969cd",
+   "he": "תִּיֵּק",
+   "translit": "tiyek",
+   "en": "to file (documents)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf1453f72",
+   "he": "לָהַט",
+   "translit": "lahat",
+   "en": "to blaze, to burn",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hfa4277eb",
+   "he": "סָרַק",
+   "translit": "sarak",
+   "en": "to comb, to examine closely",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

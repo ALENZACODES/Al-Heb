@@ -181,7 +181,7 @@ test('tracing a letter makes it known for decoding, but not its sign', () => {
   assert.deepEqual([...k.letters], ['bet']); assert.equal(k.signs.size, 0); assert.deepEqual(k.tracedOnly, ['bet']);
 });
 
-test('belts: fresh learner has no earned belt; full read track + checkpoints earns white..brown; grey is ready not earned; black is never earned', () => {
+test('belts: fresh learner has no earned belt; full read track + checkpoints earns white..brown; grey and black wait for timed reads (measurable, not earned)', () => {
   const st = fake();
   let b = M.evaluateBelts(D, M.makeContext(M.readSnapshot(st), D, T));
   assert.equal(b.filter((x) => x.state === 'earned').length, 0); assert.equal(b[0].state, 'current');
@@ -190,8 +190,25 @@ test('belts: fresh learner has no earned belt; full read track + checkpoints ear
   b = M.evaluateBelts(D, M.makeContext(M.readSnapshot(st), D, T));
   const by = Object.fromEntries(b.map((x) => [x.id, x]));
   for (const id of ['white', 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'brown']) assert.equal(by[id].state, 'earned', id + JSON.stringify(by[id].gates.filter((g) => !g.done)));
-  assert.equal(by.grey.state, 'ready'); assert.notEqual(by.black.state, 'earned');
-  assert.ok(by.grey.gates.some((g) => !g.measurable));
+  assert.equal(by.grey.state, 'current'); assert.equal(by.black.state, 'later');
+  for (const id of ['grey', 'black']) {
+    assert.ok(by[id].gates.every((g) => g.measurable), id + ': every gate is measurable now');
+    const tr = by[id].gates.find((g) => g.kind === 'timedRead');
+    assert.ok(tr && !tr.done && tr.need === 3 && tr.have === 0); assert.match(tr.note, /timed reads of one text/);
+  }
+});
+test('belts: three qualifying self-reported reads of one text earn grey; black needs the longer, faster read', () => {
+  const st = fake();
+  seedLessons(st, D.lessons.filter((l) => l.track === 'read').map((l) => l.id));
+  st.set('curriculum.checkpoints', { 1: { right: 9, total: 10 }, 2: { right: 9, total: 10 }, 3: { right: 9, total: 10 } });
+  const read = (o) => ({ textId: 'shema-1', lineId: 'shema-1', words: 10, ms: 8000, stumbled: 0, stumbledIdx: [], at: T, ...o }); // 75 wpm clean
+  st.set('timedread.v1', { v: 1, reads: [read(), read(), read()] });
+  let by = Object.fromEntries(M.evaluateBelts(D, M.makeContext(M.readSnapshot(st), D, T)).map((x) => [x.id, x]));
+  assert.equal(by.grey.state, 'earned'); assert.match(by.grey.gates.find((g) => g.kind === 'timedRead').note, /self-reported/);
+  assert.equal(by.black.state, 'current'); // 10 words < 12 minWords and 75 < 80 wpm
+  st.set('timedread.v1', { v: 1, reads: [read(), read(), read(), read({ words: 12, ms: 8000 }), read({ words: 12, ms: 8000 }), read({ words: 12, ms: 8000 })] }); // 90 wpm, last 5 reads: median of [75,75,90,90,90] clean wpm = 90 but minWords filter keeps only 12-word reads
+  by = Object.fromEntries(M.evaluateBelts(D, M.makeContext(M.readSnapshot(st), D, T)).map((x) => [x.id, x]));
+  assert.equal(by.black.state, 'earned');
 });
 test('belts: lesson range alone is not enough (checkpoint and decode gates count)', () => {
   const st = fake(); seedLessons(st, ids(19));

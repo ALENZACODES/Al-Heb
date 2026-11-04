@@ -1,0 +1,376 @@
+{
+ "id": "I-07",
+ "track": "read",
+ "level": "black",
+ "unit": "synagogue",
+ "title": "Hallel refrains: the lines the congregation sings back",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "כִּי לְעוֹלָם חַסְדּוֹ",
+   "en": "for his kindness is for ever (the Hallel refrain)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ki le'olam chasdo",
+    "sephardi": "ki le'olam chasdo",
+    "ashkenazi": "ki le'olom chasdo"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "כִּי",
+     "לְעוֹלָם",
+     "חַסְדּוֹ"
+    ]
+   }
+  },
+  {
+   "he": "הַלְלוּ־יָהּ",
+   "en": "halleluyah: praise the LORD",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "halelu-yah",
+    "sephardi": "halelu-yah",
+    "ashkenazi": "halelu-yoh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַלְלוּ",
+     "יָהּ"
+    ]
+   }
+  },
+  {
+   "he": "יֹאמַר נָא יִשְׂרָאֵל",
+   "en": "let Israel now say",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yomar na yisra'el",
+    "sephardi": "yomar na yisra'el",
+    "ashkenazi": "yomar no yisro'eil"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "יֹאמַר",
+     "נָא",
+     "יִשְׂרָאֵל"
+    ]
+   }
+  },
+  {
+   "he": "אָנָּא יְהוָה הוֹשִׁיעָה נָא",
+   "en": "please, LORD, save us",
+   "note": "the Masoretic text points the last word with a dagesh (na with dagesh); the token here is the plain dictionary form",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ana adonai hoshi'ah na",
+    "sephardi": "ana adonai hoshi'ah na",
+    "ashkenazi": "ono adonoy hoshi'oh no"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "אָנָּא",
+     "יְהוָה",
+     "הוֹשִׁיעָה",
+     "נָא"
+    ]
+   }
+  },
+  {
+   "he": "זֶה הַיּוֹם עָשָׂה יְהוָה",
+   "en": "this is the day the LORD made",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "zeh hayom asah adonai",
+    "sephardi": "zeh hayom asah adonai",
+    "ashkenazi": "zeh hayom osoh adonoy"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "זֶה",
+     "הַיּוֹם",
+     "עָשָׂה",
+     "יְהוָה"
+    ]
+   }
+  },
+  {
+   "he": "מִן הַמֵּצַר קָרָאתִי יָּהּ",
+   "en": "from the narrow place I called on the LORD",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "min hametzar karati yah",
+    "sephardi": "min hametzar karati yah",
+    "ashkenazi": "min hameitzar korosi yoh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "מִן",
+     "הַמֵּצַר",
+     "קָרָאתִי",
+     "יָּהּ"
+    ]
+   }
+  },
+  {
+   "he": "אֵלִי אַתָּה",
+   "en": "you are my God",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "eli atah",
+    "sephardi": "eli atah",
+    "ashkenazi": "eili atoh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "אֵלִי",
+     "אַתָּה"
+    ]
+   }
+  },
+  {
+   "he": "יְהוָה לִי לֹא אִירָא",
+   "en": "the LORD is with me; I will not fear",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "adonai li lo ira",
+    "sephardi": "adonai li lo ira",
+    "ashkenazi": "adonoy li lo iro"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "יְהוָה",
+     "לִי",
+     "לֹא",
+     "אִירָא"
+    ]
+   }
+  },
+  {
+   "he": "לֹא לָנוּ יְהוָה לֹא לָנוּ",
+   "en": "not to us, LORD, not to us",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lo lanu adonai lo lanu",
+    "sephardi": "lo lanu adonai lo lanu",
+    "ashkenazi": "lo lonu adonoy lo lonu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "לֹא",
+     "לָנוּ",
+     "יְהוָה",
+     "לֹא",
+     "לָנוּ"
+    ]
+   }
+  },
+  {
+   "he": "הַלְלוּ אֶת־יְהוָה כָּל־גּוֹיִם",
+   "en": "praise the LORD, all nations",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "halelu et-adonai kol-goyim",
+    "sephardi": "halelu et-adonai kol-goyim",
+    "ashkenazi": "halelu es-adonoy kol-goyim"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַלְלוּ",
+     "אֶת",
+     "יְהוָה",
+     "כָּל",
+     "גּוֹיִם"
+    ]
+   }
+  },
+  {
+   "he": "כּוֹס יְשׁוּעוֹת אֶשָּׂא",
+   "en": "I will lift the cup of salvation",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kos yeshu'ot esa",
+    "sephardi": "kos yeshu'ot esa",
+    "ashkenazi": "kos yeshu'os eso"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "כּוֹס",
+     "יְשׁוּעוֹת",
+     "אֶשָּׂא"
+    ]
+   }
+  }
+ ],
+ "prayerLines": [
+  "birkat-hamazon-1",
+  "yehalelu",
+  "havdalah-opening"
+ ],
+ "goals": [
+  "Sing back 'ki l'olam chasdo' and 'halleluyah' at the right moments",
+  "Recognise the Psalm 118 lines that are sung responsively",
+  "Know that the full Hallel text is not yet in the corpus"
+ ],
+ "estMinutes": 30,
+ "prerequisites": [
+  "I-01"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli",
+   "sephardi",
+   "ashkenazi"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Latin forms are machine output of the project's transliterator, not a native speaker's; israeli and sephardi are identical in that scheme."
+ },
+ "exercises": [
+  {
+   "id": "I-07-e01",
+   "type": "respond",
+   "cue": "Psalm 118 opens with 'Hodu l'Adonai ki tov'. The congregation sings back the refrain. Say the refrain's closing words.",
+   "answer": {
+    "he": "כִּי לְעוֹלָם חַסְדּוֹ",
+    "en": "for his kindness is for ever"
+   }
+  },
+  {
+   "id": "I-07-e02",
+   "type": "spot",
+   "line": "birkat-hamazon-1",
+   "target": "חַסְדּוֹ",
+   "en": "his kindness"
+  },
+  {
+   "id": "I-07-e03",
+   "type": "respond",
+   "cue": "The leader: 'Yomar na Yisrael'. Answer with the refrain.",
+   "answer": {
+    "he": "כִּי לְעוֹלָם חַסְדּוֹ",
+    "en": "for his kindness is for ever"
+   },
+   "prompt": {
+    "he": "יֹאמַר נָא יִשְׂרָאֵל",
+    "en": "Let Israel now say"
+   }
+  },
+  {
+   "id": "I-07-e04",
+   "type": "order",
+   "he": "יֹאמַר נָא יִשְׂרָאֵל",
+   "en": "Let Israel now say"
+  },
+  {
+   "id": "I-07-e05",
+   "type": "spot",
+   "line": "yehalelu",
+   "target": "הַלְלוּ",
+   "en": "praise! (plural command)",
+   "lineIndex": 2
+  },
+  {
+   "id": "I-07-e06",
+   "type": "recall",
+   "he": "הַלְלוּ־יָהּ",
+   "en": "halleluyah: praise the LORD"
+  },
+  {
+   "id": "I-07-e07",
+   "type": "produce",
+   "en": "please, LORD, save us",
+   "options": [
+    "אָנָּא יְהוָה הוֹשִׁיעָה נָא",
+    "זֶה הַיּוֹם עָשָׂה יְהוָה",
+    "יֹאמַר נָא יִשְׂרָאֵל"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-07-e08",
+   "type": "order",
+   "he": "אָנָּא יְהוָה הוֹשִׁיעָה נָא",
+   "en": "Please, LORD, save us"
+  },
+  {
+   "id": "I-07-e09",
+   "type": "order",
+   "he": "זֶה הַיּוֹם עָשָׂה יְהוָה",
+   "en": "This is the day the LORD made"
+  },
+  {
+   "id": "I-07-e10",
+   "type": "order",
+   "he": "מִן הַמֵּצַר קָרָאתִי יָּהּ",
+   "en": "From the narrow place I called on the LORD"
+  },
+  {
+   "id": "I-07-e11",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "אֵלִי אַתָּה",
+     "en": "you are my God"
+    },
+    {
+     "he": "יְהוָה לִי לֹא אִירָא",
+     "en": "the LORD is with me; I will not fear"
+    },
+    {
+     "he": "כּוֹס יְשׁוּעוֹת אֶשָּׂא",
+     "en": "I will lift the cup of salvation"
+    },
+    {
+     "he": "הַלְלוּ־יָהּ",
+     "en": "halleluyah"
+    }
+   ]
+  },
+  {
+   "id": "I-07-e12",
+   "type": "spot",
+   "line": "havdalah-opening",
+   "target": "יְשׁוּעוֹת",
+   "en": "salvations"
+  },
+  {
+   "id": "I-07-e13",
+   "type": "order",
+   "he": "לֹא לָנוּ יְהוָה לֹא לָנוּ",
+   "en": "Not to us, LORD, not to us"
+  },
+  {
+   "id": "I-07-e14",
+   "type": "order",
+   "he": "הַלְלוּ אֶת־יְהוָה כָּל־גּוֹיִם",
+   "en": "Praise the LORD, all nations"
+  },
+  {
+   "id": "I-07-e15",
+   "type": "produce",
+   "en": "for his kindness is for ever",
+   "options": [
+    "כִּי לְעוֹלָם חַסְדּוֹ",
+    "לְעוֹלָם וָעֶד",
+    "הַלְלוּ־יָהּ"
+   ],
+   "answer": 0
+  }
+ ],
+ "note": "Hallel itself is a corpus gap (g-hallel). This lesson teaches only refrain fragments whose words are all present in the corpus or the vocabulary file; 'hodu' is not in any source file, so the first word of the refrain cannot be shown. Register the full Hallel in the registry before extending this lesson."
+}

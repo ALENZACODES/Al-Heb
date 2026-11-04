@@ -1,0 +1,111 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-survival-taxi-1",
+ "title": "Survival: taxi",
+ "theme": "places-travel",
+ "level": "A1",
+ "track": "israel",
+ "pack": "survival-taxi-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "p8b9e1490",
+   "he": "לְאָן?",
+   "translit": "le'an?",
+   "en": "where to?",
+   "kind": "word",
+   "audioId": "taxi-02",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p532b86fb",
+   "he": "לַכּוֹתֶל",
+   "translit": "lakotel",
+   "en": "to the Western Wall",
+   "kind": "word",
+   "audioId": "taxi-06",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p9cf5c34c",
+   "he": "לַמָּלוֹן",
+   "translit": "lamalon",
+   "en": "to the hotel",
+   "kind": "word",
+   "audioId": "taxi-05",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p955decf7",
+   "he": "כַּמָּה זֶה יַעֲלֶה?",
+   "translit": "kamah zeh ya'aleh?",
+   "en": "how much will it cost?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p9a0a6cb8",
+   "he": "אֲנִי צָרִיךְ מוֹנִית",
+   "translit": "ani tzarikh monit",
+   "en": "I need a taxi",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p7f189e26",
+   "he": "לַתַּחֲנָה הַמֶּרְכָּזִית",
+   "translit": "latachanah hamerkazit",
+   "en": "to the central station",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "padcd8f41",
+   "he": "עֲצֹר כָּאן, בְּבַקָּשָׁה",
+   "translit": "atzor kan, bevakashah",
+   "en": "stop here, please",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p6e877c0f",
+   "he": "מָתַי הָרַכֶּבֶת הַבָּאָה?",
+   "translit": "matai harakevet haba'ah?",
+   "en": "when is the next train?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p090a7d5f",
+   "he": "אֵיפֹה תַּחֲנַת הָאוֹטוֹבּוּס?",
+   "translit": "eifoh tachanat ha'otobus?",
+   "en": "where is the bus stop?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p53daa1e7",
+   "he": "אֶפְשָׁר מוֹנֶה, בְּבַקָּשָׁה?",
+   "translit": "efshar moneh, bevakashah?",
+   "en": "can you use the meter, please?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pf1cbde2b",
+   "he": "לִשְׂדֵה הַתְּעוּפָה, בְּבַקָּשָׁה",
+   "translit": "lisdeh hate'ufah, bevakashah",
+   "en": "to the airport, please",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

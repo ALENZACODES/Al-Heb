@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-moving-doing-3",
+ "title": "Moving and doing 3",
+ "theme": "moving-doing",
+ "level": "A2",
+ "track": "both",
+ "pack": "moving-doing-3",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "hffd88aa2",
+   "he": "עָקַב",
+   "translit": "akav",
+   "en": "to follow, tail, track, trace",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h7ef1471c",
+   "he": "קָם",
+   "translit": "kam",
+   "en": "to rise, stand up",
+   "kind": "word",
+   "audioId": "yigdal-w52",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hdb9bd37f",
+   "he": "עָזַב",
+   "translit": "azav",
+   "en": "to leave, leave behind, depart",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf5f3eb91",
+   "he": "זָז",
+   "translit": "zaz",
+   "en": "to move",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h1eeebe32",
+   "he": "פָּשַׁט",
+   "translit": "pashat",
+   "en": "to remove, to take off (one's clothing)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h804d2347",
+   "he": "הוֹצִיא",
+   "translit": "otzi",
+   "en": "to take or bring out or forth",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb988b556",
+   "he": "נָקַם",
+   "translit": "nakam",
+   "en": "to take revenge, to avenge",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h1982ccc7",
+   "he": "רָץ",
+   "translit": "ratz",
+   "en": "to run",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h37cac81b",
+   "he": "צִלֵּם",
+   "translit": "tzilem",
+   "en": "to photograph, to take a photograph of",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h057ec4b3",
+   "he": "זָרַק",
+   "translit": "zarak",
+   "en": "to throw, to toss",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h40790488",
+   "he": "הֶחְזִיר",
+   "translit": "hechzir",
+   "en": "to return, restore",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h91e9b8f2",
+   "he": "טָס",
+   "translit": "tas",
+   "en": "to fly",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

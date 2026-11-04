@@ -1,0 +1,409 @@
+{
+ "id": "I-05",
+ "track": "read",
+ "level": "black",
+ "unit": "synagogue",
+ "title": "Kiddush: candles, wine, bread and the Shabbat verses",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "נֵר",
+   "en": "candle, lamp",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ner",
+    "sephardi": "ner",
+    "ashkenazi": "neir"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h64fb7d35"
+   }
+  },
+  {
+   "he": "יַיִן",
+   "en": "wine",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yayin",
+    "sephardi": "yayin",
+    "ashkenazi": "yayin"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h03763c94"
+   }
+  },
+  {
+   "he": "בּוֹרֵא",
+   "en": "who creates",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "bore",
+    "sephardi": "bore",
+    "ashkenazi": "borei"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h0fab4286#forms.present"
+   }
+  },
+  {
+   "he": "פְּרִי הַגָּפֶן",
+   "en": "the fruit of the vine",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "peri hagafen",
+    "sephardi": "peri hagafen",
+    "ashkenazi": "peri hagofen"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "פְּרִי",
+     "הַגָּפֶן"
+    ]
+   }
+  },
+  {
+   "he": "לֶחֶם",
+   "en": "bread",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lechem",
+    "sephardi": "lechem",
+    "ashkenazi": "lechem"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hf22f36ee"
+   }
+  },
+  {
+   "he": "הַמּוֹצִיא",
+   "en": "who brings forth",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hamotzi",
+    "sephardi": "hamotzi",
+    "ashkenazi": "hamotzi"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַמּוֹצִיא"
+    ]
+   }
+  },
+  {
+   "he": "מִן הָאָרֶץ",
+   "en": "from the earth",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "min ha'aretz",
+    "sephardi": "min ha'aretz",
+    "ashkenazi": "min ho'oretz"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "מִן",
+     "הָאָרֶץ"
+    ]
+   }
+  },
+  {
+   "he": "הַשְּׁבִיעִי",
+   "en": "the seventh",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hashevi'i",
+    "sephardi": "hashevi'i",
+    "ashkenazi": "hashevi'i"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַשְּׁבִיעִי"
+    ]
+   }
+  },
+  {
+   "he": "מְקַדֵּשׁ הַשַּׁבָּת",
+   "en": "who sanctifies the Shabbat",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mekadesh hashabat",
+    "sephardi": "mekadesh hashabat",
+    "ashkenazi": "mekadeish hashabos"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "מְקַדֵּשׁ",
+     "הַשַּׁבָּת"
+    ]
+   }
+  },
+  {
+   "he": "זָכוֹר",
+   "en": "remember!",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "zakhor",
+    "sephardi": "zakhor",
+    "ashkenazi": "zokhor"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "זָכוֹר"
+    ]
+   }
+  },
+  {
+   "he": "וְשָׁמְרוּ",
+   "en": "and they shall keep",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "veshamru",
+    "sephardi": "veshamru",
+    "ashkenazi": "veshomru"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "וְשָׁמְרוּ"
+    ]
+   }
+  },
+  {
+   "he": "לְחַיִּים",
+   "en": "cheers! (to life)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lechayim",
+    "sephardi": "lechayim",
+    "ashkenazi": "lechayim"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "pf3ba64a2"
+   }
+  },
+  {
+   "he": "שַׁבָּת שָׁלוֹם",
+   "en": "Shabbat shalom",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shabat shalom",
+    "sephardi": "shabat shalom",
+    "ashkenazi": "shabos sholom"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p425f3263"
+   }
+  }
+ ],
+ "prayerLines": [
+  "candle-shabbat",
+  "kiddush-gen-2-1-3",
+  "kiddush-wine-1",
+  "kiddush-shabbat-eve",
+  "hamotzi",
+  "kiddush-veshamru",
+  "kiddush-zachor"
+ ],
+ "goals": [
+  "Say the wine and bread blessings and answer Amen to the long Kiddush blessing",
+  "Follow the Genesis verses that open Friday-night Kiddush",
+  "Recognise V'shamru and Zachor in the Shabbat-day Kiddush"
+ ],
+ "estMinutes": 35,
+ "prerequisites": [
+  "I-01"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli",
+   "sephardi",
+   "ashkenazi"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Latin forms are machine output of the project's transliterator, not a native speaker's; israeli and sephardi are identical in that scheme."
+ },
+ "exercises": [
+  {
+   "id": "I-05-e01",
+   "type": "fade",
+   "line": "candle-shabbat",
+   "en": "Blessed are you... who made us holy with his commandments and commanded us to kindle the Shabbat light."
+  },
+  {
+   "id": "I-05-e02",
+   "type": "spot",
+   "line": "candle-shabbat",
+   "target": "נֵר",
+   "en": "candle, lamp"
+  },
+  {
+   "id": "I-05-e03",
+   "type": "order",
+   "he": "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם",
+   "en": "And the heaven and the earth were finished, and all their host."
+  },
+  {
+   "id": "I-05-e04",
+   "type": "spot",
+   "line": "kiddush-gen-2-1-3",
+   "target": "הַשְּׁבִיעִי",
+   "en": "the seventh",
+   "lineIndex": 2
+  },
+  {
+   "id": "I-05-e05",
+   "type": "fade",
+   "line": "kiddush-wine-1",
+   "en": "Blessed are you, LORD our God, king of the world, who creates the fruit of the vine."
+  },
+  {
+   "id": "I-05-e06",
+   "type": "order",
+   "he": "בּוֹרֵא פְּרִי הַגָּפֶן",
+   "en": "who creates the fruit of the vine"
+  },
+  {
+   "id": "I-05-e07",
+   "type": "respond",
+   "cue": "The wine blessing ends 'borei pri hagafen'. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "בּוֹרֵא פְּרִי הַגָּפֶן",
+    "en": "who creates the fruit of the vine"
+   }
+  },
+  {
+   "id": "I-05-e08",
+   "type": "spot",
+   "line": "kiddush-shabbat-eve",
+   "target": "מְקַדֵּשׁ",
+   "en": "who sanctifies"
+  },
+  {
+   "id": "I-05-e09",
+   "type": "respond",
+   "cue": "The long Kiddush blessing ends 'mekadesh haShabbat'. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "בָּרוּךְ אַתָּה יְהוָה מְקַדֵּשׁ הַשַּׁבָּת",
+    "en": "Blessed are you, LORD, who sanctifies the Shabbat."
+   }
+  },
+  {
+   "id": "I-05-e10",
+   "type": "fade",
+   "line": "hamotzi",
+   "en": "Blessed are you, LORD our God, king of the world, who brings forth bread from the earth."
+  },
+  {
+   "id": "I-05-e11",
+   "type": "order",
+   "he": "הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ",
+   "en": "who brings forth bread from the earth"
+  },
+  {
+   "id": "I-05-e12",
+   "type": "produce",
+   "en": "who creates the fruit of the vine",
+   "options": [
+    "בּוֹרֵא פְּרִי הַגָּפֶן",
+    "הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ",
+    "מְקַדֵּשׁ הַשַּׁבָּת"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-05-e13",
+   "type": "produce",
+   "en": "who brings forth bread from the earth",
+   "options": [
+    "הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ",
+    "בּוֹרֵא פְּרִי הַגָּפֶן",
+    "בּוֹרֵא מִינֵי בְשָׂמִים"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-05-e14",
+   "type": "spot",
+   "line": "kiddush-veshamru",
+   "target": "הַשַּׁבָּת",
+   "en": "the Shabbat",
+   "lineIndex": 1
+  },
+  {
+   "id": "I-05-e15",
+   "type": "order",
+   "he": "זָכוֹר אֶת־יוֹם הַשַׁבָּת לְקַדְּשׁוֹ",
+   "en": "Remember the Shabbat day, to keep it holy."
+  },
+  {
+   "id": "I-05-e16",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "יַיִן",
+     "en": "wine"
+    },
+    {
+     "he": "לֶחֶם",
+     "en": "bread"
+    },
+    {
+     "he": "נֵר",
+     "en": "candle"
+    },
+    {
+     "he": "הַשְּׁבִיעִי",
+     "en": "the seventh"
+    }
+   ]
+  },
+  {
+   "id": "I-05-e17",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "שַׁבָּת שָׁלוֹם!",
+     "en": "Shabbat shalom!"
+    },
+    {
+     "speaker": "b",
+     "he": "שַׁבָּת שָׁלוֹם! לְחַיִּים!",
+     "en": "Shabbat shalom! Cheers!"
+    }
+   ],
+   "task": "Answer the host's greeting at the table."
+  },
+  {
+   "id": "I-05-e18",
+   "type": "recall",
+   "he": "וְשָׁמְרוּ",
+   "en": "and they shall keep"
+  }
+ ],
+ "note": "Shalom Aleichem and Eshet Chayil are corpus gaps (g-shalom-aleichem, g-eshet-chayil)."
+}

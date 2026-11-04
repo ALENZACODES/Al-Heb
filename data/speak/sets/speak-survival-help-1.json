@@ -1,0 +1,66 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-survival-help-1",
+ "title": "Survival: help",
+ "theme": "body-health",
+ "level": "A1",
+ "track": "israel",
+ "pack": "survival-help-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "pdfabdbb8",
+   "he": "עֶזְרָה!",
+   "translit": "ezrah!",
+   "en": "help!",
+   "kind": "word",
+   "audioId": "help-01",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p682db5f1",
+   "he": "אֲנִי צָרִיךְ רוֹפֵא",
+   "translit": "ani tzarikh rofe",
+   "en": "I need a doctor",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pe8cd9ad5",
+   "he": "אָבַד לִי הַטֶּלֶפוֹן",
+   "translit": "avad li hatelefon",
+   "en": "I lost my phone",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p92e15927",
+   "he": "אָבַד לִי הַדַּרְכּוֹן",
+   "translit": "avad li hadarkon",
+   "en": "I lost my passport",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pbd962eea",
+   "he": "תִּקְרָא לַמִּשְׁטָרָה",
+   "translit": "tikra lamishtarah",
+   "en": "call the police",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p09e34218",
+   "he": "תִּקְרָא לְאַמְבּוּלַנְס",
+   "translit": "tikra le'ambulans",
+   "en": "call an ambulance",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

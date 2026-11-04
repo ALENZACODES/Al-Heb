@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-survival-greetings-1",
+ "title": "Survival: greetings",
+ "theme": "talking-asking",
+ "level": "A1",
+ "track": "israel",
+ "pack": "survival-greetings-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "p17256402",
+   "he": "הֵי",
+   "translit": "hei",
+   "en": "hi",
+   "kind": "word",
+   "audioId": "greetings-02",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p90c0affa",
+   "he": "לֹא רַע",
+   "translit": "lo ra",
+   "en": "not bad",
+   "kind": "phrase",
+   "audioId": "il13-w5",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p98cc8b60",
+   "he": "עֶרֶב טוֹב",
+   "translit": "erev tov",
+   "en": "good evening",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p1ac844f7",
+   "he": "לִבְרִיאוּת",
+   "translit": "livri'ut",
+   "en": "bless you (after a sneeze) / to your health",
+   "kind": "word",
+   "audioId": "greetings-26",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p6e9bcf25",
+   "he": "חַג שָׂמֵחַ",
+   "translit": "chag samecha",
+   "en": "happy holiday",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pd9dae8d2",
+   "he": "יוֹם נָעִים",
+   "translit": "yom na'im",
+   "en": "have a nice day",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pb9c1c2cd",
+   "he": "מַזָּל טוֹב",
+   "translit": "mazal tov",
+   "en": "congratulations / good luck",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pcb5e8938",
+   "he": "מָה קוֹרֶה?",
+   "translit": "mah koreh?",
+   "en": "what's happening?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pe37b4245",
+   "he": "בֹּקֶר טוֹב",
+   "translit": "boker tov",
+   "en": "good morning",
+   "kind": "phrase",
+   "audioId": "il01-w7",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p9028d38d",
+   "he": "נָעִים מְאֹד",
+   "translit": "na'im me'od",
+   "en": "nice to meet you",
+   "kind": "phrase",
+   "audioId": "il03-w5",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p53e1dd1f",
+   "he": "לַיְלָה טוֹב",
+   "translit": "laylah tov",
+   "en": "good night",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "paf560e32",
+   "he": "בְּהַצְלָחָה",
+   "translit": "behatzlachah",
+   "en": "good luck / all the best",
+   "kind": "word",
+   "audioId": "greetings-25",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

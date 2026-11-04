@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-school-learning-1",
+ "title": "School and learning",
+ "theme": "school-learning",
+ "level": "B1",
+ "track": "israel",
+ "pack": "school-learning-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "ha1f4dcc0",
+   "he": "חָכַם",
+   "translit": "chakham",
+   "en": "to be wise, become wise, learn",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h10798813",
+   "he": "לָמַד",
+   "translit": "lamad",
+   "en": "to learn, to study",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h80a03385",
+   "he": "חָקַר",
+   "translit": "chakar",
+   "en": "to investigate, to research, to study",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h75012f54",
+   "he": "שְׁאֵלָה",
+   "translit": "she'elah",
+   "en": "question",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h721657a4",
+   "he": "אֹמֶר",
+   "translit": "omer",
+   "en": "utterance, word, speech",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf3d6a0bb",
+   "he": "תְּשׁוּבָה",
+   "translit": "teshuvah",
+   "en": "answer, response",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h33f66dda",
+   "he": "בְּדִיקָה",
+   "translit": "bedikah",
+   "en": "an examination, check-up, test, trial",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h1610dda2",
+   "he": "הוֹרָה",
+   "translit": "orah",
+   "en": "to instruct, teach",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h4eb01fb1",
+   "he": "בָּחַן",
+   "translit": "bachan",
+   "en": "to test",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hfd00ec7c",
+   "he": "דֵּרֵג",
+   "translit": "dereg",
+   "en": "to grade, to rate (something)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hbe379d1f",
+   "he": "הִיסְטוֹרְיָה",
+   "translit": "hisetoreyah",
+   "en": "history",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h01ca134b",
+   "he": "הִתְכּוֹנֵן",
+   "translit": "hitkonen",
+   "en": "to prepare oneself (e.g. for an exam)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

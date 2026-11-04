@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-survival-directions-1",
+ "title": "Survival: directions",
+ "theme": "places-travel",
+ "level": "A1",
+ "track": "israel",
+ "pack": "survival-directions-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "pc72a6f5c",
+   "he": "עַל יַד",
+   "translit": "al yad",
+   "en": "next to",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p87accb3a",
+   "he": "יָמִינָה",
+   "translit": "yaminah",
+   "en": "right",
+   "kind": "word",
+   "audioId": "il11-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p0381993d",
+   "he": "שְׂמֹאלָה",
+   "translit": "semolah",
+   "en": "left",
+   "kind": "word",
+   "audioId": "il11-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p12e5b5a3",
+   "he": "בַּפִּנָּה",
+   "translit": "bapinah",
+   "en": "on the corner",
+   "kind": "word",
+   "audioId": "directions-13",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p575f23eb",
+   "he": "זֶה קָרוֹב",
+   "translit": "zeh karov",
+   "en": "it's near",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p84a865c5",
+   "he": "לֵךְ יָשָׁר",
+   "translit": "lekh yashar",
+   "en": "go straight",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p6d7febf8",
+   "he": "אֵיפֹה ...?",
+   "translit": "eifoh ...?",
+   "en": "where is ...?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p18cee479",
+   "he": "זֶה רָחוֹק?",
+   "translit": "zeh rachok?",
+   "en": "is it far?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p5acc4988",
+   "he": "אֲנִי אָבוּד",
+   "translit": "ani avud",
+   "en": "I'm lost",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p3842ce5f",
+   "he": "פְּנֵה יָמִינָה",
+   "translit": "peneh yaminah",
+   "en": "turn right",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p7a0ee1fc",
+   "he": "פְּנֵה שְׂמֹאלָה",
+   "translit": "peneh semolah",
+   "en": "turn left",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pa07a7a55",
+   "he": "אֵיפֹה הַמָּלוֹן?",
+   "translit": "eifoh hamalon?",
+   "en": "where is the hotel?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

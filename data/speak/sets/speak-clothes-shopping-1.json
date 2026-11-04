@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-clothes-shopping-1",
+ "title": "Clothes, colours and shopping",
+ "theme": "clothes-shopping",
+ "level": "B1",
+ "track": "both",
+ "pack": "clothes-shopping-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "hcbafeb66",
+   "he": "שִׁלֵּם",
+   "translit": "shilem",
+   "en": "to pay",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h4a2ee830",
+   "he": "שִׁנָּה",
+   "translit": "shinah",
+   "en": "to change, to alter",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he1a5e616",
+   "he": "בֶּגֶד",
+   "translit": "beged",
+   "en": "clothing, garment",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "heb070da2",
+   "he": "קָנָה",
+   "translit": "kanah",
+   "en": "to buy, to purchase",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h54d02a94",
+   "he": "מָכַר",
+   "translit": "makhar",
+   "en": "to sell",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h3398235f",
+   "he": "אָדֹם",
+   "translit": "adom",
+   "en": "red",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8f0ac707",
+   "he": "הֶחְלִיף",
+   "translit": "hechlif",
+   "en": "to swap, exchange, change",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hbb8f0628",
+   "he": "לָבַשׁ",
+   "translit": "lavash",
+   "en": "to wear (an article of clothing)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0a5c0fc2",
+   "he": "תָּלָה",
+   "translit": "talah",
+   "en": "to hang (clothing, curtains, a shelf, etc.), as on a hook or hanger",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "heca8ed1e",
+   "he": "טַבַּעַת",
+   "translit": "taba'at",
+   "en": "ring",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h82f267e3",
+   "he": "עֲנָק",
+   "translit": "anak",
+   "en": "giant",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h88af0fba",
+   "he": "אַרְגָּמָן",
+   "translit": "argaman",
+   "en": "Tyrian purple, or a garment dyed with it",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

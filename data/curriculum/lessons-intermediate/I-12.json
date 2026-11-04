@@ -1,0 +1,421 @@
+{
+ "id": "I-12",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Shuk bargaining: prices, discounts and 'I'll take it'",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "שׁוּק",
+   "en": "market",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shuk"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hc645dbd9"
+   }
+  },
+  {
+   "he": "כַּמָּה זֶה עוֹלֶה?",
+   "en": "how much does it cost?",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kamah zeh oleh?"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p7db1a1b9"
+   }
+  },
+  {
+   "he": "מָה הַמְּחִיר?",
+   "en": "what is the price?",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mah hamechir?"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "peb5b5757"
+   }
+  },
+  {
+   "he": "זֶה יָקָר",
+   "en": "it's expensive",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "zeh yakar"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p1f9370f2"
+   }
+  },
+  {
+   "he": "זֶה זוֹל",
+   "en": "it's cheap",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "zeh zol"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "pbd251204"
+   }
+  },
+  {
+   "he": "יֵשׁ הַנָּחָה?",
+   "en": "is there a discount?",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yesh hanachah?"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "pc05559a1"
+   }
+  },
+  {
+   "he": "חֲצִי",
+   "en": "half",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chatzi"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h47a142a6"
+   }
+  },
+  {
+   "he": "טָרִי",
+   "en": "fresh",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "tari"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h8349e150"
+   }
+  },
+  {
+   "he": "עַגְבָנִיָּה",
+   "en": "tomato",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "agvaniyah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h89e110bd"
+   }
+  },
+  {
+   "he": "מְלָפְפוֹן",
+   "en": "cucumber",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "melafefon"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hd91e4a26"
+   }
+  },
+  {
+   "he": "גְּבִינָה",
+   "en": "cheese",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "gevinah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h4ef6ec03"
+   }
+  },
+  {
+   "he": "זֵיתִים",
+   "en": "olives",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "zeitim"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h08e0fe5b#forms.plural"
+   }
+  },
+  {
+   "he": "אֶקַּח אֶת זֶה",
+   "en": "I'll take this",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ekach et zeh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p8ddf11d8"
+   }
+  },
+  {
+   "he": "מְזֻמָּן",
+   "en": "cash",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mezuman"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hcfabdf1c"
+   }
+  },
+  {
+   "he": "שַׂקִּית",
+   "en": "bag",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "sakit"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h55b6e9d7"
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Ask a price and react to it (expensive, cheap)",
+  "Ask for a discount politely and close the deal",
+  "Pay in cash and ask for a bag"
+ ],
+ "estMinutes": 30,
+ "prerequisites": [
+  "I-11"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-12-e01",
+   "type": "recall",
+   "he": "שׁוּק",
+   "en": "market"
+  },
+  {
+   "id": "I-12-e02",
+   "type": "produce",
+   "en": "how much does it cost?",
+   "options": [
+    "כַּמָּה זֶה עוֹלֶה?",
+    "מָה הַשָּׁעָה?",
+    "כַּמָּה זְמַן זֶה לוֹקֵחַ?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-12-e03",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "עַגְבָנִיָּה",
+     "en": "tomato"
+    },
+    {
+     "he": "מְלָפְפוֹן",
+     "en": "cucumber"
+    },
+    {
+     "he": "גְּבִינָה",
+     "en": "cheese"
+    },
+    {
+     "he": "זֵיתִים",
+     "en": "olives"
+    },
+    {
+     "he": "לֶחֶם",
+     "en": "bread"
+    }
+   ]
+  },
+  {
+   "id": "I-12-e04",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "כַּמָּה זֶה עוֹלֶה?",
+     "en": "How much is it?"
+    },
+    {
+     "speaker": "b",
+     "he": "עֶשְׂרִים שְׁקָלִים.",
+     "en": "Twenty shekels."
+    },
+    {
+     "speaker": "a",
+     "he": "זֶה יָקָר. יֵשׁ הַנָּחָה?",
+     "en": "That's expensive. Is there a discount?"
+    },
+    {
+     "speaker": "b",
+     "he": "בְּסֵדֶר, חֲמִשָּׁה עָשָׂר.",
+     "en": "OK, fifteen."
+    },
+    {
+     "speaker": "a",
+     "he": "יוֹפִי, אֶקַּח אֶת זֶה.",
+     "en": "Great, I'll take it."
+    }
+   ],
+   "task": "Play the buyer: say your three lines with the English hidden."
+  },
+  {
+   "id": "I-12-e05",
+   "type": "produce",
+   "en": "it's expensive",
+   "options": [
+    "זֶה יָקָר",
+    "זֶה זוֹל",
+    "זֶה טָרִי"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-12-e06",
+   "type": "produce",
+   "en": "is there a discount?",
+   "options": [
+    "יֵשׁ הַנָּחָה?",
+    "יֵשׁ שַׂקִּית?",
+    "יֵשׁ מַיִם?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-12-e07",
+   "type": "order",
+   "he": "יֵשׁ יוֹתֵר זוֹל?",
+   "en": "Is there (anything) cheaper?"
+  },
+  {
+   "id": "I-12-e08",
+   "type": "respond",
+   "cue": "The seller names a price you think is too high.",
+   "answer": {
+    "he": "זֶה יָקָר מְאֹד",
+    "en": "That's very expensive"
+   }
+  },
+  {
+   "id": "I-12-e09",
+   "type": "recall",
+   "he": "טָרִי",
+   "en": "fresh"
+  },
+  {
+   "id": "I-12-e10",
+   "type": "respond",
+   "cue": "Ask if the cheese is fresh.",
+   "answer": {
+    "he": "זֶה טָרִי?",
+    "en": "Is it fresh?"
+   }
+  },
+  {
+   "id": "I-12-e11",
+   "type": "produce",
+   "en": "half",
+   "options": [
+    "חֲצִי",
+    "רֶבַע",
+    "אֶחָד"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-12-e12",
+   "type": "respond",
+   "cue": "You decide to buy.",
+   "answer": {
+    "he": "אֶקַּח אֶת זֶה",
+    "en": "I'll take this"
+   }
+  },
+  {
+   "id": "I-12-e13",
+   "type": "produce",
+   "en": "I'm just looking",
+   "options": [
+    "אֲנִי רַק מִסְתַּכֵּל",
+    "אֶקַּח אֶת זֶה",
+    "אֲנִי רוֹצֶה קָפֶה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-12-e14",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "b",
+     "he": "מְזֻמָּן אוֹ כַּרְטִיס?",
+     "en": "Cash or card?"
+    },
+    {
+     "speaker": "a",
+     "he": "מְזֻמָּן. אֶפְשָׁר שַׂקִּית?",
+     "en": "Cash. Can I have a bag?"
+    },
+    {
+     "speaker": "b",
+     "he": "בְּטַח.",
+     "en": "Sure."
+    }
+   ],
+   "task": "Say the buyer's line."
+  },
+  {
+   "id": "I-12-e15",
+   "type": "register",
+   "he": "יוֹפִי",
+   "en": "great / nice",
+   "answer": "slang",
+   "options": [
+    "formal",
+    "neutral",
+    "casual",
+    "slang"
+   ]
+  },
+  {
+   "id": "I-12-e16",
+   "type": "register",
+   "he": "אֶפְשָׁר שַׂקִּית?",
+   "en": "can I have a bag?",
+   "answer": "neutral",
+   "options": [
+    "formal",
+    "neutral",
+    "casual",
+    "slang"
+   ]
+  }
+ ],
+ "note": "The vocabulary file has no pointed form for 'kilo', so weights are asked with 'half' and numbers only."
+}

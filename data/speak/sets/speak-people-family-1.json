@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-people-family-1",
+ "title": "People and family 1",
+ "theme": "people-family",
+ "level": "A2",
+ "track": "both",
+ "pack": "people-family-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h4aa6ad2a",
+   "he": "בֵּן",
+   "translit": "ben",
+   "en": "son",
+   "kind": "word",
+   "audioId": "r12-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h93bb64ad",
+   "he": "חָשַׁב",
+   "translit": "chashav",
+   "en": "to think",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h93f568f7",
+   "he": "שֶׂה",
+   "translit": "seh",
+   "en": "lamb, kid (young of Caprinae)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hef6e1613",
+   "he": "אִישׁ",
+   "translit": "ish",
+   "en": "a man, adult male human being",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he943571e",
+   "he": "אִשָּׁה",
+   "translit": "ishah",
+   "en": "woman (an adult female human)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h821319f2",
+   "he": "אָב",
+   "translit": "av",
+   "en": "father",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h020c4fa8",
+   "he": "עַם",
+   "translit": "am",
+   "en": "a nation, a people",
+   "kind": "word",
+   "audioId": "r19-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha7545fff",
+   "he": "אָח",
+   "translit": "ach",
+   "en": "brother",
+   "kind": "word",
+   "audioId": "il14-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0a70642a",
+   "he": "אַבָּא",
+   "translit": "aba",
+   "en": "father",
+   "kind": "word",
+   "audioId": "r07-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc6cdec2b",
+   "he": "דּוֹד",
+   "translit": "dod",
+   "en": "uncle",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hfe4ebf2c",
+   "he": "אָדָם",
+   "translit": "adam",
+   "en": "a man, a human",
+   "kind": "word",
+   "audioId": "havdalah-opening-w37",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hcb31fc0d",
+   "he": "בַּת",
+   "translit": "bat",
+   "en": "daughter",
+   "kind": "word",
+   "audioId": "r02-w2",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

@@ -1,0 +1,354 @@
+{
+ "id": "I-22",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Post office: parcels, letters, stamps and waiting your turn",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "דֹּאַר",
+   "en": "post, mail",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "do'ar"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h29ef7369"
+   }
+  },
+  {
+   "he": "חֲבִילָה",
+   "en": "parcel",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chavilah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h3564ecca"
+   }
+  },
+  {
+   "he": "מִכְתָּב",
+   "en": "letter",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mikhtav"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h127e8661"
+   }
+  },
+  {
+   "he": "בּוּל",
+   "en": "stamp",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "bul"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he6958c91"
+   }
+  },
+  {
+   "he": "בּוּלִים",
+   "en": "stamps",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "bulim"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he6958c91#forms.plural"
+   }
+  },
+  {
+   "he": "לִשְׁלֹחַ",
+   "en": "to send",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lishlocha"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h059e9e22#forms.infinitive"
+   }
+  },
+  {
+   "he": "לֶאֱסֹף",
+   "en": "to collect",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "le'esof"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h5eb1d4fa#forms.infinitive"
+   }
+  },
+  {
+   "he": "תּוֹר",
+   "en": "queue, turn",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "tor"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h87abbddd"
+   }
+  },
+  {
+   "he": "מִסְפָּר",
+   "en": "number",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mispar"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hfa49d2fe"
+   }
+  },
+  {
+   "he": "כְּתֹבֶת",
+   "en": "address",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ketovet"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h47a17dab"
+   }
+  },
+  {
+   "he": "מַעֲטָפָה",
+   "en": "envelope",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ma'atafah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h8afd6de0"
+   }
+  },
+  {
+   "he": "רָגִיל",
+   "en": "regular",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ragil"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h1a8a7259"
+   }
+  },
+  {
+   "he": "דֹּאַר אֲוִיר",
+   "en": "air mail",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "do'ar avir"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "דֹּאַר",
+     "אֲוִיר"
+    ]
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Say you want to send a parcel or letter abroad",
+  "Ask how long it takes and how much it costs",
+  "Take a number and collect a parcel"
+ ],
+ "estMinutes": 25,
+ "prerequisites": [
+  "I-11"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-22-e01",
+   "type": "produce",
+   "en": "where is the post office?",
+   "options": [
+    "אֵיפֹה יֵשׁ דֹּאַר?",
+    "אֵיפֹה יֵשׁ בַּנְק?",
+    "אֵיפֹה הַתַּחֲנָה?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-22-e02",
+   "type": "gender",
+   "m": "אֲנִי רוֹצֶה לִשְׁלֹחַ חֲבִילָה",
+   "f": "אֲנִי רוֹצָה לִשְׁלֹחַ חֲבִילָה",
+   "en": "I want to send a parcel"
+  },
+  {
+   "id": "I-22-e03",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "חֲבִילָה",
+     "en": "parcel"
+    },
+    {
+     "he": "מִכְתָּב",
+     "en": "letter"
+    },
+    {
+     "he": "בּוּל",
+     "en": "stamp"
+    },
+    {
+     "he": "מַעֲטָפָה",
+     "en": "envelope"
+    },
+    {
+     "he": "כְּתֹבֶת",
+     "en": "address"
+    }
+   ]
+  },
+  {
+   "id": "I-22-e04",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "שָׁלוֹם, אֲנִי רוֹצֶה לִשְׁלֹחַ מִכְתָּב.",
+     "en": "Hello, I want to send a letter."
+    },
+    {
+     "speaker": "b",
+     "he": "דֹּאַר רָגִיל אוֹ דֹּאַר אֲוִיר?",
+     "en": "Regular mail or air mail?"
+    },
+    {
+     "speaker": "a",
+     "he": "דֹּאַר אֲוִיר. כַּמָּה זְמַן זֶה לוֹקֵחַ?",
+     "en": "Air mail. How long does it take?"
+    },
+    {
+     "speaker": "b",
+     "he": "שָׁבוּעַ.",
+     "en": "A week."
+    }
+   ],
+   "task": "Say the customer's lines."
+  },
+  {
+   "id": "I-22-e05",
+   "type": "produce",
+   "en": "regular mail",
+   "options": [
+    "דֹּאַר רָגִיל",
+    "דֹּאַר אֲוִיר",
+    "מִכְתָּב"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-22-e06",
+   "type": "respond",
+   "cue": "Ask how much it costs.",
+   "answer": {
+    "he": "כַּמָּה זֶה עוֹלֶה?",
+    "en": "How much does it cost?"
+   }
+  },
+  {
+   "id": "I-22-e07",
+   "type": "produce",
+   "en": "stamps",
+   "options": [
+    "בּוּלִים",
+    "מִכְתָּבִים",
+    "חֲבִילוֹת"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-22-e08",
+   "type": "order",
+   "he": "אֲנִי צָרִיךְ בּוּלִים, בְּבַקָּשָׁה",
+   "en": "I need stamps, please"
+  },
+  {
+   "id": "I-22-e09",
+   "type": "respond",
+   "cue": "You came to collect a parcel. Say so.",
+   "answer": {
+    "he": "יֵשׁ לִי חֲבִילָה",
+    "en": "I have a parcel (to collect)"
+   }
+  },
+  {
+   "id": "I-22-e10",
+   "type": "produce",
+   "en": "what is the address?",
+   "options": [
+    "מָה כְּתֹבֶת?",
+    "מָה הַמְּחִיר?",
+    "מָה הַשָּׁעָה?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-22-e11",
+   "type": "recall",
+   "he": "תּוֹר",
+   "en": "queue, turn"
+  },
+  {
+   "id": "I-22-e12",
+   "type": "respond",
+   "cue": "The queue is long. Ask whether you need a number.",
+   "answer": {
+    "he": "צָרִיךְ מִסְפָּר?",
+    "en": "Do I need a number?"
+   }
+  },
+  {
+   "id": "I-22-e13",
+   "type": "recall",
+   "he": "לֶאֱסֹף",
+   "en": "to collect"
+  },
+  {
+   "id": "I-22-e14",
+   "type": "produce",
+   "en": "a week",
+   "options": [
+    "שָׁבוּעַ",
+    "חֹדֶשׁ",
+    "שָׁנָה"
+   ],
+   "answer": 0
+  }
+ ],
+ "note": "'registered mail', 'post code', 'abroad' and country names with the 'to' prefix have no pointed token in the sources and are left out."
+}

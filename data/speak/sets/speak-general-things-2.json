@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-general-things-2",
+ "title": "More everyday nouns 2",
+ "theme": "general-things",
+ "level": "B1",
+ "track": "both",
+ "pack": "general-things-2",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h7384a7ea",
+   "he": "אַלּוֹן",
+   "translit": "alon",
+   "en": "oak",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h24a8e217",
+   "he": "תַּבְנִית",
+   "translit": "tavnit",
+   "en": "form, pattern, template",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h362d4313",
+   "he": "תְּהוֹם",
+   "translit": "teom",
+   "en": "abyss, void, deep, depth",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h303e5d4a",
+   "he": "רִיב",
+   "translit": "riv",
+   "en": "fight (occasion of fighting), quarrel, conflict",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h7fdafb92",
+   "he": "יַשְׁבָן",
+   "translit": "yashvan",
+   "en": "buttocks",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc17d26a5",
+   "he": "יוֹרֶה",
+   "translit": "yoreh",
+   "en": "a (male) shooter",
+   "kind": "word",
+   "audioId": "yigdal-w41",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hd79b0e79",
+   "he": "כִּלְיָה",
+   "translit": "kilyah",
+   "en": "kidney",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hba3a74f8",
+   "he": "נָתִיב",
+   "translit": "nativ",
+   "en": "lane, path, route",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8ccd0ca9",
+   "he": "שְׁבִיל",
+   "translit": "shevil",
+   "en": "a trail, a path",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he17731aa",
+   "he": "מֵיְל",
+   "translit": "meyl",
+   "en": "Mail, e-mail",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha62f5b0b",
+   "he": "נֶשֶׁר",
+   "translit": "nesher",
+   "en": "griffon vulture",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hef54fd5e",
+   "he": "רִנָּה",
+   "translit": "rinah",
+   "en": "singing",
+   "kind": "word",
+   "audioId": "shir-hamaalot-w14",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

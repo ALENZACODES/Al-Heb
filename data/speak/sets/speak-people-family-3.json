@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-people-family-3",
+ "title": "People and family 3",
+ "theme": "people-family",
+ "level": "B2",
+ "track": "israel",
+ "pack": "people-family-3",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h5fa9ade9",
+   "he": "זָקֵן",
+   "translit": "zaken",
+   "en": "old person",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hd53e0a60",
+   "he": "קָרוֹב",
+   "translit": "karov",
+   "en": "a relative, a family member",
+   "kind": "word",
+   "audioId": "il11-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hd522984d",
+   "he": "תִּינוֹק",
+   "translit": "tinok",
+   "en": "infant, baby (male)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h17825deb",
+   "he": "אִידִיוֹט",
+   "translit": "idivot",
+   "en": "a (male) idiot",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h565b3652",
+   "he": "דּוֹקְטוֹר",
+   "translit": "doketor",
+   "en": "doctor",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0cc80aed",
+   "he": "טַף",
+   "translit": "taf",
+   "en": "babies, infants, small children",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hefbbc2c7",
+   "he": "זוֹנָה",
+   "translit": "zonah",
+   "en": "female prostitute (who has sex for pay)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0e0f6333",
+   "he": "צָבַע",
+   "translit": "tzava",
+   "en": "painted",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0764a400",
+   "he": "עָסוּק",
+   "translit": "asuk",
+   "en": "busy",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h2334782c",
+   "he": "זוּג",
+   "translit": "zug",
+   "en": "pair, couple, twosome",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h882ed65b",
+   "he": "טַיָּס",
+   "translit": "tayas",
+   "en": "pilot",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h3e763177",
+   "he": "תִּינֹקֶת",
+   "translit": "tinoket",
+   "en": "baby, infant (female)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

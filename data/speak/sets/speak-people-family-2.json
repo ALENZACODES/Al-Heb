@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-people-family-2",
+ "title": "People and family 2",
+ "theme": "people-family",
+ "level": "B1",
+ "track": "both",
+ "pack": "people-family-2",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "he0a1c6a5",
+   "he": "אֻמָּה",
+   "translit": "umah",
+   "en": "nation, people",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8123d4c2",
+   "he": "חוֹלֶה",
+   "translit": "choleh",
+   "en": "sick person",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h62c7d533",
+   "he": "בּוֹס",
+   "translit": "bos",
+   "en": "a (male) boss, manager, supervisor",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "heece315f",
+   "he": "חַיָּה",
+   "translit": "chayah",
+   "en": "animal (organism other than man)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8ecefcd6",
+   "he": "חָבַר",
+   "translit": "chavar",
+   "en": "to join (person), to join in, to team up with, to join forces with",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h352fc545",
+   "he": "חָם",
+   "translit": "cham",
+   "en": "father-in-law, in relation to the bride",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h6e6c1bf1",
+   "he": "גְּבִירָה",
+   "translit": "gevirah",
+   "en": "mistress, grande dame, a wealthy upper class woman, lady",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h4d76dd5a",
+   "he": "יָדִיד",
+   "translit": "yadid",
+   "en": "a (male) friend",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc8e03f62",
+   "he": "רוֹפֵא",
+   "translit": "rofe",
+   "en": "medical doctor, physician",
+   "kind": "word",
+   "audioId": "il18-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h19e80411",
+   "he": "בַּחוּרָה",
+   "translit": "bachurah",
+   "en": "young woman",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h1ce4e205",
+   "he": "אֻמַּן",
+   "translit": "uman",
+   "en": "to be trained, to be coached",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0c3b1f78",
+   "he": "רֵעַ",
+   "translit": "re'a",
+   "en": "friend, colleague",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

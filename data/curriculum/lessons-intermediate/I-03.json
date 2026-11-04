@@ -1,0 +1,399 @@
+{
+ "id": "I-03",
+ "track": "read",
+ "level": "black",
+ "unit": "synagogue",
+ "title": "Torah service responses: ark, aliyah blessings, returning the scroll",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "תּוֹרָה",
+   "en": "Torah",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "torah",
+    "sephardi": "torah",
+    "ashkenazi": "toroh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h16b7af50"
+   }
+  },
+  {
+   "he": "סֵפֶר תּוֹרָה",
+   "en": "Torah scroll",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "sefer torah",
+    "sephardi": "sefer torah",
+    "ashkenazi": "seifer toroh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "סֵפֶר",
+     "תּוֹרָה"
+    ]
+   }
+  },
+  {
+   "he": "עֲלִיָּה",
+   "en": "aliyah (being called up to the Torah)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "aliyah",
+    "sephardi": "aliyah",
+    "ashkenazi": "aliyoh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h8c045649"
+   }
+  },
+  {
+   "he": "נוֹתֵן הַתּוֹרָה",
+   "en": "giver of the Torah",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "noten hatorah",
+    "sephardi": "noten hatorah",
+    "ashkenazi": "nosein hatoroh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "נוֹתֵן",
+     "הַתּוֹרָה"
+    ]
+   }
+  },
+  {
+   "he": "גַּדְּלוּ",
+   "en": "magnify! (leader's invitation)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "gadelu",
+    "sephardi": "gadelu",
+    "ashkenazi": "gadelu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "גַּדְּלוּ"
+    ]
+   }
+  },
+  {
+   "he": "הַגְּדֻלָּה",
+   "en": "the greatness",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hagedulah",
+    "sephardi": "hagedulah",
+    "ashkenazi": "hageduloh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַגְּדֻלָּה"
+    ]
+   }
+  },
+  {
+   "he": "וְזֹאת הַתּוֹרָה",
+   "en": "and this is the Torah",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "vezot hatorah",
+    "sephardi": "vezot hatorah",
+    "ashkenazi": "vezos hatoroh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "וְזֹאת",
+     "הַתּוֹרָה"
+    ]
+   }
+  },
+  {
+   "he": "עֵץ חַיִּים",
+   "en": "a tree of life",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "etz chayim",
+    "sephardi": "etz chayim",
+    "ashkenazi": "eitz chayim"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "עֵץ",
+     "חַיִּים"
+    ]
+   }
+  },
+  {
+   "he": "הֲשִׁיבֵנוּ",
+   "en": "bring us back",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hashivenu",
+    "sephardi": "hashivenu",
+    "ashkenazi": "hashiveinu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הֲשִׁיבֵנוּ"
+    ]
+   }
+  },
+  {
+   "he": "חַדֵּשׁ",
+   "en": "renew",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chadesh",
+    "sephardi": "chadesh",
+    "ashkenazi": "chadeish"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "חַדֵּשׁ"
+    ]
+   }
+  },
+  {
+   "he": "יָמֵינוּ",
+   "en": "our days",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yameinu",
+    "sephardi": "yameinu",
+    "ashkenazi": "yomeinu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "יָמֵינוּ"
+    ]
+   }
+  },
+  {
+   "he": "כְּקֶדֶם",
+   "en": "as of old",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kekedem",
+    "sephardi": "kekedem",
+    "ashkenazi": "kekedem"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "כְּקֶדֶם"
+    ]
+   }
+  }
+ ],
+ "prayerLines": [
+  "torah-barchu",
+  "torah-bless-1",
+  "torah-bless-2",
+  "ein-kamocha",
+  "gadlu",
+  "lecha-hashem",
+  "vezot-hatorah",
+  "etz-chaim",
+  "hashivenu",
+  "yehalelu"
+ ],
+ "goals": [
+  "Answer the aliyah's Barchu and the two Torah blessings as the congregation does",
+  "Answer Gadlu with the opening of Lecha Adonai",
+  "Sing the lines said as the scroll is lifted and returned"
+ ],
+ "estMinutes": 40,
+ "prerequisites": [
+  "I-01"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli",
+   "sephardi",
+   "ashkenazi"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Latin forms are machine output of the project's transliterator, not a native speaker's; israeli and sephardi are identical in that scheme."
+ },
+ "exercises": [
+  {
+   "id": "I-03-e01",
+   "type": "respond",
+   "cue": "The person called up says Barchu. Answer as the congregation.",
+   "answer": {
+    "he": "בָּרוּךְ יְהוָה הַמְּבֹרָךְ לְעוֹלָם וָעֶד",
+    "en": "Blessed is the LORD, the blessed one, for ever and ever."
+   },
+   "prompt": {
+    "he": "בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ",
+    "en": "Bless the LORD, the blessed one."
+   }
+  },
+  {
+   "id": "I-03-e02",
+   "type": "fade",
+   "line": "torah-bless-1",
+   "en": "Blessed are you... who chose us from all the peoples and gave us his Torah. Blessed are you, LORD, giver of the Torah."
+  },
+  {
+   "id": "I-03-e03",
+   "type": "spot",
+   "line": "torah-bless-1",
+   "target": "תּוֹרָתוֹ",
+   "en": "his Torah"
+  },
+  {
+   "id": "I-03-e04",
+   "type": "respond",
+   "cue": "The blessing before the reading ends 'noten haTorah'. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה",
+    "en": "Blessed are you, LORD, giver of the Torah."
+   }
+  },
+  {
+   "id": "I-03-e05",
+   "type": "produce",
+   "en": "giver of the Torah",
+   "options": [
+    "נוֹתֵן הַתּוֹרָה",
+    "תּוֹרַת אֱמֶת",
+    "סֵפֶר תּוֹרָה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-03-e06",
+   "type": "fade",
+   "line": "torah-bless-2",
+   "en": "Blessed are you... who gave us a Torah of truth and planted eternal life within us. Blessed are you, LORD, giver of the Torah."
+  },
+  {
+   "id": "I-03-e07",
+   "type": "spot",
+   "line": "torah-bless-2",
+   "target": "אֱמֶת",
+   "en": "truth"
+  },
+  {
+   "id": "I-03-e08",
+   "type": "respond",
+   "cue": "The leader holds the scroll and invites: 'Gadlu'. The congregation answers with the start of Lecha Adonai.",
+   "answer": {
+    "he": "לְךָ יְהוָה הַגְּדֻלָּה וְהַגְּבוּרָה וְהַתִּפְאֶרֶת וְהַנֵּצַח וְהַהוֹד",
+    "en": "Yours, LORD, are the greatness, the might, the splendour, the victory and the majesty"
+   },
+   "prompt": {
+    "he": "גַּדְּלוּ לַיהוָה אִתִּי וּנְרוֹמְמָה שְׁמוֹ יַחְדָּו",
+    "en": "Magnify the LORD with me, and let us exalt his name together."
+   }
+  },
+  {
+   "id": "I-03-e09",
+   "type": "order",
+   "he": "גַּדְּלוּ לַיהוָה אִתִּי וּנְרוֹמְמָה שְׁמוֹ יַחְדָּו",
+   "en": "Magnify the LORD with me, and let us exalt his name together."
+  },
+  {
+   "id": "I-03-e10",
+   "type": "fade",
+   "line": "ein-kamocha",
+   "en": "There is none like you among the gods, my Lord, and nothing like your works."
+  },
+  {
+   "id": "I-03-e11",
+   "type": "order",
+   "he": "וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל",
+   "en": "And this is the Torah that Moses set before the children of Israel"
+  },
+  {
+   "id": "I-03-e12",
+   "type": "fade",
+   "line": "vezot-hatorah",
+   "en": "And this is the Torah that Moses set before the children of Israel, by the word of the LORD, by the hand of Moses."
+  },
+  {
+   "id": "I-03-e13",
+   "type": "spot",
+   "line": "etz-chaim",
+   "target": "שָׁלוֹם",
+   "en": "peace"
+  },
+  {
+   "id": "I-03-e14",
+   "type": "order",
+   "he": "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ",
+   "en": "It is a tree of life to those who hold fast to it"
+  },
+  {
+   "id": "I-03-e15",
+   "type": "fade",
+   "line": "hashivenu",
+   "en": "Bring us back to you, LORD, and we will return; renew our days as of old."
+  },
+  {
+   "id": "I-03-e16",
+   "type": "order",
+   "he": "הֲשִׁיבֵנוּ יְהוָה אֵלֶיךָ חַדֵּשׁ יָמֵינוּ כְּקֶדֶם",
+   "en": "Bring us back to you, LORD; renew our days as of old."
+  },
+  {
+   "id": "I-03-e17",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "עֵץ חַיִּים",
+     "en": "a tree of life"
+    },
+    {
+     "he": "הֲשִׁיבֵנוּ",
+     "en": "bring us back"
+    },
+    {
+     "he": "חַדֵּשׁ",
+     "en": "renew"
+    },
+    {
+     "he": "יָמֵינוּ",
+     "en": "our days"
+    },
+    {
+     "he": "כְּקֶדֶם",
+     "en": "as of old"
+    }
+   ]
+  },
+  {
+   "id": "I-03-e18",
+   "type": "spot",
+   "line": "yehalelu",
+   "target": "שְׁמוֹ",
+   "en": "his name",
+   "lineIndex": 1
+  }
+ ],
+ "note": "Ein Kamocha is only partly in the corpus (ein-kamocha, malchutcha, adonai-oz). The congregational 'chazak chazak' and 'yishar koach' are not in any source file and are left out rather than typed from memory."
+}

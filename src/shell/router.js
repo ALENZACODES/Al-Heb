@@ -45,6 +45,7 @@ export const ROUTES = [
   { name: 'firstday', pattern: '/firstday', module: '../firstday/firstday.view.js', title: 'Your first 10 minutes', owner: 'firstday', optional: true, group: 'learn', quick: 'nav.firstday' },
   { name: 'firstday-ladder', pattern: '/firstday/ladder', module: '../firstday/ladder.view.js', title: 'Pointed to unpointed ladder', owner: 'firstday', optional: true, group: 'learn', quick: 'nav.firstday-ladder' },
   { name: 'placement', pattern: '/placement', module: '../placement/placement.view.js', title: 'Placement check (draft)', owner: 'placement', optional: true, group: 'learn', quick: 'nav.placement' },
+  { name: 'reminders', pattern: '/reminders', module: './notify.view.js', title: 'Study reminders', owner: 'notify', optional: true, group: 'learn', quick: 'nav.reminders' },
   { name: 'sprint', pattern: '/sprint', module: '../sprint/sprint.view.js', title: 'Word Sprint', owner: 'sprint', optional: true, group: 'learn', quick: 'nav.sprint' },
   { name: 'gender',   pattern: '/gender',        module: '../curriculum/learn.view.js', title: 'Gender pairs',     owner: 'lane1', group: 'learn', quick: 'nav.gender',   query: { gender: 'pairs' }, needs: 'curriculum/gender.view.js' },
   { name: 'roles',    pattern: '/gender/roles',  module: '../curriculum/learn.view.js', title: 'Say it as me',     owner: 'lane1', group: 'learn', quick: 'nav.roles',    query: { gender: 'roles' }, needs: 'curriculum/gender.view.js' },

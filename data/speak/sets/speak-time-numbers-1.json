@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-time-numbers-1",
+ "title": "Time and numbers 1",
+ "theme": "time-numbers",
+ "level": "A1",
+ "track": "both",
+ "pack": "time-numbers-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "hcb5a058a",
+   "he": "עַכְשָׁו",
+   "translit": "akhshav",
+   "en": "now",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf07c1580",
+   "he": "שָׁנָה",
+   "translit": "shanah",
+   "en": "year",
+   "kind": "word",
+   "audioId": "r12-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h00fd9c4f",
+   "he": "פַּעַם",
+   "translit": "pa'am",
+   "en": "a time",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "heaa07285",
+   "he": "אִחֵר",
+   "translit": "icher",
+   "en": "to be late",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h14635975",
+   "he": "עוֹד",
+   "translit": "od",
+   "en": "again, once more",
+   "kind": "word",
+   "audioId": "aleinu-1-w56",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf9a1a55b",
+   "he": "שְׁנַיִם",
+   "translit": "shenayim",
+   "en": "two",
+   "kind": "word",
+   "audioId": "numbers-02-m",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h139c94a9",
+   "he": "שָׁהָה",
+   "translit": "shahah",
+   "en": "to stay, spend (time)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf5bee50d",
+   "he": "לַיְלָה",
+   "translit": "laylah",
+   "en": "night",
+   "kind": "word",
+   "audioId": "il17-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h68a92f84",
+   "he": "שִׁבְעָה",
+   "translit": "shiv'ah",
+   "en": "seven",
+   "kind": "word",
+   "audioId": "numbers-07-m",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hffd9b904",
+   "he": "מֵאָה",
+   "translit": "me'ah",
+   "en": "hundred, one hundred",
+   "kind": "word",
+   "audioId": "il05-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h749f736f",
+   "he": "תָּמִיד",
+   "translit": "tamid",
+   "en": "Always, regularly",
+   "kind": "word",
+   "audioId": "haftarah-after-w135",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc44a3fa8",
+   "he": "רִאשׁוֹן",
+   "translit": "rishon",
+   "en": "first",
+   "kind": "word",
+   "audioId": "yigdal-w33",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

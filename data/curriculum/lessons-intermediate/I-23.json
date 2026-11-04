@@ -1,0 +1,359 @@
+{
+ "id": "I-23",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Taxi: destination, meter, 'slower' and the receipt",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "מוֹנִית",
+   "en": "taxi",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "monit"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h85c6747d"
+   }
+  },
+  {
+   "he": "לְאָן?",
+   "en": "where to?",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "le'an?"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h79df22f0"
+   }
+  },
+  {
+   "he": "לִשְׂדֵה הַתְּעוּפָה",
+   "en": "to the airport",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lisdeh hate'ufah"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "לִשְׂדֵה",
+     "הַתְּעוּפָה"
+    ]
+   }
+  },
+  {
+   "he": "לַמָּלוֹן",
+   "en": "to the hotel",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lamalon"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p9cf5c34c"
+   }
+  },
+  {
+   "he": "לַתַּחֲנָה הַמֶּרְכָּזִית",
+   "en": "to the central station",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "latachanah hamerkazit"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p7f189e26"
+   }
+  },
+  {
+   "he": "מוֹנֶה",
+   "en": "meter",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "moneh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h9f68266c#forms.present"
+   }
+  },
+  {
+   "he": "כַּמָּה זֶה יַעֲלֶה?",
+   "en": "how much will it cost?",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kamah zeh ya'aleh?"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p955decf7"
+   }
+  },
+  {
+   "he": "עֲצֹר כָּאן, בְּבַקָּשָׁה",
+   "en": "stop here, please",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "atzor kan, bevakashah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "padcd8f41"
+   }
+  },
+  {
+   "he": "לְאַט",
+   "en": "slowly",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "le'at"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h2d8a8058"
+   }
+  },
+  {
+   "he": "קַבָּלָה",
+   "en": "receipt",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kabalah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h1fc1c9e1"
+   }
+  },
+  {
+   "he": "מְמַהֵר",
+   "en": "in a hurry (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "memaher"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h1ce30358#forms.present"
+   }
+  },
+  {
+   "he": "שֵׁרוּת",
+   "en": "service; shared taxi (sherut)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "sherut"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hea59fdfe"
+   }
+  },
+  {
+   "he": "חַלּוֹן",
+   "en": "window",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chalon"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h495d2c04"
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Tell the driver where to go and ask for the meter",
+  "Ask the price in advance and ask the driver to slow down or stop",
+  "Ask for a receipt and thank the driver"
+ ],
+ "estMinutes": 25,
+ "prerequisites": [
+  "I-11"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-23-e01",
+   "type": "gender",
+   "m": "אֲנִי צָרִיךְ מוֹנִית",
+   "f": "אֲנִי צְרִיכָה מוֹנִית",
+   "en": "I need a taxi"
+  },
+  {
+   "id": "I-23-e02",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "b",
+     "he": "לְאָן?",
+     "en": "Where to?"
+    },
+    {
+     "speaker": "a",
+     "he": "לִשְׂדֵה הַתְּעוּפָה, בְּבַקָּשָׁה. אֶפְשָׁר מוֹנֶה?",
+     "en": "To the airport, please. Can you use the meter?"
+    },
+    {
+     "speaker": "b",
+     "he": "בְּטַח.",
+     "en": "Sure."
+    }
+   ],
+   "task": "Say the passenger's line."
+  },
+  {
+   "id": "I-23-e03",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "לִשְׂדֵה הַתְּעוּפָה",
+     "en": "to the airport"
+    },
+    {
+     "he": "לַמָּלוֹן",
+     "en": "to the hotel"
+    },
+    {
+     "he": "לַתַּחֲנָה הַמֶּרְכָּזִית",
+     "en": "to the central station"
+    },
+    {
+     "he": "לַכּוֹתֶל",
+     "en": "to the Western Wall"
+    }
+   ]
+  },
+  {
+   "id": "I-23-e04",
+   "type": "produce",
+   "en": "can you use the meter, please?",
+   "options": [
+    "אֶפְשָׁר מוֹנֶה, בְּבַקָּשָׁה?",
+    "אֶפְשָׁר קַבָּלָה?",
+    "אֶפְשָׁר לִפְתֹּחַ חַלּוֹן?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-23-e05",
+   "type": "respond",
+   "cue": "Ask the price before you get in.",
+   "answer": {
+    "he": "כַּמָּה זֶה יַעֲלֶה?",
+    "en": "How much will it cost?"
+   }
+  },
+  {
+   "id": "I-23-e06",
+   "type": "produce",
+   "en": "that's very expensive",
+   "options": [
+    "זֶה יָקָר מְאֹד",
+    "זֶה זוֹל",
+    "זֶה קָרוֹב"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-23-e07",
+   "type": "order",
+   "he": "יוֹתֵר לְאַט, בְּבַקָּשָׁה",
+   "en": "Slower, please"
+  },
+  {
+   "id": "I-23-e08",
+   "type": "respond",
+   "cue": "Tell the driver to stop here.",
+   "answer": {
+    "he": "עֲצֹר כָּאן, בְּבַקָּשָׁה",
+    "en": "Stop here, please"
+   }
+  },
+  {
+   "id": "I-23-e09",
+   "type": "produce",
+   "en": "can I open a window?",
+   "options": [
+    "אֶפְשָׁר לִפְתֹּחַ חַלּוֹן?",
+    "אֶפְשָׁר מוֹנֶה?",
+    "אֶפְשָׁר קַבָּלָה?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-23-e10",
+   "type": "recall",
+   "he": "מְמַהֵר",
+   "en": "in a hurry (m)"
+  },
+  {
+   "id": "I-23-e11",
+   "type": "order",
+   "he": "אֲנִי מְמַהֵר, בְּבַקָּשָׁה",
+   "en": "I'm in a hurry, please"
+  },
+  {
+   "id": "I-23-e12",
+   "type": "respond",
+   "cue": "Ask for a receipt.",
+   "answer": {
+    "he": "אֶפְשָׁר קַבָּלָה?",
+    "en": "Can I have a receipt?"
+   }
+  },
+  {
+   "id": "I-23-e13",
+   "type": "recall",
+   "he": "שֵׁרוּת",
+   "en": "service; shared taxi (sherut)"
+  },
+  {
+   "id": "I-23-e14",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "יוֹם נָעִים",
+     "en": "Thanks, have a nice day."
+    },
+    {
+     "speaker": "b",
+     "he": "תּוֹדָה, לְהִתְרָאוֹת.",
+     "en": "Thanks, see you."
+    }
+   ],
+   "task": "Say goodbye to the driver."
+  },
+  {
+   "id": "I-23-e15",
+   "type": "register",
+   "he": "אֶפְשָׁר מוֹנֶה, בְּבַקָּשָׁה?",
+   "en": "can you use the meter, please?",
+   "answer": "neutral",
+   "options": [
+    "formal",
+    "neutral",
+    "casual",
+    "slang"
+   ]
+  }
+ ],
+ "note": "'keep the change' has no pointed token in the sources and is not taught."
+}

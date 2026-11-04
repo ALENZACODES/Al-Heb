@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-science-ideas-2",
+ "title": "Science and ideas 2",
+ "theme": "science-ideas",
+ "level": "B1",
+ "track": "both",
+ "pack": "science-ideas-2",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "hde989655",
+   "he": "סָתַר",
+   "translit": "satar",
+   "en": "to contradict",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h92e7a530",
+   "he": "חָתַךְ",
+   "translit": "chatakh",
+   "en": "to cut",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc7778ee0",
+   "he": "רֻפָּא",
+   "translit": "rupa",
+   "en": "to be restored (of art)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h4ad9dacd",
+   "he": "חִבֵּר",
+   "translit": "chiber",
+   "en": "to connect, attach, join (two things, or one thing to another)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf2beda21",
+   "he": "סַף",
+   "translit": "saf",
+   "en": "threshold, verge",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha891998a",
+   "he": "פָּעִיל",
+   "translit": "pa'il",
+   "en": "active",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc4654a6b",
+   "he": "שִׁעוּר",
+   "translit": "shi'ur",
+   "en": "measure, amount",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h59dac508",
+   "he": "סְבִיבָה",
+   "translit": "sevivah",
+   "en": "Surroundings, environs, area, vicinity",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hd1c3a40b",
+   "he": "מַסְלוּל",
+   "translit": "maslul",
+   "en": "path",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc5937bb8",
+   "he": "מַעֲרֶכֶת",
+   "translit": "ma'arekhet",
+   "en": "set",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha9d0156d",
+   "he": "עִגֵּל",
+   "translit": "igel",
+   "en": "to round, make circular, make a circle",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h970ac8ad",
+   "he": "תְּגוּבָה",
+   "translit": "teguvah",
+   "en": "response, reaction, reply",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

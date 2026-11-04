@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-nature-animals-2",
+ "title": "Nature and animals 2",
+ "theme": "nature-animals",
+ "level": "B1",
+ "track": "israel",
+ "pack": "nature-animals-2",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h35a8fcbe",
+   "he": "קַר",
+   "translit": "kar",
+   "en": "cold",
+   "kind": "word",
+   "audioId": "il15-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hd2fac0d2",
+   "he": "עֵץ",
+   "translit": "etz",
+   "en": "tree",
+   "kind": "word",
+   "audioId": "etz-chaim-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h72ac53a6",
+   "he": "צֹאן",
+   "translit": "tzon",
+   "en": "sheep, flock of sheep",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h2f9c8fe9",
+   "he": "זֶרַע",
+   "translit": "zera",
+   "en": "seed",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he0fc258b",
+   "he": "עֵז",
+   "translit": "ez",
+   "en": "female goat, she-goat",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h6bd07f03",
+   "he": "פִּטֵּר",
+   "translit": "piter",
+   "en": "to fire, lay off, terminate, terminate the employment of",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha1bc7ce0",
+   "he": "מַגְנִיב",
+   "translit": "magniv",
+   "en": "cool",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h5c2548dc",
+   "he": "חַם",
+   "translit": "cham",
+   "en": "Hot",
+   "kind": "word",
+   "audioId": "il15-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc4aa23c8",
+   "he": "עִדָּן",
+   "translit": "idan",
+   "en": "eon, era",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc7ade926",
+   "he": "גַּיְא",
+   "translit": "gay",
+   "en": "valley, gorge, ravine",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h7d196d47",
+   "he": "מְעָרָה",
+   "translit": "me'arah",
+   "en": "cave",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf9ef73b9",
+   "he": "נָעַר",
+   "translit": "na'ar",
+   "en": "to bray (donkey)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

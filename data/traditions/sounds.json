@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 1,
+  "draft": true,
+  "description": "Per-sound comparison of the three reading settings the app uses, plus an 'also exists' list. Plain-English values were written for ALEF as paraphrases of the sources named in sources.json. No native speaker or linguist has reviewed this file.",
+  "confidence": {
+    "high": "Two or more of the pages we read agree on the Israeli and Ashkenazi cells and on the 'other communities' cell.",
+    "medium": "One page supports it, or the pages agree on the substance but differ in detail.",
+    "low": "Mostly the project's own inference, or the page itself flags the claim as weak."
+  },
+  "settings": {
+    "israeli": "Modern Israeli: the everyday standard Hebrew of Israel. ALEF makes no claim about Tel Aviv-specific speech; no source for it was found.",
+    "american": "American synagogue (the app's 'sephardi' setting): Sephardi/Israeli vowel values said with American-English habits. This is a teaching convention in ALEF, not a community with one fixed accent.",
+    "ashkenazi": "Traditional Ashkenazi liturgical reading. Real Ashkenazi Hebrew has regional dialects (Lithuanian, Polish, German, Hungarian, ...); ALEF picks the commonest siddur values."
+  },
+  "sounds": [
+    {
+      "id": "tav-no-dagesh",
+      "label": "Tav without a dot (ת)",
+      "he": "שַׁבָּת",
+      "gloss": "Shabbat / Shabbos",
+      "link": { "kind": "consonant", "id": "tav", "variant": "without dagesh" },
+      "israeli": "t (Shabbat)",
+      "american": "t in most non-Orthodox practice (Shabbat). Orthodox and Ashkenazi-leaning synagogues often say s (Shabbos).",
+      "ashkenazi": "s (Shabbos, Yis-gadal)",
+      "other": [
+        { "who": "Yemenite, Iraqi and some Greek communities", "say": "th as in thin" },
+        { "who": "some Spanish-Portuguese and Spanish-Moroccan communities", "say": "d, or th as in this" }
+      ],
+      "confidence": "high",
+      "sources": ["wp-ashkenazi", "wp-sephardi", "wp-yemenite", "chabad", "pealim", "benor"],
+      "americanBasis": "Benor and Cohen show Reform and Conservative respondents leaning to the Israeli form of one word; the rest is lane 3's inference.",
+      "note": "A tav WITH a dot (dagesh) is t in every tradition listed here. The single most audible switch between Ashkenazi and the others."
+    },
+    {
+      "id": "kamatz",
+      "label": "Kamatz (T-shaped mark)",
+      "he": "בָּרוּךְ",
+      "gloss": "barukh / borukh",
+      "link": { "kind": "niqqud", "id": "kamatz" },
+      "israeli": "ah, as in father",
+      "american": "ah, as in father. Some older or Orthodox speakers say aw.",
+      "ashkenazi": "o or aw (Borukh). Southern Ashkenazi dialects use u when the syllable is open.",
+      "other": [
+        { "who": "Sephardi (popular speech)", "say": "ah, the same as patach" },
+        { "who": "Yemenite", "say": "a back, rounded vowel like the Ashkenazi o (per the Ashkenazi Hebrew page)" }
+      ],
+      "confidence": "high",
+      "sources": ["wp-ashkenazi", "wp-sephardi", "chabad", "pealim"],
+      "americanBasis": "lane 3 inference; the aw habit is described in data/pronunciation/niqqud.json without an outside source.",
+      "note": "Kamatz katan (a short o in a few words such as kol) is a separate topic that ALEF handles only for a short word list; it is not covered here."
+    },
+    {
+      "id": "patach-kamatz",
+      "label": "Patach and kamatz: same vowel or two?",
+      "he": "אַתָּה",
+      "gloss": "atah / atoh",
+      "link": { "kind": "niqqud", "id": "patach" },
+      "israeli": "Same: both are ah.",
+      "american": "Same: both are ah.",
+      "ashkenazi": "Two vowels: patach is ah, kamatz is o or aw.",
+      "other": [
+        { "who": "Sephardi (popular speech)", "say": "Same: both ah. The page adds that formal liturgical reading often restores a distinction (it does not say how)." },
+        { "who": "Yemenite", "say": "Kept apart; patach and segol sound alike" }
+      ],
+      "confidence": "high",
+      "sources": ["wp-sephardi", "wp-ashkenazi", "chabad"],
+      "americanBasis": "Follows the Israeli/Sephardi value in the app's CONTRACT; lane 3 inference for actual American speech.",
+      "note": "This merger is why Israeli recordings and Sephardi-values readings agree on every kamatz and patach."
+    },
+    {
+      "id": "cholam",
+      "label": "Cholam (dot above)",
+      "he": "שָׁלוֹם",
+      "gloss": "shalom / sholom",
+      "link": { "kind": "niqqud", "id": "cholam" },
+      "israeli": "oh",
+      "american": "oh",
+      "ashkenazi": "varies by region: oh (southern German), oy (Polish/Galician), ey (Lithuanian), ow (northern German). The app's siddur style writes plain o.",
+      "other": [
+        { "who": "Sephardi", "say": "oh" }
+      ],
+      "confidence": "high",
+      "sources": ["wp-ashkenazi", "chabad", "pealim"],
+      "americanBasis": "lane 3 inference.",
+      "note": "Chabad.org describes the oy, ay and ow versions as Yiddish-influenced and not official."
+    },
+    {
+      "id": "tsere",
+      "label": "Tsere (two dots) and segol (three dots)",
+      "he": "אָמֵן",
+      "gloss": "amen / omeyn",
+      "link": { "kind": "niqqud", "id": "tzere" },
+      "israeli": "eh, as in bed. Some speakers say ey in some words.",
+      "american": "eh, often stretched into an ay glide (HAY-nu).",
+      "ashkenazi": "ey, as in they (some Polish usage: ai)",
+      "other": [
+        { "who": "Sephardi", "say": "eh; tsere and segol sound the same" }
+      ],
+      "confidence": "high",
+      "sources": ["wp-ashkenazi", "wp-sephardi", "chabad", "pealim"],
+      "americanBasis": "The glide is lane 3's own observation in prayerwords.json; unreviewed.",
+      "note": ""
+    },
+    {
+      "id": "shva",
+      "label": "Shva (two dots, stacked)",
+      "he": "בְּרָכָה",
+      "gloss": "brakha / bruhkhah",
+      "link": { "kind": "niqqud", "id": "shva" },
+      "israeli": "a quick e, or nothing at all in everyday speech",
+      "american": "a quick e when reading prayers",
+      "ashkenazi": "often dropped in speech; read as a short e or uh when reading liturgy strictly",
+      "other": [
+        { "who": "Sephardi", "say": "a short e in every position where it is sounded; always sounded after a long vowel" }
+      ],
+      "confidence": "medium",
+      "sources": ["wp-sephardi", "wp-ashkenazi", "lane3"],
+      "americanBasis": "lane 3 inference.",
+      "note": "The Ashkenazi cell comes from lane 3's data only; the fetched pages describe dropping the vocal shva as an Ashkenazi feature that entered Israeli speech. Rules for WHICH shvas are sounded are in src/pronunciation/shva.js and are partly TODO."
+    },
+    {
+      "id": "ayin",
+      "label": "Ayin (ע)",
+      "he": "עוֹלָם",
+      "gloss": "olam / oylom",
+      "link": { "kind": "consonant", "id": "ayin" },
+      "israeli": "silent, or a tiny catch like the break in uh-oh (same as alef)",
+      "american": "silent",
+      "ashkenazi": "silent in most forms. Traditional authorities advised a throaty sound in prayer, which is rarely done.",
+      "other": [
+        { "who": "Balkan, Anatolian, North African and Levantine Sephardim", "say": "a throaty, Arabic-like pharyngeal sound" },
+        { "who": "Yemenite", "say": "the same pharyngeal sound" },
+        { "who": "Older Mizrahi speakers in Israel", "say": "sometimes keep it, less often than het" },
+        { "who": "Western Sephardim (Spanish-Portuguese)", "say": "an ng sound as in singing" }
+      ],
+      "confidence": "high",
+      "sources": ["wp-mhp", "wp-sephardi", "wp-ashkenazi", "wp-yemenite", "chabad"],
+      "americanBasis": "Same as Israeli; lane 3 inference for American habits.",
+      "note": "In Israeli speech ayin and alef are the same sound. Trying a pharyngeal there is likely to sound foreign; that last point is lane 3's inference."
+    },
+    {
+      "id": "chet",
+      "label": "Chet (ח) versus khaf (כ without dot)",
+      "he": "חַלָּה",
+      "gloss": "challah",
+      "link": { "kind": "consonant", "id": "chet" },
+      "israeli": "ch as in Scottish loch, the same sound as khaf",
+      "american": "ch as in Bach for both (the usual habit); some say a plain h, which is a slip to fix",
+      "ashkenazi": "ch as in Bach, the same as khaf. A throaty sound was advised but is rarely heard.",
+      "other": [
+        { "who": "Sephardim and Mizrahim who keep it, and Yemenite", "say": "a pharyngeal, throaty h that differs from khaf" },
+        { "who": "Older Mizrahi speakers in Israel", "say": "often keep the pharyngeal" }
+      ],
+      "confidence": "high",
+      "sources": ["wp-mhp", "wp-sephardi", "wp-ashkenazi", "pealim", "chabad"],
+      "americanBasis": "lane 3 inference.",
+      "note": ""
+    },
+    {
+      "id": "qof",
+      "label": "Qof (ק)",
+      "he": "קָדוֹשׁ",
+      "gloss": "kadosh / kodoysh",
+      "link": { "kind": "consonant", "id": "qof" },
+      "israeli": "k, the same as kaf with a dot",
+      "american": "k",
+      "ashkenazi": "k",
+      "other": [
+        { "who": "Sephardi (general table)", "say": "k" },
+        { "who": "Georgian Jewish liturgical tradition", "say": "kept distinct from kaf with a dot, as in Arabic" }
+      ],
+      "confidence": "medium",
+      "sources": ["wp-mhp", "wp-sephardi", "pealim"],
+      "americanBasis": "Same as Israeli.",
+      "note": "A deeper qof in some Mizrahi communities is plausible but the pages we read name only Georgian Jews, so ALEF names only them."
+    },
+    {
+      "id": "resh",
+      "label": "Resh (ר)",
+      "he": "רְאוּבֵן",
+      "gloss": "Reuven",
+      "link": { "kind": "consonant", "id": "resh" },
+      "israeli": "a back-of-the-throat r, like French or German; nearly all Israeli Jews use it",
+      "american": "the English r (most Americans). Hearing a uvular r in Israel is normal; using the English r is a common marker of a foreign speaker (lane 3's inference).",
+      "ashkenazi": "a tapped or trilled r or a uvular r, depending on region",
+      "other": [
+        { "who": "Sephardi", "say": "a front tapped or trilled r, like Spanish" },
+        { "who": "Immigrants from Arabic-speaking countries (Israel)", "say": "often keep the trilled r" }
+      ],
+      "confidence": "high",
+      "sources": ["wp-mhp", "wp-sephardi", "wp-ashkenazi"],
+      "americanBasis": "lane 3 inference.",
+      "note": "This is a place where an Israeli recording is NOT a good model for 'Sephardi' sounds: the Israeli r and the Sephardi r differ."
+    },
+    {
+      "id": "stress",
+      "label": "Which syllable is stressed",
+      "he": "שָׁלוֹם",
+      "gloss": "shaLOM / SHOlom",
+      "link": null,
+      "israeli": "most words on the last syllable; some, such as words of the melech/boker type, on the one before; spoken Israeli drifts toward the second-to-last syllable",
+      "american": "last syllable in prayer words (baRUKH, shaLOM), as in Israeli",
+      "ashkenazi": "traditionally the second-to-last syllable (SHOlom, BOrukh), but final stress was promoted for Torah reading and public prayer, and many congregations use it",
+      "other": [
+        { "who": "Sephardi", "say": "keeps the older pattern, which for most words is the last syllable" },
+        { "who": "Yemenite", "say": "the Wikipedia page says second-to-last, but tags that claim 'citation needed'; ALEF does not rely on it" }
+      ],
+      "confidence": "medium",
+      "sources": ["wp-mhp", "wp-ashkenazi", "pealim", "wp-sephardi", "wp-yemenite", "lane3"],
+      "americanBasis": "From data/pronunciation/prayerwords.json (hand-written, unreviewed).",
+      "note": "The Chabad page does not discuss stress. The Sephardi Wikipedia page says only that stress is final where Biblical Hebrew puts it there."
+    }
+  ],
+  "alsoExists": [
+    {
+      "id": "yemenite",
+      "who": "Yemenite Hebrew",
+      "claims": [
+        "Pharyngeal het and ayin, as in Arabic.",
+        "Gimel without a dot is a voiced throat fricative and with a dot is a j sound.",
+        "Tav without a dot is th as in thin; dalet without a dot is th as in this.",
+        "Patach and segol sound alike."
+      ],
+      "sources": ["wp-yemenite", "wp-ashkenazi"],
+      "confidence": "medium",
+      "note": "Described by one Wikipedia article only (first 100,000 of 124,343 characters read). ALEF has no Yemenite audio, respelling or lesson; this is a note that it exists."
+    },
+    {
+      "id": "mizrahi",
+      "who": "Mizrahi and Sephardi communities (Middle East, North Africa, Balkans, Anatolia)",
+      "claims": [
+        "Many keep pharyngeal het and sometimes ayin; the details differ by community.",
+        "Some read tav as th, and some keep qof distinct (the pages we read name Iraqi, Greek and Georgian examples).",
+        "There is no single 'Sephardi accent': the pages stress many variants inside each grouping."
+      ],
+      "sources": ["wp-sephardi", "wp-mhp", "pealim", "chabad"],
+      "confidence": "medium",
+      "note": "ALEF's 'sephardi' setting is NOT a model of any of these communities. If your synagogue belongs to one, ask a member or the cantor and treat this app as a general guide only."
+    },
+    {
+      "id": "western-sephardi",
+      "who": "Spanish-Portuguese (Western) Sephardim",
+      "claims": [
+        "Ayin traditionally an ng sound.",
+        "Bet without a dot traditionally between b and v, a habit that is declining."
+      ],
+      "sources": ["wp-sephardi", "wp-mhp"],
+      "confidence": "medium",
+      "note": "Reference only."
+    }
+  ]
+}

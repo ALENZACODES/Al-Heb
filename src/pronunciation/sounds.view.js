@@ -187,7 +187,7 @@ export function mount(root, ctx = {}) {
     };
     tradListeners.push(crow);
     crow();
-    wrap.append(h('h3', {}, 'Letters whose sound depends on a dot or the tradition'), h('table', {}, h('thead', {}, h('tr', {}, h('th', { scope: 'col' }, 'Letter'), h('th', { scope: 'col' }, 'IPA'), h('th', { scope: 'col' }, 'Sounds like'))), tbody));
+    wrap.append(h('h3', {}, 'Letters whose sound depends on a dot or the tradition'), h('div', { class: 'table-wrap', tabindex: '0', role: 'region', 'aria-label': 'Letter sounds (scrolls sideways)' }, h('table', {}, h('thead', {}, h('tr', {}, h('th', { scope: 'col' }, 'Letter'), h('th', { scope: 'col' }, 'IPA'), h('th', { scope: 'col' }, 'Sounds like'))), tbody)));
 
     // --- it's easy
     wrap.append(h('h3', {}, "Why this is easier than it looks"));
@@ -228,7 +228,7 @@ export function mount(root, ctx = {}) {
     };
     tradListeners.push(prow);
     prow();
-    wrap.append(h('h3', {}, 'Same word, two traditions'), h('table', {}, h('thead', {}, h('tr', {}, ['Hebrew', 'Israeli / Sephardi', 'Ashkenazi', 'Meaning'].map((x) => h('th', { scope: 'col' }, x)))), pbody));
+    wrap.append(h('h3', {}, 'Same word, two traditions'), h('div', { class: 'table-wrap', tabindex: '0', role: 'region', 'aria-label': 'Same word in two traditions (scrolls sideways)' }, h('table', {}, h('thead', {}, h('tr', {}, ['Hebrew', 'Israeli / Sephardi', 'Ashkenazi', 'Meaning'].map((x) => h('th', { scope: 'col' }, x)))), pbody)));
   };
 
   const dataPromise = ctx.pronunciationData ? Promise.resolve(ctx.pronunciationData) : loadPronunciationData();

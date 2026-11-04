@@ -4,7 +4,7 @@
 import { createRequire } from 'node:module';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createAppServer } from '../serve.mjs';
 
 const require = createRequire(import.meta.url);
@@ -13,29 +13,44 @@ try { ({ chromium } = require('playwright')); } catch { ({ chromium } = require(
 const here = fileURLToPath(new URL('.', import.meta.url));
 const root = join(here, '..', '..');
 const axeSource = readFileSync(join(here, 'node_modules/axe-core/axe.min.js'), 'utf8');
-const ROUTES = ['/welcome', '/', '/learn', '/learn?lesson=r01', '/learn?lesson=r05', '/learn?review=1', '/letters', '/letters/alef', '/sounds', '/read', '/read/bless-priestly-1', '/scan', '/calendar', '/settings', '/how', '/about', '/nope'];
+const { ROUTES: ROUTE_DEFS } = await import(pathToFileURL(join(root, 'src/shell/router.js')).href);
+const argv = process.argv.slice(2);
+const quick = argv.includes('--quick');
+const sampleFor = (r) => r.pattern.replace(/:(\w+)/g, (_, k) => (r.name === 'dialogue' ? 'd-cafe' : r.name === 'fadeline' ? 'bless-priestly-1' : r.name === 'letter' ? 'bet' : r.name === 'text' ? 'priestly-blessing' : k === 'group' ? 'lw1' : k === 'letter' ? 'bet' : 'x'));
+// every route in src/shell/router.js with a sample parameter, plus lesson/review states that need progress
+const ROUTES = [...new Set([...ROUTE_DEFS.map(sampleFor), '/learn?lesson=r01', '/learn?lesson=r05', '/learn?review=1', '/letters/alef', '/letters?tab=type', '/vocab?review=1', '/nope'])];
+const QUICK = new Set(['/', '/learn', '/letters/alef', '/letters/atlas', '/sounds', '/read/priestly-blessing', '/calendar', '/settings', '/vocab']);
+const routes = quick ? ROUTES.filter((r) => QUICK.has(r)) : ROUTES;
+const CONFIGS = [['phone', 'light'], ['phone', 'dark'], ['desktop', 'light'], ['desktop', 'dark']];
+const VIEWPORT = { phone: { width: 390, height: 844 }, desktop: { width: 1280, height: 800 } };
 
 const server = createAppServer({ root }); await new Promise((r) => server.listen(0, r));
 const base = `http://localhost:${server.address().port}/`;
 const browser = await chromium.launch();
 const out = { axe: '4.14.0', when: new Date().toISOString(), routes: {}, keyboard: [] };
 
-async function newPage(theme) {
-  const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, colorScheme: theme });
+async function newPage(theme, device = 'phone') {
+  const ctx = await browser.newContext({ viewport: VIEWPORT[device], deviceScaleFactor: device === 'phone' ? 2 : 1, colorScheme: theme });
   await ctx.addInitScript(() => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); });
   return { ctx, page: await ctx.newPage() };
 }
-for (const theme of ['light', 'dark']) {
-  const { ctx, page } = await newPage(theme);
+for (const [device, theme] of CONFIGS) {
+  const { ctx, page } = await newPage(theme, device);
   // a progressed profile so review/lesson screens have content
   await page.goto(base + '#/learn?lesson=r01'); await page.waitForSelector('text=Words');
   await page.getByRole('button', { name: 'Mark lesson complete' }).click(); await page.waitForSelector('text=new review cards');
-  for (const r of ROUTES) {
-    await page.goto(base + '#' + r); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(500);
-    if (r.includes('review')) { await page.getByRole('button', { name: 'Show answer' }).click().catch(() => {}); }
+  for (const r of routes) {
+    await page.goto(base + '#' + r); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(400);
+    if (r.includes('review')) { await page.getByRole('button', { name: 'Show answer' }).click({ timeout: 1000 }).catch(() => {}); }
     await page.evaluate(axeSource);
     const res = await page.evaluate(async () => { const x = await axe.run(document, { resultTypes: ['violations'] }); return x.violations.map((v) => ({ id: v.id, impact: v.impact, help: v.help, nodes: v.nodes.map((n) => ({ target: n.target.join(' '), html: n.html.slice(0, 140), summary: n.failureSummary?.split('\n').slice(1, 3).join(' ').trim() })) })); });
-    (out.routes[r] ||= {})[theme] = res;
+    (out.routes[r] ||= {})[`${device}-${theme}`] = res;
+  }
+  if (device === 'phone') { // the More sheet open (it is closed on every route load, so the loop above never sees it)
+    await page.goto(base + '#/'); await page.waitForSelector('body[data-ready="1"]'); await page.click('#more-btn'); await page.waitForTimeout(200);
+    await page.evaluate(axeSource);
+    const res = await page.evaluate(async () => { const x = await axe.run(document, { resultTypes: ['violations'] }); return x.violations.map((v) => ({ id: v.id, impact: v.impact, help: v.help, nodes: v.nodes.map((n) => ({ target: n.target.join(' '), html: n.html.slice(0, 140), summary: n.failureSummary?.split('\n').slice(1, 3).join(' ').trim() })) })); });
+    (out.routes['/ (More sheet open)'] ||= {})[`${device}-${theme}`] = res;
   }
   await ctx.close();
 }
@@ -51,7 +66,7 @@ for (const theme of ['light', 'dark']) {
   note('skip link moves focus into #main', await page.evaluate(() => document.activeElement?.id === 'main'));
   const p2 = await ctx.newPage(); await p2.goto(base + '#/'); await p2.waitForSelector('body[data-ready="1"]');
   const stops = []; for (let i = 0; i < 14; i++) { await p2.keyboard.press('Tab'); stops.push(await p2.evaluate(() => { const a = document.activeElement; return (a?.textContent || a?.tagName || '').trim().replace(/\s+/g, ' ').slice(0, 24); })); }
-  note('Tab order: skip link, brand, every nav link in order', ['Skip', 'ALEF', 'Home', 'Learn', 'Letters', 'Sounds', 'Read', 'Scan', 'Calendar', 'Settings', 'About'].every((x, i) => stops[i]?.startsWith(x)), stops.join(' | '));
+  note('Tab order on a phone: skip link, brand, the five tab-bar links, More (the sheet items are not tabbable while closed)', ['Skip', 'ALEF', 'Home', 'Learn', 'Letters', 'Sounds', 'Read', 'More'].every((x, i) => stops[i]?.startsWith(x)), stops.join(' | '));
   // focus visible on a nav link
   const outline = await page.evaluate(() => { const a = document.querySelector('#nav a'); a.focus(); const c = getComputedStyle(a); return c.outlineStyle + ' ' + c.outlineWidth; });
   note('focused nav link has a visible outline', /solid 3px/.test(outline), outline);
@@ -73,9 +88,14 @@ for (const theme of ['light', 'dark']) {
   await ctx.close();
 }
 await browser.close(); server.close();
-writeFileSync(join(here, 'last-run.json'), JSON.stringify(out, null, 1));
-let n = 0;
-for (const [r, themes] of Object.entries(out.routes)) for (const [theme, vs] of Object.entries(themes)) for (const v of vs) { n++; console.log(`${r} [${theme}] ${v.impact} ${v.id}: ${v.help} (${v.nodes.length} nodes) e.g. ${v.nodes[0].target}`); }
-console.log(n ? `${n} violation groups` : 'no axe violations');
+let n = 0, nodes = 0; const byImpact = {}, byRule = {};
+for (const [r, cfgs] of Object.entries(out.routes)) for (const [cfg, vs] of Object.entries(cfgs)) for (const v of vs) {
+  n++; nodes += v.nodes.length; byImpact[v.impact] = (byImpact[v.impact] || 0) + v.nodes.length; byRule[v.id] = (byRule[v.id] || 0) + v.nodes.length;
+  console.log(`${r} [${cfg}] ${v.impact} ${v.id}: ${v.help} (${v.nodes.length} nodes) e.g. ${v.nodes[0].target}`);
+}
+out.summary = { routes: routes.length, configs: CONFIGS.length, groups: n, nodes, byImpact, byRule };
+const outArg = argv.includes('--out') ? argv[argv.indexOf('--out') + 1] : null;
+writeFileSync(outArg || join(here, quick ? 'last-run-quick.json' : 'last-run.json'), JSON.stringify(out, null, 1));
+console.log(`${routes.length} routes x ${CONFIGS.length} configs: ${n} violation groups, ${nodes} nodes`, JSON.stringify(byImpact), JSON.stringify(byRule));
 for (const k of out.keyboard) console.log(k.ok ? 'ok  ' : 'FAIL', k.name, k.detail);
 process.exit(out.keyboard.some((k) => !k.ok) ? 1 : 0);

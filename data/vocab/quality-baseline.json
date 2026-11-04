@@ -1,0 +1,27 @@
+{
+ "note": "counts of tools/vocab/quality.py checks on the vocab5000 build BEFORE the round-2 refinement (same ranking pool, no overrides)",
+ "entries": 5000,
+ "counts": {
+  "gloss says 'form of' / spelling / alternative": 1,
+  "gloss has wiki markup or Hebrew letters": 3,
+  "gloss starts with a capital (not a proper noun)": 88,
+  "verb gloss not of the form 'to ...' (modals excluded)": 37,
+  "non-verb gloss starting 'to '": 0,
+  "yes/no/not typed as adverb, adjective or noun (should be particle)": 3,
+  "closed-class word (prep/conj/particle/det/intj/listed adverb) not marked as function": 163,
+  "function word filed under Misc Nouns / Adjectives with no function mark": 117,
+  "topic contradicts strict head-word table": 25,
+  "POS vs topic: verb not in Verbs / non-verb in Verbs": 0,
+  "religion / Jewish-life gloss with no tag": 62,
+  "noun in Misc Nouns (not function)": 1063,
+  "any entry in Misc Nouns": 1157,
+  "same unpointed spelling shared by several entries": 1419,
+  "...of which not cross-referenced (no sameSpelling)": 1419,
+  "noun that looks like the plural of another noun entry and is not marked isForm": 37,
+  "verb glossed as a passive/stative sense only (to be + participle)": 136,
+  "no vowel points (needsPointing)": 2,
+  "marked isForm (kept for rank stability)": 0,
+  "tagged 'rare-sense' / 'needs-check' by the curator": 0,
+  "hand-overridden (proofread still false)": 0
+ }
+}

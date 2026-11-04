@@ -80,3 +80,78 @@ test('essential topic words are reachable early', () => {
   for (const l of ['יום ראשון', 'ינואר', 'חורף', 'כחול', 'צפון', 'ימין']) assert.ok(g(l), l);
   assert.ok(g('כחול').tier <= 1000);
 });
+
+// ---- round 2: tags, function words, forms, overrides (data quality pass; still no native-speaker review)
+const OV = JSON.parse(fs.readFileSync(new URL('../data/vocab/overrides.json', import.meta.url), 'utf8'));
+const TAGSET = Object.keys(data.tags || {});
+const byId = new Map(E.map((e) => [e.id, e]));
+const entry = (lemma, pos) => E.filter((e) => e.lemma === lemma && (!pos || e.pos === pos)).sort((a, b) => a.rank - b.rank)[0];
+
+test('tags are drawn from the declared vocabulary; function words carry fn and the function tag', () => {
+  assert.ok(TAGSET.includes('function') && TAGSET.includes('jewish-life') && TAGSET.includes('prayer'));
+  for (const e of E) {
+    for (const t of e.tags || []) assert.ok(TAGSET.includes(t), `${e.rank} tag ${t}`);
+    assert.equal(!!e.fn, (e.tags || []).includes('function'), `fn/function mismatch at rank ${e.rank}`);
+  }
+  const fn = E.filter((e) => e.fn);
+  assert.ok(fn.length >= 150, `only ${fn.length} function words`);
+  for (const e of E) if (['prep', 'conj', 'particle', 'det', 'intj'].includes(e.pos)) assert.ok(e.fn, `${e.lemma} (${e.pos}) not flagged as function word`);
+});
+
+test('regressions reported by the UI review', () => {
+  assert.equal(entry('ב', 'prep').fn, 'preposition');
+  assert.equal(entry('ל', 'prep').fn, 'preposition');
+  assert.equal(entry('לא').pos, 'particle');
+  assert.equal(entry('בית', 'noun').topic, 'Home');
+  const he = entry('הוה', 'verb');
+  assert.ok(he.isForm && byId.get(he.formOf).lemma === 'היה');
+  assert.ok(!/constitute/.test(he.gloss));
+  assert.ok(byId.get(he.formOf).formIds.includes(he.id));
+  assert.ok(byId.get(he.formOf).rank < he.rank + 5);
+  assert.match(entry('היה', 'verb').gloss, /^to be/);
+  assert.ok(entry('הם', 'pron') && entry('מים', 'noun') && entry('כל'), 'basic function words/nouns must be present');
+  assert.equal(entry('קפה', 'noun').gloss, 'coffee');
+  assert.ok(E.some((e) => (e.tags || []).includes('jewish-life')) && E.some((e) => (e.tags || []).includes('prayer')));
+});
+
+test('non-function Misc Nouns share is below 16%, and verbs/non-verbs agree with topic', () => {
+  const misc = E.filter((e) => e.topic === 'Misc Nouns' && !e.fn);
+  assert.ok(misc.length / E.length < 0.16, `${misc.length}`);
+  for (const e of E) assert.equal(e.pos === 'verb', e.topic === 'Verbs', `${e.rank} ${e.lemma}`);
+  for (const e of E.filter((x) => x.pos === 'verb' && !x.isForm)) assert.match(e.gloss, /^(to |can\b)/, `${e.rank} ${e.lemma}: ${e.gloss}`);
+});
+
+test('forms: references resolve, forms[] entries are well formed', () => {
+  for (const e of E) {
+    if (e.isForm) { assert.ok(byId.has(e.formOf), e.id); assert.ok(byId.get(e.formOf).formIds.includes(e.id)); }
+    for (const id of e.formIds || []) assert.equal(byId.get(id).formOf, e.id);
+    for (const f of e.forms || []) { assert.match(f.he, /^[א-ת ]+$/); assert.ok(f.pointed === null || NIQ.test(f.pointed)); assert.ok(f.label); }
+    for (const id of e.sameSpelling || []) assert.equal(byId.get(id).lemma, e.lemma);
+  }
+  assert.ok(E.filter((e) => e.forms && e.forms.length).length >= 10);
+});
+
+test('overrides: every key exists or was displaced, lemma matches, nothing claims to be proofread, reasons present', () => {
+  let live = 0;
+  for (const [id, o] of Object.entries(OV.overrides)) {
+    assert.ok(o.reason !== undefined && o.lemma, id);
+    const e = byId.get(id);
+    if (!e) continue;
+    live++;
+    assert.equal(e.lemma, o.lemma, id);
+    assert.equal(e.overridden, true);
+    assert.equal(e.proofread, false);
+    if ('gloss' in o) assert.equal(e.gloss, o.gloss);
+  }
+  assert.ok(live >= 150, `${live} live overrides`);
+  for (const a of OV.additions) assert.ok(E.some((e) => e.lemma === a.lemma && e.pos === a.pos), `addition missing: ${a.lemma}`);
+});
+
+test('rank-sharing homographs: the more common pointed word holds the higher rank (swaps recorded in overrides)', () => {
+  for (const [id, o] of Object.entries(OV.overrides)) {
+    if (!o.swapRankWith) continue;
+    const a = byId.get(id), b = byId.get(o.swapRankWith);
+    assert.ok(a && b && a.lemma === b.lemma);
+    assert.ok(b.rank < a.rank, `${a.lemma}: ${b.gloss} should outrank ${a.gloss}`);
+  }
+});

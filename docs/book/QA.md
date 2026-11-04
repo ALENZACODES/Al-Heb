@@ -72,3 +72,31 @@ The colophon said the Noto licence file "still has to be added". The file was al
 
 ## Still placeholder
 All pictures (the quirky mnemonics included: prompts exist, no images), cover, QR host (alef.example.org), proofreading of hooks/anchor words/prayers/phrases, handwriting strokes.
+
+
+# Round 4 addendum (2026-11-04): corpus grew from 27 to 70 liturgy records
+
+## Decision
+Include all 70 texts (not a curated 27). Page count stays well under the 100-page ceiling, and the extra texts are the ones a learner meets first in a synagogue (Torah service, Amidah closings, Kiddush, Havdalah, Hanukkah). The prayers are now 5 chapters (`PRAYER_GROUPS` in book/build.mjs): Shema/Blessing/daily words (16 texts), **The Torah service** (18, its own chapter), Amidah/Kedushah/closing prayers (14), Shabbat/Psalms/table (18), Hanukkah (4). Any registry id not listed lands in an automatic "More prayers and verses" chapter, so new records cannot silently drop out. Each card footer now shows Hebrew source + licence, English source + licence, status, `proofread` and `typedFromMemory` flags (all 70 are proofread:false, typedFromMemory:false in the data), and the text tradition (nusach) where the record has one. Hebrew in cards over 300 / 700 characters is set smaller (12.5 / 10.5pt) and cards never split across pages.
+
+## Page counts (this build)
+| File | Pages |
+|---|---|
+| alef-book-draft.pdf (with cover) | 81 (was 68) |
+| alef-book-8.5x11-print.pdf, -print-bleed.pdf, -bleed-rtlspreads.pdf, -REVERSED-ingram-lulu.pdf | 80 each (79 content + 1 blank pad) |
+Interior layout: prayers pp. 45-64 (shema/blessing 45-48, Torah service 49-53, Amidah 54-58, Shabbat 59-63 and Hanukkah 64 start the page numbers shown in the contents), survival 65-77 area, index 78-79, colophon 80 (see the printed contents page for exact numbers).
+
+## Looked at by eye
+Contact sheets (55 dpi) of the KDP interior pages 41-64 and 73-80; full-page 80 dpi renders of the contents page (3) and page 50 (Berich shmei, Gadlu, Lecha Adonai). Not re-inspected this round: letter pages, remember chapter, vowels, survival pages before 73 (unchanged code; only their page numbers moved). The bleed, RTL and reversed files were rebuilt but only checked for page count.
+
+## Defects found and fixed
+1. First build let long cards (Berich shmei, Kaddish, Yigdal, Elohai netzor, Zachor) split across pages, with the Hebrew cut mid-prayer -> long cards stay whole and use smaller Hebrew.
+2. tests/book.build.test.js hard-coded 27/54 -> expected counts now come from LETTERS and the registry; added a check that every registry id is in exactly one prayer chapter.
+3. book/verify_qr.py reported the loop scale instead of the record key, and OpenCV's classic QR detector fails to decode one valid code (text_ashrei-84-5) -> reports the key, tries more scales and falls back to OpenCV's Aruco-based detector. All 97 codes (27 + 70) decode to their exact URLs.
+
+## Doubts / not checked
+- The Hebrew of the 43 new records was not read by a Hebrew reader; 5 records are still status transcribed-needs-check (vayehi-binsoa, vezot-hatorah, etz-chaim, yigdal, haftarah-after) and the page says so.
+- Texts come from three different nuschaot (Ashkenaz Metsudah, Edot HaMizrach, Sefard Torat Emet); the footers name it but the chapter intros only say "varies". Mixed in one chapter (Torah service: Ashkenaz plus Mizrahi haftarah blessings).
+- The companion app's /#/read/<id> route was not checked for the 43 new ids (other lane); the QR URLs are built from registry ids only.
+- Eyeballed at 10.5pt the longest Hebrew (Berich shmei, Yigdal, Haftarah) is small for a beginner; the niqqud looked intact at 55-80 dpi, not checked on paper.
+- The index now runs to two pages (second page half empty).

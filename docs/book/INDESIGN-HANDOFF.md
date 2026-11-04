@@ -14,7 +14,7 @@ InDesign **Middle Eastern edition**, World-Ready Paragraph Composer, RTL binding
 | Front matter: author's "Prayer for the One Who Begins" | book/opening-prayer.txt, rendered with a DRAFT flag: pending clergy/educator review |
 | Page 1 Priestly Blessing | from `data/corpus/registry.json` (bless-priestly-1..3) |
 | QR/URL per letter | `https://<host>/#/letters/<id>`; `letterUrl()` in build.mjs. QR codes are now generated (segno, SVG, one per letter page and per prayer; 54 decode back to their URLs in tests). Host is one value in `book/config.json`, still the placeholder `alef.example.org` |
-| Vowels, reading, prayers, survival chapters | generated from code points / registry; survival chapter = all 204 phrasebook entries; prayers chapter = all 27 registry texts with source/licence footers and 'not proofread' flags |
+| Vowels, reading, prayers, survival chapters | generated from code points / registry; survival chapter = all 204 phrasebook entries; prayers = all registry texts (70 at 2026-11-04), grouped into 5 chapters with the Torah service as its own with source/licence footers and 'not proofread' flags |
 
 ## Fonts
 Draft now embeds the OFL fonts in assets/fonts (Noto Serif Hebrew print face, Gveret Levin cursive, Frank Ruhl Libre fallback; niqqud placement checked visually, Noto Serif Hebrew chosen). Production: Adobe Fonts Hebrew (Adobe Hebrew or Noto Serif Hebrew for print; Playpen Sans Hebrew for the cursive-style look; confirm mark anchoring visually). Adobe Fonts may be embedded in PDF/EPUB but NOT in the app (app uses OFL fonts per lane 8). The cursive card uses Gveret Levin (OFL). Adobe Fonts are not needed for the draft.

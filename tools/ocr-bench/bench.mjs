@@ -56,7 +56,7 @@ const PSM_MODE = opt('psm', '6');
 const psmFor = (item) => (PSM_MODE === 'oracle' && item.lines.length === 1 ? 7 : 6);
 // The exact module the app ships (src/photo/engines/tesseract-browser.js) run inside headless Chromium via Playwright.
 const browserState = {};
-const browser = (name, preprocess) => async (file) => {
+const browser = (name, preprocess, extra = {}) => async (file) => {
   if (!browserState.page) {
     const { createAppServer } = await import('../serve.mjs');
     const req = createRequire(import.meta.url);
@@ -70,15 +70,17 @@ const browser = (name, preprocess) => async (file) => {
   const page = browserState.page;
   const b64 = readFileSync(file).toString('base64');
   const t0 = performance.now();
-  const boxes = await page.evaluate(async ({ b64, name, preprocess }) => {
-    const eng = (window.__eng[name] ||= window.__mod.createBrowserTesseract({ preprocess, psm: 6 }));
+  const boxes = await page.evaluate(async ({ b64, name, preprocess, extra }) => {
+    const eng = (window.__eng[name] ||= window.__mod.createBrowserTesseract({ preprocess, psm: 6, ...extra }));
     const bin = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
     return eng.ocr(new Blob([bin]));
-  }, { b64, name, preprocess });
+  }, { b64, name, preprocess, extra });
   return { boxes, ms: performance.now() - t0 };
 };
 const ENGINES = {
   'tess-browser': { desc: 'APP ENGINE: vendored tesseract.js 7 WASM in headless Chromium, tessdata_fast heb, psm 6, with src/photo/preprocess.js contrast normalisation', run: browser('pre', true) },
+  'tess-browser-deskew': { desc: 'app engine + deskew (projection profile)', run: browser('deskew', true, { deskew: true }) },
+  'tess-browser-deskew-bin': { desc: 'app engine + deskew + adaptive binarisation', run: browser('deskewbin', true, { deskew: true, binarize: true }) },
   'tess-browser-nopre': { desc: 'same, preprocessing OFF', run: browser('nopre', false) },
   'tess-cli-fast': { desc: 'tesseract 5.3.4 CLI, tessdata_fast heb (the system package copy), psm 7 single-line / 6 multi-line', run: cli(FAST, psmFor) },
   'tess-cli-best': { desc: 'tesseract 5.3.4 CLI, tessdata_best heb (3.7 MB), same psm', run: cli(BEST, psmFor) },

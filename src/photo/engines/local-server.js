@@ -2,6 +2,11 @@
 // Image bytes and text go to YOUR OWN machine (default http://127.0.0.1:8787), not a third party. Needs the server running.
 export const LOCAL_SERVER_DEFAULT = 'http://127.0.0.1:8787';
 
+/** Only loopback http(s) URLs are accepted as a "local helper", so a typo cannot send text or photos to a third party. */
+export function isLocalHelperUrl(u) {
+  try { const x = new URL(u); return (x.protocol === 'http:' || x.protocol === 'https:') && ['localhost', '127.0.0.1', '[::1]'].includes(x.hostname); } catch { return false; }
+}
+
 export function createLocalServer({ url = LOCAL_SERVER_DEFAULT, fetch: f = globalThis.fetch } = {}) {
   const post = async (path, init) => {
     if (typeof f !== 'function') throw new Error('no fetch available');

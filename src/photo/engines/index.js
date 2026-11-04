@@ -15,12 +15,12 @@ let sharedBrowserOcr = null; // one WASM worker for the page's lifetime
  * @param {{online?:boolean, localServerUrl?:string|null, useLocalOcr?:boolean, preprocess?:boolean, psm?:number, onProgress?:Function, fetch?:Function, tesseractLoader?:Function}} [o]
  * @returns engine bundle for runPipeline (+ `.disclosure`: plain-language list of what leaves the device)
  */
-export function createPhotoEngines({ online = false, localServerUrl = null, useLocalOcr = false, preprocess = true, psm = 6, onProgress, fetch: f, tesseractLoader } = {}) {
+export function createPhotoEngines({ online = false, localServerUrl = null, useLocalOcr = false, preprocess = true, deskew = true, psm = 6, onProgress, fetch: f, tesseractLoader } = {}) {
   const local = localServerUrl ? createLocalServer({ url: localServerUrl, fetch: f }) : null;
   let ocrPart;
   if (local && useLocalOcr) ocrPart = local.ocr;
   else {
-    if (!sharedBrowserOcr || tesseractLoader) sharedBrowserOcr = createBrowserTesseract({ preprocess, psm, onProgress, loader: tesseractLoader });
+    if (!sharedBrowserOcr || tesseractLoader) sharedBrowserOcr = createBrowserTesseract({ preprocess, deskew, psm, onProgress, loader: tesseractLoader });
     ocrPart = sharedBrowserOcr;
   }
   const parts = { ocr: ocrPart };

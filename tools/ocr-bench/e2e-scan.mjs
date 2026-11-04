@@ -31,6 +31,12 @@ export async function runScan({ image, mode = 'prayer', shot, online = false, ti
       matches: [...document.querySelectorAll('.photo-match')].map((n) => n.textContent),
       english: [...document.querySelectorAll('.photo-english')].map((n) => n.textContent),
       warns: [...document.querySelectorAll('.photo-warn')].map((n) => n.textContent),
+      accuracyNotice: document.querySelector('.photo-accuracy')?.textContent ?? null,
+      noTranslation: document.querySelector('.photo-no-translation')?.textContent ?? null,
+      translateSetup: !!document.querySelector('.photo-translate-setup'),
+      translitRows: [...document.querySelectorAll('.photo-translit')].map((d) => [...d.querySelectorAll('dt,dd')].map((n) => n.textContent)),
+      letterButtons: document.querySelectorAll('.photo-letter').length, hearButtons: document.querySelectorAll('.photo-hear').length,
+      missingEnglish: [...document.querySelectorAll('.photo-english-missing')].map((n) => n.textContent),
       engines: document.querySelector('.photo-engines')?.textContent, text: document.querySelector('.photo-out').textContent.slice(0, 200),
     }));
     if (shot) await page.screenshot({ path: shot, fullPage: true });

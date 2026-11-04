@@ -1,6 +1,8 @@
 # Photo feature: engines, status, and benchmark protocol (Lane 6)
 
-**Status in one line (updated round 2, 2026-11-04):** the scan view now runs a REAL in-browser Tesseract (vendored tesseract.js 7 + `heb`, about 5 MB, lazy) and an opt-in online vowelizer (Dicta Nakdan, live-tested). Both were measured only on SYNTHETIC rendered images (see `BENCHMARK.md`: app engine 85.2% consonant character accuracy there). **Accuracy on real photos is unknown.** Translation exists only through an optional local helper (Argos, `tools/ocr-server.mjs`); the default browser setup has none. No IPA engine. The mock engine remains for tests/demo (`ctx.photoEngines`).
+**Status in one line (updated round 2, 2026-11-04):** the scan view now runs a REAL in-browser Tesseract (vendored tesseract.js 7 + `heb`, about 5 MB, lazy) and an opt-in online vowelizer (Dicta Nakdan, live-tested). Both were measured only on SYNTHETIC rendered images (see `BENCHMARK.md`: app engine 88.4% consonant character accuracy there with deskew, 85.2% before). **Accuracy on real photos is unknown.** Translation exists only through an optional local helper (Argos, `tools/ocr-server.mjs`); the default browser setup has none. No IPA engine. The mock engine remains for tests/demo (`ctx.photoEngines`).
+
+Round 3 adds: deskew in the default browser OCR (88.4% synthetic char accuracy, was 85.2%; BENCHMARK.md), `src/photo/word-card.js` (letters + names, syllables, 3-tradition transliteration via lane 3, audio hook), an always-visible accuracy notice, a per-line 'translation unavailable offline' message and an opt-in localhost-only translation helper box (docs/photo/TRANSLATION.md).
 
 Round 2 adds: `src/photo/engines/index.js` (provider `createPhotoEngines`), `tesseract-browser.js`, `local-server.js`, `src/photo/preprocess.js`, corrected Nakdan adapter in `web.js`, lane-3 shva adapter in `syllabify.js` (`loadLane3Shva`, passed to `runPipeline` as `shvaClassifier`).
 

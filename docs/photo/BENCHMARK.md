@@ -68,6 +68,18 @@ Good on full sentences ("Where is the hospital?", "How much will it cost?"). Poo
 - LibreTranslate public instance: needs a paid API key (HTTP 400 "get an API key"). Google Cloud Translation / Microsoft / DeepL: need credentials, not tried. Argos model licence not verified.
 - Browser feasibility: a 132 MB ctranslate2 model is not a sensible browser download, so translation is available only through the optional local helper (`tools/ocr-server.mjs`). In the default browser setup there is **no translation**; the UI says so per line.
 
+## Round 3 (2026-11-04): deskew and a binarisation experiment, same SYNTHETIC set
+Re-run of all engines on the same 145 synthetic images (not photos). New: `deskew()` in `src/photo/preprocess.js` (projection-profile tilt estimate, +-10 degrees, applied only if the estimate is >= 0.8 degrees with confidence >= 1.02; thresholds fixed in advance, not tuned, but the algorithm was developed while looking at this set, so treat the gain as optimistic) and `adaptiveBinarize()` (local-mean threshold).
+| Engine | char acc % | word recall % | exact line % | niqqud kept % |
+|---|---|---|---|---|
+| app engine + deskew (NEW DEFAULT) | 88.4 | 73.0 | 65.5 | 53.6 |
+| app engine (contrast normalisation only, round 2) | 85.2 | 69.9 | 63.4 | 50.1 |
+| app engine + deskew + adaptive binarisation | 82.1 | 66.9 | 40.7 | 51.8 |
+| tesseract.js, no preprocessing | 80.8 | 64.6 | 55.2 | 47.5 |
+| Tesseract CLI fast / best | 80.8 / 80.6 | 64.8 / 63.8 | 53.1 / 55.9 | 47.6 / 37.2 |
+By variant with deskew (char acc %): clean 82.1, noise 89.6, blur 94.8, **rotate 74.0 -> 88.9**, perspective 87.6 -> 87.9, low contrast 90.9. All the gain is on the rotated images (which are synthetic +-4 to 6 degrees); nothing else moved. Binarisation hurt (noise 77.4, blur 82.0) and is NOT enabled. Prayer matching at 0.75: line top-1 80.0 -> 85.3 %, sign false accept 0 %, 4 wrongly accepted lines (unchanged); at 0.90 top-1 65.3 %. Still short of the decision rule (CER <= 5%): 11.6% CER here. Deskew does nothing for curved pages or perspective. Unknown on real photos, where lines may be curved and tilt may vary across the page.
+Run: `node tools/ocr-bench/bench.mjs --engines tess-browser,tess-browser-deskew,tess-browser-deskew-bin`. Timing impact is within noise (p50 49 -> 53 ms on this loaded machine).
+
 ## Run it on 50 real photos
 1. Take about 50 photos on real phones (suggested: 20 siddur/Chumash pages, 15 signs, 10 menus, 5 hard cases: curved page, low light, shadow). Put the JPEG/PNG files in `data/photo/real/images/` (this repo ignores nothing there; do not commit photos of people or private documents).
 2. `node tools/ocr-bench/make-template.mjs data/photo/real` creates `data/photo/real/ground-truth.json`.

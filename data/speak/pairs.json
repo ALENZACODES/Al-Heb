@@ -621,6 +621,72 @@
    "audioId": null
   },
   {
+   "id": "het-khaf:he0cb7690",
+   "contrast": "het-khaf",
+   "type": "pair",
+   "he": "סָכַר",
+   "en": "to dam, to block, to close",
+   "translit": "sakhar",
+   "answer": "khaf",
+   "slot": 1,
+   "marked": [
+    {
+     "text": "ס",
+     "mark": false
+    },
+    {
+     "text": "?",
+     "mark": true
+    },
+    {
+     "text": "ר",
+     "mark": false
+    }
+   ],
+   "audioId": null,
+   "pair": "pair-het-khaf-he0cb7690-h7e46f0f4",
+   "other": {
+    "id": "het-khaf:h7e46f0f4",
+    "he": "סָחַר",
+    "en": "to trade",
+    "translit": "sachar",
+    "answer": "het"
+   }
+  },
+  {
+   "id": "het-khaf:h7e46f0f4",
+   "contrast": "het-khaf",
+   "type": "pair",
+   "he": "סָחַר",
+   "en": "to trade",
+   "translit": "sachar",
+   "answer": "het",
+   "slot": 1,
+   "marked": [
+    {
+     "text": "ס",
+     "mark": false
+    },
+    {
+     "text": "?",
+     "mark": true
+    },
+    {
+     "text": "ר",
+     "mark": false
+    }
+   ],
+   "audioId": null,
+   "pair": "pair-het-khaf-he0cb7690-h7e46f0f4",
+   "other": {
+    "id": "het-khaf:he0cb7690",
+    "he": "סָכַר",
+    "en": "to dam, to block, to close",
+    "translit": "sakhar",
+    "answer": "khaf"
+   }
+  },
+  {
    "id": "het-khaf:h66252016",
    "contrast": "het-khaf",
    "type": "sound",
@@ -1985,64 +2051,6 @@
    }
   },
   {
-   "id": "kamatz:h24e7e49f",
-   "contrast": "kamatz",
-   "type": "pair",
-   "he": "נָגַהּ",
-   "en": "to shine, to radiate light",
-   "translit": "nagah",
-   "answer": "a",
-   "slot": 0,
-   "marked": [
-    {
-     "text": "נ",
-     "mark": true
-    },
-    {
-     "text": "גה",
-     "mark": false
-    }
-   ],
-   "audioId": null,
-   "pair": "pair-kamatz-h24e7e49f-hb26d7041",
-   "other": {
-    "id": "kamatz:hb26d7041",
-    "he": "נֹגַהּ",
-    "en": "shine, shimmer, light",
-    "translit": "nogah",
-    "answer": "o"
-   }
-  },
-  {
-   "id": "kamatz:hb26d7041",
-   "contrast": "kamatz",
-   "type": "pair",
-   "he": "נֹגַהּ",
-   "en": "shine, shimmer, light",
-   "translit": "nogah",
-   "answer": "o",
-   "slot": 0,
-   "marked": [
-    {
-     "text": "נ",
-     "mark": true
-    },
-    {
-     "text": "גה",
-     "mark": false
-    }
-   ],
-   "audioId": null,
-   "pair": "pair-kamatz-h24e7e49f-hb26d7041",
-   "other": {
-    "id": "kamatz:h24e7e49f",
-    "he": "נָגַהּ",
-    "en": "to shine, to radiate light",
-    "translit": "nagah",
-    "answer": "a"
-   }
-  },
-  {
    "id": "kamatz:h364cadf4",
    "contrast": "kamatz",
    "type": "sound",
@@ -2559,6 +2567,122 @@
    "audioId": null
   },
   {
+   "id": "shin-sin:h39d32f55",
+   "contrast": "shin-sin",
+   "type": "pair",
+   "he": "שָׂם",
+   "en": "to put, place",
+   "translit": "sam",
+   "answer": "s",
+   "slot": 0,
+   "marked": [
+    {
+     "text": "ש",
+     "mark": true
+    },
+    {
+     "text": "ם",
+     "mark": false
+    }
+   ],
+   "audioId": "aleinu-1-w18",
+   "pair": "pair-shin-sin-h39d32f55-h8e3fbf43",
+   "other": {
+    "id": "shin-sin:h8e3fbf43",
+    "he": "שָׁם",
+    "en": "to assess, appraise",
+    "translit": "sham",
+    "answer": "sh"
+   }
+  },
+  {
+   "id": "shin-sin:h8e3fbf43",
+   "contrast": "shin-sin",
+   "type": "pair",
+   "he": "שָׁם",
+   "en": "to assess, appraise",
+   "translit": "sham",
+   "answer": "sh",
+   "slot": 0,
+   "marked": [
+    {
+     "text": "ש",
+     "mark": true
+    },
+    {
+     "text": "ם",
+     "mark": false
+    }
+   ],
+   "audioId": null,
+   "pair": "pair-shin-sin-h39d32f55-h8e3fbf43",
+   "other": {
+    "id": "shin-sin:h39d32f55",
+    "he": "שָׂם",
+    "en": "to put, place",
+    "translit": "sam",
+    "answer": "s"
+   }
+  },
+  {
+   "id": "shin-sin:h84ac4111",
+   "contrast": "shin-sin",
+   "type": "pair",
+   "he": "שָׂרָה",
+   "en": "to be or become great, prince-like",
+   "translit": "sarah",
+   "answer": "s",
+   "slot": 0,
+   "marked": [
+    {
+     "text": "ש",
+     "mark": true
+    },
+    {
+     "text": "רה",
+     "mark": false
+    }
+   ],
+   "audioId": null,
+   "pair": "pair-shin-sin-h84ac4111-h64bf2c76",
+   "other": {
+    "id": "shin-sin:h64bf2c76",
+    "he": "שָׁרָה",
+    "en": "to let loose",
+    "translit": "sharah",
+    "answer": "sh"
+   }
+  },
+  {
+   "id": "shin-sin:h64bf2c76",
+   "contrast": "shin-sin",
+   "type": "pair",
+   "he": "שָׁרָה",
+   "en": "to let loose",
+   "translit": "sharah",
+   "answer": "sh",
+   "slot": 0,
+   "marked": [
+    {
+     "text": "ש",
+     "mark": true
+    },
+    {
+     "text": "רה",
+     "mark": false
+    }
+   ],
+   "audioId": null,
+   "pair": "pair-shin-sin-h84ac4111-h64bf2c76",
+   "other": {
+    "id": "shin-sin:h84ac4111",
+    "he": "שָׂרָה",
+    "en": "to be or become great, prince-like",
+    "translit": "sarah",
+    "answer": "s"
+   }
+  },
+  {
    "id": "shin-sin:h0b68ab3e",
    "contrast": "shin-sin",
    "type": "pair",
@@ -2680,6 +2804,246 @@
     "en": "flammable, combustible",
     "translit": "sarif",
     "answer": "s"
+   }
+  },
+  {
+   "id": "shin-sin:h6d523a2c",
+   "contrast": "shin-sin",
+   "type": "pair",
+   "he": "פָּרַשׂ",
+   "en": "to spread",
+   "translit": "paras",
+   "answer": "s",
+   "slot": 2,
+   "marked": [
+    {
+     "text": "פר",
+     "mark": false
+    },
+    {
+     "text": "ש",
+     "mark": true
+    }
+   ],
+   "audioId": null,
+   "pair": "pair-shin-sin-h6d523a2c-h46715ceb",
+   "other": {
+    "id": "shin-sin:h46715ceb",
+    "he": "פָּרַשׁ",
+    "en": "to retire",
+    "translit": "parash",
+    "answer": "sh"
+   }
+  },
+  {
+   "id": "shin-sin:h46715ceb",
+   "contrast": "shin-sin",
+   "type": "pair",
+   "he": "פָּרַשׁ",
+   "en": "to retire",
+   "translit": "parash",
+   "answer": "sh",
+   "slot": 2,
+   "marked": [
+    {
+     "text": "פר",
+     "mark": false
+    },
+    {
+     "text": "ש",
+     "mark": true
+    }
+   ],
+   "audioId": null,
+   "pair": "pair-shin-sin-h6d523a2c-h46715ceb",
+   "other": {
+    "id": "shin-sin:h6d523a2c",
+    "he": "פָּרַשׂ",
+    "en": "to spread",
+    "translit": "paras",
+    "answer": "s"
+   }
+  },
+  {
+   "id": "shin-sin:h168cbbab",
+   "contrast": "shin-sin",
+   "type": "pair",
+   "he": "שִׁבֵּר",
+   "en": "to shatter (break violently)",
+   "translit": "shiber",
+   "answer": "sh",
+   "slot": 0,
+   "marked": [
+    {
+     "text": "ש",
+     "mark": true
+    },
+    {
+     "text": "בר",
+     "mark": false
+    }
+   ],
+   "audioId": null,
+   "pair": "pair-shin-sin-h168cbbab-h61abc368",
+   "other": {
+    "id": "shin-sin:h61abc368",
+    "he": "שִׂבֵּר",
+    "en": "to wait",
+    "translit": "siber",
+    "answer": "s"
+   }
+  },
+  {
+   "id": "shin-sin:h61abc368",
+   "contrast": "shin-sin",
+   "type": "pair",
+   "he": "שִׂבֵּר",
+   "en": "to wait",
+   "translit": "siber",
+   "answer": "s",
+   "slot": 0,
+   "marked": [
+    {
+     "text": "ש",
+     "mark": true
+    },
+    {
+     "text": "בר",
+     "mark": false
+    }
+   ],
+   "audioId": null,
+   "pair": "pair-shin-sin-h168cbbab-h61abc368",
+   "other": {
+    "id": "shin-sin:h168cbbab",
+    "he": "שִׁבֵּר",
+    "en": "to shatter (break violently)",
+    "translit": "shiber",
+    "answer": "sh"
+   }
+  },
+  {
+   "id": "shin-sin:h4938d491",
+   "contrast": "shin-sin",
+   "type": "pair",
+   "he": "שָׁגָה",
+   "en": "to err",
+   "translit": "shagah",
+   "answer": "sh",
+   "slot": 0,
+   "marked": [
+    {
+     "text": "ש",
+     "mark": true
+    },
+    {
+     "text": "גה",
+     "mark": false
+    }
+   ],
+   "audioId": null,
+   "pair": "pair-shin-sin-h4938d491-h3f10949b",
+   "other": {
+    "id": "shin-sin:h3f10949b",
+    "he": "שָׂגָה",
+    "en": "to prosper, to flourish",
+    "translit": "sagah",
+    "answer": "s"
+   }
+  },
+  {
+   "id": "shin-sin:h3f10949b",
+   "contrast": "shin-sin",
+   "type": "pair",
+   "he": "שָׂגָה",
+   "en": "to prosper, to flourish",
+   "translit": "sagah",
+   "answer": "s",
+   "slot": 0,
+   "marked": [
+    {
+     "text": "ש",
+     "mark": true
+    },
+    {
+     "text": "גה",
+     "mark": false
+    }
+   ],
+   "audioId": null,
+   "pair": "pair-shin-sin-h4938d491-h3f10949b",
+   "other": {
+    "id": "shin-sin:h4938d491",
+    "he": "שָׁגָה",
+    "en": "to err",
+    "translit": "shagah",
+    "answer": "sh"
+   }
+  },
+  {
+   "id": "shin-sin:hac3f3a1b",
+   "contrast": "shin-sin",
+   "type": "pair",
+   "he": "הִשְׁתַּכֵּר",
+   "en": "to become drunk",
+   "translit": "hishtaker",
+   "answer": "sh",
+   "slot": 1,
+   "marked": [
+    {
+     "text": "ה",
+     "mark": false
+    },
+    {
+     "text": "ש",
+     "mark": true
+    },
+    {
+     "text": "תכר",
+     "mark": false
+    }
+   ],
+   "audioId": null,
+   "pair": "pair-shin-sin-hac3f3a1b-h246d018e",
+   "other": {
+    "id": "shin-sin:h246d018e",
+    "he": "הִשְׂתַּכֵּר",
+    "en": "to profit, make money",
+    "translit": "histaker",
+    "answer": "s"
+   }
+  },
+  {
+   "id": "shin-sin:h246d018e",
+   "contrast": "shin-sin",
+   "type": "pair",
+   "he": "הִשְׂתַּכֵּר",
+   "en": "to profit, make money",
+   "translit": "histaker",
+   "answer": "s",
+   "slot": 1,
+   "marked": [
+    {
+     "text": "ה",
+     "mark": false
+    },
+    {
+     "text": "ש",
+     "mark": true
+    },
+    {
+     "text": "תכר",
+     "mark": false
+    }
+   ],
+   "audioId": null,
+   "pair": "pair-shin-sin-hac3f3a1b-h246d018e",
+   "other": {
+    "id": "shin-sin:hac3f3a1b",
+    "he": "הִשְׁתַּכֵּר",
+    "en": "to become drunk",
+    "translit": "hishtaker",
+    "answer": "sh"
    }
   },
   {
@@ -2859,27 +3223,6 @@
    "audioId": null
   },
   {
-   "id": "shin-sin:h8e3fbf43",
-   "contrast": "shin-sin",
-   "type": "sound",
-   "he": "שָׁם",
-   "en": "to assess, appraise",
-   "translit": "sham",
-   "answer": "sh",
-   "slot": 0,
-   "marked": [
-    {
-     "text": "ש",
-     "mark": true
-    },
-    {
-     "text": "ם",
-     "mark": false
-    }
-   ],
-   "audioId": null
-  },
-  {
    "id": "shin-sin:hf9a1a55b",
    "contrast": "shin-sin",
    "type": "sound",
@@ -2937,6 +3280,31 @@
     },
     {
      "text": "הה",
+     "mark": false
+    }
+   ],
+   "audioId": null
+  },
+  {
+   "id": "shin-sin:h29ebe493",
+   "contrast": "shin-sin",
+   "type": "sound",
+   "he": "קָשֶׁה",
+   "en": "hard (resistant to pressure)",
+   "translit": "kasheh",
+   "answer": "sh",
+   "slot": 1,
+   "marked": [
+    {
+     "text": "ק",
+     "mark": false
+    },
+    {
+     "text": "ש",
+     "mark": true
+    },
+    {
+     "text": "ה",
      "mark": false
     }
    ],
@@ -3194,12 +3562,12 @@
    "audioId": null
   },
   {
-   "id": "shin-sin:h84ac4111",
+   "id": "shin-sin:h264da105",
    "contrast": "shin-sin",
    "type": "sound",
-   "he": "שָׂרָה",
-   "en": "to be or become great, prince-like",
-   "translit": "sarah",
+   "he": "שָׂבַע",
+   "en": "to be sated",
+   "translit": "sava",
    "answer": "s",
    "slot": 0,
    "marked": [
@@ -3208,7 +3576,7 @@
      "mark": true
     },
     {
-     "text": "רה",
+     "text": "בע",
      "mark": false
     }
    ],

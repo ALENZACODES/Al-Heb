@@ -41,7 +41,7 @@ TASK: generate 11 separate images in STYLE GUIDE v1, in this order. Each item gi
 
 RULES (again):
 - NEVER put any text in any image: no Hebrew, no nikkud, no Latin letters, no numerals, no logos. Signs, screens, pages, books, labels and scrolls stay completely blank.
-- ChatGPT only offers 1:1, 3:2 and 2:3: follow the size hint on each item.
+- Your image tool may only offer 1:1, 3:2 and 2:3: follow the size hint on each item.
 - Generate exactly 11 separate images, one per numbered item, each as its own image (never a collage or grid). Do not skip or merge items.
 
 When all images are done, reply ONLY with the numbered list of filenames (item number, exact filename) and the count, then STOP and wait for me to say "next". Do not start any other command.

@@ -106,15 +106,19 @@ export function coerceState(raw) {
 
 /**
  * Record one attempt (input untouched). kind 'say' (Say it) or 'pair' (listening drill).
- * a = {kind, set, itemId, he, mode, outcome, score?, heard?, contrast?, correct?, chosen?}.
+ * a = {kind, set, itemId, he, mode, outcome, score?, heard?, contrast?, correct?, tradition?, rating? (shadowing 1-3), missedWords?}.
+ * kind 'read' = a line read aloud (set = prayer id, itemId = line number); kind 'shadow' = listen-and-repeat self-rated 1-3.
  */
 export function recordAttempt(state, a, now) {
   const s = coerceState(state);
   const entry = { at: +now, kind: a.kind || 'say', set: a.set ?? null, itemId: a.itemId ?? null, he: normalizeHe(a.he), mode: a.mode || 'self', outcome: a.outcome };
   if (typeof a.score === 'number') entry.score = Math.round(a.score * 100) / 100;
-  if (a.heard) entry.heard = String(a.heard).slice(0, 80);
+  if (a.heard) entry.heard = String(a.heard).slice(0, a.kind === 'read' ? 400 : 80);
   if (a.contrast) entry.contrast = a.contrast;
   if (typeof a.correct === 'boolean') entry.correct = a.correct;
+  if (a.tradition) entry.tradition = String(a.tradition);
+  if (typeof a.rating === 'number') entry.rating = Math.max(1, Math.min(3, Math.round(a.rating)));
+  if (Array.isArray(a.missedWords)) entry.missedWords = a.missedWords.slice(0, 12).map((w) => String(w).slice(0, 24));
   const attempts = s.attempts.concat(entry);
   return { ...s, attempts: attempts.length > MAX_ATTEMPTS ? attempts.slice(attempts.length - MAX_ATTEMPTS) : attempts };
 }
@@ -151,7 +155,8 @@ export function soundClass(letter) {
   for (const c of SOUND_CLASSES) if (c.letters.includes(letter)) return c.id;
   return 'other';
 }
-export const soundLabel = (id) => (SOUND_CLASSES.find((c) => c.id === id) || { label: id }).label;
+const PAIR_LABELS = { 'kaf-khaf': 'kaf / khaf', 'pe-fe': 'pe / fe', 'tav-sav': 'tav / sav', 'tzere-segol': 'tzere / segol', 'kamatz-patach': 'kamatz / patach', 'alef-ayin': 'alef / ayin (glottal or silent)' };
+export const soundLabel = (id) => (SOUND_CLASSES.find((c) => c.id === id) || { label: PAIR_LABELS[id] || id }).label;
 
 /**
  * Align target letters against heard letters (edit-distance backtrace). Returns per target letter {letter, hit}: hit = the same
@@ -198,4 +203,57 @@ export function dailyTotals(attempts, dayKey = (t) => new Date(t).toISOString().
   const days = new Map();
   for (const a of attempts || []) { const k = dayKey(a.at); const d = days.get(k) || { day: k, say: 0, good: 0, drills: 0, drillRight: 0 }; if (a.kind === 'pair') { d.drills++; if (a.correct) d.drillRight++; } else { d.say++; if (a.outcome === 'match' || a.outcome === 'said') d.good++; } days.set(k, d); }
   return [...days.values()].sort((x, y) => y.day.localeCompare(x.day));
+}
+
+
+// ---- Word-level comparison for reading aloud ---------------------------------------------------------------------------
+// A prayer line is compared with what the recognizer wrote, word by word (letters only). Words are aligned by edit distance
+// over WORDS (a substitution costs 1 - similarity), so one missed word does not shift the rest of the line.
+
+export const NEAR_WORD = 0.7;
+/** Words of a line, letters only (maqaf and spaces split; punctuation gone). */
+export const wordsOf = (s) => normalizeHe(s).split(' ').filter(Boolean);
+const wordScore = (a, b) => (a === b || skeleton(a) === skeleton(b) ? 1 : Math.max(0, similarity(a, b)));
+
+/**
+ * Align target words with heard words. Returns [{word, heard, score, status}] in target order; status 'hit' (same letters, vav/yod
+ * tolerant), 'near' (score >= NEAR_WORD) or 'miss' (not heard, or too different). `target` and `heard` are raw strings.
+ */
+export function alignWords(target, heard) {
+  const a = wordsOf(target), b = wordsOf(heard);
+  const n = a.length, m = b.length;
+  const cost = (i, j) => 1 - wordScore(a[i], b[j]);
+  const d = Array.from({ length: n + 1 }, (_, i) => { const r = new Array(m + 1).fill(0); r[0] = i; return r; });
+  for (let j = 1; j <= m; j++) d[0][j] = j;
+  for (let i = 1; i <= n; i++) for (let j = 1; j <= m; j++) d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + cost(i - 1, j - 1));
+  const out = new Array(n);
+  let i = n, j = m;
+  while (i > 0) {
+    if (j > 0 && Math.abs(d[i][j] - (d[i - 1][j - 1] + cost(i - 1, j - 1))) < 1e-9) { const sc = wordScore(a[i - 1], b[j - 1]); out[i - 1] = { word: a[i - 1], heard: b[j - 1], score: sc, status: sc >= 1 ? 'hit' : sc >= NEAR_WORD ? 'near' : 'miss' }; i--; j--; }
+    else if (Math.abs(d[i][j] - (d[i - 1][j] + 1)) < 1e-9) { out[i - 1] = { word: a[i - 1], heard: null, score: 0, status: 'miss' }; i--; }
+    else j--;
+  }
+  return out;
+}
+
+/** Best of several recognizer alternatives for a line: {words, hit, near, miss, score, outcome, heard}. outcome match = every word hit; close = >= 70% of words hit or near. */
+export function compareLine(target, heard) {
+  const alts = (Array.isArray(heard) ? heard : [heard]).map((h) => String(h ?? '')).filter((h) => h.trim());
+  let best = null;
+  for (const h of alts.length ? alts : ['']) {
+    const words = alignWords(target, h);
+    const hit = words.filter((w) => w.status === 'hit').length, near = words.filter((w) => w.status === 'near').length;
+    const score = words.length ? (hit + 0.5 * near) / words.length : 0;
+    const cand = { words, hit, near, miss: words.length - hit - near, score, heard: h };
+    if (!best || cand.score > best.score) best = cand;
+  }
+  best.outcome = best.words.length && best.hit === best.words.length ? 'match' : (best.hit + best.near) / (best.words.length || 1) >= CLOSE_SCORE ? 'close' : 'miss';
+  return best;
+}
+
+/** Words missed most often when reading aloud: [{word, count}] with count >= min, most missed first. */
+export function missedWordsReport(attempts, { min = 2, limit = 8 } = {}) {
+  const c = new Map();
+  for (const a of attempts || []) if (a.kind === 'read' && Array.isArray(a.missedWords)) for (const w of a.missedWords) c.set(w, (c.get(w) || 0) + 1);
+  return [...c].map(([word, count]) => ({ word, count })).filter((x) => x.count >= min).sort((x, y) => y.count - x.count || x.word.localeCompare(y.word)).slice(0, limit);
 }

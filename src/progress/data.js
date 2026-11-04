@@ -29,5 +29,7 @@ export async function loadProgressData() {
     loadJSON('data/service/orders.json').catch(() => null), // missing file: no siddur coverage line
     loadCorpus(),
   ]);
-  return { lessons: lessonsFile.lessons, belts, milestones, gates: mergeTimedReadGates(beltGates, timedGates), orders, registry: corpus.allTexts(), phrases: corpus.allPhrases() };
+  const ladder = await loadJSON('data/firstday/ladder.json').catch(() => null); // missing file: no first-day ladder row
+  const personal = await loadJSON('data/progress/personal-milestones.json').catch(() => null); // missing file: no Milestones list
+  return { lessons: lessonsFile.lessons, belts, milestones, gates: mergeTimedReadGates(beltGates, timedGates), orders, ladder, personal, registry: corpus.allTexts(), phrases: corpus.allPhrases() };
 }

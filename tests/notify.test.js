@@ -56,9 +56,9 @@ test("requestPermission(): unsupported without Notification; otherwise returns w
 
 test("normalizePrefs: defaults, clamping, de-duplicated sorted days, unknown keys dropped", () => {
   const d = N.normalizePrefs(null);
-  assert.deepEqual(d, { v: 1, enabled: false, hour: 19, minute: 0, days: [0, 1, 2, 3, 4, 6], shabbatQuiet: true });
+  assert.deepEqual(d, { v: 1, enabled: false, hour: 19, minute: 0, days: [0, 1, 2, 3, 4, 6], shabbatQuiet: true, yomTovQuiet: true });
   const p = N.normalizePrefs({ enabled: true, hour: 25, minute: 7, days: [6, 6, 2, 9, -1, "x"], shabbatQuiet: false, junk: 1 });
-  assert.deepEqual(p, { v: 1, enabled: true, hour: 19, minute: 7, days: [2, 6], shabbatQuiet: false });
+  assert.deepEqual(p, { v: 1, enabled: true, hour: 19, minute: 7, days: [2, 6], shabbatQuiet: false, yomTovQuiet: true });
   assert.deepEqual(N.normalizePrefs({ days: [] }).days, []);
   assert.equal(N.normalizePrefs("nonsense").enabled, false);
 });
@@ -378,4 +378,73 @@ test("card: with a calendar city the quiet note names it and the offsets; the Sh
   await waitFor(() => N.status().next?.getTime() === local(2026, 11, 7, 12, 0));
   assert.match(byId(root, "nt-next").text, /Next reminder/);
   unmount();
+});
+
+// ---------- Yom Tov quiet hours ----------
+const when = (iso) => new Date(iso);
+const tor = toronto;
+const insideYT = (iso, o) => N.isYomTov(when(iso), tor, o);
+
+test("Rosh Hashanah 2026 (Sat 12 Sep, Reform one day): quiet from Friday candle lighting to Saturday nightfall, not after", () => {
+  const w = N.yomTovWindow(when("2026-09-12T15:00:00Z"), tor);
+  assert.equal(w.id, "rosh-hashanah");
+  assert.equal(C.formatTime(C.floorToMinute(w.start), "America/Toronto"), "19:16"); // sunset 19:34 minus 18
+  assert.equal(insideYT("2026-09-11T23:00:00Z"), false, "Friday 19:00 local, before candle lighting");
+  assert.equal(insideYT("2026-09-11T23:20:00Z"), true);
+  assert.equal(insideYT("2026-09-12T15:00:00Z"), true);
+  assert.equal(insideYT("2026-09-13T01:00:00Z"), false, "Saturday 21:00 local is after nightfall (about 20:15)");
+  assert.equal(insideYT("2026-09-13T15:00:00Z"), false, "Sunday: the optional second day is NOT quiet under Reform");
+  assert.equal(insideYT("2026-09-13T15:00:00Z", { mode: "traditional" }), true, "traditional: second day quiet");
+  assert.equal(insideYT("2026-09-13T15:00:00Z", { mode: "israel" }), true, "calendar lists two days in Israel mode");
+});
+
+test("Sukkot 2026: only the first day (Sat 26 Sep) is yom tov; Chol HaMoed is not; Shemini Atzeret 3 Oct is", () => {
+  assert.equal(N.yomTovWindow(when("2026-09-26T15:00:00Z"), tor).id, "sukkot");
+  assert.equal(insideYT("2026-09-25T23:00:00Z"), true, "Friday 19:00 local is after candle lighting (about 18:51)");
+  assert.equal(insideYT("2026-09-27T15:00:00Z"), false, "Sunday, second day of Sukkot, Chol HaMoed");
+  for (const d of ["28", "29", "30"]) assert.equal(insideYT(`2026-09-${d}T15:00:00Z`), false);
+  assert.equal(insideYT("2026-10-01T15:00:00Z"), false, "Hoshana Rabbah (7th day) is not yom tov");
+  assert.equal(N.yomTovWindow(when("2026-10-03T15:00:00Z"), tor).id, "shemini-atzeret");
+  assert.equal(insideYT("2026-09-27T15:00:00Z", { mode: "traditional" }), true, "traditional: second day of Sukkot is yom tov");
+});
+
+test("Yom Kippur 2026 (Monday 21 Sep) is quiet on a weekday where Shabbat does not apply; Pesach 2027 first and last days only", () => {
+  assert.equal(N.isShabbat(when("2026-09-21T16:00:00Z"), tor), false);
+  assert.equal(insideYT("2026-09-21T16:00:00Z"), true);
+  assert.equal(insideYT("2026-09-20T22:00:00Z"), false); // Sun 18:00 local, before candle lighting
+  assert.equal(insideYT("2026-09-20T23:30:00Z"), true);
+  assert.equal(insideYT("2026-09-22T16:00:00Z"), false);
+  const pes = C.holidaysInHebrewYear(5787, { mode: "reform" }).find((h) => h.id === "pesach");
+  const noon = (iso) => when(`${iso}T16:00:00Z`);
+  assert.equal(N.isYomTov(noon(pes.start), tor), true);
+  assert.equal(N.isYomTov(noon(pes.end), tor), true);
+  const mid = C.isoDate(C.addDays(C.parseISO(pes.start), 3));
+  assert.equal(N.isYomTov(noon(mid), tor), false, "Chol HaMoed");
+  const trad = C.holidaysInHebrewYear(5787, { mode: "traditional" }).find((h) => h.id === "pesach");
+  assert.equal(N.isYomTov(noon(C.isoDate(C.addDays(C.parseISO(trad.start), 1))), tor, { mode: "traditional" }), true, "second day, traditional");
+});
+
+test("yom tov: no location => never quiet; yomTovRuns ignores Hanukkah, Purim and fasts; quietHours honours the toggles", () => {
+  assert.equal(N.isYomTov(when("2026-09-21T16:00:00Z"), null), false);
+  assert.deepEqual(N.yomTovRuns({ id: "hanukkah", start: "2026-12-05", end: "2026-12-12", days: 8 }), []);
+  assert.deepEqual(N.yomTovRuns({ id: "purim", start: "2027-03-23", end: "2027-03-23", days: 1 }), []);
+  assert.deepEqual(N.yomTovRuns({ id: "tisha-bav", start: "2027-07-22", end: "2027-07-22", days: 1 }), []);
+  const yk = when("2026-09-21T16:00:00Z"), sat = when("2026-11-07T15:00:00Z");
+  assert.equal(N.quietHours(tor)(yk), true); assert.equal(N.quietHours(tor, { yomTov: false })(yk), false);
+  assert.equal(N.quietHours(tor)(sat), true); assert.equal(N.quietHours(tor, { shabbat: false })(sat), false);
+  assert.equal(N.quietHours(tor)(when("2026-11-04T15:00:00Z")), false, "ordinary Wednesday");
+});
+
+test("armFromPrefs skips a Yom Kippur slot using the calendar observance and city", async () => {
+  const mem = { "notify.prefs": { enabled: true, hour: 12, minute: 0, days: [0, 1, 2, 3, 4, 5, 6], shabbatQuiet: true, yomTovQuiet: true }, "calendar.prefs": { locationId: "toronto" } };
+  const t = fakeTimers(local(2026, 9, 21, 8, 0)); // Yom Kippur morning, device zone
+  const g = { Notification: fakeNotification("granted") };
+  const loc = await N.resolveQuietLocation({ store: { get: (k) => mem[k] } });
+  assert.equal(loc.observance, "reform");
+  const r = await N.armFromPrefs({ store: { get: (k) => mem[k] } }, { globalThis: g, now: t.nowFn, setTimer: t.setTimer, clearTimer: t.clearTimer });
+  assert.equal(r.ok, true);
+  assert.equal(N.quietHours(loc, { observance: loc.observance })(r.next), false, "chosen slot is not quiet");
+  mem["notify.prefs"].yomTovQuiet = false; mem["notify.prefs"].shabbatQuiet = false;
+  const r2 = await N.armFromPrefs({ store: { get: (k) => mem[k] } }, { globalThis: g, now: t.nowFn, setTimer: t.setTimer, clearTimer: t.clearTimer });
+  assert.ok(r2.next.getTime() <= r.next.getTime());
 });

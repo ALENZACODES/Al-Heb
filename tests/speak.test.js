@@ -71,20 +71,22 @@ function fakeSynth() {
 const M = await import('../src/speak/model.js');
 const P = await import('../src/speak/pairs.js');
 const R = await import('../src/speak/recognizer.js');
-const { mount, DRAFT, RECOGNIZER_NOTE } = await import('../src/speak/speak.js');
+const { mount, DRAFT, RECOGNIZER_NOTE, PRAYER_NOTE, tabFromLocation, TAB_IDS } = await import('../src/speak/speak.js');
+const T = await import('../src/speak/tradition.js');
 const L = await import('../src/speak/loader.js');
 const sets = await L.loadSetsIndex();
 const pairs = await L.loadPairs();
 const setItems = Object.fromEntries(await Promise.all(sets.map(async (s) => [s.id, await L.loadSet(s.id)])));
-const data = { sets, setItems, pairs };
+const traditionPairs = await L.loadTraditionPairs(), prayerData = await L.loadPrayers();
+const data = { sets, setItems, pairs, traditionPairs, prayers: prayerData };
 
 async function boot(extra = {}) {
   const r = new N('div'), store = memStore(extra.store);
   const s = extra.synth || fakeSynth();
-  const ctx = { store, clock: { now: () => extra.now || 1_800_000_000_000 }, rng: seeded(), query: extra.query || {}, audio: extra.audio, settings: { get: () => undefined }, t: (k) => k,
+  const ctx = { store, clock: { now: () => extra.now || 1_800_000_000_000 }, rng: seeded(), query: extra.query || {}, audio: extra.audio, settings: { get: (k) => (k === 'congregation' ? extra.congregation : undefined) }, t: (k) => k,
     speak: { data, RecognitionCtor: extra.Rec ?? null, MediaRecorderCtor: extra.MR ?? null, getUserMedia: extra.getUserMedia ?? null, URL: extra.URL, BlobCtor: extra.BlobCtor, synth: s.synth, UtteranceCtor: s.U, dayKey: (t) => new Date(t).toISOString().slice(0, 10) } };
   const unmount = mount(r, ctx);
-  await waitFor(() => byId(r, extra.query?.tab === 'drills' ? 'drill-start' : extra.query?.tab === 'history' ? 'speak-history-h' : 'speak-start'));
+  await waitFor(() => byId(r, { drills: 'drill-start', history: 'speak-history-h', sounds: 'speak-trad', read: 'read-start', shadow: 'shadow-start' }[extra.query?.tab] || 'speak-start'));
   return { root: r, store, ctx, unmount, synth: s };
 }
 
@@ -193,7 +195,7 @@ test('data/speak: 60 sets by theme, every item copied from words.json (no invent
     }
   }
   assert.ok(themes.size >= 20, `themes: ${themes.size}`); assert.ok(n >= 600);
-  assert.ok(idx.sets.filter((s) => s.pack.startsWith('survival-')).length === 12);
+  assert.equal(idx.sets.filter((s) => s.pack.startsWith('survival-')).length, 11, '12 survival packs minus numbers (3 words, below the 4-item floor)');
 });
 test('data/speak/pairs.json: four contrasts, answers agree with the source niqqud, true pairs are real pairs, het/khaf hides the letter', () => {
   const p = rd('data/speak/pairs.json');
@@ -290,21 +292,19 @@ test('self mode: listen plays the browser voice (labelled as such), I said it / 
   assert.match(root.text, /not that a teacher heard you/);
 });
 test('asr mode: match settles the item; a miss shows what was heard and offers self-judging; mic errors fall back', async () => {
-  const { Rec, made } = fakeRecognition([{ alternatives: ['שלום'] }, { alternatives: ['תודה'] }, { error: 'not-allowed' }]);
-  const { root, store } = await boot({ Rec, query: { set: 'speak-survival-greetings-1' } });
   const set = setItems['speak-survival-greetings-1'];
-  const shalom = set.items.findIndex((i) => M.normalizeHe(i.he) === 'שלומ');
-  assert.ok(shalom >= 0, 'greetings set has shalom');
+  const first = M.normalizeHe(set.items[0].he); // the recognizer returns unpointed text: feed it exactly that
+  const { Rec, made } = fakeRecognition([{ alternatives: [first] }, { alternatives: ['תודה'] }, { error: 'not-allowed' }]);
+  const { root, store } = await boot({ Rec, query: { set: 'speak-survival-greetings-1' } });
   byId(root, 'speak-start').click();
   await waitFor(() => byId(root, 'speak-mic'));
-  for (let i = 0; i < shalom; i++) { byId(root, 'speak-skip').click(); await waitFor(() => byId(root, 'speak-next')); byId(root, 'speak-next').click(); await waitFor(() => byId(root, 'speak-mic') && !byId(root, 'speak-next')); }
   byId(root, 'speak-mic').click();
   assert.match(statusText(root), /Listening/);
   await waitFor(() => byId(root, 'speak-next'));
   assert.equal(made[0].lang, 'he-IL');
   assert.match(byId(root, 'speak-verdict').text, /matched the target/); assert.match(byId(root, 'speak-verdict').text, /unverified for Hebrew/);
   let a = store.m['speak.v1'].attempts.at(-1);
-  assert.equal(a.outcome, 'match'); assert.equal(a.mode, 'asr'); assert.equal(a.heard, 'שלום');
+  assert.equal(a.outcome, 'match'); assert.equal(a.mode, 'asr'); assert.equal(a.heard, first);
   byId(root, 'speak-next').click();
   await waitFor(() => byId(root, 'speak-mic') && !byId(root, 'speak-next'));
   byId(root, 'speak-mic').click();
@@ -386,12 +386,12 @@ test('drills: contrast select with note, ten questions, answers stored with cont
 });
 test('drills: a sound question shows the unpointed word with the marked letter; het/khaf shows a hint and hides the letter', async () => {
   const { root } = await boot({ query: { tab: 'drills', contrast: 'het-khaf' } });
+  assert.match(root.text, /spelling check, not a listening one/);
   byId(root, 'drill-start').click();
   await waitFor(() => byId(root, 'drill-q'));
   const mark = root.find((n) => n.className === 'mark')[0];
   assert.ok(mark); assert.equal(mark.text, '?'); assert.match(root.text, /Hint: /);
   assert.doesNotMatch(root.find((n) => n.attrs.lang === 'he')[0].text, /[ְ-ׇ]/);
-  assert.match(root.text, /spelling check, not a listening one/);
 });
 test('history: empty state, then weakest sounds after 3 tries, by-day table, recent attempts, and a confirmed clear', async () => {
   const empty = await boot({ query: { tab: 'history' } });
@@ -415,10 +415,10 @@ test('history: empty state, then weakest sounds after 3 tries, by-day table, rec
   await waitFor(() => /Nothing yet/.test(root.text));
   assert.equal(store.m['speak.v1'].attempts.length, 0);
 });
-test('tabs: three section links, current one marked; unmount stops everything without throwing', async () => {
+test('tabs: six section links, current one marked; unmount stops everything without throwing', async () => {
   const { root, unmount } = await boot();
   const links = root.find((n) => n.tag === 'a' && n.attrs['data-tab']);
-  assert.deepEqual(links.map((l) => l.attrs.href), ['#/speak', '#/speak?tab=drills', '#/speak?tab=history']);
+  assert.deepEqual(links.map((l) => l.attrs.href), ['#/speak', '#/speak?tab=drills', '#/speak?tab=sounds', '#/speak?tab=read', '#/speak?tab=shadow', '#/speak?tab=history']);
   assert.equal(links[0].attrs['aria-current'], 'page');
   links[1].click();
   await waitFor(() => byId(root, 'drill-start'));
@@ -433,4 +433,242 @@ test('source hygiene: no build tooling or third-party imports in the runtime mod
   assert.match(routes, /pattern: '\/speak', module: '\.\.\/speak\/speak\.js'/);
   const readme = readFileSync(join(root, 'docs/speak/README.md'), 'utf8');
   assert.match(readme, /unverified for Hebrew/i);
+});
+
+// ---- stage 5: hash tabs, tradition drill, read-aloud, shadowing -----------------------------------------------------------
+test('tabFromLocation: query wins; #/speak/read, #/speak?tab=read and aliases work; unknown falls back to say', () => {
+  assert.deepEqual(TAB_IDS, ['say', 'drills', 'sounds', 'read', 'shadow', 'history']);
+  assert.equal(tabFromLocation({ tab: 'history' }, '#/speak/read'), 'history');
+  assert.equal(tabFromLocation({}, '#/speak/read'), 'read');
+  assert.equal(tabFromLocation(undefined, '#/speak?tab=shadow'), 'shadow');
+  assert.equal(tabFromLocation({}, '#/speak/tradition'), 'sounds');
+  assert.equal(tabFromLocation({ tab: 'shadowing' }, ''), 'shadow');
+  assert.equal(tabFromLocation({ tab: 'nope' }, '#/vocab'), 'say');
+  assert.equal(tabFromLocation(null, undefined), 'say');
+});
+test('hash tabs open the right screen without any router entry, and clicking a tab updates the hash without a reload', async () => {
+  const calls = [];
+  globalThis.location = { hash: '#/speak/read' }; globalThis.history = { replaceState: (a, b, u) => calls.push(u) };
+  const r = new N('div'), store = memStore(), s = fakeSynth();
+  const unmount = mount(r, { store, clock: { now: () => 1 }, rng: seeded(), query: {}, settings: { get: () => undefined }, speak: { data, RecognitionCtor: null, synth: s.synth, UtteranceCtor: s.U } });
+  await waitFor(() => byId(r, 'read-start'));
+  assert.equal(r.find((n) => n.tag === 'a' && n.attrs['aria-current'] === 'page')[0].attrs['data-tab'], 'read');
+  r.find((n) => n.tag === 'a' && n.attrs['data-tab'] === 'shadow')[0].click();
+  await waitFor(() => byId(r, 'shadow-start'));
+  assert.deepEqual(calls, ['#/speak?tab=shadow']);
+  unmount(); delete globalThis.location; delete globalThis.history;
+});
+test('tradition summary: kamatz/patach is silent in Israeli and audible in Ashkenazi; shin/sin is audible everywhere; quiz uses audible pairs only', () => {
+  const isr = T.traditionSummary(traditionPairs, 'israeli'), ash = T.traditionSummary(traditionPairs, 'ashkenazi');
+  const kp = (x) => x.find((c) => c.id === 'kamatz-patach');
+  assert.equal(kp(isr).distinct, 0); assert.equal(kp(isr).same, kp(isr).shown);
+  assert.equal(kp(ash).distinct, kp(ash).shown); assert.ok(kp(ash).shown >= 20);
+  for (const t of T.TRADITIONS) { const ss = T.traditionSummary(traditionPairs, t).find((c) => c.id === 'shin-sin'); assert.equal(ss.distinct, ss.shown); }
+  assert.equal(T.tradition('bogus'), 'sephardi');
+  const q = T.tradQueue(traditionPairs, 'israeli', seeded(), 50);
+  assert.ok(q.length && q.every((i) => i.pair.audible[0]) && !q.some((i) => i.contrast === 'kamatz-patach'));
+  const aq = T.tradQuestion(T.tradQueue(traditionPairs, 'ashkenazi', seeded(), 5)[0], () => 0.9);
+  assert.equal(aq.options.length, 2); assert.ok(aq.options.some((o) => o.id === aq.answer)); assert.match(aq.play.simple, /\S/);
+  const line = T.pairLine(traditionPairs.contrasts.find((c) => c.id === 'kamatz-patach').pairs[0], traditionPairs, 'ashkenazi');
+  assert.equal(line.distinct, true); assert.notEqual(line.simple[0], line.simple[1]);
+});
+test('sounds tab: tradition from Settings, distinct vs same lists, switching tradition changes the counts; quiz cue differs by tradition', async () => {
+  const { root, store, synth } = await boot({ query: { tab: 'sounds' }, congregation: 'ashkenazi' });
+  const sel = byId(root, 'speak-trad');
+  assert.equal(sel.value, 'ashkenazi'); assert.ok(root.find((n) => n.tag === 'label' && n.attrs.for === 'speak-trad').length);
+  assert.ok(sel.find((n) => n.tag === 'option' && /your Settings choice/.test(n.text) && n.attrs.value === 'ashkenazi').length);
+  assert.match(root.text, /Draft: the pairs were generated by rule/);
+  assert.match(root.text, /Kamatz or patach/);
+  let sums = root.find((n) => n.className === 'sk-contrast-sum').map((n) => n.text);
+  assert.ok(sums.some((t) => /^40 of 40 listed pairs sound different in Ashkenazi; 0 sound the same/.test(t)), sums.join('|'));
+  assert.match(root.text, /sound different/); 
+  // quiz in Ashkenazi: sound-spelling cue, no browser-voice button
+  byId(root, 'trad-start').click();
+  await waitFor(() => byId(root, 'trad-q'));
+  assert.ok(byId(root, 'trad-cue')); assert.equal(byId(root, 'trad-listen'), undefined);
+  assert.match(byId(root, 'trad-cue').text, /Sounds like \(Ashkenazi, by rule\): "/);
+  root.find((n) => n.tag === 'button' && n.attrs['data-id'])[0].click();
+  await waitFor(() => byId(root, 'trad-next'));
+  const a = store.m['speak.v1'].attempts[0];
+  assert.equal(a.kind, 'pair'); assert.equal(a.tradition, 'ashkenazi'); assert.equal(typeof a.correct, 'boolean');
+  byId(root, 'trad-finish').click();
+  await waitFor(() => byId(root, 'trad-summary'));
+  assert.match(byId(root, 'trad-summary').text, /of 1 right, in Ashkenazi pronunciation/);
+  byId(root, 'trad-again').click();
+  await waitFor(() => byId(root, 'speak-trad'));
+  byId(root, 'speak-trad').fire('change', { target: { value: 'israeli' } });
+  await waitFor(() => root.find((n) => n.className === 'sk-contrast-sum').some((n) => /^0 of 40 listed pairs sound different in Israeli; 40 sound the same/.test(n.text)));
+  byId(root, 'trad-start').click();
+  await waitFor(() => byId(root, 'trad-q'));
+  assert.ok(byId(root, 'trad-listen')); byId(root, 'trad-listen').click();
+  await waitFor(() => synth.spoken.length);
+  assert.equal(synth.spoken[0].lang, 'he-IL');
+});
+test('alignWords / compareLine: hits, a dropped word, vav spelling, near words, extra words ignored; best alternative wins', () => {
+  const line = 'בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ׃';
+  const full = M.compareLine(line, 'ברכו את יהוה המבורך');
+  assert.equal(full.outcome, 'match', 'full spelling (vav) still matches'); assert.equal(full.hit, 4);
+  const dropped = M.alignWords(line, 'ברכו את המברך');
+  assert.deepEqual(dropped.map((w) => w.status), ['hit', 'hit', 'miss', 'hit']); assert.equal(dropped[2].heard, null);
+  const extra = M.alignWords(line, 'אז ברכו את יהוה המברך בבקשה');
+  assert.deepEqual(extra.map((w) => w.status), ['hit', 'hit', 'hit', 'hit']);
+  const near = M.alignWords(line, 'ברכו את יהוה המברכים');
+  assert.equal(near[3].status, 'near'); assert.equal(M.compareLine(line, 'ברכו את יהוה המברכים').outcome, 'close');
+  assert.equal(M.compareLine(line, 'תודה רבה').outcome, 'miss');
+  assert.equal(M.compareLine(line, ['תודה רבה', 'ברכו את יהוה המברך']).outcome, 'match');
+  assert.equal(M.compareLine(line, '').outcome, 'miss');
+  assert.deepEqual(M.wordsOf('כָּל־הָעוֹלָם׃'), ['כל', 'העולמ']);
+});
+test('attempt fields: rating clamped, tradition and missedWords kept, read heard keeps up to 400 chars; missedWordsReport counts repeats', () => {
+  let st = M.recordAttempt(null, { kind: 'shadow', rating: 9, outcome: 'said', he: 'x', tradition: 'israeli' }, 1);
+  assert.equal(st.attempts[0].rating, 3); assert.equal(st.attempts[0].tradition, 'israeli');
+  st = M.recordAttempt(st, { kind: 'read', outcome: 'close', he: 'x', heard: 'ש'.repeat(500), missedWords: ['יהוה', 'את'] }, 2);
+  st = M.recordAttempt(st, { kind: 'read', outcome: 'close', he: 'x', missedWords: ['יהוה'] }, 3);
+  assert.equal(st.attempts[1].heard.length, 400);
+  assert.deepEqual(M.missedWordsReport(st.attempts), [{ word: 'יהוה', count: 2 }]);
+  assert.equal(M.soundReport(st.attempts).total, 0, 'read and shadow attempts are not letter evidence');
+});
+test('createRecognizer.listen accepts a per-call timeout', async () => {
+  const r = R.createRecognizer({ Ctor: class { start() {} abort() {} }, timeoutMs: 60000 });
+  assert.equal((await r.listen({ timeoutMs: 5 })).error, 'timeout');
+});
+test('data/speak/prayers.json: 8 prayers, every line verbatim from the corpus registry, with licence and draft status carried over', () => {
+  const pr = rd('data/speak/prayers.json');
+  assert.equal(pr.prayers.length, 8); assert.match(pr.note, /NOT proofread/);
+  const reg = new Map(rd('data/corpus/registry.json').entries.map((e) => [e.id, e]));
+  for (const p of pr.prayers) {
+    const e = reg.get(p.id); assert.ok(e, p.id);
+    assert.equal(p.lines.join('\n'), e.he.split('\n').map((l) => l.trim()).filter(Boolean).join('\n'));
+    assert.equal(p.proofread, false); assert.ok(p.license && p.attribution); assert.ok(p.lines.length >= 1);
+    assert.equal(!!p.lineAudio, p.lines.length === 1);
+    for (const l of p.lines) assert.match(l, /[ְ-ׇ]/, 'pointed');
+  }
+  assert.ok(pr.prayers.some((p) => p.lines.length === 2));
+});
+test('build.mjs only reads data/speak/minimal-pairs.json (it belongs to the pronunciation lane)', () => {
+  const src = readFileSync(join(root, 'src/speak/build.mjs'), 'utf8');
+  assert.doesNotMatch(src, /writeFileSync\([^)]*minimal-pairs/);
+  assert.doesNotMatch(src, /unlinkSync\(join\(root, 'data\/speak\/minimal/);
+});
+
+async function startRead(extra = {}, prayerId = 'torah-barchu') {
+  const b = await boot({ query: { tab: extra.tab || 'read', prayer: prayerId }, ...extra });
+  byId(b.root, `${extra.tab || 'read'}-start`).click();
+  await waitFor(() => byId(b.root, `${extra.tab || 'read'}-q`));
+  return b;
+}
+test('read aloud with a recognizer: missed word underlined and listed, stored with missedWords; full match settles; summary', async () => {
+  const lines = prayerData.prayers.find((p) => p.id === 'torah-barchu').lines;
+  const { Rec } = fakeRecognition([{ alternatives: ['ברכו את המברך'] }, { alternatives: [M.normalizeHe(lines[1])] }]);
+  const { root, store } = await startRead({ Rec });
+  assert.ok(root.text.includes(PRAYER_NOTE)); 
+  assert.equal(root.find((n) => n.attrs.lang === 'he')[0].text.replace(/\s+/g, ' ').trim(), lines[0]);
+  assert.match(root.text, /line 1 of 2/);
+  byId(root, 'read-mic').click();
+  assert.match(statusText(root), /Listening/);
+  await waitFor(() => byId(root, 'read-next'));
+  const miss = root.find((n) => n.className === 'w-miss'); assert.equal(miss.length, 1); assert.equal(miss[0].text, 'יְהוָה');
+  assert.equal(root.find((n) => n.attrs['data-status'] === 'hit').length, 3);
+  assert.match(byId(root, 'read-verdict').text, /3 of 4 words matched/);
+  assert.equal(byId(root, 'read-missed').text.includes('יְהוָה'), true);
+  assert.ok(byId(root, 'read-said') && byId(root, 'read-notyet'), 'self-judging offered after a miss');
+  assert.match(byId(root, 'read-verdict').text, /unverified for Hebrew/);
+  let a = store.m['speak.v1'].attempts.at(-1);
+  assert.equal(a.kind, 'read'); assert.equal(a.set, 'torah-barchu'); assert.equal(a.itemId, '0'); assert.equal(a.outcome, 'close'); assert.deepEqual(a.missedWords, ['יהוה']); assert.equal(a.mode, 'asr');
+  byId(root, 'read-next').click();
+  await waitFor(() => byId(root, 'read-mic') && !byId(root, 'read-next'));
+  assert.match(root.text, /line 2 of 2/);
+  byId(root, 'read-mic').click();
+  await waitFor(() => byId(root, 'read-next'));
+  assert.match(byId(root, 'read-verdict').text, /Every word matched/);
+  assert.equal(root.find((n) => n.className === 'w-miss').length, 0);
+  a = store.m['speak.v1'].attempts.at(-1); assert.equal(a.outcome, 'match'); assert.equal(a.itemId, '1');
+  assert.equal(byId(root, 'read-next').text, 'See my results');
+  byId(root, 'read-next').click();
+  await waitFor(() => byId(root, 'read-summary'));
+  assert.match(byId(root, 'read-summary').text, /2 lines tried, 1 read in full/);
+});
+test('read aloud errors and no recognizer: not-allowed offers self-judging; self mode stores "said" with mode self', async () => {
+  const { Rec } = fakeRecognition([{ error: 'not-allowed' }]);
+  const a = await startRead({ Rec });
+  a.root.find((n) => n.attrs.id === 'read-mic')[0].click();
+  await waitFor(() => byId(a.root, 'read-said'));
+  assert.match(byId(a.root, 'read-verdict').text, /microphone was not allowed/);
+  const b = await startRead({}, 'hamotzi');
+  assert.equal(byId(b.root, 'read-mic'), undefined);
+  byId(b.root, 'read-said').click();
+  await waitFor(() => byId(b.root, 'read-next'));
+  const at = b.store.m['speak.v1'].attempts[0];
+  assert.equal(at.kind, 'read'); assert.equal(at.mode, 'self'); assert.equal(at.outcome, 'said');
+  byId(b.root, 'read-next').click();
+  await waitFor(() => byId(b.root, 'read-summary'));
+  assert.match(byId(b.root, 'read-summary').text, /1 line tried, 1 read in full/);
+});
+test('read aloud start screen: prayer select with label, eight prayers, tradition accent warning, draft note', async () => {
+  const { root } = await boot({ query: { tab: 'read' } });
+  assert.equal(byId(root, 'speak-prayer').find((n) => n.tag === 'option').length, 8);
+  assert.ok(root.find((n) => n.tag === 'label' && n.attrs.for === 'speak-prayer').length);
+  assert.match(root.text, /Sephardi or Ashkenazi style/);
+  assert.equal(root.find((n) => n.tag === 'input' && n.attrs.type === 'radio').length, 3);
+});
+test('shadowing: listen (browser voice, slow option), rate 1-3, stored with rating; summary averages; clip preferred when it exists', async () => {
+  const { root, store, synth } = await startRead({ tab: 'shadow' });
+  assert.match(byId(root, 'shadow-howto').text, /rate how close/);
+  byId(root, 'shadow-listen').click();
+  await waitFor(() => synth.spoken.length === 1);
+  assert.equal(synth.spoken[0].text.trim(), prayerData.prayers.find((p) => p.id === 'torah-barchu').lines[0]);
+  byId(root, 'shadow-slow').click();
+  await waitFor(() => synth.spoken.length === 2);
+  assert.equal(synth.spoken[1].rate, 0.6);
+  byId(root, 'shadow-r3').click();
+  await waitFor(() => byId(root, 'shadow-next'));
+  assert.match(statusText(root), /Rated 3 of 3/);
+  assert.equal(byId(root, 'shadow-r1').attrs.disabled, '');
+  let a = store.m['speak.v1'].attempts.at(-1);
+  assert.deepEqual([a.kind, a.rating, a.outcome, a.mode, a.set], ['shadow', 3, 'said', 'self', 'torah-barchu']);
+  byId(root, 'shadow-next').click();
+  await waitFor(() => byId(root, 'shadow-r1') && !byId(root, 'shadow-next'));
+  byId(root, 'shadow-r1').click();
+  await waitFor(() => byId(root, 'shadow-next'));
+  a = store.m['speak.v1'].attempts.at(-1); assert.deepEqual([a.rating, a.outcome], [1, 'notyet']);
+  byId(root, 'shadow-next').click();
+  await waitFor(() => byId(root, 'shadow-summary'));
+  assert.match(byId(root, 'shadow-summary').text, /2 lines shadowed, average self-rating 2 of 3/);
+  const played = [];
+  const audio = { has: (k, id) => k === 'line' && id === 'hamotzi', play: async (k, id) => { played.push([k, id]); return { source: 'file' }; } };
+  const c = await startRead({ tab: 'shadow', audio }, 'hamotzi');
+  byId(c.root, 'shadow-listen').click();
+  await waitFor(() => played.length);
+  assert.deepEqual(played, [['line', 'hamotzi']]);
+  assert.equal(c.synth.spoken.length, 0, 'no browser voice when a clip exists');
+});
+test('shadowing with recording: record, playback element, then rating is stored with mode record', async () => {
+  const f = fakeRecorder();
+  const { root, store } = await startRead({ tab: 'shadow', MR: f.MR, getUserMedia: f.getUserMedia, URL: f.URL, BlobCtor: f.BlobCtor }, 'hamotzi');
+  byId(root, 'speak-record').click();
+  await waitFor(() => /Stop recording/.test(byId(root, 'speak-record').text));
+  byId(root, 'speak-record').click();
+  await waitFor(() => root.find((n) => n.tag === 'audio').length);
+  byId(root, 'shadow-r2').click();
+  await waitFor(() => byId(root, 'shadow-next'));
+  const a = store.m['speak.v1'].attempts[0]; assert.deepEqual([a.mode, a.rating], ['record', 2]);
+});
+test('history lists read and shadow attempts and the words missed most', async () => {
+  let st = M.emptyState();
+  const now = 1_800_000_000_000;
+  st = M.recordAttempt(st, { kind: 'read', set: 'torah-barchu', itemId: '0', he: 'בָּרְכוּ אֶת יְהוָה', mode: 'asr', outcome: 'close', heard: 'ברכו את', missedWords: ['יהוה'] }, now);
+  st = M.recordAttempt(st, { kind: 'read', set: 'torah-barchu', itemId: '0', he: 'בָּרְכוּ אֶת יְהוָה', mode: 'asr', outcome: 'close', heard: 'ברכו', missedWords: ['יהוה', 'את'] }, now + 1);
+  st = M.recordAttempt(st, { kind: 'shadow', set: 'hamotzi', itemId: '0', he: 'בָּרוּךְ', mode: 'self', outcome: 'said', rating: 3 }, now + 2);
+  const { root } = await boot({ query: { tab: 'history' }, store: { 'speak.v1': st } });
+  assert.match(byId(root, 'speak-missed-words').text, /missed 2 times/);
+  const recent = byId(root, 'speak-recent').text;
+  assert.match(recent, /read aloud: close/); assert.match(recent, /shadowing rated 3: said/);
+  assert.doesNotMatch(recent, /heard:/, 'long read transcripts are not echoed in the list');
+});
+test('docs: ROUTES.md lists the sub-pages and nav strings; README covers tradition, read-aloud and shadowing', () => {
+  const routes = readFileSync(join(root, 'docs/speak/ROUTES.md'), 'utf8');
+  for (const t of ['drills', 'sounds', 'read', 'shadow', 'history']) assert.match(routes, new RegExp(`pattern: '/speak/${t}'`));
+  for (const k of ['nav.speak-drills', 'nav.speak-sounds', 'nav.speak-read', 'nav.speak-shadow', 'nav.speak-history']) assert.ok(routes.includes(k), k);
+  const readme = readFileSync(join(root, 'docs/speak/README.md'), 'utf8');
+  assert.match(readme, /Sounds by tradition/); assert.match(readme, /Read a prayer aloud/); assert.match(readme, /Shadowing/);
 });

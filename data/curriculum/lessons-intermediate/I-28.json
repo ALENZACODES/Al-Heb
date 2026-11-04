@@ -1,0 +1,367 @@
+{
+ "id": "I-28",
+ "track": "read",
+ "level": "black",
+ "unit": "synagogue",
+ "title": "Yom Kippur: the few lines the corpus holds and the words around them",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "כִּפּוּר",
+   "en": "atonement",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kipur",
+    "sephardi": "kipur",
+    "ashkenazi": "kipur"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hb7990a7a"
+   }
+  },
+  {
+   "he": "צוֹם",
+   "en": "fast",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "tzom",
+    "sephardi": "tzom",
+    "ashkenazi": "tzom"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hf8b5d278"
+   }
+  },
+  {
+   "he": "שׁוֹפָר",
+   "en": "shofar",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shofar",
+    "sephardi": "shofar",
+    "ashkenazi": "shofor"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h88576753"
+   }
+  },
+  {
+   "he": "סְלִיחָה",
+   "en": "forgiveness, pardon",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "selichah",
+    "sephardi": "selichah",
+    "ashkenazi": "selichoh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h33cf0d1b"
+   }
+  },
+  {
+   "he": "סְלִיחוֹת",
+   "en": "penitential prayers",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "selichot",
+    "sephardi": "selichot",
+    "ashkenazi": "selichos"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h33cf0d1b#forms.plural"
+   }
+  },
+  {
+   "he": "תְּשׁוּבָה",
+   "en": "repentance, answer",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "teshuvah",
+    "sephardi": "teshuvah",
+    "ashkenazi": "teshuvoh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hf3d6a0bb"
+   }
+  },
+  {
+   "he": "שָׁנָה טוֹבָה",
+   "en": "a good year (greeting)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shanah tovah",
+    "sephardi": "shanah tovah",
+    "ashkenazi": "shonoh tovoh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p2f823c8f"
+   }
+  },
+  {
+   "he": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ",
+   "en": "blessed is the name of his glorious kingdom",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "barukh shem kevod malkhuto",
+    "sephardi": "barukh shem kevod malkhuto",
+    "ashkenazi": "borukh sheim kevod malkhuso"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בָּרוּךְ",
+     "שֵׁם",
+     "כְּבוֹד",
+     "מַלְכוּתוֹ"
+    ]
+   }
+  },
+  {
+   "he": "שְׁמַע יִשְׂרָאֵל",
+   "en": "hear, Israel",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shema yisra'el",
+    "sephardi": "shema yisra'el",
+    "ashkenazi": "shema yisro'eil"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "שְׁמַע",
+     "יִשְׂרָאֵל"
+    ]
+   }
+  },
+  {
+   "he": "מָגֵן",
+   "en": "shield",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "magen",
+    "sephardi": "magen",
+    "ashkenazi": "mogein"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h344eb438"
+   }
+  },
+  {
+   "he": "שָׁלוֹם",
+   "en": "peace",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shalom",
+    "sephardi": "shalom",
+    "ashkenazi": "sholom"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hf8c8316a"
+   }
+  },
+  {
+   "he": "רַחֲמִים",
+   "en": "mercy",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "rachamim",
+    "sephardi": "rachamim",
+    "ashkenazi": "rachamim"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h9a1ab3f5"
+   }
+  }
+ ],
+ "prayerLines": [
+  "shema-1",
+  "shema-2",
+  "avot-1",
+  "avot-closing",
+  "sim-shalom",
+  "kaddish-1"
+ ],
+ "goals": [
+  "Know the one day a year when 'Baruch shem' is said aloud and answer it",
+  "Recognise the Yom Kippur words: fast, atonement, shofar, forgiveness",
+  "Say 'a good year' and ask and give forgiveness politely"
+ ],
+ "estMinutes": 30,
+ "prerequisites": [
+  "I-01"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli",
+   "sephardi",
+   "ashkenazi"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Latin forms are machine output of the project's transliterator, not a native speaker's; israeli and sephardi are identical in that scheme."
+ },
+ "exercises": [
+  {
+   "id": "I-28-e01",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "כִּפּוּר",
+     "en": "atonement"
+    },
+    {
+     "he": "צוֹם",
+     "en": "fast"
+    },
+    {
+     "he": "שׁוֹפָר",
+     "en": "shofar"
+    },
+    {
+     "he": "סְלִיחָה",
+     "en": "forgiveness"
+    },
+    {
+     "he": "תְּשׁוּבָה",
+     "en": "repentance"
+    }
+   ]
+  },
+  {
+   "id": "I-28-e02",
+   "type": "respond",
+   "cue": "On Yom Kippur the congregation says the quiet line after the Shema aloud.",
+   "answer": {
+    "he": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד",
+    "en": "Blessed is the name of his glorious kingdom for ever and ever."
+   },
+   "prompt": {
+    "he": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד",
+    "en": "Hear, Israel: the LORD is our God, the LORD is one."
+   }
+  },
+  {
+   "id": "I-28-e03",
+   "type": "fade",
+   "line": "shema-2",
+   "en": "Blessed is the name of his glorious kingdom for ever and ever."
+  },
+  {
+   "id": "I-28-e04",
+   "type": "order",
+   "he": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד",
+   "en": "Blessed is the name of his glorious kingdom for ever and ever."
+  },
+  {
+   "id": "I-28-e05",
+   "type": "fade",
+   "line": "shema-1",
+   "en": "Hear, Israel: the LORD is our God, the LORD is one."
+  },
+  {
+   "id": "I-28-e06",
+   "type": "produce",
+   "en": "a good year",
+   "options": [
+    "שָׁנָה טוֹבָה",
+    "שָׁבוּעַ טוֹב",
+    "לַיְלָה טוֹב"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-28-e07",
+   "type": "produce",
+   "en": "fast",
+   "options": [
+    "צוֹם",
+    "שׁוֹפָר",
+    "כִּפּוּר"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-28-e08",
+   "type": "recall",
+   "he": "שׁוֹפָר",
+   "en": "shofar"
+  },
+  {
+   "id": "I-28-e09",
+   "type": "respond",
+   "cue": "Someone you wronged asks for forgiveness. Ask 'excuse me / sorry' back politely.",
+   "answer": {
+    "he": "סְלִיחָה",
+    "en": "Excuse me / sorry (forgive me)"
+   }
+  },
+  {
+   "id": "I-28-e10",
+   "type": "register",
+   "he": "סְלִיחָה",
+   "en": "excuse me / sorry",
+   "answer": "neutral",
+   "options": [
+    "formal",
+    "neutral",
+    "casual",
+    "slang"
+   ]
+  },
+  {
+   "id": "I-28-e11",
+   "type": "spot",
+   "line": "avot-closing",
+   "target": "מָגֵן",
+   "en": "shield"
+  },
+  {
+   "id": "I-28-e12",
+   "type": "fade",
+   "line": "avot-closing",
+   "en": "King, helper, saviour and shield. Blessed are you, LORD, shield of Abraham."
+  },
+  {
+   "id": "I-28-e13",
+   "type": "respond",
+   "cue": "The first blessing ends 'magen Avraham'. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "בָּרוּךְ אַתָּה יְהוָה מָגֵן אַבְרָהָם",
+    "en": "Blessed are you, LORD, shield of Abraham."
+   }
+  },
+  {
+   "id": "I-28-e14",
+   "type": "spot",
+   "line": "sim-shalom",
+   "target": "וְרַחֲמִים",
+   "en": "and mercy",
+   "lineIndex": 1
+  },
+  {
+   "id": "I-28-e15",
+   "type": "recall",
+   "he": "סְלִיחוֹת",
+   "en": "penitential prayers"
+  }
+ ],
+ "note": "Most Yom Kippur liturgy is a corpus gap: g-high-holidays is out of scope, and Kol Nidre, Avinu Malkenu, the confession (Vidui), Unetaneh Tokef and Ne'ilah have no entry. This lesson teaches only vocabulary from words.json and the Shema lines (the quiet Baruch shem line is said aloud on Yom Kippur)."
+}

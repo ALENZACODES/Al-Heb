@@ -15,7 +15,7 @@ export const BLOCKS = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
 export const STEM_RE = /^[A-Za-z0-9_-]+$/;
 /** Flags that stop `approve` unless --force (our rule: no text of any kind inside images). */
 export const BLOCKING_FLAGS = ['contains_text'];
-export const TOOL_DEFAULT = 'ChatGPT / OpenAI image generation (manual run, files uploaded by the author)';
+export const TOOL_DEFAULT = 'image generator (manual run, files uploaded by the author)';
 
 export function makePaths(root = DEFAULT_ROOT, o = {}) {
   return {
@@ -87,7 +87,7 @@ const DUP_SUFFIX = /(?:\s*\(\d{1,3}\)|\s*[-_ ]\s*copy(?:\s*\d{1,3})?)$/i;
  *  exact:   stem equals a manifest stem
  *  case:    equal ignoring case only (reported, accepted)
  *  variant: manifest stem + a duplicate suffix ("L05_dalet_quirky (1).png")
- *  none:    no confident match (e.g. "ChatGPT Image Nov 3, 2026, 10_32_11 AM.png"); never guessed
+ *  none:    no confident match (e.g. "Generated Image Nov 3, 2026, 10_32_11 AM.png"); never guessed
  */
 export function classifyName(fileName, stems) {
   const raw = stripExt(fileName.replace(/^.*[\\/]/, ''));
@@ -120,14 +120,14 @@ export function suggestStems(fileName, stems, k = 3) {
 }
 
 // ---------- aspect / size rules ----------
-/** ChatGPT / the Images API only deliver 1:1, 3:2 and 2:3 (per tools/images/gen_via_api.mjs apiSize). */
+/** Image tools may only deliver 1:1, 3:2 and 2:3 (per tools/images/gen_via_api.mjs apiSize). */
 export function nativeClass(w, h) { const r = w / h; return r > 1.2 ? 'landscape' : r < 0.85 ? 'portrait' : 'square'; }
 const NATIVE_RATIO = { square: 1, landscape: 1.5, portrait: 2 / 3 };
 
 /**
  * @returns {{ok:boolean, level:'exact'|'substituted'|'mismatch', note:string}}
  *  exact: same aspect within 1.5%.  substituted: the manifest asks for an odd size (1792x1024, 1024x1280) but the file has the
- *  nearest native ChatGPT aspect for that orientation (we never crop or stretch: the page layout absorbs it).  mismatch: anything else.
+ *  nearest native generator aspect for that orientation (we never crop or stretch: the page layout absorbs it).  mismatch: anything else.
  */
 export function checkAspect(imgW, imgH, rowW, rowH) {
   const ri = imgW / imgH, rr = rowW / rowH;

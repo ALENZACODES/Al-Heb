@@ -1,18 +1,22 @@
 #!/usr/bin/env node
 // Metadata scan (competitor-analysis section M.3). Exit 0 = clean, 1 = findings, 2 = usage error.
 // Usage: node tools/meta/scan.mjs [paths...] [--json] [--files] [--allowlist FILE] [--no-tools] [--cwd DIR]
+//        node tools/meta/scan.mjs --text [--text-allowlist FILE]   (tracked-text scan for AI/tool names; exit 1 on findings)
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { scanTrackedText, formatText } from './text.mjs';
 import { DEFAULT_ROOTS, detectTools, loadAllowlist, scanTree } from './lib.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 export function parseArgs(argv) {
-  const o = { paths: [], json: false, files: false, noTools: false, allowlist: path.join(here, 'allowlist.json'), cwd: process.cwd(), help: false };
+  const o = { paths: [], json: false, files: false, noTools: false, text: false, textAllowlist: path.join(here, 'text-allowlist.json'), allowlist: path.join(here, 'allowlist.json'), cwd: process.cwd(), help: false };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--json') o.json = true;
     else if (a === '--files') o.files = true;
     else if (a === '--no-tools') o.noTools = true;
+    else if (a === '--text') o.text = true;
+    else if (a === '--text-allowlist') o.textAllowlist = path.resolve(argv[++i]);
     else if (a === '--allowlist') o.allowlist = path.resolve(argv[++i]);
     else if (a === '--cwd') o.cwd = path.resolve(argv[++i]);
     else if (a === '-h' || a === '--help') o.help = true;
@@ -57,7 +61,12 @@ export function format(r, o) {
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   let o;
   try { o = parseArgs(process.argv.slice(2)); } catch (e) { console.error(e.message); process.exit(2); }
-  if (o.help) { console.log('node tools/meta/scan.mjs [paths...] [--json] [--files] [--allowlist FILE] [--no-tools] [--cwd DIR]'); process.exit(0); }
+  if (o.help) { console.log('node tools/meta/scan.mjs [paths...] [--json] [--files] [--allowlist FILE] [--no-tools] [--cwd DIR] | --text [--text-allowlist FILE]'); process.exit(0); }
+  if (o.text) {
+    const t = scanTrackedText({ cwd: o.cwd, allowlist: o.textAllowlist });
+    console.log(o.json ? JSON.stringify(t, null, 1) : formatText(t));
+    process.exit(t.findings.length ? 1 : 0);
+  }
   const r = runScan(o);
   if (o.json) console.log(JSON.stringify({ roots: r.roots, tools: r.tools, total: r.total, allowlisted: r.allowed, byType: r.res.byType, files: r.res.files.filter((f) => f.findings.length) }, null, 1));
   else console.log(format(r, o));

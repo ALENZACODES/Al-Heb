@@ -337,7 +337,7 @@ export function renderText(text, ctx) {
     for (const f of r.flags) flags.add(f);
     notes.push(...r.notes);
     colloquial.push(r.colloquial);
-    words.push({ he: r.he, syllables: r.syllables, stress: Object.fromEntries(TRADITIONS.map((t) => [t, r.variants[t].stress])) });
+    words.push({ he: r.he, syllables: r.syllables, stress: Object.fromEntries(TRADITIONS.map((t) => [t, r.variants[t].stress])), ipa: Object.fromEntries(TRADITIONS.map((t) => [t, r.variants[t].ipa])), simple: Object.fromEntries(TRADITIONS.map((t) => [t, r.variants[t].simple])) });
     for (const t of TRADITIONS) per[t].push({ ipa: r.variants[t].ipa, simple: pre + r.variants[t].simple + post });
   }
   const variants = {};
@@ -348,7 +348,7 @@ export function renderText(text, ctx) {
       stress: words.map((wd) => wd.stress[t]),
     };
   }
-  return { he: clean.normalize('NFC'), words: words.map((wd) => ({ he: wd.he, syllables: wd.syllables })), variants, flags: [...flags].sort(), notes, colloquial: colloquial.join(' ') };
+  return { he: clean.normalize('NFC'), words: words.map((wd) => ({ he: wd.he, syllables: wd.syllables })), perWord: words, variants, flags: [...flags].sort(), notes, colloquial: colloquial.join(' ') };
 }
 
 // ---------------------------------------------------------------------------------------------------------------
@@ -375,8 +375,9 @@ export function buildAll() {
   const phrasebook = readJson('data/corpus/phrasebook.json');
   const registry = readJson('data/corpus/registry.json');
   const records = [];
+  const rendered = new Map(); // id -> renderText result (per-word detail for the derived builders; not written to the shards)
   const seen = new Set();
-  const push = (r) => { if (seen.has(r.id)) throw new Error('duplicate id ' + r.id); seen.add(r.id); records.push(r); };
+  const push = (r, full) => { if (seen.has(r.id)) throw new Error('duplicate id ' + r.id); seen.add(r.id); records.push(r); rendered.set(r.id, full); };
 
   for (const w of words.words) {
     const r = w.kind === 'phrase' || /\s|־/.test(w.he) ? renderText(w.he, ctx) : renderText(w.he, ctx);
@@ -389,13 +390,13 @@ export function buildAll() {
       else if (a !== b) { rec.flags = [...rec.flags, 'ipa-differs-from-words.json'].sort(); rec.note = `words.json ipa ${w.ipa} vs rules ${r.variants.israeli.ipa}`; }
     }
     if (r.notes.length) rec.note = (rec.note ? rec.note + '; ' : '') + r.notes.join('; ');
-    push(rec);
+    push(rec, r);
   }
   for (const e of phrasebook.entries) {
     const r = renderText(e.he, ctx);
     const rec = { id: e.id, source: 'phrasebook', kind: 'phrase', he: r.he, en: e.en, variants: r.variants, flags: r.flags, syllables: r.words.map((x) => x.syllables) };
     if (r.notes.length) rec.note = r.notes.join('; ');
-    push(rec);
+    push(rec, r);
   }
   for (const e of registry.entries) {
     const lines = e.he.split('\n');
@@ -405,7 +406,7 @@ export function buildAll() {
       const rec = { id: lines.length === 1 ? e.id : `${e.id}-l${li + 1}`, source: 'corpus', kind: 'line', ref: e.ref, he: r.he, en: lines.length === 1 ? e.english : undefined, variants: r.variants, flags, syllables: r.words.map((x) => x.syllables) };
       if (rec.en === undefined) delete rec.en;
       if (r.notes.length) rec.note = r.notes.join('; ');
-      push(rec);
+      push(rec, r);
     });
   }
 
@@ -415,7 +416,7 @@ export function buildAll() {
   const shards = [];
   const header = (name, part, parts) => ({
     schemaVersion: 1, rulesVersion: RULES_VERSION, proofread: false, status: STATUS,
-    tool: 'tools/pronunciation/build_variants.mjs', rules: 'docs/pronunciation/VARIANTS.md',
+    builtFrom: 'the niqqud text of data/vocab/words.json and data/corpus/*.json, by rule', rules: 'docs/pronunciation/VARIANTS.md',
     traditions: TRADITIONS, shard: { name, part, parts },
   });
   const slice = (name, list) => {
@@ -437,7 +438,7 @@ export function buildAll() {
     shards: shards.map((s) => ({ file: s.file, count: s.data.count })),
     review: '_review.csv',
   };
-  return { records, shards, index, review };
+  return { records, rendered, shards, index, review };
 }
 
 const csvCell = (s) => { const x = String(s ?? ''); return /[",\n]/.test(x) ? '"' + x.replace(/"/g, '""') + '"' : x; };

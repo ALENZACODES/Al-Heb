@@ -14,7 +14,8 @@ export function createRecognizer(o = {}) {
   const lang = o.lang || 'he-IL', maxAlternatives = o.maxAlternatives || 5, timeoutMs = o.timeoutMs || 10000;
   const setT = o.setTimeout || ((f, ms) => g().setTimeout(f, ms)), clearT = o.clearTimeout || ((h) => g().clearTimeout(h));
   let rec = null, finish = null;
-  function listen() {
+  function listen(opts = {}) {
+    const limitMs = opts.timeoutMs || timeoutMs;
     if (!Ctor) return Promise.resolve({ ok: false, error: 'unsupported' });
     if (rec) stop();
     return new Promise((resolve) => {
@@ -36,7 +37,7 @@ export function createRecognizer(o = {}) {
       };
       r.onerror = (ev) => end({ ok: false, error: String(ev?.error || 'error'), alternatives: [] });
       r.onend = () => end({ ok: alternatives.length > 0, alternatives, error: alternatives.length ? undefined : 'no-speech' });
-      timer = setT(() => { try { r.abort?.(); } catch { /* ignore */ } end({ ok: false, error: 'timeout', alternatives: [] }); }, timeoutMs);
+      timer = setT(() => { try { r.abort?.(); } catch { /* ignore */ } end({ ok: false, error: 'timeout', alternatives: [] }); }, limitMs);
       try { r.start(); } catch (e) { end({ ok: false, error: 'start-failed', alternatives: [] }); }
     });
   }

@@ -4,17 +4,17 @@
  "count": 40,
  "themeSize": 125,
  "counts": {
-  "words": 4783,
+  "words": 4782,
   "withExample": 1038,
-  "withoutExample": 3745,
-  "droppedFromWordsJson": 1516
+  "withoutExample": 3744,
+  "droppedFromWordsJson": 1515
  },
  "themes": [
   {
    "id": "arts-sports-set01",
    "topic": "arts-sports",
    "title": "Arts and sports, set 1 of 1",
-   "size": 70,
+   "size": 69,
    "withExample": 5,
    "file": "arts-sports-set01.json"
   },

@@ -46,7 +46,7 @@ const REFORM_YT = /^(Rosh Hashana \d+|Yom Kippur|Sukkot I|Shmini Atzeret|Pesach 
 const DIA_YT = /^(Rosh Hashana \d+|Rosh Hashana II|Yom Kippur|Sukkot I|Shmini Atzeret|Simchat Torah|Pesach I|Pesach VII|Pesach VIII|Shavuot I|Shavuot II)$/;
 function fixtureYomTov(mode) {
   const out = new Set();
-  const years = ["5786", "5787", "5788"];
+  const years = ["5786", "5787", "5788", "5789"];
   if (mode === "traditional") {
     for (const y of years) for (const [name, d] of FIX.holidays[`${y}-dia`]) if (DIA_YT.test(name)) { out.add(d); if (name === "Sukkot I" || name === "Pesach I") out.add(S.addDaysISO(d, 1)); }
   } else {
@@ -255,17 +255,15 @@ for (const tz of ZONES) {
   }));
 }
 
-// Defect found by the walk (engage.js, not streak.js): the goal reached in the last seconds before midnight is not persisted.
-// save() returns early until PERSIST_MS have passed since the last save even when the 5-minute goal has just been reached, and
-// the midnight rollover then discards the unsaved accrual. The engine (and the ring) showed 5:00 but the day never completed.
-// Marked todo until engage.js forces a save when the goal is first reached (the file header already says it does).
-test("engage.js: the goal reached 0.5 s before midnight must complete the day (persist on goal, not only every 10 s)", { todo: "engage.js save() gate; see docs/qa/STREAK-FREEZE.md" }, () => withTZ("America/Toronto", () => {
+// Defect found by the walk and fixed in engage.js (stage 5): save() used to hold the goal behind the 10 s persist gate, so a goal
+// reached in the last seconds before midnight was discarded by the rollover. The goal is now persisted the moment it is reached.
+test("engage.js: the goal reached 0.5 s before midnight must complete the day (persist on goal, not only every 10 s)", () => withTZ("America/Toronto", () => {
   const d = device({ record: v2({ count: 2, best: 2, last: "2026-11-12" }), prefs: { observant: true } }); // Thu done
   d.open(at("2026-11-13", 23, 50));
   const t0 = at("2026-11-13", 23, 54, 59) + 500; // Friday; the 300th second ends at 23:59:59.5
   d.eng.setRoute(true, t0);
   let maxBefore = 0;
-  for (let i = 1; i <= 360; i++) { const t = t0 + i * 1000; if (i % 20 === 0) d.eng.interact(t); d.eng.tick(t); if (t < at("2026-11-14")) maxBefore = d.eng.seconds(); }
+  for (let i = 1; i <= 360; i++) { const t = t0 + i * 1000; if (i % 20 === 0) d.eng.interact(t); d.eng.tick(t); if (t < at("2026-11-14", 0)) maxBefore = d.eng.seconds(); }
   assert.equal(maxBefore, 300); // the engine (and so the ring) reached the goal on Friday
   assert.equal(d.rec().last, "2026-11-13"); // ...so Friday must be stored as complete
   assert.equal(d.shown(at("2026-11-15", 8)).count, 3);
@@ -298,4 +296,66 @@ test("pure streak.js walk: completeDay/rollover agree with projectStreak on ever
   }
   assert.equal(rec.count, completed); assert.equal(rec.frozenDates.length, 60); // KEEP_FROZEN cap, newest kept
   assert.equal(rec.frozenDates.at(-1), "2027-09-25");
+}));
+
+// ---------- Stage 6: Israel (Asia/Jerusalem, israel observance mode: one-day Yom Tov, two-day Rosh Hashanah), 2026-2028 ----------
+const IL_FROM = "2026-01-01", IL_TO = "2028-12-31";
+test("sanity: Asia/Jerusalem offsets and the israel-mode Yom Tov list in the fixture (2026-2028)", () => {
+  const off = (y, m, d) => withTZ("Asia/Jerusalem", () => new Date(y, m - 1, d, 12).getTimezoneOffset());
+  assert.equal(off(2026, 1, 15), -120); assert.equal(off(2026, 7, 15), -180);
+  const yt = [...fixtureYomTov("israel")].filter((d) => d >= IL_FROM && d <= IL_TO).sort();
+  // 5786: Pesach I, VII, Shavuot; 5787 (RH I+II, YK, Sukkot I, Shemini Atzeret, Pesach I, VII, Shavuot); 5788; 5789 (to Dec 2028: RH I+II, YK, Sukkot I, Shemini Atzeret)
+  assert.deepEqual(yt.filter((d) => d < "2026-09-01"), ["2026-04-02", "2026-04-08", "2026-05-22"]);
+  assert.ok(yt.includes("2026-09-13") && yt.includes("2026-09-12")); // RH 5787 both days
+  assert.ok(!yt.includes("2027-04-23") && !yt.includes("2027-04-29") && !yt.includes("2026-10-04")); // no Pesach II/VIII, no separate Simchat Torah
+  assert.equal(yt.length, 24, `count ${yt.length}`); // 3 + 7 + 7 + 7 over the four Hebrew years touched
+});
+test(`Israel walk ${IL_FROM}..${IL_TO} in Asia/Jerusalem, mode israel, freeze on: streak = completed non-rest days, zero breaks`, () => withTZ("Asia/Jerusalem", () => {
+  const d = device({ prefs: { observant: true }, cal: { observance: "israel" } });
+  d.open(at(S.addDaysISO(IL_FROM, -1), 20));
+  let completed = 0; const restSeen = [], kinds = {};
+  for (const iso of days(IL_FROM, IL_TO)) {
+    const t = at(iso, 8); d.open(t);
+    const p = d.shown(t);
+    assert.equal(S.dayKey(t), iso);
+    assert.equal(p.restToday, expectedRest(iso, "israel"), `${iso} restToday`);
+    assert.equal(p.broken, false, `${iso} broken`); assert.equal(p.count, completed, `${iso} count before`);
+    if (p.restToday) { restSeen.push(iso); kinds[p.restKind] = (kinds[p.restKind] || 0) + 1; continue; }
+    d.study(t, 300); completed++;
+    assert.equal(d.shown(t + 301000).count, completed, `${iso} after`);
+  }
+  const expectRest = [...days(IL_FROM, IL_TO)].filter((iso) => expectedRest(iso, "israel"));
+  assert.deepEqual(restSeen, expectRest);
+  assert.equal(completed, 1096 - expectRest.length); assert.equal(d.rec().count, completed); assert.equal(d.rec().best, completed);
+  assert.equal(kinds.shabbat, [...days(IL_FROM, IL_TO)].filter(isSaturday).length);
+  // Friday is an ordinary day for the freeze (the Israeli weekend is not modelled): it is studied like any weekday above
+  assert.equal(restSeen.some((iso) => new Date(iso + "T12:00:00Z").getUTCDay() === 5 && !fixtureYomTov("israel").has(iso)), false);
+}));
+test("Israel: missed weekday (incl. a missed Friday) breaks; missed Shabbat, Yom Tov, RH day 2 do not; Sukkot/Pesach second days are ordinary", () => withTZ("Asia/Jerusalem", () => {
+  const mk = (last, count = 5) => device({ record: v2({ count, best: count, last }), prefs: { observant: true }, cal: { observance: "israel" } });
+  const a = mk("2026-09-11"); a.open(at("2026-09-14", 8)); // RH I Sat 12, RH II Sun 13 frozen
+  assert.equal(a.shown(at("2026-09-14", 8)).count, 5); assert.deepEqual(a.rec().frozenDates, ["2026-09-12", "2026-09-13"]);
+  const b = mk("2026-09-24"); b.open(at("2026-09-27", 8)); // Fri 25 missed, Sat 26 (Sukkot I) frozen
+  assert.equal(b.shown(at("2026-09-27", 8)).count, 0);
+  const c = mk("2027-04-22"); c.open(at("2027-04-24", 8)); // Pesach I Thu; Fri 23 (Pesach II elsewhere) is ordinary in Israel: missed -> broken
+  assert.equal(c.shown(at("2027-04-24", 8)).count, 0);
+  const e = mk("2027-04-21"); e.open(at("2027-04-23", 8)); assert.equal(e.shown(at("2027-04-23", 8)).count, 5); // Pesach I frozen, Friday still open
+}));
+test("Israel DST: fall back 2026-10-25 (25 h) and spring forward 2027-03-26, a Friday (23 h); midnight crossing before Shabbat", () => withTZ("Asia/Jerusalem", () => {
+  const off = (y, m, d) => new Date(y, m - 1, d, 12).getTimezoneOffset();
+  assert.equal(off(2026, 10, 25) - off(2026, 10, 24), 60); assert.equal(off(2027, 3, 25) - off(2027, 3, 27), 60);
+  assert.equal(new Date(2027, 2, 26, 2, 30).getHours(), 3); // the skipped hour is on Friday
+  const a = device({ record: v2({ count: 4, best: 4, last: "2026-10-23" }), prefs: { observant: true }, cal: { observance: "israel" } }); // Fri done, Sat frozen
+  const t0 = at("2026-10-25", 0, 30); a.open(t0); const end = a.study(t0, 7200);
+  assert.equal(a.eng.seconds(), 7200); assert.equal(S.dayKey(end), "2026-10-25"); assert.equal(a.shown(end).count, 5);
+  a.open(at("2026-10-26", 8)); assert.equal(a.shown(at("2026-10-26", 8)).count, 5);
+  const f = device({ record: v2({ count: 4, best: 4, last: "2027-03-25" }), prefs: { observant: true }, cal: { observance: "israel" } });
+  const s0 = at("2027-03-26", 1, 50); f.open(s0); const sEnd = f.study(s0, 1200);
+  assert.equal(new Date(sEnd).getHours(), 3); assert.equal(f.eng.seconds(), 1200); assert.equal(f.shown(sEnd).count, 5);
+  f.open(at("2027-03-28", 8)); assert.equal(f.shown(at("2027-03-28", 8)).count, 5); // Sat 27 frozen
+  // Friday 23:54 -> Saturday 00:04 completes Friday before midnight; Saturday stays frozen
+  const g = device({ record: v2({ count: 2, best: 2, last: "2026-11-12" }), prefs: { observant: true }, cal: { observance: "israel" } });
+  const g0 = at("2026-11-13", 23, 54); g.open(g0); g.study(g0, 600);
+  assert.equal(g.rec().last, "2026-11-13"); assert.equal(g.shown(at("2026-11-15", 8)).count, 3);
+  assert.equal(g.rec().doneDates.includes("2026-11-14"), false);
 }));

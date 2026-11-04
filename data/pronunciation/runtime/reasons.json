@@ -1,0 +1,78 @@
+{
+ "schemaVersion": 1,
+ "rulesVersion": 1,
+ "proofread": false,
+ "status": "rule-generated from the niqqud text; not verified by a native speaker; no audio exists",
+ "notice": "Rule-generated and unverified: these readings come from spelling rules applied to the pointed text. No native speaker has checked them, no recording exists, and real speakers vary inside each tradition. Treat them as a study aid, not as a reference.",
+ "description": "Sentences for \"what differs and why\", keyed by the code stored in each lookup entry. Sources: docs/pronunciation/VARIANTS.md.",
+ "codes": {
+  "ka": {
+   "text": "Kamatz (ָ): a in Israeli and Sephardi, but [ɔ] (\"o\" as in \"saw\") in Ashkenazi."
+  },
+  "ko": {
+   "text": "Short o (kamatz katan or chataf-kamatz): [o] in Israeli, [ɔ] in Sephardi and Ashkenazi. The difference is small."
+  },
+  "tz": {
+   "text": "Tzere (ֵ): a plain e in Israeli and Sephardi, but \"ay\" [ej] in Ashkenazi."
+  },
+  "ho": {
+   "text": "Cholam (ֹ): o in Israeli and Sephardi, but \"oy\" [oj] in the Polish-style Ashkenazi reading used here (other Ashkenazi readings differ and are not shown)."
+  },
+  "tv": {
+   "text": "Tav without a dagesh (ת): t in Israeli and Sephardi, but s in Ashkenazi (shabbat / shabbos)."
+  },
+  "ch": {
+   "text": "Het (ח): [χ] in Israeli, a deeper throat sound [ħ] in Sephardi, [x] in Ashkenazi."
+  },
+  "kh": {
+   "text": "Khaf without a dagesh (כ / ך): [χ] in Israeli, [x] in Sephardi and Ashkenazi."
+  },
+  "ay": {
+   "text": "Ayin (ע): silent in Israeli and Ashkenazi, a throat sound [ʕ] in Sephardi."
+  },
+  "al": {
+   "text": "Alef (א) that carries a vowel: silent in Israeli and Ashkenazi, a glottal stop [ʔ] in Sephardi."
+  },
+  "re": {
+   "text": "Resh (ר): a back-of-the-throat [ʁ] in Israeli, a front rolled or tapped r in Sephardi and Ashkenazi."
+  },
+  "sv": {
+   "text": "Spoken shva: e in Israeli and Sephardi, a short [ə] in Ashkenazi."
+  },
+  "fr": {
+   "text": "Final kamatz + he (or alef) when the word is not stressed on it: an open [a] in Israeli and Sephardi, a short [ə] (\"eh\") in Ashkenazi."
+  },
+  "dn": {
+   "text": "The four-letter divine name is read as Adonai in all three traditions (Adonoy in Ashkenazi)."
+  }
+ },
+ "stressRules": [
+  "last syllable, the usual default",
+  "next-to-last syllable, the usual Ashkenazi default",
+  "last syllable, because the one before it has only a reduced vowel",
+  "furtive patach is never stressed",
+  "last syllable, the usual default",
+  "one-syllable word",
+  "stress listed for this prayer word, unreviewed",
+  "stress listed for this prayer word, unreviewed",
+  "listed stress exception, unreviewed",
+  "listed stress exception, unreviewed",
+  "stress taken from the older word-list pronunciation, unreviewed",
+  "stress taken from the older word-list pronunciation, unreviewed"
+ ],
+ "stressRulesRaw": [
+  "default milra (final)",
+  "default penultimate (Ashkenazi natural register)",
+  "final (no full-vowel syllable before it)",
+  "furtive patach never stressed",
+  "milra (words.json ipa agrees)",
+  "monosyllable",
+  "prayerwords.json (Ashkenazi, unreviewed)",
+  "prayerwords.json (Israeli)",
+  "stress.json (other)",
+  "stress.json (segolate)",
+  "words.json ipa stress mark",
+  "words.json ipa stress mark (counted from the end; that ipa drops a shva)"
+ ],
+ "stressSummary": "Israeli and Sephardi: final syllable unless a listed exception; Ashkenazi: next-to-last syllable by default"
+}

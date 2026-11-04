@@ -177,11 +177,13 @@ async function boot() {
   router = createRouter((m) => { show(m, ctxBase); });
   window.alef = { settings, store, audio, router }; // debugging handle
   router.start();
+  import('./shell/boot-hooks.js').then((m) => m.armReminders(ctxBase)).catch(() => {});
   import('./morning/boot.js').then((m) => m.startMorning({ store, audio })).catch(() => {});
   scheduleManifest(audio);
   startShardLoading(audio);
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
     navigator.serviceWorker.register('sw.js').catch((e) => console.warn('service worker not registered', e));
+    import('./shell/update.js').then((m) => { window.alef.update = m.startUpdateBanner().handle; }).catch(() => {});
   }
 }
 

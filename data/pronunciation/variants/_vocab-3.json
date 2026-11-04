@@ -3,7 +3,7 @@
  "rulesVersion": 1,
  "proofread": false,
  "status": "rule-generated from the niqqud text; not verified by a native speaker; no audio exists",
- "tool": "tools/pronunciation/build_variants.mjs",
+ "builtFrom": "the niqqud text of data/vocab/words.json and data/corpus/*.json, by rule",
  "rules": "docs/pronunciation/VARIANTS.md",
  "traditions": [
   "israeli",

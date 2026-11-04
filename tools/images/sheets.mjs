@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Contact sheets as image files, one per ChatGPT command (and one per redo paste file), from the 800 px WebP copies in
+// Contact sheets as image files, one per image command (and one per redo paste file), from the 800 px WebP copies in
 // assets/img/gen/. Output: data/images/sheets/cmd-NNN.webp, redo-NN.webp and SHEETS.md (the folder is git-ignored).
 // Each tile shows the thumbnail, the id, delivered vs expected size, the ingest flags and the matcher's scene note.
 // Rendering uses Pillow through `python3 -I -` (script on stdin, data as JSON); no file is imported from the data folders.
@@ -113,7 +113,7 @@ export function indexMd(results, sheets) {
   const rows = results.map((r) => { const s = sheets.find((x) => x.name === r.name); const bad = s.tiles.filter((t) => t.bad).length; return `| \`${r.name}\` | ${s.title.replace(/\|/g, '/')} | ${r.tiles} | ${bad} | ${r.w}x${r.h} | ${Math.round(r.bytes / 1024)} KB |`; });
   return `# Contact sheets (regenerable; this folder is git-ignored)
 
-Built by \`node tools/images/sheets.mjs\` from the 800 px WebP copies in \`assets/img/gen/\`. One sheet per ChatGPT command and one per redo paste file (\`docs/images/paste/redo-NN.txt\`). A red frame means the tile carries a blocking or redo flag (OCR text hit, square delivered for a wide row, or wrong backdrop); a gold frame means no such flag. Caption: id, delivered size (and the size asked when different), flags, and the matcher's scene note. Nothing here is an approval; decisions go through \`docs/images/REVIEW-SHEETS.md\`.
+Built by \`node tools/images/sheets.mjs\` from the 800 px WebP copies in \`assets/img/gen/\`. One sheet per image command and one per redo paste file (\`docs/images/paste/redo-NN.txt\`). A red frame means the tile carries a blocking or redo flag (OCR text hit, square delivered for a wide row, or wrong backdrop); a gold frame means no such flag. Caption: id, delivered size (and the size asked when different), flags, and the matcher's scene note. Nothing here is an approval; decisions go through \`docs/images/REVIEW-SHEETS.md\`.
 
 | Sheet | Title | Tiles | Flagged | Pixels | Size |
 |---|---|---|---|---|---|

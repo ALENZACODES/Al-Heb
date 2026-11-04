@@ -1,0 +1,504 @@
+{
+ "schema": "alef-vocab-corrections/1",
+ "generated": "2026-11-04",
+ "note": "Deterministic, safe corrections to data/vocab/words.json, applied by tools/vocab/apply_corrections.mjs. Each entry: id, field, old, new, reason. Judgement calls are NOT here: see docs/vocab/JUDGEMENT.md.",
+ "counts": {
+  "removed": 2,
+  "translit": 67
+ },
+ "corrections": [
+  {
+   "id": "had95b79a",
+   "field": "(record)",
+   "old": {
+    "he": "שֵׂעָר",
+    "pos": "noun",
+    "en": "hair",
+    "frequencyRank": 5517
+   },
+   "new": null,
+   "reason": "exact duplicate of h9ece6cb8 (same pointed form and part of speech); the better-ranked record is kept"
+  },
+  {
+   "id": "h7486bec2",
+   "field": "(record)",
+   "old": {
+    "he": "אִגְרוּף",
+    "pos": "noun",
+    "en": "boxing",
+    "frequencyRank": 5967
+   },
+   "new": null,
+   "reason": "exact duplicate of h90b342e7 (same pointed form and part of speech); the better-ranked record is kept"
+  },
+  {
+   "id": "p7cb5e293",
+   "field": "translit",
+   "old": null,
+   "new": "adonai",
+   "reason": "missing; the lesson gloss reads this spelling as Adonai and the pointed record p6584b7dc has the same transliteration"
+  },
+  {
+   "id": "pfcc78ea6",
+   "field": "translit",
+   "old": null,
+   "new": "adonai",
+   "reason": "missing; the lesson gloss reads this spelling as Adonai and the pointed record p996ad12f has the same transliteration"
+  },
+  {
+   "id": "h1ef19acb",
+   "field": "translit",
+   "old": "u",
+   "new": "hu",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h67e9e6f3",
+   "field": "translit",
+   "old": "odah",
+   "new": "hodah",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h804d2347",
+   "field": "translit",
+   "old": "otzi",
+   "new": "hotzi",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hb3377769",
+   "field": "translit",
+   "old": "usaf",
+   "new": "husaf",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hd49bc59a",
+   "field": "translit",
+   "old": "oreh",
+   "new": "horeh",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h999f1fb1",
+   "field": "translit",
+   "old": "ofi'a",
+   "new": "hofi'a",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h5ea1ecdf",
+   "field": "translit",
+   "old": "orid",
+   "new": "horid",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hc09d494d",
+   "field": "translit",
+   "old": "taor",
+   "new": "tahor",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "he038b6aa",
+   "field": "translit",
+   "old": "olid",
+   "new": "holid",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h2b9299a8",
+   "field": "translit",
+   "old": "odi'a",
+   "new": "hodi'a",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hbf0fa338",
+   "field": "translit",
+   "old": "oshi'a",
+   "new": "hoshi'a",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h8c0bec4d",
+   "field": "translit",
+   "old": "ovil",
+   "new": "hovil",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h21259289",
+   "field": "translit",
+   "old": "okhicha",
+   "new": "hokhicha",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h1610dda2",
+   "field": "translit",
+   "old": "orah",
+   "new": "horah",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hbe71a2e7",
+   "field": "translit",
+   "old": "od",
+   "new": "hod",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h1999d835",
+   "field": "translit",
+   "old": "yeudi",
+   "new": "yehudi",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h7806a1a3",
+   "field": "translit",
+   "old": "omo",
+   "new": "homo",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h97eb619a",
+   "field": "translit",
+   "old": "osif",
+   "new": "hosif",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hee662cc6",
+   "field": "translit",
+   "old": "orish",
+   "new": "horish",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hcf5a9765",
+   "field": "translit",
+   "old": "on",
+   "new": "hon",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hf3ef6847",
+   "field": "translit",
+   "old": "alkool",
+   "new": "alkohol",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h1f563643",
+   "field": "translit",
+   "old": "auvah",
+   "new": "ahuvah",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h2597c82e",
+   "field": "translit",
+   "old": "o'il",
+   "new": "ho'il",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h18bf454c",
+   "field": "translit",
+   "old": "auv",
+   "new": "ahuv",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hb52ee03e",
+   "field": "translit",
+   "old": "ushav",
+   "new": "hushav",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h362d4313",
+   "field": "translit",
+   "old": "teom",
+   "new": "tehom",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hba770b32",
+   "field": "translit",
+   "old": "ukhan",
+   "new": "hukhan",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h93a5c899",
+   "field": "translit",
+   "old": "otir",
+   "new": "hotir",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h4c3f8c3c",
+   "field": "translit",
+   "old": "zeut",
+   "new": "zehut",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h84320245",
+   "field": "translit",
+   "old": "urad",
+   "new": "hurad",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h489cb38a",
+   "field": "translit",
+   "old": "ofa'ah",
+   "new": "hofa'ah",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "he135bc1d",
+   "field": "translit",
+   "old": "uval",
+   "new": "huval",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "ha074b4fc",
+   "field": "translit",
+   "old": "utza",
+   "new": "hutza",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h354e0143",
+   "field": "translit",
+   "old": "orah",
+   "new": "horah",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h8102110a",
+   "field": "translit",
+   "old": "otza'ah",
+   "new": "hotza'ah",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hcd8757a3",
+   "field": "translit",
+   "old": "oveh",
+   "new": "hoveh",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hd986c592",
+   "field": "translit",
+   "old": "o'il",
+   "new": "ho'il",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h6d92463e",
+   "field": "translit",
+   "old": "oshiv",
+   "new": "hoshiv",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h26e54f7e",
+   "field": "translit",
+   "old": "zium",
+   "new": "zihum",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h45c77ba8",
+   "field": "translit",
+   "old": "olikh",
+   "new": "holikh",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hcb5453a0",
+   "field": "translit",
+   "old": "hau",
+   "new": "hahu",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h60a5238f",
+   "field": "translit",
+   "old": "oki",
+   "new": "hoki",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hbdea2b3a",
+   "field": "translit",
+   "old": "u'ar",
+   "new": "hu'ar",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h5bb81a1a",
+   "field": "translit",
+   "old": "urikan",
+   "new": "hurikan",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h1bfe3089",
+   "field": "translit",
+   "old": "usav",
+   "new": "husav",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h15bc0e77",
+   "field": "translit",
+   "old": "maut",
+   "new": "mahut",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "haa6c9a82",
+   "field": "translit",
+   "old": "ona'ah",
+   "new": "hona'ah",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hcc4d3e1c",
+   "field": "translit",
+   "old": "uvas",
+   "new": "huvas",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "he6c21b19",
+   "field": "translit",
+   "old": "ora'ah",
+   "new": "hora'ah",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h46b00820",
+   "field": "translit",
+   "old": "olel",
+   "new": "holel",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hff2f5141",
+   "field": "translit",
+   "old": "oda'ah",
+   "new": "hoda'ah",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h9c749e2b",
+   "field": "translit",
+   "old": "utav",
+   "new": "hutav",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h48217e6e",
+   "field": "translit",
+   "old": "ukhach",
+   "new": "hukhach",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hed1abf7f",
+   "field": "translit",
+   "old": "timaon",
+   "new": "timahon",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h1bb45465",
+   "field": "translit",
+   "old": "laut",
+   "new": "lahut",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h9f1de4eb",
+   "field": "translit",
+   "old": "olandi",
+   "new": "holandi",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hbfcd0ef1",
+   "field": "translit",
+   "old": "omeles",
+   "new": "homeles",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h5b4daf4b",
+   "field": "translit",
+   "old": "o'il",
+   "new": "ho'il",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hac61a8e4",
+   "field": "translit",
+   "old": "abaut",
+   "new": "abahut",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hfe3b3adc",
+   "field": "translit",
+   "old": "omoseksu'ali",
+   "new": "homoseksu'ali",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "ha9d07437",
+   "field": "translit",
+   "old": "ukam",
+   "new": "hukam",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "hd85d74b3",
+   "field": "translit",
+   "old": "meumah",
+   "new": "mehumah",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "h80fba28e",
+   "field": "translit",
+   "old": "teudah",
+   "new": "tehudah",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "pce7dc6f5",
+   "field": "translit",
+   "old": "eizeh otobus olekh le...?",
+   "new": "eizeh otobus holekh le...?",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "p79f72887",
+   "field": "translit",
+   "old": "ani olekh",
+   "new": "ani holekh",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  }
+ ]
+}

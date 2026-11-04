@@ -49,12 +49,12 @@ ElevenLabs subscription alternative (included characters are for v4 and vary by 
 
 ## Core + prayers + vocabulary packs (data/vocab, 6k+ items; NOT in the audio manifest, no screen plays them yet)
 
-Per voice: 8729 clips, 82,827 characters with niqqud (46,014 letters only). Both voices plus 25% contingency: 207,068 (115,035 letters only).
+Per voice: 8727 clips, 82,813 characters with niqqud (46,006 letters only). Both voices plus 25% contingency: 207,033 (115,015 letters only).
 
 | provider / tier | US$ per 1M chars | price verified | free chars / month | cost range, list price | cost range after one free month |
 |---|---:|---|---:|---:|---:|
 | azure: Neural (standard) real-time | 15 | yes | 500,000 | $1.73 to $3.11 | $0.00 to $0.00 |
-| azure: Neural HD | 22 | yes | 500,000 | $2.53 to $4.56 | $0.00 to $0.00 |
+| azure: Neural HD | 22 | yes | 500,000 | $2.53 to $4.55 | $0.00 to $0.00 |
 | google: Chirp 3: HD voices | 30 | yes | 1,000,000 | $3.45 to $6.21 | $0.00 to $0.00 |
 | google: WaveNet voices | 4 | yes | 4,000,000 | $0.46 to $0.83 | $0.00 to $0.00 |
 | google: Neural2 voices | 16 | yes | 1,000,000 | $1.84 to $3.31 | $0.00 to $0.00 |

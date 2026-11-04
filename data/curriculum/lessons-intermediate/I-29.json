@@ -1,0 +1,371 @@
+{
+ "id": "I-29",
+ "track": "read",
+ "level": "black",
+ "unit": "synagogue",
+ "title": "Pesach: the seder blessings the corpus holds",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "פֶּסַח",
+   "en": "Passover",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "pesach",
+    "sephardi": "pesach",
+    "ashkenazi": "pesach"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h4e578223"
+   }
+  },
+  {
+   "he": "מַצָּה",
+   "en": "matzo",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "matzah",
+    "sephardi": "matzah",
+    "ashkenazi": "matzoh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h4ebf1a3c"
+   }
+  },
+  {
+   "he": "חָמֵץ",
+   "en": "leavened bread",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chametz",
+    "sephardi": "chametz",
+    "ashkenazi": "chomeitz"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hb53b9046#forms.present"
+   }
+  },
+  {
+   "he": "סֵדֶר",
+   "en": "order; the seder",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "seder",
+    "sephardi": "seder",
+    "ashkenazi": "seider"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h6ad3ddd8"
+   }
+  },
+  {
+   "he": "חַג שָׂמֵחַ",
+   "en": "happy holiday",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chag samecha",
+    "sephardi": "chag samecha",
+    "ashkenazi": "chag someicha"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p6e9bcf25"
+   }
+  },
+  {
+   "he": "זֵכֶר לִיצִיאַת מִצְרָיִם",
+   "en": "a remembrance of the exodus from Egypt",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "zekher litzi'at mitzrayim",
+    "sephardi": "zekher litzi'at mitzrayim",
+    "ashkenazi": "zeikher litzi'as mitzroyim"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "זֵכֶר",
+     "לִיצִיאַת",
+     "מִצְרָיִם"
+    ]
+   }
+  },
+  {
+   "he": "מִי כָמֹכָה",
+   "en": "who is like you",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mi khamokhah",
+    "sephardi": "mi khamokhah",
+    "ashkenazi": "mi khomokhoh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "מִי",
+     "כָמֹכָה"
+    ]
+   }
+  },
+  {
+   "he": "שֶׁהֶחֱיָינוּ",
+   "en": "who has kept us alive",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shehecheyainu",
+    "sephardi": "shehecheyainu",
+    "ashkenazi": "shehecheyoynu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "שֶׁהֶחֱיָינוּ"
+    ]
+   }
+  },
+  {
+   "he": "בּוֹרֵא פְּרִי הַגָּפֶן",
+   "en": "who creates the fruit of the vine",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "bore peri hagafen",
+    "sephardi": "bore peri hagafen",
+    "ashkenazi": "borei peri hagofen"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בּוֹרֵא",
+     "פְּרִי",
+     "הַגָּפֶן"
+    ]
+   }
+  },
+  {
+   "he": "עֲבָדִים",
+   "en": "slaves",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "avadim",
+    "sephardi": "avadim",
+    "ashkenazi": "avodim"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h1414a3a2#forms.plural"
+   }
+  },
+  {
+   "he": "מִצְרַיִם",
+   "en": "Egypt",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mitzrayim",
+    "sephardi": "mitzrayim",
+    "ashkenazi": "mitzrayim"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "מִצְרַיִם"
+    ]
+   }
+  },
+  {
+   "he": "קִדּוּשׁ",
+   "en": "Kiddush",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kidush",
+    "sephardi": "kidush",
+    "ashkenazi": "kidush"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "קִדּוּשׁ"
+    ]
+   }
+  }
+ ],
+ "prayerLines": [
+  "kiddush-wine-1",
+  "kiddush-shabbat-eve",
+  "shehecheyanu",
+  "mi-chamocha-1",
+  "hamotzi"
+ ],
+ "goals": [
+  "Say the wine blessing and the Shehecheyanu that open the seder",
+  "Find 'the exodus from Egypt' in the Kiddush text",
+  "Wish 'chag sameach' and know which seder texts the corpus does not hold"
+ ],
+ "estMinutes": 30,
+ "prerequisites": [
+  "I-05"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli",
+   "sephardi",
+   "ashkenazi"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Latin forms are machine output of the project's transliterator, not a native speaker's; israeli and sephardi are identical in that scheme."
+ },
+ "exercises": [
+  {
+   "id": "I-29-e01",
+   "type": "fade",
+   "line": "kiddush-wine-1",
+   "en": "Blessed are you, LORD our God, king of the world, who creates the fruit of the vine."
+  },
+  {
+   "id": "I-29-e02",
+   "type": "respond",
+   "cue": "The first of the four cups: the leader finishes the wine blessing. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "בּוֹרֵא פְּרִי הַגָּפֶן",
+    "en": "who creates the fruit of the vine"
+   }
+  },
+  {
+   "id": "I-29-e03",
+   "type": "produce",
+   "en": "who creates the fruit of the vine",
+   "options": [
+    "בּוֹרֵא פְּרִי הַגָּפֶן",
+    "הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ",
+    "שֶׁהֶחֱיָינוּ"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-29-e04",
+   "type": "fade",
+   "line": "shehecheyanu",
+   "en": "Blessed are you... who has kept us alive, sustained us and brought us to this time."
+  },
+  {
+   "id": "I-29-e05",
+   "type": "respond",
+   "cue": "Shehecheyanu ends 'lazman hazeh'. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "שֶׁהֶחֱיָינוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה",
+    "en": "who has kept us alive, sustained us and brought us to this time"
+   }
+  },
+  {
+   "id": "I-29-e06",
+   "type": "spot",
+   "line": "kiddush-shabbat-eve",
+   "target": "מִצְרָיִם",
+   "en": "Egypt"
+  },
+  {
+   "id": "I-29-e07",
+   "type": "order",
+   "he": "זֵכֶר לִיצִיאַת מִצְרָיִם",
+   "en": "a remembrance of the exodus from Egypt"
+  },
+  {
+   "id": "I-29-e08",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "פֶּסַח",
+     "en": "Passover"
+    },
+    {
+     "he": "מַצָּה",
+     "en": "matzo"
+    },
+    {
+     "he": "חָמֵץ",
+     "en": "leavened bread"
+    },
+    {
+     "he": "סֵדֶר",
+     "en": "order; the seder"
+    },
+    {
+     "he": "עֲבָדִים",
+     "en": "slaves"
+    }
+   ]
+  },
+  {
+   "id": "I-29-e09",
+   "type": "fade",
+   "line": "mi-chamocha-1",
+   "en": "Who is like you among the mighty, LORD? Who is like you, glorious in holiness..."
+  },
+  {
+   "id": "I-29-e10",
+   "type": "order",
+   "he": "מִי־כָמֹכָה בָּאֵלִם יְהוָה",
+   "en": "Who is like you among the mighty, LORD?"
+  },
+  {
+   "id": "I-29-e11",
+   "type": "produce",
+   "en": "happy holiday",
+   "options": [
+    "חַג שָׂמֵחַ",
+    "שָׁנָה טוֹבָה",
+    "שַׁבָּת שָׁלוֹם"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-29-e12",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "חַג שָׂמֵחַ!",
+     "en": "Happy holiday!"
+    },
+    {
+     "speaker": "b",
+     "he": "חַג שָׂמֵחַ, לְחַיִּים!",
+     "en": "Happy holiday, cheers!"
+    }
+   ],
+   "task": "Greet the host at the seder door and answer."
+  },
+  {
+   "id": "I-29-e13",
+   "type": "respond",
+   "cue": "The seder begins with Kiddush over wine, then the long Kiddush blessing ends 'mekadesh'. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   }
+  },
+  {
+   "id": "I-29-e14",
+   "type": "fade",
+   "line": "hamotzi",
+   "en": "Blessed are you... who brings forth bread from the earth."
+  }
+ ],
+ "note": "The Haggadah (Mah Nishtanah, the four sons, Dayenu, Hallel, the Four Questions) is not in any source file; g-hallel, g-festival-kiddush and the matzo blessings are gaps, and the festival Kiddush text is replaced here by the Shabbat Kiddush lines in the registry. The holiday Kiddush is a gap (g-festival-kiddush); do not treat I-29 as a seder guide."
+}

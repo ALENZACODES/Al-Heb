@@ -63,15 +63,6 @@
    "source": "data/vocab/words.json"
   },
   {
-   "id": "p6584b7dc",
-   "he": "יְהוָה",
-   "translit": "adonai",
-   "en": "the Name (read aloud as Adonai)",
-   "kind": "word",
-   "audioId": "r15-w2",
-   "source": "data/vocab/words.json"
-  },
-  {
    "id": "p5218d74d",
    "he": "מוֹדָה",
    "translit": "modah",
@@ -114,6 +105,15 @@
    "en": "and I",
    "kind": "word",
    "audioId": "r14-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pb34f3bdc",
+   "he": "וְהָיָה",
+   "translit": "vehayah",
+   "en": "and it will be",
+   "kind": "word",
+   "audioId": "r33-w1",
    "source": "data/vocab/words.json"
   }
  ]

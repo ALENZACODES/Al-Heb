@@ -1,0 +1,330 @@
+{
+ "id": "I-47",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "News headlines: government, elections, war and peace, prices",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "חֲדָשׁוֹת",
+   "en": "news",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chadashot"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he55d7ce3"
+   }
+  },
+  {
+   "he": "מֶמְשָׁלָה",
+   "en": "government",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "memshalah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h5350bb79"
+   }
+  },
+  {
+   "he": "בְּחִירוֹת",
+   "en": "elections",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "bechirot"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h7e873acc#forms.plural"
+   }
+  },
+  {
+   "he": "מִלְחָמָה",
+   "en": "war",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "milchamah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h8e236dac"
+   }
+  },
+  {
+   "he": "שָׁלוֹם",
+   "en": "peace",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shalom"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hf8c8316a"
+   }
+  },
+  {
+   "he": "מְחִיר",
+   "en": "price",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mechir"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hb8a7e485"
+   }
+  },
+  {
+   "he": "רִבִּית",
+   "en": "interest",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ribit"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h69e91f72"
+   }
+  },
+  {
+   "he": "הַיּוֹם",
+   "en": "today",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hayom"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h5350449f"
+   }
+  },
+  {
+   "he": "מָחָר",
+   "en": "tomorrow",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "machar"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he1c16e99"
+   }
+  },
+  {
+   "he": "אֶתְמוֹל",
+   "en": "yesterday",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "etmol"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h1b39a6b6"
+   }
+  },
+  {
+   "he": "אֵין",
+   "en": "there isn't",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ein"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h8828bfb6"
+   }
+  },
+  {
+   "he": "יֵשׁ",
+   "en": "there is",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yesh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "ha18100a8"
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Recognise the commonest headline words",
+  "Ask what the news is today",
+  "Say 'there is / there isn't' about prices and peace"
+ ],
+ "estMinutes": 25,
+ "prerequisites": [
+  "I-25"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-47-e01",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "חֲדָשׁוֹת",
+     "en": "news"
+    },
+    {
+     "he": "מֶמְשָׁלָה",
+     "en": "government"
+    },
+    {
+     "he": "בְּחִירוֹת",
+     "en": "elections"
+    },
+    {
+     "he": "מִלְחָמָה",
+     "en": "war"
+    },
+    {
+     "he": "שָׁלוֹם",
+     "en": "peace"
+    }
+   ]
+  },
+  {
+   "id": "I-47-e02",
+   "type": "respond",
+   "cue": "Ask what the news is.",
+   "answer": {
+    "he": "יֵשׁ חֲדָשׁוֹת?",
+    "en": "Is there news?"
+   }
+  },
+  {
+   "id": "I-47-e03",
+   "type": "produce",
+   "en": "war",
+   "options": [
+    "מִלְחָמָה",
+    "שָׁלוֹם",
+    "מֶמְשָׁלָה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-47-e04",
+   "type": "produce",
+   "en": "peace",
+   "options": [
+    "שָׁלוֹם",
+    "מִלְחָמָה",
+    "בְּחִירוֹת"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-47-e05",
+   "type": "order",
+   "he": "זֶה יָקָר מְאֹד",
+   "en": "It is very expensive"
+  },
+  {
+   "id": "I-47-e06",
+   "type": "produce",
+   "en": "the price",
+   "options": [
+    "הַמְּחִיר",
+    "מֶמְשָׁלָה",
+    "חֲדָשׁוֹת"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-47-e07",
+   "type": "recall",
+   "he": "בְּחִירוֹת",
+   "en": "elections"
+  },
+  {
+   "id": "I-47-e08",
+   "type": "recall",
+   "he": "רִבִּית",
+   "en": "interest"
+  },
+  {
+   "id": "I-47-e09",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "יֵשׁ חֲדָשׁוֹת הַיּוֹם?",
+     "en": "Is there news today?"
+    },
+    {
+     "speaker": "b",
+     "he": "הַכֹּל בְּסֵדֶר.",
+     "en": "All is well."
+    }
+   ],
+   "task": "Ask and answer."
+  },
+  {
+   "id": "I-47-e10",
+   "type": "produce",
+   "en": "yesterday",
+   "options": [
+    "אֶתְמוֹל",
+    "הַיּוֹם",
+    "מָחָר"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-47-e11",
+   "type": "respond",
+   "cue": "Say you don't know.",
+   "answer": {
+    "he": "אֲנִי לֹא יוֹדֵעַ",
+    "en": "I don't know"
+   }
+  },
+  {
+   "id": "I-47-e12",
+   "type": "respond",
+   "cue": "Say you don't understand the headline.",
+   "answer": {
+    "he": "אֲנִי לֹא מֵבִין",
+    "en": "I don't understand"
+   }
+  },
+  {
+   "id": "I-47-e13",
+   "type": "register",
+   "he": "מָה קוֹרֶה?",
+   "en": "what's happening?",
+   "answer": "slang",
+   "options": [
+    "formal",
+    "neutral",
+    "casual",
+    "slang"
+   ]
+  },
+  {
+   "id": "I-47-e14",
+   "type": "recall",
+   "he": "מֶמְשָׁלָה",
+   "en": "government"
+  }
+ ],
+ "note": "Headline grammar (construct nouns, tense-free headlines), newspaper names, 'prime minister' and 'economy' have no pointed tokens in the sources. This lesson is vocabulary recognition only and takes no side on any news topic."
+}

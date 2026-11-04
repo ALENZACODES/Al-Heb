@@ -1,0 +1,346 @@
+{
+ "id": "I-38",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Dating and going out: asking someone out, plans and compliments",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "יָפֶה",
+   "en": "beautiful, nice",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yafeh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hb4ac356a"
+   }
+  },
+  {
+   "he": "חָמוּד",
+   "en": "cute, sweet",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chamud"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h4105e713"
+   }
+  },
+  {
+   "he": "מִסְעָדָה",
+   "en": "restaurant",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mis'adah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h6d121ed3"
+   }
+  },
+  {
+   "he": "סֶרֶט",
+   "en": "film",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "seret"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hbbbfa9a7"
+   }
+  },
+  {
+   "he": "חָבֵר",
+   "en": "friend; boyfriend",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chaver"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h2280b9b6"
+   }
+  },
+  {
+   "he": "חֲבֵרָה",
+   "en": "friend; girlfriend",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chaverah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h2280b9b6#forms.feminine"
+   }
+  },
+  {
+   "he": "אֶפְשָׁר לָצֵאת",
+   "en": "can we go out?",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "efshar latzet"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "אֶפְשָׁר",
+     "לָצֵאת"
+    ]
+   }
+  },
+  {
+   "he": "בֶּאֱמֶת?",
+   "en": "really?",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "be'emet?"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h5658dbbe"
+   }
+  },
+  {
+   "he": "מָתַי?",
+   "en": "when?",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "matai?"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "haf452c59"
+   }
+  },
+  {
+   "he": "הָעֶרֶב",
+   "en": "this evening",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ha'erev"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h876d966b"
+   }
+  },
+  {
+   "he": "מָחָר",
+   "en": "tomorrow",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "machar"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he1c16e99"
+   }
+  },
+  {
+   "he": "בְּשִׂמְחָה",
+   "en": "gladly",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "besimchah"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בְּשִׂמְחָה"
+    ]
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Suggest a plan (dinner, a film) politely",
+  "Accept or turn down an invitation",
+  "Give and receive a compliment without sounding stiff"
+ ],
+ "estMinutes": 25,
+ "prerequisites": [
+  "I-36"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-38-e01",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "אֶפְשָׁר לָצֵאת הָעֶרֶב?",
+     "en": "Can we go out this evening?"
+    },
+    {
+     "speaker": "b",
+     "he": "בְּשִׂמְחָה! לְאָן?",
+     "en": "Gladly! Where to?"
+    },
+    {
+     "speaker": "a",
+     "he": "מִסְעָדָה.",
+     "en": "A restaurant."
+    }
+   ],
+   "task": "Invite someone out and answer the invitation."
+  },
+  {
+   "id": "I-38-e02",
+   "type": "produce",
+   "en": "gladly",
+   "options": [
+    "בְּשִׂמְחָה",
+    "אוּלַי",
+    "לֹא נָכוֹן"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-38-e03",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "מִסְעָדָה",
+     "en": "restaurant"
+    },
+    {
+     "he": "סֶרֶט",
+     "en": "film"
+    },
+    {
+     "he": "חָבֵר",
+     "en": "friend (m)"
+    },
+    {
+     "he": "חֲבֵרָה",
+     "en": "friend (f)"
+    },
+    {
+     "he": "יָפֶה",
+     "en": "nice"
+    }
+   ]
+  },
+  {
+   "id": "I-38-e04",
+   "type": "order",
+   "he": "אֶפְשָׁר לָצֵאת מָחָר?",
+   "en": "Can we go out tomorrow?"
+  },
+  {
+   "id": "I-38-e05",
+   "type": "respond",
+   "cue": "Someone suggests a film. Say yes.",
+   "answer": {
+    "he": "כֵּן, בְּשִׂמְחָה",
+    "en": "Yes, gladly"
+   }
+  },
+  {
+   "id": "I-38-e06",
+   "type": "respond",
+   "cue": "You can't make it. Say maybe another time.",
+   "answer": {
+    "he": "אוּלַי מָחָר",
+    "en": "Maybe tomorrow"
+   }
+  },
+  {
+   "id": "I-38-e07",
+   "type": "register",
+   "he": "סַבָּבָה",
+   "en": "cool / fine by me",
+   "answer": "slang",
+   "options": [
+    "formal",
+    "neutral",
+    "casual",
+    "slang"
+   ]
+  },
+  {
+   "id": "I-38-e08",
+   "type": "register",
+   "he": "יוֹפִי",
+   "en": "great / nice",
+   "answer": "slang",
+   "options": [
+    "formal",
+    "neutral",
+    "casual",
+    "slang"
+   ]
+  },
+  {
+   "id": "I-38-e09",
+   "type": "produce",
+   "en": "really?",
+   "options": [
+    "בֶּאֱמֶת?",
+    "בֶּטַח",
+    "אוּלַי"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-38-e10",
+   "type": "respond",
+   "cue": "Someone compliments you. Say thank you.",
+   "answer": {
+    "he": "תּוֹדָה רַבָּה",
+    "en": "Thank you very much"
+   }
+  },
+  {
+   "id": "I-38-e11",
+   "type": "recall",
+   "he": "חָמוּד",
+   "en": "cute, sweet"
+  },
+  {
+   "id": "I-38-e12",
+   "type": "gender",
+   "m": "אֲנִי רוֹצֶה סֶרֶט",
+   "f": "אֲנִי רוֹצָה סֶרֶט",
+   "en": "I want a film"
+  },
+  {
+   "id": "I-38-e13",
+   "type": "produce",
+   "en": "what time?",
+   "options": [
+    "מָתַי",
+    "אֵיפֹה",
+    "כַּמָּה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-38-e14",
+   "type": "respond",
+   "cue": "End the evening.",
+   "answer": {
+    "he": "תּוֹדָה, לְהִתְרָאוֹת",
+    "en": "Thanks, see you"
+   }
+  }
+ ],
+ "note": "'Date', 'girlfriend/boyfriend (partner)', 'I like you' and flirting phrases are not in any source file; Register and tone need a native speaker."
+}

@@ -140,6 +140,7 @@ main .alef-trace .notice, main .alef-atlas .warn { color: #1b1b1f; }
   .site-nav .nav-more.open { display: grid; grid-template-columns: repeat(auto-fit, minmax(5.5rem, 1fr)); gap: .25rem; }
   .nav-more a { min-block-size: 56px; font-size: .85rem; border: 1px solid var(--border); border-radius: 10px; }
   main { padding-block-end: 1.5rem; }
+  .site-nav .nav-he { font-size: 1em; }
 }
 
 

@@ -26,6 +26,10 @@ const focusNode = (n) => { try { n?.focus?.(); } catch { /* ignore */ } };
 const pad2 = (n) => String(n).padStart(2, "0");
 const fmtWhen = (d) => { try { return new Intl.DateTimeFormat("en-GB", { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", hour12: false }).format(d); } catch { return d.toString(); } };
 
+/** Focus the heading only if nothing else has focus yet: this runs after async loading, and must not pull focus back from a keyboard user who already moved on. */
+function focusHeadingIfIdle(h1) {
+  try { const a = globalThis.document?.activeElement; if (!a || a === globalThis.document.body || a === h1 || a.id === "main") h1?.focus?.(); } catch { /* ignore */ }
+}
 /** @param {HTMLElement} root @param {any} ctx @returns {() => void} unmount */
 export function mount(root, ctx) {
   injectStyle();
@@ -89,6 +93,8 @@ export function mount(root, ctx) {
 
     const quiet = el("input", { type: "checkbox", id: "nt-quiet", checked: prefs.shabbatQuiet ? true : null,
       onchange: async (e) => { prefs = notify.normalizePrefs({ ...prefs, shabbatQuiet: e.target.checked }); await save(); await arm(); } });
+    const yt = el("input", { type: "checkbox", id: "nt-yomtov", checked: prefs.yomTovQuiet ? true : null,
+      onchange: async (e) => { prefs = notify.normalizePrefs({ ...prefs, yomTovQuiet: e.target.checked }); await save(); await arm(); } });
     const quietNote = loc
       ? `Quiet from candle lighting to havdalah in ${loc.name} (${loc.candleMinutes} minutes before Friday sunset, until ${loc.havdalah?.mode === "minutes" ? `${loc.havdalah.minutes} minutes after Saturday sunset` : `the sun is ${loc.havdalah?.degrees ?? 8.5} degrees below the horizon on Saturday`}). Change the city on the Calendar screen.`
       : "No city is set, so Shabbat quiet hours cannot be computed. Pick a city on the Calendar screen; until then reminders are not held back on Shabbat.";
@@ -118,6 +124,8 @@ export function mount(root, ctx) {
         el("p", { class: "muted" }, "Days"), days,
         el("label", { class: "nt-check", for: "nt-quiet" }, quiet, "Keep Shabbat quiet"),
         el("p", { class: "muted", id: "nt-quiet-note" }, quietNote),
+        el("label", { class: "nt-check", for: "nt-yomtov" }, yt, "Keep festivals quiet"),
+        el("p", { class: "muted", id: "nt-yomtov-note" }, `Also quiet on Rosh Hashanah, Yom Kippur, the first day of Sukkot, Shemini Atzeret, the first and last days of Pesach, and Shavuot, from the evening before until nightfall. Days follow the observance chosen on the Calendar screen (${loc?.observance === "traditional" ? "traditional, two days where that applies" : loc?.observance === "israel" ? "Israel" : "Reform, one day"}). Chol HaMoed, Hanukkah, Purim and fast days are not quiet.`),
         el("p", { class: "muted", id: "nt-next" }),
         el("div", { class: "nt-row" }, testBtn)),
       el("p", { class: "muted" }, "Prayer-time, candle-lighting and holiday reminders live on the Calendar screen; this card is only the daily study nudge."),
@@ -139,7 +147,7 @@ export function mount(root, ctx) {
     loc = await notify.resolveQuietLocation(ctx);
     if (!alive) return;
     await arm(); render();
-    focusNode(h1);
+    focusHeadingIfIdle(h1);
   }
 
   init();

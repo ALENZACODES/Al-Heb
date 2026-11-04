@@ -1,0 +1,156 @@
+{
+ "schema": "alef-speak-prayers/1",
+ "note": "Hebrew lines are copied verbatim from data/corpus/registry.json (Sefaria Metsudah siddur text, machine-compared to the source, NOT proofread by a Hebrew educator). The recognizer compares letters only, in modern Israeli pronunciation.",
+ "prayers": [
+  {
+   "id": "shema-2",
+   "title": "Baruch shem (said after Shema line)",
+   "ref": "Siddur: Baruch shem kevod malchuto",
+   "level": "intro-1",
+   "lines": [
+    "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃"
+   ],
+   "english": "Blessed is the name of the glory of his kingship for ever and ever.",
+   "registryStatus": "verified",
+   "proofread": false,
+   "license": "CC-BY",
+   "attribution": "Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.",
+   "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Shema",
+   "lineAudio": {
+    "kind": "line",
+    "id": "shema-2"
+   }
+  },
+  {
+   "id": "hamotzi",
+   "title": "HaMotzi (blessing over bread)",
+   "ref": "Siddur: HaMotzi",
+   "level": "intro-2",
+   "lines": [
+    "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ׃"
+   ],
+   "english": "Blessed are you, LORD our God, king of the world, who brings forth bread from the earth.",
+   "registryStatus": "verified",
+   "proofread": false,
+   "license": "CC0",
+   "attribution": "Hebrew text: Siddur Edot HaMizrach, \"Shaliehsaboo Edition\", from Sefaria where it is labelled CC0 (no attribution required; credit given as a courtesy). Label not independently verified. English: original literal gloss.",
+   "source": "Shaliehsaboo Edition via Sefaria: Siddur Edot HaMizrach, Shabbat Evening, First Meal",
+   "lineAudio": {
+    "kind": "line",
+    "id": "hamotzi"
+   }
+  },
+  {
+   "id": "kiddush-wine-1",
+   "title": "Blessing over wine",
+   "ref": "Siddur: blessing over wine",
+   "level": "intro-2",
+   "lines": [
+    "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן׃"
+   ],
+   "english": "Blessed are you, LORD our God, king of the world, who creates the fruit of the vine.",
+   "registryStatus": "verified",
+   "proofread": false,
+   "license": "Public Domain",
+   "attribution": "Hebrew text: Torat Emet 357 (toratemetfreeware.com), as digitised on Sefaria where it is labelled Public Domain. Label not independently verified. English: original literal gloss.",
+   "source": "Torat Emet 357 via Sefaria: Siddur Sefard, Birchat HaMazon, Blessing on Foods",
+   "lineAudio": {
+    "kind": "line",
+    "id": "kiddush-wine-1"
+   }
+  },
+  {
+   "id": "candle-shabbat",
+   "title": "Shabbat candle blessing",
+   "ref": "Siddur: Shabbat candle blessing",
+   "level": "intro-2",
+   "lines": [
+    "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת׃"
+   ],
+   "english": "Blessed are you, LORD our God, king of the world, who made us holy with his commandments and commanded us to light the lamp of Shabbat.",
+   "registryStatus": "verified",
+   "proofread": false,
+   "license": "Public Domain",
+   "attribution": "Hebrew text: Torat Emet 357 (toratemetfreeware.com), as digitised on Sefaria where it is labelled Public Domain. Label not independently verified. English: original literal gloss.",
+   "source": "Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Candle Lighting",
+   "lineAudio": {
+    "kind": "line",
+    "id": "candle-shabbat"
+   }
+  },
+  {
+   "id": "modeh-ani-1",
+   "title": "Modeh Ani (on waking)",
+   "ref": "Siddur: Modeh Ani",
+   "level": "intro-2",
+   "lines": [
+    "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃"
+   ],
+   "english": "I give thanks before you, living and enduring king, that you have returned my soul to me in mercy; great is your faithfulness.",
+   "registryStatus": "verified",
+   "proofread": false,
+   "license": "CC-BY",
+   "attribution": "Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.",
+   "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Preparatory Prayers, Modeh Ani",
+   "lineAudio": {
+    "kind": "line",
+    "id": "modeh-ani-1"
+   }
+  },
+  {
+   "id": "torah-barchu",
+   "title": "Barchu (call to the Torah blessing)",
+   "ref": "Siddur: Barchu before the Torah reading",
+   "level": "intro-3",
+   "lines": [
+    "בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ׃",
+    "בָּרוּךְ יְהוָה הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃"
+   ],
+   "english": "Bless the LORD, the blessed one.\nBlessed is the LORD, the blessed one, for ever and ever.",
+   "registryStatus": "verified",
+   "proofread": false,
+   "license": "CC-BY",
+   "attribution": "Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.",
+   "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Birkat HaTorah",
+   "lineAudio": null
+  },
+  {
+   "id": "oseh-shalom",
+   "title": "Oseh shalom (end of the Amidah and of Kaddish)",
+   "ref": "Siddur: Oseh shalom",
+   "level": "intro-3",
+   "lines": [
+    "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃"
+   ],
+   "english": "He who makes peace in his high places, may he make peace for us and for all Israel; and say: Amen.",
+   "registryStatus": "verified",
+   "proofread": false,
+   "license": "CC-BY",
+   "attribution": "Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.",
+   "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Amidah, Concluding Passage",
+   "lineAudio": {
+    "kind": "line",
+    "id": "oseh-shalom"
+   }
+  },
+  {
+   "id": "shehecheyanu",
+   "title": "Shehecheyanu (first-time and festival blessing)",
+   "ref": "Siddur: Shehecheyanu",
+   "level": "intro-2",
+   "lines": [
+    "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁהֶחֱיָינוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה׃"
+   ],
+   "english": "Blessed are you, LORD our God, king of the world, who has kept us alive, sustained us, and brought us to this time.",
+   "registryStatus": "verified",
+   "proofread": false,
+   "license": "CC0",
+   "attribution": "Hebrew text: Siddur Edot HaMizrach, \"Shaliehsaboo Edition\", from Sefaria where it is labelled CC0 (no attribution required; credit given as a courtesy). Label not independently verified. English: original literal gloss.",
+   "source": "Shaliehsaboo Edition via Sefaria: Siddur Edot HaMizrach, Hanukkah, Menorah Lighting",
+   "lineAudio": {
+    "kind": "line",
+    "id": "shehecheyanu"
+   }
+  }
+ ]
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Writes docs/images/paste/cmd-<NNN>[-a|-b].txt (self-contained ChatGPT paste files), README.md and INDEX.md
+// Writes docs/images/paste/cmd-<NNN>[-a|-b].txt (self-contained image paste files), README.md and INDEX.md
 // from data/images/next1000-groups.json. Run after build_next1000.mjs.
 import { writeFileSync, readFileSync, mkdirSync, readdirSync, unlinkSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -54,7 +54,7 @@ function footer(n) {
     '',
     'RULES (again):',
     `- ${NO_TEXT}`,
-    `- ChatGPT only offers 1:1, 3:2 and 2:3: follow the size hint on each item.`,
+    `- Your image tool may only offer 1:1, 3:2 and 2:3: follow the size hint on each item.`,
     `- Generate exactly ${n} separate images, one per numbered item, each as its own image (never a collage or grid). Do not skip or merge items.`,
     '',
     'When all images are done, reply ONLY with the numbered list of filenames (item number, exact filename) and the count, then STOP and wait for me to say "next". Do not start any other command.',
@@ -99,13 +99,13 @@ export function buildPaste() {
   return files;
 }
 
-export const README = `# ChatGPT paste files
+export const README = `# Image paste files
 
-1. Open one ChatGPT conversation (image generation on) and keep it for the whole run; do not attach anything unless a file starts with an ATTACH line.
-2. Open the first file listed in INDEX.md (the first pending command), copy the whole file and paste it as one message; ChatGPT makes the numbered images.
-3. Save every image under the exact FILENAME shown for it (ChatGPT only makes 1:1, 3:2 and 2:3, so 1792x1024 images come out 3:2 and 1024x1280 ones 2:3; resize later).
-4. When ChatGPT replies with the filenames list and waits, check the count against INDEX.md, then type "next" and paste the following file (the next file in INDEX.md). Files split into -a/-b are pasted in order.
-5. If ChatGPT puts any text in an image, ask it to redo that item without text. Rebuild these files with \`node tools/images/build_paste_files.mjs\`.
+1. Open one conversation in your image tool (image generation on) and keep it for the whole run; do not attach anything unless a file starts with an ATTACH line.
+2. Open the first file listed in INDEX.md (the first pending command), copy the whole file and paste it as one message; the tool makes the numbered images.
+3. Save every image under the exact FILENAME shown for it (the tool may only make 1:1, 3:2 and 2:3, so 1792x1024 images come out 3:2 and 1024x1280 ones 2:3; resize later).
+4. When the tool replies with the filenames list and waits, check the count against INDEX.md, then type "next" and paste the following file (the next file in INDEX.md). Files split into -a/-b are pasted in order.
+5. If the tool puts any text in an image, ask it to redo that item without text. Rebuild these files with \`node tools/images/build_paste_files.mjs\`.
 `;
 
 export function indexMd(files) {

@@ -6,6 +6,7 @@ import { projectStreak } from '../curriculum/streak.js';
 import { timedReadGate } from '../timedread/gate.js';
 import { cleanState as cleanTimedReads, median, cleanWpm, accuracy as readAccuracy } from '../timedread/model.js';
 import { coverage as siddurCoverageOf, FOLLOW_IDS, ORDER_IDS } from '../service/model.js';
+import { unpointedScore } from '../firstday/model.js';
 import { gradeLines, gradeWords, knownSet, entriesDecodable, wordsDecodable, unlockers, missingIn } from './decode.js';
 
 export const ALL_LETTERS = [...BASE_LETTER_IDS, ...FINAL_LETTER_IDS];
@@ -20,7 +21,8 @@ export const KEYS = Object.freeze({
   completed: 'curriculum.progress', cards: 'srs.cards', vocab: 'srs.vocab', streak: 'streak', traced: 'letters.progress',
   pairs: 'curriculum.pairs', checkpoints: 'curriculum.checkpoints', loanwords: 'curriculum.loanwords', ladder: 'curriculum.ladder',
   misses: 'pron.misses', state: 'progress.state',
-  timedRead: 'timedread.v1', servicePrefs: 'service.prefs',
+  timedRead: 'timedread.v1', servicePrefs: 'service.prefs', firstday: 'firstday.progress', firstdayLadder: 'firstday.ladder',
+  speak: 'speak.v1', placement: 'placement.v1', milestones: 'progress.milestones.v1',
 });
 
 const obj = (v) => (v && typeof v === 'object' && !Array.isArray(v) ? v : {});
@@ -46,6 +48,11 @@ export function readSnapshot(store) {
     misses: Array.isArray(g(KEYS.misses, [])) ? g(KEYS.misses, []) : [],
     timedRead: g(KEYS.timedRead, null), // raw 'timedread.v1'; the timed-read lane cleans it (cleanState) wherever it is read
     servicePrefs: obj(g(KEYS.servicePrefs, {})),
+    speak: g(KEYS.speak, null), // raw 'speak.v1'; src/speak/model.js coerceState cleans it where it is read
+    placement: obj(g(KEYS.placement, {})), // {v, at, answers:[{id, correct, picked}], result}
+    milestonesStore: obj(g(KEYS.milestones, {})), // {v:1, achieved:{id:{at, day, basis}}}; cleaned by milestones.js
+    firstday: obj(g(KEYS.firstday, {})), // {step, readWords[], checkCorrect, done} written by the first-day lane
+    firstdayLadder: obj(g(KEYS.firstdayLadder, {})), // {n, answers:{n:boolean}, hinted:{n:true}} written by the first-day ladder
     rest: Array.isArray(state.rest) ? state.rest.filter((d) => typeof d === 'string') : [],
     goal: state.goal && typeof state.goal === 'object' ? state.goal : null,
   };
@@ -433,3 +440,37 @@ export function niceId(id) {
   return cap(s.replace(/-/g, ' '));
 }
 const cap = (x) => x.charAt(0).toUpperCase() + x.slice(1);
+
+// ---------- "What can I read now?" (one summary over every lane) ------------------------------------------------
+
+/**
+ * First-day lane: words marked read in the first 10 minutes and the pointed-to-unpointed ladder score. Self-reported.
+ * @param {Snapshot} s @param {{ladder?:any}} d
+ */
+export function firstDayInfo(s, d) {
+  const readWords = Array.isArray(s.firstday.readWords) ? s.firstday.readWords.filter((w) => typeof w === 'string') : [];
+  const answers = obj(s.firstdayLadder.answers);
+  const steps = d.ladder && Array.isArray(d.ladder.steps) ? d.ladder.steps.length : 0;
+  const ladder = steps ? unpointedScore(d.ladder, answers) : { right: 0, total: 0, pct: 0 };
+  const answered = Object.values(answers).filter((v) => typeof v === 'boolean').length;
+  return { started: readWords.length > 0 || answered > 0 || Number(s.firstday.step) > 0, readWords, done: s.firstday.done === true, ladder: { ...ladder, answered, steps, at: Number.isInteger(s.firstdayLadder.n) ? s.firstdayLadder.n : 0 } };
+}
+
+/**
+ * Rows for the unified "What can I read now?" panel: letters and signs, lines and words, vocabulary cards, timed reads,
+ * siddur coverage, first day. Each row: {id, label, value, detail, href, have, need|null, measured:'taught'|'self'}.
+ * 'taught' = derived from completed lessons and tracing; 'self' = the learner's own report. Nothing is a fluency score.
+ * @param {Snapshot} s @param {any} d @param {ReturnType<typeof makeContext>} c
+ */
+export function readNowSummary(s, d, c) {
+  const k = c.know, r = c.read, v = c.vocab, tr = timedReadSummary(c.timedRead), sc = siddurCoverage(s, d, c), fd = firstDayInfo(s, d);
+  const rows = [
+    { id: 'letters', label: 'Letters and signs met', value: `${k.letters.size} of ${ALL_LETTERS.length} letters, ${k.signs.size} of ${ALL_SIGNS.length} signs`, detail: 'From completed lessons and finished tracing.', href: '#/learn', have: k.letters.size + k.signs.size, need: ALL_LETTERS.length + ALL_SIGNS.length, measured: 'taught' },
+    { id: 'lines', label: 'Prayer and Torah lines you can sound out', value: `${r.linesFull.length} of ${r.lines.length} lines, ${r.words.full.length.toLocaleString('en-US')} words`, detail: `${r.linesAlmost.length} more ${r.linesAlmost.length === 1 ? 'line is' : 'lines are'} one sign away. Every letter and sign in them has been taught; this is not a fluency check.`, href: '#/read', have: r.linesFull.length, need: r.lines.length, measured: 'taught' },
+    { id: 'vocab', label: 'Vocabulary cards', value: v.started ? `${v.started} started, ${v.bands.reduce((n, b) => n + b.mature, 0)} mature${v.reached ? `, working in the first ${v.reached.toLocaleString('en-US')}` : ''}` : 'none started', detail: 'Cards you have reviewed at least once; mature means the scheduler expects you to keep them for 21 days or more.', href: '#/vocab', have: v.started, need: null, measured: 'taught' },
+    { id: 'timedread', label: 'Timed read-alouds', value: tr.reads ? `${tr.reads} ${tr.reads === 1 ? 'read' : 'reads'} of ${tr.texts} ${tr.texts === 1 ? 'text' : 'texts'}${tr.best ? `, about ${tr.best.medianWpm} clean words a minute on ${tr.best.textId}` : ''}` : 'none yet', detail: 'Self-reported: you time the read and mark the words that tripped you; the app keeps only the clock.', href: '#/timedread', have: tr.reads, need: null, measured: 'self' },
+  ];
+  if (sc) rows.push({ id: 'siddur', label: `Siddur coverage, ${sc.title}`, value: `${sc.pct}% of the lines ALEF holds`, detail: `${sc.full} of ${sc.lines} lines use only letters and signs you have been taught; ${sc.gaps} ${sc.gaps === 1 ? 'part' : 'parts'} of a typical service ${sc.gaps === 1 ? 'is' : 'are'} not in ALEF yet.`, href: '#/service', have: sc.full, need: sc.lines, measured: 'taught' });
+  rows.push({ id: 'firstday', label: 'First 10 minutes and the unpointed ladder', value: !fd.started ? 'not started' : `${fd.readWords.length} first-day ${fd.readWords.length === 1 ? 'word' : 'words'} marked read${fd.ladder.steps ? `; ladder ${fd.ladder.right} of ${fd.ladder.total} unpointed words marked read` : ''}`, detail: 'Self-reported: you said whether you read each word. A hinted word never counts as read unpointed.', href: fd.ladder.answered ? '#/firstday/ladder' : '#/firstday', have: fd.readWords.length + fd.ladder.right, need: null, measured: 'self' });
+  return rows;
+}

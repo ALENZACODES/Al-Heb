@@ -1,6 +1,8 @@
 // Rebuild data/speak/ from course data:  node src/speak/build.mjs
 // Inputs (read only): data/vocab/words.json, data/vocab/packs.json, data/audio/manifest.json, data/audio/manifest-words-israeli.json.
-// Outputs: data/speak/sets.json (index), data/speak/sets/<id>.json (60 "Say it" sets by theme), data/speak/pairs.json (listening drills).
+// Outputs: data/speak/sets.json (index), data/speak/sets/<id>.json (60 "Say it" sets by theme), data/speak/pairs.json (listening drills),
+// data/speak/prayers.json (8 short prayer texts, copied line for line from data/corpus/registry.json for read-aloud and shadowing).
+// data/speak/minimal-pairs.json belongs to the pronunciation lane and is only read, never written, here.
 // Every Hebrew string is copied from the inputs; this script never composes Hebrew. Both inputs are machine-built drafts.
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, unlinkSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -11,6 +13,21 @@ import { buildPairs } from './pairs.js';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const rd = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
 const SET_COUNT = 60, ITEMS_PER_SET = 12;
+export const PRAYER_IDS = ['shema-2', 'hamotzi', 'kiddush-wine-1', 'candle-shabbat', 'modeh-ani-1', 'torah-barchu', 'oseh-shalom', 'shehecheyanu'];
+
+/** The read-aloud prayers: Hebrew lines are the registry's own (split on newline, nothing edited). */
+export function buildPrayers(registry) {
+  const byId = new Map(registry.map((e) => [e.id, e]));
+  const prayers = PRAYER_IDS.map((id) => {
+    const e = byId.get(id);
+    if (!e) throw new Error('prayer missing from registry: ' + id);
+    const lines = e.he.split('\n').map((l) => l.trim()).filter(Boolean);
+    return { id: e.id, title: e.title, ref: e.ref, level: e.level, lines, english: e.english, registryStatus: e.status, proofread: !!e.proofread, license: e.license, attribution: e.attribution, source: e.source,
+      lineAudio: lines.length === 1 ? { kind: 'line', id: e.id } : null };
+  });
+  return { schema: 'alef-speak-prayers/1', note: 'Hebrew lines are copied verbatim from data/corpus/registry.json (Sefaria Metsudah siddur text, machine-compared to the source, NOT proofread by a Hebrew educator). The recognizer compares letters only, in modern Israeli pronunciation.', prayers };
+}
+
 const NOTE = 'Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.';
 
 export function buildSets({ words, packs, manifestTexts }) {
@@ -24,7 +41,8 @@ export function buildSets({ words, packs, manifestTexts }) {
   const sets = [];
   for (const p of [...survival, ...topical]) {
     if (sets.length >= SET_COUNT) break;
-    const pool = p.wordIds.map((id) => byId.get(id)).filter((w) => w && typeof w.he === 'string' && normalizeHe(w.he) && w.translit && w.en);
+    // pointed only (the screen shows vowel points) and never the four-letter divine name, which is not pronounced as written
+    const pool = p.wordIds.map((id) => byId.get(id)).filter((w) => w && typeof w.he === 'string' && /[\u05B0-\u05C7]/.test(w.he) && normalizeHe(w.he) && normalizeHe(w.he) !== 'יהוה' && w.translit && w.en);
     const short = pool.filter((w) => normalizeHe(w.he).split(' ').length <= 3);
     short.sort((a, b) => (a.frequencyRank ?? 1e9) - (b.frequencyRank ?? 1e9) || a.he.length - b.he.length);
     const seen = new Set();
@@ -59,5 +77,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   writeFileSync(join(root, 'data/speak/sets.json'), JSON.stringify(index, null, 1) + '\n');
   const pairs = buildPairs(words, manifestTexts);
   writeFileSync(join(root, 'data/speak/pairs.json'), JSON.stringify(pairs, null, 1) + '\n');
+  const prayers = buildPrayers(rd('data/corpus/registry.json').entries);
+  writeFileSync(join(root, 'data/speak/prayers.json'), JSON.stringify(prayers, null, 1) + '\n');
   console.log(`wrote ${sets.length} sets (${sets.reduce((n, s) => n + s.items.length, 0)} items) and ${pairs.items.length} drill items across ${pairs.contrasts.length} contrasts`);
 }

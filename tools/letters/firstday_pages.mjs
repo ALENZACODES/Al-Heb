@@ -5,7 +5,8 @@
 //
 // Usage: node tools/letters/firstday_pages.mjs [--html-only]
 // Output: docs/workbook/alef-firstday-<a4|letter>.pdf (+ html/ sources), copied to assets/workbook/, entries merged into
-//         assets/workbook/manifest.json (see docs/workbook/FIRSTDAY-PAGES.md). docs/workbook/manifest.json is NOT touched: it belongs to workbook.mjs.
+//         docs/workbook/extras-manifest.json, then tools/letters/workbook_manifest.mjs rebuilds assets/workbook/manifest.json + docs/workbook/index.html
+//         from the PDFs on disk. docs/workbook/manifest.json is NOT touched: it belongs to workbook.mjs.
 // Dev tooling: Playwright (Chromium) for the PDF step only; buildFirstDayModel()/buildFirstDayHtml() are pure and unit-tested.
 // Every PDF is scrubbed by book/pdf_tools.py scrub (Author "John Khan" only). Shared helpers (page CSS, PDF rendering, manifest merge) are
 // exported for tools/letters/cursive_words.mjs and tools/letters/niqqud_workbook.mjs.
@@ -15,6 +16,7 @@ import { createRequire } from 'node:module';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { dirname, join } from 'node:path';
 import { traceStrip, PAPERS, SCRIPTS } from './workbook.mjs';
+import { recordExtras, mergeAll } from './workbook_manifest.mjs';
 
 export const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const readJson = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
@@ -76,13 +78,13 @@ h1{font-size:22pt;margin:0 0 2mm}h2{font-size:13pt;margin:3.5mm 0 1.5mm}h3{font-
 `;
 }
 
-export function pageShell({ title, body, n, total, fields = true, set = 'workbook', draft = DRAFT }) {
-  return `<section class="page" data-page="${n}"><div class="hd"><span><b>ALEF</b> &middot; ${esc(set)} &middot; ${esc(title)}</span>${fields ? '<span class="fields">No. <span>&nbsp;</span> Date <span>&nbsp;</span></span>' : ''}</div>${body}<div class="ft"><span>${esc(draft)} ${esc(FONTS_NOTE)}</span><span>${n} / ${total}</span></div></section>`;
+export function pageShell({ title, body, n, total, fields = true, set = 'workbook', draft = DRAFT, fonts = FONTS_NOTE }) {
+  return `<section class="page" data-page="${n}"><div class="hd"><span><b>ALEF</b> &middot; ${esc(set)} &middot; ${esc(title)}</span>${fields ? '<span class="fields">No. <span>&nbsp;</span> Date <span>&nbsp;</span></span>' : ''}</div>${body}<div class="ft"><span>${esc(draft)} ${esc(fonts)}</span><span>${n} / ${total}</span></div></section>`;
 }
 
-export function wrapHtml({ title, css, pages, set, draft }) {
+export function wrapHtml({ title, css, pages, set, draft, fonts }) {
   const total = pages.length;
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${esc(title)}</title><style>${css}</style></head><body>${pages.map((p, i) => pageShell({ title: p.title, body: p.body, n: i + 1, total, fields: p.fields, set, draft })).join('')}</body></html>`;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${esc(title)}</title><style>${css}</style></head><body>${pages.map((p, i) => pageShell({ title: p.title, body: p.body, n: i + 1, total, fields: p.fields, set, draft, fonts })).join('')}</body></html>`;
 }
 
 // ---------------------------------------------------------------- First 10 minutes: model
@@ -181,31 +183,6 @@ export async function renderPdf(browser, htmlPath, pdfPath) {
   copyFileSync(pdfPath, join(root, 'assets', 'workbook', pdfPath.split('/').pop()));
   return statSync(pdfPath).size;
 }
-/** Merge entries into assets/workbook/manifest.json (replace same ids, keep everything else, byte sizes re-read from disk). */
-export function mergeAssetManifest(entries) {
-  const p = join(root, 'assets', 'workbook', 'manifest.json');
-  const m = existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : { generated: '', status: 'DRAFT', fonts: 'Frank Ruhl Libre, Gveret Levin (SIL OFL 1.1)', files: [] };
-  const ids = new Set(entries.map((e) => e.id));
-  const keep = m.files.filter((f) => !ids.has(f.id));
-  const files = keep.concat(entries.map((e) => ({ ...e, bytes: statSync(join(root, 'assets', 'workbook', e.pdf)).size })));
-  writeFileSync(p, JSON.stringify({ ...m, files }, null, 1));
-  return files;
-}
-/** docs/workbook/index.html: one page listing every PDF in assets/workbook/manifest.json (main workbooks + these sets), with page and byte counts. */
-export function writeIndexPage() {
-  const p = join(root, 'assets', 'workbook', 'manifest.json'); if (!existsSync(p)) return null;
-  const m = JSON.parse(readFileSync(p, 'utf8'));
-  const SETS = [['workbook', 'Letter workbook (print and cursive, with or without memory hooks)', (f) => !f.kind], ['firstday', 'First 10 minutes', (f) => f.kind === 'firstday'], ['cursive-words', 'Cursive words (27 letter forms)', (f) => f.kind === 'cursive-words'], ['niqqud', 'Vowel signs (niqqud)', (f) => f.kind === 'niqqud']];
-  const kb = (b) => (b ? Math.round(b / 1024) + ' KB' : '?');
-  const label = (f) => f.kind ? f.script : `${f.script === 'print' ? 'Print letters' : 'Cursive letters'}${f.mnemonics ? ', with memory hooks' : ''}`;
-  const rows = SETS.map(([id, title, pick]) => { const fs = m.files.filter(pick); return fs.length ? `<h2 id="${id}">${esc(title)}</h2><table><thead><tr><th>File</th><th>Edition</th><th>Paper</th><th>Pages</th><th>Size</th></tr></thead><tbody>${fs.map((f) => `<tr><td><a href="${esc(f.pdf)}">${esc(f.pdf)}</a></td><td>${esc(label(f))}</td><td>${esc(f.paper)}</td><td>${f.pages}</td><td>${kb(f.bytes)}</td></tr>`).join('')}</tbody></table>` : ''; }).join('');
-  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>ALEF printable workbooks</title><style>body{font-family:system-ui,sans-serif;max-width:52em;margin:2em auto;padding:0 1em;color:#111}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #ccc;padding:.35em .5em;text-align:left}th{font-size:.85em}.notice{border:2px solid #000;padding:.6em .9em;margin:1em 0}</style></head><body>
-<h1>ALEF printable workbooks</h1><p>${m.files.length} PDF files, A4 and US Letter. Print at 100% ("Actual size"), single-sided. Generated ${esc(m.generated)} by tools/letters/workbook.mjs, firstday_pages.mjs, cursive_words.mjs and niqqud_workbook.mjs; this list mirrors assets/workbook/manifest.json.</p>
-<div class="notice"><b>${esc(m.status)}.</b> Every set is a draft: stroke order, pointing and example words have not been reviewed by a Hebrew teacher, and nothing has been tested with learners. Pronunciation is Israeli. Fonts: ${esc(m.fonts)}.</div>${rows}
-<p><small>Sources (HTML) for every PDF are in html/. Each PDF carries only an Author field in its metadata (book/pdf_tools.py scrub).</small></p></body></html>`;
-  writeFileSync(join(root, 'docs', 'workbook', 'index.html'), html);
-  return html;
-}
 /** Build one edition set: builder(paperId) -> {html, pages, pageCount}; returns manifest entries. */
 export async function buildEditions({ builder, name, kind, label, htmlOnly, extra = {} }) {
   const outDir = join(root, 'docs', 'workbook'); const htmlDir = join(outDir, 'html');
@@ -220,7 +197,7 @@ export async function buildEditions({ builder, name, kind, label, htmlOnly, extr
     entries.push(entry);
     console.log(id, pageCount + ' pages', entry.bytes ? Math.round(entry.bytes / 1024) + ' KB' : '(html only)');
   }
-  if (browser) { await browser.close(); mergeAssetManifest(entries); writeIndexPage(); }
+  if (browser) { await browser.close(); recordExtras(entries); mergeAll(); }
   return entries;
 }
 

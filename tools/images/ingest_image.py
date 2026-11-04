@@ -122,7 +122,7 @@ def cmd_probe(path):
             'ok': True, 'format': fmt, 'width': w, 'height': h, 'mode': mode, 'bytes': size,
             'sha256': hashlib.sha256(head).hexdigest(), 'hasAlpha': has_alpha, 'transparentFraction': transparent,
             'hasIcc': has_icc, 'hasExif': has_exif,
-            # ChatGPT/OpenAI images are expected to carry C2PA content credentials; byte-sniff only (not a validation).
+            # Generated images are expected to carry C2PA content credentials; byte-sniff only (not a validation).
             'c2paMarker': (b'c2pa' in head) or (b'jumb' in head),
         }
     except Exception as e:  # unreadable / truncated / bomb

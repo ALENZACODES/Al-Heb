@@ -66,7 +66,8 @@ function skeleton(he, contrastId) {
     return letter + marks;
   }).join('');
 }
-const firstWord = (en) => String(en || '').toLowerCase().replace(/[^a-z ]/g, '').trim().split(/\s+/)[0] || '';
+/** First sense of a gloss, articles and "to" dropped: "to put, place" -> "put". Equal heads = the same word pointed two ways in the draft list. */
+const glossHead = (en) => String(en || '').toLowerCase().split(/[,;/(]/)[0].replace(/^(to|a|an|the)\s+/, '').replace(/[^a-z ]/g, '').trim();
 const rank = (w) => w.frequencyRank ?? w.modernRank ?? 1e9;
 
 /**
@@ -88,7 +89,7 @@ export function buildPairs(words, manifestTexts = new Map(), { perContrast = 24 
       for (const w of g) { const s = contrastSlots(w.he, c.id)[0].sound; if (!bySound.has(s) || rank(w) < rank(bySound.get(s))) bySound.set(s, w); }
       if (bySound.size < 2) continue;
       const [a, b] = [...bySound.values()];
-      if (firstWord(a.en) === firstWord(b.en)) continue; // the same word pointed two ways in the draft list, not a pair
+      if (glossHead(a.en) === glossHead(b.en)) continue; // the same word pointed two ways in the draft list, not a pair
       const pid = `pair-${c.id}-${a.id}-${b.id}`;
       for (const [w, other] of [[a, b], [b, a]]) {
         const slot = contrastSlots(w.he, c.id)[0];
@@ -132,7 +133,7 @@ export function drillQueue(items, contrastId, rng = Math.random, n = 10) {
 export function drillQuestion(item, rng = Math.random) {
   const c = contrastById(item.contrast);
   if (item.type === 'pair') {
-    const playOther = rng() < 0.5;
+    const playOther = rng() >= 0.5;
     const played = playOther ? { he: item.other.he, en: item.other.en, translit: item.other.translit, answer: item.other.answer, id: item.other.id } : { he: item.he, en: item.en, translit: item.translit, answer: item.answer, id: item.id };
     const opts = shuffle([{ id: item.id, he: item.he, label: item.en }, { id: item.other.id, he: item.other.he, label: item.other.en }], rng);
     return { item, kind: 'pair', play: { he: played.he, audioId: playOther ? null : item.audioId }, options: opts, answer: played.id, prompt: 'Which word did you hear?', played };

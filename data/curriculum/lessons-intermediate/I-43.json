@@ -1,0 +1,326 @@
+{
+ "id": "I-43",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Supermarket: aisles, prices, bags and the checkout",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "קְנִיּוֹת",
+   "en": "shopping",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "keniyot"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h1f176299#forms.plural"
+   }
+  },
+  {
+   "he": "עֲגָלָה",
+   "en": "cart",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "agalah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h18f24cfb"
+   }
+  },
+  {
+   "he": "חָלָב",
+   "en": "milk",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chalav"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h35be21c5"
+   }
+  },
+  {
+   "he": "בֵּיצִים",
+   "en": "eggs",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "beitzim"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h9974efdc#forms.plural"
+   }
+  },
+  {
+   "he": "לֶחֶם",
+   "en": "bread",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lechem"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hf22f36ee"
+   }
+  },
+  {
+   "he": "פֵּרוֹת",
+   "en": "fruit",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "perot"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h166d92b0#forms.plural"
+   }
+  },
+  {
+   "he": "מְחִיר",
+   "en": "price",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mechir"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hb8a7e485"
+   }
+  },
+  {
+   "he": "מְזֻמָּן",
+   "en": "cash",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mezuman"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hcfabdf1c"
+   }
+  },
+  {
+   "he": "שַׂקִּית",
+   "en": "bag",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "sakit"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h55b6e9d7"
+   }
+  },
+  {
+   "he": "קַבָּלָה",
+   "en": "receipt",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kabalah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h1fc1c9e1"
+   }
+  },
+  {
+   "he": "הַנָּחָה",
+   "en": "discount",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hanachah"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַנָּחָה"
+    ]
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Find an item and ask its price",
+  "Pay at the checkout in cash or by card",
+  "Ask for a bag and a receipt"
+ ],
+ "estMinutes": 25,
+ "prerequisites": [
+  "I-12"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-43-e01",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "חָלָב",
+     "en": "milk"
+    },
+    {
+     "he": "בֵּיצִים",
+     "en": "eggs"
+    },
+    {
+     "he": "לֶחֶם",
+     "en": "bread"
+    },
+    {
+     "he": "פֵּרוֹת",
+     "en": "fruit"
+    },
+    {
+     "he": "עֲגָלָה",
+     "en": "cart"
+    }
+   ]
+  },
+  {
+   "id": "I-43-e02",
+   "type": "respond",
+   "cue": "Ask where the bread is.",
+   "answer": {
+    "he": "אֵיפֹה יֵשׁ לֶחֶם?",
+    "en": "Where is the bread?"
+   }
+  },
+  {
+   "id": "I-43-e03",
+   "type": "order",
+   "he": "כַּמָּה זֶה עוֹלֶה?",
+   "en": "How much does it cost?"
+  },
+  {
+   "id": "I-43-e04",
+   "type": "produce",
+   "en": "is there a discount?",
+   "options": [
+    "יֵשׁ הַנָּחָה?",
+    "יֵשׁ שַׂקִּית?",
+    "יֵשׁ מְזֻמָּן?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-43-e05",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "כַּמָּה זֶה עוֹלֶה?",
+     "en": "How much is it?"
+    },
+    {
+     "speaker": "b",
+     "he": "שְׁמוֹנָה שְׁקָלִים.",
+     "en": "Eight shekels."
+    },
+    {
+     "speaker": "a",
+     "he": "אֶקַּח אֶת זֶה.",
+     "en": "I'll take this."
+    }
+   ],
+   "task": "Ask the price and decide."
+  },
+  {
+   "id": "I-43-e06",
+   "type": "respond",
+   "cue": "Ask for a bag.",
+   "answer": {
+    "he": "אֶפְשָׁר שַׂקִּית?",
+    "en": "Can I have a bag?"
+   }
+  },
+  {
+   "id": "I-43-e07",
+   "type": "respond",
+   "cue": "Ask for a receipt.",
+   "answer": {
+    "he": "אֶפְשָׁר קַבָּלָה?",
+    "en": "Can I have a receipt?"
+   }
+  },
+  {
+   "id": "I-43-e08",
+   "type": "respond",
+   "cue": "Ask if you can pay by card.",
+   "answer": {
+    "he": "אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס?",
+    "en": "Can I pay by card?"
+   }
+  },
+  {
+   "id": "I-43-e09",
+   "type": "produce",
+   "en": "cash",
+   "options": [
+    "מְזֻמָּן",
+    "כַּרְטִיס אַשְׁרַאי",
+    "חֶשְׁבּוֹן"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-43-e10",
+   "type": "recall",
+   "he": "מְחִיר",
+   "en": "price"
+  },
+  {
+   "id": "I-43-e11",
+   "type": "produce",
+   "en": "fresh",
+   "options": [
+    "טָרִי",
+    "יָקָר",
+    "זוֹל"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-43-e12",
+   "type": "respond",
+   "cue": "Say it's expensive.",
+   "answer": {
+    "he": "זֶה יָקָר",
+    "en": "It's expensive"
+   }
+  },
+  {
+   "id": "I-43-e13",
+   "type": "register",
+   "he": "אֶפְשָׁר קַבָּלָה?",
+   "en": "can I have a receipt?",
+   "answer": "neutral",
+   "options": [
+    "formal",
+    "neutral",
+    "casual",
+    "slang"
+   ]
+  },
+  {
+   "id": "I-43-e14",
+   "type": "recall",
+   "he": "חָלָב",
+   "en": "milk"
+  }
+ ],
+ "note": "Checkout words ('self-checkout', 'club card', 'aisle') have no pointed tokens in the sources."
+}

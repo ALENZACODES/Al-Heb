@@ -11,7 +11,7 @@
 //  - Shabbat quiet hours: with a location, no reminder is fired from candle lighting (Friday sunset minus the learner's
 //    candle offset) to havdalah (Saturday, by the learner's havdalah choice). Both come from the calendar lane's data.
 // Everything is injectable (Notification, timers, now, service worker) so it is testable without a browser.
-import { sunset, havdalah as havdalahFor, addDays, weekday, DEFAULT_CANDLE_OFFSET_MIN, DEFAULT_HAVDALAH } from "../curriculum/calendar.js";
+import { sunset, sunTime, havdalah as havdalahFor, addDays, weekday, isoDate, holidaysBetween, DEFAULT_CANDLE_OFFSET_MIN, DEFAULT_HAVDALAH } from "../curriculum/calendar.js";
 
 export const NOTIFY_PREFS_KEY = "notify.prefs";
 /** Placeholder for the Web Push application server key (base64url, 65-byte P-256 public key). Empty = push is off. */
@@ -29,6 +29,7 @@ export const DEFAULT_PREFS = Object.freeze({
   hour: 19, minute: 0,
   days: Object.freeze([0, 1, 2, 3, 4, 6]), // Sunday to Thursday and Saturday night; Friday evening is Shabbat in most zones
   shabbatQuiet: true,
+  yomTovQuiet: true,
 });
 
 /** Validate/merge stored preferences; unknown keys dropped; never throws. */
@@ -44,6 +45,7 @@ export function normalizePrefs(raw) {
     minute: int(r.minute, 0, 59, d.minute),
     days,
     shabbatQuiet: typeof r.shabbatQuiet === "boolean" ? r.shabbatQuiet : d.shabbatQuiet,
+    yomTovQuiet: typeof r.yomTovQuiet === "boolean" ? r.yomTovQuiet : d.yomTovQuiet,
   };
 }
 
@@ -258,8 +260,78 @@ export function isShabbat(date, loc) {
   return hour >= FALLBACK_QUIET.fridayFromHour;
 }
 
-/** A quiet(date) predicate for scheduleStudyReminder from a location (null location = never quiet). */
+/** A quiet(date) predicate for scheduleStudyReminder from a location (null location = never quiet). Shabbat only. */
 export const shabbatQuiet = (loc) => (date) => isShabbat(date, loc);
+
+// ---------- Yom Tov quiet hours ----------
+
+/**
+ * The days of a festival record (from calendar.js holidaysBetween) on which work is forbidden (yom tov proper), as ISO
+ * date runs. Chol HaMoed and Hanukkah/Purim/fasts/modern days are NOT yom tov and are never quiet.
+ *   Rosh Hashanah, Yom Kippur, Shavuot, Shemini Atzeret / Simchat Torah: every day the calendar lists
+ *   Sukkot: first day (traditional mode: first two)       Pesach: first and last day (traditional mode: first two and last two)
+ * Under the default Reform one-day convention that is 1 day each (Pesach 2). "Some congregations keep a second day"
+ * (optionalExtraDays) is NOT counted: the learner opts in by choosing the traditional or Israel observance on the Calendar screen.
+ * @returns {string[][]} runs of consecutive ISO dates
+ */
+export function yomTovRuns(h) {
+  const span = (from, n) => { const out = []; let g = { y: +from.slice(0, 4), m: +from.slice(5, 7), d: +from.slice(8, 10) }; for (let i = 0; i < n; i++) { out.push(isoDate(g)); g = addDays(g, 1); } return out; };
+  switch (h.id) {
+    case "rosh-hashanah": case "yom-kippur": case "shavuot": case "shemini-atzeret": case "simchat-torah":
+      return [span(h.start, h.days)];
+    case "sukkot": return [span(h.start, h.mode === "traditional" ? 2 : 1)];
+    case "pesach": {
+      const k = h.mode === "traditional" ? 2 : 1;
+      const endG = { y: +h.end.slice(0, 4), m: +h.end.slice(5, 7), d: +h.end.slice(8, 10) };
+      return [span(h.start, k), span(isoDate(addDays(endG, -(k - 1))), k)];
+    }
+    default: return [];
+  }
+}
+
+/**
+ * The yom tov window containing `date` at a location: starts at (sunset on the eve - candleMinutes), ends at nightfall
+ * of the last day (sun 8.5 degrees below the horizon, or `minutes` after sunset, as the learner chose for havdalah).
+ * Returns {id, en, start, end} or null. The civil date is read in the city's zone. Polar cases with no sunset use the whole civil days.
+ * @param {Date} date @param {object|null} loc @param {{mode?:string}} [opt] mode = calendar observance (reform | traditional | israel)
+ */
+export function yomTovWindow(date, loc, opt = {}) {
+  if (!loc || !Number.isFinite(loc.lat) || !Number.isFinite(loc.lon)) return null;
+  const mode = ["reform", "traditional", "israel"].includes(opt.mode) ? opt.mode : "reform";
+  const g = zonedYMD(date, loc.tz);
+  const hols = holidaysBetween(isoDate(addDays(g, -1)), isoDate(addDays(g, 1)), { mode });
+  const off = Number.isFinite(loc.candleMinutes) ? loc.candleMinutes : DEFAULT_CANDLE_OFFSET_MIN;
+  const hv = loc.havdalah || DEFAULT_HAVDALAH;
+  const parse = (iso) => ({ y: +iso.slice(0, 4), m: +iso.slice(5, 7), d: +iso.slice(8, 10) });
+  for (const h of hols) {
+    if (h.kind !== "major") continue;
+    for (const run of yomTovRuns({ ...h, mode })) {
+      const first = parse(run[0]), last = parse(run[run.length - 1]);
+      const eveSs = sunset(addDays(first, -1), loc.lat, loc.lon);
+      const lastSs = sunset(last, loc.lat, loc.lon);
+      let start, end;
+      if (eveSs && lastSs) {
+        start = new Date(eveSs.getTime() - off * 60000);
+        end = hv.mode === "minutes" ? new Date(lastSs.getTime() + (hv.minutes ?? DEFAULT_HAVDALAH.minutes) * 60000)
+          : sunTime(last, loc.lat, loc.lon, 90 + (hv.degrees ?? DEFAULT_HAVDALAH.degrees), false);
+      }
+      if (!start || !end) { // polar: whole civil days (UTC midnight of the city's dates is close enough for a quiet rule)
+        start = new Date(Date.UTC(first.y, first.m - 1, first.d - 1, 12)); end = new Date(Date.UTC(last.y, last.m - 1, last.d, 23, 59));
+      }
+      if (date >= start && date <= end) return { id: h.id, en: h.en, start, end };
+    }
+  }
+  return null;
+}
+
+/** true when `date` is inside a yom tov at `loc` (see yomTovWindow). No location: false. */
+export const isYomTov = (date, loc, opt = {}) => !!yomTovWindow(date, loc, opt);
+
+/**
+ * Quiet predicate: Shabbat and/or Yom Tov per the toggles. `observance` is the calendar's observance mode.
+ * @param {object|null} loc @param {{shabbat?:boolean, yomTov?:boolean, observance?:string}} [o]
+ */
+export const quietHours = (loc, o = {}) => (date) => (o.shabbat !== false && isShabbat(date, loc)) || (o.yomTov !== false && isYomTov(date, loc, { mode: o.observance }));
 
 /**
  * Resolve the learner's location the way the calendar screen does: calendar prefs (store key "calendar.prefs"),
@@ -274,7 +346,7 @@ export async function resolveQuietLocation(ctx) {
     const s = ctx?.settings;
     const fallback = s && typeof s.get === "function" && Number.isFinite(s.get("lat")) && Number.isFinite(s.get("lon")) ? { lat: s.get("lat"), lon: s.get("lon") } : null;
     const loc = L.resolveLocation(prefs, fallback);
-    return loc ? { ...loc, havdalah: prefs.havdalah } : null;
+    return loc ? { ...loc, havdalah: prefs.havdalah, observance: prefs.observance } : null;
   } catch { return null; }
 }
 
@@ -292,8 +364,9 @@ export async function armFromPrefs(ctx, opt = {}) {
     const raw = ctx?.store?.get ? await ctx.store.get(NOTIFY_PREFS_KEY) : null;
     const prefs = normalizePrefs(raw);
     if (!prefs.enabled) return { ok: false, reason: "disabled", next: null, cancel() {} };
-    const loc = prefs.shabbatQuiet ? await resolveQuietLocation(ctx) : null;
-    return scheduleStudyReminder(prefs, { ...opt, quiet: prefs.shabbatQuiet ? shabbatQuiet(loc) : undefined, route: "#/learn" });
+    const wantQuiet = prefs.shabbatQuiet || prefs.yomTovQuiet;
+    const loc = wantQuiet ? await resolveQuietLocation(ctx) : null;
+    return scheduleStudyReminder(prefs, { ...opt, quiet: wantQuiet ? quietHours(loc, { shabbat: prefs.shabbatQuiet, yomTov: prefs.yomTovQuiet, observance: loc?.observance }) : undefined, route: "#/learn" });
   } catch (e) { return { ok: false, reason: String(e?.message || e), next: null, cancel() {} }; }
 }
 

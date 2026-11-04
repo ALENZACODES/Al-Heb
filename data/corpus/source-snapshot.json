@@ -695,7 +695,7 @@
    "license": "Public Domain / copy without restriction (tanach.us/License.html)",
    "url": "https://tanach.us/Books/Lamentations.xml",
    "rawLines": [
-    "הֲשִׁיבֵ֨נוּ יְהוָ֤ה ׀ אֵלֶ֙יךָ֙ חַדֵּ֥שׁ יָמֵ֖ינוּ כְּקֶֽדֶם׃"
+    "הֲשִׁיבֵ֨נוּ יְהוָ֤ה ׀ אֵלֶ֙יךָ֙ וְֽנָשׁ֔וּבָה חַדֵּ֥שׁ יָמֵ֖ינוּ כְּקֶֽדֶם׃"
    ],
    "english": {
     "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
@@ -706,7 +706,7 @@
     ],
     "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
    },
-   "fetchedAt": "2026-11-04T01:58:44Z"
+   "fetchedAt": "2026-11-04T06:08:44Z"
   },
   "kedushah-kadosh": {
    "kind": "tanach-us",
@@ -960,7 +960,7 @@
     "שִׁ֗יר הַֽמַּ֫עֲל֥וֹת בְּשׁ֣וּב יְ֭הוָה אֶת־ שִׁיבַ֣ת צִיּ֑וֹן הָ֝יִ֗ינוּ כְּחֹלְמִֽים׃",
     "אָ֤ז יִמָּלֵ֪א שְׂח֡וֹק פִּינוּ֮ וּלְשׁוֹנֵ֢נוּ רִ֫נָּ֥ה אָ֭ז יֹאמְר֣וּ בַגּוֹיִ֑ם הִגְדִּ֥יל יְ֝הוָ֗ה לַעֲשׂ֥וֹת עִם־ אֵֽלֶּה׃",
     "הִגְדִּ֣יל יְ֭הוָה לַעֲשׂ֥וֹת עִמָּ֗נוּ הָיִ֥ינוּ שְׂמֵחִֽים׃",
-    "שׁוּבָ֣ה יְ֭הוָה אֶת־ כַּאֲפִיקִ֥ים בַּנֶּֽגֶב׃",
+    "שׁוּבָ֣ה יְ֭הוָה אֶת־ שְׁבִיתֵ֑נוּ כַּאֲפִיקִ֥ים בַּנֶּֽגֶב׃",
     "הַזֹּרְעִ֥ים בְּדִמְעָ֗ה בְּרִנָּ֥ה יִקְצֹֽרוּ׃",
     "הָ֘ל֤וֹךְ יֵלֵ֨ךְ ׀ וּבָכֹה֮ נֹשֵׂ֢א מֶֽשֶׁךְ־ הַ֫זָּ֥רַע בֹּֽא־ יָב֥וֹא בְרִנָּ֑ה נֹ֝שֵׂ֗א אֲלֻמֹּתָֽיו׃"
    ],
@@ -978,7 +978,7 @@
     ],
     "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
    },
-   "fetchedAt": "2026-11-04T01:58:44Z"
+   "fetchedAt": "2026-11-04T06:08:44Z"
   },
   "vayehi-binsoa": {
    "kind": "sefaria-siddur",
@@ -1449,6 +1449,58 @@
     "<b>בְּרִיךְ שְׁמֵהּ</b> דְּמָרֵֽא עָלְמָֽא. בְּרִיךְ כִּתְרָךְ וְאַתְרָךְ. יְהֵא רְעוּתָךְ עִם עַמָּךְ יִשְׂרָאֵל לְעָלַם וּפֻרְקַן יְמִינָךְ אַחֲזֵי לְעַמָּךְ בְּבֵית מַקְדְּשָׁךְ וּלְאַמְטֽוּיֵי לָֽנָא מִטּוּב נְהוֹרָךְ וּלְקַבֵּל צְלוֹתָֽנָא בְּרַחֲמִין. יְהֵא רַעֲוָא קֳדָמָךְ דְּתוֹרִיךְ לָן חַיִּין בְּטִיבֽוּ וְלֶהֱוֵי אֲנָֽא פְקִידָֽא בְּגוֹ צַדִּיקַיָּֽא לְמִרְחַם עָלַי וּלְמִנְטַר יָתִי וְיַת־כָּל־דִּי־לִי וְדִי־לְעַמָּךְ יִשְׂרָאֵל. אַנְתְּ הוּא זָן לְכֹֽלָּא וּמְפַרְנֵֽס לְכֹֽלָּא. אַנְתְּ הוּא שַׁלִּיט עַל־כֹּֽלָּא אַנְתְּ הוּא דְּשַׁלִּיט עַל־מַלְכַיָּֽא וּמַלְכוּתָֽא דִּילָךְ הִיא. אֲנָֽא עַבְדָּֽא דְקֻדְשָֽׁא בְּרִיךְ הוּא דְּסָגִֽידְנָא קַמֵּהּ וּמִקַּמֵּי דִּיקַר אוֹרַיְתֵהּ בְּכָל־עִדָּן וְעִדָּן. לָא עַל־אֱנָשׁ רָחִֽיצְנָא וְלָא עַל־בַּר־אֱלָהִין סָמִֽיכְנָא. אֶלָּֽא בֵּאלָהָא דִשְׁמַיָּֽא דְּהוּא אֱלָהָא קְשׁוֹט וְאוֹרַיְתֵהּ קְשׁוֹט וּנְבִיאֽוֹהִי קְשׁוֹט וּמַסְגֵּֽא לְמֶעְבַּֽד טָבְוָן וּקְשׁוֹט. בֵּהּ אֲנָֽא רָחִיץ וְלִשְׁמֵהּ קַדִּישָֽׁא יַקִּירָֽא אֲנָֽא אֵמַֽר תֻּשְׁבְּחָן. יְהֵא רַעֲוָא קֳדָמָךְ דְּתִפְתַּח לִבָּאי בְּאוֹרַיְתָֽא וְתַשְׁלִים מִשְׁאֲלִין דְּלִבָּאי וְלִבָּא דְכָל־עַמָּךְ יִשְׂרָאֵל לְטָב וּלְחַיִּין וְלִשְׁלָם:"
    ],
    "fetchedAt": "2026-11-04T01:58:44Z"
+  },
+  "bless-priestly-intro": {
+   "kind": "tanach-us",
+   "book": "Numbers",
+   "chapter": 6,
+   "verses": [
+    22,
+    23
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Numbers.xml",
+   "rawLines": [
+    "וַיְדַבֵּ֥ר יְהוָ֖ה אֶל־ מֹשֶׁ֥ה לֵּאמֹֽר׃",
+    "דַּבֵּ֤ר אֶֽל־ אַהֲרֹן֙ וְאֶל־ בָּנָ֣יו לֵאמֹ֔ר כֹּ֥ה תְבָרֲכ֖וּ אֶת־ בְּנֵ֣י יִשְׂרָאֵ֑ל אָמ֖וֹר לָהֶֽם׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Numbers 6:22-23",
+    "rawLines": [
+     "And the LORD spoke unto Moses, saying:",
+     "’Speak unto Aaron and unto his sons, saying: On this wise ye shall bless the children of Israel; ye shall say unto them:"
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   },
+   "fetchedAt": "2026-11-04T06:08:44Z"
+  },
+  "bless-priestly-close": {
+   "kind": "tanach-us",
+   "book": "Numbers",
+   "chapter": 6,
+   "verses": [
+    27,
+    27
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Numbers.xml",
+   "rawLines": [
+    "וְשָׂמ֥וּ אֶת־ שְׁמִ֖י עַל־ בְּנֵ֣י יִשְׂרָאֵ֑ל וַאֲנִ֖י אֲבָרֲכֵֽם׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Numbers 6:27",
+    "rawLines": [
+     "So shall they put My name upon the children of Israel, and I will bless them.’"
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   },
+   "fetchedAt": "2026-11-04T06:08:44Z"
   }
  }
 }

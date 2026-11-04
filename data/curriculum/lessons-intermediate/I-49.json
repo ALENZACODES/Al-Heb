@@ -1,0 +1,329 @@
+{
+ "id": "I-49",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Social media: posting, messages, photos and passwords",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "הוֹדָעָה",
+   "en": "message",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hoda'ah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hff2f5141"
+   }
+  },
+  {
+   "he": "תְּמוּנָה",
+   "en": "picture",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "temunah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h08e1b712"
+   }
+  },
+  {
+   "he": "פְּרוֹפִיל",
+   "en": "profile",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "perofil"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "ha1f80c28"
+   }
+  },
+  {
+   "he": "סִיסְמָה",
+   "en": "password",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "sisemah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hd6d93430"
+   }
+  },
+  {
+   "he": "אִינְטֶרְנֶט",
+   "en": "internet",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ineternet"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h0e206323"
+   }
+  },
+  {
+   "he": "טֶלֶפוֹן",
+   "en": "phone",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "telefon"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he15e52d3"
+   }
+  },
+  {
+   "he": "חָבֵר",
+   "en": "friend (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chaver"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h2280b9b6"
+   }
+  },
+  {
+   "he": "חֲבֵרָה",
+   "en": "friend (f)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chaverah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h2280b9b6#forms.feminine"
+   }
+  },
+  {
+   "he": "אֶפְשָׁר לִשְׁלֹחַ",
+   "en": "can I send?",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "efshar lishlocha"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "אֶפְשָׁר",
+     "לִשְׁלֹחַ"
+    ]
+   }
+  },
+  {
+   "he": "שׁוֹלֵחַ",
+   "en": "sending (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "sholecha"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h059e9e22#forms.present"
+   }
+  },
+  {
+   "he": "רֶגַע",
+   "en": "one moment",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "rega"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h8f6944f1"
+   }
+  },
+  {
+   "he": "בְּסֵדֶר",
+   "en": "OK",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "beseder"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hd15601c2"
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Send and ask for a message or picture",
+  "Ask for someone's profile and say 'one moment'",
+  "Know the word for password and keep it private"
+ ],
+ "estMinutes": 20,
+ "prerequisites": [
+  "I-16"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-49-e01",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "הוֹדָעָה",
+     "en": "message"
+    },
+    {
+     "he": "תְּמוּנָה",
+     "en": "picture"
+    },
+    {
+     "he": "פְּרוֹפִיל",
+     "en": "profile"
+    },
+    {
+     "he": "סִיסְמָה",
+     "en": "password"
+    },
+    {
+     "he": "אִינְטֶרְנֶט",
+     "en": "internet"
+    }
+   ]
+  },
+  {
+   "id": "I-49-e02",
+   "type": "respond",
+   "cue": "Ask a friend to send a picture.",
+   "answer": {
+    "he": "אֶפְשָׁר תְּמוּנָה?",
+    "en": "Can I have a picture?"
+   }
+  },
+  {
+   "id": "I-49-e03",
+   "type": "order",
+   "he": "אֲנִי שׁוֹלֵחַ לְךָ הוֹדָעָה",
+   "en": "I'm sending you a message"
+  },
+  {
+   "id": "I-49-e04",
+   "type": "produce",
+   "en": "password",
+   "options": [
+    "סִיסְמָה",
+    "פְּרוֹפִיל",
+    "הוֹדָעָה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-49-e05",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "אֲנִי שׁוֹלֵחַ לְךָ תְּמוּנָה.",
+     "en": "I'm sending you a picture."
+    },
+    {
+     "speaker": "b",
+     "he": "רֶגַע, יוֹפִי!",
+     "en": "One moment, great!"
+    }
+   ],
+   "task": "Say both lines."
+  },
+  {
+   "id": "I-49-e06",
+   "type": "recall",
+   "he": "פְּרוֹפִיל",
+   "en": "profile"
+  },
+  {
+   "id": "I-49-e07",
+   "type": "recall",
+   "he": "חֲבֵרָה",
+   "en": "friend (f)"
+  },
+  {
+   "id": "I-49-e08",
+   "type": "produce",
+   "en": "internet",
+   "options": [
+    "אִינְטֶרְנֶט",
+    "טֶלֶפוֹן",
+    "סִיסְמָה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-49-e09",
+   "type": "respond",
+   "cue": "Say there is no internet.",
+   "answer": {
+    "he": "אֵין אִינְטֶרְנֶט",
+    "en": "There is no internet"
+   }
+  },
+  {
+   "id": "I-49-e10",
+   "type": "respond",
+   "cue": "Ask whether there is a password.",
+   "answer": {
+    "he": "יֵשׁ סִיסְמָה?",
+    "en": "Is there a password?"
+   }
+  },
+  {
+   "id": "I-49-e11",
+   "type": "gender",
+   "m": "אֲנִי רוֹצֶה תְּמוּנָה",
+   "f": "אֲנִי רוֹצָה תְּמוּנָה",
+   "en": "I want a picture"
+  },
+  {
+   "id": "I-49-e12",
+   "type": "produce",
+   "en": "OK",
+   "options": [
+    "בְּסֵדֶר",
+    "רֶגַע",
+    "יוֹפִי"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-49-e13",
+   "type": "register",
+   "he": "יוֹפִי",
+   "en": "great / nice",
+   "answer": "slang",
+   "options": [
+    "formal",
+    "neutral",
+    "casual",
+    "slang"
+   ]
+  },
+  {
+   "id": "I-49-e14",
+   "type": "recall",
+   "he": "הוֹדָעָה",
+   "en": "message"
+  }
+ ],
+ "note": "Names of apps and words like 'like', 'follow', 'post' and 'story' have no pointed tokens in the sources."
+}

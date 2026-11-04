@@ -1,0 +1,77 @@
+{
+  "_doc": "Allowlist for `node tools/meta/scan.mjs --text`. Paths are globs over git ls-files; every entry needs a reason.",
+  "entries": [
+    {
+      "path": "tools/meta/text.mjs",
+      "reason": "The scan tool itself: defines the patterns."
+    },
+    {
+      "path": "tools/meta/scan.mjs",
+      "reason": "The scan tool itself."
+    },
+    {
+      "path": "tools/meta/lib.mjs",
+      "reason": "The metadata scan: defines tool-name patterns."
+    },
+    {
+      "path": "tools/meta/allowlist.json",
+      "reason": "Allowlist file: quotes the false-positive word it excuses."
+    },
+    {
+      "path": "tools/meta/text-allowlist.json",
+      "reason": "This allowlist: its reasons name the words."
+    },
+    {
+      "path": "tools/release/push-clean.sh",
+      "reason": "Filter patterns that strip attribution trailers from commits before publishing; must name them."
+    },
+    {
+      "path": "data/pronunciation/variants/_vocab-3.json",
+      "reason": "False positive: the Hebrew word dalleket (transliteration) matches the dall-e pattern."
+    },
+    {
+      "path": "data/images/provenance.json",
+      "reason": "Per-image provenance and licence trail; records which generator produced each image."
+    },
+    {
+      "path": "data/audio/tts-prices.json",
+      "reason": "Price/licence note naming a TTS vendor that was not checked."
+    },
+    {
+      "path": "docs/verification/*",
+      "reason": "Verification log of vendor terms (licence facts) with source URLs and API model ids."
+    },
+    {
+      "path": "docs/meta/SCAN-REPORT.md",
+      "reason": "Report about the scan; quotes the patterns."
+    },
+    {
+      "path": "docs/images/RIGHTS.md",
+      "reason": "Licence analysis: must name the vendors whose terms govern output rights."
+    },
+    {
+      "path": "docs/book/IMAGE-RUN.md",
+      "reason": "Operational runbook for the API path (env var name) and vendor licence terms."
+    },
+    {
+      "path": "docs/strategy/COMPETITOR-REVIEW.md",
+      "reason": "Cites vendor output-rights terms."
+    },
+    {
+      "path": "docs/voices/tts-evaluation-protocol.md",
+      "reason": "Evaluation protocol names TTS vendors as candidates (provider facts)."
+    },
+    {
+      "path": "tools/images/gen_via_api.mjs",
+      "reason": "Code that calls the vendor Images API; endpoint, env var and model ids are functional."
+    },
+    {
+      "path": "tests/curriculum.intermediate.test.js",
+      "reason": "Test guarding against machine-specific paths (/home/claude)."
+    },
+    {
+      "path": "tools/youtube/fetch-slow.py",
+      "reason": "Machine path of a local research folder (user name in path); not published content."
+    }
+  ]
+}

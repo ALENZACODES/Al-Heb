@@ -25,3 +25,19 @@ Three generators next to `tools/letters/workbook.mjs` (which was not edited). Ea
 ## Status
 
 Draft everywhere: stroke order, pointing, glosses and example words are not reviewed by a Hebrew teacher; Israeli pronunciation only; not tested with learners. Each page carries this in the footer and the front page of each set repeats it. Transliterations marked `*` are machine-made (`src/pronunciation/transliterate.js`, siddur scheme). Fonts: Frank Ruhl Libre (print) and Gveret Levin (cursive), SIL OFL 1.1.
+
+
+## Build everything: `node tools/letters/build_all_workbooks.mjs`
+
+Runs every tool, scrubs every PDF in `docs/workbook/` and `assets/workbook/` (Author "John Khan" only), then rebuilds `assets/workbook/manifest.json` and `docs/workbook/index.html` from the PDFs on disk with `tools/letters/workbook_manifest.mjs`. Flags: `--html-only`, `--skip-core` (keep the 8 main `alef-workbook-*` PDFs), `--skip-cards` (skip the flashcards, about a minute), `--no-mnemonics`.
+
+The manifest problem is fixed: `workbook.mjs` still overwrites the asset manifest when run alone, but `node tools/letters/workbook_manifest.mjs` restores it (core entries from `docs/workbook/manifest.json`, extra sets from the sidecar `docs/workbook/extras-manifest.json`, sizes and page counts read from the PDFs). Each extra tool calls it automatically.
+
+| Tool | Ids | Pages | Content |
+|---|---|---|---|
+| `readaloud_sheets.mjs` | `alef-readaloud-*` | 30 | Shema, Priestly Blessing, Kiddush (3 texts), HaMotzi, Modeh Ani, Adon Olam, Ein Kamocha lines. Hebrew verbatim from `data/corpus/registry.json`, cut at word boundaries into phrases of at most 4 words; 3 phrases per page with Israeli / Sephardi / Ashkenazi boxes from `src/pronunciation/transliterate.js` and 3 tick circles; overview page per multi-page text; tradition cheat sheet. Ein Keloheinu is not in the corpus (`data/corpus/gaps.json`), so the Ein Kamocha trio stands in. Not included: Motzi beyond HaMotzi, Kiddush for Shabbat day. |
+| `flashcard_sheets.mjs` | `alef-flashcards-*` | 431 | All 5,000 words of `data/vocab/vocab5000.json`, 12 cards per page, grouped by `data/vocab/themes` topic (4,306 words) plus an "Other words" group (694), frequency order inside a group. Static Alef + Liberation Sans fonts so the PDF stays small. |
+| `flashcard_sheets.mjs --light` | `alef-flashcards-light-*` | 94 | Same layout, first 1,000 words only, about 1.8 MB per paper size. |
+| `answer_key.mjs` | `alef-answer-key-*` | 11 | Teacher key: first-day words and check answer, the 20-step ladder, 27 letters, cursive words, niqqud words, Shema/Priestly Blessing pronunciations. Built from the same models as the sheets. |
+
+Total on disk, all 22 PDFs: 29.5 MB (flashcards 17.7 MB + light 3.7 MB of that). Without the two full flashcard sets it is 11.8 MB; without the light variants 25.8 MB.

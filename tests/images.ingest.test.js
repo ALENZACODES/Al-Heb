@@ -56,20 +56,20 @@ test('the real manifest parses and every stem is safe and unique', async () => {
   assert.equal(rows.length, 797);
   assert.equal(new Set(rows.map((r) => r.stem)).size, 797);
 });
-test('classifyName: exact, case, plain duplicate suffix; ChatGPT default names are never matched', () => {
+test('classifyName: exact, case, plain duplicate suffix; generator default names are never matched', () => {
   const stems = new Set(['L05_dalet_quirky', 'L01_alef_print_mnemonic']);
   assert.deepEqual(classifyName('L05_dalet_quirky.png', stems), { kind: 'exact', stem: 'L05_dalet_quirky' });
   assert.equal(classifyName('l05_dalet_quirky.PNG', stems).kind, 'case');
   assert.equal(classifyName('L05_dalet_quirky (1).png', stems).kind, 'variant');
   assert.equal(classifyName('L05_dalet_quirky(2).png', stems).kind, 'variant');
   assert.equal(classifyName('L05_dalet_quirky - Copy.png', stems).kind, 'variant');
-  for (const n of ['ChatGPT Image Nov 3, 2026, 10_32_11 AM.png', 'image (1).png', 'L05_dalet_quirky_2.png', 'L05 dalet quirky.png', 'L05_dalet_quirky.v2.png']) assert.equal(classifyName(n, stems).kind, 'none', n);
+  for (const n of ['Generated Image Nov 3, 2026, 10_32_11 AM.png', 'image (1).png', 'L05_dalet_quirky_2.png', 'L05 dalet quirky.png', 'L05_dalet_quirky.v2.png']) assert.equal(classifyName(n, stems).kind, 'none', n);
   assert.equal(classifyName('sub/dir/L01_alef_print_mnemonic.webp', stems).kind, 'exact');
 });
 test('suggestStems only suggests near misses and edit distance is right', () => {
   assert.equal(editDistance('kitten', 'sitting'), 3);
   assert.deepEqual(suggestStems('L05 dalet quirky.png', ['L05_dalet_quirky', 'X']), ['L05_dalet_quirky']);
-  assert.deepEqual(suggestStems('ChatGPT Image Nov 3.png', ['L05_dalet_quirky']), []);
+  assert.deepEqual(suggestStems('Generated Image Nov 3.png', ['L05_dalet_quirky']), []);
 });
 test('checkAspect: exact, substituted native aspect (never cropped), mismatch', () => {
   assert.equal(checkAspect(1024, 1024, 1024, 1024).level, 'exact');
@@ -102,7 +102,7 @@ test('ingest end to end: matching, checks, web copies, metadata stripped, proven
     { name: 'T04_bad.png', w: 1024, h: 1536 },                           // wrong shape for a square row
     { name: 'T05_var (1).png', w: 1024, h: 1024, seed: 3 },              // only a renamed duplicate exists
     { name: 'ICON_t06.png', w: 1024, h: 1024 },                          // opaque icon: should flag not_transparent
-    { name: 'ChatGPT Image Nov 3, 2026, 10_32_11 AM.png', w: 1024, h: 1024, seed: 9 },
+    { name: 'Generated Image Nov 3, 2026, 10_32_11 AM.png', w: 1024, h: 1024, seed: 9 },
     { name: 'nested/ignore.txt', w: 4, h: 4 },
   ].filter((s) => !s.name.includes('/')));
   writeFileSync(join(inDir, 'notes.txt'), 'x'); writeFileSync(join(inDir, '.DS_Store'), 'x');
@@ -110,7 +110,7 @@ test('ingest end to end: matching, checks, web copies, metadata stripped, proven
   const ids = rep.ingested.map((x) => x.id).sort();
   assert.deepEqual(ids, ['ICON_t06', 'T01_cup', 'T02_wide', 'T05_var']);
   assert.equal(rep.rejectedFiles.length, 1); assert.match(rep.rejectedFiles[0].reason, /aspect mismatch/);
-  assert.equal(rep.unmatched.length, 1); assert.match(rep.unmatched[0].file, /ChatGPT Image/);
+  assert.equal(rep.unmatched.length, 1); assert.match(rep.unmatched[0].file, /Generated Image/);
   assert.equal(rep.unmatched[0].width, 1024);
   assert.ok(rep.contentDuplicates.some((d) => d.sameAs?.includes('T01_cup.png')), 'identical " (1)" copy reported as duplicate, not re-ingested');
   assert.equal(rep.ingested.find((x) => x.id === 'T05_var').matchedBy, 'renamed-duplicate');
@@ -121,7 +121,7 @@ test('ingest end to end: matching, checks, web copies, metadata stripped, proven
   const prov = JSON.parse(readFileSync(paths.provenance, 'utf8')).images;
   const p1 = prov.T01_cup;
   assert.equal(p1.humanApproved, false); assert.equal(p1.ingestedAt, '2026-11-05T00:00:00.000Z');
-  assert.match(p1.tool, /ChatGPT/); assert.match(p1.prompt, /<script>/); assert.equal(p1.command, 1);
+  assert.match(p1.tool, /image generator/); assert.match(p1.prompt, /<script>/); assert.equal(p1.command, 1);
   assert.equal(p1.promptSha256.length, 64); assert.equal(p1.metadataStripped, true);
   assert.deepEqual(p1.variants.map((v) => v.edge), [800, 1024]);   // 1024 source: never upscaled to 1600
   assert.ok(prov.T02_wide.flags.includes('aspect_substituted'));
@@ -154,9 +154,9 @@ test('ingest end to end: matching, checks, web copies, metadata stripped, proven
   assert.equal(validate({ paths }).errors.length, 0);
 });
 
-test('assignment CSV: ChatGPT-named file is used only after the user assigns it', { skip: skipPy }, async () => {
+test('assignment CSV: generator-named file is used only after the user assigns it', { skip: skipPy }, async () => {
   const { paths } = miniRoot();
-  const inDir = join(tmp(), 'in'); fixtures(inDir, [{ name: 'ChatGPT Image Nov 3, 2026, 10_32_11 AM.png', w: 1024, h: 1024 }]);
+  const inDir = join(tmp(), 'in'); fixtures(inDir, [{ name: 'Generated Image Nov 3, 2026, 10_32_11 AM.png', w: 1024, h: 1024 }]);
   const r1 = await ingest({ paths, inputs: [inDir], ocr: false });
   assert.equal(r1.ingested.length, 0); assert.equal(r1.unmatched.length, 1);
   const rows = parseCsv(readFileSync(paths.assignCsv, 'utf8'));

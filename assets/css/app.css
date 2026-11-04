@@ -25,8 +25,8 @@ h1[tabindex="-1"]:focus, h1[tabindex="-1"]:focus-visible { outline: none; }
 .skip-link { position: absolute; inset-inline-start: .5rem; inset-block-start: -4rem; background: var(--accent); color: var(--accent-fg); padding: .75rem 1rem; z-index: 100; border-radius: 8px; }
 .skip-link:focus { inset-block-start: .5rem; }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.site-header { padding: .75rem 1rem; padding-inline: max(1rem, env(safe-area-inset-left)); display: flex; align-items: center; }
-.brand { font-weight: 700; font-size: 1.25rem; text-decoration: none; color: var(--fg); display: inline-flex; gap: .5rem; min-block-size: var(--tap); align-items: center; }
+.site-header { padding: 0 1rem; padding-inline: max(1rem, env(safe-area-inset-left)); display: flex; align-items: center; }
+.brand { font-weight: 700; font-size: 1.25rem; text-decoration: none; color: var(--fg); display: inline-flex; gap: .5rem; min-block-size: 44px; align-items: center; }
 .site-nav { border-block: 1px solid var(--border); background: var(--card); overflow-x: auto; }
 .site-nav ul { list-style: none; margin: 0; padding: 0 .5rem; display: flex; gap: .25rem; }
 .site-nav a { display: flex; flex-direction: column; align-items: center; justify-content: center; min-block-size: var(--tap); min-inline-size: var(--tap); padding: .25rem .75rem; text-decoration: none; color: var(--fg); border-radius: 8px; font-size: .9rem; line-height: 1.2; }
@@ -104,7 +104,7 @@ main label:has(> input[type=radio], > input[type=checkbox]) { display: inline-fl
 select { max-inline-size: 100%; min-block-size: 44px; }
 /* tap targets: 44px minimum for disclosure summaries, the sound-bar link and the pronunciation-screen buttons */
 main summary { padding-block: .6rem; min-block-size: 44px; box-sizing: border-box; display: list-item; }
-.sound-bar a { padding-block: .75rem; margin-block: -.75rem; }
+.sound-bar a { padding-block: .9rem; margin-block: -.9rem; }
 main .alef-r4 button { min-height: 44px; }
 /* Letters (trace) and Atlas ship their own fixed-colour CSS (text #1b1b1f, buttons #fff): in dark mode that was dark text on the dark page and white buttons with light, invisible glyphs.
    Re-point their neutral surfaces at the theme variables; :where() keeps the specificity low so their own pressed/right/wrong/final states still win. */
@@ -114,3 +114,58 @@ main .alef-atlas .panel { background: var(--card); border-color: var(--border); 
 main .alef-atlas .tile .s, main .alef-atlas .muted, main .alef-trace .kb .k small { color: var(--muted); }
 main .alef-atlas .tile.final, main .alef-atlas .tile.wrong, main .alef-atlas .tile.right, main .alef-trace .kb .k.hit { color: #1b1b1f; }
 main .alef-trace .notice, main .alef-atlas .warn { color: #1b1b1f; }
+
+/* Shell chrome round (lane 8, 2026-11-04): header+nav+sound bar took ~200px of an 844px phone.
+   Phone (<720px): 44px header, one-line sound bar (tap for full text), five main sections in a fixed bottom tab bar plus a "More" sheet.
+   Wide screens: the old top nav, all sections in one row. */
+.sound-bar { padding-block: 0; flex-wrap: nowrap; gap: .75rem; font-size: .8rem; line-height: 1.3; }
+.sound-bar p { flex: 1; min-inline-size: 0; padding-block: .3rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; }
+.sound-bar p.open { white-space: normal; }
+.sound-bar a { flex: none; white-space: nowrap; }
+.site-nav { display: flex; flex-wrap: wrap; position: relative; overflow: visible; }
+.site-nav ul { padding: 0 .5rem; }
+.site-nav > ul#nav { flex-wrap: wrap; }
+.more-btn { display: none; }
+.site-nav .nav-more { list-style: none; margin: 0; padding: 0 .5rem; display: flex; flex-wrap: wrap; gap: .25rem; }
+@media (max-width: 719.98px) {
+  body { padding-block-end: calc(60px + env(safe-area-inset-bottom)); }
+  .site-nav { position: fixed; inset-inline: 0; inset-block-end: 0; z-index: 50; border-block-end: 0; padding-block-end: env(safe-area-inset-bottom); flex-wrap: nowrap; box-shadow: 0 -2px 8px rgba(0,0,0,.08); }
+  .site-nav > ul#nav { flex: 1; flex-wrap: nowrap; padding: 0; gap: 0; }
+  .site-nav > ul#nav li { flex: 1 1 0; min-inline-size: 0; }
+  .site-nav a, .more-btn { min-block-size: 56px; padding: .2rem .1rem; font-size: .75rem; inline-size: 100%; border-radius: 0; }
+  .more-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 0 0 4.5rem; border: 0; background: transparent; color: var(--fg); font: inherit; font-size: .75rem; line-height: 1.2; cursor: pointer; }
+  .more-btn[hidden] { display: none !important; }
+  .more-btn[aria-expanded="true"], .more-btn[data-current] { background: var(--accent); color: var(--accent-fg); }
+  .site-nav .nav-more { display: none; position: absolute; inset-inline: 0; inset-block-end: 100%; background: var(--card); border: 1px solid var(--border); border-block-end: 0; border-radius: 12px 12px 0 0; padding: .5rem; box-shadow: 0 -6px 16px rgba(0,0,0,.18); }
+  .site-nav .nav-more.open { display: grid; grid-template-columns: repeat(auto-fit, minmax(5.5rem, 1fr)); gap: .25rem; }
+  .nav-more a { min-block-size: 56px; font-size: .85rem; border: 1px solid var(--border); border-radius: 10px; }
+  main { padding-block-end: 1.5rem; }
+}
+
+
+/* Letters / tracing on a phone (QA defect O1): the stage sat ~1660px down the page. This only re-orders and compacts lane 2's markup
+   (tabs, notice, grid, toggles row, letter-card row, details.remember, .stage, feedback, button rows, notice) when a .stage exists, so it
+   depends on that child order: see docs/ARCHITECTURE.md. Nothing is removed; the draft notice and the memory hook stay on the page, below the stage. */
+@media (max-width: 719.98px) {
+  main .alef-trace > div:has(> .stage) { display: flex; flex-direction: column; }
+  main .alef-trace > div:has(> .stage) > * { order: 20; margin-block: 0 .6rem; }
+  main .alef-trace > div:has(> .stage) > .tabs { order: 1; }
+  main .alef-trace > div:has(> .stage) > .grid { order: 2; display: flex !important; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x proximity; gap: .4rem; padding-block-end: .35rem; -webkit-overflow-scrolling: touch; }
+  main .alef-trace > div:has(> .stage) > .grid > button { flex: 0 0 3rem; min-block-size: 48px; scroll-snap-align: center; }
+  main .alef-trace > div:has(> .stage) > .grid + .row { order: 8; }            /* print / cursive / strict / outline toggles */
+  main .alef-trace > div:has(> .stage) > .row:has(> .big) { order: 3; }            /* the chosen letter and its name */
+  main .alef-trace > div:has(> .stage) > .stage { order: 5; }
+  main .alef-trace > div:has(> .stage) > .feedback { order: 6; }
+  main .alef-trace > div:has(> .stage) > .feedback + .row { order: 7; }           /* reset / undo / next */
+  main .alef-trace > div:has(> .stage) > .feedback + .row + .row { order: 7; }
+  main .alef-trace > div:has(> .stage) > .tabs + .notice { order: 9; }        /* draft notice */
+  main .alef-trace > div:has(> .stage) > details.remember { order: 10; }
+  main .alef-trace > div:has(> .stage) > .notice:last-child { order: 11; }
+}
+/* Range sliders and file inputs: 44px hit area (QA O5) */
+input[type="range"] { min-block-size: 44px; inline-size: 100%; max-inline-size: 100%; margin-block: 0; cursor: pointer; }
+input[type="file"] { min-block-size: 44px; max-inline-size: 100%; font: inherit; cursor: pointer; }
+input[type="file"]::file-selector-button { min-block-size: 44px; padding-inline: 1rem; margin-inline-end: .75rem; font: inherit; font-weight: 600; border-radius: 999px; border: 2px solid var(--accent); background: transparent; color: var(--accent); cursor: pointer; }
+/* labels that wrap a checkbox/radio deeper than a direct child (Vocab "Show word forms", Scan options) and plain text/url/search inputs: 44px */
+main label:has(input[type=radio], input[type=checkbox]) { display: inline-flex; align-items: center; gap: .4rem; min-block-size: 44px; white-space: normal; }
+main input[type=url], main input[type=text], main input[type=search], main input:not([type]) { min-block-size: 44px; }

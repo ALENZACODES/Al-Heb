@@ -43,7 +43,7 @@ test("learn view: lists read lessons, locks unmet prerequisites, shows due count
   const he = root.find((n) => n.attrs.lang === "he")[0];
   assert.equal(he.attrs.dir, "rtl");
   // complete lesson r01 -> r02 becomes available, progress persisted
-  const mark = items[0].find((n) => n.tag === "button" && /Mark/.test(n.attrs["aria-label"] || ""))[0];
+  const mark = items[0].find((n) => n.tag === "button" && /Mark complete/.test(n.attrs["aria-label"] || ""))[0];
   await mark.click(); await tick();
   assert.ok(store.m["curriculum.progress"].completed.r01);
   const items2 = root.find((n) => n.tag === "li" && n.attrs["data-lesson"]);
@@ -51,7 +51,7 @@ test("learn view: lists read lessons, locks unmet prerequisites, shows due count
   assert.match(items2[0].className, /alef-lesson-done/);
   // start navigates
   await items2[1].find((n) => n.tag === "button")[0].click();
-  assert.deepEqual(routed, ["/learn/r02"]);
+  assert.deepEqual(routed, ["/learn?lesson=r02"]);
   // tab switch
   await root.find((n) => n.attrs.id === "alef-tab-israel")[0].click(); await tick();
   assert.ok(root.find((n) => n.tag === "li" && /^il/.test(n.attrs["data-lesson"] || "")).length >= 15);

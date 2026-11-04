@@ -14,11 +14,14 @@ export const MIME = {
   '.woff': 'font/woff', '.woff2': 'font/woff2', '.ttf': 'font/ttf', '.otf': 'font/otf', '.txt': 'text/plain; charset=utf-8', '.pdf': 'application/pdf',
 };
 
-export function createAppServer({ root = ROOT } = {}) {
+/** @param {{root?:string, prefix?:string}} [o] prefix e.g. "/alef/" serves the site under that path (to test project-site hosting) */
+export function createAppServer({ root = ROOT, prefix = '/' } = {}) {
+  const pre = prefix.replace(/\/+$/, '');
   return createServer(async (req, res) => {
     try {
       const url = new URL(req.url ?? '/', 'http://x');
       let rel = decodeURIComponent(url.pathname);
+      if (pre) { if (rel === pre) { res.writeHead(301, { location: pre + '/' }); return res.end(); } if (!rel.startsWith(pre + '/')) { res.writeHead(404, { 'content-type': 'text/plain' }); return res.end('Not found (outside prefix)'); } rel = rel.slice(pre.length); }
       if (rel.includes('\0')) throw Object.assign(new Error('bad'), { code: 400 });
       let file = normalize(join(root, rel));
       if (file !== root && !file.startsWith(root + sep)) { res.writeHead(403); return res.end('Forbidden'); }
@@ -39,6 +42,8 @@ export function createAppServer({ root = ROOT } = {}) {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const port = Number(process.argv[2] ?? process.env.PORT ?? 8080);
-  createAppServer().listen(port, () => console.log(`ALEF dev server: http://localhost:${port}/`));
+  const args = process.argv.slice(2);
+  const flag = (n) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : undefined; };
+  const port = Number(args.find((a) => /^\d+$/.test(a)) ?? process.env.PORT ?? 8080);
+  createAppServer({ root: flag('--root') ? resolve(flag('--root')) : ROOT, prefix: flag('--prefix') ?? '/' }).listen(port, () => console.log(`ALEF dev server: http://localhost:${port}/`));
 }

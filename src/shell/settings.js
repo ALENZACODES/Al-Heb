@@ -13,19 +13,23 @@ export const DEFAULTS = Object.freeze({
   theme: 'auto',
   lat: null,
   lon: null,
+  goal: 'read',        // read (synagogue) | israel | both; chosen at onboarding, drives the default Learn track
+  onboarded: false,    // true once the first-run screen was completed or skipped
+  browserVoiceAnyway: true, // let the browser voice (Israeli pronunciation) speak even when another tradition is selected; the UI flags it
 });
 export const ENUMS = Object.freeze({
   voice: ['m', 'f'],
   congregation: ['israeli', 'sephardi', 'ashkenazi'],
   script: ['print', 'cursive'],
   theme: ['auto', 'light', 'dark'],
+  goal: ['read', 'israel', 'both'],
 });
 
 /** @param {string} key @param {any} v @returns {{ok:boolean,value?:any}} */
 export function validate(key, v) {
   if (!(key in DEFAULTS)) return { ok: false };
   if (key in ENUMS) return ENUMS[/** @type {keyof typeof ENUMS} */ (key)].includes(v) ? { ok: true, value: v } : { ok: false };
-  if (key === 'israelTrack') return typeof v === 'boolean' ? { ok: true, value: v } : { ok: false };
+  if (key === 'israelTrack' || key === 'onboarded' || key === 'browserVoiceAnyway') return typeof v === 'boolean' ? { ok: true, value: v } : { ok: false };
   if (key === 'lat') return v === null || (typeof v === 'number' && v >= -90 && v <= 90) ? { ok: true, value: v } : { ok: false };
   if (key === 'lon') return v === null || (typeof v === 'number' && v >= -180 && v <= 180) ? { ok: true, value: v } : { ok: false };
   return { ok: false };

@@ -1,0 +1,1115 @@
+{
+ "axe": "4.14.0",
+ "when": "2026-11-04T00:44:52.589Z",
+ "routes": {
+  "/welcome": {
+   "light": [],
+   "dark": []
+  },
+  "/": {
+   "light": [],
+   "dark": []
+  },
+  "/learn": {
+   "light": [],
+   "dark": []
+  },
+  "/learn?lesson=r01": {
+   "light": [],
+   "dark": []
+  },
+  "/learn?lesson=r05": {
+   "light": [],
+   "dark": []
+  },
+  "/learn?review=1": {
+   "light": [],
+   "dark": []
+  },
+  "/letters": {
+   "light": [],
+   "dark": [
+    {
+     "id": "color-contrast",
+     "impact": "serious",
+     "help": "Elements must meet minimum color contrast ratio thresholds",
+     "nodes": [
+      {
+       "target": "div > strong",
+       "html": "<strong>Alef </strong>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "div > span:nth-child(2)",
+       "html": "<span dir=\"rtl\" lang=\"he\">אָלֶף</span>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 14.7pt (19.55px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "span:nth-child(4)",
+       "html": "<span>/ʔ/  silent / a tiny glottal stop, like the pause in 'uh-oh'</span>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "summary",
+       "html": "<summary>Remember it</summary>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "details > p:nth-child(2)",
+       "html": "<p><strong>Shape: </strong>A tiny acrobat doing a handstand: one arm up, one down, a body slash between.</p>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(2) > strong",
+       "html": "<strong>Shape: </strong>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(3)",
+       "html": "<p><strong>Sound: </strong>silent letter that carries a vowel (like the invisible 'a' in 'an apple')</p>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(3) > strong",
+       "html": "<strong>Sound: </strong>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(4)",
+       "html": "<p><strong>Story: </strong>Alef is the polite doorman. He never makes a noise himself; he just opens the door so the vowel can walk in. Pict",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(4) > strong",
+       "html": "<strong>Story: </strong>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(5)",
+       "html": "<p><strong>Why this name: </strong>Name means 'ox' in ancient Hebrew. Origin story: an ox head turned on its side.</p>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(5) > strong",
+       "html": "<strong>Why this name: </strong>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(6)",
+       "html": "<p><strong>Do not confuse with: </strong>Looks like a fancy K with a slash. Ayin is the other silent letter; ayin has a hooked Y shape with ",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(6) > strong",
+       "html": "<strong>Do not confuse with: </strong>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(7)",
+       "html": "<p dir=\"rtl\" lang=\"he\">אַבָּא <span dir=\"ltr\">(aba = dad)</span></p>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 14.7pt (19.55px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "span[dir=\"ltr\"]",
+       "html": "<span dir=\"ltr\">(aba = dad)</span>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 14.7pt (19.55px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": ".feedback",
+       "html": "<div class=\"feedback\" role=\"status\" aria-live=\"polite\">Press Animate to see the order, then trace it.</div>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.6pt (16.8px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": ".row:nth-child(10)",
+       "html": "<div class=\"row\">0 / 3 strokes</div>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+      }
+     ]
+    }
+   ]
+  },
+  "/letters/alef": {
+   "light": [],
+   "dark": [
+    {
+     "id": "color-contrast",
+     "impact": "serious",
+     "help": "Elements must meet minimum color contrast ratio thresholds",
+     "nodes": [
+      {
+       "target": "div > strong",
+       "html": "<strong>Alef </strong>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "div > span:nth-child(2)",
+       "html": "<span dir=\"rtl\" lang=\"he\">אָלֶף</span>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 14.7pt (19.55px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "span:nth-child(4)",
+       "html": "<span>/ʔ/  silent / a tiny glottal stop, like the pause in 'uh-oh'</span>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "summary",
+       "html": "<summary>Remember it</summary>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "details > p:nth-child(2)",
+       "html": "<p><strong>Shape: </strong>A tiny acrobat doing a handstand: one arm up, one down, a body slash between.</p>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(2) > strong",
+       "html": "<strong>Shape: </strong>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(3)",
+       "html": "<p><strong>Sound: </strong>silent letter that carries a vowel (like the invisible 'a' in 'an apple')</p>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(3) > strong",
+       "html": "<strong>Sound: </strong>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(4)",
+       "html": "<p><strong>Story: </strong>Alef is the polite doorman. He never makes a noise himself; he just opens the door so the vowel can walk in. Pict",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(4) > strong",
+       "html": "<strong>Story: </strong>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(5)",
+       "html": "<p><strong>Why this name: </strong>Name means 'ox' in ancient Hebrew. Origin story: an ox head turned on its side.</p>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(5) > strong",
+       "html": "<strong>Why this name: </strong>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(6)",
+       "html": "<p><strong>Do not confuse with: </strong>Looks like a fancy K with a slash. Ayin is the other silent letter; ayin has a hooked Y shape with ",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(6) > strong",
+       "html": "<strong>Do not confuse with: </strong>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "p:nth-child(7)",
+       "html": "<p dir=\"rtl\" lang=\"he\">אַבָּא <span dir=\"ltr\">(aba = dad)</span></p>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 14.7pt (19.55px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": "span[dir=\"ltr\"]",
+       "html": "<span dir=\"ltr\">(aba = dad)</span>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 14.7pt (19.55px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": ".feedback",
+       "html": "<div class=\"feedback\" role=\"status\" aria-live=\"polite\">Press Animate to see the order, then trace it.</div>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.6pt (16.8px), font weight: normal). Expected contrast ratio of 4.5:1"
+      },
+      {
+       "target": ".row:nth-child(10)",
+       "html": "<div class=\"row\">0 / 3 strokes</div>",
+       "summary": "Element has insufficient color contrast of 1.04 (foreground color: #1b1b1f, background color: #111722, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+      }
+     ]
+    }
+   ]
+  },
+  "/sounds": {
+   "light": [
+    {
+     "id": "label-content-name-mismatch",
+     "impact": "serious",
+     "help": "Elements must have their visible text as part of their accessible name",
+     "nodes": [
+      {
+       "target": "li:nth-child(1) > button",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Kamatz (kamatz gadol): play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בָ</span><span>Kamatz",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Patach: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Patach: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בַ</span><span>Patach</span></button",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Tzere: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Tzere: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בֵ</span><span>Tzere</span></button>",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Segol: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Segol: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בֶ</span><span>Segol</span></button>",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Chirik: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Chirik: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בִ</span><span>Chirik</span></button",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Cholam: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Cholam: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בֹ</span><span>Cholam</span></button",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Kubutz: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Kubutz: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בֻ</span><span>Kubutz</span></button",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Shuruk: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Shuruk: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בוּ</span><span>Shuruk</span></butto",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Shva: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Shva: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בְ</span><span>Shva</span></button>",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Chataf patach: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Chataf patach: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בֲ</span><span>Chataf patach<",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Chataf segol: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Chataf segol: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בֱ</span><span>Chataf segol</s",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Chataf kamatz: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Chataf kamatz: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בֳ</span><span>Chataf kamatz<",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Dagesh: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Dagesh: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בּ</span><span>Dagesh</span></button",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Shin dot: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Shin dot: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">שׁ</span><span>Shin dot</span></bu",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Sin dot: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Sin dot: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">שׂ</span><span>Sin dot</span></butt",
+       "summary": "Text inside the element is not included in the accessible name"
+      }
+     ]
+    }
+   ],
+   "dark": [
+    {
+     "id": "label-content-name-mismatch",
+     "impact": "serious",
+     "help": "Elements must have their visible text as part of their accessible name",
+     "nodes": [
+      {
+       "target": "li:nth-child(1) > button",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Kamatz (kamatz gadol): play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בָ</span><span>Kamatz",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Patach: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Patach: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בַ</span><span>Patach</span></button",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Tzere: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Tzere: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בֵ</span><span>Tzere</span></button>",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Segol: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Segol: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בֶ</span><span>Segol</span></button>",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Chirik: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Chirik: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בִ</span><span>Chirik</span></button",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Cholam: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Cholam: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בֹ</span><span>Cholam</span></button",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Kubutz: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Kubutz: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בֻ</span><span>Kubutz</span></button",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Shuruk: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Shuruk: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בוּ</span><span>Shuruk</span></butto",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Shva: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Shva: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בְ</span><span>Shva</span></button>",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Chataf patach: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Chataf patach: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בֲ</span><span>Chataf patach<",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Chataf segol: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Chataf segol: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בֱ</span><span>Chataf segol</s",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Chataf kamatz: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Chataf kamatz: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בֳ</span><span>Chataf kamatz<",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Dagesh: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Dagesh: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">בּ</span><span>Dagesh</span></button",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Shin dot: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Shin dot: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">שׁ</span><span>Shin dot</span></bu",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Sin dot: play sound\"]",
+       "html": "<button type=\"button\" class=\"sign\" aria-label=\"Sin dot: play sound\"><span class=\"he\" dir=\"rtl\" lang=\"he\">שׂ</span><span>Sin dot</span></butt",
+       "summary": "Text inside the element is not included in the accessible name"
+      }
+     ]
+    }
+   ]
+  },
+  "/read": {
+   "light": [
+    {
+     "id": "label-content-name-mismatch",
+     "impact": "serious",
+     "help": "Elements must have their visible text as part of their accessible name",
+     "nodes": [
+      {
+       "target": "button[data-letter=\"alef\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"alef\" aria-label=\"Alef, 4 times\"><span lang=\"he\" dir=\"rtl\" class=\"he",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"bet\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"bet\" aria-label=\"Bet, 1 time\"><span lang=\"he\" dir=\"rtl\" class=\"he\">ב",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"he\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"he\" aria-label=\"He, 6 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\">ה<",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"vav\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"vav\" aria-label=\"Vav, 9 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"chet\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"chet\" aria-label=\"Chet, 1 time\"><span lang=\"he\" dir=\"rtl\" class=\"he\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"yod\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"yod\" aria-label=\"Yod, 13 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"kaf\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"kaf\" aria-label=\"Kaf, 1 time\"><span lang=\"he\" dir=\"rtl\" class=\"he\">כ",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"lamed\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"lamed\" aria-label=\"Lamed, 4 times\"><span lang=\"he\" dir=\"rtl\" class=\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"mem\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"mem\" aria-label=\"Mem, 1 time\"><span lang=\"he\" dir=\"rtl\" class=\"he\">מ",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"nun\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"nun\" aria-label=\"Nun, 3 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"pe\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"pe\" aria-label=\"Pe, 2 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\">פ<",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"resh\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"resh\" aria-label=\"Resh, 3 times\"><span lang=\"he\" dir=\"rtl\" class=\"he",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"shin\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"shin\" aria-label=\"Shin, 4 times\"><span lang=\"he\" dir=\"rtl\" class=\"he",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"kaf-final\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"kaf-final\" aria-label=\"Final Kaf, 6 times\"><span lang=\"he\" dir=\"rtl\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"mem-final\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"mem-final\" aria-label=\"Final Mem, 2 times\"><span lang=\"he\" dir=\"rtl\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:24\"] > .crp-cell:nth-child(1) > .crp-w[aria-label=\"Word 1: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 1: play\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:24\"] > .crp-cell:nth-child(2) > .crp-w[aria-label=\"Word 2: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 2: play\"><span class=\"crp-l\" data-lid=\"yod\">יְ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:24\"] > .crp-cell:nth-child(3) > .crp-w[aria-label=\"Word 3: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 3: play\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(1) > .crp-w[aria-label=\"Word 1: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 1: play\"><span class=\"crp-l\" data-lid=\"yod\">יָ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(2) > .crp-w[aria-label=\"Word 2: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 2: play\"><span class=\"crp-l\" data-lid=\"yod\">יְ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(3) > .crp-w[aria-label=\"Word 3: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 3: play\"><span class=\"crp-l\" data-lid=\"pe\">פָּ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(4) > .crp-w[aria-label=\"Word 4: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 4: play\"><span class=\"crp-l\" data-lid=\"alef\">אֵ</span><span class=\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(5) > .crp-w[aria-label=\"Word 5: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 5: play\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(1) > .crp-w[aria-label=\"Word 1: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 1: play\"><span class=\"crp-l\" data-lid=\"yod\">יִ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(2) > .crp-w[aria-label=\"Word 2: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 2: play\"><span class=\"crp-l\" data-lid=\"yod\">יְ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(3) > .crp-w[aria-label=\"Word 3: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 3: play\"><span class=\"crp-l\" data-lid=\"pe\">פָּ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(4) > .crp-w[aria-label=\"Word 4: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 4: play\"><span class=\"crp-l\" data-lid=\"alef\">אֵ</span><span class=\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(5) > .crp-w[aria-label=\"Word 5: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 5: play\"><span class=\"crp-l\" data-lid=\"vav\">וְ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Word 6: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 6: play\"><span class=\"crp-l\" data-lid=\"lamed\">לְ</span><span class=",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Word 7: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 7: play\"><span class=\"crp-l\" data-lid=\"shin\">שָׁ</span><span class=",
+       "summary": "Text inside the element is not included in the accessible name"
+      }
+     ]
+    }
+   ],
+   "dark": [
+    {
+     "id": "label-content-name-mismatch",
+     "impact": "serious",
+     "help": "Elements must have their visible text as part of their accessible name",
+     "nodes": [
+      {
+       "target": "button[data-letter=\"alef\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"alef\" aria-label=\"Alef, 4 times\"><span lang=\"he\" dir=\"rtl\" class=\"he",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"bet\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"bet\" aria-label=\"Bet, 1 time\"><span lang=\"he\" dir=\"rtl\" class=\"he\">ב",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"he\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"he\" aria-label=\"He, 6 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\">ה<",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"vav\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"vav\" aria-label=\"Vav, 9 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"chet\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"chet\" aria-label=\"Chet, 1 time\"><span lang=\"he\" dir=\"rtl\" class=\"he\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"yod\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"yod\" aria-label=\"Yod, 13 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"kaf\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"kaf\" aria-label=\"Kaf, 1 time\"><span lang=\"he\" dir=\"rtl\" class=\"he\">כ",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"lamed\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"lamed\" aria-label=\"Lamed, 4 times\"><span lang=\"he\" dir=\"rtl\" class=\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"mem\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"mem\" aria-label=\"Mem, 1 time\"><span lang=\"he\" dir=\"rtl\" class=\"he\">מ",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"nun\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"nun\" aria-label=\"Nun, 3 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"pe\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"pe\" aria-label=\"Pe, 2 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\">פ<",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"resh\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"resh\" aria-label=\"Resh, 3 times\"><span lang=\"he\" dir=\"rtl\" class=\"he",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"shin\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"shin\" aria-label=\"Shin, 4 times\"><span lang=\"he\" dir=\"rtl\" class=\"he",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"kaf-final\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"kaf-final\" aria-label=\"Final Kaf, 6 times\"><span lang=\"he\" dir=\"rtl\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"mem-final\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"mem-final\" aria-label=\"Final Mem, 2 times\"><span lang=\"he\" dir=\"rtl\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:24\"] > .crp-cell:nth-child(1) > .crp-w[aria-label=\"Word 1: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 1: play\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:24\"] > .crp-cell:nth-child(2) > .crp-w[aria-label=\"Word 2: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 2: play\"><span class=\"crp-l\" data-lid=\"yod\">יְ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:24\"] > .crp-cell:nth-child(3) > .crp-w[aria-label=\"Word 3: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 3: play\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(1) > .crp-w[aria-label=\"Word 1: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 1: play\"><span class=\"crp-l\" data-lid=\"yod\">יָ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(2) > .crp-w[aria-label=\"Word 2: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 2: play\"><span class=\"crp-l\" data-lid=\"yod\">יְ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(3) > .crp-w[aria-label=\"Word 3: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 3: play\"><span class=\"crp-l\" data-lid=\"pe\">פָּ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(4) > .crp-w[aria-label=\"Word 4: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 4: play\"><span class=\"crp-l\" data-lid=\"alef\">אֵ</span><span class=\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(5) > .crp-w[aria-label=\"Word 5: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 5: play\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(1) > .crp-w[aria-label=\"Word 1: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 1: play\"><span class=\"crp-l\" data-lid=\"yod\">יִ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(2) > .crp-w[aria-label=\"Word 2: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 2: play\"><span class=\"crp-l\" data-lid=\"yod\">יְ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(3) > .crp-w[aria-label=\"Word 3: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 3: play\"><span class=\"crp-l\" data-lid=\"pe\">פָּ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(4) > .crp-w[aria-label=\"Word 4: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 4: play\"><span class=\"crp-l\" data-lid=\"alef\">אֵ</span><span class=\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(5) > .crp-w[aria-label=\"Word 5: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 5: play\"><span class=\"crp-l\" data-lid=\"vav\">וְ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Word 6: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 6: play\"><span class=\"crp-l\" data-lid=\"lamed\">לְ</span><span class=",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Word 7: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 7: play\"><span class=\"crp-l\" data-lid=\"shin\">שָׁ</span><span class=",
+       "summary": "Text inside the element is not included in the accessible name"
+      }
+     ]
+    }
+   ]
+  },
+  "/read/bless-priestly-1": {
+   "light": [
+    {
+     "id": "label-content-name-mismatch",
+     "impact": "serious",
+     "help": "Elements must have their visible text as part of their accessible name",
+     "nodes": [
+      {
+       "target": "button[data-letter=\"alef\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"alef\" aria-label=\"Alef, 4 times\"><span lang=\"he\" dir=\"rtl\" class=\"he",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"bet\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"bet\" aria-label=\"Bet, 1 time\"><span lang=\"he\" dir=\"rtl\" class=\"he\">ב",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"he\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"he\" aria-label=\"He, 6 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\">ה<",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"vav\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"vav\" aria-label=\"Vav, 9 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"chet\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"chet\" aria-label=\"Chet, 1 time\"><span lang=\"he\" dir=\"rtl\" class=\"he\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"yod\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"yod\" aria-label=\"Yod, 13 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"kaf\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"kaf\" aria-label=\"Kaf, 1 time\"><span lang=\"he\" dir=\"rtl\" class=\"he\">כ",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"lamed\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"lamed\" aria-label=\"Lamed, 4 times\"><span lang=\"he\" dir=\"rtl\" class=\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"mem\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"mem\" aria-label=\"Mem, 1 time\"><span lang=\"he\" dir=\"rtl\" class=\"he\">מ",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"nun\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"nun\" aria-label=\"Nun, 3 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"pe\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"pe\" aria-label=\"Pe, 2 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\">פ<",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"resh\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"resh\" aria-label=\"Resh, 3 times\"><span lang=\"he\" dir=\"rtl\" class=\"he",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"shin\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"shin\" aria-label=\"Shin, 4 times\"><span lang=\"he\" dir=\"rtl\" class=\"he",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"kaf-final\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"kaf-final\" aria-label=\"Final Kaf, 6 times\"><span lang=\"he\" dir=\"rtl\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"mem-final\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"mem-final\" aria-label=\"Final Mem, 2 times\"><span lang=\"he\" dir=\"rtl\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:24\"] > .crp-cell:nth-child(1) > .crp-w[aria-label=\"Word 1: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 1: play\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:24\"] > .crp-cell:nth-child(2) > .crp-w[aria-label=\"Word 2: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 2: play\"><span class=\"crp-l\" data-lid=\"yod\">יְ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:24\"] > .crp-cell:nth-child(3) > .crp-w[aria-label=\"Word 3: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 3: play\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(1) > .crp-w[aria-label=\"Word 1: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 1: play\"><span class=\"crp-l\" data-lid=\"yod\">יָ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(2) > .crp-w[aria-label=\"Word 2: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 2: play\"><span class=\"crp-l\" data-lid=\"yod\">יְ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(3) > .crp-w[aria-label=\"Word 3: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 3: play\"><span class=\"crp-l\" data-lid=\"pe\">פָּ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(4) > .crp-w[aria-label=\"Word 4: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 4: play\"><span class=\"crp-l\" data-lid=\"alef\">אֵ</span><span class=\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(5) > .crp-w[aria-label=\"Word 5: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 5: play\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(1) > .crp-w[aria-label=\"Word 1: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 1: play\"><span class=\"crp-l\" data-lid=\"yod\">יִ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(2) > .crp-w[aria-label=\"Word 2: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 2: play\"><span class=\"crp-l\" data-lid=\"yod\">יְ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(3) > .crp-w[aria-label=\"Word 3: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 3: play\"><span class=\"crp-l\" data-lid=\"pe\">פָּ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(4) > .crp-w[aria-label=\"Word 4: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 4: play\"><span class=\"crp-l\" data-lid=\"alef\">אֵ</span><span class=\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(5) > .crp-w[aria-label=\"Word 5: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 5: play\"><span class=\"crp-l\" data-lid=\"vav\">וְ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Word 6: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 6: play\"><span class=\"crp-l\" data-lid=\"lamed\">לְ</span><span class=",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Word 7: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 7: play\"><span class=\"crp-l\" data-lid=\"shin\">שָׁ</span><span class=",
+       "summary": "Text inside the element is not included in the accessible name"
+      }
+     ]
+    }
+   ],
+   "dark": [
+    {
+     "id": "label-content-name-mismatch",
+     "impact": "serious",
+     "help": "Elements must have their visible text as part of their accessible name",
+     "nodes": [
+      {
+       "target": "button[data-letter=\"alef\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"alef\" aria-label=\"Alef, 4 times\"><span lang=\"he\" dir=\"rtl\" class=\"he",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"bet\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"bet\" aria-label=\"Bet, 1 time\"><span lang=\"he\" dir=\"rtl\" class=\"he\">ב",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"he\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"he\" aria-label=\"He, 6 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\">ה<",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"vav\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"vav\" aria-label=\"Vav, 9 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"chet\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"chet\" aria-label=\"Chet, 1 time\"><span lang=\"he\" dir=\"rtl\" class=\"he\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"yod\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"yod\" aria-label=\"Yod, 13 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"kaf\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"kaf\" aria-label=\"Kaf, 1 time\"><span lang=\"he\" dir=\"rtl\" class=\"he\">כ",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"lamed\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"lamed\" aria-label=\"Lamed, 4 times\"><span lang=\"he\" dir=\"rtl\" class=\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"mem\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"mem\" aria-label=\"Mem, 1 time\"><span lang=\"he\" dir=\"rtl\" class=\"he\">מ",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"nun\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"nun\" aria-label=\"Nun, 3 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"pe\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"pe\" aria-label=\"Pe, 2 times\"><span lang=\"he\" dir=\"rtl\" class=\"he\">פ<",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"resh\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"resh\" aria-label=\"Resh, 3 times\"><span lang=\"he\" dir=\"rtl\" class=\"he",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"shin\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"shin\" aria-label=\"Shin, 4 times\"><span lang=\"he\" dir=\"rtl\" class=\"he",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"kaf-final\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"kaf-final\" aria-label=\"Final Kaf, 6 times\"><span lang=\"he\" dir=\"rtl\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[data-letter=\"mem-final\"]",
+       "html": "<button type=\"button\" class=\"crp-ltr\" aria-pressed=\"false\" data-letter=\"mem-final\" aria-label=\"Final Mem, 2 times\"><span lang=\"he\" dir=\"rtl\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:24\"] > .crp-cell:nth-child(1) > .crp-w[aria-label=\"Word 1: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 1: play\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:24\"] > .crp-cell:nth-child(2) > .crp-w[aria-label=\"Word 2: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 2: play\"><span class=\"crp-l\" data-lid=\"yod\">יְ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:24\"] > .crp-cell:nth-child(3) > .crp-w[aria-label=\"Word 3: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 3: play\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(1) > .crp-w[aria-label=\"Word 1: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 1: play\"><span class=\"crp-l\" data-lid=\"yod\">יָ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(2) > .crp-w[aria-label=\"Word 2: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 2: play\"><span class=\"crp-l\" data-lid=\"yod\">יְ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(3) > .crp-w[aria-label=\"Word 3: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 3: play\"><span class=\"crp-l\" data-lid=\"pe\">פָּ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(4) > .crp-w[aria-label=\"Word 4: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 4: play\"><span class=\"crp-l\" data-lid=\"alef\">אֵ</span><span class=\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:25\"] > .crp-cell:nth-child(5) > .crp-w[aria-label=\"Word 5: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 5: play\">",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(1) > .crp-w[aria-label=\"Word 1: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 1: play\"><span class=\"crp-l\" data-lid=\"yod\">יִ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(2) > .crp-w[aria-label=\"Word 2: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 2: play\"><span class=\"crp-l\" data-lid=\"yod\">יְ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(3) > .crp-w[aria-label=\"Word 3: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 3: play\"><span class=\"crp-l\" data-lid=\"pe\">פָּ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(4) > .crp-w[aria-label=\"Word 4: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 4: play\"><span class=\"crp-l\" data-lid=\"alef\">אֵ</span><span class=\"",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "div[aria-label=\"Numbers 6:26\"] > .crp-cell:nth-child(5) > .crp-w[aria-label=\"Word 5: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 5: play\"><span class=\"crp-l\" data-lid=\"vav\">וְ</span><span class=\"c",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Word 6: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 6: play\"><span class=\"crp-l\" data-lid=\"lamed\">לְ</span><span class=",
+       "summary": "Text inside the element is not included in the accessible name"
+      },
+      {
+       "target": "button[aria-label=\"Word 7: play\"]",
+       "html": "<button type=\"button\" class=\"crp-w\" lang=\"he\" dir=\"rtl\" aria-label=\"Word 7: play\"><span class=\"crp-l\" data-lid=\"shin\">שָׁ</span><span class=",
+       "summary": "Text inside the element is not included in the accessible name"
+      }
+     ]
+    }
+   ]
+  },
+  "/scan": {
+   "light": [],
+   "dark": []
+  },
+  "/calendar": {
+   "light": [],
+   "dark": []
+  },
+  "/settings": {
+   "light": [],
+   "dark": []
+  },
+  "/how": {
+   "light": [],
+   "dark": []
+  },
+  "/about": {
+   "light": [],
+   "dark": []
+  },
+  "/nope": {
+   "light": [],
+   "dark": []
+  }
+ },
+ "keyboard": [
+  {
+   "name": "first Tab stop is the skip link",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "skip link moves focus into #main",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "Tab order: skip link, brand, every nav link in order",
+   "ok": true,
+   "detail": "Skip to main content | ALEF אלף | Homeבית | Learnלימוד | Lettersאותיות | Soundsצלילים | Readקריאה | Scanסריקה | Calendarלוח שנה | Settingsהגדרות | Aboutאודות | How this works | Open the reader | Start"
+  },
+  {
+   "name": "focused nav link has a visible outline",
+   "ok": true,
+   "detail": "solid 3px"
+  },
+  {
+   "name": "Enter on nav link navigates and focus moves to the page heading",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "Start button opens the lesson by keyboard",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "Listen is a real button operable with Enter (indicator updated)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "Show answer moves focus to the answer region",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "rating key 3 advances to the next card",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

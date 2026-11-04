@@ -10,14 +10,18 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="assets/css/learn.css">
+  <link rel="preload" href="assets/fonts/web/frank-ruhl-libre.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header" role="banner">
-    <a class="brand" href="#/" aria-label="ALEF home"><span>ALEF</span> <span lang="he" dir="rtl" class="he">אלף</span></a>
+    <a class="brand" href="#/" aria-label="ALEF אלף, home"><span>ALEF</span> <span lang="he" dir="rtl" class="he">אלף</span></a>
   </header>
   <nav class="site-nav" aria-label="Main"><ul id="nav"></ul></nav>
+  <div class="sound-bar" role="region" aria-label="Sound status"><p id="sound-status" role="status" aria-live="polite">Sound: checking audio support...</p> <a href="#/how">How this works</a></div>
   <main id="main" tabindex="-1" aria-live="off"><p class="muted">Loading ALEF…</p></main>
   <div id="announcer" class="visually-hidden" role="status" aria-live="polite"></div>
   <noscript><p class="card">ALEF needs JavaScript enabled.</p></noscript>

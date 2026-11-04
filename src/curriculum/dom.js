@@ -25,3 +25,10 @@ export async function storeSet(ctx, key, value) {
 }
 export const PROGRESS_KEY = "curriculum.progress";   // { completed: { [lessonId]: ms } }
 export const CARDS_KEY = "srs.cards";                 // { [cardId]: card }
+export const STREAK_KEY = "streak";                   // { count, best, last }
+/** replaceChildren that keeps keyboard focus on `keep` (the heading) when it is re-inserted. */
+export function replaceKeepingFocus(wrap, keep, ...nodes) {
+  const had = globalThis.document?.activeElement === keep;
+  wrap.replaceChildren(keep, ...nodes.filter(Boolean));
+  if (had && keep.focus) keep.focus({ preventScroll: true });
+}

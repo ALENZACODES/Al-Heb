@@ -17,6 +17,8 @@ export const ROUTES = [
   { name: 'scan',     pattern: '/scan',           module: '../photo/scan.view.js',               nav: 'nav.scan',     title: 'Scan', owner: 'lane6' },
   { name: 'calendar', pattern: '/calendar',       module: '../curriculum/calendar.view.js',      nav: 'nav.calendar', title: 'Calendar', owner: 'lane1' },
   { name: 'settings', pattern: '/settings',       module: './settings.view.js',                  nav: 'nav.settings', title: 'Settings', owner: 'lane8' },
+  { name: 'welcome', pattern: '/welcome',        module: './onboarding.view.js',                title: 'Welcome', owner: 'lane8' },
+  { name: 'how',      pattern: '/how',            module: './how.view.js',                       title: 'How this works', owner: 'lane8' },
   { name: 'about',    pattern: '/about',          module: './about.view.js',                     nav: 'nav.about',    title: 'About', owner: 'lane8' },
 ];
 

@@ -1,14 +1,10 @@
-/* ALEF base styles. Logical properties throughout (RTL-aware). Local fonts only.
-   FONT PLAN (downloads are blocked here; none are bundled yet). Planned OFL self-hosted fonts:
-   FiraGO (UI/Hebrew sans), Ezra SIL (pointed prayer text), Gveret Levin (cursive).
-   Add @font-face rules in this file once the files are placed in assets/fonts/ and licences recorded.
-   Avoid Rubik and Noto Sans for pointed text (mark positioning). */
+/* ALEF base styles. Logical properties throughout (RTL-aware). Fonts: assets/css/fonts.css (self-hosted OFL). */
 :root {
   --bg: #f6efe0; --fg: #1d2433; --muted: #5a6275; --card: #fffaf0; --border: #d9cdb3;
   --accent: #1f3a5f; --accent-fg: #fffaf0; --focus: #b45309; --warn-bg: #fff1c2; --warn-fg: #5b4200;
-  --font-ui: "FiraGO", system-ui, -apple-system, "Segoe UI", "DejaVu Sans", sans-serif;
-  --font-he: "Ezra SIL", "SBL Hebrew", "FreeSerif", "DejaVu Sans", "Frank Ruehl CLM", serif;
-  --font-he-cursive: "Gveret Levin", "FreeSans", "DejaVu Sans", sans-serif;
+  --font-ui: "Heebo", system-ui, -apple-system, "Segoe UI", "DejaVu Sans", sans-serif;
+  --font-he: "Frank Ruhl Libre", "Ezra SIL", "SBL Hebrew", "FreeSerif", "DejaVu Serif", serif;
+  --font-he-cursive: "Gveret Levin", "FreeSans", "DejaVu Sans", cursive;
   --tap: 48px; --radius: 12px; --gap: 1rem;
 }
 @media (prefers-color-scheme: dark) {
@@ -59,3 +55,22 @@ details summary { cursor: pointer; min-block-size: 2rem; }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } .btn, .tile { transition: transform .12s ease; } .btn:active, .tile:active { transform: scale(.98); } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
 @media (forced-colors: active) { .btn, .tile, .card { border: 2px solid CanvasText; } }
+[hidden] { display: none !important; }
+.sound-bar { display: flex; flex-wrap: wrap; gap: .25rem 1rem; align-items: center; padding: .4rem 1rem; font-size: .85rem; background: var(--warn-bg); color: var(--warn-fg); border-block-end: 1px solid var(--border); }
+.sound-bar p { margin: 0; }
+.sound-bar a { color: inherit; font-weight: 600; }
+.sound-bar[data-mode] { }
+#sound-status[data-mode="file"] { font-weight: 600; }
+.opt-block { align-items: flex-start; padding-block: .35rem; }
+.opt-block .block { display: block; font-size: .9rem; }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; inline-size: 100%; font-size: .9rem; }
+caption { text-align: start; font-weight: 700; padding-block-end: .35rem; }
+th, td { border: 1px solid var(--border); padding: .4rem .5rem; text-align: start; vertical-align: top; overflow-wrap: break-word; }
+th:first-child, td:first-child { min-inline-size: 7rem; }
+.credits { list-style: none; margin: 0; padding: 0; }
+.credits li { padding-block: .6rem; border-block-start: 1px solid var(--border); }
+.credits .block { display: block; font-size: .92rem; }
+.how h3 { font-size: 1rem; margin-block: 1rem .25rem; }
+.how li, .card li { margin-block: .35rem; }
+.onboarding legend { font-size: 1.05rem; }

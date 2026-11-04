@@ -40,6 +40,15 @@ export const en = {
   'error.body': 'This screen failed to load. You can go back to the home screen.',
   'notfound.title': 'Page not found',
   'about.title': 'About ALEF',
+  'how.title': 'How this works',
+  'welcome.title': 'Welcome to ALEF',
+  'home.streak': 'Streak',
+  'home.goal.read': 'Next lesson: synagogue reading',
+  'home.goal.israel': 'Next lesson: Hebrew in Israel',
+  'home.how': 'How this works, credits and licences',
+  'settings.goal': 'My goal', 'settings.goal.read': 'Read in synagogue', 'settings.goal.israel': 'Get around in Israel', 'settings.goal.both': 'Both',
+  'settings.browserVoiceAnyway': 'Use the browser voice even when it cannot match my pronunciation choice (it is labelled when it does)',
+  'settings.redo': 'Run the first-time setup again',
 };
 /** Hebrew UI labels. FLAGGED: machine-assisted drafts, need native-speaker review. */
 export const he = {

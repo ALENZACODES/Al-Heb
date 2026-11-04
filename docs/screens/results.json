@@ -1,15 +1,64 @@
 {
- "when": "2026-11-03T23:49:03.319Z",
- "offline": "ok: app shell loaded offline",
+ "when": "2026-11-04T00:58:11.839Z",
+ "mode": "repo root",
+ "offline": "FAIL: page.evaluate: Target page, context or browser has been closed",
+ "checks": [
+  {
+   "name": "first run redirects home -> #/welcome",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "onboarding persists voice/congregation/goal",
+   "ok": true,
+   "detail": "{\"voice\":\"m\",\"congregation\":\"ashkenazi\",\"israelTrack\":true,\"script\":\"print\",\"theme\":\"auto\",\"lat\":null,\"lon\":null,\"goal\":\"both\",\"onboarded\":true,\"browserVoiceAnyway\":true}"
+  },
+  {
+   "name": "sound indicator states the real source after Listen",
+   "ok": true,
+   "detail": "No sound: the browser voice reported an error."
+  },
+  {
+   "name": "home shows due cards and a 1-day streak",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "review persisted ratings to srs.cards",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "lesson review deep link renders",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "flow had no page errors",
+   "ok": true,
+   "detail": ""
+  }
+ ],
  "results": [
   {
    "route": "/",
    "status": "content",
    "heading": "ALEF אלף",
    "unavailable": false,
-   "textLength": 516,
-   "focused": "view-title",
+   "textLength": 625,
+   "focused": "",
    "title": "ALEF",
+   "errors": [],
+   "consoleErrors": []
+  },
+  {
+   "route": "/welcome",
+   "status": "content",
+   "heading": "Welcome to ALEF אלף",
+   "unavailable": false,
+   "textLength": 1132,
+   "focused": "",
+   "title": "Welcome - ALEF",
    "errors": [],
    "consoleErrors": []
   },
@@ -18,7 +67,29 @@
    "status": "content",
    "heading": "Lessons",
    "unavailable": false,
-   "textLength": 2891,
+   "textLength": 2955,
+   "focused": "",
+   "title": "Learn - ALEF",
+   "errors": [],
+   "consoleErrors": []
+  },
+  {
+   "route": "/learn?lesson=r01",
+   "status": "content",
+   "heading": "Shin and Bet: your first two letters",
+   "unavailable": false,
+   "textLength": 681,
+   "focused": "",
+   "title": "Learn - ALEF",
+   "errors": [],
+   "consoleErrors": []
+  },
+  {
+   "route": "/learn?review=1",
+   "status": "content",
+   "heading": "Review",
+   "unavailable": false,
+   "textLength": 126,
    "focused": "",
    "title": "Learn - ALEF",
    "errors": [],
@@ -27,9 +98,9 @@
   {
    "route": "/letters",
    "status": "content",
-   "heading": "",
+   "heading": "Letters",
    "unavailable": false,
-   "textLength": 472,
+   "textLength": 1154,
    "focused": "",
    "title": "Letters - ALEF",
    "errors": [],
@@ -38,9 +109,9 @@
   {
    "route": "/letters/alef",
    "status": "content",
-   "heading": "",
+   "heading": "Letter",
    "unavailable": false,
-   "textLength": 472,
+   "textLength": 1153,
    "focused": "",
    "title": "Letter - ALEF",
    "errors": [],
@@ -49,9 +120,9 @@
   {
    "route": "/sounds",
    "status": "content",
-   "heading": "",
+   "heading": "Sounds",
    "unavailable": false,
-   "textLength": 5884,
+   "textLength": 5891,
    "focused": "",
    "title": "Sounds - ALEF",
    "errors": [],
@@ -63,7 +134,7 @@
    "heading": "Read",
    "unavailable": false,
    "textLength": 4195,
-   "focused": "view-title",
+   "focused": "",
    "title": "Read - ALEF",
    "errors": [],
    "consoleErrors": []
@@ -74,7 +145,7 @@
    "heading": "Read",
    "unavailable": false,
    "textLength": 4195,
-   "focused": "view-title",
+   "focused": "",
    "title": "Read - ALEF",
    "errors": [],
    "consoleErrors": []
@@ -82,9 +153,9 @@
   {
    "route": "/scan",
    "status": "content",
-   "heading": "",
+   "heading": "Scan",
    "unavailable": false,
-   "textLength": 565,
+   "textLength": 440,
    "focused": "",
    "title": "Scan - ALEF",
    "errors": [],
@@ -95,7 +166,7 @@
    "status": "content",
    "heading": "Calendar",
    "unavailable": false,
-   "textLength": 485,
+   "textLength": 494,
    "focused": "",
    "title": "Calendar - ALEF",
    "errors": [],
@@ -106,9 +177,20 @@
    "status": "content",
    "heading": "Settings",
    "unavailable": false,
-   "textLength": 377,
-   "focused": "view-title",
+   "textLength": 724,
+   "focused": "",
    "title": "Settings - ALEF",
+   "errors": [],
+   "consoleErrors": []
+  },
+  {
+   "route": "/how",
+   "status": "content",
+   "heading": "How this works",
+   "unavailable": false,
+   "textLength": 7339,
+   "focused": "",
+   "title": "How this works - ALEF",
    "errors": [],
    "consoleErrors": []
   },
@@ -117,8 +199,8 @@
    "status": "content",
    "heading": "About ALEF",
    "unavailable": false,
-   "textLength": 460,
-   "focused": "view-title",
+   "textLength": 2950,
+   "focused": "",
    "title": "About - ALEF",
    "errors": [],
    "consoleErrors": []
@@ -129,7 +211,7 @@
    "heading": "Page not found",
    "unavailable": false,
    "textLength": 27,
-   "focused": "view-title",
+   "focused": "",
    "title": "Page not found - ALEF",
    "errors": [],
    "consoleErrors": []

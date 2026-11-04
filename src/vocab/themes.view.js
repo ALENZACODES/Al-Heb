@@ -12,8 +12,10 @@
  */
 import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
 import { loadJson, loadAllVocab } from '../sprint/loader.js';
+import { visibleRecords } from './loader.js';
 import { addCards, VOCAB_CARDS_KEY, POS_LABEL } from './model.js';
 import { ATTRIBUTION, DRAFT_NOTICE } from './vocab.view.js';
+import { fileLabel } from '../shell/audio-labels.js';
 
 export const STORE_KEY = 'vocab.themes.v1';
 export const SENSE_NOTE = 'Example lines are copied from ALEF\'s own texts (prayers, phrasebook, lessons). Whether the word means the same thing in the line was not checked.';
@@ -73,7 +75,10 @@ export function mount(root, ctx) {
   const save = () => storeSet(ctx, STORE_KEY, state);
 
   const loadIndex = async () => ctx?.themesData?.index || loadJson('data/vocab/themes/index.json');
-  const loadPack = async (id) => ctx?.themesData?.packs?.[id] || loadJson(`data/vocab/themes/${id}.json`);
+  const loadPack = async (id) => {
+    const pack = ctx?.themesData?.packs?.[id] || await loadJson(`data/vocab/themes/${id}.json`);
+    return pack && Array.isArray(pack.words) ? { ...pack, words: visibleRecords(pack.words) } : pack; // flags.hidden records never render
+  };
   const loadVocab = async () => { if (!vocab) vocab = ctx?.themesData?.entries || await loadAllVocab(); return vocab; };
 
   // ---- audio: a recording when the manifest has one, else the browser's Hebrew voice, labelled as such
@@ -83,7 +88,7 @@ export function mount(root, ctx) {
     try {
       if (ctx?.audio?.has?.('word', w.id)) {
         const r = await ctx.audio.play('word', w.id);
-        if (r?.source === 'file') { noteEl.textContent = r.entryStatus === 'tts' ? 'Playing a pre-rendered computer-voice file, not a human recording.' : 'Playing a recording.'; return; }
+        if (r?.source === 'file') { noteEl.textContent = `Playing: ${fileLabel(r.entryStatus)}.`; return; }
       }
     } catch { /* fall through */ }
     const g = globalThis;
@@ -122,6 +127,7 @@ export function mount(root, ctx) {
       el('div', { class: 'th-muted' }, `From the ${SOURCE_LABEL[w.example.source?.channel] || 'ALEF texts'} (${w.example.source?.ref ?? ''}). ${SENSE_NOTE}`)) : el('p', { class: 'th-muted' }, 'No example line: this word does not appear in a full line of ALEF\'s texts.');
     const flags = w.flags?.includes('exampleSpellingShared') ? el('p', { class: 'th-muted' }, 'The spelling is shared with another word, so the line may show that other word.') : null;
     return el('li', { class: 'th-word', 'data-id': w.id },
+      ctx.img?.(el, { kind: 'word', id: w.id, class: 'th-pic', width: 400 }),
       el('div', { class: 'th-he' }, heText(w.he)),
       el('div', {}, [w.translit, `${w.en}`, POS_LABEL[w.pos] || w.pos].filter(Boolean).join(' · ')),
       listen, note, ex, flags);

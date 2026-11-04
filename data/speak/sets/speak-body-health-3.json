@@ -14,7 +14,7 @@
    "translit": "ziyen",
    "en": "to arm (with weapons)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hf7d0fb03",
    "source": "data/vocab/words.json"
   },
   {
@@ -23,7 +23,7 @@
    "translit": "chazak",
    "en": "Strong (healthy, capable of producing much physical force)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hbfda1ccb",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,7 +41,7 @@
    "translit": "etzba",
    "en": "finger",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hc5862de6",
    "source": "data/vocab/words.json"
   },
   {
@@ -50,7 +50,7 @@
    "translit": "beten",
    "en": "abdomen, belly",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h06f78f5d",
    "source": "data/vocab/words.json"
   },
   {

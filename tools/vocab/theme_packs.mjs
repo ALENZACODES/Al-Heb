@@ -93,7 +93,7 @@ export function buildThemes(root = ROOT) {
   const spellings = new Map();
   for (const w of words) spellings.set(w.heUnpointed, (spellings.get(w.heUnpointed) || 0) + 1);
   const byTopic = new Map();
-  for (const w of words) { const t = w.topic || 'untopiced'; if (!byTopic.has(t)) byTopic.set(t, []); byTopic.get(t).push(w); }
+  for (const w of words) { if (w.flags && w.flags.hidden) continue; const t = w.topic || 'untopiced'; if (!byTopic.has(t)) byTopic.set(t, []); byTopic.get(t).push(w); }
   const sizes = Object.fromEntries([...byTopic].map(([t, l]) => [t, l.length]));
   const alloc = allocateSets(sizes);
 

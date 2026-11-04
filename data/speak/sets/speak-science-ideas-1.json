@@ -14,7 +14,7 @@
    "translit": "yuda",
    "en": "to be informed",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h0e071b5c",
    "source": "data/vocab/words.json"
   },
   {
@@ -23,7 +23,7 @@
    "translit": "shar",
    "en": "to sing",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hcd826bec",
    "source": "data/vocab/words.json"
   },
   {
@@ -32,7 +32,7 @@
    "translit": "sadeh",
    "en": "field (wide space for crops)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hac94b307",
    "source": "data/vocab/words.json"
   },
   {
@@ -50,7 +50,7 @@
    "translit": "milah",
    "en": "word",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h95c52e9c",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "guf",
    "en": "a body",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h6c2b8669",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "log",
    "en": "a unit of liquid measurement",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h2111adc7",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "nechoshet",
    "en": "copper",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h5cc95d6e",
    "source": "data/vocab/words.json"
   },
   {
@@ -104,7 +104,7 @@
    "translit": "musag",
    "en": "a concept",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h812fda2f",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "yeter",
    "en": "remainder, rest, residue",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hab527ee7",
    "source": "data/vocab/words.json"
   }
  ]

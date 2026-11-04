@@ -1,7 +1,7 @@
 {
  "schema": "alef-vocab-overrides/1",
  "note": "Hand judgement by the vocabulary-quality pass, NOT a native-speaker review. Every row stays proofread:false. overrides: id -> fields applied after the deterministic rules in tools/vocab/refine.py. additions: words absent from the ranked pool, inserted at an approximate priority (see docs/vocab/METHOD.md); pointed forms and no gloss text come from Wiktionary only where marked. extraForms: forms listed under a lemma. The \"rank\" inside an override is the approximate rank at the time it was written (informational; ids are the key). swapRankWith: id of another entry with the same unpointed spelling; the two exchange rank (and tier) because frequency was counted per spelling, so the common word should hold the higher slot.",
- "fields": "gloss, pos, topic, pointed (null = unpointed), fn, tags (replace), addTags, formOf (\"lemma|pos\")",
+ "fields": "gloss, pos, topic, pointed (null = unpointed), fn, tags (replace), addTags, formOf (\"lemma|pos\"), flags (object, e.g. {\"hidden\": true})",
  "overrides": {
   "v279bb5ac": {
    "rank": 1,
@@ -17,8 +17,8 @@
   "v32e7afd6": {
    "rank": 2,
    "lemma": "ל",
-   "reason": "prefix; gloss made plain",
-   "gloss": "to, for (prefix לְ־)",
+   "reason": "prefix; gloss made plain; audit 2026-11-04: Hebrew text removed from the English gloss (the headword already shows the form)",
+   "gloss": "to, for (prefix)",
    "fn": "preposition",
    "addTags": [
     "clitic"
@@ -27,8 +27,8 @@
   "vb985a686": {
    "rank": 25,
    "lemma": "ב",
-   "reason": "prefix; gloss made plain",
-   "gloss": "in, at, with (prefix בְּ־)",
+   "reason": "prefix; gloss made plain; audit 2026-11-04: Hebrew text removed from the English gloss (the headword already shows the form)",
+   "gloss": "in, at, with (prefix)",
    "fn": "preposition",
    "addTags": [
     "clitic"
@@ -37,8 +37,8 @@
   "vab6cd0ee": {
    "rank": 89,
    "lemma": "מ",
-   "reason": "prefix; gloss made plain",
-   "gloss": "from, of (prefix מִ־)",
+   "reason": "prefix; gloss made plain; audit 2026-11-04: Hebrew text removed from the English gloss (the headword already shows the form)",
+   "gloss": "from, of (prefix)",
    "fn": "preposition",
    "addTags": [
     "clitic"
@@ -47,8 +47,8 @@
   "v1b6856e4": {
    "rank": 268,
    "lemma": "ו",
-   "reason": "prefix",
-   "gloss": "and (prefix וְ־)",
+   "reason": "prefix; audit 2026-11-04: Hebrew text removed from the English gloss (the headword already shows the form)",
+   "gloss": "and (prefix)",
    "fn": "conjunction",
    "addTags": [
     "clitic"
@@ -57,8 +57,8 @@
   "v140214c2": {
    "rank": 138,
    "lemma": "ש",
-   "reason": "prefix; relative/subordinating",
-   "gloss": "that, which, who (prefix שֶׁ־)",
+   "reason": "prefix; relative/subordinating; audit 2026-11-04: Hebrew text removed from the English gloss (the headword already shows the form)",
+   "gloss": "that, which, who (prefix)",
    "fn": "conjunction",
    "addTags": [
     "clitic"
@@ -67,8 +67,8 @@
   "v1feb4208": {
    "rank": 416,
    "lemma": "ד",
-   "reason": "Aramaic-influenced prefix, rare in modern Hebrew",
-   "gloss": "that, which, who (prefix דְּ־; Aramaic-style, rare)",
+   "reason": "Aramaic-influenced prefix, rare in modern Hebrew; audit 2026-11-04: Hebrew text removed from the English gloss (the headword already shows the form)",
+   "gloss": "that, which, who (prefix; Aramaic-style, rare)",
    "fn": "conjunction",
    "addTags": [
     "clitic",
@@ -78,8 +78,8 @@
   "v77777be8": {
    "rank": 221,
    "lemma": "ה",
-   "reason": "prefix of yes/no questions (biblical/formal); NOT the definite article, which is not listed as an entry",
-   "gloss": "question prefix הֲ־ (formal yes/no question: \"is it...?\")",
+   "reason": "prefix of yes/no questions (biblical/formal); NOT the definite article, which is not listed as an entry; audit 2026-11-04: Hebrew text removed from the English gloss (the headword already shows the form)",
+   "gloss": "question prefix (formal yes/no question: \"is it...?\")",
    "fn": "particle",
    "addTags": [
     "clitic"
@@ -127,9 +127,9 @@
   "v3bc64373": {
    "rank": 22,
    "lemma": "יש",
-   "reason": "existential; Wiktionary calls it an adverb",
+   "reason": "existential; Wiktionary calls it an adverb; audit 2026-11-04: Hebrew text removed from the English gloss (the headword already shows the form)",
    "pos": "particle",
-   "gloss": "there is, there are; (with ל־) to have",
+   "gloss": "there is, there are; (with the prefix 'to') to have",
    "fn": "existential",
    "addTags": [
     "function"
@@ -139,8 +139,8 @@
   "v67b1e365": {
    "rank": 48,
    "lemma": "אין",
-   "reason": "existential negation",
-   "gloss": "there is not, there are not; (with ל־) to have no",
+   "reason": "existential negation; audit 2026-11-04: Hebrew text removed from the English gloss (the headword already shows the form)",
+   "gloss": "there is not, there are not; (with the prefix 'to') to have no",
    "fn": "existential",
    "addTags": [
     "function"
@@ -169,8 +169,8 @@
   "vaa2ad51d": {
    "rank": 5,
    "lemma": "הוה",
-   "reason": "Wiktionary lists the spelling הוה as a defective spelling of the present tense הוֹוֶה of הָיָה; the pointed pi'el \"to constitute\" was a wrong homograph pick that carries the frequency of \"is/are\"",
-   "gloss": "is, are (present-tense form of היה, to be)",
+   "reason": "Wiktionary lists the spelling הוה as a defective spelling of the present tense הוֹוֶה of הָיָה; the pointed pi'el \"to constitute\" was a wrong homograph pick that carries the frequency of \"is/are\"; audit 2026-11-04: Hebrew text removed from the English gloss (the headword already shows the form)",
+   "gloss": "is, are (present-tense form of 'to be')",
    "pointed": "הֹוֶה",
    "formOf": "היה|verb",
    "addTags": [
@@ -181,8 +181,8 @@
   "vb667e8ae": {
    "rank": 3189,
    "lemma": "הוא",
-   "reason": "verb entry הֱוֵא is only a rare imperative of \"to be\"; spelling is shared with the pronoun he (rank 11)",
-   "gloss": "be! (rare imperative of היה)",
+   "reason": "verb entry הֱוֵא is only a rare imperative of \"to be\"; spelling is shared with the pronoun he (rank 11); audit 2026-11-04: Hebrew text removed from the English gloss (the headword already shows the form)",
+   "gloss": "be! (rare imperative of 'to be')",
    "formOf": "היה|verb",
    "addTags": [
     "form",
@@ -287,8 +287,8 @@
   "ve441aade": {
    "rank": 244,
    "lemma": "עשר",
-   "reason": "-teen",
-   "gloss": "ten (used in 11-19, e.g. אחד עשר = eleven)"
+   "reason": "-teen; audit 2026-11-04: Hebrew text removed from the English gloss (the headword already shows the form)",
+   "gloss": "ten (used in 11-19)"
   },
   "vd743b56b": {
    "rank": 988,
@@ -303,8 +303,8 @@
   "veac5df72": {
    "rank": 388,
    "lemma": "פי",
-   "reason": "multiplier",
-   "gloss": "times (multiplier, e.g. פי שניים = twice as much)"
+   "reason": "multiplier; audit 2026-11-04: Hebrew text removed from the English gloss (the headword already shows the form)",
+   "gloss": "times (multiplier, as in 'twice as much')"
   },
   "v613477b6": {
    "rank": 472,
@@ -898,8 +898,8 @@
   "v2aae2e95": {
    "rank": 610,
    "lemma": "פרק",
-   "reason": "Wiktionary lists פַּרְק as \"park\" (a loose spelling of פארק). The ordinary word פֶּרֶק (chapter, section, joint) is also in the list at a lower rank; the two share a spelling, so they swap ranks",
-   "gloss": "park (usually spelled פארק)",
+   "reason": "Wiktionary lists פַּרְק as \"park\" (a loose spelling of פארק). The ordinary word פֶּרֶק (chapter, section, joint) is also in the list at a lower rank; the two share a spelling, so they swap ranks; audit 2026-11-04: Hebrew text removed from the English gloss (the headword already shows the form)",
+   "gloss": "park (loanword; usually spelled with an alef)",
    "topic": "Location",
    "swapRankWith": "ve6f0ccc5"
   },
@@ -1303,9 +1303,9 @@
   "v0b96c869": {
    "rank": 2841,
    "lemma": "אי",
-   "reason": "Wiktionary adverb \"not\" is the negating prefix אִי־ (as in אי־אפשר); closed-class",
+   "reason": "Wiktionary adverb \"not\" is the negating prefix אִי־ (as in אי־אפשר); closed-class; audit 2026-11-04: Hebrew text removed from the English gloss (the headword already shows the form)",
    "pos": "particle",
-   "gloss": "not, un-, non- (negating prefix, as in אי־אפשר \"impossible\")",
+   "gloss": "not, un-, non- (negating prefix)",
    "fn": "particle",
    "topic": "Misc Nouns",
    "addTags": [
@@ -1433,6 +1433,65 @@
    "reason": "takes the higher rank of the shared spelling",
    "gloss": "milk",
    "topic": "Beverages"
+  },
+  "v7ba41398": {
+   "rank": 819,
+   "lemma": "כחול",
+   "reason": "audit 2026-11-04: the Wiktionary gloss carried a Hebrew comparison (\"a darker shade than ...\") into the learner-facing field; the plain colour word stands alone",
+   "gloss": "blue"
+  },
+  "v9e04887c": {
+   "rank": 937,
+   "lemma": "מרץ",
+   "reason": "audit 2026-11-04: curated-core month. Wiktionary (kaikki snapshot) gives the pointed form מֶרְץ (merts) only as the proper noun March; the noun \"energy, vigour\" is a different pointed form (מֶרֶץ, mérets) and is not this entry. The build lower-cased \"March\" because \"march\" occurs in lower case elsewhere in words.json; restored as a proper noun",
+   "gloss": "March (month)"
+  },
+  "vd5c1fc73": {
+   "rank": 4759,
+   "lemma": "סנדק",
+   "reason": "audit 2026-11-04: the gloss was only the transliteration; the explanation uses the words.json alt sense (\"a godparent\") made specific. The build strips long parentheses from words.json glosses, so the full wording is set here as well as in corrections.json",
+   "gloss": "sandek (the person who holds the baby at a circumcision)"
+  },
+  "v86404c39": {
+   "rank": 1152,
+   "lemma": "מזדין",
+   "reason": "audit 2026-11-04: words.json withholds this gloss (flags.hidden, corrections.json h974f415a); the build does not read flags.hidden and would print the bare word \"slang\". Kept in its slot so ranks stay stable; needs a reviewer; flags.hidden mirrors the words.json flag so the vocab views (src/vocab/loader.js) drop the record",
+   "gloss": "(slang; gloss withheld pending review)",
+   "addTags": [
+    "needs-check",
+    "colloquial"
+   ],
+   "flags": {
+    "hidden": true
+   }
+  },
+  "v73a6f0a9": {
+   "rank": 3823,
+   "lemma": "זין",
+   "reason": "audit 2026-11-04: words.json withholds this gloss (flags.hidden, corrections.json h8e35f713); the build does not read flags.hidden and would print the bare word \"slang\". Kept in its slot so ranks stay stable; needs a reviewer; flags.hidden mirrors the words.json flag so the vocab views (src/vocab/loader.js) drop the record",
+   "gloss": "(slang; gloss withheld pending review)",
+   "addTags": [
+    "needs-check",
+    "colloquial"
+   ],
+   "flags": {
+    "hidden": true
+   }
+  },
+  "v66f62b1a": {
+   "rank": 604,
+   "lemma": "עכשיו",
+   "reason": "audit 2026-11-04: plene spelling of עכשו (rank 55, pointed עַכְשָׁו, same gloss \"now\"). The Wiktionary page for this spelling is unpointed; the pointed form is NOT copied here because (pointed form, POS) must be unique in the list. Marked as a spelling form of the pointed entry so teaching uses the pointed one",
+   "formOf": "עכשו|adv",
+   "addTags": [
+    "form"
+   ]
+  },
+  "vc8d62cea": {
+   "rank": 4943,
+   "lemma": "צועני",
+   "reason": "audit 2026-11-04: words.json gloss is \"a Romani person\" (corrections.json h950879c7); the build lower-cased the proper adjective because \"romani\" occurs in lower case elsewhere in words.json",
+   "gloss": "Romani person"
   }
  },
  "additions": [

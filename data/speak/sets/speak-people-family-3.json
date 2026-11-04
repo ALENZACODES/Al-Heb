@@ -14,7 +14,7 @@
    "translit": "zaken",
    "en": "old person",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h5fa9ade9",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,7 +41,7 @@
    "translit": "idivot",
    "en": "a (male) idiot",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h17825deb",
    "source": "data/vocab/words.json"
   },
   {
@@ -50,7 +50,7 @@
    "translit": "doketor",
    "en": "doctor",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h565b3652",
    "source": "data/vocab/words.json"
   },
   {
@@ -59,7 +59,7 @@
    "translit": "taf",
    "en": "babies, infants, small children",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h0cc80aed",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "zonah",
    "en": "female prostitute (who has sex for pay)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hefbbc2c7",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "asuk",
    "en": "busy",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h0764a400",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "zug",
    "en": "pair, couple, twosome",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h2334782c",
    "source": "data/vocab/words.json"
   },
   {
@@ -104,7 +104,7 @@
    "translit": "tayas",
    "en": "pilot",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h882ed65b",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "tinoket",
    "en": "baby, infant (female)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h3e763177",
    "source": "data/vocab/words.json"
   }
  ]

@@ -75,7 +75,7 @@ test("every lesson keeps the lessons.json shape, is a draft, and has 12-20 exerc
     assert.deepEqual(l.letters, []); assert.deepEqual(l.vowels, []);
     assert.ok(typeof l.title === "string" && l.title.length > 8);
     assert.ok(l.goals.length >= 1 && Number.isFinite(l.estMinutes) && l.estMinutes > 0, l.id);
-    if (l.unit === "synagogue") { assert.equal(l.track, "read"); assert.equal(l.level, "black"); }
+    if (l.unit === "synagogue") { assert.equal(l.track, "read"); assert.equal(l.level, "intermediate"); }
     else { assert.equal(l.track, "israel"); assert.equal(l.level, "B1"); }
     assert.ok(l.words.length >= 8, `${l.id} words`);
     for (const w of l.words) { assert.ok(w.he && w.en && "translit" in w, `${l.id} ${w.he}`); assert.ok(HEB.test(w.he)); }

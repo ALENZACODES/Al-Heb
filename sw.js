@@ -4,14 +4,22 @@
    - audio/images: cache first, filled at runtime (Range requests bypass the cache; see docs/ARCHITECTURE.md)
    - data/audio/manifest-words-*.json (lazy per-tradition word shards, NOT precached): stale-while-revalidate into the runtime cache,
      so the learner's own shard is available offline after first use; a plain network error when neither exists (never offline.html)
-   - everything else same-origin: stale-while-revalidate */
+   - everything else same-origin: stale-while-revalidate
+   Lifecycle: a new worker installs its shell cache and then WAITS. It takes over only when the page posts {type:'SKIP_WAITING'}
+   (src/shell/update.js does that when the learner presses "Reload now" in the update banner) or when every ALEF tab is closed.
+   So a running page is never switched to a newer cache under it. activate still claims clients so the reload lands on the new worker. */
 importScripts('precache-manifest.js');
 const VERSION = self.ALEF_VERSION || 'dev';
 const SHELL = `alef-shell-${VERSION}`;
 const RUNTIME = 'alef-runtime-v1';
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(SHELL).then((c) => c.addAll(self.ALEF_PRECACHE || [])).then(() => self.skipWaiting()));
+  event.waitUntil(caches.open(SHELL).then((c) => c.addAll(self.ALEF_PRECACHE || [])));
+});
+// Consent-only takeover: the page's update banner posts this after the learner presses Reload (and not mid-exercise).
+self.addEventListener('message', (event) => {
+  const d = event.data;
+  if (d && (d === 'SKIP_WAITING' || d.type === 'SKIP_WAITING')) event.waitUntil(self.skipWaiting());
 });
 self.addEventListener('activate', (event) => {
   event.waitUntil((async () => {

@@ -162,3 +162,18 @@ export async function setScaffoldPin(ctx, cardId, pinned) {
   const cur = map[cardId] || { level: start === "faint" ? 1 : 0, pinned: false, advancedOn: null };
   await storeSet(ctx, SCAFFOLD_KEY, { ...map, [cardId]: { ...cur, pinned: !!pinned } });
 }
+
+/**
+ * Finish a quick check: the lesson is completed (cards created, streak counted) only here, after the learner answered every
+ * question. First-attempt results feed the SRS: misses lapse the card, hits review it. Returns { added, updated }.
+ */
+export async function saveQuickCheck(ctx, lesson, questions, results, now = Date.now()) {
+  if (!questions.length || !Object.keys(results).length) return { added: 0, updated: 0, completed: false };
+  const { added } = await completeLesson(ctx, lesson, now);
+  const outcomes = questions.filter((q) => q.cardId && q.id in results).map((q) => ({ id: q.cardId, kind: q.cardKind || "word", good: !!results[q.id], create: true }));
+  if (outcomes.length) {
+    const st = await loadState(ctx, now);
+    await storeSet(ctx, CARDS_KEY, applyOutcomesToCards(st.cards, outcomes, now));
+  }
+  return { added, updated: outcomes.length, completed: true };
+}

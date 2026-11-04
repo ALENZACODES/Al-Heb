@@ -1,6 +1,7 @@
 // @ts-check
 // Small DOM + audio + storage helpers shared by the Torah-reading views. Plain DOM, no dependencies.
 import { spokenForm, hasDivineName } from './pointing.js';
+import { fileLabel } from '../shell/audio-labels.js';
 
 export function el(tag, attrs = {}, ...kids) {
   const e = document.createElement(tag);
@@ -79,7 +80,7 @@ export { hasDivineName };
 /** Plain-language result of ctx.audio.play(): honest about what (if anything) was heard. */
 export function describeAudio(r, label) {
   if (!r) return `No audio yet for ${label}.`;
-  if (r.source === 'file') return `Playing ${r.entryStatus === 'tts' ? 'a pre-rendered synthetic voice file' : 'a recorded audio file'} for ${label}.`;
+  if (r.source === 'file') return `Playing ${label}: ${fileLabel(r.entryStatus)}.`;
   if (r.source === 'tts-fallback' || r.played === true) return `Played ${label} with your browser's text-to-speech voice. It is a computer voice, not a person, and it reads Israeli pronunciation.`;
   const why = {
     'unknown-item': 'no audio entry exists for it',

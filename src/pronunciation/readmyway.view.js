@@ -10,6 +10,7 @@
 import { TRADITIONS, TRADITION_LABELS, NOTICE, tokenize, variantsOf, syllablesOf, describeDifferences } from './compare.model.js';
 import { createLoader } from './lookup.js';
 import { normalizeTradition } from './sounds.model.js';
+import { setCongregation } from './forTradition.js';
 
 export const READ_KEY = 'pron.readmyway.v1';
 const CSS = `
@@ -108,7 +109,7 @@ export function mount(root, ctx) {
   form.addEventListener('submit', (e) => { e?.preventDefault?.(); convert(); });
   sel.addEventListener('change', () => {
     tradition = normalizeTradition(sel.value);
-    try { if (typeof ctx?.settings?.set === 'function') ctx.settings.set('congregation', tradition); else if (ctx?.settings) ctx.settings.congregation = tradition; } catch { /* keep local */ }
+    try { if (ctx?.settings) setCongregation(ctx.settings, tradition); } catch { /* keep local */ }
     if (lastRows) convert();
   });
   all3.addEventListener('change', () => { if (lastRows) convert(); });

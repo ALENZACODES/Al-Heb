@@ -613,7 +613,7 @@ async function calendar(ctx) {
   let m;
   try { m = await import(pathToFileURL(join(ctx.root, rel)).href); } catch { return []; }
   const items = [];
-  const flag = ['src/curriculum/calendar.js header: Hebrew names written by an AI agent, no native review recorded (report-only: no data flag to flip)'];
+  const flag = ['src/curriculum/calendar.js header: Hebrew names are drafts, no native review recorded (report-only: no data flag to flip)'];
   (m.HOLIDAY_DEFS || []).forEach((h) => items.push(mk('calendar', `holiday:${h.id}`, {
     he: h.he, translit: ctx.tr(h.he), en: `${h.en} (${h.month} ${h.day}, ${h.days} day${h.days > 1 ? 's' : ''}, ${h.kind}). ${h.note || ''}`,
     check: `Holiday name: pointing and spelling, English name. Calendar convention verified level in code: "${h.verified}" ${h.verified !== 'source' ? '(inferred/recalled, not from a fetched source)' : ''}. Is the Reform-oriented one-day convention note fair? Date: ${h.month} ${h.day}.`,

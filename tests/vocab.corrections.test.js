@@ -21,11 +21,11 @@ const packs = packFiles.map((f) => rd(`data/vocab/packs/${f}`)).filter((p) => Ar
 test('corrections.json: id, field, old, new, reason on every entry; only the deterministic kinds', () => {
   assert.equal(spec.schema, 'alef-vocab-corrections/1');
   assert.equal(spec.counts.removed, 2); assert.equal(spec.counts.translit, 67); assert.equal(spec.counts.forms, 1);
-  assert.equal(spec.corrections.length, 70);
+  assert.equal(spec.corrections.length, 70 + 35 + 5); // 70 deterministic + 35 appended gloss/hidden/example corrections (docs/vocab/JUDGEMENT.md addendum) + 5 audit gloss/alt corrections (docs/vocab/AUDIT-RESPONSE.md)
   for (const c of spec.corrections) {
     for (const k of ['id', 'field', 'old', 'new', 'reason']) assert.ok(k in c, `${c.id} lacks ${k}`);
     assert.ok(c.reason.length > 20);
-    assert.ok(['translit', 'forms.plural', '(record)'].includes(c.field));
+    assert.ok(['translit', 'forms.plural', '(record)', 'en', 'alt', 'flags.hidden', 'example'].includes(c.field));
     if (c.field === '(record)') { assert.equal(c.new, null); assert.match(c.reason, /exact duplicate of h/); }
   }
   assert.equal(new Set(spec.corrections.map((c) => c.id + c.field)).size, spec.corrections.length);
@@ -45,7 +45,7 @@ test('applied: removed duplicates are gone everywhere, corrected translits are i
       assert.ok(byId.has(kept) && byId.get(kept).he === c.old.he && byId.get(kept).pos === c.old.pos, 'the kept twin exists');
     } else if (c.field !== 'translit') {
       const at = (w) => c.field.split('.').reduce((o, k) => o?.[k], w);
-      assert.equal(at(byId.get(c.id)), c.new, c.id); assert.equal(at(packWords.get(c.id)), c.new);
+      assert.deepEqual(at(byId.get(c.id)) ?? null, c.new, c.id); assert.deepEqual(at(packWords.get(c.id)) ?? null, c.new);
     } else {
       assert.equal(byId.get(c.id).translit, c.new, c.id);
       assert.equal(packWords.get(c.id).translit, c.new); assert.equal(rows.get(c.id)[tcol], c.new);
@@ -78,7 +78,7 @@ test('re-running is a no-op (idempotent) and a dry run writes nothing', () => {
   const sha = (rel) => crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT, rel))).digest('hex');
   const before = [sha('data/vocab/words.json'), sha('data/vocab/packs.json'), sha('data/vocab/index.json'), sha('data/vocab/meta.json')];
   const r = applyCorrections(ROOT, { dry: true });
-  assert.equal(r.applied.length, 0); assert.equal(r.conflicts.length, 0); assert.equal(r.already.length, 70);
+  assert.equal(r.applied.length, 0); assert.equal(r.conflicts.length, 0); assert.equal(r.already.length, 110);
   assert.deepEqual([sha('data/vocab/words.json'), sha('data/vocab/packs.json'), sha('data/vocab/index.json'), sha('data/vocab/meta.json')], before);
   assert.deepEqual(generateCorrections(ROOT).filter((c) => c.field === '(record)'), [], 'nothing left to generate for duplicates');
 });

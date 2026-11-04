@@ -23,7 +23,7 @@
    "translit": "mekhol",
    "en": "container, bin",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h7439bf9d",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,7 +41,7 @@
    "translit": "kise",
    "en": "chair",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h568e3e03",
    "source": "data/vocab/words.json"
   },
   {
@@ -59,7 +59,7 @@
    "translit": "chomah",
    "en": "a wall, a structure built for defense around a city, castle, etc",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h293be884",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "chevel",
    "en": "rope",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h9d27e0b4",
    "source": "data/vocab/words.json"
   },
   {
@@ -77,7 +77,7 @@
    "translit": "shulchan",
    "en": "table (piece of furniture), desk",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hfac8b79e",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "gag",
    "en": "roof",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h921e79c9",
    "source": "data/vocab/words.json"
   },
   {

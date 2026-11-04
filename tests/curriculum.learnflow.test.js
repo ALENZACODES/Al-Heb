@@ -29,6 +29,20 @@ const tick = (ms = 30) => new Promise((r) => setTimeout(r, ms));
 const memStore = (init = {}) => { const m = { ...init }; return { get: (k) => m[k], set: (k, v) => { m[k] = v; }, m }; };
 const btn = (root, re) => root.find((n) => n.tag === "button" && re.test((n.attrs["aria-label"] || "") + n.text))[0];
 
+
+/** Complete a lesson through its quick check: pick the first option every time (misses are repeated once), press Continue. */
+async function completeViaQuiz(root, doneRe = /Lesson complete/) {
+  await btn(root, /Start quick check/).click();
+  for (let g = 0; g < 80 && !doneRe.test(root.text); g++) {
+    const cont = root.find((n) => n.tag === "button" && n.attrs["data-act"] === "next" && !n.hidden)[0];
+    if (cont) { await cont.click(); continue; }
+    const opt = root.find((n) => n.tag === "button" && n.attrs["data-n"] === "1")[0];
+    if (opt) await opt.click(); else await tick(5);
+  }
+  await until(root, doneRe);
+}
+
+const actions = await import("../src/curriculum/actions.js");
 const { mount } = await import("../src/curriculum/learn.view.js");
 const { describeCard } = await import("../src/curriculum/review.view.js");
 const { loadContent } = await import("../src/curriculum/content.js");
@@ -36,7 +50,7 @@ const { loadContent } = await import("../src/curriculum/content.js");
 function ctxFor(store, query, extra = {}) {
   const played = [];
   return { store, query, route: () => {}, t: (k) => k, settings: { get: (k) => ({ congregation: "sephardi", goal: "read" }[k]) },
-    audio: { play: async (kind, id) => { played.push([kind, id]); return { source: "tts-fallback" }; } }, played, ...extra };
+    audio: { status: () => ({ source: "tts-fallback" }), play: async (kind, id) => { played.push([kind, id]); return { source: "tts-fallback" }; } }, played, ...extra };
 }
 
 test("lesson deep link shows letters/vowels/words with audio, completes, creates cards and a streak", async () => {
@@ -48,29 +62,31 @@ test("lesson deep link shows letters/vowels/words with audio, completes, creates
   // audio: play the first letter -> ctx.audio.play('letter','shin') and an honest status line appears
   await btn(root, /Listen to Shin/).click(); await waitFor(() => ctx.played.at(-1)?.[1] === "shin", { message: "Shin audio never played" });
   assert.deepEqual(ctx.played.at(-1), ["letter", "shin"]);
-  assert.match(root.text, /browser's built-in voice/);
+  assert.match(root.text, /Device voice, not a recorded teacher/);
   await btn(root, /Listen to he returned/).click();
   assert.deepEqual(ctx.played.at(-1), ["word", "r01-w1"]);
   // complete
-  await btn(root, /Mark lesson complete/).click(); await waitFor(() => store.m["curriculum.progress"]?.completed?.r01, { message: "lesson never completed" });
+  assert.equal(btn(root, /Start quick check/).attrs.disabled, undefined);
+  assert.equal(store.m["curriculum.progress"], undefined, "nothing is completed before the quick check");
+  await completeViaQuiz(root); await waitFor(() => store.m["curriculum.progress"]?.completed?.r01, { message: "lesson never completed" });
   assert.ok(store.m["curriculum.progress"].completed.r01);
   assert.equal(Object.keys(store.m["srs.cards"]).length, 6);
   assert.equal(store.m.streak.count, 1);
-  assert.match(root.text, /6 new review cards added/);
+  assert.match(root.text, /review cards? updated/); assert.match(root.text, /Accuracy/); assert.match(root.text, /Next lesson/);
   un();
 });
 
 test("locked lesson: complete is disabled and says why; unknown lesson is a clear message", async () => {
   const root = new Node_("div"); mount(root, ctxFor(memStore(), { lesson: "r02" })); await until(root, /Locked: finish/);
   assert.match(root.text, /Locked: finish/);
-  assert.ok("disabled" in btn(root, /Mark lesson complete/).attrs);
+  assert.ok("disabled" in btn(root, /Start quick check/).attrs);
   const r2 = new Node_("div"); mount(r2, ctxFor(memStore(), { lesson: "zzz" })); await until(r2, /Lesson not found/);
   assert.match(r2.text, /Lesson not found/);
 });
 
 test("review deep link: queue from completed lesson, reveal, keyboard rating, persistence, summary", async () => {
   const store = memStore(); const ctx = ctxFor(store, { lesson: "r01" });
-  const lr = new Node_("div"); mount(lr, ctx); await until(lr, /Mark lesson complete/); await btn(lr, /Mark lesson complete/).click(); await waitFor(() => store.m["curriculum.progress"]?.completed?.r01, { message: "lesson r01 never completed" });
+  const lr = new Node_("div"); mount(lr, ctx); await until(lr, /Start quick check/); lr.remove(); await actions.completeLesson(ctx, (await import("../src/curriculum/lessons.js")).byId.r01);
 
   const root = new Node_("div"); const ctxR = ctxFor(store, { review: "1" });
   const un = mount(root, ctxR); await until(root, /Card 1 of 6/);

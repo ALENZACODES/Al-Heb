@@ -59,13 +59,13 @@
    "translit": "le'umi",
    "en": "National",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hb3b4c47b",
    "source": "data/vocab/words.json"
   },
   {
    "id": "hc73a45bc",
    "he": "הִרְוִיחַ",
-   "translit": "hirvicha",
+   "translit": "hirviach",
    "en": "to earn, to profit",
    "kind": "word",
    "audioId": null,
@@ -86,7 +86,7 @@
    "translit": "dal",
    "en": "weak, poor",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hc73b1b96",
    "source": "data/vocab/words.json"
   },
   {

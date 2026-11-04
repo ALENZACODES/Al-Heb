@@ -37,8 +37,10 @@ async function newPage(theme, device = 'phone') {
 for (const [device, theme] of CONFIGS) {
   const { ctx, page } = await newPage(theme, device);
   // a progressed profile so review/lesson screens have content
-  await page.goto(base + '#/learn?lesson=r01'); await page.waitForSelector('text=Words');
-  await page.getByRole('button', { name: 'Mark lesson complete' }).click(); await page.waitForSelector('text=new review cards');
+  await page.goto(base + '#/learn?lesson=r01'); await page.waitForSelector('main >> text=Words');
+  // the lesson page no longer has a one-tap complete; the Learn list's "Mark complete" does the same (creates the review cards)
+  await page.goto(base + '#/learn'); await page.waitForSelector('main >> text=Lessons');
+  await page.locator('li[data-lesson="r01"] button[aria-label^="Mark complete"]').click(); await page.waitForSelector('main >> text=reviews due');
   for (const r of routes) {
     await page.goto(base + '#' + r); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(400);
     if (r.includes('review')) { await page.getByRole('button', { name: 'Show answer' }).click({ timeout: 1000 }).catch(() => {}); }
@@ -66,20 +68,21 @@ for (const [device, theme] of CONFIGS) {
   note('skip link moves focus into #main', await page.evaluate(() => document.activeElement?.id === 'main'));
   const p2 = await ctx.newPage(); await p2.goto(base + '#/'); await p2.waitForSelector('body[data-ready="1"]');
   const stops = []; for (let i = 0; i < 14; i++) { await p2.keyboard.press('Tab'); stops.push(await p2.evaluate(() => { const a = document.activeElement; return (a?.textContent || a?.tagName || '').trim().replace(/\s+/g, ' ').slice(0, 24); })); }
-  note('Tab order on a phone: skip link, brand, the five tab-bar links, More (the sheet items are not tabbable while closed)', ['Skip', 'ALEF', 'Home', 'Learn', 'Letters', 'Sounds', 'Read', 'More'].every((x, i) => stops[i]?.startsWith(x)), stops.join(' | '));
+  note('Tab order on a phone: skip link, brand, the v0 tab-bar links (Learn, Progress), More (the sheet items are not tabbable while closed)', ['Skip', 'ALEF', 'Learn', 'Progress', 'More'].every((x, i) => stops[i]?.startsWith(x)), stops.join(' | '));
   // focus visible on a nav link
   const outline = await page.evaluate(() => { const a = document.querySelector('#nav a'); a.focus(); const c = getComputedStyle(a); return c.outlineStyle + ' ' + c.outlineWidth; });
   note('focused nav link has a visible outline', /solid 3px/.test(outline), outline);
   // activate Learn with the keyboard
-  await page.focus('#nav a[href="#/learn"]'); await page.keyboard.press('Enter'); await page.waitForSelector('text=Lessons'); await page.waitForFunction(() => document.activeElement?.id === 'view-title', null, { timeout: 3000 }).catch(() => {});
+  await page.focus('#nav a[href="#/learn"]'); await page.keyboard.press('Enter'); await page.waitForSelector('main >> text=Lessons'); await page.waitForFunction(() => document.activeElement?.id === 'view-title', null, { timeout: 3000 }).catch(() => {});
   note('Enter on nav link navigates and focus moves to the page heading', await page.evaluate(() => document.activeElement?.id === 'view-title' && location.hash === '#/learn'));
   // open a lesson with the keyboard (Start button on the first lesson)
-  await page.focus('li[data-lesson="r01"] button'); await page.keyboard.press('Enter'); await page.waitForSelector('text=Words'); await page.waitForFunction(() => document.activeElement?.id === 'view-title', null, { timeout: 3000 }).catch(() => {});
+  await page.focus('li[data-lesson="r01"] button'); await page.keyboard.press('Enter'); await page.waitForSelector('main >> text=Words'); await page.waitForFunction(() => document.activeElement?.id === 'view-title', null, { timeout: 3000 }).catch(() => {});
   note('Start button opens the lesson by keyboard', await page.evaluate(() => location.hash === '#/learn?lesson=r01' && document.activeElement?.id === 'view-title'));
   await page.focus('button[aria-label="Listen to Shin"]'); await page.keyboard.press('Enter');
   await page.waitForTimeout(200);
   note('Listen is a real button operable with Enter (indicator updated)', !/checking/.test(await page.locator('#sound-status').innerText()));
-  await page.focus('button:has-text("Mark lesson complete")'); await page.keyboard.press('Space'); await page.waitForSelector('text=new review cards');
+  await page.goto(base + '#/learn'); await page.waitForSelector('main >> text=Lessons');
+  await page.focus('li[data-lesson="r01"] button[aria-label^="Mark complete"]'); await page.keyboard.press('Space'); await page.waitForSelector('main >> text=reviews due');
   await page.focus('a:has-text("Review now")'); await page.keyboard.press('Enter'); await page.waitForSelector('text=Card 1 of');
   await page.focus('button:has-text("Show answer")'); await page.keyboard.press('Enter');
   note('Show answer moves focus to the answer region', await page.evaluate(() => document.activeElement?.className?.includes('alef-answer')));

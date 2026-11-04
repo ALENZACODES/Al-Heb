@@ -6,6 +6,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { parseCsv } from '../record-kit/lib.mjs';
+import { speechText } from '../../src/shell/names.js';
 import { buildScripts } from '../pronunciation/recording_script.mjs';
 import {
   TRADITIONS, VOICES, KINDS, LETTERS, FINAL_LETTERS, VARIANT_LETTERS, GRID_MARKS, GRID_VOWELS, GRID_VOWEL_IPA_ISRAELI,
@@ -98,7 +99,10 @@ export function buildEntries({ root = ROOT, existsFn, ...opts } = {}) {
 
   // --- corpus + curriculum
   const seen = new Set(base.map((b) => `${b.kind}/${b.id}`));
-  const add = (kind, rawId, text, src, extra = {}) => {
+  const add = (kind, rawId, rawText, src, extra = {}) => {
+    // Anything spoken uses the conventional substitute for the bare four-letter name (docs/sensitivity/CONVENTIONS.md);
+    // prefixed forms are left as they are, awaiting clergy (docs/sensitivity/OPEN.md).
+    const text = typeof rawText === 'string' ? speechText(rawText) : rawText;
     const id = normalizeId(rawId);
     if (!id || !text || !HEB.test(text)) { warnings.push(`${src}: skipped ${JSON.stringify(rawId)} (no id or no Hebrew text)`); return; }
     if (seen.has(`${kind}/${id}`)) {

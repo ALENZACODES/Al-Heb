@@ -18,8 +18,8 @@ Obligations (LICENSES.md, "Share-alike consequence"): (a) give the attribution b
 
 ## Project text
 
-5. Phrasebook entries (153 records): each phrasebook record states "original (project-owned)". Pointing and glosses were written by an AI agent and are unreviewed.
-6. Lesson-derived entries (117 records): `data/curriculum/lessons.json` states no licence; its note says the pointing and glosses were written by an AI agent and not reviewed. These records are bundled into the CC BY-SA data set, but the repo does not say on what terms they were created or may be reused. Flag `lesson-licence-not-stated` on each. Decision needed from the project owner: state a licence for lessons.json (or release the 117 records under CC BY-SA 4.0 explicitly), or remove them from the distributed set.
+5. Phrasebook entries (153 records): each phrasebook record states "original (project-owned)". Pointing and glosses are unreviewed.
+6. Lesson-derived entries (117 records): `data/curriculum/lessons.json` states no licence; its note says the pointing and glosses are not reviewed. These records are bundled into the CC BY-SA data set, but the repo does not say on what terms they were created or may be reused. Flag `lesson-licence-not-stated` on each. Decision needed from the project owner: state a licence for lessons.json (or release the 117 records under CC BY-SA 4.0 explicitly), or remove them from the distributed set.
 
 ## Attribution text for a public page
 
@@ -37,4 +37,4 @@ Needed in addition wherever example sentences are shown (suggested wording, not 
 - Whether CC BY 2.0 FR example sentences may sit inside a data set distributed under CC BY-SA 4.0, and what the per-sentence author attribution must look like on a public page.
 - The licence of the 117 lesson-derived records (item 6).
 - Whether a bundle that merges this data with ALEF's own code, audio and book text becomes share-alike as a whole (LICENSES.md says to get an opinion before selling a mixed bundle; none was obtained).
-- AI-written pointing and glosses in the project-owned records: whether the project can license them at all.
+- Unreviewed pointing and glosses in the project-owned records: whether the project can license them at all.

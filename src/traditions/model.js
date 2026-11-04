@@ -23,7 +23,7 @@ export const COLUMN_FOR = { israeli: 'israeli', sephardi: 'american', ashkenazi:
 
 export const CONFIDENCE_LABELS = { high: 'High confidence', medium: 'Medium confidence', low: 'Low confidence' };
 
-export const DRAFT_NOTICE = 'Draft, unreviewed. This screen was written by an AI agent from a handful of public references (listed under "Sources"). No native speaker, cantor or linguist has checked it, and there is no recorded audio for it yet. Communities differ; treat it as a map, not a ruling.';
+export const DRAFT_NOTICE = 'Draft, unreviewed. This screen was drafted from a handful of public references (listed under "Sources"). No native speaker, cantor or linguist has checked it, and there is no recorded audio for it yet. Communities differ; treat it as a map, not a ruling.';
 
 const isLetter = (c) => c >= 'א' && c <= 'ת';
 const isMark = (c) => (c >= '\u0591' && c <= '\u05C7') && c !== '\u05BE' && c !== '\u05C0' && c !== '\u05C3';

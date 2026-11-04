@@ -1,12 +1,13 @@
 /** Shared bits for the round-4 exercise screens (ladder, fade-out, gender, scaffold). Plain DOM, no dependencies. */
 import { el, tr } from "./dom.js";
 import { describePlay } from "./audio-ui.js";
+import { fileLabel } from "../shell/audio-labels.js";
 
 /** Draft / unreviewed notice shown on every exercise screen. `extra` adds screen-specific honesty lines. */
 export function draftNotice(ctx, ...extra) {
   return el("div", { class: "alef-draft-notice card", role: "note" },
     el("p", {}, el("strong", {}, tr(ctx, "ex.draft", "Draft. ")),
-      "This exercise and its content were written by an AI agent. Nothing here has been reviewed by a native Hebrew speaker or tested with learners."),
+      "This exercise and its content are drafts. Nothing here has been reviewed by a native Hebrew speaker or tested with learners."),
     ...extra.filter(Boolean).map((t) => el("p", { class: "muted" }, t)));
 }
 
@@ -28,12 +29,12 @@ export function audioStatus(ctx, kind, id, voice) {
   try {
     if (typeof a.status === "function") {
       const s = a.status(kind, id, { voice });
-      if (s.source === "file") return { source: "file", label: s.entryStatus === "tts" ? "Pre-rendered synthetic voice file." : "Recorded file." };
+      if (s.source === "file") return { source: "file", label: fileLabel(s.entryStatus) + "." };
       if (s.source === "tts-fallback") return { source: "tts-fallback", label: "Only the browser's built-in voice (text-to-speech); it may not match the man/woman choice." };
       if (s.reason === "checking audio...") return { source: "none", checking: true, label: "Checking audio..." };
       return { source: "none", label: "No audio yet" + (s.reason ? ` (${s.reason})` : "") + "." };
     }
-    if (typeof a.has === "function") return a.has(kind, id, { voice }) ? { source: "file", label: "Recorded file." } : { source: "none", label: "No audio file yet for this item." };
+    if (typeof a.has === "function") return a.has(kind, id, { voice }) ? { source: "file", label: fileLabel(undefined) + "." } : { source: "none", label: "No audio file yet for this item." };
   } catch { /* fall through */ }
   return { source: "none", label: "No audio yet." };
 }

@@ -257,21 +257,30 @@
    "english": "Blessed is the name of the glory of his kingship for ever and ever.",
    "englishSource": "original-gloss",
    "englishLicense": "original (project-owned)",
-   "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Shema",
-   "sourceUrl": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Blessings_of_the_Shema%2C_Shema",
-   "license": "CC-BY",
-   "attribution": "Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.",
+   "source": "Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Eve Mincha, Mincha",
+   "sourceUrl": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Eve_Mincha%2C_Mincha",
+   "license": "Public Domain",
+   "attribution": "Hebrew text: Torat Emet 357 (toratemetfreeware.com), as digitised on Sefaria where it is labelled Public Domain. Label not independently verified; the toratemetfreeware.com home page carries an all-rights-reserved footer (read 2026-11-04). English: original literal gloss.",
    "status": "verified",
-   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-03 from https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Blessings%20of%20the%20Shema%2C%20Shema?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
+   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Shabbat%20Eve%20Mincha%2C%20Mincha?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
    "proofread": false,
-   "retrieved": "2026-11-03",
+   "retrieved": "2026-11-04",
    "typedFromMemory": false,
    "traditionNeutral": true,
    "snapshotId": "shema-2",
-   "nusach": "Ashkenaz (Metsudah)",
+   "nusach": "Sefard (Torat Emet 357); consonants identical to the Ashkenaz (Metsudah) text this record carried before 2026-11-04",
    "aliases": [
     "shema-baruch-shem"
-   ]
+   ],
+   "transforms": {},
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "wordsChanged": 0,
+    "punctuationChanged": 0,
+    "previousStatus": "verified"
+   }
   },
   {
    "id": "bless-formula-1",
@@ -529,18 +538,29 @@
    "english": "Bless the LORD, the blessed one.\nBlessed is the LORD, the blessed one, for ever and ever.",
    "englishSource": "original-gloss",
    "englishLicense": "original (project-owned)",
-   "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Birkat HaTorah",
-   "sourceUrl": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Birkat_HaTorah",
-   "license": "CC-BY",
-   "attribution": "Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.",
+   "source": "Shaliehsaboo Edition via Sefaria: Siddur Edot HaMizrach, Weekday Shacharit, Torah Reading",
+   "sourceUrl": "https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Weekday_Shacharit%2C_Torah_Reading",
+   "license": "CC0",
+   "attribution": "Hebrew text: Siddur Edot HaMizrach, \"Shaliehsaboo Edition\", from Sefaria where it is labelled CC0 (no attribution required; credit given as a courtesy). Label not independently verified. English: original literal gloss.",
    "status": "verified",
-   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-03 from https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Torah%20Reading%2C%20Reading%20from%20Sefer%2C%20Birkat%20HaTorah?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
+   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Edot%20HaMizrach%2C%20Weekday%20Shacharit%2C%20Torah%20Reading?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
    "proofread": false,
-   "retrieved": "2026-11-03",
+   "retrieved": "2026-11-04",
    "typedFromMemory": false,
    "traditionNeutral": true,
    "snapshotId": "torah-barchu",
-   "nusach": "Ashkenaz (Metsudah)"
+   "nusach": "Edot HaMizrach (Shaliehsaboo edition); consonants identical to the Ashkenaz (Metsudah) text this record carried before 2026-11-04",
+   "transforms": {
+    "dropSmall": true
+   },
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "wordsChanged": 0,
+    "punctuationChanged": 0,
+    "previousStatus": "verified"
+   }
   },
   {
    "id": "torah-bless-2",
@@ -554,21 +574,30 @@
    "english": "Blessed are you, LORD our God, king of the world, who gave us a Torah of truth and planted eternal life in our midst. Blessed are you, LORD, giver of the Torah.",
    "englishSource": "original-gloss",
    "englishLicense": "original (project-owned)",
-   "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Birkat HaTorah",
-   "sourceUrl": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Birkat_HaTorah",
-   "license": "CC-BY",
-   "attribution": "Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.",
+   "source": "Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Morning Services, Blessings on Torah Reading",
+   "sourceUrl": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Morning_Services%2C_Blessings_on_Torah_Reading",
+   "license": "Public Domain",
+   "attribution": "Hebrew text: Torat Emet 357 (toratemetfreeware.com), as digitised on Sefaria where it is labelled Public Domain. Label not independently verified; the toratemetfreeware.com home page carries an all-rights-reserved footer (read 2026-11-04). English: original literal gloss.",
    "status": "verified",
-   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-03 from https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Torah%20Reading%2C%20Reading%20from%20Sefer%2C%20Birkat%20HaTorah?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
+   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Shabbat%20Morning%20Services%2C%20Blessings%20on%20Torah%20Reading?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
    "proofread": false,
-   "retrieved": "2026-11-03",
+   "retrieved": "2026-11-04",
    "typedFromMemory": false,
    "traditionNeutral": true,
    "snapshotId": "torah-bless-2",
-   "nusach": "Ashkenaz (Metsudah)",
+   "nusach": "Sefard (Torat Emet 357); consonants identical to the Ashkenaz (Metsudah) text this record carried before 2026-11-04",
    "aliases": [
     "torah-blessing-after"
-   ]
+   ],
+   "transforms": {},
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "wordsChanged": 0,
+    "punctuationChanged": 0,
+    "previousStatus": "verified"
+   }
   },
   {
    "id": "amidah-lips",
@@ -690,26 +719,35 @@
    "category": "siddur",
    "level": "inter-3",
    "language": "hebrew",
-   "he": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃\nלְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃\nוְאַחֲרֵי כִּכְלוֹת הַכֹּל לְבַדּוֹ יִמְלֹךְ נוֹרָא׃\nוְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃\nוְהוּא אֶחָד וְאֵין שֵׁנִי לְהַמְשִׁיל לוֹ לְהַחְבִּירָה׃\nבְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה׃\nוְהוּא אֵלִי וְחַי גּוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃\nוְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃\nבְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישַׁן וְאָעִירָה׃\nוְעִם רוּחִי גְּוִיָּתִי יְהוָה לִי וְלֹא אִירָא׃",
+   "he": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃\nלְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃\nוְאַחֲרֵי כִּכְלוֹת הַכֹּל לְבַדּוֹ יִמְלֹךְ נוֹרָא׃\nוְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃\nוְהוּא אֶחָד וְאֵין שֵׁנִי לְהַמְשִׁיל לוֹ לְהַחְבִּירָה׃\nבְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה׃\nוְהוּא אֵלִי וְחַי גוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃\nוְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃\nבְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישָׁן וְאָעִירָה׃\nוְעִם רוּחִי גְּוִיָּתִי יְהוָה לִי וְלֹא אִירָא׃",
    "lines": 10,
    "english": "Lord of the world, who reigned before any form was created.\nAt the time when all was made by his will, then \"King\" was his name proclaimed.\nAnd after all things have ended, he alone, the awesome one, will reign.\nAnd he was, and he is, and he will be, in glory.\nAnd he is one, and there is no second, to compare to him or to join with him.\nWithout beginning, without end; to him belong the power and the dominion.\nAnd he is my God, and my living redeemer, and the rock of my portion in time of distress.\nAnd he is my banner and my refuge, the portion of my cup on the day I call.\nInto his hand I commit my spirit, when I sleep and when I wake.\nAnd with my spirit, my body too: the LORD is with me and I will not fear.",
    "englishSource": "original-gloss",
    "englishLicense": "original (project-owned)",
-   "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Preparatory Prayers, Adon Olam",
-   "sourceUrl": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Adon_Olam",
-   "license": "CC-BY",
-   "attribution": "Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.",
+   "source": "Torat Emet 357 via Sefaria: Siddur Sefard, Musaf",
+   "sourceUrl": "https://www.sefaria.org/Siddur_Sefard%2C_Musaf",
+   "license": "Public Domain",
+   "attribution": "Hebrew text: Torat Emet 357 (toratemetfreeware.com), as digitised on Sefaria where it is labelled Public Domain. Label not independently verified; the toratemetfreeware.com home page carries an all-rights-reserved footer (read 2026-11-04). English: original literal gloss.",
    "status": "verified",
-   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-03 from https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Preparatory%20Prayers%2C%20Adon%20Olam?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
+   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Musaf?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
    "proofread": false,
-   "retrieved": "2026-11-03",
+   "retrieved": "2026-11-04",
    "typedFromMemory": false,
    "traditionNeutral": true,
    "snapshotId": "adon-olam-1",
-   "nusach": "Ashkenaz (Metsudah)",
+   "nusach": "Sefard (Torat Emet 357); consonants identical to the Ashkenaz (Metsudah) text this record carried before 2026-11-04",
    "aliases": [
     "adon-olam"
-   ]
+   ],
+   "transforms": {},
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "wordsChanged": 2,
+    "punctuationChanged": 0,
+    "previousStatus": "verified"
+   }
   },
   {
    "id": "kaddish-1",
@@ -1239,30 +1277,35 @@
    "category": "siddur",
    "level": "inter-1",
    "language": "hebrew",
-   "he": "לְךָ יְהוָה הַגְּדֻלָּה וְהַגְּבוּרָה וְהַתִּפְאֶרֶת וְהַנֵּצַח וְהַהוֹד כִּי כֹל בַּשָּׁמַיִם וּבָאָרֶץ לְךָ יְהוָה הַמַּמְלָכָה וְהַמִּתְנַשֵּׂא לְכֹל לְרֹאשׁ׃ רוֹמְמוּ יְהוָה אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לַהֲדֹם רַגְלָיו קָדוֹשׁ הוּא׃ רוֹמְמוּ יְהוָה אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לְהַר קָדְשׁוֹ כִּי קָדוֹשׁ יְהוָה אֱלֹהֵינוּ׃",
+   "he": "לְךָ יְהוָה הַגְּדֻלָּה וְהַגְּבוּרָה וְהַתִּפְאֶרֶת וְהַנֵּצַח וְהַהוֹד כִּי כֹל בַּשָּׁמַיִם וּבָאָרֶץ׃ לְךָ יְהוָה הַמַּמְלָכָה וְהַמִּתְנַשֵּׂא לְכֹל לְרֹאשׁ׃ רוֹמְמוּ יְהוָה אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לַהֲדֹם רַגְלָיו קָדוֹשׁ הוּא׃ רוֹמְמוּ יְהוָה אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לְהַר קָדְשׁוֹ כִּי קָדוֹשׁ יְהוָה אֱלֹהֵינוּ׃",
    "lines": 1,
    "english": "Yours, LORD, are the greatness and the might and the splendour and the victory and the majesty, for everything in heaven and on earth is yours. Yours, LORD, is the kingdom, and you are exalted as head over all. Exalt the LORD our God and bow at his footstool: he is holy. Exalt the LORD our God and bow at his holy mountain, for the LORD our God is holy.",
    "englishSource": "original-gloss",
    "englishLicense": "original (project-owned)",
-   "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Removing the Torah from Ark, Lekha Hashem",
-   "sourceUrl": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Removing_the_Torah_from_Ark%2C_Lekha_Hashem",
-   "license": "CC-BY",
-   "attribution": "Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.",
+   "source": "Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Morning Services, Shabbat Torah Reading",
+   "sourceUrl": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Morning_Services%2C_Shabbat_Torah_Reading",
+   "license": "Public Domain",
+   "attribution": "Hebrew text: Torat Emet 357 (toratemetfreeware.com), as digitised on Sefaria where it is labelled Public Domain. Label not independently verified; the toratemetfreeware.com home page carries an all-rights-reserved footer (read 2026-11-04). English: original literal gloss.",
    "status": "verified",
-   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Torah%20Reading%2C%20Removing%20the%20Torah%20from%20Ark%2C%20Lekha%20Hashem?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
+   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Shabbat%20Morning%20Services%2C%20Shabbat%20Torah%20Reading?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
    "proofread": false,
    "retrieved": "2026-11-04",
    "typedFromMemory": false,
    "traditionNeutral": true,
    "snapshotId": "lecha-hashem",
    "transforms": {
-    "dropTokens": [
-     "והקהל",
-     "עונימ"
-    ]
+    "dropSmall": true
    },
-   "nusach": "Ashkenaz (Metsudah)",
-   "notes": "The source line begins with a rubric (\"the congregation answers\") which is removed here."
+   "nusach": "Sefard (Torat Emet 357); consonants identical to the Ashkenaz (Metsudah) text this record carried before 2026-11-04",
+   "notes": "The source line begins with a rubric (\"the congregation answers\") which is removed here.",
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "wordsChanged": 0,
+    "punctuationChanged": 1,
+    "previousStatus": "verified"
+   }
   },
   {
    "id": "vezot-hatorah",
@@ -1271,32 +1314,33 @@
    "category": "siddur",
    "level": "intro-3",
    "language": "hebrew",
-   "he": "וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל עַל פִּי יְהוָה בְּיַד מֹשֶׁה׃",
+   "he": "וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל׃ עַל פִּי יְהוָה בְּיַד מֹשֶׁה׃",
    "lines": 1,
    "english": "This is the Torah that Moses set before the children of Israel, by the word of the LORD, by the hand of Moses.",
    "englishSource": "original-gloss",
    "englishLicense": "original (project-owned)",
-   "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Raising the Torah",
-   "sourceUrl": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Raising_the_Torah",
-   "license": "CC-BY",
-   "attribution": "Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.",
-   "status": "transcribed-needs-check",
-   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Torah%20Reading%2C%20Reading%20from%20Sefer%2C%20Raising%20the%20Torah?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread). EXCEPT these exact corrections, made because the source visibly omits a vowel: משֶׁה -> מֹשֶׁה. Status is therefore transcribed-needs-check.",
+   "source": "Torat Emet 357 via Sefaria: Siddur Sefard, Rosh Chodesh, Torah Reading",
+   "sourceUrl": "https://www.sefaria.org/Siddur_Sefard%2C_Rosh_Chodesh%2C_Torah_Reading",
+   "license": "Public Domain",
+   "attribution": "Hebrew text: Torat Emet 357 (toratemetfreeware.com), as digitised on Sefaria where it is labelled Public Domain. Label not independently verified; the toratemetfreeware.com home page carries an all-rights-reserved footer (read 2026-11-04). English: original literal gloss.",
+   "status": "verified",
+   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Rosh%20Chodesh%2C%20Torah%20Reading?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
    "proofread": false,
    "retrieved": "2026-11-04",
    "typedFromMemory": false,
    "traditionNeutral": true,
    "snapshotId": "vezot-hatorah",
-   "transforms": {
-    "corrections": [
-     [
-      "משֶׁה",
-      "מֹשֶׁה"
-     ]
-    ]
-   },
-   "nusach": "Ashkenaz (Metsudah)",
-   "notes": "Sephardi/Mizrahi books add further verses. Confirm local custom."
+   "transforms": {},
+   "nusach": "Sefard (Torat Emet 357); consonants identical to the Ashkenaz (Metsudah) text this record carried before 2026-11-04",
+   "notes": "Sephardi/Mizrahi books add further verses. Confirm local custom.",
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "wordsChanged": 0,
+    "punctuationChanged": 1,
+    "previousStatus": "transcribed-needs-check"
+   }
   },
   {
    "id": "etz-chaim",
@@ -1305,32 +1349,38 @@
    "category": "siddur",
    "level": "intro-3",
    "language": "hebrew",
-   "he": "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְכֶיהָ מְאֻשָּׁר׃ דְּרָכֶיהָ דַּרְכֵי נֹעַם וְכָל נְתִיבוֹתֶיהָ שָׁלוֹם׃ אֹרֶךְ יָמִים בִּימִינָהּ בִּשְׂמֹאלָהּ עֹשֶׁר וְכָבוֹד׃ יְהוָה חָפֵץ לְמַעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר׃",
+   "he": "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְכֶיהָ מְאֻשָּׁר׃ דְּרָכֶיהָ דַרְכֵי נֹעַם וְכָל נְתִיבוֹתֶיהָ שָׁלוֹם׃ אֹרֶךְ יָמִים בִּימִינָהּ בִּשְׂמֹאלָהּ עֹשֶׁר וְכָבוֹד׃ יְהוָה חָפֵץ לְמַעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר׃",
    "lines": 1,
    "english": "It is a tree of life to those who hold fast to it, and those who support it are happy. Its ways are ways of pleasantness and all its paths are peace. Length of days is in its right hand, in its left hand riches and honour. The LORD desired, for the sake of his righteousness, to make the Torah great and glorious.",
    "englishSource": "original-gloss",
    "englishLicense": "original (project-owned)",
-   "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Raising the Torah",
-   "sourceUrl": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Raising_the_Torah",
-   "license": "CC-BY",
-   "attribution": "Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.",
-   "status": "transcribed-needs-check",
-   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Torah%20Reading%2C%20Reading%20from%20Sefer%2C%20Raising%20the%20Torah?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread). EXCEPT these exact corrections, made because the source visibly omits a vowel: עשֶׁר -> עֹשֶׁר. Status is therefore transcribed-needs-check.",
+   "source": "Torat Emet 357 via Sefaria: Siddur Sefard, Rosh Chodesh, Torah Reading",
+   "sourceUrl": "https://www.sefaria.org/Siddur_Sefard%2C_Rosh_Chodesh%2C_Torah_Reading",
+   "license": "Public Domain",
+   "attribution": "Hebrew text: Torat Emet 357 (toratemetfreeware.com), as digitised on Sefaria where it is labelled Public Domain. Label not independently verified; the toratemetfreeware.com home page carries an all-rights-reserved footer (read 2026-11-04). English: original literal gloss.",
+   "status": "verified",
+   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Rosh%20Chodesh%2C%20Torah%20Reading?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
    "proofread": false,
    "retrieved": "2026-11-04",
    "typedFromMemory": false,
    "traditionNeutral": true,
    "snapshotId": "etz-chaim",
    "transforms": {
-    "corrections": [
-     [
-      "עשֶׁר",
-      "עֹשֶׁר"
-     ]
-    ]
+    "clip": {
+     "startAt": "עץ",
+     "endAfter": "ויאדיר"
+    }
    },
-   "nusach": "Ashkenaz (Metsudah)",
-   "notes": "The Hebrew here is the Metsudah text. Many congregations sing only the first one or two verses, then Hashivenu."
+   "nusach": "Sefard (Torat Emet 357); consonants identical to the Ashkenaz (Metsudah) text this record carried before 2026-11-04",
+   "notes": "The Hebrew here is the Metsudah text. Many congregations sing only the first one or two verses, then Hashivenu.",
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "wordsChanged": 1,
+    "punctuationChanged": 0,
+    "previousStatus": "transcribed-needs-check"
+   }
   },
   {
    "id": "brich-shmei",
@@ -1398,25 +1448,33 @@
    "category": "siddur",
    "level": "inter-2",
    "language": "hebrew",
-   "he": "מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן׃ בָּרוּךְ אַתָּה יְהוָה מָגֵן אַבְרָהָם׃",
+   "he": "מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן בָּרוּךְ אַתָּה יְהוָה מָגֵן אַבְרָהָם׃",
    "lines": 1,
    "english": "King, helper, saviour and shield. Blessed are you, LORD, shield of Abraham.",
    "englishSource": "original-gloss",
    "englishLicense": "original (project-owned)",
-   "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Amidah, Patriarchs",
-   "sourceUrl": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Patriarchs",
-   "license": "CC-BY",
-   "attribution": "Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.",
+   "source": "Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Morning Services, Amidah",
+   "sourceUrl": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Morning_Services%2C_Amidah",
+   "license": "Public Domain",
+   "attribution": "Hebrew text: Torat Emet 357 (toratemetfreeware.com), as digitised on Sefaria where it is labelled Public Domain. Label not independently verified; the toratemetfreeware.com home page carries an all-rights-reserved footer (read 2026-11-04). English: original literal gloss.",
    "status": "verified",
-   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Amidah%2C%20Patriarchs?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
+   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Shabbat%20Morning%20Services%2C%20Amidah?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
    "proofread": false,
    "retrieved": "2026-11-04",
    "typedFromMemory": false,
    "traditionNeutral": true,
    "snapshotId": "avot-closing",
    "transforms": {},
-   "nusach": "Ashkenaz (Metsudah)",
-   "notes": "Completes avot-1, which stops before this clause. Metsudah's Ten-Days-of-Repentance insertion is not included."
+   "nusach": "Sefard (Torat Emet 357); consonants identical to the Ashkenaz (Metsudah) text this record carried before 2026-11-04",
+   "notes": "Completes avot-1, which stops before this clause. Metsudah's Ten-Days-of-Repentance insertion is not included.",
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "wordsChanged": 0,
+    "punctuationChanged": 1,
+    "previousStatus": "verified"
+   }
   },
   {
    "id": "amidah-yihyu",
@@ -1430,19 +1488,27 @@
    "english": "May the words of my mouth and the thoughts of my heart be acceptable before you, LORD, my rock and my redeemer.",
    "englishSource": "original-gloss",
    "englishLicense": "original (project-owned)",
-   "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Amidah, Concluding Passage",
-   "sourceUrl": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Concluding_Passage",
-   "license": "CC-BY",
-   "attribution": "Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.",
+   "source": "Torat Emet 357 via Sefaria: Siddur Sefard, Various Prayers & Segulot, Prayer of the Shelah",
+   "sourceUrl": "https://www.sefaria.org/Siddur_Sefard%2C_Various_Prayers_%26_Segulot%2C_Prayer_of_the_Shelah",
+   "license": "Public Domain",
+   "attribution": "Hebrew text: Torat Emet 357 (toratemetfreeware.com), as digitised on Sefaria where it is labelled Public Domain. Label not independently verified; the toratemetfreeware.com home page carries an all-rights-reserved footer (read 2026-11-04). English: original literal gloss.",
    "status": "verified",
-   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Amidah%2C%20Concluding%20Passage?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
+   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Various%20Prayers%20%26%20Segulot%2C%20Prayer%20of%20the%20Shelah?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
    "proofread": false,
    "retrieved": "2026-11-04",
    "typedFromMemory": false,
    "traditionNeutral": true,
    "snapshotId": "amidah-yihyu",
    "transforms": {},
-   "nusach": "Ashkenaz (Metsudah)"
+   "nusach": "Sefard (Torat Emet 357); consonants identical to the Ashkenaz (Metsudah) text this record carried before 2026-11-04",
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "wordsChanged": 0,
+    "punctuationChanged": 0,
+    "previousStatus": "verified"
+   }
   },
   {
    "id": "amidah-elohai-netzor",
@@ -1477,17 +1543,17 @@
    "category": "siddur",
    "level": "intro-3",
    "language": "hebrew",
-   "he": "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
+   "he": "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
    "lines": 1,
    "english": "He who makes peace in his high places, may he make peace for us and for all Israel; and say: Amen.",
    "englishSource": "original-gloss",
    "englishLicense": "original (project-owned)",
-   "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Amidah, Concluding Passage",
-   "sourceUrl": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Concluding_Passage",
-   "license": "CC-BY",
-   "attribution": "Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.",
+   "source": "Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Eve Mincha, Amidah",
+   "sourceUrl": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Eve_Mincha%2C_Amidah",
+   "license": "Public Domain",
+   "attribution": "Hebrew text: Torat Emet 357 (toratemetfreeware.com), as digitised on Sefaria where it is labelled Public Domain. Label not independently verified; the toratemetfreeware.com home page carries an all-rights-reserved footer (read 2026-11-04). English: original literal gloss.",
    "status": "verified",
-   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Amidah%2C%20Concluding%20Passage?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
+   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Shabbat%20Eve%20Mincha%2C%20Amidah?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
    "proofread": false,
    "retrieved": "2026-11-04",
    "typedFromMemory": false,
@@ -1496,8 +1562,16 @@
    "transforms": {
     "dropParen": true
    },
-   "nusach": "Ashkenaz (Metsudah)",
-   "notes": "The source has a parenthetical Ten-Days-of-Repentance variant (\"hashalom\") which is removed. Reform and some Conservative books end with a variant wording in English; the Hebrew is the same."
+   "nusach": "Sefard (Torat Emet 357); consonants identical to the Ashkenaz (Metsudah) text this record carried before 2026-11-04",
+   "notes": "The source has a parenthetical Ten-Days-of-Repentance variant (\"hashalom\") which is removed. Reform and some Conservative books end with a variant wording in English; the Hebrew is the same.",
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "wordsChanged": 0,
+    "punctuationChanged": 1,
+    "previousStatus": "verified"
+   }
   },
   {
    "id": "sim-shalom",
@@ -1533,25 +1607,33 @@
    "category": "siddur",
    "level": "inter-1",
    "language": "hebrew",
-   "he": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְרָצָה בָנוּ וְשַׁבַּת קָדְשׁוֹ בְּאַהֲבָה וּבְרָצוֹן הִנְחִילָנוּ זִכָּרוֹן לְמַעֲשֵׂה בְרֵאשִׁית כִּי הוּא יוֹם תְּחִלָּה לְמִקְרָאֵי קֹדֶשׁ זֵכֶר לִיצִיאַת מִצְרָיִם כִּי בָנוּ בָחַרְתָּ וְאוֹתָנוּ קִדַּשְׁתָּ מִכָּל הָעַמִּים וְשַׁבַּת קָדְשְׁךָ בְּאַהֲבָה וּבְרָצוֹן הִנְחַלְתָּנוּ בָּרוּךְ אַתָּה יְהוָה מְקַדֵּשׁ הַשַּׁבָּת׃",
+   "he": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְרָצָה בָנוּ וְשַׁבַּת קָדְשׁוֹ בְּאַהֲבָה וּבְרָצוֹן הִנְחִילָנוּ זִכָּרוֹן לְמַעֲשֵׂה בְרֵאשִׁית כִּי הוּא יוֹם תְּחִלָּה לְמִקְרָאֵי קֹדֶשׁ זֵכֶר לִיצִיאַת מִצְרָיִם כִּי בָנוּ בָחַרְתָּ וְאוֹתָנוּ קִדַּשְׁתָּ מִכָּל הָעַמִּים וְשַׁבַּת קָדְשְׁךָ בְּאַהֲבָה וּבְרָצוֹן הִנְחַלְתָּנוּ׃ בָּרוּךְ אַתָּה יְהוָה מְקַדֵּשׁ הַשַּׁבָּת׃",
    "lines": 1,
    "english": "Blessed are you, LORD our God, king of the world, who made us holy with his commandments and was pleased with us, and in love and favour gave us his holy Shabbat as an inheritance, a remembrance of the work of creation. For it is the first of the holy convocations, a remembrance of the exodus from Egypt. For you chose us and made us holy from all the peoples, and in love and favour you gave us your holy Shabbat as an inheritance. Blessed are you, LORD, who makes the Shabbat holy.",
    "englishSource": "original-gloss",
    "englishLicense": "original (project-owned)",
-   "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Shabbat, Shabbat Evening, Kiddush",
-   "sourceUrl": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Shabbat%2C_Shabbat_Evening%2C_Kiddush",
-   "license": "CC-BY",
-   "attribution": "Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.",
+   "source": "Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Evening Meal, Shabbat Eve Kiddush",
+   "sourceUrl": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Evening_Meal%2C_Shabbat_Eve_Kiddush",
+   "license": "Public Domain",
+   "attribution": "Hebrew text: Torat Emet 357 (toratemetfreeware.com), as digitised on Sefaria where it is labelled Public Domain. Label not independently verified; the toratemetfreeware.com home page carries an all-rights-reserved footer (read 2026-11-04). English: original literal gloss.",
    "status": "verified",
-   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Shabbat%2C%20Shabbat%20Evening%2C%20Kiddush?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
+   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Shabbat%20Evening%20Meal%2C%20Shabbat%20Eve%20Kiddush?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
    "proofread": false,
    "retrieved": "2026-11-04",
    "typedFromMemory": false,
    "traditionNeutral": true,
    "snapshotId": "kiddush-shabbat-eve",
    "transforms": {},
-   "nusach": "Ashkenaz (Metsudah)",
-   "notes": "Metsudah prints two phrases in parentheses (\"ki hu yom\" and \"ki vanu vacharta ... mikol ha-amim\"); the words are kept and the parentheses are not shown. Whether the parenthesised words are said is a matter of printing convention that an educator should confirm. Pair with kiddush-gen-2-1-3 (the Genesis verses) and kiddush-wine-1 (wine)."
+   "nusach": "Sefard (Torat Emet 357); consonants identical to the Ashkenaz (Metsudah) text this record carried before 2026-11-04",
+   "notes": "Metsudah prints two phrases in parentheses (\"ki hu yom\" and \"ki vanu vacharta ... mikol ha-amim\"); the words are kept and the parentheses are not shown. Whether the parenthesised words are said is a matter of printing convention that an educator should confirm. Pair with kiddush-gen-2-1-3 (the Genesis verses) and kiddush-wine-1 (wine).",
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "wordsChanged": 0,
+    "punctuationChanged": 1,
+    "previousStatus": "verified"
+   }
   },
   {
    "id": "lecha-dodi-1",

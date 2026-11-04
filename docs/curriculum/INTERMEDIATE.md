@@ -30,7 +30,7 @@ Masoretic dagesh.
 Same fields as a `lessons.json` lesson (`id, track, level, title, letters, vowels, words, prayerLines, goals,
 estMinutes, prerequisites`; `letters` and `vowels` are empty; `words[].translit` is `null` as in `lessons.json`) plus:
 
-- `unit`: `synagogue` (I-01..I-10, `track: "read"`, `level: "black"`, the belt after grey in `belts.json`) or
+- `unit`: `synagogue` (I-01..I-10, `track: "read"`, `level: "intermediate"`; the belt name `black` is a fluency target with no lessons and must not label a lesson) or
   `israel` (I-11..I-25, `track: "israel"`, `level: "B1"`, the cap the existing test enforces).
 - `status`, `proofread`, `needsNativeReview`, `note`.
 - `pronunciation`: `{traditions, scheme: "siddur", generatedBy: "src/pronunciation/transliterate.js"}`; each word has

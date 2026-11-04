@@ -34,7 +34,7 @@
     "file": "lessons-intermediate/I-01.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "Shema and its blessings: Barchu, Shema, Baruch shem, V'ahavta",
     "prerequisites": [
      "r51"
@@ -54,7 +54,7 @@
     "file": "lessons-intermediate/I-02.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "Amidah openings: open my lips, Avot, Kedushah responses",
     "prerequisites": [
      "I-01"
@@ -77,7 +77,7 @@
     "file": "lessons-intermediate/I-03.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "Torah service responses: ark, aliyah blessings, returning the scroll",
     "prerequisites": [
      "I-01"
@@ -103,7 +103,7 @@
     "file": "lessons-intermediate/I-04.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "Kaddish responses: Amen, Yehei shmei raba, Brich hu",
     "prerequisites": [
      "I-01"
@@ -121,7 +121,7 @@
     "file": "lessons-intermediate/I-05.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "Kiddush: candles, wine, bread and the Shabbat verses",
     "prerequisites": [
      "I-01"
@@ -144,7 +144,7 @@
     "file": "lessons-intermediate/I-06.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "Havdalah: wine, spices, flame and the separation blessing",
     "prerequisites": [
      "I-05"
@@ -165,7 +165,7 @@
     "file": "lessons-intermediate/I-07.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "Hallel refrains: the lines the congregation sings back",
     "prerequisites": [
      "I-01"
@@ -184,7 +184,7 @@
     "file": "lessons-intermediate/I-08.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "Aleinu: the closing prayer and where to bow",
     "prerequisites": [
      "I-02"
@@ -201,7 +201,7 @@
     "file": "lessons-intermediate/I-09.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "Adon Olam: the closing hymn line by line",
     "prerequisites": [
      "I-02"
@@ -219,7 +219,7 @@
     "file": "lessons-intermediate/I-10.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "Mi Shebeirach, healing and thanksgiving: the blessings said for people",
     "prerequisites": [
      "I-03"
@@ -242,7 +242,7 @@
     "file": "lessons-intermediate/I-26.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "The full Torah service in order: ark, reading, lifting, returning",
     "prerequisites": [
      "I-03"
@@ -270,7 +270,7 @@
     "file": "lessons-intermediate/I-27.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "Shabbat-morning Amidah responses: Kedushah, Sim Shalom, closing verses",
     "prerequisites": [
      "I-02"
@@ -294,7 +294,7 @@
     "file": "lessons-intermediate/I-28.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "Yom Kippur: the few lines the corpus holds and the words around them",
     "prerequisites": [
      "I-01"
@@ -316,7 +316,7 @@
     "file": "lessons-intermediate/I-29.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "Pesach: the seder blessings the corpus holds",
     "prerequisites": [
      "I-05"
@@ -337,7 +337,7 @@
     "file": "lessons-intermediate/I-30.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "Sukkot: sukkah words and the blessings that carry over",
     "prerequisites": [
      "I-29"
@@ -358,7 +358,7 @@
     "file": "lessons-intermediate/I-31.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "Purim: the miracle blessing and the words of the day",
     "prerequisites": [
      "I-29"
@@ -377,7 +377,7 @@
     "file": "lessons-intermediate/I-32.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "Hanukkah: the three blessings, Hanerot Halalu and Maoz Tzur",
     "prerequisites": [
      "I-05"
@@ -398,7 +398,7 @@
     "file": "lessons-intermediate/I-33.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "Birkat Hamazon openings: Zimun, the first blessing and Shir Hamaalot",
     "prerequisites": [
      "I-05"
@@ -418,7 +418,7 @@
     "file": "lessons-intermediate/I-34.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "Before and after a journey: Hagomel, peace and the vocabulary of the road",
     "prerequisites": [
      "I-10"
@@ -438,7 +438,7 @@
     "file": "lessons-intermediate/I-35.json",
     "unit": "synagogue",
     "track": "read",
-    "level": "black",
+    "level": "intermediate",
     "title": "Shabbat-day Kiddush: V'shamru, Zachor, wine and bread",
     "prerequisites": [
      "I-05"
@@ -913,7 +913,7 @@
    "file": "lessons-intermediate/I-01.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "Shema and its blessings: Barchu, Shema, Baruch shem, V'ahavta",
    "prerequisites": [
     "r51"
@@ -933,7 +933,7 @@
    "file": "lessons-intermediate/I-02.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "Amidah openings: open my lips, Avot, Kedushah responses",
    "prerequisites": [
     "I-01"
@@ -956,7 +956,7 @@
    "file": "lessons-intermediate/I-03.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "Torah service responses: ark, aliyah blessings, returning the scroll",
    "prerequisites": [
     "I-01"
@@ -982,7 +982,7 @@
    "file": "lessons-intermediate/I-04.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "Kaddish responses: Amen, Yehei shmei raba, Brich hu",
    "prerequisites": [
     "I-01"
@@ -1000,7 +1000,7 @@
    "file": "lessons-intermediate/I-05.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "Kiddush: candles, wine, bread and the Shabbat verses",
    "prerequisites": [
     "I-01"
@@ -1023,7 +1023,7 @@
    "file": "lessons-intermediate/I-06.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "Havdalah: wine, spices, flame and the separation blessing",
    "prerequisites": [
     "I-05"
@@ -1044,7 +1044,7 @@
    "file": "lessons-intermediate/I-07.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "Hallel refrains: the lines the congregation sings back",
    "prerequisites": [
     "I-01"
@@ -1063,7 +1063,7 @@
    "file": "lessons-intermediate/I-08.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "Aleinu: the closing prayer and where to bow",
    "prerequisites": [
     "I-02"
@@ -1080,7 +1080,7 @@
    "file": "lessons-intermediate/I-09.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "Adon Olam: the closing hymn line by line",
    "prerequisites": [
     "I-02"
@@ -1098,7 +1098,7 @@
    "file": "lessons-intermediate/I-10.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "Mi Shebeirach, healing and thanksgiving: the blessings said for people",
    "prerequisites": [
     "I-03"
@@ -1346,7 +1346,7 @@
    "file": "lessons-intermediate/I-26.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "The full Torah service in order: ark, reading, lifting, returning",
    "prerequisites": [
     "I-03"
@@ -1374,7 +1374,7 @@
    "file": "lessons-intermediate/I-27.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "Shabbat-morning Amidah responses: Kedushah, Sim Shalom, closing verses",
    "prerequisites": [
     "I-02"
@@ -1398,7 +1398,7 @@
    "file": "lessons-intermediate/I-28.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "Yom Kippur: the few lines the corpus holds and the words around them",
    "prerequisites": [
     "I-01"
@@ -1420,7 +1420,7 @@
    "file": "lessons-intermediate/I-29.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "Pesach: the seder blessings the corpus holds",
    "prerequisites": [
     "I-05"
@@ -1441,7 +1441,7 @@
    "file": "lessons-intermediate/I-30.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "Sukkot: sukkah words and the blessings that carry over",
    "prerequisites": [
     "I-29"
@@ -1462,7 +1462,7 @@
    "file": "lessons-intermediate/I-31.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "Purim: the miracle blessing and the words of the day",
    "prerequisites": [
     "I-29"
@@ -1481,7 +1481,7 @@
    "file": "lessons-intermediate/I-32.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "Hanukkah: the three blessings, Hanerot Halalu and Maoz Tzur",
    "prerequisites": [
     "I-05"
@@ -1502,7 +1502,7 @@
    "file": "lessons-intermediate/I-33.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "Birkat Hamazon openings: Zimun, the first blessing and Shir Hamaalot",
    "prerequisites": [
     "I-05"
@@ -1522,7 +1522,7 @@
    "file": "lessons-intermediate/I-34.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "Before and after a journey: Hagomel, peace and the vocabulary of the road",
    "prerequisites": [
     "I-10"
@@ -1542,7 +1542,7 @@
    "file": "lessons-intermediate/I-35.json",
    "unit": "synagogue",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "title": "Shabbat-day Kiddush: V'shamru, Zachor, wine and bread",
    "prerequisites": [
     "I-05"

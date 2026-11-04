@@ -23,7 +23,7 @@
    "translit": "kerav",
    "en": "battle, war",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h386e6ad7",
    "source": "data/vocab/words.json"
   },
   {
@@ -32,16 +32,16 @@
    "translit": "matzav",
    "en": "a shape, a situation, a state",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h524e52f1",
    "source": "data/vocab/words.json"
   },
   {
    "id": "h35fcbc75",
    "he": "נִצֵּחַ",
-   "translit": "nitzecha",
+   "translit": "nitzeach",
    "en": "to win (in a game, an election, or the like)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h35fcbc75",
    "source": "data/vocab/words.json"
   },
   {
@@ -50,7 +50,7 @@
    "translit": "shoter",
    "en": "policeman, cop",
    "kind": "word",
-   "audioId": null,
+   "audioId": "ha4595016",
    "source": "data/vocab/words.json"
   },
   {
@@ -59,7 +59,7 @@
    "translit": "tik",
    "en": "bag, satchel",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h378062a7",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "esek",
    "en": "business, enterprise",
    "kind": "word",
-   "audioId": null,
+   "audioId": "haba8301e",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "shalat",
    "en": "to rule",
    "kind": "word",
-   "audioId": null,
+   "audioId": "he54faf96",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "chukah",
    "en": "statute, law",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hde9b27c8",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "tafkid",
    "en": "function, role, job",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h8877d6a8",
    "source": "data/vocab/words.json"
   }
  ]

@@ -6,6 +6,7 @@
 //   - no pronunciation/transliterate.js -> transliteration falls back to a notice
 // Plain DOM, RTL Hebrew (lang="he" dir="rtl"), keyboard and screen-reader friendly.
 import { loadCorpus, letterInventory } from './corpus.js';
+import { versionLabel } from '../shell/names.js';
 import { LETTER_ID, isHebrewLetter, FINAL_OF } from './normalize.js';
 
 const LETTER_NAME = {
@@ -316,7 +317,9 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     add('In plain English', m.whatItSays); add('Where in the service', m.whereInService); add('How it is said', [m.delivery, m.leaderOrCongregation].filter((x) => x && x !== 'unknown').join('; '));
     const d = m.denominations || {};
     const dn = ['orthodox', 'conservative', 'reform'].filter((k) => d[k] && d[k].use !== 'unknown').map((k) => `${k[0].toUpperCase() + k.slice(1)}: ${d[k].use}${d[k].note ? ' - ' + d[k].note : ''}`);
-    add('Movements', dn.join(' | ')); add('Note', m.note);
+    add('Movements', dn.join(' | '));
+    const vl = versionLabel(m); if (vl.oneVersion) dl.append(el('dt', {}, 'Version'), el('dd', { class: 'crp-version' }, vl.text));
+    add('Note', m.note);
     dl.append(el('dt', {}, 'Review'), el('dd', {}, m.clergyReviewed ? 'Reviewed by clergy.' : 'Written by the model; not reviewed by a rabbi, cantor or educator.'));
     return dl;
   }

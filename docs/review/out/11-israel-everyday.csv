@@ -1,33 +1,33 @@
 ﻿id,area,hebrew,transliteration,english,what_to_check,status,corrected_text,reviewer_notes,reviewer,review_date,priority,source
 israel-everyday:israel/etiquette:et-shabbat,israel-everyday,,,"Shabbat
-body: From Friday afternoon until Saturday night, many shops, restaurants and offices close. Buses and trains generally do not run on Shabbat in most places. Plan food and transport before Friday afternoon.","Record et-shabbat in data/israel/etiquette.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.0
+body: From Friday afternoon until Saturday night, many shops, restaurants and offices close. Buses and trains generally do not run on Shabbat in most places. Plan food and transport before Friday afternoon.","Record et-shabbat in data/israel/etiquette.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.0
 israel-everyday:israel/etiquette:et-shabbat-greeting,israel-everyday,,,"Greetings for Shabbat and holidays
-body: On Friday people say shabbat shalom. After Shabbat ends, shavua tov ('a good week') is the greeting. Before a festival, chag sameach is common.","Record et-shabbat-greeting in data/israel/etiquette.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.1
+body: On Friday people say shabbat shalom. After Shabbat ends, shavua tov ('a good week') is the greeting. Before a festival, chag sameach is common.","Record et-shabbat-greeting in data/israel/etiquette.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.1
 israel-everyday:israel/etiquette:et-kashrut,israel-everyday,,,"Kosher signs
-body: Many restaurants display a kashrut certificate. 'Basari' means meat, 'chalavi' means dairy, and 'parve' means neither. Meat and dairy are not mixed in a kosher place. Some places are not kosher: check the sign.","Record et-kashrut in data/israel/etiquette.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.2
+body: Many restaurants display a kashrut certificate. 'Basari' means meat, 'chalavi' means dairy, and 'parve' means neither. Meat and dairy are not mixed in a kosher place. Some places are not kosher: check the sign.","Record et-kashrut in data/israel/etiquette.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.2
 israel-everyday:israel/etiquette:et-tipping,israel-everyday,,,"Tipping
 body: At a restaurant with table service, a tip of roughly ten to fifteen percent is commonly given when service is not already added to the bill. Check the bill. Tipping at a counter is less usual.
-confidenceReason: General impression of practice; check the current norm with a local.","Record et-tipping in data/israel/etiquette.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.3
+confidenceReason: General impression of practice; check the current norm with a local.","Record et-tipping in data/israel/etiquette.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.3
 israel-everyday:israel/etiquette:et-taxi-tip,israel-everyday,,,"Taxis and tips
 body: Rounding up a taxi fare is welcome but is not an obligation. Ask for the meter or agree the price first when there is no meter.
-confidenceReason: Not verified; check with a local.","Record et-taxi-tip in data/israel/etiquette.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.4
+confidenceReason: Not verified; check with a local.","Record et-taxi-tip in data/israel/etiquette.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.4
 israel-everyday:israel/etiquette:et-haggling,israel-everyday,,,"Haggling
 body: At a market stall, asking for a better price is often accepted, especially for non-food goods. Prices of fruit and vegetables sold by the kilo are usually posted. In a shop with price tags, do not haggle.
-confidenceReason: General impression; varies by seller.","Record et-haggling in data/israel/etiquette.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.5
+confidenceReason: General impression; varies by seller.","Record et-haggling in data/israel/etiquette.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.5
 israel-everyday:israel/etiquette:et-directness,israel-everyday,,,"Directness
 body: Many learners report that Israelis are direct: short questions, quick answers and strong opinions are common. This is not always rudeness. Reply in the same plain way and add bevakasha and toda.
-confidenceReason: A common description, not a measured fact.","Record et-directness in data/israel/etiquette.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.6
+confidenceReason: A common description, not a measured fact.","Record et-directness in data/israel/etiquette.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.6
 israel-everyday:israel/etiquette:et-security,israel-everyday,,,"Bag checks
 body: Some malls, stations and public venues check bags at the entrance. Have your bag open and be patient.
-confidenceReason: Common in practice, but not every venue.","Record et-security in data/israel/etiquette.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.7
+confidenceReason: Common in practice, but not every venue.","Record et-security in data/israel/etiquette.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.7
 israel-everyday:israel/etiquette:et-holy-sites,israel-everyday,,,"Dress at holy places
-body: At synagogues, churches, mosques and the Western Wall, cover shoulders and knees, and follow signs and staff. Men may be asked to cover their heads at some Jewish sites.","Record et-holy-sites in data/israel/etiquette.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.8
+body: At synagogues, churches, mosques and the Western Wall, cover shoulders and knees, and follow signs and staff. Men may be asked to cover their heads at some Jewish sites.","Record et-holy-sites in data/israel/etiquette.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.8
 israel-everyday:israel/etiquette:et-ravkav,israel-everyday,,,"Rav-Kav card
 body: The Rav-Kav is a rechargeable transit card used across public transport. Ask staff or check the official site for where to buy and top it up.
-confidenceReason: Details about where to buy and load were not verified.","Record et-ravkav in data/israel/etiquette.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.9
+confidenceReason: Details about where to buy and load were not verified.","Record et-ravkav in data/israel/etiquette.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.9
 israel-everyday:israel/etiquette:et-tel-aviv,israel-everyday,,,"What is spoken in Tel Aviv?
 body: Everyday life in Tel Aviv is conducted in modern Hebrew, the same language as elsewhere in Israel, with casual forms and slang like the words on the fillers page. Visitors often report that English is widely understood, and some people may reply to you in English. How a local sounds depends on age, background and neighbourhood.
-confidenceReason: General impressions, not measured; regional variation not verified.","Record et-tel-aviv in data/israel/etiquette.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.10
+confidenceReason: General impressions, not measured; regional variation not verified.","Record et-tel-aviv in data/israel/etiquette.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/etiquette.json#cards.10
 israel-everyday:israel/fillers:fl-yalla,israel-everyday,"יַאלְלָה
 example: יַאלְלָה, נֵלֵךְ","yaLA
 example: yaLA, neLECH","come on, let's go, okay then
@@ -36,7 +36,7 @@ register: casual
 usage: Urging, agreeing to go, or closing a conversation ('yalla bye').
 genderNote: No gender-marked words.
 note: From Arabic. Very common. Said sharply it can sound impatient.
-confidenceReason: Meaning solid; stress is our best understanding.","Record fl-yalla in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.0
+confidenceReason: Meaning solid; stress is our best understanding.","Record fl-yalla in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.0
 israel-everyday:israel/fillers:fl-sababa,israel-everyday,"סַבָּבָּה
 example: הַכֹּל סַבָּבָּה","saBAba
 example: haKOL saBAba","cool, fine, great
@@ -44,7 +44,7 @@ example: Everything is cool.
 register: slang
 usage: Agreeing or saying something is fine.
 genderNote: No gender-marked words.
-note: From Arabic. Keep it for friends and relaxed settings.","Record fl-sababa in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.1
+note: From Arabic. Keep it for friends and relaxed settings.","Record fl-sababa in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.1
 israel-everyday:israel/fillers:fl-nu,israel-everyday,"נוּ
 example: נוּ, מָה?","NU
 example: NU, MA?","well? so? come on
@@ -52,7 +52,7 @@ example: Well, what?
 register: casual
 usage: Nudging someone to continue or hurry; can also express impatience.
 genderNote: No gender-marked words.
-note: Of Yiddish origin. Tone matters: it can be friendly or impatient.","Record fl-nu in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.2
+note: Of Yiddish origin. Tone matters: it can be friendly or impatient.","Record fl-nu in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.2
 israel-everyday:israel/fillers:fl-achi,israel-everyday,"אָחִי
 example: אָחִי, תּוֹדָה!","aCHI
 example: aCHI, toDA!","my brother, mate, dude
@@ -60,7 +60,7 @@ example: Mate, thanks!
 register: slang
 usage: Friendly address to a man you are familiar with. Often used between men; avoid with older strangers and in formal settings.
 genderNote: Said to a man. Do not use it for a woman unless you know the local custom.
-note: The feminine counterpart achoti ('my sister') exists but we are less sure how it is used, so it is not taught here.","Record fl-achi in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.3
+note: The feminine counterpart achoti ('my sister') exists but we are less sure how it is used, so it is not taught here.","Record fl-achi in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.3
 israel-everyday:israel/fillers:fl-beseder,israel-everyday,"בְּסֵדֶר
 example: הַכֹּל בְּסֵדֶר","beSEder
 example: haKOL beSEder","okay, all right, fine
@@ -68,7 +68,7 @@ example: Everything is fine.
 register: neutral
 usage: Agreeing, accepting, saying you are fine. Safe in any setting.
 genderNote: No gender-marked words.
-note: Literally 'in order'.","Record fl-beseder in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.4
+note: Literally 'in order'.","Record fl-beseder in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.4
 israel-everyday:israel/fillers:fl-balagan,israel-everyday,"בָּלָגָן
 example: אֵיזֶה בָּלָגָן!","balaGAN
 example: EIze balaGAN!","a mess, chaos
@@ -76,7 +76,7 @@ example: What a mess!
 register: casual
 usage: Describing a messy room, situation or schedule.
 genderNote: No gender-marked words.
-note: Used for a mess, not for pain or illness.","Record fl-balagan in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.5
+note: Used for a mess, not for pain or illness.","Record fl-balagan in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.5
 israel-everyday:israel/fillers:fl-davka,israel-everyday,"דַּוְקָא
 example: דַּוְקָא הַיּוֹם?","davKA
 example: davKA hayOM?","specifically, of all things, as it happens
@@ -85,7 +85,7 @@ register: neutral
 usage: Pointing out that something is the opposite of what you expect, or exactly that one.
 genderNote: No gender-marked words.
 note: Hard to translate; the nuance depends on context. Learn it by example.
-confidenceReason: Meaning is solid; the full range of use is subtle.","Record fl-davka in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.6
+confidenceReason: Meaning is solid; the full range of use is subtle.","Record fl-davka in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.6
 israel-everyday:israel/fillers:fl-kvar,israel-everyday,"כְּבָר
 example: הוּא כְּבָר פֹּה","KVAR
 example: HU kvar PO","already; (urging) come on
@@ -93,7 +93,7 @@ example: He is already here.
 register: neutral
 usage: 'Already' in time. Also said with a push, as in 'enough already'.
 genderNote: No gender-marked words.
-note: The impatient 'kvar!' use depends on tone; use it only with people you know.","Record fl-kvar in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.7
+note: The impatient 'kvar!' use depends on tone; use it only with people you know.","Record fl-kvar in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.7
 israel-everyday:israel/fillers:fl-ma-pitom,israel-everyday,"מָה פִּתְאוֹם
 example: מָה פִּתְאוֹם!","ma pitOM
 example: ma pitOM!","no way, what do you mean, of course not
@@ -101,7 +101,7 @@ example: No way!
 register: casual
 usage: Rejecting a suggestion or an accusation.
 genderNote: No gender-marked words.
-note: Literally 'what suddenly?'. Can sound sharp; use with friends.","Record fl-ma-pitom in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.8
+note: Literally 'what suddenly?'. Can sound sharp; use with friends.","Record fl-ma-pitom in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.8
 israel-everyday:israel/fillers:fl-vala,israel-everyday,"וָואלָה
 example: וָואלָה?","vaLA
 example: vaLA?","really? wow; honestly
@@ -109,7 +109,7 @@ example: Really?
 register: slang
 usage: Reacting with surprise or confirming something.
 genderNote: No gender-marked words.
-note: From Arabic. The first letters are pronounced 'v', not 'w'.","Record fl-vala in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.9
+note: From Arabic. The first letters are pronounced 'v', not 'w'.","Record fl-vala in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.9
 israel-everyday:israel/fillers:fl-chaval,israel-everyday,"חֲבָל עַל הַזְּמַן
 example: הַמּוּזִיקָה חֲבָל עַל הַזְּמַן","chaVAL al hazMAN
 example: hamuZIka chaVAL al hazMAN","amazing, awesome
@@ -117,7 +117,7 @@ example: The music is awesome.
 register: slang
 usage: Praising a thing or a person. The literal meaning is a pity about the time (it is a waste).
 genderNote: No gender-marked words.
-note: Slang; do not translate word by word.","Record fl-chaval in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.10
+note: Slang; do not translate word by word.","Record fl-chaval in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.10
 israel-everyday:israel/fillers:fl-achla,israel-everyday,"אַחְלָה
 example: אַחְלָה, תּוֹדָה","achLA
 example: achLA, toDA","great, cool
@@ -126,7 +126,7 @@ register: slang
 usage: Saying something is good. Some speakers may find it a little dated: we have not checked.
 genderNote: No gender-marked words.
 note: Meaning is clear; how current it sounds is not checked.
-confidenceReason: Meaning is solid; frequency among younger speakers is unknown.","Record fl-achla in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.11
+confidenceReason: Meaning is solid; frequency among younger speakers is unknown.","Record fl-achla in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.11
 israel-everyday:israel/fillers:fl-yofi,israel-everyday,"יוֹפִי
 example: יוֹפִי, תּוֹדָה","yoFI
 example: yoFI, toDA","great, nice, good job
@@ -134,7 +134,7 @@ example: Great, thanks.
 register: neutral
 usage: Praising, agreeing, closing a thought. Fits most settings.
 genderNote: No gender-marked words.
-note: Means 'beauty'.","Record fl-yofi in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.12
+note: Means 'beauty'.","Record fl-yofi in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.12
 israel-everyday:israel/fillers:fl-mamash,israel-everyday,"מַמָּשׁ
 example: מַמָּשׁ טוֹב","maMASH
 example: maMASH tov","really, truly
@@ -142,7 +142,7 @@ example: Really good.
 register: neutral
 usage: Intensifying: really good, really tired.
 genderNote: No gender-marked words.
-note: Safe in most settings.","Record fl-mamash in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.13
+note: Safe in most settings.","Record fl-mamash in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.13
 israel-everyday:israel/fillers:fl-kef,israel-everyday,"כֵּיף
 example: אֵיזֶה כֵּיף!","KEIF
 example: EIze KEIF!","fun, a pleasure, great
@@ -150,7 +150,7 @@ example: How nice!
 register: casual
 usage: Saying something is fun or pleasant.
 genderNote: No gender-marked words.
-note: Eize before a noun adds 'what a ...' to an exclamation.","Record fl-kef in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.14
+note: Eize before a noun adds 'what a ...' to an exclamation.","Record fl-kef in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.14
 israel-everyday:israel/fillers:fl-rega,israel-everyday,"רֶגַע
 example: רֶגַע, רֶגַע","REga
 example: REga, REga","just a moment, wait
@@ -158,7 +158,7 @@ example: Just a moment, hold on.
 register: neutral
 usage: Asking someone to wait or pausing yourself.
 genderNote: No gender-marked words.
-note: Literally 'a moment'.","Record fl-rega in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.15
+note: Literally 'a moment'.","Record fl-rega in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.15
 israel-everyday:israel/fillers:fl-stam,israel-everyday,"סְתָם
 example: סְתָם, לֹא חָשׁוּב","STAM
 example: STAM, lo chaSHUV","just because, for no reason, nothing special
@@ -166,7 +166,7 @@ example: Nothing, not important.
 register: casual
 usage: Answering 'why?' or 'what's up?' lightly.
 genderNote: No gender-marked words.
-note: Also used to mean 'for no reason'.","Record fl-stam in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.16
+note: Also used to mean 'for no reason'.","Record fl-stam in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.16
 israel-everyday:israel/fillers:fl-barur,israel-everyday,"בָּרוּר
 example: בָּרוּר!","baRUR
 example: baRUR!","clear, of course
@@ -174,7 +174,7 @@ example: Of course!
 register: neutral
 usage: Agreeing strongly.
 genderNote: No gender-marked words.
-note: Literally 'clear'.","Record fl-barur in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.17
+note: Literally 'clear'.","Record fl-barur in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.17
 israel-everyday:israel/fillers:fl-tachles,israel-everyday,"תַּכְלֶס
 example: תַּכְלֶס, זֶה לֹא רַע","takhLES
 example: takhLES, ze lo RA","bottom line, to be honest
@@ -183,7 +183,7 @@ register: slang
 usage: Getting to the point.
 genderNote: No gender-marked words.
 note: Of Yiddish origin. We are less sure of all the ways it is used.
-confidenceReason: Meaning is solid; range of use is not checked.","Record fl-tachles in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.18
+confidenceReason: Meaning is solid; range of use is not checked.","Record fl-tachles in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.18
 israel-everyday:israel/fillers:fl-pashut,israel-everyday,"פָּשׁוּט
 example: זֶה פָּשׁוּט","paSHUT
 example: ze paSHUT","simply, just, easy
@@ -191,7 +191,7 @@ example: It's simple.
 register: neutral
 usage: Saying something is simple or just so.
 genderNote: No gender-marked words.
-note: Also an adjective meaning 'simple'.","Record fl-pashut in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.19
+note: Also an adjective meaning 'simple'.","Record fl-pashut in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.19
 israel-everyday:israel/fillers:fl-chevre,israel-everyday,"חֲבֵרָה
 example: חֲבֵרָה, יַאלְלָה","chevRE
 example: chevRE, yaLA","guys, folks (to a group)
@@ -200,7 +200,7 @@ register: casual
 usage: Calling a group of friends together. Spelled the same as 'a female friend' (chavera) but pronounced differently.
 genderNote: No gender-marked words.
 note: Not to be confused with chavera, 'a female friend', written the same.
-confidenceReason: Meaning is solid; the difference between the two readings depends on context.","Record fl-chevre in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.20
+confidenceReason: Meaning is solid; the difference between the two readings depends on context.","Record fl-chevre in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.20
 israel-everyday:israel/fillers:fl-dai,israel-everyday,"דַּי
 example: דַּי, תּוֹדָה","DAI
 example: DAI, toDA","enough!
@@ -208,7 +208,7 @@ example: That's enough, thanks.
 register: neutral
 usage: Stopping something.
 genderNote: No gender-marked words.
-note: Can be sharp if said with force. Safe with a smile and toda.","Record fl-dai in data/israel/fillers.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.21
+note: Can be sharp if said with force. Safe with a smile and toda.","Record fl-dai in data/israel/fillers.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/fillers.json#fillers.21
 israel-everyday:israel/giveaways:gv-noun-adj,israel-everyday,"wrong: הַמִּסְעָדָה טוֹב
 right: הַמִּסְעָדָה טוֹבָה","wrong: hamis'aDA tov
 right: hamis'aDA toVA","The adjective does not match the noun
@@ -221,7 +221,7 @@ drill.options.0.text: הַמִּסְעָדָה טוֹבָה
 drill.options.1.text: הַמִּסְעָדָה טוֹב
 drill.options.2.text: הַמִּסְעָדָה טוֹבִים
 drill.answer: a
-drill.explain: Misada is feminine, so the adjective takes -a: tova. Tov is masculine singular; tovim is plural.","Record gv-noun-adj in data/israel/giveaways.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.0
+drill.explain: Misada is feminine, so the adjective takes -a: tova. Tov is masculine singular; tovim is plural.","Record gv-noun-adj in data/israel/giveaways.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.0
 israel-everyday:israel/giveaways:gv-speaker-gender,israel-everyday,"wrong: אֲנִי רוֹצֶה (said by a woman)
 right: אֲנִי רוֹצָה","wrong: ani roTSE
 right: ani roTSA","Using the wrong form for your own gender
@@ -234,7 +234,7 @@ drill.options.0.text: אֲנִי רוֹצָה מַיִם
 drill.options.1.text: אֲנִי רוֹצֶה מַיִם
 drill.options.2.text: אֲנִי רוֹצִים מַיִם
 drill.answer: a
-drill.explain: A woman says rotsa. Rotse is the masculine form; rotsim is plural.","Record gv-speaker-gender in data/israel/giveaways.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.1
+drill.explain: A woman says rotsa. Rotse is the masculine form; rotsim is plural.","Record gv-speaker-gender in data/israel/giveaways.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.1
 israel-everyday:israel/giveaways:gv-addressee-gender,israel-everyday,"wrong: מָה שְׁלוֹמְךָ? (to a woman)
 right: מָה שְׁלוֹמֵךְ?","wrong: ma shlomCHA?
 right: ma shloMECH?","Addressing a woman with a masculine form
@@ -247,7 +247,7 @@ drill.options.0.text: מָה שְׁלוֹמֵךְ?
 drill.options.1.text: מָה שְׁלוֹמְךָ?
 drill.options.2.text: מָה שְׁלוֹמוֹ?
 drill.answer: a
-drill.explain: Shlomech is for a woman, shlomcha for a man, shlomo means 'his well-being'.","Record gv-addressee-gender in data/israel/giveaways.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.2
+drill.explain: Shlomech is for a woman, shlomcha for a man, shlomo means 'his well-being'.","Record gv-addressee-gender in data/israel/giveaways.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.2
 israel-everyday:israel/giveaways:gv-final-he,israel-everyday,"wrong: רוֹצֶה → 'rotseh' with a breath at the end
 right: רוֹצֶה","wrong: roTSEH
 right: roTSE","Saying the final 'h' in -eh
@@ -260,7 +260,7 @@ drill.options.0.text: roTSE, ending on the vowel
 drill.options.1.text: roTSEH, with a clear h
 drill.options.2.text: roTSEKH
 drill.answer: a
-drill.explain: The final ה marks the vowel and is not pronounced as a consonant.","Record gv-final-he in data/israel/giveaways.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.3
+drill.explain: The final ה marks the vowel and is not pronounced as a consonant.","Record gv-final-he in data/israel/giveaways.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.3
 israel-everyday:israel/giveaways:gv-stress-last,israel-everyday,"wrong: תּוֹדָה said TOda
 right: תּוֹדָה","wrong: TOda
 right: toDA","Stressing the first syllable
@@ -273,7 +273,7 @@ drill.options.0.text: toDA
 drill.options.1.text: TOda
 drill.options.2.text: both are common
 drill.answer: a
-drill.explain: Toda is stressed on the last syllable, like most Hebrew words.","Record gv-stress-last in data/israel/giveaways.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.4
+drill.explain: Toda is stressed on the last syllable, like most Hebrew words.","Record gv-stress-last in data/israel/giveaways.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.4
 israel-everyday:israel/giveaways:gv-stress-segolate,israel-everyday,"wrong: בֹּקֶר said boKER
 right: בֹּקֶר","wrong: boKER
 right: BOker","Stressing the last syllable of every word
@@ -286,7 +286,7 @@ drill.options.0.text: BOker
 drill.options.1.text: boKER
 drill.options.2.text: both
 drill.answer: a
-drill.explain: Boker is stressed on the first syllable. This is one of the common exceptions to last-syllable stress.","Record gv-stress-segolate in data/israel/giveaways.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.5
+drill.explain: Boker is stressed on the first syllable. This is one of the common exceptions to last-syllable stress.","Record gv-stress-segolate in data/israel/giveaways.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.5
 israel-everyday:israel/giveaways:gv-chet,israel-everyday,"wrong: חָלָב said 'chalav' like church
 right: חָלָב","wrong: tshaLAV
 right: chaLAV","Saying chet as 'ch' in church or as 'h'
@@ -299,7 +299,7 @@ drill.options.0.text: a rough sound in the throat, like Scottish 'loch'
 drill.options.1.text: like ch in 'church'
 drill.options.2.text: like h in 'hat'
 drill.answer: a
-drill.explain: Chet is the rough throat sound. Church-ch and plain h are common learner errors.","Record gv-chet in data/israel/giveaways.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.6
+drill.explain: Chet is the rough throat sound. Church-ch and plain h are common learner errors.","Record gv-chet in data/israel/giveaways.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.6
 israel-everyday:israel/giveaways:gv-resh,israel-everyday,"wrong: רֹאשׁ said with a tongue-tip roll
 right: רֹאשׁ","wrong: rosh (rolled)
 right: rosh (back of throat)","Rolling the resh like Spanish or English r
@@ -313,7 +313,7 @@ drill.options.1.text: a rolled r made with the tip of the tongue
 drill.options.2.text: an American English r
 drill.answer: a
 drill.explain: A back-of-throat r is commonly heard. Other pronunciations exist: ask a native speaker what they do.
-confidenceReason: Dialect and generation differences were not checked.","Record gv-resh in data/israel/giveaways.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.7
+confidenceReason: Dialect and generation differences were not checked.","Record gv-resh in data/israel/giveaways.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.7
 israel-everyday:israel/giveaways:gv-toda-raba,israel-everyday,"wrong: תּוֹדָה רַבָּה מְאוֹד (for a held door)
 right: תּוֹדָה","wrong: toDA raBA me'OD
 right: toDA","Saying 'toda raba' for everything
@@ -327,7 +327,7 @@ drill.options.1.text: תּוֹדָה רַבָּה מְאוֹד מְאוֹד
 drill.options.2.text: אֲנִי מוֹדֶה לְךָ מִקִּרְבִּי
 drill.answer: a
 drill.explain: Plain toda fits. The other lines are grand for a held door.
-confidenceReason: Based on general impressions of everyday use, not measured.","Record gv-toda-raba in data/israel/giveaways.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.8
+confidenceReason: Based on general impressions of everyday use, not measured.","Record gv-toda-raba in data/israel/giveaways.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.8
 israel-everyday:israel/giveaways:gv-efshar,israel-everyday,"wrong: אֲנִי רוֹצֶה קָפֶה
 right: אֶפְשָׁר קָפֶה?","wrong: ani roTSE kaFE
 right: efSHAR kaFE?","Opening every request with 'I want'
@@ -341,7 +341,7 @@ drill.options.1.text: אֲנִי רוֹצֶה קָפֶה
 drill.options.2.text: אֲנִי מַעֲדִיפָה קָפֶה
 drill.answer: a
 drill.explain: Efshar has no gendered word. Rotse/rotsa and ma'adif/ma'adifa change with the speaker.
-confidenceReason: 'Commonly heard' is a general impression, not measured.","Record gv-efshar in data/israel/giveaways.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.9
+confidenceReason: 'Commonly heard' is a general impression, not measured.","Record gv-efshar in data/israel/giveaways.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.9
 israel-everyday:israel/giveaways:gv-yesh-li,israel-everyday,"wrong: אֲנִי יֵשׁ אָחוֹת
 right: יֵשׁ לִי אָחוֹת","wrong: ani YESH aCHOT
 right: YESH li aCHOT","Saying 'I am have' for 'I have'
@@ -354,7 +354,7 @@ drill.options.0.text: יֵשׁ לִי אָחוֹת
 drill.options.1.text: אֲנִי יֵשׁ אָחוֹת
 drill.options.2.text: אֲנִי אָחוֹת
 drill.answer: a
-drill.explain: Yesh li means 'I have'. Ani yesh is a literal English translation.","Record gv-yesh-li in data/israel/giveaways.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.10
+drill.explain: Yesh li means 'I have'. Ani yesh is a literal English translation.","Record gv-yesh-li in data/israel/giveaways.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.10
 israel-everyday:israel/giveaways:gv-gemination,israel-everyday,"wrong: אֶקַּח said ek-kach with a long k
 right: אֶקַּח","wrong: ek-KACH
 right: eKACH","Doubling consonants because of a dagesh
@@ -367,7 +367,7 @@ drill.options.0.text: eKACH, with a single k
 drill.options.1.text: ek-KACH, long doubled k
 drill.options.2.text: eKAH
 drill.answer: a
-drill.explain: A single consonant. The dagesh is a spelling rule, not a doubling in everyday speech.","Record gv-gemination in data/israel/giveaways.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.11
+drill.explain: A single consonant. The dagesh is a spelling rule, not a doubling in everyday speech.","Record gv-gemination in data/israel/giveaways.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.11
 israel-everyday:israel/giveaways:gv-haim,israel-everyday,"wrong: הַאִם אַתָּה בָּא?
 right: אַתָּה בָּא?","wrong: ha'IM aTA ba?
 right: aTA ba?","Starting every question with 'ha'im'
@@ -380,7 +380,7 @@ drill.options.0.text: אַתָּה בָּא?
 drill.options.1.text: הַאִם אַתָּה בָּא?
 drill.options.2.text: הַאִם הִנְּךָ בָּא?
 drill.answer: a
-drill.explain: Rising voice alone is natural. The others sound formal or archaic.","Record gv-haim in data/israel/giveaways.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.12
+drill.explain: Rising voice alone is natural. The others sound formal or archaic.","Record gv-haim in data/israel/giveaways.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.12
 israel-everyday:israel/giveaways:gv-pure-vowels,israel-everyday,"wrong: שָׁלוֹם said 'sha-LOW-oom' with a w glide
 right: שָׁלוֹם","wrong: shaLOWm
 right: shaLOM","Gliding the vowels like English
@@ -393,7 +393,7 @@ drill.options.0.text: a clean short o, no glide
 drill.options.1.text: oh-w, like American 'oh'
 drill.options.2.text: aw, as in 'law'
 drill.answer: a
-drill.explain: A pure o. The glide marks a foreign accent.","Record gv-pure-vowels in data/israel/giveaways.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.13
+drill.explain: A pure o. The glide marks a foreign accent.","Record gv-pure-vowels in data/israel/giveaways.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.13
 israel-everyday:israel/giveaways:gv-vav,israel-everyday,"wrong: וָואלָה said 'wala'
 right: וָואלָה","wrong: waLA
 right: vaLA","Saying vav as English w
@@ -406,15 +406,15 @@ drill.options.0.text: v as in 'van'
 drill.options.1.text: w as in 'water'
 drill.options.2.text: it is silent
 drill.answer: a
-drill.explain: Consonant vav is v.","Record gv-vav in data/israel/giveaways.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.14
+drill.explain: Consonant vav is v.","Record gv-vav in data/israel/giveaways.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/giveaways.json#items.14
 israel-everyday:israel/register-ladder:formal,israel-everyday,,,"label: Formal
-text: Careful, written or official. Correct, but can sound stiff in a shop or cafe.","Record formal in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#registers.0
+text: Careful, written or official. Correct, but can sound stiff in a shop or cafe.","Record formal in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#registers.0
 israel-everyday:israel/register-ladder:neutral,israel-everyday,,,"label: Neutral
-text: Safe with anyone: strangers, older people, staff.","Record neutral in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#registers.1
+text: Safe with anyone: strangers, older people, staff.","Record neutral in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#registers.1
 israel-everyday:israel/register-ladder:casual,israel-everyday,,,"label: Casual
-text: Relaxed everyday speech with people you chat with.","Record casual in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#registers.2
+text: Relaxed everyday speech with people you chat with.","Record casual in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#registers.2
 israel-everyday:israel/register-ladder:slang,israel-everyday,,,"label: Slang
-text: Friends and peers. Avoid with officials, elders and when unsure.","Record slang in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#registers.3
+text: Friends and peers. Avoid with officials, elders and when unsure.","Record slang in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#registers.3
 israel-everyday:israel/register-ladder:lad-hello,israel-everyday,"textbook: שָׁלוֹם
 everyday: הַיי","textbook: shaLOM
 everyday: HAI","textbook: hello (also goodbye, peace)
@@ -425,7 +425,7 @@ textbook.gender: none
 everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Shalom works for everyone at any time. Hai is the everyday greeting among peers; it is borrowed from English.","Record lad-hello in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.0
+note: Shalom works for everyone at any time. Hai is the everyday greeting among peers; it is borrowed from English.","Record lad-hello in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.0
 israel-everyday:israel/register-ladder:lad-bye,israel-everyday,"textbook: לְהִתְרָאוֹת
 everyday: יַאלְלָה, בַּיי","textbook: lehitra'OT
 everyday: yaLA, BAI","textbook: goodbye (until we see each other)
@@ -437,7 +437,7 @@ everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
 note: Yalla is a very common way to wrap up. The stress marked on yalla is our best understanding; check it with a native speaker.
-confidenceReason: Meaning and register are solid; the exact stress of yalla is less certain.","Record lad-bye in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.1
+confidenceReason: Meaning and register are solid; the exact stress of yalla is less certain.","Record lad-bye in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.1
 israel-everyday:israel/register-ladder:lad-morning,israel-everyday,"textbook: בֹּקֶר טוֹב
 everyday: בֹּקֶר אוֹר","textbook: BOker TOV
 everyday: BOker OR","textbook: good morning
@@ -449,7 +449,7 @@ everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
 note: Many people reply to boker tov with boker or. Plain boker tov back is also fine.
-confidenceReason: The reply is real, but how often people use it today was not checked.","Record lad-morning in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.2
+confidenceReason: The reply is real, but how often people use it today was not checked.","Record lad-morning in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.2
 israel-everyday:israel/register-ladder:lad-hows-it-going,israel-everyday,"textbook: מָה שְׁלוֹמְךָ?
 textbook.forms.m: מָה שְׁלוֹמְךָ?
 textbook.forms.f: מָה שְׁלוֹמֵךְ?
@@ -464,7 +464,7 @@ textbook.gender: addressee
 everyday.register: neutral
 everyday.gender: none
 genderNote: The textbook line changes with the person you are talking to: -cha for a man, -ech for a woman. The everyday line does not change.
-note: Ma nishma has no gender in it, so you can use it for anyone and avoid choosing the wrong ending. Ma shlomcha / shlomech sounds more formal or careful in a casual chat.","Record lad-hows-it-going in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.3
+note: Ma nishma has no gender in it, so you can use it for anyone and avoid choosing the wrong ending. Ma shlomcha / shlomech sounds more formal or careful in a casual chat.","Record lad-hows-it-going in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.3
 israel-everyday:israel/register-ladder:lad-whats-up,israel-everyday,"textbook: מָה קוֹרֶה?
 everyday: הַכֹּל טוֹב?","textbook: ma koREH?
 everyday: haKOL tov?","textbook: what's going on?
@@ -475,7 +475,7 @@ textbook.gender: none
 everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Both are common openers between people who know each other.","Record lad-whats-up in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.4
+note: Both are common openers between people who know each other.","Record lad-whats-up in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.4
 israel-everyday:israel/register-ladder:lad-reply-fine,israel-everyday,"textbook: אֲנִי מַרְגִּישׁ טוֹב, תּוֹדָה
 textbook.forms.m: אֲנִי מַרְגִּישׁ טוֹב, תּוֹדָה
 textbook.forms.f: אֲנִי מַרְגִּישָׁה טוֹב, תּוֹדָה
@@ -490,7 +490,7 @@ textbook.gender: speaker
 everyday.register: casual
 everyday.gender: none
 genderNote: The textbook line changes with your own gender (margish / margisha). The everyday line does not.
-note: Hakol tov is the easy reply and carries no gender.","Record lad-reply-fine in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.5
+note: Hakol tov is the easy reply and carries no gender.","Record lad-reply-fine in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.5
 israel-everyday:israel/register-ladder:lad-so-so,israel-everyday,"textbook: לֹא כָּל כָּךְ טוֹב
 everyday: כָּכָה כָּכָה","textbook: lo kol KACH tov
 everyday: kaCHA kaCHA","textbook: not so good
@@ -501,7 +501,7 @@ textbook.gender: none
 everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Kacha kacha is usually said with a tilting hand.","Record lad-so-so in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.6
+note: Kacha kacha is usually said with a tilting hand.","Record lad-so-so in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.6
 israel-everyday:israel/register-ladder:lad-thanks-small,israel-everyday,"textbook: תּוֹדָה רַבָּה
 everyday: תּוֹדָה","textbook: toDA raBA
 everyday: toDA","textbook: thanks a lot
@@ -513,7 +513,7 @@ everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
 note: Plain toda is what people commonly hear for small things like a held door; toda raba is warmer and fits a bigger favour. Saying toda raba for everything can sound heavy.
-confidenceReason: Frequency of use is a general impression, not measured.","Record lad-thanks-small in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.7
+confidenceReason: Frequency of use is a general impression, not measured.","Record lad-thanks-small in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.7
 israel-everyday:israel/register-ladder:lad-thanks-help,israel-everyday,"textbook: אֲנִי מוֹדֶה לָכֶם עַל הָעֶזְרָה
 textbook.forms.m: אֲנִי מוֹדֶה לָכֶם עַל הָעֶזְרָה
 textbook.forms.f: אֲנִי מוֹדָה לָכֶם עַל הָעֶזְרָה
@@ -528,7 +528,7 @@ textbook.gender: speaker
 everyday.register: neutral
 everyday.gender: none
 genderNote: The textbook line changes with your own gender (modeh / modah). The everyday line does not.
-note: Ani modeh lachem is correct but reads like a speech or a formal letter in a shop or on the street.","Record lad-thanks-help in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.8
+note: Ani modeh lachem is correct but reads like a speech or a formal letter in a shop or on the street.","Record lad-thanks-help in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.8
 israel-everyday:israel/register-ladder:lad-youre-welcome,israel-everyday,"textbook: עַל לֹא דָּבָר
 everyday: בְּכֵיף","textbook: al lo daVAR
 everyday: bekEIF","textbook: you're welcome (lit. it's nothing)
@@ -539,7 +539,7 @@ textbook.gender: none
 everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Bevakasha is the neutral reply. Bekef is a relaxed alternative among peers.","Record lad-youre-welcome in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.9
+note: Bevakasha is the neutral reply. Bekef is a relaxed alternative among peers.","Record lad-youre-welcome in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.9
 israel-everyday:israel/register-ladder:lad-okay,israel-everyday,"textbook: בְּסֵדֶר
 everyday: סַבָּבָּה","textbook: beSEder
 everyday: saBAba","textbook: okay, in order
@@ -550,7 +550,7 @@ textbook.gender: none
 everyday.register: slang
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Sababa is a friendly slang word from Arabic. Use beseder with strangers, older people and in formal settings.","Record lad-okay in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.10
+note: Sababa is a friendly slang word from Arabic. Use beseder with strangers, older people and in formal settings.","Record lad-okay in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.10
 israel-everyday:israel/register-ladder:lad-of-course,israel-everyday,"textbook: בְּוַדַּאי
 everyday: בֶּטַח","textbook: bevaDAI
 everyday: BEtach","textbook: certainly
@@ -561,7 +561,7 @@ textbook.gender: none
 everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Betach is the everyday word. Bevadai is correct but a little stiff in a chat.","Record lad-of-course in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.11
+note: Betach is the everyday word. Bevadai is correct but a little stiff in a chat.","Record lad-of-course in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.11
 israel-everyday:israel/register-ladder:lad-no-problem,israel-everyday,"textbook: אֵין בְּעָיָה
 everyday: בְּלִי לַחַץ","textbook: en be'aYA
 everyday: bli LAchatz","textbook: there is no problem
@@ -573,7 +573,7 @@ everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
 note: Bli lachatz means 'no pressure', used when someone says they are late or unsure.
-confidenceReason: Meaning is clear; how widespread it is was not checked.","Record lad-no-problem in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.12
+confidenceReason: Meaning is clear; how widespread it is was not checked.","Record lad-no-problem in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.12
 israel-everyday:israel/register-ladder:lad-agree,israel-everyday,"textbook: אֲנִי מַסְכִּים
 textbook.forms.m: אֲנִי מַסְכִּים
 textbook.forms.f: אֲנִי מַסְכִּימָה
@@ -588,7 +588,7 @@ textbook.gender: speaker
 everyday.register: neutral
 everyday.gender: none
 genderNote: The textbook line changes with your own gender (maskim / maskima). Bediyuk does not.
-note: In conversation people often just say bediyuk (exactly) instead of announcing agreement.","Record lad-agree in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.13
+note: In conversation people often just say bediyuk (exactly) instead of announcing agreement.","Record lad-agree in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.13
 israel-everyday:israel/register-ladder:lad-not-really,israel-everyday,"textbook: אֵינֶנִּי בָּטוּחַ
 textbook.forms.m: אֵינֶנִּי בָּטוּחַ
 textbook.forms.f: אֵינֶנִּי בְּטוּחָה
@@ -608,7 +608,7 @@ everyday.register: neutral
 everyday.gender: speaker
 genderNote: Both lines are gendered by your own gender: batuach (m.) / betucha (f.).
 note: Enenni is literary. Lo batuach (m.) / lo betucha (f.) is how most people say it.
-confidenceReason: The pointing of the feminine forms is the main doubt.","Record lad-not-really in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.14
+confidenceReason: The pointing of the feminine forms is the main doubt.","Record lad-not-really in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.14
 israel-everyday:israel/register-ladder:lad-order-coffee,israel-everyday,"textbook: אֲנִי רוֹצֶה קָפֶה, בְּבַקָּשָׁה
 textbook.forms.m: אֲנִי רוֹצֶה קָפֶה, בְּבַקָּשָׁה
 textbook.forms.f: אֲנִי רוֹצָה קָפֶה, בְּבַקָּשָׁה
@@ -624,7 +624,7 @@ everyday.register: neutral
 everyday.gender: none
 genderNote: The first line changes with your own gender (rotse / rotsa). Efshar does not.
 note: Ani rotse is understood and not rude. Efshar ...? is the opener commonly heard when ordering, and it has no gender. Note that the final -h in rotseh is not pronounced.
-confidenceReason: 'Commonly heard' is an impression from general knowledge; not measured.","Record lad-order-coffee in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.15
+confidenceReason: 'Commonly heard' is an impression from general knowledge; not measured.","Record lad-order-coffee in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.15
 israel-everyday:israel/register-ladder:lad-order-hafuch,israel-everyday,"textbook: אֲנִי מַעֲדִיף קָפֶה עִם חָלָב
 textbook.forms.m: אֲנִי מַעֲדִיף קָפֶה עִם חָלָב
 textbook.forms.f: אֲנִי מַעֲדִיפָה קָפֶה עִם חָלָב
@@ -639,7 +639,7 @@ textbook.gender: speaker
 everyday.register: casual
 everyday.gender: none
 genderNote: The textbook line changes with your own gender (ma'adif / ma'adifa). The everyday line does not.
-note: Hafuch is a standard cafe order for a milky coffee (it is on many cafe menus). Asking for the drink by its menu name is quicker than describing it.","Record lad-order-hafuch in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.16
+note: Hafuch is a standard cafe order for a milky coffee (it is on many cafe menus). Asking for the drink by its menu name is quicker than describing it.","Record lad-order-hafuch in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.16
 israel-everyday:israel/register-ladder:lad-takeaway,israel-everyday,"textbook: אֲנִי רוֹצֶה לָקַחַת אֶת זֶה אִתִּי
 textbook.forms.m: אֲנִי רוֹצֶה לָקַחַת אֶת זֶה אִתִּי
 textbook.forms.f: אֲנִי רוֹצָה לָקַחַת אֶת זֶה אִתִּי
@@ -655,7 +655,7 @@ everyday.register: casual
 everyday.gender: none
 genderNote: The first line changes with your own gender. The everyday line does not.
 note: Staff often ask 'to sit or to take?' and a one-word answer is normal. Some places also say take-away in English.
-confidenceReason: The exact wording staff use was not checked.","Record lad-takeaway in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.17
+confidenceReason: The exact wording staff use was not checked.","Record lad-takeaway in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.17
 israel-everyday:israel/register-ladder:lad-order-food,israel-everyday,"textbook: אֲנִי רוֹצֶה לְהַזְמִין סָלָט
 textbook.forms.m: אֲנִי רוֹצֶה לְהַזְמִין סָלָט
 textbook.forms.f: אֲנִי רוֹצָה לְהַזְמִין סָלָט
@@ -670,7 +670,7 @@ textbook.gender: speaker
 everyday.register: neutral
 everyday.gender: none
 genderNote: The textbook line changes with your own gender. Ani ekach does not.
-note: Ani ekach ('I'll take') is a very natural way to order and has no gender.","Record lad-order-food in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.18
+note: Ani ekach ('I'll take') is a very natural way to order and has no gender.","Record lad-order-food in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.18
 israel-everyday:israel/register-ladder:lad-recommend,israel-everyday,"textbook: מָה אַתֶּם מַמְלִיצִים?
 everyday: מָה כְּדַאי לָקַחַת?","textbook: ma aTEM mamliTSIM?
 everyday: ma keDAI laKAchat?","textbook: what do you recommend?
@@ -682,7 +682,7 @@ everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
 note: Kedai means 'worth it / a good idea'. It is a handy word for many questions.
-confidenceReason: Idiomatic use of kedai is from general knowledge.","Record lad-recommend in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.19
+confidenceReason: Idiomatic use of kedai is from general knowledge.","Record lad-recommend in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.19
 israel-everyday:israel/register-ladder:lad-bill,israel-everyday,"textbook: אֶפְשָׁר לְקַבֵּל אֶת הַחֶשְׁבּוֹן, בְּבַקָּשָׁה?
 everyday: אֶפְשָׁר חֶשְׁבּוֹן?","textbook: efSHAR lekaBEL et hacheshBON, bevakaSHA?
 everyday: efSHAR cheshBON?","textbook: may I have the bill, please?
@@ -693,7 +693,7 @@ textbook.gender: none
 everyday.register: neutral
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Short requests with efshar are normal and not impolite.","Record lad-bill in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.20
+note: Short requests with efshar are normal and not impolite.","Record lad-bill in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.20
 israel-everyday:israel/register-ladder:lad-shuk-price,israel-everyday,"textbook: מָה הַמְּחִיר שֶׁל קִילוֹ אֶחָד?
 everyday: בְּכַמָּה הַקִּילוֹ?","textbook: ma hamechIR shel KIlo eCHAD?
 everyday: bekaMA hakiLO?","textbook: what is the price of one kilo?
@@ -705,7 +705,7 @@ everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
 note: Bekama? ('for how much?') is the usual price question at a stall. Note: stress on kilo is our best understanding.
-confidenceReason: The phrase is solid; the stress of kilo is the doubt.","Record lad-shuk-price in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.21
+confidenceReason: The phrase is solid; the stress of kilo is the doubt.","Record lad-shuk-price in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.21
 israel-everyday:israel/register-ladder:lad-shuk-kilo,israel-everyday,"textbook: אֲנִי רוֹצֶה קִילוֹ עַגְבָנִיּוֹת
 textbook.forms.m: אֲנִי רוֹצֶה קִילוֹ עַגְבָנִיּוֹת
 textbook.forms.f: אֲנִי רוֹצָה קִילוֹ עַגְבָנִיּוֹת
@@ -720,7 +720,7 @@ textbook.gender: speaker
 everyday.register: casual
 everyday.gender: none
 genderNote: The first line changes with your own gender. The second does not.
-note: At a stall, the noun phrase plus bevakasha is enough.","Record lad-shuk-kilo in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.22
+note: At a stall, the noun phrase plus bevakasha is enough.","Record lad-shuk-kilo in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.22
 israel-everyday:israel/register-ladder:lad-shuk-taste,israel-everyday,"textbook: הַאִם אֶפְשָׁר לִטְעוֹם?
 everyday: אֶפְשָׁר לִטְעוֹם?","textbook: ha'IM efSHAR litOM?
 everyday: efSHAR litOM?","textbook: is it possible to taste?
@@ -731,7 +731,7 @@ textbook.gender: none
 everyday.register: neutral
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Ha'im at the front is almost never needed. A rising voice is enough to make a question.","Record lad-shuk-taste in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.23
+note: Ha'im at the front is almost never needed. A rising voice is enough to make a question.","Record lad-shuk-taste in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.23
 israel-everyday:israel/register-ladder:lad-shuk-more,israel-everyday,"textbook: אֶפְשָׁר לְקַבֵּל עוֹד קְצָת?
 everyday: תֵּן לִי עוֹד קְצָת
 everyday.forms.m: תֵּן לִי עוֹד קְצָת
@@ -747,7 +747,7 @@ everyday.register: casual
 everyday.gender: addressee
 genderNote: The everyday line changes with the person you are talking to: ten (to a man) / tni (to a woman).
 note: Asking a vendor with an imperative like ten li is common and not rude in itself; add bevakasha if you want it softer.
-confidenceReason: Whether it reads as friendly or abrupt depends on tone, which text cannot show.","Record lad-shuk-more in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.24
+confidenceReason: Whether it reads as friendly or abrupt depends on tone, which text cannot show.","Record lad-shuk-more in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.24
 israel-everyday:israel/register-ladder:lad-headache,israel-everyday,"textbook: יֵשׁ לִי כְּאֵב רֹאשׁ
 everyday: כּוֹאֵב לִי הָרֹאשׁ","textbook: YESH li ke'EV rosh
 everyday: ko'EV li haROSH","textbook: I have a headache
@@ -758,7 +758,7 @@ textbook.gender: none
 everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Both are fine. Ko'ev li ha... works with other body parts too (ha-gav, ha-beten).","Record lad-headache in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.25
+note: Both are fine. Ko'ev li ha... works with other body parts too (ha-gav, ha-beten).","Record lad-headache in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.25
 israel-everyday:israel/register-ladder:lad-cough,israel-everyday,"textbook: הַאִם יֵשׁ לָכֶם תְּרוּפָה לְשִׁעוּל?
 everyday: יֵשׁ לָכֶם מַשֶּׁהוּ נֶגֶד שִׁעוּל?","textbook: ha'IM yesh LAchem tru'FA leshi'UL?
 everyday: yesh LAchem maSHEhu NEged shi'UL?","textbook: do you have a medicine for a cough?
@@ -769,7 +769,7 @@ textbook.gender: none
 everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Mashehu ('something') is useful everywhere. Always check with a pharmacist before taking medicine.","Record lad-cough in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.26
+note: Mashehu ('something') is useful everywhere. Always check with a pharmacist before taking medicine.","Record lad-cough in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.26
 israel-everyday:israel/register-ladder:lad-prescription,israel-everyday,"textbook: הַאִם נִדְרָשׁ מִרְשָׁם?
 everyday: צָרִיךְ מִרְשָׁם?","textbook: ha'IM nidRASH mirSHAM?
 everyday: tsaRICH mirSHAM?","textbook: is a prescription required?
@@ -780,7 +780,7 @@ textbook.gender: none
 everyday.register: neutral
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Tsarich (m.) is used impersonally here and does not refer to you.","Record lad-prescription in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.27
+note: Tsarich (m.) is used impersonally here and does not refer to you.","Record lad-prescription in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.27
 israel-everyday:israel/register-ladder:lad-bus-goes,israel-everyday,"textbook: הַאִם הָאוֹטוֹבּוּס הַזֶּה נוֹסֵעַ לַמֶּרְכָּז?
 everyday: זֶה הוֹלֵךְ לַמֶּרְכָּז?","textbook: ha'IM ha'otoBUS haZE noSEa lamerKAZ?
 everyday: ZE hoLECH lamerKAZ?","textbook: does this bus travel to the centre?
@@ -792,7 +792,7 @@ everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
 note: Holech ('goes') is commonly used for vehicles too, though it literally means 'walks'.
-confidenceReason: Idiomatic use of holech for buses is from general knowledge.","Record lad-bus-goes in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.28
+confidenceReason: Idiomatic use of holech for buses is from general knowledge.","Record lad-bus-goes in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.28
 israel-everyday:israel/register-ladder:lad-bus-getoff,israel-everyday,"textbook: בְּאֵיזוֹ תַּחֲנָה עָלַי לָרֶדֶת?
 everyday: אֵיפֹה כְּדַאי לָרֶדֶת?","textbook: be'eyZO tachaNA aLAI laREdet?
 everyday: eiFO keDAI laREdet?","textbook: at which stop must I get off?
@@ -804,7 +804,7 @@ everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
 note: Kedai again: 'where is it a good idea to get off'.
-confidenceReason: Idiomatic use of kedai here is from general knowledge.","Record lad-bus-getoff in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.29
+confidenceReason: Idiomatic use of kedai here is from general knowledge.","Record lad-bus-getoff in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.29
 israel-everyday:israel/register-ladder:lad-ravkav,israel-everyday,"textbook: אֲנִי רוֹצֶה לִטְעוֹן אֶת הָרַב־קַו
 textbook.forms.m: אֲנִי רוֹצֶה לִטְעוֹן אֶת הָרַב־קַו
 textbook.forms.f: אֲנִי רוֹצָה לִטְעוֹן אֶת הָרַב־קַו
@@ -820,7 +820,7 @@ everyday.register: neutral
 everyday.gender: none
 genderNote: The first line changes with your own gender. Efshar does not.
 note: Rav-Kav is the national rechargeable transit card. Where and how you can top it up was not verified here: ask staff.
-confidenceReason: The phrase is simple; how topping up works in practice was not checked.","Record lad-ravkav in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.30
+confidenceReason: The phrase is simple; how topping up works in practice was not checked.","Record lad-ravkav in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.30
 israel-everyday:israel/register-ladder:lad-taxi-dest,israel-everyday,"textbook: אֲנִי רוֹצֶה לִנְסוֹעַ לִרְחוֹב דִּיזֶנְגּוֹף
 textbook.forms.m: אֲנִי רוֹצֶה לִנְסוֹעַ לִרְחוֹב דִּיזֶנְגּוֹף
 textbook.forms.f: אֲנִי רוֹצָה לִנְסוֹעַ לִרְחוֹב דִּיזֶנְגּוֹף
@@ -835,7 +835,7 @@ textbook.gender: speaker
 everyday.register: casual
 everyday.gender: none
 genderNote: The textbook line changes with your own gender. The everyday line does not.
-note: Naming the place with le- plus bevakasha is all a driver needs. Dizengoff is a real street in Tel Aviv, used here only as an example.","Record lad-taxi-dest in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.31
+note: Naming the place with le- plus bevakasha is all a driver needs. Dizengoff is a real street in Tel Aviv, used here only as an example.","Record lad-taxi-dest in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.31
 israel-everyday:israel/register-ladder:lad-taxi-stop,israel-everyday,"textbook: אֶפְשָׁר לַעֲצֹר פֹּה, בְּבַקָּשָׁה?
 everyday: תַּעֲצֹר פֹּה, בְּבַקָּשָׁה
 everyday.forms.m: תַּעֲצֹר פֹּה, בְּבַקָּשָׁה
@@ -850,7 +850,7 @@ textbook.gender: none
 everyday.register: casual
 everyday.gender: addressee
 genderNote: The everyday line changes with the driver: ta'atsor (to a man) / ta'atsri (to a woman).
-note: The everyday line is addressed to the driver, so it changes with the driver's gender.","Record lad-taxi-stop in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.32
+note: The everyday line is addressed to the driver, so it changes with the driver's gender.","Record lad-taxi-stop in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.32
 israel-everyday:israel/register-ladder:lad-taxi-meter,israel-everyday,"textbook: הַאִם תּוּכַל לְהַפְעִיל אֶת הַמּוֹנֶה?
 textbook.forms.m: הַאִם תּוּכַל לְהַפְעִיל אֶת הַמּוֹנֶה?
 textbook.forms.f: הַאִם תּוּכְלִי לְהַפְעִיל אֶת הַמּוֹנֶה?
@@ -866,7 +866,7 @@ everyday.register: casual
 everyday.gender: none
 genderNote: The textbook line changes with the driver's gender (tuchal / tuchli). The everyday line does not.
 note: Moneh is the word for a taxi meter, as far as we know. Check with a native speaker; we are not sure how people usually phrase this request.
-confidenceReason: Unsure how this request is phrased in practice. Verify before relying on it.","Record lad-taxi-meter in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.33
+confidenceReason: Unsure how this request is phrased in practice. Verify before relying on it.","Record lad-taxi-meter in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.33
 israel-everyday:israel/register-ladder:lad-sherut-off,israel-everyday,"textbook: אֲנִי יוֹרֵד בַּתַּחֲנָה הַבָּאָה
 textbook.forms.m: אֲנִי יוֹרֵד בַּתַּחֲנָה הַבָּאָה
 textbook.forms.f: אֲנִי יוֹרֶדֶת בַּתַּחֲנָה הַבָּאָה
@@ -882,7 +882,7 @@ everyday.register: casual
 everyday.gender: none
 genderNote: The textbook line changes with your own gender (yored / yoredet). The everyday line does not.
 note: A sherut is a shared taxi (shirut). How stops work on a given route was not verified: ask the driver or other passengers.
-confidenceReason: Sherut customs were not verified. Verify before relying on it.","Record lad-sherut-off in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.34
+confidenceReason: Sherut customs were not verified. Verify before relying on it.","Record lad-sherut-off in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.34
 israel-everyday:israel/register-ladder:lad-sherut-pass,israel-everyday,"textbook: אֶפְשָׁר לְהַעֲבִיר אֶת הַכֶּסֶף לַנֶּהָג?
 everyday: תַּעֲבִיר קָדִימָה, בְּבַקָּשָׁה
 everyday.forms.m: תַּעֲבִיר קָדִימָה, בְּבַקָּשָׁה
@@ -898,7 +898,7 @@ everyday.register: casual
 everyday.gender: addressee
 genderNote: The everyday line is addressed to the passenger in front, so it changes with their gender.
 note: Passing money forward in a shared taxi is commonly described, but we could not confirm it for every route. Treat as a possibility, not a rule.
-confidenceReason: Sherut payment customs not verified. Verify before relying on it.","Record lad-sherut-pass in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.35
+confidenceReason: Sherut payment customs not verified. Verify before relying on it.","Record lad-sherut-pass in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.35
 israel-everyday:israel/register-ladder:lad-train-ticket,israel-everyday,"textbook: אֲנִי רוֹצֶה כַּרְטִיס הָלוֹךְ וָשׁוֹב לְחֵיפָה
 textbook.forms.m: אֲנִי רוֹצֶה כַּרְטִיס הָלוֹךְ וָשׁוֹב לְחֵיפָה
 textbook.forms.f: אֲנִי רוֹצָה כַּרְטִיס הָלוֹךְ וָשׁוֹב לְחֵיפָה
@@ -913,7 +913,7 @@ textbook.gender: speaker
 everyday.register: casual
 everyday.gender: none
 genderNote: The first line changes with your own gender. The second does not.
-note: Halokh vashov means a return trip; the card or ticket machine may also offer other options.","Record lad-train-ticket in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.36
+note: Halokh vashov means a return trip; the card or ticket machine may also offer other options.","Record lad-train-ticket in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.36
 israel-everyday:israel/register-ladder:lad-train-platform,israel-everyday,"textbook: מֵאֵיזֶה רָצִיף יוֹצֵאת הָרַכֶּבֶת לְתֵל אָבִיב?
 everyday: מֵאֵיזֶה רָצִיף לְתֵל אָבִיב?","textbook: me'EIze raTSIF yoTSEt haraKEvet leTEL aVIV?
 everyday: me'EIze raTSIF leTEL aVIV?","textbook: from which platform does the train to Tel Aviv leave?
@@ -924,7 +924,7 @@ textbook.gender: none
 everyday.register: neutral
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Dropping the verb is natural when the context is clear.","Record lad-train-platform in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.37
+note: Dropping the verb is natural when the context is clear.","Record lad-train-platform in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.37
 israel-everyday:israel/register-ladder:lad-excuse-where,israel-everyday,"textbook: סְלִיחָה, הַאִם תּוּכַל לוֹמַר לִי אֵיפֹה נִמְצָא הַשּׁוּק?
 textbook.forms.m: סְלִיחָה, הַאִם תּוּכַל לוֹמַר לִי אֵיפֹה נִמְצָא הַשּׁוּק?
 textbook.forms.f: סְלִיחָה, הַאִם תּוּכְלִי לוֹמַר לִי אֵיפֹה נִמְצָא הַשּׁוּק?
@@ -939,7 +939,7 @@ textbook.gender: addressee
 everyday.register: neutral
 everyday.gender: none
 genderNote: The textbook line changes with the gender of the person you ask (tuchal / tuchli). The everyday line does not.
-note: Slicha + the place name is enough. Short questions are normal.","Record lad-excuse-where in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.38
+note: Slicha + the place name is enough. Short questions are normal.","Record lad-excuse-where in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.38
 israel-everyday:israel/register-ladder:lad-is-far,israel-everyday,"textbook: הַאִם זֶה רָחוֹק מִכָּאן?
 everyday: זֶה רָחוֹק מִפֹּה?","textbook: ha'IM ze raCHOK mikAN?
 everyday: ZE raCHOK miPO?","textbook: is it far from here?
@@ -950,7 +950,7 @@ textbook.gender: none
 everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Mipo is the everyday 'from here'; mikan is more formal.","Record lad-is-far in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.39
+note: Mipo is the everyday 'from here'; mikan is more formal.","Record lad-is-far in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.39
 israel-everyday:israel/register-ladder:lad-straight-right,israel-everyday,"textbook: יָשָׁר, וְאַחַר כָּךְ יָמִינָה
 everyday: יָשָׁר, וְאַחֲרֵי זֶה יָמִינָה","textbook: yaSHAR, ve'aCHAR KACH yaMIna
 everyday: yaSHAR, ve'acharEI ZE yaMIna","textbook: straight, and afterwards right
@@ -962,7 +962,7 @@ everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
 note: Both patterns are heard. Smola means left.
-confidenceReason: Which one is more frequent was not checked.","Record lad-straight-right in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.40
+confidenceReason: Which one is more frequent was not checked.","Record lad-straight-right in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.40
 israel-everyday:israel/register-ladder:lad-lost,israel-everyday,"textbook: אֲנִי אָבוּד
 textbook.forms.m: אֲנִי אָבוּד
 textbook.forms.f: אֲנִי אֲבוּדָה
@@ -978,7 +978,7 @@ everyday.register: casual
 everyday.gender: none
 genderNote: The first line changes with your own gender (avud / avuda). The second does not.
 note: The past-tense 'I' form is the same for men and women, so the everyday line avoids the gender choice.
-confidenceReason: Whether halachti le'ibud is the most natural phrase here is uncertain.","Record lad-lost in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.41
+confidenceReason: Whether halachti le'ibud is the most natural phrase here is uncertain.","Record lad-lost in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.41
 israel-everyday:israel/register-ladder:lad-pay-card,israel-everyday,"textbook: הַאִם אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס אַשְׁרַאי?
 everyday: אֶפְשָׁר בְּכַרְטִיס?","textbook: ha'IM efSHAR leshaLEM bekarTIS ashRAI?
 everyday: efSHAR bekarTIS?","textbook: may I pay by credit card?
@@ -989,7 +989,7 @@ textbook.gender: none
 everyday.register: neutral
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Ashrai means credit. Plain bekartis is understood.","Record lad-pay-card in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.42
+note: Ashrai means credit. Plain bekartis is understood.","Record lad-pay-card in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.42
 israel-everyday:israel/register-ladder:lad-pay-cash,israel-everyday,"textbook: אֲנִי אֲשַׁלֵּם בִּמְזֻמָּן
 everyday: בִּמְזֻמָּן, אִם אֶפְשָׁר","textbook: ani ashaLEM bimzuMAN
 everyday: bimzuMAN, im efSHAR","textbook: I will pay in cash
@@ -1000,7 +1000,7 @@ textbook.gender: none
 everyday.register: neutral
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Mezuman means cash.","Record lad-pay-cash in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.43
+note: Mezuman means cash.","Record lad-pay-cash in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.43
 israel-everyday:israel/register-ladder:lad-receipt,israel-everyday,"textbook: אֶפְשָׁר לְקַבֵּל קַבָּלָה, בְּבַקָּשָׁה?
 everyday: אֶפְשָׁר קַבָּלָה?","textbook: efSHAR lekaBEL kabaLA, bevakaSHA?
 everyday: efSHAR kabaLA?","textbook: may I have a receipt, please?
@@ -1011,7 +1011,7 @@ textbook.gender: none
 everyday.register: neutral
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Same idea as the bill: efshar plus the noun.","Record lad-receipt in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.44
+note: Same idea as the bill: efshar plus the noun.","Record lad-receipt in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.44
 israel-everyday:israel/register-ladder:lad-split-bill,israel-everyday,"textbook: אֶפְשָׁר לְחַלֵּק אֶת הַחֶשְׁבּוֹן?
 everyday: נְחַלֵּק אֶת זֶה?","textbook: efSHAR lechaLEK et hacheshBON?
 everyday: nechaLEK et ZE?","textbook: can we divide the bill?
@@ -1023,7 +1023,7 @@ everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
 note: Ask when ordering, not after, if you can: some places make this easier than others.
-confidenceReason: Practice varies by place.","Record lad-split-bill in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.45
+confidenceReason: Practice varies by place.","Record lad-split-bill in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.45
 israel-everyday:israel/register-ladder:lad-too-expensive,israel-everyday,"textbook: הַמְּחִיר גָּבוֹהַּ מִדַּי
 everyday: זֶה קְצָת יָקָר","textbook: hamechIR gaVOAH miDAI
 everyday: ZE ktsat yaKAR","textbook: the price is too high
@@ -1034,7 +1034,7 @@ textbook.gender: none
 everyday.register: neutral
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Ktsat ('a bit') keeps it polite. Haggling is not appropriate everywhere: see the etiquette card.","Record lad-too-expensive in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.46
+note: Ktsat ('a bit') keeps it polite. Haggling is not appropriate everywhere: see the etiquette card.","Record lad-too-expensive in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.46
 israel-everyday:israel/register-ladder:lad-discount,israel-everyday,"textbook: הַאִם תּוּכַל לַעֲשׂוֹת לִי הַנָּחָה?
 textbook.forms.m: הַאִם תּוּכַל לַעֲשׂוֹת לִי הַנָּחָה?
 textbook.forms.f: הַאִם תּוּכְלִי לַעֲשׂוֹת לִי הַנָּחָה?
@@ -1054,7 +1054,7 @@ everyday.register: casual
 everyday.gender: addressee
 genderNote: Both lines change with the gender of the seller: tuchal / tuchli and ta'ase / ta'asi.
 note: Ta'ase li mechir ('make me a price') is a phrase commonly heard in markets. Smile and be ready to accept no.
-confidenceReason: Idiom is familiar from general knowledge; not confirmed with a native speaker.","Record lad-discount in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.47
+confidenceReason: Idiom is familiar from general knowledge; not confirmed with a native speaker.","Record lad-discount in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.47
 israel-everyday:israel/register-ladder:lad-if-two,israel-everyday,"textbook: אִם אֶקַּח שְׁנַיִם, מָה יִהְיֶה הַמְּחִיר?
 everyday: אִם אֶקַּח שְׁנַיִם, כַּמָּה זֶה יוֹצֵא?","textbook: im eKACH shnaYIM, ma yihYE hamechIR?
 everyday: im eKACH shnaYIM, kaMA ze yoTSE?","textbook: if I take two, what will the price be?
@@ -1066,7 +1066,7 @@ everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
 note: Kama ze yotse is a natural way to ask the total.
-confidenceReason: Idiom from general knowledge.","Record lad-if-two in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.48
+confidenceReason: Idiom from general knowledge.","Record lad-if-two in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.48
 israel-everyday:israel/register-ladder:lad-polite-no,israel-everyday,"textbook: תּוֹדָה, אֲנִי אַחְשֹׁב עַל זֶה
 everyday: תּוֹדָה, אוּלַי בַּפַּעַם הַבָּאָה","textbook: toDA, ani achSHOV al ZE
 everyday: toDA, uLAI bapa'AM haba'A","textbook: thanks, I'll think about it
@@ -1077,7 +1077,7 @@ textbook.gender: none
 everyday.register: neutral
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Both are polite and neither needs a gender choice.","Record lad-polite-no in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.49
+note: Both are polite and neither needs a gender choice.","Record lad-polite-no in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.49
 israel-everyday:israel/register-ladder:lad-from,israel-everyday,"textbook: מֵאַיִן אַתָּה?
 textbook.forms.m: מֵאַיִן אַתָּה?
 textbook.forms.f: מֵאַיִן אַתְּ?
@@ -1096,7 +1096,7 @@ textbook.gender: addressee
 everyday.register: neutral
 everyday.gender: addressee
 genderNote: Both lines change with the person you ask: ata (to a man) / at (to a woman).
-note: Me'ayin is literary. Me'eifo is the everyday way. Both change with the gender of the listener.","Record lad-from in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.50
+note: Me'ayin is literary. Me'eifo is the everyday way. Both change with the gender of the listener.","Record lad-from in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.50
 israel-everyday:israel/register-ladder:lad-speak-english,israel-everyday,"textbook: הַאִם אַתָּה מְדַבֵּר אַנְגְּלִית?
 textbook.forms.m: הַאִם אַתָּה מְדַבֵּר אַנְגְּלִית?
 textbook.forms.f: הַאִם אַתְּ מְדַבֶּרֶת אַנְגְּלִית?
@@ -1115,7 +1115,7 @@ textbook.gender: addressee
 everyday.register: neutral
 everyday.gender: addressee
 genderNote: Both lines change with the person you ask.
-note: A rising voice makes the question; ha'im is not needed.","Record lad-speak-english in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.51
+note: A rising voice makes the question; ha'im is not needed.","Record lad-speak-english in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.51
 israel-everyday:israel/register-ladder:lad-still-learning,israel-everyday,"textbook: הָעִבְרִית שֶׁלִּי עֲדַיִן לֹא טוֹבָה
 everyday: אֲנִי עוֹד לוֹמֵד
 everyday.forms.m: אֲנִי עוֹד לוֹמֵד
@@ -1130,7 +1130,7 @@ textbook.gender: none
 everyday.register: casual
 everyday.gender: speaker
 genderNote: The everyday line changes with your own gender (lomed / lomedet).
-note: Telling people you are still learning is a good way to get them to speak slowly and to stay in Hebrew.","Record lad-still-learning in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.52
+note: Telling people you are still learning is a good way to get them to speak slowly and to stay in Hebrew.","Record lad-still-learning in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.52
 israel-everyday:israel/register-ladder:lad-slower,israel-everyday,"textbook: הַאִם תּוּכַל לְדַבֵּר לְאַט יוֹתֵר?
 textbook.forms.m: הַאִם תּוּכַל לְדַבֵּר לְאַט יוֹתֵר?
 textbook.forms.f: הַאִם תּוּכְלִי לְדַבֵּר לְאַט יוֹתֵר?
@@ -1149,7 +1149,7 @@ textbook.gender: addressee
 everyday.register: casual
 everyday.gender: addressee
 genderNote: Both lines change with the gender of the person you are asking.
-note: Always add bevakasha when using an imperative with someone you do not know.","Record lad-slower in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.53
+note: Always add bevakasha when using an imperative with someone you do not know.","Record lad-slower in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.53
 israel-everyday:israel/register-ladder:lad-nice-to-meet,israel-everyday,"textbook: נָעִים מְאוֹד לְהַכִּיר אוֹתְךָ
 textbook.forms.m: נָעִים מְאוֹד לְהַכִּיר אוֹתְךָ
 textbook.forms.f: נָעִים מְאוֹד לְהַכִּיר אוֹתָךְ
@@ -1164,7 +1164,7 @@ textbook.gender: addressee
 everyday.register: neutral
 everyday.gender: none
 genderNote: The textbook line changes with the person you meet (otcha / otach). The short line does not.
-note: The short form is complete in itself and has no gender.","Record lad-nice-to-meet in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.54
+note: The short form is complete in itself and has no gender.","Record lad-nice-to-meet in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.54
 israel-everyday:israel/register-ladder:lad-what-do-you-do,israel-everyday,"textbook: בְּמָה אַתָּה עוֹבֵד?
 textbook.forms.m: בְּמָה אַתָּה עוֹבֵד?
 textbook.forms.f: בְּמָה אַתְּ עוֹבֶדֶת?
@@ -1184,7 +1184,7 @@ everyday.register: casual
 everyday.gender: addressee
 genderNote: Both lines change with the person you ask.
 note: Ma ata ose bachayim is a common way to ask someone what they do for a living.
-confidenceReason: Relative frequency not checked.","Record lad-what-do-you-do in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.55
+confidenceReason: Relative frequency not checked.","Record lad-what-do-you-do in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.55
 israel-everyday:israel/register-ladder:lad-how-long-here,israel-everyday,"textbook: כַּמָּה זְמַן אַתָּה שׁוֹהֶה בְּיִשְׂרָאֵל?
 textbook.forms.m: כַּמָּה זְמַן אַתָּה שׁוֹהֶה בְּיִשְׂרָאֵל?
 textbook.forms.f: כַּמָּה זְמַן אַתְּ שׁוֹהָה בְּיִשְׂרָאֵל?
@@ -1204,7 +1204,7 @@ everyday.register: casual
 everyday.gender: addressee
 genderNote: Both lines change with the person you ask.
 note: Ba'aretz ('in the land') is a common way for people to say 'in Israel'.
-confidenceReason: Familiar from general knowledge; not verified.","Record lad-how-long-here in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.56
+confidenceReason: Familiar from general knowledge; not verified.","Record lad-how-long-here in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.56
 israel-everyday:israel/register-ladder:lad-sorry-late,israel-everyday,"textbook: אֲנִי מִצְטַעֵר עַל הָאִחוּר
 textbook.forms.m: אֲנִי מִצְטַעֵר עַל הָאִחוּר
 textbook.forms.f: אֲנִי מִצְטַעֶרֶת עַל הָאִחוּר
@@ -1219,7 +1219,7 @@ textbook.gender: speaker
 everyday.register: neutral
 everyday.gender: none
 genderNote: The textbook line changes with your own gender (mitsta'er / mitsta'eret). The everyday line does not.
-note: The past 'I' form echarti is the same for men and women.","Record lad-sorry-late in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.57
+note: The past 'I' form echarti is the same for men and women.","Record lad-sorry-late in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.57
 israel-everyday:israel/register-ladder:lad-my-mistake,israel-everyday,"textbook: הָיְתָה לִי טָעוּת
 everyday: טָעוּת שֶׁלִּי","textbook: hayTA li ta'UT
 everyday: ta'UT sheLI","textbook: I made a mistake
@@ -1231,7 +1231,7 @@ everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
 note: Ta'ut sheli is short and light.
-confidenceReason: Idiom from general knowledge.","Record lad-my-mistake in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.58
+confidenceReason: Idiom from general knowledge.","Record lad-my-mistake in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.58
 israel-everyday:israel/register-ladder:lad-no-worries,israel-everyday,"textbook: אֵין דָּבָר
 everyday: לֹא נוֹרָא","textbook: EN daVAR
 everyday: lo noRA","textbook: it's nothing
@@ -1242,7 +1242,7 @@ textbook.gender: none
 everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Lo nora is what you will commonly hear day to day.","Record lad-no-worries in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.59
+note: Lo nora is what you will commonly hear day to day.","Record lad-no-worries in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.59
 israel-everyday:israel/register-ladder:lad-phone-answer,israel-everyday,"textbook: שָׁלוֹם, מִי מְדַבֵּר?
 everyday: הַלּוֹ?","textbook: shaLOM, MI medaBER?
 everyday: haLO?","textbook: hello, who is speaking?
@@ -1254,7 +1254,7 @@ everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
 note: Halo is the usual phone greeting. Shalom is not usual for answering a call.
-confidenceReason: General knowledge; not measured.","Record lad-phone-answer in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.60
+confidenceReason: General knowledge; not measured.","Record lad-phone-answer in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.60
 israel-everyday:israel/register-ladder:lad-call-back,israel-everyday,"textbook: אֶתְקַשֵּׁר אֵלֶיךָ מְאוּחָר יוֹתֵר
 everyday: נְדַבֵּר אַחַר כָּךְ","textbook: etkaSHER eLEcha me'uCHAR yoTER
 everyday: nedaBER aCHAR kach","textbook: I will contact you later
@@ -1265,7 +1265,7 @@ textbook.gender: none
 everyday.register: casual
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Nedaber is 'we will talk' and is neutral about gender.","Record lad-call-back in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.61
+note: Nedaber is 'we will talk' and is neutral about gender.","Record lad-call-back in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.61
 israel-everyday:israel/register-ladder:lad-omw,israel-everyday,"textbook: אֲנִי בַּדֶּרֶךְ אֵלֶיךָ
 textbook.forms.m: אֲנִי בַּדֶּרֶךְ אֵלֶיךָ
 textbook.forms.f: אֲנִי בַּדֶּרֶךְ אֵלַיִךְ
@@ -1280,7 +1280,7 @@ textbook.gender: addressee
 everyday.register: casual
 everyday.gender: none
 genderNote: The textbook line changes with the person you write to (elecha / elayich). The short line does not.
-note: Chat messages are usually typed without vowel marks. We show the points here only to help you read them.","Record lad-omw in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.62
+note: Chat messages are usually typed without vowel marks. We show the points here only to help you read them.","Record lad-omw in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.62
 israel-everyday:israel/register-ladder:lad-send-location,israel-everyday,"textbook: אֶפְשָׁר לִשְׁלֹחַ לִי אֶת הַמִּקּוּם?
 everyday: תִּשְׁלַח לִי מִקּוּם
 everyday.forms.m: תִּשְׁלַח לִי מִקּוּם
@@ -1296,7 +1296,7 @@ everyday.register: casual
 everyday.gender: addressee
 genderNote: The everyday line changes with the person you write to (tishlach / tishlechi).
 note: Mikum means 'location'. Some people use the English loanword in chat, which we did not verify.
-confidenceReason: Pointing of the feminine form and the loanword usage are the doubts.","Record lad-send-location in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.63
+confidenceReason: Pointing of the feminine form and the loanword usage are the doubts.","Record lad-send-location in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.63
 israel-everyday:israel/register-ladder:lad-meet-at,israel-everyday,"textbook: נִפָּגֵשׁ בְּשָׁעָה שְׁמוֹנֶה
 everyday: נִפָּגֵשׁ בִּשְׁמוֹנֶה","textbook: nipaGESH besha'A shmoNE
 everyday: nipaGESH bishmoNE","textbook: we'll meet at eight o'clock
@@ -1307,7 +1307,7 @@ textbook.gender: none
 everyday.register: neutral
 everyday.gender: none
 genderNote: No gender-marked words in either line.
-note: Drop 'sha'a' (hour) in everyday speech.","Record lad-meet-at in data/israel/register-ladder.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.64
+note: Drop 'sha'a' (hour) in everyday speech.","Record lad-meet-at in data/israel/register-ladder.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/register-ladder.json#pairs.64
 israel-everyday:israel/scenarios:sc-cafe,israel-everyday,"other: אֶפְשָׁר לַעֲזוֹר?
 options.0: אֶפְשָׁר הָפוּךְ, בְּבַקָּשָׁה?
 options.1: אֲנִי רוֹצֶה לְהַזְמִין קָפֶה הָפוּךְ, בְּבַקָּשָׁה
@@ -1336,7 +1336,7 @@ options.2.role: off
 options.2.explain: Yalla plus 'quickly' sounds pushy to a stranger who is serving you.
 options.2.gender: none
 note: Register judgements are general impressions.
-confidenceReason: Register judgements are general impressions.","Record sc-cafe in data/israel/scenarios.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.0
+confidenceReason: Register judgements are general impressions.","Record sc-cafe in data/israel/scenarios.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.0
 israel-everyday:israel/scenarios:sc-bill,israel-everyday,"other: הַכֹּל בְּסֵדֶר?
 options.0: הַכֹּל מְצֻיָּן. אֶפְשָׁר חֶשְׁבּוֹן?
 options.1: הַאִם אֶפְשָׁר לְקַבֵּל אֶת הַחֶשְׁבּוֹן לְשֻׁלְחָנֵנוּ?
@@ -1361,7 +1361,7 @@ options.2.role: off
 options.2.explain: Impatient. Nu and kvar with a stranger can sound rude.
 options.2.gender: none
 note: Register judgements are general impressions.
-confidenceReason: Register judgements are general impressions.","Record sc-bill in data/israel/scenarios.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.1
+confidenceReason: Register judgements are general impressions.","Record sc-bill in data/israel/scenarios.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.1
 israel-everyday:israel/scenarios:sc-shuk-bargain,israel-everyday,"other: עֶשְׂרִים שֶׁקֶל לַקִּילוֹ
 options.0: תַּעֲשֶׂה לִי מְחִיר?
 options.1: הַאִם תִּהְיֶה מוּכָן לְהוֹרִיד אֶת הַמְּחִיר?
@@ -1390,7 +1390,7 @@ options.2.role: off
 options.2.explain: Accusing the seller will not help.
 options.2.gender: speaker
 note: Assumes a male vendor.
-confidenceReason: Assumes a male vendor.","Record sc-shuk-bargain in data/israel/scenarios.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.2
+confidenceReason: Assumes a male vendor.","Record sc-shuk-bargain in data/israel/scenarios.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.2
 israel-everyday:israel/scenarios:sc-pharmacy,israel-everyday,"other: אֶפְשָׁר לַעֲזוֹר?
 options.0: כּוֹאֵב לִי הָרֹאשׁ. יֵשׁ מַשֶּׁהוּ לָזֶה?
 options.1: אֲנִי סוֹבֵל מִכְּאֵב רֹאשׁ. אֶפְשָׁר תְּרוּפָה?
@@ -1419,7 +1419,7 @@ options.2.role: off
 options.2.explain: Slang for a professional, and balagan means 'mess', not pain.
 options.2.gender: none
 note: Assumes a male pharmacist.
-confidenceReason: Assumes a male pharmacist.","Record sc-pharmacy in data/israel/scenarios.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.3
+confidenceReason: Assumes a male pharmacist.","Record sc-pharmacy in data/israel/scenarios.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.3
 israel-everyday:israel/scenarios:sc-bus,israel-everyday,"options.0: זֶה הוֹלֵךְ לַמֶּרְכָּז?
 options.1: הַאִם הָאוֹטוֹבּוּס הַזֶּה נוֹסֵעַ לַמֶּרְכָּז?
 options.2: נֶהָג, הַמֶּרְכָּז, כֵּן אוֹ לֹא?","options.0: ZE hoLECH lamerKAZ?
@@ -1442,7 +1442,7 @@ options.2.role: off
 options.2.explain: Curt, and 'driver' as a form of address sounds blunt.
 options.2.gender: none
 note: Register judgements are general impressions.
-confidenceReason: Register judgements are general impressions.","Record sc-bus in data/israel/scenarios.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.4
+confidenceReason: Register judgements are general impressions.","Record sc-bus in data/israel/scenarios.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.4
 israel-everyday:israel/scenarios:sc-taxi,israel-everyday,"options.0: תַּעֲצֹר פֹּה, בְּבַקָּשָׁה
 options.1: הַאִם תִּהְיֶה מוּכָן לַעֲצֹר בְּמָקוֹם זֶה?
 options.2: דַּי, דַּי, תַּעֲצֹר כְּבָר!","options.0: ta'aTSOR PO, bevakaSHA
@@ -1465,7 +1465,7 @@ options.2.role: off
 options.2.explain: Sounds panicky or annoyed for a simple request.
 options.2.gender: none
 note: Assumes a male driver.
-confidenceReason: Assumes a male driver.","Record sc-taxi in data/israel/scenarios.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.5
+confidenceReason: Assumes a male driver.","Record sc-taxi in data/israel/scenarios.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.5
 israel-everyday:israel/scenarios:sc-train,israel-everyday,"other: שָׁלוֹם, לְאָן?
 options.0: הָלוֹךְ וָשׁוֹב לְחֵיפָה, בְּבַקָּשָׁה
 options.1: אֲנִי רוֹצֶה לִרְכֹּשׁ כַּרְטִיס הָלוֹךְ וָשׁוֹב לְחֵיפָה
@@ -1494,7 +1494,7 @@ options.2.role: off
 options.2.explain: Too slangy and pushy for a window.
 options.2.gender: none
 note: Register judgements are general impressions.
-confidenceReason: Register judgements are general impressions.","Record sc-train in data/israel/scenarios.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.6
+confidenceReason: Register judgements are general impressions.","Record sc-train in data/israel/scenarios.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.6
 israel-everyday:israel/scenarios:sc-directions,israel-everyday,"options.0: סְלִיחָה, אֵיפֹה הַדֹּאַר?
 options.1: סְלִיחָה אֲדוֹנִי, הַאִם תּוּכַל לוֹמַר לִי הֵיכָן נִמְצָא סְנִיף הַדֹּאַר?
 options.2: הֵי אָחִי, אֵיפֹה הַדֹּאַר?","options.0: sliCHA, eiFO haDO'ar?
@@ -1517,7 +1517,7 @@ options.2.role: off
 options.2.explain: Slang for an older stranger. Save achi for peers.
 options.2.gender: none
 note: Register judgements are general impressions.
-confidenceReason: Register judgements are general impressions.","Record sc-directions in data/israel/scenarios.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.7
+confidenceReason: Register judgements are general impressions.","Record sc-directions in data/israel/scenarios.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.7
 israel-everyday:israel/scenarios:sc-thanks,israel-everyday,"options.0: תּוֹדָה!
 options.1: אֲנִי מוֹדֶה לְךָ מְאוֹד עַל כָּךְ
 options.1.forms.m: אֲנִי מוֹדֶה לְךָ מְאוֹד עַל כָּךְ
@@ -1543,7 +1543,7 @@ options.1.gender: speaker
 options.2.role: off
 options.2.explain: That is a reply to thanks, not a way to give it.
 options.2.gender: none
-note: The wrong option is wrong in function.","Record sc-thanks in data/israel/scenarios.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.8
+note: The wrong option is wrong in function.","Record sc-thanks in data/israel/scenarios.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.8
 israel-everyday:israel/scenarios:sc-late,israel-everyday,"options.0: סְלִיחָה שֶׁאֵחַרְתִּי!
 options.1: אֲנִי מִצְטַעֵר מְאוֹד עַל הָאִחוּר
 options.1.forms.m: אֲנִי מִצְטַעֵר מְאוֹד עַל הָאִחוּר
@@ -1574,7 +1574,7 @@ options.2.role: off
 options.2.explain: Defensive instead of apologising.
 options.2.gender: speaker
 note: The wrong option is wrong in tone, not grammar.
-confidenceReason: The wrong option is wrong in tone, not grammar.","Record sc-late in data/israel/scenarios.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.9
+confidenceReason: The wrong option is wrong in tone, not grammar.","Record sc-late in data/israel/scenarios.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.9
 israel-everyday:israel/scenarios:sc-phone,israel-everyday,"options.0: הַלּוֹ?
 options.1: שָׁלוֹם, מִי מְדַבֵּר, אִם אֶפְשָׁר?
 options.2: יַאלְלָה, מִי זֶה?","options.0: haLO?
@@ -1597,7 +1597,7 @@ options.2.role: off
 options.2.explain: Rude for an unknown caller.
 options.2.gender: none
 note: Register judgements are general impressions.
-confidenceReason: Register judgements are general impressions.","Record sc-phone in data/israel/scenarios.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.10
+confidenceReason: Register judgements are general impressions.","Record sc-phone in data/israel/scenarios.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.10
 israel-everyday:israel/scenarios:sc-omw,israel-everyday,"other: כַּמָּה זְמַן עוֹד?
 options.0: בַּדֶּרֶךְ, עוֹד חָמֵשׁ דַּקּוֹת
 options.1: אֲנִי נִמְצָא בַּדֶּרֶךְ וְאַגִּיעַ בְּעוֹד כַּחֲמֵשׁ דַּקּוֹת
@@ -1626,7 +1626,7 @@ options.2.role: off
 options.2.explain: Hineni is a biblical word; it sounds like a joke here.
 options.2.gender: none
 note: The wrong option sounds archaic.
-confidenceReason: The wrong option sounds archaic.","Record sc-omw in data/israel/scenarios.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.11
+confidenceReason: The wrong option sounds archaic.","Record sc-omw in data/israel/scenarios.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.11
 israel-everyday:israel/scenarios:sc-meet-parent,israel-everyday,"options.0: נָעִים מְאוֹד
 options.1: אֲנִי שָׂמֵחַ לְהִתְוַדַּע אֵלֶיךָ בְּאֹפֶן אִישִׁי
 options.1.forms.m: אֲנִי שָׂמֵחַ לְהִתְוַדַּע אֵלֶיךָ בְּאֹפֶן אִישִׁי
@@ -1653,7 +1653,7 @@ options.2.role: off
 options.2.explain: Too casual for meeting a friend's father.
 options.2.gender: none
 note: Register judgements are general impressions.
-confidenceReason: Register judgements are general impressions.","Record sc-meet-parent in data/israel/scenarios.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.12
+confidenceReason: Register judgements are general impressions.","Record sc-meet-parent in data/israel/scenarios.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.12
 israel-everyday:israel/scenarios:sc-repeat,israel-everyday,"options.0: סְלִיחָה, אֶפְשָׁר יוֹתֵר לְאַט?
 options.1: הַאִם יִתָּכֵן לַחֲזֹר עַל הַדְּבָרִים לְאַט יוֹתֵר?
 options.2: מָה? מָה? אֲנִי לֹא מֵבִין כְּלוּם!
@@ -1680,7 +1680,7 @@ options.2.role: off
 options.2.explain: Blunt and a little panicky.
 options.2.gender: speaker
 note: Register judgements are general impressions.
-confidenceReason: Register judgements are general impressions.","Record sc-repeat in data/israel/scenarios.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.13
+confidenceReason: Register judgements are general impressions.","Record sc-repeat in data/israel/scenarios.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.13
 israel-everyday:israel/scenarios:sc-agree,israel-everyday,"other: עֲשָׂרָה בְּסֵדֶר?
 options.0: כֵּן, עֲשָׂרָה בְּסֵדֶר
 options.1: אֲנִי מַסְכִּים לַמּוֹעֵד הַמּוּצָע
@@ -1709,7 +1709,7 @@ options.2.role: off
 options.2.explain: Slang for an official.
 options.2.gender: none
 note: Register judgements are general impressions.
-confidenceReason: Register judgements are general impressions.","Record sc-agree in data/israel/scenarios.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.14
+confidenceReason: Register judgements are general impressions.","Record sc-agree in data/israel/scenarios.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.14
 israel-everyday:israel/scenarios:sc-shabbat,israel-everyday,"options.0: שַׁבָּת שָׁלוֹם!
 options.1: אֲנִי מְאַחֵל לְךָ שַׁבָּת שָׁלוֹם
 options.1.forms.m: אֲנִי מְאַחֵל לְךָ שַׁבָּת שָׁלוֹם
@@ -1735,4 +1735,4 @@ options.1.gender: speaker
 options.2.role: off
 options.2.explain: Said once Shabbat has ended, not on Friday.
 options.2.gender: none
-note: The wrong option is wrong in timing.","Record sc-shabbat in data/israel/scenarios.json. File note: ""Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.15
+note: The wrong option is wrong in timing.","Record sc-shabbat in data/israel/scenarios.json. File note: ""Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, tra"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/israel/scenarios.json#scenarios.15

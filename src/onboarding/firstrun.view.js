@@ -95,19 +95,23 @@ export function mount(root, ctx) {
     if (!D) { body.replaceChildren(h('p', {}, loadError ? 'The plan data could not be loaded. You can still start.' : 'Loading...'), skipNow()); return; }
     const opts = D.plans.minutesOptions;
     let mins = rec.minutesPerDay || D.plans.defaultMinutes;
-    const fs = fieldset('How many minutes a day?', 'Your week is planned around this. Lessons longer than it are split over several days.',
+    let goal = settings.get('goal') || 'read';
+    const goalFs = fieldset('What do you want Hebrew for?', 'This chooses which lessons your week and the Today card start with. You can change it later in Settings.',
+      ...[['read', 'Reading the siddur', 'Prayer book Hebrew: letters, vowels, prayer lines.'], ['israel', 'Speaking in Israel', 'Everyday words and phrases.'], ['both', 'Both', 'Reading lessons first, speaking lessons alongside.']]
+        .map(([id, label, d]) => radio('goal', id, label, d, goal === id, (v) => { goal = v; })));
+    const fs = fieldset('How many minutes a day?', 'This is your own study goal. Your week plan is one lesson a day.',
       ...opts.map((m) => radio('minutes', String(m), `${m} minutes`, '', mins === m, (v) => { mins = Number(v); })));
-    const form = h('form', { id: 'ob-form-minutes', onsubmit: (e) => { e.preventDefault(); rec = setMinutes(rec, mins, D.plans); save(); if (DAILY_GOALS.includes(rec.minutesPerDay)) { try { store.set(DAILY_GOAL_KEY, rec.minutesPerDay); } catch { /* best effort */ } } say(`Planned for ${rec.minutesPerDay} minutes a day. This is your study goal on Home; the streak counts a day at 5 minutes.`); go('plan'); } }, fs,
+    const form = h('form', { id: 'ob-form-minutes', onsubmit: (e) => { e.preventDefault(); rec = setMinutes(rec, mins, D.plans); save(); try { settings.set({ goal }); } catch { /* best effort */ } if (DAILY_GOALS.includes(rec.minutesPerDay)) { try { store.set(DAILY_GOAL_KEY, rec.minutesPerDay); } catch { /* best effort */ } } say(`Planned for ${rec.minutesPerDay} minutes a day. This is your study goal on Home; the streak counts a day at 5 minutes.`); go('plan'); } }, goalFs, fs,
       h('div', { class: 'row' }, h('button', { type: 'submit', class: 'btn', id: 'ob-minutes-continue' }, 'Show my week')));
-    body.replaceChildren(h('h2', {}, 'Your time'), form, skipNow());
+    body.replaceChildren(h('h2', {}, 'Your goal and time'), form, skipNow());
   }
 
   // ---- Stage 3: plan card ----
   function renderPlan() {
     const placement = store.get(PLACEMENT_KEY);
     let completed = []; try { completed = Object.keys(store.get(PROGRESS_KEY)?.completed || {}); } catch { /* none */ }
-    const plan = D ? buildPlan({ record: rec, placement, lessons: D.lessons, plans: D.plans, hasRoute: ctx.hasRoute, completed }) : null;
-    const placed = plan && plan.source === 'placement' ? plan.startLesson : null;
+    const plan = D ? buildPlan({ record: rec, placement, lessons: D.lessons, plans: D.plans, hasRoute: ctx.hasRoute, completed, goal: settings.get('goal') }) : null;
+    const placed = plan && (plan.source === 'placement' || settings.get('goal') === 'israel') ? plan.startLesson : null;
     const primaryHref = placed ? '#/learn?lesson=' + encodeURIComponent(placed) : startHref();
     const primaryLabel = placed ? `Start lesson ${placed}` : `Start: ${startTitle()}`;
     const dayNode = (d) => h('li', {}, h('strong', {}, d.label), h('span', { class: 'muted' }, ` (${d.minutes} min)`),

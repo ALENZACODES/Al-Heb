@@ -41,6 +41,7 @@ export const posGroup = (pos) => POS_GROUPS[pos] || 'function';
 export function eligible(words) {
   const seen = new Set(); const out = []; const firstOfSpelling = new Map();
   for (const w of words.slice().sort((a, b) => (a.frequencyRank ?? 1e9) - (b.frequencyRank ?? 1e9) || (a.id < b.id ? -1 : 1))) {
+    if (w.flags && w.flags.hidden) continue; // suppressed by a correction (offensive gloss pending review)
     if (w.kind !== 'word' || !w.pos || w.pos === 'unknown' || w.pos === 'phrase' || w.frequencyRank == null) continue;
     const key = w.he + '|' + w.pos;
     if (seen.has(key)) continue;

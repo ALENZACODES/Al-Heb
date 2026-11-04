@@ -109,14 +109,16 @@ test('redo: existing cmd paste files and next1000 are untouched by the redo file
 import { altTextFor, buildAltText, interAltText, MAX_LEN } from '../tools/images/alt_text.mjs';
 import { loadSlots } from '../tools/images/build_inter.mjs';
 import { loadBlockJ } from '../tools/images/block_j_rows.mjs';
+import { loadRun3 } from '../tools/images/build_run3.mjs';
 
 test('alt text: the manifest carries one entry per ingested image, matching a fresh build', () => {
   const man = JSON.parse(readFileSync(join(ROOT, 'data/images/generated-manifest.json'), 'utf8'));
   assert.ok(man.altText, 'generated-manifest.json has no altText map: run node tools/images/alt_text.mjs');
   const interIds = loadSlots().map((s) => s.id);
   const jIds = loadBlockJ().map((r) => r.id);
-  assert.deepEqual(Object.keys(man.altText).sort(), [...Object.keys(prov), ...interIds, ...jIds].sort());
-  assert.deepEqual(man.altText, buildAltText({ images: prov }, loadSlots(), loadBlockJ()), 'altText is stale: run node tools/images/alt_text.mjs');
+  const run3Ids = loadRun3().map((r) => r.id);
+  assert.deepEqual(Object.keys(man.altText).sort(), [...Object.keys(prov), ...interIds, ...jIds, ...run3Ids].sort());
+  assert.deepEqual(man.altText, buildAltText({ images: prov }, loadSlots(), loadBlockJ(), loadRun3()), 'altText is stale: run node tools/images/alt_text.mjs');
   for (const [id, t] of Object.entries(man.altText)) {
     assert.ok(typeof t === 'string' && t.length >= 12 && t.length <= MAX_LEN, `${id}: ${t}`);
     assert.match(t, /^[A-Z"']/, id);

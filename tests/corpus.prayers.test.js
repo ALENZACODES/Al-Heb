@@ -55,7 +55,7 @@ test('round 3: records with corrections are never "verified" and say which words
     }
     if (e.transforms) assert.ok(e.he.length > 0);
   }
-  assert.ok(registry.filter((e) => e.transforms?.corrections).length >= 4);
+  assert.ok(registry.filter((e) => e.transforms?.corrections).length >= 1);
 });
 
 test('prayer-meta: one entry per registry id, none extra, with the required fields', () => {

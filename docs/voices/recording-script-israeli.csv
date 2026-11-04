@@ -482,7 +482,7 @@ order,id,pointed_hebrew,read_aloud,ipa,stressed_syllable,syllables,stress_rule,g
 481,h13c6683f,הֵכִיל,hekhil,he.ˈχil,2 of 2,הֵ [כִיל],default milra (final),to contain,verb,0,,,
 482,hd04514bf,הָרַג,harag,ha.ˈʁaɡ,2 of 2,הָ [רַג],default milra (final),to kill (put to death),verb,0,,,
 483,h720b8d19,אַמָּה,ammah,a.ˈma,2 of 2,אַ [מָּה],milra (words.json ipa agrees),forearm,noun,0,,,
-484,h8ea4d152,לַעֲזָאזֵל,la'azazel,la.a.za.ˈzel,4 of 4,לַ עֲ זָא [זֵל],milra (words.json ipa agrees),"Damn!, Hell!",intj,0,,,
+484,h8ea4d152,לַעֲזָאזֵל,la'azazel,la.a.za.ˈzel,4 of 4,לַ עֲ זָא [זֵל],milra (words.json ipa agrees),an exclamation of anger or dismissal (a mild curse),intj,0,,,
 485,h3c9f9b9b,אֹהֶל,ohel,ˈo.hel,1 of 2,[אֹ] הֶל,words.json ipa stress mark,a collective term for all that covers a dead body or that a dead body covers,noun,0,,,
 486,hb9b267e3,עָמַד,amad,a.ˈmad,2 of 2,עָ [מַד],default milra (final),to stand,verb,0,,,
 487,h0faf39fb,מִישֶׁהוּ,mishehu,ˈmi.ʃe.hu,1 of 3,[מִי] שֶׁ הוּ,words.json ipa stress mark,"someone, somebody",pron,0,,,

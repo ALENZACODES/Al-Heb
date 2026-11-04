@@ -1,6 +1,6 @@
 # ALEF voice donor agreement and rights grant
 
-> **DRAFT FOR A LAWYER. NOT LEGAL ADVICE. NOT READY TO SIGN.** Drafted by an AI assistant, which is not a lawyer. A qualified lawyer must review and change this text for the jurisdiction(s) of the publisher and of each donor (including moral-rights rules, minors, consumer and privacy law) before any donor is asked to sign it. Bracketed items [LIKE THIS] are open. Nobody has been sent this form.
+> **DRAFT FOR A LAWYER. NOT LEGAL ADVICE. NOT READY TO SIGN.** Drafted without a lawyer. A qualified lawyer must review and change this text for the jurisdiction(s) of the publisher and of each donor (including moral-rights rules, minors, consumer and privacy law) before any donor is asked to sign it. Bracketed items [LIKE THIS] are open. Nobody has been sent this form.
 
 **Publisher:** [legal name and address of the ALEF publisher: TBD]  ("we", "us")
 **Donor:** the person who signs below ("you")

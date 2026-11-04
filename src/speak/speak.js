@@ -25,6 +25,7 @@ import { STORE_KEY, MODES, capabilities, pickMode, compare, usableItems, coerceS
 import { createRecognizer, createRecorder, createSpeaker } from './recognizer.js';
 import { contrastById, drillQueue, drillQuestion } from './pairs.js';
 import { loadDailyCard, dayKeyLocal, DAILY_PREFIX } from './daily.js';
+import { respell, congregationOf, audioNote, settingLine, LABELS as TRAD_NAMES } from '../pronunciation/forTradition.js';
 import { TRADITIONS, TRADITION_LABEL, tradition as normTradition, traditionSummary, pairLine, tradQueue, tradQuestion } from './tradition.js';
 
 export const TAB_LIST = [['say', 'Say it'], ['drills', 'Listening drills'], ['sounds', 'Sounds by tradition'], ['read', 'Read a prayer aloud'], ['shadow', 'Shadowing'], ['history', 'History']];
@@ -207,8 +208,9 @@ export function mount(root, ctx) {
   async function playModel(he, audioId, btn, { kind = 'word', rate } = {}) {
     if (busy) return; busy = true; if (btn) btn.setAttribute('disabled', '');
     try {
-      if (audioId && rate == null && audioHas(kind, audioId)) { const r = await ctx.audio.play(kind, audioId); say(r?.source === 'file' ? 'Played a recorded clip.' : 'Played the browser\'s voice, not a recording.'); }
-      else if (speaker.supported) { const r = await speaker.speak(he, { rate: rate ?? ctx?.settings?.get?.('ttsRate') }); say(r.ok ? 'Played the browser\'s voice, not a recording; its Hebrew is unverified.' : `No sound: ${errorText(r.error)}`); }
+      const trad = congregationOf(ctx?.settings), mism = trad === 'israeli' ? '' : ` ${audioNote(trad)}`;
+      if (audioId && rate == null && audioHas(kind, audioId)) { const r = await ctx.audio.play(kind, audioId); say(r?.source === 'file' ? 'Played a recorded clip.' : `Played the browser\'s voice, not a recording.${mism}`); }
+      else if (speaker.supported) { const r = await speaker.speak(he, { rate: rate ?? ctx?.settings?.get?.('ttsRate') }); say(r.ok ? `Played the browser\'s voice, not a recording; its Hebrew is unverified.${mism}` : `No sound: ${errorText(r.error)}`); }
       else say('No sound: this browser has no speech synthesis and no clip exists for this item yet.');
     } catch { say('The audio could not play.'); }
     busy = false; if (btn) btn.removeAttribute?.('disabled');
@@ -217,7 +219,7 @@ export function mount(root, ctx) {
   function question() {
     const item = items[qi], m = pickMode(caps, mode);
     const n = qi + 1;
-    const listen = el('button', { type: 'button', class: 'btn secondary', id: 'speak-listen', 'aria-label': `Listen to the model pronunciation of ${item.translit || 'this item'}`, onclick: () => playModel(item.he, item.audioId, listen) }, 'Listen');
+    const listen = el('button', { type: 'button', class: 'btn secondary', id: 'speak-listen', 'aria-label': `Listen to the model pronunciation of ${(respell(item.he, congregationOf(ctx?.settings)) || item.translit) || 'this item'}`, onclick: () => playModel(item.he, item.audioId, listen) }, 'Listen');
     const area = el('div', { class: 'sk-opts', role: 'group', 'aria-label': 'Your attempt' });
     const verdict = el('div', { class: 'sk-verdict', id: 'speak-verdict', hidden: true });
     const nextRow = el('div', { class: 'sk-row' });
@@ -294,7 +296,7 @@ export function mount(root, ctx) {
       el('p', { class: 'muted' }, `${set.title}: ${n} of ${items.length}`),
       el('h2', { tabindex: '-1', id: 'speak-q' }, m === 'self' ? 'Listen, then say it out loud' : 'Listen, then say it'),
       el('div', { class: 'sk-he' }, heText(item.he)),
-      el('p', { class: 'sk-sub' }, el('span', { lang: 'he-Latn' }, item.translit || ''), item.translit ? ' - ' : '', item.en),
+      el('p', { class: 'sk-sub' }, el('span', { lang: 'he-Latn' }, (respell(item.he, congregationOf(ctx?.settings)) || item.translit) || ''), (respell(item.he, congregationOf(ctx?.settings)) || item.translit) ? ' - ' : '', item.en),
       el('div', { class: 'sk-row' }, listen),
       area, verdict, nextRow,
       el('div', { class: 'sk-row' }, skip, el('button', { type: 'button', class: 'btn secondary', id: 'speak-finish', onclick: () => end() }, 'Finish now')),
@@ -359,7 +361,7 @@ export function mount(root, ctx) {
         const correct = o.id === q.answer;
         if (correct) dright++;
         for (const b of area.children) b.setAttribute?.('disabled', '');
-        const reveal = el('p', {}, 'The word was ', heText(q.played.he), ` (${q.played.translit}, ${q.played.en}).`);
+        const reveal = el('p', {}, 'The word was ', heText(q.played.he), ` (${(respell(q.played.he, congregationOf(ctx?.settings)) || q.played.translit)}, ${q.played.en}).`);
         const text = correct ? 'Right.' : `Not this time: it was ${q.kind === 'pair' ? q.played.en : c.sounds.find((s) => s.id === q.answer)?.label}.`;
         verdict.hidden = false; verdict.removeAttribute?.('hidden'); verdict.replaceChildren(el('p', {}, el('strong', {}, text)), reveal);
         say(`${text} ${q.played.translit}, ${q.played.en}.`);
@@ -589,6 +591,8 @@ export function mount(root, ctx) {
       el('p', { class: 'muted' }, `${prayer.title}: line ${n} of ${rLines.length}`),
       el('h2', { tabindex: '-1', id: `${kind}-q` }, kind === 'read' ? 'Read this line out loud' : 'Listen, then say it back'),
       lineBox,
+      el('p', { class: 'muted', id: `${kind}-setting` }, settingLine(congregationOf(ctx?.settings))),
+      el('p', { class: 'sk-sub', id: `${kind}-respell`, lang: 'he-Latn' }, respell(line.he, congregationOf(ctx?.settings))),
       el('div', { class: 'sk-row' }, ...controls),
       kind === 'shadow' ? area : el('div', { class: 'sk-opts', role: 'group', 'aria-label': 'Your reading' }),
       verdict, nextRow,

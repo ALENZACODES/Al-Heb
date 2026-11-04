@@ -6,6 +6,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { execFileSync, spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { memoDisk } from './helpers/memo.js';
 import { buildAll, idIndex, toCsv, parseCsv, toHtml, COLUMNS } from '../tools/review/packs-lib.mjs';
 import { PACKS, FAMILIES, REVIEWER_TYPES } from '../tools/review/instructions.mjs';
 
@@ -14,7 +15,7 @@ const fx = (n) => path.join(root, 'tests', 'review-fixtures', n);
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'alef-review-'));
 const ingest = (args) => spawnSync('node', [path.join(root, 'tools/review/ingest.mjs'), ...args], { encoding: 'utf8' });
 const sha = (f) => crypto.createHash('sha256').update(fs.readFileSync(path.join(root, f))).digest('hex');
-const all = buildAll(root);
+const all = memoDisk('review-packs', ['data', 'src', 'tools/review'], () => buildAll(root));
 
 test('every pack has rows, the required columns and globally unique ids', () => {
   assert.equal(all.length, PACKS.length);

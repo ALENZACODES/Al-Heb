@@ -23,7 +23,7 @@
    "translit": "ir",
    "en": "city",
    "kind": "word",
-   "audioId": null,
+   "audioId": "he3b1acbd",
    "source": "data/vocab/words.json"
   },
   {
@@ -77,7 +77,7 @@
    "translit": "gevul",
    "en": "a border, a boundary, a limit, a line",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h46a5a512",
    "source": "data/vocab/words.json"
   },
   {
@@ -104,7 +104,7 @@
    "translit": "imen",
    "en": "to train",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hea72b7d7",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "notar",
    "en": "to be left, to remain",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h3a789358",
    "source": "data/vocab/words.json"
   }
  ]

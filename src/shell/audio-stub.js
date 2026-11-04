@@ -16,6 +16,8 @@ export function createStubAudio({ settings } = {}) {
   }
   const synth = typeof speechSynthesis !== 'undefined' ? speechSynthesis : null;
   const api = {
+    /** iOS: first speak() must happen inside a user gesture; app.js calls this on the first pointerdown/keydown */
+    unlock() { try { if (synth && typeof SpeechSynthesisUtterance === 'function') { const u = new SpeechSynthesisUtterance(''); u.volume = 0; synth.speak(u); } } catch { /* ignore */ } },
     flags: ['tts-fallback'],
     source: 'stub',
     available: !!synth,

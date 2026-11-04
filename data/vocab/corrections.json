@@ -4,8 +4,11 @@
  "note": "Deterministic, safe corrections to data/vocab/words.json, applied by tools/vocab/apply_corrections.mjs. Each entry: id, field, old, new, reason. Judgement calls are NOT here: see docs/vocab/JUDGEMENT.md.",
  "counts": {
   "removed": 2,
-  "translit": 67,
-  "forms": 1
+  "translit": 164,
+  "forms": 1,
+  "glosses": 20,
+  "hidden": 2,
+  "examples": 18
  },
  "corrections": [
   {
@@ -134,8 +137,8 @@
    "id": "h21259289",
    "field": "translit",
    "old": "okhicha",
-   "new": "hokhicha",
-   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+   "new": "hokhiach",
+   "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form Also furtive patach (-ach): see the audit response, item 6."
   },
   {
    "id": "h1610dda2",
@@ -507,6 +510,1350 @@
    "old": "מְְזָגִים",
    "new": "מְזָגִים",
    "reason": "doubled sheva (U+05B0 twice on the mem) reduced to one; no letter or other mark changes, the word is the same plural of מֶזֶג"
+  },
+  {
+   "id": "h974f415a",
+   "field": "en",
+   "old": "fucking, retarded",
+   "new": "slang (gloss withheld pending review)",
+   "reason": "gloss withheld: the source gloss is a slur or vulgarity and the correct plain meaning is not certain from the record; hidden from learner lists pending native review (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h974f415a",
+   "field": "flags.hidden",
+   "old": null,
+   "new": true,
+   "reason": "suppress entry: gloss withheld: the source gloss is a slur or vulgarity and the correct plain meaning is not certain from the record; hidden from learner lists pending native review (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h8e35f713",
+   "field": "en",
+   "old": "fucker (one who has a lot of sex)",
+   "new": "slang (gloss withheld pending review)",
+   "reason": "gloss withheld: the source gloss is a slur or vulgarity and the correct plain meaning is not certain from the record; hidden from learner lists pending native review (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h8e35f713",
+   "field": "flags.hidden",
+   "old": null,
+   "new": true,
+   "reason": "suppress entry: gloss withheld: the source gloss is a slur or vulgarity and the correct plain meaning is not certain from the record; hidden from learner lists pending native review (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h31ff5eef",
+   "field": "en",
+   "old": "Retarded, mentally defective",
+   "new": "Pointless, foolish",
+   "reason": "the source gloss \"Retarded, mentally defective\" is a slur; the record's own second sense \"Pointless, foolish\" is kept as the gloss (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h31ff5eef",
+   "field": "alt",
+   "old": [
+    "Pointless, foolish"
+   ],
+   "new": [],
+   "reason": "the alt sense moved into the gloss (see the en correction for this id)"
+  },
+  {
+   "id": "h8ea4d152",
+   "field": "en",
+   "old": "Damn!, Hell!",
+   "new": "an exclamation of anger or dismissal (a mild curse)",
+   "reason": "the source gloss \"Damn!, Hell!\" is a profane interjection; the record is an interjection, so a neutral description of that is used (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h8ea4d152",
+   "field": "alt",
+   "old": [
+    "Screw him/her/it!"
+   ],
+   "new": [],
+   "reason": "the alt \"Screw him/her/it!\" is a vulgar rendering; removed (see the en correction for this id)"
+  },
+  {
+   "id": "hefbbc2c7",
+   "field": "alt",
+   "old": [
+    "slut"
+   ],
+   "new": [],
+   "reason": "the alt \"slut\" is a slur; the gloss \"female prostitute (who has sex for pay)\" already states the meaning"
+  },
+  {
+   "id": "hc208e546",
+   "field": "alt",
+   "old": [
+    "midget",
+    "gnome"
+   ],
+   "new": [
+    "gnome"
+   ],
+   "reason": "the alt \"midget\" is a slur; the gloss \"dwarf\" and the alt \"gnome\" remain"
+  },
+  {
+   "id": "h4f80908c",
+   "field": "en",
+   "old": "midget, dwarf",
+   "new": "dwarf",
+   "reason": "the gloss \"midget, dwarf\" contains a slur; \"dwarf\" is the remaining sense"
+  },
+  {
+   "id": "h01cd8c45",
+   "field": "alt",
+   "old": [
+    "a (male) Kushite, Cushite",
+    "negro, Black"
+   ],
+   "new": [
+    "a (male) Kushite, Cushite",
+    "Black"
+   ],
+   "reason": "the alt \"negro, Black\" contains an outdated offensive term; \"Black\" is kept"
+  },
+  {
+   "id": "hae4935f7",
+   "field": "en",
+   "old": "a cripple",
+   "new": "a person with a disability",
+   "reason": "the gloss \"a cripple\" is an offensive term for a person with a disability, which is what it says"
+  },
+  {
+   "id": "h950879c7",
+   "field": "en",
+   "old": "Gypsy",
+   "new": "a Romani person",
+   "reason": "the gloss \"Gypsy\" is the English exonym now widely considered offensive; the person it names is Romani"
+  },
+  {
+   "id": "h786538b1",
+   "field": "en",
+   "old": "mamzer, bastard",
+   "new": "mamzer",
+   "reason": "the gloss \"mamzer, bastard\" contains a slur; the transliterated term is kept (a legal term; a fuller explanation needs review)"
+  },
+  {
+   "id": "hefc2e447",
+   "field": "en",
+   "old": "wise-ass, wise guy, smart alec",
+   "new": "wise guy, smart alec",
+   "reason": "the gloss \"wise-ass, wise guy, smart alec\" contains a vulgar word; the two other senses remain"
+  },
+  {
+   "id": "h34d7fae2",
+   "field": "en",
+   "old": "to cause failure, to ruin, to spoil, to fuck something up",
+   "new": "to cause failure, to ruin, to spoil",
+   "reason": "the gloss ends with a vulgar phrase; the other senses remain"
+  },
+  {
+   "id": "h8ea4d152",
+   "field": "example",
+   "old": {
+    "he": "מה לעזאזל לא בסדר אתך?",
+    "en": "What the fuck is wrong with you?",
+    "hePointed": false,
+    "translit": null,
+    "match": "לעזאזל",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1485790,
+     "enId": 1036005,
+     "heAuthor": "Eldad",
+     "enAuthor": "Jesse",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1485790",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "the example sentence (Tatoeba) contains profanity, a slur or a vulgar remark, unsuitable for a learner app; removed (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h5ba22cfa",
+   "field": "example",
+   "old": {
+    "he": "תפסיק להיות כזה מפגר דפוק.",
+    "en": "Stop being so fucking retarded!",
+    "hePointed": false,
+    "translit": null,
+    "match": "דפוק",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1654434,
+     "enId": 1654265,
+     "heAuthor": "MrShoval",
+     "enAuthor": "Spamster",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1654434",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "the example sentence (Tatoeba) contains profanity, a slur or a vulgar remark, unsuitable for a learner app; removed (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h520d496c",
+   "field": "example",
+   "old": {
+    "he": "תפסיק להיות כזה מפגר דפוק.",
+    "en": "Stop being so fucking retarded!",
+    "hePointed": false,
+    "translit": null,
+    "match": "מפגר",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1654434,
+     "enId": 1654265,
+     "heAuthor": "MrShoval",
+     "enAuthor": "Spamster",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1654434",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "the example sentence (Tatoeba) contains profanity, a slur or a vulgar remark, unsuitable for a learner app; removed (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "hf7d0fb03",
+   "field": "example",
+   "old": {
+    "he": "אף אחד לא שם זין.",
+    "en": "No one gives a shit.",
+    "hePointed": false,
+    "translit": null,
+    "match": "זין",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1556842,
+     "enId": 1549989,
+     "heAuthor": "MrShoval",
+     "enAuthor": "Spamster",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1556842",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "the example sentence (Tatoeba) contains profanity, a slur or a vulgar remark, unsuitable for a learner app; removed (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h8e35f713",
+   "field": "example",
+   "old": {
+    "he": "אף אחד לא שם זין.",
+    "en": "No one gives a shit.",
+    "hePointed": false,
+    "translit": null,
+    "match": "זין",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1556842,
+     "enId": 1549989,
+     "heAuthor": "MrShoval",
+     "enAuthor": "Spamster",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1556842",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": true
+    }
+   },
+   "new": null,
+   "reason": "the example sentence (Tatoeba) contains profanity, a slur or a vulgar remark, unsuitable for a learner app; removed (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "hefbbc2c7",
+   "field": "example",
+   "old": {
+    "he": "יש לכבד זונות.",
+    "en": "Respect sluts.",
+    "hePointed": false,
+    "translit": null,
+    "match": "זונות",
+    "source": {
+     "type": "tatoeba",
+     "heId": 13884361,
+     "enId": 12725127,
+     "heAuthor": "rul",
+     "enAuthor": "rul",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/13884361",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "the example sentence (Tatoeba) contains profanity, a slur or a vulgar remark, unsuitable for a learner app; removed (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h974f415a",
+   "field": "example",
+   "old": {
+    "he": "אני מזדיין לאלוהים.",
+    "en": "I fuck God.",
+    "hePointed": false,
+    "translit": null,
+    "match": "מזדיין",
+    "source": {
+     "type": "tatoeba",
+     "heId": 14011771,
+     "enId": 11818350,
+     "heAuthor": "rul",
+     "enAuthor": "Fenrir",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/14011771",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "the example sentence (Tatoeba) contains profanity, a slur or a vulgar remark, unsuitable for a learner app; removed (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h14a9ec93",
+   "field": "example",
+   "old": {
+    "he": "אני אמא של בן זונה.",
+    "en": "I'm the mother of a son of a bitch.",
+    "hePointed": false,
+    "translit": null,
+    "match": "זונה",
+    "source": {
+     "type": "tatoeba",
+     "heId": 6600171,
+     "enId": 937044,
+     "heAuthor": "rul",
+     "enAuthor": "sacredceltic",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/6600171",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": true
+    }
+   },
+   "new": null,
+   "reason": "the example sentence (Tatoeba) contains profanity, a slur or a vulgar remark, unsuitable for a learner app; removed (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h549846fd",
+   "field": "example",
+   "old": {
+    "he": "למרי יש ציצים ענקים.",
+    "en": "Mary has huge tits.",
+    "hePointed": false,
+    "translit": null,
+    "match": "ציצים",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1420350,
+     "enId": 1419054,
+     "heAuthor": "MrShoval",
+     "enAuthor": "Spamster",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1420350",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "the example sentence (Tatoeba) contains profanity, a slur or a vulgar remark, unsuitable for a learner app; removed (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h34d7fae2",
+   "field": "example",
+   "old": {
+    "he": "חרבון יומי ירחיק רופא.",
+    "en": "A shit a day keeps the doctor away.",
+    "hePointed": false,
+    "translit": null,
+    "match": "חרבון",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1851268,
+     "enId": 27424,
+     "heAuthor": "fekundulo",
+     "enAuthor": "speedwell",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1851268",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "the example sentence (Tatoeba) contains profanity, a slur or a vulgar remark, unsuitable for a learner app; removed (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h3b306d6b",
+   "field": "example",
+   "old": {
+    "he": "סוף סוף! אדובי נפטרת מהזבל הזה, פלאש לניידים.",
+    "en": "At last! Adobe dumps this shitty Flash for mobiles.",
+    "hePointed": false,
+    "translit": null,
+    "match": "פלאש",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1851843,
+     "enId": 1231673,
+     "heAuthor": "Eldad",
+     "enAuthor": "sacredceltic",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1851843",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "the example sentence (Tatoeba) contains profanity, a slur or a vulgar remark, unsuitable for a learner app; removed (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h4f80908c",
+   "field": "example",
+   "old": {
+    "he": "אני לא ננס, אני גמד!",
+    "en": "I'm not a midget. I'm a dwarf!",
+    "hePointed": false,
+    "translit": null,
+    "match": "ננס",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1912929,
+     "enId": 1105819,
+     "heAuthor": "fekundulo",
+     "enAuthor": "gall",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1912929",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "the example sentence (Tatoeba) contains profanity, a slur or a vulgar remark, unsuitable for a learner app; removed (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "hc208e546",
+   "field": "example",
+   "old": {
+    "he": "אני לא ננס, אני גמד!",
+    "en": "I'm not a midget. I'm a dwarf!",
+    "hePointed": false,
+    "translit": null,
+    "match": "גמד",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1912929,
+     "enId": 1105819,
+     "heAuthor": "fekundulo",
+     "enAuthor": "gall",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1912929",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "the example sentence (Tatoeba) contains profanity, a slur or a vulgar remark, unsuitable for a learner app; removed (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h786538b1",
+   "field": "example",
+   "old": {
+    "he": "אתה ממזר חולה נפש.",
+    "en": "You're a sick bastard.",
+    "hePointed": false,
+    "translit": null,
+    "match": "ממזר",
+    "source": {
+     "type": "tatoeba",
+     "heId": 5797891,
+     "enId": 5780389,
+     "heAuthor": "fekundulo",
+     "enAuthor": "mailohilohi",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/5797891",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": true
+    }
+   },
+   "new": null,
+   "reason": "the example sentence (Tatoeba) contains profanity, a slur or a vulgar remark, unsuitable for a learner app; removed (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h9bb1d8c2",
+   "field": "example",
+   "old": {
+    "he": "נראה שיש לו תרנגול גדול.",
+    "en": "It seems like he has a big cock.",
+    "hePointed": false,
+    "translit": null,
+    "match": "תרנגול",
+    "source": {
+     "type": "tatoeba",
+     "heId": 4825640,
+     "enId": 4823539,
+     "heAuthor": "fekundulo",
+     "enAuthor": "whitefishglobal",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/4825640",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": true
+    }
+   },
+   "new": null,
+   "reason": "the example sentence (Tatoeba) contains profanity, a slur or a vulgar remark, unsuitable for a learner app; removed (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h161176d0",
+   "field": "example",
+   "old": {
+    "he": "העקשנות הנלוזה שלך מחליאה אנשים.",
+    "en": "Your stubborn crap makes people sick.",
+    "hePointed": false,
+    "translit": null,
+    "match": "העקשנות",
+    "source": {
+     "type": "tatoeba",
+     "heId": 3926459,
+     "enId": 3926141,
+     "heAuthor": "fekundulo",
+     "enAuthor": "Amastan",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/3926459",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "the example sentence (Tatoeba) contains profanity, a slur or a vulgar remark, unsuitable for a learner app; removed (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h84a3a6b3",
+   "field": "example",
+   "old": {
+    "he": "תזיז כבר את התחת שלך!",
+    "en": "Get your ass in gear!",
+    "hePointed": false,
+    "translit": null,
+    "match": "תזיז",
+    "source": {
+     "type": "tatoeba",
+     "heId": 2214640,
+     "enId": 2199655,
+     "heAuthor": "MrShoval",
+     "enAuthor": "Hybrid",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/2214640",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "the example sentence (Tatoeba) contains profanity, a slur or a vulgar remark, unsuitable for a learner app; removed (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h950879c7",
+   "field": "example",
+   "old": {
+    "he": "אני שר שירים צועניים.",
+    "en": "I sing Gypsy songs.",
+    "hePointed": false,
+    "translit": null,
+    "match": "צועניים",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1426049,
+     "enId": 1426043,
+     "heAuthor": "Eldad",
+     "enAuthor": "Eldad",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1426049",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "the example sentence (Tatoeba) contains profanity, a slur or a vulgar remark, unsuitable for a learner app; removed (docs/vocab/JUDGEMENT.md, addendum)"
+  },
+  {
+   "id": "h1782f762",
+   "field": "en",
+   "old": "sandek",
+   "new": "sandek (the person who holds the baby at a circumcision)",
+   "reason": "audit 2026-11-04 (Class 1, item 4): the gloss was only the transliteration of the headword, so it defined nothing; the explanation restates the record's own alt sense (\"a godparent\") as the specific role; no new sense added"
+  },
+  {
+   "id": "h79986a16",
+   "field": "en",
+   "old": "Name, sake, purpose, cause",
+   "new": "garlic",
+   "reason": "audit 2026-11-04 (Class 1, item 3): the everyday sense \"garlic\" was already in this record as an alt; it is promoted to the gloss and the literary sense moves to alt (same two senses, order swapped; see the alt correction for this id)"
+  },
+  {
+   "id": "h79986a16",
+   "field": "alt",
+   "old": [
+    "garlic"
+   ],
+   "new": [
+    "name, sake, purpose, cause"
+   ],
+   "reason": "audit 2026-11-04 (Class 1, item 3): the former gloss becomes the alt sense after \"garlic\" was promoted (see the en correction for this id); lower-cased like other alt senses"
+  },
+  {
+   "id": "hd91e4a26",
+   "field": "en",
+   "old": "Armenian cucumber, vegetable melon",
+   "new": "cucumber",
+   "reason": "audit 2026-11-04 (Class 1, item 5): the everyday sense \"cucumber\" was already in this record as an alt; it is promoted to the gloss and the botanical sense moves to alt (same two senses, order swapped; see the alt correction for this id)"
+  },
+  {
+   "id": "hd91e4a26",
+   "field": "alt",
+   "old": [
+    "cucumber"
+   ],
+   "new": [
+    "Armenian cucumber, vegetable melon"
+   ],
+   "reason": "audit 2026-11-04 (Class 1, item 5): the former gloss becomes the alt sense after \"cucumber\" was promoted (see the en correction for this id)"
+  },
+  {
+   "id": "hf1ccd0e6",
+   "field": "translit",
+   "old": "eloha",
+   "new": "eloah",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h07f9e1d9",
+   "field": "translit",
+   "old": "hitzlicha",
+   "new": "hitzliach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hfb819565",
+   "field": "translit",
+   "old": "rucha",
+   "new": "ruach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h5795e8db",
+   "field": "translit",
+   "old": "kocha",
+   "new": "koach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h5f280d64",
+   "field": "translit",
+   "old": "batucha",
+   "new": "batuach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h35fcbc75",
+   "field": "translit",
+   "old": "nitzecha",
+   "new": "nitzeach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h6fa87858",
+   "field": "translit",
+   "old": "hivticha",
+   "new": "hivtiach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "ha61e0686",
+   "field": "translit",
+   "old": "pitecha",
+   "new": "piteach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hc33f7702",
+   "field": "translit",
+   "old": "mocha",
+   "new": "moach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hb282524c",
+   "field": "translit",
+   "old": "shilecha",
+   "new": "shileach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hfb8d7482",
+   "field": "translit",
+   "old": "reicha",
+   "new": "reiach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h7b4366cd",
+   "field": "translit",
+   "old": "nitecha",
+   "new": "niteach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h5bfd5fc6",
+   "field": "translit",
+   "old": "bitucha",
+   "new": "bituach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h731dbce2",
+   "field": "translit",
+   "old": "lakocha",
+   "new": "lakoach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hd0f11592",
+   "field": "translit",
+   "old": "nocha",
+   "new": "noach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hc427aff6",
+   "field": "translit",
+   "old": "yarecha",
+   "new": "yareach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hff9ae755",
+   "field": "translit",
+   "old": "lucha",
+   "new": "luach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hd54f309e",
+   "field": "translit",
+   "old": "pikecha",
+   "new": "pikeach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h7041f9f6",
+   "field": "translit",
+   "old": "hericha",
+   "new": "heriach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h77e589a2",
+   "field": "translit",
+   "old": "bericha",
+   "new": "beriach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h156f5fbb",
+   "field": "translit",
+   "old": "mizbecha",
+   "new": "mizbeach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "ha421b308",
+   "field": "translit",
+   "old": "hishgicha",
+   "new": "hishgiach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h222966ca",
+   "field": "translit",
+   "old": "lecha",
+   "new": "leach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h6140d537",
+   "field": "translit",
+   "old": "divecha",
+   "new": "diveach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hb7990b70",
+   "field": "translit",
+   "old": "divucha",
+   "new": "divuach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h6d316926",
+   "field": "translit",
+   "old": "sochecha",
+   "new": "socheach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h127c6e1e",
+   "field": "translit",
+   "old": "nitucha",
+   "new": "nituach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h87768ff6",
+   "field": "translit",
+   "old": "kashucha",
+   "new": "kashuach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "he6d29dfd",
+   "field": "translit",
+   "old": "patucha",
+   "new": "patuach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h0f4ba1ce",
+   "field": "translit",
+   "old": "hikhricha",
+   "new": "hikhriach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hff7974cf",
+   "field": "translit",
+   "old": "orecha",
+   "new": "oreach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h7fad7415",
+   "field": "translit",
+   "old": "kerecha",
+   "new": "kereach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hff4478ee",
+   "field": "translit",
+   "old": "gilecha",
+   "new": "gileach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hc73a45bc",
+   "field": "translit",
+   "old": "hirvicha",
+   "new": "hirviach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hbb1dc7a2",
+   "field": "translit",
+   "old": "tapucha",
+   "new": "tapuach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hcf53d1c7",
+   "field": "translit",
+   "old": "mashicha",
+   "new": "mashiach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h2bcbca96",
+   "field": "translit",
+   "old": "rotzecha",
+   "new": "rotzeach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h0b507920",
+   "field": "translit",
+   "old": "sicha",
+   "new": "siach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h61ca6070",
+   "field": "translit",
+   "old": "shalicha",
+   "new": "shaliach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h57665cd9",
+   "field": "translit",
+   "old": "samecha",
+   "new": "sameach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h6893252d",
+   "field": "translit",
+   "old": "vikucha",
+   "new": "vikuach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h6ae1a1d5",
+   "field": "translit",
+   "old": "erecha",
+   "new": "ereach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h6a12a53c",
+   "field": "translit",
+   "old": "pitucha",
+   "new": "pituach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h5d37d5a5",
+   "field": "translit",
+   "old": "ivtecha",
+   "new": "ivteach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h731df85b",
+   "field": "translit",
+   "old": "shibecha",
+   "new": "shibeach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hf3271a76",
+   "field": "translit",
+   "old": "hitkalecha",
+   "new": "hitkaleach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h1e2a70f2",
+   "field": "translit",
+   "old": "sipecha",
+   "new": "sipeach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h00e64115",
+   "field": "translit",
+   "old": "hitpatecha",
+   "new": "hitpateach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hb932cb59",
+   "field": "translit",
+   "old": "hitmahameha",
+   "new": "hitmahameah",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h8cffdfee",
+   "field": "translit",
+   "old": "hidicha",
+   "new": "hidiach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "he84a93f0",
+   "field": "translit",
+   "old": "hitvakecha",
+   "new": "hitvakeach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h78520975",
+   "field": "translit",
+   "old": "shaticha",
+   "new": "shatiach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h54776395",
+   "field": "translit",
+   "old": "pinecha",
+   "new": "pineach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h4ae65978",
+   "field": "translit",
+   "old": "chocha",
+   "new": "choach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h37568631",
+   "field": "translit",
+   "old": "hitbadecha",
+   "new": "hitbadeach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hd5eeecd4",
+   "field": "translit",
+   "old": "hivricha",
+   "new": "hivriach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hffd4de51",
+   "field": "translit",
+   "old": "mishlocha",
+   "new": "mishloach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h75597f6f",
+   "field": "translit",
+   "old": "kashicha",
+   "new": "kashiach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "ha1caaf57",
+   "field": "translit",
+   "old": "richrecha",
+   "new": "richreach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "he61e7675",
+   "field": "translit",
+   "old": "pisecha",
+   "new": "piseach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h9aee2d12",
+   "field": "translit",
+   "old": "tzichtzecha",
+   "new": "tzichtzeach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "he6a4df10",
+   "field": "translit",
+   "old": "kinecha",
+   "new": "kineach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h693445be",
+   "field": "translit",
+   "old": "nisecha",
+   "new": "niseach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h703d795c",
+   "field": "translit",
+   "old": "picha",
+   "new": "piach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h90400188",
+   "field": "translit",
+   "old": "tzachicha",
+   "new": "tzachiach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h0eaebf39",
+   "field": "translit",
+   "old": "hedicha",
+   "new": "hediach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h272c8126",
+   "field": "translit",
+   "old": "hitnapecha",
+   "new": "hitnapeach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hdfe59a2d",
+   "field": "translit",
+   "old": "saficha",
+   "new": "safiach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hb52ec9da",
+   "field": "translit",
+   "old": "pikecha",
+   "new": "pikeach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hbfe184a6",
+   "field": "translit",
+   "old": "kinucha",
+   "new": "kinuach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h3c8f9e51",
+   "field": "translit",
+   "old": "nafucha",
+   "new": "nafuach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h93c1ecb2",
+   "field": "translit",
+   "old": "higbiha",
+   "new": "higbiah",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "he1eea5ca",
+   "field": "translit",
+   "old": "hishtochecha",
+   "new": "hishtocheach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h8ef716f6",
+   "field": "translit",
+   "old": "rovecha",
+   "new": "roveach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h184bfd27",
+   "field": "translit",
+   "old": "kicha",
+   "new": "kiach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "he5ef6e09",
+   "field": "translit",
+   "old": "hitlakecha",
+   "new": "hitlakeach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h33177689",
+   "field": "translit",
+   "old": "higicha",
+   "new": "higiach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h4f555528",
+   "field": "translit",
+   "old": "hesecha",
+   "new": "heseach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "he0fd983b",
+   "field": "translit",
+   "old": "nipecha",
+   "new": "nipeach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h64f51b3f",
+   "field": "translit",
+   "old": "hitmakecha",
+   "new": "hitmakeach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hf1d95870",
+   "field": "translit",
+   "old": "hirticha",
+   "new": "hirtiach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hdbc944e6",
+   "field": "translit",
+   "old": "hishtalecha",
+   "new": "hishtaleach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "hcc2f6cf7",
+   "field": "translit",
+   "old": "efrocha",
+   "new": "efroach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h2ecd73ec",
+   "field": "translit",
+   "old": "ticha",
+   "new": "tiach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "ha9a26676",
+   "field": "translit",
+   "old": "tzericha",
+   "new": "tzeriach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h85ebebb3",
+   "field": "translit",
+   "old": "mikucha",
+   "new": "mikuach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h5dc68d2a",
+   "field": "translit",
+   "old": "manocha",
+   "new": "manoach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "ha47dbc4c",
+   "field": "translit",
+   "old": "shitecha",
+   "new": "shiteach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h847a2dff",
+   "field": "translit",
+   "old": "pisecha",
+   "new": "piseach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h8f85552b",
+   "field": "translit",
+   "old": "hiznicha",
+   "new": "hizniach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h70ccf8aa",
+   "field": "translit",
+   "old": "rokecha",
+   "new": "rokeach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h8a40a96d",
+   "field": "translit",
+   "old": "malucha",
+   "new": "maluach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "h1a5a2db6",
+   "field": "translit",
+   "old": "hitgalecha",
+   "new": "hitgaleach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "p6e9bcf25",
+   "field": "translit",
+   "old": "chag samecha",
+   "new": "chag sameach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "pd0c58c67",
+   "field": "translit",
+   "old": "kamah zeman zeh lokecha?",
+   "new": "kamah zeman zeh lokeach?",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "p2f6563bf",
+   "field": "translit",
+   "old": "leshabecha",
+   "new": "leshabeach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "pb0633ed7",
+   "field": "translit",
+   "old": "maftecha",
+   "new": "mafteach",
+   "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
   }
  ]
 }

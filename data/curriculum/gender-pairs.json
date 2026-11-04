@@ -1,7 +1,7 @@
 {
  "version": 1,
  "status": "draft-needs-native-review",
- "note": "Pairs and paradigms are original sentences written by an AI agent for ALEF. The Hebrew, pointing, transliteration and glosses have NOT been reviewed by a native speaker. None was copied from TeachMeHebrew or Jewish Miami. differsAt (cluster indices of letters+marks, per form) is computed by src/curriculum/gender.js and checked by a test. Audio: ids gp-NN-m / gp-NN-f (kind word) are NOT in the audio manifest yet.",
+ "note": "Pairs and paradigms are original sentences written for ALEF. The Hebrew, pointing, transliteration and glosses have NOT been reviewed by a native speaker. None was copied from TeachMeHebrew or Jewish Miami. differsAt (cluster indices of letters+marks, per form) is computed by src/curriculum/gender.js and checked by a test. Audio: ids gp-NN-m / gp-NN-f (kind word) are NOT in the audio manifest yet.",
  "pairs": [
   {
    "id": "gp-01",

@@ -23,7 +23,7 @@
    "translit": "ketzat",
    "en": "a little, a bit, a little bit",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hbd079057",
    "source": "data/vocab/words.json"
   },
   {
@@ -32,7 +32,7 @@
    "translit": "tachat",
    "en": "below",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h62c2a993",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,7 +41,7 @@
    "translit": "mishehu",
    "en": "someone, somebody",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h0faf39fb",
    "source": "data/vocab/words.json"
   },
   {
@@ -59,7 +59,7 @@
    "translit": "zo",
    "en": "this, this one",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h7494d535",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "afilu",
    "en": "even",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h97be2e78",
    "source": "data/vocab/words.json"
   },
   {
@@ -77,7 +77,7 @@
    "translit": "eizeh",
    "en": "what, which",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hf3892816",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "ha",
    "en": "an interrogative particle, introducing a yes-no question",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h432cf2d0",
    "source": "data/vocab/words.json"
   },
   {

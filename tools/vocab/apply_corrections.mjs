@@ -142,6 +142,12 @@ export function applyCorrections(root = ROOT, { dry = false } = {}) {
   indexDoc.rows = indexDoc.rows.filter((r) => !todoRemove.has(r[0]));
   let rowEdits = 0;
   for (const r of indexDoc.rows) if (todoSet.has(r[0]) && 'translit' in todoSet.get(r[0])) { r[tcol] = todoSet.get(r[0]).translit; rowEdits++; }
+  // other edited fields that index.json carries as a column (for example the English gloss "en")
+  for (const col of indexDoc.fields) {
+    if (col === 'translit' || col === 'id') continue;
+    const ci = indexDoc.fields.indexOf(col);
+    for (const r of indexDoc.rows) if (todoSet.has(r[0]) && col in todoSet.get(r[0])) { r[ci] = todoSet.get(r[0])[col]; rowEdits++; }
+  }
   note('data/vocab/index.json', { rowsRemoved: n1 - indexDoc.rows.length, rowsEdited: rowEdits });
   // meta.json
   const metaDoc = rd(root, 'data/vocab/meta.json');

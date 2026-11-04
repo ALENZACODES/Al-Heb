@@ -13,9 +13,9 @@
    "english": "Blessed is the name of the glory of his kingship for ever and ever.",
    "registryStatus": "verified",
    "proofread": false,
-   "license": "CC-BY",
-   "attribution": "Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.",
-   "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Shema",
+   "license": "Public Domain",
+   "attribution": "Hebrew text: Torat Emet 357 (toratemetfreeware.com), as digitised on Sefaria where it is labelled Public Domain. Label not independently verified; the toratemetfreeware.com home page carries an all-rights-reserved footer (read 2026-11-04). English: original literal gloss.",
+   "source": "Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Eve Mincha, Mincha",
    "lineAudio": {
     "kind": "line",
     "id": "shema-2"
@@ -109,9 +109,9 @@
    "english": "Bless the LORD, the blessed one.\nBlessed is the LORD, the blessed one, for ever and ever.",
    "registryStatus": "verified",
    "proofread": false,
-   "license": "CC-BY",
-   "attribution": "Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.",
-   "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Birkat HaTorah",
+   "license": "CC0",
+   "attribution": "Hebrew text: Siddur Edot HaMizrach, \"Shaliehsaboo Edition\", from Sefaria where it is labelled CC0 (no attribution required; credit given as a courtesy). Label not independently verified. English: original literal gloss.",
+   "source": "Shaliehsaboo Edition via Sefaria: Siddur Edot HaMizrach, Weekday Shacharit, Torah Reading",
    "lineAudio": null
   },
   {
@@ -120,14 +120,14 @@
    "ref": "Siddur: Oseh shalom",
    "level": "intro-3",
    "lines": [
-    "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃"
+    "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃"
    ],
    "english": "He who makes peace in his high places, may he make peace for us and for all Israel; and say: Amen.",
    "registryStatus": "verified",
    "proofread": false,
-   "license": "CC-BY",
-   "attribution": "Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.",
-   "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Amidah, Concluding Passage",
+   "license": "Public Domain",
+   "attribution": "Hebrew text: Torat Emet 357 (toratemetfreeware.com), as digitised on Sefaria where it is labelled Public Domain. Label not independently verified; the toratemetfreeware.com home page carries an all-rights-reserved footer (read 2026-11-04). English: original literal gloss.",
+   "source": "Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Eve Mincha, Amidah",
    "lineAudio": {
     "kind": "line",
     "id": "oseh-shalom"

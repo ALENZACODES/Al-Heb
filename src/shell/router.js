@@ -4,18 +4,18 @@
 
 /**
  * @typedef {{name:string, pattern:string, module:string|null, nav?:string, title:string, owner:string, optional?:boolean, quick?:string,
- *   group?:string, needs?:string, query?:Record<string,string>, paramQuery?:Record<string,string>}} RouteDef
+ *   group?:string, needs?:string, query?:Record<string,string>, paramQuery?:Record<string,string>, tier?:'v0'|'preview'}} RouteDef
  * `query` is merged into ctx.query for the view; `paramQuery` copies a path param into ctx.query (param -> query key). This lets
  * pretty routes such as /dialogues/cafe drive lane 1's learn.view.js, which dispatches on ?dialogue=cafe. `group` ("learn") lists
  * the route on Home under "More ways to learn" instead of the nav bar.
  */
 /** @type {RouteDef[]} Module paths are relative to src/shell/. */
 export const ROUTES = [
-  { name: 'home',     pattern: '/',               module: './home.view.js',                      nav: 'nav.home',     title: 'Home', owner: 'lane8' },
-  { name: 'learn',    pattern: '/learn',          module: '../curriculum/learn.view.js',         nav: 'nav.learn',    title: 'Learn', owner: 'lane1' },
-  { name: 'letters',  pattern: '/letters',        module: '../letters/trace.view.js',            nav: 'nav.letters',  title: 'Letters', owner: 'lane2' },
-  { name: 'atlas',    pattern: '/letters/atlas',  module: '../letters/atlas.view.js',            title: 'Letter atlas', owner: 'lane2', optional: true, quick: 'nav.atlas' },
-  { name: 'letter',   pattern: '/letters/:id',    module: '../letters/trace.view.js',            title: 'Letter', owner: 'lane2' },
+  { name: 'home',     pattern: '/',               module: './home.view.js', tier: 'v0',                      nav: 'nav.home',     title: 'Home', owner: 'lane8' },
+  { name: 'learn',    pattern: '/learn',          module: '../curriculum/learn.view.js', tier: 'v0',         nav: 'nav.learn',    title: 'Learn', owner: 'lane1' },
+  { name: 'letters',  pattern: '/letters',        module: '../letters/trace.view.js', tier: 'v0',            nav: 'nav.letters',  title: 'Letters', owner: 'lane2' },
+  { name: 'atlas',    pattern: '/letters/atlas',  module: '../letters/atlas.view.js', tier: 'v0',            title: 'Letter atlas', owner: 'lane2', optional: true, quick: 'nav.atlas' },
+  { name: 'letter',   pattern: '/letters/:id',    module: '../letters/trace.view.js', tier: 'v0',            title: 'Letter', owner: 'lane2' },
   // Lane 1 sub-screens. They have no nav entry (nav is already full); Home lists them under "More ways to learn".
   // Their code lives in curriculum/*.view.js and is dispatched by learn.view.js from ctx.query; these routes only inject the query.
   { name: 'loanwords',  pattern: '/loanwords',         module: '../curriculum/learn.view.js', title: 'Words you can already read', owner: 'lane1', group: 'learn', quick: 'nav.loanwords', query: { loanwords: '1' }, needs: 'curriculum/loanwords.view.js' },
@@ -27,7 +27,7 @@ export const ROUTES = [
   { name: 'ladder',   pattern: '/ladder',        module: '../curriculum/learn.view.js', title: 'Syllable ladder',  owner: 'lane1', group: 'learn', quick: 'nav.ladder',   query: { ladder: '1' },      needs: 'curriculum/ladder.view.js' },
   { name: 'fade',     pattern: '/fade',          module: '../curriculum/learn.view.js', title: 'Fade-out recall',  owner: 'lane1', group: 'learn', quick: 'nav.fade',     query: { fade: '1' },        needs: 'curriculum/fade.view.js' },
   { name: 'fadeline', pattern: '/fade/:id',      module: '../curriculum/learn.view.js', title: 'Fade-out recall',  owner: 'lane1', paramQuery: { id: 'fade' },                                                       needs: 'curriculum/fade.view.js' },
-  { name: 'progress', pattern: '/progress', module: '../progress/progress.view.js', title: 'Progress', owner: 'lane10', group: 'learn', quick: 'nav.progress' },
+  { name: 'progress', pattern: '/progress', module: '../progress/progress.view.js', tier: 'v0', title: 'Progress', owner: 'lane10', group: 'learn', quick: 'nav.progress' },
   { name: 'wordtrace', pattern: '/words/trace', module: '../wordtrace/wordtrace.view.js', title: 'Trace words', owner: 'lane2', optional: true, quick: 'nav.wordtrace' },
   { name: 'israel',    pattern: '/israel',      module: '../israel/israel.view.js', title: 'Sound like a local', owner: 'lane10', optional: true, group: 'learn', quick: 'nav.israel' },
   { name: 'israelsec', pattern: '/israel/:sec', module: '../israel/israel.view.js', title: 'Sound like a local', owner: 'lane10', paramQuery: { sec: 'sec' } },
@@ -42,11 +42,11 @@ export const ROUTES = [
   { name: 'share', pattern: '/share', module: '../teacher/teacher.view.js', title: 'Share my progress', owner: 'teacher', optional: true, quick: 'nav.share', query: { mode: 'share' } },
   { name: 'classsummary', pattern: '/classsummary', module: '../teacher/teacher.view.js', title: 'Class summary', owner: 'teacher', optional: true, quick: 'nav.classsummary', query: { mode: 'class' } },
   { name: 'service', pattern: '/service', module: '../service/service.view.js', title: 'Follow the service', owner: 'service', optional: true, quick: 'nav.service' },
-  { name: 'firstday', pattern: '/firstday', module: '../firstday/firstday.view.js', title: 'Your first 10 minutes', owner: 'firstday', optional: true, group: 'learn', quick: 'nav.firstday' },
+  { name: 'firstday', pattern: '/firstday', module: '../firstday/firstday.view.js', tier: 'v0', title: 'Your first 10 minutes', owner: 'firstday', optional: true, group: 'learn', quick: 'nav.firstday' },
   { name: 'firstday-ladder', pattern: '/firstday/ladder', module: '../firstday/ladder.view.js', title: 'Pointed to unpointed ladder', owner: 'firstday', optional: true, group: 'learn', quick: 'nav.firstday-ladder' },
   { name: 'placement', pattern: '/placement', module: '../placement/placement.view.js', title: 'Placement check (draft)', owner: 'placement', optional: true, group: 'learn', quick: 'nav.placement' },
   { name: 'reminders', pattern: '/reminders', module: './notify.view.js', title: 'Study reminders', owner: 'notify', optional: true, group: 'learn', quick: 'nav.reminders' },
-  { name: 'install', pattern: '/install', module: './install.view.js', title: 'Install ALEF', owner: 'install', optional: true, group: 'learn', quick: 'nav.install' },
+  { name: 'install', pattern: '/install', module: './install.view.js', tier: 'v0', title: 'Install ALEF', owner: 'install', optional: true, group: 'learn', quick: 'nav.install' },
   { name: 'typing', pattern: '/typing', module: '../typing/typing.view.js', title: 'Typing practice', owner: 'typing', optional: true, group: 'learn', quick: 'nav.typing' },
   { name: 'festivals', pattern: '/festivals', module: '../festivals/festivals.view.js', title: 'This week in the Jewish year', owner: 'festivals', optional: true, group: 'learn', quick: 'nav.festivals' },
   { name: 'festival', pattern: '/festivals/:id', module: '../festivals/festivals.view.js', title: 'Festival words', owner: 'festivals', optional: true, paramQuery: { id: 'id' } },
@@ -60,12 +60,12 @@ export const ROUTES = [
   { name: 'intermediatelesson', pattern: '/intermediate/:id', module: '../curriculum/intermediate.view.js', title: 'Intermediate lesson',  owner: 'intermediate', optional: true, paramQuery: { id: 'id' } },
   { name: 'grammar', pattern: '/grammar', module: '../grammar/grammar.view.js', title: 'Grammar notes', owner: 'grammar', optional: true, group: 'learn', quick: 'nav.grammar' },
   { name: 'grammartopic', pattern: '/grammar/:topic', module: '../grammar/grammar.view.js', title: 'Grammar topic', owner: 'grammar', optional: true, paramQuery: { topic: 'topic' } },
-  { name: 'credits', pattern: '/credits', module: './credits.view.js', title: 'Credits and licences', owner: 'legal', optional: true, group: 'learn', quick: 'nav.credits' },
-  { name: 'privacy', pattern: '/privacy', module: './privacy.view.js', title: 'Privacy', owner: 'legal', optional: true, group: 'learn', quick: 'nav.privacy' },
+  { name: 'credits', pattern: '/credits', module: './credits.view.js', tier: 'v0', title: 'Credits and licences', owner: 'legal', optional: true, group: 'learn', quick: 'nav.credits' },
+  { name: 'privacy', pattern: '/privacy', module: './privacy.view.js', tier: 'v0', title: 'Privacy', owner: 'legal', optional: true, group: 'learn', quick: 'nav.privacy' },
   { name: 'compare', pattern: '/compare', module: '../pronunciation/compare.view.js', title: 'Compare traditions', owner: 'pronunciation', optional: true, group: 'learn', quick: 'nav.compare' },
-  { name: 'offline', pattern: '/offline', module: './offline.view.js', title: 'Use ALEF offline', owner: 'offline', optional: true, group: 'learn', quick: 'nav.offline' },
+  { name: 'offline', pattern: '/offline', module: './offline.view.js', tier: 'v0', title: 'Use ALEF offline', owner: 'offline', optional: true, group: 'learn', quick: 'nav.offline' },
   { name: 'vocab-themes', pattern: '/vocab/themes', module: '../vocab/themes.view.js', title: 'Theme packs', owner: 'vocab', optional: true, group: 'learn', quick: 'nav.vocab-themes' },
-  { name: 'speak', pattern: '/speak', module: '../speak/speak.js', title: 'Say it', owner: 'speak', optional: true, group: 'learn', quick: 'nav.speak' },
+  { name: 'speak', pattern: '/speak', module: '../speak/speak.view.js', title: 'Say it', owner: 'speak', optional: true, group: 'learn', quick: 'nav.speak' },
   { name: 'sprint', pattern: '/sprint', module: '../sprint/sprint.view.js', title: 'Word Sprint', owner: 'sprint', optional: true, group: 'learn', quick: 'nav.sprint' },
   { name: 'gender',   pattern: '/gender',        module: '../curriculum/learn.view.js', title: 'Gender pairs',     owner: 'lane1', group: 'learn', quick: 'nav.gender',   query: { gender: 'pairs' }, needs: 'curriculum/gender.view.js' },
   { name: 'roles',    pattern: '/gender/roles',  module: '../curriculum/learn.view.js', title: 'Say it as me',     owner: 'lane1', group: 'learn', quick: 'nav.roles',    query: { gender: 'roles' }, needs: 'curriculum/gender.view.js' },
@@ -75,8 +75,8 @@ export const ROUTES = [
   { name: 'text',     pattern: '/read/:textId',   module: '../corpus/read.view.js',              title: 'Read', owner: 'lane5' },
   { name: 'scan',     pattern: '/scan',           module: '../photo/scan.view.js',               nav: 'nav.scan',     title: 'Scan', owner: 'lane6' },
   { name: 'calendar', pattern: '/calendar',       module: '../curriculum/calendar.view.js',      nav: 'nav.calendar', title: 'Calendar', owner: 'lane1' },
-  { name: 'settings', pattern: '/settings',       module: './settings.view.js',                  nav: 'nav.settings', title: 'Settings', owner: 'lane8' },
-  { name: 'welcome', pattern: '/welcome',        module: './onboarding.view.js',                title: 'Welcome', owner: 'lane8' },
+  { name: 'settings', pattern: '/settings',       module: './settings.view.js', tier: 'v0',                  nav: 'nav.settings', title: 'Settings', owner: 'lane8' },
+  { name: 'welcome', pattern: '/welcome',        module: './onboarding.view.js', tier: 'v0',                title: 'Welcome', owner: 'lane8' },
   { name: 'how',      pattern: '/how',            module: './how.view.js',                       title: 'How this works', owner: 'lane8' },
   // Optional routes: other lanes add these view files over time. When the file is missing the route is hidden from nav/quick
   // links (see probeRoutes) and a direct visit shows the "not available yet" card; nothing else breaks.
@@ -89,8 +89,19 @@ export const ROUTES = [
   { name: 'torahread',    pattern: '/torahread',          module: '../torahread/torahread.view.js', title: 'Torah reading', owner: 'torahread', optional: true, quick: 'nav.torahread' },
   { name: 'torahreadsec', pattern: '/torahread/:section', module: '../torahread/torahread.view.js', title: 'Torah reading', owner: 'torahread', optional: true },
   { name: 'vocab',    pattern: '/vocab',          module: '../vocab/vocab.view.js',              title: 'Vocabulary', owner: 'lane9', optional: true, quick: 'nav.vocab' },
-  { name: 'about',    pattern: '/about',          module: './about.view.js',                     nav: 'nav.about',    title: 'About', owner: 'lane8' },
+  { name: 'search',   pattern: '/search',         module: './search.view.js', tier: 'v0',                    title: 'Search', owner: 'nav' },
+  { name: 'about',    pattern: '/about',          module: './about.view.js', tier: 'v0',                     nav: 'nav.about',    title: 'About', owner: 'lane8' },
 ];
+
+/**
+ * Release tier (see docs/v0/SCOPE.md). 'v0' routes are the small first release: they are the only bottom-nav destinations
+ * and the only menu entries outside the collapsed Preview group. Everything else defaults to 'preview': reachable, searchable
+ * (labelled), and shown with a top banner saying it is unreviewed and may change. Promote a route by setting tier: 'v0' once the
+ * exit criteria in SCOPE.md are met.
+ */
+for (const r of ROUTES) if (r.tier !== 'v0') r.tier = 'preview';
+export const tierOf = (r) => (r && r.tier === 'v0' ? 'v0' : 'preview');
+export const isPreview = (r) => tierOf(r) === 'preview';
 
 /** Parse "#/letters/alef?x=1" -> {path, query}. @param {string} hash */
 export function parseHash(hash) {

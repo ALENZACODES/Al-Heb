@@ -4,6 +4,7 @@
  * Words: data/vocab/words.json (machine-built DRAFT). Store key "listen.v1". ctx extras for tests: ctx.listenData {words, config}, ctx.rng.
  */
 import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
+import { congregationOf, audioNote, playLine, LABELS } from '../pronunciation/forTradition.js';
 import { KEY, normState, buildPool, buildRound, applyAnswer } from './model.js';
 
 const CSS = `
@@ -37,6 +38,7 @@ export function mount(root, ctx) {
   root.append(wrap);
   let alive = true, state = normState(null), pool = [], mode = 'read', qs = [], qi = 0, right = 0, answered = false;
   const say = (t) => { status.textContent = t; };
+  const trad = () => congregationOf(ctx?.settings);
   const set = (...n) => body.replaceChildren(...n.filter(Boolean));
   const audioHas = (id) => { try { return !!ctx?.audio?.has?.('word', id); } catch { return false; } };
 
@@ -57,10 +59,12 @@ export function mount(root, ctx) {
     const withAudio = pool.filter((w) => audioHas(w.id));
     const nodes = [];
     if (withAudio.length >= 4) {
-      nodes.push(el('p', {}, `${withAudio.length} words have audio. You hear a word and pick how it is written.`),
+      nodes.push(el('p', {}, `${withAudio.length} words have audio for your ${LABELS[trad()]} setting. You hear a word and pick how it is written.`),
         el('button', { class: 'btn', type: 'button', onclick: () => start('audio', withAudio) }, 'Start listening drill'));
     } else {
-      nodes.push(el('p', { class: 'ls-note', role: 'note' }, cfg.noAudio + '.'), el('p', {}, cfg.noAudioHelp),
+      nodes.push(el('p', { class: 'ls-note', role: 'note' }, cfg.noAudio + '.'),
+        trad() === 'israeli' ? null : el('p', { class: 'ls-trad', role: 'note' }, audioNote(trad())),
+        el('p', {}, cfg.noAudioHelp),
         el('button', { class: 'btn', type: 'button', onclick: () => start('read', pool) }, 'Start read-and-match'));
     }
     if (state.answered) nodes.push(el('p', {}, `So far: ${state.correct} right out of ${state.answered}.`));
@@ -88,7 +92,7 @@ export function mount(root, ctx) {
     if (mode === 'audio') play(q.id);
   }
   async function play(id) {
-    try { const r = await ctx.audio.play('word', id); if (r && r.source === 'none') say('This clip could not play. You can press Play to try again.'); } catch { say('This clip could not play.'); }
+    try { const r = await ctx.audio.play('word', id); if (r && r.source === 'none') say(r.reason === 'tts-pronunciation-mismatch' ? playLine(r, trad()) : 'This clip could not play. You can press Play to try again.'); else say(playLine(r, trad(), 'this word')); } catch { say('This clip could not play.'); }
   }
   async function pick(c, opts) {
     if (answered) return; answered = true;

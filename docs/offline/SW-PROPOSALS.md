@@ -1,14 +1,12 @@
-# Proposed changes to sw.js (NOT applied; sw.js is not this lane's file)
+# Proposed changes to sw.js
 
-Read from `sw.js` as of 2026-11-04. Each item says what to change, why, and what it costs.
+Originally read from `sw.js` on 2026-11-04. **Item 1 has since been applied** (re-read `sw.js` and `src/shell/update.js` to confirm); items 2 and 3 are still proposals and were not re-checked against the current `sw.js` beyond the runtime cache name `alef-runtime-v1`. Each item says what to change, why, and what it costs.
 
-## 1. Let the learner decide when an update takes over (waiting worker + SKIP_WAITING)
-**Now:** `install` ends with `self.skipWaiting()` and `activate` deletes every `alef-shell-*` cache except the new one, then `clients.claim()`.
-**Problem:** a tab opened on version A keeps running A's modules; the moment B activates, A's cache is deleted, so any module A imports lazily afterwards (route views are `import()`ed on navigation) is fetched from B or the network: a mixed-version page. Also the page gets a surprise `controllerchange`.
-**Change:** remove `.then(() => self.skipWaiting())` from `install`; add
-```js
-self.addEventListener('message', (e) => { if (e.data && e.data.type === 'SKIP_WAITING') self.skipWaiting(); });
-```
+## 1. Let the learner decide when an update takes over (waiting worker + SKIP_WAITING) - APPLIED
+**Now (applied):** `install` only fills the shell cache; a `message` handler in `sw.js` calls `self.skipWaiting()` when it receives `SKIP_WAITING` (as a string or `{type:'SKIP_WAITING'}`); `activate` deletes every `alef-shell-*` cache except the new one, then `clients.claim()`.
+**Was:** `install` ended with `self.skipWaiting()`.
+**Problem it solved:** a tab opened on version A keeps running A's modules; the moment B activates, A's cache is deleted, so any module A imports lazily afterwards (route views are `import()`ed on navigation) is fetched from B or the network: a mixed-version page. Also the page gets a surprise `controllerchange`.
+**Change made:** removed `skipWaiting` from `install`; added the message handler (in `sw.js`, accepts the string form too).
 **Effect:** B waits until every A tab is closed or the learner presses "Reload now" in the banner (`src/shell/update.js` posts `SKIP_WAITING` then reloads on `controllerchange`). Cost: a learner who never closes the app stays on A until they accept; with the banner that is by design. Also keep A's shell cache until B is active: that already holds because `activate` only runs after B takes over.
 
 ## 2. Cache lazy views with the shell version, not "runtime"

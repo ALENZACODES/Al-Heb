@@ -5,7 +5,8 @@
 // The text describes what the prompt asked for, so an image flagged for a wrong backdrop (docs/images/REDO-LIST.md) is
 // described as intended until it is redone. Intermediate-lesson slots (I-NN-img1/2, data/curriculum/intermediate-image-slots.json)
 // get their alt text from the slot's scene sentence, even before the image exists. Block J rows (data/images/block-j.csv) use that file's
-// `alt` column (read only); a row with an empty alt gets a generated sentence from its kind and set.
+// `alt` column (read only); a row with an empty alt gets a generated sentence from its kind and set. Run 3 rows (data/images/run3.csv,
+// ids such as TROPE_etnachta_mnemonic or CRAFT_bimah_01) are carried the same way from that file's `alt` column.
 //   node tools/images/alt_text.mjs          write the map (idempotent)
 //   node tools/images/alt_text.mjs --print  print id and text, write nothing
 // Re-run after `node tools/images/ingest.mjs manifest`, which rebuilds the file without this map.
@@ -16,6 +17,7 @@ import { LETTERS } from './spec.mjs';
 import { readJson, writeJsonAtomic } from './ingest_lib.mjs';
 import { loadSlots } from './build_inter.mjs';
 import { loadBlockJ, blockJAlt } from './block_j_rows.mjs';
+import { loadRun3, run3Alt } from './build_run3.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const MANIFEST = join(ROOT, 'data/images/generated-manifest.json');
@@ -112,12 +114,14 @@ export function interAltText(slot) {
   return t;
 }
 
-/** altText map (id -> text), ids sorted: every ingested image (from its prompt) plus every intermediate-lesson slot (from the slots file). */
-export function buildAltText(prov, slots = loadSlots(), jRows = loadBlockJ()) {
+/** altText map (id -> text), ids sorted: every ingested image (from its prompt) plus every intermediate-lesson slot (from the slots file),
+ *  every block J row and every Run 3 row (from their csv alt columns). */
+export function buildAltText(prov, slots = loadSlots(), jRows = loadBlockJ(), run3Rows = loadRun3()) {
   const out = {};
   for (const id of Object.keys(prov.images)) out[id] = altTextFor(id, prov.images[id].prompt);
   for (const s of slots) out[s.id] = interAltText(s);
   for (const r of jRows) out[r.id] = blockJAlt(r);
+  for (const r of run3Rows) out[r.id] = run3Alt(r);
   return Object.fromEntries(Object.entries(out).sort(([a], [b]) => a.localeCompare(b)));
 }
 

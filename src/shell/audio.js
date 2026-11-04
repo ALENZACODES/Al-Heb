@@ -1,6 +1,8 @@
 // Shell audio: wraps lane 4's player (src/audio/player.js) with the manifest and an honest status indicator.
 // The wrapper keeps the player's interface (play, playSequence, has, status, stop) and publishes what is actually
 // being used for sound: a recorded file, the browser's text-to-speech voice, or nothing.
+// Status wording comes from ./audio-labels.js (one table for every screen and report).
+import { fileLabel, STATUS_LABELS } from './audio-labels.js';
 export const REASONS = {
   'no-hebrew-browser-voice': 'your browser has no Hebrew voice installed',
   'tts-pronunciation-mismatch': 'the browser voice only reads Israeli pronunciation and you chose another tradition',
@@ -25,8 +27,7 @@ export function summarizeManifest(manifest) {
 export function describeResult(r, congregation = 'israeli') {
   if (!r) return { mode: 'none', text: '' };
   if (r.source === 'file') {
-    const kind = r.entryStatus === 'tts' ? 'pre-rendered synthetic voice file' : 'recorded audio file';
-    return { mode: 'file', text: `Sound: ${kind} (${r.voice === 'm' ? 'man' : 'woman'}, ${TRAD[r.fileTradition || r.tradition] || r.tradition}).` };
+    return { mode: 'file', text: `Sound: ${fileLabel(r.entryStatus)} (${r.voice === 'm' ? 'man' : 'woman'}, ${TRAD[r.fileTradition || r.tradition] || r.tradition}).` };
   }
   if (r.source === 'tts-fallback' || r.played === true) {
     const mismatch = r.mismatch || (r.tradition && r.tradition !== 'israeli');
@@ -35,9 +36,45 @@ export function describeResult(r, congregation = 'israeli') {
   return { mode: 'none', text: `No sound: ${REASONS[r.reason] || r.reason || r.error || 'unavailable'}.` };
 }
 
+/**
+ * iOS/Safari audio unlock. Mobile Safari only lets a page make sound after a user gesture, and the FIRST sound call must be
+ * synchronous inside that gesture (our play() awaits the manifest first, so its first call is too late). This primes every engine
+ * the player may use, once, from the first pointerdown/keydown: resumes an AudioContext when the browser has one (no-op without),
+ * plays a muted empty Audio element, and speaks an empty utterance. Pure of the DOM; everything optional; never throws.
+ * @param {any} [g] window-like @returns {() => {done:boolean, context:boolean, audio:boolean, speech:boolean}}
+ */
+export function createAudioUnlock(g = globalThis) {
+  let done = false, ctx = null;
+  return function unlock() {
+    if (done) return { done: true, context: false, audio: false, speech: false };
+    done = true;
+    const out = { done: true, context: false, audio: false, speech: false };
+    try {
+      const AC = g?.AudioContext || g?.webkitAudioContext;
+      if (typeof AC === 'function') {
+        ctx = ctx || new AC();
+        if (ctx.state === 'suspended' && typeof ctx.resume === 'function') { const p = ctx.resume(); if (p && typeof p.catch === 'function') p.catch(() => {}); }
+        out.context = true;
+      }
+    } catch { /* no AudioContext here */ }
+    try {
+      if (typeof g?.Audio === 'function') {
+        const a = new g.Audio(); a.muted = true;
+        const p = typeof a.play === 'function' ? a.play() : null; if (p && typeof p.catch === 'function') p.catch(() => {});
+        out.audio = true;
+      }
+    } catch { /* no audio element */ }
+    try {
+      const sp = g?.speechSynthesis, U = g?.SpeechSynthesisUtterance;
+      if (sp && typeof sp.speak === 'function' && typeof U === 'function') { const u = new U(''); u.volume = 0; sp.speak(u); out.speech = true; }
+    } catch { /* no speech */ }
+    return out;
+  };
+}
+
 const CHECKING = 'checking audio...';
 const initialText = (summary) => (summary.recorded + summary.tts > 0
-  ? { mode: 'idle', text: `Sound: ${summary.recorded} recorded and ${summary.tts} pre-rendered clips are listed; anything else uses your browser's voice.` }
+  ? { mode: 'idle', text: `Sound: ${summary.recorded} clips listed as "${STATUS_LABELS.recorded}" and ${summary.tts} as "${STATUS_LABELS.tts}"; anything else uses your browser's voice.` }
   : { mode: 'idle', text: "Sound: no recordings exist yet. Audio uses your browser's Hebrew text-to-speech voice, if your device has one." });
 
 /**
@@ -81,6 +118,8 @@ export function createShellAudio({ settings, manifest, loadManifest, createAudio
 
   return {
     ...inner,
+    /** call synchronously inside the first user gesture (see createAudioUnlock); safe to call again */
+    unlock: createAudioUnlock(globalThis),
     get summary() { return summary; },
     get state() { return state; },
     /** 'ready' | 'checking' | 'offline' - whether the core recording list is known. */

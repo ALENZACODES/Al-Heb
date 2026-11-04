@@ -180,3 +180,78 @@ main .alef-atlas .tile.final .s, main .alef-atlas .tile.wrong .s, main .alef-atl
 /* Settings: the file input behind "Restore from backup file" is visually hidden, so its keyboard focus was invisible. Ring the label that stands for it. */
 label.btn:has(+ input[type=file]:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
 [hidden] { display: none !important; }
+
+/* Generated pictures (src/img/resolve.js). Sizing only: no min-height, so a missing picture leaves no gap. */
+.alef-img{display:block;height:auto;max-width:100%;border-radius:.5rem}
+.vc-pic,.th-pic{width:100%;max-width:14rem}
+.at-pic{width:100%;max-width:18rem;margin:0 auto .5rem}
+.l-scene,.fv-pic{width:100%;max-width:36rem;margin:0 0 .75rem}
+.pl-pic{max-width:9rem;margin:0 auto .5rem}
+/* Reviewer mode (settings.showUnapprovedImages): visible outline on pictures that are not approved. */
+.alef-img[data-unapproved]{outline:3px dashed #c2410c;outline-offset:2px}
+
+/* Mobile quirks round (lane mobile, 2026-11-04). Emulation-checked only; see docs/mobile/FINDINGS.md. */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; -webkit-tap-highlight-color: rgba(31,58,95,.15); overscroll-behavior-y: none; }
+/* removes the 300ms double-tap-zoom wait on controls without disabling pinch zoom */
+a, button, summary, label, select, input, [role="button"] { touch-action: manipulation; }
+/* iOS Safari zooms the page when a focused field has a font-size under 16px: keep every field at 16px or more */
+input, select, textarea { font-size: max(16px, 1em); font-family: inherit; }
+textarea { max-inline-size: 100%; }
+/* notch / landscape: header, banner and the fixed bottom bar clear the side insets too */
+.site-header, .sound-bar { padding-inline: max(1rem, env(safe-area-inset-left), env(safe-area-inset-right)); }
+main { padding-inline: max(1rem, env(safe-area-inset-left), env(safe-area-inset-right)); }
+@media (max-width: 719.98px) {
+  /* text zoom / large system font: reserve the bar height in rem so the last card is never hidden behind it */
+  body { padding-block-end: calc(4.5rem + env(safe-area-inset-bottom)); }
+  .site-nav { padding-inline: env(safe-area-inset-left) env(safe-area-inset-right); }
+  /* the bar is capped at 14px labels: at 200% text a 5-tab bar cannot hold larger words without breaking them mid-word (page text still scales) */
+  .site-nav a, .more-btn { min-block-size: 3.5rem; font-size: min(.75rem, 14px); }
+  .site-nav .nav-more a { font-size: min(.85rem, 16px); }
+  /* Android Chrome resizes the layout viewport for the on-screen keyboard, which would leave the tab bar floating over the field: hide it while typing */
+  body:has(input:focus, textarea:focus, select:focus) .site-nav { display: none; }
+  body:has(input:focus, textarea:focus, select:focus) { padding-block-end: env(safe-area-inset-bottom); }
+}
+/* short landscape phones: a fixed bar plus header would take a third of the screen, so let the bar scroll with the page */
+@media (max-height: 480px) and (max-width: 719.98px) {
+  .site-nav { position: static; box-shadow: none; }
+  body { padding-block-end: env(safe-area-inset-bottom); }
+  .site-nav .nav-more { position: static; }
+}
+/* forced-colors / Windows high contrast: the current tab was shown by background only */
+@media (forced-colors: active) {
+  .site-nav a[aria-current="page"], .more-btn[aria-expanded="true"], .more-btn[data-current] { background: Highlight; color: HighlightText; forced-color-adjust: none; text-decoration: underline; }
+  .site-nav { border-block-start: 2px solid CanvasText; }
+  .more-btn { border: 1px solid ButtonText; }
+}
+@media (prefers-contrast: more) { :root { --border: currentColor; --muted: var(--fg); } }
+
+/* ---- Navigation: section tabs + grouped More menu + search (src/shell/nav.js, menu.js, search.view.js; docs/nav/NAV.md) ---- */
+.more-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; min-block-size: var(--tap); padding: .25rem .75rem; border: 0; background: transparent; color: var(--fg); font: inherit; font-size: .9rem; line-height: 1.2; cursor: pointer; border-radius: 8px; }
+.more-btn[hidden] { display: none !important; }
+.more-btn[aria-expanded="true"], .more-btn[data-current] { background: var(--accent); color: var(--accent-fg); }
+.site-nav > ul#nav { flex-wrap: nowrap; }
+.site-nav .nav-more { display: none; position: absolute; inset-inline: 0; inset-block-start: 100%; z-index: 60; flex-direction: column; flex-wrap: nowrap; gap: .25rem; max-block-size: min(70vh, 40rem); overflow-y: auto; overscroll-behavior: contain; background: var(--card); border: 1px solid var(--border); border-radius: 0 0 12px 12px; padding: .5rem; box-shadow: 0 6px 16px rgba(0,0,0,.18); }
+.site-nav .nav-more.open { display: flex; }
+.nav-group > details { border: 1px solid var(--border); border-radius: 10px; }
+.nav-group summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: .1rem .5rem; min-block-size: var(--tap); padding: .4rem .75rem; cursor: pointer; font-weight: 600; align-content: center; }
+.menu-count { font-weight: 400; opacity: .75; font-size: .85em; }
+.menu-sec-desc { flex-basis: 100%; font-weight: 400; font-size: .8rem; opacity: .8; }
+.nav-group .menu-list { display: grid; gap: .25rem; padding: 0 .5rem .5rem; margin: 0; list-style: none; grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr)); }
+.nav-more .menu-link, .search-list a { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: .1rem; min-block-size: var(--tap); padding: .4rem .75rem; text-align: start; border: 1px solid var(--border); border-radius: 10px; font-size: .95rem; inline-size: 100%; box-sizing: border-box; }
+.nav-more .menu-link[aria-current="page"] { background: var(--accent); color: var(--accent-fg); }
+.menu-label { font-weight: 600; }
+.menu-desc { font-size: .8rem; opacity: .8; font-weight: 400; }
+.search-form { display: flex; flex-direction: column; gap: .35rem; }
+.search-form input { min-block-size: var(--tap); font: inherit; padding: .4rem .6rem; inline-size: 100%; box-sizing: border-box; }
+.search-list { list-style: none; margin: 0 0 1rem; padding: 0; display: grid; gap: .35rem; }
+.search-he { font-size: 1.6rem; }
+@media (max-width: 719.98px) {
+  .site-nav { flex-wrap: nowrap; }
+  .site-nav > ul#nav li { flex: 1 1 0; min-inline-size: 0; }
+  .site-nav a, .more-btn { overflow-wrap: anywhere; hyphens: auto; }
+  .more-btn { flex: 0 0 4.5rem; inline-size: auto; border-radius: 0; min-block-size: 56px; padding: .2rem .1rem; font-size: .75rem; }
+  .site-nav .nav-more { inset-block-start: auto; inset-block-end: 100%; border-radius: 12px 12px 0 0; border-block-end: 0; max-block-size: calc(100dvh - 8rem); box-shadow: 0 -6px 16px rgba(0,0,0,.18); }
+  .site-nav .nav-more.open { display: flex; grid-template-columns: none; }
+  .nav-more .menu-link { min-block-size: 48px; border-radius: 10px; font-size: .95rem; }
+  .nav-group .menu-list { grid-template-columns: 1fr; }
+}

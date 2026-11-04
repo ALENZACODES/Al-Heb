@@ -30,6 +30,7 @@
 //   cholam        (ashkenazi only: 'o'|'oy', default 'o')       'oy' is a Polish/Chasidic value
 //   capitalize    (default false)
 //
+// Furtive patach: final chet / mappiq he + patach after a vowel puts the 'a' before the consonant (ruach).
 // Divine name: a word whose consonants are exactly יהוה is read as Adonai / Adonoy (convention).
 // Kamatz katan: only U+05C7 or the tiny unverified list in kamatz-katan.js.
 
@@ -220,6 +221,16 @@ function transliterateWord(word, o) {
     }
 
     let v = vid ? vowelLatin(vid, o) : '';
+    // Furtive patach (patach ganuv): a word-final chet / mappiq he with patach is read with the
+    // vowel BEFORE the consonant (רוּחַ ruach, גָּבֹהַּ gavoah). Final ayin keeps its apostrophe form (לִשְׁמֹעַ lishmo'a). The same in every tradition and scheme.
+    if (isLast && i > 0 && vid === 'patach' && (c.ch === 'ח' || (c.ch === 'ה' && c.dagesh))) {
+      let j = i - 1;
+      while (j > 0 && skip[j]) j--;
+      if (vowelOf[j] && vowelOf[j] !== 'shva') {
+        out += 'a' + cons;
+        continue;
+      }
+    }
     out += cons + v + (diph[i] ?? '');
   }
   return out;

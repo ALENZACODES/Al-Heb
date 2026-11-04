@@ -79,6 +79,7 @@ export function collectEntries(root = ROOT, { folder = null, out = OUT } = {}) {
       flags: r.flags ?? [], reasons: f ? f.reasons : [], seen: f?.sceneSeen ?? null, asked: f?.sceneExpected ?? null,
       redo: f ? `${f.redoFile} #${f.redoItem}` : null, ocr: (r.ocr?.blobs ?? []).map((b) => b.t),
       blocking: (r.flags ?? []).filter((x) => BLOCKING_FLAGS.includes(x)), alt: alt[r.id] ?? jAlt.get(r.id) ?? '', note: (notes[r.id]?.defects ?? []).join('; '),
+      needsEye: !!r.needsEye, eyeNote: r.eyeNote ?? '',
       prompt: r.prompt.replace(/^STYLE GUIDE v1:.*?upper left\.\s*/, ''),
     };
   });
@@ -124,7 +125,7 @@ main{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:
 const JS = `
 const KEY='alef-review-v1';let changes=JSON.parse(localStorage.getItem(KEY)||'{}');
 const tiles=[...document.querySelectorAll('.tile:not(.prev)')];let cur=0;
-const FILTERS=['unapproved','flagged','text','aspect','backdrop','redo','approved','rejected','all'];
+const FILTERS=['unapproved','flagged','text','aspect','backdrop','eye','redo','approved','rejected','all'];
 function eff(id){return stateOf(BASE,changes,id);}
 function paint(){let n={approved:0,rejected:0,redo:0,unapproved:0};
  tiles.forEach(t=>{const id=t.dataset.id,s=eff(id);n[s]++;t.classList.remove('approved','rejected','redo');if(s!=='unapproved')t.classList.add(s);
@@ -134,7 +135,7 @@ function paint(){let n={approved:0,rejected:0,redo:0,unapproved:0};
  document.getElementById('count').textContent='approved '+n.approved+' | rejected '+n.rejected+' | redo '+n.redo+' | undecided '+n.unapproved;filter();}
 function filter(){const f=document.getElementById('filter').value;let first=null;
  tiles.forEach(t=>{const id=t.dataset.id,s=eff(id),r=(t.dataset.reasons||'').split(' ');
-  const show=f==='all'||(f==='unapproved'&&s==='unapproved')||(f==='flagged'&&t.dataset.reasons)||(f==='text'&&r.includes('text'))||(f==='aspect'&&r.includes('aspect'))||(f==='backdrop'&&r.includes('backdrop'))||f===s;
+  const show=f==='all'||(f==='unapproved'&&s==='unapproved')||(f==='flagged'&&t.dataset.reasons)||(f==='text'&&r.includes('text'))||(f==='aspect'&&r.includes('aspect'))||(f==='backdrop'&&r.includes('backdrop'))||(f==='eye'&&r.includes('eye'))||f===s;
   t.classList.toggle('hide',!show);if(show&&!first)first=t;});
  const vis=tiles.filter(t=>!t.classList.contains('hide'));if(vis.length&&!vis.includes(tiles[cur]))select(tiles.indexOf(vis[0]));document.getElementById('shown').textContent=vis.length+' shown';}
 function select(i){tiles[cur]&&tiles[cur].classList.remove('cur');cur=i;const t=tiles[cur];if(!t)return;t.classList.add('cur');t.scrollIntoView({block:'nearest'});}
@@ -170,13 +171,15 @@ function tile(e, i) {
   const badges = [
     ...e.reasons.map((r) => `<span class="b ${r === 'text' ? 't' : r === 'aspect' ? 'a' : 'w'}">${lab(r)}</span>`),
     ...(e.flags.includes('possible_text') ? ['<span class="b a">weak text hit</span>'] : []),
+    ...(e.needsEye ? ['<span class="b a">check by eye</span>'] : []),
   ].join('');
+  const eye = e.needsEye ? `<div class="small">Check by eye: ${esc(e.eyeNote || 'identification was medium confidence')}</div>` : '';
   const seen = e.seen && e.asked && e.seen !== e.asked ? `<div class="small">backdrop seen ${esc(e.seen)}, asked ${esc(e.asked)}</div>` : '';
   const ocr = e.ocr.length ? `<div class="small">OCR saw: ${esc(e.ocr.join(' | '))}</div>` : '';
   const size = `${e.w}x${e.h}${e.w !== e.ew || e.h !== e.eh ? ` (asked ${e.ew}x${e.eh})` : ''}`;
-  return `<div class="tile" data-id="${esc(e.id)}" data-reasons="${esc([...e.reasons, ...(e.flags.includes('possible_text') ? ['weak'] : [])].join(' '))}" data-big="../../../assets/img/gen/${esc(e.big)}" data-alt="${esc(e.alt || e.id)}">
+  return `<div class="tile" data-id="${esc(e.id)}" data-reasons="${esc([...e.reasons, ...(e.flags.includes('possible_text') ? ['weak'] : []), ...(e.needsEye ? ['eye'] : [])].join(' '))}" data-big="../../../assets/img/gen/${esc(e.big)}" data-alt="${esc(e.alt || e.id)}">
 <img loading="lazy" src="../../../assets/img/gen/${esc(e.small)}" alt="${esc(e.alt || e.id)}">
-<h3>${esc(e.id)}</h3><div>${badges || '<span class="b s">no flags</span>'}</div><div class="small">${esc(size)} | command ${e.cmd}${e.redo ? ` | in ${esc(e.redo)}` : ''}</div>${seen}${ocr}
+<h3>${esc(e.id)}</h3><div>${badges || '<span class="b s">no flags</span>'}</div><div class="small">${esc(size)} | command ${e.cmd}${e.redo ? ` | in ${esc(e.redo)}` : ''}</div>${seen}${eye}${ocr}
 <div class="st" aria-live="polite"></div>
 <div class="btns"><button class="ok" data-act="ok" aria-label="Approve ${esc(e.id)}" aria-pressed="false">Approve (a)</button><button class="no" data-act="no" aria-label="Reject ${esc(e.id)}" aria-pressed="false">Reject (x)</button><button class="rd" data-act="rd" aria-label="Redo ${esc(e.id)}" aria-pressed="false">Redo (d)</button></div>
 <details><summary>prompt and notes</summary><p class="small">${esc(e.prompt)}</p>${e.note ? `<p class="small">Matcher notes: ${esc(e.note)}</p>` : ''}</details></div>`;
@@ -190,7 +193,7 @@ export function pageHtml({ entries, base, previews = [] }) {
   const block = Object.fromEntries(entries.filter((e) => e.blocking.length).map((e) => [e.id, e.blocking]));
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Image review</title><style>${CSS}</style></head><body>
 <header><strong>Image review</strong><span id="count" role="status"></span><span id="shown"></span>
-<label>Show <select id="filter"><option value="unapproved">undecided</option><option value="flagged">any flag</option><option value="text">text hit</option><option value="aspect">aspect substituted</option><option value="backdrop">wrong backdrop</option><option value="redo">redo</option><option value="approved">approved</option><option value="rejected">rejected</option><option value="all">all</option></select></label>
+<label>Show <select id="filter"><option value="unapproved">undecided</option><option value="flagged">any flag</option><option value="text">text hit</option><option value="aspect">aspect substituted</option><option value="backdrop">wrong backdrop</option><option value="eye">check by eye</option><option value="redo">redo</option><option value="approved">approved</option><option value="rejected">rejected</option><option value="all">all</option></select></label>
 <button id="export-btn" onclick="exportPanel()">Export (e)</button><button onclick="document.getElementById('help').classList.toggle('hide')">Keys (?)</button></header>
 <div id="help" class="hide" role="dialog" aria-label="Keyboard help"><b>Keys</b><br>j / k or arrow keys: next / previous image<br>a approve, x reject, d redo, u clear<br>Enter or space: enlarge (again to close)<br>f: next filter, e: export, Esc: close<br>Approving an image the text check flagged asks you to confirm.</div>
 <div id="panel" class="hide" role="dialog" aria-label="Export"><b>Export</b><p class="small">Your clicks live only in this browser until you export. Preferred route: download <code>decisions.json</code>, then run <code>node tools/images/ingest.mjs apply-decisions decisions.json --force</code> (the flag only matters for images you approved despite a text flag). <code>approvals.json</code> is the full state in the repository schema.</p>

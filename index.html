@@ -6,6 +6,13 @@
   <title>ALEF</title>
   <meta name="description" content="ALEF: learn to read Hebrew aloud and speak it in Israel.">
   <meta name="theme-color" content="#1f3a5f">
+  <meta name="theme-color" content="#f6efe0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111722" media="(prefers-color-scheme: dark)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="ALEF">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="format-detection" content="telephone=no">
   <meta name="color-scheme" content="light dark">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
@@ -26,5 +33,6 @@
   <div id="announcer" class="visually-hidden" role="status" aria-live="polite"></div>
   <noscript><p class="card">ALEF needs JavaScript enabled.</p></noscript>
   <script type="module" src="src/app.js"></script>
+  <script type="module" src="src/shell/install-notice.js"></script>
 </body>
 </html>

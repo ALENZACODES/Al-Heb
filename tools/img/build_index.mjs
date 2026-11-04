@@ -14,7 +14,9 @@ import { fileURLToPath } from 'node:url';
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const INDEX_PATH = 'data/img/index.json';
-export const MAX_BYTES = 150 * 1024;
+// Size cap on the serialized index (loaded lazily by src/img/resolve.js, not on first paint). Raised from 150 KB to 256 KB on
+// Nov 4, 2026 when the 1000 Run 3 ids (data/images/run3.csv, carried in via the altText map) joined the index: alt text is the bulk.
+export const MAX_BYTES = 256 * 1024;
 
 /** Minimal RFC-4180 CSV parser (quoted fields, doubled quotes, newlines inside quotes). */
 export function parseCsv(text) {

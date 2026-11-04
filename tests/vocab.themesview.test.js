@@ -123,3 +123,17 @@ test('sendPack matches by pointed form + part of speech and never touches input'
   assert.equal(sendPack(r.cards, words, entries, 6).existing, 1);
   assert.equal(bridgeKey('a', 'noun'), 'a|noun');
 });
+
+test('a theme-pack word flagged hidden (flags.hidden or "hidden" in a flags array) never renders', async () => {
+  const pack = readPack('food-drink-set01');
+  const w0 = { ...pack.words[0], id: 'hidden-obj', flags: { hidden: true } };
+  const w1 = { ...pack.words[1], id: 'hidden-arr', flags: ['hidden'] };
+  const packs = { 'food-drink-set01': { ...pack, words: [w0, w1, ...pack.words.slice(2)] } };
+  const root = new N('div');
+  mount(root, { store: memStore(), query: {}, audio: { has: () => false, play: async () => ({}), stop() {} }, now: () => 1, settings: { get() {} }, themesData: { index, packs } });
+  await waitFor(() => root.find((n) => n.attrs['data-pack']).length > 0, { message: 'list' });
+  await root.find((n) => n.attrs['data-pack'] === 'food-drink-set01')[0].click();
+  await waitFor(() => root.find((n) => n.tag === 'li' && n.attrs['data-id']).length === pack.words.length - 2, { message: 'two hidden words dropped' });
+  const ids = root.find((n) => n.tag === 'li' && n.attrs['data-id']).map((n) => n.attrs['data-id']);
+  assert.ok(!ids.includes('hidden-obj') && !ids.includes('hidden-arr'));
+});

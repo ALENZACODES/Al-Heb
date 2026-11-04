@@ -23,7 +23,7 @@
    "translit": "gam",
    "en": "also, too, additionally",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h04c271fe",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,7 +41,7 @@
    "translit": "me'od",
    "en": "very, quite",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h81024165",
    "source": "data/vocab/words.json"
   },
   {
@@ -59,7 +59,7 @@
    "translit": "i",
    "en": "not",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hf5a50e5d",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "met",
    "en": "Dead, having died",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h24f17330",
    "source": "data/vocab/words.json"
   }
  ]

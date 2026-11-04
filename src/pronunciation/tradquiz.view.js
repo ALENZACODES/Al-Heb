@@ -7,6 +7,7 @@
  */
 import { TRADITION_LABELS, NOTICE, TRADITIONS } from './compare.model.js';
 import { createLoader } from './lookup.js';
+import { congregationOf, LABELS } from './forTradition.js';
 import { buildQuiz, isCorrect, applyRound, weakCodes, optionLabel, NOTE, QUIZ_KEY, QUESTIONS } from './tradquiz.model.js';
 
 const CSS = `
@@ -30,6 +31,7 @@ export function mount(root, ctx) {
     return n;
   };
   const rng = ctx?.rng || Math.random;
+  const mine = () => congregationOf(ctx?.settings);
   const loader = createLoader(ctx);
   let alive = true, pool = null, reasons = null, stored = {}, qs = [], qi = 0, results = [];
 
@@ -53,6 +55,7 @@ export function mount(root, ctx) {
     setBody(
       h('p', {}, `${QUESTIONS} questions. A reading is shown; pick the tradition it belongs to. Wrong answers are never held against you: you see why and move on.`),
       h('p', { class: 'tq-flag' }, NOTE),
+      h('p', { id: 'tq-setting' }, `Your setting is ${LABELS[mine()]}. The quiz covers all three traditions whatever your setting; your own is marked in the answers.${' This quiz has no audio for any tradition.'}`),
       stored.rounds ? h('p', {}, `Rounds played: ${stored.rounds}. Best score: ${stored.best} of ${stored.last?.total ?? QUESTIONS}. Last: ${stored.last?.score} of ${stored.last?.total}.`) : null,
       weak.length ? h('div', {}, h('p', {}, 'Worth another look:'), h('ul', {}, weak.map((w) => h('li', {}, reasons.codes[w.code].text)))) : null,
       btn('Start', start, { 'data-act': 'start' }),
@@ -82,7 +85,7 @@ export function mount(root, ctx) {
       h('p', { class: ok ? '' : 'tq-flag', role: 'status' }, ok ? 'Yes.' : `Not this time. It was ${optionLabel(q.answer).replace(/ \(.*\)$/, '')}.`),
       h('p', { class: 'tq-he', dir: 'rtl', lang: 'he' }, q.word.h),
       h('p', {}, q.word.g),
-      h('ul', {}, TRADITIONS.map((t, i) => h('li', {}, `${TRADITION_LABELS[t]}: `, h('span', { dir: 'ltr', lang: 'und-fonipa' }, q.word.i[i]), ' / ', h('span', { dir: 'ltr' }, q.word.s[t === 'ashkenazi' ? 1 : 0])))),
+      h('ul', {}, TRADITIONS.map((t, i) => h('li', { 'data-mine': t === mine() ? '1' : null }, `${TRADITION_LABELS[t]}${t === mine() ? ' (your setting)' : ''}: `, h('span', { dir: 'ltr', lang: 'und-fonipa' }, q.word.i[i]), ' / ', h('span', { dir: 'ltr' }, q.word.s[t === 'ashkenazi' ? 1 : 0])))),
       why.length ? h('div', {}, h('p', {}, 'Why they differ (rule-generated):'), h('ul', {}, why.map((w) => h('li', {}, w)))) : null,
       btn(last ? 'See my score' : 'Next', last ? finish : () => { qi++; ask(); }, { 'data-act': 'next' }),
     );

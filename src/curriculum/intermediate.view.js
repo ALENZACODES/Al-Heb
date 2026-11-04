@@ -15,6 +15,9 @@ import { applyOutcomesToCards, wordCardId, wordAudioId } from "./progress.js";
 import { audioStatus, settingVoice, onKeys } from "./ex-ui.js";
 import { describePlay } from "./audio-ui.js";
 import * as A from "./intermediate-adapter.js";
+import { sequenceExercises, fairProduceOptions, createSession, feedbackText, fireFeedback } from "./exercises.session.js";
+import { progressBar, summaryNode } from "./exercises.ui.js";
+import { respell } from "../pronunciation/forTradition.js";
 
 export const STORE_KEY = "intermediate.v1";
 export const TYPE_LABEL = {
@@ -30,7 +33,7 @@ const emptyStore = () => ({ lessons: {} });
 const loadProgress = async (ctx) => { const s = await storeGet(ctx, STORE_KEY, null); return s && s.lessons ? s : emptyStore(); };
 const tradition = (ctx, lesson) => (lesson.track === "israel" ? "israeli" : ctx?.settings?.get?.("congregation") || "sephardi");
 /** Latin pronunciation line of a lesson word for the learner's tradition (falls back to the Israeli form). */
-export const pronLine = (w, trad) => w?.pronunciation?.[trad] || w?.pronunciation?.israeli || w?.translit || "";
+export const pronLine = (w, trad) => w?.pronunciation?.[trad] || (trad === "israeli" ? "" : respell(w?.he, trad)) || w?.pronunciation?.israeli || w?.translit || "";
 const wordFor = (lesson, he) => { const i = lesson.words.findIndex((w) => A.heKey(w.he) === A.heKey(he)); return i < 0 ? null : { w: lesson.words[i], n: i + 1 }; };
 
 function playBtn(ctx, kind, id, label, note, lesson) {
@@ -78,7 +81,7 @@ const R = {
       [el("p", {}, ex.en), hit ? el("p", { class: "muted" }, "Pronounced: " + pronLine(hit.w, tradition(env.ctx, env.lesson))) : null], finish);
   },
   produce(env, ex, finish) {
-    const opts = A.produceOptions(ex, env.seed);
+    const opts = fairProduceOptions(ex);
     const out = el("p", { role: "status", "aria-live": "polite" });
     let done = false;
     const group = el("div", { class: "alef-int-options col", role: "group", "aria-label": "Choices" }, ...opts.map((o, i) => el("button", { type: "button", class: "btn secondary alef-int-opt", "data-n": String(i + 1), lang: "he", dir: "rtl",
@@ -146,7 +149,7 @@ const R = {
   },
   spot(env, ex, finish) {
     const r = env.corpus?.get(ex.line), text = r ? lineText(r, ex) : ex.target;
-    const toks = text.split(/\s+/).filter(Boolean), out = el("p", { role: "status", "aria-live": "polite" }); let done = false;
+    const toks = text.split(/\s+/).flatMap((t) => t.split(/(?<=־)/)).filter(Boolean), out = el("p", { role: "status", "aria-live": "polite" }); let done = false;
     const row = el("div", { class: "alef-int-pool row", role: "group", "aria-label": "Words of the line" }, ...toks.map((t) => el("button", { type: "button", class: "btn secondary alef-int-opt", lang: "he", dir: "rtl",
       onclick: () => { if (done) return; done = true; const ok = A.gradeExercise(ex, t).correct; out.textContent = ok ? "Found it." : `Not quite. The word is ${ex.target}.`; finish(ok); } }, t)));
     return el("div", {}, el("p", {}, "Find the word that means: ", el("strong", {}, ex.en)), row, out);
@@ -169,6 +172,18 @@ export async function applyToSrs(ctx, lesson, results, now = Date.now()) {
   await storeSet(ctx, CARDS_KEY, applyOutcomesToCards(st.cards, outcomes, now));
   return outcomes.length;
 }
+
+/** Why-line shown after an answer: derived from the exercise data only (no new Hebrew is invented). */
+export function whyLine(ex, lesson, trad) {
+  const hit = (he) => lesson.words.find((w) => A.heKey(w.he) === A.heKey(he));
+  if (ex.type === "produce") { const he = ex.options[ex.answer], w = hit(he); return `${he} is the Hebrew for "${ex.en}"${w ? ` (pronounced ${pronLine(w, trad)})` : ""}.`; }
+  if (ex.type === "spot") return `${ex.target} means "${ex.en}".`;
+  if (ex.type === "order") return `${ex.he} means "${ex.en}".`;
+  if (ex.type === "register") return `"${ex.en}" is ${ex.answer}.`;
+  if (ex.type === "match") return ex.pairs.map((p) => `${p.he} = ${p.en}`).join("; ") + ".";
+  return "";
+}
+const exLabel = (e) => TYPE_LABEL[e.type] + ": " + (e.he || e.en || e.line || e.m || e.task || e.id);
 
 // ------------------------------------------------------------------------------------------------ pages
 function mountList(root, ctx) {
@@ -217,15 +232,22 @@ function mountLesson(root, ctx, id) {
     const [prog, content, st] = await Promise.all([loadProgress(ctx), loadContent(), loadState(ctx)]);
     if (!alive) return;
     const mine = prog.lessons[lesson.id] || { results: {}, done: null };
-    const exs = lesson.exercises, corpus = content.corpus;
+    const exs = sequenceExercises(lesson.exercises), corpus = content.corpus;
     const unmet = lesson.prerequisites.filter((p) => !st.completed[p]);
-    const results = { ...mine.results };
-    let idx = exs.findIndex((e) => !(e.id in results)); if (idx < 0) idx = 0;
+    let results = { ...mine.results }, session = null, t0 = 0, cardsUpdated = 0, shown = 0;
     let started = false;
+
+    const begin = () => {
+      // Resume at the first unanswered exercise; a finished lesson starts a fresh round.
+      let todo = exs.filter((e) => !(e.id in results));
+      if (!todo.length) { results = {}; todo = exs; }
+      session = createSession(todo); t0 = Date.now(); cardsUpdated = 0; shown = exs.length - todo.length;
+    };
 
     const intro = () => [
       el("p", { class: "muted" }, `${lesson.unit ? lesson.unit + " · " : ""}${lesson.estMinutes} min · ${lesson.track === "read" ? "Read the siddur" : "Speak in Israel"} · ${exs.length} exercises`),
       el("p", { class: "draft-flag", role: "note" }, DRAFT_TEXT),
+      exs.length ? null : el("p", { class: "alef-locked", role: "note" }, "This lesson has no exercises yet, so it cannot be completed."),
       lesson.needsNativeReview ? el("p", { class: "draft-flag alef-needs-review", role: "note" }, REVIEW_FLAG) : null,
       unmet.length ? el("p", { class: "alef-locked", role: "note" }, `Finish ${unmet.map((p) => byId[p]?.title || p).join(", ")} first. You can still look around.`) : null,
       el("section", { class: "card", "aria-labelledby": "i-goals" }, el("h2", { id: "i-goals" }, "Goals"), el("ul", {}, ...lesson.goals.map((g) => el("li", {}, g)))),
@@ -235,7 +257,7 @@ function mountLesson(root, ctx, id) {
           el("div", { class: "alef-item-body" }, el("span", {}, w.en), el("div", { class: "alef-pron muted", "data-pron": "1" }, pronLine(w, trad))),
           el("div", { class: "alef-item-actions" }, playBtn(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${w.en}`, note, lesson)))))),
       note,
-      el("div", { class: "row alef-actions" }, el("button", { type: "button", class: "btn", id: "alef-int-start", onclick: () => { started = true; offKeys(); show(); } }, mine.done ? "Practise again" : Object.keys(results).length ? "Continue" : "Start exercises"),
+      el("div", { class: "row alef-actions" }, el("button", { type: "button", class: "btn", id: "alef-int-start", disabled: exs.length ? null : "", onclick: () => { started = true; offKeys(); begin(); show(); } }, mine.done ? "Practise again" : Object.keys(results).length ? "Continue" : "Start exercises"),
         el("a", { class: "btn secondary", href: "#/intermediate" }, "All intermediate lessons")),
     ];
 
@@ -247,44 +269,68 @@ function mountLesson(root, ctx, id) {
     function show() {
       if (!alive) return;
       offKeys();
-      if (idx >= exs.length) return summary();
-      const ex = exs[idx];
-      let answered = false;
-      const status = el("p", { class: "alef-int-next", role: "status", "aria-live": "polite" });
-      const next = el("button", { type: "button", class: "btn", id: "alef-int-next", hidden: "", onclick: () => { idx++; show(); } }, idx + 1 >= exs.length ? "Finish" : "Next");
+      if (session.done()) return summary();
+      const ex = session.current(), retry = session.isRetry();
+      let answered = false, pending = null;
+      // The SRS update waits for "Next", so Undo costs nothing.
+      const flush = async () => { if (pending) { const p = pending; pending = null; cardsUpdated += await applyToSrs(ctx, lesson, { [p.id]: p.correct }); } };
+      const bar = progressBar("Lesson progress");
+      const refresh = () => { const p = session.progress(), tot = p.total + shown; bar.update((p.resolved + shown) / tot, `${p.resolved + shown} of ${tot} done`); };
+      refresh();
+      const status = el("p", { class: "alef-int-next alef-fb", role: "status", "aria-live": "polite" });
+      const why = el("p", { class: "muted alef-why" });
+      const next = el("button", { type: "button", class: "btn", id: "alef-int-next", hidden: "", onclick: async () => { await flush(); show(); } }, "Next");
+      const undo = el("button", { type: "button", class: "btn secondary", "data-act": "undo", hidden: "", onclick: async () => {
+        if (!session.undo()) return;
+        pending = null;
+        if (!retry) { delete results[ex.id]; await persist(); }
+        show();
+      } }, "Undo");
+      const skip = el("button", { type: "button", class: "btn secondary", "data-act": "skip", onclick: () => { if (!answered) { session.skip(); show(); } } }, "Skip");
       const finish = async (correct) => {
         if (answered) return; answered = true;
-        results[ex.id] = !!correct;
-        await persist();
-        status.textContent = correct ? "Marked as known." : "Marked to review.";
-        next.hidden = false; next.removeAttribute?.("hidden"); next.focus?.();
+        const r = session.answer(!!correct);
+        fireFeedback(ctx, !!correct);
+        sec.setAttribute("data-result", correct ? "right" : "wrong");
+        status.textContent = (retry ? feedbackText(!!correct, { retry: true }) : correct ? "Marked as known." : "Marked to review.") + (r.requeued ? " You will see it once more at the end." : "");
+        why.textContent = whyLine(ex, lesson, trad);
+        refresh();
+        for (const b of [next, undo]) { b.hidden = false; b.removeAttribute?.("hidden"); }
+        skip.hidden = true; skip.setAttribute("hidden", "");
+        if (!retry) { results[ex.id] = !!correct; pending = { id: ex.id, correct: !!correct }; await persist(); }
+        next.textContent = session.done() ? "Finish" : "Next";
+        next.focus?.();
       };
-      const node = R[ex.type](Object.assign({ ctx, lesson, note, corpus, seed: idx + 1 }, {}), ex, finish);
-      const title = el("h2", { id: "alef-int-ex", tabindex: "-1" }, `${TYPE_LABEL[ex.type] || ex.type}: ${idx + 1} of ${exs.length}`);
-      body.replaceChildren(title, el("section", { class: "card", "aria-labelledby": "alef-int-ex", "data-type": ex.type, "data-ex": ex.id }, node, status, next), note,
+      const node = R[ex.type](Object.assign({ ctx, lesson, note, corpus, seed: (lesson.exercises.indexOf(ex) + 1) }, {}), ex, finish);
+      const p0 = session.progress();
+      const title = el("h2", { id: "alef-int-ex", tabindex: "-1" }, `${retry ? "Try again - " : ""}${TYPE_LABEL[ex.type] || ex.type}: ${Math.min(shown + p0.resolved + 1, p0.total + shown)} of ${p0.total + shown}`);
+      const sec = el("section", { class: "card alef-ex-card", "aria-labelledby": "alef-int-ex", "data-type": ex.type, "data-ex": ex.id }, node, status, why, el("div", { class: "row" }, next, undo, skip));
+      body.replaceChildren(bar.node, title, sec, note,
         el("p", {}, el("a", { href: `#/intermediate/${lesson.id}` , onclick: (e) => { e?.preventDefault?.(); offKeys(); body.replaceChildren(...intro()); } }, "Back to the words")));
       title.focus?.();
       offKeys = onKeys((e) => {
         if (/^[1-9]$/.test(e.key)) { const b = body.querySelectorAll?.(".alef-int-opt")?.[Number(e.key) - 1]; if (b && !b.disabled) b.click(); }
-        else if (e.key === "Enter" && !next.hidden && document.activeElement === document.body) next.click();
+        else if (e.key === "Enter" && !next.hidden && document.activeElement !== next) next.click();
       });
     }
 
     async function summary() {
+      const st2 = session.stats(), skipped = session.skippedIds();
+      const all = exs.length > 0 && Object.keys(results).length === exs.length;
       const right = exs.filter((e) => results[e.id]).length, missed = exs.filter((e) => results[e.id] === false);
-      mine.done = Date.now();
-      await persist({ done: mine.done, score: right, total: exs.length });
-      const added = await applyToSrs(ctx, lesson, results);
-      await completeLesson(ctx, lesson);
+      if (all) {
+        mine.done = Date.now();
+        await persist({ done: mine.done, score: right, total: exs.length });
+        await completeLesson(ctx, lesson);
+      }
       if (!alive) return;
       const nextL = listIntermediate()[listIntermediate().findIndex((l) => l.id === lesson.id) + 1];
-      body.replaceChildren(el("h2", { id: "alef-int-ex", tabindex: "-1" }, "Lesson finished"),
-        el("p", { role: "status" }, `${right} of ${exs.length} marked as known.`),
-        missed.length ? el("div", {}, el("p", {}, "To review:"), el("ul", {}, ...missed.map((e) => el("li", {}, TYPE_LABEL[e.type] + ": " + (e.he || e.en || e.line || e.m || e.task || e.id))))) : el("p", {}, "Nothing to review."),
-        el("p", { class: "muted" }, added ? `${added} review card${added === 1 ? "" : "s"} updated.` : "No review cards needed updating."),
-        el("div", { class: "row" }, el("a", { class: "btn", href: "#/learn?review=1" }, "Review now"),
-          nextL ? el("a", { class: "btn secondary", href: `#/intermediate/${nextL.id}` }, "Next lesson") : null,
-          el("a", { class: "btn secondary", href: "#/intermediate" }, "All intermediate lessons")));
+      const words = (e) => (e.type === "recall" ? e.he : e.type === "produce" ? e.options[e.answer] : null);
+      const good = exs.filter((e) => results[e.id] && words(e)).map((e) => words(e));
+      body.replaceChildren(summaryNode({ title: all ? "Lesson finished" : "Round finished", countText: `${right} of ${exs.length} marked as known.`, stats: { ...st2, accuracy: st2.answered ? st2.right / st2.answered : null },
+        ms: Date.now() - t0, goodLabels: [...new Set(good)], missedLabels: missed.map(exLabel), skippedN: skipped.length, cardsUpdated,
+        nextHref: nextL ? `#/intermediate/${nextL.id}` : null, nextLabel: "Next lesson",
+        extraLinks: [el("a", { class: "btn secondary", href: "#/intermediate" }, "All intermediate lessons")] }));
       body.querySelector?.("#alef-int-ex")?.focus?.();
     }
 

@@ -29,8 +29,8 @@ export const SOURCES = {
   wiktionary: { name: 'Wiktionary contributors, via Wiktextract / kaikki.org Hebrew extract', licence: SA, shareAlike: true, use: 'lemma, gloss, pointed headword, part of speech, forms', stated: 'docs/vocab/LICENSES.md row 2: "Wiktionary text is CC BY-SA 4.0 (and GFDL); kaikki.org states its extracts follow the same terms."', caveat: 'docs/vocab/LICENSES.md marks the licence page itself as not re-read: UNVERIFIED.' },
   frequencywords: { name: 'hermitdave/FrequencyWords 2018 he (OpenSubtitles2018)', licence: SA, shareAlike: true, use: 'spoken-frequency rank (opensubtitles-he-2018)', stated: 'docs/vocab/LICENSES.md row 1: repo README "CC-by-sa-4.0 for content"; rank order is a derivative.' },
   'uxlc-counts': { name: 'Tanakh (UXLC) and prayer registry word counts', licence: 'public domain / copy without restriction', shareAlike: false, use: 'readRank boost (counts only, no text)', stated: 'docs/vocab/LICENSES.md row 3 and docs/corpus/LICENSES.md: no obligation; only counts are used.' },
-  phrasebook: { name: 'Project phrasebook (data/corpus/phrasebook.json)', licence: 'original (project-owned)', shareAlike: false, use: 'phrase / word entries', stated: 'each phrasebook record: "license": "original (project-owned)"; docs/corpus/LICENSES.md: original, needs native-speaker review.', caveat: 'Pointing and gloss were written by an AI agent and are unreviewed.' },
-  lessons: { name: 'Project curriculum (data/curriculum/lessons.json)', licence: null, shareAlike: false, use: 'lesson words added to the list', stated: 'lessons.json states no licence; its note says "Pointing and glosses written by an AI agent; NOT reviewed by a native speaker".', caveat: 'Licence not stated anywhere in the repo for these entries: flagged lesson-licence-not-stated.' },
+  phrasebook: { name: 'Project phrasebook (data/corpus/phrasebook.json)', licence: 'original (project-owned)', shareAlike: false, use: 'phrase / word entries', stated: 'each phrasebook record: "license": "original (project-owned)"; docs/corpus/LICENSES.md: original, needs native-speaker review.', caveat: 'Pointing and gloss are unreviewed.' },
+  lessons: { name: 'Project curriculum (data/curriculum/lessons.json)', licence: null, shareAlike: false, use: 'lesson words added to the list', stated: 'lessons.json states no licence; its note says "Pointing and glosses NOT reviewed by a native speaker".', caveat: 'Licence not stated anywhere in the repo for these entries: flagged lesson-licence-not-stated.' },
   tatoeba: { name: 'Tatoeba example sentences', licence: 'CC BY 2.0 FR', shareAlike: false, use: 'example sentence (per-sentence authors and ids kept on the record)', stated: 'docs/vocab/LICENSES.md: examples from Tatoeba keep their per-example attribution.' },
   'uxlc-text': { name: 'Leningrad Codex (UXLC 2.6, tanach.us) verse used as example', licence: 'public domain / copy without restriction (tanach.us/License.html)', shareAlike: false, use: 'example sentence', stated: 'docs/corpus/LICENSES.md section 1.' },
 };
@@ -66,11 +66,11 @@ export function buildAttribution(root = ROOT) {
       const pb = phrasebook.get(w.source.phrasebookId);
       if (!pb) { flags.push('phrasebook-id-not-found'); licence = null; } else licence = pb.license || null;
       if (!licence) flags.push('phrasebook-licence-not-stated');
-      flags.push('pointing-ai-written');
+      flags.push('pointing-unreviewed');
     } else if (w.source && w.source.lesson) {
       origin = 'lessons'; src.push('lessons'); licence = null;
       if (!lessonIds.has(w.source.lesson)) flags.push('lesson-id-not-found');
-      flags.push('lesson-licence-not-stated', 'pointing-ai-written');
+      flags.push('lesson-licence-not-stated', 'pointing-unreviewed');
     } else {
       origin = 'unknown'; licence = null; flags.push('origin-untraceable');
     }

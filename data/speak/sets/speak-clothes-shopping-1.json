@@ -14,7 +14,7 @@
    "translit": "shilem",
    "en": "to pay",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hcbafeb66",
    "source": "data/vocab/words.json"
   },
   {
@@ -23,7 +23,7 @@
    "translit": "shinah",
    "en": "to change, to alter",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h4a2ee830",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,7 +41,7 @@
    "translit": "kanah",
    "en": "to buy, to purchase",
    "kind": "word",
-   "audioId": null,
+   "audioId": "heb070da2",
    "source": "data/vocab/words.json"
   },
   {
@@ -50,7 +50,7 @@
    "translit": "makhar",
    "en": "to sell",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h54d02a94",
    "source": "data/vocab/words.json"
   },
   {
@@ -59,7 +59,7 @@
    "translit": "adom",
    "en": "red",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h3398235f",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "hechlif",
    "en": "to swap, exchange, change",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h8f0ac707",
    "source": "data/vocab/words.json"
   },
   {
@@ -77,7 +77,7 @@
    "translit": "lavash",
    "en": "to wear (an article of clothing)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hbb8f0628",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "taba'at",
    "en": "ring",
    "kind": "word",
-   "audioId": null,
+   "audioId": "heca8ed1e",
    "source": "data/vocab/words.json"
   },
   {
@@ -104,7 +104,7 @@
    "translit": "anak",
    "en": "giant",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h82f267e3",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "argaman",
    "en": "Tyrian purple, or a garment dyed with it",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h88af0fba",
    "source": "data/vocab/words.json"
   }
  ]

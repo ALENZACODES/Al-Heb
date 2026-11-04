@@ -2,11 +2,13 @@
 // tap-to-hear, and an optional "find the letter" quiz that shows a look-alike warning only after a wrong tap.
 // Plain DOM, no dependencies. export mount(root, ctx) -> unmount.
 // ctx (from the shell): {settings, store, audio, route, t, params}. Everything is optional.
-// Test/offline hooks: ctx.letters, ctx.mnemonics, ctx.confusables, ctx.interference supply already-loaded data.
+// Test/offline hooks: ctx.letters, ctx.mnemonics, ctx.confusables, ctx.interference, ctx.consonants supply already-loaded data.
 // @ts-check
 import { warningAfterWrongTap } from './interference.js';
+import { letterSound, congregationOf } from '../pronunciation/forTradition.js';
 
 const DATA = (name) => new URL('../../data/letters/' + name, import.meta.url).href;
+const PRON = (name) => new URL('../../data/pronunciation/' + name, import.meta.url).href;
 async function loadJson(url) { const r = await fetch(url); if (!r.ok) throw new Error('HTTP ' + r.status + ' for ' + url); return r.json(); }
 
 const DAGESH = 'ּ', SHIN_DOT = 'ׁ', SIN_DOT = 'ׂ';
@@ -19,8 +21,12 @@ const FINAL_RE = /-final$/;
 /**
  * Build the 31 atlas tiles (pure, tested). Variants follow their parent.
  * @param {any[]} letters letters.json  @param {{letters?:any[], variants?:any[]}|null} mn mnemonics.json
+ * @param {{consonants?: any, tradition?: string}} [opts] consonants = data/pronunciation/consonants.json; tradition = settings.congregation.
+ *   With both, soundEn follows the tradition (Ashkenazi tav: s without dagesh); without, letters.json's Israeli-only sound.en.
+ *   soundEnIsraeli is the same record's Israeli line, so the detail panel can say when the setting changes the sound.
  */
-export function buildTiles(letters, mn) {
+export function buildTiles(letters, mn, { consonants, tradition } = {}) {
+  const consById = consonants && consonants.letters ? consonants.letters : null;
   const byId = {}; for (const m of ((mn && mn.letters) || [])) byId[m.id] = m;
   for (const m of ((mn && mn.variants) || [])) byId[m.id] = m;
   const variants = ((mn && mn.variants) || []);
@@ -28,7 +34,7 @@ export function buildTiles(letters, mn) {
   for (const l of letters) {
     tiles.push({
       id: l.id, name: l.name, he: l.he, glyph: TILE_GLYPH[l.id] || l.he,
-      ipa: HARD_IPA[l.id] || (l.sound && l.sound.ipa) || '', soundEn: l.sound && l.sound.en, kind: FINAL_RE.test(l.id) ? 'final' : 'letter',
+      ipa: HARD_IPA[l.id] || (l.sound && l.sound.ipa) || '', soundEn: letterSound(consById ? consById[l.id] : null, tradition, { fallbackEn: l.sound && l.sound.en }).en, soundEnIsraeli: letterSound(consById ? consById[l.id] : null, 'israeli', { fallbackEn: l.sound && l.sound.en }).en, kind: FINAL_RE.test(l.id) ? 'final' : 'letter',
       soundAudioId: FINAL_RE.test(l.id) ? l.id : l.id + '-sound', nameAudioId: l.id, parent: null, mn: byId[l.id] || null
     });
     for (const v of variants.filter((x) => x.parent === l.id)) {
@@ -89,10 +95,11 @@ export function mount(root, ctx = {}) {
     ctx.letters || loadJson(DATA('letters.json')),
     ctx.mnemonics || loadJson(DATA('mnemonics.json')).catch(() => null),
     ctx.confusables || loadJson(DATA('confusables.json')).catch(() => null),
-    ctx.interference || loadJson(DATA('interference.json')).catch(() => null)
-  ]).then(([letters, mn, conf, interf]) => {
+    ctx.interference || loadJson(DATA('interference.json')).catch(() => null),
+    ctx.consonants || loadJson(PRON('consonants.json')).catch(() => null)
+  ]).then(([letters, mn, conf, interf, consonants]) => {
     if (unmounted) return;
-    state.tiles = buildTiles(letters, mn); state.conf = conf; state.interf = interf;
+    state.tiles = buildTiles(letters, mn, { consonants, tradition: congregationOf(ctx.settings) }); state.conf = conf; state.interf = interf;
     const want = ctx.params && ctx.params.id;
     state.selected = (want && state.tiles.find((x) => x.id === want)) ? want : null;
     render();
@@ -178,9 +185,11 @@ export function mount(root, ctx = {}) {
     if (sel) {
       const m = sel.mn || {};
       const panel = h('div', { class: 'panel', 'data-detail': sel.id },
+        ctx.img?.(h, { kind: 'letter', id: sel.id, script: state.script, variant: state.alt ? 'alt' : undefined, width: 600, class: 'at-pic' }),
         h('div', { class: 'row' },
           h('span', { class: 'big', dir: 'rtl', lang: 'he' }, sel.glyph),
-          h('div', {}, h('strong', {}, sel.name), h('br'), h('span', {}, '/' + sel.ipa + '/  ' + (m.soundAnchor || sel.soundEn || '')))),
+          h('div', {}, h('strong', {}, sel.name), h('br'), h('span', {}, '/' + sel.ipa + '/  ' + (m.soundAnchor || sel.soundEn || '')),
+            sel.soundEn && sel.soundEnIsraeli && sel.soundEn !== sel.soundEnIsraeli ? h('span', { class: 'muted', text: ' In your setting: ' + sel.soundEn }) : null)),
         h('div', { class: 'row' },
           h('button', { onclick: () => hear(sel.soundAudioId) }, t('atlas.hearSound', 'Hear the sound')),
           h('button', { onclick: () => hear(sel.nameAudioId) }, t('atlas.hearName', 'Hear the name')),

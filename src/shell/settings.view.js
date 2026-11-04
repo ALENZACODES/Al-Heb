@@ -1,6 +1,7 @@
 import { h } from './ui.js';
 import { ENUMS, DEFAULTS } from './settings.js';
-import { inspectBackup, requestPersistence, storageStatus } from './backup.js';
+import { requestPersistence, storageStatus } from './backup.js';
+import { describePreview, storageNotice, wipeAllData, confirmMatches, CONFIRM_WORD, backupFileName } from './settings.data.js';
 
 export function mount(root, ctx) {
   const { settings, store, t } = ctx;
@@ -14,6 +15,10 @@ export function mount(root, ctx) {
     }
     return fs;
   };
+  // one checkbox row per boolean setting (plain English labels; the i18n table is owned by another lane)
+  const boolRow = (key, label, help) => h('div', { class: 'field' },
+    h('label', { class: 'opt', for: 's-' + key }, h('input', { type: 'checkbox', id: 's-' + key, checked: settings.get(key) ? true : null, onchange: (e) => settings.set({ [key]: e.target.checked }) }), h('span', {}, label)),
+    help ? h('p', { class: 'muted' }, help) : null);
   const toggle = h('input', { type: 'checkbox', id: 's-israel', checked: settings.get('israelTrack') ? true : null,
     onchange: (e) => settings.set({ israelTrack: e.target.checked }) });
   const num = (key, label, min, max) => h('label', { class: 'field' }, label,
@@ -28,17 +33,16 @@ export function mount(root, ctx) {
       const f = e.target.files?.[0]; if (!f) return;
       let text = ''; try { text = await f.text(); } catch { text = ''; }
       e.target.value = '';
-      const info = inspectBackup(text);
-      if (!info.ok) { restoreBox.hidden = true; status.textContent = 'Could not restore: ' + info.error + ' Your progress on this device was not changed.'; return; }
-      const when = info.exportedAt ? ` made on ${info.exportedAt.slice(0, 10)}` : '';
+      const info = store.previewImport(text, { mode: 'replace' });
+      if (!info.ok) { restoreBox.hidden = true; status.textContent = 'Could not restore: ' + info.error + '. Your progress on this device was not changed.'; return; }
       const go = h('button', { type: 'button', class: 'btn', onclick: () => {
         const res = store.importData(text, { mode: 'replace' });
         restoreBox.hidden = true; restoreBox.replaceChildren();
-        if (res.ok) { settings.reload(); status.textContent = `Restored ${res.imported} saved items from the backup${when}.`; } else status.textContent = 'Could not restore: ' + res.error + ' Your progress on this device was not changed.';
+        if (res.ok) { settings.reload(); status.textContent = `Restored ${res.imported} saved items from the backup. Reload the page to see everything refreshed.`; } else status.textContent = 'Could not restore: ' + res.error + '. Your progress on this device was not changed.';
         root.querySelector('#s-import-label')?.focus();
       } }, 'Replace my progress with this backup');
       const cancel = h('button', { type: 'button', class: 'btn secondary', onclick: () => { restoreBox.hidden = true; restoreBox.replaceChildren(); status.textContent = 'Restore cancelled. Nothing was changed.'; root.querySelector('#s-import-label')?.focus(); } }, 'Cancel');
-      restoreBox.replaceChildren(h('p', {}, `This backup${when} holds ${info.items} saved items. Restoring replaces the progress and settings that are on this device now.`), h('div', { class: 'row' }, go, cancel));
+      restoreBox.replaceChildren(h('p', {}, 'Preview. Nothing has changed yet.'), ...describePreview(info).map((l) => h('p', {}, l)), h('p', {}, 'Restoring replaces the progress and settings on this device. If you are unsure, press Cancel and download a backup of what is here now first.'), h('div', { class: 'row' }, go, cancel));
       restoreBox.hidden = false; go.focus();
     } });
   const persistLine = h('p', { class: 'muted', role: 'status', 'aria-live': 'polite', id: 's-persist' }, 'Checking whether this browser keeps your progress...');
@@ -55,6 +59,20 @@ export function mount(root, ctx) {
     persistBtn.hidden = !s.supported || !!s.persisted;
   }
   showPersist();
+  const notice = h('p', { class: 'card', role: 'alert', id: 's-storage-notice', hidden: true });
+  const retryBtn = h('button', { type: 'button', class: 'btn secondary', hidden: true, onclick: () => { status.textContent = store.retryPersistence?.() ? 'Saved to this device again.' : 'Still cannot save to this device. Download a backup instead.'; showNotice(); } }, 'Try saving again');
+  function showNotice() { const m = storageNotice(store.status ? store.status() : { persistent: store.persistent, reason: null }); notice.textContent = m || ''; notice.hidden = !m; retryBtn.hidden = !m || store.persistent !== false; }
+  showNotice(); const offStatus = store.onStatus?.(showNotice);
+  const wipeInput = h('input', { type: 'text', id: 's-wipe-word', autocomplete: 'off', autocapitalize: 'characters', spellcheck: 'false', 'aria-describedby': 's-wipe-help', 'data-no-busy': '' });
+  const wipeSw = h('input', { type: 'checkbox', id: 's-wipe-sw' });
+  const wipeGo = h('button', { type: 'button', class: 'btn secondary', id: 's-wipe-go', disabled: true, onclick: async () => {
+    if (!confirmMatches(wipeInput.value)) return;
+    wipeGo.disabled = true;
+    const r = await wipeAllData({ store, caches: globalThis.caches, navigator: globalThis.navigator, storage: store.persistent ? globalThis.localStorage : null, unregisterServiceWorker: wipeSw.checked });
+    wipeInput.value = ''; settings.reload();
+    status.textContent = r.errors.length ? 'Some data could not be deleted (' + r.errors.join('; ') + '). Try again, or clear site data in your browser settings.' : `Deleted all saved progress and settings from this device${r.caches ? ', and ' + r.caches + ' offline cache' + (r.caches === 1 ? '' : 's') : ''}${r.serviceWorkers ? ', and removed the offline service worker' : ''}. Reload the page to start fresh.`;
+  } }, 'Delete all my data');
+  wipeInput.addEventListener('input', () => { wipeGo.disabled = !confirmMatches(wipeInput.value); });
   const geoBtn = h('button', { type: 'button', class: 'btn', onclick: () => {
     if (!navigator.geolocation) { status.textContent = 'Location is not available on this device.'; return; }
     navigator.geolocation.getCurrentPosition(
@@ -64,7 +82,7 @@ export function mount(root, ctx) {
   const clearBtn = h('button', { type: 'button', class: 'btn secondary', onclick: () => { settings.set({ lat: null, lon: null }); root.querySelector('#s-lat').value = ''; root.querySelector('#s-lon').value = ''; } }, t('settings.clearLocation'));
   const exportBtn = h('button', { type: 'button', class: 'btn', onclick: () => {
     const url = URL.createObjectURL(new Blob([store.exportJSON()], { type: 'application/json' }));
-    const a = h('a', { href: url, download: `alef-backup-${new Date().toISOString().slice(0, 10)}.json` }); document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+    const a = h('a', { href: url, download: backupFileName() }); document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
   } }, t('settings.export'));
   const resetBtn = h('button', { type: 'button', class: 'btn secondary', onclick: () => { settings.reset(); settings.set({ onboarded: true }); mount(root, ctx); } }, t('settings.reset'));
 
@@ -78,14 +96,24 @@ export function mount(root, ctx) {
     h('div', { class: 'field' }, h('label', { class: 'opt', for: 's-israel' }, toggle, h('span', {}, t('settings.israelTrack')))),
     radioGroup('script', 'settings.script'),
     radioGroup('theme', 'settings.theme'),
+    boolRow('writeGodAsGd', 'Write "G-d" in English text', 'Writes the English word in that form in titles and translation lines. Hebrew text is never changed. Off by default: it is a personal and communal custom.'),
+    boolRow('haptics', 'Vibrate on exercise feedback', 'Only on devices that support it, and never when your system asks for reduced motion.'),
+    boolRow('soundEffects', 'Sound effects on exercise feedback', 'No sound files ship yet; this only takes effect once the app has them.'),
     h('fieldset', { class: 'field' }, h('legend', {}, t('settings.location')),
       num('lat', t('settings.lat'), -90, 90), num('lon', t('settings.lon'), -180, 180), h('div', { class: 'row' }, geoBtn, clearBtn)),
     h('fieldset', { class: 'field' }, h('legend', {}, t('settings.backup')),
       h('div', { class: 'row' }, exportBtn, h('label', { class: 'btn secondary', id: 's-import-label', for: 's-import', tabindex: '0', role: 'button',
         onkeydown: (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); } } }, t('settings.import')), fileInput),
-      restoreBox, persistLine, h('div', { class: 'row' }, persistBtn),
+      notice, h('div', { class: 'row' }, retryBtn), restoreBox, persistLine, h('div', { class: 'row' }, persistBtn),
       store.persistent ? null : h('p', { class: 'muted' }, t('settings.persist.no'))),
+    h('fieldset', { class: 'field' }, h('legend', {}, 'Delete all my data'),
+      h('p', { id: 's-wipe-help' }, `This permanently deletes your progress, review cards, streaks and settings from this device, and the offline copies of the app. It cannot be undone, so download a backup first. Type ${CONFIRM_WORD} to enable the button.`),
+      h('label', { class: 'field' }, `Type ${CONFIRM_WORD}`, wipeInput),
+      h('label', { class: 'opt', for: 's-wipe-sw' }, wipeSw, h('span', {}, 'Also remove the offline service worker (the app will need a connection to load next time)')),
+      h('div', { class: 'row' }, wipeGo)),
+    h('fieldset', { class: 'field' }, h('legend', {}, 'Advanced'),
+      boolRow('showUnapprovedImages', 'Show images that have not passed review', 'Pictures still waiting for a reviewer may be wrong or unsuitable. Leave this off unless you are reviewing them.')),
     h('div', { class: 'row' }, resetBtn, h('a', { class: 'btn secondary', href: '#/welcome' }, t('settings.redo'))), status));
-  return () => {};
+  return () => { try { offStatus?.(); } catch { /* ignore */ } };
 }
 void DEFAULTS;

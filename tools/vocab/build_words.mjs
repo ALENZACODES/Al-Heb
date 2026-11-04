@@ -183,8 +183,8 @@ for (const p of pbEntries) {
     track: 'israel', topic: SITUATION_TOPIC[p.situation] || 'talking-asking', situation: p.situation,
     frequencyRank: null, level: 'A1', modernRank: null, readRank: null, register: p.register || null,
     unlockLesson: hasNiq ? unlockLessonFor(he) : null, example: null,
-    source: { dictionary: 'project phrasebook (data/corpus/phrasebook.json, original text, AI-written, unreviewed)', phrasebookId: p.id },
-    flags: { pointedFromSource: false, pointedSource: 'phrasebook', needsReview: true, reasons: ['pointing and gloss written by an AI agent, not native-reviewed'] },
+    source: { dictionary: 'project phrasebook (data/corpus/phrasebook.json, original text, unreviewed)', phrasebookId: p.id },
+    flags: { pointedFromSource: false, pointedSource: 'phrasebook', needsReview: true, reasons: ['pointing and gloss not native-reviewed'] },
     phrasebook: [p.id],
   };
   phrases.push(w);
@@ -210,8 +210,8 @@ for (const l of lessonsJson.lessons) {
       track: l.track === 'read' ? 'read' : 'israel', topic: l.track === 'read' ? 'religion-prayer' : 'talking-asking',
       frequencyRank: null, level: l.level === 'A1' || l.level === 'A2' || l.level === 'B1' ? l.level : 'A1', modernRank: null, readRank: null, register: null,
       unlockLesson: hasNiq ? unlockLessonFor(he) : null, example: null,
-      source: { dictionary: 'project curriculum (data/curriculum/lessons.json, AI-written, unreviewed)', lesson: l.id },
-      flags: { pointedFromSource: false, pointedSource: 'curriculum', needsReview: true, reasons: ['pointing and gloss written by an AI agent, not native-reviewed'] },
+      source: { dictionary: 'project curriculum (data/curriculum/lessons.json, unreviewed)', lesson: l.id },
+      flags: { pointedFromSource: false, pointedSource: 'curriculum', needsReview: true, reasons: ['pointing and gloss not native-reviewed'] },
     };
     phrases.push(w); lessonRefs.set(id, [l.id]);
   }

@@ -3,6 +3,8 @@ import { store } from './store.js';
 import { createSettings } from './shell/settings.js';
 import { createRouter, ROUTES, loadRouteModule, availableRoutes } from './shell/router.js';
 import { VIEW_FILES } from './shell/views.generated.js';
+import { renderNav as renderNavBar } from './shell/nav.js';
+import { mountPreviewBanner } from './shell/preview-banner.js';
 import { t, tHe } from './shell/i18n.js';
 import { createStubAudio } from './shell/audio-stub.js';
 import { createShellAudio } from './shell/audio.js';
@@ -23,6 +25,19 @@ async function makeAudio() {
   return createStubAudio({ settings });
 }
 let lastCtx = null, lastMatch = null, touched = false;
+// Scroll restore on Back (src/shell/scroll-restore.js): loaded lazily; until it loads (or offline before it is precached) every
+// navigation just scrolls to the top as before. Links and ctx.route() mark a forward navigation; an unmarked hashchange is Back/Forward.
+let scrollKeeper = null, lastHashShown = null;
+import('./shell/scroll-restore.js').then((m) => { scrollKeeper = m.createScrollRestore(); }).catch(() => {});
+document.addEventListener('click', (e) => { const a = e.target instanceof Element ? e.target.closest('a[href^="#"]') : null; if (a && !a.getAttribute('href').startsWith('#main')) scrollKeeper?.markForward(); }, true);
+// Progress protection (mobile FINDINGS item 4): ask for persistent storage the first time real progress (any non-settings key)
+// is written, not only when Settings is opened. Once per page load; the answer is logged once and never shown as an error.
+let persistAsked = false;
+store.subscribe((key, _value, info) => {
+  if (persistAsked || key === 'settings' || info?.external) return;
+  persistAsked = true;
+  import('./shell/backup.js').then((m) => m.requestPersistence()).then((r) => { if (r?.supported) console.info(`storage persistence after first save of "${key}": ${r.persisted ? 'granted' : 'not granted (keep a backup file)'}`); }).catch(() => {});
+});
 /** After the first route has rendered: load the core manifest in an idle slot; if it arrives and the learner has not touched the
  * page since the route mounted, re-render that route once so audio buttons reflect the real manifest. Otherwise they keep the
  * honest "checking" state until the next navigation (never a claim that a clip exists). */
@@ -71,21 +86,9 @@ function applyScript() { document.documentElement.dataset.script = settings.get(
 /** Names of routes whose view file exists in this build (from the generated view list). */
 let available = availableRoutes(VIEW_FILES);
 
-/** Phone bottom bar shows these five; everything else with a nav entry goes in the "More" sheet (on wide screens both lists sit in one row). */
-const MAIN_NAV = ['home', 'learn', 'letters', 'sounds', 'read'];
-function navCurrent(r, current) {
-  return current === r.name || (r.name === 'letters' && current === 'letter') || (r.name === 'read' && current === 'text') || (r.name === 'learn' && ['loanwords', 'loanword', 'spotit', 'checkpoint', 'dialogues', 'dialogue'].includes(current));
-}
+/** Navigation (bottom bar of four section tabs + the More menu) lives in shell/nav.js; see docs/nav/NAV.md. */
 function renderNav(current) {
-  const nav = document.getElementById('nav'), more = document.getElementById('nav-more'), btn = document.getElementById('more-btn');
-  const item = (r) => h('li', {}, h('a', { href: '#' + (r.pattern === '/' ? '/' : r.pattern), 'aria-current': navCurrent(r, current) ? 'page' : null },
-    h('span', {}, t(r.nav)), tHe(r.nav) ? heSpan(tHe(r.nav), 'he nav-he') : null));
-  const rs = ROUTES.filter((r) => r.nav && available.has(r.name));
-  const main = rs.filter((r) => MAIN_NAV.includes(r.name)), rest = rs.filter((r) => !MAIN_NAV.includes(r.name));
-  nav.replaceChildren(...main.map(item));
-  more.replaceChildren(...rest.map(item));
-  btn.hidden = rest.length === 0;
-  btn.toggleAttribute('data-current', rest.some((r) => navCurrent(r, current)));
+  renderNavBar(current, { routes: ROUTES, available });
   setMore(false);
 }
 function setMore(open) {
@@ -126,7 +129,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   try { unmount(); } catch (e) { console.warn('unmount failed', e); }
   unmount = () => {};
   const { route, params, query, path } = match;
-  if (!quiet) { lastMatch = match; lastCtx = ctxBase; touched = false; }
+  if (!quiet) { lastMatch = match; lastCtx = ctxBase; touched = false; if (lastHashShown != null) scrollKeeper?.leave(lastHashShown); lastHashShown = location.hash; }
   const live = document.getElementById('announcer');
   if (!route) {
     root.replaceChildren(h('section', { class: 'card' }, h('h1', { id: 'view-title', tabindex: '-1' }, t('notfound.title')), h('p', { class: 'mono' }, path), h('a', { class: 'btn', href: '#/' }, t('nav.home'))));
@@ -150,6 +153,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     root.replaceChildren();
     const u = await mod.mount(root, ctx);
     if (typeof u === 'function') unmount = u;
+    mountPreviewBanner(root, route); // preview-tier pages (docs/v0/SCOPE.md) get a small "unreviewed, may change" note on top
   } catch (err) {
     console.error(`view ${route.name} failed`, err);
     unavailableCard(root, { title: route.title, t, module: route.module, error: err?.message, kind: 'error' });
@@ -167,7 +171,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     const hd = root.querySelector('#view-title, h1');
     if (hd && !firstShow && !quiet) { if (!hd.hasAttribute('tabindex')) hd.setAttribute('tabindex', '-1'); hd.focus({ preventScroll: true }); }
     firstShow = false;
-    if (!quiet) { live.textContent = document.title; window.scrollTo(0, 0); }
+    if (!quiet) { live.textContent = document.title; if (scrollKeeper) scrollKeeper.arrive(location.hash); else window.scrollTo(0, 0); }
     document.body.dataset.route = route?.name ?? 'notfound';
     document.body.dataset.ready = '1';
     shownFirstResolve();
@@ -182,12 +186,16 @@ async function boot() {
   const audio = await makeAudio();
   document.getElementById('main').addEventListener('pointerdown', () => { touched = true; }, true);
   document.getElementById('main').addEventListener('keydown', () => { touched = true; }, true);
+  // iOS audio unlock: prime the sound engines synchronously inside the first gesture (src/shell/audio.js createAudioUnlock)
+  const unlockOnce = () => { try { audio.unlock?.(); } catch { /* ignore */ } for (const t of ['pointerdown', 'keydown', 'touchend']) document.removeEventListener(t, unlockOnce, true); };
+  for (const t of ['pointerdown', 'keydown', 'touchend']) document.addEventListener(t, unlockOnce, true);
   available = availableRoutes(VIEW_FILES);
   wireSoundStatus(audio);
+  import('./shell/audio-access.js').then((m) => import('./shell/ui.js').then((u) => m.mountAudioBanner(u.h, audio))).catch(() => {});
   let router;
   let images = null;
   try { images = await loadImageResolver((u) => fetch(u).then((r) => { if (!r.ok) throw new Error(String(r.status)); return r.json(); }), { settings }); } catch { images = null; }
-  const ctxBase = { settings, store, audio, route: (p) => router.go(p), t, installPrompt, hasRoute: (name) => available.has(name), images, img: (hh, spec) => (images ? imgEl(hh, { R: images, ...spec }) : null) };
+  const ctxBase = { settings, store, audio, route: (p) => { scrollKeeper?.markForward(); router.go(p); }, t, installPrompt, hasRoute: (name) => available.has(name), images, img: (hh, spec) => (images ? imgEl(hh, { R: images, ...spec }) : null) };
   router = createRouter((m) => { show(m, ctxBase); });
   window.alef = { settings, store, audio, router }; // debugging handle
   router.start();
@@ -197,8 +205,9 @@ async function boot() {
   startShardLoading(audio);
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
     navigator.serviceWorker.register('sw.js').catch((e) => console.warn('service worker not registered', e));
-    import('./shell/update.js').then((m) => { window.alef.update = m.startUpdateBanner().handle; }).catch(() => {});
   }
+  // Always: the storage notice (private mode, quota) matters most where there is no service worker; the update banner is inert there.
+  import('./shell/update.js').then((m) => { window.alef.update = m.startUpdateBanner().handle; }).catch(() => {});
 }
 
 window.addEventListener('error', (e) => { document.body.dataset.lastError = e.message; });

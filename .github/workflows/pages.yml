@@ -21,7 +21,7 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
       - name: Tests (no dependencies to install)
-        run: node --test
+        run: npm test
       - name: Build static site
         # Project sites live at https://<user>.github.io/<repo>/ ; all URLs in the app are relative so no rewrite is needed.
         run: node tools/build-static.mjs --base "/${GITHUB_REPOSITORY#*/}/"

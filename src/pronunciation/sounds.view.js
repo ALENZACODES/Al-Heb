@@ -5,7 +5,7 @@
 //
 // ctx (provided by lane 8's shell): { settings, store, audio, route, t }.
 // What this view assumes about ctx (flagged for lane 8 to confirm):
-//   - ctx.settings.congregation is readable; it is written with settings.set('congregation', v)
+//   - ctx.settings.congregation is readable; it is written with settings.set({congregation: v}) (see forTradition.js setCongregation)
 //     if that function exists, otherwise by assignment. Changes made elsewhere are picked up if the
 //     settings object offers subscribe(fn) | onChange(fn) | addEventListener('change', fn).
 //   - ctx.audio.play(kind, id) is called as play('vowel', id) when a sign is tapped.
@@ -14,6 +14,7 @@
 //     otherwise they are fetched relative to this module.
 
 import { TRADITIONS, TRADITION_LABELS, normalizeTradition, describeSign, soundChangingLetters, pairFormFor } from './sounds.model.js';
+import { setCongregation } from './forTradition.js';
 
 const FILES = ['niqqud', 'consonants', 'drills', 'easy'];
 
@@ -99,8 +100,7 @@ export function mount(root, ctx = {}) {
     tradition = next;
     if (!fromSettings && ctx.settings) {
       try {
-        if (typeof ctx.settings.set === 'function') ctx.settings.set('congregation', next);
-        else ctx.settings.congregation = next;
+        setCongregation(ctx.settings, next);
       } catch { /* settings store unavailable: keep local state */ }
     }
     for (const fn of tradListeners) fn();

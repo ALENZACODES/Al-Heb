@@ -67,3 +67,24 @@ Apply as `overrides` in the build (so a rebuild keeps them), not by editing `wor
 - 820 nouns without a plural and the 837 gender/plural rule rows: `docs/vocab/review/gender-plural-rules-*.csv`; irregular plurals and duals (עיניים, ערים) need a person.
 - The two removed duplicates (שֵׂעָר, אִגְרוּף) each had a different Tatoeba example sentence; the removed record's sentence is gone with it.
 - No record has a per-record licence field: add `license` in the next build from `data/vocab/attribution.json` (see `data/vocab/LICENSE-NOTES.md`).
+
+## Addendum (2026-11-04): offensive or wrong English glosses, divine-name spellings
+
+Scan: a word list (profanity, slurs, sexual terms, ethnic and disability terms, Jehovah/Yahweh/YHWH) over `en`, every `alt` and the example sentence of all 6,297 records of `data/vocab/words.json` (packs and index are copies). Changes are 35 appended entries in `data/vocab/corrections.json` (fields `en`, `alt`, `flags.hidden`, `example`), applied by `tools/vocab/apply_corrections.mjs`, which now also updates the `en` column of `index.json`. `tools/vocab/deck_order.mjs` and `tools/vocab/theme_packs.mjs` skip records with `flags.hidden`. Nothing here is a native review; every row stays unreviewed.
+
+Gloss replaced with a neutral one (meaning certain from the record's own other senses or the gloss itself):
+- `h31ff5eef` debili: "Retarded, mentally defective" -> "Pointless, foolish" (its own second sense).
+- `h8ea4d152` la'azazel: "Damn!, Hell!" / alt "Screw him/her/it!" -> "an exclamation of anger or dismissal (a mild curse)" (pos is interjection).
+- `hae4935f7` nakheh: "a cripple" -> "a person with a disability".
+- `h950879c7` tzo'ani: "Gypsy" -> "a Romani person".
+- `h4f80908c` nanas: "midget, dwarf" -> "dwarf"; `hc208e546` gamad: alt "midget" removed.
+- `h01cd8c45` kushi: alt "negro, Black" -> "Black"; `hefbbc2c7` zonah: alt "slut" removed (gloss already says prostitute).
+- `h786538b1` mamzer: "mamzer, bastard" -> "mamzer"; `hefc2e447` chakhemolog: "wise-ass" dropped; `h34d7fae2` chirben: "to fuck something up" dropped.
+
+Suppressed (gloss and meaning not certain from the record): `h974f415a` mizdayen ("fucking, retarded") and `h8e35f713` zayan ("fucker (one who has a lot of sex)"): `flags.hidden` true, gloss set to "slang (gloss withheld pending review)", left out of the deck order and the theme packs. They remain in words.json, packs and index (ids stay stable); the Vocab list view in `src/vocab` does not yet honour `flags.hidden` (not my files), so they can still appear in lists built from index.json until that view skips them.
+
+Example sentences removed (Tatoeba lines with profanity, a slur or a vulgar remark, `example` set to null): h8ea4d152, h5ba22cfa (dafak), h520d496c (piger), hf7d0fb03 (ziyen), h8e35f713, hefbbc2c7, h974f415a ("I fuck God"), h14a9ec93, h549846fd, h34d7fae2, h3b306d6b, h4f80908c, hc208e546, h786538b1, h9bb1d8c2, h161176d0, h84a3a6b3, h950879c7.
+
+Left as they are, listed for a human decision: clinical or legal sexual vocabulary (shakhav, tachan "to have sex", ones/anas rape, baal, min/mini, seksi, hatradah, avaryan and their examples), shemok "schmuck" (vulgar, needs a register label), goy / goyah (neutral in Hebrew, contested in English), gever alt "cock" and darakh "to cock" (legitimate senses), fishel "screw up", and examples "sexy legs" (regel, seksi), "Same-sex couples" (mini).
+
+Jehovah / Yahweh spellings in glosses: `ha3cf2c46` hivah example "Jehovah's Witnesses are known for their door-to-door preaching." (kept, a proper name, flagged); `hd92218f1` tanin alt "an enemy of Yahweh or Israel" (kept as a gloss; docs/sensitivity/CONVENTIONS.md judges it acceptable). No other gloss contains them.

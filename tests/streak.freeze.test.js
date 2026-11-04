@@ -44,7 +44,12 @@ const FIX = JSON.parse(fs.readFileSync("data/calendar/hebcal-fixtures.json", "ut
 const REFORM_YT = /^(Rosh Hashana \d+|Yom Kippur|Sukkot I|Shmini Atzeret|Pesach I|Pesach VII|Shavuot)$/;
 /** Traditional diaspora: adds RH II, Sukkot II (= Sukkot I + 1, not in the fixture), Simchat Torah, Pesach II (= Pesach I + 1, not in the fixture), Pesach VIII, Shavuot II. */
 const DIA_YT = /^(Rosh Hashana \d+|Rosh Hashana II|Yom Kippur|Sukkot I|Shmini Atzeret|Simchat Torah|Pesach I|Pesach VII|Pesach VIII|Shavuot I|Shavuot II)$/;
+const YT_CACHE = new Map(); // the fixture is static: build each mode's rest-day set once, not once per walked day
 function fixtureYomTov(mode) {
+  if (!YT_CACHE.has(mode)) YT_CACHE.set(mode, buildFixtureYomTov(mode));
+  return YT_CACHE.get(mode);
+}
+function buildFixtureYomTov(mode) {
   const out = new Set();
   const years = ["5786", "5787", "5788", "5789"];
   if (mode === "traditional") {

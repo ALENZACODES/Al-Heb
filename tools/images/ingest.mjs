@@ -3,6 +3,9 @@
 //
 //   node tools/images/ingest.mjs ingest <dir|zip|file> [more inputs...] [--dry-run] [--assign FILE.csv] [--replace] [--no-ocr]
 //                                  [--allow-aspect] [--jobs 4] [--tool "..."] [--model "..."] [--root DIR] [--originals DIR]
+//                                  [--needs-eye ids.txt]   ids (one per line, optional TAB + note) whose identification was only medium
+//                                                          confidence: the provenance record gets needsEye: true (and eyeNote) so the
+//                                                          review page shows a "check by eye" badge. Not an approval or a rejection.
 //   node tools/images/ingest.mjs approve <id|glob...> [--file ids.txt] [--force] [--note "..."]
 //   node tools/images/ingest.mjs reject  <id|glob...> [--file ids.txt] [--note "..."]
 //   node tools/images/ingest.mjs reset   <id|glob...>               back to the default (unapproved)
@@ -63,6 +66,17 @@ async function collect(inputs, tmpRoots, skipped) {
   return cands;
 }
 
+/** --needs-eye file: one id per line, optionally followed by a TAB and a note. Returns Map id -> note ('' when none). */
+export function readNeedsEye(text) {
+  const map = new Map();
+  for (const line of String(text).split(/\r?\n/)) {
+    const t = line.trim(); if (!t || t.startsWith('#')) continue;
+    const [id, ...rest] = t.split('\t');
+    map.set(id.trim().replace(/\.png$/i, ''), rest.join(' ').trim());
+  }
+  return map;
+}
+
 function readAssign(path, stems) {
   const rows = parseCsv(readFileSync(path, 'utf8'));
   const head = rows[0].map((h) => h.trim().toLowerCase());
@@ -91,6 +105,8 @@ export async function ingest(opts) {
     const cands = await collect(opts.inputs, tmpRoots, skipped);
     const assign = opts.assign ? readAssign(opts.assign, stems) : { map: new Map(), errors: [] };
     report.notes.push(...assign.errors);
+    const needsEye = opts.needsEye instanceof Map ? opts.needsEye : opts.needsEye ? readNeedsEye(readFileSync(opts.needsEye, 'utf8')) : new Map();
+    for (const id of needsEye.keys()) if (!stems.has(id)) report.notes.push(`--needs-eye id ${JSON.stringify(id)} is not a manifest id`);
     // hash everything once (also used for duplicate detection)
     for (const c of cands) c.sha = sha256(readFileSync(c.path));
 
@@ -175,7 +191,8 @@ export async function ingest(opts) {
       if (expectAlpha && !(r.p.hasAlpha && r.p.transparentFraction >= 0.05)) flags.push('not_transparent');
       if (!expectAlpha && r.p.hasAlpha && r.p.transparentFraction > 0.001) flags.push('unexpected_transparency');
       if (Math.max(r.p.width, r.p.height) < Math.min(Math.max(row.width, row.height), 1024) * 0.5) flags.push('low_resolution');
-      if (r.dry) { report.ingested.push({ id: c.stem, matchedBy: c.matchedBy, flags, dry: true, replacing: r.replacing }); continue; }
+      const eye = needsEye.has(c.stem);
+      if (r.dry) { report.ingested.push({ id: c.stem, matchedBy: c.matchedBy, flags, dry: true, replacing: r.replacing, ...(eye ? { needsEye: true } : {}) }); continue; }
       const ocr = r.proc.ocr;
       if (!ocr.ran) flags.push('ocr_not_run');
       else if (ocr.containsText) flags.push('contains_text');
@@ -190,6 +207,7 @@ export async function ingest(opts) {
         variants: r.proc.variants,
         ocr: ocr.ran ? { ran: true, langs: ocr.langs, blobCount: ocr.blobCount, blobs: ocr.blobs.map((b) => ({ t: b.t, conf: b.conf, lang: b.lang })), possibleLetters: ocr.possibleLetters.map((b) => b.t) } : { ran: false, reason: ocr.reason },
         flags, humanApproved: false,
+        ...(eye ? { needsEye: true, eyeNote: needsEye.get(c.stem) || 'identification was medium confidence: check by eye' } : {}),
       };
       if (r.replacing) { delete approvals.approvals[c.stem]; report.replaced.push(c.stem); }
       prov.images[c.stem] = rec;
@@ -202,6 +220,7 @@ export async function ingest(opts) {
       candidates: cands.length, matched: chosen.length, ingested: report.ingested.length, unchanged: report.unchanged.length, replaced: report.replaced.length,
       conflicts: report.conflicts.length, rejectedFiles: report.rejectedFiles.length, unmatched: report.unmatched.length, skipped: skipped.length,
       flaggedText: report.ingested.filter((x) => x.flags.includes('contains_text')).length,
+      needsEye: report.ingested.filter((x) => x.needsEye).length,
     };
     if (!opts.dryRun) {
       writeJsonAtomic(paths.approvals, approvals);
@@ -283,7 +302,7 @@ export function status(opts) {
 
 function parseArgs(argv) {
   const o = { _: [] };
-  const withVal = new Set(['assign', 'jobs', 'tool', 'model', 'root', 'originals', 'file', 'note', 'block']);
+  const withVal = new Set(['assign', 'jobs', 'tool', 'model', 'root', 'originals', 'file', 'note', 'block', 'needs-eye']);
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a.startsWith('--')) { const k = a.slice(2); if (withVal.has(k)) o[k] = argv[++i]; else o[k] = true; } else o._.push(a);
@@ -300,9 +319,9 @@ export async function main(argv) {
   switch (cmd) {
     case 'ingest': {
       if (!rest.length) { say('usage: ingest.mjs ingest <dir|zip|file>...'); return 2; }
-      const rep = await ingest({ paths, inputs: rest, dryRun: !!a['dry-run'], assign: a.assign && resolve(a.assign), replace: !!a.replace, ocr: !a['no-ocr'], allowAspect: !!a['allow-aspect'], jobs: a.jobs ? Number(a.jobs) : 4, tool: a.tool, model: a.model });
+      const rep = await ingest({ paths, inputs: rest, dryRun: !!a['dry-run'], assign: a.assign && resolve(a.assign), replace: !!a.replace, ocr: !a['no-ocr'], allowAspect: !!a['allow-aspect'], jobs: a.jobs ? Number(a.jobs) : 4, tool: a.tool, model: a.model, needsEye: a['needs-eye'] && resolve(a['needs-eye']) });
       const c = rep.counts;
-      say(`${rep.dryRun ? '[dry run] ' : ''}candidates ${c.candidates} | matched ${c.matched} | ingested ${c.ingested} | unchanged ${c.unchanged} | replaced ${c.replaced} | name conflicts ${c.conflicts} | rejected files ${c.rejectedFiles} | UNMATCHED ${c.unmatched} | skipped non-images ${c.skipped}`);
+      say(`${rep.dryRun ? '[dry run] ' : ''}candidates ${c.candidates} | matched ${c.matched} | ingested ${c.ingested} | unchanged ${c.unchanged} | replaced ${c.replaced} | name conflicts ${c.conflicts} | rejected files ${c.rejectedFiles} | UNMATCHED ${c.unmatched} | skipped non-images ${c.skipped}${c.needsEye ? ` | needs eye ${c.needsEye}` : ''}`);
       for (const n of rep.notes) say(`note: ${n}`);
       const flagged = rep.ingested.filter((x) => x.flags.length);
       if (flagged.length) { say(`\nflags on ${flagged.length} ingested image(s):`); for (const f of flagged) say(`  ${f.id}: ${f.flags.join(', ')}`); }

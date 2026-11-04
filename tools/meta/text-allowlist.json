@@ -96,6 +96,10 @@
     {
       "path": "tests/credits.test.js",
       "reason": "Test asserts that no tool names appear in rendered credits: quotes the patterns it forbids."
+    },
+    {
+      "path": "tools/release/prepush.sh",
+      "reason": "Pre-push guard: holds the banned-word list (split into fragments) it checks commit messages against."
     }
   ]
 }

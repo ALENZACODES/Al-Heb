@@ -88,3 +88,25 @@
 .alef-dline .alef-he { display: block; margin-block: .15rem; }
 .btn.secondary[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); }
 .btn.secondary[aria-pressed="true"]::before { content: "\2713\00a0"; }
+
+/* Exercise loop feel (lesson progress bar, per-answer feedback, summary). Meaning never rests on colour alone: text, marks and border style carry it. */
+.alef-pb { height: 10px; border: 1px solid var(--border); border-radius: 999px; background: var(--card); overflow: hidden; margin-block: .5rem; }
+.alef-pb-fill { display: block; height: 100%; background: var(--accent); }
+.alef-ex-card[data-result="right"] { border-style: solid; border-width: 2px; }
+.alef-ex-card[data-result="wrong"] { border-style: dashed; border-width: 2px; }
+.alef-int-opt[data-state="right"]::before { content: "\2713\00a0"; }
+.alef-int-opt[data-state="wrong"]::before { content: "\2717\00a0"; }
+.alef-int-opt[data-state="right"] { outline: 3px double currentColor; }
+.alef-fb { font-weight: 600; margin-block: .5rem .25rem; }
+.alef-why { margin-block: 0 .5rem; }
+.alef-int-opt { min-height: var(--tap); min-width: var(--tap); }
+.alef-summary-stats { display: flex; flex-wrap: wrap; gap: 1rem 2rem; margin: .75rem 0; }
+.alef-summary-stats dt { color: var(--muted); font-size: .85rem; }
+.alef-summary-stats dd { margin: 0; font-weight: 600; font-size: 1.25rem; }
+.alef-next-primary { order: -1; }
+@media (prefers-reduced-motion: no-preference) {
+  .alef-pb-fill { transition: width .25s ease; }
+  .alef-ex-card[data-result="wrong"] { animation: alef-nudge .25s ease; }
+}
+@keyframes alef-nudge { 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } }
+@media (prefers-reduced-motion: reduce) { .alef-pb-fill, .alef-ex-card { transition: none; animation: none; } }

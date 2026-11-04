@@ -14,7 +14,7 @@
    "translit": "yada",
    "en": "to know (a fact)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hf28ba308",
    "source": "data/vocab/words.json"
   },
   {
@@ -23,7 +23,7 @@
    "translit": "ahav",
    "en": "to love",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h1b96f9f4",
    "source": "data/vocab/words.json"
   },
   {
@@ -32,7 +32,7 @@
    "translit": "yare",
    "en": "to fear, be afraid",
    "kind": "word",
-   "audioId": null,
+   "audioId": "ha7e901e9",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,7 +41,7 @@
    "translit": "hirgish",
    "en": "feel, sense",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h511bbb6f",
    "source": "data/vocab/words.json"
   },
   {
@@ -50,7 +50,7 @@
    "translit": "hevin",
    "en": "to understand, to have understanding, to be one who understands",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hd83852fd",
    "source": "data/vocab/words.json"
   },
   {
@@ -59,7 +59,7 @@
    "translit": "he'emin",
    "en": "to believe",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h26a32615",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "da'ag",
    "en": "to worry (about something), to be concerned (about something)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hbab9e498",
    "source": "data/vocab/words.json"
   },
   {
@@ -77,7 +77,7 @@
    "translit": "samach",
    "en": "to be happy, glad, joyous, cheerful, merry",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h78d6aa81",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "de'ah",
    "en": "opinion, point of view",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h6fd09fff",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "ivah",
    "en": "to greatly desire, want, long for, lust for",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h0cdd730a",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "shakhach",
    "en": "to forget",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h0c76d311",
    "source": "data/vocab/words.json"
   }
  ]

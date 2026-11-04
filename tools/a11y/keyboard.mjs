@@ -173,7 +173,7 @@ async function tabTo(page, match, max = 120) {
   await page.keyboard.press('Enter');
   note(f, 'Enter opens the sheet (aria-expanded=true)', await page.evaluate(() => document.getElementById('more-btn').getAttribute('aria-expanded') === 'true'));
   await page.keyboard.press('Tab'); const first = await active(page);
-  note(f, 'first Tab after More moves into the sheet', first?.inNav && first.tag === 'a', first?.name);
+  note(f, 'first Tab after More moves into the sheet (a group heading, link or button)', first?.inNav && ['a', 'button', 'summary'].includes(first.tag), first?.name);
   await page.keyboard.press('Escape');
   const esc = await page.evaluate(() => ({ exp: document.getElementById('more-btn').getAttribute('aria-expanded'), focus: document.activeElement?.id }));
   note(f, 'Escape closes the sheet and returns focus to More', esc.exp === 'false' && esc.focus === 'more-btn', JSON.stringify(esc));
@@ -182,8 +182,16 @@ async function tabTo(page, match, max = 120) {
   note(f, 'tabbing forwards out of the open sheet closes it', left > 0 && await page.evaluate(() => document.getElementById('more-btn').getAttribute('aria-expanded') === 'false'), `${left} presses to leave the nav`);
   await page.focus('#more-btn'); await page.keyboard.press('Enter');
   note(f, 'sheet reopens from More with Enter', await page.evaluate(() => document.getElementById('more-btn').getAttribute('aria-expanded') === 'true'));
-  const nCal = await tabTo(page, (a) => a.inNav && /^calendar/i.test(a.name), 12);
-  note(f, 'Tab reaches the Calendar link in the sheet', nCal > 0, `${nCal} presses`);
+  // The sheet is grouped in <details>: a collapsed group's links are not rendered, so Tab skips them. Calendar is a preview page
+  // (docs/v0/SCOPE.md), so it sits inside the collapsed "Preview" group; the walk must open that group by keyboard first.
+  const hidden = await page.evaluate(() => { const a = document.querySelector('#nav-more a[href="#/calendar"]'); if (!a || !a.closest('details') || a.closest('details').open) return false; const was = document.activeElement; a.focus(); const got = document.activeElement === a; if (got) was?.focus(); return !got && !a.checkVisibility(); });
+  note(f, 'Calendar sits in a collapsed group and cannot take focus while collapsed', hidden);
+  const nPv = await tabTo(page, (a) => a.inNav && a.tag === 'summary' && /^preview/i.test(a.name), 12);
+  note(f, 'Tab reaches the "Preview" group heading without passing through collapsed links', nPv > 0, `${nPv} presses`);
+  await page.keyboard.press('Enter'); await page.waitForTimeout(100);
+  note(f, 'Enter expands the Preview group (details[open])', await page.evaluate(() => !!document.querySelector('#nav-more li[data-section="preview"] > details[open]')));
+  const nCal = await tabTo(page, (a) => a.inNav && /^calendar/i.test(a.name), 80);
+  note(f, 'Tab reaches the Calendar link inside the expanded group', nCal > 0, `${nCal} presses`);
   await page.keyboard.press('Enter'); await page.waitForTimeout(800);
   const a = await active(page);
   note(f, 'Enter opens the calendar, sheet closes, focus on its heading', a?.tag === 'h1' && /calendar/i.test(a.name) && await page.evaluate(() => document.getElementById('more-btn').getAttribute('aria-expanded') === 'false'), JSON.stringify(a));

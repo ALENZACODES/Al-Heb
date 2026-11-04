@@ -2,11 +2,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import { memoDisk, PRON_ROOTS } from './helpers/memo.js';
 import { join } from 'node:path';
 import { buildDerived, derivedFiles, DERIVED_DIR, SHARD_BYTES } from '../tools/pronunciation/build_derived.mjs';
 import { TRADITIONS, SHARD_SIZE } from '../tools/pronunciation/build_variants.mjs';
 
-const d = buildDerived();
+const d = memoDisk('pron-derived', PRON_ROOTS, () => buildDerived());
 const sylShards = d.shards.filter((s) => s.head.name === 'syllables');
 const recs = sylShards.flatMap((s) => s.records);
 

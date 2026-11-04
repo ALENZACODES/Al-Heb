@@ -1,5 +1,5 @@
 {
- "when": "2026-11-04T04:42:10.557Z",
+ "when": "2026-11-04T16:48:33.090Z",
  "results": [
   {
    "flow": "onboarding",
@@ -10,45 +10,66 @@
   },
   {
    "flow": "onboarding",
-   "name": "Tab reaches the first radio group",
+   "name": "Tab reaches the letters question radio group",
    "ok": true,
    "gap": false,
-   "detail": "10 Tab presses"
+   "detail": "8 Tab presses"
   },
   {
    "flow": "onboarding",
    "name": "arrow keys change the radio choice",
    "ok": true,
    "gap": false,
-   "detail": "f,american,read -> m,american,read"
+   "detail": " -> some"
   },
   {
    "flow": "onboarding",
-   "name": "Tab reaches \"Start learning\" (no trap)",
+   "name": "Tab reaches \"Continue\" (no trap)",
    "ok": true,
    "gap": false,
-   "detail": "3 more presses"
+   "detail": "1 more presses"
   },
   {
    "flow": "onboarding",
-   "name": "Enter completes onboarding and leaves /welcome",
+   "name": "Enter saves the answer (onboarding.v1, onboarded) and shows the synagogue step",
    "ok": true,
    "gap": false,
-   "detail": "#/learn"
+   "detail": "#/welcome"
+  },
+  {
+   "flow": "onboarding",
+   "name": "focus returns to the heading after the step changes",
+   "ok": true,
+   "gap": false,
+   "detail": "{\"tag\":\"h1\",\"id\":\"view-title\",\"role\":null,\"type\":\"\",\"name\":\"Welcome to ALEF אלף\",\"inMain\":true,\"inNav\":false,\"pressed\":null,\"letter\":\"\"}"
+  },
+  {
+   "flow": "onboarding",
+   "name": "Tab reaches \"Skip the rest and start now\" (no trap)",
+   "ok": true,
+   "gap": false,
+   "detail": "5 more presses"
+  },
+  {
+   "flow": "onboarding",
+   "name": "Enter leaves /welcome for the chosen starting point",
+   "ok": true,
+   "gap": false,
+   "detail": "#/placement"
   },
   {
    "flow": "onboarding",
    "name": "focus lands on the new page heading",
    "ok": true,
    "gap": false,
-   "detail": "{\"tag\":\"h1\",\"id\":\"view-title\",\"role\":null,\"type\":\"\",\"name\":\"Lessons\",\"inMain\":true,\"inNav\":false,\"pressed\":null,\"letter\":\"\"}"
+   "detail": "{\"tag\":\"h1\",\"id\":\"view-title\",\"role\":null,\"type\":\"\",\"name\":\"Placement check (draft)\",\"inMain\":true,\"inNav\":false,\"pressed\":null,\"letter\":\"\"}"
   },
   {
    "flow": "trace",
    "name": "Tab reaches the Animate (\"show me the stroke order\") button",
    "ok": true,
    "gap": false,
-   "detail": "46 presses"
+   "detail": "44 presses"
   },
   {
    "flow": "trace",
@@ -83,14 +104,14 @@
    "name": "Tab reaches \"Quiz me\"",
    "ok": true,
    "gap": false,
-   "detail": "10 presses"
+   "detail": "8 presses"
   },
   {
    "flow": "atlas quiz",
    "name": "Enter starts the quiz and shows a question",
    "ok": true,
    "gap": false,
-   "detail": "Find: He /h/"
+   "detail": "Find: Tav /t/"
   },
   {
    "flow": "atlas quiz",
@@ -118,7 +139,7 @@
    "name": "Tab reaches an \"Add\" button on a word",
    "ok": true,
    "gap": false,
-   "detail": "19 presses"
+   "detail": "17 presses"
   },
   {
    "flow": "vocab review",
@@ -153,7 +174,7 @@
    "name": "Tab reaches the reader tabs",
    "ok": true,
    "gap": false,
-   "detail": "10 presses"
+   "detail": "8 presses"
   },
   {
    "flow": "reader",
@@ -195,7 +216,7 @@
    "name": "Tab reaches More",
    "ok": true,
    "gap": false,
-   "detail": "8 presses"
+   "detail": "5 presses"
   },
   {
    "flow": "calendar + More sheet",
@@ -206,10 +227,10 @@
   },
   {
    "flow": "calendar + More sheet",
-   "name": "first Tab after More moves into the sheet",
+   "name": "first Tab after More moves into the sheet (a group heading, link or button)",
    "ok": true,
    "gap": false,
-   "detail": "Scanסריקה"
+   "detail": "Learn לימוד(5)Lessons, letters, vocabulary, grammar and typi"
   },
   {
    "flow": "calendar + More sheet",
@@ -223,7 +244,7 @@
    "name": "tabbing forwards out of the open sheet closes it",
    "ok": true,
    "gap": false,
-   "detail": "6 presses to leave the nav"
+   "detail": "10 presses to leave the nav"
   },
   {
    "flow": "calendar + More sheet",
@@ -234,10 +255,31 @@
   },
   {
    "flow": "calendar + More sheet",
-   "name": "Tab reaches the Calendar link in the sheet",
+   "name": "Calendar sits in a collapsed group and cannot take focus while collapsed",
    "ok": true,
    "gap": false,
-   "detail": "2 presses"
+   "detail": ""
+  },
+  {
+   "flow": "calendar + More sheet",
+   "name": "Tab reaches the \"Preview\" group heading without passing through collapsed links",
+   "ok": true,
+   "gap": false,
+   "detail": "9 presses"
+  },
+  {
+   "flow": "calendar + More sheet",
+   "name": "Enter expands the Preview group (details[open])",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "calendar + More sheet",
+   "name": "Tab reaches the Calendar link inside the expanded group",
+   "ok": true,
+   "gap": false,
+   "detail": "42 presses"
   },
   {
    "flow": "calendar + More sheet",

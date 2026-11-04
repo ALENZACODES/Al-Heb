@@ -41,7 +41,7 @@
    "translit": "kan",
    "en": "here, at this place",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h64c48ca3",
    "source": "data/vocab/words.json"
   },
   {
@@ -50,7 +50,7 @@
    "translit": "al",
    "en": "not, do not",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h9d36c656",
    "source": "data/vocab/words.json"
   },
   {
@@ -59,7 +59,7 @@
    "translit": "koh",
    "en": "thus, in this way",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h352b83f7",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "rav",
    "en": "many, much",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h31e27ee8",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "sham",
    "en": "there",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h8e3fbf43",
    "source": "data/vocab/words.json"
   },
   {
@@ -104,7 +104,7 @@
    "translit": "eikh",
    "en": "how",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h84e47f20",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "ayeh",
    "en": "where",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h40e5a2de",
    "source": "data/vocab/words.json"
   }
  ]

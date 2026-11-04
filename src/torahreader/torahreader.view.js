@@ -14,6 +14,8 @@
 import { el, storeGet, storeSet } from '../curriculum/dom.js';
 import { transliterate } from '../pronunciation/transliterate.js';
 import { loadAll, loadJson } from './loader.js';
+import { uiEnglish } from '../shell/names.js';
+import { playLine } from '../pronunciation/forTradition.js';
 import {
   STORE_KEY, PASSAGE_IDS, SPEEDS, DEFAULT_STATE, normaliseState, speedMs, flatten, display, plainOf, spokenText, audioIndex,
   tropeById, tropeName, legend, markGlyph, stepIndex,
@@ -121,10 +123,7 @@ export function mount(root, ctx) {
       try { ctx.audio.stop?.(); } catch { /* ignore */ }
       const r = await ctx.audio.play(kind, id, { text });
       if (!alive) return;
-      if (r && r.source === 'file') say(r.entryStatus === 'tts' ? `Playing ${label}: a pre-rendered computer voice, not a human recording.` : `Playing ${label}: a recording.`);
-      else if (r && r.source === 'tts-fallback') say(`Playing ${label} with the browser voice: a computer voice, not a person. It may ignore the vowel points.`);
-      else if (r && (r.source === 'none' || r.played === false || r.ok === false)) say(`No audio for ${label} (${r.reason || r.error || 'unavailable'}).`);
-      else say(`Played ${label}.`);
+      say(playLine(r, tradition(), label));
     } catch (e) { say(`Audio error for ${label}: ${e?.message || e}`); }
   }
 
@@ -198,7 +197,7 @@ export function mount(root, ctx) {
       const lineId = idx.lines.get(v.verse);
       const hear = el('button', { type: 'button', class: 'trd-hearline', onclick: () => playAudio('line', lineId || `torahreader-${p.id}-${v.verse}`, spokenText(v.he), `${v.ref}`) }, `Hear ${v.ref}`);
       verses.append(el('div', { class: 'trd-verse', 'data-verse': v.verse }, label, line,
-        v.english ? el('p', { class: 'trd-en' }, v.english) : null, hear));
+        v.english ? el('p', { class: 'trd-en' }, uiEnglish(ctx, v.english)) : null, hear));
     });
 
     function select(n) {

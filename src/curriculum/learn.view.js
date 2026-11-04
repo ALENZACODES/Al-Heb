@@ -35,7 +35,14 @@ export function mount(root, ctx) {
   if (q.scaffold) return mountScaffold(root, ctx);
   if (q.dialogues || q.dialogue) return mountDialogues(root, ctx, q.dialogue);
   if (q.review) return mountReview(root, ctx, { lessonId: q.lesson });
-  if (q.lesson) return mountLesson(root, ctx, q.lesson);
+  if (q.lesson) {
+    const un = mountLesson(root, ctx, q.lesson);
+    // intermediate lessons (I-xx) have a player of their own: guarded link, only when that route exists in this build
+    if (/^I-\d+$/.test(String(q.lesson)) && ctx?.hasRoute?.("intermediatelesson")) {
+      root.append(el("p", { class: "row" }, el("a", { class: "btn secondary", href: `#/intermediate/${encodeURIComponent(q.lesson)}` }, "Open in the intermediate player")));
+    }
+    return un;
+  }
   return mountMap(root, ctx);
 }
 
@@ -66,7 +73,7 @@ function mountMap(root, ctx) {
         ? dueCount === 1 ? "1 review due" : `${dueCount} ${tr(ctx, "learn.dueReviews", "reviews due")}`
         : tr(ctx, "learn.noDue", "No reviews due"), " ",
         dueCount ? el("a", { class: "btn", href: "#/learn?review=1" }, "Review now") : null),
-      el("p", { class: "alef-streak" }, st.streak.count ? `Streak: ${st.streak.count} day${st.streak.count === 1 ? "" : "s"}${st.streak.activeToday ? "" : " (learn today to keep it)"}` : "No streak yet. Finish a lesson or review a card to start one."),
+      el("p", { class: "alef-streak" }, st.streak.count ? `Streak: ${st.streak.count} day${st.streak.count === 1 ? "" : "s"}${st.streak.activeToday ? "" : " (5 minutes today keeps it)"}` : (st.streak.best ? `Paused. Your best streak was ${st.streak.best} day${st.streak.best === 1 ? "" : "s"}. A day counts after 5 minutes of study.` : "No streak yet. A day counts after 5 minutes of study on a lesson, review or practice screen.")),
       track === "read" ? beltStrip(done) : null,
       el("p", { class: "row alef-extras" },
         track === "read" ? el("a", { class: "btn secondary", href: "#/learn?loanwords=1" }, "Words you can already read") : null,
@@ -74,6 +81,7 @@ function mountMap(root, ctx) {
         track === "read" ? el("a", { class: "btn secondary", href: "#/learn?ladder=1" }, "Syllable ladder") : null,
         track === "read" ? el("a", { class: "btn secondary", href: "#/learn?fade=1" }, "Fade-out recall") : null,
         el("a", { class: "btn secondary", href: "#/learn?scaffold=1" }, "Read without Latin"),
+        ctx?.hasRoute?.("intermediate") ? el("a", { class: "btn secondary", href: "#/intermediate" }, "Intermediate lessons") : null,
         track === "israel" ? el("a", { class: "btn secondary", href: "#/learn?gender=pairs" }, "Gender pairs") : null,
         track === "israel" ? el("a", { class: "btn secondary", href: "#/learn?gender=roles" }, "Say it as me") : null,
         track === "israel" ? el("a", { class: "btn secondary", href: "#/learn?dialogues=1" }, "Dialogues") : null),

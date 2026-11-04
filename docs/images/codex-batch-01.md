@@ -14,8 +14,10 @@ Source: `C:\Users\user\.codex\generated_images\01a1a3a4-7a61-74e3-89fa-235efabff
 
 ## Files
 
-- Repo copies: `assets/images/incoming/<manifest-name>`; extras in `assets/images/incoming/_extras/`. Web-size: re-encoded lossless PNG, squares 1024x1024, portrait frames 1024x1280, wide 1600 px; metadata stripped. About 229 MB total.
-- Original-resolution copies (not in git): `/home/claude/research_notes/images/codex-batch-01/originals/exec-<uuid>.png` (1254x1254 etc.).
+- Repo copies (updated): the lossless PNGs in `assets/images/incoming/` were removed (they were ~219 MB; commit 86867c7 still holds them in git history). The 282 matched images were ingested with `tools/images/ingest.mjs` into WebP web copies in `assets/img/gen/` (q88, long edge 800 and up to 1600, metadata stripped; about 32 MB). Provenance: `data/images/provenance.json`. The 4 extras exist only as originals outside git.
+- Review notes shown on the contact sheets: `data/images/review-notes.json`. How to review: `docs/images/REVIEW-SHEETS.md`.
+- Original-resolution copies (not in git): `/home/claude/research_notes/images/codex-batch-01/originals/exec-<uuid>.png` (1254x1254 etc.); the same 282 under manifest names in `.../ingest-originals/` (what the ingest tool and validate read; symlinked as `../alef-image-originals`).
+- OCR note: the ingest OCR flagged `contains_text` on 37 images and `possible_text` on 10. The earlier eye check found no text; the flagged words look like noise (e.g. 'lik', 'BURRS'), but nobody has confirmed each. Approving a flagged image through apply-decisions is skipped unless `--force`.
 - Full data: `docs/images/codex-batch-01.json` (sha256 of source and repo copy, mtimeMs, sizes, scene seen vs expected).
 
 ## Table

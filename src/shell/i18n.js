@@ -5,7 +5,7 @@ export const en = {
   'app.tagline': 'Read Hebrew aloud. Speak it in Israel.',
   'skip': 'Skip to main content',
   'nav.home': 'Home', 'nav.learn': 'Learn', 'nav.letters': 'Letters', 'nav.sounds': 'Sounds',
-  'nav.read': 'Read', 'nav.scan': 'Scan', 'nav.calendar': 'Calendar', 'nav.settings': 'Settings', 'nav.about': 'About',
+  'nav.read': 'Read', 'nav.scan': 'Scan', 'nav.calendar': 'Calendar', 'nav.settings': 'Settings', 'nav.about': 'About', 'nav.workbook': 'Workbook', 'nav.atlas': 'Letter atlas', 'nav.soundgap': 'Sound gap', 'nav.vocab': 'Vocabulary',
   'home.opening.title': 'Opening',
   'home.opening.draft': 'Draft opening: pending clergy/educator review.',
   'home.opening.body': 'The opening prayer slot is reserved. No liturgy is bundled here until it has been reviewed. The Priestly Blessing (Numbers 6:24-26) is planned as the opener in the Read section.',
@@ -53,7 +53,7 @@ export const en = {
 /** Hebrew UI labels. FLAGGED: machine-assisted drafts, need native-speaker review. */
 export const he = {
   'nav.home': 'בית', 'nav.learn': 'לימוד', 'nav.letters': 'אותיות', 'nav.sounds': 'צלילים',
-  'nav.read': 'קריאה', 'nav.scan': 'סריקה', 'nav.calendar': 'לוח שנה', 'nav.settings': 'הגדרות', 'nav.about': 'אודות',
+  'nav.read': 'קריאה', 'nav.scan': 'סריקה', 'nav.calendar': 'לוח שנה', 'nav.settings': 'הגדרות', 'nav.about': 'אודות', 'nav.workbook': 'חוברת',
   'app.name': 'אלף',
 };
 export const HEBREW_REVIEW_NEEDED = Object.keys(he);

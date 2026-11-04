@@ -225,3 +225,39 @@ test('shell pages exist for how/about/onboarding and index has the sound status 
   for (const f of ['how', 'about', 'onboarding']) assert.ok(existsSync(join(root, `src/shell/${f}.view.js`)));
   assert.match(rd('index.html'), /id="sound-status"/);
 });
+
+// ---- data-driven optional routes (round 3) ----
+test('optional routes: hidden from the view list when the file is missing, shown when present; atlas is not swallowed by /letters/:id', async () => {
+  const { availableRoutes } = await import('../src/shell/router.js');
+  const base = ['shell/home.view.js'];
+  assert.equal(availableRoutes(base).has('atlas'), false);
+  assert.equal(availableRoutes(base).has('home'), true, 'non-optional routes always count');
+  assert.equal(availableRoutes([...base, 'letters/atlas.view.js']).has('atlas'), true);
+  assert.equal(availableRoutes([...base, 'vocab/vocab.view.js']).has('vocab'), true);
+  assert.equal(matchRoute('#/letters/atlas').route.name, 'atlas');
+  assert.equal(matchRoute('#/letters/alef').route.name, 'letter');
+  for (const [h, n] of Object.entries({ '#/workbook': 'workbook', '#/soundgap': 'soundgap', '#/vocab': 'vocab' })) assert.equal(matchRoute(h).route.name, n);
+});
+test('views.generated.js lists exactly the *.view.js files on disk (run node tools/build-precache.mjs after adding a view)', async () => {
+  const { VIEW_FILES } = await import('../src/shell/views.generated.js');
+  const { readdirSync, statSync } = await import('node:fs');
+  const out = []; const walk = (d) => { for (const n of readdirSync(d)) { const p = join(d, n); if (statSync(p).isDirectory()) walk(p); else if (n.endsWith('.view.js') && !n.startsWith('_')) out.push(p.slice(join(root, 'src').length + 1).split('\\').join('/')); } };
+  walk(join(root, 'src'));
+  assert.deepEqual([...VIEW_FILES].sort(), out.sort());
+});
+test('workbook page: every PDF in assets/workbook/manifest.json exists with the stated size', async () => {
+  const { readFileSync, statSync } = await import('node:fs');
+  const m = JSON.parse(readFileSync(join(root, 'assets/workbook/manifest.json'), 'utf8'));
+  assert.ok(m.files.length >= 4);
+  for (const f of m.files) assert.equal(statSync(join(root, 'assets/workbook', f.pdf)).size, f.bytes, f.pdf);
+});
+test('precache: skips vendor, PDFs and files over the size limit', async () => {
+  const { computeManifest, MAX_FILE_BYTES } = await import('../tools/build-precache.mjs');
+  const { readFileSync } = await import('node:fs'); const { statSync } = await import('node:fs');
+  const m = computeManifest();
+  assert.ok(!m.files.some((f) => f.startsWith('assets/vendor/') || f.startsWith('assets/workbook/') || f.endsWith('.pdf') || f.startsWith('data/vocab/packs/')));
+  for (const f of m.files) assert.ok(statSync(join(root, f)).size <= MAX_FILE_BYTES, f);
+  // compare the file LIST (not the content hash, which changes on every edit by any lane)
+  const listed = JSON.parse(readFileSync(join(root, 'precache-manifest.js'), 'utf8').match(/ALEF_PRECACHE = (\[[\s\S]*?\]);/)[1]);
+  assert.deepEqual(listed, m.files, 'precache-manifest.js file list is stale: run node tools/build-precache.mjs');
+});

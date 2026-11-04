@@ -13,7 +13,7 @@ try { ({ chromium } = require('playwright')); } catch { try { ({ chromium } = re
 
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 const outDir = join(root, 'docs', 'screens'); mkdirSync(outDir, { recursive: true });
-const ROUTES = ['/', '/welcome', '/learn', '/learn?lesson=r01', '/learn?review=1', '/letters', '/letters/alef', '/sounds', '/read', '/read/bless-priestly-1', '/scan', '/calendar', '/settings', '/how', '/about', '/nope'];
+const ROUTES = ['/', '/welcome', '/learn', '/learn?lesson=r01', '/learn?review=1', '/letters', '/letters/alef', '/sounds', '/read', '/read/bless-priestly-1', '/scan', '/calendar', '/workbook', '/letters/atlas', '/soundgap', '/vocab', '/settings', '/how', '/about', '/nope'];
 const args = process.argv.slice(2);
 const useDist = args.includes('--dist');
 const prefix = useDist && args.includes('--base') ? args[args.indexOf('--base') + 1] : '/';

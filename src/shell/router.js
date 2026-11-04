@@ -3,13 +3,14 @@
 // Each route lazily imports its view module; views export mount(root, ctx) => unmount.
 
 /**
- * @typedef {{name:string, pattern:string, module:string|null, nav?:string, title:string, owner:string}} RouteDef
+ * @typedef {{name:string, pattern:string, module:string|null, nav?:string, title:string, owner:string, optional?:boolean, quick?:string}} RouteDef
  */
 /** @type {RouteDef[]} Module paths are relative to src/shell/. */
 export const ROUTES = [
   { name: 'home',     pattern: '/',               module: './home.view.js',                      nav: 'nav.home',     title: 'Home', owner: 'lane8' },
   { name: 'learn',    pattern: '/learn',          module: '../curriculum/learn.view.js',         nav: 'nav.learn',    title: 'Learn', owner: 'lane1' },
   { name: 'letters',  pattern: '/letters',        module: '../letters/trace.view.js',            nav: 'nav.letters',  title: 'Letters', owner: 'lane2' },
+  { name: 'atlas',    pattern: '/letters/atlas',  module: '../letters/atlas.view.js',            title: 'Letter atlas', owner: 'lane2', optional: true, quick: 'nav.atlas' },
   { name: 'letter',   pattern: '/letters/:id',    module: '../letters/trace.view.js',            title: 'Letter', owner: 'lane2' },
   { name: 'sounds',   pattern: '/sounds',         module: '../pronunciation/sounds.view.js',     nav: 'nav.sounds',   title: 'Sounds', owner: 'lane3' },
   { name: 'read',     pattern: '/read',           module: '../corpus/read.view.js',              nav: 'nav.read',     title: 'Read', owner: 'lane5' },
@@ -19,6 +20,11 @@ export const ROUTES = [
   { name: 'settings', pattern: '/settings',       module: './settings.view.js',                  nav: 'nav.settings', title: 'Settings', owner: 'lane8' },
   { name: 'welcome', pattern: '/welcome',        module: './onboarding.view.js',                title: 'Welcome', owner: 'lane8' },
   { name: 'how',      pattern: '/how',            module: './how.view.js',                       title: 'How this works', owner: 'lane8' },
+  // Optional routes: other lanes add these view files over time. When the file is missing the route is hidden from nav/quick
+  // links (see probeRoutes) and a direct visit shows the "not available yet" card; nothing else breaks.
+  { name: 'workbook', pattern: '/workbook',        module: './workbook.view.js',                  nav: 'nav.workbook', title: 'Workbook', owner: 'lane8' },
+  { name: 'soundgap', pattern: '/soundgap',       module: '../pronunciation/soundgap.view.js',   title: 'Sound gap', owner: 'lane3', optional: true, quick: 'nav.soundgap' },
+  { name: 'vocab',    pattern: '/vocab',          module: '../vocab/vocab.view.js',              title: 'Vocabulary', owner: 'lane9', optional: true, quick: 'nav.vocab' },
   { name: 'about',    pattern: '/about',          module: './about.view.js',                     nav: 'nav.about',    title: 'About', owner: 'lane8' },
 ];
 
@@ -71,4 +77,15 @@ export function createRouter(onChange) {
 export function loadRouteModule(route) {
   if (!route.module) return Promise.reject(new Error('route has no module'));
   return import(route.module);
+}
+
+/**
+ * Which routes have a view file in this build? `views.generated.js` (written by tools/build-precache.mjs from the files on disk)
+ * lists every src/**\/*.view.js, so no network probe (and no 404 in the console) is needed. Non-optional routes always count.
+ * @param {string[]} files view files relative to src/, e.g. "letters/atlas.view.js" @returns {Set<string>} usable route names
+ */
+export function availableRoutes(files) {
+  const have = new Set(files);
+  const norm = (m) => m.replace(/^\.\//, 'shell/').replace(/^\.\.\//, '');
+  return new Set(ROUTES.filter((r) => !r.optional || (r.module && have.has(norm(r.module)))).map((r) => r.name));
 }

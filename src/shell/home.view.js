@@ -1,4 +1,5 @@
 import { h, heSpan } from './ui.js';
+import { ROUTES } from './router.js';
 import { tHe } from './i18n.js';
 
 async function tryImport(paths) {
@@ -6,7 +7,7 @@ async function tryImport(paths) {
   return null;
 }
 
-export const QUICK = [['letters', '#/letters'], ['sounds', '#/sounds'], ['read', '#/read'], ['scan', '#/scan'], ['calendar', '#/calendar']];
+export const QUICK = [['letters', '#/letters'], ['sounds', '#/sounds'], ['read', '#/read'], ['scan', '#/scan'], ['calendar', '#/calendar'], ['workbook', '#/workbook']];
 
 export function mount(root, ctx) {
   const { settings, store, t } = ctx;
@@ -26,7 +27,9 @@ export function mount(root, ctx) {
     h('section', { class: 'card', 'aria-labelledby': 'h-due' }, h('h2', { id: 'h-due' }, t('home.due')), dueBody),
     h('section', { class: 'card', 'aria-labelledby': 'h-streak' }, h('h2', { id: 'h-streak' }, t('home.streak')), streakBody),
     h('nav', { class: 'card', 'aria-labelledby': 'h-quick' }, h('h2', { id: 'h-quick' }, t('home.quick')),
-      h('ul', { class: 'tiles' }, ...QUICK.map(([k, href]) => h('li', {}, h('a', { class: 'tile', href }, h('span', {}, t('nav.' + k)), heSpan(tHe('nav.' + k)))))) ),
+      h('ul', { class: 'tiles' }, ...QUICK.map(([k, href]) => h('li', {}, h('a', { class: 'tile', href }, h('span', {}, t('nav.' + k)), tHe('nav.' + k) ? heSpan(tHe('nav.' + k)) : null))),
+        // optional views from other lanes: only listed when their file exists in this build
+        ...ROUTES.filter((r) => r.optional && r.quick && (ctx.hasRoute?.(r.name) ?? false)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, h('span', {}, t(r.quick))))))),
     h('section', { class: 'card', 'aria-labelledby': 'h-ref' }, h('h2', { id: 'h-ref' }, t('home.reflect')),
       h('a', { class: 'btn secondary', href: '#/calendar' }, t('home.reflect.link'))),
     h('p', {}, h('a', { href: '#/how' }, t('home.how'))),

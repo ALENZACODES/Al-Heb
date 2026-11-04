@@ -25,7 +25,7 @@
    ],
    "html": "html/alef-workbook-print-a4.html",
    "pdf": "alef-workbook-print-a4.pdf",
-   "bytes": 567636
+   "bytes": 569138
   },
   {
    "id": "alef-workbook-print-letter",
@@ -49,7 +49,7 @@
    ],
    "html": "html/alef-workbook-print-letter.html",
    "pdf": "alef-workbook-print-letter.pdf",
-   "bytes": 567639
+   "bytes": 569134
   },
   {
    "id": "alef-workbook-cursive-a4",
@@ -74,7 +74,7 @@
    ],
    "html": "html/alef-workbook-cursive-a4.html",
    "pdf": "alef-workbook-cursive-a4.pdf",
-   "bytes": 606038
+   "bytes": 607471
   },
   {
    "id": "alef-workbook-cursive-letter",
@@ -99,7 +99,7 @@
    ],
    "html": "html/alef-workbook-cursive-letter.html",
    "pdf": "alef-workbook-cursive-letter.pdf",
-   "bytes": 606430
+   "bytes": 607856
   },
   {
    "id": "alef-workbook-print-a4-mnemonics",
@@ -123,7 +123,7 @@
    ],
    "html": "html/alef-workbook-print-a4-mnemonics.html",
    "pdf": "alef-workbook-print-a4-mnemonics.pdf",
-   "bytes": 603896
+   "bytes": 605645
   },
   {
    "id": "alef-workbook-print-letter-mnemonics",
@@ -147,7 +147,7 @@
    ],
    "html": "html/alef-workbook-print-letter-mnemonics.html",
    "pdf": "alef-workbook-print-letter-mnemonics.pdf",
-   "bytes": 603869
+   "bytes": 605611
   },
   {
    "id": "alef-workbook-cursive-a4-mnemonics",
@@ -172,7 +172,7 @@
    ],
    "html": "html/alef-workbook-cursive-a4-mnemonics.html",
    "pdf": "alef-workbook-cursive-a4-mnemonics.pdf",
-   "bytes": 642635
+   "bytes": 644315
   },
   {
    "id": "alef-workbook-cursive-letter-mnemonics",
@@ -197,7 +197,7 @@
    ],
    "html": "html/alef-workbook-cursive-letter-mnemonics.html",
    "pdf": "alef-workbook-cursive-letter-mnemonics.pdf",
-   "bytes": 642970
+   "bytes": 644643
   }
  ]
 }

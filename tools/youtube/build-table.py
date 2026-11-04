@@ -1,13 +1,13 @@
 """Build docs/youtube/top100.md from research_notes/youtube/top100.json + caption files + fetch log.
 Re-run after any new captions arrive (run sync.py first). READ lists the ids whose captions the author actually read (see docs/youtube/notes.md)."""
 import json, os, collections
-R = '/home/claude/research_notes/youtube/'
+R = os.path.expanduser('~/research_notes/youtube/')
 top = json.load(open(R + 'top100.json'))
 have = {f[:-4] for f in os.listdir(R + 'all_txt')}
 log = json.load(open(R + 'fetch3.json')) if os.path.exists(R + 'fetch3.json') else {}
 old = json.load(open(R + 'fetch_log.json')) if os.path.exists(R + 'fetch_log.json') else {}
 kind = json.load(open(R + 'caption_kind.json')) if os.path.exists(R + 'caption_kind.json') else {}
-READ = set(open('/home/claude/alef/tools/youtube/read-ids.txt').read().split())
+READ = set(open(os.path.expanduser('~/alef/tools/youtube/read-ids.txt')).read().split())
 UNUSABLE = {'luk85AVuHCg': 'captions exist but hold about 13 words (the video is mostly sung)', 'Lf0ZDAvYInU': 'captions hold about 14 words'}
 def status(i):
     if i in UNUSABLE: return 'unusable'
@@ -33,7 +33,7 @@ out = ['# Top 100 Hebrew-learning videos on YouTube: candidate list and caption 
  '## How I read these videos (and what I did not do)', '',
  '- I did not watch any video and did not listen to any audio. I read English captions downloaded with `yt-dlp` (manual captions where the uploader supplied them, otherwise YouTube auto-captions, which are noisy and often garble Hebrew words). `youtube-transcript-api` is IP-blocked from this machine and was not used.',
  '- What a teacher shows on screen (arrows, colours, writing) is invisible to me unless they say it aloud. Notes below describe what is said, not what is displayed.',
- '- No caption text is stored in the repo. Raw captions stay in `/home/claude/research_notes/youtube/`. Notes are in my own words; quotes are 12 words or fewer.',
+ '- No caption text is stored in the repo. Raw captions stay in `~/research_notes/youtube/`. Notes are in my own words; quotes are 12 words or fewer.',
  '- Candidates came from `yt-dlp ytsearch` over 32 queries (alphabet, nikud, cursive, siddur and Torah reading, Shema and other prayers, pronunciation traditions, Israeli slang, travel and ordering phrases, ulpan, grammar basics) plus one WebSearch pass for channel round-ups, which added nothing the search pass had not found. The pool held 1,033 videos; I dropped songs, kids\' letter clips, Bible commentary, vlogs and off-topic hits by hand-list (`tools/youtube/select.py`), ranked the rest by log(views) plus a relevance bonus for reading and Israeli-conversation keywords, and took the first 100.',
  '- View counts are as captured by the search pass on 2026-11-03 and will have moved.', '',
  '## Coverage', '',
@@ -49,5 +49,5 @@ out += ['| total | %d |' % len(top), '',
  '## The table', '',
  'Rank is the order from the relevance-and-views score, not a quality ranking.', '',
  '| # | Title | Channel | Length | Views | Kind | URL | Captions |', '|---|---|---|---|---|---|---|---|'] + rows + ['']
-open('/home/claude/alef/docs/youtube/top100.md', 'w').write('\n'.join(out))
+open(os.path.expanduser('~/alef/docs/youtube/top100.md'), 'w').write('\n'.join(out))
 print(dict(cnt))

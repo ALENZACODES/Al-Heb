@@ -196,18 +196,18 @@ if (phases.has('interact')) {
       await pg.mouse.move(x0, y0); await pg.mouse.down();
       for (const p of m.slice(1)) { const [x, y] = toPx(p); await pg.mouse.move(x, y, { steps: 3 }); }
       await pg.mouse.up(); await pg.waitForTimeout(120);
-      counted.push(await pg.locator('.alef-trace .row').filter({ hasText: /strokes/ }).first().innerText().catch(() => '?'));
+      counted.push(await pg.locator('.alef-trace .row').filter({ hasText: /^\s*Stroke \d+ of \d+/ }).first().innerText().catch(() => '?'));
     }
     const fb = await pg.locator('.alef-trace .feedback').innerText();
-    rec(`trace ${id} (${script}): ${strokes.length} median drags counted`, counted.at(-1)?.trim().startsWith(`${strokes.length} / ${strokes.length}`) && /Perfect|Done/.test(fb), `progress after each stroke: ${counted.map((c) => c.trim().split(' ')[0]).join(',')}; feedback "${fb}"`);
+    rec(`trace ${id} (${script}): ${strokes.length} median drags counted`, counted.at(-1)?.trim().startsWith(`Stroke ${strokes.length} of ${strokes.length}`) && /Perfect|Done/.test(fb), `progress after each stroke: ${counted.map((c) => c.trim().split(' ')[1]).join(',')}; feedback "${fb}"`);
     if (id === 'alef') await pg.screenshot({ path: join(shotDir, 'interact-trace-alef-done.jpg'), type: 'jpeg', quality: 50 });
     rec(`trace ${id}: completion badge persisted`, await pg.locator('.grid button[aria-pressed=true] .badge').count() > 0);
     // wrong stroke is rejected: reset then draw a horizontal line far from the median
     await pg.getByRole('button', { name: 'Start over' }).click(); await pg.waitForTimeout(100);
     await svg.scrollIntoViewIfNeeded(); const box2 = await svg.boundingBox(); Object.assign(box, box2);
     await pg.mouse.move(box.x + box.width * 0.1, box.y + box.height * 0.9); await pg.mouse.down(); await pg.mouse.move(box.x + box.width * 0.9, box.y + box.height * 0.92, { steps: 6 }); await pg.mouse.up(); await pg.waitForTimeout(150);
-    const p2 = (await pg.locator('.alef-trace .row').filter({ hasText: /strokes/ }).first().innerText()).trim();
-    rec(`trace ${id}: wrong stroke not counted`, p2.startsWith('0 /'), p2 + ' | ' + (await pg.locator('.alef-trace .feedback').innerText()));
+    const p2 = (await pg.locator('.alef-trace .row').filter({ hasText: /^\s*Stroke \d+ of \d+/ }).first().innerText()).trim();
+    rec(`trace ${id}: wrong stroke not counted`, p2.startsWith('Stroke 0 of'), p2 + ' | ' + (await pg.locator('.alef-trace .feedback').innerText()));
     rec(`trace ${id}: no page errors`, pg.errs.length === 0, pg.errs.join('; '));
     await pg.close();
   }
@@ -217,8 +217,8 @@ if (phases.has('interact')) {
     const cdp = await ctx.newCDPSession(pg); const m = L.print.strokes[0].median; const toPx = (p) => [box.x + (p[0] / 1000) * box.width, box.y + (p[1] / 1000) * box.height];
     const ev = (type, p) => cdp.send('Input.dispatchTouchEvent', { type, touchPoints: type === 'touchEnd' ? [] : [{ x: toPx(p)[0], y: toPx(p)[1] }] });
     await ev('touchStart', m[0]); for (const p of m.slice(1)) await ev('touchMove', p); await ev('touchEnd', m.at(-1)); await pg.waitForTimeout(200);
-    const prog = (await pg.locator('.alef-trace .row').filter({ hasText: /strokes/ }).first().innerText()).trim();
-    rec('trace alef: synthetic touch (CDP) drag counts stroke 1', prog.startsWith('1 /'), prog);
+    const prog = (await pg.locator('.alef-trace .row').filter({ hasText: /^\s*Stroke \d+ of \d+/ }).first().innerText()).trim();
+    rec('trace alef: synthetic touch (CDP) drag counts stroke 1', prog.startsWith('Stroke 1 of'), prog);
     await pg.close();
   }
   // --- Atlas

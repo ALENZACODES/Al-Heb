@@ -100,7 +100,7 @@ export function mount(root, ctx) {
   }
 
   function timesBlock(g, l) {
-    if (!l) return el("p", { class: "alef-candles" }, tr(ctx, "cal.needLocation", "Set your location in Settings to see candle-lighting times."));
+    if (!l) return el("p", { class: "alef-candles" }, el("a", { href: "#/settings" }, tr(ctx, "cal.needLocation", "Set your location in Settings")), " to see candle-lighting times.");
     const tz = tzOf(l);
     const cl = candleLighting(g, { lat: l.lat, lon: l.lon, offsetMinutes: l.candleMinutes });
     const hv = havdalah(saturdayOnOrAfter(g), { lat: l.lat, lon: l.lon }, prefs.havdalah);
@@ -142,7 +142,9 @@ export function mount(root, ctx) {
 
   // ---------- grid ----------
   function dayLabel(c) {
-    return `${WEEKDAYS_EN[c.weekday]} ${c.g.d} ${MONTHS_EN[c.g.m - 1]} ${c.g.y}, ${c.hebrew.label}` + (c.label ? `, ${c.label}` : "");
+    // WCAG 2.5.3: the visible text (day, Hebrew day, label) must appear unbroken in the name, so it closes the name
+    const vis = [String(c.g.d), c.hebrew.day === 1 ? `${c.hebrew.dayHe} ${c.hebrew.monthHe}` : c.hebrew.dayHe, c.label].filter(Boolean).join("");
+    return `${WEEKDAYS_EN[c.weekday]} ${c.g.d} ${MONTHS_EN[c.g.m - 1]} ${c.g.y}, ${c.hebrew.label}` + (c.label ? `, ${c.label}` : "") + `, ${vis}`;
   }
 
   function renderGrid() {

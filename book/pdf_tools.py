@@ -4,6 +4,7 @@
   pdf_tools.py pad-even FILE.pdf           -> append a blank page (same size) if the page count is odd (in place)
   pdf_tools.py reverse IN.pdf OUT.pdf      -> reversed page order (for IngramSpark/Lulu right-to-left bound books); pads to even first
   pdf_tools.py finalize FILE.pdf TRIM_W_IN TRIM_H_IN BLEED_IN ltr|rtl  -> force exact page size (trim + KDP-style bleed on top/bottom/outer only) and set TrimBox/BleedBox per page parity
+  pdf_tools.py scrub FILE.pdf [OUT.pdf]    -> drop XMP/Info metadata (Creator/Producer/Title/dates); leave only Author "John Khan" (in place if no OUT)
   pdf_tools.py info FILE.pdf               -> JSON page count and page boxes of page 1
 """
 import sys, json
@@ -13,13 +14,27 @@ def dests(path):
     r = PdfReader(path)
     return {k.lstrip('/'): r.get_destination_page_number(v) + 1 for k, v in r.named_destinations.items()}
 
+AUTHOR = 'John Khan'
+
+def write_clean(w, out):
+    """Write with only /Author in the Info dict (pypdf would otherwise stamp Producer=pypdf) and no XMP."""
+    from pypdf.generic import NameObject, TextStringObject, DictionaryObject
+    w._root_object.pop('/Metadata', None)
+    info = DictionaryObject({NameObject('/Author'): TextStringObject(AUTHOR)})
+    w._info = info
+    w.write(out)
+
+def scrub(path, out=None):
+    r = PdfReader(path); w = PdfWriter(clone_from=r)
+    write_clean(w, out or path)
+
 def pad_even(path, out=None):
     r = PdfReader(path); w = PdfWriter()
     for p in r.pages: w.add_page(p)
     if len(r.pages) % 2:
         b = r.pages[-1].mediabox
         w.add_blank_page(float(b.width), float(b.height))
-    w.write(out or path)
+    write_clean(w, out or path)
 
 def reverse(src, out):
     r = PdfReader(src); w = PdfWriter()
@@ -27,7 +42,7 @@ def reverse(src, out):
     for p in reversed(pages): w.add_page(p)
     if len(pages) % 2:
         raise SystemExit('odd page count: run pad-even first (the reversed file must have an even count)')
-    w.write(out)
+    write_clean(w, out)
 
 def finalize(path, tw, th, b, binding):
     """Chromium rounds the page size by ~0.1pt; set MediaBox exactly and write TrimBox/BleedBox.
@@ -44,7 +59,7 @@ def finalize(path, tw, th, b, binding):
         page.mediabox = RectangleObject([0, 0, W, H]); page.cropbox = RectangleObject([0, 0, W, H])
         page.bleedbox = RectangleObject([0, 0, W, H]); page.trimbox = trim
         w.add_page(page)
-    w.write(path)
+    write_clean(w, path)
 
 if __name__ == '__main__':
     cmd = sys.argv[1]
@@ -52,6 +67,7 @@ if __name__ == '__main__':
     elif cmd == 'pad-even': pad_even(sys.argv[2])
     elif cmd == 'reverse': reverse(sys.argv[2], sys.argv[3])
     elif cmd == 'finalize': finalize(sys.argv[2], float(sys.argv[3]), float(sys.argv[4]), float(sys.argv[5]), sys.argv[6])
+    elif cmd == 'scrub': scrub(sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else None)
     elif cmd == 'info':
         r = PdfReader(sys.argv[2]); b = r.pages[0].mediabox
         print(json.dumps({'pages': len(r.pages), 'w_in': float(b.width) / 72, 'h_in': float(b.height) / 72}))

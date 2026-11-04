@@ -1,6 +1,6 @@
 {
  "meta": {
-  "source": "Claude Doc d497130e-096d-494b-9242-461c91da56e1 (\"100 ChatGPT commands for the Hebrew image lane\"), read 2026-11-03",
+  "source": "the prompt doc (\"100 image commands for the Hebrew image lane\"), read 2026-11-03",
   "generatedBy": "tools/images/build_prompt_groups.mjs",
   "docStatedCounts": {
    "A": 32,
@@ -58,7 +58,7 @@
    "STYLE_sample_cup is a name chosen here for the unnamed command-1 sample image (the doc gives no file name).",
    "Command 8 scenes 8-10 of each letter set say \"one of the BG_ scenes\" without choosing; per-image refs rotate BG_jerusalem, BG_market, BG_telaviv (assumption).",
    "A few abstract vocabulary words were given a concrete drawable form (e.g. today -> sun and calendar day, yellow -> swatch, voice -> empty speech bubble); prompt text only, file names unaffected.",
-   "The 27 REF_cursive_<name>.png silhouettes are inputs rendered by Claude from Gveret Levin before Block C; they are listed in each cursive group's inputs and are NOT manifest rows.",
+   "The 27 REF_cursive_<name>.png silhouettes are inputs rendered from Gveret Levin before Block C; they are listed in each cursive group's inputs and are NOT manifest rows.",
    "Block G / command 101 (L<nn>_<letter>_quirky[_vet|_khaf|_fe|_sin].png) is an addition after the doc and is reported as a discrepancy on purpose; DOC_COUNTS keeps the doc's own numbers. These supersede nothing: the older L<nn>_<letter>_print_mnemonic rows stay.",
    "ICON_* are 512x512 transparent PNGs per the doc; API image sizes are 1024-class, so tools/images/gen_via_api.mjs generates at the nearest supported size; resizing to the target dimensions is a separate human/ImageMagick step (not done here)."
   ]

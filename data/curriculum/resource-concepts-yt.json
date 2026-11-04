@@ -108,7 +108,7 @@
     "screen": "Two-state letter tile: one big glyph with a draggable or tappable dot. Left half shows plosive (dotted), right half shows fricative (plain), each with its sound button and a mouth-position hint drawn by ALEF.",
     "data": "dageshPairs[] = {letterId, dotted: {sound, ipa}, plain: {sound, ipa}} for bet, kaf, pe; a tradition field so a pair can be dropped or re-labelled where a tradition has no audible contrast. Audio ids reuse letter and syllable manifest entries.",
     "interaction": "Toggle the dot; the sound plays and the tile morphs. Then a 6 item test plays a sound and the learner must set the dot correctly. Mistakes feed the SRS card for that letter pair.",
-    "test": "Unit: exactly three pairs ship, each has audio ids that resolve in the manifest (or are flagged missing), and the test generator never produces an item whose answer is ambiguous under the selected tradition."
+    "test": "Unit: exactly three pairs ship, each has audio ids that resolve in the manifest (or are flagged missing), and the test builder never produces an item whose answer is ambiguous under the selected tradition."
    },
    "printable": null,
    "status": "proposed",

@@ -25,6 +25,14 @@ export function createProgress(store) {
       if (m !== null && (e.bestMistakes === null || m < e.bestMistakes)) e.bestMistakes = m;
       e.last = now.toISOString(); write(all); return e;
     },
+    /** a walk-through with the "Next stroke" buttons (no drawing). Kept apart from `completions`, so it never counts as drawn. */
+    recordAssisted(id, script, now = new Date()) {
+      const all = read(); const rec = all[id] || (all[id] = {});
+      const e = rec[script] || (rec[script] = { completions: 0, perfect: 0, bestMistakes: null, last: null });
+      e.assisted = (e.assisted || 0) + 1; e.lastAssisted = now.toISOString(); write(all); return e;
+    },
+    /** @param {string} id @param {'print'|'cursive'} script */
+    isAssisted(id, script) { const r = read()[id]; return !!(r && r[script] && r[script].assisted > 0); },
     /** @param {string} id @param {'print'|'cursive'} [script] omit = either script */
     isCompleted(id, script) { const r = read()[id]; if (!r) return false; return script ? !!(r[script] && r[script].completions > 0) : !!((r.print && r.print.completions) || (r.cursive && r.cursive.completions)); },
     /** @param {string} id */ get(id) { return read()[id] || null; },

@@ -9,6 +9,7 @@
 // Dev tooling: needs Playwright (Chromium) only for the PDF step; buildModel()/buildHtml() are pure and unit-tested.
 // Fonts (SIL OFL 1.1): Frank Ruhl Libre = print, Gveret Levin = cursive (ktav yad). Stroke-order pages come from data/letters/letters.json (DRAFT).
 import { readFileSync, writeFileSync, mkdirSync, copyFileSync, statSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
 import { createRequire } from 'node:module';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { dirname, join } from 'node:path';
@@ -251,6 +252,7 @@ async function main() {
       await page.goto(pathToFileURL(hp).href); await page.evaluate(() => document.fonts.ready); await page.waitForTimeout(300);
       const pdf = join(outDir, name + '.pdf');
       await page.pdf({ path: pdf, preferCSSPageSize: true, printBackground: false });
+      spawnSync('python3', [join(root, 'book/pdf_tools.py'), 'scrub', pdf], { stdio: 'inherit' }); // author-only metadata
       await page.close();
       copyFileSync(pdf, join(assetDir, name + '.pdf'));
       entry.pdf = `${name}.pdf`; entry.bytes = statSync(pdf).size;

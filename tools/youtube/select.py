@@ -1,8 +1,9 @@
+import os
 """Pick the top ~100 instructional Hebrew-learning videos from the earlier candidate pool.
-Reads /home/claude/research_notes/youtube/ranked_cand.json (made by an earlier search pass with yt-dlp ytsearch).
+Reads ~/research_notes/youtube/ranked_cand.json (made by an earlier search pass with yt-dlp ytsearch).
 Writes research_notes/youtube/top100.json. Songs, kids' letter clips, Bible-commentary and pure vlogs are dropped by hand-list below."""
 import json, re
-R = '/home/claude/research_notes/youtube/'
+R = os.path.expanduser('~/research_notes/youtube/')
 c = json.load(open(R + 'ranked_cand.json'))
 drop_ids = set('d57jv2bvyj8 wxO09BUrkMk Njv3SsfLVEw oDerYmk3SJ0 XX5578jAZv0 BK6kOipwljw --fU9qnMT6c 8XzixYmtKYI 8fHNPNViTpM E-GI7prZGnI qm1ShHOVbog rfRwuOSsw68 BUJ1qDGbelQ 5vGQfacLLsQ r961X6FXwpw Q_h541RkCTI lqIYu1us_zg CzsUzCpMqfg W1K1-JY6hXc 1iwUJEFEI9A r69c84WjzDc M7HNWJE_O2Y PoGL0dpUbCc kz-y5oV6_-Q pW-E4aFAA0o'.split())
 drop_re = re.compile(r'hebrews|culture test|vlog', re.I)

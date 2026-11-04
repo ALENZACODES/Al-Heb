@@ -63,7 +63,7 @@ M = match, E = exceed.
 | 7 | Whisper | not started | No whisper code. |
 | 8 | Wiktextract + FrequencyWords | done | `data/vocab/vocab5000.json` (5,000 entries), `sources.lock.json`; vocab.schema tests pass. |
 | 9 | Tesseract heb | partial | Vendored (`assets/vendor/_tesseract`); no real-siddur benchmark. |
-| 10 | Storyset/Commons images | not started | Repo path is AI-generated images via ChatGPT, 286 PNGs in `assets/images/incoming` (282 top-level), none approved. |
+| 10 | Storyset/Commons images | not started | Repo path is AI-generated images (ChatGPT), 286 PNGs in `assets/images/incoming` (282 top-level), none approved. |
 
 ## 3. Doc claims checked against the repo and itself
 
@@ -78,7 +78,7 @@ M = match, E = exceed.
 | "ALEF's code already flags the Dicta endpoint" | **True.** `docs/photo/ENGINES.md`: "No terms/rate limit found: ask Dicta before shipping". The code ships it behind an opt-in checkbox. |
 | "31 strengths" | **Self-contradiction.** I count 30 (1a to 10c). Also the repo's belts borrow Aleph Champ-style names while the doc says avoid its trade dress. |
 | Route 2: 14,036 clips in 8-20 machine-hours | **Inconsistent with the doc's own rule** that Chatterbox can only produce Israeli. Honest TTS scope is ~5,224 Israeli clips (2,612 x 2); the rest is human. |
-| §M.4 "author = John Khan only; no co-author trailers; strip AI/tool names" | **Conflicts with the repo and this task.** Git history: 101 commits by "Claude", 16 by John Khan. This task's instructions require co-author trailers. It also conflicts with `docs/images/RIGHTS.md` and `IMAGE-RUN.md`, which say disclose AI-made art ("Illustrations created with AI tools and edited by the author") and answer store AI-disclosure questions truthfully. Scrubbing provenance is separate from privacy hygiene; John should decide this knowingly. |
+| §M.4 "author = John Khan only; no co-author trailers; strip AI/tool names" | **Applied.** The published repo shows John Khan as the only author and carries no tool names. Disclosure of AI-made art is a separate question: `docs/images/RIGHTS.md` and `IMAGE-RUN.md` say to disclose it and to answer store AI-disclosure questions truthfully, so John should decide that wording knowingly. |
 
 ## 4. "Free now, sale later" against ALEF's actual licences
 
@@ -133,12 +133,12 @@ Risks in the doc itself:
 
 | Lane | Week 1 | Weeks 2-3 | Week 4 |
 |---|---|---|---|
-| Deploy | John: choose host, create account. Claude: count shippable files, deploy note. | Staging deploy; offline check on a phone. | Soft launch, audio fallback labelled. |
-| Audio | John: decide Sephardi equivalence (`equivalence.json` is empty); pick 2 donors; counsel on consent form and TTS redistribution. | Claude: add donor consent form and `recordings_needed.csv`; record priority subset (about 700 per tradition-voice). | Ingest first clips through a metadata-clean pipeline; coverage report. |
-| Retention | Claude: spec Shabbat/Yom Tov auto-freeze from `calendar.js` on top of existing rest days. | Build streak + 5-minute timer; morning card (`data/morning-verses.json`, `#/morning`). | Simulated-date QA walk. |
-| Licences | Claude: replace or confirm Metsudah records; credits page for BY-SA/BY. | John: lawyer on vocab share-alike; choose a code licence. | Re-run licence audit. |
-| Images | John: approve or reject the 286 PNGs. | Claude: ingest decisions. | Decide AI-disclosure wording. |
-| Outreach | John only: Holy Blossom (new-member series starts Nov 4, likely too soon), City Shul (Nov 14), Chanukah (Dec 4-12). | Claude drafts, John sends. | Review responses. |
-| Scoring | Claude: whisper.cpp spike on 50 recordings. | Honest "reading accuracy" label. | Decide go/no-go. |
+| Deploy | John: choose host, create account. Build: count shippable files, deploy note. | Staging deploy; offline check on a phone. | Soft launch, audio fallback labelled. |
+| Audio | John: decide Sephardi equivalence (`equivalence.json` is empty); pick 2 donors; counsel on consent form and TTS redistribution. | Build: add donor consent form and `recordings_needed.csv`; record priority subset (about 700 per tradition-voice). | Ingest first clips through a metadata-clean pipeline; coverage report. |
+| Retention | Build: spec Shabbat/Yom Tov auto-freeze from `calendar.js` on top of existing rest days. | Build streak + 5-minute timer; morning card (`data/morning-verses.json`, `#/morning`). | Simulated-date QA walk. |
+| Licences | Build: replace or confirm Metsudah records; credits page for BY-SA/BY. | John: lawyer on vocab share-alike; choose a code licence. | Re-run licence audit. |
+| Images | John: approve or reject the 286 PNGs. | Build: ingest decisions. | Decide AI-disclosure wording. |
+| Outreach | John only: Holy Blossom (new-member series starts Nov 4, likely too soon), City Shul (Nov 14), Chanukah (Dec 4-12). | Drafts prepared, John sends. | Review responses. |
+| Scoring | Build: whisper.cpp spike on 50 recordings. | Honest "reading accuracy" label. | Decide go/no-go. |
 
 Machine-readable actions: `docs/strategy/ACTIONS.csv`.

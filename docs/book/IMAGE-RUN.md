@@ -1,6 +1,6 @@
 # Image run: how to produce the 797 images (766 from the doc + 31 quirky mnemonics)
 
-Source (groups 1-100): Claude Doc "100 ChatGPT commands for the Hebrew image lane" (d497130e-096d-494b-9242-461c91da56e1). Machine-readable form: `data/images/prompt-groups.json` (101 groups, 797 rows: groups 1-100 are the doc, group 101 is lane 7's addition)  and `data/images/manifest.csv`. Rebuild with `node tools/images/build_prompt_groups.mjs`.
+Source (groups 1-100): Prompt document "100 ChatGPT commands for the Hebrew image lane" (d497130e-096d-494b-9242-461c91da56e1). Machine-readable form: `data/images/prompt-groups.json` (101 groups, 797 rows: groups 1-100 are the doc, group 101 is lane 7's addition)  and `data/images/manifest.csv`. Rebuild with `node tools/images/build_prompt_groups.mjs`.
 
 ## Count discrepancy (reported, not fudged)
 The doc states A 32, B 270, C 162, D 75, E 150, F 76 = 765. Its commands actually name A 31, B 270, C 162, D 75, E 150, F 78 = 766 files (F is 79 if the optional icon grid image is counted). Block A: the cup sample, 2 sheets, 8 expressions, 4 variants, 6 mouths, 2 frames, 6 backgrounds, 2 tests = 31 (command 9 is text-only). Block F: 6 + 10 + 8 badges + 8 locked + 40 icons + 6 brand = 78. See `meta.discrepancies` in the JSON. Decide which side is right (probably the doc's stated counts are stale). Block G adds 31 more: manifest total 797, of which the doc's own commands give 766; the log in `meta.discrepancies` lists A, F, G and the total.

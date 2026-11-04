@@ -154,7 +154,8 @@ export function mount(root, ctx = {}) {
       };
       tradListeners.push(refresh);
       refresh();
-      const btn = h('button', { type: 'button', class: 'sign', 'aria-label': `${rec.name}: ${tr('sounds.play', 'play sound')}` }, he(rec.shape), h('span', {}, rec.name));
+      const btn = h('button', { type: 'button', class: 'sign', title: tr('sounds.play', 'play sound') }, he(rec.shape), h('span', {}, rec.name));
+      btn.setAttribute('aria-label', `${rec.shape}${rec.name}, ${tr('sounds.play', 'play sound')}`); // visible text (sign + name) leads the name (WCAG 2.5.3)
       const onClick = () => { try { ctx.audio?.play?.('vowel', rec.id); } catch { /* audio is best effort */ } };
       btn.addEventListener('click', onClick);
       cleanups.push(() => btn.removeEventListener('click', onClick));

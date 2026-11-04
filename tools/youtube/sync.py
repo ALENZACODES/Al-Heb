@@ -1,7 +1,7 @@
 """Clean every downloaded .vtt under research_notes into plain text (research_notes/youtube/all_txt/<id>.txt, never committed).
 Keeps the longer of the en / en-orig tracks. Also records whether captions are manual or automatic (from info.json) in caption_kind.json."""
 import re, glob, os, json
-R = '/home/claude/research_notes/'
+R = os.path.expanduser('~/research_notes/')
 def clean(path):
     out = []; prev = ''
     for ln in open(path, encoding='utf-8'):

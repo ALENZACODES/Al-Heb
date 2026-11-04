@@ -188,8 +188,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     const lettersBox = el('div', { class: 'crp-letters', role: 'group', 'aria-label': 'Highlight a letter: choose a letter name to mark every occurrence' });
     for (const id of inv.distinctLetterIds) {
       const n = inv.letters[id];
-      lettersBox.append(el('button', { type: 'button', class: 'crp-ltr', 'aria-pressed': state.letters.has(id) ? 'true' : 'false', 'data-letter': id,
-        'aria-label': `${LETTER_NAME[id]}, ${n} time${n === 1 ? '' : 's'}`, onclick: () => toggleLetter(id, n) },
+      lettersBox.append(el('button', { type: 'button', class: 'crp-ltr', 'aria-pressed': state.letters.has(id) ? 'true' : 'false', 'data-letter': id, title: `${n} time${n === 1 ? '' : 's'}`, onclick: () => toggleLetter(id, n) },
         heEl('span', LETTER_CHAR[id], 'he'), el('span', {}, LETTER_NAME[id]), el('small', {}, String(n))));
     }
     host.append(el('p', {}, el('strong', {}, 'Find the letters: '), 'tap a letter name to highlight it everywhere in the text.'), lettersBox,
@@ -207,7 +206,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
         words.forEach((w) => {
           wi += 1;
           const idx = wi;
-          const btn = el('button', { type: 'button', class: 'crp-w', lang: 'he', dir: 'rtl', 'aria-label': `Word ${idx}: play`,
+          const btn = el('button', { type: 'button', class: 'crp-w', lang: 'he', dir: 'rtl', 'aria-label': `${clusters(w).map((c) => c.text).join('')}: play word ${idx}`,
             onclick: (e) => playWord(e.currentTarget, rec, idx, w) });
           for (const c of clusters(w)) btn.append(el('span', { class: 'crp-l', 'data-lid': c.id || '' }, c.text));
           const cell = el('span', { class: 'crp-cell' }, btn);

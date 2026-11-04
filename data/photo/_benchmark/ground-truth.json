@@ -1,7 +1,7 @@
 {
  "synthetic": true,
  "note": "Rendered text with simulated degradation. NOT real photographs. Do not quote as real-photo accuracy.",
- "generator": "tools/ocr-bench/gen.py",
+ "built_with": "tools/ocr-bench/gen.py",
  "seed": 1234,
  "count": 145,
  "items": [

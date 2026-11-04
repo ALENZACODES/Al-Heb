@@ -1,36 +1,36 @@
 id,source section,action,owner,effort,blocked_by,status
 A01,Priority 1 / audio chapter,Choose host and create account (Cloudflare Pages or alternative); do not use GitHub Pages as product host,john,S,John decision,not started
-A02,Priority 1,Count files to ship and compare with the host file limit (limit not verified in this review); write deploy note,claude,S,A01,not started
-A03,Priority 1,Deploy staging build and test offline reload on a real phone,claude,M,A01,not started
+A02,Priority 1,Count files to ship and compare with the host file limit (limit not verified in this review); write deploy note,build,S,A01,not started
+A03,Priority 1,Deploy staging build and test offline reload on a real phone,build,M,A01,not started
 A04,Section 4,Decide whether Metsudah-labelled corpus records (21 of 70) are kept; replace with pre-1929 PD transcription or get permission,john,M,Hebrew reviewer,not started
-A05,Section 4,Verify Sefaria licence labels (CC0/PD/CC-BY) on each source page for all 70 registry entries,claude,M,none,not started
+A05,Section 4,Verify Sefaria licence labels (CC0/PD/CC-BY) on each source page for all 70 registry entries,build,M,none,not started
 A06,Section 4 / vocab,Get a lawyer's opinion on CC BY-SA vocabulary data in a sold bundle,john,M,lawyer,not started
-A07,Section 4,Build visible credits page for CC BY / CC BY-SA / Hebcal / Tatoeba attributions,claude,M,none,partial
+A07,Section 4,Build visible credits page for CC BY / CC BY-SA / Hebcal / Tatoeba attributions,build,M,none,partial
 A08,Section 4,Choose a licence for the ALEF code (README says none chosen),john,S,John decision,not started
 A09,Section 4,Get counsel's view on redistribution of TTS output and on image copyright limits,john,M,lawyer,not started
 A10,Section 4,Obtain written terms from Dicta or keep Nakdan opt-in only and label it unlicensed,john,S,Dicta reply,not started
-A11,Audio / paperwork,Draft donor consent and release form (recording rights; separate opt-in for voice cloning; 18+; credit) for lawyer review,claude,S,none,not started
+A11,Audio / paperwork,Draft donor consent and release form (recording rights; separate opt-in for voice cloning; 18+; credit) for lawyer review,build,S,none,not started
 A12,Audio / paperwork,Lawyer reviews consent form and buyout terms,john,M,A11,not started
 A13,Audio / tradition problem,Decide Sephardi: equivalence rules in data/audio/equivalence.json or full Sephardi kits,john,S,John decision,not started
 A14,Audio Route 1,Recruit and contact donors for Israeli and Ashkenazi priority subset (about 700 clips per tradition-voice),john,L,A12,not started
 A15,Audio Route 1,Run recording sessions with docs/voices/kit slates,john,L,A14,not started
-A16,Audio pipeline,Add metadata-clean encode step (map_metadata -1) and transcribe-back QA to tools/audio,claude,M,none,not started
-A17,Audio Route 2,Trial Chatterbox locally on 50 Israeli lines; confirm model-card licence on download day; listen test,claude,M,GPU or local machine,not started
-A18,Priority 5,Evaluate Nakdimon pointing checkpoint licence before use,claude,S,none,not started
-A19,Audio,Implement audio pre-download packs and hands-free mode in the PWA,claude,M,A15 or A17,not started
-A20,Feature 2,Spec and build streak with 5-minute timer and automatic Shabbat/Yom Tov freeze using calendar.js,claude,M,none,partial
+A16,Audio pipeline,Add metadata-clean encode step (map_metadata -1) and transcribe-back QA to tools/audio,build,M,none,not started
+A17,Audio Route 2,Trial Chatterbox locally on 50 Israeli lines; confirm model-card licence on download day; listen test,build,M,GPU or local machine,not started
+A18,Priority 5,Evaluate Nakdimon pointing checkpoint licence before use,build,S,none,not started
+A19,Audio,Implement audio pre-download packs and hands-free mode in the PWA,build,M,A15 or A17,not started
+A20,Feature 2,Spec and build streak with 5-minute timer and automatic Shabbat/Yom Tov freeze using calendar.js,build,M,none,partial
 A21,Feature 2,Simulated-date QA walk (Friday-Saturday-Sunday; Yom Tov),reviewer,S,A20,not started
-A22,Feature 1,Build #/morning card from data/morning-verses.json (builder tools/morning exists),claude,M,A23,partial
-A23,Feature 1,Produce data/morning-verses.json with 90+ entries and licence record per entry,claude,M,none,partial
+A22,Feature 1,Build #/morning card from data/morning-verses.json (builder tools/morning exists),build,M,A23,partial
+A23,Feature 1,Produce data/morning-verses.json with 90+ entries and licence record per entry,build,M,none,partial
 A24,Feature 1,Approve card wording and art,john,S,A22,not started
-A25,Priority 7,Spike whisper.cpp read-aloud check on 50 recordings; label as reading accuracy,claude,M,A15 or test recordings,not started
+A25,Priority 7,Spike whisper.cpp read-aloud check on 50 recordings; label as reading accuracy,build,M,A15 or test recordings,not started
 A26,Priority 9,Benchmark Tesseract heb on 50 real siddur photos (protocol in docs/photo/BENCHMARK.md),john,M,photos,not started
 A27,Images,Review and approve or reject the 286 PNGs in assets/images/incoming,john,L,none,not started
 A28,Images,Decide AI-image disclosure wording and metadata policy (RIGHTS.md says disclose),john,S,John decision,not started
-A29,4b / 7a,Build 5-minute Word Sprint using approved images and vocab packs,claude,M,A27,not started
+A29,4b / 7a,Build 5-minute Word Sprint using approved images and vocab packs,build,M,A27,not started
 A30,Section 3,Resolve conflict between doc section M.4 (John-only authorship) and repo practice and required trailers,john,S,John decision,not started
-A31,Moves 10a-10c,Audit lesson order against vowel-triad design; add mastery check per rung,claude,M,Hebrew reviewer,not started
-A32,Moves 9a,State the Day-1 reading promise at onboarding and measure it,claude,S,none,not started
+A31,Moves 10a-10c,Audit lesson order against vowel-triad design; add mastery check per rung,build,M,Hebrew reviewer,not started
+A32,Moves 9a,State the Day-1 reading promise at onboarding and measure it,build,S,none,not started
 A33,Moves 9c / Toronto,Send outreach to City Shul (New Members Shabbat Nov 14) and Holy Blossom contact,john,S,A32,not started
 A34,Section 6,Re-check prices before any public comparison (Mondly figure conflicts with one third-party source),john,S,none,not started
 A35,CapCut,Decide CapCut use: marketing/demo video editing only; no CapCut voices for ALEF audio; optionally run the 15-minute Hebrew voice test,john,S,John decision,not started

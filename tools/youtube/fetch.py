@@ -2,7 +2,7 @@
 Captions only: no video or audio is downloaded. Uses the web_embedded client, which still serves captions when the default clients ask for sign-in.
 Backs off and retries on 429 / bot-check; skips ids already captured under research_notes. Results: research_notes/youtube/fetch3.json"""
 import json, os, glob, subprocess, time, sys
-R = '/home/claude/research_notes/youtube/'
+R = os.path.expanduser('~/research_notes/youtube/')
 top = json.load(open(R + 'top100.json'))
 log = json.load(open(R + 'fetch3.json')) if os.path.exists(R + 'fetch3.json') else {}
 have = {os.path.basename(f).split('.')[0] for f in glob.glob(R + 'all_txt/*.txt')}

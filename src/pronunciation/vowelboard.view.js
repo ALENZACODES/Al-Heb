@@ -37,7 +37,7 @@ export function mount(root, ctx = {}) {
 
     const signButton = (rec, extra) => {
       const d = rec.ipa?.[ui.tradition] ?? '';
-      const b = h('button', { type: 'button', 'aria-label': `${rec.name}, ${d}` },
+      const b = h('button', { type: 'button' },
         ui.he(rec.shape), ' ', h('span', {}, rec.name ?? rec.id), ' ', ui.ipaEl(d), extra);
       on(b, 'click', () => {
         const played = ui.tryPlay('vowel', rec.id);

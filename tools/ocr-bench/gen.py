@@ -138,7 +138,7 @@ for i, txt in enumerate(EXTRA_SIGNS):
     add(render([txt], fn, sz, fg, bg, pad=40, align='center'), f'menu-{i+1}', 'sign', fn, [txt], 'hand-written for this benchmark', ['clean', 'noise', 'blur', 'perspective'])
 
 json.dump({'synthetic': True, 'note': 'Rendered text with simulated degradation. NOT real photographs. Do not quote as real-photo accuracy.',
-           'generator': 'tools/ocr-bench/gen.py', 'seed': 1234, 'count': len(gt), 'items': gt},
+           'built_with': 'tools/ocr-bench/gen.py', 'seed': 1234, 'count': len(gt), 'items': gt},
           open(OUT / 'ground-truth.json', 'w'), ensure_ascii=False, indent=1)
 print(f'wrote {len(gt)} images to {OUT}')
 from collections import Counter

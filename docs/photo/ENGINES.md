@@ -45,7 +45,7 @@ Adapters: `node src/photo/engines/web.js --dry` prints what each would send. Run
 | Azure Read | cloud OCR | Believed Hebrew print; F0 ~5,000 tx/month | UNVERIFIED, no adapter |
 | AWS Textract | cloud OCR | Believed Latin-only | UNVERIFIED, not planned |
 | Apple Vision `VNRecognizeTextRequest` | iOS OCR | Believed no Hebrew through iOS 18 | UNVERIFIED; check `supportedRecognitionLanguages` at runtime on a device |
-| Vision LLMs (GPT, Claude, Gemini) | OCR | Print read well, niqqud inconsistent (anecdotal) | UNMEASURED |
+| Vision LLMs (GPT, Gemini and similar) | OCR | Print read well, niqqud inconsistent (anecdotal) | UNMEASURED |
 | Dicta Nakdan API | vowelizer | Endpoint used by nakdan.dicta.org.il | RUN live 2026-11-04: shape confirmed, 94.4% agreement with phrasebook pointing (30 phrases). Adapter corrected and wired behind an opt-in checkbox. **No terms/rate limit found: ask Dicta before shipping** |
 | nakdimon / unikud (MIT) | self-hosted vowelizer | Exist | Not wired |
 | Phonikud | IPA + stress | CC BY 4.0 code, ONNX + Python; no JS runtime | Placeholder only (`createPhonikudPlaceholder`, inert) |

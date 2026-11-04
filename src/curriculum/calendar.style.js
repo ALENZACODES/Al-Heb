@@ -16,16 +16,16 @@ export const CALENDAR_CSS = `
 .alef-cal-table caption { text-align: start; font-weight: 700; padding-block: .3rem; }
 .alef-cal-table th { font-size: .75rem; color: var(--muted); font-weight: 600; padding: .2rem; }
 .alef-cal-table td { border: 1px solid var(--border); padding: 0; vertical-align: top; }
-.alef-cal-day { display: grid; gap: 0; inline-size: 100%; min-block-size: 4.2rem; padding: .2rem .25rem; text-align: start; font: inherit; font-size: .8rem; background: transparent; color: inherit; border: 0; cursor: pointer; }
+.alef-cal-day { position: relative; display: grid; gap: 0; inline-size: 100%; min-block-size: 4.2rem; padding: .2rem .25rem; text-align: start; font: inherit; font-size: .8rem; background: transparent; color: inherit; border: 0; cursor: pointer; }
 .alef-cal-day .g { font-weight: 700; font-size: .95rem; }
 .alef-cal-day .h { color: var(--muted); font-size: .75rem; }
 .alef-cal-day .l { font-size: .68rem; line-height: 1.15; overflow-wrap: anywhere; }
-.alef-cal-day.out { opacity: .45; }
+.alef-cal-day.out, .alef-cal-day.out .g, .alef-cal-day.out .h, .alef-cal-day.out .l { color: var(--muted); font-weight: 400; }
 .alef-cal-day.shabbat { background: color-mix(in srgb, var(--accent) 9%, transparent); }
 .alef-cal-day.holiday .l { font-weight: 700; color: var(--accent); }
 .alef-cal-day.today { outline: 2px solid var(--focus); outline-offset: -2px; }
 .alef-cal-day[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); }
-.alef-cal-day[aria-pressed="true"] .h, .alef-cal-day[aria-pressed="true"] .l { color: inherit; }
+.alef-cal-day[aria-pressed="true"] .h, .alef-cal-day[aria-pressed="true"] .l, .alef-cal-day.out[aria-pressed="true"] .g { color: inherit; }
 .alef-cal-year { display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: .6rem; }
 .alef-cal-mini { inline-size: 100%; border-collapse: collapse; font-size: .7rem; text-align: center; }
 .alef-cal-mini td { padding: .1rem; }

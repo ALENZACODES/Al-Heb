@@ -31,7 +31,7 @@ export function mount(root, ctx = {}) {
         const isStress = i === r.stressIndex;
         const gone = mode === 'hide' && i >= r.syllables.length - hidden;
         const label = `Syllable ${i + 1} of ${r.syllables.length}${showStress && isStress ? ', stressed' : ''}`;
-        const b = h('button', { type: 'button', class: 'chip', 'aria-label': label, style: 'display:flex;flex-direction:column;align-items:center;min-width:3.5rem' },
+        const b = h('button', { type: 'button', class: 'chip', title: label, style: 'display:flex;flex-direction:column;align-items:center;min-width:3.5rem' },
           h('span', { class: 'he', dir: 'rtl', lang: 'he' }, gone ? '·' : s.he),
           !hideLatin && s.latin != null ? h('span', { class: 'ipa', dir: 'ltr', style: 'font-size:.95rem' }, gone ? '' : s.latin) : null,
           showStress && isStress ? h('span', { style: 'font-size:.8rem', dir: 'ltr' }, '● stress') : h('span', { style: 'font-size:.8rem', 'aria-hidden': 'true' }, ' '));

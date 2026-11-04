@@ -39,7 +39,7 @@ test('every row has all columns filled and valid enums', () => {
     for (const c of COLS) assert.ok(r[c] && r[c].trim(), `${r.id} empty ${c}`);
     assert.ok(STATUS.includes(r.status), `${r.id} status ${r.status}`);
     assert.ok(['S', 'M', 'L'].includes(r.effort), `${r.id} effort`);
-    assert.ok(['claude', 'john', 'reviewer', 'recording'].includes(r.owner), `${r.id} owner`);
+    assert.ok(['build', 'john', 'reviewer', 'recording'].includes(r.owner), `${r.id} owner`);
     assert.match(r.source_ids, /^(none|S\d+(;S\d+)*)$/, `${r.id} source_ids`);
   }
 });

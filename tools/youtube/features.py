@@ -1,7 +1,7 @@
 """Extract simple per-video features from cleaned captions: order of first mention of letter names and vowel names, plus topic flags.
 Output: research_notes/youtube/features.json (not committed). Features are keyword-detected from machine captions, so they are rough."""
 import re, json, glob, os
-R = '/home/claude/research_notes/youtube/'
+R = os.path.expanduser('~/research_notes/youtube/')
 L = {'alef':r'a?le+ph?|alef|olive|aleph','bet':r'\bbe[iy]?t\b|\bbait\b|\bbeth\b|\bbeit\b','gimel':r'gimel|gimmel','dalet':r'dalet|dalid|daleth','he':r'\bhey\b|\bhay\b|\bheh?\b','vav':r'\bvav\b|\bwaw\b','zayin':r'zayin|zion','chet':r'\bch[e]?t\b|\bhet\b|\bkhet\b|\bchat\b|\bhes\b','tet':r'\btet\b|\bteth\b','yud':r'\byud\b|\byod\b|\byood\b','kaf':r'\bka[fv]\b|\bkaph\b|\bkoff?\b','lamed':r'lamed|lamad','mem':r'\bmem\b','nun':r'\bnun\b','samech':r'samech|samekh|sameh|samek','ayin':r'\bayin\b|\bain\b|\beyin\b','pey':r'\bpey\b|\bpe\b|\bpay\b|\bfey\b','tsadi':r'tsadi|tzadi|tsade|tzaddik|sadi','kuf':r'\bku[fp]\b|\bqof\b|\bkoof\b|\bqoph\b','resh':r'\bresh\b|\brash\b','shin':r'\bshin\b|\bsheen\b','tav':r'\btav\b|\btaf\b|\btaw\b'}
 V = {'kamatz':r'kamat[sz]|qamat[sz]|kamets|komets|camets','patach':r'patach|pataḥ|patakh','tzere':r'tz?ere|tsere|zeyre|tzeire','segol':r'segol|seagull','chirik':r'chirik|hirik|hiriq|chireek','cholam':r'cholam|holam|kholam','kubutz':r'kubut[sz]|qibbut[sz]|kibbut[sz]|kubbut[sz]','shuruk':r'shuruk|shurek|shoorook','shva':r'shva|sheva|shewa|schwa|shwa'}
 rows = {}

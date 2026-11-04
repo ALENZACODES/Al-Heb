@@ -10,6 +10,7 @@ export const REASONS = {
   'invalid-tradition': 'invalid pronunciation setting',
   'no-audio-support': 'this browser cannot play audio files',
   'speech-error': 'the browser voice reported an error',
+  'checking audio...': 'still checking which recordings exist',
 };
 const TRAD = { israeli: 'Israeli', sephardi: 'Sephardi', ashkenazi: 'Ashkenazi' };
 
@@ -34,35 +35,66 @@ export function describeResult(r, congregation = 'israeli') {
   return { mode: 'none', text: `No sound: ${REASONS[r.reason] || r.reason || r.error || 'unavailable'}.` };
 }
 
+const CHECKING = 'checking audio...';
+const initialText = (summary) => (summary.recorded + summary.tts > 0
+  ? { mode: 'idle', text: `Sound: ${summary.recorded} recorded and ${summary.tts} pre-rendered clips are listed; anything else uses your browser's voice.` }
+  : { mode: 'idle', text: "Sound: no recordings exist yet. Audio uses your browser's Hebrew text-to-speech voice, if your device has one." });
+
 /**
- * @param {{settings:any, manifest?:any[], createAudio?:Function}} o
+ * @param {{settings:any, manifest?:any[], loadManifest?:()=>Promise<any[]>, createAudio?:Function}} o
+ * Give `manifest` for an already-loaded list (state 'ready'), or `loadManifest` to resolve it lazily: until it resolves,
+ * `manifestState` is 'checking', has() is false and status() says "checking audio..." for anything not already known to be a
+ * file, and play() waits for the list. A failed load gives 'offline' (and is retried on the next play/ensureManifest).
  */
-export function createShellAudio({ settings, manifest = [], createAudio }) {
-  const summary = summarizeManifest(manifest);
+export function createShellAudio({ settings, manifest, loadManifest, createAudio }) {
+  let summary = summarizeManifest(manifest || []);
   const inner = createAudio({
     settings: { get voice() { return settings.get('voice'); }, get congregation() { return settings.get('congregation'); } },
-    manifest,
+    manifest: manifest || [],
   });
-  const subs = new Set();
-  const initial = summary.recorded + summary.tts > 0
-    ? { mode: 'idle', text: `Sound: ${summary.recorded} recorded and ${summary.tts} pre-rendered clips are listed; anything else uses your browser's voice.` }
-    : { mode: 'idle', text: "Sound: no recordings exist yet. Audio uses your browser's Hebrew text-to-speech voice, if your device has one." };
-  let state = initial;
-  let note = '', raw = initial;
+  const subs = new Set(), mSubs = new Set();
+  let mstate = !manifest && typeof loadManifest === 'function' ? 'checking' : 'ready';
+  let state = mstate === 'checking' ? { mode: 'idle', text: 'Sound: checking which recordings exist...' } : initialText(summary);
+  let note = '', raw = state, pending = null;
   const compose = (s) => (note ? { ...s, text: `${s.text} (${note})` } : s);
   const publish = (s) => { raw = s; state = compose(s); for (const f of subs) { try { f(state); } catch { /* ignore */ } } };
+  const setM = (s) => { mstate = s; for (const f of mSubs) { try { f(s); } catch { /* ignore */ } } };
   const opts = (o = {}) => ({ allowMismatchedTts: !!settings.get('browserVoiceAnyway'), ...o });
+
+  /** Resolve the core manifest once (memoised while in flight). Resolves true when ready, false when unavailable. Never throws. */
+  function ensureManifest() {
+    if (mstate === 'ready') return Promise.resolve(true);
+    if (pending) return pending;
+    if (typeof loadManifest !== 'function') return Promise.resolve(false);
+    if (mstate !== 'checking') { setM('checking'); publish({ mode: 'idle', text: 'Sound: checking which recordings exist...' }); }
+    pending = Promise.resolve().then(loadManifest).then((list) => {
+      inner.extend(list); summary = summarizeManifest(list);
+      setM('ready'); publish(initialText(summary)); return true;
+    }).catch(() => {
+      setM('offline'); publish({ mode: 'none', text: "Sound: the list of recordings could not be loaded (offline?). Only your browser's voice is available, where your device has one." }); return false;
+    }).finally(() => { pending = null; });
+    return pending;
+  }
+  const settle = () => (mstate === 'checking' ? ensureManifest() : Promise.resolve());
+  const checking = (kind, id) => ({ source: 'none', reason: CHECKING, kind, id });
+  const gate = (r, kind, id) => (mstate === 'checking' && r.source !== 'file' ? checking(kind, id) : r);
 
   return {
     ...inner,
-    summary,
+    get summary() { return summary; },
     get state() { return state; },
+    /** 'ready' | 'checking' | 'offline' - whether the core recording list is known. */
+    get manifestState() { return mstate; },
+    ensureManifest,
+    /** fn(state) on every manifest state change; returns an unsubscribe function. */
+    onManifestState(fn) { mSubs.add(fn); return () => mSubs.delete(fn); },
     /** short extra note appended to the sound-status line (e.g. 'audio info unavailable offline'); '' clears it */
     setNote(n) { note = n || ''; publish(raw); },
     subscribe(fn) { subs.add(fn); fn(state); return () => subs.delete(fn); },
-    status: (kind, id, o) => inner.status(kind, id, opts(o)),
+    status: (kind, id, o) => gate(inner.status(kind, id, opts(o)), kind, id),
     has: (kind, id, o) => inner.has(kind, id, opts(o)),
     async play(kind, id, o) {
+      await settle();
       const o2 = opts(o);
       publish(describeResult(inner.status(kind, id, o2)));      // what WILL be used, before it speaks
       const r = await inner.play(kind, id, o2);
@@ -70,6 +102,7 @@ export function createShellAudio({ settings, manifest = [], createAudio }) {
       return r;
     },
     async playSequence(items, so) {
+      await settle();
       const res = await inner.playSequence(items.map((it) => ({ ...(Array.isArray(it) ? { kind: it[0], id: it[1] } : it), ...opts() })), so);
       if (res.length) publish(describeResult(res[res.length - 1]));
       return res;

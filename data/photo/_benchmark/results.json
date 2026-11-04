@@ -1,5 +1,5 @@
 {
- "dataset": "/home/claude/alef/data/photo/_benchmark",
+ "dataset": "data/photo/_benchmark",
  "synthetic": true,
  "count": 145,
  "date": "2026-11-04T01:05:33.464Z",

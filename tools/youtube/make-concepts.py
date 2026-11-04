@@ -1,3 +1,4 @@
+import os
 """Generate data/curriculum/resource-concepts-youtube100.json (judgement scores, no caption text). Run: python3 tools/youtube/make-concepts.py"""
 import json
 SRC = {
@@ -114,5 +115,5 @@ add('y100-gap-06', 'Error log that explains the rule behind a miss', 'Videos can
 json.dump(dict(version=1, generated='2026-11-03',
     note='Scores 0-1000 are the author\'s judgement of expected learner value for ALEF, not measured outcomes. improvedScore equals score when no improvement was specced. riskAxis: higher is worse. Source: English captions (manual or auto, machine-noisy) of YouTube videos from the top-100 candidate list in docs/youtube/top100.md; only 20 of 100 captions were fetched before YouTube rate-limited the machine, so counts like 4 of 11 refer to the reading videos actually read. No video was watched and no audio heard. No text, video or audio is reused; ideas only.',
     axesKey={'r': 'reading siddur or Torah aloud', 'i': 'Israeli functional Hebrew', 'c': 'beginner clarity', 'f': 'fit with ALEF', 'risk': 'originality risk, higher is worse'},
-    sources=sources, concepts=C), open('/home/claude/alef/data/curriculum/resource-concepts-youtube100.json', 'w'), indent=1, ensure_ascii=False)
+    sources=sources, concepts=C), open(os.path.expanduser('~/alef/data/curriculum/resource-concepts-youtube100.json'), 'w'), indent=1, ensure_ascii=False)
 print(len(C), sum(1 for c in C if c['score'] >= 850), sum(1 for c in C if c['spec']))

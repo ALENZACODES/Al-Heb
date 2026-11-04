@@ -4,9 +4,10 @@ Run extract_outlines.py first. All stroke data is a DRAFT: validated=false, need
 import json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from geom import smooth
-from author_strokes import PRINT, CURSIVE
+from author_strokes import PRINT
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+cur = json.load(open(os.path.join(ROOT, "data", "letters", "_build", "cursive_derived.json"), encoding="utf-8"))
 outl = json.load(open(os.path.join(ROOT, "data", "letters", "_build", "print_outlines.json"), encoding="utf-8"))
 
 # id, English name, Hebrew name (pointed), glyph, gematria, ipa (modern Israeli), English cue
@@ -62,17 +63,25 @@ def strokes(spec):
     return out
 
 def script_block(kind, lid):
-    spec = (PRINT if kind == "print" else CURSIVE)[lid]
-    st = strokes(spec)
-    blk = {"strokes": st, "strokeWidth": 85 if kind == "print" else 55,
-           "validated": False, "needsNativeReview": True, "quality": "draft"}
+    if kind == "cursive":
+        c = cur[lid]
+        blk = {"strokes": c["strokes"], "strokeWidth": c["strokeWidth"],
+               "validated": False, "needsNativeReview": True, "quality": "draft"}
+        st = blk["strokes"]
+    else:
+        st = strokes(PRINT[lid])
+        blk = {"strokes": st, "strokeWidth": 85,
+               "validated": False, "needsNativeReview": True, "quality": "draft"}
     if kind == "print":
         blk["outline"] = outl[lid]["outline"]
         blk["outlineSource"] = "DejaVu Sans (see data/letters/SOURCES.md)"
         blk["strokeBasis"] = "authored centerlines over font outline; order by author convention (docs/letters/STROKE-RULES.md)"
         conf = PRINT_COUNT_CONFIRMED.get(lid)
     else:
-        blk["strokeBasis"] = "hand-authored simplified ktav yad from verbal descriptions; no font or dataset"
+        blk["outline"] = c["outline"]
+        blk["outlineSource"] = "Gveret Levin (SIL OFL 1.1), see data/letters/SOURCES.md"
+        blk["fontScale"] = c["scale"]
+        blk["strokeBasis"] = "centrelines skeletonised from the Gveret Levin glyph (tools/letters/derive_cursive.py); order/direction by the handwriting rules in docs/letters/STROKE-RULES.md plus per-letter overrides; NOT from a school model"
         conf = CURSIVE_COUNT_CONFIRMED.get(lid)
     blk["strokeCountConfirmedByResearch"] = (conf == len(st)) if conf else False
     return blk

@@ -346,7 +346,7 @@ const SVGNS = 'http://www.w3.org/2000/svg';
  *               on('strokeResult'|'mistake'|'complete', fn) -> off(), onStrokeResult/onMistake/onComplete = fn,
  *               svg }
  * opts: leniency, markStrokeCorrectAfterMisses, showHintAfterMisses, showOutline (default true),
- *       strokeAnimationSpeed (1), delayBetweenStrokes (ms, 500), onStrokeResult, onMistake, onComplete,
+ *       strokeAnimationSpeed (1), delayBetweenStrokes (ms, 500), onUserStroke(points) (every raw learner stroke), onStrokeResult, onMistake, onComplete,
  *       document (inject for tests), strict (bool: apply MODES.strict)
  * @param {any} container
  * @param {any} letter record from letters.json
@@ -431,6 +431,7 @@ export function createTracer(container, letter, script, opts = {}) {
   function onUp(ev) {
     if (!drawing || ev.pointerId !== drawing.id) return;
     const pts = drawing.pts; const path = drawing.path; drawing = null;
+    if (typeof options.onUserStroke === 'function') { try { options.onUserStroke(pts); } catch (e) { /* observer must not break tracing */ } }
     handleResult(session.submit(pts), path);
   }
   function onCancel() { if (drawing) { clear(gUser); drawing = null; } }

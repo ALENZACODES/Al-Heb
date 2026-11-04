@@ -20,7 +20,7 @@ def tile(letter, script, i):
          f'<g transform="translate(0,22) scale({T/1000})">']
     for k in range(100, 1000, 100):
         g.append(f'<line x1="{k}" y1="0" x2="{k}" y2="1000" stroke="#eef" stroke-width="3"/><line x1="0" y1="{k}" x2="1000" y2="{k}" stroke="#eef" stroke-width="3"/>')
-    g.append('<line x1="0" y1="756" x2="1000" y2="756" stroke="#cdd" stroke-width="3" stroke-dasharray="20 14"/>' if script == "print" else '<line x1="0" y1="700" x2="1000" y2="700" stroke="#cdd" stroke-width="3" stroke-dasharray="20 14"/>')
+    g.append('<line x1="0" y1="756" x2="1000" y2="756" stroke="#cdd" stroke-width="3" stroke-dasharray="20 14"/>' if script == "print" else '')
     if s.get("outline"):
         g.append(f'<path d="{s["outline"]}" fill="#e6e6e6" stroke="none"/>')
     for n, st in enumerate(s["strokes"]):

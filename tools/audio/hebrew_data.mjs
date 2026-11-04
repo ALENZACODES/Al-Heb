@@ -19,6 +19,12 @@ export const FINAL_LETTERS = [
   ['kaf-final', 'ך', 'כַּף סוֹפִית'], ['mem-final', 'ם', 'מֵם סוֹפִית'], ['nun-final', 'ן', 'נוּן סוֹפִית'],
   ['pe-final', 'ף', 'פֵּא סוֹפִית'], ['tsadi-final', 'ץ', 'צָדִי סוֹפִית'],
 ];
+// The 4 two-sound variant forms (31 forms = 27 letters + these 4, matching the printable workbook rows Vet, Khaf, Fe, Sin).
+// [id, glyph (unmarked form), pointed name said with the variant's sound, israeli consonant IPA]
+export const VARIANT_LETTERS = [
+  ['vet', 'ב', '\u05D1\u05B5\u05D9\u05EA', 'v'], ['khaf', 'כ', '\u05DB\u05B7\u05E3', 'χ'],
+  ['fe', 'פ', '\u05E4\u05B5\u05D0', 'f'], ['sin', '\u05E9\u05C2', '\u05E9\u05C2\u05B4\u05D9\u05DF', 's'],
+];
 // Letters whose syllable-grid form needs a mark to give the "hard" sound (bet/kaf/pe + dagesh; shin + shin dot).
 export const GRID_MARKS = { bet: 'ּ', kaf: 'ּ', pe: 'ּ', shin: 'ׁ' };
 

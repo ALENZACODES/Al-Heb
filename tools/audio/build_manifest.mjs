@@ -6,7 +6,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import {
-  TRADITIONS, VOICES, KINDS, LETTERS, FINAL_LETTERS, GRID_MARKS, GRID_VOWELS, GRID_VOWEL_IPA_ISRAELI,
+  TRADITIONS, VOICES, KINDS, LETTERS, FINAL_LETTERS, VARIANT_LETTERS, GRID_MARKS, GRID_VOWELS, GRID_VOWEL_IPA_ISRAELI,
   VOWELS, normalizeId, audioPath,
 } from './hebrew_data.mjs';
 
@@ -54,10 +54,15 @@ export function buildEntries({ root = ROOT, existsFn } = {}) {
     for (const [id] of [...LETTERS, ...FINAL_LETTERS]) if (!have.has(id)) warnings.push(`letters.json lacks id ${id}`);
   }
   for (const [id, , name, ipa] of LETTERS) {
-    base.push({ kind: 'letter', id, text: name });
-    base.push({ kind: 'letter', id: `${id}-sound`, text: name[0], ipa: { israeli: ipa }, isolatedSound: true });
+    base.push({ kind: 'letter', id, text: name, group: 'letter' });
+    base.push({ kind: 'letter', id: `${id}-sound`, text: name[0], ipa: { israeli: ipa }, isolatedSound: true, group: 'letter-sound' });
   }
-  for (const [id, , name] of FINAL_LETTERS) base.push({ kind: 'letter', id, text: name });
+  for (const [id, , name] of FINAL_LETTERS) base.push({ kind: 'letter', id, text: name, group: 'letter-final' });
+  // The 4 two-sound variants (vet, khaf, fe, sin): name said with the variant's sound + isolated sound.
+  for (const [id, glyph, name, ipa] of VARIANT_LETTERS) {
+    base.push({ kind: 'letter', id, text: name, group: 'letter-variant' });
+    base.push({ kind: 'letter', id: `${id}-sound`, text: glyph, ipa: { israeli: ipa }, isolatedSound: true, group: 'letter-variant-sound' });
+  }
 
   // --- vowels
   const nq = readJson(root, 'data/pronunciation/niqqud.json');
@@ -66,7 +71,7 @@ export function buildEntries({ root = ROOT, existsFn } = {}) {
   for (const [id, text] of VOWELS) {
     const rec = nqById.get(id);
     const ipa = rec && rec.ipa && typeof rec.ipa === 'object' ? { ...rec.ipa } : undefined;
-    base.push({ kind: 'vowel', id, text, ipa });
+    base.push({ kind: 'vowel', id, text, ipa, group: 'niqqud' });
   }
   if (nq.data) for (const [id] of VOWELS) if (!nqById.has(id)) warnings.push(`niqqud.json lacks id ${id}`);
 
@@ -74,22 +79,25 @@ export function buildEntries({ root = ROOT, existsFn } = {}) {
   for (const [lid, glyph, , cons] of LETTERS) {
     for (const [vs, mark] of GRID_VOWELS) {
       const text = (glyph + (GRID_MARKS[lid] || '') + mark).normalize('NFC');
-      base.push({ kind: 'syllable', id: `${lid}-${vs}`, text, ipa: { israeli: cons + GRID_VOWEL_IPA_ISRAELI[vs] }, grid: true });
+      base.push({ kind: 'syllable', id: `${lid}-${vs}`, text, ipa: { israeli: cons + GRID_VOWEL_IPA_ISRAELI[vs] }, grid: true, group: 'syllable' });
     }
   }
 
   // --- corpus + curriculum
   const seen = new Set(base.map((b) => `${b.kind}/${b.id}`));
-  const add = (kind, rawId, text, src) => {
+  const add = (kind, rawId, text, src, extra = {}) => {
     const id = normalizeId(rawId);
     if (!id || !text || !HEB.test(text)) { warnings.push(`${src}: skipped ${JSON.stringify(rawId)} (no id or no Hebrew text)`); return; }
-    if (seen.has(`${kind}/${id}`)) return;
+    if (seen.has(`${kind}/${id}`)) {
+      const prev = base.find((x) => x.kind === kind && x.id === id);
+      if (prev && prev.text !== text && !(extra.aliasOf)) warnings.push(`${src}: id ${kind}/${id} already used with different text (kept the first)`);
+      return;
+    }
     seen.add(`${kind}/${id}`);
-    base.push({ kind, id, text, from: src });
+    base.push({ kind, id, text, from: src, ...extra });
   };
   const reg = readJson(root, 'data/corpus/registry.json');
   notes.push(reg.note);
-  for (const it of listItems(reg.data)) add(guessKind(it), it.id, it.he || it.text, 'corpus');
   // Per-line and per-word ids exactly as src/corpus/read.view.js requests them:
   //   line: `<id>` when the record has one line, else `<id>-l<n>` (1-based); word: `<id>-w<n>` (1-based, counted across the record's lines).
   // The Tetragrammaton is rendered with its spoken substitute, as the reader does.
@@ -98,10 +106,20 @@ export function buildEntries({ root = ROOT, existsFn } = {}) {
     if (typeof it.he !== 'string' || !it.id) continue;
     const lines = it.he.split('\n');
     let wi = 0;
+    const lineTexts = [];
     lines.forEach((line, li) => {
       const words = line.split(/\s+/).filter((w) => HEB.test(w));
-      add('line', lines.length === 1 ? it.id : `${it.id}-l${li + 1}`, words.map(spoken).join(' '), 'corpus(line)');
-      for (const w of words) { wi += 1; add('word', `${it.id}-w${wi}`, spoken(w), 'corpus(word)'); }
+      const lt = words.map(spoken).join(' ');
+      lineTexts.push(lt);
+      add('line', lines.length === 1 ? it.id : `${it.id}-l${li + 1}`, lt, 'corpus(line)', { group: 'prayer-line' });
+      for (const w of words) { wi += 1; add('word', `${it.id}-w${wi}`, spoken(w), 'corpus(word)', { group: 'prayer-word' }); }
+    });
+    // Whole-record read ('prayer' kind). Nothing in the app requests it (the reader plays lines/words), so it is OPTIONAL:
+    // for one-line records it is an alias of the line clip (same id); for multi-line records it is a continuous read.
+    const kind = ['torah', 'siddur'].includes(it.category) ? 'prayer' : guessKind(it);
+    add(kind, it.id, lineTexts.join(' ') || it.he, 'corpus', {
+      group: kind === 'prayer' ? 'prayer-whole' : 'corpus-other', optional: true,
+      ...(lines.length === 1 && kind === 'prayer' ? { aliasOf: `line/${normalizeId(it.id)}` } : {}),
     });
   }
   const les = readJson(root, 'data/curriculum/lessons.json');
@@ -115,9 +133,29 @@ export function buildEntries({ root = ROOT, existsFn } = {}) {
       }
     }
     // Lesson vocabulary has no ids in lessons.json: the app requests kind 'word', id `<lessonId>-w<n>` (1-based).
+    // Words of track 'israel' lessons are conversational Modern Hebrew: israeli-only, like the phrasebook. Track 'read' words keep all traditions.
     if (lesson.id && Array.isArray(lesson.words)) {
-      lesson.words.forEach((w, i) => { if (w && typeof w === 'object' && !w.id) add('word', `${lesson.id}-w${i + 1}`, w.he, 'curriculum(word)'); });
+      lesson.words.forEach((w, i) => { if (w && typeof w === 'object' && !w.id) add('word', `${lesson.id}-w${i + 1}`, w.he, 'curriculum(word)', { group: 'lesson-word', ...(lesson.track === 'israel' ? { israeliOnly: true } : {}) }); });
     }
+  }
+
+  // --- survival phrasebook (data/corpus/phrasebook.json). The reader requests kind 'line' when the displayed Hebrew has whitespace
+  // else 'word', id `<id>`, or `<id>-m` / `<id>-f` for gendered phrases (the form shown for the learner's chosen gender, independent of
+  // the narrator voice). Modern conversational Hebrew: israeli tradition only (see scope below).
+  const pb = readJson(root, 'data/corpus/phrasebook.json');
+  notes.push(pb.note);
+  for (const p of listItems(pb.data)) {
+    if (!p || !p.id) continue;
+    if (p.gendered && p.forms) {
+      for (const g of ['m', 'f']) if (p.forms[g] && p.forms[g].he) add(/\s/.test(p.forms[g].he) ? 'line' : 'word', `${p.id}-${g}`, p.forms[g].he, 'phrasebook', { group: 'phrasebook', israeliOnly: true });
+    } else add(/\s/.test(p.he || '') ? 'line' : 'word', p.id, p.he, 'phrasebook', { group: 'phrasebook', israeliOnly: true });
+  }
+
+  // --- mnemonic anchor words (data/letters/mnemonics.json): kind 'word', id `anchor-<letterId>`. NOTE: no view requests these yet.
+  const mn = readJson(root, 'data/letters/mnemonics.json');
+  notes.push(mn.note);
+  for (const m of (mn.data && Array.isArray(mn.data.letters) ? mn.data.letters : [])) {
+    if (m && m.id && m.word) add('word', `anchor-${m.id}`, m.word, 'mnemonics', { group: 'anchor-word', israeliOnly: true });
   }
 
   // --- equivalence rules (human-reviewed only)
@@ -127,7 +165,7 @@ export function buildEntries({ root = ROOT, existsFn } = {}) {
 
   // --- expand to voice x tradition
   const out = [];
-  for (const b of base) for (const voice of VOICES) for (const tradition of TRADITIONS) {
+  for (const b of base) for (const voice of VOICES) for (const tradition of (b.israeliOnly ? ['israeli'] : TRADITIONS)) {
     const p = audioPath(voice, tradition, b.kind, b.id);
     const e = { path: p, voice, tradition, kind: b.kind, id: b.id, text: b.text };
     const ipa = b.ipa && b.ipa[tradition];
@@ -145,6 +183,10 @@ export function buildEntries({ root = ROOT, existsFn } = {}) {
       }
     }
     e.status = status; e.source = source;
+    e.group = b.group || 'other';
+    if (b.israeliOnly) e.scope = 'israeli-only';
+    if (b.optional) e.optional = true;
+    if (b.aliasOf) e.aliasOf = b.aliasOf;
     const eqTo = rules.filter((r) => r.to !== tradition && r.from === tradition
       && (!r.kinds || r.kinds.includes(b.kind)) && (!r.ids || r.ids.includes(b.id))).map((r) => r.to);
     if (eqTo.length) e.equivalentTo = [...new Set(eqTo)];

@@ -120,6 +120,11 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     ...COMPOSITES.map((c) => ({ ...c, records: c.parts.map((p) => corpus.getText(p)).filter(Boolean) })),
     ...corpus.allTexts().filter((t) => !COMPOSITES.some((c) => c.parts.includes(t.id))).map((t) => ({ id: t.id, title: t.title, ref: t.ref, records: [t] })),
   ];
+  // a part id (e.g. bless-priestly-1) opens the composite passage that contains it
+  if (ctx.params?.textId && !passages.some((p) => p.id === ctx.params.textId)) {
+    const comp = COMPOSITES.find((c) => c.parts.includes(ctx.params.textId));
+    if (comp) ctx = { ...ctx, params: { ...ctx.params, textId: comp.id } };
+  }
   if (ctx.params?.textId && !passages.some((p) => p.id === ctx.params.textId)) {
     wrap.replaceChildren(
       el('h1', { id: 'view-title', tabindex: '-1' }, 'Text not found'),

@@ -96,3 +96,13 @@ main { overflow-x: clip; } /* a stray wide table (Sound gap) must not widen the 
 .alef-diff{background:transparent;color:inherit;text-decoration:underline wavy;text-underline-offset:4px}
 .alef-latin{opacity:1}.alef-latin-1,.alef-translit-faint{opacity:.45}.alef-latin-2{opacity:.25}.alef-latin-3{visibility:hidden}
 .alef-noaudio{font-size:.85rem;opacity:.7}
+
+/* QA round (lane 8/QA, 2026-11-04): fixes found by tools/qa/walk.mjs at 390px */
+/* radio/checkbox labels in the pronunciation views wrapped so the radio sat at the end of the previous line, apart from its text */
+main label:has(> input[type=radio], > input[type=checkbox]) { display: inline-flex; align-items: center; gap: .4rem; min-block-size: 44px; }
+/* a long <option> text (Read: "The Priestly Blessing (Birkat Kohanim) (Numbers 6:24-26)") made the select wider than the phone and main{overflow-x:clip} cut it off */
+select { max-inline-size: 100%; min-block-size: 44px; }
+/* tap targets: 44px minimum for disclosure summaries, the sound-bar link and the pronunciation-screen buttons */
+main summary { padding-block: .6rem; min-block-size: 44px; box-sizing: border-box; display: list-item; }
+.sound-bar a { padding-block: .75rem; margin-block: -.75rem; }
+main .alef-r4 button { min-height: 44px; }

@@ -22,7 +22,7 @@ export function mount(root, ctx) {
   let alive = true;
   const todayBody = h('p', { class: 'muted' }, t('home.today.none'));
   const dueBody = h('p', { class: 'muted' }, t('home.due.none'));
-  const streakBody = h('p', { class: 'muted' }, 'No streak yet. Finish a lesson or review a card to start one.');
+  const streakBody = h('p', { class: 'muted' }, 'No streak yet. Spend 5 minutes of active learning today to start one.');
 
   root.replaceChildren(h('div', { class: 'stack' },
     h('header', {}, h('h1', { id: 'view-title', tabindex: '-1' }, h('span', {}, t('app.name')), ' ', heSpan('אלף')), h('p', { class: 'muted' }, t('app.tagline'))),

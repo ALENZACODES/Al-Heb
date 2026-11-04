@@ -1,5 +1,6 @@
 // ALEF boot: wires store, settings, audio, router, and lazily mounted views.
 import { store } from './store.js';
+import { startMorning } from './morning/boot.js';
 import { createSettings } from './shell/settings.js';
 import { createRouter, ROUTES, loadRouteModule, availableRoutes } from './shell/router.js';
 import { VIEW_FILES } from './shell/views.generated.js';
@@ -184,8 +185,9 @@ async function boot() {
   const ctxBase = { settings, store, audio, route: (p) => router.go(p), t, installPrompt, hasRoute: (name) => available.has(name) };
   router = createRouter((m) => { show(m, ctxBase); });
   window.alef = { settings, store, audio, router }; // debugging handle
+  // Establish v2 before any lesson action can write a legacy instant streak.
+  startMorning({ store, audio });
   router.start();
-  import('./morning/boot.js').then((m) => m.startMorning({ store, audio })).catch(() => {});
   scheduleManifest(audio);
   startShardLoading(audio);
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {

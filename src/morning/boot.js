@@ -1,5 +1,5 @@
 /**
- * Start the engaged-time streak timer for the running app. Call once after the router starts:
+ * Start the engaged-time streak timer for the running app. Call once before the router starts so streak migration precedes learner actions:
  *   import { startMorning } from './morning/boot.js'; startMorning({ store, audio });
  * Listens (passively, same-origin, nothing leaves the device) to visibilitychange, pagehide, pointer/key/touch and hashchange.
  */
@@ -9,7 +9,7 @@ import { createMorningModel } from "./model.js";
 export function startMorning(ctx, env = globalThis) {
   const clock = () => Date.now();
   const model = createMorningModel(ctx.store, () => new Date());
-  const eng = createEngagement(model.io, { extraRest: () => model.extraRest() });
+  const eng = createEngagement(model.io, { visible: env.document?.visibilityState !== "hidden", extraRest: () => model.extraRest() });
   model.syncRecord();
   eng.resume(clock());
   const doc = env.document, win = env;

@@ -66,7 +66,7 @@ function mountMap(root, ctx) {
         ? dueCount === 1 ? "1 review due" : `${dueCount} ${tr(ctx, "learn.dueReviews", "reviews due")}`
         : tr(ctx, "learn.noDue", "No reviews due"), " ",
         dueCount ? el("a", { class: "btn", href: "#/learn?review=1" }, "Review now") : null),
-      el("p", { class: "alef-streak" }, st.streak.count ? `Streak: ${st.streak.count} day${st.streak.count === 1 ? "" : "s"}${st.streak.activeToday ? "" : " (learn today to keep it)"}` : "No streak yet. Finish a lesson or review a card to start one."),
+      el("p", { class: "alef-streak" }, st.streak.count ? `Streak: ${st.streak.count} day${st.streak.count === 1 ? "" : "s"}${st.streak.activeToday ? "" : " (learn today to keep it)"}` : "No streak yet. Spend 5 minutes of active learning today to start one."),
       track === "read" ? beltStrip(done) : null,
       el("p", { class: "row alef-extras" },
         track === "read" ? el("a", { class: "btn secondary", href: "#/learn?loanwords=1" }, "Words you can already read") : null,

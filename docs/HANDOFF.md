@@ -16,9 +16,11 @@ This work continues from main commit `40df88d37bc0befa399b2b1941cf572b4bfe0ff7`.
 - Deployment tests build their own fixture instead of requiring an existing `dist`. Browser smoke is a required CI check, with a dedicated multi-tab update regression. The smoke test waits for loaded Home state; the tracing harness refreshes geometry before each stroke. No tracing thresholds or letter data were weakened.
 - Older status reports are marked historical; strategy evidence now points at the tracked QR generator rather than an absent generated folder.
 
+- Streak initialization now finishes before lesson actions become available, preserving earned history and consistently requiring five minutes of active learning. Home, Learn and Progress explain the rule; initially hidden tabs do not accrue time.
+
 ## Validation
 
-- Full Node suite: 1,099 passed, 22 skipped, zero failures. Skips are optional browser/external-tool checks; browser checks below were run separately with Edge/Playwright.
+- Full Node suite: 1,100 passed, 22 skipped, zero failures. Skips are optional browser/external-tool checks; browser checks below were run separately with Edge/Playwright.
 - Deployment checker: 42/42 passed. Six informational warnings identify external origins in source; hosted network access remains governed by the existing policy.
 - Browser smoke: 30 route states, onboarding, lesson completion, saved review ratings and offline shell reload passed.
 - Initial deep browser sweep: 390 visits across phone/desktop, light/dark and fresh/seeded states. It exposed the repaired null-text and keyboard issues. One transient update error occurred while source files were being edited; final checks use the integrated source.

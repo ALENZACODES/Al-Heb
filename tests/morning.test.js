@@ -299,3 +299,19 @@ test("no third-party origins or analytics in the morning/streak code", () => {
     assert.ok(!/gtag|analytics|sendBeacon|XMLHttpRequest|WebSocket/i.test(src), `${f} has tracking-like code`);
   }
 });
+
+test("boot establishes v2 synchronously before the first learning action and preserves earned legacy history", async () => {
+  const { startMorning } = await import("../src/morning/boot.js");
+  const env = {location:{hash:"#/learn"}, document:{addEventListener() {},visibilityState:"visible"},addEventListener() {},setInterval:()=>1,clearInterval() {}};
+  for (const old of [null, {count:4,best:9,last:S.dayKey(Date.now())}]) {
+    const store = fakeStore(old ? {streak:old} : {});
+    const running = startMorning({store},env);
+    const record = store.get("streak");
+    assert.equal(record.v,2);
+    assert.equal(record.count,old?.count || 0);
+    assert.equal(record.best,old?.best || 0);
+    assert.equal(record.last,old?.last || null);
+    assert.deepEqual(recordActivity(record,Date.now()),record);
+    running.stop();
+  }
+});

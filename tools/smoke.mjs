@@ -6,6 +6,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createAppServer } from './serve.mjs';
+import { projectStreak } from '../src/curriculum/streak.js';
 
 const require = createRequire(import.meta.url);
 let chromium;
@@ -102,7 +103,10 @@ const check = (name, ok, detail = '') => { checks.push({ name, ok: !!ok, detail 
   // Wait for stored state, not the initial "No cards due" placeholder.
   await page.getByRole('link', { name: '6 cards due', exact: true }).waitFor();
   const homeText = await page.locator('main').innerText();
-  check('home shows due cards and a 1-day streak', /6 cards due/.test(homeText) && /1 day/.test(homeText), homeText);
+  const storedStreak = await page.evaluate(() => JSON.parse(localStorage.getItem('alef:streak')));
+  const projected = projectStreak(storedStreak, Date.now());
+  check('home shows due cards and the saved engagement-based streak', storedStreak?.v === 2 && /6 cards due/.test(homeText) &&
+    (projected.count ? homeText.includes(`${projected.count} day`) : /5 minutes|five minutes/i.test(homeText)), JSON.stringify({ storedStreak, projected }));
   await page.goto(base + '#/learn?review=1'); await page.waitForSelector('text=Card 1 of 6');
   for (const k of ['3', '3', '4', '2', '1', '3']) {
     // after "Again" lane 1 may show an interference hint panel with a Continue button before the next card

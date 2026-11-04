@@ -22,7 +22,7 @@ export function mountLoanwords(root, ctx, groupId) {
         el("ul", { class: "alef-items" }, ...loanwordGroups.map((x) => {
           const open = groupUnlocked(x, done);
           return el("li", { class: "alef-item" }, el("div", { class: "alef-item-body" }, el("strong", {}, x.title), " ",
-            el("span", { class: "muted" }, open ? `${x.words.length} words` : `Locked until you finish ${byId[x.unlockAfter]?.title || x.unlockAfter}`)),
+            el("span", { class: "muted" }, open ? `${x.words.length} ${x.words.length === 1 ? "word" : "words"}` : `Locked until you finish ${byId[x.unlockAfter]?.title || x.unlockAfter}`)),
             el("a", { class: "btn", href: `#/learn?loanwords=${x.id}`, "aria-disabled": open ? null : "true" }, open ? "Start" : "Preview"));
         })), el("a", { class: "btn secondary", href: "#/learn" }, "All lessons"));
       return;

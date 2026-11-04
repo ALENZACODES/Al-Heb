@@ -11,6 +11,9 @@ Run: python3 -I tools/vocab/build_vocab5k.py
 """
 import collections, hashlib, json, os, re, sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import refine  # noqa: E402  (deterministic rules + overrides loader)
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, '..', '..'))
 CACHE = os.path.join(HERE, '.cache')
@@ -231,6 +234,182 @@ def kaikki_index(lemmas):
     return got
 
 
+def pack_ranked(cand, dropped):
+    out, seen = [], set()
+    for c in cand:
+        if len(out) == N:
+            break
+        key = (c['pointed'] or c['lemma'], c['pos'])
+        if key in seen:
+            dropped['duplicate-lemma-pos'] += 1
+            continue
+        seen.add(key)
+        r = len(out) + 1
+        out.append({
+            'rank': r, 'lemma': c['lemma'], 'pointed': c['pointed'], 'needsPointing': c['pointed'] is None,
+            'pos': c['pos'], 'topic': c['topic'], 'gloss': c['gloss'], 'tier': next(t for t in TIERS if r <= t),
+            'id': 'v' + hashlib.sha1(('%s|%s' % (c['pointed'] or c['lemma'], c['pos'])).encode('utf8')).hexdigest()[:8],
+            'proofread': False, 'pointedSource': 'wiktionary' if c['pointed'] else None,
+            'readList': c['readList'], 'curatedCore': c['core'], 'sourceRank': c['sourceRank'],
+        })
+    return out
+
+
+def add_additions(cand, additions, lower_ok):
+    """Words absent from the ranked pool: pointed form from Wiktionary (when it has one), gloss/topic curated here."""
+    want = {a['lemma'] for a in additions}
+    kk = collections.defaultdict(list)
+    p = os.path.join(CACHE, 'kaikki-hebrew.jsonl')
+    if os.path.exists(p):
+        for line in open(p, encoding='utf8'):
+            d = json.loads(line)
+            if d.get('lang_code') != 'he' or strip(d['word']) not in want:
+                continue
+            if any({'alt-of', 'misspelling', 'form-of'} & set(s.get('tags') or []) for s in d['senses'][:1]):
+                continue
+            ht = (d.get('head_templates') or [{}])[0].get('args', {})
+            pt = ht.get('wv') or ht.get('dwv') or ht.get('head') or d['word']
+            kk[strip(d['word'])].append((d['pos'], pt if NIQ.search(pt or '') else None))
+    n = 0
+    for a in additions:
+        kp = a.get('kaikkiPos', a['pos'])
+        pts = [x for x in kk.get(a['lemma'], []) if x[0] in (kp, 'name' if kp == 'noun' else kp)]
+        pointed = next((x[1] for x in pts if x[1]), None)
+        if any(c['lemma'] == a['lemma'] and c['pos'] == a['pos'] and (c['pointed'] or None) == pointed for c in cand):
+            continue
+        cand.append({'lemma': a['lemma'], 'pointed': pointed, 'pos': a['pos'], 'gloss': a['gloss'], 'topic': a['topic'],
+                     'prio': a['priority'], 'core': False, 'sourceRank': None, 'readList': False, '_added': True})
+        n += 1
+    return n
+
+
+def apply_overrides(out, ovdoc):
+    byid = {e['id']: e for e in out}
+    log = collections.Counter()
+    swaps = []
+    for oid, o in ovdoc.get('overrides', {}).items():
+        e = byid.get(oid)
+        if e is None:
+            log['dropped-from-top5000'] += 1  # id no longer in the list (pushed out by additions)
+            continue
+        if e['lemma'] != o['lemma']:
+            sys.exit('override %s lemma mismatch: %s vs %s' % (oid, e['lemma'], o['lemma']))
+        for k in ('gloss', 'pos', 'topic', 'fn'):
+            if k in o:
+                e[k] = o[k]
+        if 'pointed' in o:
+            e['pointed'] = o['pointed']
+            e['needsPointing'] = o['pointed'] is None
+            e['pointedSource'] = 'wiktionary' if o['pointed'] else None
+        if 'tags' in o:
+            e['tags'] = list(o['tags'])
+        for t in o.get('addTags', []):
+            e.setdefault('tags', [])
+            if t not in e['tags']:
+                e['tags'].append(t)
+        if 'formOf' in o:
+            e['_formOf'] = o['formOf']
+        e['overridden'] = True
+        e['proofread'] = False
+        if 'swapRankWith' in o:
+            swaps.append((oid, o['swapRankWith']))
+        log['applied'] += 1
+    pos_ = {e['id']: i for i, e in enumerate(out)}
+    for a, b in swaps:
+        if a in pos_ and b in pos_ and pos_[a] != pos_[b] and out[pos_[a]]['lemma'] == out[pos_[b]]['lemma']:
+            i, j = pos_[a], pos_[b]
+            out[i], out[j] = out[j], out[i]
+            pos_[a], pos_[b] = j, i
+            log['rank-swaps'] += 1
+    for i, e in enumerate(out):
+        e['rank'] = i + 1
+        e['tier'] = next(t for t in TIERS if i + 1 <= t)
+    for e in out:
+        if e.get('fn') and 'function' not in e.get('tags', []):
+            e.setdefault('tags', []).insert(0, 'function')
+        if e.get('tags'):
+            e['tags'] = sorted(set(e['tags']), key=lambda t: (t != 'function', t))
+        if e['pos'] in ('verb',) and e['topic'] != 'Verbs':
+            e['topic'] = 'Verbs'
+    return log
+
+
+FORM_LABEL = re.compile(r'(first|second|third)-person (masculine |feminine )?(singular|plural)')
+
+
+def attach_forms(out, ovdoc):
+    """forms[]: Wiktionary pronoun-suffix paradigms for closed-class lemmas; formIds / formOf: list entries that are forms of another list entry."""
+    P = os.path.join(CACHE, 'kaikki-hebrew.jsonl')
+    bylem = collections.defaultdict(list)
+    for e in out:
+        if e['pos'] in ('prep', 'pron', 'det', 'num', 'particle'):
+            bylem[e['lemma']].append(e)
+    if os.path.exists(P) and bylem:
+        got = collections.defaultdict(dict)
+        for line in open(P, encoding='utf8'):
+            d = json.loads(line)
+            if d.get('lang_code') != 'he' or d.get('pos') not in ('prep', 'pron', 'det', 'num'):
+                continue
+            ht = (d.get('head_templates') or [{}])[0].get('args', {})
+            pt = ht.get('wv') or ht.get('dwv') or ht.get('head') or d['word']
+            pt = pt if NIQ.search(pt or '') else None
+            for s in d['senses']:
+                tg = set(s.get('tags') or [])
+                if 'form-of' not in tg or tg & {'archaic', 'poetic', 'nonstandard', 'obsolete', 'misspelling', 'alt-of', 'dialectal'}:
+                    continue
+                for fo in s.get('form_of') or []:
+                    base = strip(fo.get('word', ''))
+                    if base not in bylem:
+                        continue
+                    g = s['glosses'][0]
+                    m = FORM_LABEL.search(g)
+                    if m:
+                        lab = {'first': '1', 'second': '2', 'third': '3'}[m.group(1)] + {'masculine ': 'm', 'feminine ': 'f', None: ''}[m.group(2)] + {'singular': 'sg', 'plural': 'pl'}[m.group(3)]
+                    elif 'feminine' in tg and d['pos'] in ('num', 'pron', 'det'):
+                        lab = 'f'
+                    else:
+                        continue
+                    he = strip(d['word'])
+                    if he == base or (base == 'את' and not he.startswith('אות')):
+                        continue  # self-form quirk / Wiktionary files 'with' (איתי) under a second את; keep the object-marker paradigm only
+                    cur = got[base].get((he, lab))
+                    if cur is None or (cur['pointed'] is None and pt):
+                        got[base][(he, lab)] = {'he': he, 'pointed': pt, 'label': lab, 'pos': d['pos']}
+        ORDER = ['1sg', '2sg', '2msg', '2fsg', '3sg', '3msg', '3fsg', '1pl', '2pl', '2mpl', '2fpl', '3pl', '3mpl', '3fpl', 'f']
+        for base, fm in got.items():
+            tgt = next((e for e in sorted(bylem[base], key=lambda x: x['rank'])
+                        if any(v['pos'] == e['pos'] or (e['pos'] == 'particle' and v['pos'] == 'prep') for v in fm.values())), None)
+            if tgt is None:
+                continue
+            lst = [{'he': v['he'], 'pointed': v['pointed'], 'label': v['label']} for v in fm.values() if v['pos'] == tgt['pos'] or tgt['pos'] == 'particle']
+            lst.sort(key=lambda v: (ORDER.index(v['label']) if v['label'] in ORDER else 99, v['he']))
+            if lst:
+                tgt['forms'] = lst
+    key = {(e['lemma'], e['pos']): e for e in sorted(out, key=lambda x: -x['rank'])}
+    for k, extra in ovdoc.get('extraForms', {}).items():
+        lem, pos = k.split('|')
+        e = key.get((lem, pos))
+        if e is not None:
+            have = {(v['he']) for v in e.get('forms', [])}
+            e.setdefault('forms', []).extend({'he': x['he'], 'pointed': x['pointed'], 'label': x['note']} for x in extra if x['he'] not in have)
+    for e in out:
+        ref = e.pop('_formOf', None)
+        if ref:
+            lem, pos = ref.split('|')
+            base = key.get((lem, pos))
+            if base is None:
+                sys.exit('formOf target missing: ' + ref)
+            e['isForm'] = True
+            e['formOf'] = base['id']
+            base.setdefault('formIds', []).append(e['id'])
+    grp = collections.defaultdict(list)
+    for e in out:
+        grp[e['lemma']].append(e['id'])
+    for e in out:
+        if len(grp[e['lemma']]) > 1:
+            e['sameSpelling'] = [i for i in grp[e['lemma']] if i != e['id']]
+
+
 def main():
     words = json.load(open(os.path.join(ROOT, 'data/vocab/words.json'), encoding='utf8'))['words']
     pool = sorted([x for x in words if x['kind'] == 'word' and x['frequencyRank']], key=lambda x: x['frequencyRank'])
@@ -285,33 +464,29 @@ def main():
         cand.append({'lemma': lemma, 'pointed': k['pointed'], 'pos': k['pos'], 'gloss': clean_gloss(k['en'], lower_ok),
                      'topic': topic, 'prio': prio, 'core': True, 'sourceRank': None, 'readList': False})
         added += 1
-    cand.sort(key=lambda c: (c['prio'], c['lemma']))
-    out = []
-    for c in cand:
-        if len(out) == N:
-            break
-        key = (c['pointed'] or c['lemma'], c['pos'])
-        if key in seen:
-            dropped['duplicate-lemma-pos'] += 1
-            continue
-        seen.add(key)
-        r = len(out) + 1
-        out.append({
-            'rank': r, 'lemma': c['lemma'], 'pointed': c['pointed'], 'needsPointing': c['pointed'] is None,
-            'pos': c['pos'], 'topic': c['topic'], 'gloss': c['gloss'], 'tier': next(t for t in TIERS if r <= t),
-            'id': 'v' + hashlib.sha1(('%s|%s' % (c['pointed'] or c['lemma'], c['pos'])).encode('utf8')).hexdigest()[:8],
-            'proofread': False, 'pointedSource': 'wiktionary' if c['pointed'] else None,
-            'readList': c['readList'], 'curatedCore': c['core'], 'sourceRank': c['sourceRank'],
-        })
+    base_cand = list(cand)
+    out = pack_ranked(sorted(base_cand, key=lambda c: (c['prio'], c['lemma'])), dropped)
+    # Stage 2 (round 2): additions + refinement. The pre-refinement list is cached so tools/vocab/quality.py can print before/after.
+    with open(os.path.join(CACHE, 'vocab5000.pre-refine.json'), 'w', encoding='utf8') as f:
+        json.dump({'entries': out}, f, ensure_ascii=False, separators=(',', ':'))
+    ovdoc = refine.load_overrides(ROOT)
+    added_n = add_additions(cand, ovdoc.get('additions', []), lower_ok)
+    out = pack_ranked(sorted(cand, key=lambda c: (c['prio'], c['lemma'])), collections.Counter())
+    rlog = refine.refine(out, lower_ok)
+    olog = apply_overrides(out, ovdoc)
+    attach_forms(out, ovdoc)
     print('core added from Wiktionary:', added, '; core lemmas not found/pointed:', core_missing)
+    print('additions inserted:', added_n, '; refine:', rlog, '; overrides:', dict(olog))
     if len(out) < N:
         sys.exit('only %d entries' % len(out))
     top = collections.Counter(o['topic'] for o in out)
     doc = {
         'schema': 'alef-vocab5k/1',
+        'revision': 2,
         'generated': '2026-11-03',
         'count': len(out),
         'topics': TOPICS,
+        'tags': {'function': 'Function words (closed class: prepositions, particles, pronouns, conjunctions, auxiliaries, closed-class adverbs); topic is a compatibility placeholder', 'prayer': 'appears in prayer/blessing vocabulary (gloss keywords)', 'jewish-life': 'religion / Jewish-life vocabulary (gloss keywords)', 'biblical': 'mainly Tanakh vocabulary', 'clitic': 'prefix written attached to the next word', 'form': 'inflected or spelling form of another entry (see formOf)', 'rare-sense': 'rare sense or homograph that probably does not reflect how the spelling is mostly used', 'needs-check': 'source gloss unclear; check first', 'homograph': 'shares its spelling with a more common word; see sameSpelling', 'colloquial': 'informal'},
         'tiers': {str(t): sum(1 for o in out if o['tier'] <= t) for t in TIERS},
         'licence': 'Entries derived from Wiktionary (CC BY-SA 4.0 + GFDL) and OpenSubtitles frequencies (hermitdave/FrequencyWords, CC BY-SA 4.0). See docs/vocab/LICENSES.md.',
         'entries': out,

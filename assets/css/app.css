@@ -169,3 +169,13 @@ input[type="file"]::file-selector-button { min-block-size: 44px; padding-inline:
 /* labels that wrap a checkbox/radio deeper than a direct child (Vocab "Show word forms", Scan options) and plain text/url/search inputs: 44px */
 main label:has(input[type=radio], input[type=checkbox]) { display: inline-flex; align-items: center; gap: .4rem; min-block-size: 44px; white-space: normal; }
 main input[type=url], main input[type=text], main input[type=search], main input:not([type]) { min-block-size: 44px; }
+
+/* a11y round (lane 8, 2026-11-03): contrast fixes found by tools/a11y/run.mjs.
+   Opacity on text blends it toward the background (muted text at .7-.8 opacity measured 3.5-3.8:1 against the 4.5:1 needed), so text keeps full opacity and the muted colour carries the de-emphasis. */
+.alef-draft-notice, .alef-noaudio { opacity: 1; }
+main .alef-r4 .muted, main .crp-ltr small { opacity: 1; }
+/* atlas keeps its fixed light tile colours for the final/right/wrong states; the muted sub-label must not follow the (light) dark-mode muted colour onto them */
+main .alef-atlas .tile.final .s, main .alef-atlas .tile.wrong .s, main .alef-atlas .tile.right .s { color: #3b3b44; }
+/* Settings: the file input behind "Restore from backup file" is visually hidden, so its keyboard focus was invisible. Ring the label that stands for it. */
+label.btn:has(+ input[type=file]:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
+[hidden] { display: none !important; }

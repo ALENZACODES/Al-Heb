@@ -80,6 +80,8 @@ function wireChrome() {
   more.addEventListener('click', (e) => { if (e.target.closest('a')) setMore(false); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && more.classList.contains('open')) { setMore(false); btn.focus(); } });
   document.addEventListener('click', (e) => { if (more.classList.contains('open') && !e.target.closest('.site-nav')) setMore(false); });
+  // keyboard: tabbing out of the open More sheet (forwards or backwards) closes it, so it never hangs open over the page
+  document.querySelector('.site-nav').addEventListener('focusout', (e) => { if (more.classList.contains('open') && e.relatedTarget && !e.relatedTarget.closest('.site-nav')) setMore(false); });
   // the one-line sound status is cut with an ellipsis on a phone; tap it to read the whole message
   const st = document.getElementById('sound-status');
   st.addEventListener('click', () => st.classList.toggle('open'));

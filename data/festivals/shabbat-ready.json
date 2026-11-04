@@ -1,0 +1,13 @@
+{
+ "schema": "alef-shabbat-ready/1",
+ "note": "The phrases a learner meets at a Friday-night table, in order. Each `registry` id is an entry of data/corpus/registry.json. The two requested phrases that the corpus does not hold (Shalom Aleichem, Birkat HaBanim) are listed under `missing` and are NOT shown as texts; nothing was composed to fill them. Coverage is computed from the learner's taught letters and signs (src/progress/decode.js), which says whether the lines can be decoded, not whether the learner can say them.",
+ "phrases": [
+  { "id": "candles", "label": "Candle blessing", "registry": "candle-shabbat", "moment": "Friday, before sunset" },
+  { "id": "kiddush", "label": "Kiddush over wine", "registry": "kiddush-shabbat-eve", "moment": "Friday night, at the table" },
+  { "id": "hamotzi", "label": "HaMotzi over bread", "registry": "hamotzi", "moment": "Friday night, after Kiddush" }
+ ],
+ "missing": [
+  { "label": "Shalom Aleichem", "reason": "not in the corpus registry, phrasebook or service data" },
+  { "label": "Birkat HaBanim (blessing of the children)", "reason": "not in the corpus registry, phrasebook, service data or morning verses" }
+ ]
+}

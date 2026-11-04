@@ -50,7 +50,7 @@
    "translit": "aruchah",
    "en": "meal",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-19-w3",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "kos",
    "en": "cup",
    "kind": "word",
-   "audioId": "havdalah-opening-w55",
+   "audioId": "i-06-w1",
    "source": "data/vocab/words.json"
   }
  ]

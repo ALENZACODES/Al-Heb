@@ -1,0 +1,94 @@
+ALEF IMAGE RUN - BLOCK J MASTER INSTRUCTIONS (commands 301 to 378)
+
+This is a run of 1000 further pictures for the app and the book, in 78 paste files. Nothing needs to be attached. Keep ONE conversation in the image tool for the whole run so the style stays the same.
+
+HOW TO RUN
+1. Paste the files below one at a time, in this order: j-01.txt first, then j-02.txt, and so on. Each file is self-contained (style guide, rules, every prompt).
+2. After each file, the tool replies with a numbered list of filenames and a count. Check the count matches, then say "next" and paste the following file.
+3. Save every image under exactly the filename given (J-0001.png ... J-1000.png). Never rename. A browser suffix such as " (1)" is reported, never used.
+4. Return the images by putting them all in one folder (for example ~/alef-returns/block-j) with their exact names. Do not add text, borders or captions to any image.
+5. If an image comes out with any lettering, numerals or a real-looking face, regenerate that one image and keep the same name.
+
+RULES THAT NEVER CHANGE: no text of any kind in any image, no real people or individual faces, no logos, aspect ratios only 1:1, 3:2 or 2:3 as shown on each item.
+
+FILES IN ORDER (file: images, filenames)
+j-01.txt: 13 images, J-0001.png to J-0013.png
+j-02.txt: 13 images, J-0014.png to J-0026.png
+j-03.txt: 13 images, J-0027.png to J-0039.png
+j-04.txt: 13 images, J-0040.png to J-0052.png
+j-05.txt: 13 images, J-0053.png to J-0065.png
+j-06.txt: 13 images, J-0066.png to J-0078.png
+j-07.txt: 13 images, J-0079.png to J-0091.png
+j-08.txt: 12 images, J-0092.png to J-0103.png
+j-09.txt: 12 images, J-0104.png to J-0115.png
+j-10.txt: 13 images, J-0116.png to J-0128.png
+j-11.txt: 12 images, J-0129.png to J-0140.png
+j-12.txt: 13 images, J-0141.png to J-0153.png
+j-13.txt: 12 images, J-0154.png to J-0165.png
+j-14.txt: 13 images, J-0166.png to J-0178.png
+j-15.txt: 13 images, J-0179.png to J-0191.png
+j-16.txt: 13 images, J-0192.png to J-0204.png
+j-17.txt: 13 images, J-0205.png to J-0217.png
+j-18.txt: 13 images, J-0218.png to J-0230.png
+j-19.txt: 13 images, J-0231.png to J-0243.png
+j-20.txt: 13 images, J-0244.png to J-0256.png
+j-21.txt: 13 images, J-0257.png to J-0269.png
+j-22.txt: 13 images, J-0270.png to J-0282.png
+j-23.txt: 13 images, J-0283.png to J-0295.png
+j-24.txt: 13 images, J-0296.png to J-0308.png
+j-25.txt: 13 images, J-0309.png to J-0321.png
+j-26.txt: 13 images, J-0322.png to J-0334.png
+j-27.txt: 13 images, J-0335.png to J-0347.png
+j-28.txt: 13 images, J-0348.png to J-0360.png
+j-29.txt: 13 images, J-0361.png to J-0373.png
+j-30.txt: 13 images, J-0374.png to J-0386.png
+j-31.txt: 13 images, J-0387.png to J-0399.png
+j-32.txt: 13 images, J-0400.png to J-0412.png
+j-33.txt: 13 images, J-0413.png to J-0425.png
+j-34.txt: 13 images, J-0426.png to J-0438.png
+j-35.txt: 13 images, J-0439.png to J-0451.png
+j-36.txt: 13 images, J-0452.png to J-0464.png
+j-37.txt: 13 images, J-0465.png to J-0477.png
+j-38.txt: 13 images, J-0478.png to J-0490.png
+j-39.txt: 13 images, J-0491.png to J-0503.png
+j-40.txt: 13 images, J-0504.png to J-0516.png
+j-41.txt: 13 images, J-0517.png to J-0529.png
+j-42.txt: 13 images, J-0530.png to J-0542.png
+j-43.txt: 13 images, J-0543.png to J-0555.png
+j-44.txt: 13 images, J-0556.png to J-0568.png
+j-45.txt: 13 images, J-0569.png to J-0581.png
+j-46.txt: 13 images, J-0582.png to J-0594.png
+j-47.txt: 14 images, J-0595.png to J-0608.png
+j-48.txt: 13 images, J-0609.png to J-0621.png
+j-49.txt: 13 images, J-0622.png to J-0634.png
+j-50.txt: 13 images, J-0635.png to J-0647.png
+j-51.txt: 13 images, J-0648.png to J-0660.png
+j-52.txt: 13 images, J-0661.png to J-0673.png
+j-53.txt: 12 images, J-0674.png to J-0685.png
+j-54.txt: 12 images, J-0686.png to J-0697.png
+j-55.txt: 12 images, J-0698.png to J-0709.png
+j-56.txt: 12 images, J-0710.png to J-0721.png
+j-57.txt: 12 images, J-0722.png to J-0733.png
+j-58.txt: 12 images, J-0734.png to J-0745.png
+j-59.txt: 12 images, J-0746.png to J-0757.png
+j-60.txt: 12 images, J-0758.png to J-0769.png
+j-61.txt: 13 images, J-0770.png to J-0782.png
+j-62.txt: 13 images, J-0783.png to J-0795.png
+j-63.txt: 13 images, J-0796.png to J-0808.png
+j-64.txt: 13 images, J-0809.png to J-0821.png
+j-65.txt: 13 images, J-0822.png to J-0834.png
+j-66.txt: 13 images, J-0835.png to J-0847.png
+j-67.txt: 13 images, J-0848.png to J-0860.png
+j-68.txt: 13 images, J-0861.png to J-0873.png
+j-69.txt: 13 images, J-0874.png to J-0886.png
+j-70.txt: 13 images, J-0887.png to J-0899.png
+j-71.txt: 13 images, J-0900.png to J-0912.png
+j-72.txt: 13 images, J-0913.png to J-0925.png
+j-73.txt: 13 images, J-0926.png to J-0938.png
+j-74.txt: 13 images, J-0939.png to J-0951.png
+j-75.txt: 13 images, J-0952.png to J-0964.png
+j-76.txt: 13 images, J-0965.png to J-0977.png
+j-77.txt: 13 images, J-0978.png to J-0990.png
+j-78.txt: 10 images, J-0991.png to J-1000.png
+
+Totals: 559 vocabulary pictures, 120 festival and Shabbat scenes, 50 lesson scenes, 27 letter alternates, 15 vowel alternates, 229 flashcard pictures = 1000.

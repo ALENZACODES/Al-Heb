@@ -4,9 +4,9 @@
  * progress; it only links to the recommended lesson. Audio via ctx.audio (shown honestly; there are no recorded clips yet).
  * ctx extras for tests: ctx.placementData {config, data}, ctx.rng, ctx.clock.now.
  */
-import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
+import { el, heText, storeGet, storeSet, PROGRESS_KEY } from '../curriculum/dom.js';
 import { loadPlacementData } from './loader.js';
-import { STORE_KEY, buildItems, nextItem, recommend, seeded } from './model.js';
+import { STORE_KEY, buildItems, nextItem, openStart, recommend, seeded } from './model.js';
 
 export const DRAFT_NOTE = 'Draft, unreviewed: no Hebrew teacher has checked this check and no learner has tried it. The cutoffs that pick your starting lesson are untested guesses. You can always start at lesson r01 or pick any lesson yourself.';
 
@@ -63,15 +63,20 @@ export function mount(root, ctx) {
   async function finish() {
     const result = recommend(items, answers, P.config, P.data.lessons);
     const lesson = P.data.lessons.find((l) => l.id === result.lesson);
-    await storeSet(ctx, STORE_KEY, { v: 1, draft: true, at: now(), answers, result });
+    const progress = await storeGet(ctx, PROGRESS_KEY, { completed: {} });
+    const start = openStart(P.data.lessons, Object.keys(progress?.completed || {}), result.lesson);
+    const startLesson = P.data.lessons.find((l) => l.id === start.id);
+    await storeSet(ctx, STORE_KEY, { v: 1, draft: true, at: now(), answers, result: { ...result, start: start.id } });
     if (!alive) return;
     set(
       el('h2', {}, 'Suggested starting point'),
-      el('p', {}, `Lesson ${result.lesson}: ${lesson?.title || ''}`),
+      start.locked
+        ? el('p', {}, `Your answers fit lesson ${result.lesson}: ${lesson?.title || ''}. Lessons open in order and this check does not complete any, so that lesson is still locked. Start with lesson ${start.id}: ${startLesson?.title || ''}.`)
+        : el('p', {}, `Lesson ${start.id}: ${startLesson?.title || ''}`),
       el('p', {}, `${result.correct} of ${result.asked} answered correctly. Why: ${result.reason}.`),
       el('p', { class: 'draft-flag', role: 'note' }, DRAFT_NOTE),
-      el('a', { class: 'btn', id: 'placement-go', href: '#/learn?lesson=' + result.lesson }, 'Go to this lesson'),
-      el('button', { type: 'button', class: 'btn', onclick: () => { answers = []; renderStart(result ? { lesson: result.lesson } : null); } }, 'Retake'),
+      el('a', { class: 'btn', id: 'placement-go', href: '#/learn?lesson=' + start.id }, start.locked ? `Start lesson ${start.id}` : 'Go to this lesson'),
+      el('button', { type: 'button', class: 'btn', onclick: () => { answers = []; renderStart({ lesson: start.id }); } }, 'Retake'),
     );
     focus(h1);
   }

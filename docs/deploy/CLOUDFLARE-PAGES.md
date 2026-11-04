@@ -30,10 +30,10 @@ Does not ship: docs, tests, tools, book, research, `assets/images/` (219 MB of i
 ## Steps
 Local, before anything else (these can be run locally; **John does** everything from step 3 on).
 1. `node tools/build-precache.mjs` is not needed for Cloudflare (make-dist regenerates the list inside `dist/`), but the committed `precache-manifest.js` is still what local `node tools/serve.mjs` uses.
-2. `node tools/deploy/make-dist.mjs && node tools/deploy/check-deploy.mjs`. All checks must say PASS. The warnings about origins named in code are expected (credits and links), except the two in `src/photo/engines/web.js` (see "CSP consequences").
+2. `node tools/deploy/build_site.mjs && node tools/deploy/check-deploy.mjs`. All checks must say PASS. The warnings about origins named in code are expected (credits and links), except the two in `src/photo/engines/web.js` (see "CSP consequences").
 3. **John does:** create a free Cloudflare account at dash.cloudflare.com (email, 2FA).
-4. **John does:** Workers & Pages, Create, Pages tab, Connect to Git, authorise the Cloudflare GitHub app, and pick **only** the private ALEF repository (GitHub Settings, Applications, Cloudflare Pages, "Only select repositories"). Private repos are supported by Pages; a push to the repo is not possible from the build sandbox (invalid token), so John pushes from his own machine.
-5. **John does:** build settings: Framework preset `None`; Build command `node tools/deploy/make-dist.mjs`; Build output directory `dist`; Root directory empty; Production branch `main` (check the name your repo uses).
+4. **John does:** Workers & Pages, Create, Pages tab, Connect to Git, authorise the Cloudflare GitHub app, and pick **only** the private repository ALENZACODES/Al-Heb (GitHub Settings, Applications, Cloudflare Pages, "Only select repositories"). Private repos are supported by Pages; a push to the repo is not possible from the build sandbox (invalid token), so John pushes from his own machine.
+5. **John does:** build settings: Framework preset `None`; Build command `node tools/deploy/build_site.mjs`; Build output directory `dist`; Root directory empty; Production branch `main` (check the name your repo uses).
 6. **John does:** Environment variables (Production and Preview): `NODE_VERSION` = `22` (optional; the default is 22.23.4 today).
 7. **John does:** Save and Deploy. Watch the log for the "dist ready" report; if it prints "OVER A CLOUDFLARE PAGES LIMIT" the build fails by design.
 8. **John does:** open `https://<project>.pages.dev` in Chrome on a phone and a desktop and run the after-deploy list below. Note any failure.

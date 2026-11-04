@@ -1,5 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { waitFor } from './helpers/waitfor.js';
 import { createAudio, normalizeId } from '../src/audio/player.js';
 import { normalizeId as toolNormalize } from '../tools/audio/hebrew_data.mjs';
 
@@ -127,7 +128,7 @@ test('stop() cancels a running sequence and speech', async () => {
   const speech = fakeSpeech();
   const audio = createAudio({ settings: { voice: 'm' }, manifest: m, AudioCtor: SlowAudio, speech, UtteranceCtor: FakeUtterance, wait: async () => {} });
   const p = audio.playSequence([['syllable', 'a'], ['syllable', 'b']]);
-  await new Promise((r) => setTimeout(r, 5));
+  await waitFor(() => release, { message: "first clip started playing" });
   audio.stop();
   const rs = await p;
   assert.equal(rs.length, 1); assert.ok(speech.cancelled >= 1); void release;

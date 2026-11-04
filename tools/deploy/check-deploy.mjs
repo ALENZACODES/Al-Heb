@@ -148,7 +148,7 @@ export async function runChecks(root) {
 
   // static scans for CSP breakers
   const code = files.filter((f) => /\.(js|mjs|html)$/.test(f) && !f.startsWith('assets/vendor/'));
-  const evalHits = code.filter((f) => f !== 'sw.js' && /\b(eval\s*\(|new Function\s*\()/.test(readFileSync(join(root, f), 'utf8')));
+  const evalHits = code.filter((f) => f !== 'sw.js' && /\b(eval\s*\(|new Function\s*\()/.test(readFileSync(join(root, f), 'utf8').replace(/\/\*[\s\S]*?\*\/|(^|[^:\\'"`])\/\/.*$/gm, '$1')));
   check('no eval() or new Function() in shipped app code (CSP blocks them)', evalHits.length === 0, evalHits.join(', '));
   const inline = files.filter((f) => f.endsWith('.html')).filter((f) => /<script(?![^>]*\bsrc=)[^>]*>|\son[a-z]+\s*=\s*["']/i.test(readFileSync(join(root, f), 'utf8')));
   check('no inline <script> or on*= handlers in html (CSP blocks them)', inline.length === 0, inline.join(', '));

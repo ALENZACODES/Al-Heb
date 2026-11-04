@@ -1,0 +1,1581 @@
+{
+ "tool": "tools/a11y/newviews.mjs",
+ "axe": "4.14.0",
+ "when": "2026-11-04T13:37:54.055Z",
+ "viewport": "390x844",
+ "note": "Measured with Chromium + axe-core + DOM/CSS checks. No screen reader, no real device, no keyboard on a physical phone.",
+ "routes": {
+  "/firstday": {
+   "light": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/firstday",
+    "rendered": {
+     "text": 308,
+     "h1": "Your first 10 minutes"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Your first 10 minutes"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Your first 10 minutes - ALEF",
+    "liveRegions": [
+     {
+      "sel": "div",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 1,
+     "order": [
+      "button:Next"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": []
+   },
+   "dark": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/firstday",
+    "rendered": {
+     "text": 308,
+     "h1": "Your first 10 minutes"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Your first 10 minutes"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Your first 10 minutes - ALEF",
+    "liveRegions": [
+     {
+      "sel": "div",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 1,
+     "order": [
+      "button:Next"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": []
+   }
+  },
+  "/firstday/ladder": {
+   "light": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#ladder-title"
+    },
+    "hash": "#/firstday/ladder",
+    "rendered": {
+     "text": 391,
+     "h1": "Pointed to unpointed ladder"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "ladder-title",
+      "text": "Pointed to unpointed ladder"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Pointed to unpointed ladder - ALEF",
+    "liveRegions": [
+     {
+      "sel": "div",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 1,
+    "focus": {
+     "count": 4,
+     "order": [
+      "button:Hear it, step 1",
+      "button:I read it, step 1 co",
+      "button:Not yet, step 1",
+      "button:Next"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": []
+   },
+   "dark": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#ladder-title"
+    },
+    "hash": "#/firstday/ladder",
+    "rendered": {
+     "text": 391,
+     "h1": "Pointed to unpointed ladder"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "ladder-title",
+      "text": "Pointed to unpointed ladder"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Pointed to unpointed ladder - ALEF",
+    "liveRegions": [
+     {
+      "sel": "div",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 1,
+    "focus": {
+     "count": 4,
+     "order": [
+      "button:Hear it, step 1",
+      "button:I read it, step 1 co",
+      "button:Not yet, step 1",
+      "button:Next"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": []
+   }
+  },
+  "/placement": {
+   "light": {
+    "states": {
+     "after the start button": {
+      "axe": {
+       "violations": [],
+       "incomplete": []
+      },
+      "unnamed": [],
+      "radioGroupsWithoutName": [],
+      "placeholderOnly": [],
+      "h1": [
+       {
+        "id": "view-title",
+        "text": "Placement check (draft)"
+       }
+      ],
+      "headingSkips": [],
+      "pageTitle": "Placement check (draft) - ALEF",
+      "liveRegions": [
+       {
+        "sel": "div",
+        "role": "status",
+        "live": "polite",
+        "hidden": false
+       }
+      ],
+      "dynamicNoLive": [],
+      "hebrewIssues": [],
+      "hebrewIssueCount": 0,
+      "hebrewSpans": 1,
+      "focus": {
+       "count": 5,
+       "order": [
+        "button:Final Kaf",
+        "button:Bet",
+        "button:Tet",
+        "button:Vav",
+        "button:Not sure"
+       ],
+       "positiveTabindex": 0,
+       "noFocusRing": [],
+       "smallTargets": [],
+       "visualOrderJumps": 0,
+       "zeroSizeStops": []
+      }
+     }
+    },
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/placement",
+    "rendered": {
+     "text": 395,
+     "h1": "Placement check (draft)"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Placement check (draft)"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Placement check (draft) - ALEF",
+    "liveRegions": [
+     {
+      "sel": "div",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 2,
+     "order": [
+      "button#placement-start:Start",
+      "a:Skip: start at the b"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": []
+   },
+   "dark": {
+    "states": {
+     "after the start button": {
+      "axe": {
+       "violations": [],
+       "incomplete": []
+      },
+      "unnamed": [],
+      "radioGroupsWithoutName": [],
+      "placeholderOnly": [],
+      "h1": [
+       {
+        "id": "view-title",
+        "text": "Placement check (draft)"
+       }
+      ],
+      "headingSkips": [],
+      "pageTitle": "Placement check (draft) - ALEF",
+      "liveRegions": [
+       {
+        "sel": "div",
+        "role": "status",
+        "live": "polite",
+        "hidden": false
+       }
+      ],
+      "dynamicNoLive": [],
+      "hebrewIssues": [],
+      "hebrewIssueCount": 0,
+      "hebrewSpans": 1,
+      "focus": {
+       "count": 5,
+       "order": [
+        "button:Final Kaf",
+        "button:Bet",
+        "button:Tet",
+        "button:Vav",
+        "button:Not sure"
+       ],
+       "positiveTabindex": 0,
+       "noFocusRing": [],
+       "smallTargets": [],
+       "visualOrderJumps": 0,
+       "zeroSizeStops": []
+      }
+     }
+    },
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/placement",
+    "rendered": {
+     "text": 395,
+     "h1": "Placement check (draft)"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Placement check (draft)"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Placement check (draft) - ALEF",
+    "liveRegions": [
+     {
+      "sel": "div",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 2,
+     "order": [
+      "button#placement-start:Start",
+      "a:Skip: start at the b"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": []
+   }
+  },
+  "/speak": {
+   "light": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/speak",
+    "rendered": {
+     "text": 3047,
+     "h1": "Say it"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Say it"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Say it - ALEF",
+    "liveRegions": [
+     {
+      "sel": "div.sk-status",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 9,
+     "order": [
+      "a:Say it",
+      "a:Listening drills",
+      "a:Sounds by tradition",
+      "a:Read a prayer aloud",
+      "a:Shadowing",
+      "a:History",
+      "select#speak-set:Set",
+      "input#speak-mode-asr:Let the browser list",
+      "button#speak-start:Start"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": []
+   },
+   "dark": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/speak",
+    "rendered": {
+     "text": 3073,
+     "h1": "Say it"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Say it"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Say it - ALEF",
+    "liveRegions": [
+     {
+      "sel": "div.sk-status",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 9,
+     "order": [
+      "a:Say it",
+      "a:Listening drills",
+      "a:Sounds by tradition",
+      "a:Read a prayer aloud",
+      "a:Shadowing",
+      "a:History",
+      "select#speak-set:Set",
+      "input#speak-mode-asr:Let the browser list",
+      "button#speak-start:Start"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": []
+   }
+  },
+  "/welcome": {
+   "light": {
+    "states": {
+     "step 2 after Continue": {
+      "axe": {
+       "violations": [],
+       "incomplete": []
+      },
+      "unnamed": [],
+      "radioGroupsWithoutName": [],
+      "placeholderOnly": [],
+      "h1": [
+       {
+        "id": "view-title",
+        "text": "Welcome to ALEF אלף"
+       }
+      ],
+      "headingSkips": [],
+      "pageTitle": "Welcome - ALEF",
+      "liveRegions": [
+       {
+        "sel": "#ob-status",
+        "role": "status",
+        "live": "polite",
+        "hidden": false
+       }
+      ],
+      "dynamicNoLive": [],
+      "hebrewIssues": [],
+      "hebrewIssueCount": 0,
+      "hebrewSpans": 1,
+      "focus": {
+       "count": 3,
+       "order": [
+        "input#ob-letters-none:No, start from the b",
+        "button#ob-letters-continue:Continue",
+        "a:How this works"
+       ],
+       "positiveTabindex": 0,
+       "noFocusRing": [],
+       "smallTargets": [],
+       "visualOrderJumps": 0,
+       "zeroSizeStops": []
+      }
+     }
+    },
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/welcome",
+    "rendered": {
+     "text": 448,
+     "h1": "Welcome to ALEF אלף"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Welcome to ALEF אלף"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Welcome - ALEF",
+    "liveRegions": [
+     {
+      "sel": "#ob-status",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 1,
+    "focus": {
+     "count": 3,
+     "order": [
+      "input#ob-letters-none:No, start from the b",
+      "button#ob-letters-continue:Continue",
+      "a:How this works"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": []
+   },
+   "dark": {
+    "states": {
+     "step 2 after Continue": {
+      "axe": {
+       "violations": [],
+       "incomplete": []
+      },
+      "unnamed": [],
+      "radioGroupsWithoutName": [],
+      "placeholderOnly": [],
+      "h1": [
+       {
+        "id": "view-title",
+        "text": "Welcome to ALEF אלף"
+       }
+      ],
+      "headingSkips": [],
+      "pageTitle": "Welcome - ALEF",
+      "liveRegions": [
+       {
+        "sel": "#ob-status",
+        "role": "status",
+        "live": "polite",
+        "hidden": false
+       }
+      ],
+      "dynamicNoLive": [],
+      "hebrewIssues": [],
+      "hebrewIssueCount": 0,
+      "hebrewSpans": 1,
+      "focus": {
+       "count": 3,
+       "order": [
+        "input#ob-letters-none:No, start from the b",
+        "button#ob-letters-continue:Continue",
+        "a:How this works"
+       ],
+       "positiveTabindex": 0,
+       "noFocusRing": [],
+       "smallTargets": [],
+       "visualOrderJumps": 0,
+       "zeroSizeStops": []
+      }
+     }
+    },
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/welcome",
+    "rendered": {
+     "text": 448,
+     "h1": "Welcome to ALEF אלף"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Welcome to ALEF אלף"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Welcome - ALEF",
+    "liveRegions": [
+     {
+      "sel": "#ob-status",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 1,
+    "focus": {
+     "count": 3,
+     "order": [
+      "input#ob-letters-none:No, start from the b",
+      "button#ob-letters-continue:Continue",
+      "a:How this works"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": []
+   }
+  },
+  "/reminders": {
+   "light": {
+    "states": {
+     "Allow button (permission default)": {
+      "axe": {
+       "violations": [],
+       "incomplete": []
+      },
+      "unnamed": [],
+      "radioGroupsWithoutName": [],
+      "placeholderOnly": [],
+      "h1": [
+       {
+        "id": "view-title",
+        "text": "Study reminders"
+       }
+      ],
+      "headingSkips": [],
+      "pageTitle": "Study reminders - ALEF",
+      "liveRegions": [
+       {
+        "sel": "p.nt-status",
+        "role": "status",
+        "live": "polite",
+        "hidden": false
+       }
+      ],
+      "dynamicNoLive": [],
+      "hebrewIssues": [],
+      "hebrewIssueCount": 0,
+      "hebrewSpans": 0,
+      "focus": {
+       "count": 2,
+       "order": [
+        "input#nt-time:Time",
+        "input#nt-time:Time"
+       ],
+       "positiveTabindex": 0,
+       "noFocusRing": [],
+       "smallTargets": [],
+       "visualOrderJumps": 0,
+       "zeroSizeStops": []
+      }
+     }
+    },
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/reminders",
+    "rendered": {
+     "text": 895,
+     "h1": "Study reminders"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Study reminders"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Study reminders - ALEF",
+    "liveRegions": [
+     {
+      "sel": "p.nt-status",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 2,
+     "order": [
+      "input#nt-time:Time",
+      "input#nt-time:Time"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": []
+   },
+   "dark": {
+    "states": {
+     "Allow button (permission default)": {
+      "axe": {
+       "violations": [],
+       "incomplete": []
+      },
+      "unnamed": [],
+      "radioGroupsWithoutName": [],
+      "placeholderOnly": [],
+      "h1": [
+       {
+        "id": "view-title",
+        "text": "Study reminders"
+       }
+      ],
+      "headingSkips": [],
+      "pageTitle": "Study reminders - ALEF",
+      "liveRegions": [
+       {
+        "sel": "p.nt-status",
+        "role": "status",
+        "live": "polite",
+        "hidden": false
+       }
+      ],
+      "dynamicNoLive": [],
+      "hebrewIssues": [],
+      "hebrewIssueCount": 0,
+      "hebrewSpans": 0,
+      "focus": {
+       "count": 2,
+       "order": [
+        "input#nt-time:Time",
+        "input#nt-time:Time"
+       ],
+       "positiveTabindex": 0,
+       "noFocusRing": [],
+       "smallTargets": [],
+       "visualOrderJumps": 0,
+       "zeroSizeStops": []
+      }
+     }
+    },
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/reminders",
+    "rendered": {
+     "text": 895,
+     "h1": "Study reminders"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Study reminders"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Study reminders - ALEF",
+    "liveRegions": [
+     {
+      "sel": "p.nt-status",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 2,
+     "order": [
+      "input#nt-time:Time",
+      "input#nt-time:Time"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": []
+   }
+  },
+  "/install": {
+   "light": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/install",
+    "rendered": {
+     "text": 239,
+     "h1": "Install ALEF"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Install ALEF"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Install ALEF - ALEF",
+    "liveRegions": [
+     {
+      "sel": "p",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 1,
+     "order": [
+      "button#in-dismiss:Not now"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": []
+   },
+   "dark": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/install",
+    "rendered": {
+     "text": 239,
+     "h1": "Install ALEF"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Install ALEF"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Install ALEF - ALEF",
+    "liveRegions": [
+     {
+      "sel": "p",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 1,
+     "order": [
+      "button#in-dismiss:Not now"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": []
+   }
+  },
+  "/offline": {
+   "light": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/offline",
+    "rendered": {
+     "text": 1708,
+     "h1": "Use ALEF offline"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Use ALEF offline"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Use ALEF offline - ALEF",
+    "liveRegions": [
+     {
+      "sel": "#of-status",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 3,
+     "order": [
+      "button#of-download:Download everything ",
+      "button#of-protect:Protect my progress",
+      "a#of-export:Go to Settings to do"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": []
+   },
+   "dark": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/offline",
+    "rendered": {
+     "text": 1708,
+     "h1": "Use ALEF offline"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Use ALEF offline"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Use ALEF offline - ALEF",
+    "liveRegions": [
+     {
+      "sel": "#of-status",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 3,
+     "order": [
+      "button#of-download:Download everything ",
+      "button#of-protect:Protect my progress",
+      "a#of-export:Go to Settings to do"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": []
+   }
+  },
+  "/vocab/themes": {
+   "light": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/vocab/themes",
+    "rendered": {
+     "text": 3162,
+     "h1": "Theme packs"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Theme packs"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Theme packs - ALEF",
+    "liveRegions": [
+     {
+      "sel": "div.th-status",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 40,
+     "order": [
+      "button:Arts and sports, set",
+      "button:Body and health, set",
+      "button:Clothes and shopping",
+      "button:Describing words, se",
+      "button:Describing words, se",
+      "button:Describing words, se",
+      "button:Doing verbs, set 1 o",
+      "button:Doing verbs, set 2 o",
+      "button:Doing verbs, set 3 o",
+      "button:Doing verbs, set 4 o",
+      "button:Doing verbs, set 5 o",
+      "button:Doing verbs, set 6 o",
+      "button:Doing verbs, set 7 o",
+      "button:Doing verbs, set 8 o",
+      "button:Feelings and mind, s",
+      "button:Food and drink, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:Home things, set 1 o",
+      "button:Moving and doing, se",
+      "button:Nature and animals, ",
+      "button:People and family, s",
+      "button:Places and travel, s",
+      "button:Religion and prayer,",
+      "button:School and learning,",
+      "button:Science and ideas, s",
+      "button:Small words, set 1 o",
+      "button:Society, work and la",
+      "button:Talking and asking, ",
+      "button:Tech and media, set ",
+      "button:Time and numbers, se"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": []
+   },
+   "dark": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/vocab/themes",
+    "rendered": {
+     "text": 3162,
+     "h1": "Theme packs"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Theme packs"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Theme packs - ALEF",
+    "liveRegions": [
+     {
+      "sel": "div.th-status",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 40,
+     "order": [
+      "button:Arts and sports, set",
+      "button:Body and health, set",
+      "button:Clothes and shopping",
+      "button:Describing words, se",
+      "button:Describing words, se",
+      "button:Describing words, se",
+      "button:Doing verbs, set 1 o",
+      "button:Doing verbs, set 2 o",
+      "button:Doing verbs, set 3 o",
+      "button:Doing verbs, set 4 o",
+      "button:Doing verbs, set 5 o",
+      "button:Doing verbs, set 6 o",
+      "button:Doing verbs, set 7 o",
+      "button:Doing verbs, set 8 o",
+      "button:Feelings and mind, s",
+      "button:Food and drink, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:General things, set ",
+      "button:Home things, set 1 o",
+      "button:Moving and doing, se",
+      "button:Nature and animals, ",
+      "button:People and family, s",
+      "button:Places and travel, s",
+      "button:Religion and prayer,",
+      "button:School and learning,",
+      "button:Science and ideas, s",
+      "button:Small words, set 1 o",
+      "button:Society, work and la",
+      "button:Talking and asking, ",
+      "button:Tech and media, set ",
+      "button:Time and numbers, se"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": []
+   }
+  },
+  "/progress": {
+   "light": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/progress",
+    "rendered": {
+     "text": 10585,
+     "h1": "Your progress"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Your progress"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Progress - ALEF",
+    "liveRegions": [
+     {
+      "sel": "p.muted",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     },
+     {
+      "sel": "#pg-bk-status",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 2,
+     "order": [
+      "a:Open",
+      "a:Open"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": []
+   },
+   "dark": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/progress",
+    "rendered": {
+     "text": 10585,
+     "h1": "Your progress"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Your progress"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Progress - ALEF",
+    "liveRegions": [
+     {
+      "sel": "p.muted",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     },
+     {
+      "sel": "#pg-bk-status",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 2,
+     "order": [
+      "a:Open",
+      "a:Open"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": []
+   }
+  }
+ },
+ "findings": [],
+ "summary": {
+  "routes": 10,
+  "findings": 0,
+  "byKind": {}
+ }
+}

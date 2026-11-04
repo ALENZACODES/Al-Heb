@@ -7,7 +7,7 @@
 import { spawnSync } from 'node:child_process';
 import { join } from 'node:path';
 import { ROOT } from './content.mjs';
-import { main, parseArgs, pdfName } from './build.mjs';
+import { main, parseArgs, pdfName, scrubPdf } from './build.mjs';
 
 const extra = process.argv.slice(2);
 const base = ['--pdf', '--print', ...extra];
@@ -18,6 +18,7 @@ const src = join(ROOT, rtl.out, pdfName(rtl));
 const dst = src.replace(/\.pdf$/, '-REVERSED-ingram-lulu.pdf').replace('-rtlspreads', '');
 const r = spawnSync('python3', [join(ROOT, 'book/pdf_tools.py'), 'reverse', src, dst], { stdio: 'inherit' });
 if (r.status !== 0) process.exit(1);
+scrubPdf(dst); // last step on every output: Author=John Khan only
 console.log('reversed ->', dst);
 
 // Cut-out mnemonic flashcards (US Letter + A4): separate printable sheets, not part of the KDP interior.

@@ -50,7 +50,7 @@
    "translit": "lechayim!",
    "en": "cheers!",
    "kind": "word",
-   "audioId": "cafe-13",
+   "audioId": "i-19-w12",
    "source": "data/vocab/words.json"
   },
   {
@@ -59,7 +59,7 @@
    "translit": "espereso",
    "en": "espresso",
    "kind": "word",
-   "audioId": "cafe-05",
+   "audioId": "i-13-w3",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "ta'im me'od",
    "en": "very tasty",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-19-w11",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "kafeh hafukh",
    "en": "latte-style milky coffee (lit. upside-down coffee)",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-13-w2",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "kafeh shachor",
    "en": "black coffee",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-13-w4",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "teh im na'ana",
    "en": "tea with mint",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-13-w5",
    "source": "data/vocab/words.json"
   }
  ]

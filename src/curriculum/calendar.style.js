@@ -20,7 +20,7 @@ export const CALENDAR_CSS = `
 .alef-cal-day .g { font-weight: 700; font-size: .95rem; }
 .alef-cal-day .h { color: var(--muted); font-size: .75rem; }
 .alef-cal-day .l { font-size: .75rem; line-height: 1.2; overflow-wrap: normal; hyphens: auto; }
-@media (max-width: 419.98px) { .alef-cal-day .l { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } }
+@media (max-width: 419.98px) { .alef-cal-day .l { overflow-wrap: anywhere; hyphens: auto; } }
 @media (max-width: 359.98px) { .alef-calendar section[aria-label="Calendar grid"] { overflow-x: auto; } .alef-cal-table { min-inline-size: 322px; } }
 .alef-cal-day.out, .alef-cal-day.out .g, .alef-cal-day.out .h, .alef-cal-day.out .l { color: var(--muted); font-weight: 400; }
 .alef-cal-day.shabbat { background: color-mix(in srgb, var(--accent) 9%, transparent); }

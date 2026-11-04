@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { install, newRoot, all, sel, tick, drag } from './wordtrace.fakedom.js';
+import { waitFor } from './helpers/waitfor.js';
 
 const doc = install();
 const { mount } = await import('../src/wordtrace/wordtrace.view.js');
@@ -19,7 +20,7 @@ async function open(opts = {}) {
   const played = [];
   const ctx = { store, t: k => k, letters, wordtrace: bank, query: opts.query || {}, settings: { script: opts.script || 'print' }, audio: { has: () => false, play: (k, id) => played.push([k, id]) } };
   const unmount = mount(root, ctx);
-  await tick(); await tick();
+  await waitFor(() => root.children.length > 0 && !/Loading words/.test(root.textContent), { message: "word trace view finished loading" });
   return { root, store, unmount, played };
 }
 const btn = (root, act) => sel(root, `[data-act=${act}]`);
@@ -113,7 +114,7 @@ test('repeated wrong strokes make the round "missed": the same guide repeats and
   const vowels = btn(root, 'to-vowels'); assert.ok(vowels);
   vowels.click();
   assert.ok(sel(root, '[data-role=nq-strip]'));
-  btn(root, 'reveal').click(); btn(root, 'finish').click(); await tick(); await tick();
+  btn(root, 'reveal').click(); btn(root, 'finish').click(); await waitFor(() => sel(root, '[data-role=result]'), { message: "result panel" });
   const res = sel(root, '[data-role=result]');
   assert.equal(res.getAttribute('data-rating'), '1');
   assert.ok(store.m['wordtrace.cards']['wordtrace:print:' + BA], 'SRS card created for the missed word');
@@ -159,7 +160,7 @@ test('niqqud step: tray + tap places marks, check scores per cell, wrong cell is
   cell(0).click(); /* kamatz is still the selected mark */ pick('dagesh'); cell(0).click();
   btn(root, 'check').click();
   assert.match(txt(sel(root, '.feedback')), /All the vowel marks are right/);
-  btn(root, 'finish').click(); await tick(); await tick();
+  btn(root, 'finish').click(); await waitFor(() => sel(root, '[data-role=result]'), { message: "result panel" });
   // first check was imperfect, so the word is not a clean 3 even though the retry was right; skipping tracing also caps it at 2
   assert.equal(sel(root, '[data-role=result]').getAttribute('data-rating'), '1');
   unmount();
@@ -202,7 +203,7 @@ test('a due retrace word is offered first; unknown ?word falls back to the pick 
 test('load failure shows an alert, not a blank screen', async () => {
   const root = newRoot(doc);
   const unmount = mount(root, { t: k => k, letters: null, wordtrace: Promise.reject(new Error('nope')) });
-  await tick(); await tick();
+  await waitFor(() => sel(root, '[role=alert]') || all(root, n => n.getAttribute('role') === 'alert').length, { message: "load-failure alert" });
   assert.ok(sel(root, '[role=alert]') || all(root, n => n.getAttribute('role') === 'alert').length);
   unmount();
 });

@@ -5,8 +5,8 @@
  "themeSize": 125,
  "counts": {
   "words": 4782,
-  "withExample": 1038,
-  "withoutExample": 3744,
+  "withExample": 1044,
+  "withoutExample": 3738,
   "droppedFromWordsJson": 1515
  },
  "themes": [
@@ -23,7 +23,7 @@
    "topic": "body-health",
    "title": "Body and health, set 1 of 1",
    "size": 125,
-   "withExample": 30,
+   "withExample": 32,
    "file": "body-health-set01.json"
   },
   {
@@ -63,7 +63,7 @@
    "topic": "doing-verbs",
    "title": "Doing verbs, set 1 of 8",
    "size": 125,
-   "withExample": 122,
+   "withExample": 121,
    "file": "doing-verbs-set01.json"
   },
   {
@@ -71,7 +71,7 @@
    "topic": "doing-verbs",
    "title": "Doing verbs, set 2 of 8",
    "size": 125,
-   "withExample": 42,
+   "withExample": 44,
    "file": "doing-verbs-set02.json"
   },
   {
@@ -143,7 +143,7 @@
    "topic": "general-things",
    "title": "General things, set 1 of 11",
    "size": 125,
-   "withExample": 117,
+   "withExample": 113,
    "file": "general-things-set01.json"
   },
   {
@@ -151,7 +151,7 @@
    "topic": "general-things",
    "title": "General things, set 2 of 11",
    "size": 125,
-   "withExample": 18,
+   "withExample": 24,
    "file": "general-things-set02.json"
   },
   {
@@ -239,7 +239,7 @@
    "topic": "moving-doing",
    "title": "Moving and doing, set 1 of 1",
    "size": 125,
-   "withExample": 28,
+   "withExample": 29,
    "file": "moving-doing-set01.json"
   },
   {
@@ -255,7 +255,7 @@
    "topic": "people-family",
    "title": "People and family, set 1 of 1",
    "size": 125,
-   "withExample": 36,
+   "withExample": 37,
    "file": "people-family-set01.json"
   },
   {
@@ -287,7 +287,7 @@
    "topic": "science-ideas",
    "title": "Science and ideas, set 1 of 1",
    "size": 125,
-   "withExample": 22,
+   "withExample": 23,
    "file": "science-ideas-set01.json"
   },
   {
@@ -311,7 +311,7 @@
    "topic": "talking-asking",
    "title": "Talking and asking, set 1 of 1",
    "size": 125,
-   "withExample": 98,
+   "withExample": 95,
    "file": "talking-asking-set01.json"
   },
   {
@@ -327,7 +327,7 @@
    "topic": "time-numbers",
    "title": "Time and numbers, set 1 of 1",
    "size": 125,
-   "withExample": 49,
+   "withExample": 50,
    "file": "time-numbers-set01.json"
   }
  ]

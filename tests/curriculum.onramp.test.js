@@ -1,5 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { waitFor } from "./helpers/waitfor.js";
+const until = (n, re) => waitFor(() => re.test(n.text), { message: `text ${re} never appeared` });
 
 // Same minimal fake DOM as curriculum.learnflow.test.js: checks view logic, not browser rendering.
 class Node_ {
@@ -187,58 +189,61 @@ test("dialogues: original, pointed, with transliteration and English, tied to re
 
 // ---------- views
 test("lesson page has a 'Remember it' step from mnemonics.json and Spot It links", async () => {
-  const root = new Node_("div"); const un = mount(root, ctxFor(memStore(), { lesson: "r01" })); await tick(100);
+  const root = new Node_("div"); const un = mount(root, ctxFor(memStore(), { lesson: "r01" })); await until(root, /Spot It: Shin/);
   assert.match(root.text, /Remember it/); assert.match(root.text, /Anchor word/); assert.match(root.text, /Spot It: Shin/);
   assert.doesNotMatch(root.text, /null|undefined/);
   un();
 });
 
 test("loanwords view: meaning hidden until revealed, 'I knew this' persists, unmount clean", async () => {
-  const store = memStore(); const root = new Node_("div"); const un = mount(root, ctxFor(store, { loanwords: "lw1" })); await tick(100);
+  const store = memStore(); const root = new Node_("div"); const un = mount(root, ctxFor(store, { loanwords: "lw1" })); await until(root, /Words you can already read/);
   assert.match(root.text, /Words you can already read/); assert.match(root.text, /Draft content/);
   assert.doesNotMatch(root.text, /null|undefined/);
   const shown = (re) => root.find((n) => n.tag === "div" && n.className === "alef-answer" && !n.hidden).some((n) => re.test(n.text));
   assert.equal(root.find((n) => n.className === "alef-answer" && !n.hidden).length, 0);
   await btn(root, /Show the meaning/).click();
   assert.ok(shown(/banana/));
-  await btn(root, /I knew this/).click(); await tick();
+  await btn(root, /I knew this/).click(); await waitFor(() => store.m["curriculum.loanwords"]?.["lw1-w1"], { message: "loanword knew never stored" });
   assert.equal(store.m["curriculum.loanwords"]["lw1-w1"].knew, true);
   un(); assert.equal(root.children.length, 0);
-  const root2 = new Node_("div"); mount(root2, ctxFor(memStore(), { loanwords: "1" })); await tick(100);
+  const root2 = new Node_("div"); mount(root2, ctxFor(memStore(), { loanwords: "1" })); await until(root2, /round 1/);
   assert.match(root2.text, /round 1/);
 });
 
 test("spotit view: tap, check, result, pair stats and card lapse persisted, hint after fooled", async () => {
-  const store = memStore(); const root = new Node_("div"); const un = mount(root, ctxFor(store, { spotit: "kaf", seed: "3" })); await tick(150);
+  const store = memStore(); const root = new Node_("div"); const un = mount(root, ctxFor(store, { spotit: "kaf", seed: "3" })); await until(root, /Tap every/);
   assert.match(root.text, /Tap every/);
   const cells = root.find((n) => n.attrs["data-i"] !== undefined);
   assert.ok(cells.length > 10);
   // tap everything: all hits plus every decoy and other letter
   for (const c of cells) await c.click();
-  await btn(root, /^Check/).click(); await tick(80);
+  await btn(root, /^Check/).click(); await until(root, /look-alike fooled you/);
   assert.match(root.text, /Found \d+ of \d+/);
   assert.match(root.text, /look-alike fooled you/);
   assert.ok(store.m["curriculum.pairs"] && Object.keys(store.m["curriculum.pairs"]).length >= 1);
   assert.ok(store.m["srs.cards"]["letter:kaf"]);
   assert.ok(root.find((n) => n.attrs["data-hint-kind"] === "confusable-pair").length === 1);
   un(); assert.equal(root.children.length, 0);
-  const r2 = new Node_("div"); mount(r2, ctxFor(memStore(), { spotit: "nope" })); await tick(60);
+  const r2 = new Node_("div"); mount(r2, ctxFor(memStore(), { spotit: "nope" })); await until(r2, /no letter/);
   assert.match(r2.text, /no letter/);
 });
 
 test("checkpoint view: needs completed lessons, then asks, grades, saves and links to Spot It", async () => {
-  const empty = new Node_("div"); mount(empty, ctxFor(memStore(), { checkpoint: "1" })); await tick(80);
+  const empty = new Node_("div"); mount(empty, ctxFor(memStore(), { checkpoint: "1" })); await until(empty, /Nothing to check yet/);
   assert.match(empty.text, /Nothing to check yet/);
   // complete the lessons through r18 (bet, kaf, gimel, nun, dalet, resh... all taught)
   const completed = Object.fromEntries(lessons.filter((l) => l.track === "read").slice(0, 18).map((l) => [l.id, 1]));
   const store = memStore({ "curriculum.progress": { completed } });
-  const root = new Node_("div"); const un = mount(root, ctxFor(store, { checkpoint: "1", seed: "2" })); await tick(100);
+  const root = new Node_("div"); const un = mount(root, ctxFor(store, { checkpoint: "1", seed: "2" })); await until(root, /Question 1 of/);
   assert.match(root.text, /Question 1 of/);
   let guard = 0;
   while (/Question \d+ of/.test(root.text) && guard++ < 60) {
-    const opts = root.find((n) => n.tag === "button" && /alef-opt/.test(n.className));
-    await opts[0].click(); await tick(20);
-    await btn(root, /^(Next|See results)$/).click(); await tick(30);
+    const optsNow = () => root.find((n) => n.tag === "button" && /alef-opt/.test(n.className) && !n.disabled);
+    await waitFor(() => optsNow().length, { message: "question options never rendered" });
+    const opts = optsNow();
+    await opts[0].click(); await waitFor(() => btn(root, /^(Next|See results)$/), { message: "Next/See results never shown" });
+    await btn(root, /^(Next|See results)$/).click();
+    await waitFor(() => /of \d+ right/.test(root.text) || root.find((n) => n.tag === "button" && /alef-opt/.test(n.className) && !n.disabled).length, { message: "no next question or result" });
   }
   assert.match(root.text, /Checkpoint/); assert.match(root.text, /of \d+ right/);
   assert.ok(store.m["curriculum.checkpoints"]);
@@ -247,19 +252,19 @@ test("checkpoint view: needs completed lessons, then asks, grades, saves and lin
 });
 
 test("dialogues view: list and one dialogue, toggles hide transliteration and English", async () => {
-  const list = new Node_("div"); mount(list, ctxFor(memStore(), { dialogues: "1" })); await tick(80);
+  const list = new Node_("div"); mount(list, ctxFor(memStore(), { dialogues: "1" })); await until(list, /At the cafe/);
   assert.match(list.text, /At the cafe/); assert.match(list.text, /Draft content/);
-  const root = new Node_("div"); const un = mount(root, ctxFor(memStore(), { dialogue: "d-cafe" })); await tick(80);
+  const root = new Node_("div"); const un = mount(root, ctxFor(memStore(), { dialogue: "d-cafe" })); await until(root, /What would you like/);
   assert.match(root.text, /shalom! ma tirtsi\?/); assert.match(root.text, /What would you like/);
   await btn(root, /Transliteration/).click(); assert.doesNotMatch(root.text, /ma tirtsi/);
   await btn(root, /English/).click(); assert.doesNotMatch(root.text, /What would you like/);
   un();
-  const bad = new Node_("div"); mount(bad, ctxFor(memStore(), { dialogue: "zz" })); await tick(60);
+  const bad = new Node_("div"); mount(bad, ctxFor(memStore(), { dialogue: "zz" })); await until(bad, /no dialogue/);
   assert.match(bad.text, /no dialogue/);
 });
 
 test("learn map links to the new features without errors", async () => {
-  const root = new Node_("div"); const un = mount(root, ctxFor(memStore(), {})); await tick(100);
+  const root = new Node_("div"); const un = mount(root, ctxFor(memStore(), {})); await until(root, /Look-alike checkpoint/);
   assert.match(root.text, /Words you can already read/); assert.match(root.text, /Look-alike checkpoint/);
   un();
 });

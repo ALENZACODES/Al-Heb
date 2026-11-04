@@ -74,6 +74,9 @@ export function generateCorrections(root = ROOT) {
   return out;
 }
 
+// A field may be a dotted path into the record (for example "forms.plural"); plain names behave as before.
+const getF = (w, f) => f.split('.').reduce((o, k) => (o == null ? undefined : o[k]), w);
+const setF = (w, f, v) => { const ks = f.split('.'); const last = ks.pop(); const o = ks.reduce((x, k) => x[k], w); o[last] = v; };
 const median = (ids, byId) => {
   const r = ids.map((i) => byId.get(i)?.frequencyRank).filter((x) => x != null).sort((a, b) => a - b);
   return r.length ? r[Math.floor(r.length / 2)] : 0;
@@ -95,13 +98,13 @@ export function applyCorrections(root = ROOT, { dry = false } = {}) {
       if (w.he === c.old.he && w.pos === c.old.pos && w.frequencyRank === c.old.frequencyRank) { todoRemove.add(c.id); report.applied.push(c); } else report.conflicts.push({ ...c, current: { he: w.he, pos: w.pos, frequencyRank: w.frequencyRank } });
     } else {
       if (!w) { report.conflicts.push({ ...c, current: 'record missing' }); continue; }
-      if (eq(w[c.field] ?? null, c.new)) report.already.push(c);
-      else if (eq(w[c.field] ?? null, c.old)) { (todoSet.get(c.id) || todoSet.set(c.id, {}).get(c.id))[c.field] = c.new; report.applied.push(c); } else report.conflicts.push({ ...c, current: w[c.field] ?? null });
+      if (eq(getF(w, c.field) ?? null, c.new)) report.already.push(c);
+      else if (eq(getF(w, c.field) ?? null, c.old)) { (todoSet.get(c.id) || todoSet.set(c.id, {}).get(c.id))[c.field] = c.new; report.applied.push(c); } else report.conflicts.push({ ...c, current: getF(w, c.field) ?? null });
     }
   }
   if (report.conflicts.length) return report;
 
-  const touchWord = (w) => { if (todoSet.has(w.id)) Object.assign(w, todoSet.get(w.id)); return w; };
+  const touchWord = (w) => { if (todoSet.has(w.id)) for (const [f, v] of Object.entries(todoSet.get(w.id))) setF(w, f, v); return w; };
   const note = (f, n) => { report.files[f] = n; };
   // words.json
   const before = wordsDoc.words.length;
@@ -176,6 +179,6 @@ if (isMain) {
     }
     console.log(`${dry ? 'DRY RUN (nothing written)' : 'applied'}: ${r.applied.length} changes, ${r.already.length} already applied`);
     for (const [f, n] of Object.entries(r.files)) console.log(`  ${f}: ${JSON.stringify(n)}`);
-    if (dry) for (const c of r.applied.slice(0, 200)) console.log(c.field === REMOVE ? `  - remove ${c.id} ${c.old.he} (${c.old.pos}, rank ${c.old.frequencyRank})` : `  ~ ${c.id} translit ${JSON.stringify(c.old)} -> ${JSON.stringify(c.new)}`);
+    if (dry) for (const c of r.applied.slice(0, 200)) console.log(c.field === REMOVE ? `  - remove ${c.id} ${c.old.he} (${c.old.pos}, rank ${c.old.frequencyRank})` : `  ~ ${c.id} ${c.field} ${JSON.stringify(c.old)} -> ${JSON.stringify(c.new)}`);
   }
 }

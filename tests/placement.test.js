@@ -100,3 +100,18 @@ test("view: mounts, flags draft, runs to a result, saves placement.v1, unmounts"
   assert.equal(m["placement.v1"].answers.length, 20);
   un();
 });
+
+test("openStart: a locked recommendation resolves to an open lesson; an open one is kept; done ones are skipped", () => {
+  const read = data.lessons.filter((l) => l.track === "read");
+  const locked = read.find((l) => l.prerequisites.length && l.id !== read[0].id);
+  const r = M.openStart(data.lessons, [], locked.id);
+  assert.equal(r.id, read[0].id); assert.equal(r.locked, true); assert.equal(r.wanted, locked.id);
+  assert.equal(M.openStart(data.lessons, [], read[0].id).locked, false);
+  const afterFirst = M.openStart(data.lessons, [read[0].id], read[0].id);
+  assert.notEqual(afterFirst.id, read[0].id);
+  // for every lesson a learner could be recommended, the target is always unlocked given the completed set
+  for (const l of read) for (const done of [[], [read[0].id], read.slice(0, 5).map((x) => x.id)]) {
+    const o = M.openStart(data.lessons, done, l.id), t = data.lessons.find((x) => x.id === o.id);
+    assert.ok(t.prerequisites.every((p) => done.includes(p)), `${l.id} -> ${o.id} with ${done.length} done`);
+  }
+});

@@ -36,3 +36,34 @@ test('gen_via_api: dry run default, 3 variants cap, size mapping, selection', ()
   assert.equal(selectRows(data, parseArgs(['--command', '11'])).length, 10);
   assert.equal(selectRows(data, parseArgs(['--block', 'D'])).length, 75);
 });
+
+// --- approvals -> book image pickup (no code change when images get approved) ---
+import { mkdtempSync, mkdirSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { approvedManifest } from '../book/build.mjs';
+import { lessonChapters } from '../book/intermediate/lessons.mjs';
+import { TRACKS } from '../book/intermediate/lessons.mjs';
+
+test('approvedManifest: an approval in approvals.json makes the resolver return the real image; unapproved stays placeholder', () => {
+  const root = mkdtempSync(join(tmpdir(), 'alefimg-'));
+  mkdirSync(join(root, 'data/images'), { recursive: true }); mkdirSync(join(root, 'assets/img/gen'), { recursive: true });
+  const rec = (stem) => ({ width: 1600, height: 1600, variants: [{ edge: 800, file: `${stem}.800.webp`, width: 800, height: 800 }] });
+  writeFileSync(join(root, 'data/images/provenance.json'), JSON.stringify({ images: { BG_cafe: rec('BG_cafe'), BG_market: rec('BG_market'), BG_gone: rec('BG_gone') } }));
+  writeFileSync(join(root, 'data/images/approvals.json'), JSON.stringify({ version: 1, approvals: { BG_cafe: { status: 'approved' }, BG_market: { status: 'rejected' }, BG_gone: { status: 'approved' } } }));
+  writeFileSync(join(root, 'assets/img/gen/BG_cafe.800.webp'), 'x'); writeFileSync(join(root, 'assets/img/gen/BG_market.800.webp'), 'x');
+  const m = approvedManifest(root);
+  assert.deepEqual(Object.keys(m.images), ['BG_cafe']); // rejected excluded; approved-but-file-missing excluded
+  const r = createImgResolver({ base: 'b', files: [], generated: m });
+  assert.equal(r.src('BG_cafe'), 'b/gen/BG_cafe.800.webp'); assert.equal(r.isReal('BG_cafe'), true);
+  assert.equal(r.src('BG_market'), 'b/placeholders/BG_market.svg');
+});
+test('chapter opener shows placeholder until its scene is approved, then the <img>', () => {
+  const scene = Object.values(TRACKS)[0].scene;
+  const none = lessonChapters({ img: () => null });
+  const real = lessonChapters({ img: (s) => (s === scene ? `gen/${s}.800.webp` : null), alt: { [scene]: 'alt text' } });
+  const track = Object.keys(TRACKS)[0];
+  assert.match(none.html[track], /Image placeholder/);
+  assert.match(real.html[track], new RegExp(`<img src="gen/${scene}\\.800\\.webp" alt="alt text"`));
+  assert.doesNotMatch(real.html[track], /Image placeholder/);
+});

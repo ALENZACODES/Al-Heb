@@ -6,11 +6,11 @@ textbook readings, not any one community's practice. Treat the files as a draft 
 
 ## What is produced
 
-`node tools/pronunciation/build_variants.mjs` reads `data/vocab/words.json` (6,299 records: 6,142 words, 157 phrases),
+`node tools/pronunciation/build_variants.mjs` reads `data/vocab/words.json` (6,297 records: 6,140 words, 157 phrases),
 `data/corpus/phrasebook.json` (204 entries) and `data/corpus/registry.json` (70 entries, 129 lines; one record per
 line, ids `<entry>` or `<entry>-l<n>` as the audio manifest uses) and writes
 
-- `data/pronunciation/variants/_vocab-1..4.json`, `_corpus-1.json`: shards of at most 2,000 records each (6,632 in all);
+- `data/pronunciation/variants/_vocab-1..4.json`, `_corpus-1.json`: shards of at most 2,000 records each (6,630 in all);
 - `_index.json`: counts, flag totals, shard list;
 - `_review.csv`: the 401 records whose rendering rests on a guess (see "Flags").
 

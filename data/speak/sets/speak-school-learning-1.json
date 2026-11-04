@@ -59,7 +59,7 @@
    "translit": "teshuvah",
    "en": "answer, response",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-28-w6",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "bedikah",
    "en": "an examination, check-up, test, trial",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-20-w8",
    "source": "data/vocab/words.json"
   },
   {

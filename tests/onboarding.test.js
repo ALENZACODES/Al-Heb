@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { N, tick, btn, memStore } from './torahread.fakedom.js'; // fake DOM: checks view logic, not browser rendering
+import { N, btn, memStore } from './torahread.fakedom.js';
+import { waitFor } from './helpers/waitfor.js'; // fake DOM: checks view logic, not browser rendering
 const M = await import('../src/onboarding/model.js');
 const { loadOnboardingData } = await import('../src/onboarding/loader.js');
 const { matchRoute, ROUTES } = await import('../src/shell/router.js');
@@ -64,8 +65,11 @@ test('buildPlan: "some" without a placement result starts with the check and say
   assert.equal(p.startLesson, 'r01');
 });
 test('buildPlan: a placement result moves the start lesson and drops the check; unknown lessons are ignored', () => {
-  const p = M.buildPlan({ record: rec('vowels', 20), placement: placement('r07'), lessons: D.lessons, plans: D.plans });
+  const before = read.slice(0, read.findIndex((l) => l.id === 'r07')).map((l) => l.id); // lessons that unlock r07 when done
+  const p = M.buildPlan({ record: rec('vowels', 20), placement: placement('r07'), lessons: D.lessons, plans: D.plans, completed: before });
   assert.equal(p.source, 'placement'); assert.equal(p.startLesson, 'r07');
+  const lockedPlan = M.buildPlan({ record: rec('vowels', 20), placement: placement('r07'), lessons: D.lessons, plans: D.plans });
+  assert.equal(lockedPlan.startLesson, 'r01'); assert.match(lockedPlan.note, /locked until earlier lessons/);
   assert.ok(!M.planHrefs(p).includes('#/placement'));
   assert.equal(p.days[0].items[0].lesson, 'r07');
   const bad = M.buildPlan({ record: rec('vowels', 20), placement: placement('zzz'), lessons: D.lessons, plans: D.plans });
@@ -100,18 +104,20 @@ const mk = (init = {}, settingsInit = {}) => {
   const ctx = { store, settings, t: (k) => k, route: (p) => routed.push(p), hasRoute: () => true, onboardingData: D, clock: { now: () => 1_800_000_000_000 } };
   return { root, store, settings, ctx, routed };
 };
+const card0Text = (root) => root.querySelector('section.ob-plan').textContent;
 const radios = (root, name) => root.queryAll(`input[name="${name}"]`);
 const labelFor = (root, id) => root.queryAll(`label[for="${id}"]`)[0];
 const check = async (root, name, value) => { // mimic the browser: the picked radio becomes checked, then change fires
   const i = root.queryAll(`input[name="${name}"][value="${value}"]`)[0]; assert.ok(i, `${name}=${value}`);
   for (const o of root.queryAll(`input[name="${name}"]`)) o.checked = o === i;
   await i.fire('change'); return i; };
+const ready = (root) => waitFor(() => !/Loading/.test(root.textContent) && (root.querySelector('#ob-start') || root.querySelector('fieldset') || /could not be loaded/.test(root.textContent)), { message: 'onboarding view never finished rendering' });
 const submit = (root, formId) => root.querySelector('#' + formId).fire('submit');
 const statusText = (root) => root.querySelector('#ob-status').textContent;
 
 test('view, first run: the letters question with three labelled radios; Continue without an answer saves nothing', async () => {
   const { root, store, settings, ctx } = mk();
-  mount(root, ctx); await tick();
+  mount(root, ctx); await ready(root);
   assert.equal(root.querySelector('#view-title').textContent.replace(/\s+/g, ' ').trim(), 'Welcome to ALEF אלף'); // t() returned the key, so the English fallback is used
   assert.match(root.textContent, /Can you already read the Hebrew letters\?/);
   const rs = radios(root, 'letters');
@@ -127,7 +133,7 @@ test('view, first run: the letters question with three labelled radios; Continue
 });
 test('view: "No" stores onboarding.v1 with start /firstday, marks onboarded, and moves on to the synagogue step', async () => {
   const { root, store, settings, ctx } = mk();
-  mount(root, ctx); await tick();
+  mount(root, ctx); await ready(root);
   await check(root, 'letters', 'none'); await submit(root, 'ob-form-letters');
   const saved = store.m[M.STORE_KEY];
   assert.equal(saved.letters, 'none'); assert.equal(saved.start, '/firstday'); assert.equal(saved.askedAt, '2027-01-15T08:00:00.000Z');
@@ -139,7 +145,7 @@ test('view: "No" stores onboarding.v1 with start /firstday, marks onboarded, and
 test('view: "Some" and "Yes, I read with vowels" both lead to #/placement', async () => {
   for (const v of ['some', 'vowels']) {
     const { root, store, ctx } = mk();
-    mount(root, ctx); await tick();
+    mount(root, ctx); await ready(root);
     await check(root, 'letters', v); await submit(root, 'ob-form-letters');
     assert.equal(store.m[M.STORE_KEY].start, '/placement');
     assert.equal(root.querySelector('#ob-skip-now').attrs.href, '#/placement');
@@ -147,7 +153,7 @@ test('view: "Some" and "Yes, I read with vowels" both lead to #/placement', asyn
 });
 test('view, stage 2: Reform suggests Sephardi; an explicit Ashkenazi pick is written to the congregation setting; Orthodox suggests nothing', async () => {
   const { root, store, settings, ctx } = mk({ [M.STORE_KEY]: rec('none', null, { step: 'congregation' }) });
-  mount(root, ctx); await tick();
+  mount(root, ctx); await ready(root);
   assert.ok(!root.querySelector('#ob-form-letters'), 'the question is not asked again');
   assert.deepEqual(radios(root, 'denomination').map((r) => r.attrs.value), ['reform', 'conservative', 'reconstructionist', 'orthodox']);
   assert.deepEqual(radios(root, 'pron').map((r) => r.attrs.value), ['sephardi', 'ashkenazi', 'israeli']);
@@ -168,7 +174,7 @@ test('view, stage 2: Reform suggests Sephardi; an explicit Ashkenazi pick is wri
 });
 test('view, stage 2: Skip leaves the pronunciation setting untouched', async () => {
   const { root, settings, ctx } = mk({ [M.STORE_KEY]: rec('some', null, { step: 'congregation' }) }, { congregation: 'israeli' });
-  mount(root, ctx); await tick();
+  mount(root, ctx); await ready(root);
   await check(root, 'denomination', 'conservative');
   await root.querySelector('#ob-congregation-skip').click();
   assert.equal(settings.get('congregation'), 'israeli');
@@ -176,11 +182,13 @@ test('view, stage 2: Skip leaves the pronunciation setting untouched', async () 
 });
 test('view, stage 3: minutes choice builds the week card; links are real routes; start button goes to the stage 1 route', async () => {
   const { root, store, ctx } = mk({ [M.STORE_KEY]: rec('none', null, { step: 'minutes' }) });
-  mount(root, ctx); await tick();
+  mount(root, ctx); await ready(root);
   assert.deepEqual(radios(root, 'minutes').map((r) => Number(r.attrs.value)), D.plans.minutesOptions);
   assert.equal(radios(root, 'minutes').find((r) => r.attrs.checked === '')?.attrs.value, String(D.plans.defaultMinutes));
   await check(root, 'minutes', '15'); await submit(root, 'ob-form-minutes');
   assert.equal(store.m[M.STORE_KEY].minutesPerDay, 15); assert.equal(store.m[M.STORE_KEY].step, 'plan');
+  assert.equal(store.m['onboarding.v1.dailyGoal'], 15, 'minutes chosen here are the Today card study goal');
+  assert.match(card0Text(root), /pacing guide/);
   const card = root.querySelector('section.ob-plan');
   assert.ok(card); assert.ok(card.textContent.includes(DRAFT_NOTE));
   assert.equal(card.queryAll('ol.ob-days li strong').length, 7);
@@ -190,15 +198,16 @@ test('view, stage 3: minutes choice builds the week card; links are real routes;
   assert.match(card.textContent, /15 minutes a day/);
 });
 test('view, plan: a placement result changes the start button to the recommended lesson and rebuilds the card', async () => {
-  const { root, ctx } = mk({ [M.STORE_KEY]: rec('vowels', 10), [M.PLACEMENT_KEY]: placement('r07') });
-  mount(root, ctx); await tick();
+  const done = Object.fromEntries(read.slice(0, read.findIndex((l) => l.id === 'r07')).map((l) => [l.id, 1]));
+  const { root, ctx } = mk({ [M.STORE_KEY]: rec('vowels', 10), [M.PLACEMENT_KEY]: placement('r07'), 'curriculum.progress': { completed: done } });
+  mount(root, ctx); await ready(root);
   assert.equal(root.querySelector('#ob-start').attrs.href, '#/learn?lesson=r07');
   assert.match(root.querySelector('section.ob-plan').textContent, /Lessons start at r07/);
   assert.ok(!root.querySelector('section.ob-plan').queryAll('a').some((a) => a.attrs.href === '#/placement'));
 });
 test('view, return visit: never re-asks by itself; "Change my starting point" re-asks and rewrites the record', async () => {
   const { root, store, ctx } = mk({ [M.STORE_KEY]: rec('none', 10) });
-  mount(root, ctx); await tick();
+  mount(root, ctx); await ready(root);
   assert.ok(!root.querySelector('#ob-form-letters'));
   const change = root.querySelector('#ob-change-start');
   assert.equal(change.attrs.type, 'button'); assert.match(change.textContent, /Change my starting point/);
@@ -214,7 +223,7 @@ test('view, return visit: never re-asks by itself; "Change my starting point" re
 test('view, accessibility: every radio has a label[for], every fieldset a legend, every button a type, one h1 and a live status', async () => {
   for (const init of [{}, { [M.STORE_KEY]: rec('none', null, { step: 'congregation' }) }, { [M.STORE_KEY]: rec('none', null, { step: 'minutes' }) }, { [M.STORE_KEY]: rec('none', 10) }]) {
     const { root, ctx } = mk(init);
-    mount(root, ctx); await tick();
+    mount(root, ctx); await ready(root);
     for (const i of root.queryAll('input')) assert.ok(labelFor(root, i.attrs.id), 'label for ' + i.attrs.id);
     for (const f of root.queryAll('fieldset')) assert.equal(f.children[0].tag, 'legend');
     for (const b of root.queryAll('button')) assert.ok(['button', 'submit'].includes(b.attrs.type), b.textContent);
@@ -226,8 +235,14 @@ test('view, accessibility: every radio has a label[for], every fieldset a legend
 test('view: when the plan data fails to load the learner can still start, and the failure is said', async () => {
   const { root, ctx } = mk({ [M.STORE_KEY]: rec('none', 10) });
   ctx.onboardingData = Promise.reject(new Error('boom'));
-  mount(root, ctx); await tick();
+  mount(root, ctx); await ready(root);
   assert.equal(root.querySelector('#ob-start').attrs.href, '#/firstday');
   assert.match(root.textContent, /could not be loaded/);
   assert.ok(!root.querySelector('section.ob-plan'));
+});
+
+test('view, plan: a locked placement result starts the week and the Start button at an open lesson', async () => {
+  const { root, ctx } = mk({ [M.STORE_KEY]: rec('vowels', 10), [M.PLACEMENT_KEY]: placement('r13') });
+  mount(root, ctx); await ready(root);
+  assert.equal(root.querySelector('#ob-start').attrs.href, '#/learn?lesson=r01');
 });

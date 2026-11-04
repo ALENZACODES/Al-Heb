@@ -59,7 +59,7 @@
    "translit": "avodah",
    "en": "worship, service",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-36-w1",
    "source": "data/vocab/words.json"
   },
   {
@@ -77,7 +77,7 @@
    "translit": "chom",
    "en": "Heat, warmth",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-14-w8",
    "source": "data/vocab/words.json"
   },
   {

@@ -167,7 +167,7 @@ export function mount(root, ctx = {}) {
     if (!words.length) {
       nodes.push(h('div', { class: 'notice', role: 'status', 'data-role': 'empty' },
         t('wt.empty', 'No words at this level use only letters you have traced yet. Trace more letters first, or tick "Include letters I have not traced yet".'), ' ',
-        h('a', { href: '#/letters' }, t('wt.goLetters', 'Go to the letters'))));
+        h('a', { href: '#/letters', style: 'display:inline-flex;align-items:center;min-block-size:48px;min-inline-size:48px' }, t('wt.goLetters', 'Go to the letters'))));
     } else {
       nodes.push(h('div', { class: 'row' }, h('button', { 'data-act': 'next-word', onclick: () => startWord(pickNext(words, { dueIds: [...due], progress: S.progress, script: S.script, avoid: S.word && S.word.he })) }, dueHere.length ? t('wt.startRetrace', 'Start: retrace a due word') : t('wt.start', 'Start the next word'))));
       nodes.push(h('p', { class: 'muted' }, t('wt.orChoose', 'Or choose a word:')));

@@ -1,6 +1,6 @@
 # Device-profile walk (P074)
 
-Run: 2026-11-04T06:07:30.895Z · Chromium 153.0.8010.12 · 100 page visits in 154s
+Run: 2026-11-04T06:17:24.425Z · Chromium 153.0.8010.12 · 180 page visits in 320s
 
 ## What this is, and is not
 
@@ -74,14 +74,61 @@ Each cell is light / dark. Counts are distinct flagged elements on that page. "o
 | `/settings` | Pixel 7 | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
 | `/settings` | Galaxy S9+ | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
 | `/settings` | iPad Mini | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/speak` | iPhone SE | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/speak` | iPhone 14 Pro | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/speak` | Pixel 7 | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/speak` | Galaxy S9+ | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/speak` | iPad Mini | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/offline` | iPhone SE | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/offline` | iPhone 14 Pro | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/offline` | Pixel 7 | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/offline` | Galaxy S9+ | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/offline` | iPad Mini | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/reminders` | iPhone SE | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/reminders` | iPhone 14 Pro | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/reminders` | Pixel 7 | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/reminders` | Galaxy S9+ | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/reminders` | iPad Mini | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/install` | iPhone SE | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/install` | iPhone 14 Pro | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/install` | Pixel 7 | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/install` | Galaxy S9+ | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/install` | iPad Mini | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/vocab/themes` | iPhone SE | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/vocab/themes` | iPhone 14 Pro | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/vocab/themes` | Pixel 7 | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/vocab/themes` | Galaxy S9+ | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/vocab/themes` | iPad Mini | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/welcome` | iPhone SE | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/welcome` | iPhone 14 Pro | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/welcome` | Pixel 7 | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/welcome` | Galaxy S9+ | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/welcome` | iPad Mini | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/firstday/ladder` | iPhone SE | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/firstday/ladder` | iPhone 14 Pro | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/firstday/ladder` | Pixel 7 | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/firstday/ladder` | Galaxy S9+ | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/firstday/ladder` | iPad Mini | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/progress` | iPhone SE | yes / yes | 0 (clip) / 0 (clip) | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/progress` | iPhone 14 Pro | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/progress` | Pixel 7 | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/progress` | Galaxy S9+ | yes / yes | 0 (clip) / 0 (clip) | - / - | - / - | - / - | - / - | - / - | - / - |
+| `/progress` | iPad Mini | yes / yes | 0 / 0 | - / - | - / - | - / - | - / - | - / - | - / - |
 
 ## Findings by element
 
 Grouped across profiles by selector pattern (`:nth-of-type` and state classes stripped; "xN per page" counts the matching elements; "all (shell)" = header, nav or sound bar, present on every route). The "rule / file" column lists the matching stylesheet rules that set the measured property (own rule first, then the ancestors it inherits or scales from) and the file each lives in (a `<style>` string inside a view module, or assets/css).
 
-### Overflow (0)
+### Overflow (6)
 
-None.
+| Route | Element | right edge | where | rule / file |
+|---|---|---|---|---|
+| `/progress` | `main#main > div.pg > p.draft-flag` | 383px (w 367) | iPhone SE, Galaxy S9+ | `.draft-flag {padding:0.5rem 0.75rem} @ assets/css/app.css`<br>assets/css/app.css, src/pronunciation/ui.js |
+| `/progress` | `main#main > div.pg > section.card` | 383px (w 367) | iPhone SE, Galaxy S9+ | `.card {padding:1rem 1.25rem} @ assets/css/app.css`<br>assets/css/app.css, src/pronunciation/ui.js |
+| `/progress` | `h2#pg-h-now` | 362px (w 325) | iPhone SE, Galaxy S9+ | - |
+| `/progress` | `main#main > div.pg > section.card > p.small.muted` | 362px (w 325) | iPhone SE, Galaxy S9+ | - |
+| `/progress` | `main#main > div.pg > section.card > ul.pg-now` | 362px (w 325) | iPhone SE, Galaxy S9+ | `.pg ul, .pg ol {margin:0px} @ <style in main>`<br>`.pg-now {padding:0px;margin:0px} @ <style in main>`<br>src/progress/progress.view.js |
+| `/progress` | `div.pg > section.card > ul.pg-now > li` | 362px (w 305) | iPhone SE, Galaxy S9+ | `.pg-now li {grid-template-columns:1fr auto;margin:0px} @ <style in main>`<br>src/progress/progress.view.js |
 
 ### Tap targets under 44 px (0)
 
@@ -107,771 +154,34 @@ None: with the page scrolled to the bottom, no fixed bar overlaps the end of `ma
 
 None.
 
-## Diff vs previous run (2026-11-04T05:42:12.934Z)
+## Diff vs previous run (2026-11-04T06:07:30.895Z)
 
-Issues before: 762; now: 0; fixed: 762; new: 0.
+Issues before: 0; now: 24; fixed: 0; new: 24.
 
-Fixed:
 
-- iPhone SE|light|/|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|light|/|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|light|/|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|light|/|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|light|/|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|light|/|tiny|button#more-btn > span.he.nav-he
-- iPhone SE|light|/learn|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|light|/learn|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|light|/learn|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|light|/learn|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|light|/learn|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|light|/learn|tiny|button#more-btn > span.he.nav-he
-- iPhone SE|light|/letters/alef|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|light|/letters/alef|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|light|/letters/alef|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|light|/letters/alef|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|light|/letters/alef|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|light|/letters/alef|tiny|button#more-btn > span.he.nav-he
-- iPhone SE|light|/firstday|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|light|/firstday|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|light|/firstday|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|light|/firstday|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|light|/firstday|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|light|/firstday|tiny|button#more-btn > span.he.nav-he
-- iPhone SE|light|/placement|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|light|/placement|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|light|/placement|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|light|/placement|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|light|/placement|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|light|/placement|tiny|button#more-btn > span.he.nav-he
-- iPhone SE|light|/sprint|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|light|/sprint|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|light|/sprint|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|light|/sprint|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|light|/sprint|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|light|/sprint|tiny|button#more-btn > span.he.nav-he
-- iPhone SE|light|/service|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|light|/service|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|light|/service|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|light|/service|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|light|/service|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|light|/service|tiny|button#more-btn > span.he.nav-he
-- iPhone SE|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|light|/read/bless-priestly-1|tiny|button#more-btn > span.he.nav-he
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(1) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(2) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(3) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(4) > button.alef-cal-day.today
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(5) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(6) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(7) > button.alef-cal-day.shabbat
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(1) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(2) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(5) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(6) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(7) > button.alef-cal-day.shabbat
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(1) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(2) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(3) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(4) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(5) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(6) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(1) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(2) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(3) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(4) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(5) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(6) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(1) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(2) > button.alef-cal-day
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(3) > button.alef-cal-day.out
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(4) > button.alef-cal-day.out
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(5) > button.alef-cal-day.out
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(6) > button.alef-cal-day.out
-- iPhone SE|light|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out
-- iPhone SE|light|/calendar|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|light|/calendar|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|light|/calendar|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|light|/calendar|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|light|/calendar|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|light|/calendar|tiny|button#more-btn > span.he.nav-he
-- iPhone SE|light|/calendar|tiny|div.alef-cal-today > section.alef-prayer.now > p.alef-cal-draft > small
-- iPhone SE|light|/calendar|tiny|div.alef-cal-today > section.alef-prayer > p.alef-cal-draft > small
-- iPhone SE|light|/calendar|tiny|tr:nth-of-type(1) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone SE|light|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day > span.l
-- iPhone SE|light|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day > span.l
-- iPhone SE|light|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone SE|light|/calendar|tiny|tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone SE|light|/calendar|tiny|tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone SE|light|/calendar|tiny|tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out > span.l
-- iPhone SE|light|/calendar|word-split|tr:nth-of-type(1) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone SE|light|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day > span.l
-- iPhone SE|light|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day > span.l
-- iPhone SE|light|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone SE|light|/calendar|word-split|tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone SE|light|/calendar|word-split|tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone SE|light|/calendar|word-split|tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out > span.l
-- iPhone SE|light|/calendar|word-split|details.alef-cal-settings > div.alef-cal-form > fieldset > label.check
-- iPhone SE|light|/settings|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|light|/settings|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|light|/settings|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|light|/settings|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|light|/settings|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|light|/settings|tiny|button#more-btn > span.he.nav-he
-- iPhone SE|dark|/|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|dark|/|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|dark|/|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|dark|/|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|dark|/|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|dark|/|tiny|button#more-btn > span.he.nav-he
-- iPhone SE|dark|/learn|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|dark|/learn|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|dark|/learn|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|dark|/learn|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|dark|/learn|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|dark|/learn|tiny|button#more-btn > span.he.nav-he
-- iPhone SE|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|dark|/letters/alef|tiny|button#more-btn > span.he.nav-he
-- iPhone SE|dark|/firstday|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|dark|/firstday|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|dark|/firstday|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|dark|/firstday|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|dark|/firstday|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|dark|/firstday|tiny|button#more-btn > span.he.nav-he
-- iPhone SE|dark|/placement|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|dark|/placement|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|dark|/placement|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|dark|/placement|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|dark|/placement|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|dark|/placement|tiny|button#more-btn > span.he.nav-he
-- iPhone SE|dark|/sprint|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|dark|/sprint|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|dark|/sprint|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|dark|/sprint|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|dark|/sprint|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|dark|/sprint|tiny|button#more-btn > span.he.nav-he
-- iPhone SE|dark|/service|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|dark|/service|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|dark|/service|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|dark|/service|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|dark|/service|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|dark|/service|tiny|button#more-btn > span.he.nav-he
-- iPhone SE|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|dark|/read/bless-priestly-1|tiny|button#more-btn > span.he.nav-he
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(1) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(2) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(3) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(4) > button.alef-cal-day.today
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(5) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(6) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(7) > button.alef-cal-day.shabbat
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(1) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(2) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(5) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(6) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(7) > button.alef-cal-day.shabbat
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(1) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(2) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(3) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(4) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(5) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(6) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(1) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(2) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(3) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(4) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(5) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(6) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(1) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(2) > button.alef-cal-day
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(3) > button.alef-cal-day.out
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(4) > button.alef-cal-day.out
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(5) > button.alef-cal-day.out
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(6) > button.alef-cal-day.out
-- iPhone SE|dark|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out
-- iPhone SE|dark|/calendar|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|dark|/calendar|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|dark|/calendar|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|dark|/calendar|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|dark|/calendar|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|dark|/calendar|tiny|button#more-btn > span.he.nav-he
-- iPhone SE|dark|/calendar|tiny|div.alef-cal-today > section.alef-prayer.now > p.alef-cal-draft > small
-- iPhone SE|dark|/calendar|tiny|div.alef-cal-today > section.alef-prayer > p.alef-cal-draft > small
-- iPhone SE|dark|/calendar|tiny|tr:nth-of-type(1) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone SE|dark|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day > span.l
-- iPhone SE|dark|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day > span.l
-- iPhone SE|dark|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone SE|dark|/calendar|tiny|tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone SE|dark|/calendar|tiny|tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone SE|dark|/calendar|tiny|tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out > span.l
-- iPhone SE|dark|/calendar|word-split|tr:nth-of-type(1) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone SE|dark|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day > span.l
-- iPhone SE|dark|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day > span.l
-- iPhone SE|dark|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone SE|dark|/calendar|word-split|tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone SE|dark|/calendar|word-split|tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone SE|dark|/calendar|word-split|tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out > span.l
-- iPhone SE|dark|/calendar|word-split|details.alef-cal-settings > div.alef-cal-form > fieldset > label.check
-- iPhone SE|dark|/settings|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone SE|dark|/settings|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone SE|dark|/settings|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone SE|dark|/settings|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone SE|dark|/settings|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone SE|dark|/settings|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|light|/|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|light|/|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|light|/|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|light|/|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|light|/|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|light|/|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|light|/learn|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|light|/learn|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|light|/learn|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|light|/learn|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|light|/learn|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|light|/learn|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|light|/letters/alef|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|light|/letters/alef|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|light|/letters/alef|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|light|/letters/alef|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|light|/letters/alef|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|light|/letters/alef|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|light|/firstday|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|light|/firstday|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|light|/firstday|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|light|/firstday|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|light|/firstday|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|light|/firstday|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|light|/placement|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|light|/placement|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|light|/placement|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|light|/placement|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|light|/placement|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|light|/placement|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|light|/sprint|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|light|/sprint|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|light|/sprint|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|light|/sprint|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|light|/sprint|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|light|/sprint|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|light|/service|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|light|/service|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|light|/service|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|light|/service|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|light|/service|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|light|/service|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|light|/read/bless-priestly-1|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|light|/calendar|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|light|/calendar|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|light|/calendar|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|light|/calendar|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|light|/calendar|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|light|/calendar|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|light|/calendar|tiny|div.alef-cal-today > section.alef-prayer.now > p.alef-cal-draft > small
-- iPhone 14 Pro|light|/calendar|tiny|div.alef-cal-today > section.alef-prayer > p.alef-cal-draft > small
-- iPhone 14 Pro|light|/calendar|tiny|tr:nth-of-type(1) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone 14 Pro|light|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day > span.l
-- iPhone 14 Pro|light|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day > span.l
-- iPhone 14 Pro|light|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone 14 Pro|light|/calendar|tiny|tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone 14 Pro|light|/calendar|tiny|tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone 14 Pro|light|/calendar|tiny|tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out > span.l
-- iPhone 14 Pro|light|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day > span.l
-- iPhone 14 Pro|light|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day > span.l
-- iPhone 14 Pro|light|/calendar|word-split|tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone 14 Pro|light|/calendar|word-split|tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone 14 Pro|light|/calendar|word-split|tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out > span.l
-- iPhone 14 Pro|light|/settings|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|light|/settings|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|light|/settings|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|light|/settings|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|light|/settings|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|light|/settings|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|dark|/|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|dark|/learn|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/learn|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/learn|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/learn|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/learn|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/learn|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/letters/alef|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|dark|/firstday|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/firstday|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/firstday|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/firstday|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/firstday|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/firstday|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|dark|/placement|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/placement|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/placement|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/placement|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/placement|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/placement|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|dark|/sprint|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/sprint|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/sprint|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/sprint|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/sprint|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/sprint|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|dark|/service|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/service|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/service|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/service|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/service|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/service|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/read/bless-priestly-1|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|dark|/calendar|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/calendar|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/calendar|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/calendar|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/calendar|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/calendar|tiny|button#more-btn > span.he.nav-he
-- iPhone 14 Pro|dark|/calendar|tiny|div.alef-cal-today > section.alef-prayer.now > p.alef-cal-draft > small
-- iPhone 14 Pro|dark|/calendar|tiny|div.alef-cal-today > section.alef-prayer > p.alef-cal-draft > small
-- iPhone 14 Pro|dark|/calendar|tiny|tr:nth-of-type(1) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone 14 Pro|dark|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day > span.l
-- iPhone 14 Pro|dark|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day > span.l
-- iPhone 14 Pro|dark|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone 14 Pro|dark|/calendar|tiny|tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone 14 Pro|dark|/calendar|tiny|tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone 14 Pro|dark|/calendar|tiny|tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out > span.l
-- iPhone 14 Pro|dark|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day > span.l
-- iPhone 14 Pro|dark|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day > span.l
-- iPhone 14 Pro|dark|/calendar|word-split|tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone 14 Pro|dark|/calendar|word-split|tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPhone 14 Pro|dark|/calendar|word-split|tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out > span.l
-- iPhone 14 Pro|dark|/settings|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/settings|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/settings|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/settings|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/settings|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- iPhone 14 Pro|dark|/settings|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|light|/|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|light|/|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|light|/|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|light|/|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|light|/|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|light|/|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|light|/learn|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|light|/learn|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|light|/learn|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|light|/learn|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|light|/learn|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|light|/learn|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|light|/letters/alef|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|light|/letters/alef|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|light|/letters/alef|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|light|/letters/alef|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|light|/letters/alef|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|light|/letters/alef|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|light|/firstday|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|light|/firstday|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|light|/firstday|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|light|/firstday|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|light|/firstday|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|light|/firstday|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|light|/placement|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|light|/placement|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|light|/placement|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|light|/placement|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|light|/placement|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|light|/placement|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|light|/sprint|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|light|/sprint|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|light|/sprint|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|light|/sprint|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|light|/sprint|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|light|/sprint|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|light|/service|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|light|/service|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|light|/service|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|light|/service|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|light|/service|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|light|/service|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|light|/read/bless-priestly-1|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|light|/calendar|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|light|/calendar|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|light|/calendar|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|light|/calendar|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|light|/calendar|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|light|/calendar|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|light|/calendar|tiny|div.alef-cal-today > section.alef-prayer.now > p.alef-cal-draft > small
-- Pixel 7|light|/calendar|tiny|div.alef-cal-today > section.alef-prayer > p.alef-cal-draft > small
-- Pixel 7|light|/calendar|tiny|tr:nth-of-type(1) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Pixel 7|light|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day > span.l
-- Pixel 7|light|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day > span.l
-- Pixel 7|light|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Pixel 7|light|/calendar|tiny|tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Pixel 7|light|/calendar|tiny|tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Pixel 7|light|/calendar|tiny|tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out > span.l
-- Pixel 7|light|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day > span.l
-- Pixel 7|light|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day > span.l
-- Pixel 7|light|/calendar|word-split|tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Pixel 7|light|/calendar|word-split|tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Pixel 7|light|/calendar|word-split|tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out > span.l
-- Pixel 7|light|/settings|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|light|/settings|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|light|/settings|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|light|/settings|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|light|/settings|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|light|/settings|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|dark|/|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|dark|/|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|dark|/|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|dark|/|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|dark|/|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|dark|/|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|dark|/learn|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|dark|/learn|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|dark|/learn|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|dark|/learn|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|dark|/learn|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|dark|/learn|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|dark|/letters/alef|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|dark|/firstday|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|dark|/firstday|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|dark|/firstday|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|dark|/firstday|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|dark|/firstday|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|dark|/firstday|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|dark|/placement|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|dark|/placement|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|dark|/placement|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|dark|/placement|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|dark|/placement|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|dark|/placement|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|dark|/sprint|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|dark|/sprint|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|dark|/sprint|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|dark|/sprint|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|dark|/sprint|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|dark|/sprint|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|dark|/service|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|dark|/service|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|dark|/service|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|dark|/service|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|dark|/service|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|dark|/service|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|dark|/read/bless-priestly-1|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|dark|/calendar|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|dark|/calendar|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|dark|/calendar|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|dark|/calendar|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|dark|/calendar|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|dark|/calendar|tiny|button#more-btn > span.he.nav-he
-- Pixel 7|dark|/calendar|tiny|div.alef-cal-today > section.alef-prayer.now > p.alef-cal-draft > small
-- Pixel 7|dark|/calendar|tiny|div.alef-cal-today > section.alef-prayer > p.alef-cal-draft > small
-- Pixel 7|dark|/calendar|tiny|tr:nth-of-type(1) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Pixel 7|dark|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day > span.l
-- Pixel 7|dark|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day > span.l
-- Pixel 7|dark|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Pixel 7|dark|/calendar|tiny|tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Pixel 7|dark|/calendar|tiny|tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Pixel 7|dark|/calendar|tiny|tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out > span.l
-- Pixel 7|dark|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day > span.l
-- Pixel 7|dark|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day > span.l
-- Pixel 7|dark|/calendar|word-split|tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Pixel 7|dark|/calendar|word-split|tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Pixel 7|dark|/calendar|word-split|tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out > span.l
-- Pixel 7|dark|/settings|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Pixel 7|dark|/settings|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Pixel 7|dark|/settings|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Pixel 7|dark|/settings|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Pixel 7|dark|/settings|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Pixel 7|dark|/settings|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|light|/|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|light|/|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|light|/|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|light|/|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|light|/|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|light|/|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|light|/learn|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|light|/learn|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|light|/learn|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|light|/learn|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|light|/learn|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|light|/learn|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|light|/letters/alef|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|light|/letters/alef|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|light|/letters/alef|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|light|/letters/alef|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|light|/letters/alef|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|light|/letters/alef|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|light|/firstday|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|light|/firstday|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|light|/firstday|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|light|/firstday|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|light|/firstday|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|light|/firstday|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|light|/placement|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|light|/placement|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|light|/placement|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|light|/placement|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|light|/placement|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|light|/placement|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|light|/sprint|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|light|/sprint|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|light|/sprint|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|light|/sprint|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|light|/sprint|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|light|/sprint|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|light|/service|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|light|/service|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|light|/service|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|light|/service|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|light|/service|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|light|/service|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|light|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|light|/read/bless-priestly-1|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(1) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(2) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(3) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(4) > button.alef-cal-day.today
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(5) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(6) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(7) > button.alef-cal-day.shabbat
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(1) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(2) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(5) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(6) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(7) > button.alef-cal-day.shabbat
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(1) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(2) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(3) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(4) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(5) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(6) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(1) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(2) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(3) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(4) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(5) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(6) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(1) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(2) > button.alef-cal-day
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(3) > button.alef-cal-day.out
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(4) > button.alef-cal-day.out
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(5) > button.alef-cal-day.out
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(6) > button.alef-cal-day.out
-- Galaxy S9+|light|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out
-- Galaxy S9+|light|/calendar|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|light|/calendar|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|light|/calendar|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|light|/calendar|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|light|/calendar|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|light|/calendar|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|light|/calendar|tiny|div.alef-cal-today > section.alef-prayer.now > p.alef-cal-draft > small
-- Galaxy S9+|light|/calendar|tiny|div.alef-cal-today > section.alef-prayer > p.alef-cal-draft > small
-- Galaxy S9+|light|/calendar|tiny|tr:nth-of-type(1) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Galaxy S9+|light|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day > span.l
-- Galaxy S9+|light|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day > span.l
-- Galaxy S9+|light|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Galaxy S9+|light|/calendar|tiny|tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Galaxy S9+|light|/calendar|tiny|tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Galaxy S9+|light|/calendar|tiny|tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out > span.l
-- Galaxy S9+|light|/calendar|word-split|tr:nth-of-type(1) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Galaxy S9+|light|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day > span.l
-- Galaxy S9+|light|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day > span.l
-- Galaxy S9+|light|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Galaxy S9+|light|/calendar|word-split|tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Galaxy S9+|light|/calendar|word-split|tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Galaxy S9+|light|/calendar|word-split|tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out > span.l
-- Galaxy S9+|light|/calendar|word-split|details.alef-cal-settings > div.alef-cal-form > fieldset > label.check
-- Galaxy S9+|light|/settings|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|light|/settings|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|light|/settings|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|light|/settings|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|light|/settings|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|light|/settings|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|dark|/|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|dark|/|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|dark|/|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|dark|/|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|dark|/|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|dark|/|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|dark|/learn|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|dark|/learn|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|dark|/learn|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|dark|/learn|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|dark|/learn|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|dark|/learn|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|dark|/letters/alef|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|dark|/letters/alef|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|dark|/firstday|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|dark|/firstday|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|dark|/firstday|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|dark|/firstday|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|dark|/firstday|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|dark|/firstday|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|dark|/placement|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|dark|/placement|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|dark|/placement|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|dark|/placement|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|dark|/placement|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|dark|/placement|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|dark|/sprint|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|dark|/sprint|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|dark|/sprint|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|dark|/sprint|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|dark|/sprint|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|dark|/sprint|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|dark|/service|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|dark|/service|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|dark|/service|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|dark|/service|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|dark|/service|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|dark|/service|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|dark|/read/bless-priestly-1|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|dark|/read/bless-priestly-1|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(1) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(2) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(3) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(4) > button.alef-cal-day.today
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(5) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(6) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(1) > td:nth-of-type(7) > button.alef-cal-day.shabbat
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(1) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(2) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(5) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(6) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(2) > td:nth-of-type(7) > button.alef-cal-day.shabbat
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(1) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(2) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(3) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(4) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(5) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(6) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(1) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(2) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(3) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(4) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(5) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(6) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(1) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(2) > button.alef-cal-day
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(3) > button.alef-cal-day.out
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(4) > button.alef-cal-day.out
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(5) > button.alef-cal-day.out
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(6) > button.alef-cal-day.out
-- Galaxy S9+|dark|/calendar|tap|tbody > tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out
-- Galaxy S9+|dark|/calendar|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|dark|/calendar|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|dark|/calendar|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|dark|/calendar|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|dark|/calendar|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|dark|/calendar|tiny|button#more-btn > span.he.nav-he
-- Galaxy S9+|dark|/calendar|tiny|div.alef-cal-today > section.alef-prayer.now > p.alef-cal-draft > small
-- Galaxy S9+|dark|/calendar|tiny|div.alef-cal-today > section.alef-prayer > p.alef-cal-draft > small
-- Galaxy S9+|dark|/calendar|tiny|tr:nth-of-type(1) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Galaxy S9+|dark|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day > span.l
-- Galaxy S9+|dark|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day > span.l
-- Galaxy S9+|dark|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Galaxy S9+|dark|/calendar|tiny|tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Galaxy S9+|dark|/calendar|tiny|tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Galaxy S9+|dark|/calendar|tiny|tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out > span.l
-- Galaxy S9+|dark|/calendar|word-split|tr:nth-of-type(1) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Galaxy S9+|dark|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day > span.l
-- Galaxy S9+|dark|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day > span.l
-- Galaxy S9+|dark|/calendar|word-split|tr:nth-of-type(2) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Galaxy S9+|dark|/calendar|word-split|tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Galaxy S9+|dark|/calendar|word-split|tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- Galaxy S9+|dark|/calendar|word-split|tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out > span.l
-- Galaxy S9+|dark|/calendar|word-split|details.alef-cal-settings > div.alef-cal-form > fieldset > label.check
-- Galaxy S9+|dark|/settings|tiny|ul#nav > li:nth-of-type(1) > a > span.he.nav-he
-- Galaxy S9+|dark|/settings|tiny|ul#nav > li:nth-of-type(2) > a > span.he.nav-he
-- Galaxy S9+|dark|/settings|tiny|ul#nav > li:nth-of-type(3) > a > span.he.nav-he
-- Galaxy S9+|dark|/settings|tiny|ul#nav > li:nth-of-type(4) > a > span.he.nav-he
-- Galaxy S9+|dark|/settings|tiny|ul#nav > li:nth-of-type(5) > a > span.he.nav-he
-- Galaxy S9+|dark|/settings|tiny|button#more-btn > span.he.nav-he
-- iPad Mini|light|/calendar|tiny|div.alef-cal-today > section.alef-prayer.now > p.alef-cal-draft > small
-- iPad Mini|light|/calendar|tiny|div.alef-cal-today > section.alef-prayer > p.alef-cal-draft > small
-- iPad Mini|light|/calendar|tiny|tr:nth-of-type(1) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPad Mini|light|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day > span.l
-- iPad Mini|light|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day > span.l
-- iPad Mini|light|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPad Mini|light|/calendar|tiny|tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPad Mini|light|/calendar|tiny|tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPad Mini|light|/calendar|tiny|tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out > span.l
-- iPad Mini|dark|/calendar|tiny|div.alef-cal-today > section.alef-prayer.now > p.alef-cal-draft > small
-- iPad Mini|dark|/calendar|tiny|div.alef-cal-today > section.alef-prayer > p.alef-cal-draft > small
-- iPad Mini|dark|/calendar|tiny|tr:nth-of-type(1) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPad Mini|dark|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(3) > button.alef-cal-day > span.l
-- iPad Mini|dark|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(4) > button.alef-cal-day > span.l
-- iPad Mini|dark|/calendar|tiny|tr:nth-of-type(2) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPad Mini|dark|/calendar|tiny|tr:nth-of-type(3) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPad Mini|dark|/calendar|tiny|tr:nth-of-type(4) > td:nth-of-type(7) > button.alef-cal-day.shabbat > span.l
-- iPad Mini|dark|/calendar|tiny|tr:nth-of-type(5) > td:nth-of-type(7) > button.alef-cal-day.out > span.l
+New:
+
+- iPhone SE|light|/progress|overflow|main#main > div.pg > p.draft-flag
+- iPhone SE|light|/progress|overflow|main#main > div.pg > section.card
+- iPhone SE|light|/progress|overflow|h2#pg-h-now
+- iPhone SE|light|/progress|overflow|main#main > div.pg > section.card > p.small.muted
+- iPhone SE|light|/progress|overflow|main#main > div.pg > section.card > ul.pg-now
+- iPhone SE|light|/progress|overflow|div.pg > section.card > ul.pg-now > li:nth-of-type(1)
+- iPhone SE|dark|/progress|overflow|main#main > div.pg > p.draft-flag
+- iPhone SE|dark|/progress|overflow|main#main > div.pg > section.card
+- iPhone SE|dark|/progress|overflow|h2#pg-h-now
+- iPhone SE|dark|/progress|overflow|main#main > div.pg > section.card > p.small.muted
+- iPhone SE|dark|/progress|overflow|main#main > div.pg > section.card > ul.pg-now
+- iPhone SE|dark|/progress|overflow|div.pg > section.card > ul.pg-now > li:nth-of-type(1)
+- Galaxy S9+|light|/progress|overflow|main#main > div.pg > p.draft-flag
+- Galaxy S9+|light|/progress|overflow|main#main > div.pg > section.card
+- Galaxy S9+|light|/progress|overflow|h2#pg-h-now
+- Galaxy S9+|light|/progress|overflow|main#main > div.pg > section.card > p.small.muted
+- Galaxy S9+|light|/progress|overflow|main#main > div.pg > section.card > ul.pg-now
+- Galaxy S9+|light|/progress|overflow|div.pg > section.card > ul.pg-now > li:nth-of-type(1)
+- Galaxy S9+|dark|/progress|overflow|main#main > div.pg > p.draft-flag
+- Galaxy S9+|dark|/progress|overflow|main#main > div.pg > section.card
+- Galaxy S9+|dark|/progress|overflow|h2#pg-h-now
+- Galaxy S9+|dark|/progress|overflow|main#main > div.pg > section.card > p.small.muted
+- Galaxy S9+|dark|/progress|overflow|main#main > div.pg > section.card > ul.pg-now
+- Galaxy S9+|dark|/progress|overflow|div.pg > section.card > ul.pg-now > li:nth-of-type(1)

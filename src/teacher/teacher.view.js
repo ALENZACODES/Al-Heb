@@ -7,7 +7,10 @@ import { buildSummary, toCode, toJson, describe, parseMany, DRAFT_NOTE, MAX_TOTA
 import { aggregate } from './aggregate.js';
 
 const CSS = `
-.tc { display: grid; gap: var(--gap, 1rem); }
+.tc { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gap, 1rem); }
+.tc > *, .tc-consent > * { min-inline-size: 0; max-inline-size: 100%; overflow-wrap: anywhere; }
+.tc-scroll { overflow-x: auto; }
+.tc-scroll table { min-inline-size: 36rem; }
 .tc textarea { inline-size: 100%; min-block-size: 7rem; font: inherit; box-sizing: border-box; }
 .tc .btn { min-block-size: var(--tap, 48px); }
 .tc-row { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
@@ -104,7 +107,7 @@ export function mount(root, ctx = {}) {
           top('Vowel signs and sign practice', a.signs, 'No sign misses recorded.'),
           a.letters.length ? top('Single letters that slip in review', a.letters, '') : null,
           h('h3', {}, 'Who needs help on what'),
-          h('table', {},
+          h('div', { class: 'tc-scroll', role: 'region', tabindex: '0', 'aria-label': 'Learner table (scrolls sideways)' }, h('table', {},
             h('caption', { class: 'small' }, 'Sorted with those needing help first. Counts are from each learner\'s own device.'),
             h('thead', {}, h('tr', {}, ...['Learner', 'Week', 'Lessons', 'Letters', 'Signs', 'Needs help on', 'Timed read', 'Date'].map((c) => h('th', { scope: 'col' }, c)))),
             h('tbody', {}, ...rows.map((r) => h('tr', {},
@@ -113,7 +116,7 @@ export function mount(root, ctx = {}) {
               h('td', {}, T(r.lessons)), h('td', {}, T(r.letters)), h('td', {}, T(r.signs)),
               h('td', {}, r.helpOn.length ? r.helpOn.join('; ') : (r.behind ? 'Pace' : 'None recorded')),
               h('td', {}, r.avgWpm ? `${r.avgWpm} wpm` : 'Not measured'),
-              h('td', {}, r.date)))))),
+              h('td', {}, r.date))))))),
         h('div', { class: 'tc-row tc-noprint' }, h('button', { type: 'button', class: 'btn', onclick: () => { if (typeof window !== 'undefined' && window.print) window.print(); } }, 'Print this table')));
     }
     file.addEventListener('change', async () => {

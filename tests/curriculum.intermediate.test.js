@@ -4,7 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { transliterate } from "../src/pronunciation/transliterate.js";
 
-// Intermediate lessons I-01..I-25 live in data/curriculum/lessons-intermediate/ and are NOT in lessons.json yet
+// Intermediate lessons I-01..I-50 live in data/curriculum/lessons-intermediate/ and are registered in lessons.json by tools/curriculum/intermediate/register.py
 // (see docs/curriculum/INTERMEDIATE.md). The main rule checked here: every Hebrew string in a lesson is either a whole
 // entry of, or a composition of whitespace tokens found in, data/vocab/words.json, data/corpus/*.json or data/service/*.json.
 
@@ -61,7 +61,9 @@ test("50 lesson files I-01..I-50 exist, one per file, 20 synagogue and 30 Israel
   assert.equal(lessons.filter((l) => l.unit === "synagogue").length, 20);
   assert.equal(lessons.filter((l) => l.unit === "israel").length, 30);
   assert.deepEqual(lessons.filter((l) => l.unit === "synagogue").map((l) => l.id), [...IDS.slice(0, 10), ...IDS.slice(25, 35)]);
-  assert.ok(main.lessons.every((l) => !l.id.startsWith("I-")), "intermediate lessons must not be registered in lessons.json by this lane");
+  const reg = main.lessons.filter((l) => l.id.startsWith("I-"));
+  assert.deepEqual(reg.map((l) => l.id), IDS, "I-01..I-50 are registered in lessons.json, in order");
+  for (const l of reg) assert.deepEqual(l, JSON.parse(fs.readFileSync(new URL(`data/curriculum/lessons-intermediate/${l.id}.json`, ROOT), "utf8")), `${l.id} in lessons.json equals its source file`);
 });
 
 test("every lesson keeps the lessons.json shape, is a draft, and has 12-20 exercises", () => {

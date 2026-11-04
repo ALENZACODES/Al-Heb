@@ -19,7 +19,7 @@ globalThis.document = {
   createElement: (t) => new Node_(t),
   createTextNode: (d) => ({ nodeType: 3, data: String(d), parent: undefined }),
 };
-const tick = () => new Promise((r) => setTimeout(r, 5));
+import { waitFor } from "./helpers/waitfor.js";
 const memStore = (init = {}) => { const m = { ...init }; return { get: async (k) => m[k], set: async (k, v) => { m[k] = v; }, m }; };
 
 const { mount: mountLearn } = await import("../src/curriculum/learn.view.js");
@@ -30,7 +30,7 @@ test("learn view: lists read lessons, locks unmet prerequisites, shows due count
   const store = memStore({ "srs.cards": { a: { id: "a", due: 0, state: "review", stability: 1, lastReview: 0 }, b: { id: "b", due: 1, state: "review", stability: 1, lastReview: 0 } } });
   const routed = [];
   const unmount = mountLearn(root, { store, route: (p) => routed.push(p), t: (k) => k, settings: {} });
-  await tick();
+  await waitFor(() => root.find((n) => n.tag === "li" && n.attrs["data-lesson"]).length >= 40 && /2 reviews due/.test(root.text) && /alef-lesson-available/.test(root.find((n) => n.tag === "li" && n.attrs["data-lesson"])[0].className), { message: "lesson list rendered" });
   const items = root.find((n) => n.tag === "li" && n.attrs["data-lesson"]);
   assert.ok(items.length >= 40);
   assert.equal(items[0].attrs.class, undefined);
@@ -44,7 +44,7 @@ test("learn view: lists read lessons, locks unmet prerequisites, shows due count
   assert.equal(he.attrs.dir, "rtl");
   // complete lesson r01 -> r02 becomes available, progress persisted
   const mark = items[0].find((n) => n.tag === "button" && /Mark complete/.test(n.attrs["aria-label"] || ""))[0];
-  await mark.click(); await tick();
+  await mark.click(); await waitFor(() => { const li = root.find((n) => n.tag === "li" && n.attrs["data-lesson"]); return store.m["curriculum.progress"]?.completed?.r01 && /alef-lesson-available/.test(li[1].className) && /alef-lesson-done/.test(li[0].className); }, { message: "r01 completed and the list re-rendered" });
   assert.ok(store.m["curriculum.progress"].completed.r01);
   const items2 = root.find((n) => n.tag === "li" && n.attrs["data-lesson"]);
   assert.match(items2[1].className, /alef-lesson-available/);
@@ -53,7 +53,7 @@ test("learn view: lists read lessons, locks unmet prerequisites, shows due count
   await items2[1].find((n) => n.tag === "button")[0].click();
   assert.deepEqual(routed, ["/learn?lesson=r02"]);
   // tab switch
-  await root.find((n) => n.attrs.id === "alef-tab-israel")[0].click(); await tick();
+  await root.find((n) => n.attrs.id === "alef-tab-israel")[0].click(); await waitFor(() => root.find((n) => n.tag === "li" && /^il/.test(n.attrs["data-lesson"] || "")).length >= 15, { message: "Israel tab lessons" });
   assert.ok(root.find((n) => n.tag === "li" && /^il/.test(n.attrs["data-lesson"] || "")).length >= 15);
   unmount();
 });
@@ -61,7 +61,7 @@ test("learn view: lists read lessons, locks unmet prerequisites, shows due count
 test("learn view works with no store (graceful)", async () => {
   const root = new Node_("div");
   const unmount = mountLearn(root, {});
-  await tick();
+  await waitFor(() => root.find((n) => n.tag === "li").length > 0, { message: "root.find((n) => n.tag === \"li\").length > 0" });
   assert.ok(root.find((n) => n.tag === "li").length > 0);
   unmount();
 });
@@ -70,7 +70,7 @@ test("calendar view: candle lighting with location, next holidays, prompt (locke
   const root = new Node_("div");
   const ctx = { store: memStore(), settings: { location: { lat: 43.65, lon: -79.38, tz: "America/Toronto" } }, t: (k) => k, now: () => new Date(Date.UTC(2026, 10, 3, 15, 0)) };
   const unmount = mountCal(root, ctx);
-  await tick();
+  await waitFor(() => /Morning prompt/.test(root.text) && /Hanukkah/.test(root.text), { message: "/Morning prompt/.test(root.text) && /Hanukkah/.test(root.text)" });
   const t = root.text;
   assert.match(t, /23 Cheshvan 5787/);
   assert.match(t, /2026-11-06: 16:\d\d|2026-11-06: 17:\d\d/);
@@ -83,7 +83,7 @@ test("calendar view: candle lighting with location, next holidays, prompt (locke
 test("calendar view without location does not invent a time", async () => {
   const root = new Node_("div");
   const unmount = mountCal(root, { store: memStore(), settings: {}, now: () => new Date(2026, 10, 3, 20, 0) });
-  await tick();
+  await waitFor(() => /Evening prompt/.test(root.text), { message: "/Evening prompt/.test(root.text)" });
   assert.match(root.text, /Set your location/);
   assert.match(root.text, /Evening prompt/);
   unmount();

@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { N, tick, btn, memStore } from './torahread.fakedom.js';
+import { waitFor } from './helpers/waitfor.js';
 const { mount } = await import('../src/torahread/torahread.view.js');
 
 const mk = (audio) => { const root = new N('div'); const store = memStore(); return { root, store, ctx: { store, settings: { congregation: 'sephardi' }, audio, query: {} } }; };
@@ -50,7 +51,7 @@ test('audio hook is honest: no player, unknown item, tts fallback, file', async 
   ]) {
     const { root, ctx } = mk(audio);
     await mount(root, ctx);
-    await btn(root, /^Hear it$/).click(); await tick(5);
+    await btn(root, /^Hear it$/).click(); await waitFor(() => re.test(status(root)), { message: "status line for this audio outcome" });
     assert.match(status(root), re);
   }
   const { root, ctx } = mk({ play: async () => ({ source: 'none', reason: 'unknown-item' }), has: () => false });

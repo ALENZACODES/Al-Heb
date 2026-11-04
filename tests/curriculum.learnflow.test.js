@@ -1,5 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { waitFor } from "./helpers/waitfor.js";
+const until = (n, re) => waitFor(() => re.test(n.text), { message: `text ${re} never appeared` });
 
 // Fake DOM (checks view logic, not browser rendering; the browser flow is covered by tools/smoke.mjs + tools/a11y).
 class Node_ {
@@ -39,18 +41,18 @@ function ctxFor(store, query, extra = {}) {
 
 test("lesson deep link shows letters/vowels/words with audio, completes, creates cards and a streak", async () => {
   const store = memStore(); const ctx = ctxFor(store, { lesson: "r01" });
-  const root = new Node_("div"); const un = mount(root, ctx); await tick(80);
+  const root = new Node_("div"); const un = mount(root, ctx); await until(root, /Draft content/);
   assert.match(root.text, /Shin and Bet/);
   assert.match(root.text, /Letters/); assert.match(root.text, /Vowels and marks/); assert.match(root.text, /Words/);
   assert.match(root.text, /Draft content/); assert.doesNotMatch(root.text, /null|undefined/);
   // audio: play the first letter -> ctx.audio.play('letter','shin') and an honest status line appears
-  await btn(root, /Listen to Shin/).click(); await tick();
+  await btn(root, /Listen to Shin/).click(); await waitFor(() => ctx.played.at(-1)?.[1] === "shin", { message: "Shin audio never played" });
   assert.deepEqual(ctx.played.at(-1), ["letter", "shin"]);
   assert.match(root.text, /browser's built-in voice/);
   await btn(root, /Listen to he returned/).click();
   assert.deepEqual(ctx.played.at(-1), ["word", "r01-w1"]);
   // complete
-  await btn(root, /Mark lesson complete/).click(); await tick();
+  await btn(root, /Mark lesson complete/).click(); await waitFor(() => store.m["curriculum.progress"]?.completed?.r01, { message: "lesson never completed" });
   assert.ok(store.m["curriculum.progress"].completed.r01);
   assert.equal(Object.keys(store.m["srs.cards"]).length, 6);
   assert.equal(store.m.streak.count, 1);
@@ -59,32 +61,33 @@ test("lesson deep link shows letters/vowels/words with audio, completes, creates
 });
 
 test("locked lesson: complete is disabled and says why; unknown lesson is a clear message", async () => {
-  const root = new Node_("div"); mount(root, ctxFor(memStore(), { lesson: "r02" })); await tick(80);
+  const root = new Node_("div"); mount(root, ctxFor(memStore(), { lesson: "r02" })); await until(root, /Locked: finish/);
   assert.match(root.text, /Locked: finish/);
   assert.ok("disabled" in btn(root, /Mark lesson complete/).attrs);
-  const r2 = new Node_("div"); mount(r2, ctxFor(memStore(), { lesson: "zzz" })); await tick();
+  const r2 = new Node_("div"); mount(r2, ctxFor(memStore(), { lesson: "zzz" })); await until(r2, /Lesson not found/);
   assert.match(r2.text, /Lesson not found/);
 });
 
 test("review deep link: queue from completed lesson, reveal, keyboard rating, persistence, summary", async () => {
   const store = memStore(); const ctx = ctxFor(store, { lesson: "r01" });
-  const lr = new Node_("div"); mount(lr, ctx); await tick(80); await btn(lr, /Mark lesson complete/).click(); await tick();
+  const lr = new Node_("div"); mount(lr, ctx); await until(lr, /Mark lesson complete/); await btn(lr, /Mark lesson complete/).click(); await waitFor(() => store.m["curriculum.progress"]?.completed?.r01, { message: "lesson r01 never completed" });
 
   const root = new Node_("div"); const ctxR = ctxFor(store, { review: "1" });
-  const un = mount(root, ctxR); await tick(80);
+  const un = mount(root, ctxR); await until(root, /Card 1 of 6/);
   assert.match(root.text, /Card 1 of 6/);
   // rating buttons are hidden until the answer is revealed and keys are ignored before that
   await key("3"); await tick(); assert.match(root.text, /Card 1 of 6/);
   await btn(root, /Show answer/).click();
   assert.equal(root.find((n) => n.attrs["data-rating"]).length, 4);
-  await key("3"); await tick();
+  await key("3"); await until(root, /Card 2 of 6/);
   assert.match(root.text, /Card 2 of 6/);
   const rated = Object.values(store.m["srs.cards"]).filter((c) => c.reps === 1);
   assert.equal(rated.length, 1); assert.equal(rated[0].state, "review");
   // finish the rest with clicks: 1 Again, 2 Hard, 4 Easy mix
-  for (const k of ["1", "2", "4", "3", "3"]) { await btn(root, /Show answer/).click(); await root.find((n) => n.attrs["data-rating"] === k)[0].click(); await tick();
+  for (const k of ["1", "2", "4", "3", "3"]) { await btn(root, /Show answer/).click(); await root.find((n) => n.attrs["data-rating"] === k)[0].click();
+    await waitFor(() => /Show answer|Session done/.test(root.text) || root.find((n) => n.attrs["data-hint-kind"]).length, { message: "no next card, summary or hint after rating" });
     const panel = root.find((n) => n.attrs["data-hint-kind"]);
-    if (k === "1") { /* a hint may follow the learner's own miss; it must be dismissible */ if (panel.length) await btn(root, /Continue/).click(); await tick(); }
+    if (k === "1") { /* a hint may follow the learner's own miss; it must be dismissible */ if (panel.length) await btn(root, /Continue/).click(); await waitFor(() => /Show answer|Session done/.test(root.text), { message: "hint never dismissed" }); }
     else assert.equal(panel.length, 0, "no hint after a non-miss rating"); }
   assert.doesNotMatch(root.text, /null|undefined/);
   assert.match(root.text, /Session done/); assert.match(root.text, /6 cards reviewed: 1 again, 1 hard, 3 good, 1 easy/);
@@ -96,14 +99,14 @@ test("review deep link: queue from completed lesson, reveal, keyboard rating, pe
 
 test("practice deep link creates the lesson's cards without completing it", async () => {
   const store = memStore(); const root = new Node_("div");
-  mount(root, ctxFor(store, { lesson: "r01", review: "1" })); await tick(80);
+  mount(root, ctxFor(store, { lesson: "r01", review: "1" })); await until(root, /Card 1 of 6/);
   assert.match(root.text, /Card 1 of 6/);
   assert.equal(store.m["curriculum.progress"], undefined);
   assert.equal(Object.keys(store.m["srs.cards"]).length, 6);
 });
 
 test("empty review says nothing is due", async () => {
-  const root = new Node_("div"); mount(root, ctxFor(memStore(), { review: "1" })); await tick(80);
+  const root = new Node_("div"); mount(root, ctxFor(memStore(), { review: "1" })); await until(root, /Nothing due/);
   assert.match(root.text, /Nothing due/); assert.doesNotMatch(root.text, /null|undefined/);
 });
 

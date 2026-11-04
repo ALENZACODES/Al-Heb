@@ -14,7 +14,7 @@
    "translit": "yam",
    "en": "sea",
    "kind": "word",
-   "audioId": "anchor-mem-final",
+   "audioId": "i-41-w2",
    "source": "data/vocab/words.json"
   },
   {
@@ -32,7 +32,7 @@
    "translit": "har",
    "en": "mountain (mass of earth and rock)",
    "kind": "word",
-   "audioId": "anchor-he",
+   "audioId": "i-40-w3",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "anan",
    "en": "cloud",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-24-w7",
    "source": "data/vocab/words.json"
   },
   {

@@ -69,6 +69,12 @@ function pageAudit() {
   return out;
 }
 
+/** Wait until the text of <main> stops changing (async views such as /progress load data first), at most ~8 s. */
+async function settle(page) {
+  let last = -1, stable = 0;
+  for (let i = 0; i < 40 && stable < 3; i++) { await page.waitForTimeout(200); const n = await page.evaluate(() => (document.querySelector('main')?.innerText || '').length); stable = n === last && n > 0 ? stable + 1 : 0; last = n; }
+}
+
 /** Focus walk: Tab through main, record stops, check names, visible focus, order. Runs from Node via the page. */
 async function focusWalk(page, max = 60) {
   await page.evaluate(() => { document.getElementById('view-title')?.focus(); });
@@ -115,7 +121,7 @@ async function reducedMotion(page) {
 async function reflow(browser, base, route, theme, setup, width) {
   const ctx = await browser.newContext({ viewport: { width, height: 700 }, colorScheme: theme });
   await ctx.addInitScript(() => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); });
-  const page = await ctx.newPage(); await page.goto(base + '#' + route); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(500);
+  const page = await ctx.newPage(); await page.goto(base + '#' + route); await page.waitForSelector('body[data-ready="1"]'); await settle(page);
   if (setup) await setup(page);
   const r = await page.evaluate((W) => {
     const doc = document.documentElement; const main = document.querySelector('main') || document.body; const over = [];
@@ -147,7 +153,7 @@ for (const theme of ['light', 'dark']) {
     const rec = ((result.routes[route] ||= {})[theme] = { states: {} });
     // in-app navigation (home first, then the hash changes) because the shell deliberately does not move focus on the very first load
     await page.goto(base + '#/'); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(300);
-    await page.evaluate((h) => { location.hash = h; }, route); await page.waitForTimeout(1200);
+    await page.evaluate((h) => { location.hash = h; }, route); await settle(page);
     rec.focusOnNav = await page.evaluate(() => ({ onHeading: document.activeElement?.id === 'view-title' || document.activeElement === document.querySelector('main h1'), active: document.activeElement ? document.activeElement.tagName.toLowerCase() + (document.activeElement.id ? '#' + document.activeElement.id : '') : null }));
     rec.hash = await page.evaluate(() => location.hash);
     rec.rendered = await page.evaluate(() => { const m = document.querySelector('main'); return { text: (m?.textContent || '').trim().length, h1: document.querySelector('h1')?.textContent?.trim().slice(0, 60) || null }; });
@@ -165,7 +171,7 @@ for (const theme of ['light', 'dark']) {
     // reduced motion (separate context so the media query applies from load)
     const rctx = await browser.newContext({ viewport: { width: 390, height: 844 }, colorScheme: theme, reducedMotion: 'reduce' });
     await rctx.addInitScript(() => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); });
-    const rp = await rctx.newPage(); await rp.goto(base + '#' + route); await rp.waitForSelector('body[data-ready="1"]'); await rp.waitForTimeout(500);
+    const rp = await rctx.newPage(); await rp.goto(base + '#' + route); await rp.waitForSelector('body[data-ready="1"]'); await settle(rp);
     rec.motionUnderReduce = await reducedMotion(rp); await rctx.close();
     if (theme === 'light') { rec.reflow320 = await reflow(browser, base, route, theme, null, 320); rec.reflow195 = await reflow(browser, base, route, theme, null, 195); }
     rec.pageErrors = errors.slice(0, 5);
@@ -194,7 +200,7 @@ for (const [route, cfg] of Object.entries(result.routes)) for (const [theme, rec
     if (r.focus.visualOrderJumps > 1) add('focus-order-jumps', `${label}: ${r.focus.visualOrderJumps} backwards jumps in ${r.focus.order.join(' > ')}`);
     for (const s of r.dynamicNoLive) add('status-text-outside-live-region', `${label}: ${s.html}`);
   }
-  if (!rec.focusOnNav.onHeading) add('focus-not-on-heading-after-navigation', `activeElement was ${rec.focusOnNav.active} 1.2 s after navigating from #/`);
+  if (!rec.focusOnNav.onHeading) add('focus-not-on-heading-after-navigation', `activeElement was ${rec.focusOnNav.active} after navigating from #/ and the view settled`);
   if (!rec.rendered.text) add('empty-main', rec.hash);
   if (rec.motionUnderReduce.length) add('motion-under-reduce', rec.motionUnderReduce.slice(0, 3).join('; '));
   if (rec.reflow320?.pageScrollsSideways || rec.reflow320?.overflowing.length) add('reflow-320', `${rec.reflow320.scrollWidth}>${rec.reflow320.clientWidth} ${rec.reflow320.overflowing.slice(0, 3).join(', ')}`);

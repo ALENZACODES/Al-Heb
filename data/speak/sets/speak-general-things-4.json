@@ -50,7 +50,7 @@
    "translit": "rega",
    "en": "a moment",
    "kind": "word",
-   "audioId": "politeness-20",
+   "audioId": "i-16-w13",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "kesef",
    "en": "silver",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-21-w3",
    "source": "data/vocab/words.json"
   },
   {

@@ -168,7 +168,7 @@ export function mount(root, ctx = {}) {
     for (const tile of state.tiles) {
       const cls = ['tile', tile.kind, q && q.wrong === tile.id && !q.right ? 'wrong' : '', q && q.right === tile.id ? 'right' : ''].filter(Boolean).join(' ');
       list.appendChild(h('li', {}, h('button', {
-        class: cls, 'data-tile': tile.id, 'aria-pressed': !q && state.selected === tile.id, 'aria-label': q ? tile.glyph + ' ' + tile.name : false,
+        class: cls, 'data-tile': tile.id, 'aria-pressed': !q && state.selected === tile.id, 'aria-label': q ? tile.glyph + ' ' + tile.name : null,
         onclick: () => onTile(tile)
       }, h('span', { class: 'g', dir: 'rtl', lang: 'he' }, tile.glyph), h('span', { class: 'n' }, q ? '' : tile.name), h('span', { class: 's' }, q ? '' : '/' + tile.ipa + '/'))));
     }

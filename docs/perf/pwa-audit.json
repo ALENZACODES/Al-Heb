@@ -1,0 +1,373 @@
+{
+ "when": "2026-11-04T13:41:11.460Z",
+ "passed": 61,
+ "failed": 0,
+ "results": [
+  {
+   "name": "manifest.name present",
+   "ok": true,
+   "kind": "ok",
+   "detail": "ALEF"
+  },
+  {
+   "name": "manifest.short_name present",
+   "ok": true,
+   "kind": "ok",
+   "detail": "ALEF"
+  },
+  {
+   "name": "manifest.start_url present",
+   "ok": true,
+   "kind": "ok",
+   "detail": "./#/"
+  },
+  {
+   "name": "manifest.scope present",
+   "ok": true,
+   "kind": "ok",
+   "detail": "./"
+  },
+  {
+   "name": "manifest.display present",
+   "ok": true,
+   "kind": "ok",
+   "detail": "standalone"
+  },
+  {
+   "name": "manifest.background_color present",
+   "ok": true,
+   "kind": "ok",
+   "detail": "#f6efe0"
+  },
+  {
+   "name": "manifest.theme_color present",
+   "ok": true,
+   "kind": "ok",
+   "detail": "#1f3a5f"
+  },
+  {
+   "name": "manifest.icons present",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "manifest.id present",
+   "ok": true,
+   "kind": "ok",
+   "detail": "./"
+  },
+  {
+   "name": "manifest.description present",
+   "ok": true,
+   "kind": "ok",
+   "detail": "Learn to read Hebrew aloud and speak it in Israel."
+  },
+  {
+   "name": "manifest.lang present",
+   "ok": true,
+   "kind": "ok",
+   "detail": "en"
+  },
+  {
+   "name": "manifest.name length reasonable",
+   "ok": true,
+   "kind": "ok",
+   "detail": "name 4"
+  },
+  {
+   "name": "manifest.short_name <= 12 characters (home-screen label)",
+   "ok": true,
+   "kind": "ok",
+   "detail": "4"
+  },
+  {
+   "name": "manifest.display is standalone-like",
+   "ok": true,
+   "kind": "ok",
+   "detail": "standalone"
+  },
+  {
+   "name": "start_url is inside scope",
+   "ok": true,
+   "kind": "ok",
+   "detail": "./#/ in ./"
+  },
+  {
+   "name": "start_url and scope are relative (works under a /repo/ project-site prefix)",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "<meta name=theme-color> present and equals manifest theme_color",
+   "ok": true,
+   "kind": "ok",
+   "detail": "#1f3a5f / #1f3a5f"
+  },
+  {
+   "name": "<link rel=manifest> in index.html",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "apple-touch-icon link (iOS home screen)",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "viewport meta present",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "icon file exists: assets/icons/icon-192.png",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "icon assets/icons/icon-192.png real size equals declared 192x192",
+   "ok": true,
+   "kind": "ok",
+   "detail": "192x192"
+  },
+  {
+   "name": "icon file exists: assets/icons/icon-512.png",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "icon assets/icons/icon-512.png real size equals declared 512x512",
+   "ok": true,
+   "kind": "ok",
+   "detail": "512x512"
+  },
+  {
+   "name": "icon file exists: assets/icons/icon-maskable-512.png",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "icon assets/icons/icon-maskable-512.png real size equals declared 512x512",
+   "ok": true,
+   "kind": "ok",
+   "detail": "512x512"
+  },
+  {
+   "name": "icon file exists: assets/icons/icon.svg",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "icon 192x192 purpose any",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "icon 512x512 purpose any",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "icon 512x512 purpose maskable",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "apple-touch-icon.png is 180x180",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "no icon mixes \"any maskable\" in one entry (Lighthouse advises separate icons)",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "screenshot exists: assets/screenshots/narrow-home.jpg",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "screenshot exists: assets/screenshots/narrow-letters.jpg",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "screenshot exists: assets/screenshots/narrow-learn.jpg",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "screenshot exists: assets/screenshots/wide-home.jpg",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "screenshots cover narrow and wide form factors (richer install UI)",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "shortcut inside scope: Lessons",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "shortcut inside scope: Review cards",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "shortcut inside scope: Letters",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "sw.js has a fetch handler (required for installability)",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "sw.js lives at the site root, so its scope covers manifest scope",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "sw.js registered with a relative URL",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "offline.html exists",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "offline.html is in the precache list",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "index.html and manifest are in the precache list",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "sw.js navigation fallback chain ends in offline.html",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "every precache entry exists on disk",
+   "ok": true,
+   "kind": "ok",
+   "detail": "456 entries"
+  },
+  {
+   "name": "offline.html is self-contained (no external requests)",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "_headers: sw.js and precache-manifest.js are no-cache",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "_headers: manifest served as application/manifest+json",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "service worker active",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "SW scope equals the site root",
+   "ok": true,
+   "kind": "ok",
+   "detail": "http://localhost:41155/"
+  },
+  {
+   "name": "shell cache filled with the precache list",
+   "ok": true,
+   "kind": "ok",
+   "detail": "alef-shell-a4d664a5db40: 456 of 456"
+  },
+  {
+   "name": "Chromium's installability errors (CDP) are empty",
+   "ok": true,
+   "kind": "ok",
+   "detail": "[]"
+  },
+  {
+   "name": "Chromium parsed the manifest without errors",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "offline reload shows the app: /",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "offline reload shows the app: /#/learn",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "offline reload shows the app: /#/read/bless-priestly-1",
+   "ok": true,
+   "kind": "ok",
+   "detail": ""
+  },
+  {
+   "name": "offline.html is served from cache while offline",
+   "ok": true,
+   "kind": "ok",
+   "detail": "200 text/html; charset=utf-8"
+  },
+  {
+   "name": "limits",
+   "ok": true,
+   "kind": "NOTE",
+   "detail": "headless Chromium on localhost; no real install prompt, no iOS/Safari \"Add to Home Screen\", no maskable-safe-zone rendering check"
+  }
+ ]
+}

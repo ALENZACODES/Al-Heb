@@ -14,7 +14,7 @@
    "translit": "telefon",
    "en": "telephone, phone",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-16-w1",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "ineternet",
    "en": "an internet",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-16-w5",
    "source": "data/vocab/words.json"
   },
   {

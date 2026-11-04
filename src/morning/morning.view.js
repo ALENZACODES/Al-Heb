@@ -21,6 +21,8 @@ export const MORNING_CSS = `
 .mrn-strip li { text-align: center; min-inline-size: 2.2rem; } .mrn-strip .g { display: block; font-size: 1.2rem; }
 .mrn-banner { border: 1px solid var(--border); border-radius: var(--radius); padding: .5rem .8rem; }
 .mrn-flag { font-size: .85rem; font-style: italic; }
+.mrn label { display: inline-flex; align-items: center; gap: .4rem; min-block-size: var(--tap, 48px); }
+.mrn input[type=time] { min-block-size: var(--tap, 48px); min-inline-size: 8rem; padding: .4rem .6rem; font: inherit; box-sizing: border-box; }
 `;
 function ensureCss() { if (typeof document !== "undefined" && !document.getElementById("alef-mrn-style")) document.head.append(el("style", { id: "alef-mrn-style" }, MORNING_CSS)); }
 

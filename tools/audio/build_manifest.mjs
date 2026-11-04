@@ -5,6 +5,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
+import { parseCsv } from '../record-kit/lib.mjs';
+import { buildScripts } from '../pronunciation/recording_script.mjs';
 import {
   TRADITIONS, VOICES, KINDS, LETTERS, FINAL_LETTERS, VARIANT_LETTERS, GRID_MARKS, GRID_VOWELS, GRID_VOWEL_IPA_ISRAELI,
   VOWELS, normalizeId, audioPath,
@@ -40,7 +42,18 @@ function guessKind(item) {
   return /\s/.test(he.trim()) ? 'line' : 'word';
 }
 
-export function buildEntries({ root = ROOT, existsFn } = {}) {
+/** Rows {id, he, ipa:{tradition:ipa}} of the 1,000-word donor scripts, straight from the generator. */
+export function scriptWordRows() {
+  const { files } = buildScripts();
+  const by = new Map();
+  for (const t of TRADITIONS) for (const r of parseCsv(files[`recording-script-${t}.csv`])) {
+    if (!by.has(r.id)) by.set(r.id, { id: r.id, he: r.pointed_hebrew, ipa: {} });
+    by.get(r.id).ipa[t] = r.ipa;
+  }
+  return [...by.values()];
+}
+
+export function buildEntries({ root = ROOT, existsFn, ...opts } = {}) {
   const notes = [];
   const warnings = [];
   const exists = existsFn || ((rel) => fs.existsSync(path.join(root, rel)));
@@ -158,6 +171,15 @@ export function buildEntries({ root = ROOT, existsFn } = {}) {
     if (m && m.id && m.word) add('word', `anchor-${m.id}`, m.word, 'mnemonics', { group: 'anchor-word', israeliOnly: true });
   }
 
+  // --- donor recording-script words (docs/voices/recording-script-<tradition>.csv). ONE source of truth: the rows come from
+  // tools/pronunciation/recording_script.mjs (buildScripts), so every id a donor is asked to read has a manifest entry
+  // (kind 'word', every voice x tradition, status 'missing', group 'vocab-word'; lazy-loaded shard, not core).
+  // Existing ids (e.g. a corpus word with the same id) are kept as they are.
+  if (opts.scriptWords !== false) {
+    const sw = opts.scriptWords || scriptWordRows();
+    for (const r of sw) add('word', r.id, r.he, 'recording-script', { group: 'vocab-word', ipaAll: r.ipa });
+  }
+
   // --- equivalence rules (human-reviewed only)
   const eq = readJson(root, 'data/audio/equivalence.json');
   notes.push(eq.note);
@@ -168,7 +190,7 @@ export function buildEntries({ root = ROOT, existsFn } = {}) {
   for (const b of base) for (const voice of VOICES) for (const tradition of (b.israeliOnly ? ['israeli'] : TRADITIONS)) {
     const p = audioPath(voice, tradition, b.kind, b.id);
     const e = { path: p, voice, tradition, kind: b.kind, id: b.id, text: b.text };
-    const ipa = b.ipa && b.ipa[tradition];
+    const ipa = (b.ipa && b.ipa[tradition]) || (b.ipaAll && b.ipaAll[tradition]);
     if (ipa) e.ipa = ipa;
     let status = 'missing', source = 'none';
     if (exists(p)) {
@@ -198,11 +220,12 @@ export function buildEntries({ root = ROOT, existsFn } = {}) {
 // Size budget: the eagerly loaded data/audio/manifest.json must stay under 2 MiB. Reader word clips (group 'prayer-word', one per word of
 // every corpus record, x2 voices x3 traditions) are ~70% of all entries, so they live in lazily loaded per-tradition shards
 // data/audio/manifest-words-<tradition>.json. Everything else (letters, vowels, syllables, lines, prayers, lesson/phrasebook/anchor words) is core.
+export const SHARD_GROUPS = ['prayer-word', 'vocab-word'];
 export const SHARD_GROUP = 'prayer-word';
 export function splitEntries(entries) {
-  const core = entries.filter((e) => e.group !== SHARD_GROUP);
+  const core = entries.filter((e) => !SHARD_GROUPS.includes(e.group));
   const shards = {};
-  for (const t of TRADITIONS) shards[t] = entries.filter((e) => e.group === SHARD_GROUP && e.tradition === t);
+  for (const t of TRADITIONS) shards[t] = entries.filter((e) => SHARD_GROUPS.includes(e.group) && e.tradition === t);
   return { core, shards };
 }
 export const shardFile = (t) => `data/audio/manifest-words-${t}.json`;

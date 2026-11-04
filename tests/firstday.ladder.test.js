@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { waitFor } from './helpers/waitfor.js';
 const L = await import("../src/firstday/loader.js");
 const M = await import("../src/firstday/model.js");
 const V = await import("../src/firstday/ladder.view.js");
@@ -42,7 +43,7 @@ test("mount renders draft notice, labelled controls, and unmounts", { skip: !jsd
   const root = dom.window.document.getElementById("r");
   const mem = {};
   const un = V.mount(root, { firstdayData: { ladder }, store: { get: async (k) => mem[k], set: async (k, v) => { mem[k] = v; } } });
-  await new Promise((r) => setTimeout(r, 20));
+  await waitFor(() => /unreviewed/.test(root.textContent), { message: "/unreviewed/.test(root.textContent)" });
   assert.match(root.textContent, /unreviewed/);
   assert.ok(root.querySelector("button[aria-label^='I read']"));
   un(); assert.equal(root.children.length, 0);

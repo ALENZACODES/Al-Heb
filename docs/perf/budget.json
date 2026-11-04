@@ -1,0 +1,10 @@
+{
+ "metric": "JS bytes transferred (script resources incl. headers) until the audio manifest has settled (window.alefManifest) + 1 s, cold load of /, no service worker",
+ "baselineBytes": 234197,
+ "headroom": 1.15,
+ "budgetBytes": 276480,
+ "measured": "2026-11-04T13:57:12.127Z",
+ "network": "slow4g",
+ "jsRequests": 38,
+ "rule": "baseline x 1.15 rounded up to the next 10 KB; raise only with a written reason in docs/perf/PERF.md"
+}

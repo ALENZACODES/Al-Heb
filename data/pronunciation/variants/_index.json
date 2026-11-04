@@ -5,15 +5,15 @@
  "status": "rule-generated from the niqqud text; not verified by a native speaker; no audio exists",
  "rules": "docs/pronunciation/VARIANTS.md",
  "counts": {
-  "records": 6632,
-  "vocab": 6299,
+  "records": 6630,
+  "vocab": 6297,
   "corpus": 333,
   "review": 401
  },
  "flags": {
   "alef-vav-mater-repaired": 71,
   "aramaic": 8,
-  "ashk-final-kamatz-reduced": 1220,
+  "ashk-final-kamatz-reduced": 1221,
   "divine-name": 61,
   "he-patach-no-mappiq": 1,
   "ipa-differs-from-words.json": 136,
@@ -43,7 +43,7 @@
   },
   {
    "file": "_vocab-4.json",
-   "count": 299
+   "count": 297
   },
   {
    "file": "_corpus-1.json",

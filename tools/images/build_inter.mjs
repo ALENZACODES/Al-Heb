@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Builds the ChatGPT paste files for the intermediate-lesson images (docs/images/paste/inter-NN.txt, at most 25 images
+// Builds the paste files for the intermediate-lesson images (docs/images/paste/inter-NN.txt, at most 25 images
 // each) and data/images/inter-pending.csv (same columns as manifest.csv) from data/curriculum/intermediate-image-slots.json.
 // The file name of every returned image is the slot id plus .png (for example I-01-img1.png); see docs/images/INTER-INGEST.md.
 //   node tools/images/build_inter.mjs          write the files
@@ -18,7 +18,7 @@ export const CSV = join(ROOT, 'data/images/inter-pending.csv');
 export const MAX_ITEMS = 25;
 export const MAX_CHARS = 12000;
 export const FIRST_COMMAND = 201; // inter-01 = command 201 (cmd-NNN uses 36-149)
-export const W = 1792, H = 1024; // scenes are wide: ChatGPT delivers 3:2
+export const W = 1792, H = 1024; // scenes are wide: the image generator delivers 3:2
 export const NO_PEOPLE = 'No identifiable or real people: any person is a generic stylised figure seen from behind, from the side or at a distance, with no individual face; no portraits and no likenesses of anyone real.';
 export const SACRED = 'Sacred books and scrolls are never shown with legible writing: pages and parchment stay blank; ritual objects are drawn plainly and respectfully.';
 const HEAD = ['file', 'set', 'command', 'block', 'width', 'height', 'status', 'prompt'];

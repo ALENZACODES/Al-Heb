@@ -23,7 +23,7 @@
    "translit": "seret",
    "en": "ribbon",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-38-w4",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,7 +41,7 @@
    "translit": "temunah",
    "en": "photograph, photo, picture",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-49-w2",
    "source": "data/vocab/words.json"
   },
   {
@@ -77,7 +77,7 @@
    "translit": "chayal",
    "en": "soldier",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-18-w2",
    "source": "data/vocab/words.json"
   },
   {

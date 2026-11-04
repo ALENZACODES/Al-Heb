@@ -14,7 +14,7 @@
    "translit": "zeh zol",
    "en": "it's cheap",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-12-w5",
    "source": "data/vocab/words.json"
   },
   {
@@ -23,7 +23,7 @@
    "translit": "zeh yakar",
    "en": "it's expensive",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-12-w4",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,7 +41,7 @@
    "translit": "yesh hanachah?",
    "en": "is there a discount?",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-12-w6",
    "source": "data/vocab/words.json"
   },
   {
@@ -50,7 +50,7 @@
    "translit": "mah hamechir?",
    "en": "what is the price?",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-12-w3",
    "source": "data/vocab/words.json"
   },
   {
@@ -59,7 +59,7 @@
    "translit": "ekach et zeh",
    "en": "I'll take this",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-12-w13",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "kamah zeh oleh?",
    "en": "how much does it cost?",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-12-w2",
    "source": "data/vocab/words.json"
   }
  ]

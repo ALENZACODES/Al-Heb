@@ -14,7 +14,7 @@
    "translit": "achi",
    "en": "my brother (bro)",
    "kind": "word",
-   "audioId": "politeness-15",
+   "audioId": "i-18-w12",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,7 +41,7 @@
    "translit": "sabavah",
    "en": "cool / great / fine by me",
    "kind": "word",
-   "audioId": "politeness-12",
+   "audioId": "i-18-w11",
    "source": "data/vocab/words.json"
   },
   {
@@ -77,7 +77,7 @@
    "translit": "todah rabah",
    "en": "thank you very much",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-19-w13",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "chaval al hazeman",
    "en": "awesome (lit. a waste of the time)",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-18-w13",
    "source": "data/vocab/words.json"
   }
  ]

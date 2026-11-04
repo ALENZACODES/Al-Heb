@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { waitFor } from './helpers/waitfor.js';
 import { createStore, createMemoryStorage } from '../src/store.js';
 
 // Minimal fake DOM (checks view logic and escaping, NOT real browser rendering or print layout).
@@ -17,7 +18,7 @@ class N {
 globalThis.document = { createElement: (t) => new N(t) };
 const { mount } = await import('../src/teacher/teacher.view.js');
 const S = await import('../src/teacher/summary.js');
-const wait = async (f) => { for (let i = 0; i < 300 && !f(); i++) await new Promise((r) => setTimeout(r, 10)); };
+const wait = (f) => waitFor(f, { message: 'teacher view condition never became true' });
 const btn = (root, re) => root.find((n) => n.tag === 'button' && re.test(n.text))[0];
 
 test('share page: consent note, export shows what is shared and a valid code, no network used', async () => {

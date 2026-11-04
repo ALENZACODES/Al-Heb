@@ -23,7 +23,7 @@
    "translit": "chag",
    "en": "holiday",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-30-w2",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "yeshu'ah",
    "en": "salvation, help, rescue",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-06-w2",
    "source": "data/vocab/words.json"
   },
   {

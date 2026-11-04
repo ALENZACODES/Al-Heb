@@ -16,6 +16,7 @@ import { createRequire } from 'node:module';
 import { spawnSync } from 'node:child_process';
 import { transliterate } from '../src/pronunciation/transliterate.js';
 import { createImgResolver } from './img.js';
+import { buildGeneratedManifest, loadApprovals, loadProvenance, makePaths } from '../tools/images/ingest_lib.mjs';
 import { overlaySvg, glyphFor, loadLettersJson } from '../tools/images/overlay.mjs';
 import { LETTERS, letterToken, VOWELS } from '../tools/images/spec.mjs';
 import { mnemonicCards, mnemonicStatus } from './cards.mjs';
@@ -54,7 +55,7 @@ export function parseArgs(argv) {
     const a = argv[i];
     if (a === '--pdf') o.pdf = true; else if (a === '--bleed') o.bleed = true; else if (a === '--print') o.print = true; else if (a === '--no-qr') o.qr = false;
     else if (a === '--trim') o.trim = argv[++i]; else if (a === '--host') o.host = argv[++i]; else if (a === '--out') o.out = argv[++i];
-    else if (a === '--binding') o.binding = argv[++i];
+    else if (a === '--binding') o.binding = argv[++i]; else if (a === '--seed') o.seed = true;
     else throw new Error(`unknown option ${a}`);
   }
   if (!TRIMS[o.trim]) throw new Error(`unknown trim ${o.trim}; choose ${Object.keys(TRIMS).join(', ')}`);
@@ -128,6 +129,25 @@ export function fontFaces(outDir) {
 @font-face{font-family:"Gveret Levin";src:url("${rel('gveretlevin-GveretLevin-Regular.ttf')}") format("truetype");unicode-range:${heRange}}`;
 }
 
+/**
+ * Approved-image manifest, derived LIVE from data/images/approvals.json + provenance.json (source of truth), so approving an image
+ * (node tools/images/ingest.mjs approve ...) is picked up by the next build with no code change and without needing generated-manifest.json
+ * to be rebuilt. Only images whose variant files exist in assets/img/<dir>/ are listed. altText still comes from generated-manifest.json.
+ */
+export function approvedManifest(root = ROOT) {
+  const paths = makePaths(root);
+  const m = buildGeneratedManifest(loadProvenance(paths), loadApprovals(paths));
+  const disk = readJsonAt(join(root, 'data/images/generated-manifest.json'));
+  for (const [stem, e] of Object.entries(m.images)) {
+    e.files = e.files.filter((f) => existsSync(join(root, 'assets/img', m.dir, f.file)));
+    if (!e.files.length) delete m.images[stem];
+  }
+  m.count = Object.keys(m.images).length;
+  m.altText = disk?.altText ?? {};
+  return m;
+}
+function readJsonAt(p) { try { return JSON.parse(readFileSync(p, 'utf8')); } catch { return null; } }
+
 const sorted = (a, f) => [...a].sort((x, y) => f(x).localeCompare(f(y)));
 
 /** @param {ReturnType<typeof parseArgs>} o  @param {Record<string,number>} [pages] anchor id -> printed page number (from pass 1) */
@@ -138,8 +158,9 @@ export function buildHtml(o, pages = {}) {
   const pg = (id) => `<span class="pg">${pages[id] ?? '&middot;&middot;&middot;'}</span>`;
   const toc = (id, label) => `<li><a href="#${id}" style="display:contents"><span class="t">${label}</span>${pg(id)}</a></li>`;
   const idx = readJson('assets/img/index.json');
-  const R = createImgResolver({ base: relative(outDir, join(ROOT, 'assets/img')) || '.', files: idx?.files || [], generated: readJson('data/images/generated-manifest.json') });
-  const EX = extraChapters({ pages, toc, img: (stem) => (R.isReal(stem) ? R.src(stem) : null), alt: readJson('data/images/generated-manifest.json')?.altText });
+  const GEN = approvedManifest(ROOT);
+  const R = createImgResolver({ base: relative(outDir, join(ROOT, 'assets/img')) || '.', files: idx?.files || [], generated: GEN });
+  const EX = extraChapters({ pages, toc, binding: o.binding, img: (stem) => (R.isReal(stem) ? R.src(stem) : null), alt: GEN.altText });
   const lettersJson = loadLettersJson();
   const lettersSource = lettersJson ? 'data/letters/letters.json' : 'built-in glyph map (data/letters/letters.json not present)';
   const reg = registryBlessing();
@@ -389,17 +410,25 @@ export async function main(argv) {
   console.log(`wrote ${relative(ROOT, htmlPath)} (${html.length} bytes)`);
   if (o.pdf) {
     const pdfPath = join(out, pdfName(o));
-    await renderPdf(htmlPath, pdfPath);
-    let pages = pagesFromPdf(pdfPath);
-    html = buildHtml(o, pages); writeFileSync(htmlPath, html);
-    await renderPdf(htmlPath, pdfPath);
-    const pages2 = pagesFromPdf(pdfPath);
-    const moved = Object.keys(pages).filter((k) => pages[k] !== pages2[k]);
-    if (moved.length) { console.warn(`page numbers moved for ${moved.length} anchors after pass 2; running pass 3`); html = buildHtml(o, pages2); writeFileSync(htmlPath, html); await renderPdf(htmlPath, pdfPath); }
+    // Page numbers (and the blank pages that align lesson spreads) depend on each other, so re-render until no anchor moves (at most 5 renders).
+    // --seed starts from the page numbers of the PDF already on disk (same variant) instead of a blind first pass.
+    let cur = o.seed && existsSync(pdfPath) ? pagesFromPdf(pdfPath) : null;
+    if (!cur) { await renderPdf(htmlPath, pdfPath); cur = pagesFromPdf(pdfPath); }
+    for (let pass = 2; pass <= 5; pass++) {
+      html = buildHtml(o, cur); writeFileSync(htmlPath, html);
+      await renderPdf(htmlPath, pdfPath);
+      const next = pagesFromPdf(pdfPath);
+      const moved = Object.keys(cur).filter((k) => cur[k] !== next[k]);
+      cur = next;
+      if (!moved.length) break;
+      console.warn(`pass ${pass}: page numbers moved for ${moved.length} anchors; another pass`);
+    }
+    const pages2 = cur;
     if (o.print) {
-      spawnSync('python3', [join(ROOT, 'book/pdf_tools.py'), 'pad-even', pdfPath], { stdio: 'inherit' });
+      const chk = (r, what) => { if (r.status !== 0) throw new Error(`pdf_tools ${what} failed for ${pdfPath}`); };
+      chk(spawnSync('python3', [join(ROOT, 'book/pdf_tools.py'), 'pad-even', pdfPath], { stdio: 'inherit' }), 'pad-even');
       const [tw, th] = TRIMS[o.trim];
-      spawnSync('python3', [join(ROOT, 'book/pdf_tools.py'), 'finalize', pdfPath, String(tw), String(th), o.bleed ? '0.125' : '0', o.binding], { stdio: 'inherit' });
+      chk(spawnSync('python3', [join(ROOT, 'book/pdf_tools.py'), 'finalize', pdfPath, String(tw), String(th), o.bleed ? '0.125' : '0', o.binding], { stdio: 'inherit' }), 'finalize');
     }
     scrubPdf(pdfPath);
     console.log(`wrote ${relative(ROOT, pdfPath)} (${Object.keys(pages2).length} anchors)`);

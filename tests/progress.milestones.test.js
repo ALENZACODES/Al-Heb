@@ -25,7 +25,7 @@ test('data file: five certificate-free milestones, valid kinds, hash links, draf
   assert.deepEqual(j.milestones.map((m) => m.id), ['words-100', 'prayer-read', 'siddur-25', 'siddur-50', 'siddur-75']);
   for (const m of j.milestones) { assert.ok(['words', 'prayerRead', 'coverage'].includes(m.kind)); assert.match(m.href, /^#\//); }
   assert.deepEqual(j.milestones.filter((m) => m.kind === 'coverage').map((m) => m.pct), [25, 50, 75]);
-  assert.doesNotMatch(JSON.stringify(j), /certificate (of|for)|badge|level \d|fluent/i);
+  assert.doesNotMatch(j.milestones.map((m) => m.label).join(' '), /certificate|badge|level|fluent|master/i); assert.match(j.note, /not certificates or badges/);
   assert.ok(siddur && torah, 'registry has siddur and torah texts for the prayer-read tests');
 });
 

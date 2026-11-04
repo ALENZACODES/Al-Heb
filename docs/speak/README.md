@@ -34,6 +34,22 @@ P045, P047) as a draft. Route wiring: `docs/speak/ROUTES.md`. Store key: `speak.
 - **History** (`?tab=history`): by-day totals, recent attempts, words missed most when reading aloud, and a weakest-sounds report by letter class (from an edit-distance
   alignment of target vs recognized letters, plus drill answers). A class is ranked after 3 tries.
 
+## Daily card (for the Today card)
+
+`src/speak/daily.js` exports a pure card model for the home owner:
+
+- `buildDailyCard({ date, pool, attempts, n = 5 })` (pure; `date` is a local `YYYY-MM-DD` key) returns
+  `{ kind: 'speak-daily', id: 'daily:<date>', date, title, items[5], weakSounds[], progress: {done, total}, complete, href: '#/speak?daily=1', note }`.
+  Each item is `{ id, he, translit, en, kind, audioId, set, reason }` (`reason`: "new for today", "try again", or "works on <sound>").
+- `loadDailyCardFromStore(ctx, nowMs)` reads `speak.v1` from `ctx.store`, loads the day's pool (3 sets, moving on each day, from
+  `data/speak/sets/`) and returns the card, or `null` if the data cannot load. `loadDailyCard({ date, state })` is the same without the store;
+  `dayKeyLocal(ms)` makes the date key.
+- Choice: with no history it rotates by date. With history, items whose letters fall in a weak sound class (3+ tries, from the
+  weakest-sounds report) score higher, items last marked "not yet"/missed come back, and items said successfully today or yesterday are
+  pushed down. The four-letter divine name is never offered. "Weak" rests on an unverified recognizer and drill answers; the card carries that note.
+- Progress counts Say it attempts stored under `daily:<date>`. The Say it screen lists "Today's five" first when it can build the card;
+  `?daily=1` preselects it. Doing it does not change the remembered set.
+
 ## Model audio
 
 `ctx.audio.has('word', audioId)` is checked first (audioId = the manifest word id with the same pointed text; 0 clips exist, so

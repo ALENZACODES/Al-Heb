@@ -85,10 +85,12 @@ export function mount(root, ctx = {}) {
   Promise.all([
     ctx.letters || loadJson(DATA('letters.json')),
     ctx.confusables || loadJson(DATA('confusables.json')).catch(() => null),
-    ctx.keyboard || loadJson(DATA('keyboard-si1452.json')).catch(() => null)
-  ]).then(([letters, conf, kb]) => {
+    ctx.keyboard || loadJson(DATA('keyboard-si1452.json')).catch(() => null),
+    ctx.mnemonics || loadJson(DATA('mnemonics.json')).catch(() => null)
+  ]).then(([letters, conf, kb, mn]) => {
     if (unmounted) return;
     state.letters = letters; state.confusables = conf; state.keyboard = kb;
+    state.mnemonics = {}; for (const m of ((mn && mn.letters) || [])) state.mnemonics[m.id] = m;
     render();
   }).catch(err => {
     if (unmounted) return;
@@ -138,6 +140,18 @@ export function mount(root, ctx = {}) {
     body.appendChild(h('div', { class: 'row' },
       h('span', { class: 'big', dir: 'rtl', lang: 'he' }, letter.he),
       h('div', {}, h('strong', {}, letter.name + ' '), he(letter.nameHe), progress0.isCompleted(letter.id, state.script) ? h('span', { class: 'chip', role: 'status' }, '\u2713 ' + t('trace.completed', 'completed') + ' (' + state.script + ')') : null, h('br'), h('span', {}, '/' + letter.sound.ipa + '/  ' + letter.sound.en))));
+    const mn = state.mnemonics && state.mnemonics[letter.id];
+    if (mn) {
+      body.appendChild(h('details', { class: 'remember', open: 'open' },
+        h('summary', {}, t('trace.remember', 'Remember it')),
+        h('p', {}, h('strong', {}, t('trace.shape', 'Shape: ')), mn.shape),
+        h('p', {}, h('strong', {}, t('trace.sound', 'Sound: ')), mn.sound),
+        h('p', {}, h('strong', {}, t('trace.story', 'Story: ')), mn.story),
+        h('p', {}, h('strong', {}, t('trace.why', 'Why this name: ')), mn.reason),
+        h('p', {}, h('strong', {}, t('trace.lookalike', 'Do not confuse with: ')), mn.lookalike),
+        h('p', { dir: 'rtl', lang: 'he' }, mn.word, ' ', h('span', { dir: 'ltr' }, '(' + mn.wordSound + ' = ' + mn.wordMeaning + ')')),
+        h('p', { class: 'muted' }, t('trace.mnDraft', 'Draft memory hook: not yet checked by a Hebrew teacher.'))));
+    }
     const stage = h('div', { class: 'stage' });
     const fb = h('div', { class: 'feedback', role: 'status', 'aria-live': 'polite' }, t('trace.start', 'Press Animate to see the order, then trace it.'));
     body.appendChild(stage); body.appendChild(fb);

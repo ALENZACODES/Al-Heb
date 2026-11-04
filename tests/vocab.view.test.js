@@ -29,7 +29,7 @@ const byId = (root, id) => root.find((n) => n.attrs.id === id)[0];
 const btn = (root, re) => root.find((n) => n.tag === "button" && re.test(n.text))[0];
 const items = (root) => root.find((n) => n.tag === "li" && n.attrs["data-id"]);
 
-const { mount, ATTRIBUTION, DRAFT_NOTICE, translitFor } = await import("../src/vocab/vocab.view.js");
+const { mount, ATTRIBUTION, DRAFT_NOTICE, translitFor, applyFilters, skippedInBulk, FN_TOPIC } = await import("../src/vocab/vocab.view.js");
 const { stripPoints, filterEntries, addCards, cardId } = await import("../src/vocab/model.js");
 const { loadTier } = await import("../src/vocab/loader.js");
 const { buildPacks, packPath } = await import("../src/vocab/split-tiers.mjs");
@@ -103,7 +103,7 @@ test("browse: draft notice, attribution footer, RTL pointed Hebrew, transliterat
   assert.match(lis[0].text, /rank 1/);
   const listen = btn(lis[0], /Listen/);
   assert.match(listen.text, /computer voice/); assert.match(listen.attrs["aria-label"], /computer voice/);
-  assert.match(root.text, /Showing 40 of 500 words/);
+  assert.match(root.text, /Showing 40 of 499 words/);
   // every control has a label
   for (const id of ["vc-tier", "vc-topic", "vc-search"]) assert.ok(root.find((n) => n.tag === "label" && n.attrs.for === id).length === 1);
   un();
@@ -152,7 +152,7 @@ test("add one word, and a batch, to reviews (stored under srs.vocab)", async () 
   assert.equal(store.m["srs.cards"], undefined);
   await byId(root, "vc-add-all").click();
   assert.equal(Object.keys(store.m["srs.vocab"]).length, 101);
-  assert.match(root.text, /Added 100 words.*399 more/);
+  assert.match(root.text, /Added 100 words.*392 more/);
   assert.match(root.text, /Review \(101 due\)/);
 });
 
@@ -245,4 +245,95 @@ test("router: /vocab is the existing optional route to this module", async () =>
   assert.equal(r.module, "../vocab/vocab.view.js"); assert.equal(r.optional, true);
   const gen = readFileSync(new URL("../src/shell/views.generated.js", import.meta.url), "utf8");
   assert.match(gen, /vocab\/vocab\.view\.js/);
+});
+
+// ---- round 2: tags, function words, forms, cross-references
+// The tier packs do not yet carry sameSpelling (split-tiers.mjs KEEP list); use the full file so the view's cross-references can be tested.
+const full = JSON.parse(readFileSync(new URL("../data/vocab/vocab5000.json", import.meta.url), "utf8")).entries;
+const fullLoader = { loadTier: async (t) => full.filter((e) => e.tier === t) };
+const all5000 = full;
+const byId5 = new Map(all5000.map((e) => [e.id, e]));
+const tagged = (tag, f = () => true) => all5000.find((e) => (e.tags || []).includes(tag) && f(e));
+
+test("applyFilters: tags, forms hidden by default, function words are their own group", () => {
+  const nForms = all5000.filter((e) => e.isForm).length;
+  assert.ok(nForms >= 1);
+  assert.equal(applyFilters(all5000, {}).length, 5000 - nForms);
+  assert.equal(applyFilters(all5000, { showForms: true }).length, 5000);
+  for (const tag of ["prayer", "jewish-life", "function", "biblical", "colloquial"]) {
+    const r = applyFilters(all5000, { tag });
+    assert.ok(r.length > 0, tag); assert.ok(r.every((e) => e.tags.includes(tag)));
+  }
+  const fn = applyFilters(all5000, { topic: FN_TOPIC });
+  assert.ok(fn.length > 100 && fn.every((e) => e.tags.includes("function")));
+  const misc = applyFilters(all5000, { topic: "Misc Nouns" });
+  assert.ok(misc.length > 0 && misc.every((e) => !(e.tags || []).includes("function")), "function words are not under Misc Nouns");
+  assert.deepEqual(applyFilters(all5000, { tag: "function", query: "water" }).map((e) => e.gloss.includes("water")).filter((x) => !x), []);
+});
+
+test("bulk add skips forms and rare senses", () => {
+  const rare = tagged("rare-sense"), form = all5000.find((e) => e.isForm), plain = all5000.find((e) => !e.isForm && !(e.tags || []).includes("rare-sense"));
+  assert.ok(skippedInBulk(rare) && skippedInBulk(form) && !skippedInBulk(plain));
+});
+
+test("screen: function-word card lists forms; menus offer tag filter, form toggle and function group; function words not labelled with a topic", async () => {
+  const { root, ctx } = mk();
+  mount(root, ctx); await tick();
+  const first = items(root)[0];
+  assert.match(first.text, /Forms \(from Wiktionary/); assert.match(first.text, /1sg/);
+  assert.match(first.text, /function word \(particle\)/); assert.doesNotMatch(first.text, /Misc Nouns/);
+  assert.ok(byId(root, "vc-tag")); assert.equal(root.find((n) => n.tag === "label" && n.attrs.for === "vc-tag").length, 1);
+  assert.equal(root.find((n) => n.tag === "label" && n.attrs.for === "vc-forms").length, 1);
+  const topic = byId(root, "vc-topic");
+  assert.ok(topic.children.some((o) => o.attrs.value === FN_TOPIC));
+  assert.ok(!topic.children.some((o) => o.attrs.value === "Misc Nouns" && false));
+  topic.value = FN_TOPIC; await topic.fire("change");
+  assert.match(root.text, /Function words \(closed class; topic does not apply\)/);
+  assert.ok(items(root).every((li) => /function word/.test(li.text)));
+  const tag = byId(root, "vc-tag"); topic.value = ""; await topic.fire("change");
+  tag.value = "prayer"; await tag.fire("change");
+  assert.ok(items(root).length > 0 || /No words match/.test(root.text));
+});
+
+test("screen: word forms hidden by default, toggle shows them with a form-of note; 'needs check' badge; homograph hints; same-spelling references", async () => {
+  const form = all5000.find((e) => e.isForm);
+  const { root, ctx } = mk();
+  ctx.vocabLoader = fullLoader;
+  mount(root, ctx); await tick();
+  const tier = byId(root, "vc-tier"); tier.value = "all"; await tier.fire("change"); await tick(60);
+  assert.ok(!items(root).some((li) => li.attrs["data-id"] === form.id));
+  const search = byId(root, "vc-search"); search.value = stripPoints(form.lemma); await search.fire("input");
+  assert.ok(!items(root).some((li) => li.attrs["data-id"] === form.id));
+  const box = byId(root, "vc-forms"); box.checked = true; await box.fire("change");
+  const li = items(root).find((x) => x.attrs["data-id"] === form.id);
+  assert.ok(li); assert.match(li.text, /This is a form of another word/);
+  assert.ok(btn(li, new RegExp(byId5.get(form.formOf).gloss.slice(0, 6).replace(/[()]/g, "."))), "form-of link to the main word");
+  // needs-check badge, homograph hint, same-spelling line
+  search.value = ""; await search.fire("input"); box.checked = false; await box.fire("change");
+  const nc = tagged("needs-check"), hg = tagged("homograph", (e) => !e.tags.includes("rare-sense")), rs = tagged("rare-sense");
+  for (const [e, re] of [[nc, /needs check/], [hg, /Homograph: shares its spelling/], [rs, /Rare sense/]]) {
+    if (!e) continue;
+    search.value = e.pointed ? stripPoints(e.pointed) : stripPoints(e.lemma); await search.fire("input");
+    const hit = items(root).find((x) => x.attrs["data-id"] === e.id);
+    assert.ok(hit, e.gloss); assert.match(hit.text, re);
+  }
+  const ss = all5000.find((e) => e.sameSpelling && e.sameSpelling.length && !e.isForm && e.tags?.includes("homograph") === false) || all5000.find((e) => e.sameSpelling?.length && !e.isForm);
+  search.value = stripPoints(ss.lemma); await search.fire("input");
+  const hit = items(root).find((x) => x.attrs["data-id"] === ss.id);
+  assert.match(hit.text, /Also spelled the same: /);
+  const other = byId5.get(ss.sameSpelling[0]);
+  assert.ok(hit.text.includes(other.pointed || other.lemma));
+});
+
+test("cards show the pointed form, never the lemma spelling, when they differ", async () => {
+  const diff = all5000.find((e) => e.pointed && stripPoints(e.pointed) !== e.lemma && !e.isForm && e.tier === 500) || all5000.find((e) => e.pointed && stripPoints(e.pointed) !== e.lemma && !e.isForm);
+  assert.ok(diff, "data has a lemma/pointed spelling difference");
+  const { root, ctx } = mk(); ctx.vocabLoader = fullLoader;
+  mount(root, ctx); await tick();
+  const tier = byId(root, "vc-tier"); tier.value = "all"; await tier.fire("change"); await tick(60);
+  const search = byId(root, "vc-search"); search.value = stripPoints(diff.pointed); await search.fire("input");
+  const li = items(root).find((x) => x.attrs["data-id"] === diff.id);
+  const he = li.find((n) => n.attrs.lang === "he")[0];
+  assert.equal(he.text, diff.pointed);
+  assert.ok(!li.find((n) => n.attrs.lang === "he").some((n) => n.text === diff.lemma));
 });

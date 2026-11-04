@@ -1,0 +1,374 @@
+{
+ "_doc": "Expected occurrences of the four-letter name in learner-facing audio targets, vocabulary items, Latin spellings and respellings. A finding not covered here, or more than max, fails tests/sensitivity.test.js. status known-issue = should be fixed by the owner lane, then the entry lowered or removed; accepted = judged consistent with docs/sensitivity/CONVENTIONS.md by this audit (not clergy-reviewed).",
+ "entries": [
+  {
+   "file": "data/audio/manifest-words-ashkenazi.json",
+   "key": "text",
+   "cls": "audio-target",
+   "kind": "prefixed",
+   "max": 8,
+   "status": "known-issue",
+   "reason": "Audio target for a prefixed form (lamed, bet, vav + the name): spokenText()/spoken() in the manifest builder only rewrite the bare word. Owner: audio lane. The pointing of the spoken form needs clergy approval; do not invent it."
+  },
+  {
+   "file": "data/audio/manifest-words-israeli.json",
+   "key": "text",
+   "cls": "audio-target",
+   "kind": "prefixed",
+   "max": 8,
+   "status": "known-issue",
+   "reason": "Audio target for a prefixed form (lamed, bet, vav + the name): spokenText()/spoken() in the manifest builder only rewrite the bare word. Owner: audio lane. The pointing of the spoken form needs clergy approval; do not invent it."
+  },
+  {
+   "file": "data/audio/manifest-words-sephardi.json",
+   "key": "text",
+   "cls": "audio-target",
+   "kind": "prefixed",
+   "max": 8,
+   "status": "known-issue",
+   "reason": "Audio target for a prefixed form (lamed, bet, vav + the name): spokenText()/spoken() in the manifest builder only rewrite the bare word. Owner: audio lane. The pointing of the spoken form needs clergy approval; do not invent it."
+  },
+  {
+   "file": "data/audio/manifest.json",
+   "key": "text",
+   "cls": "audio-target",
+   "kind": "prefixed",
+   "max": 48,
+   "status": "known-issue",
+   "reason": "Audio target for a prefixed form (lamed, bet, vav + the name): spokenText()/spoken() in the manifest builder only rewrite the bare word. Owner: audio lane. The pointing of the spoken form needs clergy approval; do not invent it."
+  },
+  {
+   "file": "data/audio/manifest.json",
+   "key": "text",
+   "cls": "audio-target",
+   "kind": "exact",
+   "max": 0,
+   "status": "fixed",
+   "reason": "Was 54 bare-name audio targets (lesson word clips). Fixed by the audio lane: the manifest now uses the spoken substitute. Kept at max 0 so any return of a bare-name target fails the gate."
+  },
+  {
+   "file": "data/corpus/registry.json",
+   "key": "notes",
+   "cls": "latin-spelling",
+   "kind": "latin",
+   "max": 1,
+   "status": "accepted",
+   "reason": "English source gloss or build note that spells the name (from the vocabulary source). Not a transliteration prompt. Review wording with clergy (see REVIEW-FOR-CLERGY.md)."
+  },
+  {
+   "file": "data/pronunciation/derived/_ssml-015.json",
+   "key": "ashkenazi",
+   "cls": "audio-target",
+   "kind": "exact",
+   "max": 2,
+   "status": "accepted",
+   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
+  },
+  {
+   "file": "data/pronunciation/derived/_ssml-015.json",
+   "key": "israeli",
+   "cls": "audio-target",
+   "kind": "exact",
+   "max": 2,
+   "status": "accepted",
+   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
+  },
+  {
+   "file": "data/pronunciation/derived/_ssml-015.json",
+   "key": "sephardi",
+   "cls": "audio-target",
+   "kind": "exact",
+   "max": 2,
+   "status": "accepted",
+   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
+  },
+  {
+   "file": "data/pronunciation/derived/_ssml-016.json",
+   "key": "ashkenazi",
+   "cls": "audio-target",
+   "kind": "exact",
+   "max": 36,
+   "status": "accepted",
+   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
+  },
+  {
+   "file": "data/pronunciation/derived/_ssml-016.json",
+   "key": "ashkenazi",
+   "cls": "audio-target",
+   "kind": "prefixed",
+   "max": 3,
+   "status": "known-issue",
+   "reason": "The ph attribute for the prefixed form (lamed, shin + the name) is an as-written reading (lajhoˈva, ʃejaˈva), not the substitute. Owner: pronunciation lane. Needs a clergy-approved spoken form."
+  },
+  {
+   "file": "data/pronunciation/derived/_ssml-016.json",
+   "key": "israeli",
+   "cls": "audio-target",
+   "kind": "exact",
+   "max": 36,
+   "status": "accepted",
+   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
+  },
+  {
+   "file": "data/pronunciation/derived/_ssml-016.json",
+   "key": "israeli",
+   "cls": "audio-target",
+   "kind": "prefixed",
+   "max": 3,
+   "status": "known-issue",
+   "reason": "The ph attribute for the prefixed form (lamed, shin + the name) is an as-written reading (lajhoˈva, ʃejaˈva), not the substitute. Owner: pronunciation lane. Needs a clergy-approved spoken form."
+  },
+  {
+   "file": "data/pronunciation/derived/_ssml-016.json",
+   "key": "sephardi",
+   "cls": "audio-target",
+   "kind": "exact",
+   "max": 36,
+   "status": "accepted",
+   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
+  },
+  {
+   "file": "data/pronunciation/derived/_ssml-016.json",
+   "key": "sephardi",
+   "cls": "audio-target",
+   "kind": "prefixed",
+   "max": 3,
+   "status": "known-issue",
+   "reason": "The ph attribute for the prefixed form (lamed, shin + the name) is an as-written reading (lajhoˈva, ʃejaˈva), not the substitute. Owner: pronunciation lane. Needs a clergy-approved spoken form."
+  },
+  {
+   "file": "data/pronunciation/derived/_ssml-017.json",
+   "key": "ashkenazi",
+   "cls": "audio-target",
+   "kind": "exact",
+   "max": 39,
+   "status": "accepted",
+   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
+  },
+  {
+   "file": "data/pronunciation/derived/_ssml-017.json",
+   "key": "ashkenazi",
+   "cls": "audio-target",
+   "kind": "prefixed",
+   "max": 1,
+   "status": "known-issue",
+   "reason": "The ph attribute for the prefixed form (lamed, shin + the name) is an as-written reading (lajhoˈva, ʃejaˈva), not the substitute. Owner: pronunciation lane. Needs a clergy-approved spoken form."
+  },
+  {
+   "file": "data/pronunciation/derived/_ssml-017.json",
+   "key": "israeli",
+   "cls": "audio-target",
+   "kind": "exact",
+   "max": 39,
+   "status": "accepted",
+   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
+  },
+  {
+   "file": "data/pronunciation/derived/_ssml-017.json",
+   "key": "israeli",
+   "cls": "audio-target",
+   "kind": "prefixed",
+   "max": 1,
+   "status": "known-issue",
+   "reason": "The ph attribute for the prefixed form (lamed, shin + the name) is an as-written reading (lajhoˈva, ʃejaˈva), not the substitute. Owner: pronunciation lane. Needs a clergy-approved spoken form."
+  },
+  {
+   "file": "data/pronunciation/derived/_ssml-017.json",
+   "key": "sephardi",
+   "cls": "audio-target",
+   "kind": "exact",
+   "max": 39,
+   "status": "accepted",
+   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
+  },
+  {
+   "file": "data/pronunciation/derived/_ssml-017.json",
+   "key": "sephardi",
+   "cls": "audio-target",
+   "kind": "prefixed",
+   "max": 1,
+   "status": "known-issue",
+   "reason": "The ph attribute for the prefixed form (lamed, shin + the name) is an as-written reading (lajhoˈva, ʃejaˈva), not the substitute. Owner: pronunciation lane. Needs a clergy-approved spoken form."
+  },
+  {
+   "file": "data/pronunciation/derived/_ssml-018.json",
+   "key": "ashkenazi",
+   "cls": "audio-target",
+   "kind": "exact",
+   "max": 7,
+   "status": "accepted",
+   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
+  },
+  {
+   "file": "data/pronunciation/derived/_ssml-018.json",
+   "key": "israeli",
+   "cls": "audio-target",
+   "kind": "exact",
+   "max": 7,
+   "status": "accepted",
+   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
+  },
+  {
+   "file": "data/pronunciation/derived/_ssml-018.json",
+   "key": "sephardi",
+   "cls": "audio-target",
+   "kind": "exact",
+   "max": 7,
+   "status": "accepted",
+   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
+  },
+  {
+   "file": "data/pronunciation/runtime/lookup-02.json",
+   "key": "lookup",
+   "cls": "respell-as-written",
+   "kind": "prefixed",
+   "max": 1,
+   "status": "known-issue",
+   "reason": "Learner-facing respelling of a prefixed form reads the letters (laivah / laiveh / laihovah). Owner: pronunciation lane. The standard spoken form needs a clergy-approved respelling."
+  },
+  {
+   "file": "data/pronunciation/runtime/lookup-03.json",
+   "key": "lookup",
+   "cls": "respell-as-written",
+   "kind": "prefixed",
+   "max": 1,
+   "status": "known-issue",
+   "reason": "Learner-facing respelling of a prefixed form reads the letters (laivah / laiveh / laihovah). Owner: pronunciation lane. The standard spoken form needs a clergy-approved respelling."
+  },
+  {
+   "file": "data/pronunciation/runtime/lookup-06.json",
+   "key": "lookup",
+   "cls": "respell-as-written",
+   "kind": "prefixed",
+   "max": 1,
+   "status": "known-issue",
+   "reason": "Learner-facing respelling of a prefixed form reads the letters (laivah / laiveh / laihovah). Owner: pronunciation lane. The standard spoken form needs a clergy-approved respelling."
+  },
+  {
+   "file": "data/pronunciation/variants/_corpus-1.json",
+   "key": "simple:ashkenazi",
+   "cls": "respell-as-written",
+   "kind": "prefixed",
+   "max": 3,
+   "status": "known-issue",
+   "reason": "Learner-facing respelling of a prefixed form reads the letters (laivah / laiveh / laihovah). Owner: pronunciation lane. The standard spoken form needs a clergy-approved respelling."
+  },
+  {
+   "file": "data/pronunciation/variants/_corpus-1.json",
+   "key": "simple:israeli",
+   "cls": "respell-as-written",
+   "kind": "prefixed",
+   "max": 3,
+   "status": "known-issue",
+   "reason": "Learner-facing respelling of a prefixed form reads the letters (laivah / laiveh / laihovah). Owner: pronunciation lane. The standard spoken form needs a clergy-approved respelling."
+  },
+  {
+   "file": "data/pronunciation/variants/_corpus-1.json",
+   "key": "simple:sephardi",
+   "cls": "respell-as-written",
+   "kind": "prefixed",
+   "max": 3,
+   "status": "known-issue",
+   "reason": "Learner-facing respelling of a prefixed form reads the letters (laivah / laiveh / laihovah). Owner: pronunciation lane. The standard spoken form needs a clergy-approved respelling."
+  },
+  {
+   "file": "data/vocab/index.json",
+   "key": "rows",
+   "cls": "latin-spelling",
+   "kind": "latin",
+   "max": 1,
+   "status": "accepted",
+   "reason": "English source gloss or build note that spells the name (from the vocabulary source). Not a transliteration prompt. Review wording with clergy (see REVIEW-FOR-CLERGY.md)."
+  },
+  {
+   "file": "data/vocab/packs/doing-verbs-1.json",
+   "key": "en",
+   "cls": "latin-spelling",
+   "kind": "latin",
+   "max": 1,
+   "status": "accepted",
+   "reason": "English source gloss or build note that spells the name (from the vocabulary source). Not a transliteration prompt. Review wording with clergy (see REVIEW-FOR-CLERGY.md)."
+  },
+  {
+   "file": "data/vocab/packs/religion-prayer-1.json",
+   "key": "alt",
+   "cls": "latin-spelling",
+   "kind": "latin",
+   "max": 1,
+   "status": "accepted",
+   "reason": "English source gloss or build note that spells the name (from the vocabulary source). Not a transliteration prompt. Review wording with clergy (see REVIEW-FOR-CLERGY.md)."
+  },
+  {
+   "file": "data/vocab/packs/survival-lesson-read-1.json",
+   "key": "he",
+   "cls": "vocab-item",
+   "kind": "exact",
+   "max": 2,
+   "status": "accepted",
+   "reason": "Recognition item (the Name, read aloud as Adonai) with translit adonai and a note not to pronounce the letters. Not in speak sets or deck-order. Must stay out of any produce/say-it prompt."
+  },
+  {
+   "file": "data/vocab/packs/survival-lesson-read-1.json",
+   "key": "heUnpointed",
+   "cls": "vocab-item",
+   "kind": "exact",
+   "max": 2,
+   "status": "accepted",
+   "reason": "Recognition item (the Name, read aloud as Adonai) with translit adonai and a note not to pronounce the letters. Not in speak sets or deck-order. Must stay out of any produce/say-it prompt."
+  },
+  {
+   "file": "data/vocab/themes/religion-prayer-set01.json",
+   "key": "he",
+   "cls": "vocab-item",
+   "kind": "exact",
+   "max": 2,
+   "status": "accepted",
+   "reason": "Recognition item (the Name, read aloud as Adonai) with translit adonai and a note not to pronounce the letters. Not in speak sets or deck-order. Must stay out of any produce/say-it prompt."
+  },
+  {
+   "file": "data/vocab/themes/religion-prayer-set01.json",
+   "key": "heUnpointed",
+   "cls": "vocab-item",
+   "kind": "exact",
+   "max": 2,
+   "status": "accepted",
+   "reason": "Recognition item (the Name, read aloud as Adonai) with translit adonai and a note not to pronounce the letters. Not in speak sets or deck-order. Must stay out of any produce/say-it prompt."
+  },
+  {
+   "file": "data/vocab/words.json",
+   "key": "alt",
+   "cls": "latin-spelling",
+   "kind": "latin",
+   "max": 1,
+   "status": "accepted",
+   "reason": "English source gloss or build note that spells the name (from the vocabulary source). Not a transliteration prompt. Review wording with clergy (see REVIEW-FOR-CLERGY.md)."
+  },
+  {
+   "file": "data/vocab/words.json",
+   "key": "en",
+   "cls": "latin-spelling",
+   "kind": "latin",
+   "max": 1,
+   "status": "accepted",
+   "reason": "English source gloss or build note that spells the name (from the vocabulary source). Not a transliteration prompt. Review wording with clergy (see REVIEW-FOR-CLERGY.md)."
+  },
+  {
+   "file": "data/vocab/words.json",
+   "key": "he",
+   "cls": "vocab-item",
+   "kind": "exact",
+   "max": 2,
+   "status": "accepted",
+   "reason": "Recognition item (the Name, read aloud as Adonai) with translit adonai and a note not to pronounce the letters. Not in speak sets or deck-order. Must stay out of any produce/say-it prompt."
+  },
+  {
+   "file": "data/vocab/words.json",
+   "key": "heUnpointed",
+   "cls": "vocab-item",
+   "kind": "exact",
+   "max": 2,
+   "status": "accepted",
+   "reason": "Recognition item (the Name, read aloud as Adonai) with translit adonai and a note not to pronounce the letters. Not in speak sets or deck-order. Must stay out of any produce/say-it prompt."
+  }
+ ]
+}

@@ -11,6 +11,7 @@
 //   - The data is flagged proofread:false; the view shows that badge.
 
 import { normalizeTradition, TRADITION_LABELS, TRADITIONS } from './sounds.model.js';
+import { setCongregation } from './forTradition.js';
 
 /** @param {typeof fetch} [fetchImpl] */
 export async function loadSoundgapData(fetchImpl = globalThis.fetch) {
@@ -97,8 +98,7 @@ export function mount(root, ctx = {}) {
     tradition = next;
     if (!fromSettings && ctx.settings) {
       try {
-        if (typeof ctx.settings.set === 'function') ctx.settings.set('congregation', next);
-        else ctx.settings.congregation = next;
+        setCongregation(ctx.settings, next);
       } catch { /* keep local state */ }
     }
     for (const fn of tradListeners) fn();

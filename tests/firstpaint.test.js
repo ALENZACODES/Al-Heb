@@ -28,7 +28,7 @@ test('while the manifest is pending: has() is false, status says checking, nothi
   const s = a.status('letter', 'bet');
   assert.equal(s.source, 'none'); assert.equal(s.reason, 'checking audio...');
   assert.match(a.state.text, /checking/i);
-  assert.ok(!/recorded and/.test(a.state.text), 'no clip counts before the manifest is loaded');
+  assert.ok(!/clips listed/.test(a.state.text), 'no clip counts before the manifest is loaded');
   const states = []; a.onManifestState((x) => states.push(x));
   const ready = a.ensureManifest(); const again = a.ensureManifest();
   assert.equal(ready, again, 'in-flight load is shared');
@@ -38,7 +38,7 @@ test('while the manifest is pending: has() is false, status says checking, nothi
   assert.equal(a.has('letter', 'bet'), true);
   assert.equal(a.status('letter', 'bet').source, 'file');
   assert.equal(a.summary.recorded, 1);
-  assert.match(a.state.text, /1 recorded/);
+  assert.match(a.state.text, /1 clips listed as "Recorded by a human reader"/);
 });
 
 test('play() waits for the manifest instead of guessing', async () => {

@@ -6,12 +6,14 @@ import { loadGender } from "./gender.js";
 let content;
 export function loadContent() {
   content ??= (async () => {
-    const [letters, niq, registry, confusables, mn, ladder, gender] = await Promise.all([
+    const [letters, niq, registry, confusables, mn, ladder, gender, cons] = await Promise.all([
       loadJSON("data/letters/letters.json"), loadJSON("data/pronunciation/niqqud.json"),
       loadJSON("data/corpus/registry.json"), loadJSON("data/letters/confusables.json"), loadJSON("data/letters/mnemonics.json"), loadLadder(), loadGender(),
+      loadJSON("data/pronunciation/consonants.json"),
     ]);
     return {
       letters: new Map(letters.map((l) => [l.id, l])),
+      consonants: new Map(Object.entries(cons.letters || {})),
       vowels: new Map(niq.records.map((r) => [r.id, r])),
       corpus: new Map(registry.entries.map((e) => [e.id, e])),
       confusables,

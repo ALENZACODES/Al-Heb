@@ -1,15 +1,39 @@
 // ALEF lane 2 view: letter picker, print/cursive tracing, confusable drill, SI-1452 typing trainer.
 // Plain DOM, no dependencies. export mount(root, ctx) -> unmount.
 // ctx (from lane 8 shell): {settings, store, audio, route, t}. Everything on ctx is optional here.
-// Test/offline hooks: ctx.letters, ctx.confusables, ctx.keyboard may supply already-loaded data.
+// Test/offline hooks: ctx.letters, ctx.confusables, ctx.keyboard, ctx.consonants may supply already-loaded data.
 // @ts-check
 import { createTracer, MODES } from './trace.js';
 import { createTrainer, keyboardRows, XKB_TO_DOM } from './typing.js';
 import { createProgress } from './progress.js';
 import { matchLetter } from './shapecheck.js';
 import { warningAfterWrongTap } from './interference.js';
+import { letterSound, congregationOf } from '../pronunciation/forTradition.js';
+
+/** Records whose LETTERFORM (not just the order) the builder doubts most: docs/letters/REVIEW-LIST.md "DOUBT (HIGH)". */
+export const HIGH_DOUBT = { 'pe-final': ['cursive'], 'tsadi-final': ['cursive'] };
+
+/**
+ * Review status line for one stroke record. Pure: used by the view and by tests.
+ * @param {{id:string}} letter
+ * @param {'print'|'cursive'} script
+ * @param {(key:string, fallback:string)=>string} [t]
+ * @returns {{level:'none'|'draft'|'high', text:string}}
+ */
+export function reviewNotice(letter, script, t = (k, f) => f) {
+  const block = letter && letter[script];
+  if (!block) return { level: 'none', text: '' };
+  if ((HIGH_DOUBT[letter.id] || []).includes(script)) {
+    return { level: 'high', text: t('trace.highDoubt', 'Caution: the ' + script + ' form of this letter may not be the one Israeli schools teach, and its stroke order is an unreviewed draft. Do not learn it from here until a teacher has confirmed it.') };
+  }
+  if (block.validated === false || block.needsNativeReview) {
+    return { level: 'draft', text: t('trace.draftStrokes', 'Stroke order is a draft awaiting teacher review.') + (block.quality ? ' (' + block.quality + ')' : '') };
+  }
+  return { level: 'none', text: '' };
+}
 
 const DATA = (name) => new URL('../../data/letters/' + name, import.meta.url).href;
+const PRON = (name) => new URL('../../data/pronunciation/' + name, import.meta.url).href;
 
 async function loadJson(url) {
   const r = await fetch(url);
@@ -44,6 +68,7 @@ const CSS = `
 .alef-trace .grid button{font-size:1.6rem;padding:4px}
 .alef-trace .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}
 .alef-trace .notice{background:#fff4e0;border:1px solid #e0b060;border-radius:8px;padding:8px 10px;font-size:.9rem}
+.alef-trace .notice-high{background:#fde8e8;border-color:#c0392b;color:#5a1010;font-weight:bold}
 .alef-trace .feedback{min-height:2.2em;font-size:1.05rem;margin:6px 0}
 .alef-trace .stage{background:#fff;border:1px solid #ccd;border-radius:12px;padding:6px}
 .alef-trace .big{font-size:4rem;line-height:1.1}
@@ -91,10 +116,12 @@ export function mount(root, ctx = {}) {
     ctx.confusables || loadJson(DATA('confusables.json')).catch(() => null),
     ctx.keyboard || loadJson(DATA('keyboard-si1452.json')).catch(() => null),
     ctx.mnemonics || loadJson(DATA('mnemonics.json')).catch(() => null),
-    ctx.interference || loadJson(DATA('interference.json')).catch(() => null)
-  ]).then(([letters, conf, kb, mn, interf]) => {
+    ctx.interference || loadJson(DATA('interference.json')).catch(() => null),
+    ctx.consonants || loadJson(PRON('consonants.json')).catch(() => null)
+  ]).then(([letters, conf, kb, mn, interf, consonants]) => {
     if (unmounted) return;
     state.letters = letters; state.confusables = conf; state.keyboard = kb; state.interference = interf;
+    state.consonants = (consonants && consonants.letters) || null;
     state.mnemonics = {}; for (const m of ((mn && mn.letters) || [])) state.mnemonics[m.id] = m;
     render();
   }).catch(err => {
@@ -150,7 +177,7 @@ export function mount(root, ctx = {}) {
     body.appendChild(toggle);
     body.appendChild(h('div', { class: 'row' },
       h('span', { class: 'big', dir: 'rtl', lang: 'he' }, letter.he),
-      h('div', {}, h('strong', {}, letter.name + ' '), he(letter.nameHe), progress0.isCompleted(letter.id, state.script) ? h('span', { class: 'chip', role: 'status' }, '\u2713 ' + t('trace.completed', 'completed') + ' (' + state.script + ')') : (progress0.isAssisted(letter.id, state.script) ? h('span', { class: 'chip', role: 'status' }, t('trace.walkedThrough', 'walked through with buttons, not drawn yet') + ' (' + state.script + ')') : null), h('br'), h('span', {}, '/' + letter.sound.ipa + '/  ' + letter.sound.en))));
+      h('div', {}, h('strong', {}, letter.name + ' '), he(letter.nameHe), progress0.isCompleted(letter.id, state.script) ? h('span', { class: 'chip', role: 'status' }, '\u2713 ' + t('trace.completed', 'completed') + ' (' + state.script + ')') : (progress0.isAssisted(letter.id, state.script) ? h('span', { class: 'chip', role: 'status' }, t('trace.walkedThrough', 'walked through with buttons, not drawn yet') + ' (' + state.script + ')') : null), h('br'), h('span', {}, '/' + letter.sound.ipa + '/  ' + letterSound(state.consonants ? state.consonants[letter.id] : null, congregationOf(ctx.settings), { fallbackEn: letter.sound.en }).en))));
     const mn = state.mnemonics && state.mnemonics[letter.id];
     if (mn) {
       body.appendChild(h('details', { class: 'remember', open: 'open' },
@@ -164,10 +191,12 @@ export function mount(root, ctx = {}) {
         h('p', { class: 'muted' }, t('trace.mnDraft', 'Draft memory hook: not yet checked by a Hebrew teacher.'))));
     }
     assistedRun = false;
+    const block = letter[state.script];
+    const rn = reviewNotice(letter, state.script, t);
+    if (rn.level !== 'none') body.appendChild(h('p', { class: 'notice' + (rn.level === 'high' ? ' notice-high' : ''), 'data-review': rn.level, role: rn.level === 'high' ? 'alert' : undefined }, rn.text));
     const stage = h('div', { class: 'stage' });
     const fb = h('div', { class: 'feedback', role: 'status', 'aria-live': 'polite' }, t('trace.start', 'Press Animate to see the order, then trace it.'));
     body.appendChild(stage); body.appendChild(fb);
-    const block = letter[state.script];
     const progress = h('div', { class: 'row', role: 'status', 'aria-live': 'polite' });
     const setProgress = () => { const s = tracer.getState(); const n = s.done ? s.total : s.index; progress.textContent = t('trace.strokeCount', 'Stroke ') + n + t('trace.strokeOf', ' of ') + s.total + t('trace.strokeDone', ' done'); };
     try {
@@ -214,7 +243,6 @@ export function mount(root, ctx = {}) {
       } }, t('trace.nextStroke', 'Next stroke')) : null,
       h('button', { onclick: () => { attempt = []; assistedRun = false; tracer.reset(); fb.textContent = t('trace.start', 'Press Animate to see the order, then trace it.'); setProgress(); } }, t('trace.reset', 'Start over'))));
     body.appendChild(progress); setProgress();
-    body.appendChild(h('p', { class: 'notice' }, (block.needsNativeReview ? t('trace.reviewFlag', 'Status: draft, needs native review. ') : '') + (block.quality ? '(' + block.quality + ')' : '')));
   }
 
   // ------------------------------------------------------------ look-alike drill

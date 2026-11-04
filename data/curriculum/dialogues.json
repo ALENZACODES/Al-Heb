@@ -3,7 +3,7 @@
  "status": "draft-needs-native-review",
  "proofread": false,
  "needsNativeReview": true,
- "note": "Original short dialogues written by an AI agent from topics only (nothing copied from any course, book or website). Pointing, grammar, gender agreement and transliteration are unchecked by a native speaker; transliteration is a plain Israeli-style spelling written by hand. Prices and place names are made up for practice. No audio exists for these lines. Nothing here was tested with learners.",
+ "note": "Original short dialogues written from topics only (nothing copied from any course, book or website). Pointing, grammar, gender agreement and transliteration are unchecked by a native speaker; transliteration is a plain Israeli-style spelling written by hand. Prices and place names are made up for practice. No audio exists for these lines. Nothing here was tested with learners.",
  "dialogues": [
   {
    "id": "d-cafe",

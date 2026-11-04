@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "proofread": false,
-  "description": "Plene (full) versus defective spellings for the five-family vowel board. DRAFT written by an AI agent: every spelling and gloss needs a check against a dictionary / the Academy ktiv male rules and a native speaker. defective = spelled the way pointed (siddur/biblical style) text often does; plene = with a vowel letter (vav or yod). Both spellings of a pair are the same word and the same sound; that is checked by transliterate() in tests. Short vs long: the traditional names (kamatz gadol, patach, ...) are NOT claimed here as an audible length difference in Israeli Hebrew.",
+  "description": "Plene (full) versus defective spellings for the five-family vowel board. DRAFT: every spelling and gloss needs a check against a dictionary / the Academy ktiv male rules and a native speaker. defective = spelled the way pointed (siddur/biblical style) text often does; plene = with a vowel letter (vav or yod). Both spellings of a pair are the same word and the same sound; that is checked by transliterate() in tests. Short vs long: the traditional names (kamatz gadol, patach, ...) are NOT claimed here as an audible length difference in Israeli Hebrew.",
   "shortLongNote": "Textbooks sometimes call some signs 'long' and some 'short'. In Israeli Hebrew the five vowels are not distinguished by length, so this app teaches by sound family and does not claim an audible short/long difference. Where a Sephardi IPA value in niqqud.json carries a length mark it is shown as data, flagged unverified.",
   "families": {
     "a": {

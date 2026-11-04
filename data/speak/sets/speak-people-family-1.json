@@ -23,7 +23,7 @@
    "translit": "chashav",
    "en": "to think",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h93bb64ad",
    "source": "data/vocab/words.json"
   },
   {
@@ -32,7 +32,7 @@
    "translit": "seh",
    "en": "lamb, kid (young of Caprinae)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h93f568f7",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,7 +41,7 @@
    "translit": "ish",
    "en": "a man, adult male human being",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hef6e1613",
    "source": "data/vocab/words.json"
   },
   {
@@ -50,7 +50,7 @@
    "translit": "ishah",
    "en": "woman (an adult female human)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "he943571e",
    "source": "data/vocab/words.json"
   },
   {
@@ -59,7 +59,7 @@
    "translit": "av",
    "en": "father",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h821319f2",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "dod",
    "en": "uncle",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hc6cdec2b",
    "source": "data/vocab/words.json"
   },
   {

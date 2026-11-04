@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 // Mark accepted TTS clips in the audio manifest the app reads, and copy their MP3s into <root>/audio/.
 //   node tools/tts/manifest_update.mjs [--report tools/tts/verify-report.csv] [--work ~/alef-tts-work] [--root <repo>] [--no-copy] [--dry-run] [--allow-mock]
-// Status written: "tts" (the app's existing synthetic-voice value, shown as "pre-rendered synthetic voice file"). It NEVER writes
+// Status written: "tts" (the app's existing synthetic-voice value, shown with the label in src/shell/audio-labels.js). It NEVER writes
 // "recorded", and it never touches an entry whose status is already "recorded" (a human clip). It also never marks a clip that is
 // not in the report as accepted. After it runs, `node tools/audio/build_manifest.mjs --check` must still pass (the sidecar .meta.json
 // written next to each MP3 makes a rebuild give the same status and source).
 // Why not "recorded-tts": src/shell/audio.js and src/audio/player.js only know recorded|tts|missing. An unknown status would be counted as
-// missing in the summary and labelled "recorded audio file" in describeResult, and build_manifest.mjs would fall back to "recorded". See docs/tts/README.md.
+// missing in the summary and given the human-recording label by describeResult, and build_manifest.mjs would fall back to "recorded". See docs/tts/README.md.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';

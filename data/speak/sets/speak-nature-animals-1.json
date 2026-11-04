@@ -23,7 +23,7 @@
    "translit": "i",
    "en": "an island",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hf5a50e5d",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,13 +41,13 @@
    "translit": "esh",
    "en": "fire",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hf1da5ea6",
    "source": "data/vocab/words.json"
   },
   {
    "id": "hfb819565",
    "he": "רוּחַ",
-   "translit": "rucha",
+   "translit": "ruach",
    "en": "Wind, a wind",
    "kind": "word",
    "audioId": "r17-w3",
@@ -59,7 +59,7 @@
    "translit": "even",
    "en": "stone",
    "kind": "word",
-   "audioId": null,
+   "audioId": "he53d1d1d",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "adamah",
    "en": "earth, soil, land",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h2d90f840",
    "source": "data/vocab/words.json"
   },
   {
@@ -77,7 +77,7 @@
    "translit": "ayil",
    "en": "ram",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h8aa6404d",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "parah",
    "en": "cow, heifer",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h80d6f3f0",
    "source": "data/vocab/words.json"
   },
   {
@@ -104,7 +104,7 @@
    "translit": "aryeh",
    "en": "lion",
    "kind": "word",
-   "audioId": null,
+   "audioId": "he028e6f0",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "sus",
    "en": "horse",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h6296d0d9",
    "source": "data/vocab/words.json"
   }
  ]

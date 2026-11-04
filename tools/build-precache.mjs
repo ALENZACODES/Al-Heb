@@ -14,7 +14,7 @@ const SKIP = (rel) => rel.startsWith('assets/img/') || rel.startsWith('assets/im
   || rel.startsWith('data/vocab/packs/') /* ~150 pack files: fetched when a pack is opened, then cached at runtime */ /* big, runtime-cached */ || rel.split('/').some((p) => p.startsWith('_') || p === 'node_modules')
   || rel.endsWith('.py') || rel.endsWith('.md') || /\.(mp3|wav|ogg|m4a|svg\.src|ttf|otf|txt)$/i.test(rel)  // original TTFs and licence texts are not precached; woff2 in assets/fonts/web/ is
   || rel.split('/').includes('tools')
-  || rel.startsWith('data/images/') || rel === 'data/corpus/source-snapshot.json' || rel === 'data/audio/tts-prices.json'
+  || (rel.startsWith('data/images/') && rel !== 'data/images/approvals.json' /* read live by the image resolver */) || rel === 'data/corpus/source-snapshot.json' || rel === 'data/audio/tts-prices.json'
   || /^data\/audio\/manifest-words-[a-z]+\.json$/.test(rel); /* lazy per-tradition word shards: fetched after first paint, runtime-cached by sw.js */ /* tts-prices: build-time cost plan input */ // build-time inputs, not fetched by the app
 const DATA_ONLY_JSON = (rel) => !rel.startsWith('data/') || rel.endsWith('.json');
 

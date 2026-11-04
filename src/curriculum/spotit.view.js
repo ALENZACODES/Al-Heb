@@ -54,7 +54,7 @@ export function mountSpotIt(root, ctx, letterId, seed0 = 1) {
         el("a", { class: "btn secondary", href: "#/learn?lesson=" + intro.id }, "Back to the lesson")));
     } }, "Check");
     replaceKeepingFocus(wrap, h1,
-      el("p", { class: "draft-flag", role: "note" }, "Draft content: word pointing was written by an AI agent and not reviewed by a native speaker."),
+      el("p", { class: "draft-flag", role: "note" }, "Draft content: word pointing is not yet reviewed by a native speaker."),
       el("div", { class: "alef-spot-target", dir: "rtl" }, el("span", { class: "muted" }, "Tap every "), heText(L.he, "alef-he alef-huge"), el("span", { class: "muted" }, ` (${L.name})`)),
       el("p", { class: "muted" }, "Read each line right to left. Some letters look similar on purpose. Tap again to undo."),
       ...lineEls, check, result);

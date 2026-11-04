@@ -1108,7 +1108,7 @@
    "id": "h8ea4d152",
    "he": "לעזאזל",
    "pointed": "לַעֲזָאזֵל",
-   "en": "Damn!, Hell!"
+   "en": "an exclamation of anger or dismissal (a mild curse)"
   },
   {
    "id": "h13673f80",
@@ -1287,7 +1287,7 @@
    "id": "adon-olam-1#7",
    "title": "Adon Olam",
    "he": "והוא אלי וחי גואלי וצור חבלי בעת צרה",
-   "pointed": "וְהוּא אֵלִי וְחַי גּוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה",
+   "pointed": "וְהוּא אֵלִי וְחַי גוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה",
    "en": "From: Adon Olam"
   },
   {
@@ -1301,7 +1301,7 @@
    "id": "adon-olam-1#9",
    "title": "Adon Olam",
    "he": "בידו אפקיד רוחי בעת אישן ואעירה",
-   "pointed": "בְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישַׁן וְאָעִירָה",
+   "pointed": "בְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישָׁן וְאָעִירָה",
    "en": "From: Adon Olam"
   },
   {
@@ -1328,16 +1328,37 @@
   {
    "id": "lecha-hashem#2",
    "title": "Lecha Adonai hagedulah (carrying the Torah around)",
-   "he": "רוממו יהוה אלהינו והשתחוו להדם רגליו קדוש הוא",
-   "pointed": "רוֹמְמוּ יְהוָה אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לַהֲדֹם רַגְלָיו קָדוֹשׁ הוּא",
+   "he": "לך יהוה הממלכה והמתנשא לכל לראש",
+   "pointed": "לְךָ יְהוָה הַמַּמְלָכָה וְהַמִּתְנַשֵּׂא לְכֹל לְרֹאשׁ",
    "en": "From: Lecha Adonai hagedulah (carrying the Torah around)"
   },
   {
    "id": "lecha-hashem#3",
    "title": "Lecha Adonai hagedulah (carrying the Torah around)",
+   "he": "רוממו יהוה אלהינו והשתחוו להדם רגליו קדוש הוא",
+   "pointed": "רוֹמְמוּ יְהוָה אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לַהֲדֹם רַגְלָיו קָדוֹשׁ הוּא",
+   "en": "From: Lecha Adonai hagedulah (carrying the Torah around)"
+  },
+  {
+   "id": "lecha-hashem#4",
+   "title": "Lecha Adonai hagedulah (carrying the Torah around)",
    "he": "רוממו יהוה אלהינו והשתחוו להר קדשו כי קדוש יהוה אלהינו",
    "pointed": "רוֹמְמוּ יְהוָה אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לְהַר קָדְשׁוֹ כִּי קָדוֹשׁ יְהוָה אֱלֹהֵינוּ",
    "en": "From: Lecha Adonai hagedulah (carrying the Torah around)"
+  },
+  {
+   "id": "vezot-hatorah#1",
+   "title": "V'zot haTorah (said when the Torah is lifted)",
+   "he": "וזאת התורה אשר שם משה לפני בני ישראל",
+   "pointed": "וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל",
+   "en": "From: V'zot haTorah (said when the Torah is lifted)"
+  },
+  {
+   "id": "vezot-hatorah#2",
+   "title": "V'zot haTorah (said when the Torah is lifted)",
+   "he": "על פי יהוה ביד משה",
+   "pointed": "עַל פִּי יְהוָה בְּיַד מֹשֶׁה",
+   "en": "From: V'zot haTorah (said when the Torah is lifted)"
   },
   {
    "id": "etz-chaim#1",
@@ -1350,7 +1371,7 @@
    "id": "etz-chaim#2",
    "title": "Etz chaim hi (sung as the Torah is returned to the ark)",
    "he": "דרכיה דרכי נעם וכל נתיבותיה שלום",
-   "pointed": "דְּרָכֶיהָ דַּרְכֵי נֹעַם וְכָל נְתִיבוֹתֶיהָ שָׁלוֹם",
+   "pointed": "דְּרָכֶיהָ דַרְכֵי נֹעַם וְכָל נְתִיבוֹתֶיהָ שָׁלוֹם",
    "en": "From: Etz chaim hi (sung as the Torah is returned to the ark)"
   },
   {
@@ -1375,11 +1396,11 @@
    "en": "From: Birkat Hagomel (after recovery or safe travel) and the congregation's response"
   },
   {
-   "id": "avot-closing#2",
+   "id": "avot-closing",
    "title": "Amidah first blessing, closing (Magen Avraham)",
-   "he": "ברוך אתה יהוה מגן אברהם",
-   "pointed": "בָּרוּךְ אַתָּה יְהוָה מָגֵן אַבְרָהָם",
-   "en": "From: Amidah first blessing, closing (Magen Avraham)"
+   "he": "מלך עוזר ומושיע ומגן ברוך אתה יהוה מגן אברהם",
+   "pointed": "מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן בָּרוּךְ אַתָּה יְהוָה מָגֵן אַבְרָהָם",
+   "en": "King, helper, saviour and shield. Blessed are you, LORD, shield of Abraham."
   },
   {
    "id": "amidah-yihyu",
@@ -1394,6 +1415,13 @@
    "he": "ברוך אתה יהוה המברך את עמו ישראל בשלום",
    "pointed": "בָּרוּךְ אַתָּה יְהוָה הַמְבָרֵךְ אֶת־עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם",
    "en": "From: Sim shalom (peace blessing of the morning Amidah)"
+  },
+  {
+   "id": "kiddush-shabbat-eve#2",
+   "title": "Kiddush for Shabbat evening (the sanctification blessing)",
+   "he": "ברוך אתה יהוה מקדש השבת",
+   "pointed": "בָּרוּךְ אַתָּה יְהוָה מְקַדֵּשׁ הַשַּׁבָּת",
+   "en": "From: Kiddush for Shabbat evening (the sanctification blessing)"
   },
   {
    "id": "lecha-dodi-1#1",

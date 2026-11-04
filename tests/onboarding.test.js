@@ -53,7 +53,7 @@ test('buildPlan: 7 days, day 1 is the starting point, every item links to an exi
   const p = M.buildPlan({ record: rec('none'), lessons: D.lessons, plans: D.plans });
   assert.equal(p.days.length, 7); assert.equal(p.draft, true); assert.equal(p.minutesPerDay, 10);
   assert.equal(p.days[0].items[0].href, '#/firstday'); assert.equal(p.days[0].items[0].kind, 'start');
-  assert.equal(p.days[1].items[0].lesson, 'r01');
+  assert.ok(p.days[0].items.some((i) => i.lesson === 'r01')); assert.equal(p.days[1].items[0].lesson, 'r02'); // one lesson a day, same order the Today card follows
   for (const href of M.planHrefs(p)) assert.ok(routeOf(href), href);
   for (const d of p.days) { assert.ok(d.items.length >= 1, d.label); assert.equal(d.minutes, d.items.reduce((a, i) => a + i.minutes, 0)); }
   assert.equal(p.days[6].items[0].kind, 'review');
@@ -82,7 +82,7 @@ test('buildPlan: minutes split long lessons into at most 4 parts; one lesson par
   const parts = five.days.flatMap((d) => d.items.filter((i) => i.kind === 'lesson'));
   assert.ok(parts.every((i) => i.parts <= D.plans.lessonSplitMaxParts && i.part <= i.parts));
   assert.ok(five.days.every((d) => d.items.filter((i) => i.kind === 'lesson').length <= 1));
-  assert.equal(parts[0].lesson, 'r01'); assert.equal(parts[0].part, 1); assert.equal(parts[1].part, 2);
+  assert.equal(parts[0].lesson, 'r01'); assert.ok(parts.every((i) => i.parts === 1)); assert.notEqual(parts[1].lesson, parts[0].lesson); // lessons are not split: Today completes a lesson in one press
   const thirty = M.buildPlan({ record: rec('vowels', 30), placement: placement('r10'), lessons: D.lessons, plans: D.plans });
   assert.ok(thirty.days.some((d) => d.items.some((i) => i.kind === 'extra')));
   for (const d of thirty.days) assert.ok(d.minutes <= 30 + 9, d.label); // never more than one over-budget lesson part
@@ -245,4 +245,12 @@ test('view, plan: a locked placement result starts the week and the Start button
   const { root, ctx } = mk({ [M.STORE_KEY]: rec('vowels', 10), [M.PLACEMENT_KEY]: placement('r13') });
   mount(root, ctx); await ready(root);
   assert.equal(root.querySelector('#ob-start').attrs.href, '#/learn?lesson=r01');
+});
+
+test('buildPlan: Israel goal plans israel-track lessons, no letters start, no read extras', () => {
+  const p = M.buildPlan({ record: rec('none'), lessons: D.lessons, plans: D.plans, goal: 'israel' });
+  const first = D.lessons.find((l) => l.track === 'israel');
+  assert.equal(p.startLesson, first.id);
+  assert.ok(p.days[0].items.every((i) => i.kind === 'lesson'));
+  assert.ok(p.days.flatMap((d) => d.items).filter((i) => i.kind === 'lesson').every((i) => D.lessons.find((l) => l.id === i.lesson).track === 'israel'));
 });

@@ -31,6 +31,9 @@ const ctxFor = (store, query = {}, congregation = "ashkenazi") => ({ store, quer
 
 const V = await import("../src/curriculum/intermediate.view.js");
 const A = await import("../src/curriculum/intermediate-adapter.js");
+const { sequenceExercises } = await import("../src/curriculum/exercises.session.js");
+/** The exercise on screen (the player reorders for variety and repeats misses, so tests follow the screen, not the data order). */
+const shownEx = (root, l) => l.exercises.find((e) => e.id === section(root)?.attrs["data-ex"]);
 const { byId } = await import("../src/curriculum/lessons.js");
 
 const byText = (root, re, tag = "button") => root.find((n) => n.tag === tag && re.test(n.text));
@@ -43,9 +46,9 @@ async function mountLessonAt(store, id, congregation) {
 }
 async function start(root) { await byId_(root, "alef-int-start").click(); await waitFor(() => section(root)); }
 async function next(root) {
-  const before = section(root)?.attrs["data-ex"];
+  const before = section(root)?.attrs["data-ex"] + "|" + byId_(root, "alef-int-ex")?.text;
   await byId_(root, "alef-int-next").click();
-  await waitFor(() => /Lesson finished/.test(root.text) || (section(root) && section(root).attrs["data-ex"] !== before));
+  await waitFor(() => /Lesson finished/.test(root.text) || (section(root) && section(root).attrs["data-ex"] + "|" + byId_(root, "alef-int-ex")?.text !== before));
   await waitFor(() => !/Lesson finished/.test(root.text) || /marked as known/.test(root.text) && /review card|No review cards/.test(root.text));
 }
 
@@ -126,8 +129,8 @@ test("every one of the ten exercise types renders and grades through the view (r
   assert.deepEqual(Object.keys(FIRST_OF).sort(), [...A.EXERCISE_TYPES].sort());
   for (const [type, { lesson, ex }] of Object.entries(FIRST_OF)) {
     for (const right of [true, false]) {
-      const l = byId[lesson], i = l.exercises.indexOf(ex);
-      const pre = Object.fromEntries(l.exercises.slice(0, i).map((e) => [e.id, true]));
+      const l = byId[lesson], seq = sequenceExercises(l.exercises), i = seq.indexOf(ex);
+      const pre = Object.fromEntries(seq.slice(0, i).map((e) => [e.id, true]));
       const store = memStore({ "intermediate.v1": { lessons: { [lesson]: { results: pre, done: null } } } });
       const { root } = await mountLessonAt(store, lesson); await start(root);
       assert.match(root.find((n) => n.attrs.id === "alef-int-ex")[0].text, new RegExp(`${V.TYPE_LABEL[type]}: ${i + 1} of ${l.exercises.length}`));
@@ -141,12 +144,14 @@ test("every one of the ten exercise types renders and grades through the view (r
 test("a whole lesson: wrong answers lapse word cards in the SRS, store keeps results, lesson is completed; fade links to the fade screen", async () => {
   const lesson = FIRST_OF.produce.lesson, l = byId[lesson];
   const store = memStore(); const { root } = await mountLessonAt(store, lesson); await start(root);
-  for (const ex of l.exercises) {
+  for (let guard = 0; !/Lesson finished/.test(root.text) && guard < 200; guard++) {
+    const ex = shownEx(root, l);
     if (ex.type === "fade") assert.ok(section(root).find((n) => n.tag === "a" && n.attrs.href === `#/learn?fade=${encodeURIComponent(ex.line)}`).length);
     await answer(root, ex, false);
   }
   assert.match(root.text, /Lesson finished/);
   assert.match(root.text, new RegExp(`0 of ${l.exercises.length} marked as known`));
+  assert.match(root.text, /Accuracy/); assert.match(root.text, /To review:/);
   const s = store.m["intermediate.v1"].lessons[lesson];
   assert.equal(s.score, 0); assert.equal(s.total, l.exercises.length); assert.ok(s.done);
   assert.equal(Object.keys(s.results).length, l.exercises.length);
@@ -161,11 +166,12 @@ test("a whole lesson: wrong answers lapse word cards in the SRS, store keeps res
 test("a perfect run creates no word-card lapses and resumes where the learner stopped", async () => {
   const lesson = "I-02", l = byId[lesson]; const store = memStore();
   let { root, off } = await mountLessonAt(store, lesson); await start(root);
-  for (const ex of l.exercises.slice(0, 3)) await answer(root, ex, true);
+  const seq = sequenceExercises(l.exercises);
+  for (const ex of seq.slice(0, 3)) await answer(root, ex, true);
   off();
   ({ root } = await mountLessonAt(store, lesson)); assert.match(root.text, /Continue/); await start(root);
   assert.match(root.find((n) => n.attrs.id === "alef-int-ex")[0].text, new RegExp(`: 4 of ${l.exercises.length}`));
-  for (const ex of l.exercises.slice(3)) await answer(root, ex, true);
+  for (const ex of seq.slice(3)) await answer(root, ex, true);
   assert.match(root.text, new RegExp(`${l.exercises.length} of ${l.exercises.length} marked as known`));
   const cards = store.m["srs.cards"] || {};
   assert.ok(!Object.keys(cards).some((k) => k.startsWith(`word:${lesson}:`) && cards[k].lapses > 0));

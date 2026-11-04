@@ -66,6 +66,7 @@ function weekView(ctx, D, now) {
   parts.push(h("section", { class: "fv-card", "data-part": "festival", "aria-labelledby": "fv-h-fest" },
     h("h2", { id: "fv-h-fest" }, "Next festival"),
     f ? h("div", {},
+      ctx.img?.(h, { kind: 'festival', id: f.packId, class: 'fv-pic', width: 900 }),
       h("p", {}, heSpan(f.he), " ", h("strong", {}, f.en)),
       h("p", {}, f.inProgress ? `Under way now, until ${f.end}.` : `${f.start} (${dayName(f.start)}, ${f.hebrewDate}), ${f.daysUntil === 1 ? "tomorrow" : "in " + f.daysUntil + " days"}; begins at sundown on ${f.eve}.`),
       linkList(f.links),
@@ -91,6 +92,7 @@ const nameOf = (id) => FEST_NAMES[id] || id;
 
 function packView(ctx, D, pack) {
   const parts = [
+    ctx.img?.(h, { kind: 'festival', id: pack.id, class: 'fv-pic', width: 900 }),
     h("p", { class: "fv-muted" }, `${pl(pack.size, "word", "words")} from ALEF's vocabulary list; ${pack.withLine} with a reading line copied from ALEF's texts. ${pack.short ? `Short by ${pack.short}: the list has no entry for the terms below.` : ""}`),
     h("ul", { class: "fv-plain", "data-part": "words" }, ...pack.words.map((w) => h("li", { class: "fv-card", "data-word": w.id },
       h("div", {}, heSpan(w.he), " ", h("strong", {}, w.en), h("span", { class: "fv-muted" }, ` (${w.translit}, ${w.pos})`)),

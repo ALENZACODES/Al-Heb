@@ -15,7 +15,7 @@ export function mountLoanwords(root, ctx, groupId) {
     const known = await storeGet(ctx, LOANWORDS_KEY, {});
     if (!alive) return;
     const done = new Set(Object.keys(st.completed));
-    const flag = el("p", { class: "draft-flag", role: "note" }, "Draft content: these words, their pointing and spellings were chosen by an AI agent and have not been checked by a native speaker or a dictionary.");
+    const flag = el("p", { class: "draft-flag", role: "note" }, "Draft content: these words, their pointing and spellings are drafts and have not been checked by a native speaker or a dictionary.");
     const g = loanwordGroups.find((x) => x.id === groupId);
     if (!g) {
       replaceKeepingFocus(wrap, h1, flag, el("p", {}, "These are everyday words from other languages that Israelis use too. Once you know the letters, you can read them. Try to say each one before you look at the answer."),

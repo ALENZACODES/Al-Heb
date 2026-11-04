@@ -14,7 +14,7 @@
    "translit": "shamar",
    "en": "to guard",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h19eb6a83",
    "source": "data/vocab/words.json"
   },
   {
@@ -23,7 +23,7 @@
    "translit": "horid",
    "en": "to take down, to bring down, to lower",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h5ea1ecdf",
    "source": "data/vocab/words.json"
   },
   {
@@ -32,7 +32,7 @@
    "translit": "kokhav",
    "en": "star",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h233af6f2",
    "source": "data/vocab/words.json"
   },
   {
@@ -47,7 +47,7 @@
   {
    "id": "hb7990b70",
    "he": "דִּוּוּחַ",
-   "translit": "divucha",
+   "translit": "divuach",
    "en": "a news report",
    "kind": "word",
    "audioId": null,
@@ -65,7 +65,7 @@
   {
    "id": "he6d29dfd",
    "he": "פָּתוּחַ",
-   "translit": "patucha",
+   "translit": "patuach",
    "en": "Open",
    "kind": "word",
    "audioId": "i-21-w13",

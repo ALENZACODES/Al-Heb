@@ -66,6 +66,9 @@ export const STORE_KEYS = [
   ['notify.prefs', 'Reminder time and on/off', 'src/shell/boot-hooks.js'],
   ['calendar.prefs', 'Calendar preferences', 'src/shell/notify.js'],
   ['install.v1', 'Install prompt state', 'src/shell/install.js'],
+  ['alef.audioBannerSeen.v1', 'Whether you dismissed the audio notice (saved under this exact name, without the "alef:" prefix)', 'src/shell/audio-access.js'],
+  ['alef.storage-notice.v1', 'Storage notice state and whether you dismissed it (saved under this exact name, without the "alef:" prefix)', 'src/shell/install-notice.js'],
+  ['alef.scroll.v1', 'Scroll position per screen, so Back returns you to the same place (saved under this exact name, without the "alef:" prefix)', 'src/shell/scroll-restore.js'],
 ];
 
 const table = (caption, head, rows) => h('table', { class: 'priv-table' }, h('caption', {}, caption),

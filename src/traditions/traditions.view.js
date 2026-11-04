@@ -16,6 +16,7 @@ import {
   textLines, respellLines, compareWords, soundsIn, switchesIn, ipaFor, registryEntries,
   clipPlan, textDrillItems, makeTextQuestion, audioDrillPool, makeAudioQuestion, loadTraditionsData, sourceIndex, pick,
 } from './model.js';
+import { setCongregation, congregationOf } from '../pronunciation/forTradition.js';
 
 export const TABS = [
   { id: 'compare', label: 'Compare', key: 'trad.tab.compare' },
@@ -115,14 +116,10 @@ export function mount(root, ctx = {}) {
   };
   const clearSection = () => { for (const c of sectionCleanups.splice(0)) { try { c(); } catch { /* ignore */ } } };
 
-  const currentSetting = () => (TRADITIONS.includes(ctx.settings?.congregation) ? ctx.settings.congregation : 'israeli');
+  const currentSetting = () => congregationOf(ctx.settings, 'israeli');
   const setSetting = (t) => {
     if (!ctx.settings) return false;
-    try {
-      if (typeof ctx.settings.set === 'function') ctx.settings.set('congregation', t);
-      else ctx.settings.congregation = t;
-      return true;
-    } catch { return false; }
+    return setCongregation(ctx.settings, t);
   };
 
   root.replaceChildren();

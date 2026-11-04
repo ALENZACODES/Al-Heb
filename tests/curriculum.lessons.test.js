@@ -94,7 +94,8 @@ test("israel track Hebrew words contain Hebrew and cap at B1", () => {
 test("levels are monotone along the read track and match belts.json", () => {
   const order = belts.belts.map((b) => b.id);
   let last = -1;
-  for (const l of lessons.filter((x) => x.track === "read")) { const i = order.indexOf(l.level); assert.ok(i >= last && i >= 0, l.id); last = i; }
+  for (const l of lessons.filter((x) => x.track === "read" && x.level !== "intermediate")) { const i = order.indexOf(l.level); assert.ok(i >= last && i >= 0 && l.level !== "black", l.id); last = i; }
+  for (const l of lessons.filter((x) => /^I-\d{2}$/.test(x.id) && x.track === "read")) assert.equal(l.level, "intermediate", l.id); // "black" is a fluency target, not a lesson label
   for (const b of belts.belts.filter((x) => x.lessons)) {
     const [a, z] = b.lessons.split("-");
     for (const l of lessons.filter((x) => x.track === "read")) {

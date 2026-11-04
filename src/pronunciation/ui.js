@@ -4,8 +4,9 @@
 // ctx.settings.congregation, an honest audio button, a status live region, JSON loading, and a miss recorder.
 
 import { TRADITIONS, TRADITION_LABELS, normalizeTradition } from './sounds.model.js';
+import { setCongregation } from './forTradition.js';
 
-export const DRAFT_NOTICE = 'Draft, unreviewed: the pointing, sounds, respellings, stress marks and hints on this screen were written by an AI agent from published sources and have NOT been checked by a native speaker or a Hebrew teacher. There is no recorded audio for this screen yet.';
+export const DRAFT_NOTICE = 'Draft, unreviewed: the pointing, sounds, respellings, stress marks and hints on this screen are drafts from published sources and have NOT been checked by a native speaker or a Hebrew teacher. There is no recorded audio for this screen yet.';
 
 export const CSS = `
 .alef-r4{font:16px/1.5 system-ui,sans-serif;max-width:60rem;margin:0 auto;padding:1rem}
@@ -88,8 +89,7 @@ export function createView(root, ctx, o) {
     tradition = next;
     if (!fromSettings && ctx.settings) {
       try {
-        if (typeof ctx.settings.set === 'function') ctx.settings.set('congregation', next);
-        else ctx.settings.congregation = next;
+        setCongregation(ctx.settings, next);
       } catch { /* settings unavailable: keep local state */ }
     }
     for (const fn of tradListeners) fn();

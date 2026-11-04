@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
 
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..', '..');
-const KEEP = ['id', 'rank', 'lemma', 'pointed', 'needsPointing', 'pos', 'topic', 'gloss', 'tier', 'proofread', 'tags', 'fn', 'isForm', 'formOf', 'formIds', 'forms'];
+const KEEP = ['id', 'rank', 'lemma', 'pointed', 'needsPointing', 'pos', 'topic', 'gloss', 'tier', 'proofread', 'tags', 'fn', 'isForm', 'formOf', 'formIds', 'forms', 'flags'];
 
 export function buildPacks(data) {
   const out = {};

@@ -23,7 +23,7 @@
    "translit": "le",
    "en": "to",
    "kind": "word",
-   "audioId": null,
+   "audioId": "he9919e02",
    "source": "data/vocab/words.json"
   },
   {
@@ -50,7 +50,7 @@
    "translit": "mah",
    "en": "what",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h364cadf4",
    "source": "data/vocab/words.json"
   },
   {
@@ -104,7 +104,7 @@
    "translit": "im",
    "en": "if, whether",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h0f231144",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "be",
    "en": "in (a place or time)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hb8b78e51",
    "source": "data/vocab/words.json"
   }
  ]

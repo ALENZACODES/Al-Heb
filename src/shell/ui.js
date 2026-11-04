@@ -26,3 +26,5 @@ export function unavailableCard(root, { title, t, module, error, kind = 'unavail
     h('details', {}, h('summary', {}, 'Technical detail'),
       h('p', { class: 'mono' }, `module: ${module}`), error ? h('p', { class: 'mono' }, String(error)) : null)));
 }
+
+export { audioAccess, audioButton, deviceVoiceState, DEVICE_LABEL, NO_AUDIO } from './audio-access.js';

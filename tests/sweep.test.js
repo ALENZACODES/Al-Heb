@@ -24,7 +24,7 @@ test('sweep docs state that this is emulation', () => {
 });
 let haveBrowser = true;
 try { const r = spawnSync('node', ['-e', "const {createRequire}=require('module');const r=createRequire(process.cwd()+'/x.js');let ok=false;for(const p of ['playwright','/opt/npm-tools/node_modules/playwright','/usr/lib/node_modules/playwright']){try{r(p);ok=true;break}catch{}}process.exit(ok?0:1)"], { cwd: root }); haveBrowser = r.status === 0; } catch { haveBrowser = false; }
-test('sweep --quick: 3 routes, writes sweep.json and SWEEP.md, runs the keyboard pass', { skip: !haveBrowser, timeout: 120000 }, () => {
+test('sweep --quick: 3 routes, writes sweep.json and SWEEP.md, runs the keyboard pass', { skip: !(haveBrowser && existsSync(join(root, 'tools/a11y/node_modules/axe-core/axe.min.js'))) && 'needs Playwright and tools/a11y axe-core', timeout: 120000 }, () => {
   const out = mkdtempSync(join(tmpdir(), 'alef-sweep-'));
   const t0 = Date.now();
   const r = spawnSync('node', ['tools/qa/sweep.mjs', '--quick', '--out', out], { cwd: root, encoding: 'utf8', timeout: 110000 });

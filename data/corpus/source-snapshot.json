@@ -316,17 +316,50 @@
   },
   "shema-2": {
    "kind": "sefaria-siddur",
-   "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Shema",
-   "versionTitle": "The Metsudah siddur, 1981",
-   "license": "CC-BY",
-   "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
-   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Blessings_of_the_Shema%2C_Shema",
-   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Blessings%20of%20the%20Shema%2C%20Shema?version=hebrew%7Call",
+   "ref": "Siddur Sefard, Shabbat Eve Mincha, Mincha",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Eve_Mincha%2C_Mincha",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Shabbat%20Eve%20Mincha%2C%20Mincha?version=hebrew%7Call",
    "lineIndexes": [
-    4
+    27
    ],
    "rawLines": [
-    "<small>בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד:</small>"
+    "בָּרוּךְ, שֵׁם כְּבוֹד מַלְכוּתוֹ, לְעוֹלָם וָעֶד:"
+   ],
+   "fetchedAt": "2026-11-04T16:34:05.690Z",
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "reason": "Metsudah is a 1981 edition labelled CC-BY by Sefaria; replaced with a version Sefaria labels Public Domain. Both labels are Sefaria's; see docs/corpus/RESOURCE-METSUDAH.md."
+   },
+   "licenceEvidence": {
+    "sefariaVersionLabel": "Public Domain",
+    "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+    "read": "docs/corpus/RESOURCE-METSUDAH.md section 1"
+   },
+   "history": [
+    {
+     "kind": "sefaria-siddur",
+     "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Shema",
+     "versionTitle": "The Metsudah siddur, 1981",
+     "license": "CC-BY",
+     "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
+     "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Blessings_of_the_Shema%2C_Shema",
+     "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Blessings%20of%20the%20Shema%2C%20Shema?version=hebrew%7Call",
+     "lineIndexes": [
+      4
+     ],
+     "rawLines": [
+      "<small>בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד:</small>"
+     ],
+     "metsudahHe": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃",
+     "metsudahStatus": "verified",
+     "metsudahTransforms": null,
+     "replacedOn": "2026-11-04"
+    }
    ]
   },
   "hamotzi": {
@@ -391,34 +424,102 @@
   },
   "torah-barchu": {
    "kind": "sefaria-siddur",
-   "ref": "Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Birkat HaTorah",
-   "versionTitle": "The Metsudah siddur, 1981",
-   "license": "CC-BY",
-   "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
-   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Birkat_HaTorah",
-   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Torah%20Reading%2C%20Reading%20from%20Sefer%2C%20Birkat%20HaTorah?version=hebrew%7Call",
+   "ref": "Siddur Edot HaMizrach, Weekday Shacharit, Torah Reading",
+   "versionTitle": "Shaliehsaboo Edition",
+   "license": "CC0",
+   "versionSource": "https://www.sefaria.org",
+   "url": "https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Weekday_Shacharit%2C_Torah_Reading",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Edot%20HaMizrach%2C%20Weekday%20Shacharit%2C%20Torah%20Reading?version=hebrew%7Call",
    "lineIndexes": [
-    1,
-    3
+    11,
+    12
    ],
    "rawLines": [
-    "בָּרְ֒כוּ אֶת יְהֹוָה הַמְּ֒בֹרָךְ:",
-    "בָּרוּךְ יְהֹוָה הַמְּ֒בֹרָךְ לְעוֹלָם וָעֶד:"
+    "<small>ואומר העולה:</small> בָּרְכוּ אֶת יְהֹוָה הַמְּבֹרָךְ: ",
+    "<small>ועונים הקהל:</small> בָּרוּךְ יְהֹוָה הַמְּבֹרָךְ לְעוֹלָם וָעֶד: "
+   ],
+   "fetchedAt": "2026-11-04T16:34:05.790Z",
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "reason": "Metsudah is a 1981 edition labelled CC-BY by Sefaria; replaced with a version Sefaria labels CC0. Both labels are Sefaria's; see docs/corpus/RESOURCE-METSUDAH.md."
+   },
+   "licenceEvidence": {
+    "sefariaVersionLabel": "CC0",
+    "versionSource": "https://www.sefaria.org",
+    "read": "docs/corpus/RESOURCE-METSUDAH.md section 1"
+   },
+   "history": [
+    {
+     "kind": "sefaria-siddur",
+     "ref": "Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Birkat HaTorah",
+     "versionTitle": "The Metsudah siddur, 1981",
+     "license": "CC-BY",
+     "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
+     "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Birkat_HaTorah",
+     "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Torah%20Reading%2C%20Reading%20from%20Sefer%2C%20Birkat%20HaTorah?version=hebrew%7Call",
+     "lineIndexes": [
+      1,
+      3
+     ],
+     "rawLines": [
+      "בָּרְ֒כוּ אֶת יְהֹוָה הַמְּ֒בֹרָךְ:",
+      "בָּרוּךְ יְהֹוָה הַמְּ֒בֹרָךְ לְעוֹלָם וָעֶד:"
+     ],
+     "metsudahHe": "בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ׃\nבָּרוּךְ יְהוָה הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃",
+     "metsudahStatus": "verified",
+     "metsudahTransforms": null,
+     "replacedOn": "2026-11-04"
+    }
    ]
   },
   "torah-bless-2": {
    "kind": "sefaria-siddur",
-   "ref": "Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Birkat HaTorah",
-   "versionTitle": "The Metsudah siddur, 1981",
-   "license": "CC-BY",
-   "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
-   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Birkat_HaTorah",
-   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Torah%20Reading%2C%20Reading%20from%20Sefer%2C%20Birkat%20HaTorah?version=hebrew%7Call",
+   "ref": "Siddur Sefard, Shabbat Morning Services, Blessings on Torah Reading",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Morning_Services%2C_Blessings_on_Torah_Reading",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Shabbat%20Morning%20Services%2C%20Blessings%20on%20Torah%20Reading?version=hebrew%7Call",
    "lineIndexes": [
-    7
+    6
    ],
    "rawLines": [
-    "בָּרוּךְ אַתָּה יְהֹוָה אֱלֺהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר נָֽתַן לָֽנוּ תּוֹרַת אֱמֶת וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵֽנוּ: בָּרוּךְ אַתָּה יְהֹוָה נוֹתֵן הַתּוֹרָה:"
+    "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר נָתַן לָנוּ תּוֹרַת אֱמֶת וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵנוּ: בָּרוּךְ אַתָּה יְהֹוָה נוֹתֵן הַתּוֹרָה:"
+   ],
+   "fetchedAt": "2026-11-04T16:34:05.844Z",
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "reason": "Metsudah is a 1981 edition labelled CC-BY by Sefaria; replaced with a version Sefaria labels Public Domain. Both labels are Sefaria's; see docs/corpus/RESOURCE-METSUDAH.md."
+   },
+   "licenceEvidence": {
+    "sefariaVersionLabel": "Public Domain",
+    "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+    "read": "docs/corpus/RESOURCE-METSUDAH.md section 1"
+   },
+   "history": [
+    {
+     "kind": "sefaria-siddur",
+     "ref": "Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Birkat HaTorah",
+     "versionTitle": "The Metsudah siddur, 1981",
+     "license": "CC-BY",
+     "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
+     "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Birkat_HaTorah",
+     "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Torah%20Reading%2C%20Reading%20from%20Sefer%2C%20Birkat%20HaTorah?version=hebrew%7Call",
+     "lineIndexes": [
+      7
+     ],
+     "rawLines": [
+      "בָּרוּךְ אַתָּה יְהֹוָה אֱלֺהֵֽינוּ מֶֽלֶךְ הָעוֹלָם אֲשֶׁר נָֽתַן לָֽנוּ תּוֹרַת אֱמֶת וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵֽנוּ: בָּרוּךְ אַתָּה יְהֹוָה נוֹתֵן הַתּוֹרָה:"
+     ],
+     "metsudahHe": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר נָתַן לָנוּ תּוֹרַת אֱמֶת וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵנוּ׃ בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה׃",
+     "metsudahStatus": "verified",
+     "metsudahTransforms": null,
+     "replacedOn": "2026-11-04"
+    }
    ]
   },
   "amidah-lips": {
@@ -483,35 +584,82 @@
   },
   "adon-olam-1": {
    "kind": "sefaria-siddur",
-   "ref": "Siddur Ashkenaz, Weekday, Shacharit, Preparatory Prayers, Adon Olam",
-   "versionTitle": "The Metsudah siddur, 1981",
-   "license": "CC-BY",
-   "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
-   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Adon_Olam",
-   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Preparatory%20Prayers%2C%20Adon%20Olam?version=hebrew%7Call",
+   "ref": "Siddur Sefard, Musaf",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Musaf",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Musaf?version=hebrew%7Call",
    "lineIndexes": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9
+    152
    ],
    "rawLines": [
-    "<b>אֲדוֹן עוֹלָם</b> אֲשֶׁר מָלַךְ, בְּטֶֽרֶם כָּל יְצִיר נִבְרָא:",
-    "לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל, אֲזַי מֶֽלֶךְ שְׁמוֹ נִקְרָא:",
+    "<b>אֲדוֹן</b> עוֹלָם אֲשֶׁר מָלַךְ, בְּטֶרֶם כָּל יְצִיר נִבְרָא:",
+    "לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל, אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא:",
     "וְאַחֲרֵי כִּכְלוֹת הַכֹּל, לְבַדּוֹ יִמְלֹךְ נוֹרָא:",
-    "וְהוּא הָיָה וְהוּא הֹוֶה, וְהוּא יִהְיֶה בְּתִפְאָרָה:",
-    "וְהוּא אֶחָד וְאֵין שֵׁנִי, לְהַמְשִׁיל לוֹ לְהַחְבִּֽירָה:",
+    "וְהוּא הָיָה, וְהוּא הֹוֶה, וְהוּא יִהְיֶה בְּתִפְאָרָה:",
+    "וְהוּא אֶחָד וְאֵין שֵׁנִי, לְהַמְשִׁיל לוֹ לְהַחְבִּירָה:",
     "בְּלִי רֵאשִׁית בְּלִי תַכְלִית, וְלוֹ הָעֹז וְהַמִּשְׂרָה:",
-    "וְהוּא אֵלִי וְחַי גּוֹאֲלִי, וְצוּר חֶבְלִי בְּעֵת צָרָה:",
+    "וְהוּא אֵלִי וְחַי גוֹאֲלִי, וְצוּר חֶבְלִי בְּעֵת צָרָה:",
     "וְהוּא נִסִּי וּמָנוֹס לִי, מְנָת כּוֹסִי בְּיוֹם אֶקְרָא:",
-    "בְּיָדוֹ אַפְקִיד רוּחִי, בְּעֵת אִישַׁן וְאָעִֽירָה:",
+    "בְּיָדוֹ אַפְקִיד רוּחִי, בְּעֵת אִישָׁן וְאָעִירָה:",
     "וְעִם רוּחִי גְּוִיָּתִי, יְהֹוָה לִי וְלֹא אִירָא:"
+   ],
+   "fetchedAt": "2026-11-04T16:34:05.918Z",
+   "splitFrom": {
+    "lineIndex": 152,
+    "raw": "<b>אֲדוֹן</b> עוֹלָם אֲשֶׁר מָלַךְ, בְּטֶרֶם כָּל יְצִיר נִבְרָא: לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל, אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא: וְאַחֲרֵי כִּכְלוֹת הַכֹּל, לְבַדּוֹ יִמְלֹךְ נוֹרָא: וְהוּא הָיָה, וְהוּא הֹוֶה, וְהוּא יִהְיֶה בְּתִפְאָרָה: וְהוּא אֶחָד וְאֵין שֵׁנִי, לְהַמְשִׁיל לוֹ לְהַחְבִּירָה: בְּלִי רֵאשִׁית בְּלִי תַכְלִית, וְלוֹ הָעֹז וְהַמִּשְׂרָה: וְהוּא אֵלִי וְחַי גוֹאֲלִי, וְצוּר חֶבְלִי בְּעֵת צָרָה: וְהוּא נִסִּי וּמָנוֹס לִי, מְנָת כּוֹסִי בְּיוֹם אֶקְרָא: בְּיָדוֹ אַפְקִיד רוּחִי, בְּעֵת אִישָׁן וְאָעִירָה: וְעִם רוּחִי גְּוִיָּתִי, יְהֹוָה לִי וְלֹא אִירָא:",
+    "splitAt": ":"
+   },
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "reason": "Metsudah is a 1981 edition labelled CC-BY by Sefaria; replaced with a version Sefaria labels Public Domain. Both labels are Sefaria's; see docs/corpus/RESOURCE-METSUDAH.md."
+   },
+   "licenceEvidence": {
+    "sefariaVersionLabel": "Public Domain",
+    "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+    "read": "docs/corpus/RESOURCE-METSUDAH.md section 1"
+   },
+   "history": [
+    {
+     "kind": "sefaria-siddur",
+     "ref": "Siddur Ashkenaz, Weekday, Shacharit, Preparatory Prayers, Adon Olam",
+     "versionTitle": "The Metsudah siddur, 1981",
+     "license": "CC-BY",
+     "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
+     "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Adon_Olam",
+     "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Preparatory%20Prayers%2C%20Adon%20Olam?version=hebrew%7Call",
+     "lineIndexes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "rawLines": [
+      "<b>אֲדוֹן עוֹלָם</b> אֲשֶׁר מָלַךְ, בְּטֶֽרֶם כָּל יְצִיר נִבְרָא:",
+      "לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל, אֲזַי מֶֽלֶךְ שְׁמוֹ נִקְרָא:",
+      "וְאַחֲרֵי כִּכְלוֹת הַכֹּל, לְבַדּוֹ יִמְלֹךְ נוֹרָא:",
+      "וְהוּא הָיָה וְהוּא הֹוֶה, וְהוּא יִהְיֶה בְּתִפְאָרָה:",
+      "וְהוּא אֶחָד וְאֵין שֵׁנִי, לְהַמְשִׁיל לוֹ לְהַחְבִּֽירָה:",
+      "בְּלִי רֵאשִׁית בְּלִי תַכְלִית, וְלוֹ הָעֹז וְהַמִּשְׂרָה:",
+      "וְהוּא אֵלִי וְחַי גּוֹאֲלִי, וְצוּר חֶבְלִי בְּעֵת צָרָה:",
+      "וְהוּא נִסִּי וּמָנוֹס לִי, מְנָת כּוֹסִי בְּיוֹם אֶקְרָא:",
+      "בְּיָדוֹ אַפְקִיד רוּחִי, בְּעֵת אִישַׁן וְאָעִֽירָה:",
+      "וְעִם רוּחִי גְּוִיָּתִי, יְהֹוָה לִי וְלֹא אִירָא:"
+     ],
+     "metsudahHe": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃\nלְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃\nוְאַחֲרֵי כִּכְלוֹת הַכֹּל לְבַדּוֹ יִמְלֹךְ נוֹרָא׃\nוְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃\nוְהוּא אֶחָד וְאֵין שֵׁנִי לְהַמְשִׁיל לוֹ לְהַחְבִּירָה׃\nבְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה׃\nוְהוּא אֵלִי וְחַי גּוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃\nוְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃\nבְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישַׁן וְאָעִירָה׃\nוְעִם רוּחִי גְּוִיָּתִי יְהוָה לִי וְלֹא אִירָא׃",
+     "metsudahStatus": "verified",
+     "metsudahTransforms": null,
+     "replacedOn": "2026-11-04"
+    }
    ]
   },
   "kaddish-1": {
@@ -998,51 +1146,169 @@
   },
   "lecha-hashem": {
    "kind": "sefaria-siddur",
-   "ref": "Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Removing the Torah from Ark, Lekha Hashem",
-   "versionTitle": "The Metsudah siddur, 1981",
-   "license": "CC-BY",
-   "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
-   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Removing_the_Torah_from_Ark%2C_Lekha_Hashem",
-   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Torah%20Reading%2C%20Removing%20the%20Torah%20from%20Ark%2C%20Lekha%20Hashem?version=hebrew%7Call",
+   "ref": "Siddur Sefard, Shabbat Morning Services, Shabbat Torah Reading",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Morning_Services%2C_Shabbat_Torah_Reading",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Shabbat%20Morning%20Services%2C%20Shabbat%20Torah%20Reading?version=hebrew%7Call",
    "lineIndexes": [
-    2
+    20
    ],
    "rawLines": [
-    "<small>והקהל עונים:</small> לְךָ יְהֹוָה הַגְּ֒דֻלָּה וְהַגְּ֒בוּרָה וְהַתִּפְאֶֽרֶת וְהַנֵּֽצַח וְהַהוֹד כִּי כֹל בַּשָּׁמַֽיִם וּבָאָֽרֶץ לְךָ יְהֹוָה הַמַּמְלָכָה וְהַמִּתְנַשֵּׂא לְכֹל לְרֹאשׁ: רוֹמְ֒מוּ יְהֹוָה אֱלֺהֵֽינוּ וְהִשְׁתַּחֲווּ לַהֲדֹם רַגְלָיו קָדוֹשׁ הוּא: רוֹמְ֒מוּ יְהֹוָה אֱלֺהֵֽינוּ וְהִשְׁתַּחֲווּ לְהַר קָדְשׁוֹ כִּי קָדוֹשׁ יְהֹוָה אֱלֺהֵֽינוּ:"
+    "<small>קהל:</small> <b>לְךָ</b> יְהֹוָה הַגְּדֻלָּה וְהַגְּבוּרָה וְהַתִּפְאֶרֶת וְהַנֵּצַח וְהַהוֹד כִּי כֹל בַּשָּׁמַיִם וּבָאָרֶץ: לְךָ יְהֹוָה הַמַּמְלָכָה וְהַמִּתְנַשֵּׂא לְכֹל לְרֹאשׁ: רוֹמְמוּ יְהֹוָה אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לַהֲדֹם רַגְלָיו קָדוֹשׁ הוּא: רוֹמְמוּ יְהֹוָה אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לְהַר קָדְשׁוֹ כִּי קָדוֹשׁ יְהֹוָה אֱלֹהֵינוּ: "
    ],
-   "fetchedAt": "2026-11-04T01:58:44Z"
+   "fetchedAt": "2026-11-04T16:34:06.016Z",
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "reason": "Metsudah is a 1981 edition labelled CC-BY by Sefaria; replaced with a version Sefaria labels Public Domain. Both labels are Sefaria's; see docs/corpus/RESOURCE-METSUDAH.md."
+   },
+   "licenceEvidence": {
+    "sefariaVersionLabel": "Public Domain",
+    "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+    "read": "docs/corpus/RESOURCE-METSUDAH.md section 1"
+   },
+   "history": [
+    {
+     "kind": "sefaria-siddur",
+     "ref": "Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Removing the Torah from Ark, Lekha Hashem",
+     "versionTitle": "The Metsudah siddur, 1981",
+     "license": "CC-BY",
+     "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
+     "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Removing_the_Torah_from_Ark%2C_Lekha_Hashem",
+     "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Torah%20Reading%2C%20Removing%20the%20Torah%20from%20Ark%2C%20Lekha%20Hashem?version=hebrew%7Call",
+     "lineIndexes": [
+      2
+     ],
+     "rawLines": [
+      "<small>והקהל עונים:</small> לְךָ יְהֹוָה הַגְּ֒דֻלָּה וְהַגְּ֒בוּרָה וְהַתִּפְאֶֽרֶת וְהַנֵּֽצַח וְהַהוֹד כִּי כֹל בַּשָּׁמַֽיִם וּבָאָֽרֶץ לְךָ יְהֹוָה הַמַּמְלָכָה וְהַמִּתְנַשֵּׂא לְכֹל לְרֹאשׁ: רוֹמְ֒מוּ יְהֹוָה אֱלֺהֵֽינוּ וְהִשְׁתַּחֲווּ לַהֲדֹם רַגְלָיו קָדוֹשׁ הוּא: רוֹמְ֒מוּ יְהֹוָה אֱלֺהֵֽינוּ וְהִשְׁתַּחֲווּ לְהַר קָדְשׁוֹ כִּי קָדוֹשׁ יְהֹוָה אֱלֺהֵֽינוּ:"
+     ],
+     "fetchedAt": "2026-11-04T01:58:44Z",
+     "metsudahHe": "לְךָ יְהוָה הַגְּדֻלָּה וְהַגְּבוּרָה וְהַתִּפְאֶרֶת וְהַנֵּצַח וְהַהוֹד כִּי כֹל בַּשָּׁמַיִם וּבָאָרֶץ לְךָ יְהוָה הַמַּמְלָכָה וְהַמִּתְנַשֵּׂא לְכֹל לְרֹאשׁ׃ רוֹמְמוּ יְהוָה אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לַהֲדֹם רַגְלָיו קָדוֹשׁ הוּא׃ רוֹמְמוּ יְהוָה אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לְהַר קָדְשׁוֹ כִּי קָדוֹשׁ יְהוָה אֱלֹהֵינוּ׃",
+     "metsudahStatus": "verified",
+     "metsudahTransforms": {
+      "dropTokens": [
+       "והקהל",
+       "עונימ"
+      ]
+     },
+     "replacedOn": "2026-11-04"
+    }
+   ]
   },
   "vezot-hatorah": {
    "kind": "sefaria-siddur",
-   "ref": "Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Raising the Torah",
-   "versionTitle": "The Metsudah siddur, 1981",
-   "license": "CC-BY",
-   "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
-   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Raising_the_Torah",
-   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Torah%20Reading%2C%20Reading%20from%20Sefer%2C%20Raising%20the%20Torah?version=hebrew%7Call",
+   "ref": "Siddur Sefard, Rosh Chodesh, Torah Reading",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Rosh_Chodesh%2C_Torah_Reading",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Rosh%20Chodesh%2C%20Torah%20Reading?version=hebrew%7Call",
    "lineIndexes": [
-    1
+    27
    ],
    "rawLines": [
-    "<b>וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם משֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל עַל פִּי יְהֹוָה בְּיַד משֶׁה:</b>"
+    "<b>וְזֹאת</b> הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל: עַל פִּי יְהֹוָה בְּיַד מֹשֶׁה: "
    ],
-   "fetchedAt": "2026-11-04T01:58:44Z"
+   "fetchedAt": "2026-11-04T16:34:06.062Z",
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "reason": "Metsudah is a 1981 edition labelled CC-BY by Sefaria; replaced with a version Sefaria labels Public Domain. Both labels are Sefaria's; see docs/corpus/RESOURCE-METSUDAH.md."
+   },
+   "licenceEvidence": {
+    "sefariaVersionLabel": "Public Domain",
+    "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+    "read": "docs/corpus/RESOURCE-METSUDAH.md section 1"
+   },
+   "history": [
+    {
+     "kind": "sefaria-siddur",
+     "ref": "Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Raising the Torah",
+     "versionTitle": "The Metsudah siddur, 1981",
+     "license": "CC-BY",
+     "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
+     "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Raising_the_Torah",
+     "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Torah%20Reading%2C%20Reading%20from%20Sefer%2C%20Raising%20the%20Torah?version=hebrew%7Call",
+     "lineIndexes": [
+      1
+     ],
+     "rawLines": [
+      "<b>וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם משֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל עַל פִּי יְהֹוָה בְּיַד משֶׁה:</b>"
+     ],
+     "fetchedAt": "2026-11-04T01:58:44Z",
+     "metsudahHe": "וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל עַל פִּי יְהוָה בְּיַד מֹשֶׁה׃",
+     "metsudahStatus": "transcribed-needs-check",
+     "metsudahTransforms": {
+      "corrections": [
+       [
+        "משֶׁה",
+        "מֹשֶׁה"
+       ]
+      ]
+     },
+     "replacedOn": "2026-11-04"
+    }
+   ]
   },
   "etz-chaim": {
    "kind": "sefaria-siddur",
-   "ref": "Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Raising the Torah",
-   "versionTitle": "The Metsudah siddur, 1981",
-   "license": "CC-BY",
-   "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
-   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Raising_the_Torah",
-   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Torah%20Reading%2C%20Reading%20from%20Sefer%2C%20Raising%20the%20Torah?version=hebrew%7Call",
+   "ref": "Siddur Sefard, Rosh Chodesh, Torah Reading",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Rosh_Chodesh%2C_Torah_Reading",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Rosh%20Chodesh%2C%20Torah%20Reading?version=hebrew%7Call",
    "lineIndexes": [
-    2
+    28
    ],
    "rawLines": [
-    "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְ֒כֶֽיהָ מְאֻשָּׁר: דְּרָכֶֽיהָ דַּרְכֵי נֹֽעַם וְכָל נְתִיבוֹתֶֽיהָ שָׁלוֹם: אֹֽרֶךְ יָמִים בִּימִינָהּ בִּשְׂמֹאלָהּ עֽשֶׁר וְכָבוֹד: יְהֹוָה חָפֵץ לְמַֽעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר:"
+    "<b>תּוֹרָה</b> צִוָּה לָנוּ מֹשֶׁה מוֹרָשָׁה קְהִלַּת יַעֲקֹב: עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְכֶיהָ מְאֻשָּׁר: דְּרָכֶיהָ דַרְכֵי נֹעַם וְכָל נְתִיבוֹתֶיהָ שָׁלוֹם: אֹרֶךְ יָמִים בִּימִינָהּ בִּשְׂמֹאלָהּ עֹשֶׁר וְכָבוֹד: יְהֹוָה חָפֵץ לְמַעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר: יְהֹוָה אֱלֹהֵינוּ אֱמֶת מֹשֶׁה אֱמֶת וְתוֹרָתוֹ אֱמֶת:"
    ],
-   "fetchedAt": "2026-11-04T01:58:44Z"
+   "fetchedAt": "2026-11-04T16:34:06.062Z",
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "reason": "Metsudah is a 1981 edition labelled CC-BY by Sefaria; replaced with a version Sefaria labels Public Domain. Both labels are Sefaria's; see docs/corpus/RESOURCE-METSUDAH.md."
+   },
+   "licenceEvidence": {
+    "sefariaVersionLabel": "Public Domain",
+    "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+    "read": "docs/corpus/RESOURCE-METSUDAH.md section 1"
+   },
+   "history": [
+    {
+     "kind": "sefaria-siddur",
+     "ref": "Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Raising the Torah",
+     "versionTitle": "The Metsudah siddur, 1981",
+     "license": "CC-BY",
+     "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
+     "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Raising_the_Torah",
+     "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Torah%20Reading%2C%20Reading%20from%20Sefer%2C%20Raising%20the%20Torah?version=hebrew%7Call",
+     "lineIndexes": [
+      2
+     ],
+     "rawLines": [
+      "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְ֒כֶֽיהָ מְאֻשָּׁר: דְּרָכֶֽיהָ דַּרְכֵי נֹֽעַם וְכָל נְתִיבוֹתֶֽיהָ שָׁלוֹם: אֹֽרֶךְ יָמִים בִּימִינָהּ בִּשְׂמֹאלָהּ עֽשֶׁר וְכָבוֹד: יְהֹוָה חָפֵץ לְמַֽעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר:"
+     ],
+     "fetchedAt": "2026-11-04T01:58:44Z",
+     "metsudahHe": "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְכֶיהָ מְאֻשָּׁר׃ דְּרָכֶיהָ דַּרְכֵי נֹעַם וְכָל נְתִיבוֹתֶיהָ שָׁלוֹם׃ אֹרֶךְ יָמִים בִּימִינָהּ בִּשְׂמֹאלָהּ עֹשֶׁר וְכָבוֹד׃ יְהוָה חָפֵץ לְמַעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר׃",
+     "metsudahStatus": "transcribed-needs-check",
+     "metsudahTransforms": {
+      "corrections": [
+       [
+        "עשֶׁר",
+        "עֹשֶׁר"
+       ]
+      ]
+     },
+     "replacedOn": "2026-11-04"
+    }
+   ]
   },
   "hagomel": {
    "kind": "sefaria-siddur",
@@ -1064,35 +1330,101 @@
   },
   "avot-closing": {
    "kind": "sefaria-siddur",
-   "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Patriarchs",
-   "versionTitle": "The Metsudah siddur, 1981",
-   "license": "CC-BY",
-   "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
-   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Patriarchs",
-   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Amidah%2C%20Patriarchs?version=hebrew%7Call",
+   "ref": "Siddur Sefard, Shabbat Morning Services, Amidah",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Morning_Services%2C_Amidah",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Shabbat%20Morning%20Services%2C%20Amidah?version=hebrew%7Call",
    "lineIndexes": [
-    5
+    3
    ],
    "rawLines": [
-    "מֶֽלֶךְ עוֹזֵר וּמוֹשִֽׁיעַ וּמָגֵן: בָּרוּךְ אַתָּה יְהֹוָה מָגֵן אַבְרָהָם:"
+    "<b>מֶלֶךְ</b> עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן, בָּרוּךְ אַתָּה יְהֹוָה, מָגֵן אַבְרָהָם: "
    ],
-   "fetchedAt": "2026-11-04T01:58:44Z"
+   "fetchedAt": "2026-11-04T16:34:06.119Z",
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "reason": "Metsudah is a 1981 edition labelled CC-BY by Sefaria; replaced with a version Sefaria labels Public Domain. Both labels are Sefaria's; see docs/corpus/RESOURCE-METSUDAH.md."
+   },
+   "licenceEvidence": {
+    "sefariaVersionLabel": "Public Domain",
+    "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+    "read": "docs/corpus/RESOURCE-METSUDAH.md section 1"
+   },
+   "history": [
+    {
+     "kind": "sefaria-siddur",
+     "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Patriarchs",
+     "versionTitle": "The Metsudah siddur, 1981",
+     "license": "CC-BY",
+     "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
+     "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Patriarchs",
+     "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Amidah%2C%20Patriarchs?version=hebrew%7Call",
+     "lineIndexes": [
+      5
+     ],
+     "rawLines": [
+      "מֶֽלֶךְ עוֹזֵר וּמוֹשִֽׁיעַ וּמָגֵן: בָּרוּךְ אַתָּה יְהֹוָה מָגֵן אַבְרָהָם:"
+     ],
+     "fetchedAt": "2026-11-04T01:58:44Z",
+     "metsudahHe": "מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן׃ בָּרוּךְ אַתָּה יְהוָה מָגֵן אַבְרָהָם׃",
+     "metsudahStatus": "verified",
+     "metsudahTransforms": {},
+     "replacedOn": "2026-11-04"
+    }
+   ]
   },
   "amidah-yihyu": {
    "kind": "sefaria-siddur",
-   "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Concluding Passage",
-   "versionTitle": "The Metsudah siddur, 1981",
-   "license": "CC-BY",
-   "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
-   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Concluding_Passage",
-   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Amidah%2C%20Concluding%20Passage?version=hebrew%7Call",
+   "ref": "Siddur Sefard, Various Prayers & Segulot, Prayer of the Shelah",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Various_Prayers_%26_Segulot%2C_Prayer_of_the_Shelah",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Various%20Prayers%20%26%20Segulot%2C%20Prayer%20of%20the%20Shelah?version=hebrew%7Call",
    "lineIndexes": [
-    0
+    12
    ],
    "rawLines": [
-    "יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶֽיךָ יְהֹוָה צוּרִי וְגוֹאֲלִי:"
+    "<b>יִהְיוּ</b> לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ יְהֹוָה צוּרִי וְגוֹאֲלִי:"
    ],
-   "fetchedAt": "2026-11-04T01:58:44Z"
+   "fetchedAt": "2026-11-04T16:34:06.160Z",
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "reason": "Metsudah is a 1981 edition labelled CC-BY by Sefaria; replaced with a version Sefaria labels Public Domain. Both labels are Sefaria's; see docs/corpus/RESOURCE-METSUDAH.md."
+   },
+   "licenceEvidence": {
+    "sefariaVersionLabel": "Public Domain",
+    "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+    "read": "docs/corpus/RESOURCE-METSUDAH.md section 1"
+   },
+   "history": [
+    {
+     "kind": "sefaria-siddur",
+     "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Concluding Passage",
+     "versionTitle": "The Metsudah siddur, 1981",
+     "license": "CC-BY",
+     "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
+     "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Concluding_Passage",
+     "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Amidah%2C%20Concluding%20Passage?version=hebrew%7Call",
+     "lineIndexes": [
+      0
+     ],
+     "rawLines": [
+      "יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶֽיךָ יְהֹוָה צוּרִי וְגוֹאֲלִי:"
+     ],
+     "fetchedAt": "2026-11-04T01:58:44Z",
+     "metsudahHe": "יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ יְהוָה צוּרִי וְגוֹאֲלִי׃",
+     "metsudahStatus": "verified",
+     "metsudahTransforms": {},
+     "replacedOn": "2026-11-04"
+    }
+   ]
   },
   "amidah-elohai-netzor": {
    "kind": "sefaria-siddur",
@@ -1112,19 +1444,54 @@
   },
   "oseh-shalom": {
    "kind": "sefaria-siddur",
-   "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Concluding Passage",
-   "versionTitle": "The Metsudah siddur, 1981",
-   "license": "CC-BY",
-   "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
-   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Concluding_Passage",
-   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Amidah%2C%20Concluding%20Passage?version=hebrew%7Call",
+   "ref": "Siddur Sefard, Shabbat Eve Mincha, Amidah",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Eve_Mincha%2C_Amidah",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Shabbat%20Eve%20Mincha%2C%20Amidah?version=hebrew%7Call",
    "lineIndexes": [
-    2
+    73
    ],
    "rawLines": [
-    "עֹשֶׂה (<small>בעשי\"ת</small> הַשָּׁלוֹם) שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"
+    "<b>עֹשֶׂה שָׁלוֹם</b> <small> <small>(בעשי\"ת <b>הַשָּׁלוֹם</b>)</small> </small> בִּמְרוֹמָיו. הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל. וְאִמְרוּ אָמֵן: "
    ],
-   "fetchedAt": "2026-11-04T01:58:44Z"
+   "fetchedAt": "2026-11-04T16:34:06.222Z",
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "reason": "Metsudah is a 1981 edition labelled CC-BY by Sefaria; replaced with a version Sefaria labels Public Domain. Both labels are Sefaria's; see docs/corpus/RESOURCE-METSUDAH.md."
+   },
+   "licenceEvidence": {
+    "sefariaVersionLabel": "Public Domain",
+    "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+    "read": "docs/corpus/RESOURCE-METSUDAH.md section 1"
+   },
+   "history": [
+    {
+     "kind": "sefaria-siddur",
+     "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Concluding Passage",
+     "versionTitle": "The Metsudah siddur, 1981",
+     "license": "CC-BY",
+     "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
+     "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Concluding_Passage",
+     "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Amidah%2C%20Concluding%20Passage?version=hebrew%7Call",
+     "lineIndexes": [
+      2
+     ],
+     "rawLines": [
+      "עֹשֶׂה (<small>בעשי\"ת</small> הַשָּׁלוֹם) שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן:"
+     ],
+     "fetchedAt": "2026-11-04T01:58:44Z",
+     "metsudahHe": "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
+     "metsudahStatus": "verified",
+     "metsudahTransforms": {
+      "dropParen": true
+     },
+     "replacedOn": "2026-11-04"
+    }
+   ]
   },
   "sim-shalom": {
    "kind": "sefaria-siddur",
@@ -1146,19 +1513,52 @@
   },
   "kiddush-shabbat-eve": {
    "kind": "sefaria-siddur",
-   "ref": "Siddur Ashkenaz, Shabbat, Shabbat Evening, Kiddush",
-   "versionTitle": "The Metsudah siddur, 1981",
-   "license": "CC-BY",
-   "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
-   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Shabbat%2C_Shabbat_Evening%2C_Kiddush",
-   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Shabbat%2C%20Shabbat%20Evening%2C%20Kiddush?version=hebrew%7Call",
+   "ref": "Siddur Sefard, Shabbat Evening Meal, Shabbat Eve Kiddush",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Evening_Meal%2C_Shabbat_Eve_Kiddush",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Shabbat%20Evening%20Meal%2C%20Shabbat%20Eve%20Kiddush?version=hebrew%7Call",
    "lineIndexes": [
-    6
+    7
    ],
    "rawLines": [
-    "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָֽׁנוּ בְּמִצְוֹתָיו וְרָֽצָה בָֽנוּ, וְשַׁבַּת קָדְשׁוֹ בְּאַהֲבָה וּבְרָצוֹן הִנְחִילָֽנוּ, זִכָּרוֹן לְמַעֲשֵׂה בְרֵאשִׁית. (כִּי הוּא יוֹם) תְּחִלָּה לְמִקְרָאֵי קֹֽדֶשׁ, זֵֽכֶר לִיצִיאַת מִצְרָֽיִם. (כִּי בָֽנוּ בָחַֽרְתָּ וְאוֹתָֽנוּ קִדַּֽשְׁתָּ מִכָּל הָעַמִּים) וְשַׁבַּת קָדְשְׁךָ בְּאַהֲבָה וּבְרָצוֹן הִנְחַלְתָּֽנוּ. בָּרוּךְ אַתָּה יְהוָה, מְקַדֵּשׁ הַשַּׁבָּת:"
+    "<b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם. אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְרָצָה בָנוּ. וְשַׁבַּת קָדְשׁוֹ בְּאַהֲבָה וּבְרָצוֹן הִנְחִילָנוּ. זִכָּרוֹן לְמַעֲשֵׂה בְרֵאשִׁית. <small> <small>(<b>כִּי הוּא יוֹם</b>)</small> </small> תְּחִלָּה לְמִקְרָאֵי קֹדֶשׁ זֵכֶר לִיצִיאַת מִצְרָיִם. <small> <small>(<b>כִּי בָנוּ בָחַרְתָּ וְאוֹתָנוּ קִדַּשְׁתָּ מִכָּל הָעַמִּים</b>)</small> </small> וְשַׁבַּת קָדְשְׁךָ בְּאַהֲבָה וּבְרָצוֹן הִנְחַלְתָּנוּ: בָּרוּךְ אַתָּה יְהֹוָה מְקַדֵּשׁ הַשַּׁבָּת:"
    ],
-   "fetchedAt": "2026-11-04T01:58:44Z"
+   "fetchedAt": "2026-11-04T16:34:06.264Z",
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "reason": "Metsudah is a 1981 edition labelled CC-BY by Sefaria; replaced with a version Sefaria labels Public Domain. Both labels are Sefaria's; see docs/corpus/RESOURCE-METSUDAH.md."
+   },
+   "licenceEvidence": {
+    "sefariaVersionLabel": "Public Domain",
+    "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+    "read": "docs/corpus/RESOURCE-METSUDAH.md section 1"
+   },
+   "history": [
+    {
+     "kind": "sefaria-siddur",
+     "ref": "Siddur Ashkenaz, Shabbat, Shabbat Evening, Kiddush",
+     "versionTitle": "The Metsudah siddur, 1981",
+     "license": "CC-BY",
+     "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
+     "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Shabbat%2C_Shabbat_Evening%2C_Kiddush",
+     "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Shabbat%2C%20Shabbat%20Evening%2C%20Kiddush?version=hebrew%7Call",
+     "lineIndexes": [
+      6
+     ],
+     "rawLines": [
+      "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָֽׁנוּ בְּמִצְוֹתָיו וְרָֽצָה בָֽנוּ, וְשַׁבַּת קָדְשׁוֹ בְּאַהֲבָה וּבְרָצוֹן הִנְחִילָֽנוּ, זִכָּרוֹן לְמַעֲשֵׂה בְרֵאשִׁית. (כִּי הוּא יוֹם) תְּחִלָּה לְמִקְרָאֵי קֹֽדֶשׁ, זֵֽכֶר לִיצִיאַת מִצְרָֽיִם. (כִּי בָֽנוּ בָחַֽרְתָּ וְאוֹתָֽנוּ קִדַּֽשְׁתָּ מִכָּל הָעַמִּים) וְשַׁבַּת קָדְשְׁךָ בְּאַהֲבָה וּבְרָצוֹן הִנְחַלְתָּֽנוּ. בָּרוּךְ אַתָּה יְהוָה, מְקַדֵּשׁ הַשַּׁבָּת:"
+     ],
+     "fetchedAt": "2026-11-04T01:58:44Z",
+     "metsudahHe": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְרָצָה בָנוּ וְשַׁבַּת קָדְשׁוֹ בְּאַהֲבָה וּבְרָצוֹן הִנְחִילָנוּ זִכָּרוֹן לְמַעֲשֵׂה בְרֵאשִׁית כִּי הוּא יוֹם תְּחִלָּה לְמִקְרָאֵי קֹדֶשׁ זֵכֶר לִיצִיאַת מִצְרָיִם כִּי בָנוּ בָחַרְתָּ וְאוֹתָנוּ קִדַּשְׁתָּ מִכָּל הָעַמִּים וְשַׁבַּת קָדְשְׁךָ בְּאַהֲבָה וּבְרָצוֹן הִנְחַלְתָּנוּ בָּרוּךְ אַתָּה יְהוָה מְקַדֵּשׁ הַשַּׁבָּת׃",
+     "metsudahStatus": "verified",
+     "metsudahTransforms": {},
+     "replacedOn": "2026-11-04"
+    }
+   ]
   },
   "lecha-dodi-1": {
    "kind": "sefaria-siddur",

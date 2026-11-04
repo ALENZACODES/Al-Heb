@@ -1,6 +1,6 @@
 # Israel track: "Sound like a local" (draft)
 
-Status: DRAFT. Every line was written by an AI agent from general knowledge. No native speaker has checked the Hebrew, pointing, transliteration (capitals mark the stressed syllable), register tags, gender forms or etiquette notes. No audio exists. Nothing was tested with learners. All data carries `proofread:false`, `needsNativeReview:true` and a per-item `confidence` (high/medium/low) with a `confidenceReason` when not high.
+Status: DRAFT. Every line is a draft written from general knowledge. No native speaker has checked the Hebrew, pointing, transliteration (capitals mark the stressed syllable), register tags, gender forms or etiquette notes. No audio exists. Nothing was tested with learners. All data carries `proofread:false`, `needsNativeReview:true` and a per-item `confidence` (high/medium/low) with a `confidenceReason` when not high.
 
 ## Files
 - `data/israel/register-ladder.json`: 65 textbook vs everyday pairs (greetings, thanks, agreement, how-are-you, cafe, shuk, pharmacy, bus/Rav-Kav, taxi, sherut, train, directions, paying, bargaining, small talk, apologising, phone/WhatsApp). Lines with gender have `gender: speaker|addressee` and `forms.{m,f}`; the top-level `he` equals `forms.m`.

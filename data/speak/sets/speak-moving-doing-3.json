@@ -14,7 +14,7 @@
    "translit": "akav",
    "en": "to follow, tail, track, trace",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hffd88aa2",
    "source": "data/vocab/words.json"
   },
   {
@@ -32,7 +32,7 @@
    "translit": "azav",
    "en": "to leave, leave behind, depart",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hdb9bd37f",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,7 +41,7 @@
    "translit": "zaz",
    "en": "to move",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hf5f3eb91",
    "source": "data/vocab/words.json"
   },
   {
@@ -50,7 +50,7 @@
    "translit": "pashat",
    "en": "to remove, to take off (one's clothing)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h1eeebe32",
    "source": "data/vocab/words.json"
   },
   {
@@ -59,7 +59,7 @@
    "translit": "hotzi",
    "en": "to take or bring out or forth",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h804d2347",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "nakam",
    "en": "to take revenge, to avenge",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hb988b556",
    "source": "data/vocab/words.json"
   },
   {
@@ -77,7 +77,7 @@
    "translit": "ratz",
    "en": "to run",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h1982ccc7",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "tzilem",
    "en": "to photograph, to take a photograph of",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h37cac81b",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "zarak",
    "en": "to throw, to toss",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h057ec4b3",
    "source": "data/vocab/words.json"
   },
   {
@@ -104,7 +104,7 @@
    "translit": "hechzir",
    "en": "to return, restore",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h40790488",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "tas",
    "en": "to fly",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h91e9b8f2",
    "source": "data/vocab/words.json"
   }
  ]

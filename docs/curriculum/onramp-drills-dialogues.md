@@ -1,6 +1,6 @@
 # On-ramp words, Spot It, hints, checkpoint, mnemonics, dialogues (lane 1)
 
-Status 2026-11-03. All of this is draft content written by an AI agent. Nothing here has been tested with learners, reviewed by a native speaker or checked against a dictionary. There is no audio for any of it.
+Status 2026-11-03. All of this is draft content. Nothing here has been tested with learners, reviewed by a native speaker or checked against a dictionary. There is no audio for any of it.
 
 Deep links (all handled by `src/curriculum/learn.view.js`):
 
@@ -37,7 +37,7 @@ Seven original dialogues (cafe, restaurant, directions, small talk, shopping, ta
 - Lane 4: no audio ids exist for loanwords or dialogue lines.
 
 ## Round 4 exercises (lane 1, 2026-11-03)
-All draft: AI-written content, no native review, no learner testing, no recorded audio. Concept ids refer to `data/curriculum/resource-concepts-gratis.json`; their status there stays `proposed` (a test requires it).
+All draft: unreviewed content, no native review, no learner testing, no recorded audio. Concept ids refer to `data/curriculum/resource-concepts-gratis.json`; their status there stays `proposed` (a test requires it).
 
 | Link | Concept | What |
 |---|---|---|

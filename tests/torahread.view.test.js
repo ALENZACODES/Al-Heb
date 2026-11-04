@@ -47,7 +47,7 @@ test('audio hook is honest: no player, unknown item, tts fallback, file', async 
     [undefined, /No audio yet.*no audio player/],
     [{ play: async () => ({ source: 'none', reason: 'unknown-item' }), has: () => false }, /No audio yet.*no audio entry exists/],
     [{ play: async () => ({ source: 'tts-fallback' }), has: () => false }, /computer voice, not a person/],
-    [{ play: async () => ({ source: 'file', entryStatus: 'recorded' }), has: () => true }, /recorded audio file/],
+    [{ play: async () => ({ source: 'file', entryStatus: 'recorded' }), has: () => true }, /Recorded by a human reader/],
   ]) {
     const { root, ctx } = mk(audio);
     await mount(root, ctx);

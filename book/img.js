@@ -9,7 +9,7 @@
 //
 // Real file preference order: .png, .webp, .jpg, .svg (a hand-made SVG in assets/img/ counts as real).
 //
-// Approved AI-generated images (data/images/generated-manifest.json, written by tools/images/ingest.mjs; it lists approved images only)
+// Approved generated images (data/images/generated-manifest.json, written by tools/images/ingest.mjs; it lists approved images only)
 // are picked up when the caller passes it as `generated`. Lookup order: real file in base -> approved generated -> placeholder SVG.
 //   const r = createImgResolver({ base, files, generated: JSON.parse(readFileSync('data/images/generated-manifest.json')) });
 //   r.src('L05_dalet_quirky')                  // '<base>/gen/L05_dalet_quirky.800.webp' once approved

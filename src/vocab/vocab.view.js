@@ -11,6 +11,7 @@ import { loadTier, TIER_BANDS } from './loader.js';
 import { TIER_LABEL, POS_LABEL, VOCAB_CARDS_KEY, filterEntries, stripPoints, addCards, cardId, CARD_PREFIX } from './model.js';
 import { isFunction } from './vocab.js';
 import { plural } from '../shell/plural.js';
+import { fileLabel } from '../shell/audio-labels.js';
 
 const PAGE = 40;          // cards rendered per page
 const ADD_LIMIT = 100;    // words added to reviews per click
@@ -112,7 +113,7 @@ export function mount(root, ctx) {
     try {
       if (ctx?.audio?.has?.('word', e.id)) {
         const r = await ctx.audio.play('word', e.id);
-        if (r?.source === 'file') { audioNote.textContent = r.entryStatus === 'tts' ? 'Playing a pre-rendered computer-voice file, not a human recording.' : 'Playing a recording.'; return; }
+        if (r?.source === 'file') { audioNote.textContent = `Playing: ${fileLabel(r.entryStatus)}.`; return; }
       }
     } catch { /* fall through to the browser voice */ }
     const g = globalThis;
@@ -232,6 +233,7 @@ export function mount(root, ctx) {
       const add = el('button', { type: 'button', class: 'btn secondary', 'aria-label': inRev ? `In reviews: ${e.gloss}` : `Add to reviews: ${e.gloss}`, ...(inRev ? { disabled: true } : {}),
         onclick: async () => { const r = addCards(cards, [e], Date.now()); await saveCards(r.cards); add.setAttribute('disabled', ''); add.textContent = 'In reviews'; add.setAttribute('aria-label', `In reviews: ${e.gloss}`); updateAdd(); } }, inRev ? 'In reviews' : 'Add to reviews');
       return el('li', { class: 'card vc-card', 'data-id': e.id },
+        ctx.img?.(el, { kind: 'word', id: e.id, class: 'vc-pic', width: 400 }),
         heWord(e, 'vc-he'), el('p', { tabindex: '-1', class: 'vc-gloss' }, ...glossNodes(e.gloss)), metaLine(e), ...noteLines(e), translitLine(e),
         el('div', { class: 'row' }, listenButton(e), add));
     };
@@ -328,7 +330,7 @@ export function mount(root, ctx) {
   function showAnswer(prompt, reveal) {
     const e = rv.current; rv.revealed = true;
     reveal.remove?.();
-    const answer = el('div', { class: 'vc-answer', 'aria-live': 'polite' }, el('p', { class: 'vc-gloss', tabindex: '-1', id: 'vc-a' }, ...glossNodes(e.gloss)), metaLine(e), ...noteLines(e), translitLine(e), el('div', { class: 'row' }, listenButton(e)));
+    const answer = el('div', { class: 'vc-answer', 'aria-live': 'polite' }, ctx.img?.(el, { kind: 'word', id: e.id, class: 'vc-pic', width: 400 }), el('p', { class: 'vc-gloss', tabindex: '-1', id: 'vc-a' }, ...glossNodes(e.gloss)), metaLine(e), ...noteLines(e), translitLine(e), el('div', { class: 'row' }, listenButton(e)));
     const rate = el('div', { class: 'vc-rate', role: 'group', 'aria-label': 'How well did you remember it?' },
       ...RATINGS.map(([r, name, hint]) => el('button', { type: 'button', class: 'btn' + (r === 3 ? '' : ' secondary'), 'data-rating': String(r), 'aria-label': `${name} (${r}): ${hint}`, onclick: () => rate_(r) }, `${name} (${r})`)));
     prompt.append(answer); body.append(rate);

@@ -4,7 +4,7 @@ import { dialogues, dialogueById } from "./dialogues.js";
 import { byId } from "./lessons.js";
 import { loadState } from "./actions.js";
 
-const FLAG = "Draft content: these dialogues were written by an AI agent and have not been reviewed by a native speaker. There is no audio for them yet.";
+const FLAG = "Draft content: these dialogues have not been reviewed by a native speaker. There is no audio for them yet.";
 
 export function mountDialogues(root, ctx, id) {
   let alive = true;

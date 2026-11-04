@@ -41,7 +41,7 @@
    "translit": "chor",
    "en": "hole",
    "kind": "word",
-   "audioId": null,
+   "audioId": "habcfc77f",
    "source": "data/vocab/words.json"
   },
   {
@@ -50,7 +50,7 @@
    "translit": "chayav",
    "en": "obligated, required, bound, must",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h9f3ab68a",
    "source": "data/vocab/words.json"
   },
   {
@@ -59,7 +59,7 @@
    "translit": "ohel",
    "en": "a collective term for all that covers a dead body or that a dead body covers",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h3c9f9b9b",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "berekh",
    "en": "to bless",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h9dabc184",
    "source": "data/vocab/words.json"
   },
   {
@@ -77,7 +77,7 @@
    "translit": "adon",
    "en": "lord",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hddb7aae9",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "goy",
    "en": "gentile (a non-Jewish person), goy",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h3b32dc48",
    "source": "data/vocab/words.json"
   },
   {
@@ -104,7 +104,7 @@
    "translit": "kohen",
    "en": "a Jewish priest, a cohen or kohen",
    "kind": "word",
-   "audioId": null,
+   "audioId": "ha4794f20",
    "source": "data/vocab/words.json"
   },
   {

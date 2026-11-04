@@ -40,7 +40,7 @@ test('router table: module files for lane 8 exist; others are in the contract pa
   }
 });
 test('settings defaults and validation', () => {
-  assert.deepEqual({ ...DEFAULTS }, { voice: 'f', congregation: 'sephardi', israelTrack: false, script: 'print', theme: 'auto', lat: null, lon: null, goal: 'read', onboarded: false, browserVoiceAnyway: true, showUnapprovedImages: false });
+  assert.deepEqual({ ...DEFAULTS }, { voice: 'f', congregation: 'sephardi', israelTrack: false, script: 'print', theme: 'auto', lat: null, lon: null, goal: 'read', onboarded: false, browserVoiceAnyway: true, showUnapprovedImages: false, writeGodAsGd: false, haptics: false, soundEffects: false });
   const s = createSettings(createStore({ storage: createMemoryStorage() }));
   assert.equal(s.congregation, 'sephardi');
   assert.deepEqual(s.set({ voice: 'x', lat: 200, script: 'cursive' }), ['voice', 'lat']);
@@ -175,7 +175,7 @@ test('Tetragrammaton lines/words are stored with the spoken substitute (Adonai) 
 test('shell audio: honest status text for tts, file and refusal; manifest summary', () => {
   assert.match(describeResult({ source: 'tts-fallback', tradition: 'israeli' }).text, /text-to-speech voice, not a recording/);
   assert.match(describeResult({ source: 'tts-fallback', tradition: 'sephardi', mismatch: true }).text, /reads Israeli pronunciation, not Sephardi/);
-  assert.match(describeResult({ source: 'file', voice: 'f', tradition: 'israeli', entryStatus: 'recorded' }).text, /recorded audio file \(woman, Israeli\)/);
+  assert.match(describeResult({ source: 'file', voice: 'f', tradition: 'israeli', entryStatus: 'recorded' }).text, /Recorded by a human reader \(woman, Israeli\)/);
   assert.match(describeResult({ source: 'none', reason: 'no-hebrew-browser-voice' }).text, /no Hebrew voice/);
   const s = summarizeManifest(manifest); assert.equal(s.recorded, 0); assert.equal(s.tts, 0); assert.equal(s.total, manifest.length);
 });

@@ -6,24 +6,31 @@
 import { lessons, byId } from "./lessons.js";
 import { el, heText, tr } from "./dom.js";
 import { loadContent, vowelEnglish, vowelIpa } from "./content.js";
+import { loadJSON } from "./data.js";
 import { loadState, rateCard, addLessonCards } from "./actions.js";
 import { buildQueue, parseCardId, wordAudioId, confusableMap } from "./progress.js";
 import { playButton } from "./audio-ui.js";
 import { hintPanel } from "./hint-ui.js";
 import { errorKindForCard } from "./hints.js";
 import { fade } from "./fade.js";
+import { letterSound } from "../pronunciation/forTradition.js";
 
 const RATINGS = [[1, "Again", "forgot it"], [2, "Hard", "got it with effort"], [3, "Good", "got it"], [4, "Easy", "no effort"]];
 
-/** Front/back description of a card. */
-export function describeCard(cardId, c, congregation) {
+/** Lesson word -> vocab id (data/curriculum/word-vocab-map.json, built by tools/curriculum/word_ids.mjs by exact match). Empty map if the file cannot load. */
+export function loadWordVocabMap() {
+  return loadJSON("data/curriculum/word-vocab-map.json").then((d) => d?.map || {}, () => ({}));
+}
+
+/** Front/back description of a card. `wordVocab` (optional) adds `vocabId` to word cards that have a map entry, so the answer side can show the vocab picture. */
+export function describeCard(cardId, c, congregation, wordVocab = null) {
   const p = parseCardId(cardId);
   if (!p) return null;
   if (p.kind === "letter") {
     const L = c.letters.get(p.key); if (!L) return null;
     const sets = (c.confusables?.sets || []).filter((s) => s.letters.includes(p.key));
     return { kind: "letter", prompt: "Name this letter and say its sound.", he: L.he, big: true, audio: ["letter", p.key],
-      answer: [L.name + (L.nameHe ? "" : ""), L.sound?.en || ""], answerHe: L.nameHe,
+      answer: [L.name + (L.nameHe ? "" : ""), letterSound(c.consonants?.get(p.key), congregation, { fallbackEn: L.sound?.en || "" }).en], answerHe: L.nameHe,
       hint: sets.length ? `Easily confused with: ${[...new Set(sets.flatMap((s) => s.letters.filter((x) => x !== p.key)))].map((x) => c.letters.get(x)?.name || x).join(", ")}. ${sets[0].hint}` : "" };
   }
   if (p.kind === "vowel") {
@@ -47,8 +54,9 @@ export function describeCard(cardId, c, congregation) {
   }
   if (p.kind !== "word") return null;
   const lesson = byId[p.lessonId]; const w = lesson?.words[p.n - 1]; if (!w) return null;
+  const vocabId = wordVocab?.[`${p.lessonId}:${p.n}`] || null;
   return { kind: "word", prompt: "Read this word aloud, then recall what it means.", he: w.he, big: false, audio: ["word", wordAudioId(p.lessonId, p.n)],
-    answer: [w.en], answerHe: "", hint: "" };
+    answer: [w.en], answerHe: "", hint: "", ...(vocabId ? { vocabId } : {}) };
 }
 
 export function mountReview(root, ctx, { lessonId } = {}) {
@@ -59,13 +67,13 @@ export function mountReview(root, ctx, { lessonId } = {}) {
   wrap.append(h1);
   const congregation = ctx.settings?.get?.("congregation") || "sephardi";
   const stats = { 1: 0, 2: 0, 3: 0, 4: 0 };
-  let queue = [], pos = 0, revealed = false, content, onKey = null;
+  let queue = [], pos = 0, revealed = false, content, wordVocab = {}, onKey = null;
 
   const body = el("div", { class: "alef-review-body" });
   wrap.append(body);
 
   async function start() {
-    content = await loadContent();
+    [content, wordVocab] = await Promise.all([loadContent(), loadWordVocabMap()]);
     if (lessonId) {
       const lesson = byId[lessonId];
       if (!lesson) { body.replaceChildren(el("p", { role: "alert" }, `There is no lesson "${lessonId}".`), el("a", { class: "btn", href: "#/learn" }, "All lessons")); return; }
@@ -74,7 +82,7 @@ export function mountReview(root, ctx, { lessonId } = {}) {
     const st = await loadState(ctx);
     if (!alive) return;
     queue = buildQueue(st.cards, Date.now(), { lessonId, lessons, confusables: content.confusables, limit: 20 }).map((c) => c.id);
-    queue = queue.filter((id) => describeCard(id, content, congregation));
+    queue = queue.filter((id) => describeCard(id, content, congregation, wordVocab));
     render();
   }
 
@@ -88,7 +96,7 @@ export function mountReview(root, ctx, { lessonId } = {}) {
         total ? el("p", {}, `${total} card${total === 1 ? "" : "s"} reviewed: ${stats[1]} again, ${stats[2]} hard, ${stats[3]} good, ${stats[4]} easy.`)
           : el("p", {}, lessonId ? "No cards from this lesson are due right now." : "No reviews are due. Complete a lesson to add cards, or come back later."),
         el("p", { class: "muted" }, left ? `${left} card${left === 1 ? "" : "s"} still due (cards you rated Again return after 10 minutes).` : "All caught up."),
-        st.streak.count ? el("p", { class: "alef-streak" }, `Streak: ${st.streak.count} day${st.streak.count === 1 ? "" : "s"}`) : null,
+        el("p", { class: "alef-streak" }, st.streak.count ? `Streak: ${st.streak.count} day${st.streak.count === 1 ? "" : "s"}${st.streak.activeToday ? "" : ". Today counts after 5 minutes of study."}` : "A day counts toward a streak after 5 minutes of study."),
         el("div", { class: "row" }, left ? el("a", { class: "btn", href: "#/learn?review=1" }, "Keep reviewing") : null, el("a", { class: "btn secondary", href: "#/learn" }, "Lessons"), el("a", { class: "btn secondary", href: "#/" }, "Home"))].filter(Boolean));
     });
   }
@@ -97,7 +105,7 @@ export function mountReview(root, ctx, { lessonId } = {}) {
     if (!alive) return;
     if (pos >= queue.length) return summary();
     revealed = false;
-    const d = describeCard(queue[pos], content, congregation);
+    const d = describeCard(queue[pos], content, congregation, wordVocab);
     const note = el("p", { class: "alef-audio-note muted", role: "status", "aria-live": "polite" });
     const answerBox = el("div", { class: "alef-answer", tabindex: "-1", hidden: "" });
     const ratingBox = el("div", { class: "alef-ratings", role: "group", "aria-label": "How well did you remember it?", hidden: "" },
@@ -106,8 +114,10 @@ export function mountReview(root, ctx, { lessonId } = {}) {
     const show = el("button", { type: "button", class: "btn", onclick: reveal }, tr(ctx, "review.show", "Show answer"));
     function reveal() {
       revealed = true;
-      answerBox.replaceChildren(...(d.answerHe ? [heText(d.answerHe, "alef-he alef-word")] : []), ...d.answer.filter(Boolean).map((a, i) => el(i === 0 ? "strong" : "p", {}, a)),
-        d.hint ? el("p", { class: "muted alef-hint" }, d.hint) : null, playButton(ctx, d.audio[0], d.audio[1], "Listen", note));
+      // Picture only on the answer side, and only for word cards with a vocab-id map entry and an approved image (ctx.img returns null otherwise: nothing rendered, no gap).
+      const pic = d.vocabId ? ctx.img?.(el, { kind: "word", id: d.vocabId, class: "alef-review-pic", width: 400 }) : null;
+      answerBox.replaceChildren(...[pic, ...(d.answerHe ? [heText(d.answerHe, "alef-he alef-word")] : []), ...d.answer.filter(Boolean).map((a, i) => el(i === 0 ? "strong" : "p", {}, a)),
+        d.hint ? el("p", { class: "muted alef-hint" }, d.hint) : null, playButton(ctx, d.audio[0], d.audio[1], "Listen", note)].filter(Boolean));
       answerBox.hidden = false; ratingBox.hidden = false; show.hidden = true;
       answerBox.focus?.({ preventScroll: true });
       ratingBox.scrollIntoView?.({ block: "nearest" });

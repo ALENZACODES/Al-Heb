@@ -14,7 +14,7 @@
    "translit": "ozen",
    "en": "ear",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hc0616a4b",
    "source": "data/vocab/words.json"
   },
   {
@@ -23,7 +23,7 @@
    "translit": "chekh",
    "en": "palate, roof of the mouth",
    "kind": "word",
-   "audioId": null,
+   "audioId": "ha319beb5",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,7 +41,7 @@
    "translit": "ris",
    "en": "eyelash",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h14d8720e",
    "source": "data/vocab/words.json"
   },
   {
@@ -59,7 +59,7 @@
    "translit": "me'i",
    "en": "intestine, gut, innard, entrail, bowel",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hd5fd5e2d",
    "source": "data/vocab/words.json"
   },
   {
@@ -110,7 +110,7 @@
   {
    "id": "h127c6e1e",
    "he": "נִתּוּחַ",
-   "translit": "nitucha",
+   "translit": "nituach",
    "en": "operation, surgery",
    "kind": "word",
    "audioId": null,

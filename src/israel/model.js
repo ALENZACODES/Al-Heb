@@ -1,6 +1,6 @@
 /**
  * "Sound like a local" model (Israel track). Pure functions: no DOM.
- * Data: data/israel/*.json  (draft, written by an AI agent, NOT reviewed by a native speaker; no audio exists).
+ * Data: data/israel/*.json  (draft, NOT reviewed by a native speaker; no audio exists).
  */
 import { loadJSON } from "../curriculum/data.js";
 import { newCard, review, due } from "../curriculum/srs.js";

@@ -14,7 +14,7 @@
    "translit": "chakham",
    "en": "to be wise, become wise, learn",
    "kind": "word",
-   "audioId": null,
+   "audioId": "ha1f4dcc0",
    "source": "data/vocab/words.json"
   },
   {
@@ -23,7 +23,7 @@
    "translit": "lamad",
    "en": "to learn, to study",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h10798813",
    "source": "data/vocab/words.json"
   },
   {
@@ -32,7 +32,7 @@
    "translit": "chakar",
    "en": "to investigate, to research, to study",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h80a03385",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,7 +41,7 @@
    "translit": "she'elah",
    "en": "question",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h75012f54",
    "source": "data/vocab/words.json"
   },
   {
@@ -104,7 +104,7 @@
    "translit": "hisetoreyah",
    "en": "history",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hbe379d1f",
    "source": "data/vocab/words.json"
   },
   {

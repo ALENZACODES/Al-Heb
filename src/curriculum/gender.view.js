@@ -9,7 +9,7 @@ import { tokenize } from "./fade.js";
 import { draftNotice, voiceSelector, voiceButton, audioStatus, settingVoice } from "./ex-ui.js";
 
 const WHO = { m: "man", f: "woman" };
-const GRAMMAR_NOTE = "These sentences and forms are drafts written by an AI agent; the Hebrew has not been checked by a native speaker.";
+const GRAMMAR_NOTE = "These sentences and forms are drafts; the Hebrew has not been checked by a native speaker.";
 
 /** The Hebrew with the differing clusters highlighted (spans with class alef-diff); structure only, no extra letters. */
 function highlighted(he, diffIdx) {

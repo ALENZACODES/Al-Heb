@@ -5,7 +5,7 @@ import { join } from 'node:path';
 import { buildIndex, buildIndexFrom, serialize, parseCsv, ROOT, INDEX_PATH, MAX_BYTES } from '../tools/img/build_index.mjs';
 import { createImageResolver } from '../src/img/resolve.js';
 
-test('data/img/index.json is in sync with the manifests (regenerate and compare) and within 150 KB', () => {
+test('data/img/index.json is in sync with the manifests (regenerate and compare) and within MAX_BYTES (256 KB)', () => {
   assert.ok(existsSync(join(ROOT, INDEX_PATH)), 'run node tools/img/build_index.mjs');
   const disk = readFileSync(join(ROOT, INDEX_PATH), 'utf8');
   assert.equal(disk, serialize(buildIndex(ROOT)), 'stale index: run node tools/img/build_index.mjs');

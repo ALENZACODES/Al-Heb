@@ -103,7 +103,7 @@ export async function mount(root, ctx) {
   function build() {
     const s = readSnapshot(store), c = makeContext(s, d, now());
     const sections = [];
-    sections.push(h('p', { class: 'draft-flag', role: 'note' }, 'Draft: milestones, belt gates and thresholds are ALEF\'s own and not expert-reviewed. Hebrew text is AI-pointed and awaits native-speaker review.'));
+    sections.push(h('p', { class: 'draft-flag', role: 'note' }, 'Draft: milestones, belt gates and thresholds are ALEF\'s own and not expert-reviewed. Hebrew pointing is a draft and awaits native-speaker review.'));
 
     // 1. what can I read now: one summary over every lane (letters, lines, vocabulary, timed reads, siddur, first day)
     const HREF_ROUTE = { '#/learn': 'learn', '#/read': 'read', '#/vocab': 'vocab', '#/timedread': 'timedread', '#/service': 'service', '#/firstday': 'firstday', '#/firstday/ladder': 'firstday-ladder' };

@@ -14,7 +14,7 @@
    "translit": "halakh",
    "en": "to walk, go, especially on foot",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h81e8c0d1",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,7 +41,7 @@
    "translit": "higi'a",
    "en": "to arrive, to get, to reach",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hfd3118ed",
    "source": "data/vocab/words.json"
   },
   {
@@ -50,7 +50,7 @@
    "translit": "avar",
    "en": "to pass, to cross",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h1561ca15",
    "source": "data/vocab/words.json"
   },
   {
@@ -59,7 +59,7 @@
    "translit": "yashav",
    "en": "to sit, to be in a position with the torso upright and the legs supported",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hfcd9d9b6",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "alah",
    "en": "to ascend, rise, go up",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h888649f8",
    "source": "data/vocab/words.json"
   },
   {
@@ -77,7 +77,7 @@
    "translit": "harag",
    "en": "to kill (put to death)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hd04514bf",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "shalach",
    "en": "to send (someone or something)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h059e9e22",
    "source": "data/vocab/words.json"
   },
   {
@@ -104,7 +104,7 @@
    "translit": "amad",
    "en": "to stand",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hb9b267e3",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "nikhnas",
    "en": "to enter",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hbd47566a",
    "source": "data/vocab/words.json"
   }
  ]

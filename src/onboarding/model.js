@@ -11,7 +11,7 @@ export const PLACEMENT_KEY = 'placement.v1'; // written by src/placement (read h
 export const LETTERS_QUESTION = 'Can you already read the Hebrew letters?';
 /** Stage 1 answers. `start` is the route each answer leads to. */
 export const LETTER_ANSWERS = Object.freeze([
-  { id: 'none',   label: 'No, start from the beginning', start: '/firstday',  desc: 'Your first 10 minutes: five letters, two vowels, three real words.' },
+  { id: 'none',   label: 'No, start from the beginning', start: '/firstday',  desc: 'Your first 10 minutes: five baby steps of about 2 minutes, one letter at a time, ending with your first word.' },
   { id: 'some',   label: 'Some',                         start: '/placement', desc: 'A short placement check picks the lesson to start from.' },
   { id: 'vowels', label: 'Yes, I read with vowels',      start: '/placement', desc: 'The placement check confirms where to start so you skip what you know.' },
 ]);
@@ -84,26 +84,28 @@ export function buildPlan(o) {
   const plans = o.plans;
   const has = (name) => (typeof o.hasRoute === 'function' ? o.hasRoute(name) !== false : true);
   const minutes = rec.minutesPerDay || plans.defaultMinutes;
-  const read = o.lessons.filter((l) => l.track === 'read');
+  const israel = o.goal === 'israel';
+  const read = o.lessons.filter((l) => l.track === (israel ? 'israel' : 'read'));
   const order = new Map(read.map((l, i) => [l.id, i]));
-  const wanted = placementLesson(o.placement, read);
+  const wanted = israel ? null : placementLesson(o.placement, read);
   // Lessons unlock in order and placement completes none, so the plan starts at the recommended lesson only if it is open now.
   const open = wanted ? openStart(o.lessons, o.completed || [], wanted) : null;
   const placed = open ? open.id : null;
-  const startLesson = placed || plans.firstLesson;
+  const startLesson = placed || (israel ? (read[0]?.id || plans.firstLesson) : plans.firstLesson);
   const startIdx = order.get(startLesson) ?? 0;
 
   // lesson parts queue
   const parts = [];
   for (const l of read.slice(startIdx)) {
     const est = Number(l.estMinutes) || minutes;
-    const n = Math.max(1, Math.min(plans.lessonSplitMaxParts, Math.ceil(est / minutes)));
+    // One lesson per day: lessons are completed in one press, so the Today card moves on a lesson at a time. A long lesson is not split.
+    const n = Math.max(1, Math.min(1, plans.lessonSplitMaxParts, Math.ceil(est / minutes)));
     for (let p = 1; p <= n; p++) parts.push({ kind: 'lesson', lesson: l.id, title: l.title, part: p, parts: n, minutes: Math.ceil(est / n), route: 'learn', href: '#/learn?lesson=' + encodeURIComponent(l.id) });
     if (parts.length > 40) break;
   }
-  const startDef = plans.starts[rec.letters];
-  const needsPlacement = rec.start === '/placement' && !placed;
-  const extras = plans.extras.filter((e) => has(e.route) && order.has(e.minLesson));
+  const startDef = israel ? null : plans.starts[rec.letters];
+  const needsPlacement = !israel && rec.start === '/placement' && !placed;
+  const extras = israel ? [] : plans.extras.filter((e) => has(e.route) && order.has(e.minLesson));
   const used = new Map();
   let reached = startIdx; // index of the furthest lesson started
   const days = [];
@@ -112,7 +114,7 @@ export function buildPlan(o) {
     const push = (it) => { items.push(it); left -= it.minutes; };
     if (d === 0 && startDef && has(startDef.route) && (rec.letters === 'none' || needsPlacement)) push({ kind: 'start', title: startDef.title, href: startDef.href, route: startDef.route, minutes: startDef.minutes, why: startDef.why });
     if (d === 6 && has(plans.review.route)) push({ kind: 'review', ...plans.review });
-    if (parts.length && (items.length === 0 || parts[0].minutes <= left)) { const p = parts.shift(); push(p); reached = Math.max(reached, order.get(p.lesson) ?? reached); }
+    if (parts.length && (items.length === 0 || d === 0 || parts[0].minutes <= left)) { const p = parts.shift(); push(p); reached = Math.max(reached, order.get(p.lesson) ?? reached); }
     for (const e of extras) {
       if (left < e.minutes) break;
       if ((order.get(e.minLesson) ?? Infinity) > reached) continue;

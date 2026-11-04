@@ -6,6 +6,7 @@ import { el, heText } from "../curriculum/dom.js";
 import { createMorningModel } from "./model.js";
 import { verseFor, modehAniFor, modehAniClip, checkVerses, VERSES_URL } from "./verses.js";
 import { morningItems, TITLE } from "./plan.js";
+import { uiEnglish } from "../shell/names.js";
 import { notificationSupport, requestNotificationPermission, scheduleLocalNotifications } from "../curriculum/reminders.notify.js";
 import { clock } from "../curriculum/streak.js";
 
@@ -68,7 +69,7 @@ export async function mount(root, ctx) {
   const now = () => (typeof ctx.now === "function" ? ctx.now() : new Date());
   const model = createMorningModel(ctx.store, now);
   const wrap = el("div", { class: "mrn" });
-  root.replaceChildren(el("h1", { id: "view-title", tabindex: "-1" }, TITLE), wrap);
+  root.replaceChildren(el("h1", { id: "view-title", tabindex: "-1" }, uiEnglish(ctx, TITLE)), wrap);
   let verses = [], registry = [], problem = null;
   try { verses = await getJson("../../data/morning-verses.json"); } catch (e) { problem = String(e.message || e); }
   try { registry = (await getJson("../../data/corpus/registry.json")).entries || []; } catch { /* Modeh Ani block is skipped */ }

@@ -94,7 +94,8 @@ test('more practice: at most 3 links, only existing routes, untried first, festi
   assert.deepEqual(T.buildToday(base({ hasRoute: (n) => n === 'learn' || n === 'compare' })).more.map((m) => m.href), ['#/compare']);
   assert.deepEqual(T.buildToday(base({ hasRoute: (n) => n === 'learn' })).more, []);
   assert.equal(T.renderToday(T.buildToday(base({ hasRoute: (n) => n === 'learn' })), t).querySelector('#today-more'), null);
-  assert.equal(T.renderToday(T.buildToday(base()), t).queryAll('#today-more a').length, 3);
+  assert.equal(T.renderToday(T.buildToday(base({ completedIds: ['r01'] })), t).queryAll('#today-more a').length, 3); // due + morning + practice never exceeds 3 secondary links
+  assert.equal(T.renderToday(T.buildToday(base()), t).querySelector('#today-more'), null); // first run: one action only
   assert.equal(T.buildToday(base({ speak: {} })).more[0].name, 'speak'); // empty record is untried
 });
 test('home view: with progress it shows due count, streak and the next lesson', async () => {
@@ -122,4 +123,13 @@ test('streak copy states the real 5-minute rule; a paused streak shows the best;
   assert.doesNotMatch(txt({ count: 0, best: 0 }), /Finish a lesson or review a card to start one/);
   assert.match(txt({ count: 0 }), /Study goal:/); assert.match(txt({ count: 0 }), /streak always counts a day at 5 minutes/);
   assert.deepEqual([...T.DAILY_GOALS], [5, 10, 15, 20, 30]);
+});
+
+test('backlog: 20+ due cards make review the single main action and keep the lesson as a secondary link; Israel first run starts a speaking lesson', () => {
+  const m = T.buildToday(base({ completedIds: ['r01'], dueCount: 25 }));
+  assert.equal(m.primary.kind, 'review'); assert.equal(m.primary.href, '#/learn?review=1');
+  const root = T.renderToday(m, t); assert.ok(root.queryAll('#today-more a').length <= 3);
+  assert.equal(T.buildToday(base({ completedIds: ['r01'], dueCount: 19 })).primary.kind, 'lesson');
+  const isr = T.buildToday(base({ goal: 'israel' }));
+  assert.equal(isr.state, 'first-run'); assert.equal(isr.primary.kind, 'lesson'); assert.match(isr.primary.href, /lesson=/);
 });

@@ -34,7 +34,7 @@ test('each record names an origin, sources and a CC BY-SA distribution licence',
       assert.equal(r.shareAlike, false);
       if (r.origin === 'lessons') { assert.equal(r.licence, null); assert.ok(r.flags.includes('lesson-licence-not-stated')); }
       else assert.match(r.licence, /project-owned/);
-      assert.ok(r.flags.includes('pointing-ai-written'));
+      assert.ok(r.flags.includes('pointing-unreviewed'));
     }
     if (w.source.frequency && w.source.frequency.includes('opensubtitles-he-2018')) assert.ok(r.sources.includes('frequencywords'));
   }
@@ -62,5 +62,5 @@ test('file and doc agree with the builder; words.json untouched by it', () => {
   assert.deepEqual(fresh.counts, att.counts, 'attribution.json is stale; rerun tools/vocab/attribution.mjs');
   assert.ok(before.equals(fs.readFileSync(path.join(ROOT, 'data/vocab/words.json'))));
   const fmt = (n) => n.toLocaleString('en-US');
-  for (const n of [att.counts.total, att.counts.origin.wiktionary, att.counts.origin.phrasebook, att.counts.origin.lessons, att.counts.example.tatoeba, att.counts.example['uxlc-text'], att.counts.example.none, att.counts.mergedPhrasebook, att.counts.mergedLessons, att.counts.flags['lesson-licence-not-stated'], att.counts.flags['pointing-ai-written']]) assert.ok(doc.includes(fmt(n)), `doc lacks ${fmt(n)}`);
+  for (const n of [att.counts.total, att.counts.origin.wiktionary, att.counts.origin.phrasebook, att.counts.origin.lessons, att.counts.example.tatoeba, att.counts.example['uxlc-text'], att.counts.example.none, att.counts.mergedPhrasebook, att.counts.mergedLessons, att.counts.flags['lesson-licence-not-stated'], att.counts.flags['pointing-unreviewed']]) assert.ok(doc.includes(fmt(n)), `doc lacks ${fmt(n)}`);
 });

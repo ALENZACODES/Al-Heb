@@ -15,11 +15,11 @@ These are machine checks of character-level consistency and of agreement with th
 | Snapshot re-derivation (source-snapshot.json raw lines through normalize.js) | equal 66, clip 4 |
 | Hebrew licence label taken from Sefaria metadata (unverified) | 42 |
 | English licence label (JPS 1917 "Public Domain") taken from Sefaria metadata (unverified) | 26 |
-| Metsudah siddur (1981) records, labelled CC-BY by Sefaria | 21 |
+| Metsudah siddur (1981) records, labelled CC-BY by Sefaria | 10 |
 | Licence label "Public Domain / copy without restriction (tanach.us/License.html)" | 28 |
-| Licence label "CC-BY" | 21 |
-| Licence label "CC0" | 15 |
-| Licence label "Public Domain" | 6 |
+| Licence label "Public Domain" | 16 |
+| Licence label "CC0" | 16 |
+| Licence label "CC-BY" | 10 |
 
 Cross-check statuses: `equal` every line equals the UXLC verse after the registry normalisation; `clip` the record is a contiguous run of words inside the verse range (records that quote part of a verse); `mismatch` neither; `no-ref` the ref is not Book chapter:verse; `no-xml` the UXLC cache is not on disk (it is gitignored, so a fresh clone shows this). Snapshot statuses: `equal` re-derived from the raw snapshot line with the record's `transforms`; `clip` a word run of that derivation; `derived` the record is derived from another record and has no snapshot item.
 
@@ -71,17 +71,17 @@ Cross-check statuses: `equal` every line equals the UXLC verse after the registr
 | `ashrei-145-16` | Psalm 145:16 | torah | 24 | 7 | 2 | 1 | - | - | equal | equal |
 | `shir-hamaalot` | Psalm 126:1-6 | torah | 208 | 50 | 5 | 6 | - | - | equal | equal |
 | `vayehi-binsoa` | Siddur: Vayehi binsoa (Numbers 10:35, Isaiah 2:3, blessing) | siddur | 110 | 25 | 0 | 3 | - | - | no-ref quotes 1/2 | equal |
-| `lecha-hashem` | Siddur: Lecha Adonai hagedulah (1 Chronicles 29:11, Psalm 99:5, 99:9) | siddur | 158 | 35 | 0 | 3 | - | - | no-ref quotes 1/3 | equal |
-| `vezot-hatorah` | Siddur: V'zot haTorah (Deuteronomy 4:44, Numbers 9:23) | siddur | 43 | 13 | 0 | 1 | - | - | no-ref quotes 0/2 | equal |
+| `lecha-hashem` | Siddur: Lecha Adonai hagedulah (1 Chronicles 29:11, Psalm 99:5, 99:9) | siddur | 158 | 35 | 0 | 4 | - | - | no-ref quotes 1/3 | equal |
+| `vezot-hatorah` | Siddur: V'zot haTorah (Deuteronomy 4:44, Numbers 9:23) | siddur | 43 | 13 | 0 | 2 | - | - | no-ref quotes 0/2 | equal |
 | `etz-chaim` | Siddur: Etz chaim hi (Proverbs 3:18, 3:17, 3:16, Isaiah 42:21) | siddur | 114 | 26 | 0 | 4 | - | - | no-ref quotes 1/4 | equal |
 | `brich-shmei` | Siddur: Berich shmei (Zohar, Vayakhel) | siddur | 531 | 129 | 11 | 1 | - | - | no-ref | equal |
 | `hagomel` | Siddur: Birkat Hagomel | siddur | 78 | 20 | 1 | 2 | - | - | no-ref | equal |
-| `avot-closing` | Siddur: Amidah, first blessing, closing lines | siddur | 36 | 9 | 0 | 2 | - | - | no-ref | equal |
+| `avot-closing` | Siddur: Amidah, first blessing, closing lines | siddur | 36 | 9 | 0 | 1 | - | - | no-ref | equal |
 | `amidah-yihyu` | Siddur: Amidah, closing verse (Psalm 19:15) | siddur | 43 | 10 | 0 | 1 | - | - | no-ref quotes 0/1 | equal |
 | `amidah-elohai-netzor` | Siddur: Amidah, Elohai netzor | siddur | 247 | 57 | 0 | 3 | - | - | no-ref | equal |
-| `oseh-shalom` | Siddur: Oseh shalom | siddur | 48 | 12 | 1 | 1 | - | - | no-ref | equal |
+| `oseh-shalom` | Siddur: Oseh shalom | siddur | 48 | 12 | 0 | 1 | - | - | no-ref | equal |
 | `sim-shalom` | Siddur: Amidah, Sim shalom (morning) | siddur | 213 | 53 | 4 | 2 | - | - | no-ref | equal |
-| `kiddush-shabbat-eve` | Siddur: Kiddush for Friday night, the sanctification | siddur | 196 | 45 | 0 | 1 | - | - | no-ref | equal |
+| `kiddush-shabbat-eve` | Siddur: Kiddush for Friday night, the sanctification | siddur | 196 | 45 | 0 | 2 | - | - | no-ref | equal |
 | `lecha-dodi-1` | Siddur: Lecha Dodi, refrain and first verse | siddur | 88 | 21 | 0 | 2 | - | - | no-ref | equal |
 | `yigdal` | Siddur: Yigdal | siddur | 446 | 112 | 3 | 13 | - | - | no-ref | equal |
 | `zimun-opening` | Siddur: Birkat Hamazon, zimun (invitation) | siddur | 33 | 9 | 1 | 2 | - | - | no-ref | equal |
@@ -106,33 +106,33 @@ The Hebrew licence label of every record below is what Sefaria's API reported fo
 
 | id | licence label | Hebrew source | source URL |
 |---|---|---|---|
-| `shema-2` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Shema | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Blessings_of_the_Shema%2C_Shema |
+| `shema-2` | Public Domain | Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Eve Mincha, Mincha | https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Eve_Mincha%2C_Mincha |
 | `bless-formula-1` | CC0 | Shaliehsaboo Edition via Sefaria: Siddur Edot HaMizrach, Shabbat Evening, First Meal | https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Shabbat_Evening%2C_First_Meal |
 | `kiddush-wine-1` | Public Domain | Torat Emet 357 via Sefaria: Siddur Sefard, Birchat HaMazon, Blessing on Foods | https://www.sefaria.org/Siddur_Sefard%2C_Birchat_HaMazon%2C_Blessing_on_Foods |
 | `hamotzi` | CC0 | Shaliehsaboo Edition via Sefaria: Siddur Edot HaMizrach, Shabbat Evening, First Meal | https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Shabbat_Evening%2C_First_Meal |
 | `candle-shabbat` | Public Domain | Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Candle Lighting | https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Candle_Lighting |
 | `torah-bless-1` | CC0 | Shaliehsaboo Edition via Sefaria: Siddur Edot HaMizrach, Preparatory Prayers, Torah Blessings | https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Preparatory_Prayers%2C_Torah_Blessings |
-| `torah-barchu` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Birkat HaTorah | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Birkat_HaTorah |
-| `torah-bless-2` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Birkat HaTorah | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Birkat_HaTorah |
+| `torah-barchu` | CC0 | Shaliehsaboo Edition via Sefaria: Siddur Edot HaMizrach, Weekday Shacharit, Torah Reading | https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Weekday_Shacharit%2C_Torah_Reading |
+| `torah-bless-2` | Public Domain | Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Morning Services, Blessings on Torah Reading | https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Morning_Services%2C_Blessings_on_Torah_Reading |
 | `amidah-lips` | CC0 | Shaliehsaboo Edition via Sefaria: Siddur Edot HaMizrach, Weekday Shacharit, Amida | https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Weekday_Shacharit%2C_Amida |
 | `avot-1` | CC0 | Shaliehsaboo Edition via Sefaria: Siddur Edot HaMizrach, Weekday Shacharit, Amida | https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Weekday_Shacharit%2C_Amida |
 | `aleinu-1` | CC0 | Shaliehsaboo Edition via Sefaria: Siddur Edot HaMizrach, Weekday Shacharit, Alenu | https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Weekday_Shacharit%2C_Alenu |
 | `modeh-ani-1` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Preparatory Prayers, Modeh Ani | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Modeh_Ani |
-| `adon-olam-1` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Preparatory Prayers, Adon Olam | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Adon_Olam |
+| `adon-olam-1` | Public Domain | Torat Emet 357 via Sefaria: Siddur Sefard, Musaf | https://www.sefaria.org/Siddur_Sefard%2C_Musaf |
 | `kaddish-1` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Concluding Prayers, Mourner's Kaddish | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Concluding_Prayers%2C_Mourner%27s_Kaddish |
 | `birkat-hamazon-1` | Public Domain | Torat Emet 357 via Sefaria: Siddur Sefard, Birchat HaMazon, Birchat HaMazon | https://www.sefaria.org/Siddur_Sefard%2C_Birchat_HaMazon%2C_Birchat_HaMazon |
 | `vayehi-binsoa` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Removing the Torah from Ark, Vayehi Binsoa | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Removing_the_Torah_from_Ark%2C_Vayehi_Binsoa |
-| `lecha-hashem` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Removing the Torah from Ark, Lekha Hashem | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Removing_the_Torah_from_Ark%2C_Lekha_Hashem |
-| `vezot-hatorah` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Raising the Torah | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Raising_the_Torah |
-| `etz-chaim` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Raising the Torah | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Raising_the_Torah |
+| `lecha-hashem` | Public Domain | Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Morning Services, Shabbat Torah Reading | https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Morning_Services%2C_Shabbat_Torah_Reading |
+| `vezot-hatorah` | Public Domain | Torat Emet 357 via Sefaria: Siddur Sefard, Rosh Chodesh, Torah Reading | https://www.sefaria.org/Siddur_Sefard%2C_Rosh_Chodesh%2C_Torah_Reading |
+| `etz-chaim` | Public Domain | Torat Emet 357 via Sefaria: Siddur Sefard, Rosh Chodesh, Torah Reading | https://www.sefaria.org/Siddur_Sefard%2C_Rosh_Chodesh%2C_Torah_Reading |
 | `brich-shmei` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Removing the Torah from Ark, Berich Shmei | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Removing_the_Torah_from_Ark%2C_Berich_Shmei |
 | `hagomel` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Birkat Hagomel | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Birkat_Hagomel |
-| `avot-closing` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Amidah, Patriarchs | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Patriarchs |
-| `amidah-yihyu` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Amidah, Concluding Passage | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Concluding_Passage |
+| `avot-closing` | Public Domain | Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Morning Services, Amidah | https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Morning_Services%2C_Amidah |
+| `amidah-yihyu` | Public Domain | Torat Emet 357 via Sefaria: Siddur Sefard, Various Prayers & Segulot, Prayer of the Shelah | https://www.sefaria.org/Siddur_Sefard%2C_Various_Prayers_%26_Segulot%2C_Prayer_of_the_Shelah |
 | `amidah-elohai-netzor` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Amidah, Concluding Passage | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Concluding_Passage |
-| `oseh-shalom` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Amidah, Concluding Passage | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Concluding_Passage |
+| `oseh-shalom` | Public Domain | Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Eve Mincha, Amidah | https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Eve_Mincha%2C_Amidah |
 | `sim-shalom` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Amidah, Peace | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Peace |
-| `kiddush-shabbat-eve` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Shabbat, Shabbat Evening, Kiddush | https://www.sefaria.org/Siddur_Ashkenaz%2C_Shabbat%2C_Shabbat_Evening%2C_Kiddush |
+| `kiddush-shabbat-eve` | Public Domain | Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Evening Meal, Shabbat Eve Kiddush | https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Evening_Meal%2C_Shabbat_Eve_Kiddush |
 | `lecha-dodi-1` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Shabbat, Kabbalat Shabbat, Lekha Dodi | https://www.sefaria.org/Siddur_Ashkenaz%2C_Shabbat%2C_Kabbalat_Shabbat%2C_Lekha_Dodi |
 | `yigdal` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Preparatory Prayers, Yigdal | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Yigdal |
 | `zimun-opening` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Sefard, Birchat HaMazon, Birchat HaMazon | https://www.sefaria.org/Siddur_Sefard%2C_Birchat_HaMazon%2C_Birchat_HaMazon |
@@ -157,24 +157,13 @@ The Metsudah siddur is a 1981 publication. Sefaria labels its digitisation CC-BY
 
 | id | ref | source URL |
 |---|---|---|
-| `shema-2` | Siddur: Baruch shem kevod malchuto | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Blessings_of_the_Shema%2C_Shema |
-| `torah-barchu` | Siddur: Barchu before the Torah reading | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Birkat_HaTorah |
-| `torah-bless-2` | Siddur: Torah blessing after the reading | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Birkat_HaTorah |
 | `modeh-ani-1` | Siddur: Modeh Ani | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Modeh_Ani |
-| `adon-olam-1` | Siddur: Adon Olam | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Adon_Olam |
 | `kaddish-1` | Siddur: Mourner's Kaddish | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Concluding_Prayers%2C_Mourner%27s_Kaddish |
 | `vayehi-binsoa` | Siddur: Vayehi binsoa (Numbers 10:35, Isaiah 2:3, blessing) | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Removing_the_Torah_from_Ark%2C_Vayehi_Binsoa |
-| `lecha-hashem` | Siddur: Lecha Adonai hagedulah (1 Chronicles 29:11, Psalm 99:5, 99:9) | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Removing_the_Torah_from_Ark%2C_Lekha_Hashem |
-| `vezot-hatorah` | Siddur: V'zot haTorah (Deuteronomy 4:44, Numbers 9:23) | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Raising_the_Torah |
-| `etz-chaim` | Siddur: Etz chaim hi (Proverbs 3:18, 3:17, 3:16, Isaiah 42:21) | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Raising_the_Torah |
 | `brich-shmei` | Siddur: Berich shmei (Zohar, Vayakhel) | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Removing_the_Torah_from_Ark%2C_Berich_Shmei |
 | `hagomel` | Siddur: Birkat Hagomel | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Birkat_Hagomel |
-| `avot-closing` | Siddur: Amidah, first blessing, closing lines | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Patriarchs |
-| `amidah-yihyu` | Siddur: Amidah, closing verse (Psalm 19:15) | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Concluding_Passage |
 | `amidah-elohai-netzor` | Siddur: Amidah, Elohai netzor | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Concluding_Passage |
-| `oseh-shalom` | Siddur: Oseh shalom | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Concluding_Passage |
 | `sim-shalom` | Siddur: Amidah, Sim shalom (morning) | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Peace |
-| `kiddush-shabbat-eve` | Siddur: Kiddush for Friday night, the sanctification | https://www.sefaria.org/Siddur_Ashkenaz%2C_Shabbat%2C_Shabbat_Evening%2C_Kiddush |
 | `lecha-dodi-1` | Siddur: Lecha Dodi, refrain and first verse | https://www.sefaria.org/Siddur_Ashkenaz%2C_Shabbat%2C_Kabbalat_Shabbat%2C_Lekha_Dodi |
 | `yigdal` | Siddur: Yigdal | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Yigdal |
 | `zimun-opening` | Siddur: Birkat Hamazon, zimun (invitation) | https://www.sefaria.org/Siddur_Sefard%2C_Birchat_HaMazon%2C_Birchat_HaMazon |

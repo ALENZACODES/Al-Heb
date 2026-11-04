@@ -47,6 +47,6 @@ test('book HTML: 27 letter pages, RTL Hebrew spans, draft opening prayer block, 
   assert.match(html, /lang="he" dir="rtl"/);
   assert.match(html, /Prayer for the One Who Begins/); assert.match(html, /pending clergy\/educator review/); assert.match(html, /Hineni/);
   for (const id of LETTER_IDS) assert.ok(html.includes(letterUrl('alef.example.org', id)), id);
-  assert.match(html, /Illustrations created with AI tools and edited by the author/);
+  assert.match(html, /Illustrations produced with an image tool and edited by the author/);
   assert.throws(() => parseArgs(['--trim', '1x1']));
 });

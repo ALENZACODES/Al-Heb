@@ -23,7 +23,7 @@
    "translit": "panim",
    "en": "face",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hbd0751bc",
    "source": "data/vocab/words.json"
   },
   {
@@ -50,7 +50,7 @@
    "translit": "amah",
    "en": "forearm",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h720b8d19",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "shen",
    "en": "tooth",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h85ac8666",
    "source": "data/vocab/words.json"
   },
   {
@@ -104,7 +104,7 @@
    "translit": "yashan",
    "en": "to sleep, to be asleep",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hbea3a906",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "naga",
    "en": "to touch, lay a hand on",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h32a7c780",
    "source": "data/vocab/words.json"
   }
  ]

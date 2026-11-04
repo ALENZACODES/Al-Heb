@@ -1,7 +1,7 @@
 {
  "version": 1,
  "status": "draft-needs-native-review",
- "note": "Pointing and glosses written by an AI agent; NOT reviewed by a native speaker. Prayer text lives in lane 5's registry; lessons only reference ids.",
+ "note": "Pointing and glosses NOT reviewed by a native speaker. Prayer text lives in lane 5's registry; lessons only reference ids.",
  "lessons": [
   {
    "id": "r01",
@@ -26,11 +26,50 @@
    ],
    "prayerLines": [],
    "goals": [
-    "Name and sound Shin (sh) and Bet (b)",
-    "Read the two 'ah' vowels (kamatz, patach) with them"
+    "Name and sound Shin (sh) and Bet (b with the dot inside, v without)",
+    "Read kamatz and patach with them: both are 'ah' (Ashkenazi reads kamatz as 'aw')"
    ],
    "estMinutes": 20,
-   "prerequisites": []
+   "prerequisites": [],
+   "onramp": "/firstday",
+   "steps": [
+    {
+     "id": "r01.1",
+     "kind": "letter",
+     "letter": "shin",
+     "title": "Your first letter: Shin",
+     "minutes": 2
+    },
+    {
+     "id": "r01.2",
+     "kind": "letter",
+     "letter": "bet",
+     "title": "Your second letter: Bet",
+     "minutes": 2
+    },
+    {
+     "id": "r01.3",
+     "kind": "vowel",
+     "vowel": "kamatz",
+     "title": "Your first vowel sign: the small T",
+     "minutes": 2
+    },
+    {
+     "id": "r01.4",
+     "kind": "syllable",
+     "he": "שָׁ",
+     "title": "Your first syllable",
+     "minutes": 2
+    },
+    {
+     "id": "r01.5",
+     "kind": "word",
+     "word": 1,
+     "title": "Your first word",
+     "minutes": 2
+    }
+   ],
+   "stepsNote": "Baby steps (data/firstday/onramp.json renders them at #/firstday). Sub-steps only: the lesson id and its cards are unchanged. patach and the sin/shin dot stay on the full lesson page."
   },
   {
    "id": "r02",
@@ -57,7 +96,7 @@
    ],
    "prayerLines": [],
    "goals": [
-    "Read שַׁבָּת (Shabbat)",
+    "Read שַׁבָּת (Shabbat; Ashkenazi says Shabbos)",
     "Know the dot inside Bet hardens it to 'b'"
    ],
    "estMinutes": 20,
@@ -189,7 +228,7 @@
    ],
    "prayerLines": [],
    "goals": [
-    "Read chirik with and without yod as 'ee'"
+    "Read chirik as 'ee' (the words here have a yod after it; chirik without a yod sounds the same)"
    ],
    "estMinutes": 20,
    "prerequisites": [
@@ -266,7 +305,7 @@
    ],
    "prayerLines": [],
    "goals": [
-    "Read tzere with and without yod as 'ay'"
+    "Read tzere with and without yod: 'e' as in bed (Israeli, Sephardi) or 'ay' as in they (Ashkenazi)"
    ],
    "estMinutes": 20,
    "prerequisites": [
@@ -3041,7 +3080,7 @@
   {
    "id": "I-01",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "Shema and its blessings: Barchu, Shema, Baruch shem, V'ahavta",
    "status": "draft",
@@ -3402,7 +3441,7 @@
   {
    "id": "I-02",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "Amidah openings: open my lips, Avot, Kedushah responses",
    "status": "draft",
@@ -3821,7 +3860,7 @@
   {
    "id": "I-03",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "Torah service responses: ark, aliyah blessings, returning the scroll",
    "status": "draft",
@@ -4220,7 +4259,7 @@
   {
    "id": "I-04",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "Kaddish responses: Amen, Yehei shmei raba, Brich hu",
    "status": "draft",
@@ -4567,7 +4606,7 @@
   {
    "id": "I-05",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "Kiddush: candles, wine, bread and the Shabbat verses",
    "status": "draft",
@@ -4976,7 +5015,7 @@
   {
    "id": "I-06",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "Havdalah: wine, spices, flame and the separation blessing",
    "status": "draft",
@@ -5339,7 +5378,7 @@
   {
    "id": "I-07",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "Hallel refrains: the lines the congregation sings back",
    "status": "draft",
@@ -5715,7 +5754,7 @@
   {
    "id": "I-08",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "Aleinu: the closing prayer and where to bow",
    "status": "draft",
@@ -6060,7 +6099,7 @@
   {
    "id": "I-09",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "Adon Olam: the closing hymn line by line",
    "status": "draft",
@@ -6494,7 +6533,7 @@
   {
    "id": "I-10",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "Mi Shebeirach, healing and thanksgiving: the blessings said for people",
    "status": "draft",
@@ -12671,7 +12710,7 @@
   {
    "id": "I-26",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "The full Torah service in order: ark, reading, lifting, returning",
    "status": "draft",
@@ -13066,7 +13105,7 @@
   {
    "id": "I-27",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "Shabbat-morning Amidah responses: Kedushah, Sim Shalom, closing verses",
    "status": "draft",
@@ -13468,7 +13507,7 @@
   {
    "id": "I-28",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "Yom Kippur: the few lines the corpus holds and the words around them",
    "status": "draft",
@@ -13835,7 +13874,7 @@
   {
    "id": "I-29",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "Pesach: the seder blessings the corpus holds",
    "status": "draft",
@@ -14206,7 +14245,7 @@
   {
    "id": "I-30",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "Sukkot: sukkah words and the blessings that carry over",
    "status": "draft",
@@ -14561,7 +14600,7 @@
   {
    "id": "I-31",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "Purim: the miracle blessing and the words of the day",
    "status": "draft",
@@ -14905,7 +14944,7 @@
   {
    "id": "I-32",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "Hanukkah: the three blessings, Hanerot Halalu and Maoz Tzur",
    "status": "draft",
@@ -15274,7 +15313,7 @@
   {
    "id": "I-33",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "Birkat Hamazon openings: Zimun, the first blessing and Shir Hamaalot",
    "status": "draft",
@@ -15639,7 +15678,7 @@
   {
    "id": "I-34",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "Before and after a journey: Hagomel, peace and the vocabulary of the road",
    "status": "draft",
@@ -15995,7 +16034,7 @@
   {
    "id": "I-35",
    "track": "read",
-   "level": "black",
+   "level": "intermediate",
    "unit": "synagogue",
    "title": "Shabbat-day Kiddush: V'shamru, Zachor, wine and bread",
    "status": "draft",

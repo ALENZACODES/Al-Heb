@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "proofread": false,
-  "description": "Words for the niqqud dial. DRAFT: pointing, ordinary spelling and glosses were written by an AI agent and not checked against a dictionary or by a native speaker. unpointed = how an Israeli would normally write it; full = siddur-style pointing. When stripping the points from full does not give unpointed, the word has a plene note explaining the extra vowel letter.",
+  "description": "Words for the niqqud dial. DRAFT: pointing, ordinary spelling and glosses are drafts, not checked against a dictionary or by a native speaker. unpointed = how an Israeli would normally write it; full = siddur-style pointing. When stripping the points from full does not give unpointed, the word has a plene note explaining the extra vowel letter.",
   "words": [
     { "id": "shalom", "gloss": "peace / hello", "unpointed": "שלום", "full": "שָׁלוֹם" },
     { "id": "toda", "gloss": "thank you", "unpointed": "תודה", "full": "תּוֹדָה" },

@@ -17,7 +17,7 @@ export const isIntermediateId = (id) => /^I-\d{2}$/.test(String(id));
 export const exercisesOf = (lessonId) => byId[lessonId]?.exercises || [];
 
 const TAAM = /[֑-ֽֿׅ֯ׄ]/g;
-const PUNCT = /[,.?!:;"'()׃׀…]+$/g;
+const PUNCT = /[,.?!:;"'()׃׀…־]+$/g;
 /** Comparison key: NFC, cantillation removed, trailing punctuation dropped. Pointing is kept on purpose. */
 export const heKey = (s) => String(s).normalize("NFC").replace(TAAM, "").replace(PUNCT, "").trim();
 

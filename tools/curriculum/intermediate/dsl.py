@@ -49,6 +49,6 @@ def lesson(id, unit, title, words, prayer_lines, goals, est, prereqs, exercises,
     return {
         "id": id, "unit": unit, "title": title, "words": words, "prayerLines": prayer_lines, "goals": goals,
         "estMinutes": est, "prerequisites": prereqs, "exercises": exercises, "note": note,
-        "level": level or ("black" if unit == "synagogue" else "B1"),
+        "level": level or ("intermediate" if unit == "synagogue" else "B1"),
         "track": track or ("read" if unit == "synagogue" else "israel"),
     }

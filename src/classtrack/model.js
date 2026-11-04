@@ -5,7 +5,7 @@ import { loadJSON } from '../curriculum/data.js';
 import { loadCorpus } from '../corpus/corpus.js';
 import { knownSet, gradeLines } from '../progress/decode.js';
 
-export const DRAFT = 'Draft: ALEF\'s own plan, not reviewed by a clergy member or Hebrew educator, not copied from any book. Hebrew is AI-pointed and awaits native-speaker review.';
+export const DRAFT = 'Draft: ALEF\'s own plan, not reviewed by a clergy member or Hebrew educator, not copied from any book. Hebrew pointing is a draft and awaits native-speaker review.';
 
 export async function loadClassTrack() {
   const [track, lf, soundgap, hints, corpus, gates] = await Promise.all([

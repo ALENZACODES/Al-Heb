@@ -2,10 +2,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import { memoDisk, PRON_ROOTS } from './helpers/memo.js';
 import { buildPairs, minimalPairsJson, OUT, CONTRASTS, MAX_PER_CONTRAST } from '../tools/pronunciation/build_minimal_pairs.mjs';
 import { TRADITIONS } from '../tools/pronunciation/build_variants.mjs';
 
-const { out } = buildPairs();
+const { out } = memoDisk('pron-pairs', PRON_ROOTS, () => buildPairs());
 const words = new Map(JSON.parse(fs.readFileSync(new URL('../data/vocab/words.json', import.meta.url), 'utf8')).words.map((w) => [w.id, w]));
 const strip = (s) => s.replace(/[ˈ.]/g, '');
 

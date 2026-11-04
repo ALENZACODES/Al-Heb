@@ -45,3 +45,21 @@ Compared 20 cursive letters.
 - Disagreed with my automatic rule, CHANGED to follow Abzug: tet (reversed direction), tav (split into arch+right stem, then left stem with foot).
 - Partly agree / different shape (so not comparable): gimel (both start at the top; Abzug segment order differs), dalet, lamed, zayin (similar flow), shin (Abzug has 5 segments; ours 1), pe-final and tsadi-final (different forms).
 Other sources checked: hebrewversity.com ("most letters 1-3 strokes; top to bottom, right to left" only) and talkpal.ai (no per-letter data). Hebrew4Christians' alphabet page was blocked by this session's fetch allow-list, so it was NOT compared.
+
+## Round 3: contact-sheet review (build agent, not a teacher)
+Sheets: docs/letters/review-sheets/<id>.png (print | cursive, numbered start dots, direction arrows) and the printable
+docs/letters/REVIEW-SHEET.html (54 tick rows). Generator: `python3 tools/letters/review_sheets.py` (needs rsvg-convert + Pillow).
+Mechanical check (review-sheets/coverage.json): 100% of every stroke's median points lie inside the glyph outline dilated by
+half the stroke width, for all 54 records; no path leaves its outline, so nothing was changed in letters.json and no stroke was reordered.
+What the sheets show that a teacher must rule on (all already-listed doubts stand; these are the places where a stroke runs
+bottom-to-top against rule R2, as seen on the sheets):
+- print mem: stroke 2 starts at the mid-left junction and RISES into the arc before coming down the right side.
+- print shin: stroke 1 ends by rising up the right arm (listed above).
+- print mem-final: stroke 1 is bar + right side + base as one stroke (bar drawn left to right per R3), stroke 2 is the left stem; the table row above says "bar first then body", which is the same data described differently.
+- cursive chet: stroke 1 starts at the left end of the arc, at mid-height, and rises to the apex before coming down on the right.
+- cursive tet: starts at the inner right stem and rises (deliberate, follows Abzug; listed above).
+- cursive mem: the middle leg of the N rises (listed above).
+- cursive ayin: the loop rises after the crossing (listed above).
+- cursive pe-final: stroke 1 starts at mid-left and RISES into the top loop before descending the stem (HIGH doubt already; the whole form needs confirming).
+- cursive tsadi-final: after the first descent the pen rises round the top-right loop, then descends the stem (HIGH doubt already).
+Start dots that coincide in the data (print samekh strokes 1 and 2; print mem-final 1 and 2; print tav 1 and 2) are drawn offset on the sheets so both numbers stay readable; the data is unchanged.

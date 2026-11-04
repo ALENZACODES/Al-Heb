@@ -3,7 +3,8 @@
 // own data files, misses some on purpose, and moves the page clock forward with an overridden Date. It finds dead ends, confusing empty
 // states, console errors and places where the app claims progress that the script did not make. It says nothing about whether a person
 // would enjoy, understand or finish these screens.
-// Usage: node tools/qa/journey.mjs [--quick] [--out DIR] [--persona A,B,C] [--days N]
+// Usage: node tools/qa/journey.mjs [--quick] [--out DIR] [--persona A,B,C,D,E] [--days N]
+//   D = returns after 10 days away (days 3 to 12 skipped, comes back on day 13); E = only /read and the siddur track, never follows the Today card
 //   --quick   persona A, day 1 only (onboarding, first 10 minutes, first lesson, review, speak/typing/listen/progress, 5 minutes of dwell)
 //   --out     where journey.json and screenshots go (default docs/qa/journey)
 // The clock: an init script replaces Date. The offset lives in sessionStorage key __qa_off (not an app key) and in window.__qaOff.
@@ -27,7 +28,8 @@ const quick = args.includes('--quick');
 const outDir = resolve(root, arg('--out', 'docs/qa/journey'));
 const wantShots = !args.includes('--no-shots');
 const DAYS = quick ? 1 : Number(arg('--days', '7'));
-const WHO = (quick ? 'A' : arg('--persona', 'A,B,C')).split(',');
+const daysFor = (cfg) => (quick ? 1 : cfg.days && !args.includes('--days') ? cfg.days : DAYS);
+const WHO = (quick ? 'A' : arg('--persona', 'A,B,C,D,E')).split(',');
 mkdirSync(outDir, { recursive: true });
 for (const f of ['journey.json']) { try { rmSync(join(outDir, f)); } catch { /* none */ } }
 
@@ -44,6 +46,8 @@ const browser = await chromium.launch({ executablePath });
 const PERSONAS = {
   A: { key: 'A', name: 'A: total beginner, Ashkenazi synagogue, 10 min a day', letters: 'none', denom: 'orthodox', pron: 'ashkenazi', minutes: 10, goal: 'read', skipDay: null, lightDay: 4, tasks: 1, reviewAfter: true },
   B: { key: 'B', name: 'B: Sephardi congregation, already reads letters (placement)', letters: 'vowels', denom: 'conservative', pron: 'sephardi', minutes: 15, goal: 'read', skipDay: 6, lightDay: null, goalProbe: 2, tasks: 2, reviewAfter: false },
+  D: { key: 'D', name: 'D: returns after 10 days away (studied days 1 and 2, back on day 13)', letters: 'none', denom: 'reform', pron: 'sephardi', minutes: 10, goal: 'read', skipDay: null, skipDays: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12], lightDay: null, tasks: 1, reviewAfter: true, days: 13 },
+  E: { key: 'E', name: 'E: only /read and the siddur track, never follows the Today card', letters: 'vowels', denom: 'conservative', pron: 'sephardi', minutes: 10, goal: 'read', skipDay: null, lightDay: null, tasks: 0, reviewAfter: false, readOnly: true },
   C: { key: 'C', name: 'C: Israel-track learner', letters: 'none', denom: null, pron: 'israeli', minutes: 10, goal: 'israel', skipDay: null, lightDay: null, tasks: 1, reviewAfter: true },
 };
 
@@ -134,6 +138,8 @@ async function runPersona(cfg) {
     await page.check(`#ob-pron-${cfg.pron}`).catch(() => {});
     await page.click('#ob-congregation-continue');
     await page.waitForSelector('#ob-form-minutes', { timeout: 5000 }).catch(() => {});
+    await sleep(600); // the minutes screen re-renders once its plan data has loaded
+    await page.click(`label[for=ob-goal-${cfg.goal}]`).catch(() => {}); // the goal question (read | israel | both) is on the minutes screen
     await page.check(`#ob-minutes-${cfg.minutes}`).catch(() => {});
     await page.click('#ob-minutes-continue');
     await page.waitForSelector('.ob-plan', { timeout: 8000 }).catch(() => {});
@@ -141,12 +147,13 @@ async function runPersona(cfg) {
       text: (document.querySelector('.ob-plan')?.innerText || '').replace(/\s+/g, ' ').trim(),
       days: [...document.querySelectorAll('.ob-days > li')].map((li) => ({ label: li.querySelector('strong')?.innerText, items: [...li.querySelectorAll('ul a')].map((a) => ({ t: a.innerText, h: a.getAttribute('href') })) })),
       start: { label: document.querySelector('#ob-start')?.innerText, href: document.querySelector('#ob-start')?.getAttribute('href') },
-      goalMentioned: /\bisrael\b/i.test(document.querySelector('.onboarding')?.innerText || ''),
+      goalMentioned: /\bisrael\b/i.test(document.querySelector('.ob-plan')?.innerText || ''),
     }));
+    P.plan.trackShare = await page.evaluate(async (goal) => { const m = await import(new URL('src/curriculum/lessons.js', location.origin + '/').href); const ids = [...document.querySelectorAll('.ob-days a')].map((a) => (a.getAttribute('href').match(/lesson=([\w-]+)/) || [])[1]).filter(Boolean); const want = goal === 'israel' ? 'israel' : 'read'; return { lessons: ids.length, inGoalTrack: ids.filter((i) => m.lessons.find((l) => l.id === i)?.track === want).length }; }, cfg.goal);
     log('plan card', { days: P.plan.days.length, start: P.plan.start });
     P.planShot = await shot('plan');
     if (!P.plan.days.length) F('high', 'plan-empty', 'The "Your week" card has no days', ['Finish the four onboarding questions'], { plan: P.plan.text, shot: P.planShot });
-    if (cfg.goal === 'israel' && !P.plan.goalMentioned) P.notes.push('Onboarding never asked about the Israel goal; the plan card does not mention it.');
+    if (cfg.goal === 'israel' && P.plan.trackShare && P.plan.trackShare.inGoalTrack < P.plan.trackShare.lessons) F('medium', 'plan-ignores-goal', 'Onboarding asked for the Israel goal but the week plan lists read-track lessons', ['Choose Speaking in Israel on the goal question', 'Read Your week'], { trackShare: P.plan.trackShare, shot: P.planShot });
     const store = await storeGet('onboarding.v1');
     P.onboardingRecord = store;
   }
@@ -210,11 +217,19 @@ async function runPersona(cfg) {
     }
     // the learner has only read the page: there is no exercise on it. Record how long the page is and complete.
     const lenInfo = await page.evaluate(() => ({ cards: document.querySelectorAll('#main section.card').length, exercises: document.querySelectorAll('#main input, #main [role=radio], #main select').length }));
-    await btn.click(); await sleep(600);
-    const done = await text('.alef-done');
-    log('lesson: marked complete without any check', { lesson: id, done, ...lenInfo });
+    // the lesson now ends in a quick check (first option every time: a learner who guesses; misses come back once)
+    await btn.click(); await sleep(300);
+    let qn = 0;
+    for (let g = 0; g < 90; g++) {
+      if (/Lesson complete/.test(await text('.alef-quiz-host'))) break;
+      const cont = page.locator('.alef-quiz-host button[data-act="next"]:visible').first();
+      if (await cont.count()) { await cont.click().catch(() => {}); await sleep(80); continue; }
+      const opt = page.locator('.alef-quiz-host button[data-n="1"]').first();
+      if (await opt.count()) { await opt.click().catch(() => {}); qn++; await sleep(80); } else await sleep(120);
+    }
+    const done = await text('.alef-quiz-host');
+    log('lesson: quick check finished', { lesson: id, questionsAnswered: qn, done: done.replace(/\s+/g, ' ').slice(0, 140), ...lenInfo });
     const s = await shot('lesson-complete-' + id);
-    if (lenInfo.exercises === 0) P.notes.push(`lesson ${id}: completing it asks the learner nothing (no exercise on the page); "Mark lesson complete" is a self-declaration`);
     return { done: /complete/i.test(done), id, title, doneText: done, shot: s };
   }
 
@@ -363,31 +378,75 @@ async function runPersona(cfg) {
     return { prog, s };
   }
 
+
+  // ---------- persona E: only /read and the siddur track ----------
+  async function runReadDay(d, day) {
+    const t = await snapToday('open (E never presses it)'); day.today = t; day.todayShot = await shot('today');
+    P.streakShown[d] = t.streak;
+    // from Home, the way a siddur reader would: the Opening card link
+    const link = page.locator('.opening a.btn').first();
+    if (await link.count()) { await link.click(); await sleep(500); } else { await go('#/read'); F('medium', 'read-no-link-from-home', 'Home has no visible link to the reader', ['Open Home'], { text: t.text.slice(0, 160) }); }
+    await page.waitForFunction(() => document.body.dataset.ready === '1', null, { timeout: 8000 }).catch(() => {});
+    await page.waitForSelector('#crp-pick', { timeout: 6000 }).catch(() => {});
+    const opts = await page.locator('#crp-pick option').allInnerTexts().catch(() => []);
+    const pickIdx = opts.length ? (d - 1) % opts.length : 0;
+    if (opts.length) { await page.selectOption('#crp-pick', { index: pickIdx }).catch(() => {}); await sleep(300); }
+    const title = await text('#crp-h');
+    const hasHeb = hebrew.test(await mainText());
+    const tl = page.locator('.crp-bar input[type=checkbox]').first(); if (await tl.count()) { await tl.check().catch(() => {}); await sleep(150); }
+    const play = page.locator('.crp-play').first(); if (await play.count()) { await play.click().catch(() => {}); await sleep(600); }
+    const lt = page.locator('.crp-ltr').first(); if (await lt.count()) { await lt.click().catch(() => {}); await sleep(150); }
+    const rText = await mainText(); const rShot = await shot('read-text');
+    const nextLinks = await page.evaluate(() => [...document.querySelectorAll('#main a, #main button')].filter((e) => e.offsetParent).map((e) => (e.innerText || '').trim().slice(0, 40)).slice(0, 25));
+    log('read: text opened', { opts: opts.length, picked: opts[pickIdx], title, hasHebrew: hasHeb, status: (await text('.crp-status')).slice(0, 120), mainActions: nextLinks.length });
+    if (!hasHeb) F('high', 'read-no-hebrew', 'The reader shows no Hebrew text', ['Home > Open the reader'], { text: rText.slice(0, 200), shot: rShot });
+    P.notes.push(`day ${d}: read "${opts[pickIdx] || '?'}"; links on page: ${nextLinks.slice(0, 8).join(' | ')}`);
+    if (d === 1 || d === 4) { await go('#/learn'); const tab = page.locator('#alef-tab-read'); if (await tab.count()) { await tab.click(); await sleep(200); } log('learn: siddur track', { text: (await mainText()).slice(0, 220) }); }
+    await go('#/read'); const before = await storeGet('streak');
+    await dwell(6);
+    await go('#/'); const after = await storeGet('streak'); const t3 = await snapToday('after ~6 min on /read');
+    day.afterDwell = { streak: t3.streak, record: after, before };
+    P.didSomething[d] = true; P.dwelled[d] = true;
+    if (d === 1 && (after?.todaySeconds || 0) < 300) F('medium', 'read-time-not-counted', 'Six minutes in the reader does not count toward the streak', ['Open Home > Open the reader', 'Read for about six minutes (moving pointer)', 'Open Home'], { record: after, line: t3.streak, shot: rShot });
+    if (d >= 3 && t3.state === 'first-run') F('medium', 'home-still-first-run', `After ${d} days of reading in the reader, Home still says first-run (nothing recorded about this learner)`, ['Use only /read for several days', 'Open Home'], { text: t3.text.slice(0, 200), primary: t3.primaryLabel, shot: await shot('today-first-run') });
+  }
+
   // ---------- one day ----------
   async function runDay(d) {
     P.day = d;
     const day = { d, tasks: [] }; P.days[d] = day;
-    if (cfg.skipDay === d) { log('learner skipped this day (did not open the app)'); P.didSomething[d] = false; P.dwelled[d] = false; return; }
+    if (cfg.skipDay === d || (cfg.skipDays || []).includes(d)) { log('learner skipped this day (did not open the app)'); P.didSomething[d] = false; P.dwelled[d] = false; return; }
     if (d > 1) await reopen(d);
     else { await go('#/'); day.planStart = P.plan?.start; }
+    if (cfg.readOnly) return runReadDay(d, day);
     const light = cfg.lightDay === d;
     let t = await snapToday('open'); day.today = t; day.todayShot = await shot('today');
     const stNow = await storeGet('streak');
     day.streakRecord = stNow;
+    if (cfg.key === 'D' && d === 13) {
+      const due = Number((t.due.match(/^(\d+)/) || [])[1] || 0);
+      log('D returns after 10 days', { primary: t.primaryLabel, due: t.due, streak: t.streak, record: stNow });
+      day.returnCheck = { primary: t.primaryLabel, due, streak: t.streak, text: t.text.slice(0, 300) };
+      if (/No streak yet/.test(t.streak || '') && (stNow?.best || 0) > 0) F('medium', 'return-says-no-streak', 'A returning learner with a best streak is told No streak yet', ['Study 2 days, skip 10, open Home'], { line: t.streak });
+      if (!t.primaryHref) F('high', 'return-no-primary', 'No main action for a returning learner', ['Open Home after 10 days'], { text: t.text });
+      if (due >= 20 && !/review/i.test(t.primaryLabel || '')) F('medium', 'return-backlog-not-first', 'Returning learner has ' + due + ' cards due and the main action is not review: ' + t.primaryLabel, ['Study, skip 10 days, open Home'], { text: t.text.slice(0, 200) });
+      if (!/welcome back/i.test(t.text)) F('low', 'return-no-welcome-back', 'Home does not greet a learner returning after 10 days', ['Study 2 days, skip 10, open Home'], { text: t.text.slice(0, 200) });
+    }
     P.streakShown[d] = t.streak;
     // compare the streak line with what a learner who did something every day would expect
     const learnerExpected = (() => { let c = 0; for (let k = d - 1; k >= 1; k--) { if (P.didSomething[k]) c++; else break; } return c; })();
     const ruleExpected = (() => { let c = 0; for (let k = d - 1; k >= 1; k--) { if (P.dwelled[k]) c++; else break; } return c; })();
-    const shownN = Number((t.streak?.match(/(\d+) day/) || [])[1] || 0);
+    const shownN = Number((t.streak?.match(/^Streak:\s*(\d+) day/) || [])[1] || 0);
     if (d > 1 && shownN === 0 && /No streak yet/.test(t.streak || '') && (stNow?.best || 0) > 0) F('medium', 'streak-lost-wording', `Home says "No streak yet" to a learner whose best streak is ${stNow.best} days`, [`Persona ${cfg.key}: build a streak, then ${cfg.skipDay ? 'skip day ' + cfg.skipDay : 'do only a short review on day ' + cfg.lightDay}`, 'Open Home the next day'], { line: t.streak, best: stNow.best, progressOffers: 'Progress has "Count yesterday as a rest day" (not shown on Home)', shot: day.todayShot });
     day.streakCheck = { shown: shownN, learnerExpected, ruleExpected, line: t.streak };
-    if (d > 1 && shownN !== learnerExpected) F(shownN < learnerExpected ? 'high' : 'medium', 'streak-vs-actions', `Home streak shows ${shownN} but the learner did something on ${learnerExpected} consecutive days`, [`Persona ${cfg.key}: on days ${Object.keys(P.didSomething).filter((k) => P.didSomething[k] && !P.dwelled[k]).join(',') || '(none)'} only a short activity (under 5 min) was done`, `Open Home on day ${d}`], { line: t.streak, learnerExpected, ruleExpected, shot: day.todayShot });
+    if (d > 1 && shownN !== ruleExpected && shownN !== learnerExpected) F('medium', 'streak-vs-rule', `Home streak shows ${shownN} but the 5-minute rule predicts ${ruleExpected}`, [`Persona ${cfg.key}`, `Open Home on day ${d}`], { line: t.streak, shot: day.todayShot });
+    if (d > 1 && shownN !== learnerExpected && !/5 minutes/.test(t.streak || '')) F(shownN < learnerExpected ? 'high' : 'medium', 'streak-vs-actions', `Home streak shows ${shownN} but the learner did something on ${learnerExpected} consecutive days`, [`Persona ${cfg.key}: on days ${Object.keys(P.didSomething).filter((k) => P.didSomething[k] && !P.dwelled[k]).join(',') || '(none)'} only a short activity (under 5 min) was done`, `Open Home on day ${d}`], { line: t.streak, learnerExpected, ruleExpected, shot: day.todayShot });
     if (d > 1 && shownN !== ruleExpected) P.notes.push(`day ${d}: streak shown ${shownN}, rule (>=300 s engaged on each past day) predicts ${ruleExpected}`);
     // plan vs Today
     if (P.plan?.days?.[d - 1]) { const planned = P.plan.days[d - 1].items.map((i) => i.h); const first = t.primaryHref; day.planCompare = { plan: P.plan.days[d - 1], today: t.primaryLabel, todayHref: first, match: planned.some((h) => h && first && h.replace(/^#?/, '#') === first) }; }
     if (day.planCompare && !day.planCompare.match) P.notes.push(`day ${d}: plan card says [${day.planCompare.plan.items.map((i) => i.t).join(' | ')}] but Today says "${t.primaryLabel}"`);
     if (cfg.goalProbe === d) { // the learner picks a longer daily goal on the Today card, then studies about six minutes
-      await page.click('#today-goal [data-goal="20"]').catch(() => {}); await sleep(250);
+      await page.click('#today-goal-box summary').catch(() => {}); await page.click('#today-goal [data-goal="20"]').catch(() => {}); await sleep(250);
       day.goalProbe = { picked: 20, pressedNow: (await snapToday('after tapping 20 min')).goalOn, stored: await storeGet('onboarding.v1.dailyGoal'), onboardingMinutes: (await storeGet('onboarding.v1'))?.minutesPerDay };
     }
     // follow the Today card
@@ -424,7 +483,7 @@ async function runPersona(cfg) {
     // time spent: a learner at their stated minutes; a light day gets only ~1 minute (no dwell step)
     await go('#/'); { const tb = await snapToday('before the 5-minute mark'); day.beforeDwell = { streak: tb.streak, record: await storeGet('streak') };
       const didWork = (day.tasks || []).some((x) => x.result && (x.result.done || x.result.rated || x.result.lesson2?.done));
-      if (didWork && /No streak yet|Learn something today/.test(tb.streak || '')) F('high', 'streak-copy-vs-rule', 'Home says a lesson or a review card starts the streak, but finishing lessons and reviewing cards did not', [`Persona ${cfg.key}: finish ${day.tasks.length} Today-card task(s) on day ${d} (lessons completed and cards rated), spend under 5 minutes`, 'Open Home and read the Streak line'], { line: tb.streak, record: day.beforeDwell.record, shot: await shot('streak-before-5min') }); }
+      if (didWork && /(lesson or (a )?review card|Learn something today)/i.test(tb.streak || '')) F('high', 'streak-copy-vs-rule', 'Home says a lesson or a review card starts the streak, but finishing lessons and reviewing cards did not', [`Persona ${cfg.key}: finish ${day.tasks.length} Today-card task(s) on day ${d} (lessons completed and cards rated), spend under 5 minutes`, 'Open Home and read the Streak line'], { line: tb.streak, record: day.beforeDwell.record, shot: await shot('streak-before-5min') }); }
     if (!light) {
       await go('#/learn'); const before = await storeGet('streak');
       await dwell(6);
@@ -439,24 +498,22 @@ async function runPersona(cfg) {
 
   // ---------- go ----------
   await safe('onboarding', onboard);
-  if (cfg.goal === 'israel') { // the Israel learner looks for a way to say so
+  if (cfg.goal === 'israel') { // the goal was chosen in onboarding: does the first-run Today card follow it?
     await go('#/');
-    const t0 = await snapToday('israel learner before changing anything');
+    const t0 = await snapToday('israel learner, first-run card');
     P.israelBefore = t0;
-    log('israel learner: Today card mentions Israel?', { mentions: /israel/i.test(t0.text), primary: t0.primaryLabel, more: t0.more });
-    await go('#/settings'); await page.check('#s-goal-israel').catch(() => {}); await sleep(200);
-    const sshot = await shot('settings-goal');
-    log('israel learner: set goal in Settings', { goal: await page.evaluate(() => window.alef.settings.get('goal')) });
-    P.settingsShot = sshot;
+    const isIsraelLesson = await page.evaluate(async (h) => { const m = await import(new URL('src/curriculum/lessons.js', location.origin + '/').href); const id = ((h || '').match(/lesson=([\w-]+)/) || [])[1]; return m.lessons.find((l) => l.id === id)?.track === 'israel'; }, t0.primaryHref);
+    log('israel learner: first-run card points at an Israel-track lesson?', { yes: isIsraelLesson, primary: t0.primaryLabel, goal: await page.evaluate(() => window.alef.settings.get('goal')) });
+    if (!isIsraelLesson) F('medium', 'first-run-card-ignores-goal', 'With the Israel goal chosen in onboarding, the first-run Today card does not start an Israel-track lesson', ['Finish onboarding choosing Speaking in Israel', 'Open Home'], { text: t0.text.slice(0, 200), primary: t0.primaryLabel });
   }
-  for (let d = 1; d <= DAYS; d++) { await safe('day ' + d, () => runDay(d)); }
+  for (let d = 1; d <= daysFor(cfg); d++) { await safe('day ' + d, () => runDay(d)); }
   { // findings that need the whole week
     const fs0 = await page.evaluate(() => ({ streak: window.alef.store.get('streak'), completed: Object.keys((window.alef.store.get('curriculum.progress') || {}).completed || {}) })).catch(() => null);
-    if (fs0 && fs0.completed.length === 0 && (fs0.streak?.count || 0) >= 2) F('high', 'streak-without-progress', `The streak reads ${fs0.streak.count} days but no lesson was ever completed`, ['Persona B: placement check answering well on letters and vowels', 'Press the Today button every day (a locked lesson), stay on the app about six minutes'], { streak: fs0.streak, completed: fs0.completed, todayEveryDay: Object.values(P.days).map((x) => `day ${x.d}: ${x.today?.primaryLabel}`).slice(0, 7), learnList: P.learnListAfterLock });
+    if (fs0 && !cfg.readOnly && fs0.completed.length === 0 && (fs0.streak?.count || 0) >= 2) F('high', 'streak-without-progress', `The streak reads ${fs0.streak.count} days but no lesson was ever completed`, ['Persona B: placement check answering well on letters and vowels', 'Press the Today button every day (a locked lesson), stay on the app about six minutes'], { streak: fs0.streak, completed: fs0.completed, todayEveryDay: Object.values(P.days).map((x) => `day ${x.d}: ${x.today?.primaryLabel}`).slice(0, 7), learnList: P.learnListAfterLock });
     const mism = Object.values(P.days).filter((x) => x.planCompare && !x.planCompare.match);
     if (mism.length >= 2) F('medium', 'plan-vs-today', `The "Your week" plan and the Today card disagree on ${mism.length} of ${Object.values(P.days).filter((x) => x.planCompare).length} days`, ['Finish onboarding and read the week plan', 'Each day open Home, press the Today card button and finish it', 'Compare with the plan day'], { examples: mism.slice(0, 3).map((x) => `day ${x.d}: plan [${x.planCompare.plan.items.map((i) => i.t).join(' | ')}] vs Today "${x.planCompare.today}"`), shot: P.planShot });
-    if (cfg.goal === 'israel' && P.plan && !P.plan.goalMentioned) F('medium', 'onboarding-never-asks-goal', 'Onboarding never asks about the goal; an Israel-track learner gets a read-track week plan', ['Finish onboarding (4 screens)', 'Read "Your week"', 'Open Settings, choose the Israel goal', 'Compare the plan days with the Today card'], { planDays: (P.plan.days || []).slice(0, 3).map((x) => x.label + ': ' + x.items.map((i) => i.t).join(' | ')), todayAfter: P.days[2]?.today?.primaryLabel, shot: P.planShot });
-    if (cfg.goal === 'israel' && P.israelBefore && !/israel/i.test(P.israelBefore.text)) F('low', 'first-run-card-ignores-goal', 'With the Israel goal set in Settings, the first-run Today card still talks only about reading Hebrew letters', ['Finish onboarding', 'Settings > Goal > Israel', 'Open Home'], { text: P.israelBefore.text.slice(0, 200) });
+    if (false) F('medium', 'onboarding-never-asks-goal', 'Onboarding never asks about the goal; an Israel-track learner gets a read-track week plan', ['Finish onboarding (4 screens)', 'Read "Your week"', 'Open Settings, choose the Israel goal', 'Compare the plan days with the Today card'], { planDays: (P.plan.days || []).slice(0, 3).map((x) => x.label + ': ' + x.items.map((i) => i.t).join(' | ')), todayAfter: P.days[2]?.today?.primaryLabel, shot: P.planShot });
+    if (false) F('low', 'first-run-card-ignores-goal', 'With the Israel goal set in Settings, the first-run Today card still talks only about reading Hebrew letters', ['Finish onboarding', 'Settings > Goal > Israel', 'Open Home'], { text: P.israelBefore.text.slice(0, 200) });
     const backlog = Object.values(P.days).filter((x) => x.today?.due && /^(\d+) cards? due/.test(x.today.due) && Number(x.today.due.match(/^(\d+)/)[1]) >= 20 && /lesson=/.test(x.today.primaryHref || ''));
     if (backlog.length) F('medium', 'today-never-prefers-review', `Today card kept recommending a new lesson with ${backlog[backlog.length - 1].today.due}`, [`Persona ${cfg.key} does not tap the due-cards link`, 'Each day press only the big Today button'], { days: backlog.map((x) => `day ${x.d}: ${x.today.due}; primary: ${x.today.primaryLabel}`), shot: backlog[backlog.length - 1].todayShot });
     if (/speech-error/.test(P.soundStatus || '') || P.notes.some((n) => /speech-error/.test(n))) F('low', 'raw-speech-error', 'Sound bar and lesson Listen button show a raw code ("speech-error")', ['Open any lesson', 'Tap Listen (headless Chromium has no speech voices; not checked in a real browser)'], { statusBar: P.soundStatus });

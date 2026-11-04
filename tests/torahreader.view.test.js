@@ -101,10 +101,10 @@ test('audio: registry ids for registry verses, text-only ids for the framing ver
   const rec = await make({ audio: 'rec' });
   await sel(rec.root, '[data-passage="shema"]').click();
   await words(rec.root)[0].click();
-  await btn(rec.root, /^Hear it$/).click(); await waitFor(() => rec.calls.length >= 1 && /Playing this word: a recording/.test(status(rec.root)), { message: "rec.calls.length >= 1 && /Playing this word: a recording/.test(status(rec.root))" });
+  await btn(rec.root, /^Hear it$/).click(); await waitFor(() => rec.calls.length >= 1 && /Playing this word: Recorded by a human reader/.test(status(rec.root)), { message: "rec.calls.length >= 1 && /Playing this word: Recorded by a human reader/.test(status(rec.root))" });
   assert.deepEqual(rec.calls[0].slice(0, 2), ['word', 'shema-vahavta-w1']);
   assert.equal(rec.calls[0][2].text, 'שְׁמַע');
-  assert.match(status(rec.root), /Playing this word: a recording/);
+  assert.match(status(rec.root), /Playing this word: Recorded by a human reader/);
   await btn(rec.root, /^Hear Deuteronomy 6:5$/).click(); await waitFor(() => rec.calls.length >= 2, { message: "rec.calls.length >= 2" });
   assert.deepEqual(rec.calls[1].slice(0, 2), ['line', 'shema-vahavta-l2']);
 
@@ -121,7 +121,7 @@ test('audio: registry ids for registry verses, text-only ids for the framing ver
     [undefined, /No audio for this word: this build has no audio player/],
     [{ has: () => false, play: async () => ({ source: 'none', reason: 'unknown-item' }) }, /No audio for this word \(unknown-item\)/],
     [{ has: () => false, play: async () => ({ source: 'tts-fallback' }) }, /browser voice: a computer voice, not a person/],
-    [{ has: () => true, play: async () => ({ source: 'file', entryStatus: 'tts' }) }, /pre-rendered computer voice, not a human recording/],
+    [{ has: () => true, play: async () => ({ source: 'file', entryStatus: 'tts' }) }, /Synthetic voice \(Israeli only\), not a recorded teacher/],
     [{ has: () => true, play: async () => { throw new Error('boom'); } }, /Audio error for this word: boom/],
   ]) {
     const m = await make({ audio });

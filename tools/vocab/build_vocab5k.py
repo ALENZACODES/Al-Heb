@@ -303,6 +303,8 @@ def apply_overrides(out, ovdoc):
             e['pointedSource'] = 'wiktionary' if o['pointed'] else None
         if 'tags' in o:
             e['tags'] = list(o['tags'])
+        if 'flags' in o:
+            e['flags'] = dict(o['flags'])  # e.g. {"hidden": true}: src/vocab/loader.js drops the record from every list
         for t in o.get('addTags', []):
             e.setdefault('tags', [])
             if t not in e['tags']:

@@ -14,7 +14,7 @@
    "translit": "akhal",
    "en": "to eat",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h11b691b9",
    "source": "data/vocab/words.json"
   },
   {
@@ -23,7 +23,7 @@
    "translit": "mar",
    "en": "bitter (having an acrid taste)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hb91b24f9",
    "source": "data/vocab/words.json"
   },
   {
@@ -32,7 +32,7 @@
    "translit": "yarah",
    "en": "to flow as water (that is, to rain)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h448b5d1a",
    "source": "data/vocab/words.json"
   },
   {
@@ -59,7 +59,7 @@
    "translit": "shatah",
    "en": "to drink",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hd59a2d59",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "mashach",
    "en": "to anoint with oil",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h25e14407",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "pol",
    "en": "broad bean, fava bean, fava (Vicia faba)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h27d68eba",
    "source": "data/vocab/words.json"
   },
   {
@@ -104,7 +104,7 @@
    "translit": "lul",
    "en": "chicken coop",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hfb7bf5f4",
    "source": "data/vocab/words.json"
   },
   {

@@ -9795,7 +9795,7 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "adon-olam-1-w47",
-  "text": "גּוֹאֲלִי",
+  "text": "גוֹאֲלִי",
   "status": "missing",
   "source": "none",
   "group": "prayer-word"
@@ -9806,7 +9806,7 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "adon-olam-1-w47",
-  "text": "גּוֹאֲלִי",
+  "text": "גוֹאֲלִי",
   "status": "missing",
   "source": "none",
   "group": "prayer-word"
@@ -10169,7 +10169,7 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "adon-olam-1-w64",
-  "text": "אִישַׁן",
+  "text": "אִישָׁן",
   "status": "missing",
   "source": "none",
   "group": "prayer-word"
@@ -10180,7 +10180,7 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "adon-olam-1-w64",
-  "text": "אִישַׁן",
+  "text": "אִישָׁן",
   "status": "missing",
   "source": "none",
   "group": "prayer-word"
@@ -18089,7 +18089,7 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "lecha-hashem-w11",
-  "text": "וּבָאָרֶץ",
+  "text": "וּבָאָרֶץ׃",
   "status": "missing",
   "source": "none",
   "group": "prayer-word"
@@ -18100,7 +18100,7 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "lecha-hashem-w11",
-  "text": "וּבָאָרֶץ",
+  "text": "וּבָאָרֶץ׃",
   "status": "missing",
   "source": "none",
   "group": "prayer-word"
@@ -18793,7 +18793,7 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "vezot-hatorah-w8",
-  "text": "יִשְׂרָאֵל",
+  "text": "יִשְׂרָאֵל׃",
   "status": "missing",
   "source": "none",
   "group": "prayer-word"
@@ -18804,7 +18804,7 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "vezot-hatorah-w8",
-  "text": "יִשְׂרָאֵל",
+  "text": "יִשְׂרָאֵל׃",
   "status": "missing",
   "source": "none",
   "group": "prayer-word"
@@ -19101,7 +19101,7 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "etz-chaim-w9",
-  "text": "דַּרְכֵי",
+  "text": "דַרְכֵי",
   "status": "missing",
   "source": "none",
   "group": "prayer-word"
@@ -19112,7 +19112,7 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "etz-chaim-w9",
-  "text": "דַּרְכֵי",
+  "text": "דַרְכֵי",
   "status": "missing",
   "source": "none",
   "group": "prayer-word"
@@ -22577,7 +22577,7 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "avot-closing-w4",
-  "text": "וּמָגֵן׃",
+  "text": "וּמָגֵן",
   "status": "missing",
   "source": "none",
   "group": "prayer-word"
@@ -22588,7 +22588,7 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "avot-closing-w4",
-  "text": "וּמָגֵן׃",
+  "text": "וּמָגֵן",
   "status": "missing",
   "source": "none",
   "group": "prayer-word"
@@ -24359,7 +24359,7 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "oseh-shalom-w9",
-  "text": "כָּל־יִשְׂרָאֵל",
+  "text": "כָּל",
   "status": "missing",
   "source": "none",
   "group": "prayer-word"
@@ -24370,7 +24370,7 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "oseh-shalom-w9",
-  "text": "כָּל־יִשְׂרָאֵל",
+  "text": "כָּל",
   "status": "missing",
   "source": "none",
   "group": "prayer-word"
@@ -24381,7 +24381,7 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "oseh-shalom-w10",
-  "text": "וְאִמְרוּ",
+  "text": "יִשְׂרָאֵל",
   "status": "missing",
   "source": "none",
   "group": "prayer-word"
@@ -24392,7 +24392,7 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "oseh-shalom-w10",
-  "text": "וְאִמְרוּ",
+  "text": "יִשְׂרָאֵל",
   "status": "missing",
   "source": "none",
   "group": "prayer-word"
@@ -24403,7 +24403,7 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "oseh-shalom-w11",
-  "text": "אָמֵן׃",
+  "text": "וְאִמְרוּ",
   "status": "missing",
   "source": "none",
   "group": "prayer-word"
@@ -24414,6 +24414,28 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "oseh-shalom-w11",
+  "text": "וְאִמְרוּ",
+  "status": "missing",
+  "source": "none",
+  "group": "prayer-word"
+ },
+ {
+  "path": "audio/m/israeli/word/oseh-shalom-w12.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "oseh-shalom-w12",
+  "text": "אָמֵן׃",
+  "status": "missing",
+  "source": "none",
+  "group": "prayer-word"
+ },
+ {
+  "path": "audio/f/israeli/word/oseh-shalom-w12.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "oseh-shalom-w12",
   "text": "אָמֵן׃",
   "status": "missing",
   "source": "none",
@@ -26361,7 +26383,7 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "kiddush-shabbat-eve-w40",
-  "text": "הִנְחַלְתָּנוּ",
+  "text": "הִנְחַלְתָּנוּ׃",
   "status": "missing",
   "source": "none",
   "group": "prayer-word"
@@ -26372,7 +26394,7 @@
   "tradition": "israeli",
   "kind": "word",
   "id": "kiddush-shabbat-eve-w40",
-  "text": "הִנְחַלְתָּנוּ",
+  "text": "הִנְחַלְתָּנוּ׃",
   "status": "missing",
   "source": "none",
   "group": "prayer-word"

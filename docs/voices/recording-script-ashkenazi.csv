@@ -482,7 +482,7 @@ order,id,pointed_hebrew,read_aloud,ipa,stressed_syllable,syllables,stress_rule,g
 481,h13c6683f,הֵכִיל,heikhil,ˈhej.xil,1 of 2,[הֵ] כִיל,default penultimate (Ashkenazi natural register),to contain,verb,0,,,
 482,hd04514bf,הָרַג,horag,ˈhɔ.raɡ,1 of 2,[הָ] רַג,default penultimate (Ashkenazi natural register),to kill (put to death),verb,0,,,
 483,h720b8d19,אַמָּה,ammeh,ˈa.mə,1 of 2,[אַ] מָּה,default penultimate (Ashkenazi natural register),forearm,noun,0,final kamatz-he read as a short unstressed vowel (eh),,
-484,h8ea4d152,לַעֲזָאזֵל,la'azozeil,la.a.ˈzɔ.zejl,3 of 4,לַ עֲ [זָא] זֵל,default penultimate (Ashkenazi natural register),"Damn!, Hell!",intj,0,,,
+484,h8ea4d152,לַעֲזָאזֵל,la'azozeil,la.a.ˈzɔ.zejl,3 of 4,לַ עֲ [זָא] זֵל,default penultimate (Ashkenazi natural register),an exclamation of anger or dismissal (a mild curse),intj,0,,,
 485,h3c9f9b9b,אֹהֶל,oyhel,ˈoj.hel,1 of 2,[אֹ] הֶל,default penultimate (Ashkenazi natural register),a collective term for all that covers a dead body or that a dead body covers,noun,0,,,
 486,hb9b267e3,עָמַד,omad,ˈɔ.mad,1 of 2,[עָ] מַד,default penultimate (Ashkenazi natural register),to stand,verb,0,,,
 487,h0faf39fb,מִישֶׁהוּ,mishehu,mi.ˈʃe.hu,2 of 3,מִי [שֶׁ] הוּ,default penultimate (Ashkenazi natural register),"someone, somebody",pron,0,,,

@@ -4,6 +4,7 @@
  * progress; it only links to the recommended lesson. Audio via ctx.audio (shown honestly; there are no recorded clips yet).
  * ctx extras for tests: ctx.placementData {config, data}, ctx.rng, ctx.clock.now.
  */
+import { audioAccess } from '../shell/audio-access.js';
 import { el, heText, storeGet, storeSet, PROGRESS_KEY } from '../curriculum/dom.js';
 import { loadPlacementData } from './loader.js';
 import { STORE_KEY, buildItems, nextItem, openStart, recommend, seeded } from './model.js';
@@ -30,6 +31,7 @@ export function mount(root, ctx) {
   }
   function renderStart(prev) {
     set(
+      ctx.img?.(el, { kind: 'id', id: 'CHAR_ari_neutral', decorative: true, width: 300, class: 'pl-pic' }),
       el('p', { class: 'draft-flag', role: 'note' }, DRAFT_NOTE),
       el('p', {}, `Up to ${items.length} short questions, easiest first. It stops early if several answers in a row are missed. "Not sure" is always fine.`),
       prev ? el('p', {}, `Last result: lesson ${prev.lesson}.`) : null,
@@ -51,7 +53,7 @@ export function mount(root, ctx) {
       fb.textContent = correct ? 'Yes.' : 'Not this time. That is fine; it only helps pick your starting point.';
       next.hidden = false; status.textContent = fb.textContent; focus(next);
     };
-    const play = it.audio && ctx?.audio?.play ? el('button', { type: 'button', class: 'btn', onclick: async () => { try { await ctx.audio.play(it.audio.kind, it.audio.id); } catch { status.textContent = 'No sound available.'; } } }, 'Listen') : null;
+    const play = it.audio && ctx?.audio?.play && audioAccess(ctx.audio, it.audio.kind, it.audio.id).level !== 'none' ? el('button', { type: 'button', class: 'btn', onclick: async () => { try { await ctx.audio.play(it.audio.kind, it.audio.id); } catch { status.textContent = 'No audio yet'; } } }, 'Listen (device voice, not a recorded teacher)') : null;
     set(
       el('p', { class: 'muted' }, `Question ${answers.length + 1} of up to ${items.length}`),
       el('p', {}, it.prompt), el('p', { class: 'ps-he' }, heText(it.he)), play,

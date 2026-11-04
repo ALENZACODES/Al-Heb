@@ -1,6 +1,6 @@
 # Reviewer packets: getting the unreviewed Hebrew proofread
 
-Almost everything in ALEF that is Hebrew was written, pointed or typed by an AI agent or machine-copied from a source; nobody who reads Hebrew has proofread it. Records say so with flags (`proofread:false`, `needsNativeReview`, `typedFromMemory`, `needsVerification`, `draft`, `clergyReviewed:false`, `status: transcribed-needs-check`, `validated:false`, `review: native-speaker-needed`). This folder turns those flags into work a teacher, native speaker or clergy member can do in a few sittings, and lets the answers flow back without anyone editing JSON.
+Almost everything in ALEF that is Hebrew was typed from memory or machine-copied from a source, without a native-speaker check; nobody who reads Hebrew has proofread it. Records say so with flags (`proofread:false`, `needsNativeReview`, `typedFromMemory`, `needsVerification`, `draft`, `clergyReviewed:false`, `status: transcribed-needs-check`, `validated:false`, `review: native-speaker-needed`). This folder turns those flags into work a teacher, native speaker or clergy member can do in a few sittings, and lets the answers flow back without anyone editing JSON.
 
 Nothing here claims the content is correct. A row only becomes "reviewed" when a named person says `ok` on a dated row.
 

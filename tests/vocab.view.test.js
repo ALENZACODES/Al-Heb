@@ -33,7 +33,7 @@ const items = (root) => root.find((n) => n.tag === "li" && n.attrs["data-id"]);
 
 const { mount, ATTRIBUTION, DRAFT_NOTICE, translitFor, applyFilters, skippedInBulk, FN_TOPIC } = await import("../src/vocab/vocab.view.js");
 const { stripPoints, filterEntries, addCards, cardId } = await import("../src/vocab/model.js");
-const { loadTier } = await import("../src/vocab/loader.js");
+const { loadTier, TIER_BANDS, isHiddenRecord, visibleRecords } = await import("../src/vocab/loader.js");
 const { buildPacks, packPath } = await import("../src/vocab/split-tiers.mjs");
 const tier500 = await loadTier(500);
 
@@ -54,6 +54,16 @@ test("pack files match vocab5000.json, cover all 5000 words and stay small enoug
     n += packs[t].count;
   }
   assert.equal(n, 5000);
+});
+
+test("loader drops records flagged hidden, so every vocab list built from the tiers inherits it", async () => {
+  assert.equal(isHiddenRecord({ flags: { hidden: true } }), true);
+  assert.equal(isHiddenRecord({ flags: ["hidden", "noCorpusExample"] }), true);
+  assert.equal(isHiddenRecord({ flags: { hidden: false } }), false);
+  assert.equal(isHiddenRecord({ flags: ["noCorpusExample"] }), false);
+  assert.equal(isHiddenRecord({}), false);
+  assert.deepEqual(visibleRecords([{ id: 1, flags: { hidden: true } }, { id: 2 }, { id: 3, flags: ["hidden"] }]).map((e) => e.id), [2]);
+  for (const t of TIER_BANDS) for (const e of await loadTier(t)) assert.equal(isHiddenRecord(e), false, `tier ${t} still lists ${e.id}`);
 });
 
 test("packs are excluded from the service-worker precache", () => {
@@ -209,7 +219,7 @@ test("audio: recording used when ctx.audio has the id; otherwise browser Hebrew 
   assert.doesNotMatch(btn(lis[0], /Listen/).text, /computer voice/);
   await btn(lis[0], /Listen/).click();
   assert.deepEqual(played, [["word", tier500[0].id]]);
-  assert.match(a.root.text, /Playing a recording/);
+  assert.match(a.root.text, /Playing: Recorded by a human reader/);
 
   const utter = [];
   globalThis.SpeechSynthesisUtterance = class { constructor(t) { this.text = t; } };

@@ -1,6 +1,6 @@
 # Lane 3 round 4: vowel board, niqqud dial, dot tile, syllable chips
 
-All four screens are DRAFT: every spelling, gloss, respelling, mouth hint and stress mark was written by an AI agent and has not been checked by a native speaker. No recorded audio exists; buttons appear only when `ctx.audio.has(kind, id)` is true, otherwise "no audio yet" is shown.
+All four screens are DRAFT: every spelling, gloss, respelling, mouth hint and stress mark is a draft and has not been checked by a native speaker. No recorded audio exists; buttons appear only when `ctx.audio.has(kind, id)` is true, otherwise "no audio yet" is shown.
 
 | Screen | Module | Concept | Data |
 |---|---|---|---|

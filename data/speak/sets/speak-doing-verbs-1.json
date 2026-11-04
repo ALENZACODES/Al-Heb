@@ -14,7 +14,7 @@
    "translit": "hivah",
    "en": "to constitute",
    "kind": "word",
-   "audioId": null,
+   "audioId": "ha3cf2c46",
    "source": "data/vocab/words.json"
   },
   {
@@ -32,7 +32,7 @@
    "translit": "yakhol",
    "en": "can, to be able to",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h5aed8aaa",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,7 +41,7 @@
    "translit": "ra'ah",
    "en": "to see, to have vision",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h28ecb454",
    "source": "data/vocab/words.json"
   },
   {
@@ -50,7 +50,7 @@
    "translit": "naval",
    "en": "to wither, wilt, dry out",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hd5bcfcb8",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "met",
    "en": "to die",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h24f17330",
    "source": "data/vocab/words.json"
   },
   {
@@ -77,7 +77,7 @@
    "translit": "kiven",
    "en": "to direct (as traffic)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h22a20328",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "sham",
    "en": "to assess, appraise",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h8e3fbf43",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "barar",
    "en": "to select, to pick, to sort",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h8d0e13f2",
    "source": "data/vocab/words.json"
   },
   {
@@ -104,7 +104,7 @@
    "translit": "yibe",
    "en": "to import",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hf14f89e0",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "hekhil",
    "en": "to contain",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h13c6683f",
    "source": "data/vocab/words.json"
   }
  ]

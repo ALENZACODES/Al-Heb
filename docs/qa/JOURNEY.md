@@ -100,3 +100,26 @@ Verified by: unit tests (home, onboarding, placement, firstday, morning, streak,
 | 7 | Israel goal not asked in onboarding | Not fixed | Out of scope for this pass. |
 | 8 | Lesson completes with one press | Not fixed | Lesson view, not in scope. |
 | 9 | Raw "speech-error" text | Not fixed | Not in scope. |
+
+
+## Third pass (2026-11-04): first-run journey, five personas
+
+Run: `node tools/qa/journey.mjs` (A, B, C, D, E; 7 days, D runs 13). Scripted emulation as above, not real learners. Before = full run of the tree after the second pass; after = full run after this pass. Before, per persona: A 3 high/medium findings plus 1 low, B 4 plus 1, C 4 plus 1 (counts below). The before-run flagged items were partly detector wording: the checker looked for "No streak yet" and for a bare count in the text, which now matches correct copy, so the detector was tightened (it now flags only the old "a lesson or a review card starts a streak" wording and compares the shown count with the 5-minute rule).
+
+| Finding | Before (full run) | After (full run) |
+|---|---|---|
+| Streak copy promises "lesson or card starts it" | high (A, B, C) | not seen. Learn and Review now say the 5-minute rule (they were the last old wording) |
+| Short-day streak vs actions | high (A) | not flagged: Home says "Today is not counted yet... after 5 minutes" and "Paused. Your best streak was N days" |
+| 46 cards due, Today still sends a new lesson (B) | medium | not seen: 20 or more due cards make "Review N due cards first" the one main action; the next lesson stays one link away |
+| Israel goal never asked / first-run card ignores it (C) | medium + low | goal question added to the minutes screen; plan and first-run card then start an Israel-track lesson ("Start: Hello, thanks, sorry") |
+| Plan vs Today disagree | medium on 5-6 of 7 days (A, B, C) | still medium on 3 to 4 of 7 days (A, B, C): the plan is now one lesson a day with the first lesson on day 1, so it matches until a lesson cannot be completed (next row) |
+| Reader-only learner (E) sees "Welcome, first step" forever | not run | fixed: any counted study time or a best streak ends the first-run card; E: 0 findings, 6 minutes on /read counts toward the streak, Hebrew text present, picker and transliteration worked |
+| Returns after 10 days (D) | not run | Home says "Welcome back. No need to catch up", streak reads "Paused. Your best streak was 2 days", main action is the next lesson; 0 findings except the speech-error note |
+
+Home card: one large button first (the single next action), then one line of at most 3 secondary links (due cards, the morning verse, one or two practice links; none on first run), then the streak line, and the study goal tucked into a closed "Study goal" disclosure.
+
+### Open, high, not in my files
+Lessons whose quick check has no letters (r04 "Shabbat Shalom", r05, r08 and others; the first Israel lesson too) show "No quick check is available for this lesson yet, so it cannot be marked complete", and the start button is disabled. The Today card keeps pointing at them, so all of A, B and C stall at day 2 to 4 (3 lessons done, none of the later ones). Cause found: `buildChoiceQuestions(lesson, c, { seed, wordPool })` in `src/curriculum/lesson.view.js` passes `wordPool` in the third argument, but `src/curriculum/exercises.session.js` line 149 reads `wordPool` from the second. Checked with a toy call: `wordPool` in the second argument returns a question, in the third returns none. One-line fix in either file. Until it lands, the journey results for days 4 to 7 describe this stall, not the other fixes.
+
+### Still not fixed
+Raw "speech-error" wording (low, headless only, not my files). The microphone path, real audio, installed PWA and real learners were not covered.

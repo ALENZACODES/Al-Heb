@@ -6,7 +6,7 @@
  *   #/israel/giveaways       15 things that give you away, each with a drill
  *   #/israel/say             "Say it" scenario trainer
  *   #/israel/etiquette       short etiquette cards
- * Everything here is a DRAFT written by an AI agent: not reviewed by a native speaker, and there is no audio.
+ * Everything here is a DRAFT: not reviewed by a native speaker, and there is no audio.
  */
 import { el, heText, replaceKeepingFocus, storeGet, storeSet } from "../curriculum/dom.js";
 import { loadIsrael, validate, formFor, audioHook, lineAudioId, pickScenarios, orderedOptions, gradePick, scoreSession,
@@ -21,7 +21,7 @@ const WHO = { m: "a man", f: "a woman" };
 const REG = { formal: "Formal", neutral: "Neutral", casual: "Casual", slang: "Slang" };
 const ROLE_LABEL = { natural: "Natural", stiff: "Stiff", off: "Wrong register" };
 
-export const DRAFT = "Written by an AI agent from general knowledge. No native Hebrew speaker has checked the Hebrew, pointing, transliteration, register labels or gender forms. Not tested with learners.";
+export const DRAFT = "Draft written from general knowledge. No native Hebrew speaker has checked the Hebrew, pointing, transliteration, register labels or gender forms. Not tested with learners.";
 export const NO_AUDIO = "There is no audio for any of this yet. Capitals in the transliteration mark the stressed syllable.";
 
 const badge = (c) => el("span", { class: "il-badge" + (c === "low" ? " il-low" : ""), title: "Confidence of the author, not a review result" }, `Confidence: ${c}${c === "low" ? " (verify before use)" : ""}`);

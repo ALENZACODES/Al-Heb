@@ -3,10 +3,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { join } from 'node:path';
+import { memoDisk, PRON_ROOTS } from './helpers/memo.js';
 import { buildDerived, ssmlFor, phOf, DERIVED_DIR } from '../tools/pronunciation/build_derived.mjs';
 import { TRADITIONS } from '../tools/pronunciation/build_variants.mjs';
 
-const d = buildDerived();
+const d = memoDisk('pron-derived', PRON_ROOTS, () => buildDerived());
 const recs = d.shards.filter((s) => s.head.name === 'ssml').flatMap((s) => s.records);
 
 test('every record has three well-formed SSML strings with one phoneme per pointed word', () => {

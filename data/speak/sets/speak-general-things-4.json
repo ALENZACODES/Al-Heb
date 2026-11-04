@@ -14,7 +14,7 @@
    "translit": "eved",
    "en": "a slave, a serf",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h1414a3a2",
    "source": "data/vocab/words.json"
   },
   {
@@ -59,7 +59,7 @@
    "translit": "eden",
    "en": "base, pedestal, socket",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h36fae7b2",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "be'ayah",
    "en": "problem",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hcfccb5de",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "bad",
    "en": "fabric, cloth, linen",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h2b39dcf2",
    "source": "data/vocab/words.json"
   },
   {
@@ -104,7 +104,7 @@
    "translit": "dabar",
    "en": "leader",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hc7113076",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "edah",
    "en": "a group (as in ethnic group)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hb4ccc0e9",
    "source": "data/vocab/words.json"
   }
  ]

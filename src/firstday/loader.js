@@ -18,3 +18,4 @@ export function loadJson(rel) {
 }
 export const loadFirst10 = () => loadJson('data/firstday/first10.json');
 export const loadLadder = () => loadJson('data/firstday/ladder.json');
+export const loadOnramp = () => loadJson('data/firstday/onramp.json');

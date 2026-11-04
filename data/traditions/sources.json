@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "description": "References behind data/traditions/*.json. Every fact in this lane is a paraphrase written for ALEF; no sentences were copied. 'fetched' is the date a page was read in this build session (an AI agent read the text through a fetch tool). 'coverage' says how much of the page was read, because some pages were long.",
+  "description": "References behind data/traditions/*.json. Every fact in this lane is a paraphrase written for ALEF; no sentences were copied. 'fetched' is the date a page was read in this build session (the text was read through a fetch tool). 'coverage' says how much of the page was read, because some pages were long.",
   "licenceNote": "Wikipedia article text is CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). We copy no wording, only facts, and cite each page. If you treat the paraphrased notes in sounds.json as adaptations, they are offered under the same CC BY-SA 4.0 licence with attribution to the pages listed here; that is a precaution, not a legal opinion. Pealim, Chabad.org and the BJPA paper are NOT openly licensed: they are cited by URL only, as references a reader can open.",
   "sources": [
     {

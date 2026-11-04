@@ -5,9 +5,12 @@
   "type": "module",
   "description": "ALEF Hebrew course - zero-dependency static PWA",
   "scripts": {
-    "test": "node --test 'tests/*.test.js'",
+    "test": "node tools/test/run.mjs unit",
     "serve": "node tools/serve.mjs",
     "smoke": "node tools/smoke.mjs",
-    "precache": "node tools/build-precache.mjs"
+    "precache": "node tools/build-precache.mjs",
+    "test:browser": "node tools/test/run.mjs browser",
+    "test:all": "node tools/test/run.mjs all",
+    "test:profile": "node tools/test/profile.mjs"
   }
 }

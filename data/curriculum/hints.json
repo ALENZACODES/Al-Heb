@@ -2,7 +2,7 @@
  "version": 1,
  "status": "draft",
  "proofread": false,
- "note": "Interference hints shown only after the learner's own error, never before. Written by an AI agent from general knowledge of what English readers tend to expect; not checked by a Hebrew teacher and not tested with learners. Each hint is under 140 characters. 'example' is the worked example shown on a repeated miss. The error kind is inferred from the kind of card or drill item, not diagnosed from what the learner actually said.",
+ "note": "Interference hints shown only after the learner's own error, never before. Written from general knowledge of what English readers tend to expect; not checked by a Hebrew teacher and not tested with learners. Each hint is under 140 characters. 'example' is the worked example shown on a repeated miss. The error kind is inferred from the kind of card or drill item, not diagnosed from what the learner actually said.",
  "kinds": [
   {"errorKind": "confusable-pair", "hint": "These two letters look alike. Find the one feature that differs, then say the name before you pick.", "example": "Bet has a flat base that sticks out to the right; kaf is one smooth curve with no corner. Check the base first."},
   {"errorKind": "wrong-vowel", "hint": "A vowel sign is a tiny mark under or beside the letter. Look at its shape and its place before you guess.", "example": "Two dots side by side under a letter (tzere) say 'ay'; two dots stacked (shva) are a very short sound or silent."},

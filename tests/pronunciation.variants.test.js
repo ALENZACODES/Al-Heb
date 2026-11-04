@@ -3,11 +3,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import { memoDisk, PRON_ROOTS } from './helpers/memo.js';
 import { join } from 'node:path';
 import { buildAll, renderWord, renderText, loadStressData, shardJson, reviewCsv, parseIpaStress, SHARD_SIZE, OUT_DIR, TRADITIONS } from '../tools/pronunciation/build_variants.mjs';
 
 const ctx = { stress: loadStressData() };
-const built = buildAll();
+const built = memoDisk('pron-buildAll', PRON_ROOTS, () => buildAll());
 const word = (he) => renderWord(he, ctx).variants;
 
 test('known examples: shabbat/shabbos, torah/toyreh, bereshit/bereishis', () => {

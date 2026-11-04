@@ -81,6 +81,8 @@ test('data/corpus/trope/*.json are the current output of the builder', () => {
   for (const p of PASSAGES) {
     const built = buildPassage(p, snapshot);
     const file = read(`data/corpus/trope/${p.id}.json`);
+    // checkedAgainstXml records whether the gitignored UXLC XML cache was on disk when the file was built, so it differs on a clean checkout.
+    delete built.checkedAgainstXml; delete file.checkedAgainstXml;
     assert.deepEqual(file, built, `run: node tools/corpus/trope.mjs (${p.id})`);
   }
 });

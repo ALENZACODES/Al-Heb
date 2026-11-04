@@ -1,0 +1,27 @@
+{
+ "status": "draft hints written for ALEF from the shape of the modern print letters; not checked by a native teacher",
+ "note": "Shown ONLY after a learner taps the wrong letter. Key = the two ids sorted alphabetically and joined by '|'. If a pair has no entry here, the hint of the confusables set containing both letters is used. A wrong tap between letters that never get confused shows no look-alike warning.",
+ "pairs": {
+  "bet|kaf": "Bet has sharp corners and its floor sticks out at the back. Kaf is one soft curve, like a backwards C.",
+  "bet|pe": "Pe has a curl tucked inside at the top left. Bet is an empty box with a floor that sticks out.",
+  "kaf|pe": "Look inside the top left: pe has a curl (a tongue), kaf is empty.",
+  "gimel|nun": "Gimel has a foot kicked out at the bottom left. Nun's base is flat and stops at the stem.",
+  "dalet|resh": "Dalet has a sharp square corner at the top right and its bar sticks out. Resh has a smooth rounded shoulder.",
+  "dalet|kaf-final": "Dalet stays on the line with a square corner. Final khaf has a rounded shoulder and drops a long tail below the line.",
+  "kaf-final|resh": "Both have a rounded shoulder, but final khaf drops a long tail below the line. Resh stays on the line.",
+  "vav|zayin": "Zayin has a bar across the top. Vav is a plain single stroke.",
+  "nun-final|vav": "Final nun is much longer and drops below the line. Vav stays on the line.",
+  "vav|yod": "Yod is tiny and floats at the top. Vav is a full-height stroke.",
+  "nun-final|zayin": "Zayin is short and has a bar on top. Final nun is a long plain stick below the line.",
+  "nun-final|yod": "Yod is a tiny comma at the top. Final nun is a tall stick that drops below the line.",
+  "yod|zayin": "Zayin is taller and has a bar on top. Yod is a tiny comma floating near the top.",
+  "chet|he": "He has a gap between the left leg and the roof, like a window left open. Chet is closed all round.",
+  "he|tav": "He has a gap in the left wall. Tav has no gap but a little foot kicked out at the bottom left.",
+  "chet|tav": "Tav has a foot kicked out at the bottom left. Chet's left leg is straight and sits flush with the base.",
+  "mem-final|samekh": "Samekh is soft and round. Final mem is a hard box with square corners.",
+  "ayin|tsadi": "Tsadi has a flat base and a Y-shaped fork; its second stroke comes from the top right. Ayin sweeps in one curve and its second stroke comes from the top left.",
+  "pe-final|tsadi-final": "Final tsadi forks like a Y on top. Final fe has a round top with a curl inside.",
+  "kaf|qof": "Qof has a leg that drops below the line on the left. Kaf stays on the line.",
+  "mem|mem-final": "Open mem has a gap at the bottom left. Final mem is closed all round."
+ }
+}

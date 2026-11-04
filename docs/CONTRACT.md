@@ -35,3 +35,6 @@ Every UI view module exports `mount(root: HTMLElement, ctx): () => void` (return
 - Hebrew text always `dir="rtl" lang="he"`; pointed text verified by code points (U+0590-05FF).
 - Data files are JSON validated by a test in your lane.
 - Lane 8 owns the integration test (`tests/integration.test.js`) that imports every lane's data and checks shared ids exist.
+
+## Round 2 addendum (2026-11-03 evening)
+Network changed: npm, PyPI, YouTube pages, Google Fonts/github raw are now reachable (GitHub API/pushes are NOT: add_repo needed). Rules: the RUNTIME app stays zero-dependency static ES modules; dev/build/benchmark tooling may use pip/npm packages but only inside tools/ or your own lane dir, never in app code paths, and any install must be recorded in docs/TOOLING.md (name, version, licence). OFL fonts are in assets/fonts/ (see FONTS.md; Gveret Levin = cursive). Use `node --test` (no directory arg) to run tests. Run the whole suite before you finish; do not leave failing tests. Keep honesty rules: never claim native review, real audio, real images, or real-photo OCR accuracy that you did not measure.

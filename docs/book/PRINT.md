@@ -16,7 +16,7 @@ Other trims: `node book/build.mjs --pdf --print --trim 8x10|8.5x8.5|6x9`. Only 8
 - Bleed 0.125in; with bleed page width = trim + 0.125in, height = trim + 2 x 0.125in.
 - Inside margin minimum by page count: 24-150 pages 0.375in, 151-300 0.5in, 301-500 0.625in. Top/bottom/outside minimum 0.25in without bleed, 0.375in with bleed.
 - This build: inside 0.75in, outside 0.75in, top 0.7in, bottom 0.8in (all above the minima for up to 500 pages). Margins are measured on rendered pages (see QA.md), not just read from CSS.
-- KDP page-count limits depend on ink/paper; this book is about 62 interior pages (the page counts in QA.md are the real ones).
+- KDP page-count limits depend on ink/paper; this book is about 68 interior pages (the page counts in QA.md are the real ones).
 - Fonts are embedded (checked with pdffonts). KDP's stance on Type 3 fonts was not checked: the variable Noto Serif Hebrew is embedded as Type 3 by Chromium. If a previewer objects, make static instances (fontTools instancer) or typeset in InDesign.
 - Premium colour (not standard colour) for Hebrew titles and RTL paperback only were claims in the original research; not re-verified here.
 
@@ -28,3 +28,7 @@ Reverse any PDF: `python3 book/pdf_tools.py reverse IN.pdf OUT.pdf` (refuses odd
 
 ## What a human must still do
 Final typesetting in InDesign (Middle Eastern edition), real art and the cover, upload each file to the printers' previewers, order proofs, check Type 3 font acceptance, decide the binding direction, choose the domain for the QR codes (book/config.json).
+
+
+## Mnemonic flashcards (cut-out sheets)
+`node book/flashcards.mjs` (also run by `node book/make_print.mjs`) writes `book/out/alef-mnemonic-flashcards-letter.pdf` and `-a4.pdf`: 7 pages each (instructions + 3 x front/back). Cards are 2.5 x 3.5 in, 3 x 3 per sheet, dashed cut lines. Print at 100%, double-sided, flip on the LONG edge; backs are column-mirrored. Not part of the KDP interior, not tested on a printer.

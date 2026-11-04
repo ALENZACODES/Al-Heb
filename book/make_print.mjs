@@ -19,3 +19,7 @@ const dst = src.replace(/\.pdf$/, '-REVERSED-ingram-lulu.pdf').replace('-rtlspre
 const r = spawnSync('python3', [join(ROOT, 'book/pdf_tools.py'), 'reverse', src, dst], { stdio: 'inherit' });
 if (r.status !== 0) process.exit(1);
 console.log('reversed ->', dst);
+
+// Cut-out mnemonic flashcards (US Letter + A4): separate printable sheets, not part of the KDP interior.
+const { main: flashcards } = await import('./flashcards.mjs');
+await flashcards([]);

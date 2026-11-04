@@ -18,9 +18,11 @@ import { transliterate } from '../src/pronunciation/transliterate.js';
 import { createImgResolver } from './img.js';
 import { overlaySvg, glyphFor, loadLettersJson } from '../tools/images/overlay.mjs';
 import { LETTERS, letterToken, VOWELS } from '../tools/images/spec.mjs';
+import { mnemonicCards, mnemonicStatus } from './cards.mjs';
 import { ROOT, readJson, vocabFor, soundFor, vowelRecords, cleanNote, drills, consonantFeatures, registryEntries, phrasebook, SITUATION_TITLES, wordPool } from './content.mjs';
 
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+export const esc_ = esc;
 const he = (s, cls = '') => `<span class="he ${cls}" lang="he" dir="rtl">${s}</span>`;
 const CONFIG = readJson('book/config.json') ?? { host: 'alef.example.org', hostIsPlaceholder: true, scheme: 'https', letterPath: '/#/letters/', readPath: '/#/read/' };
 
@@ -103,7 +105,7 @@ ${o.print ? '' : '@page :first{margin:0;@bottom-center{content:none}}'}
 @page main{${foot}} @page nofoot{@bottom-center{content:none}}`;
 }
 
-function fontFaces(outDir) {
+export function fontFaces(outDir) {
   const rel = (f) => relative(outDir, join(ROOT, 'assets/fonts', f)).split('/').map(encodeURIComponent).join('/').replace(/%2C/g, ',');
   const heRange = 'U+0590-05FF, U+FB1D-FB4F, U+200C-200F, U+25CC';
   return `@font-face{font-family:"Noto Serif Hebrew";src:url("${rel('notoserifhebrew-NotoSerifHebrew[wdth,wght].ttf')}") format("truetype");font-weight:100 900;unicode-range:${heRange}}
@@ -158,7 +160,7 @@ export function buildHtml(o, pages = {}) {
 <p><b>Which pronunciation?</b> Hebrew is read differently in Israel, in Sephardi tradition and in Ashkenazi tradition. The next page explains the differences. The app lets you choose; American synagogues often use the Sephardi values.</p>
 <div class="slot"><b>Companion app.</b> The page for any letter is ${esc(letterUrl(o.host, '<letter>'))} and any prayer is ${esc(readUrl(o.host, '<text>'))}.${ph ? ` <b style="color:#B0373B">The host &ldquo;${esc(o.host)}&rdquo; is a PLACEHOLDER: those links do not work until a real domain is chosen (one value, book/config.json).</b>` : ''}</div>
 <h3 style="margin-top:.25in">Contents</h3><ul class="toc">
-${toc('ch-blessing', 'The Priestly Blessing')}${toc('ch-trad', 'Pronunciation traditions')}${toc('ch-alphabet', 'The alphabet at a glance')}${toc('letter-alef', 'The 27 letters (22 letters and 5 final forms)')}${toc('ch-vowels', 'The vowels')}${toc('ch-reading', 'Reading practice: syllables')}${toc('ch-practice', 'Reading practice: words')}${toc('ch-blessing-words', 'The Priestly Blessing, word by word')}${toc('ch-prayers', 'Prayers and verses')}${toc('ch-survival', 'Survival Hebrew')}${toc('ch-index', 'Index')}${toc('ch-colophon', 'Colophon, sources and statuses')}</ul></section>`;
+${toc('ch-blessing', 'The Priestly Blessing')}${toc('ch-trad', 'Pronunciation traditions')}${toc('ch-alphabet', 'The alphabet at a glance')}${toc('letter-alef', 'The 27 letters (22 letters and 5 final forms)')}${toc('ch-remember', 'Remember every letter')}${toc('ch-vowels', 'The vowels')}${toc('ch-reading', 'Reading practice: syllables')}${toc('ch-practice', 'Reading practice: words')}${toc('ch-blessing-words', 'The Priestly Blessing, word by word')}${toc('ch-prayers', 'Prayers and verses')}${toc('ch-survival', 'Survival Hebrew')}${toc('ch-index', 'Index')}${toc('ch-colophon', 'Colophon, sources and statuses')}</ul></section>`;
 
   // ---- pronunciation traditions ----
   const dr = drills();
@@ -199,6 +201,24 @@ ${LETTERS.map((L) => `<tr><td>${L.nn}</td><td class="he" lang="he" dir="rtl">${g
 <div class="slot link-slot">${qrBox('letter_' + L.id, 'qr')}<div class="url"><b>Hear it &amp; trace it:</b><br/>${esc(url)}${ph ? '<span class="ph">placeholder host, not a live site</span>' : ''}</div></div></div>
 <div class="vocab">${vocab}</div>${sound}</section>`;
   }).join('\n');
+
+  // ---- Remember every letter: one mnemonic card per letter (data/letters/mnemonics.json, read fresh) ----
+  const mst = mnemonicStatus();
+  const cards = mnemonicCards();
+  const rememberCard = (c) => {
+    const img = R.src(c.stem);
+    return `<div class="mcard" id="mn-${c.id}"><div class="mpic">${overlaySvg({ id: c.id, state: 'outline', imageHref: img, size: 600, lettersJson, title: `${c.name}: ${c.stem}` })}</div>
+<div class="mhead"><span class="mn">${c.nn}</span><b>${esc(c.name)}</b>${he(glyphFor(c.id, lettersJson), 'mg')}</div>
+<p><span class="k">Shape</span>${esc(c.shape)}</p><p><span class="k">Sound</span>${esc(c.sound)}</p><p><span class="k">Story</span>${esc(c.story)}</p>
+<p class="warn"><span class="k">Look-alike</span>${esc(c.lookalike)}</p>
+<p class="anchor"><span class="k">Anchor word</span>${he(c.word, 'aw')} <i>${esc(c.wordSound)}</i> &middot; ${esc(c.wordMeaning)}</p></div>`;
+  };
+  const rememberPages = [];
+  rememberPages.push(cards.slice(0, 4)); // page 1 shares the page with the intro text: 4 cards, then 6 per page
+  for (let i = 4; i < cards.length; i += 6) rememberPages.push(cards.slice(i, i + 6));
+  const remember = `<section class="chapter" id="ch-remember"><h2>Remember every letter</h2>
+<p class="small">One card per letter: a shape to see, a sound to say, a silly story that holds both, the look-alike to watch out for, and a word to anchor it. The hook is the memory aid, not the history: the letter-name meanings are real Hebrew words, but the claim that each letter was originally drawn as that object is a popular teaching story. ${mst.draft ? '<b>Draft:</b> these hooks and the pointed anchor words have not been checked by a Hebrew teacher. ' : ''}The picture on each card is ${R.isReal(cards[0].stem) ? 'an illustration' : 'a labelled placeholder until the image run is done'}; the faint outlined letter is typeset over it as vector. The same 27 cards are on the cut-out flashcard sheets (alef-mnemonic-flashcards-*.pdf).</p>
+${rememberPages.map((pg, i) => `<div class="mgrid${i ? '' : ' p1'}"${i ? ' style="break-before:page"' : ''}>${pg.map(rememberCard).join('')}</div>`).join('')}</section>`;
 
   // ---- vowels ----
   const vrec = vowelRecords();
@@ -247,12 +267,12 @@ ${pb.situations.map((s) => { const rows = pb.entries.filter((e) => e.situation =
 <h3>Vowels and marks</h3>${sorted(vrec, (v) => v.name).map((v) => link('vowel-' + v.id, esc(v.name), ' ' + he(v.shape))).join('')}
 <h3>Prayers and verses</h3>${sorted(regPrayers, (e) => e.title).map((e) => link('text-' + e.id, esc(e.title))).join('')}
 <h3>Survival phrases by situation</h3>${pb.situations.map((s) => link('sit-' + (s.id ?? s), esc(SITUATION_TITLES[s.id ?? s] ?? (s.id ?? s)))).join('')}
-<h3>Topics</h3>${[['ch-trad', 'Pronunciation traditions'], ['ch-reading', 'Syllable practice'], ['ch-practice', 'Practice words'], ['ch-blessing-words', 'Priestly Blessing, word by word'], ['ch-how', 'How to use this book']].map(([i, l]) => link(i, l)).join('')}
+<h3>Topics</h3>${[['ch-trad', 'Pronunciation traditions'], ['ch-reading', 'Syllable practice'], ['ch-practice', 'Practice words'], ['ch-blessing-words', 'Priestly Blessing, word by word'], ['ch-remember', 'Remember every letter (mnemonic cards)'], ['ch-how', 'How to use this book']].map(([i, l]) => link(i, l)).join('')}
 </div></section>`;
 
   const attr = [...new Set([...(blessing.attributions || []), ...regPrayers.map((e) => e.attribution)].filter(Boolean))];
   const colophon = `<section class="chapter end-page" id="ch-colophon"><h2>Colophon, sources and statuses</h2>
-<p class="small"><b>Draft proof</b> generated by book/build.mjs; letters data: ${esc(lettersSource)}. Hebrew print face: Noto Serif Hebrew; handwriting: Gveret Levin; fallback Frank Ruhl Libre (all SIL Open Font License 1.1; licence texts for Frank Ruhl Libre and Gveret Levin are in assets/fonts, the Noto licence file still has to be added before shipping). QR codes made with segno (BSD-3).</p>
+<p class="small"><b>Draft proof</b> generated by book/build.mjs; letters data: ${esc(lettersSource)}. Hebrew print face: Noto Serif Hebrew; handwriting: Gveret Levin; fallback Frank Ruhl Libre (all SIL Open Font License 1.1; licence texts for all three are in assets/fonts/*-OFL.txt and docs/licenses/; the Noto Serif Hebrew text is byte-identical to google/fonts ofl/notoserifhebrew/OFL.txt, fetched 2026-11-03). QR codes made with segno (BSD-3).</p>
 <p class="small"><b>What is placeholder:</b> every illustration is a labelled placeholder (no AI images have been generated); audio recordings do not exist yet (the app falls back to a device voice); the opening prayer is a draft pending clergy review; prayer texts and the phrasebook are not proofread by native speakers; stroke data for handwriting is draft quality; the companion-app host ${esc(o.host)}${ph ? ' is a placeholder domain' : ''}.</p>
 ${attr.length ? `<h3>Text attributions (from the registry)</h3>${attr.map((a) => `<p class="small">${esc(a)}</p>`).join('')}` : ''}
 <p class="small"><b>Image credit line (use once real images replace placeholders):</b> Illustrations created with AI tools and edited by the author.</p></section>`;
@@ -260,6 +280,7 @@ ${attr.length ? `<h3>Text attributions (from the registry)</h3>${attr.map((a) =>
   const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>ALEF - draft proof</title><style>${pageCss(o, tw, th, bleed)}\n${fontFaces(outDir)}\n${readFileSync(join(ROOT, 'book/style.css'), 'utf8')}</style></head><body>
 ${cover}${prayerOpen}${blessingPage}${howTo}${tradPage}${alphabet}
 ${letterPages}
+${remember}
 ${vowelChapter}${reading}${practiceWords}${blessingWords}${prayerCards}${survival}${index}${colophon}
 </body></html>`;
   return html;

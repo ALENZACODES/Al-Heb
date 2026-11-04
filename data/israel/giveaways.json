@@ -1,0 +1,653 @@
+{
+ "version": 1,
+ "status": "draft-needs-native-review",
+ "proofread": false,
+ "needsNativeReview": true,
+ "note": "Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, transliteration (capitals mark the stressed syllable), register labels and gender forms have NOT been checked by a native speaker. No audio exists for any item. Nothing here was tested with learners.",
+ "items": [
+  {
+   "id": "gv-noun-adj",
+   "category": "gender",
+   "title": "The adjective does not match the noun",
+   "wrong": {
+    "he": "הַמִּסְעָדָה טוֹב",
+    "translit": "hamis'aDA tov"
+   },
+   "right": {
+    "he": "הַמִּסְעָדָה טוֹבָה",
+    "translit": "hamis'aDA toVA"
+   },
+   "why": "Every Hebrew noun is masculine or feminine. A noun ending in -a is usually feminine, and the adjective must match it.",
+   "fix": "When you learn a noun, learn it with its adjective ending: misada tova.",
+   "say": "Say: hakafe tov (masculine), hamisada tova (feminine).",
+   "genderFocus": "noun",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true,
+   "drill": {
+    "prompt": "Pick the correct sentence for 'The restaurant is good'.",
+    "options": [
+     {
+      "id": "a",
+      "text": "הַמִּסְעָדָה טוֹבָה",
+      "translit": "hamis'aDA toVA"
+     },
+     {
+      "id": "b",
+      "text": "הַמִּסְעָדָה טוֹב",
+      "translit": "hamis'aDA tov"
+     },
+     {
+      "id": "c",
+      "text": "הַמִּסְעָדָה טוֹבִים",
+      "translit": "hamis'aDA toVIM"
+     }
+    ],
+    "answer": "a",
+    "explain": "Misada is feminine, so the adjective takes -a: tova. Tov is masculine singular; tovim is plural."
+   }
+  },
+  {
+   "id": "gv-speaker-gender",
+   "category": "gender",
+   "title": "Using the wrong form for your own gender",
+   "wrong": {
+    "he": "אֲנִי רוֹצֶה",
+    "translit": "ani roTSE",
+    "note": "said by a woman"
+   },
+   "right": {
+    "he": "אֲנִי רוֹצָה",
+    "translit": "ani roTSA"
+   },
+   "why": "Present-tense verbs agree with the speaker: men say rotse, women say rotsa. Learners often use only the masculine form they met first.",
+   "fix": "Practice each phrase in your own form, and in the other form for when you quote someone.",
+   "say": "Say the line three times in your own form.",
+   "genderFocus": "speaker",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true,
+   "drill": {
+    "prompt": "Imagine you are a woman. How do you say 'I want water'?",
+    "options": [
+     {
+      "id": "a",
+      "text": "אֲנִי רוֹצָה מַיִם",
+      "translit": "ani roTSA MAyim"
+     },
+     {
+      "id": "b",
+      "text": "אֲנִי רוֹצֶה מַיִם",
+      "translit": "ani roTSE MAyim"
+     },
+     {
+      "id": "c",
+      "text": "אֲנִי רוֹצִים מַיִם",
+      "translit": "ani rotSIM MAyim"
+     }
+    ],
+    "answer": "a",
+    "explain": "A woman says rotsa. Rotse is the masculine form; rotsim is plural."
+   }
+  },
+  {
+   "id": "gv-addressee-gender",
+   "category": "gender",
+   "title": "Addressing a woman with a masculine form",
+   "wrong": {
+    "he": "מָה שְׁלוֹמְךָ?",
+    "translit": "ma shlomCHA?",
+    "note": "said to a woman"
+   },
+   "right": {
+    "he": "מָה שְׁלוֹמֵךְ?",
+    "translit": "ma shloMECH?"
+   },
+   "why": "Words like 'you' and the endings -cha / -ech change with the person you speak to.",
+   "fix": "Before you speak, decide who you are talking to. If you are not sure, use a form with no gender, like ma nishma?",
+   "say": "Say: ma shlomcha (to a man), ma shlomech (to a woman).",
+   "genderFocus": "addressee",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true,
+   "drill": {
+    "prompt": "You ask a woman how she is. Which is correct?",
+    "options": [
+     {
+      "id": "a",
+      "text": "מָה שְׁלוֹמֵךְ?",
+      "translit": "ma shloMECH?"
+     },
+     {
+      "id": "b",
+      "text": "מָה שְׁלוֹמְךָ?",
+      "translit": "ma shlomCHA?"
+     },
+     {
+      "id": "c",
+      "text": "מָה שְׁלוֹמוֹ?",
+      "translit": "ma shloMO?"
+     }
+    ],
+    "answer": "a",
+    "explain": "Shlomech is for a woman, shlomcha for a man, shlomo means 'his well-being'."
+   }
+  },
+  {
+   "id": "gv-final-he",
+   "category": "sound",
+   "title": "Saying the final 'h' in -eh",
+   "wrong": {
+    "he": "רוֹצֶה",
+    "translit": "roTSEH",
+    "note": "with a breath at the end"
+   },
+   "right": {
+    "he": "רוֹצֶה",
+    "translit": "roTSE"
+   },
+   "why": "A final ה (he) usually only shows the vowel. It is silent. Textbook romanisations like 'rotseh' tempt learners to pronounce an h.",
+   "fix": "Read the last letter as part of the vowel and end the word on the vowel.",
+   "say": "Say: roTSE, roTSA, taleh... end each on the vowel.",
+   "genderFocus": "none",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true,
+   "drill": {
+    "prompt": "How do people say רוֹצֶה in normal speech?",
+    "options": [
+     {
+      "id": "a",
+      "text": "roTSE, ending on the vowel",
+      "translit": "roTSE"
+     },
+     {
+      "id": "b",
+      "text": "roTSEH, with a clear h",
+      "translit": "roTSEH"
+     },
+     {
+      "id": "c",
+      "text": "roTSEKH",
+      "translit": "roTSEKH"
+     }
+    ],
+    "answer": "a",
+    "explain": "The final ה marks the vowel and is not pronounced as a consonant."
+   }
+  },
+  {
+   "id": "gv-stress-last",
+   "category": "stress",
+   "title": "Stressing the first syllable",
+   "wrong": {
+    "he": "תּוֹדָה",
+    "translit": "TOda",
+    "note": "stressed on the first syllable"
+   },
+   "right": {
+    "he": "תּוֹדָה",
+    "translit": "toDA"
+   },
+   "why": "Most Hebrew words are stressed on the last syllable. English speakers tend to stress the first.",
+   "fix": "Mark the stress in your notes. Practice toDA, bevakaSHA, sliCHA, shaLOM, kaMA.",
+   "say": "Say: toDA, sliCHA, bevakaSHA, with the stress last.",
+   "genderFocus": "none",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true,
+   "drill": {
+    "prompt": "Which is the usual stress of תּוֹדָה?",
+    "options": [
+     {
+      "id": "a",
+      "text": "toDA",
+      "translit": "toDA"
+     },
+     {
+      "id": "b",
+      "text": "TOda",
+      "translit": "TOda"
+     },
+     {
+      "id": "c",
+      "text": "both are common",
+      "translit": ""
+     }
+    ],
+    "answer": "a",
+    "explain": "Toda is stressed on the last syllable, like most Hebrew words."
+   }
+  },
+  {
+   "id": "gv-stress-segolate",
+   "category": "stress",
+   "title": "Stressing the last syllable of every word",
+   "wrong": {
+    "he": "בֹּקֶר",
+    "translit": "boKER",
+    "note": "stressed on the last syllable"
+   },
+   "right": {
+    "he": "בֹּקֶר",
+    "translit": "BOker"
+   },
+   "why": "Some common nouns, such as boker, layla, sefer, erev, are stressed on the next-to-last syllable. They often have two segol-type vowels.",
+   "fix": "Learn these common words with the stress marked and say them aloud as chunks.",
+   "say": "Say: BOker, LAyla, SEfer, EREV.",
+   "genderFocus": "none",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true,
+   "drill": {
+    "prompt": "Which is the usual stress of בֹּקֶר?",
+    "options": [
+     {
+      "id": "a",
+      "text": "BOker",
+      "translit": "BOker"
+     },
+     {
+      "id": "b",
+      "text": "boKER",
+      "translit": "boKER"
+     },
+     {
+      "id": "c",
+      "text": "both",
+      "translit": ""
+     }
+    ],
+    "answer": "a",
+    "explain": "Boker is stressed on the first syllable. This is one of the common exceptions to last-syllable stress."
+   }
+  },
+  {
+   "id": "gv-chet",
+   "category": "sound",
+   "title": "Saying chet as 'ch' in church or as 'h'",
+   "wrong": {
+    "he": "חָלָב",
+    "translit": "tshaLAV",
+    "note": "ch as in church"
+   },
+   "right": {
+    "he": "חָלָב",
+    "translit": "chaLAV"
+   },
+   "why": "Chet (ח) and kaf without a dot (כ) are both a rough sound made in the throat, like the ch in Scottish loch. It is not English ch or h.",
+   "fix": "Make an English h, then tighten the back of the throat and add friction.",
+   "say": "Say: chaLAV, lechem, chaVER.",
+   "genderFocus": "none",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true,
+   "drill": {
+    "prompt": "How does חָלָב (milk) begin?",
+    "options": [
+     {
+      "id": "a",
+      "text": "a rough sound in the throat, like Scottish 'loch'",
+      "translit": "kh"
+     },
+     {
+      "id": "b",
+      "text": "like ch in 'church'",
+      "translit": "tsh"
+     },
+     {
+      "id": "c",
+      "text": "like h in 'hat'",
+      "translit": "h"
+     }
+    ],
+    "answer": "a",
+    "explain": "Chet is the rough throat sound. Church-ch and plain h are common learner errors."
+   }
+  },
+  {
+   "id": "gv-resh",
+   "category": "sound",
+   "title": "Rolling the resh like Spanish or English r",
+   "wrong": {
+    "he": "רֹאשׁ",
+    "translit": "rosh (rolled r)",
+    "note": "tongue-tip roll"
+   },
+   "right": {
+    "he": "רֹאשׁ",
+    "translit": "rosh (back of throat)"
+   },
+   "why": "Many modern Israeli speakers are commonly heard to say resh at the back of the mouth, not with the tip of the tongue. It varies by speaker, so this is a tendency, not a rule.",
+   "fix": "Practise a gentle growl at the back of the mouth, between English r and French r. Do not worry if it is hard: clarity matters more.",
+   "say": "Say: rosh, rega, rakevet, trying the back-of-throat r.",
+   "genderFocus": "none",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "drill": {
+    "prompt": "Which resh is commonly heard in everyday modern Israeli speech?",
+    "options": [
+     {
+      "id": "a",
+      "text": "an r made at the back of the throat",
+      "translit": "uvular r"
+     },
+     {
+      "id": "b",
+      "text": "a rolled r made with the tip of the tongue",
+      "translit": "trill"
+     },
+     {
+      "id": "c",
+      "text": "an American English r",
+      "translit": "English r"
+     }
+    ],
+    "answer": "a",
+    "explain": "A back-of-throat r is commonly heard. Other pronunciations exist: ask a native speaker what they do."
+   },
+   "confidenceReason": "Dialect and generation differences were not checked."
+  },
+  {
+   "id": "gv-toda-raba",
+   "category": "register",
+   "title": "Saying 'toda raba' for everything",
+   "wrong": {
+    "he": "תּוֹדָה רַבָּה מְאוֹד",
+    "translit": "toDA raBA me'OD",
+    "note": "for a held door"
+   },
+   "right": {
+    "he": "תּוֹדָה",
+    "translit": "toDA"
+   },
+   "why": "Plain toda is the commonly heard thanks for small things. Toda raba is warmer and suits a bigger favour. Saying the heavy form for everything can sound over-careful.",
+   "fix": "Use toda for small things, toda raba when someone really helped you.",
+   "say": "Say: toDA, then toDA raBA, with different warmth.",
+   "genderFocus": "none",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "drill": {
+    "prompt": "A stranger holds the door open for you. What is the lightest natural thanks?",
+    "options": [
+     {
+      "id": "a",
+      "text": "תּוֹדָה",
+      "translit": "toDA"
+     },
+     {
+      "id": "b",
+      "text": "תּוֹדָה רַבָּה מְאוֹד מְאוֹד",
+      "translit": "toDA raBA me'OD me'OD"
+     },
+     {
+      "id": "c",
+      "text": "אֲנִי מוֹדֶה לְךָ מִקִּרְבִּי",
+      "translit": "ani moDE lecha mikirBI"
+     }
+    ],
+    "answer": "a",
+    "explain": "Plain toda fits. The other lines are grand for a held door."
+   },
+   "confidenceReason": "Based on general impressions of everyday use, not measured."
+  },
+  {
+   "id": "gv-efshar",
+   "category": "register",
+   "title": "Opening every request with 'I want'",
+   "wrong": {
+    "he": "אֲנִי רוֹצֶה קָפֶה",
+    "translit": "ani roTSE kaFE"
+   },
+   "right": {
+    "he": "אֶפְשָׁר קָפֶה?",
+    "translit": "efSHAR kaFE?"
+   },
+   "why": "Ani rotse is understood and not rude, but efshar ...? ('is it possible ...?') is the opener commonly heard when ordering, and it has no gender to get wrong.",
+   "fix": "Start requests with efshar, and add bevakasha.",
+   "say": "Say: efshar kafe? efshar chesbon? efshar lashevet po?",
+   "genderFocus": "none",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "drill": {
+    "prompt": "Which request needs no choice of gender?",
+    "options": [
+     {
+      "id": "a",
+      "text": "אֶפְשָׁר קָפֶה?",
+      "translit": "efSHAR kaFE?"
+     },
+     {
+      "id": "b",
+      "text": "אֲנִי רוֹצֶה קָפֶה",
+      "translit": "ani roTSE kaFE"
+     },
+     {
+      "id": "c",
+      "text": "אֲנִי מַעֲדִיפָה קָפֶה",
+      "translit": "ani ma'adiFA kaFE"
+     }
+    ],
+    "answer": "a",
+    "explain": "Efshar has no gendered word. Rotse/rotsa and ma'adif/ma'adifa change with the speaker."
+   },
+   "confidenceReason": "'Commonly heard' is a general impression, not measured."
+  },
+  {
+   "id": "gv-yesh-li",
+   "category": "form",
+   "title": "Saying 'I am have' for 'I have'",
+   "wrong": {
+    "he": "אֲנִי יֵשׁ אָחוֹת",
+    "translit": "ani YESH aCHOT"
+   },
+   "right": {
+    "he": "יֵשׁ לִי אָחוֹת",
+    "translit": "YESH li aCHOT"
+   },
+   "why": "Hebrew has no verb 'to have'. You say 'there is to me': yesh li.",
+   "fix": "Memorise yesh li, yesh lecha, yesh lo as chunks.",
+   "say": "Say: yesh li kesef, yesh li zman.",
+   "genderFocus": "none",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true,
+   "drill": {
+    "prompt": "How do you say 'I have a sister'?",
+    "options": [
+     {
+      "id": "a",
+      "text": "יֵשׁ לִי אָחוֹת",
+      "translit": "YESH li aCHOT"
+     },
+     {
+      "id": "b",
+      "text": "אֲנִי יֵשׁ אָחוֹת",
+      "translit": "ani YESH aCHOT"
+     },
+     {
+      "id": "c",
+      "text": "אֲנִי אָחוֹת",
+      "translit": "ani aCHOT"
+     }
+    ],
+    "answer": "a",
+    "explain": "Yesh li means 'I have'. Ani yesh is a literal English translation."
+   }
+  },
+  {
+   "id": "gv-gemination",
+   "category": "sound",
+   "title": "Doubling consonants because of a dagesh",
+   "wrong": {
+    "he": "אֶקַּח",
+    "translit": "ek-KACH",
+    "note": "long doubled k"
+   },
+   "right": {
+    "he": "אֶקַּח",
+    "translit": "eKACH"
+   },
+   "why": "In everyday Israeli Hebrew a dagesh does not usually double the consonant. Reading each pointed vowel and dot as a separate sound can sound like reading a textbook aloud. Likewise kamatz and patach sound the same (a), and tsere and segol sound the same (e).",
+   "fix": "Say each word as one flowing chunk. If a point looks tricky, ask whether it changes the sound in Israeli Hebrew.",
+   "say": "Say: eKACH, hapa'AM, with single consonants.",
+   "genderFocus": "none",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true,
+   "drill": {
+    "prompt": "How do you say אֶקַּח in normal speech?",
+    "options": [
+     {
+      "id": "a",
+      "text": "eKACH, with a single k",
+      "translit": "eKACH"
+     },
+     {
+      "id": "b",
+      "text": "ek-KACH, long doubled k",
+      "translit": "ek-KACH"
+     },
+     {
+      "id": "c",
+      "text": "eKAH",
+      "translit": "eKAH"
+     }
+    ],
+    "answer": "a",
+    "explain": "A single consonant. The dagesh is a spelling rule, not a doubling in everyday speech."
+   }
+  },
+  {
+   "id": "gv-haim",
+   "category": "register",
+   "title": "Starting every question with 'ha'im'",
+   "wrong": {
+    "he": "הַאִם אַתָּה בָּא?",
+    "translit": "ha'IM aTA ba?"
+   },
+   "right": {
+    "he": "אַתָּה בָּא?",
+    "translit": "aTA ba?"
+   },
+   "why": "Ha'im marks a question in writing and in formal speech. In conversation, a rising voice is enough.",
+   "fix": "Say the statement and lift your voice at the end.",
+   "say": "Say: aTA ba? yesh li? zeh po?",
+   "genderFocus": "addressee",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true,
+   "drill": {
+    "prompt": "Which question sounds most natural in a casual chat?",
+    "options": [
+     {
+      "id": "a",
+      "text": "אַתָּה בָּא?",
+      "translit": "aTA ba?"
+     },
+     {
+      "id": "b",
+      "text": "הַאִם אַתָּה בָּא?",
+      "translit": "ha'IM aTA ba?"
+     },
+     {
+      "id": "c",
+      "text": "הַאִם הִנְּךָ בָּא?",
+      "translit": "ha'IM hinCHA ba?"
+     }
+    ],
+    "answer": "a",
+    "explain": "Rising voice alone is natural. The others sound formal or archaic."
+   }
+  },
+  {
+   "id": "gv-pure-vowels",
+   "category": "sound",
+   "title": "Gliding the vowels like English",
+   "wrong": {
+    "he": "שָׁלוֹם",
+    "translit": "shaLOWm",
+    "note": "with a w glide"
+   },
+   "right": {
+    "he": "שָׁלוֹם",
+    "translit": "shaLOM"
+   },
+   "why": "Hebrew has five clean vowels (a, e, i, o, u). English glides (oh-oo, ay-ee) mark an accent right away.",
+   "fix": "Say each vowel and hold your mouth still while you say it.",
+   "say": "Say: a, e, i, o, u; then shaLOM, toDA, ken.",
+   "genderFocus": "none",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true,
+   "drill": {
+    "prompt": "Which describes the 'o' in shalom?",
+    "options": [
+     {
+      "id": "a",
+      "text": "a clean short o, no glide",
+      "translit": "o"
+     },
+     {
+      "id": "b",
+      "text": "oh-w, like American 'oh'",
+      "translit": "ow"
+     },
+     {
+      "id": "c",
+      "text": "aw, as in 'law'",
+      "translit": "aw"
+     }
+    ],
+    "answer": "a",
+    "explain": "A pure o. The glide marks a foreign accent."
+   }
+  },
+  {
+   "id": "gv-vav",
+   "category": "sound",
+   "title": "Saying vav as English w",
+   "wrong": {
+    "he": "וָואלָה",
+    "translit": "waLA",
+    "note": "w instead of v"
+   },
+   "right": {
+    "he": "וָואלָה",
+    "translit": "vaLA"
+   },
+   "why": "Vav (ו) as a consonant is v, as in van. Hebrew has no w sound.",
+   "fix": "Put your top teeth on your bottom lip for v.",
+   "say": "Say: vaLA, vav, vered.",
+   "genderFocus": "none",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true,
+   "drill": {
+    "prompt": "How does the first letter of וָואלָה sound?",
+    "options": [
+     {
+      "id": "a",
+      "text": "v as in 'van'",
+      "translit": "v"
+     },
+     {
+      "id": "b",
+      "text": "w as in 'water'",
+      "translit": "w"
+     },
+     {
+      "id": "c",
+      "text": "it is silent",
+      "translit": ""
+     }
+    ],
+    "answer": "a",
+    "explain": "Consonant vav is v."
+   }
+  }
+ ]
+}

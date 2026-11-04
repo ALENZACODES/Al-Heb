@@ -1,0 +1,410 @@
+{
+ "version": 1,
+ "status": "draft-needs-native-review",
+ "proofread": false,
+ "needsNativeReview": true,
+ "note": "Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, transliteration (capitals mark the stressed syllable), register labels and gender forms have NOT been checked by a native speaker. No audio exists for any item. Nothing here was tested with learners.",
+ "fillers": [
+  {
+   "id": "fl-yalla",
+   "he": "יַאלְלָה",
+   "translit": "yaLA",
+   "en": "come on, let's go, okay then",
+   "register": "casual",
+   "usage": "Urging, agreeing to go, or closing a conversation ('yalla bye').",
+   "example": {
+    "he": "יַאלְלָה, נֵלֵךְ",
+    "translit": "yaLA, neLECH",
+    "en": "Come on, let's go."
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "From Arabic. Very common. Said sharply it can sound impatient.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Meaning solid; stress is our best understanding."
+  },
+  {
+   "id": "fl-sababa",
+   "he": "סַבָּבָּה",
+   "translit": "saBAba",
+   "en": "cool, fine, great",
+   "register": "slang",
+   "usage": "Agreeing or saying something is fine.",
+   "example": {
+    "he": "הַכֹּל סַבָּבָּה",
+    "translit": "haKOL saBAba",
+    "en": "Everything is cool."
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "From Arabic. Keep it for friends and relaxed settings.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "fl-nu",
+   "he": "נוּ",
+   "translit": "NU",
+   "en": "well? so? come on",
+   "register": "casual",
+   "usage": "Nudging someone to continue or hurry; can also express impatience.",
+   "example": {
+    "he": "נוּ, מָה?",
+    "translit": "NU, MA?",
+    "en": "Well, what?"
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "Of Yiddish origin. Tone matters: it can be friendly or impatient.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "fl-achi",
+   "he": "אָחִי",
+   "translit": "aCHI",
+   "en": "my brother, mate, dude",
+   "register": "slang",
+   "usage": "Friendly address to a man you are familiar with. Often used between men; avoid with older strangers and in formal settings.",
+   "example": {
+    "he": "אָחִי, תּוֹדָה!",
+    "translit": "aCHI, toDA!",
+    "en": "Mate, thanks!"
+   },
+   "genderNote": "Said to a man. Do not use it for a woman unless you know the local custom.",
+   "note": "The feminine counterpart achoti ('my sister') exists but we are less sure how it is used, so it is not taught here.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "fl-beseder",
+   "he": "בְּסֵדֶר",
+   "translit": "beSEder",
+   "en": "okay, all right, fine",
+   "register": "neutral",
+   "usage": "Agreeing, accepting, saying you are fine. Safe in any setting.",
+   "example": {
+    "he": "הַכֹּל בְּסֵדֶר",
+    "translit": "haKOL beSEder",
+    "en": "Everything is fine."
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "Literally 'in order'.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "fl-balagan",
+   "he": "בָּלָגָן",
+   "translit": "balaGAN",
+   "en": "a mess, chaos",
+   "register": "casual",
+   "usage": "Describing a messy room, situation or schedule.",
+   "example": {
+    "he": "אֵיזֶה בָּלָגָן!",
+    "translit": "EIze balaGAN!",
+    "en": "What a mess!"
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "Used for a mess, not for pain or illness.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "fl-davka",
+   "he": "דַּוְקָא",
+   "translit": "davKA",
+   "en": "specifically, of all things, as it happens",
+   "register": "neutral",
+   "usage": "Pointing out that something is the opposite of what you expect, or exactly that one.",
+   "example": {
+    "he": "דַּוְקָא הַיּוֹם?",
+    "translit": "davKA hayOM?",
+    "en": "Today of all days?"
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "Hard to translate; the nuance depends on context. Learn it by example.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Meaning is solid; the full range of use is subtle."
+  },
+  {
+   "id": "fl-kvar",
+   "he": "כְּבָר",
+   "translit": "KVAR",
+   "en": "already; (urging) come on",
+   "register": "neutral",
+   "usage": "'Already' in time. Also said with a push, as in 'enough already'.",
+   "example": {
+    "he": "הוּא כְּבָר פֹּה",
+    "translit": "HU kvar PO",
+    "en": "He is already here."
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "The impatient 'kvar!' use depends on tone; use it only with people you know.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "fl-ma-pitom",
+   "he": "מָה פִּתְאוֹם",
+   "translit": "ma pitOM",
+   "en": "no way, what do you mean, of course not",
+   "register": "casual",
+   "usage": "Rejecting a suggestion or an accusation.",
+   "example": {
+    "he": "מָה פִּתְאוֹם!",
+    "translit": "ma pitOM!",
+    "en": "No way!"
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "Literally 'what suddenly?'. Can sound sharp; use with friends.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "fl-vala",
+   "he": "וָואלָה",
+   "translit": "vaLA",
+   "en": "really? wow; honestly",
+   "register": "slang",
+   "usage": "Reacting with surprise or confirming something.",
+   "example": {
+    "he": "וָואלָה?",
+    "translit": "vaLA?",
+    "en": "Really?"
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "From Arabic. The first letters are pronounced 'v', not 'w'.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "fl-chaval",
+   "he": "חֲבָל עַל הַזְּמַן",
+   "translit": "chaVAL al hazMAN",
+   "en": "amazing, awesome",
+   "register": "slang",
+   "usage": "Praising a thing or a person. The literal meaning is a pity about the time (it is a waste).",
+   "example": {
+    "he": "הַמּוּזִיקָה חֲבָל עַל הַזְּמַן",
+    "translit": "hamuZIka chaVAL al hazMAN",
+    "en": "The music is awesome."
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "Slang; do not translate word by word.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "fl-achla",
+   "he": "אַחְלָה",
+   "translit": "achLA",
+   "en": "great, cool",
+   "register": "slang",
+   "usage": "Saying something is good. Some speakers may find it a little dated: we have not checked.",
+   "example": {
+    "he": "אַחְלָה, תּוֹדָה",
+    "translit": "achLA, toDA",
+    "en": "Great, thanks."
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "Meaning is clear; how current it sounds is not checked.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Meaning is solid; frequency among younger speakers is unknown."
+  },
+  {
+   "id": "fl-yofi",
+   "he": "יוֹפִי",
+   "translit": "yoFI",
+   "en": "great, nice, good job",
+   "register": "neutral",
+   "usage": "Praising, agreeing, closing a thought. Fits most settings.",
+   "example": {
+    "he": "יוֹפִי, תּוֹדָה",
+    "translit": "yoFI, toDA",
+    "en": "Great, thanks."
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "Means 'beauty'.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "fl-mamash",
+   "he": "מַמָּשׁ",
+   "translit": "maMASH",
+   "en": "really, truly",
+   "register": "neutral",
+   "usage": "Intensifying: really good, really tired.",
+   "example": {
+    "he": "מַמָּשׁ טוֹב",
+    "translit": "maMASH tov",
+    "en": "Really good."
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "Safe in most settings.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "fl-kef",
+   "he": "כֵּיף",
+   "translit": "KEIF",
+   "en": "fun, a pleasure, great",
+   "register": "casual",
+   "usage": "Saying something is fun or pleasant.",
+   "example": {
+    "he": "אֵיזֶה כֵּיף!",
+    "translit": "EIze KEIF!",
+    "en": "How nice!"
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "Eize before a noun adds 'what a ...' to an exclamation.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "fl-rega",
+   "he": "רֶגַע",
+   "translit": "REga",
+   "en": "just a moment, wait",
+   "register": "neutral",
+   "usage": "Asking someone to wait or pausing yourself.",
+   "example": {
+    "he": "רֶגַע, רֶגַע",
+    "translit": "REga, REga",
+    "en": "Just a moment, hold on."
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "Literally 'a moment'.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "fl-stam",
+   "he": "סְתָם",
+   "translit": "STAM",
+   "en": "just because, for no reason, nothing special",
+   "register": "casual",
+   "usage": "Answering 'why?' or 'what's up?' lightly.",
+   "example": {
+    "he": "סְתָם, לֹא חָשׁוּב",
+    "translit": "STAM, lo chaSHUV",
+    "en": "Nothing, not important."
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "Also used to mean 'for no reason'.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "fl-barur",
+   "he": "בָּרוּר",
+   "translit": "baRUR",
+   "en": "clear, of course",
+   "register": "neutral",
+   "usage": "Agreeing strongly.",
+   "example": {
+    "he": "בָּרוּר!",
+    "translit": "baRUR!",
+    "en": "Of course!"
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "Literally 'clear'.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "fl-tachles",
+   "he": "תַּכְלֶס",
+   "translit": "takhLES",
+   "en": "bottom line, to be honest",
+   "register": "slang",
+   "usage": "Getting to the point.",
+   "example": {
+    "he": "תַּכְלֶס, זֶה לֹא רַע",
+    "translit": "takhLES, ze lo RA",
+    "en": "Honestly, it's not bad."
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "Of Yiddish origin. We are less sure of all the ways it is used.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Meaning is solid; range of use is not checked."
+  },
+  {
+   "id": "fl-pashut",
+   "he": "פָּשׁוּט",
+   "translit": "paSHUT",
+   "en": "simply, just, easy",
+   "register": "neutral",
+   "usage": "Saying something is simple or just so.",
+   "example": {
+    "he": "זֶה פָּשׁוּט",
+    "translit": "ze paSHUT",
+    "en": "It's simple."
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "Also an adjective meaning 'simple'.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "fl-chevre",
+   "he": "חֲבֵרָה",
+   "translit": "chevRE",
+   "en": "guys, folks (to a group)",
+   "register": "casual",
+   "usage": "Calling a group of friends together. Spelled the same as 'a female friend' (chavera) but pronounced differently.",
+   "example": {
+    "he": "חֲבֵרָה, יַאלְלָה",
+    "translit": "chevRE, yaLA",
+    "en": "Guys, let's go."
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "Not to be confused with chavera, 'a female friend', written the same.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Meaning is solid; the difference between the two readings depends on context."
+  },
+  {
+   "id": "fl-dai",
+   "he": "דַּי",
+   "translit": "DAI",
+   "en": "enough!",
+   "register": "neutral",
+   "usage": "Stopping something.",
+   "example": {
+    "he": "דַּי, תּוֹדָה",
+    "translit": "DAI, toDA",
+    "en": "That's enough, thanks."
+   },
+   "genderNote": "No gender-marked words.",
+   "note": "Can be sharp if said with force. Safe with a smile and toda.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  }
+ ]
+}

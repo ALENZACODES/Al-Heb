@@ -41,6 +41,9 @@ fetched is not available offline; a pre-download of the audio set is not impleme
 Lane 1: tries `src/curriculum/index.js` then `lessons.js` for `export const lessons`; `srs.js` `due`. If lane 1 ships a
 different entry point, change `home.view.js` (one place).
 
+## Shell chrome on a phone
+`index.html` has header, `.site-nav` (`#nav` = Home/Learn/Letters/Sounds/Read, `#more-btn`, `#nav-more` = the other routes with a `nav` key) and the one-line `.sound-bar`. Below 720px the nav is a fixed bottom tab bar and `#nav-more` is the sheet; from 720px it is the old top row. The split is `MAIN_NAV` in `src/app.js`. `assets/css/app.css` also re-orders lane 2's Letters markup on phones (tabs, grid as a scroll strip, letter card, stage first); it selects on `.alef-trace > div:has(> .stage) > .tabs/.grid/.row/.feedback/.notice/details.remember`, so keep that child structure or update the CSS block "Letters / tracing on a phone".
+
 ## Accessibility and RTL
 Skip link, `banner`/`nav`/`main` landmarks, focus management on route change, 48px targets, visible `:focus-visible`,
 `prefers-reduced-motion`, `forced-colors`, dark mode (device or manual), logical CSS properties. Hebrew text is always

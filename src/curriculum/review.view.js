@@ -11,6 +11,7 @@ import { buildQueue, parseCardId, wordAudioId, confusableMap } from "./progress.
 import { playButton } from "./audio-ui.js";
 import { hintPanel } from "./hint-ui.js";
 import { errorKindForCard } from "./hints.js";
+import { fade } from "./fade.js";
 
 const RATINGS = [[1, "Again", "forgot it"], [2, "Hard", "got it with effort"], [3, "Good", "got it"], [4, "Easy", "no effort"]];
 
@@ -30,6 +31,21 @@ export function describeCard(cardId, c, congregation) {
     return { kind: "vowel", prompt: "Which vowel or mark is this, and how does it sound?", he: V.shape, big: true, audio: ["vowel", p.key],
       answer: [V.name, `${vowelEnglish(V, congregation)} ${vowelIpa(V, congregation)}`.trim()], answerHe: V.nameHe, hint: "" };
   }
+  if (p.kind === "syllable") {
+    const it = c.ladderItems?.get(p.key); if (!it) return null;
+    return { kind: "syllable", prompt: "Say this syllable aloud.", he: it.glyph, big: true, audio: ["syllable", p.key], answer: [`${c.letters.get(it.letter)?.name || it.letter} + ${it.vowel} vowel`], answerHe: "", hint: "" };
+  }
+  if (p.kind === "prayerLine") {
+    const e = c.corpus.get(p.key); if (!e) return null;
+    return { kind: "prayerLine", prompt: "Say the whole line from these first letters.", he: fade(e.he, 2).text, big: false, audio: ["line", p.key],
+      answer: [e.english || e.title || ""], answerHe: e.he, hint: "Corpus text: compared with its source by a machine, not proofread by a person." };
+  }
+  if (p.kind === "gender") {
+    const g = c.genderPairs?.get(p.key); if (!g) return null;
+    return { kind: "gender", prompt: g.who === "speaker" ? "Is this said by a man or a woman?" : "Is this said to a man or a woman?", he: g.forms.f.he, big: false, audio: ["word", g.audio.f || `${p.key}-f`],
+      answer: [`The woman form of: ${g.en}`, `The man form: ${g.forms.m.he} (${g.forms.m.translit})`], answerHe: "", hint: "Draft sentence, not checked by a native speaker." };
+  }
+  if (p.kind !== "word") return null;
   const lesson = byId[p.lessonId]; const w = lesson?.words[p.n - 1]; if (!w) return null;
   return { kind: "word", prompt: "Read this word aloud, then recall what it means.", he: w.he, big: false, audio: ["word", wordAudioId(p.lessonId, p.n)],
     answer: [w.en], answerHe: "", hint: "" };

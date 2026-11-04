@@ -4,6 +4,7 @@
  *   #/learn?lesson=<id>              one lesson (letters, vowels, words, prayer lines, audio, mark complete)
  *   #/learn?review=1                 review of all due cards
  *   #/learn?lesson=<id>&review=1     review of that lesson's cards
+ *   #/learn?ladder=1 | fade=1 or <id> | gender=pairs[&quiz=1] | gender=roles | scaffold=1   round-4 exercises
  * ctx: {store (sync or async get/set), route(path), t(key), settings?, audio?, query?}.
  * Storage keys: see progress.js.
  */
@@ -17,12 +18,20 @@ import { mountLoanwords } from "./loanwords.view.js";
 import { mountSpotIt } from "./spotit.view.js";
 import { mountCheckpoint } from "./checkpoint.view.js";
 import { mountDialogues } from "./dialogues.view.js";
+import { mountLadder } from "./ladder.view.js";
+import { mountFade } from "./fade.view.js";
+import { mountGender } from "./gender.view.js";
+import { mountScaffold } from "./scaffold.view.js";
 
 export function mount(root, ctx) {
   const q = ctx?.query || {};
   if (q.loanwords) return mountLoanwords(root, ctx, q.loanwords);
   if (q.spotit) return mountSpotIt(root, ctx, q.spotit, q.seed);
   if (q.checkpoint) return mountCheckpoint(root, ctx, q.seed);
+  if (q.ladder) return mountLadder(root, ctx, q);
+  if (q.fade) return mountFade(root, ctx, String(q.fade), q);
+  if (q.gender) return mountGender(root, ctx, q.gender === "roles" ? "roles" : "pairs", q);
+  if (q.scaffold) return mountScaffold(root, ctx);
   if (q.dialogues || q.dialogue) return mountDialogues(root, ctx, q.dialogue);
   if (q.review) return mountReview(root, ctx, { lessonId: q.lesson });
   if (q.lesson) return mountLesson(root, ctx, q.lesson);
@@ -61,6 +70,11 @@ function mountMap(root, ctx) {
       el("p", { class: "row alef-extras" },
         track === "read" ? el("a", { class: "btn secondary", href: "#/learn?loanwords=1" }, "Words you can already read") : null,
         track === "read" ? el("a", { class: "btn secondary", href: "#/learn?checkpoint=1" }, "Look-alike checkpoint") : null,
+        track === "read" ? el("a", { class: "btn secondary", href: "#/learn?ladder=1" }, "Syllable ladder") : null,
+        track === "read" ? el("a", { class: "btn secondary", href: "#/learn?fade=1" }, "Fade-out recall") : null,
+        el("a", { class: "btn secondary", href: "#/learn?scaffold=1" }, "Read without Latin"),
+        track === "israel" ? el("a", { class: "btn secondary", href: "#/learn?gender=pairs" }, "Gender pairs") : null,
+        track === "israel" ? el("a", { class: "btn secondary", href: "#/learn?gender=roles" }, "Say it as me") : null,
         track === "israel" ? el("a", { class: "btn secondary", href: "#/learn?dialogues=1" }, "Dialogues") : null),
       el("ol", { class: "alef-lesson-list", "aria-label": track === "read" ? "Reading lessons" : "Israel lessons" },
         ...list.map((l) => {

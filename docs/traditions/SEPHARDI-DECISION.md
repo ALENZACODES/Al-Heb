@@ -4,7 +4,7 @@ Status: DRAFT recommendation for the product owner. Nothing in the audio manifes
 
 ## 1. The question
 
-`docs/CONTRACT.md` makes the `sephardi` setting mean "American synagogue default = sephardi values". The manifest holds a `sephardi` entry for every clip a learner can request (2,203 required clips per voice, 4,406 for both voices; `docs/voices/coverage.md`). All are missing, and `data/audio/equivalence.json` is empty on purpose: "no authority has decided" which Israeli clips may stand in. The casting brief (item 43) and the kit README leave this open. The player already supports the answer: a rule produces `equivalentTo` on the entry and `src/audio/player.js` then plays the Israeli file with `via: 'equivalent'`.
+`docs/CONTRACT.md` makes the `sephardi` setting mean "American synagogue default = sephardi values". The manifest holds a `sephardi` entry for every clip a learner can request (2,203 required clips per voice, 4,406 for both voices; `docs/voices/coverage.md`). All are missing, and `data/audio/equivalence.json` is empty on purpose: "no authority has decided" which Israeli clips may stand in. The casting brief (line 43) and the kit README leave this open. The player already supports the answer: a rule produces `equivalentTo` on the entry and `src/audio/player.js` then plays the Israeli file with `via: 'equivalent'`.
 
 ## 2. What the manifest says is the same and what is different (computed from `data/audio/manifest.json`, man voice, 2026-11-03)
 

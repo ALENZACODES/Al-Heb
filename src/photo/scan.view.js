@@ -50,7 +50,7 @@ export function mount(root, ctx = {}) {
   wrap.append(el('p', { class: 'photo-scope' }, 'Printed text only. Handwriting is not supported.'));
   if (!forced) wrap.append(el('p', { class: 'photo-privacy' }, 'The photo is read on this device (first use downloads about 5 MB of OCR data, then it is cached). It is not uploaded. Accuracy on real photos has not been measured yet: check what was read against the page.'));
   const onlineBox = el('input', { type: 'checkbox', id: 'photo-online' });
-  if (!forced) wrap.append(el('label', { class: 'photo-online', for: 'photo-online', style: 'display:block;margin:0.5em 0' }, onlineBox, ' Add vowels to unpointed text online. This sends the recognised Hebrew text (not the photo) to Dicta (dicta.org.il).'));
+  if (!forced) wrap.append(el('label', { class: 'photo-online', for: 'photo-online', style: 'margin:0.5em 0' }, onlineBox, ' Add vowels to unpointed text online. This sends the recognised Hebrew text (not the photo) to Dicta (dicta.org.il).'));
   const helperInput = el('input', { type: 'url', id: 'photo-helper', placeholder: 'http://127.0.0.1:8787', 'aria-label': 'Local translation helper address (optional)', style: 'width:14em' });
   const helperMsg = el('span', { class: 'photo-helper-msg', role: 'status' });
   if (!forced) wrap.append(el('details', { class: 'photo-translate-setup' },

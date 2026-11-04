@@ -4,15 +4,17 @@ import { loadJSON } from "./data.js";
 let content;
 export function loadContent() {
   content ??= (async () => {
-    const [letters, niq, registry, confusables] = await Promise.all([
+    const [letters, niq, registry, confusables, mn] = await Promise.all([
       loadJSON("data/letters/letters.json"), loadJSON("data/pronunciation/niqqud.json"),
-      loadJSON("data/corpus/registry.json"), loadJSON("data/letters/confusables.json"),
+      loadJSON("data/corpus/registry.json"), loadJSON("data/letters/confusables.json"), loadJSON("data/letters/mnemonics.json"),
     ]);
     return {
       letters: new Map(letters.map((l) => [l.id, l])),
       vowels: new Map(niq.records.map((r) => [r.id, r])),
       corpus: new Map(registry.entries.map((e) => [e.id, e])),
       confusables,
+      mnemonics: new Map((mn.letters || []).map((m) => [m.id, m])),
+      mnemonicsMeta: mn.meta || {},
     };
   })();
   content.catch(() => { content = undefined; });

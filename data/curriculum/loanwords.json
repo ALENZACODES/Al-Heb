@@ -1,0 +1,554 @@
+{
+ "version": 1,
+ "status": "draft-needs-native-review",
+ "proofread": false,
+ "needsNativeReview": true,
+ "note": "Common international words that Israelis use in everyday speech, chosen because an English reader can recognise the meaning once the letters are decoded. Written by an AI agent from general knowledge; pointing, spelling and transliteration have NOT been checked by a native speaker or a dictionary. Word choice is limited to words the author is confident are in ordinary Israeli use. origin is 'international' on purpose: no etymology was researched. Nothing here was tested with learners.",
+ "groups": [
+  {
+   "id": "lw1",
+   "title": "Words you can already read: round 1",
+   "unlockAfter": "r12",
+   "proofread": false,
+   "words": [
+    {
+     "id": "lw1-w1",
+     "he": "בָּנָנָה",
+     "plain": "בננה",
+     "gloss": "banana",
+     "translit": "banana",
+     "origin": "international",
+     "lettersUsed": [
+      "bet",
+      "nun",
+      "he"
+     ],
+     "marksUsed": [
+      "kamatz",
+      "dagesh"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw1-w2",
+     "he": "נוֹרְמָלִי",
+     "plain": "נורמלי",
+     "gloss": "normal; fine (everyday slang)",
+     "translit": "normali",
+     "origin": "international",
+     "lettersUsed": [
+      "nun",
+      "vav",
+      "resh",
+      "mem",
+      "lamed",
+      "yod"
+     ],
+     "marksUsed": [
+      "cholam",
+      "shva",
+      "kamatz",
+      "chirik"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw1-w3",
+     "he": "בָּר",
+     "plain": "בר",
+     "gloss": "bar (a place for drinks)",
+     "translit": "bar",
+     "origin": "international",
+     "lettersUsed": [
+      "bet",
+      "resh"
+     ],
+     "marksUsed": [
+      "kamatz",
+      "dagesh"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw1-w4",
+     "he": "מָרָתוֹן",
+     "plain": "מרתון",
+     "gloss": "marathon",
+     "translit": "maraton",
+     "origin": "international",
+     "lettersUsed": [
+      "mem",
+      "resh",
+      "tav",
+      "vav",
+      "nun-final"
+     ],
+     "marksUsed": [
+      "kamatz",
+      "cholam"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw1-w5",
+     "he": "בַּלּוֹן",
+     "plain": "בלון",
+     "gloss": "balloon",
+     "translit": "balon",
+     "origin": "international",
+     "lettersUsed": [
+      "bet",
+      "lamed",
+      "vav",
+      "nun-final"
+     ],
+     "marksUsed": [
+      "patach",
+      "dagesh",
+      "cholam"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw1-w6",
+     "he": "אַלְבּוֹם",
+     "plain": "אלבום",
+     "gloss": "album",
+     "translit": "albom",
+     "origin": "international",
+     "lettersUsed": [
+      "alef",
+      "lamed",
+      "bet",
+      "vav",
+      "mem-final"
+     ],
+     "marksUsed": [
+      "patach",
+      "shva",
+      "dagesh",
+      "cholam"
+     ],
+     "proofread": false
+    }
+   ]
+  },
+  {
+   "id": "lw2",
+   "title": "Words you can already read: round 2",
+   "unlockAfter": "r20",
+   "proofread": false,
+   "words": [
+    {
+     "id": "lw2-w1",
+     "he": "מַנְגּוֹ",
+     "plain": "מנגו",
+     "gloss": "mango",
+     "translit": "mango",
+     "origin": "international",
+     "lettersUsed": [
+      "mem",
+      "nun",
+      "gimel",
+      "vav"
+     ],
+     "marksUsed": [
+      "patach",
+      "shva",
+      "dagesh",
+      "cholam"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw2-w2",
+     "he": "רַדְיוֹ",
+     "plain": "רדיו",
+     "gloss": "radio",
+     "translit": "radyo",
+     "origin": "international",
+     "lettersUsed": [
+      "resh",
+      "dalet",
+      "yod",
+      "vav"
+     ],
+     "marksUsed": [
+      "patach",
+      "shva",
+      "cholam"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw2-w3",
+     "he": "גּוֹלְף",
+     "plain": "גולף",
+     "gloss": "golf",
+     "translit": "golf",
+     "origin": "international",
+     "lettersUsed": [
+      "gimel",
+      "vav",
+      "lamed",
+      "pe-final"
+     ],
+     "marksUsed": [
+      "dagesh",
+      "cholam",
+      "shva"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw2-w4",
+     "he": "פַּנְדָּה",
+     "plain": "פנדה",
+     "gloss": "panda",
+     "translit": "panda",
+     "origin": "international",
+     "lettersUsed": [
+      "pe",
+      "nun",
+      "dalet",
+      "he"
+     ],
+     "marksUsed": [
+      "patach",
+      "dagesh",
+      "shva",
+      "kamatz"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw2-w5",
+     "he": "אֶסְפְּרֶסוֹ",
+     "plain": "אספרסו",
+     "gloss": "espresso",
+     "translit": "espresso",
+     "origin": "international",
+     "lettersUsed": [
+      "alef",
+      "samekh",
+      "pe",
+      "resh",
+      "vav"
+     ],
+     "marksUsed": [
+      "segol",
+      "shva",
+      "dagesh",
+      "cholam"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw2-w6",
+     "he": "סוּשִׁי",
+     "plain": "סושי",
+     "gloss": "sushi",
+     "translit": "sushi",
+     "origin": "international",
+     "lettersUsed": [
+      "samekh",
+      "vav",
+      "shin",
+      "yod"
+     ],
+     "marksUsed": [
+      "dagesh",
+      "chirik",
+      "shin-dot"
+     ],
+     "proofread": false
+    }
+   ]
+  },
+  {
+   "id": "lw3",
+   "title": "Words you can already read: the whole alphabet",
+   "unlockAfter": "r24",
+   "proofread": false,
+   "words": [
+    {
+     "id": "lw3-w1",
+     "he": "טֶלֶפוֹן",
+     "plain": "טלפון",
+     "gloss": "telephone",
+     "translit": "telefon",
+     "origin": "international",
+     "lettersUsed": [
+      "tet",
+      "lamed",
+      "pe",
+      "vav",
+      "nun-final"
+     ],
+     "marksUsed": [
+      "segol",
+      "cholam"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw3-w2",
+     "he": "קָפֶה",
+     "plain": "קפה",
+     "gloss": "coffee",
+     "translit": "kafe",
+     "origin": "international",
+     "lettersUsed": [
+      "qof",
+      "pe",
+      "he"
+     ],
+     "marksUsed": [
+      "kamatz",
+      "segol"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw3-w3",
+     "he": "פִּיצָה",
+     "plain": "פיצה",
+     "gloss": "pizza",
+     "translit": "pitsa",
+     "origin": "international",
+     "lettersUsed": [
+      "pe",
+      "yod",
+      "tsadi",
+      "he"
+     ],
+     "marksUsed": [
+      "chirik",
+      "dagesh",
+      "kamatz"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw3-w4",
+     "he": "טַקְסִי",
+     "plain": "טקסי",
+     "gloss": "taxi",
+     "translit": "taksi",
+     "origin": "international",
+     "lettersUsed": [
+      "tet",
+      "qof",
+      "samekh",
+      "yod"
+     ],
+     "marksUsed": [
+      "patach",
+      "shva",
+      "chirik"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw3-w5",
+     "he": "אוֹטוֹבּוּס",
+     "plain": "אוטובוס",
+     "gloss": "bus",
+     "translit": "otobus",
+     "origin": "international",
+     "lettersUsed": [
+      "alef",
+      "vav",
+      "tet",
+      "bet",
+      "samekh"
+     ],
+     "marksUsed": [
+      "cholam",
+      "dagesh"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw3-w6",
+     "he": "שׁוֹקוֹלָד",
+     "plain": "שוקולד",
+     "gloss": "chocolate",
+     "translit": "shokolad",
+     "origin": "international",
+     "lettersUsed": [
+      "shin",
+      "vav",
+      "qof",
+      "lamed",
+      "dalet"
+     ],
+     "marksUsed": [
+      "shin-dot",
+      "cholam",
+      "kamatz"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw3-w7",
+     "he": "קוֹלָה",
+     "plain": "קולה",
+     "gloss": "cola",
+     "translit": "kola",
+     "origin": "international",
+     "lettersUsed": [
+      "qof",
+      "vav",
+      "lamed",
+      "he"
+     ],
+     "marksUsed": [
+      "cholam",
+      "kamatz"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw3-w8",
+     "he": "בַּנְק",
+     "plain": "בנק",
+     "gloss": "bank",
+     "translit": "bank",
+     "origin": "international",
+     "lettersUsed": [
+      "bet",
+      "nun",
+      "qof"
+     ],
+     "marksUsed": [
+      "patach",
+      "dagesh",
+      "shva"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw3-w9",
+     "he": "אִינְטֶרְנֶט",
+     "plain": "אינטרנט",
+     "gloss": "internet",
+     "translit": "internet",
+     "origin": "international",
+     "lettersUsed": [
+      "alef",
+      "yod",
+      "nun",
+      "tet",
+      "resh"
+     ],
+     "marksUsed": [
+      "chirik",
+      "shva",
+      "segol"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw3-w10",
+     "he": "דוֹקְטוֹר",
+     "plain": "דוקטור",
+     "gloss": "doctor (title)",
+     "translit": "doktor",
+     "origin": "international",
+     "lettersUsed": [
+      "dalet",
+      "vav",
+      "qof",
+      "tet",
+      "resh"
+     ],
+     "marksUsed": [
+      "cholam",
+      "shva"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw3-w11",
+     "he": "טֶנִיס",
+     "plain": "טניס",
+     "gloss": "tennis",
+     "translit": "tenis",
+     "origin": "international",
+     "lettersUsed": [
+      "tet",
+      "nun",
+      "yod",
+      "samekh"
+     ],
+     "marksUsed": [
+      "segol",
+      "chirik"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw3-w12",
+     "he": "פַּסְטָה",
+     "plain": "פסטה",
+     "gloss": "pasta",
+     "translit": "pasta",
+     "origin": "international",
+     "lettersUsed": [
+      "pe",
+      "samekh",
+      "tet",
+      "he"
+     ],
+     "marksUsed": [
+      "patach",
+      "dagesh",
+      "shva",
+      "kamatz"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw3-w13",
+     "he": "זֶבְּרָה",
+     "plain": "זברה",
+     "gloss": "zebra",
+     "translit": "zebra",
+     "origin": "international",
+     "lettersUsed": [
+      "zayin",
+      "bet",
+      "resh",
+      "he"
+     ],
+     "marksUsed": [
+      "segol",
+      "shva",
+      "dagesh",
+      "kamatz"
+     ],
+     "proofread": false
+    },
+    {
+     "id": "lw3-w14",
+     "he": "טוֹסְט",
+     "plain": "טוסט",
+     "gloss": "toasted sandwich",
+     "translit": "tost",
+     "origin": "international",
+     "lettersUsed": [
+      "tet",
+      "vav",
+      "samekh"
+     ],
+     "marksUsed": [
+      "cholam",
+      "shva"
+     ],
+     "proofread": false
+    }
+   ]
+  }
+ ]
+}

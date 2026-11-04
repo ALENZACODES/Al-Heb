@@ -9,6 +9,8 @@ import { loadContent, vowelEnglish, vowelIpa } from "./content.js";
 import { loadState, rateCard, addLessonCards } from "./actions.js";
 import { buildQueue, parseCardId, wordAudioId, confusableMap } from "./progress.js";
 import { playButton } from "./audio-ui.js";
+import { hintPanel } from "./hint-ui.js";
+import { errorKindForCard } from "./hints.js";
 
 const RATINGS = [[1, "Again", "forgot it"], [2, "Hard", "got it with effort"], [3, "Good", "got it"], [4, "Easy", "no effort"]];
 
@@ -98,7 +100,16 @@ export function mountReview(root, ctx, { lessonId } = {}) {
       if (!revealed) return;
       const id = queue[pos]; revealed = false;
       try { await rateCard(ctx, id, n); } catch (e) { note.textContent = "Could not save: " + (e?.message || e); }
-      stats[n]++; pos++; render();
+      stats[n]++; pos++;
+      // Interference hint only after the learner's own miss (rating Again), at most once per error kind per session.
+      let panel = null;
+      if (n === 1) {
+        const pc = parseCardId(id), err = pc && errorKindForCard(pc, content.confusables);
+        if (err) panel = await hintPanel(ctx, { kind: err.kind, detail: err.detail }, () => { if (alive) { render(); h1.focus?.({ preventScroll: true }); } });
+      }
+      if (!alive) return;
+      if (panel) { body.replaceChildren(el("p", { class: "muted", role: "status" }, "That one will come back soon."), panel); return; }
+      render();
       if (alive) h1.focus?.({ preventScroll: true });
     }
     onKey = (e) => { if (revealed && /^[1-4]$/.test(e.key) && !e.ctrlKey && !e.metaKey && !e.altKey && !/^(INPUT|TEXTAREA|SELECT)$/.test(e.target?.tagName || "")) { e.preventDefault(); rate(Number(e.key)); } };

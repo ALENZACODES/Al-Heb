@@ -13,9 +13,17 @@ import { el, heText, tr, replaceKeepingFocus } from "./dom.js";
 import { loadState, completeLesson } from "./actions.js";
 import { mountLesson } from "./lesson.view.js";
 import { mountReview } from "./review.view.js";
+import { mountLoanwords } from "./loanwords.view.js";
+import { mountSpotIt } from "./spotit.view.js";
+import { mountCheckpoint } from "./checkpoint.view.js";
+import { mountDialogues } from "./dialogues.view.js";
 
 export function mount(root, ctx) {
   const q = ctx?.query || {};
+  if (q.loanwords) return mountLoanwords(root, ctx, q.loanwords);
+  if (q.spotit) return mountSpotIt(root, ctx, q.spotit, q.seed);
+  if (q.checkpoint) return mountCheckpoint(root, ctx, q.seed);
+  if (q.dialogues || q.dialogue) return mountDialogues(root, ctx, q.dialogue);
   if (q.review) return mountReview(root, ctx, { lessonId: q.lesson });
   if (q.lesson) return mountLesson(root, ctx, q.lesson);
   return mountMap(root, ctx);
@@ -50,6 +58,10 @@ function mountMap(root, ctx) {
         dueCount ? el("a", { class: "btn", href: "#/learn?review=1" }, "Review now") : null),
       el("p", { class: "alef-streak" }, st.streak.count ? `Streak: ${st.streak.count} day${st.streak.count === 1 ? "" : "s"}${st.streak.activeToday ? "" : " (learn today to keep it)"}` : "No streak yet. Finish a lesson or review a card to start one."),
       track === "read" ? beltStrip(done) : null,
+      el("p", { class: "row alef-extras" },
+        track === "read" ? el("a", { class: "btn secondary", href: "#/learn?loanwords=1" }, "Words you can already read") : null,
+        track === "read" ? el("a", { class: "btn secondary", href: "#/learn?checkpoint=1" }, "Look-alike checkpoint") : null,
+        track === "israel" ? el("a", { class: "btn secondary", href: "#/learn?dialogues=1" }, "Dialogues") : null),
       el("ol", { class: "alef-lesson-list", "aria-label": track === "read" ? "Reading lessons" : "Israel lessons" },
         ...list.map((l) => {
           const ready = l.prerequisites.every((p) => done.has(p));

@@ -157,3 +157,11 @@ td.he { font-size: 18pt; text-align: center; line-height: 1.6; }
 .pheb-l { font-size: 12.5pt; line-height: 1.65; }
 .pheb-xl { font-size: 10.5pt; line-height: 1.55; }
 .pcard.long .pq { width: .6in; height: .6in; }
+
+/* word list (5,000 words) and class-week table */
+.wl { columns: 3; column-gap: .25in; font: 7.4pt/1.2 var(--ui-font); }
+.wl h3 { break-after: avoid; column-span: all; margin: 8pt 0 3pt; border-bottom: 1pt solid var(--gold); }
+.wl .wi { display: grid; grid-template-columns: 33% 1fr; gap: 4pt; break-inside: avoid; border-bottom: .4pt dotted #ccc; align-items: baseline; }
+.wl .wi .he { font-size: 10.5pt; text-align: right; line-height: 1.25; }
+.wl .wi .g { color: #333; } .wl .wi .g b { color: #999; font-weight: normal; font-size: 6pt; margin-right: 2pt; }
+.classweeks td, .classweeks th { vertical-align: top; font-size: 9pt; } .classweeks td:first-child { text-align: center; font-weight: bold; }

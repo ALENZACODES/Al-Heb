@@ -19,7 +19,7 @@ import { createImgResolver } from './img.js';
 import { overlaySvg, glyphFor, loadLettersJson } from '../tools/images/overlay.mjs';
 import { LETTERS, letterToken, VOWELS } from '../tools/images/spec.mjs';
 import { mnemonicCards, mnemonicStatus } from './cards.mjs';
-import { ROOT, readJson, vocabFor, soundFor, vowelRecords, cleanNote, drills, consonantFeatures, registryEntries, phrasebook, SITUATION_TITLES, wordPool } from './content.mjs';
+import { ROOT, readJson, vocabFor, soundFor, vowelRecords, cleanNote, drills, consonantFeatures, registryEntries, phrasebook, SITUATION_TITLES, wordPool, vocab5000 } from './content.mjs';
 
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 export const esc_ = esc;
@@ -143,6 +143,8 @@ export function buildHtml(o, pages = {}) {
   const blessing = reg || { lines: FALLBACK_BLESSING, source: 'research note torah_opener_image_program.md (Sefaria sheet 631749); NOT from the registry', status: 'transcribed-needs-check', proofread: false, attributions: [] };
   const ph = isPlaceholderHost(o.host);
   const pool = wordPool();
+  const ct = readJson('data/curriculum/class-track.json');
+  const wl = vocab5000();
   const entries = registryEntries();
   const regPrayers = entries.filter((e) => e.he);
 
@@ -173,7 +175,31 @@ export function buildHtml(o, pages = {}) {
 <p><b>Which pronunciation?</b> Hebrew is read differently in Israel, in Sephardi tradition and in Ashkenazi tradition. The next page explains the differences. The app lets you choose; American synagogues often use the Sephardi values.</p>
 <div class="slot"><b>Companion app.</b> The page for any letter is ${esc(letterUrl(o.host, '<letter>'))} and any prayer is ${esc(readUrl(o.host, '<text>'))}.${ph ? ` <b style="color:#B0373B">The host &ldquo;${esc(o.host)}&rdquo; is a PLACEHOLDER: those links do not work until a real domain is chosen (one value, book/config.json).</b>` : ''}</div>
 <h3 style="margin-top:.25in">Contents</h3><ul class="toc">
-${toc('ch-blessing', 'The Priestly Blessing')}${toc('ch-trad', 'Pronunciation traditions')}${toc('ch-alphabet', 'The alphabet at a glance')}${toc('letter-alef', 'The 27 letters (22 letters and 5 final forms)')}${toc('ch-remember', 'Remember every letter')}${toc('ch-vowels', 'The vowels')}${toc('ch-reading', 'Reading practice: syllables')}${toc('ch-practice', 'Reading practice: words')}${toc('ch-blessing-words', 'The Priestly Blessing, word by word')}@@PRAYER_TOC@@${toc('ch-survival', 'Survival Hebrew')}${toc('ch-index', 'Index')}${toc('ch-colophon', 'Colophon, sources and statuses')}</ul></section>`;
+${toc('ch-blessing', 'The Priestly Blessing')}${ct?.weeks?.length ? toc('ch-class', 'How to use this book in a 10-week class') : ''}${toc('ch-trad', 'Pronunciation traditions')}${toc('ch-alphabet', 'The alphabet at a glance')}${toc('letter-alef', 'The 27 letters (22 letters and 5 final forms)')}${toc('ch-remember', 'Remember every letter')}${toc('ch-vowels', 'The vowels')}${toc('ch-reading', 'Reading practice: syllables')}${toc('ch-practice', 'Reading practice: words')}${toc('ch-blessing-words', 'The Priestly Blessing, word by word')}@@PRAYER_TOC@@${toc('ch-survival', 'Survival Hebrew')}${wl.length ? toc('ch-wordlist', 'Word list (' + wl.length.toLocaleString('en-US') + ' words)') : ''}${toc('ch-index', 'Index')}${toc('ch-colophon', 'Colophon, sources and statuses')}</ul></section>`;
+
+
+  // ---- How to use this book in a 10-week class (original text; schedule from data/curriculum/class-track.json) ----
+  const WEEK_LETTERS = [['shin', 'bet', 'tav'], ['lamed', 'mem-final', 'vav', 'yod'], ['alef', 'he', 'resh', 'mem'], ['kaf', 'kaf-final', 'nun', 'nun-final'], ['pe', 'pe-final', 'chet'], ['dalet', 'gimel', 'ayin', 'samekh'], ['zayin', 'tet', 'tsadi', 'tsadi-final', 'qof'], [], [], []];
+  const WEEK_BOOK = [
+    'Pronunciation traditions (agree on one); Priestly Blessing page: listen only.',
+    'Vowels: cholam, chirik.',
+    'Vowels: tzere.',
+    'Vowels: segol, shuruk, kubutz; syllable practice.',
+    'Vowels: shva; the Priestly Blessing, line 1 (word by word).',
+    'Vowels: the three chataf signs; Sin dot; practice words.',
+    'Alphabet complete: use the alphabet table as a quiz; Shema, line 1.',
+    'The Priestly Blessing, word by word; blessing formula and Hamotzi (prayer chapter 1).',
+    'Shva, dagesh and stress (traditions page); the Shema in full.',
+    'Torah service blessings; Shabbat and the table (Kiddush); then choose any unseen text.'];
+  const classSection = ct?.weeks?.length ? `<section class="chapter" id="ch-class"><h2>How to use this book in a 10-week class</h2>
+<p>This page is for a teacher, a study group, or a learner who wants a calendar. The book is organised like a reference (all letters, then all vowels, then prayers), so the table below tells you where to look each week. It follows ALEF&rsquo;s draft ${ct.weeks.length}-week adult reading track (${ct.sessionMinutes ?? 60}-minute weekly session, data/curriculum/class-track.json), which has <b>not been reviewed by an educator</b>; adapt it to your group.</p>
+<table class="grid classweeks"><thead><tr><th>Wk</th><th>Focus</th><th>New letters (book page)</th><th>Also in this book</th></tr></thead><tbody>
+${ct.weeks.map((w, i) => `<tr><td>${w.week}</td><td>${esc(w.title)}</td><td>${(WEEK_LETTERS[i] || []).map((id) => { const L = LETTERS.find((x) => x.id === id); return `<a href="#letter-${id}" style="display:contents">${esc(L ? L.title : id)}&nbsp;<span class="pg">${pages['letter-' + id] ?? '&middot;&middot;&middot;'}</span></a>`; }).join(', ') || '&ndash;'}</td><td class="small">${esc(WEEK_BOOK[i] || '')}</td></tr>`).join('')}</tbody></table>
+<h3>A session in about an hour</h3>
+<p><b>10 minutes</b> warm-up: flash last week&rsquo;s letters and vowels, finger moving right to left. <b>15</b> new letters: say the name, then the sound, then trace the strokes in the air. <b>15</b> decode: read the syllables and the three words on each letter page, first together, then one by one. <b>10</b> read aloud a short text from the prayer chapters. <b>5</b> one question about why the text matters. The companion codes on each page give learners the same letter to practise at home.</p>
+<h3>Using the book between sessions</h3>
+<p>Ask learners to read the letter pages for the coming week before class and to use the &ldquo;Remember every letter&rdquo; cards for the look-alike pairs. Every prayer page says whether its text has been proofread; if a text matters to your congregation, check it against your own prayer book, and follow your community&rsquo;s custom where the pronunciation differs.</p>
+<p class="small">The word list at the back (5,000 words) is for later: from week 8 on, pick a topic and let learners look up words they meet.</p></section>` : '';
 
   // ---- pronunciation traditions ----
   const dr = drills();
@@ -287,6 +313,13 @@ ${i === 0 ? `<p class="small">${regPrayers.length} texts from data/corpus/regist
   const survival = `<section class="chapter" id="ch-survival"><h2>Survival Hebrew</h2><p class="small">${pb.entries.length} phrases from data/corpus/phrasebook.json in ${pb.situations.length} situations. Transliteration is the project&rsquo;s own rendering. <b>Every phrase is flagged &ldquo;native-speaker-needed&rdquo; in the data</b> (pointing and register); slang is tagged.</p>
 ${pb.situations.map((s) => { const rows = pb.entries.filter((e) => e.situation === (s.id ?? s)); const sid = s.id ?? s; return `<div class="sit" id="sit-${sid}"><h3>${esc(SITUATION_TITLES[sid] ?? sid)} <span class="small">(${rows.length})</span></h3><table><tbody>${rows.map((e) => `<tr><td class="he" lang="he" dir="rtl">${esc(e.he)}</td><td class="say">${esc(e.translit)}</td><td>${esc(e.en)}${e.register && e.register !== 'neutral' ? `<span class="tag">${esc(e.register)}</span>` : ''}${e.notes ? `<span class="nt">${esc(e.notes)}</span>` : ''}</td></tr>`).join('')}</tbody></table></div>`; }).join('')}</section>`;
 
+
+  // ---- word list: the whole 5,000-word frequency list (data/vocab/vocab5000.json), pointed headword + short gloss ----
+  const tierName = (t) => ({ 500: 'Words 1 to 500', 1000: 'Words 501 to 1,000', 2000: 'Words 1,001 to 2,000', 5000: 'Words 2,001 to 5,000' }[t] ?? 'Words');
+  const wordList = wl.length ? `<section class="chapter" id="ch-wordlist"><h2>Word list: ${wl.length.toLocaleString('en-US')} common words</h2>
+<p class="small">Hebrew headwords with a short English meaning, most frequent first. Pointing, glosses and ranking come from Wiktionary and OpenSubtitles frequency data (CC BY-SA 4.0; see the colophon); <b>no entry has been proofread by a Hebrew teacher</b>, and a gloss shows only the first senses. Pronunciation follows the vowel signs: use the vowels chapter.</p>
+<div class="wl">${wl.map((w, i) => (i === 0 || w.tier !== wl[i - 1].tier ? `<h3>${tierName(w.tier)}</h3>` : '') + `<div class="wi"><span class="he" lang="he" dir="rtl">${esc(w.he)}</span><span class="g"><b>${w.rank}</b> ${esc(w.gloss)}</span></div>`).join('')}</div></section>` : '';
+
   // ---- index ----
   const link = (id, label, extra = '') => `<div><a href="#${id}" style="display:contents"><span class="t">${label}${extra}</span>${pg(id)}</a></div>`;
   const index = `<section class="chapter" id="ch-index"><h2>Index</h2><div class="index">
@@ -301,14 +334,15 @@ ${pb.situations.map((s) => { const rows = pb.entries.filter((e) => e.situation =
   const colophon = `<section class="chapter end-page" id="ch-colophon"><h2>Colophon, sources and statuses</h2>
 <p class="small"><b>Draft proof</b> generated by book/build.mjs; letters data: ${esc(lettersSource)}. Hebrew print face: Noto Serif Hebrew; handwriting: Gveret Levin; fallback Frank Ruhl Libre (all SIL Open Font License 1.1; licence texts for all three are in assets/fonts/*-OFL.txt and docs/licenses/; the Noto Serif Hebrew text is byte-identical to google/fonts ofl/notoserifhebrew/OFL.txt, fetched 2026-11-03). QR codes made with segno (BSD-3).</p>
 <p class="small"><b>What is placeholder:</b> every illustration is a labelled placeholder (no AI images have been generated); audio recordings do not exist yet (the app falls back to a device voice); the opening prayer is a draft pending clergy review; prayer texts and the phrasebook are not proofread by native speakers; stroke data for handwriting is draft quality; the companion-app host ${esc(o.host)}${ph ? ' is a placeholder domain' : ''}.</p>
+${wl.length ? `<p class="small"><b>Word list attribution.</b> Word ranking derived from the OpenSubtitles-based FrequencyWords lists by Hermit Dave (CC BY-SA 4.0); lemmas, glosses and vocalisation derived from Wiktionary contributors (CC BY-SA 4.0), via Wiktextract/kaikki.org. Changes made: filtering, re-ranking, shortened glosses. The word list is shared under CC BY-SA 4.0; see docs/vocab/LICENSES.md.</p>` : ''}
 ${attr.length ? `<h3>Text attributions (from the registry)</h3>${attr.map((a) => `<p class="small">${esc(a)}</p>`).join('')}` : ''}
 <p class="small"><b>Image credit line (use once real images replace placeholders):</b> Illustrations created with AI tools and edited by the author.</p></section>`;
 
   const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>ALEF - draft proof</title><style>${pageCss(o, tw, th, bleed)}\n${fontFaces(outDir)}\n${readFileSync(join(ROOT, 'book/style.css'), 'utf8')}</style></head><body>
-${cover}${prayerOpen}${blessingPage}${howTo}${tradPage}${alphabet}
+${cover}${prayerOpen}${blessingPage}${howTo}${classSection}${tradPage}${alphabet}
 ${letterPages}
 ${remember}
-${vowelChapter}${reading}${practiceWords}${blessingWords}${prayerCards}${survival}${index}${colophon}
+${vowelChapter}${reading}${practiceWords}${blessingWords}${prayerCards}${survival}${wordList}${index}${colophon}
 </body></html>`;
   return html.replace('@@PRAYER_TOC@@', () => prayerToc);
 }
@@ -321,7 +355,7 @@ export async function renderPdf(htmlPath, pdfPath) {
   const page = await browser.newPage();
   await page.goto(pathToFileURL(htmlPath).href, { waitUntil: 'load' });
   await page.evaluate(() => document.fonts.ready);
-  await page.pdf({ path: pdfPath, preferCSSPageSize: true, printBackground: true });
+  await page.pdf({ path: pdfPath, preferCSSPageSize: true, printBackground: true, tagged: true, outline: true });
   await browser.close();
 }
 

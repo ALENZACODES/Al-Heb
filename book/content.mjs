@@ -90,3 +90,10 @@ export function consonantFeatures() { return readJson('data/pronunciation/conson
 export function registryEntries() { const r = readJson('data/corpus/registry.json'); return Array.isArray(r) ? r : r?.entries ?? []; }
 export function phrasebook() { return readJson('data/corpus/phrasebook.json') ?? { situations: [], entries: [] }; }
 export const SITUATION_TITLES = { greetings: 'Greetings', politeness: 'Politeness', fillers: 'Fillers and slang', cafe: 'Cafe and food', shop: 'Shopping', taxi: 'Taxi and transport', directions: 'Directions', numbers: 'Numbers', 'small-talk': 'Small talk', help: 'Help' };
+
+/** The 5,000-word frequency list (data/vocab/vocab5000.json): pointed headword + short gloss, in frequency order. Nothing is written here; the 3 unpointed entries fall back to the bare lemma. */
+export function vocab5000() {
+  const d = readJson('data/vocab/vocab5000.json');
+  const short = (g) => { const t = String(g ?? '').replace(/\s+/g, ' ').trim(); if (t.length <= 52) return t; const cut = t.slice(0, 52); const i = Math.max(cut.lastIndexOf(','), cut.lastIndexOf(';')); return (i > 20 ? cut.slice(0, i) : cut.replace(/\s+\S*$/, '')) + '\u2026'; };
+  return (d?.entries ?? []).map((e) => ({ rank: e.rank, he: e.pointed || e.lemma, gloss: short(e.gloss), pos: e.pos, tier: e.tier }));
+}

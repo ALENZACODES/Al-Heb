@@ -37,3 +37,11 @@ test('groups json agrees with csv and a fresh build', () => {
   assert.deepEqual(g.groups.flatMap((x) => x.expectedFiles), next.map((r) => r.file));
   assert.deepEqual(build().rows.map((r) => r.file), next.map((r) => r.file));
 });
+test('partly done command lists only pending rows and notes the remaining range', () => {
+  const g = JSON.parse(read('data/images/next1000-groups.json')).groups[0];
+  assert.equal(g.number, 36);
+  assert.match(g.title, /partial: rows 2-10 remaining/);
+  assert.equal(g.rows.length, 9);
+  assert.equal(g.rows[0].file, 'L26_pe_final_print_ari.png');
+  assert.equal(JSON.parse(read('data/images/next1000-groups.json')).meta.doneCount, 282);
+});

@@ -44,3 +44,10 @@ test('size hints map to ChatGPT aspect ratios', () => {
     assert.equal(ratio.replace(/[^0-9:]/g, ''), want, f);
   }
 });
+
+test('index names the first pending command and 282 done images', () => {
+  const idx = readFileSync(join(DIR, 'INDEX.md'), 'utf8');
+  assert.match(idx, /282 images are already done/);
+  assert.match(idx, new RegExp(`\\*\\*${groups[0].number}\\*\\*`));
+  assert.ok(names.includes('cmd-036.txt') && !names.includes('cmd-028.txt'));
+});

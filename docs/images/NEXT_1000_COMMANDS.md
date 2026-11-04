@@ -1,7 +1,8 @@
 # Next 1000 images: ChatGPT command runbook
 
-Pending list: **1000 images** = 596 unfinished manifest rows (commands 28-101) + 404 new block H images (commands 102-141).
-Done set used: assumed: every manifest row of commands 1-27 (codex-batch-01.json not found).
+Pending list: **1000 images** = 515 unfinished manifest rows (commands 36-101) + 485 new block H images (commands 102-149).
+Done set used: docs/images/codex-batch-01.json (282 matched manifest names).
+**282 images are already done.** The next command to run is **36** (Fe sofit print set (partial: rows 2-10 remaining)), file `cmd-036.txt`.
 
 Files: `data/images/next1000.csv` (same columns as manifest.csv, all pending, command order), `data/images/next1000-groups.json` (per-command prompts, file lists, refs). Rebuild with `node tools/images/build_next1000.mjs`.
 
@@ -16,28 +17,20 @@ Files: `data/images/next1000.csv` (same columns as manifest.csv, all pending, co
 ## Paste-ready master command
 
 ```
-ChatGPT cannot read repo files, so do not use next1000-groups.json there. Paste docs/images/paste/cmd-028.txt, then cmd-029.txt ... (one self-contained file per command, see docs/images/paste/README.md; the paste files are built by node tools/images/build_paste_files.mjs).
+ChatGPT cannot read repo files, so do not use next1000-groups.json there. Paste the first pending command's file (see docs/images/paste/INDEX.md), then the next one ... (one self-contained file per command, see docs/images/paste/README.md; the paste files are built by node tools/images/build_paste_files.mjs).
 ```
 
 Several commands in a row:
 
 ```
-For several commands in a row, paste cmd-028.txt, wait for the filenames list, say "next", then paste cmd-029.txt, and so on (docs/images/paste/INDEX.md lists every file; commands split into -a/-b files are noted there).
+For several commands in a row, paste the first pending file, wait for the filenames list, say "next", then paste the following file, and so on (docs/images/paste/INDEX.md lists every file; commands split into -a/-b files are noted there).
 ```
 
 ## Command table
 
 | Cmd | Block | Title | Images | Size | Refs to attach |
 |---|---|---|---|---|---|
-| 28 | B | Tsadi print set | 10 | 1024x1024/1792x1024 | CHAR_ari_sheet.png, L18_tsadi_print_mnemonic.png, CHAR_noa_sheet.png +3 |
-| 29 | B | Kof print set | 10 | 1024x1024/1792x1024 | CHAR_ari_sheet.png, L19_qof_print_mnemonic.png, CHAR_noa_sheet.png +3 |
-| 30 | B | Resh print set | 10 | 1024x1024/1792x1024 | CHAR_ari_sheet.png, L20_resh_print_mnemonic.png, CHAR_noa_sheet.png +3 |
-| 31 | B | Shin / Sin print set | 10 | 1024x1024/1792x1024 | CHAR_ari_sheet.png, L21_shin_print_mnemonic.png, CHAR_noa_sheet.png +3 |
-| 32 | B | Tav print set | 10 | 1024x1024/1792x1024 | CHAR_ari_sheet.png, L22_tav_print_mnemonic.png, CHAR_noa_sheet.png +3 |
-| 33 | B | Khaf sofit print set | 10 | 1024x1024/1792x1024 | CHAR_ari_sheet.png, L23_kaf_final_print_mnemonic.png, CHAR_noa_sheet.png +3 |
-| 34 | B | Mem sofit print set | 10 | 1024x1024/1792x1024 | CHAR_ari_sheet.png, L24_mem_final_print_mnemonic.png, CHAR_noa_sheet.png +3 |
-| 35 | B | Nun sofit print set | 10 | 1024x1024/1792x1024 | CHAR_ari_sheet.png, L25_nun_final_print_mnemonic.png, CHAR_noa_sheet.png +3 |
-| 36 | B | Fe sofit print set | 10 | 1024x1024/1792x1024 | CHAR_ari_sheet.png, L26_pe_final_print_mnemonic.png, CHAR_noa_sheet.png +3 |
+| 36 | B | Fe sofit print set (partial: rows 2-10 remaining) | 9 | 1024x1024/1792x1024 | CHAR_ari_sheet.png, L26_pe_final_print_mnemonic.png, CHAR_noa_sheet.png +3 |
 | 37 | B | Tsadi sofit print set | 10 | 1024x1024/1792x1024 | CHAR_ari_sheet.png, L27_tsadi_final_print_mnemonic.png, CHAR_noa_sheet.png +3 |
 | 38 | C | Alef cursive set | 6 | 1024x1024 | REF_cursive_alef.png, CHAR_ari_sheet.png, CHAR_noa_sheet.png +1 |
 | 39 | C | Bet / Vet cursive set | 6 | 1024x1024 | REF_cursive_bet.png, CHAR_ari_sheet.png, CHAR_noa_sheet.png +1 |
@@ -143,3 +136,11 @@ For several commands in a row, paste cmd-028.txt, wait for the filenames list, s
 | 139 | H | Achievement badges and belts | 11 | 1024x1024 | - |
 | 140 | H | Progress dashboard mascot | 11 | 1024x1024 | MAS_rimon_01.png |
 | 141 | H | Workbook notebook doodles | 10 | 1024x1280 | - |
+| 142 | H | Street Hebrew: the train | 10 | 1792x1024 | CHAR_ari_sheet.png, CHAR_noa_sheet.png |
+| 143 | H | Street Hebrew: beach and kibbutz | 10 | 1792x1024 | CHAR_ari_sheet.png, CHAR_noa_sheet.png |
+| 144 | H | Street Hebrew: haggling in the shuk | 10 | 1792x1024 | CHAR_ari_sheet.png, CHAR_noa_sheet.png |
+| 145 | H | Reform life-cycle moments | 10 | 1792x1024 | CHAR_ari_sheet.png, CHAR_noa_sheet.png |
+| 146 | H | Classroom and learning scenes | 10 | 1792x1024 | CHAR_ari_sheet.png, CHAR_noa_sheet.png |
+| 147 | H | Object illustrations: Garden and outdoors | 10 | 1024x1024 | - |
+| 148 | H | Mouth and articulation panels | 10 | 1024x1024 | - |
+| 149 | H | Extra achievement pins | 11 | 1024x1024 | - |

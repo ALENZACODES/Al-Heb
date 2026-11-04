@@ -1,18 +1,12 @@
 # Paste file index
 
+282 images are already done (rows 1-282 of manifest.csv, matched in docs/images/codex-batch-01.json). The next command to paste is **36** (Fe sofit print set (partial: rows 2-10 remaining)), file `cmd-036.txt`.
+
 117 files, 1000 images. Files over 12000 characters are split into -a/-b parts (paste in order): cmd-101-a.txt, cmd-101-b.txt, cmd-101-c.txt, cmd-101-d.txt.
 
 | Cmd | Title | Images | File |
 |---|---|---|---|
-| 28 | Tsadi print set | 10 | `cmd-028.txt` |
-| 29 | Kof print set | 10 | `cmd-029.txt` |
-| 30 | Resh print set | 10 | `cmd-030.txt` |
-| 31 | Shin / Sin print set | 10 | `cmd-031.txt` |
-| 32 | Tav print set | 10 | `cmd-032.txt` |
-| 33 | Khaf sofit print set | 10 | `cmd-033.txt` |
-| 34 | Mem sofit print set | 10 | `cmd-034.txt` |
-| 35 | Nun sofit print set | 10 | `cmd-035.txt` |
-| 36 | Fe sofit print set | 10 | `cmd-036.txt` |
+| 36 | Fe sofit print set (partial: rows 2-10 remaining) | 9 | `cmd-036.txt` |
 | 37 | Tsadi sofit print set | 10 | `cmd-037.txt` |
 | 38 | Alef cursive set | 6 | `cmd-038.txt` |
 | 39 | Bet / Vet cursive set | 6 | `cmd-039.txt` |
@@ -121,3 +115,11 @@
 | 139 | Achievement badges and belts | 11 | `cmd-139.txt` |
 | 140 | Progress dashboard mascot | 11 | `cmd-140.txt` |
 | 141 | Workbook notebook doodles | 10 | `cmd-141.txt` |
+| 142 | Street Hebrew: the train | 10 | `cmd-142.txt` |
+| 143 | Street Hebrew: beach and kibbutz | 10 | `cmd-143.txt` |
+| 144 | Street Hebrew: haggling in the shuk | 10 | `cmd-144.txt` |
+| 145 | Reform life-cycle moments | 10 | `cmd-145.txt` |
+| 146 | Classroom and learning scenes | 10 | `cmd-146.txt` |
+| 147 | Object illustrations: Garden and outdoors | 10 | `cmd-147.txt` |
+| 148 | Mouth and articulation panels | 10 | `cmd-148.txt` |
+| 149 | Extra achievement pins | 11 | `cmd-149.txt` |

@@ -1,6 +1,8 @@
 # Photo feature: engines, status, and benchmark protocol (Lane 6)
 
-**Status in one line:** the pure pipeline (line ordering, corpus matching, syllabifier, orchestration, UI) is built and unit-tested on synthetic data. **No real OCR, vowelizer, IPA or translation engine is wired or benchmarked.** The camera feature does **not** read real Hebrew yet; the default engine is a demo mock and the UI says so.
+**Status in one line (updated round 2, 2026-11-04):** the scan view now runs a REAL in-browser Tesseract (vendored tesseract.js 7 + `heb`, about 5 MB, lazy) and an opt-in online vowelizer (Dicta Nakdan, live-tested). Both were measured only on SYNTHETIC rendered images (see `BENCHMARK.md`: app engine 85.2% consonant character accuracy there). **Accuracy on real photos is unknown.** Translation exists only through an optional local helper (Argos, `tools/ocr-server.mjs`); the default browser setup has none. No IPA engine. The mock engine remains for tests/demo (`ctx.photoEngines`).
+
+Round 2 adds: `src/photo/engines/index.js` (provider `createPhotoEngines`), `tesseract-browser.js`, `local-server.js`, `src/photo/preprocess.js`, corrected Nakdan adapter in `web.js`, lane-3 shva adapter in `syllabify.js` (`loadLane3Shva`, passed to `runPipeline` as `shvaClassifier`).
 
 ## What exists
 
@@ -23,7 +25,7 @@
 - `translate(text) -> string | {text, engine}`. Optional. The pipeline always labels the result `machine translation` (`english.label`, `english.machineTranslation === true`). Text taken from the corpus registry is labelled `corpus translation`.
 - Bundle: `{name, demo?, names?, ocr, vowelize?, ipa?, translate?}`; `composeEngines()` builds one. Supply it as `ctx.photoEngines` (lane 8 must pass it; default is the mock).
 
-Adapters: `node src/photo/engines/web.js --dry` prints what each would send. None has been run against a live service.
+Adapters: `node src/photo/engines/web.js --dry` prints what each would send. Run live: Nakdan only (Vision and LibreTranslate adapters are still unexercised).
 
 ## Engine matrix
 
@@ -32,8 +34,8 @@ Adapters: `node src/photo/engines/web.js --dry` prints what each would send. Non
 | Engine | Role | Hebrew support / fact | Status |
 |---|---|---|---|
 | Google ML Kit Text Recognition v2 | OCR | Hebrew not listed (Latin, Chinese, Devanagari, Japanese, Korean) | Verified: not usable |
-| Tesseract (`heb`) | OCR, WASM or native | Apache-2.0, `heb` traineddata exists; quality on clean print "usable", niqqud often dropped | Existence verified; quality UNVERIFIED, unmeasured. Adapter written (`createTesseractOcr`), never run |
-| paddleocr-hebrew (RivoksLab) | OCR, ONNX | Apache-2.0; script-gated cascade for Latin/digit runs inside Hebrew | Repo metadata verified; no adapter written; never run; 5 stars, young project |
+| Tesseract (`heb`) | OCR, WASM or native | Apache-2.0 | RUN: synthetic-set accuracy in BENCHMARK.md; wired in the browser via vendored tesseract.js. Real photos unmeasured. About half of vowel points are returned, unreliably |
+| paddleocr-hebrew (RivoksLab) | OCR, ONNX | Apache-2.0; no niqqud in charset | Recognizers run on synthetic SIGN images without a detector (server-v5 96.4% with crude crop, 75 MB; mobile 84.8%, 7.4 MB). Not wired |
 | Surya | OCR + reading order | Apache-2.0 repo, "90+ languages"; weights license (believed OpenRAIL-M with revenue threshold) | Weights license UNVERIFIED; no adapter |
 | kraken | OCR (historical) | Apache-2.0 | Not evaluated |
 | EasyOCR | OCR | Believed no Hebrew | UNVERIFIED |
@@ -42,11 +44,11 @@ Adapters: `node src/photo/engines/web.js --dry` prints what each would send. Non
 | AWS Textract | cloud OCR | Believed Latin-only | UNVERIFIED, not planned |
 | Apple Vision `VNRecognizeTextRequest` | iOS OCR | Believed no Hebrew through iOS 18 | UNVERIFIED; check `supportedRecognitionLanguages` at runtime on a device |
 | Vision LLMs (GPT, Claude, Gemini) | OCR | Print read well, niqqud inconsistent (anecdotal) | UNMEASURED |
-| Dicta Nakdan API | vowelizer | Free API, MIT client `moshejs/dicta-nakdan` | API existence per research; **endpoint URL, request fields, response shape in `web.js` are from memory and UNVERIFIED** (client source not readable here). Adapter never called |
+| Dicta Nakdan API | vowelizer | Endpoint used by nakdan.dicta.org.il | RUN live 2026-11-04: shape confirmed, 94.4% agreement with phrasebook pointing (30 phrases). Adapter corrected and wired behind an opt-in checkbox. **No terms/rate limit found: ask Dicta before shipping** |
 | nakdimon / unikud (MIT) | self-hosted vowelizer | Exist | Not wired |
 | Phonikud | IPA + stress | CC BY 4.0 code, ONNX + Python; no JS runtime | Placeholder only (`createPhonikudPlaceholder`, inert) |
 | ML Kit on-device Translation | he->en | Hebrew `he` listed (59 languages) | Verified listing; native Capacitor plugin, no JS adapter here |
-| Argos / LibreTranslate | he->en | MIT / AGPL-3.0 server (isolate it); he model quality and license UNVERIFIED | Adapter for LibreTranslate-style POST written; request shape UNVERIFIED |
+| Argos Translate | he->en | MIT library; 132 MB model; model licence UNVERIFIED | RUN: token F1 0.53 on 30 phrases, weak on single words. Available only via `tools/ocr-server.mjs` helper. LibreTranslate public instance needs a paid key |
 | Google Cloud Translation, Microsoft Translator | he->en | Free tiers believed 500k / 2M chars per month | UNVERIFIED |
 | DeepL, Apple Translation | he->en | Hebrew support uncertain / believed absent | UNVERIFIED |
 | NLLB-200 | he->en | Weights CC-BY-NC: not usable in a sold product | Believed; UNVERIFIED here |
@@ -61,7 +63,7 @@ Adapters: `node src/photo/engines/web.js --dry` prints what each would send. Non
 
 Known behaviour to remember: pointed text from the sign path is machine-generated and the UI warns; the syllabifier returns no syllables for unpointed words rather than guessing; the divine name is read as Adonai.
 
-## 50-photo benchmark protocol (not run)
+## 50-photo benchmark protocol (real photos NOT run; the script and instructions are in BENCHMARK.md)
 
 **Corpus (50 photos, taken by the team on real phones, no web images):** 20 siddur/Chumash pages (print, vowelled; mix of Ashkenaz/Sefard siddurim and two fonts families; include taamim pages), 15 street/shop signs (outdoor, glare, angle), 10 menus/price lists (mixed Hebrew + Latin + digits), 5 hard cases (curved page, low light, shadow). For each photo store: JPEG, hand-typed ground truth per line (consonants only, plus pointed text for siddur pages), and the correct English gloss for signs/menus.
 
@@ -75,7 +77,7 @@ Known behaviour to remember: pointed text from the sign path is machine-generate
 - Sign path: vowelizer word accuracy against hand-pointed truth (native-speaker check); syllable boundary agreement with a Hebrew-literate reviewer; translation adequacy rated 1-3 by a Hebrew speaker.
 - Latency (p50/p95 on device), download size, whether it works offline, and bytes of image leaving the device.
 
-**Decision rule (proposal):** choose the smallest offline bundle that reaches consonant CER <= 5% and prayer top-1 >= 90% with false-accept <= 2% on the benchmark; otherwise ship cloud OCR as an opt-in with a disclosure, or keep the photo feature in the marked demo state. Record results in `data/photo/benchmark.json` (not created yet).
+**Decision rule (proposal):** choose the smallest offline bundle that reaches consonant CER <= 5% and prayer top-1 >= 90% with false-accept <= 2% on the benchmark; otherwise ship cloud OCR as an opt-in with a disclosure, or keep the photo feature in the marked demo state. Synthetic results: `data/photo/_benchmark/results.json`. Real-photo results: not yet; run `tools/ocr-bench/bench.mjs data/photo/real`.
 
 ## Known limitations of what was built
 

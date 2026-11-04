@@ -1,0 +1,668 @@
+{
+ "recorded": "2026-11-04",
+ "url": "https://nakdan-u2-1a.loadbalancer.dicta.org.il/api",
+ "note": "Recorded from the public Dicta Nakdan endpoint used by nakdan.dicta.org.il; options trimmed to first 3; inputs are public single words/phrases only",
+ "requestShape": {
+  "addmorph": true,
+  "keepmetagim": true,
+  "keepqq": false,
+  "nodageshdefmem": false,
+  "patachma": false,
+  "task": "nakdan",
+  "data": "<text>",
+  "useTokenization": true,
+  "genre": "modern"
+ },
+ "latencySeconds": [
+  0.22,
+  0.24,
+  0.18,
+  0.27,
+  0.23,
+  0.26,
+  0.21,
+  0.22,
+  0.21
+ ],
+ "cases": [
+  {
+   "input": "שלום",
+   "response": {
+    "data": [
+     {
+      "nakdan": {
+       "word": "שלום",
+       "options": [
+        {
+         "w": "שָׁלוֹם",
+         "levelChoice": 1,
+         "lex": "שָׁלוֹם",
+         "morph": "1093009408",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "שָׁלוֹם",
+         "levelChoice": 2,
+         "lex": "שָׁלוֹם",
+         "morph": "1048576",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "שָׁלוֹם",
+         "levelChoice": 2,
+         "lex": "שָׁלוֹם",
+         "morph": "655360",
+         "Acc": "AccUnk",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        }
+       ],
+       "sep": false,
+       "fpasuk": false,
+       "fconfident": true
+      },
+      "str": "שלום",
+      "pStr": "שלום",
+      "sep": false
+     }
+    ]
+   }
+  },
+  {
+   "input": "חלב",
+   "response": {
+    "data": [
+     {
+      "nakdan": {
+       "word": "חלב",
+       "options": [
+        {
+         "w": "חָלָב",
+         "levelChoice": 1,
+         "lex": "חָלָב",
+         "morph": "1093009408",
+         "Acc": "Acc0",
+         "morphDifference": "1074135040",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "חַלַבּ",
+         "levelChoice": 2,
+         "lex": "חַלַבּ",
+         "morph": "655360",
+         "Acc": "AccUnk",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "חָלָב",
+         "levelChoice": 3,
+         "lex": "חָלָב",
+         "morph": "1093009408",
+         "Acc": "AccUnk",
+         "fTanakh": true,
+         "fMorphNGram": false,
+         "prefix_len": 0
+        }
+       ],
+       "sep": false,
+       "fpasuk": false,
+       "fconfident": false
+      },
+      "str": "חלב",
+      "pStr": "חלב",
+      "sep": false
+     }
+    ]
+   }
+  },
+  {
+   "input": "ברוך הבא",
+   "response": {
+    "data": [
+     {
+      "nakdan": {
+       "word": "ברוך",
+       "options": [
+        {
+         "w": "בָּרוּךְ",
+         "levelChoice": 1,
+         "lex": "בָּרוּךְ",
+         "morph": "1092681728",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "בָּרוּךְ",
+         "levelChoice": 3,
+         "lex": "בָּרוּךְ",
+         "morph": "2251801444876288",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "בָּרוּךְ",
+         "levelChoice": 3,
+         "lex": "בָּרוּךְ",
+         "morph": "19529728",
+         "Acc": "AccUnk",
+         "fTanakh": true,
+         "fMorphNGram": false,
+         "prefix_len": 0
+        }
+       ],
+       "sep": false,
+       "fpasuk": false,
+       "fconfident": true
+      },
+      "str": "ברוך",
+      "pStr": "ברוך",
+      "sep": false
+     },
+     {
+      "nakdan": {
+       "word": " ",
+       "options": [],
+       "sep": true
+      },
+      "str": " ",
+      "pStr": " ",
+      "sep": true,
+      "break": 0
+     },
+     {
+      "nakdan": {
+       "word": "הבא",
+       "options": [
+        {
+         "w": "הַ|בָּא",
+         "levelChoice": 1,
+         "lex": "בָּא",
+         "morph": "2251801444876292",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 1
+        },
+        {
+         "w": "הַ|בָּא",
+         "levelChoice": 2,
+         "lex": "בָּא",
+         "morph": "1092681732",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 1
+        },
+        {
+         "w": "הַ|בָּא",
+         "levelChoice": 3,
+         "lex": "בָּא",
+         "morph": "1093009412",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 1
+        }
+       ],
+       "sep": false,
+       "fpasuk": false,
+       "fconfident": true
+      },
+      "str": "הבא",
+      "pStr": "הבא",
+      "sep": false
+     }
+    ]
+   }
+  },
+  {
+   "input": "תורה",
+   "response": {
+    "data": [
+     {
+      "nakdan": {
+       "word": "תורה",
+       "options": [
+        {
+         "w": "תּוֹרָה",
+         "levelChoice": 1,
+         "lex": "תּוֹרָה",
+         "morph": "1095106560",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "תּוֹרָה",
+         "levelChoice": 3,
+         "lex": "תּוֹרָה",
+         "morph": "1095106560",
+         "Acc": "AccUnk",
+         "fTanakh": true,
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "תּוֹרָהּ",
+         "levelChoice": 2,
+         "lex": "תּוֹר",
+         "morph": "111120486891520",
+         "Acc": "Acc0",
+         "morphDifference": "68719476736",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        }
+       ],
+       "sep": false,
+       "fpasuk": false,
+       "fconfident": false
+      },
+      "str": "תורה",
+      "pStr": "תורה",
+      "sep": false
+     }
+    ]
+   }
+  },
+  {
+   "input": "מסעדה",
+   "response": {
+    "data": [
+     {
+      "nakdan": {
+       "word": "מסעדה",
+       "options": [
+        {
+         "w": "מִסְעָדָה",
+         "levelChoice": 1,
+         "lex": "מִסְעָדָה",
+         "morph": "1095106560",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "מִסְעָדָהּ",
+         "levelChoice": 3,
+         "lex": "מִסְעָד",
+         "morph": "111120486891520",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "מְסַעֲדָהּ",
+         "levelChoice": 3,
+         "lex": "מְסַעֵד",
+         "morph": "111120486891520",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        }
+       ],
+       "sep": false,
+       "fpasuk": false,
+       "fconfident": false
+      },
+      "str": "מסעדה",
+      "pStr": "מסעדה",
+      "sep": false
+     }
+    ]
+   }
+  },
+  {
+   "input": "יציאה",
+   "response": {
+    "data": [
+     {
+      "nakdan": {
+       "word": "יציאה",
+       "options": [
+        {
+         "w": "יְצִיאָה",
+         "levelChoice": 1,
+         "lex": "יְצִיאָה",
+         "morph": "1095106560",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "יְצִיאָהּ",
+         "levelChoice": 3,
+         "lex": "יָצִיא",
+         "morph": "111120486891520",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "יִצֵּיֽאָה",
+         "levelChoice": 3,
+         "lex": "יצא",
+         "morph": "11259008082837504",
+         "Acc": "Acc1",
+         "fPoetry": true,
+         "fMorphNGram": false,
+         "prefix_len": 0
+        }
+       ],
+       "sep": false,
+       "fpasuk": false,
+       "fconfident": false
+      },
+      "str": "יציאה",
+      "pStr": "יציאה",
+      "sep": false
+     }
+    ]
+   }
+  },
+  {
+   "input": "פתוח סגור",
+   "response": {
+    "data": [
+     {
+      "nakdan": {
+       "word": "פתוח",
+       "options": [
+        {
+         "w": "פָּתוּחַ",
+         "levelChoice": 1,
+         "lex": "פָּתוּחַ",
+         "morph": "1092681728",
+         "Acc": "Acc1",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "פָּתוּחַ",
+         "levelChoice": 3,
+         "lex": "פָּתוּחַ",
+         "morph": "2251801444876288",
+         "Acc": "Acc1",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "פָּתוּחַ",
+         "levelChoice": 3,
+         "lex": "פתח",
+         "morph": "2251801444876288",
+         "Acc": "Acc1",
+         "fTanakh": true,
+         "fMorphNGram": false,
+         "prefix_len": 0
+        }
+       ],
+       "sep": false,
+       "fpasuk": false,
+       "fconfident": false
+      },
+      "str": "פתוח",
+      "pStr": "פתוח",
+      "sep": false
+     },
+     {
+      "nakdan": {
+       "word": " ",
+       "options": [],
+       "sep": true
+      },
+      "str": " ",
+      "pStr": " ",
+      "sep": true,
+      "break": 0
+     },
+     {
+      "nakdan": {
+       "word": "סגור",
+       "options": [
+        {
+         "w": "סָגוּר",
+         "levelChoice": 1,
+         "lex": "סָגוּר",
+         "morph": "1092681728",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "סְגֹוֽר",
+         "levelChoice": 3,
+         "lex": "סגר",
+         "morph": "2251843051520000",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "סָגוּר",
+         "levelChoice": 3,
+         "lex": "סָגוּר",
+         "morph": "2251801444876288",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        }
+       ],
+       "sep": false,
+       "fpasuk": false,
+       "fconfident": false
+      },
+      "str": "סגור",
+      "pStr": "סגור",
+      "sep": false
+     }
+    ]
+   }
+  },
+  {
+   "input": "קפה ועוגה",
+   "response": {
+    "data": [
+     {
+      "nakdan": {
+       "word": "קפה",
+       "options": [
+        {
+         "w": "קָפֶה",
+         "levelChoice": 1,
+         "lex": "קָפֶה",
+         "morph": "1093009408",
+         "Acc": "Acc0",
+         "morphDifference": "1073741824",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "קָפֵה",
+         "levelChoice": 2,
+         "lex": "קָפֶה",
+         "morph": "2166751232",
+         "Acc": "Acc0",
+         "morphDifference": "2147483648",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "קֵפֶה",
+         "levelChoice": 3,
+         "lex": "קֵפֶה",
+         "morph": "1093009408",
+         "Acc": "Acc1",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        }
+       ],
+       "sep": false,
+       "fpasuk": false,
+       "fconfident": false
+      },
+      "str": "קפה",
+      "pStr": "קפה",
+      "sep": false
+     },
+     {
+      "nakdan": {
+       "word": " ",
+       "options": [],
+       "sep": true
+      },
+      "str": " ",
+      "pStr": " ",
+      "sep": true,
+      "break": 0
+     },
+     {
+      "nakdan": {
+       "word": "ועוגה",
+       "options": [
+        {
+         "w": "וְ|עוּגָה",
+         "levelChoice": 1,
+         "lex": "עוּגָה",
+         "morph": "1095106562",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 1
+        },
+        {
+         "w": "וְ|עוּגָה",
+         "levelChoice": 3,
+         "lex": "עוג",
+         "morph": "2251843051520002",
+         "Acc": "Acc1",
+         "fPoetry": true,
+         "fMorphNGram": false,
+         "prefix_len": 1
+        },
+        {
+         "w": "וְ|עוּגָהּ",
+         "levelChoice": 3,
+         "lex": "עוג",
+         "morph": "2363031164878850",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 1
+        }
+       ],
+       "sep": false,
+       "fpasuk": false,
+       "fconfident": false
+      },
+      "str": "ועוגה",
+      "pStr": "ועוגה",
+      "sep": false
+     }
+    ]
+   }
+  },
+  {
+   "input": "שלום עולם",
+   "response": {
+    "data": [
+     {
+      "nakdan": {
+       "word": "שלום",
+       "options": [
+        {
+         "w": "שָׁלוֹם",
+         "levelChoice": 1,
+         "lex": "שָׁלוֹם",
+         "morph": "1093009408",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "שָׁלוֹם",
+         "levelChoice": 2,
+         "lex": "שָׁלוֹם",
+         "morph": "655360",
+         "Acc": "AccUnk",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "שָׁלוֹם",
+         "levelChoice": 2,
+         "lex": "שָׁלוֹם",
+         "morph": "1048576",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        }
+       ],
+       "sep": false,
+       "fpasuk": false,
+       "fconfident": true
+      },
+      "str": "שלום",
+      "pStr": "שלום",
+      "sep": false
+     },
+     {
+      "nakdan": {
+       "word": " ",
+       "options": [],
+       "sep": true
+      },
+      "str": " ",
+      "pStr": " ",
+      "sep": true,
+      "break": 0
+     },
+     {
+      "nakdan": {
+       "word": "עולם",
+       "options": [
+        {
+         "w": "עוֹלָם",
+         "levelChoice": 1,
+         "lex": "עוֹלָם",
+         "morph": "1093009408",
+         "Acc": "Acc0",
+         "morphDifference": "1073741824",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "עוֹלָם",
+         "levelChoice": 2,
+         "lex": "עוֹלָם",
+         "morph": "1093009408",
+         "Acc": "Acc0",
+         "morphDifference": "1073741824",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        },
+        {
+         "w": "עוֹלָם",
+         "levelChoice": 3,
+         "lex": "עוֹלֶה",
+         "morph": "114968777588736",
+         "Acc": "Acc0",
+         "fMorphNGram": false,
+         "prefix_len": 0
+        }
+       ],
+       "sep": false,
+       "fpasuk": false,
+       "fconfident": false
+      },
+      "str": "עולם",
+      "pStr": "עולם",
+      "sep": false
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -122,7 +122,7 @@ function classify(cl, opts = {}) {
     if (c.vowel !== 'shva') return;
     const prev = base[k - 1]; const nxt = base[k + 1];
     let kind;
-    const override = opts.shvaClassifier ? opts.shvaClassifier({ clusters: base, index: k }) : undefined;
+    const override = opts.shvaClassifier ? opts.shvaClassifier({ clusters: base, index: k, all: cl, word: opts._word }) : undefined;
     if (override === 'na' || override === 'nach') kind = override;
     else if (!nxt) kind = 'nach';
     else if (!prev) kind = 'na';
@@ -176,7 +176,7 @@ export function syllabifyWord(word, opts = {}) {
   let substituted = false;
   if (readDivineName && letters === 'יהוה') { w = DIVINE_NAME_READING; substituted = true; }
   else if (!isPointed(w) && !/\u05D5\u05BC/.test(w)) return []; // no vowel information at all
-  const cl = classify(parseClusters(w), opts);
+  const cl = classify(parseClusters(w), { ...opts, _word: w });
   // positions: mater/silent letters need their original text in `he`
   const syls = [];
   let cur = null;
@@ -242,10 +242,37 @@ export function syllabifyText(text, opts = {}) {
   return tokenise(text).map((w) => ({ word: w, pointed: isPointed(w), syllables: syllabifyWord(w, opts) }));
 }
 
-/** Try to load lane 3's shva classifier (src/pronunciation/shva.js). Contract unverified: expects `classifyShva`. */
-export async function loadLane3Shva() {
+/**
+ * Adapter from lane 3's shva classifier to this module's `shvaClassifier` hook.
+ * Lane 3 exports `classifyShvas(clusters, {level}) -> Map<index, {na, rule, heuristic}>` over ITS cluster list (`parseWord`, which keeps
+ * matres lectionis as clusters). The hook here gets `{clusters (consonants only), index, all (every letter cluster), word}`. Both lists are
+ * one-cluster-per-letter, so the position of the shva consonant inside `all` is the index into lane 3's list; we re-parse `word` with
+ * lane 3's parseWord, check the letter sequence lines up (else return undefined = fall back to the built-in rule), and map `na` -> 'na'|'nach'.
+ * @param {{classifyShvas:Function, parseWord:Function}} lane3
+ * @param {{level?:1|2}} [o]
+ */
+export function createLane3ShvaClassifier({ classifyShvas, parseWord }, o = {}) {
+  const cache = new Map();
+  return ({ index, clusters, all, word }) => {
+    if (!word || !all || !clusters) return undefined;
+    const pos = all.indexOf(clusters[index]);
+    if (pos < 0) return undefined;
+    let verdicts = cache.get(word);
+    if (verdicts === undefined) {
+      const l3 = parseWord(String(word).normalize('NFD').replace(/[\u0591-\u05AF]/g, '')); // lane 3 does not reorder marks; taamim are irrelevant here
+      verdicts = l3.length === all.length && l3.every((c, i) => c.ch === all[i].ch) ? classifyShvas(l3, o) : null;
+      cache.set(word, verdicts);
+    }
+    const v = verdicts?.get(pos);
+    return v ? (v.na ? 'na' : 'nach') : undefined;
+  };
+}
+
+/** Load lane 3 (src/pronunciation/) and return a ready `shvaClassifier` for syllabifyWord/runPipeline, or null if lane 3 is unavailable. */
+export async function loadLane3Shva(o = {}) {
   try {
-    const m = await import('../pronunciation/shva.js');
-    return typeof m.classifyShva === 'function' ? m.classifyShva : null;
+    const [shva, heb] = await Promise.all([import('../pronunciation/shva.js'), import('../pronunciation/hebrew.js')]);
+    if (typeof shva.classifyShvas !== 'function' || typeof heb.parseWord !== 'function') return null;
+    return createLane3ShvaClassifier({ classifyShvas: shva.classifyShvas, parseWord: heb.parseWord }, o);
   } catch { return null; }
 }

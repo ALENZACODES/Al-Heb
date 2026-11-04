@@ -1,34 +1,44 @@
-// REAL but UNEXERCISED adapters. Nothing here has been run against a live service or a real photo in this build.
+// Network adapters. STATUS: the Dicta Nakdan adapter below was run against the live service (see its comment); the Tesseract, Vision and
+// LibreTranslate adapters here are STILL UNEXERCISED (Vision needs a key; LibreTranslate public instance needs a paid key; for in-browser
+// Tesseract use tesseract-browser.js instead). Nothing here has been run on a real photo.
 // Every network adapter takes an injectable `fetch`, has describe() and a `dry` option that returns the request
 // it WOULD send without sending it. Run `node src/photo/engines/web.js --dry` to print all descriptions.
 // See docs/photo/ENGINES.md for the verified/unverified matrix.
 
 // ---------- Dicta Nakdan (vowelizer) ----------
-// UNVERIFIED: endpoint URL, request fields and response shape below are from memory of the public Nakdan web client
-// (the MIT client moshejs/dicta-nakdan was NOT readable in this session). Confirm against the client source and
-// Dicta's terms before use. URL is configurable for that reason.
-export const NAKDAN_DEFAULT_URL = 'https://nakdan-5-0.loadbalancer.dicta.org.il/api';
+// VERIFIED 2026-11-04 by calling it (9 public test inputs, ~0.2 s each, HTTP 200, CORS `Access-Control-Allow-Origin: *`).
+// Request/response shape was read from the production web client bundle (nakdan.dicta.org.il/assets/index-*.js) and confirmed with
+// live calls; recorded responses are in data/photo/_fixtures/nakdan-recorded.json (options trimmed to 3).
+// CAVEATS: (1) this is the endpoint the Nakdan WEBSITE uses; Dicta does not publish it as a documented public API here, so the host
+// name (nakdan-u2-1a ...) may change without notice. (2) No terms of use, rate limit or SLA could be read (dicta.org.il/developers is a JS
+// page with no readable text). Get Dicta's permission/terms before shipping this in a product. (3) The text being vowelized is
+// sent to Dicta. Never send private data; the app UI must disclose it. The old guess `nakdan-5-0.loadbalancer...` returns HTTP 302.
+export const NAKDAN_DEFAULT_URL = 'https://nakdan-u2-1a.loadbalancer.dicta.org.il/api';
 
 export function nakdanRequest(text, { url = NAKDAN_DEFAULT_URL, genre = 'modern' } = {}) {
   return {
     url, method: 'POST', headers: { 'Content-Type': 'application/json' },
-    body: { task: 'nakdan', data: text, genre, addmorph: true, keepqq: false, nodageshdefmem: false, patachma: false, keepmetagim: false, matchpartial: true },
+    body: { task: 'nakdan', data: text, genre, addmorph: true, keepmetagim: true, keepqq: false, nodageshdefmem: false, patachma: false, useTokenization: true },
   };
 }
-/** Pick the first suggestion per word; Dicta marks morpheme boundaries with '|' which we drop. */
+/**
+ * Real shape: {data:[ {str, sep:false, nakdan:{word, options:[{w, lex, morph, levelChoice, prefix_len, ...}, ...]}}, {str:' ', sep:true, ...}, ... ]}
+ * Options are ranked; we take options[0].w. `|` marks the prefix/stem boundary and is dropped. Meteg (U+05BD) is dropped too because the
+ * syllabifier does not use it. Separator tokens (spaces/punctuation) are copied through from `str`.
+ */
 export function parseNakdanResponse(json) {
-  const items = Array.isArray(json) ? json : (json?.data ?? []);
+  const items = json?.data;
+  if (!Array.isArray(items)) throw new Error('Nakdan: response has no data array');
   return items.map((it) => {
-    if (typeof it === 'string') return it;
-    const opt = it?.options?.[0];
-    const w = typeof opt === 'string' ? opt : (opt?.w ?? opt?.word);
-    return String(w ?? it?.word ?? '').replace(/\|/g, '');
-  }).join('');
+    if (it?.sep) return String(it.str ?? it.nakdan?.word ?? '');
+    const w = it?.nakdan?.options?.[0]?.w;
+    return String(w ?? it?.str ?? '').replace(/[|\u05BD]/g, '');
+  }).join('').normalize('NFC'); // Nakdan's mark order is not canonical (e.g. shin dot after the vowel); NFC makes strings comparable
 }
 export function createNakdanVowelizer({ fetch: f = globalThis.fetch, url = NAKDAN_DEFAULT_URL, dry = false, genre = 'modern' } = {}) {
   const a = {
-    name: 'dicta-nakdan (unverified adapter)', unverified: true,
-    describe: () => `POST ${url} JSON {task:"nakdan", data:<unpointed text>, genre:"${genre}", ...} -> pick first option per word. UNVERIFIED endpoint/shape.`,
+    name: 'dicta-nakdan', unverified: false, sendsTextOffDevice: true,
+    describe: () => `POST ${url} JSON {task:"nakdan", data:<unpointed text>, genre:"${genre}", addmorph, keepmetagim, useTokenization...} -> data[].nakdan.options[0].w. Sends the text to Dicta. No published terms/rate limit found.`,
     async vowelize(text) {
       const req = nakdanRequest(text, { url, genre });
       if (dry) return { dry: true, request: req };

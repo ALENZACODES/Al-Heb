@@ -1,0 +1,2365 @@
+{
+ "synthetic": true,
+ "note": "Rendered text with simulated degradation. NOT real photographs. Do not quote as real-photo accuracy.",
+ "generator": "tools/ocr-bench/gen.py",
+ "seed": 1234,
+ "count": 145,
+ "items": [
+  {
+   "id": "siddur-bless-priestly-1__clean",
+   "file": "images/siddur-bless-priestly-1__clean.png",
+   "kind": "siddur-line",
+   "variant": "clean",
+   "base": "siddur-bless-priestly-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃"
+   ],
+   "consonantLines": [
+    "יברכך יהוה וישמרך׃"
+   ],
+   "source": "registry:bless-priestly-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-bless-priestly-1__noise",
+   "file": "images/siddur-bless-priestly-1__noise.jpg",
+   "kind": "siddur-line",
+   "variant": "noise",
+   "base": "siddur-bless-priestly-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃"
+   ],
+   "consonantLines": [
+    "יברכך יהוה וישמרך׃"
+   ],
+   "source": "registry:bless-priestly-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-bless-priestly-1__blur",
+   "file": "images/siddur-bless-priestly-1__blur.png",
+   "kind": "siddur-line",
+   "variant": "blur",
+   "base": "siddur-bless-priestly-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃"
+   ],
+   "consonantLines": [
+    "יברכך יהוה וישמרך׃"
+   ],
+   "source": "registry:bless-priestly-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-bless-priestly-1__rotate",
+   "file": "images/siddur-bless-priestly-1__rotate.png",
+   "kind": "siddur-line",
+   "variant": "rotate",
+   "base": "siddur-bless-priestly-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃"
+   ],
+   "consonantLines": [
+    "יברכך יהוה וישמרך׃"
+   ],
+   "source": "registry:bless-priestly-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-bless-priestly-1__perspective",
+   "file": "images/siddur-bless-priestly-1__perspective.png",
+   "kind": "siddur-line",
+   "variant": "perspective",
+   "base": "siddur-bless-priestly-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃"
+   ],
+   "consonantLines": [
+    "יברכך יהוה וישמרך׃"
+   ],
+   "source": "registry:bless-priestly-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-bless-priestly-1__lowcontrast",
+   "file": "images/siddur-bless-priestly-1__lowcontrast.jpg",
+   "kind": "siddur-line",
+   "variant": "lowcontrast",
+   "base": "siddur-bless-priestly-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃"
+   ],
+   "consonantLines": [
+    "יברכך יהוה וישמרך׃"
+   ],
+   "source": "registry:bless-priestly-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-bless-priestly-2__clean",
+   "file": "images/siddur-bless-priestly-2__clean.png",
+   "kind": "siddur-line",
+   "variant": "clean",
+   "base": "siddur-bless-priestly-2",
+   "font": "frank-ruhl",
+   "lines": [
+    "יָאֵר יְהוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃"
+   ],
+   "consonantLines": [
+    "יאר יהוה פניו אליך ויחנך׃"
+   ],
+   "source": "registry:bless-priestly-2",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-bless-priestly-2__noise",
+   "file": "images/siddur-bless-priestly-2__noise.jpg",
+   "kind": "siddur-line",
+   "variant": "noise",
+   "base": "siddur-bless-priestly-2",
+   "font": "frank-ruhl",
+   "lines": [
+    "יָאֵר יְהוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃"
+   ],
+   "consonantLines": [
+    "יאר יהוה פניו אליך ויחנך׃"
+   ],
+   "source": "registry:bless-priestly-2",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-bless-priestly-2__blur",
+   "file": "images/siddur-bless-priestly-2__blur.png",
+   "kind": "siddur-line",
+   "variant": "blur",
+   "base": "siddur-bless-priestly-2",
+   "font": "frank-ruhl",
+   "lines": [
+    "יָאֵר יְהוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃"
+   ],
+   "consonantLines": [
+    "יאר יהוה פניו אליך ויחנך׃"
+   ],
+   "source": "registry:bless-priestly-2",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-bless-priestly-2__rotate",
+   "file": "images/siddur-bless-priestly-2__rotate.png",
+   "kind": "siddur-line",
+   "variant": "rotate",
+   "base": "siddur-bless-priestly-2",
+   "font": "frank-ruhl",
+   "lines": [
+    "יָאֵר יְהוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃"
+   ],
+   "consonantLines": [
+    "יאר יהוה פניו אליך ויחנך׃"
+   ],
+   "source": "registry:bless-priestly-2",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-bless-priestly-2__perspective",
+   "file": "images/siddur-bless-priestly-2__perspective.png",
+   "kind": "siddur-line",
+   "variant": "perspective",
+   "base": "siddur-bless-priestly-2",
+   "font": "frank-ruhl",
+   "lines": [
+    "יָאֵר יְהוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃"
+   ],
+   "consonantLines": [
+    "יאר יהוה פניו אליך ויחנך׃"
+   ],
+   "source": "registry:bless-priestly-2",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-bless-priestly-2__lowcontrast",
+   "file": "images/siddur-bless-priestly-2__lowcontrast.jpg",
+   "kind": "siddur-line",
+   "variant": "lowcontrast",
+   "base": "siddur-bless-priestly-2",
+   "font": "frank-ruhl",
+   "lines": [
+    "יָאֵר יְהוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃"
+   ],
+   "consonantLines": [
+    "יאר יהוה פניו אליך ויחנך׃"
+   ],
+   "source": "registry:bless-priestly-2",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-bless-priestly-3__clean",
+   "file": "images/siddur-bless-priestly-3__clean.png",
+   "kind": "siddur-line",
+   "variant": "clean",
+   "base": "siddur-bless-priestly-3",
+   "font": "noto-serif",
+   "lines": [
+    "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃"
+   ],
+   "consonantLines": [
+    "ישא יהוה פניו אליך וישם לך שלום׃"
+   ],
+   "source": "registry:bless-priestly-3",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-bless-priestly-3__noise",
+   "file": "images/siddur-bless-priestly-3__noise.jpg",
+   "kind": "siddur-line",
+   "variant": "noise",
+   "base": "siddur-bless-priestly-3",
+   "font": "noto-serif",
+   "lines": [
+    "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃"
+   ],
+   "consonantLines": [
+    "ישא יהוה פניו אליך וישם לך שלום׃"
+   ],
+   "source": "registry:bless-priestly-3",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-bless-priestly-3__blur",
+   "file": "images/siddur-bless-priestly-3__blur.png",
+   "kind": "siddur-line",
+   "variant": "blur",
+   "base": "siddur-bless-priestly-3",
+   "font": "noto-serif",
+   "lines": [
+    "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃"
+   ],
+   "consonantLines": [
+    "ישא יהוה פניו אליך וישם לך שלום׃"
+   ],
+   "source": "registry:bless-priestly-3",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-bless-priestly-3__rotate",
+   "file": "images/siddur-bless-priestly-3__rotate.png",
+   "kind": "siddur-line",
+   "variant": "rotate",
+   "base": "siddur-bless-priestly-3",
+   "font": "noto-serif",
+   "lines": [
+    "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃"
+   ],
+   "consonantLines": [
+    "ישא יהוה פניו אליך וישם לך שלום׃"
+   ],
+   "source": "registry:bless-priestly-3",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-bless-priestly-3__perspective",
+   "file": "images/siddur-bless-priestly-3__perspective.png",
+   "kind": "siddur-line",
+   "variant": "perspective",
+   "base": "siddur-bless-priestly-3",
+   "font": "noto-serif",
+   "lines": [
+    "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃"
+   ],
+   "consonantLines": [
+    "ישא יהוה פניו אליך וישם לך שלום׃"
+   ],
+   "source": "registry:bless-priestly-3",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-bless-priestly-3__lowcontrast",
+   "file": "images/siddur-bless-priestly-3__lowcontrast.jpg",
+   "kind": "siddur-line",
+   "variant": "lowcontrast",
+   "base": "siddur-bless-priestly-3",
+   "font": "noto-serif",
+   "lines": [
+    "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃"
+   ],
+   "consonantLines": [
+    "ישא יהוה פניו אליך וישם לך שלום׃"
+   ],
+   "source": "registry:bless-priestly-3",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-shema-1__clean",
+   "file": "images/siddur-shema-1__clean.png",
+   "kind": "siddur-line",
+   "variant": "clean",
+   "base": "siddur-shema-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃"
+   ],
+   "consonantLines": [
+    "שמע ישראל יהוה אלהינו יהוה אחד׃"
+   ],
+   "source": "registry:shema-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-shema-1__noise",
+   "file": "images/siddur-shema-1__noise.jpg",
+   "kind": "siddur-line",
+   "variant": "noise",
+   "base": "siddur-shema-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃"
+   ],
+   "consonantLines": [
+    "שמע ישראל יהוה אלהינו יהוה אחד׃"
+   ],
+   "source": "registry:shema-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-shema-1__blur",
+   "file": "images/siddur-shema-1__blur.png",
+   "kind": "siddur-line",
+   "variant": "blur",
+   "base": "siddur-shema-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃"
+   ],
+   "consonantLines": [
+    "שמע ישראל יהוה אלהינו יהוה אחד׃"
+   ],
+   "source": "registry:shema-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-shema-1__rotate",
+   "file": "images/siddur-shema-1__rotate.png",
+   "kind": "siddur-line",
+   "variant": "rotate",
+   "base": "siddur-shema-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃"
+   ],
+   "consonantLines": [
+    "שמע ישראל יהוה אלהינו יהוה אחד׃"
+   ],
+   "source": "registry:shema-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-shema-1__perspective",
+   "file": "images/siddur-shema-1__perspective.png",
+   "kind": "siddur-line",
+   "variant": "perspective",
+   "base": "siddur-shema-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃"
+   ],
+   "consonantLines": [
+    "שמע ישראל יהוה אלהינו יהוה אחד׃"
+   ],
+   "source": "registry:shema-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-shema-1__lowcontrast",
+   "file": "images/siddur-shema-1__lowcontrast.jpg",
+   "kind": "siddur-line",
+   "variant": "lowcontrast",
+   "base": "siddur-shema-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃"
+   ],
+   "consonantLines": [
+    "שמע ישראל יהוה אלהינו יהוה אחד׃"
+   ],
+   "source": "registry:shema-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-shema-2__clean",
+   "file": "images/siddur-shema-2__clean.png",
+   "kind": "siddur-line",
+   "variant": "clean",
+   "base": "siddur-shema-2",
+   "font": "noto-serif",
+   "lines": [
+    "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃"
+   ],
+   "consonantLines": [
+    "ברוך שם כבוד מלכותו לעולם ועד׃"
+   ],
+   "source": "registry:shema-2",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-shema-2__noise",
+   "file": "images/siddur-shema-2__noise.jpg",
+   "kind": "siddur-line",
+   "variant": "noise",
+   "base": "siddur-shema-2",
+   "font": "noto-serif",
+   "lines": [
+    "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃"
+   ],
+   "consonantLines": [
+    "ברוך שם כבוד מלכותו לעולם ועד׃"
+   ],
+   "source": "registry:shema-2",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-shema-2__blur",
+   "file": "images/siddur-shema-2__blur.png",
+   "kind": "siddur-line",
+   "variant": "blur",
+   "base": "siddur-shema-2",
+   "font": "noto-serif",
+   "lines": [
+    "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃"
+   ],
+   "consonantLines": [
+    "ברוך שם כבוד מלכותו לעולם ועד׃"
+   ],
+   "source": "registry:shema-2",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-shema-2__rotate",
+   "file": "images/siddur-shema-2__rotate.png",
+   "kind": "siddur-line",
+   "variant": "rotate",
+   "base": "siddur-shema-2",
+   "font": "noto-serif",
+   "lines": [
+    "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃"
+   ],
+   "consonantLines": [
+    "ברוך שם כבוד מלכותו לעולם ועד׃"
+   ],
+   "source": "registry:shema-2",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-shema-2__perspective",
+   "file": "images/siddur-shema-2__perspective.png",
+   "kind": "siddur-line",
+   "variant": "perspective",
+   "base": "siddur-shema-2",
+   "font": "noto-serif",
+   "lines": [
+    "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃"
+   ],
+   "consonantLines": [
+    "ברוך שם כבוד מלכותו לעולם ועד׃"
+   ],
+   "source": "registry:shema-2",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-shema-2__lowcontrast",
+   "file": "images/siddur-shema-2__lowcontrast.jpg",
+   "kind": "siddur-line",
+   "variant": "lowcontrast",
+   "base": "siddur-shema-2",
+   "font": "noto-serif",
+   "lines": [
+    "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃"
+   ],
+   "consonantLines": [
+    "ברוך שם כבוד מלכותו לעולם ועד׃"
+   ],
+   "source": "registry:shema-2",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-mah-tovu-1__clean",
+   "file": "images/siddur-mah-tovu-1__clean.png",
+   "kind": "siddur-line",
+   "variant": "clean",
+   "base": "siddur-mah-tovu-1",
+   "font": "freeserif",
+   "lines": [
+    "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃"
+   ],
+   "consonantLines": [
+    "מה־טבו אהליך יעקב משכנתיך ישראל׃"
+   ],
+   "source": "registry:mah-tovu-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-mah-tovu-1__noise",
+   "file": "images/siddur-mah-tovu-1__noise.jpg",
+   "kind": "siddur-line",
+   "variant": "noise",
+   "base": "siddur-mah-tovu-1",
+   "font": "freeserif",
+   "lines": [
+    "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃"
+   ],
+   "consonantLines": [
+    "מה־טבו אהליך יעקב משכנתיך ישראל׃"
+   ],
+   "source": "registry:mah-tovu-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-mah-tovu-1__blur",
+   "file": "images/siddur-mah-tovu-1__blur.png",
+   "kind": "siddur-line",
+   "variant": "blur",
+   "base": "siddur-mah-tovu-1",
+   "font": "freeserif",
+   "lines": [
+    "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃"
+   ],
+   "consonantLines": [
+    "מה־טבו אהליך יעקב משכנתיך ישראל׃"
+   ],
+   "source": "registry:mah-tovu-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-mah-tovu-1__rotate",
+   "file": "images/siddur-mah-tovu-1__rotate.png",
+   "kind": "siddur-line",
+   "variant": "rotate",
+   "base": "siddur-mah-tovu-1",
+   "font": "freeserif",
+   "lines": [
+    "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃"
+   ],
+   "consonantLines": [
+    "מה־טבו אהליך יעקב משכנתיך ישראל׃"
+   ],
+   "source": "registry:mah-tovu-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-mah-tovu-1__perspective",
+   "file": "images/siddur-mah-tovu-1__perspective.png",
+   "kind": "siddur-line",
+   "variant": "perspective",
+   "base": "siddur-mah-tovu-1",
+   "font": "freeserif",
+   "lines": [
+    "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃"
+   ],
+   "consonantLines": [
+    "מה־טבו אהליך יעקב משכנתיך ישראל׃"
+   ],
+   "source": "registry:mah-tovu-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-mah-tovu-1__lowcontrast",
+   "file": "images/siddur-mah-tovu-1__lowcontrast.jpg",
+   "kind": "siddur-line",
+   "variant": "lowcontrast",
+   "base": "siddur-mah-tovu-1",
+   "font": "freeserif",
+   "lines": [
+    "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃"
+   ],
+   "consonantLines": [
+    "מה־טבו אהליך יעקב משכנתיך ישראל׃"
+   ],
+   "source": "registry:mah-tovu-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-modeh-ani-1__clean",
+   "file": "images/siddur-modeh-ani-1__clean.png",
+   "kind": "siddur-line",
+   "variant": "clean",
+   "base": "siddur-modeh-ani-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃"
+   ],
+   "consonantLines": [
+    "מודה אני לפניך מלך חי וקים שהחזרת בי נשמתי בחמלה רבה אמונתך׃"
+   ],
+   "source": "registry:modeh-ani-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-modeh-ani-1__noise",
+   "file": "images/siddur-modeh-ani-1__noise.jpg",
+   "kind": "siddur-line",
+   "variant": "noise",
+   "base": "siddur-modeh-ani-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃"
+   ],
+   "consonantLines": [
+    "מודה אני לפניך מלך חי וקים שהחזרת בי נשמתי בחמלה רבה אמונתך׃"
+   ],
+   "source": "registry:modeh-ani-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-modeh-ani-1__blur",
+   "file": "images/siddur-modeh-ani-1__blur.png",
+   "kind": "siddur-line",
+   "variant": "blur",
+   "base": "siddur-modeh-ani-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃"
+   ],
+   "consonantLines": [
+    "מודה אני לפניך מלך חי וקים שהחזרת בי נשמתי בחמלה רבה אמונתך׃"
+   ],
+   "source": "registry:modeh-ani-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-modeh-ani-1__rotate",
+   "file": "images/siddur-modeh-ani-1__rotate.png",
+   "kind": "siddur-line",
+   "variant": "rotate",
+   "base": "siddur-modeh-ani-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃"
+   ],
+   "consonantLines": [
+    "מודה אני לפניך מלך חי וקים שהחזרת בי נשמתי בחמלה רבה אמונתך׃"
+   ],
+   "source": "registry:modeh-ani-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-modeh-ani-1__perspective",
+   "file": "images/siddur-modeh-ani-1__perspective.png",
+   "kind": "siddur-line",
+   "variant": "perspective",
+   "base": "siddur-modeh-ani-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃"
+   ],
+   "consonantLines": [
+    "מודה אני לפניך מלך חי וקים שהחזרת בי נשמתי בחמלה רבה אמונתך׃"
+   ],
+   "source": "registry:modeh-ani-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-modeh-ani-1__lowcontrast",
+   "file": "images/siddur-modeh-ani-1__lowcontrast.jpg",
+   "kind": "siddur-line",
+   "variant": "lowcontrast",
+   "base": "siddur-modeh-ani-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃"
+   ],
+   "consonantLines": [
+    "מודה אני לפניך מלך חי וקים שהחזרת בי נשמתי בחמלה רבה אמונתך׃"
+   ],
+   "source": "registry:modeh-ani-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-mi-chamocha-1__clean",
+   "file": "images/siddur-mi-chamocha-1__clean.png",
+   "kind": "siddur-line",
+   "variant": "clean",
+   "base": "siddur-mi-chamocha-1",
+   "font": "noto-serif",
+   "lines": [
+    "מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃"
+   ],
+   "consonantLines": [
+    "מי־כמכה באלם יהוה מי כמכה נאדר בקדש נורא תהלת עשה פלא׃"
+   ],
+   "source": "registry:mi-chamocha-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-mi-chamocha-1__noise",
+   "file": "images/siddur-mi-chamocha-1__noise.jpg",
+   "kind": "siddur-line",
+   "variant": "noise",
+   "base": "siddur-mi-chamocha-1",
+   "font": "noto-serif",
+   "lines": [
+    "מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃"
+   ],
+   "consonantLines": [
+    "מי־כמכה באלם יהוה מי כמכה נאדר בקדש נורא תהלת עשה פלא׃"
+   ],
+   "source": "registry:mi-chamocha-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-mi-chamocha-1__blur",
+   "file": "images/siddur-mi-chamocha-1__blur.png",
+   "kind": "siddur-line",
+   "variant": "blur",
+   "base": "siddur-mi-chamocha-1",
+   "font": "noto-serif",
+   "lines": [
+    "מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃"
+   ],
+   "consonantLines": [
+    "מי־כמכה באלם יהוה מי כמכה נאדר בקדש נורא תהלת עשה פלא׃"
+   ],
+   "source": "registry:mi-chamocha-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-mi-chamocha-1__rotate",
+   "file": "images/siddur-mi-chamocha-1__rotate.png",
+   "kind": "siddur-line",
+   "variant": "rotate",
+   "base": "siddur-mi-chamocha-1",
+   "font": "noto-serif",
+   "lines": [
+    "מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃"
+   ],
+   "consonantLines": [
+    "מי־כמכה באלם יהוה מי כמכה נאדר בקדש נורא תהלת עשה פלא׃"
+   ],
+   "source": "registry:mi-chamocha-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-mi-chamocha-1__perspective",
+   "file": "images/siddur-mi-chamocha-1__perspective.png",
+   "kind": "siddur-line",
+   "variant": "perspective",
+   "base": "siddur-mi-chamocha-1",
+   "font": "noto-serif",
+   "lines": [
+    "מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃"
+   ],
+   "consonantLines": [
+    "מי־כמכה באלם יהוה מי כמכה נאדר בקדש נורא תהלת עשה פלא׃"
+   ],
+   "source": "registry:mi-chamocha-1",
+   "synthetic": true
+  },
+  {
+   "id": "siddur-mi-chamocha-1__lowcontrast",
+   "file": "images/siddur-mi-chamocha-1__lowcontrast.jpg",
+   "kind": "siddur-line",
+   "variant": "lowcontrast",
+   "base": "siddur-mi-chamocha-1",
+   "font": "noto-serif",
+   "lines": [
+    "מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃"
+   ],
+   "consonantLines": [
+    "מי־כמכה באלם יהוה מי כמכה נאדר בקדש נורא תהלת עשה פלא׃"
+   ],
+   "source": "registry:mi-chamocha-1",
+   "synthetic": true
+  },
+  {
+   "id": "page-bless-priestly-1__clean",
+   "file": "images/page-bless-priestly-1__clean.png",
+   "kind": "siddur-page",
+   "variant": "clean",
+   "base": "page-bless-priestly-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃",
+    "יָאֵר יְהוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃",
+    "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃"
+   ],
+   "consonantLines": [
+    "יברכך יהוה וישמרך׃",
+    "יאר יהוה פניו אליך ויחנך׃",
+    "ישא יהוה פניו אליך וישם לך שלום׃"
+   ],
+   "source": "registry:bless-priestly-1+bless-priestly-2+bless-priestly-3",
+   "synthetic": true
+  },
+  {
+   "id": "page-bless-priestly-1__rotate",
+   "file": "images/page-bless-priestly-1__rotate.png",
+   "kind": "siddur-page",
+   "variant": "rotate",
+   "base": "page-bless-priestly-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃",
+    "יָאֵר יְהוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃",
+    "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃"
+   ],
+   "consonantLines": [
+    "יברכך יהוה וישמרך׃",
+    "יאר יהוה פניו אליך ויחנך׃",
+    "ישא יהוה פניו אליך וישם לך שלום׃"
+   ],
+   "source": "registry:bless-priestly-1+bless-priestly-2+bless-priestly-3",
+   "synthetic": true
+  },
+  {
+   "id": "page-bless-priestly-1__noise",
+   "file": "images/page-bless-priestly-1__noise.jpg",
+   "kind": "siddur-page",
+   "variant": "noise",
+   "base": "page-bless-priestly-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃",
+    "יָאֵר יְהוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃",
+    "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃"
+   ],
+   "consonantLines": [
+    "יברכך יהוה וישמרך׃",
+    "יאר יהוה פניו אליך ויחנך׃",
+    "ישא יהוה פניו אליך וישם לך שלום׃"
+   ],
+   "source": "registry:bless-priestly-1+bless-priestly-2+bless-priestly-3",
+   "synthetic": true
+  },
+  {
+   "id": "page-shema-1__clean",
+   "file": "images/page-shema-1__clean.png",
+   "kind": "siddur-page",
+   "variant": "clean",
+   "base": "page-shema-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃",
+    "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃",
+    "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃"
+   ],
+   "consonantLines": [
+    "שמע ישראל יהוה אלהינו יהוה אחד׃",
+    "ברוך שם כבוד מלכותו לעולם ועד׃",
+    "ואהבת את יהוה אלהיך בכל־לבבך ובכל־נפשך ובכל־מאדך׃"
+   ],
+   "source": "registry:shema-1+shema-2+vahavta-1",
+   "synthetic": true
+  },
+  {
+   "id": "page-shema-1__rotate",
+   "file": "images/page-shema-1__rotate.png",
+   "kind": "siddur-page",
+   "variant": "rotate",
+   "base": "page-shema-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃",
+    "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃",
+    "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃"
+   ],
+   "consonantLines": [
+    "שמע ישראל יהוה אלהינו יהוה אחד׃",
+    "ברוך שם כבוד מלכותו לעולם ועד׃",
+    "ואהבת את יהוה אלהיך בכל־לבבך ובכל־נפשך ובכל־מאדך׃"
+   ],
+   "source": "registry:shema-1+shema-2+vahavta-1",
+   "synthetic": true
+  },
+  {
+   "id": "page-shema-1__noise",
+   "file": "images/page-shema-1__noise.jpg",
+   "kind": "siddur-page",
+   "variant": "noise",
+   "base": "page-shema-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃",
+    "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃",
+    "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃"
+   ],
+   "consonantLines": [
+    "שמע ישראל יהוה אלהינו יהוה אחד׃",
+    "ברוך שם כבוד מלכותו לעולם ועד׃",
+    "ואהבת את יהוה אלהיך בכל־לבבך ובכל־נפשך ובכל־מאדך׃"
+   ],
+   "source": "registry:shema-1+shema-2+vahavta-1",
+   "synthetic": true
+  },
+  {
+   "id": "page-mah-tovu-1__clean",
+   "file": "images/page-mah-tovu-1__clean.png",
+   "kind": "siddur-page",
+   "variant": "clean",
+   "base": "page-mah-tovu-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃",
+    "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃",
+    "מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃"
+   ],
+   "consonantLines": [
+    "מה־טבו אהליך יעקב משכנתיך ישראל׃",
+    "מודה אני לפניך מלך חי וקים שהחזרת בי נשמתי בחמלה רבה אמונתך׃",
+    "מי־כמכה באלם יהוה מי כמכה נאדר בקדש נורא תהלת עשה פלא׃"
+   ],
+   "source": "registry:mah-tovu-1+modeh-ani-1+mi-chamocha-1",
+   "synthetic": true
+  },
+  {
+   "id": "page-mah-tovu-1__rotate",
+   "file": "images/page-mah-tovu-1__rotate.png",
+   "kind": "siddur-page",
+   "variant": "rotate",
+   "base": "page-mah-tovu-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃",
+    "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃",
+    "מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃"
+   ],
+   "consonantLines": [
+    "מה־טבו אהליך יעקב משכנתיך ישראל׃",
+    "מודה אני לפניך מלך חי וקים שהחזרת בי נשמתי בחמלה רבה אמונתך׃",
+    "מי־כמכה באלם יהוה מי כמכה נאדר בקדש נורא תהלת עשה פלא׃"
+   ],
+   "source": "registry:mah-tovu-1+modeh-ani-1+mi-chamocha-1",
+   "synthetic": true
+  },
+  {
+   "id": "page-mah-tovu-1__noise",
+   "file": "images/page-mah-tovu-1__noise.jpg",
+   "kind": "siddur-page",
+   "variant": "noise",
+   "base": "page-mah-tovu-1",
+   "font": "frank-ruhl",
+   "lines": [
+    "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃",
+    "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃",
+    "מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃"
+   ],
+   "consonantLines": [
+    "מה־טבו אהליך יעקב משכנתיך ישראל׃",
+    "מודה אני לפניך מלך חי וקים שהחזרת בי נשמתי בחמלה רבה אמונתך׃",
+    "מי־כמכה באלם יהוה מי כמכה נאדר בקדש נורא תהלת עשה פלא׃"
+   ],
+   "source": "registry:mah-tovu-1+modeh-ani-1+mi-chamocha-1",
+   "synthetic": true
+  },
+  {
+   "id": "sign-politeness-19__clean",
+   "file": "images/sign-politeness-19__clean.png",
+   "kind": "sign",
+   "variant": "clean",
+   "base": "sign-politeness-19",
+   "font": "heebo",
+   "lines": [
+    "די"
+   ],
+   "consonantLines": [
+    "די"
+   ],
+   "source": "phrasebook:politeness-19",
+   "synthetic": true
+  },
+  {
+   "id": "sign-politeness-19__noise",
+   "file": "images/sign-politeness-19__noise.jpg",
+   "kind": "sign",
+   "variant": "noise",
+   "base": "sign-politeness-19",
+   "font": "heebo",
+   "lines": [
+    "די"
+   ],
+   "consonantLines": [
+    "די"
+   ],
+   "source": "phrasebook:politeness-19",
+   "synthetic": true
+  },
+  {
+   "id": "sign-politeness-19__blur",
+   "file": "images/sign-politeness-19__blur.png",
+   "kind": "sign",
+   "variant": "blur",
+   "base": "sign-politeness-19",
+   "font": "heebo",
+   "lines": [
+    "די"
+   ],
+   "consonantLines": [
+    "די"
+   ],
+   "source": "phrasebook:politeness-19",
+   "synthetic": true
+  },
+  {
+   "id": "sign-politeness-19__rotate",
+   "file": "images/sign-politeness-19__rotate.png",
+   "kind": "sign",
+   "variant": "rotate",
+   "base": "sign-politeness-19",
+   "font": "heebo",
+   "lines": [
+    "די"
+   ],
+   "consonantLines": [
+    "די"
+   ],
+   "source": "phrasebook:politeness-19",
+   "synthetic": true
+  },
+  {
+   "id": "sign-politeness-19__perspective",
+   "file": "images/sign-politeness-19__perspective.png",
+   "kind": "sign",
+   "variant": "perspective",
+   "base": "sign-politeness-19",
+   "font": "heebo",
+   "lines": [
+    "די"
+   ],
+   "consonantLines": [
+    "די"
+   ],
+   "source": "phrasebook:politeness-19",
+   "synthetic": true
+  },
+  {
+   "id": "sign-politeness-19__lowcontrast",
+   "file": "images/sign-politeness-19__lowcontrast.jpg",
+   "kind": "sign",
+   "variant": "lowcontrast",
+   "base": "sign-politeness-19",
+   "font": "heebo",
+   "lines": [
+    "די"
+   ],
+   "consonantLines": [
+    "די"
+   ],
+   "source": "phrasebook:politeness-19",
+   "synthetic": true
+  },
+  {
+   "id": "sign-directions-05__clean",
+   "file": "images/sign-directions-05__clean.png",
+   "kind": "sign",
+   "variant": "clean",
+   "base": "sign-directions-05",
+   "font": "alef-bold",
+   "lines": [
+    "ישר"
+   ],
+   "consonantLines": [
+    "ישר"
+   ],
+   "source": "phrasebook:directions-05",
+   "synthetic": true
+  },
+  {
+   "id": "sign-directions-05__noise",
+   "file": "images/sign-directions-05__noise.jpg",
+   "kind": "sign",
+   "variant": "noise",
+   "base": "sign-directions-05",
+   "font": "alef-bold",
+   "lines": [
+    "ישר"
+   ],
+   "consonantLines": [
+    "ישר"
+   ],
+   "source": "phrasebook:directions-05",
+   "synthetic": true
+  },
+  {
+   "id": "sign-directions-05__blur",
+   "file": "images/sign-directions-05__blur.png",
+   "kind": "sign",
+   "variant": "blur",
+   "base": "sign-directions-05",
+   "font": "alef-bold",
+   "lines": [
+    "ישר"
+   ],
+   "consonantLines": [
+    "ישר"
+   ],
+   "source": "phrasebook:directions-05",
+   "synthetic": true
+  },
+  {
+   "id": "sign-directions-05__rotate",
+   "file": "images/sign-directions-05__rotate.png",
+   "kind": "sign",
+   "variant": "rotate",
+   "base": "sign-directions-05",
+   "font": "alef-bold",
+   "lines": [
+    "ישר"
+   ],
+   "consonantLines": [
+    "ישר"
+   ],
+   "source": "phrasebook:directions-05",
+   "synthetic": true
+  },
+  {
+   "id": "sign-directions-05__perspective",
+   "file": "images/sign-directions-05__perspective.png",
+   "kind": "sign",
+   "variant": "perspective",
+   "base": "sign-directions-05",
+   "font": "alef-bold",
+   "lines": [
+    "ישר"
+   ],
+   "consonantLines": [
+    "ישר"
+   ],
+   "source": "phrasebook:directions-05",
+   "synthetic": true
+  },
+  {
+   "id": "sign-directions-05__lowcontrast",
+   "file": "images/sign-directions-05__lowcontrast.jpg",
+   "kind": "sign",
+   "variant": "lowcontrast",
+   "base": "sign-directions-05",
+   "font": "alef-bold",
+   "lines": [
+    "ישר"
+   ],
+   "consonantLines": [
+    "ישר"
+   ],
+   "source": "phrasebook:directions-05",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-03__clean",
+   "file": "images/sign-fillers-03__clean.png",
+   "kind": "sign",
+   "variant": "clean",
+   "base": "sign-fillers-03",
+   "font": "noto-sans",
+   "lines": [
+    "טוב"
+   ],
+   "consonantLines": [
+    "טוב"
+   ],
+   "source": "phrasebook:fillers-03",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-03__noise",
+   "file": "images/sign-fillers-03__noise.jpg",
+   "kind": "sign",
+   "variant": "noise",
+   "base": "sign-fillers-03",
+   "font": "noto-sans",
+   "lines": [
+    "טוב"
+   ],
+   "consonantLines": [
+    "טוב"
+   ],
+   "source": "phrasebook:fillers-03",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-03__blur",
+   "file": "images/sign-fillers-03__blur.png",
+   "kind": "sign",
+   "variant": "blur",
+   "base": "sign-fillers-03",
+   "font": "noto-sans",
+   "lines": [
+    "טוב"
+   ],
+   "consonantLines": [
+    "טוב"
+   ],
+   "source": "phrasebook:fillers-03",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-03__rotate",
+   "file": "images/sign-fillers-03__rotate.png",
+   "kind": "sign",
+   "variant": "rotate",
+   "base": "sign-fillers-03",
+   "font": "noto-sans",
+   "lines": [
+    "טוב"
+   ],
+   "consonantLines": [
+    "טוב"
+   ],
+   "source": "phrasebook:fillers-03",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-03__perspective",
+   "file": "images/sign-fillers-03__perspective.png",
+   "kind": "sign",
+   "variant": "perspective",
+   "base": "sign-fillers-03",
+   "font": "noto-sans",
+   "lines": [
+    "טוב"
+   ],
+   "consonantLines": [
+    "טוב"
+   ],
+   "source": "phrasebook:fillers-03",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-03__lowcontrast",
+   "file": "images/sign-fillers-03__lowcontrast.jpg",
+   "kind": "sign",
+   "variant": "lowcontrast",
+   "base": "sign-fillers-03",
+   "font": "noto-sans",
+   "lines": [
+    "טוב"
+   ],
+   "consonantLines": [
+    "טוב"
+   ],
+   "source": "phrasebook:fillers-03",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-09__clean",
+   "file": "images/sign-fillers-09__clean.png",
+   "kind": "sign",
+   "variant": "clean",
+   "base": "sign-fillers-09",
+   "font": "dejavu",
+   "lines": [
+    "סתם"
+   ],
+   "consonantLines": [
+    "סתם"
+   ],
+   "source": "phrasebook:fillers-09",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-09__noise",
+   "file": "images/sign-fillers-09__noise.jpg",
+   "kind": "sign",
+   "variant": "noise",
+   "base": "sign-fillers-09",
+   "font": "dejavu",
+   "lines": [
+    "סתם"
+   ],
+   "consonantLines": [
+    "סתם"
+   ],
+   "source": "phrasebook:fillers-09",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-09__blur",
+   "file": "images/sign-fillers-09__blur.png",
+   "kind": "sign",
+   "variant": "blur",
+   "base": "sign-fillers-09",
+   "font": "dejavu",
+   "lines": [
+    "סתם"
+   ],
+   "consonantLines": [
+    "סתם"
+   ],
+   "source": "phrasebook:fillers-09",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-09__rotate",
+   "file": "images/sign-fillers-09__rotate.png",
+   "kind": "sign",
+   "variant": "rotate",
+   "base": "sign-fillers-09",
+   "font": "dejavu",
+   "lines": [
+    "סתם"
+   ],
+   "consonantLines": [
+    "סתם"
+   ],
+   "source": "phrasebook:fillers-09",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-09__perspective",
+   "file": "images/sign-fillers-09__perspective.png",
+   "kind": "sign",
+   "variant": "perspective",
+   "base": "sign-fillers-09",
+   "font": "dejavu",
+   "lines": [
+    "סתם"
+   ],
+   "consonantLines": [
+    "סתם"
+   ],
+   "source": "phrasebook:fillers-09",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-09__lowcontrast",
+   "file": "images/sign-fillers-09__lowcontrast.jpg",
+   "kind": "sign",
+   "variant": "lowcontrast",
+   "base": "sign-fillers-09",
+   "font": "dejavu",
+   "lines": [
+    "סתם"
+   ],
+   "consonantLines": [
+    "סתם"
+   ],
+   "source": "phrasebook:fillers-09",
+   "synthetic": true
+  },
+  {
+   "id": "sign-cafe-18__clean",
+   "file": "images/sign-cafe-18__clean.png",
+   "kind": "sign",
+   "variant": "clean",
+   "base": "sign-cafe-18",
+   "font": "heebo",
+   "lines": [
+    "שקשוקה"
+   ],
+   "consonantLines": [
+    "שקשוקה"
+   ],
+   "source": "phrasebook:cafe-18",
+   "synthetic": true
+  },
+  {
+   "id": "sign-cafe-18__noise",
+   "file": "images/sign-cafe-18__noise.jpg",
+   "kind": "sign",
+   "variant": "noise",
+   "base": "sign-cafe-18",
+   "font": "heebo",
+   "lines": [
+    "שקשוקה"
+   ],
+   "consonantLines": [
+    "שקשוקה"
+   ],
+   "source": "phrasebook:cafe-18",
+   "synthetic": true
+  },
+  {
+   "id": "sign-cafe-18__blur",
+   "file": "images/sign-cafe-18__blur.png",
+   "kind": "sign",
+   "variant": "blur",
+   "base": "sign-cafe-18",
+   "font": "heebo",
+   "lines": [
+    "שקשוקה"
+   ],
+   "consonantLines": [
+    "שקשוקה"
+   ],
+   "source": "phrasebook:cafe-18",
+   "synthetic": true
+  },
+  {
+   "id": "sign-cafe-18__rotate",
+   "file": "images/sign-cafe-18__rotate.png",
+   "kind": "sign",
+   "variant": "rotate",
+   "base": "sign-cafe-18",
+   "font": "heebo",
+   "lines": [
+    "שקשוקה"
+   ],
+   "consonantLines": [
+    "שקשוקה"
+   ],
+   "source": "phrasebook:cafe-18",
+   "synthetic": true
+  },
+  {
+   "id": "sign-cafe-18__perspective",
+   "file": "images/sign-cafe-18__perspective.png",
+   "kind": "sign",
+   "variant": "perspective",
+   "base": "sign-cafe-18",
+   "font": "heebo",
+   "lines": [
+    "שקשוקה"
+   ],
+   "consonantLines": [
+    "שקשוקה"
+   ],
+   "source": "phrasebook:cafe-18",
+   "synthetic": true
+  },
+  {
+   "id": "sign-cafe-18__lowcontrast",
+   "file": "images/sign-cafe-18__lowcontrast.jpg",
+   "kind": "sign",
+   "variant": "lowcontrast",
+   "base": "sign-cafe-18",
+   "font": "heebo",
+   "lines": [
+    "שקשוקה"
+   ],
+   "consonantLines": [
+    "שקשוקה"
+   ],
+   "source": "phrasebook:cafe-18",
+   "synthetic": true
+  },
+  {
+   "id": "sign-small-talk-18__clean",
+   "file": "images/sign-small-talk-18__clean.png",
+   "kind": "sign",
+   "variant": "clean",
+   "base": "sign-small-talk-18",
+   "font": "alef-bold",
+   "lines": [
+    "חבר"
+   ],
+   "consonantLines": [
+    "חבר"
+   ],
+   "source": "phrasebook:small-talk-18",
+   "synthetic": true
+  },
+  {
+   "id": "sign-small-talk-18__noise",
+   "file": "images/sign-small-talk-18__noise.jpg",
+   "kind": "sign",
+   "variant": "noise",
+   "base": "sign-small-talk-18",
+   "font": "alef-bold",
+   "lines": [
+    "חבר"
+   ],
+   "consonantLines": [
+    "חבר"
+   ],
+   "source": "phrasebook:small-talk-18",
+   "synthetic": true
+  },
+  {
+   "id": "sign-small-talk-18__blur",
+   "file": "images/sign-small-talk-18__blur.png",
+   "kind": "sign",
+   "variant": "blur",
+   "base": "sign-small-talk-18",
+   "font": "alef-bold",
+   "lines": [
+    "חבר"
+   ],
+   "consonantLines": [
+    "חבר"
+   ],
+   "source": "phrasebook:small-talk-18",
+   "synthetic": true
+  },
+  {
+   "id": "sign-small-talk-18__rotate",
+   "file": "images/sign-small-talk-18__rotate.png",
+   "kind": "sign",
+   "variant": "rotate",
+   "base": "sign-small-talk-18",
+   "font": "alef-bold",
+   "lines": [
+    "חבר"
+   ],
+   "consonantLines": [
+    "חבר"
+   ],
+   "source": "phrasebook:small-talk-18",
+   "synthetic": true
+  },
+  {
+   "id": "sign-small-talk-18__perspective",
+   "file": "images/sign-small-talk-18__perspective.png",
+   "kind": "sign",
+   "variant": "perspective",
+   "base": "sign-small-talk-18",
+   "font": "alef-bold",
+   "lines": [
+    "חבר"
+   ],
+   "consonantLines": [
+    "חבר"
+   ],
+   "source": "phrasebook:small-talk-18",
+   "synthetic": true
+  },
+  {
+   "id": "sign-small-talk-18__lowcontrast",
+   "file": "images/sign-small-talk-18__lowcontrast.jpg",
+   "kind": "sign",
+   "variant": "lowcontrast",
+   "base": "sign-small-talk-18",
+   "font": "alef-bold",
+   "lines": [
+    "חבר"
+   ],
+   "consonantLines": [
+    "חבר"
+   ],
+   "source": "phrasebook:small-talk-18",
+   "synthetic": true
+  },
+  {
+   "id": "sign-small-talk-02__clean",
+   "file": "images/sign-small-talk-02__clean.png",
+   "kind": "sign",
+   "variant": "clean",
+   "base": "sign-small-talk-02",
+   "font": "heebo",
+   "lines": [
+    "קוראים לי ..."
+   ],
+   "consonantLines": [
+    "קוראים לי ..."
+   ],
+   "source": "phrasebook:small-talk-02",
+   "synthetic": true
+  },
+  {
+   "id": "sign-small-talk-02__noise",
+   "file": "images/sign-small-talk-02__noise.jpg",
+   "kind": "sign",
+   "variant": "noise",
+   "base": "sign-small-talk-02",
+   "font": "heebo",
+   "lines": [
+    "קוראים לי ..."
+   ],
+   "consonantLines": [
+    "קוראים לי ..."
+   ],
+   "source": "phrasebook:small-talk-02",
+   "synthetic": true
+  },
+  {
+   "id": "sign-small-talk-02__blur",
+   "file": "images/sign-small-talk-02__blur.png",
+   "kind": "sign",
+   "variant": "blur",
+   "base": "sign-small-talk-02",
+   "font": "heebo",
+   "lines": [
+    "קוראים לי ..."
+   ],
+   "consonantLines": [
+    "קוראים לי ..."
+   ],
+   "source": "phrasebook:small-talk-02",
+   "synthetic": true
+  },
+  {
+   "id": "sign-small-talk-02__rotate",
+   "file": "images/sign-small-talk-02__rotate.png",
+   "kind": "sign",
+   "variant": "rotate",
+   "base": "sign-small-talk-02",
+   "font": "heebo",
+   "lines": [
+    "קוראים לי ..."
+   ],
+   "consonantLines": [
+    "קוראים לי ..."
+   ],
+   "source": "phrasebook:small-talk-02",
+   "synthetic": true
+  },
+  {
+   "id": "sign-small-talk-02__perspective",
+   "file": "images/sign-small-talk-02__perspective.png",
+   "kind": "sign",
+   "variant": "perspective",
+   "base": "sign-small-talk-02",
+   "font": "heebo",
+   "lines": [
+    "קוראים לי ..."
+   ],
+   "consonantLines": [
+    "קוראים לי ..."
+   ],
+   "source": "phrasebook:small-talk-02",
+   "synthetic": true
+  },
+  {
+   "id": "sign-small-talk-02__lowcontrast",
+   "file": "images/sign-small-talk-02__lowcontrast.jpg",
+   "kind": "sign",
+   "variant": "lowcontrast",
+   "base": "sign-small-talk-02",
+   "font": "heebo",
+   "lines": [
+    "קוראים לי ..."
+   ],
+   "consonantLines": [
+    "קוראים לי ..."
+   ],
+   "source": "phrasebook:small-talk-02",
+   "synthetic": true
+  },
+  {
+   "id": "sign-small-talk-04__clean",
+   "file": "images/sign-small-talk-04__clean.png",
+   "kind": "sign",
+   "variant": "clean",
+   "base": "sign-small-talk-04",
+   "font": "alef-bold",
+   "lines": [
+    "אני מקנדה"
+   ],
+   "consonantLines": [
+    "אני מקנדה"
+   ],
+   "source": "phrasebook:small-talk-04",
+   "synthetic": true
+  },
+  {
+   "id": "sign-small-talk-04__noise",
+   "file": "images/sign-small-talk-04__noise.jpg",
+   "kind": "sign",
+   "variant": "noise",
+   "base": "sign-small-talk-04",
+   "font": "alef-bold",
+   "lines": [
+    "אני מקנדה"
+   ],
+   "consonantLines": [
+    "אני מקנדה"
+   ],
+   "source": "phrasebook:small-talk-04",
+   "synthetic": true
+  },
+  {
+   "id": "sign-small-talk-04__blur",
+   "file": "images/sign-small-talk-04__blur.png",
+   "kind": "sign",
+   "variant": "blur",
+   "base": "sign-small-talk-04",
+   "font": "alef-bold",
+   "lines": [
+    "אני מקנדה"
+   ],
+   "consonantLines": [
+    "אני מקנדה"
+   ],
+   "source": "phrasebook:small-talk-04",
+   "synthetic": true
+  },
+  {
+   "id": "sign-small-talk-04__rotate",
+   "file": "images/sign-small-talk-04__rotate.png",
+   "kind": "sign",
+   "variant": "rotate",
+   "base": "sign-small-talk-04",
+   "font": "alef-bold",
+   "lines": [
+    "אני מקנדה"
+   ],
+   "consonantLines": [
+    "אני מקנדה"
+   ],
+   "source": "phrasebook:small-talk-04",
+   "synthetic": true
+  },
+  {
+   "id": "sign-small-talk-04__perspective",
+   "file": "images/sign-small-talk-04__perspective.png",
+   "kind": "sign",
+   "variant": "perspective",
+   "base": "sign-small-talk-04",
+   "font": "alef-bold",
+   "lines": [
+    "אני מקנדה"
+   ],
+   "consonantLines": [
+    "אני מקנדה"
+   ],
+   "source": "phrasebook:small-talk-04",
+   "synthetic": true
+  },
+  {
+   "id": "sign-small-talk-04__lowcontrast",
+   "file": "images/sign-small-talk-04__lowcontrast.jpg",
+   "kind": "sign",
+   "variant": "lowcontrast",
+   "base": "sign-small-talk-04",
+   "font": "alef-bold",
+   "lines": [
+    "אני מקנדה"
+   ],
+   "consonantLines": [
+    "אני מקנדה"
+   ],
+   "source": "phrasebook:small-talk-04",
+   "synthetic": true
+  },
+  {
+   "id": "sign-cafe-11__clean",
+   "file": "images/sign-cafe-11__clean.png",
+   "kind": "sign",
+   "variant": "clean",
+   "base": "sign-cafe-11",
+   "font": "noto-sans",
+   "lines": [
+    "בירה"
+   ],
+   "consonantLines": [
+    "בירה"
+   ],
+   "source": "phrasebook:cafe-11",
+   "synthetic": true
+  },
+  {
+   "id": "sign-cafe-11__noise",
+   "file": "images/sign-cafe-11__noise.jpg",
+   "kind": "sign",
+   "variant": "noise",
+   "base": "sign-cafe-11",
+   "font": "noto-sans",
+   "lines": [
+    "בירה"
+   ],
+   "consonantLines": [
+    "בירה"
+   ],
+   "source": "phrasebook:cafe-11",
+   "synthetic": true
+  },
+  {
+   "id": "sign-cafe-11__blur",
+   "file": "images/sign-cafe-11__blur.png",
+   "kind": "sign",
+   "variant": "blur",
+   "base": "sign-cafe-11",
+   "font": "noto-sans",
+   "lines": [
+    "בירה"
+   ],
+   "consonantLines": [
+    "בירה"
+   ],
+   "source": "phrasebook:cafe-11",
+   "synthetic": true
+  },
+  {
+   "id": "sign-cafe-11__rotate",
+   "file": "images/sign-cafe-11__rotate.png",
+   "kind": "sign",
+   "variant": "rotate",
+   "base": "sign-cafe-11",
+   "font": "noto-sans",
+   "lines": [
+    "בירה"
+   ],
+   "consonantLines": [
+    "בירה"
+   ],
+   "source": "phrasebook:cafe-11",
+   "synthetic": true
+  },
+  {
+   "id": "sign-cafe-11__perspective",
+   "file": "images/sign-cafe-11__perspective.png",
+   "kind": "sign",
+   "variant": "perspective",
+   "base": "sign-cafe-11",
+   "font": "noto-sans",
+   "lines": [
+    "בירה"
+   ],
+   "consonantLines": [
+    "בירה"
+   ],
+   "source": "phrasebook:cafe-11",
+   "synthetic": true
+  },
+  {
+   "id": "sign-cafe-11__lowcontrast",
+   "file": "images/sign-cafe-11__lowcontrast.jpg",
+   "kind": "sign",
+   "variant": "lowcontrast",
+   "base": "sign-cafe-11",
+   "font": "noto-sans",
+   "lines": [
+    "בירה"
+   ],
+   "consonantLines": [
+    "בירה"
+   ],
+   "source": "phrasebook:cafe-11",
+   "synthetic": true
+  },
+  {
+   "id": "sign-numbers-20__clean",
+   "file": "images/sign-numbers-20__clean.png",
+   "kind": "sign",
+   "variant": "clean",
+   "base": "sign-numbers-20",
+   "font": "dejavu",
+   "lines": [
+    "היום"
+   ],
+   "consonantLines": [
+    "היום"
+   ],
+   "source": "phrasebook:numbers-20",
+   "synthetic": true
+  },
+  {
+   "id": "sign-numbers-20__noise",
+   "file": "images/sign-numbers-20__noise.jpg",
+   "kind": "sign",
+   "variant": "noise",
+   "base": "sign-numbers-20",
+   "font": "dejavu",
+   "lines": [
+    "היום"
+   ],
+   "consonantLines": [
+    "היום"
+   ],
+   "source": "phrasebook:numbers-20",
+   "synthetic": true
+  },
+  {
+   "id": "sign-numbers-20__blur",
+   "file": "images/sign-numbers-20__blur.png",
+   "kind": "sign",
+   "variant": "blur",
+   "base": "sign-numbers-20",
+   "font": "dejavu",
+   "lines": [
+    "היום"
+   ],
+   "consonantLines": [
+    "היום"
+   ],
+   "source": "phrasebook:numbers-20",
+   "synthetic": true
+  },
+  {
+   "id": "sign-numbers-20__rotate",
+   "file": "images/sign-numbers-20__rotate.png",
+   "kind": "sign",
+   "variant": "rotate",
+   "base": "sign-numbers-20",
+   "font": "dejavu",
+   "lines": [
+    "היום"
+   ],
+   "consonantLines": [
+    "היום"
+   ],
+   "source": "phrasebook:numbers-20",
+   "synthetic": true
+  },
+  {
+   "id": "sign-numbers-20__perspective",
+   "file": "images/sign-numbers-20__perspective.png",
+   "kind": "sign",
+   "variant": "perspective",
+   "base": "sign-numbers-20",
+   "font": "dejavu",
+   "lines": [
+    "היום"
+   ],
+   "consonantLines": [
+    "היום"
+   ],
+   "source": "phrasebook:numbers-20",
+   "synthetic": true
+  },
+  {
+   "id": "sign-numbers-20__lowcontrast",
+   "file": "images/sign-numbers-20__lowcontrast.jpg",
+   "kind": "sign",
+   "variant": "lowcontrast",
+   "base": "sign-numbers-20",
+   "font": "dejavu",
+   "lines": [
+    "היום"
+   ],
+   "consonantLines": [
+    "היום"
+   ],
+   "source": "phrasebook:numbers-20",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-14__clean",
+   "file": "images/sign-fillers-14__clean.png",
+   "kind": "sign",
+   "variant": "clean",
+   "base": "sign-fillers-14",
+   "font": "heebo",
+   "lines": [
+    "אני לא מבין"
+   ],
+   "consonantLines": [
+    "אני לא מבין"
+   ],
+   "source": "phrasebook:fillers-14",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-14__noise",
+   "file": "images/sign-fillers-14__noise.jpg",
+   "kind": "sign",
+   "variant": "noise",
+   "base": "sign-fillers-14",
+   "font": "heebo",
+   "lines": [
+    "אני לא מבין"
+   ],
+   "consonantLines": [
+    "אני לא מבין"
+   ],
+   "source": "phrasebook:fillers-14",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-14__blur",
+   "file": "images/sign-fillers-14__blur.png",
+   "kind": "sign",
+   "variant": "blur",
+   "base": "sign-fillers-14",
+   "font": "heebo",
+   "lines": [
+    "אני לא מבין"
+   ],
+   "consonantLines": [
+    "אני לא מבין"
+   ],
+   "source": "phrasebook:fillers-14",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-14__rotate",
+   "file": "images/sign-fillers-14__rotate.png",
+   "kind": "sign",
+   "variant": "rotate",
+   "base": "sign-fillers-14",
+   "font": "heebo",
+   "lines": [
+    "אני לא מבין"
+   ],
+   "consonantLines": [
+    "אני לא מבין"
+   ],
+   "source": "phrasebook:fillers-14",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-14__perspective",
+   "file": "images/sign-fillers-14__perspective.png",
+   "kind": "sign",
+   "variant": "perspective",
+   "base": "sign-fillers-14",
+   "font": "heebo",
+   "lines": [
+    "אני לא מבין"
+   ],
+   "consonantLines": [
+    "אני לא מבין"
+   ],
+   "source": "phrasebook:fillers-14",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-14__lowcontrast",
+   "file": "images/sign-fillers-14__lowcontrast.jpg",
+   "kind": "sign",
+   "variant": "lowcontrast",
+   "base": "sign-fillers-14",
+   "font": "heebo",
+   "lines": [
+    "אני לא מבין"
+   ],
+   "consonantLines": [
+    "אני לא מבין"
+   ],
+   "source": "phrasebook:fillers-14",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-13__clean",
+   "file": "images/sign-fillers-13__clean.png",
+   "kind": "sign",
+   "variant": "clean",
+   "base": "sign-fillers-13",
+   "font": "alef-bold",
+   "lines": [
+    "אני לא יודע"
+   ],
+   "consonantLines": [
+    "אני לא יודע"
+   ],
+   "source": "phrasebook:fillers-13",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-13__noise",
+   "file": "images/sign-fillers-13__noise.jpg",
+   "kind": "sign",
+   "variant": "noise",
+   "base": "sign-fillers-13",
+   "font": "alef-bold",
+   "lines": [
+    "אני לא יודע"
+   ],
+   "consonantLines": [
+    "אני לא יודע"
+   ],
+   "source": "phrasebook:fillers-13",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-13__blur",
+   "file": "images/sign-fillers-13__blur.png",
+   "kind": "sign",
+   "variant": "blur",
+   "base": "sign-fillers-13",
+   "font": "alef-bold",
+   "lines": [
+    "אני לא יודע"
+   ],
+   "consonantLines": [
+    "אני לא יודע"
+   ],
+   "source": "phrasebook:fillers-13",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-13__rotate",
+   "file": "images/sign-fillers-13__rotate.png",
+   "kind": "sign",
+   "variant": "rotate",
+   "base": "sign-fillers-13",
+   "font": "alef-bold",
+   "lines": [
+    "אני לא יודע"
+   ],
+   "consonantLines": [
+    "אני לא יודע"
+   ],
+   "source": "phrasebook:fillers-13",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-13__perspective",
+   "file": "images/sign-fillers-13__perspective.png",
+   "kind": "sign",
+   "variant": "perspective",
+   "base": "sign-fillers-13",
+   "font": "alef-bold",
+   "lines": [
+    "אני לא יודע"
+   ],
+   "consonantLines": [
+    "אני לא יודע"
+   ],
+   "source": "phrasebook:fillers-13",
+   "synthetic": true
+  },
+  {
+   "id": "sign-fillers-13__lowcontrast",
+   "file": "images/sign-fillers-13__lowcontrast.jpg",
+   "kind": "sign",
+   "variant": "lowcontrast",
+   "base": "sign-fillers-13",
+   "font": "alef-bold",
+   "lines": [
+    "אני לא יודע"
+   ],
+   "consonantLines": [
+    "אני לא יודע"
+   ],
+   "source": "phrasebook:fillers-13",
+   "synthetic": true
+  },
+  {
+   "id": "menu-1__clean",
+   "file": "images/menu-1__clean.png",
+   "kind": "sign",
+   "variant": "clean",
+   "base": "menu-1",
+   "font": "noto-sans",
+   "lines": [
+    "קפה 12.50"
+   ],
+   "consonantLines": [
+    "קפה 12.50"
+   ],
+   "source": "hand-written for this benchmark",
+   "synthetic": true
+  },
+  {
+   "id": "menu-1__noise",
+   "file": "images/menu-1__noise.jpg",
+   "kind": "sign",
+   "variant": "noise",
+   "base": "menu-1",
+   "font": "noto-sans",
+   "lines": [
+    "קפה 12.50"
+   ],
+   "consonantLines": [
+    "קפה 12.50"
+   ],
+   "source": "hand-written for this benchmark",
+   "synthetic": true
+  },
+  {
+   "id": "menu-1__blur",
+   "file": "images/menu-1__blur.png",
+   "kind": "sign",
+   "variant": "blur",
+   "base": "menu-1",
+   "font": "noto-sans",
+   "lines": [
+    "קפה 12.50"
+   ],
+   "consonantLines": [
+    "קפה 12.50"
+   ],
+   "source": "hand-written for this benchmark",
+   "synthetic": true
+  },
+  {
+   "id": "menu-1__perspective",
+   "file": "images/menu-1__perspective.png",
+   "kind": "sign",
+   "variant": "perspective",
+   "base": "menu-1",
+   "font": "noto-sans",
+   "lines": [
+    "קפה 12.50"
+   ],
+   "consonantLines": [
+    "קפה 12.50"
+   ],
+   "source": "hand-written for this benchmark",
+   "synthetic": true
+  },
+  {
+   "id": "menu-2__clean",
+   "file": "images/menu-2__clean.png",
+   "kind": "sign",
+   "variant": "clean",
+   "base": "menu-2",
+   "font": "dejavu",
+   "lines": [
+    "חלב 8.90"
+   ],
+   "consonantLines": [
+    "חלב 8.90"
+   ],
+   "source": "hand-written for this benchmark",
+   "synthetic": true
+  },
+  {
+   "id": "menu-2__noise",
+   "file": "images/menu-2__noise.jpg",
+   "kind": "sign",
+   "variant": "noise",
+   "base": "menu-2",
+   "font": "dejavu",
+   "lines": [
+    "חלב 8.90"
+   ],
+   "consonantLines": [
+    "חלב 8.90"
+   ],
+   "source": "hand-written for this benchmark",
+   "synthetic": true
+  },
+  {
+   "id": "menu-2__blur",
+   "file": "images/menu-2__blur.png",
+   "kind": "sign",
+   "variant": "blur",
+   "base": "menu-2",
+   "font": "dejavu",
+   "lines": [
+    "חלב 8.90"
+   ],
+   "consonantLines": [
+    "חלב 8.90"
+   ],
+   "source": "hand-written for this benchmark",
+   "synthetic": true
+  },
+  {
+   "id": "menu-2__perspective",
+   "file": "images/menu-2__perspective.png",
+   "kind": "sign",
+   "variant": "perspective",
+   "base": "menu-2",
+   "font": "dejavu",
+   "lines": [
+    "חלב 8.90"
+   ],
+   "consonantLines": [
+    "חלב 8.90"
+   ],
+   "source": "hand-written for this benchmark",
+   "synthetic": true
+  },
+  {
+   "id": "menu-3__clean",
+   "file": "images/menu-3__clean.png",
+   "kind": "sign",
+   "variant": "clean",
+   "base": "menu-3",
+   "font": "heebo",
+   "lines": [
+    "פיתה 5"
+   ],
+   "consonantLines": [
+    "פיתה 5"
+   ],
+   "source": "hand-written for this benchmark",
+   "synthetic": true
+  },
+  {
+   "id": "menu-3__noise",
+   "file": "images/menu-3__noise.jpg",
+   "kind": "sign",
+   "variant": "noise",
+   "base": "menu-3",
+   "font": "heebo",
+   "lines": [
+    "פיתה 5"
+   ],
+   "consonantLines": [
+    "פיתה 5"
+   ],
+   "source": "hand-written for this benchmark",
+   "synthetic": true
+  },
+  {
+   "id": "menu-3__blur",
+   "file": "images/menu-3__blur.png",
+   "kind": "sign",
+   "variant": "blur",
+   "base": "menu-3",
+   "font": "heebo",
+   "lines": [
+    "פיתה 5"
+   ],
+   "consonantLines": [
+    "פיתה 5"
+   ],
+   "source": "hand-written for this benchmark",
+   "synthetic": true
+  },
+  {
+   "id": "menu-3__perspective",
+   "file": "images/menu-3__perspective.png",
+   "kind": "sign",
+   "variant": "perspective",
+   "base": "menu-3",
+   "font": "heebo",
+   "lines": [
+    "פיתה 5"
+   ],
+   "consonantLines": [
+    "פיתה 5"
+   ],
+   "source": "hand-written for this benchmark",
+   "synthetic": true
+  },
+  {
+   "id": "menu-4__clean",
+   "file": "images/menu-4__clean.png",
+   "kind": "sign",
+   "variant": "clean",
+   "base": "menu-4",
+   "font": "alef-bold",
+   "lines": [
+    "מסעדה כשרה"
+   ],
+   "consonantLines": [
+    "מסעדה כשרה"
+   ],
+   "source": "hand-written for this benchmark",
+   "synthetic": true
+  },
+  {
+   "id": "menu-4__noise",
+   "file": "images/menu-4__noise.jpg",
+   "kind": "sign",
+   "variant": "noise",
+   "base": "menu-4",
+   "font": "alef-bold",
+   "lines": [
+    "מסעדה כשרה"
+   ],
+   "consonantLines": [
+    "מסעדה כשרה"
+   ],
+   "source": "hand-written for this benchmark",
+   "synthetic": true
+  },
+  {
+   "id": "menu-4__blur",
+   "file": "images/menu-4__blur.png",
+   "kind": "sign",
+   "variant": "blur",
+   "base": "menu-4",
+   "font": "alef-bold",
+   "lines": [
+    "מסעדה כשרה"
+   ],
+   "consonantLines": [
+    "מסעדה כשרה"
+   ],
+   "source": "hand-written for this benchmark",
+   "synthetic": true
+  },
+  {
+   "id": "menu-4__perspective",
+   "file": "images/menu-4__perspective.png",
+   "kind": "sign",
+   "variant": "perspective",
+   "base": "menu-4",
+   "font": "alef-bold",
+   "lines": [
+    "מסעדה כשרה"
+   ],
+   "consonantLines": [
+    "מסעדה כשרה"
+   ],
+   "source": "hand-written for this benchmark",
+   "synthetic": true
+  }
+ ]
+}

@@ -28,3 +28,15 @@ No new install was needed in this session: every tool below was already present 
 If a fresh machine lacks them: `pip install segno pypdf opencv-python-headless pillow` and `npm i playwright` (in a tools-only location; Playwright is resolved from `playwright` or /opt/npm-tools).
 Fonts (OFL 1.1, files in assets/fonts/): Noto Serif Hebrew = book print face, Gveret Levin = cursive, Frank Ruhl Libre = fallback. Latin text uses system Liberation Serif/Sans; DejaVu/FreeSerif are picked by Chromium as fallbacks for a few IPA/arrow glyphs and get embedded too (check their licences before a commercial print run; FreeSerif is GPL with the font exception).
 Commands: `node book/build.mjs --pdf` (draft with cover) | `node book/make_print.mjs` (KDP, KDP+bleed, RTL spreads, reversed Ingram/Lulu) | `python3 book/contact_sheets.py FILE.pdf OUTDIR` | `node tools/images/make_cursive_refs.mjs`.
+
+## Lane 6 round 2 (photo OCR / vowelizer / translation), 2026-11-04
+Dev/benchmark tooling only; none of it is in app code paths. Vendored runtime files are listed with sizes in `assets/vendor/_tesseract/README.md`.
+| What | Version | Licence | Where / how |
+|---|---|---|---|
+| tesseract.js (+ tesseract.js-core) | 7.0.0 | Apache-2.0 | `npm i` in `tools/ocr-bench/` (`node_modules` there, not committed); 4 files copied to `assets/vendor/_tesseract/` |
+| Tesseract CLI (already on the box) + `heb` tessdata_fast | 5.3.4 / system package | Apache-2.0 | no install; tessdata_fast and tessdata_best `heb` downloaded from raw.githubusercontent.com/tesseract-ocr/ to `/tmp/tessdata-{fast,best}/` (heb fast is also vendored) |
+| argostranslate (+ torch, ctranslate2, stanza, spacy...) | 1.11.0 | MIT | `python3 -m venv /home/claude/venv-argos && pip install argostranslate` (venv is 5.7 GB, outside the repo); he->en package 1.5 (132 MB, licence not verified) installed with `argostranslate.package` |
+| paddleocr-hebrew ONNX models (server-v5, mobile-word, charset) | HF snapshot 2026-11-03 | Apache-2.0 per model card | downloaded to `/tmp/pph` only; used with the already-installed onnxruntime 1.29 in `tools/ocr-bench/paddle-hebrew-sign-test.py`; not vendored |
+| Pillow 12.3 (raqm), numpy, opencv 5.0, Playwright 1.63 | already installed | various | used by `tools/ocr-bench/gen.py` and `bench.mjs` |
+Network checks: Dicta Nakdan endpoint called with public test words only (39 calls). MyMemory anonymous API called 60 times in total (rate-limited, results discarded). LibreTranslate public instance called once (needs a key).
+Commands: `python3 tools/ocr-bench/gen.py`; `node tools/ocr-bench/bench.mjs data/photo/_benchmark`; `node tools/ocr-bench/e2e-scan.mjs <img> prayer|sign out.png`; `node tools/ocr-server.mjs` (env `ARGOS_PYTHON=/home/claude/venv-argos/bin/python`).

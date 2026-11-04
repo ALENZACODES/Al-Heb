@@ -18,7 +18,7 @@ export const CORPUS_TRANSLATION_LABEL = 'corpus translation';
 const asText = (x) => (typeof x === 'string' ? { text: x } : x);
 
 /** @returns {Promise<object>} see docs/photo/ENGINES.md for the result shape */
-export async function runPipeline(image, engines, { mode = 'prayer', registry = null, threshold = DEFAULT_THRESHOLD } = {}) {
+export async function runPipeline(image, engines, { mode = 'prayer', registry = null, threshold = DEFAULT_THRESHOLD, shvaClassifier } = {}) {
   if (!engines || typeof engines.ocr !== 'function') throw new TypeError('runPipeline: engines.ocr(image) is required');
   if (mode !== 'prayer' && mode !== 'sign') throw new RangeError(`runPipeline: unknown mode "${mode}"`);
   const warnings = [];
@@ -52,7 +52,7 @@ export async function runPipeline(image, engines, { mode = 'prayer', registry = 
     // 2. syllables (+ ipa)
     for (const tok of tokenise(line.pointed || ol.text)) {
       if (!isHebrew(tok)) { line.words.push({ he: tok, kind: 'other', syllables: [] }); continue; }
-      const syllables = syllabifyWord(tok);
+      const syllables = syllabifyWord(tok, shvaClassifier ? { shvaClassifier } : {});
       const w = { he: tok, kind: 'hebrew', syllables };
       if (!syllables.length) w.note = 'no vowel points: cannot syllabify';
       if (syllables.some((s) => s.substituted)) w.note = 'divine name: read as Adonai';

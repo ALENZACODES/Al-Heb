@@ -90,9 +90,9 @@ test('buildCards: pure card model for the view', async () => {
 });
 
 // ---- adapters: no real network; injected fakes and dry mode ----
-test('Nakdan adapter: dry mode sends nothing; injected fetch is used; response parser (SYNTHETIC shape, unverified)', async () => {
+test('Nakdan adapter: dry mode sends nothing; injected fetch is used; parser accepts the real shape (see photo.engines.test.js for recorded live data)', async () => {
   let called = 0;
-  const f = async () => { called++; return { ok: true, json: async () => ({ data: [{ word: 'שלום', options: [{ w: 'שָׁ|לוֹם' }] }, ' '] }) }; };
+  const f = async () => { called++; return { ok: true, json: async () => ({ data: [{ str: 'שלום', sep: false, nakdan: { word: 'שלום', options: [{ w: 'שָׁ|לוֹם' }] } }, { str: ' ', sep: true, nakdan: { word: ' ', options: [], sep: true } }] }) }; };
   const dry = await createNakdanVowelizer({ fetch: f, dry: true }).vowelize('שלום');
   assert.equal(dry.dry, true);
   assert.equal(called, 0);
@@ -100,7 +100,7 @@ test('Nakdan adapter: dry mode sends nothing; injected fetch is used; response p
   const live = await createNakdanVowelizer({ fetch: f }).vowelize('שלום');
   assert.equal(called, 1);
   assert.equal(live, 'שָׁלוֹם ');
-  assert.equal(parseNakdanResponse([]), '');
+  assert.throws(() => parseNakdanResponse([]), /no data array/);
   assert.equal(nakdanRequest('x').method, 'POST');
   await assert.rejects(() => createNakdanVowelizer({ fetch: async () => ({ ok: false, status: 500 }) }).vowelize('x'), /HTTP 500/);
 });
@@ -135,5 +135,5 @@ test('Phonikud placeholder is inert; describeAdapters lists every adapter as unv
   assert.equal(createPhonikudPlaceholder().ipa, undefined);
   const d = describeAdapters();
   assert.equal(d.length, 5);
-  assert.ok(d.every((x) => /unverified|placeholder/.test(x)));
+  assert.ok(d.every((x) => /unverified|placeholder|dicta-nakdan/.test(x)));
 });

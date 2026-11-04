@@ -1,0 +1,8506 @@
+{
+ "dataset": "/home/claude/alef/data/photo/_benchmark",
+ "synthetic": true,
+ "count": 145,
+ "date": "2026-11-04T00:31:25.376Z",
+ "engines": {
+  "tess-cli-fast": {
+   "desc": "tesseract 5.3.4 CLI, tessdata_fast heb (the system package copy), psm 7 single-line / 6 multi-line",
+   "summary": {
+    "all": {
+     "n": 145,
+     "charAccuracyPct": 77.2,
+     "cerPct": 22.8,
+     "wordRecallPct": 61.3,
+     "exactLinePct": 53.1,
+     "niqqudKeptPct": 45.6,
+     "msMedian": 53,
+     "msP95": 139
+    },
+    "byKind": {
+     "siddur-line": {
+      "n": 48,
+      "charAccuracyPct": 74.6,
+      "cerPct": 25.4,
+      "wordRecallPct": 59.1,
+      "exactLinePct": 18.8,
+      "niqqudKeptPct": 42.8,
+      "msMedian": 47,
+      "msP95": 106
+     },
+     "siddur-page": {
+      "n": 9,
+      "charAccuracyPct": 76.4,
+      "cerPct": 23.6,
+      "wordRecallPct": 54.3,
+      "exactLinePct": 0,
+      "niqqudKeptPct": 50.1,
+      "msMedian": 88,
+      "msP95": 283
+     },
+     "sign": {
+      "n": 88,
+      "charAccuracyPct": 86.4,
+      "cerPct": 13.6,
+      "wordRecallPct": 77.3,
+      "exactLinePct": 77.3,
+      "niqqudKeptPct": null,
+      "msMedian": 52,
+      "msP95": 106
+     }
+    },
+    "byVariant": {
+     "clean": {
+      "n": 27,
+      "charAccuracyPct": 83.7,
+      "cerPct": 16.3,
+      "wordRecallPct": 65.7,
+      "exactLinePct": 55.6,
+      "niqqudKeptPct": 52.5,
+      "msMedian": 50,
+      "msP95": 124
+     },
+     "noise": {
+      "n": 27,
+      "charAccuracyPct": 92.1,
+      "cerPct": 7.9,
+      "wordRecallPct": 73.6,
+      "exactLinePct": 63,
+      "niqqudKeptPct": 58,
+      "msMedian": 60,
+      "msP95": 182
+     },
+     "blur": {
+      "n": 24,
+      "charAccuracyPct": 92.8,
+      "cerPct": 7.2,
+      "wordRecallPct": 82.1,
+      "exactLinePct": 75,
+      "niqqudKeptPct": 55,
+      "msMedian": 57,
+      "msP95": 113
+     },
+     "rotate": {
+      "n": 23,
+      "charAccuracyPct": 74.4,
+      "cerPct": 25.6,
+      "wordRecallPct": 54.8,
+      "exactLinePct": 43.5,
+      "niqqudKeptPct": 40.3,
+      "msMedian": 47,
+      "msP95": 141
+     },
+     "perspective": {
+      "n": 24,
+      "charAccuracyPct": 89.2,
+      "cerPct": 10.8,
+      "wordRecallPct": 71.8,
+      "exactLinePct": 58.3,
+      "niqqudKeptPct": 50.3,
+      "msMedian": 53,
+      "msP95": 99
+     },
+     "lowcontrast": {
+      "n": 20,
+      "charAccuracyPct": 10.5,
+      "cerPct": 89.5,
+      "wordRecallPct": 8.2,
+      "exactLinePct": 15,
+      "niqqudKeptPct": 0.5,
+      "msMedian": 56,
+      "msP95": 106
+     }
+    },
+    "errors": 0,
+    "byKindVariant": {
+     "siddur-line/clean": {
+      "n": 8,
+      "charAccuracyPct": 92.4,
+      "cerPct": 7.6,
+      "wordRecallPct": 74.5,
+      "exactLinePct": 12.5,
+      "niqqudKeptPct": 57.6,
+      "msMedian": 39,
+      "msP95": 124
+     },
+     "siddur-line/noise": {
+      "n": 8,
+      "charAccuracyPct": 94.7,
+      "cerPct": 5.3,
+      "wordRecallPct": 81.8,
+      "exactLinePct": 37.5,
+      "niqqudKeptPct": 58.1,
+      "msMedian": 68,
+      "msP95": 82
+     },
+     "siddur-line/blur": {
+      "n": 8,
+      "charAccuracyPct": 91.6,
+      "cerPct": 8.4,
+      "wordRecallPct": 76.4,
+      "exactLinePct": 37.5,
+      "niqqudKeptPct": 55,
+      "msMedian": 46,
+      "msP95": 106
+     },
+     "siddur-line/rotate": {
+      "n": 8,
+      "charAccuracyPct": 78.7,
+      "cerPct": 21.3,
+      "wordRecallPct": 56.4,
+      "exactLinePct": 12.5,
+      "niqqudKeptPct": 35.6,
+      "msMedian": 47,
+      "msP95": 141
+     },
+     "siddur-line/perspective": {
+      "n": 8,
+      "charAccuracyPct": 87.1,
+      "cerPct": 12.9,
+      "wordRecallPct": 65.5,
+      "exactLinePct": 12.5,
+      "niqqudKeptPct": 50.3,
+      "msMedian": 63,
+      "msP95": 99
+     },
+     "siddur-line/lowcontrast": {
+      "n": 8,
+      "charAccuracyPct": 3.1,
+      "cerPct": 96.9,
+      "wordRecallPct": 0,
+      "exactLinePct": 0,
+      "niqqudKeptPct": 0.5,
+      "msMedian": 56,
+      "msP95": 78
+     },
+     "siddur-page/clean": {
+      "n": 3,
+      "charAccuracyPct": 72.3,
+      "cerPct": 27.7,
+      "wordRecallPct": 51.6,
+      "exactLinePct": 0,
+      "niqqudKeptPct": 48.2,
+      "msMedian": 86,
+      "msP95": 156
+     },
+     "siddur-page/noise": {
+      "n": 3,
+      "charAccuracyPct": 88.6,
+      "cerPct": 11.4,
+      "wordRecallPct": 62.9,
+      "exactLinePct": 0,
+      "niqqudKeptPct": 58,
+      "msMedian": 139,
+      "msP95": 182
+     },
+     "siddur-page/rotate": {
+      "n": 3,
+      "charAccuracyPct": 68.2,
+      "cerPct": 31.8,
+      "wordRecallPct": 48.4,
+      "exactLinePct": 0,
+      "niqqudKeptPct": 44.2,
+      "msMedian": 88,
+      "msP95": 283
+     },
+     "sign/clean": {
+      "n": 16,
+      "charAccuracyPct": 96.3,
+      "cerPct": 3.7,
+      "wordRecallPct": 82.6,
+      "exactLinePct": 87.5,
+      "niqqudKeptPct": null,
+      "msMedian": 50,
+      "msP95": 101
+     },
+     "sign/noise": {
+      "n": 16,
+      "charAccuracyPct": 96.3,
+      "cerPct": 3.7,
+      "wordRecallPct": 82.6,
+      "exactLinePct": 87.5,
+      "niqqudKeptPct": null,
+      "msMedian": 54,
+      "msP95": 269
+     },
+     "sign/blur": {
+      "n": 16,
+      "charAccuracyPct": 96.3,
+      "cerPct": 3.7,
+      "wordRecallPct": 95.7,
+      "exactLinePct": 93.8,
+      "niqqudKeptPct": null,
+      "msMedian": 58,
+      "msP95": 333
+     },
+     "sign/rotate": {
+      "n": 12,
+      "charAccuracyPct": 85.5,
+      "cerPct": 14.5,
+      "wordRecallPct": 72.2,
+      "exactLinePct": 75,
+      "niqqudKeptPct": null,
+      "msMedian": 47,
+      "msP95": 78
+     },
+     "sign/perspective": {
+      "n": 16,
+      "charAccuracyPct": 95.1,
+      "cerPct": 4.9,
+      "wordRecallPct": 87,
+      "exactLinePct": 81.3,
+      "niqqudKeptPct": null,
+      "msMedian": 51,
+      "msP95": 103
+     },
+     "sign/lowcontrast": {
+      "n": 12,
+      "charAccuracyPct": 37.1,
+      "cerPct": 62.9,
+      "wordRecallPct": 33.3,
+      "exactLinePct": 25,
+      "niqqudKeptPct": null,
+      "msMedian": 57,
+      "msP95": 106
+     }
+    },
+    "prayerMatch": {
+     "0.6": {
+      "lineTop1Pct": 82.7,
+      "lines": 75,
+      "wrongAcceptedLines": 4,
+      "signFalseAcceptPct": 12.5,
+      "signs": 88
+     },
+     "0.75": {
+      "lineTop1Pct": 74.7,
+      "lines": 75,
+      "wrongAcceptedLines": 3,
+      "signFalseAcceptPct": 0,
+      "signs": 88
+     },
+     "0.9": {
+      "lineTop1Pct": 49.3,
+      "lines": 75,
+      "wrongAcceptedLines": 2,
+      "signFalseAcceptPct": 0,
+      "signs": 88
+     }
+    }
+   },
+   "perImage": [
+    {
+     "id": "siddur-bless-priestly-1__clean",
+     "kind": "siddur-line",
+     "variant": "clean",
+     "ms": 28,
+     "refLen": 15,
+     "charEdits": 4,
+     "cer": 0.26666666666666666,
+     "refWords": 3,
+     "wordsMatched": 0,
+     "ocrText": "ָבֶרְכְּ יוה וְישמְרְּ:",
+     "niqqud": {
+      "total": 14,
+      "kept": 7,
+      "ocrPoints": 9
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-1__noise",
+     "kind": "siddur-line",
+     "variant": "noise",
+     "ms": 82,
+     "refLen": 15,
+     "charEdits": 3,
+     "cer": 0.2,
+     "refWords": 3,
+     "wordsMatched": 1,
+     "ocrText": "ְברְכְּ יהוָה וְישמְרְּ:",
+     "niqqud": {
+      "total": 14,
+      "kept": 7,
+      "ocrPoints": 9
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-1__blur",
+     "kind": "siddur-line",
+     "variant": "blur",
+     "ms": 68,
+     "refLen": 15,
+     "charEdits": 3,
+     "cer": 0.2,
+     "refWords": 3,
+     "wordsMatched": 1,
+     "ocrText": "ְבֶרְכָר יְהוָה וְיִשָמֶרְבִּ:",
+     "niqqud": {
+      "total": 14,
+      "kept": 11,
+      "ocrPoints": 13
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-1__rotate",
+     "kind": "siddur-line",
+     "variant": "rotate",
+     "ms": 31,
+     "refLen": 15,
+     "charEdits": 3,
+     "cer": 0.2,
+     "refWords": 3,
+     "wordsMatched": 2,
+     "ocrText": "בכר יְהוָה וְיְשֶמָרְךּ:",
+     "niqqud": {
+      "total": 14,
+      "kept": 7,
+      "ocrPoints": 8
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-1__perspective",
+     "kind": "siddur-line",
+     "variant": "perspective",
+     "ms": 30,
+     "refLen": 15,
+     "charEdits": 5,
+     "cer": 0.3333333333333333,
+     "refWords": 3,
+     "wordsMatched": 0,
+     "ocrText": "בְרכְּ יה וְישְמְרְּ:",
+     "niqqud": {
+      "total": 14,
+      "kept": 6,
+      "ocrPoints": 8
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-1__lowcontrast",
+     "kind": "siddur-line",
+     "variant": "lowcontrast",
+     "ms": 23,
+     "refLen": 15,
+     "charEdits": 15,
+     "cer": 1,
+     "refWords": 3,
+     "wordsMatched": 0,
+     "ocrText": "",
+     "niqqud": {
+      "total": 14,
+      "kept": 0,
+      "ocrPoints": 0
+     },
+     "match": {
+      "0.6": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-2__clean",
+     "kind": "siddur-line",
+     "variant": "clean",
+     "ms": 31,
+     "refLen": 20,
+     "charEdits": 3,
+     "cer": 0.15,
+     "refWords": 5,
+     "wordsMatched": 3,
+     "ocrText": "ָאַר יְהוָה פָנִיו אַלִיך ויח",
+     "niqqud": {
+      "total": 16,
+      "kept": 5,
+      "ocrPoints": 8
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-2__noise",
+     "kind": "siddur-line",
+     "variant": "noise",
+     "ms": 39,
+     "refLen": 20,
+     "charEdits": 2,
+     "cer": 0.1,
+     "refWords": 5,
+     "wordsMatched": 3,
+     "ocrText": "ָאַר יְהוָה פָנָיו אַלֶיך ויחְנָ:",
+     "niqqud": {
+      "total": 16,
+      "kept": 7,
+      "ocrPoints": 10
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-2__blur",
+     "kind": "siddur-line",
+     "variant": "blur",
+     "ms": 37,
+     "refLen": 20,
+     "charEdits": 5,
+     "cer": 0.25,
+     "refWords": 5,
+     "wordsMatched": 2,
+     "ocrText": "ְאַר יְהוָה פָנָיו אל ויְנֶרָ:",
+     "niqqud": {
+      "total": 16,
+      "kept": 6,
+      "ocrPoints": 9
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-2__rotate",
+     "kind": "siddur-line",
+     "variant": "rotate",
+     "ms": 99,
+     "refLen": 20,
+     "charEdits": 5,
+     "cer": 0.25,
+     "refWords": 5,
+     "wordsMatched": 1,
+     "ocrText": "יאר יחה פָני אליר ויחָנּ:",
+     "niqqud": {
+      "total": 16,
+      "kept": 3,
+      "ocrPoints": 3
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-2__perspective",
+     "kind": "siddur-line",
+     "variant": "perspective",
+     "ms": 63,
+     "refLen": 20,
+     "charEdits": 6,
+     "cer": 0.3,
+     "refWords": 5,
+     "wordsMatched": 2,
+     "ocrText": "ְאר יָהוָה פנִיו לי וַיֶָָּ:",
+     "niqqud": {
+      "total": 16,
+      "kept": 8,
+      "ocrPoints": 9
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-2__lowcontrast",
+     "kind": "siddur-line",
+     "variant": "lowcontrast",
+     "ms": 39,
+     "refLen": 20,
+     "charEdits": 20,
+     "cer": 1,
+     "refWords": 5,
+     "wordsMatched": 0,
+     "ocrText": "",
+     "niqqud": {
+      "total": 16,
+      "kept": 0,
+      "ocrPoints": 0
+     },
+     "match": {
+      "0.6": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-3__clean",
+     "kind": "siddur-line",
+     "variant": "clean",
+     "ms": 39,
+     "refLen": 25,
+     "charEdits": 2,
+     "cer": 0.08,
+     "refWords": 7,
+     "wordsMatched": 6,
+     "ocrText": "ישָא יהוה פָּנִיו אַלֶיך וש לְךּ שֶלוּם:",
+     "niqqud": {
+      "total": 21,
+      "kept": 7,
+      "ocrPoints": 10
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-3__noise",
+     "kind": "siddur-line",
+     "variant": "noise",
+     "ms": 47,
+     "refLen": 25,
+     "charEdits": 3,
+     "cer": 0.12,
+     "refWords": 7,
+     "wordsMatched": 5,
+     "ocrText": "יָשָא הוה פָּנִיו אל וַישֶם לֶךּ שֶלוּם:",
+     "niqqud": {
+      "total": 21,
+      "kept": 7,
+      "ocrPoints": 11
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-3__blur",
+     "kind": "siddur-line",
+     "variant": "blur",
+     "ms": 46,
+     "refLen": 25,
+     "charEdits": 1,
+     "cer": 0.04,
+     "refWords": 7,
+     "wordsMatched": 6,
+     "ocrText": "ישָא יהןה פָּנִיו אָלִיךּ ויִשֶם לְךּ שָלוּם:",
+     "niqqud": {
+      "total": 21,
+      "kept": 9,
+      "ocrPoints": 13
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-3__rotate",
+     "kind": "siddur-line",
+     "variant": "rotate",
+     "ms": 42,
+     "refLen": 25,
+     "charEdits": 4,
+     "cer": 0.16,
+     "refWords": 7,
+     "wordsMatched": 5,
+     "ocrText": "ישא יחה פּנִיו לי וישם לְך שלום:",
+     "niqqud": {
+      "total": 21,
+      "kept": 3,
+      "ocrPoints": 3
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-3__perspective",
+     "kind": "siddur-line",
+     "variant": "perspective",
+     "ms": 39,
+     "refLen": 25,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 7,
+     "wordsMatched": 7,
+     "ocrText": "ישָא יְהוְה פָּנִיו אַלִיך וַישם לְךּ שָלוּם:",
+     "niqqud": {
+      "total": 21,
+      "kept": 9,
+      "ocrPoints": 13
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-3__lowcontrast",
+     "kind": "siddur-line",
+     "variant": "lowcontrast",
+     "ms": 63,
+     "refLen": 25,
+     "charEdits": 18,
+     "cer": 0.72,
+     "refWords": 7,
+     "wordsMatched": 0,
+     "ocrText": ". | .| ליד הש לָרשלומו.",
+     "niqqud": {
+      "total": 21,
+      "kept": 1,
+      "ocrPoints": 1
+     },
+     "match": {
+      "0.6": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-1__clean",
+     "kind": "siddur-line",
+     "variant": "clean",
+     "ms": 39,
+     "refLen": 25,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 6,
+     "wordsMatched": 6,
+     "ocrText": "שָמַע יִשֶרְאֶל יְהוָה אֶלְהִינוּ יָהוָה אֶחָד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 11,
+      "ocrPoints": 16
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-1__noise",
+     "kind": "siddur-line",
+     "variant": "noise",
+     "ms": 42,
+     "refLen": 25,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 6,
+     "wordsMatched": 6,
+     "ocrText": "שֶמַע יַשְרְאל יְהוָה אֶלְהִינוּ יָהוָה אֶחָד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 12,
+      "ocrPoints": 15
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-1__blur",
+     "kind": "siddur-line",
+     "variant": "blur",
+     "ms": 41,
+     "refLen": 25,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 6,
+     "wordsMatched": 6,
+     "ocrText": "שֶמַע יִשְרְאל יְהוָה אֶלְהִינו יֶהוָה אֶחָד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 10,
+      "ocrPoints": 14
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-1__rotate",
+     "kind": "siddur-line",
+     "variant": "rotate",
+     "ms": 47,
+     "refLen": 25,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 6,
+     "wordsMatched": 6,
+     "ocrText": "שָמַע ישֶרְאֶל יְהוָה אַלְהִינוּ יָהוֶה אֶחָד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 11,
+      "ocrPoints": 15
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-1__perspective",
+     "kind": "siddur-line",
+     "variant": "perspective",
+     "ms": 65,
+     "refLen": 25,
+     "charEdits": 1,
+     "cer": 0.04,
+     "refWords": 6,
+     "wordsMatched": 5,
+     "ocrText": "שמע ישֶךאֶל יְהוָה אַלהָינוּ יהוָה אֶחַד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 7,
+      "ocrPoints": 10
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-1__lowcontrast",
+     "kind": "siddur-line",
+     "variant": "lowcontrast",
+     "ms": 78,
+     "refLen": 25,
+     "charEdits": 25,
+     "cer": 1,
+     "refWords": 6,
+     "wordsMatched": 0,
+     "ocrText": "",
+     "niqqud": {
+      "total": 18,
+      "kept": 0,
+      "ocrPoints": 0
+     },
+     "match": {
+      "0.6": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-2__clean",
+     "kind": "siddur-line",
+     "variant": "clean",
+     "ms": 59,
+     "refLen": 24,
+     "charEdits": 1,
+     "cer": 0.041666666666666664,
+     "refWords": 6,
+     "wordsMatched": 5,
+     "ocrText": "בְּרוּך שַם כָּבוּד מִלְכוּתו לְעּלֶם וְעָד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 12,
+      "ocrPoints": 15
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-2__noise",
+     "kind": "siddur-line",
+     "variant": "noise",
+     "ms": 70,
+     "refLen": 24,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 6,
+     "wordsMatched": 6,
+     "ocrText": "בְּרוּךּ שַם כְּבוּד מִלְכוּתוּ לְעוּלֶם וְעָד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 11,
+      "ocrPoints": 17
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-2__blur",
+     "kind": "siddur-line",
+     "variant": "blur",
+     "ms": 43,
+     "refLen": 24,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 6,
+     "wordsMatched": 6,
+     "ocrText": "בָּרוּךְּ שָם כְּבוד מִלְכוּתו לְעוּלֶם וְעָד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 12,
+      "ocrPoints": 16
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-2__rotate",
+     "kind": "siddur-line",
+     "variant": "rotate",
+     "ms": 39,
+     "refLen": 24,
+     "charEdits": 1,
+     "cer": 0.041666666666666664,
+     "refWords": 6,
+     "wordsMatched": 5,
+     "ocrText": "ברו שֶם כָּבוד מַלְכוּתו לְעוּלֶם וְעֶד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 9,
+      "ocrPoints": 11
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-2__perspective",
+     "kind": "siddur-line",
+     "variant": "perspective",
+     "ms": 43,
+     "refLen": 24,
+     "charEdits": 1,
+     "cer": 0.041666666666666664,
+     "refWords": 6,
+     "wordsMatched": 5,
+     "ocrText": "בָּרוּך שָם בָּבוּד מַלְכוּתו לְעולֶם וְעַד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 12,
+      "ocrPoints": 14
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-2__lowcontrast",
+     "kind": "siddur-line",
+     "variant": "lowcontrast",
+     "ms": 28,
+     "refLen": 24,
+     "charEdits": 24,
+     "cer": 1,
+     "refWords": 6,
+     "wordsMatched": 0,
+     "ocrText": "",
+     "niqqud": {
+      "total": 18,
+      "kept": 0,
+      "ocrPoints": 0
+     },
+     "match": {
+      "0.6": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-mah-tovu-1__clean",
+     "kind": "siddur-line",
+     "variant": "clean",
+     "ms": 37,
+     "refLen": 26,
+     "charEdits": 3,
+     "cer": 0.11538461538461539,
+     "refWords": 5,
+     "wordsMatched": 2,
+     "ocrText": "מה-טבו אהָלִיךָ יקב משְכְִּיךָּ ישְרְאל:",
+     "niqqud": {
+      "total": 24,
+      "kept": 10,
+      "ocrPoints": 11
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-mah-tovu-1__noise",
+     "kind": "siddur-line",
+     "variant": "noise",
+     "ms": 46,
+     "refLen": 26,
+     "charEdits": 3,
+     "cer": 0.11538461538461539,
+     "refWords": 5,
+     "wordsMatched": 2,
+     "ocrText": "מה-טבו אהָלֶיך עלב מִשִבְּנְתִיך ישְרְאֶל:",
+     "niqqud": {
+      "total": 24,
+      "kept": 9,
+      "ocrPoints": 11
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-mah-tovu-1__blur",
+     "kind": "siddur-line",
+     "variant": "blur",
+     "ms": 45,
+     "refLen": 26,
+     "charEdits": 5,
+     "cer": 0.19230769230769232,
+     "refWords": 5,
+     "wordsMatched": 2,
+     "ocrText": "מַה-טבו אהָלִיך עקב כַשִכִּיד ישראל:",
+     "niqqud": {
+      "total": 24,
+      "kept": 6,
+      "ocrPoints": 7
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-mah-tovu-1__rotate",
+     "kind": "siddur-line",
+     "variant": "rotate",
+     "ms": 40,
+     "refLen": 26,
+     "charEdits": 9,
+     "cer": 0.34615384615384615,
+     "refWords": 5,
+     "wordsMatched": 1,
+     "ocrText": "פבו אל יטקב משפנסיך ישְרְאל:",
+     "niqqud": {
+      "total": 24,
+      "kept": 2,
+      "ocrPoints": 2
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-mah-tovu-1__perspective",
+     "kind": "siddur-line",
+     "variant": "perspective",
+     "ms": 53,
+     "refLen": 26,
+     "charEdits": 3,
+     "cer": 0.11538461538461539,
+     "refWords": 5,
+     "wordsMatched": 2,
+     "ocrText": "מה-טבו אהָלֶיך עקב משַבְּנחִיך יִשְרְאֶל:",
+     "niqqud": {
+      "total": 24,
+      "kept": 10,
+      "ocrPoints": 10
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-mah-tovu-1__lowcontrast",
+     "kind": "siddur-line",
+     "variant": "lowcontrast",
+     "ms": 56,
+     "refLen": 26,
+     "charEdits": 26,
+     "cer": 1,
+     "refWords": 5,
+     "wordsMatched": 0,
+     "ocrText": "",
+     "niqqud": {
+      "total": 24,
+      "kept": 0,
+      "ocrPoints": 0
+     },
+     "match": {
+      "0.6": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-modeh-ani-1__clean",
+     "kind": "siddur-line",
+     "variant": "clean",
+     "ms": 69,
+     "refLen": 48,
+     "charEdits": 2,
+     "cer": 0.041666666666666664,
+     "refWords": 12,
+     "wordsMatched": 10,
+     "ocrText": "מוּדֶה אַנִי לְפְנִיךּ מֶלֶ חַי וְקים שֶהֶחַָרְתָּ בִּי נַשְמָתִי בְּחְמְלָה רִבָּה אָמוּנְתֶךָ:",
+     "niqqud": {
+      "total": 44,
+      "kept": 34,
+      "ocrPoints": 38
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-modeh-ani-1__noise",
+     "kind": "siddur-line",
+     "variant": "noise",
+     "ms": 73,
+     "refLen": 48,
+     "charEdits": 1,
+     "cer": 0.020833333333333332,
+     "refWords": 12,
+     "wordsMatched": 11,
+     "ocrText": "מוּדֶה אַנִי לְפְנִיךּ מֶלֶ חַי וְקִים שֶהֶחָזְרְתָּ בִּי נַשְמָתִי בְּחָמְלָה רִבָּה אָמוּנְתֶךָ:",
+     "niqqud": {
+      "total": 44,
+      "kept": 34,
+      "ocrPoints": 39
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-modeh-ani-1__blur",
+     "kind": "siddur-line",
+     "variant": "blur",
+     "ms": 106,
+     "refLen": 48,
+     "charEdits": 5,
+     "cer": 0.10416666666666667,
+     "refWords": 12,
+     "wordsMatched": 8,
+     "ocrText": "מודֶה אַנִי לְפָנִי מלֶד חִי ְקַיס שָהַחַזרְתָ בִּי נִשְמָתִי בָחֶמְלָה רִבָה אָמוּנְתַבָּ:",
+     "niqqud": {
+      "total": 44,
+      "kept": 29,
+      "ocrPoints": 33
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-modeh-ani-1__rotate",
+     "kind": "siddur-line",
+     "variant": "rotate",
+     "ms": 62,
+     "refLen": 48,
+     "charEdits": 25,
+     "cer": 0.5208333333333334,
+     "refWords": 12,
+     "wordsMatched": 2,
+     "ocrText": "\"יפ ויר מל ליָם שְמְחורתּ ל ומת בְּחְמְלָה רְבּה אמזוםב-",
+     "niqqud": {
+      "total": 44,
+      "kept": 11,
+      "ocrPoints": 11
+     },
+     "match": {
+      "0.6": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-modeh-ani-1__perspective",
+     "kind": "siddur-line",
+     "variant": "perspective",
+     "ms": 63,
+     "refLen": 48,
+     "charEdits": 5,
+     "cer": 0.10416666666666667,
+     "refWords": 12,
+     "wordsMatched": 8,
+     "ocrText": "מזורה אָנִי לְפָנִיֶר מלר חַי וקים שִהַחְוַרְתּ בִּי נְשָמָתִי בְּחְמָלָה רִבָּה אָמוּנַתֶךָ:",
+     "niqqud": {
+      "total": 44,
+      "kept": 30,
+      "ocrPoints": 32
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-modeh-ani-1__lowcontrast",
+     "kind": "siddur-line",
+     "variant": "lowcontrast",
+     "ms": 64,
+     "refLen": 48,
+     "charEdits": 48,
+     "cer": 1,
+     "refWords": 12,
+     "wordsMatched": 0,
+     "ocrText": "",
+     "niqqud": {
+      "total": 44,
+      "kept": 0,
+      "ocrPoints": 0
+     },
+     "match": {
+      "0.6": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-mi-chamocha-1__clean",
+     "kind": "siddur-line",
+     "variant": "clean",
+     "ms": 124,
+     "refLen": 42,
+     "charEdits": 2,
+     "cer": 0.047619047619047616,
+     "refWords": 11,
+     "wordsMatched": 9,
+     "ocrText": "מִ-כָמַכָה בָּאֶלֶם יְהוֶה מִי כָּמִכָה נָאדְּר בַּקדֶש נוּרא הלת עשה פְָלָא:",
+     "niqqud": {
+      "total": 36,
+      "kept": 24,
+      "ocrPoints": 25
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-mi-chamocha-1__noise",
+     "kind": "siddur-line",
+     "variant": "noise",
+     "ms": 68,
+     "refLen": 42,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 11,
+     "wordsMatched": 11,
+     "ocrText": "מִיכָמִכָה בָּאלֶם יהוֶה מִי כָּמִכָה נָאדְּר בַּקְדֶש נוּרְא תְהָלת עשה פָלָא:",
+     "niqqud": {
+      "total": 36,
+      "kept": 24,
+      "ocrPoints": 26
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-mi-chamocha-1__blur",
+     "kind": "siddur-line",
+     "variant": "blur",
+     "ms": 81,
+     "refLen": 42,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 11,
+     "wordsMatched": 11,
+     "ocrText": "מִיכְמִכָה בָּאָלֶם יְהוָה מִי כָּמִכָה נְאֶדְּר בַּקְדֶש נורא תְהלת עשה פְלָא:",
+     "niqqud": {
+      "total": 36,
+      "kept": 22,
+      "ocrPoints": 26
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-mi-chamocha-1__rotate",
+     "kind": "siddur-line",
+     "variant": "rotate",
+     "ms": 141,
+     "refLen": 42,
+     "charEdits": 1,
+     "cer": 0.023809523809523808,
+     "refWords": 11,
+     "wordsMatched": 9,
+     "ocrText": "מִ\"יכְּמִכָה בָּאֶלֶם הוה מִי כָּמְכָה נּאדר בַּקדְש נורא תְהֶלת עשה פֶּלָא:",
+     "niqqud": {
+      "total": 36,
+      "kept": 22,
+      "ocrPoints": 23
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-mi-chamocha-1__perspective",
+     "kind": "siddur-line",
+     "variant": "perspective",
+     "ms": 99,
+     "refLen": 42,
+     "charEdits": 8,
+     "cer": 0.19047619047619047,
+     "refWords": 11,
+     "wordsMatched": 7,
+     "ocrText": "בי במובַה בַּאלֶם יהןה מִי כָּמִכָה נָאדֶּר בַּקְדֶש נורא תהלת עה פ/):.",
+     "niqqud": {
+      "total": 36,
+      "kept": 14,
+      "ocrPoints": 16
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-mi-chamocha-1__lowcontrast",
+     "kind": "siddur-line",
+     "variant": "lowcontrast",
+     "ms": 42,
+     "refLen": 42,
+     "charEdits": 42,
+     "cer": 1,
+     "refWords": 11,
+     "wordsMatched": 0,
+     "ocrText": "",
+     "niqqud": {
+      "total": 36,
+      "kept": 0,
+      "ocrPoints": 0
+     },
+     "match": {
+      "0.6": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "page-bless-priestly-1__clean",
+     "kind": "siddur-page",
+     "variant": "clean",
+     "ms": 57,
+     "refLen": 60,
+     "charEdits": 9,
+     "cer": 0.15,
+     "refWords": 15,
+     "wordsMatched": 8,
+     "ocrText": "ָבָרְכְרּ יהוָה וישְמְרְבּ:\nְאַר יְהוָה פָּנָו אַלֶי ויחִגָּךָ:\nישא יְהוָה פָּנְיו אל וְיָשֶם לְךּ שֶלוּם:",
+     "niqqud": {
+      "total": 51,
+      "kept": 30,
+      "ocrPoints": 35
+     },
+     "match": {
+      "0.6": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.75": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 3,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "page-bless-priestly-1__rotate",
+     "kind": "siddur-page",
+     "variant": "rotate",
+     "ms": 85,
+     "refLen": 60,
+     "charEdits": 31,
+     "cer": 0.5166666666666667,
+     "refWords": 15,
+     "wordsMatched": 2,
+     "ocrText": "רל הוח ישמר:\nיחו פנו לוי\nא לח פָּנִיו ליב רשם לב שָלוֶם:",
+     "niqqud": {
+      "total": 51,
+      "kept": 5,
+      "ocrPoints": 5
+     },
+     "match": {
+      "0.6": {
+       "correct": 2,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 3,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 3,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "page-bless-priestly-1__noise",
+     "kind": "siddur-page",
+     "variant": "noise",
+     "ms": 72,
+     "refLen": 60,
+     "charEdits": 5,
+     "cer": 0.08333333333333333,
+     "refWords": 15,
+     "wordsMatched": 12,
+     "ocrText": "ְבֶרְכָרּ יְהוָה וְיִשֶמְרֶך:\nיאר יְהוָה פָּנְיו אַליר ויחֶנָּךָ:\nישא יְהוָה פָּנְיו אל וְיָשֶם לְךּ שֶלוּם:",
+     "niqqud": {
+      "total": 51,
+      "kept": 30,
+      "ocrPoints": 34
+     },
+     "match": {
+      "0.6": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.75": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.9": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      }
+     }
+    },
+    {
+     "id": "page-shema-1__clean",
+     "kind": "siddur-page",
+     "variant": "clean",
+     "ms": 86,
+     "refLen": 88,
+     "charEdits": 7,
+     "cer": 0.07954545454545454,
+     "refWords": 19,
+     "wordsMatched": 14,
+     "ocrText": "שמע ישַרְאַל יְהוְה אֶלְהָינוּ יהוָה אֶחָד:\nבָּרוּך שָם כָּבוּד מַלְכוּתוּ לְעוּלֶם וְעד:\nְאַהַבְתָּ את יְהוָה אֶלְהִיּ בְּכֶלילְבָבָר וּבְכֶלינִפְשֶ וּבְכֶלימָאדֶךּ:",
+     "niqqud": {
+      "total": 71,
+      "kept": 45,
+      "ocrPoints": 57
+     },
+     "match": {
+      "0.6": {
+       "correct": 2,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.75": {
+       "correct": 2,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.9": {
+       "correct": 2,
+       "of": 3,
+       "accepted": 2
+      }
+     }
+    },
+    {
+     "id": "page-shema-1__rotate",
+     "kind": "siddur-page",
+     "variant": "rotate",
+     "ms": 88,
+     "refLen": 88,
+     "charEdits": 10,
+     "cer": 0.11363636363636363,
+     "refWords": 19,
+     "wordsMatched": 12,
+     "ocrText": "שְמַעַ ישְרְאֶל ְהוָה אֶלְהִינוּ יְהוָה אֶחָד:\nבָּרוּך שם כְבוד מַלְכוּתו לְעוּלֶם וְעָד:\nְאָהַבְתָ אֶת הוה אֶלְהֶיּ בּכֶלילְבָבָ ְַכָלדנַפָשָך וּבְכֶל\"מָאדָּ:",
+     "niqqud": {
+      "total": 71,
+      "kept": 48,
+      "ocrPoints": 55
+     },
+     "match": {
+      "0.6": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.75": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.9": {
+       "correct": 2,
+       "of": 3,
+       "accepted": 2
+      }
+     }
+    },
+    {
+     "id": "page-shema-1__noise",
+     "kind": "siddur-page",
+     "variant": "noise",
+     "ms": 182,
+     "refLen": 88,
+     "charEdits": 7,
+     "cer": 0.07954545454545454,
+     "refWords": 19,
+     "wordsMatched": 14,
+     "ocrText": "שמע ישַרְאֶל יהוְה אֶלְהָינוּ יהוָה אֶחָד:\nבַּרוּך שָם כַּבוּד מַלְכוּתוּ לְעוּלֶם וְעָד:\nְאֶהַבְתָּ את יְהוָה אֶלְהיּ בְּכֶל\"ְלְבָבָר וּבְכָלינַפְשֶּ וּבְכֶלימָאדֶּ:",
+     "niqqud": {
+      "total": 71,
+      "kept": 44,
+      "ocrPoints": 58
+     },
+     "match": {
+      "0.6": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.75": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.9": {
+       "correct": 2,
+       "of": 3,
+       "accepted": 2
+      }
+     }
+    },
+    {
+     "id": "page-mah-tovu-1__clean",
+     "kind": "siddur-page",
+     "variant": "clean",
+     "ms": 156,
+     "refLen": 116,
+     "charEdits": 57,
+     "cer": 0.49137931034482757,
+     "refWords": 28,
+     "wordsMatched": 10,
+     "ocrText": "מה-טבו אֶהָלִי עקב מִשְְֶַּי יְרְאֶל:\nמִיִכָמכָה בָּאְלֶם יְהוָה מי כָּמכָה נא בַּקדָש נוּרָא תְהַלת עשה פֶלָא:",
+     "niqqud": {
+      "total": 104,
+      "kept": 34,
+      "ocrPoints": 34
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 3,
+       "accepted": 2
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 3,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 3,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "page-mah-tovu-1__rotate",
+     "kind": "siddur-page",
+     "variant": "rotate",
+     "ms": 283,
+     "refLen": 116,
+     "charEdits": 43,
+     "cer": 0.3706896551724138,
+     "refWords": 28,
+     "wordsMatched": 16,
+     "ocrText": "<י פבו אִהֶלֶיךָ \"לזב מִשְבְְּתִיְ ישְרְאֶל:\nמודה אני לְפָנְיב מל חי וְקיָם שור בִּ נשְמָתִי\nיכְּמִכָה בָּאְלֶם יהוה מִי כָּמִכָה דר בַּקדֶש נוְרא הרבה אָמוּנתָב:\nתְהַלַת עשָה פלא.",
+     "niqqud": {
+      "total": 104,
+      "kept": 47,
+      "ocrPoints": 48
+     },
+     "match": {
+      "0.6": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 4
+      },
+      "0.75": {
+       "correct": 2,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 3,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "page-mah-tovu-1__noise",
+     "kind": "siddur-page",
+     "variant": "noise",
+     "ms": 139,
+     "refLen": 116,
+     "charEdits": 18,
+     "cer": 0.15517241379310345,
+     "refWords": 28,
+     "wordsMatched": 13,
+     "ocrText": "מהדטבו אהָלִיר יעקב מִשְכּתֶיּ ישְרְאֶל:\nמוּדָה אַנִי לְפָנִיר מִלָרּ חי וְקיָם שֶהָחָוְרְתּ בִּי נְִמְתִי בְּחְמְלָה רִבָּה אָמוּנְתַּ:\nִייכְמִכָה בָּאלם ְהוָה מִכָמכָ נא בּקדֶש נוא תחת עשה פְלָא:",
+     "niqqud": {
+      "total": 104,
+      "kept": 57,
+      "ocrPoints": 62
+     },
+     "match": {
+      "0.6": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.75": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 3,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "sign-politeness-19__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 28,
+     "refLen": 2,
+     "charEdits": 2,
+     "cer": 1,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": "₪",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-politeness-19__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 28,
+     "refLen": 2,
+     "charEdits": 2,
+     "cer": 1,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": "₪",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-politeness-19__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 39,
+     "refLen": 2,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "די",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-politeness-19__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 47,
+     "refLen": 2,
+     "charEdits": 1,
+     "cer": 0.5,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": "דו",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-politeness-19__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 44,
+     "refLen": 2,
+     "charEdits": 2,
+     "cer": 1,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": "₪",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-politeness-19__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 54,
+     "refLen": 2,
+     "charEdits": 2,
+     "cer": 1,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": ":",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-directions-05__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 33,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "ישר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-directions-05__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 52,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "ישר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-directions-05__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 333,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "ישר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-directions-05__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 47,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "ישר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-directions-05__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 41,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "ישר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-directions-05__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 67,
+     "refLen": 3,
+     "charEdits": 1,
+     "cer": 0.3333333333333333,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": "ושר,",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-03__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 38,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "טוב",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-03__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 46,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "טוב",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-03__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 43,
+     "refLen": 3,
+     "charEdits": 3,
+     "cer": 1,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": "\\",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-03__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 39,
+     "refLen": 3,
+     "charEdits": 1,
+     "cer": 0.3333333333333333,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": "טזב",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-03__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 23,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "טוב",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-03__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 24,
+     "refLen": 3,
+     "charEdits": 3,
+     "cer": 1,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": ". [",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-09__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 20,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "סתם",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-09__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 22,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "סתם",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-09__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 23,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "סתם",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-09__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 22,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "סתם",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-09__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 22,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "סתם",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-09__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 57,
+     "refLen": 3,
+     "charEdits": 3,
+     "cer": 1,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": "7",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-18__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 55,
+     "refLen": 6,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "שקשוקה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-18__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 74,
+     "refLen": 6,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "שקשוקה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-18__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 66,
+     "refLen": 6,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "שקשוקה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-18__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 59,
+     "refLen": 6,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "שקשוקה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-18__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 60,
+     "refLen": 6,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "שקשוקה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-18__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 55,
+     "refLen": 6,
+     "charEdits": 6,
+     "cer": 1,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": "",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-18__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 24,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "חבר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-18__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 24,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "חבר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-18__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 24,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "חבר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-18__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 22,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "חבר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-18__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 23,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "חבר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-18__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 25,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": ". חבר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-02__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 35,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "קוראים לי...",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-02__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 85,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "קוראים לי...",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-02__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 84,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "קוראים לי...",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-02__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 44,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "קוראים לי\n..",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-02__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 32,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "קוראים לי...",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-02__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 35,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "קוראים לי...",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-04__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 34,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "אני מקנדה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-04__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 29,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "אני מקנדה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-04__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 29,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "אני מקנדה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-04__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 32,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "אני מקנדה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-04__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 32,
+     "refLen": 8,
+     "charEdits": 1,
+     "cer": 0.125,
+     "refWords": 2,
+     "wordsMatched": 1,
+     "ocrText": "אגי מקנדה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-04__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 36,
+     "refLen": 8,
+     "charEdits": 8,
+     "cer": 1,
+     "refWords": 2,
+     "wordsMatched": 0,
+     "ocrText": "ּ , : -",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-11__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 44,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "בירה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-11__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 60,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "בירה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-11__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 57,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "בירה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-11__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 29,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "בירה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-11__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 56,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "בירה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-11__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 86,
+     "refLen": 4,
+     "charEdits": 4,
+     "cer": 1,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": ":",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-numbers-20__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 53,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "היום",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-numbers-20__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 47,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "היום",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-numbers-20__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 52,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "היום",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-numbers-20__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 65,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "היום",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-numbers-20__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 51,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "היום",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-numbers-20__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 84,
+     "refLen": 4,
+     "charEdits": 3,
+     "cer": 0.75,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": "ייפ",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-14__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 87,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 1,
+     "ocrText": "אנילא מבין",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-14__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 269,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 1,
+     "ocrText": "אנילא מבין",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-14__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 64,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 3,
+     "ocrText": "אני לא מבין",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-14__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 61,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 3,
+     "ocrText": "אני לא מבין",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-14__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 76,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 3,
+     "ocrText": "אני לא מבין",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-14__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 63,
+     "refLen": 9,
+     "charEdits": 9,
+     "cer": 1,
+     "refWords": 3,
+     "wordsMatched": 0,
+     "ocrText": "",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-13__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 79,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 3,
+     "ocrText": "אני לא יודע",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-13__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 155,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 3,
+     "ocrText": "אני לא יודע",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-13__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 101,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 3,
+     "ocrText": "אני לא יודע",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-13__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 78,
+     "refLen": 9,
+     "charEdits": 7,
+     "cer": 0.7777777777777778,
+     "refWords": 3,
+     "wordsMatched": 0,
+     "ocrText": "יש ,שי הג",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-13__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 94,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 3,
+     "ocrText": "אני לא יודע",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-13__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 106,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 3,
+     "ocrText": "אני לא יודע",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-1__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 101,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "קפה 12.50",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-1__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 50,
+     "refLen": 3,
+     "charEdits": 1,
+     "cer": 0.3333333333333333,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": "קפ ו",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-1__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 72,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "קפה 12.50",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-1__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 68,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "קפה 12.50",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-2__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 58,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "חלב 8.90",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-2__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 67,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "חלב 8.90",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-2__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 58,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "חלב 8.90",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-2__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 59,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "חלב 8.90",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-3__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 50,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "פיתה 5",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-3__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 54,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "פיתה 5",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-3__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 49,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "פיתה 5",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-3__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 49,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "פיתה 5",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-4__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 75,
+     "refLen": 9,
+     "charEdits": 1,
+     "cer": 0.1111111111111111,
+     "refWords": 2,
+     "wordsMatched": 1,
+     "ocrText": "מסעדה כבשרה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-4__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 87,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "מסעדה כשרה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-4__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 113,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "מסעדה כשרה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-4__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 103,
+     "refLen": 9,
+     "charEdits": 1,
+     "cer": 0.1111111111111111,
+     "refWords": 2,
+     "wordsMatched": 1,
+     "ocrText": "מסעדה בשרה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    }
+   ]
+  },
+  "tess-cli-best": {
+   "desc": "tesseract 5.3.4 CLI, tessdata_best heb (3.7 MB), same psm",
+   "summary": {
+    "all": {
+     "n": 145,
+     "charAccuracyPct": 78.8,
+     "cerPct": 21.2,
+     "wordRecallPct": 61,
+     "exactLinePct": 57.2,
+     "niqqudKeptPct": 35.4,
+     "msMedian": 46,
+     "msP95": 173
+    },
+    "byKind": {
+     "siddur-line": {
+      "n": 48,
+      "charAccuracyPct": 76.6,
+      "cerPct": 23.4,
+      "wordRecallPct": 61.2,
+      "exactLinePct": 25,
+      "niqqudKeptPct": 33.1,
+      "msMedian": 119,
+      "msP95": 194
+     },
+     "siddur-page": {
+      "n": 9,
+      "charAccuracyPct": 76.4,
+      "cerPct": 23.6,
+      "wordRecallPct": 45.7,
+      "exactLinePct": 0,
+      "niqqudKeptPct": 39.2,
+      "msMedian": 148,
+      "msP95": 234
+     },
+     "sign": {
+      "n": 88,
+      "charAccuracyPct": 90,
+      "cerPct": 10,
+      "wordRecallPct": 82.8,
+      "exactLinePct": 80.7,
+      "niqqudKeptPct": null,
+      "msMedian": 35,
+      "msP95": 65
+     }
+    },
+    "byVariant": {
+     "clean": {
+      "n": 27,
+      "charAccuracyPct": 83.9,
+      "cerPct": 16.1,
+      "wordRecallPct": 66.4,
+      "exactLinePct": 59.3,
+      "niqqudKeptPct": 42.7,
+      "msMedian": 43,
+      "msP95": 205
+     },
+     "noise": {
+      "n": 27,
+      "charAccuracyPct": 91.2,
+      "cerPct": 8.8,
+      "wordRecallPct": 68.6,
+      "exactLinePct": 55.6,
+      "niqqudKeptPct": 45.6,
+      "msMedian": 46,
+      "msP95": 190
+     },
+     "blur": {
+      "n": 24,
+      "charAccuracyPct": 94.4,
+      "cerPct": 5.6,
+      "wordRecallPct": 83.3,
+      "exactLinePct": 79.2,
+      "niqqudKeptPct": 44.5,
+      "msMedian": 47,
+      "msP95": 159
+     },
+     "rotate": {
+      "n": 23,
+      "charAccuracyPct": 78.4,
+      "cerPct": 21.6,
+      "wordRecallPct": 52.6,
+      "exactLinePct": 52.2,
+      "niqqudKeptPct": 29.3,
+      "msMedian": 61,
+      "msP95": 153
+     },
+     "perspective": {
+      "n": 24,
+      "charAccuracyPct": 92.5,
+      "cerPct": 7.5,
+      "wordRecallPct": 78.2,
+      "exactLinePct": 62.5,
+      "niqqudKeptPct": 36.6,
+      "msMedian": 43,
+      "msP95": 158
+     },
+     "lowcontrast": {
+      "n": 20,
+      "charAccuracyPct": 13.9,
+      "cerPct": 86.1,
+      "wordRecallPct": 9.6,
+      "exactLinePct": 30,
+      "niqqudKeptPct": 0,
+      "msMedian": 50,
+      "msP95": 151
+     }
+    },
+    "errors": 0,
+    "byKindVariant": {
+     "siddur-line/clean": {
+      "n": 8,
+      "charAccuracyPct": 92.9,
+      "cerPct": 7.1,
+      "wordRecallPct": 78.2,
+      "exactLinePct": 25,
+      "niqqudKeptPct": 46.1,
+      "msMedian": 138,
+      "msP95": 205
+     },
+     "siddur-line/noise": {
+      "n": 8,
+      "charAccuracyPct": 93.8,
+      "cerPct": 6.2,
+      "wordRecallPct": 78.2,
+      "exactLinePct": 12.5,
+      "niqqudKeptPct": 42.9,
+      "msMedian": 162,
+      "msP95": 194
+     },
+     "siddur-line/blur": {
+      "n": 8,
+      "charAccuracyPct": 92.9,
+      "cerPct": 7.1,
+      "wordRecallPct": 78.2,
+      "exactLinePct": 50,
+      "niqqudKeptPct": 44.5,
+      "msMedian": 133,
+      "msP95": 170
+     },
+     "siddur-line/rotate": {
+      "n": 8,
+      "charAccuracyPct": 83.6,
+      "cerPct": 16.4,
+      "wordRecallPct": 56.4,
+      "exactLinePct": 25,
+      "niqqudKeptPct": 28.3,
+      "msMedian": 128,
+      "msP95": 153
+     },
+     "siddur-line/perspective": {
+      "n": 8,
+      "charAccuracyPct": 92,
+      "cerPct": 8,
+      "wordRecallPct": 76.4,
+      "exactLinePct": 37.5,
+      "niqqudKeptPct": 36.6,
+      "msMedian": 137,
+      "msP95": 162
+     },
+     "siddur-line/lowcontrast": {
+      "n": 8,
+      "charAccuracyPct": 4.4,
+      "cerPct": 95.6,
+      "wordRecallPct": 0,
+      "exactLinePct": 0,
+      "niqqudKeptPct": 0,
+      "msMedian": 88,
+      "msP95": 151
+     },
+     "siddur-page/clean": {
+      "n": 3,
+      "charAccuracyPct": 72,
+      "cerPct": 28,
+      "wordRecallPct": 46.8,
+      "exactLinePct": 0,
+      "niqqudKeptPct": 39.8,
+      "msMedian": 157,
+      "msP95": 234
+     },
+     "siddur-page/noise": {
+      "n": 3,
+      "charAccuracyPct": 87.1,
+      "cerPct": 12.9,
+      "wordRecallPct": 51.6,
+      "exactLinePct": 0,
+      "niqqudKeptPct": 47.8,
+      "msMedian": 127,
+      "msP95": 175
+     },
+     "siddur-page/rotate": {
+      "n": 3,
+      "charAccuracyPct": 70.1,
+      "cerPct": 29.9,
+      "wordRecallPct": 38.7,
+      "exactLinePct": 0,
+      "niqqudKeptPct": 30.1,
+      "msMedian": 148,
+      "msP95": 189
+     },
+     "sign/clean": {
+      "n": 16,
+      "charAccuracyPct": 97.5,
+      "cerPct": 2.5,
+      "wordRecallPct": 91.3,
+      "exactLinePct": 87.5,
+      "niqqudKeptPct": null,
+      "msMedian": 35,
+      "msP95": 70
+     },
+     "sign/noise": {
+      "n": 16,
+      "charAccuracyPct": 97.5,
+      "cerPct": 2.5,
+      "wordRecallPct": 91.3,
+      "exactLinePct": 87.5,
+      "niqqudKeptPct": null,
+      "msMedian": 38,
+      "msP95": 67
+     },
+     "sign/blur": {
+      "n": 16,
+      "charAccuracyPct": 98.8,
+      "cerPct": 1.2,
+      "wordRecallPct": 95.7,
+      "exactLinePct": 93.8,
+      "niqqudKeptPct": null,
+      "msMedian": 43,
+      "msP95": 65
+     },
+     "sign/rotate": {
+      "n": 12,
+      "charAccuracyPct": 95.2,
+      "cerPct": 4.8,
+      "wordRecallPct": 88.9,
+      "exactLinePct": 83.3,
+      "niqqudKeptPct": null,
+      "msMedian": 35,
+      "msP95": 74
+     },
+     "sign/perspective": {
+      "n": 16,
+      "charAccuracyPct": 93.8,
+      "cerPct": 6.2,
+      "wordRecallPct": 82.6,
+      "exactLinePct": 75,
+      "niqqudKeptPct": null,
+      "msMedian": 34,
+      "msP95": 51
+     },
+     "sign/lowcontrast": {
+      "n": 12,
+      "charAccuracyPct": 48.4,
+      "cerPct": 51.6,
+      "wordRecallPct": 38.9,
+      "exactLinePct": 50,
+      "niqqudKeptPct": null,
+      "msMedian": 34,
+      "msP95": 78
+     }
+    },
+    "prayerMatch": {
+     "0.6": {
+      "lineTop1Pct": 82.7,
+      "lines": 75,
+      "wrongAcceptedLines": 4,
+      "signFalseAcceptPct": 12.5,
+      "signs": 88
+     },
+     "0.75": {
+      "lineTop1Pct": 77.3,
+      "lines": 75,
+      "wrongAcceptedLines": 3,
+      "signFalseAcceptPct": 0,
+      "signs": 88
+     },
+     "0.9": {
+      "lineTop1Pct": 45.3,
+      "lines": 75,
+      "wrongAcceptedLines": 2,
+      "signFalseAcceptPct": 0,
+      "signs": 88
+     }
+    }
+   },
+   "perImage": [
+    {
+     "id": "siddur-bless-priestly-1__clean",
+     "kind": "siddur-line",
+     "variant": "clean",
+     "ms": 83,
+     "refLen": 15,
+     "charEdits": 1,
+     "cer": 0.06666666666666667,
+     "refWords": 3,
+     "wordsMatched": 2,
+     "ocrText": "יברְכֶך יְהוָה וישמְרֶ:",
+     "niqqud": {
+      "total": 14,
+      "kept": 6,
+      "ocrPoints": 6
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-1__noise",
+     "kind": "siddur-line",
+     "variant": "noise",
+     "ms": 61,
+     "refLen": 15,
+     "charEdits": 2,
+     "cer": 0.13333333333333333,
+     "refWords": 3,
+     "wordsMatched": 1,
+     "ocrText": "יברְכֶך ְהוָה וישמְרֶ:",
+     "niqqud": {
+      "total": 14,
+      "kept": 6,
+      "ocrPoints": 6
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-1__blur",
+     "kind": "siddur-line",
+     "variant": "blur",
+     "ms": 133,
+     "refLen": 15,
+     "charEdits": 4,
+     "cer": 0.26666666666666666,
+     "refWords": 3,
+     "wordsMatched": 1,
+     "ocrText": "בכר יְהוָה וישָמְרף:",
+     "niqqud": {
+      "total": 14,
+      "kept": 4,
+      "ocrPoints": 4
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-1__rotate",
+     "kind": "siddur-line",
+     "variant": "rotate",
+     "ms": 93,
+     "refLen": 15,
+     "charEdits": 3,
+     "cer": 0.2,
+     "refWords": 3,
+     "wordsMatched": 1,
+     "ocrText": "בָּרְכֶר יְהוָה וַישְמְרה:",
+     "niqqud": {
+      "total": 14,
+      "kept": 7,
+      "ocrPoints": 9
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-1__perspective",
+     "kind": "siddur-line",
+     "variant": "perspective",
+     "ms": 87,
+     "refLen": 15,
+     "charEdits": 3,
+     "cer": 0.2,
+     "refWords": 3,
+     "wordsMatched": 1,
+     "ocrText": "ְברכֶך יְהוֶה וַשְמְרֶה:",
+     "niqqud": {
+      "total": 14,
+      "kept": 6,
+      "ocrPoints": 8
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-1__lowcontrast",
+     "kind": "siddur-line",
+     "variant": "lowcontrast",
+     "ms": 57,
+     "refLen": 15,
+     "charEdits": 15,
+     "cer": 1,
+     "refWords": 3,
+     "wordsMatched": 0,
+     "ocrText": "",
+     "niqqud": {
+      "total": 14,
+      "kept": 0,
+      "ocrPoints": 0
+     },
+     "match": {
+      "0.6": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-2__clean",
+     "kind": "siddur-line",
+     "variant": "clean",
+     "ms": 98,
+     "refLen": 20,
+     "charEdits": 3,
+     "cer": 0.15,
+     "refWords": 5,
+     "wordsMatched": 4,
+     "ocrText": "יְאֶר יְהוֶה פְּנַיו אַליך וִַחְג:",
+     "niqqud": {
+      "total": 16,
+      "kept": 5,
+      "ocrPoints": 11
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-2__noise",
+     "kind": "siddur-line",
+     "variant": "noise",
+     "ms": 194,
+     "refLen": 20,
+     "charEdits": 4,
+     "cer": 0.2,
+     "refWords": 5,
+     "wordsMatched": 3,
+     "ocrText": "יְאֶר יְהוָה פְּנַיו אֶַיך וִַחְג:",
+     "niqqud": {
+      "total": 16,
+      "kept": 6,
+      "ocrPoints": 12
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-2__blur",
+     "kind": "siddur-line",
+     "variant": "blur",
+     "ms": 128,
+     "refLen": 20,
+     "charEdits": 4,
+     "cer": 0.2,
+     "refWords": 5,
+     "wordsMatched": 2,
+     "ocrText": "יְאֶר יְהוָה פְּגִיו אלֶיר ויחְגֶר:",
+     "niqqud": {
+      "total": 16,
+      "kept": 6,
+      "ocrPoints": 10
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-2__rotate",
+     "kind": "siddur-line",
+     "variant": "rotate",
+     "ms": 153,
+     "refLen": 20,
+     "charEdits": 5,
+     "cer": 0.25,
+     "refWords": 5,
+     "wordsMatched": 1,
+     "ocrText": ":אר הוה פָניו ליה ויחְנֶ:",
+     "niqqud": {
+      "total": 16,
+      "kept": 3,
+      "ocrPoints": 3
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-2__perspective",
+     "kind": "siddur-line",
+     "variant": "perspective",
+     "ms": 73,
+     "refLen": 20,
+     "charEdits": 3,
+     "cer": 0.15,
+     "refWords": 5,
+     "wordsMatched": 3,
+     "ocrText": "יאר יְהוה פְּניו אי ויחְנֶ:",
+     "niqqud": {
+      "total": 16,
+      "kept": 3,
+      "ocrPoints": 5
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-2__lowcontrast",
+     "kind": "siddur-line",
+     "variant": "lowcontrast",
+     "ms": 75,
+     "refLen": 20,
+     "charEdits": 20,
+     "cer": 1,
+     "refWords": 5,
+     "wordsMatched": 0,
+     "ocrText": "",
+     "niqqud": {
+      "total": 16,
+      "kept": 0,
+      "ocrPoints": 0
+     },
+     "match": {
+      "0.6": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-3__clean",
+     "kind": "siddur-line",
+     "variant": "clean",
+     "ms": 205,
+     "refLen": 25,
+     "charEdits": 3,
+     "cer": 0.12,
+     "refWords": 7,
+     "wordsMatched": 4,
+     "ocrText": "לשא הוה פָּנָיו אַלֶיך וֶישם לֶד שלום:",
+     "niqqud": {
+      "total": 21,
+      "kept": 4,
+      "ocrPoints": 7
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-3__noise",
+     "kind": "siddur-line",
+     "variant": "noise",
+     "ms": 162,
+     "refLen": 25,
+     "charEdits": 2,
+     "cer": 0.08,
+     "refWords": 7,
+     "wordsMatched": 5,
+     "ocrText": "ישא יהוה פְּיו אַלֶיך וַישֶם לד שלום:",
+     "niqqud": {
+      "total": 21,
+      "kept": 3,
+      "ocrPoints": 6
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-3__blur",
+     "kind": "siddur-line",
+     "variant": "blur",
+     "ms": 117,
+     "refLen": 25,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 7,
+     "wordsMatched": 7,
+     "ocrText": "ישא יהוָה פְּנִיו אַלְיךְ וישם לֶך שלום:",
+     "niqqud": {
+      "total": 21,
+      "kept": 7,
+      "ocrPoints": 8
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-3__rotate",
+     "kind": "siddur-line",
+     "variant": "rotate",
+     "ms": 106,
+     "refLen": 25,
+     "charEdits": 4,
+     "cer": 0.16,
+     "refWords": 7,
+     "wordsMatched": 3,
+     "ocrText": "ילא הוה פְּניו אלָיר וישם לך שלים:",
+     "niqqud": {
+      "total": 21,
+      "kept": 3,
+      "ocrPoints": 3
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-3__perspective",
+     "kind": "siddur-line",
+     "variant": "perspective",
+     "ms": 108,
+     "refLen": 25,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 7,
+     "wordsMatched": 7,
+     "ocrText": "ישָא יְהוָה פְּנָיו אַלֶיך וְיִשם לֶךָ שלום:",
+     "niqqud": {
+      "total": 21,
+      "kept": 10,
+      "ocrPoints": 12
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-bless-priestly-3__lowcontrast",
+     "kind": "siddur-line",
+     "variant": "lowcontrast",
+     "ms": 151,
+     "refLen": 25,
+     "charEdits": 15,
+     "cer": 0.6,
+     "refWords": 7,
+     "wordsMatched": 0,
+     "ocrText": "א א ו אליר םל שלוו",
+     "niqqud": {
+      "total": 21,
+      "kept": 0,
+      "ocrPoints": 0
+     },
+     "match": {
+      "0.6": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-1__clean",
+     "kind": "siddur-line",
+     "variant": "clean",
+     "ms": 92,
+     "refLen": 25,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 6,
+     "wordsMatched": 6,
+     "ocrText": "שָמַע יִשְרְאֶל יְהוֶה אָלהִינוּ יְהוָה אֶחָד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 12,
+      "ocrPoints": 15
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-1__noise",
+     "kind": "siddur-line",
+     "variant": "noise",
+     "ms": 112,
+     "refLen": 25,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 6,
+     "wordsMatched": 6,
+     "ocrText": "שְמַע יִשְרְאֶל יְהוָה אָלהִינוּ יְהוָה אֶחָד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 12,
+      "ocrPoints": 15
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-1__blur",
+     "kind": "siddur-line",
+     "variant": "blur",
+     "ms": 94,
+     "refLen": 25,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 6,
+     "wordsMatched": 6,
+     "ocrText": "שְמָע ישרְאֶל יְהוָה אַלהִינו יְהוֶה אֶחָד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 10,
+      "ocrPoints": 12
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-1__rotate",
+     "kind": "siddur-line",
+     "variant": "rotate",
+     "ms": 54,
+     "refLen": 25,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 6,
+     "wordsMatched": 6,
+     "ocrText": "שָמע ישְרְאֶל יְהוָה אלהינו יִהוָה אֶחָד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 9,
+      "ocrPoints": 10
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-1__perspective",
+     "kind": "siddur-line",
+     "variant": "perspective",
+     "ms": 51,
+     "refLen": 25,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 6,
+     "wordsMatched": 6,
+     "ocrText": "שמע יִשראֶל יְהוָה אָלהִינוּ יְהוָה אֶחַד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 9,
+      "ocrPoints": 11
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-1__lowcontrast",
+     "kind": "siddur-line",
+     "variant": "lowcontrast",
+     "ms": 34,
+     "refLen": 25,
+     "charEdits": 25,
+     "cer": 1,
+     "refWords": 6,
+     "wordsMatched": 0,
+     "ocrText": "",
+     "niqqud": {
+      "total": 18,
+      "kept": 0,
+      "ocrPoints": 0
+     },
+     "match": {
+      "0.6": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-2__clean",
+     "kind": "siddur-line",
+     "variant": "clean",
+     "ms": 50,
+     "refLen": 24,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 6,
+     "wordsMatched": 6,
+     "ocrText": "בַּרוּך שם כְּבוּד מלכוּתו לְעוּלֶם וְעָד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 10,
+      "ocrPoints": 12
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-2__noise",
+     "kind": "siddur-line",
+     "variant": "noise",
+     "ms": 80,
+     "refLen": 24,
+     "charEdits": 1,
+     "cer": 0.041666666666666664,
+     "refWords": 6,
+     "wordsMatched": 5,
+     "ocrText": "בָּרוּד שם כַּבוּד מַלְכוּתוּ לְעוּלֶם וְעָד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 11,
+      "ocrPoints": 15
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-2__blur",
+     "kind": "siddur-line",
+     "variant": "blur",
+     "ms": 119,
+     "refLen": 24,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 6,
+     "wordsMatched": 6,
+     "ocrText": "בְּרוּך שם כְּבוד מִלְכוּתוּ לְעוּלֶם וְעָד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 10,
+      "ocrPoints": 14
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-2__rotate",
+     "kind": "siddur-line",
+     "variant": "rotate",
+     "ms": 128,
+     "refLen": 24,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 6,
+     "wordsMatched": 6,
+     "ocrText": "בּרוּך שם כָּבוּד מִלְכוּתו לעוּלם וְעָד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 8,
+      "ocrPoints": 11
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-2__perspective",
+     "kind": "siddur-line",
+     "variant": "perspective",
+     "ms": 162,
+     "refLen": 24,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 6,
+     "wordsMatched": 6,
+     "ocrText": "בּרוּך שם כבוד מלכוּתו לעולם וְעָד:",
+     "niqqud": {
+      "total": 18,
+      "kept": 5,
+      "ocrPoints": 5
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-shema-2__lowcontrast",
+     "kind": "siddur-line",
+     "variant": "lowcontrast",
+     "ms": 80,
+     "refLen": 24,
+     "charEdits": 24,
+     "cer": 1,
+     "refWords": 6,
+     "wordsMatched": 0,
+     "ocrText": "",
+     "niqqud": {
+      "total": 18,
+      "kept": 0,
+      "ocrPoints": 0
+     },
+     "match": {
+      "0.6": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-mah-tovu-1__clean",
+     "kind": "siddur-line",
+     "variant": "clean",
+     "ms": 198,
+     "refLen": 26,
+     "charEdits": 5,
+     "cer": 0.19230769230769232,
+     "refWords": 5,
+     "wordsMatched": 2,
+     "ocrText": "מה-פבוּ אהְלִיך יקב מטְבְְּתִיך יִשרָאֶל:",
+     "niqqud": {
+      "total": 24,
+      "kept": 9,
+      "ocrPoints": 11
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-mah-tovu-1__noise",
+     "kind": "siddur-line",
+     "variant": "noise",
+     "ms": 134,
+     "refLen": 26,
+     "charEdits": 2,
+     "cer": 0.07692307692307693,
+     "refWords": 5,
+     "wordsMatched": 3,
+     "ocrText": "מה-טבו אהְלִיך יִעָקב מטמנתִיך ישראל:",
+     "niqqud": {
+      "total": 24,
+      "kept": 4,
+      "ocrPoints": 5
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-mah-tovu-1__blur",
+     "kind": "siddur-line",
+     "variant": "blur",
+     "ms": 147,
+     "refLen": 26,
+     "charEdits": 2,
+     "cer": 0.07692307692307693,
+     "refWords": 5,
+     "wordsMatched": 2,
+     "ocrText": "מה\"טבו אהֶלִיך יקב מִשְכְנתִיך יְִרְאֶל:",
+     "niqqud": {
+      "total": 24,
+      "kept": 7,
+      "ocrPoints": 10
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-mah-tovu-1__rotate",
+     "kind": "siddur-line",
+     "variant": "rotate",
+     "ms": 103,
+     "refLen": 26,
+     "charEdits": 7,
+     "cer": 0.2692307692307692,
+     "refWords": 5,
+     "wordsMatched": 1,
+     "ocrText": "מה פבז אהליך יפקב ממְנתִיה יָטראָל:",
+     "niqqud": {
+      "total": 24,
+      "kept": 4,
+      "ocrPoints": 4
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-mah-tovu-1__perspective",
+     "kind": "siddur-line",
+     "variant": "perspective",
+     "ms": 137,
+     "refLen": 26,
+     "charEdits": 4,
+     "cer": 0.15384615384615385,
+     "refWords": 5,
+     "wordsMatched": 1,
+     "ocrText": "מה-טבו אהֶלִיך עקב מטְבְנְתִיך יִטראֶל:",
+     "niqqud": {
+      "total": 24,
+      "kept": 7,
+      "ocrPoints": 8
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-mah-tovu-1__lowcontrast",
+     "kind": "siddur-line",
+     "variant": "lowcontrast",
+     "ms": 88,
+     "refLen": 26,
+     "charEdits": 26,
+     "cer": 1,
+     "refWords": 5,
+     "wordsMatched": 0,
+     "ocrText": "",
+     "niqqud": {
+      "total": 24,
+      "kept": 0,
+      "ocrPoints": 0
+     },
+     "match": {
+      "0.6": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-modeh-ani-1__clean",
+     "kind": "siddur-line",
+     "variant": "clean",
+     "ms": 138,
+     "refLen": 48,
+     "charEdits": 2,
+     "cer": 0.041666666666666664,
+     "refWords": 12,
+     "wordsMatched": 10,
+     "ocrText": "מוּדֶה אַני לְפְנִיר מִלֶך חי וְקיִם שָהְחָזרְתַ בִּי נשמְתִי בְּחְמִלָה רַבָּה אַמוּנְתְר:",
+     "niqqud": {
+      "total": 44,
+      "kept": 26,
+      "ocrPoints": 31
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-modeh-ani-1__noise",
+     "kind": "siddur-line",
+     "variant": "noise",
+     "ms": 190,
+     "refLen": 48,
+     "charEdits": 2,
+     "cer": 0.041666666666666664,
+     "refWords": 12,
+     "wordsMatched": 10,
+     "ocrText": "מוּדֶה אני לְפְנִיר מִלֶך חי וְקיִם שָהְחָזרְתַ בִּי נשמְתִי בְּחְמִלָה רַבֶּה אָמוּנְתָר:",
+     "niqqud": {
+      "total": 44,
+      "kept": 26,
+      "ocrPoints": 30
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-modeh-ani-1__blur",
+     "kind": "siddur-line",
+     "variant": "blur",
+     "ms": 159,
+     "refLen": 48,
+     "charEdits": 6,
+     "cer": 0.125,
+     "refWords": 12,
+     "wordsMatched": 8,
+     "ocrText": "מודֶה אי לְפְִי מל חַי וקַיָם שָהְחַזְרְת בי נשְמָתִי בְּחְמְלֶה רַבֶה אָמנְתָבֶ:",
+     "niqqud": {
+      "total": 44,
+      "kept": 23,
+      "ocrPoints": 26
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-modeh-ani-1__rotate",
+     "kind": "siddur-line",
+     "variant": "rotate",
+     "ms": 148,
+     "refLen": 48,
+     "charEdits": 16,
+     "cer": 0.3333333333333333,
+     "refWords": 12,
+     "wordsMatched": 4,
+     "ocrText": "ויפל ?פיה מל ל\" וקים שהְחָזְרת = נשמת' בחְמלָה רבה אמוותר.",
+     "niqqud": {
+      "total": 44,
+      "kept": 5,
+      "ocrPoints": 5
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-modeh-ani-1__perspective",
+     "kind": "siddur-line",
+     "variant": "perspective",
+     "ms": 158,
+     "refLen": 48,
+     "charEdits": 3,
+     "cer": 0.0625,
+     "refWords": 12,
+     "wordsMatched": 9,
+     "ocrText": "מודה אי לְפניר מִלֶר חי וקים שהֶחזרת בּי נשמְתִי בַּחְמְלָה רַבַּה אַמוּנָתְך:",
+     "niqqud": {
+      "total": 44,
+      "kept": 19,
+      "ocrPoints": 19
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-modeh-ani-1__lowcontrast",
+     "kind": "siddur-line",
+     "variant": "lowcontrast",
+     "ms": 90,
+     "refLen": 48,
+     "charEdits": 48,
+     "cer": 1,
+     "refWords": 12,
+     "wordsMatched": 0,
+     "ocrText": "",
+     "niqqud": {
+      "total": 44,
+      "kept": 0,
+      "ocrPoints": 0
+     },
+     "match": {
+      "0.6": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-mi-chamocha-1__clean",
+     "kind": "siddur-line",
+     "variant": "clean",
+     "ms": 138,
+     "refLen": 42,
+     "charEdits": 2,
+     "cer": 0.047619047619047616,
+     "refWords": 11,
+     "wordsMatched": 9,
+     "ocrText": "מִיכָמכָה בַּאָלֶם הוָה מל כַּמכָה נָאֶדֶר בקדש נוּרא תְהֶלת עשה פלא:",
+     "niqqud": {
+      "total": 36,
+      "kept": 16,
+      "ocrPoints": 17
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-mi-chamocha-1__noise",
+     "kind": "siddur-line",
+     "variant": "noise",
+     "ms": 173,
+     "refLen": 42,
+     "charEdits": 1,
+     "cer": 0.023809523809523808,
+     "refWords": 11,
+     "wordsMatched": 10,
+     "ocrText": "מיכַמכָה בּאִלָם יהוָה מ כַּמכָה נָאדר בקדש נוּרָא תְהֶלת עשה פְלא:",
+     "niqqud": {
+      "total": 36,
+      "kept": 14,
+      "ocrPoints": 15
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-mi-chamocha-1__blur",
+     "kind": "siddur-line",
+     "variant": "blur",
+     "ms": 170,
+     "refLen": 42,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 11,
+     "wordsMatched": 11,
+     "ocrText": "מִיכְמכֶה בָּאַלֶם יְהוָה מִי כְּמכָה נְאֶדֶר בֶּקדֶש נורא תְהֶלת עשה פְּלָא:",
+     "niqqud": {
+      "total": 36,
+      "kept": 18,
+      "ocrPoints": 24
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-mi-chamocha-1__rotate",
+     "kind": "siddur-line",
+     "variant": "rotate",
+     "ms": 137,
+     "refLen": 42,
+     "charEdits": 2,
+     "cer": 0.047619047619047616,
+     "refWords": 11,
+     "wordsMatched": 9,
+     "ocrText": "מ כַמכָה בָּאִלֶם יְהוָה מי כַּמכָה נָאדֶר בקדש נורא תלת עשה פְּלָא:",
+     "niqqud": {
+      "total": 36,
+      "kept": 15,
+      "ocrPoints": 16
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "siddur-mi-chamocha-1__perspective",
+     "kind": "siddur-line",
+     "variant": "perspective",
+     "ms": 152,
+     "refLen": 42,
+     "charEdits": 5,
+     "cer": 0.11904761904761904,
+     "refWords": 11,
+     "wordsMatched": 9,
+     "ocrText": "מייצממה באלֶם יהוָה מִי כַּמכָה נָאֶדֶר בקדש נוּרָא תהלת עשה כל",
+     "niqqud": {
+      "total": 36,
+      "kept": 11,
+      "ocrPoints": 11
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 1,
+       "accepted": 1
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "siddur-mi-chamocha-1__lowcontrast",
+     "kind": "siddur-line",
+     "variant": "lowcontrast",
+     "ms": 95,
+     "refLen": 42,
+     "charEdits": 42,
+     "cer": 1,
+     "refWords": 11,
+     "wordsMatched": 0,
+     "ocrText": "",
+     "niqqud": {
+      "total": 36,
+      "kept": 0,
+      "ocrPoints": 0
+     },
+     "match": {
+      "0.6": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 1,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "page-bless-priestly-1__clean",
+     "kind": "siddur-page",
+     "variant": "clean",
+     "ms": 157,
+     "refLen": 60,
+     "charEdits": 9,
+     "cer": 0.15,
+     "refWords": 15,
+     "wordsMatched": 8,
+     "ocrText": "יבֶרְכֶר יְהוָה וַיִשָמְרֶה:\nיאר יְהוָה פָנָיו אלה וַיחַגף:\nישא יְהוָה כָּנִיו אַלֶיר ויָשם לב שָלוּם:",
+     "niqqud": {
+      "total": 51,
+      "kept": 22,
+      "ocrPoints": 26
+     },
+     "match": {
+      "0.6": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.75": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 3,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "page-bless-priestly-1__rotate",
+     "kind": "siddur-page",
+     "variant": "rotate",
+     "ms": 133,
+     "refLen": 60,
+     "charEdits": 27,
+     "cer": 0.45,
+     "refWords": 15,
+     "wordsMatched": 1,
+     "ocrText": "רכה הוה \\\"שְמר:\nיל והוה פנו ליה ויח\nלא חפנו אל השם ל שָלוּם:",
+     "niqqud": {
+      "total": 51,
+      "kept": 3,
+      "ocrPoints": 3
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 3,
+       "accepted": 2
+      },
+      "0.75": {
+       "correct": 0,
+       "of": 3,
+       "accepted": 0
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 3,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "page-bless-priestly-1__noise",
+     "kind": "siddur-page",
+     "variant": "noise",
+     "ms": 99,
+     "refLen": 60,
+     "charEdits": 7,
+     "cer": 0.11666666666666667,
+     "refWords": 15,
+     "wordsMatched": 8,
+     "ocrText": "ְבֶרְכֶך יְהוָה וַישְמְרֶה:\nיאר יְהוָה פַנִיו אֶלֶיה וִיחַגֶּך:\nישא יְהוָה כָּנִיו אַלֶיר ויָשם לב שָלוּם:",
+     "niqqud": {
+      "total": 51,
+      "kept": 24,
+      "ocrPoints": 30
+     },
+     "match": {
+      "0.6": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.75": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.9": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      }
+     }
+    },
+    {
+     "id": "page-shema-1__clean",
+     "kind": "siddur-page",
+     "variant": "clean",
+     "ms": 234,
+     "refLen": 88,
+     "charEdits": 7,
+     "cer": 0.07954545454545454,
+     "refWords": 19,
+     "wordsMatched": 14,
+     "ocrText": "שמע ישראל יהוָה אֶלהִינוּ יהוָה אֶחָד:\nבַּרוּה שם כבוד מַלְכוּתוּ לְעוּלֶם וְעָד:\nוְאְהַבְתָּ אֶת יְהוָה אֶלהֶי בְּכָל\"לְבֶבֶ וּבְכָלינפֶש וּבְכָלימָאדֶה:",
+     "niqqud": {
+      "total": 71,
+      "kept": 38,
+      "ocrPoints": 45
+     },
+     "match": {
+      "0.6": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.75": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.9": {
+       "correct": 2,
+       "of": 3,
+       "accepted": 2
+      }
+     }
+    },
+    {
+     "id": "page-shema-1__rotate",
+     "kind": "siddur-page",
+     "variant": "rotate",
+     "ms": 189,
+     "refLen": 88,
+     "charEdits": 11,
+     "cer": 0.125,
+     "refWords": 19,
+     "wordsMatched": 12,
+     "ocrText": "שמע ישראֶל ְהוֶה אלהִינו יְהוָה אֶחְדי\nבָּרוּ שם כְּבוּד מלְכוּתו לְעוּלֶם וְעָד:\nואָהַבְת אֶת יְהוָה אָלהֶיר בּכָלילְבְבֶ בכֶלינַפשֶ וּבְכָלימאדֶי",
+     "niqqud": {
+      "total": 71,
+      "kept": 35,
+      "ocrPoints": 41
+     },
+     "match": {
+      "0.6": {
+       "correct": 2,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.75": {
+       "correct": 2,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.9": {
+       "correct": 1,
+       "of": 3,
+       "accepted": 2
+      }
+     }
+    },
+    {
+     "id": "page-shema-1__noise",
+     "kind": "siddur-page",
+     "variant": "noise",
+     "ms": 127,
+     "refLen": 88,
+     "charEdits": 7,
+     "cer": 0.07954545454545454,
+     "refWords": 19,
+     "wordsMatched": 14,
+     "ocrText": "שמע ישראל יהוָה אֶלהִינוּ יהוָה אֶחָד:\nבַּרוּה שם כבוּד מַלְכוּתוּ לְעוּלֶם וְעָד:\nוְאְהַבְתָּ אֶת יְהוָה אֶלהֶי בְּכָל\"לְבֶבֶ וּבְכָלינפֶש וּבְכָלימָאדֶה:",
+     "niqqud": {
+      "total": 71,
+      "kept": 38,
+      "ocrPoints": 46
+     },
+     "match": {
+      "0.6": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.75": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.9": {
+       "correct": 2,
+       "of": 3,
+       "accepted": 2
+      }
+     }
+    },
+    {
+     "id": "page-mah-tovu-1__clean",
+     "kind": "siddur-page",
+     "variant": "clean",
+     "ms": 113,
+     "refLen": 116,
+     "charEdits": 58,
+     "cer": 0.5,
+     "refWords": 28,
+     "wordsMatched": 7,
+     "ocrText": "מה\"טבו אהָלִיה יקב מִשְְּתִיה ישראָל:\nמִי\"כְמכֶה בְַּלֶם יְהוָה מ כְּמכָה ָאחֶר בּקדֶש ורא תְהְלַת עשָה פָלָא:",
+     "niqqud": {
+      "total": 104,
+      "kept": 30,
+      "ocrPoints": 30
+     },
+     "match": {
+      "0.6": {
+       "correct": 1,
+       "of": 3,
+       "accepted": 2
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 3,
+       "accepted": 2
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 3,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "page-mah-tovu-1__rotate",
+     "kind": "siddur-page",
+     "variant": "rotate",
+     "ms": 148,
+     "refLen": 116,
+     "charEdits": 41,
+     "cer": 0.35344827586206895,
+     "refWords": 28,
+     "wordsMatched": 11,
+     "ocrText": ":יו שבו אהֶלְיהְ -לקב מִשְבְּנְתְיב ישראל:\nמידה אי לְפְנִי מל הי וְקַיִם שהחזרת בי נשְמְתי\nג\" כְמכֶה בָּאֶלֶם הוה מיכֶּמכָה נאדר בקֶדש נוא המלה רבה אֶמונְת:\nתְהַלת עשה פלא:",
+     "niqqud": {
+      "total": 104,
+      "kept": 30,
+      "ocrPoints": 31
+     },
+     "match": {
+      "0.6": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 4
+      },
+      "0.75": {
+       "correct": 1,
+       "of": 3,
+       "accepted": 2
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 3,
+       "accepted": 1
+      }
+     }
+    },
+    {
+     "id": "page-mah-tovu-1__noise",
+     "kind": "siddur-page",
+     "variant": "noise",
+     "ms": 175,
+     "refLen": 116,
+     "charEdits": 20,
+     "cer": 0.1724137931034483,
+     "refWords": 28,
+     "wordsMatched": 10,
+     "ocrText": "מה\"טבוּ אהָלִים יעקב מְכְּנתִיר יִשרְאֶל:\nמודֶה אי ליה מלֶ חַי וקיִם שָהַחַזְרְתָּ בי נשמְתי בְּחְמְלָ רַבָּה אָמוְּתָ:\nמייְמֶהבְּאַלֶ יוה מיכְּכהנאדָרבּקדֶש ורא תחת לשה פְלָא:",
+     "niqqud": {
+      "total": 104,
+      "kept": 46,
+      "ocrPoints": 47
+     },
+     "match": {
+      "0.6": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.75": {
+       "correct": 3,
+       "of": 3,
+       "accepted": 3
+      },
+      "0.9": {
+       "correct": 0,
+       "of": 3,
+       "accepted": 0
+      }
+     }
+    },
+    {
+     "id": "sign-politeness-19__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 61,
+     "refLen": 2,
+     "charEdits": 1,
+     "cer": 0.5,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": "דו",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-politeness-19__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 43,
+     "refLen": 2,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "די",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-politeness-19__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 50,
+     "refLen": 2,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "די",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-politeness-19__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 61,
+     "refLen": 2,
+     "charEdits": 1,
+     "cer": 0.5,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": "דו",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-politeness-19__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 26,
+     "refLen": 2,
+     "charEdits": 1,
+     "cer": 0.5,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": "דו",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-politeness-19__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 29,
+     "refLen": 2,
+     "charEdits": 2,
+     "cer": 1,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": ".",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-directions-05__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 25,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "ישר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-directions-05__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 28,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "ישר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-directions-05__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 65,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "ישר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-directions-05__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 74,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "ישר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-directions-05__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 35,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "ישר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-directions-05__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 40,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "ישר.",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-03__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 29,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "טוב",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-03__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 30,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "טוב",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-03__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 28,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "טוב",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-03__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 28,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "טוב",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-03__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 41,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "טוב",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-03__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 78,
+     "refLen": 3,
+     "charEdits": 3,
+     "cer": 1,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": "1 2",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-09__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 43,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "סתם",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-09__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 67,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "סתם",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-09__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 27,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "סתם",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-09__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 26,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "סתם",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-09__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 26,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "סתם",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-09__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 31,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "סתם.",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-18__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 30,
+     "refLen": 6,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "שקשוקה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-18__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 33,
+     "refLen": 6,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "שקשוקה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-18__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 31,
+     "refLen": 6,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "שקשוקה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-18__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 30,
+     "refLen": 6,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "שקשוקה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-18__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 30,
+     "refLen": 6,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "שקשוקה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-18__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 25,
+     "refLen": 6,
+     "charEdits": 6,
+     "cer": 1,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": "",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-18__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 29,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "חבר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-18__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 30,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "חבר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-18__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 30,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "חבר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-18__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 29,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "חבר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-18__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 29,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "חבר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-18__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 31,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": ": חבר",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-02__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 40,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "קוראים לי...",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-02__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 44,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "קוראים לי...",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-02__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 43,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "קוראים לי...",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-02__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 43,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "קוראים לי...",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-02__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 43,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "קוראים לי ...",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-02__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 50,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "קוראים לי...",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-04__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 35,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "אני מקנדה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-04__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 38,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "אני מקנדה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-04__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 36,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "אני מקנדה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-04__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 36,
+     "refLen": 8,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 2,
+     "wordsMatched": 2,
+     "ocrText": "אני מקנדה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-04__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 34,
+     "refLen": 8,
+     "charEdits": 2,
+     "cer": 0.25,
+     "refWords": 2,
+     "wordsMatched": 0,
+     "ocrText": "אגי מקבדה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-small-talk-04__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 39,
+     "refLen": 8,
+     "charEdits": 8,
+     "cer": 1,
+     "refWords": 2,
+     "wordsMatched": 0,
+     "ocrText": "1 : . : -",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-11__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 29,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "בירה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-11__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 29,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "בירה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-11__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 30,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "בירה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-11__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 28,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "בירה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-11__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 27,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "בירה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-cafe-11__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 34,
+     "refLen": 4,
+     "charEdits": 4,
+     "cer": 1,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": ".",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-numbers-20__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 26,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "היום",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-numbers-20__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 27,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "היום",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-numbers-20__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 26,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "היום",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-numbers-20__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 26,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "היום",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-numbers-20__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 27,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "היום",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-numbers-20__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 31,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "היום.",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-14__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 33,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 3,
+     "ocrText": "אני לא מבין",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-14__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 38,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 3,
+     "ocrText": "אני לא מבין",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-14__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 35,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 3,
+     "ocrText": "אני לא מבין",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-14__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 35,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 3,
+     "ocrText": "אני לא מבין",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-14__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 32,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 3,
+     "ocrText": "אני לא מבין",
+     "match": {
+      "0.6": {
+       "falseAccept": true
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-14__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 26,
+     "refLen": 9,
+     "charEdits": 9,
+     "cer": 1,
+     "refWords": 3,
+     "wordsMatched": 0,
+     "ocrText": "",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-13__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 43,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 3,
+     "ocrText": "אני לא יודע",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-13__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 46,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 3,
+     "ocrText": "אני לא יודע",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-13__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 47,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 3,
+     "ocrText": "אני לא יודע",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-13__rotate",
+     "kind": "sign",
+     "variant": "rotate",
+     "ms": 45,
+     "refLen": 9,
+     "charEdits": 2,
+     "cer": 0.2222222222222222,
+     "refWords": 3,
+     "wordsMatched": 2,
+     "ocrText": "אני שי יודע",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-13__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 49,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 3,
+     "ocrText": "אני לא יודע",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "sign-fillers-13__lowcontrast",
+     "kind": "sign",
+     "variant": "lowcontrast",
+     "ms": 57,
+     "refLen": 9,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 3,
+     "wordsMatched": 1,
+     "ocrText": "אני לאיודע",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-1__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 42,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "קפה 1250",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-1__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 43,
+     "refLen": 3,
+     "charEdits": 1,
+     "cer": 0.3333333333333333,
+     "refWords": 1,
+     "wordsMatched": 0,
+     "ocrText": "קפסה 1250",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-1__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 43,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "קפה 12.50",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-1__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 41,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "קפה 1250",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-2__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 33,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "חלב 8.90",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-2__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 33,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "חלב 8.90",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-2__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 45,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "חלב 8.90",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-2__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 33,
+     "refLen": 3,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "חלב 8.00",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-3__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 42,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "פיתה 5",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-3__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 43,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "פיתה 5",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-3__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 44,
+     "refLen": 4,
+     "charEdits": 0,
+     "cer": 0,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "פיתה 5",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-3__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 51,
+     "refLen": 4,
+     "charEdits": 1,
+     "cer": 0.25,
+     "refWords": 1,
+     "wordsMatched": 1,
+     "ocrText": "פיתה פ",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-4__clean",
+     "kind": "sign",
+     "variant": "clean",
+     "ms": 70,
+     "refLen": 9,
+     "charEdits": 1,
+     "cer": 0.1111111111111111,
+     "refWords": 2,
+     "wordsMatched": 1,
+     "ocrText": "מסעדה בשרה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-4__noise",
+     "kind": "sign",
+     "variant": "noise",
+     "ms": 57,
+     "refLen": 9,
+     "charEdits": 1,
+     "cer": 0.1111111111111111,
+     "refWords": 2,
+     "wordsMatched": 1,
+     "ocrText": "מסעדה בשרה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-4__blur",
+     "kind": "sign",
+     "variant": "blur",
+     "ms": 59,
+     "refLen": 9,
+     "charEdits": 1,
+     "cer": 0.1111111111111111,
+     "refWords": 2,
+     "wordsMatched": 1,
+     "ocrText": "מסעדה בשרה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    },
+    {
+     "id": "menu-4__perspective",
+     "kind": "sign",
+     "variant": "perspective",
+     "ms": 49,
+     "refLen": 9,
+     "charEdits": 1,
+     "cer": 0.1111111111111111,
+     "refWords": 2,
+     "wordsMatched": 1,
+     "ocrText": "מסעדה כבשרה",
+     "match": {
+      "0.6": {
+       "falseAccept": false
+      },
+      "0.75": {
+       "falseAccept": false
+      },
+      "0.9": {
+       "falseAccept": false
+      }
+     }
+    }
+   ]
+  }
+ }
+}

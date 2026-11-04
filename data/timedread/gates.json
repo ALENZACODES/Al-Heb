@@ -1,0 +1,9 @@
+{
+  "schema": "alef-timedread-gates/1",
+  "status": "draft-needs-expert-review",
+  "note": "Proposed replacements for the unmeasured grey and black gates in data/progress/belt-gates.json, and optional extra gates for orange..brown. minWpm is correct words per minute, self-reported. Targets come from data/curriculum/belts.json wpmTarget, which is ALEF's own proposal, not sourced. Nothing here says a learner 'is' a belt.",
+  "gates": {
+    "grey":  [ { "kind": "timedRead", "minWpm": 70, "minWords": 8, "minReads": 3, "minAccuracy": 0.9, "label": "Timed read-aloud of one text, 3 reads, about 70 words a minute (self-reported)" } ],
+    "black": [ { "kind": "timedRead", "minWpm": 80, "minWords": 12, "minReads": 3, "minAccuracy": 0.95, "label": "Timed read-aloud of one longer text, 3 reads, about 80 words a minute (self-reported)" } ]
+  }
+}

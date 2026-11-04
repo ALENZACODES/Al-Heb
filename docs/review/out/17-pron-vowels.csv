@@ -1,0 +1,198 @@
+﻿id,area,hebrew,transliteration,english,what_to_check,status,corrected_text,reviewer_notes,reviewer,review_date,priority,source
+pron-vowels:niqqud:kamatz,pron-vowels,בָ   אָב,Kamatz (kamatz gadol),"father
+Israeli: a as in father (short, no glide)
+Ashkenazi: aw as in saw (Barukh -> Bawrukh)
+Sephardi: a as in father
+American synagogue: ah as in father; older or Orthodox speakers say aw as in saw
+Note: In Ashkenazi the alternative values are [u] in open syllables (southern dialects) and [ʌ] (Lithuanian). In standard print kamatz gadol and kamatz katan look identical; Israeli readers treat a plain kamatz as [a] except for a short memorised list (see kamatz-katan variant).","Vowel/mark ""Kamatz (kamatz gadol)"" (קָמָץ). Verified flags: {""ipa"":true,""english"":false,""example"":false}. Check the English sound descriptions per tradition and the example word (pointing, gloss).",,,,,,5,data/pronunciation/niqqud.json#records[0]
+pron-vowels:niqqud:patach,pron-vowels,בַ   בַּיִת,Patach,"house (bayit)
+Israeli: a as in father
+Ashkenazi: a as in father
+Sephardi: a as in father
+American synagogue: ah as in father
+Note: A patach under a final ח, ע or ה-with-mappiq is a furtive patach and is read BEFORE the letter (נֹחַ = [no.ax]).","Vowel/mark ""Patach"" (פַּתַח). Verified flags: {""ipa"":true,""english"":false,""example"":false}. Check the English sound descriptions per tradition and the example word (pointing, gloss).",,,,,,5,data/pronunciation/niqqud.json#records[1]
+pron-vowels:niqqud:tzere,pron-vowels,בֵ   בֵּן,Tzere,"son (ben)
+Israeli: e as in bed (a few words and speakers say ei as in they)
+Ashkenazi: ei as in they (Polish usage is often like eye)
+Sephardi: e as in bed
+American synagogue: e as in bed; ei as in they when written with yod
+Note: Pealim: Israeli tzere may be [ei] in some cases, not for all speakers. Ashkenazi [aj] is the Polish variant.","Vowel/mark ""Tzere"" (צֵירֵי). Verified flags: {""ipa"":true,""english"":false,""example"":false}. Check the English sound descriptions per tradition and the example word (pointing, gloss).",,,,,,5,data/pronunciation/niqqud.json#records[2]
+pron-vowels:niqqud:segol,pron-vowels,בֶ   סֶפֶר,Segol,"book (sefer)
+Israeli: e as in bed
+Ashkenazi: e as in bed (stressed syllables in Polish/Ukrainian usage: ei)
+Sephardi: e as in bed
+American synagogue: e as in bed
+Note: Israeli tzere and segol sound the same; the sign distinction survives only in the spelling.","Vowel/mark ""Segol"" (סֶגוֹל). Verified flags: {""ipa"":true,""english"":false,""example"":false}. Check the English sound descriptions per tradition and the example word (pointing, gloss).",,,,,,5,data/pronunciation/niqqud.json#records[3]
+pron-vowels:niqqud:chirik,pron-vowels,בִ   אִמָּא,Chirik,"mother (ima)
+Israeli: i as in machine (short)
+Ashkenazi: i as in machine
+Sephardi: i as in machine
+American synagogue: i as in machine
+Note: Israeli writing usually adds a yod (chirik malei) to disambiguate; same sound.","Vowel/mark ""Chirik"" (חִירִיק). Verified flags: {""ipa"":true,""english"":false,""example"":false}. Check the English sound descriptions per tradition and the example word (pointing, gloss).",,,,,,5,data/pronunciation/niqqud.json#records[4]
+pron-vowels:niqqud:cholam,pron-vowels,בֹ   שָׁלוֹם,Cholam,"peace (shalom)
+Israeli: o as in for (no glide)
+Ashkenazi: o as in home (southern German / many American Ashkenazim); oy as in oy vey (Polish/Galician, Chasidic); ow (northern German)
+Sephardi: o as in home
+American synagogue: oh as in home
+Note: Ashkenazi values by sub-dialect: [oj] Polish/Galician, [au] N. German, [ej] Lithuanian, [øi] Hungarian, [o] S. German. The primary Ashkenazi value stored here is [o] because the sources say many non-Hassidic American Ashkenazim use it; see ashkenaziVariants.","Vowel/mark ""Cholam"" (חוֹלָם). Verified flags: {""ipa"":true,""english"":false,""example"":true}. Check the English sound descriptions per tradition and the example word (pointing, gloss).",,,,,,5,data/pronunciation/niqqud.json#records[5]
+pron-vowels:niqqud:kubutz,pron-vowels,בֻ   סֻכָּה,Kubutz,"sukkah (booth)
+Israeli: oo as in boot (short)
+Ashkenazi: oo as in boot; occasionally as in put
+Sephardi: oo as in boot
+American synagogue: oo as in boot; sometimes as in put
+Note: Hungarian/Oberlander Ashkenazi [y]; occasional [ʊ]. Same sound as shuruk.","Vowel/mark ""Kubutz"" (קֻבּוּץ). Verified flags: {""ipa"":true,""english"":false,""example"":false}. Check the English sound descriptions per tradition and the example word (pointing, gloss).",,,,,,5,data/pronunciation/niqqud.json#records[6]
+pron-vowels:niqqud:shuruk,pron-vowels,בוּ   סוּס,Shuruk,"horse (sus)
+Israeli: oo as in boot
+Ashkenazi: oo as in boot
+Sephardi: oo as in boot
+American synagogue: oo as in boot
+Note: The shared id is shuruk; the shape is a vav with a dagesh dot (U+05D5 U+05BC) after a consonant. Not to be confused with a consonant vav carrying dagesh (rare).","Vowel/mark ""Shuruk"" (שׁוּרוּק). Verified flags: {""ipa"":true,""english"":false,""example"":false}. Check the English sound descriptions per tradition and the example word (pointing, gloss).",,,,,,5,data/pronunciation/niqqud.json#records[7]
+pron-vowels:niqqud:shva,pron-vowels,בְ   שְׁמַע,Shva,"hear (Shema)
+Israeli: e as in begin, or silent
+Ashkenazi: often dropped (zman); short uh/e when read strictly in prayer
+Sephardi: e as in bed when vocal; silent otherwise
+American synagogue: a short e/uh (often written with an apostrophe), or silent
+Note: Vocal (na) vs silent (nach) is decided by rules: see src/pronunciation/shva.js. Modern Israelis often drop or insert the [e] on phonological grounds, not by the historical rules; no corpus measurement was found.","Vowel/mark ""Shva"" (שְׁוָא). Verified flags: {""ipa"":true,""english"":false,""example"":false}. Check the English sound descriptions per tradition and the example word (pointing, gloss).",,,,,,5,data/pronunciation/niqqud.json#records[8]
+pron-vowels:niqqud:chataf-patach,pron-vowels,בֲ   חֲבֵרָה,Chataf patach,"company / female friend (chavera)
+Israeli: very short a as in father
+Ashkenazi: very short a
+Sephardi: very short a
+American synagogue: very short a
+Note: Reduced vowels appear mostly under guttural letters.","Vowel/mark ""Chataf patach"" (חֲטַף פַּתַח). Verified flags: {""ipa"":true,""english"":false,""example"":true}. Check the English sound descriptions per tradition and the example word (pointing, gloss).",,,,,,5,data/pronunciation/niqqud.json#records[9]
+pron-vowels:niqqud:chataf-segol,pron-vowels,בֱ   אֱמֶת,Chataf segol,"truth (emet)
+Israeli: very short e as in bed
+Ashkenazi: very short e
+Sephardi: very short e
+American synagogue: very short e
+Note: Short reduced e.","Vowel/mark ""Chataf segol"" (חֲטַף סֶגוֹל). Verified flags: {""ipa"":true,""english"":false,""example"":true}. Check the English sound descriptions per tradition and the example word (pointing, gloss).",,,,,,5,data/pronunciation/niqqud.json#records[10]
+pron-vowels:niqqud:chataf-kamatz,pron-vowels,בֳ   צָהֳרַיִם,Chataf kamatz,"noon (tsohorayim)
+Israeli: very short o as in for
+Ashkenazi: very short aw/o
+Sephardi: very short o
+American synagogue: very short o
+Note: Not to be confused with kamatz katan. A kamatz right before a chataf kamatz is itself a kamatz katan (lane-3 synthesis, unverified).","Vowel/mark ""Chataf kamatz"" (חֲטַף קָמָץ). Verified flags: {""ipa"":true,""english"":false,""example"":true}. Check the English sound descriptions per tradition and the example word (pointing, gloss).",,,,,,5,data/pronunciation/niqqud.json#records[11]
+pron-vowels:niqqud:dagesh,pron-vowels,בּ   שַׁבָּת,Dagesh,"Shabbat
+Israeli: no sound of its own; makes b, k, p instead of v, kh, f
+Ashkenazi: same; also makes tav t instead of s
+Sephardi: same
+American synagogue: same as Israeli; a tav with dagesh is always t
+Note: Two things share one sign: dagesh kal (begadkefat hardening) and dagesh chazak (doubling). Dagesh chazak is acoustically and phonologically nonexistent in Modern Hebrew; it matters for reading only as a shva-na trigger and as a spelling convention. Mappiq (dagesh in a final he) means the he is pronounced.","Vowel/mark ""Dagesh"" (דָּגֵשׁ). Verified flags: {""ipa"":true,""english"":false,""example"":false}. Check the English sound descriptions per tradition and the example word (pointing, gloss).",,,,,,5,data/pronunciation/niqqud.json#records[12]
+pron-vowels:niqqud:shin-dot,pron-vowels,שׁ   שָׁלוֹם,Shin dot,"peace (shalom)
+Israeli: sh as in shoe
+Ashkenazi: sh as in shoe
+Sephardi: sh as in shoe
+American synagogue: sh as in shoe
+Note: The dot is written over the right (first) branch.","Vowel/mark ""Shin dot"" (נקודת שין). Verified flags: {""ipa"":true,""english"":false,""example"":true}. Check the English sound descriptions per tradition and the example word (pointing, gloss).",,,,,,5,data/pronunciation/niqqud.json#records[13]
+pron-vowels:niqqud:sin-dot,pron-vowels,שׂ   יִשְׂרָאֵל,Sin dot,"Israel (Yisrael)
+Israeli: s as in sun
+Ashkenazi: s as in sun
+Sephardi: s as in sun
+American synagogue: s as in sun
+Note: Lithuanian Ashkenazi historically merged shin and sin as [s] (historical, not current).","Vowel/mark ""Sin dot"" (נקודת שין שמאלית). Verified flags: {""ipa"":true,""english"":false,""example"":false}. Check the English sound descriptions per tradition and the example word (pointing, gloss).",,,,,,5,data/pronunciation/niqqud.json#records[14]
+pron-vowels:consonant:zayin,pron-vowels,ז,Zayin,"Israeli: z
+Ashkenazi: z
+Sephardi: z
+American synagogue: z
+Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.","Consonant record flagged verified:false (standard value, not in the fetched side-by-side table). Are the sound descriptions for each tradition correct?",,,,,,5,data/pronunciation/consonants.json#letters.zayin
+pron-vowels:consonant:tet,pron-vowels,ט,Tet,"Israeli: t
+Ashkenazi: t
+Sephardi: t
+American synagogue: t
+General Israeli lost the emphatic sounds of Biblical Hebrew (Wikipedia). Which Sephardi/Mizrahi communities keep emphatic tet was not in our sources.","Consonant record flagged verified:false (standard value, not in the fetched side-by-side table). Are the sound descriptions for each tradition correct?",,,,,,5,data/pronunciation/consonants.json#letters.tet
+pron-vowels:consonant:yod,pron-vowels,י,Yod,"Israeli: y as in yes; vowel letter for i/ei
+Ashkenazi: y as in yes; vowel letter for i/ei
+Sephardi: y as in yes; vowel letter for i/ei
+American synagogue: y as in yes; vowel letter for i/ei
+Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.","Consonant record flagged verified:false (standard value, not in the fetched side-by-side table). Are the sound descriptions for each tradition correct?",,,,,,5,data/pronunciation/consonants.json#letters.yod
+pron-vowels:consonant:lamed,pron-vowels,ל,Lamed,"Israeli: l
+Ashkenazi: l
+Sephardi: l
+American synagogue: l
+Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.","Consonant record flagged verified:false (standard value, not in the fetched side-by-side table). Are the sound descriptions for each tradition correct?",,,,,,5,data/pronunciation/consonants.json#letters.lamed
+pron-vowels:consonant:mem,pron-vowels,מ,Mem,"Israeli: m
+Ashkenazi: m
+Sephardi: m
+American synagogue: m
+Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.","Consonant record flagged verified:false (standard value, not in the fetched side-by-side table). Are the sound descriptions for each tradition correct?",,,,,,5,data/pronunciation/consonants.json#letters.mem
+pron-vowels:consonant:nun,pron-vowels,נ,Nun,"Israeli: n
+Ashkenazi: n
+Sephardi: n
+American synagogue: n
+Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.","Consonant record flagged verified:false (standard value, not in the fetched side-by-side table). Are the sound descriptions for each tradition correct?",,,,,,5,data/pronunciation/consonants.json#letters.nun
+pron-vowels:consonant:mem-final,pron-vowels,ם,Final mem,"Israeli: m
+Ashkenazi: m
+Sephardi: m
+American synagogue: m
+Same sound as the non-final form. Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.","Consonant record flagged verified:false (standard value, not in the fetched side-by-side table). Are the sound descriptions for each tradition correct?",,,,,,5,data/pronunciation/consonants.json#letters.mem-final
+pron-vowels:consonant:nun-final,pron-vowels,ן,Final nun,"Israeli: n
+Ashkenazi: n
+Sephardi: n
+American synagogue: n
+Same sound as the non-final form. Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.","Consonant record flagged verified:false (standard value, not in the fetched side-by-side table). Are the sound descriptions for each tradition correct?",,,,,,5,data/pronunciation/consonants.json#letters.nun-final
+pron-vowels:dial:shalom,pron-vowels,"שָׁלוֹם
+שלום",shalom,peace / hello,"Niqqud dial word: first line = siddur-style pointed, second = everyday unpointed spelling. Are both right (everyday spelling per the Academy rules), and is the gloss right?",,,,,,5,data/pronunciation/dial-words.json#words[0]
+pron-vowels:dial:toda,pron-vowels,"תּוֹדָה
+תודה",todah,thank you,"Niqqud dial word: first line = siddur-style pointed, second = everyday unpointed spelling. Are both right (everyday spelling per the Academy rules), and is the gloss right?",,,,,,5,data/pronunciation/dial-words.json#words[1]
+pron-vowels:dial:boker,pron-vowels,"בֹּקֶר
+בוקר",boker,"morning
+plene note: Everyday spelling adds a vav for the o sound; the pointed form writes only the cholam dot.","Niqqud dial word: first line = siddur-style pointed, second = everyday unpointed spelling. Are both right (everyday spelling per the Academy rules), and is the gloss right?",,,,,,5,data/pronunciation/dial-words.json#words[2]
+pron-vowels:dial:perot,pron-vowels,"פֵּרוֹת
+פירות",perot,"fruit
+plene note: Everyday spelling adds a yod for the e sound.","Niqqud dial word: first line = siddur-style pointed, second = everyday unpointed spelling. Are both right (everyday spelling per the Academy rules), and is the gloss right?",,,,,,5,data/pronunciation/dial-words.json#words[3]
+pron-vowels:dial:sukka,pron-vowels,"סֻכָּה
+סוכה",sukah,"booth (sukkah)
+plene note: Everyday spelling adds a vav for the u sound; kubutz is replaced by a vav letter.","Niqqud dial word: first line = siddur-style pointed, second = everyday unpointed spelling. Are both right (everyday spelling per the Academy rules), and is the gloss right?",,,,,,5,data/pronunciation/dial-words.json#words[4]
+pron-vowels:dial:kulam,pron-vowels,"כֻּלָּם
+כולם",kulam,"all of them
+plene note: Everyday spelling adds a vav for the u sound.","Niqqud dial word: first line = siddur-style pointed, second = everyday unpointed spelling. Are both right (everyday spelling per the Academy rules), and is the gloss right?",,,,,,5,data/pronunciation/dial-words.json#words[5]
+pron-vowels:dial:tora,pron-vowels,"תּוֹרָה
+תורה",torah,Torah,"Niqqud dial word: first line = siddur-style pointed, second = everyday unpointed spelling. Are both right (everyday spelling per the Academy rules), and is the gloss right?",,,,,,5,data/pronunciation/dial-words.json#words[6]
+pron-vowels:dial:yeled,pron-vowels,"יֶלֶד
+ילד",yeled,boy / child,"Niqqud dial word: first line = siddur-style pointed, second = everyday unpointed spelling. Are both right (everyday spelling per the Academy rules), and is the gloss right?",,,,,,5,data/pronunciation/dial-words.json#words[7]
+pron-vowels:dial:ima,pron-vowels,"אִמָּא
+אמא",ima,mom,"Niqqud dial word: first line = siddur-style pointed, second = everyday unpointed spelling. Are both right (everyday spelling per the Academy rules), and is the gloss right?",,,,,,5,data/pronunciation/dial-words.json#words[8]
+pron-vowels:dial:shabbat,pron-vowels,"שַׁבָּת
+שבת",shabat,Sabbath,"Niqqud dial word: first line = siddur-style pointed, second = everyday unpointed spelling. Are both right (everyday spelling per the Academy rules), and is the gloss right?",,,,,,5,data/pronunciation/dial-words.json#words[9]
+pron-vowels:dial:bayit,pron-vowels,"בַּיִת
+בית",bayit,house,"Niqqud dial word: first line = siddur-style pointed, second = everyday unpointed spelling. Are both right (everyday spelling per the Academy rules), and is the gloss right?",,,,,,5,data/pronunciation/dial-words.json#words[10]
+pron-vowels:dial:lechem,pron-vowels,"לֶחֶם
+לחם",lechem,bread,"Niqqud dial word: first line = siddur-style pointed, second = everyday unpointed spelling. Are both right (everyday spelling per the Academy rules), and is the gloss right?",,,,,,5,data/pronunciation/dial-words.json#words[11]
+pron-vowels:dial:gvina,pron-vowels,"גְּבִינָה
+גבינה",gevinah,cheese,"Niqqud dial word: first line = siddur-style pointed, second = everyday unpointed spelling. Are both right (everyday spelling per the Academy rules), and is the gloss right?",,,,,,5,data/pronunciation/dial-words.json#words[12]
+pron-vowels:dial:ani,pron-vowels,"אֲנִי
+אני",ani,I,"Niqqud dial word: first line = siddur-style pointed, second = everyday unpointed spelling. Are both right (everyday spelling per the Academy rules), and is the gloss right?",,,,,,5,data/pronunciation/dial-words.json#words[13]
+pron-vowels:dial:sefer,pron-vowels,"סֵפֶר
+ספר",sefer,book,"Niqqud dial word: first line = siddur-style pointed, second = everyday unpointed spelling. Are both right (everyday spelling per the Academy rules), and is the gloss right?",,,,,,5,data/pronunciation/dial-words.json#words[14]
+pron-vowels:dial:lama,pron-vowels,"לָמָּה
+למה",lamah,why,"Niqqud dial word: first line = siddur-style pointed, second = everyday unpointed spelling. Are both right (everyday spelling per the Academy rules), and is the gloss right?",,,,,,5,data/pronunciation/dial-words.json#words[15]
+pron-vowels:plene:a:final1,pron-vowels,שָׂרָה,sarah,"Sarah (name)
+kamatz then a final he with no dot: the he is a vowel letter, it is not a consonant","Word with a final vowel letter. Pointing, gloss and the note about the final letter.",,,,,,5,data/pronunciation/plene.json#families.a.finalVowelLetter[0]
+pron-vowels:plene:a:final2,pron-vowels,בָּרָא,bara,"he created
+kamatz then a final alef that is not read as a consonant","Word with a final vowel letter. Pointing, gloss and the note about the final letter.",,,,,,5,data/pronunciation/plene.json#families.a.finalVowelLetter[1]
+pron-vowels:plene:e,pron-vowels,"פֵּרוֹת
+פֵּירוֹת",peirot,"fruit (plural) (first line defective, second plene)
+yod added after the tzere in everyday spelling","Plene vs defective spelling for the ""e"" vowel family. Are both spellings real and correctly pointed, and is the note right?",,,,,,5,data/pronunciation/plene.json#families.e.pair
+pron-vowels:plene:i,pron-vowels,"דָּוִד
+דָּוִיד",david,"David (first line defective, second plene)
+yod added after the chirik","Plene vs defective spelling for the ""i"" vowel family. Are both spellings real and correctly pointed, and is the note right?",,,,,,5,data/pronunciation/plene.json#families.i.pair
+pron-vowels:plene:o,pron-vowels,"בֹּקֶר
+בּוֹקֶר",boker,"morning (first line defective, second plene)
+vav added after the consonant, the cholam dot sits on the vav","Plene vs defective spelling for the ""o"" vowel family. Are both spellings real and correctly pointed, and is the note right?",,,,,,5,data/pronunciation/plene.json#families.o.pair
+pron-vowels:plene:u,pron-vowels,"סֻכָּה
+סוּכָּה",sukah,"booth (sukkah) (first line defective, second plene)
+kubutz (three dots) versus shuruk (vav with a dot): same sound","Plene vs defective spelling for the ""u"" vowel family. Are both spellings real and correctly pointed, and is the note right?",,,,,,5,data/pronunciation/plene.json#families.u.pair
+pron-vowels:stress:1,pron-vowels,יֶלֶד,yeled,stress on syllable -2 from the end (segolate): two-syllable words ending in a segol are normally stressed on the first syllable,Stress exception. Is the word pointed correctly and is the stress where the data says (milel = second-to-last)?,,,,,,5,data/pronunciation/stress.json#exceptions[0]
+pron-vowels:stress:2,pron-vowels,לֶחֶם,lechem,stress on syllable -2 from the end (segolate): segolate pattern,Stress exception. Is the word pointed correctly and is the stress where the data says (milel = second-to-last)?,,,,,,5,data/pronunciation/stress.json#exceptions[1]
+pron-vowels:stress:3,pron-vowels,בֹּקֶר,boker,stress on syllable -2 from the end (segolate): segolate pattern,Stress exception. Is the word pointed correctly and is the stress where the data says (milel = second-to-last)?,,,,,,5,data/pronunciation/stress.json#exceptions[2]
+pron-vowels:stress:4,pron-vowels,בַּיִת,bayit,stress on syllable -2 from the end (other): stressed on the first syllable,Stress exception. Is the word pointed correctly and is the stress where the data says (milel = second-to-last)?,,,,,,5,data/pronunciation/stress.json#exceptions[3]
+pron-vowels:stress:5,pron-vowels,סֵפֶר,sefer,stress on syllable -2 from the end (segolate): segolate pattern; the same example is in the photo lane's list,Stress exception. Is the word pointed correctly and is the stress where the data says (milel = second-to-last)?,,,,,,5,data/pronunciation/stress.json#exceptions[4]
+pron-vowels:stress:6,pron-vowels,מֶלֶךְ,melekh,"stress on syllable -2 from the end (segolate): segolate pattern; matches prayerwords.json (Israeli, first syllable)",Stress exception. Is the word pointed correctly and is the stress where the data says (milel = second-to-last)?,,,,,,5,data/pronunciation/stress.json#exceptions[5]
+pron-vowels:stress:7,pron-vowels,אֱלֹהֵינוּ,eloheinu,"stress on syllable -2 from the end (other): stress on the syllable before the last, matches prayerwords.json (Israeli)",Stress exception. Is the word pointed correctly and is the stress where the data says (milel = second-to-last)?,,,,,,5,data/pronunciation/stress.json#exceptions[6]
+pron-vowels:dotpair:bet-vet,pron-vowels,,bet,"with: Both lips press together and pop open.
+without: Top teeth touch the lower lip; air buzzes through.",Mouth hints for the dot-toggle tile (English text). Are the articulation descriptions correct and understandable?,,,,,,5,data/pronunciation/dot-pairs.json#pairs[0]
+pron-vowels:dotpair:kaf-khaf,pron-vowels,,kaf,"with: The back of the tongue blocks the air for a moment, then releases.
+without: The back of the tongue leaves a narrow gap and air rubs through, like a rough h from the throat.",Mouth hints for the dot-toggle tile (English text). Are the articulation descriptions correct and understandable?,,,,,,5,data/pronunciation/dot-pairs.json#pairs[1]
+pron-vowels:dotpair:pe-fe,pron-vowels,,pe,"with: Both lips press together and pop open, with no buzz.
+without: Top teeth touch the lower lip; air rushes through, no buzz.",Mouth hints for the dot-toggle tile (English text). Are the articulation descriptions correct and understandable?,,,,,,5,data/pronunciation/dot-pairs.json#pairs[2]
+pron-vowels:dotpair:shin-sin,pron-vowels,,shin,"with: Right-hand dot (shin): tongue pulled back a little, a hushing sound.
+without: Left-hand dot (sin): tongue tip near the teeth, a hissing s sound.",Mouth hints for the dot-toggle tile (English text). Are the articulation descriptions correct and understandable?,,,,,,5,data/pronunciation/dot-pairs.json#pairs[3]

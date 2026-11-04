@@ -1,0 +1,777 @@
+{
+ "generated": "2026-11-03",
+ "root": ".",
+ "totalItems": 6353,
+ "totalHours": 66.64505555555556,
+ "phaseOneHours": 41.0895,
+ "overheadMultiplier": 1.15,
+ "areas": [
+  {
+   "slug": "opening-prayer",
+   "n": 1,
+   "title": "Book opening prayer (English original with Hebrew terms)",
+   "priority": 1,
+   "group": "opening prayer",
+   "reviewer": "clergy or educator",
+   "items": 5,
+   "hebrewWords": 5,
+   "hours": 0.23958333333333331,
+   "files": {
+    "csv": "01-opening-prayer.csv",
+    "html": "01-opening-prayer.html",
+    "pdf": "01-opening-prayer.pdf"
+   }
+  },
+  {
+   "slug": "prayers",
+   "n": 2,
+   "title": "Prayer registry (70 texts incl. 43 liturgy additions) and denomination notes",
+   "priority": 2,
+   "group": "prayers",
+   "reviewer": "clergy / cantor / Hebrew educator",
+   "items": 140,
+   "hebrewWords": 2252,
+   "hours": 12.199583333333333,
+   "files": {
+    "csv": "02-prayers.csv",
+    "html": "02-prayers.html",
+    "pdf": "02-prayers.pdf"
+   }
+  },
+  {
+   "slug": "prayer-prompts",
+   "n": 3,
+   "title": "Daily prompt prayers (morning, evening, Shabbat eve, holidays)",
+   "priority": 2,
+   "group": "prayers",
+   "reviewer": "clergy / Hebrew educator",
+   "items": 41,
+   "hebrewWords": 254,
+   "hours": 1.4349444444444441,
+   "files": {
+    "csv": "03-prayer-prompts.csv",
+    "html": "03-prayer-prompts.html",
+    "pdf": "03-prayer-prompts.pdf"
+   }
+  },
+  {
+   "slug": "prayer-guide",
+   "n": 4,
+   "title": "Reading a Torah service (guide prose)",
+   "priority": 2,
+   "group": "prayers",
+   "reviewer": "clergy",
+   "items": 17,
+   "hebrewWords": 23,
+   "hours": 1.3033333333333332,
+   "files": {
+    "csv": "04-prayer-guide.csv",
+    "html": "04-prayer-guide.html",
+    "pdf": "04-prayer-guide.pdf"
+   }
+  },
+  {
+   "slug": "torahread",
+   "n": 5,
+   "title": "Torah reading ladder (7 verses, 30 most frequent Torah words)",
+   "priority": 3,
+   "group": "curriculum",
+   "reviewer": "Hebrew teacher / clergy",
+   "items": 37,
+   "hebrewWords": 89,
+   "hours": 0.6072638888888888,
+   "files": {
+    "csv": "05-torahread.csv",
+    "html": "05-torahread.html",
+    "pdf": "05-torahread.pdf"
+   }
+  },
+  {
+   "slug": "lessons",
+   "n": 6,
+   "title": "Curriculum lessons (titles, goals, lesson words)",
+   "priority": 3,
+   "group": "curriculum",
+   "reviewer": "Hebrew teacher",
+   "items": 380,
+   "hebrewWords": 347,
+   "hours": 3.0347222222222223,
+   "files": {
+    "csv": "06-lessons.csv",
+    "html": "06-lessons.html",
+    "pdf": "06-lessons.pdf"
+   }
+  },
+  {
+   "slug": "dialogues",
+   "n": 7,
+   "title": "Dialogues",
+   "priority": 3,
+   "group": "curriculum",
+   "reviewer": "Israeli native speaker / teacher",
+   "items": 54,
+   "hebrewWords": 170,
+   "hours": 0.69,
+   "files": {
+    "csv": "07-dialogues.csv",
+    "html": "07-dialogues.html",
+    "pdf": "07-dialogues.pdf"
+   }
+  },
+  {
+   "slug": "gender-pairs",
+   "n": 8,
+   "title": "Gender pairs and paradigms",
+   "priority": 3,
+   "group": "curriculum",
+   "reviewer": "Hebrew teacher",
+   "items": 22,
+   "hebrewWords": 114,
+   "hours": 0.2811111111111111,
+   "files": {
+    "csv": "08-gender-pairs.csv",
+    "html": "08-gender-pairs.html",
+    "pdf": "08-gender-pairs.pdf"
+   }
+  },
+  {
+   "slug": "loanwords",
+   "n": 9,
+   "title": "Loanwords",
+   "priority": 3,
+   "group": "curriculum",
+   "reviewer": "Israeli native speaker",
+   "items": 26,
+   "hebrewWords": 26,
+   "hours": 0.1661111111111111,
+   "files": {
+    "csv": "09-loanwords.csv",
+    "html": "09-loanwords.html",
+    "pdf": "09-loanwords.pdf"
+   }
+  },
+  {
+   "slug": "hints",
+   "n": 10,
+   "title": "Interference hints (English text about Hebrew)",
+   "priority": 3,
+   "group": "curriculum",
+   "reviewer": "Hebrew teacher",
+   "items": 6,
+   "hebrewWords": 0,
+   "hours": 0.11499999999999999,
+   "files": {
+    "csv": "10-hints.csv",
+    "html": "10-hints.html",
+    "pdf": "10-hints.pdf"
+   }
+  },
+  {
+   "slug": "israel-everyday",
+   "n": 11,
+   "title": "How Israelis say it: fillers, etiquette, register ladder, scenarios, learner giveaways",
+   "priority": 4,
+   "group": "phrasebook",
+   "reviewer": "Israeli native speaker",
+   "items": 133,
+   "hebrewWords": 1573,
+   "hours": 3.1864583333333334,
+   "files": {
+    "csv": "11-israel-everyday.csv",
+    "html": "11-israel-everyday.html",
+    "pdf": "11-israel-everyday.pdf"
+   }
+  },
+  {
+   "slug": "phrasebook",
+   "n": 12,
+   "title": "Survival phrasebook",
+   "priority": 4,
+   "group": "phrasebook",
+   "reviewer": "Israeli native speaker",
+   "items": 204,
+   "hebrewWords": 407,
+   "hours": 1.9549999999999998,
+   "files": {
+    "csv": "12-phrasebook.csv",
+    "html": "12-phrasebook.html",
+    "pdf": "12-phrasebook.pdf"
+   }
+  },
+  {
+   "slug": "letter-strokes",
+   "n": 13,
+   "title": "Letter strokes (print and cursive, shape + order)",
+   "priority": 4,
+   "group": "letters",
+   "reviewer": "Israeli primary-school teacher",
+   "items": 54,
+   "hebrewWords": 54,
+   "hours": 2.5875,
+   "files": {
+    "csv": "13-letter-strokes.csv",
+    "html": "13-letter-strokes.html",
+    "pdf": "13-letter-strokes.pdf"
+   }
+  },
+  {
+   "slug": "mnemonics",
+   "n": 14,
+   "title": "Letter mnemonics (example words and name claims)",
+   "priority": 4,
+   "group": "letters",
+   "reviewer": "Hebrew teacher",
+   "items": 31,
+   "hebrewWords": 31,
+   "hours": 1.4854166666666666,
+   "files": {
+    "csv": "14-mnemonics.csv",
+    "html": "14-mnemonics.html",
+    "pdf": "14-mnemonics.pdf"
+   }
+  },
+  {
+   "slug": "pron-soundgap",
+   "n": 15,
+   "title": "Pronunciation: sound-gap lab",
+   "priority": 5,
+   "group": "pronunciation",
+   "reviewer": "native speaker / speech teacher",
+   "items": 32,
+   "hebrewWords": 48,
+   "hours": 0.45999999999999996,
+   "files": {
+    "csv": "15-pron-soundgap.csv",
+    "html": "15-pron-soundgap.html",
+    "pdf": "15-pron-soundgap.pdf"
+   }
+  },
+  {
+   "slug": "pron-prayerwords",
+   "n": 16,
+   "title": "Pronunciation: prayer words in three accents",
+   "priority": 5,
+   "group": "pronunciation",
+   "reviewer": "native speaker + Ashkenazi-trained reader",
+   "items": 10,
+   "hebrewWords": 10,
+   "hours": 0.38333333333333336,
+   "files": {
+    "csv": "16-pron-prayerwords.csv",
+    "html": "16-pron-prayerwords.html",
+    "pdf": "16-pron-prayerwords.pdf"
+   }
+  },
+  {
+   "slug": "pron-vowels",
+   "n": 17,
+   "title": "Pronunciation: vowel and consonant data, plene pairs, stress, dot hints",
+   "priority": 5,
+   "group": "pronunciation",
+   "reviewer": "Hebrew teacher",
+   "items": 56,
+   "hebrewWords": 87,
+   "hours": 1.0733333333333333,
+   "files": {
+    "csv": "17-pron-vowels.csv",
+    "html": "17-pron-vowels.html",
+    "pdf": "17-pron-vowels.pdf"
+   }
+  },
+  {
+   "slug": "pron-traditions",
+   "n": 18,
+   "title": "Pronunciation traditions guide: \"which should I learn?\" and per-sound comparison",
+   "priority": 5,
+   "group": "pronunciation",
+   "reviewer": "linguist / cantor / Hebrew teacher",
+   "items": 25,
+   "hebrewWords": 11,
+   "hours": 1.1979166666666667,
+   "files": {
+    "csv": "18-pron-traditions.csv",
+    "html": "18-pron-traditions.html",
+    "pdf": "18-pron-traditions.pdf"
+   }
+  },
+  {
+   "slug": "calendar",
+   "n": 19,
+   "title": "Calendar texts (holiday and month names)",
+   "priority": 5,
+   "group": "calendar",
+   "reviewer": "Hebrew teacher / clergy",
+   "items": 80,
+   "hebrewWords": 95,
+   "hours": 2.3,
+   "files": {
+    "csv": "19-calendar.csv",
+    "html": "19-calendar.html",
+    "pdf": "19-calendar.pdf"
+   }
+  },
+  {
+   "slug": "vocab-top1000",
+   "n": 20,
+   "title": "Vocabulary, ranks 1-1000 (pointing and glosses)",
+   "priority": 6,
+   "group": "vocab",
+   "reviewer": "Hebrew teacher / native speaker",
+   "items": 1000,
+   "hebrewWords": 1006,
+   "hours": 6.388888888888889,
+   "files": {
+    "csv": "20-vocab-top1000.csv",
+    "html": "20-vocab-top1000.html",
+    "pdf": "20-vocab-top1000.pdf"
+   }
+  },
+  {
+   "slug": "vocab-rest",
+   "n": 21,
+   "title": "Vocabulary, ranks 1001-5000 (pointing and glosses) - sheet only",
+   "priority": 7,
+   "group": "vocab",
+   "reviewer": "Hebrew teacher / native speaker",
+   "items": 4000,
+   "hebrewWords": 4000,
+   "hours": 25.555555555555557,
+   "files": {
+    "csv": "21-vocab-rest.csv"
+   }
+  }
+ ],
+ "audit": {
+  "dataFilesWithFlags": [
+   {
+    "file": "data/corpus/prayer-meta.json",
+    "flags": {
+     "clergyReviewed": 70
+    },
+    "total": 70
+   },
+   {
+    "file": "data/corpus/registry.json",
+    "flags": {
+     "proofread": 70
+    },
+    "total": 70
+   },
+   {
+    "file": "data/curriculum/dialogues.json",
+    "flags": {
+     "proofread": 8,
+     "needsNativeReview": 1
+    },
+    "total": 9
+   },
+   {
+    "file": "data/curriculum/hints.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/curriculum/loanwords.json",
+    "flags": {
+     "proofread": 30,
+     "needsNativeReview": 1
+    },
+    "total": 31
+   },
+   {
+    "file": "data/israel/etiquette.json",
+    "flags": {
+     "proofread": 12,
+     "needsNativeReview": 12
+    },
+    "total": 24
+   },
+   {
+    "file": "data/israel/fillers.json",
+    "flags": {
+     "proofread": 23,
+     "needsNativeReview": 23
+    },
+    "total": 46
+   },
+   {
+    "file": "data/israel/giveaways.json",
+    "flags": {
+     "proofread": 16,
+     "needsNativeReview": 16
+    },
+    "total": 32
+   },
+   {
+    "file": "data/israel/register-ladder.json",
+    "flags": {
+     "proofread": 66,
+     "needsNativeReview": 66
+    },
+    "total": 132
+   },
+   {
+    "file": "data/israel/scenarios.json",
+    "flags": {
+     "proofread": 17,
+     "needsNativeReview": 17
+    },
+    "total": 34
+   },
+   {
+    "file": "data/letters/letters.json",
+    "flags": {
+     "needsNativeReview": 54,
+     "validated": 54
+    },
+    "total": 108
+   },
+   {
+    "file": "data/letters/mnemonics.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/pronunciation/dial-words.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/dot-pairs.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/plene.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/prayerwords.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/soundgap.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/stress.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/torahread/verses.json",
+    "flags": {
+     "proofread": 7
+    },
+    "total": 7
+   },
+   {
+    "file": "data/torahread/words30.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/traditions/guide.json",
+    "flags": {
+     "draft": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/traditions/sounds.json",
+    "flags": {
+     "draft": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/vocab/packs/vocab5k-tier-1000.json",
+    "flags": {
+     "proofread": 500
+    },
+    "total": 500
+   },
+   {
+    "file": "data/vocab/packs/vocab5k-tier-2000.json",
+    "flags": {
+     "proofread": 1000
+    },
+    "total": 1000
+   },
+   {
+    "file": "data/vocab/packs/vocab5k-tier-500.json",
+    "flags": {
+     "proofread": 500
+    },
+    "total": 500
+   },
+   {
+    "file": "data/vocab/packs/vocab5k-tier-5000.json",
+    "flags": {
+     "proofread": 3000
+    },
+    "total": 3000
+   },
+   {
+    "file": "data/vocab/vocab5000.json",
+    "flags": {
+     "proofread": 5000
+    },
+    "total": 5000
+   }
+  ],
+  "docsWithMarkers": [
+   {
+    "file": "docs/STATUS.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/TOOLING.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/book/INDESIGN-HANDOFF.md",
+    "markers": 7
+   },
+   {
+    "file": "docs/book/PRINT.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/book/QA.md",
+    "markers": 10
+   },
+   {
+    "file": "docs/corpus/LICENSES.md",
+    "markers": 4
+   },
+   {
+    "file": "docs/curriculum/onramp-drills-dialogues.md",
+    "markers": 7
+   },
+   {
+    "file": "docs/letters/REVIEW-LIST.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/letters/STROKE-RULES.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/letters/worksheets/alef.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/ayin.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/bet.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/chet.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/dalet.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/gimel.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/he.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/kaf-final.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/kaf.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/lamed.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/mem-final.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/mem.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/nun-final.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/nun.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/pe-final.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/pe.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/qof.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/resh.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/samekh.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/shin.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/tav.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/tet.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/tsadi-final.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/tsadi.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/vav.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/yod.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/letters/worksheets/zayin.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/pronunciation/README.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/pronunciation/round4.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/qa/REPORT.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/torahread/README.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/traditions/README.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/traditions/SEPHARDI-DECISION.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/vocab/COVERAGE.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/vocab/LICENSES.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/vocab/METHOD.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/vocab/UI.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/voices/buyout-contract-terms.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/voices/casting-brief.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/wordtrace/README.md",
+    "markers": 3
+   },
+   {
+    "file": "docs/workbook/html/alef-workbook-cursive-a4-mnemonics.html",
+    "markers": 18
+   },
+   {
+    "file": "docs/workbook/html/alef-workbook-cursive-a4.html",
+    "markers": 17
+   },
+   {
+    "file": "docs/workbook/html/alef-workbook-cursive-letter-mnemonics.html",
+    "markers": 18
+   },
+   {
+    "file": "docs/workbook/html/alef-workbook-cursive-letter.html",
+    "markers": 17
+   },
+   {
+    "file": "docs/workbook/html/alef-workbook-print-a4-mnemonics.html",
+    "markers": 17
+   },
+   {
+    "file": "docs/workbook/html/alef-workbook-print-a4.html",
+    "markers": 16
+   },
+   {
+    "file": "docs/workbook/html/alef-workbook-print-letter-mnemonics.html",
+    "markers": 17
+   },
+   {
+    "file": "docs/workbook/html/alef-workbook-print-letter.html",
+    "markers": 16
+   }
+  ],
+  "dataFilesNotCoveredByAnyArea": []
+ }
+}

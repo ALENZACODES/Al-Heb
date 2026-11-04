@@ -1,0 +1,67 @@
+﻿id,area,hebrew,transliteration,english,what_to_check,status,corrected_text,reviewer_notes,reviewer,review_date,priority,source
+gender-pairs:gp-01,gender-pairs,"אֲנִי תַּלְמִיד
+אֲנִי תַּלְמִידָה","ani talmid
+ani talmida","I am a student. (m on first line, f on second)","Pair gp-01, noun-ending, speaker/listener: speaker. Check both pointed forms for gender agreement and pointing, the transliteration, and that the English matches both. Correct a form with an ""m:"" or ""f:"" prefix.",,,,,,3,data/curriculum/gender-pairs.json#pairs[0]
+gender-pairs:gp-02,gender-pairs,"אֲנִי עָיֵף
+אֲנִי עֲיֵפָה","ani ayef
+ani aye'fa","I am tired. (m on first line, f on second)","Pair gp-02, adjective, speaker/listener: speaker. Check both pointed forms for gender agreement and pointing, the transliteration, and that the English matches both. Correct a form with an ""m:"" or ""f:"" prefix.",,,,,,3,data/curriculum/gender-pairs.json#pairs[1]
+gender-pairs:gp-03,gender-pairs,"אֲנִי רָעֵב
+אֲנִי רְעֵבָה","ani ra'ev
+ani re'eva","I am hungry. (m on first line, f on second)","Pair gp-03, adjective, speaker/listener: speaker. Check both pointed forms for gender agreement and pointing, the transliteration, and that the English matches both. Correct a form with an ""m:"" or ""f:"" prefix.",,,,,,3,data/curriculum/gender-pairs.json#pairs[2]
+gender-pairs:gp-04,gender-pairs,"אֲנִי רוֹצֶה מַיִם
+אֲנִי רוֹצָה מַיִם","ani rotze mayim
+ani rotza mayim","I want water. (m on first line, f on second)","Pair gp-04, present-verb, speaker/listener: speaker. Check both pointed forms for gender agreement and pointing, the transliteration, and that the English matches both. Correct a form with an ""m:"" or ""f:"" prefix.",,,,,,3,data/curriculum/gender-pairs.json#pairs[3]
+gender-pairs:gp-05,gender-pairs,"אֲנִי גָּר בְּתֵל אָבִיב
+אֲנִי גָּרָה בְּתֵל אָבִיב","ani gar be-tel aviv
+ani gara be-tel aviv","I live in Tel Aviv. (m on first line, f on second)","Pair gp-05, present-verb, speaker/listener: speaker. Check both pointed forms for gender agreement and pointing, the transliteration, and that the English matches both. Correct a form with an ""m:"" or ""f:"" prefix.",,,,,,3,data/curriculum/gender-pairs.json#pairs[4]
+gender-pairs:gp-06,gender-pairs,"אֲנִי מֵבִין
+אֲנִי מְבִינָה","ani mevin
+ani mevina","I understand. (m on first line, f on second)","Pair gp-06, present-verb, speaker/listener: speaker. Check both pointed forms for gender agreement and pointing, the transliteration, and that the English matches both. Correct a form with an ""m:"" or ""f:"" prefix.",,,,,,3,data/curriculum/gender-pairs.json#pairs[5]
+gender-pairs:gp-07,gender-pairs,"אֲנִי מְדַבֵּר קְצָת עִבְרִית
+אֲנִי מְדַבֶּרֶת קְצָת עִבְרִית","ani medaber ktsat ivrit
+ani medaberet ktsat ivrit","I speak a little Hebrew. (m on first line, f on second)","Pair gp-07, present-verb, speaker/listener: speaker. Check both pointed forms for gender agreement and pointing, the transliteration, and that the English matches both. Correct a form with an ""m:"" or ""f:"" prefix.",,,,,,3,data/curriculum/gender-pairs.json#pairs[6]
+gender-pairs:gp-08,gender-pairs,"אֲנִי שָׂמֵחַ
+אֲנִי שְׂמֵחָה","ani sameach
+ani smecha","I am happy. (m on first line, f on second)","Pair gp-08, adjective, speaker/listener: speaker. Check both pointed forms for gender agreement and pointing, the transliteration, and that the English matches both. Correct a form with an ""m:"" or ""f:"" prefix.",,,,,,3,data/curriculum/gender-pairs.json#pairs[7]
+gender-pairs:gp-09,gender-pairs,"אֲנִי מוּכָן
+אֲנִי מוּכָנָה","ani muchan
+ani muchana","I am ready. (m on first line, f on second)","Pair gp-09, adjective, speaker/listener: speaker. Check both pointed forms for gender agreement and pointing, the transliteration, and that the English matches both. Correct a form with an ""m:"" or ""f:"" prefix.",,,,,,3,data/curriculum/gender-pairs.json#pairs[8]
+gender-pairs:gp-10,gender-pairs,"אַתָּה צוֹדֵק
+אַתְּ צוֹדֶקֶת","ata tsodek
+at tsodeket","You are right. (m on first line, f on second)","Pair gp-10, you-pronoun-adjective, speaker/listener: addressee. Check both pointed forms for gender agreement and pointing, the transliteration, and that the English matches both. Correct a form with an ""m:"" or ""f:"" prefix.",,,,,,3,data/curriculum/gender-pairs.json#pairs[9]
+gender-pairs:gp-11,gender-pairs,"מֵאֵיפֹה אַתָּה
+מֵאֵיפֹה אַתְּ","me'eifo ata
+me'eifo at","Where are you from? (m on first line, f on second)","Pair gp-11, you-pronoun, speaker/listener: addressee. Check both pointed forms for gender agreement and pointing, the transliteration, and that the English matches both. Correct a form with an ""m:"" or ""f:"" prefix.",,,,,,3,data/curriculum/gender-pairs.json#pairs[10]
+gender-pairs:gp-12,gender-pairs,"מָה אַתָּה רוֹצֶה
+מָה אַתְּ רוֹצָה","ma ata rotze
+ma at rotza","What do you want? (m on first line, f on second)","Pair gp-12, you-pronoun-verb, speaker/listener: addressee. Check both pointed forms for gender agreement and pointing, the transliteration, and that the English matches both. Correct a form with an ""m:"" or ""f:"" prefix.",,,,,,3,data/curriculum/gender-pairs.json#pairs[11]
+gender-pairs:gp-13,gender-pairs,"אַתָּה מֵבִין
+אַתְּ מְבִינָה","ata mevin
+at mevina","Do you understand? (m on first line, f on second)","Pair gp-13, you-pronoun-verb, speaker/listener: addressee. Check both pointed forms for gender agreement and pointing, the transliteration, and that the English matches both. Correct a form with an ""m:"" or ""f:"" prefix.",,,,,,3,data/curriculum/gender-pairs.json#pairs[12]
+gender-pairs:gp-14,gender-pairs,"בּוֹא הֵנָּה
+בּוֹאִי הֵנָּה","bo hena
+bo'i hena","Come here. (m on first line, f on second)","Pair gp-14, imperative, speaker/listener: addressee. Check both pointed forms for gender agreement and pointing, the transliteration, and that the English matches both. Correct a form with an ""m:"" or ""f:"" prefix.",,,,,,3,data/curriculum/gender-pairs.json#pairs[13]
+gender-pairs:gp-15,gender-pairs,"חַכֵּה רֶגַע
+חַכִּי רֶגַע","chake rega
+chaki rega","Wait a moment. (m on first line, f on second)","Pair gp-15, imperative, speaker/listener: addressee. Check both pointed forms for gender agreement and pointing, the transliteration, and that the English matches both. Correct a form with an ""m:"" or ""f:"" prefix.",,,,,,3,data/curriculum/gender-pairs.json#pairs[14]
+gender-pairs:gp-16,gender-pairs,"שֵׁב בְּבַקָּשָׁה
+שְׁבִי בְּבַקָּשָׁה","shev bevakasha
+shvi bevakasha","Sit, please. (m on first line, f on second)","Pair gp-16, imperative, speaker/listener: addressee. Check both pointed forms for gender agreement and pointing, the transliteration, and that the English matches both. Correct a form with an ""m:"" or ""f:"" prefix.",,,,,,3,data/curriculum/gender-pairs.json#pairs[15]
+gender-pairs:gpar-01,gender-pairs,"אֲנִי רוֹצֶה מַיִם
+אֲנִי רוֹצָה מַיִם","ani rotze mayim
+ani rotza mayim","I want water. (present-verb (speaker); m first, f second)","Paradigm gpar-01: one sentence frame with the changing part by gender. Check the assembled masculine and feminine sentences (pointing, agreement, transliteration). No corrected-text field is written back for paradigms: describe fixes in notes.",,,,,,3,data/curriculum/gender-pairs.json#paradigms[0]
+gender-pairs:gpar-02,gender-pairs,"אַתָּה רָעֵב
+אַתְּ רְעֵבָה","ata ra'ev
+at re'eva","Are you hungry? (pronoun + adjective (addressee); m first, f second)","Paradigm gpar-02: one sentence frame with the changing part by gender. Check the assembled masculine and feminine sentences (pointing, agreement, transliteration). No corrected-text field is written back for paradigms: describe fixes in notes.",,,,,,3,data/curriculum/gender-pairs.json#paradigms[1]
+gender-pairs:gpar-03,gender-pairs,"אֲנִי אוֹהֵב אוֹתְךָ
+אֲנִי אוֹהֶבֶת אוֹתָךְ","ani ohev otcha
+ani ohevet otach","I love you. (present-verb (speaker) + object suffix (addressee); m first, f second)","Paradigm gpar-03: one sentence frame with the changing part by gender. Check the assembled masculine and feminine sentences (pointing, agreement, transliteration). No corrected-text field is written back for paradigms: describe fixes in notes.",,,,,,3,data/curriculum/gender-pairs.json#paradigms[2]
+gender-pairs:gpar-04,gender-pairs,"אֲנִי יָכוֹל לַעֲזֹר לְךָ
+אֲנִי יְכוֹלָה לַעֲזֹר לָךְ","ani yachol la'azor lecha
+ani yechola la'azor lach","Can I help you? (adjective (speaker) + preposition suffix (addressee); m first, f second)","Paradigm gpar-04: one sentence frame with the changing part by gender. Check the assembled masculine and feminine sentences (pointing, agreement, transliteration). No corrected-text field is written back for paradigms: describe fixes in notes.",,,,,,3,data/curriculum/gender-pairs.json#paradigms[3]
+gender-pairs:gpar-05,gender-pairs,"אֲנִי מְחַכֶּה לְךָ
+אֲנִי מְחַכָּה לָךְ","ani mechake lecha
+ani mechaka lach","I am waiting for you. (present-verb (speaker) + preposition suffix (addressee); m first, f second)","Paradigm gpar-05: one sentence frame with the changing part by gender. Check the assembled masculine and feminine sentences (pointing, agreement, transliteration). No corrected-text field is written back for paradigms: describe fixes in notes.",,,,,,3,data/curriculum/gender-pairs.json#paradigms[4]
+gender-pairs:gpar-06,gender-pairs,"אֲנִי לֹא מֵבִין אוֹתְךָ
+אֲנִי לֹא מְבִינָה אוֹתָךְ","ani lo mevin otcha
+ani lo mevina otach","I don't understand you. (negated verb (speaker) + object suffix (addressee); m first, f second)","Paradigm gpar-06: one sentence frame with the changing part by gender. Check the assembled masculine and feminine sentences (pointing, agreement, transliteration). No corrected-text field is written back for paradigms: describe fixes in notes.",,,,,,3,data/curriculum/gender-pairs.json#paradigms[5]

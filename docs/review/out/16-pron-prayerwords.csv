@@ -1,0 +1,41 @@
+﻿id,area,hebrew,transliteration,english,what_to_check,status,corrected_text,reviewer_notes,reviewer,review_date,priority,source
+pron-prayerwords:barukh,pron-prayerwords,בָּרוּךְ,ba-RUKH,"blessed
+Israeli: ba-RUKH (stress last)
+American synagogue: bah-ROOKH (many say bah-ROOK) (stress last)
+Traditional Ashkenazi: BO-rukh (stress second-to-last)","Read the word ALOUD in each accent. Are the three English respellings (capitals = stressed syllable) what a speaker of that accent would say? Is the stress right? Differences claimed: stress, vowel, kamatz, chet-khaf. Ashkenazi line needs someone trained in traditional Ashkenazi reading.",,,,,,5,data/pronunciation/prayerwords.json#words.barukh
+pron-prayerwords:atah,pron-prayerwords,אַתָּה,a-TA,"you (m.)
+Israeli: a-TA (stress last)
+American synagogue: ah-TAH (stress last)
+Traditional Ashkenazi: AH-toh (stress second-to-last)","Read the word ALOUD in each accent. Are the three English respellings (capitals = stressed syllable) what a speaker of that accent would say? Is the stress right? Differences claimed: stress, kamatz. Ashkenazi line needs someone trained in traditional Ashkenazi reading.",,,,,,5,data/pronunciation/prayerwords.json#words.atah
+pron-prayerwords:adonai,pron-prayerwords,אֲדֹנָי,a-do-NAI,"Adonai (my Lord; read aloud in place of the Name)
+Israeli: a-do-NAI (stress last)
+American synagogue: ah-doh-NYE (stress last)
+Traditional Ashkenazi: ah-doh-NOY (stress last)","Read the word ALOUD in each accent. Are the three English respellings (capitals = stressed syllable) what a speaker of that accent would say? Is the stress right? Differences claimed: kamatz-yod, vowel. Ashkenazi line needs someone trained in traditional Ashkenazi reading.",,,,,,5,data/pronunciation/prayerwords.json#words.adonai
+pron-prayerwords:eloheinu,pron-prayerwords,אֱלֹהֵינוּ,e-lo-HAY-nu,"our God
+Israeli: e-lo-HAY-nu (stress second-to-last)
+American synagogue: eh-loh-HAY-noo (stress second-to-last)
+Traditional Ashkenazi: eh-loh-HAY-noo (stress second-to-last)",Read the word ALOUD in each accent. Are the three English respellings (capitals = stressed syllable) what a speaker of that accent would say? Is the stress right? Differences claimed: vowel. Ashkenazi line needs someone trained in traditional Ashkenazi reading.,,,,,,5,data/pronunciation/prayerwords.json#words.eloheinu
+pron-prayerwords:melekh,pron-prayerwords,מֶלֶךְ,ME-lekh,"king
+Israeli: ME-lekh (stress first)
+American synagogue: MEH-lekh (stress first)
+Traditional Ashkenazi: MEH-lekh (stress first)",Read the word ALOUD in each accent. Are the three English respellings (capitals = stressed syllable) what a speaker of that accent would say? Is the stress right? Differences claimed: chet-khaf. Ashkenazi line needs someone trained in traditional Ashkenazi reading.,,,,,,5,data/pronunciation/prayerwords.json#words.melekh
+pron-prayerwords:haolam,pron-prayerwords,הָעוֹלָם,ha-o-LAM,"the world
+Israeli: ha-o-LAM (stress last)
+American synagogue: hah-oh-LAHM (stress last)
+Traditional Ashkenazi: ho-OY-lom (some: ho-OH-lom) (stress second-to-last)","Read the word ALOUD in each accent. Are the three English respellings (capitals = stressed syllable) what a speaker of that accent would say? Is the stress right? Differences claimed: stress, kamatz, ayin, cholam. Ashkenazi line needs someone trained in traditional Ashkenazi reading.",,,,,,5,data/pronunciation/prayerwords.json#words.haolam
+pron-prayerwords:shalom,pron-prayerwords,שָׁלוֹם,sha-LOM,"peace
+Israeli: sha-LOM (stress last)
+American synagogue: shah-LOHM (stress last)
+Traditional Ashkenazi: SHO-lom (stress second-to-last)","Read the word ALOUD in each accent. Are the three English respellings (capitals = stressed syllable) what a speaker of that accent would say? Is the stress right? Differences claimed: stress, kamatz. Ashkenazi line needs someone trained in traditional Ashkenazi reading.",,,,,,5,data/pronunciation/prayerwords.json#words.shalom
+pron-prayerwords:amen,pron-prayerwords,אָמֵן,a-MEN,"amen
+Israeli: a-MEN (stress last)
+American synagogue: ah-MAYN (also AH-men in English) (stress last)
+Traditional Ashkenazi: o-MAYN (stress last)","Read the word ALOUD in each accent. Are the three English respellings (capitals = stressed syllable) what a speaker of that accent would say? Is the stress right? Differences claimed: kamatz, tzere. Ashkenazi line needs someone trained in traditional Ashkenazi reading.",,,,,,5,data/pronunciation/prayerwords.json#words.amen
+pron-prayerwords:shabbat,pron-prayerwords,שַׁבָּת,sha-BAT,"Sabbath
+Israeli: sha-BAT (stress last)
+American synagogue: shah-BAHT (stress last)
+Traditional Ashkenazi: SHAH-bos (stress first)",Read the word ALOUD in each accent. Are the three English respellings (capitals = stressed syllable) what a speaker of that accent would say? Is the stress right? Differences claimed: tav. Ashkenazi line needs someone trained in traditional Ashkenazi reading.,,,,,,5,data/pronunciation/prayerwords.json#words.shabbat
+pron-prayerwords:torah,pron-prayerwords,תּוֹרָה,to-RA,"Torah, teaching
+Israeli: to-RA (stress last)
+American synagogue: toh-RAH (English TOR-uh is common outside prayer) (stress last)
+Traditional Ashkenazi: TOY-roh / TOH-roh (stress first)","Read the word ALOUD in each accent. Are the three English respellings (capitals = stressed syllable) what a speaker of that accent would say? Is the stress right? Differences claimed: kamatz, stress, cholam. Ashkenazi line needs someone trained in traditional Ashkenazi reading.",,,,,,5,data/pronunciation/prayerwords.json#words.torah

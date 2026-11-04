@@ -2,6 +2,7 @@
 // ALEF Progress: pure computations over a store snapshot. No DOM, no fetch, no clock (callers pass `now`).
 // Everything here is derived from data other lanes already write; nothing is estimated that was not measured.
 import { BASE_LETTER_IDS, FINAL_LETTER_IDS, MARK_IDS } from '../corpus/normalize.js';
+import { projectStreak } from '../curriculum/streak.js';
 import { gradeLines, gradeWords, knownSet, entriesDecodable, wordsDecodable, unlockers, missingIn } from './decode.js';
 
 export const ALL_LETTERS = [...BASE_LETTER_IDS, ...FINAL_LETTER_IDS];
@@ -89,6 +90,8 @@ export function activityDays(s) {
  * @returns {{count:number, best:number, activeToday:boolean, restToday:boolean}}
  */
 export function streakInfo(s, now) {
+  // v2 records belong to the engaged-time engine: one shared projection, the same one Home uses (src/curriculum/streak.js)
+  if (s.streak && s.streak.v === 2) { const p = projectStreak(s.streak, now, s.rest); return { count: p.count, best: p.best, activeToday: p.activeToday, restToday: p.restToday }; }
   const act = activityDays(s), rest = new Set(s.rest);
   const today = dayKey(now);
   const activeToday = act.has(today), restToday = rest.has(today);

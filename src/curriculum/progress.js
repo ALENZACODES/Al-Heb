@@ -11,6 +11,7 @@
  * "<lessonId>-w<n>"). Round 4 adds "syllable:<id>", "line:<corpusId>" (fade-out recall, extra field fadeLevel) and "gender:<pairId>" cards; lessons still schedule no prayer lines.
  */
 import { newCard, due, interleave, review } from "./srs.js";
+import { projectStreak } from "./streak.js";
 
 export const letterCardId = (id) => `letter:${id}`;
 export const vowelCardId = (id) => `vowel:${id}`;
@@ -101,6 +102,7 @@ const dayNumber = (key) => { const [y, m, d] = key.split("-").map(Number); retur
 
 /** Record learning activity today. Same day: unchanged. Next day: +1. Gap: restart at 1. */
 export function recordActivity(streak, now) {
+  if (streak && streak.v === 2) return streak; // engaged-time engine owns the record (src/curriculum/streak.js)
   const today = dayKey(now);
   const s = { count: 0, best: 0, last: null, ...(streak || {}) };
   if (s.last === today) return s;
@@ -111,6 +113,7 @@ export function recordActivity(streak, now) {
 
 /** Streak to DISPLAY now: 0 when the last activity day is before yesterday. */
 export function currentStreak(streak, now) {
+  if (streak && streak.v === 2) { const p = projectStreak(streak, now); return { count: p.count, activeToday: p.activeToday, best: p.best }; }
   if (!streak || !streak.last) return { count: 0, activeToday: false, best: streak?.best || 0 };
   const gap = dayNumber(dayKey(now)) - dayNumber(streak.last);
   if (gap === 0) return { count: streak.count, activeToday: true, best: streak.best };

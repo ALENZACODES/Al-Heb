@@ -5,7 +5,7 @@ export const en = {
   'app.tagline': 'Read Hebrew aloud. Speak it in Israel.',
   'skip': 'Skip to main content',
   'nav.home': 'Home', 'nav.learn': 'Learn', 'nav.letters': 'Letters', 'nav.sounds': 'Sounds',
-  'nav.read': 'Read', 'nav.scan': 'Scan', 'nav.calendar': 'Calendar', 'nav.settings': 'Settings', 'nav.about': 'About', 'nav.workbook': 'Workbook', 'nav.atlas': 'Letter atlas', 'nav.soundgap': 'Sound gap', 'nav.vocab': 'Vocabulary', 'nav.loanwords': 'Words you can read', 'nav.checkpoint': 'Look-alike check', 'nav.dialogues': 'Israel dialogues',
+  'nav.read': 'Read', 'nav.scan': 'Scan', 'nav.calendar': 'Calendar', 'nav.settings': 'Settings', 'nav.about': 'About', 'nav.workbook': 'Workbook', 'nav.atlas': 'Letter atlas', 'nav.soundgap': 'Sound gap', 'nav.vocab': 'Vocabulary', 'nav.vowelboard': 'Vowel board', 'nav.niqquddial': 'Vowel-point dial', 'nav.dottile': 'Dot tiles', 'nav.syllablechips': 'Syllable chips', 'nav.loanwords': 'Words you can read', 'nav.checkpoint': 'Look-alike check', 'nav.dialogues': 'Israel dialogues',
   'home.more': 'More ways to learn', 'home.more.hint': 'Optional practice. These open inside the Learn section.',
   'home.opening.title': 'Opening',
   'home.opening.draft': 'Draft opening: pending clergy/educator review.',

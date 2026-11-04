@@ -6,6 +6,7 @@
 //   node tools/audio/coverage.mjs --who [--voice m|f] [--tradition israeli|sephardi|ashkenazi] [--group g] [--list] [--limit N]
 //        who: per talent (voice x tradition) and content group, what is still missing and who can supply it (human vs TTS-possible)
 // Reads data/audio/manifest.json only (run build_manifest.mjs first so it reflects files on disk). Makes no network calls.
+import { loadManifestFull } from './manifest_io.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -23,7 +24,7 @@ export const GROUP_ORDER = ['letter', 'letter-final', 'letter-variant', 'letter-
 export const VOICES = ['m', 'f'];
 export const TRADS = ['israeli', 'sephardi', 'ashkenazi'];
 
-export function loadManifest(root = ROOT) { return JSON.parse(fs.readFileSync(path.join(root, 'data/audio/manifest.json'), 'utf8')); }
+export function loadManifest(root = ROOT) { return loadManifestFull(root); }
 
 /** Who could supply this entry: 'human' always allowed; 'tts-possible' only Israeli, non-isolated content (still needs a listening test). */
 export function suppliers(e) {

@@ -5,6 +5,7 @@
 //   node tools/audio/cost_plan.mjs --check    exit 1 if that file is stale
 //   node tools/audio/cost_plan.mjs --json     machine-readable
 // Inputs: data/audio/manifest.json (character counts), data/audio/tts-prices.json (prices with per-row verified flags), data/vocab/words.json (optional tier).
+import { loadManifestFull } from './manifest_io.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -110,7 +111,7 @@ export function renderMarkdown(plan, prices) {
 }
 
 export function load(root = ROOT) {
-  const manifest = JSON.parse(fs.readFileSync(path.join(root, 'data/audio/manifest.json'), 'utf8'));
+  const manifest = loadManifestFull(root);
   const prices = JSON.parse(fs.readFileSync(path.join(root, 'data/audio/tts-prices.json'), 'utf8'));
   return { manifest, prices, vocab: vocabTexts(root) };
 }

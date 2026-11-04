@@ -1,4 +1,5 @@
 import { test } from 'node:test';
+import { loadManifestFull } from '../tools/audio/manifest_io.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
@@ -6,7 +7,7 @@ import path from 'node:path';
 import { buildEntries } from '../tools/audio/build_manifest.mjs';
 import { LETTERS, FINAL_LETTERS, VOWELS } from '../tools/audio/hebrew_data.mjs';
 
-const manifest = JSON.parse(fs.readFileSync(new URL('../data/audio/manifest.json', import.meta.url), 'utf8'));
+const manifest = loadManifestFull();
 
 test('committed manifest has contract fields, valid paths, hebrew code points', () => {
   assert.ok(Array.isArray(manifest) && manifest.length > 1000);
@@ -90,4 +91,18 @@ test('reads other lanes when present: corpus, curriculum, niqqud; skips bad ids;
   assert.deepEqual(f('audio/m/sephardi/word/shalom.mp3').equivalentTo, ['israeli']);
   assert.equal(f('audio/m/israeli/word/shalom.mp3').equivalentTo, undefined);
   assert.ok(warnings.some((w) => w.includes('noheb')));
+});
+
+test('size budget: core manifest and every word shard stay under 2 MiB; shards hold only reader word clips and are current', () => {
+  const MiB = 1048576;
+  const core = JSON.parse(fs.readFileSync(new URL('../data/audio/manifest.json', import.meta.url), 'utf8'));
+  assert.ok(fs.statSync(new URL('../data/audio/manifest.json', import.meta.url)).size < 2 * MiB, 'core manifest < 2 MiB');
+  assert.ok(core.every((e) => e.group !== 'prayer-word'), 'core has no reader word clips');
+  for (const t of ['israeli', 'sephardi', 'ashkenazi']) {
+    const f = new URL(`../data/audio/manifest-words-${t}.json`, import.meta.url);
+    assert.ok(fs.statSync(f).size < 2 * MiB, `${t} shard < 2 MiB`);
+    const sh = JSON.parse(fs.readFileSync(f, 'utf8'));
+    assert.ok(sh.length > 1000 && sh.every((e) => e.group === 'prayer-word' && e.tradition === t));
+  }
+  assert.equal(manifest.length, core.length + 3 * JSON.parse(fs.readFileSync(new URL('../data/audio/manifest-words-israeli.json', import.meta.url), 'utf8')).length);
 });

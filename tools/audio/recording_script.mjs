@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Generates docs/voices/recording-script-{israeli,ashkenazi}.md and docs/voices/recording-script.csv from data/audio/manifest.json.
 // Run build_manifest.mjs first (and again after other lanes land corpus/curriculum data).
+import { loadManifestFull } from './manifest_io.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -152,7 +153,7 @@ export function renderCsv(manifest) {
 }
 
 export function main(root = ROOT) {
-  const manifest = JSON.parse(fs.readFileSync(path.join(root, 'data/audio/manifest.json'), 'utf8'));
+  const manifest = loadManifestFull(root);
   const dir = path.join(root, 'docs/voices');
   fs.mkdirSync(dir, { recursive: true });
   for (const t of SCRIPT_TRADITIONS) fs.writeFileSync(path.join(dir, `recording-script-${t}.md`), renderMarkdown(manifest, t));

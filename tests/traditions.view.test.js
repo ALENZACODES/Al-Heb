@@ -5,7 +5,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { newRoot, all, buttons, byText, click, tick } from './pronunciation.dom-helper.js';
+import { newRoot, all, buttons, byText, click, tick, loaded, waitFor } from './pronunciation.dom-helper.js';
 import { mount, TABS } from '../src/traditions/traditions.view.js';
 import { compareWords } from '../src/traditions/model.js';
 
@@ -29,7 +29,7 @@ async function open(over, opts = {}) {
   const root = newRoot();
   const m = mk(over);
   const un = mount(root, { ...m.ctx, ...(opts.ctx ?? {}) });
-  await tick(30);
+  await loaded(root);
   return { root, un, ...m };
 }
 const tabBtn = (root, label) => buttons(root).find((b) => b.textContent === label);
@@ -122,7 +122,7 @@ test('compare: with a real clip for one setting, only that setting gets a Play b
   assert.equal(plays.length, 1);
   assert.match(plays[0].getAttribute('aria-label'), /Ashkenazi/);
   click(plays[0]);
-  await tick();
+  await waitFor(() => played.length === 1, { message: "played.length === 1" });
   assert.deepEqual(played, [['line', 'bless-priestly-1', { tradition: 'ashkenazi' }]]);
 });
 
@@ -210,7 +210,7 @@ test('hear tab with audio in two settings: listening drill, Play clip buttons ca
   const pa = byText(root, /^Play clip A$/), pb = byText(root, /^Play clip B$/);
   assert.ok(pa && pb);
   click(pa); click(pb);
-  await tick();
+  await waitFor(() => played.length === 2, { message: "played.length === 2" });
   assert.equal(played.length, 2);
   assert.deepEqual(new Set(played.map((p) => p[0].tradition)), new Set(['israeli', 'ashkenazi']));
   click(byText(root, /^Clip A$/));
@@ -236,7 +236,7 @@ test('query.tab opens that tab; query.text preselects a registry text', async ()
 test('load failure shows an alert instead of a blank screen', async () => {
   const root = newRoot();
   const un = mount(root, { settings: {}, t: (k) => k, traditionsData: { ...traditionsData, sounds: undefined } });
-  await tick(30);
+  await waitFor(() => all(root, (x) => x.getAttribute('role') === 'alert').length === 1, { message: "all(root, (x) => x.getAttribute('role') === 'alert').length === 1" });
   // sounds.json missing from the injection falls back to fetch of a file: URL, which Node cannot do, so it rejects
   const alerts = all(root, (x) => x.getAttribute('role') === 'alert');
   assert.equal(alerts.length, 1);
@@ -247,7 +247,7 @@ test('load failure shows an alert instead of a blank screen', async () => {
 test('works with no settings, no audio object and no t()', async () => {
   const root = newRoot();
   const un = mount(root, { traditionsData });
-  await tick(30);
+  await loaded(root);
   assert.match(text(root), /Modern Israeli/);
   assert.equal(all(root, (x) => /\bmine\b/.test(x.getAttribute('class') ?? '')).length, 1, 'defaults to israeli');
   un();

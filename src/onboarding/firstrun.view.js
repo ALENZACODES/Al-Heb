@@ -11,8 +11,10 @@ import { h, heSpan } from '../shell/ui.js';
 import { loadOnboardingData } from './loader.js';
 import { STORE_KEY, PLACEMENT_KEY, LETTERS_QUESTION, LETTER_ANSWERS, DENOMINATIONS, PRONUNCIATIONS, SETTINGS_KEY_PRONUNCIATION,
   normalize, answerLetters, setDenomination, setMinutes, setStep, suggestedPronunciation, answerById, placementLesson, buildPlan } from './model.js';
+import { DAILY_GOAL_KEY, DAILY_GOALS } from '../home/today.js';
+import { PROGRESS_KEY } from '../curriculum/dom.js';
 
-export const DRAFT_NOTE = 'Draft: this plan has not been tried by a learner. Minutes are targets, not measurements. Every link goes to an existing screen.';
+export const DRAFT_NOTE = 'Draft: this plan has not been tried by a learner. Minutes are targets, not measurements. Every link goes to an existing screen. This is a pacing guide: the Today card on Home moves to the next lesson as soon as you mark one complete, so it can run ahead of this plan. Follow the Today card.';
 
 export function mount(root, ctx) {
   const { settings, store } = ctx;
@@ -95,7 +97,7 @@ export function mount(root, ctx) {
     let mins = rec.minutesPerDay || D.plans.defaultMinutes;
     const fs = fieldset('How many minutes a day?', 'Your week is planned around this. Lessons longer than it are split over several days.',
       ...opts.map((m) => radio('minutes', String(m), `${m} minutes`, '', mins === m, (v) => { mins = Number(v); })));
-    const form = h('form', { id: 'ob-form-minutes', onsubmit: (e) => { e.preventDefault(); rec = setMinutes(rec, mins, D.plans); save(); say(`Planned for ${rec.minutesPerDay} minutes a day.`); go('plan'); } }, fs,
+    const form = h('form', { id: 'ob-form-minutes', onsubmit: (e) => { e.preventDefault(); rec = setMinutes(rec, mins, D.plans); save(); if (DAILY_GOALS.includes(rec.minutesPerDay)) { try { store.set(DAILY_GOAL_KEY, rec.minutesPerDay); } catch { /* best effort */ } } say(`Planned for ${rec.minutesPerDay} minutes a day. This is your study goal on Home; the streak counts a day at 5 minutes.`); go('plan'); } }, fs,
       h('div', { class: 'row' }, h('button', { type: 'submit', class: 'btn', id: 'ob-minutes-continue' }, 'Show my week')));
     body.replaceChildren(h('h2', {}, 'Your time'), form, skipNow());
   }
@@ -103,8 +105,9 @@ export function mount(root, ctx) {
   // ---- Stage 3: plan card ----
   function renderPlan() {
     const placement = store.get(PLACEMENT_KEY);
-    const plan = D ? buildPlan({ record: rec, placement, lessons: D.lessons, plans: D.plans, hasRoute: ctx.hasRoute }) : null;
-    const placed = D ? placementLesson(placement, D.lessons.filter((l) => l.track === 'read')) : null;
+    let completed = []; try { completed = Object.keys(store.get(PROGRESS_KEY)?.completed || {}); } catch { /* none */ }
+    const plan = D ? buildPlan({ record: rec, placement, lessons: D.lessons, plans: D.plans, hasRoute: ctx.hasRoute, completed }) : null;
+    const placed = plan && plan.source === 'placement' ? plan.startLesson : null;
     const primaryHref = placed ? '#/learn?lesson=' + encodeURIComponent(placed) : startHref();
     const primaryLabel = placed ? `Start lesson ${placed}` : `Start: ${startTitle()}`;
     const dayNode = (d) => h('li', {}, h('strong', {}, d.label), h('span', { class: 'muted' }, ` (${d.minutes} min)`),

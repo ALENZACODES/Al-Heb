@@ -50,7 +50,7 @@
    "translit": "mekhonit",
    "en": "car",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-39-w1",
    "source": "data/vocab/words.json"
   },
   {
@@ -59,7 +59,7 @@
    "translit": "delet",
    "en": "door (portal of entry)",
    "kind": "word",
-   "audioId": "anchor-dalet",
+   "audioId": "i-44-w3",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "rechov",
    "en": "street",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-15-w10",
    "source": "data/vocab/words.json"
   },
   {

@@ -16,14 +16,14 @@ export const WARN_RATIO = 0.7, CRITICAL_RATIO = 0.9;
 /** First match wins. `route` is where a learner finds it; `needs` lists optional downloads that feature also wants. */
 export const GROUPS = Object.freeze([
   { id: "calendar", label: "Calendar and reminders", test: /^(src\/curriculum\/(calendar|reminders)[^/]*|data\/calendar\/.*)$/, route: "#/calendar" },
-  { id: "lessons", label: "Lessons, review and Israel dialogues", test: /^(src\/curriculum\/|data\/curriculum\/|data\/speak\/|src\/israel\/|data\/israel\/|src\/firstday\/|data\/firstday\/|src\/placement\/|data\/placement\/|src\/speak\/)/, route: "#/learn" },
+  { id: "lessons", label: "Lessons, review and Israel dialogues", test: /^(src\/curriculum\/|data\/curriculum\/|data\/speak\/|src\/israel\/|data\/israel\/|src\/firstday\/|data\/firstday\/|src\/placement\/|data\/placement\/|src\/speak\/|src\/listen\/|data\/listen\/|src\/typing\/|data\/typing\/|src\/trope\/|data\/trope-trainer\/|src\/home\/)/, route: "#/learn" },
   { id: "letters", label: "Letters and tracing", test: /^(src\/letters\/|data\/letters\/|src\/wordtrace\/|data\/wordtrace\/)/, route: "#/letters" },
   { id: "pronunciation", label: "Sounds and pronunciation", test: /^(src\/pronunciation\/|data\/pronunciation\/)/, route: "#/sounds" },
-  { id: "reading", label: "Reading, Torah and prayer", test: /^(src\/corpus\/|data\/corpus\/|src\/torahread\/|data\/torahread\/|src\/service\/|src\/morning\/|data\/morning-verses\.json|data\/service\/|src\/timedread\/|data\/timedread\/)/, route: "#/read" },
+  { id: "reading", label: "Reading, Torah and prayer", test: /^(src\/corpus\/|data\/corpus\/|src\/torahread\/|data\/torahread\/|src\/torahreader\/|src\/festivals\/|data\/festivals\/|src\/grammar\/|data\/grammar\/|src\/service\/|src\/morning\/|data\/morning-verses\.json|data\/service\/|src\/timedread\/|data\/timedread\/)/, route: "#/read" },
   { id: "vocab", label: "Vocabulary and Word Sprint", test: /^(src\/vocab\/|data\/vocab\/|src\/sprint\/|data\/sprint\/)/, route: "#/vocab", needs: ["vocab-packs"] },
   { id: "photo", label: "Scan a photo", test: /^(src\/photo\/|data\/photo\/)/, route: "#/scan", needs: ["ocr"] },
   { id: "progress", label: "Progress, class track and sharing", test: /^(src\/progress\/|data\/progress\/|src\/classtrack\/|data\/classtrack\/|src\/teacher\/|src\/traditions\/|data\/traditions\/)/, route: "#/progress" },
-  { id: "shell", label: "App shell, settings and install", test: /^(index\.html|offline\.html|manifest\.webmanifest|src\/(app|store)\.js|src\/shell\/|src\/audio\/|data\/audio\/|src\/onboarding\/|data\/onboarding\/|assets\/)/, route: "#/" },
+  { id: "shell", label: "App shell, settings and install", test: /^(index\.html|offline\.html|manifest\.webmanifest|src\/(app|store)\.js|src\/shell\/|src\/img\/|data\/img\/|data\/images\/|data\/legal\/|src\/audio\/|data\/audio\/|src\/onboarding\/|data\/onboarding\/|assets\/)/, route: "#/" },
 ]);
 export const groupOf = (path) => GROUPS.find((g) => g.test.test(path))?.id || "other";
 

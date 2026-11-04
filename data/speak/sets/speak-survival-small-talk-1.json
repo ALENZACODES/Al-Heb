@@ -32,7 +32,7 @@
    "translit": "tirga",
    "en": "chill / calm down",
    "kind": "word",
-   "audioId": "small-talk-15-m",
+   "audioId": "i-18-w16",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "mah shimkha?",
    "en": "what's your name?",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-25-w1",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "mah hamatzav?",
    "en": "how's it going? (lit. what's the situation)",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-18-w14",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "me'eifoh atah?",
    "en": "where are you from?",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-25-w3",
    "source": "data/vocab/words.json"
   },
   {
@@ -104,7 +104,7 @@
    "translit": "ani mikanadah",
    "en": "I'm from Canada",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-25-w4",
    "source": "data/vocab/words.json"
   },
   {

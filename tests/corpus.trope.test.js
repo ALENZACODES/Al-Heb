@@ -88,9 +88,11 @@ test('data/corpus/trope/*.json are the current output of the builder', () => {
 test('trope passages: counts, classes and positions are consistent', () => {
   const pb = read('data/corpus/trope/priestly-blessing.json');
   const sh = read('data/corpus/trope/shema.json');
-  assert.equal(pb.verses.length, 3);
-  assert.deepEqual(pb.verses.map((v) => v.words.length), [3, 5, 7]);
-  assert.equal(pb.words, 15);
+  assert.equal(pb.ref, 'Numbers 6:22-27');
+  assert.equal(pb.verses.length, 6);
+  assert.deepEqual(pb.verses.map((v) => v.words.length), [5, 13, 3, 5, 7, 8]);
+  assert.equal(pb.words, 41);
+  assert.deepEqual(pb.registryVerses, [24, 25, 26]);
   assert.equal(sh.verses.length, 6);
   assert.equal(sh.words, 48);
   assert.equal(sh.markCounts.etnachta, 4);
@@ -124,9 +126,12 @@ test('reader: files are the current output and agree with the registry text', ()
     const file = read(`data/corpus/reader/${p.id}.json`);
     assert.deepEqual(file, built, `run: node tools/corpus/trope.mjs (${p.id})`);
     // verse text equals the registry lines, both at word and token level
+    // only the verses a registry record covers (Num 6:22-23 and 6:27 are snapshot-only framing verses)
+    const covered = file.verses.filter((v) => p.registryVerses.includes(v.verse));
+    assert.equal(covered.length, p.registryVerses.length);
     const regHe = p.registryIds.map((id) => registry.find((e) => e.id === id).he).join('\n');
-    assert.equal(file.verses.map((v) => v.he).join('\n'), regHe);
-    assert.equal(file.verses.map((v) => v.tokens.map((t) => t.he).join(' ') + '׃').join('\n'), regHe);
+    assert.equal(covered.map((v) => v.he).join('\n'), regHe);
+    assert.equal(covered.map((v) => v.tokens.map((t) => t.he).join(' ') + '׃').join('\n'), regHe);
     for (const v of file.verses) assert.deepEqual(v.tokens.map((t) => t.he), wordsOf(v.he).map((w) => w.replace(/׃$/, '')));
   }
 });
@@ -136,6 +141,7 @@ test('reader: aliyah context, reading units, word index and timing placeholders'
   const sh = read('data/corpus/reader/shema.json');
   assert.equal(pb.aliyah.parashah.en, 'Nasso');
   assert.equal(pb.aliyah.passageAliyah, 4);
+  assert.deepEqual(pb.verses.map((v) => v.unit), ['intro', 'intro', 'line-1', 'line-2', 'line-3', 'closing']);
   assert.equal(pb.aliyah.aliyot[3], 'Numbers 5:11-6:27');
   assert.equal(pb.aliyah.startsAliyah, false);
   assert.equal(sh.aliyah.parashah.en, 'Vaetchanan');
@@ -168,7 +174,8 @@ test('reader: aliyah context, reading units, word index and timing placeholders'
     assert.deepEqual(p.verses.flatMap((v) => v.words.map((w) => w.g)), all.map((_, k) => k));
   }
   // glosses exist exactly where the registry has wordGlosses
-  assert.ok(pb.verses.every((v) => v.tokens.every((t) => typeof t.gloss === 'string')));
+  assert.ok(pb.verses.filter((v) => [24, 25, 26].includes(v.verse)).every((v) => v.tokens.every((t) => typeof t.gloss === 'string')));
+  assert.ok(pb.verses.filter((v) => ![24, 25, 26].includes(v.verse)).every((v) => v.tokens.every((t) => t.gloss === null)));
   assert.ok(sh.verses[0].tokens.every((t) => typeof t.gloss === 'string'));
   assert.ok(sh.verses.slice(1).every((v) => v.tokens.every((t) => t.gloss === null)));
   assert.equal(Object.keys(ALIYOT).length, PASSAGES.length);

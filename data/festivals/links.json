@@ -1,0 +1,18 @@
+{
+ "schema": "alef-festival-links/1",
+ "note": "Where ALEF already holds a text or lesson for a festival. `texts` are ids in data/corpus/registry.json (route /read/<id>); `lessons` are ids that may exist in data/curriculum/lessons.json (route /learn?lesson=<id>). The card shows a link only when the route exists in this build (hasRoute) AND the id exists in the loaded data. Lesson ids I-29..I-32 and I-50 are in data/curriculum/lessons.json (registered when this was checked), so their lesson links appear.",
+ "festivals": {
+  "rosh-hashanah": { "texts": ["shehecheyanu", "kiddush-wine-1"], "lessons": ["I-50"] },
+  "yom-kippur": { "texts": [], "lessons": ["I-50"] },
+  "sukkot": { "texts": ["shehecheyanu", "kiddush-wine-1"], "lessons": ["I-30", "I-50"] },
+  "shemini-atzeret": { "texts": ["shehecheyanu", "vezot-hatorah"], "lessons": ["I-50"] },
+  "hanukkah": { "texts": ["hanukkah-candle", "hanukkah-nissim", "shehecheyanu", "hanerot-halalu", "maoz-tzur-1"], "lessons": ["I-32", "I-50"] },
+  "tu-bishvat": { "texts": [], "lessons": [] },
+  "purim": { "texts": [], "lessons": ["I-31", "I-50"] },
+  "pesach": { "texts": ["shehecheyanu", "kiddush-wine-1"], "lessons": ["I-29", "I-50"] },
+  "shavuot": { "texts": ["shehecheyanu", "torah-bless-1", "torah-bless-2"], "lessons": ["I-50"] },
+  "tisha-bav": { "texts": [], "lessons": [] }
+ },
+ "shabbat": { "texts": ["candle-shabbat", "kiddush-shabbat-eve", "hamotzi", "lecha-dodi-1"], "lessons": [] },
+ "parsha": { "routes": ["torahread"] }
+}

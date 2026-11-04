@@ -73,7 +73,7 @@ function pickExample(w, units, pool) {
   let best = null;
   for (const { i, kind } of units) {
     const u = pool[i];
-    if (u.tokens.length < 2) continue;
+    if (u.tokens.length < 2 || u.he.split(/\s+/).length < 2) continue; // a hyphenated compound is one written word
     const match = kind === 'exact' && pointedMatch(w, u) ? 'pointed' : kind;
     const score = u.tokens.length + (u.en ? 0 : 6) + (match === 'pointed' ? 0 : match === 'exact' ? 8 : 14) + (u.channel === 'service' ? 2 : 0);
     if (!best || score < best.score || (score === best.score && u.he < best.u.he)) best = { score, u, match };

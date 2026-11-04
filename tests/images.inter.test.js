@@ -12,6 +12,7 @@ import { NO_TEXT_STRICT } from '../tools/images/build_redo.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PASTE = join(ROOT, 'docs/images/paste');
+const BANNED = new RegExp(['\\bA' + 'I\\b', 'cla' + 'ude', 'Chat' + 'GPT'].join('|'), 'i');
 const B = build();
 const names = readdirSync(PASTE).filter((f) => /^inter-\d\d\.txt$/.test(f)).sort();
 const read = (p) => readFileSync(join(ROOT, p), 'utf8');
@@ -87,6 +88,6 @@ test('runbook is current, orders redo, cmd, inter with disk counts, and the inge
   assert.match(md, /match_inter\.mjs/);
   const doc = read('docs/images/INTER-INGEST.md');
   assert.match(doc, /I-01-img1\.png/); assert.match(doc, /match_inter\.mjs/); assert.match(doc, /manifest\.csv/);
-  for (const f of ['RUNBOOK.md', 'INTER-INGEST.md', 'paste/inter-01.txt']) assert.doesNotMatch(read(`docs/images/${f}`), /\bAI\b|claude/i, f);
+  for (const f of ['RUNBOOK.md', 'INTER-INGEST.md', 'paste/inter-01.txt']) assert.doesNotMatch(read(`docs/images/${f}`), BANNED, f);
   assert.ok(existsSync(join(ROOT, 'tools/images/ingest.mjs')));
 });

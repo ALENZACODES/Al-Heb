@@ -25,7 +25,7 @@ export function mount(root, ctx) {
     say(r.source === 'none' ? 'Sound is not available on this device yet.' : r.source === 'tts-fallback' ? 'Played with the device voice, not a recording.' : 'Playing.');
   } }, 'Hear it');
   const save = () => storeSet(ctx, PROGRESS_KEY, progress);
-  const next = () => { progress = advance(progress, data); check = null; picked = null; save(); render(); focus(); };
+  const next = () => { progress = advance(progress, data); check = null; picked = null; say(''); save(); render(); focus(); };
   const focus = () => { try { h1.focus(); } catch { /* ignore */ } };
 
   function render() {
@@ -44,7 +44,7 @@ export function mount(root, ctx) {
       check = check || buildCheck(data, 'shalom', rng);
       nodes.push(...check.options.map((o) => el('button', { class: 'btn', type: 'button', lang: 'he', dir: 'rtl', onclick: () => { picked = gradeCheck(check, o.id); progress = { ...progress, checkCorrect: picked.correct }; save(); say(picked.correct ? 'Yes, that one is shalom.' : 'Not quite. Shalom is the long word with the dot-vav. Try again, nothing is lost.'); } }, o.he)));
     }
-    if (s.kind === 'done') nodes.push(el('p', {}, data.honestyNote));
+    if (s.kind === 'done') nodes.push(el('p', {}, data.honestyNote), el('p', {}, el('a', { class: 'btn', id: 'fd-next-lesson', href: '#/learn?lesson=r01' }, 'Start your first lesson')), el('p', {}, el('a', { href: '#/' }, 'Back to Home')));
     if (s.kind !== 'done') nodes.push(el('button', { class: 'btn', type: 'button', onclick: next }, 'Next'));
     body.replaceChildren(...nodes);
   }

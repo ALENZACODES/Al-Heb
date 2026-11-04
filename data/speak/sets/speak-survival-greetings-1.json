@@ -41,7 +41,7 @@
    "translit": "livri'ut",
    "en": "bless you (after a sneeze) / to your health",
    "kind": "word",
-   "audioId": "greetings-26",
+   "audioId": "i-50-w9",
    "source": "data/vocab/words.json"
   },
   {
@@ -50,7 +50,7 @@
    "translit": "chag samecha",
    "en": "happy holiday",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-29-w5",
    "source": "data/vocab/words.json"
   },
   {
@@ -59,7 +59,7 @@
    "translit": "yom na'im",
    "en": "have a nice day",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-50-w11",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "mazal tov",
    "en": "congratulations / good luck",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-50-w5",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "behatzlachah",
    "en": "good luck / all the best",
    "kind": "word",
-   "audioId": "greetings-25",
+   "audioId": "i-50-w7",
    "source": "data/vocab/words.json"
   }
  ]

@@ -13,8 +13,11 @@ It replaces the three separate Home cards "Today's lesson", "Reviews due" and "S
   - first run (no completed lessons and `firstday.progress.done` not set): `#/firstday`; if `onboarding.v1.start` is `/placement`, `#/placement`, or the lesson recommended by `placement.v1` once it exists;
   - otherwise the next lesson; if none, review when cards are due; else `#/learn`.
 
+- Daily goal: buttons 5/10/15/20 min (`aria-pressed`, default 5 = current `GOAL_SECONDS`). A click writes the number to store key `onboarding.v1.dailyGoal` (`DAILY_GOAL_KEY` in `today.js`), the only write Home makes. `src/morning/engage.js` has no settings key; `createEngagement(io, {goal})` takes seconds. **Main must wire it**: in `src/morning/boot.js` read `onboarding.v1.dailyGoal` and pass `goal: minutes * 60` (streak.js `GOAL_SECONDS` and `completeDay` also assume 300 s, so that needs a matching change before the goal truly changes streak days).
+- More practice: up to 3 links among Say it (`speak`), Typing (`typing`), Festivals (`festivals`), Compare traditions (`compare`), each only if `hasRoute(name)`. Ordered untried first, using read-only `speak.v1`, `typing.v1`, `compare.v1` (non-empty record = tried). Festivals has no store key, so it always counts as untried. The `/festivals` route is not yet in `router.js`; the link stays hidden until it is.
+
 ## Rules
-- Read-only: reads `curriculum.progress`, `srs.cards`, `streak`, `firstday.progress`, `onboarding.v1`, `placement.v1`; writes nothing (a test compares the store before and after).
+- Read-only: reads `curriculum.progress`, `srs.cards`, `streak`, `firstday.progress`, `onboarding.v1`, `placement.v1`; writes nothing on mount (a test compares the store before and after); also reads `onboarding.v1.dailyGoal`, `speak.v1`, `typing.v1`, `compare.v1`.
 - Every link is guarded by `ctx.hasRoute(name)`. Without a `hasRoute` function only `learn` counts as present. A missing route drops the link; with no usable route there is no Continue button.
 - Before the lesson modules load, the card shows the existing "lesson plan is not available yet" line; if they fail to load it stays that way.
 

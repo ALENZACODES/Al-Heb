@@ -59,7 +59,7 @@
    "translit": "chatzi",
    "en": "half",
    "kind": "word",
-   "audioId": "numbers-18",
+   "audioId": "i-12-w7",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "kayitz",
    "en": "summer",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-24-w10",
    "source": "data/vocab/words.json"
   }
  ]

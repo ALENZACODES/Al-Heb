@@ -54,7 +54,7 @@ export function mountLadder(root, ctx, q = {}) {
           el("progress", { max: String(ladder.levels.length), value: String(cur.level), "aria-label": "Ladder level", style: "display:block;inline-size:100%;block-size:10px" })),
         el("p", { role: "status", class: "alef-levelstatus", style: "margin:.4rem 0" }, `Level ${cur.level} of ${ladder.levels.length}. ${s.streak} of ${STREAK_UP} in a row.`),
         el("p", {}, tr(ctx, "ladder.prompt", "Listen, then choose the matching card.")),
-        el("button", { type: "button", class: "btn alef-play", "aria-label": "Play the sound again", onclick: play }, el("span", { "aria-hidden": "true" }, "▶"), " Listen again (R)"),
+        el("button", { type: "button", class: "btn alef-play", onclick: play }, el("span", { "aria-hidden": "true" }, "▶"), " Listen again (R)"),
         el("div", { class: "row alef-cardpair", dir: "rtl" }, ...cards), note, fb,
         el("p", { class: "row" }, el("button", { type: "button", class: "btn secondary", onclick: finish }, "Finish and save")),
         el("p", { class: "muted alef-keys" }, "Keyboard: 1 or 2 picks a card, R plays the sound again."));

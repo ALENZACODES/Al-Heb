@@ -12,7 +12,7 @@
    "track": "israel",
    "pack": "survival-cafe-1",
    "size": 12,
-   "withClip": 7
+   "withClip": 11
   },
   {
    "id": "speak-survival-directions-1",
@@ -22,7 +22,7 @@
    "track": "israel",
    "pack": "survival-directions-1",
    "size": 12,
-   "withClip": 3
+   "withClip": 7
   },
   {
    "id": "speak-survival-fillers-1",
@@ -42,7 +42,7 @@
    "track": "israel",
    "pack": "survival-greetings-1",
    "size": 12,
-   "withClip": 6
+   "withClip": 9
   },
   {
    "id": "speak-survival-help-1",
@@ -82,7 +82,7 @@
    "track": "israel",
    "pack": "survival-politeness-1",
    "size": 12,
-   "withClip": 5
+   "withClip": 7
   },
   {
    "id": "speak-survival-shop-1",
@@ -92,7 +92,7 @@
    "track": "israel",
    "pack": "survival-shop-1",
    "size": 12,
-   "withClip": 1
+   "withClip": 7
   },
   {
    "id": "speak-survival-small-talk-1",
@@ -102,7 +102,7 @@
    "track": "israel",
    "pack": "survival-small-talk-1",
    "size": 12,
-   "withClip": 1
+   "withClip": 5
   },
   {
    "id": "speak-survival-taxi-1",
@@ -112,7 +112,7 @@
    "track": "israel",
    "pack": "survival-taxi-1",
    "size": 11,
-   "withClip": 3
+   "withClip": 6
   },
   {
    "id": "speak-doing-verbs-1",
@@ -162,7 +162,7 @@
    "track": "both",
    "pack": "body-health-1",
    "size": 12,
-   "withClip": 6
+   "withClip": 7
   },
   {
    "id": "speak-describing-words-1",
@@ -202,7 +202,7 @@
    "track": "both",
    "pack": "nature-animals-1",
    "size": 12,
-   "withClip": 3
+   "withClip": 4
   },
   {
    "id": "speak-people-family-1",
@@ -222,7 +222,7 @@
    "track": "both",
    "pack": "religion-prayer-1",
    "size": 12,
-   "withClip": 4
+   "withClip": 5
   },
   {
    "id": "speak-science-ideas-1",
@@ -232,7 +232,7 @@
    "track": "both",
    "pack": "science-ideas-1",
    "size": 12,
-   "withClip": 1
+   "withClip": 3
   },
   {
    "id": "speak-society-work-law-1",
@@ -242,7 +242,7 @@
    "track": "both",
    "pack": "society-work-law-1",
    "size": 12,
-   "withClip": 2
+   "withClip": 3
   },
   {
    "id": "speak-talking-asking-1",
@@ -262,7 +262,7 @@
    "track": "both",
    "pack": "clothes-shopping-1",
    "size": 12,
-   "withClip": 0
+   "withClip": 1
   },
   {
    "id": "speak-food-drink-1",
@@ -272,7 +272,7 @@
    "track": "both",
    "pack": "food-drink-1",
    "size": 12,
-   "withClip": 4
+   "withClip": 5
   },
   {
    "id": "speak-home-things-1",
@@ -292,7 +292,7 @@
    "track": "both",
    "pack": "places-travel-1",
    "size": 12,
-   "withClip": 6
+   "withClip": 8
   },
   {
    "id": "speak-school-learning-1",
@@ -302,7 +302,7 @@
    "track": "israel",
    "pack": "school-learning-1",
    "size": 12,
-   "withClip": 0
+   "withClip": 2
   },
   {
    "id": "speak-tech-media-1",
@@ -312,7 +312,7 @@
    "track": "israel",
    "pack": "tech-media-1",
    "size": 12,
-   "withClip": 1
+   "withClip": 2
   },
   {
    "id": "speak-arts-sports-1",
@@ -322,7 +322,7 @@
    "track": "israel",
    "pack": "arts-sports-1",
    "size": 12,
-   "withClip": 1
+   "withClip": 4
   },
   {
    "id": "speak-doing-verbs-2",
@@ -342,7 +342,7 @@
    "track": "both",
    "pack": "small-words-2",
    "size": 12,
-   "withClip": 4
+   "withClip": 5
   },
   {
    "id": "speak-body-health-2",
@@ -352,7 +352,7 @@
    "track": "israel",
    "pack": "body-health-2",
    "size": 12,
-   "withClip": 0
+   "withClip": 1
   },
   {
    "id": "speak-feelings-mind-2",
@@ -372,7 +372,7 @@
    "track": "both",
    "pack": "general-things-2",
    "size": 12,
-   "withClip": 2
+   "withClip": 4
   },
   {
    "id": "speak-moving-doing-2",
@@ -402,7 +402,7 @@
    "track": "both",
    "pack": "people-family-2",
    "size": 12,
-   "withClip": 1
+   "withClip": 2
   },
   {
    "id": "speak-places-travel-2",
@@ -412,7 +412,7 @@
    "track": "israel",
    "pack": "places-travel-2",
    "size": 12,
-   "withClip": 5
+   "withClip": 6
   },
   {
    "id": "speak-religion-prayer-2",
@@ -422,7 +422,7 @@
    "track": "both",
    "pack": "religion-prayer-2",
    "size": 12,
-   "withClip": 1
+   "withClip": 3
   },
   {
    "id": "speak-science-ideas-2",
@@ -432,7 +432,7 @@
    "track": "both",
    "pack": "science-ideas-2",
    "size": 12,
-   "withClip": 0
+   "withClip": 2
   },
   {
    "id": "speak-society-work-law-2",
@@ -452,7 +452,7 @@
    "track": "both",
    "pack": "time-numbers-2",
    "size": 12,
-   "withClip": 1
+   "withClip": 2
   },
   {
    "id": "speak-describing-words-2",
@@ -472,7 +472,7 @@
    "track": "israel",
    "pack": "food-drink-2",
    "size": 12,
-   "withClip": 1
+   "withClip": 3
   },
   {
    "id": "speak-home-things-2",
@@ -482,7 +482,7 @@
    "track": "israel",
    "pack": "home-things-2",
    "size": 12,
-   "withClip": 0
+   "withClip": 2
   },
   {
    "id": "speak-tech-media-2",
@@ -492,7 +492,7 @@
    "track": "israel",
    "pack": "tech-media-2",
    "size": 12,
-   "withClip": 1
+   "withClip": 3
   },
   {
    "id": "speak-describing-words-3",
@@ -522,7 +522,7 @@
    "track": "israel",
    "pack": "society-work-law-3",
    "size": 12,
-   "withClip": 0
+   "withClip": 2
   },
   {
    "id": "speak-body-health-3",
@@ -592,7 +592,7 @@
    "track": "israel",
    "pack": "people-family-3",
    "size": 12,
-   "withClip": 1
+   "withClip": 2
   },
   {
    "id": "speak-general-things-4",
@@ -602,7 +602,7 @@
    "track": "both",
    "pack": "general-things-4",
    "size": 12,
-   "withClip": 5
+   "withClip": 6
   }
  ]
 }

@@ -9,6 +9,7 @@ export const DEFAULTS = Object.freeze({
   voice: 'f',
   congregation: 'sephardi',
   israelTrack: false,
+  showUnapprovedImages: false,
   script: 'print',
   theme: 'auto',
   lat: null,
@@ -29,7 +30,7 @@ export const ENUMS = Object.freeze({
 export function validate(key, v) {
   if (!(key in DEFAULTS)) return { ok: false };
   if (key in ENUMS) return ENUMS[/** @type {keyof typeof ENUMS} */ (key)].includes(v) ? { ok: true, value: v } : { ok: false };
-  if (key === 'israelTrack' || key === 'onboarded' || key === 'browserVoiceAnyway') return typeof v === 'boolean' ? { ok: true, value: v } : { ok: false };
+  if (key === 'israelTrack' || key === 'onboarded' || key === 'browserVoiceAnyway' || key === 'showUnapprovedImages') return typeof v === 'boolean' ? { ok: true, value: v } : { ok: false };
   if (key === 'lat') return v === null || (typeof v === 'number' && v >= -90 && v <= 90) ? { ok: true, value: v } : { ok: false };
   if (key === 'lon') return v === null || (typeof v === 'number' && v >= -180 && v <= 180) ? { ok: true, value: v } : { ok: false };
   return { ok: false };

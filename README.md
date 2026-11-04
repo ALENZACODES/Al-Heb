@@ -6,35 +6,24 @@ modules, no build step, runs from any static file server.
 
 **License: not chosen yet.** No license file exists; until one is added, all rights are reserved by default. Fonts,
 images, audio and liturgical/Scripture texts each have their own provenance and licence notes (see lane docs).
+A dated, source-by-source audit (what was verified, what was not, and the share-alike effect of the Wiktionary-derived vocabulary) is in [docs/legal/CONTENT-LICENCE-AUDIT.md](docs/legal/CONTENT-LICENCE-AUDIT.md); open decisions are in [docs/legal/DECISIONS-FOR-JOHN.md](docs/legal/DECISIONS-FOR-JOHN.md). Not legal advice; no lawyer has reviewed any of it.
 
 ## Run
 
+Needs Node 22 (v22.23.4 was used for the checks in `docs/STATUS.md`). No install step.
+
 ```sh
-node tools/serve.mjs 8080        # open http://localhost:8080/
-node --test                      # all tests (Node 22 note: `node --test tests/` fails on directories; use plain `node --test`)
+node tools/serve.mjs 8080        # static server (zero dependencies); open http://localhost:8080/
+node --test "tests/*.test.js"    # all tests (Node 22: `node --test tests/` fails on a directory, so give the glob)
 node tools/smoke.mjs             # Chromium smoke test, screenshots to docs/screens/ (needs Playwright installed globally)
 node tools/build-precache.mjs    # regenerate precache-manifest.js after adding files under src/ data/ assets/
 ```
-No `npm install` is needed or possible here (registries blocked); `package.json` has scripts only.
+The app is plain static files: any static server over HTTPS works, and `node tools/serve.mjs [port]` is the one in the repo (default 8080). `package.json` has scripts only (`npm test`, `npm run serve`); there is nothing to `npm install`.
 
 ## Status
-See [docs/STATUS.md](docs/STATUS.md) for the latest honest per-route result. Summary of what is the app shell (lane 8):
+Early draft; nothing is deployed, no learner has used it, and no native speaker, teacher or clergy member has reviewed any Hebrew. Measured counts (routes, lessons, vocabulary, audio, images, tests), the commands that produced them and the known gaps are in [docs/STATUS.md](docs/STATUS.md). What only the owner can do next is in [docs/NEXT-STEPS-JOHN.md](docs/NEXT-STEPS-JOHN.md). How ALEF compares with Duolingo Hebrew, feature by feature: [docs/strategy/DUOLINGO-100.md](docs/strategy/DUOLINGO-100.md).
 
-| Area | State |
-|---|---|
-| Router, 11 routes + deep links (`#/letters/<id>`, `#/read/<textId>`) | built, unit-tested, smoke-tested |
-| Settings (voice, congregation, Israel track, script, theme, location) + store + backup/restore | built, unit-tested; UI smoke-rendered only |
-| Home screen (draft-opening placeholder, lesson/review hooks, quick links) | built; lesson/review hooks depend on lane 1 export shapes |
-| Service worker offline | built; offline reload of the shell verified once in Chromium; not tested on iOS/Android |
-| Install prompt | coded for Chromium; untested |
-| Hebrew UI labels | machine-drafted, **need native review** |
-| Opening prayer | **placeholder only**, pending clergy/educator review |
-| Fonts | local system fonts only; OFL self-hosting not done (downloads blocked) |
-| Capacitor wrap, store listings | documentation only ([docs/CAPACITOR.md](docs/CAPACITOR.md)) |
-| Hosting | not deployed ([docs/DEPLOY.md](docs/DEPLOY.md)) |
-
-Other lanes (curriculum, letters, pronunciation, audio, corpus, photo, book) are loaded lazily; a missing module shows a
-"Not available yet" card.
+Other lanes (curriculum, letters, pronunciation, audio, corpus, photo, book) are loaded lazily; a missing module shows a "Not available yet" card. Hosting: see [docs/DEPLOY.md](docs/DEPLOY.md) and [docs/deploy/CLOUDFLARE-PAGES.md](docs/deploy/CLOUDFLARE-PAGES.md).
 
 ## Structure
 ```

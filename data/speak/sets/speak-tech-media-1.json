@@ -59,7 +59,7 @@
    "translit": "chashmal",
    "en": "electricity",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-44-w4",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "patucha",
    "en": "Open",
    "kind": "word",
-   "audioId": "shop-16",
+   "audioId": "i-21-w13",
    "source": "data/vocab/words.json"
   },
   {

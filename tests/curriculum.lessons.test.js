@@ -16,7 +16,12 @@ const MK = { "ַ": "patach", "ָ": "kamatz", "ֵ": "tzere", "ֶ": "segol", "ִ":
 
 test("lessons.json is well formed and has enough lessons", () => {
   const read = lessons.filter((l) => l.track === "read"), il = lessons.filter((l) => l.track === "israel");
-  assert.ok(read.length >= 40 && read.length <= 60, `read ${read.length}`);
+  const beginnerRead = read.filter((l) => /^r\d+$/.test(l.id)), inter = lessons.filter((l) => /^I-\d{2}$/.test(l.id));
+  assert.ok(beginnerRead.length >= 40 && beginnerRead.length <= 60, `beginner read ${beginnerRead.length}`);
+  assert.equal(inter.length, 50, "intermediate lessons I-01..I-50 are registered");
+  assert.equal(inter.filter((l) => l.track === "read").length, 20);
+  assert.equal(inter.filter((l) => l.track === "israel").length, 30);
+  assert.equal(read.length, beginnerRead.length + 20);
   assert.ok(il.length >= 15);
   const ids = new Set();
   for (const l of lessons) {

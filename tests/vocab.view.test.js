@@ -23,6 +23,8 @@ class N {
   click() { return this.fire("click"); }
 }
 globalThis.document = { createElement: (t) => new N(t), createTextNode: (d) => ({ nodeType: 3, data: String(d), parent: undefined }) };
+import { waitFor } from "./helpers/waitfor.js";
+const idle = (root) => waitFor(() => !/Loading/.test(root.text) && (items(root).length > 0 || root.find((n) => n.attrs.role === "alert" || n.attrs.id === "vc-q").length > 0 || /No words in your reviews yet|Session done|Showing 0 of|No words match/.test(root.text)), { message: "vocab view never finished loading" });
 const tick = (ms = 30) => new Promise((r) => setTimeout(r, ms));
 const memStore = (init = {}) => { const m = { ...init }; return { get: (k) => m[k], set: (k, v) => { m[k] = v; }, m }; };
 const byId = (root, id) => root.find((n) => n.attrs.id === id)[0];
@@ -91,7 +93,7 @@ test("translitFor uses the learner's tradition and says nothing for unpointed wo
 
 test("browse: draft notice, attribution footer, RTL pointed Hebrew, transliteration, honest audio label", async () => {
   const { root, ctx } = mk();
-  const un = mount(root, ctx); await tick();
+  const un = mount(root, ctx); await idle(root);
   assert.ok(root.text.includes(DRAFT_NOTICE));
   assert.ok(root.find((n) => n.tag === "footer")[0].text.includes(ATTRIBUTION));
   assert.match(ATTRIBUTION, /CC BY-SA 4\.0/); assert.match(ATTRIBUTION, /Hermit Dave/); assert.match(ATTRIBUTION, /Wiktionary/);
@@ -111,7 +113,7 @@ test("browse: draft notice, attribution footer, RTL pointed Hebrew, transliterat
 
 test("browse: show more, search, topic and tier switch", async () => {
   const { root, ctx } = mk();
-  mount(root, ctx); await tick();
+  mount(root, ctx); await idle(root);
   await byId(root, "vc-more").click();
   assert.equal(items(root).length, 80);
   const search = byId(root, "vc-search");
@@ -127,14 +129,14 @@ test("browse: show more, search, topic and tier switch", async () => {
   topic.value = "Verbs"; await topic.fire("change");
   assert.ok(items(root).length > 0);
   assert.ok(items(root).every((li) => / Verbs · /.test(li.text) || /· Verbs ·/.test(li.text)));
-  const tier = byId(root, "vc-tier"); tier.value = "1000"; await tier.fire("change"); await tick();
+  const tier = byId(root, "vc-tier"); tier.value = "1000"; await tier.fire("change"); await idle(root);
   assert.match(root.text, /Showing \d+ of \d+/);
   assert.ok(items(root).every((li) => Number(/rank (\d+)/.exec(li.text)[1]) > 500));
 });
 
 test("browse: English search is on the gloss; pointed Hebrew search finds the unpointed lemma's entry", async () => {
   const { root, ctx } = mk();
-  mount(root, ctx); await tick();
+  mount(root, ctx); await idle(root);
   const search = byId(root, "vc-search");
   search.value = tier500[0].pointed; await search.fire("input");
   assert.ok(items(root).some((li) => li.attrs["data-id"] === tier500[0].id));
@@ -144,7 +146,7 @@ test("browse: English search is on the gloss; pointed Hebrew search finds the un
 
 test("add one word, and a batch, to reviews (stored under srs.vocab)", async () => {
   const { root, ctx, store } = mk();
-  mount(root, ctx); await tick();
+  mount(root, ctx); await idle(root);
   const first = items(root)[0];
   await btn(first, /Add to reviews/).click();
   assert.ok(store.m["srs.vocab"][cardId(tier500[0])]);
@@ -160,7 +162,7 @@ test("review: show answer, rate with button and with keyboard, SRS card updated,
   const cards = {};
   for (const e of tier500.slice(0, 3)) Object.assign(cards, addCards(cards, [e], 0).cards);
   const { root, ctx, store } = mk({ store: { "srs.vocab": cards }, query: { review: "1" } });
-  mount(root, ctx); await tick();
+  mount(root, ctx); await idle(root);
   assert.ok(byId(root, "vc-q"));
   assert.ok(!root.text.includes(tier500[0].gloss));
   assert.equal(root.find((n) => n.attrs["data-rating"]).length, 0);
@@ -168,32 +170,32 @@ test("review: show answer, rate with button and with keyboard, SRS card updated,
   assert.equal(root.find((n) => n.attrs["data-rating"]).length, 4);
   assert.ok(root.text.includes(tier500[0].gloss));
   assert.equal(globalThis.__focus.attrs.id, "vc-a");
-  await root.find((n) => n.attrs["data-rating"] === "3")[0].click(); await tick();
+  await root.find((n) => n.attrs["data-rating"] === "3")[0].click(); await waitFor(() => store.m["srs.vocab"][cardId(tier500[0])]?.reps === 1, { message: 'store.m["srs.vocab"][cardId(tier500[0])]?.reps === 1' });
   const c0 = store.m["srs.vocab"][cardId(tier500[0])];
   assert.equal(c0.reps, 1); assert.equal(c0.state, "review"); assert.ok(c0.due > Date.now());
   assert.equal(c0.tier, 500);
   // keyboard: 1 = Again => relearning, repeated later this session
   await byId(root, "vc-show").click();
   const section = root.find((n) => n.tag === "section")[0];
-  await section.fire("keydown", { key: "1" }); await tick();
+  await section.fire("keydown", { key: "1" }); await waitFor(() => store.m["srs.vocab"][cardId(tier500[1])]?.state === "relearning", { message: 'store.m["srs.vocab"][cardId(tier500[1])]?.state === "relearning"' });
   assert.equal(store.m["srs.vocab"][cardId(tier500[1])].state, "relearning");
-  await byId(root, "vc-show").click(); await section.fire("keydown", { key: "4" }); await tick();
+  await byId(root, "vc-show").click(); await section.fire("keydown", { key: "4" }); await waitFor(() => /Word 4 of 4/.test(root.text), { message: '/Word 4 of 4/.test(root.text)' });
   // 3rd card then the requeued Again card (still due? its due is +10 min, but it was queued)
   assert.match(root.text, /Word 4 of 4/);
-  await byId(root, "vc-show").click(); await section.fire("keydown", { key: "3" }); await tick();
+  await byId(root, "vc-show").click(); await section.fire("keydown", { key: "3" }); await waitFor(() => /Session done/.test(root.text), { message: '/Session done/.test(root.text)' });
   assert.match(root.text, /Session done/); assert.match(root.text, /4 words reviewed: 1 again, 0 hard, 2 good, 1 easy/);
   assert.equal(store.m["srs.vocab"][cardId(tier500[1])].reps, 2);
 });
 
 test("review: keys are ignored before the answer is shown; empty state points to Browse", async () => {
   const { root, ctx, store } = mk({ query: { review: "1" } });
-  mount(root, ctx); await tick();
+  mount(root, ctx); await waitFor(() => /No words in your reviews yet/.test(root.text), { message: '/No words in your reviews yet/.test(root.text)' });
   assert.match(root.text, /No words in your reviews yet/);
-  await btn(root, /Browse words/).click(); await tick();
+  await btn(root, /Browse words/).click(); await waitFor(() => items(root).length > 0, { message: 'items(root).length > 0' });
   assert.ok(items(root).length > 0);
   const cards = addCards({}, tier500.slice(0, 1), 0).cards;
   const b = mk({ store: { "srs.vocab": cards }, query: { review: "1" } });
-  mount(b.root, b.ctx); await tick();
+  mount(b.root, b.ctx); await waitFor(() => b.root.find((n) => n.tag === "section").length > 0, { message: 'b.root.find((n) => n.tag === "section").length > 0' });
   await b.root.find((n) => n.tag === "section")[0].fire("keydown", { key: "3" }); await tick();
   assert.equal(b.store.m["srs.vocab"][cardId(tier500[0])].reps, 0);
 });
@@ -202,7 +204,7 @@ test("audio: recording used when ctx.audio has the id; otherwise browser Hebrew 
   const played = [];
   const audio = { has: (k, id) => id === tier500[0].id, play: async (k, id) => { played.push([k, id]); return { source: "file", entryStatus: "recorded" }; }, stop() {} };
   const a = mk({ audio });
-  mount(a.root, a.ctx); await tick();
+  mount(a.root, a.ctx); await idle(a.root);
   const lis = items(a.root);
   assert.doesNotMatch(btn(lis[0], /Listen/).text, /computer voice/);
   await btn(lis[0], /Listen/).click();
@@ -213,14 +215,14 @@ test("audio: recording used when ctx.audio has the id; otherwise browser Hebrew 
   globalThis.SpeechSynthesisUtterance = class { constructor(t) { this.text = t; } };
   globalThis.speechSynthesis = { getVoices: () => [{ lang: "he-IL" }], cancel() {}, speak: (u) => utter.push(u) };
   const b = mk({ cong: "ashkenazi" });
-  mount(b.root, b.ctx); await tick();
+  mount(b.root, b.ctx); await idle(b.root);
   await btn(items(b.root)[1], /Listen/).click();
   assert.equal(utter.length, 1); assert.equal(utter[0].lang, "he-IL"); assert.equal(utter[0].text, tier500[1].pointed.replace(/־/g, " "));
   assert.match(b.root.text, /Computer voice: .*not a recording.*not Ashkenazi/);
 
   globalThis.speechSynthesis = { getVoices: () => [{ lang: "en-US" }], cancel() {}, speak: () => utter.push(1) };
   const c = mk();
-  mount(c.root, c.ctx); await tick();
+  mount(c.root, c.ctx); await idle(c.root);
   await btn(items(c.root)[0], /Listen/).click();
   assert.equal(utter.length, 1); assert.match(c.root.text, /No sound: your device has no Hebrew voice/);
   delete globalThis.speechSynthesis; delete globalThis.SpeechSynthesisUtterance;
@@ -230,9 +232,9 @@ test("load failure shows an alert with retry; unmount stops late renders", async
   let fail = true;
   const vocabLoader = { loadTier: async (t) => { if (fail) throw new Error("offline"); return tier500; } };
   const { root, ctx } = mk(); ctx.vocabLoader = vocabLoader;
-  mount(root, ctx); await tick();
+  mount(root, ctx); await idle(root);
   assert.ok(root.find((n) => n.attrs.role === "alert")[0].text.includes("offline"));
-  fail = false; await btn(root, /Try again/).click(); await tick();
+  fail = false; await btn(root, /Try again/).click(); await waitFor(() => items(root).length > 0, { message: 'items(root).length > 0' });
   assert.ok(items(root).length > 0);
   const m = mk(); m.ctx.vocabLoader = { loadTier: async () => { await tick(20); return tier500; } };
   const un = mount(m.root, m.ctx); un(); await tick(60);
@@ -278,7 +280,7 @@ test("bulk add skips forms and rare senses", () => {
 
 test("screen: function-word card lists forms; menus offer tag filter, form toggle and function group; function words not labelled with a topic", async () => {
   const { root, ctx } = mk();
-  mount(root, ctx); await tick();
+  mount(root, ctx); await idle(root);
   const first = items(root)[0];
   assert.match(first.text, /Forms \(from Wiktionary/); assert.match(first.text, /1sg/);
   assert.match(first.text, /function word \(particle\)/); assert.doesNotMatch(first.text, /Misc Nouns/);
@@ -299,8 +301,8 @@ test("screen: word forms hidden by default, toggle shows them with a form-of not
   const form = all5000.find((e) => e.isForm);
   const { root, ctx } = mk();
   ctx.vocabLoader = fullLoader;
-  mount(root, ctx); await tick();
-  const tier = byId(root, "vc-tier"); tier.value = "all"; await tier.fire("change"); await tick(60);
+  mount(root, ctx); await idle(root);
+  const tier = byId(root, "vc-tier"); tier.value = "all"; await tier.fire("change"); await idle(root);
   assert.ok(!items(root).some((li) => li.attrs["data-id"] === form.id));
   const search = byId(root, "vc-search"); search.value = stripPoints(form.lemma); await search.fire("input");
   assert.ok(!items(root).some((li) => li.attrs["data-id"] === form.id));
@@ -329,8 +331,8 @@ test("cards show the pointed form, never the lemma spelling, when they differ", 
   const diff = all5000.find((e) => e.pointed && stripPoints(e.pointed) !== e.lemma && !e.isForm && e.tier === 500) || all5000.find((e) => e.pointed && stripPoints(e.pointed) !== e.lemma && !e.isForm);
   assert.ok(diff, "data has a lemma/pointed spelling difference");
   const { root, ctx } = mk(); ctx.vocabLoader = fullLoader;
-  mount(root, ctx); await tick();
-  const tier = byId(root, "vc-tier"); tier.value = "all"; await tier.fire("change"); await tick(60);
+  mount(root, ctx); await idle(root);
+  const tier = byId(root, "vc-tier"); tier.value = "all"; await tier.fire("change"); await idle(root);
   const search = byId(root, "vc-search"); search.value = stripPoints(diff.pointed); await search.fire("input");
   const li = items(root).find((x) => x.attrs["data-id"] === diff.id);
   const he = li.find((n) => n.attrs.lang === "he")[0];

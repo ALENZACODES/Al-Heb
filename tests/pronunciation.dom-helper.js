@@ -1,5 +1,7 @@
 // Minimal fake DOM for view tests (no DOM library is available). Shared by the round-4 pronunciation tests.
 import fs from 'node:fs';
+import { waitFor } from './helpers/waitfor.js';
+export { waitFor };
 class Node_ { constructor() { this.children = []; this.parent = null; } }
 class Text_ extends Node_ { constructor(d) { super(); this.nodeType = 3; this.data = d; } get textContent() { return this.data; } }
 export class El extends Node_ {
@@ -22,6 +24,8 @@ export const all = (n, pred) => { const r = []; walk(n, (x) => { if (x.nodeType 
 export const buttons = (n) => all(n, (x) => x.tagName === 'BUTTON');
 export const byText = (n, re) => buttons(n).find((b) => re.test(b.textContent));
 export const click = (el) => el.dispatch('click');
+/** Wait until the view has finished its async load: content present and no 'Loading...' placeholder (optionally plus an extra condition). */
+export const loaded = (root, extra = () => true) => waitFor(() => root.children.length > 0 && !/Loading/.test(root.textContent) && extra(), { message: 'view never finished loading' });
 export const tick = (ms = 20) => new Promise((r) => setTimeout(r, ms));
 export const load = (f) => JSON.parse(fs.readFileSync(new URL(`../data/pronunciation/${f}.json`, import.meta.url), 'utf8'));
 export const letters = JSON.parse(fs.readFileSync(new URL('../data/letters/letters.json', import.meta.url), 'utf8'));

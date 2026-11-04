@@ -6,7 +6,7 @@ limitation listed there. No audio exists.
 ## 1. Syllables and stress: `data/pronunciation/derived/_syllables-001..007.json`, `index.json`
 Record `{i, w:[{h, s, st, sr, p}]}` per variants record id: `h` pointed word, `s` pointed syllables, `st` stressed
 syllable index (0-based) for [israeli, sephardi, ashkenazi], `sr` indexes `index.json stressRules`, `p` IPA syllables
-per tradition (stress mark removed). 6,632 records, 8,758 words; shards < 190 KB, <= 2,000 records. Stress: milra by
+per tradition (stress mark removed). 6,630 records, 8,758 words; shards < 190 KB, <= 2,000 records. Stress: milra by
 default for Israeli/Sephardi with mil'el only from existing lists (stress.json, prayerwords.json, syllabify.js, the
 stress marks in words.json ipa); Ashkenazi penultimate. 240 segolate-shaped words are read milra and flagged in
 `variants/_review.csv`. `index.json` is small and non-underscore; the bulk shards are `_`-prefixed so they are not

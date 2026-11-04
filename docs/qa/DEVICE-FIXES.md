@@ -1,6 +1,6 @@
 # Device-profile fix list (P074)
 
-Source: `docs/qa/DEVICES.md`, full run of `node tools/qa/devices.mjs` (5 profiles x light/dark x 10 routes = 100 visits, headless Chromium emulation, not a real device; WebKit not installed, so nothing here is a Safari result). Status of each item: **open** until a rerun with `--diff docs/qa/shots-devices/results.json` shows it gone. No `src/` or `assets/` file has been edited for this list.
+Source: `docs/qa/DEVICES.md`, full run of `node tools/qa/devices.mjs` (5 profiles x light/dark x 10 routes = 100 visits, headless Chromium emulation, not a real device; WebKit not installed, so nothing here is a Safari result). Status of each item is in the table below. No `src/` or `assets/` file has been edited for this list.
 
 What was clean on every profile and route: no sideways page scroll, no box poking past the viewport, no page or console errors, every view reached `data-ready`, the fixed bottom nav never covers the end of `main` (body padding 60px vs bar 57px), no RTL mixed-script wrap or niqqud-clip flag (heuristic; see DEVICES.md), nothing at all on iPad Mini except the calendar text sizes. Everything below is on the calendar page or in the shell nav, and almost all of it only bites at 320 px (iPhone SE, Galaxy S9+).
 
@@ -66,3 +66,25 @@ Root font is 16 px (`rem`), body text is 17 px (`1.0625rem`), so `.75rem` = 12 p
 ## Rerun
 
 After a fix: `node tools/qa/devices.mjs --diff docs/qa/shots-devices/results.json` regenerates DEVICES.md with a "Diff vs previous run" section listing fixed and new issue keys; then update the status lines above.
+
+## Status after Stage 4 and Stage 5 (before / after, same emulation caveats)
+
+Before (Stage 2 full run, 100 visits): tap < 44 px 140 element-visits (35 distinct on one page), text < 12 px 570, words broken mid-word 52, page-level overflow 0, errors 0. Issue keys in the diff: 762.
+After P1-P5 applied (rerun with `--diff`, same 100 visits): tap 0, text < 12 px 0, mid-word breaks 0, overflow 0, errors 0. Diff: 762 fixed, 0 new.
+
+| Item | Status | What changed |
+|---|---|---|
+| P1 day buttons 35 px wide | fixed | `src/curriculum/calendar.style.js`: under 360 px the grid section scrolls sideways inside its card and the table has `min-inline-size: 322px` (7 x 46 px). Trade-off: at 320 px the month grid scrolls horizontally; wider phones are unchanged. |
+| P2 day labels 10.9 px / split words | fixed | `.alef-cal-day .l` is `.75rem` (12 px), `overflow-wrap: normal`; under 420 px it is one line with an ellipsis (full name stays in the button's `aria-label`). |
+| P3 draft note 10.7 px | fixed | `.alef-cal-draft small { font-size: 100% }` (12.8 px). |
+| P4 nav Hebrew sublabels 10.2 px | fixed | `assets/css/app.css`, inside the phone media query: `.site-nav .nav-he { font-size: 1em }` (12 px). The five labels still fit on one line at 320 px (no mid-word flags). |
+| P5 `overflow-wrap: anywhere` | fixed | `.alef-calendar *` now `overflow-wrap: break-word`. |
+
+### Stage 5: newly wired routes
+
+Added to the walker's default route list: `/speak`, `/offline`, `/reminders`, `/install`, `/vocab/themes`, `/welcome`, `/firstday/ladder`, `/progress` (the full run is now 18 routes x 10 profile/scheme combos = 180 visits, about 5 minutes; `--quick` is unchanged). Result: all ready, 0 errors, 0 page-level sideways scroll, 0 tap targets < 44 px, 0 text < 12 px, 0 mid-word breaks, 0 RTL flags. One finding, not fixed here:
+
+- **P6 `/progress` is 367 px wide inside a 288 px column at 320 px (open).** Boxes stick out 47 px to the right and are cut off by `main { overflow-x: clip }`, so the page does not scroll but the right edge of every card is clipped (iPhone SE and Galaxy S9+ only, light and dark; 24 flagged boxes). Selector: `main#main > div.pg`. File: `src/progress/progress.view.js`, the injected CSS line `.pg { display: grid; gap: var(--gap, 1rem); }` (line 13). Cause: the grid has no column template, so its single implicit column is `auto` and grows to the min-content of its widest child instead of the 288 px available. Fix: `.pg { display: grid; grid-template-columns: minmax(0, 1fr); gap: ...}`. I did not edit it: the file was modified a few minutes before this run by another lane's work, so it is main's call. After the fix the walker should report 0 overflow on `/progress`.
+- Not a fix: the other seven routes were clean at every width, so no change was made to their style code.
+
+Test note: `tests/calendar.cards.test.js` ("every Hebrew phrase is a verbatim slice of its registry entry", card m08, hashivenu) fails in the working tree; it is a prayer-card data/registry check unrelated to the CSS above, and I did not touch it.

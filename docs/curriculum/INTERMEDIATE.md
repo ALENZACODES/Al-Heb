@@ -1,4 +1,6 @@
-# Intermediate lessons I-01..I-50 (draft, not registered)
+# Intermediate lessons I-01..I-50 (draft, registered in lessons.json)
+
+Status: I-01..I-50 are registered in `data/curriculum/lessons.json` after `il24` (done with `tools/curriculum/intermediate/register.py`, which re-appends them from `data/curriculum/lessons-intermediate/`; rerun it after rebuilding). The exercise logic is in `src/curriculum/intermediate-adapter.js` (pure helpers, tests in `tests/curriculum.intermediate-adapter.test.js`). The full order is in `docs/curriculum/PATH.md`. The player is `src/curriculum/intermediate.view.js`; route lines and the remaining steps for main are in `docs/curriculum/INTERMEDIATE-ROUTES.md`. The registration steps below are kept as a record; steps 1 to 3 are done.
 
 Status 2026-11-04. Fifty draft lessons (I-01..I-25 stage 1, I-26..I-50 stage 2) in `data/curriculum/lessons-intermediate/I-NN.json`, indexed by
 `data/curriculum/intermediate-index.json`, tested by `tests/curriculum.intermediate.test.js`
@@ -84,7 +86,7 @@ minimum of twelve; `produce` distractors there are simply other words of the sam
 Synagogue lessons reference registry ids only (`prayerLines`); the Kaddish lesson is Aramaic apart from its last line,
 and the Aleinu text is the Edot HaMizrach version held in the registry.
 
-## How main should register them (not done here)
+## Registration steps (1 to 3 done)
 
 1. Append the 50 objects (or just their `lessons.json` fields) to `data/curriculum/lessons.json` after `il24`, in
    index order, so `topoOrder()` in `src/curriculum/lessons.js` still resolves and `available()` unlocks I-01 after
@@ -101,7 +103,7 @@ and the Aleinu text is the Edot HaMizrach version held in the registry.
 4. Wire `exercises` to screens: `fade`/`spot` map to `src/curriculum/fade.js` and the Spot It idea; `gender` to
    `gender.view.js`; `recall`/`produce`/`match` to review cards; `respond`, `dialogue`, `order`, `register` need a
    small new exercise screen (none exists). Audio ids do not exist for any item (lane 4).
-5. Run `node tools/build-precache.mjs` if any `src/` view file is added (not run by this lane).
+5. `src/curriculum/intermediate-adapter.js` was added, so the precache list needs regenerating (`node tools/build-precache.mjs`); not run by this lane.
 6. Native review before anything ships: glosses, composed phrases, register labels, and the Hallel and Mi Shebeirach
    gaps above.
 

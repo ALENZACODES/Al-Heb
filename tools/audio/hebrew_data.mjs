@@ -23,7 +23,7 @@ export const FINAL_LETTERS = [
 // [id, glyph (unmarked form), pointed name said with the variant's sound, israeli consonant IPA]
 export const VARIANT_LETTERS = [
   ['vet', 'ב', '\u05D1\u05B5\u05D9\u05EA', 'v'], ['khaf', 'כ', '\u05DB\u05B7\u05E3', 'χ'],
-  ['fe', 'פ', '\u05E4\u05B5\u05D0', 'f'], ['sin', '\u05E9\u05C2', '\u05E9\u05C2\u05B4\u05D9\u05DF', 's'],
+  ['fe', 'פ', '\u05E4\u05B5\u05D0', 'f'], ['sin', '\u05E9\u05C2', '\u05E9\u05B4\u05C2\u05D9\u05DF', 's'],
 ];
 // Letters whose syllable-grid form needs a mark to give the "hard" sound (bet/kaf/pe + dagesh; shin + shin dot).
 export const GRID_MARKS = { bet: 'ּ', kaf: 'ּ', pe: 'ּ', shin: 'ׁ' };

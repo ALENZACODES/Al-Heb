@@ -4,6 +4,7 @@
 //   { v:1, letters:'none'|'some'|'vowels', start:'/firstday'|'/placement', askedAt:string,
 //     denomination:null|'reform'|'conservative'|'reconstructionist'|'orthodox', minutesPerDay:number|null, step:'letters'|'congregation'|'minutes'|'plan' }
 // The letters question is asked once; `letters` is only rewritten through "Change my starting point".
+import { openStart } from '../placement/model.js';
 export const STORE_KEY = 'onboarding.v1';
 export const PLACEMENT_KEY = 'placement.v1'; // written by src/placement (read here, never written)
 
@@ -85,7 +86,10 @@ export function buildPlan(o) {
   const minutes = rec.minutesPerDay || plans.defaultMinutes;
   const read = o.lessons.filter((l) => l.track === 'read');
   const order = new Map(read.map((l, i) => [l.id, i]));
-  const placed = placementLesson(o.placement, read);
+  const wanted = placementLesson(o.placement, read);
+  // Lessons unlock in order and placement completes none, so the plan starts at the recommended lesson only if it is open now.
+  const open = wanted ? openStart(o.lessons, o.completed || [], wanted) : null;
+  const placed = open ? open.id : null;
   const startLesson = placed || plans.firstLesson;
   const startIdx = order.get(startLesson) ?? 0;
 
@@ -120,6 +124,7 @@ export function buildPlan(o) {
   }
   const note = needsPlacement
     ? `Lessons from ${plans.firstLesson} are a placeholder until you take the placement check; this plan is rebuilt from its result.`
+    : open && open.locked ? `The placement check fit you to ${open.wanted}, which is locked until earlier lessons are done, so lessons start at ${placed}.`
     : placed ? `Lessons start at ${placed}, the placement check's suggestion (draft cutoffs, untested).` : `Lessons start at ${plans.firstLesson}.`;
   return { v: 1, draft: true, minutesPerDay: minutes, startLesson, source: placed ? 'placement' : 'default', letters: rec.letters, days, totalMinutes: days.reduce((a, x) => a + x.minutes, 0), note };
 }

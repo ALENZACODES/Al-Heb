@@ -7,7 +7,7 @@ import { vowelFamilies, movingSigns, boardSigns, variantByTradition, pleneCheck,
 import { chipWords, chipsFor, hyphenated } from '../src/pronunciation/syllables.js';
 import { transliterate } from '../src/pronunciation/transliterate.js';
 import { stripTaamim, allInHebrewBlock } from '../src/pronunciation/hebrew.js';
-import { load, letters, all, buttons, byText, click, tick, newRoot, makeCtx } from './pronunciation.dom-helper.js';
+import { load, letters, all, buttons, byText, click, tick, loaded, waitFor, newRoot, makeCtx } from './pronunciation.dom-helper.js';
 import { mount as mountBoard } from '../src/pronunciation/vowelboard.view.js';
 import { mount as mountDial } from '../src/pronunciation/niqquddial.view.js';
 import { mount as mountDot } from '../src/pronunciation/dottile.view.js';
@@ -132,7 +132,7 @@ const VIEWS = { vowelboard: mountBoard, niqquddial: mountDial, dottile: mountDot
 for (const [name, mount] of Object.entries(VIEWS)) {
   test(`${name}: draft notice, RTL Hebrew, no audio button, no "null" text, unmount clears`, async () => {
     const root = newRoot(); const { ctx } = makeCtx();
-    const un = mount(root, ctx); await tick();
+    const un = mount(root, ctx); await loaded(root);
     const txt = root.textContent;
     assert.match(txt, /Draft, unreviewed/); assert.match(txt, /no audio yet/i); assert.doesNotMatch(txt, /null|undefined/);
     const heSpans = all(root, (e) => e.getAttribute('lang') === 'he');
@@ -144,12 +144,12 @@ for (const [name, mount] of Object.entries(VIEWS)) {
   });
   test(`${name}: audio is played only when a file exists`, async () => {
     const root = newRoot(); const { ctx, played } = makeCtx({ audio: { has: () => true, play: (k, id) => played.push([k, id]) } });
-    const un = mount(root, ctx); await tick();
+    const un = mount(root, ctx); await loaded(root);
     assert.doesNotMatch(root.textContent, /no audio yet/i);
     un();
   });
   test(`${name}: follows the congregation setting`, async () => {
-    const root = newRoot(); const { ctx } = makeCtx(); const un = mount(root, ctx); await tick();
+    const root = newRoot(); const { ctx } = makeCtx(); const un = mount(root, ctx); await loaded(root);
     const ash = all(root, (e) => e.tagName === 'INPUT' && e.getAttribute('value') === 'ashkenazi')[0];
     ash.checked = true; ash.dispatch('change');
     assert.equal(ctx.settings.congregation, 'ashkenazi');
@@ -158,7 +158,7 @@ for (const [name, mount] of Object.entries(VIEWS)) {
 }
 
 test('vowelboard: sort mode accepts members only and logs misses; ashkenazi moves kamatz', async () => {
-  const root = newRoot(); const { ctx, mem } = makeCtx(); const un = mountBoard(root, ctx); await tick();
+  const root = newRoot(); const { ctx, mem } = makeCtx(); const un = mountBoard(root, ctx); await loaded(root);
   click(byText(root, /Sort the signs/));
   const signBtns = () => buttons(root).filter((b) => /^Sign /.test(b.getAttribute('aria-label') ?? ''));
   const first = signBtns()[0]; const name = first.getAttribute('aria-label').slice(5);
@@ -173,13 +173,13 @@ test('vowelboard: sort mode accepts members only and logs misses; ashkenazi move
   un();
 });
 test('vowelboard: study mode shows five families with count badges and the final-he caution', async () => {
-  const root = newRoot(); const { ctx } = makeCtx(); const un = mountBoard(root, ctx); await tick();
+  const root = newRoot(); const { ctx } = makeCtx(); const un = mountBoard(root, ctx); await loaded(root);
   assert.equal(all(root, (e) => e.tagName === 'SECTION' && /^Family /.test(e.getAttribute('aria-label') ?? '')).length, 5);
   assert.match(root.textContent, /3 signs/); assert.match(root.textContent, /not distinguished by length/); assert.match(root.textContent, /not 'just not read'|not true that a final he/);
   un();
 });
 test('niqquddial: levels reveal marks; plene word explained; quiz marks miss', async () => {
-  const root = newRoot(); const { ctx, mem } = makeCtx(); const un = mountDial(root, ctx); await tick();
+  const root = newRoot(); const { ctx, mem } = makeCtx(); const un = mountDial(root, ctx); await loaded(root);
   const idxBoker = dial.words.findIndex((w) => w.id === 'boker');
   for (let i = 0; i < idxBoker; i++) click(byText(root, /Next word/));
   assert.match(root.textContent, /בוקר/); assert.match(root.textContent, /extra vowel letter \(ו\)/);
@@ -193,13 +193,13 @@ test('niqquddial: levels reveal marks; plene word explained; quiz marks miss', a
   assert.ok(Array.isArray(mem['pron.misses']));
 });
 test('niqquddial: Ashkenazi tradition badge for kamatz', async () => {
-  const root = newRoot(); const { ctx } = makeCtx(); const un = mountDial(root, ctx); await tick();
+  const root = newRoot(); const { ctx } = makeCtx(); const un = mountDial(root, ctx); await loaded(root);
   const full = all(root, (e) => e.getAttribute('value') === 'full')[0]; full.checked = true; full.dispatch('change');
   assert.match(root.textContent, /differs by tradition/); assert.match(root.textContent, /kamatz/);
   un();
 });
 test('dottile: switch toggles state with aria-checked; test runs six items', async () => {
-  const root = newRoot(); const { ctx } = makeCtx(); const un = mountDot(root, ctx); await tick();
+  const root = newRoot(); const { ctx } = makeCtx(); const un = mountDot(root, ctx); await loaded(root);
   const sw = () => all(root, (e) => e.getAttribute('role') === 'switch')[0];
   assert.equal(sw().getAttribute('aria-checked'), 'true');
   click(sw()); assert.equal(sw().getAttribute('aria-checked'), 'false'); assert.match(root.textContent, /v as in very/);
@@ -209,7 +209,7 @@ test('dottile: switch toggles state with aria-checked; test runs six items', asy
   un();
 });
 test('syllablechips: chips are RTL buttons, stress marked in text, which-drill and hide drill work', async () => {
-  const root = newRoot(); const { ctx, mem } = makeCtx(); const un = mountChips(root, ctx); await tick();
+  const root = newRoot(); const { ctx, mem } = makeCtx(); const un = mountChips(root, ctx); await loaded(root);
   assert.match(root.textContent, /● stress/);
   assert.equal(all(root, (e) => e.getAttribute('dir') === 'rtl' && e.tagName === 'DIV').length > 0, true);
   click(byText(root, /Hide Latin letters/)); assert.equal(all(root, (e) => e.getAttribute('class') === 'ipa').length, 0);
@@ -221,17 +221,17 @@ test('syllablechips: chips are RTL buttons, stress marked in text, which-drill a
   un();
 });
 test('syllablechips: tapping a chip says "No audio yet" without a file, plays with one', async () => {
-  let root = newRoot(); let { ctx } = makeCtx(); let un = mountChips(root, ctx); await tick();
+  let root = newRoot(); let { ctx } = makeCtx(); let un = mountChips(root, ctx); await loaded(root);
   click(all(root, (e) => e.getAttribute('class') === 'chip')[0]); assert.match(root.textContent, /No audio yet for this syllable/); un();
   root = newRoot(); const m = makeCtx({ audio: { has: () => true, play() {} } }); const played = [];
-  m.ctx.audio.play = (k, id) => played.push([k, id]); un = mountChips(root, m.ctx); await tick();
+  m.ctx.audio.play = (k, id) => played.push([k, id]); un = mountChips(root, m.ctx); await loaded(root);
   click(all(root, (e) => e.getAttribute('class') === 'chip')[0]); assert.equal(played[0][0], 'syllable'); un();
 });
 
 // ---------- soundgap fixes
 test('soundgap: tables sit in a scrollable .table-wrap; no hard-coded colours outside var() fallbacks', async () => {
   const gapData = { soundgap: load('soundgap'), prayerwords: prayer };
-  const root = newRoot(); const { ctx } = makeCtx({ soundgapData: gapData }); const un = mountGap(root, ctx); await tick();
+  const root = newRoot(); const { ctx } = makeCtx({ soundgapData: gapData }); const un = mountGap(root, ctx); await loaded(root);
   const tables = all(root, (e) => e.tagName === 'TABLE');
   assert.ok(tables.length >= 2);
   for (const t of tables) assert.equal(t.parent.getAttribute('class'), 'table-wrap');

@@ -21,6 +21,7 @@ class N {
   click() { return this.fire('click'); }
 }
 globalThis.document = { createElement: (t) => new N(t), createTextNode: (d) => ({ nodeType: 3, data: String(d), parent: undefined }) };
+import { waitFor } from './helpers/waitfor.js';
 const tick = (ms = 60) => new Promise((r) => setTimeout(r, ms));
 const memStore = () => { const m = {}; return { get: (k) => m[k], set: (k, v) => { m[k] = v; }, m }; };
 
@@ -34,7 +35,7 @@ const setup = async (extra = {}) => {
   const audio = { has: (k, id) => k === 'word' && (extra.recorded || []).includes(id), play: async (k, id) => { played.push(id); return { source: 'file', entryStatus: 'recorded' }; }, stop() {} };
   const ctx = { store, query: extra.query || {}, audio, now: () => 1_700_000_000_000, settings: { get() {} } };
   const un = mount(root, ctx);
-  await tick(150);
+  await waitFor(() => root.find((n) => n.attrs['data-pack'] || n.attrs['data-action'] === 'send' || (n.tag === 'li' && n.attrs['data-id'])).length > 0, { message: "root.find((n) => n.attrs['data-pack'] || n.attrs['data-action'] === 'send' || (n.tag === 'li' && n.attrs['data-id'])).length > 0" });
   return { root, store, ctx, un, played };
 };
 const buttons = (root) => root.find((n) => n.tag === 'button');
@@ -54,8 +55,8 @@ test('lists all 40 packs as real buttons, with the draft notice and CC BY-SA att
 test('opening a pack lists its words with a listen button each and the verbatim example when present', async () => {
   const { root, played } = await setup({ recorded: [readPack('food-drink-set01').words[0].id] });
   await root.find((n) => n.attrs['data-pack'] === 'food-drink-set01')[0].click();
-  await tick();
   const pack = readPack('food-drink-set01');
+  await waitFor(() => root.find((n) => n.tag === 'li' && n.attrs['data-id']).length === pack.words.length, { message: "root.find((n) => n.tag === 'li' && n.attrs['data-id']).length === pack.words.length" });
   const lis = root.find((n) => n.tag === 'li' && n.attrs['data-id']);
   assert.equal(lis.length, pack.words.length);
   pack.words.forEach((w, i) => {
@@ -68,7 +69,7 @@ test('opening a pack lists its words with a listen button each and the verbatim 
   });
   assert.ok(lis[0].text.includes('Listen') && !/computer voice/.test(lis[0].find((n) => n.tag === 'button')[0].text), 'recorded word is not labelled computer voice');
   await lis[0].find((n) => n.tag === 'button')[0].click();
-  await tick();
+  await waitFor(() => played.length > 0, { message: "played.length > 0" });
   assert.deepEqual(played, [pack.words[0].id], 'ctx.audio.play was used');
 });
 
@@ -76,7 +77,7 @@ test('send to my review deck: adds vocab SRS cards once, reports what it skipped
   const { root, store } = await setup({ query: { pack: 'food-drink-set01' } });
   const send = root.find((n) => n.attrs['data-action'] === 'send')[0];
   assert.ok(send && send.tag === 'button');
-  await send.click(); await tick(200);
+  await send.click(); await waitFor(() => Object.keys(store.m['srs.vocab'] || {}).length > 20 && root.find((n) => n.attrs.role === 'status' && /added/.test(n.text)).length > 0, { message: "Object.keys(store.m['srs.vocab'] || {}).length > 20 && root.find((n) => n.attrs.role === 'status' && /added/.test(n.text)).length > 0" });
   const cards = store.m['srs.vocab'];
   assert.ok(cards && Object.keys(cards).length > 20, 'cards were created');
   for (const [id, c] of Object.entries(cards)) { assert.ok(id.startsWith('vocab:')); assert.equal(c.id, id); assert.equal(c.state, 'new'); assert.equal(c.kind, 'word'); }
@@ -86,7 +87,7 @@ test('send to my review deck: adds vocab SRS cards once, reports what it skipped
   assert.equal(store.m[STORE_KEY].v, 1);
   assert.equal(STORE_KEY, 'vocab.themes.v1');
   assert.equal(store.m[STORE_KEY].sent['food-drink-set01'].added, first);
-  await send.click(); await tick(200);
+  await send.click(); await waitFor(() => store.m[STORE_KEY].sent['food-drink-set01'].added === 0, { message: "store.m[STORE_KEY].sent['food-drink-set01'].added === 0" });
   assert.equal(Object.keys(store.m['srs.vocab']).length, first, 'second send adds nothing');
   assert.equal(store.m[STORE_KEY].sent['food-drink-set01'].added, 0);
   assert.equal(store.m[STORE_KEY].sent['food-drink-set01'].existing, first);

@@ -54,7 +54,7 @@ Takes per clip: 3. Clips: 4.
 | vet | israeli/letter/vet.mp3 | בֵית |  | VARIANT FORM NAME: say the name with the variant sound, once, falling intonation (vet = with a v, khaf = with the ch of chet, fe = with an f, sin = with an s). Record right after the plain form (bet/vet, kaf/khaf, pe/fe, shin/sin) so the contrast is clear. |
 | khaf | israeli/letter/khaf.mp3 | כַף |  | (as above) |
 | fe | israeli/letter/fe.mp3 | פֵא |  | (as above) |
-| sin | israeli/letter/sin.mp3 | שִׂין |  | (as above) |
+| sin | israeli/letter/sin.mp3 | שִׂין |  | (as above) |
 
 ## Isolated letter sounds
 
@@ -264,7 +264,7 @@ Takes per clip: 2. Clips: 27.
 
 ## Lesson vocabulary words
 
-Takes per clip: 2. Clips: 305.
+Takes per clip: 2. Clips: 940.
 
 | id | file (under audio/<voice>/) | pointed Hebrew | IPA | direction |
 |---|---|---|---|---|
@@ -573,6 +573,641 @@ Takes per clip: 2. Clips: 305.
 | il24-w1 | israeli/word/il24-w1.mp3 | מַה קָרָה |  | (as above) |
 | il24-w2 | israeli/word/il24-w2.mp3 | תַּסְבִּיר לִי |  | (as above) |
 | il24-w3 | israeli/word/il24-w3.mp3 | בּוֹא נַחֲלִיט |  | (as above) |
+| i-01-w1 | israeli/word/i-01-w1.mp3 | בָּרְכוּ |  | (as above) |
+| i-01-w2 | israeli/word/i-01-w2.mp3 | הַמְּבֹרָךְ |  | (as above) |
+| i-01-w3 | israeli/word/i-01-w3.mp3 | שְׁמַע |  | (as above) |
+| i-01-w4 | israeli/word/i-01-w4.mp3 | יִשְׂרָאֵל |  | (as above) |
+| i-01-w5 | israeli/word/i-01-w5.mp3 | אֱלֹהֵינוּ |  | (as above) |
+| i-01-w6 | israeli/word/i-01-w6.mp3 | אֶחָד |  | (as above) |
+| i-01-w7 | israeli/word/i-01-w7.mp3 | שֵׁם |  | (as above) |
+| i-01-w8 | israeli/word/i-01-w8.mp3 | כְּבוֹד |  | (as above) |
+| i-01-w9 | israeli/word/i-01-w9.mp3 | מַלְכוּתוֹ |  | (as above) |
+| i-01-w10 | israeli/word/i-01-w10.mp3 | לְעוֹלָם וָעֶד |  | (as above) |
+| i-01-w11 | israeli/word/i-01-w11.mp3 | וְאָהַבְתָּ |  | (as above) |
+| i-01-w12 | israeli/word/i-01-w12.mp3 | לְבָבְךָ |  | (as above) |
+| i-02-w1 | israeli/word/i-02-w1.mp3 | אֲדֹנָי |  | (as above) |
+| i-02-w2 | israeli/word/i-02-w2.mp3 | שְׂפָתַי |  | (as above) |
+| i-02-w3 | israeli/word/i-02-w3.mp3 | תִּפְתָּח |  | (as above) |
+| i-02-w4 | israeli/word/i-02-w4.mp3 | אֲבוֹתֵינוּ |  | (as above) |
+| i-02-w5 | israeli/word/i-02-w5.mp3 | אַבְרָהָם |  | (as above) |
+| i-02-w6 | israeli/word/i-02-w6.mp3 | יִצְחָק |  | (as above) |
+| i-02-w7 | israeli/word/i-02-w7.mp3 | יַעֲקֹב |  | (as above) |
+| i-02-w8 | israeli/word/i-02-w8.mp3 | הַגָּדוֹל |  | (as above) |
+| i-02-w9 | israeli/word/i-02-w9.mp3 | הַגִּבּוֹר |  | (as above) |
+| i-02-w10 | israeli/word/i-02-w10.mp3 | וְהַנּוֹרָא |  | (as above) |
+| i-02-w11 | israeli/word/i-02-w11.mp3 | מָגֵן |  | (as above) |
+| i-02-w12 | israeli/word/i-02-w12.mp3 | קָדוֹשׁ |  | (as above) |
+| i-02-w13 | israeli/word/i-02-w13.mp3 | כְּבוֹדוֹ |  | (as above) |
+| i-02-w14 | israeli/word/i-02-w14.mp3 | מִמְּקוֹמוֹ |  | (as above) |
+| i-02-w15 | israeli/word/i-02-w15.mp3 | יִמְלֹךְ |  | (as above) |
+| i-03-w1 | israeli/word/i-03-w1.mp3 | תּוֹרָה |  | (as above) |
+| i-03-w2 | israeli/word/i-03-w2.mp3 | סֵפֶר תּוֹרָה |  | (as above) |
+| i-03-w3 | israeli/word/i-03-w3.mp3 | עֲלִיָּה |  | (as above) |
+| i-03-w4 | israeli/word/i-03-w4.mp3 | נוֹתֵן הַתּוֹרָה |  | (as above) |
+| i-03-w5 | israeli/word/i-03-w5.mp3 | גַּדְּלוּ |  | (as above) |
+| i-03-w6 | israeli/word/i-03-w6.mp3 | הַגְּדֻלָּה |  | (as above) |
+| i-03-w7 | israeli/word/i-03-w7.mp3 | וְזֹאת הַתּוֹרָה |  | (as above) |
+| i-03-w8 | israeli/word/i-03-w8.mp3 | עֵץ חַיִּים |  | (as above) |
+| i-03-w9 | israeli/word/i-03-w9.mp3 | הֲשִׁיבֵנוּ |  | (as above) |
+| i-03-w10 | israeli/word/i-03-w10.mp3 | חַדֵּשׁ |  | (as above) |
+| i-03-w11 | israeli/word/i-03-w11.mp3 | יָמֵינוּ |  | (as above) |
+| i-03-w12 | israeli/word/i-03-w12.mp3 | כְּקֶדֶם |  | (as above) |
+| i-04-w1 | israeli/word/i-04-w1.mp3 | אָמֵן |  | (as above) |
+| i-04-w2 | israeli/word/i-04-w2.mp3 | שְׁמֵהּ רַבָּא |  | (as above) |
+| i-04-w3 | israeli/word/i-04-w3.mp3 | בְּעָלְמָא |  | (as above) |
+| i-04-w4 | israeli/word/i-04-w4.mp3 | יִשְׂרָאֵל |  | (as above) |
+| i-04-w5 | israeli/word/i-04-w5.mp3 | וְאִמְרוּ אָמֵן |  | (as above) |
+| i-04-w6 | israeli/word/i-04-w6.mp3 | מְבָרַךְ |  | (as above) |
+| i-04-w7 | israeli/word/i-04-w7.mp3 | בְּרִיךְ הוּא |  | (as above) |
+| i-04-w8 | israeli/word/i-04-w8.mp3 | שְׁלָמָא רַבָּא |  | (as above) |
+| i-04-w9 | israeli/word/i-04-w9.mp3 | עוֹשֶׂה שָׁלוֹם |  | (as above) |
+| i-04-w10 | israeli/word/i-04-w10.mp3 | עָלֵינוּ |  | (as above) |
+| i-05-w1 | israeli/word/i-05-w1.mp3 | נֵר |  | (as above) |
+| i-05-w2 | israeli/word/i-05-w2.mp3 | יַיִן |  | (as above) |
+| i-05-w3 | israeli/word/i-05-w3.mp3 | בּוֹרֵא |  | (as above) |
+| i-05-w4 | israeli/word/i-05-w4.mp3 | פְּרִי הַגָּפֶן |  | (as above) |
+| i-05-w5 | israeli/word/i-05-w5.mp3 | לֶחֶם |  | (as above) |
+| i-05-w6 | israeli/word/i-05-w6.mp3 | הַמּוֹצִיא |  | (as above) |
+| i-05-w7 | israeli/word/i-05-w7.mp3 | מִן הָאָרֶץ |  | (as above) |
+| i-05-w8 | israeli/word/i-05-w8.mp3 | הַשְּׁבִיעִי |  | (as above) |
+| i-05-w9 | israeli/word/i-05-w9.mp3 | מְקַדֵּשׁ הַשַּׁבָּת |  | (as above) |
+| i-05-w10 | israeli/word/i-05-w10.mp3 | זָכוֹר |  | (as above) |
+| i-05-w11 | israeli/word/i-05-w11.mp3 | וְשָׁמְרוּ |  | (as above) |
+| i-05-w12 | israeli/word/i-05-w12.mp3 | לְחַיִּים |  | (as above) |
+| i-05-w13 | israeli/word/i-05-w13.mp3 | שַׁבָּת שָׁלוֹם |  | (as above) |
+| i-06-w1 | israeli/word/i-06-w1.mp3 | כּוֹס |  | (as above) |
+| i-06-w2 | israeli/word/i-06-w2.mp3 | יְשׁוּעָה |  | (as above) |
+| i-06-w3 | israeli/word/i-06-w3.mp3 | בְשָׂמִים |  | (as above) |
+| i-06-w4 | israeli/word/i-06-w4.mp3 | מִינֵי |  | (as above) |
+| i-06-w5 | israeli/word/i-06-w5.mp3 | מְאוֹרֵי הָאֵשׁ |  | (as above) |
+| i-06-w6 | israeli/word/i-06-w6.mp3 | הַמַּבְדִּיל |  | (as above) |
+| i-06-w7 | israeli/word/i-06-w7.mp3 | קֹדֶשׁ |  | (as above) |
+| i-06-w8 | israeli/word/i-06-w8.mp3 | לְחוֹל |  | (as above) |
+| i-06-w9 | israeli/word/i-06-w9.mp3 | אוֹר |  | (as above) |
+| i-06-w10 | israeli/word/i-06-w10.mp3 | חֹשֶׁךְ |  | (as above) |
+| i-06-w11 | israeli/word/i-06-w11.mp3 | שָׁבוּעַ טוֹב |  | (as above) |
+| i-07-w1 | israeli/word/i-07-w1.mp3 | כִּי לְעוֹלָם חַסְדּוֹ |  | (as above) |
+| i-07-w2 | israeli/word/i-07-w2.mp3 | הַלְלוּ־יָהּ |  | (as above) |
+| i-07-w3 | israeli/word/i-07-w3.mp3 | יֹאמַר נָא יִשְׂרָאֵל |  | (as above) |
+| i-07-w4 | israeli/word/i-07-w4.mp3 | אָנָּא יְהוָה הוֹשִׁיעָה נָא |  | (as above) |
+| i-07-w5 | israeli/word/i-07-w5.mp3 | זֶה הַיּוֹם עָשָׂה יְהוָה |  | (as above) |
+| i-07-w6 | israeli/word/i-07-w6.mp3 | מִן הַמֵּצַר קָרָאתִי יָּהּ |  | (as above) |
+| i-07-w7 | israeli/word/i-07-w7.mp3 | אֵלִי אַתָּה |  | (as above) |
+| i-07-w8 | israeli/word/i-07-w8.mp3 | יְהוָה לִי לֹא אִירָא |  | (as above) |
+| i-07-w9 | israeli/word/i-07-w9.mp3 | לֹא לָנוּ יְהוָה לֹא לָנוּ |  | (as above) |
+| i-07-w10 | israeli/word/i-07-w10.mp3 | הַלְלוּ אֶת־יְהוָה כָּל־גּוֹיִם |  | (as above) |
+| i-07-w11 | israeli/word/i-07-w11.mp3 | כּוֹס יְשׁוּעוֹת אֶשָּׂא |  | (as above) |
+| i-08-w1 | israeli/word/i-08-w1.mp3 | עָלֵינוּ |  | (as above) |
+| i-08-w2 | israeli/word/i-08-w2.mp3 | לְשַׁבֵּחַ |  | (as above) |
+| i-08-w3 | israeli/word/i-08-w3.mp3 | לַאֲדוֹן הַכֹּל |  | (as above) |
+| i-08-w4 | israeli/word/i-08-w4.mp3 | גְּדֻלָּה |  | (as above) |
+| i-08-w5 | israeli/word/i-08-w5.mp3 | וַאֲנַחְנוּ |  | (as above) |
+| i-08-w6 | israeli/word/i-08-w6.mp3 | מִשְׁתַּחֲוִים |  | (as above) |
+| i-08-w7 | israeli/word/i-08-w7.mp3 | מֶלֶךְ מַלְכֵי הַמְּלָכִים |  | (as above) |
+| i-08-w8 | israeli/word/i-08-w8.mp3 | הַקָּדוֹשׁ בָּרוּךְ הוּא |  | (as above) |
+| i-08-w9 | israeli/word/i-08-w9.mp3 | שָׁמַיִם |  | (as above) |
+| i-08-w10 | israeli/word/i-08-w10.mp3 | אָרֶץ |  | (as above) |
+| i-08-w11 | israeli/word/i-08-w11.mp3 | אֱמֶת |  | (as above) |
+| i-08-w12 | israeli/word/i-08-w12.mp3 | אֵין עוֹד |  | (as above) |
+| i-09-w1 | israeli/word/i-09-w1.mp3 | אֲדוֹן עוֹלָם |  | (as above) |
+| i-09-w2 | israeli/word/i-09-w2.mp3 | מָלַךְ |  | (as above) |
+| i-09-w3 | israeli/word/i-09-w3.mp3 | מֶלֶךְ |  | (as above) |
+| i-09-w4 | israeli/word/i-09-w4.mp3 | שְׁמוֹ |  | (as above) |
+| i-09-w5 | israeli/word/i-09-w5.mp3 | נִקְרָא |  | (as above) |
+| i-09-w6 | israeli/word/i-09-w6.mp3 | וְהוּא הָיָה |  | (as above) |
+| i-09-w7 | israeli/word/i-09-w7.mp3 | וְהוּא הֹוֶה |  | (as above) |
+| i-09-w8 | israeli/word/i-09-w8.mp3 | וְהוּא יִהְיֶה |  | (as above) |
+| i-09-w9 | israeli/word/i-09-w9.mp3 | אֶחָד |  | (as above) |
+| i-09-w10 | israeli/word/i-09-w10.mp3 | וְאֵין שֵׁנִי |  | (as above) |
+| i-09-w11 | israeli/word/i-09-w11.mp3 | בְּלִי רֵאשִׁית |  | (as above) |
+| i-09-w12 | israeli/word/i-09-w12.mp3 | גּוֹאֲלִי |  | (as above) |
+| i-09-w13 | israeli/word/i-09-w13.mp3 | רוּחִי |  | (as above) |
+| i-09-w14 | israeli/word/i-09-w14.mp3 | אִישַׁן |  | (as above) |
+| i-09-w15 | israeli/word/i-09-w15.mp3 | וְאָעִירָה |  | (as above) |
+| i-09-w16 | israeli/word/i-09-w16.mp3 | לֹא אִירָא |  | (as above) |
+| i-10-w1 | israeli/word/i-10-w1.mp3 | מִי שֶׁבֵּרַךְ |  | (as above) |
+| i-10-w2 | israeli/word/i-10-w2.mp3 | אֲבוֹתֵינוּ |  | (as above) |
+| i-10-w3 | israeli/word/i-10-w3.mp3 | אַבְרָהָם יִצְחָק וְיַעֲקֹב |  | (as above) |
+| i-10-w4 | israeli/word/i-10-w4.mp3 | רְפוּאָה |  | (as above) |
+| i-10-w5 | israeli/word/i-10-w5.mp3 | חוֹלֶה |  | (as above) |
+| i-10-w6 | israeli/word/i-10-w6.mp3 | חוֹלָה |  | (as above) |
+| i-10-w7 | israeli/word/i-10-w7.mp3 | אֵל נָא רְפָא נָא לָהּ |  | (as above) |
+| i-10-w8 | israeli/word/i-10-w8.mp3 | הַגּוֹמֵל |  | (as above) |
+| i-10-w9 | israeli/word/i-10-w9.mp3 | שֶׁהֶחֱיָינוּ |  | (as above) |
+| i-10-w10 | israeli/word/i-10-w10.mp3 | כֵּן יְהִי רָצוֹן |  | (as above) |
+| i-10-w11 | israeli/word/i-10-w11.mp3 | יְבָרֶכְךָ |  | (as above) |
+| i-10-w12 | israeli/word/i-10-w12.mp3 | שָׁלוֹם |  | (as above) |
+| i-11-w1 | israeli/word/i-11-w1.mp3 | אוֹטוֹבּוּס |  | (as above) |
+| i-11-w2 | israeli/word/i-11-w2.mp3 | רַכֶּבֶת |  | (as above) |
+| i-11-w3 | israeli/word/i-11-w3.mp3 | תַּחֲנָה |  | (as above) |
+| i-11-w4 | israeli/word/i-11-w4.mp3 | כַּרְטִיס |  | (as above) |
+| i-11-w5 | israeli/word/i-11-w5.mp3 | רַב-קַו |  | (as above) |
+| i-11-w6 | israeli/word/i-11-w6.mp3 | רְצִיף |  | (as above) |
+| i-11-w7 | israeli/word/i-11-w7.mp3 | נַהָג |  | (as above) |
+| i-11-w8 | israeli/word/i-11-w8.mp3 | הַתַּחֲנָה הַבָּאָה |  | (as above) |
+| i-11-w9 | israeli/word/i-11-w9.mp3 | יוֹרֵד |  | (as above) |
+| i-11-w10 | israeli/word/i-11-w10.mp3 | יוֹרֶדֶת |  | (as above) |
+| i-11-w11 | israeli/word/i-11-w11.mp3 | תָּפוּס |  | (as above) |
+| i-11-w12 | israeli/word/i-11-w12.mp3 | פָּנוּי |  | (as above) |
+| i-12-w1 | israeli/word/i-12-w1.mp3 | שׁוּק |  | (as above) |
+| i-12-w2 | israeli/word/i-12-w2.mp3 | כַּמָּה זֶה עוֹלֶה? |  | (as above) |
+| i-12-w3 | israeli/word/i-12-w3.mp3 | מָה הַמְּחִיר? |  | (as above) |
+| i-12-w4 | israeli/word/i-12-w4.mp3 | זֶה יָקָר |  | (as above) |
+| i-12-w5 | israeli/word/i-12-w5.mp3 | זֶה זוֹל |  | (as above) |
+| i-12-w6 | israeli/word/i-12-w6.mp3 | יֵשׁ הַנָּחָה? |  | (as above) |
+| i-12-w7 | israeli/word/i-12-w7.mp3 | חֲצִי |  | (as above) |
+| i-12-w8 | israeli/word/i-12-w8.mp3 | טָרִי |  | (as above) |
+| i-12-w9 | israeli/word/i-12-w9.mp3 | עַגְבָנִיָּה |  | (as above) |
+| i-12-w10 | israeli/word/i-12-w10.mp3 | מְלָפְפוֹן |  | (as above) |
+| i-12-w11 | israeli/word/i-12-w11.mp3 | גְּבִינָה |  | (as above) |
+| i-12-w12 | israeli/word/i-12-w12.mp3 | זֵיתִים |  | (as above) |
+| i-12-w13 | israeli/word/i-12-w13.mp3 | אֶקַּח אֶת זֶה |  | (as above) |
+| i-12-w14 | israeli/word/i-12-w14.mp3 | מְזֻמָּן |  | (as above) |
+| i-12-w15 | israeli/word/i-12-w15.mp3 | שַׂקִּית |  | (as above) |
+| i-13-w1 | israeli/word/i-13-w1.mp3 | אֶפְשָׁר לְהַזְמִין? |  | (as above) |
+| i-13-w2 | israeli/word/i-13-w2.mp3 | קָפֶה הָפוּךְ |  | (as above) |
+| i-13-w3 | israeli/word/i-13-w3.mp3 | אֶסְפְּרֶסוֹ |  | (as above) |
+| i-13-w4 | israeli/word/i-13-w4.mp3 | קָפֶה שָׁחוֹר |  | (as above) |
+| i-13-w5 | israeli/word/i-13-w5.mp3 | תֵּה עִם נַעֲנָע |  | (as above) |
+| i-13-w6 | israeli/word/i-13-w6.mp3 | חָלָב |  | (as above) |
+| i-13-w7 | israeli/word/i-13-w7.mp3 | סֻכָּר |  | (as above) |
+| i-13-w8 | israeli/word/i-13-w8.mp3 | בְּלִי |  | (as above) |
+| i-13-w9 | israeli/word/i-13-w9.mp3 | גָּדוֹל |  | (as above) |
+| i-13-w10 | israeli/word/i-13-w10.mp3 | קָטָן |  | (as above) |
+| i-13-w11 | israeli/word/i-13-w11.mp3 | לֶאֱכֹל כָּאן אוֹ לָקַחַת? |  | (as above) |
+| i-13-w12 | israeli/word/i-13-w12.mp3 | הַחֶשְׁבּוֹן, בְּבַקָּשָׁה |  | (as above) |
+| i-13-w13 | israeli/word/i-13-w13.mp3 | צִמְחוֹנִי |  | (as above) |
+| i-13-w14 | israeli/word/i-13-w14.mp3 | צִמְחוֹנִית |  | (as above) |
+| i-14-w1 | israeli/word/i-14-w1.mp3 | בֵּית מֶרְקַחַת |  | (as above) |
+| i-14-w2 | israeli/word/i-14-w2.mp3 | תְּרוּפָה |  | (as above) |
+| i-14-w3 | israeli/word/i-14-w3.mp3 | כַּדּוּרִים |  | (as above) |
+| i-14-w4 | israeli/word/i-14-w4.mp3 | מִרְשָׁם |  | (as above) |
+| i-14-w5 | israeli/word/i-14-w5.mp3 | כְּאֵב רֹאשׁ |  | (as above) |
+| i-14-w6 | israeli/word/i-14-w6.mp3 | כְּאֵב גָּרוֹן |  | (as above) |
+| i-14-w7 | israeli/word/i-14-w7.mp3 | כְּאֵב בֶּטֶן |  | (as above) |
+| i-14-w8 | israeli/word/i-14-w8.mp3 | חֹם |  | (as above) |
+| i-14-w9 | israeli/word/i-14-w9.mp3 | נֶגֶד |  | (as above) |
+| i-14-w10 | israeli/word/i-14-w10.mp3 | פַּעַם בְּיוֹם |  | (as above) |
+| i-14-w11 | israeli/word/i-14-w11.mp3 | פַּעֲמַיִם בְּיוֹם |  | (as above) |
+| i-14-w12 | israeli/word/i-14-w12.mp3 | אַחֲרֵי |  | (as above) |
+| i-14-w13 | israeli/word/i-14-w13.mp3 | לִפְנֵי |  | (as above) |
+| i-14-w14 | israeli/word/i-14-w14.mp3 | אָלֶרְגִּי |  | (as above) |
+| i-14-w15 | israeli/word/i-14-w15.mp3 | אַנְטִיבְּיוֹטִיקָה |  | (as above) |
+| i-15-w1 | israeli/word/i-15-w1.mp3 | אֵיךְ מַגִּיעִים לְ...? |  | (as above) |
+| i-15-w2 | israeli/word/i-15-w2.mp3 | יָשָׁר |  | (as above) |
+| i-15-w3 | israeli/word/i-15-w3.mp3 | שְׂמֹאלָה |  | (as above) |
+| i-15-w4 | israeli/word/i-15-w4.mp3 | יָמִינָה |  | (as above) |
+| i-15-w5 | israeli/word/i-15-w5.mp3 | פְּנֵה |  | (as above) |
+| i-15-w6 | israeli/word/i-15-w6.mp3 | לֵךְ |  | (as above) |
+| i-15-w7 | israeli/word/i-15-w7.mp3 | עַל יַד |  | (as above) |
+| i-15-w8 | israeli/word/i-15-w8.mp3 | מוּל |  | (as above) |
+| i-15-w9 | israeli/word/i-15-w9.mp3 | בַּפִּנָּה |  | (as above) |
+| i-15-w10 | israeli/word/i-15-w10.mp3 | רְחוֹב |  | (as above) |
+| i-15-w11 | israeli/word/i-15-w11.mp3 | בֵּית חוֹלִים |  | (as above) |
+| i-15-w12 | israeli/word/i-15-w12.mp3 | גֶּשֶׁר |  | (as above) |
+| i-15-w13 | israeli/word/i-15-w13.mp3 | זֶה רָחוֹק? |  | (as above) |
+| i-15-w14 | israeli/word/i-15-w14.mp3 | זֶה קָרוֹב |  | (as above) |
+| i-15-w15 | israeli/word/i-15-w15.mp3 | אֲנִי אָבוּד |  | (as above) |
+| i-15-w16 | israeli/word/i-15-w16.mp3 | אֲנִי אֲבוּדָה |  | (as above) |
+| i-16-w1 | israeli/word/i-16-w1.mp3 | טֶלֶפוֹן |  | (as above) |
+| i-16-w2 | israeli/word/i-16-w2.mp3 | מִסְפָּר |  | (as above) |
+| i-16-w3 | israeli/word/i-16-w3.mp3 | מִסְפַּר טֶלֶפוֹן |  | (as above) |
+| i-16-w4 | israeli/word/i-16-w4.mp3 | הוֹדָעָה |  | (as above) |
+| i-16-w5 | israeli/word/i-16-w5.mp3 | אִינְטֶרְנֶט |  | (as above) |
+| i-16-w6 | israeli/word/i-16-w6.mp3 | סִיסְמָה |  | (as above) |
+| i-16-w7 | israeli/word/i-16-w7.mp3 | סוֹלְלָה |  | (as above) |
+| i-16-w8 | israeli/word/i-16-w8.mp3 | מִטְעָן |  | (as above) |
+| i-16-w9 | israeli/word/i-16-w9.mp3 | לְהִתְקַשֵּׁר |  | (as above) |
+| i-16-w10 | israeli/word/i-16-w10.mp3 | לִשְׁלֹחַ |  | (as above) |
+| i-16-w11 | israeli/word/i-16-w11.mp3 | שׁוֹלֵחַ |  | (as above) |
+| i-16-w12 | israeli/word/i-16-w12.mp3 | הַלּוֹ? |  | (as above) |
+| i-16-w13 | israeli/word/i-16-w13.mp3 | רֶגַע |  | (as above) |
+| i-16-w14 | israeli/word/i-16-w14.mp3 | אֲנִי לֹא שׁוֹמֵעַ |  | (as above) |
+| i-17-w1 | israeli/word/i-17-w1.mp3 | דִּירָה |  | (as above) |
+| i-17-w2 | israeli/word/i-17-w2.mp3 | חֶדֶר |  | (as above) |
+| i-17-w3 | israeli/word/i-17-w3.mp3 | חֲדָרִים |  | (as above) |
+| i-17-w4 | israeli/word/i-17-w4.mp3 | קוֹמָה |  | (as above) |
+| i-17-w5 | israeli/word/i-17-w5.mp3 | מִרְפֶּסֶת |  | (as above) |
+| i-17-w6 | israeli/word/i-17-w6.mp3 | חֲנָיָה |  | (as above) |
+| i-17-w7 | israeli/word/i-17-w7.mp3 | חוֹזֶה |  | (as above) |
+| i-17-w8 | israeli/word/i-17-w8.mp3 | בַּעַל הַבַּיִת |  | (as above) |
+| i-17-w9 | israeli/word/i-17-w9.mp3 | וַעַד בַּיִת |  | (as above) |
+| i-17-w10 | israeli/word/i-17-w10.mp3 | שָׁנָה |  | (as above) |
+| i-17-w11 | israeli/word/i-17-w11.mp3 | חֹדֶשׁ |  | (as above) |
+| i-17-w12 | israeli/word/i-17-w12.mp3 | גְּדוֹלָה |  | (as above) |
+| i-17-w13 | israeli/word/i-17-w13.mp3 | טוֹבָה |  | (as above) |
+| i-17-w14 | israeli/word/i-17-w14.mp3 | אוֹר |  | (as above) |
+| i-18-w1 | israeli/word/i-18-w1.mp3 | צָבָא |  | (as above) |
+| i-18-w2 | israeli/word/i-18-w2.mp3 | חַיָּל |  | (as above) |
+| i-18-w3 | israeli/word/i-18-w3.mp3 | חַיֶּלֶת |  | (as above) |
+| i-18-w4 | israeli/word/i-18-w4.mp3 | מִלּוּאִים |  | (as above) |
+| i-18-w5 | israeli/word/i-18-w5.mp3 | מְפַקֵּד |  | (as above) |
+| i-18-w6 | israeli/word/i-18-w6.mp3 | בָּסִיס |  | (as above) |
+| i-18-w7 | israeli/word/i-18-w7.mp3 | נֶשֶׁק |  | (as above) |
+| i-18-w8 | israeli/word/i-18-w8.mp3 | שְׁמִירָה |  | (as above) |
+| i-18-w9 | israeli/word/i-18-w9.mp3 | חֻפְשָׁה |  | (as above) |
+| i-18-w10 | israeli/word/i-18-w10.mp3 | יַאלְלָה |  | (as above) |
+| i-18-w11 | israeli/word/i-18-w11.mp3 | סַבָּבָה |  | (as above) |
+| i-18-w12 | israeli/word/i-18-w12.mp3 | אַחִי |  | (as above) |
+| i-18-w13 | israeli/word/i-18-w13.mp3 | חֲבָל עַל הַזְּמַן |  | (as above) |
+| i-18-w14 | israeli/word/i-18-w14.mp3 | מָה הַמַּצָּב? |  | (as above) |
+| i-18-w15 | israeli/word/i-18-w15.mp3 | אֵין מַצָּב |  | (as above) |
+| i-18-w16 | israeli/word/i-18-w16.mp3 | תִּרְגַּע |  | (as above) |
+| i-19-w1 | israeli/word/i-19-w1.mp3 | שַׁבָּת שָׁלוֹם |  | (as above) |
+| i-19-w2 | israeli/word/i-19-w2.mp3 | שָׁבוּעַ טוֹב |  | (as above) |
+| i-19-w3 | israeli/word/i-19-w3.mp3 | אֲרוּחָה |  | (as above) |
+| i-19-w4 | israeli/word/i-19-w4.mp3 | עֶרֶב |  | (as above) |
+| i-19-w5 | israeli/word/i-19-w5.mp3 | בְּשִׂמְחָה |  | (as above) |
+| i-19-w6 | israeli/word/i-19-w6.mp3 | לְהָבִיא |  | (as above) |
+| i-19-w7 | israeli/word/i-19-w7.mp3 | יַיִן |  | (as above) |
+| i-19-w8 | israeli/word/i-19-w8.mp3 | קִנּוּחַ |  | (as above) |
+| i-19-w9 | israeli/word/i-19-w9.mp3 | מָתַי לָבוֹא? |  | (as above) |
+| i-19-w10 | israeli/word/i-19-w10.mp3 | הַשָּׁעָה שֶׁבַע |  | (as above) |
+| i-19-w11 | israeli/word/i-19-w11.mp3 | טָעִים מְאֹד |  | (as above) |
+| i-19-w12 | israeli/word/i-19-w12.mp3 | לְחַיִּים! |  | (as above) |
+| i-19-w13 | israeli/word/i-19-w13.mp3 | תּוֹדָה רַבָּה |  | (as above) |
+| i-19-w14 | israeli/word/i-19-w14.mp3 | לְהִתְרָאוֹת |  | (as above) |
+| i-20-w1 | israeli/word/i-20-w1.mp3 | בֵּית חוֹלִים |  | (as above) |
+| i-20-w2 | israeli/word/i-20-w2.mp3 | רוֹפֵא |  | (as above) |
+| i-20-w3 | israeli/word/i-20-w3.mp3 | רוֹפְאָה |  | (as above) |
+| i-20-w4 | israeli/word/i-20-w4.mp3 | אָחוֹת |  | (as above) |
+| i-20-w5 | israeli/word/i-20-w5.mp3 | תּוֹר |  | (as above) |
+| i-20-w6 | israeli/word/i-20-w6.mp3 | בִּטּוּחַ |  | (as above) |
+| i-20-w7 | israeli/word/i-20-w7.mp3 | כּוֹאֵב |  | (as above) |
+| i-20-w8 | israeli/word/i-20-w8.mp3 | בְּדִיקָה |  | (as above) |
+| i-20-w9 | israeli/word/i-20-w9.mp3 | דָּם |  | (as above) |
+| i-20-w10 | israeli/word/i-20-w10.mp3 | חֵרוּם |  | (as above) |
+| i-20-w11 | israeli/word/i-20-w11.mp3 | אַמְבּוּלַנְס |  | (as above) |
+| i-20-w12 | israeli/word/i-20-w12.mp3 | הַדַּרְכּוֹן |  | (as above) |
+| i-20-w13 | israeli/word/i-20-w13.mp3 | מִשְׁפָּחָה |  | (as above) |
+| i-21-w1 | israeli/word/i-21-w1.mp3 | בַּנְק |  | (as above) |
+| i-21-w2 | israeli/word/i-21-w2.mp3 | חֶשְׁבּוֹן |  | (as above) |
+| i-21-w3 | israeli/word/i-21-w3.mp3 | כֶּסֶף |  | (as above) |
+| i-21-w4 | israeli/word/i-21-w4.mp3 | כַּסְפּוֹמָט |  | (as above) |
+| i-21-w5 | israeli/word/i-21-w5.mp3 | לִמְשֹׁךְ |  | (as above) |
+| i-21-w6 | israeli/word/i-21-w6.mp3 | לְהַחְלִיף |  | (as above) |
+| i-21-w7 | israeli/word/i-21-w7.mp3 | דּוֹלָר |  | (as above) |
+| i-21-w8 | israeli/word/i-21-w8.mp3 | שֶׁקֶל |  | (as above) |
+| i-21-w9 | israeli/word/i-21-w9.mp3 | כַּרְטִיס אַשְׁרַאי |  | (as above) |
+| i-21-w10 | israeli/word/i-21-w10.mp3 | חֲתִימָה |  | (as above) |
+| i-21-w11 | israeli/word/i-21-w11.mp3 | הַלְוָאָה |  | (as above) |
+| i-21-w12 | israeli/word/i-21-w12.mp3 | רִבִּית |  | (as above) |
+| i-21-w13 | israeli/word/i-21-w13.mp3 | פָּתוּחַ |  | (as above) |
+| i-21-w14 | israeli/word/i-21-w14.mp3 | סָגוּר |  | (as above) |
+| i-22-w1 | israeli/word/i-22-w1.mp3 | דֹּאַר |  | (as above) |
+| i-22-w2 | israeli/word/i-22-w2.mp3 | חֲבִילָה |  | (as above) |
+| i-22-w3 | israeli/word/i-22-w3.mp3 | מִכְתָּב |  | (as above) |
+| i-22-w4 | israeli/word/i-22-w4.mp3 | בּוּל |  | (as above) |
+| i-22-w5 | israeli/word/i-22-w5.mp3 | בּוּלִים |  | (as above) |
+| i-22-w6 | israeli/word/i-22-w6.mp3 | לִשְׁלֹחַ |  | (as above) |
+| i-22-w7 | israeli/word/i-22-w7.mp3 | לֶאֱסֹף |  | (as above) |
+| i-22-w8 | israeli/word/i-22-w8.mp3 | תּוֹר |  | (as above) |
+| i-22-w9 | israeli/word/i-22-w9.mp3 | מִסְפָּר |  | (as above) |
+| i-22-w10 | israeli/word/i-22-w10.mp3 | כְּתֹבֶת |  | (as above) |
+| i-22-w11 | israeli/word/i-22-w11.mp3 | מַעֲטָפָה |  | (as above) |
+| i-22-w12 | israeli/word/i-22-w12.mp3 | רָגִיל |  | (as above) |
+| i-22-w13 | israeli/word/i-22-w13.mp3 | דֹּאַר אֲוִיר |  | (as above) |
+| i-23-w1 | israeli/word/i-23-w1.mp3 | מוֹנִית |  | (as above) |
+| i-23-w2 | israeli/word/i-23-w2.mp3 | לְאָן? |  | (as above) |
+| i-23-w3 | israeli/word/i-23-w3.mp3 | לִשְׂדֵה הַתְּעוּפָה |  | (as above) |
+| i-23-w4 | israeli/word/i-23-w4.mp3 | לַמָּלוֹן |  | (as above) |
+| i-23-w5 | israeli/word/i-23-w5.mp3 | לַתַּחֲנָה הַמֶּרְכָּזִית |  | (as above) |
+| i-23-w6 | israeli/word/i-23-w6.mp3 | מוֹנֶה |  | (as above) |
+| i-23-w7 | israeli/word/i-23-w7.mp3 | כַּמָּה זֶה יַעֲלֶה? |  | (as above) |
+| i-23-w8 | israeli/word/i-23-w8.mp3 | עֲצֹר כָּאן, בְּבַקָּשָׁה |  | (as above) |
+| i-23-w9 | israeli/word/i-23-w9.mp3 | לְאַט |  | (as above) |
+| i-23-w10 | israeli/word/i-23-w10.mp3 | קַבָּלָה |  | (as above) |
+| i-23-w11 | israeli/word/i-23-w11.mp3 | מְמַהֵר |  | (as above) |
+| i-23-w12 | israeli/word/i-23-w12.mp3 | שֵׁרוּת |  | (as above) |
+| i-23-w13 | israeli/word/i-23-w13.mp3 | חַלּוֹן |  | (as above) |
+| i-24-w1 | israeli/word/i-24-w1.mp3 | מֶזֶג אֲוִיר |  | (as above) |
+| i-24-w2 | israeli/word/i-24-w2.mp3 | חַם |  | (as above) |
+| i-24-w3 | israeli/word/i-24-w3.mp3 | קַר |  | (as above) |
+| i-24-w4 | israeli/word/i-24-w4.mp3 | גֶּשֶׁם |  | (as above) |
+| i-24-w5 | israeli/word/i-24-w5.mp3 | שֶׁמֶשׁ |  | (as above) |
+| i-24-w6 | israeli/word/i-24-w6.mp3 | רוּחַ |  | (as above) |
+| i-24-w7 | israeli/word/i-24-w7.mp3 | עָנָן |  | (as above) |
+| i-24-w8 | israeli/word/i-24-w8.mp3 | שֶׁלֶג |  | (as above) |
+| i-24-w9 | israeli/word/i-24-w9.mp3 | לַח |  | (as above) |
+| i-24-w10 | israeli/word/i-24-w10.mp3 | קַיִץ |  | (as above) |
+| i-24-w11 | israeli/word/i-24-w11.mp3 | חֹרֶף |  | (as above) |
+| i-24-w12 | israeli/word/i-24-w12.mp3 | אָבִיב |  | (as above) |
+| i-24-w13 | israeli/word/i-24-w13.mp3 | סְתָו |  | (as above) |
+| i-24-w14 | israeli/word/i-24-w14.mp3 | כּוֹבַע |  | (as above) |
+| i-24-w15 | israeli/word/i-24-w15.mp3 | מְעִיל |  | (as above) |
+| i-25-w1 | israeli/word/i-25-w1.mp3 | מַה שִּׁמְךָ? |  | (as above) |
+| i-25-w2 | israeli/word/i-25-w2.mp3 | קוֹרְאִים לִי |  | (as above) |
+| i-25-w3 | israeli/word/i-25-w3.mp3 | מֵאֵיפֹה אַתָּה? |  | (as above) |
+| i-25-w4 | israeli/word/i-25-w4.mp3 | אֲנִי מִקָּנָדָה |  | (as above) |
+| i-25-w5 | israeli/word/i-25-w5.mp3 | כַּמָּה זְמַן |  | (as above) |
+| i-25-w6 | israeli/word/i-25-w6.mp3 | בָּאָרֶץ |  | (as above) |
+| i-25-w7 | israeli/word/i-25-w7.mp3 | שָׁבוּעַ |  | (as above) |
+| i-25-w8 | israeli/word/i-25-w8.mp3 | חֹדֶשׁ |  | (as above) |
+| i-25-w9 | israeli/word/i-25-w9.mp3 | לוֹמֵד |  | (as above) |
+| i-25-w10 | israeli/word/i-25-w10.mp3 | עִבְרִית |  | (as above) |
+| i-25-w11 | israeli/word/i-25-w11.mp3 | מָה אַתָּה עוֹשֶׂה? |  | (as above) |
+| i-25-w12 | israeli/word/i-25-w12.mp3 | מָה נִשְׁמָע? |  | (as above) |
+| i-25-w13 | israeli/word/i-25-w13.mp3 | הַכֹּל בְּסֵדֶר |  | (as above) |
+| i-25-w14 | israeli/word/i-25-w14.mp3 | נָעִים מְאֹד |  | (as above) |
+| i-25-w15 | israeli/word/i-25-w15.mp3 | לְהִתְרָאוֹת |  | (as above) |
+| i-26-w1 | israeli/word/i-26-w1.mp3 | אֵין כָּמוֹךָ |  | (as above) |
+| i-26-w2 | israeli/word/i-26-w2.mp3 | וַיְהִי בִּנְסֹעַ הָאָרֹן |  | (as above) |
+| i-26-w3 | israeli/word/i-26-w3.mp3 | מִצִּיּוֹן תֵּצֵא תוֹרָה |  | (as above) |
+| i-26-w4 | israeli/word/i-26-w4.mp3 | בְּרִיךְ שְׁמֵהּ |  | (as above) |
+| i-26-w5 | israeli/word/i-26-w5.mp3 | גַּדְּלוּ |  | (as above) |
+| i-26-w6 | israeli/word/i-26-w6.mp3 | לְךָ יְהוָה הַגְּדֻלָּה |  | (as above) |
+| i-26-w7 | israeli/word/i-26-w7.mp3 | סֵפֶר תּוֹרָה |  | (as above) |
+| i-26-w8 | israeli/word/i-26-w8.mp3 | עֲלִיָּה |  | (as above) |
+| i-26-w9 | israeli/word/i-26-w9.mp3 | וְזֹאת הַתּוֹרָה |  | (as above) |
+| i-26-w10 | israeli/word/i-26-w10.mp3 | לְעַמּוֹ |  | (as above) |
+| i-26-w11 | israeli/word/i-26-w11.mp3 | עֵץ חַיִּים |  | (as above) |
+| i-26-w12 | israeli/word/i-26-w12.mp3 | הֲשִׁיבֵנוּ |  | (as above) |
+| i-27-w1 | israeli/word/i-27-w1.mp3 | קָדוֹשׁ |  | (as above) |
+| i-27-w2 | israeli/word/i-27-w2.mp3 | מְלֹא כָל הָאָרֶץ |  | (as above) |
+| i-27-w3 | israeli/word/i-27-w3.mp3 | כְּבוֹדוֹ |  | (as above) |
+| i-27-w4 | israeli/word/i-27-w4.mp3 | מִמְּקוֹמוֹ |  | (as above) |
+| i-27-w5 | israeli/word/i-27-w5.mp3 | יִמְלֹךְ |  | (as above) |
+| i-27-w6 | israeli/word/i-27-w6.mp3 | שִׂים שָׁלוֹם |  | (as above) |
+| i-27-w7 | israeli/word/i-27-w7.mp3 | בָּרְכֵנוּ |  | (as above) |
+| i-27-w8 | israeli/word/i-27-w8.mp3 | בְּאוֹר פָּנֶיךָ |  | (as above) |
+| i-27-w9 | israeli/word/i-27-w9.mp3 | הַמְבָרֵךְ אֶת עַמּוֹ |  | (as above) |
+| i-27-w10 | israeli/word/i-27-w10.mp3 | יִהְיוּ לְרָצוֹן |  | (as above) |
+| i-27-w11 | israeli/word/i-27-w11.mp3 | אֱלֹהַי נְצוֹר לְשׁוֹנִי |  | (as above) |
+| i-27-w12 | israeli/word/i-27-w12.mp3 | עֹשֶׂה שָׁלוֹם |  | (as above) |
+| i-27-w13 | israeli/word/i-27-w13.mp3 | צוּרִי וְגוֹאֲלִי |  | (as above) |
+| i-28-w1 | israeli/word/i-28-w1.mp3 | כִּפּוּר |  | (as above) |
+| i-28-w2 | israeli/word/i-28-w2.mp3 | צוֹם |  | (as above) |
+| i-28-w3 | israeli/word/i-28-w3.mp3 | שׁוֹפָר |  | (as above) |
+| i-28-w4 | israeli/word/i-28-w4.mp3 | סְלִיחָה |  | (as above) |
+| i-28-w5 | israeli/word/i-28-w5.mp3 | סְלִיחוֹת |  | (as above) |
+| i-28-w6 | israeli/word/i-28-w6.mp3 | תְּשׁוּבָה |  | (as above) |
+| i-28-w7 | israeli/word/i-28-w7.mp3 | שָׁנָה טוֹבָה |  | (as above) |
+| i-28-w8 | israeli/word/i-28-w8.mp3 | בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ |  | (as above) |
+| i-28-w9 | israeli/word/i-28-w9.mp3 | שְׁמַע יִשְׂרָאֵל |  | (as above) |
+| i-28-w10 | israeli/word/i-28-w10.mp3 | מָגֵן |  | (as above) |
+| i-28-w11 | israeli/word/i-28-w11.mp3 | שָׁלוֹם |  | (as above) |
+| i-28-w12 | israeli/word/i-28-w12.mp3 | רַחֲמִים |  | (as above) |
+| i-29-w1 | israeli/word/i-29-w1.mp3 | פֶּסַח |  | (as above) |
+| i-29-w2 | israeli/word/i-29-w2.mp3 | מַצָּה |  | (as above) |
+| i-29-w3 | israeli/word/i-29-w3.mp3 | חָמֵץ |  | (as above) |
+| i-29-w4 | israeli/word/i-29-w4.mp3 | סֵדֶר |  | (as above) |
+| i-29-w5 | israeli/word/i-29-w5.mp3 | חַג שָׂמֵחַ |  | (as above) |
+| i-29-w6 | israeli/word/i-29-w6.mp3 | זֵכֶר לִיצִיאַת מִצְרָיִם |  | (as above) |
+| i-29-w7 | israeli/word/i-29-w7.mp3 | מִי כָמֹכָה |  | (as above) |
+| i-29-w8 | israeli/word/i-29-w8.mp3 | שֶׁהֶחֱיָינוּ |  | (as above) |
+| i-29-w9 | israeli/word/i-29-w9.mp3 | בּוֹרֵא פְּרִי הַגָּפֶן |  | (as above) |
+| i-29-w10 | israeli/word/i-29-w10.mp3 | עֲבָדִים |  | (as above) |
+| i-29-w11 | israeli/word/i-29-w11.mp3 | מִצְרַיִם |  | (as above) |
+| i-29-w12 | israeli/word/i-29-w12.mp3 | קִדּוּשׁ |  | (as above) |
+| i-30-w1 | israeli/word/i-30-w1.mp3 | סֻכָּה |  | (as above) |
+| i-30-w2 | israeli/word/i-30-w2.mp3 | חַג |  | (as above) |
+| i-30-w3 | israeli/word/i-30-w3.mp3 | חַג שָׂמֵחַ |  | (as above) |
+| i-30-w4 | israeli/word/i-30-w4.mp3 | שֶׁהֶחֱיָינוּ |  | (as above) |
+| i-30-w5 | israeli/word/i-30-w5.mp3 | לַזְּמַן הַזֶּה |  | (as above) |
+| i-30-w6 | israeli/word/i-30-w6.mp3 | בּוֹרֵא פְּרִי הַגָּפֶן |  | (as above) |
+| i-30-w7 | israeli/word/i-30-w7.mp3 | הַמּוֹצִיא לֶחֶם |  | (as above) |
+| i-30-w8 | israeli/word/i-30-w8.mp3 | מִצְוָה |  | (as above) |
+| i-30-w9 | israeli/word/i-30-w9.mp3 | בְּמִצְוֹתָיו |  | (as above) |
+| i-30-w10 | israeli/word/i-30-w10.mp3 | שִׂמְחָה |  | (as above) |
+| i-30-w11 | israeli/word/i-30-w11.mp3 | הוֹשִׁיעָה |  | (as above) |
+| i-30-w12 | israeli/word/i-30-w12.mp3 | אוֹרְחִים |  | (as above) |
+| i-31-w1 | israeli/word/i-31-w1.mp3 | פּוּרִים |  | (as above) |
+| i-31-w2 | israeli/word/i-31-w2.mp3 | פּוּר |  | (as above) |
+| i-31-w3 | israeli/word/i-31-w3.mp3 | שָׂמֵחַ |  | (as above) |
+| i-31-w4 | israeli/word/i-31-w4.mp3 | נִסִּים |  | (as above) |
+| i-31-w5 | israeli/word/i-31-w5.mp3 | שֶׁעָשָׂה נִסִּים |  | (as above) |
+| i-31-w6 | israeli/word/i-31-w6.mp3 | לַאֲבוֹתֵינוּ |  | (as above) |
+| i-31-w7 | israeli/word/i-31-w7.mp3 | בַּיָּמִים הָהֵם |  | (as above) |
+| i-31-w8 | israeli/word/i-31-w8.mp3 | בַּזְּמַן הַזֶּה |  | (as above) |
+| i-31-w9 | israeli/word/i-31-w9.mp3 | שִׂמְחָה |  | (as above) |
+| i-31-w10 | israeli/word/i-31-w10.mp3 | מַשְׁקֶה |  | (as above) |
+| i-31-w11 | israeli/word/i-31-w11.mp3 | לְחַיִּים |  | (as above) |
+| i-32-w1 | israeli/word/i-32-w1.mp3 | חֲנֻכָּה |  | (as above) |
+| i-32-w2 | israeli/word/i-32-w2.mp3 | לְהַדְלִיק |  | (as above) |
+| i-32-w3 | israeli/word/i-32-w3.mp3 | נֵר |  | (as above) |
+| i-32-w4 | israeli/word/i-32-w4.mp3 | נֵרוֹת |  | (as above) |
+| i-32-w5 | israeli/word/i-32-w5.mp3 | שֶׁעָשָׂה נִסִּים |  | (as above) |
+| i-32-w6 | israeli/word/i-32-w6.mp3 | הַתְּשׁוּעוֹת |  | (as above) |
+| i-32-w7 | israeli/word/i-32-w7.mp3 | הַנִּפְלָאוֹת |  | (as above) |
+| i-32-w8 | israeli/word/i-32-w8.mp3 | כֹּהֲנֶיךָ |  | (as above) |
+| i-32-w9 | israeli/word/i-32-w9.mp3 | מָעוֹז צוּר |  | (as above) |
+| i-32-w10 | israeli/word/i-32-w10.mp3 | יְשׁוּעָתִי |  | (as above) |
+| i-32-w11 | israeli/word/i-32-w11.mp3 | שְׁמוֹנַת יְמֵי חֲנֻכָּה |  | (as above) |
+| i-32-w12 | israeli/word/i-32-w12.mp3 | שֶׁהֶחֱיָינוּ |  | (as above) |
+| i-33-w1 | israeli/word/i-33-w1.mp3 | רַבּוֹתַי נְבָרֵךְ |  | (as above) |
+| i-33-w2 | israeli/word/i-33-w2.mp3 | יְהִי שֵׁם יְהוָה מְבֹרָךְ |  | (as above) |
+| i-33-w3 | israeli/word/i-33-w3.mp3 | מֵעַתָּה וְעַד עוֹלָם |  | (as above) |
+| i-33-w4 | israeli/word/i-33-w4.mp3 | הַזָּן אֶת הָעוֹלָם |  | (as above) |
+| i-33-w5 | israeli/word/i-33-w5.mp3 | כֻּלּוֹ |  | (as above) |
+| i-33-w6 | israeli/word/i-33-w6.mp3 | בְּטוּבוֹ |  | (as above) |
+| i-33-w7 | israeli/word/i-33-w7.mp3 | בְּחֵן בְּחֶסֶד וּבְרַחֲמִים |  | (as above) |
+| i-33-w8 | israeli/word/i-33-w8.mp3 | לֶחֶם |  | (as above) |
+| i-33-w9 | israeli/word/i-33-w9.mp3 | לְכָל בָּשָׂר |  | (as above) |
+| i-33-w10 | israeli/word/i-33-w10.mp3 | שִׁיר הַמַּעֲלוֹת |  | (as above) |
+| i-33-w11 | israeli/word/i-33-w11.mp3 | צִיּוֹן |  | (as above) |
+| i-33-w12 | israeli/word/i-33-w12.mp3 | שְׂמֵחִים |  | (as above) |
+| i-34-w1 | israeli/word/i-34-w1.mp3 | הַגּוֹמֵל |  | (as above) |
+| i-34-w2 | israeli/word/i-34-w2.mp3 | לְחַיָּבִים טוֹבוֹת |  | (as above) |
+| i-34-w3 | israeli/word/i-34-w3.mp3 | שֶׁגְּמָלַנִי כָּל טוֹב |  | (as above) |
+| i-34-w4 | israeli/word/i-34-w4.mp3 | דֶּרֶךְ |  | (as above) |
+| i-34-w5 | israeli/word/i-34-w5.mp3 | נְסִיעָה |  | (as above) |
+| i-34-w6 | israeli/word/i-34-w6.mp3 | לְשָׁלוֹם |  | (as above) |
+| i-34-w7 | israeli/word/i-34-w7.mp3 | בַּשָּׁלוֹם |  | (as above) |
+| i-34-w8 | israeli/word/i-34-w8.mp3 | עֹשֶׂה שָׁלוֹם |  | (as above) |
+| i-34-w9 | israeli/word/i-34-w9.mp3 | יִשָּׂא יְהוָה פָּנָיו |  | (as above) |
+| i-34-w10 | israeli/word/i-34-w10.mp3 | כֵּן יְהִי רָצוֹן |  | (as above) |
+| i-34-w11 | israeli/word/i-34-w11.mp3 | שֶׁהֶחֱיָינוּ |  | (as above) |
+| i-35-w1 | israeli/word/i-35-w1.mp3 | וְשָׁמְרוּ |  | (as above) |
+| i-35-w2 | israeli/word/i-35-w2.mp3 | בְּרִית עוֹלָם |  | (as above) |
+| i-35-w3 | israeli/word/i-35-w3.mp3 | אוֹת |  | (as above) |
+| i-35-w4 | israeli/word/i-35-w4.mp3 | זָכוֹר |  | (as above) |
+| i-35-w5 | israeli/word/i-35-w5.mp3 | לְקַדְּשׁוֹ |  | (as above) |
+| i-35-w6 | israeli/word/i-35-w6.mp3 | שֵׁשֶׁת יָמִים |  | (as above) |
+| i-35-w7 | israeli/word/i-35-w7.mp3 | הַשְּׁבִיעִי |  | (as above) |
+| i-35-w8 | israeli/word/i-35-w8.mp3 | יַיִן |  | (as above) |
+| i-35-w9 | israeli/word/i-35-w9.mp3 | לֶחֶם |  | (as above) |
+| i-35-w10 | israeli/word/i-35-w10.mp3 | בֵּרַךְ |  | (as above) |
+| i-35-w11 | israeli/word/i-35-w11.mp3 | וַיְקַדְּשֵׁהוּ |  | (as above) |
+| i-35-w12 | israeli/word/i-35-w12.mp3 | שַׁבָּת |  | (as above) |
+| i-36-w1 | israeli/word/i-36-w1.mp3 | עֲבוֹדָה |  | (as above) |
+| i-36-w2 | israeli/word/i-36-w2.mp3 | מִשְׂרָד |  | (as above) |
+| i-36-w3 | israeli/word/i-36-w3.mp3 | פְּגִישָׁה |  | (as above) |
+| i-36-w4 | israeli/word/i-36-w4.mp3 | מְנַהֵל |  | (as above) |
+| i-36-w5 | israeli/word/i-36-w5.mp3 | לָקוֹחַ |  | (as above) |
+| i-36-w6 | israeli/word/i-36-w6.mp3 | מַעֲסִיק |  | (as above) |
+| i-36-w7 | israeli/word/i-36-w7.mp3 | רֵאָיוֹן |  | (as above) |
+| i-36-w8 | israeli/word/i-36-w8.mp3 | הוֹדָעָה |  | (as above) |
+| i-36-w9 | israeli/word/i-36-w9.mp3 | מָחָר |  | (as above) |
+| i-36-w10 | israeli/word/i-36-w10.mp3 | הַיּוֹם |  | (as above) |
+| i-36-w11 | israeli/word/i-36-w11.mp3 | עוֹבֵד |  | (as above) |
+| i-36-w12 | israeli/word/i-36-w12.mp3 | רֶגַע |  | (as above) |
+| i-37-w1 | israeli/word/i-37-w1.mp3 | אוּנִיבֶרְסִיטָה |  | (as above) |
+| i-37-w2 | israeli/word/i-37-w2.mp3 | מוֹרֶה |  | (as above) |
+| i-37-w3 | israeli/word/i-37-w3.mp3 | מְרַצֶּה |  | (as above) |
+| i-37-w4 | israeli/word/i-37-w4.mp3 | פְּרוֹפֶסוֹר |  | (as above) |
+| i-37-w5 | israeli/word/i-37-w5.mp3 | מִבְחָן |  | (as above) |
+| i-37-w6 | israeli/word/i-37-w6.mp3 | שִׁעוּר |  | (as above) |
+| i-37-w7 | israeli/word/i-37-w7.mp3 | סֵפֶר |  | (as above) |
+| i-37-w8 | israeli/word/i-37-w8.mp3 | מִלְגָּה |  | (as above) |
+| i-37-w9 | israeli/word/i-37-w9.mp3 | קוֹרֵס |  | (as above) |
+| i-37-w10 | israeli/word/i-37-w10.mp3 | הַיּוֹם |  | (as above) |
+| i-37-w11 | israeli/word/i-37-w11.mp3 | מָחָר |  | (as above) |
+| i-37-w12 | israeli/word/i-37-w12.mp3 | חָבֵר |  | (as above) |
+| i-38-w1 | israeli/word/i-38-w1.mp3 | יָפֶה |  | (as above) |
+| i-38-w2 | israeli/word/i-38-w2.mp3 | חָמוּד |  | (as above) |
+| i-38-w3 | israeli/word/i-38-w3.mp3 | מִסְעָדָה |  | (as above) |
+| i-38-w4 | israeli/word/i-38-w4.mp3 | סֶרֶט |  | (as above) |
+| i-38-w5 | israeli/word/i-38-w5.mp3 | חָבֵר |  | (as above) |
+| i-38-w6 | israeli/word/i-38-w6.mp3 | חֲבֵרָה |  | (as above) |
+| i-38-w7 | israeli/word/i-38-w7.mp3 | אֶפְשָׁר לָצֵאת |  | (as above) |
+| i-38-w8 | israeli/word/i-38-w8.mp3 | בֶּאֱמֶת? |  | (as above) |
+| i-38-w9 | israeli/word/i-38-w9.mp3 | מָתַי? |  | (as above) |
+| i-38-w10 | israeli/word/i-38-w10.mp3 | הָעֶרֶב |  | (as above) |
+| i-38-w11 | israeli/word/i-38-w11.mp3 | מָחָר |  | (as above) |
+| i-38-w12 | israeli/word/i-38-w12.mp3 | בְּשִׂמְחָה |  | (as above) |
+| i-39-w1 | israeli/word/i-39-w1.mp3 | מְכוֹנִית |  | (as above) |
+| i-39-w2 | israeli/word/i-39-w2.mp3 | כְּבִישׁ |  | (as above) |
+| i-39-w3 | israeli/word/i-39-w3.mp3 | תַּמְרוּר |  | (as above) |
+| i-39-w4 | israeli/word/i-39-w4.mp3 | דֶּלֶק |  | (as above) |
+| i-39-w5 | israeli/word/i-39-w5.mp3 | חֲנָיָה |  | (as above) |
+| i-39-w6 | israeli/word/i-39-w6.mp3 | מָנוֹעַ |  | (as above) |
+| i-39-w7 | israeli/word/i-39-w7.mp3 | צְמִיג |  | (as above) |
+| i-39-w8 | israeli/word/i-39-w8.mp3 | נָתִיב |  | (as above) |
+| i-39-w9 | israeli/word/i-39-w9.mp3 | רִמְזוּר |  | (as above) |
+| i-39-w10 | israeli/word/i-39-w10.mp3 | יָשָׁר |  | (as above) |
+| i-39-w11 | israeli/word/i-39-w11.mp3 | עֲצֹר |  | (as above) |
+| i-39-w12 | israeli/word/i-39-w12.mp3 | לְאַט |  | (as above) |
+| i-40-w1 | israeli/word/i-40-w1.mp3 | טִיּוּל |  | (as above) |
+| i-40-w2 | israeli/word/i-40-w2.mp3 | מַסְלוּל |  | (as above) |
+| i-40-w3 | israeli/word/i-40-w3.mp3 | הַר |  | (as above) |
+| i-40-w4 | israeli/word/i-40-w4.mp3 | נַחַל |  | (as above) |
+| i-40-w5 | israeli/word/i-40-w5.mp3 | שְׁבִיל |  | (as above) |
+| i-40-w6 | israeli/word/i-40-w6.mp3 | מַיִם |  | (as above) |
+| i-40-w7 | israeli/word/i-40-w7.mp3 | מִפָּה |  | (as above) |
+| i-40-w8 | israeli/word/i-40-w8.mp3 | כּוֹבַע |  | (as above) |
+| i-40-w9 | israeli/word/i-40-w9.mp3 | שֶׁמֶשׁ |  | (as above) |
+| i-40-w10 | israeli/word/i-40-w10.mp3 | חַם |  | (as above) |
+| i-40-w11 | israeli/word/i-40-w11.mp3 | רָחוֹק |  | (as above) |
+| i-40-w12 | israeli/word/i-40-w12.mp3 | קָרוֹב |  | (as above) |
+| i-41-w1 | israeli/word/i-41-w1.mp3 | חוֹף |  | (as above) |
+| i-41-w2 | israeli/word/i-41-w2.mp3 | יָם |  | (as above) |
+| i-41-w3 | israeli/word/i-41-w3.mp3 | חוֹל |  | (as above) |
+| i-41-w4 | israeli/word/i-41-w4.mp3 | גַּל |  | (as above) |
+| i-41-w5 | israeli/word/i-41-w5.mp3 | מַגֶּבֶת |  | (as above) |
+| i-41-w6 | israeli/word/i-41-w6.mp3 | שֶׁמֶשׁ |  | (as above) |
+| i-41-w7 | israeli/word/i-41-w7.mp3 | מַיִם |  | (as above) |
+| i-41-w8 | israeli/word/i-41-w8.mp3 | חַם |  | (as above) |
+| i-41-w9 | israeli/word/i-41-w9.mp3 | קַר |  | (as above) |
+| i-41-w10 | israeli/word/i-41-w10.mp3 | כּוֹבַע |  | (as above) |
+| i-41-w11 | israeli/word/i-41-w11.mp3 | בֶּגֶד |  | (as above) |
+| i-41-w12 | israeli/word/i-41-w12.mp3 | סַכָּנָה |  | (as above) |
+| i-42-w1 | israeli/word/i-42-w1.mp3 | יֶלֶד |  | (as above) |
+| i-42-w2 | israeli/word/i-42-w2.mp3 | יַלְדָּה |  | (as above) |
+| i-42-w3 | israeli/word/i-42-w3.mp3 | יְלָדִים |  | (as above) |
+| i-42-w4 | israeli/word/i-42-w4.mp3 | תִּינוֹק |  | (as above) |
+| i-42-w5 | israeli/word/i-42-w5.mp3 | גַּן |  | (as above) |
+| i-42-w6 | israeli/word/i-42-w6.mp3 | מוֹרָה |  | (as above) |
+| i-42-w7 | israeli/word/i-42-w7.mp3 | מוֹרֶה |  | (as above) |
+| i-42-w8 | israeli/word/i-42-w8.mp3 | מִשְׂחָק |  | (as above) |
+| i-42-w9 | israeli/word/i-42-w9.mp3 | אִמָּא |  | (as above) |
+| i-42-w10 | israeli/word/i-42-w10.mp3 | אַבָּא |  | (as above) |
+| i-42-w11 | israeli/word/i-42-w11.mp3 | בֵּן כַּמָּה? |  | (as above) |
+| i-42-w12 | israeli/word/i-42-w12.mp3 | חָמוּד |  | (as above) |
+| i-43-w1 | israeli/word/i-43-w1.mp3 | קְנִיּוֹת |  | (as above) |
+| i-43-w2 | israeli/word/i-43-w2.mp3 | עֲגָלָה |  | (as above) |
+| i-43-w3 | israeli/word/i-43-w3.mp3 | חָלָב |  | (as above) |
+| i-43-w4 | israeli/word/i-43-w4.mp3 | בֵּיצִים |  | (as above) |
+| i-43-w5 | israeli/word/i-43-w5.mp3 | לֶחֶם |  | (as above) |
+| i-43-w6 | israeli/word/i-43-w6.mp3 | פֵּרוֹת |  | (as above) |
+| i-43-w7 | israeli/word/i-43-w7.mp3 | מְחִיר |  | (as above) |
+| i-43-w8 | israeli/word/i-43-w8.mp3 | מְזֻמָּן |  | (as above) |
+| i-43-w9 | israeli/word/i-43-w9.mp3 | שַׂקִּית |  | (as above) |
+| i-43-w10 | israeli/word/i-43-w10.mp3 | קַבָּלָה |  | (as above) |
+| i-43-w11 | israeli/word/i-43-w11.mp3 | הַנָּחָה |  | (as above) |
+| i-44-w1 | israeli/word/i-44-w1.mp3 | שָׁבוּר |  | (as above) |
+| i-44-w2 | israeli/word/i-44-w2.mp3 | מַנְעוּל |  | (as above) |
+| i-44-w3 | israeli/word/i-44-w3.mp3 | דֶּלֶת |  | (as above) |
+| i-44-w4 | israeli/word/i-44-w4.mp3 | חַשְׁמַל |  | (as above) |
+| i-44-w5 | israeli/word/i-44-w5.mp3 | חַשְׁמַלַּאי |  | (as above) |
+| i-44-w6 | israeli/word/i-44-w6.mp3 | מְקָרֵר |  | (as above) |
+| i-44-w7 | israeli/word/i-44-w7.mp3 | קִיר |  | (as above) |
+| i-44-w8 | israeli/word/i-44-w8.mp3 | בַּעַל הַבַּיִת |  | (as above) |
+| i-44-w9 | israeli/word/i-44-w9.mp3 | מָתַי? |  | (as above) |
+| i-44-w10 | israeli/word/i-44-w10.mp3 | דָּחוּף |  | (as above) |
+| i-44-w11 | israeli/word/i-44-w11.mp3 | עֶזְרָה |  | (as above) |
+| i-44-w12 | israeli/word/i-44-w12.mp3 | תּוֹר |  | (as above) |
+| i-45-w1 | israeli/word/i-45-w1.mp3 | מִשְׁלוֹחַ |  | (as above) |
+| i-45-w2 | israeli/word/i-45-w2.mp3 | הַזְמָנָה |  | (as above) |
+| i-45-w3 | israeli/word/i-45-w3.mp3 | שָׁלִיחַ |  | (as above) |
+| i-45-w4 | israeli/word/i-45-w4.mp3 | פִּיצָה |  | (as above) |
+| i-45-w5 | israeli/word/i-45-w5.mp3 | כְּתֹבֶת |  | (as above) |
+| i-45-w6 | israeli/word/i-45-w6.mp3 | קוֹמָה |  | (as above) |
+| i-45-w7 | israeli/word/i-45-w7.mp3 | דֶּלֶת |  | (as above) |
+| i-45-w8 | israeli/word/i-45-w8.mp3 | סָלָט |  | (as above) |
+| i-45-w9 | israeli/word/i-45-w9.mp3 | מַיִם |  | (as above) |
+| i-45-w10 | israeli/word/i-45-w10.mp3 | כַּמָּה זְמַן |  | (as above) |
+| i-45-w11 | israeli/word/i-45-w11.mp3 | טָעִים |  | (as above) |
+| i-45-w12 | israeli/word/i-45-w12.mp3 | תּוֹדָה |  | (as above) |
+| i-46-w1 | israeli/word/i-46-w1.mp3 | חֵרוּם |  | (as above) |
+| i-46-w2 | israeli/word/i-46-w2.mp3 | מִשְׁטָרָה |  | (as above) |
+| i-46-w3 | israeli/word/i-46-w3.mp3 | אַמְבּוּלַנְס |  | (as above) |
+| i-46-w4 | israeli/word/i-46-w4.mp3 | סַכָּנָה |  | (as above) |
+| i-46-w5 | israeli/word/i-46-w5.mp3 | דָּחוּף |  | (as above) |
+| i-46-w6 | israeli/word/i-46-w6.mp3 | שְׂרֵפָה |  | (as above) |
+| i-46-w7 | israeli/word/i-46-w7.mp3 | גַּנָּב |  | (as above) |
+| i-46-w8 | israeli/word/i-46-w8.mp3 | עֶזְרָה! |  | (as above) |
+| i-46-w9 | israeli/word/i-46-w9.mp3 | רוֹפֵא |  | (as above) |
+| i-46-w10 | israeli/word/i-46-w10.mp3 | אָבַד לִי |  | (as above) |
+| i-46-w11 | israeli/word/i-46-w11.mp3 | הַדַּרְכּוֹן |  | (as above) |
+| i-46-w12 | israeli/word/i-46-w12.mp3 | טֶלֶפוֹן |  | (as above) |
+| i-47-w1 | israeli/word/i-47-w1.mp3 | חֲדָשׁוֹת |  | (as above) |
+| i-47-w2 | israeli/word/i-47-w2.mp3 | מֶמְשָׁלָה |  | (as above) |
+| i-47-w3 | israeli/word/i-47-w3.mp3 | בְּחִירוֹת |  | (as above) |
+| i-47-w4 | israeli/word/i-47-w4.mp3 | מִלְחָמָה |  | (as above) |
+| i-47-w5 | israeli/word/i-47-w5.mp3 | שָׁלוֹם |  | (as above) |
+| i-47-w6 | israeli/word/i-47-w6.mp3 | מְחִיר |  | (as above) |
+| i-47-w7 | israeli/word/i-47-w7.mp3 | רִבִּית |  | (as above) |
+| i-47-w8 | israeli/word/i-47-w8.mp3 | הַיּוֹם |  | (as above) |
+| i-47-w9 | israeli/word/i-47-w9.mp3 | מָחָר |  | (as above) |
+| i-47-w10 | israeli/word/i-47-w10.mp3 | אֶתְמוֹל |  | (as above) |
+| i-47-w11 | israeli/word/i-47-w11.mp3 | אֵין |  | (as above) |
+| i-47-w12 | israeli/word/i-47-w12.mp3 | יֵשׁ |  | (as above) |
+| i-48-w1 | israeli/word/i-48-w1.mp3 | חֶשְׁבּוֹן |  | (as above) |
+| i-48-w2 | israeli/word/i-48-w2.mp3 | מִסְפָּר |  | (as above) |
+| i-48-w3 | israeli/word/i-48-w3.mp3 | חֲתִימָה |  | (as above) |
+| i-48-w4 | israeli/word/i-48-w4.mp3 | שֵׁם |  | (as above) |
+| i-48-w5 | israeli/word/i-48-w5.mp3 | כְּתֹבֶת |  | (as above) |
+| i-48-w6 | israeli/word/i-48-w6.mp3 | טֶלֶפוֹן |  | (as above) |
+| i-48-w7 | israeli/word/i-48-w7.mp3 | הַיּוֹם |  | (as above) |
+| i-48-w8 | israeli/word/i-48-w8.mp3 | שָׁנָה |  | (as above) |
+| i-48-w9 | israeli/word/i-48-w9.mp3 | חֹדֶשׁ |  | (as above) |
+| i-48-w10 | israeli/word/i-48-w10.mp3 | הַלְוָאָה |  | (as above) |
+| i-48-w11 | israeli/word/i-48-w11.mp3 | כֶּסֶף |  | (as above) |
+| i-48-w12 | israeli/word/i-48-w12.mp3 | בַּנְק |  | (as above) |
+| i-49-w1 | israeli/word/i-49-w1.mp3 | הוֹדָעָה |  | (as above) |
+| i-49-w2 | israeli/word/i-49-w2.mp3 | תְּמוּנָה |  | (as above) |
+| i-49-w3 | israeli/word/i-49-w3.mp3 | פְּרוֹפִיל |  | (as above) |
+| i-49-w4 | israeli/word/i-49-w4.mp3 | סִיסְמָה |  | (as above) |
+| i-49-w5 | israeli/word/i-49-w5.mp3 | אִינְטֶרְנֶט |  | (as above) |
+| i-49-w6 | israeli/word/i-49-w6.mp3 | טֶלֶפוֹן |  | (as above) |
+| i-49-w7 | israeli/word/i-49-w7.mp3 | חָבֵר |  | (as above) |
+| i-49-w8 | israeli/word/i-49-w8.mp3 | חֲבֵרָה |  | (as above) |
+| i-49-w9 | israeli/word/i-49-w9.mp3 | אֶפְשָׁר לִשְׁלֹחַ |  | (as above) |
+| i-49-w10 | israeli/word/i-49-w10.mp3 | שׁוֹלֵחַ |  | (as above) |
+| i-49-w11 | israeli/word/i-49-w11.mp3 | רֶגַע |  | (as above) |
+| i-49-w12 | israeli/word/i-49-w12.mp3 | בְּסֵדֶר |  | (as above) |
+| i-50-w1 | israeli/word/i-50-w1.mp3 | שַׁבָּת שָׁלוֹם |  | (as above) |
+| i-50-w2 | israeli/word/i-50-w2.mp3 | שָׁבוּעַ טוֹב |  | (as above) |
+| i-50-w3 | israeli/word/i-50-w3.mp3 | חַג שָׂמֵחַ |  | (as above) |
+| i-50-w4 | israeli/word/i-50-w4.mp3 | שָׁנָה טוֹבָה |  | (as above) |
+| i-50-w5 | israeli/word/i-50-w5.mp3 | מַזָּל טוֹב |  | (as above) |
+| i-50-w6 | israeli/word/i-50-w6.mp3 | לְחַיִּים |  | (as above) |
+| i-50-w7 | israeli/word/i-50-w7.mp3 | בְּהַצְלָחָה |  | (as above) |
+| i-50-w8 | israeli/word/i-50-w8.mp3 | תִּשְׁמֹר עַל עַצְמְךָ |  | (as above) |
+| i-50-w9 | israeli/word/i-50-w9.mp3 | לִבְרִיאוּת |  | (as above) |
+| i-50-w10 | israeli/word/i-50-w10.mp3 | בְּעֶזְרַת הַשֵּׁם |  | (as above) |
+| i-50-w11 | israeli/word/i-50-w11.mp3 | יוֹם נָעִים |  | (as above) |
+| i-50-w12 | israeli/word/i-50-w12.mp3 | סְלִיחָה |  | (as above) |
 
 ## Survival phrasebook (Israeli only)
 
@@ -809,7 +1444,7 @@ Takes per clip: 2. Clips: 129.
 | gadlu | israeli/line/gadlu.mp3 | גַּדְּלוּ לַיהוָה אִתִּי וּנְרוֹמְמָה שְׁמוֹ יַחְדָּו׃ |  | (as above) |
 | yehalelu-l1 | israeli/line/yehalelu-l1.mp3 | יְהַלְלוּ אֶת־שֵׁם אֲדֹנָי כִּי־נִשְׂגָּב שְׁמוֹ לְבַדּוֹ הוֹדוֹ עַל־אֶרֶץ וְשָׁמָיִם׃ |  | (as above) |
 | yehalelu-l2 | israeli/line/yehalelu-l2.mp3 | וַיָּרֶם קֶרֶן לְעַמּוֹ תְּהִלָּה לְכָל־חֲסִידָיו לִבְנֵי יִשְׂרָאֵל עַם־קְרֹבוֹ הַלְלוּ־יָהּ׃ |  | (as above) |
-| hashivenu | israeli/line/hashivenu.mp3 | הֲשִׁיבֵנוּ אֲדֹנָי אֵלֶיךָ חַדֵּשׁ יָמֵינוּ כְּקֶדֶם׃ |  | (as above) |
+| hashivenu | israeli/line/hashivenu.mp3 | הֲשִׁיבֵנוּ אֲדֹנָי אֵלֶיךָ וְנָשׁוּבָה חַדֵּשׁ יָמֵינוּ כְּקֶדֶם׃ |  | (as above) |
 | kedushah-kadosh | israeli/line/kedushah-kadosh.mp3 | וְקָרָא זֶה אֶל־זֶה וְאָמַר קָדוֹשׁ קָדוֹשׁ קָדוֹשׁ אֲדֹנָי צְבָאוֹת מְלֹא כָל־הָאָרֶץ כְּבוֹדוֹ׃ |  | (as above) |
 | kedushah-baruch | israeli/line/kedushah-baruch.mp3 | בָּרוּךְ כְּבוֹד־יְהוָה מִמְּקוֹמוֹ׃ |  | (as above) |
 | kedushah-yimloch | israeli/line/kedushah-yimloch.mp3 | יִמְלֹךְ אֲדֹנָי לְעוֹלָם אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר הַלְלוּ־יָהּ׃ |  | (as above) |
@@ -828,7 +1463,7 @@ Takes per clip: 2. Clips: 129.
 | shir-hamaalot-l1 | israeli/line/shir-hamaalot-l1.mp3 | שִׁיר הַמַּעֲלוֹת בְּשׁוּב אֲדֹנָי אֶת־שִׁיבַת צִיּוֹן הָיִינוּ כְּחֹלְמִים׃ |  | (as above) |
 | shir-hamaalot-l2 | israeli/line/shir-hamaalot-l2.mp3 | אָז יִמָּלֵא שְׂחוֹק פִּינוּ וּלְשׁוֹנֵנוּ רִנָּה אָז יֹאמְרוּ בַגּוֹיִם הִגְדִּיל אֲדֹנָי לַעֲשׂוֹת עִם־אֵלֶּה׃ |  | (as above) |
 | shir-hamaalot-l3 | israeli/line/shir-hamaalot-l3.mp3 | הִגְדִּיל אֲדֹנָי לַעֲשׂוֹת עִמָּנוּ הָיִינוּ שְׂמֵחִים׃ |  | (as above) |
-| shir-hamaalot-l4 | israeli/line/shir-hamaalot-l4.mp3 | שׁוּבָה אֲדֹנָי אֶת־כַּאֲפִיקִים בַּנֶּגֶב׃ |  | (as above) |
+| shir-hamaalot-l4 | israeli/line/shir-hamaalot-l4.mp3 | שׁוּבָה אֲדֹנָי אֶת־שְׁבִיתֵנוּ כַּאֲפִיקִים בַּנֶּגֶב׃ |  | (as above) |
 | shir-hamaalot-l5 | israeli/line/shir-hamaalot-l5.mp3 | הַזֹּרְעִים בְּדִמְעָה בְּרִנָּה יִקְצֹרוּ׃ |  | (as above) |
 | shir-hamaalot-l6 | israeli/line/shir-hamaalot-l6.mp3 | הָלוֹךְ יֵלֵךְ וּבָכֹה נֹשֵׂא מֶשֶׁךְ־הַזָּרַע בֹּא־יָבוֹא בְרִנָּה נֹשֵׂא אֲלֻמֹּתָיו׃ |  | (as above) |
 | vayehi-binsoa | israeli/line/vayehi-binsoa.mp3 | וַיְהִי בִּנְסֹעַ הָאָרֹן וַיֹאמֶר מֹשֶׁה קוּמָה אֲדֹנָי וְיָפֻצוּ אֹיְבֶיךָ וְיָנֻסוּ מְשַׂנְאֶיךָ מִפָּנֶיךָ׃ כִּי מִצִּיּוֹן תֵּצֵא תוֹרָה וּדְבַר אֲדֹנָי מִירוּשָׁלָםִ׃ בָּרוּךְ שֶׁנָּתַן תּוֹרָה לְעַמּוֹ יִשְׂרָאֵל בִּקְדֻשָּׁתוֹ׃ |  | (as above) |
@@ -880,7 +1515,7 @@ Takes per clip: 2. Clips: 129.
 
 ## Prayer words (one clip per word, for tap-to-hear)
 
-Takes per clip: 2. Clips: 1719.
+Takes per clip: 2. Clips: 1721.
 
 | id | file (under audio/<voice>/) | pointed Hebrew | IPA | direction |
 |---|---|---|---|---|
@@ -1492,9 +2127,10 @@ Takes per clip: 2. Clips: 1719.
 | hashivenu-w1 | israeli/word/hashivenu-w1.mp3 | הֲשִׁיבֵנוּ |  | (as above) |
 | hashivenu-w2 | israeli/word/hashivenu-w2.mp3 | אֲדֹנָי |  | (as above) |
 | hashivenu-w3 | israeli/word/hashivenu-w3.mp3 | אֵלֶיךָ |  | (as above) |
-| hashivenu-w4 | israeli/word/hashivenu-w4.mp3 | חַדֵּשׁ |  | (as above) |
-| hashivenu-w5 | israeli/word/hashivenu-w5.mp3 | יָמֵינוּ |  | (as above) |
-| hashivenu-w6 | israeli/word/hashivenu-w6.mp3 | כְּקֶדֶם׃ |  | (as above) |
+| hashivenu-w4 | israeli/word/hashivenu-w4.mp3 | וְנָשׁוּבָה |  | (as above) |
+| hashivenu-w5 | israeli/word/hashivenu-w5.mp3 | חַדֵּשׁ |  | (as above) |
+| hashivenu-w6 | israeli/word/hashivenu-w6.mp3 | יָמֵינוּ |  | (as above) |
+| hashivenu-w7 | israeli/word/hashivenu-w7.mp3 | כְּקֶדֶם׃ |  | (as above) |
 | kedushah-kadosh-w1 | israeli/word/kedushah-kadosh-w1.mp3 | וְקָרָא |  | (as above) |
 | kedushah-kadosh-w2 | israeli/word/kedushah-kadosh-w2.mp3 | זֶה |  | (as above) |
 | kedushah-kadosh-w3 | israeli/word/kedushah-kadosh-w3.mp3 | אֶל־זֶה |  | (as above) |
@@ -1654,21 +2290,22 @@ Takes per clip: 2. Clips: 1719.
 | shir-hamaalot-w27 | israeli/word/shir-hamaalot-w27.mp3 | שְׂמֵחִים׃ |  | (as above) |
 | shir-hamaalot-w28 | israeli/word/shir-hamaalot-w28.mp3 | שׁוּבָה |  | (as above) |
 | shir-hamaalot-w29 | israeli/word/shir-hamaalot-w29.mp3 | אֲדֹנָי |  | (as above) |
-| shir-hamaalot-w30 | israeli/word/shir-hamaalot-w30.mp3 | אֶת־כַּאֲפִיקִים |  | (as above) |
-| shir-hamaalot-w31 | israeli/word/shir-hamaalot-w31.mp3 | בַּנֶּגֶב׃ |  | (as above) |
-| shir-hamaalot-w32 | israeli/word/shir-hamaalot-w32.mp3 | הַזֹּרְעִים |  | (as above) |
-| shir-hamaalot-w33 | israeli/word/shir-hamaalot-w33.mp3 | בְּדִמְעָה |  | (as above) |
-| shir-hamaalot-w34 | israeli/word/shir-hamaalot-w34.mp3 | בְּרִנָּה |  | (as above) |
-| shir-hamaalot-w35 | israeli/word/shir-hamaalot-w35.mp3 | יִקְצֹרוּ׃ |  | (as above) |
-| shir-hamaalot-w36 | israeli/word/shir-hamaalot-w36.mp3 | הָלוֹךְ |  | (as above) |
-| shir-hamaalot-w37 | israeli/word/shir-hamaalot-w37.mp3 | יֵלֵךְ |  | (as above) |
-| shir-hamaalot-w38 | israeli/word/shir-hamaalot-w38.mp3 | וּבָכֹה |  | (as above) |
-| shir-hamaalot-w39 | israeli/word/shir-hamaalot-w39.mp3 | נֹשֵׂא |  | (as above) |
-| shir-hamaalot-w40 | israeli/word/shir-hamaalot-w40.mp3 | מֶשֶׁךְ־הַזָּרַע |  | (as above) |
-| shir-hamaalot-w41 | israeli/word/shir-hamaalot-w41.mp3 | בֹּא־יָבוֹא |  | (as above) |
-| shir-hamaalot-w42 | israeli/word/shir-hamaalot-w42.mp3 | בְרִנָּה |  | (as above) |
-| shir-hamaalot-w43 | israeli/word/shir-hamaalot-w43.mp3 | נֹשֵׂא |  | (as above) |
-| shir-hamaalot-w44 | israeli/word/shir-hamaalot-w44.mp3 | אֲלֻמֹּתָיו׃ |  | (as above) |
+| shir-hamaalot-w30 | israeli/word/shir-hamaalot-w30.mp3 | אֶת־שְׁבִיתֵנוּ |  | (as above) |
+| shir-hamaalot-w31 | israeli/word/shir-hamaalot-w31.mp3 | כַּאֲפִיקִים |  | (as above) |
+| shir-hamaalot-w32 | israeli/word/shir-hamaalot-w32.mp3 | בַּנֶּגֶב׃ |  | (as above) |
+| shir-hamaalot-w33 | israeli/word/shir-hamaalot-w33.mp3 | הַזֹּרְעִים |  | (as above) |
+| shir-hamaalot-w34 | israeli/word/shir-hamaalot-w34.mp3 | בְּדִמְעָה |  | (as above) |
+| shir-hamaalot-w35 | israeli/word/shir-hamaalot-w35.mp3 | בְּרִנָּה |  | (as above) |
+| shir-hamaalot-w36 | israeli/word/shir-hamaalot-w36.mp3 | יִקְצֹרוּ׃ |  | (as above) |
+| shir-hamaalot-w37 | israeli/word/shir-hamaalot-w37.mp3 | הָלוֹךְ |  | (as above) |
+| shir-hamaalot-w38 | israeli/word/shir-hamaalot-w38.mp3 | יֵלֵךְ |  | (as above) |
+| shir-hamaalot-w39 | israeli/word/shir-hamaalot-w39.mp3 | וּבָכֹה |  | (as above) |
+| shir-hamaalot-w40 | israeli/word/shir-hamaalot-w40.mp3 | נֹשֵׂא |  | (as above) |
+| shir-hamaalot-w41 | israeli/word/shir-hamaalot-w41.mp3 | מֶשֶׁךְ־הַזָּרַע |  | (as above) |
+| shir-hamaalot-w42 | israeli/word/shir-hamaalot-w42.mp3 | בֹּא־יָבוֹא |  | (as above) |
+| shir-hamaalot-w43 | israeli/word/shir-hamaalot-w43.mp3 | בְרִנָּה |  | (as above) |
+| shir-hamaalot-w44 | israeli/word/shir-hamaalot-w44.mp3 | נֹשֵׂא |  | (as above) |
+| shir-hamaalot-w45 | israeli/word/shir-hamaalot-w45.mp3 | אֲלֻמֹּתָיו׃ |  | (as above) |
 | vayehi-binsoa-w1 | israeli/word/vayehi-binsoa-w1.mp3 | וַיְהִי |  | (as above) |
 | vayehi-binsoa-w2 | israeli/word/vayehi-binsoa-w2.mp3 | בִּנְסֹעַ |  | (as above) |
 | vayehi-binsoa-w3 | israeli/word/vayehi-binsoa-w3.mp3 | הָאָרֹן |  | (as above) |
@@ -2606,7 +3243,7 @@ Takes per clip: 2. Clips: 1719.
 
 ## Other words
 
-Takes per clip: 2. Clips: 89.
+Takes per clip: 2. Clips: 1089.
 
 | id | file (under audio/<voice>/) | pointed Hebrew | IPA | direction |
 |---|---|---|---|---|
@@ -2699,6 +3336,1006 @@ Takes per clip: 2. Clips: 89.
 | small-talk-18-m | israeli/word/small-talk-18-m.mp3 | חָבֵר |  | (as above) |
 | small-talk-18-f | israeli/word/small-talk-18-f.mp3 | חֲבֵרָה |  | (as above) |
 | help-01 | israeli/word/help-01.mp3 | עֶזְרָה! |  | (as above) |
+| ha3cf2c46 | israeli/word/ha3cf2c46.mp3 | הִוָּה | hi.ˈva | (as above) |
+| h70669df5 | israeli/word/h70669df5.mp3 | בָּרוּךְ | ba.ˈʁuχ | (as above) |
+| ha39cf3c9 | israeli/word/ha39cf3c9.mp3 | עוֹלָם | o.ˈlam | (as above) |
+| h36d595e4 | israeli/word/h36d595e4.mp3 | אַתָּה | a.ˈta | (as above) |
+| h1ef19acb | israeli/word/h1ef19acb.mp3 | הוּא | ˈhu | (as above) |
+| h58d8d8fe | israeli/word/h58d8d8fe.mp3 | מֶלֶךְ | ˈme.leχ | (as above) |
+| h7c9d2ffe | israeli/word/h7c9d2ffe.mp3 | אֵת | ˈet | (as above) |
+| h50cf3648 | israeli/word/h50cf3648.mp3 | יוֹם | ˈjom | (as above) |
+| hdd2efa8e | israeli/word/hdd2efa8e.mp3 | עָשָׂה | a.ˈsa | (as above) |
+| hf8c8316a | israeli/word/hf8c8316a.mp3 | שָׁלוֹם | ʃa.ˈlom | (as above) |
+| ha5b5601c | israeli/word/ha5b5601c.mp3 | לוֹם | ˈlom | (as above) |
+| h103e7d27 | israeli/word/h103e7d27.mp3 | אֲנִי | a.ˈni | (as above) |
+| hb9aef784 | israeli/word/hb9aef784.mp3 | אֵל | ˈel | (as above) |
+| hb7b6cc8b | israeli/word/hb7b6cc8b.mp3 | כִּי | ˈki | (as above) |
+| h7d05bcca | israeli/word/h7d05bcca.mp3 | עַל | ˈal | (as above) |
+| h277eae86 | israeli/word/h277eae86.mp3 | עֹל | ˈol | (as above) |
+| ha8f1d06f | israeli/word/ha8f1d06f.mp3 | אֲשֶׁר | a.ˈʃeʁ | (as above) |
+| h68843f80 | israeli/word/h68843f80.mp3 | אֶל | ˈel | (as above) |
+| hd82a3079 | israeli/word/hd82a3079.mp3 | אֶרֶץ | ˈe.ʁets | (as above) |
+| h9d36c656 | israeli/word/h9d36c656.mp3 | אַל | ˈal | (as above) |
+| hea72b7d7 | israeli/word/hea72b7d7.mp3 | אִמֵּן | i.ˈmen | (as above) |
+| hc06c43b6 | israeli/word/hc06c43b6.mp3 | טוֹב | ˈtov | (as above) |
+| h8828bfb6 | israeli/word/h8828bfb6.mp3 | אֵין | ˈen | (as above) |
+| h9dabc184 | israeli/word/h9dabc184.mp3 | בֵּרֵךְ | be.ˈʁeχ | (as above) |
+| h16b7af50 | israeli/word/h16b7af50.mp3 | תּוֹרָה | to.ˈʁa | (as above) |
+| h8e3e6f50 | israeli/word/h8e3e6f50.mp3 | לֹא | ˈlo | (as above) |
+| h8982ad83 | israeli/word/h8982ad83.mp3 | נָתַן | na.ˈtan | (as above) |
+| h66252016 | israeli/word/h66252016.mp3 | אֶחָד | e.ˈχad | (as above) |
+| h5f11d31e | israeli/word/h5f11d31e.mp3 | טוּב | ˈtuv | (as above) |
+| hd2aa4e1a | israeli/word/hd2aa4e1a.mp3 | טוֹב | ˈtov | (as above) |
+| h67c6be75 | israeli/word/h67c6be75.mp3 | זֶה | ˈze | (as above) |
+| h39244df3 | israeli/word/h39244df3.mp3 | קָדוֹשׁ | ka.ˈdoʃ | (as above) |
+| h364cadf4 | israeli/word/h364cadf4.mp3 | מָה | ˈma | (as above) |
+| h39d32f55 | israeli/word/h39d32f55.mp3 | שָׂם | ˈsam | (as above) |
+| h65a05fb2 | israeli/word/h65a05fb2.mp3 | שֵׁם | ˈʃem | (as above) |
+| h8e3fbf43 | israeli/word/h8e3fbf43.mp3 | שָׁם | ˈʃam | (as above) |
+| hf2bba104 | israeli/word/hf2bba104.mp3 | שָׁם | ˈʃam | (as above) |
+| h8f42d584 | israeli/word/h8f42d584.mp3 | זְמַן | ze.ˈman | (as above) |
+| h51ed2ee5 | israeli/word/h51ed2ee5.mp3 | חַיִּים | χa.ˈjim | (as above) |
+| h9c8ddecf | israeli/word/h9c8ddecf.mp3 | בַּיִת | ˈba.jit | (as above) |
+| hd4a691d3 | israeli/word/hd4a691d3.mp3 | דָּבָר | da.ˈvaʁ | (as above) |
+| hc7113076 | israeli/word/hc7113076.mp3 | דַּבָּר | da.ˈbaʁ | (as above) |
+| h6b853dd5 | israeli/word/h6b853dd5.mp3 | אֱלֹהִים | e.lo.ˈhim | (as above) |
+| h7ac4d731 | israeli/word/h7ac4d731.mp3 | לְמַעַן | le.ma.ˈan | (as above) |
+| hba22ae3e | israeli/word/hba22ae3e.mp3 | חֶסֶד | ˈχe.sed | (as above) |
+| he5c23387 | israeli/word/he5c23387.mp3 | אֱמֶת | e.ˈmet | (as above) |
+| h14635975 | israeli/word/h14635975.mp3 | עוֹד | ˈod | (as above) |
+| h020c4fa8 | israeli/word/h020c4fa8.mp3 | עַם | ˈam | (as above) |
+| h412b4a37 | israeli/word/h412b4a37.mp3 | בֵּין | ˈben | (as above) |
+| h5c96df63 | israeli/word/h5c96df63.mp3 | מָן | ˈman | (as above) |
+| h6a0c1de1 | israeli/word/h6a0c1de1.mp3 | קֹדֶשׁ | ˈko.deʃ | (as above) |
+| he801fe52 | israeli/word/he801fe52.mp3 | שְׁבִיעִי | ʃe.vi.ˈi | (as above) |
+| h4692cd32 | israeli/word/h4692cd32.mp3 | יָם | ˈjam | (as above) |
+| h5e4080cc | israeli/word/h5e4080cc.mp3 | דִּבֵּר | di.ˈbeʁ | (as above) |
+| hffd88aa2 | israeli/word/hffd88aa2.mp3 | עָקַב | a.ˈkav | (as above) |
+| h9dcc35dc | israeli/word/h9dcc35dc.mp3 | כָּבוֹד | ka.ˈvod | (as above) |
+| h2a58afab | israeli/word/h2a58afab.mp3 | רֵאשִׁית | ʁe.ˈʃit | (as above) |
+| h8913b4db | israeli/word/h8913b4db.mp3 | מִי | ˈmi | (as above) |
+| hfe0c1c1e | israeli/word/hfe0c1c1e.mp3 | אִפְשֵׁר | if.ˈʃeʁ | (as above) |
+| ha7f96991 | israeli/word/ha7f96991.mp3 | הֵגֵן | he.ˈɡen | (as above) |
+| hddb7aae9 | israeli/word/hddb7aae9.mp3 | אָדוֹן | a.ˈdon | (as above) |
+| h470c7870 | israeli/word/h470c7870.mp3 | רָצוֹן | ʁa.ˈtson | (as above) |
+| h645365e7 | israeli/word/h645365e7.mp3 | רָצָה | ʁa.ˈtsa | (as above) |
+| h5d62592f | israeli/word/h5d62592f.mp3 | שָׁמַע | ʃa.ˈma | (as above) |
+| h4299f50f | israeli/word/h4299f50f.mp3 | יְשׁוּעָה | je.ʃu.ˈa | (as above) |
+| h2cd963e3 | israeli/word/h2cd963e3.mp3 | הָיָה | ha.ˈja | (as above) |
+| h28a30a60 | israeli/word/h28a30a60.mp3 | אָמַר | a.ˈmaʁ | (as above) |
+| hf22f36ee | israeli/word/hf22f36ee.mp3 | לֶחֶם | ˈle.χem | (as above) |
+| h5b150aaf | israeli/word/h5b150aaf.mp3 | אוֹר | ˈoʁ | (as above) |
+| hf63de22c | israeli/word/hf63de22c.mp3 | כֵּן | ˈken | (as above) |
+| ha3acfc14 | israeli/word/ha3acfc14.mp3 | צִיּוּן | tsi.ˈjun | (as above) |
+| h40502f8d | israeli/word/h40502f8d.mp3 | לִפְנֵי | lif.ˈne | (as above) |
+| h7439bf9d | israeli/word/h7439bf9d.mp3 | מְכָל | me.ˈχol | (as above) |
+| h583b5633 | israeli/word/h583b5633.mp3 | עִם | ˈim | (as above) |
+| h5ad6806e | israeli/word/h5ad6806e.mp3 | עָזַר | a.ˈzaʁ | (as above) |
+| hf4b5a979 | israeli/word/hf4b5a979.mp3 | אֵיפֹה | e.ˈfo | (as above) |
+| h3676c260 | israeli/word/h3676c260.mp3 | נָשָׂא | na.ˈsa | (as above) |
+| h75de47f9 | israeli/word/h75de47f9.mp3 | הִכָּה | hi.ˈka | (as above) |
+| h0fde2ff0 | israeli/word/h0fde2ff0.mp3 | צָבָא | tsa.ˈva | (as above) |
+| h2d58afb3 | israeli/word/h2d58afb3.mp3 | חַי | ˈχaj | (as above) |
+| hfd4bf43b | israeli/word/hfd4bf43b.mp3 | זָכַר | za.ˈχaʁ | (as above) |
+| hdd2bd792 | israeli/word/hdd2bd792.mp3 | גָּדוֹל | ɡa.ˈdol | (as above) |
+| hb8cb40c1 | israeli/word/hb8cb40c1.mp3 | גִּדּוּל | ɡi.ˈdul | (as above) |
+| h532fdc70 | israeli/word/h532fdc70.mp3 | צָחַק | tsa.ˈχak | (as above) |
+| he0b2f96b | israeli/word/he0b2f96b.mp3 | תּוֹדָה | to.ˈda | (as above) |
+| h7ef4abda | israeli/word/h7ef4abda.mp3 | הִנֵּה | hi.ˈne | (as above) |
+| h0a70642a | israeli/word/h0a70642a.mp3 | אַבָּא | ˈa.ba | (as above) |
+| h23e0b2a4 | israeli/word/h23e0b2a4.mp3 | בָּחַר | ba.ˈχaʁ | (as above) |
+| h166d92b0 | israeli/word/h166d92b0.mp3 | פְּרִי | pe.ˈʁi | (as above) |
+| h59a7d1fc | israeli/word/h59a7d1fc.mp3 | גִּבּוֹר | ɡi.ˈboʁ | (as above) |
+| hdbd6764a | israeli/word/hdbd6764a.mp3 | סִדֵּר | si.ˈdeʁ | (as above) |
+| h6ad3ddd8 | israeli/word/h6ad3ddd8.mp3 | סֵדֶר | ˈse.deʁ | (as above) |
+| h29e4f547 | israeli/word/h29e4f547.mp3 | דַּי | ˈdaj | (as above) |
+| h708c9d2f | israeli/word/h708c9d2f.mp3 | דֵּי | ˈde | (as above) |
+| ha756b5b6 | israeli/word/ha756b5b6.mp3 | אַחֵר | a.ˈχeʁ | (as above) |
+| h231c624a | israeli/word/h231c624a.mp3 | סֵפֶר | ˈse.feʁ | (as above) |
+| h22100765 | israeli/word/h22100765.mp3 | אוֹת | ˈot | (as above) |
+| h85cda534 | israeli/word/h85cda534.mp3 | גֶּפֶן | ˈɡe.fen | (as above) |
+| h1be0a47a | israeli/word/h1be0a47a.mp3 | סִפֵּר | si.ˈpeʁ | (as above) |
+| h5ae20314 | israeli/word/h5ae20314.mp3 | דֶּרֶךְ | de.ˈʁeχ | (as above) |
+| h324e6752 | israeli/word/h324e6752.mp3 | דֶּרֶךְ | de.ˈʁeχ | (as above) |
+| h9f3caed1 | israeli/word/h9f3caed1.mp3 | מִשְׁפָּחָה | miʃ.pa.ˈχa | (as above) |
+| h6c9f6f29 | israeli/word/h6c9f6f29.mp3 | רָבָה | ʁa.ˈva | (as above) |
+| h04345345 | israeli/word/h04345345.mp3 | פִּי | ˈpi | (as above) |
+| h12bba18d | israeli/word/h12bba18d.mp3 | בִּקֵּר | bi.ˈkeʁ | (as above) |
+| hd15601c2 | israeli/word/hd15601c2.mp3 | בְּסֵדֶר | be.se.ˈdeʁ | (as above) |
+| ha18100a8 | israeli/word/ha18100a8.mp3 | יֵשׁ | ˈjeʃ | (as above) |
+| hf07c1580 | israeli/word/hf07c1580.mp3 | שָׁנָה | ʃa.ˈna | (as above) |
+| h821319f2 | israeli/word/h821319f2.mp3 | אָב | ˈav | (as above) |
+| heaa07285 | israeli/word/heaa07285.mp3 | אִחֵר | i.ˈχeʁ | (as above) |
+| hbe6de4ee | israeli/word/hbe6de4ee.mp3 | הֵבִיא | he.ˈvi | (as above) |
+| h4640fc14 | israeli/word/h4640fc14.mp3 | שָׁעָה | ʃa.ˈa | (as above) |
+| h804d2347 | israeli/word/h804d2347.mp3 | הוֹצִיא | ho.ˈtsi | (as above) |
+| h50ac3ea7 | israeli/word/h50ac3ea7.mp3 | מֵצַר | me.ˈtsaʁ | (as above) |
+| h8b8a2576 | israeli/word/h8b8a2576.mp3 | נָבִיא | na.ˈvi | (as above) |
+| hd4c8080b | israeli/word/hd4c8080b.mp3 | אָנָּא | a.ˈna | (as above) |
+| hd1f143bd | israeli/word/hd1f143bd.mp3 | כַּרְטִיס | kaʁ.ˈtis | (as above) |
+| h9fc295a8 | israeli/word/h9fc295a8.mp3 | קֻפָּה | ku.ˈpa | (as above) |
+| h6999e1e4 | israeli/word/h6999e1e4.mp3 | נַפְשִׁי | naf.ˈʃi | (as above) |
+| h0b842943 | israeli/word/h0b842943.mp3 | הִיא | ˈhi | (as above) |
+| h67e9e6f3 | israeli/word/h67e9e6f3.mp3 | הוֹדָה | ho.ˈda | (as above) |
+| h8f6944f1 | israeli/word/h8f6944f1.mp3 | רֶגַע | ˈʁe.ɡa | (as above) |
+| h5cae87cc | israeli/word/h5cae87cc.mp3 | בָּטַח | ba.ˈtaχ | (as above) |
+| h62c2a993 | israeli/word/h62c2a993.mp3 | תַּחַת | ˈta.χat | (as above) |
+| h1be64280 | israeli/word/h1be64280.mp3 | נָא | ˈna | (as above) |
+| h8eec7f08 | israeli/word/h8eec7f08.mp3 | אָנֹכִי | a.no.ˈχi | (as above) |
+| h168cf034 | israeli/word/h168cf034.mp3 | חֹדֶשׁ | ˈχo.deʃ | (as above) |
+| h53c53bdf | israeli/word/h53c53bdf.mp3 | חָדָשׁ | χa.ˈdaʃ | (as above) |
+| h78d6aa81 | israeli/word/h78d6aa81.mp3 | שָׂמַח | sa.ˈmaχ | (as above) |
+| h2d90f840 | israeli/word/h2d90f840.mp3 | אֲדָמָה | a.da.ˈma | (as above) |
+| heb070da2 | israeli/word/heb070da2.mp3 | קָנָה | ka.ˈna | (as above) |
+| hc9977e17 | israeli/word/hc9977e17.mp3 | יָצַר | ˈja.tsaʁ | (as above) |
+| he15e52d3 | israeli/word/he15e52d3.mp3 | טֶלֶפוֹן | ˈte.le.fon | (as above) |
+| h3674f19e | israeli/word/h3674f19e.mp3 | נֵס | ˈnes | (as above) |
+| h1f510ba1 | israeli/word/h1f510ba1.mp3 | מָלֵא | ma.ˈle | (as above) |
+| h0fcd7e94 | israeli/word/h0fcd7e94.mp3 | קִיֵּם | ki.ˈjem | (as above) |
+| hd9ea111b | israeli/word/hd9ea111b.mp3 | רֵיק | ˈʁek | (as above) |
+| h7121d7fe | israeli/word/h7121d7fe.mp3 | אָז | ˈaz | (as above) |
+| h4fed6814 | israeli/word/h4fed6814.mp3 | רֹאשׁ | ˈʁoʃ | (as above) |
+| h059e9e22 | israeli/word/h059e9e22.mp3 | שָׁלַח | ʃa.ˈlaχ | (as above) |
+| hd08812d6 | israeli/word/hd08812d6.mp3 | עֵת | ˈet | (as above) |
+| h13673f80 | israeli/word/h13673f80.mp3 | צָדַק | ˈtsa.dak | (as above) |
+| h9f68266c | israeli/word/h9f68266c.mp3 | מָנָה | ma.ˈna | (as above) |
+| hd9cf2fa5 | israeli/word/hd9cf2fa5.mp3 | יָקָר | ja.ˈkaʁ | (as above) |
+| h447bb433 | israeli/word/h447bb433.mp3 | תַּחֲנָה | ta.χa.ˈna | (as above) |
+| he9919e02 | israeli/word/he9919e02.mp3 | לְ־ | ˈle- | (as above) |
+| h66c2ffb6 | israeli/word/h66c2ffb6.mp3 | בָּא | ˈba | (as above) |
+| h2280b9b6 | israeli/word/h2280b9b6.mp3 | חָבֵר | χa.ˈveʁ | (as above) |
+| h0902557b | israeli/word/h0902557b.mp3 | הִגִּיד | hi.ˈɡid | (as above) |
+| h9f3ab68a | israeli/word/h9f3ab68a.mp3 | חַיָּב | χa.ˈjav | (as above) |
+| h888649f8 | israeli/word/h888649f8.mp3 | עָלָה | a.ˈla | (as above) |
+| hc6cdec2b | israeli/word/hc6cdec2b.mp3 | דּוֹד | ˈdod | (as above) |
+| h4a2ee830 | israeli/word/h4a2ee830.mp3 | שִׁנָּה | ʃi.ˈna | (as above) |
+| hd83852fd | israeli/word/hd83852fd.mp3 | הֵבִין | he.ˈvin | (as above) |
+| ha7a8a47a | israeli/word/ha7a8a47a.mp3 | אַחֲרֵי | a.χa.ˈʁe | (as above) |
+| h7b44b8a0 | israeli/word/h7b44b8a0.mp3 | עָשָׂר | a.ˈsaʁ | (as above) |
+| hd2fac0d2 | israeli/word/hd2fac0d2.mp3 | עֵץ | ˈets | (as above) |
+| hea4f6fcc | israeli/word/hea4f6fcc.mp3 | חֵן | ˈχen | (as above) |
+| h39b463af | israeli/word/h39b463af.mp3 | בְּרִית | be.ˈʁit | (as above) |
+| hc4e2b459 | israeli/word/hc4e2b459.mp3 | פָּנָה | pa.ˈna | (as above) |
+| h46c75bab | israeli/word/h46c75bab.mp3 | פָּתַח | pa.ˈtaχ | (as above) |
+| h92151b55 | israeli/word/h92151b55.mp3 | שָׁבוּעַ | ʃa.ˈvu.a | (as above) |
+| h42410d5e | israeli/word/h42410d5e.mp3 | שֵׁנִי | ʃe.ˈni | (as above) |
+| he527093f | israeli/word/he527093f.mp3 | חֹם | ˈχom | (as above) |
+| h5ad2503a | israeli/word/h5ad2503a.mp3 | מִצְרִי | mits.ˈʁi | (as above) |
+| h967f68e9 | israeli/word/h967f68e9.mp3 | צְדָקָה | tse.da.ˈka | (as above) |
+| h38dc1dcd | israeli/word/h38dc1dcd.mp3 | יָשָׁר | ja.ˈʃaʁ | (as above) |
+| h64706707 | israeli/word/h64706707.mp3 | חֶשְׁבּוֹן | χeʃ.ˈbon | (as above) |
+| h90377d47 | israeli/word/h90377d47.mp3 | שֶׁקֶל | ˈʃe.kel | (as above) |
+| hf9047f4b | israeli/word/hf9047f4b.mp3 | כּוֹס | ˈkos | (as above) |
+| hfe074a94 | israeli/word/hfe074a94.mp3 | טֶרֶם | te.ˈʁem | (as above) |
+| h5c2548dc | israeli/word/h5c2548dc.mp3 | חַם | ˈχam | (as above) |
+| h5aed8aaa | israeli/word/h5aed8aaa.mp3 | יָכֹל | ja.ˈχol | (as above) |
+| h8ff6123b | israeli/word/h8ff6123b.mp3 | קָרָא | ka.ˈʁa | (as above) |
+| h11b691b9 | israeli/word/h11b691b9.mp3 | אָכַל | a.ˈχal | (as above) |
+| h1301ecc3 | israeli/word/h1301ecc3.mp3 | יֶלֶד | ˈje.led | (as above) |
+| hf5bee50d | israeli/word/hf5bee50d.mp3 | לַיְלָה | ˈlaj.la | (as above) |
+| hcbafeb66 | israeli/word/hcbafeb66.mp3 | שִׁלֵּם | ʃi.ˈlem | (as above) |
+| h3e375762 | israeli/word/h3e375762.mp3 | רַע | ˈʁa | (as above) |
+| h35a8fcbe | israeli/word/h35a8fcbe.mp3 | קַר | ˈkaʁ | (as above) |
+| h5b57ed79 | israeli/word/h5b57ed79.mp3 | בָּשָׂר | ba.ˈsaʁ | (as above) |
+| h58023e1f | israeli/word/h58023e1f.mp3 | חָל | ˈχal | (as above) |
+| h03763c94 | israeli/word/h03763c94.mp3 | יַיִן | ˈja.jin | (as above) |
+| h8123d4c2 | israeli/word/h8123d4c2.mp3 | חוֹלֶה | χo.ˈle | (as above) |
+| he90efaca | israeli/word/he90efaca.mp3 | בַּי | ˈbaj | (as above) |
+| h5658dbbe | israeli/word/h5658dbbe.mp3 | בֶּאֱמֶת | be.e.ˈmet | (as above) |
+| h81fd04d9 | israeli/word/h81fd04d9.mp3 | חַג | ˈχaɡ | (as above) |
+| hc8e03f62 | israeli/word/hc8e03f62.mp3 | רוֹפֵא | ʁo.ˈfe | (as above) |
+| h372b7277 | israeli/word/h372b7277.mp3 | רָחוֹק | ʁa.ˈχok | (as above) |
+| h1f23dde2 | israeli/word/h1f23dde2.mp3 | רָחוֹק | ʁa.ˈχok | (as above) |
+| h40319b13 | israeli/word/h40319b13.mp3 | יַמִּי | ja.ˈmi | (as above) |
+| h4aa6ad2a | israeli/word/h4aa6ad2a.mp3 | בֵּן | ˈben | (as above) |
+| h81e8c0d1 | israeli/word/h81e8c0d1.mp3 | הָלַךְ | ˈha.laχ | (as above) |
+| h64c48ca3 | israeli/word/h64c48ca3.mp3 | כָּאן | ˈkan | (as above) |
+| h1a3574d3 | israeli/word/h1a3574d3.mp3 | יָד | ˈjad | (as above) |
+| h3fbb59c8 | israeli/word/h3fbb59c8.mp3 | קָדַם | ka.ˈdam | (as above) |
+| hfaefa59a | israeli/word/hfaefa59a.mp3 | קִבֵּל | ki.ˈbel | (as above) |
+| h842147e5 | israeli/word/h842147e5.mp3 | שָׁב | ˈʃav | (as above) |
+| hfe4ebf2c | israeli/word/hfe4ebf2c.mp3 | אָדָם | a.ˈdam | (as above) |
+| hffd9b904 | israeli/word/hffd9b904.mp3 | מֵאָה | ˈme.a | (as above) |
+| h2d1e4a74 | israeli/word/h2d1e4a74.mp3 | סוֹף | ˈsof | (as above) |
+| hb5c944d2 | israeli/word/hb5c944d2.mp3 | עָרַב | ˈa.ʁav | (as above) |
+| h8453bf6a | israeli/word/h8453bf6a.mp3 | עַתָּה | a.ˈta | (as above) |
+| h5d30bc42 | israeli/word/h5d30bc42.mp3 | כָּתַב | ka.ˈtav | (as above) |
+| ha321fe95 | israeli/word/ha321fe95.mp3 | נָסַע | na.ˈsa | (as above) |
+| h2f9c8fe9 | israeli/word/h2f9c8fe9.mp3 | זֶרַע | ze.ˈʁa | (as above) |
+| h3d1c89af | israeli/word/h3d1c89af.mp3 | חָדַר | χa.ˈdaʁ | (as above) |
+| hd53e0a60 | israeli/word/hd53e0a60.mp3 | קָרוֹב | ka.ˈʁov | (as above) |
+| h6c2b8669 | israeli/word/h6c2b8669.mp3 | גּוּף | ˈɡuf | (as above) |
+| hbea613f7 | israeli/word/hbea613f7.mp3 | הֵרֵעַ | he.ˈʁe.a | (as above) |
+| h3398235f | israeli/word/h3398235f.mp3 | אָדֹם | a.ˈdom | (as above) |
+| h828bd3f0 | israeli/word/h828bd3f0.mp3 | אֶלָּא | ˈe.la | (as above) |
+| hd4fe4a46 | israeli/word/hd4fe4a46.mp3 | אֹרֶךְ | ˈo.ʁeχ | (as above) |
+| hc5d024c3 | israeli/word/hc5d024c3.mp3 | קָרוֹב | ka.ˈʁov | (as above) |
+| h355e67cb | israeli/word/h355e67cb.mp3 | יַחְדָּו | jaχ.ˈdav | (as above) |
+| h8633259a | israeli/word/h8633259a.mp3 | מְאֻשָּׁר | me.u.ˈʃaʁ | (as above) |
+| h3777d988 | israeli/word/h3777d988.mp3 | כָּכָה | ˈka.χa | (as above) |
+| h725d19e2 | israeli/word/h725d19e2.mp3 | זִכָּרוֹן | zi.ka.ˈʁon | (as above) |
+| hb082296c | israeli/word/hb082296c.mp3 | קֶרֶן | ke.ˈʁen | (as above) |
+| hb8a7e485 | israeli/word/hb8a7e485.mp3 | מְחִיר | me.ˈχiʁ | (as above) |
+| hc637d8a6 | israeli/word/hc637d8a6.mp3 | דּוֹר | ˈdoʁ | (as above) |
+| h1999d835 | israeli/word/h1999d835.mp3 | יְהוּדִי | je.hu.ˈdi | (as above) |
+| h8d837a2a | israeli/word/h8d837a2a.mp3 | אֹרֶן | ˈo.ʁen | (as above) |
+| h32c69c06 | israeli/word/h32c69c06.mp3 | שֶׁל | ˈʃel | (as above) |
+| hf28ba308 | israeli/word/hf28ba308.mp3 | יָדַע | ja.ˈda | (as above) |
+| hef6e1613 | israeli/word/hef6e1613.mp3 | אִישׁ | ˈiʃ | (as above) |
+| h46f7979e | israeli/word/h46f7979e.mp3 | עַד | ˈad | (as above) |
+| hc81786d2 | israeli/word/hc81786d2.mp3 | קָרָה | ka.ˈʁa | (as above) |
+| h4f9b4058 | israeli/word/h4f9b4058.mp3 | לָקַח | ˈla.kaχ | (as above) |
+| h00fd9c4f | israeli/word/h00fd9c4f.mp3 | פַּעַם | ˈpa.am | (as above) |
+| h04c271fe | israeli/word/h04c271fe.mp3 | גַּם | ˈɡam | (as above) |
+| ha7545fff | israeli/word/ha7545fff.mp3 | אָח | ˈaχ | (as above) |
+| hfcd9d9b6 | israeli/word/hfcd9d9b6.mp3 | יָשַׁב | ja.ˈʃav | (as above) |
+| hf9a1a55b | israeli/word/hf9a1a55b.mp3 | שְׁנַיִם | ʃe.ˈna.jim | (as above) |
+| hbd079057 | israeli/word/hbd079057.mp3 | קְצָת | ke.ˈtsat | (as above) |
+| hc30c99f6 | israeli/word/hc30c99f6.mp3 | חִכָּה | χi.ˈka | (as above) |
+| hc44a3fa8 | israeli/word/hc44a3fa8.mp3 | רִאשׁוֹן | ʁi.ˈʃon | (as above) |
+| ha45fab71 | israeli/word/ha45fab71.mp3 | עָצַר | a.ˈtsaʁ | (as above) |
+| h448b5d1a | israeli/word/h448b5d1a.mp3 | יָרָה | ja.ˈʁa | (as above) |
+| h85ac8666 | israeli/word/h85ac8666.mp3 | שֵׁן | ˈʃen | (as above) |
+| h326c520d | israeli/word/h326c520d.mp3 | הִשְׁתַּמֵּשׁ | hiʃ.ta.ˈmeʃ | (as above) |
+| h2d27796a | israeli/word/h2d27796a.mp3 | עֶשְׂרִים | es.ˈʁim | (as above) |
+| h7efc375e | israeli/word/h7efc375e.mp3 | מָשַׁךְ | ma.ˈʃaχ | (as above) |
+| hac94b307 | israeli/word/hac94b307.mp3 | שָׂדֶה | sa.ˈde | (as above) |
+| hd873a81e | israeli/word/hd873a81e.mp3 | אִבֵּד | i.ˈbed | (as above) |
+| hadfa84bd | israeli/word/hadfa84bd.mp3 | קַל | ˈkal | (as above) |
+| h84e47f20 | israeli/word/h84e47f20.mp3 | אֵיךְ | ˈeχ | (as above) |
+| h264da105 | israeli/word/h264da105.mp3 | שָׂבַע | sa.ˈva | (as above) |
+| h524e52f1 | israeli/word/h524e52f1.mp3 | מַצָּב | ma.ˈtsav | (as above) |
+| h35fcbc75 | israeli/word/h35fcbc75.mp3 | נִצֵּחַ | ni.ˈtse.aχ | (as above) |
+| h75485886 | israeli/word/h75485886.mp3 | מְלָאכָה | me.la.ˈχa | (as above) |
+| hfa69f51c | israeli/word/hfa69f51c.mp3 | הִתְרָאָה | hit.ʁa.ˈa | (as above) |
+| hae413d41 | israeli/word/hae413d41.mp3 | רָעָה | ʁa.ˈa | (as above) |
+| h7e5cc0c5 | israeli/word/h7e5cc0c5.mp3 | עֲבוֹדָה | a.vo.ˈda | (as above) |
+| h1b39a6b6 | israeli/word/h1b39a6b6.mp3 | אֶתְמוֹל | et.ˈmol | (as above) |
+| h01ebb4ee | israeli/word/h01ebb4ee.mp3 | חֵלֶב | χe.ˈlev | (as above) |
+| hba9521db | israeli/word/hba9521db.mp3 | הִזְמִין | hiz.ˈmin | (as above) |
+| ha8a6724a | israeli/word/ha8a6724a.mp3 | עָפָר | a.ˈfaʁ | (as above) |
+| h5dbeb151 | israeli/word/h5dbeb151.mp3 | אֲוִיר | a.ˈviʁ | (as above) |
+| h8f0ac707 | israeli/word/h8f0ac707.mp3 | הֶחְלִיף | heχ.ˈlif | (as above) |
+| h10354ca3 | israeli/word/h10354ca3.mp3 | רָעָב | ʁa.ˈav | (as above) |
+| h87abbddd | israeli/word/h87abbddd.mp3 | תּוֹר | ˈtoʁ | (as above) |
+| h99a070bb | israeli/word/h99a070bb.mp3 | שׁוּב | ˈʃuv | (as above) |
+| h82e76dfb | israeli/word/h82e76dfb.mp3 | חֹשֶׁךְ | ˈχo.ʃeχ | (as above) |
+| hf19f0a88 | israeli/word/hf19f0a88.mp3 | בַּנְק | ˈbank | (as above) |
+| hc8c1466c | israeli/word/hc8c1466c.mp3 | מוֹרֶה | mo.ˈʁe | (as above) |
+| h571c298a | israeli/word/h571c298a.mp3 | מַלְכָּה | mal.ˈka | (as above) |
+| hbe71a2e7 | israeli/word/hbe71a2e7.mp3 | הוֹד | ˈhod | (as above) |
+| h1643d708 | israeli/word/h1643d708.mp3 | תֵּה | ˈte | (as above) |
+| h89be12e3 | israeli/word/h89be12e3.mp3 | יַאלְלָה | ja.le.ˈla | (as above) |
+| h99bdff0e | israeli/word/h99bdff0e.mp3 | טָעִים | ta.ˈim | (as above) |
+| hfaa15644 | israeli/word/hfaa15644.mp3 | זוֹל | ˈzol | (as above) |
+| h28ecb454 | israeli/word/h28ecb454.mp3 | רָאָה | ʁa.ˈa | (as above) |
+| h4b81aad7 | israeli/word/h4b81aad7.mp3 | צָרִיךְ | tsa.ˈʁiχ | (as above) |
+| h8ba0beaa | israeli/word/h8ba0beaa.mp3 | אוֹ | ˈo | (as above) |
+| hdcd31646 | israeli/word/hdcd31646.mp3 | אוּלַי | u.ˈlaj | (as above) |
+| hb5913147 | israeli/word/hb5913147.mp3 | נֶפֶשׁ | ˈne.feʃ | (as above) |
+| hf14f89e0 | israeli/word/hf14f89e0.mp3 | יִבֵּא | ji.ˈbe | (as above) |
+| he0448a86 | israeli/word/he0448a86.mp3 | פֹּה | ˈpo | (as above) |
+| h19eb6a83 | israeli/word/h19eb6a83.mp3 | שָׁמַר | ʃa.ˈmaʁ | (as above) |
+| h7ef1471c | israeli/word/h7ef1471c.mp3 | קָם | ˈkam | (as above) |
+| h749f736f | israeli/word/h749f736f.mp3 | תָּמִיד | ta.ˈmid | (as above) |
+| hf3892816 | israeli/word/hf3892816.mp3 | אֵיזֶה | e.ˈze | (as above) |
+| h60b16793 | israeli/word/h60b16793.mp3 | פֶּה | ˈpe | (as above) |
+| h215beb3e | israeli/word/h215beb3e.mp3 | כֶּסֶף | ˈke.sef | (as above) |
+| h4237207f | israeli/word/h4237207f.mp3 | יָלַד | ˈja.lad | (as above) |
+| hcfccb5de | israeli/word/hcfccb5de.mp3 | בְּעָיָה | be.a.ˈja | (as above) |
+| h1306c935 | israeli/word/h1306c935.mp3 | אִמָּא | ˈi.ma | (as above) |
+| hba98874f | israeli/word/hba98874f.mp3 | נָכוֹן | na.ˈχon | (as above) |
+| ha42ef4a8 | israeli/word/ha42ef4a8.mp3 | הִתְקַשֵּׁר | hit.ka.ˈʃeʁ | (as above) |
+| hf95173f3 | israeli/word/hf95173f3.mp3 | מִשְׁפָּט | miʃ.ˈpat | (as above) |
+| hfb819565 | israeli/word/hfb819565.mp3 | רוּחַ | ˈʁu.aχ | (as above) |
+| hfc2573fa | israeli/word/hfc2573fa.mp3 | נִמְצָא | nim.ˈtsa | (as above) |
+| h3dfe9831 | israeli/word/h3dfe9831.mp3 | שְׁלוֹשָׁה | ʃe.lo.ˈʃa | (as above) |
+| ha23405ea | israeli/word/ha23405ea.mp3 | גִּדֵּל | ɡi.ˈdel | (as above) |
+| h1c9d2f5e | israeli/word/h1c9d2f5e.mp3 | יָחִיד | ja.ˈχid | (as above) |
+| h80c0273d | israeli/word/h80c0273d.mp3 | דֶּלֶת | ˈde.let | (as above) |
+| h79df22f0 | israeli/word/h79df22f0.mp3 | לְאָן | le.ˈan | (as above) |
+| h4589871d | israeli/word/h4589871d.mp3 | עֲשָׂרָה | a.sa.ˈʁa | (as above) |
+| h60dd9be7 | israeli/word/h60dd9be7.mp3 | מִיֵּן | mi.ˈjen | (as above) |
+| h3ed1bb74 | israeli/word/h3ed1bb74.mp3 | רָשָׁע | ʁa.ˈʃa | (as above) |
+| hf68e31d9 | israeli/word/hf68e31d9.mp3 | הֶעֱלָה | he.e.ˈla | (as above) |
+| h66ce9ca4 | israeli/word/h66ce9ca4.mp3 | מַזָּל | ma.ˈzal | (as above) |
+| h10798813 | israeli/word/h10798813.mp3 | לָמַד | la.ˈmad | (as above) |
+| h4fa970c1 | israeli/word/h4fa970c1.mp3 | לָן | ˈlan | (as above) |
+| h012c72d5 | israeli/word/h012c72d5.mp3 | נֶעֱלַם | ne.e.ˈlam | (as above) |
+| he43ad309 | israeli/word/he43ad309.mp3 | שָׁפַט | ʃa.ˈfat | (as above) |
+| h80a03385 | israeli/word/h80a03385.mp3 | חָקַר | χa.ˈkaʁ | (as above) |
+| hda5653dd | israeli/word/hda5653dd.mp3 | לְבַד | le.ˈvad | (as above) |
+| h3e4e6cff | israeli/word/h3e4e6cff.mp3 | חָלָה | χa.ˈla | (as above) |
+| hf60e846a | israeli/word/hf60e846a.mp3 | הִסְכִּים | his.ˈkim | (as above) |
+| h2a0d492e | israeli/word/h2a0d492e.mp3 | שִׁפְחָה | ʃif.ˈχa | (as above) |
+| h4bff7a16 | israeli/word/h4bff7a16.mp3 | צַדִּיק | tsa.ˈdik | (as above) |
+| h18108dff | israeli/word/h18108dff.mp3 | אָחוֹת | a.ˈχot | (as above) |
+| hef7b6946 | israeli/word/hef7b6946.mp3 | מִשְׁטָרָה | miʃ.ta.ˈʁa | (as above) |
+| he0fc258b | israeli/word/he0fc258b.mp3 | עֵז | ˈez | (as above) |
+| he19222ad | israeli/word/he19222ad.mp3 | יָמִין | ja.ˈmin | (as above) |
+| h3b09d299 | israeli/word/h3b09d299.mp3 | זָר | ˈzaʁ | (as above) |
+| hb2147419 | israeli/word/hb2147419.mp3 | נוּ | ˈnu | (as above) |
+| h620aed09 | israeli/word/h620aed09.mp3 | חַיִל | ˈχa.jil | (as above) |
+| h37034142 | israeli/word/h37034142.mp3 | מְצֻיָּן | me.tsu.ˈjan | (as above) |
+| h0edcb196 | israeli/word/h0edcb196.mp3 | אִחוּר | i.ˈχuʁ | (as above) |
+| h95d75fdd | israeli/word/h95d75fdd.mp3 | יָעֵל | ja.ˈel | (as above) |
+| had0d3973 | israeli/word/had0d3973.mp3 | גֶּן | ˈɡen | (as above) |
+| h9974efdc | israeli/word/h9974efdc.mp3 | בֵּיצָה | be.ˈtsa | (as above) |
+| h4105e713 | israeli/word/h4105e713.mp3 | חָמוּד | χa.ˈmud | (as above) |
+| h0849ff56 | israeli/word/h0849ff56.mp3 | קֵץ | ˈkets | (as above) |
+| h9d27e0b4 | israeli/word/h9d27e0b4.mp3 | חֶבֶל | ˈχe.vel | (as above) |
+| he6d29dfd | israeli/word/he6d29dfd.mp3 | פָּתוּחַ | pa.ˈtu.aχ | (as above) |
+| he38160e3 | israeli/word/he38160e3.mp3 | רֵיקָם | ʁe.ˈkam | (as above) |
+| h0f231144 | israeli/word/h0f231144.mp3 | אִם | ˈim | (as above) |
+| h93bb64ad | israeli/word/h93bb64ad.mp3 | חָשַׁב | χa.ˈʃav | (as above) |
+| h9ea65725 | israeli/word/h9ea65725.mp3 | רַק | ˈʁak | (as above) |
+| ha5429c9f | israeli/word/ha5429c9f.mp3 | יוֹתֵר | jo.ˈteʁ | (as above) |
+| h8875eeda | israeli/word/h8875eeda.mp3 | כָּךְ | ˈkaχ | (as above) |
+| h1b96f9f4 | israeli/word/h1b96f9f4.mp3 | אָהַב | a.ˈhav | (as above) |
+| hc6c367ff | israeli/word/hc6c367ff.mp3 | עָבַד | a.ˈvad | (as above) |
+| h320463c0 | israeli/word/h320463c0.mp3 | חָזַר | χa.ˈzaʁ | (as above) |
+| h2adc4b80 | israeli/word/h2adc4b80.mp3 | מִ־ | ˈmi- | (as above) |
+| h1414a3a2 | israeli/word/h1414a3a2.mp3 | עֶבֶד | ˈe.ved | (as above) |
+| h92e1aa5f | israeli/word/h92e1aa5f.mp3 | מַשֶּׁהוּ | ˈma.ʃe.hu | (as above) |
+| h5b39e0f1 | israeli/word/h5b39e0f1.mp3 | יָצָא | ja.ˈtsa | (as above) |
+| h788c5f0a | israeli/word/h788c5f0a.mp3 | עֶצֶם | e.ˈtsem | (as above) |
+| h81024165 | israeli/word/h81024165.mp3 | מְאוֹד | me.ˈod | (as above) |
+| h69ab7cef | israeli/word/h69ab7cef.mp3 | הִצְטַעֵר | hits.ta.ˈeʁ | (as above) |
+| hc91c0d80 | israeli/word/hc91c0d80.mp3 | הַר | ˈhaʁ | (as above) |
+| hc014796a | israeli/word/hc014796a.mp3 | שֶׁ־ | ˈʃe- | (as above) |
+| hb5f05782 | israeli/word/hb5f05782.mp3 | בִּקֵּשׁ | bi.ˈkeʃ | (as above) |
+| h68a92f84 | israeli/word/h68a92f84.mp3 | שִׁבְעָה | ʃiv.ˈa | (as above) |
+| ha6aca44b | israeli/word/ha6aca44b.mp3 | אַף | ˈaf | (as above) |
+| h511bbb6f | israeli/word/h511bbb6f.mp3 | הִרְגִּישׁ | hiʁ.ˈɡiʃ | (as above) |
+| hd0a91fd4 | israeli/word/hd0a91fd4.mp3 | מַמָּשׁ | ma.ˈmaʃ | (as above) |
+| h95fec412 | israeli/word/h95fec412.mp3 | אָבַל | a.ˈval | (as above) |
+| h890d1505 | israeli/word/h890d1505.mp3 | לֵב | ˈlev | (as above) |
+| h14eb0d0c | israeli/word/h14eb0d0c.mp3 | כֻּלָּם | ku.ˈlam | (as above) |
+| h8dcac995 | israeli/word/h8dcac995.mp3 | רָב | ˈʁav | (as above) |
+| hcb31fc0d | israeli/word/hcb31fc0d.mp3 | בַּת | ˈbat | (as above) |
+| hc43effe9 | israeli/word/hc43effe9.mp3 | דָּם | ˈdam | (as above) |
+| h88b16213 | israeli/word/h88b16213.mp3 | פָּשׁוּט | pa.ˈʃut | (as above) |
+| h761c6cb9 | israeli/word/h761c6cb9.mp3 | זָהָב | za.ˈhav | (as above) |
+| h3f2d70f7 | israeli/word/h3f2d70f7.mp3 | יָרַד | ja.ˈʁad | (as above) |
+| h7a29d871 | israeli/word/h7a29d871.mp3 | צִוָּה | tsi.ˈva | (as above) |
+| hbb24a2a3 | israeli/word/hbb24a2a3.mp3 | שִׂחֵק | si.ˈχek | (as above) |
+| h29aadfe4 | israeli/word/h29aadfe4.mp3 | חֲמִשָּׁה | χa.mi.ˈʃa | (as above) |
+| h15d39df8 | israeli/word/h15d39df8.mp3 | עֹלָה | o.ˈla | (as above) |
+| h31e27ee8 | israeli/word/h31e27ee8.mp3 | רַב | ˈʁav | (as above) |
+| h31c26fec | israeli/word/h31c26fec.mp3 | עָרַךְ | ˈa.ʁaχ | (as above) |
+| h21e009ad | israeli/word/h21e009ad.mp3 | אַף | ˈaf | (as above) |
+| h640d9686 | israeli/word/h640d9686.mp3 | קוֹל | ˈkol | (as above) |
+| h769a6c3e | israeli/word/h769a6c3e.mp3 | אַרְבָּעָה | aʁ.ba.ˈa | (as above) |
+| h26154c1a | israeli/word/h26154c1a.mp3 | אֶלֶף | ˈe.lef | (as above) |
+| h41683f4b | israeli/word/h41683f4b.mp3 | הִסְתַּכֵּל | his.ta.ˈkel | (as above) |
+| h1a07a738 | israeli/word/h1a07a738.mp3 | פָּשׁוּט | pa.ˈʃut | (as above) |
+| h7be38218 | israeli/word/h7be38218.mp3 | קָטָן | ka.ˈtan | (as above) |
+| hbea3a906 | israeli/word/hbea3a906.mp3 | יָשַׁן | ja.ˈʃan | (as above) |
+| h5ed3483f | israeli/word/h5ed3483f.mp3 | אַתֶּם | a.ˈtem | (as above) |
+| he1a5e616 | israeli/word/he1a5e616.mp3 | בֶּגֶד | ˈbe.ɡed | (as above) |
+| h5f280d64 | israeli/word/h5f280d64.mp3 | בָּטוּחַ | ba.ˈtu.aχ | (as above) |
+| h3e8123a0 | israeli/word/h3e8123a0.mp3 | וִתֵּר | vi.ˈteʁ | (as above) |
+| he1477da0 | israeli/word/he1477da0.mp3 | גֵּר | ˈɡeʁ | (as above) |
+| h5fc50b7a | israeli/word/h5fc50b7a.mp3 | מְכוֹנִית | me.χo.ˈnit | (as above) |
+| h6b636d7b | israeli/word/h6b636d7b.mp3 | אֲרוּחָה | a.ʁu.ˈχa | (as above) |
+| h5b285a5d | israeli/word/h5b285a5d.mp3 | חֲמִשִּׁים | χa.mi.ˈʃim | (as above) |
+| ha1f4dcc0 | israeli/word/ha1f4dcc0.mp3 | חָכַם | χa.ˈχam | (as above) |
+| hc5ed2600 | israeli/word/hc5ed2600.mp3 | לֵוִי | le.ˈvi | (as above) |
+| h4ec736eb | israeli/word/h4ec736eb.mp3 | נָהַג | na.ˈhaɡ | (as above) |
+| h5eb1d4fa | israeli/word/h5eb1d4fa.mp3 | אָסַף | a.ˈsaf | (as above) |
+| h5fa9ade9 | israeli/word/h5fa9ade9.mp3 | זָקֵן | za.ˈken | (as above) |
+| hbbbfa9a7 | israeli/word/hbbbfa9a7.mp3 | סֶרֶט | se.ˈʁet | (as above) |
+| h845d92fd | israeli/word/h845d92fd.mp3 | דּוֹלָר | ˈdo.laʁ | (as above) |
+| hd59a2d59 | israeli/word/hd59a2d59.mp3 | שָׁתָה | ʃa.ˈta | (as above) |
+| h80d6f3f0 | israeli/word/h80d6f3f0.mp3 | פָּרָה | pa.ˈʁa | (as above) |
+| h08c10040 | israeli/word/h08c10040.mp3 | נִהֵל | ni.ˈhel | (as above) |
+| h950019e4 | israeli/word/h950019e4.mp3 | פָּקַד | pa.ˈkad | (as above) |
+| h83f51398 | israeli/word/h83f51398.mp3 | אַרְבָּעִים | aʁ.ba.ˈim | (as above) |
+| hb3377769 | israeli/word/hb3377769.mp3 | הוּסַף | hu.ˈsaf | (as above) |
+| h01c48de6 | israeli/word/h01c48de6.mp3 | סָתַם | sa.ˈtam | (as above) |
+| h08e1b712 | israeli/word/h08e1b712.mp3 | תְּמוּנָה | te.mu.ˈna | (as above) |
+| hb4ac356a | israeli/word/hb4ac356a.mp3 | יָפֶה | ja.ˈfe | (as above) |
+| h3f5ee27e | israeli/word/h3f5ee27e.mp3 | גָּנַב | ɡa.ˈnav | (as above) |
+| h5965e00c | israeli/word/h5965e00c.mp3 | נֶגֶד | ne.ˈɡed | (as above) |
+| h770abeb5 | israeli/word/h770abeb5.mp3 | עָנָן | a.ˈnan | (as above) |
+| hb92cbff2 | israeli/word/hb92cbff2.mp3 | רָשַׁם | ʁa.ˈʃam | (as above) |
+| hd522984d | israeli/word/hd522984d.mp3 | תִּינוֹק | ti.ˈnok | (as above) |
+| h18b1e15c | israeli/word/h18b1e15c.mp3 | רְחוֹב | ʁe.ˈχov | (as above) |
+| h1ce30358 | israeli/word/h1ce30358.mp3 | מִהֵר | mi.ˈheʁ | (as above) |
+| hd0bb45f0 | israeli/word/hd0bb45f0.mp3 | נַחַל | na.ˈχal | (as above) |
+| h346f78ec | israeli/word/h346f78ec.mp3 | רָם | ˈʁam | (as above) |
+| h899d2134 | israeli/word/h899d2134.mp3 | עָדִיף | a.ˈdif | (as above) |
+| h8e236dac | israeli/word/h8e236dac.mp3 | מִלְחָמָה | mil.χa.ˈma | (as above) |
+| hf31e9426 | israeli/word/hf31e9426.mp3 | מוּכָן | mu.ˈχan | (as above) |
+| h731d1356 | israeli/word/h731d1356.mp3 | שָׂשׂ | ˈsas | (as above) |
+| hb7b1fae7 | israeli/word/hb7b1fae7.mp3 | עוֹר | ˈoʁ | (as above) |
+| ha457bf9e | israeli/word/ha457bf9e.mp3 | נֶשֶׁק | ne.ˈʃek | (as above) |
+| he314ca8e | israeli/word/he314ca8e.mp3 | כַּדּוּר | ka.ˈduʁ | (as above) |
+| h233af6f2 | israeli/word/h233af6f2.mp3 | כּוֹכָב | ko.ˈχav | (as above) |
+| h7f894a5c | israeli/word/h7f894a5c.mp3 | קַו | ˈkav | (as above) |
+| h25aa368e | israeli/word/h25aa368e.mp3 | צׇהֳרַיִם | tso.ho.ˈʁa.jim | (as above) |
+| h1a8a7259 | israeli/word/h1a8a7259.mp3 | רָגִיל | ʁa.ˈɡil | (as above) |
+| h679e72c6 | israeli/word/h679e72c6.mp3 | קָהָל | ka.ˈhal | (as above) |
+| hf3a8608b | israeli/word/hf3a8608b.mp3 | טָעַן | ta.ˈan | (as above) |
+| h3a789358 | israeli/word/h3a789358.mp3 | נוֹתַר | no.ˈtaʁ | (as above) |
+| hf3d6a0bb | israeli/word/hf3d6a0bb.mp3 | תְּשׁוּבָה | te.ʃu.ˈva | (as above) |
+| hde989655 | israeli/word/hde989655.mp3 | סָתַר | sa.ˈtaʁ | (as above) |
+| h0047024c | israeli/word/h0047024c.mp3 | תְּרוּפָה | te.ʁu.ˈfa | (as above) |
+| h565b3652 | israeli/word/h565b3652.mp3 | דּוֹקְטוֹר | do.ke.ˈtoʁ | (as above) |
+| h731dbce2 | israeli/word/h731dbce2.mp3 | לָקוֹחַ | la.ˈko.aχ | (as above) |
+| h263f168c | israeli/word/h263f168c.mp3 | לַח | ˈlaχ | (as above) |
+| ha5bb33e3 | israeli/word/ha5bb33e3.mp3 | טְוָח | te.ˈvaχ | (as above) |
+| h33f66dda | israeli/word/h33f66dda.mp3 | בְּדִיקָה | be.di.ˈka | (as above) |
+| hea59fdfe | israeli/word/hea59fdfe.mp3 | שֵׁרוּת | ʃe.ˈʁut | (as above) |
+| hde2302bb | israeli/word/hde2302bb.mp3 | חוֹף | ˈχof | (as above) |
+| hc427aff6 | israeli/word/hc427aff6.mp3 | יָרֵחַ | ja.ˈʁe.aχ | (as above) |
+| h06f78f5d | israeli/word/h06f78f5d.mp3 | בֶּטֶן | be.ˈten | (as above) |
+| h1c0ffa13 | israeli/word/h1c0ffa13.mp3 | קִיר | ˈkiʁ | (as above) |
+| h4ebf1a3c | israeli/word/h4ebf1a3c.mp3 | מַצָּה | ma.ˈtsa | (as above) |
+| he078c9e6 | israeli/word/he078c9e6.mp3 | מַשְׁקֶה | maʃ.ˈke | (as above) |
+| hfac8b79e | israeli/word/hfac8b79e.mp3 | שֻׁלְחָן | ʃul.ˈχan | (as above) |
+| h495d2c04 | israeli/word/h495d2c04.mp3 | חַלּוֹן | χa.ˈlon | (as above) |
+| h37908437 | israeli/word/h37908437.mp3 | בָּסִיס | ba.ˈsis | (as above) |
+| hf1200b64 | israeli/word/hf1200b64.mp3 | חֻלְצָה | χul.ˈtsa | (as above) |
+| h6d121ed3 | israeli/word/h6d121ed3.mp3 | מִסְעָדָה | mis.a.ˈda | (as above) |
+| h4e578223 | israeli/word/h4e578223.mp3 | פֶּסַח | ˈpe.saχ | (as above) |
+| hf86b2d81 | israeli/word/hf86b2d81.mp3 | רוּת | ˈʁut | (as above) |
+| h28d30511 | israeli/word/h28d30511.mp3 | שָׁבוּר | ʃa.ˈvuʁ | (as above) |
+| hf31190f0 | israeli/word/hf31190f0.mp3 | פָּנוּי | pa.ˈnuj | (as above) |
+| hb8b78e51 | israeli/word/hb8b78e51.mp3 | בְּ־ | ˈbe- | (as above) |
+| hd5bcfcb8 | israeli/word/hd5bcfcb8.mp3 | נָבַל | na.ˈval | (as above) |
+| heabe1020 | israeli/word/heabe1020.mp3 | יָא | ˈja | (as above) |
+| h93f568f7 | israeli/word/h93f568f7.mp3 | שֶׂה | ˈse | (as above) |
+| hf3ec3b23 | israeli/word/hf3ec3b23.mp3 | כְּמוֹ | ke.ˈmo | (as above) |
+| hcb5a058a | israeli/word/hcb5a058a.mp3 | עַכְשָׁו | aχ.ˈʃav | (as above) |
+| he943571e | israeli/word/he943571e.mp3 | אִשָּׁה | i.ˈʃa | (as above) |
+| hf1ccd0e6 | israeli/word/hf1ccd0e6.mp3 | אֱלוֹהַּ | e.ˈlo.ah | (as above) |
+| hf5a50e5d | israeli/word/hf5a50e5d.mp3 | אִי | ˈi | (as above) |
+| hbd0751bc | israeli/word/hbd0751bc.mp3 | פָּנִים | pa.ˈnim | (as above) |
+| he3b1acbd | israeli/word/he3b1acbd.mp3 | עִיר | ˈiʁ | (as above) |
+| h24f17330 | israeli/word/h24f17330.mp3 | מֵת | ˈmet | (as above) |
+| hfd3118ed | israeli/word/hfd3118ed.mp3 | הִגִּיעַ | hi.ˈɡi.a | (as above) |
+| h22a20328 | israeli/word/h22a20328.mp3 | כִּוֵּן | ki.ˈven | (as above) |
+| h1561ca15 | israeli/word/h1561ca15.mp3 | עָבַר | a.ˈvaʁ | (as above) |
+| hd8a5c2cf | israeli/word/hd8a5c2cf.mp3 | מָצָא | ma.ˈtsa | (as above) |
+| h9d6352ee | israeli/word/h9d6352ee.mp3 | עַיִן | ˈa.jin | (as above) |
+| h8d0e13f2 | israeli/word/h8d0e13f2.mp3 | בָּרַר | ba.ˈʁaʁ | (as above) |
+| he6287163 | israeli/word/he6287163.mp3 | זָבַח | za.ˈvaχ | (as above) |
+| hf95a2330 | israeli/word/hf95a2330.mp3 | נִסָּה | ni.ˈsa | (as above) |
+| h139c94a9 | israeli/word/h139c94a9.mp3 | שָׁהָה | ʃa.ˈha | (as above) |
+| h36fae7b2 | israeli/word/h36fae7b2.mp3 | אֶדֶן | e.ˈden | (as above) |
+| h1797f84f | israeli/word/h1797f84f.mp3 | צָר | ˈtsaʁ | (as above) |
+| h29ebe493 | israeli/word/h29ebe493.mp3 | קָשֶׁה | ka.ˈʃe | (as above) |
+| habcfc77f | israeli/word/habcfc77f.mp3 | חֹר | ˈχoʁ | (as above) |
+| hfa746c05 | israeli/word/hfa746c05.mp3 | עֲדַיִן | a.da.ˈjin | (as above) |
+| h342fd0de | israeli/word/h342fd0de.mp3 | מָקוֹם | ma.ˈkom | (as above) |
+| h4d5ad9e4 | israeli/word/h4d5ad9e4.mp3 | בִּשְׁבִיל | biʃ.ˈvil | (as above) |
+| hba8920a3 | israeli/word/hba8920a3.mp3 | חֻשַּׁב | χu.ˈʃav | (as above) |
+| ha7e901e9 | israeli/word/ha7e901e9.mp3 | יָרֵא | ja.ˈʁe | (as above) |
+| hb91b24f9 | israeli/word/hb91b24f9.mp3 | מַר | ˈmaʁ | (as above) |
+| heb8a3bc1 | israeli/word/heb8a3bc1.mp3 | הֵן | ˈhen | (as above) |
+| h0fc2ca76 | israeli/word/h0fc2ca76.mp3 | הִתְחִיל | hit.ˈχil | (as above) |
+| h352b83f7 | israeli/word/h352b83f7.mp3 | כֹּה | ˈko | (as above) |
+| h13c6683f | israeli/word/h13c6683f.mp3 | הֵכִיל | he.ˈχil | (as above) |
+| hd04514bf | israeli/word/hd04514bf.mp3 | הָרַג | ha.ˈʁaɡ | (as above) |
+| h720b8d19 | israeli/word/h720b8d19.mp3 | אַמָּה | a.ˈma | (as above) |
+| h8ea4d152 | israeli/word/h8ea4d152.mp3 | לַעֲזָאזֵל | la.a.za.ˈzel | (as above) |
+| h3c9f9b9b | israeli/word/h3c9f9b9b.mp3 | אֹהֶל | ˈo.hel | (as above) |
+| hb9b267e3 | israeli/word/hb9b267e3.mp3 | עָמַד | a.ˈmad | (as above) |
+| h0faf39fb | israeli/word/h0faf39fb.mp3 | מִישֶׁהוּ | ˈmi.ʃe.hu | (as above) |
+| h0aeb9756 | israeli/word/h0aeb9756.mp3 | דָּמַם | da.ˈmam | (as above) |
+| h7494d535 | israeli/word/h7494d535.mp3 | זוֹ | ˈzo | (as above) |
+| hdb9bd37f | israeli/word/hdb9bd37f.mp3 | עָזַב | a.ˈzav | (as above) |
+| hbd47566a | israeli/word/hbd47566a.mp3 | נִכְנַס | niχ.ˈnas | (as above) |
+| h131877e3 | israeli/word/h131877e3.mp3 | הִכִּיר | hi.ˈkiʁ | (as above) |
+| h3b32dc48 | israeli/word/h3b32dc48.mp3 | גּוֹי | ˈɡoj | (as above) |
+| h0e071b5c | israeli/word/h0e071b5c.mp3 | יֻדַּע | ju.ˈda | (as above) |
+| h97be2e78 | israeli/word/h97be2e78.mp3 | אֲפִלּוּ | a.ˈfi.lu | (as above) |
+| h0073b076 | israeli/word/h0073b076.mp3 | פַּרְעֹה | paʁ.ˈo | (as above) |
+| h26a32615 | israeli/word/h26a32615.mp3 | הֶאֱמִין | he.e.ˈmin | (as above) |
+| ha4794f20 | israeli/word/ha4794f20.mp3 | כּוֹהֵן | ko.ˈhen | (as above) |
+| h5d60ac4a | israeli/word/h5d60ac4a.mp3 | הִפְסִיק | hif.ˈsik | (as above) |
+| hdd847ae4 | israeli/word/hdd847ae4.mp3 | סָלַח | sa.ˈlaχ | (as above) |
+| h6bc4e030 | israeli/word/h6bc4e030.mp3 | אַחֲרוֹן | a.χa.ˈʁon | (as above) |
+| h23fb4faa | israeli/word/h23fb4faa.mp3 | עִנְיָן | in.ˈjan | (as above) |
+| h432cf2d0 | israeli/word/h432cf2d0.mp3 | הֲ־ | ˈha- | (as above) |
+| he8dfed90 | israeli/word/he8dfed90.mp3 | נִשְׁאַר | niʃ.ˈaʁ | (as above) |
+| hf1da5ea6 | israeli/word/hf1da5ea6.mp3 | אֵשׁ | ˈeʃ | (as above) |
+| ha536b676 | israeli/word/ha536b676.mp3 | גָּרַם | ɡa.ˈʁam | (as above) |
+| hf8d6ef2c | israeli/word/hf8d6ef2c.mp3 | גָּמַר | ɡa.ˈmaʁ | (as above) |
+| hcd826bec | israeli/word/hcd826bec.mp3 | שָׁר | ˈʃaʁ | (as above) |
+| h2b39dcf2 | israeli/word/h2b39dcf2.mp3 | בַּד | ˈbad | (as above) |
+| h524464c5 | israeli/word/h524464c5.mp3 | קָשַׁר | ka.ˈʃaʁ | (as above) |
+| hd6219bc1 | israeli/word/hd6219bc1.mp3 | חוּץ | ˈχuts | (as above) |
+| h07f9e1d9 | israeli/word/h07f9e1d9.mp3 | הִצְלִיחַ | hits.ˈli.aχ | (as above) |
+| hbab9e498 | israeli/word/hbab9e498.mp3 | דָּאַג | da.ˈaɡ | (as above) |
+| hc35fb5dd | israeli/word/hc35fb5dd.mp3 | חִפֵּשׂ | χi.ˈpes | (as above) |
+| hd11a9c4c | israeli/word/hd11a9c4c.mp3 | הִקְשִׁיב | hik.ˈʃiv | (as above) |
+| h07a5230b | israeli/word/h07a5230b.mp3 | פָּגַשׁ | pa.ˈɡaʃ | (as above) |
+| h95c54aba | israeli/word/h95c54aba.mp3 | אוֹקֵי | o.ˈke | (as above) |
+| h66f194fe | israeli/word/h66f194fe.mp3 | חָנָה | χa.ˈna | (as above) |
+| hb4ccc0e9 | israeli/word/hb4ccc0e9.mp3 | עֵדָה | e.ˈda | (as above) |
+| h129dd70a | israeli/word/h129dd70a.mp3 | שָׁאַל | ʃa.ˈal | (as above) |
+| hbd8c77c5 | israeli/word/hbd8c77c5.mp3 | קָרַב | ka.ˈʁav | (as above) |
+| h8cde0416 | israeli/word/h8cde0416.mp3 | גֶּבֶר | ˈɡe.veʁ | (as above) |
+| hb21be276 | israeli/word/hb21be276.mp3 | וְ־ | ˈve- | (as above) |
+| h32049c3e | israeli/word/h32049c3e.mp3 | כְּדַאי | ke.ˈdaj | (as above) |
+| h72ac53a6 | israeli/word/h72ac53a6.mp3 | צֹאן | ˈtson | (as above) |
+| h5385f0f3 | israeli/word/h5385f0f3.mp3 | סִבָּה | si.ˈba | (as above) |
+| h6670eb72 | israeli/word/h6670eb72.mp3 | עָנָה | a.ˈna | (as above) |
+| h5e8154a0 | israeli/word/h5e8154a0.mp3 | חָצָה | χa.ˈtsa | (as above) |
+| he945f31c | israeli/word/he945f31c.mp3 | חֶרֶב | ˈχe.ʁev | (as above) |
+| h49a493f0 | israeli/word/h49a493f0.mp3 | בְּדִיּוּק | be.di.ˈjuk | (as above) |
+| h3312eae8 | israeli/word/h3312eae8.mp3 | הִמְשִׁיךְ | him.ˈʃiχ | (as above) |
+| h871db71d | israeli/word/h871db71d.mp3 | הִסְפִּיק | his.ˈpik | (as above) |
+| h706adec4 | israeli/word/h706adec4.mp3 | אָנוּ | ˈa.nu | (as above) |
+| h0c96b2f5 | israeli/word/h0c96b2f5.mp3 | בָּחוּר | ba.ˈχuʁ | (as above) |
+| hb88ee2ce | israeli/word/hb88ee2ce.mp3 | הָפַךְ | ˈha.faχ | (as above) |
+| h84e985fd | israeli/word/h84e985fd.mp3 | מוֹעֵד | mo.ˈed | (as above) |
+| hb694815f | israeli/word/hb694815f.mp3 | נֶהֱדָר | ne.he.ˈdaʁ | (as above) |
+| he53d1d1d | israeli/word/he53d1d1d.mp3 | אֶבֶן | ˈe.ven | (as above) |
+| h386e6ad7 | israeli/word/h386e6ad7.mp3 | קְרָב | ke.ˈʁav | (as above) |
+| h6fd09fff | israeli/word/h6fd09fff.mp3 | דֵּעָה | de.ˈa | (as above) |
+| h5795e8db | israeli/word/h5795e8db.mp3 | כֹּחַ | ˈko.aχ | (as above) |
+| h32a7c780 | israeli/word/h32a7c780.mp3 | נָגַע | na.ˈɡa | (as above) |
+| hfe1ddb27 | israeli/word/hfe1ddb27.mp3 | נָפַל | na.ˈfal | (as above) |
+| hb33d863f | israeli/word/hb33d863f.mp3 | בְּתוֹךְ | be.ˈtoχ | (as above) |
+| h8db088fc | israeli/word/h8db088fc.mp3 | תָּפַס | ta.ˈfas | (as above) |
+| h6a579e02 | israeli/word/h6a579e02.mp3 | טָח | ˈtaχ | (as above) |
+| h1d7368c3 | israeli/word/h1d7368c3.mp3 | בַּל | ˈbal | (as above) |
+| h6a3b1b97 | israeli/word/h6a3b1b97.mp3 | בָּדַק | ba.ˈdak | (as above) |
+| h2f12d5bf | israeli/word/h2f12d5bf.mp3 | דָּר | ˈdaʁ | (as above) |
+| h729919fd | israeli/word/h729919fd.mp3 | נַעַר | ˈna.aʁ | (as above) |
+| h44d68d1e | israeli/word/h44d68d1e.mp3 | חֹק | ˈχok | (as above) |
+| h8674bd4c | israeli/word/h8674bd4c.mp3 | הִשִּׂיג | hi.ˈsiɡ | (as above) |
+| hf5f3eb91 | israeli/word/hf5f3eb91.mp3 | זָז | ˈzaz | (as above) |
+| h7715384f | israeli/word/h7715384f.mp3 | שָׁת | ˈʃat | (as above) |
+| h082fa7e3 | israeli/word/h082fa7e3.mp3 | חָלַק | χa.ˈlak | (as above) |
+| he22b4a86 | israeli/word/he22b4a86.mp3 | שַׂר | ˈsaʁ | (as above) |
+| hf94d4d72 | israeli/word/hf94d4d72.mp3 | אֵד | ˈed | (as above) |
+| hddb5189f | israeli/word/hddb5189f.mp3 | שַׁעַר | ʃa.ˈaʁ | (as above) |
+| hdb3c45eb | israeli/word/hdb3c45eb.mp3 | רֶגֶל | ˈʁe.ɡel | (as above) |
+| h36173537 | israeli/word/h36173537.mp3 | אִלּוּ | i.ˈlu | (as above) |
+| hc444e8d9 | israeli/word/hc444e8d9.mp3 | יְכֹלֶת | je.χo.ˈlet | (as above) |
+| hc8edded2 | israeli/word/hc8edded2.mp3 | הֶחְלִיט | heχ.ˈlit | (as above) |
+| h9034f8b8 | israeli/word/h9034f8b8.mp3 | מָוֶת | ˈma.vet | (as above) |
+| h01851b40 | israeli/word/h01851b40.mp3 | רָצַח | ʁa.ˈtsaχ | (as above) |
+| hc162425b | israeli/word/hc162425b.mp3 | אַךְ | ˈaχ | (as above) |
+| he9d6c9ab | israeli/word/he9d6c9ab.mp3 | כַּר | ˈkaʁ | (as above) |
+| h69a35691 | israeli/word/h69a35691.mp3 | פַּר | ˈpaʁ | (as above) |
+| hc941edff | israeli/word/hc941edff.mp3 | דַּק | ˈdak | (as above) |
+| hc086f897 | israeli/word/hc086f897.mp3 | מֹתֶק | mo.ˈtek | (as above) |
+| h779cc60c | israeli/word/h779cc60c.mp3 | מַטֶּה | ma.ˈte | (as above) |
+| h64e266b0 | israeli/word/h64e266b0.mp3 | אֲמִתִּי | a.mi.ˈti | (as above) |
+| h12364093 | israeli/word/h12364093.mp3 | הִצְטָרֵךְ | hits.ta.ˈʁeχ | (as above) |
+| hfdbafdf6 | israeli/word/hfdbafdf6.mp3 | בִּגְלַל | biɡ.ˈlal | (as above) |
+| h5ba7d704 | israeli/word/h5ba7d704.mp3 | נוֹסַף | no.ˈsaf | (as above) |
+| h39a5cc8a | israeli/word/h39a5cc8a.mp3 | הִקְרִיב | hik.ˈʁiv | (as above) |
+| hdebf05db | israeli/word/hdebf05db.mp3 | הִשְׁאִיר | hiʃ.ˈiʁ | (as above) |
+| h2035ee1a | israeli/word/h2035ee1a.mp3 | חָטָא | χa.ˈta | (as above) |
+| hef13f241 | israeli/word/hef13f241.mp3 | גִּלָּה | ɡi.ˈla | (as above) |
+| h84ac4111 | israeli/word/h84ac4111.mp3 | שָׂרָה | sa.ˈʁa | (as above) |
+| h68cc83f7 | israeli/word/h68cc83f7.mp3 | טָמֵא | ta.ˈme | (as above) |
+| h1eeebe32 | israeli/word/h1eeebe32.mp3 | פָּשַׁט | pa.ˈʃat | (as above) |
+| hdf8bcf60 | israeli/word/hdf8bcf60.mp3 | תׇּכְנִית | toχ.ˈnit | (as above) |
+| h57ed7970 | israeli/word/h57ed7970.mp3 | מְעַט | me.ˈat | (as above) |
+| h54cf41d4 | israeli/word/h54cf41d4.mp3 | פָּחוֹת | pa.ˈχot | (as above) |
+| h4cedaa9e | israeli/word/h4cedaa9e.mp3 | סָבִיב | sa.ˈviv | (as above) |
+| hd499f4c4 | israeli/word/hd499f4c4.mp3 | טִפֵּל | ti.ˈpel | (as above) |
+| h39e6c15a | israeli/word/h39e6c15a.mp3 | עֲבוּר | a.ˈvuʁ | (as above) |
+| h4d33d20c | israeli/word/h4d33d20c.mp3 | סִיֵּם | si.ˈjem | (as above) |
+| hc559dcdc | israeli/word/hc559dcdc.mp3 | הִצִּיל | hi.ˈtsil | (as above) |
+| h94b9c92d | israeli/word/h94b9c92d.mp3 | נָח | ˈnaχ | (as above) |
+| h40e5a2de | israeli/word/h40e5a2de.mp3 | אַיֵּה | a.ˈje | (as above) |
+| h0cdd730a | israeli/word/h0cdd730a.mp3 | אִוָּה | i.ˈva | (as above) |
+| hfb9cb2bb | israeli/word/hfb9cb2bb.mp3 | הֶחְזִיק | heχ.ˈzik | (as above) |
+| h8aa6404d | israeli/word/h8aa6404d.mp3 | אַיִל | ˈa.jil | (as above) |
+| hcb18de9f | israeli/word/hcb18de9f.mp3 | זִהָה | zi.ˈha | (as above) |
+| h08f064b2 | israeli/word/h08f064b2.mp3 | חַטָּאת | χa.ˈtat | (as above) |
+| hafedf16c | israeli/word/hafedf16c.mp3 | פָּגַע | pa.ˈɡa | (as above) |
+| h1475ee81 | israeli/word/h1475ee81.mp3 | כְּבָר | ke.ˈvaʁ | (as above) |
+| h4d766086 | israeli/word/h4d766086.mp3 | יַחַד | ja.ˈχad | (as above) |
+| hb988b556 | israeli/word/hb988b556.mp3 | נָקַם | na.ˈkam | (as above) |
+| hb1265621 | israeli/word/hb1265621.mp3 | דְּ־ | ˈde- | (as above) |
+| hdea05db5 | israeli/word/hdea05db5.mp3 | עֵבֶר | ˈe.veʁ | (as above) |
+| h327ac347 | israeli/word/h327ac347.mp3 | שָׁכַב | ʃa.ˈχav | (as above) |
+| hce5d4d38 | israeli/word/hce5d4d38.mp3 | אֹפֶן | ˈo.fen | (as above) |
+| hab586bfa | israeli/word/hab586bfa.mp3 | תִּוֵּךְ | ti.ˈveχ | (as above) |
+| h0c76d311 | israeli/word/h0c76d311.mp3 | שָׁכַח | ʃa.ˈχaχ | (as above) |
+| h18885c51 | israeli/word/h18885c51.mp3 | נָע | ˈna | (as above) |
+| he43ec7f7 | israeli/word/he43ec7f7.mp3 | בָּנָה | ba.ˈna | (as above) |
+| h7a3505d0 | israeli/word/h7a3505d0.mp3 | רַעֲיוֹן | ʁa.a.ˈjon | (as above) |
+| hd4d192c8 | israeli/word/hd4d192c8.mp3 | סוֹכֵן | so.ˈχen | (as above) |
+| h6554536b | israeli/word/h6554536b.mp3 | פְּלִשְׁתִּי | pe.liʃ.ˈti | (as above) |
+| hc639d04f | israeli/word/hc639d04f.mp3 | צַד | ˈtsad | (as above) |
+| ha98ef61d | israeli/word/ha98ef61d.mp3 | הֵשִׁיב | he.ˈʃiv | (as above) |
+| h95c52e9c | israeli/word/h95c52e9c.mp3 | מִלָּה | mi.ˈla | (as above) |
+| hf7607ee6 | israeli/word/hf7607ee6.mp3 | צִפָּה | tsi.ˈpa | (as above) |
+| hf64d1c8d | israeli/word/hf64d1c8d.mp3 | כָּלַל | ka.ˈlal | (as above) |
+| h1982ccc7 | israeli/word/h1982ccc7.mp3 | רָץ | ˈʁats | (as above) |
+| hd17f5d65 | israeli/word/hd17f5d65.mp3 | נִשְׁבַּע | niʃ.ˈba | (as above) |
+| h07407da8 | israeli/word/h07407da8.mp3 | פֶּן | ˈpen | (as above) |
+| ha4595016 | israeli/word/ha4595016.mp3 | שׁוֹטֵר | ʃo.ˈteʁ | (as above) |
+| hc0616a4b | israeli/word/hc0616a4b.mp3 | אֹזֶן | ˈo.zen | (as above) |
+| h4639e00e | israeli/word/h4639e00e.mp3 | גָּלַל | ɡa.ˈlal | (as above) |
+| hfdfd1efd | israeli/word/hfdfd1efd.mp3 | נִרְגַּע | niʁ.ˈɡa | (as above) |
+| hee07e419 | israeli/word/hee07e419.mp3 | נֶחְמָד | neχ.ˈmad | (as above) |
+| hff7d24c0 | israeli/word/hff7d24c0.mp3 | רָכַב | ˈʁa.χav | (as above) |
+| hdc17acee | israeli/word/hdc17acee.mp3 | טִהֵר | ti.ˈheʁ | (as above) |
+| h19702c85 | israeli/word/h19702c85.mp3 | מִקְוֶה | mik.ˈve | (as above) |
+| h68394bec | israeli/word/h68394bec.mp3 | מְאֻחָר | me.u.ˈχaʁ | (as above) |
+| h6fa87858 | israeli/word/h6fa87858.mp3 | הִבְטִיחַ | hiv.ˈti.aχ | (as above) |
+| h4e4b99b1 | israeli/word/h4e4b99b1.mp3 | נָשִׂיא | na.ˈsi | (as above) |
+| h4646b41c | israeli/word/h4646b41c.mp3 | כַּף | ˈkaf | (as above) |
+| h9324911c | israeli/word/h9324911c.mp3 | חָצֵר | χa.ˈtseʁ | (as above) |
+| hde82cf75 | israeli/word/hde82cf75.mp3 | הִטָּה | hi.ˈta | (as above) |
+| hb59c5cdb | israeli/word/hb59c5cdb.mp3 | שִׂיחָה | si.ˈχa | (as above) |
+| h426c201d | israeli/word/h426c201d.mp3 | דִּיּוּק | di.ˈjuk | (as above) |
+| hccc483aa | israeli/word/hccc483aa.mp3 | שׁוּם | ˈʃum | (as above) |
+| h54d02a94 | israeli/word/h54d02a94.mp3 | מָכַר | ma.ˈχaʁ | (as above) |
+| h378062a7 | israeli/word/h378062a7.mp3 | תִּיק | ˈtik | (as above) |
+| hb6d6914d | israeli/word/hb6d6914d.mp3 | כִּפֵּר | ki.ˈpeʁ | (as above) |
+| h37cac81b | israeli/word/h37cac81b.mp3 | צִלֵּם | tsi.ˈlem | (as above) |
+| hc480edcd | israeli/word/hc480edcd.mp3 | סָר | ˈsaʁ | (as above) |
+| h1202f1e7 | israeli/word/h1202f1e7.mp3 | גָּרוּעַ | ɡa.ˈʁu.a | (as above) |
+| h057ec4b3 | israeli/word/h057ec4b3.mp3 | זָרַק | za.ˈʁak | (as above) |
+| h9e7f90af | israeli/word/h9e7f90af.mp3 | חָמַד | χa.ˈmad | (as above) |
+| h00bec4fa | israeli/word/h00bec4fa.mp3 | לְגַבֵּי | le.ɡa.ˈbe | (as above) |
+| h34d7be76 | israeli/word/h34d7be76.mp3 | שָׂפָה | sa.ˈfa | (as above) |
+| hf2263f85 | israeli/word/hf2263f85.mp3 | בִּצֵּעַ | bi.ˈtse.a | (as above) |
+| hd502ab04 | israeli/word/hd502ab04.mp3 | אִכֵּף | i.ˈkef | (as above) |
+| h761f6283 | israeli/word/h761f6283.mp3 | הֵיכָן | he.ˈχan | (as above) |
+| h2c1f5534 | israeli/word/h2c1f5534.mp3 | נָשַׁר | na.ˈʃaʁ | (as above) |
+| h62b4707b | israeli/word/h62b4707b.mp3 | שָׂנֵא | sa.ˈne | (as above) |
+| hbd15d64c | israeli/word/hbd15d64c.mp3 | יֹפִי | jo.ˈfi | (as above) |
+| h46a5a512 | israeli/word/h46a5a512.mp3 | גְּבוּל | ɡe.ˈvul | (as above) |
+| h24b72cb6 | israeli/word/h24b72cb6.mp3 | אֵצֶל | ˈe.tsel | (as above) |
+| hb9165e1d | israeli/word/hb9165e1d.mp3 | בָּרַח | ba.ˈʁaχ | (as above) |
+| h1694966b | israeli/word/h1694966b.mp3 | פָּחַד | pa.ˈχad | (as above) |
+| h64945368 | israeli/word/h64945368.mp3 | סָגַר | sa.ˈɡaʁ | (as above) |
+| hf7d0fb03 | israeli/word/hf7d0fb03.mp3 | זִיֵּן | zi.ˈjen | (as above) |
+| h1fad8eb0 | israeli/word/h1fad8eb0.mp3 | פָּעַל | pa.ˈal | (as above) |
+| he2aec699 | israeli/word/he2aec699.mp3 | תָּקַף | ta.ˈkaf | (as above) |
+| ha70e3427 | israeli/word/ha70e3427.mp3 | נִקָּה | ni.ˈka | (as above) |
+| h516d731a | israeli/word/h516d731a.mp3 | נָשַׁם | na.ˈʃam | (as above) |
+| h88d247ca | israeli/word/h88d247ca.mp3 | נִכְרַת | niχ.ˈʁat | (as above) |
+| h40790488 | israeli/word/h40790488.mp3 | הֶחְזִיר | heχ.ˈziʁ | (as above) |
+| ha8df8ecd | israeli/word/ha8df8ecd.mp3 | הָרַס | ha.ˈʁas | (as above) |
+| h5f7ddcf4 | israeli/word/h5f7ddcf4.mp3 | חוֹסֶר | χo.ˈseʁ | (as above) |
+| h9720c378 | israeli/word/h9720c378.mp3 | סַם | ˈsam | (as above) |
+| h955b62a0 | israeli/word/h955b62a0.mp3 | טִפֵּשׁ | ti.ˈpeʃ | (as above) |
+| hc1aff898 | israeli/word/hc1aff898.mp3 | רָחֵל | ʁa.ˈχel | (as above) |
+| hba7a3175 | israeli/word/hba7a3175.mp3 | וִדֵּא | vi.ˈde | (as above) |
+| h91e9b8f2 | israeli/word/h91e9b8f2.mp3 | טָס | ˈtas | (as above) |
+| h1a99c4ab | israeli/word/h1a99c4ab.mp3 | מְיֻחָד | me.ju.ˈχad | (as above) |
+| h23f7ab73 | israeli/word/h23f7ab73.mp3 | כְּלוּם | ke.ˈlum | (as above) |
+| h42829564 | israeli/word/h42829564.mp3 | סָמַךְ | sa.ˈmaχ | (as above) |
+| h2111adc7 | israeli/word/h2111adc7.mp3 | לֹג | ˈloɡ | (as above) |
+| h2056d9ad | israeli/word/h2056d9ad.mp3 | קָצֶה | ka.ˈtse | (as above) |
+| hfa9e08b8 | israeli/word/hfa9e08b8.mp3 | עָף | ˈaf | (as above) |
+| he028e6f0 | israeli/word/he028e6f0.mp3 | אַרְיֵה | aʁ.ˈje | (as above) |
+| hcb7dfbf5 | israeli/word/hcb7dfbf5.mp3 | אֵיזוֹ | e.ˈzo | (as above) |
+| h5cc95d6e | israeli/word/h5cc95d6e.mp3 | נְחֹשֶׁת | ne.ˈχo.ʃet | (as above) |
+| h2f27d2ce | israeli/word/h2f27d2ce.mp3 | הֵכִין | he.ˈχin | (as above) |
+| hc156c20a | israeli/word/hc156c20a.mp3 | הֵרִים | he.ˈʁim | (as above) |
+| h29a2e2b8 | israeli/word/h29a2e2b8.mp3 | וָו | ˈvav | (as above) |
+| h16acb4dc | israeli/word/h16acb4dc.mp3 | אָרוֹן | a.ˈʁon | (as above) |
+| hc6597ed8 | israeli/word/hc6597ed8.mp3 | נְקֻדָּה | ne.ku.ˈda | (as above) |
+| h2e1e8caf | israeli/word/h2e1e8caf.mp3 | נַחֲלָה | na.χa.ˈla | (as above) |
+| h982871fa | israeli/word/h982871fa.mp3 | שָׁכַן | ʃa.ˈχan | (as above) |
+| haba8301e | israeli/word/haba8301e.mp3 | עֵסֶק | e.ˈsek | (as above) |
+| h5188f01f | israeli/word/h5188f01f.mp3 | שֵׁבֶט | ˈʃe.vet | (as above) |
+| h6b43040f | israeli/word/h6b43040f.mp3 | צֶוֶת | tse.ˈvet | (as above) |
+| h78cf1c7a | israeli/word/h78cf1c7a.mp3 | צָעִיר | tsa.ˈiʁ | (as above) |
+| h812fda2f | israeli/word/h812fda2f.mp3 | מֻשָּׂג | mu.ˈsaɡ | (as above) |
+| hc3a83879 | israeli/word/hc3a83879.mp3 | אֵבֶר | e.ˈveʁ | (as above) |
+| h8a450588 | israeli/word/h8a450588.mp3 | פַּרְק | ˈpaʁk | (as above) |
+| hbf6ba8bf | israeli/word/hbf6ba8bf.mp3 | תִּקֵּן | ti.ˈken | (as above) |
+| h07aab9ea | israeli/word/h07aab9ea.mp3 | מַלְאָךְ | mal.ˈaχ | (as above) |
+| h9790d078 | israeli/word/h9790d078.mp3 | מָתוֹק | ma.ˈtok | (as above) |
+| hc33f7702 | israeli/word/hc33f7702.mp3 | מוֹחַ | ˈmo.aχ | (as above) |
+| hb65cf584 | israeli/word/hb65cf584.mp3 | צוּרָה | tsu.ˈʁa | (as above) |
+| h0e0c5c6e | israeli/word/h0e0c5c6e.mp3 | הִזְדַּמְּנוּת | hiz.da.me.ˈnut | (as above) |
+| h5271b622 | israeli/word/h5271b622.mp3 | עָווֹן | a.ˈvon | (as above) |
+| haf460aed | israeli/word/haf460aed.mp3 | סָךְ | ˈsaχ | (as above) |
+| h6526f5a1 | israeli/word/h6526f5a1.mp3 | בְּעֵינֵי־ | be.e.ˈne- | (as above) |
+| hd49bc59a | israeli/word/hd49bc59a.mp3 | הוֹרֶה | ho.ˈʁe | (as above) |
+| h7832f163 | israeli/word/h7832f163.mp3 | יָרַשׁ | ja.ˈʁaʃ | (as above) |
+| h8b7d0341 | israeli/word/h8b7d0341.mp3 | דִּין | ˈdin | (as above) |
+| hca9b72dd | israeli/word/hca9b72dd.mp3 | בִּלְתִּי | bil.ˈti | (as above) |
+| h1182302d | israeli/word/h1182302d.mp3 | סִכּוּי | si.ˈkuj | (as above) |
+| h12c1eeaf | israeli/word/h12c1eeaf.mp3 | אַדִּיר | a.ˈdiʁ | (as above) |
+| hd3bcf136 | israeli/word/hd3bcf136.mp3 | מַס | ˈmas | (as above) |
+| h3430ee89 | israeli/word/h3430ee89.mp3 | הִכְנִיס | hiχ.ˈnis | (as above) |
+| hab527ee7 | israeli/word/hab527ee7.mp3 | יֶתֶר | je.ˈteʁ | (as above) |
+| h40963f66 | israeli/word/h40963f66.mp3 | כְּ־ | ˈke- | (as above) |
+| h9618213e | israeli/word/h9618213e.mp3 | כָּרַת | ka.ˈʁat | (as above) |
+| h3db72062 | israeli/word/h3db72062.mp3 | גַּלְעֵד | ɡal.ˈed | (as above) |
+| he54faf96 | israeli/word/he54faf96.mp3 | שָׁלַט | ʃa.ˈlat | (as above) |
+| hde9b27c8 | israeli/word/hde9b27c8.mp3 | חֻקָּה | χu.ˈka | (as above) |
+| h999f1fb1 | israeli/word/h999f1fb1.mp3 | הוֹפִיעַ | ho.ˈfi.a | (as above) |
+| hf2fcef6c | israeli/word/hf2fcef6c.mp3 | רְצִינִי | ʁe.tsi.ˈni | (as above) |
+| h447cab37 | israeli/word/h447cab37.mp3 | קְבוּצָה | ke.vu.ˈtsa | (as above) |
+| he964bca4 | israeli/word/he964bca4.mp3 | הִשְׁתַּחֲוָה | hiʃ.ta.χa.ˈva | (as above) |
+| h3dcbac32 | israeli/word/h3dcbac32.mp3 | חֲתִיכָה | χa.ti.ˈχa | (as above) |
+| h32580d06 | israeli/word/h32580d06.mp3 | נִלְחַם | nil.ˈχam | (as above) |
+| h5ea1ecdf | israeli/word/h5ea1ecdf.mp3 | הוֹרִיד | ho.ˈʁid | (as above) |
+| hf2c01ed2 | israeli/word/hf2c01ed2.mp3 | הַרְבֵּה | haʁ.ˈbe | (as above) |
+| h77ef11e1 | israeli/word/h77ef11e1.mp3 | לָשׁ | ˈlaʃ | (as above) |
+| h0c4906f8 | israeli/word/h0c4906f8.mp3 | טָעוּת | ta.ˈut | (as above) |
+| hc5a2dfc8 | israeli/word/hc5a2dfc8.mp3 | אִיֵּם | i.ˈjem | (as above) |
+| h2c308e65 | israeli/word/h2c308e65.mp3 | שִׁבְעִים | ʃiv.ˈim | (as above) |
+| h5ba22cfa | israeli/word/h5ba22cfa.mp3 | דָּפַק | da.ˈfak | (as above) |
+| hc09d494d | israeli/word/hc09d494d.mp3 | טָהוֹר | ta.ˈhoʁ | (as above) |
+| h87fe453e | israeli/word/h87fe453e.mp3 | שִׁקֵּר | ʃi.ˈkeʁ | (as above) |
+| h26f014a5 | israeli/word/h26f014a5.mp3 | שׁוֹר | ˈʃoʁ | (as above) |
+| hbd8d9038 | israeli/word/hbd8d9038.mp3 | מַדּוּעַ | ma.ˈdu.a | (as above) |
+| hc11f62ec | israeli/word/hc11f62ec.mp3 | אָמוּר | a.ˈmuʁ | (as above) |
+| h57f79164 | israeli/word/h57f79164.mp3 | תָּא | ˈta | (as above) |
+| h7ab6c1a8 | israeli/word/h7ab6c1a8.mp3 | סוּג | ˈsuɡ | (as above) |
+| hc3279140 | israeli/word/hc3279140.mp3 | הִסְבִּיר | his.ˈbiʁ | (as above) |
+| h6568e5f7 | israeli/word/h6568e5f7.mp3 | גֵּב | ˈɡev | (as above) |
+| h595f9b33 | israeli/word/h595f9b33.mp3 | נָשָׁה | na.ˈʃa | (as above) |
+| he038b6aa | israeli/word/he038b6aa.mp3 | הוֹלִיד | ho.ˈlid | (as above) |
+| h730c9015 | israeli/word/h730c9015.mp3 | הִצִּיעַ | hi.ˈtsi.a | (as above) |
+| h6bc55d67 | israeli/word/h6bc55d67.mp3 | קׇדָשִׁים | ko.da.ˈʃim | (as above) |
+| h23d5cdb5 | israeli/word/h23d5cdb5.mp3 | מָהִיר | ma.ˈhiʁ | (as above) |
+| h8012e24c | israeli/word/h8012e24c.mp3 | כָּעַס | ˈka.as | (as above) |
+| hae3180a2 | israeli/word/hae3180a2.mp3 | גָּבֹהַ | ɡa.ˈvo.ah | (as above) |
+| ha7e21a82 | israeli/word/ha7e21a82.mp3 | נִפְלָא | nif.ˈla | (as above) |
+| h5db22897 | israeli/word/h5db22897.mp3 | אֶקְדָּח | ek.ˈdaχ | (as above) |
+| h6066f5e4 | israeli/word/h6066f5e4.mp3 | דָּרַשׁ | da.ˈʁaʃ | (as above) |
+| hab401cf0 | israeli/word/hab401cf0.mp3 | מִנְחָה | min.ˈχa | (as above) |
+| h4739925f | israeli/word/h4739925f.mp3 | חֵמָה | χe.ˈma | (as above) |
+| h3ea8601d | israeli/word/h3ea8601d.mp3 | כְּלִי | ke.ˈli | (as above) |
+| h637ad9ae | israeli/word/h637ad9ae.mp3 | נָשִׁים | na.ˈʃim | (as above) |
+| ha82bf37a | israeli/word/ha82bf37a.mp3 | קָלַט | ka.ˈlat | (as above) |
+| h3e9837b3 | israeli/word/h3e9837b3.mp3 | זָרַח | za.ˈʁaχ | (as above) |
+| hd3f164cc | israeli/word/hd3f164cc.mp3 | סְפִינָה | se.fi.ˈna | (as above) |
+| h8877d6a8 | israeli/word/h8877d6a8.mp3 | תַּפְקִיד | taf.ˈkid | (as above) |
+| ha7403fc6 | israeli/word/ha7403fc6.mp3 | לָחַץ | la.ˈχats | (as above) |
+| h57072da4 | israeli/word/h57072da4.mp3 | סוֹד | ˈsod | (as above) |
+| hbb8f0628 | israeli/word/hbb8f0628.mp3 | לָבַשׁ | la.ˈvaʃ | (as above) |
+| h6296d0d9 | israeli/word/h6296d0d9.mp3 | סוּס | ˈsus | (as above) |
+| h01f4a63f | israeli/word/h01f4a63f.mp3 | מַטָּרָה | ma.ta.ˈʁa | (as above) |
+| ha5c7216c | israeli/word/ha5c7216c.mp3 | פָּשַׁע | pa.ˈʃa | (as above) |
+| h2b9299a8 | israeli/word/h2b9299a8.mp3 | הוֹדִיעַ | ho.ˈdi.a | (as above) |
+| h0284af7f | israeli/word/h0284af7f.mp3 | קֶרֶשׁ | ke.ˈʁeʃ | (as above) |
+| hddeaa2ed | israeli/word/hddeaa2ed.mp3 | אָוֶן | a.ˈven | (as above) |
+| h572c48d4 | israeli/word/h572c48d4.mp3 | יְחִידָה | je.χi.ˈda | (as above) |
+| hd8e09290 | israeli/word/hd8e09290.mp3 | יַחַס | ˈja.χas | (as above) |
+| h7bacd4a2 | israeli/word/h7bacd4a2.mp3 | אַלּוּף | a.ˈluf | (as above) |
+| hc972012f | israeli/word/hc972012f.mp3 | פָּרַץ | pa.ˈʁats | (as above) |
+| h6bd07f03 | israeli/word/h6bd07f03.mp3 | פִּטֵּר | pi.ˈteʁ | (as above) |
+| h130343ba | israeli/word/h130343ba.mp3 | בֹּשׁ | ˈboʃ | (as above) |
+| h010999c9 | israeli/word/h010999c9.mp3 | זִקּוּק | zi.ˈkuk | (as above) |
+| h75012f54 | israeli/word/h75012f54.mp3 | שְׁאֵלָה | ʃe.e.ˈla | (as above) |
+| hfb8d7482 | israeli/word/hfb8d7482.mp3 | רֵיחַ | ˈʁe.aχ | (as above) |
+| h4f87a7b9 | israeli/word/h4f87a7b9.mp3 | נֶדֶר | ˈne.deʁ | (as above) |
+| h19cf953f | israeli/word/h19cf953f.mp3 | חֲמוֹר | χa.ˈmoʁ | (as above) |
+| hb3fb7693 | israeli/word/hb3fb7693.mp3 | תְּרוּמָה | te.ʁu.ˈma | (as above) |
+| h8917f673 | israeli/word/h8917f673.mp3 | עֵר | ˈeʁ | (as above) |
+| h2eaba841 | israeli/word/h2eaba841.mp3 | אַשּׁוּר | a.ˈʃuʁ | (as above) |
+| h13b46b09 | israeli/word/h13b46b09.mp3 | קֵס | ˈkes | (as above) |
+| h9e50969f | israeli/word/h9e50969f.mp3 | בְּאֵר | be.ˈeʁ | (as above) |
+| h450c4832 | israeli/word/h450c4832.mp3 | עֶרְוָה | eʁ.ˈva | (as above) |
+| h89486b6f | israeli/word/h89486b6f.mp3 | קׇרְבָּן | koʁ.ˈban | (as above) |
+| h62c7d533 | israeli/word/h62c7d533.mp3 | בּוֹס | ˈbos | (as above) |
+| hc7da2ad4 | israeli/word/hc7da2ad4.mp3 | גָּד | ˈɡad | (as above) |
+| h56eaa7d0 | israeli/word/h56eaa7d0.mp3 | אֶמְצַע | em.ˈtsa | (as above) |
+| h1d79f7b0 | israeli/word/h1d79f7b0.mp3 | אֵזוֹר | e.ˈzoʁ | (as above) |
+| h8c0bec4d | israeli/word/h8c0bec4d.mp3 | הוֹבִיל | ho.ˈvil | (as above) |
+| h3a6be4d0 | israeli/word/h3a6be4d0.mp3 | סֹלֶת | ˈso.let | (as above) |
+| h319721ae | israeli/word/h319721ae.mp3 | אִכְפַּת | iχ.ˈpat | (as above) |
+| ha54e1129 | israeli/word/ha54e1129.mp3 | יְרִיעָה | je.ʁi.ˈa | (as above) |
+| hf423b369 | israeli/word/hf423b369.mp3 | תָּו | ˈtav | (as above) |
+| h38459da3 | israeli/word/h38459da3.mp3 | שָׁפַךְ | ʃa.ˈfaχ | (as above) |
+| hec9c6f65 | israeli/word/hec9c6f65.mp3 | מְסֻגָּל | me.su.ˈɡal | (as above) |
+| h62371cee | israeli/word/h62371cee.mp3 | קַפִּיטָן | ka.pi.ˈtan | (as above) |
+| hbd118cf1 | israeli/word/hbd118cf1.mp3 | עוֹף | ˈof | (as above) |
+| hcd00a615 | israeli/word/hcd00a615.mp3 | הָא | ˈha | (as above) |
+| hd354fb0e | israeli/word/hd354fb0e.mp3 | הִזְכִּיר | hiz.ˈkiʁ | (as above) |
+| h34aee9cc | israeli/word/h34aee9cc.mp3 | פֵּאָה | pe.ˈa | (as above) |
+| h3e44d72d | israeli/word/h3e44d72d.mp3 | מוּזָר | mu.ˈzaʁ | (as above) |
+| h9e375a8d | israeli/word/h9e375a8d.mp3 | חָלָל | χa.ˈlal | (as above) |
+| heece315f | israeli/word/heece315f.mp3 | חַיָּה | χa.ˈja | (as above) |
+| h25e14407 | israeli/word/h25e14407.mp3 | מָשַׁח | ma.ˈʃaχ | (as above) |
+| h17825deb | israeli/word/h17825deb.mp3 | אִידִיוֹט | i.di.ˈvot | (as above) |
+| hc26a7ce3 | israeli/word/hc26a7ce3.mp3 | נִחֵשׁ | ni.ˈχeʃ | (as above) |
+| h0e1d6c8d | israeli/word/h0e1d6c8d.mp3 | הִתְגַּעֲגֵעַ | hit.ɡa.a.ˈɡe.a | (as above) |
+| h568e3e03 | israeli/word/h568e3e03.mp3 | כִּסֵּא | ki.ˈse | (as above) |
+| h850a3966 | israeli/word/h850a3966.mp3 | כָּנָף | ka.ˈnaf | (as above) |
+| hc35a1f96 | israeli/word/hc35a1f96.mp3 | חֹמֶר | ˈχo.meʁ | (as above) |
+| h3c6a06b3 | israeli/word/h3c6a06b3.mp3 | חֲלוֹם | χa.ˈlom | (as above) |
+| h81a7a0c1 | israeli/word/h81a7a0c1.mp3 | מִילְיוֹן | mi.le.ˈjon | (as above) |
+| h13b625ed | israeli/word/h13b625ed.mp3 | עָלוּל | a.ˈlul | (as above) |
+| h0a99b68d | israeli/word/h0a99b68d.mp3 | זְכוּת | ze.ˈχut | (as above) |
+| h0aa6bd95 | israeli/word/h0aa6bd95.mp3 | גִּיל | ˈɡil | (as above) |
+| h26e6f8c5 | israeli/word/h26e6f8c5.mp3 | שֻׁתָּף | ʃu.ˈtaf | (as above) |
+| h271a18af | israeli/word/h271a18af.mp3 | כְּנַעֲנִי | ke.na.a.ˈni | (as above) |
+| h834701b7 | israeli/word/h834701b7.mp3 | תְּכֵלֶת | te.χe.ˈlet | (as above) |
+| h67ba809e | israeli/word/h67ba809e.mp3 | נֶסֶךְ | ne.ˈseχ | (as above) |
+| hb9151e6b | israeli/word/hb9151e6b.mp3 | יוֹשֵׁב | jo.ˈʃev | (as above) |
+| h1b791b4d | israeli/word/h1b791b4d.mp3 | כִּבֵּד | ki.ˈbed | (as above) |
+| hbd2244c0 | israeli/word/hbd2244c0.mp3 | קְטֹרֶת | ke.to.ˈʁet | (as above) |
+| h8db1b2e3 | israeli/word/h8db1b2e3.mp3 | זָהִיר | za.ˈhiʁ | (as above) |
+| hbb7445e6 | israeli/word/hbb7445e6.mp3 | תּוֹעֵבָה | to.e.ˈva | (as above) |
+| h943beaa8 | israeli/word/h943beaa8.mp3 | יַקִּיר | ja.ˈkiʁ | (as above) |
+| h12ec8adc | israeli/word/h12ec8adc.mp3 | פְּרָט | pe.ˈʁat | (as above) |
+| h3a77b486 | israeli/word/h3a77b486.mp3 | גָּמָל | ɡa.ˈmal | (as above) |
+| ha319beb5 | israeli/word/ha319beb5.mp3 | חֵךְ | ˈχeχ | (as above) |
+| hcbbc774f | israeli/word/hcbbc774f.mp3 | עָתִיד | a.ˈtid | (as above) |
+| h6e6c1bf1 | israeli/word/h6e6c1bf1.mp3 | גְּבִירָה | ɡe.vi.ˈʁa | (as above) |
+| hf3af4fb9 | israeli/word/hf3af4fb9.mp3 | תָּמִים | ta.ˈmim | (as above) |
+| h342c3c55 | israeli/word/h342c3c55.mp3 | צָב | ˈtsav | (as above) |
+| he21208a3 | israeli/word/he21208a3.mp3 | מְשֻׁגָּע | me.ʃu.ˈɡa | (as above) |
+| hcef6e567 | israeli/word/hcef6e567.mp3 | עִסְקָה | is.ˈka | (as above) |
+| h4760a2a0 | israeli/word/h4760a2a0.mp3 | פְּנִימָה | pe.ni.ˈma | (as above) |
+| h79f1f8cd | israeli/word/h79f1f8cd.mp3 | עָמֹק | a.ˈmok | (as above) |
+| h5bebb792 | israeli/word/h5bebb792.mp3 | גִּבְעָה | ɡiv.ˈa | (as above) |
+| he7f4c5c3 | israeli/word/he7f4c5c3.mp3 | רֶגֶשׁ | ˈʁe.ɡeʃ | (as above) |
+| h27d68eba | israeli/word/h27d68eba.mp3 | פּוֹל | ˈpol | (as above) |
+| h9cbc0f35 | israeli/word/h9cbc0f35.mp3 | יוֹנָה | jo.ˈna | (as above) |
+| h2c8086bd | israeli/word/h2c8086bd.mp3 | בִּנְיָן | bin.ˈjan | (as above) |
+| h242d7d42 | israeli/word/h242d7d42.mp3 | לוֹט | ˈlot | (as above) |
+| hc5e933f4 | israeli/word/hc5e933f4.mp3 | שַׁיָּךְ | ʃa.ˈjaχ | (as above) |
+| h14bf163a | israeli/word/h14bf163a.mp3 | אֲפֵר | ˈa.feʁ | (as above) |
+| hffc00eb8 | israeli/word/hffc00eb8.mp3 | מוּזִיקָה | ˈmu.zi.ka | (as above) |
+| hfb7bf5f4 | israeli/word/hfb7bf5f4.mp3 | לוּל | ˈlul | (as above) |
+| hef13c381 | israeli/word/hef13c381.mp3 | חַוָּה | χa.ˈva | (as above) |
+| h1e92d681 | israeli/word/h1e92d681.mp3 | שְׁכֶם | ʃe.ˈχem | (as above) |
+| h4d76dd5a | israeli/word/h4d76dd5a.mp3 | יָדִיד | ja.ˈdid | (as above) |
+| h0cc80aed | israeli/word/h0cc80aed.mp3 | טַף | ˈtaf | (as above) |
+| hf4544f2a | israeli/word/hf4544f2a.mp3 | כַּנָּה | ka.ˈna | (as above) |
+| hf12d3f21 | israeli/word/hf12d3f21.mp3 | רוֹן | ˈʁon | (as above) |
+| h64713a3a | israeli/word/h64713a3a.mp3 | הָמוֹן | ha.ˈmon | (as above) |
+| hefbbc2c7 | israeli/word/hefbbc2c7.mp3 | זוֹנָה | zo.ˈna | (as above) |
+| hd791f802 | israeli/word/hd791f802.mp3 | יְאוֹר | je.ˈoʁ | (as above) |
+| h2ce7109c | israeli/word/h2ce7109c.mp3 | סִימָן | si.ˈman | (as above) |
+| h0aed18d2 | israeli/word/h0aed18d2.mp3 | אַחְרָאִי | aχ.ʁa.ˈi | (as above) |
+| h56319802 | israeli/word/h56319802.mp3 | מוֹעֲדוֹן | mo.a.ˈdon | (as above) |
+| h5be380fa | israeli/word/h5be380fa.mp3 | אֲבִימֶלֶךְ | a.vi.ˈme.leχ | (as above) |
+| h333a5dcb | israeli/word/h333a5dcb.mp3 | אוֹיֵב | o.ˈjev | (as above) |
+| h14d8720e | israeli/word/h14d8720e.mp3 | רִיס | ˈʁis | (as above) |
+| h97dc517a | israeli/word/h97dc517a.mp3 | מַבָּט | ma.ˈbat | (as above) |
+| hbfda1ccb | israeli/word/hbfda1ccb.mp3 | חָזָק | χa.ˈzak | (as above) |
+| hf09f7879 | israeli/word/hf09f7879.mp3 | כּוּר | ˈkuʁ | (as above) |
+| hd0f11592 | israeli/word/hd0f11592.mp3 | נוֹחַ | ˈno.aχ | (as above) |
+| h0a3f1a37 | israeli/word/h0a3f1a37.mp3 | שְׁטוּת | ʃe.ˈtut | (as above) |
+| hcbe6cbe0 | israeli/word/hcbe6cbe0.mp3 | חֲתֻנָּה | χa.tu.ˈna | (as above) |
+| hb5cf3549 | israeli/word/hb5cf3549.mp3 | אַט | ˈat | (as above) |
+| hd492fef5 | israeli/word/hd492fef5.mp3 | אַשְׁמָה | aʃ.ˈma | (as above) |
+| hbc8677f5 | israeli/word/hbc8677f5.mp3 | נִסָּיוֹן | ni.sa.ˈjon | (as above) |
+| h3820d95e | israeli/word/h3820d95e.mp3 | עַמּוּד | a.ˈmud | (as above) |
+| h80c149b6 | israeli/word/h80c149b6.mp3 | תּוֹלַעַת | to.ˈla.at | (as above) |
+| h4a3da4c1 | israeli/word/h4a3da4c1.mp3 | חֵץ | ˈχets | (as above) |
+| h6884e387 | israeli/word/h6884e387.mp3 | סִינִי | si.ˈni | (as above) |
+| h0c2df2e4 | israeli/word/h0c2df2e4.mp3 | תְּאֻנָּה | te.u.ˈna | (as above) |
+| h1b73383e | israeli/word/h1b73383e.mp3 | מַדְהִים | mad.ˈhim | (as above) |
+| h91ac0d37 | israeli/word/h91ac0d37.mp3 | נָהָר | na.ˈhaʁ | (as above) |
+| h4548c2ea | israeli/word/h4548c2ea.mp3 | אֶפְשָׁרוּת | ef.ʃa.ˈʁut | (as above) |
+| h2adc37eb | israeli/word/h2adc37eb.mp3 | עֻבְדָּה | uv.ˈda | (as above) |
+| he0949da8 | israeli/word/he0949da8.mp3 | לָשׁוֹן | la.ˈʃon | (as above) |
+| h0764a400 | israeli/word/h0764a400.mp3 | עָסוּק | a.ˈsuk | (as above) |
+| h19e80411 | israeli/word/h19e80411.mp3 | בַּחוּרָה | ba.χu.ˈʁa | (as above) |
+| h9aaba801 | israeli/word/h9aaba801.mp3 | שׁוֹפֵט | ʃo.ˈfet | (as above) |
+| hc0a3c428 | israeli/word/hc0a3c428.mp3 | רֹחַב | ˈʁo.χav | (as above) |
+| hb2ae1b9a | israeli/word/hb2ae1b9a.mp3 | תּוֹצָאָה | to.tsa.ˈa | (as above) |
+| heca8ed1e | israeli/word/heca8ed1e.mp3 | טַבַּעַת | ta.ba.ˈat | (as above) |
+| h82f267e3 | israeli/word/h82f267e3.mp3 | עֲנָק | a.ˈnak | (as above) |
+| ha17e21d4 | israeli/word/ha17e21d4.mp3 | מְדִינָה | me.di.ˈna | (as above) |
+| ha148623d | israeli/word/ha148623d.mp3 | נִשּׂוּאִין | ni.su.ˈin | (as above) |
+| h3f469e92 | israeli/word/h3f469e92.mp3 | אַנְגְּלִי | an.ɡe.ˈli | (as above) |
+| h97e97e5b | israeli/word/h97e97e5b.mp3 | פְּעֻלָּה | pe.u.ˈla | (as above) |
+| ha0b8ee08 | israeli/word/ha0b8ee08.mp3 | מִגְרָשׁ | miɡ.ˈʁaʃ | (as above) |
+| h46266386 | israeli/word/h46266386.mp3 | לְמַטָּה | le.ˈma.ta | (as above) |
+| hf059f7b7 | israeli/word/hf059f7b7.mp3 | מַצְחִיק | mats.ˈχik | (as above) |
+| h9a35778f | israeli/word/h9a35778f.mp3 | שַׂק | ˈsak | (as above) |
+| hc5862de6 | israeli/word/hc5862de6.mp3 | אֶצְבַּע | ˈets.ba | (as above) |
+| h00ca167b | israeli/word/h00ca167b.mp3 | לַחֲלוּטִין | la.χa.lu.ˈtin | (as above) |
+| h15edfdd8 | israeli/word/h15edfdd8.mp3 | שִׁטָּה | ʃi.ˈta | (as above) |
+| hc8a77ebe | israeli/word/hc8a77ebe.mp3 | דַּעַת | ˈda.at | (as above) |
+| he34bd325 | israeli/word/he34bd325.mp3 | בְּהֵמָה | be.he.ˈma | (as above) |
+| hd04dbb3d | israeli/word/hd04dbb3d.mp3 | כִּתָּה | ki.ˈta | (as above) |
+| h7097c7a9 | israeli/word/h7097c7a9.mp3 | צָפוֹן | tsa.ˈfon | (as above) |
+| hcb9c4379 | israeli/word/hcb9c4379.mp3 | קֹשִׁי | ko.ˈʃi | (as above) |
+| hc008b0a9 | israeli/word/hc008b0a9.mp3 | דְּבַשׁ | de.ˈvaʃ | (as above) |
+| h4b14c918 | israeli/word/h4b14c918.mp3 | לַק | ˈlak | (as above) |
+| h88af0fba | israeli/word/h88af0fba.mp3 | אַרְגָּמָן | aʁ.ɡa.ˈman | (as above) |
+| h293be884 | israeli/word/h293be884.mp3 | חוֹמָה | χo.ˈma | (as above) |
+| h3e5d0f9c | israeli/word/h3e5d0f9c.mp3 | תְּקוּפָה | te.ku.ˈfa | (as above) |
+| hef745501 | israeli/word/hef745501.mp3 | יַעַר | ˈja.aʁ | (as above) |
+| h7efa21d2 | israeli/word/h7efa21d2.mp3 | קֶרַח | ˈke.ʁaχ | (as above) |
+| h1ac1f2cd | israeli/word/h1ac1f2cd.mp3 | הֻלֶּדֶת | hu.le.ˈdet | (as above) |
+| h8359d19c | israeli/word/h8359d19c.mp3 | סָבְתָא | sa.ˈve.ta | (as above) |
+| h426417f9 | israeli/word/h426417f9.mp3 | עֵצָה | e.ˈtsa | (as above) |
+| h09f2621b | israeli/word/h09f2621b.mp3 | שַׁחַת | ʃa.ˈχat | (as above) |
+| hc957eb01 | israeli/word/hc957eb01.mp3 | בְּדִיחָה | be.di.ˈχa | (as above) |
+| h74789994 | israeli/word/h74789994.mp3 | פְּצָצָה | pe.tsa.ˈtsa | (as above) |
+| h9be743b3 | israeli/word/h9be743b3.mp3 | כֶּרֶם | ˈke.ʁem | (as above) |
+| hf2beda21 | israeli/word/hf2beda21.mp3 | סַף | ˈsaf | (as above) |
+| h064edcbd | israeli/word/h064edcbd.mp3 | חָ | ˈχa | (as above) |
+| hee0f6bea | israeli/word/hee0f6bea.mp3 | בָּרִיא | ba.ˈʁi | (as above) |
+| hd5fd5e2d | israeli/word/hd5fd5e2d.mp3 | מְעִי | me.ˈi | (as above) |
+| h7af5d439 | israeli/word/h7af5d439.mp3 | תֵּבָה | te.ˈva | (as above) |
+| he973e381 | israeli/word/he973e381.mp3 | רְשִׁימָה | ʁe.ʃi.ˈma | (as above) |
+| h2299e4b3 | israeli/word/h2299e4b3.mp3 | אֶרֶז | ˈe.ʁez | (as above) |
+| h2334782c | israeli/word/h2334782c.mp3 | זוּג | ˈzuɡ | (as above) |
+| hd2fbb343 | israeli/word/hd2fbb343.mp3 | אֵרוּעַ | e.ˈʁu.a | (as above) |
+| hfcc1a370 | israeli/word/hfcc1a370.mp3 | גּוֹרָל | ɡo.ˈʁal | (as above) |
+| h68581174 | israeli/word/h68581174.mp3 | קֶסֶם | ˈke.sem | (as above) |
+| haf87e61a | israeli/word/haf87e61a.mp3 | רְצִינוּת | ʁe.tsi.ˈnut | (as above) |
+| h45474028 | israeli/word/h45474028.mp3 | הֵרָיוֹן | he.ʁa.ˈjon | (as above) |
+| haccb2ff3 | israeli/word/haccb2ff3.mp3 | דַּד | ˈdad | (as above) |
+| hff9ae755 | israeli/word/hff9ae755.mp3 | לוּחַ | ˈlu.aχ | (as above) |
+| hb814461b | israeli/word/hb814461b.mp3 | יָרֹק | ja.ˈʁok | (as above) |
+| h146d3d91 | israeli/word/h146d3d91.mp3 | הָלְאָה | ha.ˈle.a | (as above) |
+| h2d4006ef | israeli/word/h2d4006ef.mp3 | צַיָּד | tsa.ˈjad | (as above) |
+| h65a6c7e5 | israeli/word/h65a6c7e5.mp3 | תִּיכוֹן | ti.ˈχon | (as above) |
+| h5bd1f5e1 | israeli/word/h5bd1f5e1.mp3 | דֹּב | ˈdov | (as above) |
+| h882ed65b | israeli/word/h882ed65b.mp3 | טַיָּס | ta.ˈjas | (as above) |
+| hfdd2f995 | israeli/word/hfdd2f995.mp3 | עָנִי | a.ˈni | (as above) |
+| h54170135 | israeli/word/h54170135.mp3 | צָרַעַת | tsa.ˈʁa.at | (as above) |
+| hbe379d1f | israeli/word/hbe379d1f.mp3 | הִיסְטוֹרְיָה | hi.se.to.ʁe.ˈja | (as above) |
+| h3e763177 | israeli/word/h3e763177.mp3 | תִּינֹקֶת | ti.no.ˈket | (as above) |
+| he62efbab | israeli/word/he62efbab.mp3 | אֲהָהּ | a.ˈhah | (as above) |
+| ha891998a | israeli/word/ha891998a.mp3 | פָּעִיל | pa.ˈil | (as above) |
+| h68594418 | israeli/word/h68594418.mp3 | סֶלַע | ˈse.la | (as above) |
+| h817ec28c | israeli/word/h817ec28c.mp3 | צִפּוֹר | tsi.ˈpoʁ | (as above) |
+| h404d10ed | israeli/word/h404d10ed.mp3 | פֶּרֶד | pe.ˈʁed | (as above) |
+| h519ce338 | israeli/word/h519ce338.mp3 | קָצִיר | ka.ˈtsiʁ | (as above) |
+| h093f1db7 | israeli/word/h093f1db7.mp3 | אַלְמָן | al.ˈman | (as above) |
+| h921e79c9 | israeli/word/h921e79c9.mp3 | גַּג | ˈɡaɡ | (as above) |
+| hcaf49702 | israeli/word/hcaf49702.mp3 | עָשִׁיר | a.ˈʃiʁ | (as above) |
+| h0210d79f | israeli/word/h0210d79f.mp3 | שְׁאֵר | ʃe.ˈeʁ | (as above) |
+| h16d3c412 | israeli/word/h16d3c412.mp3 | פִּיל | ˈpil | (as above) |
+| h61ba0237 | israeli/word/h61ba0237.mp3 | אָחוּז | a.ˈχuz | (as above) |
+| ha1bc7ce0 | israeli/word/ha1bc7ce0.mp3 | מַגְנִיב | maɡ.ˈniv | (as above) |
+| h4fadd60b | israeli/word/h4fadd60b.mp3 | עִסְקִי | is.ˈki | (as above) |
+| h331ea4dc | israeli/word/h331ea4dc.mp3 | נָקִי | na.ˈki | (as above) |
+| hcf4a5632 | israeli/word/hcf4a5632.mp3 | צְבָאִי | tse.va.ˈi | (as above) |
+| hb3b4c47b | israeli/word/hb3b4c47b.mp3 | לְאֻמִּי | le.u.ˈmi | (as above) |
+| hc3060738 | israeli/word/hc3060738.mp3 | נָטוּי | na.ˈtuj | (as above) |
+| hc73b1b96 | israeli/word/hc73b1b96.mp3 | דַּל | ˈdal | (as above) |
+| h7410d5ab | israeli/word/h7410d5ab.mp3 | רִשְׁמִי | ʁiʃ.ˈmi | (as above) |
+| h54471e7b | israeli/word/h54471e7b.mp3 | צִבּוּרִי | tsi.bu.ˈʁi | (as above) |
+| h6117e9f5 | israeli/word/h6117e9f5.mp3 | טִבְעִי | tiv.ˈi | (as above) |
+| h02ca8410 | israeli/word/h02ca8410.mp3 | צָהֹב | tsa.ˈhov | (as above) |
+| h36dea5a7 | israeli/word/h36dea5a7.mp3 | פּוֹלִיטִי | po.li.ˈti | (as above) |
+| hf78ea570 | israeli/word/hf78ea570.mp3 | צְפוֹנִי | tse.fo.ˈni | (as above) |
+| h558a0857 | israeli/word/h558a0857.mp3 | חַשְׁמַלִּי | χaʃ.ma.ˈli | (as above) |
+| h62a328ef | israeli/word/h62a328ef.mp3 | מִשְׁפַּחְתִּי | miʃ.paχ.ˈti | (as above) |
+| h9f97835b | israeli/word/h9f97835b.mp3 | בָּהִיר | ba.ˈhiʁ | (as above) |
+| h3e5331a2 | israeli/word/h3e5331a2.mp3 | פֻּמְבִּי | pum.ˈbi | (as above) |
+| hf76c8cd2 | israeli/word/hf76c8cd2.mp3 | אָכֹם | a.ˈχom | (as above) |
+| hc89b2d29 | israeli/word/hc89b2d29.mp3 | רִאשׁוֹנִי | ʁi.ʃo.ˈni | (as above) |
+| he78a3b3f | israeli/word/he78a3b3f.mp3 | חָרִיף | χa.ˈʁif | (as above) |
+| h975e3b85 | israeli/word/h975e3b85.mp3 | סָגֹל | sa.ˈɡol | (as above) |
+| hdaf2f831 | israeli/word/hdaf2f831.mp3 | יְמָנִי | je.ma.ˈni | (as above) |
+| hf53c9bc7 | israeli/word/hf53c9bc7.mp3 | כַּמּוּבָן | ka.mu.ˈvan | (as above) |
+| h34530899 | israeli/word/h34530899.mp3 | חוֹלָנִי | χo.la.ˈni | (as above) |
+| hc75b99fe | israeli/word/hc75b99fe.mp3 | קִדְמִי | kid.ˈmi | (as above) |
+| he53429ef | israeli/word/he53429ef.mp3 | שְׂמָאלִי | se.ma.ˈli | (as above) |
+| h796a7887 | israeli/word/h796a7887.mp3 | אֶזְרָחִי | ez.ʁa.ˈχi | (as above) |
+| h8dd44157 | israeli/word/h8dd44157.mp3 | שָׁחֹר | ʃa.ˈχoʁ | (as above) |
+| h603fd1ca | israeli/word/h603fd1ca.mp3 | חוּם | ˈχum | (as above) |
+| h5c559f1a | israeli/word/h5c559f1a.mp3 | דְּרוֹמִי | de.ʁo.ˈmi | (as above) |
+| ha103b1ee | israeli/word/ha103b1ee.mp3 | מוּצָק | mu.ˈtsak | (as above) |
+| h9499a4fd | israeli/word/h9499a4fd.mp3 | חָמוּץ | χa.ˈmuts | (as above) |
+| hcae649ca | israeli/word/hcae649ca.mp3 | שׁוֹטֶה | ʃo.ˈte | (as above) |
+| h453ca6b4 | israeli/word/h453ca6b4.mp3 | קָרִיר | ka.ˈʁiʁ | (as above) |
+| h00cdb883 | israeli/word/h00cdb883.mp3 | מְקֻלְקָל | me.kul.ˈkal | (as above) |
+| hf228052b | israeli/word/hf228052b.mp3 | אַרְצִי | aʁ.ˈtsi | (as above) |
+| h9247f58c | israeli/word/h9247f58c.mp3 | מַדָּעִי | ma.da.ˈi | (as above) |
+| h233116f1 | israeli/word/h233116f1.mp3 | יַלְדוּתִי | jal.du.ˈti | (as above) |
+| h0a9333f1 | israeli/word/h0a9333f1.mp3 | דִּיגִיטָלִי | di.ɡi.ta.ˈli | (as above) |
+| h7944f080 | israeli/word/h7944f080.mp3 | חֲזָרָה | χa.za.ˈʁa | (as above) |
+| hc3ea51d7 | israeli/word/hc3ea51d7.mp3 | נָאצִי | na.ˈtsi | (as above) |
+| h8886e1be | israeli/word/h8886e1be.mp3 | קָלִיל | ka.ˈlil | (as above) |
+| h995f8ab2 | israeli/word/h995f8ab2.mp3 | אֲדַמְדַּם | a.dam.ˈdam | (as above) |
+| h0986ff35 | israeli/word/h0986ff35.mp3 | חָמִים | χa.ˈmim | (as above) |
+| hd51b5d78 | israeli/word/hd51b5d78.mp3 | מֻרְכָּב | muʁ.ˈkav | (as above) |
+| h254a987e | israeli/word/h254a987e.mp3 | כִירוּרְגִּי | χi.ʁu.ʁe.ˈɡi | (as above) |
 
 ## Other lines
 
@@ -2721,7 +4358,7 @@ Takes per clip: 3. Clips: 18. OPTIONAL: not needed by any screen (the reader pla
 | kiddush-veshamru | israeli/prayer/kiddush-veshamru.mp3 | וְשָׁמְרוּ בְנֵי־יִשְׂרָאֵל אֶת־הַשַּׁבָּת לַעֲשׂוֹת אֶת־הַשַּׁבָּת לְדֹרֹתָם בְּרִית עוֹלָם׃ בֵּינִי וּבֵין בְּנֵי יִשְׂרָאֵל אוֹת הִוא לְעֹלָם כִּי־שֵׁשֶׁת יָמִים עָשָׂה אֲדֹנָי אֶת־הַשָּׁמַיִם וְאֶת־הָאָרֶץ וּבַיּוֹם הַשְּׁבִיעִי שָׁבַת וַיִּנָּפַשׁ׃ |  | (as above) |
 | kiddush-zachor | israeli/prayer/kiddush-zachor.mp3 | זָכוֹר אֶת־יוֹם הַשַׁבָּת לְקַדְּשׁוֹ שֵׁשֶׁת יָמִים תַּעֲבֹד וְעָשִׂיתָ כָּל־מְלַאכְתֶּךָ וְיוֹם הַשְּׁבִיעִי שַׁבָּת לַיהוָה אֱלֹהֶיךָ לֹא־תַעֲשֶׂה כָל־מְלָאכָה אַתָּה וּבִנְךָ־וּבִתֶּךָ עַבְדְּךָ וַאֲמָתְךָ וּבְהֶמְתֶּךָ וְגֵרְךָ אֲשֶׁר בִּשְׁעָרֶיךָ כִּי שֵׁשֶׁת־יָמִים עָשָׂה אֲדֹנָי אֶת־הַשָּׁמַיִם וְאֶת־הָאָרֶץ אֶת־הַיָּם וְאֶת־כָּל־אֲשֶׁר־בָּם וַיָּנַח בַּיּוֹם הַשְּׁבִיעִי עַל־כֵּן בֵּרַךְ אֲדֹנָי אֶת־יוֹם הַשַׁבָּת וַיְקַדְּשֵׁהוּ׃ |  | (as above) |
 | ashrei-145-1-3 | israeli/prayer/ashrei-145-1-3.mp3 | תְּהִלָּה לְדָוִד אֲרוֹמִמְךָ אֱלוֹהַי הַמֶּלֶךְ וַאֲבָרֲכָה שִׁמְךָ לְעוֹלָם וָעֶד׃ בְּכָל־יוֹם אֲבָרֲכֶךָּ וַאֲהַלְלָה שִׁמְךָ לְעוֹלָם וָעֶד׃ גָּדוֹל אֲדֹנָי וּמְהֻלָּל מְאֹד וְלִגְדֻלָּתוֹ אֵין חֵקֶר׃ |  | (as above) |
-| shir-hamaalot | israeli/prayer/shir-hamaalot.mp3 | שִׁיר הַמַּעֲלוֹת בְּשׁוּב אֲדֹנָי אֶת־שִׁיבַת צִיּוֹן הָיִינוּ כְּחֹלְמִים׃ אָז יִמָּלֵא שְׂחוֹק פִּינוּ וּלְשׁוֹנֵנוּ רִנָּה אָז יֹאמְרוּ בַגּוֹיִם הִגְדִּיל אֲדֹנָי לַעֲשׂוֹת עִם־אֵלֶּה׃ הִגְדִּיל אֲדֹנָי לַעֲשׂוֹת עִמָּנוּ הָיִינוּ שְׂמֵחִים׃ שׁוּבָה אֲדֹנָי אֶת־כַּאֲפִיקִים בַּנֶּגֶב׃ הַזֹּרְעִים בְּדִמְעָה בְּרִנָּה יִקְצֹרוּ׃ הָלוֹךְ יֵלֵךְ וּבָכֹה נֹשֵׂא מֶשֶׁךְ־הַזָּרַע בֹּא־יָבוֹא בְרִנָּה נֹשֵׂא אֲלֻמֹּתָיו׃ |  | (as above) |
+| shir-hamaalot | israeli/prayer/shir-hamaalot.mp3 | שִׁיר הַמַּעֲלוֹת בְּשׁוּב אֲדֹנָי אֶת־שִׁיבַת צִיּוֹן הָיִינוּ כְּחֹלְמִים׃ אָז יִמָּלֵא שְׂחוֹק פִּינוּ וּלְשׁוֹנֵנוּ רִנָּה אָז יֹאמְרוּ בַגּוֹיִם הִגְדִּיל אֲדֹנָי לַעֲשׂוֹת עִם־אֵלֶּה׃ הִגְדִּיל אֲדֹנָי לַעֲשׂוֹת עִמָּנוּ הָיִינוּ שְׂמֵחִים׃ שׁוּבָה אֲדֹנָי אֶת־שְׁבִיתֵנוּ כַּאֲפִיקִים בַּנֶּגֶב׃ הַזֹּרְעִים בְּדִמְעָה בְּרִנָּה יִקְצֹרוּ׃ הָלוֹךְ יֵלֵךְ וּבָכֹה נֹשֵׂא מֶשֶׁךְ־הַזָּרַע בֹּא־יָבוֹא בְרִנָּה נֹשֵׂא אֲלֻמֹּתָיו׃ |  | (as above) |
 | hagomel | israeli/prayer/hagomel.mp3 | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַגּוֹמֵל לְחַיָּבִים טוֹבוֹת שֶׁגְּמָלַנִי כָּל טוֹב׃ מִי שֶׁגְּמָלְךָ טוֹב הוּא יִגְמָלְךָ כָּל־טוֹב סֶלָה׃ |  | (as above) |
 | sim-shalom | israeli/prayer/sim-shalom.mp3 | שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה חֵן וָחֶסֶד וְרַחֲמִים עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל עַמֶּךָ בָּרְכֵנוּ אָבִינוּ כֻּלָּנוּ כְּאֶחָד בְּאוֹר פָּנֶיךָ כִּי בְאוֹר פָּנֶיךָ נָתַתָּ לָּנוּ אֲדֹנָי אֱלֹהֵינוּ תּוֹרַת חַיִּים וְאַהֲבַת חֶסֶד וּצְדָקָה וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם וְטוֹב בְּעֵינֶיךָ לְבָרֵךְ אֶת עַמְּךָ יִשְׂרָאֵל בְּכָל־עֵת וּבְכָל־שָׁעָה בִּשְׁלוֹמֶךָ׃ בָּרוּךְ אַתָּה אֲדֹנָי הַמְבָרֵךְ אֶת־עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם׃ |  | (as above) |
 | lecha-dodi-1 | israeli/prayer/lecha-dodi-1.mp3 | לְכָה דוֹדִי לִקְרַאת כַּלָּה פְּנֵי שַׁבָּת נְקַבְּלָה׃ שָׁמוֹר וְזָכוֹר בְּדִבּוּר אֶחָד הִשְׁמִיעָנוּ אֵל הַמְיוּחָד אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד לְשֵׁם וּלְתִפְאֶרֶת וְלִתְהִלָּה׃ |  | (as above) |
@@ -2748,4 +4385,4 @@ _Word-level minimal pairs from the pronunciation lane (data/pronunciation/drills
 
 ## Totals
 
-Takes to record per voice for this tradition: 5322 (sum of clips x take count above; optional sections excluded).
+Takes to record per voice for this tradition: 8596 (sum of clips x take count above; optional sections excluded).

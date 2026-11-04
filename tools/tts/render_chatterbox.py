@@ -47,10 +47,10 @@ def mock_freq(order):
 
 
 def mock_render(it, wrong_order=None):
-    """0.15 s silence + tone (0.4 s + 0.02 s per character) + 0.15 s silence, quiet on purpose so loudness normalisation has work to do."""
+    """0.1 s silence + tone (0.5 s + 0.01 s per character) + 0.1 s silence, quiet on purpose so loudness normalisation has work to do."""
     f = mock_freq(wrong_order if wrong_order is not None else it['order'])
-    n = int(SR_MOCK * (0.4 + 0.02 * len(it['text'])))
-    pad = [0.0] * int(SR_MOCK * 0.15)
+    n = int(SR_MOCK * (0.5 + 0.01 * len(it['text'])))
+    pad = [0.0] * int(SR_MOCK * 0.1)
     tone = [0.12 * math.sin(2 * math.pi * f * i / SR_MOCK) for i in range(n)]
     return pad + tone + pad, SR_MOCK
 

@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { waitFor } from './helpers/waitfor.js';
 
 // Minimal fake DOM (checks view logic, NOT real browser rendering or print layout).
 class Node_ {
@@ -19,7 +20,7 @@ class Node_ {
 globalThis.document = { createElement: (t) => new Node_(t), createTextNode: (d) => ({ nodeType: 3, data: String(d), parent: undefined }) };
 const { mount } = await import('../src/classtrack/classtrack.view.js');
 const memStore = (init = {}) => { const m = { ...init }; return { get: async (k, f) => m[k] ?? f, set: async (k, v) => { m[k] = v; }, m }; };
-const ready = async (root) => { for (let i = 0; i < 300 && !/Draft:/.test(root.text); i++) await new Promise((r) => setTimeout(r, 10)); };
+const ready = (root) => waitFor(() => /Draft:/.test(root.text), { message: 'classtrack view never finished rendering' });
 const go = async (query = {}, init = {}) => { const root = new Node_('div'); const un = mount(root, { store: memStore(init), query }); await ready(root); return { root, un }; };
 
 test('week list: ten weeks, draft notice, one h1, links to week, handout and teacher plan', async () => {

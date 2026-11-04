@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import { parseCsv } from '../tools/record-kit/lib.mjs';
 import { buildEntries } from '../tools/audio/build_manifest.mjs';
 import { LETTERS, FINAL_LETTERS, VOWELS } from '../tools/audio/hebrew_data.mjs';
 
@@ -97,12 +98,43 @@ test('size budget: core manifest and every word shard stay under 2 MiB; shards h
   const MiB = 1048576;
   const core = JSON.parse(fs.readFileSync(new URL('../data/audio/manifest.json', import.meta.url), 'utf8'));
   assert.ok(fs.statSync(new URL('../data/audio/manifest.json', import.meta.url)).size < 2 * MiB, 'core manifest < 2 MiB');
-  assert.ok(core.every((e) => e.group !== 'prayer-word'), 'core has no reader word clips');
+  assert.ok(core.every((e) => !['prayer-word', 'vocab-word'].includes(e.group)), 'core has no reader or donor-script word clips');
   for (const t of ['israeli', 'sephardi', 'ashkenazi']) {
     const f = new URL(`../data/audio/manifest-words-${t}.json`, import.meta.url);
     assert.ok(fs.statSync(f).size < 2 * MiB, `${t} shard < 2 MiB`);
     const sh = JSON.parse(fs.readFileSync(f, 'utf8'));
-    assert.ok(sh.length > 1000 && sh.every((e) => e.group === 'prayer-word' && e.tradition === t));
+    assert.ok(sh.length > 1000 && sh.every((e) => ['prayer-word', 'vocab-word'].includes(e.group) && e.tradition === t));
   }
   assert.equal(manifest.length, core.length + 3 * JSON.parse(fs.readFileSync(new URL('../data/audio/manifest-words-israeli.json', import.meta.url), 'utf8')).length);
+});
+
+test('every id in every donor recording script resolves to a missing manifest entry with the right kind/voice/tradition path', () => {
+  const idx = new Map(manifest.map((e) => [e.path, e]));
+  const ids = {};
+  for (const t of ['israeli', 'sephardi', 'ashkenazi']) {
+    const rows = parseCsv(fs.readFileSync(new URL(`../docs/voices/recording-script-${t}.csv`, import.meta.url), 'utf8'));
+    assert.equal(rows.length, 1000, t);
+    ids[t] = rows.map((r) => r.id);
+    for (const r of rows) for (const v of ['m', 'f']) {
+      const e = idx.get(`audio/${v}/${t}/word/${r.id}.mp3`);
+      assert.ok(e, `${t}/${v}/${r.id} missing from manifest`);
+      assert.deepEqual([e.kind, e.voice, e.tradition, e.status], ['word', v, t, 'missing']);
+    }
+  }
+  assert.deepEqual(ids.israeli, ids.sephardi); assert.deepEqual(ids.israeli, ids.ashkenazi);
+  assert.ok(manifest.some((e) => e.id === 'ha3cf2c46'));
+});
+
+test('every vocab-word manifest entry (donor-script words) appears in its tradition script; script words are not in core', () => {
+  const inScript = {};
+  for (const t of ['israeli', 'sephardi', 'ashkenazi']) inScript[t] = new Set(parseCsv(fs.readFileSync(new URL(`../docs/voices/recording-script-${t}.csv`, import.meta.url), 'utf8')).map((r) => r.id));
+  const vw = manifest.filter((e) => e.group === 'vocab-word');
+  assert.equal(vw.length, 6000);
+  for (const e of vw) assert.ok(inScript[e.tradition].has(e.id), `${e.path} not in script`);
+});
+
+test('sin letter name follows canonical mark order (vowel before sin dot)', () => {
+  const sin = manifest.find((e) => e.id === 'sin' && e.kind === 'letter');
+  assert.equal(sin.text, sin.text.normalize('NFC'));
+  assert.equal(sin.text, '\u05E9\u05B4\u05C2\u05D9\u05DF');
 });

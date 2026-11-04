@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { waitFor } from './helpers/waitfor.js';
+const tiles = (r) => r.find(n => n.tag === 'button' && n.attrs['data-tile']);
 
 // Minimal fake DOM: checks view logic (31 tiles, audio calls, warning only after a wrong tap), NOT browser rendering.
 class El {
@@ -37,7 +39,7 @@ test('atlas view: renders 31 tiles, tapping one calls ctx.audio.play with its so
   const root = new El('div'); const played = [];
   const audio = { play: async (kind, id) => { played.push([kind, id]); return { source: 'file' }; } };
   const un = mount(root, { ...data, audio, t: k => k });
-  await tick();
+  await waitFor(() => tiles(root).length === 31, { message: "31 tiles rendered" });
   assert.equal(root.find(n => n.tag === 'button' && n.attrs['data-tile']).length, 31);
   await tile(root, 'nun').click();
   assert.deepEqual(played[0], ['letter', 'nun-sound']);
@@ -51,9 +53,9 @@ test('atlas view: renders 31 tiles, tapping one calls ctx.audio.play with its so
 
 test('atlas view: honest status when audio has no clip, and when audio is absent', async () => {
   const r1 = new El('div'); mount(r1, { ...data, audio: { play: async () => ({ source: 'none' }) }, t: (k) => k });
-  await tick(); await tile(r1, 'vet').click(); await tick();
+  await waitFor(() => tiles(r1).length > 0, { message: "atlas rendered" }); await tile(r1, 'vet').click();
   assert.match(body(r1), /No audio for this one yet/);
-  const r2 = new El('div'); mount(r2, { ...data }); await tick(); await tile(r2, 'alef').click();
+  const r2 = new El('div'); mount(r2, { ...data }); await waitFor(() => tiles(r2).length > 0, { message: "atlas rendered" }); await tile(r2, 'alef').click();
   assert.match(body(r2), /Audio is not available/);
 });
 
@@ -62,7 +64,7 @@ test('atlas quiz: look-alike warning appears only AFTER a wrong tap on a real lo
   Math.random = () => (data.letters.findIndex(l => l.id === 'dalet')) / 31 + 0.001; // pool excludes variants; pick dalet below
   try {
     mount(root, { ...data, audio: { play: async () => ({ source: 'file' }) }, t: k => k });
-    await tick();
+    await waitFor(() => root.find(n => n.tag === 'button' && /atlas.quizOn|Quiz me/.test(n.text)).length > 0, { message: "quiz button rendered" });
     const startBtn = root.find(n => n.tag === 'button' && /atlas.quizOn|Quiz me/.test(n.text))[0];
     await startBtn.click();
     assert.ok(!/Look-alike:/.test(body(root)), 'no warning before any tap');

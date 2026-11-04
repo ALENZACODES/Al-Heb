@@ -1,0 +1,10 @@
+{
+  "schema": "alef-trope-trainer-levels/1",
+  "note": "Levels group the trope marks by how often they occur in the two corpus passages (Numbers 6:22-27 and Deuteronomy 6:4-9). The most frequent marks come first. Counts are computed at run time from data/corpus/trope/*.json; nothing here is copied from a teacher.",
+  "levels": [
+    { "level": 1, "label": "Most frequent", "topMarks": 4 },
+    { "level": 2, "label": "Common", "topMarks": 8 },
+    { "level": 3, "label": "All marks in these passages", "topMarks": null }
+  ],
+  "optionCount": 4
+}

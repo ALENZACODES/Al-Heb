@@ -20,6 +20,7 @@ class Node_ {
 const keyHandlers = [];
 globalThis.document = { createElement: (t) => new Node_(t), createTextNode: (d) => ({ nodeType: 3, data: String(d), parent: undefined }),
   addEventListener: (t, f) => { if (t === "keydown") keyHandlers.push(f); }, removeEventListener: (t, f) => { const i = keyHandlers.indexOf(f); if (i >= 0) keyHandlers.splice(i, 1); } };
+import { waitFor } from "./helpers/waitfor.js";
 const tick = (ms = 40) => new Promise((r) => setTimeout(r, ms));
 const memStore = (init = {}) => { const m = { ...init }; return { get: (k) => m[k], set: (k, v) => { m[k] = v; }, m }; };
 const played = [];
@@ -118,7 +119,7 @@ test("ladder session: three right advance, two wrong drop back, never below 1, c
 test("ladder view: plays the sound, two RTL cards, keyboard answers, saves level and SRS, unlocks the verse at the end", async () => {
   played.length = 0;
   const store = memStore(); const root = new Node_("div");
-  const un = mountLearn(root, ctxFor(store, { ladder: "1", seed: "4" })); await tick(80);
+  const un = mountLearn(root, ctxFor(store, { ladder: "1", seed: "4" })); await waitFor(() => /Level 1 of 30/.test(root.text) && played.length > 0 && root.find((n) => n.attrs["data-option"]).length === 2, { message: "/Level 1 of 30/.test(root.text) && played.length > 0 && root.find((n) => n.attrs[\"data-option\"]).length === 2" });
   assert.match(root.text, /Draft/); assert.match(root.text, /Level 1 of 30/);
   assert.equal(played[0][0], "syllable");
   const cards = root.find((n) => n.attrs["data-option"]);
@@ -128,17 +129,17 @@ test("ladder view: plays the sound, two RTL cards, keyboard answers, saves level
   // a wrong answer through the keyboard (the card that is not the played syllable)
   const target = played.at(-1)[1];
   const wrongIdx = cards.findIndex((c) => c.attrs["data-option"] !== target);
-  keyHandlers[0]({ key: String(wrongIdx + 1), preventDefault() {}, target: {} }); await tick(40);
+  keyHandlers[0]({ key: String(wrongIdx + 1), preventDefault() {}, target: {} }); await waitFor(() => /Not quite/.test(root.text), { message: "/Not quite/.test(root.text)" });
   assert.match(root.text, /Not quite/);
-  await btn(root, /Finish and save/).click(); await tick(60);
+  await btn(root, /Finish and save/).click(); await waitFor(() => store.m["srs.cards"]?.[`syllable:${target}`] && store.m["curriculum.ladder"]?.level >= 1, { message: "store.m[\"srs.cards\"]?.[`syllable:${target}`] && store.m[\"curriculum.ladder\"]?.level >= 1" });
   assert.ok(store.m["srs.cards"][`syllable:${target}`], "missed syllable becomes an SRS card");
   assert.equal(store.m["srs.cards"][`syllable:${target}`].state, "relearning");
   assert.ok(store.m["curriculum.ladder"].level >= 1);
   un(); assert.equal(keyHandlers.length, 0);
   // cleared verse
   const top = new Node_("div"); const s2 = memStore({ "curriculum.ladder": { level: 30 } });
-  mountLearn(top, ctxFor(s2, { ladder: "1", level: "30", seed: "1" })); await tick(60);
-  for (let i = 0; i < 3; i++) { const p = played.at(-1)[1]; const opt = top.find((n) => n.attrs["data-option"] === p)[0]; await opt.click(); await tick(20); await btn(top, /^(Next|See results)/).click(); await tick(40); }
+  mountLearn(top, ctxFor(s2, { ladder: "1", level: "30", seed: "1" })); await waitFor(() => played.length > 0 && top.find((n) => n.attrs["data-option"]).length > 0, { message: "played.length > 0 && top.find((n) => n.attrs[\"data-option\"]).length > 0" });
+  for (let i = 0; i < 3; i++) { const p = played.at(-1)[1]; const opt = top.find((n) => n.attrs["data-option"] === p)[0]; await opt.click(); await waitFor(() => btn(top, /^(Next|See results)/), { message: "btn(top, /^(Next|See results)/)" }); const prevPlayed = played.length; await btn(top, /^(Next|See results)/).click(); await waitFor(() => played.length > prevPlayed || /Priestly Blessing/.test(top.text), { message: "played.length > prevPlayed || /Priestly Blessing/.test(top.text)" }); }
   assert.match(top.text, /Priestly Blessing/); assert.match(top.text, /not proofread/);
 });
 
@@ -175,10 +176,10 @@ test("fade: nextFadeLevel moves only when practised at the stored level; options
 });
 test("fade view: pick a line, fill gaps by keyboard, level stored in the SRS card and advances; honest about corpus text", async () => {
   const store = memStore(); const root = new Node_("div");
-  mountLearn(root, ctxFor(store, { fade: "1" })); await tick(100);
+  mountLearn(root, ctxFor(store, { fade: "1" })); await waitFor(() => root.find((n) => n.attrs["data-line"] === "bless-priestly-1").length === 1, { message: "root.find((n) => n.attrs[\"data-line\"] === \"bless-priestly-1\").length === 1" });
   assert.match(root.text, /Draft/); assert.match(root.text, /not proofread/);
   assert.ok(root.find((n) => n.attrs["data-line"] === "bless-priestly-1").length === 1);
-  const r2 = new Node_("div"); const un = mountLearn(r2, ctxFor(store, { fade: "bless-priestly-1", level: "1", seed: "1" })); await tick(100);
+  const r2 = new Node_("div"); const un = mountLearn(r2, ctxFor(store, { fade: "bless-priestly-1", level: "1", seed: "1" })); await waitFor(() => r2.find((n) => n.attrs.dir === "rtl" && /alef-fade-line/.test(n.className)).length === 1, { message: "r2.find((n) => n.attrs.dir === \"rtl\" && /alef-fade-line/.test(n.className)).length === 1" });
   assert.ok(r2.find((n) => n.attrs.dir === "rtl" && /alef-fade-line/.test(n.className)).length === 1);
   const gaps = r2.find((n) => n.attrs["data-gap"] !== undefined).length;
   assert.ok(gaps > 3);
@@ -190,23 +191,23 @@ test("fade view: pick a line, fill gaps by keyboard, level stored in the SRS car
     const opts = r2.find((n) => n.attrs["data-option"] !== undefined);
     const wrong = opts.filter((n) => n.attrs["data-option"].normalize("NFC") !== g.text.normalize("NFC"))[0];
     if (k === 0) { await wrong.click(); assert.match(wrong.className, /alef-wrong/); }
-    await opts.filter((n) => n.attrs["data-option"].normalize("NFC") === g.text.normalize("NFC"))[0].click(); await tick(5);
+    await opts.filter((n) => n.attrs["data-option"].normalize("NFC") === g.text.normalize("NFC"))[0].click();
   }
-  await tick(40);
+  await waitFor(() => store.m["srs.cards"]?.["line:bless-priestly-1"] && /saved level stays/.test(r2.text), { message: "store.m[\"srs.cards\"]?.[\"line:bless-priestly-1\"] && /saved level stays/.test(r2.text)" });
   const card = store.m["srs.cards"]["line:bless-priestly-1"];
   assert.ok(card, "SRS card for the line"); assert.equal(card.fadeLevel, 0, "practised level 1 while stored level was 0: no change");
   assert.match(r2.text, /saved level stays/);
   un();
   // practise at the stored level (0) with self-grading: advances to 1
-  const r3 = new Node_("div"); mountLearn(r3, ctxFor(store, { fade: "bless-priestly-1", level: "0" })); await tick(80);
-  await btn(r3, /I can read it smoothly/).click(); await tick(40);
+  const r3 = new Node_("div"); mountLearn(r3, ctxFor(store, { fade: "bless-priestly-1", level: "0" })); await waitFor(() => btn(r3, /I can read it smoothly/), { message: "btn(r3, /I can read it smoothly/)" });
+  await btn(r3, /I can read it smoothly/).click(); await waitFor(() => /one stage more faded/.test(r3.text), { message: "/one stage more faded/.test(r3.text)" });
   assert.equal(store.m["srs.cards"]["line:bless-priestly-1"].fadeLevel, 1);
   assert.match(r3.text, /one stage more faded/);
   // a miss at stored level 1 goes back to 0 and lapses the card
-  const r4 = new Node_("div"); mountLearn(r4, ctxFor(store, { fade: "bless-priestly-1", level: "3" })); await tick(80);
+  const r4 = new Node_("div"); mountLearn(r4, ctxFor(store, { fade: "bless-priestly-1", level: "3" })); await waitFor(() => /Blank/.test(r4.text), { message: "/Blank/.test(r4.text)" });
   assert.match(r4.text, /Blank/);
-  await btn(r4, /Reveal the line/).click(); await tick(10);
-  await btn(r4, /I missed some/).click(); await tick(40);
+  await btn(r4, /Reveal the line/).click(); await waitFor(() => btn(r4, /I missed some/), { message: "btn(r4, /I missed some/)" });
+  const before4 = JSON.stringify(store.m["srs.cards"]["line:bless-priestly-1"]); await btn(r4, /I missed some/).click(); await waitFor(() => JSON.stringify(store.m["srs.cards"]["line:bless-priestly-1"]) !== before4, { message: "JSON.stringify(store.m[\"srs.cards\"][\"line:bless-priestly-1\"]) !== before4" });
   assert.equal(store.m["srs.cards"]["line:bless-priestly-1"].fadeLevel, 1, "practised a different stage: unchanged");
   assert.equal(store.m["srs.cards"]["line:bless-priestly-1"].lapses + store.m["srs.cards"]["line:bless-priestly-1"].reps >= 3, true);
 });
@@ -276,42 +277,44 @@ test("gender pairs view: own form first, voice selector passes the voice to ctx.
   played.length = 0;
   const audio = audioMock((k, i) => i === "gp-04-m" || i === "gp-04-f"); // pretend one authored pair has files
   const store = memStore(); const root = new Node_("div");
-  const un = mountLearn(root, ctxFor(store, { gender: "pairs" }, { audio })); await tick(100);
+  const un = mountLearn(root, ctxFor(store, { gender: "pairs" }, { audio })); await waitFor(() => /No audio yet/.test(root.text), { message: "/No audio yet/.test(root.text)" });
   assert.match(root.text, /Draft/); assert.match(root.text, /No audio yet/);
   const first = root.find((n) => n.attrs["data-pair"] === "gp-04")[0];
   assert.equal(first.find((n) => n.attrs["data-form"])[0].attrs["data-form"], "m");
   assert.ok(root.find((n) => n.attrs.lang === "he" && n.attrs.dir === "rtl").length > 10);
   assert.ok(root.find((n) => n.tag === "mark" && n.className === "alef-diff").length > 10);
-  await root.find((n) => n.attrs["data-iam"] === "f")[0].click(); await tick(40);
+  await root.find((n) => n.attrs["data-iam"] === "f")[0].click(); await waitFor(() => store.m["curriculum.gender"]?.iAm === "f", { message: "store.m[\"curriculum.gender\"]?.iAm === \"f\"" });
   assert.equal(store.m["curriculum.gender"].iAm, "f");
   assert.equal(root.find((n) => n.attrs["data-pair"] === "gp-04")[0].find((n) => n.attrs["data-form"])[0].attrs["data-form"], "f");
   await root.find((n) => n.attrs["data-voice"] === "f" && n.attrs.role === "radio")[0].click();
   const playBtn = root.find((n) => n.attrs["data-audio"] === "word/gp-04-m" && n.attrs["data-voice"] === "f")[0];
-  assert.ok(playBtn, "play button uses the selected voice"); await playBtn.click(); await tick(10);
+  assert.ok(playBtn, "play button uses the selected voice"); await playBtn.click(); await waitFor(() => played.at(-1)?.[1] === "gp-04-m" && played.at(-1)?.[2] === "f", { message: "played.at(-1)?.[1] === \"gp-04-m\" && played.at(-1)?.[2] === \"f\"" });
   assert.deepEqual(played.at(-1), ["word", "gp-04-m", "f"]);
   assert.equal(root.find((n) => n.attrs["data-audio"] === "word/gp-05-f").length, 0, "no button for an item without audio");
   un();
 });
 test("gender quiz view: reading questions when there is no audio, tap question graded, results saved to SRS and stats", async () => {
   const store = memStore(); const root = new Node_("div");
-  mountLearn(root, ctxFor(store, { gender: "pairs", quiz: "1", seed: "3" })); await tick(100);
+  mountLearn(root, ctxFor(store, { gender: "pairs", quiz: "1", seed: "3" })); await waitFor(() => /Question 1 of 8/.test(root.text), { message: "/Question 1 of 8/.test(root.text)" });
   assert.match(root.text, /Question 1 of 8/);
   for (let i = 0; i < 8; i++) {
     const which = root.find((n) => n.attrs["data-answer"]);
     if (which.length) { assert.match(root.text, /No audio yet/); await which[0].click(); }
     else { assert.ok(root.find((n) => n.attrs["data-cluster"] !== undefined).length >= 3); await btn(root, /^Check/).click(); }
-    await tick(10); await btn(root, /^(Next|See results)/).click(); await tick(30);
+    await waitFor(() => btn(root, /^(Next|See results)/), { message: "Next/See results never shown" });
+    await btn(root, /^(Next|See results)/).click();
+    await waitFor(() => new RegExp(`Question ${i + 2} of 8|Quiz done`).test(root.text), { message: "no next question or result" });
   }
-  await tick(50);
+  await waitFor(() => /Quiz done/.test(root.text) && Object.keys(store.m["curriculum.gender"]?.stats || {}).length === 8, { message: "/Quiz done/.test(root.text) && Object.keys(store.m[\"curriculum.gender\"]?.stats || {}).length === 8" });
   assert.match(root.text, /Quiz done/);
   assert.ok(Object.keys(store.m["curriculum.gender"].stats).length === 8);
 });
 test("gender roles view: two role choosers, swap changes both lines, no audio button for missing items", async () => {
   const store = memStore(); const root = new Node_("div");
-  mountLearn(root, ctxFor(store, { gender: "roles" }, { audio: audioMock(() => false) })); await tick(100);
+  mountLearn(root, ctxFor(store, { gender: "roles" }, { audio: audioMock(() => false) })); await waitFor(() => /You hear/.test(root.text), { message: "/You hear/.test(root.text)" });
   assert.match(root.text, /You say/); assert.match(root.text, /You hear/); assert.match(root.text, /No audio yet/);
   const before = root.text;
-  await btn(root, /Swap roles/).click(); await tick(10);
+  await btn(root, /Swap roles/).click(); await waitFor(() => root.text !== before, { message: "root.text !== before" });
   assert.notEqual(root.text, before);
   assert.ok(root.find((n) => n.attrs["data-audio"] && /gpar/.test(n.attrs["data-audio"])).length === 0);
   assert.ok(root.find((n) => n.attrs["data-role-value"]).length === 4);
@@ -351,17 +354,17 @@ test("scaffold wiring: rating a word card in review updates the stored scaffold;
 
   // view: stored level 1 = faint
   const s2 = memStore({ "srs.cards": { "word:r01:1": { ...card } }, "curriculum.scaffold": { "word:r01:1": { level: 3, pinned: false, advancedOn: null } } });
-  const root = new Node_("div"); mountLearn(root, ctxW(s2)); await tick(100);
+  const root = new Node_("div"); mountLearn(root, ctxW(s2)); await waitFor(() => /Latin help: Hidden/.test(root.text), { message: "/Latin help: Hidden/.test(root.text)" });
   assert.match(root.text, /Draft/); assert.match(root.text, /Latin help: Hidden/);
   assert.equal(root.find((n) => /alef-latin/.test(n.className))[0].text, "");
-  await btn(root, /Pin the Latin letters on/).click(); await tick(60);
+  await btn(root, /Pin the Latin letters on/).click(); await waitFor(() => /Latin help: Shown \(pinned\)/.test(root.text), { message: "/Latin help: Shown \\(pinned\\)/.test(root.text)" });
   assert.match(root.text, /Latin help: Shown \(pinned\)/);
   assert.ok(root.find((n) => /alef-latin/.test(n.className))[0].text.length > 0);
   assert.ok(root.find((n) => n.attrs.lang === "he" && n.attrs.dir === "rtl").length >= 1);
-  await btn(root, /Show meaning/).click(); await btn(root, /^3 Good/).click(); await tick(60);
+  await btn(root, /Show meaning/).click(); await btn(root, /^3 Good/).click(); await waitFor(() => /Session done/.test(root.text), { message: "/Session done/.test(root.text)" });
   assert.match(root.text, /Session done/);
   assert.equal(s2.m["srs.cards"]["word:r01:1"].reps, 4);
-  const empty = new Node_("div"); mountLearn(empty, ctxW(memStore())); await tick(60);
+  const empty = new Node_("div"); mountLearn(empty, ctxW(memStore())); await waitFor(() => /no word cards yet/.test(empty.text), { message: "/no word cards yet/.test(empty.text)" });
   assert.match(empty.text, /no word cards yet/);
 });
 
@@ -393,10 +396,10 @@ test("review: syllable, line and gender cards have a front/back so due ones do n
 // ---------------------------------------------------------------- regression: spot it result panel printed "null"
 test("spotit view regression: the result panel never contains the text 'null' (strict replaceChildren)", async () => {
   const store = memStore(); const root = new Node_("div");
-  const un = mountLearn(root, ctxFor(store, { spotit: "kaf", seed: "3" })); await tick(150);
+  const un = mountLearn(root, ctxFor(store, { spotit: "kaf", seed: "3" })); await waitFor(() => root.find((n) => n.attrs["data-i"] !== undefined).length > 0, { message: "root.find((n) => n.attrs[\"data-i\"] !== undefined).length > 0" });
   const cells = root.find((n) => n.attrs["data-i"] !== undefined);
   await cells[0].click();
-  await btn(root, /^Check/).click(); await tick(80);
+  await btn(root, /^Check/).click(); await waitFor(() => /Found \d+ of \d+/.test(root.text), { message: "/Found \\d+ of \\d+/.test(root.text)" });
   assert.match(root.text, /Found \d+ of \d+/);
   assert.doesNotMatch(root.text, /null/);
   un();

@@ -41,7 +41,7 @@
    "translit": "mashkeh",
    "en": "drink (a beverage)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-31-w10",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "ta'im",
    "en": "tasty (having a pleasant taste)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-45-w11",
    "source": "data/vocab/words.json"
   },
   {

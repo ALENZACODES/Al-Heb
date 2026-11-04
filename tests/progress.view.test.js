@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { waitFor } from './helpers/waitfor.js';
 import { N, tick } from './torahread.fakedom.js';
 // The shared fake DOM has no Element.remove(); the Progress view removes its loading line that way.
 N.prototype.remove = function remove() { if (this.parent) this.parent.children = this.parent.children.filter((c) => c !== this); };
@@ -16,7 +17,7 @@ async function show(init = {}, { routes = null, goal = 'read' } = {}) {
   const root = new N('div'); const store = memStore(init);
   const ctx = { store, settings: { get: (k) => (k === 'goal' ? goal : undefined) }, hasRoute: (n) => (routes ? routes.includes(n) : true) };
   const un = await mount(root, ctx);
-  await tick();
+  await waitFor(() => !/Loading your progre/.test(root.textContent), { message: "progress view finished loading" });
   return { root, store, un, text: root.textContent };
 }
 const section = (root, id) => root.queryAll(`[aria-labelledby="${id}"]`)[0];
@@ -130,4 +131,94 @@ test('a tampered pasted file is refused with the checksum message and no confirm
   bk.querySelector('#pg-bk-paste').value = 'not json';
   await bk.querySelector('#pg-bk-check').click();
   assert.match(bk.querySelector('#pg-bk-status').textContent, /not valid JSON/);
+});
+
+// ---------- weak report, this week, milestones ----------
+const weekRec = (o) => ({ v: 2, count: 2, best: 2, last: '2026-11-10', todayDate: '2026-11-10', todaySeconds: 400, frozenDates: [], doneDates: ['2026-11-09', '2026-11-10'], freeze: true, mode: 'reform', ...o });
+async function showAt(init, iso = '2026-11-10', o) {
+  const real = Date.now; const at = new Date(iso + 'T12:00:00').getTime();
+  Date.now = () => at;
+  try { return await show(init, o); } finally { Date.now = real; }
+}
+
+test('weak report section: ten at most, each with "Do this next" and a link, merged rows, honest header', async () => {
+  const cards = Object.fromEntries(Array.from({ length: 12 }, (_, i) => [`letter:l${i}`, { id: `letter:l${i}`, kind: 'letter', state: 'review', stability: 3, reps: 3, lapses: 12 - i, lastReview: T }]));
+  const { root } = await show({ 'srs.cards': cards, 'letters.progress': { l0: { print: { completions: 2, perfect: 0, bestMistakes: 3 } } } });
+  const sec = section(root, 'pg-h-weak');
+  const items = sec.queryAll('li');
+  assert.equal(items.length, 10);
+  assert.equal(items[0].attrs['data-weak'], 'letter:l0');
+  assert.match(items[0].textContent, /Slipped 12 times in review; Your best tracing run still had 3 slips\./);
+  for (const li of items) { assert.match(li.textContent, /Do this next: .+/); assert.match(li.queryAll('a')[0].attrs.href, /^#\//); }
+  assert.match(sec.textContent, /Each source counts slips its own way, so the order is a rough guide/);
+  assert.match(sec.textContent, /browser recognizer or on your own marks/);
+});
+
+test('weak report: empty state is gentle, and a Hebrew word row is set as Hebrew', async () => {
+  const { root } = await show();
+  assert.match(section(root, 'pg-h-weak').textContent, /Nothing stands out yet/);
+  const r = (o) => ({ textId: 'shema-1', lineId: 'shema-1', words: 6, ms: 9000, stumbled: 1, stumbledIdx: [1], at: T, ...o });
+  const { root: r2 } = await show({ 'timedread.v1': { v: 1, reads: [r(), r()] } });
+  const he = section(r2, 'pg-h-weak').queryAll('li')[0].queryAll('[lang="he"]');
+  assert.equal(he.length, 1); assert.equal(he[0].attrs.dir, 'rtl');
+});
+
+test('weak report links respect hasRoute', async () => {
+  const seed = { 'srs.vocab': { 'vocab:1': { id: 'vocab:1', tier: 500, topic: 'food-drink', state: 'review', reps: 3, lapses: 3, stability: 2, lastReview: T } } };
+  const a = await show(seed); assert.equal(section(a.root, 'pg-h-weak').queryAll('a')[0].attrs.href, '#/vocab');
+  const b = await show(seed, { routes: ['learn'] }); assert.equal(section(b.root, 'pg-h-weak').queryAll('a')[0].attrs.href, '#/learn?review=1');
+});
+
+test('this week card: engaged days, floor minutes, streak, honored rest days and the 8-week sparkline with a text alternative', async () => {
+  const { root } = await showAt({ streak: weekRec({ doneDates: ['2026-11-08', '2026-11-09', '2026-11-10'], count: 3, best: 3 }), 'curriculum.progress': { completed: { r01: new Date('2026-11-09T10:00:00').getTime() } } });
+  const sec = section(root, 'pg-h-week');
+  assert.ok(sec);
+  const t = (k) => sec.querySelector(`[data-w="${k}"]`).textContent;
+  assert.match(t('days'), /^3 of 7 days reached the daily goal$/);
+  assert.match(t('minutes'), /^At least 16 minutes engaged$/); // two past days at 5 minutes + 400 s today = 16.7, floored
+  assert.match(t('streak'), /^Streak: 3 days$/);
+  assert.match(t('rest'), /^1 rest day honored \(1 Shabbat\)$/); // Sat 7 Nov, freeze on
+  assert.match(t('reads'), /self-reported/);
+  const wrap = sec.querySelector('.pg-spark-wrap');
+  assert.equal(wrap.attrs['data-series'], '0,0,0,0,0,0,0,1');
+  assert.match(wrap.innerHTML, /^<svg [^>]*role="img"[^>]*aria-label="Dated activity per week, oldest to newest: 0, 0, 0, 0, 0, 0, 0, 1"/);
+  assert.match(sec.querySelector('[data-w="series"]').textContent, /Oldest week to this week: 0, 0, 0, 0, 0, 0, 0, 1 \(1 in all\)/);
+  assert.match(sec.textContent, /at least/i); assert.match(sec.textContent, /This is activity, not a measure of how well you read/);
+  assert.doesNotMatch(sec.textContent, /fluen(t|cy) (score|level)/i);
+});
+
+test('this week card without any history: zeros, no invented minutes, an all-zero graph that still has a text alternative', async () => {
+  const { root } = await showAt({});
+  const sec = section(root, 'pg-h-week');
+  assert.match(sec.querySelector('[data-w="minutes"]').textContent, /^At least 0 minutes engaged$/);
+  assert.match(sec.querySelector('[data-w="rest"]').textContent, /^No rest days in this week$/);
+  assert.equal(sec.querySelector('.pg-spark-wrap').attrs['data-series'], '0,0,0,0,0,0,0,0');
+});
+
+test('milestones list: certificate-free, shows reached ones with dates and the rest with progress, and records them once', async () => {
+  const noon = (iso) => new Date(iso + 'T12:00:00').getTime();
+  const sp = (await loadProgressData()).registry.find((e) => e.category === 'siddur').id;
+  const init = { ...allRead(), 'timedread.v1': { v: 1, reads: [read({ textId: sp, lineId: sp, at: noon('2026-11-03') })] } };
+  const { root, store } = await showAt(init);
+  const sec = section(root, 'pg-h-ms');
+  assert.match(sec.textContent, /no certificate, badge or level/);
+  const row = (id) => sec.querySelector(`[data-ms="${id}"]`);
+  assert.equal(row('prayer-read').attrs['data-done'], '1'); assert.match(row('prayer-read').textContent, /Reached.*\(2026-11-03\)/);
+  assert.equal(row('siddur-25').attrs['data-done'], '1'); assert.match(row('siddur-25').textContent, /\(first noticed 2026-11-10\)/);
+  assert.equal(row('words-100').attrs['data-done'], '0'); assert.match(row('words-100').textContent, /Not yet.*\(0 of 100\)/);
+  assert.equal(row('words-100').queryAll('a')[0].attrs.href, '#/vocab');
+  assert.equal(store.m['progress.milestones.v1'].achieved['prayer-read'].basis, 'dated');
+  const kept = JSON.stringify(store.m['progress.milestones.v1']);
+  // reopening on a later day keeps the first date
+  const { root: r2 } = await showAt({ ...init, 'progress.milestones.v1': store.m['progress.milestones.v1'] }, '2026-12-05');
+  assert.match(r2.querySelector('[data-ms="siddur-25"]').textContent, /first noticed 2026-11-10/);
+  assert.doesNotMatch(sec.textContent, /fluen|master|champion/i);
+  assert.ok(kept.includes('siddur-25'));
+});
+
+test('milestones: a store that refuses writes does not break the screen', async () => {
+  const root = new N('div'); const m = { ...allRead() };
+  const store = { m, get: (k, d) => (k in m ? m[k] : d), set: () => { throw new Error('quota'); } };
+  const un = await mount(root, { store, settings: { get: () => 'read' } }); await waitFor(() => section(root, 'pg-h-ms') && section(root, 'pg-h-week'), { message: "milestones and week sections" });
+  assert.ok(section(root, 'pg-h-ms')); assert.ok(section(root, 'pg-h-week')); un();
 });

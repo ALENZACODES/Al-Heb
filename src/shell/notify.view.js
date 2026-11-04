@@ -12,6 +12,7 @@ const CSS = `
 .alef-notify .nt-card{border:1px solid var(--border,#999);border-radius:12px;padding:1rem;background:var(--card,#fff);margin-block:1rem}
 .alef-notify label{display:block;font-weight:600;margin-block:.75rem .25rem}
 .alef-notify input[type=time]{font:inherit;min-block-size:var(--tap,48px);padding:.4rem .6rem;border:2px solid var(--border,#999);border-radius:8px;background:var(--card,#fff);color:inherit}
+.alef-notify label[for=nt-time]{display:flex;align-items:center;min-block-size:var(--tap,48px);margin-block:.25rem}
 .alef-notify .nt-days{display:flex;flex-wrap:wrap;gap:.5rem;margin-block:.5rem}
 .alef-notify .nt-days label{display:inline-flex;align-items:center;gap:.3rem;min-block-size:var(--tap,48px);padding:.2rem .6rem;border:2px solid var(--border,#999);border-radius:999px;margin:0;font-weight:500}
 .alef-notify .nt-row{display:grid;gap:.5rem;margin-block:.75rem}

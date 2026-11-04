@@ -23,7 +23,7 @@ export function mount(root, ctx) {
   const status = h('p', { role: 'status', 'aria-live': 'polite', class: 'muted' });
   // Restore is a two-step action: choosing a file only inspects it (nothing changes), then the learner confirms the replacement.
   const restoreBox = h('div', { class: 'field', role: 'group', 'aria-label': 'Restore confirmation', hidden: true });
-  const fileInput = h('input', { type: 'file', accept: 'application/json,.json', id: 's-import', class: 'visually-hidden',
+  const fileInput = h('input', { type: 'file', accept: 'application/json,.json', id: 's-import', class: 'visually-hidden', tabindex: '-1',
     onchange: async (e) => {
       const f = e.target.files?.[0]; if (!f) return;
       let text = ''; try { text = await f.text(); } catch { text = ''; }
@@ -35,9 +35,9 @@ export function mount(root, ctx) {
         const res = store.importData(text, { mode: 'replace' });
         restoreBox.hidden = true; restoreBox.replaceChildren();
         if (res.ok) { settings.reload(); status.textContent = `Restored ${res.imported} saved items from the backup${when}.`; } else status.textContent = 'Could not restore: ' + res.error + ' Your progress on this device was not changed.';
-        root.querySelector('#s-import')?.focus();
+        root.querySelector('#s-import-label')?.focus();
       } }, 'Replace my progress with this backup');
-      const cancel = h('button', { type: 'button', class: 'btn secondary', onclick: () => { restoreBox.hidden = true; restoreBox.replaceChildren(); status.textContent = 'Restore cancelled. Nothing was changed.'; root.querySelector('#s-import')?.focus(); } }, 'Cancel');
+      const cancel = h('button', { type: 'button', class: 'btn secondary', onclick: () => { restoreBox.hidden = true; restoreBox.replaceChildren(); status.textContent = 'Restore cancelled. Nothing was changed.'; root.querySelector('#s-import-label')?.focus(); } }, 'Cancel');
       restoreBox.replaceChildren(h('p', {}, `This backup${when} holds ${info.items} saved items. Restoring replaces the progress and settings that are on this device now.`), h('div', { class: 'row' }, go, cancel));
       restoreBox.hidden = false; go.focus();
     } });
@@ -81,7 +81,8 @@ export function mount(root, ctx) {
     h('fieldset', { class: 'field' }, h('legend', {}, t('settings.location')),
       num('lat', t('settings.lat'), -90, 90), num('lon', t('settings.lon'), -180, 180), h('div', { class: 'row' }, geoBtn, clearBtn)),
     h('fieldset', { class: 'field' }, h('legend', {}, t('settings.backup')),
-      h('div', { class: 'row' }, exportBtn, h('label', { class: 'btn secondary', id: 's-import-label', for: 's-import' }, t('settings.import')), fileInput),
+      h('div', { class: 'row' }, exportBtn, h('label', { class: 'btn secondary', id: 's-import-label', for: 's-import', tabindex: '0', role: 'button',
+        onkeydown: (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); } } }, t('settings.import')), fileInput),
       restoreBox, persistLine, h('div', { class: 'row' }, persistBtn),
       store.persistent ? null : h('p', { class: 'muted' }, t('settings.persist.no'))),
     h('div', { class: 'row' }, resetBtn, h('a', { class: 'btn secondary', href: '#/welcome' }, t('settings.redo'))), status));

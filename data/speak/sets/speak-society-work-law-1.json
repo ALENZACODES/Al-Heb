@@ -23,7 +23,7 @@
    "translit": "chaver",
    "en": "a (male) friend",
    "kind": "word",
-   "audioId": "small-talk-18-m",
+   "audioId": "i-37-w12",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "milchamah",
    "en": "warfare, war",
    "kind": "word",
-   "audioId": null,
+   "audioId": "i-47-w4",
    "source": "data/vocab/words.json"
   }
  ]

@@ -243,7 +243,7 @@ test('start screen: draft flag, set select with label, mode radios (only self en
   assert.ok(root.text.includes(DRAFT));
   const sel = byId(root, 'speak-set'); assert.equal(sel.tag, 'select');
   assert.ok(root.find((n) => n.tag === 'label' && n.attrs.for === 'speak-set').length);
-  assert.equal(root.find((n) => n.tag === 'option').length, 60);
+  assert.equal(root.find((n) => n.tag === 'option').length, 61, '60 sets + today\'s five');
   const radios = root.find((n) => n.tag === 'input' && n.attrs.type === 'radio');
   assert.equal(radios.length, 3);
   assert.equal(radios.find((r) => r.attrs.value === 'self').attrs.checked, '');
@@ -561,7 +561,6 @@ test('read aloud with a recognizer: missed word underlined and listed, stored wi
   const lines = prayerData.prayers.find((p) => p.id === 'torah-barchu').lines;
   const { Rec } = fakeRecognition([{ alternatives: ['ברכו את המברך'] }, { alternatives: [M.normalizeHe(lines[1])] }]);
   const { root, store } = await startRead({ Rec });
-  assert.ok(root.text.includes(PRAYER_NOTE)); 
   assert.equal(root.find((n) => n.attrs.lang === 'he')[0].text.replace(/\s+/g, ' ').trim(), lines[0]);
   assert.match(root.text, /line 1 of 2/);
   byId(root, 'read-mic').click();
@@ -608,18 +607,20 @@ test('read aloud start screen: prayer select with label, eight prayers, traditio
   const { root } = await boot({ query: { tab: 'read' } });
   assert.equal(byId(root, 'speak-prayer').find((n) => n.tag === 'option').length, 8);
   assert.ok(root.find((n) => n.tag === 'label' && n.attrs.for === 'speak-prayer').length);
-  assert.match(root.text, /Sephardi or Ashkenazi style/);
+  assert.match(root.text, /Sephardi or Ashkenazi style/); assert.ok(root.text.includes(PRAYER_NOTE));
   assert.equal(root.find((n) => n.tag === 'input' && n.attrs.type === 'radio').length, 3);
 });
 test('shadowing: listen (browser voice, slow option), rate 1-3, stored with rating; summary averages; clip preferred when it exists', async () => {
   const { root, store, synth } = await startRead({ tab: 'shadow' });
   assert.match(byId(root, 'shadow-howto').text, /rate how close/);
   byId(root, 'shadow-listen').click();
-  await waitFor(() => synth.spoken.length === 1);
+  await waitFor(() => /browser's voice/.test(statusText(root)));
+  assert.equal(synth.spoken.length, 1);
   assert.equal(synth.spoken[0].text.trim(), prayerData.prayers.find((p) => p.id === 'torah-barchu').lines[0]);
   byId(root, 'shadow-slow').click();
   await waitFor(() => synth.spoken.length === 2);
   assert.equal(synth.spoken[1].rate, 0.6);
+  await flush(); await flush(); // let the slow playback finish so its status line does not overwrite the rating message
   byId(root, 'shadow-r3').click();
   await waitFor(() => byId(root, 'shadow-next'));
   assert.match(statusText(root), /Rated 3 of 3/);
@@ -671,4 +672,98 @@ test('docs: ROUTES.md lists the sub-pages and nav strings; README covers traditi
   for (const k of ['nav.speak-drills', 'nav.speak-sounds', 'nav.speak-read', 'nav.speak-shadow', 'nav.speak-history']) assert.ok(routes.includes(k), k);
   const readme = readFileSync(join(root, 'docs/speak/README.md'), 'utf8');
   assert.match(readme, /Sounds by tradition/); assert.match(readme, /Read a prayer aloud/); assert.match(readme, /Shadowing/);
+});
+
+// ---- daily card ----------------------------------------------------------------------------------------------------------
+const D = await import('../src/speak/daily.js');
+const poolFor = (date) => D.setsForDay(date, sets.length).flatMap((i) => setItems[sets[i].id].items.map((it) => ({ ...it, set: sets[i].id })));
+test('daily: dayKeyLocal, dayNumber and setsForDay rotate by date, wrap, and are deterministic', () => {
+  assert.equal(D.dayKeyLocal(new Date(2026, 10, 4, 23, 59).getTime()), '2026-11-04');
+  assert.equal(D.dayNumber('1970-01-02'), 1); assert.equal(D.dayNumber('junk'), 0);
+  const a = D.setsForDay('2026-11-04', 60), b = D.setsForDay('2026-11-05', 60);
+  assert.equal(a.length, 3); assert.deepEqual(a, D.setsForDay('2026-11-04', 60));
+  assert.notDeepEqual(a, b); assert.equal(b[0], (a[0] + 3) % 60);
+  assert.deepEqual(D.setsForDay('2026-11-04', 2).length, 2); assert.deepEqual(D.setsForDay('2026-11-04', 0), []);
+});
+test('daily: five distinct pointed items from the pool, no history = rotates by date, never the divine name, stable for a date', () => {
+  const c1 = D.buildDailyCard({ date: '2026-11-04', pool: poolFor('2026-11-04') });
+  const c2 = D.buildDailyCard({ date: '2026-11-05', pool: poolFor('2026-11-05') });
+  assert.equal(c1.kind, 'speak-daily'); assert.equal(c1.items.length, 5); assert.equal(c1.id, 'daily:2026-11-04');
+  assert.equal(new Set(c1.items.map((i) => M.normalizeHe(i.he))).size, 5);
+  assert.deepEqual(c1, D.buildDailyCard({ date: '2026-11-04', pool: poolFor('2026-11-04') }));
+  assert.notDeepEqual(c1.items.map((i) => i.id), c2.items.map((i) => i.id));
+  const words = new Map(rd('data/vocab/words.json').words.map((w) => [w.id, w]));
+  for (const it of c1.items) { assert.equal(it.he, words.get(it.id).he); assert.match(it.he, /[ְ-ׇ]/); assert.ok(it.reason); }
+  assert.deepEqual(c1.progress, { done: 0, total: 5 }); assert.equal(c1.complete, false); assert.equal(c1.weakSounds.length, 0);
+  assert.match(c1.note, /not verified for Hebrew|has not verified/); assert.equal(c1.href, '#/speak?daily=1');
+  const bad = D.buildDailyCard({ date: '2026-11-04', pool: [{ id: 'x', he: 'יְהוָה', set: 's' }, { id: 'y', he: 'שָׁלוֹם', set: 's' }] });
+  assert.deepEqual(bad.items.map((i) => i.id), ['y']);
+  assert.deepEqual(D.buildDailyCard({ date: 'd', pool: [] }).items, []);
+});
+test('daily: weighted to weak sounds (shin/sin misses pull shin words in), "try again" for missed items, recent successes pushed down', () => {
+  const pool = [
+    { id: 'a', he: 'שָׁלוֹם', translit: 'shalom', en: 'peace', set: 's' }, { id: 'b', he: 'מַיִם', translit: 'mayim', en: 'water', set: 's' },
+    { id: 'c', he: 'שָׁנָה', translit: 'shana', en: 'year', set: 's' }, { id: 'd', he: 'דֶּלֶת', translit: 'delet', en: 'door', set: 's' },
+    { id: 'e', he: 'סֵפֶר', translit: 'sefer', en: 'book', set: 's' }, { id: 'f', he: 'בַּיִת', translit: 'bayit', en: 'house', set: 's' },
+    { id: 'g', he: 'שֻׁלְחָן', translit: 'shulchan', en: 'table', set: 's' }, { id: 'h', he: 'גָּדוֹל', translit: 'gadol', en: 'big', set: 's' },
+  ];
+  const now = new Date(2026, 10, 4, 9).getTime();
+  let st = M.emptyState();
+  for (let i = 0; i < 4; i++) st = M.recordAttempt(st, { kind: 'pair', set: 'shin-sin', itemId: 'p' + i, he: 'x', contrast: 'shin-sin', correct: false, outcome: 'miss' }, now - 9e9);
+  const card = D.buildDailyCard({ date: '2026-11-04', pool, attempts: st.attempts, n: 3 });
+  assert.deepEqual(card.items.map((i) => i.id).sort(), ['a', 'c', 'g'], 'the three shin words');
+  assert.ok(card.items.every((i) => /shin \/ sin/.test(i.reason)));
+  assert.deepEqual(card.weakSounds, ['shin / sin']);
+  st = M.recordAttempt(st, { kind: 'say', set: 'speak-x', itemId: 'd', he: 'דלת', mode: 'self', outcome: 'notyet' }, now - 20 * 3600e3);
+  st = M.recordAttempt(st, { kind: 'say', set: 'speak-x', itemId: 'a', he: 'שלומ', mode: 'self', outcome: 'said' }, now - 20 * 3600e3);
+  const next = D.buildDailyCard({ date: '2026-11-04', pool, attempts: st.attempts, n: 4 });
+  const ids = next.items.map((i) => i.id);
+  assert.ok(ids.includes('d') && next.items.find((i) => i.id === 'd').reason === 'try again', 'missed item comes back');
+  assert.ok(!ids.includes('a'), 'a word said yesterday or today is pushed down');
+});
+test('daily: the card is stable through the day (today\'s attempts do not reshuffle it)', () => {
+  const pool = poolFor('2026-11-04'), base = D.buildDailyCard({ date: '2026-11-04', pool });
+  const today = new Date(2026, 10, 4, 10).getTime();
+  let st = M.emptyState();
+  for (const i of base.items) st = M.recordAttempt(st, { kind: 'say', set: base.id, itemId: i.id, he: i.he, mode: 'asr', outcome: 'miss', heard: 'xyz' }, today);
+  assert.deepEqual(D.buildDailyCard({ date: '2026-11-04', pool, attempts: st.attempts }).items.map((i) => i.id), base.items.map((i) => i.id));
+});
+test('daily: progress counts today\'s attempts on the daily set; complete when all five are done; skips do not count', () => {
+  const card = D.buildDailyCard({ date: '2026-11-04', pool: poolFor('2026-11-04') });
+  let st = M.emptyState();
+  card.items.slice(0, 2).forEach((i) => { st = M.recordAttempt(st, { kind: 'say', set: card.id, itemId: i.id, he: i.he, mode: 'self', outcome: 'said' }, 5); });
+  st = M.recordAttempt(st, { kind: 'say', set: card.id, itemId: card.items[2].id, he: card.items[2].he, mode: 'self', outcome: 'skip' }, 6);
+  st = M.recordAttempt(st, { kind: 'say', set: 'daily:2026-11-03', itemId: card.items[3].id, he: card.items[3].he, mode: 'self', outcome: 'said' }, 7);
+  assert.deepEqual(D.buildDailyCard({ date: '2026-11-04', pool: poolFor('2026-11-04'), attempts: st.attempts }).progress.done, 2);
+  card.items.slice(2).forEach((i) => { st = M.recordAttempt(st, { kind: 'say', set: card.id, itemId: i.id, he: i.he, mode: 'self', outcome: 'match' }, 8); });
+  const done = D.buildDailyCard({ date: '2026-11-04', pool: poolFor('2026-11-04'), attempts: st.attempts });
+  assert.equal(done.complete, true);
+});
+test('daily: loadDailyCard / loadDailyCardFromStore use speak.v1 and the real data files; bad store values and missing data are tolerated', async () => {
+  const now = new Date(2026, 10, 4, 12).getTime();
+  const viaFiles = await D.loadDailyCard({ date: '2026-11-04', state: null });
+  assert.equal(viaFiles.items.length, 5);
+  assert.deepEqual(viaFiles.items.map((i) => i.id), D.buildDailyCard({ date: '2026-11-04', pool: poolFor('2026-11-04') }).items.map((i) => i.id));
+  const fromStore = await D.loadDailyCardFromStore({ store: memStore({ 'speak.v1': { attempts: 'junk' } }) }, now);
+  assert.equal(fromStore.date, '2026-11-04'); assert.equal(fromStore.items.length, 5);
+  assert.equal((await D.loadDailyCardFromStore({}, now)).items.length, 5);
+  assert.equal(await D.loadDailyCard({ date: '2026-11-04', state: null, data: { sets: [{ id: 'nope' }], setItems: {} } }), null);
+});
+test('daily on the Say it screen: "Today\'s five" option, ?daily=1 preselects it, attempts are stored under daily:<date>, progress shown next time', async () => {
+  const { root, store } = await boot({ query: { daily: '1' } });
+  assert.match(byId(root, 'speak-set').value, /^daily$/);
+  assert.ok(root.find((n) => n.tag === 'option' && /Today's five \(0 of 5 done\)/.test(n.text)).length);
+  byId(root, 'speak-start').click();
+  await waitFor(() => byId(root, 'speak-q'));
+  assert.match(root.text, /today's five: 1 of 5/);
+  byId(root, 'speak-said').click();
+  await waitFor(() => byId(root, 'speak-next'));
+  const a = store.m['speak.v1'].attempts[0];
+  assert.match(a.set, /^daily:\d{4}-\d{2}-\d{2}$/); assert.equal(store.m['speak.v1'].lastSet, null, 'daily does not replace the remembered set');
+  const again = await boot({ store: { 'speak.v1': store.m['speak.v1'] } });
+  assert.ok(again.root.find((n) => n.tag === 'option' && /Today's five \(1 of 5 done\)/.test(n.text)).length);
+});
+test('docs: daily card model is documented for the home owner', () => {
+  const readme = readFileSync(join(root, 'docs/speak/README.md'), 'utf8');
+  assert.match(readme, /loadDailyCardFromStore/); assert.match(readme, /buildDailyCard/);
 });

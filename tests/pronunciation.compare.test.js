@@ -4,7 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { join } from 'node:path';
-import { newRoot, all, buttons, click, tick } from './pronunciation.dom-helper.js';
+import { newRoot, all, buttons, click, tick, loaded, waitFor } from './pronunciation.dom-helper.js';
 import { mount } from '../src/pronunciation/compare.view.js';
 import { wordKey, shardOf, shardFile, tokenize, variantsOf, syllablesOf, describeDifferences, speechPlan, ssmlFor, STORE_KEY, NOTICE } from '../src/pronunciation/compare.model.js';
 import { buildRuntime, RUNTIME_DIR, SHARD_BYTES } from '../tools/pronunciation/build_runtime.mjs';
@@ -89,10 +89,10 @@ const submit = (root) => all(root, (x) => x.tagName === 'FORM')[0].dispatch('sub
 
 test('view: typing a word shows three labelled readings with stress, the notice, and the why-sentences; state is stored', async () => {
   const { root, mem } = setup();
-  await tick(); 
+  await loaded(root);
   assert.match(textOf(root), /Rule-generated and unverified/);
   assert.equal(NOTICE.includes('native speaker'), true);
-  inputOf(root).value = 'שַׁבָּת'; submit(root); await tick();
+  inputOf(root).value = 'שַׁבָּת'; submit(root); await waitFor(() => mem[STORE_KEY]?.text === 'שַׁבָּת' && all(root, (x) => x.tagName === 'SECTION' && x.getAttribute('data-tradition')).length === 3, { message: "result cards and stored state" });
   const cards = all(root, (x) => x.tagName === 'SECTION' && x.getAttribute('data-tradition'));
   assert.deepEqual(cards.map((c) => c.getAttribute('data-tradition')), ['israeli', 'sephardi', 'ashkenazi']);
   assert.match(textOf(cards[0]), /ʃa\.bat/); assert.match(textOf(cards[2]), /ʃa\.bɔs/); assert.match(textOf(cards[2]), /shabbos/);
@@ -103,7 +103,7 @@ test('view: typing a word shows three labelled readings with stress, the notice,
 
 test('view: Listen buttons speak Hebrew for Israeli and the respelling (en-US) for Ashkenazi', async () => {
   const { root, spoken } = setup();
-  await tick(); inputOf(root).value = 'שַׁבָּת'; submit(root); await tick();
+  await loaded(root); inputOf(root).value = 'שַׁבָּת'; submit(root); await waitFor(() => all(root, (x) => x.tagName === 'BUTTON' && x.getAttribute('data-play') === 'ashkenazi').length === 1, { message: "all(root, (x) => x.tagName === 'BUTTON' && x.getAttribute('data-play') === 'ashkenazi').length === 1" });
   const play = (t) => all(root, (x) => x.tagName === 'BUTTON' && x.getAttribute('data-play') === t)[0];
   click(play('israeli')); click(play('ashkenazi'));
   assert.deepEqual(spoken.map((u) => [u.text, u.lang]), [['שַׁבָּת', 'he-IL'], ['shabbos', 'en-US']]);
@@ -112,7 +112,7 @@ test('view: Listen buttons speak Hebrew for Israeli and the respelling (en-US) f
 
 test('view: no speech synthesis => Listen disabled, text still shown', async () => {
   const { root } = setup({ speech: null });
-  await tick(); inputOf(root).value = 'תּוֹרָה'; submit(root); await tick();
+  await loaded(root); inputOf(root).value = 'תּוֹרָה'; submit(root); await waitFor(() => /toyreh/.test(textOf(root)), { message: "/toyreh/.test(textOf(root))" });
   const play = all(root, (x) => x.tagName === 'BUTTON' && x.getAttribute('data-play'));
   assert.equal(play.length, 3); assert.ok(play.every((b) => b.getAttribute('disabled') === ''));
   assert.match(textOf(root), /toyreh/);
@@ -120,29 +120,29 @@ test('view: no speech synthesis => Listen disabled, text still shown', async () 
 
 test('view: phrase with an unknown or unpointed word reports it and compares the rest; pure unknown text says so', async () => {
   const { root } = setup();
-  await tick(); inputOf(root).value = 'שַׁבָּת שלום'; submit(root); await tick();
+  await loaded(root); inputOf(root).value = 'שַׁבָּת שלום'; submit(root); await waitFor(() => /Not in the table, so left out: שלום/.test(textOf(root)), { message: "/Not in the table, so left out: \u05e9\u05dc\u05d5\u05dd/.test(textOf(root))" });
   assert.match(textOf(root), /Not in the table, so left out: שלום/); assert.match(textOf(root), /need vowel points/);
   assert.match(textOf(root), /shabbos/);
-  inputOf(root).value = 'zzz'; submit(root); await tick();
+  inputOf(root).value = 'zzz'; submit(root); await waitFor(() => /Type a Hebrew word/.test(textOf(root)), { message: "/Type a Hebrew word/.test(textOf(root))" });
   assert.match(textOf(root), /Type a Hebrew word/);
-  inputOf(root).value = 'אֲבַרַקְדַבְרָא'; submit(root); await tick();
+  inputOf(root).value = 'אֲבַרַקְדַבְרָא'; submit(root); await waitFor(() => /Not in the table/.test(textOf(root)) && !/Type a Hebrew word/.test(textOf(root)), { message: "unknown-word result replaces the empty-input message" });
   assert.match(textOf(root), /Not in the table/);
 });
 
 test('view: picking an example compares it; the saved text is restored on the next mount', async () => {
-  const a = setup(); await tick();
+  const a = setup(); await loaded(a.root);
   const sel = all(a.root, (x) => x.tagName === 'SELECT')[0];
   assert.ok(all(sel, (x) => x.tagName === 'OPTION').length > 10);
-  sel.value = picks.picks[0].he; sel.dispatch('change'); await tick();
+  sel.value = picks.picks[0].he; sel.dispatch('change'); await waitFor(() => /What differs and why/.test(textOf(a.root)), { message: "/What differs and why/.test(textOf(a.root))" });
   assert.match(textOf(a.root), /What differs and why/);
-  const b = setup({ store: { get: () => a.mem[STORE_KEY], set: () => {} } }); await tick();
+  const b = setup({ store: { get: () => a.mem[STORE_KEY], set: () => {} } }); await waitFor(() => inputOf(b.root).value === picks.picks[0].he, { message: "inputOf(b.root).value === picks.picks[0].he" });
   assert.equal(inputOf(b.root).value, picks.picks[0].he);
   assert.match(textOf(b.root), /Israeli/);
 });
 
 test('view: keyboard access (native form, input with a label, real buttons) and unmount cancels speech', async () => {
   const { root, unmount, cancelled } = setup();
-  await tick(); inputOf(root).value = 'שַׁבָּת'; submit(root); await tick();
+  await loaded(root); inputOf(root).value = 'שַׁבָּת'; submit(root); await waitFor(() => all(root, (x) => x.tagName === 'SECTION' && x.getAttribute('data-tradition')).length === 3, { message: "all(root, (x) => x.tagName === 'SECTION' && x.getAttribute('data-tradition')).length === 3" });
   const inp = inputOf(root);
   assert.ok(all(root, (x) => x.tagName === 'LABEL' && x.getAttribute('for') === inp.getAttribute('id')).length === 1);
   assert.ok(all(root, (x) => x.getAttribute('role') === 'status').length === 1);
@@ -156,5 +156,5 @@ test('view: lookup data that cannot load shows a calm message, not a crash', asy
   const root = newRoot();
   mount(root, { compareData: { index: undefined }, store: null });
   const orig = globalThis.fetch; globalThis.fetch = async () => ({ ok: false, status: 500 });
-  try { await tick(50); assert.match(textOf(root), /could not be loaded|Loading|Type a Hebrew/); } finally { globalThis.fetch = orig; }
+  try { await waitFor(() => /could not be loaded|Loading|Type a Hebrew/.test(textOf(root)), { message: 'no load message' }); assert.match(textOf(root), /could not be loaded|Loading|Type a Hebrew/); } finally { globalThis.fetch = orig; }
 });

@@ -4,7 +4,8 @@
  "note": "Deterministic, safe corrections to data/vocab/words.json, applied by tools/vocab/apply_corrections.mjs. Each entry: id, field, old, new, reason. Judgement calls are NOT here: see docs/vocab/JUDGEMENT.md.",
  "counts": {
   "removed": 2,
-  "translit": 67
+  "translit": 67,
+  "forms": 1
  },
  "corrections": [
   {
@@ -499,6 +500,13 @@
    "old": "ani olekh",
    "new": "ani holekh",
    "reason": "the stored transliteration drops an h that the siddur scheme writes (ה); new value is the scheme output for the pointed form"
+  },
+  {
+   "id": "he0fc0a82",
+   "field": "forms.plural",
+   "old": "מְְזָגִים",
+   "new": "מְזָגִים",
+   "reason": "doubled sheva (U+05B0 twice on the mem) reduced to one; no letter or other mark changes, the word is the same plural of מֶזֶג"
   }
  ]
 }

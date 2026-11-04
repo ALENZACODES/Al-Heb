@@ -3,7 +3,9 @@
 // (plus the letter / vocabulary data in spec.mjs for context), written as the `altText` map (id -> text) of
 // data/images/generated-manifest.json. Every other field of the manifest is left as ingest.mjs wrote it.
 // The text describes what the prompt asked for, so an image flagged for a wrong backdrop (docs/images/REDO-LIST.md) is
-// described as intended until it is redone.
+// described as intended until it is redone. Intermediate-lesson slots (I-NN-img1/2, data/curriculum/intermediate-image-slots.json)
+// get their alt text from the slot's scene sentence, even before the image exists. Block J rows (data/images/block-j.csv) use that file's
+// `alt` column (read only); a row with an empty alt gets a generated sentence from its kind and set.
 //   node tools/images/alt_text.mjs          write the map (idempotent)
 //   node tools/images/alt_text.mjs --print  print id and text, write nothing
 // Re-run after `node tools/images/ingest.mjs manifest`, which rebuilds the file without this map.
@@ -12,6 +14,8 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { LETTERS } from './spec.mjs';
 import { readJson, writeJsonAtomic } from './ingest_lib.mjs';
+import { loadSlots } from './build_inter.mjs';
+import { loadBlockJ, blockJAlt } from './block_j_rows.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const MANIFEST = join(ROOT, 'data/images/generated-manifest.json');
@@ -100,11 +104,21 @@ export function altTextFor(id, prompt) {
   return out;
 }
 
-/** altText map for every image in a provenance object (id -> text), ids sorted. */
-export function buildAltText(prov) {
+/** Alt text for an intermediate-lesson scene slot (I-NN-imgN): the slot's one-line scene description. */
+export function interAltText(slot) {
+  let t = `Illustration: ${String(slot.scene).replace(/\s+/g, ' ').trim()}`;
+  if (!/[.!?]$/.test(t)) t += '.';
+  if (t.length > MAX_LEN) t = `${t.slice(0, MAX_LEN - 1).replace(/[,;:\s]+\S*$/, '')}.`;
+  return t;
+}
+
+/** altText map (id -> text), ids sorted: every ingested image (from its prompt) plus every intermediate-lesson slot (from the slots file). */
+export function buildAltText(prov, slots = loadSlots(), jRows = loadBlockJ()) {
   const out = {};
-  for (const id of Object.keys(prov.images).sort()) out[id] = altTextFor(id, prov.images[id].prompt);
-  return out;
+  for (const id of Object.keys(prov.images)) out[id] = altTextFor(id, prov.images[id].prompt);
+  for (const s of slots) out[s.id] = interAltText(s);
+  for (const r of jRows) out[r.id] = blockJAlt(r);
+  return Object.fromEntries(Object.entries(out).sort(([a], [b]) => a.localeCompare(b)));
 }
 
 /** Writes the map into the manifest, keeping every other field. Returns the count. */

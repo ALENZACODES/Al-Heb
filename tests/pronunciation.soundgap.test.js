@@ -120,12 +120,12 @@ class El extends N {
 }
 class Doc { createElement(t) { return new El(t, this); } createTextNode(s) { return new T(s); } }
 const all = (n, pred, r = []) => { if (n.nodeType === 1 && pred(n)) r.push(n); for (const c of n.children ?? []) all(c, pred, r); return r; };
-const tick = () => new Promise((r) => setTimeout(r, 0));
+import { waitFor } from './helpers/waitfor.js';
 
 test('view renders every gap, shows not-proofread badge, no audio buttons when audio.has is false', async () => {
   const root = new El('div', new Doc());
   const un = mount(root, { settings: { congregation: 'israeli' }, audio: { has: () => false, play() { throw new Error('should not play'); } }, soundgapData: { soundgap, prayerwords } });
-  await tick();
+  await waitFor(() => all(root, (e) => e.tagName === 'DETAILS').length === 8, { message: "all(root, (e) => e.tagName === 'DETAILS').length === 8" });
   assert.equal(all(root, (e) => e.tagName === 'DETAILS').length, 8);
   assert.match(root.textContent, /not proofread/);
   assert.equal(all(root, (e) => e.tagName === 'BUTTON').length, 0);
@@ -141,7 +141,7 @@ test('view: tradition switch writes the setting and refreshes the verdicts; play
   const settings = { congregation: 'israeli', set(k, v) { sets.push([k, v]); this.congregation = v; } };
   const root = new El('div', new Doc());
   const un = mount(root, { settings, audio: { has: () => true, play: (k, id) => played.push([k, id]) }, soundgapData: { soundgap, prayerwords } });
-  await tick();
+  await waitFor(() => /said the same here/.test(root.textContent), { message: "/said the same here/.test(root.textContent)" });
   assert.match(root.textContent, /said the same here/);
   const radio = all(root, (e) => e.tagName === 'INPUT' && e.attrs.value === 'sephardi')[0];
   radio.dispatch('change');
@@ -160,7 +160,7 @@ test('view: load failure shows an alert', async () => {
   globalThis.fetch = async () => ({ ok: false, status: 404 });
   try {
     const un = mount(root, {});
-    await tick();
+    await waitFor(() => all(root, (e) => e.attrs.role === 'alert').length === 1, { message: "all(root, (e) => e.attrs.role === 'alert').length === 1" });
     assert.ok(all(root, (e) => e.attrs.role === 'alert').length === 1);
     un();
   } finally { globalThis.fetch = globalThis.__origFetch; }

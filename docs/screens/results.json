@@ -1,5 +1,5 @@
 {
- "when": "2026-11-04T06:00:35.025Z",
+ "when": "2026-11-04T13:47:44.592Z",
  "mode": "repo root",
  "offline": "ok: app shell loaded offline",
  "checks": [
@@ -11,7 +11,7 @@
   {
    "name": "onboarding persists letters answer, denomination, minutes and the congregation setting",
    "ok": true,
-   "detail": "{\"s\":{\"voice\":\"f\",\"congregation\":\"ashkenazi\",\"israelTrack\":false,\"script\":\"print\",\"theme\":\"auto\",\"lat\":null,\"lon\":null,\"goal\":\"read\",\"onboarded\":true,\"browserVoiceAnyway\":true},\"o\":{\"v\":1,\"letters\":\"none\",\"start\":\"/firstday\",\"askedAt\":\"2026-11-04T06:00:31.387Z\",\"denomination\":\"reform\",\"minutesPerDay\":10,\"step\":\"plan\"}}"
+   "detail": "{\"s\":{\"voice\":\"f\",\"congregation\":\"ashkenazi\",\"israelTrack\":false,\"script\":\"print\",\"theme\":\"auto\",\"lat\":null,\"lon\":null,\"goal\":\"read\",\"onboarded\":true,\"browserVoiceAnyway\":true},\"o\":{\"v\":1,\"letters\":\"none\",\"start\":\"/firstday\",\"askedAt\":\"2026-11-04T13:47:34.516Z\",\"denomination\":\"reform\",\"minutesPerDay\":10,\"step\":\"plan\"}}"
   },
   {
    "name": "week plan card has 7 days",
@@ -31,7 +31,7 @@
   {
    "name": "home Today card shows 6 due cards, a streak line, the morning link and one Continue button",
    "ok": true,
-   "detail": "ALEF אלף Read Hebrew aloud. Speak it in Israel. Today's lesson Next lesson: Tav and the dot in Bet: Shabbat 6 cards due Streak: No streak yet. Finish a lesson or review a card to start one. Today's morning verse Continue: Tav and the dot in Bet: Shabbat Opening Draft opening: pending clergy/educator review. The opening prayer slot is reserved. No liturgy is bundled here until it has been reviewed."
+   "detail": "ALEF אלף Read Hebrew aloud. Speak it in Israel. Today's lesson Next lesson: Tav and the dot in Bet: Shabbat 6 cards due Streak: No streak yet. Finish a lesson or review a card to start one. Daily goal: 5 min10 min15 min20 min More practice: Typing · Festivals · Compare traditions Today's morning verse Continue: Tav and the dot in Bet: Shabbat Opening Draft opening: pending clergy/educator review. "
   },
   {
    "name": "review persisted ratings to srs.cards",
@@ -55,7 +55,7 @@
    "status": "content",
    "heading": "ALEF אלף",
    "unavailable": false,
-   "textLength": 1345,
+   "textLength": 1478,
    "focused": "",
    "title": "ALEF",
    "errors": [],
@@ -77,7 +77,7 @@
    "status": "content",
    "heading": "Lessons",
    "unavailable": false,
-   "textLength": 3056,
+   "textLength": 4818,
    "focused": "",
    "title": "Learn - ALEF",
    "errors": [],
@@ -209,7 +209,7 @@
    "status": "content",
    "heading": "Sound gap",
    "unavailable": false,
-   "textLength": 1898,
+   "textLength": 35,
    "focused": "",
    "title": "Sound gap - ALEF",
    "errors": [],

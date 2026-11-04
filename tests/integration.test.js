@@ -40,7 +40,7 @@ test('router table: module files for lane 8 exist; others are in the contract pa
   }
 });
 test('settings defaults and validation', () => {
-  assert.deepEqual({ ...DEFAULTS }, { voice: 'f', congregation: 'sephardi', israelTrack: false, script: 'print', theme: 'auto', lat: null, lon: null, goal: 'read', onboarded: false, browserVoiceAnyway: true });
+  assert.deepEqual({ ...DEFAULTS }, { voice: 'f', congregation: 'sephardi', israelTrack: false, script: 'print', theme: 'auto', lat: null, lon: null, goal: 'read', onboarded: false, browserVoiceAnyway: true, showUnapprovedImages: false });
   const s = createSettings(createStore({ storage: createMemoryStorage() }));
   assert.equal(s.congregation, 'sephardi');
   assert.deepEqual(s.set({ voice: 'x', lat: 200, script: 'cursive' }), ['voice', 'lat']);

@@ -19,7 +19,8 @@ const bodyNode = new Node_("body");
 globalThis.document = {
   createElement: (t) => new Node_(t), createTextNode: (d) => ({ nodeType: 3, data: String(d), parent: undefined }), body: bodyNode,
 };
-const tick = () => new Promise((r) => setTimeout(r, 5));
+import { waitFor } from "./helpers/waitfor.js";
+const ready = (root) => waitFor(() => root.find((n) => n.tag === "table").length > 0 && !/Loading/.test(root.text), { message: "calendar view never finished rendering" });
 const memStore = (init = {}) => { const m = { ...init }; return { get: async (k) => m[k], set: async (k, v) => { m[k] = v; }, m }; };
 const byId = (root, id) => root.find((n) => n.attrs.id === id)[0];
 const NOW = () => new Date(Date.UTC(2026, 10, 3, 15, 0)); // 10:00 in Toronto, 23 Cheshvan 5787
@@ -30,7 +31,7 @@ const { mount } = await import("../src/curriculum/calendar.view.js");
 test("with a saved Toronto city: today, Hebrew date, parsha, candle lighting, havdalah, both prayer cards, upcoming holidays", async () => {
   const store = memStore({ "calendar.prefs": { locationId: "toronto" } });
   const root = new Node_("div");
-  const un = mount(root, ctxFor({ store })); await tick();
+  const un = mount(root, ctxFor({ store })); await ready(root);
   const t = root.text;
   assert.match(t, /Tuesday 2026-11-03/); assert.match(t, /23 Cheshvan 5787/);
   assert.match(t, /Chayei Sara/);
@@ -48,7 +49,7 @@ test("with a saved Toronto city: today, Hebrew date, parsha, candle lighting, ha
 
 test("no location: asks for one, never invents a time, settings panel opens", async () => {
   const root = new Node_("div");
-  const un = mount(root, ctxFor({ now: () => new Date(2026, 10, 3, 20, 0) })); await tick();
+  const un = mount(root, ctxFor({ now: () => new Date(2026, 10, 3, 20, 0) })); await ready(root);
   assert.match(root.text, /Set your location/);
   assert.doesNotMatch(root.text, /candle lighting in/);
   assert.ok("open" in root.find((n) => n.tag === "details")[0].attrs);
@@ -58,7 +59,7 @@ test("no location: asks for one, never invents a time, settings panel opens", as
 
 test("month grid: caption with Hebrew months, 7 headers, 5 weeks for Nov 2026, Saturday shows the portion, holiday days flagged", async () => {
   const root = new Node_("div");
-  const un = mount(root, ctxFor({ settings: { location: { lat: 43.65, lon: -79.38, tz: "America/Toronto" } } })); await tick();
+  const un = mount(root, ctxFor({ settings: { location: { lat: 43.65, lon: -79.38, tz: "America/Toronto" } } })); await ready(root);
   const table = root.find((n) => n.tag === "table" && /alef-cal-table/.test(n.className))[0];
   assert.match(table.find((n) => n.tag === "caption")[0].text, /November 2026 .* Cheshvan . Kislev 5787/);
   assert.equal(table.find((n) => n.tag === "th").length, 7);
@@ -74,7 +75,7 @@ test("month grid: caption with Hebrew months, 7 headers, 5 weeks for Nov 2026, S
 
 test("navigating to December shows Hanukkah; selecting a day shows details; Today returns", async () => {
   const root = new Node_("div");
-  const un = mount(root, ctxFor({ store: memStore({ "calendar.prefs": { locationId: "toronto" } }) })); await tick();
+  const un = mount(root, ctxFor({ store: memStore({ "calendar.prefs": { locationId: "toronto" } }) })); await ready(root);
   await root.find((n) => n.attrs["aria-label"] === "Next month")[0].click();
   const table = () => root.find((n) => n.tag === "table" && /alef-cal-table/.test(n.className))[0];
   assert.match(table().find((n) => n.tag === "caption")[0].text, /December 2026/);
@@ -94,7 +95,7 @@ test("navigating to December shows Hanukkah; selecting a day shows details; Toda
 
 test("year view: 12 mini months with festival days marked; picking a month returns to month view", async () => {
   const root = new Node_("div");
-  const un = mount(root, ctxFor()); await tick();
+  const un = mount(root, ctxFor()); await ready(root);
   await root.find((n) => n.tag === "button" && n.text === "Year")[0].click();
   const minis = root.find((n) => /alef-cal-mini/.test(n.className));
   assert.equal(minis.length, 12);
@@ -108,17 +109,17 @@ test("year view: 12 mini months with festival days marked; picking a month retur
 test("choosing a city saves preferences, switches candle minutes (Jerusalem 40) and the Israel schedule", async () => {
   const store = memStore();
   const root = new Node_("div");
-  const un = mount(root, ctxFor({ store })); await tick();
-  await byId(root, "alef-loc-select").fire("change", { target: { value: "jerusalem" } }); await tick();
+  const un = mount(root, ctxFor({ store })); await ready(root);
+  await byId(root, "alef-loc-select").fire("change", { target: { value: "jerusalem" } }); await waitFor(() => store.m["calendar.prefs"]?.locationId === "jerusalem" && /40 min before/.test(root.text), { message: "store.m[\"calendar.prefs\"]?.locationId === \"jerusalem\" && /40 min before/.test(root.text)" });
   assert.equal(store.m["calendar.prefs"].locationId, "jerusalem");
   assert.equal(store.m["calendar.prefs"].candleMinutes, 40);
   assert.match(root.text, /2026-11-06: 16:05 Asia\/Jerusalem/);
   assert.match(root.text, /40 min before/);
   assert.equal(byId(root, "alef-candle-min").attrs.value, "40");
   // custom candle minutes + havdalah choice persist
-  await byId(root, "alef-candle-min").fire("change", { target: { value: "25" } }); await tick();
+  await byId(root, "alef-candle-min").fire("change", { target: { value: "25" } }); await waitFor(() => store.m["calendar.prefs"]?.candleMinutes === 25, { message: "store.m[\"calendar.prefs\"]?.candleMinutes === 25" });
   assert.equal(store.m["calendar.prefs"].candleMinutes, 25);
-  await byId(root, "alef-havdalah").fire("change", { target: { value: "min72" } }); await tick();
+  await byId(root, "alef-havdalah").fire("change", { target: { value: "min72" } }); await waitFor(() => store.m["calendar.prefs"]?.havdalah?.minutes === 72 && /72 min after sunset/.test(root.text), { message: "store.m[\"calendar.prefs\"]?.havdalah?.minutes === 72 && /72 min after sunset/.test(root.text)" });
   assert.deepEqual([store.m["calendar.prefs"].havdalah.mode, store.m["calendar.prefs"].havdalah.minutes], ["minutes", 72]);
   assert.match(root.text, /72 min after sunset/);
   un();
@@ -127,9 +128,9 @@ test("choosing a city saves preferences, switches candle minutes (Jerusalem 40) 
 test("manual coordinates: custom location, candle minutes suggested from position", async () => {
   const store = memStore();
   const root = new Node_("div");
-  const un = mount(root, ctxFor({ store })); await tick();
-  await byId(root, "alef-lat").fire("change", { target: { value: "43.7" } }); await tick();
-  await byId(root, "alef-lon").fire("change", { target: { value: "-79.4" } }); await tick();
+  const un = mount(root, ctxFor({ store })); await ready(root);
+  await byId(root, "alef-lat").fire("change", { target: { value: "43.7" } }); await waitFor(() => store.m["calendar.prefs"]?.lat === 43.7, { message: "store.m[\"calendar.prefs\"]?.lat === 43.7" });
+  await byId(root, "alef-lon").fire("change", { target: { value: "-79.4" } }); await waitFor(() => store.m["calendar.prefs"]?.lon === -79.4 && /candle lighting in Custom location/.test(root.text), { message: "store.m[\"calendar.prefs\"]?.lon === -79.4 && /candle lighting in Custom location/.test(root.text)" });
   const p = store.m["calendar.prefs"];
   assert.deepEqual([p.locationId, p.lat, p.lon, p.candleMinutes], ["custom", 43.7, -79.4, 18]);
   assert.match(root.text, /candle lighting in Custom location/);
@@ -139,7 +140,7 @@ test("manual coordinates: custom location, candle minutes suggested from positio
 test("reminders list, .ics download status, toggles", async () => {
   const store = memStore({ "calendar.prefs": { locationId: "new-york" } });
   const root = new Node_("div");
-  const un = mount(root, ctxFor({ store, now: () => new Date(Date.UTC(2026, 10, 4, 15, 0)) })); await tick();
+  const un = mount(root, ctxFor({ store, now: () => new Date(Date.UTC(2026, 10, 4, 15, 0)) })); await ready(root);
   const list = root.find((n) => n.attrs["aria-label"] === "Upcoming reminders")[0];
   assert.equal(list.find((n) => n.tag === "li").length, 8);
   assert.match(list.text, /Evening prayer moment/);
@@ -153,7 +154,7 @@ test("reminders list, .ics download status, toggles", async () => {
   assert.match(byId(root, "alef-rem-status").text, /alarm behaviour depends on the calendar app/);
   // switch everything off -> nothing to export
   for (const cb of root.find((n) => n.tag === "input" && n.attrs.type === "checkbox")) await cb.fire("change", { target: { checked: false } });
-  await tick();
+  await waitFor(() => /Nothing scheduled/.test(root.text), { message: "/Nothing scheduled/.test(root.text)" });
   assert.match(root.text, /Nothing scheduled/);
   await byId(root, "alef-ics-btn").click();
   assert.match(byId(root, "alef-rem-status").text, /Nothing to export/);
@@ -163,7 +164,7 @@ test("reminders list, .ics download status, toggles", async () => {
 
 test("notifications section is honest about limits; button only when the browser supports them", async () => {
   const root = new Node_("div");
-  const un = mount(root, ctxFor()); await tick();
+  const un = mount(root, ctxFor()); await ready(root);
   assert.match(root.text, /can only fire while this app is open/);
   assert.match(root.text, /nothing can wake the app when it is closed/);
   assert.match(root.text, /does not support notifications/);
@@ -178,8 +179,8 @@ test("notification permission flow with a fake Notification (granted)", async ()
   globalThis.Notification = N;
   const store = memStore({ "calendar.prefs": { locationId: "toronto" } });
   const root = new Node_("div");
-  const un = mount(root, ctxFor({ store })); await tick();
-  await byId(root, "alef-notify-btn").click(); await tick();
+  const un = mount(root, ctxFor({ store })); await ready(root);
+  await byId(root, "alef-notify-btn").click(); await waitFor(() => store.m["calendar.prefs"]?.notify === true, { message: "store.m[\"calendar.prefs\"]?.notify === true" });
   assert.equal(store.m["calendar.prefs"].notify, true);
   assert.match(byId(root, "alef-rem-status").text, /for as long as this app stays open/);
   un();
@@ -188,7 +189,7 @@ test("notification permission flow with a fake Notification (granted)", async ()
 
 test("unmount removes the view and is safe to call twice; no store and no ctx fields still renders", async () => {
   const root = new Node_("div");
-  const un = mount(root, {}); await tick();
+  const un = mount(root, {}); await ready(root);
   assert.ok(root.find((n) => n.tag === "table").length > 0);
   un(); un();
   assert.equal(root.children.length, 0);

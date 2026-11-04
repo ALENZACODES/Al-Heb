@@ -10,7 +10,7 @@
   "ashkenazi"
  ],
  "counts": {
-  "records": 6632,
+  "records": 6630,
   "words": 8758
  },
  "stressRules": [
@@ -61,8 +61,8 @@
   {
    "file": "_syllables-006.json",
    "kind": "syllables",
-   "count": 495,
-   "first": "p3226cfe7"
+   "count": 493,
+   "first": "pe712578e"
   },
   {
    "file": "_syllables-007.json",
@@ -152,31 +152,31 @@
    "file": "_ssml-014.json",
    "kind": "ssml",
    "count": 358,
-   "first": "h06eb7f2e"
+   "first": "h4dab8371"
   },
   {
    "file": "_ssml-015.json",
    "kind": "ssml",
    "count": 332,
-   "first": "p89595761"
+   "first": "pdab3ebcf"
   },
   {
    "file": "_ssml-016.json",
    "kind": "ssml",
-   "count": 81,
-   "first": "help-05"
+   "count": 80,
+   "first": "help-07"
   },
   {
    "file": "_ssml-017.json",
    "kind": "ssml",
    "count": 44,
-   "first": "ashrei-145-16"
+   "first": "shir-hamaalot-l1"
   },
   {
    "file": "_ssml-018.json",
    "kind": "ssml",
-   "count": 9,
-   "first": "havdalah-opening"
+   "count": 8,
+   "first": "havdalah-spices"
   }
  ]
 }

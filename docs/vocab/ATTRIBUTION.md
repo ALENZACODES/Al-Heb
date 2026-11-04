@@ -22,7 +22,7 @@ Required attribution text (identical to `ATTRIBUTION` in `src/vocab/vocab.view.j
 
 ## Could not be traced or settled (flags)
 
-- `lesson-licence-not-stated` (117): lesson-derived entries. `lessons.json` carries no licence; its note says the text was written by an AI agent and is unreviewed. They are bundled into the CC BY-SA data set, but who may reuse them on what terms is not stated in the repo.
+- `lesson-licence-not-stated` (117): lesson-derived entries. `lessons.json` states no licence and the repo says nothing about how these records may be reused; the owner decision and the legal-review list are in `data/vocab/LICENSE-NOTES.md`.
 - `pointing-ai-written` (270): phrasebook and lesson entries; the vowel points and glosses were not taken from Wiktionary and are unreviewed.
 - Not a per-record flag but applies to all 6,027 Wiktionary records: LICENSES.md says the Wiktionary licence page itself was not re-read (UNVERIFIED); kaikki.org's statement was taken from the extract's own terms.
 - `data/vocab/overrides.json` (hand corrections) feeds `vocab5000.json`, not `words.json`, and its ids use a different scheme, so it is not traced here.

@@ -775,9 +775,13 @@ async function genericFile(ctx, slug, F, covered = null) {
   if (!j) return [];
   const inherited = Array.isArray(j) ? [] : hardFlags(j);
   const items = [];
+  const usedLocal = new Set();
   for (const u of flaggedUnits(j, [], inherited)) {
     const d = describeRecord(u.rec);
-    const local = `${F.replace(/^data\//, '').replace(/\.json$/, '')}:${u.rec.id || u.path.join('.')}`;
+    let local = `${F.replace(/^data\//, '').replace(/\.json$/, '')}:${u.rec.id || u.path.join('.')}`;
+    // the same id can legitimately appear in two arrays of one file (units[] and lessons[]): keep ids unique by path
+    if (usedLocal.has(local)) local += `@${u.path.join('.')}`;
+    usedLocal.add(local);
     const fieldEntries = Object.entries(d.fields);
     const only = fieldEntries.length === 1 ? fieldEntries[0][0] : null;
     items.push(mk(slug, local, {

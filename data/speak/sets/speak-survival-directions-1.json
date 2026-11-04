@@ -14,7 +14,7 @@
    "translit": "al yad",
    "en": "next to",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-15-w7",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,7 +41,7 @@
    "translit": "bapinah",
    "en": "on the corner",
    "kind": "word",
-   "audioId": "directions-13",
+   "audioId": "i-15-w9",
    "source": "data/vocab/words.json"
   },
   {
@@ -50,7 +50,7 @@
    "translit": "zeh karov",
    "en": "it's near",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-15-w14",
    "source": "data/vocab/words.json"
   },
   {
@@ -77,7 +77,7 @@
    "translit": "zeh rachok?",
    "en": "is it far?",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-15-w13",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "ani avud",
    "en": "I'm lost",
    "kind": "phrase",
-   "audioId": null,
+   "audioId": "i-15-w15",
    "source": "data/vocab/words.json"
   },
   {

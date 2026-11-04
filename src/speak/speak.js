@@ -24,6 +24,7 @@ import { loadSetsIndex, loadSet, loadPairs, loadPrayers, loadTraditionPairs } fr
 import { STORE_KEY, MODES, capabilities, pickMode, compare, usableItems, coerceState, recordAttempt, setSummary, soundReport, historyRows, dailyTotals, wordsOf, compareLine, missedWordsReport } from './model.js';
 import { createRecognizer, createRecorder, createSpeaker } from './recognizer.js';
 import { contrastById, drillQueue, drillQuestion } from './pairs.js';
+import { loadDailyCard, dayKeyLocal, DAILY_PREFIX } from './daily.js';
 import { TRADITIONS, TRADITION_LABEL, tradition as normTradition, traditionSummary, pairLine, tradQueue, tradQuestion } from './tradition.js';
 
 export const TAB_LIST = [['say', 'Say it'], ['drills', 'Listening drills'], ['sounds', 'Sounds by tradition'], ['read', 'Read a prayer aloud'], ['shadow', 'Shadowing'], ['history', 'History']];
@@ -116,7 +117,7 @@ export function mount(root, ctx) {
 
   let alive = true, state = coerceState(null), index = [], pairs = null, tab = tabFromLocation(ctx?.query, g.location?.hash);
   let chosenSet = ctx?.query?.set || null, mode = 'auto', chosenContrast = ctx?.query?.contrast || 'bet-vet';
-  let set = null, items = [], qi = 0, results = [], busy = false;
+  let set = null, items = [], qi = 0, results = [], busy = false, daily = null;
   const say = (t) => { status.textContent = t; };
   const setBody = (...n) => { body.replaceChildren(...n.filter(Boolean)); };
   const save = () => storeSet(ctx, STORE_KEY, state);
@@ -126,9 +127,9 @@ export function mount(root, ctx) {
     tabs.replaceChildren(...TAB_LIST.map(([id, label]) =>
       el('li', {}, el('a', { href: `#/speak${id === 'say' ? '' : `?tab=${id}`}`, 'aria-current': tab === id ? 'page' : null, 'data-tab': id, onclick: (e) => { e.preventDefault?.(); go(id); } }, label))));
   }
-  function go(id) {
+  function go(id, initial) {
     if (!alive) return; tab = id; renderTabs(); say('');
-    try { g.history?.replaceState?.(null, '', id === 'say' ? '#/speak' : `#/speak?tab=${id}`); } catch { /* optional */ }
+    if (!initial) try { g.history?.replaceState?.(null, '', id === 'say' ? '#/speak' : `#/speak?tab=${id}`); } catch { /* optional */ }
     if (id === 'say') renderStart(); else if (id === 'drills') renderDrillStart(); else if (id === 'sounds') renderSounds(); else if (id === 'read' || id === 'shadow') renderPrayerStart(id); else renderHistory();
   }
 
@@ -139,12 +140,14 @@ export function mount(root, ctx) {
       index = d?.sets || await loadSetsIndex();
       state = coerceState(await storeGet(ctx, STORE_KEY, null));
       mode = state.mode || 'auto';
+      daily = await loadDailyCard({ date: (inj.dayKey || dayKeyLocal)(clock.now()), state, data: inj.data });
+      if (ctx?.query?.daily && daily?.items.length) chosenSet = 'daily';
       if (!chosenSet) chosenSet = state.lastSet && index.some((s) => s.id === state.lastSet) ? state.lastSet : (index[0]?.id || null);
     } catch {
       if (alive) setBody(el('p', { role: 'alert' }, 'The practice sets could not be loaded. Check your connection and reload; nothing was lost.'));
       return;
     }
-    if (alive) go(tab);
+    if (alive) go(tab, true);
   }
 
   // ---- Say it ---------------------------------------------------------------------------------------------------------
@@ -160,8 +163,9 @@ export function mount(root, ctx) {
     const opt = (v, label) => el('option', { value: v, selected: v === chosenSet }, label);
     const groups = new Map();
     for (const s of index) { const k = s.pack?.startsWith('survival-') ? 'Survival phrases' : `Level ${s.level}`; (groups.get(k) || groups.set(k, []).get(k)).push(s); }
+    if (daily?.items.length) sel.append(el('optgroup', { label: 'Today' }, opt('daily', `Today's five (${daily.progress.done} of ${daily.progress.total} done)`)));
     for (const [label, list] of groups) sel.append(el('optgroup', { label }, list.map((s) => opt(s.id, `${s.title} (${count(s.size, 'item')})`))));
-    if (!index.some((s) => s.id === chosenSet)) chosenSet = index[0]?.id || null;
+    if (!(chosenSet === 'daily' && daily?.items.length) && !index.some((s) => s.id === chosenSet)) chosenSet = index[0]?.id || null;
     sel.value = chosenSet;
     sel.addEventListener('change', (e) => { chosenSet = e.target.value; });
     const fs = el('fieldset', {}, el('legend', {}, 'How to check what you said'));
@@ -188,13 +192,14 @@ export function mount(root, ctx) {
   }
 
   async function start() {
-    const meta = index.find((s) => s.id === chosenSet);
+    const isDaily = chosenSet === 'daily' && daily?.items.length;
+    const meta = isDaily ? { id: daily.id } : index.find((s) => s.id === chosenSet);
     if (!meta) return;
     setBody(el('p', {}, 'Loading the set...'));
-    try { set = inj.data?.setItems?.[meta.id] || await loadSet(meta.id); } catch { if (alive) setBody(el('p', { role: 'alert' }, 'That set could not be loaded. Try another one.'), el('div', { class: 'sk-row' }, el('button', { type: 'button', class: 'btn', onclick: renderStart }, 'Back'))); return; }
+    try { set = isDaily ? { id: daily.id, title: daily.title, items: daily.items } : (inj.data?.setItems?.[meta.id] || await loadSet(meta.id)); } catch { if (alive) setBody(el('p', { role: 'alert' }, 'That set could not be loaded. Try another one.'), el('div', { class: 'sk-row' }, el('button', { type: 'button', class: 'btn', onclick: renderStart }, 'Back'))); return; }
     if (!alive) return;
     items = usableItems(set.items); qi = 0; results = [];
-    state = { ...state, lastSet: meta.id }; save();
+    if (!isDaily) { state = { ...state, lastSet: meta.id }; save(); }
     if (!items.length) return end();
     question();
   }
@@ -556,7 +561,7 @@ export function mount(root, ctx) {
           const missed = tokens.filter((t, i) => { let k = per.slice(0, i).reduce((a, b) => a + b, 0); return cmp.words.slice(k, k + per[i]).some((w) => w.status === 'miss'); });
           const text = cmp.outcome === 'match' ? 'Every word matched.' : `${cmp.hit} of ${cmp.words.length} words matched${cmp.near ? `, ${cmp.near} close` : ''}.`;
           const extra = el('div', {},
-            missed.length ? el('p', { id: 'read-missed' }, 'Not heard: ', missed.map((t) => [heText(t), ' '])) : null,
+            missed.length ? el('p', { id: 'read-missed' }, 'Not heard: ', missed.flatMap((t) => [heText(t), ' '])) : null,
             el('p', { class: 'muted' }, 'Underlined words were not heard as written (wavy = not heard, dotted = close). A hint from the browser\'s recognizer, which is unverified for Hebrew.'),
             cmp.outcome === 'match' ? null : el('div', { class: 'sk-opts' }, ...selfBtns('You decided: ')));
           showVerdict(text, extra);

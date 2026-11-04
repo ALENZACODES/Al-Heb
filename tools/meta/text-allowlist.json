@@ -72,6 +72,30 @@
     {
       "path": "tools/youtube/fetch-slow.py",
       "reason": "Machine path of a local research folder (user name in path); not published content."
+    },
+    {
+      "path": "data/pronunciation/runtime/lookup-01.json",
+      "reason": "Hebrew word dalleket (inflammation) transliteration matches an image-model pattern by accident."
+    },
+    {
+      "path": "docs/TOOLING.md",
+      "reason": "Documents the scan tool and the names it searches for."
+    },
+    {
+      "path": "tests/meta.text.test.js",
+      "reason": "Test of the scan tool: contains the patterns it checks."
+    },
+    {
+      "path": "tests/images.blockj.test.js",
+      "reason": "Test asserts that no tool names appear in generated output: quotes the patterns it forbids."
+    },
+    {
+      "path": "tests/images.review.test.js",
+      "reason": "Test asserts that no tool names appear in generated output: quotes the patterns it forbids."
+    },
+    {
+      "path": "tests/credits.test.js",
+      "reason": "Test asserts that no tool names appear in rendered credits: quotes the patterns it forbids."
     }
   ]
 }

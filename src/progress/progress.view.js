@@ -10,7 +10,12 @@ import { weeklySummary, weeklySentences, sparklineSVG, WEEKS } from './weekly.js
 import { evaluateMilestones, milestoneRows } from './milestones.js';
 
 const CSS = `
-.pg { display: grid; gap: var(--gap, 1rem); }
+.pg { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gap, 1rem); max-inline-size: 100%; overflow-wrap: anywhere; }
+.pg > *, .pg li, .pg dl > *, .pg details, .pg .pg-row > * { min-inline-size: 0; }
+.pg .pg-row > * { max-inline-size: 100%; }
+.pg input, .pg select, .pg textarea { max-inline-size: 100%; box-sizing: border-box; }
+.pg .btn { white-space: normal; max-inline-size: 100%; }
+.pg .pg-spark-wrap { max-inline-size: 100%; overflow: hidden; }
 .pg h2 { margin-block: 0 .5rem; font-size: 1.2rem; }
 .pg h3 { margin-block: .75rem .25rem; font-size: 1rem; }
 .pg ul, .pg ol { margin: 0; padding-inline-start: 1.25rem; }
@@ -74,7 +79,7 @@ export async function mount(root, ctx) {
     const missedYesterday = !s.rest.includes(yesterday) && streakInfo({ ...s, rest: [...s.rest, yesterday] }, t).count > st.count;
     const streakLine = st.count > 0
       ? `${plural(st.count, 'day', 'days')} in a row${st.restToday ? ' (resting today)' : st.activeToday ? ', including today' : ''}. Best so far: ${st.best}.`
-      : st.restToday ? 'Resting today. Your streak is waiting for you.' : 'No streak running right now. Any lesson or review card starts one.';
+      : st.restToday ? 'Resting today. Your streak is waiting for you.' : 'No streak running right now. A day counts after 5 minutes of study on a lesson, review or practice screen.';
     const goalLine = g.lessonsToday > 0 ? `Today's goal is met: you finished ${plural(g.lessonsToday, 'lesson', 'lessons')}.`
       : g.cards >= g.target ? `Today's goal is met: ${plural(g.cards, 'card', 'cards')} reviewed.`
       : `${g.cards} of ${g.target} cards today. Any amount counts.`;
@@ -85,7 +90,7 @@ export async function mount(root, ctx) {
       h('p', { class: 'pg-big' }, streakLine),
       h('p', {}, goalLine),
       h('progress', { max: String(g.target), value: String(g.met ? g.target : Math.min(g.cards, g.target)), 'aria-label': 'Cards reviewed today' }),
-      h('p', { class: 'small muted' }, 'A rest day does not break your streak. The goal is a gentle target in cards; the app does not time you, so there is no minutes goal.'),
+      h('p', { class: 'small muted' }, 'A rest day does not break your streak. The streak counts a day after 5 minutes of study. The card goal below is a separate, gentle target.'),
       h('div', { class: 'pg-row' },
         h('label', { for: 'pg-goal' }, 'Daily goal '), sel),
       h('div', { class: 'pg-row' },

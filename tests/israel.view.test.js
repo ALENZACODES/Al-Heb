@@ -16,8 +16,8 @@ class Node_ {
   async click() { for (const f of this.listeners.click || []) await f({}); }
 }
 globalThis.document = { createElement: (t) => new Node_(t), createTextNode: (d) => ({ nodeType: 3, data: String(d), parent: undefined }) };
-const tick = () => new Promise((r) => setTimeout(r, 15));
-const ready = async (root) => { for (let i = 0; i < 200 && !/Draft\./.test(root.text); i++) await new Promise((r) => setTimeout(r, 10)); await tick(); };
+import { waitFor } from "./helpers/waitfor.js";
+const ready = (root) => waitFor(() => /Draft\./.test(root.text) && root.find((n) => n.tag === "h1").length === 1, { message: "israel view never finished rendering" });
 const memStore = (init = {}) => { const m = { ...init }; return { get: async (k) => m[k], set: async (k, v) => { m[k] = v; }, m }; };
 const { mount } = await import("../src/israel/israel.view.js");
 const mountSec = async (sec, extra = {}) => { const root = new Node_("div"); const store = memStore(); const un = mount(root, { store, query: { sec, ...extra }, settings: {}, t: (k) => k }); await ready(root); return { root, store, un }; };
@@ -55,7 +55,7 @@ test("ladder: gender controls switch the displayed form", async () => {
   assert.match(everyText(), /shlomCHA/);
   const toWoman = root.find((n) => n.tag === "button" && n.attrs["data-v"] === "f" && /woman/i.test(n.text));
   // "I am talking to" is the second group; click its woman button
-  await toWoman[1].click(); await tick();
+  await toWoman[1].click(); await waitFor(() => /shloMECH/.test(everyText()), { message: "/shloMECH/.test(everyText())" });
   assert.match(everyText(), /shloMECH/);
 });
 
@@ -68,7 +68,7 @@ test("giveaways: answering a drill records stats and an SRS card", async () => {
   const { root, store } = await mountSec("giveaways");
   const first = root.find((n) => n.attrs["data-giveaway"] === "gv-noun-adj")[0];
   const wrong = first.find((n) => n.attrs["data-opt"] === "b")[0];
-  await wrong.click(); await tick();
+  await wrong.click(); await waitFor(() => /Not quite/.test(first.text) && store.m["israel.cards"]?.["israel:giveaway:gv-noun-adj"], { message: "/Not quite/.test(first.text) && store.m[\"israel.cards\"]?.[\"israel:giveaway:gv-noun-adj\"]" });
   assert.match(first.text, /Not quite/);
   assert.equal(store.m["israel.stats"].giveaways["gv-noun-adj"].total, 1);
   assert.ok(store.m["israel.cards"]["israel:giveaway:gv-noun-adj"]);
@@ -82,11 +82,11 @@ test("say it: pick through a full round, see explanations, score is saved with S
     assert.equal(opts.length, 3);
     // always pick the natural one on even rounds, the stiff one on odd rounds
     const want = i % 2 === 0 ? "natural" : "stiff";
-    await opts.find((b) => b.attrs["data-role"] === want).click(); await tick();
+    await opts.find((b) => b.attrs["data-role"] === want).click(); await waitFor(() => (i % 2 === 0 ? /Natural\. / : /Correct Hebrew, but stiff/).test(root.text) && root.find((n) => n.attrs.id === "il-next").length > 0, { message: "(i % 2 === 0 ? /Natural\\. / : /Correct Hebrew, but stiff/).test(root.text) && root.find((n) => n.attrs.id === \"il-next\").length > 0" });
     assert.match(root.text, i % 2 === 0 ? /Natural\. / : /Correct Hebrew, but stiff/);
     assert.match(root.text, /Wrong register: /); // explanations for all three are shown
     const next = root.find((n) => n.attrs.id === "il-next")[0]; assert.ok(next); assert.equal(globalThis.__focused, next, "focus moves to Next");
-    await next.click(); await tick();
+    await next.click(); await waitFor(() => i === 7 ? /natural \(/.test(root.text) : btnsWith(root, "data-role").length === 3, { message: "next question or final score" });
   }
   assert.match(root.text, /4 of 8 natural \(50%\)/);
   assert.equal(Object.keys(store.m["israel.cards"]).length, 8);
@@ -96,10 +96,10 @@ test("say it: pick through a full round, see explanations, score is saved with S
 test("say it: a second pick on the same question is ignored", async () => {
   const { root, store } = await mountSec("say", { seed: "9" });
   const opts = btnsWith(root, "data-role");
-  await opts[0].click(); await opts[1].click(); await tick();
+  await opts[0].click(); await opts[1].click(); await waitFor(() => root.find((n) => n.attrs.id === "il-next").length > 0, { message: "root.find((n) => n.attrs.id === \"il-next\").length > 0" });
   const next = root.find((n) => n.attrs.id === "il-next")[0];
-  for (let i = 0; i < 7; i++) { await next.click(); await tick(); const o = btnsWith(root, "data-role"); await o[0].click(); await tick(); }
-  await root.find((n) => n.attrs.id === "il-next")[0].click(); await tick();
+  for (let i = 0; i < 7; i++) { await next.click(); await waitFor(() => btnsWith(root, "data-role").length > 0, { message: "next question options" }); const o = btnsWith(root, "data-role"); await o[0].click(); await waitFor(() => root.find((n) => n.attrs.id === "il-next").length > 0, { message: "root.find((n) => n.attrs.id === \"il-next\").length > 0" }); }
+  await root.find((n) => n.attrs.id === "il-next")[0].click(); await waitFor(() => / of 8 natural/.test(root.text), { message: "/ of 8 natural/.test(root.text)" });
   assert.match(root.text, / of 8 natural/);
 });
 

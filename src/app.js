@@ -9,6 +9,7 @@ import { createShellAudio } from './shell/audio.js';
 import { createShardLoader } from './shell/audio-shards.js';
 import { fetchCoreManifest, afterPaint } from './shell/audio-manifest.js';
 import { h, heSpan, unavailableCard } from './shell/ui.js';
+import { loadImageResolver, img as imgEl } from './img/resolve.js';
 
 const settings = createSettings(store);
 
@@ -104,6 +105,17 @@ function wireChrome() {
   st.addEventListener('click', () => st.classList.toggle('open'));
 }
 
+// WCAG 2.4.11: on phones the bottom nav is position:fixed; keep the keyboard-focused control above it.
+document.addEventListener('focusin', (e) => {
+  const nav = document.querySelector('.site-nav'); const el = e.target;
+  if (!nav || !(el instanceof Element) || el.closest('.site-nav') || getComputedStyle(nav).position !== 'fixed') return;
+  requestAnimationFrame(() => {
+    if (document.activeElement !== el) return;
+    const over = el.getBoundingClientRect().bottom - nav.getBoundingClientRect().top;
+    if (over > 0) window.scrollBy({ top: over + 8, behavior: 'instant' });
+  });
+});
+
 let unmount = () => {};
 let navToken = 0;
 let firstShow = true; // do not steal focus on the initial page load (keyboard users start at the skip link)
@@ -173,7 +185,9 @@ async function boot() {
   available = availableRoutes(VIEW_FILES);
   wireSoundStatus(audio);
   let router;
-  const ctxBase = { settings, store, audio, route: (p) => router.go(p), t, installPrompt, hasRoute: (name) => available.has(name) };
+  let images = null;
+  try { images = await loadImageResolver((u) => fetch(u).then((r) => { if (!r.ok) throw new Error(String(r.status)); return r.json(); }), { settings }); } catch { images = null; }
+  const ctxBase = { settings, store, audio, route: (p) => router.go(p), t, installPrompt, hasRoute: (name) => available.has(name), images, img: (hh, spec) => (images ? imgEl(hh, { R: images, ...spec }) : null) };
   router = createRouter((m) => { show(m, ctxBase); });
   window.alef = { settings, store, audio, router }; // debugging handle
   router.start();

@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { waitFor } from './helpers/waitfor.js';
 const L = await import("../src/firstday/loader.js");
 const M = await import("../src/firstday/model.js");
 const first10 = await L.loadFirst10();
@@ -94,7 +95,19 @@ test("view mounts with injected data, shows the draft notice and steps through",
   const dom = new doc("<body></body>"); globalThis.document = dom.window.document;
   const V = await import("../src/firstday/firstday.view.js");
   const root = document.body; const un = V.mount(root, { firstdayData: { first10, ladder } });
-  await new Promise((r) => setTimeout(r, 20));
+  await waitFor(() => /unreviewed/.test(root.textContent), { message: "/unreviewed/.test(root.textContent)" });
   assert.match(root.textContent, /unreviewed/);
+  un(); delete globalThis.document;
+});
+
+test("last step has a next-step button and a way home, and no stale check message", async () => {
+  let doc; try { ({ JSDOM: doc } = await import("jsdom")); } catch { return; }
+  const dom = new doc("<body></body>"); globalThis.document = dom.window.document;
+  const V = await import("../src/firstday/firstday.view.js");
+  const store = { m: { "firstday.progress": { ...M.emptyProgress(), step: first10.steps.length - 1 } }, get(k) { return this.m[k]; }, set(k, v) { this.m[k] = v; } };
+  const root = document.body; const un = V.mount(root, { store, firstdayData: { first10, ladder } });
+  await waitFor(() => root.querySelector("#fd-next-lesson"), { message: "next lesson link" });
+  assert.equal(root.querySelector("#fd-next-lesson").getAttribute("href"), "#/learn?lesson=r01");
+  assert.ok([...root.querySelectorAll("a")].some((a) => a.getAttribute("href") === "#/"));
   un(); delete globalThis.document;
 });

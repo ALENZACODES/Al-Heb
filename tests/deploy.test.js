@@ -34,11 +34,12 @@ test('make-dist ships runtime files only', () => {
   for (const must of ['index.html', 'sw.js', '_headers', 'manifest.webmanifest', 'assets/fonts/web/heebo.woff2', 'assets/vendor/_tesseract/heb.traineddata', 'src/app.js']) assert.ok(files.includes(must), must);
   for (const f of files) assert.ok(!/^(docs|tests|tools|book|research|assets\/images|node_modules)\//.test(f) && !/\.test\.js$/.test(f), f);
 });
-test('check-deploy passes on a build and FAILS when the headers are broken', { timeout: 120000 }, async () => {
+test('check-deploy passes on a build and FAILS when the headers are broken', { timeout: 120000 }, async (t) => {
   const tmp = mkdtempSync(join(tmpdir(), 'alef-deploy-'));
   try {
+    // dist/ is gitignored, so a clean CI checkout has no build: skip with a message instead of failing on the copy
+    if (!existsSync(join(root, 'dist', 'index.html'))) { t.skip('dist/ not built in this checkout (run tools/make-dist.mjs first)'); return; }
     cpSync(join(root, 'dist'), tmp, { recursive: true });
-    if (!existsSync(join(tmp, 'index.html'))) return; // dist not built in this checkout: nothing to check
     cpSync(join(root, '_headers'), join(tmp, '_headers'));
     const good = await runChecks(tmp);
     assert.deepEqual(good.results.filter((r) => !r.pass).map((r) => r.name), []);

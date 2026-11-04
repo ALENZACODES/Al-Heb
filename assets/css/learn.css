@@ -42,3 +42,49 @@
 :root[data-theme="dark"] .alef-rate-1 { background: #f19a9a; border-color: #f19a9a; color: #2b0b0b; }
 :root[data-theme="dark"] .alef-rate-2 { background: #f1c27a; border-color: #f1c27a; color: #2b1c00; }
 @media (forced-colors: active) { .alef-lesson, .alef-btn, .alef-play, .alef-link { border: 2px solid CanvasText; } }
+
+/* Spot It (src/curriculum/spotit.view.js): lines of tappable words. Right-to-left lines; wraps at 390px. */
+.alef-spot-target { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .5rem; text-align: center; }
+.alef-spot-target .alef-huge { display: inline; font-size: 4rem; }
+.alef-spot-line { display: flex; flex-wrap: wrap; gap: .4rem .6rem; padding: .5rem .6rem; margin-block: .5rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); font-family: var(--font-he); font-size: 1.6rem; line-height: 1.7; }
+.alef-spot-gap { display: none; }
+.alef-spot-cell { font: inherit; font-family: var(--font-he); font-size: 1.6rem; line-height: 1.5; color: var(--fg); background: var(--bg); border: 2px solid var(--border); border-radius: 10px; min-block-size: var(--tap); min-inline-size: var(--tap); padding: .15rem .6rem; cursor: pointer; unicode-bidi: isolate; }
+.alef-spot-cell:hover { border-color: var(--accent); }
+.alef-spot-cell[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+.alef-spot-cell[disabled] { cursor: default; }
+/* After "Check": colour is never the only cue (a border style and a text mark are added too). */
+.alef-spot-cell.alef-spot-hit { background: #dff3e3; color: #0d3b1a; border: 3px solid #1d7a38; }
+.alef-spot-cell.alef-spot-hit::after { content: " \2713"; font-family: var(--font-ui); font-size: .9rem; }
+.alef-spot-cell.alef-spot-missed { background: var(--bg); color: var(--fg); border: 3px dashed #b45309; }
+.alef-spot-cell.alef-spot-wrong { background: #fbe3e3; color: #5a0f0f; border: 3px solid #a31d1d; text-decoration: line-through; }
+.alef-spot-cell.alef-spot-wrong::after { content: " \2717"; font-family: var(--font-ui); font-size: .9rem; text-decoration: none; display: inline-block; }
+.alef-spot-result { min-block-size: 1.5em; font-weight: 600; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .alef-spot-cell.alef-spot-hit { background: #123d20; color: #c9f0d4; border-color: #5bd17f; }
+  :root:not([data-theme="light"]) .alef-spot-cell.alef-spot-wrong { background: #4a1616; color: #ffd4d4; border-color: #f19a9a; }
+  :root:not([data-theme="light"]) .alef-spot-cell.alef-spot-missed { border-color: #f1c27a; }
+}
+:root[data-theme="dark"] .alef-spot-cell.alef-spot-hit { background: #123d20; color: #c9f0d4; border-color: #5bd17f; }
+:root[data-theme="dark"] .alef-spot-cell.alef-spot-wrong { background: #4a1616; color: #ffd4d4; border-color: #f19a9a; }
+:root[data-theme="dark"] .alef-spot-cell.alef-spot-missed { border-color: #f1c27a; }
+@media (forced-colors: active) { .alef-spot-cell { border-color: ButtonText; } .alef-spot-cell[aria-pressed="true"] { background: Highlight; color: HighlightText; } }
+
+/* Interference hint (src/curriculum/hint-ui.js): a short note, visually distinct from a normal card. */
+.alef-hint-panel { border-inline-start: 5px solid var(--focus); background: var(--warn-bg); color: var(--warn-fg); font-size: .95rem; padding-block: .6rem; }
+.alef-hint-panel > * { margin-block: .3rem; }
+.alef-hint-panel .btn { min-block-size: 40px; font-size: .9rem; }
+
+/* Transliteration line under a dialogue line (src/curriculum/dialogues.view.js) */
+.alef-translit { color: var(--muted); font-style: italic; font-size: .95rem; overflow-wrap: anywhere; }
+
+/* Containers of the other lane 1 sub-screens */
+.alef-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr)); gap: .5rem; }
+.alef-options .btn, .alef-opt { font-size: 1.1rem; }
+.alef-dialogue-lines { list-style: none; margin: 0; padding: 0; display: grid; gap: .75rem; }
+.alef-dline { padding-block: .5rem; border-block-end: 1px solid var(--border); }
+.alef-speaker { font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; }
+.alef-spot-target { direction: ltr; }
+.alef-spot-target .alef-huge { unicode-bidi: isolate; }
+.alef-dline .alef-he { display: block; margin-block: .15rem; }
+.btn.secondary[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); }
+.btn.secondary[aria-pressed="true"]::before { content: "\2713\00a0"; }

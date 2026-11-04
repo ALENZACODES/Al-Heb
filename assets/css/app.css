@@ -74,3 +74,7 @@ th:first-child, td:first-child { min-inline-size: 7rem; }
 .how h3 { font-size: 1rem; margin-block: 1rem .25rem; }
 .how li, .card li { margin-block: .35rem; }
 .onboarding legend { font-size: 1.05rem; }
+/* fieldsets default to min-width:min-content, which pushed the Sound-gap radio group past 390px */
+fieldset { min-inline-size: 0; max-inline-size: 100%; }
+main { overflow-x: clip; } /* a stray wide table (Sound gap) must not widen the page; tables inside .table-wrap still scroll */
+.tiles li { display: flex; } .tiles .tile { flex: 1; text-align: center; padding-inline: .4rem; }

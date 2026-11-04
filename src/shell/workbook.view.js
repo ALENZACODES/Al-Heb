@@ -11,9 +11,9 @@ export async function mount(root, ctx) {
   const files = Array.isArray(m?.files) ? m.files : [];
   const list = files.length
     ? h('ul', { class: 'credits', 'aria-label': 'Workbook PDFs' }, ...files.map((f) => h('li', {},
-        h('strong', {}, `${LABEL[f.script] ?? f.script}, ${f.paper}`),
+        h('strong', {}, `${LABEL[f.script] ?? f.script}, ${f.paper}${f.mnemonics ? ', with memory hooks' : ''}`),
         h('span', { class: 'block muted' }, `${f.pages} pages, ${mb(f.bytes)}`),
-        h('a', { class: 'btn', href: new URL('../../assets/workbook/' + f.pdf, import.meta.url).href, download: f.pdf, 'aria-label': `Download ${LABEL[f.script] ?? f.script} workbook, ${f.paper}` }, 'Download PDF'))))
+        h('a', { class: 'btn', href: new URL('../../assets/workbook/' + f.pdf, import.meta.url).href, download: f.pdf, 'aria-label': `Download ${LABEL[f.script] ?? f.script} workbook, ${f.paper}${f.mnemonics ? ', with memory hooks' : ''}` }, 'Download PDF'))))
     : h('p', { class: 'muted', role: 'status' }, err ? `The workbook list could not be loaded (${err.message}). It may not be available offline: PDFs are not stored for offline use until you open them once.` : 'No workbook files are listed in this build.');
   root.replaceChildren(h('article', { class: 'stack' },
     h('section', { class: 'card' },

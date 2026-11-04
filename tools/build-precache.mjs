@@ -14,7 +14,7 @@ const SKIP = (rel) => rel.startsWith('assets/img/') || rel.startsWith('assets/ve
   || rel.startsWith('data/vocab/packs/') /* ~150 pack files: fetched when a pack is opened, then cached at runtime */ /* big, runtime-cached */ || rel.split('/').some((p) => p.startsWith('_') || p === 'node_modules')
   || rel.endsWith('.py') || rel.endsWith('.md') || /\.(mp3|wav|ogg|m4a|svg\.src|ttf|otf|txt)$/i.test(rel)  // original TTFs and licence texts are not precached; woff2 in assets/fonts/web/ is
   || rel.split('/').includes('tools')
-  || rel.startsWith('data/images/') || rel === 'data/corpus/source-snapshot.json'; // build-time inputs, not fetched by the app
+  || rel.startsWith('data/images/') || rel === 'data/corpus/source-snapshot.json' || rel === 'data/audio/tts-prices.json'; /* tts-prices: build-time cost plan input */ // build-time inputs, not fetched by the app
 const DATA_ONLY_JSON = (rel) => !rel.startsWith('data/') || rel.endsWith('.json');
 
 function walk(dir, out = [], root = repoRoot) {

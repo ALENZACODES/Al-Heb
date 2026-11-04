@@ -1,28 +1,20 @@
-# ALEF status (lane 8 integration run, round 3, 2026-11-04)
+# ALEF status (lane 8 integration run, round 4, 2026-11-04)
 
-Checked: `node --test` -> 364 pass, 1 transient fail (the precache file-list test, which fails whenever any lane adds a file under src/, assets/ or data/ until `node tools/build-precache.mjs` is re-run; it passed after re-running).
-Browser smoke (`node tools/smoke.mjs`, Chromium, 390x844 @2x, screenshots in `docs/screens/`): no uncaught page errors, offline reload of the app shell succeeded once with the service worker, first-run onboarding persisted voice/tradition/goal.
-Screenshots actually viewed this round: home, welcome (onboarding), workbook. Others (including the three "not available yet" cards) were not viewed.
+Checked this run: `node --test` -> 502 tests, 0 failing at the last run (the precache file-list test fails whenever any lane adds a file under src/, assets/ or data/ until `node tools/build-precache.mjs` is re-run; re-run it last). `node tools/smoke.mjs` (Chromium, 390x844 @2x) exits 0: no uncaught page errors, offline reload of the app shell works once with the service worker, first-run setup persists, lesson -> review flow works.
 
-Routes are data-driven: `src/shell/router.js` ROUTES; routes flagged `optional` are hidden from nav/quick links unless their view file exists
-(`src/shell/views.generated.js`, written by `node tools/build-precache.mjs`; re-run it after adding a view). A direct visit to a missing view shows the "not available yet" card.
+## Routes
+Data-driven in `src/shell/router.js`. New this round (lane 1 sub-screens; they re-use `curriculum/learn.view.js` by injecting its query, so `#/learn?loanwords=1` etc. still work):
+`#/loanwords`, `#/loanwords/:group`, `#/spotit/:letter`, `#/checkpoint`, `#/dialogues`, `#/dialogues/:id`. They are not in the nav bar (full already; Learn stays highlighted); Home has a "More ways to learn" card with Words you can read, Look-alike check, Israel dialogues. Spot It is linked from lessons (it needs a letter). `#/letters/atlas`, `#/soundgap`, `#/vocab` mount and have Home tiles (their view files now exist).
 
-| Route | Result | Notes |
-|---|---|---|
-| `#/` | real content (lane 8) | draft-opening placeholder, today's lesson from lane 1 ("Shin and Bet..."), quick links |
-| `#/learn` | lane 1 view mounted | `?lesson=` query from home is NOT read by lane 1's view (not verified) |
-| `#/letters`, `#/letters/alef` | lane 2 view mounted | view ignores `ctx.params.id` (always opens alef), so QR deep links do not select a letter yet: lane 2 must read `ctx.params.id` |
-| `#/sounds` | lane 3 view mounted | |
-| `#/read`, `#/read/<textId>` | lane 5 view mounted | reads `ctx.params.textId` |
-| `#/scan` | lane 6 view mounted | no OCR engine wired (mock only) |
-| `#/calendar` | lane 1 view mounted | |
-| `#/workbook` | real content (lane 8) | lists the 4 PDFs from assets/workbook/manifest.json with print instructions; PDFs are not precached (download online); PDF print quality not checked by me |
-| `#/letters/atlas`, `#/soundgap`, `#/vocab` | not available yet | registered, but src/letters/atlas.view.js, src/pronunciation/soundgap.view.js and src/vocab/vocab.view.js do not exist yet; they appear in the Home "Go to" tiles automatically once the file exists and the view list is regenerated |
-| `#/settings`, `#/about` | real content (lane 8) | |
-| `#/nope` | not-found card | |
+## Screenshots actually viewed at 390px (docs/screens/)
+spotit (seeded, tapped and checked), loanwords lw1 (seeded), checkpoint (seeded), dialogues d-cafe, atlas, soundgap, workbook, home. NOT viewed: dialogues list, vocab, about credits (checked only that it mounts), dark mode, desktop width.
+Fixed after viewing: Spot It target line read backwards (RTL container), "(missed)" labels wrapped cells, dialogue lines wrapped mid-sentence, Sound-gap fieldset widened the page to 414px, duplicate workbook labels (the memory-hook PDFs now say so), uneven Home tiles.
 
-Smoke "content" means a view mounted and rendered something without errors; it does not mean the content is correct.
-Visually inspected screenshots: home, settings, learn (earlier), sounds (full page, tiny). Others were not individually reviewed.
+## Open defects that are not lane 8's
+- `src/curriculum/spotit.view.js` (lane 1): after "Check" the result shows the literal text "null" because `result.replaceChildren(..., fooled.length ? el(...) : null, ...)` stringifies null. Filter nulls.
+- Sound gap table is slightly wider than 390px and is clipped by `main{overflow-x:clip}` rather than scrolled; the view should wrap it in `.table-wrap`.
+- Atlas and Sound gap use their own inline CSS with fixed colours; dark mode not checked.
+- `data/audio/manifest.json` is 1.7 MB and is precached (under the 2 MiB cap); consider lazy loading.
 
-Not verified: iOS/Android, install prompt, real recorded audio (none exists; the audio player falls back to speech synthesis),
-screen-reader behaviour, keyboard-only walkthrough, CI workflow on GitHub, Hebrew UI label correctness.
+## Not verified
+iOS/Android, install prompt, screen readers, keyboard-only walkthrough, CI on GitHub, correctness of Hebrew UI labels (all machine-drafted; new labels nav.loanwords/checkpoint/dialogues are drafts), the credits text has not been legally reviewed.

@@ -12,6 +12,16 @@ export function mount(root, ctx) {
       h('p', {}, 'ALEF is an interactive Hebrew course with two goals: reading Torah and prayers aloud with a congregation, and getting around in Israel without sounding like an outsider.'),
       h('p', {}, 'Status: early build. Audio uses your device\'s speech synthesis because no recordings exist yet; Hebrew UI labels and all prayer text await native/clergy review. ', h('a', { href: '#/how' }, 'How this works'), ' lists exactly what is and is not finished.'),
       h('p', {}, 'The software licence has not been chosen yet: until one is added, all rights in ALEF\'s own code and original text are reserved.')),
+    h('section', { class: 'card', id: 'credits', 'aria-labelledby': 'cr-top' }, h('h2', { id: 'cr-top' }, 'Credits & licences'),
+      h('p', { class: 'draft-flag', role: 'note' }, 'Status: everything below is draft and unreviewed. Licence labels are what each source says about itself; they were not checked by a lawyer, and no native speaker, rabbi or educator has reviewed the Hebrew, the pointing, the transliteration or the translations.'),
+      h('p', {}, 'The sections below cover fonts, vocabulary, text sources and software. The vocabulary list needs the attribution in the next section.')),
+    h('section', { class: 'card', 'aria-labelledby': 'cr-vocab' }, h('h2', { id: 'cr-vocab' }, 'Vocabulary data (CC BY-SA 4.0)'),
+      h('p', {}, 'Word ranking derived from the OpenSubtitles-based FrequencyWords lists by Hermit Dave (CC BY-SA 4.0); lemmas, glosses and vocalisation derived from Wiktionary contributors (CC BY-SA 4.0), via Wiktextract/kaikki.org.'),
+      h('p', {}, 'Changes were made: filtering, re-ranking, topic assignment and gloss shortening. The vocabulary data, as distributed with ALEF, is licensed under ', h('a', { href: 'https://creativecommons.org/licenses/by-sa/4.0/', rel: 'noopener' }, 'CC BY-SA 4.0'), '. The pointing comes from Wiktionary headwords and none of it has been proofread (all entries are marked unreviewed). Details: docs/vocab/LICENSES.md in the repository.')),
+    h('section', { class: 'card', 'aria-labelledby': 'cr-sw' }, h('h2', { id: 'cr-sw' }, 'Software and online services'),
+      table('Software and services', ['Name', 'Used for', 'Licence and notes'], [
+        row('Tesseract.js 7.0.0 with the Hebrew trained data from tesseract-ocr/tessdata_fast', 'Reading text from a photo in the Scan screen, inside your browser. The files are about 5 MB and load only when you scan a photo.', 'Apache-2.0'),
+        row('Dicta Nakdan (nakdan.dicta.org.il)', 'Optional, off by default: adds vowel points to text read from a photo. If you turn it on, the recognised text is sent to Dicta\'s servers.', 'Online service by Dicta. ALEF found no published terms of use or rate limit, so permission has not been confirmed. Do not send private text.')])),
     h('section', { class: 'card', 'aria-labelledby': 'cr-fonts' }, h('h2', { id: 'cr-fonts' }, 'Fonts'),
       h('p', {}, 'All fonts are self-hosted and licensed under the SIL Open Font License 1.1.'),
       table('Fonts used', ['Font', 'Used for', 'Copyright holder'], [

@@ -24,3 +24,10 @@ Code (`src/pronunciation/`): `hebrew.js` (parser), `shva.js` (rules), `kamatz-ka
 external changes followed via `subscribe(fn)` / `onChange(fn)` / `addEventListener('change', fn)` if present.
 `ctx.audio.play('vowel', id)` on tap. `ctx.pronunciationData` optionally injects the four JSON files (tests).
 Note: with Node 22 the contract command `node --test tests/` fails ("Cannot find module"); use `node --test tests/*.test.js`.
+
+## Round 2: he fix, sound-gap lab, prayer-word contrast
+- Fixed: `transliterate()` dropped a he whose following vav was a vowel letter (הוּא gave "u", הוֹדוּ gave "odu"). Now hu / hodu; regression tests in `tests/pronunciation.transliterate.test.js`.
+- `data/pronunciation/soundgap.json` (`proofread:false`): eight contrasts (chet/khaf/he, alef/ayin, resh, tsadi, kaf/qof, tet/tav, samekh/sin, vav/bet) with per-tradition notes, plain-English mouth steps and word pairs. Pair kinds: minimal, homophone (same in Israeli), alternation, tradition. `heardIn` lists traditions where the pair is audibly different.
+- `data/pronunciation/prayerwords.json` (`proofread:false`): ten prayer words, Israeli / American synagogue / Ashkenazi respellings with stress.
+- `src/pronunciation/soundgap.view.js`: `mount(root, ctx)`; shows both. Play buttons appear only when `ctx.audio.has('word', 'soundgap-<gap>-<i>-a|b')`; no such audio exists yet.
+- Needs a native speaker: every gloss and pair, pharyngeal chet/ayin, uvular qof, emphatic tet, w-vav, tsadi-as-s, Ashkenazi stress for amen and haolam, all respellings.

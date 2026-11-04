@@ -6,15 +6,28 @@
   "scope": "./",
   "id": "./",
   "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
   "orientation": "any",
   "background_color": "#f6efe0",
   "theme_color": "#1f3a5f",
   "lang": "en",
+  "dir": "ltr",
   "categories": ["education"],
   "icons": [
     { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
     { "src": "assets/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
     { "src": "assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "Lessons", "short_name": "Lessons", "url": "./#/learn", "description": "Open the lesson list" },
+    { "name": "Review cards", "short_name": "Review", "url": "./#/learn?review=1", "description": "Practise the cards that are due" },
+    { "name": "Letters", "short_name": "Letters", "url": "./#/letters", "description": "Trace and look up the letters" }
+  ],
+  "screenshots": [
+    { "src": "assets/screenshots/narrow-home.jpg", "sizes": "390x844", "type": "image/jpeg", "form_factor": "narrow", "label": "Home: today's lesson and reviews" },
+    { "src": "assets/screenshots/narrow-letters.jpg", "sizes": "390x844", "type": "image/jpeg", "form_factor": "narrow", "label": "Letters: stroke-order tracing" },
+    { "src": "assets/screenshots/narrow-learn.jpg", "sizes": "390x844", "type": "image/jpeg", "form_factor": "narrow", "label": "Learn: the lesson list" },
+    { "src": "assets/screenshots/wide-home.jpg", "sizes": "1280x800", "type": "image/jpeg", "form_factor": "wide", "label": "Home on a wide screen" }
   ]
 }

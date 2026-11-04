@@ -1,0 +1,86 @@
+{
+ "when": "2026-11-04T03:45:33.312Z",
+ "lighthouse": "13.6.0",
+ "summary": [
+  {
+   "route": "/",
+   "scores": {
+    "performance": 63,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "failed": [
+    "largest-contentful-paint (0.01)",
+    "total-blocking-time (0.6)",
+    "max-potential-fid (0.77)",
+    "interactive (0.32)",
+    "mainthread-work-breakdown (0)",
+    "unminified-css (0.5)",
+    "unminified-javascript (0.5)",
+    "unused-css-rules (0)",
+    "network-dependency-tree-insight (0)",
+    "render-blocking-insight (0)"
+   ]
+  },
+  {
+   "route": "/learn",
+   "scores": {
+    "performance": 62,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "failed": [
+    "largest-contentful-paint (0)",
+    "total-blocking-time (0.58)",
+    "max-potential-fid (0.24)",
+    "interactive (0.06)",
+    "mainthread-work-breakdown (0)",
+    "unminified-css (0)",
+    "unminified-javascript (0)",
+    "unused-css-rules (0)",
+    "network-dependency-tree-insight (0)",
+    "render-blocking-insight (0)"
+   ]
+  },
+  {
+   "route": "/letters/alef",
+   "scores": {
+    "performance": 74,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "failed": [
+    "largest-contentful-paint (0)",
+    "interactive (0.06)",
+    "total-byte-weight (0.5)",
+    "unminified-css (0)",
+    "unminified-javascript (0)",
+    "unused-css-rules (0)",
+    "network-dependency-tree-insight (0)",
+    "render-blocking-insight (0)"
+   ]
+  },
+  {
+   "route": "/sounds",
+   "scores": {
+    "performance": 75,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "failed": [
+    "largest-contentful-paint (0)",
+    "interactive (0.08)",
+    "label-content-name-mismatch (0)",
+    "unminified-css (0)",
+    "unminified-javascript (0)",
+    "unused-css-rules (0)",
+    "network-dependency-tree-insight (0)",
+    "render-blocking-insight (0)"
+   ]
+  }
+ ]
+}

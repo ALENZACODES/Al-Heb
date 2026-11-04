@@ -8,12 +8,28 @@ import { el, heText, tr, storeGet, storeSet } from '../curriculum/dom.js';
 import { review, due, MS_DAY } from '../curriculum/srs.js';
 import { transliterate } from '../pronunciation/transliterate.js';
 import { loadTier, TIER_BANDS } from './loader.js';
-import { TIER_LABEL, POS_LABEL, VOCAB_CARDS_KEY, filterEntries, addCards, cardId, CARD_PREFIX } from './model.js';
+import { TIER_LABEL, POS_LABEL, VOCAB_CARDS_KEY, filterEntries, stripPoints, addCards, cardId, CARD_PREFIX } from './model.js';
+import { isFunction } from './vocab.js';
 
 const PAGE = 40;          // cards rendered per page
 const ADD_LIMIT = 100;    // words added to reviews per click
 const SESSION = 20;       // cards per review session
 const RATINGS = [[1, 'Again', 'forgot it'], [2, 'Hard', 'got it with effort'], [3, 'Good', 'got it'], [4, 'Easy', 'no effort']];
+const hasTag = (e, t) => Array.isArray(e.tags) && e.tags.includes(t);
+/** Tag filter options: value -> label. 'function' is the closed-class group. */
+export const TAG_FILTERS = [['', 'All kinds of words'], ['prayer', 'Prayer'], ['jewish-life', 'Jewish life'], ['function', 'Function words'], ['biblical', 'Biblical'], ['colloquial', 'Colloquial']];
+export const FN_TOPIC = '__function';
+/** Words that "Add to reviews" in bulk skips: forms of another word and rare senses. A single card's own button still adds them. */
+export const skippedInBulk = (e) => !!e.isForm || hasTag(e, 'rare-sense');
+/** Browse filter beyond model.filterEntries: tag, word forms, and topic (function words have no real topic; they form their own group). */
+export function applyFilters(entries, { tag = '', topic = '', showForms = false, query = '' } = {}) {
+  let out = entries;
+  if (!showForms) out = out.filter((e) => !e.isForm);
+  if (tag) out = out.filter((e) => hasTag(e, tag));
+  if (topic === FN_TOPIC) out = out.filter(isFunction);
+  else if (topic) out = out.filter((e) => !isFunction(e) && e.topic === topic);
+  return filterEntries(out, { query });
+}
 const TRAD = { israeli: 'Israeli', sephardi: 'Sephardi', ashkenazi: 'Ashkenazi' };
 
 export const ATTRIBUTION = 'Word ranking derived from the OpenSubtitles-based FrequencyWords lists by Hermit Dave (CC BY-SA 4.0); lemmas, glosses and vocalisation derived from Wiktionary contributors (CC BY-SA 4.0), via Wiktextract/kaikki.org. Changes were made (filtering, re-ranking, topic assignment, gloss shortening). This vocabulary data is shared under CC BY-SA 4.0.';
@@ -35,6 +51,12 @@ const CSS = `
 .alef-vocab .vc-modes [aria-pressed=true]{background:var(--accent);color:var(--accent-fg)}
 .alef-vocab .vc-modes [aria-pressed=false]{background:transparent;color:var(--accent)}
 .alef-vocab .vc-rate{display:grid;grid-template-columns:repeat(auto-fit,minmax(6rem,1fr));gap:.5rem}
+.alef-vocab .vc-check{display:flex;align-items:center;gap:.5rem;min-block-size:var(--tap,48px)}
+.alef-vocab .vc-check input{inline-size:1.5rem;block-size:1.5rem}
+.alef-vocab .vc-check label{margin:0;font-weight:600}
+.alef-vocab .vc-badge{display:inline-block;border:1px solid currentColor;border-radius:6px;padding:0 .4rem;font-size:.85rem;font-weight:700}
+.alef-vocab .vc-forms{display:flex;flex-wrap:wrap;gap:.25rem .75rem;align-items:baseline}
+.alef-vocab .vc-forms span[lang=he]{font-size:1.2rem}
 .alef-vocab footer{margin-block-start:1.5rem;font-size:.85rem;color:var(--muted,#555)}
 `;
 function injectStyle() {
@@ -115,20 +137,62 @@ export function mount(root, ctx) {
     const tl = translitFor(e, tradition());
     return el('p', { class: 'vc-meta' }, `Transliteration (${TRAD[tradition()]}, approximate): `, tl ? el('i', {}, tl) : '(not available: this word has no vowel points yet)');
   };
-  const metaLine = (e) => el('p', { class: 'vc-meta' }, `${POS_LABEL[e.pos] || e.pos} · ${e.topic} · rank ${e.rank}`);
+  const known = new Map(); // id -> entry, for every tier loaded so far (cross-references)
+  const label = (e) => `${e.pointed || e.lemma} (${e.gloss})`;
+  const metaLine = (e) => {
+    const kind = isFunction(e) ? `function word${e.fn ? ` (${e.fn})` : ''}` : e.topic;
+    const extra = [];
+    if (hasTag(e, 'prayer')) extra.push('prayer');
+    if (hasTag(e, 'jewish-life')) extra.push('Jewish life');
+    if (hasTag(e, 'biblical')) extra.push('biblical');
+    if (hasTag(e, 'colloquial')) extra.push('colloquial');
+    return el('p', { class: 'vc-meta' }, `${POS_LABEL[e.pos] || e.pos} · ${kind} · rank ${e.rank}${extra.length ? ' · ' + extra.join(', ') : ''}`,
+      hasTag(e, 'needs-check') ? ' ' : null, hasTag(e, 'needs-check') ? el('span', { class: 'vc-badge' }, 'needs check') : null);
+  };
+  /** Notes under a card: form-of link, word forms, rare sense / homograph hints, same-spelling cross-references. */
+  const noteLines = (e) => {
+    const out = [];
+    if (e.isForm) {
+      const base = known.get(e.formOf);
+      out.push(el('p', { class: 'vc-meta' }, 'This is a form of another word: ',
+        base ? el('button', { type: 'button', class: 'btn secondary', 'aria-label': `Show the main word ${base.gloss}`, onclick: () => showWord(base) }, label(base)) : '(open "All 5,000 words" to see it).'));
+    }
+    if (Array.isArray(e.forms) && e.forms.length) {
+      out.push(el('div', { class: 'vc-meta' }, el('span', {}, 'Forms (from Wiktionary, may be incomplete): '),
+        el('span', { class: 'vc-forms' }, ...e.forms.filter((f, i, a) => a.findIndex((g) => g.pointed === f.pointed && g.label === f.label) === i).map((f) => el('span', {}, heText(f.pointed || f.he, ''), ` ${f.label}`)))));
+    }
+    if (hasTag(e, 'rare-sense')) out.push(el('p', { class: 'vc-meta' }, 'Rare sense: this spelling is mostly used for a different, more common word.'));
+    else if (hasTag(e, 'homograph')) out.push(el('p', { class: 'vc-meta' }, 'Homograph: shares its spelling with another word; the frequency rank belongs to the spelling, not to this word alone.'));
+    if (Array.isArray(e.sameSpelling) && e.sameSpelling.length) {
+      const seen = e.sameSpelling.map((id) => known.get(id)).filter(Boolean);
+      const missing = e.sameSpelling.length - seen.length;
+      out.push(el('p', { class: 'vc-meta' }, 'Also spelled the same: ', seen.map(label).join('; '),
+        missing ? `${seen.length ? '; ' : ''}${missing} more in other tiers (choose "All 5,000 words")` : '', '.'));
+    }
+    return out;
+  };
+  const showWord = (w) => { sel.tier = 'all'; sel.topic = ''; sel.tag = ''; sel.showForms = true; sel.query = stripPoints(w.lemma); setMode('browse'); };
 
   // ---- browse
-  const sel = { tier: '500', topic: '', query: '' };
+  const sel = { tier: '500', topic: '', tag: '', showForms: false, query: '' };
   let gen = 0;
   async function entriesFor(tierSel) {
     const tiers = tierSel === 'all' ? TIER_BANDS : [Number(tierSel)];
-    return (await Promise.all(tiers.map((t) => load(t)))).flat();
+    const es = (await Promise.all(tiers.map((t) => load(t)))).flat();
+    for (const e of es) known.set(e.id, e);
+    return es;
   }
   function renderBrowse() {
     const my = ++gen;
     const tierSel = el('select', { id: 'vc-tier' }, el('option', { value: 'all' }, 'All 5,000 words'), ...TIER_BANDS.map((t) => el('option', { value: String(t) }, TIER_LABEL[t])));
     tierSel.value = sel.tier;
     const topicSel = el('select', { id: 'vc-topic' }, el('option', { value: '' }, 'All topics'));
+    const tagSel = el('select', { id: 'vc-tag' }, ...TAG_FILTERS.map(([v, l]) => el('option', { value: v }, l)));
+    tagSel.value = sel.tag;
+    const formsBox = el('input', { id: 'vc-forms', type: 'checkbox' });
+    if (sel.showForms) formsBox.setAttribute('checked', '');
+    formsBox.checked = sel.showForms;
+    const heading = el('h2', { class: 'vc-group' });
     const search = el('input', { id: 'vc-search', type: 'search', dir: 'auto', autocomplete: 'off', placeholder: 'שלום or hello' });
     search.value = sel.query;
     const status = el('p', { role: 'status', 'aria-live': 'polite', class: 'muted' }, 'Loading words…');
@@ -139,14 +203,16 @@ export function mount(root, ctx) {
       el('div', { class: 'vc-controls' },
         el('div', {}, el('label', { for: 'vc-tier' }, 'Tier'), tierSel),
         el('div', {}, el('label', { for: 'vc-topic' }, 'Topic'), topicSel),
+        el('div', {}, el('label', { for: 'vc-tag' }, 'Kind of word'), tagSel),
         el('div', {}, el('label', { for: 'vc-search' }, 'Search (Hebrew with or without vowel points, or English)'), search)),
-      status, addRow, list, moreRow);
+      el('div', { class: 'vc-check' }, formsBox, el('label', { for: 'vc-forms' }, 'Show word forms (spellings that are only a form of another word)')),
+      status, addRow, heading, list, moreRow);
     let all = [], matches = [], shown = 0;
 
     const fillTopics = () => {
-      const topics = [...new Set(all.map((e) => e.topic))].sort();
-      topicSel.replaceChildren(el('option', { value: '' }, 'All topics'), ...topics.map((tp) => el('option', { value: tp }, tp)));
-      if (!topics.includes(sel.topic)) sel.topic = '';
+      const topics = [...new Set(all.filter((e) => !isFunction(e)).map((e) => e.topic))].sort();
+      topicSel.replaceChildren(el('option', { value: '' }, 'All topics'), ...topics.map((tp) => el('option', { value: tp }, tp)), el('option', { value: FN_TOPIC }, 'Function words (no topic)'));
+      if (!topics.includes(sel.topic) && sel.topic !== FN_TOPIC) sel.topic = '';
       topicSel.value = sel.topic;
     };
     const cardItem = (e) => {
@@ -154,24 +220,28 @@ export function mount(root, ctx) {
       const add = el('button', { type: 'button', class: 'btn secondary', 'aria-label': inRev ? `${e.gloss}: already in reviews` : `Add ${e.gloss} to reviews`, ...(inRev ? { disabled: true } : {}),
         onclick: async () => { const r = addCards(cards, [e], Date.now()); await saveCards(r.cards); add.setAttribute('disabled', ''); add.textContent = 'In reviews'; add.setAttribute('aria-label', `${e.gloss}: already in reviews`); updateAdd(); } }, inRev ? 'In reviews' : 'Add to reviews');
       return el('li', { class: 'card vc-card', 'data-id': e.id },
-        heWord(e, 'vc-he'), el('p', { tabindex: '-1', class: 'vc-gloss' }, e.gloss), metaLine(e), translitLine(e),
+        heWord(e, 'vc-he'), el('p', { tabindex: '-1', class: 'vc-gloss' }, e.gloss), metaLine(e), ...noteLines(e), translitLine(e),
         el('div', { class: 'row' }, listenButton(e), add));
     };
     const updateAdd = () => {
-      const fresh = matches.filter((e) => !cards[cardId(e)]).length;
+      const eligible = matches.filter((e) => !skippedInBulk(e));
+      const skipped = matches.length - eligible.length;
+      const fresh = eligible.filter((e) => !cards[cardId(e)]).length;
       if (!matches.length) { addRow.replaceChildren(); return; }
       const what = sel.topic || (sel.tier === 'all' ? 'all tiers' : TIER_LABEL[sel.tier]);
       addRow.replaceChildren(
         fresh ? el('button', { type: 'button', class: 'btn', id: 'vc-add-all', onclick: async () => {
-          const r = addCards(cards, matches, Date.now(), ADD_LIMIT); await saveCards(r.cards);
+          const r = addCards(cards, eligible, Date.now(), ADD_LIMIT); await saveCards(r.cards);
           renderRows(true); updateAdd();
-          status.textContent = `Added ${r.added} word${r.added === 1 ? '' : 's'} to your reviews${fresh > r.added ? `; ${fresh - r.added} more can be added with another click` : ''}.`; } }, `Add ${Math.min(fresh, ADD_LIMIT)} of these ${matches.length} words to reviews`)
+          status.textContent = `Added ${r.added} word${r.added === 1 ? '' : 's'} to your reviews${fresh > r.added ? `; ${fresh - r.added} more can be added with another click` : ''}.`; } }, `Add ${Math.min(fresh, ADD_LIMIT)} of these ${eligible.length} words to reviews`)
           : el('p', { class: 'muted' }, 'All of these words are already in your reviews.'),
-        el('span', { class: 'muted' }, `(${what}${sel.query ? ', matching your search' : ''})`));
+        el('span', { class: 'muted' }, `(${what}${sel.query ? ', matching your search' : ''})`),
+        skipped ? el('p', { class: 'muted' }, `${skipped} word form${skipped === 1 ? '' : 's'} and rare-sense word${skipped === 1 ? '' : 's'} in this list are skipped here; use a card's own button to add one.`) : null);
     };
     const renderRows = (keep) => {
       const n = keep ? Math.max(shown, PAGE) : PAGE;
       shown = Math.min(n, matches.length);
+      heading.textContent = sel.topic === FN_TOPIC || sel.tag === 'function' ? 'Function words (closed class; topic does not apply)' : '';
       list.replaceChildren(...matches.slice(0, shown).map(cardItem));
       status.textContent = matches.length ? `Showing ${shown} of ${matches.length} word${matches.length === 1 ? '' : 's'}.` : 'No words match. Try fewer letters, or another tier or topic.';
       moreRow.replaceChildren(shown < matches.length ? el('button', { type: 'button', class: 'btn secondary', id: 'vc-more', onclick: () => {
@@ -182,7 +252,7 @@ export function mount(root, ctx) {
         focusNode(list.children?.[from]?.querySelector?.('.vc-gloss'));
       } }, `Show ${Math.min(PAGE, matches.length - shown)} more`) : null);
     };
-    const refilter = () => { matches = filterEntries(all, { topic: sel.topic, query: sel.query }); renderRows(false); updateAdd(); };
+    const refilter = () => { matches = applyFilters(all, sel); renderRows(false); updateAdd(); };
     const reload = async () => {
       const id = ++gen; status.textContent = 'Loading words…'; list.replaceChildren(); moreRow.replaceChildren(); addRow.replaceChildren();
       try { all = await entriesFor(sel.tier); } catch (err) {
@@ -192,6 +262,8 @@ export function mount(root, ctx) {
       if (!alive || id !== gen) return;
       fillTopics(); refilter();
     };
+    tagSel.addEventListener('change', () => { sel.tag = tagSel.value; refilter(); });
+    formsBox.addEventListener('change', () => { sel.showForms = !!formsBox.checked; refilter(); });
     tierSel.addEventListener('change', () => { sel.tier = tierSel.value; sel.topic = ''; reload(); });
     topicSel.addEventListener('change', () => { sel.topic = topicSel.value; refilter(); });
     search.addEventListener('input', () => { sel.query = search.value; refilter(); });
@@ -213,7 +285,7 @@ export function mount(root, ctx) {
     }
     const queueCards = dueNow().slice(0, SESSION);
     const byTier = {};
-    try { for (const t of new Set(queueCards.map((c) => c.tier))) for (const e of await load(t)) byTier[e.id] = e; }
+    try { for (const t of new Set(queueCards.map((c) => c.tier))) for (const e of await load(t)) { byTier[e.id] = e; known.set(e.id, e); } }
     catch (err) { if (!alive || my !== gen) return; body.replaceChildren(el('p', { role: 'alert' }, `Could not load the word list (${err?.message || err}).`), el('button', { type: 'button', class: 'btn', onclick: renderReview }, 'Try again')); return; }
     if (!alive || my !== gen) return;
     const queue = queueCards.map((c) => c.id).filter((id) => byTier[id.slice(CARD_PREFIX.length)]);
@@ -243,7 +315,7 @@ export function mount(root, ctx) {
   function showAnswer(prompt, reveal) {
     const e = rv.current; rv.revealed = true;
     reveal.remove?.();
-    const answer = el('div', { class: 'vc-answer', 'aria-live': 'polite' }, el('p', { class: 'vc-gloss', tabindex: '-1', id: 'vc-a' }, e.gloss), metaLine(e), translitLine(e), el('div', { class: 'row' }, listenButton(e)));
+    const answer = el('div', { class: 'vc-answer', 'aria-live': 'polite' }, el('p', { class: 'vc-gloss', tabindex: '-1', id: 'vc-a' }, e.gloss), metaLine(e), ...noteLines(e), translitLine(e), el('div', { class: 'row' }, listenButton(e)));
     const rate = el('div', { class: 'vc-rate', role: 'group', 'aria-label': 'How well did you remember it?' },
       ...RATINGS.map(([r, name, hint]) => el('button', { type: 'button', class: 'btn' + (r === 3 ? '' : ' secondary'), 'data-rating': String(r), 'aria-label': `${name} (${r}): ${hint}`, onclick: () => rate_(r) }, `${name} (${r})`)));
     prompt.append(answer); body.append(rate);

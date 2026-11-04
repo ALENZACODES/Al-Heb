@@ -42,15 +42,17 @@ export function pairHeardIn(pair, tradition) {
 const CSS = `
 .alef-soundgap{font:16px/1.5 system-ui,sans-serif;max-width:60rem;margin:0 auto;padding:1rem}
 .alef-soundgap h2,.alef-soundgap h3{margin:1.2em 0 .4em}
-.alef-soundgap fieldset{border:1px solid #888;border-radius:8px;padding:.5rem 1rem}
+.alef-soundgap,.alef-soundgap *{box-sizing:border-box}
+.alef-soundgap fieldset{min-width:0;border:1px solid var(--border,#888);border-radius:8px;padding:.5rem 1rem}
 .alef-soundgap fieldset label{margin-inline-end:1.2rem;white-space:nowrap}
-.alef-soundgap details{border:1px solid #8886;border-radius:8px;padding:.4rem .8rem;margin:.4rem 0}
-.alef-soundgap table{border-collapse:collapse;width:100%}
-.alef-soundgap th,.alef-soundgap td{border-bottom:1px solid #8886;padding:.3rem .5rem;text-align:start;vertical-align:top}
+.alef-soundgap details{border:1px solid var(--border,#888)6;border-radius:8px;padding:.4rem .8rem;margin:.4rem 0}
+.alef-soundgap .table-wrap{overflow-x:auto;max-width:100%}
+.alef-soundgap table{border-collapse:collapse;min-width:30rem;width:100%}
+.alef-soundgap th,.alef-soundgap td{border-bottom:1px solid var(--border,#888)6;padding:.3rem .5rem;text-align:start;vertical-align:top}
 .alef-soundgap .he{font-size:1.5rem;unicode-bidi:isolate}
 .alef-soundgap .badge{font-size:.8rem;border:1px solid currentColor;border-radius:4px;padding:0 .3rem;margin-inline-start:.4rem}
 .alef-soundgap button{font:inherit;cursor:pointer}
-.alef-soundgap button:focus-visible{outline:3px solid #1a5fb4;outline-offset:2px}
+.alef-soundgap button:focus-visible{outline:3px solid var(--focus,#1a5fb4);outline-offset:2px}
 `;
 
 /**
@@ -163,7 +165,7 @@ export function mount(root, ctx = {}) {
         h('p', {}, h('strong', {}, 'English-speaker trap: '), gap.englishTrap),
         noteEl,
         gap.mouth.map((m) => h('div', {}, h('h4', {}, m.for), h('ol', {}, m.steps.map((st) => h('li', {}, st))))),
-        h('table', {}, h('thead', {}, h('tr', {}, ['Word A', 'Word B', 'Contrast'].map((x) => h('th', { scope: 'col' }, x)))), pbody),
+        h('div', { class: 'table-wrap', tabindex: '0', role: 'region', 'aria-label': 'Word pairs (scrolls sideways)' }, h('table', {}, h('thead', {}, h('tr', {}, ['Word A', 'Word B', 'Contrast'].map((x) => h('th', { scope: 'col' }, x)))), pbody)),
         gap.needsNativeSpeaker?.length ? h('p', {}, h('small', {}, 'Needs a native speaker: ', gap.needsNativeSpeaker.join('; '), '.')) : ''));
     });
 
@@ -173,7 +175,7 @@ export function mount(root, ctx = {}) {
     const rows = prayerwords.words.map((w) => h('tr', {},
       h('td', {}, he(w.he), ' ', w.gloss),
       h('td', {}, w.israeli.say), h('td', {}, w.american.say), h('td', {}, w.ashkenazi.say)));
-    wrap.append(h('table', {}, h('thead', {}, h('tr', {}, ['Word', 'Israeli', 'American synagogue', 'Ashkenazi'].map((x) => h('th', { scope: 'col' }, x)))), h('tbody', {}, rows)),
+    wrap.append(h('div', { class: 'table-wrap', tabindex: '0', role: 'region', 'aria-label': 'Prayer words (scrolls sideways)' }, h('table', {}, h('thead', {}, h('tr', {}, ['Word', 'Israeli', 'American synagogue', 'Ashkenazi'].map((x) => h('th', { scope: 'col' }, x)))), h('tbody', {}, rows))),
       h('p', {}, h('small', {}, 'Capitals mark the stressed syllable. These respellings are approximations, not recordings.')));
   };
 

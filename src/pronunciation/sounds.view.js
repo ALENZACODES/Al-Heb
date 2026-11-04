@@ -31,21 +31,21 @@ export async function loadPronunciationData(fetchImpl = globalThis.fetch) {
 const CSS = `
 .alef-sounds{font:16px/1.5 system-ui,sans-serif;max-width:60rem;margin:0 auto;padding:1rem}
 .alef-sounds h2,.alef-sounds h3{margin:1.2em 0 .4em}
-.alef-sounds fieldset{border:1px solid #888;border-radius:8px;padding:.5rem 1rem}
+.alef-sounds fieldset{border:1px solid var(--border,#888);border-radius:8px;padding:.5rem 1rem}
 .alef-sounds fieldset label{margin-inline-end:1.2rem;white-space:nowrap}
 .alef-sounds .vowel-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:.75rem}
-.alef-sounds .vowel-grid>li{border:1px solid #888;border-radius:8px;padding:.6rem}
+.alef-sounds .vowel-grid>li{border:1px solid var(--border,#888);border-radius:8px;padding:.6rem}
 .alef-sounds .sign{all:unset;cursor:pointer;display:flex;align-items:center;gap:.7rem;border-radius:6px;padding:.2rem .4rem}
-.alef-sounds .sign:focus-visible{outline:3px solid #1a5fb4;outline-offset:2px}
+.alef-sounds .sign:focus-visible{outline:3px solid var(--focus,#1a5fb4);outline-offset:2px}
 .alef-sounds .sign:hover{background:rgba(128,128,128,.15)}
 .alef-sounds .he{font-size:2.2rem;line-height:1.2;unicode-bidi:isolate}
 .alef-sounds .he-small{font-size:1.3rem;unicode-bidi:isolate}
 .alef-sounds .ipa{font-family:"Noto Sans","DejaVu Sans",sans-serif}
 .alef-sounds .badge{font-size:.8rem;border:1px solid currentColor;border-radius:4px;padding:0 .3rem;margin-inline-start:.4rem}
 .alef-sounds table{border-collapse:collapse;width:100%}
-.alef-sounds th,.alef-sounds td{border-bottom:1px solid #8886;padding:.3rem .5rem;text-align:start;vertical-align:top}
+.alef-sounds th,.alef-sounds td{border-bottom:1px solid var(--border,#888)6;padding:.3rem .5rem;text-align:start;vertical-align:top}
 .alef-sounds .current{font-weight:600}
-.alef-sounds details{border:1px solid #8886;border-radius:8px;padding:.4rem .8rem;margin:.4rem 0}
+.alef-sounds details{border:1px solid var(--border,#888)6;border-radius:8px;padding:.4rem .8rem;margin:.4rem 0}
 `;
 
 /**

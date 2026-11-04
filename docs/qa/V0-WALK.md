@@ -10,25 +10,25 @@ Result: PASS = next action within two screens and no errors; WARN = reachable bu
 
 | # | Step | Route at start | Route at end | Next action | Where | Taps | Errors | Result | Screenshot |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | onboarding | `#/welcome` | `#/welcome` | plan card: "Start: Your first 10 minutes" | far down (y=1458) | 6 | 0 | WARN | israeli-01-onboarding.png |
-| 2 | onboarding to first letter | `#/welcome` | `#/firstday` | first quick-check choice | after scrolling (y=908) | 1 | 0 | PASS | israeli-02-onboarding-to-first-letter.png |
-| 3 | first letter | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=908); Next: after scrolling (y=829) | 3 | 0 | PASS | israeli-03-first-letter.png |
-| 4 | second letter | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=882); Next: after scrolling (y=803) | 3 | 0 | PASS | israeli-04-second-letter.png |
-| 5 | first vowel | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=899); Next: after scrolling (y=855) | 2 | 0 | PASS | israeli-05-first-vowel.png |
-| 6 | first syllable | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=872); Next: after scrolling (y=829) | 2 | 0 | PASS | israeli-06-first-syllable.png |
-| 7 | first word | `#/firstday` | `#/firstday` | Next then Finish | check: after scrolling (y=855); Next: after scrolling (y=855) | 1 | 0 | PASS | israeli-07-first-word.png |
+| 1 | onboarding | `#/welcome` | `#/welcome` | plan card: "Start: Your first 10 minutes" | first screen | 6 | 0 | PASS | israeli-01-onboarding.png |
+| 2 | onboarding to first letter | `#/welcome` | `#/firstday` | first quick-check choice | after scrolling (y=793) | 1 | 0 | PASS | israeli-02-onboarding-to-first-letter.png |
+| 3 | first letter | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=793); Next: after scrolling (y=697) | 3 | 0 | PASS | israeli-03-first-letter.png |
+| 4 | second letter | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=767); Next: after scrolling (y=670) | 3 | 0 | PASS | israeli-04-second-letter.png |
+| 5 | first vowel | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=783); Next: after scrolling (y=723) | 2 | 0 | PASS | israeli-05-first-vowel.png |
+| 6 | first syllable | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=757); Next: after scrolling (y=697) | 2 | 0 | PASS | israeli-06-first-syllable.png |
+| 7 | first word | `#/firstday` | `#/firstday` | Next then Finish | check: after scrolling (y=723); Next: after scrolling (y=723) | 1 | 0 | PASS | israeli-07-first-word.png |
 | 8 | after first word (done screen) | `#/firstday` | `#/firstday` | "Continue: <lesson>" link | after scrolling (y=626) | 0 | 0 | PASS | israeli-08-after-first-word-done-screen-.png |
 | 9 | open the lesson it points to | `#/firstday` | `#/learn?lesson=r02` | any button or button-link on the lesson screen | after scrolling (y=660) | 1 | 0 | PASS | israeli-09-open-the-lesson-it-points-to.png |
 | 10 | review cards | `#/learn?lesson=r02` | `#/learn?review=1` | a review answer/continue button | first screen | 2 | 0 | PASS | israeli-10-review-cards.png |
-| 11 | settings | `#/learn?review=1` | `#/settings` | "Download backup" button | far down (y=1927) | 3 | 0 | WARN | israeli-11-settings.png |
-| 12 | backup download | `#/settings` | `#/settings` | "Download backup" | far down (y=1927) | 1 | 0 | WARN | israeli-12-backup-download.png |
-| 13 | restore | `#/settings` | `#/settings` | "Restore from backup file" button | far down (y=1983) | 2 | 0 | WARN | israeli-13-restore.png |
+| 11 | settings | `#/learn?review=1` | `#/settings` | "Download backup" button | first screen | 2 | 0 | PASS | israeli-11-settings.png |
+| 12 | backup download | `#/settings` | `#/settings` | "Download backup" | first screen | 1 | 0 | PASS | israeli-12-backup-download.png |
+| 13 | restore | `#/settings` | `#/settings` | "Restore from backup file" button | first screen | 2 | 0 | PASS | israeli-13-restore.png |
 
-Total taps for the walk: 27. Results: 9 pass, 4 warn, 0 fail.
+Total taps for the walk: 26. Results: 13 pass, 0 warn, 0 fail.
 
 Notes and errors:
 
-- **onboarding** (WARN): first screen shows a "How this works" notice with a "Got it" button (y=146); tapped to dismiss; screens: letters question > synagogue/pronunciation > goal/minutes; next action "Start: Your first 10 minutes" starts 1458px down (more than one screen)
+- **onboarding** (PASS): first screen shows a "How this works" notice with a "Got it" button (y=146); tapped to dismiss; screens: letters question > synagogue/pronunciation > goal/minutes
 - **first letter** (PASS): shows "Step 1 of 5 · about 2 min" / "Your first letter: Shin"
 - **second letter** (PASS): shows "Step 2 of 5 · about 2 min" / "Your second letter: Bet"
 - **first vowel** (PASS): shows "Step 3 of 5 · about 2 min" / "Your first vowel sign: the small T"
@@ -37,33 +37,33 @@ Notes and errors:
 - **after first word (done screen)** (PASS): done screen text starts: "Your first 10 minutes Draft, unreviewed: no Hebrew teacher has checked it and no learner has tried it yet. 5 of 5 wins · budget 10 min (a design target, not mea"; continue link goes to #/learn?lesson=r02
 - **open the lesson it points to** (PASS): lesson screen title "Tav and the dot in Bet: Shabbat", 11 controls, document height 1806px
 - **review cards** (PASS): Learn screen says: "4 reviews due"; review screen "Review": Show answer
-- **settings** (WARN): Settings is inside a collapsed "More" group in the More sheet: one extra tap to expand it before Settings shows; Settings link is at y=612-660, below the visible part of the More sheet (sheet ends at y=611, under the bottom bar): the learner has to scroll inside the sheet to find it; checked radios: voice=f, congregation=israeli, goal=read, script=print, theme=auto; next action "Download backup" starts 1927px down (more than one screen)
-- **backup download** (WARN): next action "Download backup" starts 1927px down (more than one screen); downloaded alef-backup-2026-11-04.json (3301 bytes, 7 top-level keys); no visible confirmation text after the download (status area empty)
-- **restore** (WARN): next action "Restore from backup file" starts 1983px down (more than one screen); preview text: "Preview. Nothing has changed yet. This backup was made on 2026-11-04 and holds 7 saved items. 7 are already identical. Restoring replaces the progress and settings on this device. If you are unsure, press Cancel and down"; after confirm: "Restored 7 saved items from the backup. Reload the page to see everything refreshed."; bad file: "Could not restore: Not valid JSON. Your progress on this device was not changed."
+- **settings** (PASS): checked radios: voice=f, congregation=israeli, goal=read, script=print, theme=auto
+- **backup download** (PASS): downloaded alef-backup-2026-11-04.json (3289 bytes, 7 top-level keys)
+- **restore** (PASS): preview text: "Preview. Nothing has changed yet. This backup was made on 2026-11-04 and holds 7 saved items. 7 are already identical. Restoring replaces the progress and settings on this device. If you are unsure, press Cancel and down"; after confirm: "Restored 7 saved items from the backup. Reload the page to see everything refreshed."; bad file: "Could not restore: Not valid JSON. Your progress on this device was not changed."
 
 ## sephardi
 
 | # | Step | Route at start | Route at end | Next action | Where | Taps | Errors | Result | Screenshot |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | onboarding | `#/welcome` | `#/welcome` | plan card: "Start: Your first 10 minutes" | far down (y=1458) | 6 | 0 | WARN | sephardi-01-onboarding.png |
-| 2 | onboarding to first letter | `#/welcome` | `#/firstday` | first quick-check choice | after scrolling (y=961) | 1 | 0 | PASS | sephardi-02-onboarding-to-first-letter.png |
-| 3 | first letter | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=961); Next: after scrolling (y=882) | 3 | 0 | PASS | sephardi-03-first-letter.png |
-| 4 | second letter | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=935); Next: after scrolling (y=855) | 3 | 0 | PASS | sephardi-04-second-letter.png |
-| 5 | first vowel | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=951); Next: after scrolling (y=908) | 2 | 0 | PASS | sephardi-05-first-vowel.png |
-| 6 | first syllable | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=925); Next: after scrolling (y=882) | 2 | 0 | PASS | sephardi-06-first-syllable.png |
-| 7 | first word | `#/firstday` | `#/firstday` | Next then Finish | check: after scrolling (y=908); Next: after scrolling (y=908) | 1 | 0 | PASS | sephardi-07-first-word.png |
+| 1 | onboarding | `#/welcome` | `#/welcome` | plan card: "Start: Your first 10 minutes" | first screen | 6 | 0 | PASS | sephardi-01-onboarding.png |
+| 2 | onboarding to first letter | `#/welcome` | `#/firstday` | first quick-check choice | after scrolling (y=793) | 1 | 0 | PASS | sephardi-02-onboarding-to-first-letter.png |
+| 3 | first letter | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=793); Next: after scrolling (y=697) | 3 | 0 | PASS | sephardi-03-first-letter.png |
+| 4 | second letter | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=767); Next: after scrolling (y=670) | 3 | 0 | PASS | sephardi-04-second-letter.png |
+| 5 | first vowel | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=783); Next: after scrolling (y=723) | 2 | 0 | PASS | sephardi-05-first-vowel.png |
+| 6 | first syllable | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=757); Next: after scrolling (y=697) | 2 | 0 | PASS | sephardi-06-first-syllable.png |
+| 7 | first word | `#/firstday` | `#/firstday` | Next then Finish | check: after scrolling (y=723); Next: after scrolling (y=723) | 1 | 0 | PASS | sephardi-07-first-word.png |
 | 8 | after first word (done screen) | `#/firstday` | `#/firstday` | "Continue: <lesson>" link | after scrolling (y=626) | 0 | 0 | PASS | sephardi-08-after-first-word-done-screen-.png |
 | 9 | open the lesson it points to | `#/firstday` | `#/learn?lesson=r02` | any button or button-link on the lesson screen | after scrolling (y=660) | 1 | 0 | PASS | sephardi-09-open-the-lesson-it-points-to.png |
 | 10 | review cards | `#/learn?lesson=r02` | `#/learn?review=1` | a review answer/continue button | first screen | 2 | 0 | PASS | sephardi-10-review-cards.png |
-| 11 | settings | `#/learn?review=1` | `#/settings` | "Download backup" button | far down (y=1927) | 3 | 0 | WARN | sephardi-11-settings.png |
-| 12 | backup download | `#/settings` | `#/settings` | "Download backup" | far down (y=1927) | 1 | 0 | WARN | sephardi-12-backup-download.png |
-| 13 | restore | `#/settings` | `#/settings` | "Restore from backup file" button | far down (y=1983) | 2 | 0 | WARN | sephardi-13-restore.png |
+| 11 | settings | `#/learn?review=1` | `#/settings` | "Download backup" button | first screen | 2 | 0 | PASS | sephardi-11-settings.png |
+| 12 | backup download | `#/settings` | `#/settings` | "Download backup" | first screen | 1 | 0 | PASS | sephardi-12-backup-download.png |
+| 13 | restore | `#/settings` | `#/settings` | "Restore from backup file" button | first screen | 2 | 0 | PASS | sephardi-13-restore.png |
 
-Total taps for the walk: 27. Results: 9 pass, 4 warn, 0 fail.
+Total taps for the walk: 26. Results: 13 pass, 0 warn, 0 fail.
 
 Notes and errors:
 
-- **onboarding** (WARN): first screen shows a "How this works" notice with a "Got it" button (y=146); tapped to dismiss; screens: letters question > synagogue/pronunciation > goal/minutes; next action "Start: Your first 10 minutes" starts 1458px down (more than one screen)
+- **onboarding** (PASS): first screen shows a "How this works" notice with a "Got it" button (y=146); tapped to dismiss; screens: letters question > synagogue/pronunciation > goal/minutes
 - **first letter** (PASS): shows "Step 1 of 5 · about 2 min" / "Your first letter: Shin"
 - **second letter** (PASS): shows "Step 2 of 5 · about 2 min" / "Your second letter: Bet"
 - **first vowel** (PASS): shows "Step 3 of 5 · about 2 min" / "Your first vowel sign: the small T"
@@ -72,33 +72,33 @@ Notes and errors:
 - **after first word (done screen)** (PASS): done screen text starts: "Your first 10 minutes Draft, unreviewed: no Hebrew teacher has checked it and no learner has tried it yet. 5 of 5 wins · budget 10 min (a design target, not mea"; continue link goes to #/learn?lesson=r02
 - **open the lesson it points to** (PASS): lesson screen title "Tav and the dot in Bet: Shabbat", 11 controls, document height 1806px
 - **review cards** (PASS): Learn screen says: "4 reviews due"; review screen "Review": Show answer
-- **settings** (WARN): Settings is inside a collapsed "More" group in the More sheet: one extra tap to expand it before Settings shows; Settings link is at y=612-660, below the visible part of the More sheet (sheet ends at y=611, under the bottom bar): the learner has to scroll inside the sheet to find it; checked radios: voice=f, congregation=sephardi, goal=read, script=print, theme=auto; next action "Download backup" starts 1927px down (more than one screen)
-- **backup download** (WARN): next action "Download backup" starts 1927px down (more than one screen); downloaded alef-backup-2026-11-04.json (3302 bytes, 7 top-level keys); no visible confirmation text after the download (status area empty)
-- **restore** (WARN): next action "Restore from backup file" starts 1983px down (more than one screen); preview text: "Preview. Nothing has changed yet. This backup was made on 2026-11-04 and holds 7 saved items. 7 are already identical. Restoring replaces the progress and settings on this device. If you are unsure, press Cancel and down"; after confirm: "Restored 7 saved items from the backup. Reload the page to see everything refreshed."; bad file: "Could not restore: Not valid JSON. Your progress on this device was not changed."
+- **settings** (PASS): checked radios: voice=f, congregation=sephardi, goal=read, script=print, theme=auto
+- **backup download** (PASS): downloaded alef-backup-2026-11-04.json (3302 bytes, 7 top-level keys)
+- **restore** (PASS): preview text: "Preview. Nothing has changed yet. This backup was made on 2026-11-04 and holds 7 saved items. 7 are already identical. Restoring replaces the progress and settings on this device. If you are unsure, press Cancel and down"; after confirm: "Restored 7 saved items from the backup. Reload the page to see everything refreshed."; bad file: "Could not restore: Not valid JSON. Your progress on this device was not changed."
 
 ## ashkenazi
 
 | # | Step | Route at start | Route at end | Next action | Where | Taps | Errors | Result | Screenshot |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | onboarding | `#/welcome` | `#/welcome` | plan card: "Start: Your first 10 minutes" | far down (y=1458) | 6 | 0 | WARN | ashkenazi-01-onboarding.png |
-| 2 | onboarding to first letter | `#/welcome` | `#/firstday` | first quick-check choice | after scrolling (y=961) | 1 | 0 | PASS | ashkenazi-02-onboarding-to-first-letter.png |
-| 3 | first letter | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=961); Next: after scrolling (y=882) | 3 | 0 | PASS | ashkenazi-03-first-letter.png |
-| 4 | second letter | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=935); Next: after scrolling (y=855) | 3 | 0 | PASS | ashkenazi-04-second-letter.png |
-| 5 | first vowel | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=951); Next: after scrolling (y=908) | 2 | 0 | PASS | ashkenazi-05-first-vowel.png |
-| 6 | first syllable | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=925); Next: after scrolling (y=882) | 2 | 0 | PASS | ashkenazi-06-first-syllable.png |
-| 7 | first word | `#/firstday` | `#/firstday` | Next then Finish | check: after scrolling (y=908); Next: after scrolling (y=908) | 1 | 0 | PASS | ashkenazi-07-first-word.png |
+| 1 | onboarding | `#/welcome` | `#/welcome` | plan card: "Start: Your first 10 minutes" | first screen | 6 | 0 | PASS | ashkenazi-01-onboarding.png |
+| 2 | onboarding to first letter | `#/welcome` | `#/firstday` | first quick-check choice | after scrolling (y=793) | 1 | 0 | PASS | ashkenazi-02-onboarding-to-first-letter.png |
+| 3 | first letter | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=793); Next: after scrolling (y=697) | 3 | 0 | PASS | ashkenazi-03-first-letter.png |
+| 4 | second letter | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=767); Next: after scrolling (y=670) | 3 | 0 | PASS | ashkenazi-04-second-letter.png |
+| 5 | first vowel | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=783); Next: after scrolling (y=723) | 2 | 0 | PASS | ashkenazi-05-first-vowel.png |
+| 6 | first syllable | `#/firstday` | `#/firstday` | a quick-check choice then Next | check: after scrolling (y=757); Next: after scrolling (y=697) | 2 | 0 | PASS | ashkenazi-06-first-syllable.png |
+| 7 | first word | `#/firstday` | `#/firstday` | Next then Finish | check: after scrolling (y=723); Next: after scrolling (y=723) | 1 | 0 | PASS | ashkenazi-07-first-word.png |
 | 8 | after first word (done screen) | `#/firstday` | `#/firstday` | "Continue: <lesson>" link | after scrolling (y=626) | 0 | 0 | PASS | ashkenazi-08-after-first-word-done-screen-.png |
 | 9 | open the lesson it points to | `#/firstday` | `#/learn?lesson=r02` | any button or button-link on the lesson screen | after scrolling (y=681) | 1 | 0 | PASS | ashkenazi-09-open-the-lesson-it-points-to.png |
 | 10 | review cards | `#/learn?lesson=r02` | `#/learn?review=1` | a review answer/continue button | first screen | 2 | 0 | PASS | ashkenazi-10-review-cards.png |
-| 11 | settings | `#/learn?review=1` | `#/settings` | "Download backup" button | far down (y=1927) | 3 | 0 | WARN | ashkenazi-11-settings.png |
-| 12 | backup download | `#/settings` | `#/settings` | "Download backup" | far down (y=1927) | 1 | 0 | WARN | ashkenazi-12-backup-download.png |
-| 13 | restore | `#/settings` | `#/settings` | "Restore from backup file" button | far down (y=1983) | 2 | 0 | WARN | ashkenazi-13-restore.png |
+| 11 | settings | `#/learn?review=1` | `#/settings` | "Download backup" button | first screen | 2 | 0 | PASS | ashkenazi-11-settings.png |
+| 12 | backup download | `#/settings` | `#/settings` | "Download backup" | first screen | 1 | 0 | PASS | ashkenazi-12-backup-download.png |
+| 13 | restore | `#/settings` | `#/settings` | "Restore from backup file" button | first screen | 2 | 0 | PASS | ashkenazi-13-restore.png |
 
-Total taps for the walk: 27. Results: 9 pass, 4 warn, 0 fail.
+Total taps for the walk: 26. Results: 13 pass, 0 warn, 0 fail.
 
 Notes and errors:
 
-- **onboarding** (WARN): first screen shows a "How this works" notice with a "Got it" button (y=146); tapped to dismiss; screens: letters question > synagogue/pronunciation > goal/minutes; next action "Start: Your first 10 minutes" starts 1458px down (more than one screen)
+- **onboarding** (PASS): first screen shows a "How this works" notice with a "Got it" button (y=146); tapped to dismiss; screens: letters question > synagogue/pronunciation > goal/minutes
 - **first letter** (PASS): shows "Step 1 of 5 · about 2 min" / "Your first letter: Shin"
 - **second letter** (PASS): shows "Step 2 of 5 · about 2 min" / "Your second letter: Bet"
 - **first vowel** (PASS): shows "Step 3 of 5 · about 2 min" / "Your first vowel sign: the small T"
@@ -107,9 +107,9 @@ Notes and errors:
 - **after first word (done screen)** (PASS): done screen text starts: "Your first 10 minutes Draft, unreviewed: no Hebrew teacher has checked it and no learner has tried it yet. 5 of 5 wins · budget 10 min (a design target, not mea"; continue link goes to #/learn?lesson=r02
 - **open the lesson it points to** (PASS): lesson screen title "Tav and the dot in Bet: Shabbat", 11 controls, document height 1853px
 - **review cards** (PASS): Learn screen says: "4 reviews due"; review screen "Review": Show answer
-- **settings** (WARN): Settings is inside a collapsed "More" group in the More sheet: one extra tap to expand it before Settings shows; Settings link is at y=612-660, below the visible part of the More sheet (sheet ends at y=611, under the bottom bar): the learner has to scroll inside the sheet to find it; checked radios: voice=f, congregation=ashkenazi, goal=read, script=print, theme=auto; next action "Download backup" starts 1927px down (more than one screen)
-- **backup download** (WARN): next action "Download backup" starts 1927px down (more than one screen); downloaded alef-backup-2026-11-04.json (3303 bytes, 7 top-level keys); no visible confirmation text after the download (status area empty)
-- **restore** (WARN): next action "Restore from backup file" starts 1983px down (more than one screen); preview text: "Preview. Nothing has changed yet. This backup was made on 2026-11-04 and holds 7 saved items. 7 are already identical. Restoring replaces the progress and settings on this device. If you are unsure, press Cancel and down"; after confirm: "Restored 7 saved items from the backup. Reload the page to see everything refreshed."; bad file: "Could not restore: Not valid JSON. Your progress on this device was not changed."
+- **settings** (PASS): checked radios: voice=f, congregation=ashkenazi, goal=read, script=print, theme=auto
+- **backup download** (PASS): downloaded alef-backup-2026-11-04.json (3303 bytes, 7 top-level keys)
+- **restore** (PASS): preview text: "Preview. Nothing has changed yet. This backup was made on 2026-11-04 and holds 7 saved items. 7 are already identical. Restoring replaces the progress and settings on this device. If you are unsure, press Cancel and down"; after confirm: "Restored 7 saved items from the backup. Reload the page to see everything refreshed."; bad file: "Could not restore: Not valid JSON. Your progress on this device was not changed."
 
 ## Where the three settings differ
 
@@ -149,34 +149,23 @@ Step sequence and pass/warn/fail pattern identical across settings: yes.
 
 ## Dead ends and confusing screens (observed in this run)
 
-- [israeli] step 1 "onboarding" at `#/welcome` (WARN): first screen shows a "How this works" notice with a "Got it" button (y=146); tapped to dismiss; screens: letters question > synagogue/pronunciation > goal/minutes; next action "Start: Your first 10 minutes" starts 1458px down (more than one screen)
-- [israeli] step 11 "settings" at `#/settings` (WARN): Settings is inside a collapsed "More" group in the More sheet: one extra tap to expand it before Settings shows; Settings link is at y=612-660, below the visible part of the More sheet (sheet ends at y=611, under the bottom bar): the learner has to scroll inside the sheet to find it; checked radios: voice=f, congregation=israeli, goal=read, script=print, theme=auto; next action "Download backup" starts 1927px down (more than one screen)
-- [israeli] step 12 "backup download" at `#/settings` (WARN): next action "Download backup" starts 1927px down (more than one screen); downloaded alef-backup-2026-11-04.json (3301 bytes, 7 top-level keys); no visible confirmation text after the download (status area empty)
-- [israeli] step 13 "restore" at `#/settings` (WARN): next action "Restore from backup file" starts 1983px down (more than one screen); preview text: "Preview. Nothing has changed yet. This backup was made on 2026-11-04 and holds 7 saved items. 7 are already identical. Restoring replaces the progress and settings on this device. If you are unsure, press Cancel and down"; after confirm: "Restored 7 saved items from the backup. Reload the page to see everything refreshed."; bad file: "Could not restore: Not valid JSON. Your progress on this device was not changed."
-- [sephardi] step 1 "onboarding" at `#/welcome` (WARN): first screen shows a "How this works" notice with a "Got it" button (y=146); tapped to dismiss; screens: letters question > synagogue/pronunciation > goal/minutes; next action "Start: Your first 10 minutes" starts 1458px down (more than one screen)
-- [sephardi] step 11 "settings" at `#/settings` (WARN): Settings is inside a collapsed "More" group in the More sheet: one extra tap to expand it before Settings shows; Settings link is at y=612-660, below the visible part of the More sheet (sheet ends at y=611, under the bottom bar): the learner has to scroll inside the sheet to find it; checked radios: voice=f, congregation=sephardi, goal=read, script=print, theme=auto; next action "Download backup" starts 1927px down (more than one screen)
-- [sephardi] step 12 "backup download" at `#/settings` (WARN): next action "Download backup" starts 1927px down (more than one screen); downloaded alef-backup-2026-11-04.json (3302 bytes, 7 top-level keys); no visible confirmation text after the download (status area empty)
-- [sephardi] step 13 "restore" at `#/settings` (WARN): next action "Restore from backup file" starts 1983px down (more than one screen); preview text: "Preview. Nothing has changed yet. This backup was made on 2026-11-04 and holds 7 saved items. 7 are already identical. Restoring replaces the progress and settings on this device. If you are unsure, press Cancel and down"; after confirm: "Restored 7 saved items from the backup. Reload the page to see everything refreshed."; bad file: "Could not restore: Not valid JSON. Your progress on this device was not changed."
-- [ashkenazi] step 1 "onboarding" at `#/welcome` (WARN): first screen shows a "How this works" notice with a "Got it" button (y=146); tapped to dismiss; screens: letters question > synagogue/pronunciation > goal/minutes; next action "Start: Your first 10 minutes" starts 1458px down (more than one screen)
-- [ashkenazi] step 11 "settings" at `#/settings` (WARN): Settings is inside a collapsed "More" group in the More sheet: one extra tap to expand it before Settings shows; Settings link is at y=612-660, below the visible part of the More sheet (sheet ends at y=611, under the bottom bar): the learner has to scroll inside the sheet to find it; checked radios: voice=f, congregation=ashkenazi, goal=read, script=print, theme=auto; next action "Download backup" starts 1927px down (more than one screen)
-- [ashkenazi] step 12 "backup download" at `#/settings` (WARN): next action "Download backup" starts 1927px down (more than one screen); downloaded alef-backup-2026-11-04.json (3303 bytes, 7 top-level keys); no visible confirmation text after the download (status area empty)
-- [ashkenazi] step 13 "restore" at `#/settings` (WARN): next action "Restore from backup file" starts 1983px down (more than one screen); preview text: "Preview. Nothing has changed yet. This backup was made on 2026-11-04 and holds 7 saved items. 7 are already identical. Restoring replaces the progress and settings on this device. If you are unsure, press Cancel and down"; after confirm: "Restored 7 saved items from the backup. Reload the page to see everything refreshed."; bad file: "Could not restore: Not valid JSON. Your progress on this device was not changed."
+None flagged by the script.
 
 ## Per-step screen text (first congregation, truncated)
 
-- onboarding: title "Welcome to ALEF אלף"; controls at end: Your first 10 minutes \| Shin and Bet: your first two letters \| Tav and the dot in Bet: Shabbat \| Lamed, final Mem and Vav: Shalom \| Shabbat Shalom: review \| Meet the Priestly Blessing (listen and spot) \| Yod and the 'ee' vowel \| Review due cards \| Trace letters \| Start: Your first 10 minutes \| Change my starting point \| Change synagogue or pronunciation \| Change minutes a day
-- onboarding to first letter: title "Your first 10 minutes"; controls at end: Hear it \| Trace it \| Why? \|  \| Samekh \| Shin \| Lamed
-- first letter: title "Your first 10 minutes"; controls at end: Hear it \| Trace it \| Why? \|  \| Kaf \| Bet \| Pe
-- second letter: title "Your first 10 minutes"; controls at end: Hear it \| Why? \| בָ \| ב
-- first vowel: title "Your first 10 minutes"; controls at end: Hear it \| Why? \| שָׁ \| בָ
-- first syllable: title "Your first 10 minutes"; controls at end: Hear it \| Why? \| Finish
+- onboarding: title "Welcome to ALEF אלף"; controls at end: Start: Your first 10 minutes \| Your first 10 minutes \| Shin and Bet: your first two letters \| Tav and the dot in Bet: Shabbat \| Lamed, final Mem and Vav: Shalom \| Shabbat Shalom: review \| Meet the Priestly Blessing (listen and spot) \| Yod and the 'ee' vowel \| Review due cards \| Trace letters \| Change my starting point \| Change synagogue or pronunciation \| Change minutes a day
+- onboarding to first letter: title "Your first 10 minutes"; controls at end: Hear it \| Trace it \| Samekh \| Shin \| Lamed \| Why? \| 
+- first letter: title "Your first 10 minutes"; controls at end: Hear it \| Trace it \| Pe \| Kaf \| Bet \| Why? \| 
+- second letter: title "Your first 10 minutes"; controls at end: Hear it \| בָ \| ב \| Why?
+- first vowel: title "Your first 10 minutes"; controls at end: Hear it \| שָׁ \| בָ \| Why?
+- first syllable: title "Your first 10 minutes"; controls at end: Hear it \| Finish \| Why?
 - first word: title "Your first 10 minutes"; controls at end: Continue: Tav and the dot in Bet: Shabbat \| Read shalom today \| Back to Home
 - after first word (done screen): title "Your first 10 minutes"; controls at end: Continue: Tav and the dot in Bet: Shabbat \| Read shalom today \| Back to Home
 - open the lesson it points to: title "Tav and the dot in Bet: Shabbat"; controls at end: ▶ Listen \| Trace \| Why? Remember it: memory hooks \| Optional: Spot It drills \|  \| ▶ Listen \| ▶ Listen \| ▶ Listen \| Start quick check \| Practise these cards \| All lessons
 - review cards: title "Review"; controls at end: Show answer
-- settings: title "Settings"; controls at end: m \| f \| israeli \| sephardi \| ashkenazi \| read \| israel \| both \| on \| on \| print \| cursive \| auto \| light
-- backup download: title "Settings"; controls at end: m \| f \| israeli \| sephardi \| ashkenazi \| read \| israel \| both \| on \| on \| print \| cursive \| auto \| light
-- restore: title "Settings"; controls at end: m \| f \| israeli \| sephardi \| ashkenazi \| read \| israel \| both \| on \| on \| print \| cursive \| auto \| light
+- settings: title "Settings"; controls at end: Download backup \| s-import \| Ask the browser to protect my progress \| m \| f \| israeli \| sephardi \| ashkenazi \| read \| israel \| both \| on \| on \| print
+- backup download: title "Settings"; controls at end: Download backup \| s-import \| Ask the browser to protect my progress \| m \| f \| israeli \| sephardi \| ashkenazi \| read \| israel \| both \| on \| on \| print
+- restore: title "Settings"; controls at end: Download backup \| s-import \| Ask the browser to protect my progress \| m \| f \| israeli \| sephardi \| ashkenazi \| read \| israel \| both \| on \| on \| print
 
 ## Not covered
 

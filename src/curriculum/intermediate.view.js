@@ -18,6 +18,10 @@ import * as A from "./intermediate-adapter.js";
 import { sequenceExercises, fairProduceOptions, createSession, feedbackText, fireFeedback } from "./exercises.session.js";
 import { progressBar, summaryNode } from "./exercises.ui.js";
 import { respell } from "../pronunciation/forTradition.js";
+import { uiEnglish } from "../shell/names.js";
+
+/** English shown to the learner honours the writeGodAsGd setting (display only; grading uses the raw data). */
+const G = (ctx, text) => (typeof text === "string" ? uiEnglish(ctx, text) : text);
 
 export const STORE_KEY = "intermediate.v1";
 export const TYPE_LABEL = {
@@ -54,7 +58,7 @@ function heRow(ctx, lesson, note, he, { audio } = {}) {
   const id = audio?.id ?? (hit ? wordAudioId(lesson.id, hit.n) : null);
   return el("div", { class: "alef-int-he row" }, heText(he, "alef-he alef-word"),
     hit ? el("span", { class: "alef-pron muted", "data-pron": "1" }, pronLine(hit.w, tradition(ctx, lesson))) : null,
-    id ? playBtn(ctx, audio?.kind ?? "word", id, `Listen to ${hit?.w.en || he}`, note, lesson) : null);
+    id ? playBtn(ctx, audio?.kind ?? "word", id, `Listen to ${G(ctx, hit?.w.en || he)}`, note, lesson) : null);
 }
 
 // ------------------------------------------------------------------------------------------------ exercise renderers
@@ -78,7 +82,7 @@ const R = {
   recall(env, ex, finish) {
     const hit = wordFor(env.lesson, ex.he);
     return revealable(env, ex, [el("p", {}, "Say it aloud and think what it means."), heRow(env.ctx, env.lesson, env.note, ex.he)],
-      [el("p", {}, ex.en), hit ? el("p", { class: "muted" }, "Pronounced: " + pronLine(hit.w, tradition(env.ctx, env.lesson))) : null], finish);
+      [el("p", {}, G(env.ctx, ex.en)), hit ? el("p", { class: "muted" }, "Pronounced: " + pronLine(hit.w, tradition(env.ctx, env.lesson))) : null], finish);
   },
   produce(env, ex, finish) {
     const opts = fairProduceOptions(ex);
@@ -91,21 +95,21 @@ const R = {
         out.textContent = ok ? "Correct." : `Not quite. The answer is ${ex.options[ex.answer]}.`;
         finish(ok);
       } }, o.text)));
-    return el("div", {}, el("p", {}, "Which Hebrew means: ", el("strong", {}, ex.en), "?"), group, out);
+    return el("div", {}, el("p", {}, "Which Hebrew means: ", el("strong", {}, G(env.ctx, ex.en)), "?"), group, out);
   },
   match(env, ex, finish) {
     const cols = A.matchColumns(ex, env.seed), chosen = {}; let done = false;
     const out = el("p", { role: "status", "aria-live": "polite" });
     const rows = ex.pairs.map((p) => {
       const btns = cols.right.map((en) => el("button", { type: "button", class: "btn secondary alef-int-opt", "aria-pressed": "false",
-        onclick: () => { if (done) return; chosen[p.he] = en; btns.forEach((b) => b.setAttribute("aria-pressed", String(b.text === en))); } }, en));
+        onclick: () => { if (done) return; chosen[p.he] = en; btns.forEach((b) => b.setAttribute("aria-pressed", String(b.text === G(env.ctx, en)))); } }, G(env.ctx, en)));
       return el("div", { class: "alef-int-match", role: "group", "aria-label": p.he }, heText(p.he, "alef-he alef-word"), el("div", { class: "row" }, ...btns));
     });
     const check = el("button", { type: "button", class: "btn", onclick: () => {
       if (done) return;
       if (Object.keys(chosen).length < ex.pairs.length) { out.textContent = "Match every Hebrew phrase first."; return; }
       done = true; const ok = A.gradeExercise(ex, chosen).correct;
-      out.textContent = ok ? "All matched." : "Not all right. " + ex.pairs.map((p) => `${p.he} = ${p.en}`).join("; ");
+      out.textContent = ok ? "All matched." : "Not all right. " + ex.pairs.map((p) => `${p.he} = ${G(env.ctx, p.en)}`).join("; ");
       finish(ok);
     } }, "Check");
     return el("div", {}, el("p", {}, "Match each Hebrew phrase with its meaning."), ...rows, check, out);
@@ -125,25 +129,25 @@ const R = {
       out.textContent = ok ? "Right order." : `Not quite. The order is: ${ex.he}`;
       finish(ok);
     } }, "Check");
-    return el("div", {}, el("p", {}, "Put the words in order: ", el("strong", {}, ex.en)), el("div", { class: "alef-int-pool row", role: "group", "aria-label": "Words" }, ...poolBtns), line, el("div", { class: "row" }, undo, check), out);
+    return el("div", {}, el("p", {}, "Put the words in order: ", el("strong", {}, G(env.ctx, ex.en))), el("div", { class: "alef-int-pool row", role: "group", "aria-label": "Words" }, ...poolBtns), line, el("div", { class: "row" }, undo, check), out);
   },
   respond(env, ex, finish) {
-    const prompt = ex.prompt ? [heRow(env.ctx, env.lesson, env.note, ex.prompt.he), el("p", { class: "muted" }, ex.prompt.en)] : [];
-    return revealable(env, ex, [el("p", {}, ex.cue), ...prompt, el("p", {}, "Say your reply aloud.")],
-      [heRow(env.ctx, env.lesson, env.note, ex.answer.he), el("p", {}, ex.answer.en)], finish);
+    const prompt = ex.prompt ? [heRow(env.ctx, env.lesson, env.note, ex.prompt.he), el("p", { class: "muted" }, G(env.ctx, ex.prompt.en))] : [];
+    return revealable(env, ex, [el("p", {}, G(env.ctx, ex.cue)), ...prompt, el("p", {}, "Say your reply aloud.")],
+      [heRow(env.ctx, env.lesson, env.note, ex.answer.he), el("p", {}, G(env.ctx, ex.answer.en))], finish);
   },
   gender(env, ex, finish) {
-    return revealable(env, ex, [el("p", {}, "Say both forms aloud: ", el("strong", {}, ex.en), ".")],
+    return revealable(env, ex, [el("p", {}, "Say both forms aloud: ", el("strong", {}, G(env.ctx, ex.en)), ".")],
       [el("p", {}, "Masculine: ", heText(ex.m, "alef-he alef-word")), el("p", {}, "Feminine: ", heText(ex.f, "alef-he alef-word"))], finish);
   },
   dialogue(env, ex, finish) {
-    const lines = ex.lines.map((l) => el("li", { class: "alef-int-dlg" }, el("strong", {}, l.speaker.toUpperCase() + ": "), heText(l.he, "alef-he alef-word"), el("span", { class: "muted" }, " " + l.en)));
-    return revealable(env, ex, [el("p", {}, ex.task), el("p", {}, "Read the dialogue aloud, both parts."), el("ul", { class: "alef-items" }, ...ex.lines.map((l) => el("li", { lang: "he", dir: "rtl" }, l.he)))],
+    const lines = ex.lines.map((l) => el("li", { class: "alef-int-dlg" }, el("strong", {}, l.speaker.toUpperCase() + ": "), heText(l.he, "alef-he alef-word"), el("span", { class: "muted" }, " " + G(env.ctx, l.en))));
+    return revealable(env, ex, [el("p", {}, G(env.ctx, ex.task)), el("p", {}, "Read the dialogue aloud, both parts."), el("ul", { class: "alef-items" }, ...ex.lines.map((l) => el("li", { lang: "he", dir: "rtl" }, l.he)))],
       [el("ul", { class: "alef-items" }, ...lines)], finish);
   },
   fade(env, ex, finish) {
     const r = env.corpus?.get(ex.line), text = r ? lineText(r, ex) : null;
-    return revealable(env, ex, [el("p", {}, "Say this line from memory: ", el("strong", {}, ex.en)),
+    return revealable(env, ex, [el("p", {}, "Say this line from memory: ", el("strong", {}, G(env.ctx, ex.en))),
       el("p", {}, el("a", { class: "btn secondary", href: A.exerciseRoute(ex) }, "Practise with fade-out screen"))],
       [text ? heRow(env.ctx, env.lesson, env.note, text, { audio: { kind: "line", id: lineAudioId(r, ex) } }) : el("p", { class: "muted" }, `(${ex.line}: text not in the corpus build)`)], finish);
   },
@@ -152,17 +156,18 @@ const R = {
     const toks = text.split(/\s+/).flatMap((t) => t.split(/(?<=־)/)).filter(Boolean), out = el("p", { role: "status", "aria-live": "polite" }); let done = false;
     const row = el("div", { class: "alef-int-pool row", role: "group", "aria-label": "Words of the line" }, ...toks.map((t) => el("button", { type: "button", class: "btn secondary alef-int-opt", lang: "he", dir: "rtl",
       onclick: () => { if (done) return; done = true; const ok = A.gradeExercise(ex, t).correct; out.textContent = ok ? "Found it." : `Not quite. The word is ${ex.target}.`; finish(ok); } }, t)));
-    return el("div", {}, el("p", {}, "Find the word that means: ", el("strong", {}, ex.en)), row, out);
+    return el("div", {}, el("p", {}, "Find the word that means: ", el("strong", {}, G(env.ctx, ex.en))), row, out);
   },
   register(env, ex, finish) {
     let done = false; const out = el("p", { role: "status", "aria-live": "polite" });
     const group = el("div", { class: "alef-int-options row", role: "group", "aria-label": "Register" }, ...ex.options.map((o) => el("button", { type: "button", class: "btn secondary alef-int-opt", "data-register": o,
       onclick: () => { if (done) return; done = true; const ok = A.gradeExercise(ex, o).correct; out.textContent = ok ? "Yes." : `Not quite. This is ${ex.answer}.`; finish(ok); } }, o)));
-    return el("div", {}, el("p", {}, "How formal is this phrase? ", el("em", {}, ex.en)), heRow(env.ctx, env.lesson, env.note, ex.he), group, out);
+    return el("div", {}, el("p", {}, "How formal is this phrase? ", el("em", {}, G(env.ctx, ex.en))), heRow(env.ctx, env.lesson, env.note, ex.he), group, out);
   },
 };
-const lineText = (r, ex) => { const ls = r.he.split("\n"); return ls[ex.lineIndex ?? 0] ?? ls[0]; };
-const lineAudioId = (r, ex) => (r.lines > 1 ? `${r.id}-l${(ex.lineIndex ?? 0) + 1}` : r.id);
+/** lineIndex is 1-based in the data (default 1), like the audio line ids. */
+const lineText = (r, ex) => { const ls = r.he.split("\n"); return ls[(ex.lineIndex ?? 1) - 1] ?? ls[0]; };
+const lineAudioId = (r, ex) => (r.lines > 1 ? `${r.id}-l${ex.lineIndex ?? 1}` : r.id);
 
 /** Save the SRS effects of a finished lesson: misses lapse (and create) word cards; fade lines get line cards. */
 export async function applyToSrs(ctx, lesson, results, now = Date.now()) {
@@ -250,12 +255,12 @@ function mountLesson(root, ctx, id) {
       exs.length ? null : el("p", { class: "alef-locked", role: "note" }, "This lesson has no exercises yet, so it cannot be completed."),
       lesson.needsNativeReview ? el("p", { class: "draft-flag alef-needs-review", role: "note" }, REVIEW_FLAG) : null,
       unmet.length ? el("p", { class: "alef-locked", role: "note" }, `Finish ${unmet.map((p) => byId[p]?.title || p).join(", ")} first. You can still look around.`) : null,
-      el("section", { class: "card", "aria-labelledby": "i-goals" }, el("h2", { id: "i-goals" }, "Goals"), el("ul", {}, ...lesson.goals.map((g) => el("li", {}, g)))),
+      el("section", { class: "card", "aria-labelledby": "i-goals" }, el("h2", { id: "i-goals" }, "Goals"), el("ul", {}, ...lesson.goals.map((g) => el("li", {}, G(ctx, g))))),
       el("section", { class: "card", "aria-labelledby": "i-words" }, el("h2", { id: "i-words" }, "Words"),
         el("p", { class: "muted" }, lesson.track === "israel" ? "Pronunciation lines are the Israeli form." : `Pronunciation lines follow your tradition setting (${trad}).`),
         el("ul", { class: "alef-items" }, ...lesson.words.map((w, i) => el("li", { class: "alef-item" }, heText(w.he, "alef-he alef-word"),
-          el("div", { class: "alef-item-body" }, el("span", {}, w.en), el("div", { class: "alef-pron muted", "data-pron": "1" }, pronLine(w, trad))),
-          el("div", { class: "alef-item-actions" }, playBtn(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${w.en}`, note, lesson)))))),
+          el("div", { class: "alef-item-body" }, el("span", {}, G(ctx, w.en)), el("div", { class: "alef-pron muted", "data-pron": "1" }, pronLine(w, trad))),
+          el("div", { class: "alef-item-actions" }, playBtn(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${G(ctx, w.en)}`, note, lesson)))))),
       note,
       el("div", { class: "row alef-actions" }, el("button", { type: "button", class: "btn", id: "alef-int-start", disabled: exs.length ? null : "", onclick: () => { started = true; offKeys(); begin(); show(); } }, mine.done ? "Practise again" : Object.keys(results).length ? "Continue" : "Start exercises"),
         el("a", { class: "btn secondary", href: "#/intermediate" }, "All intermediate lessons")),
@@ -293,7 +298,7 @@ function mountLesson(root, ctx, id) {
         fireFeedback(ctx, !!correct);
         sec.setAttribute("data-result", correct ? "right" : "wrong");
         status.textContent = (retry ? feedbackText(!!correct, { retry: true }) : correct ? "Marked as known." : "Marked to review.") + (r.requeued ? " You will see it once more at the end." : "");
-        why.textContent = whyLine(ex, lesson, trad);
+        why.textContent = uiEnglish(ctx, whyLine(ex, lesson, trad));
         refresh();
         for (const b of [next, undo]) { b.hidden = false; b.removeAttribute?.("hidden"); }
         skip.hidden = true; skip.setAttribute("hidden", "");
@@ -345,4 +350,4 @@ export function mount(root, ctx = {}) {
   const id = ctx.query?.id;
   return id ? mountLesson(root, ctx, id) : mountList(root, ctx);
 }
-export { mountList, mountLesson };
+export { mountList, mountLesson, R as EXERCISE_RENDERERS };

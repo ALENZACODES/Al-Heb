@@ -43,9 +43,9 @@
    "en": "happy",
    "translit": null,
    "pronunciation": {
-    "israeli": "samecha",
-    "sephardi": "samecha",
-    "ashkenazi": "someicha"
+    "israeli": "sameach",
+    "sephardi": "sameach",
+    "ashkenazi": "someiach"
    },
    "source": {
     "file": "data/vocab/words.json",

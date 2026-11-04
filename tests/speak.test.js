@@ -616,7 +616,7 @@ test('shadowing: listen (browser voice, slow option), rate 1-3, stored with rati
   byId(root, 'shadow-listen').click();
   await waitFor(() => /browser's voice/.test(statusText(root)));
   assert.equal(synth.spoken.length, 1);
-  assert.equal(synth.spoken[0].text.trim(), prayerData.prayers.find((p) => p.id === 'torah-barchu').lines[0]);
+  assert.equal(synth.spoken[0].text.trim(), M.spokenPointed(prayerData.prayers.find((p) => p.id === 'torah-barchu').lines[0]), 'the browser voice gets the spoken form of the divine name (Adonai), as the audio manifest does');
   byId(root, 'shadow-slow').click();
   await waitFor(() => synth.spoken.length === 2);
   assert.equal(synth.spoken[1].rate, 0.6);
@@ -766,4 +766,13 @@ test('daily on the Say it screen: "Today\'s five" option, ?daily=1 preselects it
 test('docs: daily card model is documented for the home owner', () => {
   const readme = readFileSync(join(root, 'docs/speak/README.md'), 'utf8');
   assert.match(readme, /loadDailyCardFromStore/); assert.match(readme, /buildDailyCard/);
+});
+test('divine name: a recognizer that wrote what it heard (Adonai) still matches the printed name; the name written out matches too', () => {
+  const line = 'בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ׃';
+  for (const heard of ['ברכו את אדוני המבורך', 'ברכו את יהוה המבורך']) {
+    const r = M.compareLine(line, heard);
+    assert.equal(r.outcome, 'match', heard); assert.equal(r.words[2].word, 'יהוה', 'the stored word is the printed one');
+  }
+  assert.equal(M.compare('לַיהוָה', 'לאדוני').outcome, 'match', 'prefixed form');
+  assert.equal(M.spokenPointed('אֶת יְהוָה'), 'אֶת אֲדֹנָי');
 });

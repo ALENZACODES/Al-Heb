@@ -3,6 +3,7 @@ import { lessons, byId } from "./lessons.js";
 import { el, heText, tr, replaceKeepingFocus } from "./dom.js";
 import { loadContent, vowelEnglish, vowelIpa } from "./content.js";
 import { saveQuickCheck, loadState } from "./actions.js";
+import { due as dueCards } from "./srs.js";
 import { buildChoiceQuestions } from "./exercises.session.js";
 import { mountQuiz, summaryNode } from "./exercises.ui.js";
 import { wordAudioId } from "./progress.js";
@@ -105,9 +106,11 @@ export function mountLesson(root, ctx, lessonId) {
       offQuiz = mountQuiz(quizHost, { questions, ctx, onFinish: async ({ stats, results, ms }) => {
         const { updated } = await saveQuickCheck(ctx, lesson, questions, results);
         if (!alive) return;
+        let dueCount; try { dueCount = dueCards(Object.values((await loadState(ctx)).cards), Date.now()).length; } catch { dueCount = undefined; } // hide "Review now" when nothing is due
+        if (!alive) return;
         const label = (id) => { const q = questions.find((x) => x.id === id); return q ? `${q.promptHe ? q.promptHe + " " : ""}${q.options[q.answerIndex].text}` : id; };
         quizHost.replaceChildren(summaryNode({ title: "Lesson complete", countText: `${stats.right} of ${stats.answered} right first time.`, stats, ms,
-          goodLabels: Object.keys(results).filter((id) => results[id]).map(label), missedLabels: stats.missed.map(label), skippedN: stats.skipped.length, cardsUpdated: updated,
+          goodLabels: Object.keys(results).filter((id) => results[id]).map(label), missedLabels: stats.missed.map(label), skippedN: stats.skipped.length, cardsUpdated: updated, dueCount,
           nextHref: next ? `#/learn?lesson=${next.id}` : "#/learn", nextLabel: next ? "Next lesson" : "All lessons",
           extraLinks: [el("a", { class: "btn secondary", href: `#/learn?lesson=${lesson.id}&review=1` }, "Practise these cards")] }));
         quizHost.querySelector?.("#alef-int-ex")?.focus?.();

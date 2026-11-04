@@ -159,7 +159,7 @@ test('he edge cases: final he is shown or silent, mappiq he always sounds, no vo
   assert.equal(transliterate('תּוֹרָה'), 'torah');
   assert.equal(transliterate('תּוֹרָה', { finalHe: 'silent' }), 'tora');
   assert.equal(transliterate('לָהּ'), 'lah');
-  assert.equal(transliterate('גָּבוֹהַּ'), 'gavoha');
+  assert.equal(transliterate('גָּבוֹהַּ'), 'gavoah'); // furtive patach: the a is read before the mappiq he
   assert.equal(transliterate('הַר'), 'har');
 });
 
@@ -180,4 +180,37 @@ test('shva edge cases', () => {
   assert.equal(transliterate('וּבְנֵי'), 'uvenei');
   assert.equal(transliterate('קוֹלְךָ'), 'kolekha');
   assert.equal(transliterate('מַלְכֵּנוּ'), 'malkenu');
+});
+
+// Furtive patach (patach ganuv): word-final chet / mappiq he + patach is read with the vowel BEFORE the consonant.
+// Convention (ruach, not rucha); same in all three traditions. Ayin keeps the apostrophe form and is unchanged.
+test('furtive patach: final chet and mappiq he put the a before the consonant', () => {
+  const cases = [['רוּחַ', 'ruach'], ['כֹּחַ', 'koach'], ['הִצְלִיחַ', 'hitzliach'], ['הִשְׁתּוֹחֵחַ', 'hishtocheach'], ['שָׁמֵחַ', 'shameach'], ['אֱלוֹהַּ', 'eloah'], ['גָּבֹהַּ', 'gavoah']];
+  for (const [he, want] of cases) {
+    assert.equal(transliterate(he, { tradition: 'israeli' }), want, he);
+    assert.equal(transliterate(he, { tradition: 'sephardi' }), want, he);
+  }
+  assert.equal(transliterate('רוּחַ', { tradition: 'ashkenazi' }), 'ruach');
+  assert.equal(transliterate('שָׁמֵחַ', { tradition: 'ashkenazi' }), 'shomeiach'); // vowels differ, furtive order does not
+  assert.equal(transliterate('רוּחַ', { scheme: 'academic' }), 'ruaẖ');
+  assert.equal(transliterate('לִשְׁמֹעַ'), "lishmo'a");
+  // not furtive: chet with patach that is not word-final, or a final chet after a consonant with no full vowel
+  assert.equal(transliterate('חַם'), 'cham');
+  assert.equal(transliterate('פֶּתַח'), 'petach');
+});
+
+// V0-CONTENT-CHECK X1/X2: kamatz katan forms and the exceptions data file
+test('kamatz katan: קָדְשׁוֹ and וּבְכָל read with o; exceptions.json mirrors the code list', async () => {
+  const { readFileSync } = await import('node:fs');
+  const { KAMATZ_KATAN_FORMS } = await import('../src/pronunciation/kamatz-katan.js');
+  const { respellAll } = await import('../src/pronunciation/forTradition.js');
+  for (const t of ['israeli', 'sephardi', 'ashkenazi']) {
+    assert.equal(respellAll('קָדְשׁוֹ')[t], 'kodsho');
+    assert.equal(respellAll('וּבְכָל')[t], 'uvekhol');
+  }
+  assert.equal(respellAll('מַאֲכָל').israeli, 'ma\'akhal'); // not a כָּל stem
+  const data = JSON.parse(readFileSync(new URL('../data/pronunciation/exceptions.json', import.meta.url), 'utf8'));
+  assert.deepEqual(data.kamatzKatanForms.map((e) => e.he), KAMATZ_KATAN_FORMS.map((e) => e.he));
+  for (const e of [...data.kamatzKatanForms, ...data.candidates]) assert.equal(e.status, 'needs-native-review');
+  assert.ok(data.candidates.every((e) => e.applied === false));
 });

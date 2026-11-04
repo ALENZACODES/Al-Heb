@@ -78,8 +78,8 @@ test('afterPaint defers to a frame then an idle slot', () => {
   assert.deepEqual(log, ['raf', 't', 'idle1500', 'run']);
 });
 
-test('the core manifest and the new module are still precached for offline use', () => {
+test('the audio manifest is on demand and its loader module is still precached for offline use', () => {
   const pre = readFileSync(new URL('../precache-manifest.js', import.meta.url), 'utf8');
-  assert.ok(pre.includes('"data/audio/manifest.json"'));
+  assert.ok(pre.includes('"data/audio/manifest.json"') && pre.indexOf('"data/audio/manifest.json"') > pre.indexOf('ALEF_ON_DEMAND'), 'the audio manifest is listed as on demand (runtime-cached), not installed');
   assert.ok(pre.includes('"src/shell/audio-manifest.js"'));
 });

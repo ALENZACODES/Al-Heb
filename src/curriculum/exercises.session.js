@@ -184,8 +184,9 @@ export function letterDistractors(targetId, letters, confusables, rand, { n = 2,
 // ------------------------------------------------------------------------------------------------ word-meaning distractors
 /** Consonant skeleton: the Hebrew string without niqqud, cantillation and maqaf (U+0591 to U+05C7). */
 export const skeleton = (he) => String(he ?? "").normalize("NFC").replace(/[\u0591-\u05C7]/g, "");
-const toks = (s) => norm(s).replace(/\([^)]*\)/g, " ").replace(/[^\p{L}\p{N}\s]+/gu, " ").split(/\s+/).filter(Boolean);
-const meaningParts = (en) => String(en ?? "").replace(/\([^)]*\)/g, " ").split(/[;,/]/).map((p) => toks(p)).filter((p) => p.length);
+const memo = (f) => { const m = new Map(); return (x) => { let v = m.get(x); if (v === undefined) { v = f(x); m.set(x, v); } return v; }; };
+const toks = memo((s) => norm(s).replace(/\([^)]*\)/g, " ").replace(/[^\p{L}\p{N}\s]+/gu, " ").split(/\s+/).filter(Boolean));
+const meaningParts = memo((en) => String(en ?? "").replace(/\([^)]*\)/g, " ").split(/[;,/]/).map((p) => toks(p)).filter((p) => p.length));
 const hasRun = (hay, needle) => { for (let i = 0; i + needle.length <= hay.length; i++) if (needle.every((w, j) => hay[i + j] === w)) return true; return false; };
 /** True when gloss `g` could also be read as a correct answer for `answer`: shares a whole-word phrase either way, a stem, or is a near duplicate. */
 const STOP = new Set(["a", "an", "the", "to", "of", "in", "is", "he", "she", "it", "who", "and", "my", "our", "your", "you", "we", "they"]);
@@ -204,16 +205,22 @@ export function glossesOverlap(answer, g) {
   return inter / new Set([...a, ...b]).size >= 0.5;
 }
 const wordKey = (w) => `${w.he}|${norm(w.en)}`;
-/** Pool entries from lessons up to the current one. With `order` (ordered lessons) use it; otherwise the pool's own order (lesson order) up to the current lesson's last word. */
+/**
+ * The pool in lesson order plus the cut index of the current lesson: entries before `cut` come from lessons up to and including it.
+ * With `order` (ordered lessons) the position comes from the lesson that first teaches the word; otherwise the pool's own order is
+ * taken to be lesson order (how the lesson page builds it) and the cut is the current lesson's last word.
+ */
 function earlierPool(pool, lesson, order) {
   if (Array.isArray(order) && order.length) {
-    const at = order.findIndex((l) => l.id === lesson.id); if (at < 0) return pool;
-    const ok = new Set(order.slice(0, at + 1).flatMap((l) => l.words.map(wordKey)));
-    return pool.filter((p) => ok.has(wordKey(p)));
+    const first = new Map(); order.forEach((l, i) => l.words.forEach((w) => { if (!first.has(wordKey(w))) first.set(wordKey(w), i); }));
+    const at = order.findIndex((l) => l.id === lesson.id); if (at < 0) return { list: pool, cut: pool.length };
+    const list = pool.map((p, i) => [first.get(wordKey(p)) ?? 1e9, i, p]).sort((x, y) => x[0] - y[0] || x[1] - y[1]);
+    return { list: list.map((x) => x[2]), cut: list.filter((x) => x[0] <= at).length };
   }
   const mine = new Set(lesson.words.map(wordKey)); let last = -1;
-  pool.forEach((p, i) => { if (mine.has(wordKey(p))) last = i; });
-  return last < 0 ? pool : pool.slice(0, last + 1);
+  const seen = new Set(); // a word re-taught later counts at its first appearance
+  pool.forEach((p, i) => { const k = wordKey(p); if (mine.has(k) && !seen.has(k)) { seen.add(k); last = i; } });
+  return { list: pool, cut: last < 0 ? pool.length : last + 1 };
 }
 const MIN_EARLIER = 8;
 
@@ -245,11 +252,14 @@ export function buildChoiceQuestions(lesson, { letters, confusables, consonants,
     const ok = (p) => norm(p.en) !== norm(w.en) && !meaningKeys.has(norm(p.en)) && p.he !== w.he && skeleton(p.he) !== skeleton(w.he) && !glossesOverlap(w.en, p.en);
     const pick = (pool) => {
       const uniq = [];
-      for (const p of shuffled(pool.filter(ok), rand)) if (!uniq.some((u) => norm(u.en) === norm(p.en) || glossesOverlap(u.en, p.en) || skeleton(u.he) === skeleton(p.he))) uniq.push(p);
+      for (const p of shuffled(pool, rand)) if (uniq.length < MIN_EARLIER && ok(p) && !uniq.some((u) => norm(u.en) === norm(p.en) || glossesOverlap(u.en, p.en) || skeleton(u.he) === skeleton(p.he))) uniq.push(p);
       return uniq;
     };
-    const early = pick(earlierPool(wordPool, lesson, order2 || order));
-    const uniq = early.length >= MIN_EARLIER ? early : pick(wordPool);
+    // lessons up to this one; when they give too few usable glosses, reach into the next lessons only as far as needed
+    const { list, cut } = earlierPool(wordPool, lesson, order2 || order);
+    let k = cut, good = 0; for (let i = 0; i < k; i++) if (ok(list[i])) good++;
+    while (good < MIN_EARLIER && k < list.length) { if (ok(list[k])) good++; k++; }
+    const uniq = pick(list.slice(0, k));
     if (uniq.length < optionCount - 1) return;
     const opts = placeOptions([w.en, ...uniq.slice(0, optionCount - 1).map((p) => p.en)], w.en, rand);
     qs.push({ id: `${lesson.id}-q-word-${i + 1}`, kind: "word-meaning", prompt: "What does this mean?", promptHe: w.he,

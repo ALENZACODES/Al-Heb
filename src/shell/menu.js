@@ -37,6 +37,10 @@ export function renderMenu(listEl, { routes, available, current }) {
           h('p', { class: 'menu-desc menu-preview-note' }, h('strong', {}, t(section.labelKey)), ' - ', t(noteKey)),
           h('ul', { class: 'menu-list', 'aria-label': t('nav.preview.section', { s: t(section.labelKey) }) }, ...rowsOf(items)))))));
   }
-  listEl.replaceChildren(...groups);
-  return groups.length;
+  // Settings (backup, restore, voice, tradition) is never behind a collapsed group: it is the first row of the sheet, so More then Settings is two taps.
+  const settingsRoute = routes.find((r) => r.name === 'settings');
+  const quick = settingsRoute && available.has('settings')
+    ? rowsOf([settingsRoute]).map((li) => { li.setAttribute('class', 'nav-quick'); li.setAttribute('data-quick', 'settings'); return li; }) : [];
+  listEl.replaceChildren(...quick, ...groups);
+  return quick.length + groups.length;
 }

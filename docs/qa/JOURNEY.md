@@ -4,6 +4,32 @@
 
 Run: `node tools/qa/journey.mjs` (all three personas, 7 days, about 200 s). `--quick` runs persona A, day 1 only (about 50 s). Output: `docs/qa/journey/journey.json` (every step, with the text the script read) plus the screenshots cited below. Run date 2026-11-04, simulated week Monday 2026-11-09 to Sunday 2026-11-15, Toronto time.
 
+## Fourth pass (2026-11-04): five personas, phone size, v0 tiering in place
+
+Run: `node tools/qa/journey.mjs` (A, B, C, D, E; 7 days, D runs 13), 390x844, scripted emulation as described at the top, not real learners. Output `docs/qa/journey/journey.json`; screenshots kept: `docs/qa/journey/A-d1-plan.jpg`, `docs/qa/journey/B-d1-plan.jpg`, `docs/qa/journey/C-d1-plan.jpg`, `docs/qa/journey/C-d1-review-summary.jpg`. Earlier screenshots cited in the sections above are not in the repository any more and are marked "(screenshot not kept)"; in particular `B-d1-lesson-locked-r13.jpg` was not regenerated because the locked-lesson landing it showed no longer happens (placement now starts B at r01).
+
+Harness changes needed to test the current tree (`tools/qa/journey.mjs`): the first-10-minutes driver was written for the old eight-step flow and stopped after step 1 of the new five-step on-ramp (its quick-check buttons are `.fd-opt`, Next is `#fd-next`); that produced a false "Today keeps recommending Shin" result in a first attempt at this run. The driver now walks all five steps, answering the first option of each check. A backup probe was added: Settings, press the backup button, read the downloaded file.
+
+Observed result per persona (console errors, page errors, failed requests: 0 for all five):
+
+| Persona | First letter | First word | Review cards | Backup | Dead end |
+|---|---|---|---|---|---|
+| A: beginner, Ashkenazi | Pass: first-10 step 1 (Shin), then Bet | Pass: step 5 "you read a real Hebrew word"; ends on "Continue: Tav and the dot in Bet" | Pass: 5 cards reviewed day 1, due cards reviewed on days 2 to 7 (34 cards stored) | Pass: file downloaded, 12 keys, includes curriculum progress and cards | None. Lessons r01 to r08 completed by day 7 |
+| B: placement, Sephardi | Via lessons: placement result names r13 but its start is r01, and B starts r01 (Shin and Bet) | Via lessons only (no first-10 run for this path) | Pass: Today says "Review N due cards first" on days 5 and 7, 20 cards rated each time (46 stored) | Pass: 12 keys with progress and cards | None. r01 to r10 completed; the old locked-r13 landing did not occur |
+| C: Israel goal | Not applicable: the Israel track starts with phrases, not letters | Pass: first-run card "Start: Hello, thanks, sorry" (il01), then il02 to il08 | Pass: cards reviewed days 2 to 7 (51 stored) | Pass: 11 keys with progress and cards | None. 8 lessons by day 7 |
+| D: away 10 days | Pass (day 1 first-10 as A) | Pass (as A) | Pass: day 13 review of 16 cards | Pass: 12 keys | None. Day 13 Home reads "Streak: Paused. Your best streak was 2 days" and offers the next lesson (r04) |
+| E: reads /read only | Not exercised (E never follows the Today card) | Not exercised | Not exercised: 0 cards, no lessons completed | Opens and downloads, but the file has only 4 keys, no curriculum progress or cards, as expected | None on the paths E uses (/read worked every day, 7-day streak from reading) |
+
+Exact defects and observations from this run:
+1. MEDIUM, Today card vs week plan: "Your week" plan and the Today card disagree on 6 of 7 days for A and C, 4 of 6 for B (the plan is one lesson a day; Today moves ahead as soon as a lesson is marked done). Unchanged from the third pass.
+2. LOW, C day 1: the due-cards link led to "Nothing due" (after il01 and again after il02). Cause not investigated.
+3. LOW, headless-only: "No sound: speech-error." in the lesson Listen note and "No sound: the browser voice reported an error." in the sound bar (A, B, C, D). The first-10 "Hear it" says "Sound is not available on this device yet." Headless Chromium has no voices, so this is not verified for a real browser.
+4. Backup probe limit: the confirmation text after pressing the backup button was not captured (the script read the sound bar's status element instead), so only the downloaded file is verified, not the message.
+5. v0 tiering: speak, typing and listen show the "Preview: unreviewed, may change" banner at the top; Home, Learn, Progress, first-10 and Settings are v0 and show none. No dead end seen at either tier.
+6. Quick-check scores are low (0 to 50 percent first try) because the script answers choice questions by position, not by knowledge; not an app result.
+
+Not covered: real audio, microphone, installed PWA, restore from a backup file (only the download was checked), screen readers, a real phone, real learners. Persona E's first letter, first word and review cards were not exercised.
+
 ## What was emulated
 
 | | Onboarding answers | Behaviour |
@@ -25,7 +51,7 @@ Results across the week: console errors, page errors and failed requests: 0 for 
 - What happens: the lesson page says "Locked: finish Nun and final Nun first. You can still look around." The only completion button is disabled. The note names one lesson (the direct prerequisite, itself locked behind r01 to r11) and is not a link. Nothing on the page says how to get unlocked.
 - Then: Home says "Continue: lesson r13" on days 2, 3, 4, 5 and 7 (the card shows its first-run state, with a lesson id instead of a title). Pressing it lands on the same locked page every time. After seven days B had 0 lessons completed and 0 review cards, while the streak had reached 5 days, because time on a locked lesson page counts as engaged time.
 - The Learn list does show "Start" next to r01 (seen in the step log), so a person could escape; nothing points to it.
-- Evidence: `docs/qa/journey/B-d1-lesson-locked-r13.jpg`, `docs/qa/journey/B-d2-today-repeat.jpg`; JSON `personas.B.findings` ids `lesson-locked-dead-end`, `today-repeats`, and steps "learn list after a locked lesson".
+- Evidence: (screenshot not kept), (screenshot not kept); first-run JSON (since overwritten) `personas.B.findings` ids `lesson-locked-dead-end`, `today-repeats`, and steps "learn list after a locked lesson".
 - Human would expect: placement either completes or unlocks the lessons before the placed one, or the Today card names the first available lesson and says why.
 - Caveat: B follows the Today card only, as instructed. The placed lesson (r13) depends on B's scripted answers; a different answer pattern may land on an unlocked lesson (r01 is always unlocked).
 
@@ -34,24 +60,24 @@ Results across the week: console errors, page errors and failed requests: 0 for 
 - Home: "Streak: No streak yet. Finish a lesson or review a card to start one." Stored record: `count 0, todaySeconds 7`. The Progress screen at the same moment says "Today's goal is met: you finished 1 lesson" and, in the sentence before it, "No streak running right now. Any lesson or review card starts one."
 - After the script moved the clock past 300 engaged seconds, Home said "Streak: 1 day and counting. Done for today." (record `todaySeconds 345`).
 - So the copy says a lesson or a card starts a streak; the rule is five engaged minutes on a counted screen. Lessons here take seconds to complete (finding 8), so a learner can do "enough" and be told they have not.
-- Evidence: `docs/qa/journey/A-d1-streak-before-5min.jpg`, `docs/qa/journey/C-d1-streak-before-5min.jpg`; JSON `streak-copy-vs-rule`, `days.1.beforeDwell` and `days.1.afterDwell`.
+- Evidence: (screenshot not kept), (screenshot not kept); JSON `streak-copy-vs-rule`, `days.1.beforeDwell` and `days.1.afterDwell`.
 
 ### 3. HIGH: a short day breaks the streak the app said a review would keep (A, day 4 to 5)
 - Repro: three days with 5+ minutes. Day 4: open Home ("Streak: 3 days. Learn something today to keep it."), tap "4 cards due", rate the 4 cards, leave. Day 5: open Home.
 - Day 5 shows "Streak: No streak yet. Finish a lesson or review a card to start one." The learner did something on four straight days; the best streak (3) is not shown on Home. B on day 7 (after skipping day 6) gets the same line with a best of 5. Progress has a "Count yesterday as a rest day" button, but only for a day you skipped, and Home does not link to it.
-- Evidence: `docs/qa/journey/A-d5-today.jpg`, `docs/qa/journey/B-d7-today.jpg`; JSON `streak-vs-actions` (A), `streak-lost-wording` (A, B). The streak engine's rule (300 s a day) is documented in `src/curriculum/streak.js`; this is the same cause as finding 2 seen a day later.
+- Evidence: (screenshot not kept), (screenshot not kept); JSON `streak-vs-actions` (A), `streak-lost-wording` (A, B). The streak engine's rule (300 s a day) is documented in `src/curriculum/streak.js`; this is the same cause as finding 2 seen a day later.
 - Human would expect: a reviewed day to count as a day, or the card to say "5 minutes needed" before the day ends, and "No streak yet" not to be used for someone who just lost one.
 
 ### 4. HIGH: the last screen of "Your first 10 minutes" has no button (A, C)
 - Repro: onboarding as a beginner, Home, "Continue: your first 10 minutes", press Next through all eight steps.
 - Step 8 of 8 shows "You read 3 Hebrew words" and the honesty note. There is no Next, Home, or lesson button in the page (visible links and buttons in the main area: 0). Only the bottom tab bar remains. The stale "Yes, that one is shalom." from the previous step is still the last line.
 - Home afterwards correctly offers r01, so nothing is lost; the page just ends.
-- Evidence: `docs/qa/journey/A-d1-firstday-done.jpg`, `docs/qa/journey/C-d1-firstday-done.jpg`; JSON `firstday-dead-end`.
+- Evidence: (screenshot not kept), (screenshot not kept); JSON `firstday-dead-end`.
 
 ### 5. MEDIUM: the minutes the learner chose do nothing (A, B, C)
 - Repro: onboarding, pick 10 (or 15) minutes a day, finish. Open Home.
 - The Today card highlights "5 min" for all three personas (saved: 10, 15, 10). The two settings live in different places (`onboarding.v1.minutesPerDay` and `onboarding.v1.dailyGoal`). B then tapped "20 min" on day 2 (stored 20, button pressed) and studied about 339 s: Home said "Streak: 2 days and counting. Done for today." A grep of `src/` finds the daily-goal key read only for the Today card's buttons; the streak engine uses a fixed 300 s (`src/morning/boot.js`).
-- Evidence: `docs/qa/journey/A-d1-today.jpg`, `docs/qa/journey/B-d1-today.jpg`, `docs/qa/journey/C-d1-today.jpg`; JSON `onboarding-minutes-not-carried`, `daily-goal-ignored`.
+- Evidence: (screenshot not kept), (screenshot not kept), (screenshot not kept); JSON `onboarding-minutes-not-carried`, `daily-goal-ignored`.
 
 ### 6. MEDIUM: the "Your week" plan and the Today card disagree from day 2 (A 6 of 7 days, B 5 of 6, C 6 of 7)
 - Repro: finish onboarding, read the week card. Each day press the Today button and finish it.
@@ -61,7 +87,7 @@ Results across the week: console errors, page errors and failed requests: 0 for 
 ### 7. MEDIUM: Israel goal is not asked in onboarding; the first-run card ignores it (C)
 - Repro: onboarding (four screens, no goal question), "Your week" shows read-track lessons only. Home says "Welcome. Start with your first 10 minutes: five letters, two vowels, three real words." The goal is only in Settings (Goal: Israel). After setting it, the first-run Today card is unchanged.
 - C's week plan listed Shin and Bet on day 2; the Today card (after first 10 minutes) said "Hello, thanks, sorry" then "Fillers that make you sound local". The first 10 minutes is Hebrew-letter work for a learner whose goal is speaking.
-- Evidence: `docs/qa/journey/C-d1-plan.jpg`, `docs/qa/journey/C-d1-today.jpg`; JSON `onboarding-never-asks-goal`, `first-run-card-ignores-goal`.
+- Evidence: `docs/qa/journey/C-d1-plan.jpg`, (screenshot not kept); JSON `onboarding-never-asks-goal`, `first-run-card-ignores-goal`.
 
 ### 8. MEDIUM: a lesson is completed with one press and no check (A, B, C)
 - Repro: Home, "Continue: Shin and Bet", scroll, "Mark lesson complete".
@@ -87,7 +113,7 @@ Results across the week: console errors, page errors and failed requests: 0 for 
 
 ## Fix status (second pass, 2026-11-04)
 
-Verified by: unit tests (home, onboarding, placement, firstday, morning, streak, progress: 260 pass) and `node tools/qa/journey.mjs --quick` (persona A, day 1; output kept in `docs/qa/journey/journey.quick-after-fix.json`; `journey.json` is still the full pre-fix run). Persona B/C paths and days 2 to 7 were not re-run; the placement and plan fixes are covered by unit tests only.
+Verified by: unit tests (home, onboarding, placement, firstday, morning, streak, progress: 260 pass) and `node tools/qa/journey.mjs --quick` (persona A, day 1; output kept in `docs/qa/journey/journey.quick-after-fix.json`; `journey.json` was the full pre-fix run at that time; it has since been overwritten by the fourth-pass run below). Persona B/C paths and days 2 to 7 were not re-run; the placement and plan fixes are covered by unit tests only.
 
 | # | Finding | Status | What changed / what remains |
 |---|---|---|---|

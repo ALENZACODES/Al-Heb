@@ -281,7 +281,7 @@
    "id": "r08",
    "track": "read",
    "level": "white",
-   "title": "Tzere: the 'ay' vowel",
+   "title": "Tzere: the 'e' / 'ay' vowel",
    "letters": [],
    "vowels": [
     "tzere"
@@ -346,7 +346,7 @@
    ],
    "prayerLines": [],
    "goals": [
-    "Tell Resh from Dalet (later) by the rounded corner",
+    "Tell Resh by its rounded corner (Dalet, taught in r18, has a sharp corner)",
     "Use medial vs final Mem correctly"
    ],
    "estMinutes": 25,
@@ -385,7 +385,7 @@
    ],
    "prayerLines": [],
    "goals": [
-    "Read Kaf with/without dagesh",
+    "Read Kaf with dagesh (k, as in כִּי) and final Kaf (kh, as in לָךְ)",
     "Preview: a shva at the end of a word is silent"
    ],
    "estMinutes": 25,
@@ -417,7 +417,7 @@
    "prayerLines": [],
    "goals": [
     "Read segol as 'eh'",
-    "Hear the difference between tzere and segol in your tradition"
+    "Compare tzere and segol: the same 'e' in Israeli and Sephardi, different in Ashkenazi (tzere 'ei', segol 'e')"
    ],
    "estMinutes": 20,
    "prerequisites": [
@@ -606,7 +606,7 @@
    ],
    "prayerLines": [],
    "goals": [
-    "Tell Pe with dagesh 'p' from Pe without 'f'"
+    "Tell Pe with dagesh (p, as in פֶּה) from final Pe (f, as in אַף)"
    ],
    "estMinutes": 20,
    "prerequisites": [
@@ -641,8 +641,8 @@
    ],
    "prayerLines": [],
    "goals": [
-    "Produce chet distinctly from kaf and he",
-    "Read a patach under final chet/ayin/he as 'ah' AFTER the consonant"
+    "Produce chet distinctly from kaf",
+    "Read a patach under a final chet (as in רוּחַ) as 'ah' AFTER the consonant; the same rule covers final ayin and he, shown in later lessons"
    ],
    "estMinutes": 25,
    "prerequisites": [
@@ -718,7 +718,7 @@
    ],
    "prayerLines": [],
    "goals": [
-    "Know Ayin is silent in the Ashkenazi/Israeli norm; note the tradition options"
+    "Ayin: silent in Ashkenazi, silent or a glottal stop in Israeli; Sephardi data lists a throat sound [ʕ] but the app's English line says silent"
    ],
    "estMinutes": 20,
    "prerequisites": [
@@ -755,7 +755,7 @@
    ],
    "prayerLines": [],
    "goals": [
-    "Tell Samekh, Sin and Shin apart",
+    "Tell Samekh, Sin and Shin apart by shape and dot (Samekh and Sin both sound 's'; Shin is 'sh')",
     "Place the dot on the left of Sin and on the right of Shin"
    ],
    "estMinutes": 25,
@@ -884,7 +884,7 @@
    ],
    "prayerLines": [],
    "goals": [
-    "Tell Zayin from Vav/Nun-final; Tet from Tav"
+    "Tell Zayin from Vav/Nun-final; Tet from Tav (by shape: Tet and dagesh-Tav sound alike; Ashkenazi Tav without dagesh is 's')"
    ],
    "estMinutes": 20,
    "prerequisites": [
@@ -973,7 +973,7 @@
    ],
    "goals": [
     "Decode and read Numbers 6:25 aloud, 3 times",
-    "Read a dagesh in the middle of a word (doubled letter)"
+    "Read a dagesh in the middle of a word (it marks a doubled letter, but Israeli and Sephardi do not say it doubled)"
    ],
    "estMinutes": 25,
    "prerequisites": [
@@ -1081,7 +1081,7 @@
     "bless-formula-1"
    ],
    "goals": [
-    "Read the six-word formula 'Baruch atah Adonai Eloheinu melech ha'olam' fluently"
+    "Read the six-word formula 'Baruch atah Adonai Eloheinu melech ha'olam' fluently (spelled here in Israeli/Sephardi style; the Ashkenazi setting respells the vowels, e.g. borukh atoh adonoy)"
    ],
    "estMinutes": 25,
    "prerequisites": [
@@ -1299,8 +1299,8 @@
    ],
    "prayerLines": [],
    "goals": [
-    "Know how Adonai / Hashem are read when the Name is written",
-    "Recognise abbreviation marks in a siddur"
+    "Know that the written Name is read aloud as Adonai in prayer",
+    "Recognise abbreviation marks in a siddur (no example word is in this lesson yet)"
    ],
    "estMinutes": 20,
    "prerequisites": [
@@ -1333,7 +1333,7 @@
    ],
    "prayerLines": [],
    "goals": [
-    "Read 10 unpointed familiar words (exploration; not required for synagogue reading)"
+    "Read the unpointed familiar words here (exploration; not required for synagogue reading)"
    ],
    "estMinutes": 20,
    "prerequisites": [
@@ -5782,9 +5782,9 @@
      "en": "to praise",
      "translit": null,
      "pronunciation": {
-      "israeli": "leshabecha",
-      "sephardi": "leshabecha",
-      "ashkenazi": "leshabeicha"
+      "israeli": "leshabeach",
+      "sephardi": "leshabeach",
+      "ashkenazi": "leshabeiach"
      },
      "source": {
       "file": "data/vocab/words.json",
@@ -9018,7 +9018,7 @@
      "en": "to send",
      "translit": null,
      "pronunciation": {
-      "israeli": "lishlocha"
+      "israeli": "lishloach"
      },
      "source": {
       "file": "data/vocab/words.json",
@@ -9030,7 +9030,7 @@
      "en": "sending (m)",
      "translit": null,
      "pronunciation": {
-      "israeli": "sholecha"
+      "israeli": "sholeach"
      },
      "source": {
       "file": "data/vocab/words.json",
@@ -10157,7 +10157,7 @@
      "en": "dessert",
      "translit": null,
      "pronunciation": {
-      "israeli": "kinucha"
+      "israeli": "kinuach"
      },
      "source": {
       "file": "data/vocab/words.json",
@@ -10532,7 +10532,7 @@
      "en": "insurance",
      "translit": null,
      "pronunciation": {
-      "israeli": "bitucha"
+      "israeli": "bituach"
      },
      "source": {
       "file": "data/vocab/words.json",
@@ -10982,7 +10982,7 @@
      "en": "open",
      "translit": null,
      "pronunciation": {
-      "israeli": "patucha"
+      "israeli": "patuach"
      },
      "source": {
       "file": "data/vocab/words.json",
@@ -11269,7 +11269,7 @@
      "en": "to send",
      "translit": null,
      "pronunciation": {
-      "israeli": "lishlocha"
+      "israeli": "lishloach"
      },
      "source": {
       "file": "data/vocab/words.json",
@@ -11982,7 +11982,7 @@
      "en": "wind",
      "translit": null,
      "pronunciation": {
-      "israeli": "rucha"
+      "israeli": "ruach"
      },
      "source": {
       "file": "data/vocab/words.json",
@@ -13944,9 +13944,9 @@
      "en": "happy holiday",
      "translit": null,
      "pronunciation": {
-      "israeli": "chag samecha",
-      "sephardi": "chag samecha",
-      "ashkenazi": "chag someicha"
+      "israeli": "chag sameach",
+      "sephardi": "chag sameach",
+      "ashkenazi": "chag someiach"
      },
      "source": {
       "file": "data/vocab/words.json",
@@ -14287,9 +14287,9 @@
      "en": "happy holiday",
      "translit": null,
      "pronunciation": {
-      "israeli": "chag samecha",
-      "sephardi": "chag samecha",
-      "ashkenazi": "chag someicha"
+      "israeli": "chag sameach",
+      "sephardi": "chag sameach",
+      "ashkenazi": "chag someiach"
      },
      "source": {
       "file": "data/vocab/words.json",
@@ -14642,9 +14642,9 @@
      "en": "happy",
      "translit": null,
      "pronunciation": {
-      "israeli": "samecha",
-      "sephardi": "samecha",
-      "ashkenazi": "someicha"
+      "israeli": "sameach",
+      "sephardi": "sameach",
+      "ashkenazi": "someiach"
      },
      "source": {
       "file": "data/vocab/words.json",
@@ -15950,7 +15950,7 @@
      "en": "in peace",
      "options": [
       "בַּשָּׁלוֹם",
-      "לְשָׁלוֹם",
+      "עֹשֶׂה שָׁלוֹם",
       "שַׁבָּת שָׁלוֹם"
      ],
      "answer": 0
@@ -16466,7 +16466,7 @@
      "en": "client",
      "translit": null,
      "pronunciation": {
-      "israeli": "lakocha"
+      "israeli": "lakoach"
      },
      "source": {
       "file": "data/vocab/words.json",
@@ -17405,7 +17405,7 @@
     {
      "id": "I-38-e13",
      "type": "produce",
-     "en": "what time?",
+     "en": "when?",
      "options": [
       "מָתַי",
       "אֵיפֹה",
@@ -19423,7 +19423,7 @@
      "en": "delivery, shipment",
      "translit": null,
      "pronunciation": {
-      "israeli": "mishlocha"
+      "israeli": "mishloach"
      },
      "source": {
       "file": "data/vocab/words.json",
@@ -19447,7 +19447,7 @@
      "en": "courier",
      "translit": null,
      "pronunciation": {
-      "israeli": "shalicha"
+      "israeli": "shaliach"
      },
      "source": {
       "file": "data/vocab/words.json",
@@ -20844,7 +20844,7 @@
      "en": "can I send?",
      "translit": null,
      "pronunciation": {
-      "israeli": "efshar lishlocha"
+      "israeli": "efshar lishloach"
      },
      "source": {
       "file": "composed",
@@ -20859,7 +20859,7 @@
      "en": "sending (m)",
      "translit": null,
      "pronunciation": {
-      "israeli": "sholecha"
+      "israeli": "sholeach"
      },
      "source": {
       "file": "data/vocab/words.json",
@@ -21101,7 +21101,7 @@
      "en": "happy holiday",
      "translit": null,
      "pronunciation": {
-      "israeli": "chag samecha"
+      "israeli": "chag sameach"
      },
      "source": {
       "file": "data/vocab/words.json",

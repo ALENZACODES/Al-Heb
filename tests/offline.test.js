@@ -17,9 +17,10 @@ const noSleep = async () => {};
 // ---------- precache list ----------
 test("parsePrecacheText: reads version and files without eval; the real manifest parses and lists index.html", () => {
   const r = O.parsePrecacheText(manifestText);
-  assert.match(r.version, /^[0-9a-f]{12}$/); assert.ok(r.files.length > 300); assert.ok(r.files.includes("index.html")); assert.ok(r.files.includes("src/app.js"));
-  assert.deepEqual(O.parsePrecacheText("garbage"), { version: null, files: [] });
-  assert.deepEqual(O.parsePrecacheText('self.ALEF_VERSION = "v";\nself.ALEF_PRECACHE = [\n "a.js",\n 3,\n "b.json"\n];\n'), { version: "v", files: ["a.js", "b.json"] });
+  assert.match(r.version, /^[0-9a-f]{12}$/); assert.ok(r.files.length > 200); assert.ok(r.files.includes("index.html")); assert.ok(r.files.includes("src/app.js"));
+  assert.deepEqual(O.parsePrecacheText("garbage"), { version: null, files: [], onDemand: [] });
+  assert.deepEqual(O.parsePrecacheText('self.ALEF_VERSION = "v";\nself.ALEF_PRECACHE = [\n "a.js",\n 3,\n "b.json"\n];\n'), { version: "v", files: ["a.js", "b.json"], onDemand: [] });
+  assert.deepEqual(O.parsePrecacheText('self.ALEF_PRECACHE = ["a.js"];\nself.ALEF_ON_DEMAND = ["data/vocab/x.json", 7];\n').onDemand, ["data/vocab/x.json"]);
   assert.deepEqual(O.parsePrecacheText('self.ALEF_PRECACHE = [ not json ];').files, []);
 });
 test("loadPrecacheList: HTTP errors throw with the status, success parses", async () => {
@@ -35,6 +36,17 @@ test("every precached file belongs to a known group (none fall into 'other' exce
   for (const t of ["israeli", "sephardi", "ashkenazi"]) for (const g of O.optionalGroups(t)) for (const u of g.urls) assert.ok(exists(u), u);
   assert.match(O.optionalGroups("nonsense")[0].urls[0], /sephardi/);
   for (const u of O.optionalGroups().flatMap((g) => g.urls)) assert.ok(!files.includes(u), "optional file is not already precached: " + u);
+});
+
+test("on-demand files: every one in precache-manifest.js is on disk, none is installed, each lands in a named group (not 'More pages and data'), and groups cover them exactly once", () => {
+  const { files, onDemand } = O.parsePrecacheText(manifestText);
+  assert.ok(onDemand.length > 100, "run node tools/build-precache.mjs");
+  for (const u of onDemand) { assert.ok(exists(u), u); assert.ok(!files.includes(u), "installed and on demand: " + u); }
+  const groups = O.onDemandGroups(onDemand);
+  assert.ok(!groups.some((g) => g.id === "od-other"), "add an ON_DEMAND_GROUPS entry for: " + onDemand.filter((u) => !O.ON_DEMAND_GROUPS.some((g) => g.test.test(u))).slice(0, 5));
+  assert.deepEqual(groups.flatMap((g) => g.urls).sort(), [...onDemand].sort());
+  assert.deepEqual(O.onDemandGroups([]), []);
+  assert.equal(O.onDemandGroups(["data/zzz/new.json"])[0].id, "od-other");
 });
 
 // ---------- cache report ----------
@@ -232,6 +244,21 @@ test("card: lists groups with honest states, optional downloads, version, and st
   assert.match(byId(root, "of-sw").text, /running on this page/); assert.match(byId(root, "of-sw").text, /Version v123/);
   assert.match(byId(root, "of-usage").text, /1\.0 MB of about 1024\.0 MB/);
   assert.match(byId(root, "of-persist").text, /not protected/);
+  unmount();
+});
+test("card: files the manifest lists as ALEF_ON_DEMAND appear under optional downloads and are fetched by Download everything", async () => {
+  const od = ["data/vocab/index.json", "data/vocab/themes/a.json", "data/audio/manifest.json"];
+  const pmOd = pm + `self.ALEF_ON_DEMAND = ${JSON.stringify(od)};\n`;
+  const fetched = []; const map = { "alef-shell-v123": { "index.html": "1", "src/app.js": "22" }, "alef-runtime-v1": {} };
+  const fetch = async (u) => { fetched.push(u); if (u === "precache-manifest.js") return resp(pmOd); map["alef-runtime-v1"][u] = "d"; return resp("d"); };
+  const root = new El("div");
+  const unmount = mount(root, { env: { fetch, caches: fakeCaches(map), navigator: { onLine: true, serviceWorker: { controller: {} } }, localStorage: fakeLS({}) }, settings: { get: () => "israeli" } });
+  await waitFor(() => byId(root, "of-groups"));
+  assert.match(byId(root, "of-extras").text, /Vocabulary data and theme packs: 2 of 2 not saved/); assert.match(byId(root, "of-extras").text, /Audio clip index \(core\): 1 of 1 not saved/);
+  assert.match(byId(root, "of-groups").text, /2 of 4 files are saved/, "on-demand files do not count against the installed list");
+  await byId(root, "of-download").click(); await waitFor(() => /Saved \d+ files/.test(byId(root, "of-status").text));
+  for (const u of od) assert.ok(fetched.includes(u), u);
+  await waitFor(() => /Vocabulary data and theme packs: saved/.test(byId(root, "of-extras").text));
   unmount();
 });
 test("card: uncontrolled page says to reload; browser without service workers says so; unreadable manifest is an alert and the button is disabled", async () => {

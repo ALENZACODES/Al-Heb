@@ -64,7 +64,8 @@ export function mount(root, ctx) {
     const hook = s.kind === 'letter' ? { kind: 'letter', id: s.letter } : s.kind === 'vowel' ? { kind: 'vowel', id: s.vowel } : { kind: 'word', id: `firstday-${s.id}` };
     const row = el('p', { class: 'row' }, listen(hook));
     if (s.kind === 'letter') row.append(' ', el('a', { class: 'btn secondary', href: `#/letters/${s.letter}`, id: 'fd-trace' }, 'Trace it'));
-    nodes.push(row, hearNote());
+    nodes.push(row);
+    const post = [hearNote()]; // below the check, so the check and Next stay within one scroll of the step start
     // memory hooks and explanations stay behind "Why?"
     const why = [];
     if (M) why.push(el('p', {}, M.shape), el('p', {}, M.story), el('p', { class: 'muted small' }, 'A memory hook written for this course: a teaching aid, not history.'));
@@ -72,7 +73,7 @@ export function mount(root, ctx) {
     if (s.kind === 'syllable') why.push(el('p', {}, 'Hebrew reads right to left. Each letter carries the vowel sign under it, so you read the letter and then its sign as one piece.'));
     if (s.kind === 'word') why.push(el('p', {}, 'Bet with no dot inside is the soft sound (v). The dot that makes it b is the next lesson.'), el('p', { class: 'muted small' }, `Pointing and gloss are draft course data; the Latin respelling is rule-generated for ${LABELS[tradition]}.`));
     if (s.kind === 'letter' && ctx?.hasRoute?.('learn') !== false) why.push(el('p', { class: 'fd-spot' }, 'Optional: ', el('a', { class: 'btn secondary', href: `#/learn?spotit=${s.letter}` }, `Spot It: ${L?.name || s.letter}`)));
-    if (why.length) nodes.push(el('details', { class: 'fd-why' }, el('summary', {}, 'Why?'), ...why));
+    if (why.length) post.push(el('details', { class: 'fd-why' }, el('summary', {}, 'Why?'), ...why));
     // the check: at most 2 questions, one at a time; the answer (right or wrong) opens Next
     const qs = stepQuestions(s, lessonQs);
     if (!qs.length) answered = { all: true };
@@ -95,7 +96,7 @@ export function mount(root, ctx) {
       nodes.push(el('p', { class: 'fd-win', role: 'status' }, el('strong', {}, s.win)),
         el('button', { class: 'btn', type: 'button', id: 'fd-next', onclick: () => win(s) }, i + 1 < onramp.steps.length ? 'Next' : 'Finish'));
     }
-    body.replaceChildren(...nodes);
+    body.replaceChildren(...nodes, ...post);
   }
   async function win(s) {
     progress = winStep(progress, onramp, s.id); answered = null;

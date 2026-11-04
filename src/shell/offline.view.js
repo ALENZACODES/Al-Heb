@@ -40,18 +40,18 @@ export function mount(root, ctx) {
   wrap.append(h1, body, status);
   root.append(wrap);
 
-  let alive = true, files = [], version = null, report = null, extraReport = null, health = null, loadError = "", job = null, ac = null, last = null, updState = "idle";
+  let alive = true, files = [], onDemand = [], version = null, report = null, extraReport = null, health = null, loadError = "", job = null, ac = null, last = null, updState = "idle";
   const say = (t) => { status.textContent = t; };
   const tradition = () => { try { return ctx?.settings?.get?.("congregation"); } catch { return undefined; } };
-  const extras = () => O.optionalGroups(tradition());
+  const extras = () => [...O.optionalGroups(tradition()), ...O.onDemandGroups(onDemand)];
   const extraUrls = () => extras().flatMap((g) => g.urls);
   const upd = ctx?.update ?? null;
   const offUpd = upd?.onChange?.((s) => { updState = s; if (alive && !job) render(); });
   if (upd?.state) updState = upd.state();
 
   async function refresh() {
-    try { const l = await O.loadPrecacheList(env.fetch); files = l.files; version = l.version; loadError = ""; }
-    catch (e) { loadError = `Could not read the list of offline files (${e?.message || e}). Open ALEF once while online, then try again.`; files = []; }
+    try { const l = await O.loadPrecacheList(env.fetch); files = l.files; onDemand = l.onDemand || []; version = l.version; loadError = ""; }
+    catch (e) { loadError = `Could not read the list of offline files (${e?.message || e}). Open ALEF once while online, then try again.`; files = []; onDemand = []; }
     report = await O.cacheReport(files, { caches: env.caches });
     extraReport = await O.cacheReport(extraUrls(), { caches: env.caches, measure: false });
     health = await O.storageHealth({ navigator: nav, localStorage: env.localStorage, hasRoute: ctx?.hasRoute });

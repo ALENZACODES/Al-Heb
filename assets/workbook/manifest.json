@@ -252,7 +252,7 @@
     "letters"
    ],
    "pdf": "alef-cursive-words-a4.pdf",
-   "bytes": 647179
+   "bytes": 648741
   },
   {
    "id": "alef-cursive-words-letter",
@@ -279,7 +279,7 @@
     "letters"
    ],
    "pdf": "alef-cursive-words-letter.pdf",
-   "bytes": 648390
+   "bytes": 648283
   },
   {
    "id": "alef-niqqud-a4",
@@ -307,7 +307,7 @@
     "sign"
    ],
    "pdf": "alef-niqqud-a4.pdf",
-   "bytes": 534065
+   "bytes": 533259
   },
   {
    "id": "alef-niqqud-letter",
@@ -335,7 +335,7 @@
     "sign"
    ],
    "pdf": "alef-niqqud-letter.pdf",
-   "bytes": 533188
+   "bytes": 532437
   },
   {
    "id": "alef-readaloud-a4",
@@ -377,7 +377,7 @@
     "cheatsheet"
    ],
    "pdf": "alef-readaloud-a4.pdf",
-   "bytes": 237525
+   "bytes": 238348
   },
   {
    "id": "alef-readaloud-letter",
@@ -419,7 +419,7 @@
     "cheatsheet"
    ],
    "pdf": "alef-readaloud-letter.pdf",
-   "bytes": 236324
+   "bytes": 237143
   },
   {
    "id": "alef-flashcards-a4",
@@ -1540,7 +1540,7 @@
     "readaloud"
    ],
    "pdf": "alef-answer-key-a4.pdf",
-   "bytes": 221749
+   "bytes": 221460
   },
   {
    "id": "alef-answer-key-letter",
@@ -1563,7 +1563,7 @@
     "readaloud"
    ],
    "pdf": "alef-answer-key-letter.pdf",
-   "bytes": 221390
+   "bytes": 221143
   }
  ]
 }

@@ -1,0 +1,15 @@
+{
+  "schema": "alef-pronunciation-exceptions/1",
+  "note": "Exact pointed forms (taamim, dagesh and maqaf ignored) where the rule engine in src/pronunciation/ needs help or where a reading is open. 'applied' entries are used by the engine (kamatzKatanForms mirrors KAMATZ_KATAN_FORMS in src/pronunciation/kamatz-katan.js; a test keeps them equal). 'candidate' entries are NOT applied: they record a possible reading for a native reviewer. Nothing here has been checked by a native speaker.",
+  "source": "docs/review/V0-CONTENT-CHECK.md items X1 to X4",
+  "kamatzKatanForms": [
+    { "he": "קָדְשׁוֹ", "item": "X1", "status": "needs-native-review", "applied": true, "reason": "Lesson r32 teaches this as a kamatz katan example: kamatz reads o and the shva after it is silent, so the respelling is kodsho in every tradition (was kadesho)." }
+  ],
+  "ruleNotes": [
+    { "item": "X2", "he": "וּבְכָל", "status": "needs-native-review", "applied": true, "reason": "Not a per-word exception: kamatzKatanStemStart now accepts conjunctive vav plus one more prefix before a listed stem (כָּל), so וּבְכָל, וּלְכָל, וּמִכָּל respell with o (uvekhol), matching the V'ahavta reading and r32 כָּל = kol. The כָּל stem itself is still unverified (kamatz-katan.js)." }
+  ],
+  "candidates": [
+    { "he": "שְׁמֵהּ", "item": "X3", "status": "needs-native-review", "applied": false, "current": { "israeli": "shemeh", "ashkenazi": "shemeih" }, "candidate": "sh'mei (a reviewer note says the Aramaic phrase is commonly read this way; unverified)", "reason": "Initial shva is vocal by rule B1; whether the Aramaic reading drops it is not rule-derivable." },
+    { "he": "נֶאְדָּר", "item": "X4", "status": "needs-native-review", "applied": false, "current": { "israeli": "nedar", "ashkenazi": "nedor" }, "candidate": "ne'dar (alef closing a syllable written as an apostrophe, as in ya'er)", "reason": "Alef with a silent shva is not a consonant sound in the engine, so it is dropped; whether the learner-facing spelling should show a glottal stop is a style decision for a reviewer." }
+  ]
+}

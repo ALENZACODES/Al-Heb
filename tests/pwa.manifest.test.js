@@ -68,7 +68,7 @@ test('index.html links the manifest, has lang, viewport-fit, a title and a descr
   assert.match(html, /<html lang="en"/); assert.match(html, /viewport-fit=cover/); assert.match(html, /<title>[^<]+<\/title>/); assert.match(html, /<meta name="description"/);
 });
 test('every precache entry exists on disk (one missing file makes cache.addAll reject and the whole SW install fail)', async () => {
-  const src = read('precache-manifest.js'); const list = JSON.parse(src.slice(src.indexOf('['), src.lastIndexOf(']') + 1));
+  const src = read('precache-manifest.js'); const list = JSON.parse(/ALEF_PRECACHE = (\[[\s\S]*?\]);/.exec(src)[1]);
   assert.ok(list.length > 50);
   const missing = list.filter((f) => !existsSync(join(root, f)));
   assert.deepEqual(missing, []);
@@ -77,7 +77,7 @@ test('every precache entry exists on disk (one missing file makes cache.addAll r
   }
 });
 test('everything index.html loads locally is precached (offline first paint)', () => {
-  const src = read('precache-manifest.js'); const list = new Set(JSON.parse(src.slice(src.indexOf('['), src.lastIndexOf(']') + 1)));
+  const src = read('precache-manifest.js'); const list = new Set(JSON.parse(/ALEF_PRECACHE = (\[[\s\S]*?\]);/.exec(src)[1]));
   const refs = [...html.matchAll(/(?:href|src)="([^"#:]+)"/g)].map((m) => m[1]).filter((u) => !u.startsWith('http'));
   for (const u of refs) assert.ok(list.has(u), `${u} is referenced by index.html but not precached (run node tools/build-precache.mjs)`);
 });

@@ -164,6 +164,45 @@ test('ingest --apply on the REAL manifest flips exactly one entry (the clip reco
   assert.equal(after.size, before.size);
 });
 
+test('ingest copies one recording to every lesson-word id with the same text (synthetic WAV, temp root)', { skip: !haveFf, timeout: 60000 }, async () => {
+  const d = tmp('rk-copy-'); const rootDir = path.join(d, 'repo'); fs.mkdirSync(path.join(rootDir, 'data/audio'), { recursive: true });
+  const mk = (id, text, o = {}) => ({ path: `audio/${o.voice || 'm'}/${o.trad || 'sephardi'}/word/${id}.mp3`, voice: o.voice || 'm', tradition: o.trad || 'sephardi', kind: 'word', id, text, status: o.status || 'missing', source: o.status === 'recorded' ? 'human:record-kit' : 'none', group: o.group || 'lesson-word' });
+  const entries = [mk('r04-w1', 'שָׁלוֹם'), mk('r04-w2', 'שָׁלוֹם'), mk('r05-w1', 'שָׁלוֹם'), mk('r05-w2', 'שָׁלוֹם', { status: 'recorded' }), mk('r06-w1', 'אַבָּא'),
+    mk('r07-w1', 'שָׁלוֹם', { voice: 'f' }), mk('r08-w1', 'שָׁלוֹם', { trad: 'ashkenazi' }), mk('shema-1-w1', 'שָׁלוֹם', { group: 'prayer-word' })];
+  fs.writeFileSync(path.join(rootDir, 'data/audio/manifest-words-sephardi.json'), JSON.stringify(entries.filter((e) => e.tradition === 'sephardi')));
+  fs.writeFileSync(path.join(rootDir, 'data/audio/manifest-words-ashkenazi.json'), JSON.stringify(entries.filter((e) => e.tradition === 'ashkenazi')));
+  const w = path.join(d, 'g.wav'); ff(w, 'sine=frequency=220:sample_rate=44100,volume=4');
+  const consent = { version: 'v', donor_ref: 'abc123', volunteer_name: 'Test Reader', required: { age18: true, grant: true, own_voice: true }, ai_clone_consent: false };
+  const zip = path.join(d, 'e.zip');
+  fs.writeFileSync(zip, L.zipStore([{ name: 'audio/m/sephardi/word/r04-w1.wav', data: fs.readFileSync(w) }, { name: 'consent.json', data: JSON.stringify(consent) }]));
+  const copyPaths = ['audio/m/sephardi/word/r04-w2.mp3', 'audio/m/sephardi/word/r05-w1.mp3'];
+  // dry run: lists the copies, writes nothing
+  const dry = await ingest({ input: zip, root: rootDir, work: path.join(d, 'work') });
+  assert.deepEqual(dry.copies.map((c) => c.path), copyPaths); assert.ok(dry.plan.some((p) => /copy of audio\/m\/sephardi\/word\/r04-w1\.mp3/.test(p.action)));
+  assert.ok(!fs.existsSync(path.join(rootDir, 'audio')));
+  // opt-out
+  assert.deepEqual((await ingest({ input: zip, root: rootDir, work: path.join(d, 'work'), copies: false })).copies, []);
+  // apply
+  const r = await ingest({ input: zip, root: rootDir, work: path.join(d, 'work'), apply: true });
+  assert.equal(r.applied, true); assert.deepEqual(r.copies.map((c) => c.path), copyPaths);
+  const orig = fs.readFileSync(path.join(rootDir, 'audio/m/sephardi/word/r04-w1.mp3'));
+  const { checkMp3 } = await import('../tools/tts/post.mjs');
+  for (const cp of copyPaths) {
+    assert.ok(orig.equals(fs.readFileSync(path.join(rootDir, cp))), cp); assert.deepEqual(checkMp3(path.join(rootDir, cp)).problems, []);
+    const meta = JSON.parse(fs.readFileSync(path.join(rootDir, cp + '.meta.json'), 'utf8')); assert.equal(meta.copyOf, 'audio/m/sephardi/word/r04-w1.mp3'); assert.equal(meta.status, 'recorded');
+    assert.ok(!JSON.stringify(meta).includes('Test Reader'));
+  }
+  const man = Object.fromEntries(JSON.parse(fs.readFileSync(path.join(rootDir, 'data/audio/manifest-words-sephardi.json'), 'utf8')).map((e) => [`${e.voice}/${e.id}`, e]));
+  for (const id of ['r04-w1', 'r04-w2', 'r05-w1']) assert.equal(man[`m/${id}`].status, 'recorded');
+  assert.equal(man['m/r04-w2'].copyOf, 'audio/m/sephardi/word/r04-w1.mp3'); assert.equal(man['m/r04-w1'].copyOf, undefined);
+  // untouched: different text, other voice, prayer-word group, already-recorded duplicate, other tradition
+  assert.equal(man['m/r06-w1'].status, 'missing'); assert.equal(man['f/r07-w1'].status, 'missing'); assert.equal(man['m/shema-1-w1'].status, 'missing');
+  assert.equal(man['m/r05-w2'].copyOf, undefined);
+  assert.equal(JSON.parse(fs.readFileSync(path.join(rootDir, 'data/audio/manifest-words-ashkenazi.json'), 'utf8'))[0].status, 'missing');
+  for (const rel of ['r06-w1', 'r05-w2']) assert.ok(!fs.existsSync(path.join(rootDir, `audio/m/sephardi/word/${rel}.mp3`)));
+  assert.ok(!fs.existsSync(path.join(root, 'audio')), 'no audio leaked into the real repo');
+});
+
 // ---- headless browser ----
 const requireC = createRequire(import.meta.url);
 let chromium = null;
@@ -187,5 +226,36 @@ test('headless Chromium with a fake microphone: consent gate, record, resume aft
     const out = path.join(tmp('rk-dl-'), 'x.zip'); await dl.saveAs(out);
     const names = L.zipRead(new Uint8Array(fs.readFileSync(out))).map((f) => f.name);
     assert.deepEqual(names, ['audio/m/sephardi/word/ha3cf2c46.wav', 'manifest.csv', 'consent.json', 'consent.txt']); assert.deepEqual(errs, []);
+  } finally { await browser.close(); }
+});
+
+test('record page: ?tradition=&voice= preselect and lock the choices; the first-100 CSV renders and filters per tradition', { skip: !chromium, timeout: 90000 }, async () => {
+  const { buildHtml } = await import('../tools/record-kit/build.mjs');
+  const csv = L.parseCsv(fs.readFileSync(path.join(root, 'docs/voices/first-100.csv'), 'utf8'));
+  const items = L.normalizeItems(csv, { kind: 'word' });
+  assert.equal(items.length, 200);
+  const html = path.join(tmp('rk-f100-'), 'first100.html'); fs.writeFileSync(html, buildHtml({ bundle: { items } }));
+  const browser = await chromium.launch({ args: ['--use-fake-device-for-media-stream', '--use-fake-ui-for-media-stream'] });
+  try {
+    for (const [t, v] of [['sephardi', 'm'], ['ashkenazi', 'f']]) {
+      const page = await (await browser.newContext({ permissions: ['microphone'] })).newPage();
+      const errs = []; page.on('pageerror', (e) => errs.push(String(e)));
+      await page.goto(`file://${html}?tradition=${t}&voice=${v}`);
+      assert.equal(await page.inputValue('#f-trad'), t); assert.equal(await page.inputValue('#f-voice'), v);
+      assert.equal(await page.isDisabled('#f-trad'), true); assert.equal(await page.isDisabled('#f-voice'), true);
+      assert.match(await page.textContent('#c-url'), /set by the link/);
+      await page.fill('#f-name', 'Test Reader'); for (const k of ['age18', 'grant', 'own_voice']) await page.check('#cb-' + k);
+      await page.click('#b-consent'); await page.waitForSelector('#sc-bundled:not(.hidden)');
+      assert.match(await page.textContent('#sc-bundled'), new RegExp(`100 items for the ${t} tradition, ${v === 'f' ? 'woman' : 'man'} voice`));
+      await page.click('#b-bundle'); await page.waitForSelector('#s-rec:not(.hidden)');
+      const want = csv.filter((r) => r.tradition === t);
+      assert.equal(await page.textContent('#i-he'), want[0].pointed_hebrew);
+      const S = await page.evaluate(() => ({ n: S.items.length, ids: S.items.map((x) => `${x.tradition}/${x.kind}/${x.id}`), voice: S.voice, tradition: S.tradition }));
+      assert.equal(S.n, 100); assert.deepEqual(S.ids, want.map((r) => `${t}/${r.kind}/${r.id}`)); assert.equal(S.voice, v); assert.equal(S.tradition, t);
+      assert.deepEqual(errs, []); await page.context().close();
+    }
+    // an unknown value is ignored with a notice; nothing is locked
+    const p2 = await (await browser.newContext()).newPage(); await p2.goto(`file://${html}?tradition=klingon`);
+    assert.equal(await p2.isDisabled('#f-trad'), false); assert.match(await p2.textContent('#c-url'), /does not offer/);
   } finally { await browser.close(); }
 });

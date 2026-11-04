@@ -5,10 +5,10 @@ Why Cloudflare Pages: docs/ research (competitor analysis, item 39) picks it as 
 ## Limits (read from developers.cloudflare.com/pages/platform/limits and /pages/configuration/build-image on 2026-11-03)
 | Limit | Value | ALEF today (`node tools/deploy/make-dist.mjs`) |
 |---|---|---|
-| Files per site (Free) | 20,000 (paid plans up to 100,000 with `PAGES_WRANGLER_MAJOR_VERSION=4`) | 410 files |
-| Size of one file | 25 MiB | largest is 3.72 MiB (`assets/vendor/_tesseract/tesseract-core-simd-lstm.wasm.js`) |
+| Files per site (Free) | 20,000 (paid plans up to 100,000 with `PAGES_WRANGLER_MAJOR_VERSION=4`) | 720 files (59.74 MiB) |
+| Size of one file | 25 MiB | largest is 8.86 MiB (`assets/workbook/alef-flashcards-letter.pdf`); the largest script is 3.72 MiB (`assets/vendor/_tesseract/tesseract-core-simd-lstm.wasm.js`) |
 | Builds per month (Free) | 500; one build at a time; 20 minute timeout | not applicable yet |
-| `_headers` | 100 rules, 2,000 characters per header | 17 rules, longest header 343 characters |
+| `_headers` | 100 rules, 2,000 characters per header | 18 rules, longest header 343 characters |
 | `_redirects` | 2,000 static + 100 dynamic | no file (see below) |
 | Build image Node.js | default 22.23.4; override with env var `NODE_VERSION` or a `.node-version` file | scripts need Node 18+ |
 Re-open the limits page on deploy day: quotas change. Planned audio (about 14,000 clips) is far under both limits (mp3 clips are small; 14,000 files is under 20,000 only if nothing else grows much: **file count is the limit to watch**, not size).
@@ -24,16 +24,16 @@ The `_headers` merge rules (all matching rules apply, a header named twice is co
 No `_redirects` (the hash router needs no rewrites; with no `404.html` Pages serves `index.html` for unknown paths) and no `wrangler.toml` (a repo-level Wrangler file changes how the dashboard treats the project; add one only if you move to `wrangler pages deploy`).
 
 ## What ships and what does not
-Ships: the precache list (231 files, 6.44 MiB), `sw.js`, `_headers`, the OCR runtime `assets/vendor/` (4.8 MiB, loaded on the first photo), `assets/workbook/` PDFs, `data/vocab/packs/`, the three `data/audio/manifest-words-*.json` shards, the OFL font licence texts, and `audio/` once it exists.
-Does not ship: docs, tests, tools, book, research, `assets/images/` (219 MB of incoming photos), `*.test.js`, `.md` files (except the vendored licences), and `assets/img/` (16.6 MiB of placeholder SVG/WebP that no file in `src/` references; add `--with-img` when the app starts using them).
+Ships: the precache list (527 files, 13.81 MiB, measured 2026-11-04; the first install downloads all of it: data/vocab 5.9 MiB, data/audio manifest 1.8 MiB, data/curriculum 1.1 MiB), `sw.js`, `_headers`, the OCR runtime `assets/vendor/` (4.8 MiB, loaded on the first photo), `assets/workbook/` PDFs (29.5 MiB, not precached), `data/vocab/packs/`, the three `data/audio/manifest-words-*.json` shards, the OFL font licence texts, and `audio/` once it exists.
+Does not ship: docs, tests, tools, book, research, `assets/images/` (219 MB of incoming photos), `*.test.js`, `.md` files (except the vendored licences), and `assets/img/` (about 42 MB on disk of placeholder SVG/WebP that no file in `src/` references; add `--with-img` when the app starts using them).
 
 ## Steps
 Local, before anything else (these can be run locally; **John does** everything from step 3 on).
 1. `node tools/build-precache.mjs` is not needed for Cloudflare (make-dist regenerates the list inside `dist/`), but the committed `precache-manifest.js` is still what local `node tools/serve.mjs` uses.
-2. `node tools/deploy/build_site.mjs && node tools/deploy/check-deploy.mjs`. All checks must say PASS. The warnings about origins named in code are expected (credits and links), except the two in `src/photo/engines/web.js` (see "CSP consequences").
+2. `node tools/deploy/build_site.mjs && node tools/deploy/check-deploy.mjs --root dist`. All checks must say PASS. The warnings about origins named in code are expected (credits and links), except the two in `src/photo/engines/web.js` (see "CSP consequences").
 3. **John does:** create a free Cloudflare account at dash.cloudflare.com (email, 2FA).
 4. **John does:** Workers & Pages, Create, Pages tab, Connect to Git, authorise the Cloudflare GitHub app, and pick **only** the private repository ALENZACODES/Al-Heb (GitHub Settings, Applications, Cloudflare Pages, "Only select repositories"). Private repos are supported by Pages; a push to the repo is not possible from the build sandbox (invalid token), so John pushes from his own machine.
-5. **John does:** build settings: Framework preset `None`; Build command `node tools/deploy/build_site.mjs`; Build output directory `dist`; Root directory empty; Production branch `main` (check the name your repo uses).
+5. **John does:** build settings: Framework preset `None`; Build command `node tools/deploy/build_site.mjs`; Build output directory `dist`; Root directory empty; Production branch: the local checkout is on `master` while `.github/workflows/pages.yml` triggers on `main`; set the dashboard to whichever branch you actually push (the CI `build-dist` job runs on every push either way).
 6. **John does:** Environment variables (Production and Preview): `NODE_VERSION` = `22` (optional; the default is 22.23.4 today).
 7. **John does:** Save and Deploy. Watch the log for the "dist ready" report; if it prints "OVER A CLOUDFLARE PAGES LIMIT" the build fails by design.
 8. **John does:** open `https://<project>.pages.dev` in Chrome on a phone and a desktop and run the after-deploy list below. Note any failure.

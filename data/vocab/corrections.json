@@ -4,7 +4,7 @@
  "note": "Deterministic, safe corrections to data/vocab/words.json, applied by tools/vocab/apply_corrections.mjs. Each entry: id, field, old, new, reason. Judgement calls are NOT here: see docs/vocab/JUDGEMENT.md.",
  "counts": {
   "removed": 2,
-  "translit": 164,
+  "translit": 165,
   "forms": 1,
   "glosses": 20,
   "hidden": 2,
@@ -1854,6 +1854,13 @@
    "old": "maftecha",
    "new": "mafteach",
    "reason": "furtive patach: a word-final chet or mappiq he with patach is read with the vowel before the consonant (-ach, -ah); transliterate.js was fixed and the stored scheme output regenerated (docs/vocab/AUDIT-RESPONSE.md item 6)"
+  },
+  {
+   "id": "p133cac9a",
+   "field": "translit",
+   "old": "uvekhal",
+   "new": "uvekhol",
+   "reason": "V0-CONTENT-CHECK X2: kamatz after conjunctive vav plus prefix before כָּל is kamatz katan (V'ahavta reading); engine rule extended in src/pronunciation/kamatz-katan.js. Needs native review."
   }
  ]
 }

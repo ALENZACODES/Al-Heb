@@ -37,10 +37,35 @@ export function optionalGroups(tradition = "sephardi") {
   ];
 }
 
+/**
+ * Files that tools/build-precache.mjs lists as ALEF_ON_DEMAND: NOT installed with the app (first install is small, v0 pages only),
+ * fetched when a learner first opens the page that needs them or all at once by "Download everything". Same shape as optionalGroups()
+ * so the Use-ALEF-offline card can list them; `approxMB` is measured from the repo on 2026-11-04 and only a hint.
+ * First match wins; anything unmatched lands in "More pages and data".
+ */
+export const ON_DEMAND_GROUPS = Object.freeze([
+  { id: "od-vocab", label: "Vocabulary data and theme packs", test: /^data\/vocab\//, approxMB: 5.9 },
+  { id: "od-audio-index", label: "Audio clip index (core)", test: /^data\/audio\//, approxMB: 1.8 },
+  { id: "od-pronunciation", label: "Sounds and pronunciation data", test: /^data\/pronunciation\//, approxMB: 0.8 },
+  { id: "od-speak", label: "Speaking, Israel dialogues, listening, typing, word tracing", test: /^data\/(speak|israel|listen|typing|wordtrace)\//, approxMB: 0.5 },
+  { id: "od-reading", label: "Reading, festivals, calendar, grammar and traditions data", test: /^data\/(corpus|torahread|festivals|calendar|grammar|traditions|trope-trainer)\//, approxMB: 0.5 },
+  { id: "od-intermediate", label: "Intermediate lessons and class track", test: /^data\/curriculum\//, approxMB: 0.6 },
+  { id: "od-screens", label: "Install-prompt screenshots", test: /^assets\/screen(s|shots)\//, approxMB: 0.5 },
+]);
+/** Group a list of ALEF_ON_DEMAND paths into optional-download entries ({id,label,urls,approxMB}); empty groups are dropped. */
+export function onDemandGroups(onDemand = []) {
+  const by = new Map(); const rest = [];
+  for (const u of onDemand) { const g = ON_DEMAND_GROUPS.find((x) => x.test.test(u)); if (!g) rest.push(u); else by.set(g.id, [...(by.get(g.id) || []), u]); }
+  const out = ON_DEMAND_GROUPS.filter((g) => by.has(g.id)).map((g) => ({ id: g.id, label: g.label, urls: by.get(g.id), approxMB: g.approxMB }));
+  if (rest.length) out.push({ id: "od-other", label: "More pages and data", urls: rest, approxMB: 0.1 });
+  return out;
+}
+
 // ---------- the precache list, read from the page ----------
 /**
  * Parse tools/build-precache.mjs output WITHOUT eval (the site CSP has no unsafe-eval): version string and the JSON array.
- * @returns {{version:string|null, files:string[]}}
+ * `onDemand` is ALEF_ON_DEMAND (files that are not installed up front; empty for older manifests).
+ * @returns {{version:string|null, files:string[], onDemand:string[]}}
  */
 export function parsePrecacheText(text) {
   const v = /self\.ALEF_VERSION\s*=\s*("(?:[^"\\]|\\.)*")/.exec(text);
@@ -48,7 +73,9 @@ export function parsePrecacheText(text) {
   let files = [];
   try { if (a) { const j = JSON.parse(a[1]); if (Array.isArray(j)) files = j.filter((x) => typeof x === "string"); } } catch { /* leave empty */ }
   let version = null; try { if (v) version = JSON.parse(v[1]); } catch { /* ignore */ }
-  return { version, files };
+  let onDemand = [];
+  try { const o = /self\.ALEF_ON_DEMAND\s*=\s*(\[[\s\S]*?\])\s*;/.exec(text); if (o) { const j = JSON.parse(o[1]); if (Array.isArray(j)) onDemand = j.filter((x) => typeof x === "string"); } } catch { /* leave empty */ }
+  return { version, files, onDemand };
 }
 /** Fetch and parse precache-manifest.js (served by the worker/cache, so it works offline once installed). Throws on HTTP failure. */
 export async function loadPrecacheList(fetchFn = globalThis.fetch?.bind(globalThis), url = PRECACHE_URL) {

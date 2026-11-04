@@ -3,6 +3,9 @@
 // firstday.progress, onboarding.v1, placement.v1) and never writes. Every link is guarded by hasRoute.
 import { h } from '../shell/ui.js';
 import { openStart } from '../placement/model.js';
+import { ROUTES } from '../shell/router.js';
+import { tierOf } from '../shell/nav-model.js';
+import { nextPerTrack } from './nextlesson.js';
 
 export const FIRSTDAY_PROGRESS_KEY = 'firstday.progress';
 export const ONBOARDING_KEY = 'onboarding.v1';
@@ -16,6 +19,8 @@ export const normalizeDailyGoal = (v) => (DAILY_GOALS.includes(v) ? v : 5); // 5
 /** Read-only practice keys: a non-empty record means the learner has tried it. Festivals keeps no store key, so it counts as untried. */
 export const PRACTICE_KEYS = Object.freeze({ speak: 'speak.v1', typing: 'typing.v1', compare: 'compare.v1' });
 const MORE = [['speak', '/speak', 'Say it'], ['typing', '/typing', 'Typing'], ['festivals', '/festivals', 'Festivals'], ['compare', '/compare', 'Compare traditions']];
+/** ' (Preview)' for a route that is not v0 (docs/v0/SCOPE.md), else ''. Links on the card to such routes carry it. */
+export const previewTag = (name) => { const r = ROUTES.find((x) => x.name === name); return r && tierOf(r) !== 'v0' ? ' (Preview)' : ''; };
 const tried = (v) => !!v && typeof v === 'object' && Object.keys(v).length > 0;
 export const ONRAMP_WINS = 5;
 /** Label of the first-day button from the firstday.progress record: the very first step is named, later ones count the wins. */
@@ -35,48 +40,49 @@ export function buildToday(o) {
   const ok = (n) => (typeof o.hasRoute === 'function' ? !!o.hasRoute(n) : n === 'learn');
   const done = new Set(o.completedIds || []);
   const goal = o.goal || 'read';
-  const tracks = goal === 'israel' ? ['israel'] : goal === 'both' ? ['read', 'israel'] : ['read'];
-  const avail = o.available || ((d, tr) => (o.lessons || []).filter((l) => l.track === tr && !d.has(l.id) && (l.prerequisites || []).every((p) => d.has(p))));
-  const nexts = tracks.map((tr) => avail(done, tr)[0]).filter(Boolean);
+  const nexts = nextPerTrack({ lessons: o.lessons, done, goal, available: o.available }); // shared with the week plan (nextlesson.js)
   const dueCount = Math.max(0, Number(o.dueCount) || 0);
   const streak = { count: o.streak?.count || 0, activeToday: !!o.streak?.activeToday, best: Math.max(o.streak?.best || 0, o.streak?.count || 0) };
   const triedBy = { speak: tried(o.speak), typing: tried(o.typing), compare: tried(o.compare), festivals: false };
-  const more = MORE.filter(([n]) => ok(n)).sort((a, b) => Number(triedBy[a[0]]) - Number(triedBy[b[0]])).slice(0, 3).map(([n, p, label]) => ({ name: n, href: '#' + p, label }));
+  const more = MORE.filter(([n]) => ok(n)).sort((a, b) => Number(triedBy[a[0]]) - Number(triedBy[b[0]])).slice(0, 3).map(([n, p, label]) => ({ name: n, href: '#' + p, label: label + previewTag(n) }));
   // first run ends when something was done: a lesson, the first 10 minutes, or any counted study time (a learner who only reads texts is not new)
   const firstRun = done.size === 0 && !o.firstday?.done && !((o.streak?.best || 0) > 0 || (o.streak?.count || 0) > 0);
   const BACKLOG = 20; // this many due cards: review comes before a new lesson (the lesson stays one tap away as a secondary link)
   const backlog = dueCount >= BACKLOG && ok('learn');
 
-  const lessonHref = (id) => '#/learn?lesson=' + encodeURIComponent(id);
+  // intermediate lessons (I-xx) live on their own route, not on the Learn page
+  const isInter = (id) => /^I-\d+$/.test(id) && ok('intermediatelesson');
+  const lessonHref = (id) => (isInter(id) ? '#/intermediate/' + encodeURIComponent(id) : '#/learn?lesson=' + encodeURIComponent(id));
+  const tag = (id) => (isInter(id) ? previewTag('intermediatelesson') : '');
   const onramp = { href: '#/firstday', label: onrampLabel(o.firstday), kind: 'firstday' };
   // a lesson that has an on-ramp (lessons.json `onramp`, r01) is started one baby step at a time, never on its full page; learners who
   // took the placement check said they know some letters, so they keep the full lesson page
   const rampFor = (id) => ((o.lessons || []).find((l) => l.id === id)?.onramp && !o.firstday?.done && o.onboarding?.start !== '/placement' && ok('firstday') ? onramp : null);
   let primary = null;
-  if (firstRun && goal === 'israel' && nexts[0] && ok('learn')) primary = { href: lessonHref(nexts[0].id), label: 'Start: ' + nexts[0].title, kind: 'lesson' };
+  if (firstRun && goal === 'israel' && nexts[0] && ok('learn')) primary = { href: lessonHref(nexts[0].id), label: 'Start: ' + nexts[0].title + tag(nexts[0].id), kind: 'lesson' };
   else if (firstRun) {
     const start = o.onboarding?.start === '/placement' ? 'placement' : 'firstday';
     // Only ever an open lesson: the placed lesson if its prerequisites are done, else the first open read lesson (placement completes nothing).
     const wanted = start === 'placement' && typeof o.placement?.result?.lesson === 'string' ? o.placement.result.lesson : null;
     const placed = wanted && (o.lessons || []).some((l) => l.id === wanted) ? openStart(o.lessons, done, wanted).id : null;
-    if (placed && ok('learn')) primary = rampFor(placed) || { href: lessonHref(placed), label: `Continue: lesson ${placed}`, kind: 'lesson' };
-    else if (ok(start)) primary = start === 'placement' ? { href: '#/placement', label: 'Continue: placement check', kind: 'placement' } : onramp;
+    if (placed && ok('learn')) primary = rampFor(placed) || { href: lessonHref(placed), label: `Continue: lesson ${placed}${tag(placed)}`, kind: 'lesson' };
+    else if (ok(start)) primary = start === 'placement' ? { href: '#/placement', label: 'Continue: placement check' + previewTag('placement'), kind: 'placement' } : onramp;
     else if (ok('firstday')) primary = onramp;
-    else if (ok('learn') && nexts[0]) primary = { href: lessonHref(nexts[0].id), label: 'Continue: ' + nexts[0].title, kind: 'lesson' };
+    else if (ok('learn') && nexts[0]) primary = { href: lessonHref(nexts[0].id), label: 'Continue: ' + nexts[0].title + tag(nexts[0].id), kind: 'lesson' };
   } else if (backlog) primary = { href: '#/learn?review=1', label: `Review ${dueCount} due cards first`, kind: 'review' };
-  else if (nexts[0] && ok('learn')) primary = rampFor(nexts[0].id) || { href: lessonHref(nexts[0].id), label: 'Continue: ' + nexts[0].title, kind: 'lesson' };
+  else if (nexts[0] && ok('learn')) primary = rampFor(nexts[0].id) || { href: lessonHref(nexts[0].id), label: 'Continue: ' + nexts[0].title + tag(nexts[0].id), kind: 'lesson' };
   else if (dueCount > 0 && ok('learn')) primary = { href: '#/learn?review=1', label: 'Continue: review due cards', kind: 'review' };
   else if (ok('learn')) primary = { href: '#/learn', label: 'Continue: open Learn', kind: 'learn' };
 
   return {
     state: firstRun ? 'first-run' : 'learning', firstRun, primary, backlog,
     onramp: { wins: Array.isArray(o.firstday?.wins) ? Math.min(ONRAMP_WINS, o.firstday.wins.length) : 0, total: ONRAMP_WINS },
-    lessons: ok('learn') ? nexts.map((l) => ({ id: l.id, title: l.title, href: lessonHref(l.id) })) : [],
+    lessons: ok('learn') ? nexts.map((l) => ({ id: l.id, title: l.title, href: lessonHref(l.id), tag: tag(l.id) })) : [],
     allDone: !firstRun && nexts.length === 0,
     due: { count: dueCount, href: dueCount > 0 && ok('learn') ? '#/learn?review=1' : null },
     streak,
     dailyGoal: normalizeDailyGoal(o.dailyGoal), more,
-    morning: ok('morning') ? { href: '#/morning' } : null,
+    morning: ok('morning') ? { href: '#/morning', label: "Today's morning verse" + previewTag('morning') } : null,
   };
 }
 
@@ -100,8 +106,8 @@ export function renderToday(today, t, onGoal) {
   // At most 3 secondary links: due cards (when not already the main action), the lesson a backlog displaces, the morning verse, then practice.
   const sec = [];
   if (today.due.href && today.primary?.kind !== 'review') sec.push(h('a', { href: today.due.href }, dueText));
-  if (today.backlog && today.lessons[0]) sec.push(h('a', { href: today.lessons[0].href, class: 'next-lesson-link' }, 'Next lesson: ' + today.lessons[0].title));
-  if (today.morning && !today.firstRun) sec.push(h('a', { href: today.morning.href, id: 'today-morning' }, "Today's morning verse"));
+  if (today.backlog && today.lessons[0]) sec.push(h('a', { href: today.lessons[0].href, class: 'next-lesson-link' }, 'Next lesson: ' + today.lessons[0].title + (today.lessons[0].tag || '')));
+  if (today.morning && !today.firstRun) sec.push(h('a', { href: today.morning.href, id: 'today-morning' }, today.morning.label));
   const room = 3 - sec.length;
   const moreLinks = today.firstRun ? [] : today.more.slice(0, Math.max(0, room));
   return h('section', { class: 'card today', id: 'home-today', 'aria-labelledby': 'h-today', 'data-state': today.state },

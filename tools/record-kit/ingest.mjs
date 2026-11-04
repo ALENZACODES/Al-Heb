@@ -8,6 +8,10 @@
 // --apply: runs the same chain as tools/tts/post.mjs (trim, two-pass loudnorm to -16 LUFS, mono 44.1 kHz CBR MP3, all metadata stripped, verified),
 // stages MP3s under <work>/<donor>/audio/, copies accepted ones into <root>/audio/ with a .meta.json sidecar (status "recorded"), and sets the
 // manifest entry to status "recorded". Consent files are copied to <work>/<donor>/consent/ and are NEVER copied into the repo (they hold a real name).
+// Same-text copies: some lesson-word ids (r04-w1, r04-w2, r05-w1, ...) have exactly the pointed text of another word with the same voice and
+// tradition. One recording fills them all: for every accepted clip, each other manifest entry (kind word, group lesson-word, same voice, tradition and
+// text, not already recorded unless --replace, not itself in this export) gets the same MP3 under its own path, a .meta.json with "copyOf", and
+// status "recorded" plus a "copyOf" field in the manifest. Dry run lists them. --no-copies turns this off.
 // Needs ffmpeg + ffprobe on PATH (FFMPEG / FFPROBE override). It never touches an entry already marked "recorded" unless --replace is given.
 import fs from 'node:fs';
 import os from 'node:os';
@@ -45,7 +49,7 @@ export function readExport(input) {
   return files;
 }
 
-export async function ingest({ input, root = REPO_ROOT, work = path.join(os.homedir(), 'alef-record-work'), apply = false, replace = false, now = () => new Date().toISOString() }) {
+export async function ingest({ input, root = REPO_ROOT, work = path.join(os.homedir(), 'alef-record-work'), apply = false, replace = false, copies = true, now = () => new Date().toISOString() }) {
   const files = readExport(input).filter((f) => !/(^|\/)(__MACOSX|\.DS_Store)/.test(f.name));
   const res = { fatal: [], accepted: [], rejected: [], warnings: [], unknownFiles: [], plan: [], donor: null, applied: false };
   const byName = new Map(files.map((f) => [f.name, f]));
@@ -115,6 +119,21 @@ export async function ingest({ input, root = REPO_ROOT, work = path.join(os.home
   for (const r of rows) if (!files.some((f) => f.name === r.path)) res.warnings.push(`manifest.csv lists ${r.path} but the file is absent`);
   if (res.fatal.length) { res.plan = []; res.rejected.push(...res.accepted.map((c) => ({ name: c.name, errors: ['blocked by consent check'] }))); res.accepted = []; }
   res.plan = res.accepted.map((c) => ({ path: c.path, action: (entry.has(c.path) ? 'set manifest status "recorded", ' : 'no manifest entry (left unchanged), ') + 'copy mp3 + .meta.json', from: c.name }));
+  // same-text copies (see header)
+  res.copies = [];
+  if (copies) {
+    const taken = new Set([...res.accepted.map((c) => c.path), ...res.rejected.map((r) => r.name).map((n) => (parseClipPath(n) ? `audio/${parseClipPath(n).voice}/${parseClipPath(n).tradition}/${parseClipPath(n).kind}/${parseClipPath(n).id}.mp3` : ''))]);
+    const all = shards.flatMap((s) => s.list);
+    for (const c of res.accepted) {
+      const src = entry.get(c.path)?.e; if (!src || src.kind !== 'word' || src.group !== 'lesson-word' || !src.text) continue;
+      for (const e of all) {
+        if (e.path === c.path || taken.has(e.path) || e.kind !== 'word' || e.group !== 'lesson-word' || e.voice !== src.voice || e.tradition !== src.tradition || e.text !== src.text) continue;
+        if (e.status === 'recorded' && !replace) continue;
+        taken.add(e.path); res.copies.push({ path: e.path, copyOf: c.path });
+      }
+    }
+    for (const k of res.copies) res.plan.push({ path: k.path, action: `copy of ${k.copyOf} (same text): set manifest status "recorded", copy mp3 + .meta.json`, from: k.copyOf });
+  }
   res.aiClone = consent ? consent.ai_clone_consent === true : false;
 
   if (apply && !res.fatal.length && res.accepted.length) res.applied = await applyAll(res, { root, work, shards, entry, consent, byName, now, files });
@@ -141,6 +160,14 @@ async function applyAll(res, { root, work, shards, entry, consent, byName, now }
     done.push(c);
   }
   res.accepted = done;
+  const doneSet = new Set(done.map((c) => c.path)); res.copies = res.copies.filter((k) => doneSet.has(k.copyOf));
+  for (const k of res.copies) {
+    const from = path.join(root, k.copyOf), dst = path.join(root, k.path);
+    fs.mkdirSync(path.dirname(dst), { recursive: true }); fs.copyFileSync(from, dst);
+    const base = JSON.parse(fs.readFileSync(`${from}.meta.json`, 'utf8'));
+    fs.writeFileSync(`${dst}.meta.json`, JSON.stringify({ ...base, copyOf: k.copyOf, note: 'Copy of another id with the same pointed text, same voice and tradition. ' + base.note }, null, 1) + '\n');
+    const h = entry.get(k.path); if (h) { h.e.status = 'recorded'; h.e.source = 'human:record-kit'; h.e.copyOf = k.copyOf; h.s.changed = true; }
+  }
   for (const s of shards) if (s.changed) fs.writeFileSync(path.join(root, s.rel), JSON.stringify(s.list, null, 1) + '\n');
   res.stagedIn = dir;
   return true;
@@ -150,6 +177,7 @@ export function formatReport(res, apply) {
   const L = [];
   L.push(apply ? 'INGEST (applied)' : 'DRY RUN: nothing was written. Re-run with --apply to post-process and update the manifest.');
   for (const f of res.fatal) L.push(`FATAL: ${f}`);
+  L.push(`same-text copies ${res.copies.length}`);
   L.push(`accepted ${res.accepted.length}, rejected ${res.rejected.length}, warnings ${res.warnings.length}${res.donor ? `, donor ${res.donor}, AI-clone consent: ${res.aiClone ? 'YES' : 'no'}` : ''}`);
   for (const r of res.rejected) L.push(`  REJECT ${r.name}: ${r.errors.join('; ')}`);
   for (const w of res.warnings.slice(0, 40)) L.push(`  warn ${w}`);
@@ -162,16 +190,16 @@ export function formatReport(res, apply) {
 }
 
 export async function main(argv = process.argv.slice(2)) {
-  const o = { apply: false, replace: false };
+  const o = { apply: false, replace: false, copies: true };
   const pos = [];
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
-    if (a === '--apply') o.apply = true; else if (a === '--replace') o.replace = true;
+    if (a === '--apply') o.apply = true; else if (a === '--replace') o.replace = true; else if (a === '--no-copies') o.copies = false;
     else if (a === '--root') o.root = path.resolve(argv[++i]); else if (a === '--work') o.work = path.resolve(argv[++i]); else if (a === '--report') o.report = path.resolve(argv[++i]);
     else if (a.startsWith('--')) { console.error('unknown option ' + a); process.exit(2); } else pos.push(a);
   }
-  if (pos.length !== 1) { console.error('usage: node tools/record-kit/ingest.mjs <export.zip|folder> [--apply] [--replace] [--root R] [--work W] [--report out.csv]'); process.exit(2); }
-  const res = await ingest({ input: path.resolve(pos[0]), root: o.root, work: o.work, apply: o.apply, replace: o.replace });
+  if (pos.length !== 1) { console.error('usage: node tools/record-kit/ingest.mjs <export.zip|folder> [--apply] [--replace] [--no-copies] [--root R] [--work W] [--report out.csv]'); process.exit(2); }
+  const res = await ingest({ input: path.resolve(pos[0]), root: o.root, work: o.work, apply: o.apply, replace: o.replace, copies: o.copies });
   console.log(formatReport(res, o.apply));
   if (o.report) fs.writeFileSync(o.report, toCsv(['file', 'verdict', 'detail'], [...res.accepted.map((c) => ({ file: c.name, verdict: 'accept', detail: c.warnings.join('; ') })), ...res.rejected.map((r) => ({ file: r.name, verdict: 'reject', detail: r.errors.join('; ') }))]));
   if (res.fatal.length || res.rejected.length) process.exitCode = 1;

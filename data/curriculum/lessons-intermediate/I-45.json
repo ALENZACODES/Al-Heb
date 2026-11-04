@@ -15,7 +15,7 @@
    "en": "delivery, shipment",
    "translit": null,
    "pronunciation": {
-    "israeli": "mishlocha"
+    "israeli": "mishloach"
    },
    "source": {
     "file": "data/vocab/words.json",
@@ -39,7 +39,7 @@
    "en": "courier",
    "translit": null,
    "pronunciation": {
-    "israeli": "shalicha"
+    "israeli": "shaliach"
    },
    "source": {
     "file": "data/vocab/words.json",

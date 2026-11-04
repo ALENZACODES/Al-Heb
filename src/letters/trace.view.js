@@ -135,7 +135,27 @@ export function mount(root, ctx = {}) {
     if (keyHandler) { document.removeEventListener('keydown', keyHandler); keyHandler = null; }
   }
 
+  /** Re-rendering replaces every node, which drops keyboard focus to <body>. Remember the focused control and put focus back on its twin. */
+  function focusSig() {
+    const ae = document.activeElement;
+    if (!ae || ae === document.body || !body.contains(ae) || !/^(BUTTON|A)$/.test(ae.tagName)) return null;
+    const grp = ae.closest('[aria-label]');
+    return { tag: ae.tagName, label: ae.getAttribute('aria-label'), text: (ae.textContent || '').trim(), act: ae.getAttribute('data-act'), role: ae.getAttribute('role'), grp: grp && grp !== ae ? grp.getAttribute('aria-label') : null };
+  }
+  function restoreFocus(sig) {
+    if (!sig) return;
+    const c = [...body.querySelectorAll(sig.tag.toLowerCase())].filter(e => e.getAttribute('data-act') === sig.act && e.getAttribute('role') === sig.role && e.getAttribute('aria-label') === sig.label && (e.textContent || '').trim() === sig.text);
+    const el = c.find(e => { const g = e.closest('[aria-label]'); return (g && g !== e ? g.getAttribute('aria-label') : null) === sig.grp; }) || c[0];
+    if (el) { try { el.focus({ preventScroll: true }); } catch (e) { /* ignore */ } }
+  }
+
   function render() {
+    const sig = focusSig();
+    renderInner();
+    restoreFocus(sig);
+  }
+
+  function renderInner() {
     teardownInner();
     body.textContent = '';
     if (ctx.params && typeof ctx.params.id === 'string' && ctx.params.id && !letterById(ctx.params.id)) {
@@ -167,6 +187,11 @@ export function mount(root, ctx = {}) {
 
   function renderTrace() {
     const letter = letterById(state.letterId) || state.letters[0];
+    // first look: the first two letters of the first-day flow (Shin, then Bet) one tap away, one compact row
+    { const fl = ['shin', 'bet'].map(letterById).filter(Boolean);
+      if (fl.length === 2) body.appendChild(h('div', { class: 'row', 'data-firstlook': '1', role: 'group', 'aria-label': t('trace.firstLook', 'First look') },
+        h('strong', {}, t('trace.firstLook', 'First look') + ':'),
+        ...fl.map(l => h('a', { class: 'btn secondary', href: '#/letters/' + l.id, 'data-firstlook-id': l.id, 'aria-current': l.id === letter.id ? 'true' : false }, l.name + ' ', h('span', { lang: 'he', dir: 'rtl' }, l.he))))); }
     body.appendChild(picker(id => { state.letterId = id; render(); }, letter.id));
     const toggle = h('div', { class: 'row', role: 'group', 'aria-label': t('trace.script', 'Script') },
       h('button', { 'aria-pressed': state.script === 'print', onclick: () => { state.script = 'print'; render(); } }, t('trace.print', 'Print')),
@@ -175,12 +200,14 @@ export function mount(root, ctx = {}) {
       h('button', { 'aria-pressed': state.outline, onclick: () => { state.outline = !state.outline; render(); } }, t('trace.outline', 'Outline')),
       h('button', { 'data-act': 'mode-step', 'aria-pressed': state.step, onclick: () => { state.step = !state.step; render(); const nb = body.querySelector('[data-act="mode-step"]'); if (nb) nb.focus(); } }, t('trace.modeStep', 'Show me, stroke by stroke (buttons)')));
     body.appendChild(toggle);
+    { const rn = reviewNotice(letter, state.script, t); // above the drawing area so the caution is seen before the learner starts
+      if (rn.level !== 'none') body.appendChild(h('p', { class: 'notice' + (rn.level === 'high' ? ' notice-high' : ''), 'data-review': rn.level, role: rn.level === 'high' ? 'alert' : undefined }, rn.text)); }
     body.appendChild(h('div', { class: 'row' },
       h('span', { class: 'big', dir: 'rtl', lang: 'he' }, letter.he),
       h('div', {}, h('strong', {}, letter.name + ' '), he(letter.nameHe), progress0.isCompleted(letter.id, state.script) ? h('span', { class: 'chip', role: 'status' }, '\u2713 ' + t('trace.completed', 'completed') + ' (' + state.script + ')') : (progress0.isAssisted(letter.id, state.script) ? h('span', { class: 'chip', role: 'status' }, t('trace.walkedThrough', 'walked through with buttons, not drawn yet') + ' (' + state.script + ')') : null), h('br'), h('span', {}, '/' + letter.sound.ipa + '/  ' + letterSound(state.consonants ? state.consonants[letter.id] : null, congregationOf(ctx.settings), { fallbackEn: letter.sound.en }).en))));
     const mn = state.mnemonics && state.mnemonics[letter.id];
     if (mn) {
-      body.appendChild(h('details', { class: 'remember', open: 'open' },
+      body.appendChild(h('details', { class: 'remember', open: (typeof matchMedia === 'function' && matchMedia('(max-width: 600px)').matches) ? false : 'open' }, // closed by default on phones so the stage starts in the first screen
         h('summary', {}, t('trace.remember', 'Remember it')),
         h('p', {}, h('strong', {}, t('trace.shape', 'Shape: ')), mn.shape),
         h('p', {}, h('strong', {}, t('trace.sound', 'Sound: ')), mn.sound),
@@ -192,8 +219,6 @@ export function mount(root, ctx = {}) {
     }
     assistedRun = false;
     const block = letter[state.script];
-    const rn = reviewNotice(letter, state.script, t);
-    if (rn.level !== 'none') body.appendChild(h('p', { class: 'notice' + (rn.level === 'high' ? ' notice-high' : ''), 'data-review': rn.level, role: rn.level === 'high' ? 'alert' : undefined }, rn.text));
     const stage = h('div', { class: 'stage' });
     const fb = h('div', { class: 'feedback', role: 'status', 'aria-live': 'polite' }, t('trace.start', 'Press Animate to see the order, then trace it.'));
     body.appendChild(stage); body.appendChild(fb);

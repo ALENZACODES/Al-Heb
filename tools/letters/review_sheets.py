@@ -192,16 +192,16 @@ def html_sheet(letters, covs, svgs):
             taken = []
             flag = 'DOUBT (HIGH)' if high else ('builder doubt' if re.search(r'\b' + ('P' if script == 'print' else 'C') + r':[^.]*DOUBT', L.get('_doubt', '')) else '')
             rows.append(
-                f'<tr class="{"high" if high else ""}"><td class="tick"><span class="box"></span></td>'
-                f'<td><b>{esc(L["id"])}</b><br>{esc(L["name"])} <span lang="he" dir="rtl">{esc(L["he"])}</span></td>'
-                f'<td>{script}</td><td>{len(s["strokes"])}</td>'
-                f'<td class="pic"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="150" height="150">'
+                f'<tr class="{"high" if high else ""}"><td class="tick" data-l="OK?"><span class="box"></span></td>'
+                f'<td data-l="Letter"><b>{esc(L["id"])}</b><br>{esc(L["name"])} <span lang="he" dir="rtl">{esc(L["he"])}</span></td>'
+                f'<td data-l="Script">{script}</td><td data-l="Strokes">{len(s["strokes"])}</td>'
+                f'<td class="pic" data-l="Draft"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="150" height="150">'
                 + (f'<path d="{s["outline"]}" fill="#e2e2e2" stroke="#b0b0b0" stroke-width="2"/>' if s.get('outline') else '')
                 + ''.join(stroke_svg(st, n + 1, COLORS[n % len(COLORS)], taken) for n, st in enumerate(s['strokes']))
                 + '</svg></td>'
-                f'<td class="cov">{("" if worst is None else ("%.0f%% of points inside outline (worst stroke)" % (100 * worst)))}</td>'
-                f'<td class="doubt">{("<b>" + flag + "</b><br>") if flag else ""}{esc(L.get("_doubt", ""))}</td>'
-                f'<td class="fix"></td></tr>')
+                f'<td class="cov" data-l="Mechanical check">{("" if worst is None else ("%.0f%% of points inside outline (worst stroke)" % (100 * worst)))}</td>'
+                f'<td class="doubt" data-l="Builder doubt">{("<b>" + flag + "</b><br>") if flag else ""}{esc(L.get("_doubt", ""))}</td>'
+                f'<td class="fix" data-l="Correction"></td></tr>')
     style = """
 body{font-family:system-ui,sans-serif;margin:16px;color:#111}
 h1{font-size:1.3rem;margin:0 0 4px}p{margin:4px 0;font-size:.9rem}
@@ -212,9 +212,20 @@ tr.high td{background:#fff0f0}
 .box{display:inline-block;width:18px;height:18px;border:2px solid #000;border-radius:3px}
 .tick{text-align:center;width:28px}.pic{width:150px}.fix{min-width:180px}.doubt{max-width:300px}
 tr{page-break-inside:avoid}
+@media screen and (max-width:700px){
+body{margin:10px}
+table,thead,tbody,tr,td{display:block;width:auto}
+thead{position:absolute;left:-9999px}
+tr{border:1px solid #999;margin:0 0 10px;padding:4px 6px}
+td{border:0;border-bottom:1px solid #ddd;padding:4px 0;max-width:none;min-width:0}
+td:last-child{border-bottom:0}
+td[data-l]:before{content:attr(data-l);display:block;font-size:.7rem;color:#555;text-transform:uppercase}
+.tick{text-align:left;width:auto}.pic{width:auto}.pic svg{width:150px;height:150px}
+.fix{min-height:48px}
+}
 @media print{body{margin:6mm}table{font-size:.7rem}}
 """
-    body = (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>ALEF stroke-order review sheet (draft)</title><style>{style}</style></head><body>'
+    body = (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ALEF stroke-order review sheet (draft)</title><style>{style}</style></head><body>'
             '<h1>Hebrew letter stroke order: teacher review sheet (DRAFT)</h1>'
             '<p>54 records: 27 letters x print (block) and cursive (ktav yad). None is validated. Please tick the box if the shape AND the stroke count, order and direction are what Israeli school handwriting teaches; otherwise write the correction in the last column (for example "2 strokes: bar right-to-left, then stem top-down").</p>'
             '<p>Numbered dot = where the stroke starts; arrows = pen direction; grey = the glyph outline the strokes should follow. '

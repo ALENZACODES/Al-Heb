@@ -183,3 +183,40 @@ test("every intermediate lesson mounts and its first exercise renders", async ()
     assert.ok(section(root), l.id); assert.equal(section(root).attrs["data-ex"], l.exercises[0].id); off();
   }
 });
+
+// ---- spot / fade show the line that holds their target (lineIndex is 1-based in the data), all 50 lessons
+const rawText = (n) => (n.nodeType === 3 ? n.data : n.children.map(rawText).join(""));
+test("spot and fade exercises show the registry line named by lineIndex (1-based) in all 50 lessons", async () => {
+  const { loadContent } = await import("../src/curriculum/content.js");
+  const corpus = (await loadContent()).corpus, R = V.EXERCISE_RENDERERS, ctx = ctxFor(memStore());
+  let spots = 0, fades = 0;
+  for (const l of V.listIntermediate()) {
+    assert.equal(l.id.startsWith("I-"), true);
+    for (const ex of l.exercises.filter((e) => e.type === "spot" || e.type === "fade")) {
+      const r = corpus.get(ex.line); assert.ok(r, `${ex.id}: registry entry ${ex.line}`);
+      const expected = r.he.split("\n")[(ex.lineIndex ?? 1) - 1]; assert.ok(expected, `${ex.id}: lineIndex in range`);
+      const node = R[ex.type]({ ctx, lesson: l, note: new Node_("p"), corpus, seed: 1 }, ex, () => {});
+      if (ex.type === "spot") {
+        spots++;
+        const shown = node.find((n) => n.tag === "button" && n.attrs.lang === "he").map((b) => b.text);
+        assert.ok(shown.some((t) => A.heKey(t) === A.heKey(ex.target)), `${ex.id}: target ${ex.target} among the shown words`);
+        assert.ok(A.heKey(expected).includes(A.heKey(ex.target)), `${ex.id}: target is in the expected line`);
+        assert.ok(shown.every((t) => A.heKey(expected).includes(A.heKey(t))), `${ex.id}: every shown word is from the expected line`);
+      } else {
+        fades++;
+        assert.ok(rawText(node).includes(expected), `${ex.id}: fade shows line ${ex.lineIndex ?? 1}`);
+        if (r.lines > 1) assert.ok(node.find((n) => n.attrs["data-audio"]).some((b) => b.attrs["data-audio"] === `line/${r.id}-l${ex.lineIndex ?? 1}`), `${ex.id}: audio id`);
+      }
+    }
+  }
+  assert.ok(spots > 0 && fades > 0);
+});
+
+test("the G-d setting reaches lesson English in the player", async () => {
+  const l = byId["I-01"], ex = l.exercises.find((e) => /\bGod\b/.test(e.en || "") && e.type !== "match");
+  assert.ok(ex, "an I-01 exercise with God in its English");
+  const mk = (gd) => ({ ...ctxFor(memStore()), settings: { get: (k) => ({ congregation: "ashkenazi", voice: "f", writeGodAsGd: gd }[k]) } });
+  const env = (c) => ({ ctx: c, lesson: l, note: new Node_("p"), corpus: new Map(), seed: 1 });
+  const on = rawText(V.EXERCISE_RENDERERS[ex.type](env(mk(true)), ex, () => {})), off = rawText(V.EXERCISE_RENDERERS[ex.type](env(mk(false)), ex, () => {}));
+  assert.match(on, /G-d/); assert.doesNotMatch(on, /\bGod\b/); assert.match(off, /\bGod\b/); assert.doesNotMatch(off, /G-d/);
+});

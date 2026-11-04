@@ -196,8 +196,14 @@ export async function runChecks(root) {
     check('sw.js importScripts the precache list at the same level', /importScripts\(\s*['"]precache-manifest\.js['"]/.test(swText));
     const list = JSON.parse(/self\.ALEF_PRECACHE\s*=\s*(\[[\s\S]*?\]);/.exec(pm.buf.toString('utf8'))[1]);
     const bad = [];
-    for (const f of list) { const g = await get('/' + f); const want = MIME[extname(f).toLowerCase()]; if (g.r.status !== 200 || (want && g.ct !== want) || (g.buf.length === 0)) bad.push(`${f} -> ${g.r.status} ${g.ct}`); }
+    let installBytes = 0;
+    for (const f of list) { const g = await get('/' + f); installBytes += g.buf.length; const want = MIME[extname(f).toLowerCase()]; if (g.r.status !== 200 || (want && g.ct !== want) || (g.buf.length === 0)) bad.push(`${f} -> ${g.r.status} ${g.ct}`); }
     check(`all ${list.length} precache entries return 200 with the expected MIME (one failure makes the whole SW install fail)`, bad.length === 0, bad.slice(0, 3).join('; '));
+    check(`first-install precache is ${(installBytes / 1048576).toFixed(2)} MiB (${list.length} files), budget 4 MiB`, installBytes <= 4 * 1048576, `${(installBytes / 1048576).toFixed(2)} MiB`);
+    const od = /self\.ALEF_ON_DEMAND\s*=\s*(\[[\s\S]*?\])\s*;/.exec(pm.buf.toString('utf8')); const onDemand = od ? JSON.parse(od[1]) : [];
+    const odBad = []; let odBytes = 0;
+    for (const f of onDemand) { const g = await get('/' + f); odBytes += g.buf.length; if (g.r.status !== 200 || g.buf.length === 0) odBad.push(`${f} -> ${g.r.status}`); }
+    check(`all ${onDemand.length} on-demand files (${(odBytes / 1048576).toFixed(2)} MiB, fetched later, not installed) are served with 200`, odBad.length === 0, odBad.slice(0, 3).join('; '));
 
     // MIME for every extension that ships
     const byExt = new Map(); for (const f of files) { if (['_headers', '_redirects'].includes(f)) continue; const e = extname(f).toLowerCase(); if (!byExt.has(e)) byExt.set(e, f); }

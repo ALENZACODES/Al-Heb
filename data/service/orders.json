@@ -1,0 +1,106 @@
+{
+ "schema": "alef-service-orders/1",
+ "note": "Draft, written by an AI agent for ALEF, NOT reviewed by a rabbi, cantor or Hebrew educator. Each order is ALEF's own simplified sequence of the registry texts it actually holds, loosely following data/corpus/torah-service-guide.json. A real congregation's sequence differs (additions, omissions, different melodies and customs). It follows no published prayerbook: no copyrighted siddur text, layout or page numbers are used (for example Mishkan T'filah). Markers (stand/sit/sing/silent) appear ONLY where the Torah service guide says so; each carries the guide section and the exact quoted words, and a test checks the quote is really in the guide. gaps lists ids from data/corpus/gaps.json: parts of a typical service that ALEF does not hold yet.",
+ "orders": {
+  "friday-night": {
+   "title": "Friday evening",
+   "short": "Friday night",
+   "follow": true,
+   "items": [
+    { "id": "candle-shabbat", "moment": "Candle blessing", "anchor": "shabbat-evening" },
+    { "id": "lecha-dodi-1", "moment": "Welcoming Shabbat", "anchor": "shabbat-evening" },
+    { "id": "torah-barchu", "moment": "The call to prayer (Barchu)", "anchor": "shema-and-blessings" },
+    { "id": "shema-1", "moment": "The Shema", "anchor": "shema-and-blessings" },
+    { "id": "vahavta-full", "moment": "V'ahavta", "anchor": "shema-and-blessings" },
+    { "id": "mi-chamocha-1", "moment": "Mi Chamocha", "anchor": "shema-and-blessings" },
+    { "id": "amidah-lips", "moment": "The Amidah begins", "anchor": "amidah" },
+    { "id": "avot-1", "moment": "First blessing of the Amidah", "anchor": "amidah" },
+    { "id": "oseh-shalom", "moment": "Closing line of the Amidah", "anchor": "amidah" },
+    { "id": "aleinu-1", "moment": "Aleinu", "anchor": "closing" },
+    { "id": "kaddish-1", "moment": "Mourner's Kaddish", "anchor": "closing" },
+    { "id": "kiddush-gen-2-1-3", "moment": "Kiddush: Genesis verses", "anchor": "shabbat-evening" },
+    { "id": "kiddush-shabbat-eve", "moment": "Kiddush blessing", "anchor": "shabbat-evening" },
+    { "id": "hamotzi", "moment": "Blessing over bread", "anchor": "shabbat-evening" }
+   ],
+   "gaps": ["g-kabbalat-shabbat-psalms", "g-shalom-aleichem", "g-ahavat-olam", "g-emet-veyatziv", "g-modim", "g-shabbat-amidah-middle", "g-aleinu-second-paragraph", "g-eshet-chayil"]
+  },
+  "shabbat-morning": {
+   "title": "Shabbat morning",
+   "short": "Shabbat morning",
+   "follow": true,
+   "items": [
+    { "id": "mah-tovu-1", "moment": "Opening song", "anchor": "opening" },
+    { "id": "torah-barchu", "moment": "The call to prayer (Barchu)", "anchor": "shema-and-blessings" },
+    { "id": "shema-1", "moment": "The Shema", "anchor": "shema-and-blessings" },
+    { "id": "shema-2", "moment": "Quiet line after the Shema", "anchor": "shema-and-blessings" },
+    { "id": "vahavta-full", "moment": "V'ahavta", "anchor": "shema-and-blessings" },
+    { "id": "mi-chamocha-1", "moment": "Mi Chamocha", "anchor": "shema-and-blessings" },
+    { "id": "amidah-lips", "moment": "The Amidah begins", "anchor": "amidah" },
+    { "id": "avot-1", "moment": "First blessing of the Amidah", "anchor": "amidah" },
+    { "id": "kedushah-kadosh", "moment": "Kedushah, first verse", "anchor": "amidah" },
+    { "id": "kedushah-baruch", "moment": "Kedushah, second verse", "anchor": "amidah" },
+    { "id": "kedushah-yimloch", "moment": "Kedushah, third verse", "anchor": "amidah" },
+    { "id": "sim-shalom", "moment": "Peace blessing", "anchor": "amidah" },
+    { "id": "oseh-shalom", "moment": "Closing line of the Amidah", "anchor": "amidah" },
+    { "id": "ein-kamocha", "moment": "Opening the ark", "anchor": "torah-service-open" },
+    { "id": "vayehi-binsoa", "moment": "As the scroll is taken out", "anchor": "torah-service-open" },
+    { "id": "torah-bless-1", "moment": "Blessing before the reading", "anchor": "torah-reading" },
+    { "id": "torah-bless-2", "moment": "Blessing after the reading", "anchor": "torah-reading" },
+    { "id": "vezot-hatorah", "moment": "Lifting the scroll", "anchor": "hagbahah" },
+    { "id": "haftarah-before", "moment": "Blessings before the haftarah", "anchor": "haftarah" },
+    { "id": "haftarah-after", "moment": "Blessings after the haftarah", "anchor": "haftarah" },
+    { "id": "etz-chaim", "moment": "Returning the scroll", "anchor": "returning-torah" },
+    { "id": "aleinu-1", "moment": "Aleinu", "anchor": "closing" },
+    { "id": "kaddish-1", "moment": "Mourner's Kaddish", "anchor": "closing" },
+    { "id": "adon-olam-1", "moment": "Closing hymn", "anchor": "closing" }
+   ],
+   "gaps": ["g-yotzer-or", "g-ahavat-olam", "g-emet-veyatziv", "g-modim", "g-shabbat-amidah-middle", "g-ein-kamocha-composite", "g-torah-reading-text", "g-haftarah-text", "g-community-prayers", "g-aleinu-second-paragraph", "g-mi-sheberach-full"]
+  },
+  "weekday-morning": {
+   "title": "Weekday morning",
+   "short": "Weekday morning",
+   "follow": false,
+   "items": [
+    { "id": "modeh-ani-1", "moment": "On waking", "anchor": null },
+    { "id": "mah-tovu-1", "moment": "Opening verse", "anchor": "opening" },
+    { "id": "ashrei-84-5", "moment": "Ashrei, line 1", "anchor": "pesukei-dezimra" },
+    { "id": "ashrei-144-15", "moment": "Ashrei, line 2", "anchor": "pesukei-dezimra" },
+    { "id": "ashrei-145-1-3", "moment": "Psalm 145 begins", "anchor": "pesukei-dezimra" },
+    { "id": "ashrei-145-16", "moment": "Psalm 145, a verse said with concentration", "anchor": "pesukei-dezimra" },
+    { "id": "torah-barchu", "moment": "The call to prayer (Barchu)", "anchor": "shema-and-blessings" },
+    { "id": "shema-1", "moment": "The Shema", "anchor": "shema-and-blessings" },
+    { "id": "shema-2", "moment": "Quiet line after the Shema", "anchor": "shema-and-blessings" },
+    { "id": "vahavta-full", "moment": "V'ahavta", "anchor": "shema-and-blessings" },
+    { "id": "mi-chamocha-1", "moment": "Mi Chamocha", "anchor": "shema-and-blessings" },
+    { "id": "amidah-lips", "moment": "The Amidah begins", "anchor": "amidah" },
+    { "id": "avot-1", "moment": "First blessing of the Amidah", "anchor": "amidah" },
+    { "id": "avot-closing", "moment": "End of the first blessing", "anchor": "amidah" },
+    { "id": "kedushah-kadosh", "moment": "Kedushah, first verse", "anchor": "amidah" },
+    { "id": "kedushah-baruch", "moment": "Kedushah, second verse", "anchor": "amidah" },
+    { "id": "kedushah-yimloch", "moment": "Kedushah, third verse", "anchor": "amidah" },
+    { "id": "sim-shalom", "moment": "Peace blessing", "anchor": "amidah" },
+    { "id": "amidah-yihyu", "moment": "Closing verse", "anchor": "amidah" },
+    { "id": "amidah-elohai-netzor", "moment": "Private closing prayer", "anchor": "amidah" },
+    { "id": "oseh-shalom", "moment": "Closing line of the Amidah", "anchor": "amidah" },
+    { "id": "aleinu-1", "moment": "Aleinu", "anchor": "closing" },
+    { "id": "kaddish-1", "moment": "Mourner's Kaddish", "anchor": "closing" }
+   ],
+   "gaps": ["g-baruch-sheamar", "g-yishtabach", "g-psalms-pesukei", "g-yotzer-or", "g-ahavat-olam", "g-emet-veyatziv", "g-shema-paragraph-2-3", "g-modim", "g-aleinu-second-paragraph"]
+  }
+ },
+ "markers": {
+  "shabbat-morning": {
+   "shema-2": [{ "kind": "silent", "section": "shema-and-blessings", "field": "role", "quote": "usually said quietly" }],
+   "mi-chamocha-1": [{ "kind": "sing", "section": "shema-and-blessings", "field": "role", "quote": "sung after the Shema" }],
+   "amidah-lips": [{ "kind": "stand", "section": "amidah", "field": "yourPart", "quote": "Stand, say the Amidah quietly" }, { "kind": "silent", "section": "amidah", "field": "yourPart", "quote": "Stand, say the Amidah quietly" }],
+   "avot-1": [{ "kind": "stand", "section": "amidah", "field": "yourPart", "quote": "Stand, say the Amidah quietly" }, { "kind": "silent", "section": "amidah", "field": "yourPart", "quote": "Stand, say the Amidah quietly" }],
+   "sim-shalom": [{ "kind": "stand", "section": "amidah", "field": "yourPart", "quote": "Stand, say the Amidah quietly" }, { "kind": "silent", "section": "amidah", "field": "yourPart", "quote": "Stand, say the Amidah quietly" }],
+   "ein-kamocha": [{ "kind": "stand", "section": "torah-service-open", "field": "yourPart", "quote": "Most congregations stand while the ark is open" }, { "kind": "sing", "section": "torah-service-open", "field": "yourPart", "quote": "Join the singing" }],
+   "vayehi-binsoa": [{ "kind": "stand", "section": "torah-service-open", "field": "yourPart", "quote": "Most congregations stand while the ark is open" }, { "kind": "sing", "section": "torah-service-open", "field": "yourPart", "quote": "Join the singing" }],
+   "vezot-hatorah": [{ "kind": "stand", "section": "hagbahah", "field": "yourPart", "quote": "Stand, look at the text, and sing or say the line" }, { "kind": "sing", "section": "hagbahah", "field": "yourPart", "quote": "Stand, look at the text, and sing or say the line" }],
+   "etz-chaim": [{ "kind": "sing", "section": "returning-torah", "field": "yourPart", "quote": "Join the singing" }],
+   "aleinu-1": [{ "kind": "stand", "section": "closing", "field": "yourPart", "quote": "Stand for Aleinu" }],
+   "adon-olam-1": [{ "kind": "sing", "section": "opening", "field": "role", "quote": "nearly all sing at the end" }]
+  }
+ }
+}

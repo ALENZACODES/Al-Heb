@@ -39,13 +39,36 @@ function applyScript() { document.documentElement.dataset.script = settings.get(
 /** Names of routes whose view file exists in this build (from the generated view list). */
 let available = availableRoutes(VIEW_FILES);
 
+/** Phone bottom bar shows these five; everything else with a nav entry goes in the "More" sheet (on wide screens both lists sit in one row). */
+const MAIN_NAV = ['home', 'learn', 'letters', 'sounds', 'read'];
+function navCurrent(r, current) {
+  return current === r.name || (r.name === 'letters' && current === 'letter') || (r.name === 'read' && current === 'text') || (r.name === 'learn' && ['loanwords', 'loanword', 'spotit', 'checkpoint', 'dialogues', 'dialogue'].includes(current));
+}
 function renderNav(current) {
-  const nav = document.getElementById('nav');
-  nav.replaceChildren(...ROUTES.filter((r) => r.nav && available.has(r.name)).map((r) => {
-    const a = h('a', { href: '#' + (r.pattern === '/' ? '/' : r.pattern), 'aria-current': current === r.name || (r.name === 'letters' && current === 'letter') || (r.name === 'read' && current === 'text') || (r.name === 'learn' && ['loanwords', 'loanword', 'spotit', 'checkpoint', 'dialogues', 'dialogue'].includes(current)) ? 'page' : null },
-      h('span', {}, t(r.nav)), tHe(r.nav) ? heSpan(tHe(r.nav), 'he nav-he') : null);
-    return h('li', {}, a);
-  }));
+  const nav = document.getElementById('nav'), more = document.getElementById('nav-more'), btn = document.getElementById('more-btn');
+  const item = (r) => h('li', {}, h('a', { href: '#' + (r.pattern === '/' ? '/' : r.pattern), 'aria-current': navCurrent(r, current) ? 'page' : null },
+    h('span', {}, t(r.nav)), tHe(r.nav) ? heSpan(tHe(r.nav), 'he nav-he') : null));
+  const rs = ROUTES.filter((r) => r.nav && available.has(r.name));
+  const main = rs.filter((r) => MAIN_NAV.includes(r.name)), rest = rs.filter((r) => !MAIN_NAV.includes(r.name));
+  nav.replaceChildren(...main.map(item));
+  more.replaceChildren(...rest.map(item));
+  btn.hidden = rest.length === 0;
+  btn.toggleAttribute('data-current', rest.some((r) => navCurrent(r, current)));
+  setMore(false);
+}
+function setMore(open) {
+  const more = document.getElementById('nav-more'), btn = document.getElementById('more-btn');
+  more.classList.toggle('open', open); btn.setAttribute('aria-expanded', String(open));
+}
+function wireChrome() {
+  const btn = document.getElementById('more-btn'), more = document.getElementById('nav-more');
+  btn.addEventListener('click', () => setMore(btn.getAttribute('aria-expanded') !== 'true'));
+  more.addEventListener('click', (e) => { if (e.target.closest('a')) setMore(false); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && more.classList.contains('open')) { setMore(false); btn.focus(); } });
+  document.addEventListener('click', (e) => { if (more.classList.contains('open') && !e.target.closest('.site-nav')) setMore(false); });
+  // the one-line sound status is cut with an ellipsis on a phone; tap it to read the whole message
+  const st = document.getElementById('sound-status');
+  st.addEventListener('click', () => st.classList.toggle('open'));
 }
 
 let unmount = () => {};
@@ -108,7 +131,7 @@ async function show(match, ctxBase) {
 async function boot() {
   // The skip link's #main href would be read by the hash router as the route "/main"; focus <main> directly instead.
   document.querySelector('.skip-link')?.addEventListener('click', (e) => { e.preventDefault(); document.getElementById('main')?.focus(); });
-  applyTheme(); applyScript();
+  applyTheme(); applyScript(); wireChrome();
   settings.subscribe((_, changed) => { if (changed.includes('theme')) applyTheme(); if (changed.includes('script')) applyScript(); });
   const audio = await makeAudio();
   available = availableRoutes(VIEW_FILES);

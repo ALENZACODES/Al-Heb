@@ -90,6 +90,20 @@ export function buildEntries({ root = ROOT, existsFn } = {}) {
   const reg = readJson(root, 'data/corpus/registry.json');
   notes.push(reg.note);
   for (const it of listItems(reg.data)) add(guessKind(it), it.id, it.he || it.text, 'corpus');
+  // Per-line and per-word ids exactly as src/corpus/read.view.js requests them:
+  //   line: `<id>` when the record has one line, else `<id>-l<n>` (1-based); word: `<id>-w<n>` (1-based, counted across the record's lines).
+  // The Tetragrammaton is rendered with its spoken substitute, as the reader does.
+  const spoken = (w) => ([...w].filter((c) => c >= '\u05D0' && c <= '\u05EA').join('') === '\u05D9\u05D4\u05D5\u05D4' ? '\u05D0\u05B2\u05D3\u05B9\u05E0\u05B8\u05D9' : w);
+  for (const it of listItems(reg.data)) {
+    if (typeof it.he !== 'string' || !it.id) continue;
+    const lines = it.he.split('\n');
+    let wi = 0;
+    lines.forEach((line, li) => {
+      const words = line.split(/\s+/).filter((w) => HEB.test(w));
+      add('line', lines.length === 1 ? it.id : `${it.id}-l${li + 1}`, words.map(spoken).join(' '), 'corpus(line)');
+      for (const w of words) { wi += 1; add('word', `${it.id}-w${wi}`, spoken(w), 'corpus(word)'); }
+    });
+  }
   const les = readJson(root, 'data/curriculum/lessons.json');
   notes.push(les.note);
   for (const lesson of listItems(les.data)) {
@@ -97,8 +111,12 @@ export function buildEntries({ root = ROOT, existsFn } = {}) {
       for (const w of lesson[field] || []) {
         if (typeof w === 'string') {
           if (HEB.test(w)) add(kind, `${kind[0]}-${crypto.createHash('sha1').update(w).digest('hex').slice(0, 8)}`, w, 'curriculum(hash-id)');
-        } else if (w && typeof w === 'object') add(kind, w.id, w.he || w.text, 'curriculum');
+        } else if (w && typeof w === 'object' && w.id) add(kind, w.id, w.he || w.text, 'curriculum');
       }
+    }
+    // Lesson vocabulary has no ids in lessons.json: the app requests kind 'word', id `<lessonId>-w<n>` (1-based).
+    if (lesson.id && Array.isArray(lesson.words)) {
+      lesson.words.forEach((w, i) => { if (w && typeof w === 'object' && !w.id) add('word', `${lesson.id}-w${i + 1}`, w.he, 'curriculum(word)'); });
     }
   }
 

@@ -1,40 +1,56 @@
 /**
- * Lesson map view (Lane 1). mount(root, ctx) -> unmount.
- * ASSUMED ctx shape (lane 8 owns the real one): ctx.store.get(key)/set(key, value) (sync or Promise),
- * ctx.route(path), ctx.t(key), ctx.settings. Keys: "curriculum.progress" {completed:{id:ms}}, "srs.cards" {id: card}.
- * Lesson navigation target: ctx.route("/learn/<lessonId>") (route name is a proposal; lane 8 must wire it).
+ * Learn screen (Lane 1, wired by Lane 8). mount(root, ctx) -> unmount.
+ *   #/learn                          lesson map (two tracks, progress, due reviews, streak)
+ *   #/learn?lesson=<id>              one lesson (letters, vowels, words, prayer lines, audio, mark complete)
+ *   #/learn?review=1                 review of all due cards
+ *   #/learn?lesson=<id>&review=1     review of that lesson's cards
+ * ctx: {store (sync or async get/set), route(path), t(key), settings?, audio?, query?}.
+ * Storage keys: see progress.js.
  */
 import { lessons, belts } from "./lessons.js";
 import { due } from "./srs.js";
-import { el, heText, tr, storeGet, storeSet, PROGRESS_KEY, CARDS_KEY } from "./dom.js";
+import { el, heText, tr, replaceKeepingFocus } from "./dom.js";
+import { loadState, completeLesson } from "./actions.js";
+import { mountLesson } from "./lesson.view.js";
+import { mountReview } from "./review.view.js";
 
 export function mount(root, ctx) {
+  const q = ctx?.query || {};
+  if (q.review) return mountReview(root, ctx, { lessonId: q.lesson });
+  if (q.lesson) return mountLesson(root, ctx, q.lesson);
+  return mountMap(root, ctx);
+}
+
+function mountMap(root, ctx) {
   let alive = true;
-  let track = "read";
-  const wrap = el("section", { class: "alef-learn", "aria-labelledby": "alef-learn-h" });
+  const goal = ctx?.settings?.get?.("goal");
+  let track = goal === "israel" ? "israel" : "read";
+  const wrap = el("section", { class: "alef-learn", "aria-labelledby": "view-title" });
+  const h1 = el("h1", { id: "view-title", tabindex: "-1", class: "alef-h" }, tr(ctx, "learn.title", "Lessons"));
+  wrap.append(h1);
   root.append(wrap);
 
   async function render() {
-    const progress = await storeGet(ctx, PROGRESS_KEY, { completed: {} });
-    const cards = Object.values(await storeGet(ctx, CARDS_KEY, {}));
+    const st = await loadState(ctx);
     if (!alive) return;
-    const done = new Set(Object.keys(progress.completed || {}));
-    const dueCount = due(cards, Date.now()).length;
+    const done = new Set(Object.keys(st.completed));
+    const dueCount = due(Object.values(st.cards), Date.now()).length;
     const list = lessons.filter((l) => l.track === track);
     const doneInTrack = list.filter((l) => done.has(l.id)).length;
 
-    wrap.replaceChildren(
-      el("h1", { id: "alef-learn-h", class: "alef-h" }, tr(ctx, "learn.title", "Lessons")),
-      el("div", { class: "alef-tabs", role: "tablist", "aria-label": tr(ctx, "learn.tracks", "Tracks") },
+    replaceKeepingFocus(wrap, h1,
+      el("div", { class: "alef-tabs", role: "group", "aria-label": tr(ctx, "learn.tracks", "Tracks") },
         ...[["read", tr(ctx, "learn.track.read", "Read the siddur")], ["israel", tr(ctx, "learn.track.israel", "Speak in Israel")]].map(([id, label]) =>
-          el("button", { type: "button", role: "tab", class: "alef-tab", "aria-selected": String(track === id), id: `alef-tab-${id}`,
+          el("button", { type: "button", class: "alef-tab", "aria-pressed": String(track === id), id: `alef-tab-${id}`,
             onclick: () => { track = id; render(); } }, label))),
       el("p", { class: "alef-progress", role: "status" }, `${doneInTrack} / ${list.length} ${tr(ctx, "learn.lessonsDone", "lessons done")}`),
       el("p", { class: "alef-due", role: "status" }, dueCount
         ? `${dueCount} ${tr(ctx, "learn.dueReviews", "reviews due")}`
-        : tr(ctx, "learn.noDue", "No reviews due")),
+        : tr(ctx, "learn.noDue", "No reviews due"), " ",
+        dueCount ? el("a", { class: "btn", href: "#/learn?review=1" }, "Review now") : null),
+      el("p", { class: "alef-streak" }, st.streak.count ? `Streak: ${st.streak.count} day${st.streak.count === 1 ? "" : "s"}${st.streak.activeToday ? "" : " (learn today to keep it)"}` : "No streak yet. Finish a lesson or review a card to start one."),
       track === "read" ? beltStrip(done) : null,
-      el("ol", { class: "alef-lesson-list", role: "tabpanel", "aria-labelledby": `alef-tab-${track}` },
+      el("ol", { class: "alef-lesson-list", "aria-label": track === "read" ? "Reading lessons" : "Israel lessons" },
         ...list.map((l) => {
           const ready = l.prerequisites.every((p) => done.has(p));
           const isDone = done.has(l.id);
@@ -46,15 +62,10 @@ export function mount(root, ctx) {
             l.words[0] ? heText(l.words[0].he) : null, " ",
             el("button", { type: "button", class: "alef-btn", disabled: state === "locked" ? "" : null,
               "aria-label": `${state === "done" ? "Review" : "Start"} ${l.title}`,
-              onclick: () => ctx && ctx.route && ctx.route(`/learn/${l.id}`) }, state === "done" ? tr(ctx, "learn.review", "Review") : tr(ctx, "learn.start", "Start")),
+              onclick: () => ctx && ctx.route && ctx.route(`/learn?lesson=${l.id}`) }, state === "done" ? tr(ctx, "learn.review", "Review") : tr(ctx, "learn.start", "Start")),
             " ",
-            state === "available" ? el("button", { type: "button", class: "alef-btn alef-btn-secondary", "aria-label": `Mark ${l.title} complete`,
-              onclick: async () => {
-                const p = await storeGet(ctx, PROGRESS_KEY, { completed: {} });
-                p.completed = { ...(p.completed || {}), [l.id]: Date.now() };
-                await storeSet(ctx, PROGRESS_KEY, p);
-                render();
-              } }, tr(ctx, "learn.markDone", "Mark complete")) : null);
+            state === "available" ? el("button", { type: "button", class: "alef-btn alef-btn-secondary", "aria-label": `Mark complete: ${l.title}`,
+              onclick: async () => { await completeLesson(ctx, l); render(); } }, tr(ctx, "learn.markDone", "Mark complete")) : null);
         })));
   }
 

@@ -9,6 +9,10 @@ import { DEFAULTS, ENUMS, createSettings, validate } from '../src/shell/settings
 import { createStore, createMemoryStorage } from '../src/store.js';
 import { t, en } from '../src/shell/i18n.js';
 import { computeManifest } from '../tools/build-precache.mjs';
+import { build, findRootAbsolute } from '../tools/build-static.mjs';
+import { createAudio } from '../src/audio/player.js';
+import { createShellAudio, describeResult, summarizeManifest } from '../src/shell/audio.js';
+import { rmSync } from 'node:fs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const rd = (p) => readFileSync(join(root, p), 'utf8');
@@ -17,7 +21,7 @@ const json = (p) => JSON.parse(rd(p));
 const LETTERS = 'alef bet gimel dalet he vav zayin chet tet yod kaf lamed mem nun samekh ayin pe tsadi qof resh shin tav kaf-final mem-final nun-final pe-final tsadi-final'.split(' ');
 
 test('router table: every required route matches and params parse', () => {
-  const cases = { '#/': 'home', '#/learn': 'learn', '#/letters': 'letters', '#/letters/alef': 'letter', '#/sounds': 'sounds', '#/read': 'read', '#/read/abc': 'text', '#/scan': 'scan', '#/calendar': 'calendar', '#/settings': 'settings', '#/about': 'about', '': 'home' };
+  const cases = { '#/': 'home', '#/learn': 'learn', '#/letters': 'letters', '#/letters/alef': 'letter', '#/sounds': 'sounds', '#/read': 'read', '#/read/abc': 'text', '#/scan': 'scan', '#/calendar': 'calendar', '#/settings': 'settings', '#/about': 'about', '#/how': 'how', '#/welcome': 'welcome', '#/learn?lesson=r01&review=1': 'learn', '': 'home' };
   for (const [h, name] of Object.entries(cases)) assert.equal(matchRoute(h).route?.name, name, h);
   assert.equal(matchRoute('#/letters/kaf-final').params.id, 'kaf-final');
   assert.equal(matchRoute('#/read/x?y=1').query.y, '1');
@@ -35,7 +39,7 @@ test('router table: module files for lane 8 exist; others are in the contract pa
   }
 });
 test('settings defaults and validation', () => {
-  assert.deepEqual({ ...DEFAULTS }, { voice: 'f', congregation: 'sephardi', israelTrack: false, script: 'print', theme: 'auto', lat: null, lon: null });
+  assert.deepEqual({ ...DEFAULTS }, { voice: 'f', congregation: 'sephardi', israelTrack: false, script: 'print', theme: 'auto', lat: null, lon: null, goal: 'read', onboarded: false, browserVoiceAnyway: true });
   const s = createSettings(createStore({ storage: createMemoryStorage() }));
   assert.equal(s.congregation, 'sephardi');
   assert.deepEqual(s.set({ voice: 'x', lat: 200, script: 'cursive' }), ['voice', 'lat']);
@@ -129,4 +133,95 @@ ifFile('data/audio/manifest.json', (d) => {
 test('every data/**/*.json (not _build) parses', () => {
   const walk = (d) => readdirSync(d, { withFileTypes: true }).flatMap((e) => e.name.startsWith('_') ? [] : e.isDirectory() ? walk(join(d, e.name)) : e.name.endsWith('.json') ? [join(d, e.name)] : []);
   for (const f of walk(join(root, 'data'))) { try { JSON.parse(readFileSync(f, 'utf8')); } catch (e) { assert.fail(f + ': ' + e.message); } }
+});
+
+test('settings: goal and onboarding flags validate', () => {
+  const s = createSettings(createStore({ storage: createMemoryStorage() }));
+  assert.deepEqual(s.set({ goal: 'israel', onboarded: true, browserVoiceAnyway: false }), []);
+  assert.deepEqual(s.set({ goal: 'nope', onboarded: 'yes' }), ['goal', 'onboarded']);
+  assert.equal(s.goal, 'israel'); assert.equal(s.onboarded, true);
+});
+test('query deep link #/learn?lesson=<id>&review=1 parses', () => {
+  const m = matchRoute('#/learn?lesson=r05&review=1');
+  assert.equal(m.route.name, 'learn'); assert.deepEqual(m.query, { lesson: 'r05', review: '1' });
+});
+
+// ---- audio ids: every id the app requests resolves to a manifest entry (so the player can find its text) ----
+const manifest = json('data/audio/manifest.json');
+const fakeSpeech = { speak() {}, cancel() {} };
+const player = (voice = 'm', congregation = 'israeli') => createAudio({ settings: { voice, congregation }, manifest, speech: fakeSpeech, UtteranceCtor: class { constructor(t) { this.text = t; } } });
+test('audio manifest resolves corpus words/lines (reader ids) and lesson words (learn ids)', () => {
+  const a = player(); const missing = [];
+  for (const rec of json('data/corpus/registry.json').entries) {
+    const lines = rec.he.split('\n'); let wi = 0;
+    lines.forEach((line, li) => {
+      const id = lines.length === 1 ? rec.id : `${rec.id}-l${li + 1}`;
+      if (a.status('line', id).source === 'none') missing.push(['line', id]);
+      for (const w of line.split(/\s+/).filter((x) => /[א-ת]/.test(x))) { wi++; if (a.status('word', `${rec.id}-w${wi}`).source === 'none') missing.push(['word', `${rec.id}-w${wi}`]); }
+    });
+  }
+  for (const l of json('data/curriculum/lessons.json').lessons) {
+    l.words.forEach((_, i) => { if (a.status('word', `${l.id}-w${i + 1}`).source === 'none') missing.push(['word', `${l.id}-w${i + 1}`]); });
+    for (const id of l.prayerLines) { const r = json('data/corpus/registry.json').entries.find((e) => e.id === id); const lid = r.lines > 1 ? `${id}-l1` : id; if (a.status('line', lid).source === 'none') missing.push(['line', lid]); }
+  }
+  assert.deepEqual(missing.slice(0, 5), []);
+  assert.ok(manifest.every((e) => e.id !== 'undefined' && !e.path.includes('undefined')), 'no undefined ids');
+});
+test('Tetragrammaton lines/words are stored with the spoken substitute (Adonai) in the manifest', () => {
+  const e = manifest.find((x) => x.kind === 'word' && x.id === 'bless-priestly-1-w2' && x.voice === 'm' && x.tradition === 'israeli');
+  assert.equal(e.text, 'אֲדֹנָי');
+});
+test('shell audio: honest status text for tts, file and refusal; manifest summary', () => {
+  assert.match(describeResult({ source: 'tts-fallback', tradition: 'israeli' }).text, /text-to-speech voice, not a recording/);
+  assert.match(describeResult({ source: 'tts-fallback', tradition: 'sephardi', mismatch: true }).text, /reads Israeli pronunciation, not Sephardi/);
+  assert.match(describeResult({ source: 'file', voice: 'f', tradition: 'israeli', entryStatus: 'recorded' }).text, /recorded audio file \(woman, Israeli\)/);
+  assert.match(describeResult({ source: 'none', reason: 'no-hebrew-browser-voice' }).text, /no Hebrew voice/);
+  const s = summarizeManifest(manifest); assert.equal(s.recorded, 0); assert.equal(s.tts, 0); assert.equal(s.total, manifest.length);
+});
+test('shell audio: sephardi learner gets the labelled browser voice (not silence) unless they opt out', async () => {
+  const spoken = []; const speech = { speak(u) { spoken.push(u.text); setTimeout(() => u.onend(), 0); }, cancel() {} };
+  const mk = (anyway) => createShellAudio({ settings: { get: (k) => ({ voice: 'f', congregation: 'sephardi', browserVoiceAnyway: anyway })[k] }, manifest,
+    createAudio: (o) => createAudio({ ...o, speech, UtteranceCtor: class { constructor(t) { this.text = t; } } }) });
+  const on = mk(true); const seen = []; on.subscribe((st) => seen.push(st.mode));
+  await on.play('letter', 'alef');
+  assert.deepEqual(spoken, ['אָלֶף']); assert.equal(on.state.mode, 'tts'); assert.match(on.state.text, /not Sephardi/);
+  const off = mk(false); await off.play('letter', 'bet');
+  assert.equal(off.state.mode, 'none'); assert.match(off.state.text, /only reads Israeli pronunciation/);
+  assert.equal(off.has('letter', 'alef'), false, 'has() is true only for real files');
+});
+
+// ---- fonts ----
+test('fonts.css: every @font-face file exists, font-display swap, licence texts present', () => {
+  const css = rd('assets/css/fonts.css');
+  const faces = css.match(/@font-face[^}]+}/g); assert.equal(faces.length, 3);
+  for (const f of faces) { assert.match(f, /font-display:\s*swap/); const u = f.match(/url\("\.\.\/([^"]+)"\)/)[1]; assert.ok(existsSync(join(root, 'assets', u)), u); }
+  for (const l of ['heebo', 'frankruhllibre', 'gveretlevin', 'alef', 'notosanshebrew', 'notoserifhebrew']) assert.match(rd(`docs/licenses/OFL-${l}.txt`), /SIL OPEN FONT LICENSE Version 1\.1/i);
+  assert.match(rd('index.html'), /fonts\.css/);
+  assert.match(rd('assets/css/app.css'), /"Frank Ruhl Libre"/);
+});
+
+// ---- static build ----
+test('build-static: dist has the shell, woff2 fonts, no TTFs/tests/tools, precache matches, no root-absolute URLs', () => {
+  const r = build({ out: 'dist-test', base: '/alef/' });
+  try {
+    assert.deepEqual(r.problems, []);
+    const d = join(root, 'dist-test');
+    for (const f of ['index.html', 'sw.js', 'precache-manifest.js', 'manifest.webmanifest', '.nojekyll', '404.html', 'assets/fonts/web/frank-ruhl-libre.woff2', 'data/audio/manifest.json', 'src/shell/how.view.js']) assert.ok(existsSync(join(d, f)), f);
+    for (const f of ['assets/fonts/heebo-Heebo[wght].ttf', 'tools', 'tests', 'src/corpus/tools', 'data/images']) assert.ok(!existsSync(join(d, f)), 'should not ship ' + f);
+    const files = JSON.parse(readFileSync(join(d, 'precache-manifest.js'), 'utf8').match(/ALEF_PRECACHE = (\[[\s\S]*?\]);/)[1]);
+    for (const f of files) assert.ok(existsSync(join(d, f)), f);
+    assert.ok(files.includes('assets/fonts/web/heebo.woff2'));
+    assert.ok(!files.some((f) => f.endsWith('.ttf')));
+  } finally { rmSync(join(root, 'dist-test'), { recursive: true, force: true }); }
+});
+test('findRootAbsolute flags root-absolute URLs but not relative ones or protocol-relative', () => {
+  assert.equal(findRootAbsolute('a.html', '<link href="/assets/x.css">').length, 1);
+  assert.equal(findRootAbsolute('a.js', "fetch('/data/x.json')").length, 1);
+  assert.equal(findRootAbsolute('a.css', 'src: url(/f.woff2)').length, 1);
+  assert.equal(findRootAbsolute('a.html', '<link href="assets/x.css"><a href="#/x"><a href="//cdn.example/x">').length, 0);
+  assert.equal(findRootAbsolute('a.js', "fetch('data/x.json'); fetch(new URL('../x', import.meta.url))").length, 0);
+});
+test('shell pages exist for how/about/onboarding and index has the sound status bar', () => {
+  for (const f of ['how', 'about', 'onboarding']) assert.ok(existsSync(join(root, `src/shell/${f}.view.js`)));
+  assert.match(rd('index.html'), /id="sound-status"/);
 });

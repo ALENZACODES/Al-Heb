@@ -4,16 +4,24 @@ import { createSettings } from './shell/settings.js';
 import { createRouter, ROUTES, loadRouteModule } from './shell/router.js';
 import { t, tHe } from './shell/i18n.js';
 import { createStubAudio } from './shell/audio-stub.js';
+import { createShellAudio } from './shell/audio.js';
 import { h, heSpan, unavailableCard } from './shell/ui.js';
 
 const settings = createSettings(store);
 
 async function makeAudio() {
   try {
-    const m = await import('./audio/player.js');
-    if (typeof m.createAudio === 'function') return m.createAudio({ settings });
-  } catch { /* lane 4 not present: fall back */ }
+    const [m, res] = await Promise.all([import('./audio/player.js'), fetch('data/audio/manifest.json')]);
+    if (typeof m.createAudio !== 'function' || !res.ok) throw new Error('player or manifest unavailable');
+    return createShellAudio({ settings, manifest: await res.json(), createAudio: m.createAudio });
+  } catch (e) { console.warn('lane 4 audio player not used:', e?.message); }
   return createStubAudio({ settings });
+}
+function wireSoundStatus(audio) {
+  const el = document.getElementById('sound-status');
+  if (!el) return;
+  if (typeof audio.subscribe === 'function') audio.subscribe((s) => { el.textContent = s.text; el.dataset.mode = s.mode; });
+  else { el.textContent = "Sound: your browser's text-to-speech voice (fallback player). No recordings."; el.dataset.mode = 'tts'; }
 }
 
 // Install prompt (Chromium). Not supported on iOS Safari (Add to Home Screen is manual).
@@ -38,6 +46,7 @@ function renderNav(current) {
 
 let unmount = () => {};
 let navToken = 0;
+let firstShow = true; // do not steal focus on the initial page load (keyboard users start at the skip link)
 
 async function show(match, ctxBase) {
   const token = ++navToken;
@@ -50,6 +59,7 @@ async function show(match, ctxBase) {
     root.replaceChildren(h('section', { class: 'card' }, h('h1', { id: 'view-title', tabindex: '-1' }, t('notfound.title')), h('p', { class: 'mono' }, path), h('a', { class: 'btn', href: '#/' }, t('nav.home'))));
     renderNav(null); document.title = `${t('notfound.title')} - ALEF`; return finish();
   }
+  if (route.name === 'home' && !settings.get('onboarded')) { ctxBase.route('/welcome'); return; }
   renderNav(route.name);
   document.title = route.name === 'home' ? 'ALEF' : `${route.title} - ALEF`;
   const ctx = { ...ctxBase, params, query, path, routeName: route.name };
@@ -75,9 +85,15 @@ async function show(match, ctxBase) {
   finish();
 
   function finish() {
-    // focus management: move focus to the view heading, announce title, reset scroll
+    // Every screen needs a level-one heading and a focus target. Views should provide `<h1 id="view-title">`; if one does
+    // not (some lane views still don't), add a visually hidden one from the route title so screen readers have a heading.
+    if (!root.querySelector('h1')) {
+      root.prepend(h('h1', { id: 'view-title', class: 'visually-hidden', tabindex: '-1' }, route?.title ?? t('notfound.title')));
+    }
+    // focus management on navigation: move focus to the view heading, announce title, reset scroll
     const hd = root.querySelector('#view-title, h1');
-    if (hd) { if (!hd.hasAttribute('tabindex')) hd.setAttribute('tabindex', '-1'); hd.focus({ preventScroll: true }); }
+    if (hd && !firstShow) { if (!hd.hasAttribute('tabindex')) hd.setAttribute('tabindex', '-1'); hd.focus({ preventScroll: true }); }
+    firstShow = false;
     live.textContent = document.title;
     window.scrollTo(0, 0);
     document.body.dataset.route = route?.name ?? 'notfound';
@@ -86,9 +102,12 @@ async function show(match, ctxBase) {
 }
 
 async function boot() {
+  // The skip link's #main href would be read by the hash router as the route "/main"; focus <main> directly instead.
+  document.querySelector('.skip-link')?.addEventListener('click', (e) => { e.preventDefault(); document.getElementById('main')?.focus(); });
   applyTheme(); applyScript();
   settings.subscribe((_, changed) => { if (changed.includes('theme')) applyTheme(); if (changed.includes('script')) applyScript(); });
   const audio = await makeAudio();
+  wireSoundStatus(audio);
   let router;
   const ctxBase = { settings, store, audio, route: (p) => router.go(p), t, installPrompt };
   router = createRouter((m) => { show(m, ctxBase); });

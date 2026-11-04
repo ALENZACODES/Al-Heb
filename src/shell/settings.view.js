@@ -38,12 +38,15 @@ export function mount(root, ctx) {
     const url = URL.createObjectURL(new Blob([store.exportJSON()], { type: 'application/json' }));
     const a = h('a', { href: url, download: `alef-backup-${new Date().toISOString().slice(0, 10)}.json` }); document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
   } }, t('settings.export'));
-  const resetBtn = h('button', { type: 'button', class: 'btn secondary', onclick: () => { settings.reset(); mount(root, ctx); } }, t('settings.reset'));
+  const resetBtn = h('button', { type: 'button', class: 'btn secondary', onclick: () => { settings.reset(); settings.set({ onboarded: true }); mount(root, ctx); } }, t('settings.reset'));
 
   root.replaceChildren(h('article', { class: 'card' },
     h('h1', { id: 'view-title', tabindex: '-1' }, t('settings.title')),
+    h('p', { class: 'muted' }, 'No recorded voices exist yet: the Man/Woman choice is a saved preference. Sound currently comes from your browser\'s text-to-speech voice. See "How this works".'),
     radioGroup('voice', 'settings.voice'),
     radioGroup('congregation', 'settings.congregation'),
+    radioGroup('goal', 'settings.goal'),
+    h('div', { class: 'field' }, h('label', { class: 'opt', for: 's-bva' }, h('input', { type: 'checkbox', id: 's-bva', checked: settings.get('browserVoiceAnyway') ? true : null, onchange: (e) => settings.set({ browserVoiceAnyway: e.target.checked }) }), h('span', {}, t('settings.browserVoiceAnyway')))),
     h('div', { class: 'field' }, h('label', { class: 'opt', for: 's-israel' }, toggle, h('span', {}, t('settings.israelTrack')))),
     radioGroup('script', 'settings.script'),
     radioGroup('theme', 'settings.theme'),
@@ -52,7 +55,7 @@ export function mount(root, ctx) {
     h('fieldset', { class: 'field' }, h('legend', {}, t('settings.backup')),
       h('div', { class: 'row' }, exportBtn, h('label', { class: 'btn secondary', for: 's-import' }, t('settings.import')), fileInput),
       store.persistent ? null : h('p', { class: 'muted' }, t('settings.persist.no'))),
-    h('div', { class: 'row' }, resetBtn), status));
+    h('div', { class: 'row' }, resetBtn, h('a', { class: 'btn secondary', href: '#/welcome' }, t('settings.redo'))), status));
   return () => {};
 }
 void DEFAULTS;

@@ -1,0 +1,38 @@
+name: pages
+# Builds the static site (tools/build-static.mjs) and deploys it to GitHub Pages.
+# One-time setup in the repository: Settings -> Pages -> Build and deployment -> Source: "GitHub Actions".
+# NOT YET RUN: this workflow was written in an environment where nothing could be pushed, so it is untested on GitHub.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Tests (no dependencies to install)
+        run: node --test
+      - name: Build static site
+        # Project sites live at https://<user>.github.io/<repo>/ ; all URLs in the app are relative so no rewrite is needed.
+        run: node tools/build-static.mjs --base "/${GITHUB_REPOSITORY#*/}/"
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: dist }
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

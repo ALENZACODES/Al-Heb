@@ -1,10 +1,10 @@
 /**
  * Lesson graph (Lane 1). Data lives in data/curriculum/lessons.json; this module re-exports it with helpers.
- * Uses JSON import attributes (`with { type: "json" }`): Node >= 22, Chromium >= 123, Safari >= 17.2, Firefox >= 138.
- * Older browsers would need a fetch-based loader (not built).
+ * JSON is loaded with fetch (browser) or fs (Node) through ./data.js and top-level await, so the exports stay
+ * synchronous for importers. No JSON import attributes are used.
  */
-import data from "../../data/curriculum/lessons.json" with { type: "json" };
-import belts from "../../data/curriculum/belts.json" with { type: "json" };
+import { loadJSON } from "./data.js";
+const [data, belts] = await Promise.all([loadJSON("data/curriculum/lessons.json"), loadJSON("data/curriculum/belts.json")]);
 
 /** @type {Array<{id:string, track:"read"|"israel", level:string, title:string, letters:string[], vowels:string[], words:{he:string,en:string,translit:string|null,note?:string}[], prayerLines:string[], goals:string[], estMinutes:number, prerequisites:string[]}>} */
 export const lessons = data.lessons;

@@ -1,7 +1,8 @@
 /** Daily prompt selection (Lane 1). Deterministic rotation by day number; no randomness. */
-import prompts from "../../data/curriculum/prompts.json" with { type: "json" };
+import { loadJSON } from "./data.js";
 import { toRD, weekday } from "./calendar.js";
 
+const prompts = await loadJSON("data/curriculum/prompts.json");
 export { prompts };
 
 /**

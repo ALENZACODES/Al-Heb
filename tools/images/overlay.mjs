@@ -18,7 +18,7 @@ export const GLYPHS = {
 };
 export const LETTER_IDS = Object.keys(GLYPHS);
 export const STATES = ['outline', 'solid', 'silhouette'];
-export const FONT_STACK = "'Frank Ruhl Libre','Ezra SIL','SBL Hebrew','Noto Serif Hebrew','FreeSerif','DejaVu Serif',serif";
+export const FONT_STACK = "'Noto Serif Hebrew','Frank Ruhl Libre','Ezra SIL','SBL Hebrew','Noto Serif Hebrew','FreeSerif','DejaVu Serif',serif";
 
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 

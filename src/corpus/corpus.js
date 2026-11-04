@@ -58,7 +58,8 @@ export function letterInventory(he) {
 }
 
 /** Plain, serialisable corpus built from parsed JSON. */
-export function createCorpus(registry, phrasebook) {
+export function createCorpus(registry, phrasebook, extras = {}) {
+  const guide = extras.guide ?? null, prayerMeta = extras.prayerMeta?.entries ?? {}, gaps = extras.gaps?.gaps ?? [];
   const texts = (registry?.entries ?? []);
   const phrases = (phrasebook?.entries ?? []);
   const textById = new Map(texts.map((t) => [t.id, t]));
@@ -68,6 +69,12 @@ export function createCorpus(registry, phrasebook) {
   const lower = (s) => String(s ?? '').toLowerCase();
   return {
     registry, phrasebook,
+    /** Torah-service guide ({title, sections[], otherOccasions[]}) or null when the file is absent */
+    guide: () => guide,
+    /** per-prayer metadata (where in the service, delivery, denominations, plain-English line) or null */
+    prayerMeta: (id) => prayerMeta[textById.get(id)?.id ?? id] ?? null,
+    /** a gap from gaps.json (something the corpus does not contain) by id */
+    gap: (id) => gaps.find((g) => g.id === id) ?? null,
     /** by id or by an alias (earlier descriptive id) */
     getText: (id) => textById.get(id) ?? null,
     allTexts: () => texts.slice(),
@@ -122,6 +129,8 @@ export async function loadCorpus(opts = {}) {
     if (!r.ok) throw new Error(`corpus: ${name} -> HTTP ${r.status}`);
     return r.json();
   };
-  const [registry, phrasebook] = await Promise.all([readJson('registry.json'), readJson('phrasebook.json')]);
-  return createCorpus(registry, phrasebook);
+  // guide, per-prayer metadata and gaps are optional: the reader still works without them
+  const optional = (name) => readJson(name).catch(() => null);
+  const [registry, phrasebook, guide, prayerMeta, gaps] = await Promise.all([readJson('registry.json'), readJson('phrasebook.json'), optional('torah-service-guide.json'), optional('prayer-meta.json'), optional('gaps.json')]);
+  return createCorpus(registry, phrasebook, { guide, prayerMeta, gaps });
 }

@@ -1,0 +1,132 @@
+#!/usr/bin/env node
+// DRY-RUN TTS cost plan. Never calls any API (this file imports no network code and no provider adapter).
+//   node tools/audio/cost_plan.mjs            print the plan
+//   node tools/audio/cost_plan.mjs --write    write docs/voices/tts-cost-plan.md
+//   node tools/audio/cost_plan.mjs --check    exit 1 if that file is stale
+//   node tools/audio/cost_plan.mjs --json     machine-readable
+// Inputs: data/audio/manifest.json (character counts), data/audio/tts-prices.json (prices with per-row verified flags), data/vocab/words.json (optional tier).
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
+export const CONTINGENCY = 0.25; // assumption: 25% of clips re-rendered after the listening test / pronunciation fixes
+const usd = (n) => (n < 10 ? `$${n.toFixed(2)}` : `$${Math.round(n).toLocaleString('en-US')}`);
+const lettersOnly = (t) => [...String(t)].filter((c) => (c >= 'א' && c <= 'ת') || c === ' ').length;
+const codePoints = (t) => [...String(t)].length;
+
+export const SCENARIOS = [
+  { id: 'core', label: 'Core: lesson words + phrasebook + mnemonic anchors', groups: ['lesson-word', 'phrasebook', 'anchor-word'] },
+  { id: 'core+prayers', label: 'Core + prayer lines + prayer words', groups: ['lesson-word', 'phrasebook', 'anchor-word', 'prayer-line', 'prayer-word'] },
+];
+
+/** Israeli-tradition entries only (no TTS offers other traditions), one voice's worth, required clips only. */
+export function scenarioText(manifest, sc, voice = 'm') {
+  return manifest.filter((e) => e.voice === voice && e.tradition === 'israeli' && sc.groups.includes(e.group) && !e.optional && !e.aliasOf).map((e) => e.text);
+}
+export function vocabTexts(root = ROOT) {
+  const p = path.join(root, 'data/vocab/words.json');
+  if (!fs.existsSync(p)) return null;
+  const d = JSON.parse(fs.readFileSync(p, 'utf8'));
+  return (d.words || []).map((w) => w.he).filter(Boolean);
+}
+
+export function count(texts) { return { clips: texts.length, charsWithNiqqud: texts.reduce((a, t) => a + codePoints(t), 0), charsLettersOnly: texts.reduce((a, t) => a + lettersOnly(t), 0) }; }
+
+/** Cost of rendering `chars` characters (both voices already included by caller) at one price row. Free tier applied once (single month). */
+export function priceRow(chars, usdPerM, freeChars = 0) {
+  const billable = Math.max(0, chars - freeChars);
+  return { list: (chars / 1e6) * usdPerM, afterFreeTier: (billable / 1e6) * usdPerM };
+}
+
+export function elevenPlanCost(chars, plans) {
+  let best = null;
+  for (const p of plans) {
+    if (!p.usdPerMonth) continue;
+    const months = Math.ceil(chars / p.includedCharsV4);
+    const cost = months * p.usdPerMonth;
+    if (!best || cost < best.cost) best = { plan: p.name, months, cost };
+  }
+  return best;
+}
+
+export function buildPlan(manifest, prices, vocab) {
+  const out = { contingency: CONTINGENCY, scenarios: [] };
+  const scs = SCENARIOS.map((s) => ({ ...s, texts: scenarioText(manifest, s, 'm') }));
+  if (vocab) scs.push({ id: 'core+prayers+vocab', label: 'Core + prayers + vocabulary packs (data/vocab, 6k+ items; NOT in the audio manifest, no screen plays them yet)', groups: [], texts: [...scenarioText(manifest, SCENARIOS[1], 'm'), ...vocab] });
+  for (const s of scs) {
+    const one = count(s.texts);
+    const voices = 2; // man + woman, same text each
+    const chars = { withNiqqud: one.charsWithNiqqud * voices, lettersOnly: one.charsLettersOnly * voices };
+    const withCont = { withNiqqud: Math.ceil(chars.withNiqqud * (1 + CONTINGENCY)), lettersOnly: Math.ceil(chars.lettersOnly * (1 + CONTINGENCY)) };
+    const rows = [];
+    for (const [pid, p] of Object.entries(prices.providers)) {
+      for (const r of p.rows) {
+        const free = r.freeCharsPerMonth ?? (p.freeTier ? p.freeTier.charsPerMonth : 0);
+        const hi = priceRow(withCont.withNiqqud, r.usdPerMillionChars, free);
+        const lo = priceRow(withCont.lettersOnly, r.usdPerMillionChars, free);
+        rows.push({ provider: pid, row: r.id, label: r.label, usdPerMillionChars: r.usdPerMillionChars, priceVerified: !!r.verified, freeCharsPerMonth: free,
+          costHigh: hi.list, costLow: lo.list, costHighAfterFree: hi.afterFreeTier, costLowAfterFree: lo.afterFreeTier });
+      }
+    }
+    const e = prices.providers.elevenlabs;
+    const plan = {
+      high: elevenPlanCost(withCont.withNiqqud, e.plans),
+      low: elevenPlanCost(withCont.lettersOnly, e.plans),
+    };
+    out.scenarios.push({ id: s.id, label: s.label, clipsPerVoice: one.clips, charsPerVoice: { withNiqqud: one.charsWithNiqqud, lettersOnly: one.charsLettersOnly }, charsBothVoices: chars, charsBothVoicesWithContingency: withCont, rows, elevenlabsPlans: plan });
+  }
+  return out;
+}
+
+export function renderMarkdown(plan, prices) {
+  const L = ['# TTS cost plan (dry run)', '',
+    'Generated by `node tools/audio/cost_plan.mjs --write`. Do not edit by hand.', '',
+    '**Nothing here was rendered or bought. No TTS API was called (no credentials exist in this repo/session), and no TTS audio exists.** Prices come from data/audio/tts-prices.json, where each row carries a `verified` flag: true only if the figure was seen on a fetched page or API response on ' + prices.fetchedAt + '.', '',
+    '## Scope and assumptions', '',
+    '- Israeli tradition only. No provider offers Ashkenazi or Sephardi liturgical pronunciation, so those traditions are a human-recording task (docs/voices/kit/).',
+    '- Isolated letter sounds, letter/vowel names and syllables are excluded: they default to human recording (docs/voices/tts-evaluation-protocol.md).',
+    '- Both voices (man and woman) render the same text, so characters are doubled. A 25% re-render contingency is added (assumption).',
+    '- Two character counts: "with niqqud" counts every Unicode code point sent (pointed text). "letters only" counts Hebrew letters and spaces, a lower bound in case a provider does not bill combining marks. How each provider actually bills marks is NOT verified (Google says only that every character in the input string counts).',
+    '- Free tiers are monthly. The "after free tier" column subtracts one month of the free allowance; spreading renders over several months would reduce cost further.',
+    '- Quality is unproven: nothing here says any provider pronounces pointed Hebrew correctly. The listening test comes first.', ''];
+  const maxCost = Math.max(...plan.scenarios.flatMap((s) => s.rows.map((r) => r.costHigh)));
+  L.splice(L.indexOf('## Scope and assumptions'), 0, `**Takeaway: at list price the highest figure in this plan is ${usd(maxCost)} (largest scenario, most expensive per-character tier, before free tiers). Characters are not the constraint; pronunciation quality, the listening test and licensing are.**`, '');
+  for (const s of plan.scenarios) {
+    L.push(`## ${s.label}`, '',
+      `Per voice: ${s.clipsPerVoice} clips, ${s.charsPerVoice.withNiqqud.toLocaleString('en-US')} characters with niqqud (${s.charsPerVoice.lettersOnly.toLocaleString('en-US')} letters only). Both voices plus 25% contingency: ${s.charsBothVoicesWithContingency.withNiqqud.toLocaleString('en-US')} (${s.charsBothVoicesWithContingency.lettersOnly.toLocaleString('en-US')} letters only).`, '',
+      '| provider / tier | US$ per 1M chars | price verified | free chars / month | cost range, list price | cost range after one free month |', '|---|---:|---|---:|---:|---:|');
+    for (const r of s.rows) L.push(`| ${r.provider}: ${r.label} | ${r.usdPerMillionChars} | ${r.priceVerified ? 'yes' : 'NO'} | ${r.freeCharsPerMonth ? r.freeCharsPerMonth.toLocaleString('en-US') : '0'} | ${usd(r.costLow)} to ${usd(r.costHigh)} | ${usd(r.costLowAfterFree)} to ${usd(r.costHighAfterFree)} |`);
+    const pl = s.elevenlabsPlans;
+    if (pl.low && pl.high) L.push('', `ElevenLabs subscription alternative (included characters are for v4 and vary by model; plan table verified on the pricing page): cheapest plan to cover the range is about ${usd(pl.low.cost)} (${pl.low.plan} x ${pl.low.months} month${pl.low.months > 1 ? 's' : ''}) to ${usd(pl.high.cost)} (${pl.high.plan} x ${pl.high.months} month${pl.high.months > 1 ? 's' : ''}). Commercial rights apply only to output generated under a paid plan (per the notes, not re-verified).`);
+    L.push('');
+  }
+  L.push('## What was and was not verified', '',
+    '- Verified on fetched pages/API (2026-11-03): Google per-character prices and free tiers for Chirp 3 HD, WaveNet, Neural2, and Google\'s character-counting rule; Azure per-million prices via the Azure Retail Prices API (Neural $15, Neural HD $22) and the 0.5M-character F0 free tier on the Azure pricing page; ElevenLabs API per-1K prices, plan table, and Hebrew support on v3/v4 only.',
+    '- NOT verified: that the named he-IL Azure/Google voices bill at the rows used here; whether any engine honours or bills niqqud; Hebrew availability on Google WaveNet/Neural2; redistribution rights of output; discounts, taxes, currency.',
+    '- The Azure pricing web page itself rendered no USD amounts in our fetch ("Pricing is not available in the selected region"); the USD figures are from the official Retail Prices REST API response.',
+    '- Human recording cost is unknown: no quotes exist (docs/voices/casting-brief.md). Booth-hour estimates for talent are in docs/voices/kit/ and are unmeasured assumptions.', '');
+  return L.join('\n');
+}
+
+export function load(root = ROOT) {
+  const manifest = JSON.parse(fs.readFileSync(path.join(root, 'data/audio/manifest.json'), 'utf8'));
+  const prices = JSON.parse(fs.readFileSync(path.join(root, 'data/audio/tts-prices.json'), 'utf8'));
+  return { manifest, prices, vocab: vocabTexts(root) };
+}
+
+export function main(argv = process.argv.slice(2)) {
+  const { manifest, prices, vocab } = load();
+  const plan = buildPlan(manifest, prices, vocab);
+  const md = renderMarkdown(plan, prices);
+  const target = path.join(ROOT, 'docs/voices/tts-cost-plan.md');
+  if (argv.includes('--json')) { console.log(JSON.stringify(plan, null, 1)); return; }
+  if (argv.includes('--check')) {
+    const cur = fs.existsSync(target) ? fs.readFileSync(target, 'utf8') : '';
+    if (cur !== md) { console.error('docs/voices/tts-cost-plan.md is stale; run: node tools/audio/cost_plan.mjs --write'); process.exit(1); }
+    console.log('tts-cost-plan.md is current'); return;
+  }
+  if (argv.includes('--write')) { fs.writeFileSync(target, md); console.log('wrote docs/voices/tts-cost-plan.md'); return; }
+  console.log(md);
+}
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main();

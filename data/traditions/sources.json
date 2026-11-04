@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "description": "References behind data/traditions/*.json. Every fact in this lane is a paraphrase written for ALEF; no sentences were copied. 'fetched' is the date a page was read in this build session (an AI agent read the text through a fetch tool). 'coverage' says how much of the page was read, because some pages were long.",
+  "licenceNote": "Wikipedia article text is CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). We copy no wording, only facts, and cite each page. If you treat the paraphrased notes in sounds.json as adaptations, they are offered under the same CC BY-SA 4.0 licence with attribution to the pages listed here; that is a precaution, not a legal opinion. Pealim, Chabad.org and the BJPA paper are NOT openly licensed: they are cited by URL only, as references a reader can open.",
+  "sources": [
+    {
+      "id": "wp-sephardi",
+      "title": "Sephardi Hebrew (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew",
+      "publisher": "Wikipedia contributors",
+      "licence": "CC BY-SA 4.0 (text); paraphrased only",
+      "open": true,
+      "fetched": "2026-11-03",
+      "coverage": "whole page summarised by the fetch tool",
+      "supports": "pharyngeal ayin and het among several Sephardi communities; Western Sephardim use a nasal for ayin; alveolar r; tav as t in standard Sephardi and Israeli, th in Greek and some Mizrahi groups; popular speech does not separate patah and kamatz gadol; tsere and holam are plain e and o; shva na read as e; Israeli Hebrew dropped the pharyngeals and shifted resh"
+    },
+    {
+      "id": "wp-ashkenazi",
+      "title": "Ashkenazi Hebrew (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew",
+      "publisher": "Wikipedia contributors",
+      "licence": "CC BY-SA 4.0 (text); paraphrased only",
+      "open": true,
+      "fetched": "2026-11-03",
+      "coverage": "whole page summarised by the fetch tool",
+      "supports": "unaccented tav as s; kamatz gadol as a back rounded vowel (o or aw), u in southern dialects; cholam and tsere regional values; traditional penultimate stress with final stress promoted for Torah reading; ayin, het and alef silent in most forms; resh varies by dialect; Israeli Hebrew was meant to follow Sephardi values but absorbed some Ashkenazi features; Yemenite keeps kamatz and patah apart but not patah and segol"
+    },
+    {
+      "id": "wp-mhp",
+      "title": "Modern Hebrew phonology (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology",
+      "publisher": "Wikipedia contributors",
+      "licence": "CC BY-SA 4.0 (text); paraphrased only",
+      "open": true,
+      "fetched": "2026-11-03",
+      "coverage": "whole page summarised by the fetch tool",
+      "supports": "older Oriental (Mizrahi) speakers often keep pharyngeal het and, less commonly, ayin; general Israeli ayin merged into the glottal stop; het merged with khaf for most; qof merged into k; resh uvular for nearly all Israeli Jews, alveolar trill often kept by immigrants from Arabic-speaking countries; five-vowel system with no audible length contrast; stress final or penultimate and now meaning-bearing; Standard Israeli based on Sephardi Hebrew"
+    },
+    {
+      "id": "wp-yemenite",
+      "title": "Yemenite Hebrew (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Yemenite_Hebrew",
+      "publisher": "Wikipedia contributors",
+      "licence": "CC BY-SA 4.0 (text); paraphrased only",
+      "open": true,
+      "fetched": "2026-11-03",
+      "coverage": "first 100,000 of 124,343 characters",
+      "supports": "pharyngeal het and ayin; gimel without dagesh as a voiced throat fricative and with dagesh as j; tav raphe as th; dalet raphe as dh; patah and segol sound alike; penultimate stress claim is tagged 'citation needed' on the page, so ALEF does not rely on it"
+    },
+    {
+      "id": "pealim",
+      "title": "Pronunciations of Hebrew (Pealim.com article)",
+      "url": "https://www.pealim.com/articles/pronunciations-of-hebrew/",
+      "publisher": "Pealim.com",
+      "licence": "not openly licensed; cited by URL, facts paraphrased",
+      "open": false,
+      "fetched": "2026-11-03",
+      "coverage": "whole page summarised by the fetch tool; page does not discuss ayin",
+      "supports": "tav t versus s; kamatz, cholam, tsere values in Ashkenazi versus Sephardi/Israeli; Ashkenazi stress usually penultimate except in public religious readings; het versus khaf and qof versus kaf still distinct in some Mizrahi or Georgian liturgical traditions; traditional pronunciations survive mainly in synagogues and religious schools"
+    },
+    {
+      "id": "chabad",
+      "title": "The Difference Between Sepharadic and Ashkenazic Pronunciation (Chabad.org)",
+      "url": "https://www.chabad.org/library/article_cdo/aid/3549013/jewish/The-Difference-Between-Sepharadic-and-Ashkenazic-Pronunciation.htm",
+      "publisher": "Chabad.org",
+      "licence": "not openly licensed; cited by URL, facts paraphrased",
+      "open": false,
+      "fetched": "2026-11-03",
+      "coverage": "whole page summarised by the fetch tool; page does not discuss stress",
+      "supports": "unaccented tav; kamatz versus patach; cholam; tsere and segol; Sephardim distinguish alef/ayin and het/khaf, Ashkenazim generally do not; many variants inside each grouping; modern Hebrew read with 'Sepharadic' values by many Jews of both backgrounds; the page says all dialects are acceptable"
+    },
+    {
+      "id": "benor",
+      "title": "Survey of Jewish English and Hebrew usage, popular paper (Benor and Cohen, via BJPA)",
+      "url": "https://www.bjpa.org/content/upload/bjpa/c__w/Survey%20popular%20paper%20final.pdf",
+      "publisher": "Berman Jewish Policy Archive",
+      "licence": "not openly licensed; cited by URL, facts paraphrased",
+      "open": false,
+      "fetched": "2026-11-03",
+      "coverage": "whole PDF summarised by the fetch tool",
+      "supports": "for the single word 'Festival of Booths', Reform, Reconstructionist and Conservative respondents more often chose the Israeli form while Orthodox and Black Hat respondents more often chose the Ashkenazic form; self-reported, snowball sample, not representative of all American Jews, one or two example words only; many people use both forms depending on audience"
+    },
+    {
+      "id": "lane3",
+      "title": "ALEF data/pronunciation (lane 3, in this repository)",
+      "url": "data/pronunciation/consonants.json",
+      "publisher": "ALEF project",
+      "licence": "project data; marked unreviewed by a native speaker",
+      "open": true,
+      "fetched": "2026-11-03",
+      "coverage": "read in full",
+      "supports": "American-synagogue habits (English r, ch for chet, long vowels) are the project's own inference, not a published measurement"
+    },
+    {
+      "id": "own",
+      "title": "Project inference (no outside source)",
+      "url": "",
+      "publisher": "ALEF project",
+      "licence": "n/a",
+      "open": true,
+      "fetched": "2026-11-03",
+      "coverage": "n/a",
+      "supports": "statements the project wrote itself and could not tie to a fetched page; always shown with low confidence"
+    }
+  ]
+}

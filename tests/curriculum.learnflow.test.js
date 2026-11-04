@@ -82,7 +82,10 @@ test("review deep link: queue from completed lesson, reveal, keyboard rating, pe
   const rated = Object.values(store.m["srs.cards"]).filter((c) => c.reps === 1);
   assert.equal(rated.length, 1); assert.equal(rated[0].state, "review");
   // finish the rest with clicks: 1 Again, 2 Hard, 4 Easy mix
-  for (const k of ["1", "2", "4", "3", "3"]) { await btn(root, /Show answer/).click(); await root.find((n) => n.attrs["data-rating"] === k)[0].click(); await tick(); }
+  for (const k of ["1", "2", "4", "3", "3"]) { await btn(root, /Show answer/).click(); await root.find((n) => n.attrs["data-rating"] === k)[0].click(); await tick();
+    const panel = root.find((n) => n.attrs["data-hint-kind"]);
+    if (k === "1") { /* a hint may follow the learner's own miss; it must be dismissible */ if (panel.length) await btn(root, /Continue/).click(); await tick(); }
+    else assert.equal(panel.length, 0, "no hint after a non-miss rating"); }
   assert.doesNotMatch(root.text, /null|undefined/);
   assert.match(root.text, /Session done/); assert.match(root.text, /6 cards reviewed: 1 again, 1 hard, 3 good, 1 easy/);
   assert.match(root.text, /Streak: 1 day/);

@@ -40,3 +40,56 @@ export async function rateCard(ctx, cardId, rating, now = Date.now()) {
   await storeSet(ctx, STREAK_KEY, recordActivity(st.rawStreak, now));
   return next;
 }
+
+// ---- practice features: hints, loanwords, Spot It, checkpoint (storage keys documented in docs/curriculum/onramp-drills-dialogues.md)
+import { HINTS_KEY, newHintSession, dismissHint } from "./hints.js";
+import { lapseLetters, applyCheckpointToCards } from "./checkpoint.js";
+export const PAIRS_KEY = "curriculum.pairs";             // { "bet|kaf": { errors, trials } }
+export const LOANWORDS_KEY = "curriculum.loanwords";     // { [wordId]: { knew:boolean, at:ms } }
+export const CHECKPOINTS_KEY = "curriculum.checkpoints"; // { [stage]: { right, total, at } }
+
+const sessions = new WeakMap();
+/** In-memory hint session for this page load, seeded with the persisted "Got it" suppressions. */
+export async function hintSession(ctx) {
+  const key = ctx?.store && typeof ctx.store === "object" ? ctx.store : sessions;
+  if (!sessions.has(key)) sessions.set(key, newHintSession(await storeGet(ctx, HINTS_KEY, [])));
+  return sessions.get(key);
+}
+export async function suppressHint(ctx, kind) {
+  const s = await hintSession(ctx);
+  await storeSet(ctx, HINTS_KEY, dismissHint(s, kind));
+}
+/** Letters whose cards a completed lesson list teaches (read track). */
+export function taughtFromCompleted(completed, lessonList) {
+  const done = new Set(Object.keys(completed || {}));
+  return new Set(lessonList.filter((l) => done.has(l.id)).flatMap((l) => l.letters));
+}
+export async function markLoanword(ctx, wordId, knew, now = Date.now()) {
+  const m = await storeGet(ctx, LOANWORDS_KEY, {});
+  await storeSet(ctx, LOANWORDS_KEY, { ...m, [wordId]: { knew, at: now } });
+}
+/** Save a Spot It result: pair accuracy, and lapse the target and the decoys that fooled the learner. */
+export async function saveSpotIt(ctx, model, score, now = Date.now()) {
+  const pairs = await storeGet(ctx, PAIRS_KEY, {});
+  const next = { ...pairs };
+  const decoyBases = new Set(model.decoyIndices.map((i) => model.cells[i].base));
+  for (const b of decoyBases) {
+    const k = [model.targetId, b].sort().join("|");
+    next[k] = { errors: (next[k]?.errors || 0) + (score.pairErrors[k] || 0), trials: (next[k]?.trials || 0) + 1 };
+  }
+  await storeSet(ctx, PAIRS_KEY, next);
+  const fooled = Object.keys(score.fooledBy);
+  if (fooled.length) {
+    const st = await loadState(ctx, now);
+    await storeSet(ctx, CARDS_KEY, lapseLetters(st.cards, [model.targetId, ...fooled], now));
+  }
+  const st2 = await loadState(ctx, now);
+  await storeSet(ctx, STREAK_KEY, recordActivity(st2.rawStreak, now));
+}
+export async function saveCheckpoint(ctx, stage, qs, answers, result, now = Date.now()) {
+  const st = await loadState(ctx, now);
+  await storeSet(ctx, CARDS_KEY, applyCheckpointToCards(st.cards, qs, answers, now));
+  const prev = await storeGet(ctx, CHECKPOINTS_KEY, {});
+  await storeSet(ctx, CHECKPOINTS_KEY, { ...prev, [stage]: { right: result.right, total: result.total, at: now } });
+  await storeSet(ctx, STREAK_KEY, recordActivity(st.rawStreak, now));
+}

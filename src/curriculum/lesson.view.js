@@ -47,6 +47,16 @@ export function mountLesson(root, ctx, lessonId) {
           el("div", { class: "alef-item-actions" }, playButton(ctx, "letter", id, `Listen to ${L?.name || id}`, note),
             el("a", { class: "alef-link", href: `#/letters/${id}`, "aria-label": `Trace ${L?.name || id}` }, "Trace")));
       }))));
+    const hooks = lesson.letters.map((id) => c.mnemonics?.get(id)).filter(Boolean);
+    if (hooks.length) parts.push(section("l-remember", "Remember it",
+      el("p", { class: "muted" }, "Memory hooks written for this course (a draft; the stories are teaching aids, not history)."),
+      el("ul", { class: "alef-items" }, ...hooks.map((m) => el("li", { class: "alef-item alef-hook" },
+        el("div", { class: "alef-item-body" }, el("strong", {}, m.name),
+          el("p", {}, m.shape), el("p", {}, m.story),
+          el("p", {}, "Sound: ", m.sound, ". Anchor word: ", heText(m.word, "alef-he alef-word"), ` (${m.wordSound}, "${m.wordMeaning}")`),
+          m.lookalike ? el("p", { class: "muted" }, "Watch out: " + m.lookalike) : null))))));
+    if (lesson.letters.length) parts.push(el("p", { class: "row" }, ...lesson.letters.map((id) =>
+      el("a", { class: "btn secondary", href: `#/learn?spotit=${id}` }, `Spot It: ${c.letters.get(id)?.name || id}`))));
     if (lesson.vowels.length) parts.push(section("l-vowels", "Vowels and marks", el("ul", { class: "alef-items" },
       ...lesson.vowels.map((id) => {
         const V = c.vowels.get(id);

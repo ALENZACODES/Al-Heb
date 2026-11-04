@@ -8,9 +8,9 @@
  *   "streak"               { count, best, last }         last = local day key "YYYY-MM-DD"
  *
  * Card ids: "letter:<letterId>", "vowel:<vowelId>", "word:<lessonId>:<n>" (n is 1-based and equals the audio id
- * "<lessonId>-w<n>"). Prayer lines are not scheduled as cards (they are read in the Read view).
+ * "<lessonId>-w<n>"). Round 4 adds "syllable:<id>", "line:<corpusId>" (fade-out recall, extra field fadeLevel) and "gender:<pairId>" cards; lessons still schedule no prayer lines.
  */
-import { newCard, due, interleave } from "./srs.js";
+import { newCard, due, interleave, review } from "./srs.js";
 
 export const letterCardId = (id) => `letter:${id}`;
 export const vowelCardId = (id) => `vowel:${id}`;
@@ -21,9 +21,30 @@ export const wordAudioId = (lessonId, n) => `${lessonId}-w${n}`;
 export function parseCardId(id) {
   const m = /^(letter|vowel):(.+)$/.exec(id);
   if (m) return { kind: m[1], key: m[2] };
+  const x = /^(syllable|line|gender):(.+)$/.exec(id);
+  if (x) return { kind: x[1] === "line" ? "prayerLine" : x[1], key: x[2] };
   const w = /^word:([^:]+):(\d+)$/.exec(id);
   if (w) return { kind: "word", key: id, lessonId: w[1], n: Number(w[2]) };
   return null;
+}
+
+export const syllableCardId = (id) => `syllable:${id}`;
+export const lineCardId = (id) => `line:${id}`;
+export const genderCardId = (id) => `gender:${id}`;
+
+/**
+ * Apply exercise outcomes to SRS cards (pure, does not mutate). outcome = { id, kind, good, create? }.
+ * A miss creates the card if needed and lapses it (rating 1). A hit is a Good review (rating 3) of an existing card,
+ * or of a new card when `create` is true.
+ */
+export function applyOutcomesToCards(cards, outcomes, now) {
+  const out = { ...cards };
+  for (const o of outcomes) {
+    const have = out[o.id];
+    if (!have && o.good && !o.create) continue;
+    out[o.id] = review(have || newCard({ id: o.id, kind: o.kind, now }), o.good ? 3 : 1, now);
+  }
+  return out;
 }
 
 /** Card descriptors a lesson teaches. */

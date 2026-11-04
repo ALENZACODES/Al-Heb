@@ -43,7 +43,20 @@ Window = **[candle lighting, havdalah]** for the Friday/Saturday containing the 
 
 Checked values (tests): Toronto 2026-11-06 start 16:43, end 17:45 local, the same minutes the calendar lane cross-checked against Hebcal on 2026-11-03/04. Jerusalem with 40 minutes: Friday 14:30Z (16:30 local) is quiet, 13:30Z is not.
 
-Not covered: **yom tov** (holidays) are not quiet; only Shabbat. The calendar's holiday list exists (`holidaysBetween`) and could be added with the same window shape (eve sunset minus offset to end-of-holiday havdalah), but it is not done, and the card does not claim it.
+### Yom Tov quiet hours
+
+Same window shape as Shabbat, per run of festival days: **eve sunset minus the candle offset, to nightfall of the run's last day** (same havdalah choice: 8.5 degrees or N minutes after sunset). Source of the days: `holidaysBetween` in `src/curriculum/calendar.js`, kind "major", at the learner's observance (`calendar.prefs.observance`):
+
+| Festival | Reform (default, 1 day) | Traditional diaspora | Israel mode |
+|---|---|---|---|
+| Rosh Hashanah | 1 Tishrei | 1 and 2 Tishrei | 1 and 2 Tishrei (the calendar lists two) |
+| Yom Kippur | 10 Tishrei | same | same |
+| Sukkot | first day (15 Tishrei) | first two days | first day |
+| Shemini Atzeret / Simchat Torah | 22 Tishrei | 22 and 23 Tishrei | 22 Tishrei |
+| Pesach | first and last day (15 and 21 Nisan) | first two and last two (15-16, 21-22 Nisan) | first and last day |
+| Shavuot | 6 Sivan | 6 and 7 Sivan | 6 Sivan |
+
+Never quiet: Chol HaMoed (middle days of Sukkot and Pesach), Hanukkah, Purim, Tisha B'Av and other fasts, Rosh Chodesh, modern Israeli days. The optional second day of Rosh Hashanah shown under Reform is not quiet unless the learner picks the traditional or Israel observance. Israel-mode Pesach/Shavuot single days follow the calendar's own list, which has not been checked against an Israeli rabbinate calendar. The `verified` flags in the calendar data apply: Yom Kippur, Sukkot and Shavuot day counts are "inferred", not source-checked. Tests (tests/notify.test.js) pin Rosh Hashanah 2026 (Fri 11 Sep eve, Toronto start 19:16 local) and Sukkot 2026 (first day Sat 26 Sep; Sun 27 Sep is not quiet); they check our own window against our own calendar, not against an external calendar.
 
 If every chosen slot in the next 15 days is quiet (for example "Saturdays at noon"), nothing is scheduled and the card says "No reminder in the next two weeks".
 

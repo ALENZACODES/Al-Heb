@@ -14,8 +14,9 @@
  */
 import {
   toRD, fromRD, isoDate, parseISO, weekday, addDays, sunset, havdalah, floorToMinute, roundToMinute,
-  holidaysBetween, formatTime, toHebrew, HEBREW_MONTH_NAMES,
+  holidaysBetween, formatTime, toHebrew, HEBREW_MONTH_NAMES, sunTime,
 } from "./calendar.js";
+import { yomTovDates } from "./streak.js";
 import { parshaOnShabbat } from "./calendar.parsha.js";
 import { prayerCard } from "./calendar.prayer.js";
 import { resolveLocation } from "./calendar.locations.js";
@@ -45,28 +46,43 @@ export function buildReminders(prefs, fromISO, toISO, opt = {}) {
   if (needsLoc && !loc) notes.push("No location set: candle-lighting and havdalah reminders were skipped.");
 
   const hols = holidaysBetween(isoDate(addDays(from, -1)), isoDate(addDays(to, 1)), { mode: prefs.observance, roshChodesh: prefs.remind.roshChodesh });
-  const eveNames = new Map(); // ISO date -> [names] for yom tov eves (major festivals only)
-  for (const h of hols) if (h.kind === "major") (eveNames.get(h.eve) || eveNames.set(h.eve, []).get(h.eve)).push(h.en);
+  // Candle-lighting evenings: every Friday, plus the evening before EVERY Yom Tov day (not only the first day of a
+  // festival: Pesach VII, and in traditional mode the second days). Yom Tov days are the same set the streak freeze uses.
+  const ytDays = yomTovDates(isoDate(addDays(from, -1)), isoDate(addDays(to, 1)), prefs.observance);
+  const majors = hols.filter((h) => h.kind === "major");
+  const namesOn = (iso) => majors.filter((h) => h.start <= iso && iso <= h.end).map((h) => h.en);
+  /** Nightfall (tzeit) on civil date g by the havdalah method chosen in the preferences; null at high latitudes. */
+  const nightfall = (g) => {
+    if (prefs.havdalah.mode === "minutes") { const ss = sunset(g, loc.lat, loc.lon); return ss && new Date(ss.getTime() + prefs.havdalah.minutes * 60000); }
+    return sunTime(g, loc.lat, loc.lon, 90 + prefs.havdalah.degrees, false);
+  };
 
   for (let rd = toRD(from); rd <= toRD(to); rd++) {
     const g = fromRD(rd), iso = isoDate(g), dow = weekday(g);
 
     if (loc && prefs.remind.candles) {
-      const eveHols = eveNames.get(iso) || [];
+      const nextIso = isoDate(addDays(g, 1));
+      const eveHols = ytDays.has(nextIso) ? namesOn(nextIso) : [];
       if (dow === 5 || eveHols.length) {
         const ss = sunset(g, loc.lat, loc.lon);
-        if (ss) {
-          const at = floorToMinute(new Date(ss.getTime() - loc.candleMinutes * 60000));
+        // Shabbat (Saturday) or a first Yom Tov day (not Friday) is still running: the next day's candles are lit after
+        // nightfall from an existing flame, never before sunset.
+        const afterNightfall = dow === 6 || (dow !== 5 && ytDays.has(iso));
+        const nf = afterNightfall ? nightfall(g) : null;
+        if (ss && (!afterNightfall || nf)) {
+          const at = afterNightfall ? roundToMinute(nf) : floorToMinute(new Date(ss.getTime() - loc.candleMinutes * 60000));
           const parsha = dow === 5 ? parshaOnShabbat(addDays(g, 1), { israel: il }) : null;
-          const what = [dow === 5 ? "Shabbat" : null, ...eveHols].filter(Boolean).join(" and ");
+          const what = [dow === 5 ? "Shabbat" : null, ...eveHols].filter(Boolean).join(" and ") + (afterNightfall && dow !== 6 ? " (second night)" : "");
           items.push({
             uid: `alef-candles-${iso}`, kind: "candles",
             title: `Candle lighting (${what})`,
-            description: `Candle lighting ${formatTime(at, loc.tz)} in ${loc.name}; ${loc.candleMinutes} minutes before sunset (${formatTime(ss, loc.tz)}).` +
-              (parsha ? ` Torah portion: ${parsha.en} (${parsha.he}).` : "") + ` ${NOT_AUTHORITY}`,
+            description: afterNightfall
+              ? `Light candles after nightfall, ${formatTime(at, loc.tz)} in ${loc.name}, from an existing flame; ${dow === 6 ? "Shabbat" : "the first day of the festival"} must be over first (${prefs.havdalah.mode === "minutes" ? prefs.havdalah.minutes + " minutes after sunset" : "sun " + prefs.havdalah.degrees + " degrees below the horizon"}). ${NOT_AUTHORITY}`
+              : `Candle lighting ${formatTime(at, loc.tz)} in ${loc.name}; ${loc.candleMinutes} minutes before sunset (${formatTime(ss, loc.tz)}).` +
+                (parsha ? ` Torah portion: ${parsha.en} (${parsha.he}).` : "") + ` ${NOT_AUTHORITY}`,
             when: { type: "instant", at }, durationMin: 15, alarmMin: prefs.candleAlarmMin,
           });
-        } else notes.push(`No sunset on ${iso} at this latitude.`);
+        } else notes.push(`No sunset or nightfall on ${iso} at this latitude.`);
       }
     }
 

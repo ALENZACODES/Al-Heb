@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Renders letter silhouettes (black glyph on white, 1024x1024 PNG, glyph fitted to 78% of the square) from the OFL fonts in assets/fonts/.
-//   assets/img/refs/REF_cursive_<id>.png   Gveret Levin (Israeli handwriting) - the inputs ChatGPT's Block C cursive commands ask for
+//   assets/img/refs/REF_cursive_<id>.png   Gveret Levin (Israeli handwriting) - the inputs the Block C cursive commands ask for
 //   assets/img/refs/REF_print_<id>.png     Noto Serif Hebrew (the book's print face) - print-letter references
 // <id> = contract letter id with '-' -> '_' (kaf_final), exactly as listed in data/images/prompt-groups.json `inputs`.
 //   node tools/images/make_cursive_refs.mjs [--out assets/img/refs] [--size 1024]

@@ -36,11 +36,11 @@ export function mount(root, ctx) {
       el('p', {}, `Step ${s.n} of ${total}. Stage: ${STAGE_LABEL[s.stage] || s.stage}.`),
       el('p', {}, heText(shown, 'alef-he fd-big')),
       el('p', {}, 'Say it aloud, then say how it went.'),
-      btn('Hear it', async () => { const r = await playHook(ctx?.audio, s.audio); say(r.source === 'none' ? 'Sound is not available on this device yet.' : r.source === 'tts-fallback' ? 'Played with the device voice, not a recording.' : 'Playing.'); }, { 'aria-label': `Hear step ${s.n}` }),
+      btn('Hear it', async () => { const r = await playHook(ctx?.audio, s.audio); say(r.source === 'none' ? 'Sound is not available on this device yet.' : r.source === 'tts-fallback' ? 'Played with the device voice, not a recording.' : 'Playing.'); }, { 'aria-label': `Hear it, step ${s.n}` }),
     ];
     if (s.hintAvailable) nodes.push(btn(revealed ? 'Points shown' : 'Show the points (hint)', () => { revealed = true; st = { ...st, hinted: { ...st.hinted, [s.n]: true } }; save(); render(); say('Points shown. This word will not count as read unpointed.'); }, { 'aria-pressed': String(revealed) }));
     const check = (said) => { st = recordAnswer(st, s.n, said, !!st.hinted[s.n]); save(); say(`${s.word}: ${s.gloss}. Saved. ${said ? 'Marked as read.' : 'Marked as not yet.'}`); };
-    nodes.push(btn('I read it', () => check(true), { 'aria-label': `I read step ${s.n} correctly` }), btn('Not yet', () => check(false), { 'aria-label': `I could not read step ${s.n} yet` }));
+    nodes.push(btn('I read it', () => check(true), { 'aria-label': `I read it, step ${s.n} correctly` }), btn('Not yet', () => check(false), { 'aria-label': `Not yet, step ${s.n}` }));
     nodes.push(el('p', {}, `Meaning: ${s.gloss}. This reading is self-reported.`));
     nodes.push(btn('Previous', () => go(st.n - 1), { disabled: st.n === 1 }), btn('Next', () => go(st.n + 1), { disabled: st.n === total }));
     const sc = unpointedScore(ladder, st.answers);

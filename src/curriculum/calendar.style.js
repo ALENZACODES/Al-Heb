@@ -4,7 +4,7 @@
  */
 export const CALENDAR_CSS = `
 .alef-calendar { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; max-inline-size: 100%; }
-.alef-calendar * { min-inline-size: 0; overflow-wrap: anywhere; }
+.alef-calendar * { min-inline-size: 0; overflow-wrap: break-word; }
 .alef-calendar input, .alef-calendar select { max-inline-size: 100%; inline-size: 100%; }
 .alef-cal-form .row > label { flex: 1 1 9rem; }
 .alef-calendar section, .alef-calendar details { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: .75rem 1rem; }
@@ -19,7 +19,9 @@ export const CALENDAR_CSS = `
 .alef-cal-day { position: relative; display: grid; gap: 0; inline-size: 100%; min-block-size: 4.2rem; padding: .2rem .25rem; text-align: start; font: inherit; font-size: .8rem; background: transparent; color: inherit; border: 0; cursor: pointer; }
 .alef-cal-day .g { font-weight: 700; font-size: .95rem; }
 .alef-cal-day .h { color: var(--muted); font-size: .75rem; }
-.alef-cal-day .l { font-size: .68rem; line-height: 1.15; overflow-wrap: anywhere; }
+.alef-cal-day .l { font-size: .75rem; line-height: 1.2; overflow-wrap: normal; hyphens: auto; }
+@media (max-width: 419.98px) { .alef-cal-day .l { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } }
+@media (max-width: 359.98px) { .alef-calendar section[aria-label="Calendar grid"] { overflow-x: auto; } .alef-cal-table { min-inline-size: 322px; } }
 .alef-cal-day.out, .alef-cal-day.out .g, .alef-cal-day.out .h, .alef-cal-day.out .l { color: var(--muted); font-weight: 400; }
 .alef-cal-day.shabbat { background: color-mix(in srgb, var(--accent) 9%, transparent); }
 .alef-cal-day.holiday .l { font-weight: 700; color: var(--accent); }
@@ -36,6 +38,7 @@ export const CALENDAR_CSS = `
 .alef-prayer.now { box-shadow: 0 0 0 2px var(--focus); }
 .alef-prayer .alef-he-large { font-size: 1.6rem; line-height: 1.8; display: block; }
 .alef-cal-draft { color: var(--muted); font-size: .8rem; }
+.alef-cal-draft small { font-size: 100%; }
 .alef-cal-form { display: grid; gap: .6rem; }
 .alef-cal-form label { display: grid; gap: .15rem; font-weight: 600; }
 .alef-cal-form input, .alef-cal-form select { font: inherit; min-block-size: var(--tap); padding: .2rem .5rem; }

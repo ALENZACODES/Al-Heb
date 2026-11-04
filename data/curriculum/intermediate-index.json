@@ -236,6 +236,222 @@
      "bless-priestly-2",
      "bless-priestly-3"
     ]
+   },
+   {
+    "id": "I-26",
+    "file": "lessons-intermediate/I-26.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "The full Torah service in order: ark, reading, lifting, returning",
+    "prerequisites": [
+     "I-03"
+    ],
+    "estMinutes": 45,
+    "words": 12,
+    "exercises": 16,
+    "prayerLines": [
+     "ein-kamocha",
+     "vayehi-binsoa",
+     "brich-shmei",
+     "gadlu",
+     "lecha-hashem",
+     "torah-bless-1",
+     "torah-bless-2",
+     "vezot-hatorah",
+     "haftarah-before",
+     "yehalelu",
+     "etz-chaim",
+     "hashivenu"
+    ]
+   },
+   {
+    "id": "I-27",
+    "file": "lessons-intermediate/I-27.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "Shabbat-morning Amidah responses: Kedushah, Sim Shalom, closing verses",
+    "prerequisites": [
+     "I-02"
+    ],
+    "estMinutes": 35,
+    "words": 13,
+    "exercises": 16,
+    "prayerLines": [
+     "kedushah-kadosh",
+     "kedushah-baruch",
+     "kedushah-yimloch",
+     "sim-shalom",
+     "amidah-yihyu",
+     "amidah-elohai-netzor",
+     "oseh-shalom",
+     "kiddush-veshamru"
+    ]
+   },
+   {
+    "id": "I-28",
+    "file": "lessons-intermediate/I-28.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "Yom Kippur: the few lines the corpus holds and the words around them",
+    "prerequisites": [
+     "I-01"
+    ],
+    "estMinutes": 30,
+    "words": 12,
+    "exercises": 15,
+    "prayerLines": [
+     "shema-1",
+     "shema-2",
+     "avot-1",
+     "avot-closing",
+     "sim-shalom",
+     "kaddish-1"
+    ]
+   },
+   {
+    "id": "I-29",
+    "file": "lessons-intermediate/I-29.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "Pesach: the seder blessings the corpus holds",
+    "prerequisites": [
+     "I-05"
+    ],
+    "estMinutes": 30,
+    "words": 12,
+    "exercises": 14,
+    "prayerLines": [
+     "kiddush-wine-1",
+     "kiddush-shabbat-eve",
+     "shehecheyanu",
+     "mi-chamocha-1",
+     "hamotzi"
+    ]
+   },
+   {
+    "id": "I-30",
+    "file": "lessons-intermediate/I-30.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "Sukkot: sukkah words and the blessings that carry over",
+    "prerequisites": [
+     "I-29"
+    ],
+    "estMinutes": 25,
+    "words": 12,
+    "exercises": 14,
+    "prayerLines": [
+     "shehecheyanu",
+     "kiddush-wine-1",
+     "hamotzi",
+     "havdalah-opening",
+     "kiddush-veshamru"
+    ]
+   },
+   {
+    "id": "I-31",
+    "file": "lessons-intermediate/I-31.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "Purim: the miracle blessing and the words of the day",
+    "prerequisites": [
+     "I-29"
+    ],
+    "estMinutes": 25,
+    "words": 11,
+    "exercises": 14,
+    "prayerLines": [
+     "hanukkah-nissim",
+     "shehecheyanu",
+     "hagomel"
+    ]
+   },
+   {
+    "id": "I-32",
+    "file": "lessons-intermediate/I-32.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "Hanukkah: the three blessings, Hanerot Halalu and Maoz Tzur",
+    "prerequisites": [
+     "I-05"
+    ],
+    "estMinutes": 35,
+    "words": 12,
+    "exercises": 15,
+    "prayerLines": [
+     "hanukkah-candle",
+     "hanukkah-nissim",
+     "shehecheyanu",
+     "hanerot-halalu",
+     "maoz-tzur-1"
+    ]
+   },
+   {
+    "id": "I-33",
+    "file": "lessons-intermediate/I-33.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "Birkat Hamazon openings: Zimun, the first blessing and Shir Hamaalot",
+    "prerequisites": [
+     "I-05"
+    ],
+    "estMinutes": 30,
+    "words": 12,
+    "exercises": 15,
+    "prayerLines": [
+     "zimun-opening",
+     "birkat-hamazon-1",
+     "shir-hamaalot",
+     "hamotzi"
+    ]
+   },
+   {
+    "id": "I-34",
+    "file": "lessons-intermediate/I-34.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "Before and after a journey: Hagomel, peace and the vocabulary of the road",
+    "prerequisites": [
+     "I-10"
+    ],
+    "estMinutes": 25,
+    "words": 11,
+    "exercises": 14,
+    "prayerLines": [
+     "hagomel",
+     "oseh-shalom",
+     "bless-priestly-3",
+     "shehecheyanu"
+    ]
+   },
+   {
+    "id": "I-35",
+    "file": "lessons-intermediate/I-35.json",
+    "unit": "synagogue",
+    "track": "read",
+    "level": "black",
+    "title": "Shabbat-day Kiddush: V'shamru, Zachor, wine and bread",
+    "prerequisites": [
+     "I-05"
+    ],
+    "estMinutes": 30,
+    "words": 12,
+    "exercises": 15,
+    "prayerLines": [
+     "kiddush-veshamru",
+     "kiddush-zachor",
+     "kiddush-wine-1",
+     "hamotzi"
+    ]
    }
   ],
   "israel": [
@@ -462,6 +678,231 @@
     "estMinutes": 25,
     "words": 15,
     "exercises": 16,
+    "prayerLines": []
+   },
+   {
+    "id": "I-36",
+    "file": "lessons-intermediate/I-36.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Work: office, meeting, boss and interview",
+    "prerequisites": [
+     "I-25"
+    ],
+    "estMinutes": 30,
+    "words": 12,
+    "exercises": 14,
+    "prayerLines": []
+   },
+   {
+    "id": "I-37",
+    "file": "lessons-intermediate/I-37.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "University: courses, lectures, exams and scholarships",
+    "prerequisites": [
+     "I-36"
+    ],
+    "estMinutes": 30,
+    "words": 12,
+    "exercises": 14,
+    "prayerLines": []
+   },
+   {
+    "id": "I-38",
+    "file": "lessons-intermediate/I-38.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Dating and going out: asking someone out, plans and compliments",
+    "prerequisites": [
+     "I-36"
+    ],
+    "estMinutes": 25,
+    "words": 12,
+    "exercises": 14,
+    "prayerLines": []
+   },
+   {
+    "id": "I-39",
+    "file": "lessons-intermediate/I-39.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Driving: car, road, signs, fuel and parking",
+    "prerequisites": [
+     "I-15"
+    ],
+    "estMinutes": 25,
+    "words": 12,
+    "exercises": 14,
+    "prayerLines": []
+   },
+   {
+    "id": "I-40",
+    "file": "lessons-intermediate/I-40.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Hiking: trail, mountain, stream, water and the map",
+    "prerequisites": [
+     "I-24"
+    ],
+    "estMinutes": 25,
+    "words": 12,
+    "exercises": 14,
+    "prayerLines": []
+   },
+   {
+    "id": "I-41",
+    "file": "lessons-intermediate/I-41.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Beach: sea, sand, towel and swimming",
+    "prerequisites": [
+     "I-24"
+    ],
+    "estMinutes": 20,
+    "words": 12,
+    "exercises": 14,
+    "prayerLines": []
+   },
+   {
+    "id": "I-42",
+    "file": "lessons-intermediate/I-42.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Kids: asking about children, school and play",
+    "prerequisites": [
+     "I-25"
+    ],
+    "estMinutes": 25,
+    "words": 12,
+    "exercises": 14,
+    "prayerLines": []
+   },
+   {
+    "id": "I-43",
+    "file": "lessons-intermediate/I-43.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Supermarket: aisles, prices, bags and the checkout",
+    "prerequisites": [
+     "I-12"
+    ],
+    "estMinutes": 25,
+    "words": 11,
+    "exercises": 14,
+    "prayerLines": []
+   },
+   {
+    "id": "I-44",
+    "file": "lessons-intermediate/I-44.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Repairs and the landlord: something is broken",
+    "prerequisites": [
+     "I-17"
+    ],
+    "estMinutes": 25,
+    "words": 12,
+    "exercises": 14,
+    "prayerLines": []
+   },
+   {
+    "id": "I-45",
+    "file": "lessons-intermediate/I-45.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Ordering delivery: pizza, address, floor and the courier",
+    "prerequisites": [
+     "I-13"
+    ],
+    "estMinutes": 25,
+    "words": 12,
+    "exercises": 14,
+    "prayerLines": []
+   },
+   {
+    "id": "I-46",
+    "file": "lessons-intermediate/I-46.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Emergencies: police, ambulance, fire and calling for help",
+    "prerequisites": [
+     "I-20"
+    ],
+    "estMinutes": 30,
+    "words": 12,
+    "exercises": 14,
+    "prayerLines": []
+   },
+   {
+    "id": "I-47",
+    "file": "lessons-intermediate/I-47.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "News headlines: government, elections, war and peace, prices",
+    "prerequisites": [
+     "I-25"
+    ],
+    "estMinutes": 25,
+    "words": 12,
+    "exercises": 14,
+    "prayerLines": []
+   },
+   {
+    "id": "I-48",
+    "file": "lessons-intermediate/I-48.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Banking forms: name, number, signature and date",
+    "prerequisites": [
+     "I-21"
+    ],
+    "estMinutes": 25,
+    "words": 12,
+    "exercises": 14,
+    "prayerLines": []
+   },
+   {
+    "id": "I-49",
+    "file": "lessons-intermediate/I-49.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Social media: posting, messages, photos and passwords",
+    "prerequisites": [
+     "I-16"
+    ],
+    "estMinutes": 20,
+    "words": 12,
+    "exercises": 14,
+    "prayerLines": []
+   },
+   {
+    "id": "I-50",
+    "file": "lessons-intermediate/I-50.json",
+    "unit": "israel",
+    "track": "israel",
+    "level": "B1",
+    "title": "Holiday greetings by festival: who says what, and when",
+    "prerequisites": [
+     "I-19"
+    ],
+    "estMinutes": 25,
+    "words": 12,
+    "exercises": 15,
     "prayerLines": []
    }
   ]
@@ -898,6 +1339,447 @@
    "estMinutes": 25,
    "words": 15,
    "exercises": 16,
+   "prayerLines": []
+  },
+  {
+   "id": "I-26",
+   "file": "lessons-intermediate/I-26.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "The full Torah service in order: ark, reading, lifting, returning",
+   "prerequisites": [
+    "I-03"
+   ],
+   "estMinutes": 45,
+   "words": 12,
+   "exercises": 16,
+   "prayerLines": [
+    "ein-kamocha",
+    "vayehi-binsoa",
+    "brich-shmei",
+    "gadlu",
+    "lecha-hashem",
+    "torah-bless-1",
+    "torah-bless-2",
+    "vezot-hatorah",
+    "haftarah-before",
+    "yehalelu",
+    "etz-chaim",
+    "hashivenu"
+   ]
+  },
+  {
+   "id": "I-27",
+   "file": "lessons-intermediate/I-27.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "Shabbat-morning Amidah responses: Kedushah, Sim Shalom, closing verses",
+   "prerequisites": [
+    "I-02"
+   ],
+   "estMinutes": 35,
+   "words": 13,
+   "exercises": 16,
+   "prayerLines": [
+    "kedushah-kadosh",
+    "kedushah-baruch",
+    "kedushah-yimloch",
+    "sim-shalom",
+    "amidah-yihyu",
+    "amidah-elohai-netzor",
+    "oseh-shalom",
+    "kiddush-veshamru"
+   ]
+  },
+  {
+   "id": "I-28",
+   "file": "lessons-intermediate/I-28.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "Yom Kippur: the few lines the corpus holds and the words around them",
+   "prerequisites": [
+    "I-01"
+   ],
+   "estMinutes": 30,
+   "words": 12,
+   "exercises": 15,
+   "prayerLines": [
+    "shema-1",
+    "shema-2",
+    "avot-1",
+    "avot-closing",
+    "sim-shalom",
+    "kaddish-1"
+   ]
+  },
+  {
+   "id": "I-29",
+   "file": "lessons-intermediate/I-29.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "Pesach: the seder blessings the corpus holds",
+   "prerequisites": [
+    "I-05"
+   ],
+   "estMinutes": 30,
+   "words": 12,
+   "exercises": 14,
+   "prayerLines": [
+    "kiddush-wine-1",
+    "kiddush-shabbat-eve",
+    "shehecheyanu",
+    "mi-chamocha-1",
+    "hamotzi"
+   ]
+  },
+  {
+   "id": "I-30",
+   "file": "lessons-intermediate/I-30.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "Sukkot: sukkah words and the blessings that carry over",
+   "prerequisites": [
+    "I-29"
+   ],
+   "estMinutes": 25,
+   "words": 12,
+   "exercises": 14,
+   "prayerLines": [
+    "shehecheyanu",
+    "kiddush-wine-1",
+    "hamotzi",
+    "havdalah-opening",
+    "kiddush-veshamru"
+   ]
+  },
+  {
+   "id": "I-31",
+   "file": "lessons-intermediate/I-31.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "Purim: the miracle blessing and the words of the day",
+   "prerequisites": [
+    "I-29"
+   ],
+   "estMinutes": 25,
+   "words": 11,
+   "exercises": 14,
+   "prayerLines": [
+    "hanukkah-nissim",
+    "shehecheyanu",
+    "hagomel"
+   ]
+  },
+  {
+   "id": "I-32",
+   "file": "lessons-intermediate/I-32.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "Hanukkah: the three blessings, Hanerot Halalu and Maoz Tzur",
+   "prerequisites": [
+    "I-05"
+   ],
+   "estMinutes": 35,
+   "words": 12,
+   "exercises": 15,
+   "prayerLines": [
+    "hanukkah-candle",
+    "hanukkah-nissim",
+    "shehecheyanu",
+    "hanerot-halalu",
+    "maoz-tzur-1"
+   ]
+  },
+  {
+   "id": "I-33",
+   "file": "lessons-intermediate/I-33.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "Birkat Hamazon openings: Zimun, the first blessing and Shir Hamaalot",
+   "prerequisites": [
+    "I-05"
+   ],
+   "estMinutes": 30,
+   "words": 12,
+   "exercises": 15,
+   "prayerLines": [
+    "zimun-opening",
+    "birkat-hamazon-1",
+    "shir-hamaalot",
+    "hamotzi"
+   ]
+  },
+  {
+   "id": "I-34",
+   "file": "lessons-intermediate/I-34.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "Before and after a journey: Hagomel, peace and the vocabulary of the road",
+   "prerequisites": [
+    "I-10"
+   ],
+   "estMinutes": 25,
+   "words": 11,
+   "exercises": 14,
+   "prayerLines": [
+    "hagomel",
+    "oseh-shalom",
+    "bless-priestly-3",
+    "shehecheyanu"
+   ]
+  },
+  {
+   "id": "I-35",
+   "file": "lessons-intermediate/I-35.json",
+   "unit": "synagogue",
+   "track": "read",
+   "level": "black",
+   "title": "Shabbat-day Kiddush: V'shamru, Zachor, wine and bread",
+   "prerequisites": [
+    "I-05"
+   ],
+   "estMinutes": 30,
+   "words": 12,
+   "exercises": 15,
+   "prayerLines": [
+    "kiddush-veshamru",
+    "kiddush-zachor",
+    "kiddush-wine-1",
+    "hamotzi"
+   ]
+  },
+  {
+   "id": "I-36",
+   "file": "lessons-intermediate/I-36.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Work: office, meeting, boss and interview",
+   "prerequisites": [
+    "I-25"
+   ],
+   "estMinutes": 30,
+   "words": 12,
+   "exercises": 14,
+   "prayerLines": []
+  },
+  {
+   "id": "I-37",
+   "file": "lessons-intermediate/I-37.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "University: courses, lectures, exams and scholarships",
+   "prerequisites": [
+    "I-36"
+   ],
+   "estMinutes": 30,
+   "words": 12,
+   "exercises": 14,
+   "prayerLines": []
+  },
+  {
+   "id": "I-38",
+   "file": "lessons-intermediate/I-38.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Dating and going out: asking someone out, plans and compliments",
+   "prerequisites": [
+    "I-36"
+   ],
+   "estMinutes": 25,
+   "words": 12,
+   "exercises": 14,
+   "prayerLines": []
+  },
+  {
+   "id": "I-39",
+   "file": "lessons-intermediate/I-39.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Driving: car, road, signs, fuel and parking",
+   "prerequisites": [
+    "I-15"
+   ],
+   "estMinutes": 25,
+   "words": 12,
+   "exercises": 14,
+   "prayerLines": []
+  },
+  {
+   "id": "I-40",
+   "file": "lessons-intermediate/I-40.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Hiking: trail, mountain, stream, water and the map",
+   "prerequisites": [
+    "I-24"
+   ],
+   "estMinutes": 25,
+   "words": 12,
+   "exercises": 14,
+   "prayerLines": []
+  },
+  {
+   "id": "I-41",
+   "file": "lessons-intermediate/I-41.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Beach: sea, sand, towel and swimming",
+   "prerequisites": [
+    "I-24"
+   ],
+   "estMinutes": 20,
+   "words": 12,
+   "exercises": 14,
+   "prayerLines": []
+  },
+  {
+   "id": "I-42",
+   "file": "lessons-intermediate/I-42.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Kids: asking about children, school and play",
+   "prerequisites": [
+    "I-25"
+   ],
+   "estMinutes": 25,
+   "words": 12,
+   "exercises": 14,
+   "prayerLines": []
+  },
+  {
+   "id": "I-43",
+   "file": "lessons-intermediate/I-43.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Supermarket: aisles, prices, bags and the checkout",
+   "prerequisites": [
+    "I-12"
+   ],
+   "estMinutes": 25,
+   "words": 11,
+   "exercises": 14,
+   "prayerLines": []
+  },
+  {
+   "id": "I-44",
+   "file": "lessons-intermediate/I-44.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Repairs and the landlord: something is broken",
+   "prerequisites": [
+    "I-17"
+   ],
+   "estMinutes": 25,
+   "words": 12,
+   "exercises": 14,
+   "prayerLines": []
+  },
+  {
+   "id": "I-45",
+   "file": "lessons-intermediate/I-45.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Ordering delivery: pizza, address, floor and the courier",
+   "prerequisites": [
+    "I-13"
+   ],
+   "estMinutes": 25,
+   "words": 12,
+   "exercises": 14,
+   "prayerLines": []
+  },
+  {
+   "id": "I-46",
+   "file": "lessons-intermediate/I-46.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Emergencies: police, ambulance, fire and calling for help",
+   "prerequisites": [
+    "I-20"
+   ],
+   "estMinutes": 30,
+   "words": 12,
+   "exercises": 14,
+   "prayerLines": []
+  },
+  {
+   "id": "I-47",
+   "file": "lessons-intermediate/I-47.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "News headlines: government, elections, war and peace, prices",
+   "prerequisites": [
+    "I-25"
+   ],
+   "estMinutes": 25,
+   "words": 12,
+   "exercises": 14,
+   "prayerLines": []
+  },
+  {
+   "id": "I-48",
+   "file": "lessons-intermediate/I-48.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Banking forms: name, number, signature and date",
+   "prerequisites": [
+    "I-21"
+   ],
+   "estMinutes": 25,
+   "words": 12,
+   "exercises": 14,
+   "prayerLines": []
+  },
+  {
+   "id": "I-49",
+   "file": "lessons-intermediate/I-49.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Social media: posting, messages, photos and passwords",
+   "prerequisites": [
+    "I-16"
+   ],
+   "estMinutes": 20,
+   "words": 12,
+   "exercises": 14,
+   "prayerLines": []
+  },
+  {
+   "id": "I-50",
+   "file": "lessons-intermediate/I-50.json",
+   "unit": "israel",
+   "track": "israel",
+   "level": "B1",
+   "title": "Holiday greetings by festival: who says what, and when",
+   "prerequisites": [
+    "I-19"
+   ],
+   "estMinutes": 25,
+   "words": 12,
+   "exercises": 15,
    "prayerLines": []
   }
  ]

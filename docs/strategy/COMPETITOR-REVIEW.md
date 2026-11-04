@@ -63,7 +63,7 @@ M = match, E = exceed.
 | 7 | Whisper | not started | No whisper code. |
 | 8 | Wiktextract + FrequencyWords | done | `data/vocab/vocab5000.json` (5,000 entries), `sources.lock.json`; vocab.schema tests pass. |
 | 9 | Tesseract heb | partial | Vendored (`assets/vendor/_tesseract`); no real-siddur benchmark. |
-| 10 | Storyset/Commons images | not started | Repo path is AI-generated images (ChatGPT), 286 PNGs in `assets/images/incoming` (282 top-level), none approved. |
+| 10 | Storyset/Commons images | not started | Repo path is generated images, 286 PNGs in `assets/images/incoming` (282 top-level), none approved. |
 
 ## 3. Doc claims checked against the repo and itself
 

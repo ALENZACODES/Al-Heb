@@ -240,9 +240,52 @@ test('spotit milestone needs enough rounds before it can be met or show a percen
   st.set('curriculum.pairs', { 'bet|kaf': { errors: 1, trials: 12 } });
   assert.equal(M.evaluate({ kind: 'spotit', accuracy: 0.85 }, M.makeContext(M.readSnapshot(st), D, T)).done, true);
 });
-test('reading speed is never produced: no wpm field anywhere in the computed output', () => {
+test('reading speed is never invented: without stored reads no wpm number appears; with reads it is labelled self-reported', () => {
   const st = fake(); seedLessons(st, ids(51));
   const c = M.makeContext(M.readSnapshot(st), D, T);
-  const text = JSON.stringify([M.evaluateBelts(D, c), M.evaluatePath('read', D, c), c.srs, c.vocab]);
-  assert.ok(!/"wpm|wordsPerMinute/i.test(text));
+  const text = JSON.stringify([M.evaluateBelts(D, c), M.evaluatePath('read', D, c), c.srs, c.vocab, M.timedReadSummary(c.timedRead)]);
+  assert.ok(!/"wpm|wordsPerMinute|\d+ wpm/i.test(text));
+  st.set('timedread.v1', { v: 1, reads: Array.from({ length: 3 }, () => ({ textId: 'shema-1', lineId: 'shema-1', words: 12, ms: 8000, stumbled: 0, stumbledIdx: [], at: T })) });
+  const c2 = M.makeContext(M.readSnapshot(st), D, T);
+  const notes = M.evaluateBelts(D, c2).flatMap((b) => b.gates).filter((g) => g.kind === 'timedRead').map((g) => g.note);
+  assert.ok(notes.length >= 2 && notes.every((n) => /self-reported/.test(n)));
+});
+
+// ---------- "What can I read now?" summary ----------
+test('readNowSummary: fresh learner has every row at zero, with the measurement kind and a route per row', () => {
+  const rows = M.readNowSummary(M.readSnapshot(fake()), D, M.makeContext(M.readSnapshot(fake()), D, T));
+  assert.deepEqual(rows.map((r) => r.id), ['letters', 'lines', 'vocab', 'timedread', 'siddur', 'firstday']);
+  for (const r of rows) { assert.match(r.href, /^#\//); assert.ok(['taught', 'self'].includes(r.measured)); assert.equal(r.have, 0); assert.ok(r.label && r.value && r.detail); }
+  assert.deepEqual(rows.filter((r) => r.measured === 'self').map((r) => r.id), ['timedread', 'firstday']);
+  assert.match(rows[0].value, /^0 of 27 letters, 0 of 15 signs$/);
+  assert.match(rows.find((r) => r.id === 'vocab').value, /none started/); assert.match(rows.find((r) => r.id === 'timedread').value, /none yet/);
+  assert.match(rows.find((r) => r.id === 'siddur').value, /^0% of the lines ALEF holds$/); assert.match(rows.find((r) => r.id === 'firstday').value, /not started/);
+  assert.ok(!rows.some((r) => /fluen(t|cy) (score|rating)/i.test(r.value)));
+});
+test('readNowSummary: every source feeds its row', () => {
+  const st = fake();
+  seedLessons(st, D.lessons.filter((l) => l.track === 'read').map((l) => l.id));
+  st.set('srs.vocab', { 'vocab:a': { id: 'vocab:a', tier: 500, reps: 3, state: 'review', stability: 30 }, 'vocab:b': { id: 'vocab:b', tier: 500, reps: 1, state: 'learning', stability: 1 } });
+  const read = (o) => ({ textId: 'shema-1', lineId: 'shema-1', words: 12, ms: 8000, stumbled: 0, stumbledIdx: [], at: T, ...o });
+  st.set('timedread.v1', { v: 1, reads: [read(), read({ textId: 'avot-1' })] });
+  st.set('service.prefs', { order: 'friday-night' });
+  st.set('firstday.progress', { step: 5, readWords: ['shalom', 'sham'], checkCorrect: true, done: false });
+  st.set('firstday.ladder', { n: 15, answers: { 1: true, 13: true, 14: false, 15: true }, hinted: { 15: true } });
+  const s = M.readSnapshot(st), c = M.makeContext(s, D, T);
+  const by = Object.fromEntries(M.readNowSummary(s, D, c).map((r) => [r.id, r]));
+  assert.equal(by.letters.have, 27 + 15);
+  assert.ok(by.lines.have > 0 && by.lines.have <= by.lines.need);
+  assert.match(by.vocab.value, /^2 started, 1 mature$/); // band needs 10 started cards, so no "working in"
+  assert.match(by.timedread.value, /^2 reads of 2 texts, about 90 clean words a minute on (shema-1|avot-1)$/);
+  assert.match(by.siddur.label, /Friday evening/); assert.ok(by.siddur.have > 0);
+  assert.match(by.firstday.value, /^2 first-day words marked read; ladder 2 of 8 unpointed words marked read$/); // step 1 is pointed; 15 is counted as said
+  assert.equal(by.firstday.href, '#/firstday/ladder');
+});
+test('firstDayInfo: corrupt values, hinted answers and missing ladder data are handled', () => {
+  const st = fake(); st.set('firstday.progress', { readWords: 'x', step: 'y' }); st.set('firstday.ladder', { n: 'q', answers: { 13: 'yes', 14: true } });
+  const f = M.firstDayInfo(M.readSnapshot(st), D);
+  assert.deepEqual(f.readWords, []); assert.equal(f.ladder.at, 0); assert.equal(f.ladder.answered, 1); assert.equal(f.ladder.right, 1); assert.equal(f.started, true);
+  const g = M.firstDayInfo(M.readSnapshot(st), { ...D, ladder: null });
+  assert.equal(g.ladder.total, 0); assert.equal(g.ladder.steps, 0);
+  assert.equal(M.firstDayInfo(M.readSnapshot(fake()), D).started, false);
 });

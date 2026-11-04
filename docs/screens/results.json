@@ -1,5 +1,5 @@
 {
- "when": "2026-11-04T03:07:05.995Z",
+ "when": "2026-11-04T06:00:35.025Z",
  "mode": "repo root",
  "offline": "ok: app shell loaded offline",
  "checks": [
@@ -9,9 +9,19 @@
    "detail": ""
   },
   {
-   "name": "onboarding persists voice/congregation/goal",
+   "name": "onboarding persists letters answer, denomination, minutes and the congregation setting",
    "ok": true,
-   "detail": "{\"voice\":\"m\",\"congregation\":\"ashkenazi\",\"israelTrack\":true,\"script\":\"print\",\"theme\":\"auto\",\"lat\":null,\"lon\":null,\"goal\":\"both\",\"onboarded\":true,\"browserVoiceAnyway\":true}"
+   "detail": "{\"s\":{\"voice\":\"f\",\"congregation\":\"ashkenazi\",\"israelTrack\":false,\"script\":\"print\",\"theme\":\"auto\",\"lat\":null,\"lon\":null,\"goal\":\"read\",\"onboarded\":true,\"browserVoiceAnyway\":true},\"o\":{\"v\":1,\"letters\":\"none\",\"start\":\"/firstday\",\"askedAt\":\"2026-11-04T06:00:31.387Z\",\"denomination\":\"reform\",\"minutesPerDay\":10,\"step\":\"plan\"}}"
+  },
+  {
+   "name": "week plan card has 7 days",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "plan start button opens the first 10 minutes",
+   "ok": true,
+   "detail": ""
   },
   {
    "name": "sound indicator states the real source after Listen",
@@ -19,9 +29,9 @@
    "detail": "No sound: the browser voice reported an error."
   },
   {
-   "name": "home shows due cards and a 1-day streak",
+   "name": "home Today card shows 6 due cards, a streak line, the morning link and one Continue button",
    "ok": true,
-   "detail": ""
+   "detail": "ALEF אלף Read Hebrew aloud. Speak it in Israel. Today's lesson Next lesson: Tav and the dot in Bet: Shabbat 6 cards due Streak: No streak yet. Finish a lesson or review a card to start one. Today's morning verse Continue: Tav and the dot in Bet: Shabbat Opening Draft opening: pending clergy/educator review. The opening prayer slot is reserved. No liturgy is bundled here until it has been reviewed."
   },
   {
    "name": "review persisted ratings to srs.cards",
@@ -45,7 +55,7 @@
    "status": "content",
    "heading": "ALEF אלף",
    "unavailable": false,
-   "textLength": 985,
+   "textLength": 1345,
    "focused": "",
    "title": "ALEF",
    "errors": [],
@@ -56,7 +66,7 @@
    "status": "content",
    "heading": "Welcome to ALEF אלף",
    "unavailable": false,
-   "textLength": 1132,
+   "textLength": 461,
    "focused": "",
    "title": "Welcome - ALEF",
    "errors": [],
@@ -100,7 +110,7 @@
    "status": "content",
    "heading": "Letters",
    "unavailable": false,
-   "textLength": 1194,
+   "textLength": 1235,
    "focused": "",
    "title": "Letters - ALEF",
    "errors": [],
@@ -111,7 +121,7 @@
    "status": "content",
    "heading": "Letter",
    "unavailable": false,
-   "textLength": 1193,
+   "textLength": 1234,
    "focused": "",
    "title": "Letter - ALEF",
    "errors": [],
@@ -155,7 +165,7 @@
    "status": "content",
    "heading": "Scan",
    "unavailable": false,
-   "textLength": 892,
+   "textLength": 891,
    "focused": "",
    "title": "Scan - ALEF",
    "errors": [],
@@ -166,7 +176,7 @@
    "status": "content",
    "heading": "Calendar",
    "unavailable": false,
-   "textLength": 494,
+   "textLength": 4509,
    "focused": "",
    "title": "Calendar - ALEF",
    "errors": [],
@@ -177,7 +187,7 @@
    "status": "content",
    "heading": "Printable workbook",
    "unavailable": false,
-   "textLength": 1334,
+   "textLength": 2153,
    "focused": "",
    "title": "Workbook - ALEF",
    "errors": [],
@@ -243,7 +253,7 @@
    "status": "content",
    "heading": "Spot It",
    "unavailable": false,
-   "textLength": 272,
+   "textLength": 264,
    "focused": "",
    "title": "Spot It - ALEF",
    "errors": [],
@@ -287,7 +297,7 @@
    "status": "content",
    "heading": "Settings",
    "unavailable": false,
-   "textLength": 724,
+   "textLength": 914,
    "focused": "",
    "title": "Settings - ALEF",
    "errors": [],
@@ -340,7 +350,7 @@
    "status": "content",
    "heading": "Spot It",
    "unavailable": false,
-   "textLength": 397,
+   "textLength": 389,
    "errors": [],
    "consoleErrors": []
   },

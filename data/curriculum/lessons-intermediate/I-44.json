@@ -1,0 +1,336 @@
+{
+ "id": "I-44",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Repairs and the landlord: something is broken",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "שָׁבוּר",
+   "en": "broken",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shavur"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h28d30511"
+   }
+  },
+  {
+   "he": "מַנְעוּל",
+   "en": "lock",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "man'ul"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h77db1172"
+   }
+  },
+  {
+   "he": "דֶּלֶת",
+   "en": "door",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "delet"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h80c0273d"
+   }
+  },
+  {
+   "he": "חַשְׁמַל",
+   "en": "electricity",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chashmal"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he174b395"
+   }
+  },
+  {
+   "he": "חַשְׁמַלַּאי",
+   "en": "electrician",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chashmalay"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h7fc282e5"
+   }
+  },
+  {
+   "he": "מְקָרֵר",
+   "en": "refrigerator",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mekarer"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h23c32a91#forms.present"
+   }
+  },
+  {
+   "he": "קִיר",
+   "en": "wall",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kir"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h1c0ffa13"
+   }
+  },
+  {
+   "he": "בַּעַל הַבַּיִת",
+   "en": "the landlord",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ba'al habayit"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בַּעַל",
+     "הַבַּיִת"
+    ]
+   }
+  },
+  {
+   "he": "מָתַי?",
+   "en": "when?",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "matai?"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "haf452c59"
+   }
+  },
+  {
+   "he": "דָּחוּף",
+   "en": "urgent",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "dachuf"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "heede8c51"
+   }
+  },
+  {
+   "he": "עֶזְרָה",
+   "en": "help",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ezrah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h9a52f49b"
+   }
+  },
+  {
+   "he": "תּוֹר",
+   "en": "turn, appointment",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "tor"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h87abbddd"
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Tell the landlord something is broken",
+  "Ask when someone can come and say if it is urgent",
+  "Name the common household things that break"
+ ],
+ "estMinutes": 25,
+ "prerequisites": [
+  "I-17"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-44-e01",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "מַנְעוּל",
+     "en": "lock"
+    },
+    {
+     "he": "דֶּלֶת",
+     "en": "door"
+    },
+    {
+     "he": "קִיר",
+     "en": "wall"
+    },
+    {
+     "he": "מְקָרֵר",
+     "en": "refrigerator"
+    },
+    {
+     "he": "חַשְׁמַל",
+     "en": "electricity"
+    }
+   ]
+  },
+  {
+   "id": "I-44-e02",
+   "type": "order",
+   "he": "מְקָרֵר שָׁבוּר, זֶה דָּחוּף",
+   "en": "The refrigerator is broken, it's urgent"
+  },
+  {
+   "id": "I-44-e03",
+   "type": "produce",
+   "en": "broken",
+   "options": [
+    "שָׁבוּר",
+    "פָּתוּחַ",
+    "סָגוּר"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-44-e04",
+   "type": "respond",
+   "cue": "Tell the landlord the lock is broken.",
+   "answer": {
+    "he": "מַנְעוּל שָׁבוּר",
+    "en": "The lock is broken"
+   }
+  },
+  {
+   "id": "I-44-e05",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "שָׁלוֹם, מְקָרֵר שָׁבוּר.",
+     "en": "Hello, the refrigerator is broken."
+    },
+    {
+     "speaker": "b",
+     "he": "מָתַי אֶפְשָׁר לָבוֹא?",
+     "en": "When can I come?"
+    },
+    {
+     "speaker": "a",
+     "he": "מָחָר, זֶה דָּחוּף.",
+     "en": "Tomorrow, it's urgent."
+    }
+   ],
+   "task": "Report the problem and say it's urgent."
+  },
+  {
+   "id": "I-44-e06",
+   "type": "produce",
+   "en": "it's urgent",
+   "options": [
+    "זֶה דָּחוּף",
+    "זֶה קָרוֹב",
+    "זֶה זוֹל"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-44-e07",
+   "type": "recall",
+   "he": "חַשְׁמַלַּאי",
+   "en": "electrician"
+  },
+  {
+   "id": "I-44-e08",
+   "type": "respond",
+   "cue": "Ask the landlord when someone can come.",
+   "answer": {
+    "he": "מָתַי אֶפְשָׁר לָבוֹא?",
+    "en": "When can someone come?"
+   }
+  },
+  {
+   "id": "I-44-e09",
+   "type": "respond",
+   "cue": "Ask for help.",
+   "answer": {
+    "he": "אֲנִי צָרִיךְ עֶזְרָה",
+    "en": "I need help"
+   }
+  },
+  {
+   "id": "I-44-e10",
+   "type": "produce",
+   "en": "the landlord",
+   "options": [
+    "בַּעַל הַבַּיִת",
+    "וַעַד בַּיִת",
+    "חוֹזֶה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-44-e11",
+   "type": "recall",
+   "he": "שָׁבוּר",
+   "en": "broken"
+  },
+  {
+   "id": "I-44-e12",
+   "type": "respond",
+   "cue": "Say there is no electricity.",
+   "answer": {
+    "he": "אֵין חַשְׁמַל",
+    "en": "There is no electricity"
+   }
+  },
+  {
+   "id": "I-44-e13",
+   "type": "register",
+   "he": "בְּסֵדֶר",
+   "en": "OK / fine / alright",
+   "answer": "neutral",
+   "options": [
+    "formal",
+    "neutral",
+    "casual",
+    "slang"
+   ]
+  },
+  {
+   "id": "I-44-e14",
+   "type": "recall",
+   "he": "קִיר",
+   "en": "wall"
+  }
+ ],
+ "note": "'Plumber', 'leak', 'air-conditioner' and 'to fix' have no pointed token in the sources; the feminine and plural forms of 'broken' are not in the sources, so only the masculine form is used."
+}

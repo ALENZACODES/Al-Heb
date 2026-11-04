@@ -1,6 +1,6 @@
 # Image run: how to produce the 797 images (766 from the doc + 31 quirky mnemonics)
 
-Source (groups 1-100): Prompt document "100 ChatGPT commands for the Hebrew image lane" (d497130e-096d-494b-9242-461c91da56e1). Machine-readable form: `data/images/prompt-groups.json` (101 groups, 797 rows: groups 1-100 are the doc, group 101 is lane 7's addition)  and `data/images/manifest.csv`. Rebuild with `node tools/images/build_prompt_groups.mjs`.
+Source (groups 1-100): Prompt document "100 image commands for the Hebrew image lane" (d497130e-096d-494b-9242-461c91da56e1). Machine-readable form: `data/images/prompt-groups.json` (101 groups, 797 rows: groups 1-100 are the doc, group 101 is lane 7's addition)  and `data/images/manifest.csv`. Rebuild with `node tools/images/build_prompt_groups.mjs`.
 
 ## Count discrepancy (reported, not fudged)
 The doc states A 32, B 270, C 162, D 75, E 150, F 76 = 765. Its commands actually name A 31, B 270, C 162, D 75, E 150, F 78 = 766 files (F is 79 if the optional icon grid image is counted). Block A: the cup sample, 2 sheets, 8 expressions, 4 variants, 6 mouths, 2 frames, 6 backgrounds, 2 tests = 31 (command 9 is text-only). Block F: 6 + 10 + 8 badges + 8 locked + 40 icons + 6 brand = 78. See `meta.discrepancies` in the JSON. Decide which side is right (probably the doc's stated counts are stale). Block G adds 31 more: manifest total 797, of which the doc's own commands give 766; the log in `meta.discrepancies` lists A, F, G and the total.
@@ -8,9 +8,9 @@ The doc states A 32, B 270, C 162, D 75, E 150, F 76 = 765. Its commands actuall
 ## Block G: quirky mnemonic images (command 101, NOT in the doc)
 31 rows `L<nn>_<letter>_quirky.png` (27, one per contract letter id) plus `_quirky_vet`, `_quirky_khaf`, `_quirky_fe`, `_quirky_sin` (the four sound-variant forms). The subject of each is the `imageIdea` in `data/letters/mnemonics.json`, read when `node tools/images/build_prompt_groups.mjs` runs (re-run it after lane 2 refines that file; `tests/book.images.test.js` warns, but does not fail, when the prompts are stale). The four variant ideas are written by lane 7 from the existing story sentences (listed in `QUIRKY_VARIANTS` in `tools/images/spec.mjs`); they are not in mnemonics.json. The 27 letters are 27, not ~31: the extra four are the variants. One idea ("a fence of letters", lamed) is rewritten to "a fence of plain wooden planks" in the prompt so the model is not invited to draw lettering. Every prompt carries the style guide, a quirky addendum, the no-text rule and "do not draw any letter"; the Hebrew is overlaid as vector (`tools/images/overlay.mjs`) in the book chapter and on the flashcards. The older `L<nn>_<letter>_print_mnemonic` rows stay; the quirky set is an alternative/extra picture, and the book's "Remember every letter" chapter and the flashcards use the quirky one. Run it as `node tools/images/gen_via_api.mjs --block G` (not run).
 
-## Path 1: human with ChatGPT (the doc's plan)
-1. New ChatGPT Project. Paste the "6-hour work order" from the doc as the first message; attach/paste the 100 commands.
-2. Say `next` repeatedly. Per image ChatGPT prints `FILE: | SET: | PROMPT: | NOTES:`.
+## Path 1: human with an image tool (the doc's plan)
+1. New project in your image tool. Paste the "6-hour work order" from the doc as the first message; attach/paste the 100 commands.
+2. Say `next` repeatedly. Per image the tool prints `FILE: | SET: | PROMPT: | NOTES:`.
 3. Before Block C, supply the 27 `REF_cursive_<name>.png` silhouettes: made, in `assets/img/refs/` (1024x1024, black on white, Gveret Levin; regenerate with `node tools/images/make_cursive_refs.mjs`). 27 matching `REF_print_<name>.png` print-letter silhouettes (Noto Serif Hebrew, semibold) are beside them. They live in a subfolder so they are never mistaken for finished manifest images. Contact sheet checked by eye; the glyph is the plain letter, no niqqud.
 4. Save images under the exact names in `manifest.csv` into `assets/img/`, then run `node tools/images/make_placeholders.mjs` (refreshes `assets/img/index.json`).
 5. Limits (doc, unverified): ~40 images / 3 h, ~200 / day on Plus, so about a week.

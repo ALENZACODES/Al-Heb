@@ -47,7 +47,10 @@ export function createEngagement(io, opt = {}) {
     const base = projectStreak(rec, t, extraRest());
     const have = base.todaySeconds;
     const next = Math.max(sec, have);
-    if (!force && (st.lastPersist != null && t - st.lastPersist < persistMs)) return;
+    // Reaching the goal is persisted at once (the 10 s gate must not hold it back: a goal reached just before local
+    // midnight would otherwise be discarded by the day rollover in sync()).
+    const reached = next >= goal && st.lastSavedSec < goal;
+    if (!force && !reached && (st.lastPersist != null && t - st.lastPersist < persistMs)) return;
     st.lastPersist = t;
     if (sec === st.lastSavedSec && !force) return;
     st.lastSavedSec = sec;

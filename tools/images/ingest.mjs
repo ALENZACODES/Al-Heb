@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Ingest pipeline for the ~800 images the author generates by hand in ChatGPT (see docs/images/README.md).
+// Ingest pipeline for the ~800 images the author generates by hand in an image generator (see docs/images/README.md).
 //
 //   node tools/images/ingest.mjs ingest <dir|zip|file> [more inputs...] [--dry-run] [--assign FILE.csv] [--replace] [--no-ocr]
 //                                  [--allow-aspect] [--jobs 4] [--tool "..."] [--model "..."] [--root DIR] [--originals DIR]

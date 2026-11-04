@@ -1,4 +1,4 @@
-// Source-of-truth transcription of the 100-command ChatGPT doc
+// Source-of-truth transcription of the 100-command image doc
 // (the "100 image commands" prompt doc, read 2026-11-03).
 // Pure data + prompt templates. No I/O. Used by build_prompt_groups.mjs.
 

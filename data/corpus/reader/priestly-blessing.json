@@ -2,17 +2,22 @@
  "schema": "alef-corpus-reader/1",
  "id": "priestly-blessing",
  "title": "Priestly Blessing",
- "ref": "Numbers 6:24-26",
+ "ref": "Numbers 6:22-27",
  "registryIds": [
   "bless-priestly-1",
   "bless-priestly-2",
   "bless-priestly-3"
  ],
+ "registryVerses": [
+  24,
+  25,
+  26
+ ],
  "source": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
  "sourceUrl": "https://tanach.us/Books/Numbers.xml",
  "license": "Public Domain / copy without restriction (tanach.us/License.html)",
  "attribution": "Hebrew text: Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026), Tanach.us Inc., West Redding, CT, USA (tanach.us; \"may be viewed or copied without restriction\"). Cantillation marks removed. Not the WLC. English: JPS 1917, public domain.",
- "note": "Verse-by-verse reader data. he = pointed text without cantillation (registry normalisation); heTrope = UXLC text with cantillation. Word glosses are the registry's original literal glosses where a one-verse record has them, else null. timing.start/end are placeholders (seconds) for future audio alignment and are null until a recording exists. Aliyah ranges from the Sefaria calendar API; reading units are common practice, not reviewed by clergy.",
+ "note": "Verse-by-verse reader data. he = pointed text without cantillation (registry normalisation); heTrope = UXLC text with cantillation. words = UXLC word units (a maqaf-joined proclitic is its own word, joinedWithNext true); tokens = reading tokens, maqaf groups joined, which is where the literal glosses attach (null where no registry record has them). timing.start/end are placeholders in seconds for future audio alignment; null until a recording exists. Aliyah ranges from the Sefaria calendar API; reading units are common practice, not reviewed by clergy.",
  "aliyah": {
   "parashah": {
    "en": "Nasso",
@@ -32,9 +37,17 @@
   "maftir": "Numbers 7:87-7:89",
   "passageAliyah": 4,
   "startsAliyah": false,
-  "note": "Numbers 6:24-26 sits inside the fourth aliyah (5:11-6:27). It is also recited, not read from the scroll, as the Priestly Blessing in the service; there the three verses are said one at a time with the congregation responding after each."
+  "note": "Numbers 6:22-27 sits inside the fourth aliyah (5:11-6:27). Verses 22-23 (the instruction to Aaron) and 27 (the closing) are narrative; the blessing proper is 6:24-26. It is also recited, not read from the scroll, as the Priestly Blessing in the service; there the three verses are said one at a time with the congregation responding after each."
  },
  "readingUnits": [
+  {
+   "id": "intro",
+   "verses": [
+    22,
+    23
+   ],
+   "label": "Introduction (6:22-23, narrative, not part of the blessing)"
+  },
   {
    "id": "line-1",
    "verses": [
@@ -55,17 +68,29 @@
     26
    ],
    "label": "Line 3 (7 words)"
+  },
+  {
+   "id": "closing",
+   "verses": [
+    27
+   ],
+   "label": "Closing (6:27, narrative)"
   }
  ],
- "wordCount": 15,
+ "wordCount": 41,
+ "tokenCount": 35,
  "wordIndex": {
-  "יְבָרֶכְךָ": [
+  "וַיְדַבֵּר": [
    [
-    24,
+    22,
     0
    ]
   ],
   "יְהוָה": [
+   [
+    22,
+    1
+   ],
    [
     24,
     1
@@ -77,6 +102,118 @@
    [
     26,
     1
+   ]
+  ],
+  "אֶל־": [
+   [
+    22,
+    2
+   ],
+   [
+    23,
+    1
+   ]
+  ],
+  "מֹשֶׁה": [
+   [
+    22,
+    3
+   ]
+  ],
+  "לֵּאמֹר": [
+   [
+    22,
+    4
+   ]
+  ],
+  "דַּבֵּר": [
+   [
+    23,
+    0
+   ]
+  ],
+  "אַהֲרֹן": [
+   [
+    23,
+    2
+   ]
+  ],
+  "וְאֶל־": [
+   [
+    23,
+    3
+   ]
+  ],
+  "בָּנָיו": [
+   [
+    23,
+    4
+   ]
+  ],
+  "לֵאמֹר": [
+   [
+    23,
+    5
+   ]
+  ],
+  "כֹּה": [
+   [
+    23,
+    6
+   ]
+  ],
+  "תְבָרֲכוּ": [
+   [
+    23,
+    7
+   ]
+  ],
+  "אֶת־": [
+   [
+    23,
+    8
+   ],
+   [
+    27,
+    1
+   ]
+  ],
+  "בְּנֵי": [
+   [
+    23,
+    9
+   ],
+   [
+    27,
+    4
+   ]
+  ],
+  "יִשְׂרָאֵל": [
+   [
+    23,
+    10
+   ],
+   [
+    27,
+    5
+   ]
+  ],
+  "אָמוֹר": [
+   [
+    23,
+    11
+   ]
+  ],
+  "לָהֶם": [
+   [
+    23,
+    12
+   ]
+  ],
+  "יְבָרֶכְךָ": [
+   [
+    24,
+    0
    ]
   ],
   "וְיִשְׁמְרֶךָ": [
@@ -140,39 +277,70 @@
     26,
     6
    ]
+  ],
+  "וְשָׂמוּ": [
+   [
+    27,
+    0
+   ]
+  ],
+  "שְׁמִי": [
+   [
+    27,
+    2
+   ]
+  ],
+  "עַל־": [
+   [
+    27,
+    3
+   ]
+  ],
+  "וַאֲנִי": [
+   [
+    27,
+    6
+   ]
+  ],
+  "אֲבָרֲכֵם": [
+   [
+    27,
+    7
+   ]
   ]
  },
  "verses": [
   {
-   "ref": "Numbers 6:24",
+   "ref": "Numbers 6:22",
    "book": "Numbers",
    "chapter": 6,
-   "verse": 24,
-   "unit": "line-1",
-   "he": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃",
-   "heTrope": "יְבָרֶכְךָ֥ יְהוָ֖ה וְיִשְׁמְרֶֽךָ׃",
-   "english": "The LORD bless thee, and keep thee;",
+   "verse": 22,
+   "unit": "intro",
+   "he": "וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר׃",
+   "heTrope": "וַיְדַבֵּ֥ר יְהוָ֖ה אֶל־ מֹשֶׁ֥ה לֵּאמֹֽר׃",
+   "english": "And the LORD spoke unto Moses, saying:",
    "englishSource": "JPS 1917 (The Holy Scriptures: A New Translation), Public Domain (label from Sefaria metadata, unverified)",
+   "glossSource": null,
    "largeLetters": [],
    "halves": [
     [
      0,
-     2
+     4
     ]
    ],
    "words": [
     {
      "i": 0,
      "g": 0,
-     "he": "יְבָרֶכְךָ",
-     "heTrope": "יְבָרֶכְךָ֥",
-     "gloss": "may-he-bless-you",
+     "he": "וַיְדַבֵּר",
+     "heTrope": "וַיְדַבֵּ֥ר",
+     "joinedWithNext": false,
      "trope": "mercha",
      "tropeClass": "conjunctive",
      "marks": [
       "mercha"
      ],
-     "stressLetterIndex": 4,
+     "stressLetterIndex": 3,
      "pauseAfter": "none",
      "timing": {
       "start": null,
@@ -184,7 +352,7 @@
      "g": 1,
      "he": "יְהוָה",
      "heTrope": "יְהוָ֖ה",
-     "gloss": "the LORD",
+     "joinedWithNext": false,
      "trope": "tipcha",
      "tropeClass": "disjunctive",
      "marks": [
@@ -200,9 +368,571 @@
     {
      "i": 2,
      "g": 2,
+     "he": "אֶל־",
+     "heTrope": "אֶל־",
+     "joinedWithNext": true,
+     "trope": null,
+     "tropeClass": "none",
+     "marks": [],
+     "stressLetterIndex": null,
+     "pauseAfter": "none",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 3,
+     "g": 3,
+     "he": "מֹשֶׁה",
+     "heTrope": "מֹשֶׁ֥ה",
+     "joinedWithNext": false,
+     "trope": "mercha",
+     "tropeClass": "conjunctive",
+     "marks": [
+      "mercha"
+     ],
+     "stressLetterIndex": 1,
+     "pauseAfter": "none",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 4,
+     "g": 4,
+     "he": "לֵּאמֹר",
+     "heTrope": "לֵּאמֹֽר׃",
+     "joinedWithNext": false,
+     "trope": "siluk",
+     "tropeClass": "disjunctive",
+     "marks": [
+      "siluk"
+     ],
+     "stressLetterIndex": 2,
+     "pauseAfter": "major",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    }
+   ],
+   "tokens": [
+    {
+     "t": 0,
+     "he": "וַיְדַבֵּר",
+     "words": [
+      0
+     ],
+     "gloss": null,
+     "trope": "mercha",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 1,
+     "he": "יְהוָה",
+     "words": [
+      1
+     ],
+     "gloss": null,
+     "trope": "tipcha",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 2,
+     "he": "אֶל־מֹשֶׁה",
+     "words": [
+      2,
+      3
+     ],
+     "gloss": null,
+     "trope": "mercha",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 3,
+     "he": "לֵּאמֹר",
+     "words": [
+      4
+     ],
+     "gloss": null,
+     "trope": "siluk",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    }
+   ],
+   "timing": {
+    "start": null,
+    "end": null
+   }
+  },
+  {
+   "ref": "Numbers 6:23",
+   "book": "Numbers",
+   "chapter": 6,
+   "verse": 23,
+   "unit": "intro",
+   "he": "דַּבֵּר אֶל־אַהֲרֹן וְאֶל־בָּנָיו לֵאמֹר כֹּה תְבָרֲכוּ אֶת־בְּנֵי יִשְׂרָאֵל אָמוֹר לָהֶם׃",
+   "heTrope": "דַּבֵּ֤ר אֶֽל־ אַהֲרֹן֙ וְאֶל־ בָּנָ֣יו לֵאמֹ֔ר כֹּ֥ה תְבָרֲכ֖וּ אֶת־ בְּנֵ֣י יִשְׂרָאֵ֑ל אָמ֖וֹר לָהֶֽם׃",
+   "english": "’Speak unto Aaron and unto his sons, saying: On this wise ye shall bless the children of Israel; ye shall say unto them:",
+   "englishSource": "JPS 1917 (The Holy Scriptures: A New Translation), Public Domain (label from Sefaria metadata, unverified)",
+   "glossSource": null,
+   "largeLetters": [],
+   "halves": [
+    [
+     0,
+     10
+    ],
+    [
+     11,
+     12
+    ]
+   ],
+   "words": [
+    {
+     "i": 0,
+     "g": 5,
+     "he": "דַּבֵּר",
+     "heTrope": "דַּבֵּ֤ר",
+     "joinedWithNext": false,
+     "trope": "mahpach",
+     "tropeClass": "conjunctive",
+     "marks": [
+      "mahpach"
+     ],
+     "stressLetterIndex": 1,
+     "pauseAfter": "none",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 1,
+     "g": 6,
+     "he": "אֶל־",
+     "heTrope": "אֶֽל־",
+     "joinedWithNext": true,
+     "trope": null,
+     "tropeClass": "none",
+     "marks": [
+      "meteg"
+     ],
+     "stressLetterIndex": null,
+     "pauseAfter": "none",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 2,
+     "g": 7,
+     "he": "אַהֲרֹן",
+     "heTrope": "אַהֲרֹן֙",
+     "joinedWithNext": false,
+     "trope": "pashta",
+     "tropeClass": "disjunctive",
+     "marks": [
+      "pashta"
+     ],
+     "stressLetterIndex": null,
+     "pauseAfter": "minor",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 3,
+     "g": 8,
+     "he": "וְאֶל־",
+     "heTrope": "וְאֶל־",
+     "joinedWithNext": true,
+     "trope": null,
+     "tropeClass": "none",
+     "marks": [],
+     "stressLetterIndex": null,
+     "pauseAfter": "none",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 4,
+     "g": 9,
+     "he": "בָּנָיו",
+     "heTrope": "בָּנָ֣יו",
+     "joinedWithNext": false,
+     "trope": "munach",
+     "tropeClass": "conjunctive",
+     "marks": [
+      "munach"
+     ],
+     "stressLetterIndex": 1,
+     "pauseAfter": "none",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 5,
+     "g": 10,
+     "he": "לֵאמֹר",
+     "heTrope": "לֵאמֹ֔ר",
+     "joinedWithNext": false,
+     "trope": "zakef-katan",
+     "tropeClass": "disjunctive",
+     "marks": [
+      "zakef-katan"
+     ],
+     "stressLetterIndex": 2,
+     "pauseAfter": "minor",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 6,
+     "g": 11,
+     "he": "כֹּה",
+     "heTrope": "כֹּ֥ה",
+     "joinedWithNext": false,
+     "trope": "mercha",
+     "tropeClass": "conjunctive",
+     "marks": [
+      "mercha"
+     ],
+     "stressLetterIndex": 0,
+     "pauseAfter": "none",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 7,
+     "g": 12,
+     "he": "תְבָרֲכוּ",
+     "heTrope": "תְבָרֲכ֖וּ",
+     "joinedWithNext": false,
+     "trope": "tipcha",
+     "tropeClass": "disjunctive",
+     "marks": [
+      "tipcha"
+     ],
+     "stressLetterIndex": 3,
+     "pauseAfter": "minor",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 8,
+     "g": 13,
+     "he": "אֶת־",
+     "heTrope": "אֶת־",
+     "joinedWithNext": true,
+     "trope": null,
+     "tropeClass": "none",
+     "marks": [],
+     "stressLetterIndex": null,
+     "pauseAfter": "none",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 9,
+     "g": 14,
+     "he": "בְּנֵי",
+     "heTrope": "בְּנֵ֣י",
+     "joinedWithNext": false,
+     "trope": "munach",
+     "tropeClass": "conjunctive",
+     "marks": [
+      "munach"
+     ],
+     "stressLetterIndex": 1,
+     "pauseAfter": "none",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 10,
+     "g": 15,
+     "he": "יִשְׂרָאֵל",
+     "heTrope": "יִשְׂרָאֵ֑ל",
+     "joinedWithNext": false,
+     "trope": "etnachta",
+     "tropeClass": "disjunctive",
+     "marks": [
+      "etnachta"
+     ],
+     "stressLetterIndex": 3,
+     "pauseAfter": "major",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 11,
+     "g": 16,
+     "he": "אָמוֹר",
+     "heTrope": "אָמ֖וֹר",
+     "joinedWithNext": false,
+     "trope": "tipcha",
+     "tropeClass": "disjunctive",
+     "marks": [
+      "tipcha"
+     ],
+     "stressLetterIndex": 1,
+     "pauseAfter": "minor",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 12,
+     "g": 17,
+     "he": "לָהֶם",
+     "heTrope": "לָהֶֽם׃",
+     "joinedWithNext": false,
+     "trope": "siluk",
+     "tropeClass": "disjunctive",
+     "marks": [
+      "siluk"
+     ],
+     "stressLetterIndex": 1,
+     "pauseAfter": "major",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    }
+   ],
+   "tokens": [
+    {
+     "t": 0,
+     "he": "דַּבֵּר",
+     "words": [
+      0
+     ],
+     "gloss": null,
+     "trope": "mahpach",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 1,
+     "he": "אֶל־אַהֲרֹן",
+     "words": [
+      1,
+      2
+     ],
+     "gloss": null,
+     "trope": "pashta",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 2,
+     "he": "וְאֶל־בָּנָיו",
+     "words": [
+      3,
+      4
+     ],
+     "gloss": null,
+     "trope": "munach",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 3,
+     "he": "לֵאמֹר",
+     "words": [
+      5
+     ],
+     "gloss": null,
+     "trope": "zakef-katan",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 4,
+     "he": "כֹּה",
+     "words": [
+      6
+     ],
+     "gloss": null,
+     "trope": "mercha",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 5,
+     "he": "תְבָרֲכוּ",
+     "words": [
+      7
+     ],
+     "gloss": null,
+     "trope": "tipcha",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 6,
+     "he": "אֶת־בְּנֵי",
+     "words": [
+      8,
+      9
+     ],
+     "gloss": null,
+     "trope": "munach",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 7,
+     "he": "יִשְׂרָאֵל",
+     "words": [
+      10
+     ],
+     "gloss": null,
+     "trope": "etnachta",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 8,
+     "he": "אָמוֹר",
+     "words": [
+      11
+     ],
+     "gloss": null,
+     "trope": "tipcha",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 9,
+     "he": "לָהֶם",
+     "words": [
+      12
+     ],
+     "gloss": null,
+     "trope": "siluk",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    }
+   ],
+   "timing": {
+    "start": null,
+    "end": null
+   }
+  },
+  {
+   "ref": "Numbers 6:24",
+   "book": "Numbers",
+   "chapter": 6,
+   "verse": 24,
+   "unit": "line-1",
+   "he": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃",
+   "heTrope": "יְבָרֶכְךָ֥ יְהוָ֖ה וְיִשְׁמְרֶֽךָ׃",
+   "english": "The LORD bless thee, and keep thee;",
+   "englishSource": "JPS 1917 (The Holy Scriptures: A New Translation), Public Domain (label from Sefaria metadata, unverified)",
+   "glossSource": "registry bless-priestly-1 wordGlosses (original literal glosses)",
+   "largeLetters": [],
+   "halves": [
+    [
+     0,
+     2
+    ]
+   ],
+   "words": [
+    {
+     "i": 0,
+     "g": 18,
+     "he": "יְבָרֶכְךָ",
+     "heTrope": "יְבָרֶכְךָ֥",
+     "joinedWithNext": false,
+     "trope": "mercha",
+     "tropeClass": "conjunctive",
+     "marks": [
+      "mercha"
+     ],
+     "stressLetterIndex": 4,
+     "pauseAfter": "none",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 1,
+     "g": 19,
+     "he": "יְהוָה",
+     "heTrope": "יְהוָ֖ה",
+     "joinedWithNext": false,
+     "trope": "tipcha",
+     "tropeClass": "disjunctive",
+     "marks": [
+      "tipcha"
+     ],
+     "stressLetterIndex": 2,
+     "pauseAfter": "minor",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 2,
+     "g": 20,
      "he": "וְיִשְׁמְרֶךָ",
      "heTrope": "וְיִשְׁמְרֶֽךָ׃",
-     "gloss": "and-may-he-keep-you",
+     "joinedWithNext": false,
      "trope": "siluk",
      "tropeClass": "disjunctive",
      "marks": [
@@ -210,6 +940,47 @@
      ],
      "stressLetterIndex": 4,
      "pauseAfter": "major",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    }
+   ],
+   "tokens": [
+    {
+     "t": 0,
+     "he": "יְבָרֶכְךָ",
+     "words": [
+      0
+     ],
+     "gloss": "may-he-bless-you",
+     "trope": "mercha",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 1,
+     "he": "יְהוָה",
+     "words": [
+      1
+     ],
+     "gloss": "the LORD",
+     "trope": "tipcha",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 2,
+     "he": "וְיִשְׁמְרֶךָ",
+     "words": [
+      2
+     ],
+     "gloss": "and-may-he-keep-you",
+     "trope": "siluk",
      "timing": {
       "start": null,
       "end": null
@@ -231,6 +1002,7 @@
    "heTrope": "יָאֵ֨ר יְהוָ֧ה ׀ פָּנָ֛יו אֵלֶ֖יךָ וִֽיחֻנֶּֽךָּ׃",
    "english": "The LORD make His face to shine upon thee, and be gracious unto thee;",
    "englishSource": "JPS 1917 (The Holy Scriptures: A New Translation), Public Domain (label from Sefaria metadata, unverified)",
+   "glossSource": "registry bless-priestly-2 wordGlosses (original literal glosses)",
    "largeLetters": [],
    "halves": [
     [
@@ -241,10 +1013,10 @@
    "words": [
     {
      "i": 0,
-     "g": 3,
+     "g": 21,
      "he": "יָאֵר",
      "heTrope": "יָאֵ֨ר",
-     "gloss": "may-he-shine",
+     "joinedWithNext": false,
      "trope": "kadma",
      "tropeClass": "conjunctive",
      "marks": [
@@ -259,10 +1031,10 @@
     },
     {
      "i": 1,
-     "g": 4,
+     "g": 22,
      "he": "יְהוָה",
      "heTrope": "יְהוָ֧ה׀",
-     "gloss": "the LORD",
+     "joinedWithNext": false,
      "trope": "darga",
      "tropeClass": "conjunctive",
      "marks": [
@@ -270,7 +1042,7 @@
       "pasek"
      ],
      "stressLetterIndex": 2,
-     "pauseAfter": "none",
+     "pauseAfter": "pasek",
      "timing": {
       "start": null,
       "end": null
@@ -278,10 +1050,10 @@
     },
     {
      "i": 2,
-     "g": 5,
+     "g": 23,
      "he": "פָּנָיו",
      "heTrope": "פָּנָ֛יו",
-     "gloss": "his-face",
+     "joinedWithNext": false,
      "trope": "tevir",
      "tropeClass": "disjunctive",
      "marks": [
@@ -296,10 +1068,10 @@
     },
     {
      "i": 3,
-     "g": 6,
+     "g": 24,
      "he": "אֵלֶיךָ",
      "heTrope": "אֵלֶ֖יךָ",
-     "gloss": "toward-you",
+     "joinedWithNext": false,
      "trope": "tipcha",
      "tropeClass": "disjunctive",
      "marks": [
@@ -314,10 +1086,10 @@
     },
     {
      "i": 4,
-     "g": 7,
+     "g": 25,
      "he": "וִיחֻנֶּךָּ",
      "heTrope": "וִֽיחֻנֶּֽךָּ׃",
-     "gloss": "and-may-he-be-gracious-to-you",
+     "joinedWithNext": false,
      "trope": "siluk",
      "tropeClass": "disjunctive",
      "marks": [
@@ -326,6 +1098,73 @@
      ],
      "stressLetterIndex": 3,
      "pauseAfter": "major",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    }
+   ],
+   "tokens": [
+    {
+     "t": 0,
+     "he": "יָאֵר",
+     "words": [
+      0
+     ],
+     "gloss": "may-he-shine",
+     "trope": "kadma",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 1,
+     "he": "יְהוָה",
+     "words": [
+      1
+     ],
+     "gloss": "the LORD",
+     "trope": "darga",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 2,
+     "he": "פָּנָיו",
+     "words": [
+      2
+     ],
+     "gloss": "his-face",
+     "trope": "tevir",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 3,
+     "he": "אֵלֶיךָ",
+     "words": [
+      3
+     ],
+     "gloss": "toward-you",
+     "trope": "tipcha",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 4,
+     "he": "וִיחֻנֶּךָּ",
+     "words": [
+      4
+     ],
+     "gloss": "and-may-he-be-gracious-to-you",
+     "trope": "siluk",
      "timing": {
       "start": null,
       "end": null
@@ -347,6 +1186,7 @@
    "heTrope": "יִשָּׂ֨א יְהוָ֤ה ׀ פָּנָיו֙ אֵלֶ֔יךָ וְיָשֵׂ֥ם לְךָ֖ שָׁלֽוֹם׃",
    "english": "The LORD lift up His countenance upon thee, and give thee peace.",
    "englishSource": "JPS 1917 (The Holy Scriptures: A New Translation), Public Domain (label from Sefaria metadata, unverified)",
+   "glossSource": "registry bless-priestly-3 wordGlosses (original literal glosses)",
    "largeLetters": [],
    "halves": [
     [
@@ -357,10 +1197,10 @@
    "words": [
     {
      "i": 0,
-     "g": 8,
+     "g": 26,
      "he": "יִשָּׂא",
      "heTrope": "יִשָּׂ֨א",
-     "gloss": "may-he-lift",
+     "joinedWithNext": false,
      "trope": "kadma",
      "tropeClass": "conjunctive",
      "marks": [
@@ -375,10 +1215,10 @@
     },
     {
      "i": 1,
-     "g": 9,
+     "g": 27,
      "he": "יְהוָה",
      "heTrope": "יְהוָ֤ה׀",
-     "gloss": "the LORD",
+     "joinedWithNext": false,
      "trope": "mahpach",
      "tropeClass": "conjunctive",
      "marks": [
@@ -386,7 +1226,7 @@
       "pasek"
      ],
      "stressLetterIndex": 2,
-     "pauseAfter": "none",
+     "pauseAfter": "pasek",
      "timing": {
       "start": null,
       "end": null
@@ -394,10 +1234,10 @@
     },
     {
      "i": 2,
-     "g": 10,
+     "g": 28,
      "he": "פָּנָיו",
      "heTrope": "פָּנָיו֙",
-     "gloss": "his-face",
+     "joinedWithNext": false,
      "trope": "pashta",
      "tropeClass": "disjunctive",
      "marks": [
@@ -412,10 +1252,10 @@
     },
     {
      "i": 3,
-     "g": 11,
+     "g": 29,
      "he": "אֵלֶיךָ",
      "heTrope": "אֵלֶ֔יךָ",
-     "gloss": "toward-you",
+     "joinedWithNext": false,
      "trope": "zakef-katan",
      "tropeClass": "disjunctive",
      "marks": [
@@ -430,10 +1270,10 @@
     },
     {
      "i": 4,
-     "g": 12,
+     "g": 30,
      "he": "וְיָשֵׂם",
      "heTrope": "וְיָשֵׂ֥ם",
-     "gloss": "and-may-he-set",
+     "joinedWithNext": false,
      "trope": "mercha",
      "tropeClass": "conjunctive",
      "marks": [
@@ -448,10 +1288,10 @@
     },
     {
      "i": 5,
-     "g": 13,
+     "g": 31,
      "he": "לְךָ",
      "heTrope": "לְךָ֖",
-     "gloss": "for-you",
+     "joinedWithNext": false,
      "trope": "tipcha",
      "tropeClass": "disjunctive",
      "marks": [
@@ -466,10 +1306,10 @@
     },
     {
      "i": 6,
-     "g": 14,
+     "g": 32,
      "he": "שָׁלוֹם",
      "heTrope": "שָׁלֽוֹם׃",
-     "gloss": "peace",
+     "joinedWithNext": false,
      "trope": "siluk",
      "tropeClass": "disjunctive",
      "marks": [
@@ -477,6 +1317,350 @@
      ],
      "stressLetterIndex": 1,
      "pauseAfter": "major",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    }
+   ],
+   "tokens": [
+    {
+     "t": 0,
+     "he": "יִשָּׂא",
+     "words": [
+      0
+     ],
+     "gloss": "may-he-lift",
+     "trope": "kadma",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 1,
+     "he": "יְהוָה",
+     "words": [
+      1
+     ],
+     "gloss": "the LORD",
+     "trope": "mahpach",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 2,
+     "he": "פָּנָיו",
+     "words": [
+      2
+     ],
+     "gloss": "his-face",
+     "trope": "pashta",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 3,
+     "he": "אֵלֶיךָ",
+     "words": [
+      3
+     ],
+     "gloss": "toward-you",
+     "trope": "zakef-katan",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 4,
+     "he": "וְיָשֵׂם",
+     "words": [
+      4
+     ],
+     "gloss": "and-may-he-set",
+     "trope": "mercha",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 5,
+     "he": "לְךָ",
+     "words": [
+      5
+     ],
+     "gloss": "for-you",
+     "trope": "tipcha",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 6,
+     "he": "שָׁלוֹם",
+     "words": [
+      6
+     ],
+     "gloss": "peace",
+     "trope": "siluk",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    }
+   ],
+   "timing": {
+    "start": null,
+    "end": null
+   }
+  },
+  {
+   "ref": "Numbers 6:27",
+   "book": "Numbers",
+   "chapter": 6,
+   "verse": 27,
+   "unit": "closing",
+   "he": "וְשָׂמוּ אֶת־שְׁמִי עַל־בְּנֵי יִשְׂרָאֵל וַאֲנִי אֲבָרֲכֵם׃",
+   "heTrope": "וְשָׂמ֥וּ אֶת־ שְׁמִ֖י עַל־ בְּנֵ֣י יִשְׂרָאֵ֑ל וַאֲנִ֖י אֲבָרֲכֵֽם׃",
+   "english": "So shall they put My name upon the children of Israel, and I will bless them.’",
+   "englishSource": "JPS 1917 (The Holy Scriptures: A New Translation), Public Domain (label from Sefaria metadata, unverified)",
+   "glossSource": null,
+   "largeLetters": [],
+   "halves": [
+    [
+     0,
+     5
+    ],
+    [
+     6,
+     7
+    ]
+   ],
+   "words": [
+    {
+     "i": 0,
+     "g": 33,
+     "he": "וְשָׂמוּ",
+     "heTrope": "וְשָׂמ֥וּ",
+     "joinedWithNext": false,
+     "trope": "mercha",
+     "tropeClass": "conjunctive",
+     "marks": [
+      "mercha"
+     ],
+     "stressLetterIndex": 2,
+     "pauseAfter": "none",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 1,
+     "g": 34,
+     "he": "אֶת־",
+     "heTrope": "אֶת־",
+     "joinedWithNext": true,
+     "trope": null,
+     "tropeClass": "none",
+     "marks": [],
+     "stressLetterIndex": null,
+     "pauseAfter": "none",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 2,
+     "g": 35,
+     "he": "שְׁמִי",
+     "heTrope": "שְׁמִ֖י",
+     "joinedWithNext": false,
+     "trope": "tipcha",
+     "tropeClass": "disjunctive",
+     "marks": [
+      "tipcha"
+     ],
+     "stressLetterIndex": 1,
+     "pauseAfter": "minor",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 3,
+     "g": 36,
+     "he": "עַל־",
+     "heTrope": "עַל־",
+     "joinedWithNext": true,
+     "trope": null,
+     "tropeClass": "none",
+     "marks": [],
+     "stressLetterIndex": null,
+     "pauseAfter": "none",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 4,
+     "g": 37,
+     "he": "בְּנֵי",
+     "heTrope": "בְּנֵ֣י",
+     "joinedWithNext": false,
+     "trope": "munach",
+     "tropeClass": "conjunctive",
+     "marks": [
+      "munach"
+     ],
+     "stressLetterIndex": 1,
+     "pauseAfter": "none",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 5,
+     "g": 38,
+     "he": "יִשְׂרָאֵל",
+     "heTrope": "יִשְׂרָאֵ֑ל",
+     "joinedWithNext": false,
+     "trope": "etnachta",
+     "tropeClass": "disjunctive",
+     "marks": [
+      "etnachta"
+     ],
+     "stressLetterIndex": 3,
+     "pauseAfter": "major",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 6,
+     "g": 39,
+     "he": "וַאֲנִי",
+     "heTrope": "וַאֲנִ֖י",
+     "joinedWithNext": false,
+     "trope": "tipcha",
+     "tropeClass": "disjunctive",
+     "marks": [
+      "tipcha"
+     ],
+     "stressLetterIndex": 2,
+     "pauseAfter": "minor",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "i": 7,
+     "g": 40,
+     "he": "אֲבָרֲכֵם",
+     "heTrope": "אֲבָרֲכֵֽם׃",
+     "joinedWithNext": false,
+     "trope": "siluk",
+     "tropeClass": "disjunctive",
+     "marks": [
+      "siluk"
+     ],
+     "stressLetterIndex": 3,
+     "pauseAfter": "major",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    }
+   ],
+   "tokens": [
+    {
+     "t": 0,
+     "he": "וְשָׂמוּ",
+     "words": [
+      0
+     ],
+     "gloss": null,
+     "trope": "mercha",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 1,
+     "he": "אֶת־שְׁמִי",
+     "words": [
+      1,
+      2
+     ],
+     "gloss": null,
+     "trope": "tipcha",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 2,
+     "he": "עַל־בְּנֵי",
+     "words": [
+      3,
+      4
+     ],
+     "gloss": null,
+     "trope": "munach",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 3,
+     "he": "יִשְׂרָאֵל",
+     "words": [
+      5
+     ],
+     "gloss": null,
+     "trope": "etnachta",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 4,
+     "he": "וַאֲנִי",
+     "words": [
+      6
+     ],
+     "gloss": null,
+     "trope": "tipcha",
+     "timing": {
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "t": 5,
+     "he": "אֲבָרֲכֵם",
+     "words": [
+      7
+     ],
+     "gloss": null,
+     "trope": "siluk",
      "timing": {
       "start": null,
       "end": null

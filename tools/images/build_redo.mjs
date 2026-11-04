@@ -2,7 +2,7 @@
 // Builds the redo queue for ingested images that the ingest / matcher flagged:
 //   contains_text (OCR hit), aspect_mismatch_allowed (square delivered for a wide row), wrong backdrop (scene seen != scene asked).
 // Writes docs/images/REDO-LIST.md (every flagged image + a one-page eyeball checklist) and docs/images/paste/redo-NN.txt
-// (ChatGPT paste files in the same format as cmd-NNN.txt, at most MAX_ITEMS images each, with stricter wording).
+// (image paste files in the same format as cmd-NNN.txt, at most MAX_ITEMS images each, with stricter wording).
 // Sources: data/images/provenance.json (flags, prompt snapshot, expected size), data/images/review-notes.json (scene seen/expected),
 // data/images/ingest-report.json when present (cross-check only). Pure helpers are exported for tests.
 //   node tools/images/build_redo.mjs            write the files

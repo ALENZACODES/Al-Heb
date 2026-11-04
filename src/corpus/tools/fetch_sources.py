@@ -59,7 +59,10 @@ def tanach_verse(book, ch, v):
     s = tanach_book(book)
     m = re.search(r'<c n="%d">(.*?)</c>' % ch, s, re.S)
     mv = re.search(r'<v n="%d">(.*?)</v>' % v, m.group(1), re.S)
-    words = re.findall(r"<w>(.*?)</w>", mv.group(1), re.S)
+    # Repo convention (same as src/torahread/tools/build-data.mjs and tools/corpus/verify_texts.mjs): read every <w> word AND
+    # the pointed <q> (qere) reading of a ketiv/qere pair; skip <k> (ketiv, unpointed). Matching <w> alone silently drops
+    # the qere word (Lam 5:21 and Ps 126:4 lost a word before this fix).
+    words = [m[1] for m in re.findall(r"<(w|q)>(.*?)</\1>", mv.group(1), re.S)]
     return " ".join(w.strip() for w in words)
 
 def tanach_item(book, ch, v1, v2=None, sefref=None):

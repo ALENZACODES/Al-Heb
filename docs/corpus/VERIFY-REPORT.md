@@ -11,7 +11,7 @@ These are machine checks of character-level consistency and of agreement with th
 | Records | 70 (torah 28, siddur 42) |
 | Records with a hard failure (stray characters, mark placement, final forms, maqaf/sof pasuq, NFC) | 0 |
 | Records with warnings only (dagesh on alef/ayin) | 0 |
-| UXLC cross-check (tools/vocab/.cache/tanach) | equal 25, no-ref 41, clip 2, mismatch 2 |
+| UXLC cross-check (tools/vocab/.cache/tanach) | equal 27, no-ref 41, clip 2 |
 | Snapshot re-derivation (source-snapshot.json raw lines through normalize.js) | equal 66, clip 4 |
 | Hebrew licence label taken from Sefaria metadata (unverified) | 42 |
 | English licence label (JPS 1917 "Public Domain") taken from Sefaria metadata (unverified) | 26 |
@@ -59,7 +59,7 @@ Cross-check statuses: `equal` every line equals the UXLC verse after the registr
 | `adonai-oz` | Psalm 29:11 | torah | 31 | 9 | 1 | 1 | - | - | equal | equal |
 | `gadlu` | Psalm 34:4 | torah | 26 | 6 | 0 | 1 | - | - | equal | equal |
 | `yehalelu` | Psalm 148:13-14 | torah | 85 | 24 | 6 | 2 | - | - | equal | equal |
-| `hashivenu` | Lamentations 5:21 | torah | 26 | 6 | 0 | 1 | - | - | mismatch (3: וְנָשׁוּבָה / חַדֵּשׁ; 4: חַדֵּשׁ / יָמֵינוּ; 5: יָמֵינוּ / כְּקֶדֶם; equals UXLC with the qere word dropped) | equal |
+| `hashivenu` | Lamentations 5:21 | torah | 32 | 7 | 0 | 1 | - | - | equal | equal |
 | `kedushah-kadosh` | Isaiah 6:3 | torah | 49 | 14 | 2 | 1 | - | - | equal | equal |
 | `kedushah-baruch` | Ezekiel 3:12 (last three words) | torah | 18 | 4 | 1 | 1 | - | - | clip | equal |
 | `kedushah-yimloch` | Psalm 146:10 | torah | 34 | 9 | 1 | 1 | - | - | equal | equal |
@@ -69,7 +69,7 @@ Cross-check statuses: `equal` every line equals the UXLC verse after the registr
 | `ashrei-144-15` | Psalm 144:15 | torah | 30 | 8 | 0 | 1 | - | - | equal | equal |
 | `ashrei-145-1-3` | Psalm 145:1-3 | torah | 97 | 23 | 1 | 3 | - | - | equal | equal |
 | `ashrei-145-16` | Psalm 145:16 | torah | 24 | 7 | 2 | 1 | - | - | equal | equal |
-| `shir-hamaalot` | Psalm 126:1-6 | torah | 202 | 49 | 5 | 6 | - | - | mismatch (29: אֶת־שְׁבִיתֵנוּ / אֶת־כַּאֲפִיקִים; 30: כַּאֲפִיקִים / בַּנֶּגֶב; 31: בַּנֶּגֶב / הַזֹּרְעִים; equals UXLC with the qere word dropped) | equal |
+| `shir-hamaalot` | Psalm 126:1-6 | torah | 208 | 50 | 5 | 6 | - | - | equal | equal |
 | `vayehi-binsoa` | Siddur: Vayehi binsoa (Numbers 10:35, Isaiah 2:3, blessing) | siddur | 110 | 25 | 0 | 3 | - | - | no-ref quotes 1/2 | equal |
 | `lecha-hashem` | Siddur: Lecha Adonai hagedulah (1 Chronicles 29:11, Psalm 99:5, 99:9) | siddur | 158 | 35 | 0 | 3 | - | - | no-ref quotes 1/3 | equal |
 | `vezot-hatorah` | Siddur: V'zot haTorah (Deuteronomy 4:44, Numbers 9:23) | siddur | 43 | 13 | 0 | 1 | - | - | no-ref quotes 0/2 | equal |
@@ -181,8 +181,7 @@ The Metsudah siddur is a 1981 publication. Sefaria labels its digitisation CC-BY
 
 ## 5. UXLC mismatches
 
-- `hashivenu` (Lamentations 5:21): first differing words (UXLC / record): #3 וְנָשׁוּבָה / חַדֵּשׁ; #4 חַדֵּשׁ / יָמֵינוּ; #5 יָמֵינוּ / כְּקֶדֶם. The record equals the UXLC verse with its qere word (`<q>`) left out: the snapshot fetcher reads `<w>` elements only, so a ketiv/qere word is missing from the record. Fix belongs in `src/corpus/tools/fetch_sources*.py` and a re-fetch; not changed here.
-- `shir-hamaalot` (Psalm 126:1-6): first differing words (UXLC / record): #29 אֶת־שְׁבִיתֵנוּ / אֶת־כַּאֲפִיקִים; #30 כַּאֲפִיקִים / בַּנֶּגֶב; #31 בַּנֶּגֶב / הַזֹּרְעִים. The record equals the UXLC verse with its qere word (`<q>`) left out: the snapshot fetcher reads `<w>` elements only, so a ketiv/qere word is missing from the record. Fix belongs in `src/corpus/tools/fetch_sources*.py` and a re-fetch; not changed here.
+None.
 
 ## 6. Failures and warnings in detail
 

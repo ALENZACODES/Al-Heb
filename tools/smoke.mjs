@@ -85,11 +85,20 @@ const check = (name, ok, detail = '') => { checks.push({ name, ok: !!ok, detail 
   await page.goto(base, { waitUntil: 'load' });
   await page.waitForFunction(() => location.hash === '#/welcome', null, { timeout: 8000 }).catch(() => {});
   check('first run redirects home -> #/welcome', (await page.evaluate(() => location.hash)) === '#/welcome');
-  await page.getByLabel('Man (Ari)').check(); await page.getByLabel('Ashkenazi').check(); await page.getByLabel('Both').check();
-  await page.getByRole('button', { name: 'Start learning' }).click();
-  await page.waitForFunction(() => location.hash.startsWith('#/learn'), null, { timeout: 8000 }).catch(() => {});
-  const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('alef:settings')));
-  check('onboarding persists voice/congregation/goal', saved?.voice === 'm' && saved?.congregation === 'ashkenazi' && saved?.goal === 'both' && saved?.onboarded === true, JSON.stringify(saved));
+  await page.locator('#ob-letters-none').check();
+  await page.getByRole('button', { name: 'Continue', exact: true }).click();
+  await page.waitForSelector('#ob-form-congregation');
+  await page.locator('#ob-denomination-reform').check(); await page.locator('#ob-pron-ashkenazi').check();
+  await page.getByRole('button', { name: 'Continue', exact: true }).click();
+  await page.waitForSelector('#ob-form-minutes');
+  await page.getByRole('button', { name: 'Show my week' }).click();
+  await page.waitForSelector('section.ob-plan');
+  const saved = await page.evaluate(() => ({ s: JSON.parse(localStorage.getItem('alef:settings')), o: JSON.parse(localStorage.getItem('alef:onboarding.v1')) }));
+  check('onboarding persists letters answer, denomination, minutes and the congregation setting', saved.o?.letters === 'none' && saved.o?.start === '/firstday' && saved.o?.denomination === 'reform' && saved.o?.minutesPerDay === 10 && saved.s?.congregation === 'ashkenazi' && saved.s?.onboarded === true, JSON.stringify(saved));
+  check('week plan card has 7 days', (await page.locator('section.ob-plan ol.ob-days > li').count()) === 7);
+  await page.locator('#ob-start').click();
+  await page.waitForFunction(() => location.hash === '#/firstday', null, { timeout: 8000 }).catch(() => {});
+  check('plan start button opens the first 10 minutes', (await page.evaluate(() => location.hash)) === '#/firstday');
   // learning loop: lesson -> listen -> complete -> review -> home due count
   await page.goto(base + '#/learn?lesson=r01'); await page.waitForSelector('text=Words');
   await page.getByRole('button', { name: 'Listen to Shin', exact: true }).click();
@@ -99,7 +108,8 @@ const check = (name, ok, detail = '') => { checks.push({ name, ok: !!ok, detail 
   await page.getByRole('button', { name: 'Mark lesson complete' }).click();
   await page.waitForSelector('text=new review cards added');
   await page.goto(base + '#/'); await page.waitForSelector('text=cards due');
-  check('home shows due cards and a 1-day streak', /6 cards due/.test(await page.locator('main').innerText()) && /1 day/.test(await page.locator('main').innerText()));
+  { const txt = await page.locator('main').innerText(); // the streak is now engaged-time based (src/curriculum/streak.js v2): completing a lesson alone no longer starts it, so only the line is asserted
+    check('home Today card shows 6 due cards, a streak line, the morning link and one Continue button', /6 cards due/.test(txt) && /Streak:/.test(txt) && /Today's morning verse/.test(txt) && (await page.locator('#today-continue').count()) === 1, txt.replace(/\s+/g, ' ').slice(0, 400)); }
   await page.goto(base + '#/learn?review=1'); await page.waitForSelector('text=Card 1 of 6');
   for (const k of ['3', '3', '4', '2', '1', '3']) {
     // after "Again" lane 1 may show an interference hint panel with a Continue button before the next card

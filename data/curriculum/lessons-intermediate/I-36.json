@@ -1,0 +1,343 @@
+{
+ "id": "I-36",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Work: office, meeting, boss and interview",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "עֲבוֹדָה",
+   "en": "work, job",
+   "note": "also 'worship, service' in the source; in speech it is the everyday word for work",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "avodah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h7e5cc0c5"
+   }
+  },
+  {
+   "he": "מִשְׂרָד",
+   "en": "office",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "misrad"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hc293ad54"
+   }
+  },
+  {
+   "he": "פְּגִישָׁה",
+   "en": "meeting, appointment",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "pegishah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h0aeef906"
+   }
+  },
+  {
+   "he": "מְנַהֵל",
+   "en": "manager, boss",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "menahel"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h08c10040#forms.present"
+   }
+  },
+  {
+   "he": "לָקוֹחַ",
+   "en": "client",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lakocha"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h731dbce2"
+   }
+  },
+  {
+   "he": "מַעֲסִיק",
+   "en": "employer",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ma'asik"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h70e3d8d3"
+   }
+  },
+  {
+   "he": "רֵאָיוֹן",
+   "en": "interview",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "re'aivon"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h328ae702"
+   }
+  },
+  {
+   "he": "הוֹדָעָה",
+   "en": "message, notice",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hoda'ah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hff2f5141"
+   }
+  },
+  {
+   "he": "מָחָר",
+   "en": "tomorrow",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "machar"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he1c16e99"
+   }
+  },
+  {
+   "he": "הַיּוֹם",
+   "en": "today",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hayom"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h5350449f"
+   }
+  },
+  {
+   "he": "עוֹבֵד",
+   "en": "working (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "oved"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hc6c367ff#forms.present"
+   }
+  },
+  {
+   "he": "רֶגַע",
+   "en": "one moment",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "rega"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h8f6944f1"
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Say where you work and that you have a meeting",
+  "Ask for and give a time for a meeting or interview",
+  "Use 'one moment' and 'I don't understand' politely at work"
+ ],
+ "estMinutes": 30,
+ "prerequisites": [
+  "I-25"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-36-e01",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "מִשְׂרָד",
+     "en": "office"
+    },
+    {
+     "he": "פְּגִישָׁה",
+     "en": "meeting"
+    },
+    {
+     "he": "מְנַהֵל",
+     "en": "manager"
+    },
+    {
+     "he": "לָקוֹחַ",
+     "en": "client"
+    },
+    {
+     "he": "רֵאָיוֹן",
+     "en": "interview"
+    }
+   ]
+  },
+  {
+   "id": "I-36-e02",
+   "type": "order",
+   "he": "יֵשׁ לִי פְּגִישָׁה מָחָר",
+   "en": "I have a meeting tomorrow"
+  },
+  {
+   "id": "I-36-e03",
+   "type": "produce",
+   "en": "I have a meeting",
+   "options": [
+    "יֵשׁ לִי פְּגִישָׁה",
+    "אֵין לִי תּוֹר",
+    "יֵשׁ לִי מִרְשָׁם"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-36-e04",
+   "type": "gender",
+   "m": "אֲנִי צָרִיךְ עֶזְרָה",
+   "f": "אֲנִי צְרִיכָה עֶזְרָה",
+   "en": "I need help"
+  },
+  {
+   "id": "I-36-e05",
+   "type": "respond",
+   "cue": "A new colleague asks what you do.",
+   "answer": {
+    "he": "אֲנִי עוֹבֵד כָּאן",
+    "en": "I work here"
+   },
+   "prompt": {
+    "he": "מָה אַתָּה עוֹשֶׂה?",
+    "en": "What do you do?"
+   }
+  },
+  {
+   "id": "I-36-e06",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "מָתַי יֵשׁ פְּגִישָׁה?",
+     "en": "When is the meeting?"
+    },
+    {
+     "speaker": "b",
+     "he": "מָחָר, הַשָּׁעָה עֶשֶׂר.",
+     "en": "Tomorrow, at ten o'clock."
+    },
+    {
+     "speaker": "a",
+     "he": "בְּסֵדֶר, תּוֹדָה.",
+     "en": "OK, thanks."
+    }
+   ],
+   "task": "Ask about the meeting and confirm."
+  },
+  {
+   "id": "I-36-e07",
+   "type": "produce",
+   "en": "when is the meeting?",
+   "options": [
+    "מָתַי יֵשׁ פְּגִישָׁה?",
+    "אֵיפֹה יֵשׁ מִשְׂרָד?",
+    "מָה הַשָּׁעָה?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-36-e08",
+   "type": "recall",
+   "he": "מַעֲסִיק",
+   "en": "employer"
+  },
+  {
+   "id": "I-36-e09",
+   "type": "respond",
+   "cue": "The boss asks if you understood.",
+   "answer": {
+    "he": "אֲנִי לֹא מֵבִין",
+    "en": "I don't understand"
+   },
+   "prompt": {
+    "he": "הַכֹּל בְּסֵדֶר?",
+    "en": "Is everything OK?"
+   }
+  },
+  {
+   "id": "I-36-e10",
+   "type": "produce",
+   "en": "one moment",
+   "options": [
+    "רֶגַע",
+    "מָחָר",
+    "הַיּוֹם"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-36-e11",
+   "type": "respond",
+   "cue": "Ask the manager to repeat.",
+   "answer": {
+    "he": "אֶפְשָׁר לַחֲזֹר עַל זֶה?",
+    "en": "Can you repeat that?"
+   }
+  },
+  {
+   "id": "I-36-e12",
+   "type": "respond",
+   "cue": "Ask to write it down.",
+   "answer": {
+    "he": "אֶפְשָׁר לִכְתֹּב אֶת זֶה?",
+    "en": "Can you write that down?"
+   }
+  },
+  {
+   "id": "I-36-e13",
+   "type": "register",
+   "he": "אֶפְשָׁר לַחֲזֹר עַל זֶה?",
+   "en": "can you repeat that?",
+   "answer": "neutral",
+   "options": [
+    "formal",
+    "neutral",
+    "casual",
+    "slang"
+   ]
+  },
+  {
+   "id": "I-36-e14",
+   "type": "recall",
+   "he": "רֵאָיוֹן",
+   "en": "interview"
+  }
+ ],
+ "note": "Salary, contract terms, CV, email, 'colleague' and 'to resign' have no pointed token in the sources. A workplace register check by a native speaker is needed."
+}

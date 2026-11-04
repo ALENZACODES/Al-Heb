@@ -1,0 +1,328 @@
+{
+ "id": "I-46",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Emergencies: police, ambulance, fire and calling for help",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "חֵרוּם",
+   "en": "emergency",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "cherum"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h91c309d9"
+   }
+  },
+  {
+   "he": "מִשְׁטָרָה",
+   "en": "police",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mishtarah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hef7b6946"
+   }
+  },
+  {
+   "he": "אַמְבּוּלַנְס",
+   "en": "ambulance",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ambulans"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hd3813b34"
+   }
+  },
+  {
+   "he": "סַכָּנָה",
+   "en": "danger",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "sakanah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he9067edb"
+   }
+  },
+  {
+   "he": "דָּחוּף",
+   "en": "urgent",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "dachuf"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "heede8c51"
+   }
+  },
+  {
+   "he": "שְׂרֵפָה",
+   "en": "fire",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "serefah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h3693d71a"
+   }
+  },
+  {
+   "he": "גַּנָּב",
+   "en": "thief",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ganav"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h9ac3dac3"
+   }
+  },
+  {
+   "he": "עֶזְרָה!",
+   "en": "help!",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ezrah!"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h9a52f49b"
+   }
+  },
+  {
+   "he": "רוֹפֵא",
+   "en": "doctor",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "rofe"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hc8e03f62"
+   }
+  },
+  {
+   "he": "אָבַד לִי",
+   "en": "I lost",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "avad li"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "אָבַד",
+     "לִי"
+    ]
+   }
+  },
+  {
+   "he": "הַדַּרְכּוֹן",
+   "en": "the passport",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hadarkon"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַדַּרְכּוֹן"
+    ]
+   }
+  },
+  {
+   "he": "טֶלֶפוֹן",
+   "en": "phone",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "telefon"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he15e52d3"
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Shout for help and say what happened",
+  "Ask someone to call the police or an ambulance",
+  "Say you lost your phone or passport and that it is urgent"
+ ],
+ "estMinutes": 30,
+ "prerequisites": [
+  "I-20"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-46-e01",
+   "type": "respond",
+   "cue": "You need help right now.",
+   "answer": {
+    "he": "עֶזְרָה!",
+    "en": "Help!"
+   }
+  },
+  {
+   "id": "I-46-e02",
+   "type": "respond",
+   "cue": "Ask someone to call the police.",
+   "answer": {
+    "he": "תִּקְרָא לַמִּשְׁטָרָה",
+    "en": "Call the police"
+   }
+  },
+  {
+   "id": "I-46-e03",
+   "type": "respond",
+   "cue": "Ask someone to call an ambulance.",
+   "answer": {
+    "he": "תִּקְרָא לְאַמְבּוּלַנְס",
+    "en": "Call an ambulance"
+   }
+  },
+  {
+   "id": "I-46-e04",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "מִשְׁטָרָה",
+     "en": "police"
+    },
+    {
+     "he": "אַמְבּוּלַנְס",
+     "en": "ambulance"
+    },
+    {
+     "he": "שְׂרֵפָה",
+     "en": "fire"
+    },
+    {
+     "he": "סַכָּנָה",
+     "en": "danger"
+    },
+    {
+     "he": "גַּנָּב",
+     "en": "thief"
+    }
+   ]
+  },
+  {
+   "id": "I-46-e05",
+   "type": "order",
+   "he": "אָבַד לִי הַטֶּלֶפוֹן",
+   "en": "I lost my phone"
+  },
+  {
+   "id": "I-46-e06",
+   "type": "produce",
+   "en": "I lost my passport",
+   "options": [
+    "אָבַד לִי הַדַּרְכּוֹן",
+    "אָבַד לִי הַטֶּלֶפוֹן",
+    "יֵשׁ לִי כְּאֵב רֹאשׁ"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-46-e07",
+   "type": "respond",
+   "cue": "Say it is urgent.",
+   "answer": {
+    "he": "זֶה דָּחוּף",
+    "en": "It's urgent"
+   }
+  },
+  {
+   "id": "I-46-e08",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "עֶזְרָה! אֲנִי צָרִיךְ רוֹפֵא.",
+     "en": "Help! I need a doctor."
+    },
+    {
+     "speaker": "b",
+     "he": "אֲנִי קוֹרֵא לְאַמְבּוּלַנְס.",
+     "en": "I'm calling an ambulance."
+    }
+   ],
+   "task": "Ask for help."
+  },
+  {
+   "id": "I-46-e09",
+   "type": "gender",
+   "m": "אֲנִי צָרִיךְ רוֹפֵא",
+   "f": "אֲנִי צְרִיכָה רוֹפֵא",
+   "en": "I need a doctor"
+  },
+  {
+   "id": "I-46-e10",
+   "type": "recall",
+   "he": "חֵרוּם",
+   "en": "emergency"
+  },
+  {
+   "id": "I-46-e11",
+   "type": "respond",
+   "cue": "Ask to use someone's phone.",
+   "answer": {
+    "he": "אֶפְשָׁר לְהִשְׁתַּמֵּשׁ בַּטֶּלֶפוֹן שֶׁלְּךָ?",
+    "en": "Can I use your phone?"
+   }
+  },
+  {
+   "id": "I-46-e12",
+   "type": "respond",
+   "cue": "Say you don't feel well.",
+   "answer": {
+    "he": "אֲנִי לֹא מַרְגִּישׁ טוֹב",
+    "en": "I don't feel well"
+   }
+  },
+  {
+   "id": "I-46-e13",
+   "type": "produce",
+   "en": "fire",
+   "options": [
+    "שְׂרֵפָה",
+    "סַכָּנָה",
+    "גַּנָּב"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-46-e14",
+   "type": "recall",
+   "he": "דָּחוּף",
+   "en": "urgent"
+  }
+ ],
+ "note": "Emergency phone numbers and the words 'fire brigade' and 'break-in' are not in the sources and are deliberately not given: check the current numbers locally."
+}

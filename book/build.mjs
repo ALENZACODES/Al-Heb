@@ -21,6 +21,7 @@ import { LETTERS, letterToken, VOWELS } from '../tools/images/spec.mjs';
 import { mnemonicCards, mnemonicStatus } from './cards.mjs';
 import { ROOT, readJson, vocabFor, soundFor, vowelRecords, cleanNote, drills, consonantFeatures, registryEntries, phrasebook, SITUATION_TITLES, wordPool, vocab5000 } from './content.mjs';
 import { firstDayChapter, FIRSTDAY_ID, FIRSTDAY_TITLE } from './firstday/section.mjs'; // hook: 'Your first 10 minutes' chapter (book/firstday/)
+import { extraChapters } from './intermediate/chapters.mjs'; // hook: sounds reference, intermediate lessons, vocabulary appendix, answer key (book/intermediate/)
 
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 export const esc_ = esc;
@@ -138,6 +139,7 @@ export function buildHtml(o, pages = {}) {
   const toc = (id, label) => `<li><a href="#${id}" style="display:contents"><span class="t">${label}</span>${pg(id)}</a></li>`;
   const idx = readJson('assets/img/index.json');
   const R = createImgResolver({ base: relative(outDir, join(ROOT, 'assets/img')) || '.', files: idx?.files || [], generated: readJson('data/images/generated-manifest.json') });
+  const EX = extraChapters({ pages, toc, img: (stem) => (R.isReal(stem) ? R.src(stem) : null), alt: readJson('data/images/generated-manifest.json')?.altText });
   const lettersJson = loadLettersJson();
   const lettersSource = lettersJson ? 'data/letters/letters.json' : 'built-in glyph map (data/letters/letters.json not present)';
   const reg = registryBlessing();
@@ -176,7 +178,7 @@ export function buildHtml(o, pages = {}) {
 <p><b>Which pronunciation?</b> Hebrew is read differently in Israel, in Sephardi tradition and in Ashkenazi tradition. The next page explains the differences. The app lets you choose; American synagogues often use the Sephardi values.</p>
 <div class="slot"><b>Companion app.</b> The page for any letter is ${esc(letterUrl(o.host, '<letter>'))} and any prayer is ${esc(readUrl(o.host, '<text>'))}.${ph ? ` <b style="color:#B0373B">The host &ldquo;${esc(o.host)}&rdquo; is a PLACEHOLDER: those links do not work until a real domain is chosen (one value, book/config.json).</b>` : ''}</div>
 <h3 style="margin-top:.25in">Contents</h3><ul class="toc">
-${toc('ch-blessing', 'The Priestly Blessing')}${ct?.weeks?.length ? toc('ch-class', 'How to use this book in a 10-week class') : ''}${toc(FIRSTDAY_ID, FIRSTDAY_TITLE)}${toc('ch-trad', 'Pronunciation traditions')}${toc('ch-alphabet', 'The alphabet at a glance')}${toc('letter-alef', 'The 27 letters (22 letters and 5 final forms)')}${toc('ch-remember', 'Remember every letter')}${toc('ch-vowels', 'The vowels')}${toc('ch-reading', 'Reading practice: syllables')}${toc('ch-practice', 'Reading practice: words')}${toc('ch-blessing-words', 'The Priestly Blessing, word by word')}@@PRAYER_TOC@@${toc('ch-survival', 'Survival Hebrew')}${wl.length ? toc('ch-wordlist', 'Word list (' + wl.length.toLocaleString('en-US') + ' words)') : ''}${toc('ch-index', 'Index')}${toc('ch-colophon', 'Colophon, sources and statuses')}</ul></section>`;
+${toc('ch-blessing', 'The Priestly Blessing')}${ct?.weeks?.length ? toc('ch-class', 'How to use this book in a 10-week class') : ''}${toc(FIRSTDAY_ID, FIRSTDAY_TITLE)}${toc('ch-trad', 'Pronunciation traditions')}${EX.tocSounds}${toc('ch-alphabet', 'The alphabet at a glance')}${toc('letter-alef', 'The 27 letters (22 letters and 5 final forms)')}${toc('ch-remember', 'Remember every letter')}${toc('ch-vowels', 'The vowels')}${toc('ch-reading', 'Reading practice: syllables')}${toc('ch-practice', 'Reading practice: words')}${toc('ch-blessing-words', 'The Priestly Blessing, word by word')}@@PRAYER_TOC@@${toc('ch-survival', 'Survival Hebrew')}${EX.tocInter}${wl.length ? toc('ch-wordlist', 'Word list (' + wl.length.toLocaleString('en-US') + ' words)') : ''}${EX.tocBack}${toc('ch-index', 'Index')}${toc('ch-colophon', 'Colophon, sources and statuses')}</ul></section>`;
 
 
   // ---- How to use this book in a 10-week class (original text; schedule from data/curriculum/class-track.json) ----
@@ -328,7 +330,7 @@ ${pb.situations.map((s) => { const rows = pb.entries.filter((e) => e.situation =
 <h3>Vowels and marks</h3>${sorted(vrec, (v) => v.name).map((v) => link('vowel-' + v.id, esc(v.name), ' ' + he(v.shape))).join('')}
 <h3>Prayers and verses</h3>${sorted(regPrayers, (e) => e.title).map((e) => link('text-' + e.id, esc(e.title))).join('')}
 <h3>Survival phrases by situation</h3>${pb.situations.map((s) => link('sit-' + (s.id ?? s), esc(SITUATION_TITLES[s.id ?? s] ?? (s.id ?? s)))).join('')}
-<h3>Topics</h3>${[['ch-trad', 'Pronunciation traditions'], ['ch-reading', 'Syllable practice'], ['ch-practice', 'Practice words'], ['ch-blessing-words', 'Priestly Blessing, word by word'], ['ch-remember', 'Remember every letter (mnemonic cards)'], ['ch-how', 'How to use this book'], [FIRSTDAY_ID, FIRSTDAY_TITLE]].map(([i, l]) => link(i, l)).join('')}
+<h3>Topics</h3>${[['ch-trad', 'Pronunciation traditions'], ['ch-reading', 'Syllable practice'], ['ch-practice', 'Practice words'], ['ch-blessing-words', 'Priestly Blessing, word by word'], ['ch-remember', 'Remember every letter (mnemonic cards)'], ['ch-how', 'How to use this book'], [FIRSTDAY_ID, FIRSTDAY_TITLE], ...EX.indexTopics].map(([i, l]) => link(i, l)).join('')}
 </div></section>`;
 
   const attr = [...new Set([...(blessing.attributions || []), ...regPrayers.map((e) => e.attribution)].filter(Boolean))];
@@ -339,11 +341,11 @@ ${wl.length ? `<p class="small"><b>Word list attribution.</b> Word ranking deriv
 ${attr.length ? `<h3>Text attributions (from the registry)</h3>${attr.map((a) => `<p class="small">${esc(a)}</p>`).join('')}` : ''}
 <p class="small"><b>Image credit line (use once real images replace placeholders):</b> Illustrations created with AI tools and edited by the author.</p></section>`;
 
-  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>ALEF - draft proof</title><style>${pageCss(o, tw, th, bleed)}\n${fontFaces(outDir)}\n${readFileSync(join(ROOT, 'book/style.css'), 'utf8')}</style></head><body>
-${cover}${prayerOpen}${blessingPage}${howTo}${classSection}${firstDayChapter(pages)}${tradPage}${alphabet}
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>ALEF - draft proof</title><style>${pageCss(o, tw, th, bleed)}\n${fontFaces(outDir)}\n${readFileSync(join(ROOT, 'book/style.css'), 'utf8')}\n${EX.css}</style></head><body>
+${cover}${prayerOpen}${blessingPage}${howTo}${classSection}${firstDayChapter(pages)}${tradPage}${EX.sounds}${alphabet}
 ${letterPages}
 ${remember}
-${vowelChapter}${reading}${practiceWords}${blessingWords}${prayerCards}${survival}${wordList}${index}${colophon}
+${vowelChapter}${reading}${practiceWords}${blessingWords}${prayerCards}${survival}${EX.synagogue}${EX.israel}${wordList}${EX.vocab}${EX.key}${index}${colophon}
 </body></html>`;
   return html.replace('@@PRAYER_TOC@@', () => prayerToc);
 }

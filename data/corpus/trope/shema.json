@@ -13,6 +13,14 @@
  "registryIds": [
   "shema-vahavta"
  ],
+ "registryVerses": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
  "markCounts": {
   "tipcha": 10,
   "etnachta": 4,
@@ -187,7 +195,7 @@
        "cls": "separator",
        "level": null,
        "placement": "after the word",
-       "at": 8,
+       "at": 7,
        "letterIndex": 3,
        "letter": "ה"
       }

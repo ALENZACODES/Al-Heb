@@ -105,6 +105,7 @@ export function largeLettersIn(raw) {
 
 /** Parse one word token. isLast: the word closes the verse. Returns a word record. */
 export function parseWord(token, isLast) {
+  token = token.replace(' ׀', '׀'); // paseq glued to the word; offsets below are in this form
   const cps = [...token].map((c) => c.codePointAt(0));
   const letters = [];
   const marks = [];
@@ -146,7 +147,7 @@ export function parseWord(token, isLast) {
   const stressMark = out.find((m) => m.role === 'stress') || out.find((m) => (m.cls === 'disjunctive' || m.cls === 'conjunctive') && m.placement === 'impositive');
   const plain = cleanLine(token);
   return {
-    text: token.replace(' ׀', '׀'),
+    text: token,
     plain,
     letters: letters.length,
     marks: out,
@@ -173,8 +174,9 @@ export function parseVerse(raw, ref) {
 
 /** The two passages this stage covers, with the snapshot items that hold their UXLC raw lines. */
 export const PASSAGES = [
-  { id: 'priestly-blessing', title: 'Priestly Blessing', book: 'Numbers', chapter: 6, from: 24, to: 26, registryIds: ['bless-priestly-1', 'bless-priestly-2', 'bless-priestly-3'], snapshotIds: ['bless-priestly-1', 'bless-priestly-2', 'bless-priestly-3'] },
-  { id: 'shema', title: 'Shema and V\'ahavta', book: 'Deuteronomy', chapter: 6, from: 4, to: 9, registryIds: ['shema-vahavta'], snapshotIds: ['shema-vahavta'] },
+  // Numbers 6:22-27: the framing verses 22-23 and 27 are snapshot-only (fetch_sources_qere.py); the blessing itself is 6:24-26.
+  { id: 'priestly-blessing', title: 'Priestly Blessing', book: 'Numbers', chapter: 6, from: 22, to: 27, registryIds: ['bless-priestly-1', 'bless-priestly-2', 'bless-priestly-3'], registryVerses: [24, 25, 26], snapshotIds: ['bless-priestly-intro', 'bless-priestly-1', 'bless-priestly-2', 'bless-priestly-3', 'bless-priestly-close'] },
+  { id: 'shema', title: 'Shema and V\'ahavta', book: 'Deuteronomy', chapter: 6, from: 4, to: 9, registryIds: ['shema-vahavta'], registryVerses: [4, 5, 6, 7, 8, 9], snapshotIds: ['shema-vahavta'] },
 ];
 
 /** Raw verse lines for a passage from the committed snapshot; checked against the XML cache when it is on disk. */
@@ -216,6 +218,7 @@ export function buildPassage(p, snapshot, uxlcDir = UXLC_DIR) {
     checkedAgainstXml,
     note: 'Machine parse of the UXLC code points. Mark names follow the table in data/corpus/trope/table.json; the musical motifs are not described and nothing here was reviewed by a cantor.',
     registryIds: p.registryIds,
+    registryVerses: p.registryVerses,
     markCounts: counts,
     words: verses.reduce((n, v) => n + v.words.length, 0),
     verses,
@@ -245,7 +248,7 @@ export const ALIYOT = {
     maftir: 'Numbers 7:87-7:89',
     passageAliyah: 4,
     startsAliyah: false,
-    note: 'Numbers 6:24-26 sits inside the fourth aliyah (5:11-6:27). It is also recited, not read from the scroll, as the Priestly Blessing in the service; there the three verses are said one at a time with the congregation responding after each.',
+    note: 'Numbers 6:22-27 sits inside the fourth aliyah (5:11-6:27). Verses 22-23 (the instruction to Aaron) and 27 (the closing) are narrative; the blessing proper is 6:24-26. It is also recited, not read from the scroll, as the Priestly Blessing in the service; there the three verses are said one at a time with the congregation responding after each.',
   },
   shema: {
     parashah: { en: 'Vaetchanan', he: 'ואתחנן', number: 45, range: 'Deuteronomy 3:23-7:11' },
@@ -260,9 +263,11 @@ export const ALIYOT = {
 /** Liturgical reading units inside each passage (where a reciter pauses), by verse. */
 export const READING_UNITS = {
   'priestly-blessing': [
+    { id: 'intro', verses: [22, 23], label: 'Introduction (6:22-23, narrative, not part of the blessing)' },
     { id: 'line-1', verses: [24], label: 'Line 1 (3 words)' },
     { id: 'line-2', verses: [25], label: 'Line 2 (5 words)' },
     { id: 'line-3', verses: [26], label: 'Line 3 (7 words)' },
+    { id: 'closing', verses: [27], label: 'Closing (6:27, narrative)' },
   ],
   shema: [
     { id: 'shema', verses: [4], label: 'Shema (verse 4)' },
@@ -272,24 +277,25 @@ export const READING_UNITS = {
 
 export function buildReader(p, trope, registry, snapshot) {
   const regById = new Map(registry.map((e) => [e.id, e]));
-  // English (JPS 1917) and glosses by verse from the registry / snapshot
+  // English (JPS 1917) by verse from the snapshot
   const english = new Map();
   for (const sid of p.snapshotIds) {
     const it = snapshot[sid];
     const en = it.english?.rawLines || [];
     for (let k = 0; k < en.length; k++) english.set(it.verses[0] + k, en[k]);
   }
+  // literal glosses: any one-verse registry record for the verse that carries wordGlosses (one gloss per reading token)
   const glosses = new Map();
-  for (const rid of p.registryIds) {
-    const e = regById.get(rid);
-    if (e?.wordGlosses && e.lines === 1) glosses.set(+e.ref.split(':')[1], e.wordGlosses);
+  for (const e of registry) {
+    if (!e.wordGlosses || e.lines !== 1) continue;
+    const m = /^(\w+) (\d+):(\d+)$/.exec(e.ref);
+    if (m && m[1] === p.book && +m[2] === p.chapter) glosses.set(+m[3], { id: e.id, glosses: e.wordGlosses });
   }
   const units = READING_UNITS[p.id];
   let g = 0;
   const index = {};
   const verses = trope.verses.map((v) => {
     const unit = units.find((u) => u.verses.includes(v.verse));
-    const wg = glosses.get(v.verse);
     const words = v.words.map((w, i) => {
       const key = w.plain.replace(/׃$/, '');
       (index[key] ||= []).push([v.verse, i]);
@@ -297,15 +303,30 @@ export function buildReader(p, trope, registry, snapshot) {
         i, g: g++,
         he: key,
         heTrope: w.text,
-        gloss: wg && wg.length === v.words.length ? wg[i] : null,
+        joinedWithNext: /־$/.test(key),
         trope: w.trope,
         tropeClass: w.tropeClass,
         marks: w.marks.filter((m) => m.cls !== 'verse-end').map((m) => m.id),
         stressLetterIndex: w.stressLetterIndex,
-        pauseAfter: w.disjunctiveLevel === 1 ? 'major' : w.tropeClass === 'disjunctive' ? 'minor' : 'none',
+        pauseAfter: w.disjunctiveLevel === 1 ? 'major' : w.tropeClass === 'disjunctive' ? 'minor' : w.pasek ? 'pasek' : 'none',
         timing: { start: null, end: null },
       };
     });
+    // reading tokens: maqaf-joined words form one token (the registry's wordsOf convention); glosses attach here
+    const tokens = [];
+    let cur = null;
+    for (const w of words) {
+      if (!cur) cur = { t: tokens.length, he: '', words: [] };
+      cur.he += w.he; cur.words.push(w.i);
+      if (!w.joinedWithNext) { tokens.push(cur); cur = null; }
+    }
+    if (cur) tokens.push(cur);
+    const gl = glosses.get(v.verse);
+    for (const t of tokens) {
+      t.gloss = gl && gl.glosses.length === tokens.length ? gl.glosses[t.t] : null;
+      t.trope = words[t.words[t.words.length - 1]].trope;
+      t.timing = { start: null, end: null };
+    }
     return {
       ref: v.ref, book: v.book, chapter: v.chapter, verse: v.verse,
       unit: unit ? unit.id : null,
@@ -313,9 +334,11 @@ export function buildReader(p, trope, registry, snapshot) {
       heTrope: v.raw,
       english: english.get(v.verse) ?? null,
       englishSource: english.has(v.verse) ? 'JPS 1917 (The Holy Scriptures: A New Translation), Public Domain (label from Sefaria metadata, unverified)' : null,
+      glossSource: gl && gl.glosses.length === tokens.length ? `registry ${gl.id} wordGlosses (original literal glosses)` : null,
       largeLetters: v.largeLetters,
       halves: v.halves,
       words,
+      tokens,
       timing: { start: null, end: null },
     };
   });
@@ -326,14 +349,16 @@ export function buildReader(p, trope, registry, snapshot) {
     title: p.title,
     ref: trope.ref,
     registryIds: p.registryIds,
+    registryVerses: p.registryVerses,
     source: trope.source,
     sourceUrl: trope.sourceUrl,
     license: trope.license,
     attribution: reg0?.attribution || trope.attribution,
-    note: 'Verse-by-verse reader data. he = pointed text without cantillation (registry normalisation); heTrope = UXLC text with cantillation. Word glosses are the registry\'s original literal glosses where a one-verse record has them, else null. timing.start/end are placeholders (seconds) for future audio alignment and are null until a recording exists. Aliyah ranges from the Sefaria calendar API; reading units are common practice, not reviewed by clergy.',
+    note: 'Verse-by-verse reader data. he = pointed text without cantillation (registry normalisation); heTrope = UXLC text with cantillation. words = UXLC word units (a maqaf-joined proclitic is its own word, joinedWithNext true); tokens = reading tokens, maqaf groups joined, which is where the literal glosses attach (null where no registry record has them). timing.start/end are placeholders in seconds for future audio alignment; null until a recording exists. Aliyah ranges from the Sefaria calendar API; reading units are common practice, not reviewed by clergy.',
     aliyah: ALIYOT[p.id],
     readingUnits: units,
     wordCount: g,
+    tokenCount: verses.reduce((n, v) => n + v.tokens.length, 0),
     wordIndex: index,
     verses,
   };

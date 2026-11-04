@@ -1,0 +1,18 @@
+{
+ "schemaVersion": 1,
+ "rulesVersion": 1,
+ "proofread": false,
+ "status": "rule-generated from the niqqud text; not verified by a native speaker; no audio exists",
+ "notice": "Rule-generated and unverified: these readings come from spelling rules applied to the pointed text. No native speaker has checked them, no recording exists, and real speakers vary inside each tradition. Treat them as a study aid, not as a reference.",
+ "description": "Lookup shards for the Compare traditions view. Entry: [ipaIsraeli, ipaSephardi, ipaAshkenazi, respelling Israeli+Sephardi, respelling Ashkenazi, codes, stressRuleIds]. Shard = shardOf(wordKey(word), shards) in src/pronunciation/compare.model.js.",
+ "shards": 6,
+ "words": 6985,
+ "files": [
+  "lookup-01.json",
+  "lookup-02.json",
+  "lookup-03.json",
+  "lookup-04.json",
+  "lookup-05.json",
+  "lookup-06.json"
+ ]
+}

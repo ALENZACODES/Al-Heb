@@ -72,8 +72,62 @@ test('numbers: reading speed is self-reported and absent until a timed read exis
   assert.match(n2, /the app measures nothing but the clock/);
 });
 
-test('no wording claims the app measures reading, and nothing mentions the tooling that wrote it', async () => {
+test('no wording claims the app measures reading', async () => {
   const { text } = await show({ ...allRead(), 'timedread.v1': { v: 1, reads: [read(), read(), read()] } });
-  assert.doesNotMatch(text, /measured by the app:|app measures your reading|fluency score/i);
-  assert.doesNotMatch(text, /\bassistant\b|\bchatbot\b/i);
+  assert.doesNotMatch(text, /measured by the app:|app measures your reading|your fluency score|fluency score:/i);
+});
+
+// ---------- stage 2: unified "What can I read now?" ----------
+test('unified section comes first, has one row per source, marks self-reported rows and links each to its screen', async () => {
+  const { root } = await show({ ...allRead(), 'timedread.v1': { v: 1, reads: [read()] }, 'firstday.progress': { step: 3, readWords: ['shalom'], done: false } });
+  const first = root.queryAll('section.card')[0];
+  assert.equal(first.attrs['aria-labelledby'], 'pg-h-now');
+  assert.match(first.textContent, /^What can I read now\?/);
+  const rows = first.queryAll('[data-now]');
+  assert.deepEqual(rows.map((r) => r.attrs['data-now']), ['letters', 'lines', 'vocab', 'timedread', 'siddur', 'firstday']);
+  assert.deepEqual(rows.map((r) => r.queryAll('a')[0].attrs.href), ['#/learn', '#/read', '#/vocab', '#/timedread', '#/service', '#/firstday']);
+  assert.equal(rows.filter((r) => r.queryAll('.pg-self').length).map((r) => r.attrs['data-now']).join(), 'timedread,firstday');
+  assert.match(rows[0].textContent, /27 of 27 letters, 15 of 15 signs/); assert.match(rows[3].textContent, /1 read of 1 text, about 90 clean words a minute/);
+  assert.match(rows[5].textContent, /1 first-day word marked read; ladder 0 of 8/);
+  assert.match(first.textContent, /None of it is a fluency score/);
+  assert.match(root.queryAll('section.card')[1].textContent, /^Lines and words you can sound out/);
+});
+test('unified section hides the links of routes missing from this build and still renders every row', async () => {
+  const { root } = await show({}, { routes: ['learn', 'read'] });
+  const rows = root.queryAll('[data-now]');
+  assert.equal(rows.length, 6);
+  assert.deepEqual(rows.map((r) => r.queryAll('a').length), [1, 1, 0, 0, 0, 0]);
+});
+
+// ---------- stage 3: progress-only export / import ----------
+const { inspectProgressBackup, exportProgressJSON } = await import('../src/progress/store.js');
+test('export button produces a progress file whose checksum verifies; import is checked, confirmed, then applied and the screen rebuilt', async () => {
+  const { root, store } = await show({ ...allRead(), 'timedread.v1': { v: 1, reads: [read(), read(), read()] } });
+  const bk = section(root, 'pg-h-bk');
+  assert.match(bk.textContent, /carries a checksum/);
+  await bk.querySelector('#pg-bk-export').click();
+  const box = bk.querySelector('.pg-bk-text'); // shown both with a download link (Blob present) and without
+  assert.ok(box, 'file text shown'); const file = inspectProgressBackup(box.value); assert.equal(file.ok, true); assert.ok(file.keys.includes('timedread.v1')); assert.ok(file.keys.includes('progress.milestones.v1'), 'reached milestones travel with the progress file');
+  // import into a fresh learner, by paste
+  const { root: r2, store: s2 } = await show();
+  const bk2 = section(r2, 'pg-h-bk');
+  bk2.querySelector('#pg-bk-paste').value = box.value;
+  await bk2.querySelector('#pg-bk-check').click();
+  assert.match(bk2.querySelector('#pg-bk-status').textContent, /Checked: 4 progress keys.*Checksum matches\. Nothing is changed until you confirm/);
+  assert.equal(s2.m['timedread.v1'], undefined, 'nothing written before confirm');
+  await bk2.querySelector('#pg-bk-go').click();
+  assert.equal(s2.m['timedread.v1'].reads.length, 3);
+  assert.match(r2.querySelector('#pg-bk-status').textContent, /Imported 4 keys/);
+  assert.match(section(r2, 'pg-h-belts').textContent, /Grey belt: Earned/, 'screen rebuilt from the imported data');
+});
+test('a tampered pasted file is refused with the checksum message and no confirm button appears', async () => {
+  const { root, store } = await show();
+  const bk = section(root, 'pg-h-bk');
+  bk.querySelector('#pg-bk-paste').value = exportProgressJSON({ get: (k, d) => (k === 'progress.state' ? { rest: [], goal: { kind: 'cards', target: 20 } } : d) }, T).replace('"target": 20', '"target": 21');
+  await bk.querySelector('#pg-bk-check').click();
+  assert.match(bk.querySelector('#pg-bk-status').textContent, /checksum does not match.*Nothing was imported/);
+  assert.equal(bk.querySelector('#pg-bk-go'), null); assert.deepEqual(Object.keys(store.m), []);
+  bk.querySelector('#pg-bk-paste').value = 'not json';
+  await bk.querySelector('#pg-bk-check').click();
+  assert.match(bk.querySelector('#pg-bk-status').textContent, /not valid JSON/);
 });

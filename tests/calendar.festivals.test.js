@@ -23,7 +23,7 @@
  * Candle-lighting offsets by city are checked against the same snapshot, through the reminders path, and against a
  * third solar computation (the "sunrise equation", Wikipedia article of that name; accuracy about 1-2 minutes).
  *
- * Written up in docs/qa/CALENDAR-QA.md. Defects found are todo tests at the end (reminders.js is not edited here).
+ * Written up in docs/qa/CALENDAR-QA.md. Stage 5 fixed the two reminders.js defects found here; their tests are at the end.
  */
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -31,6 +31,7 @@ import fs from "node:fs";
 import * as C from "../src/curriculum/calendar.js";
 import * as R from "../src/curriculum/reminders.js";
 import * as L from "../src/curriculum/calendar.locations.js";
+import { yomTovDates } from "../src/curriculum/streak.js";
 
 const FIX = JSON.parse(fs.readFileSync("data/calendar/hebcal-fixtures.json", "utf8"));
 const LOCS = JSON.parse(fs.readFileSync("data/calendar/locations.json", "utf8")).presets;
@@ -167,7 +168,8 @@ for (const mode of ["reform", "traditional", "israel"]) {
     let checked = 0;
     for (const y of YEARS) {
       const hols = C.holidaysInHebrewYear(y, { mode });
-      const fx = Object.fromEntries(FIX.holidays[`${y}-${mode === "traditional" ? "dia" : "il"}`]);
+      // Hebcal titles the postponed fast "Tish'a B'Av (observed)" when 9 Av is a Saturday (5789); normalise the title
+      const fx = Object.fromEntries(FIX.holidays[`${y}-${mode === "traditional" ? "dia" : "il"}`].map(([n, d]) => [n.replace(" (observed)", ""), d]));
       const b = festivalsB(y);
       const expectIds = ["rosh-hashanah", "yom-kippur", "sukkot", "shemini-atzeret", "hanukkah", "tu-bishvat", "purim", "pesach", "yom-hashoah", "yom-hazikaron", "yom-haatzmaut", "shavuot", "tisha-bav", ...(mode === "traditional" ? ["simchat-torah"] : [])];
       assert.deepEqual(hols.map((h) => h.id).sort(), expectIds.sort(), `${mode} ${y} ids`);
@@ -275,7 +277,7 @@ test("locations.json: every preset's offset follows the documented rule (18 outs
 const eveItems = (mode, city = "toronto") => {
   const prefs = L.normalizePrefs({ locationId: city, observance: mode });
   const items = [...R.buildReminders(prefs, "2026-01-01", "2027-01-31").items, ...R.buildReminders(prefs, "2027-02-01", "2028-02-29").items, ...R.buildReminders(prefs, "2028-03-01", "2028-12-31").items];
-  return items.filter((i) => i.kind === "candles").map((i) => ({ iso: i.uid.replace("alef-candles-", ""), title: i.title, at: i.when.at }));
+  return items.filter((i) => i.kind === "candles").map((i) => ({ iso: i.uid.replace("alef-candles-", ""), title: i.title, description: i.description, at: i.when.at }));
 };
 test("reform: a candle-lighting reminder exists on the eve of every first festival day 2026-2028, none on a Saturday, Friday eves merge with Shabbat", () => {
   const items = eveItems("reform");
@@ -292,21 +294,65 @@ test("reform: a candle-lighting reminder exists on the eve of every first festiv
   for (const i of items) if (dow(i.iso) === 5) assert.match(i.title, /^Candle lighting \(Shabbat/);
 });
 
-// Defects found (reminders.js, outside this prong's files): recorded as todo tests until fixed.
-test("reminders: the eve of the LAST festival day gets a candle reminder too (Reform Pesach VII, 20 Nisan: 2027-04-27, 2028-04-16)", { todo: "reminders.js builds eves from holiday start only; see docs/qa/CALENDAR-QA.md" }, () => {
+// Stage 5: reminders.js now builds candle evenings from every Yom Tov day (same set as the streak freeze), and lights after nightfall
+// when the evening is Shabbat or itself a Yom Tov day other than Friday.
+const lightsAfterNightfall = (iso, mode) => dow(iso) === 6 || (dow(iso) !== 5 && yomTovSet(mode).has(iso));
+const yomTovSet = (mode) => yomTovDates("2025-12-01", "2029-01-31", mode);
+test("reminders: the eve of the LAST Pesach day (Reform Pesach VII, 20 Nisan: 2026-04-07, 2027-04-27, 2028-04-16) has a candle reminder before sunset", () => {
   const items = new Map(eveItems("reform").map((i) => [i.iso, i]));
-  for (const eve of ["2026-04-07", "2027-04-27", "2028-04-16"]) assert.ok(items.has(eve), `no candle reminder on ${eve} (eve of Pesach VII)`);
-});
-test("reminders, traditional mode: second-day candle lighting is after nightfall of day 1, never 18 minutes before sunset on Shabbat (Simchat Torah 2026-10-04 and 2027-10-24 follow Shemini Atzeret on Shabbat)", { todo: "reminders.js; see docs/qa/CALENDAR-QA.md" }, () => {
-  const items = eveItems("traditional");
-  for (const i of items) assert.notEqual(dow(i.iso), 6, `candle reminder on a Saturday: ${i.iso} ${i.title}`);
-  // second days of a two-day festival need a reminder (lit after nightfall), e.g. Rosh Hashanah II 2026-09-13, Pesach II 2027-04-23, Shavuot II 2027-06-12
-  const byIso = new Map(items.map((i) => [i.iso, i]));
-  for (const h of C.holidaysBetween("2026-01-01", "2028-12-31", { mode: "traditional" })) {
-    if (h.kind !== "major" || h.days !== 2) continue;
-    const it = byIso.get(h.start);
-    assert.ok(it, `${h.id} ${h.start}: no candle reminder for the second night`);
-    const ss = C.sunset(C.parseISO(h.start), 43.65, -79.38);
-    assert.ok(it.at.getTime() > ss.getTime(), `${h.id} ${h.start}: second-night candles must be after sunset`);
+  for (const eve of ["2026-04-07", "2027-04-27", "2028-04-16"]) {
+    const it = items.get(eve);
+    assert.ok(it, `no candle reminder on ${eve} (eve of Pesach VII)`);
+    assert.match(it.title, /Pesach/);
+    assert.ok(it.at.getTime() < C.sunset(C.parseISO(eve), 43.65, -79.38).getTime(), "first-day eve: before sunset");
   }
+});
+test("reminders, every mode: a candle reminder on the eve of every Yom Tov day 2026-2028 (the streak-freeze day list); after nightfall when the evening is Shabbat or a Yom Tov day other than Friday, else before sunset", () => {
+  for (const mode of ["reform", "traditional", "israel"]) {
+    const items = new Map(eveItems(mode).map((i) => [i.iso, i]));
+    const yt = [...yomTovSet(mode)].filter((d) => d >= "2026-01-01" && d <= "2028-12-31").sort();
+    assert.ok(yt.length >= ({ reform: 21, israel: 24, traditional: 30 })[mode], `${mode}: ${yt.length}`);
+    for (const y of yt) {
+      const eve = plus(y, -1), it = items.get(eve);
+      assert.ok(it, `${mode}: no candle reminder on ${eve} (eve of Yom Tov ${y})`);
+      const ss = C.sunset(C.parseISO(eve), 43.65, -79.38).getTime();
+      if (lightsAfterNightfall(eve, mode)) {
+        assert.ok(it.at.getTime() > ss + 30 * 60000, `${mode} ${eve}: ${it.title} must be after nightfall`);
+        assert.match(it.title, dow(eve) === 6 ? /^Candle lighting \(/ : /second night/);
+        assert.match(it.description, /existing flame/);
+      } else assert.ok(it.at.getTime() < ss, `${mode} ${eve}: ${it.title} must be before sunset`);
+    }
+    // nothing on a Saturday except those after nightfall, and every Saturday item is a Yom Tov evening
+    for (const i of items.values()) if (dow(i.iso) === 6) { assert.ok(yomTovSet(mode).has(plus(i.iso, 1)), i.iso); assert.ok(i.at.getTime() > C.sunset(C.parseISO(i.iso), 43.65, -79.38).getTime()); }
+  }
+});
+test("reminders, traditional mode: Simchat Torah 2026-10-04 and 2027-10-24 follow Shemini Atzeret on Shabbat, so the candles are after Shabbat ends (equal to the Toronto havdalah time), not 18 minutes before sunset", () => {
+  const items = new Map(eveItems("traditional").map((i) => [i.iso, i]));
+  for (const eve of ["2026-10-03", "2027-10-23"]) {
+    const it = items.get(eve);
+    assert.match(it.title, /Simchat Torah/);
+    const hv = C.roundToMinute(C.havdalah(C.parseISO(eve), { lat: 43.65, lon: -79.38 }).havdalah);
+    assert.equal(it.at.getTime(), hv.getTime());
+  }
+  // second nights: RH II 2026-09-12 (Shabbat), Sukkot II eve 2026-09-26 (Shabbat), Pesach II 2027-04-22, Shavuot II 2027-06-11 (Friday: before sunset)
+  assert.match(items.get("2027-04-22").title, /second night/);
+  assert.ok(items.get("2027-06-11").at.getTime() < C.sunset(C.parseISO("2027-06-11"), 43.65, -79.38).getTime(), "Shavuot I is a Friday: Shabbat candles before sunset");
+});
+
+test("Israel (Jerusalem, israel mode): candle reminder on the eve of every Yom Tov day 2026-2028, first-day eves 40 minutes before sunset, RH II after nightfall, no Simchat Torah or Pesach VIII", () => {
+  const prefs = L.normalizePrefs({ locationId: "jerusalem", observance: "israel" });
+  const items = new Map([["2026-01-01", "2027-01-31"], ["2027-02-01", "2028-02-29"], ["2028-03-01", "2028-12-31"]].flatMap(([a, b]) => R.buildReminders(prefs, a, b).items).filter((i) => i.kind === "candles").map((i) => [i.uid.replace("alef-candles-", ""), i]));
+  const yt = [...yomTovDates("2025-12-01", "2029-01-31", "israel")].filter((d) => d >= "2026-01-01" && d <= "2028-12-31").sort();
+  assert.equal(yt.length, 24);
+  for (const y of yt) {
+    const eve = plus(y, -1), it = items.get(eve);
+    assert.ok(it, `no reminder on ${eve}`);
+    const ss = C.sunset(C.parseISO(eve), 31.78, 35.22).getTime();
+    const at = it.when.at.getTime();
+    if (lightsAfterNightfall(eve, "israel")) assert.ok(at > ss + 30 * 60000, `${eve} nightfall`);
+    else { assert.ok(at <= ss - 39 * 60000 && at > ss - 41 * 60000, `${eve} 40 min`); assert.match(it.description, /40 minutes before sunset/); }
+  }
+  // RH II 2026-09-13 (Sunday): its eve Sat 12 Sep is Rosh Hashanah I itself, so the candles are after Shabbat ends
+  assert.match(items.get("2026-09-12").title, /Rosh Hashanah/); assert.ok(items.get("2026-09-12").when.at.getTime() > C.sunset(C.parseISO("2026-09-12"), 31.78, 35.22).getTime() + 30 * 60000);
+  for (const eve of ["2027-04-22", "2027-04-28", "2026-10-03"]) assert.equal(items.has(eve), false, `${eve}: no Pesach II / VIII / Simchat Torah night in Israel`);
 });

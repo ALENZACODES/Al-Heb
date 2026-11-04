@@ -51,15 +51,16 @@ function hebrewStrings(o, p = "", out = []) {
 }
 
 const TYPES = ["recall", "produce", "match", "order", "respond", "gender", "dialogue", "fade", "spot", "register"];
-const IDS = Array.from({ length: 25 }, (_, i) => `I-${String(i + 1).padStart(2, "0")}`);
+const IDS = Array.from({ length: 50 }, (_, i) => `I-${String(i + 1).padStart(2, "0")}`);
 const byId = Object.fromEntries(lessons.map((l) => [l.id, l]));
 const mainIds = new Set(main.lessons.map((l) => l.id));
 
-test("25 lesson files I-01..I-25 exist, one per file, 10 synagogue and 15 Israel", () => {
+test("50 lesson files I-01..I-50 exist, one per file, 20 synagogue and 30 Israel", () => {
   assert.deepEqual(files, IDS.map((id) => id + ".json"));
   assert.deepEqual(lessons.map((l) => l.id), IDS);
-  assert.equal(lessons.filter((l) => l.unit === "synagogue").length, 10);
-  assert.equal(lessons.filter((l) => l.unit === "israel").length, 15);
+  assert.equal(lessons.filter((l) => l.unit === "synagogue").length, 20);
+  assert.equal(lessons.filter((l) => l.unit === "israel").length, 30);
+  assert.deepEqual(lessons.filter((l) => l.unit === "synagogue").map((l) => l.id), [...IDS.slice(0, 10), ...IDS.slice(25, 35)]);
   assert.ok(main.lessons.every((l) => !l.id.startsWith("I-")), "intermediate lessons must not be registered in lessons.json by this lane");
 });
 
@@ -177,6 +178,7 @@ test("prerequisites reference intermediate or lessons.json ids of the same track
   }
   assert.deepEqual(byId["I-01"].prerequisites, ["r51"]);
   assert.deepEqual(byId["I-11"].prerequisites, ["il24"]);
+  assert.deepEqual(byId["I-36"].prerequisites, ["I-25"]);
   const color = {};
   const visit = (id) => { if (!byId[id]) return; if (color[id] === 1) throw new Error("cycle at " + id); if (color[id] === 2) return; color[id] = 1; byId[id].prerequisites.forEach(visit); color[id] = 2; };
   assert.doesNotThrow(() => lessons.forEach((l) => visit(l.id)));
@@ -184,10 +186,12 @@ test("prerequisites reference intermediate or lessons.json ids of the same track
   for (const l of lessons) for (const p of l.prerequisites) if (!byId[p]) assert.ok(mainIds.has(p), p);
 });
 
-test("the ten synagogue topics and the fifteen Israel topics asked for are all covered by titles", () => {
+test("the requested synagogue and Israel topics are all covered by titles", () => {
   const titles = lessons.map((l) => l.title.toLowerCase());
   const want = ["shema", "amidah", "torah service", "kaddish", "kiddush", "havdalah", "hallel", "aleinu", "adon olam", "mi shebeirach",
-    "bus and train", "shuk", "cafe", "pharmacy", "directions", "phone and sim", "apartment", "army slang", "shabbat invitation", "hospital", "bank", "post office", "taxi", "weather", "small talk"];
+    "bus and train", "shuk", "cafe", "pharmacy", "directions", "phone and sim", "apartment", "army slang", "shabbat invitation", "hospital", "bank", "post office", "taxi", "weather", "small talk",
+    "torah service in order", "amidah responses", "yom kippur", "pesach", "sukkot", "purim", "hanukkah", "birkat hamazon", "journey", "shabbat-day kiddush",
+    "work", "university", "dating", "driving", "hiking", "beach", "kids", "supermarket", "repairs", "delivery", "emergencies", "news headlines", "banking forms", "social media", "holiday greetings"];
   for (const w of want) assert.ok(titles.some((t) => t.includes(w)), `no lesson title for ${w}`);
 });
 
@@ -200,7 +204,7 @@ test("index matches the files and the docs explain registration", () => {
     assert.equal(i.title, l.title); assert.equal(i.exercises, l.exercises.length); assert.equal(i.words, l.words.length);
     assert.deepEqual(i.prerequisites, l.prerequisites); assert.equal(i.unit, l.unit);
   }
-  assert.equal(index.units.synagogue.length, 10); assert.equal(index.units.israel.length, 15);
+  assert.equal(index.units.synagogue.length, 20); assert.equal(index.units.israel.length, 30);
   for (const t of TYPES) assert.ok(index.exerciseTypes[t], t);
   const doc = fs.readFileSync(new URL("docs/curriculum/INTERMEDIATE.md", ROOT), "utf8");
   for (const id of IDS) assert.ok(doc.includes(id), `doc lacks ${id}`);
@@ -215,4 +219,30 @@ test("no file in the intermediate set claims review it did not get, and corpus g
   }
   assert.ok(/g-hallel/.test(byId["I-07"].note), "Hallel lesson must name the corpus gap");
   assert.ok(/g-mi-sheberach-full/.test(byId["I-10"].note));
+});
+
+test("image slot map: exactly two slots per lesson, one line each, no text in images, ids unique", () => {
+  const slots = readJson("data/curriculum/intermediate-image-slots.json");
+  assert.equal(slots.status, "draft");
+  assert.deepEqual(slots.lessons.map((x) => x.lesson), IDS);
+  const seen = new Set();
+  for (const x of slots.lessons) {
+    assert.equal(x.title, byId[x.lesson].title);
+    assert.equal(x.slots.length, 2, x.lesson);
+    for (const sl of x.slots) {
+      assert.ok(sl.id.startsWith(x.lesson + "-img") && !seen.has(sl.id), sl.id); seen.add(sl.id);
+      assert.ok(sl.scene.length > 20 && sl.scene.length < 220 && !sl.scene.includes("\n"), sl.id);
+      assert.ok(!HEB.test(sl.scene), `${sl.id}: scene must contain no Hebrew`);
+      assert.ok(!/\b(text|caption|writing|lettering|label|sign reading|says)\b/i.test(sl.scene), `${sl.id}: scene must not ask for text`);
+    }
+  }
+  assert.ok(slots.rules.some((r) => /no text/i.test(r)));
+});
+
+test("the generator under tools/curriculum/intermediate is in the repo and has no machine-specific paths", () => {
+  const dir = new URL("tools/curriculum/intermediate/", ROOT);
+  for (const f of ["build.py", "sources.py", "dsl.py", "syn.py", "syn2.py", "isr.py", "isr2.py", "slots.py", "chk.py"]) {
+    const t = fs.readFileSync(new URL(f, dir), "utf8");
+    assert.ok(!/\/tmp\/ib|\/home\/claude/.test(t), `${f} has a machine-specific path`);
+  }
 });

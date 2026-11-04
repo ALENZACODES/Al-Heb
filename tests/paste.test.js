@@ -37,7 +37,7 @@ test('every paste file has the no-text rule, the style guide and stays under 12k
   }
 });
 
-test('size hints map to ChatGPT aspect ratios', () => {
+test('size hints map to image-tool aspect ratios', () => {
   for (const f of names) for (const m of text(f).matchAll(/SIZE: use (\S+).*?target (\d+)x(\d+)/g)) {
     const [, ratio, w, h] = m;
     const want = w === h ? '1:1' : Number(w) > Number(h) ? '3:2' : '2:3';

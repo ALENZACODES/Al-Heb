@@ -7,3 +7,4 @@ __pycache__/
 data/images/sheets/
 data/images/ingest-report.json
 data/images/unmatched-assignment.csv
+dist-test/

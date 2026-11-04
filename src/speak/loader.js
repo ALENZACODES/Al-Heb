@@ -30,3 +30,10 @@ export const loadSetsIndex = async () => (await loadJson(SETS_INDEX)).sets || []
 export const loadSet = (id) => loadJson(setFile(id));
 /** Minimal-pair drills: {contrasts:[{id, title, ...}], items:[...]}. */
 export const loadPairs = () => loadJson(PAIRS_FILE);
+
+export const PRAYERS_FILE = 'data/speak/prayers.json';
+export const TRADITION_FILE = 'data/speak/minimal-pairs.json';
+/** Read-aloud and shadowing texts: {prayers:[{id, title, lines[], lineAudio, ...}]}. */
+export const loadPrayers = () => loadJson(PRAYERS_FILE);
+/** The pronunciation lane's rule-generated pairs: {traditions, contrasts:[{id, title, heard, pairs:[{a, b, audible[]}]}]}. */
+export const loadTraditionPairs = () => loadJson(TRADITION_FILE);

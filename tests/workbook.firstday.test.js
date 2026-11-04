@@ -2,8 +2,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync, statSync } from 'node:fs';
 import { buildFirstDayModel, buildFirstDayHtml } from '../tools/letters/firstday_pages.mjs';
+import { buildCursiveModel, buildCursiveHtml } from '../tools/letters/cursive_words.mjs';
+import { buildNiqqudModel, buildNiqqudHtml, PER_SIGN, signMatcher } from '../tools/letters/niqqud_workbook.mjs';
 import { firstDayChapter, firstDayModel, FIRSTDAY_ID } from '../book/firstday/section.mjs';
 import { PAPERS } from '../tools/letters/workbook.mjs';
+import { wordPool } from '../book/content.mjs';
 
 const read = (p) => JSON.parse(readFileSync(new URL('../' + p, import.meta.url), 'utf8'));
 const first10 = read('data/firstday/first10.json');
@@ -67,16 +70,87 @@ test('book chapter: first-day section with letters, vowels, words and the ladder
   assert.ok(html.indexOf(`id="${FIRSTDAY_ID}"`) < html.indexOf('id="ch-trad"'), 'chapter sits before the traditions page');
 });
 
-test('generated first-day PDFs (if present): listed in assets/workbook/manifest.json with the real byte size and page count', () => {
+// ---- Stage 2: cursive words ----
+const letters = read('data/letters/letters.json');
+test('cursive words model: 27 letter forms in alphabet order, every word from the pool, starts/ends with the letter, bare form traced', () => {
+  const m = buildCursiveModel();
+  assert.deepEqual(m.map((b) => b.id), letters.map((l) => l.id));
+  const pool = new Set(wordPool().map((w) => w.he));
+  const FINAL = { 'kaf-final': 'ך', 'mem-final': 'ם', 'nun-final': 'ן', 'pe-final': 'ף', 'tsadi-final': 'ץ' };
+  let total = 0;
+  for (const b of m) {
+    assert.ok(b.words.length <= 3 && b.strokes >= 1, b.id);
+    total += b.words.length;
+    for (const w of b.words) {
+      assert.ok(pool.has(w.he), w.he); assert.match(w.he, NIQQUD); assert.ok(!NIQQUD.test(w.bare));
+      if (FINAL[b.id]) assert.ok(w.bare.endsWith(FINAL[b.id]), `${b.id} ${w.bare}`); else assert.ok(w.bare.startsWith(b.glyph), `${b.id} ${w.bare}`);
+      assert.ok(w.en && w.translit);
+    }
+  }
+  assert.ok(total >= 70, 'words: ' + total);
+  assert.ok(m.every((b) => b.words.length >= 1), 'every letter form has at least one word in the data');
+});
+for (const paper of Object.keys(PAPERS)) {
+  test(`cursive words ${paper} HTML: front + 14 letter pages, 27 stroke boxes and letter rows, cursive strips, print reference, draft`, () => {
+    const { html, pages, pageCount } = buildCursiveHtml(paper);
+    assert.equal(pageCount, 15); assert.equal(pages[0], 'front'); assert.equal(pages.filter((k) => k === 'letters').length, 14);
+    assert.equal(count(html, /data-cursive-letter="/g), 27);
+    assert.equal(count(html, /data-cursive-letter-row="/g), 27);
+    assert.equal(count(html, /stroke order \(cursive\)"/g), 27);
+    assert.equal(count(html, /data-cursive-word="/g), buildCursiveModel().reduce((a, b) => a + b.words.length, 0));
+    const row = html.match(/data-cursive-word="[^"]+"[\s\S]*?<\/svg>/)[0];
+    assert.match(row, /font-family="WB-Cursive"/); assert.match(row, /class="he print ref"/);
+    assert.match(html, /DRAFT: cursive stroke order not reviewed/);
+    assert.ok(!/\bAI\b/.test(html));
+  });
+}
+
+// ---- Stage 3: niqqud ----
+const niq = read('data/pronunciation/niqqud.json').records;
+test('niqqud model: every record of niqqud.json, 6 example words each that really contain the sign, from existing vocab only', () => {
+  const m = buildNiqqudModel();
+  assert.deepEqual(m.sections.map((s) => s.id), niq.map((r) => r.id));
+  const src = read('data/curriculum/lessons.json').lessons.flatMap((l) => (l.words || []).map((w) => w.he)).concat(read('data/corpus/phrasebook.json').entries.map((e) => e.he), read('data/vocab/vocab5000.json').entries.map((e) => e.pointed));
+  const known = new Set(src.filter(Boolean).map((h) => h.replace(/[?!.,׃\s]+$/g, '')));
+  for (const s of m.sections) {
+    assert.equal(s.words.length, PER_SIGN, s.id);
+    const re = signMatcher(niq.find((r) => r.id === s.id));
+    const bares = new Set();
+    for (const w of s.words) {
+      assert.match(w.he, re, `${s.id}: ${w.he}`); assert.ok(known.has(w.he), `${s.id}: ${w.he} not in course data`); assert.ok(w.en && w.translit);
+      const bare = w.he.replace(/[֑-ׇ]/g, ''); assert.ok(!bares.has(bare), 'one spelling per sign'); bares.add(bare);
+    }
+    assert.ok(s.cells.length >= 1 && s.sound);
+  }
+  assert.ok(m.sections.find((s) => s.id === 'dagesh').words.every((w) => !/^וּ/.test(w.he)));
+});
+for (const paper of Object.keys(PAPERS)) {
+  test(`niqqud ${paper} HTML: front + one page per sign, 6 word rows each, print strips, contents page numbers, draft`, () => {
+    const { html, pages, pageCount } = buildNiqqudHtml(paper);
+    assert.equal(pageCount, niq.length + 1); assert.deepEqual(pages.slice(1), niq.map(() => 'sign'));
+    assert.equal(count(html, /data-niqqud="/g), niq.length);
+    assert.equal(count(html, /data-niqqud-word="/g), niq.length * PER_SIGN);
+    assert.match(html, /<td>page 2<\/td>/); assert.match(html, new RegExp(`<td>page ${niq.length + 1}</td>`));
+    assert.match(html, /DRAFT: not reviewed by a Hebrew teacher; Israeli values only/);
+    assert.ok(!/\bAI\b/.test(html));
+  });
+}
+
+// ---- Stage 4: manifest, index page, PDFs ----
+const BUILDERS = { firstday: (p) => buildFirstDayHtml(p), 'cursive-words': (p) => buildCursiveHtml(p), niqqud: (p) => buildNiqqudHtml(p) };
+test('generated PDFs (if present): listed in assets/workbook/manifest.json with the real byte size, page count, docs copy, scrubbed metadata; index page lists them', () => {
   const mpath = new URL('../assets/workbook/manifest.json', import.meta.url);
   if (!existsSync(mpath)) return;
   const m = JSON.parse(readFileSync(mpath, 'utf8'));
-  const mine = m.files.filter((f) => f.kind === 'firstday');
-  if (!mine.length) return; // built by: node tools/letters/firstday_pages.mjs
-  assert.equal(mine.length, 2);
+  const mine = m.files.filter((f) => BUILDERS[f.kind]);
+  if (!mine.length) return; // built by: node tools/letters/firstday_pages.mjs, cursive_words.mjs, niqqud_workbook.mjs
+  assert.equal(mine.length, 6, 'three sets, A4 + Letter each');
+  const ipath = new URL('../docs/workbook/index.html', import.meta.url);
+  const index = existsSync(ipath) ? readFileSync(ipath, 'utf8') : '';
   for (const f of mine) {
-    const [, paper] = f.id.match(/firstday-(\w+)$/);
-    assert.equal(f.pages, buildFirstDayHtml(paper).pageCount, f.id);
+    const [, paper] = f.id.match(/-(a4|letter)$/);
+    assert.equal(f.pages, BUILDERS[f.kind](paper).pageCount, f.id);
+    if (index) assert.ok(index.includes(`href="${f.pdf}"`), 'index page lists ' + f.pdf);
     const p = new URL('../assets/workbook/' + f.pdf, import.meta.url);
     assert.equal(statSync(p).size, f.bytes, f.id + ' bytes');
     const pdf = readFileSync(p);

@@ -1,4 +1,4 @@
-# Next 1000 images: ChatGPT command runbook
+# Next 1000 images: command runbook
 
 Pending list: **1000 images** = 515 unfinished manifest rows (commands 36-101) + 485 new block H images (commands 102-149).
 Done set used: docs/images/codex-batch-01.json (282 matched manifest names).
@@ -8,7 +8,7 @@ Files: `data/images/next1000.csv` (same columns as manifest.csv, all pending, co
 
 ## How to run
 
-1. Open one ChatGPT conversation (or Codex session) and keep it for the whole run so STYLE GUIDE v1 stays pinned. If the conversation was restarted, paste the STYLE GUIDE v1 text from `tools/images/spec.mjs` first.
+1. Open one conversation in your image tool and keep it for the whole run so STYLE GUIDE v1 stays pinned. If the conversation was restarted, paste the STYLE GUIDE v1 text from `tools/images/spec.mjs` first.
 2. Run **one command at a time**. For each command, attach the reference sheets named in the `refs` column (for example CHAR_ari_sheet.png, CHAR_noa_sheet.png, FRAME_lettercard.png, REF_cursive_*.png, or an earlier image of the same set).
 3. Each image is its own PNG, named exactly as in `next1000-groups.json` (`expectedFiles`). Never any text, letters or numerals in an image: Hebrew is overlaid later as vector.
 4. Save each image under its exact file name and check the command's count before saying "next".
@@ -17,7 +17,7 @@ Files: `data/images/next1000.csv` (same columns as manifest.csv, all pending, co
 ## Paste-ready master command
 
 ```
-ChatGPT cannot read repo files, so do not use next1000-groups.json there. Paste the first pending command's file (see docs/images/paste/INDEX.md), then the next one ... (one self-contained file per command, see docs/images/paste/README.md; the paste files are built by node tools/images/build_paste_files.mjs).
+Your image tool cannot read repo files, so do not use next1000-groups.json there. Paste the first pending command's file (see docs/images/paste/INDEX.md), then the next one ... (one self-contained file per command, see docs/images/paste/README.md; the paste files are built by node tools/images/build_paste_files.mjs).
 ```
 
 Several commands in a row:

@@ -90,7 +90,7 @@ test('NO invented Hebrew: every example line exists verbatim in data/corpus, dat
 });
 
 test('example really contains the word (its unpointed form or a listed form, possibly behind a prefix)', () => {
-  const strip = (s) => s.normalize('NFC').replace(/[֑-ׇ]/g, '').replace(/[.,!?;:"“”()…׃\/]/g, ' ').replace(/\s+/g, ' ').trim();
+  const strip = (s) => s.normalize('NFC').replace(/[־׃]/g, ' ').replace(/[֑-ׇ]/g, '').replace(/[.,!?;:"“”()…׃\/]/g, ' ').replace(/\s+/g, ' ').trim();
   const forms = (w) => { const out = new Set([strip(w.heUnpointed)]); const walk = (x) => { if (typeof x === 'string') out.add(strip(x)); else if (x && typeof x === 'object') Object.values(x).forEach(walk); }; walk(w.forms); return [...out].filter(Boolean); };
   for (const t of themes) for (const w of t.words) {
     if (!w.example) continue;

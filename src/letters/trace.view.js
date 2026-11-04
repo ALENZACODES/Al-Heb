@@ -7,6 +7,7 @@ import { createTracer, MODES } from './trace.js';
 import { createTrainer, keyboardRows, XKB_TO_DOM } from './typing.js';
 import { createProgress } from './progress.js';
 import { matchLetter } from './shapecheck.js';
+import { warningAfterWrongTap } from './interference.js';
 
 const DATA = (name) => new URL('../../data/letters/' + name, import.meta.url).href;
 
@@ -86,10 +87,11 @@ export function mount(root, ctx = {}) {
     ctx.letters || loadJson(DATA('letters.json')),
     ctx.confusables || loadJson(DATA('confusables.json')).catch(() => null),
     ctx.keyboard || loadJson(DATA('keyboard-si1452.json')).catch(() => null),
-    ctx.mnemonics || loadJson(DATA('mnemonics.json')).catch(() => null)
-  ]).then(([letters, conf, kb, mn]) => {
+    ctx.mnemonics || loadJson(DATA('mnemonics.json')).catch(() => null),
+    ctx.interference || loadJson(DATA('interference.json')).catch(() => null)
+  ]).then(([letters, conf, kb, mn, interf]) => {
     if (unmounted) return;
-    state.letters = letters; state.confusables = conf; state.keyboard = kb;
+    state.letters = letters; state.confusables = conf; state.keyboard = kb; state.interference = interf;
     state.mnemonics = {}; for (const m of ((mn && mn.letters) || [])) state.mnemonics[m.id] = m;
     render();
   }).catch(err => {
@@ -203,7 +205,6 @@ export function mount(root, ctx = {}) {
     body.appendChild(h('div', { class: 'row', role: 'group', 'aria-label': t('trace.sets', 'Look-alike sets') },
       ...sets.map(s => h('button', { dir: 'rtl', lang: 'he', 'aria-pressed': s.id === set.id, onclick: () => { state.drillSet = s.id; state.drillQ = null; render(); } },
         s.letters.map(id => (letterById(id) || {}).he).join(' ')))));
-    body.appendChild(h('p', {}, set.hint));
     // question: which glyph is <name>?
     const ids = set.letters;
     if (!state.drillQ || !ids.includes(state.drillQ.target)) state.drillQ = { target: ids[Math.floor(Math.random() * ids.length)], answered: null, score: (state.drillQ && state.drillQ.score) || { ok: 0, n: 0 } };
@@ -217,7 +218,7 @@ export function mount(root, ctx = {}) {
       opts.appendChild(h('button', { lang: 'he', 'aria-label': l.name, onclick: () => {
         q.score.n++;
         if (id === q.target) { q.score.ok++; fb.textContent = t('trace.good', 'Good!') + ' ' + l.name; state.drillQ = { target: null, score: q.score }; setTimeout(() => { if (!unmounted && state.tab === 'drill') render(); }, 900); }
-        else fb.textContent = t('trace.notThat', 'That is ') + l.name + '. ' + set.hint;
+        else { const w = warningAfterWrongTap(q.target, id, state.interference, state.confusables); fb.textContent = t('trace.notThat', 'That is ') + l.name + '.' + (w ? ' ' + w.hint : ''); } // look-alike hint only after a wrong tap
       } }, l.he));
     }
     body.appendChild(opts); body.appendChild(fb);

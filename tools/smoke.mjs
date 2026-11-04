@@ -13,7 +13,9 @@ try { ({ chromium } = require('playwright')); } catch { try { ({ chromium } = re
 
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 const outDir = join(root, 'docs', 'screens'); mkdirSync(outDir, { recursive: true });
-const ROUTES = ['/', '/welcome', '/learn', '/learn?lesson=r01', '/learn?review=1', '/letters', '/letters/alef', '/sounds', '/read', '/read/bless-priestly-1', '/scan', '/calendar', '/workbook', '/letters/atlas', '/soundgap', '/vocab', '/settings', '/how', '/about', '/nope'];
+// Routes in SEEDED_ROUTES are also shot again with 14 read-track lessons marked complete (so Spot It, loanwords and the checkpoint have content).
+const SEEDED_ROUTES = ['/loanwords/lw1', '/spotit/bet', '/checkpoint', '/dialogues'];
+const ROUTES = ['/', '/welcome', '/learn', '/learn?lesson=r01', '/learn?review=1', '/letters', '/letters/alef', '/sounds', '/read', '/read/bless-priestly-1', '/scan', '/calendar', '/workbook', '/letters/atlas', '/soundgap', '/vocab', '/loanwords', '/loanwords/lw1', '/spotit/bet', '/checkpoint', '/dialogues', '/dialogues/d-cafe', '/settings', '/how', '/about', '/nope'];
 const args = process.argv.slice(2);
 const useDist = args.includes('--dist');
 const prefix = useDist && args.includes('--base') ? args[args.indexOf('--base') + 1] : '/';
@@ -46,6 +48,34 @@ for (const r of ROUTES) {
   results.push({ route: r, status, ...info, errors, consoleErrors: consoleErrors.filter((c) => !/Failed to load resource/.test(c)) });
   await page.close();
 }
+// seeded sweep: completed lessons unlock the loanword groups and the look-alike checkpoint; also taps through Spot It
+{
+  const seeded = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 });
+  const ids = Array.from({ length: 24 }, (_, i) => 'r' + String(i + 1).padStart(2, '0'));
+  await seeded.addInitScript((ids) => { if (!localStorage.getItem('alef:settings')) { localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); localStorage.setItem('alef:curriculum.progress', JSON.stringify({ completed: Object.fromEntries(ids.map((i) => [i, Date.now()])) })); } }, ids);
+  for (const r of SEEDED_ROUTES) {
+    const page = await seeded.newPage(); const errors = [];
+    page.on('pageerror', (e) => errors.push(e.message));
+    await page.goto(base + '#' + r, { waitUntil: 'load' });
+    try { await page.waitForSelector('body[data-ready="1"]', { timeout: 8000 }); } catch { errors.push('view never became ready'); }
+    await page.waitForTimeout(500);
+    const name = 'seeded_' + r.slice(1).replace(/[\/?=&]+/g, '_');
+    if (r.startsWith('/spotit')) {
+      // tap the first two cells, then Check
+      const cells = page.locator('.alef-spot-cell'); const n = await cells.count();
+      for (let i = 0; i < Math.min(n, 3); i++) await cells.nth(i).click();
+      await page.screenshot({ path: join(outDir, name + '_tapped.png'), fullPage: true });
+      await page.getByRole('button', { name: /check/i }).first().click().catch(() => {});
+      await page.waitForTimeout(400);
+    }
+    await page.screenshot({ path: join(outDir, name + '.png'), fullPage: true });
+    const len = await page.evaluate(() => document.getElementById('main').innerText.length);
+    if (errors.length) failed = true;
+    results.push({ route: r + ' (seeded)', status: errors.length ? 'ERROR' : 'content', heading: await page.locator('h1').first().innerText().catch(() => ''), unavailable: false, textLength: len, errors, consoleErrors: [] });
+    await page.close();
+  }
+  await seeded.close();
+}
 // first run (fresh profile, no init script): home redirects to the welcome screen; finishing it persists settings
 const checks = [];
 const check = (name, ok, detail = '') => { checks.push({ name, ok: !!ok, detail }); if (!ok) failed = true; };
@@ -71,7 +101,10 @@ const check = (name, ok, detail = '') => { checks.push({ name, ok: !!ok, detail 
   await page.goto(base + '#/'); await page.waitForSelector('text=cards due');
   check('home shows due cards and a 1-day streak', /6 cards due/.test(await page.locator('main').innerText()) && /1 day/.test(await page.locator('main').innerText()));
   await page.goto(base + '#/learn?review=1'); await page.waitForSelector('text=Card 1 of 6');
-  for (const k of ['3', '3', '4', '2', '1', '3']) { await page.getByRole('button', { name: 'Show answer' }).click(); await page.keyboard.press(k); await page.waitForTimeout(80); }
+  for (const k of ['3', '3', '4', '2', '1', '3']) {
+    // after "Again" lane 1 may show an interference hint panel with a Continue button before the next card
+    const cont = page.getByRole('button', { name: 'Continue' }); if (await cont.count()) await cont.first().click();
+    await page.getByRole('button', { name: 'Show answer' }).click(); await page.keyboard.press(k); await page.waitForTimeout(80); }
   await page.waitForSelector('text=Session done');
   const cards = await page.evaluate(() => JSON.parse(localStorage.getItem('alef:srs.cards')));
   check('review persisted ratings to srs.cards', Object.values(cards).every((c) => c.reps === 1) && Object.values(cards).some((c) => c.state === 'relearning'));

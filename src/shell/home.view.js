@@ -29,7 +29,11 @@ export function mount(root, ctx) {
     h('nav', { class: 'card', 'aria-labelledby': 'h-quick' }, h('h2', { id: 'h-quick' }, t('home.quick')),
       h('ul', { class: 'tiles' }, ...QUICK.map(([k, href]) => h('li', {}, h('a', { class: 'tile', href }, h('span', {}, t('nav.' + k)), tHe('nav.' + k) ? heSpan(tHe('nav.' + k)) : null))),
         // optional views from other lanes: only listed when their file exists in this build
-        ...ROUTES.filter((r) => r.optional && r.quick && (ctx.hasRoute?.(r.name) ?? false)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, h('span', {}, t(r.quick))))))),
+        ...ROUTES.filter((r) => r.optional && r.quick && !r.group && (ctx.hasRoute?.(r.name) ?? false)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, h('span', {}, t(r.quick))))))),
+    ROUTES.some((r) => r.group === 'learn' && ctx.hasRoute?.(r.name))
+      ? h('nav', { class: 'card', 'aria-labelledby': 'h-more' }, h('h2', { id: 'h-more' }, t('home.more')), h('p', { class: 'muted' }, t('home.more.hint')),
+        h('ul', { class: 'tiles' }, ...ROUTES.filter((r) => r.group === 'learn' && ctx.hasRoute?.(r.name)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, h('span', {}, t(r.quick)), tHe(r.quick) ? heSpan(tHe(r.quick)) : null)))))
+      : null,
     h('section', { class: 'card', 'aria-labelledby': 'h-ref' }, h('h2', { id: 'h-ref' }, t('home.reflect')),
       h('a', { class: 'btn secondary', href: '#/calendar' }, t('home.reflect.link'))),
     h('p', {}, h('a', { href: '#/how' }, t('home.how'))),

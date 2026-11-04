@@ -42,7 +42,7 @@ let available = availableRoutes(VIEW_FILES);
 function renderNav(current) {
   const nav = document.getElementById('nav');
   nav.replaceChildren(...ROUTES.filter((r) => r.nav && available.has(r.name)).map((r) => {
-    const a = h('a', { href: '#' + (r.pattern === '/' ? '/' : r.pattern), 'aria-current': current === r.name || (r.name === 'letters' && current === 'letter') || (r.name === 'read' && current === 'text') ? 'page' : null },
+    const a = h('a', { href: '#' + (r.pattern === '/' ? '/' : r.pattern), 'aria-current': current === r.name || (r.name === 'letters' && current === 'letter') || (r.name === 'read' && current === 'text') || (r.name === 'learn' && ['loanwords', 'loanword', 'spotit', 'checkpoint', 'dialogues', 'dialogue'].includes(current)) ? 'page' : null },
       h('span', {}, t(r.nav)), tHe(r.nav) ? heSpan(tHe(r.nav), 'he nav-he') : null);
     return h('li', {}, a);
   }));

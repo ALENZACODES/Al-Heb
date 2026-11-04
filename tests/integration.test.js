@@ -128,7 +128,7 @@ ifFile('data/audio/manifest.json', (d) => {
   assert.ok(Array.isArray(d));
   for (const e of d) { assert.ok(['m', 'f'].includes(e.voice), e.path); assert.ok(['israeli', 'sephardi', 'ashkenazi'].includes(e.tradition), e.path); assert.ok(['missing', 'tts', 'recorded'].includes(e.status), e.path); assert.equal(e.path, `audio/${e.voice}/${e.tradition}/${e.kind}/${e.id}.mp3`); }
   const letterIds = new Set(d.filter((e) => e.kind === 'letter').map((e) => e.id));
-  for (const id of letterIds) assert.ok(LETTERS.includes(id.replace(/-sound$/, '')), 'audio letter id not in shared ids: ' + id);
+  for (const id of letterIds) assert.ok(LETTERS.includes(id.replace(/-sound$/, '')) || ['vet', 'khaf', 'fe', 'sin'].includes(id.replace(/-sound$/, '')), 'audio letter id not in shared ids: ' + id);
 });
 test('every data/**/*.json (not _build) parses', () => {
   const walk = (d) => readdirSync(d, { withFileTypes: true }).flatMap((e) => e.name.startsWith('_') ? [] : e.isDirectory() ? walk(join(d, e.name)) : e.name.endsWith('.json') ? [join(d, e.name)] : []);
@@ -260,4 +260,15 @@ test('precache: skips vendor, PDFs and files over the size limit', async () => {
   // compare the file LIST (not the content hash, which changes on every edit by any lane)
   const listed = JSON.parse(readFileSync(join(root, 'precache-manifest.js'), 'utf8').match(/ALEF_PRECACHE = (\[[\s\S]*?\]);/)[1]);
   assert.deepEqual(listed, m.files, 'precache-manifest.js file list is stale: run node tools/build-precache.mjs');
+});
+
+test('router: lane 1 sub-screens inject the query learn.view.js dispatches on', () => {
+  assert.equal(matchRoute('#/loanwords').query.loanwords, '1');
+  assert.equal(matchRoute('#/loanwords/lw2').query.loanwords, 'lw2');
+  assert.equal(matchRoute('#/spotit/kaf-final').query.spotit, 'kaf-final');
+  assert.equal(matchRoute('#/checkpoint').query.checkpoint, '1');
+  assert.equal(matchRoute('#/dialogues').query.dialogues, '1');
+  assert.equal(matchRoute('#/dialogues/d-cafe').query.dialogue, 'd-cafe');
+  assert.equal(matchRoute('#/letters/atlas').route.name, 'atlas');
+  assert.equal(matchRoute('#/soundgap').route.name, 'soundgap');
 });

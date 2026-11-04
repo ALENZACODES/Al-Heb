@@ -1,0 +1,739 @@
+{
+ "version": 1,
+ "generated": "2026-11-03",
+ "note": "Scores 0-1000 are the author's judgement of expected learner value for ALEF, not measured outcomes. improvedScore equals score when no improvement was specced. riskAxis: higher is worse. Source: English captions (manual or auto, machine-noisy) of YouTube videos from the top-100 candidate list in docs/youtube/top100.md; only 16 of 100 captions were fetched before YouTube rate-limited the machine, so counts like 4 of 9 refer to the reading videos actually read. No video was watched and no audio heard. No text, video or audio is reused; ideas only.",
+ "axesKey": {
+  "r": "reading siddur or Torah aloud",
+  "i": "Israeli functional Hebrew",
+  "c": "beginner clarity",
+  "f": "fit with ALEF",
+  "risk": "originality risk, higher is worse"
+ },
+ "sources": {
+  "y100-tech": {
+   "name": "Teaching techniques seen in the captions of widely viewed Hebrew-learning YouTube videos",
+   "licence": "Public YouTube videos by several channels; licence not stated in the data read, treat as standard YouTube terms with all rights reserved. Ideas only, no text, video, audio or image reused."
+  },
+  "y100-err": {
+   "name": "Errors and myths heard in those captions, turned into guards for ALEF",
+   "licence": "Public YouTube videos by several channels; licence not stated in the data read, treat as standard YouTube terms with all rights reserved. Ideas only, no text, video, audio or image reused."
+  },
+  "y100-gap": {
+   "name": "Things none of the read videos does well, which ALEF can",
+   "licence": "Public YouTube videos by several channels; licence not stated in the data read, treat as standard YouTube terms with all rights reserved. Ideas only, no text, video, audio or image reused."
+  }
+ },
+ "concepts": [
+  {
+   "id": "y100-tech-01",
+   "source": "y100-tech",
+   "name": "Letters taught in alef-bet order",
+   "what": "The default sequence: aleph first, then bet, gimel and so on, a few letters per lesson. Seen in 8 of 9 reading videos read. Easy to follow but puts look-alikes far apart and gives no reading until late.",
+   "axes": {
+    "r": 650,
+    "i": 500,
+    "c": 750,
+    "f": 650,
+    "risk": 100
+   },
+   "score": 600,
+   "improvedScore": 600,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (8 of 9)",
+   "notes": "ALEF can order by frequency and by contrast pairs instead."
+  },
+  {
+   "id": "y100-tech-02",
+   "source": "y100-tech",
+   "name": "Print and handwritten forms shown together",
+   "what": "Each letter is shown in the book shape and in the hand shape from the start, so the learner can read signs and also write notes. Seen in 4 to 5 of 9.",
+   "axes": {
+    "r": 500,
+    "i": 800,
+    "c": 750,
+    "f": 850,
+    "risk": 100
+   },
+   "score": 700,
+   "improvedScore": 700,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (5 of 9)",
+   "notes": ""
+  },
+  {
+   "id": "y100-tech-03",
+   "source": "y100-tech",
+   "name": "Live stroke-order demonstration",
+   "what": "The teacher draws each letter in front of the learner and says the number of strokes and where to start. Seen in 4 of 9. A screen video cannot check the learner copy.",
+   "axes": {
+    "r": 450,
+    "i": 700,
+    "c": 800,
+    "f": 900,
+    "risk": 100
+   },
+   "score": 780,
+   "improvedScore": 780,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (4 of 9)",
+   "notes": "Overlaps gap-02 where ALEF actually checks the learner trace."
+  },
+  {
+   "id": "y100-tech-04",
+   "source": "y100-tech",
+   "name": "Letter name used as the sound cue",
+   "what": "Learners are told the name of a letter starts with its sound, which gives a free memory hook. Seen in the HebrewPod101 series only (2 of the 9 videos read, same series). It fails for ayin, vav, tsadi and others and is rarely caveated.",
+   "axes": {
+    "r": 600,
+    "i": 550,
+    "c": 700,
+    "f": 650,
+    "risk": 150
+   },
+   "score": 640,
+   "improvedScore": 640,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (2 of 9, one series)",
+   "notes": ""
+  },
+  {
+   "id": "y100-tech-05",
+   "source": "y100-tech",
+   "name": "One key word per letter",
+   "what": "A familiar object or animal word is paired with every letter. Seen in 3 of 9. Helps recall but the words are not reused later in reading practice.",
+   "axes": {
+    "r": 550,
+    "i": 700,
+    "c": 750,
+    "f": 700,
+    "risk": 150
+   },
+   "score": 700,
+   "improvedScore": 700,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (3 of 9)",
+   "notes": ""
+  },
+  {
+   "id": "y100-tech-06",
+   "source": "y100-tech",
+   "name": "Shape gimmicks and picture mnemonics",
+   "what": "Letters and vowels are tied to a picture or a gag (a necktie, a gap in the shape, a hole at the bottom). Seen in 3 of 9. Strong for look-alike pairs; each teacher invents their own, so ALEF must draw its own.",
+   "axes": {
+    "r": 700,
+    "i": 600,
+    "c": 800,
+    "f": 800,
+    "risk": 350
+   },
+   "score": 760,
+   "improvedScore": 760,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (3 of 9)",
+   "notes": "Originality risk: never reuse a teacher gimmick."
+  },
+  {
+   "id": "y100-tech-07",
+   "source": "y100-tech",
+   "name": "Dotted versus undotted pairs compared back to back",
+   "what": "Bet, kaf and pe are played with and without the dot, then the contrast is reused. Seen in 5 of 9. Overlaps yt-alphabet-03 from the Hebrew For Beginners playlists.",
+   "axes": {
+    "r": 850,
+    "i": 700,
+    "c": 850,
+    "f": 850,
+    "risk": 100
+   },
+   "score": 790,
+   "improvedScore": 790,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (5 of 9)",
+   "notes": "Already specced as yt-alphabet-03; not re-specced here."
+  },
+  {
+   "id": "y100-tech-08",
+   "source": "y100-tech",
+   "name": "Final letters taught as one batch",
+   "what": "The five final shapes come together after the main letters, often with a rule that they only close a word. Seen in 6 of 9. Good for recognition; few teachers add a drill that makes the learner spot them in running text.",
+   "axes": {
+    "r": 700,
+    "i": 650,
+    "c": 800,
+    "f": 800,
+    "risk": 100
+   },
+   "score": 800,
+   "improvedScore": 800,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (6 of 9)",
+   "notes": ""
+  },
+  {
+   "id": "y100-tech-09",
+   "source": "y100-tech",
+   "name": "Silent carriers named early",
+   "what": "Aleph and ayin are explained as letters that mostly hand the sound to the vowel. Seen in 5 of 9. Helpful, but how silent they are depends on tradition and is rarely said.",
+   "axes": {
+    "r": 800,
+    "i": 700,
+    "c": 750,
+    "f": 800,
+    "risk": 100
+   },
+   "score": 820,
+   "improvedScore": 820,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (5 of 9)",
+   "notes": ""
+  },
+  {
+   "id": "y100-tech-10",
+   "source": "y100-tech",
+   "name": "A real word read in the first lesson",
+   "what": "Two letters plus one vowel sign yield a word the learner understands (father, come, roof) inside minutes. Seen in 3 of 9. The strongest motivator in the set and cheap to build.",
+   "axes": {
+    "r": 800,
+    "i": 900,
+    "c": 900,
+    "f": 900,
+    "risk": 100
+   },
+   "score": 900,
+   "improvedScore": 965,
+   "improvedName": "First-lesson word contract",
+   "spec": {
+    "screen": "Lesson 1 ends on a read-aloud card: three tiles (two consonants and a vowel sign) assemble into a meaningful word with a picture and one tap to hear it. Never shown before the tiles have been traced.",
+    "data": "firstWords[] = {id, letters[], vowelSignId, gloss, audioId, tradition} drawn only from letters and signs already taught; a build check rejects any word needing an untaught item.",
+    "interaction": "Tap each tile in order to hear its piece, then the blended word; learner reads it aloud into a self-check button (no recording stored) and then picks the matching picture from three.",
+    "test": "Unit: every firstWords entry resolves to taught letters and one vowel sign, has an audio id in the manifest, and appears in lesson 1 or 2 only. A render test asserts no untaught glyph on the card."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (3 of 9)",
+   "notes": "Spec below makes it a standing first-lesson contract."
+  },
+  {
+   "id": "y100-tech-11",
+   "source": "y100-tech",
+   "name": "Vowel signs grouped by sound family",
+   "what": "Signs are taught by the sound they make (a, e, i, o, u) rather than by name. Seen in 4 of 9. Overlaps yt-vowels-01 from the earlier playlist pass.",
+   "axes": {
+    "r": 880,
+    "i": 880,
+    "c": 850,
+    "f": 880,
+    "risk": 150
+   },
+   "score": 820,
+   "improvedScore": 820,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (4 of 9)",
+   "notes": "Already specced as yt-vowels-01."
+  },
+  {
+   "id": "y100-tech-12",
+   "source": "y100-tech",
+   "name": "Consonant-plus-vowel syllable chains drilled on a beat",
+   "what": "Every new vowel is immediately combined with all known letters and read in rhythm, so reading is syllable-level from minute five. Seen in full in 1 of 9 (the one-hour course), with per-sound practice lists in the Hebrew For Beginners vowel series. Rare but the most effective use of time I saw.",
+   "axes": {
+    "r": 900,
+    "i": 800,
+    "c": 850,
+    "f": 900,
+    "risk": 150
+   },
+   "score": 900,
+   "improvedScore": 960,
+   "improvedName": "Syllable chain runner",
+   "spec": {
+    "screen": "A single row of letter-vowel tiles that scrolls right to left at a chosen pace with a pulse marker. The learner reads each tile as it passes; the sound plays after a one-beat gap so they speak first and check second.",
+    "data": "syllableChains[] = {id, vowelSignId, letterIds[], pace, audioIds[], tradition}; chains are generated from taught letters only and reuse the audio manifest syllable ids.",
+    "interaction": "Choose pace (slow, medium, fast); tap a tile to hear it at any time; the runner records hits (learner marks I got it / I missed it) and feeds missed tiles into the SRS queue.",
+    "test": "Unit: generated chains contain only taught items, every tile has an audio id or is flagged missing, pace values are in range, and a missed tile creates exactly one SRS card."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (2 of 9)",
+   "notes": "Needs ALEF audio for each syllable."
+  },
+  {
+   "id": "y100-tech-13",
+   "source": "y100-tech",
+   "name": "Quizzes and recaps at lesson ends",
+   "what": "A short quiz or recap follows each block. Seen in 3 of 9. Useful but mostly passive (name the sign), with no spacing.",
+   "axes": {
+    "r": 550,
+    "i": 550,
+    "c": 700,
+    "f": 800,
+    "risk": 50
+   },
+   "score": 640,
+   "improvedScore": 640,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (3 of 9)",
+   "notes": ""
+  },
+  {
+   "id": "y100-tech-14",
+   "source": "y100-tech",
+   "name": "Table of letters that sound the same in Israeli Hebrew",
+   "what": "One video closes with groups of letters that merge in speech (aleph and ayin, vet and vav, tet and tav, kuf and kaf, sin and samech). Seen in 2 of 9. It answers a question every learner asks and almost nobody covers.",
+   "axes": {
+    "r": 700,
+    "i": 900,
+    "c": 850,
+    "f": 900,
+    "risk": 100
+   },
+   "score": 880,
+   "improvedScore": 965,
+   "improvedName": "Same-sound explorer with spelling quiz",
+   "spec": {
+    "screen": "A grid of merged-sound groups. Tap a sound to see which letters write it, with three example words each and a note on which tradition keeps the split.",
+    "data": "mergedSounds[] = {sound, ipa, letterIds[], traditionsThatSplit[], exampleWordIds[]} generated from the letter table plus a tradition field; no hand-copied word lists.",
+    "interaction": "Hear a word, pick the spelling from two to three candidates; wrong picks explain that both letters share the sound here and show the rule or the word memory hint. Results feed SRS on word cards.",
+    "test": "Unit: each group has at least two letters and one example word per letter; tradition switch changes which groups appear; quiz never offers a distractor that is also correct for the selected tradition."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (2 of 9)",
+   "notes": "Tradition aware: merges differ for Sephardi and Ashkenazi readings."
+  },
+  {
+   "id": "y100-tech-15",
+   "source": "y100-tech",
+   "name": "Gender variants flagged as phrases arrive",
+   "what": "Phrase videos stop to say a line changes with speaker and listener gender, giving up to four forms. Seen in all 3 phrase videos read. Taught as a list rather than a switch.",
+   "axes": {
+    "r": 100,
+    "i": 900,
+    "c": 800,
+    "f": 800,
+    "risk": 100
+   },
+   "score": 700,
+   "improvedScore": 700,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (3 of 3 phrase videos)",
+   "notes": ""
+  },
+  {
+   "id": "y100-err-01",
+   "source": "y100-err",
+   "name": "Shva taught as silent, or as a flat short e",
+   "what": "Two HebrewPod101 videos say shva has no sound and the earlier Hebrew For Beginners pass heard it taught as a short e (3 of 10 reading sources); one other video gives a usable rule (after a vowel it closes the syllable, otherwise a quick uh). Learners then mis-read common words and prayer lines.",
+   "axes": {
+    "r": 900,
+    "i": 850,
+    "c": 900,
+    "f": 900,
+    "risk": 100
+   },
+   "score": 920,
+   "improvedScore": 975,
+   "improvedName": "Shva decision walker",
+   "spec": {
+    "screen": "A word is split into syllables on screen. Where a shva sits, the learner is asked: does a vowel sign come directly before it, is it the first letter, is it under a doubled letter? The app then shows the vocal or silent verdict with the sound or a gap.",
+    "data": "shvaCases[] = {wordId, shvaPosition, rule: after-vowel | word-start | double | after-shva, verdict: silent | vocal, audioId, tradition}; rules stored as data so the lesson text and the checker share them.",
+    "interaction": "Learner drags a marker to the correct verdict, then hears the word. Wrong answers show the one rule that applied. A weekly mixed set re-tests cases the learner missed.",
+    "test": "Unit: every shvaCase has exactly one rule and a verdict consistent with it; no teaching card uses the words silent vowel as a blanket description; audio ids resolve."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (3 of 10)",
+   "notes": "Biggest single fixable error."
+  },
+  {
+   "id": "y100-err-02",
+   "source": "y100-err",
+   "name": "Long and short vowels presented as audible pairs",
+   "what": "One academic-style video teaches signs as long/short pairs while admitting that native speakers merge them. Seen in 1 of 9, plus in Hebrew For Beginners vowel naming. For Israeli Hebrew this inflates the vowel inventory to seven or more; for liturgy it is only a naming convention.",
+   "axes": {
+    "r": 700,
+    "i": 900,
+    "c": 850,
+    "f": 900,
+    "risk": 100
+   },
+   "score": 860,
+   "improvedScore": 960,
+   "improvedName": "Tradition-labelled vowel chart",
+   "spec": {
+    "screen": "One vowel chart where each sign shows its name, its sound in the chosen tradition, and a small badge when two signs are heard the same. A tradition control swaps the chart between Israeli, Sephardi liturgical and Ashkenazi liturgical readings.",
+    "data": "vowelTable[] = {signId, name, soundByTradition: {israeli, sephardi, ashkenazi}, mergedWith[]}; all lesson copy that states a sound reads from this table.",
+    "interaction": "Tap a sign to hear it in the chosen tradition; a Compare button plays two merged signs back to back so the learner hears that they match; a quiz asks which sound a sign makes in the selected tradition.",
+    "test": "Unit: every sign has a sound for all three traditions; mergedWith is symmetric; changing tradition changes at least one displayed sound; no copy hard-codes a vowel sound."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (2 of 10)",
+   "notes": "Good teaching: tell learners the sound count per tradition up front."
+  },
+  {
+   "id": "y100-err-03",
+   "source": "y100-err",
+   "name": "Hebrew said to have no vowels",
+   "what": "One video says Hebrew has no vowels at all (another says the letters are consonants, which is accurate). Misleading for a learner who must read vav and yud as vowels in real words. Seen in 1 of 9.",
+   "axes": {
+    "r": 600,
+    "i": 650,
+    "c": 700,
+    "f": 800,
+    "risk": 100
+   },
+   "score": 640,
+   "improvedScore": 640,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (1 of 9)",
+   "notes": ""
+  },
+  {
+   "id": "y100-err-04",
+   "source": "y100-err",
+   "name": "Aleph and ayin simply called silent",
+   "what": "Several videos call aleph and ayin silent for simplicity (at least 3 of 9). Right for most Israeli speech, wrong for many Sephardi, Mizrahi and Yemenite readers and for learners who will hear a throat sound in the siddur.",
+   "axes": {
+    "r": 700,
+    "i": 800,
+    "c": 800,
+    "f": 850,
+    "risk": 100
+   },
+   "score": 840,
+   "improvedScore": 840,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (3 of 9)",
+   "notes": "Fix via the tradition switch, no separate spec."
+  },
+  {
+   "id": "y100-err-05",
+   "source": "y100-err",
+   "name": "Chet and the h letters given incompatible sounds",
+   "what": "One video gives chet an h-like sound and a Bach-like sound in the same lesson (1 of 9); the usual advice elsewhere is a throat sound. Learners then cannot tell he from chet by ear.",
+   "axes": {
+    "r": 800,
+    "i": 850,
+    "c": 800,
+    "f": 800,
+    "risk": 100
+   },
+   "score": 760,
+   "improvedScore": 760,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (1 of 9)",
+   "notes": ""
+  },
+  {
+   "id": "y100-err-06",
+   "source": "y100-err",
+   "name": "The letter-name-gives-the-sound rule stated without limits",
+   "what": "Stated as a law in the HebrewPod101 series (2 videos). Fine for most letters; not for ayin, vav or tsadi, and ayin gives the wrong cue.",
+   "axes": {
+    "r": 500,
+    "i": 500,
+    "c": 650,
+    "f": 700,
+    "risk": 100
+   },
+   "score": 620,
+   "improvedScore": 620,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (2 of 9)",
+   "notes": ""
+  },
+  {
+   "id": "y100-err-07",
+   "source": "y100-err",
+   "name": "Final he sounded out as a vowel",
+   "what": "One video presents he as something that can sound like a, which blurs the fact that a word-final he is a silent spelling carrier (1 of 9, caption doubt). Learners then read extra syllables.",
+   "axes": {
+    "r": 900,
+    "i": 850,
+    "c": 850,
+    "f": 880,
+    "risk": 100
+   },
+   "score": 900,
+   "improvedScore": 965,
+   "improvedName": "Silent-letter tagging game",
+   "spec": {
+    "screen": "A word is shown with each letter tinted by role: sounds, carries a vowel, or silent. The learner taps the silent letter or letters, then hears the word. Final he, aleph in mid-word and ayin come up repeatedly.",
+    "data": "letterRoles[] = {wordId, letterIndex, role: sound | vowel-carrier | silent, tradition}; roles are produced by a rule table plus a reviewed exceptions list, never by hand per word.",
+    "interaction": "Tap to mark a silent letter; feedback shows the rule. After five wins the tint is removed and the learner marks silent letters on plain text.",
+    "test": "Unit: every word has at least one role per letter; final he is never marked sounding; exceptions list entries carry a reason; marking by tradition changes ayin only where documented."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (1 of 9)",
+   "notes": "Rare in this set but costly and very common in learner errors generally."
+  },
+  {
+   "id": "y100-err-08",
+   "source": "y100-err",
+   "name": "Vowel marks said to be optional, so skip them",
+   "what": "Two videos tell learners modern text drops vowel marks and push on. True for newspapers; false for the siddur, Torah, children's books and anyone learning new words (2 of 9).",
+   "axes": {
+    "r": 950,
+    "i": 700,
+    "c": 700,
+    "f": 850,
+    "risk": 100
+   },
+   "score": 860,
+   "improvedScore": 965,
+   "improvedName": "Pointed to unpointed bridge",
+   "spec": {
+    "screen": "Any reading text has a Marks toggle with three states: full vowel marks, tap-to-reveal per word, and none. A step ladder moves the learner from full marks to none over a course, never abruptly.",
+    "data": "textRenderModes: pointed | reveal | plain per text id; all corpus texts store full pointing, plain forms are derived; a ladder table says which stage unlocks each mode.",
+    "interaction": "In reveal mode tap a word for its marks and audio; the app counts reveals per word and queues frequent reveals for review; the learner chooses the next stage only after a clean passage.",
+    "test": "Unit: plain forms derive from pointed by stripping marks only; reveal counts persist; ladder stages unlock in order; the siddur and Torah texts cannot default to plain."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (2 of 9)",
+   "notes": "Cure is a toggle plus a bridge, not a lecture."
+  },
+  {
+   "id": "y100-err-09",
+   "source": "y100-err",
+   "name": "One pronunciation presented as the pronunciation",
+   "what": "Teachers pick one reading tradition (academic, Sephardi, or Israeli) and rarely say how to switch; phrase videos rely on Latin spellings alone. Seen in at least 4 of 15 sources. Learners then fail when they hear a synagogue, a class or an Israeli friend.",
+   "axes": {
+    "r": 950,
+    "i": 900,
+    "c": 850,
+    "f": 950,
+    "risk": 100
+   },
+   "score": 930,
+   "improvedScore": 975,
+   "improvedName": "Tradition setting in every drill",
+   "spec": {
+    "screen": "A tradition chip (Israeli, Sephardi, Ashkenazi, Mizrahi) sits at the top of every lesson and drill. Changing it changes audio, quiz answers and the notes under each letter, and a Compare view plays the same line in two traditions.",
+    "data": "settings.tradition, with traditionTable[] = {itemId, byTradition: {sound, audioId}} for letters, signs and shva cases; every drill reads through one lookup function.",
+    "interaction": "The chip persists; a first-run question sets it; a Compare button plays two traditions; mixed-tradition review is offered only when the learner opts in.",
+    "test": "Unit: a global test lists every drill item and asserts a sound or an explicit not-applicable entry for each tradition; switching tradition never leaves a quiz with two correct answers."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (at least 4 of 15)",
+   "notes": "ALEF already plans per-tradition audio; this makes the tradition a first-class setting in every drill."
+  },
+  {
+   "id": "y100-err-10",
+   "source": "y100-err",
+   "name": "Kamatz katan waved away",
+   "what": "The a-sign that is read as an o sound in certain closed syllables is mentioned in passing in 1 of 9 and taught in none. Learners then mis-read frequent liturgical words.",
+   "axes": {
+    "r": 850,
+    "i": 600,
+    "c": 650,
+    "f": 800,
+    "risk": 100
+   },
+   "score": 830,
+   "improvedScore": 830,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (1 of 9 mentions it)",
+   "notes": ""
+  },
+  {
+   "id": "y100-gap-01",
+   "source": "y100-gap",
+   "name": "Adaptive look-alike drilling",
+   "what": "No video drills the classic confusions (bet/kaf, dalet/resh, vav/zayin/final nun, he/chet/tav) beyond a spoken warning. ALEF can log each learner confusion and serve the pair that hurts them.",
+   "axes": {
+    "r": 850,
+    "i": 800,
+    "c": 900,
+    "f": 950,
+    "risk": 100
+   },
+   "score": 880,
+   "improvedScore": 965,
+   "improvedName": "Confusion-pair trainer",
+   "spec": {
+    "screen": "A two-up card: hear a sound or word, tap one of two near-identical letters. After a miss, the pair is shown with its one differing feature highlighted by ALEF art (never a teacher mnemonic) and the miss is logged.",
+    "data": "confusionPairs[] = {a, b, feature, audioIds}; learnerConfusions{pairId: misses, lastSeen}; scheduling is a plain SRS queue weighted by miss count.",
+    "interaction": "Round of ten pairs, weighted to the learner worst pairs; a streak unlocks the next pair set; a heat map in progress shows which pairs are still weak.",
+    "test": "Unit: every pair has an audio id and a stated feature; selection never repeats a pair twice in a row; misses raise a pair weight and clean answers lower it."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (9 of 9 reading videos lack drills)",
+   "notes": ""
+  },
+  {
+   "id": "y100-gap-02",
+   "source": "y100-gap",
+   "name": "Stylus tracing with a real stroke check",
+   "what": "Every writing demo is passive, and the learner cannot be corrected on a video. ALEF can check start point, direction and order on a tablet, linked to the handwriting form.",
+   "axes": {
+    "r": 400,
+    "i": 800,
+    "c": 850,
+    "f": 950,
+    "risk": 100
+   },
+   "score": 870,
+   "improvedScore": 960,
+   "improvedName": "Stroke-checked tracing",
+   "spec": {
+    "screen": "Letter outline with a ghost stroke and start dot; the learner draws, and each stroke is scored on start, direction and order. Hand letters get the same treatment after print letters.",
+    "data": "strokes[letterId][form] = ordered polylines with tolerance; learner result = {strokeScores[], orderOk}; only the scores are stored, never the ink image.",
+    "interaction": "Trace with the ghost, then trace blind; a wrong order is flagged once and the stroke replays; three blind passes mark the letter writing-ready.",
+    "test": "Unit: every letter has stroke data for print form; scoring is deterministic for a fixed input; order errors are reported separately from shape errors."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (4 of 9 demo writing; none checks it)",
+   "notes": ""
+  },
+  {
+   "id": "y100-gap-03",
+   "source": "y100-gap",
+   "name": "Word stress and rhythm",
+   "what": "The read videos barely mention which syllable carries the stress. Reading aloud with the wrong stress is a common give-away, and ALEF can colour the stressed syllable and test it.",
+   "axes": {
+    "r": 700,
+    "i": 900,
+    "c": 800,
+    "f": 850,
+    "risk": 100
+   },
+   "score": 860,
+   "improvedScore": 955,
+   "improvedName": "Stress marker practice",
+   "spec": {
+    "screen": "Words appear split into syllables with the stressed one coloured. The learner taps the stressed syllable, hears the word, and sees the usual pattern (last syllable by default, second-last for a known group).",
+    "data": "wordStress[] = {wordId, syllables[], stressIndex, pattern, tradition}; a pattern tag lets the checker teach the rule and not just the answer.",
+    "interaction": "Tap the stressed syllable; feedback names the pattern; a second mode hides the colour and asks the learner to read aloud and self-rate.",
+    "test": "Unit: stressIndex is within the syllable range, exactly one syllable is stressed per word, pattern values come from a closed list, audio ids resolve."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (stress barely touched in 9 of 9)",
+   "notes": ""
+  },
+  {
+   "id": "y100-gap-04",
+   "source": "y100-gap",
+   "name": "Follow-along prayer reading without transliteration",
+   "what": "The prayer videos read a line for the learner to repeat, or discuss meaning, and none ties the sounds back to letters and signs. ALEF can light words as they are read and let the learner tap any word.",
+   "axes": {
+    "r": 950,
+    "i": 300,
+    "c": 850,
+    "f": 950,
+    "risk": 100
+   },
+   "score": 900,
+   "improvedScore": 970,
+   "improvedName": "Tap-a-word prayer reader",
+   "spec": {
+    "screen": "The prayer text in large pointed letters with words lighting at reading pace; a Tap on any word shows its syllables and plays that word; a Slow button halves the pace.",
+    "data": "prayerLines[] = {textId, words[], syllables[], audioId, timings[], tradition}; text comes from the licensed corpus, audio from our own recording or TTS with the usual disclosure.",
+    "interaction": "Pace control, loop a line, record-yourself self check with no storage, hide-the-marks mode from the bridge feature.",
+    "test": "Unit: timings are monotonic and cover each word, every word resolves to syllables, the text equals the corpus source byte for byte, and audio ids exist."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (3 of 3 prayer videos)",
+   "notes": ""
+  },
+  {
+   "id": "y100-gap-05",
+   "source": "y100-gap",
+   "name": "Gender-aware phrase builder",
+   "what": "Phrase videos list up to four forms per line. A toggle on speaker and listener gender would let one card serve all forms and teach the pattern.",
+   "axes": {
+    "r": 50,
+    "i": 900,
+    "c": 800,
+    "f": 800,
+    "risk": 100
+   },
+   "score": 740,
+   "improvedScore": 740,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (3 of 3 phrase videos)",
+   "notes": ""
+  },
+  {
+   "id": "y100-gap-06",
+   "source": "y100-gap",
+   "name": "Error log that explains the rule behind a miss",
+   "what": "Videos cannot say why this learner missed this word. ALEF can tag each miss with the rule at fault (shva, silent letter, merged sound, look-alike) and show the matching mini-lesson.",
+   "axes": {
+    "r": 800,
+    "i": 800,
+    "c": 900,
+    "f": 950,
+    "risk": 100
+   },
+   "score": 840,
+   "improvedScore": 840,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "captions-read (inferred from absence in 9 of 9)",
+   "notes": ""
+  }
+ ]
+}

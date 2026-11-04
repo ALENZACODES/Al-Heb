@@ -120,6 +120,12 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     ...COMPOSITES.map((c) => ({ ...c, records: c.parts.map((p) => corpus.getText(p)).filter(Boolean) })),
     ...corpus.allTexts().filter((t) => !COMPOSITES.some((c) => c.parts.includes(t.id))).map((t) => ({ id: t.id, title: t.title, ref: t.ref, records: [t] })),
   ];
+  if (ctx.params?.textId && !passages.some((p) => p.id === ctx.params.textId)) {
+    wrap.replaceChildren(
+      el('h1', { id: 'view-title', tabindex: '-1' }, 'Text not found'),
+      el('p', {}, `There is no text called "${ctx.params.textId}". `, el('a', { class: 'btn', href: '#/read' }, 'Back to all texts')));
+    return () => {};
+  }
   const state = {
     tab: 'read',
     passageId: passages.some((p) => p.id === ctx.params?.textId) ? ctx.params.textId : passages[0].id,

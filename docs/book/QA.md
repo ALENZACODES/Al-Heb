@@ -100,3 +100,27 @@ Contact sheets (55 dpi) of the KDP interior pages 41-64 and 73-80; full-page 80 
 - The companion app's /#/read/<id> route was not checked for the 43 new ids (other lane); the QR URLs are built from registry ids only.
 - Eyeballed at 10.5pt the longest Hebrew (Berich shmei, Yigdal, Haftarah) is small for a beginner; the niqqud looked intact at 55-80 dpi, not checked on paper.
 - The index now runs to two pages (second page half empty).
+
+
+# Round 4 audit (2026-11-03): class section, 5,000-word list, tagged PDF
+
+## Page counts
+Draft with cover: 120 pages. Print interiors (no-bleed, bleed, rtl-spreads, reversed): 120 each (even; no pad page needed this time). Was 81 / 68 before.
+
+## Looked at by eye
+Cover, opening prayer, Priestly Blessing, how-to + contents, traditions, 10-week class page, a letter page (Alef), remember cards, vowels, syllable table at 110 dpi, prayers chapter 1, survival, index, colophon (contact sheets); word list page 1. Not every word-list page was looked at.
+
+## Findings
+- Opens (print builds: page 1; draft: after the cover) with the original "Prayer for the One Who Begins", flagged DRAFT pending clergy/educator review, then the Priestly Blessing from the registry (bless-priestly-1..3, status verified, proofread false; the page says so).
+- All 27 letter pages, 12 vowel/mark cards, 70 prayer cards each with a QR (QR host is the PLACEHOLDER alef.example.org; links do not work until config.json is changed).
+- Every picture is still a labelled placeholder (cover, blessing page, mnemonics, vocab). The 282 unapproved incoming images are not used.
+- Syllable table columns run left to right (patach first); Hebrew readers may expect right to left. Left as is.
+- Image alt text: images are `alt=""` (placeholders); real images need alt text when approved. Open.
+
+## Fixed this round
+1. PDF was untagged: Playwright now called with `tagged: true, outline: true` (pdfinfo: Tagged yes; headings become bookmarks). Tag quality (reading order of Hebrew) not checked with a screen reader.
+2. No vocabulary section approached 5,000 words: added "Word list" appendix with all 5,000 entries of data/vocab/vocab5000.json (pointed headword, rank, gloss cut at about 52 characters), CC BY-SA attribution in the colophon. 4,935 distinct pointed spellings (homographs repeat). Nothing in it is proofread.
+3. Added "How to use this book in a 10-week class" (original text) mapping weeks of data/curriculum/class-track.json to letter pages and chapters. Letter pages are alphabetical, not in week order; the table gives page numbers.
+
+## Word count method
+Count of `class="wi"` entries in the built HTML = 5,000 (test in tests/book.build.test.js). Earlier, per-letter vocabulary was about 80 words, practice words 72, survival phrases 204.

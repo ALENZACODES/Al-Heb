@@ -131,3 +131,12 @@ test('pdf_tools: reverse puts the last page first and refuses odd page counts; p
     assert.equal(JSON.parse(spawnSync('python3', [tool, 'info', b], { encoding: 'utf8' }).stdout).pages, 4);
   } finally { rmSync(dir, { recursive: true, force: true }); }
 });
+
+test('word list: all 5,000 vocab5000 entries are in the book, with CC BY-SA attribution; class section present', () => {
+  const d = JSON.parse(read('data/vocab/vocab5000.json'));
+  assert.equal(d.entries.length, 5000);
+  assert.equal((html.match(/class="wi"/g) || []).length, d.entries.length);
+  assert.match(html, /id="ch-wordlist"/); assert.match(html, /CC BY-SA 4\.0/); assert.match(html, /Hermit Dave/);
+  assert.match(html, /id="ch-class"/); assert.match(html, /How to use this book in a 10-week class/);
+  assert.equal((html.match(/<td>\d+<\/td><td>[^<]+<\/td><td>.*?letter-/g) || []).length >= 7, true);
+});

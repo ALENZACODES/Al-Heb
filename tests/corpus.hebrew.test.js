@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { cleanLine, stripAccents, wordsOf, clipWords, foldedSkeleton, largeLetters, cleanEnglish } from '../src/corpus/normalize.js';
+import { cleanLine, stripAccents, wordsOf, clipWords, foldedSkeleton, largeLetters, cleanEnglish, applyTransforms } from '../src/corpus/normalize.js';
 
 const root = new URL('../', import.meta.url);
 const registry = JSON.parse(fs.readFileSync(new URL('data/corpus/registry.json', root), 'utf8')).entries;
@@ -68,6 +68,11 @@ test('every non-clipped registry text equals the normalisation of its fetched so
   for (const e of registry) {
     const src = snapshot[e.snapshotId];
     assert.ok(src, e.id);
+    if (e.transforms) {
+      // round-3 records: the stored `transforms` object fully explains the text
+      assert.equal(e.he, applyTransforms(src.rawLines, e.transforms).join('\n'), `${e.id}: differs from replaying its transforms on the snapshot`);
+      checked++; continue;
+    }
     const clean = src.rawLines.map((l) => cleanLine(l, { dropSmall: e.id === 'avot-1' }));
     if (!clipped.has(e.id)) { assert.equal(e.he, clean.join('\n'), `${e.id}: differs from its source`); checked++; }
     else {

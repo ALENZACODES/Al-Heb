@@ -145,3 +145,39 @@ test('options: capitalize, shvaStyle, kamatz aw, cholam oy, bad scheme throws', 
   assert.throws(() => transliterate('א', { tradition: 'nope' }), RangeError);
   assert.equal(resolveOptions({ scheme: 'ashkenazi-siddur', tradition: 'israeli' }).tradition, 'ashkenazi');
 });
+
+test('regression: initial and mid-word he before a vav vowel letter is kept', () => {
+  const cases = {
+    'הוּא': 'hu', 'הוֹדוּ': 'hodu', 'הוֹלֵךְ': 'holekh', 'הוּלַד': 'hulad', 'וְהוּא': 'vehu',
+    'מְהוּמָה': 'mehumah', 'יְהוּדִי': 'yehudi', 'תַּהֲלוּכָה': 'tahalukhah', 'הוֹאִיל': "ho'il",
+  };
+  for (const [he, lat] of Object.entries(cases)) assert.equal(transliterate(he), lat, he);
+  assert.equal(transliterate('הוּא', { tradition: 'ashkenazi' }), 'hu');
+});
+
+test('he edge cases: final he is shown or silent, mappiq he always sounds, no vowel-less middle he', () => {
+  assert.equal(transliterate('תּוֹרָה'), 'torah');
+  assert.equal(transliterate('תּוֹרָה', { finalHe: 'silent' }), 'tora');
+  assert.equal(transliterate('לָהּ'), 'lah');
+  assert.equal(transliterate('גָּבוֹהַּ'), 'gavoha');
+  assert.equal(transliterate('הַר'), 'har');
+});
+
+test('silent letters and matres: alef, ayin, yod, vav', () => {
+  assert.equal(transliterate('אוֹר'), 'or');
+  assert.equal(transliterate('עוֹלָם'), 'olam');
+  assert.equal(transliterate('בָּאוּ'), "ba'u");
+  assert.equal(transliterate('שְׁמַע'), 'shema');
+  assert.equal(transliterate('לֹא'), 'lo');
+  assert.equal(transliterate('מוֹשִׁיעַ'), "moshi'a");
+});
+
+test('shva edge cases', () => {
+  assert.equal(transliterate('וַיְהִי'), 'vayhi');
+  assert.equal(transliterate('הִנְנִי'), 'hineni');
+  assert.equal(transliterate('שְׁתַּיִם'), 'shtayim');
+  assert.equal(transliterate('מִצְוֹת'), 'mitzvot');
+  assert.equal(transliterate('וּבְנֵי'), 'uvenei');
+  assert.equal(transliterate('קוֹלְךָ'), 'kolekha');
+  assert.equal(transliterate('מַלְכֵּנוּ'), 'malkenu');
+});

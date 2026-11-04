@@ -207,10 +207,11 @@ function transliterateWord(word, o) {
     else if (c.ch === 'א' || c.ch === 'ע') cons = !isFirst && vid ? "'" : '';
     else if (c.ch === 'ה') {
       // mappiq he is always pronounced; a final he without mappiq is a vowel letter
-      if (c.dagesh) cons = 'h';
-      else if (isLast && !c.vowel) cons = o.finalHe === 'show' ? 'h' : '';
-      else if (!c.vowel) cons = '';
-      else cons = 'h';
+      // A he that has lost its own mark only because a following vav is a vowel letter
+      // (הוּא, הוֹדוּ, מְהוּמָה) still carries the vowel resolved into vowelOf[i], so it is a consonant.
+      if (c.dagesh || vowelOf[i] || c.vowel) cons = 'h';
+      else if (isLast) cons = o.finalHe === 'show' ? 'h' : '';
+      else cons = '';
     } else cons = consonantLatin(c, o);
 
     // gemination spelling

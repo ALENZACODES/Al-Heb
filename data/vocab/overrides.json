@@ -1,0 +1,1579 @@
+{
+ "schema": "alef-vocab-overrides/1",
+ "note": "Hand judgement by the vocabulary-quality pass, NOT a native-speaker review. Every row stays proofread:false. overrides: id -> fields applied after the deterministic rules in tools/vocab/refine.py. additions: words absent from the ranked pool, inserted at an approximate priority (see docs/vocab/METHOD.md); pointed forms and no gloss text come from Wiktionary only where marked. extraForms: forms listed under a lemma. The \"rank\" inside an override is the approximate rank at the time it was written (informational; ids are the key). swapRankWith: id of another entry with the same unpointed spelling; the two exchange rank (and tier) because frequency was counted per spelling, so the common word should hold the higher slot.",
+ "fields": "gloss, pos, topic, pointed (null = unpointed), fn, tags (replace), addTags, formOf (\"lemma|pos\")",
+ "overrides": {
+  "v279bb5ac": {
+   "rank": 1,
+   "lemma": "את",
+   "reason": "object marker is a particle with no English equivalent; Wiktionary files it as preposition",
+   "pos": "particle",
+   "gloss": "(marks a definite direct object; not translated)",
+   "fn": "particle",
+   "addTags": [
+    "function"
+   ]
+  },
+  "v32e7afd6": {
+   "rank": 2,
+   "lemma": "ל",
+   "reason": "prefix; gloss made plain",
+   "gloss": "to, for (prefix לְ־)",
+   "fn": "preposition",
+   "addTags": [
+    "clitic"
+   ]
+  },
+  "vb985a686": {
+   "rank": 25,
+   "lemma": "ב",
+   "reason": "prefix; gloss made plain",
+   "gloss": "in, at, with (prefix בְּ־)",
+   "fn": "preposition",
+   "addTags": [
+    "clitic"
+   ]
+  },
+  "vab6cd0ee": {
+   "rank": 89,
+   "lemma": "מ",
+   "reason": "prefix; gloss made plain",
+   "gloss": "from, of (prefix מִ־)",
+   "fn": "preposition",
+   "addTags": [
+    "clitic"
+   ]
+  },
+  "v1b6856e4": {
+   "rank": 268,
+   "lemma": "ו",
+   "reason": "prefix",
+   "gloss": "and (prefix וְ־)",
+   "fn": "conjunction",
+   "addTags": [
+    "clitic"
+   ]
+  },
+  "v140214c2": {
+   "rank": 138,
+   "lemma": "ש",
+   "reason": "prefix; relative/subordinating",
+   "gloss": "that, which, who (prefix שֶׁ־)",
+   "fn": "conjunction",
+   "addTags": [
+    "clitic"
+   ]
+  },
+  "v1feb4208": {
+   "rank": 416,
+   "lemma": "ד",
+   "reason": "Aramaic-influenced prefix, rare in modern Hebrew",
+   "gloss": "that, which, who (prefix דְּ־; Aramaic-style, rare)",
+   "fn": "conjunction",
+   "addTags": [
+    "clitic",
+    "rare-sense"
+   ]
+  },
+  "v77777be8": {
+   "rank": 221,
+   "lemma": "ה",
+   "reason": "prefix of yes/no questions (biblical/formal); NOT the definite article, which is not listed as an entry",
+   "gloss": "question prefix הֲ־ (formal yes/no question: \"is it...?\")",
+   "fn": "particle",
+   "addTags": [
+    "clitic"
+   ]
+  },
+  "vf4b7a96c": {
+   "rank": 8,
+   "lemma": "אשר",
+   "reason": "plain gloss",
+   "gloss": "that, which, who (relative; formal)"
+  },
+  "vddc86cbe": {
+   "rank": 4,
+   "lemma": "לא",
+   "reason": "negation is a particle, not an adverb",
+   "pos": "particle",
+   "gloss": "not, no",
+   "fn": "particle",
+   "addTags": [
+    "function"
+   ]
+  },
+  "ve36e71c4": {
+   "rank": 15,
+   "lemma": "כן",
+   "reason": "\"yes\" is a particle/discourse word, not an adjective-like adverb",
+   "pos": "particle",
+   "gloss": "yes; so, thus",
+   "fn": "particle",
+   "addTags": [
+    "function"
+   ]
+  },
+  "v452168b7": {
+   "rank": 133,
+   "lemma": "אל",
+   "reason": "prohibitive particle",
+   "pos": "particle",
+   "gloss": "do not (negative command, with future form)",
+   "fn": "particle",
+   "addTags": [
+    "function"
+   ]
+  },
+  "v3bc64373": {
+   "rank": 22,
+   "lemma": "יש",
+   "reason": "existential; Wiktionary calls it an adverb",
+   "pos": "particle",
+   "gloss": "there is, there are; (with ל־) to have",
+   "fn": "existential",
+   "addTags": [
+    "function"
+   ],
+   "topic": "Misc Nouns"
+  },
+  "v67b1e365": {
+   "rank": 48,
+   "lemma": "אין",
+   "reason": "existential negation",
+   "gloss": "there is not, there are not; (with ל־) to have no",
+   "fn": "existential",
+   "addTags": [
+    "function"
+   ]
+  },
+  "v2ed1bdc1": {
+   "rank": 7,
+   "lemma": "היה",
+   "reason": "canonical lemma of \"to be\"; forms 5 and 3189 point here",
+   "gloss": "to be; to happen",
+   "fn": "auxiliary",
+   "addTags": [
+    "function"
+   ]
+  },
+  "vf4f042e6": {
+   "rank": 17,
+   "lemma": "יכל",
+   "reason": "modal verb",
+   "gloss": "can, to be able to",
+   "fn": "modal",
+   "addTags": [
+    "function"
+   ]
+  },
+  "vaa2ad51d": {
+   "rank": 5,
+   "lemma": "הוה",
+   "reason": "Wiktionary lists the spelling הוה as a defective spelling of the present tense הוֹוֶה of הָיָה; the pointed pi'el \"to constitute\" was a wrong homograph pick that carries the frequency of \"is/are\"",
+   "gloss": "is, are (present-tense form of היה, to be)",
+   "pointed": "הֹוֶה",
+   "formOf": "היה|verb",
+   "addTags": [
+    "form"
+   ],
+   "fn": "auxiliary"
+  },
+  "vb667e8ae": {
+   "rank": 3189,
+   "lemma": "הוא",
+   "reason": "verb entry הֱוֵא is only a rare imperative of \"to be\"; spelling is shared with the pronoun he (rank 11)",
+   "gloss": "be! (rare imperative of היה)",
+   "formOf": "היה|verb",
+   "addTags": [
+    "form",
+    "rare-sense"
+   ]
+  },
+  "v2c5dd51c": {
+   "rank": 143,
+   "lemma": "הן",
+   "reason": "Wiktionary pronoun sense \"they (feminine)\" is the modern one; \"lo!\" is biblical",
+   "pos": "pron",
+   "gloss": "they (feminine plural)",
+   "topic": "Pronouns",
+   "fn": "pronoun",
+   "addTags": [
+    "function"
+   ]
+  },
+  "ve61ba31a": {
+   "rank": 1476,
+   "lemma": "את",
+   "reason": "feminine \"you\" is spelled like the object marker (rank 1)",
+   "gloss": "you (feminine singular)"
+  },
+  "v413f0da9": {
+   "rank": 111,
+   "lemma": "אתה",
+   "reason": "gender",
+   "gloss": "you (masculine singular)"
+  },
+  "v17678fed": {
+   "rank": 6,
+   "lemma": "אני",
+   "reason": "English capital I",
+   "gloss": "I"
+  },
+  "v56d52420": {
+   "rank": 55,
+   "lemma": "כך",
+   "reason": "not a pronoun",
+   "pos": "adv",
+   "gloss": "so, thus, like this",
+   "topic": "Misc Nouns",
+   "fn": "adverb",
+   "addTags": [
+    "function"
+   ]
+  },
+  "v3db2bc42": {
+   "rank": 203,
+   "lemma": "אנכי",
+   "reason": "gloss was a pointer to another spelling",
+   "gloss": "I (biblical/formal)",
+   "addTags": [
+    "biblical"
+   ]
+  },
+  "v34051491": {
+   "rank": 44,
+   "lemma": "יותר",
+   "reason": "adverb/quantifier",
+   "pos": "adv",
+   "gloss": "more",
+   "fn": "adverb",
+   "addTags": [
+    "function"
+   ]
+  },
+  "v4f054645": {
+   "rank": 151,
+   "lemma": "קצת",
+   "reason": "adverb/quantifier",
+   "pos": "adv",
+   "gloss": "a little, a bit",
+   "fn": "adverb",
+   "addTags": [
+    "function"
+   ]
+  },
+  "vccd64b1d": {
+   "rank": 157,
+   "lemma": "אף",
+   "reason": "\"even/also\" is a particle; spelling shared with nose (rank 245)",
+   "pos": "particle",
+   "gloss": "even; also",
+   "fn": "particle",
+   "addTags": [
+    "function"
+   ]
+  },
+  "vb559f384": {
+   "rank": 197,
+   "lemma": "אפלו",
+   "reason": "\"even\"",
+   "pos": "particle",
+   "gloss": "even",
+   "fn": "particle",
+   "addTags": [
+    "function"
+   ]
+  },
+  "ve441aade": {
+   "rank": 244,
+   "lemma": "עשר",
+   "reason": "-teen",
+   "gloss": "ten (used in 11-19, e.g. אחד עשר = eleven)"
+  },
+  "vd743b56b": {
+   "rank": 988,
+   "lemma": "אפשר",
+   "reason": "modal adverb",
+   "gloss": "possible; perhaps, maybe; one can",
+   "fn": "modal",
+   "addTags": [
+    "function"
+   ]
+  },
+  "veac5df72": {
+   "rank": 388,
+   "lemma": "פי",
+   "reason": "multiplier",
+   "gloss": "times (multiplier, e.g. פי שניים = twice as much)"
+  },
+  "v613477b6": {
+   "rank": 472,
+   "lemma": "פן",
+   "reason": "wiki markup in source gloss",
+   "gloss": "lest, so that not"
+  },
+  "v361efab4": {
+   "rank": 361,
+   "lemma": "בגלל",
+   "reason": "markup",
+   "gloss": "because of, due to"
+  },
+  "vb87843c3": {
+   "rank": 785,
+   "lemma": "בי",
+   "reason": "Wiktionary intj sense is the colloquial \"bye\" (spelled like ב + me)",
+   "gloss": "bye (informal)",
+   "addTags": [
+    "colloquial"
+   ]
+  },
+  "v643cd498": {
+   "rank": 945,
+   "lemma": "תוך",
+   "reason": "\"inside, within, during\" is a preposition; spelling shared with a rare verb at rank 425",
+   "pos": "prep",
+   "gloss": "within, during, inside",
+   "topic": "Location",
+   "fn": "preposition",
+   "addTags": [
+    "function"
+   ]
+  },
+  "v61f463c9": {
+   "rank": 425,
+   "lemma": "תוך",
+   "reason": "rare verb, spelling shared with the common preposition תוך (rank 945)",
+   "addTags": [
+    "rare-sense"
+   ]
+  },
+  "vf1cb84fb": {
+   "rank": 246,
+   "lemma": "חוץ",
+   "reason": "outside",
+   "gloss": "outside, exterior",
+   "topic": "Location"
+  },
+  "v0a377305": {
+   "rank": 33,
+   "lemma": "בית",
+   "reason": "house is a Home word, not Electronics",
+   "topic": "Home",
+   "gloss": "house; home"
+  },
+  "v3318c300": {
+   "rank": 42,
+   "lemma": "שה",
+   "reason": "lamb is an animal",
+   "topic": "Animals",
+   "gloss": "lamb, kid (young sheep or goat)"
+  },
+  "v3e03f25c": {
+   "rank": 47,
+   "lemma": "יד",
+   "reason": "hand",
+   "gloss": "hand, arm"
+  },
+  "va4c25f3b": {
+   "rank": 65,
+   "lemma": "הודה",
+   "reason": "missing common sense",
+   "gloss": "to thank; to admit, confess"
+  },
+  "v02462aac": {
+   "rank": 71,
+   "lemma": "מן",
+   "reason": "manna",
+   "topic": "Food",
+   "gloss": "manna (food of the Israelites in the desert)"
+  },
+  "v3bb3aed6": {
+   "rank": 75,
+   "lemma": "סדר",
+   "reason": "common senses",
+   "gloss": "order, arrangement; the Passover seder",
+   "addTags": [
+    "jewish-life"
+   ]
+  },
+  "vbd9a318d": {
+   "rank": 99,
+   "lemma": "שם",
+   "reason": "rare homograph sharing the spelling of שם (name, there, put)",
+   "addTags": [
+    "rare-sense"
+   ]
+  },
+  "vc4901724": {
+   "rank": 114,
+   "lemma": "זבח",
+   "reason": "ritual sense",
+   "gloss": "to sacrifice, slaughter (as an offering)",
+   "addTags": [
+    "jewish-life"
+   ]
+  },
+  "va52b4f06": {
+   "rank": 120,
+   "lemma": "אדן",
+   "reason": "",
+   "topic": "Home",
+   "gloss": "base, pedestal, socket (e.g. of a window or door)"
+  },
+  "v2c5ab4f5": {
+   "rank": 169,
+   "lemma": "אהל",
+   "reason": "source gloss was a rare technical sense (uncleanness-covering); the ordinary word is \"tent\"",
+   "gloss": "tent",
+   "topic": "Home",
+   "addTags": [
+    "biblical"
+   ]
+  },
+  "v8848fba6": {
+   "rank": 175,
+   "lemma": "אבל",
+   "reason": "pos clarity",
+   "gloss": "to mourn"
+  },
+  "v5021c53f": {
+   "rank": 178,
+   "lemma": "דמם",
+   "reason": "",
+   "gloss": "to be silent, still"
+  },
+  "v95a83f84": {
+   "rank": 179,
+   "lemma": "כלם",
+   "reason": "",
+   "gloss": "all of them; everyone"
+  },
+  "vf05f14cb": {
+   "rank": 186,
+   "lemma": "הכיר",
+   "reason": "the first Wiktionary sense (recognise a state) is narrow",
+   "gloss": "to know (a person); to recognize"
+  },
+  "v6614c3a2": {
+   "rank": 200,
+   "lemma": "פרעה",
+   "reason": "a title/person",
+   "topic": "People",
+   "gloss": "Pharaoh",
+   "addTags": [
+    "biblical"
+   ]
+  },
+  "v5d9b5518": {
+   "rank": 226,
+   "lemma": "ירה",
+   "reason": "source gloss was the rare \"to rain\" sense; the common sense is to shoot",
+   "gloss": "to shoot (a weapon); to throw"
+  },
+  "v236b2d7e": {
+   "rank": 229,
+   "lemma": "עלה",
+   "reason": "burnt offering (olah); leaf is a different pointed word at rank 724",
+   "gloss": "burnt offering (olah)",
+   "addTags": [
+    "jewish-life"
+   ]
+  },
+  "v41ea478a": {
+   "rank": 724,
+   "lemma": "עלה",
+   "reason": "leaf is nature",
+   "topic": "Nature",
+   "gloss": "leaf"
+  },
+  "v081de0bd": {
+   "rank": 231,
+   "lemma": "ערב",
+   "reason": "",
+   "gloss": "to guarantee, to vouch for"
+  },
+  "v6726aede": {
+   "rank": 248,
+   "lemma": "דבר",
+   "reason": "rare noun sense; the common noun is דבר \"thing\" (rank 45)",
+   "addTags": [
+    "rare-sense"
+   ]
+  },
+  "v17afa6b7": {
+   "rank": 250,
+   "lemma": "הצליח",
+   "reason": "",
+   "gloss": "to succeed"
+  },
+  "vea1b6747": {
+   "rank": 258,
+   "lemma": "חנה",
+   "reason": "",
+   "gloss": "to camp; to park"
+  },
+  "v3371810f": {
+   "rank": 260,
+   "lemma": "עדה",
+   "reason": "",
+   "topic": "People",
+   "gloss": "community, congregation; ethnic group"
+  },
+  "vc93f8ef3": {
+   "rank": 269,
+   "lemma": "כדאי",
+   "reason": "",
+   "gloss": "worthwhile, advisable, \"it is worth...\"",
+   "fn": "modal",
+   "addTags": [
+    "function"
+   ]
+  },
+  "vb2e1cde4": {
+   "rank": 274,
+   "lemma": "חצה",
+   "reason": "",
+   "gloss": "to cross; to divide in half"
+  },
+  "v8fa89315": {
+   "rank": 275,
+   "lemma": "חרב",
+   "reason": "sword is a weapon, not Art",
+   "topic": "Society",
+   "gloss": "sword"
+  },
+  "v1314eef9": {
+   "rank": 287,
+   "lemma": "משפט",
+   "reason": "Math is wrong; common senses are sentence and legal judgment",
+   "topic": "Society",
+   "gloss": "sentence (grammar); trial, legal judgment"
+  },
+  "vab071ffb": {
+   "rank": 291,
+   "lemma": "רוח",
+   "reason": "wind is nature",
+   "topic": "Nature",
+   "gloss": "wind; spirit"
+  },
+  "veca63622": {
+   "rank": 293,
+   "lemma": "מועד",
+   "reason": "a point in time",
+   "topic": "Time",
+   "gloss": "appointed time, date, deadline"
+  },
+  "vddd64548": {
+   "rank": 307,
+   "lemma": "זרע",
+   "reason": "seed is nature",
+   "topic": "Nature",
+   "gloss": "seed; sperm"
+  },
+  "va149d5ba": {
+   "rank": 328,
+   "lemma": "נער",
+   "reason": "",
+   "topic": "People",
+   "gloss": "boy, youth"
+  },
+  "ve9721132": {
+   "rank": 332,
+   "lemma": "שדה",
+   "reason": "field is nature",
+   "topic": "Nature",
+   "gloss": "field (open land)"
+  },
+  "vf12b77cc": {
+   "rank": 340,
+   "lemma": "שר",
+   "reason": "",
+   "topic": "Professions",
+   "gloss": "minister (government); commander, chief"
+  },
+  "v4fcd7b81": {
+   "rank": 342,
+   "lemma": "אד",
+   "reason": "",
+   "topic": "Nature",
+   "gloss": "vapour, steam"
+  },
+  "vbbc3bba2": {
+   "rank": 343,
+   "lemma": "שער",
+   "reason": "gate is a place",
+   "topic": "Location",
+   "gloss": "gate; (also) hair"
+  },
+  "v6d62d4c5": {
+   "rank": 354,
+   "lemma": "כר",
+   "reason": "",
+   "topic": "Home",
+   "gloss": "cushion; (also) pasture"
+  },
+  "vbf17db98": {
+   "rank": 374,
+   "lemma": "תכנית",
+   "reason": "not electronics",
+   "topic": "Society",
+   "gloss": "plan, program, scheme"
+  },
+  "vd735f7d7": {
+   "rank": 384,
+   "lemma": "ספר",
+   "reason": "book is not a Body word",
+   "topic": "Art",
+   "gloss": "book"
+  },
+  "v9f7b2297": {
+   "rank": 392,
+   "lemma": "מצב",
+   "reason": "",
+   "topic": "Misc Nouns",
+   "gloss": "situation, state, condition"
+  },
+  "vc2dfad66": {
+   "rank": 403,
+   "lemma": "על",
+   "reason": "rare noun homograph of the preposition על",
+   "addTags": [
+    "rare-sense"
+   ]
+  },
+  "va539b888": {
+   "rank": 413,
+   "lemma": "תורה",
+   "reason": "",
+   "gloss": "Torah; instruction, teaching",
+   "addTags": [
+    "jewish-life"
+   ]
+  },
+  "v8d03d3cc": {
+   "rank": 418,
+   "lemma": "עבר",
+   "reason": "the past is the common modern sense; \"side/region beyond\" is biblical",
+   "topic": "Time",
+   "gloss": "the past; (biblical) the far side, the other side of"
+  },
+  "v949efd30": {
+   "rank": 429,
+   "lemma": "לוי",
+   "reason": "a person",
+   "topic": "People",
+   "gloss": "Levite",
+   "addTags": [
+    "jewish-life"
+   ]
+  },
+  "v5342bbb2": {
+   "rank": 445,
+   "lemma": "מלאכה",
+   "reason": "",
+   "topic": "Society",
+   "gloss": "craft, trade, manual work"
+  },
+  "v0929a38c": {
+   "rank": 446,
+   "lemma": "פתח",
+   "reason": "",
+   "topic": "Home",
+   "gloss": "doorway, opening"
+  },
+  "v6e9fe50e": {
+   "rank": 447,
+   "lemma": "פלשתי",
+   "reason": "",
+   "topic": "People",
+   "gloss": "Philistine",
+   "addTags": [
+    "biblical"
+   ]
+  },
+  "vdec621a5": {
+   "rank": 448,
+   "lemma": "סרט",
+   "reason": "common sense is film",
+   "gloss": "film, movie; ribbon, strip"
+  },
+  "vfbb65293": {
+   "rank": 452,
+   "lemma": "דולר",
+   "reason": "",
+   "topic": "Math/Measurements",
+   "gloss": "dollar"
+  },
+  "v6af84384": {
+   "rank": 454,
+   "lemma": "מלך",
+   "reason": "king is a person",
+   "topic": "People",
+   "gloss": "king"
+  },
+  "vfdd34e08": {
+   "rank": 455,
+   "lemma": "התראה",
+   "reason": "",
+   "gloss": "to see each other, meet; to be warned"
+  },
+  "v8767fa3a": {
+   "rank": 467,
+   "lemma": "קנה",
+   "reason": "",
+   "topic": "Nature",
+   "gloss": "reed, cane; (also) barrel, windpipe"
+  },
+  "vf322e875": {
+   "rank": 480,
+   "lemma": "רק",
+   "reason": "rare noun sharing the spelling of the adverb רק (rank 38)",
+   "addTags": [
+    "rare-sense"
+   ]
+  },
+  "v884fd229": {
+   "rank": 484,
+   "lemma": "מזל",
+   "reason": "",
+   "topic": "Misc Nouns",
+   "gloss": "luck, fortune; zodiac sign"
+  },
+  "v8dc2d800": {
+   "rank": 485,
+   "lemma": "מקוה",
+   "reason": "",
+   "topic": "Society",
+   "gloss": "mikveh (ritual bath)",
+   "addTags": [
+    "jewish-life"
+   ]
+  },
+  "v40b5ec5e": {
+   "rank": 498,
+   "lemma": "כף",
+   "reason": "",
+   "gloss": "palm (of the hand); spoon; sole of the foot"
+  },
+  "v92945c3e": {
+   "rank": 499,
+   "lemma": "חדר",
+   "reason": "room is a Home word",
+   "topic": "Home",
+   "gloss": "room"
+  },
+  "v178e1158": {
+   "rank": 500,
+   "lemma": "עבודה",
+   "reason": "work is not Nature",
+   "topic": "Society",
+   "gloss": "work, labour; (also) worship, service"
+  },
+  "vbfb663f0": {
+   "rank": 513,
+   "lemma": "אלף",
+   "reason": "",
+   "topic": "Time",
+   "gloss": "millennium; (also) thousand"
+  },
+  "v470870f6": {
+   "rank": 515,
+   "lemma": "גוף",
+   "reason": "body",
+   "topic": "Body",
+   "gloss": "body"
+  },
+  "vcff61062": {
+   "rank": 527,
+   "lemma": "שפה",
+   "reason": "",
+   "gloss": "lip; language"
+  },
+  "v6a242550": {
+   "rank": 534,
+   "lemma": "זכר",
+   "reason": "",
+   "topic": "People",
+   "gloss": "male; (also) memory"
+  },
+  "v4c4b7474": {
+   "rank": 535,
+   "lemma": "כסף",
+   "reason": "pointed form כַּסָּף is the rare \"silversmith\"; silver/money is the unrelated pointed כֶּסֶף at rank 220",
+   "gloss": "silversmith (rare)",
+   "topic": "Professions",
+   "addTags": [
+    "rare-sense",
+    "homograph"
+   ]
+  },
+  "vab6eeb7b": {
+   "rank": 220,
+   "lemma": "כסף",
+   "reason": "add money sense",
+   "gloss": "silver; money"
+  },
+  "vf51884d2": {
+   "rank": 552,
+   "lemma": "מצרי",
+   "reason": "",
+   "topic": "People",
+   "gloss": "Egyptian (person)",
+   "addTags": [
+    "biblical"
+   ]
+  },
+  "v50777c8f": {
+   "rank": 570,
+   "lemma": "סם",
+   "reason": "",
+   "topic": "Body",
+   "gloss": "drug, medicine, poison"
+  },
+  "vd13952bd": {
+   "rank": 571,
+   "lemma": "טפש",
+   "reason": "",
+   "topic": "People",
+   "gloss": "fool"
+  },
+  "v09410329": {
+   "rank": 573,
+   "lemma": "רחל",
+   "reason": "ewe is an animal",
+   "topic": "Animals",
+   "gloss": "ewe (female sheep); (also) Rachel"
+  },
+  "va85434c2": {
+   "rank": 579,
+   "lemma": "חלב",
+   "reason": "\"chelev\" is the forbidden/sacrificial animal fat; milk (חָלָב) shares the spelling and is in the list at a lower rank, so they swap ranks",
+   "gloss": "chelev (animal fat, in the Torah laws)",
+   "topic": "Misc Nouns",
+   "addTags": [
+    "jewish-life",
+    "rare-sense"
+   ],
+   "swapRankWith": "v4012c7d8"
+  },
+  "v1910c03f": {
+   "rank": 583,
+   "lemma": "קצה",
+   "reason": "",
+   "topic": "Location",
+   "gloss": "edge, tip, end"
+  },
+  "v9a945a74": {
+   "rank": 592,
+   "lemma": "וו",
+   "reason": "",
+   "topic": "Home",
+   "gloss": "hook; (also) the letter vav"
+  },
+  "v1de1488b": {
+   "rank": 595,
+   "lemma": "אחות",
+   "reason": "sister is a family word",
+   "topic": "People",
+   "gloss": "sister; nurse"
+  },
+  "v7f64097f": {
+   "rank": 599,
+   "lemma": "בוקר",
+   "reason": "",
+   "gloss": "morning"
+  },
+  "v4bda263c": {
+   "rank": 602,
+   "lemma": "צהריים",
+   "reason": "",
+   "gloss": "noon, midday, afternoon"
+  },
+  "v905b1db4": {
+   "rank": 603,
+   "lemma": "שנייה",
+   "reason": "",
+   "gloss": "second (unit of time); moment"
+  },
+  "v2aae2e95": {
+   "rank": 610,
+   "lemma": "פרק",
+   "reason": "Wiktionary lists פַּרְק as \"park\" (a loose spelling of פארק). The ordinary word פֶּרֶק (chapter, section, joint) is also in the list at a lower rank; the two share a spelling, so they swap ranks",
+   "gloss": "park (usually spelled פארק)",
+   "topic": "Location",
+   "swapRankWith": "ve6f0ccc5"
+  },
+  "v3a8d4692": {
+   "rank": 614,
+   "lemma": "מוח",
+   "reason": "",
+   "topic": "Body",
+   "gloss": "brain; mind"
+  },
+  "v851da597": {
+   "rank": 615,
+   "lemma": "צורה",
+   "reason": "",
+   "topic": "Misc Nouns",
+   "gloss": "shape, form"
+  },
+  "v1aa48c50": {
+   "rank": 627,
+   "lemma": "דין",
+   "reason": "",
+   "topic": "Society",
+   "gloss": "law, judgment, verdict"
+  },
+  "v7f219ebf": {
+   "rank": 630,
+   "lemma": "רב",
+   "reason": "this is רֹב (majority); the very common רַב (rabbi, master) and רַב (many) share the spelling",
+   "gloss": "majority, most",
+   "addTags": [
+    "homograph"
+   ]
+  },
+  "v85053062": {
+   "rank": 637,
+   "lemma": "רחוב",
+   "reason": "street is a place",
+   "topic": "Location",
+   "gloss": "street"
+  },
+  "v25a021ea": {
+   "rank": 648,
+   "lemma": "זר",
+   "reason": "",
+   "topic": "People",
+   "gloss": "stranger, foreigner"
+  },
+  "v1da242af": {
+   "rank": 649,
+   "lemma": "קבוצה",
+   "reason": "",
+   "topic": "Society",
+   "gloss": "group, team; set"
+  },
+  "v5be021dc": {
+   "rank": 670,
+   "lemma": "עפר",
+   "reason": "",
+   "topic": "Nature",
+   "gloss": "dust, soil"
+  },
+  "v52726497": {
+   "rank": 672,
+   "lemma": "סוג",
+   "reason": "",
+   "topic": "Misc Nouns",
+   "gloss": "kind, type, sort"
+  },
+  "vac404580": {
+   "rank": 676,
+   "lemma": "גב",
+   "reason": "pointed גֵּב is a rare \"cistern\"; the ordinary גַּב (back of the body) is also in the list at a lower rank; same spelling, so they swap ranks",
+   "gloss": "cistern (rare)",
+   "topic": "Misc Nouns",
+   "swapRankWith": "v982e6537",
+   "addTags": [
+    "rare-sense",
+    "homograph"
+   ]
+  },
+  "vb0542826": {
+   "rank": 692,
+   "lemma": "אני",
+   "reason": "noun",
+   "topic": "Misc Nouns",
+   "gloss": "ego, the self"
+  },
+  "v09203604": {
+   "rank": 698,
+   "lemma": "אויר",
+   "reason": "",
+   "topic": "Nature",
+   "gloss": "air"
+  },
+  "vbbf51290": {
+   "rank": 700,
+   "lemma": "גבור",
+   "reason": "",
+   "topic": "People",
+   "gloss": "hero, mighty man"
+  },
+  "v34a16423": {
+   "rank": 719,
+   "lemma": "מנחה",
+   "reason": "",
+   "gloss": "offering; minchah (afternoon prayer)",
+   "addTags": [
+    "jewish-life",
+    "prayer"
+   ]
+  },
+  "vd29aac74": {
+   "rank": 727,
+   "lemma": "כלי",
+   "reason": "Wiktionary lists armory; tool; utensil; instrument, and the first (armory) is the rare one",
+   "gloss": "tool, utensil, instrument; (pl.) dishes",
+   "topic": "Home"
+  },
+  "v7fa14ad6": {
+   "rank": 729,
+   "lemma": "נשים",
+   "reason": "plural of אשה (rank 53)",
+   "formOf": "אשה|noun",
+   "addTags": [
+    "form"
+   ]
+  },
+  "v59c00be6": {
+   "rank": 735,
+   "lemma": "נשק",
+   "reason": "",
+   "topic": "Society",
+   "gloss": "weapon, arms"
+  },
+  "vb639a3f1": {
+   "rank": 737,
+   "lemma": "כדור",
+   "reason": "",
+   "topic": "Art",
+   "gloss": "ball; bullet; pill"
+  },
+  "vcbaea340": {
+   "rank": 753,
+   "lemma": "קרש",
+   "reason": "",
+   "topic": "Materials",
+   "gloss": "board, plank"
+  },
+  "vbdce7ab8": {
+   "rank": 755,
+   "lemma": "קפה",
+   "reason": "Wiktionary pointed form קֻפָּה is \"cash box\"; coffee (קָפֶה) is a different pointed word in the list at a lower rank; same spelling, so they swap ranks",
+   "addTags": [
+    "homograph"
+   ],
+   "swapRankWith": "ved7fcd23"
+  },
+  "va9f342cf": {
+   "rank": 757,
+   "lemma": "יחידה",
+   "reason": "",
+   "topic": "Society",
+   "gloss": "unit, single (female)"
+  },
+  "vda368758": {
+   "rank": 761,
+   "lemma": "יחס",
+   "reason": "",
+   "topic": "Society",
+   "gloss": "relation, attitude, ratio"
+  },
+  "vef6c305f": {
+   "rank": 763,
+   "lemma": "כוכב",
+   "reason": "star is nature",
+   "topic": "Nature",
+   "gloss": "star; celebrity"
+  },
+  "vf6611f3c": {
+   "rank": 769,
+   "lemma": "זקוק",
+   "reason": "rare noun sense; adjective at rank 908",
+   "addTags": [
+    "rare-sense"
+   ]
+  },
+  "v1b11bc7b": {
+   "rank": 773,
+   "lemma": "רעב",
+   "reason": "",
+   "topic": "Body",
+   "gloss": "hunger"
+  },
+  "v16a32b8a": {
+   "rank": 775,
+   "lemma": "ריח",
+   "reason": "",
+   "topic": "Body",
+   "gloss": "smell, scent"
+  },
+  "v4afe517e": {
+   "rank": 793,
+   "lemma": "אשור",
+   "reason": "same pointed form is also the name Ashur/Assyria",
+   "topic": "Nature",
+   "gloss": "boxwood tree; (as a name) Ashur, Assyria"
+  },
+  "vfac210c6": {
+   "rank": 794,
+   "lemma": "קס",
+   "reason": "source gloss \"kahen\" is unintelligible; Wiktionary second sense is a rabbi of Beta Israel origin (colloquial)",
+   "gloss": "kes: a rabbi/priest of the Beta Israel (Ethiopian Jewish) community",
+   "topic": "People",
+   "addTags": [
+    "jewish-life",
+    "needs-check"
+   ]
+  },
+  "v688da9ac": {
+   "rank": 797,
+   "lemma": "אחור",
+   "reason": "",
+   "topic": "Directions",
+   "gloss": "back, rear; (also) backward"
+  },
+  "v841c4a68": {
+   "rank": 799,
+   "lemma": "חלק",
+   "reason": "",
+   "topic": "Math/Measurements",
+   "gloss": "part, portion, share"
+  },
+  "ve3e1c887": {
+   "rank": 800,
+   "lemma": "תור",
+   "reason": "",
+   "topic": "Misc Nouns",
+   "gloss": "turn; queue; (also) turtledove"
+  },
+  "v5d5dff3f": {
+   "rank": 807,
+   "lemma": "גד",
+   "reason": "pointed גָּד is luck; coriander is the different pointed גַּד",
+   "topic": "Misc Nouns",
+   "gloss": "luck",
+   "addTags": [
+    "biblical"
+   ]
+  },
+  "vba010668": {
+   "rank": 822,
+   "lemma": "שחור",
+   "reason": "pointed שְׁחוֹר is the noun blackness; the adjective black is in Wiktionary without vowel points, so it is left unpointed rather than invented",
+   "pos": "adj",
+   "gloss": "black",
+   "topic": "Colours",
+   "pointed": null
+  },
+  "v6b1b5c23": {
+   "rank": 826,
+   "lemma": "קהל",
+   "reason": "",
+   "topic": "People",
+   "gloss": "audience, crowd, public"
+  },
+  "v3ab9ac8a": {
+   "rank": 828,
+   "lemma": "אזור",
+   "reason": "",
+   "topic": "Location",
+   "gloss": "area, region, zone"
+  },
+  "v818a65b4": {
+   "rank": 834,
+   "lemma": "סלת",
+   "reason": "",
+   "topic": "Food",
+   "gloss": "fine flour"
+  },
+  "vad55b9b9": {
+   "rank": 838,
+   "lemma": "חפש",
+   "reason": "",
+   "gloss": "freedom; holiday, vacation"
+  },
+  "v432d71f4": {
+   "rank": 851,
+   "lemma": "חשבון",
+   "reason": "",
+   "gloss": "arithmetic; bill; account"
+  },
+  "v0867ff2c": {
+   "rank": 856,
+   "lemma": "גן",
+   "reason": "gene (גֶּן); the garden word גַּן shares the spelling and is in the list at a lower rank, so they swap ranks",
+   "addTags": [
+    "homograph"
+   ],
+   "swapRankWith": "v011168eb"
+  },
+  "v93a59252": {
+   "rank": 858,
+   "lemma": "חלל",
+   "reason": "",
+   "topic": "Nature",
+   "gloss": "space, void; (also) a fallen soldier"
+  },
+  "ve93db2d4": {
+   "rank": 877,
+   "lemma": "עלול",
+   "reason": "",
+   "gloss": "liable to, likely to (something bad)"
+  },
+  "v2227371a": {
+   "rank": 902,
+   "lemma": "חם",
+   "reason": "rare sense (father-in-law); the common adjective \"hot\" (חַם) shares the spelling and is in the list at a lower rank, so they swap ranks",
+   "addTags": [
+    "rare-sense"
+   ],
+   "swapRankWith": "v6f08a3bb"
+  },
+  "va59713e1": {
+   "rank": 914,
+   "lemma": "קדם",
+   "reason": "",
+   "topic": "Directions",
+   "gloss": "front; (also) east, antiquity"
+  },
+  "v6190355f": {
+   "rank": 953,
+   "lemma": "חג",
+   "reason": "",
+   "topic": "Time",
+   "gloss": "holiday, festival",
+   "addTags": [
+    "jewish-life"
+   ]
+  },
+  "v8ef4f205": {
+   "rank": 972,
+   "lemma": "אפר",
+   "reason": "pointed אֲפֵר is a rare \"blindfold\"; the ordinary אֵפֶר (ash) is also in the list at a lower rank; same spelling, so they swap ranks",
+   "gloss": "blindfold, eye covering (rare)",
+   "topic": "Misc Nouns",
+   "swapRankWith": "v9a3752ee",
+   "addTags": [
+    "rare-sense",
+    "homograph"
+   ]
+  },
+  "vfb5d89b6": {
+   "rank": 979,
+   "lemma": "חוה",
+   "reason": "farm",
+   "topic": "Location",
+   "gloss": "farm"
+  },
+  "va6383a25": {
+   "rank": 730,
+   "lemma": "קלט",
+   "reason": "source gloss \"to know\" is not the ordinary sense",
+   "gloss": "to absorb, take in, receive (a signal, an idea); to catch on"
+  },
+  "v925af338": {
+   "rank": 1027,
+   "lemma": "צבע",
+   "reason": "",
+   "gloss": "to paint, to dye"
+  },
+  "v29ae86ed": {
+   "rank": 2998,
+   "lemma": "הובל",
+   "reason": "",
+   "gloss": "to be led, to be conveyed"
+  },
+  "v227430b9": {
+   "rank": 555,
+   "lemma": "זין",
+   "reason": "rare homograph; a vulgar noun shares the spelling",
+   "addTags": [
+    "rare-sense"
+   ]
+  },
+  "vd8d1aa39": {
+   "rank": 619,
+   "lemma": "סך",
+   "reason": "rare homograph",
+   "addTags": [
+    "rare-sense"
+   ]
+  },
+  "v3f0fc09e": {
+   "rank": 791,
+   "lemma": "אבד",
+   "reason": "source gloss is a rare passive; the ordinary verb is rank 334",
+   "addTags": [
+    "rare-sense"
+   ]
+  },
+  "v0b96c869": {
+   "rank": 2841,
+   "lemma": "אי",
+   "reason": "Wiktionary adverb \"not\" is the negating prefix אִי־ (as in אי־אפשר); closed-class",
+   "pos": "particle",
+   "gloss": "not, un-, non- (negating prefix, as in אי־אפשר \"impossible\")",
+   "fn": "particle",
+   "topic": "Misc Nouns",
+   "addTags": [
+    "function",
+    "clitic"
+   ]
+  },
+  "v827bf5d6": {
+   "rank": 3259,
+   "lemma": "פז",
+   "reason": "gloss \"color gold\" is garbled; פַּז is fine/pure gold (poetic); not a colour word for learners",
+   "gloss": "fine gold, pure gold (poetic)",
+   "topic": "Materials",
+   "addTags": [
+    "biblical"
+   ]
+  },
+  "v69fa9037": {
+   "rank": 1391,
+   "lemma": "קבץ",
+   "reason": "pointed קִבֵּץ is \"gather, collect\"; \"pack\" is a narrow sense",
+   "gloss": "to gather, collect, assemble"
+  },
+  "vc1896b33": {
+   "rank": 1446,
+   "lemma": "מערכת",
+   "reason": "\"set\" is too narrow; common senses are system and editorial office",
+   "topic": "Society",
+   "gloss": "system; set; editorial board"
+  },
+  "vf9167373": {
+   "rank": 2392,
+   "lemma": "מחלקה",
+   "reason": "department/class is the ordinary sense; platoon is military",
+   "topic": "Society",
+   "gloss": "department, division; class (category); platoon"
+  },
+  "vb8706af7": {
+   "rank": 3678,
+   "lemma": "קקי",
+   "reason": "not a measurement word (matched \"number two\")",
+   "topic": "Body"
+  },
+  "v53448c11": {
+   "rank": 4295,
+   "lemma": "חברה",
+   "reason": "girlfriend is a narrow sense; ordinary senses are society, company and female friend",
+   "gloss": "society, company (business); female friend, girlfriend"
+  },
+  "v1686869a": {
+   "rank": 4817,
+   "lemma": "דלקת",
+   "reason": "source gloss rambles",
+   "gloss": "inflammation"
+  },
+  "v7c55cb99": {
+   "rank": 4012,
+   "lemma": "עולמי",
+   "reason": "",
+   "gloss": "worldwide, global, world (adj.)"
+  },
+  "v0a3724ac": {
+   "rank": 1680,
+   "lemma": "פרש",
+   "reason": "horseman (chess: knight) is a person word",
+   "topic": "People",
+   "gloss": "horseman, rider; (chess) knight"
+  },
+  "v779235b5": {
+   "rank": 2161,
+   "lemma": "דור",
+   "reason": "pointed דַּוָּר is a rare courier; the common דוֹר (generation) shares the spelling",
+   "addTags": [
+    "rare-sense",
+    "homograph"
+   ]
+  },
+  "v75fa68fe": {
+   "rank": 3652,
+   "lemma": "פשע",
+   "reason": "pointed פֶּשַׂע is a rare biblical step; the common word for crime is פֶּשַׁע",
+   "addTags": [
+    "rare-sense",
+    "homograph"
+   ]
+  },
+  "ve6f0ccc5": {
+   "rank": 0,
+   "lemma": "פרק",
+   "reason": "takes the higher rank of the shared spelling",
+   "gloss": "chapter, section; joint",
+   "topic": "Art"
+  },
+  "v982e6537": {
+   "rank": 0,
+   "lemma": "גב",
+   "reason": "takes the higher rank of the shared spelling",
+   "gloss": "back (of the body)",
+   "topic": "Body"
+  },
+  "v9a3752ee": {
+   "rank": 0,
+   "lemma": "אפר",
+   "reason": "takes the higher rank of the shared spelling",
+   "gloss": "ash, ashes",
+   "topic": "Nature"
+  },
+  "ved7fcd23": {
+   "rank": 0,
+   "lemma": "קפה",
+   "reason": "takes the higher rank of the shared spelling",
+   "gloss": "coffee",
+   "topic": "Beverages"
+  },
+  "v011168eb": {
+   "rank": 0,
+   "lemma": "גן",
+   "reason": "takes the higher rank of the shared spelling",
+   "gloss": "garden; kindergarten",
+   "topic": "Nature"
+  },
+  "v4012c7d8": {
+   "rank": 0,
+   "lemma": "חלב",
+   "reason": "takes the higher rank of the shared spelling",
+   "gloss": "milk",
+   "topic": "Beverages"
+  }
+ },
+ "additions": [
+  {
+   "lemma": "הם",
+   "pos": "pron",
+   "gloss": "they (masculine plural)",
+   "topic": "Pronouns",
+   "priority": 12,
+   "fn": "pronoun",
+   "tags": [
+    "function"
+   ],
+   "reason": "missing from the ranked pool (no frequency attached upstream)"
+  },
+  {
+   "lemma": "אנחנו",
+   "pos": "pron",
+   "gloss": "we",
+   "topic": "Pronouns",
+   "priority": 50,
+   "fn": "pronoun",
+   "tags": [
+    "function"
+   ],
+   "reason": "missing from the ranked pool; only the formal אנו was present"
+  },
+  {
+   "lemma": "כל",
+   "pos": "det",
+   "kaikkiPos": "noun",
+   "gloss": "all, every, whole",
+   "topic": "Misc Nouns",
+   "priority": 20,
+   "fn": "determiner",
+   "tags": [
+    "function"
+   ],
+   "reason": "missing from the ranked pool (pos unknown upstream)"
+  },
+  {
+   "lemma": "מים",
+   "pos": "noun",
+   "gloss": "water",
+   "topic": "Beverages",
+   "priority": 300,
+   "reason": "missing from the ranked pool (plural-only noun)"
+  },
+  {
+   "lemma": "כלב",
+   "pos": "noun",
+   "gloss": "dog",
+   "topic": "Animals",
+   "priority": 900,
+   "reason": "basic noun missing from the pool"
+  },
+  {
+   "lemma": "מחשב",
+   "pos": "noun",
+   "gloss": "computer",
+   "topic": "Electronics",
+   "priority": 900,
+   "reason": "basic noun missing from the pool"
+  },
+  {
+   "lemma": "רכבת",
+   "pos": "noun",
+   "gloss": "train",
+   "topic": "Transportation",
+   "priority": 1000,
+   "reason": "basic noun missing from the pool"
+  },
+  {
+   "lemma": "שולחן",
+   "pos": "noun",
+   "gloss": "table, desk",
+   "topic": "Home",
+   "priority": 700,
+   "reason": "basic noun missing from the pool; Wiktionary gives no vowel points, so none are shown"
+  },
+  {
+   "lemma": "ציפור",
+   "pos": "noun",
+   "gloss": "bird",
+   "topic": "Animals",
+   "priority": 900,
+   "reason": "basic noun missing from the pool; unpointed in Wiktionary"
+  },
+  {
+   "lemma": "עיתון",
+   "pos": "noun",
+   "gloss": "newspaper",
+   "topic": "Art",
+   "priority": 1300,
+   "reason": "basic noun missing from the pool; unpointed in Wiktionary"
+  },
+  {
+   "lemma": "טלוויזיה",
+   "pos": "noun",
+   "gloss": "television",
+   "topic": "Electronics",
+   "priority": 1500,
+   "reason": "basic noun missing from the pool; unpointed in Wiktionary"
+  },
+  {
+   "lemma": "סוכר",
+   "pos": "noun",
+   "gloss": "sugar",
+   "topic": "Food",
+   "priority": 1800,
+   "reason": "basic noun missing from the pool; unpointed in Wiktionary"
+  },
+  {
+   "lemma": "אורז",
+   "pos": "noun",
+   "gloss": "rice",
+   "topic": "Food",
+   "priority": 2000,
+   "reason": "basic noun missing from the pool; unpointed in Wiktionary"
+  },
+  {
+   "lemma": "אופניים",
+   "pos": "noun",
+   "gloss": "bicycle, bike",
+   "topic": "Transportation",
+   "priority": 1800,
+   "reason": "basic noun missing from the pool; unpointed in Wiktionary"
+  }
+ ],
+ "extraForms": {
+  "זה|pron": [
+   {
+    "he": "זאת",
+    "pointed": "זֹאת",
+    "note": "feminine singular (this)"
+   },
+   {
+    "he": "אלה",
+    "pointed": "אֵלֶּה",
+    "note": "plural (these)"
+   }
+  ]
+ }
+}

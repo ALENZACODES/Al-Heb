@@ -1,0 +1,2066 @@
+{
+ "schema": "alef-corpus-prayer-meta/1",
+ "note": "Hand-written for ALEF (lane 5, round 3). Plain-English lines and denomination hints were written by the model from general knowledge. NO rabbi, cantor or Hebrew educator has reviewed this file (clergyReviewed is false on every entry). Where the author was not sure the value is \"unknown\" or \"varies\". \"as-written\" means the Hebrew in the registry is the common text in that movement, not that every congregation says it.",
+ "vocabulary": {
+  "delivery": [
+   "sung",
+   "chanted",
+   "recited",
+   "unknown"
+  ],
+  "denominationUse": [
+   "as-written",
+   "varies",
+   "rarely-used",
+   "unknown"
+  ],
+  "service": "Computed from torah-service-guide.json: shabbat-morning/<section id> or an otherOccasions id (shabbat-evening, havdalah, hanukkah, meals). An empty list means the prayer is not placed in the guide (for example Modeh Ani is said at home)."
+ },
+ "entries": {
+  "bless-priestly-1": {
+   "service": [
+    "shabbat-morning/amidah"
+   ],
+   "occasions": [
+    "shabbat",
+    "festival"
+   ],
+   "whereInService": "Part of the Amidah leader's repetition; also used as a closing blessing in many services",
+   "delivery": "chanted",
+   "leaderOrCongregation": "leader or kohanim",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "Kohanim bless the congregation at Musaf on festivals in many Orthodox communities in the diaspora; the same words are said daily in Israel."
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "May the LORD bless you and keep you safe.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "bless-priestly-2": {
+   "service": [
+    "shabbat-morning/amidah"
+   ],
+   "occasions": [
+    "shabbat",
+    "festival"
+   ],
+   "whereInService": "Second line of the Priestly Blessing",
+   "delivery": "chanted",
+   "leaderOrCongregation": "leader or kohanim",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "May the LORD make his face shine on you and be kind to you.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "bless-priestly-3": {
+   "service": [
+    "shabbat-morning/amidah"
+   ],
+   "occasions": [
+    "shabbat",
+    "festival"
+   ],
+   "whereInService": "Third line of the Priestly Blessing",
+   "delivery": "chanted",
+   "leaderOrCongregation": "leader or kohanim",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "May the LORD look kindly on you and give you peace.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "shema-1": {
+   "service": [
+    "shabbat-morning/shema-and-blessings",
+    "shabbat-morning/torah-service-open"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Shema and Its Blessings (after Barchu); also said when the ark is opened for the Torah reading",
+   "delivery": "recited",
+   "leaderOrCongregation": "congregation together",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The Hebrew verse is the same everywhere."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "The Hebrew verse is the same everywhere."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "The Hebrew verse is the same everywhere."
+    },
+    "note": ""
+   },
+   "whatItSays": "Listen, Israel: the LORD is our God, the LORD is one.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "vahavta-1": {
+   "service": [
+    "shabbat-morning/shema-and-blessings"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Immediately after the first line of the Shema",
+   "delivery": "recited",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": ""
+    },
+    "reform": {
+     "use": "varies",
+     "note": "Some older Reform books shorten or move this passage; modern Reform books print it. Unverified."
+    },
+    "note": ""
+   },
+   "whatItSays": "You shall love the LORD your God with all your heart, all your soul and all your strength.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "vahavta-2": {
+   "service": [
+    "shabbat-morning/shema-and-blessings"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Second part of the V'ahavta",
+   "delivery": "recited",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Keep these words in your heart. Teach them to your children and speak of them at home and away, when you lie down and when you get up.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "vahavta-full": {
+   "service": [
+    "shabbat-morning/shema-and-blessings"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "The whole V'ahavta paragraph (Deuteronomy 6:5-9)",
+   "delivery": "recited",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Love God completely, keep these words in mind, teach them to your children, and bind them as a sign on your hand, between your eyes, and on your doorposts and gates.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "shema-vahavta": {
+   "service": [
+    "shabbat-morning/shema-and-blessings"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "The first line of the Shema together with the V'ahavta",
+   "delivery": "recited",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Listen, Israel, the LORD is our God, the LORD is one; then the command to love God and to keep and teach these words.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "shema-2": {
+   "service": [
+    "shabbat-morning/shema-and-blessings"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Said quietly right after the first line of the Shema",
+   "delivery": "recited",
+   "leaderOrCongregation": "congregation, quietly",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Blessed is the name of the glory of God's kingdom for ever and ever.",
+   "note": "In many Orthodox and Conservative services this line is said in an undertone.",
+   "clergyReviewed": false
+  },
+  "bless-formula-1": {
+   "service": [],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Opens almost every blessing in the siddur",
+   "delivery": "recited",
+   "leaderOrCongregation": "anyone",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": ""
+    },
+    "reform": {
+     "use": "as-written",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Blessed are you, LORD our God, king of the world: the standard opening of a blessing.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "mah-tovu-1": {
+   "service": [
+    "shabbat-morning/opening"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Opening of the morning service, and said on entering the synagogue",
+   "delivery": "recited",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "How good are your tents, Jacob, your dwelling places, Israel.",
+   "note": "Often sung or said together at the start of the service.",
+   "clergyReviewed": false
+  },
+  "mi-chamocha-1": {
+   "service": [
+    "shabbat-morning/shema-and-blessings"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "In the blessing after the Shema (the Redemption blessing), the Song at the Sea",
+   "delivery": "sung",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Who is like you, LORD, among the powers? Who is like you, glorious in holiness, awesome in praise, doing wonders?",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "num-12-13": {
+   "service": [],
+   "occasions": [
+    "any"
+   ],
+   "whereInService": "Not tied to one fixed place; sung or said as a short healing prayer",
+   "delivery": "sung",
+   "leaderOrCongregation": "anyone",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "A short prayer for healing: \"God, please heal her, please.\"",
+   "note": "Often sung at a prayer for healing; unverified for each community.",
+   "clergyReviewed": false
+  },
+  "kiddush-gen-2-1-3": {
+   "service": [
+    "shabbat-evening"
+   ],
+   "occasions": [
+    "shabbat-evening"
+   ],
+   "whereInService": "Friday night Kiddush (before the blessings), at the table or in synagogue",
+   "delivery": "chanted",
+   "leaderOrCongregation": "one person leads",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": ""
+    },
+    "reform": {
+     "use": "as-written",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "The heavens and earth were finished; on the seventh day God rested, and blessed and made the seventh day holy.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "kiddush-wine-1": {
+   "service": [
+    "shabbat-morning/kiddush-lunch",
+    "shabbat-evening",
+    "havdalah"
+   ],
+   "occasions": [
+    "shabbat",
+    "festival"
+   ],
+   "whereInService": "Kiddush over wine (Friday night and Shabbat morning), and Havdalah",
+   "delivery": "chanted",
+   "leaderOrCongregation": "one person leads, all answer amen",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The wine blessing is the same words in all three movements."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "The wine blessing is the same words in all three movements."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "The wine blessing is the same words in all three movements."
+    },
+    "note": ""
+   },
+   "whatItSays": "Blessing over wine or grape juice: God creates the fruit of the vine.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "hamotzi": {
+   "service": [
+    "shabbat-morning/kiddush-lunch",
+    "shabbat-evening",
+    "meals"
+   ],
+   "occasions": [
+    "meals",
+    "shabbat"
+   ],
+   "whereInService": "Before a meal with bread, including Shabbat meals and the kiddush lunch after services",
+   "delivery": "recited",
+   "leaderOrCongregation": "one person says it, all answer amen",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "Same Hebrew in all three movements."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "Same Hebrew in all three movements."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "Same Hebrew in all three movements."
+    },
+    "note": ""
+   },
+   "whatItSays": "Blessing over bread: God brings forth bread from the earth.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "candle-shabbat": {
+   "service": [
+    "shabbat-evening"
+   ],
+   "occasions": [
+    "shabbat-evening"
+   ],
+   "whereInService": "Friday before sunset, at home when the candles are lit; some synagogues light together",
+   "delivery": "recited",
+   "leaderOrCongregation": "the person lighting",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The Hebrew blessing is the same; some books print \"shel Shabbat\" and some add \"v'shel yom tov\" on festivals."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "The Hebrew blessing is the same; some books print \"shel Shabbat\" and some add \"v'shel yom tov\" on festivals."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "The Hebrew blessing is the same; some books print \"shel Shabbat\" and some add \"v'shel yom tov\" on festivals."
+    },
+    "note": ""
+   },
+   "whatItSays": "Blessing for lighting the Shabbat candles: God made us holy with commandments and commanded us to light Shabbat lights.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "torah-bless-1": {
+   "service": [
+    "shabbat-morning/torah-reading"
+   ],
+   "occasions": [
+    "shabbat-morning"
+   ],
+   "whereInService": "Torah service, before each Torah reading; also the morning Torah-study blessing",
+   "delivery": "chanted",
+   "leaderOrCongregation": "the person called up (oleh), then the congregation answers amen",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The aliyah blessing is the same Hebrew in the three movements."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "The aliyah blessing is the same Hebrew in the three movements."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "The aliyah blessing is the same Hebrew in the three movements."
+    },
+    "note": ""
+   },
+   "whatItSays": "Blessed are you, LORD, who chose us from all peoples and gave us the Torah.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "torah-barchu": {
+   "service": [
+    "shabbat-morning/shema-and-blessings",
+    "shabbat-morning/torah-reading"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Torah service: the person called up invites the congregation to bless; also the call to prayer before the Shema",
+   "delivery": "chanted",
+   "leaderOrCongregation": "leader or oleh calls; congregation answers",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "Same call and response in all three movements."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "Same call and response in all three movements."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "Same call and response in all three movements."
+    },
+    "note": ""
+   },
+   "whatItSays": "Bless the LORD, the blessed one. / Blessed is the LORD, the blessed one, for ever and ever.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "torah-bless-2": {
+   "service": [
+    "shabbat-morning/torah-reading"
+   ],
+   "occasions": [
+    "shabbat-morning"
+   ],
+   "whereInService": "Torah service, after each Torah reading",
+   "delivery": "chanted",
+   "leaderOrCongregation": "oleh; congregation answers amen",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": ""
+    },
+    "reform": {
+     "use": "as-written",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Blessed are you, LORD, who gave us a Torah of truth and planted eternal life among us.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "amidah-lips": {
+   "service": [
+    "shabbat-morning/amidah"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Opening line of the silent Amidah prayer",
+   "delivery": "recited",
+   "leaderOrCongregation": "each person, quietly",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": ""
+    },
+    "reform": {
+     "use": "as-written",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "My Lord, open my lips, and my mouth will declare your praise.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "avot-1": {
+   "service": [
+    "shabbat-morning/amidah"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "First blessing of the Amidah (Avot)",
+   "delivery": "recited",
+   "leaderOrCongregation": "each person; leader repeats aloud",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "varies",
+     "note": "Conservative movement books add the matriarchs (Sarah, Rebecca, Rachel and Leah) as an option."
+    },
+    "reform": {
+     "use": "varies",
+     "note": "Reform movement books add the matriarchs. The registry text is the traditional wording."
+    },
+    "note": ""
+   },
+   "whatItSays": "Blessed are you, LORD, God of Abraham, Isaac and Jacob, great, mighty and awesome, who remembers the kindness of our ancestors.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "aleinu-1": {
+   "service": [
+    "shabbat-morning/closing"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Near the end of the service",
+   "delivery": "recited",
+   "leaderOrCongregation": "congregation together, often standing",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "varies",
+     "note": "Wording of the \"he has not made us like the nations\" lines varies in some Conservative books."
+    },
+    "reform": {
+     "use": "varies",
+     "note": "Reform and Reconstructionist books usually change or omit the \"has not made us like the nations\" lines. Unverified."
+    },
+    "note": ""
+   },
+   "whatItSays": "It is our duty to praise the Master of all: we bow before the King of kings, the Holy One. There is no other.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "modeh-ani-1": {
+   "service": [
+    "shabbat-morning/opening"
+   ],
+   "occasions": [
+    "daily"
+   ],
+   "whereInService": "On waking up, at home; not part of the synagogue service",
+   "delivery": "recited",
+   "leaderOrCongregation": "individual",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "I give thanks before you, living and enduring king, for giving me back my soul in mercy: great is your faithfulness.",
+   "note": "Men say modeh and women say modah.",
+   "clergyReviewed": false
+  },
+  "adon-olam-1": {
+   "service": [
+    "shabbat-morning/opening",
+    "shabbat-morning/closing"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Closing hymn of many services; in some congregations at the start",
+   "delivery": "sung",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "Sung in all three movements; the tune differs."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "Sung in all three movements; the tune differs."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "Sung in all three movements; the tune differs."
+    },
+    "note": ""
+   },
+   "whatItSays": "Lord of the world, who reigned before anything was created and will reign when all is ended; into your hand I commit my spirit.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "kaddish-1": {
+   "service": [
+    "shabbat-morning/closing"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Near the end of the service, said by mourners and those observing a yahrzeit",
+   "delivery": "recited",
+   "leaderOrCongregation": "mourners say it; congregation answers",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "Aramaic text; same words in the three movements. Who says it (mourners only, or the whole room) varies by community."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "Aramaic text; same words in the three movements. Who says it (mourners only, or the whole room) varies by community."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "Aramaic text; same words in the three movements. Who says it (mourners only, or the whole room) varies by community."
+    },
+    "note": ""
+   },
+   "whatItSays": "A prayer praising God's great name; it does not mention death. The congregation answers \"Amen\" and \"Yehei shmei rabba\".",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "birkat-hamazon-1": {
+   "service": [
+    "shabbat-morning/kiddush-lunch",
+    "meals"
+   ],
+   "occasions": [
+    "meals"
+   ],
+   "whereInService": "After a meal with bread; the first blessing",
+   "delivery": "recited",
+   "leaderOrCongregation": "individual or group (zimun)",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Blessed are you, LORD, who feeds the whole world with goodness, grace and mercy.",
+   "note": "Opening of the first of four blessings.",
+   "clergyReviewed": false
+  },
+  "ein-kamocha": {
+   "service": [
+    "shabbat-morning/torah-service-open"
+   ],
+   "occasions": [
+    "shabbat-morning"
+   ],
+   "whereInService": "When the ark is opened for the Torah reading",
+   "delivery": "sung",
+   "leaderOrCongregation": "congregation, often with the leader",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "Ashkenazi-tradition Shabbat morning."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "There is none like you among the powers, LORD, and no deeds like yours.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "malchutcha": {
+   "service": [
+    "shabbat-morning/torah-service-open"
+   ],
+   "occasions": [
+    "shabbat-morning"
+   ],
+   "whereInService": "Second line of Ein Kamocha",
+   "delivery": "sung",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Your kingdom is a kingdom for all ages, and your rule lasts through every generation.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "adonai-oz": {
+   "service": [
+    "shabbat-morning/torah-service-open"
+   ],
+   "occasions": [
+    "shabbat-morning"
+   ],
+   "whereInService": "Closing line of Ein Kamocha",
+   "delivery": "sung",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "The LORD will give his people strength; the LORD will bless his people with peace.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "gadlu": {
+   "service": [
+    "shabbat-morning/torah-service-open"
+   ],
+   "occasions": [
+    "shabbat-morning"
+   ],
+   "whereInService": "Torah service, as the Torah is taken from the ark and carried to the reading desk",
+   "delivery": "chanted",
+   "leaderOrCongregation": "leader says it; congregation continues with the second half",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Magnify the LORD with me, and let us lift up his name together.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "yehalelu": {
+   "service": [
+    "shabbat-morning/returning-torah"
+   ],
+   "occasions": [
+    "shabbat-morning"
+   ],
+   "whereInService": "As the Torah is returned to the ark",
+   "delivery": "recited",
+   "leaderOrCongregation": "leader, then congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Let them praise the name of the LORD, for his name alone is lifted high.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "hashivenu": {
+   "service": [
+    "shabbat-morning/returning-torah"
+   ],
+   "occasions": [
+    "shabbat-morning"
+   ],
+   "whereInService": "Sung as the Torah is returned to the ark in many congregations",
+   "delivery": "sung",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Return us to you, LORD, and we shall return; renew our days as of old.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "kedushah-kadosh": {
+   "service": [
+    "shabbat-morning/amidah"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Kedushah, in the leader's repetition of the Amidah",
+   "delivery": "chanted",
+   "leaderOrCongregation": "leader and congregation, responsively",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": ""
+    },
+    "reform": {
+     "use": "varies",
+     "note": "Reform books often sing the Kedushah in Hebrew with the congregation but not in the same place or length."
+    },
+    "note": ""
+   },
+   "whatItSays": "Holy, holy, holy is the LORD of hosts; the whole earth is full of his glory.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "kedushah-baruch": {
+   "service": [
+    "shabbat-morning/amidah"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Kedushah, second verse",
+   "delivery": "chanted",
+   "leaderOrCongregation": "leader and congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Blessed be the glory of the LORD from his place.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "kedushah-yimloch": {
+   "service": [
+    "shabbat-morning/amidah"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Kedushah, third verse",
+   "delivery": "chanted",
+   "leaderOrCongregation": "leader and congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "The LORD will reign for ever; your God, Zion, from generation to generation. Praise the LORD.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "kiddush-veshamru": {
+   "service": [
+    "shabbat-morning/kiddush-lunch"
+   ],
+   "occasions": [
+    "shabbat-day"
+   ],
+   "whereInService": "Kiddush for Shabbat day, at the kiddush after services",
+   "delivery": "chanted",
+   "leaderOrCongregation": "one person leads",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The Ashkenazi Orthodox custom is V'shamru, then Zachor, then the wine blessing."
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": "Practice varies by community."
+    },
+    "reform": {
+     "use": "unknown",
+     "note": "Practice varies by community."
+    },
+    "note": ""
+   },
+   "whatItSays": "The Israelites shall keep the Sabbath as a lasting covenant between God and Israel.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "kiddush-zachor": {
+   "service": [
+    "shabbat-morning/kiddush-lunch"
+   ],
+   "occasions": [
+    "shabbat-day"
+   ],
+   "whereInService": "Kiddush for Shabbat day, second passage",
+   "delivery": "chanted",
+   "leaderOrCongregation": "one person leads",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Remember the Sabbath day and keep it holy: six days you work, the seventh is a Sabbath to the LORD.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "ashrei-84-5": {
+   "service": [
+    "shabbat-morning/pesukei-dezimra"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Opening of Ashrei (Pesukei Dezimra, and again on Shabbat morning before the Torah is returned)",
+   "delivery": "recited",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": ""
+    },
+    "reform": {
+     "use": "as-written",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Happy are those who live in your house; they praise you for ever.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "ashrei-144-15": {
+   "service": [
+    "shabbat-morning/pesukei-dezimra"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Second line of Ashrei",
+   "delivery": "recited",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": ""
+    },
+    "reform": {
+     "use": "as-written",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Happy is the people who have this; happy is the people whose God is the LORD.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "ashrei-145-1-3": {
+   "service": [
+    "shabbat-morning/pesukei-dezimra"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Start of Psalm 145, the main text of Ashrei",
+   "delivery": "recited",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": ""
+    },
+    "reform": {
+     "use": "as-written",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "I will praise you, my God the king, and bless your name for ever. Great is the LORD and greatly to be praised.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "ashrei-145-16": {
+   "service": [
+    "shabbat-morning/pesukei-dezimra"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "The verse in Psalm 145 said with special concentration",
+   "delivery": "recited",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "You open your hand and satisfy every living thing with favour.",
+   "note": "Tradition asks for special concentration on this verse.",
+   "clergyReviewed": false
+  },
+  "shir-hamaalot": {
+   "service": [
+    "meals"
+   ],
+   "occasions": [
+    "shabbat-meal",
+    "festival-meal"
+   ],
+   "whereInService": "Before Birkat Hamazon on Shabbat and festivals",
+   "delivery": "sung",
+   "leaderOrCongregation": "table",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "When the LORD returned the exiles to Zion we were like dreamers; our mouths filled with laughter.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "vayehi-binsoa": {
+   "service": [
+    "shabbat-morning/torah-service-open"
+   ],
+   "occasions": [
+    "shabbat-morning"
+   ],
+   "whereInService": "Torah service, when the ark is opened",
+   "delivery": "chanted",
+   "leaderOrCongregation": "leader and congregation, often sung",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": ""
+    },
+    "reform": {
+     "use": "varies",
+     "note": "Many Reform services omit or shorten the Torah-service procession."
+    },
+    "note": ""
+   },
+   "whatItSays": "When the ark set out, Moses said: Rise up, LORD, and scatter your enemies. From Zion comes Torah. Blessed is the one who gave Torah to Israel.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "lecha-hashem": {
+   "service": [
+    "shabbat-morning/torah-service-open"
+   ],
+   "occasions": [
+    "shabbat-morning"
+   ],
+   "whereInService": "Torah service, as the Torah is carried to the reading desk",
+   "delivery": "sung",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Yours, LORD, are the greatness, power, glory, victory and majesty; exalt the LORD our God, for he is holy.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "vezot-hatorah": {
+   "service": [
+    "shabbat-morning/hagbahah"
+   ],
+   "occasions": [
+    "shabbat-morning"
+   ],
+   "whereInService": "Torah service, when the Torah is lifted and shown to the congregation",
+   "delivery": "sung",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "Raising the Torah is customary in all three movements; the surrounding words and the custom of standing or bowing vary."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "Raising the Torah is customary in all three movements; the surrounding words and the custom of standing or bowing vary."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "Raising the Torah is customary in all three movements; the surrounding words and the custom of standing or bowing vary."
+    },
+    "note": ""
+   },
+   "whatItSays": "This is the Torah that Moses set before the Israelites, by the word of the LORD.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "etz-chaim": {
+   "service": [
+    "shabbat-morning/returning-torah"
+   ],
+   "occasions": [
+    "shabbat-morning"
+   ],
+   "whereInService": "As the Torah is returned to the ark",
+   "delivery": "sung",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "It is a tree of life for those who hold fast to it; its ways are ways of pleasantness and all its paths are peace.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "hagomel": {
+   "service": [
+    "shabbat-morning/torah-reading"
+   ],
+   "occasions": [
+    "shabbat-morning"
+   ],
+   "whereInService": "After the Torah reading, said by a person who has recovered, survived danger or travelled safely",
+   "delivery": "recited",
+   "leaderOrCongregation": "person giving thanks; congregation answers",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Blessing of thanks: God who gives good things to the undeserving has been good to me. The congregation answers: May the one who has been good to you be good to you always.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "brich-shmei": {
+   "service": [
+    "shabbat-morning/torah-service-open"
+   ],
+   "occasions": [
+    "shabbat-morning"
+   ],
+   "whereInService": "Torah service, when the ark is opened (Ashkenazi and Sephardi tradition)",
+   "delivery": "sung",
+   "leaderOrCongregation": "congregation, often sung or said aloud",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "varies",
+     "note": "Some Conservative congregations omit it."
+    },
+    "reform": {
+     "use": "varies",
+     "note": "Many Reform services do not say it."
+    },
+    "note": ""
+   },
+   "whatItSays": "Aramaic prayer: blessed is the name of the Master of the world; may I be allowed to trust only in God and in the Torah and to open my heart to its teaching.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "avot-closing": {
+   "service": [
+    "shabbat-morning/amidah"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "End of the first blessing of the Amidah",
+   "delivery": "recited",
+   "leaderOrCongregation": "each person; leader repeats",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "varies",
+     "note": "Conservative and Reform movement books add the matriarchs in the closing line in some editions (wording varies; unverified)."
+    },
+    "reform": {
+     "use": "varies",
+     "note": "See Conservative note."
+    },
+    "note": ""
+   },
+   "whatItSays": "King, helper, saviour and shield. Blessed are you, LORD, shield of Abraham.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "amidah-yihyu": {
+   "service": [
+    "shabbat-morning/amidah"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "End of the Amidah (verse said before taking three steps back)",
+   "delivery": "recited",
+   "leaderOrCongregation": "each person, quietly",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": ""
+    },
+    "reform": {
+     "use": "as-written",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "May the words of my mouth and the thoughts of my heart be acceptable to you, LORD, my rock and my redeemer.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "amidah-elohai-netzor": {
+   "service": [
+    "shabbat-morning/amidah"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Private prayer at the end of the Amidah",
+   "delivery": "recited",
+   "leaderOrCongregation": "each person, quietly",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "My God, keep my tongue from evil and my lips from deceit; open my heart to your Torah.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "oseh-shalom": {
+   "service": [
+    "shabbat-morning/amidah",
+    "shabbat-morning/closing"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Last line of the Amidah and of Kaddish; said while stepping back and bowing",
+   "delivery": "recited",
+   "leaderOrCongregation": "each person",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": ""
+    },
+    "reform": {
+     "use": "as-written",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "He who makes peace in his high places, may he make peace for us and for all Israel.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "sim-shalom": {
+   "service": [
+    "shabbat-morning/amidah"
+   ],
+   "occasions": [
+    "every-service"
+   ],
+   "whereInService": "Peace blessing, the last blessing of the Amidah (morning)",
+   "delivery": "recited",
+   "leaderOrCongregation": "each person; leader repeats",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "Afternoon and evening use Shalom Rav."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "Afternoon and evening use Shalom Rav."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "Afternoon and evening use Shalom Rav."
+    },
+    "note": ""
+   },
+   "whatItSays": "Grant peace, goodness, blessing, grace, kindness and mercy to us and to all Israel your people.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "kiddush-shabbat-eve": {
+   "service": [
+    "shabbat-evening"
+   ],
+   "occasions": [
+    "shabbat-evening"
+   ],
+   "whereInService": "Friday night Kiddush, the sanctification blessing, after the wine blessing",
+   "delivery": "chanted",
+   "leaderOrCongregation": "one person leads, all answer amen",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "Same Hebrew in all three; the \"ki hu yom\" and \"ki vanu\" phrases are printed in parentheses in the source and kept here."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "Same Hebrew in all three; the \"ki hu yom\" and \"ki vanu\" phrases are printed in parentheses in the source and kept here."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "Same Hebrew in all three; the \"ki hu yom\" and \"ki vanu\" phrases are printed in parentheses in the source and kept here."
+    },
+    "note": ""
+   },
+   "whatItSays": "God made us holy with his commandments, gave us the holy Shabbat in love, and sanctifies the Shabbat.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "lecha-dodi-1": {
+   "service": [
+    "shabbat-evening"
+   ],
+   "occasions": [
+    "shabbat-evening"
+   ],
+   "whereInService": "Kabbalat Shabbat on Friday night",
+   "delivery": "sung",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": ""
+    },
+    "reform": {
+     "use": "varies",
+     "note": "Reform books use shortened verses or change the \"bride\" language."
+    },
+    "note": ""
+   },
+   "whatItSays": "Come, my beloved, to meet the bride: let us welcome Shabbat.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "yigdal": {
+   "service": [
+    "shabbat-morning/opening"
+   ],
+   "occasions": [
+    "shabbat-evening",
+    "shabbat-morning"
+   ],
+   "whereInService": "Opening or closing hymn in some services; Ashkenazi tradition",
+   "delivery": "sung",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "varies",
+     "note": "Some Conservative books keep it with small changes."
+    },
+    "reform": {
+     "use": "varies",
+     "note": "Reform and Reconstructionist books often omit or change the last lines. Unverified."
+    },
+    "note": ""
+   },
+   "whatItSays": "A hymn that retells the Thirteen Principles of faith: God is one, has no body, gave Torah through Moses, and will revive the dead.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "zimun-opening": {
+   "service": [
+    "shabbat-morning/kiddush-lunch",
+    "meals"
+   ],
+   "occasions": [
+    "meals"
+   ],
+   "whereInService": "Before Birkat Hamazon, when three or more eat together",
+   "delivery": "recited",
+   "leaderOrCongregation": "leader and group",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Leader: Friends, let us bless. Group: May the name of the LORD be blessed from now and for ever.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "haftarah-before": {
+   "service": [
+    "shabbat-morning/haftarah"
+   ],
+   "occasions": [
+    "shabbat-morning"
+   ],
+   "whereInService": "Haftarah reading, blessings before",
+   "delivery": "chanted",
+   "leaderOrCongregation": "the person reading haftarah; congregation answers amen",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "Same Hebrew pattern in all three; Reform and Conservative books may shorten the closing blessings."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "Same Hebrew pattern in all three; Reform and Conservative books may shorten the closing blessings."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "Same Hebrew pattern in all three; Reform and Conservative books may shorten the closing blessings."
+    },
+    "note": ""
+   },
+   "whatItSays": "Blessed are you, LORD, who chose good prophets, and the Torah, Moses, Israel and prophets of truth.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "haftarah-after": {
+   "service": [
+    "shabbat-morning/haftarah"
+   ],
+   "occasions": [
+    "shabbat-morning"
+   ],
+   "whereInService": "Haftarah reading, blessings after",
+   "delivery": "chanted",
+   "leaderOrCongregation": "the person reading haftarah",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "varies",
+     "note": "Conservative books may soften the Zion, Elijah and David paragraphs."
+    },
+    "reform": {
+     "use": "varies",
+     "note": "Reform books often shorten or reword these paragraphs."
+    },
+    "note": ""
+   },
+   "whatItSays": "Blessed are you, LORD, faithful in all his words; have mercy on Zion; gladden us with Elijah and the house of David; for the Torah, the prophets and the Shabbat.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "mi-sheberach-opening": {
+   "service": [
+    "shabbat-morning/torah-reading"
+   ],
+   "occasions": [
+    "shabbat-morning"
+   ],
+   "whereInService": "Torah service: opening words of the prayers for a person called to the Torah, the sick, or a new baby",
+   "delivery": "chanted",
+   "leaderOrCongregation": "leader, with the congregation answering amen",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "varies",
+     "note": "Many Conservative congregations add the matriarchs."
+    },
+    "reform": {
+     "use": "varies",
+     "note": "Many Reform congregations add the matriarchs."
+    },
+    "note": ""
+   },
+   "whatItSays": "\"May the one who blessed our ancestors Abraham, Isaac and Jacob...\" and then the blessing for the person named.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "havdalah-opening": {
+   "service": [
+    "havdalah"
+   ],
+   "occasions": [
+    "saturday-night"
+   ],
+   "whereInService": "Havdalah, Saturday night after dark: opening verses",
+   "delivery": "chanted",
+   "leaderOrCongregation": "one person leads",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "Havdalah is observed in all three movements; the opening verses vary a little."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "Havdalah is observed in all three movements; the opening verses vary a little."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "Havdalah is observed in all three movements; the opening verses vary a little."
+    },
+    "note": ""
+   },
+   "whatItSays": "Behold, God is my salvation; I trust and am not afraid. I will lift the cup of salvation and call on the name of the LORD.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "havdalah-spices": {
+   "service": [
+    "havdalah"
+   ],
+   "occasions": [
+    "saturday-night"
+   ],
+   "whereInService": "Havdalah: blessing over spices",
+   "delivery": "chanted",
+   "leaderOrCongregation": "one person; all smell the spices",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": ""
+    },
+    "reform": {
+     "use": "as-written",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Blessing over fragrant spices as Shabbat departs.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "havdalah-flame": {
+   "service": [
+    "havdalah"
+   ],
+   "occasions": [
+    "saturday-night"
+   ],
+   "whereInService": "Havdalah: blessing over the braided candle",
+   "delivery": "chanted",
+   "leaderOrCongregation": "one person",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": ""
+    },
+    "reform": {
+     "use": "as-written",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Blessing over the Havdalah flame: God creates the lights of fire.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "havdalah-hamavdil": {
+   "service": [
+    "havdalah"
+   ],
+   "occasions": [
+    "saturday-night"
+   ],
+   "whereInService": "Havdalah: the separation blessing, last before drinking the wine",
+   "delivery": "chanted",
+   "leaderOrCongregation": "one person",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The \"Israel from the nations\" phrase appears in all standard Hebrew texts; some English translations soften it."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "The \"Israel from the nations\" phrase appears in all standard Hebrew texts; some English translations soften it."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "The \"Israel from the nations\" phrase appears in all standard Hebrew texts; some English translations soften it."
+    },
+    "note": ""
+   },
+   "whatItSays": "God separates holy from ordinary, light from darkness, Israel from the nations, the seventh day from the six working days.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "hanukkah-candle": {
+   "service": [
+    "hanukkah"
+   ],
+   "occasions": [
+    "hanukkah"
+   ],
+   "whereInService": "Hanukkah, when lighting the candles",
+   "delivery": "recited",
+   "leaderOrCongregation": "the person lighting",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "\"Ner Hanukkah\" or \"ner shel Hanukkah\" depending on the book."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "\"Ner Hanukkah\" or \"ner shel Hanukkah\" depending on the book."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "\"Ner Hanukkah\" or \"ner shel Hanukkah\" depending on the book."
+    },
+    "note": ""
+   },
+   "whatItSays": "Blessing: God commanded us to light the Hanukkah light.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "hanukkah-nissim": {
+   "service": [
+    "hanukkah"
+   ],
+   "occasions": [
+    "hanukkah"
+   ],
+   "whereInService": "Hanukkah, second blessing for the candles",
+   "delivery": "recited",
+   "leaderOrCongregation": "the person lighting",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": ""
+    },
+    "reform": {
+     "use": "as-written",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "Blessing: God performed miracles for our ancestors in those days, at this time.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "shehecheyanu": {
+   "service": [
+    "hanukkah"
+   ],
+   "occasions": [
+    "festival",
+    "hanukkah",
+    "first-times"
+   ],
+   "whereInService": "First night of Hanukkah and festivals, at new fruit, at first-time events",
+   "delivery": "recited",
+   "leaderOrCongregation": "anyone",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "Same words in all three movements."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "Same words in all three movements."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "Same words in all three movements."
+    },
+    "note": ""
+   },
+   "whatItSays": "Blessing of thanks: God has kept us alive, sustained us, and brought us to this time.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "hanerot-halalu": {
+   "service": [
+    "hanukkah"
+   ],
+   "occasions": [
+    "hanukkah"
+   ],
+   "whereInService": "Hanukkah, after lighting the candles",
+   "delivery": "recited",
+   "leaderOrCongregation": "the person lighting",
+   "denominations": {
+    "orthodox": {
+     "use": "unknown",
+     "note": ""
+    },
+    "conservative": {
+     "use": "unknown",
+     "note": ""
+    },
+    "reform": {
+     "use": "unknown",
+     "note": ""
+    },
+    "note": ""
+   },
+   "whatItSays": "We light these lights for the miracles, deliverances and wonders you did for our ancestors; these lights are holy and are for looking at.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "maoz-tzur-1": {
+   "service": [
+    "hanukkah"
+   ],
+   "occasions": [
+    "hanukkah"
+   ],
+   "whereInService": "Hanukkah, sung after lighting the candles",
+   "delivery": "sung",
+   "leaderOrCongregation": "family or congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": ""
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": ""
+    },
+    "reform": {
+     "use": "varies",
+     "note": "Some Reform books print different English words; the Hebrew first verse is common."
+    },
+    "note": ""
+   },
+   "whatItSays": "Rock of my salvation, it is fitting to praise you; restore my house of prayer and I will bring a thanksgiving offering.",
+   "note": "",
+   "clergyReviewed": false
+  }
+ }
+}

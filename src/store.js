@@ -48,11 +48,13 @@ export const migrations = [];
  */
 export function createStore(opts = {}) {
   const prefix = opts.prefix ?? 'alef:';
-  let backend = opts.storage === undefined
-    ? (typeof localStorage !== 'undefined' ? localStorage : null)
-    : opts.storage;
+  let backend = opts.storage;
+  if (backend === undefined) {
+    try { backend = globalThis.localStorage ?? null; } catch { backend = null; }
+  }
   let persistent = true;
-  if (!backend || !probe(backend)) { backend = createMemoryStorage(); persistent = false; }
+  // A full storage area can still be read. Preserve it before falling back.
+  if (!backend || !probe(backend)) degrade();
   /** @type {Set<(key:string,value:any)=>void>} */
   const listeners = new Set();
 
@@ -65,7 +67,7 @@ export function createStore(opts = {}) {
   }
   function dump() {
     /** @type {Record<string,any>} */
-    const out = {};
+    const out = Object.create(null);
     try {
       for (let i = 0; i < backend.length; i++) {
         const full = backend.key(i);
@@ -110,7 +112,7 @@ export function createStore(opts = {}) {
     /**
      * @param {string|object} input backup JSON text or object
      * @param {{mode?: 'replace'|'merge'}} [o]
-     * @returns {{ok:true,imported:number}|{ok:false,error:string}}
+     * @returns {{ok:true,imported:number}|{ok:false,error:string,recoveryRequired?:boolean}}
      */
     importData(input, o = {}) {
       let obj;
@@ -121,10 +123,33 @@ export function createStore(opts = {}) {
       if (obj.schema > SCHEMA_VERSION) return { ok: false, error: `Backup is from a newer ALEF (schema ${obj.schema})` };
       let data = obj.data;
       for (let v = obj.schema; v < SCHEMA_VERSION; v++) data = migrations[v - 1](data);
-      if ((o.mode ?? 'replace') === 'replace') api.clear();
-      let n = 0;
-      for (const [k, v] of Object.entries(data)) { api.set(k, v); n++; }
-      return { ok: true, imported: n };
+      // Validate serialisability before replacing any existing progress.
+      try { data = JSON.parse(JSON.stringify(data)); }
+      catch { return { ok: false, error: 'Backup data is not JSON serialisable' }; }
+      const previous = dump();
+      const replace = (o.mode ?? 'replace') === 'replace';
+      const entries = Object.entries(data);
+      const touched = new Set([...Object.keys(previous), ...Object.keys(data)]);
+      try {
+        if (replace) for (const k of Object.keys(previous)) backend.removeItem(prefix + k);
+        for (const [k, v] of entries) backend.setItem(prefix + k, JSON.stringify(v));
+      } catch {
+        // A too-large restore must not silently leave a partial backup on disk
+        // while reporting success from the memory fallback.
+        let recoveryRequired = false;
+        try {
+          for (const k of touched) backend.removeItem(prefix + k);
+          for (const [k, v] of Object.entries(previous)) backend.setItem(prefix + k, JSON.stringify(v));
+        } catch {
+          recoveryRequired = true;
+          backend = createMemoryStorage(); persistent = false;
+          for (const [k, v] of Object.entries(previous)) backend.setItem(prefix + k, JSON.stringify(v));
+        }
+        return { ok: false, error: 'Not enough writable storage to restore this backup. Keep a backup of your current progress.', recoveryRequired };
+      }
+      if (replace) for (const k of Object.keys(previous)) if (!Object.hasOwn(data, k)) emit(k, undefined);
+      for (const [k, v] of entries) emit(k, v);
+      return { ok: true, imported: entries.length };
     },
   };
   // stamp schema (best effort)

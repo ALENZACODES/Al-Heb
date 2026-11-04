@@ -34,7 +34,8 @@ export function mount(root, ctx) {
       const go = h('button', { type: 'button', class: 'btn', onclick: () => {
         const res = store.importData(text, { mode: 'replace' });
         restoreBox.hidden = true; restoreBox.replaceChildren();
-        if (res.ok) { settings.reload(); status.textContent = `Restored ${res.imported} saved items from the backup${when}.`; } else status.textContent = 'Could not restore: ' + res.error + ' Your progress on this device was not changed.';
+        if (res.ok) { settings.reload(); status.textContent = `Restored ${res.imported} saved items from the backup${when}.`; }
+        else status.textContent = restoreFailureMessage(res);
         root.querySelector('#s-import')?.focus();
       } }, 'Replace my progress with this backup');
       const cancel = h('button', { type: 'button', class: 'btn secondary', onclick: () => { restoreBox.hidden = true; restoreBox.replaceChildren(); status.textContent = 'Restore cancelled. Nothing was changed.'; root.querySelector('#s-import')?.focus(); } }, 'Cancel');
@@ -88,3 +89,9 @@ export function mount(root, ctx) {
   return () => {};
 }
 void DEFAULTS;
+
+export function restoreFailureMessage(result) {
+  return result.recoveryRequired
+    ? 'Could not restore or recover the saved copy on this device. Your previous progress is available only in this open app. Download a backup now, before closing or reloading; some saved data may have changed.'
+    : 'Could not restore: ' + result.error + ' Your progress on this device was not changed.';
+}

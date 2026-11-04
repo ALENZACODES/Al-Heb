@@ -12,17 +12,17 @@ let chromium;
 try { ({ chromium } = require('playwright')); } catch { try { ({ chromium } = require('/usr/lib/node_modules/playwright')); } catch (e) { console.error('playwright not found:', e.message); process.exit(2); } }
 
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..');
-const outDir = join(root, 'docs', 'screens'); mkdirSync(outDir, { recursive: true });
+const args = process.argv.slice(2);
+const outDir = join(root, args.includes('--out') ? args[args.indexOf('--out') + 1] : 'docs/screens'); mkdirSync(outDir, { recursive: true });
 // Routes in SEEDED_ROUTES are also shot again with 14 read-track lessons marked complete (so Spot It, loanwords and the checkpoint have content).
 const SEEDED_ROUTES = ['/loanwords/lw1', '/spotit/bet', '/checkpoint', '/dialogues'];
 const ROUTES = ['/', '/welcome', '/learn', '/learn?lesson=r01', '/learn?review=1', '/letters', '/letters/alef', '/sounds', '/read', '/read/bless-priestly-1', '/scan', '/calendar', '/workbook', '/letters/atlas', '/soundgap', '/vocab', '/loanwords', '/loanwords/lw1', '/spotit/bet', '/checkpoint', '/dialogues', '/dialogues/d-cafe', '/settings', '/how', '/about', '/nope'];
-const args = process.argv.slice(2);
 const useDist = args.includes('--dist');
 const prefix = useDist && args.includes('--base') ? args[args.indexOf('--base') + 1] : '/';
 
 const server = createAppServer({ root: useDist ? join(root, 'dist') : root, prefix }); await new Promise((r) => server.listen(0, r));
 const base = `http://localhost:${server.address().port}${prefix}`;
-const browser = await chromium.launch();
+const browser = await chromium.launch({ executablePath: process.env.QA_CHROME || undefined });
 const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, serviceWorkers: 'allow' });
 // skip first-run setup for the route sweep (the first-run redirect is checked separately below)
 await ctx.addInitScript(() => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); });
@@ -98,8 +98,11 @@ const check = (name, ok, detail = '') => { checks.push({ name, ok: !!ok, detail 
   check('sound indicator states the real source after Listen', /browser|No sound|recorded/i.test(sound) && !/checking/i.test(sound), sound);
   await page.getByRole('button', { name: 'Mark lesson complete' }).click();
   await page.waitForSelector('text=new review cards added');
-  await page.goto(base + '#/'); await page.waitForSelector('text=cards due');
-  check('home shows due cards and a 1-day streak', /6 cards due/.test(await page.locator('main').innerText()) && /1 day/.test(await page.locator('main').innerText()));
+  await page.goto(base + '#/');
+  // Wait for stored state, not the initial "No cards due" placeholder.
+  await page.getByRole('link', { name: '6 cards due', exact: true }).waitFor();
+  const homeText = await page.locator('main').innerText();
+  check('home shows due cards and a 1-day streak', /6 cards due/.test(homeText) && /1 day/.test(homeText), homeText);
   await page.goto(base + '#/learn?review=1'); await page.waitForSelector('text=Card 1 of 6');
   for (const k of ['3', '3', '4', '2', '1', '3']) {
     // after "Again" lane 1 may show an interference hint panel with a Continue button before the next card

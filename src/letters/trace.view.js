@@ -48,8 +48,8 @@ const CSS = `
 .alef-trace .stage{background:#fff;border:1px solid #ccd;border-radius:12px;padding:6px}
 .alef-trace .big{font-size:4rem;line-height:1.1}
 .alef-trace .kb{direction:ltr;display:flex;flex-direction:column;gap:4px;margin:10px 0;user-select:none}
-.alef-trace .kb .r{display:flex;gap:4px;justify-content:center}
-.alef-trace .kb .k{min-width:34px;min-height:44px;padding:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:1.2rem}
+.alef-trace .kb .r{display:flex;flex-wrap:wrap;gap:4px;justify-content:center}
+.alef-trace .kb .k{min-width:44px;min-height:44px;padding:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:1.2rem}
 .alef-trace .kb .k small{font-size:.6rem;color:#667}
 .alef-trace .kb .k.hit{background:#c8f0c8}.alef-trace .kb .k.want{outline:3px solid #e67e22}
 .alef-trace .grid button{position:relative}

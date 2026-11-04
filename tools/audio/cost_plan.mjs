@@ -124,7 +124,7 @@ export function main(argv = process.argv.slice(2)) {
   if (argv.includes('--json')) { console.log(JSON.stringify(plan, null, 1)); return; }
   if (argv.includes('--check')) {
     const cur = fs.existsSync(target) ? fs.readFileSync(target, 'utf8') : '';
-    if (cur !== md) { console.error('docs/voices/tts-cost-plan.md is stale; run: node tools/audio/cost_plan.mjs --write'); process.exit(1); }
+    if (cur.replace(/\r\n/g, '\n') !== md) { console.error('docs/voices/tts-cost-plan.md is stale; run: node tools/audio/cost_plan.mjs --write'); process.exit(1); }
     console.log('tts-cost-plan.md is current'); return;
   }
   if (argv.includes('--write')) { fs.writeFileSync(target, md); console.log('wrote docs/voices/tts-cost-plan.md'); return; }

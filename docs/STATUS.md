@@ -6,6 +6,8 @@
 
 # ALEF status (lane 8, shell/QA-fix round, 2026-11-04)
 
+Historical lane report: several open items below were fixed by subsequent lanes. See [COMPLETION.md](COMPLETION.md) for the current release boundary; do not interpret these historical test counts as a result from the latest checkout.
+
 ## This round (lane 8)
 - Precache test: `precache: skips vendor, PDFs and files over the size limit` failed because `precache-manifest.js` was stale, not because of a rule bug. Other lanes were adding and removing files under `data/` (corpus gaps/prayer-meta/torah-service-guide came and went) and `data/audio/manifest.json` was rewritten (it measured 3.9 MB at one point, over the 2 MiB cap, so the builder dropped it; at the last look it is 1.78 MB, so it is back in). Fix: re-ran `node tools/build-precache.mjs`. It will go stale again whenever any lane adds a file under `src/`, `assets/` or `data/`; re-run it last.
 - QA defect O1 (tracing stage ~1660px down on a phone): fixed in CSS only (`assets/css/app.css`, phone widths), without editing lane 2's files. The 27-letter grid becomes a one-row horizontal strip, and the stage is moved up under the letter name; toggles, draft notice and the "Remember it" panel are below it. Measured in a screenshot at 390x844: stage starts at about y=390 and is on screen without scrolling (before: about 1660). Caveat: this depends on the child order of lane 2's markup (documented in ARCHITECTURE.md); if lane 2 changes that markup the reorder may need a tweak.

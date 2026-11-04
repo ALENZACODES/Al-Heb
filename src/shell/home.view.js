@@ -7,6 +7,14 @@ async function tryImport(paths) {
   return null;
 }
 
+/** Continue from the accepted placement entry without inventing completed lessons. */
+export function nextLesson(lessons, state, track) {
+  const list = lessons.filter((lesson) => lesson.track === track);
+  const entry = track === 'read' ? list.findIndex((lesson) => lesson.id === state.placementStart) : -1;
+  return list.slice(Math.max(0, entry)).find((lesson) => !state.completed[lesson.id] &&
+    (lesson.id === state.placementStart || lesson.prerequisites.every((id) => state.completed[id])));
+}
+
 export const QUICK = [['letters', '#/letters'], ['sounds', '#/sounds'], ['read', '#/read'], ['scan', '#/scan'], ['calendar', '#/calendar'], ['workbook', '#/workbook']];
 
 export function mount(root, ctx) {
@@ -45,12 +53,11 @@ export function mount(root, ctx) {
     if (!alive || !cur?.lessons?.length || !act?.loadState) return;
     const st = await act.loadState(ctx);
     if (!alive) return;
-    const done = new Set(Object.keys(st.completed));
     const goal = settings.get('goal');
     const tracks = goal === 'israel' ? ['israel'] : goal === 'both' ? ['read', 'israel'] : ['read'];
-    const nexts = tracks.map((tr) => cur.available(done, tr)[0]).filter(Boolean);
+    const nexts = tracks.map((tr) => nextLesson(cur.lessons, st, tr)).filter(Boolean);
     if (nexts.length) todayBody.replaceChildren(...nexts.map((l) => h('p', { class: 'next-lesson' }, h('strong', {}, l.title), ' ', h('a', { class: 'btn', href: `#/learn?lesson=${encodeURIComponent(l.id)}` }, t('home.today.start')))));
-    else todayBody.replaceChildren(h('p', {}, 'All lessons in your track are complete. Use Review to keep them fresh.'));
+    else todayBody.replaceChildren(h('p', {}, st.placementStart ? 'No more lessons from your selected starting point. Use Review, or visit Learn to explore earlier lessons.' : 'All lessons in your track are complete. Use Review to keep them fresh.'));
     const n = srs?.due ? srs.due(Object.values(st.cards), new Date()).length : 0;
     if (n > 0) dueBody.replaceChildren(h('a', { class: 'btn', href: '#/learn?review=1' }, t(n === 1 ? 'home.due.count.one' : 'home.due.count', { n })));
     if (st.streak.count > 0) streakBody.replaceChildren(h('strong', {}, `${st.streak.count} day${st.streak.count === 1 ? '' : 's'}`), st.streak.activeToday ? ' and counting. Done for today.' : '. Learn something today to keep it.');

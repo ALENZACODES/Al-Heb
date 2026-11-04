@@ -69,7 +69,7 @@ class N {
   remove() {} focus() {}
   get text() { return this.children.map((c) => (c.nodeType === 3 ? c.data : c.text)).join(""); }
   find(pred, out = []) { if (pred(this)) out.push(this); for (const c of this.children) if (c.nodeType === 1) c.find(pred, out); return out; }
-  click() { for (const f of this.listeners.click || []) f({}); }
+  async click() { for (const f of this.listeners.click || []) await f({ preventDefault() {} }); }
 }
 globalThis.document = { createElement: (t) => new N(t), createTextNode: (d) => ({ nodeType: 3, data: String(d) }) };
 const flush = () => new Promise((r) => setTimeout(r, 0));
@@ -80,8 +80,8 @@ test("view: mounts, flags draft, runs to a result, saves placement.v1, unmounts"
   const { mount, DRAFT_NOTE } = await import("../src/placement/placement.view.js");
   const m = {}; const store = { get: (k) => m[k], set: (k, v) => { m[k] = v; } };
   const root = new N("div");
-  const played = [];
-  const un = mount(root, { store, placementData: P, audio: { play: async (k, i) => { played.push([k, i]); return { ok: true }; } }, clock: { now: () => 1 } });
+  const played = []; const routes = [];
+  const un = mount(root, { store, route: (path) => routes.push(path), placementData: P, audio: { play: async (k, i) => { played.push([k, i]); return { ok: true }; } }, clock: { now: () => 1 } });
   const start = await waitFor(() => find(root, (n) => n.attrs.id === "placement-start"));
   assert.match(root.text, /Draft, unreviewed/); assert.ok(DRAFT_NOTE.includes("untested guesses"));
   start.click();
@@ -98,5 +98,10 @@ test("view: mounts, flags draft, runs to a result, saves placement.v1, unmounts"
   assert.ok(lessonIds.has(go.attrs.href.split("=")[1]));
   assert.equal(m["placement.v1"].draft, true);
   assert.equal(m["placement.v1"].answers.length, 20);
+  assert.equal(m["placement.startLesson"], undefined);
+  await go.click();
+  assert.equal(m["placement.startLesson"], m["placement.v1"].result.lesson);
+  assert.equal(m["curriculum.progress"], undefined);
+  assert.deepEqual(routes, ["/learn?lesson=" + m["placement.startLesson"]]);
   un();
 });

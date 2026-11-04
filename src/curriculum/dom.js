@@ -20,8 +20,11 @@ export function tr(ctx, key, fallback) {
 export async function storeGet(ctx, key, fallback) {
   try { const v = ctx?.store?.get ? await ctx.store.get(key) : undefined; return v == null ? fallback : v; } catch { return fallback; }
 }
-export async function storeSet(ctx, key, value) {
-  try { if (ctx?.store?.set) await ctx.store.set(key, value); } catch { /* best effort */ }
+export async function storeSet(ctx, key, value, { required = false } = {}) {
+  try {
+    if (ctx?.store?.set) await ctx.store.set(key, value);
+    else if (required) throw new Error("Storage is unavailable");
+  } catch (error) { if (required) throw error; }
 }
 export const PROGRESS_KEY = "curriculum.progress";   // { completed: { [lessonId]: ms } }
 export const CARDS_KEY = "srs.cards";                 // { [cardId]: card }

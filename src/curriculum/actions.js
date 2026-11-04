@@ -9,8 +9,9 @@ export async function loadState(ctx, now = Date.now()) {
   const progress = await storeGet(ctx, PROGRESS_KEY, { completed: {} });
   const cards = await storeGet(ctx, CARDS_KEY, {});
   const streak = await storeGet(ctx, STREAK_KEY, null);
+  const placementStart = await storeGet(ctx, "placement.startLesson", null);
   const normCards = Array.isArray(cards) ? Object.fromEntries(cards.filter((c) => c?.id).map((c) => [c.id, c])) : cards;
-  return { completed: progress.completed || {}, cards: normCards, streak: currentStreak(streak, now), rawStreak: streak };
+  return { placementStart, completed: progress.completed || {}, cards: normCards, streak: currentStreak(streak, now), rawStreak: streak };
 }
 
 /** Mark a lesson complete, create its SRS cards, count today as active. Idempotent for cards. */
@@ -18,8 +19,8 @@ export async function completeLesson(ctx, lesson, now = Date.now()) {
   const st = await loadState(ctx, now);
   const completed = { ...st.completed, [lesson.id]: st.completed[lesson.id] || now };
   const { cards, added } = ensureCards(st.cards, lesson, now);
-  await storeSet(ctx, PROGRESS_KEY, { completed });
-  await storeSet(ctx, CARDS_KEY, cards);
+  await storeSet(ctx, CARDS_KEY, cards, { required: true });
+  await storeSet(ctx, PROGRESS_KEY, { completed }, { required: true });
   await storeSet(ctx, STREAK_KEY, recordActivity(st.rawStreak, now));
   return { added, completed };
 }
@@ -38,7 +39,7 @@ export async function rateCard(ctx, cardId, rating, now = Date.now()) {
   const card = st.cards[cardId];
   if (!card) throw new Error("unknown card " + cardId);
   const next = review(card, rating, now);
-  await storeSet(ctx, CARDS_KEY, { ...st.cards, [cardId]: next });
+  await storeSet(ctx, CARDS_KEY, { ...st.cards, [cardId]: next }, { required: true });
   await storeSet(ctx, STREAK_KEY, recordActivity(st.rawStreak, now));
   if (cardId.startsWith("word:")) await updateScaffold(ctx, cardId, rating, next, now);
   return next;
@@ -161,4 +162,10 @@ export async function setScaffoldPin(ctx, cardId, pinned) {
   const start = ctx?.settings?.get?.("scaffoldStart") === "faint" ? "faint" : "full";
   const cur = map[cardId] || { level: start === "faint" ? 1 : 0, pinned: false, advancedOn: null };
   await storeSet(ctx, SCAFFOLD_KEY, { ...map, [cardId]: { ...cur, pinned: !!pinned } });
+}
+
+/** Placement unlocks only its chosen entry; earlier lessons remain uncompleted. */
+export function unmetPrerequisites(lesson, state) {
+  if (lesson.track === "read" && state.placementStart === lesson.id) return [];
+  return lesson.prerequisites.filter((id) => !state.completed[id]);
 }

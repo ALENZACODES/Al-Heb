@@ -107,7 +107,7 @@ export function mountReview(root, ctx, { lessonId } = {}) {
     function reveal() {
       revealed = true;
       answerBox.replaceChildren(...(d.answerHe ? [heText(d.answerHe, "alef-he alef-word")] : []), ...d.answer.filter(Boolean).map((a, i) => el(i === 0 ? "strong" : "p", {}, a)),
-        d.hint ? el("p", { class: "muted alef-hint" }, d.hint) : null, playButton(ctx, d.audio[0], d.audio[1], "Listen", note));
+        ...(d.hint ? [el("p", { class: "muted alef-hint" }, d.hint)] : []), playButton(ctx, d.audio[0], d.audio[1], "Listen", note));
       answerBox.hidden = false; ratingBox.hidden = false; show.hidden = true;
       answerBox.focus?.({ preventScroll: true });
       ratingBox.scrollIntoView?.({ block: "nearest" });
@@ -115,7 +115,7 @@ export function mountReview(root, ctx, { lessonId } = {}) {
     async function rate(n) {
       if (!revealed) return;
       const id = queue[pos]; revealed = false;
-      try { await rateCard(ctx, id, n); } catch (e) { note.textContent = "Could not save: " + (e?.message || e); }
+      try { await rateCard(ctx, id, n); } catch (e) { note.textContent = "Could not save: " + (e?.message || e); revealed = true; return; }
       stats[n]++; pos++;
       // Interference hint only after the learner's own miss (rating Again), at most once per error kind per session.
       let panel = null;

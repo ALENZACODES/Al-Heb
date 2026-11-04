@@ -1,3 +1,4 @@
+import { pathToFileURL } from "node:url";
 // Tiny zero-dependency static server. Usage: node tools/serve.mjs [port]   (default 8080; PORT env also works)
 // SPA-safe: unknown extensionless paths serve index.html. Never serves outside the repo root.
 import { createServer } from 'node:http';
@@ -41,7 +42,7 @@ export function createAppServer({ root = ROOT, prefix = '/' } = {}) {
   });
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const args = process.argv.slice(2);
   const flag = (n) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : undefined; };
   const port = Number(args.find((a) => /^\d+$/.test(a)) ?? process.env.PORT ?? 8080);

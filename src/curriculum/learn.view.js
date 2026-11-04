@@ -12,7 +12,7 @@ import { lessons, belts } from "./lessons.js";
 import { due } from "./srs.js";
 import { plural } from "../shell/plural.js";
 import { el, heText, tr, replaceKeepingFocus } from "./dom.js";
-import { loadState, completeLesson } from "./actions.js";
+import { loadState, completeLesson, unmetPrerequisites } from "./actions.js";
 import { mountLesson } from "./lesson.view.js";
 import { mountReview } from "./review.view.js";
 import { mountLoanwords } from "./loanwords.view.js";
@@ -79,7 +79,7 @@ function mountMap(root, ctx) {
         track === "israel" ? el("a", { class: "btn secondary", href: "#/learn?dialogues=1" }, "Dialogues") : null),
       el("ol", { class: "alef-lesson-list", "aria-label": track === "read" ? "Reading lessons" : "Israel lessons" },
         ...list.map((l) => {
-          const ready = l.prerequisites.every((p) => done.has(p));
+          const ready = unmetPrerequisites(l, st).length === 0;
           const isDone = done.has(l.id);
           const state = isDone ? "done" : ready ? "available" : "locked";
           return el("li", { class: `alef-lesson alef-lesson-${state}`, "data-lesson": l.id },
@@ -92,7 +92,11 @@ function mountMap(root, ctx) {
               onclick: () => ctx && ctx.route && ctx.route(`/learn?lesson=${l.id}`) }, state === "done" ? tr(ctx, "learn.review", "Review") : tr(ctx, "learn.start", "Start")),
             " ",
             state === "available" ? el("button", { type: "button", class: "alef-btn alef-btn-secondary", "aria-label": `Mark complete: ${l.title}`,
-              onclick: async () => { await completeLesson(ctx, l); render(); } }, tr(ctx, "learn.markDone", "Mark complete")) : null);
+              onclick: async (event) => {
+                const button = event.currentTarget; if (button) button.disabled = true;
+                try { await completeLesson(ctx, l); render(); }
+                catch (error) { if (button) button.disabled = false; wrap.append(el("p", { role: "alert" }, "Could not save: " + (error?.message || error) + ". Please try again.")); }
+              } }, tr(ctx, "learn.markDone", "Mark complete")) : null);
         })));
   }
 

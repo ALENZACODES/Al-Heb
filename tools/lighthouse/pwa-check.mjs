@@ -43,7 +43,7 @@ const pageErrors = []; page.on('pageerror', (e) => pageErrors.push(e.message));
 // ---- 1. install + precache
 await page.goto(base + '#/welcome'); await page.waitForSelector('body[data-ready="1"]');
 await page.evaluate(() => { localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); return navigator.serviceWorker.ready; });
-await page.waitForFunction(() => !!navigator.serviceWorker.controller, null, { timeout: 15000 }).catch(() => {});
+await page.reload(); await page.waitForSelector('body[data-ready="1"]');
 const sw1 = await page.evaluate(async () => ({ controller: !!navigator.serviceWorker.controller, caches: await caches.keys(), n: (await (await caches.open((await caches.keys()).find((k) => k.startsWith('alef-shell-')))).keys()).length }));
 note('service worker registered and controlling the page', sw1.controller, JSON.stringify(sw1.caches));
 note('precache filled (alef-shell-* cache has entries)', sw1.n > 50, `${sw1.n} entries`);
@@ -83,25 +83,30 @@ for (const r of routes) {
 }
 await ctx.setOffline(false);
 
-// ---- 4. update flow: a new version of the precache list installs, takes over, and the old cache is removed
+// ---- 4. update flow: a new version waits for an explicit Reload action
 const oldKeys = await page.evaluate(async () => (await caches.keys()).filter((k) => k.startsWith('alef-shell-')));
 versionOverride = 'update-test-v2';
 const upd = await page.evaluate(async () => {
   const reg = await navigator.serviceWorker.getRegistration();
-  const states = []; let changed = false;
+  let changed = false;
   navigator.serviceWorker.addEventListener('controllerchange', () => { changed = true; });
   await reg.update();
-  const w = reg.installing || reg.waiting; if (w) w.addEventListener('statechange', () => states.push(w.state));
-  for (let i = 0; i < 150 && !(reg.active && reg.active.state === 'activated' && !reg.installing && !reg.waiting && (await caches.keys()).some((k) => k.endsWith('update-test-v2'))); i++) await new Promise((r) => setTimeout(r, 200));
-  return { keys: (await caches.keys()), changed, activeState: reg.active?.state, sawNew: !!w };
+  for (let i = 0; i < 150 && !reg.waiting; i++) await new Promise((r) => setTimeout(r, 200));
+  return { keys: await caches.keys(), changed, waiting: !!reg.waiting };
 });
-note('update: a changed precache version installs a new SW and activates it (skipWaiting)', upd.sawNew && upd.activeState === 'activated' && upd.keys.some((k) => k.endsWith('update-test-v2')), JSON.stringify(upd.keys));
-note('update: the old shell cache is deleted on activate', !upd.keys.some((k) => oldKeys.includes(k)), `old=${oldKeys.join(',')}`);
-note('update: the open page receives controllerchange (it can offer a reload)', upd.changed, upd.changed ? '' : 'no controllerchange seen (page has the new SW only after reload, or events missed)');
-const hasPrompt = await page.evaluate(() => /update|new version|reload/i.test(document.getElementById('announcer').textContent + document.body.innerText));
-note('update: the app tells the learner a new version is ready', hasPrompt, hasPrompt ? '' : 'no visible update notice: the tab keeps running old code until reloaded', true);
+note('update: the new version waits without interrupting the current page', upd.waiting && !upd.changed, JSON.stringify(upd.keys));
+const updateButton = page.locator('aside[aria-label="App update"] button');
+await updateButton.waitFor();
+note('update: the app tells the learner a new version is ready', await updateButton.isVisible());
+await Promise.all([page.waitForNavigation(), updateButton.click()]);
+await page.waitForSelector('body[data-ready="1"]');
+const activated = await page.evaluate(async () => {
+  const reg = await navigator.serviceWorker.getRegistration();
+  return { active: reg.active?.state === 'activated' && !reg.waiting, keys: await caches.keys() };
+});
+note('update: explicit Reload activates the waiting worker', activated.active);
+note('update: the old shell cache remains while a page is open', oldKeys.every(k => activated.keys.includes(k)));
 versionOverride = null;
-
 // ---- 5. persistence API and clear-site-data behaviour
 const per = await page.evaluate(async () => ({ api: !!(navigator.storage && navigator.storage.persist), persisted: navigator.storage?.persisted ? await navigator.storage.persisted() : null }));
 note('navigator.storage.persist is available in this browser', per.api, `persisted now: ${per.persisted}`);

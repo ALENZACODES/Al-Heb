@@ -258,7 +258,7 @@ Scale: ahead / even / behind / unproven. "Unproven" means the claim depends on s
 | id | Duolingo gap or strength (source) | ALEF move | ALEF has it now? (status; file) | effort / owner | Beaten when | Risk or honesty note |
 |---|---|---|---|---|---|---|
 | P085 | No Duolingo claim made; this is an ALEF-side prong. (none) | Printable book. | **done**: Print PDFs exist and are draft. `book/out/alef-book-8.5x11-print.pdf` | L / build | A print proof of one chapter is read cover to cover by a reviewer who lists errors. | Draft; no reviewer has read the book end to end. |
-| P086 | No Duolingo claim made; this is an ALEF-side prong. (none) | QR codes link book pages to app routes. | **partial**: QR images exist; host not deployed. `book/out/qr` | S / build | Scanning 10 QR codes opens the right route on a deployed URL. | Blocked by P093. |
+| P086 | No Duolingo claim made; this is an ALEF-side prong. (none) | QR codes link book pages to app routes. | **partial**: QR generator exists; host not deployed. `book/make_qr.py` | S / build | Scanning 10 QR codes opens the right route on a deployed URL. | Blocked by P093. |
 | P087 | No Duolingo claim made; this is an ALEF-side prong. (none) | Printable flashcards of letters. | **done**: Letter and A4 PDFs exist. `book/out/alef-mnemonic-flashcards-letter.pdf` | S / build | A learner prints and uses all 22 cards; images approved. | Images unapproved. |
 | P088 | No Duolingo claim made; this is an ALEF-side prong. (none) | Workbook with print worksheets. | **done**: Workbook view exists. `src/shell/workbook.view.js` | S / build | All workbook PDFs open and print on letter and A4. | Draft. |
 

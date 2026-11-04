@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync, mkdtempSync, writeFileSync, rmSync } from 'node:fs';
@@ -9,7 +10,7 @@ import { vocabFor, wordPool, skeleton, registryEntries, phrasebook } from '../bo
 import { LETTERS } from '../tools/images/spec.mjs';
 
 const BASE = { alef: 'א', bet: 'ב', gimel: 'ג', dalet: 'ד', he: 'ה', vav: 'ו', zayin: 'ז', chet: 'ח', tet: 'ט', yod: 'י', kaf: 'כ', lamed: 'ל', mem: 'מ', nun: 'נ', samekh: 'ס', ayin: 'ע', pe: 'פ', tsadi: 'צ', qof: 'ק', resh: 'ר', shin: 'ש', tav: 'ת' };
-const root = new URL('..', import.meta.url).pathname;
+const root = fileURLToPath(new URL('..', import.meta.url));
 const html = buildHtml(parseArgs(['--no-qr']));
 const read = (p) => readFileSync(new URL('../' + p, import.meta.url), 'utf8');
 const py = (code, ...args) => spawnSync('python3', ['-c', code, ...args], { encoding: 'utf8' });

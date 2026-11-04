@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import { test } from 'node:test';
 import { loadManifestFull } from '../tools/audio/manifest_io.mjs';
 import assert from 'node:assert/strict';
@@ -6,7 +7,7 @@ import path from 'node:path';
 import { buildKit, allFiles, SCENARIOS, MARKERS, clipMinutes, clipSeconds, hebLetters, KIT_TRADITIONS } from '../tools/audio/session_kit.mjs';
 import { section } from '../tools/audio/recording_script.mjs';
 
-const R = new URL('..', import.meta.url).pathname;
+const R = fileURLToPath(new URL('..', import.meta.url));
 const manifest = loadManifestFull(R);
 
 for (const t of KIT_TRADITIONS) for (const v of ['m', 'f']) {
@@ -67,7 +68,7 @@ test('prayer block starts a fresh session and keeps lines before words per praye
 
 test('kit files on disk are current, and the docs are honest: no recordings, unmeasured', () => {
   for (const [rel, text] of allFiles(manifest)) {
-    assert.equal(fs.readFileSync(path.join(R, rel), 'utf8'), text, `${rel} is stale (node tools/audio/session_kit.mjs --write)`);
+    assert.equal(fs.readFileSync(path.join(R, rel), 'utf8').replace(/\r\n/g, '\n'), text, `${rel} is stale (node tools/audio/session_kit.mjs --write)`);
   }
   const plan = fs.readFileSync(path.join(R, 'docs/voices/kit/israeli-m/session-plan.md'), 'utf8');
   assert.match(plan, /No recordings exist/); assert.match(plan, /NOT measured/); assert.match(plan, /\[ \] /);

@@ -2,7 +2,7 @@
 import { lessons, byId } from "./lessons.js";
 import { el, heText, tr, replaceKeepingFocus } from "./dom.js";
 import { loadContent, vowelEnglish, vowelIpa } from "./content.js";
-import { completeLesson, loadState } from "./actions.js";
+import { completeLesson, loadState, unmetPrerequisites } from "./actions.js";
 import { wordAudioId } from "./progress.js";
 import { playButton } from "./audio-ui.js";
 
@@ -26,7 +26,7 @@ export function mountLesson(root, ctx, lessonId) {
     const [c, st] = await Promise.all([loadContent(), loadState(ctx)]);
     if (!alive) return;
     const isDone = !!st.completed[lesson.id];
-    const unmet = lesson.prerequisites.filter((p) => !st.completed[p]);
+    const unmet = unmetPrerequisites(lesson, st);
     const idx = lessons.findIndex((l) => l.id === lesson.id);
     const next = lessons.slice(idx + 1).find((l) => l.track === lesson.track);
 
@@ -84,7 +84,12 @@ export function mountLesson(root, ctx, lessonId) {
 
     const completeBtn = el("button", { type: "button", class: "btn", disabled: unmet.length ? "" : null, onclick: async () => {
       completeBtn.disabled = true;
-      const { added } = await completeLesson(ctx, lesson);
+      let added;
+      try { ({ added } = await completeLesson(ctx, lesson)); }
+      catch (error) {
+        if (alive) { completeBtn.disabled = false; done.textContent = "Could not save: " + (error?.message || error) + ". Please try again."; }
+        return;
+      }
       if (!alive) return;
       completeBtn.textContent = "Completed";
       done.replaceChildren(el("p", {}, `Lesson complete. ${added} new review card${added === 1 ? "" : "s"} added.`),

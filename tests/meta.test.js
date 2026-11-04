@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 // Metadata scan/strip tests on synthetic fixtures written to a temp dir (no repo assets touched).
 // Tests needing ffmpeg, pdfinfo or python3+pypdf are skipped when those tools are absent.
 import test from 'node:test';
@@ -170,7 +171,7 @@ test('strip: dry-run changes nothing; --out leaves originals; incoming refused i
 test('CLI exit codes: 0 clean, 1 findings', () => {
   const d = tmp();
   write(d, 'a.png', png());
-  const run = () => spawnSync('node', [new URL('../tools/meta/scan.mjs', import.meta.url).pathname, '.', '--cwd', d, '--no-tools', '--allowlist', '/nonexistent'], { encoding: 'utf8' });
+  const run = () => spawnSync('node', [fileURLToPath(new URL('../tools/meta/scan.mjs', import.meta.url)), '.', '--cwd', d, '--no-tools', '--allowlist', '/nonexistent'], { encoding: 'utf8' });
   assert.equal(run().status, 0);
   write(d, 'b.png', png([chunk('tEXt', Buffer.from('k\0v'))]));
   const r = run();

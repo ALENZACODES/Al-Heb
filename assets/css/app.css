@@ -59,6 +59,7 @@ details summary { cursor: pointer; min-block-size: 2rem; }
 .sound-bar { display: flex; flex-wrap: wrap; gap: .25rem 1rem; align-items: center; padding: .4rem 1rem; font-size: .85rem; background: var(--warn-bg); color: var(--warn-fg); border-block-end: 1px solid var(--border); }
 .sound-bar p { margin: 0; }
 .sound-bar a { color: inherit; font-weight: 600; }
+.sound-bar button { min-inline-size: 44px; min-block-size: 44px; flex: none; padding: .25rem .5rem; color: inherit; background: transparent; border: 1px solid currentColor; border-radius: .4rem; cursor: pointer; }
 .sound-bar[data-mode] { }
 #sound-status[data-mode="file"] { font-weight: 600; }
 .opt-block { align-items: flex-start; padding-block: .35rem; }

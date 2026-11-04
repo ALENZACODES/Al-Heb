@@ -6,7 +6,7 @@ import { join, dirname } from 'node:path';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { parseHeaders, headersFor, cacheRuleCount, runChecks, woff2Coverage } from '../tools/deploy/check-deploy.mjs';
-import { listShipFiles } from '../tools/deploy/make-dist.mjs';
+import { listShipFiles, makeDist } from '../tools/deploy/make-dist.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const rules = parseHeaders(readFileSync(join(root, '_headers'), 'utf8'));
@@ -36,17 +36,18 @@ test('make-dist ships runtime files only', () => {
 });
 test('check-deploy passes on a build and FAILS when the headers are broken', { timeout: 120000 }, async () => {
   const tmp = mkdtempSync(join(tmpdir(), 'alef-deploy-'));
+  const build = makeDist({ out: `.test-dist-${process.pid}` });
   try {
-    cpSync(join(root, 'dist'), tmp, { recursive: true });
-    if (!existsSync(join(tmp, 'index.html'))) return; // dist not built in this checkout: nothing to check
+    cpSync(build.dist, tmp, { recursive: true });
+    assert.ok(existsSync(join(tmp, 'index.html')));
     cpSync(join(root, '_headers'), join(tmp, '_headers'));
     const good = await runChecks(tmp);
     assert.deepEqual(good.results.filter((r) => !r.pass).map((r) => r.name), []);
-    const bad = readFileSync(join(root, '_headers'), 'utf8').replace('Content-Type: application/manifest+json\n', '').replace("connect-src 'self'", "connect-src 'self' https://evil.example");
+    const bad = readFileSync(join(root, '_headers'), 'utf8').replace(/Content-Type: application\/manifest\+json\r?\n/, '').replace("connect-src 'self'", "connect-src 'self' https://evil.example");
     writeFileSync(join(tmp, '_headers'), bad);
     const r = await runChecks(tmp);
     const failed = r.results.filter((x) => !x.pass).map((x) => x.name).join(' | ');
     assert.match(failed, /third-party origins/); assert.match(failed, /application\/manifest\+json/);
-  } finally { rmSync(tmp, { recursive: true, force: true }); }
+  } finally { rmSync(tmp, { recursive: true, force: true }); rmSync(build.dist, { recursive: true, force: true }); }
 });
 test('woff2Coverage rejects a non-woff2 buffer', () => { assert.throws(() => woff2Coverage(Buffer.from('not a font at all, padding padding padding padding padding'), [0x5d0])); });

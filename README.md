@@ -18,6 +18,8 @@ node tools/build-precache.mjs    # regenerate precache-manifest.js after adding 
 No `npm install` is needed or possible here (registries blocked); `package.json` has scripts only.
 
 ## Status
+Start with [current completion and release boundaries](docs/COMPLETION.md). The lane notes below are historical snapshots and include superseded gaps; they are retained as an implementation history.
+
 See [docs/STATUS.md](docs/STATUS.md) for the latest honest per-route result. Summary of what is the app shell (lane 8):
 
 | Area | State |

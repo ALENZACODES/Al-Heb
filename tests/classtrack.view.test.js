@@ -7,8 +7,8 @@ class Node_ {
   setAttribute(k, v) { this.attrs[k] = v; if (k === 'class') this.className = v; }
   getAttribute(k) { return this.attrs[k]; }
   addEventListener(t, f) { (this.listeners[t] ||= []).push(f); }
-  append(...c) { for (let x of c) { if (typeof x === 'string') x = { nodeType: 3, data: x, parent: undefined }; this.children.push(x); if (x && x.parent !== undefined) x.parent = this; } }
-  replaceChildren(...c) { this.children = []; this.append(...c.filter((x) => x != null)); }
+  append(...c) { for (let x of c) { if (typeof x === 'string' || x == null) x = { nodeType: 3, data: String(x), parent: undefined }; this.children.push(x); if (x && x.parent !== undefined) x.parent = this; } }
+  replaceChildren(...c) { this.children = []; this.append(...c); }
   remove() { if (this.parent) this.parent.children = this.parent.children.filter((x) => x !== this); }
   focus() {}
   get text() { return this.children.map((c) => (c.nodeType === 3 ? c.data : c.text)).join(''); }
@@ -25,6 +25,7 @@ const go = async (query = {}, init = {}) => { const root = new Node_('div'); con
 test('week list: ten weeks, draft notice, one h1, links to week, handout and teacher plan', async () => {
   const { root, un } = await go();
   assert.match(root.text, /Draft: ALEF's own plan/);
+  assert.doesNotMatch(root.text, /null|undefined/);
   assert.equal(root.find((n) => n.tag === 'h1').length, 1);
   assert.equal(root.find((n) => n.attrs['data-week']).length, 10);
   const hrefs = root.find((n) => n.tag === 'a').map((a) => a.attrs.href);
@@ -43,6 +44,7 @@ test('progress comes from the store: finishing week 1 core lessons marks it done
 test('week page: lessons link to learn, Hebrew spans are lang=he dir=rtl, can-you list present', async () => {
   const { root } = await go({ week: '8' });
   assert.match(root.text, /Week 8:/);
+  assert.doesNotMatch(root.text, /null|undefined/);
   assert.ok(root.find((n) => n.tag === 'a' && n.attrs.href === '#/learn?lesson=r25').length >= 1);
   const he = root.find((n) => n.attrs.lang === 'he');
   assert.ok(he.length >= 5 && he.every((n) => n.attrs.dir === 'rtl'));

@@ -16,6 +16,19 @@ const ROW = 'display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-start';
 const BTN = 'display:inline-flex;flex-direction:column;align-items:center;min-width:3.4em;padding:4px 6px;font-size:1.1em';
 export const TRADITION_LABEL = { israeli: 'Israeli', sephardi: 'Sephardi', ashkenazi: 'Ashkenazi' };
 
+// The published host blocks Dicta, and the helper accepts only loopback
+// page origins. Keep these development integrations opt-in on local builds.
+export function supportsPhotoHelpers(href) {
+  try { const u = new URL(href); return /^https?:$/.test(u.protocol) && ['localhost', '127.0.0.1'].includes(u.hostname); }
+  catch { return false; }
+}
+
+export function photoHelperOptions(href, online, typed = '', configured = '') {
+  if (!supportsPhotoHelpers(href)) return { online: false, localServerUrl: null };
+  const url = typed.trim() || configured;
+  return { online: !!online, localServerUrl: isLocalHelperUrl(url) ? url : null };
+}
+
 /** Pure: result -> card data (testable without a DOM). */
 export function buildCards(result) {
   const cards = [];
@@ -35,6 +48,8 @@ export function buildCards(result) {
 export function mount(root, ctx = {}) {
   const doc = root.ownerDocument;
   const forced = ctx.photoEngines || null;
+  const pageUrl = doc.defaultView?.location?.href || doc.location?.href;
+  const helpersAvailable = supportsPhotoHelpers(pageUrl);
   const el = (tag, attrs = {}, ...kids) => {
     const n = doc.createElement(tag);
     for (const [k, v] of Object.entries(attrs)) { if (k === 'class') n.className = v; else if (k.startsWith('on')) n.addEventListener(k.slice(2), v); else n.setAttribute(k, v); }
@@ -50,10 +65,12 @@ export function mount(root, ctx = {}) {
   wrap.append(el('p', { class: 'photo-scope' }, 'Printed text only. Handwriting is not supported.'));
   if (!forced) wrap.append(el('p', { class: 'photo-privacy' }, 'The photo is read on this device (first use downloads about 5 MB of OCR data, then it is cached). It is not uploaded. Accuracy on real photos has not been measured yet: check what was read against the page.'));
   const onlineBox = el('input', { type: 'checkbox', id: 'photo-online' });
+  if (!helpersAvailable) onlineBox.setAttribute('disabled', '');
   if (!forced) wrap.append(el('label', { class: 'photo-online', for: 'photo-online', style: 'margin:0.5em 0' }, onlineBox, ' Add vowels to unpointed text online. This sends the recognised Hebrew text (not the photo) to Dicta (dicta.org.il).'));
+  if (!forced && !helpersAvailable) wrap.append(el('p', { class: 'photo-helper-unavailable', role: 'note' }, 'Online vowels and the translation helper are unavailable in this hosted app. Photo reading stays on your device. These optional integrations are available only when running ALEF locally on your computer.'));
   const helperInput = el('input', { type: 'url', id: 'photo-helper', placeholder: 'http://127.0.0.1:8787', 'aria-label': 'Local translation helper address (optional)', style: 'width:14em' });
   const helperMsg = el('span', { class: 'photo-helper-msg', role: 'status' });
-  if (!forced) wrap.append(el('details', { class: 'photo-translate-setup' },
+  if (!forced && helpersAvailable) wrap.append(el('details', { class: 'photo-translate-setup' },
     el('summary', {}, 'Translation: off. How to turn it on (optional)'),
     el('p', {}, 'Translation needs a helper program running on your own computer. Photos are never sent to it unless you also choose that; only the recognised Hebrew text is, and only to the address below. Steps: run `node tools/ocr-server.mjs` from the project folder (needs Python and the Argos Translate package with its he-en model; see docs/photo/TRANSLATION.md), then enter its address here.'),
     el('label', { for: 'photo-helper' }, 'Helper address (this computer only): '), helperInput, helperMsg,
@@ -153,11 +170,10 @@ export function mount(root, ctx = {}) {
       let engines = forced;
       if (!engines) {
         const { createPhotoEngines } = await import('./engines/index.js');
-        const typed = helperInput.value.trim();
+        const typed = (helperInput.value || '').trim();
         if (typed && !isLocalHelperUrl(typed)) { helperMsg.textContent = ' Only an address on this computer (localhost or 127.0.0.1) is accepted; translation stays off.'; }
         else helperMsg.textContent = '';
-        const helperUrl = typed && isLocalHelperUrl(typed) ? typed : (ctx.photoLocalServer || null);
-        engines = createPhotoEngines({ online: onlineBox.checked, localServerUrl: helperUrl,
+        engines = createPhotoEngines({ ...photoHelperOptions(pageUrl, onlineBox.checked, typed, ctx.photoLocalServer),
           onProgress: (m) => { if (m?.status) status.textContent = `${m.status}${typeof m.progress === 'number' ? ` ${Math.round(m.progress * 100)}%` : ''}`; } });
         activeEngines = engines;
       }

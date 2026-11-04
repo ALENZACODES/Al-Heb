@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import { test } from 'node:test';
 import { loadManifestFull } from '../tools/audio/manifest_io.mjs';
 import assert from 'node:assert/strict';
@@ -7,7 +8,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { renderMarkdown, renderCsv, TAKES } from '../tools/audio/recording_script.mjs';
 
-const R = new URL('..', import.meta.url).pathname;
+const R = fileURLToPath(new URL('..', import.meta.url));
 const manifest = loadManifestFull(R);
 
 test('script paths match manifest paths exactly', () => {
@@ -23,8 +24,8 @@ test('ashkenazi script states the human-only and open dialect decision; takes de
   assert.ok(Object.values(TAKES).every((n) => n >= 2));
 });
 test('generated docs on disk are current', () => {
-  for (const t of ['israeli', 'ashkenazi']) assert.equal(fs.readFileSync(path.join(R, `docs/voices/recording-script-${t}.md`), 'utf8'), renderMarkdown(manifest, t));
-  assert.equal(fs.readFileSync(path.join(R, 'docs/voices/recording-script.csv'), 'utf8'), renderCsv(manifest));
+  for (const t of ['israeli', 'ashkenazi']) assert.equal(fs.readFileSync(path.join(R, `docs/voices/recording-script-${t}.md`), 'utf8').replace(/\r\n/g, '\n'), renderMarkdown(manifest, t));
+  assert.equal(fs.readFileSync(path.join(R, 'docs/voices/recording-script.csv'), 'utf8').replace(/\r\n/g, '\n'), renderCsv(manifest));
 });
 test('docs state Google he-IL limit and no-Ashkenazi-TTS fact', () => {
   const p = fs.readFileSync(path.join(R, 'docs/voices/tts-evaluation-protocol.md'), 'utf8');

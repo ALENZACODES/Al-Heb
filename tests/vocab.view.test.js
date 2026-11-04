@@ -48,7 +48,7 @@ test("pack files match vocab5000.json, cover all 5000 words and stay small enoug
   let n = 0;
   for (const t of [500, 1000, 2000, 5000]) {
     const onDisk = readFileSync(new URL("../" + packPath(t), import.meta.url), "utf8");
-    assert.equal(onDisk, JSON.stringify(packs[t]) + "\n", `${packPath(t)} is stale: run node src/vocab/split-tiers.mjs`);
+    assert.equal(onDisk.replaceAll('\r\n', '\n'), JSON.stringify(packs[t]) + "\n", `${packPath(t)} is stale: run node src/vocab/split-tiers.mjs`);
     n += packs[t].count;
   }
   assert.equal(n, 5000);

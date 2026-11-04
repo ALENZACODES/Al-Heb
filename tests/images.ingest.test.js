@@ -52,7 +52,7 @@ test('csv: quoted commas, doubled quotes and newlines round-trip', () => {
 });
 test('the real manifest parses and every stem is safe and unique', async () => {
   const { loadManifest } = await import('../tools/images/ingest_lib.mjs');
-  const rows = loadManifest(new URL('../data/images/manifest.csv', import.meta.url).pathname);
+  const rows = loadManifest(fileURLToPath(new URL('../data/images/manifest.csv', import.meta.url)));
   assert.equal(rows.length, 797);
   assert.equal(new Set(rows.map((r) => r.stem)).size, 797);
 });

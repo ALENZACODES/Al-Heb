@@ -1,3 +1,4 @@
+import { pathToFileURL } from "node:url";
 // End-to-end check in headless Chromium: open #/scan, upload a generated SYNTHETIC test image, wait for real in-browser OCR, report what the page shows.
 // Usage: node tools/ocr-bench/e2e-scan.mjs <image> [prayer|sign] [screenshot.png] [--online]
 import { createRequire } from 'node:module';
@@ -44,4 +45,4 @@ export async function runScan({ image, mode = 'prayer', shot, online = false, ti
     return { ms, ...info, errors, externalOrigins: external, vendorRequests: reqs.filter((u) => u.includes('/assets/vendor/')).map((u) => u.split('/').pop()) };
   } finally { await browser.close(); server.close(); }
 }
-if (import.meta.url === `file://${process.argv[1]}`) console.log(JSON.stringify(await runScan({ image, mode, shot, online }), null, 1));
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) console.log(JSON.stringify(await runScan({ image, mode, shot, online }), null, 1));

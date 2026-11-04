@@ -154,7 +154,7 @@ export function main(argv = process.argv.slice(2)) {
   const target = path.join(ROOT, 'docs/voices/coverage.md');
   if (a.check) {
     const cur = fs.existsSync(target) ? fs.readFileSync(target, 'utf8') : '';
-    if (cur !== md) { console.error('docs/voices/coverage.md is stale; run: node tools/audio/coverage.mjs --write'); process.exit(1); }
+    if (cur.replace(/\r\n/g, '\n') !== md) { console.error('docs/voices/coverage.md is stale; run: node tools/audio/coverage.mjs --write'); process.exit(1); }
     console.log('coverage.md is current'); return;
   }
   if (a.write) { fs.writeFileSync(target, md); console.log('wrote docs/voices/coverage.md'); }

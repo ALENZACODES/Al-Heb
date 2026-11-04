@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import { test } from 'node:test';
 import { loadManifestFull } from '../tools/audio/manifest_io.mjs';
 import assert from 'node:assert/strict';
@@ -6,7 +7,7 @@ import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { computeCoverage, totals, whoIsMissing, renderWho, renderMarkdown, entryState, buildIndex, suppliers, TALENT } from '../tools/audio/coverage.mjs';
 
-const R = new URL('..', import.meta.url).pathname;
+const R = fileURLToPath(new URL('..', import.meta.url));
 const manifest = loadManifestFull(R);
 const E = (voice, tradition, kind, id, group, extra = {}) => ({ path: `audio/${voice}/${tradition}/${kind}/${id}.mp3`, voice, tradition, kind, id, text: 'שָׁלוֹם', status: 'missing', source: 'none', group, ...extra });
 
@@ -57,7 +58,7 @@ test('who is missing what: filters by voice/tradition/group and labels the suppl
 });
 
 test('docs/voices/coverage.md is current; CLI --who works and rejects bad flags', () => {
-  assert.equal(fs.readFileSync(path.join(R, 'docs/voices/coverage.md'), 'utf8'), renderMarkdown(manifest));
+  assert.equal(fs.readFileSync(path.join(R, 'docs/voices/coverage.md'), 'utf8').replace(/\r\n/g, '\n'), renderMarkdown(manifest));
   const cli = path.join(R, 'tools/audio/coverage.mjs');
   const ok = spawnSync('node', [cli, '--who', '--voice', 'f', '--tradition', 'ashkenazi'], { encoding: 'utf8' });
   assert.equal(ok.status, 0, ok.stderr); assert.match(ok.stdout, /Ashkenazi reader \(woman\)/);

@@ -14,6 +14,6 @@ test('pwa-check --quick: SW controls the page, Chromium reports no installabilit
   const r = spawnSync('node', ['tools/lighthouse/pwa-check.mjs', '--quick', '--out', join(tmpdir(), 'alef-pwa.json')], { cwd: root, encoding: 'utf8', timeout: 190000 });
   const run = JSON.parse(readFileSync(join(tmpdir(), 'alef-pwa.json'), 'utf8'));
   assert.deepEqual(run.results.filter((x) => !x.ok && !x.gap), [], r.stdout.slice(-1500));
-  for (const needle of [/installability/, /offline reload: \/learn/, /old shell cache is deleted/, /after clearing site data/]) assert.ok(run.results.some((x) => needle.test(x.name) && x.ok), String(needle));
+  for (const needle of [/installability/, /offline reload: \/learn/, /old shell cache remains/, /after clearing site data/]) assert.ok(run.results.some((x) => needle.test(x.name) && x.ok), String(needle));
   assert.equal(r.status, 0);
 });

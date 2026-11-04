@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 // Accessibility fixes (docs/A11Y.md open items). Unit checks run always; the browser checks need Playwright and are skipped without it.
 // They test DOM behaviour and axe rules only. No screen reader was used.
 import test from 'node:test';
@@ -7,7 +8,7 @@ import { readFileSync } from 'node:fs';
 import { createProgress } from '../src/letters/progress.js';
 import { createAppServer } from '../tools/serve.mjs';
 
-const root = new URL('..', import.meta.url).pathname.replace(/\/$/, '');
+const root = fileURLToPath(new URL('..', import.meta.url)).replace(/\/$/, '');
 const src = (p) => readFileSync(root + '/' + p, 'utf8');
 
 test('assisted tracing is recorded apart from drawn completions', () => {

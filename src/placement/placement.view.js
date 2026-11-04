@@ -1,14 +1,14 @@
 /**
  * Placement check (#/placement): DRAFT, UNREVIEWED 20-item check (letters, vowels, syllables, common words, Siddur phrases) that
  * recommends a starting lesson. Cutoffs are untested guesses. Result saved under store key "placement.v1". It never changes lesson
- * progress; it only links to the recommended lesson. Audio via ctx.audio (shown honestly; there are no recorded clips yet).
+ * completion history; accepting its recommendation separately saves an unlocked entry lesson. Audio via ctx.audio (shown honestly; there are no recorded clips yet).
  * ctx extras for tests: ctx.placementData {config, data}, ctx.rng, ctx.clock.now.
  */
 import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
 import { loadPlacementData } from './loader.js';
 import { STORE_KEY, buildItems, nextItem, recommend, seeded } from './model.js';
 
-export const DRAFT_NOTE = 'Draft, unreviewed: no Hebrew teacher has checked this check and no learner has tried it. The cutoffs that pick your starting lesson are untested guesses. You can always start at lesson r01 or pick any lesson yourself.';
+export const DRAFT_NOTE = 'Draft, unreviewed: no Hebrew teacher has checked this check and no learner has tried it. The cutoffs that pick your starting lesson are untested guesses. You can always start at lesson r01. Choosing the suggested lesson unlocks it without marking earlier lessons complete.';
 
 export function mount(root, ctx) {
   const wrap = el('section', { class: 'alef-placement', 'aria-labelledby': 'view-title' });
@@ -70,7 +70,13 @@ export function mount(root, ctx) {
       el('p', {}, `Lesson ${result.lesson}: ${lesson?.title || ''}`),
       el('p', {}, `${result.correct} of ${result.asked} answered correctly. Why: ${result.reason}.`),
       el('p', { class: 'draft-flag', role: 'note' }, DRAFT_NOTE),
-      el('a', { class: 'btn', id: 'placement-go', href: '#/learn?lesson=' + result.lesson }, 'Go to this lesson'),
+      el('a', { class: 'btn', id: 'placement-go', href: '#/learn?lesson=' + result.lesson, onclick: async (event) => {
+        event.preventDefault();
+        try {
+          await storeSet(ctx, 'placement.startLesson', result.lesson, { required: true });
+          ctx.route('/learn?lesson=' + result.lesson);
+        } catch { status.textContent = 'Could not save your starting point. Please try again.'; }
+      } }, 'Go to this lesson'),
       el('button', { type: 'button', class: 'btn', onclick: () => { answers = []; renderStart(result ? { lesson: result.lesson } : null); } }, 'Retake'),
     );
     focus(h1);

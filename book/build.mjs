@@ -119,7 +119,7 @@ ${o.print ? '' : '@page :first{margin:0;@bottom-center{content:none}}'}
 }
 
 export function fontFaces(outDir) {
-  const rel = (f) => relative(outDir, join(ROOT, 'assets/fonts', f)).split('/').map(encodeURIComponent).join('/').replace(/%2C/g, ',');
+  const rel = (f) => relative(outDir, join(ROOT, 'assets/fonts', f)).replaceAll('\\', '/').split('/').map(encodeURIComponent).join('/').replace(/%2C/g, ',');
   const heRange = 'U+0590-05FF, U+FB1D-FB4F, U+200C-200F, U+25CC';
   return `@font-face{font-family:"Noto Serif Hebrew";src:url("${rel('notoserifhebrew-NotoSerifHebrew[wdth,wght].ttf')}") format("truetype");font-weight:100 900;unicode-range:${heRange}}
 @font-face{font-family:"Frank Ruhl Libre";src:url("${rel('frankruhllibre-FrankRuhlLibre[wght].ttf')}") format("truetype");font-weight:300 900;unicode-range:${heRange}}
@@ -136,7 +136,7 @@ export function buildHtml(o, pages = {}) {
   const pg = (id) => `<span class="pg">${pages[id] ?? '&middot;&middot;&middot;'}</span>`;
   const toc = (id, label) => `<li><a href="#${id}" style="display:contents"><span class="t">${label}</span>${pg(id)}</a></li>`;
   const idx = readJson('assets/img/index.json');
-  const R = createImgResolver({ base: relative(outDir, join(ROOT, 'assets/img')) || '.', files: idx?.files || [], generated: readJson('data/images/generated-manifest.json') });
+  const R = createImgResolver({ base: relative(outDir, join(ROOT, 'assets/img')).replaceAll('\\', '/') || '.', files: idx?.files || [], generated: readJson('data/images/generated-manifest.json') });
   const lettersJson = loadLettersJson();
   const lettersSource = lettersJson ? 'data/letters/letters.json' : 'built-in glyph map (data/letters/letters.json not present)';
   const reg = registryBlessing();

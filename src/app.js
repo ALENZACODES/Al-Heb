@@ -8,6 +8,7 @@ import { createStubAudio } from './shell/audio-stub.js';
 import { createShellAudio } from './shell/audio.js';
 import { createShardLoader } from './shell/audio-shards.js';
 import { fetchCoreManifest, afterPaint } from './shell/audio-manifest.js';
+import { watchForUpdate } from './shell/update-notice.js';
 import { h, heSpan, unavailableCard } from './shell/ui.js';
 
 const settings = createSettings(store);
@@ -101,7 +102,14 @@ function wireChrome() {
   document.querySelector('.site-nav').addEventListener('focusout', (e) => { if (more.classList.contains('open') && e.relatedTarget && !e.relatedTarget.closest('.site-nav')) setMore(false); });
   // the one-line sound status is cut with an ellipsis on a phone; tap it to read the whole message
   const st = document.getElementById('sound-status');
-  st.addEventListener('click', () => st.classList.toggle('open'));
+  const expand = document.getElementById('sound-expand');
+  const toggleSound = () => {
+    const open = st.classList.toggle('open');
+    expand.setAttribute('aria-expanded', String(open));
+    expand.textContent = open ? 'Less' : 'Details';
+  };
+  st.addEventListener('click', toggleSound);
+  expand.addEventListener('click', toggleSound);
 }
 
 let unmount = () => {};
@@ -181,7 +189,13 @@ async function boot() {
   scheduleManifest(audio);
   startShardLoading(audio);
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-    navigator.serviceWorker.register('sw.js').catch((e) => console.warn('service worker not registered', e));
+    navigator.serviceWorker.register('sw.js').then((registration) => watchForUpdate(navigator.serviceWorker, registration, (activate, message) => {
+      document.getElementById('update-notice')?.remove();
+      const notice = h('aside', { id: 'update-notice', class: 'card', 'aria-label': 'App update' },
+        h('p', { role: 'status' }, message || 'A new version is ready. Reload when you are at a good stopping point.'),
+        h('button', { type: 'button', onclick: activate }, 'Reload'));
+      document.getElementById('main').before(notice);
+    }, () => location.reload())).catch((e) => console.warn('service worker not registered', e));
   }
 }
 

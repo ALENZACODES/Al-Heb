@@ -34,6 +34,11 @@ const extras = ['/letters/alef', '/letters/final-mem', '/letters/bet?tab=drill&x
 const seen = new Set(); const ALL = [];
 for (const r of [...routeList, ...extras.map((p) => ({ path: p, route: 'extra' }))]) if (!seen.has(r.path)) { seen.add(r.path); ALL.push(r); }
 if (quick) { const keep = new Set(['/', '/learn', '/letters/alef', '/letters/atlas', '/sounds', '/read/bless-priestly-1', '/vocab', '/nope']); for (let i = ALL.length - 1; i >= 0; i--) if (!keep.has(ALL[i].path)) ALL.splice(i, 1); }
+if (args.includes('--routes')) {
+  const keep = new Set(arg('--routes', '').split(','));
+  for (let i = ALL.length - 1; i >= 0; i--) if (!keep.has(ALL[i].path)) ALL.splice(i, 1);
+  if (!ALL.length) throw new Error('--routes did not match any known route');
+}
 const slug = (p) => (p === '/' ? 'home' : p.slice(1).replace(/[\/?=&%]+/g, '_'));
 const SAMPLE_DARK = ['/', '/learn', '/letters/alef', '/letters/atlas', '/sounds', '/read/bless-priestly-1', '/soundgap', '/vowelboard', '/vocab', '/spotit/bet', '/dialogues/d-cafe', '/settings', '/about', '/workbook', '/scan'];
 const SAMPLE_DESK = ['/', '/learn', '/letters/alef', '/letters/atlas', '/sounds', '/read/bless-priestly-1', '/soundgap', '/vocab', '/settings', '/calendar'];
@@ -188,10 +193,15 @@ if (phases.has('interact')) {
     const svg = pg.locator('.alef-trace svg[role=img]').first();
     const have = await svg.count();
     if (!have) { rec(`trace ${id}: svg present`, false, 'no tracing svg'); await pg.close(); continue; }
+    await pg.evaluate(() => document.fonts.ready);
     await svg.scrollIntoViewIfNeeded(); const box = await svg.boundingBox(); const strokes = L[script].strokes;
     const toPx = (p) => [box.x + (p[0] / 1000) * box.width, box.y + (p[1] / 1000) * box.height];
     let counted = [];
     for (let i = 0; i < strokes.length; i++) {
+      // Feedback and late fonts can change layout between strokes. Aim at the current
+      // surface, as a learner would, instead of reusing stale viewport coordinates.
+      await svg.scrollIntoViewIfNeeded();
+      Object.assign(box, await svg.boundingBox());
       const m = strokes[i].median; const [x0, y0] = toPx(m[0]);
       await pg.mouse.move(x0, y0); await pg.mouse.down();
       for (const p of m.slice(1)) { const [x, y] = toPx(p); await pg.mouse.move(x, y, { steps: 3 }); }

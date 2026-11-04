@@ -1,3 +1,4 @@
+import { pathToFileURL } from "node:url";
 // Rebuild data/wordtrace/words.json from course data:  node src/wordtrace/build.mjs
 // Inputs: data/curriculum/lessons.json, data/vocab/words.json, data/pronunciation/prayerwords.json, data/corpus/registry.json (siddur entries).
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -14,7 +15,7 @@ export function loadSources() {
 }
 export function build() { return buildBank(loadSources()); }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const bank = build();
   writeFileSync(new URL('../../data/wordtrace/words.json', import.meta.url), JSON.stringify(bank, null, 1) + '\n');
   const c = {}; for (const w of bank.words) c[w.level] = (c[w.level] || 0) + 1;

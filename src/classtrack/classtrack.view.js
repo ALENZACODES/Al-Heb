@@ -59,7 +59,7 @@ export function mount(root, ctx = {}) {
     function renderList() {
       const cur = currentWeekIndex(weeks, completed);
       const total = weeks.reduce((a, w) => a + w.lessons.length, 0), done = weeks.reduce((a, w) => a + weekStatus(w, completed).done, 0);
-      main.replaceChildren(draft, bad,
+      main.replaceChildren(draft, ...(bad ? [bad] : []),
         h('section', { class: 'card', 'aria-labelledby': 'ct-h-over' },
           h('h2', { id: 'ct-h-over' }, 'A ten-week plan for a beginners reading class'),
           h('p', {}, 'Each week gives a few letters and signs, a 10-minute warm-up, text to read aloud, homework in this app and a self-check. Use it alongside a class or on your own. It is not a copy of any book or course.'),
@@ -81,7 +81,7 @@ export function mount(root, ctx = {}) {
 
     function renderWeek(i) {
       const w = weeks[i], s = weekStatus(w, completed), nw = newInWeek(d, i), ra = readAloudTexts(d, w);
-      main.replaceChildren(draft, bad,
+      main.replaceChildren(draft, ...(bad ? [bad] : []),
         h('p', {}, h('a', { href: '#/classtrack' }, 'All weeks')),
         h('section', { class: 'card', 'aria-labelledby': 'ct-h-wk' },
           h('h2', { id: 'ct-h-wk' }, `Week ${w.week}: ${w.title}`),

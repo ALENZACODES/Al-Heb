@@ -42,7 +42,7 @@ test('glyphFor uses letters.json record when valid, else built-in', () => {
   assert.equal(glyphFor('bet', [{ id: 'bet', he: 'x' }]), GLYPHS.bet);
 });
 test('book HTML: 27 letter pages, RTL Hebrew spans, draft opening prayer block, URL map', () => {
-  const html = buildHtml(parseArgs([]));
+  const html = buildHtml(parseArgs(['--no-qr']));
   assert.equal((html.match(/<section class="letter"/g) || []).length, 27);
   assert.match(html, /lang="he" dir="rtl"/);
   assert.match(html, /Prayer for the One Who Begins/); assert.match(html, /pending clergy\/educator review/); assert.match(html, /Hineni/);

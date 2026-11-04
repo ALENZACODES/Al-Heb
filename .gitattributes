@@ -1,0 +1,9 @@
+# Keep runtime bytes stable across Windows and Linux for service-worker hashes.
+*.js text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.svg text eol=lf
+*.webmanifest text eol=lf
+*.yml text eol=lf

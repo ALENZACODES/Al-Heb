@@ -115,3 +115,47 @@ test("describeCard: letter, vowel (tradition-aware) and word cards", async () =>
   assert.deepEqual(describeCard("word:r01:1", c, "israeli").audio, ["word", "r01-w1"]);
   assert.equal(describeCard("letter:nope", c, "israeli"), null);
 });
+
+test("chosen placement unlocks its lesson without completing earlier lessons, then permits the next lesson", async () => {
+  const store = memStore({ "placement.startLesson": "r10" });
+  const root = new Node_("div"); const un = mount(root, ctxFor(store, { lesson: "r10" })); await tick(80);
+  assert.doesNotMatch(root.text, /Locked: finish/);
+  assert.ok(!("disabled" in btn(root, /Mark lesson complete/).attrs));
+  await btn(root, /Mark lesson complete/).click();
+  assert.deepEqual(Object.keys(store.m["curriculum.progress"].completed), ["r10"]);
+  un();
+  const next = new Node_("div"); const unNext = mount(next, ctxFor(store, { lesson: "r11" })); await tick(80);
+  assert.doesNotMatch(next.text, /Locked: finish/); unNext();
+});
+
+test("review save rejection retains the revealed card for retry and never counts it as reviewed", async () => {
+  const store = memStore();
+  const { completeLesson } = await import("../src/curriculum/actions.js");
+  const { byId } = await import("../src/curriculum/lessons.js");
+  await completeLesson(ctxFor(store, {}), byId.r01);
+  const originalSet = store.set; let fail = true;
+  store.set = (k, v) => { if (k === "srs.cards" && fail) throw new Error("disk unavailable"); originalSet(k, v); };
+  const root = new Node_("div"); const un = mount(root, ctxFor(store, { review: "1" })); await tick(80);
+  await btn(root, /Show answer/).click();
+  assert.doesNotMatch(root.text, /null|undefined/);
+  await root.find(n => n.attrs["data-rating"] === "3")[0].click();
+  assert.match(root.text, /Card 1 of 6/); assert.match(root.text, /Could not save: disk unavailable/);
+  fail = false;
+  await root.find(n => n.attrs["data-rating"] === "3")[0].click();
+  assert.match(root.text, /Card 2 of 6/); un();
+});
+
+test("lesson completion rejects failed card writes without claiming completion, and can retry", async () => {
+  const store = memStore(); const originalSet = store.set; let fail = true;
+  store.set = (key, value) => { if (fail && key === "srs.cards") throw new Error("disk unavailable"); originalSet(key, value); };
+  const root = new Node_("div"); const un = mount(root, ctxFor(store, { lesson: "r01" })); await tick(80);
+  const complete = btn(root, /Mark lesson complete/);
+  await complete.click();
+  assert.match(root.text, /Could not save: disk unavailable/);
+  assert.equal(store.m["curriculum.progress"], undefined);
+  assert.equal(complete.disabled, false);
+  fail = false; await complete.click();
+  assert.ok(store.m["curriculum.progress"].completed.r01);
+  assert.equal(Object.keys(store.m["srs.cards"]).length, 6);
+  assert.match(root.text, /Lesson complete/); un();
+});

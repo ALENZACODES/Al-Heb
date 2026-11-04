@@ -81,10 +81,10 @@ test('everything index.html loads locally is precached (offline first paint)', (
   const refs = [...html.matchAll(/(?:href|src)="([^"#:]+)"/g)].map((m) => m[1]).filter((u) => !u.startsWith('http'));
   for (const u of refs) assert.ok(list.has(u), `${u} is referenced by index.html but not precached (run node tools/build-precache.mjs)`);
 });
-test('sw.js: precache, versioned shell cache, old caches deleted on activate, skipWaiting + clients.claim, navigation falls back offline', () => {
+test('sw.js: precache, versioned shell cache, staged activation, no automatic claim, immutable offline navigation', () => {
   const sw = read('sw.js');
   assert.match(sw, /ALEF_PRECACHE/); assert.match(sw, /alef-shell-\$\{VERSION\}/);
-  assert.match(sw, /caches\.delete\(k\)/); assert.match(sw, /skipWaiting\(\)/); assert.match(sw, /clients\.claim\(\)/);
+  assert.match(sw, /caches\.delete\(k\)/); assert.match(sw, /skipWaiting\(\)/); assert.doesNotMatch(sw, /clients\.claim\(\)/); assert.match(sw, /UPDATE_BLOCKED/);
   assert.match(sw, /req\.mode === 'navigate'/); assert.match(sw, /offline\.html/);
   assert.match(sw, /headers\.has\('range'\)/, 'range requests bypass the cache (partial 206 responses cannot be cached)');
   assert.doesNotThrow(() => new Function(sw.replace(/importScripts\([^)]*\);/, '')));

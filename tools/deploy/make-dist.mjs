@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { pathToFileURL } from "node:url";
 // Build the Cloudflare Pages output folder: copies ONLY runtime files into dist/ and prints a size report.
 //   node tools/deploy/make-dist.mjs [--out dist] [--with-img]
 // What ships: the precache list (tools/build-precache.mjs computeManifest) + the extras below. Never shipped: docs, tests, book,
@@ -73,7 +74,7 @@ export function makeDist({ out = 'dist', img = false } = {}) {
 }
 
 const mib = (b) => (b / 1048576).toFixed(2) + ' MiB';
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const args = process.argv.slice(2);
   const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
   const r = makeDist({ out: opt('--out', 'dist'), img: args.includes('--with-img') });

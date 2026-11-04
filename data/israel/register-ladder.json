@@ -1,0 +1,2015 @@
+{
+ "version": 1,
+ "status": "draft-needs-native-review",
+ "proofread": false,
+ "needsNativeReview": true,
+ "note": "Original content written by an AI agent from general knowledge. Nothing was copied from a course, book, phrasebook or website. Pointing, transliteration (capitals mark the stressed syllable), register labels and gender forms have NOT been checked by a native speaker. No audio exists for any item. Nothing here was tested with learners.",
+ "registers": [
+  {
+   "id": "formal",
+   "label": "Formal",
+   "text": "Careful, written or official. Correct, but can sound stiff in a shop or cafe."
+  },
+  {
+   "id": "neutral",
+   "label": "Neutral",
+   "text": "Safe with anyone: strangers, older people, staff."
+  },
+  {
+   "id": "casual",
+   "label": "Casual",
+   "text": "Relaxed everyday speech with people you chat with."
+  },
+  {
+   "id": "slang",
+   "label": "Slang",
+   "text": "Friends and peers. Avoid with officials, elders and when unsure."
+  }
+ ],
+ "categories": [
+  "agreement",
+  "apologising",
+  "bargaining",
+  "bus",
+  "cafe",
+  "directions",
+  "greetings",
+  "paying",
+  "pharmacy",
+  "phone",
+  "sherut",
+  "shuk",
+  "small-talk",
+  "taxi",
+  "thanks",
+  "train"
+ ],
+ "pairs": [
+  {
+   "id": "lad-hello",
+   "category": "greetings",
+   "situation": "Saying hello to someone",
+   "textbook": {
+    "he": "שָׁלוֹם",
+    "translit": "shaLOM",
+    "en": "hello (also goodbye, peace)",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "הַיי",
+    "translit": "HAI",
+    "en": "hi",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Shalom works for everyone at any time. Hai is the everyday greeting among peers; it is borrowed from English.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-bye",
+   "category": "greetings",
+   "situation": "Ending a conversation",
+   "textbook": {
+    "he": "לְהִתְרָאוֹת",
+    "translit": "lehitra'OT",
+    "en": "goodbye (until we see each other)",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "יַאלְלָה, בַּיי",
+    "translit": "yaLA, BAI",
+    "en": "okay then, bye",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Yalla is a very common way to wrap up. The stress marked on yalla is our best understanding; check it with a native speaker.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Meaning and register are solid; the exact stress of yalla is less certain."
+  },
+  {
+   "id": "lad-morning",
+   "category": "greetings",
+   "situation": "Replying to 'good morning'",
+   "textbook": {
+    "he": "בֹּקֶר טוֹב",
+    "translit": "BOker TOV",
+    "en": "good morning",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "בֹּקֶר אוֹר",
+    "translit": "BOker OR",
+    "en": "good morning (the traditional reply, 'morning of light')",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Many people reply to boker tov with boker or. Plain boker tov back is also fine.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "The reply is real, but how often people use it today was not checked."
+  },
+  {
+   "id": "lad-hows-it-going",
+   "category": "greetings",
+   "situation": "Asking a friend how things are",
+   "textbook": {
+    "he": "מָה שְׁלוֹמְךָ?",
+    "translit": "ma shlomCHA?",
+    "en": "how are you?",
+    "register": "formal",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "מָה שְׁלוֹמְךָ?",
+      "translit": "ma shlomCHA?"
+     },
+     "f": {
+      "he": "מָה שְׁלוֹמֵךְ?",
+      "translit": "ma shloMECH?"
+     }
+    }
+   },
+   "everyday": {
+    "he": "מָה נִשְׁמָע?",
+    "translit": "ma nishMA?",
+    "en": "what's new? how are you?",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "genderNote": "The textbook line changes with the person you are talking to: -cha for a man, -ech for a woman. The everyday line does not change.",
+   "note": "Ma nishma has no gender in it, so you can use it for anyone and avoid choosing the wrong ending. Ma shlomcha / shlomech sounds more formal or careful in a casual chat.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-whats-up",
+   "category": "greetings",
+   "situation": "A quick check-in with someone you know",
+   "textbook": {
+    "he": "מָה קוֹרֶה?",
+    "translit": "ma koREH?",
+    "en": "what's going on?",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "הַכֹּל טוֹב?",
+    "translit": "haKOL tov?",
+    "en": "everything good?",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Both are common openers between people who know each other.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-reply-fine",
+   "category": "greetings",
+   "situation": "Answering 'how are you'",
+   "textbook": {
+    "he": "אֲנִי מַרְגִּישׁ טוֹב, תּוֹדָה",
+    "translit": "ani margIsh tov, toDA",
+    "en": "I feel well, thank you",
+    "register": "formal",
+    "gender": "speaker",
+    "forms": {
+     "m": {
+      "he": "אֲנִי מַרְגִּישׁ טוֹב, תּוֹדָה",
+      "translit": "ani margIsh tov, toDA"
+     },
+     "f": {
+      "he": "אֲנִי מַרְגִּישָׁה טוֹב, תּוֹדָה",
+      "translit": "ani margiSHA tov, toDA"
+     }
+    }
+   },
+   "everyday": {
+    "he": "הַכֹּל טוֹב, תּוֹדָה",
+    "translit": "haKOL tov, toDA",
+    "en": "all good, thanks",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "The textbook line changes with your own gender (margish / margisha). The everyday line does not.",
+   "note": "Hakol tov is the easy reply and carries no gender.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-so-so",
+   "category": "greetings",
+   "situation": "Saying things are not great",
+   "textbook": {
+    "he": "לֹא כָּל כָּךְ טוֹב",
+    "translit": "lo kol KACH tov",
+    "en": "not so good",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "כָּכָה כָּכָה",
+    "translit": "kaCHA kaCHA",
+    "en": "so-so",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Kacha kacha is usually said with a tilting hand.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-thanks-small",
+   "category": "thanks",
+   "situation": "Thanking someone for a small favour",
+   "textbook": {
+    "he": "תּוֹדָה רַבָּה",
+    "translit": "toDA raBA",
+    "en": "thanks a lot",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "תּוֹדָה",
+    "translit": "toDA",
+    "en": "thanks",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Plain toda is what people commonly hear for small things like a held door; toda raba is warmer and fits a bigger favour. Saying toda raba for everything can sound heavy.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Frequency of use is a general impression, not measured."
+  },
+  {
+   "id": "lad-thanks-help",
+   "category": "thanks",
+   "situation": "Thanking someone who helped you",
+   "textbook": {
+    "he": "אֲנִי מוֹדֶה לָכֶם עַל הָעֶזְרָה",
+    "translit": "ani moDE lachem al ha'ezRA",
+    "en": "I thank you (plural) for the help",
+    "register": "formal",
+    "gender": "speaker",
+    "forms": {
+     "m": {
+      "he": "אֲנִי מוֹדֶה לָכֶם עַל הָעֶזְרָה",
+      "translit": "ani moDE lachem al ha'ezRA"
+     },
+     "f": {
+      "he": "אֲנִי מוֹדָה לָכֶם עַל הָעֶזְרָה",
+      "translit": "ani moDA lachem al ha'ezRA"
+     }
+    }
+   },
+   "everyday": {
+    "he": "תּוֹדָה עַל הָעֶזְרָה",
+    "translit": "toDA al ha'ezRA",
+    "en": "thanks for the help",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "genderNote": "The textbook line changes with your own gender (modeh / modah). The everyday line does not.",
+   "note": "Ani modeh lachem is correct but reads like a speech or a formal letter in a shop or on the street.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-youre-welcome",
+   "category": "thanks",
+   "situation": "Replying to thanks",
+   "textbook": {
+    "he": "עַל לֹא דָּבָר",
+    "translit": "al lo daVAR",
+    "en": "you're welcome (lit. it's nothing)",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "בְּכֵיף",
+    "translit": "bekEIF",
+    "en": "my pleasure, gladly",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Bevakasha is the neutral reply. Bekef is a relaxed alternative among peers.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-okay",
+   "category": "agreement",
+   "situation": "Agreeing to a suggestion",
+   "textbook": {
+    "he": "בְּסֵדֶר",
+    "translit": "beSEder",
+    "en": "okay, in order",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "סַבָּבָּה",
+    "translit": "saBAba",
+    "en": "cool, fine by me",
+    "register": "slang",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Sababa is a friendly slang word from Arabic. Use beseder with strangers, older people and in formal settings.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-of-course",
+   "category": "agreement",
+   "situation": "Saying 'of course'",
+   "textbook": {
+    "he": "בְּוַדַּאי",
+    "translit": "bevaDAI",
+    "en": "certainly",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "בֶּטַח",
+    "translit": "BEtach",
+    "en": "sure, of course",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Betach is the everyday word. Bevadai is correct but a little stiff in a chat.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-no-problem",
+   "category": "agreement",
+   "situation": "Saying 'no problem'",
+   "textbook": {
+    "he": "אֵין בְּעָיָה",
+    "translit": "en be'aYA",
+    "en": "there is no problem",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "בְּלִי לַחַץ",
+    "translit": "bli LAchatz",
+    "en": "no pressure",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Bli lachatz means 'no pressure', used when someone says they are late or unsure.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Meaning is clear; how widespread it is was not checked."
+  },
+  {
+   "id": "lad-agree",
+   "category": "agreement",
+   "situation": "Saying you agree",
+   "textbook": {
+    "he": "אֲנִי מַסְכִּים",
+    "translit": "ani masKIM",
+    "en": "I agree",
+    "register": "formal",
+    "gender": "speaker",
+    "forms": {
+     "m": {
+      "he": "אֲנִי מַסְכִּים",
+      "translit": "ani masKIM"
+     },
+     "f": {
+      "he": "אֲנִי מַסְכִּימָה",
+      "translit": "ani maskiMA"
+     }
+    }
+   },
+   "everyday": {
+    "he": "בְּדִיּוּק",
+    "translit": "bediYUK",
+    "en": "exactly",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "genderNote": "The textbook line changes with your own gender (maskim / maskima). Bediyuk does not.",
+   "note": "In conversation people often just say bediyuk (exactly) instead of announcing agreement.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-not-really",
+   "category": "agreement",
+   "situation": "Gently disagreeing",
+   "textbook": {
+    "he": "אֵינֶנִּי בָּטוּחַ",
+    "translit": "eNEni baTU'ach",
+    "en": "I'm not sure",
+    "register": "formal",
+    "gender": "speaker",
+    "forms": {
+     "m": {
+      "he": "אֵינֶנִּי בָּטוּחַ",
+      "translit": "eNEni baTU'ach"
+     },
+     "f": {
+      "he": "אֵינֶנִּי בְּטוּחָה",
+      "translit": "eNEni betuCHA"
+     }
+    }
+   },
+   "everyday": {
+    "he": "לֹא בָּטוּחַ",
+    "translit": "lo baTU'ach",
+    "en": "not sure",
+    "register": "neutral",
+    "gender": "speaker",
+    "forms": {
+     "m": {
+      "he": "לֹא בָּטוּחַ",
+      "translit": "lo baTU'ach"
+     },
+     "f": {
+      "he": "לֹא בְּטוּחָה",
+      "translit": "lo betuCHA"
+     }
+    }
+   },
+   "genderNote": "Both lines are gendered by your own gender: batuach (m.) / betucha (f.).",
+   "note": "Enenni is literary. Lo batuach (m.) / lo betucha (f.) is how most people say it.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "The pointing of the feminine forms is the main doubt."
+  },
+  {
+   "id": "lad-order-coffee",
+   "category": "cafe",
+   "situation": "Asking for a coffee at a counter",
+   "textbook": {
+    "he": "אֲנִי רוֹצֶה קָפֶה, בְּבַקָּשָׁה",
+    "translit": "ani roTSE kaFE, bevakaSHA",
+    "en": "I want a coffee, please",
+    "register": "neutral",
+    "gender": "speaker",
+    "forms": {
+     "m": {
+      "he": "אֲנִי רוֹצֶה קָפֶה, בְּבַקָּשָׁה",
+      "translit": "ani roTSE kaFE, bevakaSHA"
+     },
+     "f": {
+      "he": "אֲנִי רוֹצָה קָפֶה, בְּבַקָּשָׁה",
+      "translit": "ani roTSA kaFE, bevakaSHA"
+     }
+    }
+   },
+   "everyday": {
+    "he": "אֶפְשָׁר קָפֶה, בְּבַקָּשָׁה?",
+    "translit": "efSHAR kaFE, bevakaSHA?",
+    "en": "is it possible to get a coffee, please?",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "genderNote": "The first line changes with your own gender (rotse / rotsa). Efshar does not.",
+   "note": "Ani rotse is understood and not rude. Efshar ...? is the opener commonly heard when ordering, and it has no gender. Note that the final -h in rotseh is not pronounced.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "'Commonly heard' is an impression from general knowledge; not measured."
+  },
+  {
+   "id": "lad-order-hafuch",
+   "category": "cafe",
+   "situation": "Choosing a milky coffee",
+   "textbook": {
+    "he": "אֲנִי מַעֲדִיף קָפֶה עִם חָלָב",
+    "translit": "ani ma'aDIF kaFE im chaLAV",
+    "en": "I prefer coffee with milk",
+    "register": "formal",
+    "gender": "speaker",
+    "forms": {
+     "m": {
+      "he": "אֲנִי מַעֲדִיף קָפֶה עִם חָלָב",
+      "translit": "ani ma'aDIF kaFE im chaLAV"
+     },
+     "f": {
+      "he": "אֲנִי מַעֲדִיפָה קָפֶה עִם חָלָב",
+      "translit": "ani ma'adiFA kaFE im chaLAV"
+     }
+    }
+   },
+   "everyday": {
+    "he": "הָפוּךְ, בְּבַקָּשָׁה",
+    "translit": "haFUCH, bevakaSHA",
+    "en": "a hafuch, please",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "The textbook line changes with your own gender (ma'adif / ma'adifa). The everyday line does not.",
+   "note": "Hafuch is a standard cafe order for a milky coffee (it is on many cafe menus). Asking for the drink by its menu name is quicker than describing it.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-takeaway",
+   "category": "cafe",
+   "situation": "Saying you want it to go",
+   "textbook": {
+    "he": "אֲנִי רוֹצֶה לָקַחַת אֶת זֶה אִתִּי",
+    "translit": "ani roTSE laKAchat et ZE iTI",
+    "en": "I want to take this with me",
+    "register": "neutral",
+    "gender": "speaker",
+    "forms": {
+     "m": {
+      "he": "אֲנִי רוֹצֶה לָקַחַת אֶת זֶה אִתִּי",
+      "translit": "ani roTSE laKAchat et ZE iTI"
+     },
+     "f": {
+      "he": "אֲנִי רוֹצָה לָקַחַת אֶת זֶה אִתִּי",
+      "translit": "ani roTSA laKAchat et ZE iTI"
+     }
+    }
+   },
+   "everyday": {
+    "he": "לָקַחַת, בְּבַקָּשָׁה",
+    "translit": "laKAchat, bevakaSHA",
+    "en": "to take away, please",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "The first line changes with your own gender. The everyday line does not.",
+   "note": "Staff often ask 'to sit or to take?' and a one-word answer is normal. Some places also say take-away in English.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "The exact wording staff use was not checked."
+  },
+  {
+   "id": "lad-order-food",
+   "category": "cafe",
+   "situation": "Ordering a dish",
+   "textbook": {
+    "he": "אֲנִי רוֹצֶה לְהַזְמִין סָלָט",
+    "translit": "ani roTSE lehazMIN saLAT",
+    "en": "I want to order a salad",
+    "register": "formal",
+    "gender": "speaker",
+    "forms": {
+     "m": {
+      "he": "אֲנִי רוֹצֶה לְהַזְמִין סָלָט",
+      "translit": "ani roTSE lehazMIN saLAT"
+     },
+     "f": {
+      "he": "אֲנִי רוֹצָה לְהַזְמִין סָלָט",
+      "translit": "ani roTSA lehazMIN saLAT"
+     }
+    }
+   },
+   "everyday": {
+    "he": "אֲנִי אֶקַּח סָלָט",
+    "translit": "ani eKACH saLAT",
+    "en": "I'll take a salad",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "genderNote": "The textbook line changes with your own gender. Ani ekach does not.",
+   "note": "Ani ekach ('I'll take') is a very natural way to order and has no gender.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-recommend",
+   "category": "cafe",
+   "situation": "Asking what is good",
+   "textbook": {
+    "he": "מָה אַתֶּם מַמְלִיצִים?",
+    "translit": "ma aTEM mamliTSIM?",
+    "en": "what do you recommend?",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "מָה כְּדַאי לָקַחַת?",
+    "translit": "ma keDAI laKAchat?",
+    "en": "what is worth taking?",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Kedai means 'worth it / a good idea'. It is a handy word for many questions.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Idiomatic use of kedai is from general knowledge."
+  },
+  {
+   "id": "lad-bill",
+   "category": "cafe",
+   "situation": "Asking for the bill",
+   "textbook": {
+    "he": "אֶפְשָׁר לְקַבֵּל אֶת הַחֶשְׁבּוֹן, בְּבַקָּשָׁה?",
+    "translit": "efSHAR lekaBEL et hacheshBON, bevakaSHA?",
+    "en": "may I have the bill, please?",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "אֶפְשָׁר חֶשְׁבּוֹן?",
+    "translit": "efSHAR cheshBON?",
+    "en": "bill?",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Short requests with efshar are normal and not impolite.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-shuk-price",
+   "category": "shuk",
+   "situation": "Asking the price of fruit",
+   "textbook": {
+    "he": "מָה הַמְּחִיר שֶׁל קִילוֹ אֶחָד?",
+    "translit": "ma hamechIR shel KIlo eCHAD?",
+    "en": "what is the price of one kilo?",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "בְּכַמָּה הַקִּילוֹ?",
+    "translit": "bekaMA hakiLO?",
+    "en": "how much is the kilo?",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Bekama? ('for how much?') is the usual price question at a stall. Note: stress on kilo is our best understanding.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "The phrase is solid; the stress of kilo is the doubt."
+  },
+  {
+   "id": "lad-shuk-kilo",
+   "category": "shuk",
+   "situation": "Asking for a quantity",
+   "textbook": {
+    "he": "אֲנִי רוֹצֶה קִילוֹ עַגְבָנִיּוֹת",
+    "translit": "ani roTSE KIlo agvaniYOT",
+    "en": "I want a kilo of tomatoes",
+    "register": "neutral",
+    "gender": "speaker",
+    "forms": {
+     "m": {
+      "he": "אֲנִי רוֹצֶה קִילוֹ עַגְבָנִיּוֹת",
+      "translit": "ani roTSE KIlo agvaniYOT"
+     },
+     "f": {
+      "he": "אֲנִי רוֹצָה קִילוֹ עַגְבָנִיּוֹת",
+      "translit": "ani roTSA KIlo agvaniYOT"
+     }
+    }
+   },
+   "everyday": {
+    "he": "קִילוֹ עַגְבָנִיּוֹת, בְּבַקָּשָׁה",
+    "translit": "KIlo agvaniYOT, bevakaSHA",
+    "en": "a kilo of tomatoes, please",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "The first line changes with your own gender. The second does not.",
+   "note": "At a stall, the noun phrase plus bevakasha is enough.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-shuk-taste",
+   "category": "shuk",
+   "situation": "Asking to try something",
+   "textbook": {
+    "he": "הַאִם אֶפְשָׁר לִטְעוֹם?",
+    "translit": "ha'IM efSHAR litOM?",
+    "en": "is it possible to taste?",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "אֶפְשָׁר לִטְעוֹם?",
+    "translit": "efSHAR litOM?",
+    "en": "can I taste?",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Ha'im at the front is almost never needed. A rising voice is enough to make a question.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-shuk-more",
+   "category": "shuk",
+   "situation": "Asking for a bit more",
+   "textbook": {
+    "he": "אֶפְשָׁר לְקַבֵּל עוֹד קְצָת?",
+    "translit": "efSHAR lekaBEL od ktsat?",
+    "en": "may I have a little more?",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "תֵּן לִי עוֹד קְצָת",
+    "translit": "TEN li od KTSAT",
+    "en": "give me a bit more",
+    "register": "casual",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "תֵּן לִי עוֹד קְצָת",
+      "translit": "TEN li od KTSAT"
+     },
+     "f": {
+      "he": "תְּנִי לִי עוֹד קְצָת",
+      "translit": "teNI li od KTSAT"
+     }
+    }
+   },
+   "genderNote": "The everyday line changes with the person you are talking to: ten (to a man) / tni (to a woman).",
+   "note": "Asking a vendor with an imperative like ten li is common and not rude in itself; add bevakasha if you want it softer.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Whether it reads as friendly or abrupt depends on tone, which text cannot show."
+  },
+  {
+   "id": "lad-headache",
+   "category": "pharmacy",
+   "situation": "Telling the pharmacist about a headache",
+   "textbook": {
+    "he": "יֵשׁ לִי כְּאֵב רֹאשׁ",
+    "translit": "YESH li ke'EV rosh",
+    "en": "I have a headache",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "כּוֹאֵב לִי הָרֹאשׁ",
+    "translit": "ko'EV li haROSH",
+    "en": "my head hurts",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Both are fine. Ko'ev li ha... works with other body parts too (ha-gav, ha-beten).",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-cough",
+   "category": "pharmacy",
+   "situation": "Asking for something for a cough",
+   "textbook": {
+    "he": "הַאִם יֵשׁ לָכֶם תְּרוּפָה לְשִׁעוּל?",
+    "translit": "ha'IM yesh LAchem tru'FA leshi'UL?",
+    "en": "do you have a medicine for a cough?",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "יֵשׁ לָכֶם מַשֶּׁהוּ נֶגֶד שִׁעוּל?",
+    "translit": "yesh LAchem maSHEhu NEged shi'UL?",
+    "en": "do you have something for a cough?",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Mashehu ('something') is useful everywhere. Always check with a pharmacist before taking medicine.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-prescription",
+   "category": "pharmacy",
+   "situation": "Asking if you need a prescription",
+   "textbook": {
+    "he": "הַאִם נִדְרָשׁ מִרְשָׁם?",
+    "translit": "ha'IM nidRASH mirSHAM?",
+    "en": "is a prescription required?",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "צָרִיךְ מִרְשָׁם?",
+    "translit": "tsaRICH mirSHAM?",
+    "en": "need a prescription?",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Tsarich (m.) is used impersonally here and does not refer to you.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-bus-goes",
+   "category": "bus",
+   "situation": "Checking the bus goes where you want",
+   "textbook": {
+    "he": "הַאִם הָאוֹטוֹבּוּס הַזֶּה נוֹסֵעַ לַמֶּרְכָּז?",
+    "translit": "ha'IM ha'otoBUS haZE noSEa lamerKAZ?",
+    "en": "does this bus travel to the centre?",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "זֶה הוֹלֵךְ לַמֶּרְכָּז?",
+    "translit": "ZE hoLECH lamerKAZ?",
+    "en": "does this go to the centre?",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Holech ('goes') is commonly used for vehicles too, though it literally means 'walks'.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Idiomatic use of holech for buses is from general knowledge."
+  },
+  {
+   "id": "lad-bus-getoff",
+   "category": "bus",
+   "situation": "Asking where to get off",
+   "textbook": {
+    "he": "בְּאֵיזוֹ תַּחֲנָה עָלַי לָרֶדֶת?",
+    "translit": "be'eyZO tachaNA aLAI laREdet?",
+    "en": "at which stop must I get off?",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "אֵיפֹה כְּדַאי לָרֶדֶת?",
+    "translit": "eiFO keDAI laREdet?",
+    "en": "where is it good to get off?",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Kedai again: 'where is it a good idea to get off'.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Idiomatic use of kedai here is from general knowledge."
+  },
+  {
+   "id": "lad-ravkav",
+   "category": "bus",
+   "situation": "Topping up a transit card",
+   "textbook": {
+    "he": "אֲנִי רוֹצֶה לִטְעוֹן אֶת הָרַב־קַו",
+    "translit": "ani roTSE lit'ON et haravKAV",
+    "en": "I want to load the Rav-Kav",
+    "register": "neutral",
+    "gender": "speaker",
+    "forms": {
+     "m": {
+      "he": "אֲנִי רוֹצֶה לִטְעוֹן אֶת הָרַב־קַו",
+      "translit": "ani roTSE lit'ON et haravKAV"
+     },
+     "f": {
+      "he": "אֲנִי רוֹצָה לִטְעוֹן אֶת הָרַב־קַו",
+      "translit": "ani roTSA lit'ON et haravKAV"
+     }
+    }
+   },
+   "everyday": {
+    "he": "אֶפְשָׁר לִטְעוֹן רַב־קַו?",
+    "translit": "efSHAR lit'ON ravKAV?",
+    "en": "can I load a Rav-Kav?",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "genderNote": "The first line changes with your own gender. Efshar does not.",
+   "note": "Rav-Kav is the national rechargeable transit card. Where and how you can top it up was not verified here: ask staff.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "The phrase is simple; how topping up works in practice was not checked."
+  },
+  {
+   "id": "lad-taxi-dest",
+   "category": "taxi",
+   "situation": "Telling the driver the destination",
+   "textbook": {
+    "he": "אֲנִי רוֹצֶה לִנְסוֹעַ לִרְחוֹב דִּיזֶנְגּוֹף",
+    "translit": "ani roTSE linSO'a lirCHOV DIzengof",
+    "en": "I want to travel to Dizengoff Street",
+    "register": "formal",
+    "gender": "speaker",
+    "forms": {
+     "m": {
+      "he": "אֲנִי רוֹצֶה לִנְסוֹעַ לִרְחוֹב דִּיזֶנְגּוֹף",
+      "translit": "ani roTSE linSO'a lirCHOV DIzengof"
+     },
+     "f": {
+      "he": "אֲנִי רוֹצָה לִנְסוֹעַ לִרְחוֹב דִּיזֶנְגּוֹף",
+      "translit": "ani roTSA linSO'a lirCHOV DIzengof"
+     }
+    }
+   },
+   "everyday": {
+    "he": "לְדִיזֶנְגּוֹף, בְּבַקָּשָׁה",
+    "translit": "lediZENgof, bevakaSHA",
+    "en": "to Dizengoff, please",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "The textbook line changes with your own gender. The everyday line does not.",
+   "note": "Naming the place with le- plus bevakasha is all a driver needs. Dizengoff is a real street in Tel Aviv, used here only as an example.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-taxi-stop",
+   "category": "taxi",
+   "situation": "Asking the driver to stop",
+   "textbook": {
+    "he": "אֶפְשָׁר לַעֲצֹר פֹּה, בְּבַקָּשָׁה?",
+    "translit": "efSHAR la'aTSOR PO, bevakaSHA?",
+    "en": "may we stop here, please?",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "תַּעֲצֹר פֹּה, בְּבַקָּשָׁה",
+    "translit": "ta'aTSOR PO, bevakaSHA",
+    "en": "stop here, please",
+    "register": "casual",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "תַּעֲצֹר פֹּה, בְּבַקָּשָׁה",
+      "translit": "ta'aTSOR PO, bevakaSHA"
+     },
+     "f": {
+      "he": "תַּעַצְרִי פֹּה, בְּבַקָּשָׁה",
+      "translit": "ta'atsRI PO, bevakaSHA"
+     }
+    }
+   },
+   "genderNote": "The everyday line changes with the driver: ta'atsor (to a man) / ta'atsri (to a woman).",
+   "note": "The everyday line is addressed to the driver, so it changes with the driver's gender.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-taxi-meter",
+   "category": "taxi",
+   "situation": "Asking for the meter",
+   "textbook": {
+    "he": "הַאִם תּוּכַל לְהַפְעִיל אֶת הַמּוֹנֶה?",
+    "translit": "ha'IM tuCHAL lehaf'IL et hamoNE?",
+    "en": "could you start the meter?",
+    "register": "formal",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "הַאִם תּוּכַל לְהַפְעִיל אֶת הַמּוֹנֶה?",
+      "translit": "ha'IM tuCHAL lehaf'IL et hamoNE?"
+     },
+     "f": {
+      "he": "הַאִם תּוּכְלִי לְהַפְעִיל אֶת הַמּוֹנֶה?",
+      "translit": "ha'IM tuchLI lehaf'IL et hamoNE?"
+     }
+    }
+   },
+   "everyday": {
+    "he": "עִם מוֹנֶה, בְּבַקָּשָׁה",
+    "translit": "im moNE, bevakaSHA",
+    "en": "with the meter, please",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "The textbook line changes with the driver's gender (tuchal / tuchli). The everyday line does not.",
+   "note": "Moneh is the word for a taxi meter, as far as we know. Check with a native speaker; we are not sure how people usually phrase this request.",
+   "confidence": "low",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Unsure how this request is phrased in practice. Verify before relying on it."
+  },
+  {
+   "id": "lad-sherut-off",
+   "category": "sherut",
+   "situation": "Asking the driver to let you off",
+   "textbook": {
+    "he": "אֲנִי יוֹרֵד בַּתַּחֲנָה הַבָּאָה",
+    "translit": "ani yoRED bataCHAna haba'A",
+    "en": "I get off at the next stop",
+    "register": "formal",
+    "gender": "speaker",
+    "forms": {
+     "m": {
+      "he": "אֲנִי יוֹרֵד בַּתַּחֲנָה הַבָּאָה",
+      "translit": "ani yoRED bataCHAna haba'A"
+     },
+     "f": {
+      "he": "אֲנִי יוֹרֶדֶת בַּתַּחֲנָה הַבָּאָה",
+      "translit": "ani yoREdet bataCHAna haba'A"
+     }
+    }
+   },
+   "everyday": {
+    "he": "לְיַד הָרַמְזוֹר, בְּבַקָּשָׁה",
+    "translit": "leYAD haramZOR, bevakaSHA",
+    "en": "by the traffic light, please",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "The textbook line changes with your own gender (yored / yoredet). The everyday line does not.",
+   "note": "A sherut is a shared taxi (shirut). How stops work on a given route was not verified: ask the driver or other passengers.",
+   "confidence": "low",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Sherut customs were not verified. Verify before relying on it."
+  },
+  {
+   "id": "lad-sherut-pass",
+   "category": "sherut",
+   "situation": "Passing money to the driver",
+   "textbook": {
+    "he": "אֶפְשָׁר לְהַעֲבִיר אֶת הַכֶּסֶף לַנֶּהָג?",
+    "translit": "efSHAR leha'aVIR et haKEsef lanehAG?",
+    "en": "may I pass the money to the driver?",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "תַּעֲבִיר קָדִימָה, בְּבַקָּשָׁה",
+    "translit": "ta'aVIR kaDIma, bevakaSHA",
+    "en": "pass it forward, please",
+    "register": "casual",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "תַּעֲבִיר קָדִימָה, בְּבַקָּשָׁה",
+      "translit": "ta'aVIR kaDIma, bevakaSHA"
+     },
+     "f": {
+      "he": "תַּעֲבִירִי קָדִימָה, בְּבַקָּשָׁה",
+      "translit": "ta'aviRI kaDIma, bevakaSHA"
+     }
+    }
+   },
+   "genderNote": "The everyday line is addressed to the passenger in front, so it changes with their gender.",
+   "note": "Passing money forward in a shared taxi is commonly described, but we could not confirm it for every route. Treat as a possibility, not a rule.",
+   "confidence": "low",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Sherut payment customs not verified. Verify before relying on it."
+  },
+  {
+   "id": "lad-train-ticket",
+   "category": "train",
+   "situation": "Buying a return ticket",
+   "textbook": {
+    "he": "אֲנִי רוֹצֶה כַּרְטִיס הָלוֹךְ וָשׁוֹב לְחֵיפָה",
+    "translit": "ani roTSE karTIS haLOCH vaSHOV lecheiFA",
+    "en": "I want a return ticket to Haifa",
+    "register": "neutral",
+    "gender": "speaker",
+    "forms": {
+     "m": {
+      "he": "אֲנִי רוֹצֶה כַּרְטִיס הָלוֹךְ וָשׁוֹב לְחֵיפָה",
+      "translit": "ani roTSE karTIS haLOCH vaSHOV lecheiFA"
+     },
+     "f": {
+      "he": "אֲנִי רוֹצָה כַּרְטִיס הָלוֹךְ וָשׁוֹב לְחֵיפָה",
+      "translit": "ani roTSA karTIS haLOCH vaSHOV lecheiFA"
+     }
+    }
+   },
+   "everyday": {
+    "he": "הָלוֹךְ וָשׁוֹב לְחֵיפָה, בְּבַקָּשָׁה",
+    "translit": "haLOCH vaSHOV lecheiFA, bevakaSHA",
+    "en": "return to Haifa, please",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "The first line changes with your own gender. The second does not.",
+   "note": "Halokh vashov means a return trip; the card or ticket machine may also offer other options.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-train-platform",
+   "category": "train",
+   "situation": "Asking which platform",
+   "textbook": {
+    "he": "מֵאֵיזֶה רָצִיף יוֹצֵאת הָרַכֶּבֶת לְתֵל אָבִיב?",
+    "translit": "me'EIze raTSIF yoTSEt haraKEvet leTEL aVIV?",
+    "en": "from which platform does the train to Tel Aviv leave?",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "מֵאֵיזֶה רָצִיף לְתֵל אָבִיב?",
+    "translit": "me'EIze raTSIF leTEL aVIV?",
+    "en": "which platform for Tel Aviv?",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Dropping the verb is natural when the context is clear.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-excuse-where",
+   "category": "directions",
+   "situation": "Stopping someone to ask the way",
+   "textbook": {
+    "he": "סְלִיחָה, הַאִם תּוּכַל לוֹמַר לִי אֵיפֹה נִמְצָא הַשּׁוּק?",
+    "translit": "sliCHA, ha'IM tuCHAL lo'MAR li eiFO nimTSA hashUK?",
+    "en": "excuse me, could you tell me where the market is?",
+    "register": "formal",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "סְלִיחָה, הַאִם תּוּכַל לוֹמַר לִי אֵיפֹה נִמְצָא הַשּׁוּק?",
+      "translit": "sliCHA, ha'IM tuCHAL lo'MAR li eiFO nimTSA hashUK?"
+     },
+     "f": {
+      "he": "סְלִיחָה, הַאִם תּוּכְלִי לוֹמַר לִי אֵיפֹה נִמְצָא הַשּׁוּק?",
+      "translit": "sliCHA, ha'IM tuchLI lo'MAR li eiFO nimTSA hashUK?"
+     }
+    }
+   },
+   "everyday": {
+    "he": "סְלִיחָה, אֵיפֹה הַשּׁוּק?",
+    "translit": "sliCHA, eiFO hashUK?",
+    "en": "excuse me, where is the market?",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "genderNote": "The textbook line changes with the gender of the person you ask (tuchal / tuchli). The everyday line does not.",
+   "note": "Slicha + the place name is enough. Short questions are normal.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-is-far",
+   "category": "directions",
+   "situation": "Asking if it is far",
+   "textbook": {
+    "he": "הַאִם זֶה רָחוֹק מִכָּאן?",
+    "translit": "ha'IM ze raCHOK mikAN?",
+    "en": "is it far from here?",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "זֶה רָחוֹק מִפֹּה?",
+    "translit": "ZE raCHOK miPO?",
+    "en": "is it far from here?",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Mipo is the everyday 'from here'; mikan is more formal.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-straight-right",
+   "category": "directions",
+   "situation": "Following directions",
+   "textbook": {
+    "he": "יָשָׁר, וְאַחַר כָּךְ יָמִינָה",
+    "translit": "yaSHAR, ve'aCHAR KACH yaMIna",
+    "en": "straight, and afterwards right",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "יָשָׁר, וְאַחֲרֵי זֶה יָמִינָה",
+    "translit": "yaSHAR, ve'acharEI ZE yaMIna",
+    "en": "straight, and after that right",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Both patterns are heard. Smola means left.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Which one is more frequent was not checked."
+  },
+  {
+   "id": "lad-lost",
+   "category": "directions",
+   "situation": "Saying you are lost",
+   "textbook": {
+    "he": "אֲנִי אָבוּד",
+    "translit": "ani aVUD",
+    "en": "I am lost",
+    "register": "neutral",
+    "gender": "speaker",
+    "forms": {
+     "m": {
+      "he": "אֲנִי אָבוּד",
+      "translit": "ani aVUD"
+     },
+     "f": {
+      "he": "אֲנִי אֲבוּדָה",
+      "translit": "ani avuDA"
+     }
+    }
+   },
+   "everyday": {
+    "he": "הָלַכְתִּי לְאִיבּוּד",
+    "translit": "halACHti le'iBUD",
+    "en": "I went astray",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "The first line changes with your own gender (avud / avuda). The second does not.",
+   "note": "The past-tense 'I' form is the same for men and women, so the everyday line avoids the gender choice.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Whether halachti le'ibud is the most natural phrase here is uncertain."
+  },
+  {
+   "id": "lad-pay-card",
+   "category": "paying",
+   "situation": "Asking to pay by card",
+   "textbook": {
+    "he": "הַאִם אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס אַשְׁרַאי?",
+    "translit": "ha'IM efSHAR leshaLEM bekarTIS ashRAI?",
+    "en": "may I pay by credit card?",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "אֶפְשָׁר בְּכַרְטִיס?",
+    "translit": "efSHAR bekarTIS?",
+    "en": "card okay?",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Ashrai means credit. Plain bekartis is understood.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-pay-cash",
+   "category": "paying",
+   "situation": "Paying cash",
+   "textbook": {
+    "he": "אֲנִי אֲשַׁלֵּם בִּמְזֻמָּן",
+    "translit": "ani ashaLEM bimzuMAN",
+    "en": "I will pay in cash",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "בִּמְזֻמָּן, אִם אֶפְשָׁר",
+    "translit": "bimzuMAN, im efSHAR",
+    "en": "cash, if possible",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Mezuman means cash.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-receipt",
+   "category": "paying",
+   "situation": "Asking for a receipt",
+   "textbook": {
+    "he": "אֶפְשָׁר לְקַבֵּל קַבָּלָה, בְּבַקָּשָׁה?",
+    "translit": "efSHAR lekaBEL kabaLA, bevakaSHA?",
+    "en": "may I have a receipt, please?",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "אֶפְשָׁר קַבָּלָה?",
+    "translit": "efSHAR kabaLA?",
+    "en": "receipt?",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Same idea as the bill: efshar plus the noun.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-split-bill",
+   "category": "paying",
+   "situation": "Splitting the bill",
+   "textbook": {
+    "he": "אֶפְשָׁר לְחַלֵּק אֶת הַחֶשְׁבּוֹן?",
+    "translit": "efSHAR lechaLEK et hacheshBON?",
+    "en": "can we divide the bill?",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "נְחַלֵּק אֶת זֶה?",
+    "translit": "nechaLEK et ZE?",
+    "en": "shall we split this?",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Ask when ordering, not after, if you can: some places make this easier than others.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Practice varies by place."
+  },
+  {
+   "id": "lad-too-expensive",
+   "category": "bargaining",
+   "situation": "Saying the price is high",
+   "textbook": {
+    "he": "הַמְּחִיר גָּבוֹהַּ מִדַּי",
+    "translit": "hamechIR gaVOAH miDAI",
+    "en": "the price is too high",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "זֶה קְצָת יָקָר",
+    "translit": "ZE ktsat yaKAR",
+    "en": "that's a bit expensive",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Ktsat ('a bit') keeps it polite. Haggling is not appropriate everywhere: see the etiquette card.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-discount",
+   "category": "bargaining",
+   "situation": "Asking for a better price",
+   "textbook": {
+    "he": "הַאִם תּוּכַל לַעֲשׂוֹת לִי הַנָּחָה?",
+    "translit": "ha'IM tuCHAL la'aSOT li hanaCHA?",
+    "en": "could you give me a discount?",
+    "register": "formal",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "הַאִם תּוּכַל לַעֲשׂוֹת לִי הַנָּחָה?",
+      "translit": "ha'IM tuCHAL la'aSOT li hanaCHA?"
+     },
+     "f": {
+      "he": "הַאִם תּוּכְלִי לַעֲשׂוֹת לִי הַנָּחָה?",
+      "translit": "ha'IM tuchLI la'aSOT li hanaCHA?"
+     }
+    }
+   },
+   "everyday": {
+    "he": "תַּעֲשֶׂה לִי מְחִיר",
+    "translit": "ta'aSE li meCHIR",
+    "en": "give me a (good) price",
+    "register": "casual",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "תַּעֲשֶׂה לִי מְחִיר",
+      "translit": "ta'aSE li meCHIR"
+     },
+     "f": {
+      "he": "תַּעֲשִׂי לִי מְחִיר",
+      "translit": "ta'aSI li meCHIR"
+     }
+    }
+   },
+   "genderNote": "Both lines change with the gender of the seller: tuchal / tuchli and ta'ase / ta'asi.",
+   "note": "Ta'ase li mechir ('make me a price') is a phrase commonly heard in markets. Smile and be ready to accept no.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Idiom is familiar from general knowledge; not confirmed with a native speaker."
+  },
+  {
+   "id": "lad-if-two",
+   "category": "bargaining",
+   "situation": "Offering to buy more",
+   "textbook": {
+    "he": "אִם אֶקַּח שְׁנַיִם, מָה יִהְיֶה הַמְּחִיר?",
+    "translit": "im eKACH shnaYIM, ma yihYE hamechIR?",
+    "en": "if I take two, what will the price be?",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "אִם אֶקַּח שְׁנַיִם, כַּמָּה זֶה יוֹצֵא?",
+    "translit": "im eKACH shnaYIM, kaMA ze yoTSE?",
+    "en": "if I take two, how much does it come to?",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Kama ze yotse is a natural way to ask the total.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Idiom from general knowledge."
+  },
+  {
+   "id": "lad-polite-no",
+   "category": "bargaining",
+   "situation": "Declining politely",
+   "textbook": {
+    "he": "תּוֹדָה, אֲנִי אַחְשֹׁב עַל זֶה",
+    "translit": "toDA, ani achSHOV al ZE",
+    "en": "thanks, I'll think about it",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "תּוֹדָה, אוּלַי בַּפַּעַם הַבָּאָה",
+    "translit": "toDA, uLAI bapa'AM haba'A",
+    "en": "thanks, maybe next time",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Both are polite and neither needs a gender choice.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-from",
+   "category": "small-talk",
+   "situation": "Asking where someone is from",
+   "textbook": {
+    "he": "מֵאַיִן אַתָּה?",
+    "translit": "me'AYin aTA?",
+    "en": "from where are you?",
+    "register": "formal",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "מֵאַיִן אַתָּה?",
+      "translit": "me'AYin aTA?"
+     },
+     "f": {
+      "he": "מֵאַיִן אַתְּ?",
+      "translit": "me'AYin AT?"
+     }
+    }
+   },
+   "everyday": {
+    "he": "מֵאֵיפֹה אַתָּה?",
+    "translit": "me'eiFO aTA?",
+    "en": "where are you from?",
+    "register": "neutral",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "מֵאֵיפֹה אַתָּה?",
+      "translit": "me'eiFO aTA?"
+     },
+     "f": {
+      "he": "מֵאֵיפֹה אַתְּ?",
+      "translit": "me'eiFO AT?"
+     }
+    }
+   },
+   "genderNote": "Both lines change with the person you ask: ata (to a man) / at (to a woman).",
+   "note": "Me'ayin is literary. Me'eifo is the everyday way. Both change with the gender of the listener.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-speak-english",
+   "category": "small-talk",
+   "situation": "Asking if someone speaks English",
+   "textbook": {
+    "he": "הַאִם אַתָּה מְדַבֵּר אַנְגְּלִית?",
+    "translit": "ha'IM aTA medaBER anGLIT?",
+    "en": "do you speak English?",
+    "register": "formal",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "הַאִם אַתָּה מְדַבֵּר אַנְגְּלִית?",
+      "translit": "ha'IM aTA medaBER anGLIT?"
+     },
+     "f": {
+      "he": "הַאִם אַתְּ מְדַבֶּרֶת אַנְגְּלִית?",
+      "translit": "ha'IM AT medaBEret anGLIT?"
+     }
+    }
+   },
+   "everyday": {
+    "he": "אַתָּה מְדַבֵּר אַנְגְּלִית?",
+    "translit": "aTA medaBER anGLIT?",
+    "en": "you speak English?",
+    "register": "neutral",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "אַתָּה מְדַבֵּר אַנְגְּלִית?",
+      "translit": "aTA medaBER anGLIT?"
+     },
+     "f": {
+      "he": "אַתְּ מְדַבֶּרֶת אַנְגְּלִית?",
+      "translit": "AT medaBEret anGLIT?"
+     }
+    }
+   },
+   "genderNote": "Both lines change with the person you ask.",
+   "note": "A rising voice makes the question; ha'im is not needed.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-still-learning",
+   "category": "small-talk",
+   "situation": "Explaining your Hebrew level",
+   "textbook": {
+    "he": "הָעִבְרִית שֶׁלִּי עֲדַיִן לֹא טוֹבָה",
+    "translit": "ha'ivRIT sheLI adaYIN lo toVA",
+    "en": "my Hebrew is not yet good",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "אֲנִי עוֹד לוֹמֵד",
+    "translit": "ani OD loMED",
+    "en": "I'm still learning",
+    "register": "casual",
+    "gender": "speaker",
+    "forms": {
+     "m": {
+      "he": "אֲנִי עוֹד לוֹמֵד",
+      "translit": "ani OD loMED"
+     },
+     "f": {
+      "he": "אֲנִי עוֹד לוֹמֶדֶת",
+      "translit": "ani OD loMEdet"
+     }
+    }
+   },
+   "genderNote": "The everyday line changes with your own gender (lomed / lomedet).",
+   "note": "Telling people you are still learning is a good way to get them to speak slowly and to stay in Hebrew.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-slower",
+   "category": "small-talk",
+   "situation": "Asking someone to slow down",
+   "textbook": {
+    "he": "הַאִם תּוּכַל לְדַבֵּר לְאַט יוֹתֵר?",
+    "translit": "ha'IM tuCHAL ledaBER le'AT yoTER?",
+    "en": "could you speak more slowly?",
+    "register": "formal",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "הַאִם תּוּכַל לְדַבֵּר לְאַט יוֹתֵר?",
+      "translit": "ha'IM tuCHAL ledaBER le'AT yoTER?"
+     },
+     "f": {
+      "he": "הַאִם תּוּכְלִי לְדַבֵּר לְאַט יוֹתֵר?",
+      "translit": "ha'IM tuchLI ledaBER le'AT yoTER?"
+     }
+    }
+   },
+   "everyday": {
+    "he": "תְּדַבֵּר יוֹתֵר לְאַט, בְּבַקָּשָׁה",
+    "translit": "tedaBER yoTER le'AT, bevakaSHA",
+    "en": "speak more slowly, please",
+    "register": "casual",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "תְּדַבֵּר יוֹתֵר לְאַט, בְּבַקָּשָׁה",
+      "translit": "tedaBER yoTER le'AT, bevakaSHA"
+     },
+     "f": {
+      "he": "תְּדַבְּרִי יוֹתֵר לְאַט, בְּבַקָּשָׁה",
+      "translit": "tedabRI yoTER le'AT, bevakaSHA"
+     }
+    }
+   },
+   "genderNote": "Both lines change with the gender of the person you are asking.",
+   "note": "Always add bevakasha when using an imperative with someone you do not know.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-nice-to-meet",
+   "category": "small-talk",
+   "situation": "Meeting someone",
+   "textbook": {
+    "he": "נָעִים מְאוֹד לְהַכִּיר אוֹתְךָ",
+    "translit": "na'IM me'OD lehaKIR otCHA",
+    "en": "very nice to meet you",
+    "register": "formal",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "נָעִים מְאוֹד לְהַכִּיר אוֹתְךָ",
+      "translit": "na'IM me'OD lehaKIR otCHA"
+     },
+     "f": {
+      "he": "נָעִים מְאוֹד לְהַכִּיר אוֹתָךְ",
+      "translit": "na'IM me'OD lehaKIR oTACH"
+     }
+    }
+   },
+   "everyday": {
+    "he": "נָעִים מְאוֹד",
+    "translit": "na'IM me'OD",
+    "en": "very nice (to meet you)",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "genderNote": "The textbook line changes with the person you meet (otcha / otach). The short line does not.",
+   "note": "The short form is complete in itself and has no gender.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-what-do-you-do",
+   "category": "small-talk",
+   "situation": "Asking about work",
+   "textbook": {
+    "he": "בְּמָה אַתָּה עוֹבֵד?",
+    "translit": "beMA aTA oVED?",
+    "en": "what do you work at?",
+    "register": "formal",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "בְּמָה אַתָּה עוֹבֵד?",
+      "translit": "beMA aTA oVED?"
+     },
+     "f": {
+      "he": "בְּמָה אַתְּ עוֹבֶדֶת?",
+      "translit": "beMA AT oVEdet?"
+     }
+    }
+   },
+   "everyday": {
+    "he": "מָה אַתָּה עוֹשֶׂה בַּחַיִּים?",
+    "translit": "MA aTA oSE bachaYIM?",
+    "en": "what do you do in life?",
+    "register": "casual",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "מָה אַתָּה עוֹשֶׂה בַּחַיִּים?",
+      "translit": "MA aTA oSE bachaYIM?"
+     },
+     "f": {
+      "he": "מָה אַתְּ עוֹשָׂה בַּחַיִּים?",
+      "translit": "MA AT oSA bachaYIM?"
+     }
+    }
+   },
+   "genderNote": "Both lines change with the person you ask.",
+   "note": "Ma ata ose bachayim is a common way to ask someone what they do for a living.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Relative frequency not checked."
+  },
+  {
+   "id": "lad-how-long-here",
+   "category": "small-talk",
+   "situation": "Asking how long someone has been in Israel",
+   "textbook": {
+    "he": "כַּמָּה זְמַן אַתָּה שׁוֹהֶה בְּיִשְׂרָאֵל?",
+    "translit": "kaMA zeMAN aTA shoHE beyisra'EL?",
+    "en": "how long are you staying in Israel?",
+    "register": "formal",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "כַּמָּה זְמַן אַתָּה שׁוֹהֶה בְּיִשְׂרָאֵל?",
+      "translit": "kaMA zeMAN aTA shoHE beyisra'EL?"
+     },
+     "f": {
+      "he": "כַּמָּה זְמַן אַתְּ שׁוֹהָה בְּיִשְׂרָאֵל?",
+      "translit": "kaMA zeMAN AT shoHA beyisra'EL?"
+     }
+    }
+   },
+   "everyday": {
+    "he": "כַּמָּה זְמַן אַתָּה בָּאָרֶץ?",
+    "translit": "kaMA zeMAN aTA ba'Aretz?",
+    "en": "how long are you in the country?",
+    "register": "casual",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "כַּמָּה זְמַן אַתָּה בָּאָרֶץ?",
+      "translit": "kaMA zeMAN aTA ba'Aretz?"
+     },
+     "f": {
+      "he": "כַּמָּה זְמַן אַתְּ בָּאָרֶץ?",
+      "translit": "kaMA zeMAN AT ba'Aretz?"
+     }
+    }
+   },
+   "genderNote": "Both lines change with the person you ask.",
+   "note": "Ba'aretz ('in the land') is a common way for people to say 'in Israel'.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Familiar from general knowledge; not verified."
+  },
+  {
+   "id": "lad-sorry-late",
+   "category": "apologising",
+   "situation": "Apologising for being late",
+   "textbook": {
+    "he": "אֲנִי מִצְטַעֵר עַל הָאִחוּר",
+    "translit": "ani mitsta'ER al ha'iCHUR",
+    "en": "I regret the delay",
+    "register": "formal",
+    "gender": "speaker",
+    "forms": {
+     "m": {
+      "he": "אֲנִי מִצְטַעֵר עַל הָאִחוּר",
+      "translit": "ani mitsta'ER al ha'iCHUR"
+     },
+     "f": {
+      "he": "אֲנִי מִצְטַעֶרֶת עַל הָאִחוּר",
+      "translit": "ani mitsta'Eret al ha'iCHUR"
+     }
+    }
+   },
+   "everyday": {
+    "he": "סְלִיחָה שֶׁאֵחַרְתִּי",
+    "translit": "sliCHA she'echARti",
+    "en": "sorry I was late",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "genderNote": "The textbook line changes with your own gender (mitsta'er / mitsta'eret). The everyday line does not.",
+   "note": "The past 'I' form echarti is the same for men and women.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-my-mistake",
+   "category": "apologising",
+   "situation": "Owning a small mistake",
+   "textbook": {
+    "he": "הָיְתָה לִי טָעוּת",
+    "translit": "hayTA li ta'UT",
+    "en": "I made a mistake",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "טָעוּת שֶׁלִּי",
+    "translit": "ta'UT sheLI",
+    "en": "my mistake",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Ta'ut sheli is short and light.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Idiom from general knowledge."
+  },
+  {
+   "id": "lad-no-worries",
+   "category": "apologising",
+   "situation": "Answering an apology",
+   "textbook": {
+    "he": "אֵין דָּבָר",
+    "translit": "EN daVAR",
+    "en": "it's nothing",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "לֹא נוֹרָא",
+    "translit": "lo noRA",
+    "en": "not terrible, no worries",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Lo nora is what you will commonly hear day to day.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-phone-answer",
+   "category": "phone",
+   "situation": "Answering the phone",
+   "textbook": {
+    "he": "שָׁלוֹם, מִי מְדַבֵּר?",
+    "translit": "shaLOM, MI medaBER?",
+    "en": "hello, who is speaking?",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "הַלּוֹ?",
+    "translit": "haLO?",
+    "en": "hello?",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Halo is the usual phone greeting. Shalom is not usual for answering a call.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "General knowledge; not measured."
+  },
+  {
+   "id": "lad-call-back",
+   "category": "phone",
+   "situation": "Postponing a call",
+   "textbook": {
+    "he": "אֶתְקַשֵּׁר אֵלֶיךָ מְאוּחָר יוֹתֵר",
+    "translit": "etkaSHER eLEcha me'uCHAR yoTER",
+    "en": "I will contact you later",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "נְדַבֵּר אַחַר כָּךְ",
+    "translit": "nedaBER aCHAR kach",
+    "en": "we'll talk later",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Nedaber is 'we will talk' and is neutral about gender.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-omw",
+   "category": "phone",
+   "situation": "Texting that you are on the way",
+   "textbook": {
+    "he": "אֲנִי בַּדֶּרֶךְ אֵלֶיךָ",
+    "translit": "ani baDErech eLEcha",
+    "en": "I am on my way to you",
+    "register": "formal",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "אֲנִי בַּדֶּרֶךְ אֵלֶיךָ",
+      "translit": "ani baDErech eLEcha"
+     },
+     "f": {
+      "he": "אֲנִי בַּדֶּרֶךְ אֵלַיִךְ",
+      "translit": "ani baDErech eLAyich"
+     }
+    }
+   },
+   "everyday": {
+    "he": "בַּדֶּרֶךְ!",
+    "translit": "baDErech!",
+    "en": "on the way!",
+    "register": "casual",
+    "gender": "none"
+   },
+   "genderNote": "The textbook line changes with the person you write to (elecha / elayich). The short line does not.",
+   "note": "Chat messages are usually typed without vowel marks. We show the points here only to help you read them.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "lad-send-location",
+   "category": "phone",
+   "situation": "Asking for a location pin",
+   "textbook": {
+    "he": "אֶפְשָׁר לִשְׁלֹחַ לִי אֶת הַמִּקּוּם?",
+    "translit": "efSHAR lishLO'ach li et hamiKUM?",
+    "en": "could you send me the location?",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "תִּשְׁלַח לִי מִקּוּם",
+    "translit": "tishLACH li miKUM",
+    "en": "send me a location",
+    "register": "casual",
+    "gender": "addressee",
+    "forms": {
+     "m": {
+      "he": "תִּשְׁלַח לִי מִקּוּם",
+      "translit": "tishLACH li miKUM"
+     },
+     "f": {
+      "he": "תִּשְׁלְחִי לִי מִקּוּם",
+      "translit": "tishlechI li miKUM"
+     }
+    }
+   },
+   "genderNote": "The everyday line changes with the person you write to (tishlach / tishlechi).",
+   "note": "Mikum means 'location'. Some people use the English loanword in chat, which we did not verify.",
+   "confidence": "medium",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Pointing of the feminine form and the loanword usage are the doubts."
+  },
+  {
+   "id": "lad-meet-at",
+   "category": "phone",
+   "situation": "Arranging a time",
+   "textbook": {
+    "he": "נִפָּגֵשׁ בְּשָׁעָה שְׁמוֹנֶה",
+    "translit": "nipaGESH besha'A shmoNE",
+    "en": "we'll meet at eight o'clock",
+    "register": "formal",
+    "gender": "none"
+   },
+   "everyday": {
+    "he": "נִפָּגֵשׁ בִּשְׁמוֹנֶה",
+    "translit": "nipaGESH bishmoNE",
+    "en": "we'll meet at eight",
+    "register": "neutral",
+    "gender": "none"
+   },
+   "genderNote": "No gender-marked words in either line.",
+   "note": "Drop 'sha'a' (hour) in everyday speech.",
+   "confidence": "high",
+   "proofread": false,
+   "needsNativeReview": true
+  }
+ ]
+}

@@ -8,7 +8,7 @@ log = json.load(open(R + 'fetch3.json')) if os.path.exists(R + 'fetch3.json') el
 old = json.load(open(R + 'fetch_log.json')) if os.path.exists(R + 'fetch_log.json') else {}
 kind = json.load(open(R + 'caption_kind.json')) if os.path.exists(R + 'caption_kind.json') else {}
 READ = set(open('/home/claude/alef/tools/youtube/read-ids.txt').read().split())
-UNUSABLE = {'luk85AVuHCg': 'captions exist but hold about 13 words (the video is mostly sung)'}
+UNUSABLE = {'luk85AVuHCg': 'captions exist but hold about 13 words (the video is mostly sung)', 'Lf0ZDAvYInU': 'captions hold about 14 words'}
 def status(i):
     if i in UNUSABLE: return 'unusable'
     if i in have and i in READ: return 'read'

@@ -1,7 +1,7 @@
 {
  "version": 1,
  "generated": "2026-11-03",
- "note": "Scores 0-1000 are the author's judgement of expected learner value for ALEF, not measured outcomes. improvedScore equals score when no improvement was specced. riskAxis: higher is worse. Source: English captions (manual or auto, machine-noisy) of YouTube videos from the top-100 candidate list in docs/youtube/top100.md; only 16 of 100 captions were fetched before YouTube rate-limited the machine, so counts like 4 of 9 refer to the reading videos actually read. No video was watched and no audio heard. No text, video or audio is reused; ideas only.",
+ "note": "Scores 0-1000 are the author's judgement of expected learner value for ALEF, not measured outcomes. improvedScore equals score when no improvement was specced. riskAxis: higher is worse. Source: English captions (manual or auto, machine-noisy) of YouTube videos from the top-100 candidate list in docs/youtube/top100.md; only 20 of 100 captions were fetched before YouTube rate-limited the machine, so counts like 4 of 11 refer to the reading videos actually read. No video was watched and no audio heard. No text, video or audio is reused; ideas only.",
  "axesKey": {
   "r": "reading siddur or Torah aloud",
   "i": "Israeli functional Hebrew",
@@ -28,7 +28,7 @@
    "id": "y100-tech-01",
    "source": "y100-tech",
    "name": "Letters taught in alef-bet order",
-   "what": "The default sequence: aleph first, then bet, gimel and so on, a few letters per lesson. Seen in 8 of 9 reading videos read. Easy to follow but puts look-alikes far apart and gives no reading until late.",
+   "what": "The default sequence: aleph first, then bet, gimel and so on, a few letters per lesson. Seen in 9 of 11 reading videos read. Easy to follow but puts look-alikes far apart and gives no reading until late.",
    "axes": {
     "r": 650,
     "i": 500,
@@ -42,14 +42,14 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (8 of 9)",
+   "evidence": "captions-read (9 of 11)",
    "notes": "ALEF can order by frequency and by contrast pairs instead."
   },
   {
    "id": "y100-tech-02",
    "source": "y100-tech",
    "name": "Print and handwritten forms shown together",
-   "what": "Each letter is shown in the book shape and in the hand shape from the start, so the learner can read signs and also write notes. Seen in 4 to 5 of 9.",
+   "what": "Each letter is shown in the book shape and in the hand shape from the start, so the learner can read signs and also write notes. Seen in 4 to 5 of 11.",
    "axes": {
     "r": 500,
     "i": 800,
@@ -63,14 +63,14 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (5 of 9)",
+   "evidence": "captions-read (5 of 11)",
    "notes": ""
   },
   {
    "id": "y100-tech-03",
    "source": "y100-tech",
    "name": "Live stroke-order demonstration",
-   "what": "The teacher draws each letter in front of the learner and says the number of strokes and where to start. Seen in 4 of 9. A screen video cannot check the learner copy.",
+   "what": "The teacher draws each letter in front of the learner and says the number of strokes and where to start. Seen in 5 of 11. A screen video cannot check the learner copy.",
    "axes": {
     "r": 450,
     "i": 700,
@@ -84,7 +84,7 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (4 of 9)",
+   "evidence": "captions-read (5 of 11)",
    "notes": "Overlaps gap-02 where ALEF actually checks the learner trace."
   },
   {
@@ -105,14 +105,14 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (2 of 9, one series)",
+   "evidence": "captions-read (2 of 11, one series)",
    "notes": ""
   },
   {
    "id": "y100-tech-05",
    "source": "y100-tech",
    "name": "One key word per letter",
-   "what": "A familiar object or animal word is paired with every letter. Seen in 3 of 9. Helps recall but the words are not reused later in reading practice.",
+   "what": "A familiar object or animal word is paired with every letter. Seen in 4 of 11. Helps recall but the words are not reused later in reading practice.",
    "axes": {
     "r": 550,
     "i": 700,
@@ -126,14 +126,14 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (3 of 9)",
+   "evidence": "captions-read (4 of 11)",
    "notes": ""
   },
   {
    "id": "y100-tech-06",
    "source": "y100-tech",
    "name": "Shape gimmicks and picture mnemonics",
-   "what": "Letters and vowels are tied to a picture or a gag (a necktie, a gap in the shape, a hole at the bottom). Seen in 3 of 9. Strong for look-alike pairs; each teacher invents their own, so ALEF must draw its own.",
+   "what": "Letters and vowels are tied to a picture or a gag (a necktie, a gap in the shape, a hole at the bottom). Seen in 3 of 11. Strong for look-alike pairs; each teacher invents their own, so ALEF must draw its own.",
    "axes": {
     "r": 700,
     "i": 600,
@@ -147,14 +147,14 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (3 of 9)",
+   "evidence": "captions-read (3 of 11)",
    "notes": "Originality risk: never reuse a teacher gimmick."
   },
   {
    "id": "y100-tech-07",
    "source": "y100-tech",
    "name": "Dotted versus undotted pairs compared back to back",
-   "what": "Bet, kaf and pe are played with and without the dot, then the contrast is reused. Seen in 5 of 9. Overlaps yt-alphabet-03 from the Hebrew For Beginners playlists.",
+   "what": "Bet, kaf and pe are played with and without the dot, then the contrast is reused. Seen in 6 of 11. Overlaps yt-alphabet-03 from the Hebrew For Beginners playlists.",
    "axes": {
     "r": 850,
     "i": 700,
@@ -168,14 +168,14 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (5 of 9)",
+   "evidence": "captions-read (6 of 11)",
    "notes": "Already specced as yt-alphabet-03; not re-specced here."
   },
   {
    "id": "y100-tech-08",
    "source": "y100-tech",
    "name": "Final letters taught as one batch",
-   "what": "The five final shapes come together after the main letters, often with a rule that they only close a word. Seen in 6 of 9. Good for recognition; few teachers add a drill that makes the learner spot them in running text.",
+   "what": "The five final shapes come together after the main letters, often with a rule that they only close a word. Seen in 6 of 11. Good for recognition; few teachers add a drill that makes the learner spot them in running text.",
    "axes": {
     "r": 700,
     "i": 650,
@@ -189,14 +189,14 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (6 of 9)",
+   "evidence": "captions-read (6 of 11)",
    "notes": ""
   },
   {
    "id": "y100-tech-09",
    "source": "y100-tech",
    "name": "Silent carriers named early",
-   "what": "Aleph and ayin are explained as letters that mostly hand the sound to the vowel. Seen in 5 of 9. Helpful, but how silent they are depends on tradition and is rarely said.",
+   "what": "Aleph and ayin are explained as letters that mostly hand the sound to the vowel. Seen in 5 of 11. Helpful, but how silent they are depends on tradition and is rarely said.",
    "axes": {
     "r": 800,
     "i": 700,
@@ -210,14 +210,14 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (5 of 9)",
+   "evidence": "captions-read (5 of 11)",
    "notes": ""
   },
   {
    "id": "y100-tech-10",
    "source": "y100-tech",
    "name": "A real word read in the first lesson",
-   "what": "Two letters plus one vowel sign yield a word the learner understands (father, come, roof) inside minutes. Seen in 3 of 9. The strongest motivator in the set and cheap to build.",
+   "what": "Two letters plus one vowel sign yield a word the learner understands (father, come, roof) inside minutes. Seen in 3 of 11. The strongest motivator in the set and cheap to build.",
    "axes": {
     "r": 800,
     "i": 900,
@@ -236,14 +236,14 @@
    },
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (3 of 9)",
+   "evidence": "captions-read (3 of 11)",
    "notes": "Spec below makes it a standing first-lesson contract."
   },
   {
    "id": "y100-tech-11",
    "source": "y100-tech",
    "name": "Vowel signs grouped by sound family",
-   "what": "Signs are taught by the sound they make (a, e, i, o, u) rather than by name. Seen in 4 of 9. Overlaps yt-vowels-01 from the earlier playlist pass.",
+   "what": "Signs are taught by the sound they make (a, e, i, o, u) rather than by name. Seen in 5 of 11. Overlaps yt-vowels-01 from the earlier playlist pass.",
    "axes": {
     "r": 880,
     "i": 880,
@@ -257,14 +257,14 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (4 of 9)",
+   "evidence": "captions-read (5 of 11)",
    "notes": "Already specced as yt-vowels-01."
   },
   {
    "id": "y100-tech-12",
    "source": "y100-tech",
    "name": "Consonant-plus-vowel syllable chains drilled on a beat",
-   "what": "Every new vowel is immediately combined with all known letters and read in rhythm, so reading is syllable-level from minute five. Seen in full in 1 of 9 (the one-hour course), with per-sound practice lists in the Hebrew For Beginners vowel series. Rare but the most effective use of time I saw.",
+   "what": "Every new vowel is immediately combined with all known letters and read in rhythm, so reading is syllable-level from minute five. Seen in full in 1 of 11 (the one-hour course), with per-sound practice lists in the Hebrew For Beginners vowel series. Rare but the most effective use of time I saw.",
    "axes": {
     "r": 900,
     "i": 800,
@@ -283,14 +283,14 @@
    },
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (2 of 9)",
+   "evidence": "captions-read (2 of 11)",
    "notes": "Needs ALEF audio for each syllable."
   },
   {
    "id": "y100-tech-13",
    "source": "y100-tech",
    "name": "Quizzes and recaps at lesson ends",
-   "what": "A short quiz or recap follows each block. Seen in 3 of 9. Useful but mostly passive (name the sign), with no spacing.",
+   "what": "A short quiz or recap follows each block. Seen in 3 of 11. Useful but mostly passive (name the sign), with no spacing.",
    "axes": {
     "r": 550,
     "i": 550,
@@ -304,14 +304,14 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (3 of 9)",
+   "evidence": "captions-read (3 of 11)",
    "notes": ""
   },
   {
    "id": "y100-tech-14",
    "source": "y100-tech",
    "name": "Table of letters that sound the same in Israeli Hebrew",
-   "what": "One video closes with groups of letters that merge in speech (aleph and ayin, vet and vav, tet and tav, kuf and kaf, sin and samech). Seen in 2 of 9. It answers a question every learner asks and almost nobody covers.",
+   "what": "One video closes with groups of letters that merge in speech (aleph and ayin, vet and vav, tet and tav, kuf and kaf, sin and samech). Seen in 2 of 11. It answers a question every learner asks and almost nobody covers.",
    "axes": {
     "r": 700,
     "i": 900,
@@ -330,7 +330,7 @@
    },
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (2 of 9)",
+   "evidence": "captions-read (2 of 11)",
    "notes": "Tradition aware: merges differ for Sephardi and Ashkenazi readings."
   },
   {
@@ -358,7 +358,7 @@
    "id": "y100-err-01",
    "source": "y100-err",
    "name": "Shva taught as silent, or as a flat short e",
-   "what": "Two HebrewPod101 videos say shva has no sound and the earlier Hebrew For Beginners pass heard it taught as a short e (3 of 10 reading sources); one other video gives a usable rule (after a vowel it closes the syllable, otherwise a quick uh). Learners then mis-read common words and prayer lines.",
+   "what": "Two HebrewPod101 videos say shva has no sound and the earlier Hebrew For Beginners pass heard it taught as a short e (3 of 12 reading sources); one other video gives a usable rule (after a vowel it closes the syllable, otherwise a quick uh). Learners then mis-read common words and prayer lines.",
    "axes": {
     "r": 900,
     "i": 850,
@@ -377,14 +377,14 @@
    },
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (3 of 10)",
+   "evidence": "captions-read (3 of 12)",
    "notes": "Biggest single fixable error."
   },
   {
    "id": "y100-err-02",
    "source": "y100-err",
    "name": "Long and short vowels presented as audible pairs",
-   "what": "One academic-style video teaches signs as long/short pairs while admitting that native speakers merge them. Seen in 1 of 9, plus in Hebrew For Beginners vowel naming. For Israeli Hebrew this inflates the vowel inventory to seven or more; for liturgy it is only a naming convention.",
+   "what": "One academic-style video teaches signs as long/short pairs while admitting that native speakers merge them. Seen in 1 of 11, plus in Hebrew For Beginners vowel naming. For Israeli Hebrew this inflates the vowel inventory to seven or more; for liturgy it is only a naming convention.",
    "axes": {
     "r": 700,
     "i": 900,
@@ -410,7 +410,7 @@
    "id": "y100-err-03",
    "source": "y100-err",
    "name": "Hebrew said to have no vowels",
-   "what": "One video says Hebrew has no vowels at all (another says the letters are consonants, which is accurate). Misleading for a learner who must read vav and yud as vowels in real words. Seen in 1 of 9.",
+   "what": "Two videos say Hebrew has no vowel letters or no vowels at all (a third says the letters are consonants, which is accurate). Misleading for a learner who must read vav and yud as vowels in real words. Seen in 2 of 11.",
    "axes": {
     "r": 600,
     "i": 650,
@@ -424,14 +424,14 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (1 of 9)",
+   "evidence": "captions-read (2 of 11)",
    "notes": ""
   },
   {
    "id": "y100-err-04",
    "source": "y100-err",
    "name": "Aleph and ayin simply called silent",
-   "what": "Several videos call aleph and ayin silent for simplicity (at least 3 of 9). Right for most Israeli speech, wrong for many Sephardi, Mizrahi and Yemenite readers and for learners who will hear a throat sound in the siddur.",
+   "what": "Several videos call aleph and ayin silent for simplicity (at least 3 of 11). Right for most Israeli speech, wrong for many Sephardi, Mizrahi and Yemenite readers and for learners who will hear a throat sound in the siddur.",
    "axes": {
     "r": 700,
     "i": 800,
@@ -445,14 +445,14 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (3 of 9)",
+   "evidence": "captions-read (3 of 11)",
    "notes": "Fix via the tradition switch, no separate spec."
   },
   {
    "id": "y100-err-05",
    "source": "y100-err",
    "name": "Chet and the h letters given incompatible sounds",
-   "what": "One video gives chet an h-like sound and a Bach-like sound in the same lesson (1 of 9); the usual advice elsewhere is a throat sound. Learners then cannot tell he from chet by ear.",
+   "what": "One video gives chet an h-like sound and a Bach-like sound in the same lesson (1 of 11); the usual advice elsewhere is a throat sound. Learners then cannot tell he from chet by ear.",
    "axes": {
     "r": 800,
     "i": 850,
@@ -466,7 +466,7 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (1 of 9)",
+   "evidence": "captions-read (1 of 11)",
    "notes": ""
   },
   {
@@ -487,14 +487,14 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (2 of 9)",
+   "evidence": "captions-read (2 of 11)",
    "notes": ""
   },
   {
    "id": "y100-err-07",
    "source": "y100-err",
    "name": "Final he sounded out as a vowel",
-   "what": "One video presents he as something that can sound like a, which blurs the fact that a word-final he is a silent spelling carrier (1 of 9, caption doubt). Learners then read extra syllables.",
+   "what": "One video presents he as something that can sound like a, which blurs the fact that a word-final he is a silent spelling carrier (1 of 11, caption doubt). Learners then read extra syllables.",
    "axes": {
     "r": 900,
     "i": 850,
@@ -513,14 +513,14 @@
    },
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (1 of 9)",
+   "evidence": "captions-read (1 of 11)",
    "notes": "Rare in this set but costly and very common in learner errors generally."
   },
   {
    "id": "y100-err-08",
    "source": "y100-err",
    "name": "Vowel marks said to be optional, so skip them",
-   "what": "Two videos tell learners modern text drops vowel marks and push on. True for newspapers; false for the siddur, Torah, children's books and anyone learning new words (2 of 9).",
+   "what": "Two videos tell learners modern text drops vowel marks and push on. True for newspapers; false for the siddur, Torah, children's books and anyone learning new words (2 of 11).",
    "axes": {
     "r": 950,
     "i": 700,
@@ -539,14 +539,14 @@
    },
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (2 of 9)",
+   "evidence": "captions-read (2 of 11)",
    "notes": "Cure is a toggle plus a bridge, not a lecture."
   },
   {
    "id": "y100-err-09",
    "source": "y100-err",
    "name": "One pronunciation presented as the pronunciation",
-   "what": "Teachers pick one reading tradition (academic, Sephardi, or Israeli) and rarely say how to switch; phrase videos rely on Latin spellings alone. Seen in at least 4 of 15 sources. Learners then fail when they hear a synagogue, a class or an Israeli friend.",
+   "what": "Teachers pick one reading tradition (academic, Sephardi, or Israeli) and rarely say how to switch; phrase videos rely on Latin spellings alone, and the best prayer video leans on a syllable-by-syllable Latin key with stress in capitals. Seen in at least 5 of 18 sources. Learners then fail when they hear a synagogue, a class or an Israeli friend.",
    "axes": {
     "r": 950,
     "i": 900,
@@ -565,14 +565,14 @@
    },
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (at least 4 of 15)",
+   "evidence": "captions-read (at least 5 of 18)",
    "notes": "ALEF already plans per-tradition audio; this makes the tradition a first-class setting in every drill."
   },
   {
    "id": "y100-err-10",
    "source": "y100-err",
    "name": "Kamatz katan waved away",
-   "what": "The a-sign that is read as an o sound in certain closed syllables is mentioned in passing in 1 of 9 and taught in none. Learners then mis-read frequent liturgical words.",
+   "what": "The a-sign that is read as an o sound in certain closed syllables is mentioned in passing in 1 of 11 and taught in none. Learners then mis-read frequent liturgical words.",
    "axes": {
     "r": 850,
     "i": 600,
@@ -586,7 +586,7 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (1 of 9 mentions it)",
+   "evidence": "captions-read (1 of 11 mentions it)",
    "notes": ""
   },
   {
@@ -612,7 +612,7 @@
    },
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (9 of 9 reading videos lack drills)",
+   "evidence": "captions-read (11 of 11 reading videos lack drills)",
    "notes": ""
   },
   {
@@ -638,7 +638,7 @@
    },
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (4 of 9 demo writing; none checks it)",
+   "evidence": "captions-read (4 of 11 demo writing; none checks it)",
    "notes": ""
   },
   {
@@ -664,7 +664,7 @@
    },
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (stress barely touched in 9 of 9)",
+   "evidence": "captions-read (stress barely touched in 9 of 11)",
    "notes": ""
   },
   {
@@ -690,7 +690,7 @@
    },
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (3 of 3 prayer videos)",
+   "evidence": "captions-read (4 of 4 prayer videos read)",
    "notes": ""
   },
   {
@@ -732,7 +732,7 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "evidence": "captions-read (inferred from absence in 9 of 9)",
+   "evidence": "captions-read (inferred from absence in 9 of 11)",
    "notes": ""
   }
  ]

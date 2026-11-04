@@ -40,3 +40,13 @@ Dev/benchmark tooling only; none of it is in app code paths. Vendored runtime fi
 | Pillow 12.3 (raqm), numpy, opencv 5.0, Playwright 1.63 | already installed | various | used by `tools/ocr-bench/gen.py` and `bench.mjs` |
 Network checks: Dicta Nakdan endpoint called with public test words only (39 calls). MyMemory anonymous API called 60 times in total (rate-limited, results discarded). LibreTranslate public instance called once (needs a key).
 Commands: `python3 tools/ocr-bench/gen.py`; `node tools/ocr-bench/bench.mjs data/photo/_benchmark`; `node tools/ocr-bench/e2e-scan.mjs <img> prayer|sign out.png`; `node tools/ocr-server.mjs` (env `ARGOS_PYTHON=/home/claude/venv-argos/bin/python`).
+
+## Image ingest (tools/images/ingest*.mjs, ingest_image.py, validate.mjs) - dev tooling only, never imported by app code
+Nothing was installed for this; all tools were already on the box (versions observed 2026-11-03). Tested only with synthetic images drawn by `tests/images.ingest_fixtures.py`.
+| Tool | Version | Licence | Used for |
+|---|---|---|---|
+| Pillow (python) | 12.3.0 | HPND | decode/verify, resize, WebP encode (metadata dropped), sRGB conversion via ImageCms, synthetic test images |
+| Tesseract CLI + `heb`, `eng` traineddata | 5.3.4 / system package | Apache-2.0 | cheap "contains text" screen (one pass per language, `--psm 11`, TSV) |
+| Python `zipfile` (stdlib) | - | PSF | safe extraction (member names flattened) |
+Python runs as `python3 -I` (isolated). Commands: see `docs/images/README.md`.
+

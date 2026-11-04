@@ -1,4 +1,5 @@
 import test from 'node:test';
+import { loadManifestFull } from '../tools/audio/manifest_io.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { runPipeline } from '../src/photo/pipeline.js';
@@ -8,7 +9,7 @@ import { ACCURACY_NOTICE, NO_TRANSLATION_NOTICE } from '../src/photo/scan.view.j
 import { isLocalHelperUrl } from '../src/photo/engines/local-server.js';
 
 const registry = JSON.parse(readFileSync(new URL('../data/corpus/registry.json', import.meta.url), 'utf8'));
-const manifest = JSON.parse(readFileSync(new URL('../data/audio/manifest.json', import.meta.url), 'utf8'));
+const manifest = loadManifestFull();
 
 test('word card: letters with names, syllables, three transliterations, audio hook', async () => {
   const r = await runPipeline({}, createMockEngine(), { mode: 'sign' });

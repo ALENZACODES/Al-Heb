@@ -1,4 +1,5 @@
 // Lane 8 integration tests: shell pieces + cross-lane data checks. Lane data checks skip when the file is absent.
+import { loadManifestFull } from '../tools/audio/manifest_io.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
@@ -147,7 +148,7 @@ test('query deep link #/learn?lesson=<id>&review=1 parses', () => {
 });
 
 // ---- audio ids: every id the app requests resolves to a manifest entry (so the player can find its text) ----
-const manifest = json('data/audio/manifest.json');
+const manifest = loadManifestFull(); // core + lazily loaded word shards
 const fakeSpeech = { speak() {}, cancel() {} };
 const player = (voice = 'm', congregation = 'israeli') => createAudio({ settings: { voice, congregation }, manifest, speech: fakeSpeech, UtteranceCtor: class { constructor(t) { this.text = t; } } });
 test('audio manifest resolves corpus words/lines (reader ids) and lesson words (learn ids)', () => {

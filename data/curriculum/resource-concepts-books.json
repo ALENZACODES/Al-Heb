@@ -1,0 +1,688 @@
+{
+ "version": 1,
+ "generated": "2026-11-03",
+ "note": "Scores 0-1000 are the author's judgement of expected learner value, not measured outcomes. improvedScore equals score when no improvement was specced. riskAxis: higher is worse.",
+ "concepts": [
+  {
+   "id": "bk-bpa-01",
+   "source": "bpa",
+   "name": "Fixed two-page template per letter",
+   "what": "Every letter gets the same pair of pages (story/picture page, then a write page), so the learner always knows what comes next.",
+   "axes": {
+    "r": 600,
+    "i": 500,
+    "c": 800,
+    "f": 700,
+    "risk": 100
+   },
+   "score": 620,
+   "improvedScore": 620,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-bpa-02",
+   "source": "bpa",
+   "name": "Numbered stroke-order arrows on the model glyph",
+   "what": "The modern-script model carries small numbers and arrows showing stroke order and direction (visible on the pages I rasterised; I did not check all 22).",
+   "axes": {
+    "r": 750,
+    "i": 700,
+    "c": 800,
+    "f": 800,
+    "risk": 50
+   },
+   "score": 760,
+   "improvedScore": 760,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-bpa-03",
+   "source": "bpa",
+   "name": "Single heavy model glyph at the start of an RTL practice line, then blank ruled lines",
+   "what": "One grey model sits at the right edge (the reading start) and the rest of the page is empty lines; no fading, no checking.",
+   "axes": {
+    "r": 600,
+    "i": 550,
+    "c": 750,
+    "f": 600,
+    "risk": 50
+   },
+   "score": 600,
+   "improvedScore": 600,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-bpa-04",
+   "source": "bpa",
+   "name": "Picture hook per letter (object plus short story)",
+   "what": "Each letter is tied to a drawn object and a two-sentence story, and a colouring task to fix the image. The hook is the book's main memory device.",
+   "axes": {
+    "r": 700,
+    "i": 600,
+    "c": 850,
+    "f": 700,
+    "risk": 350
+   },
+   "score": 780,
+   "improvedScore": 940,
+   "improvedName": "Shape-hook cards with learner choice",
+   "spec": {
+    "screen": "Per-letter card showing a simple original image that echoes the print glyph's shape, a one-line cue, and the sound anchor word; a toggle swaps between two cues.",
+    "data": "Data: hooks[] per letter {cue, imageId, kind: shape or sound}, authored for ALEF, not taken from the book. Optional history line kept in a separate \"origin\" field and labelled as background.",
+    "interaction": "Learner picks the hook that works for them; a recall test later shows only the hook image and asks for the letter; hook usage informs which hooks stay.",
+    "test": "Unit: every letter has at least one hook, imageId resolves to an asset or is flagged pending, no hook text contradicts the letter's recorded sound; recall quiz returns the right answer for each hook."
+   },
+   "printable": null,
+   "status": "proposed",
+   "notes": "The specific objects and stories are the book's own expression and carry its theology; only the general technique (picture hook plus recall) is reused."
+  },
+  {
+   "id": "bk-bpa-05",
+   "source": "bpa",
+   "name": "Three-script ancestry strip (pictograph, paleo, modern) beside each letter",
+   "what": "Shows an old picture-form, an older script form and the modern form side by side so shape descent is visible.",
+   "axes": {
+    "r": 250,
+    "i": 150,
+    "c": 550,
+    "f": 350,
+    "risk": 300
+   },
+   "score": 330,
+   "improvedScore": 330,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "notes": "Interesting history, little reading payoff. The book presents each early form and each letter-meaning as settled fact; I did not verify those claims."
+  },
+  {
+   "id": "bk-bpa-06",
+   "source": "bpa",
+   "name": "Three keyword \"meanings\" listed per letter",
+   "what": "Each letter lists three English words (an object plus abstract ideas) as its meaning.",
+   "axes": {
+    "r": 100,
+    "i": 100,
+    "c": 500,
+    "f": 150,
+    "risk": 400
+   },
+   "score": 200,
+   "improvedScore": 200,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "notes": "Weak for both goals and the abstract meanings are unverified folklore; reject as learning content. The picture-hook technique (bk-bpa-04) is the only part worth keeping."
+  },
+  {
+   "id": "bk-bpa-07",
+   "source": "bpa",
+   "name": "One-page alphabet chart with three script columns",
+   "what": "A single reference table listing every letter, used as a lookup.",
+   "axes": {
+    "r": 600,
+    "i": 500,
+    "c": 700,
+    "f": 650,
+    "risk": 100
+   },
+   "score": 580,
+   "improvedScore": 580,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-bpa-08",
+   "source": "bpa",
+   "name": "\"Did you know\" orientation box (right to left, count of letters, name plus sound)",
+   "what": "Three facts up front before any letter.",
+   "axes": {
+    "r": 650,
+    "i": 600,
+    "c": 800,
+    "f": 600,
+    "risk": 100
+   },
+   "score": 600,
+   "improvedScore": 600,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-bpa-09",
+   "source": "bpa",
+   "name": "Colouring task as retention device",
+   "what": "Colour the picture to anchor the hook. Good for young children; adult value is low.",
+   "axes": {
+    "r": 250,
+    "i": 250,
+    "c": 600,
+    "f": 300,
+    "risk": 100
+   },
+   "score": 280,
+   "improvedScore": 280,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-bpa-10",
+   "source": "bpa",
+   "name": "Alphabetical-only sequence, one letter at a time, no review",
+   "what": "Alef to Tav in order with no cumulative review, no look-alike contrast and no sounds task.",
+   "axes": {
+    "r": 300,
+    "i": 300,
+    "c": 650,
+    "f": 200,
+    "risk": 50
+   },
+   "score": 250,
+   "improvedScore": 250,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "notes": "This is a weakness record, not an idea to adopt. See the gap concepts below."
+  },
+  {
+   "id": "bk-bpa-11",
+   "source": "bpa-gap",
+   "name": "Circle-the-target scan on running text (gap filler; not in the book)",
+   "what": "The book never has the learner find a letter inside text. Cancellation-style scanning (find every instance of a target letter, ignoring look-alikes) trains the actual reading skill.",
+   "axes": {
+    "r": 880,
+    "i": 820,
+    "c": 900,
+    "f": 900,
+    "risk": 80
+   },
+   "score": 850,
+   "improvedScore": 960,
+   "improvedName": "Letter-scan drill (Spot It)",
+   "spec": {
+    "screen": "New drill screen \"Spot It\" reachable from a letter lesson and from the review queue. Shows 3 to 5 lines of pointed Hebrew, right to left, in the learner's chosen script; a target letter chip sits at the top right.",
+    "data": "Pure builder over the corpus registry and the confusables list: for target T pick lines containing T and plant its confusable partners (for example bet/kaf, dalet/resh) as decoys. Output {lineIds, targetId, hitIndices, decoyIndices}. Difficulty ladder: single letters, then words, then a verse line. Results feed the existing progress store as per-letter and per-confusable-pair accuracy.",
+    "interaction": "Tap or stylus-circle every instance of the target; decoys that are tapped count against the confusable pair and re-queue that pair in the SRS; a timer is optional and off by default; finishing shows hits, misses and which decoy fooled the learner.",
+    "test": "Unit: builder returns hit indices equal to the true count of T in the line, never marks a decoy as a hit, and is deterministic with a seed. Data guard: only lines whose letters are all taught by that lesson. UI: mount/unmount leaves no listeners."
+   },
+   "printable": "Printable page kind \"scan\": one target letter in a box at the top right, 6 ruled lines of unpointed then pointed text, instruction \"circle every one\"; answer key page lists the count per line. Spec only; reuse the buildModel/buildHtml page-kind convention in tools/letters/workbook.mjs.",
+   "status": "proposed"
+  },
+  {
+   "id": "bk-bpa-12",
+   "source": "bpa-gap",
+   "name": "Sound-to-letter matching with a keyword per sound (gap filler)",
+   "what": "The book teaches shape and writing but never ties shape to sound on the page. Matching glyph to a sound cue is the missing link.",
+   "axes": {
+    "r": 850,
+    "i": 850,
+    "c": 880,
+    "f": 850,
+    "risk": 60
+   },
+   "score": 800,
+   "improvedScore": 950,
+   "improvedName": "Sound-anchor matching",
+   "spec": {
+    "screen": "Two-column matcher: left column plays an audio clip (no transliteration), right column shows 4 candidate glyphs including one look-alike; sits after the tap-to-hear atlas.",
+    "data": "Per-letter keyword anchor (an everyday word whose first sound is the letter's sound) stored in letters.json as proposed field soundAnchor, one per tradition where sounds differ; reuses audio manifest ids kind=letter.",
+    "interaction": "Hear, pick the glyph, get immediate audio plus the anchor word on a miss; misses of look-alikes are logged into the confusables SRS queue.",
+    "test": "Unit: distractor generator never includes the target twice and always contains one confusable partner when one exists; accuracy logging writes to the progress store; every referenced audio id exists in the manifest."
+   },
+   "printable": "Printable \"match the sound\" page needs audio so is not good on paper; use a keyword-anchor page instead (draw a line from glyph to the picture word). Spec only.",
+   "status": "proposed"
+  },
+  {
+   "id": "bk-njop-01",
+   "source": "njop",
+   "name": "Tap a big letter, instantly hear it (grid of all tiles)",
+   "what": "One screen of tiles; tapping one opens a single letter and plays audio. Zero setup, zero reading needed.",
+   "axes": {
+    "r": 760,
+    "i": 760,
+    "c": 900,
+    "f": 800,
+    "risk": 80
+   },
+   "score": 780,
+   "improvedScore": 780,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-njop-02",
+   "source": "njop",
+   "name": "Each form-plus-sound pair is its own tile (32 entries, repeated names for variants and finals)",
+   "what": "The grid lists repeated names (for example three Kaf tiles, two Mem, two Nun, three Pe, two Shin), which I read as dagesh and final variants. The page does not label which is which, so this is my inference.",
+   "axes": {
+    "r": 880,
+    "i": 860,
+    "c": 780,
+    "f": 900,
+    "risk": 80
+   },
+   "score": 860,
+   "improvedScore": 955,
+   "improvedName": "Letter Atlas of form-sound tiles",
+   "spec": {
+    "screen": "Atlas screen: a right-to-left grid of all 27 letters plus the dagesh and shin-dot variants as separately labelled tiles, each tile showing glyph, its form state (plain, dagesh, final) and a small sound label for the active tradition.",
+    "data": "Derived, not hand-typed: built from letters.json and niqqud.json variant rules, 31 form-sound units to match the printable workbook's 31 rows. Each tile links audio id kind=letter plus a sibling list (bet to vet, kaf to khaf, finals to their regular forms).",
+    "interaction": "Tap a tile: audio plays in the chosen voice and tradition, the sibling tiles pulse; long-press shows stroke order. A \"sound merges here\" badge appears on pairs that sound identical in the chosen tradition (for example Israeli chet and khaf).",
+    "test": "Unit: tile count equals 31; every tile has an audio id that resolves in the manifest or falls back to Web Speech; tiles are ordered right to left; sibling links are symmetric; merge badges match the pronunciation data for each tradition."
+   },
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-njop-03",
+   "source": "njop",
+   "name": "One tradition stated plainly above the grid",
+   "what": "A note says pronunciation is Sephardic Israeli. Honest, but there is no way to change it.",
+   "axes": {
+    "r": 700,
+    "i": 700,
+    "c": 850,
+    "f": 650,
+    "risk": 50
+   },
+   "score": 640,
+   "improvedScore": 640,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "notes": "ALEF already has a congregation setting; keep the up-front statement, add per-tradition playback."
+  },
+  {
+   "id": "bk-njop-04",
+   "source": "njop",
+   "name": "Letters laid out left to right with an apology note",
+   "what": "The page admits the grid contradicts reading direction. For a siddur-reading goal this teaches the wrong spatial habit.",
+   "axes": {
+    "r": 300,
+    "i": 300,
+    "c": 600,
+    "f": 100,
+    "risk": 30
+   },
+   "score": 150,
+   "improvedScore": 150,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "notes": "Weakness record. ALEF shows tiles right to left everywhere."
+  },
+  {
+   "id": "bk-njop-05",
+   "source": "njop",
+   "name": "Read first, write later as separate courses",
+   "what": "The page points to separate reading and writing crash courses, with writing described as reinforcing earlier reading. Their claim of 250,000 learners is the organisation's own figure, which I did not verify.",
+   "axes": {
+    "r": 840,
+    "i": 600,
+    "c": 800,
+    "f": 750,
+    "risk": 100
+   },
+   "score": 780,
+   "improvedScore": 780,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-njop-06",
+   "source": "njop",
+   "name": "Built-in accessibility toolbar (contrast, text size, readable font, reduced motion)",
+   "what": "A widget adjusts contrast, size and animation.",
+   "axes": {
+    "r": 600,
+    "i": 600,
+    "c": 800,
+    "f": 700,
+    "risk": 30
+   },
+   "score": 650,
+   "improvedScore": 650,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-njop-07",
+   "source": "njop",
+   "name": "Weakness: audio only; no quiz, no stroke order, no memory hook stated on the page",
+   "what": "The page offers listening and nothing to test recall. I could only see the static HTML, so interactions inside the lightbox are unseen.",
+   "axes": {
+    "r": 300,
+    "i": 300,
+    "c": 500,
+    "f": 100,
+    "risk": 30
+   },
+   "score": 200,
+   "improvedScore": 200,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "notes": "Weakness record."
+  },
+  {
+   "id": "bk-udemy-01",
+   "source": "udemy",
+   "name": "Letters taught in small alphabetical groups with a midterm",
+   "what": "Course sections run Alef-Dalet up to Resh-Tav with a midterm in the middle (from the public outline; group sizes beyond the first and last were not shown).",
+   "axes": {
+    "r": 750,
+    "i": 700,
+    "c": 850,
+    "f": 750,
+    "risk": 100
+   },
+   "score": 780,
+   "improvedScore": 940,
+   "improvedName": "Confusion-aware groups with cumulative checkpoint",
+   "spec": {
+    "screen": "Lesson plan view groups letters by look-alike sets separated across lessons (so bet and kaf are not introduced together), with a checkpoint after each third of the alphabet.",
+    "data": "Grouping rule applied over confusables.json when generating lessons; checkpoint is a mixed quiz drawing from everything taught so far.",
+    "interaction": "Checkpoint results move items between SRS stages; failure sends the learner to the relevant Spot It or matching drill.",
+    "test": "Unit: no lesson contains two letters flagged confusable unless the lesson is a contrast lesson; each checkpoint draws only taught letters."
+   },
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-udemy-02",
+   "source": "udemy",
+   "name": "Hebrew keyboard setup in lecture one",
+   "what": "Typing is introduced up front so the learner can type letters and search.",
+   "axes": {
+    "r": 600,
+    "i": 800,
+    "c": 650,
+    "f": 650,
+    "risk": 80
+   },
+   "score": 700,
+   "improvedScore": 700,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-udemy-03",
+   "source": "udemy",
+   "name": "Dedicated \"recognise handwriting\" block after print letters",
+   "what": "A separate section on handwritten letter forms, run in letter groups (Alef-Hey through Pey-Tav).",
+   "axes": {
+    "r": 650,
+    "i": 900,
+    "c": 800,
+    "f": 900,
+    "risk": 80
+   },
+   "score": 860,
+   "improvedScore": 960,
+   "improvedName": "Handwriting decoder",
+   "spec": {
+    "screen": "Drill screen \"Read the handwriting\" shown after the print letters are known. Each card shows one letter or a short word in ktav yad, with a print-script reveal on tap.",
+    "data": "Uses the cursive glyph data already in letters.json (cursive strokes derived from an OFL font) plus a stylus-sample variation layer: random slant, stroke weight and joining jitter generated client-side. Optional extension: learner's own tracing from the trace view saved as a personal sample.",
+    "interaction": "Forced-choice from 4 print candidates; the confusable cursive pairs are weighted up (cursive shapes that collide); after a miss the stroke-order animation of the cursive form plays once. Unlocks after 12 letters are mature in SRS.",
+    "test": "Unit: jitter keeps the glyph inside its box and is deterministic with a seed; candidate set always includes the true letter once; unlock gate respects the SRS maturity threshold; every card passes the shape check in src/letters/shapecheck.js."
+   },
+   "printable": "Printable page kind \"handwriting\": a row of 8 jittered cursive samples with print-letter boxes to fill in. Spec only.",
+   "status": "proposed"
+  },
+  {
+   "id": "bk-udemy-04",
+   "source": "udemy",
+   "name": "Letters only, no vowel signs",
+   "what": "The course scope is letter names and pronunciation without niqqud; the public description says so.",
+   "axes": {
+    "r": 350,
+    "i": 400,
+    "c": 750,
+    "f": 200,
+    "risk": 30
+   },
+   "score": 320,
+   "improvedScore": 320,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "notes": "Weakness for ALEF goals: a learner cannot read a single word yet. Short scope is a strength for a free funnel course only."
+  },
+  {
+   "id": "bk-udemy-05",
+   "source": "udemy",
+   "name": "Overview PDF cheat sheet",
+   "what": "A downloadable one-pager of the alphabet.",
+   "axes": {
+    "r": 550,
+    "i": 500,
+    "c": 750,
+    "f": 650,
+    "risk": 50
+   },
+   "score": 560,
+   "improvedScore": 560,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-udemy-06",
+   "source": "udemy",
+   "name": "Video lecture format (about 55 minutes total)",
+   "what": "Passive watching; no stroke or recall mechanism is visible in the outline.",
+   "axes": {
+    "r": 350,
+    "i": 350,
+    "c": 700,
+    "f": 250,
+    "risk": 30
+   },
+   "score": 300,
+   "improvedScore": 300,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-dummies-01",
+   "source": "dummies",
+   "name": "\"You already know some Hebrew\" opener (cognates and loanwords as the first words)",
+   "what": "The listing shows Chapter 1 is framed around words an English speaker already knows. Reuse the idea only: first reading words are ones the learner can already understand.",
+   "axes": {
+    "r": 500,
+    "i": 900,
+    "c": 920,
+    "f": 900,
+    "risk": 150
+   },
+   "score": 880,
+   "improvedScore": 965,
+   "improvedName": "Words you can already read (loanword on-ramp)",
+   "spec": {
+    "screen": "Lesson card \"You can already read this\": after the first 8 to 10 letters the learner decodes Israeli loanwords written in Hebrew, one at a time, with the English meaning hidden until they attempt it.",
+    "data": "New list data/vocab loanwords (proposed): {he pointed, he plain, gloss, source language, lettersUsed[], tradition notes}. Selection rule: every letter in the word already taught, no vowel signs needed beyond what the lesson has shown. Needs native-speaker review before shipping and attribution is not required because the words are common vocabulary, but I have not checked any specific candidate list.",
+    "interaction": "See word, tap letters to hear syllables, type or pick the English meaning, then hear the word in both voices. The learner can mark \"I knew this\" for a quick pass.",
+    "test": "Unit: for each word, lettersUsed is a subset of the lesson's taught letters, pointed text passes the U+0590-05FF check, and no word appears before its letters are taught. Review flag status must be set to needs-native-review."
+   },
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-dummies-02",
+   "source": "dummies",
+   "name": "Pre-teaching sounds English speakers lack (gutturals and similar)",
+   "what": "The publisher description says the book prepares readers for unfamiliar sounds. Treated here as a dedicated sound-gap step instead of folding these letters in with easy ones.",
+   "axes": {
+    "r": 800,
+    "i": 900,
+    "c": 850,
+    "f": 850,
+    "risk": 100
+   },
+   "score": 870,
+   "improvedScore": 960,
+   "improvedName": "Sound-gap lab",
+   "spec": {
+    "screen": "A short lab screen reached after the first consonants: three pairs of sounds English readers blur, each as a listen-and-pick minimal-pair drill (chet versus khaf, kaf versus qof, tet versus tav). The set shown depends on the chosen tradition because merges differ.",
+    "data": "Pair table keyed by tradition in data/pronunciation (proposed pairs.json): {a, b, traditions where they are distinct, audio ids}. Pairs that are merged in a tradition are shown as \"same sound here\" rather than drilled.",
+    "interaction": "Hear one clip, tap the letter; a mouth-position tip card appears on a miss; recording self-compare is out of scope until the audio lane supports it.",
+    "test": "Unit: every pair references real letter ids and audio ids; merged pairs are never drilled in the tradition where they merge; no pair data contradicts the pronunciation data files. Human check: a native speaker confirms which pairs are distinct per tradition."
+   },
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-dummies-03",
+   "source": "dummies",
+   "name": "Contrast framing: where Hebrew resembles English and where it differs",
+   "what": "Explanations are anchored in what the English reader will get wrong or right by instinct.",
+   "axes": {
+    "r": 800,
+    "i": 850,
+    "c": 900,
+    "f": 850,
+    "risk": 120
+   },
+   "score": 860,
+   "improvedScore": 955,
+   "improvedName": "Interference hints triggered by the learner's own error",
+   "spec": {
+    "screen": "Inline hint panel under a wrong answer: one sentence saying what an English reader tends to expect and what Hebrew does instead (reading direction, missing short vowels, silent letters).",
+    "data": "Hint library keyed by error type: {errorKind, hint, appliesTo tradition}; error kinds come from the drill results already logged (confusable pair, wrong vowel, direction slip).",
+    "interaction": "Show the hint only after a miss, once per error kind per session, with a \"got it\" button that suppresses it for that kind next time; repeated misses escalate to a worked example.",
+    "test": "Unit: every errorKind produced by the drills has a hint; hints are under 140 characters; suppression state persists in the store; a hint never appears on a correct answer."
+   },
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-dummies-04",
+   "source": "dummies",
+   "name": "Parts ordered: basics, everyday action, travel, deeper life, sacred Hebrew last",
+   "what": "A functional Hebrew path with the sacred register as its own late part, shown by the table of contents.",
+   "axes": {
+    "r": 600,
+    "i": 850,
+    "c": 750,
+    "f": 700,
+    "risk": 120
+   },
+   "score": 760,
+   "improvedScore": 760,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "notes": "ALEF runs these as two parallel tracks (read and israel) from day one, which suits the two stated goals better."
+  },
+  {
+   "id": "bk-dummies-05",
+   "source": "dummies",
+   "name": "Exercises with an answer key appendix",
+   "what": "The table of contents ends with an answer key, which implies printed exercises that the learner can self-mark.",
+   "axes": {
+    "r": 700,
+    "i": 700,
+    "c": 850,
+    "f": 700,
+    "risk": 60
+   },
+   "score": 760,
+   "improvedScore": 760,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-dummies-06",
+   "source": "dummies",
+   "name": "Verb tables and mini-dictionary appendices",
+   "what": "Reference tables for lookup.",
+   "axes": {
+    "r": 300,
+    "i": 700,
+    "c": 600,
+    "f": 500,
+    "risk": 60
+   },
+   "score": 560,
+   "improvedScore": 560,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-dummies-07",
+   "source": "dummies",
+   "name": "Online audio of native speakers in conversation",
+   "what": "The description says audio of native speakers in dialogue accompanies the book.",
+   "axes": {
+    "r": 500,
+    "i": 800,
+    "c": 800,
+    "f": 800,
+    "risk": 60
+   },
+   "score": 750,
+   "improvedScore": 750,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed"
+  },
+  {
+   "id": "bk-dummies-08",
+   "source": "dummies",
+   "name": "Part of Tens: ten-item quick-win lists",
+   "what": "A closing section of short top-ten lists (content not shown in the listing).",
+   "axes": {
+    "r": 400,
+    "i": 700,
+    "c": 800,
+    "f": 600,
+    "risk": 100
+   },
+   "score": 600,
+   "improvedScore": 600,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed"
+  }
+ ]
+}

@@ -39,11 +39,12 @@ export function createAudio(opts) {
   // Items marked scope:'israeli-only' (survival phrasebook, mnemonic anchor words) exist only in the israeli tradition:
   // they are conversational Modern Hebrew, so the learner's congregation setting must not change how they sound.
   const israeliOnly = new Set();
-  for (const e of manifest) {
+  const addEntries = (list) => { for (const e of list) {
     if (e.scope === 'israeli-only') israeliOnly.add(`${e.kind}|${e.id}`);
     index.set(`${e.voice}|${e.tradition}|${e.kind}|${e.id}`, e);
     if (!textBy.has(`${e.kind}|${e.id}`) && e.text) textBy.set(`${e.kind}|${e.id}`, e.text);
-  }
+  } };
+  addEntries(manifest);
 
   let current = null;     // {audio} currently playing
   let stopped = 0;        // generation counter for cancelling sequences
@@ -195,5 +196,7 @@ export function createAudio(opts) {
     has: (kind, id, o) => plan(kind, id, o).source === 'file',
     /** what play() would use right now, without playing. */
     status: (kind, id, o) => plan(kind, id, o),
+    /** add entries after creation (the lazily loaded data/audio/manifest-words-<tradition>.json shards). Safe to call repeatedly. */
+    extend: (entries) => addEntries(entries || []),
   };
 }

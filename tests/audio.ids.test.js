@@ -1,11 +1,12 @@
 // Reconciles manifest ids with what the app actually asks the player for (patterns copied from the view modules; a change there must be mirrored in build_manifest.mjs).
+import { loadManifestFull } from '../tools/audio/manifest_io.mjs';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { createAudio, normalizeId } from '../src/audio/player.js';
 
 const R = (p) => JSON.parse(fs.readFileSync(new URL('../' + p, import.meta.url), 'utf8'));
-const manifest = R('data/audio/manifest.json');
+const manifest = loadManifestFull();
 const idx = new Map(manifest.map((e) => [`${e.voice}|${e.tradition}|${e.kind}|${e.id}`, e]));
 const lessons = R('data/curriculum/lessons.json').lessons;
 const registry = R('data/corpus/registry.json').entries;

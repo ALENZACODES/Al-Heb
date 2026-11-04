@@ -5,6 +5,7 @@
 //   node tools/audio/session_kit.mjs --write --tradition sephardi   also/only sephardi (blocked on an equivalence decision, see README)
 //   node tools/audio/session_kit.mjs --check               exit 1 if docs/voices/kit/** is stale
 // Reads data/audio/manifest.json (required clips only: optional whole-prayer reads and aliases are excluded). No network.
+import { loadManifestFull } from './manifest_io.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -210,7 +211,7 @@ export function allFiles(manifest, traditions = KIT_TRADITIONS) {
 }
 
 export function main(argv = process.argv.slice(2)) {
-  const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/audio/manifest.json'), 'utf8'));
+  const manifest = loadManifestFull(ROOT);
   const ti = argv.indexOf('--tradition');
   const traditions = ti >= 0 ? [argv[ti + 1]] : KIT_TRADITIONS;
   if (traditions.some((t) => !['israeli', 'sephardi', 'ashkenazi'].includes(t))) { console.error('--tradition israeli|sephardi|ashkenazi'); process.exit(2); }

@@ -1,4 +1,5 @@
 import { test } from 'node:test';
+import { loadManifestFull } from '../tools/audio/manifest_io.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -6,7 +7,7 @@ import { buildKit, allFiles, SCENARIOS, MARKERS, clipMinutes, clipSeconds, hebLe
 import { section } from '../tools/audio/recording_script.mjs';
 
 const R = new URL('..', import.meta.url).pathname;
-const manifest = JSON.parse(fs.readFileSync(path.join(R, 'data/audio/manifest.json'), 'utf8'));
+const manifest = loadManifestFull(R);
 
 for (const t of KIT_TRADITIONS) for (const v of ['m', 'f']) {
   test(`kit ${t}-${v}: every required clip appears exactly once, in session order, none optional/alias`, () => {

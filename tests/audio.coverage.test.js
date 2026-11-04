@@ -1,4 +1,5 @@
 import { test } from 'node:test';
+import { loadManifestFull } from '../tools/audio/manifest_io.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -6,7 +7,7 @@ import { spawnSync } from 'node:child_process';
 import { computeCoverage, totals, whoIsMissing, renderWho, renderMarkdown, entryState, buildIndex, suppliers, TALENT } from '../tools/audio/coverage.mjs';
 
 const R = new URL('..', import.meta.url).pathname;
-const manifest = JSON.parse(fs.readFileSync(path.join(R, 'data/audio/manifest.json'), 'utf8'));
+const manifest = loadManifestFull(R);
 const E = (voice, tradition, kind, id, group, extra = {}) => ({ path: `audio/${voice}/${tradition}/${kind}/${id}.mp3`, voice, tradition, kind, id, text: 'שָׁלוֹם', status: 'missing', source: 'none', group, ...extra });
 
 test('real manifest: nothing exists, so required == missing and the report says so plainly', () => {

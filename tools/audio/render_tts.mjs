@@ -2,6 +2,7 @@
 // Batch TTS renderer. DRY-RUN BY DEFAULT: lists what would be sent, characters, and approximate cost. Live calls need --execute.
 //   node tools/audio/render_tts.mjs --provider azure --voice m [--tradition israeli] [--kinds word,line,syllable] [--limit N] [--execute]
 // Refuses --tradition ashkenazi/sephardi: no TTS offers those; Ashkenazi audio must be human-recorded.
+import { loadManifestFull } from './manifest_io.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -55,7 +56,7 @@ export async function main(argv = process.argv.slice(2)) {
   const provider = PROVIDERS[a.provider];
   if (!provider) { console.error(`--provider required: ${Object.keys(PROVIDERS).join('|')}`); process.exit(2); }
   if (!['m', 'f'].includes(a.voice)) { console.error('--voice m|f required'); process.exit(2); }
-  const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/audio/manifest.json'), 'utf8'));
+  const manifest = loadManifestFull(ROOT);
   const rows = selectEntries(manifest, { voice: a.voice, tradition: a.tradition, kinds: a.kinds ? a.kinds.split(',') : DEFAULT_KINDS, limit: a.limit ? +a.limit : undefined });
   const est = estimate(rows, provider);
   console.log(`${a.execute ? 'EXECUTE' : 'DRY RUN'}: provider=${provider.id} voice=${a.voice} (${provider.voices[a.voice]})`);

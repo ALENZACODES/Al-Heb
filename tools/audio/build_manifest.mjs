@@ -195,21 +195,36 @@ export function buildEntries({ root = ROOT, existsFn } = {}) {
   return { entries: out, notes, warnings };
 }
 
+// Size budget: the eagerly loaded data/audio/manifest.json must stay under 2 MiB. Reader word clips (group 'prayer-word', one per word of
+// every corpus record, x2 voices x3 traditions) are ~70% of all entries, so they live in lazily loaded per-tradition shards
+// data/audio/manifest-words-<tradition>.json. Everything else (letters, vowels, syllables, lines, prayers, lesson/phrasebook/anchor words) is core.
+export const SHARD_GROUP = 'prayer-word';
+export function splitEntries(entries) {
+  const core = entries.filter((e) => e.group !== SHARD_GROUP);
+  const shards = {};
+  for (const t of TRADITIONS) shards[t] = entries.filter((e) => e.group === SHARD_GROUP && e.tradition === t);
+  return { core, shards };
+}
+export const shardFile = (t) => `data/audio/manifest-words-${t}.json`;
+
 export function main(argv = process.argv.slice(2)) {
   const check = argv.includes('--check');
   const { entries, notes, warnings } = buildEntries();
-  const text = JSON.stringify(entries, null, 1) + '\n';
-  const target = path.join(ROOT, 'data/audio/manifest.json');
+  const { core, shards } = splitEntries(entries);
+  const files = [['data/audio/manifest.json', JSON.stringify(core, null, 1) + '\n'], ...TRADITIONS.map((t) => [shardFile(t), JSON.stringify(shards[t], null, 1) + '\n'])];
   if (check) {
-    const cur = fs.existsSync(target) ? fs.readFileSync(target, 'utf8') : '';
-    if (cur !== text) { console.error('manifest.json is stale; run: node tools/audio/build_manifest.mjs'); process.exit(1); }
-    console.log('manifest.json is current'); return;
+    for (const [rel, text] of files) {
+      const t = path.join(ROOT, rel);
+      const cur = fs.existsSync(t) ? fs.readFileSync(t, 'utf8') : '';
+      if (cur !== text) { console.error(`${rel} is stale; run: node tools/audio/build_manifest.mjs`); process.exit(1); }
+    }
+    console.log('manifest files are current'); return;
   }
-  fs.mkdirSync(path.dirname(target), { recursive: true });
-  fs.writeFileSync(target, text);
+  fs.mkdirSync(path.join(ROOT, 'data/audio'), { recursive: true });
+  for (const [rel, text] of files) { fs.writeFileSync(path.join(ROOT, rel), text); console.log(`${rel}: ${(Buffer.byteLength(text) / 1048576).toFixed(2)} MiB`); }
   const counts = {};
   for (const e of entries) counts[`${e.kind}/${e.status}`] = (counts[`${e.kind}/${e.status}`] || 0) + 1;
-  console.log(`wrote ${entries.length} entries to data/audio/manifest.json`);
+  console.log(`wrote ${entries.length} entries (${core.length} core + ${entries.length - core.length} in word shards)`);
   console.log(notes.join('\n')); console.log(JSON.stringify(counts));
   for (const w of warnings) console.warn('warning:', w);
 }

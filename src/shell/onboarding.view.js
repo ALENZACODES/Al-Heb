@@ -1,5 +1,6 @@
 // First-run setup: voice, pronunciation tradition, goal. Everything is stored in settings and can be changed later.
 import { h, heSpan } from './ui.js';
+import { requestPersistence } from './backup.js';
 
 // "American synagogue" is a label for the Sephardi-values default (CONTRACT: American-synagogue default = sephardi values).
 const CONG = [
@@ -27,6 +28,7 @@ export function mount(root, ctx) {
     const patch = { onboarded: true };
     if (!skip) Object.assign(patch, { voice: sel.voice, congregation: sel.cong, goal: sel.goal, israelTrack: sel.goal !== 'read' });
     settings.set(patch);
+    if (!skip) requestPersistence(); // best effort, after a user gesture; a refusal is fine (Settings explains and offers a backup)
     ctx.route(skip ? '/' : '/learn');
   };
   root.replaceChildren(h('article', { class: 'card onboarding' },

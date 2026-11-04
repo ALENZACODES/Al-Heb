@@ -1,7 +1,8 @@
 // ALEF boot: wires store, settings, audio, router, and lazily mounted views.
 import { store } from './store.js';
 import { createSettings } from './shell/settings.js';
-import { createRouter, ROUTES, loadRouteModule } from './shell/router.js';
+import { createRouter, ROUTES, loadRouteModule, availableRoutes } from './shell/router.js';
+import { VIEW_FILES } from './shell/views.generated.js';
 import { t, tHe } from './shell/i18n.js';
 import { createStubAudio } from './shell/audio-stub.js';
 import { createShellAudio } from './shell/audio.js';
@@ -35,11 +36,14 @@ function applyTheme() {
 }
 function applyScript() { document.documentElement.dataset.script = settings.get('script'); }
 
+/** Names of routes whose view file exists in this build (from the generated view list). */
+let available = availableRoutes(VIEW_FILES);
+
 function renderNav(current) {
   const nav = document.getElementById('nav');
-  nav.replaceChildren(...ROUTES.filter((r) => r.nav).map((r) => {
+  nav.replaceChildren(...ROUTES.filter((r) => r.nav && available.has(r.name)).map((r) => {
     const a = h('a', { href: '#' + (r.pattern === '/' ? '/' : r.pattern), 'aria-current': current === r.name || (r.name === 'letters' && current === 'letter') || (r.name === 'read' && current === 'text') ? 'page' : null },
-      h('span', {}, t(r.nav)), heSpan(tHe(r.nav), 'he nav-he'));
+      h('span', {}, t(r.nav)), tHe(r.nav) ? heSpan(tHe(r.nav), 'he nav-he') : null);
     return h('li', {}, a);
   }));
 }
@@ -107,9 +111,10 @@ async function boot() {
   applyTheme(); applyScript();
   settings.subscribe((_, changed) => { if (changed.includes('theme')) applyTheme(); if (changed.includes('script')) applyScript(); });
   const audio = await makeAudio();
+  available = availableRoutes(VIEW_FILES);
   wireSoundStatus(audio);
   let router;
-  const ctxBase = { settings, store, audio, route: (p) => router.go(p), t, installPrompt };
+  const ctxBase = { settings, store, audio, route: (p) => router.go(p), t, installPrompt, hasRoute: (name) => available.has(name) };
   router = createRouter((m) => { show(m, ctxBase); });
   window.alef = { settings, store, audio, router }; // debugging handle
   router.start();

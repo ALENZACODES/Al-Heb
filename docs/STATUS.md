@@ -1,8 +1,11 @@
-# ALEF status (lane 8 integration run, 2026-11-03)
+# ALEF status (lane 8 integration run, round 3, 2026-11-04)
 
-Checked: `node --test` -> 242 pass, 0 fail (all lanes landed at the time, including lane 8's integration tests).
-Browser smoke (`node tools/smoke.mjs`, Chromium, 390x844 @2x, screenshots in `docs/screens/`): no uncaught page errors,
-no console errors, offline reload of the app shell succeeded once with the service worker.
+Checked: `node --test` -> 364 pass, 1 transient fail (the precache file-list test, which fails whenever any lane adds a file under src/, assets/ or data/ until `node tools/build-precache.mjs` is re-run; it passed after re-running).
+Browser smoke (`node tools/smoke.mjs`, Chromium, 390x844 @2x, screenshots in `docs/screens/`): no uncaught page errors, offline reload of the app shell succeeded once with the service worker, first-run onboarding persisted voice/tradition/goal.
+Screenshots actually viewed this round: home, welcome (onboarding), workbook. Others (including the three "not available yet" cards) were not viewed.
+
+Routes are data-driven: `src/shell/router.js` ROUTES; routes flagged `optional` are hidden from nav/quick links unless their view file exists
+(`src/shell/views.generated.js`, written by `node tools/build-precache.mjs`; re-run it after adding a view). A direct visit to a missing view shows the "not available yet" card.
 
 | Route | Result | Notes |
 |---|---|---|
@@ -13,6 +16,8 @@ no console errors, offline reload of the app shell succeeded once with the servi
 | `#/read`, `#/read/<textId>` | lane 5 view mounted | reads `ctx.params.textId` |
 | `#/scan` | lane 6 view mounted | no OCR engine wired (mock only) |
 | `#/calendar` | lane 1 view mounted | |
+| `#/workbook` | real content (lane 8) | lists the 4 PDFs from assets/workbook/manifest.json with print instructions; PDFs are not precached (download online); PDF print quality not checked by me |
+| `#/letters/atlas`, `#/soundgap`, `#/vocab` | not available yet | registered, but src/letters/atlas.view.js, src/pronunciation/soundgap.view.js and src/vocab/vocab.view.js do not exist yet; they appear in the Home "Go to" tiles automatically once the file exists and the view list is regenerated |
 | `#/settings`, `#/about` | real content (lane 8) | |
 | `#/nope` | not-found card | |
 

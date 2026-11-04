@@ -1,7 +1,7 @@
 {
- "when": "2026-11-04T00:58:11.839Z",
+ "when": "2026-11-04T01:06:31.804Z",
  "mode": "repo root",
- "offline": "FAIL: page.evaluate: Target page, context or browser has been closed",
+ "offline": "ok: app shell loaded offline",
  "checks": [
   {
    "name": "first run redirects home -> #/welcome",
@@ -45,7 +45,7 @@
    "status": "content",
    "heading": "ALEF אלף",
    "unavailable": false,
-   "textLength": 625,
+   "textLength": 640,
    "focused": "",
    "title": "ALEF",
    "errors": [],
@@ -89,7 +89,7 @@
    "status": "content",
    "heading": "Review",
    "unavailable": false,
-   "textLength": 126,
+   "textLength": 121,
    "focused": "",
    "title": "Learn - ALEF",
    "errors": [],
@@ -173,6 +173,50 @@
    "consoleErrors": []
   },
   {
+   "route": "/workbook",
+   "status": "content",
+   "heading": "Printable workbook",
+   "unavailable": false,
+   "textLength": 1048,
+   "focused": "",
+   "title": "Workbook - ALEF",
+   "errors": [],
+   "consoleErrors": []
+  },
+  {
+   "route": "/letters/atlas",
+   "status": "not-available-yet",
+   "heading": "Letter atlas: Not available yet",
+   "unavailable": true,
+   "textLength": 160,
+   "focused": "",
+   "title": "Letter atlas - ALEF",
+   "errors": [],
+   "consoleErrors": []
+  },
+  {
+   "route": "/soundgap",
+   "status": "not-available-yet",
+   "heading": "Sound gap: Not available yet",
+   "unavailable": true,
+   "textLength": 157,
+   "focused": "",
+   "title": "Sound gap - ALEF",
+   "errors": [],
+   "consoleErrors": []
+  },
+  {
+   "route": "/vocab",
+   "status": "not-available-yet",
+   "heading": "Vocabulary: Not available yet",
+   "unavailable": true,
+   "textLength": 158,
+   "focused": "",
+   "title": "Vocabulary - ALEF",
+   "errors": [],
+   "consoleErrors": []
+  },
+  {
    "route": "/settings",
    "status": "content",
    "heading": "Settings",
@@ -199,7 +243,7 @@
    "status": "content",
    "heading": "About ALEF",
    "unavailable": false,
-   "textLength": 2950,
+   "textLength": 3161,
    "focused": "",
    "title": "About - ALEF",
    "errors": [],

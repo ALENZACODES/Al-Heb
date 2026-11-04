@@ -55,6 +55,15 @@ const CSS = `
 .crp-badge{display:inline-block;font-size:.75rem;border:1px solid currentColor;border-radius:999px;padding:0 .5rem;margin-inline-start:.4rem}
 .crp-card .crp-play{grid-column:2;grid-row:1}
 .crp-status{min-block-size:1.4em;margin-block:.4rem;font-size:.95rem}
+.crp-sec{border:1px solid var(--border,#d9cdb3);background:var(--card,#fffaf0);border-radius:12px;padding:.7rem 1rem;margin-block:.6rem}
+.crp-sec h3{margin-block:.1em .3em}
+.crp-sec p{margin:.3em 0}
+.crp-sec .he{font-family:var(--font-he,serif);font-size:1.4rem}
+.crp-lnk{font:inherit;min-block-size:var(--tap,48px);padding:.3rem .8rem;margin:.2rem .3rem .2rem 0;border-radius:999px;border:2px solid var(--accent,#1f3a5f);background:transparent;color:var(--accent,#1f3a5f);cursor:pointer;text-align:start;max-inline-size:100%}
+.crp-lnk:focus-visible{outline:3px solid var(--focus,#b45309);outline-offset:2px}
+.crp-meta{border:1px solid var(--border,#d9cdb3);border-radius:12px;padding:.5rem 1rem;margin-block:.6rem}
+.crp-meta dt{font-weight:700;margin-block-start:.4em}
+.crp-meta dd{margin:0}
 .crp-sr{position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip:rect(0 0 0 0)}
 `;
 
@@ -202,6 +211,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     });
     for (const rec of p.records) if (rec.variants?.f) textBox.append(el('p', {}, el('strong', {}, 'Women say: '), heEl('span', rec.variants.f.he, 'he'), el('span', { class: 'crp-badge' }, 'derived, needs check')));
     host.append(textBox, status);
+    for (const rec of p.records) { const mb = metaBlock(rec); if (mb) host.append(el('h3', {}, p.records.length > 1 ? `About: ${rec.title}` : 'About this prayer'), mb); }
 
     // footer
     const foot = el('div', { class: 'crp-foot' });
@@ -253,6 +263,54 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     }
   }
 
+  // ---------- Torah-service guide ----------
+  const passageOf = (id) => { const t = corpus.getText(id); return t ? (passages.find((p) => p.records.some((r) => r.id === t.id)) ?? null) : null; };
+  function openPrayer(id) {
+    const p = passageOf(id); if (!p) return;
+    state.passageId = p.id; state.letters.clear(); state.tab = 'read'; render();
+    wrap.querySelector('#crp-h')?.scrollIntoView?.();
+  }
+  function prayerLink(pr) {
+    const t = corpus.getText(pr.id);
+    return el('button', { type: 'button', class: 'crp-lnk', 'data-prayer': pr.id, onclick: () => openPrayer(pr.id) },
+      el('strong', {}, t ? t.title : pr.id), pr.role ? ` (${pr.role})` : '');
+  }
+  function renderGuide(host) {
+    const g = corpus.guide();
+    host.append(el('h2', { id: 'crp-h' }, g.title), el('p', {}, g.subtitle),
+      el('p', { class: 'crp-warn' }, (String(g.note).match(/^.*?NOT been reviewed[^.]*\./) || [String(g.note)])[0] + ' Orders and customs differ between Orthodox, Conservative, Reform, Sephardi and Mizrahi communities.'), el('p', {}, g.approximateLength), el('p', {}, g.scrollNote));
+    const ol = el('ol', { class: 'crp-guide', 'aria-label': 'Order of the Shabbat morning service' });
+    for (const s of g.sections.slice().sort((a, b) => a.order - b.order)) {
+      const li = el('li', { id: `crp-sec-${s.id}`, class: 'crp-sec' },
+        el('h3', {}, s.title, ' ', s.hebrewName ? heEl('span', s.hebrewName, 'he') : null),
+        el('p', {}, s.whatHappens), el('p', {}, el('strong', {}, 'Your part: '), s.yourPart));
+      if (s.prayers?.length) li.append(el('div', { role: 'group', 'aria-label': `Prayers in ${s.title}` }, ...s.prayers.map(prayerLink)));
+      const gapNames = (s.gaps || []).map((id) => corpus.gap(id)?.name).filter(Boolean);
+      if (gapNames.length) li.append(el('p', { class: 'crp-gl' }, 'Not in this app yet: ' + gapNames.join('; ') + '.'));
+      if (s.howCongregationsDiffer) li.append(el('p', { class: 'crp-gl' }, 'Customs differ: ' + s.howCongregationsDiffer));
+      ol.append(li);
+    }
+    host.append(ol);
+    if (g.otherOccasions?.length) {
+      host.append(el('h3', {}, 'Other occasions'));
+      for (const o of g.otherOccasions) host.append(el('div', { class: 'crp-sec' }, el('h4', {}, o.title),
+        el('div', { role: 'group', 'aria-label': o.title }, ...o.prayers.map((id) => prayerLink({ id })))));
+    }
+  }
+
+  // per-prayer metadata (where it falls in the service, who says it, how movements differ)
+  function metaBlock(rec) {
+    const m = corpus.prayerMeta(rec.id); if (!m) return null;
+    const dl = el('dl', { class: 'crp-meta' });
+    const add = (k, v) => { if (v && v !== 'unknown') dl.append(el('dt', {}, k), el('dd', {}, v)); };
+    add('In plain English', m.whatItSays); add('Where in the service', m.whereInService); add('How it is said', [m.delivery, m.leaderOrCongregation].filter((x) => x && x !== 'unknown').join('; '));
+    const d = m.denominations || {};
+    const dn = ['orthodox', 'conservative', 'reform'].filter((k) => d[k] && d[k].use !== 'unknown').map((k) => `${k[0].toUpperCase() + k.slice(1)}: ${d[k].use}${d[k].note ? ' - ' + d[k].note : ''}`);
+    add('Movements', dn.join(' | ')); add('Note', m.note);
+    dl.append(el('dt', {}, 'Review'), el('dd', {}, m.clergyReviewed ? 'Reviewed by clergy.' : 'Written by the model; not reviewed by a rabbi, cantor or educator.'));
+    return dl;
+  }
+
   // ---------- phrasebook ----------
   function renderPhrasebook(host) {
     const sits = corpus.situations();
@@ -294,12 +352,12 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     const keepFocus = document.activeElement?.id;
     const host = el('div');
     const tabs = el('div', { class: 'crp-tabs', role: 'tablist', 'aria-label': 'Reader sections' },
-      ...[['read', 'Prayers and Torah'], ['phrasebook', 'Phrasebook']].map(([k, label]) =>
+      ...[['read', 'Prayers and Torah'], ...(corpus.guide() ? [['guide', 'Torah service guide']] : []), ['phrasebook', 'Phrasebook']].map(([k, label]) =>
         el('button', { type: 'button', role: 'tab', class: 'crp-tab', id: `crp-tab-${k}`, 'aria-selected': state.tab === k ? 'true' : 'false', 'aria-controls': 'crp-panel', tabindex: state.tab === k ? '0' : '-1',
           onclick: () => { state.tab = k; render(); },
-          onkeydown: (e) => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { state.tab = state.tab === 'read' ? 'phrasebook' : 'read'; render(); wrap.querySelector(`#crp-tab-${state.tab}`)?.focus(); } } }, label)));
+          onkeydown: (e) => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { const ks = [...tabs.querySelectorAll('[role=tab]')].map((b) => b.id.slice(8)); const d = e.key === 'ArrowRight' ? 1 : -1; state.tab = ks[(ks.indexOf(state.tab) + d + ks.length) % ks.length]; render(); wrap.querySelector(`#crp-tab-${state.tab}`)?.focus(); } } }, label)));
     const panel = el('div', { id: 'crp-panel', role: 'tabpanel', 'aria-labelledby': `crp-tab-${state.tab}` });
-    if (state.tab === 'read') renderReader(panel); else renderPhrasebook(panel);
+    if (state.tab === 'read') renderReader(panel); else if (state.tab === 'guide') renderGuide(panel); else renderPhrasebook(panel);
     wrap.replaceChildren(el('h1', { id: 'view-title', tabindex: '-1' }, 'Read'), tabs, panel, live);
     if (keepFocus) wrap.querySelector('#' + CSS_escape(keepFocus))?.focus();
   }

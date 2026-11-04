@@ -1,0 +1,906 @@
+{
+ "schema": "alef-class-track/1",
+ "status": "draft-not-educator-reviewed",
+ "note": "ALEF original 10-week adult reading track. Not clergy or educator reviewed. Not derived from any book text; shape (a few letters and vowels a week, letters to words to sentences, siddur focus) follows only public course descriptions (docs/curriculum/class-track/SOURCES.md). Hebrew comes from the corpus registry by id only.",
+ "sessionMinutes": 60,
+ "teacherPlan": [
+  {
+   "min": 10,
+   "what": "Warm-up (from the week sheet)"
+  },
+  {
+   "min": 15,
+   "what": "New letters and signs: show, say, echo"
+  },
+  {
+   "min": 15,
+   "what": "Decode drill: syllables, then words, in chorus then singly"
+  },
+  {
+   "min": 10,
+   "what": "Read-aloud text from the list"
+  },
+  {
+   "min": 5,
+   "what": "Culture note and questions"
+  },
+  {
+   "min": 5,
+   "what": "Self-check and homework"
+  }
+ ],
+ "teacherSay": [
+  "Move your finger from the right.",
+  "Say the name, then the sound.",
+  "Slow is fine. Read it again.",
+  "Which sign is under that letter?"
+ ],
+ "weeks": [
+  {
+   "id": "w01",
+   "week": 1,
+   "title": "First letters and the first word",
+   "goals": [
+    "Name and sound Shin, Bet and Tav",
+    "Read the two \"ah\" vowels and the dot in Bet",
+    "Read the word Shabbat right to left",
+    "Hear a blessing sung or read by the teacher, no reading yet"
+   ],
+   "lessons": [
+    "r01",
+    "r02"
+   ],
+   "stretch": [],
+   "warmUp": {
+    "minutes": 10,
+    "steps": [
+     {
+      "min": 3,
+      "text": "Point at the right edge of a line and move a finger left. Say \"right to left\" aloud three times."
+     },
+     {
+      "min": 4,
+      "text": "Trace Shin and Bet in the air, then on paper. Say each name and sound.",
+      "route": "#/letters"
+     },
+     {
+      "min": 3,
+      "text": "Sound out one two-letter syllable at a time, then glue them together."
+     }
+    ]
+   },
+   "readAloud": {
+    "mode": "listen",
+    "ids": [
+     {
+      "id": "bless-priestly-1"
+     }
+    ]
+   },
+   "homework": [
+    {
+     "label": "Lesson r01",
+     "route": "#/learn?lesson=r01",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r02",
+     "route": "#/learn?lesson=r02",
+     "minutes": 20
+    },
+    {
+     "label": "Trace letters",
+     "route": "#/letters",
+     "minutes": 10
+    },
+    {
+     "label": "Vowel board",
+     "route": "#/vowelboard",
+     "minutes": 5
+    }
+   ],
+   "canYou": [
+    "say the names and sounds of Shin, Bet and Tav",
+    "tell Bet from Vet by the dot in it",
+    "read Shabbat slowly, right to left"
+   ],
+   "errorKinds": [
+    "direction-slip",
+    "wrong-vowel"
+   ],
+   "soundGaps": [
+    "vav-bet",
+    "tet-tav"
+   ],
+   "culture": "The greeting Shabbat shalom is the first thing many people read in Hebrew."
+  },
+  {
+   "id": "w02",
+   "week": 2,
+   "title": "Lamed, Vav, Yod and the word shalom",
+   "goals": [
+    "Name and sound Lamed, final Mem, Vav and Yod",
+    "Read cholam and chirik",
+    "Read Shabbat shalom unaided",
+    "Spot the final-Mem shape",
+    "Listen for the first words of the Priestly Blessing"
+   ],
+   "lessons": [
+    "r03",
+    "r04",
+    "r05",
+    "r06"
+   ],
+   "stretch": [],
+   "warmUp": {
+    "minutes": 10,
+    "steps": [
+     {
+      "min": 3,
+      "text": "Flash the six letters from last week and this week; say name, then sound."
+     },
+     {
+      "min": 4,
+      "text": "Read the Shabbat shalom words from last week without help.",
+      "route": "#/learn?lesson=r04"
+     },
+     {
+      "min": 3,
+      "text": "Pairs drill: a final Mem next to a regular Mem, say which is which."
+     }
+    ]
+   },
+   "readAloud": {
+    "mode": "listen",
+    "ids": [
+     {
+      "id": "bless-priestly-1"
+     }
+    ]
+   },
+   "homework": [
+    {
+     "label": "Lesson r03",
+     "route": "#/learn?lesson=r03",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r04",
+     "route": "#/learn?lesson=r04",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r05",
+     "route": "#/learn?lesson=r05",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r06",
+     "route": "#/learn?lesson=r06",
+     "minutes": 20
+    },
+    {
+     "label": "Look-alike check",
+     "route": "#/checkpoint",
+     "minutes": 5
+    }
+   ],
+   "canYou": [
+    "read Shabbat shalom without peeking",
+    "name the vowel under a letter: kamatz, patach, cholam or chirik",
+    "say which Mem is the final one"
+   ],
+   "errorKinds": [
+    "final-form",
+    "wrong-vowel"
+   ],
+   "soundGaps": [
+    "vav-bet"
+   ],
+   "culture": "Shalom is both hello and goodbye, and it means peace."
+  },
+  {
+   "id": "w03",
+   "week": 3,
+   "title": "Alef, He, Resh, Mem and the \"ay\" sound",
+   "goals": [
+    "Name and sound Alef, He, Resh and Mem",
+    "Read tzere",
+    "Know that Alef carries a vowel but no sound of its own",
+    "Read short real words from the lesson lists"
+   ],
+   "lessons": [
+    "r07",
+    "r08",
+    "r09"
+   ],
+   "stretch": [],
+   "warmUp": {
+    "minutes": 10,
+    "steps": [
+     {
+      "min": 3,
+      "text": "Flash all letters so far, then flash all vowels so far."
+     },
+     {
+      "min": 4,
+      "text": "Echo reading: the teacher says a short word, the class says it back, then reads it from the board."
+     },
+     {
+      "min": 3,
+      "text": "Each person reads one syllable from the board aloud."
+     }
+    ]
+   },
+   "readAloud": {
+    "mode": "listen",
+    "ids": [
+     {
+      "id": "bless-priestly-1"
+     }
+    ]
+   },
+   "homework": [
+    {
+     "label": "Lesson r07",
+     "route": "#/learn?lesson=r07",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r08",
+     "route": "#/learn?lesson=r08",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r09",
+     "route": "#/learn?lesson=r09",
+     "minutes": 20
+    },
+    {
+     "label": "Syllable ladder",
+     "route": "#/ladder",
+     "minutes": 10
+    }
+   ],
+   "canYou": [
+    "tell Resh from Dalet and Vav by shape",
+    "say a word that starts with Alef without adding an extra consonant",
+    "read a word with tzere"
+   ],
+   "errorKinds": [
+    "silent-letter",
+    "wrong-vowel"
+   ],
+   "soundGaps": [
+    "chet-khaf-he",
+    "alef-ayin",
+    "resh"
+   ],
+   "culture": "Hebrew is written without capital letters; there is one shape per letter, plus five final shapes."
+  },
+  {
+   "id": "w04",
+   "week": 4,
+   "title": "Kaf, Nun and the \"oo\" and \"eh\" vowels",
+   "goals": [
+    "Name and sound Kaf (and final Kaf) and Nun (and final Nun)",
+    "Read segol, shuruk and kubutz",
+    "Hear a silent shva at the end of a word",
+    "Read the first whole line of a prayer"
+   ],
+   "lessons": [
+    "r10",
+    "r11",
+    "r12",
+    "r13"
+   ],
+   "stretch": [],
+   "warmUp": {
+    "minutes": 10,
+    "steps": [
+     {
+      "min": 3,
+      "text": "Vowel round: show each vowel, the class says the sound together.",
+      "route": "#/vowelboard"
+     },
+     {
+      "min": 4,
+      "text": "Look-alike drill: Bet or Kaf, Dalet or Resh, Vav or final Nun.",
+      "route": "#/checkpoint"
+     },
+     {
+      "min": 3,
+      "text": "Read two words chosen from last week lessons."
+     }
+    ]
+   },
+   "readAloud": {
+    "mode": "read",
+    "ids": [
+     {
+      "id": "zimun-opening",
+      "line": 1
+     }
+    ]
+   },
+   "homework": [
+    {
+     "label": "Lesson r10",
+     "route": "#/learn?lesson=r10",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r11",
+     "route": "#/learn?lesson=r11",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r12",
+     "route": "#/learn?lesson=r12",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r13",
+     "route": "#/learn?lesson=r13",
+     "minutes": 20
+    },
+    {
+     "label": "Fade-out recall",
+     "route": "#/fade",
+     "minutes": 10
+    }
+   ],
+   "canYou": [
+    "tell Bet from Kaf and final Nun from Vav",
+    "read a word with shuruk and a word with kubutz",
+    "read the first line of the zimun slowly"
+   ],
+   "errorKinds": [
+    "confusable-pair",
+    "wrong-vowel"
+   ],
+   "soundGaps": [
+    "chet-khaf-he",
+    "kaf-qof"
+   ],
+   "culture": "The zimun is the call that opens the blessing after a meal."
+  },
+  {
+   "id": "w05",
+   "week": 5,
+   "title": "Shva, Pe, Chet and the Name",
+   "goals": [
+    "Read a shva that starts a syllable",
+    "Name and sound Pe (and final Pe) and Chet",
+    "Meet the sneaky patach",
+    "Read the first line of the Priestly Blessing and see how the Name is written"
+   ],
+   "lessons": [
+    "r14",
+    "r15",
+    "r16",
+    "r17"
+   ],
+   "stretch": [],
+   "warmUp": {
+    "minutes": 10,
+    "steps": [
+     {
+      "min": 3,
+      "text": "Flash look-alike letters, then vowels."
+     },
+     {
+      "min": 4,
+      "text": "Syllable chips: build a two-syllable word from chips and read it.",
+      "route": "#/syllablechips"
+     },
+     {
+      "min": 3,
+      "text": "Read last week zimun line again, faster."
+     }
+    ]
+   },
+   "readAloud": {
+    "mode": "read",
+    "ids": [
+     {
+      "id": "num-12-13"
+     }
+    ]
+   },
+   "homework": [
+    {
+     "label": "Lesson r14",
+     "route": "#/learn?lesson=r14",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r15",
+     "route": "#/learn?lesson=r15",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r16",
+     "route": "#/learn?lesson=r16",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r17",
+     "route": "#/learn?lesson=r17",
+     "minutes": 20
+    },
+    {
+     "label": "Listen to the sound gap",
+     "route": "#/soundgap",
+     "minutes": 5
+    }
+   ],
+   "canYou": [
+    "read a word that starts with shva",
+    "say Chet with a scrape, not a plain h",
+    "read the first line of the Priestly Blessing"
+   ],
+   "errorKinds": [
+    "wrong-vowel",
+    "confusable-pair"
+   ],
+   "soundGaps": [
+    "chet-khaf-he"
+   ],
+   "culture": "The four-letter Name is not pronounced as written; readers say Adonai instead."
+  },
+  {
+   "id": "w06",
+   "week": 6,
+   "title": "Dalet, Gimel, Ayin, Samekh, Sin and half vowels",
+   "goals": [
+    "Name and sound Dalet, Gimel, Ayin, Samekh and Sin",
+    "Read the three chataf vowels",
+    "Tell Shin from Sin by the dot",
+    "Read three short prayer lines"
+   ],
+   "lessons": [
+    "r18",
+    "r19",
+    "r20",
+    "r21"
+   ],
+   "stretch": [],
+   "warmUp": {
+    "minutes": 10,
+    "steps": [
+     {
+      "min": 3,
+      "text": "Letter flash with a timer on the board, no pressure."
+     },
+     {
+      "min": 4,
+      "text": "Dot tiles: move the dot, hear the change.",
+      "route": "#/dottile"
+     },
+     {
+      "min": 3,
+      "text": "Read a line from last week twice in a row."
+     }
+    ]
+   },
+   "readAloud": {
+    "mode": "read",
+    "ids": [
+     {
+      "id": "ein-kamocha"
+     },
+     {
+      "id": "oseh-shalom"
+     },
+     {
+      "id": "ashrei-84-5"
+     }
+    ]
+   },
+   "homework": [
+    {
+     "label": "Lesson r18",
+     "route": "#/learn?lesson=r18",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r19",
+     "route": "#/learn?lesson=r19",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r20",
+     "route": "#/learn?lesson=r20",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r21",
+     "route": "#/learn?lesson=r21",
+     "minutes": 20
+    },
+    {
+     "label": "Trace words",
+     "route": "#/words/trace",
+     "minutes": 10
+    }
+   ],
+   "canYou": [
+    "tell Shin from Sin by the dot",
+    "read a chataf vowel as a short sound",
+    "read one of the three lines from the read-aloud list"
+   ],
+   "errorKinds": [
+    "silent-letter",
+    "wrong-vowel"
+   ],
+   "soundGaps": [
+    "alef-ayin",
+    "samekh-sin"
+   ],
+   "culture": "Oseh shalom closes both the standing prayer and the mourner Kaddish."
+  },
+  {
+   "id": "w07",
+   "week": 7,
+   "title": "The alphabet is finished: Zayin, Tet, Tsadi, Qof",
+   "goals": [
+    "Name and sound Zayin, Tet, Tsadi (and final) and Qof",
+    "Recognise all 27 letter shapes",
+    "Read the first line of the Shema",
+    "Read a morning line and a verse of welcome"
+   ],
+   "lessons": [
+    "r22",
+    "r23",
+    "r24"
+   ],
+   "stretch": [],
+   "warmUp": {
+    "minutes": 10,
+    "steps": [
+     {
+      "min": 3,
+      "text": "Alphabet song or order recited together, then individually."
+     },
+     {
+      "min": 4,
+      "text": "Look-alike check on the new letters.",
+      "route": "#/checkpoint"
+     },
+     {
+      "min": 3,
+      "text": "Read two lines from last week."
+     }
+    ]
+   },
+   "readAloud": {
+    "mode": "read",
+    "ids": [
+     {
+      "id": "modeh-ani-1"
+     },
+     {
+      "id": "mah-tovu-1"
+     },
+     {
+      "id": "ashrei-144-15"
+     }
+    ]
+   },
+   "homework": [
+    {
+     "label": "Lesson r22",
+     "route": "#/learn?lesson=r22",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r23",
+     "route": "#/learn?lesson=r23",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r24",
+     "route": "#/learn?lesson=r24",
+     "minutes": 20
+    },
+    {
+     "label": "Letters atlas",
+     "route": "#/letters/atlas",
+     "minutes": 10
+    }
+   ],
+   "canYou": [
+    "recognise every letter in the alphabet",
+    "read Shema line 1 slowly",
+    "tell Tet from Tav and Qof from Kaf"
+   ],
+   "errorKinds": [
+    "confusable-pair",
+    "final-form"
+   ],
+   "soundGaps": [
+    "tsadi",
+    "kaf-qof",
+    "tet-tav"
+   ],
+   "culture": "Modeh ani is the first thing many people say on waking."
+  },
+  {
+   "id": "w08",
+   "week": 8,
+   "title": "The full Priestly Blessing and the blessing formula",
+   "goals": [
+    "Read each of the three Priestly Blessing lines",
+    "Read all three straight through",
+    "Read the common start of a blessing",
+    "Read the bread blessing"
+   ],
+   "lessons": [
+    "r25",
+    "r26",
+    "r27",
+    "r28"
+   ],
+   "stretch": [],
+   "warmUp": {
+    "minutes": 10,
+    "steps": [
+     {
+      "min": 3,
+      "text": "Fast review of vowels and the Name."
+     },
+     {
+      "min": 4,
+      "text": "Line-by-line choral reading of the three blessing lines, then in pairs.",
+      "route": "#/read/bless-priestly-1"
+     },
+     {
+      "min": 3,
+      "text": "Everyone reads the first words of a blessing."
+     }
+    ]
+   },
+   "readAloud": {
+    "mode": "read",
+    "ids": [
+     {
+      "id": "bless-priestly-1"
+     },
+     {
+      "id": "bless-priestly-2"
+     },
+     {
+      "id": "bless-priestly-3"
+     },
+     {
+      "id": "bless-formula-1"
+     },
+     {
+      "id": "hamotzi"
+     }
+    ]
+   },
+   "homework": [
+    {
+     "label": "Lesson r25",
+     "route": "#/learn?lesson=r25",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r26",
+     "route": "#/learn?lesson=r26",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r27",
+     "route": "#/learn?lesson=r27",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r28",
+     "route": "#/learn?lesson=r28",
+     "minutes": 20
+    },
+    {
+     "label": "Read the blessing",
+     "route": "#/read/bless-priestly-1",
+     "minutes": 10
+    }
+   ],
+   "canYou": [
+    "read the three Priestly Blessing lines in order",
+    "read the start of a blessing without stopping",
+    "read the bread blessing slowly"
+   ],
+   "errorKinds": [
+    "wrong-vowel",
+    "missing-short-vowels"
+   ],
+   "soundGaps": [],
+   "culture": "The Priestly Blessing is traditionally sung or said over children on Friday night in many homes."
+  },
+  {
+   "id": "w09",
+   "week": 9,
+   "title": "Shva, dagesh and stress rules; the Shema",
+   "goals": [
+    "Decide if a shva sounds or is silent",
+    "Tell a hard dagesh from a soft letter",
+    "Know where the stress falls",
+    "Read both lines of the Shema"
+   ],
+   "lessons": [
+    "r29",
+    "r30",
+    "r31",
+    "r36"
+   ],
+   "stretch": [
+    "r32",
+    "r33"
+   ],
+   "warmUp": {
+    "minutes": 10,
+    "steps": [
+     {
+      "min": 3,
+      "text": "Shva quiz: show a word, class says \"sounds\" or \"silent\"."
+     },
+     {
+      "min": 4,
+      "text": "Tap out the beats of a line, then read it.",
+      "route": "#/niqquddial"
+     },
+     {
+      "min": 3,
+      "text": "Read two blessings from last week."
+     }
+    ]
+   },
+   "readAloud": {
+    "mode": "read",
+    "ids": [
+     {
+      "id": "shema-1"
+     },
+     {
+      "id": "shema-2"
+     },
+     {
+      "id": "vahavta-1"
+     },
+     {
+      "id": "kiddush-wine-1"
+     }
+    ]
+   },
+   "homework": [
+    {
+     "label": "Lesson r29",
+     "route": "#/learn?lesson=r29",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r30",
+     "route": "#/learn?lesson=r30",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r31",
+     "route": "#/learn?lesson=r31",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r36",
+     "route": "#/learn?lesson=r36",
+     "minutes": 20
+    },
+    {
+     "label": "Fade-out recall",
+     "route": "#/fade",
+     "minutes": 10
+    }
+   ],
+   "canYou": [
+    "say when a shva is silent",
+    "read the first Shema line without stopping",
+    "say which syllable is stressed in a word of your choice"
+   ],
+   "errorKinds": [
+    "wrong-vowel",
+    "silent-letter"
+   ],
+   "soundGaps": [],
+   "culture": "The Shema is said every morning and every evening."
+  },
+  {
+   "id": "w10",
+   "week": 10,
+   "title": "A Friday-night page and a new page",
+   "goals": [
+    "Read the Torah blessings",
+    "Read the Friday-night wine blessing",
+    "Read a line you have never seen with no help",
+    "Plan what to practise next"
+   ],
+   "lessons": [
+    "r38",
+    "r41",
+    "r50"
+   ],
+   "stretch": [
+    "r37",
+    "r39",
+    "r40"
+   ],
+   "warmUp": {
+    "minutes": 10,
+    "steps": [
+     {
+      "min": 3,
+      "text": "Read the first line of a prayer you know by heart."
+     },
+     {
+      "min": 4,
+      "text": "Cold read without a timer: each person reads one unseen line aloud."
+     },
+     {
+      "min": 3,
+      "text": "Read the whole week 8 blessing together."
+     }
+    ]
+   },
+   "readAloud": {
+    "mode": "read",
+    "ids": [
+     {
+      "id": "torah-bless-1"
+     },
+     {
+      "id": "candle-shabbat"
+     },
+     {
+      "id": "kiddush-shabbat-eve"
+     },
+     {
+      "id": "aleinu-1"
+     }
+    ]
+   },
+   "homework": [
+    {
+     "label": "Lesson r38",
+     "route": "#/learn?lesson=r38",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r41",
+     "route": "#/learn?lesson=r41",
+     "minutes": 20
+    },
+    {
+     "label": "Lesson r50",
+     "route": "#/learn?lesson=r50",
+     "minutes": 20
+    },
+    {
+     "label": "Your progress",
+     "route": "#/progress",
+     "minutes": 5
+    }
+   ],
+   "canYou": [
+    "read a blessing you have not seen before",
+    "read at your own pace without fear of mistakes",
+    "name the next prayer you want to learn"
+   ],
+   "errorKinds": [
+    "missing-short-vowels",
+    "direction-slip"
+   ],
+   "soundGaps": [],
+   "culture": "The wine blessing opens Friday-night Kiddush; the candle blessing is said at home as Shabbat begins."
+  }
+ ]
+}

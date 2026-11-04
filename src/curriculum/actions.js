@@ -1,7 +1,9 @@
 /** Store-backed learning actions shared by the Lane 1 views and the home screen. */
 import { storeGet, storeSet, PROGRESS_KEY, CARDS_KEY, STREAK_KEY } from "./dom.js";
-import { ensureCards, recordActivity, currentStreak } from "./progress.js";
-import { review } from "./srs.js";
+import { ensureCards, recordActivity, currentStreak, applyOutcomesToCards, syllableCardId, lineCardId, genderCardId } from "./progress.js";
+import { review, newCard } from "./srs.js";
+import { nextScaffold, SCAFFOLD_KEY } from "./scaffold.js";
+import { nextFadeLevel } from "./fade.js";
 
 export async function loadState(ctx, now = Date.now()) {
   const progress = await storeGet(ctx, PROGRESS_KEY, { completed: {} });
@@ -38,6 +40,7 @@ export async function rateCard(ctx, cardId, rating, now = Date.now()) {
   const next = review(card, rating, now);
   await storeSet(ctx, CARDS_KEY, { ...st.cards, [cardId]: next });
   await storeSet(ctx, STREAK_KEY, recordActivity(st.rawStreak, now));
+  if (cardId.startsWith("word:")) await updateScaffold(ctx, cardId, rating, next, now);
   return next;
 }
 
@@ -92,4 +95,70 @@ export async function saveCheckpoint(ctx, stage, qs, answers, result, now = Date
   const prev = await storeGet(ctx, CHECKPOINTS_KEY, {});
   await storeSet(ctx, CHECKPOINTS_KEY, { ...prev, [stage]: { right: result.right, total: result.total, at: now } });
   await storeSet(ctx, STREAK_KEY, recordActivity(st.rawStreak, now));
+}
+
+// ---- round 4 exercises: syllable ladder, fade-out recall, gender cards, per-word transliteration fading
+export const LADDER_KEY = "curriculum.ladder";   // { level, best, cleared, at }
+export const GENDER_KEY = "curriculum.gender";   // { iAm: "m"|"f", stats:{ [pairId]:{right,total} } }
+
+async function touchStreak(ctx, now) {
+  const st = await loadState(ctx, now);
+  await storeSet(ctx, STREAK_KEY, recordActivity(st.rawStreak, now));
+}
+
+/** Save a ladder session: resume level, and SRS outcomes (misses lapse "syllable:<id>" cards, hits review existing ones). */
+export async function saveLadder(ctx, state, now = Date.now()) {
+  const kindOf = (id) => (/-final$/.test(id) ? "letter" : "syllable");
+  const outcomes = [
+    ...state.missed.map((id) => ({ id: kindOf(id) === "letter" ? `letter:${id}` : syllableCardId(id), kind: kindOf(id), good: false })),
+    ...state.right.filter((id) => !state.missed.includes(id)).map((id) => ({ id: kindOf(id) === "letter" ? `letter:${id}` : syllableCardId(id), kind: kindOf(id), good: true })),
+  ];
+  if (outcomes.length) {
+    const st = await loadState(ctx, now);
+    await storeSet(ctx, CARDS_KEY, applyOutcomesToCards(st.cards, outcomes, now));
+  }
+  const prev = await storeGet(ctx, LADDER_KEY, {});
+  await storeSet(ctx, LADDER_KEY, { level: state.cleared ? 1 : state.level, best: Math.max(prev.best || 0, state.best), cleared: !!(prev.cleared || state.cleared), at: now });
+  if (state.answered) await touchStreak(ctx, now);
+}
+
+/** Save one fade-out recall attempt for a line. Returns { level, card }. `played` = the fade level the learner practised. */
+export async function saveFade(ctx, lineId, played, correct, now = Date.now()) {
+  const st = await loadState(ctx, now);
+  const id = lineCardId(lineId);
+  const have = st.cards[id] || newCard({ id, kind: "prayerLine", now });
+  const stored = have.fadeLevel ?? 0;
+  const fadeLevel = nextFadeLevel(stored, played, correct);
+  const card = { ...review(have, correct ? 3 : 1, now), fadeLevel };
+  await storeSet(ctx, CARDS_KEY, { ...st.cards, [id]: card });
+  await storeSet(ctx, STREAK_KEY, recordActivity(st.rawStreak, now));
+  return { level: fadeLevel, card };
+}
+
+/** Save gender-quiz answers: right/total per pair, and SRS cards "gender:<pairId>" (misses lapse; hits review existing). */
+export async function saveGender(ctx, results, now = Date.now()) {
+  const stats = (await storeGet(ctx, GENDER_KEY, {})) || {};
+  const per = { ...(stats.stats || {}) };
+  for (const r of results) per[r.id] = { right: (per[r.id]?.right || 0) + (r.good ? 1 : 0), total: (per[r.id]?.total || 0) + 1 };
+  await storeSet(ctx, GENDER_KEY, { ...stats, stats: per });
+  const st = await loadState(ctx, now);
+  await storeSet(ctx, CARDS_KEY, applyOutcomesToCards(st.cards, results.map((r) => ({ id: genderCardId(r.id), kind: "genderPair", good: r.good })), now));
+  if (results.length) await touchStreak(ctx, now);
+}
+export async function setLearnerGender(ctx, iAm) {
+  const g = (await storeGet(ctx, GENDER_KEY, {})) || {};
+  await storeSet(ctx, GENDER_KEY, { ...g, iAm });
+}
+
+/** Update a word card's transliteration scaffold after a review (see scaffold.js). */
+export async function updateScaffold(ctx, cardId, rating, card, now = Date.now()) {
+  const map = (await storeGet(ctx, SCAFFOLD_KEY, {})) || {};
+  const start = ctx?.settings?.get?.("scaffoldStart") === "faint" ? "faint" : "full";
+  await storeSet(ctx, SCAFFOLD_KEY, { ...map, [cardId]: nextScaffold(map[cardId], { rating, stability: card.stability, now, start }) });
+}
+export async function setScaffoldPin(ctx, cardId, pinned) {
+  const map = (await storeGet(ctx, SCAFFOLD_KEY, {})) || {};
+  const start = ctx?.settings?.get?.("scaffoldStart") === "faint" ? "faint" : "full";
+  const cur = map[cardId] || { level: start === "faint" ? 1 : 0, pinned: false, advancedOn: null };
+  await storeSet(ctx, SCAFFOLD_KEY, { ...map, [cardId]: { ...cur, pinned: !!pinned } });
 }

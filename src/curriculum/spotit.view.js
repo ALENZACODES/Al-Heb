@@ -39,10 +39,10 @@ export function mountSpotIt(root, ctx, letterId, seed0 = 1) {
         if (cell.kind === "hit") b.className += tapped.has(i) ? " alef-spot-hit" : " alef-spot-missed";
         else if (tapped.has(i)) b.className += " alef-spot-wrong"; });
       const fooled = Object.entries(s.fooledBy).map(([b, n]) => `${c.letters.get(b)?.name || b} (${n})`);
-      result.replaceChildren(
+      result.replaceChildren(...[
         el("p", {}, `Found ${s.hits} of ${s.total} ${L.name}.` + (s.otherTaps.length ? ` ${s.otherTaps.length} other tap${s.otherTaps.length === 1 ? "" : "s"} were not a look-alike or the target.` : "")),
         fooled.length ? el("p", {}, `A look-alike fooled you: ${fooled.join(", ")}.`) : null,
-        s.missed.length ? el("p", { class: "muted" }, `${s.missed.length} missed (outlined).`) : null);
+        s.missed.length ? el("p", { class: "muted" }, `${s.missed.length} missed (outlined).`) : null].filter(Boolean));
       await saveSpotIt(ctx, model, s);
       if (!alive) return;
       if (fooled.length) {

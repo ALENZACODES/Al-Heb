@@ -25,7 +25,7 @@ export function mount(root, ctx) {
       h('a', { class: 'btn secondary', href: '#/read' }, t('home.opening.link'))),
     h('section', { class: 'card', 'aria-labelledby': 'h-today' }, h('h2', { id: 'h-today' }, t('home.today')), todayBody),
     h('section', { class: 'card', 'aria-labelledby': 'h-due' }, h('h2', { id: 'h-due' }, t('home.due')), dueBody),
-    h('section', { class: 'card', 'aria-labelledby': 'h-streak' }, h('h2', { id: 'h-streak' }, t('home.streak')), streakBody),
+    h('section', { class: 'card', 'aria-labelledby': 'h-streak' }, h('h2', { id: 'h-streak' }, t('home.streak')), streakBody, h('a', { class: 'btn secondary', href: '#/progress' }, 'See your progress')),
     h('nav', { class: 'card', 'aria-labelledby': 'h-quick' }, h('h2', { id: 'h-quick' }, t('home.quick')),
       h('ul', { class: 'tiles' }, ...QUICK.map(([k, href]) => h('li', {}, h('a', { class: 'tile', href }, h('span', {}, t('nav.' + k)), tHe('nav.' + k) ? heSpan(tHe('nav.' + k)) : null))),
         // optional views from other lanes: only listed when their file exists in this build

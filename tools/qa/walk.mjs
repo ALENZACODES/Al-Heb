@@ -25,7 +25,7 @@ const executablePath = process.env.QA_CHROME || undefined;
 
 // ---- routes: every ROUTES entry with sample params, plus deep links and bad input
 const { ROUTES } = await import(pathToFileURL(join(root, 'src/shell/router.js')).href);
-const SAMPLE = { id: null, letter: 'bet', group: 'lw1', textId: 'bless-priestly-1' };
+const SAMPLE = { id: null, letter: 'bet', group: 'lw1', textId: 'bless-priestly-1', sec: 'ladder', section: 'ladder' };
 const sampleFor = (r) => r.pattern.replace(/:(\w+)/g, (_, k) => (r.name === 'dialogue' ? 'd-cafe' : r.name === 'fadeline' ? 'bless-priestly-1' : r.name === 'letter' ? 'bet' : SAMPLE[k] ?? 'x'));
 const routeList = ROUTES.map((r) => ({ path: sampleFor(r), route: r.name }));
 const extras = ['/letters/alef', '/letters/final-mem', '/letters/bet?tab=drill&x=1', '/letters?tab=type', '/learn?lesson=r01', '/learn?lesson=r05&review=1', '/learn?review=1', '/learn?loanwords=1', '/read/bless-priestly-1?line=2',

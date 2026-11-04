@@ -136,7 +136,7 @@ export function buildHtml(o, pages = {}) {
   const pg = (id) => `<span class="pg">${pages[id] ?? '&middot;&middot;&middot;'}</span>`;
   const toc = (id, label) => `<li><a href="#${id}" style="display:contents"><span class="t">${label}</span>${pg(id)}</a></li>`;
   const idx = readJson('assets/img/index.json');
-  const R = createImgResolver({ base: relative(outDir, join(ROOT, 'assets/img')) || '.', files: idx?.files || [] });
+  const R = createImgResolver({ base: relative(outDir, join(ROOT, 'assets/img')) || '.', files: idx?.files || [], generated: readJson('data/images/generated-manifest.json') });
   const lettersJson = loadLettersJson();
   const lettersSource = lettersJson ? 'data/letters/letters.json' : 'built-in glyph map (data/letters/letters.json not present)';
   const reg = registryBlessing();

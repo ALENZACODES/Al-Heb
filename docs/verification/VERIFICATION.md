@@ -1,0 +1,215 @@
+# ALEF verification sweep
+
+Fetch date: 2026-11-03/04 (sandbox UTC clock read 2026-11-04; the session date was 2026-11-03). Every VERIFIED row rests on a page or API response fetched in this session; the URL column is that page. Nothing was marked VERIFIED from memory. Raw fetches and the fetch log are in `/home/claude/research_notes/verification/raw/` and `fetchlog.tsv` (outside git).
+
+Status rules. VERIFIED: a fetched primary source states it (a few rows say 'secondary' or 'as Sefaria label' where the primary is a Wikipedia page or a platform's own metadata label). CONTRADICTED: a fetched source says something different from what the project holds. STILL UNVERIFIED: page could not be fetched, did not say, or the claim is a judgement. A status with a semicolon (for example 'VERIFIED (lexical pair); stress position STILL UNVERIFIED') is a split verdict; it is counted under its first word and the unverified half is spelled out in the same cell.
+
+Caveats about method. (1) Pages that returned 403 to curl through the proxy (OpenAI, Adobe, Midjourney, Chabad SO) were retried with WebFetch; only the OpenAI terms succeeded, and that result passed through a summariser, so its quotes should be re-read on the live page. (2) Text extraction from JavaScript-heavy pages (Vercel, Netlify, Azure pricing) can lose table structure; those rows say so. (3) Prices were read from rendered pages and can change.
+
+## Totals
+
+| Area | VERIFIED | CONTRADICTED | STILL UNVERIFIED | Rows |
+|---|---|---|---|---|
+| 1. Jewish-calendar module (Hebcal, GeoNames, Reform conventions, candle lighting) | 18 | 0 | 3 | 21 |
+| 2. Sefaria, corpus licences, tanach.us, Open Siddur | 11 | 0 | 2 | 13 |
+| 3. OCR and translation | 13 | 3 | 5 | 21 |
+| 4. TTS and voice | 14 | 0 | 6 | 20 |
+| 5. Stores, hosting, Web Speech, FSRS | 16 | 0 | 1 | 17 |
+| 6. Image generation, book production, fonts | 11 | 1 | 5 | 17 |
+| 7. Language and pedagogy facts | 12 | 3 | 7 | 22 |
+| **All** | **95** | **7** | **29** | **131** |
+
+These are counts of rows in this file, not of every claim in the research report: several report claims were split into more than one row, and some report claims were not reached (see 'Not reached' at the end). Most rows began as unverified or as unchecked assumptions; a few (for example Hebcal candle offsets) had been fetched once before and are re-confirmed here.
+
+## 1. Jewish-calendar module (Hebcal, GeoNames, Reform conventions, candle lighting)
+
+Candle-lighting comparison is in section 1b below the table.
+
+| ID | Claim | Status | Evidence | URL | Fetched |
+|---|---|---|---|---|---|
+| 1.01 | Hebcal web APIs need no registration/API key | VERIFIED | "do not require registration or API keys" | https://www.hebcal.com/home/developer-apis | 2026-11-03/04 |
+| 1.02 | Hebcal rate limit | VERIFIED | 429 if >90 requests in a 10-second window; "free service; please be polite" | https://www.hebcal.com/home/developer-apis | 2026-11-03/04 |
+| 1.03 | Hebcal API content licence/attribution/commercial use | VERIFIED | CC BY 4.0; "even commercially... give appropriate credit to Hebcal.com" | https://www.hebcal.com/home/developer-apis | 2026-11-03/04 |
+| 1.04 | Separate Hebcal "terms of service" page exists | STILL UNVERIFIED | /home/about/terms returns 404; only developer-apis licence text and privacy policy found; no standalone ToS located | https://www.hebcal.com/home/about/terms (404) | 2026-11-03/04 |
+| 1.05 | Hebcal code libs licence (@hebcal/core GPL) | VERIFIED | "@hebcal/core... released under GPL License"; some newer libs BSD. NOTE: ALEF calendar.js is independent code so GPL does not attach unless @hebcal/core is bundled | https://www.hebcal.com/home/developer-apis | 2026-11-03/04 |
+| 1.06 | Hebcal location uses GeoNames IDs (geonameid), zip, or lat/long; elevation optional | VERIFIED | "GeoNames.org numeric ID, United States ZIP code, or latitude/longitude" | https://www.hebcal.com/home/195/shabbat-times-rest-api | 2026-11-03/04 |
+| 1.07 | GeoNames data: licence/commercial use | VERIFIED | cc-by; "commercial usage is allowed 'as is'"; credit GeoNames | https://www.geonames.org/export/ | 2026-11-03/04 |
+| 1.08 | Candle lighting 18 min default; 40 Jerusalem; 30 Haifa | VERIFIED | "18 minutes before sundown (40 for Jerusalem, 30 for Haifa and Zikhron Ya'akov)"; applies to Erev Shabbat and Erev Chag. NOTE: calendar.js only defines 18 and 40 constants; no Haifa/Zikhron 30 | https://www.hebcal.com/home/195/shabbat-times-rest-api | 2026-11-03/04 |
+| 1.09 | calendar.js candle-lighting vs Hebcal (8 cities, every Friday 2026-11-06..2027-06-25, 34 each = 272 values) | VERIFIED (agreement) | Max diff 1 min (Reykjavik 2 min); 0 diffs: see VERIFICATION.md section 1b for table | https://www.hebcal.com/hebcal?v=1&cfg=json&c=on&geo=geoname&geonameid=6167865 (and 7 other ids) | 2026-11-03/04 |
+| 1.10 | Holiday dates 5787/5788 (diaspora) match Hebcal | VERIFIED | Rosh Hashana, Yom Kippur, Sukkot, Shemini Atzeret, Hanukkah, Tu BiShvat, Purim, Pesach, Shavuot, Tisha B'Av start dates identical for both years | https://www.hebcal.com/hebcal?v=1&cfg=json&maj=on&min=on&mod=on&nx=on&year=5787&yt=H | 2026-11-03/04 |
+| 1.11 | Tisha B'Av moves to 10 Av if 9 Av is Shabbat | VERIFIED | "never observed on Shabbat; if the 9th of Av falls on Saturday, the fast is postponed until the 10th" | https://www.hebcal.com/holidays/tisha-bav-2027 | 2026-11-03/04 |
+| 1.12 | Reform: Shemini Atzeret observed concurrently with Simchat Torah (one day) | VERIFIED | "in Israel and in Reform congregations... Sh'mini Atzeret is observed concurrently with Simchat Torah" | https://reformjudaism.org/jewish-holidays/simchat-torah | 2026-11-03/04 |
+| 1.13 | Reform: Sukkot is seven-day festival | VERIFIED | "commonly used during the seven-day festival" | https://reformjudaism.org/jewish-holidays/sukkot | 2026-11-03/04 |
+| 1.14 | Reform: Yom Kippur one day; Shavuot one day (single festival day) | STILL UNVERIFIED | reformjudaism.org YK and Shavuot pages give only date ranges (eve to day); no explicit one-day statement. Date range on site (Shavuot 2027 Jun 10-11 = eve+day) is consistent with one day. Simchat Torah page states Reform "generally observe one day of holidays rather than two" | https://reformjudaism.org/jewish-holidays/shavuot | 2026-11-03/04 |
+| 1.15 | Tu BiShvat = 15 Shevat; Hebcal date 2027-01-23 equals module | VERIFIED | "observed on the 15th day of the Hebrew month of Sh'vat"; Hebcal Tu BiShvat 2027-01-23 | https://reformjudaism.org/jewish-holidays/tu-bishvat/tu-bishvat-history | 2026-11-03/04 |
+| 1.16 | Reform observance of Tisha B'Av varies | VERIFIED | "Liberal Judaism never has assigned a central religious role to the ancient Temple... may not be particularly meaningful" | https://reformjudaism.org/jewish-holidays/tishah-bav | 2026-11-03/04 |
+| 1.17 | Yom HaShoah 27 Nisan, with shifts; 2027 = May 3 eve / May 4 (Hebcal) | VERIFIED (dates); shifting rule STILL UNVERIFIED | Hebcal 2025=26 Nisan, 2026/2027=27 Nisan so rule shifts exist; exact rule text not captured | https://www.hebcal.com/holidays/yom-hashoah-2027 | 2026-11-03/04 |
+| 1.18 | Yom HaAtzmaut shifting: 2028 = 6 Iyyar, 2029 = 4 Iyyar, 2025 = 3 Iyyar, else 5 Iyyar | VERIFIED (observed dates) | Hebcal table shows 3 Iyyar 5785, 5 Iyyar 5786/87, 6 Iyyar 5788, 4 Iyyar 5789; rule text not captured | https://www.hebcal.com/holidays/yom-haatzmaut-2027 | 2026-11-03/04 |
+| 1.19 | Rosh Chodesh: Hebcal lists Rosh Chodesh (two-day months e.g. Iyyar May 7-8 2027) | VERIFIED (Hebcal data); Reform-specific observance STILL UNVERIFIED | reformjudaism.org Rosh Chodesh page found but text mostly nav in extraction; no Reform practice claim captured | https://reformjudaism.org/jewish-holidays/rosh-chodesh | 2026-11-03/04 |
+| 1.20 | Rosh Hashanah one vs two days in Reform (previous note) | STILL UNVERIFIED (URL moved) | Old article URL 404s; reformjudaism.org Rosh Hashanah page links an article titled "Do Reform Jews Celebrate One or Two Days of Rosh HaShanah?" but its body not fetched this session | https://reformjudaism.org/jewish-holidays/rosh-hashanah | 2026-11-03/04 |
+| 1.21 | Hebcal diaspora Hanukkah date vs module: Hebcal "1 Candle" is eve | VERIFIED (no error) | Module start 2026-12-05 = 25 Kislev; Hebcal 1 Candle 12-04 (eve), 8th Day 12-12 = module end | https://www.hebcal.com/hebcal?v=1&cfg=json&maj=on&min=on&mod=on&nx=on&year=5787&yt=H | 2026-11-03/04 |
+
+### 1b. calendar.js candle lighting vs Hebcal
+
+Method: for each city, Hebcal's JSON API (`/hebcal?v=1&cfg=json&c=on&geo=geoname&geonameid=ID&start=2026-11-06&end=2027-06-30`, defaults: 18 min before sunset, 40 Jerusalem, 30 Haifa) gives the candle-lighting time for every Friday; `candleLighting()` from `src/curriculum/calendar.js` was run with Hebcal's own latitude/longitude and the same offset, and both were formatted in the city's IANA zone to the minute. 34 Fridays per city, 272 comparisons. Difference = ours minus Hebcal, in minutes. Hebcal uses sea-level sunset by default (Toronto's record carries elevation 161 m, unused).
+
+| City (geonameid) | Offset | Fridays | Max abs diff | Diff distribution (min: count) | Example (date: Hebcal / ours) |
+|---|---|---|---|---|---|
+| Toronto (6167865) | 18 | 34 | 1 | -1: 17, +0: 14, +1: 3 | 2026-11-06: 16:43 / 16:44 |
+| NewYork (5128581) | 18 | 34 | 1 | -1: 15, +0: 19 | 2026-12-25: 16:16 / 16:15 |
+| Jerusalem (281184) | 40 | 34 | 1 | -1: 3, +0: 30, +1: 1 | 2026-11-13: 16:00 / 16:01 |
+| Haifa (294801) | 30 | 34 | 1 | -1: 3, +0: 30, +1: 1 | 2026-11-13: 16:09 / 16:10 |
+| London (2643743) | 18 | 34 | 1 | -1: 12, +0: 18, +1: 4 | 2026-11-06: 16:06 / 16:07 |
+| LosAngeles (5368361) | 18 | 34 | 1 | -1: 11, +0: 23 | 2027-01-08: 16:42 / 16:41 |
+| Sydney (2147714) | 18 | 34 | 1 | -1: 6, +0: 28 | 2027-02-19: 19:26 / 19:25 |
+| Reykjavik (3413829) | 18 | 34 | 2 | -2: 2, -1: 21, +0: 9, +1: 2 | 2026-11-06: 16:36 / 16:37 |
+
+Result: no value differs by more than 1 minute except two Reykjavik Fridays (2 minutes, 64N). The old comment in calendar.js ('expect errors of roughly a minute or two') is accurate; zero values differ by 3 or more. The difference is consistently ours minus Hebcal in {-1,0,+1} because the module rounds to the minute after subtracting the offset from an unrounded sunset, while Hebcal rounds sunset first (inference from the pattern, not checked against Hebcal's source). Caveat: this validates the sunset algorithm against Hebcal, not against any halachic authority; Hebcal itself is a calculation.
+
+### 1c. Holiday dates, module vs Hebcal (diaspora, 5787 and 5788)
+
+Rosh Hashanah, Yom Kippur, Sukkot, Shemini Atzeret/Simchat Torah, Hanukkah, Tu BiShvat, Purim, Pesach, Shavuot and Tisha B'Av start dates are identical in both years (10 holidays x 2 years). Hebcal's 'Hanukkah: 1 Candle' is the eve, so it is one day before the module's 25 Kislev start; the 8th-day dates agree. Hebcal marks Rosh Hashana II, Sukkot II, Shemini Atzeret vs Simchat Torah, Pesach II/VIII and Shavuot II as separate diaspora days, which the module intentionally folds into the Reform one-day convention.
+
+## 2. Sefaria, corpus licences, tanach.us, Open Siddur
+
+| ID | Claim | Status | Evidence | URL | Fetched |
+|---|---|---|---|---|---|
+| 2.01 | Sefaria ToS: commercial use | VERIFIED (adverse to a sold product) | "any exploitation of the Service or its Content for any commercial use is strictly prohibited without our express, prior written consent, unless expressly stated otherwise" | https://docs.google.com/document/d/e/2PACX-1vQHQfHUVMNugNyPyJRucHa9cEU9VUdFD8DAcLFAsUmBORodDmIO2YG85-m01OtF3FUlIgmaSxW_YWSc/pub (embedded in https://www.sefaria.org/terms) | 2026-11-03/04 |
+| 2.02 | Sefaria ToS: crawling | VERIFIED | crawling the Service "simply to crawl the Service for its Content is strictly prohibited"; point to Sefaria-Export GitHub and the API for data | same | 2026-11-03/04 |
+| 2.03 | Sefaria API requires no key | VERIFIED | "accessed without API keys, tokens, or authorization" | https://developers.sefaria.org/reference/getting-started | 2026-11-03/04 |
+| 2.04 | Sefaria API published rate limits | STILL UNVERIFIED | no rate-limit statement found in developers.sefaria.org getting-started, welcome or powered-by pages | https://developers.sefaria.org/docs/welcome | 2026-11-03/04 |
+| 2.05 | Torat Emet 357 (Hebrew Siddur Sefard candle lighting) licence | VERIFIED (as Sefaria label) | API heLicense "Public Domain", source toratemetfreeware.com. Label only; upstream site not fetched | https://www.sefaria.org/api/texts/Siddur_Sefard%2C_Shabbat_Candle_Lighting | 2026-11-03/04 |
+| 2.06 | Shaliehsaboo Edition (Siddur Edot HaMizrach) licence | VERIFIED (as Sefaria label) | API heLicense "CC0", versionSource https://www.sefaria.org (i.e. Sefaria-internal, no upstream cited) | https://www.sefaria.org/api/texts/Siddur_Edot_HaMizrach%2C_Weekday_Shacharit%2C_Amida | 2026-11-03/04 |
+| 2.07 | Metsudah siddur 1981 Hebrew licence | VERIFIED (as Sefaria label); legal strength STILL UNVERIFIED | API heLicense "CC-BY", source nli.org.il record; Sefaria label does not itself establish the publisher licensed it | https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Adon_Olam | 2026-11-03/04 |
+| 2.08 | JPS 1917 on Sefaria is Public Domain | VERIFIED (as Sefaria label) | versions list: "The Holy Scriptures: A New Translation (JPS 1917) / Public Domain" | https://www.sefaria.org/api/texts/versions/Genesis | 2026-11-03/04 |
+| 2.09 | Sefaria default English for Numbers 6:24 is JPS Gender-Sensitive CC-BY-NC (not used by registry; registry uses JPS 1917) | VERIFIED (informational) | default en version license CC-BY-NC; ensure code always requests JPS 1917 explicitly | https://www.sefaria.org/api/texts/Numbers.6.24 | 2026-11-03/04 |
+| 2.10 | Registry sefaria Hebrew for Birchat HaMazon (Torat Emet 357) present | VERIFIED | versions list for Siddur Sefard Birchat HaMazon includes he 'Torat Emet 357' Public Domain | https://www.sefaria.org/api/texts/versions/Siddur_Sefard%2C_Birchat_HaMazon%2C_Birchat_HaMazon | 2026-11-03/04 |
+| 2.11 | tanach.us licence | VERIFIED | "All biblical Hebrew text, in any format, may be viewed or copied without restriction"; other files copyrighted | https://tanach.us/License.html | 2026-11-03/04 |
+| 2.12 | tanach.us version string "UXLC 2.6 (27.7)... Oct 2026" | VERIFIED | License page shows "UXLC 2.6 (27.7), Tanach.us Inc., West Redding, CT, USA, Oct 2026" | https://tanach.us/License.html | 2026-11-03/04 |
+| 2.13 | Open Siddur licence for JPS 1917 page | STILL UNVERIFIED | opensiddur.org returned HTTP 403 via proxy | https://opensiddur.org/ | 2026-11-03/04 |
+
+## 3. OCR and translation
+
+| ID | Claim | Status | Evidence | URL | Fetched |
+|---|---|---|---|---|---|
+| 3.01 | Apple Vision VNRecognizeTextRequest Hebrew support | STILL UNVERIFIED (indirect evidence against) | Apple docs list API but not languages (runtime supportedRecognitionLanguages); Apple Live Text language list has no Hebrew | https://www.apple.com/ios/feature-availability/ | 2026-11-03/04 |
+| 3.02 | Google Cloud Vision OCR supports Hebrew | VERIFIED | language list: "Hebrew iw Hebr" | https://cloud.google.com/vision/docs/languages | 2026-11-03/04 |
+| 3.03 | Google Cloud Vision price $1.50/1000 after 1000 free | VERIFIED | Text Detection and Document Text Detection: 0-1,000 free, 1,000-5,000,000 $1.50 per 1000 | https://cloud.google.com/vision/pricing | 2026-11-03/04 |
+| 3.04 | Azure AI Vision Read supports Hebrew printed | VERIFIED | Printed text table lists "Hebrew he"; handwritten table lists only 9 languages (not Hebrew) | https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/language-support | 2026-11-03/04 |
+| 3.05 | Azure F0 free tier 5,000/month | VERIFIED (scope caveat) | "Free (F0) ... All 5,000 free transactions per month, 20 per minute" (Image Analysis row, covers Read in Group 2 list) | https://azure.microsoft.com/en-us/pricing/details/cognitive-services/computer-vision/ | 2026-11-03/04 |
+| 3.06 | AWS Textract Latin-script only, no Hebrew | CONTRADICTED | FAQ: "detects printed text ... in more than 40 languages including ... Hebrew"; handwriting English only | https://aws.amazon.com/textract/faqs/ | 2026-11-03/04 |
+| 3.07 | ML Kit Text Recognition v2 languages | VERIFIED (no Hebrew) | "recognizes text in Chinese, Devanagari, Japanese, Korean, and Latin scripts"; Hebrew script not listed | https://developers.google.com/ml-kit/vision/text-recognition/v2 | 2026-11-03/04 |
+| 3.08 | Tesseract tessdata licence | VERIFIED | tessdata and tessdata_best LICENSE files are Apache License 2.0 | https://raw.githubusercontent.com/tesseract-ocr/tessdata/main/LICENSE | 2026-11-03/04 |
+| 3.09 | Surya weights licence (modified OpenRAIL-M, threshold ~US$2M) | CONTRADICTED (threshold) | README: weights "modified AI Pubs Open Rail-M (free for research, personal use, and startups under $5M funding/revenue)"; code Apache 2.0 | https://raw.githubusercontent.com/datalab-to/surya/master/README.md | 2026-11-03/04 |
+| 3.10 | Google Cloud Translation 500k chars/month free, then $20/M | VERIFIED | "First 500,000 characters per month Free"; over 500,000 $20.00 (NMT) | https://cloud.google.com/translate/pricing | 2026-11-03/04 |
+| 3.11 | Google Translation attribution required | STILL UNVERIFIED | not found on pricing page | https://cloud.google.com/translate/pricing | 2026-11-03/04 |
+| 3.12 | Microsoft Translator F0 2M chars/month | VERIFIED | "F0 - Free ... 2 million characters ... free per month" | https://azure.microsoft.com/en-us/pricing/details/cognitive-services/translator/ | 2026-11-03/04 |
+| 3.13 | DeepL API Hebrew support | VERIFIED (resolves earlier 'uncertain') | supported-languages data: code HE name Hebrew translation:true glossaries:true | https://developers.deepl.com/docs/getting-started/supported-languages | 2026-11-03/04 |
+| 3.14 | Apple Translation lacks Hebrew | CONTRADICTED (system Translate feature) | Apple feature availability "Translate: System-Wide Translation" list includes Hebrew; Translation framework language list itself not fetched | https://www.apple.com/ios/feature-availability/ | 2026-11-03/04 |
+| 3.15 | NLLB-200 weights licence | VERIFIED | HF API license cc-by-nc-4.0 (distilled-600M and 3.3B) | https://huggingface.co/api/models/facebook/nllb-200-distilled-600M | 2026-11-03/04 |
+| 3.16 | MADLAD-400 licence | VERIFIED | HF API license apache-2.0 (google/madlad400-3b-mt) | https://huggingface.co/api/models/google/madlad400-3b-mt | 2026-11-03/04 |
+| 3.17 | opus-mt-he-en licence | STILL UNVERIFIED | HF model page for Helsinki-NLP/opus-mt-he-en returned 401; sibling opus-mt-en-he is apache-2.0 (checked) | https://huggingface.co/api/models/Helsinki-NLP/opus-mt-en-he | 2026-11-03/04 |
+| 3.18 | Argos he<->en packages exist (v1.5) | VERIFIED (existence) | argospm-index lists translate-he_en and en_he 1.5; per-package licence not stated in index | https://raw.githubusercontent.com/argosopentech/argospm-index/main/index.json | 2026-11-03/04 |
+| 3.19 | Argos models licence | STILL UNVERIFIED | index has no licence field | same | 2026-11-03/04 |
+| 3.20 | EasyOCR lacks Hebrew; Surya Hebrew support | STILL UNVERIFIED | not checked this session | - | 2026-11-03/04 |
+| 3.21 | ML Kit on-device Translation lists Hebrew (ENGINES.md row) | VERIFIED (listing); "59 languages" count STILL UNVERIFIED | supported-languages table contains "he Hebrew" | https://developers.google.com/ml-kit/language/translation/translation-language-support | 2026-11-03/04 |
+
+## 4. TTS and voice
+
+| ID | Claim | Status | Evidence | URL | Fetched |
+|---|---|---|---|---|---|
+| 4.01 | Azure TTS he-IL voices (Avri, Hila) | VERIFIED | Standard voice list: he-IL-HilaNeural (Female), he-IL-AvriNeural (Male); no other he-IL standard voice listed (HD/multilingual coverage of he-IL not determined) | https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=tts | 2026-11-03/04 |
+| 4.02 | Azure SSML <phoneme> IPA for he-IL | VERIFIED | "he-IL Vowels for he-IL ipa viseme" tables of IPA phones (i e a o u + consonants); alphabet attr supports ipa/sapi/ups/x-sampa | https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-ssml-phonetic-sets | 2026-11-03/04 |
+| 4.03 | Azure Neural TTS free tier | VERIFIED | "Neural 0.5 million characters free per month" | https://azure.microsoft.com/en-us/pricing/details/cognitive-services/speech-services/ | 2026-11-03/04 |
+| 4.04 | Azure TTS dollar prices | STILL UNVERIFIED | official page renders "$-" for all per-1M-character prices | same | 2026-11-03/04 |
+| 4.05 | Azure honours niqqud in input | STILL UNVERIFIED | not documented on fetched pages | - | 2026-11-03/04 |
+| 4.06 | Google Cloud TTS he-IL voices | VERIFIED (new info) | 38 he-IL voices: 30 Chirp3-HD, 4 Wavenet (A-D), 4 Standard (A-D) | https://cloud.google.com/text-to-speech/docs/list-voices-and-types | 2026-11-03/04 |
+| 4.07 | Google Cloud TTS pricing | VERIFIED | Chirp 3 HD: first 1M chars free then US$30/M; WaveNet/Standard: first 4M free then US$4/M; Studio US$160/M | https://cloud.google.com/text-to-speech/pricing | 2026-11-03/04 |
+| 4.08 | Google/Azure TTS output ownership and redistribution | STILL UNVERIFIED | no explicit output-ownership statement found on fetched pages (Google service-terms page fetched but extraction returned only nav; Azure TTS overview page needs sign-in) | https://cloud.google.com/terms/service-terms | 2026-11-03/04 |
+| 4.09 | ElevenLabs Hebrew support | VERIFIED (language list); model-specific scope not isolated | models page lists "Hebrew (he)" among supported languages | https://elevenlabs.io/docs/overview/models | 2026-11-03/04 |
+| 4.10 | ElevenLabs commercial terms | VERIFIED | "Free User... may only use the Services for non-commercial purposes... Paid User... may use the Services for commercial purposes" | https://elevenlabs.io/terms-of-use | 2026-11-03/04 |
+| 4.11 | ElevenLabs pronunciation dictionaries | VERIFIED (mechanism); Hebrew efficacy STILL UNVERIFIED | IPA and CMU supported; phoneme tags work only with eleven_v4, eleven_v4_turbo, eleven_flash_v2, eleven_v3; other models use alias tags | https://elevenlabs.io/docs/eleven-api/guides/how-to/text-to-speech/pronunciation-dictionaries | 2026-11-03/04 |
+| 4.12 | OpenAI TTS Hebrew | VERIFIED (weak) | TTS "generally follows the Whisper model in language support"; list includes Hebrew; voices optimized for English; must disclose AI voice to end users | https://platform.openai.com/docs/guides/text-to-speech | 2026-11-03/04 |
+| 4.13 | OpenAI TTS output ownership terms | STILL UNVERIFIED | usage-policy disclosure requirement seen; output-ownership terms page not fetched (see area 6) | - | 2026-11-03/04 |
+| 4.14 | iOS system Hebrew voice (VoiceOver/Speak) | VERIFIED | Apple feature availability list "Accessibility: VoiceOver, Live Speech, Read & Speak" includes "Hebrew (Israel)" | https://www.apple.com/ios/feature-availability/ | 2026-11-03/04 |
+| 4.15 | Android system Hebrew voices and terms | STILL UNVERIFIED | not fetched | - | 2026-11-03/04 |
+| 4.16 | Phonikud repo licence | VERIFIED | README: "Phonikud G2P (the code in this repository) is licensed under CC BY 4.0"; LICENSE file is CC BY 4.0; datasets have separate licences. NOTE CC BY is unusual for software | https://raw.githubusercontent.com/thewh1teagle/phonikud/main/LICENSE | 2026-11-03/04 |
+| 4.17 | Dicta Nakdan API commercial terms | STILL UNVERIFIED | nakdan.dicta.org.il is a JS app; no terms text retrieved; dicta.org.il fetch returned no matching terms | https://nakdan.dicta.org.il/ | 2026-11-03/04 |
+| 4.18 | Google Chirp 3 HD he-IL: no pause control, no custom pronunciations | VERIFIED (confirms tts-evaluation-protocol.md) | "Pause control is available across all locales except... he-il"; "Custom pronunciations is available across all locales except... he-il" | https://cloud.google.com/text-to-speech/docs/chirp3-hd | 2026-11-03/04 |
+| 4.19 | Google he-IL Chirp3-HD 16 male / 14 female; Wavenet B,D male A,C female | VERIFIED | voice list: 30 Chirp3-HD (16 MALE, 14 FEMALE); Wavenet-A/C FEMALE, B/D MALE; Standard A/C FEMALE, B/D MALE | https://cloud.google.com/text-to-speech/docs/list-voices-and-types | 2026-11-03/04 |
+| 4.20 | Azure SSML phoneme/IPA support for he-IL (tts-evaluation-protocol.md says unverified) | VERIFIED | he-IL phone-set tables exist in speech-ssml-phonetic-sets (ipa column); (see 4.02). Whether the neural voices render them well is untested | https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-ssml-phonetic-sets | 2026-11-03/04 |
+
+## 5. Stores, hosting, Web Speech, FSRS
+
+| ID | Claim | Status | Evidence | URL | Fetched |
+|---|---|---|---|---|---|
+| 5.01 | App Store Guideline 4.2 text | VERIFIED | "include features, content, and UI that elevate it beyond a repackaged website"; 4.2.2 "collection of links"  | https://developer.apple.com/app-store/review/guidelines/ | 2026-11-03/04 |
+| 5.02 | App Store guideline 5.1.5 location services | VERIFIED | "Use Location Services in your app only when it is directly relevant"; notify and obtain consent | same | 2026-11-03/04 |
+| 5.03 | Google Play background location policy | VERIFIED | "Background location may only be used when it provides a significant benefit... core functionality"; foreground otherwise | https://support.google.com/googleplay/android-developer/answer/9799150 | 2026-11-03/04 |
+| 5.04 | Google Play local-notification policy for education apps | STILL UNVERIFIED | no notification-specific policy page fetched | - | 2026-11-03/04 |
+| 5.05 | Apple Developer Program fee | VERIFIED | "$99 annual membership" | https://developer.apple.com/programs/ | 2026-11-03/04 |
+| 5.06 | Google Play developer fee | VERIFIED | "There is a US$25 one-time registration fee" | https://support.google.com/googleplay/android-developer/answer/6112435 | 2026-11-03/04 |
+| 5.07 | Vercel Hobby free tier | VERIFIED (partial) | Hobby $0/mo; included Fast Data Transfer 100 GB/month and 1M CDN requests listed on pricing page (tier attribution Hobby vs Pro not isolated by text extraction); Hobby commercial-use restriction not checked | https://vercel.com/pricing | 2026-11-03/04 |
+| 5.08 | Netlify free tier | VERIFIED | Free $0 forever; "300 credit limit / month" (credit-based plans) | https://www.netlify.com/pricing/ | 2026-11-03/04 |
+| 5.09 | Cloudflare Pages free limits | VERIFIED | Free: 500 builds/month, 1 concurrent build, 20-min build timeout, 20,000 files/site, 25 MiB max file; page updated Sep 5, 2026 | https://developers.cloudflare.com/pages/platform/limits/ | 2026-11-03/04 |
+| 5.10 | GitHub Pages limits and commercial restriction | VERIFIED (new risk) | site <=1 GB; 100 GB/month soft bandwidth; 10 builds/hour soft; "not... free web-hosting service to run your online business... or commercial SaaS" | https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits | 2026-11-03/04 |
+| 5.11 | Web Speech API SpeechRecognition support | VERIFIED (general); he-IL specifically STILL UNVERIFIED | MDN: Chrome uses server-based engine, "won't work offline"; caniuse data: Chrome/Edge-chromium partial with prefix, Firefox no, Safari partial; per-language (he-IL) coverage not documented by MDN or caniuse | https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition | 2026-11-03/04 |
+| 5.12 | ts-fsrs current version | VERIFIED | npm registry latest = 6.0.0 (MIT); default_w = FSRS6_DEFAULT_WEIGHTS | https://registry.npmjs.org/ts-fsrs/latest | 2026-11-03/04 |
+| 5.13 | FSRS-6 default weights (wiki) | VERIFIED | 21 params [0.212,1.2931,2.3065,8.2956,6.4133,0.8334,3.0194,0.001,1.8722,0.1666,0.796,1.4835,0.0614,0.2629,1.6483,0.6014,1.8729,0.5425,0.0912,0.0658,0.1542]; ts-fsrs 6.0.0 source starts .212,1.2931,2.3065,8.2956,6.4133,.8334 (rest not diffed) | https://raw.githubusercontent.com/wiki/open-spaced-repetition/awesome-fsrs/The-Algorithm.md | 2026-11-03/04 |
+| 5.14 | FSRS-6 forgetting curve R=(1+factor*t/S)^(-w20), factor=0.9^(-1/w20)-1 | VERIFIED | wiki FSRS-6 section. srs-notes.md statement that FSRS-6 makes decay trainable (w20) is correct | same | 2026-11-03/04 |
+| 5.15 | srs.js: FACTOR 19/81, DECAY -0.5 are FSRS-4.5 constants | VERIFIED (and note) | FSRS-4.5: "DECAY=-0.5 and FACTOR=19/81". Not FSRS-6 (default w20=0.1542, factor 0.9803). srs.js header says "FSRS-4.5/FSRS-5" which is accurate | same | 2026-11-03/04 |
+| 5.16 | srs.js is FSRS-style, not reference | VERIFIED (self-description accurate) | exact differences listed in DATA-FIXES.md section SRS (INIT_S, D0, difficulty update, lapse formula, hard/easy multipliers, exponent constants); same-day review and fuzz absent | same | 2026-11-03/04 |
+| 5.17 | Old wiki URL fsrs4anki/wiki/The-Algorithm | VERIFIED (informational: official source moved) | raw wiki stub says "Page moved" to awesome-fsrs wiki; update any citations | https://raw.githubusercontent.com/wiki/open-spaced-repetition/fsrs4anki/The-Algorithm.md | 2026-11-03/04 |
+
+## 6. Image generation, book production, fonts
+
+| ID | Claim | Status | Evidence | URL | Fetched |
+|---|---|---|---|---|---|
+| 6.01 | OpenAI terms: user owns Output; commercial use allowed | VERIFIED (via WebFetch summariser; direct curl 403) | "OpenAI hereby assigns to you all its right, title and interest in and to Output"; "use Content for any purpose, including commercial" (Sec 3(a), conditional on compliance); no calendar date shown | https://openai.com/policies/terms-of-use/ | 2026-11-03/04 |
+| 6.02 | OpenAI "US" terms page | STILL UNVERIFIED | openai.com/policies/row-terms-of-use returned 403 via curl; page fetched is the generic terms-of-use; US vs ROW/EU difference not checked | https://openai.com/policies/row-terms-of-use/ | 2026-11-03/04 |
+| 6.03 | Current OpenAI Images API model names | VERIFIED | Docs: "set model to gpt-image-2.5-sunburst or gpt-image-2.5-flare"; also gpt-image-2 and gpt-image-1 named. Bare 'gpt-image-2.5' never appears (0 hits in guide or pricing). tools/images/gen_via_api.mjs defaults to 'gpt-image-2.5' | https://platform.openai.com/docs/guides/image-generation | 2026-11-03/04 |
+| 6.04 | OpenAI image pricing | VERIFIED (token-based) | gpt-image-2.5-sunburst/flare standard: image in $8.00, image out $30.00, text in $5.00 per 1M tokens; Batch halves image to $4/$15; gpt-image-2 batch $4/$15. Per-image dollar cost not published (use calculator); per-image cost remains unverified | https://platform.openai.com/docs/pricing | 2026-11-03/04 |
+| 6.05 | OpenAI image text-rendering limitation | VERIFIED | "Text Rendering: ... can still struggle with precise text placement and clarity"; no Hebrew-specific statement | https://platform.openai.com/docs/guides/image-generation | 2026-11-03/04 |
+| 6.06 | Midjourney ToS (ownership, revenue threshold, free-tier licence) | STILL UNVERIFIED | docs.midjourney.com returns 403 to curl; WebFetch denied (not on allowlist); only secondary summaries seen in search results, not used | https://docs.midjourney.com/docs/terms-of-service | 2026-11-03/04 |
+| 6.07 | Adobe Firefly terms | STILL UNVERIFIED | adobe.com/legal/terms.html and helpx Firefly FAQ returned 403 | https://www.adobe.com/legal/terms.html | 2026-11-03/04 |
+| 6.08 | KDP supports Hebrew paperback; RTL via PDF | VERIFIED | "publish paperbacks in Hebrew... Hardcover publishing for Hebrew and Yiddish in RTL isn't currently available"; interior and cover PDF only; standard colour not available; no Expanded Distribution; Cover Creator not available | https://kdp.amazon.com/en_US/help/topic/GML3FXP998V8WS4U | 2026-11-03/04 |
+| 6.09 | KDP RTL cover layout | VERIFIED | "front cover placed to the left of the spine and the back cover to the right"; interior uploaded starting page 1 (NOT reversed, unlike IngramSpark); set RTL in PDF editing language | same | 2026-11-03/04 |
+| 6.10 | KDP bleed 0.125 in | VERIFIED | "trimmed ... by cutting 0.125 in (3.2 mm) from the top, bottom, and outside edges" | https://kdp.amazon.com/en_US/help/topic/GVBQ3CMEQW3W2VL6 | 2026-11-03/04 |
+| 6.11 | IngramSpark RTL/reverse-bound requirements and bleed | VERIFIED | File Creation Guide (dated 8.24.26): RTL interiors "last page of text presented as the first page of the PDF"; even page count; bleed 0.125 in (3 mm) except bind side; separate RTL cover setups | https://www.ingramspark.com/hubfs/downloads/file-creation-guide.pdf | 2026-11-03/04 |
+| 6.12 | Lulu RTL/trim/bleed specs | STILL UNVERIFIED | guessed help URL 404; no Lulu page located | - | 2026-11-03/04 |
+| 6.13 | InDesign Middle Eastern edition / RTL binding availability | STILL UNVERIFIED | helpx.adobe.com returned 403 via curl | https://helpx.adobe.com/indesign/using/arabic-hebrew.html | 2026-11-03/04 |
+| 6.14 | Adobe Fonts library includes Adobe Hebrew, Myriad Hebrew, Noto Serif Hebrew, Gisha, Playpen Sans Hebrew | VERIFIED | each fonts.adobe.com/fonts/<slug> page loads with "Subscribe to Creative Cloud to use more fonts / Add family" | https://fonts.adobe.com/fonts/myriad-hebrew | 2026-11-03/04 |
+| 6.15 | Adobe Fonts permit PDF embedding | VERIFIED (generic wording on a font page) | Gisha page: "full Adobe Fonts library is cleared for both personal and commercial use... PDFs: Embed fonts in PDFs for viewing and printing". The same page directs buyers to Microsoft for mobile-app embedding and self-hosting, but that is specific to that Microsoft-foundry font; the general Adobe Fonts licensing FAQ returned 403 so app-embedding terms for Adobe Originals are NOT verified | https://fonts.adobe.com/fonts/gisha | 2026-11-03/04 |
+| 6.16 | Apple Books: RTL page progression for EPUB | VERIFIED (flowing/pagination); fixed-layout RTL STILL UNVERIFIED | Asset Guide: "Apple Books 3.0 (or later) supports both pagination directions... page-progression-direction on the <spine>... values ltr, rtl, default"; fixed-layout section exists but RTL FXL not specifically tested | https://help.apple.com/itc/booksassetguide/en.lproj/static.html | 2026-11-03/04 |
+| 6.17 | tools/images/gen_via_api.mjs default model id 'gpt-image-2.5' is a valid API model | CONTRADICTED | docs name only gpt-image-2.5-sunburst, gpt-image-2.5-flare, gpt-image-2, gpt-image-1; bare 'gpt-image-2.5' has 0 hits in the guide or pricing page | https://platform.openai.com/docs/guides/image-generation | 2026-11-03/04 |
+
+## 7. Language and pedagogy facts
+
+| ID | Claim | Status | Evidence | URL | Fetched |
+|---|---|---|---|---|---|
+| 7.01 | Kamatz katan occurs in a closed unstressed syllable | VERIFIED (secondary: Wikipedia, en and he) | he.wikipedia: "kamatz in a closed unstressed syllable is kamatz katan by all opinions"; en.wikipedia: occurs "in a closed syllable"; Academy primary text not fetched | https://he.wikipedia.org/wiki/%D7%A7%D7%9E%D7%A5_%D7%A7%D7%98%D7%9F | 2026-11-03/04 |
+| 7.02 | Examples kol (kol-), chochma, tochnit as kamatz katan | VERIFIED | he.wikipedia examples: חׇכְמָה, וַיָּקׇם, כׇּל־ (unstressed by construct); en.wikipedia: תׇּכְנִית [toχˈnit] | same + https://en.wikipedia.org/wiki/Qamets | 2026-11-03/04 |
+| 7.03 | Example korban (קָרְבָּן) as kamatz katan | STILL UNVERIFIED | word not in either Wikipedia page; fits the closed-syllable rule but not independently sourced | - | 2026-11-03/04 |
+| 7.04 | The four-word list is an exhaustive "exception list" | CONTRADICTED (framing) | sources give a general rule plus open-syllable cases (שׇׁרָשִׁים, קׇדָשִׁים, פׇּעֳלוֹ) and metheg effects; a 4-word list is incomplete, rule-based detection needed (code header already says TODO) | https://he.wikipedia.org/wiki/%D7%A7%D7%9E%D7%A5_%D7%A7%D7%98%D7%9F | 2026-11-03/04 |
+| 7.05 | Unicode U+05C7 HEBREW POINT QAMATS QATAN exists | VERIFIED | "Unicode defines the code point U+05C7... although its usage is not required" | https://en.wikipedia.org/wiki/Qamets | 2026-11-03/04 |
+| 7.06 | Siddur marking of kamatz katan: Koren / ArtScroll | STILL UNVERIFIED | Wikipedia names only Rinat Yisrael (longer vertical stroke), Sim Shalom (separated horizontal line), a Breslov Psalter (bolder); Koren and ArtScroll not mentioned | https://en.wikipedia.org/wiki/Qamets | 2026-11-03/04 |
+| 7.07 | Stress minimal pair bóker (morning) / bokér (cowboy) | VERIFIED (lexical pair); stress position STILL UNVERIFIED | Wiktionary בוקר: "A morning" pattern קֹטֶל and "A cowboy" pattern קֹטֵל; IPA stress marks not captured | https://en.wiktionary.org/wiki/%D7%91%D7%95%D7%A7%D7%A8 | 2026-11-03/04 |
+| 7.08 | Stress minimal pair yálda (girl) / yaldá (she gave birth) | VERIFIED (lexical pair); stress position STILL UNVERIFIED | Wiktionary: ילדה "girl" (pattern קַטְלָה) and "3rd sg past of יָלַד: (she) gave birth" | https://en.wiktionary.org/wiki/%D7%99%D7%9C%D7%93%D7%94 | 2026-11-03/04 |
+| 7.09 | kar/char/har contrast (k vs x vs h) | VERIFIED (phonology); the three specific words STILL UNVERIFIED | Wikipedia: ח and כ merge to /χ/; ה is /h/; k is /k/; individual words kar/char/har not looked up | https://en.wikipedia.org/wiki/Modern_Hebrew_phonology | 2026-11-03/04 |
+| 7.10 | He-dropping / glottal elision in informal speech | VERIFIED (secondary) | "glottal consonants tend to be elided... In informal speech, elision may occur in stressed syllables as well" | https://en.wikipedia.org/wiki/Modern_Hebrew_phonology | 2026-11-03/04 |
+| 7.11 | Tel Aviv as a distinct dialect; "ma ze"; "yesh li et ha-"; fillers; aspiration of /p t k/ | STILL UNVERIFIED | no source located this session | - | 2026-11-03/04 |
+| 7.12 | Jewish-English/Hebrew pronunciation survey (Benor and Cohen) | VERIFIED | "Reform Jews... Israeli Hebrew pronunciations (Shabbat, soo-COAT)... Orthodox... Ashkenazic (Shabbos, SUK-kiss)"; younger Jews more Israeli forms | https://www.bjpa.org/content/upload/bjpa/c__w/Survey%20popular%20paper%20final.pdf | 2026-11-03/04 |
+| 7.13 | "Toyrah" spelling in Benor data | STILL UNVERIFIED | string not present in the Benor/Cohen popular paper | same | 2026-11-03/04 |
+| 7.14 | Aleph Champ: ten colour levels, 3 stripes each | VERIFIED | FAQ: "Students pass through 10 colored levels on their way to becoming a Black Aleph Champ"; medallion colours White, Orange, Red, Yellow, Green, Blue, Purple, Brown, Grey, Black | https://alephchamp.com/about/faqs/ | 2026-11-03/04 |
+| 7.15 | Aleph Champ White = first 18 letters; Red = all 32 | CONTRADICTED | official About page: "First 19 letters" then "Last 13 letters" (total 32) | https://alephchamp.com/about/ | 2026-11-03/04 |
+| 7.16 | Aleph Champ top of ladder: Black = 80+ wpm (one site says 100+) | CONTRADICTED | official page tops out with Chumash Reading stripe 3 "50 - 53 WPM"; prayer practice starts 13-16 WPM | https://alephchamp.com/about/ | 2026-11-03/04 |
+| 7.17 | Aleph Champ level content order (vowels in 3-3-3, exceptions, then prayers, holiday prayers, Chumash) | VERIFIED (order); colour-to-level mapping STILL UNVERIFIED | About page lists: first 19 letters, last 13, first 3 vowels (kamatz, patach, tzeireh), next 3 (segol, shva, cholam), last 3 (cheerik, koobutz, shooruk), exceptions, then WPM bands | https://alephchamp.com/about/ | 2026-11-03/04 |
+| 7.18 | Aleph Champ founded 2004; 600 schools, 30 countries, 50,000 students | VERIFIED (vendor self-report) | "Born in 2004... 600 SCHOOLS 30 COUNTRIES 50,000 STUDENTS" | https://alephchamp.com/about/ | 2026-11-03/04 |
+| 7.19 | NJOP programme details | STILL UNVERIFIED | njop.org home lists "Read Hebrew America" and Zoom classes only; no programme specifics fetched (the claim in the research notes was not specified) | https://njop.org/ | 2026-11-03/04 |
+| 7.20 | Shmidman and Ehri 2010: sample, task, outcomes | VERIFIED (abstract, ERIC) | "English-speaking preschoolers (N = 36, M = 5;2 years) were taught 10 Hebrew letter-sound relations"; outcomes: trials to mastery, confusions, 1-week retention, word-reading and spelling transfer; journal Scientific Studies of Reading | https://api.ies.ed.gov/eric/?search=title%3A%22Embedded%20Picture%20Mnemonics%20to%20Learn%20Letters%22&format=json | 2026-11-03/04 |
+| 7.21 | Shmidman and Ehri effect sizes | STILL UNVERIFIED | abstract has no effect sizes; full paper (tandfonline) returned 403 | https://www.tandfonline.com/doi/abs/10.1080/10888431003623470 | 2026-11-03/04 |
+| 7.22 | Siddur/Torah letter-name Academy 2006 transliteration table | STILL UNVERIFIED | not fetched | - | 2026-11-03/04 |
+
+## Not reached or not attempted
+
+Open Siddur licence page (403); Lulu specs; InDesign Middle Eastern edition and RTL binding (403); Midjourney ToS (403, not on WebFetch allowlist); Adobe Firefly terms (403); Adobe Fonts licensing FAQ (403); Hebrew Academy 2006 transliteration table; Mishkan T'filah / Koren / ArtScroll transliteration keys; Android system TTS and terms; Google Play notification policy; Apple Translation framework's own language list; Surya and EasyOCR Hebrew coverage; opus-mt-he-en model card (401); Argos package licence; Sefaria API rate limits (none published on pages fetched); Hebcal standalone terms (none exists at the guessed URL); Tel Aviv / colloquial features; NJOP programme details; Shmidman and Ehri effect sizes; HHD dataset licence; Lute licence; Culmus font licences; stroke-order sources. Items from the original report outside the seven listed areas (competitor facts, YouTube, dataset licences) were not touched.

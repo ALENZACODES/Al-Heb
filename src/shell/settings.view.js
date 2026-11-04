@@ -83,12 +83,19 @@ export function mount(root, ctx) {
   const exportBtn = h('button', { type: 'button', class: 'btn', onclick: () => {
     const url = URL.createObjectURL(new Blob([store.exportJSON()], { type: 'application/json' }));
     const a = h('a', { href: url, download: backupFileName() }); document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+    status.textContent = `Backup saved: ${a.getAttribute('download')} was downloaded. Keep the file somewhere safe; Restore reads it back.`;
   } }, t('settings.export'));
   const resetBtn = h('button', { type: 'button', class: 'btn secondary', onclick: () => { settings.reset(); settings.set({ onboarded: true }); mount(root, ctx); } }, t('settings.reset'));
 
   root.replaceChildren(h('article', { class: 'card' },
     h('h1', { id: 'view-title', tabindex: '-1' }, t('settings.title')),
     h('p', { class: 'muted' }, 'No recorded voices exist yet: the Man/Woman choice is a saved preference. Sound currently comes from your browser\'s text-to-speech voice. See "How this works".'),
+    h('fieldset', { class: 'field' }, h('legend', {}, t('settings.backup')),
+      h('div', { class: 'row' }, exportBtn, h('label', { class: 'btn secondary', id: 's-import-label', for: 's-import', tabindex: '0', role: 'button',
+        onkeydown: (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); } } }, t('settings.import')), fileInput),
+      notice, h('div', { class: 'row' }, retryBtn), restoreBox, persistLine, h('div', { class: 'row' }, persistBtn),
+      store.persistent ? null : h('p', { class: 'muted' }, t('settings.persist.no'))),
+    status, // right under the backup buttons so a confirmation is visible without scrolling
     radioGroup('voice', 'settings.voice'),
     radioGroup('congregation', 'settings.congregation'),
     radioGroup('goal', 'settings.goal'),
@@ -101,11 +108,6 @@ export function mount(root, ctx) {
     boolRow('soundEffects', 'Sound effects on exercise feedback', 'No sound files ship yet; this only takes effect once the app has them.'),
     h('fieldset', { class: 'field' }, h('legend', {}, t('settings.location')),
       num('lat', t('settings.lat'), -90, 90), num('lon', t('settings.lon'), -180, 180), h('div', { class: 'row' }, geoBtn, clearBtn)),
-    h('fieldset', { class: 'field' }, h('legend', {}, t('settings.backup')),
-      h('div', { class: 'row' }, exportBtn, h('label', { class: 'btn secondary', id: 's-import-label', for: 's-import', tabindex: '0', role: 'button',
-        onkeydown: (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); } } }, t('settings.import')), fileInput),
-      notice, h('div', { class: 'row' }, retryBtn), restoreBox, persistLine, h('div', { class: 'row' }, persistBtn),
-      store.persistent ? null : h('p', { class: 'muted' }, t('settings.persist.no'))),
     h('fieldset', { class: 'field' }, h('legend', {}, 'Delete all my data'),
       h('p', { id: 's-wipe-help' }, `This permanently deletes your progress, review cards, streaks and settings from this device, and the offline copies of the app. It cannot be undone, so download a backup first. Type ${CONFIRM_WORD} to enable the button.`),
       h('label', { class: 'field' }, `Type ${CONFIRM_WORD}`, wipeInput),
@@ -113,7 +115,7 @@ export function mount(root, ctx) {
       h('div', { class: 'row' }, wipeGo)),
     h('fieldset', { class: 'field' }, h('legend', {}, 'Advanced'),
       boolRow('showUnapprovedImages', 'Show images that have not passed review', 'Pictures still waiting for a reviewer may be wrong or unsuitable. Leave this off unless you are reviewing them.')),
-    h('div', { class: 'row' }, resetBtn, h('a', { class: 'btn secondary', href: '#/welcome' }, t('settings.redo'))), status));
+    h('div', { class: 'row' }, resetBtn, h('a', { class: 'btn secondary', href: '#/welcome' }, t('settings.redo')))));
   return () => { try { offStatus?.(); } catch { /* ignore */ } };
 }
 void DEFAULTS;

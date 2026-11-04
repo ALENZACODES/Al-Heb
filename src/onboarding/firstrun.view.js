@@ -14,7 +14,7 @@ import { STORE_KEY, PLACEMENT_KEY, LETTERS_QUESTION, LETTER_ANSWERS, DENOMINATIO
 import { DAILY_GOAL_KEY, DAILY_GOALS } from '../home/today.js';
 import { PROGRESS_KEY } from '../curriculum/dom.js';
 
-export const DRAFT_NOTE = 'Draft: this plan has not been tried by a learner. Minutes are targets, not measurements. Every link goes to an existing screen. This is a pacing guide: the Today card on Home moves to the next lesson as soon as you mark one complete, so it can run ahead of this plan. Follow the Today card.';
+export const DRAFT_NOTE = 'Draft: this plan has not been tried by a learner. Minutes are targets, not measurements. Every link goes to an existing screen. This is a pacing guide, rebuilt from the lessons you have finished: its first lesson is the one the Today card on Home shows, and it assumes one lesson a day.';
 
 export function mount(root, ctx) {
   const { settings, store } = ctx;
@@ -126,8 +126,8 @@ export function mount(root, ctx) {
     const changeStart = h('button', { type: 'button', class: 'btn secondary', id: 'ob-change-start', onclick: () => { say('Answer the question again to change your starting point.'); go('letters'); } }, 'Change my starting point');
     body.replaceChildren(
       h('p', {}, `Starting point: ${startTitle()}. ${rec.denomination ? DENOMINATIONS.find((d) => d.id === rec.denomination).label + '; ' : ''}${PRONUNCIATIONS.find((p) => p.id === settings.get(SETTINGS_KEY_PRONUNCIATION))?.label || 'Sephardi'} pronunciation.`),
+      h('div', { class: 'row' }, h('a', { class: 'btn', id: 'ob-start', href: primaryHref }, primaryLabel)), // start button first: within the first screen
       card,
-      h('div', { class: 'row' }, h('a', { class: 'btn', id: 'ob-start', href: primaryHref }, primaryLabel)),
       h('div', { class: 'row' }, changeStart,
         h('button', { type: 'button', class: 'btn secondary', id: 'ob-change-congregation', onclick: () => go('congregation') }, 'Change synagogue or pronunciation'),
         h('button', { type: 'button', class: 'btn secondary', id: 'ob-change-minutes', onclick: () => go('minutes') }, 'Change minutes a day')),

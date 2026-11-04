@@ -7,6 +7,9 @@
  */
 export async function armReminders(ctx) {
   try {
+    // Cheap check first: with reminders off (the default) the notify and calendar modules are never fetched at boot.
+    const raw = ctx?.store?.get ? await ctx.store.get("notify.prefs") : null;
+    if (!raw || raw.enabled !== true) return { ok: false, reason: "disabled", next: null, cancel() {} };
     const { armFromPrefs } = await import("./notify.js");
     return await armFromPrefs(ctx);
   } catch (e) { return { ok: false, reason: String(e?.message || e), next: null, cancel() {} }; }

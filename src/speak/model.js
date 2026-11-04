@@ -19,6 +19,15 @@ export function normalizeHe(s) {
     .replace(/\s+/g, ' ').trim();
 }
 
+/**
+ * The four-letter divine name is never read as written; a recognizer writes what it hears (אדוני), though it might also write the name
+ * itself. Both the target and what was heard are folded to the spoken form before comparing, on normalized (unpointed) text, so
+ * prefixed forms (ליהוה) are covered too.
+ */
+export const spokenTarget = (s) => normalizeHe(s).replace(/יהוה/g, 'אדני');
+/** Pointed text with the divine name replaced by its spoken form, for the browser voice (same substitution the audio manifest uses). */
+export const spokenPointed = (he) => String(he ?? '').normalize('NFC').replace(/יְהוָה/g, 'אֲדֹנָי');
+
 /** Spelling skeleton: vav and yod removed, so the recognizer's full spelling (בוקר) matches the pointed list's defective one (בקר). */
 export const skeleton = (s) => String(s ?? '').replace(/[וי]/g, '');
 
@@ -49,11 +58,11 @@ export function similarity(a, b) {
  * 'close' = similarity >= CLOSE_SCORE or the target appears inside the alternative; this is a hint from an unverified recognizer.
  */
 export function compare(targetHe, heard) {
-  const target = normalizeHe(targetHe);
+  const target = spokenTarget(targetHe);
   const alts = (Array.isArray(heard) ? heard : [heard]).map((h) => String(h ?? '')).filter((h) => h.trim());
   let best = { outcome: 'miss', score: 0, heard: alts[0] || '', target, heardNorm: normalizeHe(alts[0] || '') };
   for (const h of alts) {
-    const hn = normalizeHe(h);
+    const hn = spokenTarget(h);
     let score = Math.max(similarity(target, hn), similarity(skeleton(target), skeleton(hn)));
     if (hn !== target && target && hn.split(' ').includes(target)) score = Math.max(score, CLOSE_SCORE);
     const same = !!target && (hn === target || skeleton(hn) === skeleton(target));
@@ -163,7 +172,7 @@ export const soundLabel = (id) => (SOUND_CLASSES.find((c) => c.id === id) || { l
  * letter in the alignment; substitution or deletion = miss. Insertions in the heard text are ignored.
  */
 export function alignLetters(target, heard) {
-  const a = normalizeHe(target).replace(/ /g, ''), b = normalizeHe(heard).replace(/ /g, '');
+  const a = spokenTarget(target).replace(/ /g, ''), b = spokenTarget(heard).replace(/ /g, '');
   const n = a.length, m = b.length;
   const d = Array.from({ length: n + 1 }, (_, i) => { const r = new Array(m + 1); r[0] = i; return r; });
   for (let j = 1; j <= m; j++) d[0][j] = j;
@@ -221,15 +230,16 @@ const wordScore = (a, b) => (a === b || skeleton(a) === skeleton(b) ? 1 : Math.m
  */
 export function alignWords(target, heard) {
   const a = wordsOf(target), b = wordsOf(heard);
+  const af = spokenTarget(target).split(' ').filter(Boolean), bf = spokenTarget(heard).split(' ').filter(Boolean); // divine name folded to its spoken form for scoring
   const n = a.length, m = b.length;
-  const cost = (i, j) => 1 - wordScore(a[i], b[j]);
+  const cost = (i, j) => 1 - wordScore(af[i], bf[j]);
   const d = Array.from({ length: n + 1 }, (_, i) => { const r = new Array(m + 1).fill(0); r[0] = i; return r; });
   for (let j = 1; j <= m; j++) d[0][j] = j;
   for (let i = 1; i <= n; i++) for (let j = 1; j <= m; j++) d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + cost(i - 1, j - 1));
   const out = new Array(n);
   let i = n, j = m;
   while (i > 0) {
-    if (j > 0 && Math.abs(d[i][j] - (d[i - 1][j - 1] + cost(i - 1, j - 1))) < 1e-9) { const sc = wordScore(a[i - 1], b[j - 1]); out[i - 1] = { word: a[i - 1], heard: b[j - 1], score: sc, status: sc >= 1 ? 'hit' : sc >= NEAR_WORD ? 'near' : 'miss' }; i--; j--; }
+    if (j > 0 && Math.abs(d[i][j] - (d[i - 1][j - 1] + cost(i - 1, j - 1))) < 1e-9) { const sc = wordScore(af[i - 1], bf[j - 1]); out[i - 1] = { word: a[i - 1], heard: b[j - 1], score: sc, status: sc >= 1 ? 'hit' : sc >= NEAR_WORD ? 'near' : 'miss' }; i--; j--; }
     else if (Math.abs(d[i][j] - (d[i - 1][j] + 1)) < 1e-9) { out[i - 1] = { word: a[i - 1], heard: null, score: 0, status: 'miss' }; i--; }
     else j--;
   }

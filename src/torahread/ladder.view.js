@@ -131,6 +131,6 @@ export function renderLadder(host, env) {
 export function recordedLine(ctx, audio, noun = 'line') {
   let has = false;
   try { has = !!(ctx?.audio && typeof ctx.audio.has === 'function' && ctx.audio.has(audio.kind, audio.id)); } catch { has = false; }
-  return has ? `A recording is listed for this ${noun}.` : `No recorded audio for this ${noun} yet. The button uses your browser\'s Hebrew voice if there is one, and says so.`;
+  return has ? `A recording is listed for this ${noun}.` : `No recorded audio for this ${noun} yet. The button tries your browser\'s Hebrew voice (Israeli pronunciation only) and says what happened, including when nothing can play.`;
 }
 export { unpoint };

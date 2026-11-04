@@ -114,17 +114,22 @@ test("grammar: list links resolve to the six topics, each topic has real example
   assert.ok(hrefs(bad).includes("#/grammar"));
 });
 
-test("Learn and Today: an I-xx lesson link opens the learn route, which offers the intermediate player (only when that route exists)", async () => {
+test("Today: an I-xx lesson link opens #/intermediate/<id> when that route exists; otherwise the Learn page, which offers the intermediate player", async () => {
   const { buildToday } = await import("../src/home/today.js");
   const { lessons } = await import("../src/curriculum/lessons.js");
   const done = lessons.filter((l) => !/^I-/.test(l.id)).map((l) => l.id);
   const t = buildToday({ completedIds: done, lessons, goal: "read", hasRoute: () => true });
   const card = t.lessons[0];
   assert.equal(card.id, "I-01", "after the beginner path the Today card points at I-01");
-  const m = Rt.matchRoute(card.href);
+  const direct = Rt.matchRoute(card.href);
+  assert.equal(direct.route.name, "intermediatelesson");
+  assert.equal(direct.query.id, "I-01");
+  assert.equal(Rt.matchRoute(t.primary.href).query.id, "I-01");
+  // without the intermediate route the card falls back to the Learn page, which offers the player when it can
+  const fb = buildToday({ completedIds: done, lessons, goal: "read", hasRoute: (n) => n === "learn" });
+  const m = Rt.matchRoute(fb.lessons[0].href);
   assert.equal(m.route.name, "learn");
   assert.equal(m.query.lesson, "I-01");
-  assert.equal(Rt.matchRoute(t.primary.href).query.lesson, "I-01");
   const L = await import("../src/curriculum/learn.view.js");
   const withRoute = new N("div"); L.mount(withRoute, ctxFor(m.query, { hasRoute: (n) => n === "intermediatelesson" }));
   await waitFor(() => hrefs(withRoute).includes("#/intermediate/I-01"));

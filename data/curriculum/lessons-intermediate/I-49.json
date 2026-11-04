@@ -111,7 +111,7 @@
    "en": "can I send?",
    "translit": null,
    "pronunciation": {
-    "israeli": "efshar lishlocha"
+    "israeli": "efshar lishloach"
    },
    "source": {
     "file": "composed",
@@ -126,7 +126,7 @@
    "en": "sending (m)",
    "translit": null,
    "pronunciation": {
-    "israeli": "sholecha"
+    "israeli": "sholeach"
    },
    "source": {
     "file": "data/vocab/words.json",

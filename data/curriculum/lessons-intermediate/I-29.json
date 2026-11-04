@@ -71,9 +71,9 @@
    "en": "happy holiday",
    "translit": null,
    "pronunciation": {
-    "israeli": "chag samecha",
-    "sephardi": "chag samecha",
-    "ashkenazi": "chag someicha"
+    "israeli": "chag sameach",
+    "sephardi": "chag sameach",
+    "ashkenazi": "chag someiach"
    },
    "source": {
     "file": "data/vocab/words.json",

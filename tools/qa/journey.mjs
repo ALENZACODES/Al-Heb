@@ -160,28 +160,19 @@ async function runPersona(cfg) {
 
   // ---------- screens ----------
   async function doFirstday() {
+    // v0 on-ramp: five one-screen steps ("Step N of 5"), each with a one or two question quick check (.fd-opt buttons) that opens Next.
     const steps = [];
-    for (let i = 0; i < 14; i++) {
+    for (let i = 0; i < 40; i++) {
       const h2 = await text('.fd-body h2'); const body = await text('.fd-body');
-      steps.push(h2);
       if (/Step\s+\d+ of/.test(body) === false) break;
+      if (steps[steps.length - 1] !== h2) steps.push(h2);
       const hear = page.locator('.fd-body button:has-text("Hear it")').first();
-      if (await hear.count()) { await hear.click(); await sleep(500); const st = await text('.alef-firstday [role=status]'); log('first 10: Hear it', { step: h2, status: st }); if (/not available/i.test(st)) P.notes.push('first10-hear: ' + st); }
-      const chk = page.locator('.fd-body button:has-text("Check my reading")').first();
-      if (await chk.count()) { await chk.click(); await sleep(250); log('first 10: Check my reading', { status: await text('.alef-firstday [role=status]') }); }
-      const opts = page.locator('.fd-body button[lang=he]');
-      if (await opts.count()) { // the check question: miss first, then answer right (the right word is "shalom" in data/firstday/first10.json)
-        const right = await page.evaluate(async () => { const d = await (await fetch('data/firstday/first10.json')).json(); return d.words.find((w) => w.id === 'shalom').he; });
-        const all = await opts.allInnerTexts();
-        const wrong = all.find((t) => t.trim() !== right);
-        await page.locator('.fd-body button[lang=he]', { hasText: wrong }).first().click(); await sleep(200);
-        log('first 10: check answered wrong on purpose', { status: await text('.alef-firstday [role=status]') });
-        await page.locator('.fd-body button[lang=he]', { hasText: right }).first().click(); await sleep(200);
-        log('first 10: check answered right', { status: await text('.alef-firstday [role=status]') });
-      }
-      const next = page.locator('.fd-body button:has-text("Next")').first();
-      if (!(await next.count())) break;
-      await next.click(); await sleep(150);
+      if (steps.length && !P.hearLogged?.[h2] && await hear.count()) { (P.hearLogged ||= {})[h2] = 1; await hear.click(); await sleep(400); const st = await text('.alef-firstday [role=status]'); log('first 10: Hear it', { step: h2, status: st }); if (/not available/i.test(st)) P.notes.push('first10-hear: ' + st); }
+      const opt = page.locator('.fd-body button.fd-opt:not([disabled])').first();
+      if (await opt.count()) { await opt.click(); await sleep(1700); continue; } // first answer is a guess, wrong or right; either way the check moves on
+      const next = page.locator('#fd-next').first();
+      if (!(await next.count())) { await sleep(300); if (!(await page.locator('#fd-next, .fd-body button.fd-opt').count())) break; continue; }
+      await next.click(); await sleep(200);
     }
     const finalText = await mainText();
     const acts = await page.evaluate(() => [...document.querySelectorAll('#main a, #main button')].filter((e) => e.offsetParent).map((e) => ({ tag: e.tagName, t: (e.innerText || '').trim().slice(0, 40), h: e.getAttribute('href') })));
@@ -521,8 +512,22 @@ async function runPersona(cfg) {
   // dedupe errors
   const seen = new Set(); const errs = []; for (const e of P.errors) { const k = e.text; if (!seen.has(k)) { seen.add(k); errs.push(e); } }
   if (errs.length) F('medium', 'console-errors', `${errs.length} console/page/network error(s) during the journey`, ['Replay the persona'], { errors: errs.slice(0, 10) });
+  // Backup probe: Settings > Backup (download), then read the downloaded file and look for the progress keys.
+  await safe('backup probe', async () => {
+    await go('#/settings');
+    const btn = page.locator('button:has-text("Download"), button:has-text("Export"), button:has-text("Back up")').first();
+    const n = await btn.count();
+    if (!n) { P.backup = { ok: false, why: 'no export button found on Settings' }; log('backup: no export button', P.backup); return; }
+    const [dl] = await Promise.all([page.waitForEvent('download', { timeout: 4000 }).catch(() => null), btn.click()]);
+    const status = await text('[role=status]');
+    if (!dl) { P.backup = { ok: false, why: 'no download started', status }; log('backup: no download', P.backup); return; }
+    const path = await dl.path(); const raw = readFileSync(path, 'utf8'); let keys = [];
+    try { const j = JSON.parse(raw); keys = Object.keys(j.data || j.items || j.store || j); } catch { /* not json */ }
+    P.backup = { ok: keys.length > 0, file: dl.suggestedFilename(), bytes: raw.length, keys: keys.length, hasCurriculum: /curriculum\.progress/.test(raw), hasSrs: /srs\.cards/.test(raw), status: status.slice(0, 140) };
+    log('backup: downloaded', P.backup); P.backupShot = await shot('backup');
+  });
   const finalStore = await page.evaluate(() => ({ streak: window.alef.store.get('streak'), completed: Object.keys((window.alef.store.get('curriculum.progress') || {}).completed || {}), cards: (() => { const c = window.alef.store.get('srs.cards'); return Array.isArray(c) ? c.length : Object.keys(c || {}).length; })() })).catch(() => null);
-  report.personas[cfg.key] = { name: cfg.name, plan: P.plan, placement: P.placement || null, steps: P.steps, findings: P.findings, errors: errs, days: P.days, notes: P.notes, finalStore, onboardingRecord: P.onboardingRecord, israelBefore: P.israelBefore || null };
+  report.personas[cfg.key] = { name: cfg.name, plan: P.plan, placement: P.placement || null, steps: P.steps, findings: P.findings, errors: errs, days: P.days, notes: P.notes, finalStore, backup: P.backup || null, onboardingRecord: P.onboardingRecord, israelBefore: P.israelBefore || null };
   await ctx.close();
 }
 

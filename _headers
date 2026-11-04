@@ -52,6 +52,8 @@
   Cache-Control: public, max-age=604800
 /assets/screenshots/*
   Cache-Control: public, max-age=604800
+/assets/screens/*
+  Cache-Control: public, max-age=604800
 /assets/img/*
   Cache-Control: public, max-age=604800
 /assets/vendor/*

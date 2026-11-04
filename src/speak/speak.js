@@ -21,7 +21,7 @@
 import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
 import { count } from '../shell/plural.js';
 import { loadSetsIndex, loadSet, loadPairs, loadPrayers, loadTraditionPairs } from './loader.js';
-import { STORE_KEY, MODES, capabilities, pickMode, compare, usableItems, coerceState, recordAttempt, setSummary, soundReport, historyRows, dailyTotals, wordsOf, compareLine, missedWordsReport } from './model.js';
+import { STORE_KEY, MODES, capabilities, pickMode, compare, usableItems, coerceState, recordAttempt, setSummary, soundReport, historyRows, dailyTotals, spokenPointed, wordsOf, compareLine, missedWordsReport } from './model.js';
 import { createRecognizer, createRecorder, createSpeaker } from './recognizer.js';
 import { contrastById, drillQueue, drillQuestion } from './pairs.js';
 import { loadDailyCard, dayKeyLocal, DAILY_PREFIX } from './daily.js';
@@ -210,7 +210,7 @@ export function mount(root, ctx) {
     try {
       const trad = congregationOf(ctx?.settings), mism = trad === 'israeli' ? '' : ` ${audioNote(trad)}`;
       if (audioId && rate == null && audioHas(kind, audioId)) { const r = await ctx.audio.play(kind, audioId); say(r?.source === 'file' ? 'Played a recorded clip.' : `Played the browser\'s voice, not a recording.${mism}`); }
-      else if (speaker.supported) { const r = await speaker.speak(he, { rate: rate ?? ctx?.settings?.get?.('ttsRate') }); say(r.ok ? `Played the browser\'s voice, not a recording; its Hebrew is unverified.${mism}` : `No sound: ${errorText(r.error)}`); }
+      else if (speaker.supported) { const r = await speaker.speak(spokenPointed(he), { rate: rate ?? ctx?.settings?.get?.('ttsRate') }); say(r.ok ? `Played the browser\'s voice, not a recording; its Hebrew is unverified.${mism}` : `No sound: ${errorText(r.error)}`); }
       else say('No sound: this browser has no speech synthesis and no clip exists for this item yet.');
     } catch { say('The audio could not play.'); }
     busy = false; if (btn) btn.removeAttribute?.('disabled');

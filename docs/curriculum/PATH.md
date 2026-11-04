@@ -22,7 +22,7 @@ Intermediate split: I-01 to I-10 and I-26 to I-35 synagogue (reading track, 20),
 | 5 | r05 | read | Meet the Priestly Blessing (listen and spot) | r04 | 15 |
 | 6 | r06 | read | Yod and the 'ee' vowel | r05 | 20 |
 | 7 | r07 | read | Alef and He | r06 | 25 |
-| 8 | r08 | read | Tzere: the 'ay' vowel | r07 | 20 |
+| 8 | r08 | read | Tzere: the 'e' / 'ay' vowel | r07 | 20 |
 | 9 | r09 | read | Resh and Mem | r08 | 25 |
 | 10 | r10 | read | Kaf, final Kaf, and a silent shva at word end | r09 | 25 |
 | 11 | r11 | read | Segol: the 'eh' vowel | r10 | 20 |

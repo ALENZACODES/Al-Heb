@@ -126,7 +126,7 @@
    "en": "to send",
    "translit": null,
    "pronunciation": {
-    "israeli": "lishlocha"
+    "israeli": "lishloach"
    },
    "source": {
     "file": "data/vocab/words.json",
@@ -138,7 +138,7 @@
    "en": "sending (m)",
    "translit": null,
    "pronunciation": {
-    "israeli": "sholecha"
+    "israeli": "sholeach"
    },
    "source": {
     "file": "data/vocab/words.json",

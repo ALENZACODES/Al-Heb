@@ -32,9 +32,11 @@ export function main(argv = process.argv.slice(2)) {
   if (o.scripts.length) {
     const items = [];
     for (const s of o.scripts) {
+      const rows = parseCsv(fs.readFileSync(s, 'utf8'));
       const t = o.tradition || traditionFromName(path.basename(s));
-      if (!t) throw new Error(`cannot tell the tradition of ${s}; pass --tradition`);
-      items.push(...normalizeItems(parseCsv(fs.readFileSync(s, 'utf8')), { tradition: t, kind: 'word' }).map((x) => ({ ...x, tradition: t })));
+      // A list with its own tradition column (docs/voices/first-100.csv holds both) needs no --tradition: every item keeps its own and the page filters.
+      if (!t && !rows.every((r) => r.tradition)) throw new Error(`cannot tell the tradition of ${s}; pass --tradition`);
+      items.push(...normalizeItems(rows, { tradition: t, kind: 'word' }).map((x) => ({ ...x, tradition: x.tradition || t })));
     }
     bundle = { items: o.limit ? items.slice(0, o.limit) : items };
   }

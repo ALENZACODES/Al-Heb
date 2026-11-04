@@ -42,7 +42,7 @@ Plan: pre-check as learners arrive (one learner at a time, away from the group, 
 Watch for: reading left to right; mixing up Vav and Bet; Tet and Tav.
 
 ### Session 2: Vowel sounds, five new letters
-In the room: r06 (Yod and the 'ee' vowel), r07 (Alef and He), r08 (Tzere: the 'ay' vowel), r09 (Resh and Mem).
+In the room: r06 (Yod and the 'ee' vowel), r07 (Alef and He), r08 (Tzere: the 'e' / 'ay' vowel), r09 (Resh and Mem).
 Home before session 3: r10 (Kaf, final Kaf), r11 (Segol: the 'eh' vowel).
 Read-aloud: `bless-priestly-1`, listen again, then echo the first word only.
 Goal: sound out two-letter syllables, then short words made from the letters taught. Use the Vowel board and Letters tracing in ALEF for the drill block.

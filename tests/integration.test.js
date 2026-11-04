@@ -258,12 +258,29 @@ test('precache: skips vendor, PDFs and files over the size limit', async () => {
   const m = computeManifest();
   assert.ok(!m.files.some((f) => f.startsWith('assets/vendor/') || f.startsWith('assets/workbook/') || f.endsWith('.pdf') || f.startsWith('data/vocab/packs/')));
   assert.ok(!m.files.some((f) => /^data\/audio\/manifest-words-/.test(f)), 'word shards are lazy + runtime-cached, not precached');
-  assert.ok(m.files.includes('data/audio/manifest.json'), 'core audio manifest stays precached');
+  assert.ok(!m.files.includes('data/audio/manifest.json') && m.onDemand.includes('data/audio/manifest.json'), 'core audio manifest (1.8 MiB, every clip still missing) is on demand, runtime-cached after first load');
   assert.match(rd('sw.js'), /manifest-words-/, 'sw.js has a runtime rule for the shards');
   for (const f of m.files) assert.ok(statSync(join(root, f)).size <= MAX_FILE_BYTES, f);
   // compare the file LIST (not the content hash, which changes on every edit by any lane)
-  const listed = JSON.parse(readFileSync(join(root, 'precache-manifest.js'), 'utf8').match(/ALEF_PRECACHE = (\[[\s\S]*?\]);/)[1]);
+  const text = readFileSync(join(root, 'precache-manifest.js'), 'utf8');
+  const listed = JSON.parse(text.match(/ALEF_PRECACHE = (\[[\s\S]*?\]);/)[1]);
   assert.deepEqual(listed, m.files, 'precache-manifest.js file list is stale: run node tools/build-precache.mjs');
+  assert.deepEqual(JSON.parse(text.match(/ALEF_ON_DEMAND = (\[[\s\S]*?\]);/)[1]), m.onDemand, 'on-demand list is stale: run node tools/build-precache.mjs');
+});
+test('precache: first install is the v0 core only (under 4 MiB); preview data and vocab are on demand, nothing is in both lists', async () => {
+  const { computeManifest, isOnDemand } = await import('../tools/build-precache.mjs');
+  const { statSync } = await import('node:fs');
+  const m = computeManifest();
+  const bytes = m.files.reduce((a, f) => a + statSync(join(root, f)).size, 0);
+  assert.ok(bytes < 4 * 1048576, `first-install precache is ${(bytes / 1048576).toFixed(2)} MiB, budget 4 MiB`);
+  assert.equal(m.files.filter((f) => m.onDemand.includes(f)).length, 0);
+  assert.ok(m.files.every((f) => !isOnDemand(f)) && m.onDemand.every(isOnDemand));
+  assert.ok(m.onDemand.some((f) => f.startsWith('data/vocab/')) && !m.files.some((f) => f.startsWith('data/vocab/')), 'vocab data is on demand');
+  // what every v0 route reads offline stays installed: lesson data, letters, first-day, progress, credits, onboarding, search letters, images index
+  for (const f of ['data/curriculum/lessons.json', 'data/curriculum/belts.json', 'data/curriculum/hints.json', 'data/letters/letters.json', 'data/letters/confusables.json', 'data/letters/mnemonics.json', 'data/letters/interference.json',
+    'data/pronunciation/consonants.json', 'data/pronunciation/niqqud.json', 'data/firstday/first10.json', 'data/firstday/onramp.json', 'data/firstday/ladder.json', 'data/progress/milestones.json', 'data/progress/belt-gates.json',
+    'data/onboarding/plans.json', 'data/legal/attributions.json', 'data/corpus/registry.json', 'data/corpus/phrasebook.json', 'data/img/index.json', 'data/calendar/locations.json', 'data/placement/config.json',
+    'data/service/orders.json', 'data/timedread/gates.json', 'src/curriculum/lesson.view.js', 'src/letters/trace.view.js', 'src/shell/offline.view.js']) assert.ok(m.files.includes(f), `v0 file not installed: ${f}`);
 });
 
 test('router: lane 1 sub-screens inject the query learn.view.js dispatches on', () => {

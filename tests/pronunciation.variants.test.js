@@ -51,8 +51,8 @@ test('rules: kamatz, tav, holam, het/khaf, ayin/alef, resh, shva, dagesh, stress
 
 test('running text: separators kept, maqaf joined, sof pasuq dropped, one stress entry per word', () => {
   const r = renderText('בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ׃', ctx);
-  assert.equal(r.variants.israeli.simple, 'bekhol-levavekha uvekhal-nafshekha');
-  assert.equal(r.variants.israeli.ipa, 'be.ˈχol-le.va.ve.ˈχa u.ve.ˈχal-naf.ʃe.ˈχa');
+  assert.equal(r.variants.israeli.simple, 'bekhol-levavekha uvekhol-nafshekha');
+  assert.equal(r.variants.israeli.ipa, 'be.ˈχol-le.va.ve.ˈχa u.ve.ˈχol-naf.ʃe.ˈχa');
   assert.equal(r.variants.israeli.stress.length, 4);
   assert.equal(renderText('מַה שְׁלוֹמְךָ?', ctx).variants.israeli.simple, 'mah shelomekha?');
 });

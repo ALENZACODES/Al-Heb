@@ -20,8 +20,8 @@ const packs = packFiles.map((f) => rd(`data/vocab/packs/${f}`)).filter((p) => Ar
 
 test('corrections.json: id, field, old, new, reason on every entry; only the deterministic kinds', () => {
   assert.equal(spec.schema, 'alef-vocab-corrections/1');
-  assert.equal(spec.counts.removed, 2); assert.equal(spec.counts.translit, 67); assert.equal(spec.counts.forms, 1);
-  assert.equal(spec.corrections.length, 70 + 35 + 5); // 70 deterministic + 35 appended gloss/hidden/example corrections (docs/vocab/JUDGEMENT.md addendum) + 5 audit gloss/alt corrections (docs/vocab/AUDIT-RESPONSE.md)
+  assert.equal(spec.counts.removed, 2); assert.equal(spec.counts.translit, 164); assert.equal(spec.counts.forms, 1);
+  assert.equal(spec.corrections.length, 70 + 97 + 35 + 5); // +97 furtive-patach translit regenerations (docs/vocab/AUDIT-RESPONSE.md item 6); 70 deterministic + 35 appended gloss/hidden/example corrections (docs/vocab/JUDGEMENT.md addendum) + 5 audit gloss/alt corrections (docs/vocab/AUDIT-RESPONSE.md)
   for (const c of spec.corrections) {
     for (const k of ['id', 'field', 'old', 'new', 'reason']) assert.ok(k in c, `${c.id} lacks ${k}`);
     assert.ok(c.reason.length > 20);
@@ -78,7 +78,7 @@ test('re-running is a no-op (idempotent) and a dry run writes nothing', () => {
   const sha = (rel) => crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT, rel))).digest('hex');
   const before = [sha('data/vocab/words.json'), sha('data/vocab/packs.json'), sha('data/vocab/index.json'), sha('data/vocab/meta.json')];
   const r = applyCorrections(ROOT, { dry: true });
-  assert.equal(r.applied.length, 0); assert.equal(r.conflicts.length, 0); assert.equal(r.already.length, 110);
+  assert.equal(r.applied.length, 0); assert.equal(r.conflicts.length, 0); assert.equal(r.already.length, 207);
   assert.deepEqual([sha('data/vocab/words.json'), sha('data/vocab/packs.json'), sha('data/vocab/index.json'), sha('data/vocab/meta.json')], before);
   assert.deepEqual(generateCorrections(ROOT).filter((c) => c.field === '(record)'), [], 'nothing left to generate for duplicates');
 });

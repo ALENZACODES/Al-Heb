@@ -14,7 +14,7 @@ export function progressBar(label = "Lesson progress") {
 }
 
 /**
- * End-of-lesson card. data: { title, countText, stats, ms, goodLabels[], missedLabels[], skippedN, cardsUpdated, nextHref, nextLabel,
+ * End-of-lesson card. data: { title, countText, stats, ms, goodLabels[], missedLabels[], skippedN, cardsUpdated, dueCount (optional; 0 hides the Review now link), nextHref, nextLabel,
  * extraLinks[] }. The primary button is "next"; review and the list are secondary.
  */
 export function summaryNode(d) {
@@ -31,7 +31,7 @@ export function summaryNode(d) {
     d.missedLabels.length ? el("div", {}, el("p", {}, "To review:"), el("ul", { "data-list": "review" }, ...d.missedLabels.map((t) => el("li", {}, t)))) : el("p", {}, "Nothing to review."),
     d.skippedN ? el("p", { class: "muted", "data-skipped": String(d.skippedN) }, `${d.skippedN} skipped (not counted either way). Use "Practise again" to do them.`) : null,
     el("p", { class: "muted" }, d.cardsUpdated ? `${d.cardsUpdated} review card${d.cardsUpdated === 1 ? "" : "s"} updated.` : "No review cards needed updating."),
-    el("div", { class: "row alef-summary-actions" }, next, el("a", { class: next ? "btn secondary" : "btn", href: "#/learn?review=1" }, "Review now"), ...(d.extraLinks || [])));
+    el("div", { class: "row alef-summary-actions" }, next, d.dueCount === 0 ? null : el("a", { class: next ? "btn secondary" : "btn", href: "#/learn?review=1" }, "Review now"), ...(d.extraLinks || [])));
 }
 
 /**

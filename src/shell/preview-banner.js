@@ -13,7 +13,9 @@ export const needsBanner = (route) => !!route && route.tier !== 'v0';
  * Add (or refresh) the banner on `root` when `route` is a preview route; remove any stale banner otherwise.
  * @param {HTMLElement} root the view container (#main) @param {any} route @returns {HTMLElement|null} the banner element, or null
  */
+let watcher = null; // one observer, for the current page only
 export function mountPreviewBanner(root, route) {
+  if (watcher) { watcher.disconnect(); watcher = null; }
   if (!root) return null;
   const stale = root.queryAll ? root.queryAll(BANNER_SELECTOR) : [...root.querySelectorAll(BANNER_SELECTOR)];
   for (const old of stale) { if (typeof old.remove === 'function') old.remove(); else if (Array.isArray(root.children)) root.children = root.children.filter((c) => c !== old); }
@@ -21,5 +23,10 @@ export function mountPreviewBanner(root, route) {
   const el = h('p', { class: 'preview-banner muted', 'data-tier': 'preview', role: 'note' },
     h('strong', {}, t('nav.preview.banner')), h('span', { class: 'visually-hidden' }, ' ' + t('nav.preview.banner.more')));
   root.prepend(el);
+  // Some views rebuild #main when the learner interacts (root.replaceChildren(...)), which would drop the banner: put it back.
+  if (typeof MutationObserver === 'function' && typeof root.nodeType === 'number') {
+    watcher = new MutationObserver(() => { if (!root.querySelector(BANNER_SELECTOR)) { watcher.disconnect(); root.prepend(el); watcher.observe(root, { childList: true }); } });
+    watcher.observe(root, { childList: true });
+  }
   return el;
 }

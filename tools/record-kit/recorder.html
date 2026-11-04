@@ -352,8 +352,8 @@ async function acceptConsent() {
   await idb.set('session', S);
   show('s-consent', false); show('s-script', true);
   if (BUNDLE) {
-    const list = BUNDLE.items.filter((x) => !x.tradition || x.tradition === S.tradition);
-    $('sc-bundled').textContent = `A built-in list is included (${list.length} items for the ${S.tradition} tradition).`; show('sc-bundled', true); show('b-bundle', true);
+    const list = BUNDLE.items.filter((x) => (!x.tradition || x.tradition === S.tradition) && (!x.voice || x.voice === S.voice));
+    $('sc-bundled').textContent = `A built-in list is included (${list.length} items for the ${S.tradition} tradition, ${S.voice === 'f' ? 'woman' : 'man'} voice).`; show('sc-bundled', true); show('b-bundle', true);
     $('b-bundle').onclick = () => setItems(list, 'built-in list');
   }
 }
@@ -489,8 +489,19 @@ document.addEventListener('keydown', (e) => {
 });
 window.addEventListener('pagehide', () => { if (S) idb.set('session', S); });
 
+// ?tradition=sephardi&voice=m preselects (and locks) the two choices, so a page opened from the first-100 list matches that list.
+function applyUrlChoices() {
+  const q = new URLSearchParams(location.search); const notes = [];
+  for (const [param, id, label] of [['tradition', 'f-trad', 'reading tradition'], ['voice', 'f-voice', 'voice']]) {
+    const want = (q.get(param) || '').toLowerCase(); if (!want) continue;
+    const sel = $(id);
+    if (![...sel.options].some((o) => o.value === want)) { notes.push(`The link asks for ${label} "${want}", which this page does not offer. Pick one yourself.`); continue; }
+    sel.value = want; sel.disabled = true; notes.push(`${label}: ${sel.selectedOptions[0].textContent} (set by the link)`);
+  }
+  if (notes.length) { const h = $('c-hint'); const p = document.createElement('p'); p.className = 'small'; p.id = 'c-url'; p.textContent = notes.join('. ') + '.'; h.after(p); }
+}
 (async () => {
-  renderConsent(); await idb.open();
+  renderConsent(); applyUrlChoices(); await idb.open();
   if (!idb.ok) { const n = document.createElement('p'); n.className = 'msg warn'; n.textContent = 'This browser is blocking local storage (private mode?). Recordings will be lost if you close this tab: export often.'; document.querySelector('main').prepend(n); }
   const saved = await idb.get('session');
   if (saved && saved.items && saved.items.length) {

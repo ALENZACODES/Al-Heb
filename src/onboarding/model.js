@@ -5,6 +5,7 @@
 //     denomination:null|'reform'|'conservative'|'reconstructionist'|'orthodox', minutesPerDay:number|null, step:'letters'|'congregation'|'minutes'|'plan' }
 // The letters question is asked once; `letters` is only rewritten through "Change my starting point".
 import { openStart } from '../placement/model.js';
+import { lessonQueue } from '../home/nextlesson.js';
 export const STORE_KEY = 'onboarding.v1';
 export const PLACEMENT_KEY = 'placement.v1'; // written by src/placement (read here, never written)
 
@@ -92,29 +93,23 @@ export function buildPlan(o) {
   const open = wanted ? openStart(o.lessons, o.completed || [], wanted) : null;
   const placed = open ? open.id : null;
   const startLesson = placed || (israel ? (read[0]?.id || plans.firstLesson) : plans.firstLesson);
-  const startIdx = order.get(startLesson) ?? 0;
 
-  // lesson parts queue
-  const parts = [];
-  for (const l of read.slice(startIdx)) {
-    const est = Number(l.estMinutes) || minutes;
-    // One lesson per day: lessons are completed in one press, so the Today card moves on a lesson at a time. A long lesson is not split.
-    const n = Math.max(1, Math.min(1, plans.lessonSplitMaxParts, Math.ceil(est / minutes)));
-    for (let p = 1; p <= n; p++) parts.push({ kind: 'lesson', lesson: l.id, title: l.title, part: p, parts: n, minutes: Math.ceil(est / n), route: 'learn', href: '#/learn?lesson=' + encodeURIComponent(l.id) });
-    if (parts.length > 40) break;
-  }
+  // Lessons come from the shared next-lesson rule (src/home/nextlesson.js), one finished lesson per day, so day 1 is what the Today card
+  // recommends now and each later day is what it recommends after the lessons before it are done. Rebuilt from progress on every view.
+  const parts = lessonQueue({ lessons: o.lessons, completed: o.completed || [], goal: israel ? 'israel' : o.goal, first: (o.completed || []).length ? null : placed, limit: 14 })
+    .map((l) => ({ kind: 'lesson', lesson: l.id, title: l.title, part: 1, parts: 1, minutes: Number(l.estMinutes) || minutes, route: 'learn', href: '#/learn?lesson=' + encodeURIComponent(l.id) }));
   const startDef = israel ? null : plans.starts[rec.letters];
   const needsPlacement = !israel && rec.start === '/placement' && !placed;
   const extras = israel ? [] : plans.extras.filter((e) => has(e.route) && order.has(e.minLesson));
   const used = new Map();
-  let reached = startIdx; // index of the furthest lesson started
+  let reached = order.get(parts[0]?.lesson ?? startLesson) ?? 0; // index of the furthest lesson started
   const days = [];
   for (let d = 0; d < 7; d++) {
     const items = []; let left = minutes;
     const push = (it) => { items.push(it); left -= it.minutes; };
     if (d === 0 && startDef && has(startDef.route) && (rec.letters === 'none' || needsPlacement)) push({ kind: 'start', title: startDef.title, href: startDef.href, route: startDef.route, minutes: startDef.minutes, why: startDef.why });
     if (d === 6 && has(plans.review.route)) push({ kind: 'review', ...plans.review });
-    if (parts.length && (items.length === 0 || d === 0 || parts[0].minutes <= left)) { const p = parts.shift(); push(p); reached = Math.max(reached, order.get(p.lesson) ?? reached); }
+    if (parts.length) { const p = parts.shift(); push(p); reached = Math.max(reached, order.get(p.lesson) ?? reached); }
     for (const e of extras) {
       if (left < e.minutes) break;
       if ((order.get(e.minLesson) ?? Infinity) > reached) continue;

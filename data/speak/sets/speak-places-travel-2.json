@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-places-travel-2",
+ "title": "Places and travel 2",
+ "theme": "places-travel",
+ "level": "B1",
+ "track": "israel",
+ "pack": "places-travel-2",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "hd82a3079",
+   "he": "אֶרֶץ",
+   "translit": "eretz",
+   "en": "country, land",
+   "kind": "word",
+   "audioId": "r24-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h13673f80",
+   "he": "צָדַק",
+   "translit": "tzadak",
+   "en": "to be right",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hdf8bcf60",
+   "he": "תׇּכְנִית",
+   "translit": "tokhnit",
+   "en": "a program, a plan",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8a450588",
+   "he": "פַּרְק",
+   "translit": "park",
+   "en": "park",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc5d024c3",
+   "he": "קָרוֹב",
+   "translit": "karov",
+   "en": "close, near",
+   "kind": "word",
+   "audioId": "il11-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0a99b68d",
+   "he": "זְכוּת",
+   "translit": "zekhut",
+   "en": "a right, a legal right, a moral right",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h90377d47",
+   "he": "שֶׁקֶל",
+   "translit": "shekel",
+   "en": "shekel, the name of Israel's currency unit since 24 February 1980",
+   "kind": "word",
+   "audioId": "il05-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h7097c7a9",
+   "he": "צָפוֹן",
+   "translit": "tzafon",
+   "en": "north",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf19f0a88",
+   "he": "בַּנְק",
+   "translit": "bank",
+   "en": "bank",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h372b7277",
+   "he": "רָחוֹק",
+   "translit": "rachok",
+   "en": "far, distant",
+   "kind": "word",
+   "audioId": "il11-w5",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf524a1ad",
+   "he": "אוֹטוֹבּוּס",
+   "translit": "otobus",
+   "en": "a bus (vehicle)",
+   "kind": "word",
+   "audioId": "il10-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h6fc590a9",
+   "he": "מָטוֹס",
+   "translit": "matos",
+   "en": "plane (an airplane",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

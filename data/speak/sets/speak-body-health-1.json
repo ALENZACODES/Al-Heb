@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-body-health-1",
+ "title": "Body and health 1",
+ "theme": "body-health",
+ "level": "A2",
+ "track": "both",
+ "pack": "body-health-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h1a3574d3",
+   "he": "יָד",
+   "translit": "yad",
+   "en": "arm",
+   "kind": "word",
+   "audioId": "anchor-yod",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hbd0751bc",
+   "he": "פָּנִים",
+   "translit": "panim",
+   "en": "face",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h9d6352ee",
+   "he": "עַיִן",
+   "translit": "ayin",
+   "en": "eye",
+   "kind": "word",
+   "audioId": "anchor-ayin",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h4fed6814",
+   "he": "רֹאשׁ",
+   "translit": "rosh",
+   "en": "head",
+   "kind": "word",
+   "audioId": "r09-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h720b8d19",
+   "he": "אַמָּה",
+   "translit": "amah",
+   "en": "forearm",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h890d1505",
+   "he": "לֵב",
+   "translit": "lev",
+   "en": "heart",
+   "kind": "word",
+   "audioId": "r08-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc43effe9",
+   "he": "דָּם",
+   "translit": "dam",
+   "en": "blood",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h60b16793",
+   "he": "פֶּה",
+   "translit": "peh",
+   "en": "mouth",
+   "kind": "word",
+   "audioId": "r16-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h85ac8666",
+   "he": "שֵׁן",
+   "translit": "shen",
+   "en": "tooth",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h21e009ad",
+   "he": "אַף",
+   "translit": "af",
+   "en": "nose",
+   "kind": "word",
+   "audioId": "r16-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hbea3a906",
+   "he": "יָשַׁן",
+   "translit": "yashan",
+   "en": "to sleep, to be asleep",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h32a7c780",
+   "he": "נָגַע",
+   "translit": "naga",
+   "en": "to touch, lay a hand on",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

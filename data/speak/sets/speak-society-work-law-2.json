@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-society-work-law-2",
+ "title": "Work, money and society 2",
+ "theme": "society-work-law",
+ "level": "B1",
+ "track": "israel",
+ "pack": "society-work-law-2",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "ha9aefc4e",
+   "he": "גֶּנֶרָל",
+   "translit": "general",
+   "en": "a general",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h4f2727e0",
+   "he": "הֵסֵב",
+   "translit": "hesev",
+   "en": "to cause a change in course or direction",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h52de344e",
+   "he": "תְּמוּרָה",
+   "translit": "temurah",
+   "en": "compensation, reward",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h437735c2",
+   "he": "מְסִבָּה",
+   "translit": "mesibah",
+   "en": "a party",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h34c90d35",
+   "he": "מַחֲנֶה",
+   "translit": "machaneh",
+   "en": "camp",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb3b4c47b",
+   "he": "לְאֻמִּי",
+   "translit": "le'umi",
+   "en": "National",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc73a45bc",
+   "he": "הִרְוִיחַ",
+   "translit": "hirvicha",
+   "en": "to earn, to profit",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h1766781e",
+   "he": "גִּיֵּס",
+   "translit": "giyes",
+   "en": "to recruit, to draft, to conscript",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc73b1b96",
+   "he": "דַּל",
+   "translit": "dal",
+   "en": "weak, poor",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h3c804750",
+   "he": "גְּדוּד",
+   "translit": "gedud",
+   "en": "a troop, a band, a unit",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hfd92c60d",
+   "he": "גָּבָה",
+   "translit": "gavah",
+   "en": "to collect (a debt)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0025ee12",
+   "he": "נָסִיךְ",
+   "translit": "nasikh",
+   "en": "prince",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

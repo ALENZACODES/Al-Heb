@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-places-travel-1",
+ "title": "Places and travel 1",
+ "theme": "places-travel",
+ "level": "B1",
+ "track": "both",
+ "pack": "places-travel-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h9c8ddecf",
+   "he": "בַּיִת",
+   "translit": "bayit",
+   "en": "house",
+   "kind": "word",
+   "audioId": "anchor-bet",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he3b1acbd",
+   "he": "עִיר",
+   "translit": "ir",
+   "en": "city",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h5ae20314",
+   "he": "דֶּרֶךְ",
+   "translit": "derekh",
+   "en": "a road, a path, a way",
+   "kind": "word",
+   "audioId": "r18-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hba98874f",
+   "he": "נָכוֹן",
+   "translit": "nakhon",
+   "en": "Right, correct",
+   "kind": "word",
+   "audioId": "fillers-04",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h5fc50b7a",
+   "he": "מְכוֹנִית",
+   "translit": "mekhonit",
+   "en": "car",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h80c0273d",
+   "he": "דֶּלֶת",
+   "translit": "delet",
+   "en": "door (portal of entry)",
+   "kind": "word",
+   "audioId": "anchor-dalet",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h4fa970c1",
+   "he": "לָן",
+   "translit": "lan",
+   "en": "to stay overnight (at a hotel or other lodging)",
+   "kind": "word",
+   "audioId": "brich-shmei-w31",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h46a5a512",
+   "he": "גְּבוּל",
+   "translit": "gevul",
+   "en": "a border, a boundary, a limit, a line",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h18b1e15c",
+   "he": "רְחוֹב",
+   "translit": "rechov",
+   "en": "street",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h38dc1dcd",
+   "he": "יָשָׁר",
+   "translit": "yashar",
+   "en": "right, straight",
+   "kind": "word",
+   "audioId": "il11-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hea72b7d7",
+   "he": "אִמֵּן",
+   "translit": "imen",
+   "en": "to train",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h3a789358",
+   "he": "נוֹתַר",
+   "translit": "notar",
+   "en": "to be left, to remain",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

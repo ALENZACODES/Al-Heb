@@ -1,0 +1,361 @@
+{
+ "id": "I-01",
+ "track": "read",
+ "level": "black",
+ "unit": "synagogue",
+ "title": "Shema and its blessings: Barchu, Shema, Baruch shem, V'ahavta",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "בָּרְכוּ",
+   "en": "bless! (the leader's call)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "barkhu",
+    "sephardi": "barkhu",
+    "ashkenazi": "borkhu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בָּרְכוּ"
+    ]
+   }
+  },
+  {
+   "he": "הַמְּבֹרָךְ",
+   "en": "the blessed one",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hamevorakh",
+    "sephardi": "hamevorakh",
+    "ashkenazi": "hamevorokh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַמְּבֹרָךְ"
+    ]
+   }
+  },
+  {
+   "he": "שְׁמַע",
+   "en": "hear, listen",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shema",
+    "sephardi": "shema",
+    "ashkenazi": "shema"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "שְׁמַע"
+    ]
+   }
+  },
+  {
+   "he": "יִשְׂרָאֵל",
+   "en": "Israel",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yisra'el",
+    "sephardi": "yisra'el",
+    "ashkenazi": "yisro'eil"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p41545921"
+   }
+  },
+  {
+   "he": "אֱלֹהֵינוּ",
+   "en": "our God",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "eloheinu",
+    "sephardi": "eloheinu",
+    "ashkenazi": "eloheinu"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p29823ceb"
+   }
+  },
+  {
+   "he": "אֶחָד",
+   "en": "one",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "echad",
+    "sephardi": "echad",
+    "ashkenazi": "echod"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h66252016"
+   }
+  },
+  {
+   "he": "שֵׁם",
+   "en": "name",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shem",
+    "sephardi": "shem",
+    "ashkenazi": "sheim"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h65a05fb2"
+   }
+  },
+  {
+   "he": "כְּבוֹד",
+   "en": "the glory of",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kevod",
+    "sephardi": "kevod",
+    "ashkenazi": "kevod"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "כְּבוֹד"
+    ]
+   }
+  },
+  {
+   "he": "מַלְכוּתוֹ",
+   "en": "his kingdom",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "malkhuto",
+    "sephardi": "malkhuto",
+    "ashkenazi": "malkhuso"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "pc8f262be"
+   }
+  },
+  {
+   "he": "לְעוֹלָם וָעֶד",
+   "en": "for ever and ever",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "le'olam va'ed",
+    "sephardi": "le'olam va'ed",
+    "ashkenazi": "le'olom vo'ed"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "לְעוֹלָם",
+     "וָעֶד"
+    ]
+   }
+  },
+  {
+   "he": "וְאָהַבְתָּ",
+   "en": "and you shall love",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ve'ahavta",
+    "sephardi": "ve'ahavta",
+    "ashkenazi": "ve'ohavto"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "pd4b665ac"
+   }
+  },
+  {
+   "he": "לְבָבְךָ",
+   "en": "your heart",
+   "note": "in the line it is joined to b'chol (with all) by a maqaf",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "levavekha",
+    "sephardi": "levavekha",
+    "ashkenazi": "levovekho"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p2bee7060"
+   }
+  }
+ ],
+ "prayerLines": [
+  "torah-barchu",
+  "shema-1",
+  "shema-2",
+  "vahavta-1"
+ ],
+ "goals": [
+  "Answer Barchu with the congregation's line without reading it",
+  "Say the Shema line and the quiet Baruch shem line from memory",
+  "Read V'ahavta's first verse and find the three 'with all your' phrases"
+ ],
+ "estMinutes": 30,
+ "prerequisites": [
+  "r51"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli",
+   "sephardi",
+   "ashkenazi"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Latin forms are machine output of the project's transliterator, not a native speaker's; israeli and sephardi are identical in that scheme."
+ },
+ "exercises": [
+  {
+   "id": "I-01-e01",
+   "type": "respond",
+   "cue": "The leader calls the congregation to prayer. Answer with the congregation's line.",
+   "answer": {
+    "he": "בָּרוּךְ יְהוָה הַמְּבֹרָךְ לְעוֹלָם וָעֶד",
+    "en": "Blessed is the LORD, the blessed one, for ever and ever."
+   },
+   "prompt": {
+    "he": "בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ",
+    "en": "Bless the LORD, the blessed one."
+   }
+  },
+  {
+   "id": "I-01-e02",
+   "type": "order",
+   "he": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד",
+   "en": "Hear, Israel: the LORD is our God, the LORD is one."
+  },
+  {
+   "id": "I-01-e03",
+   "type": "fade",
+   "line": "shema-1",
+   "en": "Hear, Israel: the LORD is our God, the LORD is one."
+  },
+  {
+   "id": "I-01-e04",
+   "type": "spot",
+   "line": "shema-1",
+   "target": "אֶחָד",
+   "en": "one"
+  },
+  {
+   "id": "I-01-e05",
+   "type": "recall",
+   "he": "שְׁמַע",
+   "en": "hear, listen"
+  },
+  {
+   "id": "I-01-e06",
+   "type": "produce",
+   "en": "one",
+   "options": [
+    "אֶחָד",
+    "אֱלֹהֵינוּ",
+    "יִשְׂרָאֵל"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-01-e07",
+   "type": "respond",
+   "cue": "After the Shema line, the quiet line (said aloud only on Yom Kippur in many communities).",
+   "answer": {
+    "he": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד",
+    "en": "Blessed is the name of his glorious kingdom for ever and ever."
+   }
+  },
+  {
+   "id": "I-01-e08",
+   "type": "order",
+   "he": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד",
+   "en": "Blessed is the name of his glorious kingdom for ever and ever."
+  },
+  {
+   "id": "I-01-e09",
+   "type": "fade",
+   "line": "shema-2",
+   "en": "Blessed is the name of his glorious kingdom for ever and ever."
+  },
+  {
+   "id": "I-01-e10",
+   "type": "spot",
+   "line": "vahavta-1",
+   "target": "לְבָבְךָ",
+   "en": "your heart"
+  },
+  {
+   "id": "I-01-e11",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "שֵׁם",
+     "en": "name"
+    },
+    {
+     "he": "כְּבוֹד",
+     "en": "the glory of"
+    },
+    {
+     "he": "מַלְכוּתוֹ",
+     "en": "his kingdom"
+    },
+    {
+     "he": "לְעוֹלָם וָעֶד",
+     "en": "for ever and ever"
+    }
+   ]
+  },
+  {
+   "id": "I-01-e12",
+   "type": "produce",
+   "en": "with all your heart",
+   "options": [
+    "בְּכָל־לְבָבְךָ",
+    "וּבְכָל־נַפְשְׁךָ",
+    "וּבְכָל־מְאֹדֶךָ"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-01-e13",
+   "type": "produce",
+   "en": "and with all your soul",
+   "options": [
+    "וּבְכָל־נַפְשְׁךָ",
+    "בְּכָל־לְבָבְךָ",
+    "וּבְכָל־מְאֹדֶךָ"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-01-e14",
+   "type": "fade",
+   "line": "vahavta-1",
+   "en": "And you shall love the LORD your God with all your heart, with all your soul and with all your might."
+  },
+  {
+   "id": "I-01-e15",
+   "type": "order",
+   "he": "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ",
+   "en": "And you shall love the LORD your God"
+  },
+  {
+   "id": "I-01-e16",
+   "type": "recall",
+   "he": "הַמְּבֹרָךְ",
+   "en": "the blessed one"
+  }
+ ],
+ "note": "Barchu is the call before the Shema blessings; the blessings themselves (Yotzer or, Ahavat olam) are corpus gaps (g-yotzer-or, g-ahavat-olam) and are not taught here."
+}

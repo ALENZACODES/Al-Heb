@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-describing-words-2",
+ "title": "Describing words 2",
+ "theme": "describing-words",
+ "level": "B2",
+ "track": "israel",
+ "pack": "describing-words-2",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "hdcd31646",
+   "he": "אוּלַי",
+   "translit": "ulai",
+   "en": "maybe",
+   "kind": "word",
+   "audioId": "il20-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h04c271fe",
+   "he": "גַּם",
+   "translit": "gam",
+   "en": "also, too, additionally",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h29e4f547",
+   "he": "דַּי",
+   "translit": "dai",
+   "en": "enough, sufficient, adequate",
+   "kind": "word",
+   "audioId": "politeness-19",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h81024165",
+   "he": "מְאוֹד",
+   "translit": "me'od",
+   "en": "very, quite",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf4ddbbd1",
+   "he": "נָבוֹן",
+   "translit": "navon",
+   "en": "intelligent, smart",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h4b54285f",
+   "he": "אִי",
+   "translit": "i",
+   "en": "not",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h5966880b",
+   "he": "אָנוֹנִימִי",
+   "translit": "anonimi",
+   "en": "Anonymous",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb0dd4a48",
+   "he": "רָאשִׁי",
+   "translit": "rashi",
+   "en": "main, principal",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h87b6d6e6",
+   "he": "נָבוֹךְ",
+   "translit": "navokh",
+   "en": "embarrassed",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h9c148cb7",
+   "he": "מֶמְשַׁלְתִּי",
+   "translit": "memshalti",
+   "en": "governmental",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h37c091c7",
+   "he": "אִישִׁית",
+   "translit": "ishit",
+   "en": "personally",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc4c07eab",
+   "he": "מֵת",
+   "translit": "met",
+   "en": "Dead, having died",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-body-health-3",
+ "title": "Body and health 3",
+ "theme": "body-health",
+ "level": "B1",
+ "track": "israel",
+ "pack": "body-health-3",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "hf7d0fb03",
+   "he": "זִיֵּן",
+   "translit": "ziyen",
+   "en": "to arm (with weapons)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hbfda1ccb",
+   "he": "חָזָק",
+   "translit": "chazak",
+   "en": "Strong (healthy, capable of producing much physical force)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "heb9ba19c",
+   "he": "עָקֵב",
+   "translit": "akev",
+   "en": "a heel",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc5862de6",
+   "he": "אֶצְבַּע",
+   "translit": "etzba",
+   "en": "finger",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h06f78f5d",
+   "he": "בֶּטֶן",
+   "translit": "beten",
+   "en": "abdomen, belly",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hce6c1385",
+   "he": "פַּרְצוּף",
+   "translit": "partzuf",
+   "en": "face, visage, countenance",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h9b95c3c0",
+   "he": "עֶצֶב",
+   "translit": "etzev",
+   "en": "pain, sorrow",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8df78048",
+   "he": "פָּצַע",
+   "translit": "patza",
+   "en": "to wound",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h862e0a3d",
+   "he": "הִזִּיק",
+   "translit": "hizik",
+   "en": "to damage, to do damage, to hurt",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h7100639d",
+   "he": "צַוָּאר",
+   "translit": "tzavar",
+   "en": "neck",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h16c8a08a",
+   "he": "רַקָּה",
+   "translit": "rakah",
+   "en": "temple",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h94d003ae",
+   "he": "קְלִפָּה",
+   "translit": "kelipah",
+   "en": "peel, skin, bark, shell (as of a nut or fruit)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-religion-prayer-3",
+ "title": "Prayer and Jewish life 3",
+ "theme": "religion-prayer",
+ "level": "B1",
+ "track": "both",
+ "pack": "religion-prayer-3",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "hf1ccd0e6",
+   "he": "אֱלוֹהַּ",
+   "translit": "eloha",
+   "en": "a god",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h5cae87cc",
+   "he": "בָּטַח",
+   "translit": "batach",
+   "en": "to rely on, to have faith in, to depend on",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf95173f3",
+   "he": "מִשְׁפָּט",
+   "translit": "mishpat",
+   "en": "a trial",
+   "kind": "word",
+   "audioId": "r29-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h44d68d1e",
+   "he": "חֹק",
+   "translit": "chok",
+   "en": "law, statute",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h2035ee1a",
+   "he": "חָטָא",
+   "translit": "chata",
+   "en": "to sin",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h66ce9ca4",
+   "he": "מַזָּל",
+   "translit": "mazal",
+   "en": "astrological sign",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h19702c85",
+   "he": "מִקְוֶה",
+   "translit": "mikveh",
+   "en": "mikveh",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h7475c7c8",
+   "he": "פִּקֵּד",
+   "translit": "piked",
+   "en": "to command, to oversee",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h967f68e9",
+   "he": "צְדָקָה",
+   "translit": "tzedakah",
+   "en": "charity",
+   "kind": "word",
+   "audioId": "r24-w5",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h56ac9aad",
+   "he": "חֵלֶק",
+   "translit": "chelek",
+   "en": "part, piece, portion, fraction",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h89486b6f",
+   "he": "קׇרְבָּן",
+   "translit": "korban",
+   "en": "a ritual sacrifice, as of an animal",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h39244df3",
+   "he": "קָדוֹשׁ",
+   "translit": "kadosh",
+   "en": "holy",
+   "kind": "word",
+   "audioId": "r24-w4",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

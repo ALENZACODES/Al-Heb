@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-science-ideas-1",
+ "title": "Science and ideas 1",
+ "theme": "science-ideas",
+ "level": "A2",
+ "track": "both",
+ "pack": "science-ideas-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h0e071b5c",
+   "he": "יֻדַּע",
+   "translit": "yuda",
+   "en": "to be informed",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hcd826bec",
+   "he": "שָׁר",
+   "translit": "shar",
+   "en": "to sing",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hac94b307",
+   "he": "שָׂדֶה",
+   "translit": "sadeh",
+   "en": "field (wide space for crops)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h1c9d2f5e",
+   "he": "יָחִיד",
+   "translit": "yachid",
+   "en": "individual",
+   "kind": "word",
+   "audioId": "yigdal-w12",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h95c52e9c",
+   "he": "מִלָּה",
+   "translit": "milah",
+   "en": "word",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h7e5cc0c5",
+   "he": "עֲבוֹדָה",
+   "translit": "avodah",
+   "en": "worship, service",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h6c2b8669",
+   "he": "גּוּף",
+   "translit": "guf",
+   "en": "a body",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he527093f",
+   "he": "חֹם",
+   "translit": "chom",
+   "en": "Heat, warmth",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h2111adc7",
+   "he": "לֹג",
+   "translit": "log",
+   "en": "a unit of liquid measurement",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h5cc95d6e",
+   "he": "נְחֹשֶׁת",
+   "translit": "nechoshet",
+   "en": "copper",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h812fda2f",
+   "he": "מֻשָּׂג",
+   "translit": "musag",
+   "en": "a concept",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hab527ee7",
+   "he": "יֶתֶר",
+   "translit": "yeter",
+   "en": "remainder, rest, residue",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-survival-shop-1",
+ "title": "Survival: shop",
+ "theme": "clothes-shopping",
+ "level": "A1",
+ "track": "israel",
+ "pack": "survival-shop-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "pbd251204",
+   "he": "זֶה זוֹל",
+   "translit": "zeh zol",
+   "en": "it's cheap",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p1f9370f2",
+   "he": "זֶה יָקָר",
+   "translit": "zeh yakar",
+   "en": "it's expensive",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p24719256",
+   "he": "מָה הַמִּדָּה?",
+   "translit": "mah hamidah?",
+   "en": "what size?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pc05559a1",
+   "he": "יֵשׁ הַנָּחָה?",
+   "translit": "yesh hanachah?",
+   "en": "is there a discount?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "peb5b5757",
+   "he": "מָה הַמְּחִיר?",
+   "translit": "mah hamechir?",
+   "en": "what is the price?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p8ddf11d8",
+   "he": "אֶקַּח אֶת זֶה",
+   "translit": "ekach et zeh",
+   "en": "I'll take this",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p9e16b6d4",
+   "he": "יֵשׁ לָכֶם ...?",
+   "translit": "yesh lakhem ...?",
+   "en": "do you have ...?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p895603a0",
+   "he": "אֶפְשָׁר לִמְדֹּד?",
+   "translit": "efshar limdod?",
+   "en": "can I try it on?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p4ce4f970",
+   "he": "אֶפְשָׁר שַׂקִּית?",
+   "translit": "efshar sakit?",
+   "en": "can I have a bag?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pe163cc18",
+   "he": "אֶפְשָׁר קַבָּלָה?",
+   "translit": "efshar kabalah?",
+   "en": "can I have a receipt?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p41740a5e",
+   "he": "כַּרְטִיס אַשְׁרַאי",
+   "translit": "kartis ashray",
+   "en": "credit card",
+   "kind": "phrase",
+   "audioId": "il09-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p7db1a1b9",
+   "he": "כַּמָּה זֶה עוֹלֶה?",
+   "translit": "kamah zeh oleh?",
+   "en": "how much does it cost?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

@@ -3,6 +3,9 @@
 // Everything here is derived from data other lanes already write; nothing is estimated that was not measured.
 import { BASE_LETTER_IDS, FINAL_LETTER_IDS, MARK_IDS } from '../corpus/normalize.js';
 import { projectStreak } from '../curriculum/streak.js';
+import { timedReadGate } from '../timedread/gate.js';
+import { cleanState as cleanTimedReads, median, cleanWpm, accuracy as readAccuracy } from '../timedread/model.js';
+import { coverage as siddurCoverageOf, FOLLOW_IDS, ORDER_IDS } from '../service/model.js';
 import { gradeLines, gradeWords, knownSet, entriesDecodable, wordsDecodable, unlockers, missingIn } from './decode.js';
 
 export const ALL_LETTERS = [...BASE_LETTER_IDS, ...FINAL_LETTER_IDS];
@@ -17,6 +20,7 @@ export const KEYS = Object.freeze({
   completed: 'curriculum.progress', cards: 'srs.cards', vocab: 'srs.vocab', streak: 'streak', traced: 'letters.progress',
   pairs: 'curriculum.pairs', checkpoints: 'curriculum.checkpoints', loanwords: 'curriculum.loanwords', ladder: 'curriculum.ladder',
   misses: 'pron.misses', state: 'progress.state',
+  timedRead: 'timedread.v1', servicePrefs: 'service.prefs',
 });
 
 const obj = (v) => (v && typeof v === 'object' && !Array.isArray(v) ? v : {});
@@ -40,6 +44,8 @@ export function readSnapshot(store) {
     loanwords: obj(g(KEYS.loanwords, {})),
     ladder: obj(g(KEYS.ladder, {})),
     misses: Array.isArray(g(KEYS.misses, [])) ? g(KEYS.misses, []) : [],
+    timedRead: g(KEYS.timedRead, null), // raw 'timedread.v1'; the timed-read lane cleans it (cleanState) wherever it is read
+    servicePrefs: obj(g(KEYS.servicePrefs, {})),
     rest: Array.isArray(state.rest) ? state.rest.filter((d) => typeof d === 'string') : [],
     goal: state.goal && typeof state.goal === 'object' ? state.goal : null,
   };
@@ -284,6 +290,7 @@ export function evaluate(g, c) {
     case 'loanwords': return num(Object.values(c.s.loanwords).filter((x) => x && x.knew).length, g.count);
     case 'vocabBand': return num(c.vocab.bands.find((b) => b.band === g.band)?.started ?? 0, g.started);
     case 'phrases': return num(c.read.phraseFull.length, g.count);
+    case 'timedRead': return timedReadGate(g, c.timedRead); // self-reported reads under 'timedread.v1'; one text, never mixed
     case 'unmeasured': return { done: false, have: 0, need: 1, measurable: false };
     default: return { done: false, have: 0, need: 1, measurable: false };
   }
@@ -298,8 +305,54 @@ export function makeContext(s, d, now = Date.now()) {
     cp: checkpointStats(s.checkpoints), spot: spotItStats(s.pairs),
     srs: srsMaturity(s.cards, settings.matureStabilityDays),
     vocab: vocabBands(s.vocab, { startedMin: settings.vocabBandStartedMin, matureDays: settings.matureStabilityDays }),
+    timedRead: s.timedRead ?? null,
     now,
   };
+}
+
+// ---------- timed reads (self-reported) ----------------------------------------------------------------------
+
+/**
+ * Summary of the learner's stored timed reads: how many, how many texts, and the median clean wpm / accuracy of the
+ * text with the most reads (last `window` reads of that one text; texts are never mixed). Self-reported numbers.
+ * @param {any} raw value of 'timedread.v1' @returns {{reads:number, texts:number, best:null|{textId:string, reads:number, medianWpm:number, medianAccuracy:number}}}
+ */
+export function timedReadSummary(raw, window = 5) {
+  const reads = cleanTimedReads(raw).reads;
+  const by = new Map();
+  for (const r of reads) (by.get(r.textId) || by.set(r.textId, []).get(r.textId)).push(r);
+  let best = null;
+  for (const [textId, rs] of by) {
+    if (best && rs.length <= best.reads) continue;
+    const last = rs.slice(-window);
+    best = { textId, reads: rs.length, medianWpm: Math.round(/** @type {number} */ (median(last.map(cleanWpm)))), medianAccuracy: /** @type {number} */ (median(last.map(readAccuracy))) };
+  }
+  return { reads: reads.length, texts: by.size, best };
+}
+
+// ---------- siddur coverage (service lane) -------------------------------------------------------------------
+
+/** The service the learner follows: their saved choice on the Service screen, else Shabbat morning (the Service screen's own default). */
+export function preferredService(s) {
+  const o = s.servicePrefs && s.servicePrefs.order;
+  return FOLLOW_IDS.includes(o) ? o : 'shabbat-morning';
+}
+
+/**
+ * Siddur coverage for one service, computed by the service lane's coverage() over Progress's graded lines.
+ * Returns null when the orders file is absent. pct is rounded down (never claims more than is true).
+ * @param {Snapshot} s @param {{orders?:any}} d @param {{read:{lines:any[], known:Set<string>}}} c @param {string} [orderId]
+ */
+export function siddurCoverage(s, d, c, orderId = preferredService(s)) {
+  const order = d.orders && d.orders.orders ? d.orders.orders[orderId] : null;
+  if (!order) return null;
+  const cv = siddurCoverageOf(order, c.read.lines, c.read.known);
+  return { orderId, title: order.title, pct: cv.pct, full: cv.full, lines: cv.lines, almost: cv.almost, wordsPct: cv.wordsPct, textsFull: cv.textsFull, texts: cv.texts, gaps: cv.gaps };
+}
+
+/** Coverage for every service that has an order, in ORDER_IDS order. */
+export function siddurCoverageAll(s, d, c) {
+  return ORDER_IDS.map((id) => siddurCoverage(s, d, c, id)).filter((x) => x !== null);
 }
 
 /** Path for one goal: milestones in order with done / current ("next") / later. */
@@ -321,8 +374,8 @@ export function evaluateBelts(d, c) {
   return d.belts.belts.map((b) => {
     const ids = expandRange(b.lessons);
     const gates = [];
-    if (ids.length) { const r = evaluate({ kind: 'lessonRange', ids }, c); gates.push({ label: `Lessons ${b.lessons}`, ...r }); }
-    for (const g of d.gates.gates[b.id] || []) gates.push({ label: g.label, ...evaluate(g, c) });
+    if (ids.length) { const r = evaluate({ kind: 'lessonRange', ids }, c); gates.push({ label: `Lessons ${b.lessons}`, kind: 'lessonRange', ...r }); }
+    for (const g of d.gates.gates[b.id] || []) gates.push({ label: g.label, kind: g.kind, ...evaluate(g, c) });
     const measurable = gates.filter((g) => g.measurable), unmeasured = gates.filter((g) => !g.measurable);
     const allMet = measurable.length > 0 && measurable.every((g) => g.done);
     const state = allMet && unmeasured.length === 0 ? 'earned' : allMet ? 'ready' : !currentSeen ? 'current' : 'later';

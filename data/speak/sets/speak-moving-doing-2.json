@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-moving-doing-2",
+ "title": "Moving and doing 2",
+ "theme": "moving-doing",
+ "level": "B1",
+ "track": "both",
+ "pack": "moving-doing-2",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "hc81786d2",
+   "he": "קָרָה",
+   "translit": "karah",
+   "en": "to happen, occur, go on",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h4f9b4058",
+   "he": "לָקַח",
+   "translit": "lakach",
+   "en": "to take (grasp with the hands)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h320463c0",
+   "he": "חָזַר",
+   "translit": "chazar",
+   "en": "to return",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h3fbb59c8",
+   "he": "קָדַם",
+   "translit": "kadam",
+   "en": "to precede, to come before",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h5b39e0f1",
+   "he": "יָצָא",
+   "translit": "yatza",
+   "en": "to come out, come away",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h391bfe81",
+   "he": "הִסְתַּדֵּר",
+   "translit": "histader",
+   "en": "to turn out OK",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h45cd33c0",
+   "he": "דָּחַף",
+   "translit": "dachaf",
+   "en": "to push",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h471ccb9d",
+   "he": "נָעַל",
+   "translit": "na'al",
+   "en": "to put on",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb3f84633",
+   "he": "נִגַּשׁ",
+   "translit": "nigash",
+   "en": "to approach, come up to",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hd8f5e57a",
+   "he": "גָּלָה",
+   "translit": "galah",
+   "en": "to go into exile",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h450ac9b7",
+   "he": "הֶעֱמִיד",
+   "translit": "he'emid",
+   "en": "to erect, stand, raise",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he2797b77",
+   "he": "סֵרֵב",
+   "translit": "serev",
+   "en": "to decline, refuse, turn down (such as an offer)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

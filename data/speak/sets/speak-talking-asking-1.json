@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-talking-asking-1",
+ "title": "Talking and asking",
+ "theme": "talking-asking",
+ "level": "A2",
+ "track": "israel",
+ "pack": "talking-asking-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h28a30a60",
+   "he": "אָמַר",
+   "translit": "amar",
+   "en": "to say, tell",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h5e4080cc",
+   "he": "דִּבֵּר",
+   "translit": "diber",
+   "en": "to speak (say words)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h1be0a47a",
+   "he": "סִפֵּר",
+   "translit": "siper",
+   "en": "to tell (a story), to narrate, to recount",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8ff6123b",
+   "he": "קָרָא",
+   "translit": "kara",
+   "en": "to read",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0902557b",
+   "he": "הִגִּיד",
+   "translit": "higid",
+   "en": "to tell, say",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb5f05782",
+   "he": "בִּקֵּשׁ",
+   "translit": "bikesh",
+   "en": "to ask for, request",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8ea4d152",
+   "he": "לַעֲזָאזֵל",
+   "translit": "la'azazel",
+   "en": "Damn!, Hell!",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h95c54aba",
+   "he": "אוֹקֵי",
+   "translit": "okei",
+   "en": "OK, okay",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h129dd70a",
+   "he": "שָׁאַל",
+   "translit": "sha'al",
+   "en": "to ask (a question), to query",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h6670eb72",
+   "he": "עָנָה",
+   "translit": "anah",
+   "en": "to answer, to reply",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha42ef4a8",
+   "he": "הִתְקַשֵּׁר",
+   "translit": "hitkasher",
+   "en": "to phone, call someone on a telephone",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h5d30bc42",
+   "he": "כָּתַב",
+   "translit": "katav",
+   "en": "to write",
+   "kind": "word",
+   "audioId": "r30-w2",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-food-drink-2",
+ "title": "Food and drink 2",
+ "theme": "food-drink",
+ "level": "B2",
+ "track": "israel",
+ "pack": "food-drink-2",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h9790d078",
+   "he": "מָתוֹק",
+   "translit": "matok",
+   "en": "Sweet",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h84bdc684",
+   "he": "הִשְׁקָה",
+   "translit": "hishkah",
+   "en": "to give drink to, to water",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h9974efdc",
+   "he": "בֵּיצָה",
+   "translit": "beitzah",
+   "en": "egg",
+   "kind": "word",
+   "audioId": "il07-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he078c9e6",
+   "he": "מַשְׁקֶה",
+   "translit": "mashkeh",
+   "en": "drink (a beverage)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb8e5e66d",
+   "he": "טָעַם",
+   "translit": "ta'am",
+   "en": "to taste",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hd22f2e01",
+   "he": "בַּקְבּוּק",
+   "translit": "bakbuk",
+   "en": "bottle",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h08e0fe5b",
+   "he": "זַיִת",
+   "translit": "zayit",
+   "en": "olive (species)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h23ada4e1",
+   "he": "פִּצָּה",
+   "translit": "pitzah",
+   "en": "to compensate",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h99bdff0e",
+   "he": "טָעִים",
+   "translit": "ta'im",
+   "en": "tasty (having a pleasant taste)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h1f02450d",
+   "he": "מִיץ",
+   "translit": "mitz",
+   "en": "juice",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h6cc8112a",
+   "he": "שׁוֹקוֹלָד",
+   "translit": "shokolad",
+   "en": "chocolate",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hbdf967d7",
+   "he": "חֲטִיף",
+   "translit": "chatif",
+   "en": "snack",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

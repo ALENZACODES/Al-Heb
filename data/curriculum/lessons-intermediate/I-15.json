@@ -1,0 +1,397 @@
+{
+ "id": "I-15",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Directions: streets, corners and 'how do I get to'",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "אֵיךְ מַגִּיעִים לְ...?",
+   "en": "how do you get to ...?",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "eikh magi'im le...?"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "pa066d2d5"
+   }
+  },
+  {
+   "he": "יָשָׁר",
+   "en": "straight ahead",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yashar"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h38dc1dcd"
+   }
+  },
+  {
+   "he": "שְׂמֹאלָה",
+   "en": "to the left",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "semolah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p0381993d"
+   }
+  },
+  {
+   "he": "יָמִינָה",
+   "en": "to the right",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yaminah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p87accb3a"
+   }
+  },
+  {
+   "he": "פְּנֵה",
+   "en": "turn (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "peneh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "פְּנֵה"
+    ]
+   }
+  },
+  {
+   "he": "לֵךְ",
+   "en": "go (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lekh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "לֵךְ"
+    ]
+   }
+  },
+  {
+   "he": "עַל יַד",
+   "en": "next to",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "al yad"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "pc72a6f5c"
+   }
+  },
+  {
+   "he": "מוּל",
+   "en": "opposite",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mul"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h68953136"
+   }
+  },
+  {
+   "he": "בַּפִּנָּה",
+   "en": "on the corner",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "bapinah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p12e5b5a3"
+   }
+  },
+  {
+   "he": "רְחוֹב",
+   "en": "street",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "rechov"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h18b1e15c"
+   }
+  },
+  {
+   "he": "בֵּית חוֹלִים",
+   "en": "hospital",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "beit cholim"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בֵּית",
+     "חוֹלִים"
+    ]
+   }
+  },
+  {
+   "he": "גֶּשֶׁר",
+   "en": "bridge",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "gesher"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h4d892f7a"
+   }
+  },
+  {
+   "he": "זֶה רָחוֹק?",
+   "en": "is it far?",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "zeh rachok?"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p18cee479"
+   }
+  },
+  {
+   "he": "זֶה קָרוֹב",
+   "en": "it's near",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "zeh karov"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p575f23eb"
+   }
+  },
+  {
+   "he": "אֲנִי אָבוּד",
+   "en": "I'm lost (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ani avud"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p5acc4988"
+   }
+  },
+  {
+   "he": "אֲנִי אֲבוּדָה",
+   "en": "I'm lost (f)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ani avudah"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "אֲנִי",
+     "אֲבוּדָה"
+    ]
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Ask how to get somewhere and whether it is far",
+  "Follow 'straight, left, right, next to, opposite'",
+  "Say you are lost and ask to be shown on the map"
+ ],
+ "estMinutes": 30,
+ "prerequisites": [
+  "I-11"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-15-e01",
+   "type": "produce",
+   "en": "how do you get to the station?",
+   "options": [
+    "אֵיךְ מַגִּיעִים לַתַּחֲנָה?",
+    "אֵיפֹה הַתַּחֲנָה?",
+    "זֶה רָחוֹק?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-15-e02",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "יָשָׁר",
+     "en": "straight ahead"
+    },
+    {
+     "he": "שְׂמֹאלָה",
+     "en": "to the left"
+    },
+    {
+     "he": "יָמִינָה",
+     "en": "to the right"
+    },
+    {
+     "he": "עַל יַד",
+     "en": "next to"
+    },
+    {
+     "he": "מוּל",
+     "en": "opposite"
+    }
+   ]
+  },
+  {
+   "id": "I-15-e03",
+   "type": "order",
+   "he": "לֵךְ יָשָׁר, אַחַר כָּךְ פְּנֵה שְׂמֹאלָה",
+   "en": "Go straight, then turn left"
+  },
+  {
+   "id": "I-15-e04",
+   "type": "gender",
+   "m": "לֵךְ יָשָׁר",
+   "f": "לְכִי יָשָׁר",
+   "en": "Go straight"
+  },
+  {
+   "id": "I-15-e05",
+   "type": "gender",
+   "m": "פְּנֵה יָמִינָה",
+   "f": "פְּנִי יָמִינָה",
+   "en": "Turn right"
+  },
+  {
+   "id": "I-15-e06",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "סְלִיחָה, אֵיךְ מַגִּיעִים לַתַּחֲנָה הַמֶּרְכָּזִית?",
+     "en": "Excuse me, how do I get to the central station?"
+    },
+    {
+     "speaker": "b",
+     "he": "לֵךְ יָשָׁר, פְּנֵה יָמִינָה בַּפִּנָּה. זֶה עַל יַד בֵּית הַמִּרְקַחַת.",
+     "en": "Go straight, turn right on the corner. It's next to the pharmacy."
+    },
+    {
+     "speaker": "a",
+     "he": "זֶה רָחוֹק?",
+     "en": "Is it far?"
+    },
+    {
+     "speaker": "b",
+     "he": "לֹא, זֶה קָרוֹב.",
+     "en": "No, it's near."
+    }
+   ],
+   "task": "Say the asker's lines, then repeat the directions."
+  },
+  {
+   "id": "I-15-e07",
+   "type": "produce",
+   "en": "it's near",
+   "options": [
+    "זֶה קָרוֹב",
+    "זֶה רָחוֹק",
+    "זֶה כָּאן"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-15-e08",
+   "type": "produce",
+   "en": "on the corner",
+   "options": [
+    "בַּפִּנָּה",
+    "מוּל",
+    "עַל יַד"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-15-e09",
+   "type": "recall",
+   "he": "גֶּשֶׁר",
+   "en": "bridge"
+  },
+  {
+   "id": "I-15-e10",
+   "type": "recall",
+   "he": "רְחוֹב",
+   "en": "street"
+  },
+  {
+   "id": "I-15-e11",
+   "type": "gender",
+   "m": "אֲנִי אָבוּד",
+   "f": "אֲנִי אֲבוּדָה",
+   "en": "I'm lost"
+  },
+  {
+   "id": "I-15-e12",
+   "type": "respond",
+   "cue": "Ask to be shown the way on a map.",
+   "answer": {
+    "he": "אֶפְשָׁר לְהַרְאוֹת לִי עַל הַמַּפָּה?",
+    "en": "Can you show me on the map?"
+   }
+  },
+  {
+   "id": "I-15-e13",
+   "type": "respond",
+   "cue": "Ask how long it takes.",
+   "answer": {
+    "he": "כַּמָּה זְמַן זֶה לוֹקֵחַ?",
+    "en": "How long does it take?"
+   }
+  },
+  {
+   "id": "I-15-e14",
+   "type": "produce",
+   "en": "five minutes",
+   "options": [
+    "חָמֵשׁ דַּקּוֹת",
+    "עֶשֶׂר דַּקּוֹת",
+    "חֲצִי שָׁעָה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-15-e15",
+   "type": "order",
+   "he": "זֶה מוּל הַתַּחֲנָה, עַל יַד בֵּית הַחוֹלִים",
+   "en": "It's opposite the station, next to the hospital"
+  }
+ ],
+ "note": "'on foot' (ba-regel), 'traffic light' with a prefix and 'the bridge' with the article have no pointed token in the sources and are left out."
+}

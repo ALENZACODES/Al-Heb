@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-religion-prayer-1",
+ "title": "Prayer and Jewish life 1",
+ "theme": "religion-prayer",
+ "level": "A2",
+ "track": "both",
+ "pack": "religion-prayer-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h50cf3648",
+   "he": "יוֹם",
+   "translit": "yom",
+   "en": "Day",
+   "kind": "word",
+   "audioId": "kiddush-shabbat-eve-w22",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h6ad3ddd8",
+   "he": "סֵדֶר",
+   "translit": "seder",
+   "en": "Order, the state of being well-arranged, in the sense of putting things in order",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb5913147",
+   "he": "נֶפֶשׁ",
+   "translit": "nefesh",
+   "en": "a soul, psyche",
+   "kind": "word",
+   "audioId": "haftarah-after-w54",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "habcfc77f",
+   "he": "חֹר",
+   "translit": "chor",
+   "en": "hole",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h9f3ab68a",
+   "he": "חַיָּב",
+   "translit": "chayav",
+   "en": "obligated, required, bound, must",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h3c9f9b9b",
+   "he": "אֹהֶל",
+   "translit": "ohel",
+   "en": "a collective term for all that covers a dead body or that a dead body covers",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h9dabc184",
+   "he": "בֵּרֵךְ",
+   "translit": "berekh",
+   "en": "to bless",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hddb7aae9",
+   "he": "אָדוֹן",
+   "translit": "adon",
+   "en": "lord",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h3b32dc48",
+   "he": "גּוֹי",
+   "translit": "goy",
+   "en": "gentile (a non-Jewish person), goy",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h6b853dd5",
+   "he": "אֱלֹהִים",
+   "translit": "elohim",
+   "en": "a god",
+   "kind": "word",
+   "audioId": "r21-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha4794f20",
+   "he": "כּוֹהֵן",
+   "translit": "kohen",
+   "en": "a Jewish priest, a cohen or kohen",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb9aef784",
+   "he": "אֵל",
+   "translit": "el",
+   "en": "god",
+   "kind": "word",
+   "audioId": "r08-w1",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

@@ -1,6 +1,6 @@
-# Timed read: spec for the missing measurement (not built)
+# Timed read: spec for the missing measurement
 
-Status: **not built, not measured.** The app has no timed-read feature and no speech recognition, so Progress shows no reading speed and no belt requires one (belts.json: `measurement` "Not yet automated: needs ASR from another lane or self-report").
+Status: **built as self-report, not measured by the app.** The timed-read lane (`#/timedread`, `src/timedread/`, key `timedread.v1`) implements steps 1 to 5 below with these differences from the first draft: stumbled words are tapped, not counted; the key is `timedread.v1`, not `progress.reads`. Step 6 is wired: `src/progress/data.js` merges `data/timedread/gates.json` into the grey and black belts and `evaluate()` resolves kind `timedRead` through `src/timedread/gate.js`. There is still no speech recognition, so nothing about reading is measured except elapsed time; every wpm number on the Progress screen is labelled self-reported. The rest of this file is the original spec, kept for the record.
 
 ## Smallest honest version (self-report, no ASR)
 1. Pick a registry text the learner can fully decode (`readableNow().linesFull`), at least 20 words.

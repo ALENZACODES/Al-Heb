@@ -1,0 +1,144 @@
+/**
+ * First-run flow (#/welcome; the route line in src/shell/router.js points at src/shell/onboarding.view.js, which re-exports this).
+ * DRAFT, untested with learners.
+ *  Stage 1  "Can you already read the Hebrew letters?" -> saved once under store key onboarding.v1; never asked again by itself.
+ *  Stage 2  denomination (onboarding.v1 only) + pronunciation (existing `congregation` setting) with one-line explanations.
+ *  Stage 3  "Your week": a 7-day card built from the placement result (placement.v1, read only) and minutes per day.
+ * A return visit shows the plan with "Change my starting point", which is the only way the Stage 1 question comes back.
+ * ctx used: settings.get/set(patch), store.get/set, route, t, hasRoute. Test extras: ctx.onboardingData {plans, lessons}, ctx.clock.now.
+ */
+import { h, heSpan } from '../shell/ui.js';
+import { loadOnboardingData } from './loader.js';
+import { STORE_KEY, PLACEMENT_KEY, LETTERS_QUESTION, LETTER_ANSWERS, DENOMINATIONS, PRONUNCIATIONS, SETTINGS_KEY_PRONUNCIATION,
+  normalize, answerLetters, setDenomination, setMinutes, setStep, suggestedPronunciation, answerById, placementLesson, buildPlan } from './model.js';
+
+export const DRAFT_NOTE = 'Draft: this plan has not been tried by a learner. Minutes are targets, not measurements. Every link goes to an existing screen.';
+
+export function mount(root, ctx) {
+  const { settings, store } = ctx;
+  const t = (k, fb) => { try { const v = ctx.t?.(k); return v && v !== k ? v : fb; } catch { return fb; } };
+  let alive = true, D = null, loadError = null;
+  let rec = normalize(store.get(STORE_KEY));
+  let step = rec ? rec.step : 'letters';
+  const nowISO = () => new Date(ctx?.clock?.now ? ctx.clock.now() : Date.now()).toISOString();
+  const h1 = h('h1', { id: 'view-title', tabindex: '-1' }, t('welcome.title', 'Welcome to ALEF'), ' ', heSpan('אלף'));
+  const body = h('div', { class: 'ob-body' });
+  const status = h('p', { role: 'status', 'aria-live': 'polite', class: 'muted', id: 'ob-status' });
+  root.replaceChildren(h('article', { class: 'card onboarding' }, h1, body, status));
+  const say = (m) => { status.textContent = m; };
+  const focus = (n) => { try { n?.focus?.({ preventScroll: true }); } catch { try { n?.focus?.(); } catch { /* ignore */ } } };
+  const save = () => { try { store.set(STORE_KEY, rec); } catch { /* best effort */ } };
+  const go = (next) => { step = next; if (rec) { rec = setStep(rec, next); save(); } render(); focus(h1); };
+  const startHref = () => '#' + (rec?.start || '/firstday');
+  const startTitle = () => (rec ? answerById(rec.letters)?.start === '/placement' ? 'Placement check' : 'Your first 10 minutes' : '');
+
+  const radio = (name, value, label, desc, checked, onchange) => {
+    const id = `ob-${name}-${value}`;
+    return h('label', { class: 'opt opt-block', for: id },
+      h('input', { type: 'radio', name, id, value, checked: checked ? true : null, onchange: () => onchange(value) }),
+      h('span', {}, h('strong', {}, label), desc ? h('span', { class: 'muted block' }, desc) : null));
+  };
+  const fieldset = (legend, intro, ...kids) => h('fieldset', { class: 'field' }, h('legend', {}, legend), intro ? h('p', { class: 'muted' }, intro) : null, ...kids);
+  const skipNow = () => h('p', { class: 'muted' }, h('a', { href: startHref(), id: 'ob-skip-now' }, `Skip the rest and start now: ${startTitle()}`));
+
+  // ---- Stage 1 ----
+  function renderLetters() {
+    let picked = null;
+    const fs = fieldset(LETTERS_QUESTION, rec ? 'This replaces your saved starting point.' : 'One question. It is asked only once; you can change it later from this screen.',
+      ...LETTER_ANSWERS.map((a) => radio('letters', a.id, a.label, a.desc, false, (v) => { picked = v; })));
+    const form = h('form', { id: 'ob-form-letters', onsubmit: (e) => { e.preventDefault(); submit(); } }, fs,
+      h('div', { class: 'row' }, h('button', { type: 'submit', class: 'btn', id: 'ob-letters-continue' }, 'Continue'),
+        rec ? h('button', { type: 'button', class: 'btn secondary', onclick: () => go('plan') }, 'Keep my current starting point') : null));
+    const submit = () => {
+      if (!picked) { say('Choose one answer to continue.'); focus(form.querySelector('#ob-letters-none')); return; }
+      rec = answerLetters(rec, picked, nowISO());
+      save();
+      try { settings.set({ onboarded: true }); } catch { /* settings may be read-only in tests */ }
+      say(`Saved. Your starting point is ${answerById(picked).start === '/placement' ? 'the placement check' : 'your first 10 minutes'}.`);
+      go('congregation');
+    };
+    body.replaceChildren(form, h('p', { class: 'muted' }, 'Your answer is saved only on this device. ', h('a', { href: '#/how' }, 'How this works'), '.'));
+  }
+
+  // ---- Stage 2 ----
+  function renderCongregation() {
+    let denom = rec.denomination, pron = settings.get(SETTINGS_KEY_PRONUNCIATION) || 'sephardi', pronPicked = false;
+    const pronInputs = {};
+    const setPronRadio = (v) => { for (const [id, input] of Object.entries(pronInputs)) { const on = id === v; input.checked = on; if (on) input.setAttribute('checked', ''); else input.removeAttribute?.('checked'); } };
+    const onDenom = (v) => {
+      denom = v;
+      const s = suggestedPronunciation(v);
+      if (s && !pronPicked) { pron = s; setPronRadio(s); say(`Suggested pronunciation: ${PRONUNCIATIONS.find((p) => p.id === s).label}. Change it below if your synagogue differs.`); }
+      else if (!s) say(DENOMINATIONS.find((d) => d.id === v).changes);
+    };
+    const denomFs = fieldset('Which synagogue stream do you belong to? (optional)', 'Each line says what the choice changes in the app.',
+      ...DENOMINATIONS.map((d) => radio('denomination', d.id, d.label, d.changes, denom === d.id, onDenom)));
+    const pronFs = fieldset('Which pronunciation does your synagogue use?', 'This is the "Prayer pronunciation" setting; you can change it any time in Settings or on the Sounds screen.',
+      ...PRONUNCIATIONS.map((p) => { const l = radio('pron', p.id, p.label, p.changes, pron === p.id, (v) => { pron = v; pronPicked = true; }); pronInputs[p.id] = l.querySelector(`#ob-pron-${p.id}`) || l.children?.[0]; return l; }));
+    const apply = () => {
+      rec = setDenomination(rec, denom); save();
+      const rejected = settings.set({ [SETTINGS_KEY_PRONUNCIATION]: pron });
+      if (Array.isArray(rejected) && rejected.length) say('The pronunciation could not be saved; pick it again in Settings.');
+      else say(`Saved: ${PRONUNCIATIONS.find((p) => p.id === pron)?.label || pron} pronunciation.`);
+      go('minutes');
+    };
+    const form = h('form', { id: 'ob-form-congregation', onsubmit: (e) => { e.preventDefault(); apply(); } }, denomFs, pronFs,
+      h('div', { class: 'row' }, h('button', { type: 'submit', class: 'btn', id: 'ob-congregation-continue' }, 'Continue'),
+        h('button', { type: 'button', class: 'btn secondary', id: 'ob-congregation-skip', onclick: () => { say('Skipped. Pronunciation stays as it is.'); go('minutes'); } }, 'Skip')));
+    body.replaceChildren(h('h2', {}, 'Your synagogue'), form, skipNow());
+  }
+
+  // ---- Stage 3: minutes ----
+  function renderMinutes() {
+    if (!D) { body.replaceChildren(h('p', {}, loadError ? 'The plan data could not be loaded. You can still start.' : 'Loading...'), skipNow()); return; }
+    const opts = D.plans.minutesOptions;
+    let mins = rec.minutesPerDay || D.plans.defaultMinutes;
+    const fs = fieldset('How many minutes a day?', 'Your week is planned around this. Lessons longer than it are split over several days.',
+      ...opts.map((m) => radio('minutes', String(m), `${m} minutes`, '', mins === m, (v) => { mins = Number(v); })));
+    const form = h('form', { id: 'ob-form-minutes', onsubmit: (e) => { e.preventDefault(); rec = setMinutes(rec, mins, D.plans); save(); say(`Planned for ${rec.minutesPerDay} minutes a day.`); go('plan'); } }, fs,
+      h('div', { class: 'row' }, h('button', { type: 'submit', class: 'btn', id: 'ob-minutes-continue' }, 'Show my week')));
+    body.replaceChildren(h('h2', {}, 'Your time'), form, skipNow());
+  }
+
+  // ---- Stage 3: plan card ----
+  function renderPlan() {
+    const placement = store.get(PLACEMENT_KEY);
+    const plan = D ? buildPlan({ record: rec, placement, lessons: D.lessons, plans: D.plans, hasRoute: ctx.hasRoute }) : null;
+    const placed = D ? placementLesson(placement, D.lessons.filter((l) => l.track === 'read')) : null;
+    const primaryHref = placed ? '#/learn?lesson=' + encodeURIComponent(placed) : startHref();
+    const primaryLabel = placed ? `Start lesson ${placed}` : `Start: ${startTitle()}`;
+    const dayNode = (d) => h('li', {}, h('strong', {}, d.label), h('span', { class: 'muted' }, ` (${d.minutes} min)`),
+      h('ul', {}, ...d.items.map((i) => h('li', {}, h('a', { href: i.href }, i.title), i.kind === 'lesson' && i.parts > 1 ? ` (part ${i.part} of ${i.parts})` : '', h('span', { class: 'muted' }, ` ${i.minutes} min`)))));
+    const card = plan
+      ? h('section', { class: 'card ob-plan', 'aria-labelledby': 'ob-plan-h' },
+        h('h2', { id: 'ob-plan-h' }, 'Your week'),
+        h('p', { class: 'draft-flag', role: 'note' }, DRAFT_NOTE),
+        h('p', {}, `${plan.minutesPerDay} minutes a day, about ${plan.totalMinutes} minutes this week. ${plan.note}`),
+        h('ol', { class: 'ob-days' }, ...plan.days.map(dayNode)))
+      : h('p', { role: 'note' }, loadError ? 'The plan data could not be loaded, so there is no week card yet. Your starting point still works.' : 'Building your week...');
+    const changeStart = h('button', { type: 'button', class: 'btn secondary', id: 'ob-change-start', onclick: () => { say('Answer the question again to change your starting point.'); go('letters'); } }, 'Change my starting point');
+    body.replaceChildren(
+      h('p', {}, `Starting point: ${startTitle()}. ${rec.denomination ? DENOMINATIONS.find((d) => d.id === rec.denomination).label + '; ' : ''}${PRONUNCIATIONS.find((p) => p.id === settings.get(SETTINGS_KEY_PRONUNCIATION))?.label || 'Sephardi'} pronunciation.`),
+      card,
+      h('div', { class: 'row' }, h('a', { class: 'btn', id: 'ob-start', href: primaryHref }, primaryLabel)),
+      h('div', { class: 'row' }, changeStart,
+        h('button', { type: 'button', class: 'btn secondary', id: 'ob-change-congregation', onclick: () => go('congregation') }, 'Change synagogue or pronunciation'),
+        h('button', { type: 'button', class: 'btn secondary', id: 'ob-change-minutes', onclick: () => go('minutes') }, 'Change minutes a day')),
+      h('p', { class: 'muted' }, 'Saved only on this device. Settings has the full list of choices.'));
+  }
+
+  function render() {
+    if (!rec) step = 'letters';
+    if (step === 'letters') renderLetters();
+    else if (step === 'congregation') renderCongregation();
+    else if (step === 'minutes') renderMinutes();
+    else renderPlan();
+  }
+  render();
+  (async () => {
+    try { D = await (ctx?.onboardingData ?? loadOnboardingData()); if (!D?.plans || !Array.isArray(D?.lessons)) throw new Error('plan data missing'); } catch (e) { D = null; loadError = e; }
+    if (!alive) return;
+    if (step === 'minutes' || step === 'plan') render(); // re-render with data; focus is left where it is
+  })();
+  return () => { alive = false; };
+}

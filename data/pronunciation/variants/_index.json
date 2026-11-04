@@ -1,0 +1,54 @@
+{
+ "schemaVersion": 1,
+ "rulesVersion": 1,
+ "proofread": false,
+ "status": "rule-generated from the niqqud text; not verified by a native speaker; no audio exists",
+ "rules": "docs/pronunciation/VARIANTS.md",
+ "counts": {
+  "records": 6632,
+  "vocab": 6299,
+  "corpus": 333,
+  "review": 401
+ },
+ "flags": {
+  "alef-vav-mater-repaired": 71,
+  "aramaic": 8,
+  "ashk-final-kamatz-reduced": 1220,
+  "divine-name": 61,
+  "he-patach-no-mappiq": 1,
+  "ipa-differs-from-words.json": 136,
+  "kamatz-katan-before-chataf": 2,
+  "kamatz-katan-list": 35,
+  "non-hebrew-token": 8,
+  "possible-segolate": 240,
+  "shva-heuristic-L3": 176,
+  "unpointed": 2,
+  "vav-cholam-consonantal": 8,
+  "vav-dagesh-consonantal": 57,
+  "words-ipa-colloquial-shva-drop": 178,
+  "words-ipa-syllable-count-differs": 17
+ },
+ "shards": [
+  {
+   "file": "_vocab-1.json",
+   "count": 2000
+  },
+  {
+   "file": "_vocab-2.json",
+   "count": 2000
+  },
+  {
+   "file": "_vocab-3.json",
+   "count": 2000
+  },
+  {
+   "file": "_vocab-4.json",
+   "count": 299
+  },
+  {
+   "file": "_corpus-1.json",
+   "count": 333
+  }
+ ],
+ "review": "_review.csv"
+}

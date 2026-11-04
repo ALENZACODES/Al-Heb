@@ -1,0 +1,407 @@
+{
+ "id": "I-25",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Small talk: where you're from, how long you've been here, keeping in touch",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "מַה שִּׁמְךָ?",
+   "en": "what's your name?",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mah shimkha?"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p13070783"
+   }
+  },
+  {
+   "he": "קוֹרְאִים לִי",
+   "en": "my name is (they call me)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kore'im li"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "pa41bbdd2"
+   }
+  },
+  {
+   "he": "מֵאֵיפֹה אַתָּה?",
+   "en": "where are you from? (to m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "me'eifoh atah?"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p6db860f8"
+   }
+  },
+  {
+   "he": "אֲנִי מִקָּנָדָה",
+   "en": "I'm from Canada",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ani mikanadah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p381cd549"
+   }
+  },
+  {
+   "he": "כַּמָּה זְמַן",
+   "en": "how long",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kamah zeman"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "כַּמָּה",
+     "זְמַן"
+    ]
+   }
+  },
+  {
+   "he": "בָּאָרֶץ",
+   "en": "in the country (Israel)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ba'aretz"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בָּאָרֶץ"
+    ]
+   }
+  },
+  {
+   "he": "שָׁבוּעַ",
+   "en": "a week",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shavu'a"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h92151b55"
+   }
+  },
+  {
+   "he": "חֹדֶשׁ",
+   "en": "a month",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chodesh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h168cf034"
+   }
+  },
+  {
+   "he": "לוֹמֵד",
+   "en": "studying (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lomed"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h10798813#forms.present"
+   }
+  },
+  {
+   "he": "עִבְרִית",
+   "en": "Hebrew",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ivrit"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h2796e605"
+   }
+  },
+  {
+   "he": "מָה אַתָּה עוֹשֶׂה?",
+   "en": "what do you do?",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mah atah oseh?"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p98dde51c"
+   }
+  },
+  {
+   "he": "מָה נִשְׁמָע?",
+   "en": "what's up?",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mah nishma?"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p8d8700f1"
+   }
+  },
+  {
+   "he": "הַכֹּל בְּסֵדֶר",
+   "en": "everything is OK",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hakol beseder"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p666197ac"
+   }
+  },
+  {
+   "he": "נָעִים מְאֹד",
+   "en": "nice to meet you",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "na'im me'od"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p9028d38d"
+   }
+  },
+  {
+   "he": "לְהִתְרָאוֹת",
+   "en": "see you",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lehitra'ot"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hfa69f51c#forms.infinitive"
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Introduce yourself and say where you are from and how long you have been here",
+  "Ask what someone does and say you are learning Hebrew",
+  "End the conversation and keep in touch"
+ ],
+ "estMinutes": 25,
+ "prerequisites": [
+  "I-19"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-25-e01",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "שָׁלוֹם, מַה שִּׁמְךָ?",
+     "en": "Hello, what's your name?"
+    },
+    {
+     "speaker": "b",
+     "he": "קוֹרְאִים לִי דָּוִד. וְאַתָּה?",
+     "en": "My name is David. And you?"
+    },
+    {
+     "speaker": "a",
+     "he": "קוֹרְאִים לִי מֹשֶׁה. נָעִים מְאֹד.",
+     "en": "My name is Moshe. Nice to meet you."
+    }
+   ],
+   "task": "Introduce yourself with your own name."
+  },
+  {
+   "id": "I-25-e02",
+   "type": "gender",
+   "m": "מֵאֵיפֹה אַתָּה?",
+   "f": "מֵאֵיפֹה אַתְּ?",
+   "en": "Where are you from?"
+  },
+  {
+   "id": "I-25-e03",
+   "type": "produce",
+   "en": "I'm from Canada",
+   "options": [
+    "אֲנִי מִקָּנָדָה",
+    "אֲנִי תַּיָּר",
+    "אֲנִי לוֹמֵד עִבְרִית"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-25-e04",
+   "type": "gender",
+   "m": "כַּמָּה זְמַן אַתָּה בָּאָרֶץ?",
+   "f": "כַּמָּה זְמַן אַתְּ בָּאָרֶץ?",
+   "en": "How long have you been in Israel?"
+  },
+  {
+   "id": "I-25-e05",
+   "type": "produce",
+   "en": "three months",
+   "options": [
+    "שְׁלוֹשָׁה חֳדָשִׁים",
+    "שָׁבוּעַ",
+    "חֲצִי שָׁנָה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-25-e06",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "שָׁבוּעַ",
+     "en": "a week"
+    },
+    {
+     "he": "חֹדֶשׁ",
+     "en": "a month"
+    },
+    {
+     "he": "שָׁנָה",
+     "en": "a year"
+    },
+    {
+     "he": "חֲצִי שָׁנָה",
+     "en": "half a year"
+    }
+   ]
+  },
+  {
+   "id": "I-25-e07",
+   "type": "order",
+   "he": "אֲנִי לוֹמֵד עִבְרִית",
+   "en": "I'm learning Hebrew"
+  },
+  {
+   "id": "I-25-e08",
+   "type": "gender",
+   "m": "מָה אַתָּה עוֹשֶׂה?",
+   "f": "מָה אַתְּ עוֹשָׂה?",
+   "en": "What do you do?"
+  },
+  {
+   "id": "I-25-e09",
+   "type": "respond",
+   "cue": "Say it is your first time in Israel.",
+   "answer": {
+    "he": "זֹאת הַפַּעַם הָרִאשׁוֹנָה שֶׁלִּי בְּיִשְׂרָאֵל",
+    "en": "It's my first time in Israel"
+   }
+  },
+  {
+   "id": "I-25-e10",
+   "type": "register",
+   "he": "מָה נִשְׁמָע?",
+   "en": "what's up?",
+   "answer": "neutral",
+   "options": [
+    "formal",
+    "neutral",
+    "casual",
+    "slang"
+   ]
+  },
+  {
+   "id": "I-25-e11",
+   "type": "register",
+   "he": "מָה קוֹרֶה?",
+   "en": "what's happening?",
+   "answer": "slang",
+   "options": [
+    "formal",
+    "neutral",
+    "casual",
+    "slang"
+   ]
+  },
+  {
+   "id": "I-25-e12",
+   "type": "produce",
+   "en": "everything is OK",
+   "options": [
+    "הַכֹּל בְּסֵדֶר",
+    "לֹא רַע",
+    "כָּכָה כָּכָה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-25-e13",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "מָה נִשְׁמָע?",
+     "en": "What's up?"
+    },
+    {
+     "speaker": "b",
+     "he": "הַכֹּל בְּסֵדֶר, תּוֹדָה. וְאַתָּה?",
+     "en": "All fine, thanks. And you?"
+    },
+    {
+     "speaker": "a",
+     "he": "לֹא רַע.",
+     "en": "Not bad."
+    }
+   ],
+   "task": "Answer 'what's up' two different ways."
+  },
+  {
+   "id": "I-25-e14",
+   "type": "produce",
+   "en": "do you have family here?",
+   "options": [
+    "יֵשׁ לְךָ מִשְׁפָּחָה כָּאן?",
+    "יֵשׁ לְךָ רַב-קַו?",
+    "יֵשׁ לְךָ מְעִיל?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-25-e15",
+   "type": "respond",
+   "cue": "End the conversation warmly.",
+   "answer": {
+    "he": "נָעִים מְאֹד, לְהִתְרָאוֹת!",
+    "en": "Nice to meet you, see you!"
+   }
+  },
+  {
+   "id": "I-25-e16",
+   "type": "recall",
+   "he": "אֶתְגַּעְגֵּעַ אֵלֶיךָ",
+   "en": "I'll miss you"
+  }
+ ],
+ "note": "'David' and 'Moshe' are names from the source files. 'let's keep in touch' has no pointed token in the sources."
+}

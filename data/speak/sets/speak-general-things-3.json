@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-general-things-3",
+ "title": "More everyday nouns 3",
+ "theme": "general-things",
+ "level": "B2",
+ "track": "israel",
+ "pack": "general-things-3",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "hcdfd36ba",
+   "he": "לַהַב",
+   "translit": "lahav",
+   "en": "blade",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8ddcb25f",
+   "he": "אִכָּר",
+   "translit": "ikar",
+   "en": "farmer, husbandman",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8f0deb0a",
+   "he": "יוֹן",
+   "translit": "yon",
+   "en": "ion",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hde878aab",
+   "he": "לֶהָבָה",
+   "translit": "lehavah",
+   "en": "flame",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hfcd86a18",
+   "he": "הַב",
+   "translit": "hav",
+   "en": "woof",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0d0ce04b",
+   "he": "אוֹן",
+   "translit": "on",
+   "en": "sexual potency",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "haa6c9a82",
+   "he": "הוֹנָאָה",
+   "translit": "ona'ah",
+   "en": "Fraud, deception",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h49b4e517",
+   "he": "יָרִיב",
+   "translit": "yariv",
+   "en": "opponent, rival, antagonist",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h4b859c7f",
+   "he": "שְׁלִישִׁיָּה",
+   "translit": "shelishiyah",
+   "en": "triplet, trio",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hcdd0c393",
+   "he": "אַשְׁלָיָה",
+   "translit": "ashlayah",
+   "en": "an illusion",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hd289e0fe",
+   "he": "אִימֵיְל",
+   "translit": "imeyl",
+   "en": "e-mail",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h570b2cac",
+   "he": "שָׁלִישׁ",
+   "translit": "shalish",
+   "en": "a lieutenant",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

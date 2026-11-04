@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-general-things-4",
+ "title": "More everyday nouns 4",
+ "theme": "general-things",
+ "level": "A1",
+ "track": "both",
+ "pack": "general-things-4",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h1414a3a2",
+   "he": "עֶבֶד",
+   "translit": "eved",
+   "en": "a slave, a serf",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h51ed2ee5",
+   "he": "חַיִּים",
+   "translit": "chayim",
+   "en": "life",
+   "kind": "word",
+   "audioId": "il23-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha39cf3c9",
+   "he": "עוֹלָם",
+   "translit": "olam",
+   "en": "world",
+   "kind": "word",
+   "audioId": "r19-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h1301ecc3",
+   "he": "יֶלֶד",
+   "translit": "yeled",
+   "en": "a",
+   "kind": "word",
+   "audioId": "il14-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8f6944f1",
+   "he": "רֶגַע",
+   "translit": "rega",
+   "en": "a moment",
+   "kind": "word",
+   "audioId": "politeness-20",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h36fae7b2",
+   "he": "אֶדֶן",
+   "translit": "eden",
+   "en": "base, pedestal, socket",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h215beb3e",
+   "he": "כֶּסֶף",
+   "translit": "kesef",
+   "en": "silver",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h2d1e4a74",
+   "he": "סוֹף",
+   "translit": "sof",
+   "en": "an end, a finish",
+   "kind": "word",
+   "audioId": "yigdal-w17",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hcfccb5de",
+   "he": "בְּעָיָה",
+   "translit": "be'ayah",
+   "en": "problem",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h2b39dcf2",
+   "he": "בַּד",
+   "translit": "bad",
+   "en": "fabric, cloth, linen",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc7113076",
+   "he": "דַּבָּר",
+   "translit": "dabar",
+   "en": "leader",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb4ccc0e9",
+   "he": "עֵדָה",
+   "translit": "edah",
+   "en": "a group (as in ethnic group)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

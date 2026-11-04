@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-nature-animals-1",
+ "title": "Nature and animals 1",
+ "theme": "nature-animals",
+ "level": "A2",
+ "track": "both",
+ "pack": "nature-animals-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h4692cd32",
+   "he": "יָם",
+   "translit": "yam",
+   "en": "sea",
+   "kind": "word",
+   "audioId": "anchor-mem-final",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf5a50e5d",
+   "he": "אִי",
+   "translit": "i",
+   "en": "an island",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc91c0d80",
+   "he": "הַר",
+   "translit": "har",
+   "en": "mountain (mass of earth and rock)",
+   "kind": "word",
+   "audioId": "anchor-he",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf1da5ea6",
+   "he": "אֵשׁ",
+   "translit": "esh",
+   "en": "fire",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hfb819565",
+   "he": "רוּחַ",
+   "translit": "rucha",
+   "en": "Wind, a wind",
+   "kind": "word",
+   "audioId": "r17-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he53d1d1d",
+   "he": "אֶבֶן",
+   "translit": "even",
+   "en": "stone",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h2d90f840",
+   "he": "אֲדָמָה",
+   "translit": "adamah",
+   "en": "earth, soil, land",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8aa6404d",
+   "he": "אַיִל",
+   "translit": "ayil",
+   "en": "ram",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h80d6f3f0",
+   "he": "פָּרָה",
+   "translit": "parah",
+   "en": "cow, heifer",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h770abeb5",
+   "he": "עָנָן",
+   "translit": "anan",
+   "en": "cloud",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he028e6f0",
+   "he": "אַרְיֵה",
+   "translit": "aryeh",
+   "en": "lion",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h6296d0d9",
+   "he": "סוּס",
+   "translit": "sus",
+   "en": "horse",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

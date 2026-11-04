@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-society-work-law-1",
+ "title": "Work, money and society 1",
+ "theme": "society-work-law",
+ "level": "A2",
+ "track": "both",
+ "pack": "society-work-law-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "hc6c367ff",
+   "he": "עָבַד",
+   "translit": "avad",
+   "en": "to work, labor",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h2280b9b6",
+   "he": "חָבֵר",
+   "translit": "chaver",
+   "en": "a (male) friend",
+   "kind": "word",
+   "audioId": "small-talk-18-m",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h131877e3",
+   "he": "הִכִּיר",
+   "translit": "hikir",
+   "en": "to recognize (a country or legal entity)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he945f31c",
+   "he": "חֶרֶב",
+   "translit": "cherev",
+   "en": "sword",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h58023e1f",
+   "he": "חָל",
+   "translit": "chal",
+   "en": "to apply (of a law, method, etc.)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf8c8316a",
+   "he": "שָׁלוֹם",
+   "translit": "shalom",
+   "en": "peace",
+   "kind": "word",
+   "audioId": "r03-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h1202f1e7",
+   "he": "גָּרוּעַ",
+   "translit": "garu'a",
+   "en": "bad, of poor quality",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h16acb4dc",
+   "he": "אָרוֹן",
+   "translit": "aron",
+   "en": "cupboard, closet, cabinet, or similar piece of furniture",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he19222ad",
+   "he": "יָמִין",
+   "translit": "yamin",
+   "en": "right",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hd3bcf136",
+   "he": "מַס",
+   "translit": "mas",
+   "en": "tax",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h32580d06",
+   "he": "נִלְחַם",
+   "translit": "nilcham",
+   "en": "to fight, wage war",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8e236dac",
+   "he": "מִלְחָמָה",
+   "translit": "milchamah",
+   "en": "warfare, war",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

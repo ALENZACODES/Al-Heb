@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-describing-words-1",
+ "title": "Describing words 1",
+ "theme": "describing-words",
+ "level": "A2",
+ "track": "both",
+ "pack": "describing-words-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h8e3e6f50",
+   "he": "לֹא",
+   "translit": "lo",
+   "en": "not",
+   "kind": "word",
+   "audioId": "r07-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf63de22c",
+   "he": "כֵּן",
+   "translit": "ken",
+   "en": "yes",
+   "kind": "word",
+   "audioId": "il01-w5",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha18100a8",
+   "he": "יֵשׁ",
+   "translit": "yesh",
+   "en": "there is or are",
+   "kind": "word",
+   "audioId": "il08-w5",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h64c48ca3",
+   "he": "כָּאן",
+   "translit": "kan",
+   "en": "here, at this place",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h9d36c656",
+   "he": "אַל",
+   "translit": "al",
+   "en": "not, do not",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h352b83f7",
+   "he": "כֹּה",
+   "translit": "koh",
+   "en": "thus, in this way",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hd0a91fd4",
+   "he": "מַמָּשׁ",
+   "translit": "mamash",
+   "en": "really, very, truly",
+   "kind": "word",
+   "audioId": "fillers-07",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h1be64280",
+   "he": "נָא",
+   "translit": "na",
+   "en": "please, if you please",
+   "kind": "word",
+   "audioId": "num-12-13-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h31e27ee8",
+   "he": "רַב",
+   "translit": "rav",
+   "en": "many, much",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf2bba104",
+   "he": "שָׁם",
+   "translit": "sham",
+   "en": "there",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h84e47f20",
+   "he": "אֵיךְ",
+   "translit": "eikh",
+   "en": "how",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h40e5a2de",
+   "he": "אַיֵּה",
+   "translit": "ayeh",
+   "en": "where",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

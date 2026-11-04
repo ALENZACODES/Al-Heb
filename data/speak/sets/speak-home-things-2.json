@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-home-things-2",
+ "title": "Home and things 2",
+ "theme": "home-things",
+ "level": "B2",
+ "track": "israel",
+ "pack": "home-things-2",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "hadfa84bd",
+   "he": "קַל",
+   "translit": "kal",
+   "en": "light (of low weight)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h3e9837b3",
+   "he": "זָרַח",
+   "translit": "zarach",
+   "en": "to shine (emit light)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h9fc295a8",
+   "he": "קֻפָּה",
+   "translit": "kupah",
+   "en": "money box",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h11b6d758",
+   "he": "מִטָּה",
+   "translit": "mitah",
+   "en": "a bed",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h89e2dc0a",
+   "he": "צָפָה",
+   "translit": "tzafah",
+   "en": "to watch",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h1c0ffa13",
+   "he": "קִיר",
+   "translit": "kir",
+   "en": "wall",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hfcbe3a9c",
+   "he": "קוֹמָה",
+   "translit": "komah",
+   "en": "story, floor",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h192ef310",
+   "he": "רִצְפָּה",
+   "translit": "ritzpah",
+   "en": "floor",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h2d2dc4db",
+   "he": "קֻפְסָה",
+   "translit": "kufsah",
+   "en": "a box or other container or receptacle for storage or transport",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8cc6fa49",
+   "he": "חֵפֶץ",
+   "translit": "chefetz",
+   "en": "object (thing)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf73dc598",
+   "he": "עֵט",
+   "translit": "et",
+   "en": "a pen",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h563600b3",
+   "he": "אַרְנָק",
+   "translit": "arnak",
+   "en": "a purse",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

@@ -1,0 +1,368 @@
+{
+ "id": "I-11",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Bus and train: tickets, platforms and getting off",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "אוֹטוֹבּוּס",
+   "en": "bus",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "otobus"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hf524a1ad"
+   }
+  },
+  {
+   "he": "רַכֶּבֶת",
+   "en": "train",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "rakevet"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p8ee06166"
+   }
+  },
+  {
+   "he": "תַּחֲנָה",
+   "en": "station, stop",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "tachanah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h447bb433"
+   }
+  },
+  {
+   "he": "כַּרְטִיס",
+   "en": "ticket, card",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kartis"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hd1f143bd"
+   }
+  },
+  {
+   "he": "רַב-קַו",
+   "en": "Rav-Kav (the transit card)",
+   "note": "composed from rav (multi) and kav (line), the card's name; not a single entry in the vocabulary file",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "rav-kav"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "רַב",
+     "קַו"
+    ]
+   }
+  },
+  {
+   "he": "רְצִיף",
+   "en": "platform",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "retzif"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hc11598b3"
+   }
+  },
+  {
+   "he": "נַהָג",
+   "en": "driver",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "nahag"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h2e5d7731"
+   }
+  },
+  {
+   "he": "הַתַּחֲנָה הַבָּאָה",
+   "en": "the next stop",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hatachanah haba'ah"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַתַּחֲנָה",
+     "הַבָּאָה"
+    ]
+   }
+  },
+  {
+   "he": "יוֹרֵד",
+   "en": "getting off (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yored"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h3f2d70f7#forms.present"
+   }
+  },
+  {
+   "he": "יוֹרֶדֶת",
+   "en": "getting off (f)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yoredet"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h185d60db#forms.feminine"
+   }
+  },
+  {
+   "he": "תָּפוּס",
+   "en": "taken (seat)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "tafus"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h8572110b"
+   }
+  },
+  {
+   "he": "פָּנוּי",
+   "en": "free (seat)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "panuy"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hf31190f0"
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Ask which bus goes somewhere and whether this is the right one",
+  "Buy or validate a ticket and ask for the platform",
+  "Say that you are getting off at the next stop"
+ ],
+ "estMinutes": 30,
+ "prerequisites": [
+  "il24"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-11-e01",
+   "type": "recall",
+   "he": "רַב-קַו",
+   "en": "Rav-Kav (the transit card)"
+  },
+  {
+   "id": "I-11-e02",
+   "type": "produce",
+   "en": "which bus goes to ...?",
+   "options": [
+    "אֵיזֶה אוֹטוֹבּוּס הוֹלֵךְ לְ...?",
+    "מָתַי הָרַכֶּבֶת הַבָּאָה?",
+    "אֵיפֹה תַּחֲנַת הָאוֹטוֹבּוּס?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-11-e03",
+   "type": "order",
+   "he": "הַאִם זֶה הָאוֹטוֹבּוּס לַתַּחֲנָה הַמֶּרְכָּזִית?",
+   "en": "Is this the bus to the central station?"
+  },
+  {
+   "id": "I-11-e04",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "סְלִיחָה, הַאִם זֶה הָאוֹטוֹבּוּס לַתַּחֲנָה הַמֶּרְכָּזִית?",
+     "en": "Excuse me, is this the bus to the central station?"
+    },
+    {
+     "speaker": "b",
+     "he": "כֵּן. יֵשׁ לְךָ רַב-קַו?",
+     "en": "Yes. Do you have a Rav-Kav?"
+    },
+    {
+     "speaker": "a",
+     "he": "כֵּן, יֵשׁ לִי.",
+     "en": "Yes, I have."
+    }
+   ],
+   "task": "Read the exchange, then say the passenger's lines with the English hidden."
+  },
+  {
+   "id": "I-11-e05",
+   "type": "gender",
+   "m": "יֵשׁ לְךָ רַב-קַו?",
+   "f": "יֵשׁ לָךְ רַב-קַו?",
+   "en": "Do you have a Rav-Kav?"
+  },
+  {
+   "id": "I-11-e06",
+   "type": "produce",
+   "en": "one ticket to ..., please",
+   "options": [
+    "כַּרְטִיס אֶחָד לְ..., בְּבַקָּשָׁה",
+    "אֶפְשָׁר קַבָּלָה?",
+    "כַּמָּה זֶה עוֹלֶה?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-11-e07",
+   "type": "respond",
+   "cue": "You are at the train station and want the next train.",
+   "answer": {
+    "he": "מָתַי הָרַכֶּבֶת הַבָּאָה?",
+    "en": "When is the next train?"
+   }
+  },
+  {
+   "id": "I-11-e08",
+   "type": "produce",
+   "en": "which platform?",
+   "options": [
+    "אֵיזֶה רְצִיף?",
+    "אֵיזֶה אוֹטוֹבּוּס?",
+    "אֵיפֹה הַתַּחֲנָה?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-11-e09",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "רְצִיף",
+     "en": "platform"
+    },
+    {
+     "he": "תַּחֲנָה",
+     "en": "station, stop"
+    },
+    {
+     "he": "נַהָג",
+     "en": "driver"
+    },
+    {
+     "he": "כַּרְטִיס",
+     "en": "ticket"
+    }
+   ]
+  },
+  {
+   "id": "I-11-e10",
+   "type": "gender",
+   "m": "אֲנִי יוֹרֵד כָּאן",
+   "f": "אֲנִי יוֹרֶדֶת כָּאן",
+   "en": "I am getting off here"
+  },
+  {
+   "id": "I-11-e11",
+   "type": "order",
+   "he": "הַתַּחֲנָה הַבָּאָה, אֲנִי יוֹרֵד",
+   "en": "The next stop, I am getting off"
+  },
+  {
+   "id": "I-11-e12",
+   "type": "respond",
+   "cue": "The bus is full. Ask whether a seat is taken.",
+   "answer": {
+    "he": "סְלִיחָה, זֶה תָּפוּס?",
+    "en": "Excuse me, is this taken?"
+   }
+  },
+  {
+   "id": "I-11-e13",
+   "type": "produce",
+   "en": "it's free (not taken)",
+   "options": [
+    "זֶה פָּנוּי",
+    "זֶה תָּפוּס",
+    "זֶה רָחוֹק"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-11-e14",
+   "type": "respond",
+   "cue": "Ask how long the ride takes.",
+   "answer": {
+    "he": "כַּמָּה זְמַן זֶה לוֹקֵחַ?",
+    "en": "How long does it take?"
+   }
+  },
+  {
+   "id": "I-11-e15",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "נַהָג, עֲצֹר כָּאן, בְּבַקָּשָׁה.",
+     "en": "Driver, stop here, please."
+    },
+    {
+     "speaker": "b",
+     "he": "בְּסֵדֶר.",
+     "en": "OK."
+    },
+    {
+     "speaker": "a",
+     "he": "תּוֹדָה, יוֹם נָעִים!",
+     "en": "Thanks, have a nice day!"
+    }
+   ],
+   "task": "Say the passenger's two lines."
+  },
+  {
+   "id": "I-11-e16",
+   "type": "register",
+   "he": "הַאִם זֶה הָאוֹטוֹבּוּס לְ...?",
+   "en": "is this the bus to ...?",
+   "answer": "formal",
+   "options": [
+    "formal",
+    "neutral",
+    "casual",
+    "slang"
+   ]
+  }
+ ],
+ "note": "'Rav-Kav' and 'platform' are from the vocabulary file; there is no source line for 'validate' or 'to load the card', so those are not taught."
+}

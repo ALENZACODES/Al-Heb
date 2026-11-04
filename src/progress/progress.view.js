@@ -1,9 +1,9 @@
 // ALEF Progress screen: what you can read now, today (streak, gentle goal, rest day), your path per goal, belts, weak spots.
-// Everything is computed offline from the store (see model.js). Nothing here is estimated: reading speed is not measured,
-// so it is not shown (see docs/progress/timed-read-spec.md).
+// Everything is computed offline from the store (see model.js). Nothing here is estimated: reading speed comes only from
+// the learner's own timed reads (#/timedread), which are self-reported, and is labelled so (see docs/progress/timed-read-spec.md).
 import { h, heSpan } from '../shell/ui.js';
 import { loadProgressData } from './data.js';
-import { readSnapshot, makeContext, evaluatePath, evaluateBelts, streakInfo, goalInfo, weakSpots, lessonCounts, dayKey, addDays, teacherLesson, niceId, ALL_LETTERS, ALL_SIGNS } from './model.js';
+import { readSnapshot, makeContext, evaluatePath, evaluateBelts, streakInfo, goalInfo, weakSpots, lessonCounts, dayKey, addDays, teacherLesson, niceId, siddurCoverage, timedReadSummary, ALL_LETTERS, ALL_SIGNS } from './model.js';
 import { setRestDay, setGoalTarget } from './store.js';
 
 const CSS = `
@@ -105,10 +105,17 @@ export async function mount(root, ctx) {
       const almost = pick(r.linesAlmost, 3);
       if (almost.length) readSec.append(h('h3', {}, 'Almost: one sign away'), h('ul', {}, ...almost.map((l) => { const les = teacherLesson(l.missing[0], d.lessons, d.gates.nameLesson); return h('li', {}, heSpan(l.he, 'he pg-he'), h('span', { class: 'small' }, `${l.title}: needs ${l.missing[0] === '@name' ? 'the Name (read as Adonai)' : niceId(l.missing[0])}. `), les ? h('a', { href: `#/learn?lesson=${les}` }, `Learn it in lesson ${les}`) : null); })));
       if (r.unlockers.length) { const u = r.unlockers[0]; readSec.append(h('p', {}, `Next best sign to learn: ${u.id === '@name' ? 'the Name' : niceId(u.id)}. It opens ${plural(u.lines, 'more line', 'more lines')}.`)); }
-      if (r.words.full.length) readSec.append(h('h3', {}, 'Words you can sound out'), h('ul', { class: 'pg-chips', 'aria-label': 'Sample readable words' }, ...r.words.full.slice(0, 12).map((w) => h('li', {}, heSpan(w.he)))), r.words.almost.length ? h('p', { class: 'small muted' }, `${plural(r.words.almost.length, 'more word', 'more words')} ${r.words.almost.length === 1 ? 'is' : 'are'} one sign away.`) : null);
+      if (r.words.full.length) {
+        readSec.append(h('h3', {}, 'Words you can sound out'), h('ul', { class: 'pg-chips', 'aria-label': 'Sample readable words' }, ...r.words.full.slice(0, 12).map((w) => h('li', {}, heSpan(w.he)))));
+        if (r.words.almost.length) readSec.append(h('p', { class: 'small muted' }, `${plural(r.words.almost.length, 'more word', 'more words')} ${r.words.almost.length === 1 ? 'is' : 'are'} one sign away.`));
+      }
       if (goals.includes('israel') || goalSetting === 'both') readSec.append(h('p', { class: 'small' }, `Phrasebook: ${r.phraseFull.length} of ${r.phraseTotal} phrases readable now, ${r.phraseAlmost.length} one sign away.`));
       if (!full.length && !almost.length) readSec.append(h('p', {}, 'No whole line yet. Keep going; the first lines open up after a few lessons.'));
     }
+    const sc = siddurCoverage(s, d, c);
+    if (sc) readSec.append(h('p', { class: 'pg-siddur', 'data-pct': String(sc.pct), 'data-order': sc.orderId },
+      `Siddur coverage: ${sc.pct}% of the phrases in ${sc.title} you can read`, ' ', h('a', { href: '#/service' }, 'See the service')),
+      h('p', { class: 'small muted' }, `${sc.full} of the ${sc.lines} lines ALEF holds for ${sc.title.toLowerCase()} use only letters and signs you have been taught. That says you can sound them out, not that you read them fluently; ${plural(sc.gaps, 'part', 'parts')} of a typical service ${sc.gaps === 1 ? 'is' : 'are'} not in ALEF yet.`));
     sections.push(readSec);
 
     // 2. today
@@ -129,12 +136,15 @@ export async function mount(root, ctx) {
 
     // 4. belts
     const belts = evaluateBelts(d, c);
-    const stateText = { earned: 'Earned', ready: 'Ready: only a timed read is left', current: 'Working on', later: 'Later' };
+    const stateText = { earned: 'Earned', ready: 'Ready: only a check the app cannot make is left', current: 'Working on', later: 'Later' };
+    const timedBelts = belts.filter((b) => b.gates.some((g) => g.kind === 'timedRead'));
     sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-belts' }, h('h2', { id: 'pg-h-belts' }, 'Belts'),
-      h('p', { class: 'small muted' }, 'ALEF\'s own belts (names borrowed, gates are ours). A belt means you have met every letter and sign in its texts and finished its lessons. Reading speed is not measured in the app yet, so no belt asks for it.'),
+      h('p', { class: 'small muted' }, `ALEF's own belts (names borrowed, gates are ours). A belt means you have met every letter and sign in its texts and finished its lessons.${timedBelts.length ? ` The ${timedBelts.map((b) => b.name).join(' and ')} belt${timedBelts.length === 1 ? '' : 's'} also ask for timed read-alouds, which you time and mark yourself (self-reported, not measured by the app).` : ''}`),
       ...belts.map((b) => h('details', { open: b.state === 'current' ? true : null }, h('summary', {}, `${b.name} belt: ${stateText[b.state]}`),
         h('p', { class: 'small' }, b.gate),
-        h('ul', {}, ...b.gates.map((g) => h('li', { class: 'small' }, `${g.label}: `, g.measurable ? (g.done ? 'met' : `${g.have} of ${g.need}`) : 'cannot be checked in the app yet')))))));
+        h('ul', {}, ...b.gates.map((g) => h('li', { class: 'small', 'data-gate': g.kind }, `${g.label}: `, g.measurable ? (g.done ? 'met' : `${g.have} of ${g.need}`) : 'cannot be checked in the app yet',
+          g.note && g.measurable ? h('span', { class: 'muted' }, ` (${g.note})`) : null,
+          g.kind === 'timedRead' && !g.done && has('timedread') ? h('span', {}, ' ', h('a', { href: '#/timedread' }, 'Time a read')) : null)))))));
 
     // 5. weak spots
     const weak = weakSpots(s, { max: d.milestones.settings.weakSpotsMax, has });
@@ -143,7 +153,7 @@ export async function mount(root, ctx) {
         : h('p', {}, 'Nothing stands out yet. Spot It, the look-alike check and review cards feed this list as you practise.')));
 
     // 6. numbers
-    const k = c.know, bands = c.vocab, sp = c.spot, cp = c.cp;
+    const k = c.know, bands = c.vocab, sp = c.spot, cp = c.cp, tr = timedReadSummary(c.timedRead);
     const row = (a, b) => [h('dt', {}, a), h('dd', {}, b)];
     sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-num' }, h('h2', { id: 'pg-h-num' }, 'Your numbers'),
       h('dl', {},
@@ -155,8 +165,9 @@ export async function mount(root, ctx) {
         ...row('Vocabulary band', bands.reached ? `working in the first ${bands.reached.toLocaleString('en-US')}` : bands.started ? 'just started' : 'not started'),
         ...row('Spot It clean rounds', sp.cleanAtLeast === null ? 'no rounds yet' : `at least ${Math.round(sp.cleanAtLeast * 100)}% of ${sp.trials}`),
         ...row('Look-alike checkpoints passed', cp.passed.length ? cp.passed.map((n) => `${n}`).join(', ') + ' of 1, 2, 3' : 'none yet'),
-        ...row('Reading speed', 'not measured')),
-      h('p', { class: 'small muted' }, 'Mature means a card the scheduler expects you to remember for 21 days or more. "Learning" is every other card you have started.')));
+        ...row('Timed reads (self-reported)', tr.reads ? `${plural(tr.reads, 'read', 'reads')} of ${plural(tr.texts, 'text', 'texts')}` : 'none yet'),
+        ...row('Reading speed (self-reported)', tr.best ? `about ${tr.best.medianWpm} clean words a minute on ${tr.best.textId}, median of your last reads` : 'not measured')),
+      h('p', { class: 'small muted' }, 'Mature means a card the scheduler expects you to remember for 21 days or more. "Learning" is every other card you have started. Reading speed comes only from timed reads you timed and marked yourself; the app measures nothing but the clock.')));
 
     sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-bk' }, h('h2', { id: 'pg-h-bk' }, 'Back up your progress'),
       h('p', {}, 'Everything on this screen, including rest days and your goal, is saved with your other data. Back it up or restore it from Settings.'),

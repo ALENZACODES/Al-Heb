@@ -3,6 +3,7 @@
 export function h(tag, attrs = {}, ...kids) {
   const e = document.createElement(tag);
   for (const [k, v] of Object.entries(attrs || {})) {
+    if (typeof v === 'boolean' && k.startsWith('aria-')) { e.setAttribute(k, String(v)); continue; } // aria-pressed={true} must be "true", not ""
     if (v == null || v === false) continue;
     if (k === 'class') e.className = v;
     else if (k.startsWith('on') && typeof v === 'function') e.addEventListener(k.slice(2), v);

@@ -71,6 +71,7 @@ export function mount(root, ctx = {}) {
     tab: 'trace', letterId: (ctx.params && typeof ctx.params.id === 'string' && ctx.params.id) || 'alef', script: (ctx.settings && (ctx.settings.script === 'cursive' || ctx.settings.script === 'print')) ? ctx.settings.script : 'print',
     strict: false, outline: true
   };
+  { const q = ctx.query && ctx.query.tab; if (q === 'drill') state.tab = 'drill'; else if (q === 'type' || q === 'typing') state.tab = 'typing'; }
   const progress0 = createProgress(ctx.store);
   let attempt = []; // raw learner strokes since the last reset, for the whole-shape fallback hint
   let tracer = null, keyHandler = null, unmounted = false, trainer = null;
@@ -109,6 +110,11 @@ export function mount(root, ctx = {}) {
   function render() {
     teardownInner();
     body.textContent = '';
+    if (ctx.params && typeof ctx.params.id === 'string' && ctx.params.id && !letterById(ctx.params.id)) {
+      body.appendChild(h('h2', { role: 'alert', text: t('trace.notFound', 'Letter not found') }));
+      body.appendChild(h('p', {}, t('trace.notFoundBody', 'There is no letter called "') + ctx.params.id + t('trace.notFoundBody2', '". ') , h('a', { class: 'btn', href: '#/letters' }, t('trace.backToLetters', 'Back to all letters'))));
+      return;
+    }
     const tabs = h('div', { class: 'tabs', role: 'tablist', 'aria-label': t('trace.tabs', 'Letter practice') },
       ...[['trace', t('trace.tabTrace', 'Trace')], ['drill', t('trace.tabDrill', 'Look-alikes')], ['typing', t('trace.tabTyping', 'Typing')]].map(([id, label]) =>
         h('button', { role: 'tab', 'aria-selected': state.tab === id, onclick: () => { state.tab = id; render(); } }, label)));

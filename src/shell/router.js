@@ -39,6 +39,8 @@ export const ROUTES = [
   { name: 'classtrackmode',     pattern: '/classtrack/:week/:mode',   module: '../classtrack/classtrack.view.js', title: 'Class track sheet', owner: 'lane10', paramQuery: { week: 'week', mode: 'mode' } },
   { name: 'morning', pattern: '/morning', module: '../morning/morning.view.js', title: 'Start your day with God', owner: 'morning', optional: true, quick: 'nav.morning' },
   { name: 'timedread', pattern: '/timedread', module: '../timedread/timedread.view.js', title: 'Timed read-aloud', owner: 'timedread', optional: true, quick: 'nav.timedread' },
+  { name: 'share', pattern: '/share', module: '../teacher/teacher.view.js', title: 'Share my progress', owner: 'teacher', optional: true, quick: 'nav.share', query: { mode: 'share' } },
+  { name: 'classsummary', pattern: '/classsummary', module: '../teacher/teacher.view.js', title: 'Class summary', owner: 'teacher', optional: true, quick: 'nav.classsummary', query: { mode: 'class' } },
   { name: 'gender',   pattern: '/gender',        module: '../curriculum/learn.view.js', title: 'Gender pairs',     owner: 'lane1', group: 'learn', quick: 'nav.gender',   query: { gender: 'pairs' }, needs: 'curriculum/gender.view.js' },
   { name: 'roles',    pattern: '/gender/roles',  module: '../curriculum/learn.view.js', title: 'Say it as me',     owner: 'lane1', group: 'learn', quick: 'nav.roles',    query: { gender: 'roles' }, needs: 'curriculum/gender.view.js' },
   { name: 'scaffold', pattern: '/scaffold',      module: '../curriculum/learn.view.js', title: 'Read without Latin', owner: 'lane1', group: 'learn', quick: 'nav.scaffold', query: { scaffold: '1' }, needs: 'curriculum/scaffold.view.js' },

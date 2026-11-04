@@ -78,3 +78,21 @@ th:first-child, td:first-child { min-inline-size: 7rem; }
 fieldset { min-inline-size: 0; max-inline-size: 100%; }
 main { overflow-x: clip; } /* a stray wide table (Sound gap) must not widen the page; tables inside .table-wrap still scroll */
 .tiles li { display: flex; } .tiles .tile { flex: 1; text-align: center; padding-inline: .4rem; }
+
+/* Lane 1 round 4 exercises (ladder, fade-out, gender pairs, scaffold) */
+.alef-draft-notice{font-size:.85rem;opacity:.8;border:1px dashed currentColor;border-radius:8px;padding:6px 10px;margin:8px 0}
+.alef-cardpair,.alef-chips,.alef-gap-options,.alef-voice-select{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0}
+.alef-card-opt,.alef-opt,.alef-chip,.alef-voice-choice{min-height:44px;min-width:44px;padding:8px 14px;border:2px solid currentColor;border-radius:10px;background:transparent;color:inherit;font:inherit;cursor:pointer}
+.alef-card-opt{font-size:1.8rem}
+.alef-correct{border-style:solid;outline:3px double currentColor}
+.alef-wrong{border-style:dashed;opacity:.7}
+.alef-chip[aria-pressed="true"],.alef-voice-choice[aria-checked="true"]{outline:3px solid currentColor;font-weight:700}
+.alef-levelbar{height:10px;border-radius:6px;background:rgba(127,127,127,.25);overflow:hidden}
+.alef-fade-line{font-size:1.6rem;line-height:2.1;direction:rtl}
+.alef-gap{display:inline-block;min-width:2.2em;border-bottom:3px solid currentColor;text-align:center}
+.alef-gap-open{outline:2px dashed currentColor}
+.alef-fade-blank{opacity:.5}
+.alef-pair{border:1px solid rgba(127,127,127,.5);border-radius:10px;padding:10px;margin:10px 0}
+.alef-diff{background:transparent;color:inherit;text-decoration:underline wavy;text-underline-offset:4px}
+.alef-latin{opacity:1}.alef-latin-1,.alef-translit-faint{opacity:.45}.alef-latin-2{opacity:.25}.alef-latin-3{visibility:hidden}
+.alef-noaudio{font-size:.85rem;opacity:.7}

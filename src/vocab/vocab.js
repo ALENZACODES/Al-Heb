@@ -33,3 +33,23 @@ export function nextNew(data, known, n = 10, maxTier = 5000) {
 export function cardFor(e) {
   return { id: e.id, front: e.pointed || e.lemma, back: e.gloss, needsPointing: e.needsPointing, tier: e.tier, topic: e.topic };
 }
+
+// ---- round 2 (quality pass): tags, function words, forms. All fields are optional on an entry.
+
+/** True for closed-class words (prepositions, particles, pronouns, conjunctions, auxiliaries ...). Their `topic` is a compatibility placeholder. */
+export const isFunction = (e) => Array.isArray(e.tags) && e.tags.includes('function');
+
+/** Entries carrying a tag such as 'function', 'prayer', 'jewish-life', 'biblical'. */
+export function byTag(data, tag, maxTier = 5000) {
+  return data.entries.filter((e) => e.tier <= maxTier && Array.isArray(e.tags) && e.tags.includes(tag));
+}
+
+/** Entries that teach a lemma: drops entries marked isForm (inflected/spelling forms kept only so ranks stay stable). */
+export function lemmasOnly(entries) {
+  return entries.filter((e) => !e.isForm);
+}
+
+/** Content words for topic browsing: everything except function words and forms. */
+export function contentWords(entries) {
+  return entries.filter((e) => !e.isForm && !isFunction(e));
+}

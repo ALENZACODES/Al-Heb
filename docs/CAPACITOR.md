@@ -18,3 +18,9 @@ US$25 once) come from the research and were not re-checked.
 
 ## Native touches to plan
 Local notifications and geolocation permission for the calendar module; file sharing for backup export; haptics optional.
+
+## Notes from the accessibility and PWA pass (2026-11-04; none of this was run in a Capacitor shell)
+- Progress lives in `localStorage` (`alef:` keys). In a Capacitor webview that storage belongs to the app and is deleted with it; iOS can also purge webview storage under pressure. The Settings backup (JSON download, confirm-before-replace restore, see docs/DEPLOY.md) is the only safety net today. In a wrapper, the Blob-download trick in `src/shell/settings.view.js` (anchor with `download`) is not expected to work in WKWebView; plan to write the file with `@capacitor/filesystem` and hand it to `@capacitor/share` (not built, not tested).
+- `navigator.storage.persist()` is requested at onboarding; whether a Capacitor webview honours it was not checked.
+- The service-worker update flow tested in Chromium (docs/DEPLOY.md) does not apply when the app files are bundled: updates then arrive as new app-store builds.
+- Accessibility in a wrapper is unverified: VoiceOver and TalkBack were not used on this app at all. The bottom tab bar uses `env(safe-area-inset-bottom)`; check it against the home indicator on a notched device.

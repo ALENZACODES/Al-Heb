@@ -1,0 +1,264 @@
+{
+ "when": "2026-11-04T03:50:01.008Z",
+ "results": [
+  {
+   "flow": "onboarding",
+   "name": "a first visit lands on the welcome screen",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "onboarding",
+   "name": "Tab reaches the first radio group",
+   "ok": true,
+   "gap": false,
+   "detail": "10 Tab presses"
+  },
+  {
+   "flow": "onboarding",
+   "name": "arrow keys change the radio choice",
+   "ok": true,
+   "gap": false,
+   "detail": "f,american,read -> m,american,read"
+  },
+  {
+   "flow": "onboarding",
+   "name": "Tab reaches \"Start learning\" (no trap)",
+   "ok": true,
+   "gap": false,
+   "detail": "3 more presses"
+  },
+  {
+   "flow": "onboarding",
+   "name": "Enter completes onboarding and leaves /welcome",
+   "ok": true,
+   "gap": false,
+   "detail": "#/learn"
+  },
+  {
+   "flow": "onboarding",
+   "name": "focus lands on the new page heading",
+   "ok": true,
+   "gap": false,
+   "detail": "{\"tag\":\"h1\",\"id\":\"view-title\",\"role\":null,\"type\":\"\",\"name\":\"Lessons\",\"inMain\":true,\"inNav\":false,\"pressed\":null}"
+  },
+  {
+   "flow": "trace",
+   "name": "Tab reaches the Animate (\"show me the stroke order\") button",
+   "ok": true,
+   "gap": false,
+   "detail": "45 presses"
+  },
+  {
+   "flow": "trace",
+   "name": "Enter on Animate starts the stroke-order animation (status text)",
+   "ok": true,
+   "gap": false,
+   "detail": "Watch the order..."
+  },
+  {
+   "flow": "trace",
+   "name": "Hint button is keyboard reachable",
+   "ok": true,
+   "gap": false,
+   "detail": "1 presses"
+  },
+  {
+   "flow": "trace",
+   "name": "a user who cannot draw can finish a letter with the keyboard (step-through / \"trace it for me\")",
+   "ok": false,
+   "gap": true,
+   "detail": "stage focusable=0; buttons: ץ | print | cursive | strict | outline | animate | hint | start over"
+  },
+  {
+   "flow": "trace",
+   "name": "Typing tab (physical keyboard) works as a recognition alternative",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "atlas quiz",
+   "name": "Tab reaches \"Quiz me\"",
+   "ok": true,
+   "gap": false,
+   "detail": "10 presses"
+  },
+  {
+   "flow": "atlas quiz",
+   "name": "Enter starts the quiz and shows a question",
+   "ok": true,
+   "gap": false,
+   "detail": "Find: Lamed /l/"
+  },
+  {
+   "flow": "atlas quiz",
+   "name": "focus stays on the Quiz/Stop button after it re-renders the screen",
+   "ok": false,
+   "gap": true,
+   "detail": "body Skip to main content ALEF אלף "
+  },
+  {
+   "flow": "atlas quiz",
+   "name": "focus stays inside the tile list after answering (no jump to page top)",
+   "ok": false,
+   "gap": true,
+   "detail": "Skip to main content ALEF אלף "
+  },
+  {
+   "flow": "atlas quiz",
+   "name": "Space on a tile answers and gives feedback in text",
+   "ok": true,
+   "gap": false,
+   "detail": "That is Alef. Score: 0"
+  },
+  {
+   "flow": "vocab review",
+   "name": "Tab reaches an \"Add\" button on a word",
+   "ok": true,
+   "gap": false,
+   "detail": "19 presses"
+  },
+  {
+   "flow": "vocab review",
+   "name": "Enter adds the word to reviews (stored)",
+   "ok": true,
+   "gap": false,
+   "detail": "1 card(s)"
+  },
+  {
+   "flow": "vocab review",
+   "name": "Tab reaches the Review mode button",
+   "ok": true,
+   "gap": false,
+   "detail": "2 presses"
+  },
+  {
+   "flow": "vocab review",
+   "name": "Tab reaches \"Show answer\"",
+   "ok": true,
+   "gap": false,
+   "detail": "1 presses"
+  },
+  {
+   "flow": "vocab review",
+   "name": "Show answer reveals the rating group, digit key 3 rates and the queue advances",
+   "ok": true,
+   "gap": false,
+   "detail": "done"
+  },
+  {
+   "flow": "reader",
+   "name": "Tab reaches the reader tabs",
+   "ok": true,
+   "gap": false,
+   "detail": "10 presses"
+  },
+  {
+   "flow": "reader",
+   "name": "arrow keys move between tabs (WAI-ARIA tabs pattern)",
+   "ok": true,
+   "gap": false,
+   "detail": "Torah service guide"
+  },
+  {
+   "flow": "reader",
+   "name": "Space toggles a letter-highlight chip (aria-pressed changes)",
+   "ok": true,
+   "gap": false,
+   "detail": "alef: false -> true"
+  },
+  {
+   "flow": "reader",
+   "name": "focus stays on the chip after it toggles (no re-render focus loss)",
+   "ok": true,
+   "gap": false,
+   "detail": "Alef, 4 times"
+  },
+  {
+   "flow": "reader",
+   "name": "Enter on \"Word 1: play\" works and the sound status bar reports what happened",
+   "ok": true,
+   "gap": false,
+   "detail": "No sound: the browser voice reported an error."
+  },
+  {
+   "flow": "calendar + More sheet",
+   "name": "phone shows the More button",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "calendar + More sheet",
+   "name": "Tab reaches More",
+   "ok": true,
+   "gap": false,
+   "detail": "8 presses"
+  },
+  {
+   "flow": "calendar + More sheet",
+   "name": "Enter opens the sheet (aria-expanded=true)",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "calendar + More sheet",
+   "name": "first Tab after More moves into the sheet",
+   "ok": true,
+   "gap": false,
+   "detail": "Scanסריקה"
+  },
+  {
+   "flow": "calendar + More sheet",
+   "name": "Escape closes the sheet and returns focus to More",
+   "ok": true,
+   "gap": false,
+   "detail": "{\"exp\":\"false\",\"focus\":\"more-btn\"}"
+  },
+  {
+   "flow": "calendar + More sheet",
+   "name": "tabbing forwards out of the open sheet closes it",
+   "ok": true,
+   "gap": false,
+   "detail": "6 presses to leave the nav"
+  },
+  {
+   "flow": "calendar + More sheet",
+   "name": "sheet reopens from More with Enter",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "calendar + More sheet",
+   "name": "Tab reaches the Calendar link in the sheet",
+   "ok": true,
+   "gap": false,
+   "detail": "2 presses"
+  },
+  {
+   "flow": "calendar + More sheet",
+   "name": "Enter opens the calendar, sheet closes, focus on its heading",
+   "ok": true,
+   "gap": false,
+   "detail": "{\"tag\":\"h1\",\"id\":\"alef-cal-h\",\"role\":null,\"type\":\"\",\"name\":\"Calendar\",\"inMain\":true,\"inNav\":false,\"pressed\":null}"
+  },
+  {
+   "flow": "calendar + More sheet",
+   "name": "calendar shows dates/holidays as text, and any controls it has (day grid) are real buttons reachable by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "{\"text\":true,\"focusable\":63,\"hasSettingsLink\":false,\"buttonsOnly\":true}"
+  },
+  {
+   "flow": "calendar + More sheet",
+   "name": "calendar \"Set your location in Settings\" is a link, not just text",
+   "ok": false,
+   "gap": true,
+   "detail": ""
+  }
+ ]
+}

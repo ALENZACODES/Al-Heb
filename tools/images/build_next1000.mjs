@@ -107,7 +107,7 @@ Files: \`data/images/next1000.csv\` (same columns as manifest.csv, all pending, 
 ${MASTER}
 \`\`\`
 
-Batch variant (commands 28-37 in one go):
+Several commands in a row:
 
 \`\`\`
 ${BATCH}
@@ -122,8 +122,8 @@ ${table}
 }
 
 export const MASTER =
-`Continue the ALEF image run from command 28, sequentially. For each command: read its list from next1000-groups.json, generate every listed image as its own PNG named exactly as listed, in STYLE GUIDE v1 (flat vector, thick rounded outlines, cream #F6F1E7 background, palette blue #1F3A5F / red #B0373B / olive #6B7F3A / gold #D9A441 / charcoal #2B2B2B, 3/4 light from upper left). NEVER include any text, letters, Hebrew or numerals in any image; signs, screens and pages stay blank. Use the attached reference sheets for Ari, Noa and Rimon. When done, confirm with the list of filenames and the count, then STOP and wait until I say "next".`;
-export const BATCH = MASTER.replace('Continue the ALEF image run from command 28, sequentially. For each command:', 'Run ALEF image commands 28-37 as one batch, in order. For each of these commands:').replace('then STOP and wait until I say "next".', 'after each command, then STOP after command 37 and wait until I say "next".');
+`ChatGPT cannot read repo files, so do not use next1000-groups.json there. Paste docs/images/paste/cmd-028.txt, then cmd-029.txt ... (one self-contained file per command, see docs/images/paste/README.md; the paste files are built by node tools/images/build_paste_files.mjs).`;
+export const BATCH = `For several commands in a row, paste cmd-028.txt, wait for the filenames list, say "next", then paste cmd-029.txt, and so on (docs/images/paste/INDEX.md lists every file; commands split into -a/-b files are noted there).`;
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const B = build();

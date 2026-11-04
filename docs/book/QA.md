@@ -44,3 +44,31 @@ Layout of the 8.5x11 interior: opening prayer 1, Priestly Blessing 2, how-to + c
 - Stroke diagrams come from data/letters/letters.json as of the last rebuild (lane 2 was still upgrading cursive; cursive is labelled draft).
 - Survival Hebrew and prayers are not proofread by a native/educator; the book says so on the pages.
 - A blank last page is added for the even count.
+
+
+# Round 3 addendum (2026-11-03, lane 7): "Remember every letter" chapter, mnemonic flashcards, quirky image prompts
+
+## Page counts (this build)
+| File | Pages |
+|---|---|
+| book/out/alef-book-draft.pdf (with cover) | 68 (was 63) |
+| alef-book-8.5x11-print.pdf, -print-bleed.pdf, -bleed-rtlspreads.pdf, -REVERSED-ingram-lulu.pdf | 68 each (67 content pages + 1 blank pad page; was 62) |
+| alef-mnemonic-flashcards-letter.pdf, -a4.pdf | 7 each (1 instruction page + 3 sheets x front/back) |
+The new chapter is 5 pages (PDF pages 34-38 of the interior): page 1 holds the intro and 4 cards, the other pages 6 cards each (2 x 3), 27 cards in all, right after the 27 letter pages. Interior layout shifts by 5 pages from "Vowels" onward (see the contents page).
+
+## Looked at by eye (rasterised)
+- Chapter pages in the draft PDF at 45-80 dpi: all 5 pages, and at 80 dpi pages 1 and 2 in full. Found and fixed: only 4 cards on page 1 spilled a 3rd row onto the next page and left page 2 with 2 cards (now 4 + 6/6/6/5); anchor word clipped at the card bottom (card height set; two cards, mem and tav, then shin, still overflowed by a few pixels: padding trimmed); picture shrunk to 0.85in.
+- Interior print PDF: contact sheets 1 (pages 1-6: contents page shows the new chapter with its page number 34) and 6 (pages 31-36), last sheet (colophon, blank page 68). Bleed PDF page 36.
+- Flashcards, US Letter: pages 1 (instructions), 2 (fronts 1-9), 3 (backs 1-9: column order mirrored, so Gimel/Bet/Alef sit behind Alef/Bet/Gimel). A4: pages 6 and 7 (fronts 19-27, backs). Found and fixed: sound line on the front overlapped the footer tag for long sounds (front shows the first clause only); glyph overflow by 2px on fronts (sizes reduced).
+- Not looked at: the other flashcard pages one by one, the 8x10/6x9/square trims (chapter not checked at those), the RTL-spreads and reversed files beyond the page counts.
+
+## Automated
+- tests/book.cards.test.js: 27 cards match data/letters/mnemonics.json field by field, pointed anchor words, chapter in contents, flashcards count/mirror order/instruction page, and (with Chromium) no card or flashcard box overflows.
+- These cards read mnemonics.json at build time and the text changed between two of my builds (lane 2 refining it), so the page counts above can move if the text grows; the overflow test is the guard, not these numbers.
+- Not checked: duplex alignment on a real printer (a page-geometry design only), how A4 margins behave on printers with 0.25in unprintable edges (sheet margins are 0.38in left/right and 0.6in top/bottom on A4, 0.5in / 0.25in on Letter: the Letter top/bottom margin is at the limit of many printers).
+
+## Colophon licence TODO
+The colophon said the Noto licence file "still has to be added". The file was already in the repo (assets/fonts/notoserifhebrew-OFL.txt and docs/licenses/OFL-notoserifhebrew.txt); I fetched https://raw.githubusercontent.com/google/fonts/main/ofl/notoserifhebrew/OFL.txt on 2026-11-03 and it is byte-identical (diff). Only the stale sentence was wrong; it now says so. The colophon cites the licence files, it does not reproduce the text.
+
+## Still placeholder
+All pictures (the quirky mnemonics included: prompts exist, no images), cover, QR host (alef.example.org), proofreading of hooks/anchor words/prayers/phrases, handwriting strokes.

@@ -54,7 +54,7 @@ test('selection: default kinds exclude letters/vowels, skip already-present, ref
 test('estimate counts code points and prices from notes', () => {
   const e = estimate(selectEntries(manifest, { voice: 'm' }), google);
   assert.equal(e.chars, [...'שָׁלוֹם'].length); assert.ok(Math.abs(e.usd - (e.chars / 1e6) * 30) < 1e-12);
-  assert.match(PRICE_LABEL, /approximate, from notes dated 2026-11-03/);
+  assert.match(PRICE_LABEL, /list price verified on fetched pages 2026-11-03/);
 });
 test('renderBatch writes file + tts meta (fake fetch, temp dir, no network)', async () => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'alefr-'));
@@ -67,5 +67,5 @@ test('renderBatch writes file + tts meta (fake fetch, temp dir, no network)', as
 });
 test('CLI defaults to dry run and makes no network call', () => {
   const r = spawnSync(process.execPath, ['tools/audio/render_tts.mjs', '--provider', 'elevenlabs', '--voice', 'f', '--limit', '2'], { cwd: new URL('..', import.meta.url).pathname, encoding: 'utf8', env: { PATH: process.env.PATH } });
-  assert.equal(r.status, 0, r.stderr); assert.match(r.stdout, /DRY RUN/); assert.match(r.stdout, /No network calls made/); assert.match(r.stdout, /approximate, from notes dated 2026-11-03/);
+  assert.equal(r.status, 0, r.stderr); assert.match(r.stdout, /DRY RUN/); assert.match(r.stdout, /No network calls made/); assert.match(r.stdout, /list price verified on fetched pages 2026-11-03/);
 });

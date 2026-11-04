@@ -3,7 +3,7 @@
 // Default voices are Chirp 3 HD names from the notes (m Charon, f Kore) - an arbitrary starting pick for the listening test, not a recommendation.
 // DOCUMENTED LIMITS (Chirp 3: HD page): custom pronunciations and pause control are NOT available for he-IL. SSML <phoneme> is in the
 // tag list but the page does not say it works for Hebrew; do not rely on it. Therefore this adapter sends plain pointed text by default.
-// SSML tags count as billed characters (except <mark>). Price US$30 per 1M chars for Chirp 3 HD (first 1M free/month), notes dated 2026-11-03.
+// SSML tags count as billed characters (except <mark>). Price US$30 per 1M chars for Chirp 3 HD (first 1M free/month): verified on cloud.google.com/text-to-speech/pricing 2026-11-03. See data/audio/tts-prices.json.
 export const id = 'google';
 export const env = ['GOOGLE_TTS_API_KEY'];
 export const pricePerMillionChars = 30;

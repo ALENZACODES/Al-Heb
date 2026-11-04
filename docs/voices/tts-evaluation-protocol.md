@@ -30,5 +30,5 @@ Render with: `node tools/audio/render_tts.mjs --provider <p> --voice m|f --limit
 ## Decision rules (set before listening)
 - A provider passes for a content class only if >= 90% of items score 2 on (A) and (B) from every native listener, and no item has a wrong vowel in a letter-learning context.
 - Isolated letter and vowel sounds default to human recording regardless of the outcome.
-- Report cost using the render dry-run (labelled approximate, from notes dated 2026-11-03) and attach the redistribution-rights status.
+- Report cost using the render dry-run and docs/voices/tts-cost-plan.md (list prices verified on fetched pages 2026-11-03; per-row verified flags in data/audio/tts-prices.json) and attach the redistribution-rights status.
 - Outcome format: one table per provider x voice x content class with pass/fail counts, plus the list of failures.

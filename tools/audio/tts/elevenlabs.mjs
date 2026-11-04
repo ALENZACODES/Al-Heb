@@ -1,7 +1,7 @@
 // ElevenLabs REST adapter. NOT run in this session.
 // Env: ELEVENLABS_API_KEY, ELEVENLABS_VOICE_M, ELEVENLABS_VOICE_F (voice ids: deliberately not hardcoded; pick them in the listening test).
 // Notes: Multilingual v2 was reported unintelligible for Hebrew; v3 needs language_code "he". Commercial rights only for output generated
-// during a paid subscription. Price ~US$80 per 1M chars for v3 (third-party figure, notes dated 2026-11-03). No documented Hebrew phoneme control.
+// during a paid subscription. Price US$80 per 1M chars for v3/v4: verified on elevenlabs.io/pricing/api 2026-11-03; Hebrew listed for v3/v4 only (docs/overview/models). See data/audio/tts-prices.json. No documented Hebrew phoneme control.
 export const id = 'elevenlabs';
 export const env = ['ELEVENLABS_API_KEY', 'ELEVENLABS_VOICE_M', 'ELEVENLABS_VOICE_F'];
 export const pricePerMillionChars = 80;

@@ -1,6 +1,6 @@
 // Azure AI Speech REST adapter. NOT run in this session (no credentials, no live calls).
 // Env: AZURE_SPEECH_KEY, AZURE_SPEECH_REGION (e.g. eastus).
-// Voices (he-IL): m = he-IL-AvriNeural, f = he-IL-HilaNeural. Price ~US$15 per 1M chars (third-party figure, notes dated 2026-11-03).
+// Voices (he-IL): m = he-IL-AvriNeural, f = he-IL-HilaNeural. Price US$15 per 1M chars: verified 2026-11-03 against the Azure Retail Prices API (S1 Neural meter); billing of he-IL voices under that meter is inferred. See data/audio/tts-prices.json.
 // UNVERIFIED: whether Azure honours niqqud in input, and whether <phoneme> (IPA) is accepted for he-IL. Plain pointed text only here.
 export const id = 'azure';
 export const env = ['AZURE_SPEECH_KEY', 'AZURE_SPEECH_REGION'];

@@ -11,12 +11,12 @@ import * as elevenlabs from './tts/elevenlabs.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const PROVIDERS = { azure, google, elevenlabs };
-export const PRICE_LABEL = 'approximate, from notes dated 2026-11-03';
+export const PRICE_LABEL = 'list price verified on fetched pages 2026-11-03, see data/audio/tts-prices.json (azure row inferred for he-IL voices)';
 export const DEFAULT_KINDS = ['syllable', 'word', 'line', 'prayer'];
 
 export function selectEntries(manifest, { voice, tradition = 'israeli', kinds = DEFAULT_KINDS, limit, onlyMissing = true }) {
   if (tradition !== 'israeli') throw new Error(`refusing tradition "${tradition}": no TTS provider offers it (Web/cloud voices are Modern Israeli Hebrew). Record a human.`);
-  let rows = manifest.filter((e) => e.voice === voice && e.tradition === tradition && kinds.includes(e.kind) && (!onlyMissing || e.status === 'missing'));
+  let rows = manifest.filter((e) => e.voice === voice && e.tradition === tradition && kinds.includes(e.kind) && !e.aliasOf && (!onlyMissing || e.status === 'missing'));
   if (limit) rows = rows.slice(0, limit);
   return rows;
 }

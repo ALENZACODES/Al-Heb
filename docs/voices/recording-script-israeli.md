@@ -45,9 +45,20 @@ Takes per clip: 3. Clips: 27.
 | pe-final | israeli/letter/pe-final.mp3 | פֵּא סוֹפִית |  | (as above) |
 | tsadi-final | israeli/letter/tsadi-final.mp3 | צָדִי סוֹפִית |  | (as above) |
 
+## Letter variant forms (vet, khaf, fe, sin)
+
+Takes per clip: 3. Clips: 4.
+
+| id | file (under audio/<voice>/) | pointed Hebrew | IPA | direction |
+|---|---|---|---|---|
+| vet | israeli/letter/vet.mp3 | בֵית |  | VARIANT FORM NAME: say the name with the variant sound, once, falling intonation (vet = with a v, khaf = with the ch of chet, fe = with an f, sin = with an s). Record right after the plain form (bet/vet, kaf/khaf, pe/fe, shin/sin) so the contrast is clear. |
+| khaf | israeli/letter/khaf.mp3 | כַף |  | (as above) |
+| fe | israeli/letter/fe.mp3 | פֵא |  | (as above) |
+| sin | israeli/letter/sin.mp3 | שִׂין |  | (as above) |
+
 ## Isolated letter sounds
 
-Takes per clip: 4. Clips: 22.
+Takes per clip: 4. Clips: 26.
 
 | id | file (under audio/<voice>/) | pointed Hebrew | IPA | direction |
 |---|---|---|---|---|
@@ -73,6 +84,10 @@ Takes per clip: 4. Clips: 22.
 | resh-sound | israeli/letter/resh-sound.mp3 | ר | ʁ | (as above) |
 | shin-sound | israeli/letter/shin-sound.mp3 | ש | ʃ | (as above) |
 | tav-sound | israeli/letter/tav-sound.mp3 | ת | t | (as above) |
+| vet-sound | israeli/letter/vet-sound.mp3 | ב | v | (as above) |
+| khaf-sound | israeli/letter/khaf-sound.mp3 | כ | χ | (as above) |
+| fe-sound | israeli/letter/fe-sound.mp3 | פ | f | (as above) |
+| sin-sound | israeli/letter/sin-sound.mp3 | שׂ | s | (as above) |
 
 ## Vowels and marks
 
@@ -213,13 +228,589 @@ Takes per clip: 2. Clips: 110.
 | tav-o | israeli/syllable/tav-o.mp3 | תֹ | to | (as above) |
 | tav-u | israeli/syllable/tav-u.mp3 | תֻ | tu | (as above) |
 
-## Words
+## Mnemonic anchor words (Israeli only)
 
-Takes per clip: 2. Clips: 867.
+Takes per clip: 2. Clips: 27.
 
 | id | file (under audio/<voice>/) | pointed Hebrew | IPA | direction |
 |---|---|---|---|---|
-| bless-priestly-1-w1 | israeli/word/bless-priestly-1-w1.mp3 | יְבָרֶכְךָ |  | Natural Modern Israeli word, correct (usually final) stress, neutral conversational tone, one breath. |
+| anchor-alef | israeli/word/anchor-alef.mp3 | אַבָּא |  | MNEMONIC ANCHOR WORD (everyday word that starts with the letter's sound, shown in the letter lesson): say the word naturally, once, slightly clear, correct stress. Israeli only. |
+| anchor-bet | israeli/word/anchor-bet.mp3 | בַּיִת |  | (as above) |
+| anchor-gimel | israeli/word/anchor-gimel.mp3 | גָּמָל |  | (as above) |
+| anchor-dalet | israeli/word/anchor-dalet.mp3 | דֶּלֶת |  | (as above) |
+| anchor-he | israeli/word/anchor-he.mp3 | הַר |  | (as above) |
+| anchor-vav | israeli/word/anchor-vav.mp3 | וֶרֶד |  | (as above) |
+| anchor-zayin | israeli/word/anchor-zayin.mp3 | זָהָב |  | (as above) |
+| anchor-chet | israeli/word/anchor-chet.mp3 | חָלָב |  | (as above) |
+| anchor-tet | israeli/word/anchor-tet.mp3 | טוֹב |  | (as above) |
+| anchor-yod | israeli/word/anchor-yod.mp3 | יָד |  | (as above) |
+| anchor-kaf | israeli/word/anchor-kaf.mp3 | כֶּלֶב |  | (as above) |
+| anchor-lamed | israeli/word/anchor-lamed.mp3 | לֶחֶם |  | (as above) |
+| anchor-mem | israeli/word/anchor-mem.mp3 | מַיִם |  | (as above) |
+| anchor-nun | israeli/word/anchor-nun.mp3 | נֵר |  | (as above) |
+| anchor-samekh | israeli/word/anchor-samekh.mp3 | סֵפֶר |  | (as above) |
+| anchor-ayin | israeli/word/anchor-ayin.mp3 | עַיִן |  | (as above) |
+| anchor-pe | israeli/word/anchor-pe.mp3 | פֶּה |  | (as above) |
+| anchor-tsadi | israeli/word/anchor-tsadi.mp3 | צִפּוֹר |  | (as above) |
+| anchor-qof | israeli/word/anchor-qof.mp3 | קוֹף |  | (as above) |
+| anchor-resh | israeli/word/anchor-resh.mp3 | רֹאשׁ |  | (as above) |
+| anchor-shin | israeli/word/anchor-shin.mp3 | שָׁלוֹם |  | (as above) |
+| anchor-tav | israeli/word/anchor-tav.mp3 | תּוֹדָה |  | (as above) |
+| anchor-kaf-final | israeli/word/anchor-kaf-final.mp3 | מֶלֶךְ |  | (as above) |
+| anchor-mem-final | israeli/word/anchor-mem-final.mp3 | יָם |  | (as above) |
+| anchor-nun-final | israeli/word/anchor-nun-final.mp3 | גָּן |  | (as above) |
+| anchor-pe-final | israeli/word/anchor-pe-final.mp3 | כַּף |  | (as above) |
+| anchor-tsadi-final | israeli/word/anchor-tsadi-final.mp3 | אֶרֶץ |  | (as above) |
+
+## Lesson vocabulary words
+
+Takes per clip: 2. Clips: 305.
+
+| id | file (under audio/<voice>/) | pointed Hebrew | IPA | direction |
+|---|---|---|---|---|
+| r01-w1 | israeli/word/r01-w1.mp3 | שָׁב |  | Lesson vocabulary word, natural Modern Israeli, correct stress, one breath, no carrier phrase. |
+| r02-w1 | israeli/word/r02-w1.mp3 | שַׁבָּת |  | (as above) |
+| r02-w2 | israeli/word/r02-w2.mp3 | בַּת |  | (as above) |
+| r03-w1 | israeli/word/r03-w1.mp3 | שָׁלוֹם |  | (as above) |
+| r03-w2 | israeli/word/r03-w2.mp3 | לוֹ |  | (as above) |
+| r04-w1 | israeli/word/r04-w1.mp3 | שַׁבָּת |  | (as above) |
+| r04-w2 | israeli/word/r04-w2.mp3 | שָׁלוֹם |  | (as above) |
+| r04-w3 | israeli/word/r04-w3.mp3 | שַׁבָּת שָׁלוֹם |  | (as above) |
+| r05-w1 | israeli/word/r05-w1.mp3 | שָׁלוֹם |  | (as above) |
+| r06-w1 | israeli/word/r06-w1.mp3 | בִּי |  | (as above) |
+| r06-w2 | israeli/word/r06-w2.mp3 | לִי |  | (as above) |
+| r07-w1 | israeli/word/r07-w1.mp3 | אַבָּא |  | (as above) |
+| r07-w2 | israeli/word/r07-w2.mp3 | בָּא |  | (as above) |
+| r07-w3 | israeli/word/r07-w3.mp3 | הָיָה |  | (as above) |
+| r07-w4 | israeli/word/r07-w4.mp3 | לֹא |  | (as above) |
+| r08-w1 | israeli/word/r08-w1.mp3 | אֵל |  | (as above) |
+| r08-w2 | israeli/word/r08-w2.mp3 | בֵּית |  | (as above) |
+| r08-w3 | israeli/word/r08-w3.mp3 | לֵב |  | (as above) |
+| r09-w1 | israeli/word/r09-w1.mp3 | שִׁיר |  | (as above) |
+| r09-w2 | israeli/word/r09-w2.mp3 | אִמָּא |  | (as above) |
+| r09-w3 | israeli/word/r09-w3.mp3 | רֹאשׁ |  | (as above) |
+| r09-w4 | israeli/word/r09-w4.mp3 | רָם |  | (as above) |
+| r10-w1 | israeli/word/r10-w1.mp3 | כִּי |  | (as above) |
+| r10-w2 | israeli/word/r10-w2.mp3 | לָךְ |  | (as above) |
+| r10-w3 | israeli/word/r10-w3.mp3 | אַתָּה |  | (as above) |
+| r11-w1 | israeli/word/r11-w1.mp3 | אֶת |  | (as above) |
+| r11-w2 | israeli/word/r11-w2.mp3 | מֶלֶךְ |  | (as above) |
+| r12-w1 | israeli/word/r12-w1.mp3 | בֵּן |  | (as above) |
+| r12-w2 | israeli/word/r12-w2.mp3 | שָׁנָה |  | (as above) |
+| r12-w3 | israeli/word/r12-w3.mp3 | אָנִי |  | (as above) |
+| r12-w4 | israeli/word/r12-w4.mp3 | אָמֵן |  | (as above) |
+| r13-w1 | israeli/word/r13-w1.mp3 | הוּא |  | (as above) |
+| r13-w2 | israeli/word/r13-w2.mp3 | שׁוּב |  | (as above) |
+| r13-w3 | israeli/word/r13-w3.mp3 | כֻּלָּם |  | (as above) |
+| r14-w1 | israeli/word/r14-w1.mp3 | בְּרָכָה |  | (as above) |
+| r14-w2 | israeli/word/r14-w2.mp3 | בְּרֵאשִׁית |  | (as above) |
+| r14-w3 | israeli/word/r14-w3.mp3 | לְךָ |  | (as above) |
+| r14-w4 | israeli/word/r14-w4.mp3 | וְאָנִי |  | (as above) |
+| r15-w1 | israeli/word/r15-w1.mp3 | יְבָרֶכְךָ |  | (as above) |
+| r15-w2 | israeli/word/r15-w2.mp3 | יְהוָה |  | (as above) |
+| r15-w3 | israeli/word/r15-w3.mp3 | וְיִשְׁמְרֶךָ |  | (as above) |
+| r16-w1 | israeli/word/r16-w1.mp3 | פֶּה |  | (as above) |
+| r16-w2 | israeli/word/r16-w2.mp3 | אַף |  | (as above) |
+| r16-w3 | israeli/word/r16-w3.mp3 | פָּנָיו |  | (as above) |
+| r17-w1 | israeli/word/r17-w1.mp3 | חַי |  | (as above) |
+| r17-w2 | israeli/word/r17-w2.mp3 | חָכָם |  | (as above) |
+| r17-w3 | israeli/word/r17-w3.mp3 | רוּחַ |  | (as above) |
+| r18-w1 | israeli/word/r18-w1.mp3 | אֶחָד |  | (as above) |
+| r18-w2 | israeli/word/r18-w2.mp3 | גָּדוֹל |  | (as above) |
+| r18-w3 | israeli/word/r18-w3.mp3 | גַּן |  | (as above) |
+| r18-w4 | israeli/word/r18-w4.mp3 | דֶּרֶךְ |  | (as above) |
+| r19-w1 | israeli/word/r19-w1.mp3 | שְׁמַע |  | (as above) |
+| r19-w2 | israeli/word/r19-w2.mp3 | עַם |  | (as above) |
+| r19-w3 | israeli/word/r19-w3.mp3 | עוֹלָם |  | (as above) |
+| r20-w1 | israeli/word/r20-w1.mp3 | סֵפֶר |  | (as above) |
+| r20-w2 | israeli/word/r20-w2.mp3 | יִשְׂרָאֵל |  | (as above) |
+| r20-w3 | israeli/word/r20-w3.mp3 | שִׂמְחָה |  | (as above) |
+| r21-w1 | israeli/word/r21-w1.mp3 | אֱלֹהִים |  | (as above) |
+| r21-w2 | israeli/word/r21-w2.mp3 | אֱמֶת |  | (as above) |
+| r21-w3 | israeli/word/r21-w3.mp3 | אֲנִי |  | (as above) |
+| r21-w4 | israeli/word/r21-w4.mp3 | אֲדֹנָי |  | (as above) |
+| r21-w5 | israeli/word/r21-w5.mp3 | אֳנִיָּה |  | (as above) |
+| r22-w1 | israeli/word/r22-w1.mp3 | שְׁמַע |  | (as above) |
+| r22-w2 | israeli/word/r22-w2.mp3 | יִשְׂרָאֵל |  | (as above) |
+| r22-w3 | israeli/word/r22-w3.mp3 | אֱלֹהֵינוּ |  | (as above) |
+| r22-w4 | israeli/word/r22-w4.mp3 | אֶחָד |  | (as above) |
+| r23-w1 | israeli/word/r23-w1.mp3 | זֶה |  | (as above) |
+| r23-w2 | israeli/word/r23-w2.mp3 | טוֹב |  | (as above) |
+| r23-w3 | israeli/word/r23-w3.mp3 | זָהָב |  | (as above) |
+| r23-w4 | israeli/word/r23-w4.mp3 | טַל |  | (as above) |
+| r24-w1 | israeli/word/r24-w1.mp3 | צֶדֶק |  | (as above) |
+| r24-w2 | israeli/word/r24-w2.mp3 | אֶרֶץ |  | (as above) |
+| r24-w3 | israeli/word/r24-w3.mp3 | קוֹל |  | (as above) |
+| r24-w4 | israeli/word/r24-w4.mp3 | קָדוֹשׁ |  | (as above) |
+| r24-w5 | israeli/word/r24-w5.mp3 | צְדָקָה |  | (as above) |
+| r25-w1 | israeli/word/r25-w1.mp3 | יָאֵר |  | (as above) |
+| r25-w2 | israeli/word/r25-w2.mp3 | פָּנָיו |  | (as above) |
+| r25-w3 | israeli/word/r25-w3.mp3 | אֵלֶיךָ |  | (as above) |
+| r25-w4 | israeli/word/r25-w4.mp3 | וִיחֻנֶּךָּ |  | (as above) |
+| r26-w1 | israeli/word/r26-w1.mp3 | יִשָּׂא |  | (as above) |
+| r26-w2 | israeli/word/r26-w2.mp3 | וְיָשֵׂם |  | (as above) |
+| r26-w3 | israeli/word/r26-w3.mp3 | שָׁלוֹם |  | (as above) |
+| r27-w1 | israeli/word/r27-w1.mp3 | בִּרְכַּת כֹּהֲנִים |  | (as above) |
+| r28-w1 | israeli/word/r28-w1.mp3 | בָּרוּךְ |  | (as above) |
+| r28-w2 | israeli/word/r28-w2.mp3 | אַתָּה |  | (as above) |
+| r28-w3 | israeli/word/r28-w3.mp3 | אֱלֹהֵינוּ |  | (as above) |
+| r28-w4 | israeli/word/r28-w4.mp3 | מֶלֶךְ |  | (as above) |
+| r28-w5 | israeli/word/r28-w5.mp3 | הָעוֹלָם |  | (as above) |
+| r29-w1 | israeli/word/r29-w1.mp3 | יִשְׁמְרֶךָ |  | (as above) |
+| r29-w2 | israeli/word/r29-w2.mp3 | מִשְׁפָּט |  | (as above) |
+| r29-w3 | israeli/word/r29-w3.mp3 | תִּשְׁמְעוּ |  | (as above) |
+| r29-w4 | israeli/word/r29-w4.mp3 | וּבְכָל |  | (as above) |
+| r30-w1 | israeli/word/r30-w1.mp3 | בָּרוּךְ |  | (as above) |
+| r30-w2 | israeli/word/r30-w2.mp3 | כָּתַב |  | (as above) |
+| r30-w3 | israeli/word/r30-w3.mp3 | שְׁמֵהּ |  | (as above) |
+| r30-w4 | israeli/word/r30-w4.mp3 | כֻּלּוֹ |  | (as above) |
+| r31-w1 | israeli/word/r31-w1.mp3 | שָׁלוֹם |  | (as above) |
+| r31-w2 | israeli/word/r31-w2.mp3 | בְּרֵאשִׁית |  | (as above) |
+| r31-w3 | israeli/word/r31-w3.mp3 | יִשְׂרָאֵל |  | (as above) |
+| r31-w4 | israeli/word/r31-w4.mp3 | אַתָּה |  | (as above) |
+| r32-w1 | israeli/word/r32-w1.mp3 | כָּל |  | (as above) |
+| r32-w2 | israeli/word/r32-w2.mp3 | חָכְמָה |  | (as above) |
+| r32-w3 | israeli/word/r32-w3.mp3 | קָדְשׁוֹ |  | (as above) |
+| r33-w1 | israeli/word/r33-w1.mp3 | וְהָיָה |  | (as above) |
+| r33-w2 | israeli/word/r33-w2.mp3 | בַּבַּיִת |  | (as above) |
+| r33-w3 | israeli/word/r33-w3.mp3 | לַמֶּלֶךְ |  | (as above) |
+| r33-w4 | israeli/word/r33-w4.mp3 | מֵהָעוֹלָם |  | (as above) |
+| r34-w1 | israeli/word/r34-w1.mp3 | יהוה |  | (as above) |
+| r34-w2 | israeli/word/r34-w2.mp3 | אדני |  | (as above) |
+| r35-w1 | israeli/word/r35-w1.mp3 | שלום |  | (as above) |
+| r35-w2 | israeli/word/r35-w2.mp3 | שבת |  | (as above) |
+| r35-w3 | israeli/word/r35-w3.mp3 | ברוך |  | (as above) |
+| r36-w1 | israeli/word/r36-w1.mp3 | בָּרוּךְ |  | (as above) |
+| r36-w2 | israeli/word/r36-w2.mp3 | שֵׁם |  | (as above) |
+| r36-w3 | israeli/word/r36-w3.mp3 | כְּבוֹד |  | (as above) |
+| r36-w4 | israeli/word/r36-w4.mp3 | מַלְכוּתוֹ |  | (as above) |
+| r36-w5 | israeli/word/r36-w5.mp3 | לְעוֹלָם |  | (as above) |
+| r36-w6 | israeli/word/r36-w6.mp3 | וָעֶד |  | (as above) |
+| r37-w1 | israeli/word/r37-w1.mp3 | וְאָהַבְתָּ |  | (as above) |
+| r37-w2 | israeli/word/r37-w2.mp3 | לְבָבְךָ |  | (as above) |
+| r37-w3 | israeli/word/r37-w3.mp3 | נַפְשְׁךָ |  | (as above) |
+| r37-w4 | israeli/word/r37-w4.mp3 | מְאֹדֶךָ |  | (as above) |
+| r37-w5 | israeli/word/r37-w5.mp3 | וְשִׁנַּנְתָּם |  | (as above) |
+| r38-w1 | israeli/word/r38-w1.mp3 | תּוֹרָה |  | (as above) |
+| r38-w2 | israeli/word/r38-w2.mp3 | בָּחַר |  | (as above) |
+| r38-w3 | israeli/word/r38-w3.mp3 | הָעַמִּים |  | (as above) |
+| r38-w4 | israeli/word/r38-w4.mp3 | נָתַן |  | (as above) |
+| r39-w1 | israeli/word/r39-w1.mp3 | מוֹדֶה |  | (as above) |
+| r39-w2 | israeli/word/r39-w2.mp3 | מוֹדָה |  | (as above) |
+| r39-w3 | israeli/word/r39-w3.mp3 | נִשְׁמָתִי |  | (as above) |
+| r39-w4 | israeli/word/r39-w4.mp3 | בְּחֶמְלָה |  | (as above) |
+| r39-w5 | israeli/word/r39-w5.mp3 | אֱמוּנָתֶךָ |  | (as above) |
+| r40-w1 | israeli/word/r40-w1.mp3 | מַה |  | (as above) |
+| r40-w2 | israeli/word/r40-w2.mp3 | טֹּבוּ |  | (as above) |
+| r40-w3 | israeli/word/r40-w3.mp3 | אֹהָלֶיךָ |  | (as above) |
+| r40-w4 | israeli/word/r40-w4.mp3 | יַעֲקֹב |  | (as above) |
+| r40-w5 | israeli/word/r40-w5.mp3 | מִשְׁכְּנֹתֶיךָ |  | (as above) |
+| r41-w1 | israeli/word/r41-w1.mp3 | בּוֹרֵא |  | (as above) |
+| r41-w2 | israeli/word/r41-w2.mp3 | פְּרִי |  | (as above) |
+| r41-w3 | israeli/word/r41-w3.mp3 | הַגָּפֶן |  | (as above) |
+| r41-w4 | israeli/word/r41-w4.mp3 | יַיִן |  | (as above) |
+| r42-w1 | israeli/word/r42-w1.mp3 | אֱלֹהֵי |  | (as above) |
+| r42-w2 | israeli/word/r42-w2.mp3 | אַבְרָהָם |  | (as above) |
+| r42-w3 | israeli/word/r42-w3.mp3 | יִצְחָק |  | (as above) |
+| r42-w4 | israeli/word/r42-w4.mp3 | יַעֲקֹב |  | (as above) |
+| r43-w1 | israeli/word/r43-w1.mp3 | מִי |  | (as above) |
+| r43-w2 | israeli/word/r43-w2.mp3 | כָּמֹכָה |  | (as above) |
+| r43-w3 | israeli/word/r43-w3.mp3 | נֶאְדָּר |  | (as above) |
+| r43-w4 | israeli/word/r43-w4.mp3 | בַּקֹּדֶשׁ |  | (as above) |
+| r44-w1 | israeli/word/r44-w1.mp3 | עָלֵינוּ |  | (as above) |
+| r44-w2 | israeli/word/r44-w2.mp3 | לְשַׁבֵּחַ |  | (as above) |
+| r44-w3 | israeli/word/r44-w3.mp3 | לַאֲדוֹן |  | (as above) |
+| r44-w4 | israeli/word/r44-w4.mp3 | הַכֹּל |  | (as above) |
+| r45-w1 | israeli/word/r45-w1.mp3 | יִתְגַּדַּל |  | (as above) |
+| r45-w2 | israeli/word/r45-w2.mp3 | וְיִתְקַדַּשׁ |  | (as above) |
+| r45-w3 | israeli/word/r45-w3.mp3 | שְׁמֵהּ |  | (as above) |
+| r45-w4 | israeli/word/r45-w4.mp3 | רַבָּא |  | (as above) |
+| r46-w1 | israeli/word/r46-w1.mp3 | אֲדוֹן |  | (as above) |
+| r46-w2 | israeli/word/r46-w2.mp3 | עוֹלָם |  | (as above) |
+| r46-w3 | israeli/word/r46-w3.mp3 | מָלַךְ |  | (as above) |
+| r46-w4 | israeli/word/r46-w4.mp3 | בְּטֶרֶם |  | (as above) |
+| r46-w5 | israeli/word/r46-w5.mp3 | יְצִיר |  | (as above) |
+| r46-w6 | israeli/word/r46-w6.mp3 | נִבְרָא |  | (as above) |
+| r47-w1 | israeli/word/r47-w1.mp3 | הַזָּן |  | (as above) |
+| r47-w2 | israeli/word/r47-w2.mp3 | כֻּלּוֹ |  | (as above) |
+| r47-w3 | israeli/word/r47-w3.mp3 | בְּטוּבוֹ |  | (as above) |
+| r47-w4 | israeli/word/r47-w4.mp3 | חֵן |  | (as above) |
+| r47-w5 | israeli/word/r47-w5.mp3 | חֶסֶד |  | (as above) |
+| r47-w6 | israeli/word/r47-w6.mp3 | וּבְרַחֲמִים |  | (as above) |
+| r48-w1 | israeli/word/r48-w1.mp3 | בִּרְכַּת כֹּהֲנִים |  | (as above) |
+| r49-w1 | israeli/word/r49-w1.mp3 | וְאָהַבְתָּ |  | (as above) |
+| r50-w1 | israeli/word/r50-w1.mp3 | תְּפִלָּה |  | (as above) |
+| r51-w1 | israeli/word/r51-w1.mp3 | סִדּוּר |  | (as above) |
+| il01-w1 | israeli/word/il01-w1.mp3 | שָׁלוֹם |  | (as above) |
+| il01-w2 | israeli/word/il01-w2.mp3 | תּוֹדָה |  | (as above) |
+| il01-w3 | israeli/word/il01-w3.mp3 | בְּבַקָּשָׁה |  | (as above) |
+| il01-w4 | israeli/word/il01-w4.mp3 | סְלִיחָה |  | (as above) |
+| il01-w5 | israeli/word/il01-w5.mp3 | כֵּן |  | (as above) |
+| il01-w6 | israeli/word/il01-w6.mp3 | לֹא |  | (as above) |
+| il01-w7 | israeli/word/il01-w7.mp3 | בֹּקֶר טוֹב |  | (as above) |
+| il02-w1 | israeli/word/il02-w1.mp3 | יָאללָה |  | (as above) |
+| il02-w2 | israeli/word/il02-w2.mp3 | נוּ |  | (as above) |
+| il02-w3 | israeli/word/il02-w3.mp3 | סַבָּבָּה |  | (as above) |
+| il02-w4 | israeli/word/il02-w4.mp3 | בְּסֵדֶר |  | (as above) |
+| il02-w5 | israeli/word/il02-w5.mp3 | אַחְלָה |  | (as above) |
+| il02-w6 | israeli/word/il02-w6.mp3 | וַואלָה |  | (as above) |
+| il03-w1 | israeli/word/il03-w1.mp3 | שְׁמִי |  | (as above) |
+| il03-w2 | israeli/word/il03-w2.mp3 | מַה שְׁמֶךָ |  | (as above) |
+| il03-w3 | israeli/word/il03-w3.mp3 | מַה שְׁמֵךְ |  | (as above) |
+| il03-w4 | israeli/word/il03-w4.mp3 | אֲנִי מִ... |  | (as above) |
+| il03-w5 | israeli/word/il03-w5.mp3 | נָעִים מְאֹד |  | (as above) |
+| il04-w1 | israeli/word/il04-w1.mp3 | אַחַת |  | (as above) |
+| il04-w2 | israeli/word/il04-w2.mp3 | שְׁתַּיִם |  | (as above) |
+| il04-w3 | israeli/word/il04-w3.mp3 | שָׁלוֹשׁ |  | (as above) |
+| il04-w4 | israeli/word/il04-w4.mp3 | אַרְבַּע |  | (as above) |
+| il04-w5 | israeli/word/il04-w5.mp3 | חָמֵשׁ |  | (as above) |
+| il04-w6 | israeli/word/il04-w6.mp3 | שֵׁשׁ |  | (as above) |
+| il04-w7 | israeli/word/il04-w7.mp3 | שֶׁבַע |  | (as above) |
+| il04-w8 | israeli/word/il04-w8.mp3 | שְׁמוֹנֶה |  | (as above) |
+| il04-w9 | israeli/word/il04-w9.mp3 | תֵּשַׁע |  | (as above) |
+| il04-w10 | israeli/word/il04-w10.mp3 | עֶשֶׂר |  | (as above) |
+| il05-w1 | israeli/word/il05-w1.mp3 | עֶשְׂרִים |  | (as above) |
+| il05-w2 | israeli/word/il05-w2.mp3 | שְׁלוֹשִׁים |  | (as above) |
+| il05-w3 | israeli/word/il05-w3.mp3 | מֵאָה |  | (as above) |
+| il05-w4 | israeli/word/il05-w4.mp3 | שֶׁקֶל |  | (as above) |
+| il05-w5 | israeli/word/il05-w5.mp3 | כַּמָּה |  | (as above) |
+| il06-w1 | israeli/word/il06-w1.mp3 | אֶפְשָׁר |  | (as above) |
+| il06-w2 | israeli/word/il06-w2.mp3 | קָפֶה |  | (as above) |
+| il06-w3 | israeli/word/il06-w3.mp3 | הָפוּךְ |  | (as above) |
+| il06-w4 | israeli/word/il06-w4.mp3 | מַיִם |  | (as above) |
+| il06-w5 | israeli/word/il06-w5.mp3 | לְהַזְמִין |  | (as above) |
+| il06-w6 | israeli/word/il06-w6.mp3 | חֶשְׁבּוֹן |  | (as above) |
+| il07-w1 | israeli/word/il07-w1.mp3 | אֹכֶל |  | (as above) |
+| il07-w2 | israeli/word/il07-w2.mp3 | לֶחֶם |  | (as above) |
+| il07-w3 | israeli/word/il07-w3.mp3 | גְּבִינָה |  | (as above) |
+| il07-w4 | israeli/word/il07-w4.mp3 | בֵּיצָה |  | (as above) |
+| il07-w5 | israeli/word/il07-w5.mp3 | סָלָט |  | (as above) |
+| il07-w6 | israeli/word/il07-w6.mp3 | תֵּה |  | (as above) |
+| il08-w1 | israeli/word/il08-w1.mp3 | כַּמָּה זֶה עוֹלֶה |  | (as above) |
+| il08-w2 | israeli/word/il08-w2.mp3 | יָקָר |  | (as above) |
+| il08-w3 | israeli/word/il08-w3.mp3 | זוֹל |  | (as above) |
+| il08-w4 | israeli/word/il08-w4.mp3 | אֲנִי רוֹצֶה |  | (as above) |
+| il08-w5 | israeli/word/il08-w5.mp3 | יֵשׁ |  | (as above) |
+| il08-w6 | israeli/word/il08-w6.mp3 | אֵין |  | (as above) |
+| il09-w1 | israeli/word/il09-w1.mp3 | מְזֻמָּן |  | (as above) |
+| il09-w2 | israeli/word/il09-w2.mp3 | כַּרְטִיס אַשְׁרַאי |  | (as above) |
+| il09-w3 | israeli/word/il09-w3.mp3 | עוֹדֶף |  | (as above) |
+| il09-w4 | israeli/word/il09-w4.mp3 | שַׂקִּית |  | (as above) |
+| il09-w5 | israeli/word/il09-w5.mp3 | קַבָּלָה |  | (as above) |
+| il10-w1 | israeli/word/il10-w1.mp3 | מוֹנִית |  | (as above) |
+| il10-w2 | israeli/word/il10-w2.mp3 | אוֹטוֹבּוּס |  | (as above) |
+| il10-w3 | israeli/word/il10-w3.mp3 | רַכֶּבֶת |  | (as above) |
+| il10-w4 | israeli/word/il10-w4.mp3 | תַּחֲנָה |  | (as above) |
+| il10-w5 | israeli/word/il10-w5.mp3 | כַּרְטִיס |  | (as above) |
+| il10-w6 | israeli/word/il10-w6.mp3 | נְסִיעָה |  | (as above) |
+| il11-w1 | israeli/word/il11-w1.mp3 | יָמִינָה |  | (as above) |
+| il11-w2 | israeli/word/il11-w2.mp3 | שְׂמֹאלָה |  | (as above) |
+| il11-w3 | israeli/word/il11-w3.mp3 | יָשָׁר |  | (as above) |
+| il11-w4 | israeli/word/il11-w4.mp3 | קָרוֹב |  | (as above) |
+| il11-w5 | israeli/word/il11-w5.mp3 | רָחוֹק |  | (as above) |
+| il11-w6 | israeli/word/il11-w6.mp3 | אֵיפֹה |  | (as above) |
+| il12-w1 | israeli/word/il12-w1.mp3 | הַיּוֹם |  | (as above) |
+| il12-w2 | israeli/word/il12-w2.mp3 | מָחָר |  | (as above) |
+| il12-w3 | israeli/word/il12-w3.mp3 | אֶתְמוֹל |  | (as above) |
+| il12-w4 | israeli/word/il12-w4.mp3 | שָׁעָה |  | (as above) |
+| il12-w5 | israeli/word/il12-w5.mp3 | יוֹם רִאשׁוֹן |  | (as above) |
+| il12-w6 | israeli/word/il12-w6.mp3 | שַׁבָּת |  | (as above) |
+| il13-w1 | israeli/word/il13-w1.mp3 | מַה נִּשְׁמָע |  | (as above) |
+| il13-w2 | israeli/word/il13-w2.mp3 | הַכֹּל בְּסֵדֶר |  | (as above) |
+| il13-w3 | israeli/word/il13-w3.mp3 | מַה קּוֹרֶה |  | (as above) |
+| il13-w4 | israeli/word/il13-w4.mp3 | בְּרוּךְ הַשֵּׁם |  | (as above) |
+| il13-w5 | israeli/word/il13-w5.mp3 | לֹא רַע |  | (as above) |
+| il14-w1 | israeli/word/il14-w1.mp3 | מִשְׁפָּחָה |  | (as above) |
+| il14-w2 | israeli/word/il14-w2.mp3 | אָח |  | (as above) |
+| il14-w3 | israeli/word/il14-w3.mp3 | אָחוֹת |  | (as above) |
+| il14-w4 | israeli/word/il14-w4.mp3 | יֶלֶד |  | (as above) |
+| il14-w5 | israeli/word/il14-w5.mp3 | יַלְדָּה |  | (as above) |
+| il14-w6 | israeli/word/il14-w6.mp3 | נָשׂוּי |  | (as above) |
+| il15-w1 | israeli/word/il15-w1.mp3 | חַם |  | (as above) |
+| il15-w2 | israeli/word/il15-w2.mp3 | קַר |  | (as above) |
+| il15-w3 | israeli/word/il15-w3.mp3 | גֶּשֶׁם |  | (as above) |
+| il15-w4 | israeli/word/il15-w4.mp3 | שֶׁמֶשׁ |  | (as above) |
+| il15-w5 | israeli/word/il15-w5.mp3 | מֶזֶג אֲוִיר |  | (as above) |
+| il16-w1 | israeli/word/il16-w1.mp3 | אֲנִי הוֹלֵךְ |  | (as above) |
+| il16-w2 | israeli/word/il16-w2.mp3 | אֲנִי אוֹכֵל |  | (as above) |
+| il16-w3 | israeli/word/il16-w3.mp3 | אֲנִי לוֹמֵד |  | (as above) |
+| il16-w4 | israeli/word/il16-w4.mp3 | אֲנִי כּוֹתֵב |  | (as above) |
+| il16-w5 | israeli/word/il16-w5.mp3 | אֲנִי מְדַבֵּר |  | (as above) |
+| il17-w1 | israeli/word/il17-w1.mp3 | חֶדֶר |  | (as above) |
+| il17-w2 | israeli/word/il17-w2.mp3 | הַזְמָנָה |  | (as above) |
+| il17-w3 | israeli/word/il17-w3.mp3 | לַיְלָה |  | (as above) |
+| il17-w4 | israeli/word/il17-w4.mp3 | מַפְתֵּחַ |  | (as above) |
+| il17-w5 | israeli/word/il17-w5.mp3 | אַרוּחַת בֹּקֶר |  | (as above) |
+| il18-w1 | israeli/word/il18-w1.mp3 | אֲנִי לֹא מֵבִין |  | (as above) |
+| il18-w2 | israeli/word/il18-w2.mp3 | אֶפְשָׁר לְדַבֵּר לְאַט |  | (as above) |
+| il18-w3 | israeli/word/il18-w3.mp3 | תַּגִּידוּ בְּאַנְגְּלִית |  | (as above) |
+| il18-w4 | israeli/word/il18-w4.mp3 | רוֹפֵא |  | (as above) |
+| il18-w5 | israeli/word/il18-w5.mp3 | בֵּית מֶרְקַחַת |  | (as above) |
+| il18-w6 | israeli/word/il18-w6.mp3 | עֶזְרָה |  | (as above) |
+| il19-w1 | israeli/word/il19-w1.mp3 | הָלַכְתִּי |  | (as above) |
+| il19-w2 | israeli/word/il19-w2.mp3 | אָכַלְתִּי |  | (as above) |
+| il19-w3 | israeli/word/il19-w3.mp3 | רָאִיתִי |  | (as above) |
+| il19-w4 | israeli/word/il19-w4.mp3 | אָמַרְתִּי |  | (as above) |
+| il19-w5 | israeli/word/il19-w5.mp3 | הָיָה |  | (as above) |
+| il20-w1 | israeli/word/il20-w1.mp3 | אֲנִי אֵלֵךְ |  | (as above) |
+| il20-w2 | israeli/word/il20-w2.mp3 | אֲנִי אֹכַל |  | (as above) |
+| il20-w3 | israeli/word/il20-w3.mp3 | נִתְרָאֶה |  | (as above) |
+| il20-w4 | israeli/word/il20-w4.mp3 | אוּלַי |  | (as above) |
+| il20-w5 | israeli/word/il20-w5.mp3 | בְּעוֹד שָׁבוּעַ |  | (as above) |
+| il21-w1 | israeli/word/il21-w1.mp3 | אֲנִי חוֹשֵׁב שֶׁ... |  | (as above) |
+| il21-w2 | israeli/word/il21-w2.mp3 | לְדַעְתִּי |  | (as above) |
+| il21-w3 | israeli/word/il21-w3.mp3 | אֲנִי מַעֲדִיף |  | (as above) |
+| il21-w4 | israeli/word/il21-w4.mp3 | מַסְכִּים |  | (as above) |
+| il21-w5 | israeli/word/il21-w5.mp3 | לֹא מַסְכִּים |  | (as above) |
+| il22-w1 | israeli/word/il22-w1.mp3 | הַלּוֹ |  | (as above) |
+| il22-w2 | israeli/word/il22-w2.mp3 | לְהִתְקַשֵּׁר |  | (as above) |
+| il22-w3 | israeli/word/il22-w3.mp3 | פְּגִישָׁה |  | (as above) |
+| il22-w4 | israeli/word/il22-w4.mp3 | לְקַבֵּעַ |  | (as above) |
+| il22-w5 | israeli/word/il22-w5.mp3 | הוֹדָעָה |  | (as above) |
+| il23-w1 | israeli/word/il23-w1.mp3 | רֹאשׁ |  | (as above) |
+| il23-w2 | israeli/word/il23-w2.mp3 | חַיִּים |  | (as above) |
+| il23-w3 | israeli/word/il23-w3.mp3 | מַה שְׁלוֹמְךָ |  | (as above) |
+| il24-w1 | israeli/word/il24-w1.mp3 | מַה קָרָה |  | (as above) |
+| il24-w2 | israeli/word/il24-w2.mp3 | תַּסְבִּיר לִי |  | (as above) |
+| il24-w3 | israeli/word/il24-w3.mp3 | בּוֹא נַחֲלִיט |  | (as above) |
+
+## Survival phrasebook (Israeli only)
+
+Takes per clip: 2. Clips: 161.
+
+| id | file (under audio/<voice>/) | pointed Hebrew | IPA | direction |
+|---|---|---|---|---|
+| greetings-03 | israeli/line/greetings-03.mp3 | בֹּקֶר טוֹב |  | SURVIVAL PHRASE: say it the way an Israeli would in the street (register is in the corpus data; slang is slang). Natural rhythm, no teaching slowdown, one breath unless the text has a comma. The feminine/masculine form is already chosen by the id (-m / -f); read the pointed text as written. |
+| greetings-04 | israeli/line/greetings-04.mp3 | צָהֳרַיִם טוֹבִים |  | (as above) |
+| greetings-05 | israeli/line/greetings-05.mp3 | עֶרֶב טוֹב |  | (as above) |
+| greetings-06 | israeli/line/greetings-06.mp3 | לַיְלָה טוֹב |  | (as above) |
+| greetings-07 | israeli/line/greetings-07.mp3 | שַׁבָּת שָׁלוֹם |  | (as above) |
+| greetings-08 | israeli/line/greetings-08.mp3 | שָׁבוּעַ טוֹב |  | (as above) |
+| greetings-09 | israeli/line/greetings-09.mp3 | חַג שָׂמֵחַ |  | (as above) |
+| greetings-10 | israeli/line/greetings-10.mp3 | שָׁנָה טוֹבָה |  | (as above) |
+| greetings-11-m | israeli/line/greetings-11-m.mp3 | מַה שְׁלוֹמְךָ? |  | (as above) |
+| greetings-11-f | israeli/line/greetings-11-f.mp3 | מַה שְׁלוֹמֵךְ? |  | (as above) |
+| greetings-12 | israeli/line/greetings-12.mp3 | מָה נִשְׁמָע? |  | (as above) |
+| greetings-13 | israeli/line/greetings-13.mp3 | מָה קוֹרֶה? |  | (as above) |
+| greetings-14 | israeli/line/greetings-14.mp3 | הַכֹּל בְּסֵדֶר |  | (as above) |
+| greetings-17 | israeli/line/greetings-17.mp3 | לֹא רַע |  | (as above) |
+| greetings-18 | israeli/line/greetings-18.mp3 | כָּכָה כָּכָה |  | (as above) |
+| greetings-19 | israeli/line/greetings-19.mp3 | נָעִים מְאֹד |  | (as above) |
+| greetings-21 | israeli/line/greetings-21.mp3 | יוֹם נָעִים |  | (as above) |
+| greetings-22-m | israeli/line/greetings-22-m.mp3 | בָּרוּךְ הַבָּא |  | (as above) |
+| greetings-22-f | israeli/line/greetings-22-f.mp3 | בְּרוּכָה הַבָּאָה |  | (as above) |
+| greetings-23 | israeli/line/greetings-23.mp3 | בְּרוּכִים הַבָּאִים |  | (as above) |
+| greetings-24 | israeli/line/greetings-24.mp3 | מַזָּל טוֹב |  | (as above) |
+| greetings-27-m | israeli/line/greetings-27-m.mp3 | תִּשְׁמֹר עַל עַצְמְךָ |  | (as above) |
+| greetings-27-f | israeli/line/greetings-27-f.mp3 | תִּשְׁמְרִי עַל עַצְמֵךְ |  | (as above) |
+| politeness-02 | israeli/line/politeness-02.mp3 | תּוֹדָה רַבָּה |  | (as above) |
+| politeness-04 | israeli/line/politeness-04.mp3 | אֵין בְּעָיָה |  | (as above) |
+| politeness-05 | israeli/line/politeness-05.mp3 | אֵין בַּעַד מָה |  | (as above) |
+| politeness-07-m | israeli/line/politeness-07-m.mp3 | אֲנִי מִצְטַעֵר |  | (as above) |
+| politeness-07-f | israeli/line/politeness-07-f.mp3 | אֲנִי מִצְטַעֶרֶת |  | (as above) |
+| politeness-17 | israeli/line/politeness-17.mp3 | חֲבָל עַל הַזְּמַן |  | (as above) |
+| politeness-18 | israeli/line/politeness-18.mp3 | מָה פִּתְאוֹם? |  | (as above) |
+| politeness-21 | israeli/line/politeness-21.mp3 | בְּעֶזְרַת הַשֵּׁם |  | (as above) |
+| politeness-22 | israeli/line/politeness-22.mp3 | יִהְיֶה בְּסֵדֶר |  | (as above) |
+| fillers-05 | israeli/line/fillers-05.mp3 | לֹא נָכוֹן |  | (as above) |
+| fillers-13-m | israeli/line/fillers-13-m.mp3 | אֲנִי לֹא יוֹדֵעַ |  | (as above) |
+| fillers-13-f | israeli/line/fillers-13-f.mp3 | אֲנִי לֹא יוֹדַעַת |  | (as above) |
+| fillers-14-m | israeli/line/fillers-14-m.mp3 | אֲנִי לֹא מֵבִין |  | (as above) |
+| fillers-14-f | israeli/line/fillers-14-f.mp3 | אֲנִי לֹא מְבִינָה |  | (as above) |
+| fillers-15-m | israeli/line/fillers-15-m.mp3 | אֲנִי מֵבִין |  | (as above) |
+| fillers-15-f | israeli/line/fillers-15-f.mp3 | אֲנִי מְבִינָה |  | (as above) |
+| fillers-16-m | israeli/line/fillers-16-m.mp3 | אַתָּה מְדַבֵּר אַנְגְּלִית? |  | (as above) |
+| fillers-16-f | israeli/line/fillers-16-f.mp3 | אַתְּ מְדַבֶּרֶת אַנְגְּלִית? |  | (as above) |
+| fillers-17-m | israeli/line/fillers-17-m.mp3 | אֲנִי לֹא מְדַבֵּר עִבְרִית טוֹב |  | (as above) |
+| fillers-17-f | israeli/line/fillers-17-f.mp3 | אֲנִי לֹא מְדַבֶּרֶת עִבְרִית טוֹב |  | (as above) |
+| fillers-18 | israeli/line/fillers-18.mp3 | אֶפְשָׁר לְדַבֵּר לְאַט? |  | (as above) |
+| fillers-19 | israeli/line/fillers-19.mp3 | אֶפְשָׁר לַחֲזֹר עַל זֶה? |  | (as above) |
+| fillers-20 | israeli/line/fillers-20.mp3 | מָה זֶה? |  | (as above) |
+| fillers-21 | israeli/line/fillers-21.mp3 | מָה זֶה אוֹמֵר? |  | (as above) |
+| fillers-22 | israeli/line/fillers-22.mp3 | אֵיךְ אוֹמְרִים ... בְּעִבְרִית? |  | (as above) |
+| fillers-23 | israeli/line/fillers-23.mp3 | אֶפְשָׁר לִכְתֹּב אֶת זֶה? |  | (as above) |
+| cafe-01 | israeli/line/cafe-01.mp3 | שֻׁלְחָן לִשְׁנַיִם, בְּבַקָּשָׁה |  | (as above) |
+| cafe-02 | israeli/line/cafe-02.mp3 | אֶפְשָׁר לִרְאוֹת אֶת הַתַּפְרִיט? |  | (as above) |
+| cafe-03-m | israeli/line/cafe-03-m.mp3 | אֲנִי רוֹצֶה קָפֶה |  | (as above) |
+| cafe-03-f | israeli/line/cafe-03-f.mp3 | אֲנִי רוֹצָה קָפֶה |  | (as above) |
+| cafe-04 | israeli/line/cafe-04.mp3 | קָפֶה הָפוּךְ |  | (as above) |
+| cafe-06 | israeli/line/cafe-06.mp3 | קָפֶה שָׁחוֹר |  | (as above) |
+| cafe-07 | israeli/line/cafe-07.mp3 | קָפֶה עִם חָלָב |  | (as above) |
+| cafe-08 | israeli/line/cafe-08.mp3 | תֵּה עִם נַעֲנָע |  | (as above) |
+| cafe-10 | israeli/line/cafe-10.mp3 | מַיִם קָרִים, בְּבַקָּשָׁה |  | (as above) |
+| cafe-14 | israeli/line/cafe-14.mp3 | אֶפְשָׁר לְהַזְמִין? |  | (as above) |
+| cafe-15 | israeli/line/cafe-15.mp3 | אֶפְשָׁר עוֹד אֶחָד? |  | (as above) |
+| cafe-21 | israeli/line/cafe-21.mp3 | טָעִים מְאֹד |  | (as above) |
+| cafe-22-m | israeli/line/cafe-22-m.mp3 | אֲנִי צִמְחוֹנִי |  | (as above) |
+| cafe-22-f | israeli/line/cafe-22-f.mp3 | אֲנִי צִמְחוֹנִית |  | (as above) |
+| cafe-23-m | israeli/line/cafe-23-m.mp3 | אֲנִי טִבְעוֹנִי |  | (as above) |
+| cafe-23-f | israeli/line/cafe-23-f.mp3 | אֲנִי טִבְעוֹנִית |  | (as above) |
+| cafe-24-m | israeli/line/cafe-24-m.mp3 | אֲנִי אָלֶרְגִּי לְ |  | (as above) |
+| cafe-24-f | israeli/line/cafe-24-f.mp3 | אֲנִי אָלֶרְגִּית לְ |  | (as above) |
+| cafe-25 | israeli/line/cafe-25.mp3 | לֶאֱכֹל כָּאן אוֹ לָקַחַת? |  | (as above) |
+| cafe-26 | israeli/line/cafe-26.mp3 | הַחֶשְׁבּוֹן, בְּבַקָּשָׁה |  | (as above) |
+| cafe-27 | israeli/line/cafe-27.mp3 | אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס? |  | (as above) |
+| shop-01 | israeli/line/shop-01.mp3 | כַּמָּה זֶה עוֹלֶה? |  | (as above) |
+| shop-02 | israeli/line/shop-02.mp3 | מָה הַמְּחִיר? |  | (as above) |
+| shop-03 | israeli/line/shop-03.mp3 | זֶה יָקָר |  | (as above) |
+| shop-04 | israeli/line/shop-04.mp3 | זֶה זוֹל |  | (as above) |
+| shop-05 | israeli/line/shop-05.mp3 | יֵשׁ הַנָּחָה? |  | (as above) |
+| shop-06-m | israeli/line/shop-06-m.mp3 | אֲנִי רַק מִסְתַּכֵּל |  | (as above) |
+| shop-06-f | israeli/line/shop-06-f.mp3 | אֲנִי רַק מִסְתַּכֶּלֶת |  | (as above) |
+| shop-07 | israeli/line/shop-07.mp3 | אֶקַּח אֶת זֶה |  | (as above) |
+| shop-08 | israeli/line/shop-08.mp3 | יֵשׁ לָכֶם ...? |  | (as above) |
+| shop-09 | israeli/line/shop-09.mp3 | אֶפְשָׁר לִמְדֹּד? |  | (as above) |
+| shop-10 | israeli/line/shop-10.mp3 | מָה הַמִּדָּה? |  | (as above) |
+| shop-11 | israeli/line/shop-11.mp3 | יֵשׁ מִדָּה גְּדוֹלָה יוֹתֵר? |  | (as above) |
+| shop-13 | israeli/line/shop-13.mp3 | כַּרְטִיס אַשְׁרַאי |  | (as above) |
+| shop-14 | israeli/line/shop-14.mp3 | אֶפְשָׁר קַבָּלָה? |  | (as above) |
+| shop-15 | israeli/line/shop-15.mp3 | אֶפְשָׁר שַׂקִּית? |  | (as above) |
+| shop-18 | israeli/line/shop-18.mp3 | מָתַי אַתֶּם סוֹגְרִים? |  | (as above) |
+| shop-20 | israeli/line/shop-20.mp3 | אֵיפֹה הַשֵּׁרוּתִים? |  | (as above) |
+| taxi-01-m | israeli/line/taxi-01-m.mp3 | אֲנִי צָרִיךְ מוֹנִית |  | (as above) |
+| taxi-01-f | israeli/line/taxi-01-f.mp3 | אֲנִי צְרִיכָה מוֹנִית |  | (as above) |
+| taxi-03 | israeli/line/taxi-03.mp3 | לִשְׂדֵה הַתְּעוּפָה, בְּבַקָּשָׁה |  | (as above) |
+| taxi-04 | israeli/line/taxi-04.mp3 | לַתַּחֲנָה הַמֶּרְכָּזִית |  | (as above) |
+| taxi-07 | israeli/line/taxi-07.mp3 | אֶפְשָׁר מוֹנֶה, בְּבַקָּשָׁה? |  | (as above) |
+| taxi-08 | israeli/line/taxi-08.mp3 | כַּמָּה זֶה יַעֲלֶה? |  | (as above) |
+| taxi-09-m | israeli/line/taxi-09-m.mp3 | עֲצֹר כָּאן, בְּבַקָּשָׁה |  | (as above) |
+| taxi-09-f | israeli/line/taxi-09-f.mp3 | עִצְרִי כָּאן, בְּבַקָּשָׁה |  | (as above) |
+| taxi-10 | israeli/line/taxi-10.mp3 | אֵיפֹה תַּחֲנַת הָאוֹטוֹבּוּס? |  | (as above) |
+| taxi-11 | israeli/line/taxi-11.mp3 | אֵיזֶה אוֹטוֹבּוּס הוֹלֵךְ לְ...? |  | (as above) |
+| taxi-12 | israeli/line/taxi-12.mp3 | מָתַי הָרַכֶּבֶת הַבָּאָה? |  | (as above) |
+| taxi-13 | israeli/line/taxi-13.mp3 | כַּרְטִיס אֶחָד לְ..., בְּבַקָּשָׁה |  | (as above) |
+| taxi-14 | israeli/line/taxi-14.mp3 | הַאִם זֶה הָאוֹטוֹבּוּס לְ...? |  | (as above) |
+| taxi-15 | israeli/line/taxi-15.mp3 | הַנְּסִיעָה הָיְתָה נָעִימָה, תּוֹדָה |  | (as above) |
+| directions-01 | israeli/line/directions-01.mp3 | אֵיפֹה ...? |  | (as above) |
+| directions-02 | israeli/line/directions-02.mp3 | אֵיךְ מַגִּיעִים לְ...? |  | (as above) |
+| directions-03 | israeli/line/directions-03.mp3 | זֶה רָחוֹק? |  | (as above) |
+| directions-04 | israeli/line/directions-04.mp3 | זֶה קָרוֹב |  | (as above) |
+| directions-08-m | israeli/line/directions-08-m.mp3 | לֵךְ יָשָׁר |  | (as above) |
+| directions-08-f | israeli/line/directions-08-f.mp3 | לְכִי יָשָׁר |  | (as above) |
+| directions-09-m | israeli/line/directions-09-m.mp3 | פְּנֵה שְׂמֹאלָה |  | (as above) |
+| directions-09-f | israeli/line/directions-09-f.mp3 | פְּנִי שְׂמֹאלָה |  | (as above) |
+| directions-10-m | israeli/line/directions-10-m.mp3 | פְּנֵה יָמִינָה |  | (as above) |
+| directions-10-f | israeli/line/directions-10-f.mp3 | פְּנִי יָמִינָה |  | (as above) |
+| directions-11 | israeli/line/directions-11.mp3 | עַל יַד |  | (as above) |
+| directions-14-m | israeli/line/directions-14-m.mp3 | אֲנִי אָבוּד |  | (as above) |
+| directions-14-f | israeli/line/directions-14-f.mp3 | אֲנִי אֲבוּדָה |  | (as above) |
+| directions-15 | israeli/line/directions-15.mp3 | אֶפְשָׁר לְהַרְאוֹת לִי עַל הַמַּפָּה? |  | (as above) |
+| directions-16 | israeli/line/directions-16.mp3 | כַּמָּה זְמַן זֶה לוֹקֵחַ? |  | (as above) |
+| directions-17 | israeli/line/directions-17.mp3 | אֵיפֹה בֵּית הַחוֹלִים? |  | (as above) |
+| directions-18 | israeli/line/directions-18.mp3 | אֵיפֹה בֵּית הַמִּרְקַחַת? |  | (as above) |
+| directions-19 | israeli/line/directions-19.mp3 | אֵיפֹה הַמָּלוֹן? |  | (as above) |
+| directions-20 | israeli/line/directions-20.mp3 | אֵיפֹה הַתַּחֲנָה? |  | (as above) |
+| numbers-16 | israeli/line/numbers-16.mp3 | מָה הַשָּׁעָה? |  | (as above) |
+| numbers-17 | israeli/line/numbers-17.mp3 | הַשָּׁעָה שָׁלוֹשׁ |  | (as above) |
+| small-talk-01-m | israeli/line/small-talk-01-m.mp3 | מַה שִּׁמְךָ? |  | (as above) |
+| small-talk-01-f | israeli/line/small-talk-01-f.mp3 | מַה שְּׁמֵךְ? |  | (as above) |
+| small-talk-02 | israeli/line/small-talk-02.mp3 | קוֹרְאִים לִי ... |  | (as above) |
+| small-talk-03-m | israeli/line/small-talk-03-m.mp3 | מֵאֵיפֹה אַתָּה? |  | (as above) |
+| small-talk-03-f | israeli/line/small-talk-03-f.mp3 | מֵאֵיפֹה אַתְּ? |  | (as above) |
+| small-talk-04 | israeli/line/small-talk-04.mp3 | אֲנִי מִקָּנָדָה |  | (as above) |
+| small-talk-05-m | israeli/line/small-talk-05-m.mp3 | אֲנִי תַּיָּר |  | (as above) |
+| small-talk-05-f | israeli/line/small-talk-05-f.mp3 | אֲנִי תַּיֶּרֶת |  | (as above) |
+| small-talk-06 | israeli/line/small-talk-06.mp3 | זֹאת הַפַּעַם הָרִאשׁוֹנָה שֶׁלִּי בְּיִשְׂרָאֵל |  | (as above) |
+| small-talk-07-m | israeli/line/small-talk-07-m.mp3 | מָה אַתָּה עוֹשֶׂה? |  | (as above) |
+| small-talk-07-f | israeli/line/small-talk-07-f.mp3 | מָה אַתְּ עוֹשָׂה? |  | (as above) |
+| small-talk-08-m | israeli/line/small-talk-08-m.mp3 | בֶּן כַּמָּה אַתָּה? |  | (as above) |
+| small-talk-08-f | israeli/line/small-talk-08-f.mp3 | בַּת כַּמָּה אַתְּ? |  | (as above) |
+| small-talk-09-m | israeli/line/small-talk-09-m.mp3 | אֲנִי רָעֵב |  | (as above) |
+| small-talk-09-f | israeli/line/small-talk-09-f.mp3 | אֲנִי רְעֵבָה |  | (as above) |
+| small-talk-10-m | israeli/line/small-talk-10-m.mp3 | אֲנִי צָמֵא |  | (as above) |
+| small-talk-10-f | israeli/line/small-talk-10-f.mp3 | אֲנִי צְמֵאָה |  | (as above) |
+| small-talk-11-m | israeli/line/small-talk-11-m.mp3 | אֲנִי עָיֵף |  | (as above) |
+| small-talk-11-f | israeli/line/small-talk-11-f.mp3 | אֲנִי עֲיֵפָה |  | (as above) |
+| small-talk-12 | israeli/line/small-talk-12.mp3 | חַם לִי |  | (as above) |
+| small-talk-13 | israeli/line/small-talk-13.mp3 | קַר לִי |  | (as above) |
+| small-talk-14-m | israeli/line/small-talk-14-m.mp3 | הַכֹּל בְּסֵדֶר אִתְּךָ? |  | (as above) |
+| small-talk-14-f | israeli/line/small-talk-14-f.mp3 | הַכֹּל בְּסֵדֶר אִתָּךְ? |  | (as above) |
+| small-talk-16 | israeli/line/small-talk-16.mp3 | מָה הַמַּצָּב? |  | (as above) |
+| small-talk-17 | israeli/line/small-talk-17.mp3 | אֵין מָה לַעֲשׂוֹת |  | (as above) |
+| small-talk-19-m | israeli/line/small-talk-19-m.mp3 | אֶתְגַּעְגֵּעַ אֵלֶיךָ |  | (as above) |
+| small-talk-19-f | israeli/line/small-talk-19-f.mp3 | אֶתְגַּעְגֵּעַ אֵלַיִךְ |  | (as above) |
+| help-02-m | israeli/line/help-02-m.mp3 | אֲנִי צָרִיךְ רוֹפֵא |  | (as above) |
+| help-02-f | israeli/line/help-02-f.mp3 | אֲנִי צְרִיכָה רוֹפֵא |  | (as above) |
+| help-03-m | israeli/line/help-03-m.mp3 | תִּקְרָא לַמִּשְׁטָרָה |  | (as above) |
+| help-03-f | israeli/line/help-03-f.mp3 | תִּקְרְאִי לַמִּשְׁטָרָה |  | (as above) |
+| help-04-m | israeli/line/help-04-m.mp3 | תִּקְרָא לְאַמְבּוּלַנְס |  | (as above) |
+| help-04-f | israeli/line/help-04-f.mp3 | תִּקְרְאִי לְאַמְבּוּלַנְס |  | (as above) |
+| help-05 | israeli/line/help-05.mp3 | אָבַד לִי הַדַּרְכּוֹן |  | (as above) |
+| help-06 | israeli/line/help-06.mp3 | אָבַד לִי הַטֶּלֶפוֹן |  | (as above) |
+| help-07-m | israeli/line/help-07-m.mp3 | אֲנִי לֹא מַרְגִּישׁ טוֹב |  | (as above) |
+| help-07-f | israeli/line/help-07-f.mp3 | אֲנִי לֹא מַרְגִּישָׁה טוֹב |  | (as above) |
+| help-08 | israeli/line/help-08.mp3 | יֵשׁ לִי כְּאֵב רֹאשׁ |  | (as above) |
+| help-09 | israeli/line/help-09.mp3 | אֶפְשָׁר לְהִשְׁתַּמֵּשׁ בַּטֶּלֶפוֹן שֶׁלְּךָ? |  | (as above) |
+
+## Prayer lines (one clip per line)
+
+Takes per clip: 2. Clips: 55.
+
+| id | file (under audio/<voice>/) | pointed Hebrew | IPA | direction |
+|---|---|---|---|---|
+| bless-priestly-1 | israeli/line/bless-priestly-1.mp3 | יְבָרֶכְךָ אֲדֹנָי וְיִשְׁמְרֶךָ׃ |  | Prayer line (a line of a longer text), Israeli pronunciation, unhurried and steady, no sung cantillation, natural pause at commas. |
+| bless-priestly-2 | israeli/line/bless-priestly-2.mp3 | יָאֵר אֲדֹנָי פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃ |  | (as above) |
+| bless-priestly-3 | israeli/line/bless-priestly-3.mp3 | יִשָּׂא אֲדֹנָי פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃ |  | (as above) |
+| shema-1 | israeli/line/shema-1.mp3 | שְׁמַע יִשְׂרָאֵל אֲדֹנָי אֱלֹהֵינוּ אֲדֹנָי אֶחָד׃ |  | (as above) |
+| vahavta-1 | israeli/line/vahavta-1.mp3 | וְאָהַבְתָּ אֵת אֲדֹנָי אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃ |  | (as above) |
+| vahavta-2-l1 | israeli/line/vahavta-2-l1.mp3 | וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ |  | (as above) |
+| vahavta-2-l2 | israeli/line/vahavta-2-l2.mp3 | וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃ |  | (as above) |
+| vahavta-full-l1 | israeli/line/vahavta-full-l1.mp3 | וְאָהַבְתָּ אֵת אֲדֹנָי אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃ |  | (as above) |
+| vahavta-full-l2 | israeli/line/vahavta-full-l2.mp3 | וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ |  | (as above) |
+| vahavta-full-l3 | israeli/line/vahavta-full-l3.mp3 | וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃ |  | (as above) |
+| vahavta-full-l4 | israeli/line/vahavta-full-l4.mp3 | וּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃ |  | (as above) |
+| vahavta-full-l5 | israeli/line/vahavta-full-l5.mp3 | וּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃ |  | (as above) |
+| shema-vahavta-l1 | israeli/line/shema-vahavta-l1.mp3 | שְׁמַע יִשְׂרָאֵל אֲדֹנָי אֱלֹהֵינוּ אֲדֹנָי אֶחָד׃ |  | (as above) |
+| shema-vahavta-l2 | israeli/line/shema-vahavta-l2.mp3 | וְאָהַבְתָּ אֵת אֲדֹנָי אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃ |  | (as above) |
+| shema-vahavta-l3 | israeli/line/shema-vahavta-l3.mp3 | וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ |  | (as above) |
+| shema-vahavta-l4 | israeli/line/shema-vahavta-l4.mp3 | וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃ |  | (as above) |
+| shema-vahavta-l5 | israeli/line/shema-vahavta-l5.mp3 | וּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃ |  | (as above) |
+| shema-vahavta-l6 | israeli/line/shema-vahavta-l6.mp3 | וּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃ |  | (as above) |
+| shema-2 | israeli/line/shema-2.mp3 | בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃ |  | (as above) |
+| bless-formula-1 | israeli/line/bless-formula-1.mp3 | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם |  | (as above) |
+| mah-tovu-1 | israeli/line/mah-tovu-1.mp3 | מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃ |  | (as above) |
+| mi-chamocha-1 | israeli/line/mi-chamocha-1.mp3 | מִי־כָמֹכָה בָּאֵלִם אֲדֹנָי מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃ |  | (as above) |
+| num-12-13 | israeli/line/num-12-13.mp3 | אֵל נָא רְפָא נָא לָהּ׃ |  | (as above) |
+| kiddush-gen-2-1-3-l1 | israeli/line/kiddush-gen-2-1-3-l1.mp3 | וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃ |  | (as above) |
+| kiddush-gen-2-1-3-l2 | israeli/line/kiddush-gen-2-1-3-l2.mp3 | וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה׃ |  | (as above) |
+| kiddush-gen-2-1-3-l3 | israeli/line/kiddush-gen-2-1-3-l3.mp3 | וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ שָׁבַת מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת׃ |  | (as above) |
+| kiddush-wine-1 | israeli/line/kiddush-wine-1.mp3 | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן׃ |  | (as above) |
+| hamotzi | israeli/line/hamotzi.mp3 | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ׃ |  | (as above) |
+| candle-shabbat | israeli/line/candle-shabbat.mp3 | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת׃ |  | (as above) |
+| torah-bless-1 | israeli/line/torah-bless-1.mp3 | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל־הָעַמִּים וְנָתַן לָנוּ אֶת־תּוֹרָתוֹ בָּרוּךְ אַתָּה אֲדֹנָי נוֹתֵן הַתּוֹרָה׃ |  | (as above) |
+| torah-barchu-l1 | israeli/line/torah-barchu-l1.mp3 | בָּרְכוּ אֶת אֲדֹנָי הַמְּבֹרָךְ׃ |  | (as above) |
+| torah-barchu-l2 | israeli/line/torah-barchu-l2.mp3 | בָּרוּךְ אֲדֹנָי הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃ |  | (as above) |
+| torah-bless-2 | israeli/line/torah-bless-2.mp3 | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר נָתַן לָנוּ תּוֹרַת אֱמֶת וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵנוּ׃ בָּרוּךְ אַתָּה אֲדֹנָי נוֹתֵן הַתּוֹרָה׃ |  | (as above) |
+| amidah-lips | israeli/line/amidah-lips.mp3 | אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ׃ |  | (as above) |
+| avot-1 | israeli/line/avot-1.mp3 | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא אֵל עֶלְיוֹן גּוֹמֵל חֲסָדִים טוֹבִים קוֹנֵה הַכֹּל וְזוֹכֵר חַסְדֵּי אָבוֹת וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַעַן שְׁמוֹ בְּאַהֲבָה׃ מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן׃ |  | (as above) |
+| aleinu-1 | israeli/line/aleinu-1.mp3 | עָלֵינוּ לְשַׁבֵּחַ לַאֲדוֹן הַכֹּל לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית שֶׁלֹּא עָשָׂנוּ כְּגוֹיֵי הָאֲרָצוֹת וְלֹא שָׂמָנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה שֶׁלֹּא שָׂם חֶלְקֵנוּ כָּהֶם וְגוֹרָלֵנוּ כְּכָל־הֲמוֹנָם שֶׁהֵם מִשְׁתַּחֲוִים לָהֶבֶל וָרִיק וּמִתְפַּלְּלִים אֶל־אֵל לֹא יוֹשִׁיעַ וַאֲנַחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא שֶׁהוּא נוֹטֶה שָׁמַיִם וְיוֹסֵד אָרֶץ וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַיִם מִמַּעַל וּשְׁכִינַת עֻזּוֹ בְּגָבְהֵי מְרוֹמִים הוּא אֱלֹהֵינוּ וְאֵין עוֹד אַחֵר אֱמֶת מַלְכֵּנוּ וְאֶפֶס זוּלָתוֹ כַּכָּתוּב בַּתּוֹרָה וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל־לְבָבֶךָ כִּי אֲדֹנָי הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל־הָאָרֶץ מִתָּחַת אֵין עוֹד׃ |  | (as above) |
+| modeh-ani-1 | israeli/line/modeh-ani-1.mp3 | מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃ |  | (as above) |
+| adon-olam-1-l1 | israeli/line/adon-olam-1-l1.mp3 | אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃ |  | (as above) |
+| adon-olam-1-l2 | israeli/line/adon-olam-1-l2.mp3 | לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃ |  | (as above) |
+| adon-olam-1-l3 | israeli/line/adon-olam-1-l3.mp3 | וְאַחֲרֵי כִּכְלוֹת הַכֹּל לְבַדּוֹ יִמְלֹךְ נוֹרָא׃ |  | (as above) |
+| adon-olam-1-l4 | israeli/line/adon-olam-1-l4.mp3 | וְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃ |  | (as above) |
+| adon-olam-1-l5 | israeli/line/adon-olam-1-l5.mp3 | וְהוּא אֶחָד וְאֵין שֵׁנִי לְהַמְשִׁיל לוֹ לְהַחְבִּירָה׃ |  | (as above) |
+| adon-olam-1-l6 | israeli/line/adon-olam-1-l6.mp3 | בְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה׃ |  | (as above) |
+| adon-olam-1-l7 | israeli/line/adon-olam-1-l7.mp3 | וְהוּא אֵלִי וְחַי גּוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃ |  | (as above) |
+| adon-olam-1-l8 | israeli/line/adon-olam-1-l8.mp3 | וְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃ |  | (as above) |
+| adon-olam-1-l9 | israeli/line/adon-olam-1-l9.mp3 | בְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישַׁן וְאָעִירָה׃ |  | (as above) |
+| adon-olam-1-l10 | israeli/line/adon-olam-1-l10.mp3 | וְעִם רוּחִי גְּוִיָּתִי אֲדֹנָי לִי וְלֹא אִירָא׃ |  | (as above) |
+| kaddish-1-l1 | israeli/line/kaddish-1-l1.mp3 | יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא אָמֵן |  | (as above) |
+| kaddish-1-l2 | israeli/line/kaddish-1-l2.mp3 | בְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן׃ |  | (as above) |
+| kaddish-1-l3 | israeli/line/kaddish-1-l3.mp3 | יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא |  | (as above) |
+| kaddish-1-l4 | israeli/line/kaddish-1-l4.mp3 | יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא |  | (as above) |
+| kaddish-1-l5 | israeli/line/kaddish-1-l5.mp3 | לְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחָמָתָא דַּאֲמִירָן בְּעָלְמָא וְאִמְרוּ אָמֵן׃ |  | (as above) |
+| kaddish-1-l6 | israeli/line/kaddish-1-l6.mp3 | יְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃ |  | (as above) |
+| kaddish-1-l7 | israeli/line/kaddish-1-l7.mp3 | עוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃ |  | (as above) |
+| birkat-hamazon-1 | israeli/line/birkat-hamazon-1.mp3 | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַזָּן אֶת הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ בְּחֵן בְּחֶסֶד וּבְרַחֲמִים הוּא נוֹתֵן לֶחֶם לְכָל בָּשָׂר כִּי לְעוֹלָם חַסְדּוֹ׃ |  | (as above) |
+
+## Prayer words (one clip per word, for tap-to-hear)
+
+Takes per clip: 2. Clips: 562.
+
+| id | file (under audio/<voice>/) | pointed Hebrew | IPA | direction |
+|---|---|---|---|---|
+| bless-priestly-1-w1 | israeli/word/bless-priestly-1-w1.mp3 | יְבָרֶכְךָ |  | Single word cut from a prayer, Israeli pronunciation; say it as if reading it slowly, not sung. |
 | bless-priestly-1-w2 | israeli/word/bless-priestly-1-w2.mp3 | אֲדֹנָי |  | (as above) |
 | bless-priestly-1-w3 | israeli/word/bless-priestly-1-w3.mp3 | וְיִשְׁמְרֶךָ׃ |  | (as above) |
 | bless-priestly-2-w1 | israeli/word/bless-priestly-2-w1.mp3 | יָאֵר |  | (as above) |
@@ -781,393 +1372,120 @@ Takes per clip: 2. Clips: 867.
 | birkat-hamazon-1-w20 | israeli/word/birkat-hamazon-1-w20.mp3 | כִּי |  | (as above) |
 | birkat-hamazon-1-w21 | israeli/word/birkat-hamazon-1-w21.mp3 | לְעוֹלָם |  | (as above) |
 | birkat-hamazon-1-w22 | israeli/word/birkat-hamazon-1-w22.mp3 | חַסְדּוֹ׃ |  | (as above) |
-| r01-w1 | israeli/word/r01-w1.mp3 | שָׁב |  | (as above) |
-| r02-w1 | israeli/word/r02-w1.mp3 | שַׁבָּת |  | (as above) |
-| r02-w2 | israeli/word/r02-w2.mp3 | בַּת |  | (as above) |
-| r03-w1 | israeli/word/r03-w1.mp3 | שָׁלוֹם |  | (as above) |
-| r03-w2 | israeli/word/r03-w2.mp3 | לוֹ |  | (as above) |
-| r04-w1 | israeli/word/r04-w1.mp3 | שַׁבָּת |  | (as above) |
-| r04-w2 | israeli/word/r04-w2.mp3 | שָׁלוֹם |  | (as above) |
-| r04-w3 | israeli/word/r04-w3.mp3 | שַׁבָּת שָׁלוֹם |  | (as above) |
-| r05-w1 | israeli/word/r05-w1.mp3 | שָׁלוֹם |  | (as above) |
-| r06-w1 | israeli/word/r06-w1.mp3 | בִּי |  | (as above) |
-| r06-w2 | israeli/word/r06-w2.mp3 | לִי |  | (as above) |
-| r07-w1 | israeli/word/r07-w1.mp3 | אַבָּא |  | (as above) |
-| r07-w2 | israeli/word/r07-w2.mp3 | בָּא |  | (as above) |
-| r07-w3 | israeli/word/r07-w3.mp3 | הָיָה |  | (as above) |
-| r07-w4 | israeli/word/r07-w4.mp3 | לֹא |  | (as above) |
-| r08-w1 | israeli/word/r08-w1.mp3 | אֵל |  | (as above) |
-| r08-w2 | israeli/word/r08-w2.mp3 | בֵּית |  | (as above) |
-| r08-w3 | israeli/word/r08-w3.mp3 | לֵב |  | (as above) |
-| r09-w1 | israeli/word/r09-w1.mp3 | שִׁיר |  | (as above) |
-| r09-w2 | israeli/word/r09-w2.mp3 | אִמָּא |  | (as above) |
-| r09-w3 | israeli/word/r09-w3.mp3 | רֹאשׁ |  | (as above) |
-| r09-w4 | israeli/word/r09-w4.mp3 | רָם |  | (as above) |
-| r10-w1 | israeli/word/r10-w1.mp3 | כִּי |  | (as above) |
-| r10-w2 | israeli/word/r10-w2.mp3 | לָךְ |  | (as above) |
-| r10-w3 | israeli/word/r10-w3.mp3 | אַתָּה |  | (as above) |
-| r11-w1 | israeli/word/r11-w1.mp3 | אֶת |  | (as above) |
-| r11-w2 | israeli/word/r11-w2.mp3 | מֶלֶךְ |  | (as above) |
-| r12-w1 | israeli/word/r12-w1.mp3 | בֵּן |  | (as above) |
-| r12-w2 | israeli/word/r12-w2.mp3 | שָׁנָה |  | (as above) |
-| r12-w3 | israeli/word/r12-w3.mp3 | אָנִי |  | (as above) |
-| r12-w4 | israeli/word/r12-w4.mp3 | אָמֵן |  | (as above) |
-| r13-w1 | israeli/word/r13-w1.mp3 | הוּא |  | (as above) |
-| r13-w2 | israeli/word/r13-w2.mp3 | שׁוּב |  | (as above) |
-| r13-w3 | israeli/word/r13-w3.mp3 | כֻּלָּם |  | (as above) |
-| r14-w1 | israeli/word/r14-w1.mp3 | בְּרָכָה |  | (as above) |
-| r14-w2 | israeli/word/r14-w2.mp3 | בְּרֵאשִׁית |  | (as above) |
-| r14-w3 | israeli/word/r14-w3.mp3 | לְךָ |  | (as above) |
-| r14-w4 | israeli/word/r14-w4.mp3 | וְאָנִי |  | (as above) |
-| r15-w1 | israeli/word/r15-w1.mp3 | יְבָרֶכְךָ |  | (as above) |
-| r15-w2 | israeli/word/r15-w2.mp3 | יְהוָה |  | (as above) |
-| r15-w3 | israeli/word/r15-w3.mp3 | וְיִשְׁמְרֶךָ |  | (as above) |
-| r16-w1 | israeli/word/r16-w1.mp3 | פֶּה |  | (as above) |
-| r16-w2 | israeli/word/r16-w2.mp3 | אַף |  | (as above) |
-| r16-w3 | israeli/word/r16-w3.mp3 | פָּנָיו |  | (as above) |
-| r17-w1 | israeli/word/r17-w1.mp3 | חַי |  | (as above) |
-| r17-w2 | israeli/word/r17-w2.mp3 | חָכָם |  | (as above) |
-| r17-w3 | israeli/word/r17-w3.mp3 | רוּחַ |  | (as above) |
-| r18-w1 | israeli/word/r18-w1.mp3 | אֶחָד |  | (as above) |
-| r18-w2 | israeli/word/r18-w2.mp3 | גָּדוֹל |  | (as above) |
-| r18-w3 | israeli/word/r18-w3.mp3 | גַּן |  | (as above) |
-| r18-w4 | israeli/word/r18-w4.mp3 | דֶּרֶךְ |  | (as above) |
-| r19-w1 | israeli/word/r19-w1.mp3 | שְׁמַע |  | (as above) |
-| r19-w2 | israeli/word/r19-w2.mp3 | עַם |  | (as above) |
-| r19-w3 | israeli/word/r19-w3.mp3 | עוֹלָם |  | (as above) |
-| r20-w1 | israeli/word/r20-w1.mp3 | סֵפֶר |  | (as above) |
-| r20-w2 | israeli/word/r20-w2.mp3 | יִשְׂרָאֵל |  | (as above) |
-| r20-w3 | israeli/word/r20-w3.mp3 | שִׂמְחָה |  | (as above) |
-| r21-w1 | israeli/word/r21-w1.mp3 | אֱלֹהִים |  | (as above) |
-| r21-w2 | israeli/word/r21-w2.mp3 | אֱמֶת |  | (as above) |
-| r21-w3 | israeli/word/r21-w3.mp3 | אֲנִי |  | (as above) |
-| r21-w4 | israeli/word/r21-w4.mp3 | אֲדֹנָי |  | (as above) |
-| r21-w5 | israeli/word/r21-w5.mp3 | אֳנִיָּה |  | (as above) |
-| r22-w1 | israeli/word/r22-w1.mp3 | שְׁמַע |  | (as above) |
-| r22-w2 | israeli/word/r22-w2.mp3 | יִשְׂרָאֵל |  | (as above) |
-| r22-w3 | israeli/word/r22-w3.mp3 | אֱלֹהֵינוּ |  | (as above) |
-| r22-w4 | israeli/word/r22-w4.mp3 | אֶחָד |  | (as above) |
-| r23-w1 | israeli/word/r23-w1.mp3 | זֶה |  | (as above) |
-| r23-w2 | israeli/word/r23-w2.mp3 | טוֹב |  | (as above) |
-| r23-w3 | israeli/word/r23-w3.mp3 | זָהָב |  | (as above) |
-| r23-w4 | israeli/word/r23-w4.mp3 | טַל |  | (as above) |
-| r24-w1 | israeli/word/r24-w1.mp3 | צֶדֶק |  | (as above) |
-| r24-w2 | israeli/word/r24-w2.mp3 | אֶרֶץ |  | (as above) |
-| r24-w3 | israeli/word/r24-w3.mp3 | קוֹל |  | (as above) |
-| r24-w4 | israeli/word/r24-w4.mp3 | קָדוֹשׁ |  | (as above) |
-| r24-w5 | israeli/word/r24-w5.mp3 | צְדָקָה |  | (as above) |
-| r25-w1 | israeli/word/r25-w1.mp3 | יָאֵר |  | (as above) |
-| r25-w2 | israeli/word/r25-w2.mp3 | פָּנָיו |  | (as above) |
-| r25-w3 | israeli/word/r25-w3.mp3 | אֵלֶיךָ |  | (as above) |
-| r25-w4 | israeli/word/r25-w4.mp3 | וִיחֻנֶּךָּ |  | (as above) |
-| r26-w1 | israeli/word/r26-w1.mp3 | יִשָּׂא |  | (as above) |
-| r26-w2 | israeli/word/r26-w2.mp3 | וְיָשֵׂם |  | (as above) |
-| r26-w3 | israeli/word/r26-w3.mp3 | שָׁלוֹם |  | (as above) |
-| r27-w1 | israeli/word/r27-w1.mp3 | בִּרְכַּת כֹּהֲנִים |  | (as above) |
-| r28-w1 | israeli/word/r28-w1.mp3 | בָּרוּךְ |  | (as above) |
-| r28-w2 | israeli/word/r28-w2.mp3 | אַתָּה |  | (as above) |
-| r28-w3 | israeli/word/r28-w3.mp3 | אֱלֹהֵינוּ |  | (as above) |
-| r28-w4 | israeli/word/r28-w4.mp3 | מֶלֶךְ |  | (as above) |
-| r28-w5 | israeli/word/r28-w5.mp3 | הָעוֹלָם |  | (as above) |
-| r29-w1 | israeli/word/r29-w1.mp3 | יִשְׁמְרֶךָ |  | (as above) |
-| r29-w2 | israeli/word/r29-w2.mp3 | מִשְׁפָּט |  | (as above) |
-| r29-w3 | israeli/word/r29-w3.mp3 | תִּשְׁמְעוּ |  | (as above) |
-| r29-w4 | israeli/word/r29-w4.mp3 | וּבְכָל |  | (as above) |
-| r30-w1 | israeli/word/r30-w1.mp3 | בָּרוּךְ |  | (as above) |
-| r30-w2 | israeli/word/r30-w2.mp3 | כָּתַב |  | (as above) |
-| r30-w3 | israeli/word/r30-w3.mp3 | שְׁמֵהּ |  | (as above) |
-| r30-w4 | israeli/word/r30-w4.mp3 | כֻּלּוֹ |  | (as above) |
-| r31-w1 | israeli/word/r31-w1.mp3 | שָׁלוֹם |  | (as above) |
-| r31-w2 | israeli/word/r31-w2.mp3 | בְּרֵאשִׁית |  | (as above) |
-| r31-w3 | israeli/word/r31-w3.mp3 | יִשְׂרָאֵל |  | (as above) |
-| r31-w4 | israeli/word/r31-w4.mp3 | אַתָּה |  | (as above) |
-| r32-w1 | israeli/word/r32-w1.mp3 | כָּל |  | (as above) |
-| r32-w2 | israeli/word/r32-w2.mp3 | חָכְמָה |  | (as above) |
-| r32-w3 | israeli/word/r32-w3.mp3 | קָדְשׁוֹ |  | (as above) |
-| r33-w1 | israeli/word/r33-w1.mp3 | וְהָיָה |  | (as above) |
-| r33-w2 | israeli/word/r33-w2.mp3 | בַּבַּיִת |  | (as above) |
-| r33-w3 | israeli/word/r33-w3.mp3 | לַמֶּלֶךְ |  | (as above) |
-| r33-w4 | israeli/word/r33-w4.mp3 | מֵהָעוֹלָם |  | (as above) |
-| r34-w1 | israeli/word/r34-w1.mp3 | יהוה |  | (as above) |
-| r34-w2 | israeli/word/r34-w2.mp3 | אדני |  | (as above) |
-| r35-w1 | israeli/word/r35-w1.mp3 | שלום |  | (as above) |
-| r35-w2 | israeli/word/r35-w2.mp3 | שבת |  | (as above) |
-| r35-w3 | israeli/word/r35-w3.mp3 | ברוך |  | (as above) |
-| r36-w1 | israeli/word/r36-w1.mp3 | בָּרוּךְ |  | (as above) |
-| r36-w2 | israeli/word/r36-w2.mp3 | שֵׁם |  | (as above) |
-| r36-w3 | israeli/word/r36-w3.mp3 | כְּבוֹד |  | (as above) |
-| r36-w4 | israeli/word/r36-w4.mp3 | מַלְכוּתוֹ |  | (as above) |
-| r36-w5 | israeli/word/r36-w5.mp3 | לְעוֹלָם |  | (as above) |
-| r36-w6 | israeli/word/r36-w6.mp3 | וָעֶד |  | (as above) |
-| r37-w1 | israeli/word/r37-w1.mp3 | וְאָהַבְתָּ |  | (as above) |
-| r37-w2 | israeli/word/r37-w2.mp3 | לְבָבְךָ |  | (as above) |
-| r37-w3 | israeli/word/r37-w3.mp3 | נַפְשְׁךָ |  | (as above) |
-| r37-w4 | israeli/word/r37-w4.mp3 | מְאֹדֶךָ |  | (as above) |
-| r37-w5 | israeli/word/r37-w5.mp3 | וְשִׁנַּנְתָּם |  | (as above) |
-| r38-w1 | israeli/word/r38-w1.mp3 | תּוֹרָה |  | (as above) |
-| r38-w2 | israeli/word/r38-w2.mp3 | בָּחַר |  | (as above) |
-| r38-w3 | israeli/word/r38-w3.mp3 | הָעַמִּים |  | (as above) |
-| r38-w4 | israeli/word/r38-w4.mp3 | נָתַן |  | (as above) |
-| r39-w1 | israeli/word/r39-w1.mp3 | מוֹדֶה |  | (as above) |
-| r39-w2 | israeli/word/r39-w2.mp3 | מוֹדָה |  | (as above) |
-| r39-w3 | israeli/word/r39-w3.mp3 | נִשְׁמָתִי |  | (as above) |
-| r39-w4 | israeli/word/r39-w4.mp3 | בְּחֶמְלָה |  | (as above) |
-| r39-w5 | israeli/word/r39-w5.mp3 | אֱמוּנָתֶךָ |  | (as above) |
-| r40-w1 | israeli/word/r40-w1.mp3 | מַה |  | (as above) |
-| r40-w2 | israeli/word/r40-w2.mp3 | טֹּבוּ |  | (as above) |
-| r40-w3 | israeli/word/r40-w3.mp3 | אֹהָלֶיךָ |  | (as above) |
-| r40-w4 | israeli/word/r40-w4.mp3 | יַעֲקֹב |  | (as above) |
-| r40-w5 | israeli/word/r40-w5.mp3 | מִשְׁכְּנֹתֶיךָ |  | (as above) |
-| r41-w1 | israeli/word/r41-w1.mp3 | בּוֹרֵא |  | (as above) |
-| r41-w2 | israeli/word/r41-w2.mp3 | פְּרִי |  | (as above) |
-| r41-w3 | israeli/word/r41-w3.mp3 | הַגָּפֶן |  | (as above) |
-| r41-w4 | israeli/word/r41-w4.mp3 | יַיִן |  | (as above) |
-| r42-w1 | israeli/word/r42-w1.mp3 | אֱלֹהֵי |  | (as above) |
-| r42-w2 | israeli/word/r42-w2.mp3 | אַבְרָהָם |  | (as above) |
-| r42-w3 | israeli/word/r42-w3.mp3 | יִצְחָק |  | (as above) |
-| r42-w4 | israeli/word/r42-w4.mp3 | יַעֲקֹב |  | (as above) |
-| r43-w1 | israeli/word/r43-w1.mp3 | מִי |  | (as above) |
-| r43-w2 | israeli/word/r43-w2.mp3 | כָּמֹכָה |  | (as above) |
-| r43-w3 | israeli/word/r43-w3.mp3 | נֶאְדָּר |  | (as above) |
-| r43-w4 | israeli/word/r43-w4.mp3 | בַּקֹּדֶשׁ |  | (as above) |
-| r44-w1 | israeli/word/r44-w1.mp3 | עָלֵינוּ |  | (as above) |
-| r44-w2 | israeli/word/r44-w2.mp3 | לְשַׁבֵּחַ |  | (as above) |
-| r44-w3 | israeli/word/r44-w3.mp3 | לַאֲדוֹן |  | (as above) |
-| r44-w4 | israeli/word/r44-w4.mp3 | הַכֹּל |  | (as above) |
-| r45-w1 | israeli/word/r45-w1.mp3 | יִתְגַּדַּל |  | (as above) |
-| r45-w2 | israeli/word/r45-w2.mp3 | וְיִתְקַדַּשׁ |  | (as above) |
-| r45-w3 | israeli/word/r45-w3.mp3 | שְׁמֵהּ |  | (as above) |
-| r45-w4 | israeli/word/r45-w4.mp3 | רַבָּא |  | (as above) |
-| r46-w1 | israeli/word/r46-w1.mp3 | אֲדוֹן |  | (as above) |
-| r46-w2 | israeli/word/r46-w2.mp3 | עוֹלָם |  | (as above) |
-| r46-w3 | israeli/word/r46-w3.mp3 | מָלַךְ |  | (as above) |
-| r46-w4 | israeli/word/r46-w4.mp3 | בְּטֶרֶם |  | (as above) |
-| r46-w5 | israeli/word/r46-w5.mp3 | יְצִיר |  | (as above) |
-| r46-w6 | israeli/word/r46-w6.mp3 | נִבְרָא |  | (as above) |
-| r47-w1 | israeli/word/r47-w1.mp3 | הַזָּן |  | (as above) |
-| r47-w2 | israeli/word/r47-w2.mp3 | כֻּלּוֹ |  | (as above) |
-| r47-w3 | israeli/word/r47-w3.mp3 | בְּטוּבוֹ |  | (as above) |
-| r47-w4 | israeli/word/r47-w4.mp3 | חֵן |  | (as above) |
-| r47-w5 | israeli/word/r47-w5.mp3 | חֶסֶד |  | (as above) |
-| r47-w6 | israeli/word/r47-w6.mp3 | וּבְרַחֲמִים |  | (as above) |
-| r48-w1 | israeli/word/r48-w1.mp3 | בִּרְכַּת כֹּהֲנִים |  | (as above) |
-| r49-w1 | israeli/word/r49-w1.mp3 | וְאָהַבְתָּ |  | (as above) |
-| r50-w1 | israeli/word/r50-w1.mp3 | תְּפִלָּה |  | (as above) |
-| r51-w1 | israeli/word/r51-w1.mp3 | סִדּוּר |  | (as above) |
-| il01-w1 | israeli/word/il01-w1.mp3 | שָׁלוֹם |  | (as above) |
-| il01-w2 | israeli/word/il01-w2.mp3 | תּוֹדָה |  | (as above) |
-| il01-w3 | israeli/word/il01-w3.mp3 | בְּבַקָּשָׁה |  | (as above) |
-| il01-w4 | israeli/word/il01-w4.mp3 | סְלִיחָה |  | (as above) |
-| il01-w5 | israeli/word/il01-w5.mp3 | כֵּן |  | (as above) |
-| il01-w6 | israeli/word/il01-w6.mp3 | לֹא |  | (as above) |
-| il01-w7 | israeli/word/il01-w7.mp3 | בֹּקֶר טוֹב |  | (as above) |
-| il02-w1 | israeli/word/il02-w1.mp3 | יָאללָה |  | (as above) |
-| il02-w2 | israeli/word/il02-w2.mp3 | נוּ |  | (as above) |
-| il02-w3 | israeli/word/il02-w3.mp3 | סַבָּבָּה |  | (as above) |
-| il02-w4 | israeli/word/il02-w4.mp3 | בְּסֵדֶר |  | (as above) |
-| il02-w5 | israeli/word/il02-w5.mp3 | אַחְלָה |  | (as above) |
-| il02-w6 | israeli/word/il02-w6.mp3 | וַואלָה |  | (as above) |
-| il03-w1 | israeli/word/il03-w1.mp3 | שְׁמִי |  | (as above) |
-| il03-w2 | israeli/word/il03-w2.mp3 | מַה שְׁמֶךָ |  | (as above) |
-| il03-w3 | israeli/word/il03-w3.mp3 | מַה שְׁמֵךְ |  | (as above) |
-| il03-w4 | israeli/word/il03-w4.mp3 | אֲנִי מִ... |  | (as above) |
-| il03-w5 | israeli/word/il03-w5.mp3 | נָעִים מְאֹד |  | (as above) |
-| il04-w1 | israeli/word/il04-w1.mp3 | אַחַת |  | (as above) |
-| il04-w2 | israeli/word/il04-w2.mp3 | שְׁתַּיִם |  | (as above) |
-| il04-w3 | israeli/word/il04-w3.mp3 | שָׁלוֹשׁ |  | (as above) |
-| il04-w4 | israeli/word/il04-w4.mp3 | אַרְבַּע |  | (as above) |
-| il04-w5 | israeli/word/il04-w5.mp3 | חָמֵשׁ |  | (as above) |
-| il04-w6 | israeli/word/il04-w6.mp3 | שֵׁשׁ |  | (as above) |
-| il04-w7 | israeli/word/il04-w7.mp3 | שֶׁבַע |  | (as above) |
-| il04-w8 | israeli/word/il04-w8.mp3 | שְׁמוֹנֶה |  | (as above) |
-| il04-w9 | israeli/word/il04-w9.mp3 | תֵּשַׁע |  | (as above) |
-| il04-w10 | israeli/word/il04-w10.mp3 | עֶשֶׂר |  | (as above) |
-| il05-w1 | israeli/word/il05-w1.mp3 | עֶשְׂרִים |  | (as above) |
-| il05-w2 | israeli/word/il05-w2.mp3 | שְׁלוֹשִׁים |  | (as above) |
-| il05-w3 | israeli/word/il05-w3.mp3 | מֵאָה |  | (as above) |
-| il05-w4 | israeli/word/il05-w4.mp3 | שֶׁקֶל |  | (as above) |
-| il05-w5 | israeli/word/il05-w5.mp3 | כַּמָּה |  | (as above) |
-| il06-w1 | israeli/word/il06-w1.mp3 | אֶפְשָׁר |  | (as above) |
-| il06-w2 | israeli/word/il06-w2.mp3 | קָפֶה |  | (as above) |
-| il06-w3 | israeli/word/il06-w3.mp3 | הָפוּךְ |  | (as above) |
-| il06-w4 | israeli/word/il06-w4.mp3 | מַיִם |  | (as above) |
-| il06-w5 | israeli/word/il06-w5.mp3 | לְהַזְמִין |  | (as above) |
-| il06-w6 | israeli/word/il06-w6.mp3 | חֶשְׁבּוֹן |  | (as above) |
-| il07-w1 | israeli/word/il07-w1.mp3 | אֹכֶל |  | (as above) |
-| il07-w2 | israeli/word/il07-w2.mp3 | לֶחֶם |  | (as above) |
-| il07-w3 | israeli/word/il07-w3.mp3 | גְּבִינָה |  | (as above) |
-| il07-w4 | israeli/word/il07-w4.mp3 | בֵּיצָה |  | (as above) |
-| il07-w5 | israeli/word/il07-w5.mp3 | סָלָט |  | (as above) |
-| il07-w6 | israeli/word/il07-w6.mp3 | תֵּה |  | (as above) |
-| il08-w1 | israeli/word/il08-w1.mp3 | כַּמָּה זֶה עוֹלֶה |  | (as above) |
-| il08-w2 | israeli/word/il08-w2.mp3 | יָקָר |  | (as above) |
-| il08-w3 | israeli/word/il08-w3.mp3 | זוֹל |  | (as above) |
-| il08-w4 | israeli/word/il08-w4.mp3 | אֲנִי רוֹצֶה |  | (as above) |
-| il08-w5 | israeli/word/il08-w5.mp3 | יֵשׁ |  | (as above) |
-| il08-w6 | israeli/word/il08-w6.mp3 | אֵין |  | (as above) |
-| il09-w1 | israeli/word/il09-w1.mp3 | מְזֻמָּן |  | (as above) |
-| il09-w2 | israeli/word/il09-w2.mp3 | כַּרְטִיס אַשְׁרַאי |  | (as above) |
-| il09-w3 | israeli/word/il09-w3.mp3 | עוֹדֶף |  | (as above) |
-| il09-w4 | israeli/word/il09-w4.mp3 | שַׂקִּית |  | (as above) |
-| il09-w5 | israeli/word/il09-w5.mp3 | קַבָּלָה |  | (as above) |
-| il10-w1 | israeli/word/il10-w1.mp3 | מוֹנִית |  | (as above) |
-| il10-w2 | israeli/word/il10-w2.mp3 | אוֹטוֹבּוּס |  | (as above) |
-| il10-w3 | israeli/word/il10-w3.mp3 | רַכֶּבֶת |  | (as above) |
-| il10-w4 | israeli/word/il10-w4.mp3 | תַּחֲנָה |  | (as above) |
-| il10-w5 | israeli/word/il10-w5.mp3 | כַּרְטִיס |  | (as above) |
-| il10-w6 | israeli/word/il10-w6.mp3 | נְסִיעָה |  | (as above) |
-| il11-w1 | israeli/word/il11-w1.mp3 | יָמִינָה |  | (as above) |
-| il11-w2 | israeli/word/il11-w2.mp3 | שְׂמֹאלָה |  | (as above) |
-| il11-w3 | israeli/word/il11-w3.mp3 | יָשָׁר |  | (as above) |
-| il11-w4 | israeli/word/il11-w4.mp3 | קָרוֹב |  | (as above) |
-| il11-w5 | israeli/word/il11-w5.mp3 | רָחוֹק |  | (as above) |
-| il11-w6 | israeli/word/il11-w6.mp3 | אֵיפֹה |  | (as above) |
-| il12-w1 | israeli/word/il12-w1.mp3 | הַיּוֹם |  | (as above) |
-| il12-w2 | israeli/word/il12-w2.mp3 | מָחָר |  | (as above) |
-| il12-w3 | israeli/word/il12-w3.mp3 | אֶתְמוֹל |  | (as above) |
-| il12-w4 | israeli/word/il12-w4.mp3 | שָׁעָה |  | (as above) |
-| il12-w5 | israeli/word/il12-w5.mp3 | יוֹם רִאשׁוֹן |  | (as above) |
-| il12-w6 | israeli/word/il12-w6.mp3 | שַׁבָּת |  | (as above) |
-| il13-w1 | israeli/word/il13-w1.mp3 | מַה נִּשְׁמָע |  | (as above) |
-| il13-w2 | israeli/word/il13-w2.mp3 | הַכֹּל בְּסֵדֶר |  | (as above) |
-| il13-w3 | israeli/word/il13-w3.mp3 | מַה קּוֹרֶה |  | (as above) |
-| il13-w4 | israeli/word/il13-w4.mp3 | בְּרוּךְ הַשֵּׁם |  | (as above) |
-| il13-w5 | israeli/word/il13-w5.mp3 | לֹא רַע |  | (as above) |
-| il14-w1 | israeli/word/il14-w1.mp3 | מִשְׁפָּחָה |  | (as above) |
-| il14-w2 | israeli/word/il14-w2.mp3 | אָח |  | (as above) |
-| il14-w3 | israeli/word/il14-w3.mp3 | אָחוֹת |  | (as above) |
-| il14-w4 | israeli/word/il14-w4.mp3 | יֶלֶד |  | (as above) |
-| il14-w5 | israeli/word/il14-w5.mp3 | יַלְדָּה |  | (as above) |
-| il14-w6 | israeli/word/il14-w6.mp3 | נָשׂוּי |  | (as above) |
-| il15-w1 | israeli/word/il15-w1.mp3 | חַם |  | (as above) |
-| il15-w2 | israeli/word/il15-w2.mp3 | קַר |  | (as above) |
-| il15-w3 | israeli/word/il15-w3.mp3 | גֶּשֶׁם |  | (as above) |
-| il15-w4 | israeli/word/il15-w4.mp3 | שֶׁמֶשׁ |  | (as above) |
-| il15-w5 | israeli/word/il15-w5.mp3 | מֶזֶג אֲוִיר |  | (as above) |
-| il16-w1 | israeli/word/il16-w1.mp3 | אֲנִי הוֹלֵךְ |  | (as above) |
-| il16-w2 | israeli/word/il16-w2.mp3 | אֲנִי אוֹכֵל |  | (as above) |
-| il16-w3 | israeli/word/il16-w3.mp3 | אֲנִי לוֹמֵד |  | (as above) |
-| il16-w4 | israeli/word/il16-w4.mp3 | אֲנִי כּוֹתֵב |  | (as above) |
-| il16-w5 | israeli/word/il16-w5.mp3 | אֲנִי מְדַבֵּר |  | (as above) |
-| il17-w1 | israeli/word/il17-w1.mp3 | חֶדֶר |  | (as above) |
-| il17-w2 | israeli/word/il17-w2.mp3 | הַזְמָנָה |  | (as above) |
-| il17-w3 | israeli/word/il17-w3.mp3 | לַיְלָה |  | (as above) |
-| il17-w4 | israeli/word/il17-w4.mp3 | מַפְתֵּחַ |  | (as above) |
-| il17-w5 | israeli/word/il17-w5.mp3 | אַרוּחַת בֹּקֶר |  | (as above) |
-| il18-w1 | israeli/word/il18-w1.mp3 | אֲנִי לֹא מֵבִין |  | (as above) |
-| il18-w2 | israeli/word/il18-w2.mp3 | אֶפְשָׁר לְדַבֵּר לְאַט |  | (as above) |
-| il18-w3 | israeli/word/il18-w3.mp3 | תַּגִּידוּ בְּאַנְגְּלִית |  | (as above) |
-| il18-w4 | israeli/word/il18-w4.mp3 | רוֹפֵא |  | (as above) |
-| il18-w5 | israeli/word/il18-w5.mp3 | בֵּית מֶרְקַחַת |  | (as above) |
-| il18-w6 | israeli/word/il18-w6.mp3 | עֶזְרָה |  | (as above) |
-| il19-w1 | israeli/word/il19-w1.mp3 | הָלַכְתִּי |  | (as above) |
-| il19-w2 | israeli/word/il19-w2.mp3 | אָכַלְתִּי |  | (as above) |
-| il19-w3 | israeli/word/il19-w3.mp3 | רָאִיתִי |  | (as above) |
-| il19-w4 | israeli/word/il19-w4.mp3 | אָמַרְתִּי |  | (as above) |
-| il19-w5 | israeli/word/il19-w5.mp3 | הָיָה |  | (as above) |
-| il20-w1 | israeli/word/il20-w1.mp3 | אֲנִי אֵלֵךְ |  | (as above) |
-| il20-w2 | israeli/word/il20-w2.mp3 | אֲנִי אֹכַל |  | (as above) |
-| il20-w3 | israeli/word/il20-w3.mp3 | נִתְרָאֶה |  | (as above) |
-| il20-w4 | israeli/word/il20-w4.mp3 | אוּלַי |  | (as above) |
-| il20-w5 | israeli/word/il20-w5.mp3 | בְּעוֹד שָׁבוּעַ |  | (as above) |
-| il21-w1 | israeli/word/il21-w1.mp3 | אֲנִי חוֹשֵׁב שֶׁ... |  | (as above) |
-| il21-w2 | israeli/word/il21-w2.mp3 | לְדַעְתִּי |  | (as above) |
-| il21-w3 | israeli/word/il21-w3.mp3 | אֲנִי מַעֲדִיף |  | (as above) |
-| il21-w4 | israeli/word/il21-w4.mp3 | מַסְכִּים |  | (as above) |
-| il21-w5 | israeli/word/il21-w5.mp3 | לֹא מַסְכִּים |  | (as above) |
-| il22-w1 | israeli/word/il22-w1.mp3 | הַלּוֹ |  | (as above) |
-| il22-w2 | israeli/word/il22-w2.mp3 | לְהִתְקַשֵּׁר |  | (as above) |
-| il22-w3 | israeli/word/il22-w3.mp3 | פְּגִישָׁה |  | (as above) |
-| il22-w4 | israeli/word/il22-w4.mp3 | לְקַבֵּעַ |  | (as above) |
-| il22-w5 | israeli/word/il22-w5.mp3 | הוֹדָעָה |  | (as above) |
-| il23-w1 | israeli/word/il23-w1.mp3 | רֹאשׁ |  | (as above) |
-| il23-w2 | israeli/word/il23-w2.mp3 | חַיִּים |  | (as above) |
-| il23-w3 | israeli/word/il23-w3.mp3 | מַה שְׁלוֹמְךָ |  | (as above) |
-| il24-w1 | israeli/word/il24-w1.mp3 | מַה קָרָה |  | (as above) |
-| il24-w2 | israeli/word/il24-w2.mp3 | תַּסְבִּיר לִי |  | (as above) |
-| il24-w3 | israeli/word/il24-w3.mp3 | בּוֹא נַחֲלִיט |  | (as above) |
 
-## Lines and phrases
+## Other words
 
-Takes per clip: 2. Clips: 62.
+Takes per clip: 2. Clips: 89.
 
 | id | file (under audio/<voice>/) | pointed Hebrew | IPA | direction |
 |---|---|---|---|---|
-| shema-1 | israeli/line/shema-1.mp3 | שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃ |  | Natural conversational delivery, Modern Israeli, as one would say it to a friend. No chant. |
-| vahavta-1 | israeli/line/vahavta-1.mp3 | וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃ |  | (as above) |
-| vahavta-2 | israeli/line/vahavta-2.mp3 | וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃ |  | (as above) |
-| vahavta-full | israeli/line/vahavta-full.mp3 | וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃ וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃ וּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃ וּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃ |  | (as above) |
-| shema-vahavta | israeli/line/shema-vahavta.mp3 | שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃ וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃ וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃ וּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃ וּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃ |  | (as above) |
-| shema-2 | israeli/line/shema-2.mp3 | בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃ |  | (as above) |
-| mah-tovu-1 | israeli/line/mah-tovu-1.mp3 | מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃ |  | (as above) |
-| mi-chamocha-1 | israeli/line/mi-chamocha-1.mp3 | מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃ |  | (as above) |
-| num-12-13 | israeli/line/num-12-13.mp3 | אֵל נָא רְפָא נָא לָהּ׃ |  | (as above) |
-| kiddush-gen-2-1-3 | israeli/line/kiddush-gen-2-1-3.mp3 | וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃ וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה׃ וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ שָׁבַת מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת׃ |  | (as above) |
-| kiddush-wine-1 | israeli/line/kiddush-wine-1.mp3 | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן׃ |  | (as above) |
-| hamotzi | israeli/line/hamotzi.mp3 | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ׃ |  | (as above) |
-| candle-shabbat | israeli/line/candle-shabbat.mp3 | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת׃ |  | (as above) |
-| torah-barchu | israeli/line/torah-barchu.mp3 | בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ׃ בָּרוּךְ יְהוָה הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃ |  | (as above) |
-| amidah-lips | israeli/line/amidah-lips.mp3 | אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ׃ |  | (as above) |
-| avot-1 | israeli/line/avot-1.mp3 | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא אֵל עֶלְיוֹן גּוֹמֵל חֲסָדִים טוֹבִים קוֹנֵה הַכֹּל וְזוֹכֵר חַסְדֵּי אָבוֹת וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַעַן שְׁמוֹ בְּאַהֲבָה׃ מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן׃ |  | (as above) |
-| aleinu-1 | israeli/line/aleinu-1.mp3 | עָלֵינוּ לְשַׁבֵּחַ לַאֲדוֹן הַכֹּל לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית שֶׁלֹּא עָשָׂנוּ כְּגוֹיֵי הָאֲרָצוֹת וְלֹא שָׂמָנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה שֶׁלֹּא שָׂם חֶלְקֵנוּ כָּהֶם וְגוֹרָלֵנוּ כְּכָל־הֲמוֹנָם שֶׁהֵם מִשְׁתַּחֲוִים לָהֶבֶל וָרִיק וּמִתְפַּלְּלִים אֶל־אֵל לֹא יוֹשִׁיעַ וַאֲנַחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא שֶׁהוּא נוֹטֶה שָׁמַיִם וְיוֹסֵד אָרֶץ וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַיִם מִמַּעַל וּשְׁכִינַת עֻזּוֹ בְּגָבְהֵי מְרוֹמִים הוּא אֱלֹהֵינוּ וְאֵין עוֹד אַחֵר אֱמֶת מַלְכֵּנוּ וְאֶפֶס זוּלָתוֹ כַּכָּתוּב בַּתּוֹרָה וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל־לְבָבֶךָ כִּי יְהוָה הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל־הָאָרֶץ מִתָּחַת אֵין עוֹד׃ |  | (as above) |
-| modeh-ani-1 | israeli/line/modeh-ani-1.mp3 | מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃ |  | (as above) |
-| adon-olam-1 | israeli/line/adon-olam-1.mp3 | אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃ לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃ וְאַחֲרֵי כִּכְלוֹת הַכֹּל לְבַדּוֹ יִמְלֹךְ נוֹרָא׃ וְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃ וְהוּא אֶחָד וְאֵין שֵׁנִי לְהַמְשִׁיל לוֹ לְהַחְבִּירָה׃ בְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה׃ וְהוּא אֵלִי וְחַי גּוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃ וְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃ בְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישַׁן וְאָעִירָה׃ וְעִם רוּחִי גְּוִיָּתִי יְהוָה לִי וְלֹא אִירָא׃ |  | (as above) |
-| kaddish-1 | israeli/line/kaddish-1.mp3 | יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא אָמֵן בְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן׃ יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא לְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחָמָתָא דַּאֲמִירָן בְּעָלְמָא וְאִמְרוּ אָמֵן׃ יְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃ עוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃ |  | (as above) |
-| birkat-hamazon-1 | israeli/line/birkat-hamazon-1.mp3 | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַזָּן אֶת הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ בְּחֵן בְּחֶסֶד וּבְרַחֲמִים הוּא נוֹתֵן לֶחֶם לְכָל בָּשָׂר כִּי לְעוֹלָם חַסְדּוֹ׃ |  | (as above) |
-| bless-priestly-1 | israeli/line/bless-priestly-1.mp3 | יְבָרֶכְךָ אֲדֹנָי וְיִשְׁמְרֶךָ׃ |  | (as above) |
-| bless-priestly-2 | israeli/line/bless-priestly-2.mp3 | יָאֵר אֲדֹנָי פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃ |  | (as above) |
-| bless-priestly-3 | israeli/line/bless-priestly-3.mp3 | יִשָּׂא אֲדֹנָי פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃ |  | (as above) |
-| vahavta-2-l1 | israeli/line/vahavta-2-l1.mp3 | וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ |  | (as above) |
-| vahavta-2-l2 | israeli/line/vahavta-2-l2.mp3 | וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃ |  | (as above) |
-| vahavta-full-l1 | israeli/line/vahavta-full-l1.mp3 | וְאָהַבְתָּ אֵת אֲדֹנָי אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃ |  | (as above) |
-| vahavta-full-l2 | israeli/line/vahavta-full-l2.mp3 | וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ |  | (as above) |
-| vahavta-full-l3 | israeli/line/vahavta-full-l3.mp3 | וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃ |  | (as above) |
-| vahavta-full-l4 | israeli/line/vahavta-full-l4.mp3 | וּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃ |  | (as above) |
-| vahavta-full-l5 | israeli/line/vahavta-full-l5.mp3 | וּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃ |  | (as above) |
-| shema-vahavta-l1 | israeli/line/shema-vahavta-l1.mp3 | שְׁמַע יִשְׂרָאֵל אֲדֹנָי אֱלֹהֵינוּ אֲדֹנָי אֶחָד׃ |  | (as above) |
-| shema-vahavta-l2 | israeli/line/shema-vahavta-l2.mp3 | וְאָהַבְתָּ אֵת אֲדֹנָי אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃ |  | (as above) |
-| shema-vahavta-l3 | israeli/line/shema-vahavta-l3.mp3 | וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ |  | (as above) |
-| shema-vahavta-l4 | israeli/line/shema-vahavta-l4.mp3 | וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃ |  | (as above) |
-| shema-vahavta-l5 | israeli/line/shema-vahavta-l5.mp3 | וּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃ |  | (as above) |
-| shema-vahavta-l6 | israeli/line/shema-vahavta-l6.mp3 | וּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃ |  | (as above) |
-| bless-formula-1 | israeli/line/bless-formula-1.mp3 | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם |  | (as above) |
-| kiddush-gen-2-1-3-l1 | israeli/line/kiddush-gen-2-1-3-l1.mp3 | וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃ |  | (as above) |
-| kiddush-gen-2-1-3-l2 | israeli/line/kiddush-gen-2-1-3-l2.mp3 | וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה׃ |  | (as above) |
-| kiddush-gen-2-1-3-l3 | israeli/line/kiddush-gen-2-1-3-l3.mp3 | וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ שָׁבַת מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת׃ |  | (as above) |
-| torah-bless-1 | israeli/line/torah-bless-1.mp3 | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל־הָעַמִּים וְנָתַן לָנוּ אֶת־תּוֹרָתוֹ בָּרוּךְ אַתָּה אֲדֹנָי נוֹתֵן הַתּוֹרָה׃ |  | (as above) |
-| torah-barchu-l1 | israeli/line/torah-barchu-l1.mp3 | בָּרְכוּ אֶת אֲדֹנָי הַמְּבֹרָךְ׃ |  | (as above) |
-| torah-barchu-l2 | israeli/line/torah-barchu-l2.mp3 | בָּרוּךְ אֲדֹנָי הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃ |  | (as above) |
-| torah-bless-2 | israeli/line/torah-bless-2.mp3 | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר נָתַן לָנוּ תּוֹרַת אֱמֶת וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵנוּ׃ בָּרוּךְ אַתָּה אֲדֹנָי נוֹתֵן הַתּוֹרָה׃ |  | (as above) |
-| adon-olam-1-l1 | israeli/line/adon-olam-1-l1.mp3 | אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃ |  | (as above) |
-| adon-olam-1-l2 | israeli/line/adon-olam-1-l2.mp3 | לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃ |  | (as above) |
-| adon-olam-1-l3 | israeli/line/adon-olam-1-l3.mp3 | וְאַחֲרֵי כִּכְלוֹת הַכֹּל לְבַדּוֹ יִמְלֹךְ נוֹרָא׃ |  | (as above) |
-| adon-olam-1-l4 | israeli/line/adon-olam-1-l4.mp3 | וְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃ |  | (as above) |
-| adon-olam-1-l5 | israeli/line/adon-olam-1-l5.mp3 | וְהוּא אֶחָד וְאֵין שֵׁנִי לְהַמְשִׁיל לוֹ לְהַחְבִּירָה׃ |  | (as above) |
-| adon-olam-1-l6 | israeli/line/adon-olam-1-l6.mp3 | בְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה׃ |  | (as above) |
-| adon-olam-1-l7 | israeli/line/adon-olam-1-l7.mp3 | וְהוּא אֵלִי וְחַי גּוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃ |  | (as above) |
-| adon-olam-1-l8 | israeli/line/adon-olam-1-l8.mp3 | וְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃ |  | (as above) |
-| adon-olam-1-l9 | israeli/line/adon-olam-1-l9.mp3 | בְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישַׁן וְאָעִירָה׃ |  | (as above) |
-| adon-olam-1-l10 | israeli/line/adon-olam-1-l10.mp3 | וְעִם רוּחִי גְּוִיָּתִי אֲדֹנָי לִי וְלֹא אִירָא׃ |  | (as above) |
-| kaddish-1-l1 | israeli/line/kaddish-1-l1.mp3 | יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא אָמֵן |  | (as above) |
-| kaddish-1-l2 | israeli/line/kaddish-1-l2.mp3 | בְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן׃ |  | (as above) |
-| kaddish-1-l3 | israeli/line/kaddish-1-l3.mp3 | יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא |  | (as above) |
-| kaddish-1-l4 | israeli/line/kaddish-1-l4.mp3 | יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא |  | (as above) |
-| kaddish-1-l5 | israeli/line/kaddish-1-l5.mp3 | לְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחָמָתָא דַּאֲמִירָן בְּעָלְמָא וְאִמְרוּ אָמֵן׃ |  | (as above) |
-| kaddish-1-l6 | israeli/line/kaddish-1-l6.mp3 | יְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃ |  | (as above) |
-| kaddish-1-l7 | israeli/line/kaddish-1-l7.mp3 | עוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃ |  | (as above) |
+| greetings-01 | israeli/word/greetings-01.mp3 | שָׁלוֹם |  | Natural Modern Israeli word, correct (usually final) stress, neutral conversational tone, one breath. |
+| greetings-02 | israeli/word/greetings-02.mp3 | הֵי |  | (as above) |
+| greetings-15 | israeli/word/greetings-15.mp3 | בְּסֵדֶר |  | (as above) |
+| greetings-16 | israeli/word/greetings-16.mp3 | מְצֻיָּן |  | (as above) |
+| greetings-20 | israeli/word/greetings-20.mp3 | לְהִתְרָאוֹת |  | (as above) |
+| greetings-25 | israeli/word/greetings-25.mp3 | בְּהַצְלָחָה |  | (as above) |
+| greetings-26 | israeli/word/greetings-26.mp3 | לִבְרִיאוּת |  | (as above) |
+| politeness-01 | israeli/word/politeness-01.mp3 | תּוֹדָה |  | (as above) |
+| politeness-03 | israeli/word/politeness-03.mp3 | בְּבַקָּשָׁה |  | (as above) |
+| politeness-06 | israeli/word/politeness-06.mp3 | סְלִיחָה |  | (as above) |
+| politeness-08 | israeli/word/politeness-08.mp3 | כֵּן |  | (as above) |
+| politeness-09 | israeli/word/politeness-09.mp3 | לֹא |  | (as above) |
+| politeness-10 | israeli/word/politeness-10.mp3 | אוּלַי |  | (as above) |
+| politeness-11 | israeli/word/politeness-11.mp3 | בְּטַח |  | (as above) |
+| politeness-12 | israeli/word/politeness-12.mp3 | סַבָּבָה |  | (as above) |
+| politeness-13 | israeli/word/politeness-13.mp3 | יַאלְלָה |  | (as above) |
+| politeness-14 | israeli/word/politeness-14.mp3 | וָואלָה |  | (as above) |
+| politeness-15 | israeli/word/politeness-15.mp3 | אַחִי |  | (as above) |
+| politeness-16 | israeli/word/politeness-16.mp3 | יוֹפִי |  | (as above) |
+| politeness-19 | israeli/word/politeness-19.mp3 | דַּי |  | (as above) |
+| politeness-20 | israeli/word/politeness-20.mp3 | רֶגַע |  | (as above) |
+| fillers-01 | israeli/word/fillers-01.mp3 | אָז |  | (as above) |
+| fillers-02 | israeli/word/fillers-02.mp3 | נוּ |  | (as above) |
+| fillers-03 | israeli/word/fillers-03.mp3 | טוֹב |  | (as above) |
+| fillers-04 | israeli/word/fillers-04.mp3 | נָכוֹן |  | (as above) |
+| fillers-06 | israeli/word/fillers-06.mp3 | בֶּאֱמֶת? |  | (as above) |
+| fillers-07 | israeli/word/fillers-07.mp3 | מַמָּשׁ |  | (as above) |
+| fillers-08 | israeli/word/fillers-08.mp3 | פָּשׁוּט |  | (as above) |
+| fillers-09 | israeli/word/fillers-09.mp3 | סְתָם |  | (as above) |
+| fillers-10 | israeli/word/fillers-10.mp3 | בְּעֶצֶם |  | (as above) |
+| fillers-11 | israeli/word/fillers-11.mp3 | כְּלוֹמַר |  | (as above) |
+| fillers-12 | israeli/word/fillers-12.mp3 | אֲבָל |  | (as above) |
+| cafe-05 | israeli/word/cafe-05.mp3 | אֶסְפְּרֶסוֹ |  | (as above) |
+| cafe-09 | israeli/word/cafe-09.mp3 | מַיִם |  | (as above) |
+| cafe-11 | israeli/word/cafe-11.mp3 | בִּירָה |  | (as above) |
+| cafe-12 | israeli/word/cafe-12.mp3 | יַיִן |  | (as above) |
+| cafe-13 | israeli/word/cafe-13.mp3 | לְחַיִּים! |  | (as above) |
+| cafe-16 | israeli/word/cafe-16.mp3 | חוּמוּס |  | (as above) |
+| cafe-17 | israeli/word/cafe-17.mp3 | פָלָאפֶל |  | (as above) |
+| cafe-18 | israeli/word/cafe-18.mp3 | שַׁקְשׁוּקָה |  | (as above) |
+| cafe-19 | israeli/word/cafe-19.mp3 | פִּיתָה |  | (as above) |
+| cafe-20 | israeli/word/cafe-20.mp3 | סָלָט |  | (as above) |
+| shop-12 | israeli/word/shop-12.mp3 | מְזֻמָּן |  | (as above) |
+| shop-16 | israeli/word/shop-16.mp3 | פָּתוּחַ |  | (as above) |
+| shop-17 | israeli/word/shop-17.mp3 | סָגוּר |  | (as above) |
+| shop-19 | israeli/word/shop-19.mp3 | שֶׁקֶל |  | (as above) |
+| taxi-02 | israeli/word/taxi-02.mp3 | לְאָן? |  | (as above) |
+| taxi-05 | israeli/word/taxi-05.mp3 | לַמָּלוֹן |  | (as above) |
+| taxi-06 | israeli/word/taxi-06.mp3 | לַכּוֹתֶל |  | (as above) |
+| directions-05 | israeli/word/directions-05.mp3 | יָשָׁר |  | (as above) |
+| directions-06 | israeli/word/directions-06.mp3 | שְׂמֹאלָה |  | (as above) |
+| directions-07 | israeli/word/directions-07.mp3 | יָמִינָה |  | (as above) |
+| directions-12 | israeli/word/directions-12.mp3 | מוּל |  | (as above) |
+| directions-13 | israeli/word/directions-13.mp3 | בַּפִּנָּה |  | (as above) |
+| numbers-01-m | israeli/word/numbers-01-m.mp3 | אֶחָד |  | (as above) |
+| numbers-01-f | israeli/word/numbers-01-f.mp3 | אַחַת |  | (as above) |
+| numbers-02-m | israeli/word/numbers-02-m.mp3 | שְׁנַיִם |  | (as above) |
+| numbers-02-f | israeli/word/numbers-02-f.mp3 | שְׁתַּיִם |  | (as above) |
+| numbers-03-m | israeli/word/numbers-03-m.mp3 | שְׁלוֹשָׁה |  | (as above) |
+| numbers-03-f | israeli/word/numbers-03-f.mp3 | שָׁלוֹשׁ |  | (as above) |
+| numbers-04-m | israeli/word/numbers-04-m.mp3 | אַרְבָּעָה |  | (as above) |
+| numbers-04-f | israeli/word/numbers-04-f.mp3 | אַרְבַּע |  | (as above) |
+| numbers-05-m | israeli/word/numbers-05-m.mp3 | חֲמִשָּׁה |  | (as above) |
+| numbers-05-f | israeli/word/numbers-05-f.mp3 | חָמֵשׁ |  | (as above) |
+| numbers-06-m | israeli/word/numbers-06-m.mp3 | שִׁשָּׁה |  | (as above) |
+| numbers-06-f | israeli/word/numbers-06-f.mp3 | שֵׁשׁ |  | (as above) |
+| numbers-07-m | israeli/word/numbers-07-m.mp3 | שִׁבְעָה |  | (as above) |
+| numbers-07-f | israeli/word/numbers-07-f.mp3 | שֶׁבַע |  | (as above) |
+| numbers-08-m | israeli/word/numbers-08-m.mp3 | שְׁמוֹנָה |  | (as above) |
+| numbers-08-f | israeli/word/numbers-08-f.mp3 | שְׁמוֹנֶה |  | (as above) |
+| numbers-09-m | israeli/word/numbers-09-m.mp3 | תִּשְׁעָה |  | (as above) |
+| numbers-09-f | israeli/word/numbers-09-f.mp3 | תֵּשַׁע |  | (as above) |
+| numbers-10-m | israeli/word/numbers-10-m.mp3 | עֲשָׂרָה |  | (as above) |
+| numbers-10-f | israeli/word/numbers-10-f.mp3 | עֶשֶׂר |  | (as above) |
+| numbers-11 | israeli/word/numbers-11.mp3 | עֶשְׂרִים |  | (as above) |
+| numbers-12 | israeli/word/numbers-12.mp3 | שְׁלוֹשִׁים |  | (as above) |
+| numbers-13 | israeli/word/numbers-13.mp3 | חֲמִשִּׁים |  | (as above) |
+| numbers-14 | israeli/word/numbers-14.mp3 | מֵאָה |  | (as above) |
+| numbers-15 | israeli/word/numbers-15.mp3 | אֶלֶף |  | (as above) |
+| numbers-18 | israeli/word/numbers-18.mp3 | חֲצִי |  | (as above) |
+| numbers-19 | israeli/word/numbers-19.mp3 | רֶבַע |  | (as above) |
+| numbers-20 | israeli/word/numbers-20.mp3 | הַיּוֹם |  | (as above) |
+| numbers-21 | israeli/word/numbers-21.mp3 | מָחָר |  | (as above) |
+| numbers-22 | israeli/word/numbers-22.mp3 | אֶתְמוֹל |  | (as above) |
+| small-talk-15-m | israeli/word/small-talk-15-m.mp3 | תִּרְגַּע |  | (as above) |
+| small-talk-15-f | israeli/word/small-talk-15-f.mp3 | תִּרְגְּעִי |  | (as above) |
+| small-talk-18-m | israeli/word/small-talk-18-m.mp3 | חָבֵר |  | (as above) |
+| small-talk-18-f | israeli/word/small-talk-18-f.mp3 | חֲבֵרָה |  | (as above) |
+| help-01 | israeli/word/help-01.mp3 | עֶזְרָה! |  | (as above) |
 
-## Prayer lines
+## Other lines
 
-Takes per clip: 3. Clips: 6.
+_No entries yet (source data from another lane not present when generated). Re-run after data lands._
+
+## OPTIONAL: whole-prayer continuous reads
+
+Takes per clip: 3. Clips: 7. OPTIONAL: not needed by any screen (the reader plays line and word clips); record only if budget allows.
 
 | id | file (under audio/<voice>/) | pointed Hebrew | IPA | direction |
 |---|---|---|---|---|
-| bless-priestly-1 | israeli/prayer/bless-priestly-1.mp3 | יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃ |  | Prayer line, Israeli pronunciation. Reverent, steady, unhurried, no sung cantillation. Beginner-followable pace. |
-| bless-priestly-2 | israeli/prayer/bless-priestly-2.mp3 | יָאֵר יְהוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃ |  | (as above) |
-| bless-priestly-3 | israeli/prayer/bless-priestly-3.mp3 | יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃ |  | (as above) |
-| bless-formula-1 | israeli/prayer/bless-formula-1.mp3 | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם |  | (as above) |
-| torah-bless-1 | israeli/prayer/torah-bless-1.mp3 | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל־הָעַמִּים וְנָתַן לָנוּ אֶת־תּוֹרָתוֹ בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה׃ |  | (as above) |
-| torah-bless-2 | israeli/prayer/torah-bless-2.mp3 | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר נָתַן לָנוּ תּוֹרַת אֱמֶת וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵנוּ׃ בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה׃ |  | (as above) |
+| vahavta-2 | israeli/prayer/vahavta-2.mp3 | וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃ |  | Prayer line, Israeli pronunciation. Reverent, steady, unhurried, no sung cantillation. Beginner-followable pace. |
+| vahavta-full | israeli/prayer/vahavta-full.mp3 | וְאָהַבְתָּ אֵת אֲדֹנָי אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃ וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃ וּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃ וּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃ |  | (as above) |
+| shema-vahavta | israeli/prayer/shema-vahavta.mp3 | שְׁמַע יִשְׂרָאֵל אֲדֹנָי אֱלֹהֵינוּ אֲדֹנָי אֶחָד׃ וְאָהַבְתָּ אֵת אֲדֹנָי אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃ וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃ וּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃ וּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃ |  | (as above) |
+| kiddush-gen-2-1-3 | israeli/prayer/kiddush-gen-2-1-3.mp3 | וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃ וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה׃ וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ שָׁבַת מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת׃ |  | (as above) |
+| torah-barchu | israeli/prayer/torah-barchu.mp3 | בָּרְכוּ אֶת אֲדֹנָי הַמְּבֹרָךְ׃ בָּרוּךְ אֲדֹנָי הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃ |  | (as above) |
+| adon-olam-1 | israeli/prayer/adon-olam-1.mp3 | אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃ לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃ וְאַחֲרֵי כִּכְלוֹת הַכֹּל לְבַדּוֹ יִמְלֹךְ נוֹרָא׃ וְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃ וְהוּא אֶחָד וְאֵין שֵׁנִי לְהַמְשִׁיל לוֹ לְהַחְבִּירָה׃ בְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה׃ וְהוּא אֵלִי וְחַי גּוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃ וְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃ בְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישַׁן וְאָעִירָה׃ וְעִם רוּחִי גְּוִיָּתִי אֲדֹנָי לִי וְלֹא אִירָא׃ |  | (as above) |
+| kaddish-1 | israeli/prayer/kaddish-1.mp3 | יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא אָמֵן בְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן׃ יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא לְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחָמָתָא דַּאֲמִירָן בְּעָלְמָא וְאִמְרוּ אָמֵן׃ יְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃ עוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃ |  | (as above) |
 
 ## Minimal pairs and confusable letters
 
@@ -1188,4 +1506,4 @@ _Word-level minimal pairs from the pronunciation lane (data/pronunciation/drills
 
 ## Totals
 
-Takes to record per voice for this tradition: 2310 (sum of clips x take count above).
+Takes to record per voice for this tradition: 2860 (sum of clips x take count above; optional sections excluded).

@@ -16,9 +16,9 @@ Why human: the project research found no TTS service offering Ashkenazi pronunci
 
 ## Scope of work (from the generated recording scripts)
 - docs/voices/recording-script-israeli.md and recording-script-ashkenazi.md, plus recording-script.csv (filterable by voice).
-- Content groups per voice: letter names (27), isolated letter sounds (22), vowels and marks (15), syllable grid (110: 22 letters x 5 vowel sounds), then words, phrases and prayer lines as the corpus lane delivers them (counts in the scripts after regeneration).
-- Roughly 2-4 takes per clip; exact take counts are in the scripts. Plan for several hundred short clips per voice, mostly under 2 seconds. Final clip counts will grow when corpus data is added; ask for a per-clip price AND a day rate.
-- Estimated studio time: unknown. Ask the talent to estimate after seeing the scripts; do not assume.
+- Content groups per voice (counts are in docs/voices/coverage.md): 31 letter-form names (27 letters + vet, khaf, fe, sin), 26 isolated letter sounds, 15 vowels and marks, a 110-clip syllable grid (22 letters x 5 vowel sounds), 27 mnemonic anchor words, lesson vocabulary, the survival phrasebook (Israeli only), and prayer lines plus single prayer words. Optional whole-prayer continuous reads are listed but not required.
+- Roughly 2-4 takes per clip; take counts are in the scripts. Each kit (docs/voices/kit/<tradition>-<voice>/) has the slate order, pause markers, checklist and a session plan; the Israeli kits are about 1,380 clips per voice and the Ashkenazi kits about 970. Most clips are under 2 seconds. Ask for a per-clip price AND a day rate.
+- Estimated studio time: unknown until a talent is timed. docs/voices/kit/*/session-plan.md gives a model-based range (for example Israeli kit, about 4 to 12 booth hours per voice) built from stated assumptions; nobody has been timed, so treat it only as a planning placeholder and run the 30-clip pilot described in docs/voices/kit/README.md.
 
 ## Technical requirements
 - Treated room, large-diaphragm or shotgun mic, consistent distance; noise floor below about -60 dBFS; no room reverb.

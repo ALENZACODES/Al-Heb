@@ -36,7 +36,11 @@ export function createAudio(opts) {
 
   const index = new Map();
   const textBy = new Map();
+  // Items marked scope:'israeli-only' (survival phrasebook, mnemonic anchor words) exist only in the israeli tradition:
+  // they are conversational Modern Hebrew, so the learner's congregation setting must not change how they sound.
+  const israeliOnly = new Set();
   for (const e of manifest) {
+    if (e.scope === 'israeli-only') israeliOnly.add(`${e.kind}|${e.id}`);
     index.set(`${e.voice}|${e.tradition}|${e.kind}|${e.id}`, e);
     if (!textBy.has(`${e.kind}|${e.id}`) && e.text) textBy.set(`${e.kind}|${e.id}`, e.text);
   }
@@ -55,12 +59,23 @@ export function createAudio(opts) {
   /** Decide the source without playing. */
   function plan(kind, rawId, o = {}) {
     const id = normalizeId(rawId);
-    const { voice, tradition } = context(o);
+    const ctxt = context(o);
+    const { voice } = ctxt;
+    let tradition = ctxt.tradition;
+    if (TRADITIONS.includes(tradition) && israeliOnly.has(`${kind}|${id}`)) tradition = 'israeli';
     if (!VOICES.includes(voice)) return { source: 'none', reason: 'invalid-voice', kind, id, voice, tradition };
     if (!TRADITIONS.includes(tradition)) return { source: 'none', reason: 'invalid-tradition', kind, id, voice, tradition };
     const exact = index.get(`${voice}|${tradition}|${kind}|${id}`);
     if (exact && exact.status !== 'missing') {
       return { source: 'file', path: exact.path, url: url(exact.path), kind, id, voice, tradition, entryStatus: exact.status, via: 'exact' };
+    }
+    // alias (e.g. a one-line 'prayer' record is the same clip as its 'line'): only when the target file exists
+    if (exact && exact.aliasOf) {
+      const [ak, ...rest] = String(exact.aliasOf).split('/');
+      const target = index.get(`${voice}|${tradition}|${ak}|${rest.join('/')}`);
+      if (target && target.status !== 'missing') {
+        return { source: 'file', path: target.path, url: url(target.path), kind, id, voice, tradition, entryStatus: target.status, via: 'alias' };
+      }
     }
     if (exact && Array.isArray(exact.equivalentTo)) {
       for (const t of exact.equivalentTo) {
@@ -142,7 +157,9 @@ export function createAudio(opts) {
 
   function planWithoutFile(kind, rawId, o) {
     const id = normalizeId(rawId);
-    const { voice, tradition } = context(o);
+    const c2 = context(o);
+    const { voice } = c2;
+    const tradition = israeliOnly.has(`${kind}|${id}`) ? 'israeli' : c2.tradition;
     const text = textBy.get(`${kind}|${id}`);
     if (!text) return { source: 'none', reason: 'unknown-item', kind, id, voice, tradition };
     if (!speech || !UtteranceCtor) return { source: 'none', reason: 'no-speech-synthesis', kind, id, voice, tradition };

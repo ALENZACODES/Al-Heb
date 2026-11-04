@@ -24,13 +24,13 @@ test('committed manifest has contract fields, valid paths, hebrew code points', 
   }
 });
 
-test('covers 27 letters, 15 vowels, 22x5 syllable grid for both voices and all traditions', () => {
+test('covers 31 letter forms (27 + 4 variants), 15 vowels, 22x5 syllable grid for both voices and all traditions', () => {
   const count = (kind, voice, trad) => manifest.filter((e) => e.kind === kind && e.voice === voice && e.tradition === trad);
   for (const v of ['m', 'f']) for (const t of ['israeli', 'sephardi', 'ashkenazi']) {
     const names = count('letter', v, t).filter((e) => !e.id.endsWith('-sound'));
-    assert.equal(names.length, LETTERS.length + FINAL_LETTERS.length);
-    assert.equal(names.length, 27);
-    assert.equal(count('letter', v, t).filter((e) => e.id.endsWith('-sound')).length, 22);
+    assert.equal(names.length, LETTERS.length + FINAL_LETTERS.length + 4);
+    assert.equal(names.length, 31, '27 letters + vet, khaf, fe, sin');
+    assert.equal(count('letter', v, t).filter((e) => e.id.endsWith('-sound')).length, 26, '22 sounds + 4 variant sounds');
     assert.equal(count('vowel', v, t).length, VOWELS.length);
     assert.equal(count('vowel', v, t).length, 15);
     assert.equal(count('syllable', v, t).length, 110);

@@ -45,6 +45,7 @@ function h(tag, attrs, ...kids) {
   const e = document.createElement(tag);
   for (const k in (attrs || {})) {
     const v = attrs[k];
+    if (typeof v === 'boolean' && k.startsWith('aria-')) { e.setAttribute(k, String(v)); continue; } // aria-pressed={true} must be "true", not ""
     if (v === undefined || v === null || v === false) continue;
     if (k === 'class') e.className = v; else if (k === 'text') e.textContent = v;
     else if (k.startsWith('on') && typeof v === 'function') e.addEventListener(k.slice(2).toLowerCase(), v);

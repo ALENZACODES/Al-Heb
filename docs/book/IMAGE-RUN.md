@@ -8,7 +8,7 @@ The doc states A 32, B 270, C 162, D 75, E 150, F 76 = 765. Its commands actuall
 ## Path 1: human with ChatGPT (the doc's plan)
 1. New ChatGPT Project. Paste the "6-hour work order" from the doc as the first message; attach/paste the 100 commands.
 2. Say `next` repeatedly. Per image ChatGPT prints `FILE: | SET: | PROMPT: | NOTES:`.
-3. Before Block C, supply the 27 `REF_cursive_<name>.png` silhouettes (rendered from Gveret Levin; NOT yet made - listed as `inputs` in each cursive group).
+3. Before Block C, supply the 27 `REF_cursive_<name>.png` silhouettes: made, in `assets/img/refs/` (1024x1024, black on white, Gveret Levin; regenerate with `node tools/images/make_cursive_refs.mjs`). 27 matching `REF_print_<name>.png` print-letter silhouettes (Noto Serif Hebrew, semibold) are beside them. They live in a subfolder so they are never mistaken for finished manifest images. Contact sheet checked by eye; the glyph is the plain letter, no niqqud.
 4. Save images under the exact names in `manifest.csv` into `assets/img/`, then run `node tools/images/make_placeholders.mjs` (refreshes `assets/img/index.json`).
 5. Limits (doc, unverified): ~40 images / 3 h, ~200 / day on Plus, so about a week.
 

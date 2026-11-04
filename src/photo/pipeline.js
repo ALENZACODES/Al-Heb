@@ -63,18 +63,22 @@ export async function runPipeline(image, engines, { mode = 'prayer', registry = 
     }
 
     // 3. English
+    line.englishStatus = 'unavailable';
     if (corpusEnglish) line.english = { text: corpusEnglish, label: CORPUS_TRANSLATION_LABEL, machineTranslation: false, engine: 'registry' };
+    if (corpusEnglish) line.englishStatus = 'corpus';
     else if (typeof engines.translate === 'function') {
       try {
         const r = asText(await engines.translate(stripMarks(line.pointed || ol.text)));
         if (r?.text) line.english = { text: r.text, label: MACHINE_TRANSLATION_LABEL, machineTranslation: true, engine: r.engine || engines.names?.translate || 'translator' };
-      } catch (e) { lw.push(`translate failed: ${e.message}`); }
+        line.englishStatus = line.english ? 'machine' : 'failed';
+      } catch (e) { lw.push(`translate failed: ${e.message}`); line.englishStatus = 'failed'; }
     } else lw.push('no translation engine');
     lines.push(line);
   }
   return {
     mode, demo: !!engines.demo, engine: engines.name || 'custom', engines: engines.names || {},
     lines, warnings,
+    translationAvailable: typeof engines.translate === 'function',
     notice: engines.demo ? 'demo engine: no real OCR installed. Output does not come from the photo.' : undefined,
   };
 }

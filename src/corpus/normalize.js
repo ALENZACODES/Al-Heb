@@ -133,3 +133,30 @@ export function cleanEnglish(raw) {
   return raw.replace(/<sup[\s\S]*?<\/sup>/g, '').replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&')
     .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\s+/g, ' ').trim();
 }
+
+/**
+ * Deterministic transform pipeline used for round-3 records (the builder and tests/corpus.hebrew.test.js both call it,
+ * so a record's `transforms` field fully explains how `he` was derived from the raw snapshot lines).
+ *   dropParen   remove "( ... )" groups from the raw string first (rubrics / Ten-Days variants)
+ *   dropSmall   remove <small> stage directions (see cleanLine)
+ *   dropTokens  after cleaning, delete whole words whose folded skeleton is listed (rubric words such as "answers")
+ *   corrections [[from, to], ...] exact string replacements on the cleaned line, used ONLY for letters the source
+ *               visibly drops (e.g. a missing holam on mem in Moshe). Each must match at least once or the build fails.
+ *   clip        options for clipWords on the joined text (result is one line)
+ * @param {string[]} rawLines
+ * @param {{dropParen?:boolean, dropSmall?:boolean, dropTokens?:string[], corrections?:string[][], clip?:object}} t
+ * @returns {string[]}
+ */
+export function applyTransforms(rawLines, t = {}) {
+  let lines = rawLines.map((l) => (t.dropParen ? l.replace(/\([^()]*\)/g, ' ') : l)).map((l) => cleanLine(l, { dropSmall: !!t.dropSmall }));
+  if (t.dropTokens) lines = lines.map((l) => l.split(' ').filter((w) => !t.dropTokens.includes(foldedSkeleton(w))).join(' '));
+  for (const [from0, to0] of t.corrections || []) {
+    const from = from0.normalize('NFC'), to = to0.normalize('NFC');
+    let hit = 0;
+    lines = lines.map((l) => l.split(' ').map((w) => (w.replace(/׃$/, '') === from ? (hit++, w.replace(from, to)) : w)).join(' '));
+    if (!hit) throw new Error('correction did not match: ' + from);
+  }
+  lines = lines.map((l) => l.normalize('NFC'));
+  if (t.clip) lines = [clipWords(lines.join(' '), t.clip)];
+  return lines;
+}

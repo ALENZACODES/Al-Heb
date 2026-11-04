@@ -74,8 +74,8 @@ test('registry: "verified" records state what they were compared with, and nothi
   }
 });
 
-test('registry: Kaddish is flagged Aramaic, every other record Hebrew', () => {
-  for (const e of entries) assert.equal(e.language, e.id === 'kaddish-1' ? 'aramaic' : 'hebrew', e.id);
+test('registry: Kaddish and Brich shmei are flagged Aramaic, every other record Hebrew', () => {
+  for (const e of entries) assert.equal(e.language, ['kaddish-1', 'brich-shmei'].includes(e.id) ? 'aramaic' : 'hebrew', e.id);
 });
 
 test('registry: Modeh Ani feminine variant is present but honestly marked as derived', () => {

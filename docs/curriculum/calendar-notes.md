@@ -1,26 +1,53 @@
-# Calendar notes (Lane 1)
+# Calendar notes (Lane 1, round 2, 2026-11-04)
+
+Files: `src/curriculum/calendar.js` (dates, holidays, sun times), `calendar.parsha.js`, `calendar.grid.js`, `calendar.locations.js`, `calendar.prayer.js`, `calendar.view.js`, `calendar.style.js`, `reminders.js`, `reminders.ics.js`, `reminders.notify.js`; data in `data/calendar/`; tests `tests/calendar.*.test.js`; dev tools (network, not run by `node --test`) in `tests/calendar.tools/`.
+
+## What was checked against Hebcal (and what that means)
+Hebcal is itself a calculation, not a halachic authority. "Matches Hebcal" means the arithmetic agrees.
+
+| Item | Result | How to re-run |
+|---|---|---|
+| Gregorian to Hebrew date, every day 2000-2040 (14,976 days) | 0 mismatches | `node tests/calendar.tools/compare-dates.mjs 2000 2040` |
+| Holiday dates, Hebrew years 5740-5900, reform, israel and traditional modes (RH, YK, Sukkot, Shemini Atzeret, Simchat Torah, Hanukkah, Tu BiShvat, Purim, Pesach, Shavuot, Tisha B'Av incl. 10 Av shift, Yom HaShoah, Rosh Chodesh) | 5,696 comparisons, 0 mismatches | `fetch-hebcal.mjs <dir>` then `compare-holidays.mjs <dir>` |
+| Yom HaZikaron / Yom HaAtzmaut weekday shifts | match from Hebrew year 5758 (1997/8) on; earlier years use an older rule not implemented | `compare-holidays.mjs <dir> 5758` |
+| Candle lighting and havdalah, 63 preset locations x 34 weeks (Nov 2026 - Jun 2027), two havdalah methods | candles: 2,141 of 2,142 identical to the minute, 1 value one minute earlier than Hebcal; havdalah: 4,262 of 4,271 identical, 9 one minute earlier | `node tests/calendar.tools/compare-times.mjs` |
+| Torah portions, 14 year types x diaspora/Israel | all 161 years of the same type have identical sequences; tables learned from 5740-5820 reproduce 5821-5900 exactly | `build-parsha.mjs <dir> <out>` |
+
+Candle times are shown rounded DOWN to the minute (never later than the exact time); havdalah rounded to the nearest minute. Those rounding rules are what make the output equal Hebcal's.
+
+Offline test fixtures (a snapshot of Hebcal output, CC BY 4.0, credit Hebcal) are in `data/calendar/hebcal-fixtures.json`; `tests/calendar.dates.test.js` and `calendar.parsha.test.js` compare against it without network.
 
 ## Hebrew date arithmetic
-Standard arithmetic calendar (Dershowitz and Reingold style: molad parts 12084 + 13753 per month, the four dehiyyot, year-length corrections 356/382). Implemented from the published algorithm as I remember it. Verified ONLY by the dated fixtures in `tests/curriculum.calendar.test.js`:
-- torah-box.net holiday pages 5787 and 5788 (list the evening an observance begins): Hanukkah, Purim, Pesach, Shavuot, 9 Av 5787; Rosh Hashanah, Yom Kippur, Sukkot, Shemini Atzeret 5788. Same site's header showed 23 Cheshvan 5787 on 2026-11-03.
-- almo-ai.com (poor source: its Pesach and Purim rows were wrong): only Rosh Hashana 2026-09-12, Yom Kippur 09-21, Sukkot 09-26, Simchat Torah 10-03 were used, and they agree with the independent anchors above.
-- Structural checks (year lengths, Rosh Hashanah never Sun/Wed/Fri, round trips).
-Not checked: years far outside 5700-5900, an authoritative published table.
+Standard arithmetic calendar (molad parts 12084 + 13753, the four dehiyyot, year-length corrections). Checked as above.
 
-## Reform conventions (what was and was not verified)
+## Holidays and Reform conventions
 | Item | Status |
 |---|---|
-| Rosh Hashanah: most North American Reform congregations keep ONE day; some keep two | verified (reformjudaism.org "Do Reform Jews celebrate one or two days of Rosh HaShanah"). The module shows one day and exposes `optionalExtraDays: 1`. |
-| Pesach: 7 days for most Reform communities (one-day yom tov convention, since 1846 Breslau conference per the same site) | verified (reformjudaism.org "Passover: 7 or 8 days") |
-| Sukkot, Shemini Atzeret, Shavuot, Yom Kippur: one festival day each | INFERRED from the one-day-per-festival convention; the Pesach article names these festivals but I did not capture explicit per-festival statements. Marked `verified: "inferred"`. |
-| Shemini Atzeret and Simchat Torah combined on 22 Tishrei | inferred (Israeli convention) |
-| Hanukkah 8 days, Purim 14 Adar (Adar II in leap years) | standard dates, dates match the torah-box fixtures |
-| Tu BiShvat, Tisha B'Av (moved to 10 Av if 9 Av is Shabbat) | UNVERIFIED (recalled); Reform observance of Tisha B'Av varies |
-| Not included | Yom HaShoah, Yom HaZikaron, Yom HaAtzmaut (shifting rules not researched), Rosh Chodesh, Omer, minor fasts, parsha |
-Do not present the list as an authority for any particular congregation.
+| Rosh Hashanah: most North American Reform congregations keep one day, some two | sourced (reformjudaism.org). Default: one day plus `optionalExtraDays: 1`. |
+| Pesach 7 days for most Reform communities | sourced (reformjudaism.org) |
+| Shemini Atzeret combined with Simchat Torah on 22 Tishrei | sourced: reformjudaism.org Simchat Torah page, "in Israel and in Reform congregations, which generally observe one day of holidays rather than two" |
+| Yom Kippur one day | 10 Tishrei; one day in every stream, so the open question in VERIFICATION 1.14 is only about Shavuot |
+| Shavuot one day in Reform | still not stated explicitly by a fetched page; consistent with the sentence above (one day of holidays rather than two). Marked `verified: "inferred"`. |
+| Tu BiShvat, Tisha B'Av | dates equal Hebcal (applied DATA-FIXES B1, B2); Reform observance of Tisha B'Av varies |
+| Rosh Chodesh | dates equal Hebcal; Reform-specific practice not researched (shown as a date only) |
+| Yom HaShoah, Yom HaZikaron, Yom HaAtzmaut | dates equal Hebcal from 5758; Reform practice not researched |
+Modes: `reform` (default), `traditional` (two-day Rosh Hashanah and Shavuot, 8-day Pesach, Simchat Torah separate, Hebcal diaspora dates), `israel` (one festival day, two-day Rosh Hashanah). Not a statement about any particular congregation.
+Not included: Omer, Lag BaOmer, minor fasts, Yom Yerushalayim, Shabbat special names (Shekalim, Zachor...).
 
-## Candle lighting
-- Defaults: 18 minutes before sunset; Jerusalem 40 minutes. Source: Hebcal's candle-lighting help page states 18 before sundown, 40 for Jerusalem, 30 for Haifa (page fetched; Hebcal's API/service terms were NOT researched and Hebcal is not called). Other communities use other offsets; the offset is configurable (`offsetMinutes`).
-- Sunset algorithm: NOAA solar calculator equations (declination, equation of time, hour angle at 90.833 degrees zenith). No external table of sunset times was reachable, so only sanity checks exist (equator equinox about 18:00; Toronto 2026-11-06 sunset 16:50-17:15 EST; seasons ordered; polar night null). Output for Toronto 2026-11-06 is sunset 17:02, candles 16:44. NOT validated to the minute.
-- Elevation, horizon and DST are not modelled beyond the IANA zone formatting via built-in Intl.
-- Store/app-store policy on location permissions and local notifications was not researched. The view takes `ctx.settings.location` and never calls geolocation.
+## Torah portions
+Computed offline from the year type (weekday of 1 Tishrei x year length) with tables in `data/calendar/parsha.json`. The tables were derived from Hebcal's output, not from an independent source; independent invariants are tested for 5740-5900 (sequence order, Bereshit on the first Shabbat after Simchat Torah, Devarim on Shabbat Chazon, Bamidbar before Shavuot). Default schedule is diaspora outside Israel and Israeli for Israeli presets; Reform congregations in the diaspora normally follow the diaspora schedule, but in years when a festival's last day falls on Shabbat the two schedules differ for several weeks and a congregation may follow either (setting "Torah reading schedule"). Portion names are Hebcal's transliterations; Hebrew names are unpointed.
+
+## Locations, candle lighting, havdalah
+- 63 presets in `data/calendar/locations.json` (US, Canada, Israel, a few others) with hand-entered approximate coordinates (not GeoNames), IANA time zones, plus manual latitude/longitude. The app never calls geolocation.
+- Candle minutes: 18; Jerusalem 40; Haifa and Zikhron Ya'akov 30 (Hebcal's published text); other Israeli presets 20. The 20 is not in Hebcal's published text: it is what Hebcal's output implies (observed 2026-11-04 for 13 Israeli points and Tel Aviv by GeoNames id, where an explicit `b=18` made no difference). VERIFICATION 1.08 says "18 elsewhere"; that row should get this caveat. Any value 0-90 can be typed.
+- Havdalah: sun 8.5 degrees below the horizon (default, equals Hebcal's `M=on`), or 42, 50 or 72 minutes after sunset. At high latitudes in summer the angle method has no answer; the UI says so and suggests minutes.
+- Sun position is evaluated at the event time (one refinement pass); sea-level horizon, no elevation or terrain.
+
+## Reminders
+- In-app list plus a `.ics` file (RFC 5545): candle lighting (Fridays and festival eves) and havdalah as absolute UTC times; morning and evening prayer moments as floating local times; holidays and Rosh Chodesh as all-day events; one VALARM (ACTION:DISPLAY) each. Candle lighting alert default 30 minutes before; holidays alert at 09:00 on the eve; prayer moments at the event time.
+- Verified: tests parse the file back (structure, CRLF, 75-octet folding, escaping, UTC/floating/all-day dates, TRIGGER values); a one-off check with the Python `icalendar` 7.3.0 package (installed to /tmp only, not in the repo) parsed an Israel export with 421 events and 421 alarms; a headless Chromium download produced the file.
+- NOT verified: import into Apple Calendar, Google Calendar or Outlook, and how each treats VALARM on import. Calendar apps differ; some ignore alarms on imported events.
+- Notifications use the Notification API with setTimeout and only fire while the app is open. No server, no push, no background. The button is shown only when the browser supports Notification; permission is requested on click only.
+
+## Prayer cards
+`data/calendar/prayer-cards.json`: 23 morning, 23 evening, 4 Friday-evening and 2 Saturday-evening reflections written by Lane 1 in the spirit of `book/opening-prayer.txt`, each with a one-line pointed Hebrew phrase sliced verbatim from a `data/corpus/registry.json` entry (test checks containment). Labelled draft and not clergy reviewed in the data and on screen. Glosses are ALEF's own plain renderings. Modeh Ani switches to the feminine form for voice `f` (checked against `prompts.json`). The previous `dailyPrompt` rotation in `prompts.js` is no longer shown in the calendar view (its file is untouched).

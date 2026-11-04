@@ -6,6 +6,7 @@
   {
    "id": "alef-workbook-print-a4",
    "script": "print",
+   "mnemonics": false,
    "paper": "A4",
    "pages": 12,
    "pageKinds": [
@@ -29,6 +30,7 @@
   {
    "id": "alef-workbook-print-letter",
    "script": "print",
+   "mnemonics": false,
    "paper": "US Letter",
    "pages": 12,
    "pageKinds": [
@@ -52,6 +54,7 @@
   {
    "id": "alef-workbook-cursive-a4",
    "script": "cursive",
+   "mnemonics": false,
    "paper": "A4",
    "pages": 13,
    "pageKinds": [
@@ -76,6 +79,7 @@
   {
    "id": "alef-workbook-cursive-letter",
    "script": "cursive",
+   "mnemonics": false,
    "paper": "US Letter",
    "pages": 13,
    "pageKinds": [
@@ -96,6 +100,104 @@
    "html": "html/alef-workbook-cursive-letter.html",
    "pdf": "alef-workbook-cursive-letter.pdf",
    "bytes": 606430
+  },
+  {
+   "id": "alef-workbook-print-a4-mnemonics",
+   "script": "print",
+   "mnemonics": true,
+   "paper": "A4",
+   "pages": 12,
+   "pageKinds": [
+    "front",
+    "strokeorder",
+    "letters",
+    "strokeorder",
+    "letters",
+    "strokeorder",
+    "letters",
+    "confusables",
+    "syllables",
+    "words",
+    "words",
+    "words"
+   ],
+   "html": "html/alef-workbook-print-a4-mnemonics.html",
+   "pdf": "alef-workbook-print-a4-mnemonics.pdf",
+   "bytes": 603896
+  },
+  {
+   "id": "alef-workbook-print-letter-mnemonics",
+   "script": "print",
+   "mnemonics": true,
+   "paper": "US Letter",
+   "pages": 12,
+   "pageKinds": [
+    "front",
+    "strokeorder",
+    "letters",
+    "strokeorder",
+    "letters",
+    "strokeorder",
+    "letters",
+    "confusables",
+    "syllables",
+    "words",
+    "words",
+    "words"
+   ],
+   "html": "html/alef-workbook-print-letter-mnemonics.html",
+   "pdf": "alef-workbook-print-letter-mnemonics.pdf",
+   "bytes": 603869
+  },
+  {
+   "id": "alef-workbook-cursive-a4-mnemonics",
+   "script": "cursive",
+   "mnemonics": true,
+   "paper": "A4",
+   "pages": 13,
+   "pageKinds": [
+    "front",
+    "strokeorder",
+    "letters",
+    "strokeorder",
+    "letters",
+    "strokeorder",
+    "letters",
+    "confusables",
+    "confusables",
+    "syllables",
+    "words",
+    "words",
+    "words"
+   ],
+   "html": "html/alef-workbook-cursive-a4-mnemonics.html",
+   "pdf": "alef-workbook-cursive-a4-mnemonics.pdf",
+   "bytes": 642635
+  },
+  {
+   "id": "alef-workbook-cursive-letter-mnemonics",
+   "script": "cursive",
+   "mnemonics": true,
+   "paper": "US Letter",
+   "pages": 13,
+   "pageKinds": [
+    "front",
+    "strokeorder",
+    "letters",
+    "strokeorder",
+    "letters",
+    "strokeorder",
+    "letters",
+    "confusables",
+    "confusables",
+    "syllables",
+    "words",
+    "words",
+    "words"
+   ],
+   "html": "html/alef-workbook-cursive-letter-mnemonics.html",
+   "pdf": "alef-workbook-cursive-letter-mnemonics.pdf",
+   "bytes": 642970
   }
  ]
 }

@@ -3,7 +3,8 @@
 // number, English name (gematria) and a long line of repetitions that fades solid -> grey -> dotted -> blank. Hebrew is right-to-left, so the
 // first (model) glyph is at the RIGHT end and the repetitions run leftward.
 //
-// Usage: node tools/letters/workbook.mjs [--html-only]
+// Usage: node tools/letters/workbook.mjs [--html-only] [--mnemonics]
+//   --mnemonics also builds the '-mnemonics' editions: each letter row gets a one-line memory-hook caption from data/letters/mnemonics.json.
 // Output: docs/workbook/alef-workbook-<print|cursive>-<a4|letter>.pdf (+ html/ sources, manifest.json), copied to assets/workbook/.
 // Dev tooling: needs Playwright (Chromium) only for the PDF step; buildModel()/buildHtml() are pure and unit-tested.
 // Fonts (SIL OFL 1.1): Frank Ruhl Libre = print, Gveret Levin = cursive (ktav yad). Stroke-order pages come from data/letters/letters.json (DRAFT).
@@ -38,13 +39,19 @@ const SYL_CONSONANTS = ['ב', 'ל', 'מ', 'ר', 'ת'];
 const NIQQUD_RE = /[֑-ׇ]/g;
 
 /** Pure data model of the workbook (no layout). */
-export function buildModel(script) {
+export function buildModel(script, opts = {}) {
   const letters = readJson('data/letters/letters.json');
   const byId = Object.fromEntries(letters.map((l) => [l.id, l]));
   const conf = readJson('data/letters/confusables.json');
   const niq = Object.fromEntries(readJson('data/pronunciation/niqqud.json').records.map((r) => [r.id, r]));
   const lessons = readJson('data/curriculum/lessons.json').lessons;
 
+  const mnAll = opts.mnemonics ? readJson('data/letters/mnemonics.json') : null;
+  const capOf = (row) => {
+    if (!mnAll) return undefined;
+    const m = row.kind === 'variant' ? mnAll.variants.find((v) => v.parent === row.letterId) : mnAll.letters.find((x) => x.id === row.letterId);
+    return m && m.caption;
+  };
   const alphaIndex = Object.fromEntries(letters.map((l, i) => [l.id, i + 1]));
   const letterRows = [];
   for (const l of letters) {
@@ -58,6 +65,8 @@ export function buildModel(script) {
       letterRows.push({ ...common, kind: 'letter', label: SOFIT[l.id] || l.name, glyph: l.he, ipa: l.sound.ipa });
     }
   }
+
+  if (mnAll) for (const r of letterRows) r.caption = capOf(r);
 
   const sections = GROUPS.map((ids, gi) => ({
     index: gi + 1, ids, title: `Letters ${gi * 9 + 1}-${gi * 9 + 9}: ${ids.map((i) => byId[i].name).join(', ')}`,
@@ -85,7 +94,7 @@ export function buildModel(script) {
     seen.add(w.he); wordRows.push({ kind: 'word', he: w.he, en: w.en, lesson: les.id });
     if (wordRows.length >= 24) break outer;
   }
-  return { script, letters: letters.length, letterRows, sections, confRows, sylRows, wordRows, groups: GROUPS };
+  return { script, mnemonics: !!mnAll, letters: letters.length, letterRows, sections, confRows, sylRows, wordRows, groups: GROUPS };
 }
 
 // ---------------------------------------------------------------- SVG pieces
@@ -130,7 +139,7 @@ function strokeOrderCell(letter, script) {
 function rowHtml(r, S) {
   const g = r.gematria !== undefined ? `(${r.gematria}${r.gematriaIsConvention ? '*' : ''})` : '';
   const attrs = r.kind === 'letter' ? `data-letter-row="${r.letterId}"` : `data-variant-row="${r.letterId}"`;
-  return `<div class="row" ${attrs}><div class="rh"><span class="box" aria-label="tick when done"></span><span class="num">${esc(r.number)}</span><span class="nm">${esc(r.label)} <span class="g">${g}</span></span><span class="ipa">/${esc(r.ipa)}/</span></div>${traceStrip({ cells: [r.glyph], family: S.family, tierOf: letterTier, size: S.print ? 62 : 48, base: 58, height: 80 })}</div>`;
+  return `<div class="row" ${attrs}><div class="rh"><span class="box" aria-label="tick when done"></span><span class="num">${esc(r.number)}</span><span class="nm">${esc(r.label)} <span class="g">${g}</span></span>${r.caption ? `<span class="cap">${esc(r.caption)}</span>` : ''}<span class="ipa">/${esc(r.ipa)}/</span></div>${traceStrip({ cells: [r.glyph], family: S.family, tierOf: letterTier, size: S.print ? 62 : 48, base: 58, height: 80 })}</div>`;
 }
 function confHtml(r, S) {
   return `<div class="row conf" data-confusable="${esc(r.id)}"><div class="rh"><span class="box"></span><span class="nm">${esc(r.label)}</span><span class="hint">${esc(r.hint)}</span></div>${traceStrip({ cells: r.cells, family: S.family, tierOf: cycleTier(r.cells.length), size: S.print ? 58 : 46, base: 58, height: 80 })}</div>`;
@@ -162,6 +171,7 @@ body{margin:0;font-family:system-ui,"Helvetica Neue",Arial,sans-serif;color:#000
 .row.conf,.row.syl{height:22.5mm}.row.word{height:27.5mm}
 .rh{display:flex;align-items:center;gap:2.2mm;height:5.6mm;font-size:9.5pt;direction:ltr}
 .box{width:4mm;height:4mm;border:.4mm solid #000;display:inline-block;flex:none}
+.cap{flex:1;min-width:0;margin-left:2mm;font-size:7pt;font-style:italic;color:#333;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .num{font-weight:bold;min-width:6mm}.g{color:#444;font-size:8.5pt}.ipa{margin-left:auto;color:#444;font-size:8pt}
 .hint{margin-left:2mm;font-size:6.8pt;line-height:1.15;color:#333;max-width:125mm}
 .row.conf .rh,.row.syl .rh{height:auto;min-height:7mm}
@@ -181,8 +191,8 @@ function pageShell({ paper, S, title, body, n, total, fields = true }) {
 }
 
 /** Full HTML + page list. @param {'print'|'cursive'} script @param {'a4'|'letter'} paperId */
-export function buildHtml(script, paperId) {
-  const paper = PAPERS[paperId]; const S = SCRIPTS[script]; const model = buildModel(script);
+export function buildHtml(script, paperId, opts = {}) {
+  const paper = PAPERS[paperId]; const S = SCRIPTS[script]; const model = buildModel(script, opts);
   const letters = readJson('data/letters/letters.json'); const byId = Object.fromEntries(letters.map((l) => [l.id, l]));
   const usable = paper.h - 11 - 9 - 14 - 6; // page minus paddings, header, footer
   const per = (h) => Math.max(1, Math.floor(usable / h));
@@ -200,7 +210,7 @@ export function buildHtml(script, paperId) {
 <li>Colour in one circle in the progress chart below each time you do that (three circles per letter).</li></ol>
 <div class="notice"><b>DRAFT:</b> stroke order not yet reviewed by a native teacher. The numbered strokes in this workbook were computed from fonts and checked only against one outside reference; if your teacher shows a different order, follow your teacher. ${script === 'cursive' ? 'Cursive shapes come from the font Gveret Levin (Israeli handwriting style); real handwriting also joins and varies.' : 'Print stroke order is a proposal; Israeli schools may teach print letters mainly for reading.'}</div>
 <h2>My progress (27 letters, right to left)</h2><div class="chart">${chart}</div>
-<p style="font-size:7.5pt;margin-top:3mm">* The values 500-900 for the five final (sofit) letters are a widely used convention, not confirmed by a source consulted here. Gematria = the number value of a letter. Letters with two sounds (Bet/Vet, Kaf/Khaf, Pe/Fe, Shin/Sin) have two rows; the row marked "b" is the second sound.</p>` });
+${opts.mnemonics ? '<div class="notice"><b>Memory hooks (DRAFT):</b> the italic line on each row is a sound-alike memory trick, not the history of the letter, and has not been checked by a Hebrew teacher.</div>' : ''}<p style="font-size:7.5pt;margin-top:3mm">* The values 500-900 for the five final (sofit) letters are a widely used convention, not confirmed by a source consulted here. Gematria = the number value of a letter. Letters with two sounds (Bet/Vet, Kaf/Khaf, Pe/Fe, Shin/Sin) have two rows; the row marked "b" is the second sound.</p>` });
 
   // sections: stroke order page + row page(s)
   model.sections.forEach((sec) => {
@@ -220,6 +230,7 @@ export function buildHtml(script, paperId) {
 // ---------------------------------------------------------------- build (PDF)
 async function main() {
   const htmlOnly = process.argv.includes('--html-only');
+  const withMn = process.argv.includes('--mnemonics');
   const outDir = join(root, 'docs', 'workbook'); const htmlDir = join(outDir, 'html'); const assetDir = join(root, 'assets', 'workbook');
   mkdirSync(htmlDir, { recursive: true }); mkdirSync(assetDir, { recursive: true });
   let chromium = null;
@@ -229,11 +240,12 @@ async function main() {
   }
   const browser = chromium ? await chromium.launch() : null;
   const files = [];
-  for (const script of Object.keys(SCRIPTS)) for (const paperId of Object.keys(PAPERS)) {
-    const { html, pages, pageCount } = buildHtml(script, paperId);
-    const name = `alef-workbook-${script}-${paperId}`;
+  const editions = withMn ? [false, true] : [false];
+  for (const mnem of editions) for (const script of Object.keys(SCRIPTS)) for (const paperId of Object.keys(PAPERS)) {
+    const { html, pages, pageCount } = buildHtml(script, paperId, { mnemonics: mnem });
+    const name = `alef-workbook-${script}-${paperId}${mnem ? '-mnemonics' : ''}`;
     const hp = join(htmlDir, name + '.html'); writeFileSync(hp, html);
-    const entry = { id: name, script, paper: PAPERS[paperId].label, pages: pageCount, pageKinds: pages, html: `html/${name}.html` };
+    const entry = { id: name, script, mnemonics: mnem, paper: PAPERS[paperId].label, pages: pageCount, pageKinds: pages, html: `html/${name}.html` };
     if (browser) {
       const page = await browser.newPage();
       await page.goto(pathToFileURL(hp).href); await page.evaluate(() => document.fonts.ready); await page.waitForTimeout(300);

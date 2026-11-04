@@ -173,7 +173,7 @@ export function buildGeneratedManifest(prov, approvals) {
   }
   return {
     version: 1,
-    note: 'APPROVED AI-generated images only (AI-generated; see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.',
+    note: 'APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.',
     dir: 'gen',
     count: Object.keys(images).length,
     images,

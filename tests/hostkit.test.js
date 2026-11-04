@@ -49,10 +49,10 @@ test('no email addresses or phone numbers anywhere in the kit', () => {
 test('every file is marked draft and not reviewed by clergy or educators', () => {
   for (const [f, t] of Object.entries(all)) { assert.match(t, /DRAFT/, f); assert.match(t, /[Nn]ot reviewed by clergy or educators/, f); }
 });
-test('outreach drafts say John edits and sends, Claude does not send; every fact has a source tag', () => {
+test('outreach drafts say John edits and sends, nothing is sent automatically; every fact has a source tag', () => {
   const o = all['outreach-drafts.md'];
   assert.match(o, /for John to edit and send/i);
-  assert.match(o, /Claude does not send/);
+  assert.match(o, /Drafts are never sent automatically/);
   const rows = o.split('\n').filter((l) => /^\| F\d+ /.test(l));
   assert.ok(rows.length >= 10);
   for (const r of rows) assert.match(r, /\[[A-Z]+(-[A-Za-z0-9]+)*[:,\]]/, r);

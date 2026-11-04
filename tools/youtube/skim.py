@@ -1,6 +1,7 @@
+import os
 """Print a short skim of cleaned caption text (research aid; output is for the reader's eyes, not committed)."""
 import re, sys
-R = '/home/claude/research_notes/youtube/all_txt/'
+R = os.path.expanduser('~/research_notes/youtube/all_txt/')
 KW = re.compile(r'shva|sheva|schwa|silent|final|sofit|dagesh|kamatz|qamats|patach|stress|vav|yud|mater|remember|mnemonic|looks like|shin|sin\b|trick|dot|ending|syllable|accent|ashkenaz|sephard|israeli|modern|vowel', re.I)
 for vid in sys.argv[2:]:
     t = open(R + vid + '.txt').read()

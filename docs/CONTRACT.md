@@ -1,11 +1,11 @@
 # ALEF build contract (all lanes read this first)
 
 Product: interactive Hebrew course (app + book), intro -> intermediate. Two goals: (1) read Torah/prayers aloud
-with a congregation, (2) function in Israel without sounding like an outsider. Man + woman voices. Spec: /home/claude/reports/Hebrew learning app research.md and notes in /home/claude/research_notes/Hebrew learning app research/.
+with a congregation, (2) function in Israel without sounding like an outsider. Man + woman voices. Spec: ~/reports/Hebrew learning app research.md and notes in ~/research_notes/Hebrew learning app research/.
 
 ## Hard environment facts
 - NO npm/pip installs (registries are blocked). Zero third-party dependencies. Plain ES modules (`.js`, JSDoc types), no build step, runs from any static server.
-- Tests: Node built-in runner. `node --test tests/` from /home/claude/alef. Each lane writes `tests/<lane>.*.test.js`. Tests must pass before you report.
+- Tests: Node built-in runner. `node --test tests/` from ~/alef. Each lane writes `tests/<lane>.*.test.js`. Tests must pass before you report.
 - Python 3 + fontTools, Playwright(Chromium), rsvg-convert exist locally. Hebrew-capable local fonts: DejaVu, FreeSerif/FreeSans.
 - No internet for packages; WebFetch/WebSearch work for reading docs. GitHub push is not possible this session.
 - Only edit files inside YOUR lane's paths. Shared files (index.html, src/app.js, sw.js) belong to lane 8 only. If you need a change there, say so in your report.
@@ -28,7 +28,7 @@ Every UI view module exports `mount(root: HTMLElement, ctx): () => void` (return
 - Lane 4 voices/audio: `src/audio/*`, `tools/audio/*`, `data/audio/*`. `player.js` (`createAudio({settings})` -> {play(kind,id), playSequence([...]), has(kind,id)} resolving manifest paths with fallback to Web Speech `speechSynthesis` he-IL when file missing and flagging it), recording-script generator, TTS provider adapters (Azure/Google/ElevenLabs REST, credentials via env, NOT run here), casting brief + contract docs in `docs/voices/`.
 - Lane 5 corpus: `src/corpus/*`, `data/corpus/*`. `registry.json` (every displayed text: id, ref, he (pointed), source, license, attribution, english (PD only), status:"transcribed-needs-check"|"verified"), prayer roster, survival phrasebook (>= 150 phrases with he, transliteration placeholder fields, en), view `src/corpus/read.view.js` (prayer reader with highlighted letters; opener = Priestly Blessing Num 6:24-26).
 - Lane 6 photo: `src/photo/*`, `data/photo/*`. Pure, testable pipeline: `order-lines.js` (RTL line ordering from OCR boxes), `match-prayer.js` (fuzzy match consonant skeleton against corpus), `syllabify.js` (Hebrew syllabifier for pointed text), `pipeline.js` (adapter interface for OCR/nakdan/translate engines, with a mock engine for tests), view `src/photo/scan.view.js` (file input/camera -> pipeline -> letter + syllable breakdown -> audio -> English). Real OCR engine wiring is documented, not run.
-- Lane 7 images+book: `tools/images/*`, `data/images/*`, `book/*`, `docs/book/*`. Machine-readable prompt groups (~200) derived from the ChatGPT command doc (https://claude.ai/artifact/TFbAibbxmNmS1oYn3m2pdv content is in the lane brief), SVG overlay templates, print-ready book HTML sources + build script producing a PDF with Chromium (Playwright), QR/URL map per letter page, KDP/Ingram specs doc.
+- Lane 7 images+book: `tools/images/*`, `data/images/*`, `book/*`, `docs/book/*`. Machine-readable prompt groups (~200) derived from the ChatGPT command doc (content is in the lane brief), SVG overlay templates, print-ready book HTML sources + build script producing a PDF with Chromium (Playwright), QR/URL map per letter page, KDP/Ingram specs doc.
 - Lane 8 platform: `index.html`, `manifest.webmanifest`, `sw.js`, `src/app.js`, `src/shell/*`, `src/store.js`, `assets/*`, `.github/workflows/*`, `README.md`, `docs/ARCHITECTURE.md`. Hash router, settings (voice m/f, congregation, script), IndexedDB/localStorage store, offline service worker precaching, install prompt, accessibility, RTL handling, i18n helper, home screen linking all views. Capacitor wrap doc only.
 
 ## Quality bar

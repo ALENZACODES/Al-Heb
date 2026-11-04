@@ -7,18 +7,35 @@ import { t, tHe } from './shell/i18n.js';
 import { createStubAudio } from './shell/audio-stub.js';
 import { createShellAudio } from './shell/audio.js';
 import { createShardLoader } from './shell/audio-shards.js';
+import { fetchCoreManifest, afterPaint } from './shell/audio-manifest.js';
 import { h, heSpan, unavailableCard } from './shell/ui.js';
 
 const settings = createSettings(store);
 
+/** The player module is small and loads at boot; the ~1.3 MB core manifest does NOT: it resolves after first paint (see scheduleManifest). */
 async function makeAudio() {
   try {
-    const [m, res] = await Promise.all([import('./audio/player.js'), fetch('data/audio/manifest.json')]);
-    if (typeof m.createAudio !== 'function' || !res.ok) throw new Error('player or manifest unavailable');
-    return createShellAudio({ settings, manifest: await res.json(), createAudio: m.createAudio });
+    const m = await import('./audio/player.js');
+    if (typeof m.createAudio !== 'function') throw new Error('player unavailable');
+    return createShellAudio({ settings, loadManifest: () => fetchCoreManifest((u) => fetch(u)), createAudio: m.createAudio });
   } catch (e) { console.warn('lane 4 audio player not used:', e?.message); }
   return createStubAudio({ settings });
 }
+let lastCtx = null, lastMatch = null, touched = false;
+/** After the first route has rendered: load the core manifest in an idle slot; if it arrives and the learner has not touched the
+ * page since the route mounted, re-render that route once so audio buttons reflect the real manifest. Otherwise they keep the
+ * honest "checking" state until the next navigation (never a claim that a clip exists). */
+function scheduleManifest(audio) {
+  if (typeof audio.ensureManifest !== 'function') return;
+  const go = async () => {
+    const was = lastMatch;
+    const ok = await audio.ensureManifest();
+    document.body.dataset.audioManifest = audio.manifestState;
+    if (ok && was && was === lastMatch && !touched && lastCtx) show(was, lastCtx, { quiet: true });
+  };
+  window.alefManifest = new Promise((res) => { shownFirst.then(() => afterPaint(() => go().then(res, res))); });
+}
+let shownFirstResolve; const shownFirst = new Promise((r) => { shownFirstResolve = r; });
 function wireSoundStatus(audio) {
   const el = document.getElementById('sound-status');
   if (!el) return;
@@ -91,12 +108,13 @@ let unmount = () => {};
 let navToken = 0;
 let firstShow = true; // do not steal focus on the initial page load (keyboard users start at the skip link)
 
-async function show(match, ctxBase) {
+async function show(match, ctxBase, { quiet = false } = {}) {
   const token = ++navToken;
   const root = document.getElementById('main');
   try { unmount(); } catch (e) { console.warn('unmount failed', e); }
   unmount = () => {};
   const { route, params, query, path } = match;
+  if (!quiet) { lastMatch = match; lastCtx = ctxBase; touched = false; }
   const live = document.getElementById('announcer');
   if (!route) {
     root.replaceChildren(h('section', { class: 'card' }, h('h1', { id: 'view-title', tabindex: '-1' }, t('notfound.title')), h('p', { class: 'mono' }, path), h('a', { class: 'btn', href: '#/' }, t('nav.home'))));
@@ -135,12 +153,12 @@ async function show(match, ctxBase) {
     }
     // focus management on navigation: move focus to the view heading, announce title, reset scroll
     const hd = root.querySelector('#view-title, h1');
-    if (hd && !firstShow) { if (!hd.hasAttribute('tabindex')) hd.setAttribute('tabindex', '-1'); hd.focus({ preventScroll: true }); }
+    if (hd && !firstShow && !quiet) { if (!hd.hasAttribute('tabindex')) hd.setAttribute('tabindex', '-1'); hd.focus({ preventScroll: true }); }
     firstShow = false;
-    live.textContent = document.title;
-    window.scrollTo(0, 0);
+    if (!quiet) { live.textContent = document.title; window.scrollTo(0, 0); }
     document.body.dataset.route = route?.name ?? 'notfound';
     document.body.dataset.ready = '1';
+    shownFirstResolve();
   }
 }
 
@@ -150,6 +168,8 @@ async function boot() {
   applyTheme(); applyScript(); wireChrome();
   settings.subscribe((_, changed) => { if (changed.includes('theme')) applyTheme(); if (changed.includes('script')) applyScript(); });
   const audio = await makeAudio();
+  document.getElementById('main').addEventListener('pointerdown', () => { touched = true; }, true);
+  document.getElementById('main').addEventListener('keydown', () => { touched = true; }, true);
   available = availableRoutes(VIEW_FILES);
   wireSoundStatus(audio);
   let router;
@@ -157,6 +177,8 @@ async function boot() {
   router = createRouter((m) => { show(m, ctxBase); });
   window.alef = { settings, store, audio, router }; // debugging handle
   router.start();
+  import('./morning/boot.js').then((m) => m.startMorning({ store, audio })).catch(() => {});
+  scheduleManifest(audio);
   startShardLoading(audio);
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
     navigator.serviceWorker.register('sw.js').catch((e) => console.warn('service worker not registered', e));

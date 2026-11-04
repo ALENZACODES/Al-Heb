@@ -12,7 +12,7 @@ import { createImgResolver } from './img.js';
 import { overlaySvg, glyphFor, loadLettersJson } from '../tools/images/overlay.mjs';
 import { mnemonicCards, mnemonicStatus } from './cards.mjs';
 import { ROOT, readJson } from './content.mjs';
-import { fontFaces, renderPdf } from './build.mjs';
+import { fontFaces, renderPdf, scrubPdf } from './build.mjs';
 
 export const PAPERS = { letter: { w: 8.5, h: 11, label: 'US Letter' }, a4: { w: 8.2677, h: 11.6929, label: 'A4' } };
 const CARD_W = 2.5, CARD_H = 3.5, COLS = 3, ROWS = 3;
@@ -92,6 +92,7 @@ export async function main(argv = process.argv.slice(2)) {
     const html = join(dir, `alef-mnemonic-flashcards-${paper}.html`), pdf = join(dir, `alef-mnemonic-flashcards-${paper}.pdf`);
     writeFileSync(html, buildFlashcardsHtml(paper, { out }));
     await renderPdf(html, pdf);
+    scrubPdf(pdf);
     console.log('wrote', relative(ROOT, pdf));
   }
 }

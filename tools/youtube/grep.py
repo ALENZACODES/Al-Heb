@@ -1,6 +1,7 @@
+import os
 """usage: grep.py REGEX VIDEO_ID... : print 36-word windows around matches (max 5 per video)."""
 import re, sys
-R = '/home/claude/research_notes/youtube/all_txt/'
+R = os.path.expanduser('~/research_notes/youtube/all_txt/')
 rx = re.compile(sys.argv[1], re.I)
 for vid in sys.argv[2:]:
     w = open(R + vid + '.txt').read().split(); print('==', vid, len(w))

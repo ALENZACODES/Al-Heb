@@ -1,6 +1,6 @@
 {
  "axe": "4.14.0",
- "when": "2026-11-04T03:38:12.418Z",
+ "when": "2026-11-04T03:53:04.485Z",
  "routes": {
   "/": {
    "phone-light": [],
@@ -791,6 +791,42 @@
    "desktop-dark": []
   },
   "/progress": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/words/trace": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/israel": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/israel/x": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/traditions": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/traditions/guide": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/traditions/hear": {
    "phone-light": [],
    "phone-dark": [],
    "desktop-light": [],
@@ -3698,6 +3734,18 @@
     }
    ]
   },
+  "/torahread": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/torahread/x": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
   "/vocab": {
    "phone-light": [
     {
@@ -5377,7 +5425,7 @@
   }
  ],
  "summary": {
-  "routes": 41,
+  "routes": 49,
   "configs": 4,
   "groups": 48,
   "nodes": 940,

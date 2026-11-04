@@ -26,6 +26,6 @@ Press "Export decisions" on a block page. The JSON appears in the box (and is co
 | What | Where |
 |---|---|
 | Web copies (WebP q88, long edge 800 and 1600, metadata stripped) | `assets/img/gen/` (in git, about 32 MB) |
-| Full-resolution originals (1254 px PNG, metadata intact) | NOT in git: `/home/claude/research_notes/images/codex-batch-01/ingest-originals/` (symlinked as `../alef-image-originals`; or set `ALEF_IMAGE_ORIGINALS`). Back it up. |
+| Full-resolution originals (1254 px PNG, metadata intact) | NOT in git: `~/research_notes/images/codex-batch-01/ingest-originals/` (symlinked as `../alef-image-originals`; or set `ALEF_IMAGE_ORIGINALS`). Back it up. |
 | Lossless 1024 px PNGs of the first import | removed from the tree; still in git history at commit 86867c7 |
 | Defect notes shown on sheets | `data/images/review-notes.json` |

@@ -1,0 +1,295 @@
+{
+ "schemaVersion": 1,
+ "status": "draft",
+ "proofread": false,
+ "reviewNote": "DRAFT, unreviewed. Glosses and points written by the module author; not checked by a Hebrew teacher. Later steps use letters and vowels beyond the first-10-minutes set. Not tested on learners.",
+ "stages": [
+  "pointed",
+  "first-letter-pointed",
+  "unpointed-with-hint",
+  "unpointed"
+ ],
+ "passRule": "Target (unmeasured): 80% on the 20 unpointed words after the ladder.",
+ "steps": [
+  {
+   "n": 1,
+   "stage": "pointed",
+   "word": "שָׁלוֹם",
+   "shown": "שָׁלוֹם",
+   "bare": "שלום",
+   "gloss": "peace",
+   "hintAvailable": false,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-1"
+   },
+   "status": "draft"
+  },
+  {
+   "n": 2,
+   "stage": "pointed",
+   "word": "שָׁם",
+   "shown": "שָׁם",
+   "bare": "שם",
+   "gloss": "there",
+   "hintAvailable": false,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-2"
+   },
+   "status": "draft"
+  },
+  {
+   "n": 3,
+   "stage": "pointed",
+   "word": "מָה",
+   "shown": "מָה",
+   "bare": "מה",
+   "gloss": "what",
+   "hintAvailable": false,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-3"
+   },
+   "status": "draft"
+  },
+  {
+   "n": 4,
+   "stage": "pointed",
+   "word": "לֹא",
+   "shown": "לֹא",
+   "bare": "לא",
+   "gloss": "no, not",
+   "hintAvailable": false,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-4"
+   },
+   "status": "draft"
+  },
+  {
+   "n": 5,
+   "stage": "pointed",
+   "word": "טוֹב",
+   "shown": "טוֹב",
+   "bare": "טוב",
+   "gloss": "good",
+   "hintAvailable": false,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-5"
+   },
+   "status": "draft"
+  },
+  {
+   "n": 6,
+   "stage": "pointed",
+   "word": "יוֹם",
+   "shown": "יוֹם",
+   "bare": "יום",
+   "gloss": "day",
+   "hintAvailable": false,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-6"
+   },
+   "status": "draft"
+  },
+  {
+   "n": 7,
+   "stage": "first-letter-pointed",
+   "word": "אָב",
+   "shown": "אָב",
+   "bare": "אב",
+   "gloss": "father",
+   "hintAvailable": false,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-7"
+   },
+   "status": "draft"
+  },
+  {
+   "n": 8,
+   "stage": "first-letter-pointed",
+   "word": "כֹּל",
+   "shown": "כֹּל",
+   "bare": "כל",
+   "gloss": "all",
+   "hintAvailable": false,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-8"
+   },
+   "status": "draft"
+  },
+  {
+   "n": 9,
+   "stage": "first-letter-pointed",
+   "word": "גַּם",
+   "shown": "גַּם",
+   "bare": "גם",
+   "gloss": "also",
+   "hintAvailable": false,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-9"
+   },
+   "status": "draft"
+  },
+  {
+   "n": 10,
+   "stage": "first-letter-pointed",
+   "word": "כֵּן",
+   "shown": "כֵּן",
+   "bare": "כן",
+   "gloss": "yes",
+   "hintAvailable": false,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-10"
+   },
+   "status": "draft"
+  },
+  {
+   "n": 11,
+   "stage": "first-letter-pointed",
+   "word": "אֵין",
+   "shown": "אֵין",
+   "bare": "אין",
+   "gloss": "there is not",
+   "hintAvailable": false,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-11"
+   },
+   "status": "draft"
+  },
+  {
+   "n": 12,
+   "stage": "first-letter-pointed",
+   "word": "יֵשׁ",
+   "shown": "יֵש",
+   "bare": "יש",
+   "gloss": "there is",
+   "hintAvailable": false,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-12"
+   },
+   "status": "draft"
+  },
+  {
+   "n": 13,
+   "stage": "unpointed-with-hint",
+   "word": "מַיִם",
+   "shown": "מים",
+   "bare": "מים",
+   "gloss": "water",
+   "hintAvailable": true,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-13"
+   },
+   "status": "draft"
+  },
+  {
+   "n": 14,
+   "stage": "unpointed-with-hint",
+   "word": "בַּיִת",
+   "shown": "בית",
+   "bare": "בית",
+   "gloss": "house",
+   "hintAvailable": true,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-14"
+   },
+   "status": "draft"
+  },
+  {
+   "n": 15,
+   "stage": "unpointed-with-hint",
+   "word": "סֵפֶר",
+   "shown": "ספר",
+   "bare": "ספר",
+   "gloss": "book",
+   "hintAvailable": true,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-15"
+   },
+   "status": "draft"
+  },
+  {
+   "n": 16,
+   "stage": "unpointed-with-hint",
+   "word": "תּוֹדָה",
+   "shown": "תודה",
+   "bare": "תודה",
+   "gloss": "thanks",
+   "hintAvailable": true,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-16"
+   },
+   "status": "draft"
+  },
+  {
+   "n": 17,
+   "stage": "unpointed-with-hint",
+   "word": "שָׁנָה",
+   "shown": "שנה",
+   "bare": "שנה",
+   "gloss": "year",
+   "hintAvailable": true,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-17"
+   },
+   "status": "draft"
+  },
+  {
+   "n": 18,
+   "stage": "unpointed-with-hint",
+   "word": "עוֹד",
+   "shown": "עוד",
+   "bare": "עוד",
+   "gloss": "more, still",
+   "hintAvailable": true,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-18"
+   },
+   "status": "draft"
+  },
+  {
+   "n": 19,
+   "stage": "unpointed",
+   "word": "אֲבָל",
+   "shown": "אבל",
+   "bare": "אבל",
+   "gloss": "but",
+   "hintAvailable": false,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-19"
+   },
+   "status": "draft"
+  },
+  {
+   "n": 20,
+   "stage": "unpointed",
+   "word": "אִמָּא",
+   "shown": "אמא",
+   "bare": "אמא",
+   "gloss": "mom",
+   "hintAvailable": false,
+   "audio": {
+    "kind": "word",
+    "id": "firstday-ladder-20"
+   },
+   "status": "draft"
+  }
+ ]
+}

@@ -507,7 +507,7 @@
    "improvedName": "Silent-letter tagging game",
    "spec": {
     "screen": "A word is shown with each letter tinted by role: sounds, carries a vowel, or silent. The learner taps the silent letter or letters, then hears the word. Final he, aleph in mid-word and ayin come up repeatedly.",
-    "data": "letterRoles[] = {wordId, letterIndex, role: sound | vowel-carrier | silent, tradition}; roles are produced by a rule table plus a reviewed exceptions list, never by hand per word.",
+    "data": "letterRoles[] = {wordId, letterIndex, role: sound | vowel-carrier | silent, tradition}; roles are made by a rule table plus a reviewed exceptions list, never by hand per word.",
     "interaction": "Tap to mark a silent letter; feedback shows the rule. After five wins the tint is removed and the learner marks silent letters on plain text.",
     "test": "Unit: every word has at least one role per letter; final he is never marked sounding; exceptions list entries carry a reason; marking by tradition changes ayin only where documented."
    },

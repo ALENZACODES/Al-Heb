@@ -30,6 +30,7 @@ export function audioStatus(ctx, kind, id, voice) {
       const s = a.status(kind, id, { voice });
       if (s.source === "file") return { source: "file", label: s.entryStatus === "tts" ? "Pre-rendered synthetic voice file." : "Recorded file." };
       if (s.source === "tts-fallback") return { source: "tts-fallback", label: "Only the browser's built-in voice (text-to-speech); it may not match the man/woman choice." };
+      if (s.reason === "checking audio...") return { source: "none", checking: true, label: "Checking audio..." };
       return { source: "none", label: "No audio yet" + (s.reason ? ` (${s.reason})` : "") + "." };
     }
     if (typeof a.has === "function") return a.has(kind, id, { voice }) ? { source: "file", label: "Recorded file." } : { source: "none", label: "No audio file yet for this item." };
@@ -41,7 +42,8 @@ export function audioStatus(ctx, kind, id, voice) {
 export function voiceButton(ctx, kind, id, voice, label, note) {
   return el("button", { type: "button", class: "btn secondary alef-play alef-voice-btn", "data-voice": voice, "data-audio": `${kind}/${id}`, "aria-label": label,
     onclick: async () => {
-      const st = audioStatus(ctx, kind, id, voice);
+      let st = audioStatus(ctx, kind, id, voice);
+      if (st.checking && typeof ctx.audio.ensureManifest === "function") { if (note) note.textContent = st.label; await ctx.audio.ensureManifest(); st = audioStatus(ctx, kind, id, voice); }
       if (st.source === "none") { if (note) note.textContent = st.label; return; }
       try { const r = await ctx.audio.play(kind, id, { voice }); if (note) note.textContent = describePlay(r) + (st.source === "tts-fallback" ? " The voice gender is chosen by your device, not by this button." : ""); }
       catch (e) { if (note) note.textContent = "No sound: " + (e?.message || e); }

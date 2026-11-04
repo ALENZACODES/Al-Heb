@@ -140,10 +140,13 @@ export function mount(root, ctx = {}) {
   }
 
   function render() {
+    // keep keyboard focus: the screen is rebuilt on every press, so remember what had focus and put it back afterwards
+    const ae = document.activeElement;
+    const keep = ae && ae !== document.body && body.contains(ae) ? (ae.getAttribute('data-tile') ? '[data-tile="' + ae.getAttribute('data-tile') + '"]' : ae.getAttribute('data-act') ? '[data-act="' + ae.getAttribute('data-act') + '"]' : '[data-act="quiz"]') : null;
     body.textContent = '';
     const q = state.quiz;
     body.appendChild(h('div', { class: 'row' },
-      h('button', { 'aria-pressed': !!q, onclick: () => { if (q) state.quiz = null; else startQuiz(); render(); } }, q ? t('atlas.quizOff', 'Stop quiz') : t('atlas.quizOn', 'Quiz me: find the letter')),
+      h('button', { 'data-act': 'quiz', 'aria-pressed': !!q, onclick: () => { if (q) state.quiz = null; else startQuiz(); render(); } }, q ? t('atlas.quizOff', 'Stop quiz') : t('atlas.quizOn', 'Quiz me: find the letter')),
       h('span', { class: 'muted' }, t('atlas.help', 'Tap a tile to hear its sound. Dashed tiles are the second sound of a two-sound letter.'))));
     statusEl = h('div', { class: 'status', role: 'status', 'aria-live': 'polite' }, state.status || '');
 
@@ -152,7 +155,7 @@ export function mount(root, ctx = {}) {
       const box = h('div', { class: 'panel' },
         h('strong', {}, t('atlas.find', 'Find: ') + tg.name + '  '), h('span', { class: 'muted' }, '/' + tg.ipa + '/'),
         h('div', { class: 'row' }, h('button', { onclick: () => hear(tg.nameAudioId) }, t('atlas.hearName', 'Hear it'))),
-        q.right ? h('p', {}, t('atlas.good', 'Good! ') + tg.name, ' ', h('button', { onclick: () => { startQuiz(); render(); } }, t('atlas.next', 'Next'))) : null,
+        q.right ? h('p', {}, t('atlas.good', 'Good! ') + tg.name, ' ', h('button', { 'data-act': 'next', onclick: () => { startQuiz(); render(); } }, t('atlas.next', 'Next'))) : null,
         q.wrong && !q.right ? h('p', { role: 'alert' }, t('atlas.notThat', 'That is ') + tileById(q.wrong).name + '.') : null,
         q.warning && !q.right ? h('p', { class: 'warn' }, h('strong', {}, t('atlas.lookalike', 'Look-alike: ')), q.warning) : null,
         q.msg ? h('p', { class: 'muted' }, q.msg) : null,
@@ -165,9 +168,9 @@ export function mount(root, ctx = {}) {
     for (const tile of state.tiles) {
       const cls = ['tile', tile.kind, q && q.wrong === tile.id && !q.right ? 'wrong' : '', q && q.right === tile.id ? 'right' : ''].filter(Boolean).join(' ');
       list.appendChild(h('li', {}, h('button', {
-        class: cls, 'data-tile': tile.id, 'aria-pressed': !q && state.selected === tile.id, 'aria-label': tile.name + (q ? '' : ', /' + tile.ipa + '/'),
+        class: cls, 'data-tile': tile.id, 'aria-pressed': !q && state.selected === tile.id, 'aria-label': q ? tile.glyph + ' ' + tile.name : false,
         onclick: () => onTile(tile)
-      }, h('span', { class: 'g', dir: 'rtl', lang: 'he', 'aria-hidden': 'true' }, tile.glyph), h('span', { class: 'n' }, q ? '' : tile.name), h('span', { class: 's' }, q ? '' : '/' + tile.ipa + '/'))));
+      }, h('span', { class: 'g', dir: 'rtl', lang: 'he' }, tile.glyph), h('span', { class: 'n' }, q ? '' : tile.name), h('span', { class: 's' }, q ? '' : '/' + tile.ipa + '/'))));
     }
     body.appendChild(list);
 
@@ -191,6 +194,7 @@ export function mount(root, ctx = {}) {
       body.appendChild(panel);
     }
     body.appendChild(statusEl);
+    if (keep) { const el = body.querySelector(keep) || body.querySelector('[data-act="quiz"]'); if (el) el.focus(); }
   }
 
   return function unmount() { unmounted = true; root.textContent = ''; };

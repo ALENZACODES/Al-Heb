@@ -359,6 +359,12 @@ export async function renderPdf(htmlPath, pdfPath) {
   await browser.close();
 }
 
+/** Strip Chromium/Skia Creator/Producer, title, dates and XMP; leaves only Author "John Khan". Run on every finished PDF. */
+export function scrubPdf(pdfPath) {
+  const r = spawnSync('python3', [join(ROOT, 'book/pdf_tools.py'), 'scrub', pdfPath], { stdio: 'inherit' });
+  if (r.status !== 0) throw new Error('pdf metadata scrub failed for ' + pdfPath);
+}
+
 export function pdfName(o) {
   if (!o.print) return 'alef-book-draft.pdf';
   return `alef-book-${o.trim}-print${o.bleed ? '-bleed' : ''}${o.binding === 'rtl' ? '-rtlspreads' : ''}.pdf`;
@@ -392,6 +398,7 @@ export async function main(argv) {
       const [tw, th] = TRIMS[o.trim];
       spawnSync('python3', [join(ROOT, 'book/pdf_tools.py'), 'finalize', pdfPath, String(tw), String(th), o.bleed ? '0.125' : '0', o.binding], { stdio: 'inherit' });
     }
+    scrubPdf(pdfPath);
     console.log(`wrote ${relative(ROOT, pdfPath)} (${Object.keys(pages2).length} anchors)`);
   }
 }

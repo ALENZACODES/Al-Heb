@@ -280,7 +280,7 @@
    "improvedName": "Syllable chips with stress marking",
    "spec": {
     "screen": "Word line shows syllable chips (RTL order) with a stress dot or accent bar under the stressed chip; tapping a chip plays just that syllable; a toggle hides the Latin letters entirely.",
-    "data": "syllables[] and stressIndex on each word record, produced by src/photo/syllabify.js plus a stress exceptions table (default final, milel exceptions listed); validated against audio syllable files where present.",
+    "data": "syllables[] and stressIndex on each word record, made by src/photo/syllabify.js plus a stress exceptions table (default final, milel exceptions listed); validated against audio syllable files where present.",
     "interaction": "Learner taps chips; a drill plays a word and asks which chip is stressed; a second drill removes chips one by one.",
     "test": "Unit: syllable join equals the word; stressIndex in range; the default-final rule yields the listed stress for the fixture words; exceptions table entries all appear in the corpus."
    },

@@ -69,10 +69,11 @@ export function mount(root, ctx = {}) {
   const state = {
     letters: /** @type {any[]} */ ([]), confusables: null, keyboard: null,
     tab: 'trace', letterId: (ctx.params && typeof ctx.params.id === 'string' && ctx.params.id) || 'alef', script: (ctx.settings && (ctx.settings.script === 'cursive' || ctx.settings.script === 'print')) ? ctx.settings.script : 'print',
-    strict: false, outline: true
+    strict: false, outline: true, step: false
   };
   { const q = ctx.query && ctx.query.tab; if (q === 'drill') state.tab = 'drill'; else if (q === 'type' || q === 'typing') state.tab = 'typing'; }
   const progress0 = createProgress(ctx.store);
+  let assistedRun = false; // true once "Next stroke" was used in this run: the run then counts as walked through, not drawn
   let attempt = []; // raw learner strokes since the last reset, for the whole-shape fallback hint
   let tracer = null, keyHandler = null, unmounted = false, trainer = null;
   const cleanups = [];
@@ -144,11 +145,12 @@ export function mount(root, ctx = {}) {
       h('button', { 'aria-pressed': state.script === 'print', onclick: () => { state.script = 'print'; render(); } }, t('trace.print', 'Print')),
       h('button', { 'aria-pressed': state.script === 'cursive', onclick: () => { state.script = 'cursive'; render(); } }, t('trace.cursive', 'Cursive')),
       h('button', { 'aria-pressed': state.strict, onclick: () => { state.strict = !state.strict; render(); } }, t('trace.strict', 'Strict')),
-      h('button', { 'aria-pressed': state.outline, onclick: () => { state.outline = !state.outline; render(); } }, t('trace.outline', 'Outline')));
+      h('button', { 'aria-pressed': state.outline, onclick: () => { state.outline = !state.outline; render(); } }, t('trace.outline', 'Outline')),
+      h('button', { 'data-act': 'mode-step', 'aria-pressed': state.step, onclick: () => { state.step = !state.step; render(); const nb = body.querySelector('[data-act="mode-step"]'); if (nb) nb.focus(); } }, t('trace.modeStep', 'Show me, stroke by stroke (buttons)')));
     body.appendChild(toggle);
     body.appendChild(h('div', { class: 'row' },
       h('span', { class: 'big', dir: 'rtl', lang: 'he' }, letter.he),
-      h('div', {}, h('strong', {}, letter.name + ' '), he(letter.nameHe), progress0.isCompleted(letter.id, state.script) ? h('span', { class: 'chip', role: 'status' }, '\u2713 ' + t('trace.completed', 'completed') + ' (' + state.script + ')') : null, h('br'), h('span', {}, '/' + letter.sound.ipa + '/  ' + letter.sound.en))));
+      h('div', {}, h('strong', {}, letter.name + ' '), he(letter.nameHe), progress0.isCompleted(letter.id, state.script) ? h('span', { class: 'chip', role: 'status' }, '\u2713 ' + t('trace.completed', 'completed') + ' (' + state.script + ')') : (progress0.isAssisted(letter.id, state.script) ? h('span', { class: 'chip', role: 'status' }, t('trace.walkedThrough', 'walked through with buttons, not drawn yet') + ' (' + state.script + ')') : null), h('br'), h('span', {}, '/' + letter.sound.ipa + '/  ' + letter.sound.en))));
     const mn = state.mnemonics && state.mnemonics[letter.id];
     if (mn) {
       body.appendChild(h('details', { class: 'remember', open: 'open' },
@@ -161,12 +163,13 @@ export function mount(root, ctx = {}) {
         h('p', { dir: 'rtl', lang: 'he' }, mn.word, ' ', h('span', { dir: 'ltr' }, '(' + mn.wordSound + ' = ' + mn.wordMeaning + ')')),
         h('p', { class: 'muted' }, t('trace.mnDraft', 'Draft memory hook: not yet checked by a Hebrew teacher.'))));
     }
+    assistedRun = false;
     const stage = h('div', { class: 'stage' });
     const fb = h('div', { class: 'feedback', role: 'status', 'aria-live': 'polite' }, t('trace.start', 'Press Animate to see the order, then trace it.'));
     body.appendChild(stage); body.appendChild(fb);
     const block = letter[state.script];
-    const progress = h('div', { class: 'row' });
-    const setProgress = () => { const s = tracer.getState(); progress.textContent = (s.done ? s.total : s.index) + ' / ' + s.total + ' ' + t('trace.strokes', 'strokes'); };
+    const progress = h('div', { class: 'row', role: 'status', 'aria-live': 'polite' });
+    const setProgress = () => { const s = tracer.getState(); const n = s.done ? s.total : s.index; progress.textContent = t('trace.strokeCount', 'Stroke ') + n + t('trace.strokeOf', ' of ') + s.total + t('trace.strokeDone', ' done'); };
     try {
       tracer = createTracer(stage, letter, state.script, Object.assign({}, state.strict ? MODES.strict : MODES.forgiving, {
         showOutline: state.outline,
@@ -184,7 +187,13 @@ export function mount(root, ctx = {}) {
         onComplete: c => {
           fb.textContent = (c.perfect ? t('trace.perfect', 'Perfect! ') : t('trace.done', 'Done. ')) + letter.name;
           try {
-            progress0.record(letter.id, state.script, c); attempt = [];
+            attempt = [];
+            if (assistedRun) { // walked through with the buttons: recorded apart from drawn completions
+              progress0.recordAssisted(letter.id, state.script);
+              fb.textContent += ' ' + t('trace.assistedNote', 'You used the stroke buttons, so this is recorded as walked through, not as drawn.');
+              return;
+            }
+            progress0.record(letter.id, state.script, c);
             const cur = body.querySelector('.grid button[aria-pressed=true]');
             if (cur && !cur.querySelector('.badge')) { cur.setAttribute('data-completed', '1'); cur.appendChild(h('span', { class: 'badge', 'aria-hidden': 'true' }, '\u2713')); }
           } catch (e) { /* progress is best-effort */ }
@@ -198,7 +207,12 @@ export function mount(root, ctx = {}) {
     body.appendChild(h('div', { class: 'row' },
       h('button', { onclick: () => { fb.textContent = t('trace.animating', 'Watch the order...'); tracer.animate().then(() => { if (!unmounted) fb.textContent = t('trace.yourTurn', 'Your turn.'); }); } }, t('trace.animate', 'Animate')),
       h('button', { onclick: () => { tracer.hint(); } }, t('trace.hint', 'Hint')),
-      h('button', { onclick: () => { attempt = []; tracer.reset(); fb.textContent = t('trace.start', 'Press Animate to see the order, then trace it.'); setProgress(); } }, t('trace.reset', 'Start over'))));
+      state.step ? h('button', { 'data-act': 'next-stroke', onclick: () => {
+        const s = tracer.getState(); if (s.done) return;
+        assistedRun = true; // set first: submit() can complete the letter synchronously
+        tracer.submit(block.strokes[s.index].median.map(p => [p[0], p[1]]));
+      } }, t('trace.nextStroke', 'Next stroke')) : null,
+      h('button', { onclick: () => { attempt = []; assistedRun = false; tracer.reset(); fb.textContent = t('trace.start', 'Press Animate to see the order, then trace it.'); setProgress(); } }, t('trace.reset', 'Start over'))));
     body.appendChild(progress); setProgress();
     body.appendChild(h('p', { class: 'notice' }, (block.needsNativeReview ? t('trace.reviewFlag', 'Status: draft, needs native review. ') : '') + (block.quality ? '(' + block.quality + ')' : '')));
   }
@@ -249,7 +263,7 @@ export function mount(root, ctx = {}) {
     for (const row of keyboardRows(kb)) {
       const r = h('div', { class: 'r' });
       for (const k of row) {
-        const b = h('button', { class: 'k', 'aria-label': (k.base || '') + ' / ' + (k.qwerty || ''), tabindex: '-1', onclick: () => answer({ code: k.domCode, key: undefined, altGraph: kind === 'niqqud' }) },
+        const b = h('button', { class: 'k', tabindex: '-1', onclick: () => answer({ code: k.domCode, key: undefined, altGraph: kind === 'niqqud' }) },
           h('span', { dir: 'rtl', lang: 'he' }, k.base), h('small', {}, k.qwerty || ''));
         keyEls.set(k.domCode, b); r.appendChild(b);
       }

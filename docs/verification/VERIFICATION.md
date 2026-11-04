@@ -1,6 +1,6 @@
 # ALEF verification sweep
 
-Fetch date: 2026-11-03/04 (sandbox UTC clock read 2026-11-04; the session date was 2026-11-03). Every VERIFIED row rests on a page or API response fetched in this session; the URL column is that page. Nothing was marked VERIFIED from memory. Raw fetches and the fetch log are in `/home/claude/research_notes/verification/raw/` and `fetchlog.tsv` (outside git).
+Fetch date: 2026-11-03/04 (sandbox UTC clock read 2026-11-04; the session date was 2026-11-03). Every VERIFIED row rests on a page or API response fetched in this session; the URL column is that page. Nothing was marked VERIFIED from memory. Raw fetches and the fetch log are in `~/research_notes/verification/raw/` and `fetchlog.tsv` (outside git).
 
 Status rules. VERIFIED: a fetched primary source states it (a few rows say 'secondary' or 'as Sefaria label' where the primary is a Wikipedia page or a platform's own metadata label). CONTRADICTED: a fetched source says something different from what the project holds. STILL UNVERIFIED: page could not be fetched, did not say, or the claim is a judgement. A status with a semicolon (for example 'VERIFIED (lexical pair); stress position STILL UNVERIFIED') is a split verdict; it is counted under its first word and the unverified half is spelled out in the same cell.
 

@@ -1,6 +1,7 @@
+import os
 """Build docs/youtube/synthesis.md from the concept JSON (tables) plus the narrative below."""
 import json
-d = json.load(open('/home/claude/alef/data/curriculum/resource-concepts-youtube100.json'))
+d = json.load(open(os.path.expanduser('~/alef/data/curriculum/resource-concepts-youtube100.json')))
 cs = d['concepts']
 def table(src):
     rows = ['| ID | Concept | r | i | c | f | risk | Score | Improved |', '|---|---|---|---|---|---|---|---|---|']
@@ -50,4 +51,4 @@ In short: none checks the learner (writing, reading aloud, spelling); none makes
 
 Each concept scoring 850 or more has a full improved spec (screen, data, interaction, test) rescored to 950 or more in the JSON, in the same shape as `data/curriculum/resource-concepts-books.json`. Several overlap earlier specs (yt-alphabet-03, yt-vowels-01) and are marked as such rather than re-specced. Originality: no teacher's mnemonic, example word list or script is reused; ALEF art and wording must be its own.
 """
-open('/home/claude/alef/docs/youtube/synthesis.md', 'w').write(o)
+open(os.path.expanduser('~/alef/docs/youtube/synthesis.md'), 'w').write(o)

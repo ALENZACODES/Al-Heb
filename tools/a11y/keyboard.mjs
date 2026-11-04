@@ -30,7 +30,7 @@ async function open(hash, { fresh = false, viewport = { width: 390, height: 844 
   await page.goto(base + (hash ? '#' + hash : '')); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(500);
   return { ctx, page, errors };
 }
-const active = (page) => page.evaluate(() => { const a = document.activeElement; return a ? { tag: a.tagName.toLowerCase(), id: a.id, role: a.getAttribute('role'), type: a.type || '', name: (a.getAttribute('aria-label') || a.textContent || a.value || '').trim().replace(/\s+/g, ' ').slice(0, 60), inMain: !!a.closest('main'), inNav: !!a.closest('.site-nav'), pressed: a.getAttribute('aria-pressed'), checked: a.checked } : null; });
+const active = (page) => page.evaluate(() => { const a = document.activeElement; return a ? { tag: a.tagName.toLowerCase(), id: a.id, role: a.getAttribute('role'), type: a.type || '', name: (a.getAttribute('aria-label') || a.textContent || a.value || '').trim().replace(/\s+/g, ' ').slice(0, 60), inMain: !!a.closest('main'), inNav: !!a.closest('.site-nav'), pressed: a.getAttribute('aria-pressed'), letter: a.dataset.letter || '', checked: a.checked } : null; });
 /** Press Tab until `match(active)` is true. Returns the number of presses, or -1 if not reached within max. */
 async function tabTo(page, match, max = 120) {
   for (let i = 1; i <= max; i++) { await page.keyboard.press('Tab'); const a = await active(page); if (a && match(a)) return i; }
@@ -70,13 +70,16 @@ async function tabTo(page, match, max = 120) {
   note(f, 'Hint button is keyboard reachable', nH > 0, `${nH} presses`);
   const count = async () => page.evaluate(() => document.querySelector('.alef-trace .row [role=status], .alef-trace .progress')?.textContent || document.body.innerText.match(/\d+\s*\/\s*\d+/)?.[0] || '');
   // Is there any keyboard way to actually register the strokes (and so mark the letter done)? Look for focusable controls on/near the tracing area.
-  const alt = await page.evaluate(() => {
-    const stage = document.querySelector('.alef-trace .stage');
-    const focusableInStage = stage ? [...stage.querySelectorAll('[tabindex]:not([tabindex="-1"]), button, a[href], input')].length : -1;
-    const btns = [...document.querySelectorAll('.alef-trace button')].map((b) => b.textContent.trim().toLowerCase());
-    return { focusableInStage, hasStepButton: btns.some((x) => /next stroke|step|trace for me|auto|follow/.test(x)), btns: btns.slice(-8) };
-  });
-  note(f, 'a user who cannot draw can finish a letter with the keyboard (step-through / "trace it for me")', alt.hasStepButton, `stage focusable=${alt.focusableInStage}; buttons: ${alt.btns.join(' | ')}`, true);
+  let toggle = -1; // the toggle sits above the controls used earlier in this flow: walk backwards with Shift+Tab
+  for (let i = 1; i <= 40 && toggle < 0; i++) { await page.keyboard.press('Shift+Tab'); const x = await active(page); if (x && x.tag === 'button' && /stroke by stroke/i.test(x.name)) toggle = i; }
+  const alt = { toggle };
+  let walked = '';
+  if (alt.toggle > 0) {
+    await page.keyboard.press('Enter'); await page.waitForTimeout(300);
+    const n = await tabTo(page, (x) => x.tag === 'button' && /^next stroke$/i.test(x.name), 90);
+    if (n > 0) { for (let i = 0; i < 12; i++) { await page.keyboard.press('Enter'); await page.waitForTimeout(150); const t = await page.evaluate(() => document.querySelector('.alef-trace .feedback')?.textContent || ''); if (/walked through/i.test(t)) { walked = t; break; } } }
+  }
+  note(f, 'a user who cannot draw can finish a letter with the keyboard ("Show me, stroke by stroke" toggle + "Next stroke")', !!walked, `toggle=${alt.toggle}; ` + (walked || await page.evaluate(() => document.querySelector('.alef-trace .feedback')?.textContent)).slice(0, 90));
   await page.keyboard.press('Escape');
   // the typing tab is the keyboard alternative for recognition, not for shape
   await page.goto(base + '#/letters?tab=type'); await page.waitForTimeout(500);
@@ -139,17 +142,17 @@ async function tabTo(page, match, max = 120) {
   await page.keyboard.press('ArrowRight'); const a1 = await active(page);
   note(f, 'arrow keys move between tabs (WAI-ARIA tabs pattern)', a1?.role === 'tab' && /guide|phrase/i.test(a1.name), a1?.name);
   await page.keyboard.press('ArrowLeft'); await page.waitForTimeout(300);
-  const nC = await tabTo(page, (a) => a.tag === 'button' && a.pressed !== null && /\d+ times?$/i.test(a.name), 30);
+  const nC = await tabTo(page, (a) => a.tag === 'button' && a.pressed !== null && !!a.letter, 30);
   const letter = await page.evaluate(() => document.activeElement.dataset.letter || '');
   const pr = () => page.evaluate((l) => document.querySelector(`[data-letter="${l}"]`)?.getAttribute('aria-pressed'), letter);
   const p0 = await pr(); await page.keyboard.press('Space'); await page.waitForTimeout(200); const p1 = await pr();
   note(f, 'Space toggles a letter-highlight chip (aria-pressed changes)', nC > 0 && !!letter && p0 !== p1, `${letter}: ${p0} -> ${p1}`);
   const kept = await active(page);
-  note(f, 'focus stays on the chip after it toggles (no re-render focus loss)', kept?.name?.includes('time'), kept?.name);
-  const nW = await tabTo(page, (a) => /^word 1: play/i.test(a.name), 40);
+  note(f, 'focus stays on the chip after it toggles (no re-render focus loss)', kept?.letter === letter, kept?.name);
+  const nW = await tabTo(page, (a) => /play word 1$/i.test(a.name), 40);
   await page.keyboard.press('Enter'); await page.waitForTimeout(400);
   const snd = await page.evaluate(() => document.getElementById('sound-status').textContent);
-  note(f, 'Enter on "Word 1: play" works and the sound status bar reports what happened', nW > 0 && snd.length > 5, snd.slice(0, 90));
+  note(f, 'Enter on the first word button ("...: play word 1") works and the sound status bar reports what happened', nW > 0 && snd.length > 5, snd.slice(0, 90));
   await ctx.close();
 }
 

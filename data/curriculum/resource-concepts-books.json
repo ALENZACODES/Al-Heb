@@ -245,7 +245,7 @@
     "screen": "Two-column matcher: left column plays an audio clip (no transliteration), right column shows 4 candidate glyphs including one look-alike; sits after the tap-to-hear atlas.",
     "data": "Per-letter keyword anchor (an everyday word whose first sound is the letter's sound) stored in letters.json as proposed field soundAnchor, one per tradition where sounds differ; reuses audio manifest ids kind=letter.",
     "interaction": "Hear, pick the glyph, get immediate audio plus the anchor word on a miss; misses of look-alikes are logged into the confusables SRS queue.",
-    "test": "Unit: distractor generator never includes the target twice and always contains one confusable partner when one exists; accuracy logging writes to the progress store; every referenced audio id exists in the manifest."
+    "test": "Unit: distractor builder never includes the target twice and always contains one confusable partner when one exists; accuracy logging writes to the progress store; every referenced audio id exists in the manifest."
    },
    "printable": "Printable \"match the sound\" page needs audio so is not good on paper; use a keyword-anchor page instead (draw a line from glyph to the picture word). Spec only.",
    "status": "proposed"
@@ -583,7 +583,7 @@
     "screen": "Inline hint panel under a wrong answer: one sentence saying what an English reader tends to expect and what Hebrew does instead (reading direction, missing short vowels, silent letters).",
     "data": "Hint library keyed by error type: {errorKind, hint, appliesTo tradition}; error kinds come from the drill results already logged (confusable pair, wrong vowel, direction slip).",
     "interaction": "Show the hint only after a miss, once per error kind per session, with a \"got it\" button that suppresses it for that kind next time; repeated misses escalate to a worked example.",
-    "test": "Unit: every errorKind produced by the drills has a hint; hints are under 140 characters; suppression state persists in the store; a hint never appears on a correct answer."
+    "test": "Unit: every errorKind made by the drills has a hint; hints are under 140 characters; suppression state persists in the store; a hint never appears on a correct answer."
    },
    "printable": null,
    "status": "proposed"

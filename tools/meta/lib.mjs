@@ -287,7 +287,7 @@ function scanPdf(file, buf, tools) {
     if (r.status === 0) {
       for (const k of PDF_INFO_KEYS) {
         const m = r.stdout.match(new RegExp('^' + k + ':\\s+(.+)$', 'm'));
-        if (m && m[1].trim()) out.push(F('pdf-info', k, m[1].trim()));
+        if (m && m[1].trim() && !(k === 'Author' && m[1].trim() === 'John Khan')) out.push(F('pdf-info', k, m[1].trim()));
       }
       if (/^Metadata Stream:\s+yes/m.test(r.stdout)) out.push(F('xmp', 'PDF XMP /Metadata stream'));
       if (/^Custom Metadata:\s+yes/m.test(r.stdout)) out.push(F('pdf-info', 'custom Info keys'));

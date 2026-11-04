@@ -1,9 +1,9 @@
 # Outreach drafts: Toronto-area congregations
 
-**DRAFT for John to edit and send. Claude does not send. Not reviewed by clergy or educators.**
+**DRAFT for John to edit and send. Drafts are never sent automatically. Not reviewed by clergy or educators.**
 
 Rules followed here:
-- Only facts from the user's competitor analysis (`/home/claude/research_notes/competitor/competitor-analysis.txt`, section "Toronto inspiration", read from the congregations' public sites on 3 Nov 2026 via a web index) appear below. Each fact has a source tag in square brackets.
+- Only facts from the user's competitor analysis (`~/research_notes/competitor/competitor-analysis.txt`, section "Toronto inspiration", read from the congregations' public sites on 3 Nov 2026 via a web index) appear below. Each fact has a source tag in square brackets.
 - No email addresses or phone numbers are included. Use the contact page or published contact route on each congregation's own site.
 - Facts were not re-verified live. Programme details can change. John should check each site before sending.
 - Placeholders in [brackets] are for John to fill. Do not claim anything about ALEF that the partner sheet does not say.

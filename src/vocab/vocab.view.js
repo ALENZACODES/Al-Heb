@@ -229,8 +229,8 @@ export function mount(root, ctx) {
     };
     const cardItem = (e) => {
       const inRev = !!cards[cardId(e)];
-      const add = el('button', { type: 'button', class: 'btn secondary', 'aria-label': inRev ? `${e.gloss}: already in reviews` : `Add ${e.gloss} to reviews`, ...(inRev ? { disabled: true } : {}),
-        onclick: async () => { const r = addCards(cards, [e], Date.now()); await saveCards(r.cards); add.setAttribute('disabled', ''); add.textContent = 'In reviews'; add.setAttribute('aria-label', `${e.gloss}: already in reviews`); updateAdd(); } }, inRev ? 'In reviews' : 'Add to reviews');
+      const add = el('button', { type: 'button', class: 'btn secondary', 'aria-label': inRev ? `In reviews: ${e.gloss}` : `Add to reviews: ${e.gloss}`, ...(inRev ? { disabled: true } : {}),
+        onclick: async () => { const r = addCards(cards, [e], Date.now()); await saveCards(r.cards); add.setAttribute('disabled', ''); add.textContent = 'In reviews'; add.setAttribute('aria-label', `In reviews: ${e.gloss}`); updateAdd(); } }, inRev ? 'In reviews' : 'Add to reviews');
       return el('li', { class: 'card vc-card', 'data-id': e.id },
         heWord(e, 'vc-he'), el('p', { tabindex: '-1', class: 'vc-gloss' }, ...glossNodes(e.gloss)), metaLine(e), ...noteLines(e), translitLine(e),
         el('div', { class: 'row' }, listenButton(e), add));
@@ -254,6 +254,7 @@ export function mount(root, ctx) {
       const n = keep ? Math.max(shown, PAGE) : PAGE;
       shown = Math.min(n, matches.length);
       heading.textContent = sel.topic === FN_TOPIC || sel.tag === 'function' ? 'Function words (closed class; topic does not apply)' : '';
+      heading.hidden = !heading.textContent; // no empty h2 for the ordinary (ungrouped) list
       list.replaceChildren(...matches.slice(0, shown).map(cardItem));
       status.textContent = matches.length ? `Showing ${shown} of ${matches.length} word${matches.length === 1 ? '' : 's'}.` : 'No words match. Try fewer letters, or another tier or topic.';
       moreRow.replaceChildren(...(shown < matches.length ? [el('button', { type: 'button', class: 'btn secondary', id: 'vc-more', onclick: () => {

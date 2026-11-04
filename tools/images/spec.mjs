@@ -1,5 +1,5 @@
 // Source-of-truth transcription of the 100-command ChatGPT doc
-// (Claude Doc d497130e-096d-494b-9242-461c91da56e1, read 2026-11-03).
+// (the "100 image commands" prompt doc, read 2026-11-03).
 // Pure data + prompt templates. No I/O. Used by build_prompt_groups.mjs.
 
 export const DOC_COUNTS = { A: 32, B: 270, C: 162, D: 75, E: 150, F: 76, total: 765 };

@@ -1,5 +1,5 @@
 {
- "when": "2026-11-04T03:50:01.008Z",
+ "when": "2026-11-04T04:42:10.557Z",
  "results": [
   {
    "flow": "onboarding",
@@ -41,14 +41,14 @@
    "name": "focus lands on the new page heading",
    "ok": true,
    "gap": false,
-   "detail": "{\"tag\":\"h1\",\"id\":\"view-title\",\"role\":null,\"type\":\"\",\"name\":\"Lessons\",\"inMain\":true,\"inNav\":false,\"pressed\":null}"
+   "detail": "{\"tag\":\"h1\",\"id\":\"view-title\",\"role\":null,\"type\":\"\",\"name\":\"Lessons\",\"inMain\":true,\"inNav\":false,\"pressed\":null,\"letter\":\"\"}"
   },
   {
    "flow": "trace",
    "name": "Tab reaches the Animate (\"show me the stroke order\") button",
    "ok": true,
    "gap": false,
-   "detail": "45 presses"
+   "detail": "46 presses"
   },
   {
    "flow": "trace",
@@ -66,10 +66,10 @@
   },
   {
    "flow": "trace",
-   "name": "a user who cannot draw can finish a letter with the keyboard (step-through / \"trace it for me\")",
-   "ok": false,
-   "gap": true,
-   "detail": "stage focusable=0; buttons: ץ | print | cursive | strict | outline | animate | hint | start over"
+   "name": "a user who cannot draw can finish a letter with the keyboard (\"Show me, stroke by stroke\" toggle + \"Next stroke\")",
+   "ok": true,
+   "gap": false,
+   "detail": "toggle=3; Perfect! Alef You used the stroke buttons, so this is recorded as walked through, not as d"
   },
   {
    "flow": "trace",
@@ -90,21 +90,21 @@
    "name": "Enter starts the quiz and shows a question",
    "ok": true,
    "gap": false,
-   "detail": "Find: Lamed /l/"
+   "detail": "Find: He /h/"
   },
   {
    "flow": "atlas quiz",
    "name": "focus stays on the Quiz/Stop button after it re-renders the screen",
-   "ok": false,
-   "gap": true,
-   "detail": "body Skip to main content ALEF אלף "
+   "ok": true,
+   "gap": false,
+   "detail": "button Stop quiz"
   },
   {
    "flow": "atlas quiz",
    "name": "focus stays inside the tile list after answering (no jump to page top)",
-   "ok": false,
-   "gap": true,
-   "detail": "Skip to main content ALEF אלף "
+   "ok": true,
+   "gap": false,
+   "detail": "א Alef"
   },
   {
    "flow": "atlas quiz",
@@ -174,11 +174,11 @@
    "name": "focus stays on the chip after it toggles (no re-render focus loss)",
    "ok": true,
    "gap": false,
-   "detail": "Alef, 4 times"
+   "detail": "אAlef4"
   },
   {
    "flow": "reader",
-   "name": "Enter on \"Word 1: play\" works and the sound status bar reports what happened",
+   "name": "Enter on the first word button (\"...: play word 1\") works and the sound status bar reports what happened",
    "ok": true,
    "gap": false,
    "detail": "No sound: the browser voice reported an error."
@@ -244,20 +244,20 @@
    "name": "Enter opens the calendar, sheet closes, focus on its heading",
    "ok": true,
    "gap": false,
-   "detail": "{\"tag\":\"h1\",\"id\":\"alef-cal-h\",\"role\":null,\"type\":\"\",\"name\":\"Calendar\",\"inMain\":true,\"inNav\":false,\"pressed\":null}"
+   "detail": "{\"tag\":\"h1\",\"id\":\"alef-cal-h\",\"role\":null,\"type\":\"\",\"name\":\"Calendar\",\"inMain\":true,\"inNav\":false,\"pressed\":null,\"letter\":\"\"}"
   },
   {
    "flow": "calendar + More sheet",
    "name": "calendar shows dates/holidays as text, and any controls it has (day grid) are real buttons reachable by Tab",
    "ok": true,
    "gap": false,
-   "detail": "{\"text\":true,\"focusable\":63,\"hasSettingsLink\":false,\"buttonsOnly\":true}"
+   "detail": "{\"text\":true,\"focusable\":64,\"hasSettingsLink\":true,\"buttonsOnly\":true}"
   },
   {
    "flow": "calendar + More sheet",
    "name": "calendar \"Set your location in Settings\" is a link, not just text",
-   "ok": false,
-   "gap": true,
+   "ok": true,
+   "gap": false,
    "detail": ""
   }
  ]

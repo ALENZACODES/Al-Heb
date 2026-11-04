@@ -36,6 +36,10 @@ export const ROUTES = [
   // links (see probeRoutes) and a direct visit shows the "not available yet" card; nothing else breaks.
   { name: 'workbook', pattern: '/workbook',        module: './workbook.view.js',                  nav: 'nav.workbook', title: 'Workbook', owner: 'lane8' },
   { name: 'soundgap', pattern: '/soundgap',       module: '../pronunciation/soundgap.view.js',   title: 'Sound gap', owner: 'lane3', optional: true, quick: 'nav.soundgap' },
+  { name: 'vowelboard',   pattern: '/vowelboard',    module: '../pronunciation/vowelboard.view.js',    title: 'Vowel board', owner: 'lane3', optional: true, quick: 'nav.vowelboard' },
+  { name: 'niqquddial',   pattern: '/niqquddial',    module: '../pronunciation/niqquddial.view.js',    title: 'Vowel-point dial', owner: 'lane3', optional: true, quick: 'nav.niqquddial' },
+  { name: 'dottile',      pattern: '/dottile',       module: '../pronunciation/dottile.view.js',       title: 'Dot tiles', owner: 'lane3', optional: true, quick: 'nav.dottile' },
+  { name: 'syllablechips',pattern: '/syllablechips', module: '../pronunciation/syllablechips.view.js', title: 'Syllable chips', owner: 'lane3', optional: true, quick: 'nav.syllablechips' },
   { name: 'vocab',    pattern: '/vocab',          module: '../vocab/vocab.view.js',              title: 'Vocabulary', owner: 'lane9', optional: true, quick: 'nav.vocab' },
   { name: 'about',    pattern: '/about',          module: './about.view.js',                     nav: 'nav.about',    title: 'About', owner: 'lane8' },
 ];

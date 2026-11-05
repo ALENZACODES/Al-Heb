@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // Builds the folder map inside docs/INDEX.md. Zero dependencies.
 //   node tools/docs/index.mjs           rewrite the generated block between the index markers
-//   node tools/docs/index.mjs --check   exit 1 when the block on disk differs from what the tree gives now (exact counts)
+//   node tools/docs/index.mjs --check   exit 1 when the folder/file lists differ or a count is far from the tree (same tolerance as tests/docs.index.test.js)
+//   node tools/docs/index.mjs --check --exact   exit 1 when the block differs at all (exact counts)
 // Only the block between <!-- index:start --> and <!-- index:end --> is generated; the reading guide above it is written by hand.
 // The first-heading text of a folder comes from its README.md, else its first Markdown file (sorted by name).
 import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from 'node:fs';
@@ -69,6 +70,12 @@ export function render({ folders, files, total }) {
   return L.join('\n');
 }
 
+/** Counts only need to be near: other people add files all the time. Shared by --check and the unit test. */
+export const countsNear = (listed, now) => Math.abs(now - listed) <= Math.max(5, Math.ceil(now * 0.1));
+
+/** Parse the folder rows of a rendered block: [[name, count], ...]. */
+export const listedFolders = (text) => [...text.matchAll(/^\| \[`([^`]+)\/`\]\([^)]*\) \| (\d+) \|/gm)].map((m) => [m[1], Number(m[2])]);
+
 export function splice(text, block) {
   const a = text.indexOf(START), b = text.indexOf(END);
   if (a < 0 || b < a) throw new Error(`docs/INDEX.md must contain ${START} and ${END}`);
@@ -79,11 +86,19 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const file = join(ROOT, 'docs', 'INDEX.md');
   const next = splice(readFileSync(file, 'utf8'), render(scan()));
   if (process.argv.includes('--check')) {
-    if (next !== readFileSync(file, 'utf8')) {
+    const cur = readFileSync(file, 'utf8');
+    let stale = next !== cur;
+    if (stale && !process.argv.includes('--exact')) {
+      const a = listedFolders(cur), b = listedFolders(next);
+      const sameLists = JSON.stringify(a.map((x) => x[0])) === JSON.stringify(b.map((x) => x[0]));
+      const files = (t) => [...t.matchAll(/^\| \[`([^`]+)`\]\([^)]*\) \|/gm)].map((m) => m[1]).filter((n) => !n.endsWith('/'));
+      stale = !(sameLists && a.every(([, n], i) => countsNear(n, b[i][1])) && JSON.stringify(files(cur)) === JSON.stringify(files(next)));
+    }
+    if (stale) {
       console.error('docs/INDEX.md is stale: run node tools/docs/index.mjs and commit the result');
       process.exit(1);
     }
-    console.log('docs/INDEX.md is current');
+    console.log(next === cur ? 'docs/INDEX.md is current' : 'docs/INDEX.md is close enough (counts within tolerance); run without --check to refresh exactly');
   } else {
     writeFileSync(file, next);
     console.log('docs/INDEX.md rewritten');

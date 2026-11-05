@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { scan, render, splice, START, END, listFiles } from '../tools/docs/index.mjs';
+import { scan, render, splice, START, END, listFiles, countsNear } from '../tools/docs/index.mjs';
 import { checkFile } from '../tools/docs/linkcheck.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -38,10 +38,10 @@ test('docs/INDEX.md lists exactly the folders and top-level files on disk, with 
   const s = scan(ROOT);
   const listed = [...text.matchAll(/^\| \[`([^`]+)\/`\]\([^)]*\) \| (\d+) \|/gm)].map((m) => [m[1], Number(m[2])]);
   assert.deepEqual(listed.map((l) => l[0]), s.folders.map((f) => f.name), 'folder list is stale: run node tools/docs/index.mjs');
-  // Other people add files all the time, so counts only need to be near; `node tools/docs/index.mjs --check` is the exact test.
+  // Other people add files all the time, so counts only need to be near; `node tools/docs/index.mjs --check --exact` is the exact test.
   for (const [name, n] of listed) {
     const now = s.folders.find((f) => f.name === name).count;
-    assert.ok(Math.abs(now - n) <= Math.max(5, Math.ceil(now * 0.1)), `${name}/ count ${n} is far from ${now}: run node tools/docs/index.mjs`);
+    assert.ok(countsNear(n, now), `${name}/ count ${n} is far from ${now}: run node tools/docs/index.mjs`);
   }
   for (const f of s.files) assert.ok(text.includes(`[\`${f.name}\`]`), `${f.name} missing from the index`);
 });

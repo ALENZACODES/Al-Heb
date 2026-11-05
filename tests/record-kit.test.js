@@ -165,6 +165,9 @@ test('ingest --apply on the REAL manifest flips exactly one entry (the clip reco
 });
 
 test('ingest copies one recording to every lesson-word id with the same text (synthetic WAV, temp root)', { skip: !haveFf, timeout: 60000 }, async () => {
+  // the real repo may hold shipped audio; what matters is that this test adds nothing to it
+  const listReal = () => { const out = []; (function walk(d) { if (!fs.existsSync(d)) return; for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) walk(p); else { const st = fs.statSync(p); out.push(`${p}:${st.size}:${st.mtimeMs}`); } } })(path.join(root, 'audio')); return out.sort(); };
+  const realBefore = listReal();
   const d = tmp('rk-copy-'); const rootDir = path.join(d, 'repo'); fs.mkdirSync(path.join(rootDir, 'data/audio'), { recursive: true });
   const mk = (id, text, o = {}) => ({ path: `audio/${o.voice || 'm'}/${o.trad || 'sephardi'}/word/${id}.mp3`, voice: o.voice || 'm', tradition: o.trad || 'sephardi', kind: 'word', id, text, status: o.status || 'missing', source: o.status === 'recorded' ? 'human:record-kit' : 'none', group: o.group || 'lesson-word' });
   const entries = [mk('r04-w1', 'שָׁלוֹם'), mk('r04-w2', 'שָׁלוֹם'), mk('r05-w1', 'שָׁלוֹם'), mk('r05-w2', 'שָׁלוֹם', { status: 'recorded' }), mk('r06-w1', 'אַבָּא'),
@@ -200,7 +203,7 @@ test('ingest copies one recording to every lesson-word id with the same text (sy
   assert.equal(man['m/r05-w2'].copyOf, undefined);
   assert.equal(JSON.parse(fs.readFileSync(path.join(rootDir, 'data/audio/manifest-words-ashkenazi.json'), 'utf8'))[0].status, 'missing');
   for (const rel of ['r06-w1', 'r05-w2']) assert.ok(!fs.existsSync(path.join(rootDir, `audio/m/sephardi/word/${rel}.mp3`)));
-  assert.ok(!fs.existsSync(path.join(root, 'audio')), 'no audio leaked into the real repo');
+  assert.deepEqual(listReal(), realBefore, 'no audio leaked into the real repo');
 });
 
 // ---- headless browser ----

@@ -154,9 +154,12 @@ function wireChrome() {
   document.addEventListener('click', (e) => { if (more.classList.contains('open') && !e.target.closest('.site-nav')) setMore(false); });
   // keyboard: tabbing out of the open More sheet (forwards or backwards) closes it, so it never hangs open over the page
   document.querySelector('.site-nav').addEventListener('focusout', (e) => { if (more.classList.contains('open') && e.relatedTarget && !e.relatedTarget.closest('.site-nav')) setMore(false); });
-  // the one-line sound status is cut with an ellipsis on a phone; tap it to read the whole message
-  const st = document.getElementById('sound-status');
-  st.addEventListener('click', () => st.classList.toggle('open'));
+  // the sound status is cut after two lines on a phone. A real button (Tab, Enter, Space) shows the whole message and carries
+  // aria-expanded; a tap on the text itself still works for pointer users and keeps the button in step.
+  const st = document.getElementById('sound-status'), soundMore = document.querySelector('.sound-bar-more');
+  const setOpen = (open) => { st.classList.toggle('open', open); if (soundMore) soundMore.setAttribute('aria-expanded', String(open)); };
+  st.addEventListener('click', () => setOpen(!st.classList.contains('open')));
+  if (soundMore) soundMore.addEventListener('click', () => setOpen(!st.classList.contains('open')));
 }
 
 // WCAG 2.4.11: on phones the bottom nav is position:fixed; keep the keyboard-focused control above it.

@@ -269,6 +269,7 @@ main { padding-inline: max(1rem, env(safe-area-inset-left), env(safe-area-inset-
 .sound-bar p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; white-space: normal; text-overflow: clip; }
 .sound-bar p.open { -webkit-line-clamp: unset; line-clamp: unset; display: block; }
 .sound-bar a.sound-bar-details { display: inline-flex; align-items: center; justify-content: center; min-inline-size: 44px; min-block-size: 44px; padding-block: 0; margin-block: 0; }
+.sound-bar-more { flex: none; min-inline-size: 44px; min-block-size: 44px; padding-inline: .5rem; background: none; border: 0; color: inherit; font: inherit; font-weight: 600; text-decoration: underline; cursor: pointer; }
 .sound-bar-x { flex: none; min-inline-size: 44px; min-block-size: 44px; margin-inline-end: -.5rem; background: none; border: 0; color: inherit; font-size: 1.4rem; line-height: 1; cursor: pointer; }
 
 /* ---- v0 accessibility pass (docs/qa/A11Y-V0.md): fixes seen at 375x667 and at 200% text ---- */
@@ -410,7 +411,7 @@ main .opt, main label:has(> input[type="radio"], > input[type="checkbox"]) { mar
 main details { margin-block: 4px; }
 main label > :is(select, input[type="url"], input[type="file"]) { margin-block: 4px; }
 /* large mode: header, sound bar and list links too */
-:root[data-target-size="large"] :is(.brand, .sound-bar-details, .sound-bar-x, .pg li a:not(.btn), .credits li a, .search-list a, .nav-more a) { min-block-size: var(--hit, 64px); min-inline-size: var(--hit, 64px); }
+:root[data-target-size="large"] :is(.brand, .sound-bar-details, .sound-bar-more, .sound-bar-x, .pg li a:not(.btn), .credits li a, .search-list a, .nav-more a) { min-block-size: var(--hit, 64px); min-inline-size: var(--hit, 64px); }
 :root[data-target-size="large"] main .alef-trace .kb .k { flex-basis: 56px; min-inline-size: 56px; min-block-size: 64px; }
 /* Letters on a phone: "Strokes in words" kept the default order 20 and so sat below "Remember it" on screen while coming before it for Tab (the DOM ranks it 8.2). Same place in both now. */
 @media (max-width: 719.98px) { main .alef-trace > div:has(> .stage) > .sw-wrap { order: 9; } }

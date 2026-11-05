@@ -297,6 +297,23 @@ async function tabTo(page, match, max = 120) {
     await ctx.close(); }
 }
 
+// ---- 9. Sound status: the "Full message" control is a real button (Tab, Enter, Space) with aria-expanded
+{
+  const f = 'sound status';
+  const { ctx, page } = await open('/');
+  await page.evaluate(() => { const el = document.getElementById('sound-status'); el.textContent = 'Sound: ' + 'this is a long status message that needs more than two lines on a phone. '.repeat(6); });
+  const clipped = () => page.evaluate(() => { const el = document.getElementById('sound-status'); return el.scrollHeight - el.clientHeight > 1; });
+  const wasClipped = await clipped();
+  const n = await tabTo(page, (a) => /^full message$/i.test(a.name) && a.tag === 'button', 12);
+  note(f, 'Tab reaches the "Full message" button', n > 0, `${n} presses`);
+  note(f, 'before opening: aria-expanded is false and the long message is cut', (await page.getAttribute('.sound-bar-more', 'aria-expanded')) === 'false' && wasClipped);
+  await page.keyboard.press('Enter'); await page.waitForTimeout(150);
+  note(f, 'Enter opens it: aria-expanded true, the whole message is visible, focus stays on the button', (await page.getAttribute('.sound-bar-more', 'aria-expanded')) === 'true' && !(await clipped()) && /^full message$/i.test((await active(page))?.name || ''));
+  await page.keyboard.press('Space'); await page.waitForTimeout(150);
+  note(f, 'Space closes it again: aria-expanded false, focus stays on the button', (await page.getAttribute('.sound-bar-more', 'aria-expanded')) === 'false' && /^full message$/i.test((await active(page))?.name || ''));
+  await ctx.close();
+}
+
 await browser.close(); server.close();
 const outArg = process.argv.includes('--out') ? process.argv[process.argv.indexOf('--out') + 1] : null;
 writeFileSync(outArg || join(here, 'keyboard-run.json'), JSON.stringify({ when: new Date().toISOString(), results }, null, 1));

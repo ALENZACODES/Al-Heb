@@ -21,6 +21,7 @@ Audio ingest reports (what was and was not matched when a clip batch was checked
 reviewed or approved): [`audio/INGEST-REPORT-83.md`](audio/INGEST-REPORT-83.md), [`audio/INGEST-REPORT-88.md`](audio/INGEST-REPORT-88.md),
 with the tool output in [`audio/INGEST-REPORT-83-tool.md`](audio/INGEST-REPORT-83-tool.md) and [`audio/INGEST-REPORT-88-tool.md`](audio/INGEST-REPORT-88-tool.md).
 Owner decision sheet on where clips live, the open licence questions for the outside voice, and what "approved" requires: [`audio/CLIP-HOSTING-AND-LICENCE.md`](audio/CLIP-HOSTING-AND-LICENCE.md).
+Ranked list of which clips to ask the outside generator for next (a builder judgement, not learner data): [`audio/NEXT-CLIPS-PRIORITY.md`](audio/NEXT-CLIPS-PRIORITY.md).
 QA notes: start at [`qa/REPORT.md`](qa/REPORT.md), [`qa/DEFECTS.md`](qa/DEFECTS.md) and [`qa/REGRESSION-2026-11-04.md`](qa/REGRESSION-2026-11-04.md);
 the per-screen notes sit beside them in `qa/` (for example [`qa/DAILY-A11Y.md`](qa/DAILY-A11Y.md), [`qa/CALENDAR-QA.md`](qa/CALENDAR-QA.md), [`qa/HOME-QA.md`](qa/HOME-QA.md)).
 Animation poses (draft tooling): [`anim/README.md`](anim/README.md), [`anim/CHECK-REPORT.md`](anim/CHECK-REPORT.md).
@@ -38,7 +39,7 @@ copies and 764 draft animation poses, none approved and none wired into the app)
 | [`a11y/`](a11y/) | 8 | Cognitive, learning, mental-health and sensory-sensitivity access (`COGNITIVE.md`) |
 | [`accents/`](accents/) | 3 | Audit: does `settings.congregation` change what the learner sees? (`AUDIT.md`) |
 | [`anim/`](anim/) | 32 | Animation poses: checker and player (DRAFT tooling) (`README.md`) |
-| [`audio/`](audio/) | 7 | Audio clips: where to keep them, what we do not know about the voice, and what "approved" requires (`CLIP-HOSTING-AND-LICENCE.md`) |
+| [`audio/`](audio/) | 20 | Audio clips: where to keep them, what we do not know about the voice, and what "approved" requires (`CLIP-HOSTING-AND-LICENCE.md`) |
 | [`book/`](book/) | 5 | Image run: how to produce the 797 images (766 from the doc + 31 quirky mnemonics) (`IMAGE-RUN.md`) |
 | [`corpus/`](corpus/) | 5 | ALEF corpus: sources, licences and reuse status (`LICENSES.md`) |
 | [`curriculum/`](curriculum/) | 12 | Curriculum integrity (`INTEGRITY.md`) |

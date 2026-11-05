@@ -59,3 +59,9 @@ Until a route meets all four it stays preview, however finished it looks.
 `home.view.js` and `src/home/today.js` are owned by the on-ramp lane and were not edited here. Any link on the Today card that
 points at a preview route should carry the same honesty; the suggested change is to pass `tierOf(route)` from `nav-model.js` and
 append the "(Preview)" label to such links. No such patch has been applied.
+
+## Lean v0: hidden preview pages
+
+`docs/v0/PREVIEW-TRIAGE.md` gives every static preview route one decision (hide, merge or keep). Routes marked **hide** are in
+`PREVIEW_HIDDEN` (`src/shell/nav-model.js`): they are left out of the More sheet's Preview group and Home's "More ways to learn",
+but still open by direct link, keep the Preview banner, and stay in search with the "(Preview)" label.

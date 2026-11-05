@@ -4,7 +4,7 @@ import { ROUTES, availableRoutes } from '../src/shell/router.js';
 import { VIEW_FILES } from '../src/shell/views.generated.js';
 import { en, he } from '../src/shell/i18n.js';
 import { NAV_EN } from '../src/shell/nav.strings.js';
-import { SECTIONS, SECTION_ROUTES, PARENT, isStatic, labelKey, menuSections, previewGroups, tabs, currentState, searchablePages, tierOf } from '../src/shell/nav-model.js';
+import { SECTIONS, SECTION_ROUTES, PARENT, isStatic, labelKey, menuSections, previewGroups, tabs, currentState, searchablePages, tierOf, PREVIEW_HIDDEN } from '../src/shell/nav-model.js';
 import { buildPageIndex, searchPages, searchLetters, searchWords, norm, loadLetters } from '../src/shell/search.js';
 import { loadTier } from '../src/vocab/loader.js';
 
@@ -34,7 +34,7 @@ test('no route is unreachable: static routes are in the menu or search; paramete
     const search = new Set(searchablePages(ROUTES, av).map((r) => r.name));
     for (const r of ROUTES) {
       if (!av.has(r.name)) continue;
-      if (isStatic(r)) { assert.ok(search.has(r.name), `${r.name} not searchable`); assert.ok(menu.has(r.name) || r.name === 'welcome', `${r.name} not in the menu`); }
+      if (isStatic(r)) { assert.ok(search.has(r.name), `${r.name} not searchable`); assert.ok(menu.has(r.name) || r.name === 'welcome' || PREVIEW_HIDDEN.has(r.name), `${r.name} not in the menu`); }
       else { const p = PARENT[r.name]; assert.ok(p, `${r.name} has no parent`); assert.ok(isStatic(ROUTES.find((x) => x.name === p))); assert.ok(!av.has(p) || (search.has(p) && menu.has(p)), `${r.name} parent ${p} unreachable`); }
     }
   }

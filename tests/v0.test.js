@@ -10,7 +10,7 @@ import { N } from './torahread.fakedom.js';
 import { ROUTES, availableRoutes, tierOf as routerTier } from '../src/shell/router.js';
 import { VIEW_FILES } from '../src/shell/views.generated.js';
 import { en } from '../src/shell/i18n.js';
-import { tabs, menuSections, previewGroups, searchablePages, tierOf, isStatic, SECTIONS } from '../src/shell/nav-model.js';
+import { tabs, menuSections, previewGroups, searchablePages, tierOf, isStatic, SECTIONS, PREVIEW_HIDDEN } from '../src/shell/nav-model.js';
 import { renderMenu } from '../src/shell/menu.js';
 import { buildPageIndex, searchPages } from '../src/shell/search.js';
 import { mountPreviewBanner, needsBanner, BANNER_SELECTOR } from '../src/shell/preview-banner.js';
@@ -51,7 +51,8 @@ test('More sheet model: open groups hold only v0 pages; every available static p
     const prev = previewGroups(ROUTES, av);
     for (const g of prev) { assert.ok(en[g.noteKey], g.noteKey); for (const r of g.items) assert.equal(r.tier, 'preview'); }
     const listed = new Set([...open, ...prev.flatMap((g) => g.items)].map((r) => r.name));
-    for (const r of ROUTES) if (isStatic(r) && av.has(r.name) && r.name !== 'welcome') assert.ok(listed.has(r.name), `${r.name} not in the sheet`);
+    for (const r of ROUTES) if (isStatic(r) && av.has(r.name) && r.name !== 'welcome' && !PREVIEW_HIDDEN.has(r.name)) assert.ok(listed.has(r.name), `${r.name} not in the sheet`);
+    for (const n of PREVIEW_HIDDEN) assert.ok(!listed.has(n), `${n} is triaged hidden but still in the sheet`);
   }
   for (const s of SECTIONS) assert.ok(en['nav.preview.note.' + s.id], 'note for ' + s.id);
 });
@@ -99,4 +100,18 @@ test('preview banner (fake DOM): appears on a preview route, not on a v0 route, 
   assert.equal(main.queryAll(BANNER_SELECTOR).length, 1, 'no stacking');
   mountPreviewBanner(main, by('settings'));
   assert.equal(main.queryAll(BANNER_SELECTOR).length, 0, 'cleared on a v0 route');
+});
+
+test('lean v0: hidden preview pages are preview-tier, still searchable, and each is documented as "hide" in docs/v0/PREVIEW-TRIAGE.md', () => {
+  const doc = readFileSync(new URL('../docs/v0/PREVIEW-TRIAGE.md', import.meta.url), 'utf8');
+  const search = new Set(searchablePages(ROUTES, ALL).map((r) => r.name));
+  assert.ok(PREVIEW_HIDDEN.size >= 5);
+  for (const n of PREVIEW_HIDDEN) {
+    const r = ROUTES.find((x) => x.name === n); assert.ok(r, `${n} is a route`);
+    assert.equal(tierOf(r), 'preview', `${n} must be preview`);
+    assert.ok(search.has(n), `${n} still searchable`);
+    assert.match(doc, new RegExp('^\\| `' + n + '` \\| hide \\|', 'm'), `${n} documented as hide`);
+  }
+  // every preview route has exactly one decision row
+  for (const r of ROUTES.filter((x) => tierOf(x) === 'preview' && isStatic(x))) assert.match(doc, new RegExp('^\\| `' + r.name + '` \\| (hide|merge|keep) \\|', 'm'), `${r.name} has no triage row`);
 });

@@ -1,5 +1,6 @@
 import { h, heSpan } from './ui.js';
 import { ROUTES } from './router.js';
+import { PREVIEW_HIDDEN } from './nav-model.js';
 import { tHe } from './i18n.js';
 import { calmOn, streakVisible } from './comfort.js';
 import { REMINDER_KEY, reminderDue, reminderNode, snoozed } from './backup-reminder.js';
@@ -45,10 +46,10 @@ export function mount(root, ctx) {
     h('nav', { class: 'card', 'aria-labelledby': 'h-quick' }, h('h2', { id: 'h-quick' }, t('home.quick')),
       h('ul', { class: 'tiles' }, ...QUICK.map(([k, href]) => h('li', {}, h('a', { class: 'tile', href }, h('span', {}, t('nav.' + k)), tHe('nav.' + k) ? heSpan(tHe('nav.' + k)) : null))),
         // optional views from other lanes: only listed when their file exists in this build
-        ...ROUTES.filter((r) => r.optional && r.quick && !r.group && (ctx.hasRoute?.(r.name) ?? false)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, h('span', {}, t(r.quick))))))),
-    ROUTES.some((r) => r.group === 'learn' && r.quick && !r.pattern.includes(':') && ctx.hasRoute?.(r.name))
+        ...ROUTES.filter((r) => r.optional && r.quick && !r.group && !PREVIEW_HIDDEN.has(r.name) && (ctx.hasRoute?.(r.name) ?? false)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, h('span', {}, t(r.quick))))))),
+    ROUTES.some((r) => r.group === 'learn' && r.quick && !r.pattern.includes(':') && !PREVIEW_HIDDEN.has(r.name) && ctx.hasRoute?.(r.name))
       ? h('nav', { class: 'card', 'aria-labelledby': 'h-more' }, h('details', { id: 'home-more-box' }, h('summary', {}, h('h2', { id: 'h-more', style: 'display:inline;margin:0' }, t('home.more'))), h('p', { class: 'muted' }, t('home.more.hint')),
-        h('ul', { class: 'tiles' }, ...ROUTES.filter((r) => r.group === 'learn' && r.quick && !r.pattern.includes(':') && ctx.hasRoute?.(r.name)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, h('span', {}, t(r.quick)), tHe(r.quick) ? heSpan(tHe(r.quick)) : null))))))
+        h('ul', { class: 'tiles' }, ...ROUTES.filter((r) => r.group === 'learn' && r.quick && !r.pattern.includes(':') && !PREVIEW_HIDDEN.has(r.name) && ctx.hasRoute?.(r.name)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, h('span', {}, t(r.quick)), tHe(r.quick) ? heSpan(tHe(r.quick)) : null))))))
       : null,
     h('section', { class: 'card', 'aria-labelledby': 'h-ref' }, h('h2', { id: 'h-ref' }, t('home.reflect')),
       h('a', { class: 'btn secondary', href: '#/calendar' }, t('home.reflect.link'))),

@@ -88,13 +88,13 @@ const check = (name, ok, detail = '') => { checks.push({ name, ok: !!ok, detail 
   await page.locator('#ob-letters-none').check();
   await page.getByRole('button', { name: 'Continue', exact: true }).click();
   await page.waitForSelector('#ob-form-congregation');
+  await page.evaluate(() => { const d = document.querySelector('details.ob-more'); if (d) d.open = true; }); // the branch-of-Judaism question is optional and collapsed
   await page.locator('#ob-denomination-reform').check(); await page.locator('#ob-pron-ashkenazi').check();
   await page.getByRole('button', { name: 'Continue', exact: true }).click();
-  await page.waitForSelector('#ob-form-minutes');
-  await page.getByRole('button', { name: 'Show my week' }).click();
+  // minutes a day is no longer its own step: the plan card appears after the pronunciation step with the default minutes
   await page.waitForSelector('section.ob-plan');
   const saved = await page.evaluate(() => ({ s: JSON.parse(localStorage.getItem('alef:settings')), o: JSON.parse(localStorage.getItem('alef:onboarding.v1')) }));
-  check('onboarding persists letters answer, denomination, minutes and the congregation setting', saved.o?.letters === 'none' && saved.o?.start === '/firstday' && saved.o?.denomination === 'reform' && saved.o?.minutesPerDay === 10 && saved.s?.congregation === 'ashkenazi' && saved.s?.onboarded === true, JSON.stringify(saved));
+  check('onboarding persists letters answer, denomination, the congregation setting and the default (unset) minutes', saved.o?.letters === 'none' && saved.o?.start === '/firstday' && saved.o?.denomination === 'reform' && saved.o?.minutesPerDay === null && saved.s?.congregation === 'ashkenazi' && saved.s?.onboarded === true, JSON.stringify(saved));
   check('week plan card has 7 days', (await page.locator('section.ob-plan ol.ob-days > li').count()) === 7);
   await page.locator('#ob-start').click();
   await page.waitForFunction(() => location.hash === '#/firstday', null, { timeout: 8000 }).catch(() => {});
@@ -123,10 +123,10 @@ const check = (name, ok, detail = '') => { checks.push({ name, ok: !!ok, detail 
   }
   await page.getByRole('heading', { name: 'Lesson complete', exact: true }).waitFor();
   const before = await page.evaluate(() => JSON.parse(localStorage.getItem('alef:srs.cards')));
-  check('quick check earns completion and creates review cards', Object.keys(before).length === 6 && await page.evaluate(() => !!JSON.parse(localStorage.getItem('alef:curriculum.progress')).completed.r01));
+  check('quick check earns completion and creates review cards', Object.keys(before).length === 14 /* 6 lesson cards + 8 memory-chain cards (4 each for Shin and Bet) */ && await page.evaluate(() => !!JSON.parse(localStorage.getItem('alef:curriculum.progress')).completed.r01));
   await page.goto(base + '#/'); await page.locator('#today-continue').waitFor();
   { const txt = await page.locator('main').innerText();
-    check('home Today card shows the streak line, morning link and one Continue button', /Streak:/.test(txt) && /Today's morning verse/.test(txt) && (await page.locator('#today-continue').count()) === 1, txt.replace(/\s+/g, ' ').slice(0, 400)); }
+    check('home Today card shows no streak line on day 1, the morning link and one Continue button', (await page.locator('#today-streak').count()) === 0 /* hidden until a streak of 2 days (src/home/today.js) */ && /Today's morning verse/.test(txt) && (await page.locator('#today-continue').count()) === 1, txt.replace(/\s+/g, ' ').slice(0, 400)); }
   await page.goto(base + '#/learn?review=1');
   await page.getByRole('button', { name: 'Show answer' }).waitFor();
   for (let i = 0; i < 12 && await page.getByRole('button', { name: 'Show answer' }).count(); i++) {

@@ -1,0 +1,2030 @@
+{
+  "batch": 3,
+  "short": false,
+  "count": 100,
+  "status": "DRAFT, not reviewed",
+  "files": [
+    {
+      "file": "tzere-k2.svg",
+      "phase": "B",
+      "item": "tzere",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tzere — pose 2",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "tzere-k3.svg",
+      "phase": "B",
+      "item": "tzere",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tzere — pose 3",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "tzere-k4.svg",
+      "phase": "B",
+      "item": "tzere",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tzere — pose 4",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "tzere-k5.svg",
+      "phase": "B",
+      "item": "tzere",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tzere — pose 5",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "segol-k1.svg",
+      "phase": "B",
+      "item": "segol",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "segol — pose 1",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "segol-k2.svg",
+      "phase": "B",
+      "item": "segol",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "segol — pose 2",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "segol-k3.svg",
+      "phase": "B",
+      "item": "segol",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "segol — pose 3",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "segol-k4.svg",
+      "phase": "B",
+      "item": "segol",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "segol — pose 4",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "segol-k5.svg",
+      "phase": "B",
+      "item": "segol",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "segol — pose 5",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chirik-k1.svg",
+      "phase": "B",
+      "item": "chirik",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "chirik — pose 1",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chirik-k2.svg",
+      "phase": "B",
+      "item": "chirik",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "chirik — pose 2",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chirik-k3.svg",
+      "phase": "B",
+      "item": "chirik",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "chirik — pose 3",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chirik-k4.svg",
+      "phase": "B",
+      "item": "chirik",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "chirik — pose 4",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chirik-k5.svg",
+      "phase": "B",
+      "item": "chirik",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "chirik — pose 5",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "cholam-k1.svg",
+      "phase": "B",
+      "item": "cholam",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "cholam — pose 1",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "cholam-k2.svg",
+      "phase": "B",
+      "item": "cholam",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "cholam — pose 2",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "cholam-k3.svg",
+      "phase": "B",
+      "item": "cholam",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "cholam — pose 3",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "cholam-k4.svg",
+      "phase": "B",
+      "item": "cholam",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "cholam — pose 4",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "cholam-k5.svg",
+      "phase": "B",
+      "item": "cholam",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "cholam — pose 5",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "kubutz-k1.svg",
+      "phase": "B",
+      "item": "kubutz",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "kubutz — pose 1",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "kubutz-k2.svg",
+      "phase": "B",
+      "item": "kubutz",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "kubutz — pose 2",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "kubutz-k3.svg",
+      "phase": "B",
+      "item": "kubutz",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "kubutz — pose 3",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "kubutz-k4.svg",
+      "phase": "B",
+      "item": "kubutz",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "kubutz — pose 4",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "kubutz-k5.svg",
+      "phase": "B",
+      "item": "kubutz",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "kubutz — pose 5",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "shuruk-k1.svg",
+      "phase": "B",
+      "item": "shuruk",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "shuruk — pose 1",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "shuruk-k2.svg",
+      "phase": "B",
+      "item": "shuruk",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "shuruk — pose 2",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "shuruk-k3.svg",
+      "phase": "B",
+      "item": "shuruk",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "shuruk — pose 3",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "shuruk-k4.svg",
+      "phase": "B",
+      "item": "shuruk",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "shuruk — pose 4",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "shuruk-k5.svg",
+      "phase": "B",
+      "item": "shuruk",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "shuruk — pose 5",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "shva-k1.svg",
+      "phase": "B",
+      "item": "shva",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "shva — pose 1",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "shva-k2.svg",
+      "phase": "B",
+      "item": "shva",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "shva — pose 2",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "shva-k3.svg",
+      "phase": "B",
+      "item": "shva",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "shva — pose 3",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "shva-k4.svg",
+      "phase": "B",
+      "item": "shva",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "shva — pose 4",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "shva-k5.svg",
+      "phase": "B",
+      "item": "shva",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "shva — pose 5",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chataf-patach-k1.svg",
+      "phase": "B",
+      "item": "chataf-patach",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chataf patach — pose 1",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chataf-patach-k2.svg",
+      "phase": "B",
+      "item": "chataf-patach",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chataf patach — pose 2",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chataf-patach-k3.svg",
+      "phase": "B",
+      "item": "chataf-patach",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chataf patach — pose 3",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chataf-patach-k4.svg",
+      "phase": "B",
+      "item": "chataf-patach",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chataf patach — pose 4",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chataf-patach-k5.svg",
+      "phase": "B",
+      "item": "chataf-patach",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chataf patach — pose 5",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chataf-segol-k1.svg",
+      "phase": "B",
+      "item": "chataf-segol",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chataf segol — pose 1",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chataf-segol-k2.svg",
+      "phase": "B",
+      "item": "chataf-segol",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chataf segol — pose 2",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chataf-segol-k3.svg",
+      "phase": "B",
+      "item": "chataf-segol",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chataf segol — pose 3",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chataf-segol-k4.svg",
+      "phase": "B",
+      "item": "chataf-segol",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chataf segol — pose 4",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chataf-segol-k5.svg",
+      "phase": "B",
+      "item": "chataf-segol",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chataf segol — pose 5",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chataf-kamatz-k1.svg",
+      "phase": "B",
+      "item": "chataf-kamatz",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chataf kamatz — pose 1",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chataf-kamatz-k2.svg",
+      "phase": "B",
+      "item": "chataf-kamatz",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chataf kamatz — pose 2",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chataf-kamatz-k3.svg",
+      "phase": "B",
+      "item": "chataf-kamatz",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chataf kamatz — pose 3",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chataf-kamatz-k4.svg",
+      "phase": "B",
+      "item": "chataf-kamatz",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chataf kamatz — pose 4",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "chataf-kamatz-k5.svg",
+      "phase": "B",
+      "item": "chataf-kamatz",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chataf kamatz — pose 5",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "dagesh-k1.svg",
+      "phase": "B",
+      "item": "dagesh",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "dagesh — pose 1",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "dagesh-k2.svg",
+      "phase": "B",
+      "item": "dagesh",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "dagesh — pose 2",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "dagesh-k3.svg",
+      "phase": "B",
+      "item": "dagesh",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "dagesh — pose 3",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "dagesh-k4.svg",
+      "phase": "B",
+      "item": "dagesh",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "dagesh — pose 4",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "dagesh-k5.svg",
+      "phase": "B",
+      "item": "dagesh",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "dagesh — pose 5",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "shin-dot-k1.svg",
+      "phase": "B",
+      "item": "shin-dot",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "shin dot — pose 1",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "shin-dot-k2.svg",
+      "phase": "B",
+      "item": "shin-dot",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "shin dot — pose 2",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "shin-dot-k3.svg",
+      "phase": "B",
+      "item": "shin-dot",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "shin dot — pose 3",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "shin-dot-k4.svg",
+      "phase": "B",
+      "item": "shin-dot",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "shin dot — pose 4",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "shin-dot-k5.svg",
+      "phase": "B",
+      "item": "shin-dot",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "shin dot — pose 5",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "sin-dot-k1.svg",
+      "phase": "B",
+      "item": "sin-dot",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "sin dot — pose 1",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "sin-dot-k2.svg",
+      "phase": "B",
+      "item": "sin-dot",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "sin dot — pose 2",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "sin-dot-k3.svg",
+      "phase": "B",
+      "item": "sin-dot",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "sin dot — pose 3",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "sin-dot-k4.svg",
+      "phase": "B",
+      "item": "sin-dot",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "sin dot — pose 4",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "sin-dot-k5.svg",
+      "phase": "B",
+      "item": "sin-dot",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "sin dot — pose 5",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "water-k1.svg",
+      "phase": "C",
+      "item": "water",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "water — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "water-k2.svg",
+      "phase": "C",
+      "item": "water",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "water — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "water-k3.svg",
+      "phase": "C",
+      "item": "water",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "water — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "water-k4.svg",
+      "phase": "C",
+      "item": "water",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "water — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "water-k5.svg",
+      "phase": "C",
+      "item": "water",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "water — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "bread-k1.svg",
+      "phase": "C",
+      "item": "bread",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "bread — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "bread-k2.svg",
+      "phase": "C",
+      "item": "bread",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "bread — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "bread-k3.svg",
+      "phase": "C",
+      "item": "bread",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "bread — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "bread-k4.svg",
+      "phase": "C",
+      "item": "bread",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "bread — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "bread-k5.svg",
+      "phase": "C",
+      "item": "bread",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "bread — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "house-k1.svg",
+      "phase": "C",
+      "item": "house",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "house — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "house-k2.svg",
+      "phase": "C",
+      "item": "house",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "house — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "house-k3.svg",
+      "phase": "C",
+      "item": "house",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "house — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "house-k4.svg",
+      "phase": "C",
+      "item": "house",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "house — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "house-k5.svg",
+      "phase": "C",
+      "item": "house",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "house — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "door-k1.svg",
+      "phase": "C",
+      "item": "door",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "door — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "door-k2.svg",
+      "phase": "C",
+      "item": "door",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "door — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "door-k3.svg",
+      "phase": "C",
+      "item": "door",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "door — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "door-k4.svg",
+      "phase": "C",
+      "item": "door",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "door — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "door-k5.svg",
+      "phase": "C",
+      "item": "door",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "door — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "book-k1.svg",
+      "phase": "C",
+      "item": "book",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "book — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "book-k2.svg",
+      "phase": "C",
+      "item": "book",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "book — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "book-k3.svg",
+      "phase": "C",
+      "item": "book",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "book — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "book-k4.svg",
+      "phase": "C",
+      "item": "book",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "book — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "book-k5.svg",
+      "phase": "C",
+      "item": "book",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "book — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "table-k1.svg",
+      "phase": "C",
+      "item": "table",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "table — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "table-k2.svg",
+      "phase": "C",
+      "item": "table",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "table — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "table-k3.svg",
+      "phase": "C",
+      "item": "table",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "table — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "table-k4.svg",
+      "phase": "C",
+      "item": "table",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "table — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "table-k5.svg",
+      "phase": "C",
+      "item": "table",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "table — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "chair-k1.svg",
+      "phase": "C",
+      "item": "chair",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chair — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "chair-k2.svg",
+      "phase": "C",
+      "item": "chair",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chair — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "chair-k3.svg",
+      "phase": "C",
+      "item": "chair",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chair — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "chair-k4.svg",
+      "phase": "C",
+      "item": "chair",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chair — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "chair-k5.svg",
+      "phase": "C",
+      "item": "chair",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chair — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "window-k1.svg",
+      "phase": "C",
+      "item": "window",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "window — pose 1",
+      "doubt": "n/a"
+    }
+  ],
+  "doubts": [
+    {
+      "file": "tzere-k2.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tzere-k3.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tzere-k4.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tzere-k5.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "segol-k1.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "segol-k2.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "segol-k3.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "segol-k4.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "segol-k5.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chirik-k1.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chirik-k2.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chirik-k3.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chirik-k4.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chirik-k5.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "cholam-k1.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "cholam-k2.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "cholam-k3.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "cholam-k4.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "cholam-k5.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "kubutz-k1.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "kubutz-k2.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "kubutz-k3.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "kubutz-k4.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "kubutz-k5.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "shuruk-k1.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "shuruk-k2.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "shuruk-k3.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "shuruk-k4.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "shuruk-k5.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "shva-k1.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "shva-k2.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "shva-k3.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "shva-k4.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "shva-k5.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chataf-patach-k1.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chataf-patach-k2.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chataf-patach-k3.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chataf-patach-k4.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chataf-patach-k5.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chataf-segol-k1.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chataf-segol-k2.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chataf-segol-k3.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chataf-segol-k4.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chataf-segol-k5.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chataf-kamatz-k1.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chataf-kamatz-k2.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chataf-kamatz-k3.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chataf-kamatz-k4.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chataf-kamatz-k5.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "dagesh-k1.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "dagesh-k2.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "dagesh-k3.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "dagesh-k4.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "dagesh-k5.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "shin-dot-k1.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "shin-dot-k2.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "shin-dot-k3.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "shin-dot-k4.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "shin-dot-k5.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "sin-dot-k1.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "sin-dot-k2.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "sin-dot-k3.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "sin-dot-k4.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "sin-dot-k5.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    }
+  ]
+}

@@ -1,0 +1,2395 @@
+{
+  "batch": 6,
+  "short": false,
+  "count": 100,
+  "status": "DRAFT, not reviewed",
+  "files": [
+    {
+      "file": "mouth-k2.svg",
+      "phase": "C",
+      "item": "mouth",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "mouth — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "mouth-k3.svg",
+      "phase": "C",
+      "item": "mouth",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "mouth — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "mouth-k4.svg",
+      "phase": "C",
+      "item": "mouth",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "mouth — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "mouth-k5.svg",
+      "phase": "C",
+      "item": "mouth",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "mouth — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "heart-k1.svg",
+      "phase": "C",
+      "item": "heart",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "heart — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "heart-k2.svg",
+      "phase": "C",
+      "item": "heart",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "heart — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "heart-k3.svg",
+      "phase": "C",
+      "item": "heart",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "heart — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "heart-k4.svg",
+      "phase": "C",
+      "item": "heart",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "heart — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "heart-k5.svg",
+      "phase": "C",
+      "item": "heart",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "heart — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "hot-k1.svg",
+      "phase": "C",
+      "item": "hot",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 13,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "hot — pose 1",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "hot-k2.svg",
+      "phase": "C",
+      "item": "hot",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 13,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "hot — pose 2",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "hot-k3.svg",
+      "phase": "C",
+      "item": "hot",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 13,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "hot — pose 3",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "hot-k4.svg",
+      "phase": "C",
+      "item": "hot",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 13,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "hot — pose 4",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "hot-k5.svg",
+      "phase": "C",
+      "item": "hot",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 13,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "hot — pose 5",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "cold-k1.svg",
+      "phase": "C",
+      "item": "cold",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 15,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "cold — pose 1",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "cold-k2.svg",
+      "phase": "C",
+      "item": "cold",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 15,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "cold — pose 2",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "cold-k3.svg",
+      "phase": "C",
+      "item": "cold",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 15,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "cold — pose 3",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "cold-k4.svg",
+      "phase": "C",
+      "item": "cold",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 15,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "cold — pose 4",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "cold-k5.svg",
+      "phase": "C",
+      "item": "cold",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 15,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "cold — pose 5",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "hungry-k1.svg",
+      "phase": "C",
+      "item": "hungry",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 11,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "hungry — pose 1",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "hungry-k2.svg",
+      "phase": "C",
+      "item": "hungry",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 11,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "hungry — pose 2",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "hungry-k3.svg",
+      "phase": "C",
+      "item": "hungry",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 11,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "hungry — pose 3",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "hungry-k4.svg",
+      "phase": "C",
+      "item": "hungry",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 11,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "hungry — pose 4",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "hungry-k5.svg",
+      "phase": "C",
+      "item": "hungry",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 11,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "hungry — pose 5",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "thirsty-k1.svg",
+      "phase": "C",
+      "item": "thirsty",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 13,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "thirsty — pose 1",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "thirsty-k2.svg",
+      "phase": "C",
+      "item": "thirsty",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 13,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "thirsty — pose 2",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "thirsty-k3.svg",
+      "phase": "C",
+      "item": "thirsty",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 13,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "thirsty — pose 3",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "thirsty-k4.svg",
+      "phase": "C",
+      "item": "thirsty",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 13,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "thirsty — pose 4",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "thirsty-k5.svg",
+      "phase": "C",
+      "item": "thirsty",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 13,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "thirsty — pose 5",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "tired-k1.svg",
+      "phase": "C",
+      "item": "tired",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tired — pose 1",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "tired-k2.svg",
+      "phase": "C",
+      "item": "tired",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tired — pose 2",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "tired-k3.svg",
+      "phase": "C",
+      "item": "tired",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tired — pose 3",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "tired-k4.svg",
+      "phase": "C",
+      "item": "tired",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tired — pose 4",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "tired-k5.svg",
+      "phase": "C",
+      "item": "tired",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tired — pose 5",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "sleepy-k1.svg",
+      "phase": "C",
+      "item": "sleepy",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "sleepy — pose 1",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "sleepy-k2.svg",
+      "phase": "C",
+      "item": "sleepy",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "sleepy — pose 2",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "sleepy-k3.svg",
+      "phase": "C",
+      "item": "sleepy",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "sleepy — pose 3",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "sleepy-k4.svg",
+      "phase": "C",
+      "item": "sleepy",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "sleepy — pose 4",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "sleepy-k5.svg",
+      "phase": "C",
+      "item": "sleepy",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "sleepy — pose 5",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "proud-k1.svg",
+      "phase": "C",
+      "item": "proud",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 13,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "proud — pose 1",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "proud-k2.svg",
+      "phase": "C",
+      "item": "proud",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 13,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "proud — pose 2",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "proud-k3.svg",
+      "phase": "C",
+      "item": "proud",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 13,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "proud — pose 3",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "proud-k4.svg",
+      "phase": "C",
+      "item": "proud",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 13,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "proud — pose 4",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "proud-k5.svg",
+      "phase": "C",
+      "item": "proud",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 13,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "proud — pose 5",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "happy-k1.svg",
+      "phase": "C",
+      "item": "happy",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "happy — pose 1",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "happy-k2.svg",
+      "phase": "C",
+      "item": "happy",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "happy — pose 2",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "happy-k3.svg",
+      "phase": "C",
+      "item": "happy",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "happy — pose 3",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "happy-k4.svg",
+      "phase": "C",
+      "item": "happy",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "happy — pose 4",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "happy-k5.svg",
+      "phase": "C",
+      "item": "happy",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "happy — pose 5",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "sad-k1.svg",
+      "phase": "C",
+      "item": "sad",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "sad — pose 1",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "sad-k2.svg",
+      "phase": "C",
+      "item": "sad",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "sad — pose 2",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "sad-k3.svg",
+      "phase": "C",
+      "item": "sad",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "sad — pose 3",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "sad-k4.svg",
+      "phase": "C",
+      "item": "sad",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "sad — pose 4",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "sad-k5.svg",
+      "phase": "C",
+      "item": "sad",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "sad — pose 5",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "big-k1.svg",
+      "phase": "C",
+      "item": "big",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "big — pose 1",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "big-k2.svg",
+      "phase": "C",
+      "item": "big",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "big — pose 2",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "big-k3.svg",
+      "phase": "C",
+      "item": "big",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "big — pose 3",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "big-k4.svg",
+      "phase": "C",
+      "item": "big",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "big — pose 4",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "big-k5.svg",
+      "phase": "C",
+      "item": "big",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "big — pose 5",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "small-k1.svg",
+      "phase": "C",
+      "item": "small",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "small — pose 1",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "small-k2.svg",
+      "phase": "C",
+      "item": "small",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "small — pose 2",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "small-k3.svg",
+      "phase": "C",
+      "item": "small",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "small — pose 3",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "small-k4.svg",
+      "phase": "C",
+      "item": "small",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "small — pose 4",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "small-k5.svg",
+      "phase": "C",
+      "item": "small",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "small — pose 5",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "new-k1.svg",
+      "phase": "C",
+      "item": "new",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "new — pose 1",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "new-k2.svg",
+      "phase": "C",
+      "item": "new",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "new — pose 2",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "new-k3.svg",
+      "phase": "C",
+      "item": "new",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "new — pose 3",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "new-k4.svg",
+      "phase": "C",
+      "item": "new",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "new — pose 4",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "new-k5.svg",
+      "phase": "C",
+      "item": "new",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "new — pose 5",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "old-k1.svg",
+      "phase": "C",
+      "item": "old",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "old — pose 1",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "old-k2.svg",
+      "phase": "C",
+      "item": "old",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "old — pose 2",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "old-k3.svg",
+      "phase": "C",
+      "item": "old",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "old — pose 3",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "old-k4.svg",
+      "phase": "C",
+      "item": "old",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "old — pose 4",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "old-k5.svg",
+      "phase": "C",
+      "item": "old",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "old — pose 5",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "fast-k1.svg",
+      "phase": "C",
+      "item": "fast",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "fast — pose 1",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "fast-k2.svg",
+      "phase": "C",
+      "item": "fast",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "fast — pose 2",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "fast-k3.svg",
+      "phase": "C",
+      "item": "fast",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "fast — pose 3",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "fast-k4.svg",
+      "phase": "C",
+      "item": "fast",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "fast — pose 4",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "fast-k5.svg",
+      "phase": "C",
+      "item": "fast",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "fast — pose 5",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "slow-k1.svg",
+      "phase": "C",
+      "item": "slow",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "slow — pose 1",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "slow-k2.svg",
+      "phase": "C",
+      "item": "slow",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "slow — pose 2",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "slow-k3.svg",
+      "phase": "C",
+      "item": "slow",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "slow — pose 3",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "slow-k4.svg",
+      "phase": "C",
+      "item": "slow",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "slow — pose 4",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "slow-k5.svg",
+      "phase": "C",
+      "item": "slow",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "slow — pose 5",
+      "doubt": "Meaning is interpretive; test recognition and retain accessible labels."
+    },
+    {
+      "file": "up-k1.svg",
+      "phase": "C",
+      "item": "up",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "up — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "up-k2.svg",
+      "phase": "C",
+      "item": "up",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "up — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "up-k3.svg",
+      "phase": "C",
+      "item": "up",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "up — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "up-k4.svg",
+      "phase": "C",
+      "item": "up",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "up — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "up-k5.svg",
+      "phase": "C",
+      "item": "up",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "up — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "down-k1.svg",
+      "phase": "C",
+      "item": "down",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "down — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "down-k2.svg",
+      "phase": "C",
+      "item": "down",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "down — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "down-k3.svg",
+      "phase": "C",
+      "item": "down",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "down — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "down-k4.svg",
+      "phase": "C",
+      "item": "down",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "down — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "down-k5.svg",
+      "phase": "C",
+      "item": "down",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "down — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "open-k1.svg",
+      "phase": "C",
+      "item": "open",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "open — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "open-k2.svg",
+      "phase": "C",
+      "item": "open",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "open — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "open-k3.svg",
+      "phase": "C",
+      "item": "open",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "open — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "open-k4.svg",
+      "phase": "C",
+      "item": "open",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "open — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "open-k5.svg",
+      "phase": "C",
+      "item": "open",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "open — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "closed-k1.svg",
+      "phase": "C",
+      "item": "closed",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "closed — pose 1",
+      "doubt": "n/a"
+    }
+  ],
+  "doubts": [
+    {
+      "file": "hot-k1.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "hot-k2.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "hot-k3.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "hot-k4.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "hot-k5.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "cold-k1.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "cold-k2.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "cold-k3.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "cold-k4.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "cold-k5.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "hungry-k1.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "hungry-k2.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "hungry-k3.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "hungry-k4.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "hungry-k5.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "thirsty-k1.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "thirsty-k2.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "thirsty-k3.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "thirsty-k4.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "thirsty-k5.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tired-k1.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tired-k2.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tired-k3.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tired-k4.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tired-k5.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "sleepy-k1.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "sleepy-k2.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "sleepy-k3.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "sleepy-k4.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "sleepy-k5.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "proud-k1.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "proud-k2.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "proud-k3.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "proud-k4.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "proud-k5.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "happy-k1.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "happy-k2.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "happy-k3.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "happy-k4.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "happy-k5.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "sad-k1.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "sad-k2.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "sad-k3.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "sad-k4.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "sad-k5.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "big-k1.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "big-k2.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "big-k3.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "big-k4.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "big-k5.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "small-k1.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "small-k2.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "small-k3.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "small-k4.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "small-k5.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "new-k1.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "new-k2.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "new-k3.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "new-k4.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "new-k5.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "old-k1.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "old-k2.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "old-k3.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "old-k4.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "old-k5.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "fast-k1.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "fast-k2.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "fast-k3.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "fast-k4.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "fast-k5.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "slow-k1.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "slow-k2.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "slow-k3.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "slow-k4.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "slow-k5.svg",
+      "what": "Meaning is interpretive; test recognition and retain accessible labels.",
+      "tag": "?? CHECK"
+    }
+  ]
+}

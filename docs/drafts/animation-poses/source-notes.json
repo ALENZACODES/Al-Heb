@@ -1,0 +1,13 @@
+{
+  "status": "DRAFT, not reviewed",
+  "brief": "User-supplied animation queue: 27 letters, 15 marks, 100 English-gloss concepts.",
+  "letter_picture_mapping": "Uses the existing round-one picture subjects: three-candle cake, house and ball, Noa handstand, tent, lamp, kite, vine, table, yo-yo, diving board, hut, magnet, cat, cushion, eye, mouth, pizza, ball, camel, zipper, gate and teapot, plus final-form variants. These are visual mnemonics, not etymology or sound claims.",
+  "glyph_method": "Local installed Hebrew glyph outlines converted to self-contained absolute integer path contours. No font dependency remains in SVG files.",
+  "mark_reference": "Read-only project data/pronunciation/niqqud.json positional descriptions and Israeli values. The current queue supplies the explicit 15-item mapping that was absent from the previous twelve-picture task.",
+  "character_code_reference": "https://unicode.org/charts/PDF/U0590.pdf",
+  "vowel_reference": "https://prologdigital.com/FlexPaper/3442_ULPAN%20HEBREW%20-%20hesberim%20-%20ENGversion_FlexPaper_SAMPLE/docs/3443_ULPAN%20HEBREW%20-%20hesberim%20-%20ENGversion_SinglePages_SAMPLE.pdf",
+  "pronunciation_tradition": "Israeli",
+  "phonetic_limitations": "Mouth shapes are schematic cues only. They do not encode tongue position, airflow or reliable pronunciation. Kamatz here represents kamatz gadol; other contexts differ. Shva varies by context. Dagesh is not a vowel and has no single sound. Shin-dot and sin-dot are consonant marks, not vowels. All Phase B items carry review doubts.",
+  "calendar_convention": "Seven positions read left to right, top row then bottom row, Sunday first. A check shape marks the selected position so colour is not the only distinction. Today and tomorrow are relative illustrative positions, not live dates.",
+  "motion": "Fixed fill colours per path; monotonic opacity and geometry transitions. No flashing or repeated colour switching. Renderer must honor reduced motion by displaying the final still only."
+}

@@ -106,7 +106,7 @@ test('listen: clip count and honesty notes follow the tradition (clips exist for
     await waitFor(() => /Start/.test(root.textContent)); return { root, un };
   };
   const a = await open('ashkenazi');
-  assert.match(a.root.textContent, /words have audio for your Ashkenazi setting/);
+  assert.match(a.root.textContent, /words have a clip for your Ashkenazi setting/);
   bt(a.root, /Start listening drill/).click();
   const status = () => a.root.find((n) => n.attrs.role === 'status').map((n) => n.textContent).join(' ');
   await waitFor(() => /Playing this word/.test(status()));

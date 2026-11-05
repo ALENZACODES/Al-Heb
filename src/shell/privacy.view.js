@@ -29,6 +29,7 @@ export const STORE_KEYS = [
   ['settings', 'Settings: language, script, theme, accessibility options (as listed on the Accessibility screen), voice, pronunciation style, your gender for Hebrew forms (optional), saved latitude and longitude', 'src/shell/settings.js'],
   ['onboarding.v1', 'Setup answers and plan', 'src/onboarding/model.js'],
   ['onboarding.v1.dailyGoal', 'Daily goal', 'src/home/today.js'],
+  ['backup.reminder.v1', 'When you last downloaded a backup file, and "Not now" on the backup reminder', 'src/shell/backup-reminder.js'],
   ['placement.v1', 'Placement check result', 'src/placement/placement.view.js'],
   ['curriculum.progress', 'Completed lessons', 'src/curriculum/dom.js'],
   ['srs.cards', 'Review cards for lessons', 'src/curriculum/dom.js'],

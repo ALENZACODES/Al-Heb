@@ -18,8 +18,10 @@ test('Settings: back up -> delete all (typed confirmation) -> restore brings eve
   const ctx = await browser.newContext({ acceptDownloads: true, serviceWorkers: 'block' });
   const page = await ctx.newPage();
   try {
+    await page.clock.setFixedTime(new Date('2026-11-04T12:00:00Z'));
     await page.goto(base + '#/settings'); await page.waitForSelector('#s-wipe-go', { timeout: 30000 });
-    const seeded = { 'srs.cards': { 'c:alef': { due: 5, reps: 2 } }, 'curriculum.progress': { completed: { r01: 1 } }, 'streak': { v: 2, days: ['2026-11-01'] }, 'unlisted.future.key': { ok: true } };
+    // Use a valid current streak record: the engagement timer normalizes malformed records.
+    const seeded = { 'srs.cards': { 'c:alef': { due: 5, reps: 2 } }, 'curriculum.progress': { completed: { r01: 1 } }, 'streak': { v: 2, count: 1, best: 1, last: '2026-11-04', todayDate: '2026-11-04', todaySeconds: 300, frozenDates: [], doneDates: ['2026-11-04'], freeze: false, mode: 'reform' }, 'unlisted.future.key': { ok: true } };
     await page.evaluate((d) => { for (const [k, v] of Object.entries(d)) window.alef.store.set(k, v); }, seeded);
     const [dl] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: /back up|download/i }).first().click()]);
     const path = await dl.path(); const text = readFileSync(path, 'utf8'); const file = JSON.parse(text);

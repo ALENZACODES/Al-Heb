@@ -3,6 +3,7 @@ import { h } from './ui.js';
 import { ENUMS, DEFAULTS } from './settings.js';
 import { AUDIO_FREE_LABEL, AUDIO_FREE_HELP } from './audiofree.js';
 import { requestPersistence, storageStatus } from './backup.js';
+import { REMINDER_KEY, afterExport, completedCount } from './backup-reminder.js';
 import { describePreview, storageNotice, wipeAllData, confirmMatches, CONFIRM_WORD, backupFileName } from './settings.data.js';
 
 export function mount(root, ctx) {
@@ -95,7 +96,9 @@ export function mount(root, ctx) {
   const exportBtn = h('button', { type: 'button', class: 'btn', onclick: () => {
     const url = URL.createObjectURL(new Blob([store.exportJSON()], { type: 'application/json' }));
     const a = h('a', { href: url, download: backupFileName() }); document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
-    status.textContent = `Backup saved: ${a.getAttribute('download')} was downloaded. Keep the file somewhere safe; Restore reads it back.`;
+    status.textContent = `Backup file downloaded: ${a.getAttribute('download')}. This copy is only as safe as where you keep it; Restore reads it back. ALEF does not make backups by itself.`;
+    // the Home reminder counts from here (backup.reminder.v1); only a downloaded file counts, never anything automatic
+    try { store.set(REMINDER_KEY, afterExport(store.get(REMINDER_KEY), completedCount(store.get('curriculum.progress')))); } catch { /* best effort */ }
   } }, t('settings.export'));
   // Reset settings changes many choices at once, so it asks first (a slipped tap should not undo a person's set-up)
   const resetAsk = h('div', { class: 'row', role: 'group', 'aria-label': 'Confirm reset', hidden: true });

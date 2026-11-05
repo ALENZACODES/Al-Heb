@@ -2,6 +2,7 @@ import { h, heSpan } from './ui.js';
 import { ROUTES } from './router.js';
 import { tHe } from './i18n.js';
 import { calmOn, streakVisible } from './comfort.js';
+import { REMINDER_KEY, reminderDue, reminderNode, snoozed } from './backup-reminder.js';
 import { buildToday, renderToday, daysAway, reviewedToday, previewTag, FIRSTDAY_PROGRESS_KEY, ONBOARDING_KEY, PLACEMENT_KEY, DAILY_GOAL_KEY, PRACTICE_KEYS } from '../home/today.js';
 
 async function tryImport(paths) {
@@ -60,10 +61,11 @@ export function mount(root, ctx) {
 
   // Says the daily-goal choice out loud. It lives outside todayHost because the Today card is redrawn on every choice, and a live region that is
   // replaced is not announced. It is empty until a goal button is pressed, and it claims nothing about saving (the store write is best effort).
+  const backupHost = h('div', { id: 'home-backup-host' }); // backup reminder after meaningful progress (src/shell/backup-reminder.js)
   const goalStatus = h('p', { id: 'today-goal-status', class: 'visually-hidden', role: 'status', 'aria-live': 'polite' });
   root.replaceChildren(h('div', { class: 'stack' },
     h('header', {}, h('h1', { id: 'view-title', tabindex: '-1' }, h('span', {}, t('app.name')), ' ', heSpan('אלף')), h('p', { class: 'muted' }, t('app.tagline'))),
-    destHost, todayHost, goalStatus, restHost));
+    destHost, todayHost, backupHost, goalStatus, restHost));
 
   // Lane 1 data (fetch-based loaders; modules shared with the Learn screen). Best effort: a missing module leaves the placeholder.
   // The Today card only reads other modules' stores (curriculum progress, SRS cards, streak, firstday.progress, onboarding.v1, placement.v1).
@@ -85,6 +87,12 @@ export function mount(root, ctx) {
       todayHost.replaceChildren(renderToday(today, t, (m) => { goalNow = m; try { store.set(DAILY_GOAL_KEY, m); } catch { /* best effort */ } const wasOpen = todayHost.querySelector('#today-goal-box')?.open === true; draw(); const box = todayHost.querySelector('#today-goal-box'); if (box && wasOpen) box.open = true; /* the redraw makes a new, closed <details>; a hidden button cannot take focus */ const b = todayHost.querySelector(`[data-goal="${m}"]`); b?.focus?.(); goalStatus.textContent = `Daily goal: ${m} minutes.`; }, { calm: calmOn(ctx), showStreak: streakVisible(ctx) }));
     };
     draw();
+    // backup reminder: only once there is real progress to lose, never claiming a backup happened by itself
+    const completed = Object.keys(st.completed || {}).length;
+    const record = await get(REMINDER_KEY);
+    if (alive && reminderDue({ completed, record, now: Date.now() })) {
+      backupHost.replaceChildren(reminderNode(h, { completed, record, onSnooze: () => { try { store.set(REMINDER_KEY, snoozed(record, Date.now())); } catch { /* best effort */ } } }));
+    }
   })();
   return () => { alive = false; };
 }

@@ -15,8 +15,8 @@ import { loadJson, loadAllVocab } from '../sprint/loader.js';
 import { visibleRecords } from './loader.js';
 import { addCards, VOCAB_CARDS_KEY, POS_LABEL } from './model.js';
 import { ATTRIBUTION, DRAFT_NOTICE } from './vocab.view.js';
-import { fileLabel } from '../shell/audio-labels.js';
-import { speechText, uiEnglish } from '../shell/names.js';
+import { audioButton } from '../shell/audio-access.js';
+import { uiEnglish } from '../shell/names.js';
 import { sourcesLine, exampleCredit } from '../shell/sources.js';
 
 export const STORE_KEY = 'vocab.themes.v1';
@@ -83,28 +83,6 @@ export function mount(root, ctx) {
   };
   const loadVocab = async () => { if (!vocab) vocab = ctx?.themesData?.entries || await loadAllVocab(); return vocab; };
 
-  // ---- audio: a recording when the manifest has one, else the browser's Hebrew voice, labelled as such
-  async function playWord(w, noteEl) {
-    noteEl.textContent = '';
-    try { ctx?.audio?.stop?.(); } catch { /* ignore */ }
-    try {
-      if (ctx?.audio?.has?.('word', w.id)) {
-        const r = await ctx.audio.play('word', w.id);
-        if (r?.source === 'file') { noteEl.textContent = `Playing: ${fileLabel(r.entryStatus)}.`; return; }
-      }
-    } catch { /* fall through */ }
-    const g = globalThis;
-    if (!g.speechSynthesis || !g.SpeechSynthesisUtterance) { noteEl.textContent = 'No sound: this browser has no speech synthesis, and there is no recording of this word.'; return; }
-    const voices = typeof g.speechSynthesis.getVoices === 'function' ? g.speechSynthesis.getVoices() : [];
-    if (voices?.length && !voices.some((v) => /^he([-_]|$)/i.test(v.lang || ''))) { noteEl.textContent = 'No sound: your device has no Hebrew voice installed, and there is no recording of this word.'; return; }
-    try {
-      const u = new g.SpeechSynthesisUtterance(speechText(String(w.he).replace(/־/g, ' '))); u.lang = 'he-IL';
-      const rate = ctx?.settings?.get?.('ttsRate'); if (typeof rate === 'number') u.rate = rate;
-      g.speechSynthesis.cancel?.(); g.speechSynthesis.speak(u);
-      noteEl.textContent = 'Computer voice: your browser\'s text-to-speech, not a recording. It reads Israeli pronunciation and may ignore the vowel points.';
-    } catch { noteEl.textContent = 'No sound: the browser voice did not work.'; }
-  }
-
   function showList() {
     current = null;
     h1.textContent = 'Theme packs';
@@ -120,10 +98,9 @@ export function mount(root, ctx) {
   }
 
   function wordItem(w) {
-    const note = el('p', { class: 'th-muted', role: 'status', 'aria-live': 'polite' });
-    const rec = (() => { try { return !!ctx?.audio?.has?.('word', w.id); } catch { return false; } })();
-    const listen = el('button', { type: 'button', class: 'btn secondary', 'aria-label': `Listen to ${w.en}${rec ? '' : ' (computer voice)'}`, onclick: () => playWord(w, note) },
-      el('span', { 'aria-hidden': 'true' }, '▶'), ' ', rec ? 'Listen' : 'Listen (computer voice)');
+    // the shared button (src/shell/audio-access.js): a recording when the list has one, else the device voice reading this word's
+    // pointed text (Israeli only, labelled), else "No audio yet". The button carries its own status line.
+    const listen = audioButton(el, ctx, { kind: 'word', id: w.id, text: String(w.he || '').replace(/־/g, ' '), label: 'Listen', name: w.en });
     const ex = w.example ? el('blockquote', { class: 'th-ex' },
       heText(w.example.he), w.example.en ? el('div', {}, uiEnglish(ctx, w.example.en)) : null,
       el('div', { class: 'th-muted' }, `From the ${SOURCE_LABEL[w.example.source?.channel] || 'ALEF texts'} (${w.example.source?.ref ?? ''}). ${SENSE_NOTE}`), exampleCredit(el, w.example)) : el('p', { class: 'th-muted' }, 'No example line: this word does not appear in a full line of ALEF\'s texts.');
@@ -132,7 +109,7 @@ export function mount(root, ctx) {
       ctx.img?.(el, { kind: 'word', id: w.id, class: 'th-pic', width: 400 }),
       el('div', { class: 'th-he' }, heText(w.he)),
       el('div', {}, [w.translit, `${uiEnglish(ctx, w.en)}`, POS_LABEL[w.pos] || w.pos].filter(Boolean).join(' · ')),
-      listen, note, ex, flags);
+      listen, ex, flags);
   }
 
   async function sendToDeck(pack, btn) {

@@ -35,6 +35,12 @@ export const PARENT = {
 
 /** Hidden from the menu (still searchable): first-run onboarding. */
 const MENU_HIDDEN = new Set(['welcome']);
+/**
+ * Lean v0 (docs/v0/PREVIEW-TRIAGE.md): the lowest-value preview pages are kept out of the More sheet's Preview group and Home's
+ * "More ways to learn" so a new learner meets fewer half-finished screens. They still open by direct link, still carry the Preview
+ * banner and are still found by search (labelled Preview). Only preview routes may be listed here (tests/v0.test.js).
+ */
+export const PREVIEW_HIDDEN = new Set(['scheduler', 'known-words', 'time-budget', 'classsummary', 'torahreader', 'niqquddial', 'dottile', 'nikkud-fade', 'record-compare']);
 
 export const isStatic = (r) => !r.pattern.includes(':');
 /** Release tier of a route: 'v0' only when router.js says so; anything else is 'preview'. */
@@ -48,7 +54,7 @@ export const sectionOf = (name) => ROUTE_SECTION[name] || 'more';
 export function sectionRoutes(sectionId, routes, available, { includeHidden = false, tier = null } = {}) {
   const by = new Map(routes.map((r) => [r.name, r]));
   return (SECTION_ROUTES[sectionId] || []).map((n) => by.get(n))
-    .filter((r) => r && isStatic(r) && available.has(r.name) && (includeHidden || !MENU_HIDDEN.has(r.name)) && (!tier || tierOf(r) === tier));
+    .filter((r) => r && isStatic(r) && available.has(r.name) && (includeHidden || (!MENU_HIDDEN.has(r.name) && !(PREVIEW_HIDDEN.has(r.name) && tierOf(r) === 'preview'))) && (!tier || tierOf(r) === tier));
 }
 
 /** The "More" menu: every section with its available static v0 routes. Empty sections are dropped. Preview routes: previewGroups(). */

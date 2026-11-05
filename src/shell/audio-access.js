@@ -43,19 +43,23 @@ export function chipText(a) { return a.level === 'none' ? NO_AUDIO : a.label; }
  * A play button that is only a button when sound is possible. Otherwise a one-line "No audio yet" with the respelling.
  * @param {Function} h element factory (src/shell/ui.js h)
  * @param {any} ctx view context ({audio})
- * @param {{kind:string,id:string,label?:string,respelling?:string,voice?:string,tradition?:string,note?:HTMLElement,class?:string}} o
+ * @param {{kind:string,id:string,label?:string,respelling?:string,text?:string,name?:string,voice?:string,tradition?:string,note?:HTMLElement,class?:string}} o
+ *   `text`: the pointed Hebrew the caller shows. When the item is not in the recording list, the device voice may read this text
+ *   (src/audio/player.js plan() uses it only as a last resort, after every file step and the manifest's own text).
+ *   `name`: what the item is (e.g. the English gloss), added to the accessible name so a list of Listen buttons is not all one name.
  */
 export function audioButton(h, ctx, o) {
   const { kind, id, label = 'Listen', respelling } = o;
   if (isAudioFree(ctx)) return h('span', { class: 'audio-off', hidden: '' }); // "I do not use audio": no button, no "No audio yet" line
   const opt = {}; if (o.voice) opt.voice = o.voice; if (o.tradition) opt.tradition = o.tradition;
+  if (typeof o.text === 'string' && o.text.trim()) opt.text = o.text;
   const a = audioAccess(ctx && ctx.audio, kind, id, opt);
   if (a.level === 'none' && !a.checking) {
     return h('span', { class: 'audio-none muted', 'data-audio-state': 'none' }, NO_AUDIO, respelling ? ` - say it as written: ${respelling}` : '');
   }
   const note = o.note || h('span', { class: 'audio-chip muted', role: 'status', 'aria-live': 'polite' }, a.checking ? 'Checking audio...' : a.label);
   const btn = h('button', { type: 'button', class: o.class || 'btn secondary alef-play', 'data-audio': `${kind}/${id}`, 'data-audio-state': a.level,
-    'aria-label': `${label} (${a.checking ? 'checking audio' : a.label})`,
+    'aria-label': `${label}${o.name ? `: ${o.name}` : ''} (${a.checking ? 'checking audio' : a.label})`,
     onclick: async () => {
       try {
         if (ctx.audio.ensureManifest) await ctx.audio.ensureManifest();

@@ -97,3 +97,29 @@ test('one sound bar: Details link, dismiss remembered, focus moves, status comes
   bar.hidden = false; wireSoundBar({}, { doc, storage: st }); assert.equal(bar.hidden, true, 'stays dismissed on the next visit');
   assert.equal(wireSoundBar({}, { doc: { querySelector: () => null } }), null);
 });
+
+// ---- caller text: an item missing from the recording list can still use the device voice with the text the screen shows ----
+test('unknown item + caller text -> device; without text it stays none', () => {
+  const a = mk(speech([{ lang: 'he-IL' }]));
+  assert.equal(audioAccess(a, 'word', 'not-in-list').level, 'none');
+  assert.equal(audioAccess(a, 'word', 'not-in-list', { text: 'שָׁלוֹם' }).level, 'device');
+  assert.equal(audioAccess(a, 'word', 'not-in-list', { text: '   ' }).level, 'none', 'blank text is not text');
+});
+test('caller text never beats a file or the manifest text, and stays Israeli-only for the device voice', async () => {
+  const spoken = [];
+  const sp = { getVoices: () => [{ lang: 'he-IL' }], speak(u) { spoken.push(u.text); queueMicrotask(() => u.onend?.()); }, cancel() {} };
+  const a = mk(sp);
+  await a.play('word', 'bayit', { text: 'שָׁלוֹם' });
+  assert.deepEqual(spoken, ['בַּיִת'], 'manifest text wins over caller text');
+  await a.play('word', 'not-in-list', { text: 'שָׁלוֹם' });
+  assert.equal(spoken[1], 'שָׁלוֹם');
+  const ash = createAudio({ settings: { voice: 'f', congregation: 'ashkenazi' }, manifest: [], AudioCtor: class {}, speech: sp, UtteranceCtor: Utt });
+  assert.equal(ash.status('word', 'not-in-list', { text: 'שָׁלוֹם' }).reason, 'tts-pronunciation-mismatch');
+});
+test('audioButton passes caller text through: a device button for an item missing from the list', () => {
+  const ctx = { audio: mk(speech([{ lang: 'he-IL' }])) };
+  const without = audioButton(h, ctx, { kind: 'word', id: 'not-in-list', respelling: 'sha-LOM' });
+  assert.equal(without.attrs['data-audio-state'], 'none');
+  const withText = audioButton(h, ctx, { kind: 'word', id: 'not-in-list', text: 'שָׁלוֹם' });
+  assert.equal(withText.kids[0].tag, 'button'); assert.equal(withText.kids[0].attrs['data-audio-state'], 'device');
+});

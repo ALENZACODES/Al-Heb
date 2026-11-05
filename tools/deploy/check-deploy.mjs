@@ -163,7 +163,17 @@ export async function runChecks(root) {
       for (const m of line.matchAll(/https?:\/\/([a-z0-9.-]+)/gi)) { const h = m[1].toLowerCase(); if (h === 'www.w3.org' || h === 'localhost' || h === '127.0.0.1') continue; (hosts.get(h) ?? hosts.set(h, new Set()).get(h)).add(f); }
     }
   }
-  for (const [h, fs] of hosts) warn(`origin named in code: ${h} (${[...fs].join(', ')}) - harmless if only shown as a link or credit; if fetched, the CSP blocks it`);
+  // Credit and licence links, checked by hand: these files name the host only inside an <a href> (never fetch). A line that names an
+  // allowlisted host and is not an href still warns, so a later fetch to the same host cannot hide behind this list.
+  const LINK_ONLY = { 'src/vocab/vocab.view.js': ['creativecommons.org', 'github.com', 'www.wiktionary.org', 'kaikki.org'] };
+  const linkOnly = (h, f) => (LINK_ONLY[f] || []).includes(h) && readFileSync(join(root, f), 'utf8').split('\n')
+    .filter((line) => line.toLowerCase().includes('//' + h)).every((line) => new RegExp(`href:\\s*['"]https?://${h.replace(/\./g, '\\.')}`, 'i').test(line) && !/fetch\s*\(/.test(line));
+  let credited = 0;
+  for (const [h, fs] of hosts) {
+    const rest = [...fs].filter((f) => !linkOnly(h, f)); credited += fs.size - rest.length;
+    if (rest.length) warn(`origin named in code: ${h} (${rest.join(', ')}) - harmless if only shown as a link or credit; if fetched, the CSP blocks it`);
+  }
+  if (credited) console.log(`info  ${credited} credit link origin(s) allowlisted as link-only (LINK_ONLY in tools/deploy/check-deploy.mjs)`);
 
   // HTTP checks
   const srv = await startServer(root, rules); const base = `http://127.0.0.1:${srv.address().port}`;

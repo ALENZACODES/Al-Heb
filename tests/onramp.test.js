@@ -179,3 +179,18 @@ test('docs: ONRAMP.md exists, names the limits, and its screenshots exist and ca
     assert.equal(b.indexOf(Buffer.from('Exif')), -1, f + ' has an EXIF block'); assert.equal(b.indexOf(Buffer.from('http://ns.adobe.com/xap')), -1, f + ' has XMP');
   }
 });
+
+test('first day follows the chosen tradition: a style line before step 1, and the Hear result never calls the Israeli device voice Ashkenazi', async () => {
+  const store = memStore(); const root = new N('div'); const un = mount(root, ctxFor(store));
+  await waitFor(() => /Step 1 of/.test(root.textContent), { message: 'step 1 never rendered' });
+  const style = root.queryAll('p').find((p) => p.getAttribute('id') === 'fd-style');
+  assert.ok(style, 'style line present');
+  assert.match(style.textContent, /Reading style: Ashkenazi\./);
+  assert.equal(style.getAttribute('data-audio-support'), 'none');
+  assert.match(style.textContent, /No Ashkenazi audio yet/);
+  const hear = btns(root, /Hear it/)[0]; assert.ok(hear);
+  await hear.fire('click');
+  await waitFor(() => /browser voice/.test(root.queryAll('div').find((d) => d.getAttribute('id') === 'fd-status')?.textContent || ''), { message: 'no play line' });
+  assert.match(root.textContent, /It speaks Israeli Hebrew, not Ashkenazi/);
+  un?.();
+});

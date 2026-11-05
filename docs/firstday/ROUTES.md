@@ -17,3 +17,10 @@ Notes
 - Ladder (data/firstday/ladder.json, 20 steps) is tested in the model (`checkLadder`, `unpointedScore`) but has no view yet; a `/firstday/ladder` route should wait for a view.
 - Suggested first-run link: onboarding could send true beginners to `#/firstday`. Not wired.
 - All content is draft and proofread:false. The Day-1 claim (P001) is a target until the 5-learner test is run.
+
+## Tradition and sound on the first day
+
+The top of `#/firstday` names the reading style the screen follows (`Reading style: Sephardi.`) and what sound to expect with it,
+from `audioSupport()` (docs/accents/PLAN.md). The step respellings and vowel wording already follow the setting. "Hear it" reports
+its result with `playLine()`. A learner who chose "Start without sound" on the welcome screen gets no Hear buttons and no sound
+notes; every step still works by reading.

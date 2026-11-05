@@ -296,3 +296,20 @@ test('view, first screen goal: community and both still ask the pronunciation qu
     assert.equal(settings.get('congregation'), 'sephardi');
   }
 });
+
+test('view, stage 2: the sound line follows the picked pronunciation, and "Start without sound" turns audioFree on', async () => {
+  const { root, settings, ctx } = mk({ [M.STORE_KEY]: rec('none', null, { step: 'congregation' }) }, { congregation: 'israeli' });
+  mount(root, ctx); await ready(root);
+  const note = () => root.querySelector('#ob-sound-note');
+  assert.equal(note().getAttribute('data-audio-support'), 'device');
+  assert.match(note().textContent, /No recorded audio yet/);
+  await check(root, 'pron', 'ashkenazi');
+  // "Use my browser's voice anyway" is on by default: the line says the device voice will not sound Ashkenazi
+  assert.equal(note().getAttribute('data-audio-support'), 'device-mismatch');
+  assert.match(note().textContent, /No Ashkenazi audio yet.*Israeli Hebrew, so it will not sound Ashkenazi/);
+  assert.doesNotMatch(note().textContent, /recorded teacher clips? (is|are) ready|Ashkenazi voice/i);
+  const box = root.querySelector('#ob-silent'); box.checked = true; await box.fire('change');
+  assert.equal(settings.get('audioFree'), true);
+  assert.match(statusText(root), /Sound is off/);
+  assert.equal(note().getAttribute('data-audio-support'), 'off');
+});

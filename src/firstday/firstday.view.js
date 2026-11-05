@@ -14,7 +14,7 @@ import { loadFirst10, loadLadder, loadOnramp } from './loader.js';
 import { DRAFT_NOTICE, PROGRESS_KEY, advance, markRead, wordById, buildCheck, gradeCheck, audioEntries, playHook, totalMinutes } from './model.js';
 import { migrateProgress, winStep, recordAnswer, stepQuestions, stepIndex, onrampDone, totalMinutes as onrampMinutes } from './onramp.model.js';
 import { loadMemoryChain, entryFor, buildMemoryCard } from '../letters/memorycard.js';
-import { vowelSound, respell, congregationOf, audioNote, saySound, LABELS } from '../pronunciation/forTradition.js';
+import { vowelSound, respell, congregationOf, audioNote, saySound, playLine, audioSupport, LABELS } from '../pronunciation/forTradition.js';
 import { isAudioFree } from '../shell/audiofree.js';
 
 const PREVIEW_SOURCES = 'Hebrew copied from existing course data; nothing new.';
@@ -29,11 +29,15 @@ export function onrampAudioEntries(onramp) {
 export function mount(root, ctx) {
   const rng = ctx?.rng || Math.random;
   const tradition = congregationOf(ctx?.settings);
-  const wrap = el('section', { class: 'alef-firstday', 'aria-labelledby': 'view-title' });
+  const wrap = el('section', { class: 'alef-firstday', 'aria-labelledby': 'view-title', 'data-tradition': tradition });
   const h1 = el('h1', { id: 'view-title', tabindex: '-1' }, 'Your first 10 minutes');
   const body = el('div', { class: 'fd-body' });
   const status = el('div', { role: 'status', 'aria-live': 'polite', id: 'fd-status' });
-  wrap.append(h1, el('p', { class: 'fd-draft muted small', title: DRAFT_NOTICE }, SHORT_NOTICE), body, status);
+  // one line, before step 1: which reading style this screen follows and what sound to expect with it (no recorded clips exist yet)
+  const support = audioSupport(tradition, { browserVoiceAnyway: !!ctx?.settings?.get?.('browserVoiceAnyway'), audioFree: isAudioFree(ctx), recorded: ctx?.audio?.summary?.recorded || 0 });
+  const styleLine = el('p', { class: 'fd-style muted small', id: 'fd-style', 'data-audio-support': support.supported },
+    el('strong', {}, `Reading style: ${LABELS[tradition]}.`), ' ', support.line, ' ', el('a', { href: '#/settings' }, 'Change in Settings'));
+  wrap.append(h1, el('p', { class: 'fd-draft muted small', title: DRAFT_NOTICE }, SHORT_NOTICE), styleLine, body, status);
   root.append(wrap);
   let alive = true, data = null, onramp = null, content = null, lessonQs = [], lesson = null, nextLesson = null;
   let chain, memCard = null; // chain: undefined while loading (never blocks the step), null when unavailable, else the file
@@ -47,7 +51,7 @@ export function mount(root, ctx) {
   const hearNote = () => (isAudioFree(ctx) ? el('span', { hidden: '' }) : el('p', { class: 'muted small fd-audio-note' }, audioNote(tradition)));
   const listen = (hook, label = 'Hear it') => isAudioFree(ctx) ? el('span', { hidden: '' }) : el('button', { class: 'btn', type: 'button', onclick: async () => {
     const r = await playHook(ctx?.audio, hook);
-    say(r.source === 'none' ? 'Sound is not available on this device yet.' : r.source === 'tts-fallback' ? 'Played with the device voice (Israeli), not a recording.' : 'Playing.');
+    say(playLine(r, tradition, 'it')); // one shared, tradition-aware sentence (never presents the Israeli device voice as the learner's style)
   } }, label);
   const wantPreview = () => ctx?.query?.part === 'preview';
 

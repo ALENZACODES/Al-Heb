@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Inbox checker for external drafts. Report-only: it never edits, moves or deletes an inbox file.
 //   node tools/drafts/check_inbox.mjs [--inbox DIR] [--report FILE | --no-report] [--vocab FILE]
-//        [--urls FILE] [--max-words N] [--strict] [--max-bytes N] [--min-edge N] [--max-edge N]
+//        [--urls FILE] [--placeholders FILE] [--max-words N] [--strict] [--max-bytes N] [--min-edge N] [--max-edge N]
 // Exit 0 = no errors (warnings and unknown words do not fail; --strict also fails on '?? CHECK' flags),
 // exit 1 = at least one error, exit 2 = bad usage.
 // Passing is NOT proof of correct Hebrew: it checks code points, the app word list, names, links and file shape only.
@@ -10,7 +10,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { lintString, RULES, hasHebrew } from '../hebrew-lint/lint.mjs';
 import { pngChunks, PNG_KEEP } from '../meta/lib.mjs';
-import { TEXT_RE, PROVENANCE_RE } from '../meta/text.mjs';
+import { textHit } from '../meta/text.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '../..');
@@ -19,6 +19,7 @@ export const DEFAULTS = {
   report: path.join(root, 'docs/drafts/INBOX-REPORT.md'),
   vocab: path.join(root, 'data/vocab/words.json'),
   urls: path.join(here, 'url-allowlist.json'),
+  placeholders: null, // path to a placeholder-columns.json to turn the placeholder rule on; null = off
   maxWords: 8, maxBytes: 6 * 1024 * 1024, minEdge: 256, maxEdge: 4096,
 };
 
@@ -36,7 +37,18 @@ const HEB_TOKEN = /[\u05d0-\u05ea\u0591-\u05c7\u05f3\u05f4]+/g;
 const strip = (w) => w.normalize('NFC').replace(/[\u0591-\u05af\u05bd\u05c0\u05c3]/g, '');
 const unpoint = (w) => strip(w).replace(/[\u05b0-\u05c7]/g, '');
 export const hebTokens = (s) => (s.match(HEB_TOKEN) || []).filter((t) => /[\u05d0-\u05ea]/.test(t));
-const bannedName = (s) => TEXT_RE.test(s) || EXTRA_NAMES.test(s) || PROVENANCE_RE.test(s);
+// textHit = the exact pattern list `node tools/meta/scan.mjs --text` uses (TEXT_RE + PROVENANCE_RE), so the two cannot drift.
+const bannedName = (s) => textHit(s) || EXTRA_NAMES.test(s);
+// Windows source paths: a drive letter, a UNC share, or a user/profile folder. Matched on the decoded cell text.
+const WIN_PATH_RE = /\b[A-Za-z]:[\\/]|\\\\[\w.-]+\\[\w$.-]+|[\\/](?:Users|Documents and Settings|AppData)[\\/]/i;
+// A path segment named Codex is an error. The bare word is only a warning: scan.mjs leaves it out on purpose (Leningrad/Aleppo Codex).
+const CODEX_SEG_RE = /[\\/]Codex[\\/]/i;
+const CODEX_WORD_RE = /\bcodex\b/i;
+const pathHit = (s) => WIN_PATH_RE.test(s) || CODEX_SEG_RE.test(s);
+export function loadPlaceholders(file) {
+  const j = JSON.parse(fs.readFileSync(file, 'utf8'));
+  return { columns: new Set((j.columns || []).map((c) => String(c).trim().toLowerCase())), tokens: new Set(j.placeholders || ['PENDING-HUMAN', 'UNASSIGNED']) };
+}
 
 // ---------- vocab ----------
 export function loadVocab(file) {
@@ -84,7 +96,8 @@ function unitsOf(file, ext, text, issue) {
       if (r.cells.length !== head.length) issue('error', 'bad-format', `row ${r.line}${rid}`, `this row has ${r.cells.length} cells but the header row has ${head.length}; a comma inside a cell needs the cell wrapped in double quotes`);
       r.cells.forEach((c, i) => {
         const loc = `row ${r.line}${rid}, column ${head[i] || i + 1}`;
-        if (c.trim() === '') out.push({ loc, text: '', empty: true }); else out.push({ loc, text: c });
+        const col = (head[i] || '').toLowerCase();
+        if (c.trim() === '') out.push({ loc, text: '', empty: true, col }); else out.push({ loc, text: c, col, csv: true });
         if (i === idCol && c.trim()) ids.push({ id: c.trim(), loc: `row ${r.line}` });
       });
     });
@@ -112,6 +125,8 @@ export function checkInbox(opts = {}) {
   const o = { ...DEFAULTS, ...opts };
   const vocab = loadVocab(o.vocab);
   const allowHosts = new Set((JSON.parse(fs.readFileSync(o.urls, 'utf8')).hosts || []).map((h) => h.toLowerCase()));
+  const ph = o.placeholders ? loadPlaceholders(o.placeholders) : null;
+  let placeholders = 0;
   const findings = []; const files = []; const unknown = new Map(); const allIds = new Map();
   const rel = (f) => path.relative(o.inbox, f).split(path.sep).join('/');
 
@@ -131,6 +146,7 @@ export function checkInbox(opts = {}) {
     if (!dirLane) issue('error', 'misplaced', r, 'the file is not inside a folder named lane1 to lane6');
     if (!m) issue('error', 'file-name', base, 'the file name must look like lane2-18-greetings.csv: lane number, item number, short name, all lower case with hyphens');
     else if (dirLane && dirLane[1] !== m[1]) issue('error', 'file-name', base, `the name says lane ${m[1]} but the file is in the lane${dirLane[1]} folder; move it to the right folder`);
+    if (pathHit(base)) issue('error', 'windows-path', base, 'the file name contains a Windows path or a Codex path segment; rename it');
     if (bannedName(base)) issue('error', 'banned-name', base, 'the file name contains a tool, company or provenance word; rename it');
     const ext = path.extname(base).slice(1).toLowerCase();
     rec.kind = ext;
@@ -154,9 +170,15 @@ export function checkInbox(opts = {}) {
     for (const u of units) {
       if (u.empty) { if (ext !== 'md') issue('error', 'empty-cell', u.loc, 'this cell is empty'); continue; }
       const s = u.text; const toks = hasHebrew(s) ? hebTokens(s) : [];
+      if (ph && u.csv && ph.tokens.has(s.trim())) {
+        if (ph.columns.has(u.col)) { placeholders++; rec.placeholders = (rec.placeholders || 0) + 1; continue; }
+        issue('error', 'placeholder-column', u.loc, `${s.trim()} is only accepted in the columns listed in the placeholder allowlist; this column is not listed`); continue;
+      }
       let hot = false; // unit carries banned content: never echo it in the report
       const bad = (rule, detail) => { hot = true; issue('error', rule, u.loc, detail, ''); };
       if (bannedName(s)) bad('banned-name', 'wording that names a tool, company or says who made it');
+      if (pathHit(s)) bad('windows-path', 'a Windows source path (drive letter, user folder or Codex folder); remove the path');
+      else if (CODEX_WORD_RE.test(s) && !textHit(s)) issue('warn', 'codex-word', u.loc, 'the word Codex appears; fine for a manuscript name, wrong for a tool name', '');
       if (DIVINE_LATIN.test(s) || toks.some((t) => DIVINE_HEB.has(unpoint(t))) || /(^|\s)ה[׳'](?=\s|$|[.,;:!?)])/.test(s)) bad('divine-name', 'a divine name or its abbreviation');
       if (ATTRIBUTION.test(s)) bad('attribution-marker', 'an author, copyright or credit line');
       if (LYRIC_MARK.test(s)) bad('lyrics-marker', 'a music note or the word lyrics');
@@ -191,7 +213,7 @@ export function checkInbox(opts = {}) {
   const warnings = findings.filter((x) => x.sev === 'warn').length;
   const flags = findings.filter((x) => x.sev === 'flag').length;
   const unk = [...unknown.values()].sort((a, b) => b.count - a.count || a.word.localeCompare(b.word));
-  return { files, findings, unknown: unk, errors, warnings, flags, vocabCount: vocab.count, exit: errors || (o.strict && flags) ? 1 : 0 };
+  return { files, findings, placeholders, unknown: unk, errors, warnings, flags, vocabCount: vocab.count, exit: errors || (o.strict && flags) ? 1 : 0 };
 }
 
 function checkPng(f, o, issue) {
@@ -220,6 +242,9 @@ export function fixFor(rule) {
     'empty-cell': 'Ask the drafter to fill it in, or write "n/a" if nothing belongs there',
     'url-not-allowed': 'Remove the link, or ask for a source from the allowed list',
     'banned-name': 'Ask for a redo without that wording',
+    'windows-path': 'Ask for a redo with no file paths (give a repo-relative name or n/a)',
+    'placeholder-column': 'Put a real value here, or n/a, or ask for this column to be added to the placeholder allowlist',
+    'codex-word': 'Check it is a manuscript name, not a tool name',
     'divine-name': 'Ask for a redo without it',
     'attribution-marker': 'Ask for a redo without it',
     'lyrics-marker': 'Ask for a redo; no songs or lyrics',
@@ -241,7 +266,7 @@ export function renderReport(r, o = {}) {
   const L = ['# Inbox report', ''];
   L.push('Generated by `node tools/drafts/check_inbox.mjs`. It only reads the inbox; it changes nothing.', '');
   L.push('**Passing is NOT proof of correct Hebrew or safe content.** It checks code points, the app word list, names, links and file shape. Every draft still needs human review, and `?? CHECK` items need a native speaker.', '');
-  L.push(`Result: **${r.exit ? 'FAIL' : 'PASS'}** (${r.errors} error(s), ${r.warnings} warning(s), ${r.flags} '?? CHECK' flag(s), ${r.unknown.length} distinct unknown word(s)). Files checked: ${r.files.length}. App word list: ${r.vocabCount} entries.`, '');
+  L.push(`Result: **${r.exit ? 'FAIL' : 'PASS'}** (${r.errors} error(s), ${r.warnings} warning(s), ${r.flags} '?? CHECK' flag(s), ${r.unknown.length} distinct unknown word(s)${r.placeholders ? `, ${r.placeholders} accepted placeholder cell(s)` : ''}). Files checked: ${r.files.length}. App word list: ${r.vocabCount} entries.`, '');
   if (!r.files.length) L.push('The inbox holds no files.', '');
   const flagged = new Set(r.findings.filter((x) => x.sev === 'flag').map((x) => x.file));
   const verdict = (f) => (f.errors ? 'FIX FIRST' : flagged.has(f.file) ? 'needs native check' : f.warnings ? 'read warnings' : 'nothing mechanical found');
@@ -278,6 +303,7 @@ function main(argv) {
     else if (a === '--no-report') write = false;
     else if (a === '--vocab') o.vocab = path.resolve(val(i++));
     else if (a === '--urls') o.urls = path.resolve(val(i++));
+    else if (a === '--placeholders') o.placeholders = path.resolve(val(i++));
     else if (a === '--max-words') o.maxWords = +val(i++);
     else if (a === '--max-bytes') o.maxBytes = +val(i++);
     else if (a === '--min-edge') o.minEdge = +val(i++);
@@ -288,7 +314,7 @@ function main(argv) {
   const r = checkInbox(o);
   if (write) { fs.mkdirSync(path.dirname(o.report), { recursive: true }); fs.writeFileSync(o.report, renderReport(r, o)); }
   for (const x of r.findings.filter((x) => x.sev === 'error')) console.log(`ERROR ${x.file}, ${x.loc}: ${x.detail}. ${fixFor(x.rule)}.`);
-  console.log(`${r.files.length} file(s), ${r.errors} error(s), ${r.warnings} warning(s), ${r.flags} flag(s), ${r.unknown.length} unknown word(s)${write ? '; report ' + path.relative(process.cwd(), o.report) : ''}`);
+  console.log(`${r.files.length} file(s), ${r.errors} error(s), ${r.warnings} warning(s), ${r.flags} flag(s), ${r.unknown.length} unknown word(s)${r.placeholders ? ', ' + r.placeholders + ' placeholder cell(s)' : ''}${write ? '; report ' + path.relative(process.cwd(), o.report) : ''}`);
   process.exitCode = r.exit;
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main(process.argv.slice(2));

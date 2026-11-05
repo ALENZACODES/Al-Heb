@@ -58,9 +58,12 @@ export function mount(root, ctx) {
   const renderRest = (firstRun) => { const short = firstRun || calmOn(ctx); destHost.replaceChildren(...(short && !calmOn(ctx) ? [babyDests()] : [])); restHost.replaceChildren(...(short ? babyRest() : fullRest()).filter(Boolean)); };
   renderRest(true); // until the Today model says otherwise, show the short layout (never a flash of 60 tiles)
 
+  // Says the daily-goal choice out loud. It lives outside todayHost because the Today card is redrawn on every choice, and a live region that is
+  // replaced is not announced. It is empty until a goal button is pressed, and it claims nothing about saving (the store write is best effort).
+  const goalStatus = h('p', { id: 'today-goal-status', class: 'visually-hidden', role: 'status', 'aria-live': 'polite' });
   root.replaceChildren(h('div', { class: 'stack' },
     h('header', {}, h('h1', { id: 'view-title', tabindex: '-1' }, h('span', {}, t('app.name')), ' ', heSpan('אלף')), h('p', { class: 'muted' }, t('app.tagline'))),
-    destHost, todayHost, restHost));
+    destHost, todayHost, goalStatus, restHost));
 
   // Lane 1 data (fetch-based loaders; modules shared with the Learn screen). Best effort: a missing module leaves the placeholder.
   // The Today card only reads other modules' stores (curriculum progress, SRS cards, streak, firstday.progress, onboarding.v1, placement.v1).
@@ -79,7 +82,7 @@ export function mount(root, ctx) {
       firstday, onboarding, placement, hasRoute: ctx.hasRoute, daysAway: daysAway({ last: st.rawStreak?.last, cards: st.cards }), reviewedToday: reviewedToday(st.cards), dailyGoal: goalNow, speak, typing, compare,
       });
       renderRest(today.firstRun);
-      todayHost.replaceChildren(renderToday(today, t, (m) => { goalNow = m; try { store.set(DAILY_GOAL_KEY, m); } catch { /* best effort */ } draw(); const b = todayHost.querySelector(`[data-goal="${m}"]`); b?.focus?.(); }, { calm: calmOn(ctx), showStreak: streakVisible(ctx) }));
+      todayHost.replaceChildren(renderToday(today, t, (m) => { goalNow = m; try { store.set(DAILY_GOAL_KEY, m); } catch { /* best effort */ } const wasOpen = todayHost.querySelector('#today-goal-box')?.open === true; draw(); const box = todayHost.querySelector('#today-goal-box'); if (box && wasOpen) box.open = true; /* the redraw makes a new, closed <details>; a hidden button cannot take focus */ const b = todayHost.querySelector(`[data-goal="${m}"]`); b?.focus?.(); goalStatus.textContent = `Daily goal: ${m} minutes.`; }, { calm: calmOn(ctx), showStreak: streakVisible(ctx) }));
     };
     draw();
   })();

@@ -37,7 +37,7 @@ Preview, written 2026-11-04. This is a plain account of what the builders measur
 - The default border around cards and fields is only about 1.4 to 1 against the page, below the 3 to 1 target for field edges. The two high-contrast themes make the edges solid (docs/a11y/colourblind.md).
 - "I do not use audio" does not yet hide every optional play button (for example on the letter atlas, Torah reader, vocabulary and scan screens), and first-run setup does not ask about it; the written text is shown next to those buttons (docs/a11y/deaf-hoh.md).
 - Written descriptions of sounds are drafts that no Hebrew speaker has checked, and words cannot replace hearing a sound (docs/a11y/deaf-hoh.md).
-- Calm mode does not change Torah "read with me" (a highlight that moves on a timer once pressed), the letter-tracing layout or the letter atlas, which still show a lot at once. Pause and resume covers the lesson page and its quick check, not every practice screen (docs/a11y/COGNITIVE.md).
+- Calm mode removes the Torah "read with me" timer (Previous word and Next word stay, so you move the highlight by hand), but does not change the letter-tracing layout or the letter atlas, which still show a lot at once. Pause and resume covers the lesson page and its quick check, not every practice screen (docs/a11y/COGNITIVE.md).
 - Audio: no recorded voices ship yet. Sound comes from your browser's speech voice, which ALEF cannot control or caption. The "I do not use audio" setting swaps listening questions for reading ones.
 - This list can be incomplete. Read docs/A11Y.md and the other files in docs/a11y/ for the measured details.
 

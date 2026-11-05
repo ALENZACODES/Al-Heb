@@ -257,9 +257,10 @@ export function buildMemoryCard(o) {
   const svgBox = h('span', { class: 'mc-svg', 'aria-hidden': 'true' });
   const glyphEl = h('span', { class: 'mc-glyph', dir: 'rtl', lang: 'he', 'aria-hidden': 'true' }, glyph);
   const ideaEl = h('span', { class: 'mc-idea', 'aria-hidden': 'true' }, '');
+  const artName = t('mc.artLabel', entry.name + ': show the picture that helps you remember it');
   const art = h('button', {
     type: 'button', class: 'mc-art', 'data-act': 'mc-art', 'aria-pressed': false, 'data-state': 'a',
-    'aria-label': t('mc.artLabel', entry.name + ': show the picture that helps you remember it'),
+    'aria-label': artName,
     'aria-describedby': 'mc-sr-' + entry.id,
     onclick: () => { pressed = !pressed; if (pressed && stage < 1) { stage = 3; if (o.onStage) o.onStage(stage); } sync(); if (pressed) reveal(); }
   }, svgBox, glyphEl, ideaEl);
@@ -310,6 +311,8 @@ export function buildMemoryCard(o) {
     // without a picture file, the pressed state still shows the picture idea as words (honest fallback)
     glyphEl.textContent = svgReady ? '' : (pressed ? '' : glyph);
     ideaEl.textContent = !svgReady && pressed ? (pic.alt || pic.idea || '') : ''; // the shorter text fits the small button; the caption beside it has it in full
+    // WCAG 2.5.3: when no picture file loaded, the pressed button shows the picture idea as words; those visible words must be inside the accessible name
+    art.setAttribute('aria-label', artName + (ideaEl.textContent ? '. ' + ideaEl.textContent : ''));
     srEl.textContent = pressed ? pictureDescription(entry, tradition, svgDesc) : '';
     capEl.textContent = pressed ? t('mc.pic', 'Picture: ') + (pic.alt || pic.idea || '') : (o.compact ? '' : t('mc.cap', 'Press the letter to see what it turns into.'));
     nextHost.textContent = '';

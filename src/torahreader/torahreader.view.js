@@ -15,6 +15,7 @@ import { el, storeGet, storeSet } from '../curriculum/dom.js';
 import { transliterate } from '../pronunciation/transliterate.js';
 import { loadAll, loadJson } from './loader.js';
 import { uiEnglish } from '../shell/names.js';
+import { calmOn } from '../shell/comfort.js';
 import { playLine, LABELS as TRAD_LABELS } from '../pronunciation/forTradition.js';
 import {
   STORE_KEY, PASSAGE_IDS, SPEEDS, DEFAULT_STATE, normaliseState, speedMs, flatten, plainOf, spokenText, audioIndex,
@@ -23,6 +24,7 @@ import {
 
 export const NOTICE = 'Draft, not checked by a cantor, rabbi or Hebrew teacher. The Hebrew and the cantillation marks come from the Leningrad Codex (UXLC, tanach.us); a program read the marks, and this screen shows which mark sits on which word and what kind of mark it is. It does not teach melodies and plays no chanting.';
 export const LEGEND_NOTICE = 'This page names the marks and says whether each one pauses or joins. It does not describe or play any melody, because melodies are passed on by ear and differ between communities, and nobody qualified has reviewed this table. To learn to chant, work with a cantor or teacher from your own community.';
+export const CALM_NOTE = 'Calm mode is on, so the highlight does not move on its own and there is no timer. Use Next word and Previous word to step through the passage one word at a time.';
 export const PACE_NOTE = 'The highlight moves at the pace you pick. It is not synchronised with any audio or chanting.';
 const TRAD = { israeli: 1, sephardi: 1, ashkenazi: 1 };
 const PASSAGE_LABEL = { 'priestly-blessing': 'Priestly Blessing (Numbers 6:22-27)', shema: 'Shema and V’ahavta (Deuteronomy 6:4-9)' };
@@ -109,6 +111,7 @@ export function mount(root, ctx) {
   }
   function startRun() {
     stopTimer();
+    if (calmOn(ctx)) { say(CALM_NOTE); return; } // calm mode: no timers. The button is not drawn then; this guards any other caller.
     if (cur == null || cur >= items.length - 1) highlight(0);
     timer = clock.setInterval(tickOnce, speedMs(state.speed));
     say(`Reading with you at ${state.speed} pace, from word ${(cur ?? 0) + 1}. ${PACE_NOTE}`);
@@ -176,8 +179,9 @@ export function mount(root, ctx) {
     const switches = el('div', { class: 'trd-bar', role: 'group', 'aria-label': 'Show or hide' },
       toggle('Cantillation marks', 'showTrope', 'Cantillation marks shown.', 'Cantillation marks hidden.'),
       toggle('Vowel points', 'showNiqqud', 'Vowel points shown.', 'Vowel points hidden. Tap a word to see it pointed.'));
+    const calm = calmOn(ctx); // calm mode: no pace choice, no timer; the learner steps the highlight by hand
     const speeds = el('div', { class: 'trd-bar', role: 'group', 'aria-label': 'Pace for Read with me' });
-    for (const s of SPEEDS) {
+    for (const s of (calm ? [] : SPEEDS)) {
       speeds.append(el('button', {
         type: 'button', class: 'trd-speed', 'data-speed': s.id, 'aria-pressed': state.speed === s.id ? 'true' : 'false',
         onclick: () => { setState({ speed: s.id }); if (timer != null) { startRun(); } else say(`Pace set to ${s.id}, about ${(s.ms / 1000).toFixed(1)} seconds a word.`); render(); focusSel(`[data-speed="${s.id}"]`); },
@@ -190,8 +194,8 @@ export function mount(root, ctx) {
         onclick: () => { setState({ size: z.id }); say(`Hebrew text size: ${z.label.toLowerCase()}.`); render(); focusSel(`[data-size="${z.id}"]`); },
       }, `Text: ${z.label}`));
     }
-    runBtn = el('button', { type: 'button', class: 'trd-run', 'aria-pressed': 'false', onclick: () => (timer != null ? pauseRun() : startRun()) }, 'Read with me');
-    const stepBar = el('div', { class: 'trd-bar', role: 'group', 'aria-label': 'Read with me controls' },
+    runBtn = calm ? null : el('button', { type: 'button', class: 'trd-run', 'aria-pressed': 'false', onclick: () => (timer != null ? pauseRun() : startRun()) }, 'Read with me');
+    const stepBar = el('div', { class: 'trd-bar', role: 'group', 'aria-label': calm ? 'Step through the words' : 'Read with me controls' },
       el('button', { type: 'button', class: 'trd-prev', onclick: () => manualStep(-1) }, 'Previous word'),
       runBtn,
       el('button', { type: 'button', class: 'trd-next', onclick: () => manualStep(1) }, 'Next word'));
@@ -268,9 +272,9 @@ export function mount(root, ctx) {
     if (sel != null && sel < items.length) showDetail(sel);
     // Secondary controls sit in a closed details so the first verse is on the first screen of a phone.
     const ctl = el('details', { class: 'trd-ctl', open: ctlOpen ? '' : null, ontoggle: (e) => { ctlOpen = !!(e?.target?.open); } },
-      el('summary', {}, 'Marks, text size, Read with me, legend'),
+      el('summary', {}, calm ? 'Marks, text size, step through words, legend' : 'Marks, text size, Read with me, legend'),
       el('p', { class: 'trd-hint' }, 'Tap or press a word to see it with its vowel points and mark, its transliteration (', trad, ' tradition) and to hear it. The details open under that verse.'),
-      switches, sizes, speeds, stepBar, el('p', { class: 'trd-pace' }, PACE_NOTE), legendBtn());
+      switches, sizes, calm ? null : speeds, stepBar, el('p', { class: 'trd-pace' }, calm ? CALM_NOTE : PACE_NOTE), legendBtn());
     return [ctl, verses];
   }
 

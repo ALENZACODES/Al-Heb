@@ -43,10 +43,12 @@ for (const route of list) {
       for (const e of document.querySelectorAll('main a[href], main button, main [role=button], main [role=tab], main summary, main input, main [role=checkbox], main [role=radio], .site-nav a, .site-nav button')) {
         if (!e.getAttribute('aria-label') && !e.getAttribute('aria-labelledby')) continue;
         const r = e.getBoundingClientRect(); if (r.width === 0 && r.height === 0) continue;
-        let vis = e.matches('input') ? (e.labels?.[0]?.textContent || '') : (e.innerText || e.textContent || '');
+        // <title>, <desc> and <style> inside an inline SVG are never painted, so they are not visible words (the memory-picture buttons carry them)
+        const paintedText = (el) => { const c = el.cloneNode(true); c.querySelectorAll('svg title, svg desc, svg style, style, script').forEach((n) => n.remove()); return (c.innerText ?? '') || c.textContent || ''; };
+        let vis = e.matches('input') ? (e.labels?.[0]?.textContent || '') : paintedText(e);
         vis = norm(vis); if (!vis) continue; // icon only or Hebrew only: nothing to speak
         const nm = norm(nameOf(e));
-        if (!(' ' + nm + ' ').includes(' ' + vis + ' ')) out.push({ tag: e.tagName.toLowerCase(), visible: (e.innerText || e.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 50), name: nameOf(e).slice(0, 80) });
+        if (!(' ' + nm + ' ').includes(' ' + vis + ' ')) out.push({ tag: e.tagName.toLowerCase(), visible: paintedText(e).trim().replace(/\s+/g, ' ').slice(0, 50), name: nameOf(e).slice(0, 80) });
       }
       return out;
     });

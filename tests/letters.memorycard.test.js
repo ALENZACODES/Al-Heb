@@ -215,3 +215,19 @@ test('memory card: "Same sound:" prefix is not shown; hideSoundLine drops the li
   const d = M.buildMemoryCard({ entry: e, glyph: 'ב', tradition: 'sephardi', hideSoundLine: true, svg: M.sanitizeSvg(SVG) }); await act(d.el, 'mc-art').click();
   assert.doesNotMatch(body(d.el), /dagesh/);
 });
+
+// WCAG 2.5.3 (label in name): the picture button's visible words, when there are any, are inside its accessible name.
+test('memory card: picture button name keeps its base wording, and includes the visible picture idea when no picture file loaded', async () => {
+  const base = M.buildMemoryCard({ entry: { ...fixture.letters[1], picture: { idea: 'a house', alt: 'A small house' } }, glyph: 'ב' });
+  const art = act(base.el, 'mc-art');
+  const before = art.attrs['aria-label'];
+  assert.match(before, /show the picture that helps you remember it$/);
+  await art.click();
+  assert.ok(art.text.includes('A small house'));
+  assert.ok(art.attrs['aria-label'].startsWith(before) && art.attrs['aria-label'].includes('A small house'), art.attrs['aria-label']);
+  await art.click();
+  assert.equal(art.attrs['aria-label'], before, 'back to the base name when the words are gone');
+  const withSvg = M.buildMemoryCard({ entry: fixture.letters[2], glyph: 'ש', svg: M.sanitizeSvg(SVG) });
+  const a2 = act(withSvg.el, 'mc-art'); await a2.click();
+  assert.doesNotMatch(a2.attrs['aria-label'], /\. /, 'with the drawn picture there are no visible words, so the name stays as it was');
+});

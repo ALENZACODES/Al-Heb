@@ -11,7 +11,7 @@ import { buildWordCards, loadTransliterator, loadLetterInfo, TRADITIONS } from '
 import { isLocalHelperUrl } from './engines/local-server.js';
 
 export const ACCURACY_NOTICE = 'Accuracy notice: this reader has only been tested on 145 computer-generated images (about 88% of letters right there). It has not been measured on real photos, so expect mistakes, especially with vowel points, curved pages, glare or small print. Treat the result as a study aid, check it against the page, and do not rely on it for anything important (medical, legal, kashrut, prayer text for a ritual).';
-export const NO_TRANSLATION_NOTICE = 'Translation unavailable offline. This app has no built-in Hebrew-to-English translator (the available model is about 132 MB and does not run in a browser). Prayer lines that match the built-in texts show the stored translation; everything else shows no English. Nothing was sent anywhere to try.';
+export const NO_TRANSLATION_NOTICE = 'This app has no built-in Hebrew-to-English translator. Prayer lines that match the built-in texts show the stored translation; everything else shows no English. Nothing was sent anywhere to try.';
 const ROW = 'display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-start';
 const BTN = 'display:inline-flex;flex-direction:column;align-items:center;min-width:3.4em;padding:4px 6px;font-size:1.1em';
 export const TRADITION_LABEL = { israeli: 'Israeli', sephardi: 'Sephardi', ashkenazi: 'Ashkenazi' };

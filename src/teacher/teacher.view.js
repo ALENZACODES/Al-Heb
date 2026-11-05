@@ -75,7 +75,7 @@ export function mount(root, ctx = {}) {
     main.replaceChildren(draft,
       h('section', { class: 'card tc-consent', 'aria-labelledby': 'tc-h-consent', role: 'note' },
         h('h2', { id: 'tc-h-consent' }, 'Before you share'),
-        h('p', {}, 'You are sharing a short summary: lessons you finished, letters and vowel signs you know, the look-alike pairs and signs you miss most, your class-track week, any timed read results, and today\'s date. It has no email, no account and no recordings.'),
+        h('p', {}, 'You are sharing a short summary: lessons you finished, letters and vowel signs you practised, the look-alike pairs and signs you miss most, your class-track week, any timed read results, and today\'s date. It has no email, no account and no recordings.'),
         h('p', {}, 'Nothing leaves your device until you send it yourself, by pasting the code into a message or attaching the file. ALEF never uploads it.')),
       h('div', {}, h('label', { for: 'tc-name' }, 'Your name for your teacher (optional)'), name),
       h('button', { type: 'button', class: 'btn', onclick: make }, 'Export my summary'),

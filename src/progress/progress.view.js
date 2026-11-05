@@ -108,7 +108,7 @@ export async function mount(root, ctx) {
     // 1. what can I read now: one summary over every lane (letters, lines, vocabulary, timed reads, siddur, first day)
     const HREF_ROUTE = { '#/learn': 'learn', '#/read': 'read', '#/vocab': 'vocab', '#/timedread': 'timedread', '#/service': 'service', '#/firstday': 'firstday', '#/firstday/ladder': 'firstday-ladder' };
     const nowRows = readNowSummary(s, d, c);
-    sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-now' }, h('h2', { id: 'pg-h-now' }, 'What can I read now?'),
+    sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-now' }, h('h2', { id: 'pg-h-now' }, 'What have I practised?'),
       h('p', { class: 'small muted' }, 'One view across the app. "Taught" rows come from lessons and tracing; "self-reported" rows are what you told the app about your own reading. None of it is a fluency score.'),
       h('ul', { class: 'pg-now' }, ...nowRows.map((row) => h('li', { 'data-now': row.id },
         h('span', {}, row.label, row.measured === 'self' ? h('span', { class: 'pg-self' }, 'self-reported') : null),
@@ -117,22 +117,22 @@ export async function mount(root, ctx) {
 
     // 2. lines and words in detail (the hook)
     const r = c.read, cnt = lessonCounts(s, d.lessons);
-    const readSec = h('section', { class: 'card', 'aria-labelledby': 'pg-h-read' }, h('h2', { id: 'pg-h-read' }, 'Lines and words you can sound out'));
+    const readSec = h('section', { class: 'card', 'aria-labelledby': 'pg-h-read' }, h('h2', { id: 'pg-h-read' }, 'Lines and words using signs you have practised'));
     if (c.know.letters.size === 0) {
-      readSec.append(h('p', {}, 'Finish your first lesson and this panel will list the prayer lines and words you can already sound out.'), h('a', { class: 'btn', href: '#/learn' }, 'Start a lesson'));
+      readSec.append(h('p', {}, 'Finish your first lesson and this panel will list prayer lines and words using signs from that lesson.'), h('a', { class: 'btn', href: '#/learn' }, 'Start a lesson'));
     } else {
       const totalLines = r.lines.length;
       readSec.append(h('p', { class: 'pg-big' }, `${plural(r.linesFull.length, 'line', 'lines')} of ${totalLines} prayer and Torah lines, and ${plural(r.words.full.length.toLocaleString('en-US'), 'word', 'words')}, use only signs you have met.`),
-        h('p', { class: 'small muted' }, `Based on ${c.know.letters.size} of ${ALL_LETTERS.length} letters (from completed lessons and finished tracing) and ${c.know.signs.size} of ${ALL_SIGNS.length} signs (from completed lessons). This says you know the signs, not that you read the line fluently.`));
+        h('p', { class: 'small muted' }, `Based on ${c.know.letters.size} of ${ALL_LETTERS.length} letters (from completed lessons and finished tracing) and ${c.know.signs.size} of ${ALL_SIGNS.length} signs (from completed lessons). This records practice activity; it does not assess recognition or fluent reading.`));
       const pick = (arr, n) => arr.filter((l) => l.words >= 2).sort((a, b) => a.words - b.words || a.id.localeCompare(b.id)).slice(0, n);
       const lineHref = (l) => `#/read/${encodeURIComponent(l.entryId)}${l.n > 1 ? `?line=${l.n}` : ''}`;
       const full = pick(r.linesFull, 4);
-      if (full.length) readSec.append(h('h3', {}, 'Ready to read'), h('ul', {}, ...full.map((l) => h('li', {}, heSpan(l.he, 'he pg-he'), h('span', { class: 'small muted' }, `${l.title}${l.n > 1 ? `, line ${l.n}` : ''} `), h('a', { href: lineHref(l) }, 'Read it')))));
+      if (full.length) readSec.append(h('h3', {}, 'Try reading'), h('ul', {}, ...full.map((l) => h('li', {}, heSpan(l.he, 'he pg-he'), h('span', { class: 'small muted' }, `${l.title}${l.n > 1 ? `, line ${l.n}` : ''} `), h('a', { href: lineHref(l) }, 'Read it')))));
       const almost = pick(r.linesAlmost, 3);
       if (almost.length) readSec.append(h('h3', {}, 'Almost: one sign away'), h('ul', {}, ...almost.map((l) => { const les = teacherLesson(l.missing[0], d.lessons, d.gates.nameLesson); return h('li', {}, heSpan(l.he, 'he pg-he'), h('span', { class: 'small' }, `${l.title}: needs ${l.missing[0] === '@name' ? 'the Name (read as Adonai)' : niceId(l.missing[0])}. `), les ? h('a', { href: `#/learn?lesson=${les}` }, `Learn it in lesson ${les}`) : null); })));
       if (r.unlockers.length) { const u = r.unlockers[0]; readSec.append(h('p', {}, `Next best sign to learn: ${u.id === '@name' ? 'the Name' : niceId(u.id)}. It opens ${plural(u.lines, 'more line', 'more lines')}.`)); }
       if (r.words.full.length) {
-        readSec.append(h('h3', {}, 'Words you can sound out'), h('ul', { class: 'pg-chips', 'aria-label': 'Sample readable words' }, ...r.words.full.slice(0, 12).map((w) => h('li', {}, heSpan(w.he)))));
+        readSec.append(h('h3', {}, 'Words to practise'), h('ul', { class: 'pg-chips', 'aria-label': 'Sample words using practised signs' }, ...r.words.full.slice(0, 12).map((w) => h('li', {}, heSpan(w.he)))));
         if (r.words.almost.length) readSec.append(h('p', { class: 'small muted' }, `${plural(r.words.almost.length, 'more word', 'more words')} ${r.words.almost.length === 1 ? 'is' : 'are'} one sign away.`));
       }
       if (goals.includes('israel') || goalSetting === 'both') readSec.append(h('p', { class: 'small' }, `Phrasebook: ${r.phraseFull.length} of ${r.phraseTotal} phrases readable now, ${r.phraseAlmost.length} one sign away.`));
@@ -140,8 +140,8 @@ export async function mount(root, ctx) {
     }
     const sc = siddurCoverage(s, d, c);
     if (sc) readSec.append(h('p', { class: 'pg-siddur', 'data-pct': String(sc.pct), 'data-order': sc.orderId },
-      `Siddur coverage: ${sc.pct}% of the phrases in ${sc.title} you can read`, ' ', h('a', { href: '#/service' }, 'See the service')),
-      h('p', { class: 'small muted' }, `${sc.full} of the ${sc.lines} lines ALEF holds for ${sc.title.toLowerCase()} use only letters and signs you have been taught. That says you can sound them out, not that you read them fluently; ${plural(sc.gaps, 'part', 'parts')} of a typical service ${sc.gaps === 1 ? 'is' : 'are'} not in ALEF yet.`));
+      `Siddur coverage: ${sc.pct}% of the phrases in ${sc.title} use signs you have practised`, ' ', h('a', { href: '#/service' }, 'See the service')),
+      h('p', { class: 'small muted' }, `${sc.full} of the ${sc.lines} lines ALEF holds for ${sc.title.toLowerCase()} use only letters and signs from your completed activities. This is content coverage, not a reading assessment; ${plural(sc.gaps, 'part', 'parts')} of a typical service ${sc.gaps === 1 ? 'is' : 'are'} not in ALEF yet.`));
     sections.push(readSec);
 
     // 2. today, then this week

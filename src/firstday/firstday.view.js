@@ -79,7 +79,8 @@ export function mount(root, ctx) {
     const post = [hearNote()]; // below the check, so the check and Next stay within one scroll of the step start
     // memory hooks and explanations stay behind "Why?"
     const why = [];
-    if (M) why.push(el('p', {}, M.shape), el('p', {}, M.story), el('p', { class: 'muted small' }, 'A memory hook written for this course: a teaching aid, not history.'));
+    // the chain is the one story for a letter that has an entry; the old story prints only once the chain is known to lack it (upgradeCard adds it if the file arrives later without the letter)
+    if (M) why.push(el('p', {}, M.shape), !me && chain !== undefined ? el('p', { 'data-old-story': '1' }, M.story) : null, el('p', { class: 'muted small' }, 'A memory hook written for this course: a teaching aid, not history.'));
     if (V) why.push(el('p', {}, V.position ? `Where it sits: ${V.position}.` : ''), el('p', {}, V.notes || ''));
     if (s.kind === 'syllable') why.push(el('p', {}, 'Hebrew reads right to left. The vowel mark sits under its letter. Read the letter and its mark together as one sound.'));
     if (s.kind === 'word') why.push(el('p', {}, 'Bet with no dot inside is the soft sound (v). The dot that makes it b is the next lesson.'), el('p', { class: 'muted small' }, `The vowel marks and the English meaning are draft course data. The English-letter spelling of the sound was made by rules for ${LABELS[tradition]} style.`));
@@ -193,7 +194,11 @@ export function mount(root, ctx) {
     if (typeof slot.replaceWith !== 'function' || typeof slot.after !== 'function') { renderStep(); return; } // minimal DOMs: renderStep keeps the quiz position
     const me = entryFor(chain, s.letter);
     if (me) { memCard = buildMemoryCard({ entry: me, glyph: content?.letters?.get(s.letter)?.he || '', tradition, audio: ctx?.audio, compact: true, hideSoundLine: true }); slot.replaceWith(memCard.el); }
-    else if (chain === null) slot.after(el('p', { class: 'mc-fallback muted small', role: 'status', 'data-memory-fallback': '1' }, 'Picture and word hint unavailable offline'));
+    else {
+      if (chain === null) slot.after(el('p', { class: 'mc-fallback muted small', role: 'status', 'data-memory-fallback': '1' }, 'Picture and word hint unavailable offline'));
+      const M = content?.mnemonics?.get(s.letter), shape = body.querySelector('.fd-why p'); // no chain entry: the old story stays, as before
+      if (M?.story && shape && !body.querySelector('[data-old-story]')) shape.after(el('p', { 'data-old-story': '1' }, M.story));
+    }
   }
 
   (async () => {

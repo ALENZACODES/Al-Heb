@@ -89,11 +89,15 @@ export function mountLesson(root, ctx, lessonId) {
     const hooks = lesson.letters.map((id) => c.mnemonics?.get(id)).filter(Boolean);
     if (hooks.length) parts.push(el("details", { class: "card alef-why" }, el("summary", {}, el("strong", {}, "Why? Remember it: memory hooks")),
       el("p", { class: "muted" }, plain("hooksNote")),
-      el("ul", { class: "alef-items" }, ...hooks.map((m) => el("li", { class: "alef-item alef-hook" },
-        el("div", { class: "alef-item-body" }, el("strong", {}, m.name),
-          el("p", {}, m.shape), el("p", {}, m.story),
-          el("p", {}, saySound(c.consonants?.get(m.id), congregation, { fallbackEn: m.sound }), " Anchor word: ", heText(m.word, "alef-he alef-word"), ` (${m.wordSound}, "${m.wordMeaning}")`),
-          m.lookalike ? el("p", { class: "muted" }, "Watch out: " + m.lookalike) : null))))));
+      el("ul", { class: "alef-items" }, ...hooks.map((m) => {
+        // the memory chain is the one story and word for a letter that has an entry (the hook line above and the card say it); keep shape, sound and look-alike only
+        const chained = !!c.chain?.get?.(m.id);
+        return el("li", { class: "alef-item alef-hook" },
+          el("div", { class: "alef-item-body" }, el("strong", {}, m.name),
+            el("p", {}, m.shape), chained ? null : el("p", {}, m.story),
+            el("p", {}, saySound(c.consonants?.get(m.id), congregation, { fallbackEn: m.sound }), chained ? null : [" Anchor word: ", heText(m.word, "alef-he alef-word"), ` (${m.wordSound}, "${m.wordMeaning}")`]),
+            m.lookalike ? el("p", { class: "muted" }, "Watch out: " + m.lookalike) : null));
+      }))));
     if (lesson.letters.length) parts.push(el("details", { class: "alef-spotit" }, el("summary", { class: "muted" }, "Optional: Spot It drills"), el("p", { class: "row" }, ...lesson.letters.map((id) =>
       el("a", { class: "btn secondary", href: `#/learn?spotit=${id}` }, `Spot It: ${c.letters.get(id)?.name || id}`)))));
     if (lesson.vowels.length) parts.push(section("l-vowels", "Vowels and marks", el("ul", { class: "alef-items" },

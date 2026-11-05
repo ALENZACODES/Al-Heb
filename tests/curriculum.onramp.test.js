@@ -190,7 +190,7 @@ test("dialogues: original, pointed, with transliteration and English, tied to re
 // ---------- views
 test("lesson page has a 'Remember it' step from mnemonics.json and Spot It links", async () => {
   const root = new Node_("div"); const un = mount(root, ctxFor(memStore(), { lesson: "r01" })); await until(root, /Spot It: Shin/);
-  assert.match(root.text, /Remember it/); assert.match(root.text, /Anchor word/); assert.match(root.text, /Spot It: Shin/);
+  assert.match(root.text, /Remember it/); assert.match(root.text, /Spot It: Shin/); // the anchor word is not printed where the memory chain has an entry (see lesson.firstday.chain-gate.test.js)
   assert.doesNotMatch(root.text, /null|undefined/);
   un();
 });

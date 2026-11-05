@@ -177,3 +177,8 @@ main > section.card[aria-labelledby] .alef-item { row-gap: .1rem; }
 .alef-mem-miss { outline: 2px dashed currentColor; outline-offset: 1px; }
 .alef-mem-fb { display: grid; gap: .4rem; inline-size: 100%; text-align: start; }
 .alef-mem-actions { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; }
+
+/* Journey QA with clips: a prayer line is one long Hebrew line; the old two-column row gave that line its full width and squeezed the
+   title and the Listen / Read buttons to 0 to 9 px (past the card edge) at 360 to 412 px. One column keeps everything inside the card. */
+.alef-item.alef-line { grid-template-columns: minmax(0, 1fr); }
+.alef-item.alef-line > .alef-item-actions { grid-column: 1; }

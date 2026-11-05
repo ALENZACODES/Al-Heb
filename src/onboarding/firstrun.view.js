@@ -48,7 +48,7 @@ export function mount(root, ctx) {
   // Sound, said before the first lesson: what this pronunciation gets (no recorded clips exist yet) and a way to start silent.
   const supportOf = (pron) => audioSupport(pron, { browserVoiceAnyway: !!settings.get('browserVoiceAnyway'), audioFree: isAudioFree(ctx), recorded: ctx?.audio?.summary?.recorded || 0 });
   const soundNote = (pron) => h('p', { class: 'muted ob-sound', id: 'ob-sound-note', role: 'note', 'data-audio-support': supportOf(pron).supported }, supportOf(pron).line);
-  const silentToggle = (onchange) => h('label', { class: 'opt', for: 'ob-silent' },
+  const silentToggle = (onchange) => h('label', { class: 'opt opt-block', for: 'ob-silent' },
     h('input', { type: 'checkbox', id: 'ob-silent', checked: isAudioFree(ctx) ? true : null, onchange: (e) => {
       const on = !!e.target.checked;
       try { settings.set({ audioFree: on }); } catch { /* best effort */ }

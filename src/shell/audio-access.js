@@ -73,7 +73,19 @@ export function audioButton(h, ctx, o) {
         if (r && r.source === 'none') note.textContent = `${NO_AUDIO}${respelling ? `. Say it as written: ${respelling}` : ''}`;
       } catch { note.textContent = NO_AUDIO; }
     } }, h('span', { 'aria-hidden': 'true' }, '▶'), ' ', label);
-  return h('span', { class: 'audio-wrap' }, btn, ' ', note);
+  const wrap = h('span', { class: 'audio-wrap' }, btn, ' ', note);
+  // The first answer can be "checking audio..." (the clip list loads the first time something asks). The shell re-renders a route once for
+  // that, but not in the middle of an exercise (word tracing), so the button used to stay on "Checking audio..." until it was pressed.
+  if (a.checking && ctx && ctx.audio && typeof ctx.audio.ensureManifest === 'function') {
+    Promise.resolve(ctx.audio.ensureManifest()).then(() => {
+      const now = audioAccess(ctx.audio, kind, id, opt);
+      if (now.checking) return;
+      if (now.level === 'none') { wrap.replaceWith(h('span', { class: o.noneClass || 'audio-none muted', 'data-audio-state': 'none' }, NO_AUDIO, respelling ? ` - say it as written: ${respelling}` : '')); return; }
+      btn.setAttribute('data-audio-state', now.level); btn.setAttribute('aria-label', `${label}${o.name ? `: ${o.name}` : ''} (${now.label})`);
+      if (!o.note) note.textContent = now.label;
+    }).catch(() => {});
+  }
+  return wrap;
 }
 
 /** Pure: text for the full notice (the one-line banner links to it; it is also the link's title). */

@@ -1,5 +1,6 @@
 import { el, tr } from "./dom.js";
 import { audioAccess, NO_AUDIO } from "../shell/audio-access.js";
+import { isSyntheticStatus, fileLabel } from "../shell/audio-labels.js";
 import { REASONS } from "../shell/audio.js";
 import { isAudioFree } from "../shell/audiofree.js";
 
@@ -9,7 +10,7 @@ export function reasonText(code) { return REASONS[code] || code || "unavailable"
 /** Describe a play() result for display, honestly (recorded file vs browser voice vs nothing). */
 export function describePlay(r) {
   if (!r) return "";
-  if (r.source === "file") return "Playing a recorded file.";
+  if (r.source === "file") return isSyntheticStatus(r.entryStatus) ? `Playing a computer-made clip, not a recording: ${fileLabel(r.entryStatus, r.fileTradition || r.tradition, r.entrySource)}.` : "Playing a recorded file.";
   if (r.source === "tts-fallback" || r.played === true) return "Device voice, not a recorded teacher; Israeli-style only.";
   return `No sound: ${reasonText(r.reason || r.error)}.`;
 }

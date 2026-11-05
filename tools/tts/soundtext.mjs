@@ -77,6 +77,7 @@ export const FLAG_INFO = {
   'kamatz-katan-list': { hard: false, reason: 'Kamatz katan is recognised only from a four-word list, unverified.' },
   'vav-dagesh-consonantal': { hard: false, reason: 'A vav with dagesh inside the word was read as a consonant.' },
   'alef-vav-mater-repaired': { hard: false, reason: 'A vav after a silent alef was re-read as a vowel letter.' },
+  'words-ipa-colloquial-shva-drop': { hard: false, reason: 'The repo\'s own Israeli IPA for this word drops a shva that the careful reading keeps; the respelling keeps it.' },
   'maqaf-compound': { hard: false, reason: 'Words joined by a hyphen/maqaf: only the last part carries the stress mark.' },
   'template-ellipsis': { hard: false, reason: 'A phrase template with "..." (an open slot), not a full utterance.' },
   'shva-heuristic-L3': { hard: true, reason: 'A shva after a long vowel is classed vocal by assuming final stress (an unsourced shortcut).' },
@@ -86,7 +87,8 @@ export const FLAG_INFO = {
   'he-patach-no-mappiq': { hard: true, reason: 'Final he with patach and no mappiq was read as a pronounced h with a furtive patach.' },
   'shin-undotted': { hard: true, reason: 'A shin without a dot was read as sh.' },
   'non-hebrew-token': { hard: true, reason: 'A token with Latin letters or digits was found; it is dropped, not respelled.' },
-  'unpointed': { hard: false, reason: 'A word has no niqqud: not respelled (refusing to guess vowels).' },
+  'aramaic': { hard: true, reason: 'Aramaic text (Kaddish, Brich Shmei): the Hebrew rules were applied mechanically. Added by the builder from data/corpus/registry.json, not by soundText().' },
+  'unpointed': { hard: false, reason: 'A word has no vowel signs (niqqud): not respelled, because the vowels would be a guess. Marked unvoiced.' },
   'no-vowel-derived': { hard: false, reason: 'The text carries no vowel that can be spoken (an isolated dagesh, shin dot or silent shva).' },
 };
 
@@ -150,9 +152,14 @@ function hasVocalShvaSyllable(he) {
  * One Hebrew word (no spaces or maqaf).
  * @returns {{ok:boolean, flags:string[], syllables:string[], stressIndex:number, text:string, he:string, stressRule:string}}
  */
-function wordSound(core, tradition, lang, opts, isChainTail) {
+function wordSound(core, tradition, lang, opts, noAccent) {
   const r = renderWord(core, ctx());
   const flags = new Set(r.flags);
+  // renderWord computes some flags for every tradition at once; keep only those that apply to this one
+  flags.delete('words-ipa-syllable-count-differs'); // concerns only which stress source could be used
+  if (tradition !== 'israeli') flags.delete('words-ipa-colloquial-shva-drop'); // the stored colloquial IPA is Israeli
+  if (tradition !== 'ashkenazi') flags.delete('ashk-final-kamatz-reduced');
+  if (tradition === 'ashkenazi') flags.delete('possible-segolate');
   if (flags.has('unpointed')) return { ok: false, flags: ['unpointed'], syllables: [], stressIndex: -1, text: '', he: core, stressRule: '' };
   const v = r.variants[tradition];
   let ipa = v.ipa;
@@ -188,7 +195,7 @@ function wordSound(core, tradition, lang, opts, isChainTail) {
 
   let stressIndex = sylls.findIndex((s) => s.stressed);
   if (stressIndex < 0) stressIndex = sylls.length - 1;
-  const out = sylls.map((s, i) => respellSyllable(s.ipa, lang, i === stressIndex && !isChainTail).text);
+  const out = sylls.map((s, i) => respellSyllable(s.ipa, lang, i === stressIndex && !noAccent).text);
   return { ok: true, flags: [...flags], syllables: out, stressIndex, text: out.join('-'), he: r.he, stressRule: rule };
 }
 

@@ -11,6 +11,9 @@ import { tokenise, isHebrew } from './hebrew.js';
 
 export const TRADITIONS = ['israeli', 'sephardi', 'ashkenazi'];
 
+/** Shown on every card that has a generated reading: the syllables, stress and transliteration are rule output, not checked facts. */
+export const DRAFT_READING_NOTE = 'This reading is a draft guess made by spelling rules. Stress and vocal shvas may be wrong, and no native speaker has checked it.';
+
 /** Load lane 3's transliterate (or null if unavailable). Browser or Node. */
 export async function loadTransliterator() {
   try { const m = await import('../pronunciation/transliterate.js'); return typeof m.transliterate === 'function' ? m.transliterate : null; } catch { return null; }
@@ -77,6 +80,8 @@ export function buildWordCards(result, { transliterate, letterInfo, registry } =
       const audioId = hasSyl ? wordAudioId(line.match, registry, tokenIndex) : null;
       cards.push({
         lineIndex: line.index, he: w.he, note: w.note || null, ipa: w.ipa || null,
+        confidence: hasSyl ? (w.confidence ?? { level: 'draft', reasons: [], checked: false }) : null,
+        draftNote: hasSyl ? DRAFT_READING_NOTE : null,
         pointedSource: line.pointedSource,
         letters,
         syllables: w.syllables.map((s) => ({ he: s.he, translit: s.translit ?? '', stressed: !!s.stressed })),

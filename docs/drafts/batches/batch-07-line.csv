@@ -1,0 +1,91 @@
+id,kind,group,he
+shop-02,line,phrasebook,מָה הַמְּחִיר?
+shop-03,line,phrasebook,זֶה יָקָר
+shop-04,line,phrasebook,זֶה זוֹל
+shop-05,line,phrasebook,יֵשׁ הַנָּחָה?
+shop-06-m,line,phrasebook,אֲנִי רַק מִסְתַּכֵּל
+shop-06-f,line,phrasebook,אֲנִי רַק מִסְתַּכֶּלֶת
+shop-07,line,phrasebook,אֶקַּח אֶת זֶה
+shop-08,line,phrasebook,יֵשׁ לָכֶם ...?
+shop-09,line,phrasebook,אֶפְשָׁר לִמְדֹּד?
+shop-10,line,phrasebook,מָה הַמִּדָּה?
+shop-11,line,phrasebook,יֵשׁ מִדָּה גְּדוֹלָה יוֹתֵר?
+shop-13,line,phrasebook,כַּרְטִיס אַשְׁרַאי
+shop-14,line,phrasebook,אֶפְשָׁר קַבָּלָה?
+shop-15,line,phrasebook,אֶפְשָׁר שַׂקִּית?
+shop-18,line,phrasebook,מָתַי אַתֶּם סוֹגְרִים?
+shop-20,line,phrasebook,אֵיפֹה הַשֵּׁרוּתִים?
+taxi-01-m,line,phrasebook,אֲנִי צָרִיךְ מוֹנִית
+taxi-01-f,line,phrasebook,אֲנִי צְרִיכָה מוֹנִית
+taxi-03,line,phrasebook,"לִשְׂדֵה הַתְּעוּפָה, בְּבַקָּשָׁה"
+taxi-04,line,phrasebook,לַתַּחֲנָה הַמֶּרְכָּזִית
+taxi-07,line,phrasebook,"אֶפְשָׁר מוֹנֶה, בְּבַקָּשָׁה?"
+taxi-08,line,phrasebook,כַּמָּה זֶה יַעֲלֶה?
+taxi-09-m,line,phrasebook,"עֲצֹר כָּאן, בְּבַקָּשָׁה"
+taxi-09-f,line,phrasebook,"עִצְרִי כָּאן, בְּבַקָּשָׁה"
+taxi-10,line,phrasebook,אֵיפֹה תַּחֲנַת הָאוֹטוֹבּוּס?
+taxi-11,line,phrasebook,אֵיזֶה אוֹטוֹבּוּס הוֹלֵךְ לְ...?
+taxi-12,line,phrasebook,מָתַי הָרַכֶּבֶת הַבָּאָה?
+taxi-13,line,phrasebook,"כַּרְטִיס אֶחָד לְ..., בְּבַקָּשָׁה"
+taxi-14,line,phrasebook,הַאִם זֶה הָאוֹטוֹבּוּס לְ...?
+taxi-15,line,phrasebook,"הַנְּסִיעָה הָיְתָה נָעִימָה, תּוֹדָה"
+directions-01,line,phrasebook,אֵיפֹה ...?
+directions-02,line,phrasebook,אֵיךְ מַגִּיעִים לְ...?
+directions-03,line,phrasebook,זֶה רָחוֹק?
+directions-04,line,phrasebook,זֶה קָרוֹב
+directions-08-m,line,phrasebook,לֵךְ יָשָׁר
+directions-08-f,line,phrasebook,לְכִי יָשָׁר
+directions-09-m,line,phrasebook,פְּנֵה שְׂמֹאלָה
+directions-09-f,line,phrasebook,פְּנִי שְׂמֹאלָה
+directions-10-m,line,phrasebook,פְּנֵה יָמִינָה
+directions-10-f,line,phrasebook,פְּנִי יָמִינָה
+directions-11,line,phrasebook,עַל יַד
+directions-14-m,line,phrasebook,אֲנִי אָבוּד
+directions-14-f,line,phrasebook,אֲנִי אֲבוּדָה
+directions-15,line,phrasebook,אֶפְשָׁר לְהַרְאוֹת לִי עַל הַמַּפָּה?
+directions-16,line,phrasebook,כַּמָּה זְמַן זֶה לוֹקֵחַ?
+directions-17,line,phrasebook,אֵיפֹה בֵּית הַחוֹלִים?
+directions-18,line,phrasebook,אֵיפֹה בֵּית הַמִּרְקַחַת?
+directions-19,line,phrasebook,אֵיפֹה הַמָּלוֹן?
+directions-20,line,phrasebook,אֵיפֹה הַתַּחֲנָה?
+numbers-16,line,phrasebook,מָה הַשָּׁעָה?
+numbers-17,line,phrasebook,הַשָּׁעָה שָׁלוֹשׁ
+small-talk-01-m,line,phrasebook,מַה שִּׁמְךָ?
+small-talk-01-f,line,phrasebook,מַה שְּׁמֵךְ?
+small-talk-02,line,phrasebook,קוֹרְאִים לִי ...
+small-talk-03-m,line,phrasebook,מֵאֵיפֹה אַתָּה?
+small-talk-03-f,line,phrasebook,מֵאֵיפֹה אַתְּ?
+small-talk-04,line,phrasebook,אֲנִי מִקָּנָדָה
+small-talk-05-m,line,phrasebook,אֲנִי תַּיָּר
+small-talk-05-f,line,phrasebook,אֲנִי תַּיֶּרֶת
+small-talk-06,line,phrasebook,זֹאת הַפַּעַם הָרִאשׁוֹנָה שֶׁלִּי בְּיִשְׂרָאֵל
+small-talk-07-m,line,phrasebook,מָה אַתָּה עוֹשֶׂה?
+small-talk-07-f,line,phrasebook,מָה אַתְּ עוֹשָׂה?
+small-talk-08-m,line,phrasebook,בֶּן כַּמָּה אַתָּה?
+small-talk-08-f,line,phrasebook,בַּת כַּמָּה אַתְּ?
+small-talk-09-m,line,phrasebook,אֲנִי רָעֵב
+small-talk-09-f,line,phrasebook,אֲנִי רְעֵבָה
+small-talk-10-m,line,phrasebook,אֲנִי צָמֵא
+small-talk-10-f,line,phrasebook,אֲנִי צְמֵאָה
+small-talk-11-m,line,phrasebook,אֲנִי עָיֵף
+small-talk-11-f,line,phrasebook,אֲנִי עֲיֵפָה
+small-talk-12,line,phrasebook,חַם לִי
+small-talk-13,line,phrasebook,קַר לִי
+small-talk-14-m,line,phrasebook,הַכֹּל בְּסֵדֶר אִתְּךָ?
+small-talk-14-f,line,phrasebook,הַכֹּל בְּסֵדֶר אִתָּךְ?
+small-talk-16,line,phrasebook,מָה הַמַּצָּב?
+small-talk-17,line,phrasebook,אֵין מָה לַעֲשׂוֹת
+small-talk-19-m,line,phrasebook,אֶתְגַּעְגֵּעַ אֵלֶיךָ
+small-talk-19-f,line,phrasebook,אֶתְגַּעְגֵּעַ אֵלַיִךְ
+help-02-m,line,phrasebook,אֲנִי צָרִיךְ רוֹפֵא
+help-02-f,line,phrasebook,אֲנִי צְרִיכָה רוֹפֵא
+help-03-m,line,phrasebook,תִּקְרָא לַמִּשְׁטָרָה
+help-03-f,line,phrasebook,תִּקְרְאִי לַמִּשְׁטָרָה
+help-04-m,line,phrasebook,תִּקְרָא לְאַמְבּוּלַנְס
+help-04-f,line,phrasebook,תִּקְרְאִי לְאַמְבּוּלַנְס
+help-05,line,phrasebook,אָבַד לִי הַדַּרְכּוֹן
+help-06,line,phrasebook,אָבַד לִי הַטֶּלֶפוֹן
+help-07-m,line,phrasebook,אֲנִי לֹא מַרְגִּישׁ טוֹב
+help-07-f,line,phrasebook,אֲנִי לֹא מַרְגִּישָׁה טוֹב
+help-08,line,phrasebook,יֵשׁ לִי כְּאֵב רֹאשׁ
+help-09,line,phrasebook,אֶפְשָׁר לְהִשְׁתַּמֵּשׁ בַּטֶּלֶפוֹן שֶׁלְּךָ?

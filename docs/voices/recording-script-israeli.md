@@ -258,7 +258,7 @@ Takes per clip: 2. Clips: 27.
 | anchor-tav | israeli/word/anchor-tav.mp3 | תּוֹדָה |  | (as above) |
 | anchor-kaf-final | israeli/word/anchor-kaf-final.mp3 | מֶלֶךְ |  | (as above) |
 | anchor-mem-final | israeli/word/anchor-mem-final.mp3 | יָם |  | (as above) |
-| anchor-nun-final | israeli/word/anchor-nun-final.mp3 | גָּן |  | (as above) |
+| anchor-nun-final | israeli/word/anchor-nun-final.mp3 | גַּן |  | (as above) |
 | anchor-pe-final | israeli/word/anchor-pe-final.mp3 | כַּף |  | (as above) |
 | anchor-tsadi-final | israeli/word/anchor-tsadi-final.mp3 | אֶרֶץ |  | (as above) |
 

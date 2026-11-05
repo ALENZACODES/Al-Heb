@@ -8,7 +8,7 @@
  * Audio: ctx.audio.play(kind, id); no recordings exist, the device voice (Israeli) is the fallback and the screen says so.
  * ctx extras for tests: ctx.firstdayData {first10, ladder, onramp, content, lessons}, ctx.rng.
  */
-import { el, heText, heLabeled, storeGet, storeSet, STREAK_KEY } from '../curriculum/dom.js';
+import { el, heText, heLabeled, storeGet, storeSet, showSaveFailure, STREAK_KEY } from '../curriculum/dom.js';
 import { recordActivity } from '../curriculum/progress.js';
 import { loadFirst10, loadLadder, loadOnramp } from './loader.js';
 import { DRAFT_NOTICE, PROGRESS_KEY, advance, markRead, wordById, buildCheck, gradeCheck, audioEntries, playHook, totalMinutes } from './model.js';
@@ -115,20 +115,31 @@ export function mount(root, ctx) {
     }
     body.replaceChildren(...nodes, ...post);
   }
+  // Count the lesson (its review cards, the done mark, the streak) in one all-or-nothing save. Returns the StoreWriteError when it could not be saved, else null.
+  // The done screen still shows the wins either way, but a failed save is said plainly and offered again (showSaveFailed).
+  async function countLesson() {
+    try {
+      const act = await import('../curriculum/actions.js');
+      const qs = onramp.steps.flatMap((st) => stepQuestions(st, lessonQs)).filter((q) => q.cardId && q.id in progress.answers);
+      const results = Object.fromEntries(qs.map((q) => [q.id, progress.answers[q.id]]));
+      await act.saveQuickCheck(ctx, lesson, qs, results);
+      nextLesson = await findNext();
+      return null;
+    } catch (e) {
+      return e && e.name === 'StoreWriteError' ? e : null; /* any other problem: the on-ramp still shows its done screen */
+    }
+  }
+  function showSaveFailed(err) {
+    if (!alive) return;
+    showSaveFailure(body, err, async () => { const e2 = await countLesson(); say(''); renderStep(); focus(); if (e2) showSaveFailed(e2); });
+  }
   async function win(s) {
     progress = winStep(progress, onramp, s.id); answered = null;
     await save();
     try { const raw = await storeGet(ctx, STREAK_KEY, null); await storeSet(ctx, STREAK_KEY, recordActivity(raw, Date.now())); } catch { /* best effort */ }
-    if (onrampDone(onramp, progress) && lesson) {
-      try {
-        const act = await import('../curriculum/actions.js');
-        const qs = onramp.steps.flatMap((st) => stepQuestions(st, lessonQs)).filter((q) => q.cardId && q.id in progress.answers);
-        const results = Object.fromEntries(qs.map((q) => [q.id, progress.answers[q.id]]));
-        await act.saveQuickCheck(ctx, lesson, qs, results);
-        nextLesson = await findNext();
-      } catch { /* the on-ramp still shows its done screen */ }
-    }
+    const err = onrampDone(onramp, progress) && lesson ? await countLesson() : null;
     say(''); renderStep(); focus();
+    if (err) showSaveFailed(err);
   }
   function renderDone() {
     const d = onramp.done || {};

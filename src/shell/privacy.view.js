@@ -51,7 +51,7 @@ export const STORE_KEYS = [
   ['israel.cards', 'Sound-like-a-local review cards', 'src/israel/model.js'],
   ['israel.stats', 'Sound-like-a-local session results', 'src/israel/model.js'],
   ['israel.prefs', 'Sound-like-a-local preferences', 'src/israel/israel.view.js'],
-  ['listen.v1', 'Listen-and-pick results', 'src/listen/listen.view.js'],
+  ['listen.v1', 'Listen-and-pick and read-and-match tallies', 'src/listen/listen.view.js'],
   ['timedread.v1', 'Timed read-aloud results', 'src/progress/model.js'],
   ['speak.v1', 'Say-it results (not recordings)', 'src/speak/model.js'],
   ['sprint.last', 'Last word sprint', 'src/sprint/model.js'],

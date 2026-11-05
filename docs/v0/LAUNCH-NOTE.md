@@ -4,7 +4,9 @@ Plain version of where things stand if you ship a tiny first release and share t
 
 ## What v0 is
 
-- **15 pages** are marked `v0`; the other 70 of 85 are marked `preview` and carry a banner (`docs/STATUS.md`, `docs/v0/SCOPE.md`). The 15: welcome, home, first day, learn, letters, one letter, atlas, progress, settings, about, credits, privacy, install, offline, search (`docs/v0/SCOPE.md`).
+v0 is the intended first-release set of pages. The code for it exists; its lessons and Hebrew are drafts, its tests have not covered a real phone, and nothing in it has been reviewed (`docs/qa/HONESTY-AUDIT.md`).
+
+- **15 pages** are marked `v0`; the other 71 of 86 are marked `preview` and carry a banner (`docs/STATUS.md`, `docs/v0/SCOPE.md`). The 15: welcome, home, first day, learn, letters, one letter, atlas, progress, settings, about, credits, privacy, install, offline, search (`docs/v0/SCOPE.md`).
 - **Baby steps lessons 1 to 10.** The learn page is the lesson path r01 to r10, plus the spaced review of due cards (`docs/v0/SCOPE.md`). The first day ("your first 10 minutes") leads into r01 and is built as short two-minute steps (`docs/onramp/ONRAMP.md`, a draft).
 - **Three pronunciation settings:** Ashkenazi, Sephardi, Israeli. A scripted first-release walk was run for each (`docs/qa/V0-WALK.md`).
 - The app has no account, keeps progress on the device, and has backup, restore and delete in settings (`docs/v0/SCOPE.md`).
@@ -13,7 +15,7 @@ Plain version of where things stand if you ship a tiny first release and share t
 
 - **No recordings.** 0 of 24,906 listed audio clips are recorded (`docs/STATUS.md`). Sound comes from the device's own Hebrew voice, if the phone has one (`docs/audio/NO-AUDIO.md`, `docs/launch/COPY.md`).
 - **Preview pages are unreviewed.** They stay reachable by direct link and search, labelled "Preview" (`docs/v0/SCOPE.md`).
-- **No native, teacher or clergy review yet:** 0 of 3,716 rows in the review packs are reviewed (`docs/review/STATUS.md`, via `docs/STATUS.md`). No route has met the promotion bar (`docs/v0/SCOPE.md`).
+- **No native, teacher or clergy review yet:** 0 of 3,718 rows in the review packs are reviewed (`docs/review/STATUS.md`, via `docs/STATUS.md`). No route has met the promotion bar (`docs/v0/SCOPE.md`).
 - **Nobody has used it.** No learner has used the app and nothing is deployed (`docs/STATUS.md`).
 
 ## Checked and not checked
@@ -29,23 +31,23 @@ Not checked:
 - **Safari/WebKit only partly.** With the normal offline method WebKit passed 52 of 83 checks; with the "stop-server" method it passed 82 of 83 and 80 of 83, and the failures were not investigated (`docs/qa/CROSS-ENGINE.md`). Safari offline is treated as unverified (`docs/STATUS.md`).
 - The live site: headers, security policy and the OCR folder on a real host are unverified (`docs/STATUS.md`).
 - The full test suite was not re-run for that status file; the last saved full run is stale (`docs/STATUS.md`).
-- Open items: the 62 preview pages have known layout and accessibility gaps (`docs/STATUS.md`, from `docs/qa/SWEEP.md`).
+- Open items: the preview pages have known layout and accessibility gaps (`docs/STATUS.md`, from `docs/qa/SWEEP.md`).
 
 ## The 5 things you must do to go live
 
 1. **Cloudflare account and deploy** (about 10 minutes): sign up, connect the GitHub repo `Al-Heb`, build command `node tools/deploy/build_site.mjs`, output `dist`, production branch name, Save and Deploy; then run the smoke test on the live URL (`docs/deploy/GO-LIVE-CHECKLIST.md`). Nothing on that list has been done.
-2. **Choose a licence** for the code: proprietary, MIT or Apache-2.0 (`docs/legal/DECISIONS-FOR-JOHN.md`, section 1). None is chosen; the content licence questions (share-alike vocabulary, 21 prayer records) are in section 2 and are not legal advice.
+2. **Choose a licence** for the code: proprietary, MIT or Apache-2.0 (`docs/legal/DECISIONS-FOR-JOHN.md`, section 1). None is chosen; the content licence questions (share-alike vocabulary; Metsudah-sourced prayers, which that document counts as 21 of 70 corpus records because 21 records mention Metsudah, while only 9 name it in their `source` field) are in section 2 and are not legal advice.
 3. **Decide on the extra remote branch** `codex/complete-alef-review`: do not merge it; to delete it, run `git push origin --delete codex/complete-alef-review` from your machine. Its contents were never compared with `master` (`docs/DECISIONS-NEEDED.md`, item 6).
 4. **Record the audio kit.** The recorder page and a first-100 list per tradition exist; follow `docs/voices/JOHN-RECORDING-GUIDE.md`. It was tested with a fake microphone only, and its consent wording is a draft for a lawyer (`docs/STATUS.md`, `docs/record-kit/README.md`). Recording is not required for v0 to be honest; it is what makes the sound real.
 5. **Test on a real iPhone** (and ideally an Android phone): install, offline with airplane mode, a lesson, review, backup (`docs/deploy/GO-LIVE-CHECKLIST.md` phone steps; the gap is stated in `docs/qa/DEVICES.md`).
 
 ## A line you can share
 
-> Early version of a free Hebrew reading course. Audio is coming (for now it uses your phone's Hebrew voice), and the content has not yet been reviewed by a teacher. Feedback welcome.
+> Early draft of a free Hebrew reading course. There are no recordings yet; where your phone has a Hebrew voice the app uses it, and that is a device voice, not a teacher. No teacher has reviewed the Hebrew and nobody has tested it with learners. Feedback welcome.
 
 Do not call it reviewed, tested on phones, or complete; the docs above do not support that.
 
-Note: `docs/launch/COPY.md` was updated on 2026-11-04 to the figures in `docs/STATUS.md` (24,900 clips, 3,718 review rows).
+Note: `docs/launch/COPY.md` was updated on 2026-11-04 to the figures in `docs/STATUS.md` (24,906 clips, 3,718 review rows).
 
 ## New today: the letter memory chain (not part of the checked v0 walk)
 

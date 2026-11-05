@@ -43,7 +43,9 @@ test('sanitizeSvg: rejects script, handlers, external references, foreignObject,
     '<svg><use href="https://x.test/a.svg#b"/></svg>', '<svg><foreignObject><div/></foreignObject></svg>',
     '<!DOCTYPE svg><svg><g/></svg>', '<svg><image href="#a"/></svg>', '<svg><style>@import url(x.css);</style></svg>',
     '<svg><path fill="url(https://x.test/p)"/></svg>', '<svg><a href="#x"><g/></a></svg>', '<svg><g style="x:javascript:1"/></svg>',
-    '<div>not svg</div>', '', null, '<svg><iframe/></svg>', '<svg><g/></svg>trailing<b>'
+    '<div>not svg</div>', '', null, '<svg><iframe/></svg>', '<svg><g/></svg>trailing<b>',
+    // a handler attribute does not need a space before it: after a closing quote or a slash it still runs when a click reaches it
+    '<svg><path d="M0 0h9v9z"onclick="x()"/></svg>', '<svg><path d="M0 0"/onclick="x()"/></svg>', '<svg><g class=\'a\'onmouseover=\'x()\'/></svg>'
   ];
   for (const b of bad) assert.equal(M.sanitizeSvg(b), null, String(b));
   assert.ok(M.sanitizeSvg('<svg><use href="#a"/></svg>'));

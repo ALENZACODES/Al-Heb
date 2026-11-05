@@ -12,7 +12,7 @@ import { plain } from "../shell/plain-copy.js";
 import { lessons, belts } from "./lessons.js";
 import { due } from "./srs.js";
 import { plural } from "../shell/plural.js";
-import { el, heText, tr, replaceKeepingFocus, levelLabel } from "./dom.js";
+import { el, heText, tr, replaceKeepingFocus, levelLabel, showSaveFailure } from "./dom.js";
 import { loadState, completeLesson } from "./actions.js";
 import { mountLesson } from "./lesson.view.js";
 import { mountReview } from "./review.view.js";
@@ -105,14 +105,14 @@ function mountMap(root, ctx) {
               onclick: () => ctx && ctx.route && ctx.route(`/learn?lesson=${l.id}`) }, state === "done" ? tr(ctx, "learn.review", "Review") : tr(ctx, "learn.start", "Start")),
             " ",
             state === "available" ? el("button", { type: "button", class: "alef-btn alef-btn-secondary", "aria-label": `Mark complete: ${l.title}`,
-              onclick: async () => { await completeLesson(ctx, l); await render(); if (alive) h1.focus?.({ preventScroll: true }); } }, tr(ctx, "learn.markDone", "Mark complete")) : null);
+              onclick: async function markDone() { try { await completeLesson(ctx, l); } catch (e) { if (alive) showSaveFailure(wrap, e, markDone); return; } await render(); if (alive) h1.focus?.({ preventScroll: true }); } }, tr(ctx, "learn.markDone", "Mark complete")) : null);
         })),
       list.length > 8 ? el("p", {}, el("button", { type: "button", class: "btn secondary", id: "alef-show-all", "aria-pressed": String(showAll), onclick: () => { showAll = !showAll; render().then(() => { if (alive) wrap.querySelector?.("#alef-show-all")?.focus?.(); }); } }, showAll ? "Show fewer lessons" : `Show all ${list.length} lessons`)) : null);
   }
 
   function beltStrip(done) {
     const current = belts.belts.find((b) => b.lessons && !lessonsOfBelt(b).every((id) => done.has(id)));
-    return el("p", { class: "alef-belt" }, `${tr(ctx, "learn.belt", "Your level")}: ${current ? current.name + " belt" : "Black belt (practice for fluency)"}. `, el("span", { class: "muted" }, "Belts are ALEF's own levels, like in martial arts. Each one covers a set of lessons."));
+    return el("p", { class: "alef-belt" }, `${tr(ctx, "learn.belt", "Your level")}: ${current ? current.name + " belt" : "Black belt (all belts finished; keep practising)"}. `, el("span", { class: "muted" }, "Belts are ALEF's own levels, like in martial arts. Each one covers a set of lessons."));
   }
   render();
   return () => { alive = false; wrap.remove(); };

@@ -1,6 +1,6 @@
 /**
  * Placement check (#/placement): DRAFT, UNREVIEWED 20-item check (letters, vowels, syllables, common words, Siddur phrases) that
- * recommends a starting lesson. Cutoffs are untested guesses. Result saved under store key "placement.v1". It never changes lesson
+ * suggests a starting lesson. Cutoffs are untested guesses; the result is a reversible suggestion, not a measure of what you know. Result saved under store key "placement.v1". It never changes lesson
  * progress; it only links to the recommended lesson. Audio via ctx.audio (shown honestly; there are no recorded clips yet).
  * ctx extras for tests: ctx.placementData {config, data}, ctx.rng, ctx.clock.now.
  */
@@ -35,7 +35,7 @@ export function mount(root, ctx) {
       ctx.img?.(el, { kind: 'id', id: 'CHAR_ari_neutral', decorative: true, width: 300, class: 'pl-pic' }),
       el('p', { class: 'draft-flag', role: 'note' }, DRAFT_NOTE),
       el('p', {}, `Up to ${items.length} short questions, easiest first. It stops early if several answers in a row are missed. "Not sure" is always fine.`),
-      prev ? el('p', {}, `Last result: lesson ${prev.lesson}.`) : null,
+      prev ? el('p', {}, `Last suggestion: lesson ${prev.lesson}.`) : null,
       el('button', { type: 'button', class: 'btn', id: 'placement-start', onclick: () => { answers = []; question(); } }, 'Start'),
       el('a', { class: 'btn', href: '#/learn?lesson=' + P.config.firstLesson }, 'Skip: start at the beginning'),
     );
@@ -72,11 +72,12 @@ export function mount(root, ctx) {
     await storeSet(ctx, STORE_KEY, { v: 1, draft: true, at: now(), answers, result: { ...result, start: start.id } });
     if (!alive) return;
     set(
-      el('h2', {}, 'Suggested starting point'),
+      el('h2', {}, 'A possible starting point'),
       start.locked
-        ? el('p', {}, `Your answers fit lesson ${result.lesson}: ${lesson?.title || ''}. Lessons open in order and this check does not complete any, so that lesson is still locked. Start with lesson ${start.id}: ${startLesson?.title || ''}.`)
+        ? el('p', {}, `Your answers point towards lesson ${result.lesson}: ${lesson?.title || ''}. Lessons open in order and this check does not complete any, so that lesson is still locked. Start with lesson ${start.id}: ${startLesson?.title || ''}.`)
         : el('p', {}, `Lesson ${start.id}: ${startLesson?.title || ''}`),
-      el('p', {}, `${result.correct} of ${result.asked} answered correctly. Why: ${result.reason}.`),
+      el('p', {}, `${result.correct} of ${result.asked} answers matched. The suggestion rests on this: ${result.reason}. A short, untested check cannot show how much you know, so treat it as a rough guess.`),
+      el('p', {}, 'Nothing is locked in. You can pick an earlier or later lesson at any time, or retake this check.'),
       el('p', { class: 'draft-flag', role: 'note' }, DRAFT_NOTE),
       el('a', { class: 'btn', id: 'placement-go', href: '#/learn?lesson=' + start.id }, start.locked ? `Start lesson ${start.id}` : 'Go to this lesson'),
       el('button', { type: 'button', class: 'btn', onclick: () => { answers = []; renderStart({ lesson: start.id }); } }, 'Retake'),

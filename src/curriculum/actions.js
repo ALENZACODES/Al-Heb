@@ -1,5 +1,5 @@
 /** Store-backed learning actions shared by the Lane 1 views and the home screen. */
-import { storeGet, storeSet, PROGRESS_KEY, CARDS_KEY, STREAK_KEY } from "./dom.js";
+import { storeGet, storeSet, storeWriteAll, PROGRESS_KEY, CARDS_KEY, STREAK_KEY } from "./dom.js";
 import { loadState } from "./state.js";
 import { ensureCards, recordActivity, applyOutcomesToCards, syllableCardId, lineCardId, genderCardId } from "./progress.js";
 import { review, newCard } from "./srs.js";
@@ -9,15 +9,32 @@ import { memoryCardsFor, ensureMemoryCards } from "../letters/memory.core.js";
 import { loadContent } from "./content.js";
 export { loadState };
 
-/** Mark a lesson complete, create its SRS cards, count today as active. Idempotent for cards. */
-export async function completeLesson(ctx, lesson, now = Date.now()) {
+/**
+ * Work out every write that counting a lesson as done needs, without writing anything. `old` is what each key holds now, so a failed batch can be undone.
+ * Order matters: the review cards go first, then the "done" mark, then the streak, so a lesson is never marked done without its cards.
+ */
+async function planCompletion(ctx, lesson, now, applyOutcomes) {
   const st = await loadState(ctx, now);
+  const oldProgress = await storeGet(ctx, PROGRESS_KEY, undefined), oldCards = await storeGet(ctx, CARDS_KEY, undefined);
   const completed = { ...st.completed, [lesson.id]: st.completed[lesson.id] || now };
   const { cards: base, added } = ensureCards(st.cards, lesson, now);
-  const cards = await withMemoryCards(base, lesson.letters, now); // memory-chain cards for the lesson's letters (none when the chain is absent)
-  await storeSet(ctx, PROGRESS_KEY, { completed });
-  await storeSet(ctx, CARDS_KEY, cards);
-  await storeSet(ctx, STREAK_KEY, recordActivity(st.rawStreak, now));
+  let cards = await withMemoryCards(base, lesson.letters, now); // memory-chain cards for the lesson's letters (none when the chain is absent)
+  if (applyOutcomes) cards = applyOutcomes(cards);
+  return { added, completed, writes: [
+    { key: CARDS_KEY, value: cards, old: oldCards },
+    { key: PROGRESS_KEY, value: { completed }, old: oldProgress },
+    { key: STREAK_KEY, value: recordActivity(st.rawStreak, now), old: st.rawStreak ?? undefined },
+  ] };
+}
+
+/**
+ * Mark a lesson complete, create its SRS cards, count today as active. Idempotent for cards.
+ * All-or-nothing: if the store is missing or a write fails, the writes already made are undone and StoreWriteError is thrown, so the caller must not show "complete".
+ * (A store that has fallen back to memory still accepts the writes; that is disclosed by the storage notice, not an error.)
+ */
+export async function completeLesson(ctx, lesson, now = Date.now()) {
+  const { added, completed, writes } = await planCompletion(ctx, lesson, now);
+  await storeWriteAll(ctx, writes);
   return { added, completed };
 }
 
@@ -220,11 +237,9 @@ export async function setScaffoldPin(ctx, cardId, pinned) {
  */
 export async function saveQuickCheck(ctx, lesson, questions, results, now = Date.now()) {
   if (!questions.length || !Object.keys(results).length) return { added: 0, updated: 0, completed: false };
-  const { added } = await completeLesson(ctx, lesson, now);
   const outcomes = questions.filter((q) => q.cardId && q.id in results).map((q) => ({ id: q.cardId, kind: q.cardKind || "word", good: !!results[q.id], create: true }));
-  if (outcomes.length) {
-    const st = await loadState(ctx, now);
-    await storeSet(ctx, CARDS_KEY, applyOutcomesToCards(st.cards, outcomes, now));
-  }
+  // One batch: the lesson's cards, the answers' effect on them, the done mark and the streak are written together or not at all (throws StoreWriteError).
+  const { added, writes } = await planCompletion(ctx, lesson, now, outcomes.length ? (cards) => applyOutcomesToCards(cards, outcomes, now) : null);
+  await storeWriteAll(ctx, writes);
   return { added, updated: outcomes.length, completed: true };
 }

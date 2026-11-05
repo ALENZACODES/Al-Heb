@@ -18,7 +18,7 @@ Short list. Each item says what to answer and which file to open. Nothing here h
 
 8. **Real iPhone test.** Chromium and Firefox walks passed in emulation, but offline checks failed in the Linux WebKit build (cause unknown), so Safari offline is unverified. Answer: who lends an iPhone (and an Android phone) and when; then follow `docs/qa/DEVICES.md` and the live-site list in `docs/deploy/GO-LIVE-CHECKLIST.md`. Screen readers have not been tried either.
 
-9. **v0 cuts.** 15 routes are the first release and 62 show a Preview banner. Answer: cut any v0 route (for example `search` or `install`) or promote a preview route. Open `docs/v0/SCOPE.md`; `docs/qa/V0-WALK.md` shows what the scripted walk saw (emulation only).
+9. **v0 cuts.** 15 routes are the first release and 71 show a Preview banner. Answer: cut any v0 route (for example `search` or `install`) or promote a preview route. Open `docs/v0/SCOPE.md`; `docs/qa/V0-WALK.md` shows what the scripted walk saw (emulation only).
 
 10. **Which `book/out/alef-book.html` to commit.** The file and the book PDFs are modified but uncommitted. The print variants are listed in `docs/book/PRINT.md`: no bleed (left-bound), bleed, and bleed with mirrored right-to-left spreads (plus a reversed file for IngramSpark and Lulu); the doc says the binding direction is still undecided and nothing has been uploaded to any printer. The checked-out `alef-book.html` is a bleed variant that a plain `node book/build.mjs` does not reproduce (`docs/review/LETTERS-CONTENT-CHECK.md`), and it still has the old "Final Khaf / Final Fe" names. I did not compare it with the committed copy. Answer: bleed with right-to-left spreads, or the zero-bleed one; then it gets rebuilt from the current sources.
 

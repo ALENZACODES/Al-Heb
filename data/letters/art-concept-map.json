@@ -1,0 +1,1956 @@
+{
+  "meta": {
+    "status": "DRAFT",
+    "needsHumanReview": true,
+    "generated": "2026-11-04",
+    "purpose": "One map from approved picture concept to older mnemonic concept to older art to files on disk, per letter. A test (tests/letters.artconcept.test.js) checks that the displayed fields in data/letters/mnemonics.json do not contradict it.",
+    "definitions": {
+      "approved": "the concept in data/letters/memory-chain.json; its SVG is in assets/letters/morph/",
+      "olderMnemonic": "imageIdea, caption and story in data/letters/mnemonics.json",
+      "olderArt": "the picture prompts in tools/images/spec.mjs and the files in assets/img/gen. The agreement judgments compare the prompt words only; no image was opened.",
+      "status": "keep = nothing older conflicts; retire = an older concept conflicts, so its displayed text was rewritten (or never shown) and its art stays on disk, hidden; needs decision = a person must choose",
+      "nothingDeleted": true
+    },
+    "displayedFields": [
+      "caption",
+      "story",
+      "shape",
+      "imageIdea",
+      "soundAnchor"
+    ],
+    "notDisplayed": "altStory is shown only by the atlas \"Another picture\" button, which is hidden whenever the memory chain covers the letter (all 27). The nun-final and tsadi-final alt stories still mention a cat; they are listed here, not changed.",
+    "globalRetiredPatterns": [
+      "kneel",
+      "\\b(a|the|kneeling|standing|praying) nuns?\\b"
+    ],
+    "olderArtHidden": "data/images/approvals.json holds no approvals",
+    "stale": "book/out, docs/workbook/html and the workbook PDFs were built before this pass and were not rebuilt"
+  },
+  "letters": [
+    {
+      "id": "alef",
+      "name": "Alef",
+      "hebrew": "א",
+      "order": "01",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A silent mime in a handstand. The handstand body is the letter.",
+        "hook": "uh-oh",
+        "wordGloss": "father",
+        "morphSvg": "assets/letters/morph/alef.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "cartoon mime in a handstand with a finger to the lips, audience clapping",
+        "caption": "silent mime in a handstand; the vowel does the talking",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Ox head",
+        "agreement": "differs",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/alef.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0731",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter alef: a mime in a silent handstand with one hand over the mouth and a tiny audience clapping behind, in a stripe-free costume."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "needs decision",
+      "note": "Approved chain concept and older mnemonic are both the silent handstand mime. The brief lists a generic mime as conflicting with the Noa direction, but memory-chain.json (and docs/letters/RECONCILE.md) approve the mime, so nothing was retired. Human decision: keep the mime, or replace it with a Noa picture. Older art prompt is an ox head.",
+      "captionMustMatch": "mime",
+      "retiredPatterns": []
+    },
+    {
+      "id": "bet",
+      "name": "Bet",
+      "hebrew": "ב",
+      "order": "02",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A bungalow seen from the side with a ball inside; the floor sticks out at the back.",
+        "hook": "ball",
+        "wordGloss": "house",
+        "morphSvg": "assets/letters/morph/bet.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a cozy cartoon bungalow with its front door open and a beach ball visible inside",
+        "caption": "a Bungalow with a Ball inside: B (no ball = Vacant = V)",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Bed inside a house",
+        "agreement": "differs",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/bet.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0732",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter bet: a bed seen from the side: tall headboard on the right, mattress sticking out, open on the left."
+        },
+        "placeholderSvgs": 18
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "retire",
+      "note": "Older art prompt is a bed inside a house; approved is a bungalow with a ball.",
+      "captionMustMatch": "bungalow",
+      "retiredPatterns": []
+    },
+    {
+      "id": "gimel",
+      "name": "Gimel",
+      "hebrew": "ג",
+      "order": "03",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A grumpy camel stomping forward, one foot kicked out ahead: the foot is gimel's foot.",
+        "hook": "grumpy",
+        "wordGloss": "camel",
+        "morphSvg": "assets/letters/morph/gimel.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a grumpy camel stomping forward, one foot kicked out, wearing a tiny sweatband",
+        "caption": "a Grumpy camel on the Go, one foot kicked out",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Giraffe mid-stride",
+        "agreement": "differs",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/gimel.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0733",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter gimel: a stout camel walking forward with one front foot kicked out, wearing a woven saddle blanket."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "retire",
+      "note": "Older art prompt is a giraffe; approved is a grumpy camel.",
+      "captionMustMatch": "camel",
+      "retiredPatterns": []
+    },
+    {
+      "id": "dalet",
+      "name": "Dalet",
+      "hebrew": "ד",
+      "order": "04",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A diving board sticking out from one post over a pool.",
+        "hook": "dive",
+        "wordGloss": "door",
+        "morphSvg": "assets/letters/morph/dalet.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a diving board sticking out from one wooden post over a pool",
+        "caption": "a Diving board on one post: D (a Door frame from the side)",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Door frame",
+        "agreement": "differs",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/dalet.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0734",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter dalet: a wooden diving board overhanging a pool, held up by a single thick post."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "retire",
+      "note": "Older art prompt is a door frame; approved is a diving board.",
+      "captionMustMatch": "diving board",
+      "retiredPatterns": []
+    },
+    {
+      "id": "he",
+      "name": "He",
+      "hebrew": "ה",
+      "order": "05",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A small hut on a mountain with a gap in the left wall.",
+        "hook": "hut",
+        "wordGloss": "mountain",
+        "morphSvg": "assets/letters/morph/he.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a small hut with a hole in one wall and a person leaning out shouting",
+        "caption": "a Hut with a Hole: Holler 'Hey!' through the gap",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "House with an open window",
+        "agreement": "partial",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/he.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0735",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter he: a small hut with a window whose left shutter is missing, and a figure leaning out to call, seen from behind."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "keep",
+      "note": "Older art prompt is a house with an open window; approved is a hut with a gap in the wall. Both are small buildings with an opening.",
+      "captionMustMatch": "hut",
+      "retiredPatterns": []
+    },
+    {
+      "id": "vav",
+      "name": "Vav",
+      "hebrew": "ו",
+      "order": "06",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "One straight vine hanging from a hook: the letter is the vine, the hook is the ceiling hook.",
+        "hook": "vine",
+        "wordGloss": "hook",
+        "morphSvg": "assets/letters/morph/vav.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a single straight vine dangling from a ceiling, with a small vacuum cleaner humming nearby",
+        "caption": "a Vine hanging straight down, humming vvv; hooks 'and'",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Vine on a stake",
+        "agreement": "same",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/vav.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0736",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter vav: a single straight violin bow standing upright on its tip, with a small vacuum cleaner humming beside it."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "keep",
+      "note": "Vine in both.",
+      "captionMustMatch": "vine",
+      "retiredPatterns": []
+    },
+    {
+      "id": "zayin",
+      "name": "Zayin",
+      "hebrew": "ז",
+      "order": "07",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A zipper pull on a zipper with gold teeth: a short bar on top and a straight stem down.",
+        "hook": "zipper",
+        "wordGloss": "gold",
+        "morphSvg": "assets/letters/morph/zayin.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a zipper pull on a jacket zipper, being zipped up",
+        "caption": "a Zipper pull: a bar on top, zzzip",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Zipper pull",
+        "agreement": "same",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/zayin.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0737",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter zayin: a zipper pull standing upright on a jacket zipper, being zipped up."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "keep",
+      "note": "Zipper pull in both.",
+      "captionMustMatch": "zipper",
+      "retiredPatterns": []
+    },
+    {
+      "id": "chet",
+      "name": "Chet",
+      "hebrew": "ח",
+      "order": "08",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A closed gate at the edge of a loch (a lake), with a jug of milk standing at the gate.",
+        "hook": "loch",
+        "wordGloss": "milk",
+        "morphSvg": "assets/letters/morph/chet.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a closed garden gate on the shore of a lake, a jug of milk beside it",
+        "caption": "a Closed gate by a loch, a milk jug beside it: Chhh",
+        "beforeThisPass": "closed garden gate with a hissing cat behind it",
+        "textAgreement": "changed here"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Hut doorway",
+        "agreement": "differs",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/chet.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0738",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter chet: a closed arched garden gate with no gap, a hissing cat peeking behind a bush."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "retire",
+      "note": "Older mnemonic text had a closed gate with a hissing cat (a second cat in the set); now the gate by a loch with a milk jug, as in the chain. Older art prompt is a hut doorway.",
+      "captionMustMatch": "loch",
+      "retiredPatterns": [
+        "\\bcat\\b",
+        "hiss"
+      ]
+    },
+    {
+      "id": "tet",
+      "name": "Tet",
+      "hebrew": "ט",
+      "order": "09",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A round teapot full of tea, its top curling inward.",
+        "hook": "tea",
+        "wordGloss": "telephone",
+        "morphSvg": "assets/letters/morph/tet.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a round teapot with its spout curling inward, steam rising",
+        "caption": "a round-bellied Teapot full of Tea: T",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Teacup with a curled handle",
+        "agreement": "partial",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/tet.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0739",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter tet: a round-bellied teapot with its spout curling inward, steam rising."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "keep",
+      "note": "Older art prompt is a teacup with a curled handle; approved is a teapot. Both are tea vessels.",
+      "captionMustMatch": "teapot",
+      "retiredPatterns": []
+    },
+    {
+      "id": "yod",
+      "name": "Yod",
+      "hebrew": "י",
+      "order": "10",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A tiny hand at the top of the line flicking a yo-yo on its string.",
+        "hook": "yo-yo",
+        "wordGloss": "arm",
+        "morphSvg": "assets/letters/morph/yod.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a yo-yo on a string dangling from a tiny hand",
+        "caption": "a Yo-yo bead floating at the top: the tiniest letter, Y",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Yo-yo on a short string",
+        "agreement": "same",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/yod.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0740",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter yod: a small yo-yo on a string dangling from a small hand, high on the page."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "keep",
+      "note": "Yo-yo in both.",
+      "captionMustMatch": "yo-yo",
+      "retiredPatterns": []
+    },
+    {
+      "id": "kaf",
+      "name": "Kaf",
+      "hebrew": "כ",
+      "order": "11",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A cup lying on its side: the C-shape is the letter.",
+        "hook": "cup",
+        "wordGloss": "palm",
+        "morphSvg": "assets/letters/morph/kaf.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a cup lying on its side on a table, one popcorn kernel beside it",
+        "caption": "a Cup on its side with a Kernel (dot): K; no dot = Kh",
+        "beforeThisPass": "kitchen spoon holding a popcorn kernel",
+        "textAgreement": "changed here"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Cupped palm",
+        "agreement": "differs",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/kaf.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0741",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter kaf: a kangaroo's open pouch seen from the side with a tiny joey peeping out, opening to the left."
+        },
+        "placeholderSvgs": 18
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "retire",
+      "note": "Older mnemonic text had a kitchen spoon with a kernel; now a cup on its side, as in the chain. Older art prompt is a cupped palm.",
+      "captionMustMatch": "cup",
+      "retiredPatterns": [
+        "spoon"
+      ]
+    },
+    {
+      "id": "lamed",
+      "name": "Lamed",
+      "hebrew": "ל",
+      "order": "12",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A tall lamp post with a bent arm reaching high, lighting the ground below.",
+        "hook": "lamp",
+        "wordGloss": "bread",
+        "morphSvg": "assets/letters/morph/lamed.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a tall lamp post with a bent arm lighting a row of short letters on a desk",
+        "caption": "a tall Lamp post lighting everyone below: L for Learn",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Lighthouse / shepherd's staff",
+        "agreement": "differs",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/lamed.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0742",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter lamed: a tall llama with a very long neck rising above a row of short sheep, looking around."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "retire",
+      "note": "Older art prompt is a lighthouse or shepherd staff; approved is a lamp post.",
+      "captionMustMatch": "lamp",
+      "retiredPatterns": []
+    },
+    {
+      "id": "mem",
+      "name": "Mem",
+      "hebrew": "מ",
+      "order": "13",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A mailbox on a post with a letter sticking out and a small flag.",
+        "hook": "mailbox",
+        "wordGloss": "water",
+        "morphSvg": "assets/letters/morph/mem.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a mailbox on a post with its door open and a letter sliding out, a glass of water beside it",
+        "caption": "a Mailbox with its door open and a letter out: Mmm",
+        "beforeThisPass": "camping tent with its door flap open",
+        "textAgreement": "changed here"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Mountain over water (mayim)",
+        "agreement": "differs",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/mem.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0743",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter mem: a small camping tent with its door flap open to one side and a glass of water beside it."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "retire",
+      "note": "Older mnemonic text had an open-flap mountain tent; now a mailbox, as in the chain. Older art prompt is a mountain over water.",
+      "captionMustMatch": "mailbox",
+      "retiredPatterns": [
+        "\\btent\\b"
+      ]
+    },
+    {
+      "id": "nun",
+      "name": "Nun",
+      "hebrew": "נ",
+      "order": "14",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A cat curled up asleep, side view, with a Z for its snore. The only cat picture in the set.",
+        "hook": "nap",
+        "wordGloss": "candle",
+        "morphSvg": "assets/letters/morph/nun.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a cat curled up asleep in an open box, side view",
+        "caption": "a cat Napping curled in a box; final nun stands straight",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Nail bent at the top",
+        "agreement": "differs",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/nun.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0744",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter nun: a cat curled up asleep in an open box, head tucked in the corner."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "retire",
+      "note": "Approved and older mnemonic text are the one napping cat. Older art prompt is a bent nail, which is not the approved picture. Cat stays the only cat in the set.",
+      "captionMustMatch": "\\bcat\\b",
+      "retiredPatterns": []
+    },
+    {
+      "id": "samekh",
+      "name": "Samekh",
+      "hebrew": "ס",
+      "order": "15",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A striped swim ring floating on water: the closed ring is the letter.",
+        "hook": "swim ring",
+        "wordGloss": "book",
+        "morphSvg": "assets/letters/morph/samekh.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a striped swim ring floating on water, a little air hissing out",
+        "caption": "a Swim ring on the water: Sss (round, no sharp corners)",
+        "beforeThisPass": "soft round cushion with a person sitting on it",
+        "textAgreement": "changed here"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Sun",
+        "agreement": "differs",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/samekh.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0745",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter samekh: a sesame bagel, perfectly round and closed, on a plate."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "retire",
+      "note": "Older mnemonic text had a soft cushion; now a swim ring, as in the chain. Older art prompt is a sun.",
+      "captionMustMatch": "swim ring",
+      "retiredPatterns": [
+        "cushion"
+      ]
+    },
+    {
+      "id": "ayin",
+      "name": "Ayin",
+      "hebrew": "ע",
+      "order": "16",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A big open eye: the sweeping lid curve is the letter.",
+        "hook": "eye",
+        "wordGloss": "eye",
+        "morphSvg": "assets/letters/morph/ayin.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a large cartoon eye winking",
+        "caption": "an Eye winking; silent except in the Sephardi reading",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Eye (ayin)",
+        "agreement": "same",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/ayin.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0746",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter ayin: a big cartoon eye winking above a cup with a straw, a finger against closed lips."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "keep",
+      "note": "Eye in both. The sound wording was reconciled by reading (see the ayin section).",
+      "captionMustMatch": "eye",
+      "retiredPatterns": []
+    },
+    {
+      "id": "pe",
+      "name": "Pe",
+      "hebrew": "פ",
+      "order": "17",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A wide-open mouth blowing one big bubble, the curl inside the letter being the tongue.",
+        "hook": "pop",
+        "wordGloss": "mouth",
+        "morphSvg": "assets/letters/morph/pe.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a mouth blowing a bubble with a party horn, side view",
+        "caption": "a mouth that Pops (dot) or Fluffs (no dot): P or F",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Pie in an open mouth",
+        "agreement": "partial",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/pe.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0747",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter pe: a party horn unrolling as someone blows, a stream of confetti."
+        },
+        "placeholderSvgs": 18
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "keep",
+      "note": "Older art prompt is a pie in an open mouth; approved is a mouth blowing a bubble. Both show an open mouth.",
+      "captionMustMatch": "mouth",
+      "retiredPatterns": []
+    },
+    {
+      "id": "tsadi",
+      "name": "Tsadi",
+      "hebrew": "צ",
+      "order": "18",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A slice of pizza with a bird perched on the pizza box; the leaning body is the letter.",
+        "hook": "pizza",
+        "wordGloss": "bird",
+        "morphSvg": "assets/letters/morph/tsadi.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a slice of pizza on a flat box with a small bird perched on the box",
+        "caption": "a Bird on a pizza box: ts (as in pizza and cats)",
+        "beforeThisPass": "cat sitting upright with pointed ears, beside a pizza slice",
+        "textAgreement": "changed here"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Cat sitting (ts of 'cats')",
+        "agreement": "differs",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/tsadi.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0748",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter tsadi: a cat sitting upright with pointed ears, seen from the side, beside a slice of pizza."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "retire",
+      "note": "Older mnemonic text had a sitting cat with pointed ears (a second cat in the set); now a pizza slice with a bird on the box, as in the chain. Older art prompt is a sitting cat.",
+      "captionMustMatch": "bird",
+      "retiredPatterns": [
+        "\\bcat\\b"
+      ]
+    },
+    {
+      "id": "qof",
+      "name": "Qof",
+      "hebrew": "ק",
+      "order": "19",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A red kite in the sky with its long string dangling below the line.",
+        "hook": "kite",
+        "wordGloss": "line",
+        "morphSvg": "assets/letters/morph/qof.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a red kite in the sky with a long string dangling down",
+        "caption": "a Kite with its string hanging below the line: K",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Kangaroo tail / monkey (kof) hanging",
+        "agreement": "differs",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/qof.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0749",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter qof: a kite in the sky whose long string droops far below the frame's middle line."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "retire",
+      "note": "Older art prompt is a kangaroo tail or hanging monkey; approved is a kite.",
+      "captionMustMatch": "kite",
+      "retiredPatterns": []
+    },
+    {
+      "id": "resh",
+      "name": "Resh",
+      "hebrew": "ר",
+      "order": "20",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A smooth round head in profile, growling; no corners.",
+        "hook": "round",
+        "wordGloss": "head",
+        "morphSvg": "assets/letters/morph/resh.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a smooth round head in profile growling, with a ball rolling down a ramp behind",
+        "caption": "a Round head from the side, no corner: Rrr (rosh = head)",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Rainbow arc / head (rosh)",
+        "agreement": "partial",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/resh.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0750",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter resh: a wooden ramp with a smooth curved end, a ball rolling down."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "keep",
+      "note": "Older art prompt is a rainbow arc or a head; approved is a round head in profile. The head is in both.",
+      "captionMustMatch": "head",
+      "retiredPatterns": []
+    },
+    {
+      "id": "shin",
+      "name": "Shin",
+      "hebrew": "ש",
+      "order": "21",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A birthday shortcake with three candle flames: the three prongs are the letter.",
+        "hook": "shortcake",
+        "wordGloss": "peace",
+        "morphSvg": "assets/letters/morph/shin.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a birthday cake with three candle flames and a finger to the lips",
+        "caption": "three flames: Shhh; dot on the left = Sin, a Sun: Sss",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Shark teeth / three flames",
+        "agreement": "partial",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/shin.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0751",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter shin: a birthday cake with three lit candles and a finger held to the lips."
+        },
+        "placeholderSvgs": 18
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "keep",
+      "note": "Older art prompt is shark teeth or three flames; approved is a birthday cake with three flames. The flames are in both.",
+      "captionMustMatch": "flame",
+      "retiredPatterns": []
+    },
+    {
+      "id": "tav",
+      "name": "Tav",
+      "hebrew": "ת",
+      "order": "22",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A small table with a baby beside it; the leg with a little foot is the letter.",
+        "hook": "table",
+        "wordGloss": "baby",
+        "morphSvg": "assets/letters/morph/tav.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a small table with one leg ending in a toe tapping the floor",
+        "caption": "a Table with a Toe tapping 'todah': T, the last letter",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Table / tent",
+        "agreement": "partial",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/tav.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0752",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter tav: a small table with one leg ending in a toe tapping the floor."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "keep",
+      "note": "Older art prompt is a table or tent; approved is a table with a baby. The table is in both.",
+      "captionMustMatch": "table",
+      "retiredPatterns": []
+    },
+    {
+      "id": "kaf-final",
+      "name": "Final Kaf",
+      "hebrew": "ך",
+      "order": "23",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A king in a long robe whose cloak trails behind him into a loch (a lake).",
+        "hook": "loch",
+        "wordGloss": "king",
+        "morphSvg": "assets/letters/morph/kaf-final.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a king in a long robe whose cloak trails behind him on the floor",
+        "caption": "a King's cloak trailing on the floor: kh at word end",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Key hanging on a hook",
+        "agreement": "differs",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/kaf-final.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0753",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter kaf-final: a long khaki sock hanging off a washing line, with a tall tail."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "retire",
+      "note": "Older art prompt is a key on a hook; approved is a king whose cloak trails into a loch.",
+      "captionMustMatch": "king",
+      "retiredPatterns": []
+    },
+    {
+      "id": "mem-final",
+      "name": "Final Mem",
+      "hebrew": "ם",
+      "order": "24",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A camping tent zipped shut beside the sea, with mom at the door.",
+        "hook": "mom",
+        "wordGloss": "sea",
+        "morphSvg": "assets/letters/morph/mem-final.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a tent zipped shut beside the sea",
+        "caption": "the tent zipped shut at the end of the word: m",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Sealed box",
+        "agreement": "differs",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/mem-final.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0754",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter mem-final: a tightly wrapped gift box tied with ribbon, a closed square shape."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "retire",
+      "note": "Older art prompt is a sealed box; approved is a tent zipped shut by the sea. Older text said \"Mountain tent\" (a leftover of the retired open-mem tent); now \"a tent\".",
+      "captionMustMatch": "tent",
+      "retiredPatterns": []
+    },
+    {
+      "id": "nun-final",
+      "name": "Final Nun",
+      "hebrew": "ן",
+      "order": "25",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "One tall nail hammered upright into a big stone.",
+        "hook": "nail",
+        "wordGloss": "stone",
+        "morphSvg": "assets/letters/morph/nun-final.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a single long nail standing upright in a garden bed",
+        "caption": "a Nail standing straight, below the line: n",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Nail driven down",
+        "agreement": "same",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/nun-final.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0755",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter nun-final: a single long iron nail driven straight down into a wooden plank."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "keep",
+      "note": "Nail in both. The anchor word pointing was reconciled with the word list (see the garden section). Its alt story still has a cat; it is not displayed.",
+      "captionMustMatch": "nail",
+      "retiredPatterns": [
+        "\\bcat\\b"
+      ]
+    },
+    {
+      "id": "pe-final",
+      "name": "Final Pe",
+      "hebrew": "ף",
+      "order": "26",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A big feather held off the tip of a nose; the long stem is the tail of the letter.",
+        "hook": "feather",
+        "wordGloss": "nose",
+        "morphSvg": "assets/letters/morph/pe-final.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a big feather held off the tip of a nose, long quill pointing down",
+        "caption": "a Feather held off a nose, quill below the line: f",
+        "beforeThisPass": "cartoon mouth with a long tongue blowing a feather off a spoon",
+        "textAgreement": "changed here"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Flag on a pole",
+        "agreement": "differs",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/pe-final.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0756",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter pe-final: a long party horn fully unrolled to a very long curl, with a feather floating above it."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "retire",
+      "note": "Older mnemonic text had a mouth with a lolling tongue; now a feather held off a nose, as in the chain. Older art prompt is a flag on a pole.",
+      "captionMustMatch": "feather",
+      "retiredPatterns": [
+        "tongue",
+        "loll"
+      ]
+    },
+    {
+      "id": "tsadi-final",
+      "name": "Final Tsadi",
+      "hebrew": "ץ",
+      "order": "27",
+      "approved": {
+        "source": "data/letters/memory-chain.json",
+        "idea": "A tall tree with Y-shaped branches and a long straight trunk, nuts hanging from the branches.",
+        "hook": "nuts",
+        "wordGloss": "tree",
+        "morphSvg": "assets/letters/morph/tsadi-final.svg"
+      },
+      "olderMnemonic": {
+        "source": "data/letters/mnemonics.json",
+        "imageIdea": "a leafy tree with Y-shaped branches and a long straight trunk",
+        "caption": "a Tree: Y branches, long trunk into the land: ts",
+        "beforeThisPass": null,
+        "textAgreement": "same"
+      },
+      "olderArt": {
+        "source": "tools/images/spec.mjs keyword (the prompt behind the files in assets/img/gen)",
+        "keyword": "Tree with a taproot",
+        "agreement": "same",
+        "inspected": false
+      },
+      "files": {
+        "morphSvg": {
+          "path": "assets/letters/morph/tsadi-final.svg",
+          "exists": true
+        },
+        "genPrintStems": [
+          "print_ari",
+          "print_mnemonic",
+          "print_noa",
+          "print_s1",
+          "print_s2",
+          "print_s3",
+          "print_silhouette",
+          "print_v1",
+          "print_v2",
+          "print_v3"
+        ],
+        "genAlternateSlot": {
+          "id": "J-0757",
+          "filesOnDisk": 0,
+          "alt": "Alternate memory picture for the letter tsadi-final: a cat sitting tall on one long pole, pointed ears forming a fork shape."
+        },
+        "placeholderSvgs": 17
+      },
+      "appShows": {
+        "olderTextFields": [
+          "shape",
+          "story",
+          "sound",
+          "soundAnchor",
+          "reason",
+          "lookalike",
+          "word (anchor word)",
+          "caption (workbook, book)"
+        ],
+        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+      },
+      "status": "keep",
+      "note": "Tree in both. Its alt story still has a cat on a pole; it is not displayed.",
+      "captionMustMatch": "tree",
+      "retiredPatterns": []
+    }
+  ],
+  "variants": [
+    {
+      "id": "vet",
+      "parent": "bet",
+      "caption": "Bet's house with no ball: Vacant, V",
+      "imageIdea": "an empty cartoon house with a 'for rent' sign and a vase in the window",
+      "beforeThisPass": null,
+      "morphSvg": null,
+      "captionMustMatch": "house",
+      "retiredPatterns": [],
+      "note": "No morph SVG of its own; the app shows the parent letter picture."
+    },
+    {
+      "id": "khaf",
+      "parent": "kaf",
+      "caption": "Kaf's cup, empty, blown on: Khhh",
+      "imageIdea": "an empty cup lying on its side with a puff of breath",
+      "beforeThisPass": "empty wooden spoon with a puff of breath",
+      "morphSvg": null,
+      "captionMustMatch": "cup",
+      "retiredPatterns": [
+        "spoon"
+      ],
+      "note": "No morph SVG of its own; the app shows the parent letter picture."
+    },
+    {
+      "id": "fe",
+      "parent": "pe",
+      "caption": "Pe without the pop: a Feather floating, F",
+      "imageIdea": "a mouth gently blowing a feather",
+      "beforeThisPass": null,
+      "morphSvg": null,
+      "captionMustMatch": "feather",
+      "retiredPatterns": [],
+      "note": "No morph SVG of its own; the app shows the parent letter picture."
+    },
+    {
+      "id": "sin",
+      "parent": "shin",
+      "caption": "Shin with the dot on the left: a Sun on the left, Sss",
+      "imageIdea": "a three-flame candle with a small bright sun-dot at its upper left",
+      "beforeThisPass": null,
+      "morphSvg": "assets/letters/morph/sin.svg",
+      "captionMustMatch": "sun",
+      "retiredPatterns": [],
+      "note": "Has its own morph SVG (the 28th file)."
+    }
+  ],
+  "ayin": {
+    "rule": "Stated per reading, only from data/pronunciation/consonants.json (verified true): Israeli [ʔ] or silent, merged with alef (\"do not try a pharyngeal in Israel\"); Sephardi pharyngeal [ʕ] (Western Sephardim [ŋ]); Ashkenazi silent (relic [ŋ] in Yiddish Yankev, mayse).",
+    "fieldsChanged": [
+      "mnemonics.json ayin sound, soundAnchor, story, altStory, caption, lookalike, imageIdea; alef lookalike; meta.note",
+      "memory-chain.json ayin story (via tools/letters/memory-chain.source.json)",
+      "tools/images/spec.mjs ayin sound (printed in the book header and the art prompt; it said \"silent in Tel Aviv, throaty in Mizrahi speech\", which the data does not say)"
+    ],
+    "unqualifiedSilentFound": false,
+    "notDecidedByData": [
+      "How many Sephardi or Mizrahi communities keep a throat sound for ayin, and which: the data gives one \"Sephardi\" textbook model and says it is not a model of any community.",
+      "Whether Ashkenazi ayin is always silent: data/traditions/sounds.json says \"silent in most forms; traditional authorities advised a throaty sound in prayer, which is rarely done\".",
+      "Alef has the same issue: its fields say silent, while consonants.json lists a glottal stop [ʔ] for Sephardi. Not changed in this pass."
+    ]
+  },
+  "garden": {
+    "wordList": {
+      "file": "data/vocab/words.json",
+      "id": "ha5babfe9",
+      "pointing": "patach + dagesh",
+      "gloss": "a garden",
+      "register": "formal",
+      "flags": "needsReview: example token fits another entry; homograph",
+      "plural": "patach + dagesh"
+    },
+    "segolHomograph": "data/vocab/words.json also has the same consonants with segol + dagesh (id had0d3973, \"a gene\"); that is a different word.",
+    "mnemonicsBefore": "qamats + dagesh (nun-final anchor word)",
+    "mnemonicsNow": "patach + dagesh, copied from the word list",
+    "agreeingSources": [
+      "data/curriculum/lessons.json (4)",
+      "data/curriculum/lessons-intermediate/I-42.json (3)",
+      "data/wordtrace/words.json",
+      "data/pronunciation/runtime/lookup-02.json",
+      "data/tts/soundwords.*.json (lesson-word and vocab-alias)",
+      "tools/curriculum/intermediate/isr2.py"
+    ],
+    "changedToMatch": [
+      "data/letters/mnemonics.json",
+      "data/audio/manifest.json (2 anchor-nun-final rows, rebuilt)",
+      "data/tts/soundwords.israeli.json (1 row, rebuilt)",
+      "docs/voices/* and docs/drafts/batches/batch-19-word.csv (regenerated)"
+    ],
+    "notInSrc": "no occurrence in src/",
+    "reviewer": "A qualified Hebrew reader should confirm the pointing and the word choice. The word list is dictionary-derived and flagged for review, and the data does not say whether the qamats form is a recognised variant, so it was not kept as one."
+  },
+  "decisions": [
+    "alef: keep the handstand mime (approved in the chain) or replace it with a Noa picture. The data shows no Noa letter picture.",
+    "Older art in assets/img/gen: keep hidden, rename or remove later. Nothing was deleted.",
+    "ayin and alef sound wording: reviewer to check the per-reading lines (see the ayin section).",
+    "garden pointing: reviewer to confirm patach + dagesh.",
+    "nun-final and tsadi-final alt stories still describe a cat: retire them or leave them hidden.",
+    "The brief mentions kneeling and standing nuns near lines 29 and 40 of mnemonics.json. Those lines are the nun (napping cat) and nun-final (nail) records; no kneeling or standing nun text was found in the file. docs/DECISIONS-NEEDED.md item 13 says a kneeling-nun picture was already replaced by the cat."
+  ]
+}

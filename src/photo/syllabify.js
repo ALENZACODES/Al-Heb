@@ -199,7 +199,36 @@ export function syllabifyWord(word, opts = {}) {
   finish();
   const out = syls.map((s) => { const { _t, ...r } = s; r.he = r.he.normalize('NFC'); if (substituted) r.substituted = true; return translit ? { ...r, translit: _t } : r; });
   applyStress(out, w, { exceptions, segolateHeuristic });
+  out.confidence = readingConfidence(cl, out);
   return out;
+}
+
+/** Plain-language text for each reason code in `confidence.reasons`. */
+export const CONFIDENCE_REASONS = {
+  'final-stress-assumed': 'stress is assumed to fall on the last syllable; only a very short exception list exists',
+  'segolate-stress-guess': 'stress was guessed from the two-syllable segolate pattern',
+  'shva-rules-partial': 'silent versus vocal shva follows a partial rule set (accents, prefixes and word forms are not checked)',
+  'shva-after-long-vowel-guess': 'a shva after a long vowel was called vocal on an assumed stress position',
+  'kamatz-gadol-katan-undecided': 'a kamatz before a shva (or in a one-syllable closed word) is read as "a"; the "o" reading (kamatz katan) is only used when marked',
+};
+
+/**
+ * How much weight a generated reading can bear. Backwards compatible: attached as a property of the returned syllable array
+ * (like `stressRule`). level 'low' = at least one heuristic reason applied; 'draft' = no known caveat fired, but the reading is
+ * still rule-generated and unchecked by a native speaker. There is deliberately no 'verified' level.
+ * @returns {{level:'low'|'draft', reasons:string[], checked:false}}
+ */
+function readingConfidence(cl, syls) {
+  const reasons = [];
+  const rule = syls.stressRule || '';
+  if (syls.length > 1 && rule.startsWith('default-final')) reasons.push('final-stress-assumed');
+  if (rule.startsWith('segolate-heuristic')) reasons.push('segolate-stress-guess');
+  const base = cl.filter((c) => c.role === 'cons');
+  if (base.some((c) => c.vowel === 'shva')) reasons.push('shva-rules-partial');
+  if (base.some((c, k) => k > 0 && c.vowel === 'shva' && c.shva === 'na' && (LONG_FOR_SHVA.has(base[k - 1].vowel) || base[k - 1].vowel === 'kamatz'))) reasons.push('shva-after-long-vowel-guess');
+  // only where the "o" reading is a live alternative: kamatz closed by a shva, or a one-syllable closed word (כָּל)
+  if (base.some((c, k) => c.vowel === 'kamatz' && !c.qatan && (base[k + 1]?.vowel === 'shva' || (syls.length === 1 && k < base.length - 1)))) reasons.push('kamatz-gadol-katan-undecided');
+  return { level: reasons.length ? 'low' : 'draft', reasons, checked: false };
 }
 
 function lastBaseIndex(cl, idx) { for (let i = idx - 1; i >= 0; i--) if (cl[i].role === 'cons') return i; return -1; }

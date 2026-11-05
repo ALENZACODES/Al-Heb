@@ -6,7 +6,7 @@ modules, no build step, served by any static file server.
 
 ## Status
 
-Early draft. Nothing is deployed, no learner has used it, and no native speaker, teacher or clergy member has reviewed any
+Early draft. The code runs and has unit tests; the lessons, vocabulary and other Hebrew content are drafts built by programs, the audio is a list of scripts with no recordings, and many tests have not been run on real devices. A directory full of drafts is not a finished course. Nothing is deployed, no learner has used it, and no native speaker, teacher or clergy member has reviewed any
 Hebrew. Measured counts and known gaps are in [docs/STATUS.md](docs/STATUS.md).
 
 What has been checked, and how: scripted walks in headless Chromium (plus Firefox and WebKit emulation for one cross-engine
@@ -16,9 +16,9 @@ screen reader, any real recording (0 of 24,906 listed clips exist; sound is the 
 summarised in [docs/STATUS.md](docs/STATUS.md); the step list for going live is
 [docs/deploy/GO-LIVE-CHECKLIST.md](docs/deploy/GO-LIVE-CHECKLIST.md) (nothing on it has been done).
 
-**v0 versus preview.** The app has 85 routes. 15 are tier `v0` (the baby-steps first release: welcome, home, first day, the
+**v0 versus preview.** The app has 86 routes. 15 are tier `v0` (the baby-steps first release: welcome, home, first day, the
 r01 to r10 lesson path and review, letters and atlas, progress, settings with backup/restore/delete, about, credits, privacy,
-install, offline, search). The other 70 are tier `preview`: still reachable by direct link and search, but unreviewed, labelled
+install, offline, search). The other 71 are tier `preview`: still reachable by direct link and search, but unreviewed, labelled
 "Preview" and shown only in a collapsed group in the More sheet. The tier is the `tier` field on `ROUTES` in
 `src/shell/router.js`; the list and the promotion bar (native review, tests, a real-phone check, meta scan) are in
 [docs/v0/SCOPE.md](docs/v0/SCOPE.md). No route has met that bar yet, so "v0" means the intended first-release set, not a reviewed one.
@@ -73,7 +73,7 @@ There is no single docs index file; `docs/` has top-level files plus one folder 
 
 ## Decisions needed
 
-Decisions only the owner can make (14 items: licence, hosting account, recordings, images, reviewers and more) are in [docs/DECISIONS-NEEDED.md](docs/DECISIONS-NEEDED.md). Other next steps:
+Decisions only the owner can make (15 items: licence, hosting account, recordings, images, reviewers and more) are in [docs/DECISIONS-NEEDED.md](docs/DECISIONS-NEEDED.md). Other next steps:
 [docs/NEXT-STEPS-JOHN.md](docs/NEXT-STEPS-JOHN.md). Comparison with Duolingo Hebrew: [docs/strategy/DUOLINGO-100.md](docs/strategy/DUOLINGO-100.md).
 
 ## Licence

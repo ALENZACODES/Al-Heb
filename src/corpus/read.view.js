@@ -195,6 +195,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     ctl.append(bar);
 
     if (state.translit && !translitFn) ctl.append(el('p', { class: 'crp-warn' }, 'Transliteration needs src/pronunciation/transliterate.js, which is not available here.'));
+    if (state.translit && translitFn) ctl.append(el('p', { class: 'crp-translit-note', role: 'note' }, 'Transliteration is a draft made by spelling rules, not checked by a native speaker. Stress is not marked, and some silent or vocal shvas may be wrong.'));
 
     // letter highlight control
     const lettersBox = el('div', { class: 'crp-letters', role: 'group', 'aria-label': 'Highlight a letter: choose a letter name to mark every occurrence' });

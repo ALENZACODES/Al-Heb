@@ -97,7 +97,7 @@ export function mount(root, ctx) {
         el("ul", {}, items),
         el("h3", {}, "Optional downloads"),
         el("ul", { id: "of-extras" }, optMissing.map(({ g, miss }) => el("li", { "data-extra": g.id }, `${g.label}: ${miss === 0 ? "saved" : `${miss} of ${g.urls.length} not saved, about ${g.approxMB} MB`}`))),
-        el("p", { class: "muted" }, "Spoken audio clips are not part of this: none are recorded yet.")));
+        el("p", { class: "muted" }, "Spoken audio clips are not part of this: none are recorded yet. The speech you hear is your browser's own voice, not a recording; whether it works without a connection depends on your device.")));
     }
 
     // download

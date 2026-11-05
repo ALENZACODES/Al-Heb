@@ -6,9 +6,9 @@ The numbers in the first table were produced by the command beside it, run in th
 
 | Fact | Value | Command | Re-run in this refresh |
 |---|---|---|---|
-| Routes in the route table | 85 (10 with a nav entry, 45 marked optional; 15 tier `v0`, the other 70 `preview`; it was 77 earlier today, the audit board added eight preview routes) | `node -e "import('./src/shell/router.js').then(m=>console.log(m.ROUTES.length, m.ROUTES.filter(r=>r.nav).length, m.ROUTES.filter(r=>r.optional).length, m.ROUTES.filter(r=>r.tier==='v0').length))"` | yes |
-| View files | 78 | `find src -name '*.view.js' \| wc -l` | yes |
-| JS files under src | 253 | `find src -name '*.js' \| wc -l` | yes |
+| Routes in the route table | 86 when re-run during the honesty audit (10 with a nav entry, 45 marked optional; 15 tier `v0`, the other 71 `preview`; it was 85 and 77 earlier today) | `node -e "import('./src/shell/router.js').then(m=>console.log(m.ROUTES.length, m.ROUTES.filter(r=>r.nav).length, m.ROUTES.filter(r=>r.optional).length, m.ROUTES.filter(r=>r.tier==='v0').length))"` | yes |
+| View files | 79 (re-run during the honesty audit) | `find src -name '*.view.js' \| wc -l` | yes |
+| JS files under src | 268 (re-run during the honesty audit) | `find src -name '*.js' \| wc -l` | yes |
 | Core lessons | 125 | `node -e "console.log(JSON.parse(require('fs').readFileSync('data/curriculum/lessons.json')).lessons.length)"` | yes |
 | Intermediate lessons | 50 (I-01 to I-50) | `ls data/curriculum/lessons-intermediate \| grep -c '^I-[0-9]*\.json$'` | yes |
 | Vocabulary records | 6,303 (was 6,297 earlier today: the first-500 follow-up added six records) | `node -e "console.log(JSON.parse(require('fs').readFileSync('data/vocab/meta.json')).counts.total)"` | yes |
@@ -18,8 +18,8 @@ The numbers in the first table were produced by the command beside it, run in th
 | Images approved | 0 (`approvals` is `{}` in `data/images/approvals.json`), so no generated image is shown to learners | `data/images/approvals.json` | yes (file read) |
 | Image files on disk | 1,828 in `assets/img/gen`, 797 in `assets/img/placeholders`, 54 in `assets/img/refs` (the `gen` count was 1,664 earlier today: other agents are still adding) | `for d in gen placeholders refs; do find assets/img/$d -type f \| wc -l; done` | yes |
 | Audio clips listed in the manifests | 24,906 (my script over the four manifest files; the earlier value today was 24,900, and I did not split the six extra by file; it was 22,716 before that) | `node -e` over `data/audio/manifest.json` and `data/audio/manifest-words-{ashkenazi,israeli,sephardi}.json` (arrays) | yes |
-| Audio clips recorded | 0 of 24,906 (every entry has status `missing`) | same script, grouped by `status` | yes |
-| Test files | 241 `*.test.js` in `tests/` | `ls tests/*.test.js \| wc -l` | yes |
+| Audio clips recorded | 0 of 24,906 (every entry has status `missing`); no `.mp3`, `.ogg`, `.m4a` or `.opus` file exists under `assets/` (checked during the honesty audit) | same script, grouped by `status` | yes |
+| Test files | 252 `*.test.js` in `tests/` (re-run during the honesty audit; counts files, not passes) | `ls tests/*.test.js \| wc -l` | yes |
 | Docs | 1,223 files under `docs/` (377 in `qa`, 205 in `images`, 106 in `voices`, 105 in `review`, 65 in `letters`, 56 in `workbook`, 51 in `vocab`, 35 in `screens`; 10 top-level `docs/*.md`) | `find docs -type f \| wc -l`; `for d in docs/*/; do echo "$(find $d -type f \| wc -l) $d"; done \| sort -rn` | yes |
 | Text scan for tool names | PASS (4,294 tracked files, 24 allowlisted; run again at about 21:10) | `node tools/meta/scan.mjs --text` | yes |
 | Deploy build | 723 files, 59.76 MiB; install list 284 files, 3.36 MiB; 246 more files (10.46 MiB) fetched on demand (stale: measured before the eight new routes, the memory-chain changes and the later pictures; not re-run because the build writes `dist/`) | `node tools/deploy/build_site.mjs` | no (earlier run today) |
@@ -37,11 +37,23 @@ I did not run the full suite in this refresh. Re-run by me at about 21:05 (each 
 - Accessibility pass: 68 pass, 1 fail (`data/wordtrace/words.json is current`) (`docs/qa/A11Y-V0.md`).
 - CI triage: 9 test files re-run on a copy of the working tree; all pass except one image alt-text test, `images.redo` #653 (`docs/test/CI-FAILURE-TRIAGE.md`). Whether CI passes after a push has not been observed.
 
+## What kind of thing each part is (added by the honesty audit, 2026-11-04)
+
+Read this before quoting any count above. A folder full of files is not a finished course.
+
+| Kind | What it covers here | Evidence in the repo |
+|---|---|---|
+| Finished code | None is called finished. Code exists and has unit tests that passed in the runs recorded above; it has not been used by a learner, reviewed by a native speaker or run on a real phone. | `tests/`, runs listed under Tests |
+| Draft educational content | The 125 core and 50 intermediate lessons, 6,303 vocabulary records, 70 corpus records, respellings, mnemonics, stroke data, the placement check, the word lists in Listen and pick. Built by programs and the repo's own checks; every Hebrew string is unreviewed. | `docs/review/STATUS.md` (0 of 3,718 rows reviewed) |
+| Unrecorded scripts | 24,906 audio clips are listed in the manifests and all have status `missing`; no audio file exists under `assets/`. The record kit, the voice-actor kits and the first-100 lists are plans and tools, not recordings. | manifests; `find assets -name '*.mp3' -o -name '*.ogg' -o -name '*.m4a' -o -name '*.opus'` finds none |
+| Unexecuted tests | The browser-tier tests (`npm run test:browser`) were not run in the audit that wrote this section; the full unit tier was not re-run either, only the files named in the audit report `docs/qa/HONESTY-AUDIT.md`. Real-phone, real-screen-reader and live-host checks have not been run by anyone. | Tests section above |
+| Reviewer dependencies | Every item needing a Hebrew teacher, cantor or rabbi, a native speaker, a lawyer or a licence decision. Nothing is waiting on a tool; all of it waits on people. | `docs/review/STATUS.md`, `docs/DECISIONS-NEEDED.md`, `docs/legal/DECISIONS-FOR-JOHN.md` |
+
 ## Deployed and reviewed
 
 - Deployed: nothing. No host account exists (`docs/deploy/CLOUDFLARE-PAGES.md`, `docs/deploy/GO-LIVE-CHECKLIST.md`, `docs/DEPLOY.md`). No learner has used the app.
-- v0 tiering: 15 routes are tier `v0`, 70 are `preview` and carry a banner (`docs/v0/SCOPE.md`). Promotion needs native review, tests, a real-phone check and the scan, none of which has happened for any route.
-- Reviewed by native speakers, teachers or clergy: 0 of 3,718 rows in the seven review packs (`docs/review/STATUS.md`, generated by `node tools/review/build-packs.mjs`). The area packets (`docs/review/README.md`, `docs/review/out/manifest.json`) list 8,508 items in 25 areas, about 92.9 reviewer hours by a per-item time model (phase one: 4,510 items, 67.4 h); the hours are an estimate, not a measurement. The older figure of 7,039 rows in earlier copies of this file is superseded by the 3,718 in `docs/review/STATUS.md`.
+- v0 tiering: 15 routes are tier `v0`, 71 are `preview` and carry a banner (`docs/v0/SCOPE.md`). Promotion needs native review, tests, a real-phone check and the scan, none of which has happened for any route.
+- Reviewed by native speakers, teachers or clergy: 0 of 3,718 rows in the seven review packs (`docs/review/STATUS.md`, generated by `node tools/review/build-packs.mjs`). The area packets (`docs/review/README.md`, `docs/review/out/manifest.json`) list 8,541 items in 25 areas, about 94.5 reviewer hours by a per-item time model (phase one: 4,543 items, 69.0 h; figures read from `docs/review/STATUS.md` during the honesty audit); the hours are an estimate, not a measurement. The older figure of 7,039 rows in earlier copies of this file is superseded by the 3,718 in `docs/review/STATUS.md`.
 - Real-device testing: none. Cross-engine run (Chromium, Firefox, WebKit, emulation): `docs/qa/CROSS-ENGINE.md`; WebKit offline checks failed there for an undetermined reason, so Safari offline is unverified. The device and route sweeps are headless Chromium emulation (`docs/qa/DEVICES.md`, `docs/qa/SWEEP.md`).
 - Code licence: none chosen (no `LICENSE` file: `ls LICENSE*` finds nothing).
 

@@ -58,7 +58,7 @@ export function update({ root = REPO_ROOT, work = defaultWork(), reportPath, cop
         fs.copyFileSync(src, dst);
         fs.writeFileSync(`${dst}.meta.json`, JSON.stringify({
           status: TTS_STATUS, source, synth, renderedAt: now(), engine: r.engine, cer: r.cer === '' || r.cer == null ? null : Number(r.cer), reviewed: false, redistributionCleared: false,
-          note: base === 'tts-respelled'
+          note: mock ? 'MOCK RUN: the audio is a test tone, not speech. Plumbing test only.' : base === 'tts-respelled'
             ? 'Synthetic voice made from a respelling (sound word) of the Hebrew. Not a human recording. No human has listened to it; how it sounds is unknown. Chatterbox output carries an inaudible PerTh watermark. Redistribution/sale clearance per docs/tts/README.md.'
             : 'Synthetic voice made from pointed Hebrew. Not a human recording. No human has listened to it. Chatterbox output carries an inaudible PerTh watermark. Redistribution/sale clearance per docs/tts/README.md.',
         }, null, 1) + '\n');

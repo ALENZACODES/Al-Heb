@@ -6,7 +6,7 @@
 //                     if ctx.photoLocalServer is set (see tools/ocr-server.mjs).
 // Accuracy on real photos is UNMEASURED (synthetic benchmark only: docs/photo/BENCHMARK.md). The UI says so.
 import { runPipeline } from './pipeline.js';
-import { loadLane3Shva } from './syllabify.js';
+import { loadLane3Shva, CONFIDENCE_REASONS } from './syllabify.js';
 import { buildWordCards, loadTransliterator, loadLetterInfo, TRADITIONS } from './word-card.js';
 import { isLocalHelperUrl } from './engines/local-server.js';
 import { speechText } from '../shell/names.js';
@@ -127,6 +127,7 @@ export function mount(root, ctx = {}) {
           for (const t of TRADITIONS) tl.append(el('dt', {}, TRADITION_LABEL[t]), el('dd', {}, c.translit[t] + (t === 'sephardi' && c.translit.sameIsraeliSephardi ? ' (same spelling as Israeli: the Latin scheme does not show the difference)' : '')));
           card.append(el('p', { class: 'photo-label' }, 'Transliteration by tradition'), tl);
         }
+        if (c.draftNote) card.append(el('p', { class: 'photo-draft', role: 'note' }, c.draftNote, c.confidence?.reasons?.length ? ` Why: ${c.confidence.reasons.map((r) => CONFIDENCE_REASONS[r] || r).join('; ')}.` : ''));
         if (c.audio.canSpeak) card.append(el('button', { type: 'button', class: 'photo-hear', onclick: () => hearWord(c, note) }, 'Hear the word'));
         card.append(note);
         if (c.unpointedNote) card.append(el('p', { class: 'photo-note' }, c.unpointedNote));

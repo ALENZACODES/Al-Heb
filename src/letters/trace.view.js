@@ -210,7 +210,7 @@ export function mount(root, ctx = {}) {
     const g = h('div', { class: 'grid', dir: 'rtl', role: 'group', 'aria-label': t('trace.letters', 'Letters') });
     for (const l of state.letters) {
       const done = progress0.isCompleted(l.id, state.script);
-      g.appendChild(h('button', { dir: 'rtl', lang: 'he', 'aria-label': l.name + (done ? ', ' + t('trace.completed', 'completed') : ''), title: l.name + (done ? ' (' + t('trace.completed', 'completed') + ')' : ''), 'data-completed': done ? '1' : false, 'aria-pressed': l.id === current, onclick: () => onPick(l.id) }, l.he, done ? h('span', { class: 'badge', 'aria-hidden': 'true' }, '\u2713') : null));
+      g.appendChild(h('button', { dir: 'rtl', lang: 'he', 'aria-label': l.name + (done ? ', ' + t('trace.completed', 'drawn by you') : ''), title: l.name + (done ? ' (' + t('trace.completed', 'drawn by you') + ')' : ''), 'data-completed': done ? '1' : false, 'aria-pressed': l.id === current, onclick: () => onPick(l.id) }, l.he, done ? h('span', { class: 'badge', 'aria-hidden': 'true' }, '\u2713') : null));
     }
     try { makeRoving(g); } catch { /* a stripped-down DOM (unit tests) has no layout; every button then stays a tab stop */ }
     return g;
@@ -236,7 +236,7 @@ export function mount(root, ctx = {}) {
       if (rn.level !== 'none') body.appendChild(h('p', { class: 'notice' + (rn.level === 'high' ? ' notice-high' : ''), 'data-review': rn.level, role: rn.level === 'high' ? 'alert' : undefined }, rn.text)); }
     body.appendChild(h('div', { class: 'row' },
       h('span', { class: 'big', dir: 'rtl', lang: 'he' }, letter.he),
-      h('div', {}, h('strong', {}, letter.name + ' '), he(letter.nameHe), progress0.isCompleted(letter.id, state.script) ? h('span', { class: 'chip', role: 'status' }, '\u2713 ' + t('trace.completed', 'completed') + ' (' + state.script + ')') : (progress0.isAssisted(letter.id, state.script) ? h('span', { class: 'chip', role: 'status' }, t('trace.walkedThrough', 'walked through with buttons, not drawn yet') + ' (' + state.script + ')') : null), h('br'), h('span', {}, (() => { const rec = state.consonants ? state.consonants[letter.id] : null; const trad = congregationOf(ctx.settings); const mine = letterSound(rec, trad, { fallbackEn: letter.sound.en }).en; return mine; })()))));
+      h('div', {}, h('strong', {}, letter.name + ' '), he(letter.nameHe), progress0.isCompleted(letter.id, state.script) ? h('span', { class: 'chip', role: 'status' }, '\u2713 ' + t('trace.completed', 'drawn by you') + ' (' + state.script + ')') : (progress0.isAssisted(letter.id, state.script) ? h('span', { class: 'chip', role: 'status' }, t('trace.walkedThrough', 'walked through with help, not drawn by you yet') + ' (' + state.script + ')') : null), h('br'), h('span', {}, (() => { const rec = state.consonants ? state.consonants[letter.id] : null; const trad = congregationOf(ctx.settings); const mine = letterSound(rec, trad, { fallbackEn: letter.sound.en }).en; return mine; })()))));
     { // memory card: letter -> picture -> sound hook -> word. For a letter the learner has not traced yet it sits right under the letter row,
       // above the stage (first screen on a phone); once traced it moves below the toggles so the stage stays first.
       const me = entryFor(state.chain, letter.id);
@@ -273,7 +273,7 @@ export function mount(root, ctx = {}) {
     try {
       tracer = createTracer(stage, letter, state.script, Object.assign({}, state.strict ? MODES.strict : MODES.forgiving, {
         showOutline: state.outline,
-        onStrokeResult: r => { fb.textContent = r.forced ? t('trace.shown', 'Here is the correct stroke.') : t('trace.good', 'Good!'); setProgress(); },
+        onStrokeResult: r => { if (r.forced) assistedRun = true; /* the correct stroke was shown for you: not independent drawing */ fb.textContent = r.forced ? t('trace.shown', 'Here is the correct stroke.') : t('trace.good', 'Good!'); setProgress(); },
         onUserStroke: pts => { attempt.push(pts); if (attempt.length > 6) attempt.shift(); },
         onMistake: m => {
           fb.textContent = t(m.feedback.key, m.feedback.text);
@@ -285,12 +285,12 @@ export function mount(root, ctx = {}) {
           }
         },
         onComplete: c => {
-          fb.textContent = (c.perfect ? t('trace.perfect', 'Perfect! ') : t('trace.done', 'Done. ')) + letter.name;
+          fb.textContent = (assistedRun ? t('trace.walked', 'Walked through. ') : c.perfect ? t('trace.perfect', 'Perfect! ') : t('trace.done', 'Done. ')) + letter.name;
           try {
             attempt = [];
             if (assistedRun) { // walked through with the buttons: recorded apart from drawn completions
               progress0.recordAssisted(letter.id, state.script);
-              fb.textContent += ' ' + t('trace.assistedNote', 'You used the stroke buttons, so this is recorded as walked through, not as drawn.');
+              fb.textContent += ' ' + t('trace.assistedNote', 'The app moved the strokes for you (stroke buttons or shown strokes), so this is recorded as walked through, not as drawn by you.');
               return;
             }
             progress0.record(letter.id, state.script, c);

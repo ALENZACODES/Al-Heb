@@ -81,3 +81,46 @@ test('audio path: plays the word and offers 4 written choices', async () => {
   assert.doesNotMatch(root.text, /Audio not recorded yet/);
   un();
 });
+
+test('title, intro and score follow the real mode; a visible word is not counted as listening', async () => {
+  const root = new N('div'), st = store();
+  const un = mount(root, { listenData: { config: cfg, words }, store: st, rng: seeded(), audio: { has: () => false, play: async () => ({ source: 'none' }) } });
+  await waitFor(() => btn(root, /Start read-and-match/));
+  const h1 = root.find((n) => n.tag === 'h1')[0];
+  assert.equal(h1.text, 'Read and match');
+  assert.match(root.text, /reading drill/);
+  assert.match(root.text, /not listening/);
+  btn(root, /Start read-and-match/).click();
+  const opts = await waitFor(() => root.find((n) => n.attrs.role === 'group')[0]);
+  opts.children[0].click();
+  await waitFor(() => st.m['listen.v1']);
+  assert.equal(st.m['listen.v1'].heard, 0);
+  un();
+});
+
+test('offline recording list is named as such, not as "not recorded yet"', async () => {
+  const root = new N('div');
+  const un = mount(root, { listenData: { config: cfg, words }, store: store(), rng: seeded(), audio: { has: () => false, manifestState: 'offline' } });
+  await waitFor(() => btn(root, /Start read-and-match/));
+  assert.match(root.text, /could not be loaded/);
+  assert.doesNotMatch(root.text, /Audio not recorded yet/);
+  un();
+});
+
+test('listening drill: title says Listen and pick, clip kind is named, listening score is separate', async () => {
+  const root = new N('div'), st = store();
+  const un = mount(root, { listenData: { config: cfg, words }, store: st, rng: seeded(), audio: { has: () => true, status: () => ({ source: 'file', entryStatus: 'synthetic-unreviewed' }), play: async () => ({ source: 'file' }) } });
+  (await waitFor(() => btn(root, /Start listening drill/))).click();
+  assert.equal(root.find((n) => n.tag === 'h1')[0].text, 'Listen and pick');
+  const opts = await waitFor(() => root.find((n) => n.attrs.role === 'group')[0]);
+  opts.children[0].click();
+  await waitFor(() => st.m['listen.v1']);
+  assert.equal(st.m['listen.v1'].heard, 1);
+  un();
+  const r2 = new N('div');
+  const un2 = mount(r2, { listenData: { config: cfg, words }, store: st, rng: seeded(), audio: { has: () => true, status: () => ({ source: 'file', entryStatus: 'synthetic-unreviewed' }) } });
+  await waitFor(() => btn(r2, /Start listening drill/));
+  assert.match(r2.text, /computer-made voice, not a recorded teacher/);
+  assert.match(r2.text, /after hearing a clip/);
+  un2();
+});

@@ -5,7 +5,7 @@
  * mountChunkedLesson(root, ctx, lessonId) -> unmount. Reads and writes the store key lesson.resume.v1.
  */
 import { lessons, byId } from "./lessons.js";
-import { el, heText, replaceKeepingFocus, storeGet, storeSet } from "./dom.js";
+import { el, heText, replaceKeepingFocus, storeGet, storeSet, showSaveFailure } from "./dom.js";
 import { loadContent, vowelEnglish } from "./content.js";
 import { saveQuickCheck, loadState } from "./actions.js";
 import { due as dueCards } from "./srs.js";
@@ -113,8 +113,9 @@ export function mountChunkedLesson(root, ctx, lessonId) {
         extraLinks: [el("a", { class: "btn secondary", href: `#/learn?lesson=${lesson.id}&review=1` }, "Review these cards")] }));
       wrap.querySelector?.("#alef-int-ex")?.focus?.();
     }
-    async function finish() {
-      const { updated } = await saveQuickCheck(ctx, lesson, questions, results);
+    async function finish(host) {
+      let updated;
+      try { ({ updated } = await saveQuickCheck(ctx, lesson, questions, results)); } catch (e) { if (alive) showSaveFailure(host, e, () => finish(host)); return; } // never say "Lesson complete" for a lesson that was not saved
       resumeAll = clearResume(resumeAll, lesson.id); await storeSet(ctx, RESUME_KEY, resumeAll);
       if (!alive) return;
       let dueCount; try { dueCount = dueCards(Object.values((await loadState(ctx)).cards), Date.now()).length; } catch { dueCount = undefined; }
@@ -149,7 +150,7 @@ export function mountChunkedLesson(root, ctx, lessonId) {
             results = { ...Object.fromEntries(Object.entries(results).filter(([id]) => !chunk.ids.includes(id))), ...r };
             await persist({ results, replaceResults: true, chunk: Math.min(cur + 1, plan.length - 1) });
             if (!alive) return;
-            if (cur >= plan.length - 1) return finish();
+            if (cur >= plan.length - 1) return finish(host);
             host.replaceChildren(el("section", { class: "card" }, el("h2", { id: "alef-part-done", tabindex: "-1" }, "That part is done"),
               el("p", {}, "Your place is saved."), el("div", { class: "row alef-actions alef-actionbar" }, el("button", { type: "button", class: "btn", id: "alef-next-part", onclick: () => goTo(cur + 1) }, "Next part"), pauseLink())));
             host.querySelector?.("#alef-part-done")?.focus?.({ preventScroll: true });

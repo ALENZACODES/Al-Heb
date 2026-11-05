@@ -110,9 +110,12 @@ test('flow: one screen per step, one letter first, the check opens Next, five wi
   for (let step = 1; step <= 5; step++) {
     await waitFor(() => new RegExp(`Step ${step} of 5`).test(root.textContent));
     for (let guard = 0; guard < 3; guard++) {
-      const live = () => root.queryAll('.fd-check button').filter((b) => !('disabled' in b.attrs));
-      await waitFor(() => btns(root, /^(Next|Finish)$/).length || live().length, { timeout: 4000, message: 'next question or Next' });
+      const live = () => root.queryAll('.fd-check button').filter((b) => !('disabled' in b.attrs) && !/^Next question$/.test(b.textContent));
+      const nextQ = () => btns(root, /^Next question$/);
+      // the quick check no longer moves to the next question by itself: a "Next question" button does (motor lane)
+      await waitFor(() => btns(root, /^(Next|Finish)$/).length || live().length || nextQ().length, { timeout: 4000, message: 'next question or Next' });
       if (btns(root, /^(Next|Finish)$/).length) break;
+      if (nextQ().length) { await nextQ()[0].click(); await tick(40); continue; }
       const opts = live(); assert.ok(opts.length >= 2 && opts.length <= 3, 'a check has 2 or 3 choices');
       await opts[0].click(); await tick(40);
     }

@@ -84,7 +84,7 @@ export function sanitizeSvg(text) {
   if (typeof text !== 'string' || text.length > 200000) return null;
   let s = text.replace(/^﻿/, '').replace(/<\?xml[\s\S]*?\?>/g, '').replace(/<!--[\s\S]*?-->/g, '').trim();
   if (!/^<svg[\s>]/i.test(s) || !/<\/svg>\s*$/i.test(s)) return null;
-  if (/<!\s*(DOCTYPE|ENTITY)|<!\[CDATA\[|<\s*script|<\s*foreignObject|<\s*iframe|<\s*image|<\s*a[\s>]|javascript:|data:|@import|&#|\son[a-z]+\s*=/i.test(s)) return null;
+  if (/<!\s*(DOCTYPE|ENTITY)|<!\[CDATA\[|<\s*script|<\s*foreignObject|<\s*iframe|<\s*image|<\s*a[\s>]|javascript:|data:|@import|&#|[\s\"'/]on[a-z]+\s*=/i.test(s)) return null; // an event-handler attribute can follow a quote or a slash, not only a space
   for (const m of s.matchAll(/<\s*([a-zA-Z][\w:-]*)/g)) if (!OK_TAGS.has(m[1].toLowerCase())) return null;
   for (const m of s.matchAll(/(?:xlink:)?href\s*=\s*("([^"]*)"|'([^']*)')/gi)) { const v = (m[2] ?? m[3] ?? '').trim(); if (!v.startsWith('#')) return null; }
   for (const m of s.matchAll(/url\(\s*(['"]?)([^)'"]*)\1\s*\)/gi)) if (!m[2].trim().startsWith('#')) return null;

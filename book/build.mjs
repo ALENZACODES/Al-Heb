@@ -263,7 +263,7 @@ ${LETTERS.map((L) => `<tr><td>${L.nn}</td><td class="he" lang="he" dir="rtl">${g
 <div class="stroke"><div class="pair"><div>${sp.svg}<div class="cap">${sp.real ? `Print: ${sp.n} stroke${sp.n > 1 ? 's' : ''}` : 'Print strokes: none'}</div></div><div>${sc.svg}<div class="cap">${sc.real ? `Cursive: ${sc.n} (${esc(sc.quality ?? '')})` : 'Cursive strokes: none'}</div></div></div></div>
 <div class="mnemonic">${overlay}</div>
 <div class="side"><div class="mnemonic-cap"><b>Find it:</b> ${esc(L.keyword)}. The letter's shape: ${esc(L.shape)}. <span class="small">(image: ${R.isReal(`${base}_mnemonic`) ? 'final' : 'AI-image placeholder'})</span></div>
-<div class="slot link-slot">${qrBox('letter_' + L.id, 'qr')}<div class="url"><b>Hear it &amp; trace it:</b><br/>${esc(url)}${ph ? '<span class="ph">placeholder host, not a live site</span>' : ''}</div></div></div>
+<div class="slot link-slot">${qrBox('letter_' + L.id, 'qr')}<div class="url"><b>Open it &amp; trace it:</b><br/>${esc(url)}${ph ? '<span class="ph">placeholder host, not a live site</span>' : ''}</div></div></div>
 <div class="vocab">${vocab}</div>${sound}</section>`;
   }).join('\n');
 

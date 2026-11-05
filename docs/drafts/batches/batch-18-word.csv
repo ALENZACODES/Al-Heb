@@ -1,0 +1,101 @@
+id,kind,group,he
+i-47-w9,word,lesson-word,מָחָר
+i-47-w10,word,lesson-word,אֶתְמוֹל
+i-47-w11,word,lesson-word,אֵין
+i-47-w12,word,lesson-word,יֵשׁ
+i-48-w1,word,lesson-word,חֶשְׁבּוֹן
+i-48-w2,word,lesson-word,מִסְפָּר
+i-48-w3,word,lesson-word,חֲתִימָה
+i-48-w4,word,lesson-word,שֵׁם
+i-48-w5,word,lesson-word,כְּתֹבֶת
+i-48-w6,word,lesson-word,טֶלֶפוֹן
+i-48-w7,word,lesson-word,הַיּוֹם
+i-48-w8,word,lesson-word,שָׁנָה
+i-48-w9,word,lesson-word,חֹדֶשׁ
+i-48-w10,word,lesson-word,הַלְוָאָה
+i-48-w11,word,lesson-word,כֶּסֶף
+i-48-w12,word,lesson-word,בַּנְק
+i-49-w1,word,lesson-word,הוֹדָעָה
+i-49-w2,word,lesson-word,תְּמוּנָה
+i-49-w3,word,lesson-word,פְּרוֹפִיל
+i-49-w4,word,lesson-word,סִיסְמָה
+i-49-w5,word,lesson-word,אִינְטֶרְנֶט
+i-49-w6,word,lesson-word,טֶלֶפוֹן
+i-49-w7,word,lesson-word,חָבֵר
+i-49-w8,word,lesson-word,חֲבֵרָה
+i-49-w9,word,lesson-word,אֶפְשָׁר לִשְׁלֹחַ
+i-49-w10,word,lesson-word,שׁוֹלֵחַ
+i-49-w11,word,lesson-word,רֶגַע
+i-49-w12,word,lesson-word,בְּסֵדֶר
+i-50-w1,word,lesson-word,שַׁבָּת שָׁלוֹם
+i-50-w2,word,lesson-word,שָׁבוּעַ טוֹב
+i-50-w3,word,lesson-word,חַג שָׂמֵחַ
+i-50-w4,word,lesson-word,שָׁנָה טוֹבָה
+i-50-w5,word,lesson-word,מַזָּל טוֹב
+i-50-w6,word,lesson-word,לְחַיִּים
+i-50-w7,word,lesson-word,בְּהַצְלָחָה
+i-50-w8,word,lesson-word,תִּשְׁמֹר עַל עַצְמְךָ
+i-50-w9,word,lesson-word,לִבְרִיאוּת
+i-50-w10,word,lesson-word,בְּעֶזְרַת הַשֵּׁם
+i-50-w11,word,lesson-word,יוֹם נָעִים
+i-50-w12,word,lesson-word,סְלִיחָה
+greetings-01,word,phrasebook,שָׁלוֹם
+greetings-02,word,phrasebook,הֵי
+greetings-15,word,phrasebook,בְּסֵדֶר
+greetings-16,word,phrasebook,מְצֻיָּן
+greetings-20,word,phrasebook,לְהִתְרָאוֹת
+greetings-25,word,phrasebook,בְּהַצְלָחָה
+greetings-26,word,phrasebook,לִבְרִיאוּת
+politeness-01,word,phrasebook,תּוֹדָה
+politeness-03,word,phrasebook,בְּבַקָּשָׁה
+politeness-06,word,phrasebook,סְלִיחָה
+politeness-08,word,phrasebook,כֵּן
+politeness-09,word,phrasebook,לֹא
+politeness-10,word,phrasebook,אוּלַי
+politeness-11,word,phrasebook,בְּטַח
+politeness-12,word,phrasebook,סַבָּבָה
+politeness-13,word,phrasebook,יַאלְלָה
+politeness-14,word,phrasebook,וָואלָה
+politeness-15,word,phrasebook,אַחִי
+politeness-16,word,phrasebook,יוֹפִי
+politeness-19,word,phrasebook,דַּי
+politeness-20,word,phrasebook,רֶגַע
+fillers-01,word,phrasebook,אָז
+fillers-02,word,phrasebook,נוּ
+fillers-03,word,phrasebook,טוֹב
+fillers-04,word,phrasebook,נָכוֹן
+fillers-06,word,phrasebook,בֶּאֱמֶת?
+fillers-07,word,phrasebook,מַמָּשׁ
+fillers-08,word,phrasebook,פָּשׁוּט
+fillers-09,word,phrasebook,סְתָם
+fillers-10,word,phrasebook,בְּעֶצֶם
+fillers-11,word,phrasebook,כְּלוֹמַר
+fillers-12,word,phrasebook,אֲבָל
+cafe-05,word,phrasebook,אֶסְפְּרֶסוֹ
+cafe-09,word,phrasebook,מַיִם
+cafe-11,word,phrasebook,בִּירָה
+cafe-12,word,phrasebook,יַיִן
+cafe-13,word,phrasebook,לְחַיִּים!
+cafe-16,word,phrasebook,חוּמוּס
+cafe-17,word,phrasebook,פָלָאפֶל
+cafe-18,word,phrasebook,שַׁקְשׁוּקָה
+cafe-19,word,phrasebook,פִּיתָה
+cafe-20,word,phrasebook,סָלָט
+shop-12,word,phrasebook,מְזֻמָּן
+shop-16,word,phrasebook,פָּתוּחַ
+shop-17,word,phrasebook,סָגוּר
+shop-19,word,phrasebook,שֶׁקֶל
+taxi-02,word,phrasebook,לְאָן?
+taxi-05,word,phrasebook,לַמָּלוֹן
+taxi-06,word,phrasebook,לַכּוֹתֶל
+directions-05,word,phrasebook,יָשָׁר
+directions-06,word,phrasebook,שְׂמֹאלָה
+directions-07,word,phrasebook,יָמִינָה
+directions-12,word,phrasebook,מוּל
+directions-13,word,phrasebook,בַּפִּנָּה
+numbers-01-m,word,phrasebook,אֶחָד
+numbers-01-f,word,phrasebook,אַחַת
+numbers-02-m,word,phrasebook,שְׁנַיִם
+numbers-02-f,word,phrasebook,שְׁתַּיִם
+numbers-03-m,word,phrasebook,שְׁלוֹשָׁה
+numbers-03-f,word,phrasebook,שָׁלוֹשׁ

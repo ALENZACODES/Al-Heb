@@ -1,11 +1,11 @@
 /** Listen and pick: pure model. Words come from data/vocab/words.json only. */
 export const KEY = 'listen.v1';
-export const emptyState = () => ({ v: 1, answered: 0, correct: 0, missed: {}, last: 0 });
+export const emptyState = () => ({ v: 1, answered: 0, correct: 0, heard: 0, heardCorrect: 0, missed: {}, last: 0 });
 
 export function normState(s) {
   const o = emptyState();
   if (!s || typeof s !== 'object') return o;
-  for (const k of ['answered', 'correct', 'last']) if (Number.isFinite(s[k]) && s[k] >= 0) o[k] = s[k];
+  for (const k of ['answered', 'correct', 'heard', 'heardCorrect', 'last']) if (Number.isFinite(s[k]) && s[k] >= 0) o[k] = s[k];
   if (s.missed && typeof s.missed === 'object') for (const [id, n] of Object.entries(s.missed)) if (Number.isFinite(n) && n > 0) o.missed[id] = n;
   return o;
 }
@@ -58,8 +58,10 @@ export function buildRound(targets, pool, cfg, rng, mode, missed = {}) {
   return qs;
 }
 
-export function applyAnswer(state, id, ok, now) {
+/** mode 'audio' = a clip was played for this question; anything else is a reading question (a visible word is not evidence of hearing). */
+export function applyAnswer(state, id, ok, now, mode = 'read') {
   const s = normState(state); s.answered++; s.last = now;
+  if (mode === 'audio') { s.heard++; if (ok) s.heardCorrect++; }
   if (ok) { s.correct++; if (s.missed[id]) { s.missed[id]--; if (s.missed[id] <= 0) delete s.missed[id]; } } else s.missed[id] = (s.missed[id] || 0) + 1;
   return s;
 }

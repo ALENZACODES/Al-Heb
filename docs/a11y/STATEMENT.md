@@ -17,11 +17,13 @@ Preview, written 2026-11-04. This is a plain account of what the builders measur
 - Hearing: the places in the code that play, record or listen to sound were listed, and the "I do not use audio" setting hides the Listen button on many of them and replaces listening-only questions with reading ones. Tests run the code paths (docs/a11y/deaf-hoh.md).
 - Calm mode and reading comfort (text size, spacing, line length, font): tested by unit tests on a fake DOM and by one desktop Chromium run that read computed styles. The code was searched for animation and flashing, and nothing was found that changes more than 3 times per second; this was a code read, not a measurement with a flash analyser (docs/a11y/COGNITIVE.md).
 - Plain wording: 21 strings the builder judged long were rewritten; the average sentence went from 11.1 to 7.5 words by a word-counting script. Those strings were chosen by the builder, so this is not a measure of the whole app (docs/a11y/COGNITIVE.md).
+- Movement and touch: a Tab-key walk of 23 screens in desktop Chromium found no keyboard trap, every visible control reachable, a visible focus mark on each stop and no jumps back up the page (144 checks). Tap targets were measured by script at an emulated phone size of 375 by 667: none of 908 targets on 32 screens is under 44 by 44 CSS pixels. Letters, Atlas and the quick checks need no dragging or sliding gestures; stroke tracing has a stroke-by-stroke button mode that is recorded as walked through, not as drawn. Time limits, automatic advance, undo and one-handed placement are covered in docs/a11y/motor.md.
 - The settings on the Accessibility screen exist, are checked when saved, are kept on this device and are included in a backup. This was tested in code (tests/a11y.hub.test.js).
 
 ## What was not tested with real people or devices
 
 - No screen reader (VoiceOver, TalkBack, NVDA, JAWS) was used, so how the screens sound is unknown. No braille display, voice control or switch access was used.
+- No switch device, eye tracker, head pointer or voice-control software was used, and no person with a motor disability tried the app. Target sizes are CSS pixels in an emulator, not measured on a finger.
 - No real phone or tablet (iOS or Android) and no physical keyboard was used; checks ran in desktop Chromium, some at an emulated phone size.
 - Nobody with dyslexia, ADHD, memory difficulties, anxiety, sensory sensitivity, migraine or low literacy tried the calm mode, short sessions or reading settings, and no photosensitivity analyser was used.
 - No person with a disability, and no person who is deaf, blind, colour-blind, has limited movement or finds screens overwhelming, tried the app for this statement. Whether a setting helps a given person is not known.
@@ -31,7 +33,7 @@ Preview, written 2026-11-04. This is a plain account of what the builders measur
 ## Known gaps
 
 - docs/A11Y.md lists open items from its 2026-11-04 run. Some have been worked on since (for example letter tracing now has a stroke-by-stroke button mode, and the letter atlas keeps keyboard focus), but only the automated keyboard walk in desktop Chromium has re-checked them, not a person using a keyboard or switch.
-- Some tap targets are smaller than 44 pixels, for example a range slider, file inputs and one checkbox label (docs/A11Y.md, open item 9). The "Size of buttons and fields" setting makes buttons, links and fields larger but was not measured everywhere.
+- The 44 pixel measurement covers 32 screens at one phone size, not every screen. The "Size of buttons and fields: Large" setting was measured on the same screens: all but 49 targets reach 60 pixels (the on-screen typing keys are 56 wide, one paste box is 54 tall, one link is 48). Only lesson quick checks have "Ask me to confirm each answer"; "Keep the main buttons at the bottom" covers Review, first 10 minutes and Word Sprint; the single-key shortcuts setting does not reach the vocabulary list, Torah reader or typing trainer (docs/a11y/motor.md).
 - The default border around cards and fields is only about 1.4 to 1 against the page, below the 3 to 1 target for field edges. The two high-contrast themes make the edges solid (docs/a11y/colourblind.md).
 - "I do not use audio" does not yet hide every optional play button (for example on the letter atlas, Torah reader, vocabulary and scan screens), and first-run setup does not ask about it; the written text is shown next to those buttons (docs/a11y/deaf-hoh.md).
 - Written descriptions of sounds are drafts that no Hebrew speaker has checked, and words cannot replace hearing a sound (docs/a11y/deaf-hoh.md).
@@ -65,8 +67,8 @@ Preview, written 2026-11-04. This is a plain account of what the builders measur
 **Tapping, dragging and typing**
 
 - Size of buttons and fields (`targetSize`): Makes buttons, links and fields bigger to tap.
-- Keep the main buttons at the bottom (`bottomActions`): Keeps the main buttons of a screen at the bottom, where a thumb reaches them. Today this covers Show answer and the rating buttons in Review, Next in your first 10 minutes, and the Word Sprint buttons; lessons already keep their Continue bar at the bottom.
-- Ask me to check my answer (`confirmAnswers`): Choosing an answer only marks it, and a separate Check answer button submits it, so a slipped tap can be changed. This works in lesson quick checks today; other practice screens still answer on the tap, and most of them have an Undo button.
+- Keep the main buttons at the bottom (`bottomActions`): Keeps main buttons at the bottom, where a thumb reaches them. Covers Review, your first 10 minutes and Word Sprint; lessons already do this.
+- Ask me to check my answer (`confirmAnswers`): Choosing an answer only marks it; a Check answer button submits it. Works in lesson quick checks today; other practice screens still answer on the tap.
 - No time limits (`untimed`): Removes time limits: Word Sprint has no clock and a Record and compare clip does not stop by itself.
 - Single-key shortcuts (`keyShortcuts`): Lets keys such as 1 to 4 and S act on a screen; turn it off if speech input or a stray key triggers them.
 

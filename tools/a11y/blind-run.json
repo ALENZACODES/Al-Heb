@@ -1,11 +1,11 @@
 {
  "tool": "tools/a11y/blind.mjs",
- "when": "2026-11-05T02:37:24.293Z",
+ "when": "2026-11-05T02:44:49.700Z",
  "note": "Chromium accessibility tree and DOM only. No screen reader, braille display, magnifier software or blind user was involved.",
  "routes": {
   "/": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 2,
@@ -46,7 +46,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 2,
@@ -103,7 +103,7 @@
   },
   "/learn": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -139,7 +139,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -191,7 +191,7 @@
   },
   "/letters": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -227,7 +227,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -279,7 +279,7 @@
   },
   "/letters/atlas": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -315,7 +315,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -353,7 +353,7 @@
   },
   "/letters/alef": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -389,7 +389,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -441,7 +441,7 @@
   },
   "/progress": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -489,7 +489,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -539,7 +539,7 @@
   },
   "/firstday": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -576,7 +576,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -689,7 +689,7 @@
   },
   "/credits": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -736,7 +736,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -785,7 +785,7 @@
   },
   "/privacy": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 2,
@@ -826,7 +826,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 2,
@@ -949,7 +949,7 @@
   },
   "/settings": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -985,7 +985,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1023,7 +1023,7 @@
   },
   "/welcome": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1059,7 +1059,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1097,7 +1097,7 @@
   },
   "/search": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1133,7 +1133,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1171,7 +1171,7 @@
   },
   "/about": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1208,7 +1208,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1247,7 +1247,7 @@
   },
   "/learn?lesson=r01": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1288,7 +1288,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1345,7 +1345,7 @@
   },
   "/learn?review=1": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1382,7 +1382,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1435,7 +1435,7 @@
   },
   "/firstday/ladder": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#ladder-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1471,7 +1471,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#ladder-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1509,7 +1509,7 @@
   },
   "/torahread": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1548,7 +1548,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1663,7 +1663,7 @@
   },
   "/sounds": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1707,7 +1707,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1753,7 +1753,7 @@
   },
   "/vocab": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1789,7 +1789,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1827,7 +1827,7 @@
   },
   "/read": {
    "375x667": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1867,7 +1867,7 @@
     "errors": []
    },
    "1280x800": {
-    "focusOnNav": "body",
+    "focusOnNav": "h1#view-title",
     "landmarks": {
      "main": 1,
      "banner": 1,
@@ -1955,7 +1955,7 @@
   },
   "look-alike drill: each glyph option has a shape description for a screen reader": {
    "ok": true,
-   "detail": "Hebrew letter. Shape: A backwards C: a rounded shape with the opening on the left, like a cupped hand or a spoon bowl. |"
+   "detail": "Hebrew letter. Shape: A house seen from the side: flat roof, back wall on the right, floor that sticks out past the wall"
   },
   "lesson: pointed words show a respelling as text": {
    "ok": true,
@@ -1982,261 +1982,20 @@
   {
    "route": "/",
    "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/",
-   "vp": "375x667",
    "kind": "no-live-region",
    "detail": "main has buttons or fields but no live region"
-  },
-  {
-   "route": "/learn",
-   "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/letters",
-   "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/letters/atlas",
-   "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/letters/alef",
-   "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/progress",
-   "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/firstday",
-   "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/credits",
-   "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/privacy",
-   "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/settings",
-   "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/welcome",
-   "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/search",
-   "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/about",
-   "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/learn?lesson=r01",
-   "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/learn?review=1",
-   "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/firstday/ladder",
-   "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/torahread",
-   "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/sounds",
-   "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/vocab",
-   "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/read",
-   "vp": "375x667",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
   },
   {
    "route": "/",
    "vp": "1280x800",
    "kind": "no-live-region",
    "detail": "main has buttons or fields but no live region"
-  },
-  {
-   "route": "/learn",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/letters",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/letters/atlas",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/letters/alef",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/progress",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/firstday",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/credits",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/privacy",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/settings",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/welcome",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/search",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/about",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/learn?lesson=r01",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/learn?review=1",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/firstday/ladder",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/torahread",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/sounds",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/vocab",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
-  },
-  {
-   "route": "/read",
-   "vp": "1280x800",
-   "kind": "focus-after-navigation",
-   "detail": "activeElement was body"
   }
  ],
  "summary": {
   "routes": 23,
-  "findings": 42,
+  "findings": 2,
   "byKind": {
-   "focus-after-navigation": 40,
    "no-live-region": 2
   }
  }

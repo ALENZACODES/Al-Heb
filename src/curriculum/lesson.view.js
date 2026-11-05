@@ -14,7 +14,7 @@ import { isAudioFree } from "../shell/audiofree.js";
 import { plain } from "../shell/plain-copy.js";
 import { chunkedLessons } from "../shell/comfort.js";
 import { RESUME_KEY, getResume, setResume, clearResume } from "./chunks.js";
-import { storeGet, storeSet } from "./dom.js";
+import { storeGet, storeSet, showSaveFailure } from "./dom.js";
 import { hookLine, hookNode } from "../letters/hookline.js";
 import { mountChunkedLesson } from "./lesson.parts.js";
 
@@ -133,8 +133,10 @@ export function mountLesson(root, ctx, lessonId) {
       startBtn.hidden = true; startBtn.setAttribute("hidden", ""); done.replaceChildren();
       actions.className = "row alef-actions"; // the quiz has its own action bar; two sticky bars would stack
       const t0 = Date.now();
-      offQuiz = mountQuiz(quizHost, { questions, ctx, carry, onProgress: (r) => { saveResume({ results: r, replaceResults: true }); }, onFinish: async ({ stats, results, ms }) => {
-        const { updated } = await saveQuickCheck(ctx, lesson, questions, results);
+      offQuiz = mountQuiz(quizHost, { questions, ctx, carry, onProgress: (r) => { saveResume({ results: r, replaceResults: true }); }, onFinish: async function finishQuiz(res) {
+        const { stats, results, ms } = res;
+        let updated;
+        try { ({ updated } = await saveQuickCheck(ctx, lesson, questions, results)); } catch (e) { if (alive) showSaveFailure(quizHost, e, () => finishQuiz(res)); return; } // never say "Lesson complete" for a lesson that was not saved
         resumeAll = clearResume(resumeAll, lesson.id); await storeSet(ctx, RESUME_KEY, resumeAll);
         if (!alive) return;
         let dueCount; try { dueCount = dueCards(Object.values((await loadState(ctx)).cards), Date.now()).length; } catch { dueCount = undefined; } // hide "Review now" when nothing is due

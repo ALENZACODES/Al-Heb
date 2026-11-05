@@ -29,6 +29,8 @@ diacritizer (dicta_onnx) that would silently rewrite our pointing; this script s
 import argparse, hashlib, json, math, os, re, struct, sys, time, wave, zlib
 
 NIQQUD = re.compile('[ְ-ׇּׁׂ]')
+HEBREW_LETTER = re.compile('[\u05d0-\u05ea]')
+TRADITIONS = ('israeli', 'sephardi', 'ashkenazi')
 SR_MOCK = 24000
 
 

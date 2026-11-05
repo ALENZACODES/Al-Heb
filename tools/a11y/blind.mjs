@@ -43,7 +43,8 @@ async function settle(page) {
   for (let i = 0; i < 40 && stable < 3; i++) { await page.waitForTimeout(200); const n = await page.evaluate(() => (document.querySelector('main')?.innerText || '').length); stable = n === last && n > 0 ? stable + 1 : 0; last = n; }
 }
 async function go(page, route) {
-  await page.goto(base + (route === '/' ? '#/how' : '#/')); // Home is reached from another page: setting the hash to the one already showing is not a navigation await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(250);
+  // Home is reached from another page: setting the hash to the one already showing is not a navigation
+  await page.goto(base + (route === '/' ? '#/how' : '#/')); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(250);
   await page.evaluate((h) => { location.hash = h; }, route); await settle(page);
   // the shell moves focus to the heading a moment after the view draws; wait for it (up to 2.5 s) before anything reads document.activeElement
   await page.waitForFunction(() => document.activeElement && document.activeElement.id === 'view-title', null, { timeout: 2500 }).catch(() => {});

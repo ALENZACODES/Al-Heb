@@ -7,7 +7,7 @@
  *   { lessons: { [id]: { results: { [exerciseId]: boolean }, done: ms|null, score, total } } }
  * Draft content: not reviewed by a native Hebrew speaker, not tested with learners.
  */
-import { el, heText, tr, storeGet, storeSet, replaceKeepingFocus, CARDS_KEY } from "./dom.js";
+import { el, heText, tr, storeGet, storeSet, replaceKeepingFocus, showSaveFailure, CARDS_KEY } from "./dom.js";
 import { byId, lessons } from "./lessons.js";
 import { loadContent } from "./content.js";
 import { loadState, completeLesson } from "./actions.js";
@@ -360,9 +360,10 @@ function mountLesson(root, ctx, id) {
       const all = exs.length > 0 && Object.keys(results).length === exs.length;
       const right = exs.filter((e) => results[e.id]).length, missed = exs.filter((e) => results[e.id] === false);
       if (all) {
+        // Count the lesson in the shared progress first: if that cannot be saved, nothing here says "finished" (the exercise results stay, so the learner can try again).
+        try { await completeLesson(ctx, lesson); } catch (e) { if (alive) showSaveFailure(body, e, summary); return; }
         mine.done = Date.now();
         await persist({ done: mine.done, score: right, total: exs.length });
-        await completeLesson(ctx, lesson);
       }
       if (!alive) return;
       const nextL = listIntermediate()[listIntermediate().findIndex((l) => l.id === lesson.id) + 1];

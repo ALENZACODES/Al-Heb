@@ -54,6 +54,7 @@ export async function runPipeline(image, engines, { mode = 'prayer', registry = 
       if (!isHebrew(tok)) { line.words.push({ he: tok, kind: 'other', syllables: [] }); continue; }
       const syllables = syllabifyWord(tok, shvaClassifier ? { shvaClassifier } : {});
       const w = { he: tok, kind: 'hebrew', syllables };
+      if (syllables.confidence) w.confidence = syllables.confidence;
       if (!syllables.length) w.note = 'no vowel points: cannot syllabify';
       if (syllables.some((s) => s.substituted)) w.note = 'divine name: read as Adonai';
       if (typeof engines.ipa === 'function' && syllables.length) {

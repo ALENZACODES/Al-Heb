@@ -24,7 +24,7 @@ Counts are required clips only (optional whole-prayer reads and aliases excluded
 - P2: all niqqud clips plus every syllable drill in the manifest. The manifest has 110 syllables per voice, not ~120, so the count is 110.
 - P3: prayer LINES whose id matches the core list in `CORE_PRAYER_RE` (Modeh Ani, Shema and V'ahavta lines, blessing formula, Torah-reading blessings, Kiddush wine, bread, candles, Shehecheyanu and a few others). This is a draft choice by the tool author, not a rabbinic or product decision; the research target was about 60 lines.
 - P4: the manifest does not contain 500 of the 500 most frequent Hebrew words. Words are ranked by frequency rank in data/vocab/words.json where the spelling matches, then by how often the word occurs in the manifest; the top 500 distinct pointed words are taken (each recorded once per voice and tradition). How many of those are inside the true frequency top 500:
-  - israeli: 2455 distinct pointed words in the manifest; picked 500; 500 of them match the vocabulary list; 500 are inside the frequency top 500.
+  - israeli: 2454 distinct pointed words in the manifest; picked 500; 500 of them match the vocabulary list; 500 are inside the frequency top 500.
   - sephardi: 2142 distinct pointed words in the manifest; picked 500; 500 of them match the vocabulary list; 500 are inside the frequency top 500.
   - ashkenazi: 2142 distinct pointed words in the manifest; picked 500; 500 of them match the vocabulary list; 500 are inside the frequency top 500.
 - Words in P4 appear once; other manifest ids with the same pointed text are left as long tail (an equivalence rule or a re-slice could reuse the recording; not decided).

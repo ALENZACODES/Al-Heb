@@ -1,7 +1,7 @@
 // @ts-check
 // "Reading without vowels" ladder: pointed -> points fading -> unpointed, with tap-to-reveal and a self-check.
 // The self-check never uses speech recognition: the learner reads aloud, presses Check, compares, and rates themselves.
-import { el, heEl, playHook, hasDivineName } from './ui.js';
+import { el, heEl, hearButton, hasDivineName } from './ui.js';
 import { mixed } from '../hebrewtext/mixed.js'; // Hebrew runs inside the tips get lang=he dir=rtl
 import { uiEnglish } from '../shell/names.js';
 import { largePositionsIn, bigParts } from '../torahreader/model.js';
@@ -97,10 +97,7 @@ export function renderLadder(host, env) {
     if (item.lines.some((l) => hasDivineName(l))) root.append(el('p', { class: 'trd-muted' }, 'The divine name (four letters, yod he vav he) is never read as written. Say Adonai.'));
 
     // audio
-    const status = el('p', { class: 'trd-status', role: 'status', 'aria-live': 'polite' });
-    root.append(el('div', { class: 'trd-row' },
-      el('button', { type: 'button', class: 'trd-btn', onclick: () => playHook(ctx, status, item.audio.kind, item.audio.id, item.he, item.title) }, 'Hear it')),
-      status, el('p', { class: 'trd-muted' }, recordedLine(ctx, item.audio)));
+    root.append(el('div', { class: 'trd-row' }, hearButton(ctx, item.audio.kind, item.audio.id, item.he, item.title)));
 
     // self-check
     root.append(el('h3', {}, 'Check yourself'),

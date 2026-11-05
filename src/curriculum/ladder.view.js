@@ -4,6 +4,7 @@ import { loadLadder, createLadderSession, STREAK_UP } from "./ladder.js";
 import { loadContent } from "./content.js";
 import { LADDER_KEY, saveLadder } from "./actions.js";
 import { draftNotice, audioStatus, onKeys } from "./ex-ui.js";
+import { audioButton } from "../shell/audio-access.js";
 import { describePlay } from "./audio-ui.js";
 import { SETTING_LABELS } from "../traditions/model.js";
 import { isAudioFree, SKIP_NOTE, AUDIO_FREE_NOTE, syllableByName } from "../shell/audiofree.js";
@@ -59,7 +60,7 @@ export function mountLadder(root, ctx, q = {}) {
         silent
           ? el("p", { class: "alef-silent-prompt" }, `Find the card for: ${syllableByName(content.letters.get(cur.item.letter)?.name || cur.item.letter, cur.item.vowel)}. (Reading version: you chose "I do not use audio".)`)
           : el("p", {}, tr(ctx, "ladder.prompt", "Listen, then choose the matching card.")),
-        silent ? null : el("button", { type: "button", class: "btn alef-play", onclick: play }, el("span", { "aria-hidden": "true" }, "▶"), " Listen again (R)"),
+        silent ? null : audioButton(el, ctx, { kind: cur.item.audioKind, id: cur.item.audioId, voice: ctx?.settings?.get?.("voice"), label: "Listen again (R)", class: "btn alef-play" }),
         el("div", { class: "row alef-cardpair", dir: "rtl" }, ...cards), note, fb,
         el("p", { class: "row" },
           el("button", { type: "button", class: "btn secondary", "data-act": "skip", onclick: () => { if (locked || finished) return; session.skip(); draw(); } }, "Skip this card"),

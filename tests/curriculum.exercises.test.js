@@ -404,3 +404,18 @@ test("spotit view regression: the result panel never contains the text 'null' (s
   assert.doesNotMatch(root.text, /null/);
   un();
 });
+
+test("ladder view: 'Listen again' is the shared audio button (file, labelled device voice, or No audio yet with no dead button)", async () => {
+  for (const [source, state] of [["file", "file"], ["tts-fallback", "device"], ["none", null]]) {
+    played.length = 0;
+    const audio = { play: async (k, i, o) => { played.push([k, i, o?.voice]); return { source }; }, status: () => ({ source, entryStatus: "recorded", reason: "no-speech-synthesis" }) };
+    const root = new Node_("div");
+    const un = mountLearn(root, ctxFor(memStore(), { ladder: "1", seed: "4" }, { audio })); await waitFor(() => /Level 1 of 30/.test(root.text) && root.find((n) => n.attrs["data-option"]).length === 2, { message: "ladder drawn" });
+    const again = root.find((n) => n.tag === "button" && /^syllable\//.test(n.attrs["data-audio"] || ""));
+    if (!state) { assert.equal(again.length, 0); assert.match(root.text, /No audio yet/); un(); continue; }
+    assert.equal(again.length, 1, source); assert.equal(again[0].attrs["data-audio-state"], state);
+    if (state === "device") assert.match(again[0].attrs["aria-label"], /Device voice, not a recorded teacher; Israeli-style only/);
+    played.length = 0; await again[0].click(); assert.equal(played.length, 1); assert.equal(played[0][0], "syllable");
+    un();
+  }
+});

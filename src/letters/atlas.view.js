@@ -5,6 +5,7 @@
 // Test/offline hooks: ctx.letters, ctx.mnemonics, ctx.confusables, ctx.interference, ctx.consonants supply already-loaded data.
 // @ts-check
 import { warningAfterWrongTap } from './interference.js';
+import { audioButton } from '../shell/audio-access.js';
 import { letterSound, congregationOf } from '../pronunciation/forTradition.js';
 import { loadMemoryChain, entryFor, buildMemoryCard, memoryFallback } from './memorycard.js';
 
@@ -136,6 +137,9 @@ export function mount(root, ctx = {}) {
     } catch (e) { say(t('atlas.noClip', 'No audio for this one yet.')); }
   }
 
+  /** Shared audio button (file, labelled device voice, or one No audio yet line). No caller text: the recording list holds the letter text; an id not in it shows No audio yet. */
+  const letterAudio = (audioId, label) => audioButton(h, ctx, { kind: 'letter', id: audioId, label });
+
   function startQuiz() {
     const pool = state.tiles.filter((x) => x.kind !== 'variant');
     const target = pool[Math.floor(Math.random() * pool.length)];
@@ -184,7 +188,7 @@ export function mount(root, ctx = {}) {
       const tg = tileById(q.target);
       const box = h('div', { class: 'panel' },
         h('strong', {}, t('atlas.find', 'Find: ') + tg.name + '  '), h('span', { class: 'muted' }, tg.ipa ? '/' + tg.ipa + '/' : ''),
-        h('div', { class: 'row' }, h('button', { onclick: () => hear(tg.nameAudioId) }, t('atlas.hearName', 'Hear it'))),
+        h('div', { class: 'row' }, letterAudio(tg.nameAudioId, t('atlas.hearName', 'Hear it'))),
         q.right ? h('p', {}, t('atlas.good', 'Good! ') + tg.name, ' ', h('button', { 'data-act': 'next', onclick: () => { startQuiz(); render(); } }, t('atlas.next', 'Next'))) : null,
         q.wrong && !q.right ? h('p', { role: 'alert' }, t('atlas.notThat', 'That is ') + tileById(q.wrong).name + '.') : null,
         q.warning && !q.right ? h('p', { class: 'warn' }, h('strong', {}, t('atlas.lookalike', 'Look-alike: ')), q.warning) : null,
@@ -217,8 +221,8 @@ export function mount(root, ctx = {}) {
           h('div', {}, h('strong', {}, sel.name), h('br'), h('span', {}, (sel.ipa ? '/' + sel.ipa + '/  ' : '') + (m.soundAnchor || sel.soundEn || '')),
             sel.soundEn && sel.soundEnIsraeli && sel.soundEn !== sel.soundEnIsraeli ? h('span', { class: 'muted', text: ' In your setting: ' + sel.soundEn }) : null)),
         h('div', { class: 'row' },
-          h('button', { onclick: () => hear(sel.soundAudioId) }, t('atlas.hearSound', 'Hear the sound')),
-          h('button', { onclick: () => hear(sel.nameAudioId) }, t('atlas.hearName', 'Hear the name')),
+          letterAudio(sel.soundAudioId, t('atlas.hearSound', 'Hear the sound')),
+          letterAudio(sel.nameAudioId, t('atlas.hearName', 'Hear the name')),
           m.altStory && !chained ? h('button', { 'aria-pressed': state.alt, onclick: () => { state.alt = !state.alt; render(); } }, t('atlas.another', 'Another picture')) : null),
         viaParent ? h('p', { class: 'muted', 'data-variant-note': sel.id }, t('atlas.variantNote', sel.name + ' is ' + (cardEntry.name || sel.parent) + ', told apart by its dot, so it shares that letter\u2019s picture below. Sound: ') + (m.sound || sel.soundEn || '') + '.') : null,
         (() => { const me = cardEntry; if (!me) return state.chain ? null : memoryFallback(t); memCard = buildMemoryCard({ entry: me, glyph: viaParent ? (tileById(sel.parent) || {}).glyph || sel.glyph : sel.glyph, tradition: congregationOf(ctx.settings), audio: ctx.audio, t, fetchFn: ctx.fetch }); return memCard.el; })(),

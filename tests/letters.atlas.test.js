@@ -117,3 +117,19 @@ test('atlas view: where the memory chain has an entry the old mnemonics story an
   await waitFor(() => tiles(r2).length === 31, { message: 'tiles, no chain' }); await tile(r2, 'kaf').click();
   assert.ok(body(r2).includes(data.mnemonics.letters.find((x) => x.id === 'kaf').story)); u2();
 });
+
+test('atlas view: Hear buttons are the shared audio button (file plays, device voice is labelled, no voice says No audio yet)', async () => {
+  for (const [source, state] of [['file', 'file'], ['tts-fallback', 'device'], ['none', null]]) {
+    const root = new El('div'); const played = [];
+    const audio = { status: () => ({ source, reason: 'no-speech-synthesis' }), play: async (kind, id) => { played.push([kind, id]); return { source }; } };
+    const un = mount(root, { ...data, audio, t: k => k });
+    await waitFor(() => tiles(root).length === 31, { message: "31 tiles rendered" });
+    await tile(root, 'nun').click(); played.length = 0;
+    const hear = root.find(n => n.tag === 'button' && n.attrs['data-audio'] === 'letter/nun-sound');
+    if (!state) { assert.equal(hear.length, 0); assert.match(body(root), /No audio yet/); un(); continue; }
+    assert.equal(hear.length, 1, source); assert.equal(hear[0].attrs['data-audio-state'], state);
+    if (state === 'device') assert.match(hear[0].attrs['aria-label'], /Device voice, not a recorded teacher; Israeli-style only/);
+    await hear[0].click(); assert.deepEqual(played[0], ['letter', 'nun-sound']);
+    un();
+  }
+});

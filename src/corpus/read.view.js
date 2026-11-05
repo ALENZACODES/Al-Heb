@@ -11,6 +11,7 @@ import { silentReadingNode } from '../shell/silent-reading.js';
 import { isAudioFree } from '../shell/audiofree.js';
 import { uiEnglish } from '../shell/names.js';
 import { speechText } from '../shell/names.js';
+import { audioButton } from '../shell/audio-access.js';
 import { largePositionsIn } from '../torahreader/model.js';
 import { LETTER_ID, isHebrewLetter, FINAL_OF } from './normalize.js';
 
@@ -231,7 +232,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
           if (state.english && rec.wordGlosses && rec.wordGlosses[idx - 1] && lines.length === 1) cell.append(el('span', { class: 'crp-gl' }, rec.wordGlosses[idx - 1]));
           row.append(cell);
         });
-        const lineBtn = el('button', { type: 'button', class: 'crp-play', onclick: () => playLine(rec, li, line) }, `Play ${lines.length > 1 ? 'line ' + (li + 1) : 'line'}`);
+        const lineBtn = audioButton(el, ctx, { kind: 'line', id: lines.length === 1 ? rec.id : `${rec.id}-l${li + 1}`, text: speechText(line), class: 'crp-play', label: `Play ${lines.length > 1 ? 'line ' + (li + 1) : 'line'}`, name: lines.length > 1 ? rec.ref : undefined });
         textBox.append(row, el('div', { class: 'crp-bar' }, lineBtn));
         if (state.english) textBox.append(el('p', { class: 'crp-en', lang: 'en' }, enLines.length === lines.length ? enLines[li] : (li === 0 ? enLines.join('\n') : '')));
       });
@@ -370,7 +371,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
         el('div', { class: 'meta' }, el('div', {}, el('strong', {}, p.en), el('span', { class: 'crp-badge' }, p.register), p.register === 'slang' ? el('span', { class: 'crp-badge' }, 'native review needed') : null),
           state.translit ? el('div', { class: 'crp-tr' }, tr) : null,
           p.notes ? el('div', { class: 'crp-gl' }, p.notes) : null),
-        isAudioFree(ctx) ? null : el('button', { type: 'button', class: 'crp-play', 'aria-label': `Play: ${p.en}`, onclick: () => playItem(/\s/.test(he) ? 'line' : 'word', p.gendered ? `${p.id}-${state.gender}` : p.id, he, p.en) }, 'Play'));
+        audioButton(el, ctx, { kind: /\s/.test(he) ? 'line' : 'word', id: p.gendered ? `${p.id}-${state.gender}` : p.id, text: speechText(he), class: 'crp-play', label: 'Play', name: p.en }));
       host.append(card);
     }
     host.append(status);

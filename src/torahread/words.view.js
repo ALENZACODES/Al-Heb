@@ -1,7 +1,6 @@
 // @ts-check
 // The 30 most frequent written words of the Torah, with pointed forms (from the Torah text itself).
-import { el, heEl, playHook } from './ui.js';
-import { recordedLine } from './ladder.view.js';
+import { el, heEl, hearButton } from './ui.js';
 import { spokenForm } from './pointing.js';
 import { uiEnglish } from '../shell/names.js';
 
@@ -39,10 +38,8 @@ export function renderWords(host, env) {
             el('ul', {}, ...w.others.map((o) => el('li', {}, heEl('span', o.he), ` ${o.count}x`, o.gloss ? `: ${uiEnglish(ctx, o.gloss)}` : ': (no meaning given here)'))));
         }
         if (w.vocabId) d.append(el('p', { class: 'trd-muted' }, `Also in the Vocabulary list (entry ${w.vocabId}).`));
-        const status = el('p', { class: 'trd-status', role: 'status', 'aria-live': 'polite' });
         const aid = 'torahread-word-' + String(w.rank).padStart(2, '0');
-        d.append(el('div', { class: 'trd-row' }, el('button', { type: 'button', class: 'trd-btn', onclick: () => playHook(ctx, status, 'word', aid, w.pointed, 'this word') }, 'Hear it')),
-          status, el('p', { class: 'trd-muted' }, recordedLine(ctx, { kind: 'word', id: aid }, 'word')));
+        d.append(el('div', { class: 'trd-row' }, hearButton(ctx, 'word', aid, w.pointed, 'this word')));
         li.append(d);
       }
       ul.append(li);

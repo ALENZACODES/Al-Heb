@@ -1,7 +1,7 @@
 /** Shared bits for the round-4 exercise screens (ladder, fade-out, gender, scaffold). Plain DOM, no dependencies. */
 import { plain } from "../shell/plain-copy.js";
 import { el, tr } from "./dom.js";
-import { describePlay } from "./audio-ui.js";
+import { audioButton } from "../shell/audio-access.js";
 import { fileLabel } from "../shell/audio-labels.js";
 import { isAudioFree } from "../shell/audiofree.js";
 import { shortcutsOn } from "../shell/motor.js";
@@ -42,17 +42,15 @@ export function audioStatus(ctx, kind, id, voice) {
   return { source: "none", label: "No audio yet." };
 }
 
-/** A play button that plays (kind,id) in `voice` and writes the honest outcome into `note`. */
-export function voiceButton(ctx, kind, id, voice, label, note) {
+/**
+ * A play button for (kind,id) in `voice`, on the shared audioButton (src/shell/audio-access.js): a file button, a labelled
+ * device-voice button, or one "No audio yet" line. The button carries its own status chip, so `note` (kept for callers) is not written to. `text` is the pointed Hebrew shown.
+ */
+export function voiceButton(ctx, kind, id, voice, label, note, text) {
   if (isAudioFree(ctx)) return el("span", { class: "muted alef-noaudio" }, "Sound is switched off in Settings (I do not use audio).");
-  return el("button", { type: "button", class: "btn secondary alef-play alef-voice-btn", "data-voice": voice, "data-audio": `${kind}/${id}`, "aria-label": label,
-    onclick: async () => {
-      let st = audioStatus(ctx, kind, id, voice);
-      if (st.checking && typeof ctx.audio.ensureManifest === "function") { if (note) note.textContent = st.label; await ctx.audio.ensureManifest(); st = audioStatus(ctx, kind, id, voice); }
-      if (st.source === "none") { if (note) note.textContent = st.label; return; }
-      try { const r = await ctx.audio.play(kind, id, { voice }); if (note) note.textContent = describePlay(r) + (st.source === "tts-fallback" ? " The voice gender is chosen by your device, not by this button." : ""); }
-      catch (e) { if (note) note.textContent = "No sound: the browser could not play this."; }
-    } }, el("span", { "aria-hidden": "true" }, "▶"), " ", label);
+  const btn = audioButton(el, ctx, { kind, id, voice, label, text, class: "btn secondary alef-play alef-voice-btn", attrs: { "data-voice": voice }, noneClass: "muted alef-noaudio" });
+  if (audioStatus(ctx, kind, id, voice).source !== "tts-fallback") return btn;
+  return el("span", { class: "alef-voice-wrap" }, btn, " ", el("span", { class: "muted small" }, "The voice gender is chosen by your device, not by this button."));
 }
 
 /** Radio-style man/woman voice selector. Returns {node, get(), onChange(fn)}. */

@@ -12,8 +12,8 @@ import { byId, lessons } from "./lessons.js";
 import { loadContent } from "./content.js";
 import { loadState, completeLesson } from "./actions.js";
 import { applyOutcomesToCards, wordCardId, wordAudioId } from "./progress.js";
-import { audioStatus, settingVoice, onKeys } from "./ex-ui.js";
-import { describePlay } from "./audio-ui.js";
+import { settingVoice, onKeys } from "./ex-ui.js";
+import { audioButton } from "../shell/audio-access.js";
 import * as A from "./intermediate-adapter.js";
 import { sequenceExercises, fairProduceOptions, createSession, feedbackText, fireFeedback } from "./exercises.session.js";
 import { progressBar, summaryNode } from "./exercises.ui.js";
@@ -50,15 +50,8 @@ export const pronLine = (w, trad) => w?.pronunciation?.[trad] || (trad === "isra
 const wordFor = (lesson, he) => { const i = lesson.words.findIndex((w) => A.heKey(w.he) === A.heKey(he)); return i < 0 ? null : { w: lesson.words[i], n: i + 1 }; };
 
 function playBtn(ctx, kind, id, label, note, lesson) {
-  return el("button", { type: "button", class: "btn secondary alef-play", "aria-label": label, "data-audio": `${kind}/${id}`,
-    onclick: async () => {
-      const voice = settingVoice(ctx), trad = tradition(ctx, lesson);
-      let st = audioStatus(ctx, kind, id, voice);
-      if (st.checking && typeof ctx.audio?.ensureManifest === "function") { await ctx.audio.ensureManifest(); st = audioStatus(ctx, kind, id, voice); }
-      if (st.source === "none") { note.textContent = st.label; return; }
-      try { note.textContent = describePlay(await ctx.audio.play(kind, id, { voice, tradition: trad })); }
-      catch (e) { note.textContent = "No sound: the browser could not play this."; }
-    } }, el("span", { "aria-hidden": "true" }, "▶"), " Listen");
+  // Shared audioButton: file, labelled device voice (Israeli-style only), or one "No audio yet" line. It carries its own status chip.
+  return audioButton(el, ctx, { kind, id, voice: settingVoice(ctx), tradition: tradition(ctx, lesson), label: "Listen", name: label.replace(/^Listen to /, ""), class: "btn secondary alef-play" });
 }
 
 /** Hebrew + optional pronunciation line + optional audio, as one row. */

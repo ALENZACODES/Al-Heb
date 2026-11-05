@@ -3,6 +3,7 @@
 import { spokenForm, hasDivineName } from './pointing.js';
 import { fileLabel } from '../shell/audio-labels.js';
 import { speechText } from '../shell/names.js';
+import { audioButton } from '../shell/audio-access.js';
 
 export function el(tag, attrs = {}, ...kids) {
   const e = document.createElement(tag);
@@ -109,6 +110,11 @@ export async function playHook(ctx, statusEl, kind, id, text, label) {
     set(describeAudio(r, label));
     return r;
   } catch (e) { set(`Audio error for ${label}: ${e?.message || e}`); return null; }
+}
+
+/** The shared audio button for a Torah-reading item: a file button, a labelled device-voice button (Israeli-style only), or one No audio yet line. The shown text goes through speechText first so the four-letter name is never spoken as written. */
+export function hearButton(ctx, kind, id, text, name) {
+  return audioButton(el, ctx, { kind, id, text: typeof text === 'string' ? speechText(text) : undefined, label: 'Hear it', name, class: 'trd-btn' });
 }
 
 /** Progress in ctx.store under one key (store may be absent in tests). */

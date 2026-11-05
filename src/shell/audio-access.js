@@ -47,6 +47,7 @@ export function chipText(a) { return a.level === 'none' ? NO_AUDIO : a.label; }
  *   `text`: the pointed Hebrew the caller shows. When the item is not in the recording list, the device voice may read this text
  *   (src/audio/player.js plan() uses it only as a last resort, after every file step and the manifest's own text).
  *   `buttonId`: DOM id for the button itself (for views whose tests or links address it).
+ *   `attrs`: extra attributes for the button (e.g. a data- hook a test or stylesheet uses).
  *   `noneClass`: replaces the class of the one-line "No audio yet" span, for views whose stylesheet already styles their own class.
  *   `name`: what the item is (e.g. the English gloss), added to the accessible name so a list of Listen buttons is not all one name.
  */
@@ -60,7 +61,7 @@ export function audioButton(h, ctx, o) {
     return h('span', { class: o.noneClass || 'audio-none muted', 'data-audio-state': 'none' }, NO_AUDIO, respelling ? ` - say it as written: ${respelling}` : '');
   }
   const note = o.note || h('span', { class: 'audio-chip muted', role: 'status', 'aria-live': 'polite' }, a.checking ? 'Checking audio...' : a.label);
-  const btn = h('button', { type: 'button', class: o.class || 'btn secondary alef-play', ...(o.buttonId ? { id: o.buttonId } : {}), 'data-audio': `${kind}/${id}`, 'data-audio-state': a.level,
+  const btn = h('button', { type: 'button', class: o.class || 'btn secondary alef-play', ...(o.buttonId ? { id: o.buttonId } : {}), ...(o.attrs || {}), 'data-audio': `${kind}/${id}`, 'data-audio-state': a.level,
     'aria-label': `${label}${o.name ? `: ${o.name}` : ''} (${a.checking ? 'checking audio' : a.label})`,
     onclick: async () => {
       try {

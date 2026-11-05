@@ -18,7 +18,7 @@ function limited(cap) { const m = createMemoryStorage(); const ref = { cap }; co
 
 test('backup covers every key in the privacy list plus keys nobody listed, and restores them exactly on a fresh store', () => {
   const a = mk();
-  const names = [...STORE_KEYS.map((r) => r[0]), 'some.future.key.v9'];
+  const names = [...STORE_KEYS.map((r) => r[0]).filter((k) => k !== '__meta'), 'some.future.key.v9'];
   names.forEach((k, i) => a.set(k, { i, nested: { list: [1, 'שלום', null] } }));
   const b = mk();
   const res = b.importData(a.exportJSON());
@@ -123,9 +123,11 @@ test('schema: stamped, old unstamped data counts as schema 1, newer data is flag
 test('old and odd shapes of every stored key survive a backup round trip, and settings tolerate old shapes', () => {
   const shapes = [null, 0, 'text', true, [], [1, 2], {}, { v: 1 }, { completed: ['r01'] }, { completed: { r01: 1 } }, { 'c:alef': { due: 1 } }];
   const a = mk();
-  STORE_KEYS.forEach(([k], i) => a.set(k, shapes[i % shapes.length]));
+  // __meta is the store's own format-version row (listed for the privacy table, left out of backups)
+  const keys = STORE_KEYS.filter(([k]) => k !== '__meta');
+  keys.forEach(([k], i) => a.set(k, shapes[i % shapes.length]));
   const b = mk(); assert.equal(b.importData(a.exportJSON()).ok, true);
-  STORE_KEYS.forEach(([k]) => assert.deepEqual(b.get(k, 'MISSING'), a.get(k, 'MISSING'), k));
+  keys.forEach(([k]) => assert.deepEqual(b.get(k, 'MISSING'), a.get(k, 'MISSING'), k));
   for (const old of [null, 'x', [], 7, { voice: 'robot', theme: 'dark', retired: 1, lat: 'far', israelTrack: 'yes' }, { voice: 'm' }]) {
     const t = mk(); t.set('settings', old); const s = createSettings(t);
     assert.ok(['m', 'f'].includes(s.voice)); assert.ok(['auto', 'light', 'dark'].includes(s.theme)); assert.equal(s.lat, null); assert.equal(s.israelTrack, false);

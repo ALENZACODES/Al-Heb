@@ -7,7 +7,7 @@ export const FLOWS = [
   { id: 'own-site', what: 'Pages, scripts, fonts, lesson and corpus data files, and audio files if they exist', to: 'The site that serves ALEF (fetch of relative URLs, plus the service worker in sw.js)', sendsUserData: false, when: 'Whenever the app loads or updates. The request carries no progress or settings.', files: ['sw.js', 'src/app.js'] },
   { id: 'dicta', what: 'The Hebrew text recognised from a photo (not the photo) to add vowel points', to: 'Dicta, a third party (nakdan-u2-1a.loadbalancer.dicta.org.il)', sendsUserData: true, when: 'Only if you tick "Add vowels to unpointed text online" on the Scan screen. Off by default. The hosting headers in _headers (Content-Security-Policy connect-src) do not list Dicta, so a browser following them should block this call on the deployed site; that was read in the file, not tested on a live deployment. Dicta publishes no terms we could read.', files: ['src/photo/engines/web.js', 'src/photo/scan.view.js', '_headers'] },
   { id: 'local-helper', what: 'Recognised Hebrew text to translate (and the photo itself only if you also choose the local OCR option)', to: 'A helper program on your own computer (loopback address only: 127.0.0.1, localhost or [::1])', sendsUserData: false, when: 'Only if you enter a helper address on the Scan screen. Addresses that are not loopback are refused. It leaves your browser but not your machine.', files: ['src/photo/engines/local-server.js', 'src/photo/scan.view.js'] },
-  { id: 'speech-recognition', what: 'Your voice, if the browser\'s speech recogniser is used on the Say it screen', to: 'Decided by your browser, not by ALEF. Some browsers send the audio to the browser maker\'s servers.', sendsUserData: true, when: 'Only after you press the button. ALEF does not upload audio itself. The Permissions-Policy header in _headers sets microphone=(), which should disable microphone use on the deployed site; read in the file, not tested live.', files: ['src/speak/recognizer.js', 'src/speak/model.js', '_headers'] },
+  { id: 'speech-recognition', what: 'Your voice, if the browser\'s speech recogniser is used on the Say it screen', to: 'Decided by your browser, not by ALEF. Some browsers send the audio to the browser maker\'s servers.', sendsUserData: true, when: 'Only after you press the button. ALEF does not upload audio itself. The Permissions-Policy header in _headers sets microphone=(self), which does not block the recogniser on ALEF\'s own address; read in the file, not tested live.', files: ['src/speak/recognizer.js', 'src/speak/model.js', '_headers'] },
 ];
 
 /** Things the code does on your device only. */
@@ -20,7 +20,8 @@ export const LOCAL_ONLY = [
   'Your location is read only when you press the button in Settings. The latitude and longitude are saved in your settings and used on your device for candle-lighting times. Nothing in the code sends them anywhere. You can type numbers instead, or clear them.',
   'Reminders: the app shows notifications while it is open or via the service worker only after you allow them. No push server is configured (the push key is empty in src/shell/notify.js), so nothing is pushed to you from a server.',
   'Calendar and progress files are made in your browser and handed to you as downloads. The Teacher screen can copy a code to your clipboard when you press its button.',
-  'A service worker (sw.js) keeps an offline copy of the app in the browser\'s Cache Storage.',
+  'A service worker (sw.js) keeps an offline copy of the app in the browser\'s Cache Storage, in caches named alef-shell-<version>, alef-data-<version> and alef-runtime-v1 (audio clips). They hold ALEF\'s own files only.',
+  'On the Scan screen, "Take or choose a photo" is the browser\'s own file picker, which on a phone can open the camera. ALEF itself never calls the camera API and reads the chosen photo in your browser. The Permissions-Policy header in _headers also allows camera=(self); read in the file, not tested on a device.',
 ];
 
 /** localStorage keys (all written with the prefix "alef:"). `file` is one source file that defines or uses the key. */
@@ -42,6 +43,9 @@ export const STORE_KEYS = [
   ['curriculum.loanwords', 'Loanword practice', 'src/curriculum/actions.js'],
   ['curriculum.scaffold', 'Read-without-Latin progress', 'src/curriculum/scaffold.js'],
   ['intermediate.v1', 'Intermediate lessons progress', 'src/curriculum/intermediate.view.js'],
+  ['service.prefs', 'Follow-the-service choices (order, tradition, whether to show transliteration)', 'src/service/service.view.js'],
+  ['progress.milestones.v1', 'Which progress milestones you have reached, and when', 'src/progress/store.js'],
+  ['__meta', 'Storage format version number only (no learner data; left out of backups)', 'src/store.js'],
   ['firstday.progress', 'First 10 minutes progress', 'src/firstday/model.js'],
   ['firstday.ladder', 'Pointed-to-unpointed ladder', 'src/firstday/ladder.view.js'],
   ['letters.progress', 'Letter tracing progress', 'src/letters/progress.js'],
@@ -75,7 +79,7 @@ export const STORE_KEYS = [
   ['install.v1', 'Install prompt state', 'src/shell/install.js'],
   ['alef.audioBannerSeen.v1', 'Whether you dismissed the audio notice (saved under this exact name, without the "alef:" prefix)', 'src/shell/audio-access.js'],
   ['alef.storage-notice.v1', 'Storage notice state and whether you dismissed it (saved under this exact name, without the "alef:" prefix)', 'src/shell/install-notice.js'],
-  ['alef.scroll.v1', 'Scroll position per screen, so Back returns you to the same place. Unlike every other row it is kept in sessionStorage, not localStorage: it is tied to this browser tab and is gone when the tab closes (exact name, without the "alef:" prefix)', 'src/shell/scroll-restore.js'],
+  ['alef.scroll.v1', 'Scroll position per screen, so Back returns you to the same place. Unlike every other row it is kept in sessionStorage, not localStorage: it is tied to this browser tab and is gone when the tab closes. Each entry is named by the screen address, so a term typed on the Search screen can appear in an entry name (exact name, without the "alef:" prefix)', 'src/shell/scroll-restore.js'],
 ];
 
 const table = (caption, head, rows) => h('div', { class: 'table-wrap', role: 'region', 'aria-label': caption, tabindex: '0' }, h('table', { class: 'priv-table' }, h('caption', {}, caption),

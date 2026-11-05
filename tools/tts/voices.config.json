@@ -1,0 +1,8 @@
+{
+  "_read_me": "Fill in the two voice ids from your own account (node tools/tts/voice_list.mjs lists them). The tools never choose a voice for you. No key goes in this file: the key is read from an environment variable only.",
+  "m_pleasant": { "voice_id": "PASTE_MAN_VOICE_ID_HERE", "name": "", "library_voice": false, "note": "free text for you; not sent anywhere" },
+  "f_extra_feminine": { "voice_id": "PASTE_WOMAN_VOICE_ID_HERE", "name": "", "library_voice": false, "note": "free text for you; not sent anywhere" },
+  "licence_note": "",
+  "requests_per_minute": 30,
+  "recogniser": { "mode": "service" }
+}

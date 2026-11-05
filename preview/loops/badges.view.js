@@ -59,13 +59,13 @@ export function settle(store, catalog, now, { offline = false, snapNow = null } 
 const mk = (h, html) => { const s = h('span', {}); s.innerHTML = html; return s; };
 
 /** The calm card for new badges. role=status so a screen reader reads it once, politely. Focus is not moved. */
-export function newBadgeNode(h, s, { quiet = false, soundOn = false } = {}) {
+export function newBadgeNode(h, s, { quiet = false, soundOn = false, level = 3 } = {}) {
   const plan = badgePlan({ newly: s.unseen, catalog: s.catalog, quiet, soundOn, tierUp: s.tierUp });
   if (!plan.items.length && !plan.tierLine) return { node: null, plan };
   const by = new Map(s.catalog.badges.map((b) => [b.id, b]));
   const node = h('section', { class: 'lp-cele', role: 'status', 'aria-live': 'polite', 'data-motion': plan.motion, 'data-badges': 'new' },
-    h('h3', {}, plan.items.length === 1 ? 'New badge' : plan.items.length ? 'New badges' : 'New tier'),
-    ...plan.items.map((i) => h('div', { class: 'bd-new' }, mk(h, artFor(by.get(i.id), i.level, { uid: `bd-new-${i.id}-${i.level}`, levelNames: s.catalog.levelNames, size: 64 })),
+    h('h' + level, {}, plan.items.length === 1 ? 'New badge' : plan.items.length ? 'New badges' : 'New tier'),
+    ...plan.items.map((i) => h('div', { class: 'bd-new' }, mk(h, artFor(by.get(i.id), i.level, { uid: `bd-new-${i.id}-${i.level}`, levelNames: s.catalog.levelNames, size: 64, decorative: true })),
       h('div', {}, h('p', { class: 'bd-name' }, `${i.name}: ${i.levelName} (${i.threshold})`), h('p', {}, i.text)))),
     s.unseenMore ? h('p', {}, `${s.unseenMore} more ${s.unseenMore === 1 ? 'badge is' : 'badges are'} on your shelf below.`) : null,
     plan.tierLine ? h('p', {}, plan.tierLine) : null);
@@ -84,7 +84,7 @@ export function shelfNode(h, s, { onCopy } = {}) {
     if (!rows.length) return null;
     const by = new Map(cat.badges.map((b) => [b.id, b]));
     return h('div', { 'data-family': f.id }, h('h3', {}, f.name), h('ul', { class: 'bd-list' }, ...rows.map((r) => h('li', { class: 'bd-item', 'data-badge': r.id, 'data-level': String(r.level) },
-      mk(h, artFor(by.get(r.id), r.level, { uid: `bd-${r.id}`, levelNames: cat.levelNames })),
+      mk(h, artFor(by.get(r.id), r.level, { uid: `bd-${r.id}`, levelNames: cat.levelNames, decorative: true })),
       h('div', {}, h('p', { class: 'bd-name' }, r.level ? `${r.name}: ${r.levelName} (${r.threshold})` : r.name),
         r.level ? h('p', {}, `${r.earnText} Earned ${r.since}.`) : null,
         r.next ? h('p', { class: 'muted' }, r.level ? r.next.text : `Next: ${r.next.levelName} at ${r.next.threshold} ${unitFor(r.next.threshold, by.get(r.id).unit)}. You are at ${r.next.have}.`) : h('p', { class: 'muted' }, 'All three levels earned.'))))));

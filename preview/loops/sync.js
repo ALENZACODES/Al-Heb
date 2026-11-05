@@ -54,7 +54,7 @@ export function buildModel(rec, snap, now) {
   };
 }
 export function describe(model) {
-  return { ...statSentences(model.stats), heat: heatmapSummary(model.heat), heatRows: heatmapRows(model.heat) };
+  return { ...statSentences(model.stats), heat: heatmapSummary(model.heat), heatRows: heatmapRows(model.heat, model.heat.length) };
 }
 
 /** Apply a free repair: cover the current gap. Returns the new record. */

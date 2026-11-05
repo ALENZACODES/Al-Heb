@@ -36,10 +36,11 @@ const FRAMES = Object.freeze({
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 
 /**
- * @param {{glyph:string, level:number, title:string, desc:string, uid?:string, size?:number}} o  level 0 = not earned yet
+ * @param {{glyph:string, level:number, title:string, desc:string, uid?:string, size?:number, decorative?:boolean}} o  level 0 = not earned yet.
+ *  decorative = hidden from screen readers (use only where the text beside the picture already gives the name, level and number)
  * @returns {string} one <svg> element
  */
-export function badgeSVG({ glyph, level, title, desc, uid = 'b', size = 72 }) {
+export function badgeSVG({ glyph, level, title, desc, uid = 'b', size = 72, decorative = false }) {
   const lv = [0, 1, 2, 3].includes(level) ? level : 0, earned = lv > 0, filled = lv === 3;
   const ink = !earned ? V.muted : filled ? V.accentFg : V.accent;
   const frameStyle = earned
@@ -52,7 +53,7 @@ export function badgeSVG({ glyph, level, title, desc, uid = 'b', size = 72 }) {
     : `<path d="${GLYPHS[glyph] || GLYPHS.target}" style="${sty}"/>`;
   const pips = Array.from({ length: lv }, (_, i) => `<circle cx="${50 + (i - (lv - 1) / 2) * 12}" cy="79" r="4" style="fill:${ink};stroke:none"/>`).join('');
   const t = `${uid}-t`, d = `${uid}-d`;
-  return `<svg xmlns="http://www.w3.org/2000/svg" class="bd-art" viewBox="0 0 100 100" width="${size}" height="${size}" role="img" aria-labelledby="${t} ${d}" focusable="false" data-level="${lv}">`
+  return `<svg xmlns="http://www.w3.org/2000/svg" class="bd-art" viewBox="0 0 100 100" width="${size}" height="${size}" ${decorative ? 'aria-hidden="true"' : `role="img" aria-labelledby="${t} ${d}"`} focusable="false" data-level="${lv}">`
     + `<title id="${t}">${esc(title)}</title><desc id="${d}">${esc(desc)}</desc>${frame}<g transform="translate(0,-5)">${picture}</g>${pips}</svg>`;
 }
 
@@ -66,5 +67,5 @@ export function badgeLabel(bd, level, levelNames = ['First', 'Steady', 'Deep']) 
 /** Convenience: the SVG for a catalogue badge. */
 export function artFor(bd, level, opts = {}) {
   const { title, desc } = badgeLabel(bd, level, opts.levelNames);
-  return badgeSVG({ glyph: bd.glyph, level, title, desc, uid: opts.uid || `bd-${bd.id}-${level}`, size: opts.size });
+  return badgeSVG({ glyph: bd.glyph, level, title, desc, uid: opts.uid || `bd-${bd.id}-${level}`, size: opts.size, decorative: opts.decorative === true });
 }

@@ -10,7 +10,8 @@ import { CSS as BADGE_CSS, loadCatalog, settle, newBadgeNode, shelfNode, copyTex
 import { ensureStyle } from './celebrate.js';
 
 export const CSS = `
-.lp { display: grid; gap: var(--gap, 1rem); max-inline-size: 100%; overflow-wrap: anywhere; }
+.lp { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gap, 1rem); max-inline-size: 100%; overflow-wrap: anywhere; }
+.lp > * { min-inline-size: 0; }
 .lp h2 { margin-block: 0 .5rem; font-size: 1.2rem; }
 .lp .lp-row { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
 .lp .btn { min-block-size: var(--tap, 48px); min-inline-size: var(--tap, 48px); white-space: normal; }
@@ -18,10 +19,10 @@ export const CSS = `
 .lp ul { margin: 0; padding-inline-start: 1.25rem; }
 .lp li + li { margin-block-start: .4rem; }
 .lp summary { min-block-size: var(--tap, 48px); display: flex; align-items: center; cursor: pointer; font-weight: 600; }
-.lp-heat { display: grid; grid-auto-flow: column; grid-template-rows: repeat(7, 1.1rem); gap: 3px; overflow-x: auto; padding-block: .25rem; }
+.lp-heat { max-inline-size: 100%; display: grid; grid-auto-flow: column; grid-template-rows: repeat(7, 1.1rem); gap: 3px; overflow-x: auto; padding-block: .25rem; }
 .lp-cell { inline-size: 1.1rem; block-size: 1.1rem; font-size: .6rem; line-height: 1.1rem; text-align: center; border: 1px solid var(--border); border-radius: 3px; box-sizing: border-box; }
-.lp-cell[data-level="1"] { background: color-mix(in srgb, var(--accent) 25%, transparent); border-style: dotted; }
-.lp-cell[data-level="2"] { background: color-mix(in srgb, var(--accent) 55%, transparent); }
+.lp-cell[data-level="1"] { background: color-mix(in srgb, var(--accent) 25%, var(--card)); color: var(--fg); border-style: dotted; }
+.lp-cell[data-level="2"] { background: color-mix(in srgb, var(--accent) 70%, var(--card)); color: var(--accent-fg); }
 .lp-cell[data-level="3"] { background: var(--accent); color: var(--accent-fg); border-width: 2px; }
 .lp-cell[data-level="none"] { border-color: transparent; }
 .lp table { border-collapse: collapse; inline-size: 100%; }
@@ -49,7 +50,8 @@ export function mount(root, ctx) {
     const showRhythm = streakVisible(ctx);
 
     // goal
-    const ringHost = h('span', {}); ringHost.innerHTML = ringSVG(m.points, m.goal);
+    // the sentence beside the ring says the same, so a screen reader reads the ring once, as text
+    const ringHost = h('span', { 'aria-hidden': 'true' }); ringHost.innerHTML = ringSVG(m.points, m.goal);
     const goalCard = h('section', { class: 'card', 'aria-labelledby': 'lp-h-goal' }, h('h2', { id: 'lp-h-goal' }, 'Today'),
       h('div', { class: 'lp-row' }, ringHost, h('div', {}, h('p', { id: 'lp-ring-text', style: 'font-weight:600;margin:0' }, m.ring.text), h('p', { style: 'margin:.25rem 0 0' }, m.goalLine))),
       h('div', { class: 'lp-row', role: 'group', 'aria-label': 'Daily goal in points' }, ...GOALS.map((g) => h('button', { type: 'button', class: g === m.goal ? 'btn' : 'btn secondary', 'data-goal': String(g), 'aria-pressed': String(g === m.goal),
@@ -78,14 +80,16 @@ export function mount(root, ctx) {
       h('p', { class: 'muted' }, 'These are read from your own review cards and lesson records. Reviews and minutes are lower bounds, because a card keeps only its latest review time.'),
       h('h3', { id: 'lp-h-heat' }, 'Calendar'),
       h('p', { id: 'lp-heat-text' }, d.heat),
-      h('div', { class: 'lp-heat', 'aria-hidden': 'true' }, ...cells),
+      h('div', { class: 'lp-heat', 'aria-hidden': 'true', tabindex: '-1' }, ...cells),
       h('p', { class: 'muted' }, 'Level 0 none, 1 some, 2 a practice day, 3 daily goal reached.'),
       h('details', {}, h('summary', {}, 'Show the calendar as a table'),
-        h('table', {}, h('caption', {}, 'Points per week, newest first'), h('thead', {}, h('tr', {}, h('th', { scope: 'col' }, 'Week starting'), h('th', { scope: 'col' }, 'Points'), h('th', { scope: 'col' }, 'Practice days'), h('th', { scope: 'col' }, 'Each day (month-day: points)'))),
-          h('tbody', {}, ...d.heatRows.map((r) => h('tr', {}, h('th', { scope: 'row' }, r.from), h('td', {}, String(r.points)), h('td', {}, String(r.days)), h('td', {}, r.detail)))))));
+        h('div', { class: 'table-wrap', role: 'region', 'aria-label': 'Points per week, newest first', tabindex: '0' }, h('table', {}, h('caption', {}, 'Points per week, newest first'), h('thead', {}, h('tr', {}, h('th', { scope: 'col' }, 'Week starting'), h('th', { scope: 'col' }, 'Points'), h('th', { scope: 'col' }, 'Practice days'), h('th', { scope: 'col' }, 'Each day (month-day: points)'))),
+          h('tbody', {}, ...d.heatRows.map((r) => h('tr', {}, h('th', { scope: 'row' }, r.from), h('td', {}, String(r.points)), h('td', {}, String(r.days)), h('td', {}, r.detail))))))));
 
     main.replaceChildren(...[goalCard, rhythmCard, questCard, weekCard, badgeHost, progressCard].filter(Boolean));
     renderBadges();
+    // the newest weeks are on the right; start the sideways scroll there so today is in view
+    const heatEl = root.querySelector ? root.querySelector('.lp-heat') : null; if (heatEl && typeof heatEl.scrollWidth === 'number') heatEl.scrollLeft = heatEl.scrollWidth;
     if (focusId) { const el = root.querySelector ? root.querySelector('#' + focusId) : null; if (el && el.focus) el.focus(); }
   }
   function renderBadges() {
@@ -95,7 +99,7 @@ export function mount(root, ctx) {
     if (!s) { badgeHost.replaceChildren(); return; }
     badgeHost.replaceChildren(shelfNode(h, s, { onCopy: async (text) => { status.textContent = (await copyText(text)) ? 'Badge summary copied.' : 'Copying is not available here. The text is in the box above, so you can select and copy it.'; } }));
     const soundOn = !!(ctx && ctx.settings && ctx.settings.get && ctx.settings.get('soundEffects') === true);
-    const { node, plan } = newBadgeNode(h, s, { quiet: quietNow(ctx && ctx.settings), soundOn });
+    const { node, plan } = newBadgeNode(h, s, { quiet: quietNow(ctx && ctx.settings), soundOn, level: 2 });
     if (node) {
       ensureStyle(globalThis.document); newHost.replaceChildren(node);
       if (plan.sound && ctx && ctx.sfx && typeof ctx.sfx.play === 'function') { try { ctx.sfx.play(plan.sound); } catch { /* no sound is fine */ } }

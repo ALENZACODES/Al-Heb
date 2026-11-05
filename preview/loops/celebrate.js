@@ -5,7 +5,7 @@ export const FADE_MS = 600;
 
 export const CSS = `
 .lp-cele { border: 2px solid var(--accent); border-radius: var(--radius, 12px); padding: .75rem 1rem; margin-block: 1rem; }
-.lp-cele h3 { margin-block: 0 .25rem; font-size: 1.1rem; }
+.lp-cele h2, .lp-cele h3 { margin-block: 0 .25rem; font-size: 1.1rem; }
 .lp-cele p { margin-block: .25rem; }
 .lp-cele[data-motion="fade"] { animation: lp-fade ${FADE_MS}ms ease-out 1; }
 @keyframes lp-fade { from { opacity: 0; } to { opacity: 1; } }

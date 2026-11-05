@@ -32,6 +32,9 @@ import { summaryOf } from './build_manifest.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const OUTSIDE_SOURCE = 'outside-synthetic';
+/** Clips made by sending a stored respelling to an outside voice service (tools/tts/voice_*.mjs): --origin respelled. The label says so, and that the accent is not verified. */
+export const RESPELLED_SOURCE = 'outside-respelled';
+export const ORIGINS = Object.freeze({ outside: OUTSIDE_SOURCE, respelled: RESPELLED_SOURCE });
 export const INGEST_STATUS = 'synthetic-unreviewed'; // the only status this tool writes
 const PROTECTED = new Set(['recorded', 'synthetic-reviewed']); // never overwritten
 export const AUDIO_EXT = new Set(['.wav', '.mp3', '.ogg', '.oga', '.opus', '.m4a', '.aac', '.flac', '.webm']);
@@ -177,7 +180,7 @@ export function loadListing(file) {
     rows = Array.isArray(j) ? j : Object.entries(j).map(([k, v]) => (typeof v === 'string' ? { file: k, id: v } : { file: k, ...v }));
   } else rows = parseCsv(text);
   const pick = (r, names) => { for (const k of Object.keys(r)) if (names.includes(k.toLowerCase().trim())) return String(r[k] ?? '').trim(); return ''; };
-  const map = new Map(); const rowsOut = [];
+  const map = new Map(); const rowsOut = []; const base = new Map(), byBase = new Map();
   for (const r of rows) {
     const f = pick(r, ['file', 'filename', 'file_name', 'audio_file', 'audio', 'wav', 'mp3', 'clip']);
     const p = pick(r, ['path', 'manifest_path']);
@@ -190,8 +193,11 @@ export function loadListing(file) {
     if (!row.file) continue;
     rowsOut.push(row);
     const k = row.file.replace(/\\/g, '/').toLowerCase();
-    map.set(k, row); map.set(path.posix.basename(k), row);
+    map.set(k, row); if (k.startsWith('audio/')) map.set(k.slice(6), row); // a listing written relative to the repo root also matches an input folder that IS audio/
+    const b = path.posix.basename(k); base.set(b, (base.get(b) || 0) + 1); byBase.set(b, row);
   }
+  // The bare file name only identifies a row when no other row has the same file name (the same id exists for several voices and traditions in different folders).
+  for (const [b, n] of base) if (n === 1 && !map.has(b)) map.set(b, byBase.get(b));
   return { map, rows: rowsOut };
 }
 
@@ -362,7 +368,8 @@ export async function run(opts) {
   const root = path.resolve(opts.root || ROOT);
   const t = { ...DEFAULTS, ...(opts.thresholds || {}) };
   const tools = opts.tools || detectTools(); if (opts.noFfmpeg) { tools.ffmpeg = false; tools.ffprobe = false; }
-  const res = { root, input: opts.input, apply: !!opts.apply, tools, thresholds: t, files: [], counts: {}, ignored: {}, listingProblems: [], skipped: {}, errors: [], applied: 0, convertSample: null, delivery: null };
+  if (opts.origin != null && !['outside', 'respelled'].includes(opts.origin)) throw new Error('--origin must be outside (default) or respelled');
+  const res = { origin: opts.origin || 'outside', root, input: opts.input, apply: !!opts.apply, tools, thresholds: t, files: [], counts: {}, ignored: {}, listingProblems: [], skipped: {}, errors: [], applied: 0, convertSample: null, delivery: null };
   let input = path.resolve(opts.input), scratch = null;
   if (!fs.existsSync(input)) throw new Error(`input not found: ${opts.input}`);
   if (fs.statSync(input).isFile()) { if (!/\.zip$/i.test(input)) throw new Error('input must be a folder or a .zip'); scratch = extractZip(input); input = scratch; }
@@ -374,13 +381,14 @@ export async function run(opts) {
     let listing = null;
     if (opts.listing) {
       listing = loadListing(path.resolve(opts.listing)); res.listingRows = listing.rows.length;
-      const have = new Set(audio.flatMap((f) => [f.rel.toLowerCase(), path.posix.basename(f.rel).toLowerCase()]));
-      for (const r of listing.rows) if (!have.has(r.file.replace(/\\/g, '/').toLowerCase()) && !have.has(path.posix.basename(r.file).toLowerCase())) res.listingProblems.push(`listed but no such audio file: ${r.file}`);
+      const lookup = (rel) => listing.map.get(rel.toLowerCase()) || listing.map.get(path.posix.basename(rel).toLowerCase()) || null;
+      const used = new Set(audio.map((f) => lookup(f.rel)).filter(Boolean));
+      for (const r of listing.rows) if (!used.has(r)) res.listingProblems.push(`listed but no such audio file: ${r.file}`);
     }
     // 1. match by name
     const hashes = new Map();
     for (const f of audio) {
-      const row = listing ? (listing.map.get(f.rel.toLowerCase()) || listing.map.get(path.posix.basename(f.rel).toLowerCase())) : null;
+      const row = listing ? (listing.map.get(f.rel.toLowerCase()) || listing.map.get(path.posix.basename(f.rel).toLowerCase())) : null; // basename only when unique (loadListing)
       const m = matchFile(f.rel, index, { voice: opts.voice, tradition: opts.tradition, kind: opts.kind, listingRow: row });
       const rec = { rel: f.rel, abs: f.abs, size: f.size, ...m, fails: [], warns: [], state: m.result, listingText: row?.text || '' };
       if (m.result === 'matched') {
@@ -468,12 +476,13 @@ async function applyAll(res, entries, root, opts, tools, jobs, t) {
       const lu = integratedLufs(tmp); r.outLufs = lu; r.outBytes = size; r.outSec = c.info.duration;
       if (lu !== null && Math.abs(lu - TARGET.I) > 3) r.warns.push(`loudness after conversion ${lu.toFixed(1)} LUFS (target ${TARGET.I})`);
       fs.mkdirSync(path.dirname(dst), { recursive: true }); fs.copyFileSync(tmp, dst);
-      const synth = { origin: OUTSIDE_SOURCE, reviewed: false, redistributionCleared: false, licence: 'unknown: not cleared', batch: opts.batch || null, note: opts.batchNote || null, inputSha256: r.sha, ingestedAt: now, ingestedBy: 'tools/audio/ingest.mjs' };
+      const source = opts.origin === 'respelled' ? RESPELLED_SOURCE : OUTSIDE_SOURCE;
+      const synth = { origin: source, ...(opts.origin === 'respelled' ? { madeFrom: 'respelling', accentVerified: false } : {}), reviewed: false, redistributionCleared: false, licence: opts.origin === 'respelled' ? 'licence not cleared' : 'unknown: not cleared', batch: opts.batch || null, note: opts.batchNote || null, inputSha256: r.sha, ingestedAt: now, ingestedBy: 'tools/audio/ingest.mjs' };
       fs.writeFileSync(`${dst}.meta.json`, JSON.stringify({
-        status: INGEST_STATUS, source: OUTSIDE_SOURCE, synth, reviewed: false, redistributionCleared: false,
-        note: 'Synthetic clip from an outside source (provenance and licence not verified). Not a human recording. No human has listened to it; whether the speech is correct Hebrew is unknown. Converted by tools/audio/ingest.mjs (original file name and tags not kept).',
+        status: INGEST_STATUS, source, synth, reviewed: false, redistributionCleared: false,
+        note: (opts.origin === 'respelled' ? 'Synthetic clip made from a stored respelling by an outside voice service (licence not cleared). Whether it sounds Sephardi or Ashkenazi is not verified. ' : 'Synthetic clip from an outside source (provenance and licence not verified). ') + 'Not a human recording. No human has listened to it; whether the speech is correct Hebrew is unknown. Converted by tools/audio/ingest.mjs (original file name and tags not kept).',
       }, null, 1) + '\n');
-      hit.e.status = INGEST_STATUS; hit.e.source = OUTSIDE_SOURCE; hit.e.synth = synth; hit.f.changed = true; // synth last, as tools/tts/manifest_update.mjs and build_manifest.mjs do
+      hit.e.status = INGEST_STATUS; hit.e.source = source; hit.e.synth = synth; hit.f.changed = true; // synth last, as tools/tts/manifest_update.mjs and build_manifest.mjs do
       r.state = 'applied'; done.push(r); res.applied++;
     } catch (e) { r.state = 'rejected'; r.fails.push('conversion failed: ' + e.message.slice(0, 200)); try { fs.rmSync(dst, { force: true }); } catch { /* */ } }
     finally { fs.rmSync(tmpDir, { recursive: true, force: true }); }
@@ -528,7 +537,7 @@ export function report(res, o = {}) {
   if (res.convertSample) { const c = res.convertSample; L.push('## Conversion sample (scratch folder, deleted)', '', `- ${c.ok} of ${c.n} sample clips converted and passed the metadata check (mono 44.1 kHz 64 kbps MP3, no tags, no encoder string); measured ${c.measuredBytes} B against estimated ${c.estimatedBytes} B; loudness after: ${c.sample.map((s) => (s.lufs == null ? 'n/a' : s.lufs.toFixed(1))).join(', ')} LUFS (target ${TARGET.I})`); for (const s of c.sample) if (!s.ok) L.push(`- FAILED sample: ${s.problems.join('; ')}`); L.push(''); }
   if (res.delivery) { L.push('## Delivery checks (precache and service worker)', ''); for (const i of res.delivery.items) L.push(`- ${i.ok ? 'OK' : 'PROBLEM'}: ${i.text}`); L.push(''); }
   for (const e of res.errors) L.push(`**ERROR:** ${e}`, '');
-  if (res.apply) L.push(`## Applied`, '', `- ${res.applied} clip(s) written to audio/, each with a \`.meta.json\` sidecar; manifest entries set to status \`${INGEST_STATUS}\`, source \`${OUTSIDE_SOURCE}\`, provenance in \`synth\` (not reviewed, licence not cleared). Next: \`node tools/audio/build_manifest.mjs --check\`, \`node tools/build-precache.mjs\`, run the tests, commit.`, '');
+  if (res.apply) L.push(`## Applied`, '', `- ${res.applied} clip(s) written to audio/, each with a \`.meta.json\` sidecar; manifest entries set to status \`${INGEST_STATUS}\`, source \`${res.origin === 'respelled' ? RESPELLED_SOURCE : OUTSIDE_SOURCE}\`, provenance in \`synth\` (not reviewed, licence not cleared). Next: \`node tools/audio/build_manifest.mjs --check\`, \`node tools/build-precache.mjs\`, run the tests, commit.`, '');
   else L.push('## Next', '', 'Nothing was changed. Fix or accept the lists above, then re-run with `--apply`.', '');
   L.push('## What this report cannot tell you', '', '- Whether the speech is correct Hebrew, the right word, the right vowels or the right tradition. Only a native listener can judge that. Every clip stays `synthetic-unreviewed` until a person has listened.', '- Who made the clips, under what terms, and whether they may be redistributed or sold. The tool records `outside generator, not reviewed, licence not cleared`; get the terms in writing.', '- Voice quality, accent and naturalness. The length-for-text check is a rough sanity filter only.');
   return L.join('\n') + '\n';
@@ -543,7 +552,7 @@ export async function main(argv = process.argv.slice(2)) {
   let res;
   try {
     res = await run({ input: a._[0], root: a.root, apply: !!a.apply, listing: a.listing, voice: a.voice, tradition: a.tradition, kind: a.kind, thresholds: th, jobs: num('jobs'), tryConvert: num('try-convert'),
-      strict: !!a.strict, replace: !!a.replace, allowHumanOnly: !!a['allow-human-only-groups'], overBudgetOk: !!a['over-budget-ok'], noDeliveryCheck: !!a['no-delivery-check'], batch: a.batch, batchNote: a['batch-note'] });
+      strict: !!a.strict, replace: !!a.replace, allowHumanOnly: !!a['allow-human-only-groups'], overBudgetOk: !!a['over-budget-ok'], noDeliveryCheck: !!a['no-delivery-check'], batch: a.batch, batchNote: a['batch-note'], origin: a.origin });
   } catch (e) { console.error('ingest: ' + e.message); process.exitCode = 2; return; }
   const text = report(res, { maxList: num('max-list') });
   console.log(text);

@@ -4,6 +4,7 @@
 //   tts                   older synthetic Israeli-Hebrew clip (kept readable)
 //   synthetic-unreviewed  synthetic clip from the local text-to-speech pipeline, no human has listened to it
 //   synthetic-reviewed    same, after a human marked it reviewed (no tool does that yet; edit by hand)
+// A clip whose manifest `source` is 'outside-respelled' was made from a stored respelling by an outside voice service; its label says that and that the accent is not verified.
 // A clip whose manifest `source` is 'outside-synthetic' (tools/audio/ingest.mjs) came from a generator whose model and method are unknown, so its label
 // says that instead of claiming "made from pointed Hebrew / a respelling".
 // Anything else counts as 'missing' (see summarizeManifest in ./audio.js).
@@ -26,6 +27,11 @@ const TRAD_STYLE = Object.freeze({ israeli: 'Israeli', sephardi: 'Sephardi', ash
  */
 export function syntheticLabel(status, tradition, source) {
   const style = TRAD_STYLE[tradition];
+  if (typeof source === 'string' && source.startsWith('outside-respelled')) {
+    // made by an outside voice service from a stored respelling (tools/tts/voice_*.mjs, tools/audio/ingest.mjs --origin respelled): say so, and that the accent is unverified
+    const rev = status === 'synthetic-reviewed' ? 'reviewed by a listener' : 'unreviewed';
+    return `Synthetic voice (${[style ? `${style} style not verified` : '', 'made from a respelling', 'not a recorded teacher', rev].filter(Boolean).join('; ')})`;
+  }
   if (typeof source === 'string' && source.startsWith('outside-synthetic')) {
     const rev = status === 'synthetic-reviewed' ? 'reviewed by a listener' : 'unreviewed';
     return `Synthetic voice (${['outside generator', style ? `${style} style not verified` : '', 'not a recorded teacher', rev].filter(Boolean).join('; ')})`;

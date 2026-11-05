@@ -88,8 +88,10 @@ export function glossIndex(root) {
  * `audioDir` is the folder that holds m/ and f/ (the repo's audio/ folder by default). Entries whose file is absent are returned
  * in `missing` and are not in the packet.
  */
-export function collectClips(root, audioDir = path.join(root, 'audio')) {
-  const entries = loadManifestFull(root).filter((e) => e.status === REVIEWABLE_STATUS);
+export function collectClips(root, audioDir = path.join(root, 'audio'), filter = {}) {
+  // filter {tradition, voice}: one packet per tradition x voice slice, so a set of clips that repeats ids across traditions or voices (the respelled Sephardi and Ashkenazi
+  // clips, man and woman) can still be listened to; the packet keys on id, so each slice must have unique ids.
+  const entries = loadManifestFull(root).filter((e) => e.status === REVIEWABLE_STATUS && (!filter.tradition || e.tradition === filter.tradition) && (!filter.voice || e.voice === filter.voice));
   const gl = glossIndex(root);
   const clips = [], missing = [];
   for (const e of entries) {

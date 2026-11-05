@@ -5,7 +5,7 @@
 //   node tools/review/build_audio_packet.mjs --zip FILE.zip       ALSO writes a send-ready zip: page + sheet + guide + the clips
 //   node tools/review/build_audio_packet.mjs --check              exits 1 if the committed page/sheet are not what would be built now
 //
-// Options: --root DIR (repo, default this checkout)  --audio DIR (folder holding m/ and f/, default <root>/audio)
+// Options: --tradition israeli|sephardi|ashkenazi  --voice m|f  (only that slice; needed when the same ids exist for several traditions or voices)  --root DIR (repo, default this checkout)  --audio DIR (folder holding m/ and f/, default <root>/audio)
 //          --out DIR (default <root>/docs/review/audio-packet)  --audio-href PREFIX (how the page reaches the clips;
 //          default: the relative path from --out to --audio, so the page works in place inside the repo)
 //
@@ -309,7 +309,7 @@ export function zipFiles(clips, guideText) {
 }
 
 export function main(argv = process.argv.slice(2)) {
-  const opt = { root: DEFAULT_ROOT, audio: null, out: null, href: null, zip: null, check: false };
+  const opt = { root: DEFAULT_ROOT, audio: null, out: null, href: null, zip: null, check: false, tradition: null, voice: null };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i], next = () => { if (i + 1 >= argv.length) throw new Error(`${a} needs a value`); return argv[++i]; };
     if (a === '--root') opt.root = path.resolve(next());
@@ -318,12 +318,14 @@ export function main(argv = process.argv.slice(2)) {
     else if (a === '--audio-href') opt.href = next();
     else if (a === '--zip') opt.zip = path.resolve(next());
     else if (a === '--check') opt.check = true;
+    else if (a === '--tradition') opt.tradition = next();
+    else if (a === '--voice') opt.voice = next();
     else throw new Error(`unknown option ${a}`);
   }
   const audio = opt.audio || path.join(opt.root, 'audio');
   const out = opt.out || path.join(opt.root, 'docs/review/audio-packet');
   const href = opt.href || (path.relative(out, audio).split(path.sep).join('/') || '.');
-  const { clips, missing, glossMissing } = collectClips(opt.root, audio);
+  const { clips, missing, glossMissing } = collectClips(opt.root, audio, { tradition: opt.tradition, voice: opt.voice });
   if (!clips.length) throw new Error(`no synthetic-unreviewed clips with a file under ${audio}`);
   const page = buildPage(clips, href), sheet = buildSheetCsv(clips);
   const report = [`${clips.length} clips in the packet`];

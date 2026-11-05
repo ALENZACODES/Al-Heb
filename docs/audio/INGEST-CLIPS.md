@@ -75,6 +75,10 @@ Per matched clip (needs ffmpeg for non-WAV; WAV works without):
 - Who made it, the terms, and any voice-clone rights. Not a technical question.
 - Whether a clip is the right length for its text beyond the crude check above.
 
+## Clips made from a respelling by the outside-voice pipeline (`--origin respelled`)
+
+Clips from `tools/tts/voice_handoff.mjs` (see `docs/tts/VOICE-SERVICE-RUNBOOK.md`) already use the repo's layout, `audio/<m|f>/<sephardi|ashkenazi>/word/<id>.mp3`, so voice, tradition and kind come from the path, and the hand-off `listing.csv` adds the Hebrew text for the consonant check. Pass `--origin respelled` so the provenance says what they are: `source: "outside-respelled"`, `synth.madeFrom: "respelling"`, `synth.accentVerified: false`, `synth.licence: "licence not cleared"`. The label then reads "Synthetic voice (Sephardi style not verified; made from a respelling; not a recorded teacher; unreviewed)". Without `--origin` the behaviour is unchanged (`outside-synthetic`). The listing matches a row by its full path (with or without the leading `audio/`); a bare file name only counts when no other row has the same name, because the same id exists for several voices and traditions. To listen, `node tools/review/build_audio_packet.mjs --tradition sephardi --voice m` builds one packet per slice (the packet keys on id).
+
 ## How the app labels these clips
 
 `--apply` writes `status: "synthetic-unreviewed"` and `source: "outside-synthetic"`, plus `synth: { origin, reviewed: false, redistributionCleared: false, licence: "unknown: not cleared", batch, note, inputSha256, ingestedAt, ingestedBy }` into the manifest entry and the sidecar. It never writes `recorded` and never touches an entry that is `recorded` or `synthetic-reviewed`. It also updates `data/audio/summary.json`. `node tools/audio/build_manifest.mjs --check` passes afterwards (the sidecar reproduces the same entry; checked on a scratch copy with two tone clips).
@@ -92,4 +96,4 @@ Isolated letters, vowels and syllables (`HUMAN_ONLY_GROUPS` in `tools/audio/cove
 
 ## Options
 
-`--root`, `--listing`, `--voice`, `--tradition`, `--kind`, `--report`, `--json`, `--min-sec`, `--max-sec`, `--min-rate`, `--max-clip-pct`, `--max-clip-kb`, `--budget-mb`, `--over-budget-ok`, `--strict`, `--replace`, `--allow-human-only-groups`, `--try-convert N` (dry run: convert N sample clips in a scratch folder, delete them, report measured size and loudness; default 3), `--jobs`, `--max-list`, `--batch`, `--batch-note`, `--no-delivery-check`. Exit codes: 0 fine; 1 over budget, delivery check failed, conversion error or failed sample; 2 usage or unreadable input.
+`--root`, `--listing`, `--voice`, `--tradition`, `--kind`, `--report`, `--json`, `--min-sec`, `--max-sec`, `--min-rate`, `--max-clip-pct`, `--max-clip-kb`, `--budget-mb`, `--over-budget-ok`, `--strict`, `--replace`, `--allow-human-only-groups`, `--try-convert N` (dry run: convert N sample clips in a scratch folder, delete them, report measured size and loudness; default 3), `--jobs`, `--max-list`, `--batch`, `--batch-note`, `--no-delivery-check`, `--origin outside|respelled`. Exit codes: 0 fine; 1 over budget, delivery check failed, conversion error or failed sample; 2 usage or unreadable input.

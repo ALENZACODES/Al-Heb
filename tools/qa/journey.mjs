@@ -535,6 +535,9 @@ async function runPersona(cfg) {
   // Backup probe: Settings > Backup (download), then read the downloaded file and look for the progress keys.
   await safe('backup probe', async () => {
     await go('#/settings');
+    // Settings groups its long list into collapsed <details>; the backup button sits in the data group, so open it first.
+    await page.waitForSelector('#s-g-data', { state: 'attached', timeout: 10000 }).catch(() => null);
+    await page.evaluate(() => { const d = document.getElementById('s-g-data'); if (d) d.open = true; });
     const btn = page.locator('button:has-text("Download"), button:has-text("Export"), button:has-text("Back up")').first();
     const n = await btn.count();
     if (!n) { P.backup = { ok: false, why: 'no export button found on Settings' }; log('backup: no export button', P.backup); return; }

@@ -110,7 +110,9 @@ versionOverride = null;
 // ---- 5. persistence API and clear-site-data behaviour
 const per = await page.evaluate(async () => ({ api: !!(navigator.storage && navigator.storage.persist), persisted: navigator.storage?.persisted ? await navigator.storage.persisted() : null }));
 note('navigator.storage.persist is available in this browser', per.api, `persisted now: ${per.persisted}`);
-await page.goto(base + '#/settings'); await page.waitForSelector('#s-persist'); await page.waitForTimeout(400);
+// Settings groups its long list into collapsed <details>; the persistence line, backup and import controls live in them, so open every group first.
+const openSettingsGroups = async () => { await page.waitForSelector('details.s-group', { state: 'attached' }); await page.evaluate(() => document.querySelectorAll('details.s-group').forEach((d) => { d.open = true; })); };
+await page.goto(base + '#/settings'); await openSettingsGroups(); await page.waitForSelector('#s-persist'); await page.waitForTimeout(400);
 const line = await page.textContent('#s-persist');
 note('Settings states whether progress is protected', /protected|may remove|does not offer/.test(line), line.slice(0, 90));
 // export a backup from Settings (real download), then simulate the learner clearing site data, then restore from the file
@@ -124,7 +126,7 @@ const errBefore = pageErrors.length;
 await page.goto(base + '#/'); await page.reload(); await page.waitForSelector('body[data-ready="1"]');
 note('after clearing site data the app starts again as a first run (welcome screen), no errors', await page.evaluate(() => location.hash === '#/welcome') && pageErrors.length === errBefore, await page.evaluate(() => location.hash));
 note('after clearing site data the progress is gone (this is why the backup file matters)', await page.evaluate(() => !localStorage.getItem('alef:curriculum.progress')));
-await page.goto(base + '#/settings'); await page.waitForSelector('#s-import');
+await page.goto(base + '#/settings'); await openSettingsGroups(); await page.waitForSelector('#s-import');
 // a bad file is refused and changes nothing
 const badPath = join((await import('node:os')).tmpdir(), 'alef-pwa-bad.json'); (await import('node:fs')).writeFileSync(badPath, '{"hello":1}');
 await page.setInputFiles('#s-import', badPath); await page.waitForTimeout(300);

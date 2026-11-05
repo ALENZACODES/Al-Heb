@@ -80,7 +80,7 @@ export function mount(root, ctx) {
   const wipeGo = h('button', { type: 'button', class: 'btn secondary', id: 's-wipe-go', disabled: true, onclick: async () => {
     if (!confirmMatches(wipeInput.value)) return;
     wipeGo.disabled = true;
-    const r = await wipeAllData({ store, caches: globalThis.caches, navigator: globalThis.navigator, storage: store.persistent ? globalThis.localStorage : null, unregisterServiceWorker: wipeSw.checked });
+    const r = await wipeAllData({ store, caches: globalThis.caches, navigator: globalThis.navigator, storage: (() => { try { return globalThis.localStorage; } catch { return null; } })(), unregisterServiceWorker: wipeSw.checked });
     wipeInput.value = ''; settings.reload();
     status.textContent = r.errors.length ? 'Some data could not be deleted (' + r.errors.join('; ') + '). Try again, or clear site data in your browser settings.' : `Deleted all saved progress and settings from this device${r.caches ? ', and ' + r.caches + ' offline cache' + (r.caches === 1 ? '' : 's') : ''}${r.serviceWorkers ? ', and removed the offline service worker' : ''}. Reload the page to start fresh.`;
   } }, 'Delete all my data');

@@ -161,13 +161,22 @@ export function createStore(opts = {}) {
      * @param {string} key @param {(cur:any)=>any} fn @param {any} [fallback] */
     update(key, fn, fallback) { const v = fn(api.get(key, fallback)); api.set(key, v); return v; },
     /** @param {string} key */
-    remove(key) { try { backend.removeItem(prefix + key); } catch { /* ignore */ } emit(key, undefined); },
+    remove(key) {
+      try { backend.removeItem(prefix + key); } catch { /* ignore */ }
+      // After a fallback to memory the old copy is still in the real storage and would return on the next load: remove it too.
+      if (!persistent && primary && primary !== backend) { try { primary.removeItem(prefix + key); } catch { /* ignore */ } }
+      emit(key, undefined);
+    },
     keys() { return Object.keys(dump()); },
     /** @param {(key:string,value:any,info?:{external?:boolean})=>void} fn @returns {()=>void} */
     subscribe(fn) { listeners.add(fn); return () => listeners.delete(fn); },
     /** Remove every ALEF entry (including ones that fail to parse). Keeps the schema stamp. */
     clear() {
       for (const full of Object.keys(rawAll())) { if (full === prefix + META) continue; try { backend.removeItem(full); } catch { /* ignore */ } emit(full.slice(prefix.length), undefined); }
+      // After a fallback to memory the old copy is still in the real storage and would return on the next load: remove it too.
+      if (!persistent && primary && primary !== backend) {
+        for (const full of Object.keys(rawAll(primary))) { if (full === prefix + META) continue; try { primary.removeItem(full); } catch { /* ignore */ } }
+      }
     },
     /** After the device freed space or the user backed up: try to move in-memory data back into localStorage. @returns {boolean} */
     retryPersistence() {

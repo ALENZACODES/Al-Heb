@@ -74,24 +74,76 @@ export function scopeSvgCss(css) {
   return out;
 }
 
+const OK_ATTRS = new Set(['xmlns', 'xmlns:xlink', 'viewbox', 'class', 'id', 'role', 'aria-labelledby', 'aria-hidden', 'focusable', 'd', 'x', 'y', 'cx', 'cy', 'r', 'rx', 'ry', 'x1', 'y1', 'x2', 'y2', 'width', 'height', 'points', 'transform', 'style', 'fill', 'stroke', 'stroke-width', 'stroke-linecap', 'stroke-linejoin', 'fill-rule', 'clip-rule', 'clip-path', 'mask', 'filter', 'opacity', 'fill-opacity', 'stroke-opacity', 'pathlength', 'href', 'xlink:href', 'offset', 'stop-color', 'stop-opacity', 'gradientunits', 'gradienttransform', 'fx', 'fy', 'clippathunits', 'preserveaspectratio', 'text-anchor', 'font-size', 'font-family', 'font-weight', 'dx', 'dy', 'stddeviation', 'in', 'in2', 'result', 'operator', 'type', 'values', 'flood-color', 'flood-opacity']);
 /**
  * Make an SVG file safe to inline: returns the cleaned markup, or null when anything is off (the caller then shows the plain letter).
- * It REJECTS rather than repairs: script, foreignObject, event handlers, external references, DOCTYPE/entities, unknown elements, @import, remote url().
+ * ALLOW-LIST, not reject-list: the file is tokenised, and only well-formed, double-quoted markup made of known elements and known attributes survives.
+ * Anything else (a stray "<", an entity other than the five XML ones, an unknown element or attribute, a backslash escape, a url() that is not "#id", an
+ * @-rule other than @media/@supports/@keyframes, image-set()/image()/src()/expression(), position:, a mismatched close tag) rejects the whole file.
  * Ids are prefixed ("mc-") so they cannot collide with the page; the root becomes decorative (aria-hidden) because the card supplies the alt text.
  * @param {string} text @returns {string|null}
  */
 export function sanitizeSvg(text) {
   if (typeof text !== 'string' || text.length > 200000) return null;
-  let s = text.replace(/^﻿/, '').replace(/<\?xml[\s\S]*?\?>/g, '').replace(/<!--[\s\S]*?-->/g, '').trim();
-  if (!/^<svg[\s>]/i.test(s) || !/<\/svg>\s*$/i.test(s)) return null;
-  if (/<!\s*(DOCTYPE|ENTITY)|<!\[CDATA\[|<\s*script|<\s*foreignObject|<\s*iframe|<\s*image|<\s*a[\s>]|javascript:|data:|@import|&#|[\s\"'/]on[a-z]+\s*=/i.test(s)) return null; // an event-handler attribute can follow a quote or a slash, not only a space
-  for (const m of s.matchAll(/<\s*([a-zA-Z][\w:-]*)/g)) if (!OK_TAGS.has(m[1].toLowerCase())) return null;
-  for (const m of s.matchAll(/(?:xlink:)?href\s*=\s*("([^"]*)"|'([^']*)')/gi)) { const v = (m[2] ?? m[3] ?? '').trim(); if (!v.startsWith('#')) return null; }
-  for (const m of s.matchAll(/url\(\s*(['"]?)([^)'"]*)\1\s*\)/gi)) if (!m[2].trim().startsWith('#')) return null;
-  s = s.replace(/\sid\s*=\s*("([^"]*)"|'([^']*)')/g, (_, __, a, b) => ` id="mc-${a ?? b}"`)
-    .replace(/(href\s*=\s*["'])#/gi, '$1#mc-').replace(/url\(\s*(['"]?)#/gi, 'url($1#mc-');
-  s = s.replace(/(<style\b[^>]*>)([\s\S]*?)(<\/style>)/gi, (_, a, css, z) => a + scopeSvgCss(css) + z);
-  s = s.replace(/<svg\b/i, '<svg aria-hidden="true" focusable="false"');
+  let s = text.replace(/^﻿/, '').replace(/^\s*<\?xml[^>]*\?>/, '').replace(/<!--(?:(?!-->)[^])*-->/g, '').trim();
+  if (!/^<svg[\s>]/.test(s) || !/<\/svg>$/.test(s)) return null;
+  const ID = /^[A-Za-z][\w-]*$/;
+  const cssOk = (css) => {
+    const c = css.replace(/\/\*[^]*?\*\//g, ' ');
+    if (/[\\&<]|\/\*|\*\//.test(c)) return false;
+    if (/@(?!(?:media|supports|keyframes)\b)/i.test(c)) return false;
+    if (/image-set|image\s*\(|cross-fade|element\s*\(|src\s*\(|expression|behavior|binding|paint\s*\(|position\s*:|javascript|data:/i.test(c)) return false;
+    return !/url\s*\(/i.test(c.replace(/url\(\s*#[\w-]+\s*\)/gi, ' '));
+  };
+  const attrOk = (name, v, isRoot) => {
+    if (name === 'xmlns') return isRoot && v === 'http://www.w3.org/2000/svg';
+    if (name === 'xmlns:xlink') return isRoot && v === 'http://www.w3.org/1999/xlink';
+    if (name === 'href' || name === 'xlink:href') return v.startsWith('#') && ID.test(v.slice(1));
+    if (name === 'style') return cssOk(v);
+    if (name === 'id') return ID.test(v);
+    if (name === 'aria-labelledby') return v.split(/\s+/).every((x) => ID.test(x));
+    if (/url\s*\(/i.test(v)) return /^\s*url\(\s*#[\w-]+\s*\)\s*$/i.test(v) && ['fill', 'stroke', 'clip-path', 'mask', 'filter'].includes(name);
+    return /^[\w\s.,:;#%()+\-/]*$/.test(v) && !/javascript|data:|expression/i.test(v);
+  };
+  const stack = []; const out = []; let i = 0; let rootSeen = false;
+  const openRe = /<([A-Za-z][A-Za-z0-9]*)((?:\s+[A-Za-z][A-Za-z0-9:-]*="[^"<>&\\]*")*)\s*(\/?)>/y;
+  const closeRe = /<\/([A-Za-z][A-Za-z0-9]*)\s*>/y;
+  while (i < s.length) {
+    if (s[i] !== '<') { // text: no "<", only the five XML entities
+      const j = s.indexOf('<', i); const t = s.slice(i, j < 0 ? s.length : j);
+      if (/&(?!(?:amp|lt|gt|quot|apos);)/.test(t)) return null;
+      out.push(t); i += t.length; continue;
+    }
+    closeRe.lastIndex = i; let m = closeRe.exec(s);
+    if (m) {
+      if (!stack.length || stack.pop() !== m[1].toLowerCase()) return null;
+      out.push(m[0]); i += m[0].length; if (!stack.length && i < s.length) return null; continue;
+    }
+    openRe.lastIndex = i; m = openRe.exec(s);
+    if (!m) return null;
+    const tag = m[1].toLowerCase();
+    if (!OK_TAGS.has(tag)) return null;
+    const isRoot = !rootSeen; if (isRoot && tag !== 'svg') return null; if (!isRoot && tag === 'svg') return null; rootSeen = true;
+    const seen = new Set();
+    for (const a of m[2].matchAll(/\s+([A-Za-z][A-Za-z0-9:-]*)="([^"]*)"/g)) {
+      const n = a[1].toLowerCase(); if (seen.has(n)) return null; seen.add(n);
+      if (!OK_ATTRS.has(n) || !attrOk(n, a[2], isRoot)) return null;
+    }
+    out.push(m[0]); i += m[0].length;
+    if (m[3]) { if (!stack.length && !isRoot) return null; if (isRoot) return null; continue; }
+    stack.push(tag);
+    if (tag === 'style') { // raw text up to the matching close: validate as CSS, never as markup
+      const e = s.indexOf('</style>', i); if (e < 0) return null;
+      const css = s.slice(i, e); if (!cssOk(css)) return null;
+      out.push(css); i = e;
+    }
+  }
+  if (stack.length || !rootSeen) return null;
+  s = out.join('');
+  s = s.replace(/\sid="([^"]*)"/g, (_, a) => ` id="mc-${a}"`)
+    .replace(/(href=")#/g, '$1#mc-').replace(/url\(\s*#/gi, 'url(#mc-');
+  s = s.replace(/(<style\b[^>]*>)([^]*?)(<\/style>)/g, (_, a, css, z) => a + scopeSvgCss(css) + z);
+  s = s.replace(/<svg\b/, '<svg aria-hidden="true" focusable="false"');
   return s;
 }
 

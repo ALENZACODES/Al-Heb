@@ -68,7 +68,7 @@ self.addEventListener('fetch', (event) => {
   event.respondWith((async () => {
     const hit = await caches.match(req, { ignoreSearch: false });
     const hitInData = hit && !!(await (await caches.open(DATA)).match(req));
-    const net = fetch(req).then(async (res) => { if (res.ok) { const c = await caches.open(hit && !hitInData ? SHELL : DATA); c.put(req, res.clone()); } return res; }).catch(() => null);
+    const net = fetch(req).then(async (res) => { if (res.ok) { if (!(hit && !hitInData)) { const c = await caches.open(DATA); c.put(req, res.clone()); } } return res; }).catch(() => null);
     return hit || (await net) || (await caches.match('offline.html')) || Response.error();
   })());
 });

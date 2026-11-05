@@ -73,7 +73,7 @@ export const STORE_KEYS = [
   ['torahreader.v1', 'Torah reader position', 'src/torahreader/model.js'],
   ['torahread.v1', 'Torah-reading course progress', 'src/torahread/ui.js'],
   ['progress.state', 'Progress screen state', 'src/morning/model.js'],
-  ['loops.v1', 'Daily goal in points, which days you practiced and what you did each day (counts only), your repair days, and whether quests are shown', 'preview/loops/store.js'],
+  ['loops.v1', 'Daily goal in points, which days you practiced and what you did each day (counts only), your repair days, whether quests are shown, and your badges (which you earned and on what date, as counts only)', 'preview/loops/store.js'],
   ['morning.prefs', 'Morning verse preferences', 'src/morning/plan.js'],
   ['notify.prefs', 'Reminder time and on/off', 'src/shell/boot-hooks.js'],
   ['calendar.prefs', 'Calendar preferences', 'src/shell/notify.js'],

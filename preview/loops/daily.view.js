@@ -2,10 +2,12 @@
 // progress section with a calendar heatmap that has a text alternative. Local only: nothing is sent anywhere, nothing
 // autoplays, nothing asks for permission. Draft, not tried with learners or on a device.
 import { h } from '../../src/shell/ui.js';
-import { streakVisible } from '../../src/shell/comfort.js';
+import { streakVisible, quietNow } from '../../src/shell/comfort.js';
 import { GOALS, load, save, withGoal, withQuests } from './store.js';
 import { refresh, buildModel, describe, applyRepair, dayKey } from './sync.js';
 import { ringSVG } from './points.js';
+import { CSS as BADGE_CSS, loadCatalog, settle, newBadgeNode, shelfNode, copyText } from './badges.view.js';
+import { ensureStyle } from './celebrate.js';
 
 export const CSS = `
 .lp { display: grid; gap: var(--gap, 1rem); max-inline-size: 100%; overflow-wrap: anywhere; }
@@ -25,7 +27,7 @@ export const CSS = `
 .lp table { border-collapse: collapse; inline-size: 100%; }
 .lp th, .lp td { text-align: start; padding: .3rem .4rem; border-top: 1px solid var(--border); font-weight: normal; }
 .lp progress { inline-size: 6rem; block-size: .8rem; accent-color: var(--accent); }
-`;
+` + BADGE_CSS;
 
 const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
 
@@ -34,9 +36,11 @@ export function mount(root, ctx) {
   const now = () => (ctx && typeof ctx.now === 'function' ? ctx.now() : Date.now());
   const status = h('p', { class: 'muted', role: 'status', 'aria-live': 'polite' });
   const main = h('div', { class: 'lp' });
+  const newHost = h('div', {}), badgeHost = h('div', {});
+  let catalog = null, catalogTried = false;
   const style = h('style', {}); style.textContent = CSS;
   root.replaceChildren(style, h('h1', { id: 'view-title', tabindex: '-1' }, 'Daily goal and quests'),
-    h('p', { class: 'muted' }, 'A gentle daily layer on top of your lessons. Everything here is kept on this device only, nothing is sent anywhere, and nothing here ever stops you from learning. Draft: not tried with learners yet.'), status, main);
+    h('p', { class: 'muted' }, 'A gentle daily layer on top of your lessons. Everything here is kept on this device only, nothing is sent anywhere, and nothing here ever stops you from learning. Draft: not tried with learners yet.'), status, newHost, main);
 
   function render(focusId) {
     const { rec, snap } = refresh(store);
@@ -80,9 +84,24 @@ export function mount(root, ctx) {
         h('table', {}, h('caption', {}, 'Points per week, newest first'), h('thead', {}, h('tr', {}, h('th', { scope: 'col' }, 'Week starting'), h('th', { scope: 'col' }, 'Points'), h('th', { scope: 'col' }, 'Practice days'), h('th', { scope: 'col' }, 'Each day (month-day: points)'))),
           h('tbody', {}, ...d.heatRows.map((r) => h('tr', {}, h('th', { scope: 'row' }, r.from), h('td', {}, String(r.points)), h('td', {}, String(r.days)), h('td', {}, r.detail)))))));
 
-    main.replaceChildren(...[goalCard, rhythmCard, questCard, weekCard, progressCard].filter(Boolean));
+    main.replaceChildren(...[goalCard, rhythmCard, questCard, weekCard, badgeHost, progressCard].filter(Boolean));
+    renderBadges();
     if (focusId) { const el = root.querySelector ? root.querySelector('#' + focusId) : null; if (el && el.focus) el.focus(); }
   }
+  function renderBadges() {
+    if (!catalog) { badgeHost.replaceChildren(catalogTried ? h('section', { class: 'card' }, h('h2', {}, 'Badges'), h('p', {}, 'The badge list could not be read right now. Your badges are kept on this device and will show next time.')) : h('section', { class: 'card' }, h('h2', {}, 'Badges'), h('p', { class: 'muted' }, 'Loading badges.'))); return; }
+    const offline = typeof navigator !== 'undefined' && navigator.onLine === false;
+    const s = settle(store, catalog, now(), { offline });
+    if (!s) { badgeHost.replaceChildren(); return; }
+    badgeHost.replaceChildren(shelfNode(h, s, { onCopy: async (text) => { status.textContent = (await copyText(text)) ? 'Badge summary copied.' : 'Copying is not available here. The text is in the box above, so you can select and copy it.'; } }));
+    const soundOn = !!(ctx && ctx.settings && ctx.settings.get && ctx.settings.get('soundEffects') === true);
+    const { node, plan } = newBadgeNode(h, s, { quiet: quietNow(ctx && ctx.settings), soundOn });
+    if (node) {
+      ensureStyle(globalThis.document); newHost.replaceChildren(node);
+      if (plan.sound && ctx && ctx.sfx && typeof ctx.sfx.play === 'function') { try { ctx.sfx.play(plan.sound); } catch { /* no sound is fine */ } }
+    }
+  }
   render();
+  loadCatalog(ctx).then((c) => { catalog = c; catalogTried = true; renderBadges(); }).catch(() => { catalogTried = true; renderBadges(); });
   return () => {};
 }

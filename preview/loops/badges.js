@@ -111,6 +111,9 @@ export function shownTier(catalog, points, bestIndex) {
   return t.index >= bestIndex ? t : { ...tierFor(catalog, (((catalog && catalog.tiers) || [])[bestIndex] || { min: 0 }).min), points };
 }
 
+/** "1 final forms" reads wrongly: use the singular for exactly one. */
+export const unitFor = (n, unit) => (n === 1 ? String(unit).replace(/ies$/, 'y').replace(/s$/, '') : unit);
+
 /** Rows for the shelf: per badge, the levels earned, and the next level described gently. */
 export function shelf(catalog, badges, facts) {
   const b = cleanBadges(badges), names = (catalog && catalog.levelNames) || ['First', 'Steady', 'Deep'];
@@ -120,7 +123,7 @@ export function shelf(catalog, badges, facts) {
     return { id: bd.id, family: bd.family, name: bd.name, glyph: bd.glyph, hidden: !!bd.hidden, level, levelName: level ? names[level - 1] : null, threshold: level ? bd.levels[level - 1] : null,
       since: level ? lv[level] : null, earnText: level ? bd.earn[level - 1] : null, earnedLevels: LEVELS.filter((n) => lv[n]),
       next: nextN == null ? null : { level: level + 1, levelName: names[level], threshold: nextN, have: Math.min(have, nextN),
-        text: `Next: ${names[level]} at ${nextN} ${bd.unit}. You are at ${Math.min(have, nextN)}.` } };
+        text: `Next: ${names[level]} at ${nextN} ${unitFor(nextN, bd.unit)}. You are at ${Math.min(have, nextN)}.` } };
   });
 }
 

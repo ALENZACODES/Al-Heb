@@ -150,3 +150,8 @@ test('plan: calm mode and reduced motion give no motion; sound only when on and 
   assert.equal(B.badgePlan({ newly: [], catalog, quiet: false, soundOn: true }).sound, null);
   assert.match(B.badgePlan({ newly: [], catalog, quiet: false, tierUp: B.tierAt(catalog, 1) }).announce, /Your tier is now Reader/);
 });
+
+test('wording: a threshold of one uses the singular unit', () => {
+  assert.equal(B.unitFor(1, 'final forms'), 'final form'); assert.equal(B.unitFor(1, 'tries'), 'try'); assert.equal(B.unitFor(1, 'timed reads'), 'timed read'); assert.equal(B.unitFor(5, 'tries'), 'tries');
+  assert.equal(B.shelf(catalog, null, {}).find((x) => x.id === 'letters-finals').next.text, 'Next: First at 1 final form. You are at 0.');
+});

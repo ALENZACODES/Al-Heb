@@ -13,6 +13,8 @@ import { STORE_KEY, PLACEMENT_KEY, LETTERS_QUESTION, LETTER_ANSWERS, DENOMINATIO
   GOAL_QUESTION, GOAL_CHOICES, normalize, answerLetters, setDenomination, setMinutes, setStep, suggestedPronunciation, answerById, placementLesson, buildPlan } from './model.js';
 import { DAILY_GOAL_KEY, DAILY_GOALS } from '../home/today.js';
 import { PROGRESS_KEY } from '../curriculum/dom.js';
+import { audioSupport } from '../pronunciation/forTradition.js';
+import { isAudioFree } from '../shell/audiofree.js';
 
 export const DRAFT_NOTE = 'Draft: no learner has tried this plan yet. The minutes are goals, not measurements. The plan has one lesson a day and starts with the lesson shown on Home. It updates as you finish lessons.';
 
@@ -42,6 +44,18 @@ export function mount(root, ctx) {
   };
   const fieldset = (legend, intro, ...kids) => h('fieldset', { class: 'field' }, h('legend', {}, legend), intro ? h('p', { class: 'muted' }, intro) : null, ...kids);
   const skipNow = () => h('p', { class: 'muted' }, h('a', { href: startHref(), id: 'ob-skip-now' }, `Skip the rest and start now: ${startTitle()}`));
+
+  // Sound, said before the first lesson: what this pronunciation gets (no recorded clips exist yet) and a way to start silent.
+  const supportOf = (pron) => audioSupport(pron, { browserVoiceAnyway: !!settings.get('browserVoiceAnyway'), audioFree: isAudioFree(ctx), recorded: ctx?.audio?.summary?.recorded || 0 });
+  const soundNote = (pron) => h('p', { class: 'muted ob-sound', id: 'ob-sound-note', role: 'note', 'data-audio-support': supportOf(pron).supported }, supportOf(pron).line);
+  const silentToggle = (onchange) => h('label', { class: 'opt', for: 'ob-silent' },
+    h('input', { type: 'checkbox', id: 'ob-silent', checked: isAudioFree(ctx) ? true : null, onchange: (e) => {
+      const on = !!e.target.checked;
+      try { settings.set({ audioFree: on }); } catch { /* best effort */ }
+      say(on ? 'Sound is off. Listen buttons are hidden and nothing needs hearing; turn it back on in Settings.' : 'Sound is on where your device can play it.');
+      if (onchange) onchange(on);
+    } }),
+    h('span', {}, h('strong', {}, 'Start without sound'), h('span', { class: 'muted block' }, 'Every first-day step can be done by reading. Nothing is marked wrong for skipping sound.')));
 
   // ---- Stage 1 ----
   function renderLetters() {
@@ -76,14 +90,16 @@ export function mount(root, ctx) {
     const onDenom = (v) => {
       denom = v;
       const s = suggestedPronunciation(v);
-      if (s && !pronPicked) { pron = s; setPronRadio(s); say(`Suggested pronunciation: ${PRONUNCIATIONS.find((p) => p.id === s).label}. Change it below if your synagogue differs.`); }
+      if (s && !pronPicked) { pron = s; setPronRadio(s); refreshSound(); say(`Suggested pronunciation: ${PRONUNCIATIONS.find((p) => p.id === s).label}. Change it below if your synagogue differs.`); }
       else if (!s) say(DENOMINATIONS.find((d) => d.id === v).changes);
     };
     const denomFs = fieldset('Which branch of Judaism are you part of? (optional)', 'Optional. It does not change your lessons.',
       ...DENOMINATIONS.map((d) => radio('denomination', d.id, d.label, d.changes, denom === d.id, onDenom)));
     const denomMore = h('details', { class: 'ob-more' }, h('summary', {}, 'Optional: your branch of Judaism'), denomFs); // kept out of the first screen so Continue and Skip stay visible
     const pronFs = fieldset('Which pronunciation style do you want?', 'It changes the sounds you hear and read. Change it any time in Settings.',
-      ...PRONUNCIATIONS.map((p) => { const l = radio('pron', p.id, p.label, p.changes, pron === p.id, (v) => { pron = v; pronPicked = true; }); pronInputs[p.id] = l.querySelector(`#ob-pron-${p.id}`) || l.children?.[0]; return l; }));
+      ...PRONUNCIATIONS.map((p) => { const l = radio('pron', p.id, p.label, p.changes, pron === p.id, (v) => { pron = v; pronPicked = true; refreshSound(); }); pronInputs[p.id] = l.querySelector(`#ob-pron-${p.id}`) || l.children?.[0]; return l; }));
+    const note = soundNote(pron);
+    const refreshSound = () => { const s2 = supportOf(pron); note.textContent = s2.line; note.setAttribute('data-audio-support', s2.supported); };
     const apply = () => {
       rec = setDenomination(rec, denom); save();
       const rejected = settings.set({ [SETTINGS_KEY_PRONUNCIATION]: pron });
@@ -91,7 +107,8 @@ export function mount(root, ctx) {
       else say(`Saved: ${PRONUNCIATIONS.find((p) => p.id === pron)?.label || pron} pronunciation.`);
       go('plan'); // minutes a day and goal keep their defaults; "Change minutes a day" on the plan card (and Settings) change them
     };
-    const form = h('form', { id: 'ob-form-congregation', onsubmit: (e) => { e.preventDefault(); apply(); } }, pronFs,
+    const soundBox = h('div', { class: 'field ob-sound-box' }, note, silentToggle(() => refreshSound()));
+    const form = h('form', { id: 'ob-form-congregation', onsubmit: (e) => { e.preventDefault(); apply(); } }, pronFs, soundBox,
       h('div', { class: 'row' }, h('button', { type: 'submit', class: 'btn', id: 'ob-congregation-continue' }, 'Continue'),
         h('button', { type: 'button', class: 'btn secondary', id: 'ob-congregation-skip', onclick: () => { say('Skipped. Pronunciation stays as it is; you can change it in Settings.'); go('plan'); } }, 'Skip')),
       skipNow(), denomMore);
@@ -140,6 +157,7 @@ export function mount(root, ctx) {
       h('div', { class: 'row' }, changeStart,
         h('button', { type: 'button', class: 'btn secondary', id: 'ob-change-congregation', onclick: () => go('congregation') }, 'Change pronunciation style'),
         h('button', { type: 'button', class: 'btn secondary', id: 'ob-change-minutes', onclick: () => go('minutes') }, 'Change goal or minutes a day')),
+      h('details', { class: 'ob-more', id: 'ob-sound-plan' }, h('summary', {}, 'Sound'), soundNote(settings.get(SETTINGS_KEY_PRONUNCIATION)), silentToggle()),
       h('p', { class: 'muted' }, 'Saved only on this device. Settings has the full list of choices.'));
   }
 

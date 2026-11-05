@@ -129,3 +129,16 @@ test('no pronunciation file calls settings.set("congregation", ...) with the wro
     assert.ok(!bad.test(src), `${f} uses the old (key, value) call; use setCongregation()`);
   }
 });
+
+test('audioSupport: never promises recorded or non-Israeli sound that does not exist', () => {
+  assert.equal(FT.audioSupport('israeli').supported, 'device');
+  for (const t of ['sephardi', 'ashkenazi']) {
+    const s = FT.audioSupport(t);
+    assert.equal(s.supported, 'none'); assert.equal(s.deviceVoice, false); assert.match(s.line, /only Israeli Hebrew/);
+    assert.equal(FT.audioSupport(t, { browserVoiceAnyway: true }).supported, 'device-mismatch');
+    assert.match(FT.audioSupport(t, { browserVoiceAnyway: true }).line, /will not sound/);
+  }
+  assert.equal(FT.audioSupport('ashkenazi', { audioFree: true }).supported, 'off');
+  assert.equal(FT.audioSupport('israeli', { recorded: 3 }).supported, 'recorded');
+  assert.doesNotMatch(FT.audioSupport('israeli').line, /recorded teacher|human/i);
+});

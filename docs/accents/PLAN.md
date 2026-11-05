@@ -98,3 +98,20 @@ QA by a second listener: someone other than the donor, ideally from the same tra
 - Donor dialect disagreement (Ashkenazi variety, Sephardi community) can invalidate a recording set; settle it before the first session.
 - Consent wording is a draft; recordings cannot ship until a lawyer reviews it.
 - Respellings are rule-generated; the Sephardi-values respelling equals the Israeli one and cannot show pharyngeal ayin/chet.
+
+## First run and first day: sound promised per tradition
+
+`audioSupport(tradition, {browserVoiceAnyway, audioFree, recorded})` in `src/pronunciation/forTradition.js` (re-exported from
+`src/shell/tradition.js`) gives one plain line about what sound a learner gets with their setting, before any button is pressed:
+
+| setting | `supported` | what the line says |
+|---|---|---|
+| Israeli | `device` | no recorded audio yet; Listen uses the device's Hebrew voice where it has one (a computer voice, not a teacher) |
+| Sephardi / Ashkenazi, "use my browser's voice anyway" on (default) | `device-mismatch` | no audio in that style yet; the device voice is Israeli Hebrew and will not sound like the chosen style |
+| Sephardi / Ashkenazi, that setting off | `none` | no audio in that style yet; Listen stays off; read the English-letter spelling |
+| "I do not use audio" on | `off` | sound is off; every step can be done by reading |
+
+Where it shows: the pronunciation step of `#/welcome` (updates as the choice changes, with a "Start without sound" checkbox that sets
+`audioFree`), the Sound box on the welcome plan card, and the `#fd-style` line at the top of `#/firstday`. The first-day "Hear it"
+result uses `playLine()`, so the Israeli device voice is never presented as Sephardi or Ashkenazi. Tests: `tests/accents.test.js`,
+`tests/onboarding.test.js`, `tests/onramp.test.js`.

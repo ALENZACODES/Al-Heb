@@ -9,6 +9,7 @@ import { el, heText, storeGet, storeSet, PROGRESS_KEY } from '../curriculum/dom.
 import { loadPlacementData } from './loader.js';
 import { STORE_KEY, buildItems, nextItem, openStart, recommend, seeded } from './model.js';
 import { isAudioFree } from '../shell/audiofree.js';
+import { loadFailureText } from '../shell/load-error.js';
 
 export const DRAFT_NOTE = 'Draft, unreviewed: no Hebrew teacher has checked this check and no learner has tried it. The cutoffs that pick your starting lesson are untested guesses. You can always start at lesson r01 or pick any lesson yourself.';
 
@@ -24,7 +25,7 @@ export function mount(root, ctx) {
 
   async function init() {
     set(el('p', {}, 'Loading...'));
-    try { P = ctx?.placementData || await loadPlacementData(); } catch { if (alive) set(el('p', { role: 'alert' }, 'The check could not be loaded. Nothing was lost.')); return; }
+    try { P = ctx?.placementData || await loadPlacementData(); } catch (e) { if (alive) set(el('p', { role: 'alert' }, loadFailureText(e, 'The check could not be loaded', 'The check could not be loaded. Nothing was lost.'))); return; }
     if (!alive) return;
     items = buildItems(P.data, P.config, ctx?.rng || seeded(P.config.seed));
     const saved = await storeGet(ctx, STORE_KEY, null);

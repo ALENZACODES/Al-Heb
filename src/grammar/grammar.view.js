@@ -7,6 +7,7 @@
 import { el, storeGet, storeSet } from '../curriculum/dom.js';
 import { loadGrammarData } from './loader.js';
 import { STORE_KEY, TOPIC_IDS, DRAFT_NOTICE, buildTopics, buildQuestions, seededRng } from './model.js';
+import { loadFailureText } from '../shell/load-error.js';
 
 const CSS = `
 .alef-grammar{max-inline-size:40rem;margin-inline:auto;overflow-wrap:anywhere}
@@ -48,8 +49,8 @@ export function mount(root, ctx) {
       topics = buildTopics(data);
       const s = await storeGet(ctx, STORE_KEY, null);
       saved = s && typeof s === 'object' && s.topics ? s : { topics: {} };
-    } catch {
-      if (alive) setBody(el('p', { role: 'alert' }, 'The grammar notes could not be loaded. Check your connection and reload; nothing was lost.'));
+    } catch (e) {
+      if (alive) setBody(el('p', { role: 'alert' }, loadFailureText(e, 'The grammar notes could not be loaded', 'The grammar notes could not be loaded. Check your connection and reload; nothing was lost.')));
       return;
     }
     if (!alive) return;

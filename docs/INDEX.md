@@ -92,7 +92,7 @@ copies and 764 draft animation poses, none approved and none wired into the app)
 | [`torahread/`](torahread/) | 3 | Torah reading mini-course (draft) (`README.md`) |
 | [`traditions/`](traditions/) | 7 | Traditions lane (`README.md`) |
 | [`trope/`](trope/) | 1 | Trope trainer: route and nav string (main wires) (`ROUTES.md`) |
-| [`tts/`](tts/) | 5 | Local TTS factory for synthetic clips (Israeli from Hebrew; Sephardi and Ashkenazi from respellings) (`README.md`) |
+| [`tts/`](tts/) | 6 | Local TTS factory for synthetic clips (Israeli from Hebrew; Sephardi and Ashkenazi from respellings) (`README.md`) |
 | [`typing/`](typing/) | 1 | Typing practice (draft, unreviewed) (`ROUTES.md`) |
 | [`v0/`](v0/) | 3 | ALEF v0: launch note for John (2026-11-04, memory-chain section refreshed about 21:15) (`LAUNCH-NOTE.md`) |
 | [`verification/`](verification/) | 3 | Proposed fixes from the verification sweep (`DATA-FIXES.md`) |

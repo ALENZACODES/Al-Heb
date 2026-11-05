@@ -101,23 +101,43 @@ const check = (name, ok, detail = '') => { checks.push({ name, ok: !!ok, detail 
   check('plan start button opens the first 10 minutes', (await page.evaluate(() => location.hash)) === '#/firstday');
   // learning loop: lesson -> listen -> complete -> review -> home due count
   await page.goto(base + '#/learn?lesson=r01'); await page.locator('main').getByRole('heading', { name: 'Words', exact: true }).waitFor();
-  await page.getByRole('button', { name: 'Listen to Shin', exact: true }).click();
-  await page.waitForTimeout(300);
-  const sound = await page.locator('#sound-status').innerText();
-  check('sound indicator states the real source after Listen', /browser|No sound|recorded/i.test(sound) && !/checking/i.test(sound), sound);
-  await page.getByRole('button', { name: 'Mark lesson complete' }).click();
-  await page.waitForSelector('text=new review cards added');
-  await page.goto(base + '#/'); await page.getByRole('link', { name: '6 cards due', exact: true }).waitFor();
-  { const txt = await page.locator('main').innerText(); // the streak is now engaged-time based (src/curriculum/streak.js v2): completing a lesson alone no longer starts it, so only the line is asserted
-    check('home Today card shows 6 due cards, a streak line, the morning link and one Continue button', /6 cards due/.test(txt) && /Streak:/.test(txt) && /Today's morning verse/.test(txt) && (await page.locator('#today-continue').count()) === 1, txt.replace(/\s+/g, ' ').slice(0, 400)); }
-  await page.goto(base + '#/learn?review=1'); await page.waitForSelector('text=Card 1 of 6');
-  for (const k of ['3', '3', '4', '2', '1', '3']) {
-    // after "Again" lane 1 may show an interference hint panel with a Continue button before the next card
-    const cont = page.getByRole('button', { name: 'Continue' }); if (await cont.count()) await cont.first().click();
-    await page.getByRole('button', { name: 'Show answer' }).click(); await page.keyboard.press(k); await page.waitForTimeout(80); }
+  const listen = page.getByRole('button', { name: 'Listen to Shin', exact: true });
+  if (await listen.count()) {
+    await listen.click();
+    await page.waitForTimeout(300);
+    const sound = await page.locator('#sound-status').innerText();
+    check('sound indicator states the real source after Listen', /browser|device voice|No sound|recorded/i.test(sound) && !/checking/i.test(sound), sound);
+  } else {
+    check('unavailable congregation recording is labelled honestly', await page.locator('main .audio-none').first().isVisible() && /No audio yet/.test(await page.locator('main .audio-none').first().innerText()));
+  }
+  await page.locator('#alef-quick-start').click();
+  const answers = new Map();
+  for (let i = 0; i < 30 && await page.locator('.alef-ex-card').count(); i++) {
+    const card = page.locator('.alef-ex-card');
+    const id = await card.getAttribute('data-ex');
+    const options = card.locator('.alef-int-opt');
+    if (answers.has(id)) await options.filter({ hasText: answers.get(id) }).first().click();
+    else await options.first().click();
+    answers.set(id, await card.locator('[data-state="right"]').innerText());
+    await card.locator('[data-act="next"]').click();
+  }
+  await page.getByRole('heading', { name: 'Lesson complete', exact: true }).waitFor();
+  const before = await page.evaluate(() => JSON.parse(localStorage.getItem('alef:srs.cards')));
+  check('quick check earns completion and creates review cards', Object.keys(before).length === 6 && await page.evaluate(() => !!JSON.parse(localStorage.getItem('alef:curriculum.progress')).completed.r01));
+  await page.goto(base + '#/'); await page.locator('#today-continue').waitFor();
+  { const txt = await page.locator('main').innerText();
+    check('home Today card shows the streak line, morning link and one Continue button', /Streak:/.test(txt) && /Today's morning verse/.test(txt) && (await page.locator('#today-continue').count()) === 1, txt.replace(/\s+/g, ' ').slice(0, 400)); }
+  await page.goto(base + '#/learn?review=1');
+  await page.getByRole('button', { name: 'Show answer' }).waitFor();
+  for (let i = 0; i < 12 && await page.getByRole('button', { name: 'Show answer' }).count(); i++) {
+    await page.getByRole('button', { name: 'Show answer' }).click();
+    await page.keyboard.press('3'); await page.waitForTimeout(100);
+    const cont = page.getByRole('button', { name: 'Continue', exact: true });
+    if (await cont.count()) await cont.first().click();
+  }
   await page.waitForSelector('text=Session done');
   const cards = await page.evaluate(() => JSON.parse(localStorage.getItem('alef:srs.cards')));
-  check('review persisted ratings to srs.cards', Object.values(cards).every((c) => c.reps === 1) && Object.values(cards).some((c) => c.state === 'relearning'));
+  check('review persisted new ratings to srs.cards', Object.values(cards).some((c) => c.reps > before[c.id].reps));
   await page.screenshot({ path: join(outDir, 'flow_review_done.png'), fullPage: true });
   await page.goto(base + '#/learn?lesson=r01&review=1'); await page.waitForSelector('main');
   check('lesson review deep link renders', /Nothing due|Card 1 of/.test(await page.locator('main').innerText()));

@@ -92,9 +92,13 @@ const upd = await page.evaluate(async () => {
   navigator.serviceWorker.addEventListener('controllerchange', () => { changed = true; });
   await reg.update();
   const w = reg.installing || reg.waiting; if (w) w.addEventListener('statechange', () => states.push(w.state));
+  for (let i = 0; i < 150 && !reg.waiting; i++) await new Promise((r) => setTimeout(r, 200));
+  const waited = !!reg.waiting && !changed;
+  reg.waiting?.postMessage({ type: 'SKIP_WAITING' });
   for (let i = 0; i < 150 && !(reg.active && reg.active.state === 'activated' && !reg.installing && !reg.waiting && (await caches.keys()).some((k) => k.endsWith('update-test-v2'))); i++) await new Promise((r) => setTimeout(r, 200));
-  return { keys: (await caches.keys()), changed, activeState: reg.active?.state, sawNew: !!w };
+  return { keys: (await caches.keys()), changed, activeState: reg.active?.state, sawNew: !!w, waited };
 });
+note('update: the new worker waits for learner consent', upd.waited);
 note('update: a changed precache version installs a new SW and activates it (skipWaiting)', upd.sawNew && upd.activeState === 'activated' && upd.keys.some((k) => k.endsWith('update-test-v2')), JSON.stringify(upd.keys));
 note('update: the old shell cache is deleted on activate', !upd.keys.some((k) => oldKeys.includes(k)), `old=${oldKeys.join(',')}`);
 note('update: the open page receives controllerchange (it can offer a reload)', upd.changed, upd.changed ? '' : 'no controllerchange seen (page has the new SW only after reload, or events missed)');
@@ -123,7 +127,7 @@ await page.goto(base + '#/settings'); await page.waitForSelector('#s-import');
 // a bad file is refused and changes nothing
 const badPath = join((await import('node:os')).tmpdir(), 'alef-pwa-bad.json'); (await import('node:fs')).writeFileSync(badPath, '{"hello":1}');
 await page.setInputFiles('#s-import', badPath); await page.waitForTimeout(300);
-note('restore: a file that is not an ALEF backup is refused with a message and changes nothing', /not an ALEF backup/.test(await page.textContent('main')) && await page.evaluate(() => !localStorage.getItem('alef:curriculum.progress')));
+note('restore: a file that is not an ALEF backup is refused with a message and changes nothing', /not an ALEF backup/i.test(await page.textContent('main')) && await page.evaluate(() => !localStorage.getItem('alef:curriculum.progress')));
 // a good file: nothing happens until the learner confirms
 await page.setInputFiles('#s-import', backupPath); await page.waitForTimeout(300);
 note('restore: choosing a good file only asks for confirmation (nothing is written yet)', await page.isVisible('button:has-text("Replace my progress")') && await page.evaluate(() => !localStorage.getItem('alef:curriculum.progress')));

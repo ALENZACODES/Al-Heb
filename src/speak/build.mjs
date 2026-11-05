@@ -1,3 +1,4 @@
+import { pathToFileURL } from 'node:url';
 // Rebuild data/speak/ from course data:  node src/speak/build.mjs
 // Inputs (read only): data/vocab/words.json, data/vocab/packs.json, data/audio/manifest.json, data/audio/manifest-words-israeli.json.
 // Outputs: data/speak/sets.json (index), data/speak/sets/<id>.json (60 "Say it" sets by theme), data/speak/pairs.json (listening drills),
@@ -65,7 +66,7 @@ export function manifestTextMap(lists) {
   return m;
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const words = rd('data/vocab/words.json').words;
   const packs = rd('data/vocab/packs.json').packs;
   const manifestTexts = manifestTextMap([rd('data/audio/manifest.json'), rd('data/audio/manifest-words-israeli.json')]);

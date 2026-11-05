@@ -18,6 +18,10 @@ The first GitHub main run inspected had 24 failed unit checks. Local repair veri
 
 ## Publishing and outstanding review
 
+Follow-up verification: the home screen now imports only the read-only progress state, keeping its JavaScript within the existing performance budget. PWA checks count only installed cache entries and verify that an update waits for learner consent. The smoke flow completes the current quick-check quiz, verifies persisted reviews, and accepts the explicit unavailable-audio label for traditions without recordings. The backup rejection check accepts the displayed message's capitalization.
+
+Local follow-up: browser tier 22 passed and three skipped before the backup-message correction; the corrected PWA test then passed. Route, learning-flow and offline smoke passed. Unit tier passed 1,906 checks with two local browser-location failures; those two microphone checks passed on rerun with the installed browser path. Cache inputs were compared byte-for-byte with staged Git contents before commit. No performance budget was increased and no application check was disabled.
+
 No Pages site was configured when checked. The Pages workflow builds on main; public publishing requires configuring Pages and setting the repository variable `ENABLE_GITHUB_PAGES=true`. This avoids treating an unconfigured public deployment as an application test failure.
 
 The older pull request #1 contains changes based on an earlier main and conflicts with newer work. Its changes were not blindly merged. Human Hebrew/clergy review, image approval, recordings, licence decisions and real-device acceptance remain separate requirements; passing CI does not establish those approvals.

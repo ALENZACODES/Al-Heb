@@ -33,7 +33,9 @@ export async function rateCard(ctx, cardId, rating, now = Date.now()) {
   const card = st.cards[cardId];
   if (!card) throw new Error("unknown card " + cardId);
   const next = review(card, rating, now);
-  await storeSet(ctx, CARDS_KEY, { ...st.cards, [cardId]: next });
+  // The rating is the primary write: a rejecting store must not be reported as a saved review.
+  if (!ctx?.store?.set) throw new Error("Review storage is unavailable");
+  await ctx.store.set(CARDS_KEY, { ...st.cards, [cardId]: next });
   await storeSet(ctx, STREAK_KEY, recordActivity(st.rawStreak, now));
   if (cardId.startsWith("word:")) await updateScaffold(ctx, cardId, rating, next, now);
   return next;

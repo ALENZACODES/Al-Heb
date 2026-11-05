@@ -134,11 +134,16 @@ test('trace view: the tav header shows the Ashkenazi sound for ashkenazi and the
     const root = newRoot();
     const un = mount(root, { ...lettersData, keyboard: null, settings: settingsWith(congregation), params: { id: 'tav' }, store: memStore(), audio: { play: async () => ({ source: 'file' }) } });
     await loaded(root, () => /Tav/.test(root.textContent));
-    const t = text(root); un(); return t;
+    const t = text(root);
+    // the header line under the letter name: the view now renders the sound wording only (no /ipa/ prefix)
+    const head = all(root, (n) => n.tag === 'strong' && /^Tav\s*$/.test(n.textContent))[0];
+    const line = head ? head.parent.children[head.parent.children.length - 1].textContent : null;
+    un(); return { t, line };
   };
   const a = await open('ashkenazi'), i = await open('israeli');
-  assert.ok(a.includes(TAV_ASHK), 'ashkenazi header: ' + a.slice(0, 300));
-  assert.ok(!i.includes(TAV_ASHK) && i.includes('/t/  t'), 'israeli header: ' + i.slice(0, 300));
+  assert.equal(a.line, TAV_ASHK, 'ashkenazi header: ' + a.t.slice(0, 300));
+  assert.equal(i.line, TAV_ISR, 'israeli header: ' + i.t.slice(0, 300));
+  assert.ok(!i.t.includes(TAV_ASHK), 'israeli view never shows the Ashkenazi wording');
 });
 
 // 6. intermediate.view.js pronLine: a word with no line for the tradition is respelled, not silently shown in Israeli.

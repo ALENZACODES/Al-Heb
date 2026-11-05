@@ -113,6 +113,25 @@ test("review deep link: queue from completed lesson, reveal, keyboard rating, pe
   un(); assert.equal((docListeners.keydown || new Set()).size, 0, "keydown listener removed on unmount");
 });
 
+test("review keeps an unsaved card visible and retries its rating without counting a failed write", async () => {
+  const store = memStore(); const ctx = ctxFor(store, { review: "1" });
+  await actions.completeLesson(ctx, (await import("../src/curriculum/lessons.js")).byId.r01);
+  const save = store.set; let reject = true;
+  store.set = async (k, v) => { if (reject && k === "srs.cards") throw new Error("temporary write failure"); save(k, v); };
+  const root = new Node_("div"); const un = mount(root, ctx);
+  try {
+    await until(root, /Card 1 of 6/); await btn(root, /Show answer/).click();
+    await root.find((n) => n.attrs["data-rating"] === "3")[0].click();
+    assert.match(root.text, /Card 1 of 6/); assert.match(root.text, /Could not save: temporary write failure/);
+    assert.ok(Object.values(store.m["srs.cards"]).every((c) => c.reps === 0));
+    reject = false;
+    await root.find((n) => n.attrs["data-rating"] === "3")[0].click();
+    await until(root, /Card 2 of 6/);
+    assert.equal(Object.values(store.m["srs.cards"]).filter((c) => c.reps === 1).length, 1);
+    assert.doesNotMatch(root.text, /Could not save/);
+  } finally { un(); }
+});
+
 test("practice deep link creates the lesson's cards without completing it", async () => {
   const store = memStore(); const root = new Node_("div");
   mount(root, ctxFor(store, { lesson: "r01", review: "1" })); await until(root, /Card 1 of 6/);

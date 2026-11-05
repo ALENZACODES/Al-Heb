@@ -125,7 +125,10 @@ export function mountReview(root, ctx, { lessonId } = {}) {
     async function rate(n) {
       if (!revealed) return;
       const id = queue[pos]; revealed = false;
-      try { await rateCard(ctx, id, n); } catch (e) { note.textContent = "Could not save: " + (e?.message || e); }
+      try { await rateCard(ctx, id, n); } catch (e) {
+        if (alive) { note.textContent = "Could not save: " + (e?.message || e) + ". Try rating this card again."; revealed = true; }
+        return;
+      }
       stats[n]++; pos++;
       // Interference hint only after the learner's own miss (rating Again), at most once per error kind per session.
       let panel = null;

@@ -18,6 +18,8 @@ The first GitHub main run inspected had 24 failed unit checks. Local repair veri
 
 ## Publishing and outstanding review
 
+Review-save follow-up: a rejected rating write now leaves the current card revealed and retryable, displays the failure, and does not advance the queue or count a review. The primary card write propagates rejection rather than using the optional-write helper. The shell's deliberate in-memory fallback remains supported and is reported by its existing storage warning; a false durable-storage result is not treated as an unwritten card. A regression test rejects the first asynchronous write and verifies one successful rating after retry.
+
 Follow-up verification: the home screen now imports only the read-only progress state, keeping its JavaScript within the existing performance budget. PWA checks count only installed cache entries and verify that an update waits for learner consent. The smoke flow completes the current quick-check quiz, verifies persisted reviews, and accepts the explicit unavailable-audio label for traditions without recordings. The backup rejection check accepts the displayed message's capitalization.
 
 Local follow-up: browser tier 22 passed and three skipped before the backup-message correction; the corrected PWA test then passed. Route, learning-flow and offline smoke passed. Unit tier passed 1,906 checks with two local browser-location failures; those two microphone checks passed on rerun with the installed browser path. Cache inputs were compared byte-for-byte with staged Git contents before commit. No performance budget was increased and no application check was disabled.

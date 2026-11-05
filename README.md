@@ -6,7 +6,7 @@ modules, no build step, served by any static file server.
 
 ## Status
 
-Early draft. The code runs and has unit tests; the lessons, vocabulary and other Hebrew content are drafts built by programs, the audio is a list of scripts with no recordings, and many tests have not been run on real devices. A directory full of drafts is not a finished course. Nothing is deployed, no learner has used it, and no native speaker, teacher or clergy member has reviewed any
+Early draft. The code runs and has unit tests; the lessons, vocabulary and other Hebrew content are drafts built by programs, the audio is mostly a list of scripts: no recorded teacher, and 87 short word clips with a synthetic voice that no native speaker has reviewed (count as of 2026-11-05 from `cat data/audio/summary.json`), and many tests have not been run on real devices. A directory full of drafts is not a finished course. Nothing is deployed, no learner has used it, and no native speaker, teacher or clergy member has reviewed any
 Hebrew. Measured counts and known gaps are in [docs/STATUS.md](docs/STATUS.md).
 
 What has been checked, and how: scripted walks in headless Chromium (plus Firefox and WebKit emulation for one cross-engine

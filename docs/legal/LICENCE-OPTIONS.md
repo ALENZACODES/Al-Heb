@@ -46,7 +46,7 @@ Split by origin, because the licence differs by row.
 
 ## 5. Audio
 
-Nothing ships today (`audio-voices`: not-present; 0 of 16,290 clips exist per the audit).
+Audio: 87 synthetic word clips from an outside generator are in the repo as of 2026-11-05 (`audio-voices`: unverified, licence "unknown: not cleared"); nothing recorded by a person ships.
 
 | Option | Notes |
 |---|---|

@@ -5,6 +5,7 @@ import { AUDIO_FREE_LABEL, AUDIO_FREE_HELP } from './audiofree.js';
 import { requestPersistence, storageStatus } from './backup.js';
 import { REMINDER_KEY, afterExport, completedCount } from './backup-reminder.js';
 import { readinessNode } from './readiness.js';
+import { audioTruthNode } from './audio-truth.js';
 import { describePreview, storageNotice, wipeAllData, confirmMatches, CONFIRM_WORD, backupFileName } from './settings.data.js';
 
 export function mount(root, ctx) {
@@ -137,6 +138,7 @@ export function mount(root, ctx) {
     h('h1', { id: 'view-title', tabindex: '-1' }, t('settings.title')),
     h('p', {}, h('a', { href: '#/accessibility', id: 's-a11y-link' }, 'Accessibility: text, sound, colour, touch and calm settings')),
     h('p', { class: 'muted' }, plain('settingsIntro')),
+    audioTruthNode(h, { id: 'settings-audio-truth', class: 'muted', fetchFn: ctx.readinessFetch }), // counts read from data/audio/summary.json
     readinessNode(h, { fetchFn: ctx.readinessFetch }), // plain "what is ready and what is not" (src/shell/readiness.js)
     status, // right under the backup buttons so a confirmation is visible without scrolling
     radioGroup('voice', 'settings.voice'),

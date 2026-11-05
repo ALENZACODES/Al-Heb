@@ -11,7 +11,11 @@ test('with the shipped data: audio not ready, content unreviewed, no pictures ap
   const lines = readinessLines({ audio: summary, imagesApproved: Object.keys(approvals.approvals).length });
   const by = Object.fromEntries(lines.map((l) => [l.id, l]));
   assert.equal(summary.recorded, 0, 'when clips are recorded, update the expectations below');
-  assert.match(by.audio.text, /Recorded audio: not ready\. 0 of 24,906/);
+  assert.equal(summary.total, 24906, 'the planned total moved: update this expectation from data/audio/summary.json');
+  assert.match(by.audio.text, /^Audio: not ready\. /);
+  assert.match(by.audio.text, new RegExp(`${summary.tts.toLocaleString('en-US')} of ${summary.total.toLocaleString('en-US')} planned clips exist, and none is a person recording`));
+  assert.match(by.audio.text, /no recorded teacher/); assert.match(by.audio.text, /synthetic voice, unreviewed by native speakers/);
+  assert.doesNotMatch(by.audio.text, /audio available|native-recorded|recorded by a native/i);
   assert.match(by.review.text, /unreviewed draft/);
   assert.match(by.images.text, /none approved yet/);
   for (const l of lines) assert.doesNotMatch(l.text, /\b(complete|finished|fully reviewed|native-checked|ready to use)\b/i, l.id);

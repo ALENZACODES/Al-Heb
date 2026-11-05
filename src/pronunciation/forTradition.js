@@ -127,7 +127,7 @@ export function saySound(rec, tradition, { fallbackEn = '' } = {}) {
 
 /**
  * What sound the learner can expect with this setting, before any button is pressed. Used by the first-run pronunciation step and
- * the first-day screen so the promise is made once, plainly. No recorded clips exist yet; this never claims one.
+ * the first-day screen so the promise is made once, plainly. No recorded clip exists; this never claims one. A few synthetic Israeli word clips exist and are named as such.
  * @param {string} tradition @param {{browserVoiceAnyway?: boolean, audioFree?: boolean, recorded?: number}} [o]
  * @returns {{tradition:string, recorded:boolean, deviceVoice:boolean, supported:'recorded'|'device'|'device-mismatch'|'none'|'off', line:string}}
  */
@@ -136,7 +136,7 @@ export function audioSupport(tradition, { browserVoiceAnyway = false, audioFree 
   const base = { tradition: t, recorded: recorded > 0 };
   if (audioFree) return { ...base, deviceVoice: false, supported: 'off', line: 'Sound is off: you chose to learn without audio. Every step can be done by reading.' };
   if (recorded > 0) return { ...base, deviceVoice: t === 'israeli', supported: 'recorded', line: `Some items have recorded audio. Anything else is read by your device voice, which is Israeli Hebrew${t === 'israeli' ? '' : `, not ${L}`}.` };
-  if (t === 'israeli') return { ...base, deviceVoice: true, supported: 'device', line: 'No recorded audio yet. Listen buttons use your device\'s Hebrew voice where it has one: a computer voice, not a teacher.' };
+  if (t === 'israeli') return { ...base, deviceVoice: true, supported: 'device', line: 'No recorded audio yet. A few short word clips use a synthetic voice; other Listen buttons use your device\'s Hebrew voice where it has one: a computer voice, not a teacher.' };
   if (browserVoiceAnyway) return { ...base, deviceVoice: true, supported: 'device-mismatch', line: `No ${L} audio yet. You chose to hear the device voice anyway: it speaks Israeli Hebrew, so it will not sound ${L}.` };
   return { ...base, deviceVoice: false, supported: 'none', line: `No ${L} audio yet. The device voice speaks only Israeli Hebrew, so Listen stays off for ${L}. Read the English-letter spelling instead.` };
 }

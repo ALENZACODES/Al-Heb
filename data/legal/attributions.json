@@ -342,14 +342,14 @@
       "id": "audio-voices",
       "name": "Audio recordings and synthetic speech",
       "group": "audio",
-      "usedFor": "Nothing today: docs/voices/coverage.md reports no audio files in the repo; the app falls back to the browser voice",
-      "licence": "Not applicable yet; human voice buyout and any synthetic-speech redistribution rights are open",
+      "usedFor": "A few short single-word synthetic clips from an outside generator (count in data/audio/summary.json), unreviewed by native speakers. Nothing recorded by a person; everything else uses the browser voice",
+      "licence": "Unknown: not cleared. The generator, its model and the voice terms are not known to the repo; human voice buyout and any synthetic-speech redistribution rights are open",
       "licenceUrl": "",
-      "commercialUse": "not-applicable",
+      "commercialUse": "unknown",
       "shareAlike": false,
       "attributionText": "Voice talent credit to be added if recordings ship (wording to be agreed in the voice agreement).",
       "perItemCredit": false,
-      "status": "not-present",
+      "status": "unverified",
       "auditRef": "CONTENT-LICENCE-AUDIT.md#audio-voices"
     },
     {

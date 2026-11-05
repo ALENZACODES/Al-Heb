@@ -4,7 +4,7 @@
 //
 // WHAT "READY" MEANS HERE: every file of a feature group is present in a Cache Storage cache of this origin ("alef-shell-<version>"
 // from the install-time precache, or "alef-runtime-v1" from runtime caching). It does NOT prove the feature works offline end to end:
-// no browser has been run in airplane mode for this module. Audio clips are not part of any group (none are recorded yet).
+// no browser has been run in airplane mode for this module. Audio clips are not part of any group (no recorded teacher; the few synthetic word clips are fetched when played and not tested offline).
 import { requestPersistence, storageStatus } from "./backup.js";
 
 export const PRECACHE_URL = "precache-manifest.js";

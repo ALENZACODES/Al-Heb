@@ -34,7 +34,7 @@ export function mountGender(root, ctx, mode = "pairs", q = {}) {
   root.append(wrap);
   const sel = voiceSelector(ctx, settingVoice(ctx));
   const note = el("p", { class: "alef-audio-note muted", role: "status", "aria-live": "polite" });
-  const voiceHonesty = "Voices: Man (Ari) and Woman (Noa) are the planned narrators. No recordings exist yet. A button only plays when the audio manifest has a file or the browser can speak that item; if it says \"No audio yet\", there is nothing to play.";
+  const voiceHonesty = "Voices: Man (Ari) and Woman (Noa) are the planned narrators. No recorded teacher exists. A button only plays when the audio manifest has a clip or the browser can speak that item; if it says \"No audio yet\", there is nothing to play.";
 
   (async () => {
     const [g, saved] = await Promise.all([loadGender(), storeGet(ctx, GENDER_KEY, {})]);

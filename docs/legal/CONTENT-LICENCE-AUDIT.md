@@ -55,7 +55,7 @@ Read directly on 2026-11-04:
 | `wikipedia-paraphrase` | Wikipedia articles on Hebrew traditions | paraphrased facts in `data/traditions` | CC BY-SA 4.0 | Yes-with-conditions | The repo treats the notes as adaptations offered under CC BY-SA as a precaution; whether bare facts need it is a legal question | Yes if treated as adaptation | partly-verified |
 | `xkb-si1452` | xkeyboard-config il layout | keyboard layout data | X11-style permissive (repo note) | Yes-with-conditions | No | Keep notice | unverified |
 | `generated-images` | image tools | illustrations (pipeline built, repo says none ingested for real yet) | tool terms; copyright in machine-made images uncertain | Unknown | No | Disclosure line recommended in the repo | unverified |
-| `audio-voices` | recordings / synthetic speech | nothing today (0 of 16,290 clips exist per `docs/voices/coverage.md`) | n/a | n/a | n/a | n/a | not-present |
+| `audio-voices` | recordings / synthetic speech | 87 synthetic word clips from an outside generator under `audio/` (0 recorded by a person); counts as of 2026-11-05 from `cat data/audio/summary.json`; this row's older "0 of 16,290" came from `docs/voices/coverage.md` before they were added | unknown: generator, model and voice terms not known to the repo | Unknown | No | n/a | unverified (recorded as "unknown: not cleared") |
 | `dicta-nakdan` | Dicta online vowel service | optional, off by default, sends text to a third party | no terms could be read (repo note) | Unknown | No | n/a | unverified |
 | `ts-fsrs-weights` | ts-fsrs 6.0.0 (open-spaced-repetition) | 21 default FSRS-6 weights in `src/fsrs/fsrs6.js` | MIT | Yes-with-conditions | No | Keep the MIT notice (`docs/licenses/MIT-ts-fsrs.txt`) | partly-verified |
 | `project-original` | Project-written text and code | phrasebook, glosses, guides, code | owner's; none chosen | n/a | No | n/a | project-owned |
@@ -116,7 +116,7 @@ Based on a repo note quoting the X11-style licence. Not checked today.
 No repo statement says any real generated image has been ingested. Copyrightability of purely machine-made images, and the generating tool's terms, are open questions (the repo's `docs/images/RIGHTS.md` says the same and marks details unverified). If images ship, keep the disclosure line.
 
 ### audio-voices
-`docs/voices/coverage.md` reports no audio files in the repo. Redistribution rights for synthetic speech were not found and a voice buyout contract is only a term sheet (`docs/voices/buyout-contract-terms.md`).
+As of 2026-11-05 the repo holds 87 synthetic word clips (`docs/audio/INGEST-REPORT-83.md`, `-88.md`); their sidecars record the licence as "unknown: not cleared". No recorded audio is in the repo. Redistribution rights for synthetic speech were not found and a voice buyout contract is only a term sheet (`docs/voices/buyout-contract-terms.md`).
 
 ### dicta-nakdan
 Optional and off by default per the deploy doc. Not content, but a third-party service with no readable terms.

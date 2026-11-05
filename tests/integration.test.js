@@ -260,7 +260,7 @@ test('precache: skips vendor, PDFs and files over the size limit', async () => {
   const m = computeManifest();
   assert.ok(!m.files.some((f) => f.startsWith('assets/vendor/') || f.startsWith('assets/workbook/') || f.endsWith('.pdf') || f.startsWith('data/vocab/packs/')));
   assert.ok(!m.files.some((f) => /^data\/audio\/manifest-words-/.test(f)), 'word shards are lazy + runtime-cached, not precached');
-  assert.ok(!m.files.includes('data/audio/manifest.json') && m.onDemand.includes('data/audio/manifest.json'), 'core audio manifest (1.8 MiB, every clip still missing) is on demand, runtime-cached after first load');
+  assert.ok(!m.files.includes('data/audio/manifest.json') && m.onDemand.includes('data/audio/manifest.json'), 'core audio manifest (1.8 MiB, almost every clip still missing) is on demand, runtime-cached after first load');
   assert.match(rd('sw.js'), /manifest-words-/, 'sw.js has a runtime rule for the shards');
   for (const f of m.files) assert.ok(statSync(join(root, f)).size <= MAX_FILE_BYTES, f);
   // compare the file LIST (not the content hash, which changes on every edit by any lane)

@@ -164,7 +164,7 @@ export function mount(root, ctx) {
     const parts = [];
     parts.push(caps.recognition ? 'Speech recognition: offered by this browser (Hebrew support unverified).' : 'Speech recognition: not available in this browser, so the check is by ear.');
     parts.push(caps.recording ? 'Recording: available.' : 'Recording: not available here.');
-    parts.push(caps.synthesis ? (caps.hebrewVoice === false ? 'Model voice: this browser lists no Hebrew voice, so "Listen" may stay silent or read with a wrong accent.' : 'Model voice: no recorded clips exist yet, so "Listen" uses the browser\'s voice.') : 'Model voice: this browser has no speech synthesis; "Listen" will do nothing until clips are recorded.');
+    parts.push(caps.synthesis ? (caps.hebrewVoice === false ? 'Model voice: this browser lists no Hebrew voice, so "Listen" may stay silent or read with a wrong accent.' : 'Model voice: no recorded teacher exists, so "Listen" uses a short synthetic clip where one exists and otherwise the browser\'s voice.') : 'Model voice: this browser has no speech synthesis; "Listen" will do nothing until clips are recorded.');
     return parts.join(' ');
   }
   function renderStart() {
@@ -362,7 +362,7 @@ export function mount(root, ctx) {
     sel.addEventListener('change', (e) => { chosenContrast = e.target.value; note.textContent = contrastById(chosenContrast)?.note || ''; });
     setBody(
       el('p', {}, 'Hear one word and pick the sound you heard at the marked letter, or which of two look-alike words was played. Ten a round.'),
-      el('p', { class: 'draft-flag', role: 'note' }, DRAFT + ' No recorded clips exist yet: the only sound is the browser\'s voice, which may itself say a word wrongly.'),
+      el('p', { class: 'draft-flag', role: 'note' }, DRAFT + ' No recorded teacher exists: the sound is the browser\'s voice (or, for a few words, a synthetic clip nobody has reviewed), and either may say a word wrongly.'),
       el('label', { for: 'speak-contrast' }, 'Contrast'),
       sel, note,
       el('div', { class: 'sk-row' }, el('button', { type: 'button', class: 'btn', id: 'drill-start', onclick: startDrill }, 'Start 10')),

@@ -8,7 +8,7 @@ Status: draft text for the main lane to wire into the About screen. Written 2026
 
 **The Hebrew has not been reviewed.** The lessons, word lists, vowel points, transliterations, prayer texts and tradition comparisons were put together by programs. No native speaker, Hebrew teacher, rabbi or cantor has reviewed them yet. There will be mistakes. If something looks wrong, trust a printed siddur, a dictionary or your teacher over ALEF, and please tell us.
 
-**There are no recordings yet.** Sound uses your device's built-in Hebrew voice, if it has one. That is a computer voice, not a teacher. Some phones and browsers have no Hebrew voice, and the ones that do vary in quality. Without one, you will see text but hear nothing.
+**There is no recorded teacher.** A few short word clips (87 as of 2026-11-05, `cat data/audio/summary.json`) use a synthetic voice that no native speaker has reviewed, in Israeli style only. All other sound uses your device's built-in Hebrew voice, if it has one. Both are computer voices, not a teacher. Some phones and browsers have no Hebrew voice, and the ones that do vary in quality. Without one, you will see text but hear nothing.
 
 **Speaking practice is limited.** It relies on your browser's speech recognition, which may not support Hebrew, and nobody has checked how well it understands learners. Treat any score as a rough hint.
 

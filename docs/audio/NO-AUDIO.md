@@ -1,10 +1,12 @@
-# Audio-less experience (0 recorded clips)
+# Audio-less experience (0 recorded clips; 87 synthetic word clips)
+
+State as of 2026-11-05 (`cat data/audio/summary.json`): 87 short word clips with a synthetic voice, unreviewed by native speakers; no recorded teacher; the rest of the app uses your device voice when it has a Hebrew voice. Those 87 are Israeli style only (labelled, not verified), single words, and a learner on another reading style does not get them as their own sound. They came from an outside generator (`docs/audio/INGEST-REPORT-83.md`, `-88.md`). In the app the count is read from `data/audio/summary.json` at run time (`src/shell/audio-truth.js`, shown on About, Settings and How this works); `tests/audio.truth.test.js` checks the summary against the manifests and files. This page still describes the case where an item has no clip, which is almost every item.
 
 Three honest levels, decided by `audioAccess()` in `src/shell/audio-access.js` (re-exported from `src/shell/ui.js`):
 
 | level | when | shown |
 |---|---|---|
-| file | manifest entry is recorded/tts or synthetic (incl. outside-source clips, labelled "outside generator ... unreviewed") | "Recorded by a human reader" or "Synthetic voice (Israeli only), not a recorded teacher" (src/shell/audio-labels.js) |
+| file | manifest entry is recorded/tts or synthetic (today only the 87 synthetic ones exist, labelled "outside generator ... unreviewed") | "Recorded by a human reader" or "Synthetic voice (Israeli only), not a recorded teacher" (src/shell/audio-labels.js) |
 | device | no clip, a he-IL browser voice exists or may exist (voices not yet loaded) | "Device voice, not a recorded teacher; Israeli-style only" (never Sephardi/Ashkenazi) |
 | none | no clip and no usable voice (no speechSynthesis, only non-Hebrew voices, unknown item) | "No audio yet" plus the written respelling where the view has one |
 

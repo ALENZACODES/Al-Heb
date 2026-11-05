@@ -4,6 +4,8 @@
 // they cannot (offline, first load), the line says so instead of guessing. The native-review line is fixed text tied to
 // docs/review/STATUS.md by tests/readiness.test.js: when review starts, that test fails and this wording must be updated.
 
+import { audioTruthLine } from './audio-truth.js';
+
 export const READINESS_TITLE = 'What is ready, and what is not';
 
 /**
@@ -13,12 +15,12 @@ export const READINESS_TITLE = 'What is ready, and what is not';
 export function readinessLines({ audio = null, imagesApproved = null } = {}) {
   const lines = [];
   if (audio && Number.isFinite(audio.total)) {
+    // The wording comes from audio-truth.js; every number is read from data/audio/summary.json.
     const rec = audio.recorded || 0, tts = audio.tts || 0;
-    lines.push(rec > 0
-      ? { id: 'audio', ready: false, text: `Recorded audio: ${rec.toLocaleString('en-US')} of ${audio.total.toLocaleString('en-US')} planned clips. Everything else uses your device's voice or has no sound.` }
-      : { id: 'audio', ready: false, text: `Recorded audio: not ready. 0 of ${audio.total.toLocaleString('en-US')} planned clips are recorded${tts ? ` (${tts.toLocaleString('en-US')} synthetic clips exist, labelled as synthetic)` : ''}. Listen buttons use your device's voice, which is a computer voice and Israeli-style only.` });
+    const planned = `${tts.toLocaleString('en-US')} of ${audio.total.toLocaleString('en-US')} planned clips exist${rec > 0 ? `, ${rec.toLocaleString('en-US')} of them recorded by a person` : ', and none is a person recording'}.`;
+    lines.push({ id: 'audio', ready: false, text: `Audio: not ready. ${audioTruthLine(audio)} ${planned}` });
   } else {
-    lines.push({ id: 'audio', ready: false, text: 'Recorded audio: could not be checked right now. No recorded teacher clips were included when this version was built; Listen buttons use your device\'s voice.' });
+    lines.push({ id: 'audio', ready: false, text: `Audio: ${audioTruthLine(null)}` });
   }
   lines.push({ id: 'review', ready: false, text: 'Hebrew content: unreviewed draft. No native Hebrew speaker, teacher, cantor or rabbi has checked the lessons, words, respellings or prayer text yet.' });
   lines.push(Number.isFinite(imagesApproved) && /** @type {number} */ (imagesApproved) > 0

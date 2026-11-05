@@ -60,7 +60,7 @@ All run by a scratch script over the JSON files; the stable ones are now in `tes
 | Audio manifests: duplicate paths | 24,906 entries over 4 files | 0 |
 | Audio path equals `audio/<voice>/<tradition>/<kind>/<id>.mp3` and text present | all | 0 mismatches |
 | Audio ids map to an owner | letters (342), vowels (90), syllables, lines (1,096), prayers (420), words (22,298) | every letter, vowel, line, prayer, lesson word, prayer word, phrasebook and vocab id resolves; every `vocabId` exists; every `aliasOf` target exists; every lesson word has a clip slot |
-| Audio status | 24,906 | all `missing`; no recorded clip exists |
+| Audio status | 24,906 | written when every entry was `missing`; since then 87 became synthetic and unreviewed (`cat data/audio/summary.json`, 2026-11-05); no recorded clip exists |
 | Memory-chain | 27 letters | SVG exists, vocab record exists and the Hebrew word equals the record |
 | Art concept map | 27 letters, 27 file refs | same letter set as memory-chain; every `exists` flag matches disk |
 | Image queues | manifest 1,797, next1000 814, inter-pending 100, block-j 1,000, run3 1,000 | no duplicate file inside any one queue; all 100 intermediate image slot ids have a prompt row |

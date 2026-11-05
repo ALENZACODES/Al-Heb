@@ -20,7 +20,7 @@ I am building a free app called ALEF that teaches you to read Hebrew letters and
 
 **What is NOT ready.** Please read this so nothing surprises you:
 
-- **There are no recordings.** Nobody has recorded a teacher's voice yet. Where the app makes sound it uses your phone's built-in Hebrew voice, if your phone has one. Some phones have none, and then you will see letters and words but hear nothing. The app tells you this in a notice at the top.
+- **There are no recordings of a teacher.** Nobody has recorded a teacher's voice yet. A few short word clips (87 as of 2026-11-05, `cat data/audio/summary.json`) use a synthetic voice that no native speaker has reviewed, in Israeli style only, so most people will not hear them. Everywhere else the app uses your phone's built-in Hebrew voice, if your phone has one. Some phones have none, and then you will see letters and words but hear nothing. The app tells you this in a notice at the top, and on the About and Settings screens.
 - **The Hebrew has not been checked.** No native speaker, teacher, rabbi or cantor has reviewed the lessons, word lists, spellings of sounds or prayer text. There may be mistakes. That is one of the things I want to find out.
 - **The pictures are drafts.** Some pictures may be missing or look odd.
 - **It has not been tried on many phones.** If something is broken on yours, that is useful to know.
@@ -65,7 +65,7 @@ For each task write: start time, end time, finished yes/no/gave up.
 - Where they tapped something that did nothing, or tapped the wrong thing.
 - What they said out loud, in their words. Quote it; do not paraphrase.
 - Any time they asked for help, and what they asked.
-- Whether they noticed the "no recordings" notice without being pointed to it, and what they said about it.
+- Whether they noticed the sound notice ("no recorded teacher", synthetic clips, device voice) without being pointed to it, and what they said about it.
 - Any sound that played, and whether they said it sounded like Hebrew to them.
 - Any Hebrew they said looked wrong, odd or different from what they know. Write the screen name and the exact text; do not judge it.
 - Anything that broke: blank screen, button that does not respond, text cut off.
@@ -106,7 +106,7 @@ One row per tester. The header row is also saved as `docs/launch/tester-feedback
 | `L2_could_read_letters_self` | tester | "After about 10 minutes, how well could you tell the first two letters apart?" | 1 not at all, 2 a little, 3 mostly, 4 easily |
 | `A1_noticed_no_audio_notice` | facilitator | observed: did they mention or read the notice without prompting | yes / no |
 | `A2_notice_in_own_words` | tester | "In your own words, what did the app say about sound?" | free text; the facilitator marks the next column |
-| `A2_matches_reality` | facilitator | compare A2 with the real notice: no recordings, device voice only if the device has one | correct / partly / wrong |
+| `A2_matches_reality` | facilitator | compare A2 with the real notice: no recorded teacher, a few synthetic word clips, device voice only if the device has one | correct / partly / wrong |
 | `A3_expected_audio` | tester | "Before reading the notice, did you expect to hear a teacher?" | yes / no / unsure |
 | `C1_confusing` | tester | "What, if anything, was confusing?" | free text |
 | `C2_stuck_screen` | facilitator | screen name where they were stuck longest | text |

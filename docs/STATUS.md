@@ -22,7 +22,7 @@ All rows re-run 2026-11-05 unless marked STALE.
 | Draft animation poses | 764 SVG files under `docs/drafts/animation-poses` (plus 13 JSON and 1 README): drafts, not approved, not wired into the app | `find docs/drafts/animation-poses -type f -name '*.svg' \| wc -l` |
 | Image files on disk | 1,828 in `assets/img/gen`, 797 in `assets/img/placeholders`, 54 in `assets/img/refs` | `for d in gen placeholders refs; do find assets/img/$d -type f \| wc -l; done` |
 | Audio clips listed in the manifests | 24,906 (6,384 in `manifest.json`; 6,174 in each of the three `manifest-words-*.json`) | `node -e` over `data/audio/manifest.json` and `data/audio/manifest-words-{ashkenazi,israeli,sephardi}.json` |
-| Audio clips recorded | 0 of 24,906 (every entry has status `missing`); no `.mp3`, `.ogg`, `.m4a`, `.opus` or `.wav` file exists under `assets/` | same script, grouped by `status`; `find assets -name '*.mp3' -o -name '*.ogg' -o -name '*.m4a' -o -name '*.opus' -o -name '*.wav'` |
+| Audio clips, by status | As of 2026-11-05: 0 recorded by a person, 87 synthetic and unreviewed (all `synthetic-unreviewed`, Israeli style only, single words, voice slot `m`), 24,819 `missing`. In words: 87 short word clips with a synthetic voice, unreviewed by native speakers; no recorded teacher; the rest of the app uses your device voice when it has a Hebrew voice. Files: 87 `.mp3` (each with a sidecar) under `audio/`; none under `assets/`. Licence of the synthetic clips: unknown, not cleared. Reports: `docs/audio/INGEST-REPORT-83.md`, `docs/audio/INGEST-REPORT-88.md`. Nobody has listened to them. | `cat data/audio/summary.json` gives `{"total":24906,"recorded":0,"tts":87}`; `find audio -name '*.mp3' \| wc -l` gives 87; `node --test tests/audio.truth.test.js` checks the summary against the manifests and the files |
 | Test files | 276 `*.test.js` in `tests/` (counts files, not passes) | `ls tests/*.test.js \| wc -l` |
 | Docs | 3,594 files under `docs/` (2,346 in `docs/drafts`, 402 in `docs/qa`, 205 in `docs/images`; the rest in `docs/INDEX.md`) | `find docs -type f \| wc -l` |
 | Metadata scan | PASS: zero findings; 914 allowlisted | `node tools/meta/scan.mjs` |
@@ -52,7 +52,7 @@ Read this before quoting any count above. A folder full of files is not a finish
 |---|---|---|
 | Finished code | None is called finished. Code exists and has unit tests that passed in the runs recorded above; it has not been used by a learner, reviewed by a native speaker or run on a real phone. | `tests/`, runs listed under Tests |
 | Draft educational content | The 125 core and 50 intermediate lessons, 6,303 vocabulary records, 70 corpus records, respellings, mnemonics, stroke data, the placement check, the word lists in Listen and pick. Built by programs and the repo's own checks; every Hebrew string is unreviewed. | `docs/review/STATUS.md` (0 of 3,718 rows reviewed) |
-| Unrecorded scripts | 24,906 audio clips are listed in the manifests and all have status `missing`; no audio file exists under `assets/`. The record kit, the voice-actor kits and the first-100 lists are plans and tools, not recordings. | manifests; `find assets -name '*.mp3' -o -name '*.ogg' -o -name '*.m4a' -o -name '*.opus'` finds none |
+| Unrecorded scripts | 24,906 audio clips are listed in the manifests; 24,819 have status `missing` and 87 are synthetic, unreviewed single-word clips (none is a human recording; see the Counts table, command and date there). The record kit, the voice-actor kits and the first-100 lists are plans and tools, not recordings. | `cat data/audio/summary.json` (2026-11-05); `find assets -name '*.mp3' -o -name '*.ogg' -o -name '*.m4a' -o -name '*.opus'` finds none under `assets/` |
 | Unexecuted tests | The browser-tier tests (`npm run test:browser`) were not run in the audit that wrote this section; the full unit tier was not re-run either, only the files named in the audit report `docs/qa/HONESTY-AUDIT.md`. Real-phone, real-screen-reader and live-host checks have not been run by anyone. | Tests section above |
 | Reviewer dependencies | Every item needing a Hebrew teacher, cantor or rabbi, a native speaker, a lawyer or a licence decision. Nothing is waiting on a tool; all of it waits on people. | `docs/review/STATUS.md`, `docs/DECISIONS-NEEDED.md`, `docs/legal/DECISIONS-FOR-JOHN.md` |
 
@@ -80,7 +80,7 @@ Read this before quoting any count above. A folder full of files is not a finish
 - `docs/vocab/FIRST-500-CHECK.md`: audit of ranks 1 to 500 plus a same-day follow-up (90 corrections: six basic words added, 33 wrong-sense examples handled, two rank holders lowered). Every row still `proofread: false`; `docs/vocab/REVIEW-PACK.md` and `JUDGEMENT.md` counts were not refreshed.
 - `docs/pronunciation/DOUBLING-POLICY.md`: respellings write a doubling dot as a single letter in all three settings; claims about how Sephardi and Ashkenazi readers speak are marked uncertain, needs-native-review. Several of the 23 replaced IPA values are careful-reading forms.
 - `docs/sensitivity/OPEN.md`: divine-name handling in audio targets and speech sinks; 72 manifest targets still carry prefixed forms until clergy decide; vocabulary scan with 67 candidates, a few hidden or trimmed, `גּוֹי` left for a reviewer.
-- `docs/audio/NO-AUDIO.md`: three honest states when no clip exists (file, device voice, none) and the one sound bar; tested with fake audio objects and a stubbed speech engine, with route-level button counts inconclusive.
+- `docs/audio/NO-AUDIO.md`: three honest states for an item (file, device voice, none) (file, device voice, none) and the one sound bar; tested with fake audio objects and a stubbed speech engine, with route-level button counts inconclusive.
 - `docs/test/CI-FAILURE-TRIAGE.md` and `docs/deploy/GO-LIVE-CHECKLIST.md`: see the sections below.
 
 ## Known gaps (pulled from the named docs on 2026-11-04; STALE, not re-verified in the 2026-11-05 refresh)
@@ -111,7 +111,7 @@ From `docs/legal/CONTENT-LICENCE-AUDIT.md` (not legal advice; no lawyer has revi
 - Full in-app attribution list (about 28 rows) not yet reconciled with the About screen.
 
 From `docs/tts/README.md`:
-- The local TTS pipeline is tested in mock mode only; no real Hebrew clip has been generated, no model quality was checked, nothing was listened to. A real-model install attempt on 2026-11-04 ran out of disk.
+- The local TTS pipeline is tested in mock mode only; it has not generated a real Hebrew clip, no model quality was checked, nothing was listened to. (The 87 synthetic clips now in `audio/` came from a generator outside this repo and were ingested with `tools/audio/ingest.mjs`; they are machine-checked only. See the Counts table.) A real-model install attempt on 2026-11-04 ran out of disk.
 - Synthetic clips written by the local pipeline are marked `synthetic-unreviewed` (the older value `tts` is still read by the app) with `redistributionCleared: false`; Sephardi and Ashkenazi clips and Israeli letters, vowels and syllables are human-only.
 - The acceptance gate (character error rate by Whisper) does not check vowels, accent or voice quality.
 - Licence rows for Chatterbox weights, Nakdimon and ffmpeg are declarations read from their pages, to be confirmed by counsel.
@@ -164,5 +164,5 @@ Changes that need no speakers or reviewers. None of them makes content reviewed 
 - Home shows a backup reminder after three finished lessons; Settings says ALEF does not make backups by itself
   (`docs/progress/BACKUP-REMINDER.md`).
 - Lean v0: preview triage (`docs/v0/PREVIEW-TRIAGE.md`); nine low-value preview pages are out of the menus.
-- Settings and About show "What is ready, and what is not": recorded audio 0 of 24,906, content unreviewed, no pictures approved.
+- Settings and About show "What is ready, and what is not" and one sound line. The sound line and the audio row read their counts from `data/audio/summary.json` when the page loads (no typed number); at the 2026-11-05 data it says 87 short word clips with a synthetic voice, unreviewed by native speakers; no recorded teacher; the rest of the app uses your device voice when it has a Hebrew voice. Content unreviewed, no pictures approved.
 - `docs/INDEX.md`: one line per docs folder.

@@ -111,7 +111,7 @@ export function buildPairs(words, manifestTexts = new Map(), { perContrast = 24 
       }
     }
   }
-  return { schema: 'alef-speak-pairs/1', note: 'Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Answers come from the source niqqud; a wrong point there makes a wrong answer here. No recorded clips exist yet; the browser voice is the only sound.', contrasts: CONTRASTS.map(({ letters, ...c }) => c), items };
+  return { schema: 'alef-speak-pairs/1', note: 'Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Answers come from the source niqqud; a wrong point there makes a wrong answer here. No recorded teacher exists; the sound is the browser voice, or for a few words a synthetic clip nobody has reviewed.', contrasts: CONTRASTS.map(({ letters, ...c }) => c), items };
 }
 
 /** Shuffle with an injected rng. */

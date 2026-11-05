@@ -1,12 +1,14 @@
 import { h } from './ui.js';
 import { readinessNode } from './readiness.js';
+import { audioTruthNode } from './audio-truth.js';
 
 export function mount(root, ctx) {
   root.replaceChildren(h('article', { class: 'stack' },
     h('section', { class: 'card' },
       h('h1', { id: 'view-title', tabindex: '-1' }, ctx.t('about.title')),
       h('p', {}, 'ALEF is a Hebrew course with two goals. One is to read the Torah and prayers aloud in synagogue. The other is to get around in Israel and sound natural.'),
-      h('p', {}, 'This is an early version. There are no recordings yet, so the sound comes from your device\'s built-in voice. A Hebrew speaker or rabbi has not yet checked the Hebrew labels or the prayer text. ', h('a', { href: '#/how' }, 'How this works'), ' lists what is and is not finished.'),
+      h('p', {}, 'This is an early version. A Hebrew speaker or rabbi has not yet checked the Hebrew labels or the prayer text. ', h('a', { href: '#/how' }, 'How this works'), ' lists what is and is not finished.'),
+      audioTruthNode(h, { id: 'about-audio-truth', fetchFn: ctx.readinessFetch }), // counts read from data/audio/summary.json
       h('p', {}, 'ALEF has no software licence yet. Until one is added, all rights to its code and original text are reserved.')),
     readinessNode(h, { open: true, fetchFn: ctx.readinessFetch }),
     h('section', { class: 'card', id: 'credits', 'aria-labelledby': 'cr-top' }, h('h2', { id: 'cr-top' }, 'Credits & licences'),

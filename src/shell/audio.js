@@ -74,9 +74,11 @@ export function createAudioUnlock(g = globalThis) {
 
 const CHECKING = 'checking audio...';
 const IDLE_TEXT = "Sound: the list has not been loaded yet."; // one short line: the sound bar is one line at 360px; Details explains
-const initialText = (summary) => (summary.recorded + summary.tts > 0
+const initialText = (summary) => (summary.recorded > 0
   ? { mode: 'idle', text: `Sound: ${summary.recorded} clips listed as "${STATUS_LABELS.recorded}" and ${summary.tts} as "${STATUS_LABELS.tts}"; anything else uses your browser's voice.` }
-  : { mode: 'idle', text: "No recordings yet. Uses your device's Hebrew voice, if it has one." });
+  : summary.tts > 0
+    ? { mode: 'idle', text: "Sound: no recorded teacher. A few word clips are synthetic and unreviewed; the rest uses your device's voice." } // no count: this list is only part of the clips (word shards load later)
+    : { mode: 'idle', text: "No recordings yet. Uses your device's Hebrew voice, if it has one." });
 
 /**
  * @param {{settings:any, manifest?:any[], loadManifest?:()=>Promise<any[]>, loadSummary?:()=>Promise<{recorded:number,tts:number}>, createAudio?:Function}} o

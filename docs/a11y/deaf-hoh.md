@@ -16,7 +16,7 @@ Lane: Deaf and hard of hearing. Draft. Written 2026-11-04.
 
 | Where (file) | What it does with sound | Hearing needed? | What a Deaf or hard of hearing learner gets now |
 |---|---|---|---|
-| `src/audio/player.js`, `src/shell/audio.js`, `src/shell/audio-stub.js`, `src/shell/audio-access.js` | The sound engine: recorded clip, else the browser's Hebrew voice, else nothing. | Engine only | Every outcome is also written as text in a status line. With `audioFree` the shared `audioButton` helper draws nothing. |
+| `src/audio/player.js`, `src/shell/audio.js`, `src/shell/audio-stub.js`, `src/shell/audio-access.js` | The sound engine: clip (synthetic, unreviewed; no recorded clip exists), else the browser's Hebrew voice, else nothing. | Engine only | Every outcome is also written as text in a status line. With `audioFree` the shared `audioButton` helper draws nothing. |
 | `src/shell/names.js`, `src/shell/ui.js` | `names.js`: the spoken form of the divine name used as speech text. `ui.js`: re-exports the shared `audioButton`. | No | Text only. |
 | `src/curriculum/audio-ui.js` (`playButton`), `src/curriculum/ex-ui.js` (`voiceButton`) | The Listen button used by lessons, review, fade-out and gender cards. | No (extra) | With `audioFree` the button is not drawn (a hidden empty span), so lessons, review and fade-out show only the written content. |
 | `src/curriculum/lesson.view.js`, `src/curriculum/lesson.parts.js` | Listen next to letters, vowels, words, prayer lines (`lesson.parts.js` is the short-session version, added by another lane). | No | Buttons hidden with `audioFree` in both (they share `playButton`). The written "how it is said" block is only in `lesson.view.js`; the short-session version does not have it yet. Written "how it is said" block added for every letter and vowel of the lesson (open by default with `audioFree`). |
@@ -64,7 +64,7 @@ Each letter shows: the one-sentence "say" line and the English comparison from `
 ## Remaining
 1. Onboarding does not ask about audio. A learner has to find Settings > Sound.
 2. `audioFree` does not hide the optional play buttons on: letters atlas and trace, the pronunciation pages other than `/sounds`, Torah reader, morning, service, Israel, vocab, scan, word trace, first-day ladder, intermediate. They sit next to the written content and a Deaf learner can ignore them. Hiding them is mechanical but touches files other lanes are editing.
-3. No recorded-audio captions or transcripts exist because no recorded audio exists yet. If recorded clips are added, each needs a transcript and the text that is spoken must stay on screen.
+3. No captions or transcripts exist for the few synthetic word clips (single words; the word is shown as text on the screens that play it, which was not re-checked for every screen) or for recorded audio, because no recorded audio exists yet. If recorded clips are added, each needs a transcript and the text that is spoken must stay on screen.
 4. The Sound-gap lab, the Sounds page and the new text blocks are not proofread by a Hebrew speaker.
 5. The reading steps in `src/shell/silent-reading.js` are not reviewed by a teacher.
 6. Vowel mouth positions are not written anywhere in the data.

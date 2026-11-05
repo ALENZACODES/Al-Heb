@@ -38,7 +38,7 @@ copies and 764 draft animation poses, none approved and none wired into the app)
 | [`a11y/`](a11y/) | 8 | Cognitive, learning, mental-health and sensory-sensitivity access (`COGNITIVE.md`) |
 | [`accents/`](accents/) | 3 | Audit: does `settings.congregation` change what the learner sees? (`AUDIT.md`) |
 | [`anim/`](anim/) | 2 | Animation poses: checker and player (DRAFT tooling) (`README.md`) |
-| [`audio/`](audio/) | 7 | Audio clips: where to keep them, what we do not know about the voice, and what "approved" requires (`CLIP-HOSTING-AND-LICENCE.md`) |
+| [`audio/`](audio/) | 7 | Audio clips: where to keep them, what we do not know about the voice, and what "approved" requires (`CLIP-HOSTING-AND-LICENCE.md`); the audio-less experience, with the synthetic-clip count as of 2026-11-05 (`NO-AUDIO.md`) |
 | [`book/`](book/) | 5 | Image run: how to produce the 797 images (766 from the doc + 31 quirky mnemonics) (`IMAGE-RUN.md`) |
 | [`corpus/`](corpus/) | 5 | ALEF corpus: sources, licences and reuse status (`LICENSES.md`) |
 | [`curriculum/`](curriculum/) | 12 | Curriculum integrity (`INTEGRITY.md`) |

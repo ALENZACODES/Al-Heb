@@ -23,7 +23,7 @@ ALEF is a free Hebrew course that runs in your browser and works offline once lo
 
 ## What it is not yet
 
-- **No recorded audio.** 0 of 24,906 listed clips exist. Sound comes from your device's own Hebrew voice, if it has one; that is a device voice, not a teacher, and it may be missing or poor on your phone.
+- **No recorded teacher.** 87 short word clips with a synthetic voice, unreviewed by native speakers; no recorded teacher; the rest of the app uses your device voice when it has a Hebrew voice. (As of 2026-11-05: `cat data/audio/summary.json` gives 87 of 24,906 listed clips; in the app the number is read from that file.) The device voice is not a teacher, and it may be missing or poor on your phone. Never describe the clips as native, recorded or professional.
 - **Not reviewed.** The Hebrew (lessons, vocabulary, vowel points, transliterations, prayer texts, tradition comparisons) was assembled by programs and has not been checked by a native speaker, Hebrew teacher, rabbi or cantor. 0 of 3,718 review rows have come back. Expect mistakes. Do not rely on it for liturgical use without checking a trusted printed siddur or your own teacher.
 - **Not tested with learners or on real devices.** Layout checks were done in emulation, not on actual phones, and no learner has used it.
 - **Not a full course.** Trope (cantillation) is only partly covered, and the vocabulary list is machine-built and ordered by frequency, not by teaching sense.
@@ -33,11 +33,11 @@ ALEF is a free Hebrew course that runs in your browser and works offline once lo
 
 - Tagline: "Read Hebrew aloud. Speak it in Israel." (this is the line already on the Home screen)
 - 80 characters: "Free Hebrew reading and speaking practice. Offline. Early draft, unreviewed."
-- Post: "ALEF is a free, offline Hebrew reading course for shul and Israel trips. It is an early draft: no recordings yet and no teacher has reviewed the Hebrew. I am looking for a few learners and one reviewer to tell me what is wrong."
+- Post: "ALEF is a free, offline Hebrew reading course for shul and Israel trips. It is an early draft: no recorded teacher (a few short word clips use a synthetic voice nobody has reviewed) and no teacher has reviewed the Hebrew. I am looking for a few learners and one reviewer to tell me what is wrong."
 
 ## Wording rules for anyone editing this
 
 - Say "draft" and "unreviewed" wherever Hebrew content is described. Do not say "accurate", "authentic" or "approved".
-- Do not say "native speaker audio" until recorded clips ship.
+- Do not say "native speaker audio", "recorded", "audio available" or "professional voice" about the synthetic clips. The only audio sentence allowed is: "87 short word clips with a synthetic voice, unreviewed by native speakers; no recorded teacher; the rest of the app uses your device voice when it has a Hebrew voice." The number is as of 2026-11-05 (`cat data/audio/summary.json`); re-read it before quoting. Do not say "native speaker audio" until recorded clips ship.
 - Do not name any tool used to generate content.
 - Do not quote learner numbers, ratings or outcomes; none exist.

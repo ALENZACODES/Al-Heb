@@ -2,7 +2,7 @@
 
 Read this first. These are the facts the order is built on, each measured from the repo today:
 
-- The audio manifest needs 22,512 clips and has 0 recorded, 0 text-to-speech (TTS), so 22,512 are missing (`node tools/audio/coverage.mjs`).
+- The audio manifest needs 22,512 clips. As of 2026-11-05 (`node tools/audio/coverage.mjs`, which also prints the counts) it has 0 recorded and 87 synthetic and unreviewed (from an outside generator, not from this pipeline; see `docs/audio/INGEST-REPORT-88.md`), so 22,425 are missing. Re-run the command for current numbers.
 - Missing per voice: Ari (man, Israeli) 4,286; Noa (woman, Israeli) 4,286; Ashkenazi man 3,485; Ashkenazi woman 3,485; Sephardi man 3,485; Sephardi woman 3,485.
 - The manifest marks letter names, letter sounds, final and variant letters, vowel signs (niqqud) and syllables as **human only** (22 + 5 + 4 + 22 + 4 + 15 + 110 = 182 per Israeli voice). Everything else listed (anchor words 27, lesson words 940, phrasebook 250, prayer lines 129, prayer words 1,723 per Israeli voice) is marked "human or TTS (TTS unvetted)". Do not push TTS into the human-only kinds without deciding to change that rule on purpose.
 - The existing TTS pipeline (`tools/tts/`, `docs/tts/README.md`) is tested in mock mode only. No real Hebrew clip has been generated. Nobody has listened to any output. A real-model install attempt on 2026-11-04 ran out of disk in this cloud workspace.

@@ -2,6 +2,7 @@
 // recorded in the project research notes; nothing here is measured on ALEF's own learners), draft-content statements, privacy.
 // Sources for section 3 are the research notes competitor_teardown_pedagogy.md (Key Question 5) and torah_opener_image_program.md (B5).
 import { h } from './ui.js';
+import { audioTruthNode } from './audio-truth.js';
 
 const li = (...k) => h('li', {}, ...k);
 const sec = (id, title, ...kids) => h('section', { class: 'card', id: `how-${id}`, 'aria-labelledby': `how-${id}-h` }, h('h2', { id: `how-${id}-h` }, title), ...kids);
@@ -18,7 +19,7 @@ export function mount(root, ctx) {
     sec('tradition', '2. Pronunciation styles',
       h('p', {}, 'You choose Israeli, Sephardi or Ashkenazi. "American synagogue" in the setup screen is stored as Sephardi, because the common American-synagogue pronunciation uses Sephardi/Israeli vowel values; if your synagogue differs, pick the one that matches.'),
       h('p', {}, 'Vowel descriptions and prayer transliteration follow your choice. In the research for this project, no competing product page or review that we read stated which pronunciation style its audio uses (the one exception was a text-to-speech Bible reader offering three dialects), so ALEF names it.'),
-      h('p', { id: 'how-sound' }, h('strong', {}, 'Sound, honestly. '), 'No human or studio recordings exist yet, and no synthetic voice files exist either. Every sound you hear today is your browser\'s built-in text-to-speech Hebrew voice, if your device has one. That voice reads Modern Israeli pronunciation, and its gender and accent are chosen by your device, so the Man (Ari) / Woman (Noa) choice cannot change it yet. The bar at the top of every screen tells you what played last: a recorded file, the browser voice, or nothing.')),
+      h('p', { id: 'how-sound' }, h('strong', {}, 'Sound, honestly. '), audioTruthNode(h, { tag: 'span', id: 'how-audio-truth', prefix: '', fetchFn: ctx.readinessFetch }), ' No human or studio recordings exist yet. Most sound you hear is your browser\'s built-in text-to-speech Hebrew voice, if your device has one. That voice reads Modern Israeli pronunciation, and its gender and accent are chosen by your device, so the Man (Ari) / Woman (Noa) choice cannot change it yet. The bar at the top of every screen tells you what played last: a synthetic clip, the browser voice, or nothing.')),
 
     sec('science', '3. What the research says, and how ALEF uses it',
       h('p', { class: 'muted' }, 'These are findings reported in the research notes for this project (study summaries read on 2026-11-03). Where the notes only had a blog or abstract summary, that is stated. They describe other learners in other settings. ALEF has not measured any learning outcome of its own.'),

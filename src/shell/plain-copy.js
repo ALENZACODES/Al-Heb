@@ -5,7 +5,7 @@
 
 export const PLAIN = Object.freeze({
   streakRule: 'A day counts when you study for 5 minutes. The timer stops if you do not tap for a minute.',
-  settingsIntro: 'There are no recorded voices yet. The Man and Woman choice is saved for later. Sound comes from your device\'s own voice. See "How this works".',
+  settingsIntro: 'The Man and Woman choice is saved for later. It does not change the sound yet. See "How this works".',
   persistNo: 'This browser cannot protect your progress. It is saved on this device only. Download a backup now and then.',
   persistYes: 'Your progress is protected from automatic clean-up. Clearing site data in your browser still deletes it. Keep a backup file.',
   persistMaybe: 'Your progress is saved on this device. The browser may remove it if space runs low. Download a backup now and then.',

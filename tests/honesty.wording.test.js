@@ -21,10 +21,12 @@ test('no learner-facing text calls self-rating or completion measured mastery', 
 
 test('every place that speaks about voices says no recordings exist and that browser speech is not a recording', () => {
   const must = [
-    ['src/shell/plain-copy.js', /no recorded voices yet/],
-    ['src/shell/about.view.js', /no recordings yet/],
+    ['src/shell/plain-copy.js', /does not change the sound yet/],
+    ['src/shell/about.view.js', /audioTruthNode/], // the about line (no recorded teacher, synthetic clips) is built in src/shell/audio-truth.js; tests/audio.truth.test.js
+    ['src/shell/settings.view.js', /audioTruthNode/],
+    ['src/shell/audio-truth.js', /no recorded teacher/],
     ['src/shell/how.view.js', /No human or studio recordings exist yet/],
-    ['src/shell/offline.view.js', /none are recorded yet/],
+    ['src/shell/offline.view.js', /No recorded teacher exists/],
     ['src/shell/offline.view.js', /not a recording/],
     ['src/shell/a11y.statement.js', /no recorded voices ship yet/],
     ['src/app.js', /No recordings\./],

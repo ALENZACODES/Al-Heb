@@ -54,6 +54,8 @@ Before publishing, `node tools/build-precache.mjs` regenerates `precache-manifes
 
 ## Repo map
 
+Folder-by-folder guide to the docs: [docs/INDEX.md](docs/INDEX.md).
+
 | Path | What is there |
 |---|---|
 | `index.html`, `manifest.webmanifest`, `sw.js`, `offline.html`, `precache-manifest.js` | PWA entry points; the precache manifest is generated |

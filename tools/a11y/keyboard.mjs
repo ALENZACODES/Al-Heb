@@ -107,12 +107,12 @@ async function tabTo(page, match, max = 120) {
   const q = await page.evaluate(() => document.querySelector('.alef-atlas')?.innerText.match(/Find[^\n]*/i)?.[0] || '');
   note(f, 'Enter starts the quiz and shows a question', q.length > 0 || (await page.evaluate(() => document.querySelector('button[aria-pressed="true"]')?.textContent || '')).includes('Stop'), q);
   const afterQuiz = await active(page);
-  note(f, 'focus stays on the Quiz/Stop button after it re-renders the screen', afterQuiz?.inMain, afterQuiz ? afterQuiz.tag + ' ' + afterQuiz.name.slice(0, 30) : 'none', true);
+  note(f, 'focus stays on the Quiz/Stop button after it re-renders the screen', afterQuiz?.inMain, afterQuiz ? afterQuiz.tag + ' ' + afterQuiz.name.slice(0, 30) : 'none');
   await page.focus('.alef-atlas .tile');
   const nt = 1;
   await page.keyboard.press('Space'); await page.waitForTimeout(300);
   const afterTile = await active(page);
-  note(f, 'focus stays inside the tile list after answering (no jump to page top)', afterTile?.inMain, afterTile?.name?.slice(0, 30), true);
+  note(f, 'focus stays inside the tile list after answering (no jump to page top)', afterTile?.inMain, afterTile?.name?.slice(0, 30));
   const st = await page.evaluate(() => [...document.querySelectorAll('.alef-atlas p, .alef-atlas .status')].map((e) => e.textContent).join(' ').match(/(Good!|That is)[^/]*/)?.[0] || '');
   note(f, 'Space on a tile answers and gives feedback in text', nt > 0 && st.trim().length > 0, st.trim().slice(0, 100));
   await ctx.close();
@@ -204,7 +204,7 @@ async function tabTo(page, match, max = 120) {
   note(f, 'Enter opens the calendar, sheet closes, focus on its heading', a?.tag === 'h1' && /calendar/i.test(a.name) && await page.evaluate(() => document.getElementById('more-btn').getAttribute('aria-expanded') === 'false'), JSON.stringify(a));
   const cal = await page.evaluate(() => { const m = document.querySelector('main'); return { text: /Shabbat|Hanukkah|Cheshvan/i.test(m.innerText), focusable: [...m.querySelectorAll('a[href],button,input,select')].length, hasSettingsLink: !!m.querySelector('a[href="#/settings"]'), buttonsOnly: [...m.querySelectorAll('[tabindex]:not([tabindex="-1"])')].every((e) => /^(a|button|input|select|summary|textarea)$/i.test(e.tagName)) }; });
   note(f, 'calendar shows dates/holidays as text, and any controls it has (day grid) are real buttons reachable by Tab', cal.text && cal.buttonsOnly, JSON.stringify(cal));
-  note(f, 'calendar "Set your location in Settings" is a link, not just text', cal.hasSettingsLink, '', true);
+  note(f, 'calendar "Set your location in Settings" is a link, not just text', cal.hasSettingsLink, '');
   await ctx.close();
 }
 

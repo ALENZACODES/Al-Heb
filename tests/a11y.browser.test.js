@@ -27,9 +27,9 @@ test('axe (quick subset, 4 configs): no critical issue and no colour-contrast fa
   const out = JSON.parse(readFileSync(join(outDir, 'alef-axe-quick.json'), 'utf8'));
   assert.ok(out.summary.routes >= 8 && out.summary.configs === 4, r.stdout.slice(-400));
   assert.equal(out.summary.byImpact.critical ?? 0, 0, 'critical axe violations');
-  // the calendar view is being rebuilt by another lane; its own contrast findings are tracked in docs/A11Y.md, so it is excluded here
+  // every route in the quick set is checked, including /calendar (it was excluded while another lane rebuilt it)
   const contrast = [];
-  for (const [route, cfgs] of Object.entries(out.routes)) if (route !== '/calendar') for (const [cfg, vs] of Object.entries(cfgs)) for (const v of vs) if (v.id === 'color-contrast') contrast.push(`${route} ${cfg} ${v.nodes[0].target}`);
+  for (const [route, cfgs] of Object.entries(out.routes)) for (const [cfg, vs] of Object.entries(cfgs)) for (const v of vs) if (v.id === 'color-contrast') contrast.push(`${route} ${cfg} ${v.nodes[0].target}`);
   assert.deepEqual(contrast, []);
   assert.deepEqual(out.routes['/ (More sheet open)'] && Object.values(out.routes['/ (More sheet open)']).flat(), [], 'the open More sheet has no violations');
   assert.deepEqual(out.keyboard.filter((k) => !k.ok), [], 'keyboard checks in run.mjs');
@@ -40,5 +40,5 @@ test('keyboard-only walk: onboarding, trace, atlas quiz, vocab review, reader, c
   assert.equal(r.status, 0, r.stdout.slice(-1500) + r.stderr.slice(-500));
   const run = JSON.parse(readFileSync(join(outDir, 'alef-kbd.json'), 'utf8'));
   assert.ok(run.results.length >= 25);
-  assert.deepEqual(run.results.filter((x) => !x.ok && !x.gap), []);
+  assert.deepEqual(run.results.filter((x) => !x.ok), [], 'a result failed or is still marked as a known gap');
 });

@@ -5,9 +5,7 @@ import { applyComfort, COMFORT_KEYS } from './shell/comfort.js';
 import { createRouter, ROUTES, loadRouteModule, availableRoutes } from './shell/router.js';
 import { VIEW_FILES } from './shell/views.generated.js';
 import { renderNav as renderNavBar } from './shell/nav.js';
-import { mountPreviewBanner } from './shell/preview-banner.js';
 import { t, tHe } from './shell/i18n.js';
-import { createStubAudio } from './shell/audio-stub.js';
 import { createShellAudio } from './shell/audio.js';
 import { createShardLoader, warmShardAfterInstall } from './shell/audio-shards.js';
 import { isRealProgressWrite } from './shell/persist-gate.js';
@@ -25,8 +23,11 @@ async function makeAudio() {
     if (typeof m.createAudio !== 'function') throw new Error('player unavailable');
     return createShellAudio({ settings, loadManifest: () => fetchCoreManifest((u) => fetch(u)), loadSummary: () => fetchAudioSummary((u) => fetch(u)), createAudio: m.createAudio });
   } catch (e) { console.warn('lane 4 audio player not used:', e?.message); }
-  return createStubAudio({ settings });
+  return (await import('./shell/audio-stub.js')).createStubAudio({ settings }); // fallback only: loaded when the player is unavailable
 }
+// The preview banner module loads only once a preview-tier route is shown (v0 routes never need it); afterwards it also clears a stale banner.
+let bannerMod = null;
+const needsBannerTier = (route) => !!route && route.tier !== 'v0';
 let lastCtx = null, lastMatch = null, touched = false;
 // Finer-grained than `touched`, for the late-manifest retry: a gesture outside a text field, or an edit to any field.
 let touchedOutsideField = false, fieldEdited = false;
@@ -226,7 +227,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     try { const L = await (await fetch(new URL('../data/letters/letters.json', import.meta.url))).json(); nm = (Array.isArray(L) ? L : L.letters || []).find((x) => x.id === params.id)?.name || ''; } catch { /* keep the generic title */ }
     if (token === navToken) document.title = `${route.title} ${nm || params.id.charAt(0).toUpperCase() + params.id.slice(1)} - ALEF`;
   }
-  try { mountPreviewBanner(root, route); } catch (e) { console.warn('preview banner failed', e); } // preview-tier note (docs/v0/SCOPE.md); a banner fault must not replace a view that mounted
+  try { if (bannerMod || needsBannerTier(route)) { bannerMod ??= await import('./shell/preview-banner.js'); bannerMod.mountPreviewBanner(root, route); } } catch (e) { console.warn('preview banner failed', e); } // preview-tier note (docs/v0/SCOPE.md); a banner fault must not replace a view that mounted
   root.removeAttribute('aria-busy');
   finish();
 

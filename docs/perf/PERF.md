@@ -27,6 +27,10 @@ Headroom is tightened to 5 % (budget 317440 B) instead of 15 %, so that the bump
 
 The cold load of `/` had grown to 346346 B in 55 requests (budget 317440 B). Cause: `home.view.js` imported `curriculum/actions.js` only for `loadState`, which pulled in the whole practice chain (progress, scaffold, fade, hints, checkpoint, content, ladder, gender, spotit, hebrew, memory.core, about 47 KB). `loadState` and `currentStreak` now live in `curriculum/state.js`; `actions.js` and `progress.js` re-export them, and Home imports `state.js`. Measured after: 277 KB in 44 requests (`node tools/qa/perf.mjs --quick`, emulated, this machine). Budget and baseline are unchanged.
 
+### Home JS reduction, 2026-11-05 (no re-baseline)
+
+The cold load of `/` measured 326629 B in 49 requests against the 317440 B budget. Three changes, each measured with `node tools/qa/perf.mjs --quick` (emulated, this machine): the fallback audio stub (`shell/audio-stub.js`) and the preview banner (`shell/preview-banner.js`) are imported only when needed (player failed; a preview-tier route shown), and Home fetches `shell/backup-reminder.js` only when at least one lesson is completed (the reminder is never due below 3). Together: 326629 B to 317594 B. Then `openStart` moved from `placement/model.js` (9.2 KB) to `placement/start.js` (re-exported from the model, same behaviour), so Home no longer loads the placement item builder: 309860 B in 46 requests. Budget and baseline unchanged.
+
 ## Numbers (slow 4G, 4x CPU, median of 3)
 
 | Route | FCP ms | JS KB (req) | JS KB before FCP | total KB | long tasks (TBT ms) | DOM nodes (main) | JS heap MB |

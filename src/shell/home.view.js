@@ -3,7 +3,6 @@ import { ROUTES } from './router.js';
 import { PREVIEW_HIDDEN } from './nav-model.js';
 import { tHe } from './i18n.js';
 import { calmOn, streakVisible } from './comfort.js';
-import { REMINDER_KEY, reminderDue, reminderNode, snoozed } from './backup-reminder.js';
 import { buildToday, renderToday, daysAway, reviewedToday, previewTag, FIRSTDAY_PROGRESS_KEY, ONBOARDING_KEY, PLACEMENT_KEY, DAILY_GOAL_KEY, PRACTICE_KEYS } from '../home/today.js';
 
 async function tryImport(paths) {
@@ -90,9 +89,13 @@ export function mount(root, ctx) {
     draw();
     // backup reminder: only once there is real progress to lose, never claiming a backup happened by itself
     const completed = Object.keys(st.completed || {}).length;
-    const record = await get(REMINDER_KEY);
-    if (alive && reminderDue({ completed, record, now: Date.now() })) {
-      backupHost.replaceChildren(reminderNode(h, { completed, record, onSnooze: () => { try { store.set(REMINDER_KEY, snoozed(record, Date.now())); } catch { /* best effort */ } } }));
+    // reminderDue() is always false below FIRST_AT completed lessons, so the module is fetched only once there is some progress
+    if (completed > 0) {
+      const B = await import('./backup-reminder.js');
+      const record = await get(B.REMINDER_KEY);
+      if (alive && B.reminderDue({ completed, record, now: Date.now() })) {
+        backupHost.replaceChildren(B.reminderNode(h, { completed, record, onSnooze: () => { try { store.set(B.REMINDER_KEY, B.snoozed(record, Date.now())); } catch { /* best effort */ } } }));
+      }
     }
   })();
   return () => { alive = false; };

@@ -3,7 +3,7 @@
 // firstday.progress, onboarding.v1, placement.v1) and never writes. Every link is guarded by hasRoute.
 import { plain } from '../shell/plain-copy.js';
 import { h } from '../shell/ui.js';
-import { openStart } from '../placement/model.js';
+import { openStart } from '../placement/start.js';
 import { ROUTES } from '../shell/router.js';
 import { tierOf } from '../shell/nav-model.js';
 import { nextPerTrack } from './nextlesson.js';

@@ -4,7 +4,7 @@ Three honest levels, decided by `audioAccess()` in `src/shell/audio-access.js` (
 
 | level | when | shown |
 |---|---|---|
-| file | manifest entry is recorded/tts | "Recorded by a human reader" or "Synthetic voice (Israeli only), not a recorded teacher" (src/shell/audio-labels.js) |
+| file | manifest entry is recorded/tts or synthetic (incl. outside-source clips, labelled "outside generator ... unreviewed") | "Recorded by a human reader" or "Synthetic voice (Israeli only), not a recorded teacher" (src/shell/audio-labels.js) |
 | device | no clip, a he-IL browser voice exists or may exist (voices not yet loaded) | "Device voice, not a recorded teacher; Israeli-style only" (never Sephardi/Ashkenazi) |
 | none | no clip and no usable voice (no speechSynthesis, only non-Hebrew voices, unknown item) | "No audio yet" plus the written respelling where the view has one |
 

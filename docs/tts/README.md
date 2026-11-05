@@ -103,7 +103,7 @@ Different machine: zip `<work>/mp3`, `<work>/render-log.jsonl` (required: it hol
 node tools/tts/manifest_update.mjs --work <scratch-parent> --report <path>/verify-report.csv
 ```
 
-where `<scratch-parent>/mp3/audio/...` holds the files (the tool looks for `<work>/mp3/<manifest path>`). There is no separate audio ingest tool in the repo (`tools/images/ingest*.mjs` is for images), so this is the hand-back path.
+where `<scratch-parent>/mp3/audio/...` holds the files (the tool looks for `<work>/mp3/<manifest path>`). For clips that come from an outside source (not this pipeline), use `tools/audio/ingest.mjs`; see `docs/audio/INGEST-CLIPS.md`.
 
 Human-only work: `tools/tts/donor-export/human-only-<tradition>-<voice>.csv` uses the same columns as `docs/voices/recording/recordings_needed.csv`, so it can feed the existing donor sheet tooling (`tools/audio/recording_sheets.mjs` reads the priority subset of the same data).
 

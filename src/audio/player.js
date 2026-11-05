@@ -87,21 +87,21 @@ export function createAudio(opts) {
   function fileFor(voice, tradition, kind, id) {
     const exact = index.get(`${voice}|${tradition}|${kind}|${id}`);
     if (exact && exact.status !== 'missing') {
-      return { source: 'file', path: exact.path, url: url(exact.path), entryStatus: exact.status, via: 'exact' };
+      return { source: 'file', path: exact.path, url: url(exact.path), entryStatus: exact.status, entrySource: exact.source, via: 'exact' };
     }
     // alias (e.g. a one-line 'prayer' record is the same clip as its 'line'): only when the target file exists
     if (exact && exact.aliasOf) {
       const [ak, ...rest] = String(exact.aliasOf).split('/');
       const target = index.get(`${voice}|${tradition}|${ak}|${rest.join('/')}`);
       if (target && target.status !== 'missing') {
-        return { source: 'file', path: target.path, url: url(target.path), entryStatus: target.status, via: 'alias' };
+        return { source: 'file', path: target.path, url: url(target.path), entryStatus: target.status, entrySource: target.source, via: 'alias' };
       }
     }
     if (exact && Array.isArray(exact.equivalentTo)) {
       for (const t of exact.equivalentTo) {
         const alt = index.get(`${voice}|${t}|${kind}|${id}`);
         if (alt && alt.status !== 'missing') {
-          return { source: 'file', path: alt.path, url: url(alt.path), fileTradition: t, entryStatus: alt.status, via: 'equivalent' };
+          return { source: 'file', path: alt.path, url: url(alt.path), fileTradition: t, entryStatus: alt.status, entrySource: alt.source, via: 'equivalent' };
         }
       }
     }

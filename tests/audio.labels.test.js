@@ -65,3 +65,13 @@ test('no ad-hoc status phrasings remain in src/ (everything goes through audio-l
   walk(path.join(ROOT, 'src'));
   assert.deepEqual(hits, []);
 });
+
+test('outside-synthetic clips: honest label, no claim about how they were made, never human', () => {
+  for (const t of [undefined, 'israeli', 'sephardi', 'ashkenazi']) {
+    const l = fileLabel('synthetic-unreviewed', t, 'outside-synthetic');
+    assert.match(l, /^Synthetic voice \(outside generator; /); assert.match(l, /not a recorded teacher; unreviewed\)$/);
+    assert.doesNotMatch(l, /respelling|pointed Hebrew/); assert.notEqual(l, STATUS_LABELS.recorded);
+  }
+  assert.equal(fileLabel('synthetic-unreviewed', 'sephardi', 'outside-synthetic'), 'Synthetic voice (outside generator; Sephardi style not verified; not a recorded teacher; unreviewed)');
+  assert.match(fileLabel('synthetic-reviewed', 'israeli', 'outside-synthetic'), /reviewed by a listener/);
+});

@@ -31,6 +31,7 @@ import argparse, hashlib, json, math, os, re, struct, sys, time, wave, zlib
 NIQQUD = re.compile('[ְ-ׇּׁׂ]')
 HEBREW_LETTER = re.compile('[\u05d0-\u05ea]')
 TRADITIONS = ('israeli', 'sephardi', 'ashkenazi')
+TTS_STATUS = 'synthetic-unreviewed'  # the only label this renderer ever writes; keep equal to TTS_STATUS in tools/tts/lib.mjs (a test checks)
 SR_MOCK = 24000
 
 
@@ -83,6 +84,34 @@ def ref_digest(path):
 
 def raw_path(work, it):
     return os.path.join(work, 'raw', it['voice'], it['tradition'], it['kind'], it['id'] + '.wav')
+
+
+def logged_keys(log_path):
+    """Clip keys with a complete line in render-log.jsonl (a torn last line from a crash is ignored)."""
+    keys = set()
+    if os.path.exists(log_path):
+        with open(log_path, encoding='utf-8') as f:
+            for line in f:
+                try:
+                    r = json.loads(line)
+                    keys.add(f"{r['voice']}/{r['tradition']}/{r['kind']}/{r['id']}")
+                except Exception:
+                    pass
+    return keys
+
+
+def clean_stale(work, items, logged):
+    """Delete *.part files and any WAV of a selected clip that has no render-log line (the run died between the two writes)."""
+    n = 0
+    for it in items:
+        out = raw_path(work, it)
+        for f in (out + '.part',):
+            if os.path.exists(f):
+                os.remove(f); n += 1
+        key = f"{it['voice']}/{it['tradition']}/{it['kind']}/{it['id']}"
+        if os.path.exists(out) and key not in logged:
+            os.remove(out); n += 1
+    return n
 
 
 def write_wav(path, samples, sr):
@@ -172,6 +201,9 @@ def main(argv=None):
     ap.add_argument('--voice', choices=['m', 'f'])
     ap.add_argument('--tradition', help='only these traditions (comma list or all); default: every tradition in the plan')
     ap.add_argument('--confidence', choices=['high', 'all'], default='all', help='high: only items the plan marked high-confidence')
+    ap.add_argument('--israeli-only', action='store_true', help='render only Israeli (pointed Hebrew) items; refuses to start if the selected items include a respelled tradition')
+    ap.add_argument('--resume', action='store_true', help='explicit restart mode (also the default): finished clips are skipped; a stray .part file or a WAV with no render-log record is cleaned up and re-rendered')
+    ap.add_argument('--max-clips', type=int, help='stop after rendering this many NEW clips (clips already done do not count), so a run can be done in small batches')
     ap.add_argument('--lang-token', help='override the language token of every tts-respelled item (default: the plan\'s)')
     a = ap.parse_args(argv)
     engine = 'mock' if a.mock else a.engine
@@ -183,6 +215,15 @@ def main(argv=None):
              and (wanted is None or i['tradition'] in wanted) and (a.confidence == 'all' or i.get('confidence') == 'high')]
     if a.limit:
         items = items[:a.limit]
+    if a.israeli_only:
+        if wanted and wanted != {'israeli'}:
+            raise SystemExit('--israeli-only conflicts with --tradition ' + a.tradition)
+        other = [i for i in items if i['tradition'] != 'israeli']
+        if other:
+            # Not silently dropped: the plan was built with a respelled tradition, and that has to be a deliberate choice.
+            raise SystemExit(f'--israeli-only: the plan holds {len(other)} Sephardi/Ashkenazi (respelled, untested) items; re-run render with --tradition israeli to skip them, or plan again without them')
+    if a.max_clips is not None and a.max_clips < 1:
+        raise SystemExit('--max-clips must be 1 or more')
     for i in items:
         i['source'] = check_item(i)
         if a.lang_token and i['source'] == 'tts-respelled':
@@ -202,13 +243,28 @@ def main(argv=None):
         eng = Chatterbox(device, a.internal_diacritizer, {'m': a.ref_m, 'f': a.ref_f}, a.allow_default_voice, a.seed)
         print(f'engine=chatterbox model={eng.model_tag} device={device}')
     wrong = {x for x in a.mock_wrong.split(',') if x}
-    log = open(os.path.join(a.work, 'render-log.jsonl'), 'a', encoding='utf-8')
+    logged = logged_keys(os.path.join(a.work, 'render-log.jsonl'))
+    cleaned = clean_stale(a.work, items, logged)
+    if cleaned:
+        print(f'resume: removed {cleaned} unfinished file(s) (partial or with no render-log record); they will be rendered again')
+    log_path = os.path.join(a.work, 'render-log.jsonl')
+    if os.path.exists(log_path) and os.path.getsize(log_path) > 0:
+        with open(log_path, 'rb') as f:
+            f.seek(-1, os.SEEK_END)
+            torn = f.read(1) != b'\n'
+        if torn:  # a crash cut the last line: end it, or the next record would be glued onto the fragment and lost
+            with open(log_path, 'a', encoding='utf-8') as f:
+                f.write('\n')
+    log = open(log_path, 'a', encoding='utf-8')
     done = skipped = 0
+    stopped_early = False
     t0 = time.time()
     for n, it in enumerate(items, 1):
         out = raw_path(a.work, it)
         if os.path.exists(out) and os.path.getsize(out) > 44:
             skipped += 1; continue  # resumable: a finished WAV is never redone
+        if a.max_clips is not None and done >= a.max_clips:
+            stopped_early = True; break  # batch limit reached: everything done so far is on disk and logged
         text = speak_text(it)
         vocalized = False
         if nak and it['source'] == 'tts-hebrew' and not NIQQUD.search(text):
@@ -225,6 +281,7 @@ def main(argv=None):
         write_wav(out, samples, sr)
         rec = {'voice': it['voice'], 'tradition': it['tradition'], 'kind': it['kind'], 'id': it['id'], 'path': it.get('path'), 'engine': engine,
                'source': it['source'] + (':mock' if engine == 'mock' else ''), 'sound_word': it.get('sound_word'), 'sound_model': it.get('sound_model'), 'language': it.get('language') or 'he',
+               'status': TTS_STATUS, 'untested': it['source'] == 'tts-respelled',
                'confidence': it.get('confidence'), 'flags': it.get('flags') or [],
                'model_name': 'mock' if engine == 'mock' else 'chatterbox-multilingual', 'model_version': 'mock' if engine == 'mock' else eng.model_version,
                'package': None if engine == 'mock' else eng.package_version,
@@ -236,7 +293,12 @@ def main(argv=None):
         if n % 25 == 0 or n == len(items):
             rate = done / max(time.time() - t0, 1e-6)
             print(f'{n}/{len(items)} done={done} skipped={skipped} {rate:.2f} clips/s')
+    remaining = sum(1 for it in items if not (os.path.exists(raw_path(a.work, it)) and os.path.getsize(raw_path(a.work, it)) > 44))
     print(f'rendered {done}, already present {skipped}, engine={engine}, work={a.work}')
+    if stopped_early:
+        print(f'stopped after --max-clips {a.max_clips}; {remaining} selected clip(s) still to render: run the same command again to continue')
+    if any(i['source'] == 'tts-respelled' for i in items):
+        print('note: Sephardi/Ashkenazi clips come from respellings and are UNTESTED; every clip written here is synthetic-unreviewed')
 
 
 if __name__ == '__main__':

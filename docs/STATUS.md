@@ -105,7 +105,7 @@ From `docs/legal/CONTENT-LICENCE-AUDIT.md` (not legal advice; no lawyer has revi
 
 From `docs/tts/README.md`:
 - The local TTS pipeline is tested in mock mode only; no real Hebrew clip has been generated, no model quality was checked, nothing was listened to. A real-model install attempt on 2026-11-04 ran out of disk.
-- Synthetic clips are marked `tts` with `redistributionCleared: false`; Sephardi and Ashkenazi clips and Israeli letters, vowels and syllables are human-only.
+- Synthetic clips written by the local pipeline are marked `synthetic-unreviewed` (the older value `tts` is still read by the app) with `redistributionCleared: false`; Sephardi and Ashkenazi clips and Israeli letters, vowels and syllables are human-only.
 - The acceptance gate (character error rate by Whisper) does not check vowels, accent or voice quality.
 - Licence rows for Chatterbox weights, Nakdimon and ffmpeg are declarations read from their pages, to be confirmed by counsel.
 - Voice-actor kits in `docs/voices/kit/` are plans only; no talent contacted, nothing recorded.

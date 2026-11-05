@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Build the TTS render plan from the audio manifest.
 //   node tools/tts/plan.mjs [--root <repo>] [--out tools/tts/plan.json] [--donor-dir tools/tts/donor-export] [--limit N] [--voice m|f] [--include-optional]
-//                           [--tradition israeli|sephardi|ashkenazi|all|a,b] [--confidence high|all] [--lang-tokens sephardi=es,ashkenazi=es]
+//                           [--israeli-only] [--tradition israeli|sephardi|ashkenazi|all|a,b] [--confidence high|all] [--lang-tokens sephardi=es,ashkenazi=es]
 // Each plan item says: clip id (kind + id), tradition, voice m|f, the text to speak, and the language token to give the model.
 //   Israeli: speaks the pointed Hebrew with language 'he' (source 'tts-hebrew').
 //   Sephardi / Ashkenazi: speaks a "sound word" (a respelling in Latin letters from tools/tts/soundtext.mjs, soundText(pointedHebrew, tradition))
@@ -115,7 +115,7 @@ export function buildPlan(root = REPO_ROOT, { includeOptional = false, voice, li
     } else {
       const s = typeof soundText === 'function' ? normaliseSound(soundText(e.text, e.tradition, { lang: langTokens[e.tradition] || DEFAULT_LANG_TOKENS[e.tradition] })) : null;
       if (!s) { human.push({ ...e, why: `${e.tradition} pronunciation: no sound word available` }); skipped.noSoundWord++; continue; }
-      item = { ...base, source: 'tts-respelled', speak: s.text, language: langTokens[e.tradition] || DEFAULT_LANG_TOKENS[e.tradition], sound_word: s.text, sound_model: s.model, confidence: s.confidence, flags: s.flags };
+      item = { ...base, source: 'tts-respelled', speak: s.text, language: langTokens[e.tradition] || DEFAULT_LANG_TOKENS[e.tradition], sound_word: s.text, sound_model: s.model, confidence: s.confidence, flags: s.flags, untested: true };
     }
     if (confidence === 'high' && item.confidence !== 'high') { skipped.lowConfidence++; continue; }
     items.push(item);
@@ -158,9 +158,10 @@ export async function loadSoundText() {
 }
 
 export async function main(argv = process.argv.slice(2)) {
-  const a = parseArgs(argv, ['include-optional']);
+  const a = parseArgs(argv, ['include-optional', 'israeli-only']);
   const root = a.root ? path.resolve(a.root) : REPO_ROOT;
-  const traditions = parseTraditions(a.tradition);
+  if (a['israeli-only'] && a.tradition != null && String(a.tradition) !== 'israeli') throw new Error('--israeli-only conflicts with --tradition ' + a.tradition);
+  const traditions = parseTraditions(a['israeli-only'] ? 'israeli' : a.tradition);
   const st = traditions.some((t) => t !== 'israeli') ? await loadSoundText() : null;
   const soundText = st ? st.fn : null;
   if (traditions.some((t) => t !== 'israeli') && !st) console.warn('warning: tools/tts/soundtext.mjs not found or has no soundText export: Sephardi/Ashkenazi items cannot be planned');

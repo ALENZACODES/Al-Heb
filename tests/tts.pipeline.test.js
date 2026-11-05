@@ -10,7 +10,7 @@ import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { audioPath } from '../tools/audio/hebrew_data.mjs';
 import { checkMp3, integratedLufs } from '../tools/tts/post.mjs';
-import { parseCsv, stripNiqqud } from '../tools/tts/lib.mjs';
+import { parseCsv, stripNiqqud, TTS_STATUS } from '../tools/tts/lib.mjs';
 import { buildPlan } from '../tools/tts/plan.mjs';
 import { update } from '../tools/tts/manifest_update.mjs';
 
@@ -256,5 +256,95 @@ test('real engine refuses the same reference audio for the man and the woman voi
   const ref = path.join(root, 'same.wav'); fs.writeFileSync(ref, Buffer.from('RIFF0000WAVEnot-a-real-voice'));
   const r = spawnSync('python3', [path.join(T, 'render_chatterbox.py'), '--plan', plan, '--work', work, '--ref-m', ref, '--ref-f', ref], { encoding: 'utf8' });
   assert.notEqual(r.status, 0); assert.match(r.stderr, /must differ/); assert.match(r.stderr, /donor-rights-grant/);
+  fs.rmSync(root, { recursive: true, force: true });
+});
+
+// ---- small-batch / restart-safe run (--israeli-only, --max-clips, --resume) ----
+const RJ = (work) => fs.readFileSync(path.join(work, 'render-log.jsonl'), 'utf8').split('\n').filter(Boolean).flatMap((l) => { try { return [JSON.parse(l)]; } catch { return []; } }); // a torn line is skipped, as readRenderLog does
+
+test('render --max-clips N renders at most N NEW clips per run and a re-run continues where it stopped', opts, () => {
+  const { root, work } = fixture();
+  const plan = path.join(root, 'plan.json');
+  run('node', [path.join(T, 'plan.mjs'), '--root', root, '--israeli-only', '--out', plan, '--donor-dir', path.join(root, 'donor')]);
+  const r = (...x) => run('python3', [path.join(T, 'render_chatterbox.py'), '--mock', '--plan', plan, '--work', work, '--israeli-only', ...x]);
+  assert.match(r('--max-clips', '7'), /rendered 7, already present 0[\s\S]*13 selected clip\(s\) still to render/);
+  assert.match(r('--max-clips', '7', '--resume'), /rendered 7, already present 7[\s\S]*6 selected clip\(s\) still to render/, 'finished clips do not count against the batch');
+  assert.match(r('--max-clips', '7'), /rendered 6, already present 14/);
+  assert.equal(RJ(work).length, 20);
+  assert.throws(() => run('python3', [path.join(T, 'render_chatterbox.py'), '--mock', '--plan', plan, '--work', work, '--max-clips', '0']));
+  fs.rmSync(root, { recursive: true, force: true });
+});
+
+test('every clip the renderer logs is labelled synthetic-unreviewed (never recorded or tts); respelled ones are flagged untested', opts, () => {
+  const { root, work } = respelFixture();
+  const plan = path.join(root, 'plan.json');
+  fs.writeFileSync(plan, JSON.stringify(buildPlan(root, { traditions: ['israeli', 'sephardi', 'ashkenazi'], soundText: stubSound })));
+  run('python3', [path.join(T, 'render_chatterbox.py'), '--mock', '--plan', plan, '--work', work]);
+  const log = RJ(work);
+  assert.ok(log.length > 0);
+  for (const l of log) {
+    assert.equal(l.status, 'synthetic-unreviewed');
+    assert.equal(l.untested, l.source.startsWith('tts-respelled'));
+  }
+  assert.ok(log.some((l) => l.untested) && log.some((l) => !l.untested));
+  assert.equal(TTS_STATUS, 'synthetic-unreviewed');
+  assert.match(fs.readFileSync(path.join(T, 'render_chatterbox.py'), 'utf8'), /TTS_STATUS = 'synthetic-unreviewed'/, 'python and node labels cannot drift apart');
+  fs.rmSync(root, { recursive: true, force: true });
+});
+
+test('--israeli-only: plan keeps only Israeli items; render refuses a plan holding respelled items; conflicting --tradition is refused', opts, () => {
+  const { root, work } = respelFixture();
+  const all = path.join(root, 'all.json'), isr = path.join(root, 'isr.json');
+  fs.writeFileSync(all, JSON.stringify(buildPlan(root, { traditions: ['israeli', 'sephardi', 'ashkenazi'], soundText: stubSound })));
+  run('node', [path.join(T, 'plan.mjs'), '--root', root, '--israeli-only', '--out', isr, '--donor-dir', path.join(root, 'donor')]);
+  const pi = JSON.parse(fs.readFileSync(isr, 'utf8'));
+  assert.ok(pi.items.length > 0 && pi.items.every((i) => i.tradition === 'israeli' && i.source === 'tts-hebrew' && !i.untested));
+  const bad = spawnSync('node', [path.join(T, 'plan.mjs'), '--root', root, '--israeli-only', '--tradition', 'sephardi', '--out', isr, '--donor-dir', path.join(root, 'donor')], { encoding: 'utf8' });
+  assert.notEqual(bad.status, 0); assert.match(bad.stderr, /conflicts/);
+  const refuse = spawnSync('python3', [path.join(T, 'render_chatterbox.py'), '--mock', '--plan', all, '--work', work, '--israeli-only'], { encoding: 'utf8' });
+  assert.notEqual(refuse.status, 0); assert.match(refuse.stderr, /respelled, untested/);
+  assert.equal(fs.existsSync(path.join(work, 'raw')), false, 'nothing was rendered before the refusal');
+  const ok = run('python3', [path.join(T, 'render_chatterbox.py'), '--mock', '--plan', all, '--work', work, '--israeli-only', '--tradition', 'israeli']);
+  assert.match(ok, /rendered \d+/);
+  assert.ok(RJ(work).every((l) => l.tradition === 'israeli'));
+  fs.rmSync(root, { recursive: true, force: true });
+});
+
+test('restart safety: a crash leftover (.part file, or a WAV with no log line) is cleaned and re-rendered; a torn log line is tolerated', opts, () => {
+  const { root, work } = fixture();
+  const plan = path.join(root, 'plan.json');
+  run('node', [path.join(T, 'plan.mjs'), '--root', root, '--out', plan, '--donor-dir', path.join(root, 'donor')]);
+  const p = JSON.parse(fs.readFileSync(plan, 'utf8'));
+  const R = (...x) => run('python3', [path.join(T, 'render_chatterbox.py'), '--mock', '--plan', plan, '--work', work, ...x]);
+  R('--max-clips', '3');
+  const first = p.items[0], third = p.items[2];
+  const wav = (it) => path.join(work, 'raw', it.voice, it.tradition, it.kind, `${it.id}.wav`);
+  // crash 1: WAV written, log line never made it
+  const lines = fs.readFileSync(path.join(work, 'render-log.jsonl'), 'utf8').split('\n').filter(Boolean);
+  fs.writeFileSync(path.join(work, 'render-log.jsonl'), lines.slice(0, 2).join('\n') + '\n' + lines[2].slice(0, 40)); // third line torn
+  // crash 2: half-written file
+  fs.writeFileSync(wav(p.items[5]) + '.part', 'x'.repeat(10)); fs.mkdirSync(path.dirname(wav(p.items[5])), { recursive: true });
+  const out = R('--resume');
+  assert.match(out, /resume: removed 2 unfinished file/);
+  assert.match(out, /rendered 18, already present 2/);
+  assert.equal(fs.existsSync(wav(p.items[5]) + '.part'), false);
+  const keys = RJ(work).map((l) => l.id);
+  for (const it of p.items) assert.ok(keys.includes(it.id), `${it.id} has a log line, so its provenance can be stated`);
+  assert.ok(fs.statSync(wav(third)).size > 44 && fs.statSync(wav(first)).size > 44);
+  fs.rmSync(root, { recursive: true, force: true });
+});
+
+test('verify --resume keeps earlier accepted rows and only checks the rest', opts, () => {
+  const { root, work } = fixture();
+  const plan = path.join(root, 'plan.json'), report = path.join(root, 'r.csv');
+  run('node', [path.join(T, 'plan.mjs'), '--root', root, '--out', plan, '--donor-dir', path.join(root, 'donor')]);
+  const step = (n) => {
+    run('python3', [path.join(T, 'render_chatterbox.py'), '--mock', '--plan', plan, '--work', work, '--max-clips', String(n)]);
+    run('node', [path.join(T, 'post.mjs'), '--plan', plan, '--work', work]);
+    return run('python3', [path.join(T, 'verify.py'), '--mock', '--resume', '--plan', plan, '--work', work, '--report', report]);
+  };
+  assert.match(step(8), /verify: 8 accepted, 0 rejected, 12 without an MP3/);
+  assert.match(step(8), /verify: 16 accepted, 0 rejected, 4 without an MP3/);
+  assert.equal(parseCsv(fs.readFileSync(report, 'utf8')).length, 16);
   fs.rmSync(root, { recursive: true, force: true });
 });

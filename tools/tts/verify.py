@@ -92,6 +92,7 @@ def main(argv=None):
     ap.add_argument('--engine', choices=['faster-whisper', 'mock'], default='faster-whisper')
     ap.add_argument('--mock', action='store_true')
     ap.add_argument('--model', default='large-v3'); ap.add_argument('--device', default='auto'); ap.add_argument('--compute-type', default='default')
+    ap.add_argument('--resume', action='store_true', help='keep rows already accepted in an existing --report for the same target text and only check the rest (for batch runs; a rejected row is checked again)')
     ap.add_argument('--max-cer', type=float, default=0.10)
     ap.add_argument('--min-seconds', type=float, default=0.2); ap.add_argument('--max-seconds', type=float, default=20.0)
     a = ap.parse_args(argv)
@@ -109,7 +110,15 @@ def main(argv=None):
         from faster_whisper import WhisperModel  # MIT; model weights downloaded on first use
         model = WhisperModel(a.model, device=a.device, compute_type=a.compute_type)
     rows, acc, rej, none = [], 0, 0, 0
+    kept = {}
+    if a.resume and os.path.exists(a.report):
+        with open(a.report, newline='', encoding='utf-8') as f:
+            for r in csv.DictReader(f):
+                if r.get('verdict') == 'accept':
+                    kept[r['path']] = r
     for it in items:
+        if it['path'] in kept and kept[it['path']].get('target') == it['text'] and os.path.exists(os.path.join(a.work, 'mp3', it['path'])):
+            rows.append(kept[it['path']]); acc += 1; continue
         mp3 = os.path.join(a.work, 'mp3', 'audio', it['voice'], it['tradition'], it['kind'], it['id'] + '.mp3')
         if not os.path.exists(mp3):
             none += 1; continue

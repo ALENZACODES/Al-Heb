@@ -113,13 +113,22 @@ export function createImageResolver(opts) {
 }
 
 /**
- * Load index + approvals and build a resolver. `fetchJson(url)` returns parsed JSON (the app passes (u) => fetch(u).then(r => r.json())).
+ * Load approvals (tiny) and build a resolver. `fetchJson(url)` returns parsed JSON (the app passes (u) => fetch(u).then(r => r.json())).
+ * The 235 KB index is fetched only when it can change what a view shows: at least one image is approved, or "show images that have not
+ * passed review" is on (now, or when it is switched on later: the index is then loaded and views show pictures from their next render).
+ * With nothing approved and that setting off, every resolve() is null whatever the index says, so the fetch is skipped.
  * Any failure yields a resolver that returns null for everything (views then render no image).
  */
 export async function loadImageResolver(fetchJson, { settings, base = 'assets/img', indexUrl = 'data/img/index.json', approvalsUrl = 'data/images/approvals.json' } = {}) {
-  let index = null, approvals = null;
-  try { [index, approvals] = await Promise.all([fetchJson(indexUrl), fetchJson(approvalsUrl).catch(() => ({}))]); } catch { index = null; }
-  return createImageResolver({ index: index || undefined, approvals, base, showUnapproved: () => settings?.get?.('showUnapprovedImages') === true });
+  const approvals = await Promise.resolve().then(() => fetchJson(approvalsUrl)).catch(() => ({}));
+  const showAll = () => settings?.get?.('showUnapprovedImages') === true;
+  const R = createImageResolver({ approvals, base, showUnapproved: showAll });
+  let loading = null;
+  const ensureIndex = () => (loading ||= Promise.resolve().then(() => fetchJson(indexUrl)).then((ix) => { if (ix) R.setIndex(ix); }).catch(() => { loading = null; }));
+  const anyApproved = Object.values(approvals?.approvals ?? approvals ?? {}).some((a) => a && a.status === 'approved');
+  if (anyApproved || showAll()) await ensureIndex();
+  try { settings?.subscribe?.((all, changed) => { if (Array.isArray(changed) && changed.includes('showUnapprovedImages') && showAll()) ensureIndex(); }); } catch { /* no live settings */ }
+  return Object.assign(R, { ensureIndex });
 }
 
 /**

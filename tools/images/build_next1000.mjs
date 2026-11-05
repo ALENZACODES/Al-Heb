@@ -29,6 +29,11 @@ const csvCell = (v) => { const s = String(v); return /[",\n]/.test(s) ? `"${s.re
 
 /** Returns { done:Set<string>|null, source } */
 function doneSet(manifest) {
+  const provenance = join(ROOT, 'data/images/provenance.json');
+  if (existsSync(provenance)) {
+    const images = JSON.parse(readFileSync(provenance, 'utf8')).images;
+    return { done: new Set(Object.keys(images).map(id => `${id}.png`)), source: 'data/images/provenance.json (ingested images)' };
+  }
   const p = join(ROOT, 'docs/images/codex-batch-01.json');
   if (existsSync(p)) {
     const j = JSON.parse(readFileSync(p, 'utf8'));
@@ -48,14 +53,16 @@ function doneSet(manifest) {
 }
 
 export function build() {
-  const manifest = parseCsv(readFileSync(join(ROOT, 'data/images/manifest.csv'), 'utf8'));
+  // Commands 150+ have their own run-3 queue; this queue covers the original series.
+  const manifest = parseCsv(readFileSync(join(ROOT, 'data/images/manifest.csv'), 'utf8')).filter(r => +r.command < 150);
   const pg = JSON.parse(readFileSync(join(ROOT, 'data/images/prompt-groups.json'), 'utf8')).groups;
   const { done, source } = doneSet(manifest);
   const remaining = manifest.filter((r) => !done.has(r.file));
   const next = buildNext();
-  const need = TARGET - remaining.length;
-  const newRows = next.flatMap((g) => g.rows);
-  if (need > newRows.length) throw new Error(`need ${need} new rows but spec_next has ${newRows.length}; add commands to spec_next.mjs`);
+  const need = Math.max(0, TARGET - remaining.length);
+  const existing = new Set(manifest.map(r => r.file));
+  const newRows = next.flatMap((g) => g.rows).filter(r => !done.has(r.file) && !existing.has(r.file));
+  // Up to TARGET: completed work must never be queued again just to fill the batch.
   const keepNew = newRows.slice(0, need);
   const keepSet = new Set(keepNew.map((r) => r.file));
   const byCmd = new Map();

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { pathToFileURL } from 'node:url';
 // Optional LOCAL helper server for the photo feature (dev / self-hosted use; NOT part of the static app and not needed for in-browser OCR).
 //   GET  /health                 -> {ok, tesseract, argos}
 //   POST /translate  {text}      -> {text, engine}          he -> en with Argos Translate (MIT; ~132 MB model, Python + ctranslate2)
@@ -92,7 +93,7 @@ export function createOcrServer({ argosPython = process.env.ARGOS_PYTHON || 'pyt
   return server;
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const port = Number(process.env.PORT || 8787);
   const s = createOcrServer();
   s.listen(port, '127.0.0.1', () => console.log(`ALEF local OCR/translate helper on http://127.0.0.1:${port}/ (health: /health)`));

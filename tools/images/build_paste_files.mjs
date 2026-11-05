@@ -114,7 +114,7 @@ export function indexMd(files) {
   const splits = files.filter((f) => f.split).map((f) => f.name).join(', ');
   return `# Paste file index
 
-282 images are already done (rows 1-282 of manifest.csv, matched in docs/images/codex-batch-01.json). The next command to paste is **${files[0].number}** (${files[0].title}), file \`${files[0].name}\`.
+Ingested images are excluded using data/images/provenance.json. The next command to paste is **${files[0].number}** (${files[0].title}), file \`${files[0].name}\`.
 
 ${files.length} files, ${total} images. Files over ${MAX_CHARS} characters are split into -a/-b parts (paste in order): ${splits || 'none'}.
 

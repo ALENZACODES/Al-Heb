@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -5,7 +6,7 @@ import { generate, buildRows, topWordTexts, stripNiqqud, hours, summarize, CSV_H
 import { buildSheets, esc } from '../tools/audio/recording_sheets.mjs';
 import { loadManifestFull } from '../tools/audio/manifest_io.mjs';
 
-const R = new URL('..', import.meta.url).pathname;
+const R = fileURLToPath(new URL('..', import.meta.url));
 const g = generate(R);
 const manifest = loadManifestFull(R);
 

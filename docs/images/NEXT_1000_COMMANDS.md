@@ -1,8 +1,8 @@
 # Next 1000 images: command runbook
 
-Pending list: **1000 images** = 515 unfinished manifest rows (commands 36-101) + 485 new block H images (commands 102-149).
-Done set used: docs/images/codex-batch-01.json (282 matched manifest names).
-**282 images are already done.** The next command to run is **36** (Fe sofit print set (partial: rows 2-10 remaining)), file `cmd-036.txt`.
+Pending list: **981 images** = 496 unfinished manifest rows (commands 38-101) + 485 new block H images (commands 102-149).
+Done set used: data/images/provenance.json (ingested images).
+**432 images are already done.** The next command to run is **38** (Alef cursive set), file `cmd-038.txt`.
 
 Files: `data/images/next1000.csv` (same columns as manifest.csv, all pending, command order), `data/images/next1000-groups.json` (per-command prompts, file lists, refs). Rebuild with `node tools/images/build_next1000.mjs`.
 
@@ -30,8 +30,6 @@ For several commands in a row, paste the first pending file, wait for the filena
 
 | Cmd | Block | Title | Images | Size | Refs to attach |
 |---|---|---|---|---|---|
-| 36 | B | Fe sofit print set (partial: rows 2-10 remaining) | 9 | 1024x1024/1792x1024 | CHAR_ari_sheet.png, L26_pe_final_print_mnemonic.png, CHAR_noa_sheet.png +3 |
-| 37 | B | Tsadi sofit print set | 10 | 1024x1024/1792x1024 | CHAR_ari_sheet.png, L27_tsadi_final_print_mnemonic.png, CHAR_noa_sheet.png +3 |
 | 38 | C | Alef cursive set | 6 | 1024x1024 | REF_cursive_alef.png, CHAR_ari_sheet.png, CHAR_noa_sheet.png +1 |
 | 39 | C | Bet / Vet cursive set | 6 | 1024x1024 | REF_cursive_bet.png, CHAR_ari_sheet.png, CHAR_noa_sheet.png +1 |
 | 40 | C | Gimel cursive set | 6 | 1024x1024 | REF_cursive_gimel.png, CHAR_ari_sheet.png, CHAR_noa_sheet.png +1 |

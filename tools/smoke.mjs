@@ -100,14 +100,14 @@ const check = (name, ok, detail = '') => { checks.push({ name, ok: !!ok, detail 
   await page.waitForFunction(() => location.hash === '#/firstday', null, { timeout: 8000 }).catch(() => {});
   check('plan start button opens the first 10 minutes', (await page.evaluate(() => location.hash)) === '#/firstday');
   // learning loop: lesson -> listen -> complete -> review -> home due count
-  await page.goto(base + '#/learn?lesson=r01'); await page.waitForSelector('text=Words');
+  await page.goto(base + '#/learn?lesson=r01'); await page.locator('main').getByRole('heading', { name: 'Words', exact: true }).waitFor();
   await page.getByRole('button', { name: 'Listen to Shin', exact: true }).click();
   await page.waitForTimeout(300);
   const sound = await page.locator('#sound-status').innerText();
   check('sound indicator states the real source after Listen', /browser|No sound|recorded/i.test(sound) && !/checking/i.test(sound), sound);
   await page.getByRole('button', { name: 'Mark lesson complete' }).click();
   await page.waitForSelector('text=new review cards added');
-  await page.goto(base + '#/'); await page.waitForSelector('text=cards due');
+  await page.goto(base + '#/'); await page.getByRole('link', { name: '6 cards due', exact: true }).waitFor();
   { const txt = await page.locator('main').innerText(); // the streak is now engaged-time based (src/curriculum/streak.js v2): completing a lesson alone no longer starts it, so only the line is asserted
     check('home Today card shows 6 due cards, a streak line, the morning link and one Continue button', /6 cards due/.test(txt) && /Streak:/.test(txt) && /Today's morning verse/.test(txt) && (await page.locator('#today-continue').count()) === 1, txt.replace(/\s+/g, ' ').slice(0, 400)); }
   await page.goto(base + '#/learn?review=1'); await page.waitForSelector('text=Card 1 of 6');

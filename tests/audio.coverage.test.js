@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import { test } from 'node:test';
 import { loadManifestFull } from '../tools/audio/manifest_io.mjs';
 import assert from 'node:assert/strict';
@@ -6,7 +7,7 @@ import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { computeCoverage, totals, whoIsMissing, renderWho, renderMarkdown, entryState, buildIndex, suppliers, TALENT } from '../tools/audio/coverage.mjs';
 
-const R = new URL('..', import.meta.url).pathname;
+const R = fileURLToPath(new URL('..', import.meta.url));
 const manifest = loadManifestFull(R);
 const E = (voice, tradition, kind, id, group, extra = {}) => ({ path: `audio/${voice}/${tradition}/${kind}/${id}.mp3`, voice, tradition, kind, id, text: 'שָׁלוֹם', status: 'missing', source: 'none', group, ...extra });
 

@@ -12,6 +12,7 @@ if (!sets[tier]) { console.error('usage: run.mjs unit|browser|all'); process.exi
 let code = 0;
 for (const [files, c] of sets[tier]) {
   const r = spawnSync(process.execPath, ['--test', `--test-concurrency=${c}`, ...rest, ...files], { stdio: 'inherit' });
-  code = code || r.status || 0;
+  if (r.error) console.error(r.error.message);
+  code = code || (r.status ?? 1);
 }
 process.exit(code);

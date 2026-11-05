@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import { test } from 'node:test';
 import { loadManifestFull } from '../tools/audio/manifest_io.mjs';
 import assert from 'node:assert/strict';
@@ -6,7 +7,7 @@ import path from 'node:path';
 import { buildKit, allFiles, SCENARIOS, MARKERS, clipMinutes, clipSeconds, hebLetters, KIT_TRADITIONS } from '../tools/audio/session_kit.mjs';
 import { section } from '../tools/audio/recording_script.mjs';
 
-const R = new URL('..', import.meta.url).pathname;
+const R = fileURLToPath(new URL('..', import.meta.url));
 const manifest = loadManifestFull(R);
 
 for (const t of KIT_TRADITIONS) for (const v of ['m', 'f']) {

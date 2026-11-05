@@ -1,7 +1,7 @@
 name: pages
 # Builds the static site (tools/build-static.mjs) and deploys it to GitHub Pages.
 # One-time setup in the repository: Settings -> Pages -> Build and deployment -> Source: "GitHub Actions".
-# NOT YET RUN: this workflow was written in an environment where nothing could be pushed, so it is untested on GitHub.
+# Build and validate on every main push. Publishing is explicitly enabled after Pages is configured.
 on:
   push:
     branches: [main]
@@ -20,6 +20,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Install test dependencies
+        run: python -m pip install Pillow==11.3.0 segno==1.6.6
       - name: Tests (no dependencies to install)
         run: npm test
       - name: Build static site
@@ -28,6 +32,7 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with: { path: dist }
   deploy:
+    if: vars.ENABLE_GITHUB_PAGES == 'true'
     needs: build
     runs-on: ubuntu-latest
     environment:

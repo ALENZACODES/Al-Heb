@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
@@ -12,7 +13,7 @@ const deck = readJ("data/vocab/deck-order.json");
 
 // ---------- data ----------
 test("drills.json is current with its sources (src/typing/build.mjs --check) and has the documented shape", () => {
-  const r = spawnSync("node", ["src/typing/build.mjs", "--check"], { cwd: new URL("..", import.meta.url).pathname, encoding: "utf8" });
+  const r = spawnSync("node", ["src/typing/build.mjs", "--check"], { cwd: fileURLToPath(new URL("..", import.meta.url)), encoding: "utf8" });
   assert.equal(r.status, 0, r.stderr);
   assert.equal(drills.schema, "alef-typing-drills/1");
   assert.ok(drills.words.length >= 150 && drills.words.length <= 200); assert.ok(drills.lines.length >= 20);

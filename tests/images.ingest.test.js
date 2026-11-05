@@ -52,9 +52,9 @@ test('csv: quoted commas, doubled quotes and newlines round-trip', () => {
 });
 test('the real manifest parses and every stem is safe and unique', async () => {
   const { loadManifest } = await import('../tools/images/ingest_lib.mjs');
-  const rows = loadManifest(new URL('../data/images/manifest.csv', import.meta.url).pathname);
-  assert.equal(rows.length, 797);
-  assert.equal(new Set(rows.map((r) => r.stem)).size, 797);
+  const rows = loadManifest(fileURLToPath(new URL('../data/images/manifest.csv', import.meta.url)));
+  assert.equal(rows.length, 1797);
+  assert.equal(new Set(rows.map((r) => r.stem)).size, rows.length);
 });
 test('classifyName: exact, case, plain duplicate suffix; generator default names are never matched', () => {
   const stems = new Set(['L05_dalet_quirky', 'L01_alef_print_mnemonic']);

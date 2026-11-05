@@ -82,9 +82,24 @@ export function replaceKeepingFocus(wrap, keep, ...nodes) {
   if (had && keep.focus) keep.focus({ preventScroll: true });
 }
 
-/** Learner-facing name of a lesson's level: belt colours get "belt"; the A1/A2/B1 codes get a plain word. */
+/** Learner-facing name of a lesson's level: belt colours get "belt"; israel-track codes map to course-stage names (not CEFR claims). */
 export function levelLabel(level) {
   const L = String(level || "");
-  const plain = { A1: "Beginner (A1)", A2: "Elementary (A2)", B1: "Intermediate (B1)", intermediate: "Intermediate" };
+  const plain = { A1: "Stage 1", A2: "Stage 2", B1: "Stage 3", intermediate: "Intermediate" };
   return plain[L] || (L ? L[0].toUpperCase() + L.slice(1) + " belt" : "");
+}
+/**
+ * After a control is disabled or removed, keep keyboard focus inside `root` (never leave it on body).
+ * Only moves focus when it was already lost. `sel` is a querySelector string; `fallback` is an element.
+ */
+export function refocusIfLost(root, sel, fallback) {
+  try {
+    const doc = globalThis.document;
+    const a = doc?.activeElement;
+    const lost = !a || a === doc.body || (root && !root.contains(a)) || a.disabled;
+    if (!lost) return false;
+    const t = (sel && root?.querySelector?.(sel)) || fallback;
+    if (t?.focus) { t.focus({ preventScroll: true }); return true; }
+  } catch { /* ignore */ }
+  return false;
 }

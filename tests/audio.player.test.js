@@ -202,3 +202,14 @@ test('failed clip file with only a non-Hebrew browser voice: no "browser voice" 
   FakeAudio.failUrls.add('/app/audio/m/israeli/letter/bet.mp3');
   assert.equal((await ok.audio.play('letter', 'bet')).source, 'tts-fallback');
 });
+
+test('TTS fails closed on Latin spellings of the divine name', async () => {
+  const { audio, speech } = make(
+    [e('m', 'israeli', 'word', 'xname', 'missing', { text: 'Yahweh' })],
+    { voice: 'm', congregation: 'israeli' },
+  );
+  const r = await audio.play('word', 'xname', { text: 'Yahweh' });
+  assert.equal(r.source, 'none');
+  assert.equal(r.reason, 'unresolved-liturgical-name');
+  assert.equal(speech.spoken.length, 0);
+});

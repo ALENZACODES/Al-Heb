@@ -5,7 +5,7 @@
 export const TRACK_LABEL = { read: 'Reading and prayer track', israel: 'Israel and everyday Hebrew track' };
 const LEVEL_ORDER = ['white', 'yellow', 'orange', 'green', 'blue', 'purple', 'brown', 'red', 'grey', 'intermediate', 'A1', 'A2', 'B1'];
 const levelRank = (l) => { const i = LEVEL_ORDER.indexOf(l); return i < 0 ? LEVEL_ORDER.length : i; };
-const LABEL = { A1: 'A1', A2: 'A2', B1: 'B1', intermediate: 'Intermediate' };
+const LABEL = { A1: 'Stage 1', A2: 'Stage 2', B1: 'Stage 3', intermediate: 'Intermediate' };
 export const levelName = (l) => LABEL[l] || (l ? `${String(l)[0].toUpperCase()}${String(l).slice(1)} belt` : 'Other');
 
 /** The planning range of hours (low, high) is a PARAMETER: the repo does not source it. */

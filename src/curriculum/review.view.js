@@ -6,7 +6,7 @@
 import { streakVisible } from "../shell/comfort.js";
 import { hookLine, hookNode as hookParagraph } from "../letters/hookline.js";
 import { lessons, byId } from "./lessons.js";
-import { el, heText, heLabeled, tr } from "./dom.js";
+import { el, heText, heLabeled, tr, refocusIfLost } from "./dom.js";
 import { shapeLabel, wordLabel } from "../letters/shapetext.js";
 import { loadContent, vowelEnglish, vowelIpa } from "./content.js";
 import { loadJSON } from "./data.js";
@@ -224,7 +224,7 @@ export function mountReview(root, ctx, { lessonId } = {}) {
       let panel = null;
       if (n === 1) {
         const pc = parseCardId(id), err = pc && errorKindForCard(pc, content.confusables);
-        if (err) panel = await hintPanel(ctx, { kind: err.kind, detail: err.detail }, () => { if (alive) { render(); h1.focus?.({ preventScroll: true }); } });
+        if (err) panel = await hintPanel(ctx, { kind: err.kind, detail: err.detail }, () => { if (alive) { render(); refocusIfLost(wrap, "#view-title", h1); } });
       }
       if (!alive) return;
       if (panel) { body.replaceChildren(el("p", { class: "muted", role: "status" }, "That one will come back soon."), panel); h1.focus?.({ preventScroll: true }); return; }

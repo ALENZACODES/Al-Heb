@@ -93,8 +93,9 @@ test('privacy facts match the source: Dicta is opt-in and the only third-party U
   const web = read('src/photo/engines/web.js'); const idx = read('src/photo/engines/index.js'); const scan = read('src/photo/scan.view.js');
   assert.match(web, /sendsTextOffDevice: true/);
   assert.match(idx, /if \(online\) \{ parts\.vowelize = createNakdanVowelizer/);
-  assert.match(scan, /online: onlineBox\.checked/);
-  assert.match(scan, /id: 'photo-online'/);
+  assert.match(scan, /online: false/);
+  assert.doesNotMatch(scan, /id: 'photo-online'|onlineBox/);
+  assert.match(scan, /Adding vowels online is not available/);
   const src = []; const walk = (d) => { for (const n of fs.readdirSync(path.join(ROOT, d), { withFileTypes: true })) { const p = `${d}/${n.name}`; if (n.isDirectory()) walk(p); else if (n.name.endsWith('.js')) src.push(p); } };
   walk('src');
   // only photo/engines/index.js imports the web adapters (Dicta); the Vision/translate adapters are unused

@@ -4,18 +4,28 @@ import assert from "node:assert/strict";
 // Minimal fake DOM: enough for createElement/createTextNode/append/replaceChildren/remove/click/getAttribute.
 // This checks view logic, NOT real browser rendering.
 class Node_ {
-  constructor(tag) { this.tag = tag; this.children = []; this.attrs = {}; this.listeners = {}; this.parent = null; this.nodeType = 1; this.className = ""; }
-  setAttribute(k, v) { this.attrs[k] = v; }
+  constructor(tag) { this.tag = tag; this.children = []; this.attrs = {}; this.listeners = {}; this.parent = null; this.nodeType = 1; this.className = ""; this.disabled = false; }
+  setAttribute(k, v) { this.attrs[k] = v; if (k === "disabled") this.disabled = true; }
   getAttribute(k) { return this.attrs[k]; }
   addEventListener(t, f) { (this.listeners[t] ||= []).push(f); }
   append(...c) { for (const x of c) { this.children.push(x); if (x && x.parent !== undefined) x.parent = this; } }
   replaceChildren(...c) { this.children = []; this.append(...c.filter((x) => x != null)); }
   remove() { if (this.parent) this.parent.children = this.parent.children.filter((x) => x !== this); }
+  focus() { globalThis.document.activeElement = this; }
+  querySelector(sel) {
+    if (sel === "#view-title") return this.find((n) => n.attrs.id === "view-title")[0] || null;
+    if (sel.startsWith("#")) return this.find((n) => n.attrs.id === sel.slice(1))[0] || null;
+    return null;
+  }
+  contains(n) { if (n === this) return true; return this.find((x) => x === n).length > 0; }
   get text() { return this.children.map((c) => (c.nodeType === 3 ? c.data : c.text)).join(""); }
   find(pred, out = []) { if (pred(this)) out.push(this); for (const c of this.children) if (c.nodeType === 1) c.find(pred, out); return out; }
   async click() { for (const f of this.listeners.click || []) await f({}); }
 }
+const bodyEl = new Node_("body");
 globalThis.document = {
+  body: bodyEl,
+  activeElement: bodyEl,
   createElement: (t) => new Node_(t),
   createTextNode: (d) => ({ nodeType: 3, data: String(d), parent: undefined }),
 };
@@ -46,6 +56,7 @@ test("learn view: lists read lessons, locks unmet prerequisites, shows due count
   const mark = items[0].find((n) => n.tag === "button" && /Mark complete/.test(n.attrs["aria-label"] || ""))[0];
   await mark.click(); await waitFor(() => { const li = root.find((n) => n.tag === "li" && n.attrs["data-lesson"]); return store.m["curriculum.progress"]?.completed?.r01 && /alef-lesson-available/.test(li[1].className) && /alef-lesson-done/.test(li[0].className); }, { message: "r01 completed and the list re-rendered" });
   assert.ok(store.m["curriculum.progress"].completed.r01);
+  assert.equal(globalThis.document.activeElement?.attrs?.id, "view-title", "Mark complete returns focus to the lesson list heading");
   const items2 = root.find((n) => n.tag === "li" && n.attrs["data-lesson"]);
   assert.match(items2[1].className, /alef-lesson-available/);
   assert.match(items2[0].className, /alef-lesson-done/);
@@ -55,6 +66,11 @@ test("learn view: lists read lessons, locks unmet prerequisites, shows due count
   // tab switch
   await root.find((n) => n.attrs.id === "alef-tab-israel")[0].click(); await waitFor(() => root.find((n) => n.tag === "li" && /^il/.test(n.attrs["data-lesson"] || "")).length >= 15, { message: "Israel tab lessons" });
   assert.ok(root.find((n) => n.tag === "li" && /^il/.test(n.attrs["data-lesson"] || "")).length >= 15);
+  const levels = root.find((n) => /\balef-level\b/.test(n.className || ""));
+  assert.ok(levels.length >= 3, "israel lessons show a level chip");
+  for (const n of levels) {
+    assert.match(n.text, /^Stage [123]$/, `level chip should be a course-stage name, got ${JSON.stringify(n.text)}`);
+  }
   unmount();
 });
 

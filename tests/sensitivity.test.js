@@ -7,7 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { audit, summarize } from '../tools/sensitivity/audit.mjs';
 import {
-  classifyNameWord, findName, speechText, displayHebrew, displayTranslit, englishGod, isNameVocabItem, versionLabel,
+  classifyNameWord, findName, speechText, speechSafeText, displayHebrew, displayTranslit, englishGod, isNameVocabItem, versionLabel,
   SPOKEN_NAME, NAME_ABBREV, SETTING_SUGGESTION,
 } from '../src/shell/names.js';
 import { buildDailyCard } from '../src/speak/daily.js';
@@ -39,6 +39,15 @@ test('speechText replaces the bare name and prefixed forms (prefix kept as writt
   assert.equal(speechText(`a ${LA_NAME}`), `a ${LA_NAME.slice(0, 2)}${SPOKEN_NAME}`);
   assert.equal(speechText('no name here'), 'no name here');
   assert.equal(speechText(''), '');
+});
+
+test('speechSafeText: ordinary Hebrew is ok; Latin spellings of the Name fail closed', () => {
+  const ok = speechSafeText('שָׁלוֹם');
+  assert.equal(ok.ok, true); assert.equal(ok.text, 'שָׁלוֹם');
+  const bare = speechSafeText(NAME_PLAIN);
+  assert.equal(bare.ok, true); assert.equal(bare.text, SPOKEN_NAME);
+  const latin = speechSafeText('say Yahweh here');
+  assert.equal(latin.ok, false); assert.equal(latin.reason, 'unresolved-liturgical-name');
 });
 
 test('displayHebrew: source by default, abbreviation on request, prefixed untouched', () => {

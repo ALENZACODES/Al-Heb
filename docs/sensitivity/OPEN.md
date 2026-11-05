@@ -1,3 +1,5 @@
+Playback: browser speech refuses Latin spellings of the Name and any leftover written four-letter form after substitution (`speechSafeText` in `src/shell/names.js`, used by `src/audio/player.js`). Recording targets for prefixed forms remain open below.
+
 # Open items awaiting clergy (divine-name forms)
 
 Bare occurrences of the four-letter name in audio and recording targets now go through `speechText()` (`tools/audio/build_manifest.mjs`): the 54 lesson-word clip targets (r15-w2, r34-w1, i-07-w4/w5/w8/w9, i-26-w6, i-33-w2, i-34-w9, six voice/tradition combos each) carry the Adonai substitute, and the recording scripts are rebuilt from them. Check: no manifest target is the bare name.

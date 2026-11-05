@@ -1,13 +1,13 @@
 // Daily Speak Session builder. Pure: no DOM, no clock, no store, no fetch.
 // The caller passes items it already has (speak sets, or the same shape). This module writes no Hebrew.
 //
-// Progressive reveal: the first session is one Speak turn from the table track. Street, then sanctuary,
-// open only after the learner has finished earlier turns. Spark, quests, and the boss phrase are flags
-// for later screens; they stay off until their own turn counts, and this module does not roll a reward,
-// write a quest, or pick a boss line. Gates read a completed-turn count. A missed day leaves that count
-// where it is.
+// Depth opens slowly. Tier 0 is Hear, Say, Done: one table line. Later flags appear only after the
+// practice counts and the distinct days in `computeDepth(stats)`, and at most one tier per day.
+// A stored tier is a floor. A missed day leaves the counts where they are.
+// Spark, quests, the boss phrase, scenes, and the arena are flags only. This module does not roll a
+// reward, write a quest, or pick a boss line.
 //
-// A seed makes the choice repeatable. The same seed, items, and turn count rebuild the same session.
+// A seed makes the choice repeatable. The same seed, items, and tier rebuild the same session.
 // An audio id on an item is a catalog key. This module does not count clips or pictures and does not
 // score pronunciation. With no id, the item carries the shared missing-audio line.
 
@@ -15,8 +15,10 @@ import { normalizeHe } from './model.js';
 import { STATUS_LABELS } from '../shell/audio-labels.js';
 
 export const NO_AUDIO = STATUS_LABELS.missing;
-export const SESSION_NOTE = 'Say the line, then mark how it went.';
+export const SESSION_NOTE = 'Hear it, say it, then done.';
 export const EMPTY_NOTE = 'Nothing to say yet.';
+/** Marks that count as spoken practice. "Heard only" stays a turn, not spoken. */
+export const SPOKEN_MARKS = Object.freeze(['Said it', 'With help']);
 
 export const TRACKS = Object.freeze([
   Object.freeze({ id: 'table', label: 'Table', blurb: 'Family, food, and Shabbat' }),
@@ -30,69 +32,150 @@ const STREET_THEMES = new Set(['places-travel', 'talking-asking']);
 const SOURCE_TRACKS = new Set(['israel', 'read', 'both']);
 const LONE_NAME = '\u05D9\u05D4\u05D5\u05D4';
 
-// Preview ladder. minTurns is how many Speak turns are already finished.
-// One line, then the next track, and the session stops at one line per open track.
-// Feature flags come after every track is open. Reward odds are not decided here.
-const TABLE_ONLY = Object.freeze(['table']);
-const TABLE_STREET = Object.freeze(['table', 'street']);
-const ALL_TRACKS = Object.freeze([...TRACK_IDS]);
+// Preview ladder. `turns` counts finished Speak turns. `spoken` counts "Said it" and "With help".
+// `days` is distinct days the learner showed up. Each step also waits for every earlier step.
+// Reward odds are not decided here. Locked flags are omitted, not stored as false.
+const CORE_UI = Object.freeze(['hear', 'say', 'done']);
+const EXTRA_UI = Object.freeze(['rhythm', 'compare', 'spark', 'quests', 'boss', 'scenes', 'arena']);
 
 export const DEPTH_LADDER = Object.freeze([
-  Object.freeze({ tier: 0, level: 'start', minTurns: 0, tracks: TABLE_ONLY, sessionSize: 1, spark: false, quests: false, bossPhrase: false }),
-  Object.freeze({ tier: 1, level: 'table', minTurns: 1, tracks: TABLE_ONLY, sessionSize: 1, spark: false, quests: false, bossPhrase: false }),
-  Object.freeze({ tier: 2, level: 'street', minTurns: 3, tracks: TABLE_STREET, sessionSize: 2, spark: false, quests: false, bossPhrase: false }),
-  Object.freeze({ tier: 3, level: 'sanctuary', minTurns: 6, tracks: ALL_TRACKS, sessionSize: 3, spark: false, quests: false, bossPhrase: false }),
-  Object.freeze({ tier: 4, level: 'spark', minTurns: 9, tracks: ALL_TRACKS, sessionSize: 3, spark: true, quests: false, bossPhrase: false }),
-  Object.freeze({ tier: 5, level: 'quests', minTurns: 12, tracks: ALL_TRACKS, sessionSize: 3, spark: true, quests: true, bossPhrase: false }),
-  Object.freeze({ tier: 6, level: 'boss', minTurns: 15, tracks: ALL_TRACKS, sessionSize: 3, spark: true, quests: true, bossPhrase: true }),
+  Object.freeze({ tier: 0, turns: 0, spoken: 0, days: 0, add: Object.freeze([]) }),
+  Object.freeze({ tier: 1, turns: 3, spoken: 0, days: 2, add: Object.freeze(['rhythm']) }),
+  Object.freeze({ tier: 2, turns: 9, spoken: 0, days: 3, add: Object.freeze(['secondTrack', 'compare']) }),
+  Object.freeze({ tier: 3, turns: 0, spoken: 18, days: 5, add: Object.freeze(['spark']) }),
+  Object.freeze({ tier: 4, turns: 0, spoken: 27, days: 7, add: Object.freeze(['quests', 'boss']) }),
+  Object.freeze({ tier: 5, turns: 0, spoken: 40, days: 10, add: Object.freeze(['thirdTrack']) }),
+  Object.freeze({ tier: 6, turns: 0, spoken: 80, days: 21, add: Object.freeze(['scenes', 'arena']) }),
 ]);
 
+/** Sanctuary is the third track's content, and it waits past the tier-5 counts. */
+export const SANCTUARY_GATE = Object.freeze({ spoken: 60, days: 14, needs: Object.freeze(['table', 'street']) });
+
 function assertLadder(steps) {
-  if (steps[0]?.tier !== 0 || steps[0]?.level !== 'start' || steps[0]?.minTurns !== 0) throw new Error('the first Speak session must be tier 0');
-  let prevTurns = -1;
-  let prevSize = 0;
-  let spark = false;
-  let quests = false;
-  let boss = false;
+  if (steps[0]?.tier !== 0 || steps.length !== 7) throw new Error('the first Speak session must be tier 0');
+  let prevDays = 0;
+  let prevNeed = 0;
+  const seen = new Set(CORE_UI);
   for (const s of steps) {
-    if (!(s.minTurns > prevTurns)) throw new Error('turn gates must move forward');
-    if (s.sessionSize !== s.tracks.length || s.sessionSize > 3 || s.sessionSize < prevSize) throw new Error('a session grows only by opening the next track, and stops at one line per track');
-    for (let i = 0; i < s.tracks.length; i++) if (s.tracks[i] !== TRACK_IDS[i]) throw new Error('tracks must open table, then street, then sanctuary');
-    if (spark && !s.spark) throw new Error('spark gate closed');
-    if (quests && !s.quests) throw new Error('quest gate closed');
-    if (boss && !s.bossPhrase) throw new Error('boss phrase gate closed');
-    if (s.quests && !s.spark) throw new Error('quests open before spark');
-    if (s.bossPhrase && !s.quests) throw new Error('boss phrase opens before quests');
-    if ((s.spark || s.quests || s.bossPhrase) && s.tracks.length < TRACK_IDS.length) throw new Error('reward gates open before every track');
-    spark = s.spark;
-    quests = s.quests;
-    boss = s.bossPhrase;
-    prevTurns = s.minTurns;
-    prevSize = s.sessionSize;
+    if (s.tier === 0) continue;
+    if (!(s.days > prevDays)) throw new Error('day gates must move forward');
+    const need = Math.max(s.turns, s.spoken);
+    if (need < prevNeed) throw new Error('practice gates went backwards');
+    if (!s.add.length) throw new Error('a later tier adds a flag');
+    for (const key of s.add) {
+      if (seen.has(key)) throw new Error('a flag opened twice');
+      seen.add(key);
+    }
+    prevDays = s.days;
+    prevNeed = Math.max(prevNeed, need);
   }
+  if (!(SANCTUARY_GATE.spoken > 40 && SANCTUARY_GATE.days > 10)) throw new Error('sanctuary waits past the third-track tier');
 }
 assertLadder(DEPTH_LADDER);
 
-/** Completed Speak turns. A small finite number counts. A clock reading, a date, or anything else stays on the first session. */
+/** A small finite count. A clock reading, a date, or anything else counts as zero. */
 export function completedTurnCount(value) {
   if (typeof value !== 'number' || !Number.isFinite(value) || value <= 0) return 0;
   if (value > 100000) return 0;
   return Math.floor(value);
 }
 
-/** Where the learner is on the ladder. Views can stay on tier 0 and read the richer fields later. */
-export function depthFor(completedTurns) {
-  const n = completedTurnCount(completedTurns);
-  let step = DEPTH_LADDER[0];
-  for (const s of DEPTH_LADDER) if (n >= s.minTurns) step = s;
-  return {
-    depthTier: step.tier,
-    unlockLevel: step.level,
-    minTurns: step.minTurns,
-    tracks: step.tracks.slice(),
-    sessionSize: step.sessionSize,
-    features: { spark: step.spark, quests: step.quests, bossPhrase: step.bossPhrase },
-  };
+function dayKey(value) {
+  return typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value) ? value : null;
+}
+
+function countDays(value) {
+  if (Array.isArray(value)) {
+    const keys = new Set();
+    for (const v of value) { const k = dayKey(v); if (k) keys.add(k); }
+    return keys.size;
+  }
+  return completedTurnCount(value);
+}
+
+function practiceCounts(stats) {
+  const spoken = completedTurnCount(stats.spoken);
+  let turns = completedTurnCount(stats.turns);
+  if (spoken > turns) turns = spoken;
+  return { turns, spoken, days: countDays(stats.days) };
+}
+
+function earnedTier(counts) {
+  let tier = 0;
+  for (const step of DEPTH_LADDER) {
+    if (step.tier === 0) continue;
+    if (counts.turns < step.turns || counts.spoken < step.spoken || counts.days < step.days) break;
+    tier = step.tier;
+  }
+  return tier;
+}
+
+function storedTierOf(stats) {
+  const raw = stats.tier ?? stats.storedTier;
+  if (typeof raw !== 'number' || !Number.isFinite(raw) || raw <= 0) return 0;
+  return Math.min(DEPTH_LADDER.length - 1, Math.floor(raw));
+}
+
+function trackCount(stats, id) {
+  const bag = stats.byTrack;
+  if (!bag || typeof bag !== 'object') return 0;
+  return completedTurnCount(bag[id]);
+}
+
+function featuresFor(tier, sanctuary) {
+  const features = { hear: true, say: true, done: true };
+  for (const step of DEPTH_LADDER) {
+    if (step.tier > tier) break;
+    for (const key of step.add) features[key] = true;
+  }
+  if (sanctuary) features.sanctuary = true;
+  return features;
+}
+
+function tracksFor(features) {
+  const tracks = ['table'];
+  if (features.secondTrack) tracks.push('street');
+  if (features.sanctuary) tracks.push('sanctuary');
+  return tracks;
+}
+
+/** Controls the view may render. Locked controls are omitted. */
+export function uiFlags(features) {
+  const ui = { hear: true, say: true, done: true };
+  for (const key of EXTRA_UI) if (features && features[key] === true) ui[key] = true;
+  return ui;
+}
+
+/**
+ * @param {{turns?: number, spoken?: number, days?: number|string[], byTrack?: {table?: number, street?: number}, tier?: number, storedTier?: number, sanctuary?: boolean, lastRevealDay?: string|null, today?: string}} [stats]
+ * `today` is a YYYY-MM-DD key from the caller. This function does not read a clock.
+ * @returns {{tier: number, features: Record<string, true>, tracks: string[], lastRevealDay: string|null}}
+ */
+export function computeDepth(stats) {
+  const s = stats && typeof stats === 'object' ? stats : {};
+  const counts = practiceCounts(s);
+  const earned = earnedTier(counts);
+  const floor = storedTierOf(s);
+  const today = dayKey(s.today);
+  const last = dayKey(s.lastRevealDay);
+  let tier = floor;
+  let revealed = false;
+  if (earned > floor && today && last !== today) {
+    tier = floor + 1;
+    revealed = true;
+  }
+  const sanctuary = tier >= 5 && (s.sanctuary === true || (
+    counts.spoken >= SANCTUARY_GATE.spoken && counts.days >= SANCTUARY_GATE.days
+    && trackCount(s, 'table') >= 1 && trackCount(s, 'street') >= 1
+  ));
+  const features = featuresFor(tier, sanctuary);
+  return { tier, features, tracks: tracksFor(features), lastRevealDay: revealed ? today : last };
+}
+
+/** True for "Said it" and "With help" (and their short stored forms). */
+export function isSpokenMark(outcome) {
+  const s = String(outcome ?? '').trim().toLowerCase();
+  return s === 'said it' || s === 'with help' || s === 'said' || s === 'with-help';
 }
 
 /**
@@ -232,31 +315,30 @@ function speakOrder(list, recentIds) {
 
 /**
  * Build one session.
- * @param {{seed?: string|number, items?: any[], completedTurns?: number, recentIds?: string[]}} [input]
- * `completedTurns` is a count of finished Speak turns, not a date.
- * `recentIds` are lines already said; a new line is chosen first when one exists.
- * At tier 0 the result is a single table line. Later tiers mix the tracks that are open.
+ * @param {{seed?: string|number, items?: any[], recentIds?: string[], stats?: object}} [input]
+ * `stats` is the `computeDepth` input. `recentIds` are lines already said; a new line is chosen first when one exists.
+ * Tier 0 is one table line. Later tiers mix the tracks that are open.
  */
 export function buildSession(input) {
   const o = input && typeof input === 'object' ? input : {};
-  const turns = completedTurnCount(o.completedTurns);
-  const depth = depthFor(turns);
+  const depth = computeDepth(o.stats);
   const key = o.seed == null ? '' : String(o.seed);
   const open = new Set(depth.tracks);
   const recentIds = Array.isArray(o.recentIds) ? o.recentIds : [];
   const rows = dedupe(tagged(o.items).filter((it) => open.has(it.track)));
-  const rng = mulberry32(hashSeed(`${key}|${turns}`));
+  const rng = mulberry32(hashSeed(`${key}|${depth.tier}`));
   const buckets = new Map(depth.tracks.map((t) => [t, []]));
   for (const it of rows) buckets.get(it.track).push(it);
   for (const t of depth.tracks) buckets.set(t, speakOrder(shuffle(buckets.get(t), rng), recentIds));
   const order = rotate(depth.tracks, depth.tracks.length > 1 ? Math.floor(rng() * depth.tracks.length) : 0);
+  const want = depth.tracks.length;
   const picked = [];
   const mix = {};
   for (const t of depth.tracks) mix[t] = 0;
-  while (picked.length < depth.sessionSize) {
+  while (picked.length < want) {
     let progressed = false;
     for (const t of order) {
-      if (picked.length >= depth.sessionSize) break;
+      if (picked.length >= want) break;
       const next = buckets.get(t).shift();
       if (!next) continue;
       picked.push(next);
@@ -269,14 +351,15 @@ export function buildSession(input) {
     kind: 'speak-dss',
     preview: true,
     seed: key,
-    depthTier: depth.depthTier,
-    unlockLevel: depth.unlockLevel,
+    tier: depth.tier,
     tracks: depth.tracks,
-    sessionSize: depth.sessionSize,
+    sessionSize: want,
     turnCount: picked.length,
     items: picked,
     mix,
     features: depth.features,
+    ui: uiFlags(depth.features),
+    lastRevealDay: depth.lastRevealDay,
     note: picked.length ? SESSION_NOTE : EMPTY_NOTE,
   };
 }

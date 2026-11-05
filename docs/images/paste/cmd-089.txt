@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - COMMAND 89: Synagogue objects pack
+ALEF IMAGE RUN - COMMAND 89: Synagogue objects pack (partial: rows 3-10 remaining)
 
 No attachments are needed otherwise; everything is described in words below.
 
@@ -14,32 +14,28 @@ BACKGROUND SCENES (when a prompt mentions BG_...): BG_jerusalem = a blank Jerusa
 
 REFERENCES: where a prompt says "attached" or "the same object", it means the image already generated in this chat for the same set (usually item 1, the mnemonic), or the file attached above. Keep the object identical.
 
-TASK: generate 10 separate images in STYLE GUIDE v1, in this order. Each item gives the exact filename (label the image with it in your reply, never inside the image), the aspect hint and the full prompt.
+TASK: generate 8 separate images in STYLE GUIDE v1, in this order. Each item gives the exact filename (label the image with it in your reply, never inside the image), the aspect hint and the full prompt.
 
-1. FILENAME: VOC_synagogue_01.png | SIZE: use 1:1 (target 1024x1024)
-   PROMPT: One centred image: a siddur (closed, blank cover). No people unless the item is an action. No text, letters or numerals anywhere in the image.
-2. FILENAME: VOC_synagogue_02.png | SIZE: use 1:1 (target 1024x1024)
-   PROMPT: One centred image: a Torah scroll. No people unless the item is an action. No text, letters or numerals anywhere in the image.
-3. FILENAME: VOC_synagogue_03.png | SIZE: use 1:1 (target 1024x1024)
+1. FILENAME: VOC_synagogue_03.png | SIZE: use 1:1 (target 1024x1024)
    PROMPT: One centred image: a tallit folded. No people unless the item is an action. No text, letters or numerals anywhere in the image.
-4. FILENAME: VOC_synagogue_04.png | SIZE: use 1:1 (target 1024x1024)
+2. FILENAME: VOC_synagogue_04.png | SIZE: use 1:1 (target 1024x1024)
    PROMPT: One centred image: a kippah. No people unless the item is an action. No text, letters or numerals anywhere in the image.
-5. FILENAME: VOC_synagogue_05.png | SIZE: use 1:1 (target 1024x1024)
+3. FILENAME: VOC_synagogue_05.png | SIZE: use 1:1 (target 1024x1024)
    PROMPT: One centred image: a Torah pointer (yad). No people unless the item is an action. No text, letters or numerals anywhere in the image.
-6. FILENAME: VOC_synagogue_06.png | SIZE: use 1:1 (target 1024x1024)
+4. FILENAME: VOC_synagogue_06.png | SIZE: use 1:1 (target 1024x1024)
    PROMPT: One centred image: the ark with its curtain. No people unless the item is an action. No text, letters or numerals anywhere in the image.
-7. FILENAME: VOC_synagogue_07.png | SIZE: use 1:1 (target 1024x1024)
+5. FILENAME: VOC_synagogue_07.png | SIZE: use 1:1 (target 1024x1024)
    PROMPT: One centred image: a shofar. No people unless the item is an action. No text, letters or numerals anywhere in the image.
-8. FILENAME: VOC_synagogue_08.png | SIZE: use 1:1 (target 1024x1024)
+6. FILENAME: VOC_synagogue_08.png | SIZE: use 1:1 (target 1024x1024)
    PROMPT: One centred image: a bimah. No people unless the item is an action. No text, letters or numerals anywhere in the image.
-9. FILENAME: VOC_synagogue_09.png | SIZE: use 1:1 (target 1024x1024)
+7. FILENAME: VOC_synagogue_09.png | SIZE: use 1:1 (target 1024x1024)
    PROMPT: One centred image: a mezuzah. No people unless the item is an action. No text, letters or numerals anywhere in the image.
-10. FILENAME: VOC_synagogue_10.png | SIZE: use 1:1 (target 1024x1024)
+8. FILENAME: VOC_synagogue_10.png | SIZE: use 1:1 (target 1024x1024)
    PROMPT: One centred image: a pair of tefillin. No people unless the item is an action. No text, letters or numerals anywhere in the image.
 
 RULES (again):
 - NEVER put any text in any image: no Hebrew, no nikkud, no Latin letters, no numerals, no logos. Signs, screens, pages, books, labels and scrolls stay completely blank.
 - Your image tool may only offer 1:1, 3:2 and 2:3: follow the size hint on each item.
-- Generate exactly 10 separate images, one per numbered item, each as its own image (never a collage or grid). Do not skip or merge items.
+- Generate exactly 8 separate images, one per numbered item, each as its own image (never a collage or grid). Do not skip or merge items.
 
 When all images are done, reply ONLY with the numbered list of filenames (item number, exact filename) and the count, then STOP and wait for me to say "next". Do not start any other command.

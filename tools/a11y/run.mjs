@@ -77,7 +77,7 @@ for (const [device, theme] of CONFIGS) {
   note('Enter on nav link navigates and focus moves to the page heading', await page.evaluate(() => document.activeElement?.id === 'view-title' && location.hash === '#/learn'));
   // open a lesson with the keyboard (Start button on the first lesson)
   await page.focus('li[data-lesson="r01"] button'); await page.keyboard.press('Enter'); await page.waitForSelector('main >> text=Words'); await page.waitForFunction(() => document.activeElement?.id === 'view-title', null, { timeout: 3000 }).catch(() => {});
-  note('Start button opens the lesson by keyboard', await page.evaluate(() => location.hash === '#/learn?lesson=r01' && document.activeElement?.id === 'view-title'));
+  { const st = await page.evaluate(() => ({ hash: location.hash, id: document.activeElement?.id || document.activeElement?.tagName })); note('Start button opens the lesson by keyboard', st.hash === '#/learn?lesson=r01' && st.id === 'view-title', JSON.stringify(st)); }
   await page.focus('button[aria-label="Listen to Shin"]'); await page.keyboard.press('Enter');
   await page.waitForTimeout(200);
   note('Listen is a real button operable with Enter (indicator updated)', !/checking/.test(await page.locator('#sound-status').innerText()));

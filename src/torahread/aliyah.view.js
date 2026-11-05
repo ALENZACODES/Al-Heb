@@ -1,6 +1,7 @@
 // @ts-check
 // "Aliyah rehearsal": what happens when you are called to the Torah, step by step, with the registry's blessings.
 import { el, heEl, playHook, hasDivineName } from './ui.js';
+import { uiEnglish } from '../shell/names.js';
 import { recordedLine } from './ladder.view.js';
 
 const CERT = {
@@ -33,9 +34,9 @@ export function renderAliyah(host, env) {
     lines.forEach((l, i) => {
       box.append(heEl('p', l, 'trd-he'));
       const tr = translit(l); if (tr) box.append(el('p', { class: 'trd-tr' }, tr));
-      if (en.length === lines.length && en[i]) box.append(el('p', { class: 'trd-en' }, en[i]));
+      if (en.length === lines.length && en[i]) box.append(el('p', { class: 'trd-en' }, uiEnglish(ctx, en[i])));
     });
-    if (en.length !== lines.length) box.append(el('p', { class: 'trd-en' }, rec.english));
+    if (en.length !== lines.length) box.append(el('p', { class: 'trd-en' }, uiEnglish(ctx, rec.english)));
     if (lines.some(hasDivineName)) box.append(el('p', { class: 'trd-muted' }, 'Say Adonai where the four-letter name is written.'));
     const status = el('p', { class: 'trd-status', role: 'status', 'aria-live': 'polite' });
     box.append(el('div', { class: 'trd-row' }, el('button', { type: 'button', class: 'trd-btn', onclick: () => playHook(ctx, status, 'prayer', rec.id, rec.he, rec.title) }, 'Hear it')),

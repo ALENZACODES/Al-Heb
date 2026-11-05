@@ -64,9 +64,10 @@ async function answer(root, ex, right) {
     case "match": {
       for (const [i, p] of ex.pairs.entries()) {
         const group = sec.find((n) => n.attrs.role === "group" && n.attrs["aria-label"] === p.he)[0];
-        const opts = group.find((n) => n.tag === "button");
+        const sel = group.find((n) => n.tag === "select")[0];
         const want = right ? p.en : ex.pairs[(i + 1) % ex.pairs.length].en;
-        await opts.find((b) => b.text === want).click();
+        sel.value = want;
+        for (const f of sel.listeners.change || []) await f({ currentTarget: sel, target: sel });
       }
       await buttons.find((b) => b.text === "Check").click(); break;
     }
@@ -133,12 +134,58 @@ test("every one of the ten exercise types renders and grades through the view (r
       const pre = Object.fromEntries(seq.slice(0, i).map((e) => [e.id, true]));
       const store = memStore({ "intermediate.v1": { lessons: { [lesson]: { results: pre, done: null } } } });
       const { root } = await mountLessonAt(store, lesson); await start(root);
-      assert.match(root.find((n) => n.attrs.id === "alef-int-ex")[0].text, new RegExp(`${V.TYPE_LABEL[type]}: ${i + 1} of ${l.exercises.length}`));
+      assert.match(root.find((n) => n.attrs.id === "alef-int-ex")[0].text, new RegExp(`${V.TYPE_LABEL[type]}: question ${i + 1} of ${l.exercises.length}`));
       assert.ok(byId_(root, "alef-int-next").hidden, "Next hidden until answered");
       await answer(root, ex, right);
       assert.equal(store.m["intermediate.v1"].lessons[lesson].results[ex.id], right, `${type} ${right}`);
     }
   }
+});
+
+test("the primary actions (Show answer, ratings, Check, Undo, Next) live in the sticky action bar", async () => {
+  const inBar = (root, pred) => { const bar = root.find((n) => /\balef-actionbar\b/.test(n.className))[0]; assert.ok(bar, "action bar present"); return bar.find((n) => n.tag === "button" && pred(n)); };
+  for (const [type, { lesson, ex }] of Object.entries(FIRST_OF)) {
+    const l = byId[lesson], seq = sequenceExercises(l.exercises), i = seq.indexOf(ex);
+    const store = memStore({ "intermediate.v1": { lessons: { [lesson]: { results: Object.fromEntries(seq.slice(0, i).map((e) => [e.id, true])), done: null } } } });
+    const { root } = await mountLessonAt(store, lesson); await start(root);
+    assert.ok(inBar(root, (b) => b.attrs.id === "alef-int-next").length === 1, `${type}: Next in the bar`);
+    assert.ok(inBar(root, (b) => b.attrs["data-act"] === "skip").length === 1, `${type}: Skip in the bar`);
+    if (["order", "match"].includes(type)) assert.ok(inBar(root, (b) => b.text === "Check").length === 1, `${type}: Check in the bar`);
+    if (["recall", "respond", "gender", "dialogue", "fade"].includes(type)) {
+      assert.ok(inBar(root, (b) => b.text === "Show answer").length === 1, `${type}: Show answer in the bar`);
+      assert.equal(inBar(root, (b) => b.attrs["data-rating"]).length, 4, `${type}: four ratings in the bar`);
+    }
+    await answer(root, ex, true);
+  }
+});
+
+test("intermediate: options re-scroll on keyboard focus, and after an answer one scroll call brings the explanation (last line above the bar) into view", async () => {
+  const { root } = await mountLessonAt(memStore(), FIRST_OF.produce.lesson); await start(root);
+  let sec = section(root), ex = shownEx(root, byId[FIRST_OF.produce.lesson]);
+  for (let g = 0; ex.type !== "produce" && g < 30; g++) { await sec.find((n) => n.attrs["data-act"] === "skip")[0].click(); sec = section(root); ex = shownEx(root, byId[FIRST_OF.produce.lesson]); }
+  assert.equal(ex.type, "produce");
+  const opts = sec.find((n) => n.tag === "button" && /\balef-int-opt\b/.test(n.className));
+  assert.ok(opts.length >= 2 && opts.every((b) => (b.listeners.focus || []).length === 1), "every option re-scrolls itself on keyboard focus");
+  // focus handler: scrolls only for keyboard focus (:focus-visible), one tick later
+  const calls = []; const fake = { matches: (q) => q === ":focus-visible", scrollIntoView: (o) => calls.push(o) };
+  opts[0].listeners.focus[0]({ currentTarget: fake }); assert.equal(calls.length, 0, "deferred a tick"); await tick(10);
+  assert.deepEqual(calls, [{ block: "nearest" }]);
+  const mouse = { matches: () => false, scrollIntoView: () => calls.push("mouse") }; opts[0].listeners.focus[0]({ currentTarget: mouse }); await tick(10);
+  assert.ok(!calls.includes("mouse"), "pointer focus does not scroll");
+  const scrolled = []; const orig = Node_.prototype.scrollIntoView; Node_.prototype.scrollIntoView = function (o) { scrolled.push({ cls: this.className, block: o?.block }); };
+  try { await opts.find((b) => b.text === ex.options[ex.answer]).click(); await waitFor(() => !byId_(root, "alef-int-next").hidden); } finally { Node_.prototype.scrollIntoView = orig; }
+  assert.equal(scrolled.length, 1, "one scroll call (a second would cancel the smooth scroll of the first)");
+  assert.match(scrolled[0].cls, /alef-why/); assert.equal(scrolled[0].block, "nearest");
+});
+
+test("learn.css pins the action bar: sticky, 44px buttons, above the tab bar, safe-area inset", async () => {
+  const { readFileSync } = await import("node:fs");
+  const css = readFileSync(new URL("../assets/css/learn.css", import.meta.url), "utf8");
+  assert.match(css, /\.alef-actionbar\s*\{[^}]*position:\s*sticky/);
+  assert.match(css, /\.alef-actionbar \.btn\s*\{[^}]*min-block-size:\s*44px/);
+  assert.match(css, /@media \(max-width: 719\.98px\)\s*\{\s*\.alef-actionbar\s*\{[^}]*3\.6rem[^}]*safe-area-inset-bottom/);
+  assert.match(css, /\.alef-ex-card \.alef-why[^{]*\.alef-int-opt[^{]*\{[^}]*scroll-margin-block-end/, "the explanation line and the options keep clear of the bar when scrolled into view");
+  assert.match(css, /max-height:\s*480px[^{]*\{\s*\.alef-actionbar\s*\{[^}]*inset-block-end:\s*env\(safe-area-inset-bottom\)/, "short viewport (soft keyboard): the bar drops to the bottom edge");
 });
 
 test("a whole lesson: wrong answers lapse word cards in the SRS, store keeps results, lesson is completed; fade links to the fade screen", async () => {
@@ -170,7 +217,7 @@ test("a perfect run creates no word-card lapses and resumes where the learner st
   for (const ex of seq.slice(0, 3)) await answer(root, ex, true);
   off();
   ({ root } = await mountLessonAt(store, lesson)); assert.match(root.text, /Continue/); await start(root);
-  assert.match(root.find((n) => n.attrs.id === "alef-int-ex")[0].text, new RegExp(`: 4 of ${l.exercises.length}`));
+  assert.match(root.find((n) => n.attrs.id === "alef-int-ex")[0].text, new RegExp(`: question 4 of ${l.exercises.length}`));
   for (const ex of seq.slice(3)) await answer(root, ex, true);
   assert.match(root.text, new RegExp(`${l.exercises.length} of ${l.exercises.length} marked as known`));
   const cards = store.m["srs.cards"] || {};
@@ -219,4 +266,20 @@ test("the G-d setting reaches lesson English in the player", async () => {
   const env = (c) => ({ ctx: c, lesson: l, note: new Node_("p"), corpus: new Map(), seed: 1 });
   const on = rawText(V.EXERCISE_RENDERERS[ex.type](env(mk(true)), ex, () => {})), off = rawText(V.EXERCISE_RENDERERS[ex.type](env(mk(false)), ex, () => {}));
   assert.match(on, /G-d/); assert.doesNotMatch(on, /\bGod\b/); assert.match(off, /\bGod\b/); assert.doesNotMatch(off, /G-d/);
+});
+
+test("counter stays at the lesson size when a miss is requeued; belt wording is plain on a fresh profile", async () => {
+  const l = byId["I-01"];
+  const { root } = await mountLessonAt(memStore(), "I-01");
+  assert.match(root.text, /Finish the beginner assessment \(lesson r51\) first/);
+  assert.doesNotMatch(root.text, /belt/i);
+  await byId_(root, "alef-int-start").click();
+  await waitFor(() => section(root));
+  const ex = shownEx(root, l);
+  await answer(root, ex, false);
+  const t = () => root.find((n) => n.attrs.id === "alef-int-ex")[0].text;
+  await byId_(root, "alef-int-next").click();
+  await waitFor(() => /plus 1 to retry/.test(t()));
+  assert.match(t(), new RegExp(`of ${l.exercises.length}, plus 1 to retry`));
+  assert.doesNotMatch(t(), new RegExp(`of ${l.exercises.length + 1}`));
 });

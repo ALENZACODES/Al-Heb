@@ -7,8 +7,8 @@
   "kaf|pe": "Look inside the top left: pe has a curl (a tongue), kaf is empty.",
   "gimel|nun": "Gimel has a foot kicked out at the bottom left. Nun's base is flat and stops at the stem.",
   "dalet|resh": "Dalet has a sharp square corner at the top right and its bar sticks out. Resh has a smooth rounded shoulder.",
-  "dalet|kaf-final": "Dalet stays on the line with a square corner. Final khaf has a rounded shoulder and drops a long tail below the line.",
-  "kaf-final|resh": "Both have a rounded shoulder, but final khaf drops a long tail below the line. Resh stays on the line.",
+  "dalet|kaf-final": "Dalet stays on the line with a square corner. Final kaf has a rounded shoulder and drops a long tail below the line.",
+  "kaf-final|resh": "Both have a rounded shoulder, but final kaf drops a long tail below the line. Resh stays on the line.",
   "vav|zayin": "Zayin has a bar across the top. Vav is a plain single stroke.",
   "nun-final|vav": "Final nun is much longer and drops below the line. Vav stays on the line.",
   "vav|yod": "Yod is tiny and floats at the top. Vav is a full-height stroke.",
@@ -20,7 +20,7 @@
   "chet|tav": "Tav has a foot kicked out at the bottom left. Chet's left leg is straight and sits flush with the base.",
   "mem-final|samekh": "Samekh is soft and round. Final mem is a hard box with square corners.",
   "ayin|tsadi": "Tsadi has a flat base and a Y-shaped fork; its second stroke comes from the top right. Ayin sweeps in one curve and its second stroke comes from the top left.",
-  "pe-final|tsadi-final": "Final tsadi forks like a Y on top. Final fe has a round top with a curl inside.",
+  "pe-final|tsadi-final": "Final tsadi forks like a Y on top. Final pe has a round top with a curl inside.",
   "kaf|qof": "Qof has a leg that drops below the line on the left. Kaf stays on the line.",
   "mem|mem-final": "Open mem has a gap at the bottom left. Final mem is closed all round."
  }

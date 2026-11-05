@@ -3,7 +3,6 @@
 // is used in a browser tab (not added to the Home Screen). This shows one dismissible banner, after the learner has come back on
 // a second day, telling them to add ALEF to the Home Screen and keep a backup file. Not shown when installed (standalone).
 // Own keys, plain localStorage, never throws. Loaded from index.html as a second module so src/app.js is untouched.
-import { detectPlatform } from "./install.js";
 const KEY = "alef.storage-notice.v1";
 const DAY = 86400000;
 
@@ -18,12 +17,19 @@ export function decide({ platform, rec, now }) {
   return { show: now - first >= DAY, rec: next };
 }
 
-function run() {
+async function run() {
   const g = globalThis, d = g.document;
   if (!d) return;
   let rec = null;
   try { rec = JSON.parse(g.localStorage.getItem(KEY) || "null"); } catch { /* storage blocked */ }
-  const out = decide({ platform: detectPlatform(g), rec, now: Date.now() });
+  const now = Date.now();
+  // The notice needs the platform check (install.js) only when it could show: not dismissed and a day or more since the first visit. Otherwise decide() would return show:false whatever the platform, so skip loading it.
+  const first = rec && typeof rec.first === "number" ? rec.first : now;
+  let platform = { ios: false, standalone: false };
+  if (!(rec && rec.dismissed === true) && now - first >= DAY) {
+    try { platform = (await import("./install.js")).detectPlatform(g); } catch { return; }
+  }
+  const out = decide({ platform, rec, now });
   try { g.localStorage.setItem(KEY, JSON.stringify(out.rec)); } catch { /* ignore */ }
   if (!out.show) return;
   const box = d.createElement("aside");
@@ -38,4 +44,4 @@ function run() {
   row.append(how, x); box.append(p, row);
   d.querySelector(".sound-bar")?.after(box);
 }
-if (typeof document !== "undefined") { try { run(); } catch { /* never break the app */ } }
+if (typeof document !== "undefined") { run().catch(() => { /* never break the app */ }); }

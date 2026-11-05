@@ -10,10 +10,11 @@
 // manifest entry to status "recorded". Consent files are copied to <work>/<donor>/consent/ and are NEVER copied into the repo (they hold a real name).
 // Same-text copies: some lesson-word ids (r04-w1, r04-w2, r05-w1, ...) have exactly the pointed text of another word with the same voice and
 // tradition. One recording fills them all: for every accepted clip, each other manifest entry (kind word, group lesson-word, same voice, tradition and
-// text, not already recorded unless --replace, not itself in this export) gets the same MP3 under its own path, a .meta.json with "copyOf", and
+// text (groups lesson-word, vocab-word, vocab-alias, vocab-extra: so a clip recorded under r01-w1 also fills the vocab id of the same text), not already recorded unless --replace, not itself in this export) gets the same MP3 under its own path, a .meta.json with "copyOf", and
 // status "recorded" plus a "copyOf" field in the manifest. Dry run lists them. --no-copies turns this off.
 // Needs ffmpeg + ffprobe on PATH (FFMPEG / FFPROBE override). It never touches an entry already marked "recorded" unless --replace is given.
 import fs from 'node:fs';
+const COPY_GROUPS = new Set(['lesson-word', 'vocab-word', 'vocab-alias', 'vocab-extra']);
 import os from 'node:os';
 import path from 'node:path';
 import zlib from 'node:zlib';
@@ -111,7 +112,7 @@ export async function ingest({ input, root = REPO_ROOT, work = path.join(os.home
     }
     if (hit && hit.e.status === 'recorded' && !replace) errors.push('manifest already has a human recording for this clip (use --replace to overwrite)');
     else if (hit && hit.e.status === 'recorded') warns.push('replaces an existing human recording');
-    else if (hit && hit.e.status === 'tts') warns.push('replaces a synthetic clip');
+    else if (hit && /^(tts|synthetic-)/.test(hit.e.status)) warns.push('replaces a synthetic clip');
     if (errors.length) { rej(...errors); continue; }
     res.accepted.push({ name: f.name, path: mp3Path, ...pc, duration: a.duration, peakDb: a.peakDb, rmsDb: a.rmsDb, warnings: warns, data: f.data, recordedAt: row?.recorded_at || '' });
     for (const w of warns) res.warnings.push(`${f.name}: ${w}`);
@@ -125,9 +126,9 @@ export async function ingest({ input, root = REPO_ROOT, work = path.join(os.home
     const taken = new Set([...res.accepted.map((c) => c.path), ...res.rejected.map((r) => r.name).map((n) => (parseClipPath(n) ? `audio/${parseClipPath(n).voice}/${parseClipPath(n).tradition}/${parseClipPath(n).kind}/${parseClipPath(n).id}.mp3` : ''))]);
     const all = shards.flatMap((s) => s.list);
     for (const c of res.accepted) {
-      const src = entry.get(c.path)?.e; if (!src || src.kind !== 'word' || src.group !== 'lesson-word' || !src.text) continue;
+      const src = entry.get(c.path)?.e; if (!src || src.kind !== 'word' || !COPY_GROUPS.has(src.group) || !src.text) continue;
       for (const e of all) {
-        if (e.path === c.path || taken.has(e.path) || e.kind !== 'word' || e.group !== 'lesson-word' || e.voice !== src.voice || e.tradition !== src.tradition || e.text !== src.text) continue;
+        if (e.path === c.path || taken.has(e.path) || e.kind !== 'word' || !COPY_GROUPS.has(e.group) || e.voice !== src.voice || e.tradition !== src.tradition || e.text !== src.text) continue;
         if (e.status === 'recorded' && !replace) continue;
         taken.add(e.path); res.copies.push({ path: e.path, copyOf: c.path });
       }
@@ -156,7 +157,7 @@ async function applyAll(res, { root, work, shards, entry, consent, byName, now }
     } catch (e) { res.rejected.push({ name: c.name, errors: ['post chain failed: ' + e.message] }); continue; }
     const dst = path.join(root, c.path); fs.mkdirSync(path.dirname(dst), { recursive: true }); fs.copyFileSync(out, dst);
     fs.writeFileSync(`${dst}.meta.json`, JSON.stringify({ status: 'recorded', source: 'human:record-kit', recordedAt: c.recordedAt || now(), ingestedAt: now(), donorRef: res.donor, aiCloneConsent: res.aiClone, consentVersion: consent.version, note: 'Human recording. Rights per the volunteer consent held outside the repo; check docs/voices/donor-rights-grant.md before release.' }, null, 1) + '\n');
-    const h = entry.get(c.path); if (h) { h.e.status = 'recorded'; h.e.source = 'human:record-kit'; h.s.changed = true; }
+    const h = entry.get(c.path); if (h) { h.e.status = 'recorded'; h.e.source = 'human:record-kit'; delete h.e.synth; h.s.changed = true; }
     done.push(c);
   }
   res.accepted = done;
@@ -166,7 +167,7 @@ async function applyAll(res, { root, work, shards, entry, consent, byName, now }
     fs.mkdirSync(path.dirname(dst), { recursive: true }); fs.copyFileSync(from, dst);
     const base = JSON.parse(fs.readFileSync(`${from}.meta.json`, 'utf8'));
     fs.writeFileSync(`${dst}.meta.json`, JSON.stringify({ ...base, copyOf: k.copyOf, note: 'Copy of another id with the same pointed text, same voice and tradition. ' + base.note }, null, 1) + '\n');
-    const h = entry.get(k.path); if (h) { h.e.status = 'recorded'; h.e.source = 'human:record-kit'; h.e.copyOf = k.copyOf; h.s.changed = true; }
+    const h = entry.get(k.path); if (h) { h.e.status = 'recorded'; h.e.source = 'human:record-kit'; delete h.e.synth; h.e.copyOf = k.copyOf; h.s.changed = true; }
   }
   for (const s of shards) if (s.changed) fs.writeFileSync(path.join(root, s.rel), JSON.stringify(s.list, null, 1) + '\n');
   res.stagedIn = dir;

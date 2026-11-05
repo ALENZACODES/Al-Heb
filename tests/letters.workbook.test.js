@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync, statSync } from 'node:fs';
-import { buildModel, buildHtml, PAPERS, SCRIPTS } from '../tools/letters/workbook.mjs';
+import { buildModel, buildHtml, teachingOrder, PAPERS, SCRIPTS } from '../tools/letters/workbook.mjs';
 
 const read = (p) => JSON.parse(readFileSync(new URL('../' + p, import.meta.url), 'utf8'));
 const letters = read('data/letters/letters.json');
@@ -9,22 +9,30 @@ const lessons = read('data/curriculum/lessons.json').lessons;
 const count = (html, re) => (html.match(re) || []).length;
 
 for (const script of Object.keys(SCRIPTS)) {
-  test(`${script} workbook model: 27 letters in alphabet order, 4 two-sound variant rows, 5 sofit rows`, () => {
+  test(`${script} workbook model: 27 letters in baby-step teaching order, 4 two-sound variant rows, 5 sofit rows`, () => {
     const m = buildModel(script);
     const rows = m.letterRows.filter((r) => r.kind === 'letter');
     assert.equal(rows.length, 27);
-    assert.deepEqual(rows.map((r) => r.letterId), letters.map((l) => l.id));
-    assert.deepEqual(m.letterRows.filter((r) => r.kind === 'variant').map((r) => r.label), ['Vet', 'Khaf', 'Fe', 'Sin']);
-    assert.deepEqual(rows.filter((r) => /sofit/.test(r.label)).map((r) => r.label), ['Kaf sofit', 'Mem sofit', 'Nun sofit', 'Pe sofit', 'Tsadi sofit']);
+    const order = rows.map((r) => r.letterId);
+    assert.deepEqual(order, teachingOrder(letters, lessons));
+    // baby-step order: Shin, Bet first, then r01..r10 letter order (data/curriculum/lessons.json)
+    assert.deepEqual(order.slice(0, 13), ['shin', 'bet', 'tav', 'lamed', 'mem-final', 'vav', 'yod', 'alef', 'he', 'resh', 'mem', 'kaf', 'kaf-final']);
+    assert.deepEqual(order.slice().sort(), letters.map((l) => l.id).sort(), 'every letter exactly once');
+    assert.notDeepEqual(order, letters.map((l) => l.id), 'no longer alphabet order');
+    assert.deepEqual(m.letterRows.slice(0, 4).map((r) => r.label), ['Shin', 'Sin', 'Bet', 'Vet'], 'variant row follows its letter');
+    assert.deepEqual(m.letterRows.filter((r) => r.kind === 'variant').map((r) => r.label), ['Sin', 'Vet', 'Khaf', 'Fe']);
+    assert.deepEqual(rows.filter((r) => /sofit/.test(r.label)).map((r) => r.label), ['Mem sofit', 'Kaf sofit', 'Nun sofit', 'Pe sofit', 'Tsadi sofit'], 'sofit rows follow teaching order (mem-final is taught 5th, kaf-final 13th), not alphabet order');
     assert.equal(m.sections.reduce((a, s) => a + s.rows.length, 0), 31);
   });
 
   test(`${script} workbook model: gematria 1-400 for the 22 letters, finals 500-900 flagged as convention`, () => {
     const rows = buildModel(script).letterRows.filter((r) => r.kind === 'letter');
-    assert.deepEqual(rows.slice(0, 22).map((r) => r.gematria), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400]);
-    assert.ok(rows.slice(0, 22).every((r) => !r.gematriaIsConvention));
-    assert.deepEqual(rows.slice(22).map((r) => r.gematria), [500, 600, 700, 800, 900]);
-    assert.ok(rows.slice(22).every((r) => r.gematriaIsConvention));
+    const val = Object.fromEntries(rows.map((r) => [r.letterId, r]));
+    const alpha = letters.map((l) => val[l.id]); // back in alphabet order, independent of the teaching order
+    assert.deepEqual(alpha.slice(0, 22).map((r) => r.gematria), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400]);
+    assert.ok(alpha.slice(0, 22).every((r) => !r.gematriaIsConvention));
+    assert.deepEqual(alpha.slice(22).map((r) => r.gematria), [500, 600, 700, 800, 900]);
+    assert.ok(alpha.slice(22).every((r) => r.gematriaIsConvention));
   });
 
   test(`${script} workbook model: word rows are pointed words that exist in data/curriculum/lessons.json`, () => {
@@ -43,6 +51,8 @@ for (const script of Object.keys(SCRIPTS)) {
       assert.equal(pages[0], 'front');
       assert.equal(pages.filter((k) => k === 'strokeorder').length, 3, 'one stroke-order page per letter group');
       assert.equal(pages.indexOf('strokeorder'), 1);
+      assert.equal(pages.indexOf('words'), 4, 'words follow the syllable page, ahead of the later letter sections');
+      assert.equal(pages.indexOf('syllables'), 3, 'kamatz and first syllables right after the first nine letters (Shin, Bet first)');
       assert.equal(count(html, /data-letter-row="/g), 27);
       assert.equal(count(html, /data-variant-row="/g), 4);
       assert.equal(count(html, /data-confusable="/g), script === 'cursive' ? 12 : 9);

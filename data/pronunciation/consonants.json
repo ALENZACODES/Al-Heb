@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "description": "Consonant sound records keyed by the 27 shared letter ids. changesSound marks the letters whose sound depends on dagesh/dots/tradition. verified=false records are standard values that were NOT in the fetched side-by-side table.",
+ "description": "Consonant sound records keyed by the 27 shared letter ids. changesSound marks the letters whose sound depends on dagesh/dots/tradition. verified=false records are standard values that were NOT in the fetched side-by-side table. say = one plain beginner sentence per tradition (<=15 words, no IPA), shown on first-day and lesson screens; unreviewed by a native speaker.",
  "traditions": [
   "israeli",
   "sephardi",
@@ -21,6 +21,11 @@
     "sephardi": "silent / a glottal stop between vowels (uh-oh)",
     "ashkenazi": "silent",
     "american_synagogue": "silent / a glottal stop between vowels (uh-oh)"
+   },
+   "say": {
+    "israeli": "Alef says nothing; it holds a vowel, like the catch in uh-oh.",
+    "sephardi": "Alef says nothing; it holds a vowel, like the catch in uh-oh.",
+    "ashkenazi": "Alef says nothing; it only holds a vowel."
    },
    "changesSound": false,
    "notes": "Ashkenazi alef is silent at all times in most forms.",
@@ -54,6 +59,11 @@
     "sephardi": "b with dagesh, v without",
     "ashkenazi": "b with dagesh, v without",
     "american_synagogue": "b with dagesh, v without"
+   },
+   "say": {
+    "israeli": "Bet says B, like the b in ball; no dot, V as in vine.",
+    "sephardi": "Bet says B, like the b in ball; no dot, V as in vine.",
+    "ashkenazi": "Bet says B, like the b in ball; no dot, V as in vine."
    },
    "changesSound": true,
    "notes": "One of the three letters that still alternate in Modern Hebrew.",
@@ -114,6 +124,11 @@
     "ashkenazi": "hard g as in game, never soft",
     "american_synagogue": "hard g as in game, never soft"
    },
+   "say": {
+    "israeli": "Gimel says G, like the g in grumpy, never like gem.",
+    "sephardi": "Gimel says G, like the g in grumpy, never like gem.",
+    "ashkenazi": "Gimel says G, like the g in grumpy, never like gem."
+   },
    "changesSound": false,
    "notes": "No alternation in Modern Hebrew. Jewfaq: always a hard g.",
    "sources": [
@@ -147,6 +162,11 @@
     "ashkenazi": "d",
     "american_synagogue": "d"
    },
+   "say": {
+    "israeli": "Dalet says D, like the d in dive.",
+    "sephardi": "Dalet says D, like the d in dive.",
+    "ashkenazi": "Dalet says D, like the d in dive."
+   },
    "changesSound": false,
    "notes": "No alternation in Modern Hebrew.",
    "sources": [
@@ -176,6 +196,11 @@
     "ashkenazi": "h; silent at the end of a word unless it has mappiq",
     "american_synagogue": "h; silent at the end of a word unless it has mappiq"
    },
+   "say": {
+    "israeli": "He says H, like the h in hey; usually silent ending a word.",
+    "sephardi": "He says H, like the h in hey; usually silent ending a word.",
+    "ashkenazi": "He says H, like the h in hey; usually silent ending a word."
+   },
    "changesSound": false,
    "notes": "Final he without mappiq is a vowel letter. Fast-speech he-dropping is unsourced (see drills TODO).",
    "sources": [
@@ -204,6 +229,11 @@
     "sephardi": "v; also the vowel letter for o (cholam malei) and u (shuruk)",
     "ashkenazi": "v; also the vowel letter for o (cholam malei) and u (shuruk)",
     "american_synagogue": "v; also the vowel letter for o (cholam malei) and u (shuruk)"
+   },
+   "say": {
+    "israeli": "Vav says V, like the v in vine; it can also be O or U.",
+    "sephardi": "Vav says V, like the v in vine; it can also be O or U.",
+    "ashkenazi": "Vav says V, like the v in vine; it can also be O or U."
    },
    "changesSound": false,
    "notes": "As a vowel letter see the cholam/shuruk records.",
@@ -238,6 +268,11 @@
     "ashkenazi": "z",
     "american_synagogue": "z"
    },
+   "say": {
+    "israeli": "Zayin says Z, like the z in zipper.",
+    "sephardi": "Zayin says Z, like the z in zipper.",
+    "ashkenazi": "Zayin says Z, like the z in zipper."
+   },
    "changesSound": false,
    "notes": "Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.",
    "sources": [
@@ -260,12 +295,17 @@
    },
    "english": {
     "israeli": "ch as in Bach / loch (back-of-throat, no English chair sound)",
-    "sephardi": "ch as in Bach / loch (back-of-throat, no English chair sound)",
-    "ashkenazi": "ch as in Bach / loch (back-of-throat, no English chair sound)",
+    "sephardi": "pharyngeal [ħ], a throat sound (the ch of Bach / loch is the Israeli merged value)",
+    "ashkenazi": "ch as in Bach / loch (back-of-throat, no English chair sound); the pharyngeal is seldom observed in practice",
     "american_synagogue": "ch as in loch"
    },
+   "say": {
+    "israeli": "Chet says CH, like the ch in Bach: clear your throat softly.",
+    "sephardi": "Chet says CH, like the ch in Bach, but deeper in the throat.",
+    "ashkenazi": "Chet says CH, like the ch in Bach: clear your throat softly."
+   },
    "changesSound": true,
-   "notes": "General Israeli: chet and khaf merged into one sound. Older Mizrahi speakers keep the pharyngeal. Strict liturgical usage asks for the pharyngeal but it is rarely observed.",
+   "notes": "General Israeli: chet and khaf merged into one sound. Older Mizrahi speakers keep the pharyngeal. Strict liturgical usage asks for the pharyngeal but it is rarely observed. The per-tradition English lines follow the stored IPA; needs-native-review.",
    "sources": [
     {
      "label": "Wikipedia: Modern Hebrew phonology",
@@ -301,6 +341,11 @@
     "ashkenazi": "t",
     "american_synagogue": "t"
    },
+   "say": {
+    "israeli": "Tet says T, like the t in tea; Tav sounds the same.",
+    "sephardi": "Tet says T, like the t in tea; Tav sounds the same.",
+    "ashkenazi": "Tet says T, like the t in tea."
+   },
    "changesSound": false,
    "notes": "General Israeli lost the emphatic sounds of Biblical Hebrew (Wikipedia). Which Sephardi/Mizrahi communities keep emphatic tet was not in our sources.",
    "sources": [
@@ -327,6 +372,11 @@
     "ashkenazi": "y as in yes; vowel letter for i/ei",
     "american_synagogue": "y as in yes; vowel letter for i/ei"
    },
+   "say": {
+    "israeli": "Yod says Y, like the y in yo-yo.",
+    "sephardi": "Yod says Y, like the y in yo-yo.",
+    "ashkenazi": "Yod says Y, like the y in yo-yo."
+   },
    "changesSound": false,
    "notes": "Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.",
    "sources": [
@@ -352,6 +402,11 @@
     "sephardi": "k with dagesh; kh (loch) without",
     "ashkenazi": "k with dagesh; kh (loch) without",
     "american_synagogue": "k / kh (often softened)"
+   },
+   "say": {
+    "israeli": "Kaf says K, like the k in kernel; no dot, clear your throat softly (ch).",
+    "sephardi": "Kaf says K, like the k in kernel; no dot, clear your throat softly (ch).",
+    "ashkenazi": "Kaf says K, like the k in kernel; no dot, clear your throat softly (ch)."
    },
    "changesSound": true,
    "notes": "Khaf is the same sound as chet in General Israeli.",
@@ -411,10 +466,15 @@
     "ashkenazi": "[x] ([k] with dagesh)"
    },
    "english": {
-    "israeli": "kh as in loch (k with dagesh, as in the last word of the Priestly Blessing)",
-    "sephardi": "kh as in loch (k with dagesh, as in the last word of the Priestly Blessing)",
-    "ashkenazi": "kh as in loch (k with dagesh, as in the last word of the Priestly Blessing)",
-    "american_synagogue": "kh as in loch (k with dagesh, as in the last word of the Priestly Blessing)"
+    "israeli": "kh as in loch",
+    "sephardi": "kh as in loch",
+    "ashkenazi": "kh as in loch",
+    "american_synagogue": "kh as in loch"
+   },
+   "say": {
+    "israeli": "Final Kaf says CH, like clearing your throat softly.",
+    "sephardi": "Final Kaf says CH, like clearing your throat softly.",
+    "ashkenazi": "Final Kaf says CH, like clearing your throat softly."
    },
    "changesSound": false,
    "notes": "Same sounds as kaf; the Priestly Blessing ends one word with ךָּ (dagesh) so it is read k.",
@@ -445,6 +505,11 @@
     "ashkenazi": "l",
     "american_synagogue": "l"
    },
+   "say": {
+    "israeli": "Lamed says L, like the l in lamp.",
+    "sephardi": "Lamed says L, like the l in lamp.",
+    "ashkenazi": "Lamed says L, like the l in lamp."
+   },
    "changesSound": false,
    "notes": "Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.",
    "sources": [
@@ -470,6 +535,11 @@
     "sephardi": "m",
     "ashkenazi": "m",
     "american_synagogue": "m"
+   },
+   "say": {
+    "israeli": "Mem says M, like the m in mom.",
+    "sephardi": "Mem says M, like the m in mom.",
+    "ashkenazi": "Mem says M, like the m in mom."
    },
    "changesSound": false,
    "notes": "Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.",
@@ -497,6 +567,11 @@
     "ashkenazi": "n",
     "american_synagogue": "n"
    },
+   "say": {
+    "israeli": "Nun says N, like the n in nap.",
+    "sephardi": "Nun says N, like the n in nap.",
+    "ashkenazi": "Nun says N, like the n in nap."
+   },
    "changesSound": false,
    "notes": "Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.",
    "sources": [
@@ -523,6 +598,11 @@
     "ashkenazi": "s",
     "american_synagogue": "s"
    },
+   "say": {
+    "israeli": "Samekh says S, like the s in sit.",
+    "sephardi": "Samekh says S, like the s in sit.",
+    "ashkenazi": "Samekh says S, like the s in sit."
+   },
    "changesSound": false,
    "notes": "Chabad notes Ashkenazim read an unaccented tav like samekh (see tav).",
    "sources": [
@@ -548,12 +628,17 @@
    },
    "english": {
     "israeli": "silent / glottal stop; do not try a pharyngeal in Israel",
-    "sephardi": "silent / glottal stop; do not try a pharyngeal in Israel",
+    "sephardi": "pharyngeal [ʕ] (Western Sephardim [ŋ]); silent in Israeli and Ashkenazi",
     "ashkenazi": "silent",
     "american_synagogue": "silent"
    },
+   "say": {
+    "israeli": "Ayin says nothing, like Alef; it only holds a vowel.",
+    "sephardi": "Ayin says a squeezed throat sound; Israeli Hebrew keeps it silent.",
+    "ashkenazi": "Ayin says nothing, like Alef; it only holds a vowel."
+   },
    "changesSound": true,
-   "notes": "General Israeli ayin is absorbed by alef. A pharyngeal learned in shul can mark a speaker as an outsider in Israel.",
+   "notes": "General Israeli ayin is absorbed by alef. A pharyngeal learned in shul can mark a speaker as an outsider in Israel. The per-tradition English lines follow the stored IPA; needs-native-review.",
    "sources": [
     {
      "label": "Wikipedia: Modern Hebrew phonology",
@@ -584,6 +669,11 @@
     "sephardi": "p with dagesh, f without",
     "ashkenazi": "p with dagesh, f without",
     "american_synagogue": "p with dagesh, f without"
+   },
+   "say": {
+    "israeli": "Pe says P, like the p in pop; no dot, F as in fluff.",
+    "sephardi": "Pe says P, like the p in pop; no dot, F as in fluff.",
+    "ashkenazi": "Pe says P, like the p in pop; no dot, F as in fluff."
    },
    "changesSound": true,
    "notes": "Aspiration of p/t/k compared with English is unsourced (see drills).",
@@ -644,6 +734,11 @@
     "ashkenazi": "ts / tz as in cats",
     "american_synagogue": "ts / tz as in cats"
    },
+   "say": {
+    "israeli": "Tsadi says TS, like the ts in pizza: a T sliding into S.",
+    "sephardi": "Tsadi says TS, like the ts in pizza: a T sliding into S.",
+    "ashkenazi": "Tsadi says TS, like the ts in pizza: a T sliding into S."
+   },
    "changesSound": false,
    "notes": "",
    "sources": [
@@ -673,6 +768,11 @@
     "ashkenazi": "k",
     "american_synagogue": "k"
    },
+   "say": {
+    "israeli": "Qof says K, like the k in kite: back of tongue lifts to the roof.",
+    "sephardi": "Qof says K, like the k in kite: back of tongue lifts to the roof.",
+    "ashkenazi": "Qof says K, like the k in kite: back of tongue lifts to the roof."
+   },
    "changesSound": false,
    "notes": "",
    "sources": [
@@ -698,12 +798,17 @@
    },
    "english": {
     "israeli": "back-of-the-throat r (like French or German r), not the English r",
-    "sephardi": "back-of-the-throat r (like French or German r), not the English r",
-    "ashkenazi": "back-of-the-throat r (like French or German r), not the English r",
+    "sephardi": "front r, rolled or tapped (like Spanish r)",
+    "ashkenazi": "r varies by regional dialect: front (alveolar) or back-of-the-throat (uvular)",
     "american_synagogue": "most Americans say English r as in rail"
    },
+   "say": {
+    "israeli": "Resh says R, like French r: at the back of your throat, not the tongue.",
+    "sephardi": "Resh says R, like Spanish r: tap your tongue tip behind your top teeth.",
+    "ashkenazi": "Resh says R: tongue tip or back of the throat, depending on your dialect."
+   },
    "changesSound": true,
-   "notes": "Nearly all Israeli Jews use a uvular resh. Using the English [ɹ] is a leading outsider marker.",
+   "notes": "Nearly all Israeli Jews use a uvular resh. Using the English [ɹ] is a leading outsider marker. The Sephardi and Ashkenazi English lines follow the stored IPA; needs-native-review.",
    "sources": [
     {
      "label": "Wikipedia: Modern Hebrew phonology",
@@ -738,6 +843,11 @@
     "sephardi": "sh with the right dot, s with the left dot",
     "ashkenazi": "sh with the right dot, s with the left dot",
     "american_synagogue": "sh with the right dot, s with the left dot"
+   },
+   "say": {
+    "israeli": "Shin says SH, like shh; left dot, S as in sit.",
+    "sephardi": "Shin says SH, like shh; left dot, S as in sit.",
+    "ashkenazi": "Shin says SH, like shh; left dot, S as in sit."
    },
    "changesSound": true,
    "notes": "Lithuanian Ashkenazi historically merged both as [s] (historical).",
@@ -797,6 +907,11 @@
     "sephardi": "t",
     "ashkenazi": "s without dagesh (Shabbos), t with dagesh",
     "american_synagogue": "t in prayer; s in Orthodox shuls and in English loanwords such as Shabbos"
+   },
+   "say": {
+    "israeli": "Tav says T, like the t in table; Tet sounds the same.",
+    "sephardi": "Tav says T, like the t in table; Tet sounds the same.",
+    "ashkenazi": "Tav says S, a hiss, like the s in Shabbos; with a dot, T."
    },
    "changesSound": true,
    "notes": "The single most audible Ashkenazi/Sephardi switch (Yit-gadal vs Yis-gadal).",
@@ -865,6 +980,11 @@
     "ashkenazi": "m",
     "american_synagogue": "m"
    },
+   "say": {
+    "israeli": "Final Mem says M, like the m in mom.",
+    "sephardi": "Final Mem says M, like the m in mom.",
+    "ashkenazi": "Final Mem says M, like the m in mom."
+   },
    "changesSound": false,
    "notes": "Same sound as the non-final form. Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.",
    "sources": [
@@ -891,6 +1011,11 @@
     "ashkenazi": "n",
     "american_synagogue": "n"
    },
+   "say": {
+    "israeli": "Final Nun says N, like the n in nail.",
+    "sephardi": "Final Nun says N, like the n in nail.",
+    "ashkenazi": "Final Nun says N, like the n in nail."
+   },
    "changesSound": false,
    "notes": "Same sound as the non-final form. Not in the fetched side-by-side table; standard value, lane-3 inference. Check with a native speaker or phonetics reference.",
    "sources": [
@@ -912,10 +1037,15 @@
     "ashkenazi": "[f] ([p] with dagesh)"
    },
    "english": {
-    "israeli": "f (p with dagesh)",
-    "sephardi": "f (p with dagesh)",
-    "ashkenazi": "f (p with dagesh)",
-    "american_synagogue": "f (p with dagesh)"
+    "israeli": "f as in fluff",
+    "sephardi": "f as in fluff",
+    "ashkenazi": "f as in fluff",
+    "american_synagogue": "f as in fluff"
+   },
+   "say": {
+    "israeli": "Final Pe says F, like the f in fluff.",
+    "sephardi": "Final Pe says F, like the f in fluff.",
+    "ashkenazi": "Final Pe says F, like the f in fluff."
    },
    "changesSound": true,
    "notes": "Same sound as the non-final form. Aspiration of p/t/k compared with English is unsourced (see drills).",
@@ -945,6 +1075,11 @@
     "sephardi": "ts / tz as in cats",
     "ashkenazi": "ts / tz as in cats",
     "american_synagogue": "ts / tz as in cats"
+   },
+   "say": {
+    "israeli": "Final Tsadi says TS, like the ts in cats: a T sliding into S.",
+    "sephardi": "Final Tsadi says TS, like the ts in cats: a T sliding into S.",
+    "ashkenazi": "Final Tsadi says TS, like the ts in cats: a T sliding into S."
    },
    "changesSound": false,
    "notes": "Same sound as the non-final form. ",
@@ -1121,5 +1256,6 @@
    ],
    "verified": true
   }
- ]
+ ],
+ "sayNeedsNativeReview": true
 }

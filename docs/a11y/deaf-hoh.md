@@ -1,0 +1,73 @@
+# Deaf and hard-of-hearing learners: audio inventory and what was changed
+
+Lane: Deaf and hard of hearing. Draft. Written 2026-11-04.
+
+## Read this first
+- Nobody working on this could test with Deaf or hard of hearing people, a hearing aid, a cochlear implant, captions, or any assistive device. Everything below is a reading of the code and runs of the automated tests. A line that says "works" means "the code path runs in a test", not "a Deaf learner found it usable".
+- Lip-reading and sign-language material are out of scope. ALEF has none and does not claim any.
+- Words cannot replace hearing a sound. The written sound descriptions are taken from ALEF's own pronunciation notes (`data/pronunciation`), nobody who speaks Hebrew has checked their wording, and they are marked draft on screen.
+- The "Closest English" lines are comparisons with English words, not exact phonetics.
+
+## The setting
+`audioFree` (Settings > Sound > "I do not use audio"), boolean, default `false`. One helper, `src/shell/audiofree.js`, says what it means: Listen buttons are not drawn; a question that can only be answered by hearing is replaced by a reading question about the same item or left out with a sentence saying so; a skipped listening or speaking item is never recorded as a miss and never touches a score or streak. There is no automatic detection (a browser cannot tell whether someone hears), so it is a choice the learner makes. It is not asked at onboarding yet (see "Remaining").
+
+## Inventory: every place that plays, records or listens
+"Hearing needed?" means the item cannot be done without it. Status is after this change.
+
+| Where (file) | What it does with sound | Hearing needed? | What a Deaf or hard of hearing learner gets now |
+|---|---|---|---|
+| `src/audio/player.js`, `src/shell/audio.js`, `src/shell/audio-stub.js`, `src/shell/audio-access.js` | The sound engine: recorded clip, else the browser's Hebrew voice, else nothing. | Engine only | Every outcome is also written as text in a status line. With `audioFree` the shared `audioButton` helper draws nothing. |
+| `src/shell/names.js`, `src/shell/ui.js` | `names.js`: the spoken form of the divine name used as speech text. `ui.js`: re-exports the shared `audioButton`. | No | Text only. |
+| `src/curriculum/audio-ui.js` (`playButton`), `src/curriculum/ex-ui.js` (`voiceButton`) | The Listen button used by lessons, review, fade-out and gender cards. | No (extra) | With `audioFree` the button is not drawn (a hidden empty span), so lessons, review and fade-out show only the written content. |
+| `src/curriculum/lesson.view.js`, `src/curriculum/lesson.parts.js` | Listen next to letters, vowels, words, prayer lines (`lesson.parts.js` is the short-session version, added by another lane). | No | Buttons hidden with `audioFree` in both (they share `playButton`). The written "how it is said" block is only in `lesson.view.js`; the short-session version does not have it yet. Written "how it is said" block added for every letter and vowel of the lesson (open by default with `audioFree`). |
+| `src/curriculum/review.view.js` | Listen after the answer; prompts "say its sound / aloud". | No | Cards are self-rated. With `audioFree` the prompts say "recall / read" instead of "say aloud". |
+| `src/curriculum/ladder.view.js` | Syllable ladder: hear a syllable, pick the card. | Yes (before) | With `audioFree`: "Find the card for: Bet with the "a" vowel" (reading version, uses the letter name and vowel family already in the data). New "Skip this card" for everyone: not answered, not missed, streak and level untouched (`session.skip()` in `src/curriculum/ladder.js`). |
+| `src/curriculum/gender.view.js` | Pair-card quiz had listening questions ("Listen, then say who it is said to"). | Yes (before) | With `audioFree` every question is a reading question. For other learners a listening question has "I cannot listen: show the word written" and "Skip this question". |
+| `src/curriculum/fade.view.js` | Listen to the line; self-graded. | No | Button hidden with `audioFree`; the line is on screen. |
+| `src/curriculum/scaffold.view.js`, `src/curriculum/intermediate.view.js` | Optional Listen buttons beside written text. | No | Text is always shown. Not hidden under `audioFree` in `intermediate.view.js` (see Remaining). |
+| `src/listen/listen.view.js` | "Listen and pick": hear a word, pick how it is written. | Yes | With `audioFree` only "read-and-match" is offered (meaning shown, pick the written word). In the listening version there are "Skip this word" and "I cannot listen: use reading questions"; a skip saves nothing. |
+| `src/pronunciation/tradquiz.view.js` (route `/tradition-quiz`) | Eye quiz on written IPA or respelling. | No | Works without sound. It does assume the learner can read the IPA or respelling; that was not tested. |
+| `src/traditions/traditions.view.js`, `src/traditions/model.js` | "Hear the difference": which clip is the Sephardi reading. | Yes (listening mode) | With `audioFree` it opens in the existing reading drill and the Listening switch is not offered. Listening questions have "Skip this question" (nothing counted). |
+| `src/speak/speak.js` (Say it) | Hear a model, say it, check by browser speech recognition, a recording, or self-rating. | Partly | "Skip this one" already existed but wrote a skip row that was counted as "tried" in set totals and daily totals. Fixed: a skip is no longer saved, and old skip rows are ignored in totals and history. "Skip this line" added to read-aloud and shadowing. With `audioFree`: a note on each screen, Listen buttons hidden, prompt says "Say it, or skip it". |
+| `src/speak/speak.js` (Listening drills tab) | Minimal pairs by ear. | Yes | With `audioFree` replaced by an explanation and links to the written Sound-gap lab and "Sounds by tradition". |
+| `src/speak/speak.js` (Shadowing tab) | Hear a line and repeat it. | Yes | With `audioFree` replaced by an explanation; points to "Read a prayer aloud" and the reader. |
+| `src/speak/model.js`, `src/speak/recognizer.js` | Attempt log; recorder and recognizer wrappers. | n/a | `setSummary`, `dailyTotals`, `historyRows` ignore skips. Recorder and recognizer start only on a button press. |
+| `src/recordcompare/recordcompare.view.js` | Record two words and say if you could hear a difference; there was no way to move on without answering. | Yes | With `audioFree`: explanation and link to the Sound-gap lab. Otherwise "Skip this pair" (nothing saved). |
+| `src/timedread/timedread.view.js`, `src/timedread/model.js` | Timed read-aloud, self-assessed; no recognition is started. | No | Wording for `audioFree` says "read the line" not "read aloud". |
+| `src/placement/placement.view.js` | Optional Listen on some items; every question has "Not sure". | No | Listen button not drawn with `audioFree`. |
+| `src/sprint/sprint.view.js` | "hear-meaning" questions also show the written word; point-to-English says "say it". | No | Listen button hidden and wording changed with `audioFree`. The sprint has a timer; that is another lane's concern. |
+| `src/firstday/firstday.view.js`, `src/firstday/model.js`, `src/firstday/ladder.view.js` | "Hear it" beside each written item. | No | Hidden with `audioFree` in `firstday.view.js`. `ladder.view.js` (first-day ladder) still shows "Hear it" (see Remaining). |
+| `src/letters/atlas.view.js`, `src/letters/trace.view.js` | Tap a tile to hear a letter. Sound line is written beside it. | No | Written sound line is always there; buttons not hidden with `audioFree` (see Remaining). |
+| `src/pronunciation/sounds.view.js` | Tap a vowel to hear it. | No | New section "How each sound is said, in words" (all letters and vowels, follows the tradition switcher, open by default with `audioFree`). |
+| `src/pronunciation/soundgap.view.js`, `src/pronunciation/vowelboard.view.js`, `src/pronunciation/dottile.view.js`, `src/pronunciation/niqquddial.view.js`, `src/pronunciation/ui.js`, `src/pronunciation/compare.view.js`, `src/pronunciation/forTradition.js` | Optional play buttons beside written respelling or IPA. The Sound-gap lab already has step-by-step mouth instructions in words. | No | Text is always shown. Buttons not hidden with `audioFree` (see Remaining). |
+| `src/corpus/read.view.js` | Reader: Play per word and line; phrasebook Play. | No | New closed block "Reading a prayer line without hearing it" on every reader page (open with `audioFree`); phrasebook Play hidden with `audioFree`. |
+| `src/torahreader/torahreader.view.js`, `src/torahread/ladder.view.js`, `src/torahread/ui.js` | Play beside the verse; says "the app does not listen". | No | Text shown. Not hidden with `audioFree`. |
+| `src/morning/morning.view.js`, `src/service/service.view.js`, `src/israel/israel.view.js` | Play beside written lines. | No | Text shown. Not hidden with `audioFree`. |
+| `src/vocab/vocab.view.js`, `src/vocab/themes.view.js`, `src/photo/scan.view.js`, `src/photo/word-card.js`, `src/wordtrace/wordtrace.view.js` | Listen or Hear the word beside a written word. | No | Text shown. Not hidden with `audioFree`. |
+| `src/curriculum/exercises.session.js` | Optional sound effects on answers (`soundEffects`, needs a shell sound that does not exist yet); vibration (`haptics`). | No | Nothing plays today. A sound effect is off when `audioFree` is on, and the right/wrong verdict is always written as text and marked on the answer, so a sound is never the only cue. Vibration is separate and unchanged. |
+| Trope trainer (`src/trope/trope.view.js`) | Names of cantillation marks only. Says there is no audio. | No | Works without sound. |
+
+## What was changed (files)
+- New: `src/shell/audiofree.js` (setting meaning, shared notes, wording swaps), `src/pronunciation/soundtext.js` (written sound descriptions from existing data, draft), `src/shell/silent-reading.js` (text-only steps for reading a line), `tests/a11y.deaf.test.js`.
+- Edited: `src/shell/settings.js` (key and validation), `src/shell/settings.view.js` (Sound row), `src/shell/audio-access.js`, `src/curriculum/{audio-ui,ex-ui,ladder,ladder.view,gender.view,lesson.view,review.view,exercises.session}.js`, `src/listen/listen.view.js`, `src/traditions/traditions.view.js`, `src/speak/{speak,model}.js`, `src/recordcompare/recordcompare.view.js`, `src/timedread/timedread.view.js`, `src/placement/placement.view.js`, `src/sprint/sprint.view.js`, `src/firstday/firstday.view.js`, `src/pronunciation/sounds.view.js`, `src/corpus/read.view.js`.
+- New files are not in the offline file list yet: `node tools/build-precache.mjs` has to be run by whoever owns the build (this lane was told not to run it).
+
+## Skips, streaks, scores
+- Lesson quick checks already had a penalty-free Skip (`createSession.skip`, unchanged).
+- Added or fixed skips: syllable ladder, gender quiz listening questions, listen-and-pick, tradition "Hear the difference", read-aloud and shadowing lines, record-and-compare. None writes to a store.
+- The Say-it skip bug (skips counted as "tried") is covered by a test.
+- The streak counts a day at 300 seconds of engaged time (`GOAL_SECONDS` in `src/curriculum/streak.js`), not right answers, so a skip cannot lower it. That file was read, not changed. A day spent only on screens that `audioFree` leaves out would add little engaged time; the other screens still count.
+
+## Written sound descriptions: what they are made of
+Each letter shows: the one-sentence "say" line and the English comparison from `consonants.json` for the chosen tradition, and any mouth steps from `soundgap.json` for the sound-gap groups that include the letter (chet/khaf/he, alef/ayin, resh, tsadi, kaf/qof, tet/tav, samekh/shin, vav/bet). Letters outside those groups have no mouth steps in the data, and the block says so instead of inventing any. Vowels show the English comparison and where the mark is written; no mouth description exists for vowels. Nothing in this module adds a claim that is not in those files.
+
+## Remaining
+1. Onboarding does not ask about audio. A learner has to find Settings > Sound.
+2. `audioFree` does not hide the optional play buttons on: letters atlas and trace, the pronunciation pages other than `/sounds`, Torah reader, morning, service, Israel, vocab, scan, word trace, first-day ladder, intermediate. They sit next to the written content and a Deaf learner can ignore them. Hiding them is mechanical but touches files other lanes are editing.
+3. No recorded-audio captions or transcripts exist because no recorded audio exists yet. If recorded clips are added, each needs a transcript and the text that is spoken must stay on screen.
+4. The Sound-gap lab, the Sounds page and the new text blocks are not proofread by a Hebrew speaker.
+5. The reading steps in `src/shell/silent-reading.js` are not reviewed by a teacher.
+6. Vowel mouth positions are not written anywhere in the data.
+7. Atlas tile, letters and trace views do not yet show the written sound block (only the lesson page and `/sounds` do).
+8. Speech recognition (browser, he-IL) is optional in Say it. It may send audio to the browser maker; the screen already says so. Not changed.
+9. Nothing was tested with captions-reliant readers, with screen magnification, with real devices or with Deaf learners.

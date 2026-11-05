@@ -31,10 +31,10 @@
    "en": "used to introduce a semantically definite direct object"
   },
   {
-   "id": "h50cf3648",
-   "he": "יום",
-   "pointed": "יוֹם",
-   "en": "Day"
+   "id": "pefce5ddb",
+   "he": "כל",
+   "pointed": "כָּל",
+   "en": "all, whole, everything"
   },
   {
    "id": "hc6c367ff",
@@ -97,22 +97,16 @@
    "en": "to know (a fact)"
   },
   {
-   "id": "hf63de22c",
-   "he": "כן",
-   "pointed": "כֵּן",
-   "en": "yes"
-  },
-  {
-   "id": "ha39cf3c9",
-   "he": "עולם",
-   "pointed": "עוֹלָם",
-   "en": "world"
-  },
-  {
    "id": "h28a30a60",
    "he": "אמר",
    "pointed": "אָמַר",
    "en": "to say, tell"
+  },
+  {
+   "id": "hf63de22c",
+   "he": "כן",
+   "pointed": "כֵּן",
+   "en": "yes"
   },
   {
    "id": "hd82a3079",
@@ -121,16 +115,22 @@
    "en": "country, land"
   },
   {
-   "id": "hdd2efa8e",
-   "he": "עשה",
-   "pointed": "עָשָׂה",
-   "en": "to do (to perform an action, to accomplish a thing)"
+   "id": "ha39cf3c9",
+   "he": "עולם",
+   "pointed": "עוֹלָם",
+   "en": "world"
   },
   {
    "id": "h11b691b9",
    "he": "אכל",
    "pointed": "אָכַל",
    "en": "to eat"
+  },
+  {
+   "id": "hdd2efa8e",
+   "he": "עשה",
+   "pointed": "עָשָׂה",
+   "en": "to do (to perform an action, to accomplish a thing)"
   },
   {
    "id": "hcbafeb66",
@@ -142,7 +142,7 @@
    "id": "h1301ecc3",
    "he": "ילד",
    "pointed": "יֶלֶד",
-   "en": "a"
+   "en": "child, a kid, a boy"
   },
   {
    "id": "h5aed8aaa",
@@ -157,10 +157,10 @@
    "en": "there is or are"
   },
   {
-   "id": "hf1ccd0e6",
-   "he": "אלוה",
-   "pointed": "אֱלוֹהַּ",
-   "en": "a god"
+   "id": "h50cf3648",
+   "he": "יום",
+   "pointed": "יוֹם",
+   "en": "day"
   },
   {
    "id": "h2280b9b6",
@@ -253,10 +253,10 @@
    "en": "to guard"
   },
   {
-   "id": "hd5bcfcb8",
-   "he": "נבל",
-   "pointed": "נָבַל",
-   "en": "to wither, wilt, dry out"
+   "id": "h8982ad83",
+   "he": "נתן",
+   "pointed": "נָתַן",
+   "en": "to give"
   },
   {
    "id": "h342fd0de",
@@ -265,16 +265,10 @@
    "en": "place (location or position)"
   },
   {
-   "id": "hb5913147",
-   "he": "נפש",
-   "pointed": "נֶפֶשׁ",
-   "en": "a soul, psyche"
-  },
-  {
-   "id": "h131877e3",
-   "he": "הכיר",
-   "pointed": "הִכִּיר",
-   "en": "to recognize (a country or legal entity)"
+   "id": "hf1ccd0e6",
+   "he": "אלוה",
+   "pointed": "אֱלוֹהַּ",
+   "en": "a god"
   },
   {
    "id": "h103e7d27",
@@ -287,6 +281,24 @@
    "he": "טוב",
    "pointed": "טוֹב",
    "en": "good, fair, fine"
+  },
+  {
+   "id": "h9c8ddecf",
+   "he": "בית",
+   "pointed": "בַּיִת",
+   "en": "house"
+  },
+  {
+   "id": "h1be0a47a",
+   "he": "ספר",
+   "pointed": "סִפֵּר",
+   "en": "to tell (a story), to narrate, to recount"
+  },
+  {
+   "id": "h131877e3",
+   "he": "הכיר",
+   "pointed": "הִכִּיר",
+   "en": "to recognize (a country or legal entity)"
   },
   {
    "id": "hddb5189f",
@@ -307,22 +319,10 @@
    "en": "lamb, kid (young of Caprinae)"
   },
   {
-   "id": "h8982ad83",
-   "he": "נתן",
-   "pointed": "נָתַן",
-   "en": "to give"
-  },
-  {
-   "id": "h9c8ddecf",
-   "he": "בית",
-   "pointed": "בַּיִת",
-   "en": "house"
-  },
-  {
-   "id": "h1be0a47a",
-   "he": "ספר",
-   "pointed": "סִפֵּר",
-   "en": "to tell (a story), to narrate, to recount"
+   "id": "hdbd6764a",
+   "he": "סדר",
+   "pointed": "סִדֵּר",
+   "en": "to organize"
   },
   {
    "id": "hc91c0d80",
@@ -343,16 +343,22 @@
    "en": "pharaoh"
   },
   {
+   "id": "hb91b24f9",
+   "he": "מר",
+   "pointed": "מַר",
+   "en": "bitter (having an acrid taste)"
+  },
+  {
    "id": "hbb24a2a3",
    "he": "שחק",
    "pointed": "שִׂחֵק",
    "en": "to play"
   },
   {
-   "id": "hdbd6764a",
-   "he": "סדר",
-   "pointed": "סִדֵּר",
-   "en": "to organize"
+   "id": "h67e9e6f3",
+   "he": "הודה",
+   "pointed": "הוֹדָה",
+   "en": "to admit, acknowledge, confess"
   },
   {
    "id": "h8f42d584",
@@ -365,12 +371,6 @@
    "he": "עין",
    "pointed": "עַיִן",
    "en": "eye"
-  },
-  {
-   "id": "hb91b24f9",
-   "he": "מר",
-   "pointed": "מַר",
-   "en": "bitter (having an acrid taste)"
   },
   {
    "id": "h64c48ca3",
@@ -394,25 +394,25 @@
    "id": "h4b81aad7",
    "he": "צריך",
    "pointed": "צָרִיךְ",
-   "en": "Needing, in need of (something)"
+   "en": "needing, in need of (something)"
   },
   {
    "id": "ha8f1d06f",
    "he": "אשר",
    "pointed": "אֲשֶׁר",
-   "en": "Introduces a subordinate clause"
+   "en": "introduces a subordinate clause"
   },
   {
-   "id": "habcfc77f",
-   "he": "חר",
-   "pointed": "חֹר",
-   "en": "hole"
+   "id": "hb5913147",
+   "he": "נפש",
+   "pointed": "נֶפֶשׁ",
+   "en": "a soul, psyche"
   },
   {
-   "id": "h67e9e6f3",
-   "he": "הודה",
-   "pointed": "הוֹדָה",
-   "en": "to admit, acknowledge, confess"
+   "id": "h24f17330",
+   "he": "מת",
+   "pointed": "מֵת",
+   "en": "to die"
   },
   {
    "id": "he1a5e616",
@@ -451,16 +451,16 @@
    "en": "cold"
   },
   {
+   "id": "h5d62592f",
+   "he": "שמע",
+   "pointed": "שָׁמַע",
+   "en": "to hear, to be able to hear"
+  },
+  {
    "id": "h39d32f55",
    "he": "שם",
    "pointed": "שָׂם",
    "en": "to put, place"
-  },
-  {
-   "id": "h24f17330",
-   "he": "מת",
-   "pointed": "מֵת",
-   "en": "to die"
   },
   {
    "id": "hcfccb5de",
@@ -481,10 +481,16 @@
    "en": "to sing"
   },
   {
-   "id": "h5d62592f",
-   "he": "שמע",
-   "pointed": "שָׁמַע",
-   "en": "to hear, to be able to hear"
+   "id": "hfaefa59a",
+   "he": "קבל",
+   "pointed": "קִבֵּל",
+   "en": "to receive, to get"
+  },
+  {
+   "id": "he3b1acbd",
+   "he": "עיר",
+   "pointed": "עִיר",
+   "en": "city"
   },
   {
    "id": "h00fd9c4f",
@@ -499,6 +505,12 @@
    "en": "maybe"
   },
   {
+   "id": "h8ff6123b",
+   "he": "קרא",
+   "pointed": "קָרָא",
+   "en": "to read"
+  },
+  {
    "id": "h4fed6814",
    "he": "ראש",
    "pointed": "רֹאשׁ",
@@ -511,28 +523,10 @@
    "en": "fabric, cloth, linen"
   },
   {
-   "id": "h9f3ab68a",
-   "he": "חיב",
-   "pointed": "חַיָּב",
-   "en": "obligated, required, bound, must"
-  },
-  {
-   "id": "he3b1acbd",
-   "he": "עיר",
-   "pointed": "עִיר",
-   "en": "city"
-  },
-  {
-   "id": "h8ff6123b",
-   "he": "קרא",
-   "pointed": "קָרָא",
-   "en": "to read"
-  },
-  {
-   "id": "h0fde2ff0",
-   "he": "צבא",
-   "pointed": "צָבָא",
-   "en": "a military (armed forces)"
+   "id": "habcfc77f",
+   "he": "חר",
+   "pointed": "חֹר",
+   "en": "hole"
   },
   {
    "id": "h1b96f9f4",
@@ -541,10 +535,22 @@
    "en": "to love"
   },
   {
-   "id": "hfaefa59a",
-   "he": "קבל",
-   "pointed": "קִבֵּל",
-   "en": "to receive, to get"
+   "id": "h0fde2ff0",
+   "he": "צבא",
+   "pointed": "צָבָא",
+   "en": "a military (armed forces)"
+  },
+  {
+   "id": "h22a20328",
+   "he": "כון",
+   "pointed": "כִּוֵּן",
+   "en": "to direct (as traffic)"
+  },
+  {
+   "id": "hd6219bc1",
+   "he": "חוץ",
+   "pointed": "חוּץ",
+   "en": "outside (of)"
   },
   {
    "id": "he943571e",
@@ -559,34 +565,16 @@
    "en": "on, on top of"
   },
   {
-   "id": "hf1da5ea6",
-   "he": "אש",
-   "pointed": "אֵשׁ",
-   "en": "fire"
-  },
-  {
    "id": "h04c271fe",
    "he": "גם",
    "pointed": "גַּם",
    "en": "also, too, additionally"
   },
   {
-   "id": "h4f9b4058",
-   "he": "לקח",
-   "pointed": "לָקַח",
-   "en": "to take (grasp with the hands)"
-  },
-  {
-   "id": "hd6219bc1",
-   "he": "חוץ",
-   "pointed": "חוּץ",
-   "en": "Outside (of)"
-  },
-  {
-   "id": "h22a20328",
-   "he": "כון",
-   "pointed": "כִּוֵּן",
-   "en": "to direct (as traffic)"
+   "id": "hf1da5ea6",
+   "he": "אש",
+   "pointed": "אֵשׁ",
+   "en": "fire"
   },
   {
    "id": "h448b5d1a",
@@ -595,16 +583,28 @@
    "en": "to flow as water (that is, to rain)"
   },
   {
+   "id": "h4f9b4058",
+   "he": "לקח",
+   "pointed": "לָקַח",
+   "en": "to take (grasp with the hands)"
+  },
+  {
+   "id": "hd8a5c2cf",
+   "he": "מצא",
+   "pointed": "מָצָא",
+   "en": "to find"
+  },
+  {
    "id": "h7439bf9d",
    "he": "מכל",
    "pointed": "מְכָל",
    "en": "container, bin"
   },
   {
-   "id": "h5cae87cc",
-   "he": "בטח",
-   "pointed": "בָּטַח",
-   "en": "to rely on, to have faith in, to depend on"
+   "id": "h9f3ab68a",
+   "he": "חיב",
+   "pointed": "חַיָּב",
+   "en": "obligated, required, bound, must"
   },
   {
    "id": "h640d9686",
@@ -625,10 +625,10 @@
    "en": "enough, sufficient, adequate"
   },
   {
-   "id": "hd8a5c2cf",
-   "he": "מצא",
-   "pointed": "מָצָא",
-   "en": "to find"
+   "id": "h8d0e13f2",
+   "he": "ברר",
+   "pointed": "בָּרַר",
+   "en": "to select, to pick, to sort"
   },
   {
    "id": "h1ef19acb",
@@ -673,16 +673,10 @@
    "en": "to buy, to purchase"
   },
   {
-   "id": "h8d0e13f2",
-   "he": "ברר",
-   "pointed": "בָּרַר",
-   "en": "to select, to pick, to sort"
-  },
-  {
-   "id": "hd2fac0d2",
-   "he": "עץ",
-   "pointed": "עֵץ",
-   "en": "tree"
+   "id": "h5ad6806e",
+   "he": "עזר",
+   "pointed": "עָזַר",
+   "en": "to help, to assist"
   },
   {
    "id": "ha7e901e9",
@@ -691,28 +685,16 @@
    "en": "to fear, be afraid"
   },
   {
-   "id": "h81024165",
-   "he": "מאוד",
-   "pointed": "מְאוֹד",
-   "en": "very, quite"
-  },
-  {
-   "id": "h320463c0",
-   "he": "חזר",
-   "pointed": "חָזַר",
-   "en": "to return"
-  },
-  {
-   "id": "h5385f0f3",
-   "he": "סבה",
-   "pointed": "סִבָּה",
-   "en": "cause"
-  },
-  {
    "id": "h0902557b",
    "he": "הגיד",
    "pointed": "הִגִּיד",
    "en": "to tell, say"
+  },
+  {
+   "id": "h81024165",
+   "he": "מאוד",
+   "pointed": "מְאוֹד",
+   "en": "very, quite"
   },
   {
    "id": "h5ae20314",
@@ -721,34 +703,46 @@
    "en": "a road, a path, a way"
   },
   {
+   "id": "hd2fac0d2",
+   "he": "עץ",
+   "pointed": "עֵץ",
+   "en": "tree"
+  },
+  {
+   "id": "h5385f0f3",
+   "he": "סבה",
+   "pointed": "סִבָּה",
+   "en": "cause"
+  },
+  {
+   "id": "h320463c0",
+   "he": "חזר",
+   "pointed": "חָזַר",
+   "en": "to return"
+  },
+  {
    "id": "h32c69c06",
    "he": "של",
    "pointed": "שֶׁל",
    "en": "of, belonging to, owned by, pertaining to"
   },
   {
-   "id": "h5ad6806e",
-   "he": "עזר",
-   "pointed": "עָזַר",
-   "en": "to help, to assist"
+   "id": "he6287163",
+   "he": "זבח",
+   "pointed": "זָבַח",
+   "en": "to slaughter, to kill"
   },
   {
-   "id": "h3c9f9b9b",
-   "he": "אהל",
-   "pointed": "אֹהֶל",
-   "en": "a collective term for all that covers a dead body or that a dead body covers"
+   "id": "h5cae87cc",
+   "he": "בטח",
+   "pointed": "בָּטַח",
+   "en": "to rely on, to have faith in, to depend on"
   },
   {
    "id": "he15e52d3",
    "he": "טלפון",
    "pointed": "טֶלֶפוֹן",
    "en": "telephone, phone"
-  },
-  {
-   "id": "h35fcbc75",
-   "he": "נצח",
-   "pointed": "נִצֵּחַ",
-   "en": "to win (in a game, an election, or the like)"
   },
   {
    "id": "h29ebe493",
@@ -763,10 +757,16 @@
    "en": "individual"
   },
   {
-   "id": "he6287163",
-   "he": "זבח",
-   "pointed": "זָבַח",
-   "en": "to slaughter, to kill"
+   "id": "hf95a2330",
+   "he": "נסה",
+   "pointed": "נִסָּה",
+   "en": "to try, to attempt"
+  },
+  {
+   "id": "h35fcbc75",
+   "he": "נצח",
+   "pointed": "נִצֵּחַ",
+   "en": "to win (in a game, an election, or the like)"
   },
   {
    "id": "hea4f6fcc",
@@ -793,10 +793,10 @@
    "en": "brother"
   },
   {
-   "id": "h72ac53a6",
-   "he": "צאן",
-   "pointed": "צֹאן",
-   "en": "sheep, flock of sheep"
+   "id": "hf22f36ee",
+   "he": "לחם",
+   "pointed": "לֶחֶם",
+   "en": "bread"
   },
   {
    "id": "h68843f80",
@@ -811,16 +811,16 @@
    "en": "a vapour, a fume"
   },
   {
-   "id": "hf95a2330",
-   "he": "נסה",
-   "pointed": "נִסָּה",
-   "en": "to try, to attempt"
+   "id": "h69ab7cef",
+   "he": "הצטער",
+   "pointed": "הִצְטַעֵר",
+   "en": "to be sorry, remorseful"
   },
   {
-   "id": "h3fbb59c8",
-   "he": "קדם",
-   "pointed": "קָדַם",
-   "en": "to precede, to come before"
+   "id": "h72ac53a6",
+   "he": "צאן",
+   "pointed": "צֹאן",
+   "en": "sheep, flock of sheep"
   },
   {
    "id": "hfa746c05",
@@ -829,40 +829,34 @@
    "en": "still, yet"
   },
   {
-   "id": "hf22f36ee",
-   "he": "לחם",
-   "pointed": "לֶחֶם",
-   "en": "bread"
-  },
-  {
    "id": "h511bbb6f",
    "he": "הרגיש",
    "pointed": "הִרְגִּישׁ",
-   "en": "feel, sense"
+   "en": "to feel, sense"
   },
   {
-   "id": "h9dabc184",
-   "he": "ברך",
-   "pointed": "בֵּרֵךְ",
-   "en": "to bless"
+   "id": "h3fbb59c8",
+   "he": "קדם",
+   "pointed": "קָדַם",
+   "en": "to precede, to come before"
+  },
+  {
+   "id": "h3c9f9b9b",
+   "he": "אהל",
+   "pointed": "אֹהֶל",
+   "en": "a collective term for all that covers a dead body or that a dead body covers"
   },
   {
    "id": "hc444e8d9",
    "he": "יכלת",
    "pointed": "יְכֹלֶת",
-   "en": "Ability, capability, power"
+   "en": "ability, capability, power"
   },
   {
-   "id": "h69ab7cef",
-   "he": "הצטער",
-   "pointed": "הִצְטַעֵר",
-   "en": "to be sorry, remorseful"
-  },
-  {
-   "id": "h58023e1f",
-   "he": "חל",
-   "pointed": "חָל",
-   "en": "to apply (of a law, method, etc.)"
+   "id": "h1797f84f",
+   "he": "צר",
+   "pointed": "צָר",
+   "en": "to shape"
   },
   {
    "id": "hb7b6cc8b",
@@ -875,6 +869,24 @@
    "he": "איפה",
    "pointed": "אֵיפֹה",
    "en": "where"
+  },
+  {
+   "id": "hb5f05782",
+   "he": "בקש",
+   "pointed": "בִּקֵּשׁ",
+   "en": "to ask for, request"
+  },
+  {
+   "id": "hba98874f",
+   "he": "נכון",
+   "pointed": "נָכוֹן",
+   "en": "right, correct"
+  },
+  {
+   "id": "h58023e1f",
+   "he": "חל",
+   "pointed": "חָל",
+   "en": "to apply (of a law, method, etc.)"
   },
   {
    "id": "hbbbfa9a7",
@@ -901,10 +913,10 @@
    "en": "father"
   },
   {
-   "id": "h1797f84f",
-   "he": "צר",
-   "pointed": "צָר",
-   "en": "to shape"
+   "id": "hf14f89e0",
+   "he": "יבא",
+   "pointed": "יִבֵּא",
+   "en": "to import"
   },
   {
    "id": "hf9a1a55b",
@@ -919,40 +931,22 @@
    "en": "blood"
   },
   {
-   "id": "hb5f05782",
-   "he": "בקש",
-   "pointed": "בִּקֵּשׁ",
-   "en": "to ask for, request"
-  },
-  {
-   "id": "hba98874f",
-   "he": "נכון",
-   "pointed": "נָכוֹן",
-   "en": "Right, correct"
-  },
-  {
-   "id": "hfb819565",
-   "he": "רוח",
-   "pointed": "רוּחַ",
-   "en": "Wind, a wind"
-  },
-  {
    "id": "he9d6c9ab",
    "he": "כר",
    "pointed": "כַּר",
    "en": "cushion"
   },
   {
-   "id": "hfd3118ed",
-   "he": "הגיע",
-   "pointed": "הִגִּיעַ",
-   "en": "to arrive, to get, to reach"
+   "id": "hfb819565",
+   "he": "רוח",
+   "pointed": "רוּחַ",
+   "en": "wind, a wind"
   },
   {
-   "id": "hddb7aae9",
-   "he": "אדון",
-   "pointed": "אָדוֹן",
-   "en": "lord"
+   "id": "h9dabc184",
+   "he": "ברך",
+   "pointed": "בֵּרֵךְ",
+   "en": "to bless"
   },
   {
    "id": "h352b83f7",
@@ -961,10 +955,16 @@
    "en": "thus, in this way"
   },
   {
-   "id": "hf14f89e0",
-   "he": "יבא",
-   "pointed": "יִבֵּא",
-   "en": "to import"
+   "id": "h0fc2ca76",
+   "he": "התחיל",
+   "pointed": "הִתְחִיל",
+   "en": "to start, to begin"
+  },
+  {
+   "id": "hfd3118ed",
+   "he": "הגיע",
+   "pointed": "הִגִּיעַ",
+   "en": "to arrive, to get, to reach"
   },
   {
    "id": "h0f231144",
@@ -991,16 +991,16 @@
    "en": "light (of low weight)"
   },
   {
+   "id": "h2d58afb3",
+   "he": "חי",
+   "pointed": "חַי",
+   "en": "to live (to be alive, to have life)"
+  },
+  {
    "id": "hf8c8316a",
    "he": "שלום",
    "pointed": "שָׁלוֹם",
    "en": "peace"
-  },
-  {
-   "id": "h0fc2ca76",
-   "he": "התחיל",
-   "pointed": "הִתְחִיל",
-   "en": "to start, to begin"
   },
   {
    "id": "hc086f897",
@@ -1015,6 +1015,12 @@
    "en": "here, this place, at this place, in this place"
   },
   {
+   "id": "h6b636d7b",
+   "he": "ארוחה",
+   "pointed": "אֲרוּחָה",
+   "en": "meal"
+  },
+  {
    "id": "hc6cdec2b",
    "he": "דוד",
    "pointed": "דּוֹד",
@@ -1027,22 +1033,16 @@
    "en": "worship, service"
   },
   {
-   "id": "he53d1d1d",
-   "he": "אבן",
-   "pointed": "אֶבֶן",
-   "en": "stone"
+   "id": "h13c6683f",
+   "he": "הכיל",
+   "pointed": "הֵכִיל",
+   "en": "to contain"
   },
   {
-   "id": "h2d58afb3",
-   "he": "חי",
-   "pointed": "חַי",
-   "en": "to live (to be alive, to have life)"
-  },
-  {
-   "id": "ha5b5601c",
-   "he": "לום",
-   "pointed": "לוֹם",
-   "en": "a crowbar"
+   "id": "hba22ae3e",
+   "he": "חסד",
+   "pointed": "חֶסֶד",
+   "en": "loving kindness, benevolence, goodness"
   },
   {
    "id": "h139c94a9",
@@ -1057,58 +1057,28 @@
    "en": "tooth"
   },
   {
-   "id": "h3b32dc48",
-   "he": "גוי",
-   "pointed": "גּוֹי",
-   "en": "gentile (a non-Jewish person), goy"
+   "id": "hddb7aae9",
+   "he": "אדון",
+   "pointed": "אָדוֹן",
+   "en": "lord"
   },
   {
-   "id": "h6b636d7b",
-   "he": "ארוחה",
-   "pointed": "אֲרוּחָה",
-   "en": "meal"
+   "id": "he53d1d1d",
+   "he": "אבן",
+   "pointed": "אֶבֶן",
+   "en": "stone"
   },
   {
-   "id": "h1561ca15",
-   "he": "עבר",
-   "pointed": "עָבַר",
-   "en": "to pass, to cross"
+   "id": "p580df509",
+   "he": "בבקשה",
+   "pointed": "בְּבַקָּשָׁה",
+   "en": "please / you're welcome"
   },
   {
    "id": "hd0a91fd4",
    "he": "ממש",
    "pointed": "מַמָּשׁ",
    "en": "really, very, truly"
-  },
-  {
-   "id": "hba22ae3e",
-   "he": "חסד",
-   "pointed": "חֶסֶד",
-   "en": "loving kindness, benevolence, goodness"
-  },
-  {
-   "id": "h13c6683f",
-   "he": "הכיל",
-   "pointed": "הֵכִיל",
-   "en": "to contain"
-  },
-  {
-   "id": "ha4595016",
-   "he": "שוטר",
-   "pointed": "שׁוֹטֵר",
-   "en": "policeman, cop"
-  },
-  {
-   "id": "h10798813",
-   "he": "למד",
-   "pointed": "לָמַד",
-   "en": "to learn, to study"
-  },
-  {
-   "id": "h8ea4d152",
-   "he": "לעזאזל",
-   "pointed": "לַעֲזָאזֵל",
-   "en": "an exclamation of anger or dismissal (a mild curse)"
   },
   {
    "id": "h13673f80",
@@ -1123,22 +1093,52 @@
    "en": "way, manner"
   },
   {
-   "id": "hfd4bf43b",
-   "he": "זכר",
-   "pointed": "זָכַר",
-   "en": "to remember"
-  },
-  {
-   "id": "h0b842943",
-   "he": "היא",
-   "pointed": "הִיא",
-   "en": "she, it"
+   "id": "h1561ca15",
+   "he": "עבר",
+   "pointed": "עָבַר",
+   "en": "to pass, to cross"
   },
   {
    "id": "hc30c99f6",
    "he": "חכה",
    "pointed": "חִכָּה",
    "en": "to wait, wait for"
+  },
+  {
+   "id": "h10798813",
+   "he": "למד",
+   "pointed": "לָמַד",
+   "en": "to learn, to study"
+  },
+  {
+   "id": "ha4595016",
+   "he": "שוטר",
+   "pointed": "שׁוֹטֵר",
+   "en": "policeman, cop"
+  },
+  {
+   "id": "he5c23387",
+   "he": "אמת",
+   "pointed": "אֱמֶת",
+   "en": "truth"
+  },
+  {
+   "id": "hfd4bf43b",
+   "he": "זכר",
+   "pointed": "זָכַר",
+   "en": "to remember"
+  },
+  {
+   "id": "hdee3e527",
+   "he": "אנחנו",
+   "pointed": "אֲנַחְנוּ",
+   "en": "we"
+  },
+  {
+   "id": "h3676c260",
+   "he": "נשא",
+   "pointed": "נָשָׂא",
+   "en": "to lift"
   },
   {
    "id": "hfe4ebf2c",
@@ -1159,22 +1159,22 @@
    "en": "to tilt, slant"
   },
   {
-   "id": "h2f9c8fe9",
-   "he": "זרע",
-   "pointed": "זֶרַע",
-   "en": "seed"
+   "id": "h6554536b",
+   "he": "פלשתי",
+   "pointed": "פְּלִשְׁתִּי",
+   "en": "a Philistine"
   },
   {
-   "id": "he5c23387",
-   "he": "אמת",
-   "pointed": "אֱמֶת",
-   "en": "truth"
+   "id": "h3b32dc48",
+   "he": "גוי",
+   "pointed": "גּוֹי",
+   "en": "gentile (a non-Jewish person), goy"
   },
   {
-   "id": "h6b853dd5",
-   "he": "אלהים",
-   "pointed": "אֱלֹהִים",
-   "en": "a god"
+   "id": "h95fec412",
+   "he": "אבל",
+   "pointed": "אָבַל",
+   "en": "to bewail"
   }
  ],
  "lines": [
@@ -1392,7 +1392,7 @@
    "id": "hagomel#2",
    "title": "Birkat Hagomel (after recovery or safe travel) and the congregation's response",
    "he": "מי שגמלך טוב הוא יגמלך כל טוב סלה",
-   "pointed": "מִי שֶׁגְּמָלְךָ טוֹב הוּא יִגְמָלְךָ כָּל־טוֹב סֶלָה",
+   "pointed": "מִי שֶׁגְּמָלְךָ טוֹב הוּא יִגְמָלְךָ כָּל טוֹב סֶלָה",
    "en": "From: Birkat Hagomel (after recovery or safe travel) and the congregation's response"
   },
   {

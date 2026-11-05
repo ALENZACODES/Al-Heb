@@ -82,6 +82,21 @@ const median = (ids, byId) => {
   return r.length ? r[Math.floor(r.length / 2)] : 0;
 };
 
+export const ADD = '(add)';
+export const RERANK = '(rerank)';
+const levelOf = (rank) => (rank <= 600 ? 'A1' : rank <= 1800 ? 'A2' : rank <= 3600 ? 'B1' : 'B2'); // same bands as build_words.mjs POLICY.levelBands
+const priorityOf = (w) => Math.min(w.modernRank ?? Infinity, 1.5 * (w.readRank ?? Infinity));
+const clone = (o) => JSON.parse(JSON.stringify(o));
+
+/** The ranking rule of build_words.mjs: sort by priority = min(modernRank, 1.5 * readRank); ties keep the old order
+ *  (a record without an old rank goes after the ranked ones with the same priority), then id. A record takes part when it has a
+ *  frequencyRank or a modernRank/readRank (a phrasebook or lesson item has neither and stays unranked). Ranks are contiguous from 1. */
+export function plannedRanks(words) {
+  const part = words.filter((w) => w.frequencyRank != null || w.modernRank != null || w.readRank != null);
+  part.sort((a, b) => priorityOf(a) - priorityOf(b) || (a.frequencyRank ?? Infinity) - (b.frequencyRank ?? Infinity) || (a.id < b.id ? -1 : 1));
+  return new Map(part.map((w, i) => [w.id, i + 1]));
+}
+
 /** Plan + (optionally) write. Returns {changes, conflicts, already, files}. */
 export function applyCorrections(root = ROOT, { dry = false } = {}) {
   const spec = rd(root, CORRECTIONS_PATH);
@@ -89,10 +104,16 @@ export function applyCorrections(root = ROOT, { dry = false } = {}) {
   const wordsDoc = rd(root, 'data/vocab/words.json');
   const byId = new Map(wordsDoc.words.map((w) => [w.id, w]));
   const report = { applied: [], already: [], conflicts: [], files: {} };
-  const todoSet = new Map(); const todoRemove = new Set();
+  const todoSet = new Map(); const todoRemove = new Set(); const todoAdd = []; let rerank = null;
   const eq = (a, b) => JSON.stringify(a) === JSON.stringify(b);
   for (const c of list) {
     const w = byId.get(c.id);
+    if (c.field === RERANK) { rerank = c; continue; }
+    if (c.field === ADD) {
+      if (w) report.already.push(c); // the record exists: nothing to add (later edits of it are separate corrections)
+      else { todoAdd.push(c); report.applied.push(c); }
+      continue;
+    }
     if (c.field === REMOVE) {
       if (!w) { report.already.push(c); continue; }
       if (w.he === c.old.he && w.pos === c.old.pos && w.frequencyRank === c.old.frequencyRank) { todoRemove.add(c.id); report.applied.push(c); } else report.conflicts.push({ ...c, current: { he: w.he, pos: w.pos, frequencyRank: w.frequencyRank } });
@@ -106,54 +127,77 @@ export function applyCorrections(root = ROOT, { dry = false } = {}) {
 
   const touchWord = (w) => { if (todoSet.has(w.id)) for (const [f, v] of Object.entries(todoSet.get(w.id))) setF(w, f, v); return w; };
   const note = (f, n) => { report.files[f] = n; };
-  // words.json
+  // words.json: removals, field sets, additions
   const before = wordsDoc.words.length;
   wordsDoc.words = wordsDoc.words.filter((w) => !todoRemove.has(w.id)).map(touchWord);
+  for (const c of todoAdd) { const r = clone(c.new); r.id = c.id; wordsDoc.words.push(r); }
+  // the (rerank) step: ranks and levels follow the build rule; the array is kept in rank order (ranked records, then the rest in their old order)
+  const oldRank = new Map(wordsDoc.words.map((w) => [w.id, w.frequencyRank]));
+  let rankChanged = 0;
+  if (rerank) {
+    const plan = plannedRanks(wordsDoc.words);
+    for (const w of wordsDoc.words) {
+      const r = plan.get(w.id);
+      if (r !== undefined && (w.frequencyRank !== r || w.level !== levelOf(r))) { w.frequencyRank = r; w.level = levelOf(r); rankChanged++; }
+    }
+    const ranked = wordsDoc.words.filter((w) => w.frequencyRank != null).sort((a, b) => a.frequencyRank - b.frequencyRank);
+    wordsDoc.words = [...ranked, ...wordsDoc.words.filter((w) => w.frequencyRank == null)];
+    if (rankChanged) report.applied.push(rerank); else report.already.push(rerank);
+  }
   wordsDoc.count = wordsDoc.words.length;
-  note('data/vocab/words.json', { records: wordsDoc.words.length, removed: before - wordsDoc.words.length, edited: todoSet.size });
+  note('data/vocab/words.json', { records: wordsDoc.words.length, removed: before - (wordsDoc.words.length - todoAdd.length), added: todoAdd.length, edited: todoSet.size, rankChanged });
   const newById = new Map(wordsDoc.words.map((w) => [w.id, w]));
-  // pack copies
+  // pack copies: each pack file holds exact copies of its words.json records
   const packDir = path.join(root, 'data/vocab/packs');
   const packWrites = [];
-  let packEdits = 0; let packRemovals = 0; let packFiles = 0;
+  let packEdits = 0; let packRemovals = 0; let packFiles = 0; let packAdds = 0;
+  const addByPack = new Map(); for (const c of todoAdd) { const k = newById.get(c.id).pack; (addByPack.get(k) || addByPack.set(k, []).get(k)).push(c.id); }
   for (const f of fs.readdirSync(packDir).filter((x) => x.endsWith('.json')).sort()) {
     const p = JSON.parse(fs.readFileSync(path.join(packDir, f), 'utf8'));
     if (!Array.isArray(p.words)) continue; // vocab5k tier files
     packFiles++;
     const n0 = p.words.length;
-    let changed = false;
-    p.words = p.words.filter((w) => !todoRemove.has(w.id)).map((w) => { if (todoSet.has(w.id)) { changed = true; packEdits++; return touchWord(w); } return w; });
-    if (p.words.length !== n0) { changed = true; packRemovals += n0 - p.words.length; }
-    if (changed) packWrites.push([`data/vocab/packs/${f}`, p]);
+    const kept = p.words.filter((w) => !todoRemove.has(w.id));
+    packRemovals += n0 - kept.length;
+    const next = [...kept.map((w) => clone(newById.get(w.id))), ...(addByPack.get(p.pack) || []).map((id) => clone(newById.get(id)))];
+    packAdds += (addByPack.get(p.pack) || []).length;
+    if (JSON.stringify(next) !== JSON.stringify(p.words)) { packEdits += next.filter((w, i) => JSON.stringify(w) !== JSON.stringify(p.words[i])).length; p.words = next; packWrites.push([`data/vocab/packs/${f}`, p]); }
   }
-  note('data/vocab/packs/*.json', { packFiles, filesChanged: packWrites.length, wordEdits: packEdits, wordRemovals: packRemovals });
-  // packs.json
+  note('data/vocab/packs/*.json', { packFiles, filesChanged: packWrites.length, wordEdits: packEdits, wordRemovals: packRemovals, wordAdds: packAdds });
+  // packs.json: wordIds, size, medianRank and level follow the records
   const packsDoc = rd(root, 'data/vocab/packs.json');
   let packsChanged = 0;
   for (const k of packsDoc.packs) {
-    if (!k.wordIds.some((i) => todoRemove.has(i))) continue;
-    k.wordIds = k.wordIds.filter((i) => !todoRemove.has(i)); k.size = k.wordIds.length; k.medianRank = median(k.wordIds, newById); packsChanged++;
+    const snap = JSON.stringify([k.wordIds, k.size, k.medianRank, k.level]);
+    k.wordIds = [...k.wordIds.filter((i) => !todoRemove.has(i)), ...(addByPack.get(k.id) || [])];
+    k.size = k.wordIds.length; k.medianRank = median(k.wordIds, newById);
+    if (rerank || todoRemove.size) k.level = levelOf(k.medianRank || 1);
+    if (JSON.stringify([k.wordIds, k.size, k.medianRank, k.level]) !== snap) packsChanged++;
   }
   note('data/vocab/packs.json', { packsChanged });
-  // index.json
+  // index.json: rows follow words.json order; only the columns a correction can touch are rewritten on an existing row
   const indexDoc = rd(root, 'data/vocab/index.json');
-  const tcol = indexDoc.fields.indexOf('translit');
+  const col = (n) => indexDoc.fields.indexOf(n);
   const n1 = indexDoc.rows.length;
-  indexDoc.rows = indexDoc.rows.filter((r) => !todoRemove.has(r[0]));
+  const rowOf = new Map(indexDoc.rows.filter((r) => !todoRemove.has(r[0])).map((r) => [r[0], r]));
   let rowEdits = 0;
-  for (const r of indexDoc.rows) if (todoSet.has(r[0]) && 'translit' in todoSet.get(r[0])) { r[tcol] = todoSet.get(r[0]).translit; rowEdits++; }
-  // other edited fields that index.json carries as a column (for example the English gloss "en")
-  for (const col of indexDoc.fields) {
-    if (col === 'translit' || col === 'id') continue;
-    const ci = indexDoc.fields.indexOf(col);
-    for (const r of indexDoc.rows) if (todoSet.has(r[0]) && col in todoSet.get(r[0])) { r[ci] = todoSet.get(r[0])[col]; rowEdits++; }
+  for (const [id, r] of rowOf) {
+    const w = newById.get(id);
+    for (const n of ['pos', 'level', 'frequencyRank']) if (col(n) >= 0 && !eq(r[col(n)], w[n] ?? null)) { r[col(n)] = w[n] ?? null; rowEdits++; }
+    if (todoSet.has(id)) for (const [fld, v] of Object.entries(todoSet.get(id))) if (fld !== 'frequencyRank' && col(fld) >= 0 && r[col(fld)] !== v) { r[col(fld)] = v; rowEdits++; }
   }
-  note('data/vocab/index.json', { rowsRemoved: n1 - indexDoc.rows.length, rowsEdited: rowEdits });
+  for (const c of todoAdd) {
+    const w = newById.get(c.id);
+    const vals = { id: w.id, he: w.he, heUnpointed: w.heUnpointed, en: w.en + (w.alt && w.alt.length ? '; ' + w.alt.join('; ') : ''), pos: w.pos, level: w.level, track: w.track, topic: w.topic, pack: w.pack, frequencyRank: w.frequencyRank ?? null, unlockLesson: w.unlockLesson ?? null, translit: w.translit ?? null };
+    rowOf.set(c.id, indexDoc.fields.map((n) => vals[n] ?? null));
+  }
+  indexDoc.rows = wordsDoc.words.map((w) => rowOf.get(w.id)).filter(Boolean);
+  note('data/vocab/index.json', { rowsRemoved: n1 - (indexDoc.rows.length - todoAdd.length), rowsAdded: todoAdd.length, rowsEdited: rowEdits });
   // meta.json
   const metaDoc = rd(root, 'data/vocab/meta.json');
-  const delta = before - wordsDoc.words.length;
-  if (delta) { metaDoc.counts.total -= delta; metaDoc.counts.words -= delta; }
-  note('data/vocab/meta.json', { countsTotalDelta: -delta });
+  const delta = wordsDoc.words.length - before;
+  if (delta) { metaDoc.counts.total += delta; metaDoc.counts.words += delta; }
+  note('data/vocab/meta.json', { countsTotalDelta: delta });
 
   if (!dry) {
     wr(root, 'data/vocab/words.json', wordsDoc);

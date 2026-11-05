@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { unpoint, shownWord, spokenForm, hasDivineName, wordsOfLine, pointCount } from '../src/torahread/pointing.js';
+import { unpoint, shownWord, spokenForm, hasDivineName, wordsOfLine, wordsWithStops, pointCount } from '../src/torahread/pointing.js';
 import { loadTorahRead } from '../src/torahread/data.js';
 
 const J = (p) => JSON.parse(readFileSync(new URL('../' + p, import.meta.url), 'utf8'));
@@ -97,4 +97,11 @@ test('trope.json: explainer present, marked unreviewed, points a beginner to a c
   const t = J('data/torahread/trope.json');
   assert.equal(t.reviewed, false);
   assert.ok(t.whyNotHere.length >= 3 && t.whatToDo.some((x) => /cantor/i.test(x)));
+});
+
+test('wordsWithStops: same words as wordsOfLine, and says which word the source gives a sof pasuq', () => {
+  const line = 'שְׁמַע יִשְׂרָאֵל אֶחָד׃';
+  assert.deepEqual(wordsWithStops(line).map((x) => x.word), wordsOfLine(line));
+  assert.deepEqual(wordsWithStops(line).map((x) => x.stop), [false, false, true]);
+  assert.deepEqual(wordsWithStops('בְּרֵאשִׁית בָּרָא').map((x) => x.stop), [false, false]);
 });

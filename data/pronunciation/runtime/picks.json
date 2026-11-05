@@ -62,8 +62,8 @@
    "gloss": "used to introduce a semantically definite direct object"
   },
   {
-   "he": "יוֹם",
-   "gloss": "Day"
+   "he": "כָּל",
+   "gloss": "all, whole, everything"
   },
   {
    "he": "עָבַד",
@@ -106,28 +106,32 @@
    "gloss": "to know (a fact)"
   },
   {
-   "he": "כֵּן",
-   "gloss": "yes"
-  },
-  {
-   "he": "עוֹלָם",
-   "gloss": "world"
-  },
-  {
    "he": "אָמַר",
    "gloss": "to say, tell"
+  },
+  {
+   "he": "כֵּן",
+   "gloss": "yes"
   },
   {
    "he": "אֶרֶץ",
    "gloss": "country, land"
   },
   {
-   "he": "עָשָׂה",
-   "gloss": "to do (to perform an action, to accomplish a thing)"
+   "he": "עוֹלָם",
+   "gloss": "world"
   },
   {
    "he": "אָכַל",
    "gloss": "to eat"
+  },
+  {
+   "he": "עָשָׂה",
+   "gloss": "to do (to perform an action, to accomplish a thing)"
+  },
+  {
+   "he": "לְ־",
+   "gloss": "to"
   },
   {
    "he": "שִׁלֵּם",
@@ -135,7 +139,7 @@
   },
   {
    "he": "יֶלֶד",
-   "gloss": "a"
+   "gloss": "child, a kid, a boy"
   },
   {
    "he": "יָכֹל",
@@ -146,8 +150,8 @@
    "gloss": "there is or are"
   },
   {
-   "he": "אֱלוֹהַּ",
-   "gloss": "a god"
+   "he": "יוֹם",
+   "gloss": "day"
   },
   {
    "he": "חָבֵר",

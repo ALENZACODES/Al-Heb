@@ -14,8 +14,8 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const DOCS = join(root, 'docs', 'workbook'); const ASSETS = join(root, 'assets', 'workbook');
 const readJson = (p, d) => (existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : d);
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-export const SET_ORDER = ['firstday', 'cursive-words', 'niqqud', 'readaloud', 'flashcards', 'flashcards-light', 'answer-key'];
-const SET_TITLE = { firstday: 'First 10 minutes', 'cursive-words': 'Cursive words (27 letter forms)', niqqud: 'Vowel signs (niqqud)', readaloud: 'Read-aloud practice (Siddur phrases)', flashcards: 'Vocabulary flashcards (5,000 words, cut-out cards)', 'flashcards-light': 'Vocabulary flashcards, lighter variant (first 1,000 words)', 'answer-key': 'Teacher answer key' };
+export const SET_ORDER = ['firstday', 'cursive-words', 'niqqud', 'readaloud', 'flashcards', 'flashcards-light', 'flashcards-letters', 'memory-chain', 'answer-key'];
+const SET_TITLE = { firstday: 'First 10 minutes', 'cursive-words': 'Cursive words (27 letter forms)', niqqud: 'Vowel signs (niqqud)', readaloud: 'Read-aloud practice (Siddur phrases)', flashcards: 'Vocabulary flashcards (5,000 words, cut-out cards)', 'flashcards-light': 'Vocabulary flashcards, lighter variant (first 1,000 words)', 'flashcards-letters': 'Letter flashcards (27 cut-out cards, memory chain)', 'memory-chain': 'Memory chain poster (one page, 27 letters)', 'answer-key': 'Teacher answer key' };
 
 /** Count pages in a PDF without a PDF library: /Type /Page objects (not /Pages). */
 export const pdfPageCount = (file) => (readFileSync(file).toString('latin1').match(/\/Type\s*\/Page[^s]/g) || []).length;

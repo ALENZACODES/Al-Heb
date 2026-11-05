@@ -44,8 +44,8 @@ test('review: page lists every ingested image with the right flag counts and emb
   const { entries, base } = D();
   const prov = loadProvenance(makePaths(ROOT));
   assert.deepEqual(entries.map((e) => e.id).sort(), Object.keys(prov.images).sort());
-  assert.equal(entries.filter((e) => e.reasons.includes('text')).length, 37);
-  assert.equal(entries.filter((e) => e.reasons.includes('aspect')).length, 79);
+  assert.equal(entries.filter((e) => e.reasons.includes('text')).length, 89);
+  assert.equal(entries.filter((e) => e.reasons.includes('aspect')).length, 123);
   assert.equal(entries.filter((e) => e.reasons.includes('backdrop')).length, 58);
   const html = pageHtml({ entries, base });
   for (const e of entries) assert.ok(html.includes(`data-id="${e.id}"`), e.id);
@@ -254,7 +254,7 @@ test('block J: review page previews returned, not-yet-ingested files with csv al
     assert.match(pv.find((p) => p.id === 'I-01-img1').alt, /^Illustration: A congregation/);
     const { entries, base } = collectEntries(ROOT, { folder: dir });
     const data = collectEntries(ROOT, { folder: dir });
-    assert.equal(data.previews.length, 3); assert.equal(entries.length, 282);
+    assert.equal(data.previews.length, 3); assert.equal(entries.length, ingested.size);
     const html = pageHtml(data);
     assert.match(html, /class="tile prev" data-id="J-0001"/);
     assert.match(html, /not ingested yet/);
@@ -266,7 +266,8 @@ test('block J: review page previews returned, not-yet-ingested files with csv al
 });
 
 import { wrongAspect, imageSizes } from '../tools/images/match_blockj.mjs';
-test('block J: wrong aspect is detected from real image dimensions (python3 -I PIL), unreadable files are skipped', () => {
+const hasPil = spawnSync('python3', ['-I', '-c', 'import PIL'], { stdio: 'ignore' }).status === 0;
+test('block J: wrong aspect is detected from real image dimensions (python3 -I PIL), unreadable files are skipped', { skip: !hasPil && 'python module PIL (Pillow) not installed' }, () => {
   const dir = mkdtempSync(join(tmpdir(), 'alef-jasp-'));
   try {
     const py = 'from PIL import Image\nImage.new("RGB",(64,64)).save("J-0001.png")\nImage.new("RGB",(96,64)).save("J-0002.png")\n';

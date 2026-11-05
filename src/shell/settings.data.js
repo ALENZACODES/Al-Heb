@@ -37,7 +37,7 @@ export function storageNotice(s) {
 }
 
 /**
- * Delete everything ALEF keeps on this device. Each step is independent and reported; one failing does not stop the others.
+ * Delete everything ALEF keeps on this device (the offline app copy stays unless the service worker is removed). Each step is independent and reported; one failing does not stop the others.
  * @param {{store:any, caches?:any, navigator?:any, storage?:any, unregisterServiceWorker?:boolean}} o
  * @returns {Promise<{store:boolean, extraKeys:number, caches:number, serviceWorkers:number, errors:string[]}>}
  */
@@ -50,7 +50,9 @@ export async function wipeAllData(o) {
       for (const k of names) { st.removeItem(k); rep.extraKeys++; }
     }
   } catch (e) { rep.errors.push('local flags: ' + (/** @type {any} */ (e)?.message || e)); }
-  try { const c = o.caches; if (c?.keys) { for (const k of await c.keys()) { if (await c.delete(k)) rep.caches++; } } } catch (e) { rep.errors.push('offline copies: ' + (/** @type {any} */ (e)?.message || e)); }
+  // The worker's caches (alef-shell-*: the app itself; alef-runtime-*: static audio, images and word-clip lists) hold no learner
+  // data, so they stay unless the worker is being removed too: wiping them would leave the installed app unable to open offline.
+  try { const c = o.caches; if (c?.keys) { for (const k of await c.keys()) { if (!o.unregisterServiceWorker && /^alef-(shell|runtime)-/.test(k)) continue; if (await c.delete(k)) rep.caches++; } } } catch (e) { rep.errors.push('offline copies: ' + (/** @type {any} */ (e)?.message || e)); }
   if (o.unregisterServiceWorker) {
     try { const sw = o.navigator?.serviceWorker; const regs = sw?.getRegistrations ? await sw.getRegistrations() : []; for (const r of regs) { if (await r.unregister()) rep.serviceWorkers++; } }
     catch (e) { rep.errors.push('service worker: ' + (/** @type {any} */ (e)?.message || e)); }

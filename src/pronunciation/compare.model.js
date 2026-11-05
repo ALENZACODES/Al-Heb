@@ -9,8 +9,8 @@ export const STORE_KEY = 'compare.v1';
 export const NOTICE = 'Rule-generated and unverified: these readings come from spelling rules applied to the pointed text. No native speaker has checked them, no recording exists, and real speakers vary inside each tradition. Treat them as a study aid, not as a reference.';
 
 const TAAM = /[֑-ֽ֯׀׃]/g; // accents, meteg, paseq, sof pasuq
-/** Lookup key: accents removed, canonical (NFD) mark order. */
-export const wordKey = (s) => String(s).replace(TAAM, '').normalize('NFD');
+/** Lookup key: accents removed, maqaf removed (so a bound prefix such as לְ־ finds its entry לְ), canonical (NFD) mark order. */
+export const wordKey = (s) => String(s).replace(TAAM, '').replace(/־/g, '').normalize('NFD');
 
 /** FNV-1a (32-bit) over UTF-16 code units; used to pick the lookup shard. */
 export function shardOf(key, n) {

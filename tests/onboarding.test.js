@@ -16,7 +16,7 @@ const routeOf = (href) => matchRoute(href).route;
 test('stage 1: three answers map to the agreed routes and are stored under onboarding.v1', () => {
   assert.equal(M.STORE_KEY, 'onboarding.v1');
   assert.deepEqual(M.LETTER_ANSWERS.map((a) => [a.label, a.start]), [
-    ['No, start from the beginning', '/firstday'], ['Some', '/placement'], ['Yes, I read with vowels', '/placement']]);
+    ['No, start from the beginning', '/firstday'], ['Some', '/placement'], ['Yes, I can read with vowel marks', '/placement']]);
   for (const a of M.LETTER_ANSWERS) assert.equal(routeOf('#' + a.start)?.name, a.start.slice(1));
   const r = M.answerLetters(null, 'none', '2026-11-04T00:00:00.000Z');
   assert.equal(r.v, 1); assert.equal(r.letters, 'none'); assert.equal(r.start, '/firstday'); assert.equal(r.step, 'congregation');
@@ -111,7 +111,7 @@ const check = async (root, name, value) => { // mimic the browser: the picked ra
   const i = root.queryAll(`input[name="${name}"][value="${value}"]`)[0]; assert.ok(i, `${name}=${value}`);
   for (const o of root.queryAll(`input[name="${name}"]`)) o.checked = o === i;
   await i.fire('change'); return i; };
-const ready = (root) => waitFor(() => !/Loading/.test(root.textContent) && (root.querySelector('#ob-start') || root.querySelector('fieldset') || /could not be loaded/.test(root.textContent)), { message: 'onboarding view never finished rendering' });
+const ready = (root) => waitFor(() => !/Loading/.test(root.textContent) && (root.querySelector('#ob-start') || root.querySelector('fieldset') || /did not load/.test(root.textContent)), { message: 'onboarding view never finished rendering' });
 const submit = (root, formId) => root.querySelector('#' + formId).fire('submit');
 const statusText = (root) => root.querySelector('#ob-status').textContent;
 
@@ -124,8 +124,11 @@ test('view, first run: the letters question with three labelled radios; Continue
   assert.deepEqual(rs.map((r) => r.attrs.value), ['none', 'some', 'vowels']);
   for (const r of rs) { const l = labelFor(root, r.attrs.id); assert.ok(l, r.attrs.id); assert.ok(l.textContent.length > 3); }
   const labels = rs.map((r) => labelFor(root, r.attrs.id).textContent);
-  assert.ok(labels[0].startsWith('No, start from the beginning') && labels[1].startsWith('Some') && labels[2].startsWith('Yes, I read with vowels'), labels.join(' | '));
-  assert.equal(root.queryAll('fieldset legend').length, 1);
+  assert.ok(labels[0].startsWith('No, start from the beginning') && labels[1].startsWith('Some') && labels[2].startsWith('Yes, I can read with vowel marks'), labels.join(' | '));
+  assert.equal(root.queryAll('fieldset legend').length, 2, 'goal question then letters question');
+  assert.match(root.textContent, /What do you want to do first\?/);
+  assert.deepEqual(radios(root, 'goal').map((r) => r.attrs.value), ['read', 'israel', 'both']);
+  assert.ok(radios(root, 'goal')[0].attrs.checked !== undefined && radios(root, 'goal')[0].attrs.checked !== null, 'the current goal (read by default) is preselected');
   await submit(root, 'ob-form-letters');
   assert.match(statusText(root), /Choose one answer/);
   assert.equal(store.m[M.STORE_KEY], undefined); assert.equal(settings.get('onboarded'), false);
@@ -142,7 +145,7 @@ test('view: "No" stores onboarding.v1 with start /firstday, marks onboarded, and
   assert.equal(globalThis.__focus?.attrs.id, 'view-title');
   assert.match(root.querySelector('#ob-skip-now').attrs.href, /^#\/firstday$/);
 });
-test('view: "Some" and "Yes, I read with vowels" both lead to #/placement', async () => {
+test('view: "Some" and "Yes, I can read with vowel marks" both lead to #/placement', async () => {
   for (const v of ['some', 'vowels']) {
     const { root, store, ctx } = mk();
     mount(root, ctx); await ready(root);
@@ -169,8 +172,8 @@ test('view, stage 2: Reform suggests Sephardi; an explicit Ashkenazi pick is wri
   await submit(root, 'ob-form-congregation');
   assert.equal(settings.get('congregation'), 'ashkenazi');
   assert.equal(store.m[M.STORE_KEY].denomination, 'reform');
-  assert.equal(store.m[M.STORE_KEY].step, 'minutes');
-  assert.ok(root.querySelector('#ob-form-minutes'));
+  assert.equal(store.m[M.STORE_KEY].step, 'plan', 'Continue goes straight to the plan card; minutes and goal keep their defaults');
+  assert.ok(root.querySelector('#ob-start'));
 });
 test('view, stage 2: Skip leaves the pronunciation setting untouched', async () => {
   const { root, settings, ctx } = mk({ [M.STORE_KEY]: rec('some', null, { step: 'congregation' }) }, { congregation: 'israeli' });
@@ -178,7 +181,8 @@ test('view, stage 2: Skip leaves the pronunciation setting untouched', async () 
   await check(root, 'denomination', 'conservative');
   await root.querySelector('#ob-congregation-skip').click();
   assert.equal(settings.get('congregation'), 'israeli');
-  assert.ok(root.querySelector('#ob-form-minutes'));
+  assert.ok(root.querySelector('#ob-start'));
+  assert.ok(root.querySelector('#ob-change-minutes'), 'minutes stay reachable from the plan card');
 });
 test('view, stage 3: minutes choice builds the week card; links are real routes; start button goes to the stage 1 route', async () => {
   const { root, store, ctx } = mk({ [M.STORE_KEY]: rec('none', null, { step: 'minutes' }) });
@@ -188,7 +192,7 @@ test('view, stage 3: minutes choice builds the week card; links are real routes;
   await check(root, 'minutes', '15'); await submit(root, 'ob-form-minutes');
   assert.equal(store.m[M.STORE_KEY].minutesPerDay, 15); assert.equal(store.m[M.STORE_KEY].step, 'plan');
   assert.equal(store.m['onboarding.v1.dailyGoal'], 15, 'minutes chosen here are the Today card study goal');
-  assert.match(card0Text(root), /pacing guide/);
+  assert.match(card0Text(root), /one lesson a day/);
   const card = root.querySelector('section.ob-plan');
   assert.ok(card); assert.ok(card.textContent.includes(DRAFT_NOTE));
   assert.equal(card.queryAll('ol.ob-days li strong').length, 7);
@@ -237,7 +241,7 @@ test('view: when the plan data fails to load the learner can still start, and th
   ctx.onboardingData = Promise.reject(new Error('boom'));
   mount(root, ctx); await ready(root);
   assert.equal(root.querySelector('#ob-start').attrs.href, '#/firstday');
-  assert.match(root.textContent, /could not be loaded/);
+  assert.match(root.textContent, /did not load/);
   assert.ok(!root.querySelector('section.ob-plan'));
 });
 
@@ -253,4 +257,42 @@ test('buildPlan: Israel goal plans israel-track lessons, no letters start, no re
   assert.equal(p.startLesson, first.id);
   assert.ok(p.days[0].items.every((i) => i.kind === 'lesson'));
   assert.ok(p.days.flatMap((d) => d.items).filter((i) => i.kind === 'lesson').every((i) => D.lessons.find((l) => l.id === i.lesson).track === 'israel'));
+});
+
+test('plan copy: the default note names the first lesson (not an id), and the goal line says goal vs lesson minutes', () => {
+  const p = M.buildPlan({ record: rec('none'), lessons: D.lessons, plans: D.plans, goal: 'israel' });
+  const first = D.lessons.find((l) => l.id === p.startLesson);
+  assert.ok(p.note.includes(`"${first.title}"`), p.note); assert.doesNotMatch(p.note, /\b(il|r)\d\d\b/);
+});
+test('view, plan: an Israel goal starts with the lesson title, says so under "Starting point", and offers to change the goal', async () => {
+  const { root, ctx } = mk({ [M.STORE_KEY]: rec('none', 10) }, { goal: 'israel' });
+  mount(root, ctx); await ready(root);
+  const first = D.lessons.find((l) => l.track === 'israel');
+  assert.equal(root.querySelector('#ob-start').textContent, `Start: ${first.title}`);
+  assert.equal(root.querySelector('#ob-start').attrs.href, '#/learn?lesson=' + first.id);
+  assert.match(root.textContent, new RegExp(`Starting point: ${first.title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\.`));
+  assert.match(root.querySelector('#ob-change-minutes').textContent, /goal or minutes/);
+  assert.match(root.querySelector('section.ob-plan').textContent, /Your goal is 10 minutes a day\. The lessons below add up to/);
+});
+
+test('view, first screen goal: Israel sets Israeli pronunciation and skips the Sephardi/Ashkenazi step', async () => {
+  const { root, store, settings, ctx } = mk();
+  mount(root, ctx); await ready(root);
+  await check(root, 'goal', 'israel'); await check(root, 'letters', 'none'); await submit(root, 'ob-form-letters');
+  assert.equal(settings.get('goal'), 'israel'); assert.equal(settings.get('congregation'), 'israeli');
+  assert.ok(!root.querySelector('#ob-form-congregation'), 'pronunciation step is skipped');
+  assert.equal(store.m[M.STORE_KEY].step, 'plan');
+  await waitFor(() => root.querySelector('#ob-start'));
+  assert.match(root.textContent, /Israeli pronunciation/); assert.doesNotMatch(root.textContent, /Sephardi pronunciation/);
+  assert.ok(root.querySelector('#ob-change-congregation'), 'still changeable');
+});
+test('view, first screen goal: community and both still ask the pronunciation question', async () => {
+  for (const g of ['read', 'both']) {
+    const { root, settings, ctx } = mk();
+    mount(root, ctx); await ready(root);
+    await check(root, 'goal', g); await check(root, 'letters', 'none'); await submit(root, 'ob-form-letters');
+    assert.equal(settings.get('goal'), g);
+    assert.ok(root.querySelector('#ob-form-congregation'), g);
+    assert.equal(settings.get('congregation'), 'sephardi');
+  }
 });

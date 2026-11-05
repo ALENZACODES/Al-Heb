@@ -1,7 +1,7 @@
 /* ALEF service worker. Precache list comes from the generated precache-manifest.js
    (node tools/build-precache.mjs). Strategies:
    - navigation: network first, fall back to cached index.html, then offline.html
-   - audio/images: cache first, filled at runtime (Range requests bypass the cache; see docs/ARCHITECTURE.md)
+   - audio/images/fonts: cache first, filled at runtime (audio in alef-runtime-v1; the rest in the per-version alef-data-<version>, dropped on activate) (Range requests bypass the cache; see docs/ARCHITECTURE.md)
    - data/audio/manifest-words-*.json (lazy per-tradition word shards, NOT precached): stale-while-revalidate into the runtime cache,
      so the learner's own shard is available offline after first use; a plain network error when neither exists (never offline.html)
    - everything else same-origin: stale-while-revalidate
@@ -11,7 +11,9 @@
 importScripts('precache-manifest.js');
 const VERSION = self.ALEF_VERSION || 'dev';
 const SHELL = `alef-shell-${VERSION}`;
-const RUNTIME = 'alef-runtime-v1';
+const RUNTIME = 'alef-runtime-v1'; // audio clips only (cache first, kept across versions)
+const DATA = `alef-data-${VERSION}`;  // every other runtime-cached file (vocab shards, audio manifest, word shard, images, fonts): one cache per version
+const AUDIO = /\.(mp3|m4a|ogg|wav)$/i;
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(SHELL).then((c) => c.addAll(self.ALEF_PRECACHE || [])));
@@ -23,7 +25,9 @@ self.addEventListener('message', (event) => {
 });
 self.addEventListener('activate', (event) => {
   event.waitUntil((async () => {
-    for (const k of await caches.keys()) if (k.startsWith('alef-shell-') && k !== SHELL) await caches.delete(k);
+    for (const k of await caches.keys()) if ((k.startsWith('alef-shell-') && k !== SHELL) || (k.startsWith('alef-data-') && k !== DATA)) await caches.delete(k);
+    // older workers also put data/images in RUNTIME; those copies would win cache lookups and stay stale, so drop everything but audio clips
+    try { const c = await caches.open(RUNTIME); for (const r of await c.keys()) if (!AUDIO.test(new URL(r.url).pathname)) await c.delete(r); } catch { /* ignore */ }
     await self.clients.claim();
   })());
 });
@@ -47,7 +51,7 @@ self.addEventListener('fetch', (event) => {
   if (/\/data\/audio\/manifest-words-[a-z]+\.json$/.test(url.pathname)) {
     event.respondWith((async () => {
       const hit = await caches.match(req);
-      const net = fetch(req).then(async (res) => { if (res.ok) { const c = await caches.open(RUNTIME); c.put(req, res.clone()); } return res; }).catch(() => null);
+      const net = fetch(req).then(async (res) => { if (res.ok) { const c = await caches.open(DATA); c.put(req, res.clone()); } return res; }).catch(() => null);
       return hit || (await net) || Response.error();
     })());
     return;
@@ -56,14 +60,15 @@ self.addEventListener('fetch', (event) => {
     event.respondWith((async () => {
       const hit = await caches.match(req); if (hit) return hit;
       const res = await fetch(req);
-      if (res.ok) { const c = await caches.open(RUNTIME); c.put(req, res.clone()); }
+      if (res.ok) { const c = await caches.open(AUDIO.test(url.pathname) ? RUNTIME : DATA); c.put(req, res.clone()); }
       return res;
     })());
     return;
   }
   event.respondWith((async () => {
     const hit = await caches.match(req, { ignoreSearch: false });
-    const net = fetch(req).then(async (res) => { if (res.ok) { const c = await caches.open(hit ? SHELL : RUNTIME); c.put(req, res.clone()); } return res; }).catch(() => null);
+    const hitInData = hit && !!(await (await caches.open(DATA)).match(req));
+    const net = fetch(req).then(async (res) => { if (res.ok) { const c = await caches.open(hit && !hitInData ? SHELL : DATA); c.put(req, res.clone()); } return res; }).catch(() => null);
     return hit || (await net) || (await caches.match('offline.html')) || Response.error();
   })());
 });

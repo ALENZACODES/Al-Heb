@@ -21,7 +21,7 @@
    "id": "h4b81aad7",
    "he": "צָרִיךְ",
    "translit": "tzarikh",
-   "en": "Needing, in need of (something)",
+   "en": "needing, in need of (something)",
    "kind": "word",
    "audioId": "h4b81aad7",
    "source": "data/vocab/words.json"
@@ -39,7 +39,7 @@
    "id": "h5f280d64",
    "he": "בָּטוּחַ",
    "translit": "batuach",
-   "en": "Confident, sure, certain",
+   "en": "confident, sure, certain",
    "kind": "word",
    "audioId": "h5f280d64",
    "source": "data/vocab/words.json"

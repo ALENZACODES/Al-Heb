@@ -4,6 +4,9 @@
 //  - voice 'f' (Noa): arbitrary starting point; the learner picks and it persists. Both voices are first-class.
 //  - congregation 'sephardi': "Sephardi values" is the common pronunciation in American synagogues (contract).
 //  - israelTrack false: Torah/prayer reading track is the default; toggle adds the everyday-Israeli track.
+//  - gender null: the learner's own grammatical gender for first-person Hebrew forms ('m', 'f' or 'both' = show both forms). Unset by
+//    default and never guessed: nothing may fall back to a masculine form. One shared value, read by the gender drill, the Israel view
+//    and the pair cards; adopted once from the old per-feature keys (see adoptLegacyGender).
 //  - script 'print', theme 'auto', lat/lon null (candle-lighting location is opt-in).
 export const DEFAULTS = Object.freeze({
   voice: 'f',
@@ -14,31 +17,81 @@ export const DEFAULTS = Object.freeze({
   theme: 'auto',
   lat: null,
   lon: null,
+  gender: null,        // null (not chosen) | 'm' | 'f' | 'both'; see the comment above
   goal: 'read',        // read (synagogue) | israel | both; chosen at onboarding, drives the default Learn track
   onboarded: false,    // true once the first-run screen was completed or skipped
   browserVoiceAnyway: true, // let the browser voice (Israeli pronunciation) speak even when another tradition is selected; the UI flags it
   writeGodAsGd: false, // write the English divine name as "G-d" in UI and translation text (names.englishGod); a personal custom, off by default
   haptics: false,      // vibration on exercise feedback (exercises.session.js hapticsOn); opt-in, never under reduced motion
   soundEffects: false, // sound on exercise feedback (exercises.session.js soundOn); opt-in; needs ctx.sfx from the shell
+  // Calm and reading comfort (src/shell/comfort.js). All off or normal by default; none asks anything about the person.
+  calmMode: false,     // no animation, no sound effects, no vibration, no streak or timer pressure; one thing at a time
+  shortSession: false, // lessons are shown in small parts (about 2 to 3 minutes each) and your place is saved after every part
+  showStreak: true,    // false hides every streak line; progress is never affected
+  readFont: 'default', // 'default' (Heebo) | 'clear' (a system font stack; no download)
+  lineSpacing: 'normal', // 'normal' | 'relaxed' | 'wide'
+  letterSpacing: 'normal', // 'normal' | 'wide' | 'wider' (not applied to Hebrew)
+  textSize: 'normal',  // 'normal' | 'large' | 'larger' | 'largest' (steps of the root font size)
+  lineLength: 'normal', // 'normal' | 'narrow'
+  audioFree: false,    // true = this learner does not use audio: Listen buttons are hidden and listening-only questions are replaced by reading ones (src/shell/audiofree.js)
+  // Touch and movement (src/shell/motor.js). Lane: motor and physical.
+  targetSize: 'normal', // 'normal' | 'large': bigger buttons, links and fields (CSS variable --tap)
+  bottomActions: false, // true = the main buttons of a screen stay at the bottom, within thumb reach
+  untimed: false,       // true = no time limit anywhere (Word Sprint has no clock; Record and compare does not stop by itself)
+  confirmAnswers: false, // true = choosing an answer only marks it; a "Check answer" button submits it
+  keyShortcuts: true,   // false = the single-key shortcuts (1 to 4, S) are off
 });
 export const ENUMS = Object.freeze({
   voice: ['m', 'f'],
   congregation: ['israeli', 'sephardi', 'ashkenazi'],
   script: ['print', 'cursive'],
-  theme: ['auto', 'light', 'dark'],
+  theme: ['auto', 'light', 'dark', 'contrast', 'contrast-dark'], // 'contrast' = black on white, 'contrast-dark' = white on black (high-contrast options)
   goal: ['read', 'israel', 'both'],
+  readFont: ['default', 'clear'],
+  lineSpacing: ['normal', 'relaxed', 'wide'],
+  letterSpacing: ['normal', 'wide', 'wider'],
+  textSize: ['normal', 'large', 'larger', 'largest'],
+  lineLength: ['normal', 'narrow'],
+  targetSize: ['normal', 'large'],
 });
+export const GENDER_VALUES = Object.freeze(['m', 'f', 'both']);
 
-const BOOL_KEYS = new Set(['israelTrack', 'onboarded', 'browserVoiceAnyway', 'showUnapprovedImages', 'writeGodAsGd', 'haptics', 'soundEffects']);
+const BOOL_KEYS = new Set(['israelTrack', 'onboarded', 'browserVoiceAnyway', 'showUnapprovedImages', 'writeGodAsGd', 'haptics', 'soundEffects', 'calmMode', 'shortSession', 'showStreak', 'audioFree', 'bottomActions', 'untimed', 'confirmAnswers', 'keyShortcuts']);
 
 /** @param {string} key @param {any} v @returns {{ok:boolean,value?:any}} */
 export function validate(key, v) {
   if (!(key in DEFAULTS)) return { ok: false };
   if (key in ENUMS) return ENUMS[/** @type {keyof typeof ENUMS} */ (key)].includes(v) ? { ok: true, value: v } : { ok: false };
   if (BOOL_KEYS.has(key)) return typeof v === 'boolean' ? { ok: true, value: v } : { ok: false };
+  if (key === 'gender') return v === null || GENDER_VALUES.includes(v) ? { ok: true, value: v } : { ok: false };
   if (key === 'lat') return v === null || (typeof v === 'number' && v >= -90 && v <= 90) ? { ok: true, value: v } : { ok: false };
   if (key === 'lon') return v === null || (typeof v === 'number' && v >= -180 && v <= 180) ? { ok: true, value: v } : { ok: false };
   return { ok: false };
+}
+
+/**
+ * One-time adoption of the learner's gender from the older per-feature keys, in this order of trust:
+ *  1. gender.v1 .speaker (gender drill; may be 'both')   2. curriculum.gender .iAm (pair cards; explicit tap)
+ *  3. israel.prefs .iAm, only when it is 'f' (the Israel view saved 'm' as an untouched default, so an 'm' there is not a choice).
+ * Returns 'm' | 'f' | 'both' | null. Reads only; the old keys are left as they are.
+ * @param {{get:Function}} store
+ */
+export function adoptLegacyGender(store) {
+  const read = (k) => { try { return store.get(k, null); } catch { return null; } };
+  const a = read('gender.v1'); if (a && typeof a === 'object' && GENDER_VALUES.includes(a.speaker)) return a.speaker;
+  const b = read('curriculum.gender'); if (b && typeof b === 'object' && (b.iAm === 'm' || b.iAm === 'f')) return b.iAm;
+  const c = read('israel.prefs'); if (c && typeof c === 'object' && c.iAm === 'f') return 'f';
+  return null;
+}
+/** The shared learner gender from a view ctx: 'm' | 'f' | 'both' | null (not chosen, or no settings object). @param {any} ctx */
+export function learnerGender(ctx) {
+  const v = typeof ctx?.settings?.get === 'function' ? ctx.settings.get('gender') : null;
+  return GENDER_VALUES.includes(v) ? v : null;
+}
+/** Save the shared learner gender. Returns false when the ctx has no settings object (callers may then keep a local copy). @param {any} ctx @param {'m'|'f'|'both'|null} v */
+export function setLearnerGenderSetting(ctx, v) {
+  if (typeof ctx?.settings?.set !== 'function') return false;
+  return ctx.settings.set({ gender: v }).length === 0;
 }
 
 /** @param {{get:Function,set:Function}} store */
@@ -50,9 +103,15 @@ export function createSettings(store) {
     const out = {}; let saved = {};
     try { saved = store.get('settings', {}); } catch { saved = {}; }
     if (saved && typeof saved === 'object' && !Array.isArray(saved)) for (const [k, v] of Object.entries(saved)) { const r = validate(k, v); if (r.ok) out[k] = r.value; }
+    // learner gender: when the stored settings have no 'gender' key at all (first run of this version, or an older backup just restored),
+    // adopt it from the old keys. An explicit null (the learner reset it) is a stored choice and is not overridden.
+    if (!('gender' in out) && !(saved && typeof saved === 'object' && 'gender' in saved)) { const g = adoptLegacyGender(store); if (g) { out.gender = g; adopted = true; } }
     return out;
   };
+  let adopted = false;
+  const persistAdopted = () => { if (adopted) { adopted = false; try { store.set('settings', { ...values }); } catch { /* best effort */ } } };
   Object.assign(values, readStored());
+  persistAdopted();
   /** @type {Set<(all:Record<string,any>, changed:string[])=>void>} */
   const subs = new Set();
   const api = {
@@ -76,7 +135,7 @@ export function createSettings(store) {
     /** @param {(all:Record<string,any>, changed:string[])=>void} fn */
     subscribe(fn) { subs.add(fn); return () => subs.delete(fn); },
     /** Re-read from store (after backup import). */
-    reload() { values = { ...DEFAULTS, ...readStored() }; for (const x of subs) { try { x({ ...values }, Object.keys(values)); } catch {} } },
+    reload() { values = { ...DEFAULTS, ...readStored() }; persistAdopted(); for (const x of subs) { try { x({ ...values }, Object.keys(values)); } catch {} } },
   };
   // another tab changed settings (storage event) or storage was cleared/restored: re-read, never write back
   try { store.subscribe?.((k, _v, info) => { if ((k === 'settings' && info?.external) || k === '*') api.reload(); }); } catch { /* store without subscribe */ }

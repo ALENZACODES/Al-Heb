@@ -9,6 +9,15 @@
  "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
  "items": [
   {
+   "id": "pefce5ddb",
+   "he": "כָּל",
+   "translit": "kol",
+   "en": "all, whole, everything",
+   "kind": "word",
+   "audioId": "r32-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
    "id": "p876ae85e",
    "he": "לִי",
    "translit": "li",
@@ -24,15 +33,6 @@
    "en": "to you",
    "kind": "word",
    "audioId": "r14-w3",
-   "source": "data/vocab/words.json"
-  },
-  {
-   "id": "pefce5ddb",
-   "he": "כָּל",
-   "translit": "kol",
-   "en": "all",
-   "kind": "word",
-   "audioId": "r32-w1",
    "source": "data/vocab/words.json"
   },
   {

@@ -56,7 +56,7 @@ export function mount(root, ctx) {
         el("div", { class: "in-row" }, el("button", { type: "button", class: "btn secondary", id: "in-showagain", onclick: () => { force = true; render(); } }, "Show the install steps again")));
     } else {
       const card = el("div", { class: "in-card", id: "in-card", "data-mode": st.mode });
-      card.append(el("p", {}, "Put ALEF on your home screen so it opens like an app, works offline, and can remind you to study."));
+      card.append(el("p", {}, "Add ALEF to your home screen. It opens like an app, works offline, and can remind you to study."));
       if (st.mode === "prompt") {
         card.append(el("div", { class: "in-row" }, el("button", { type: "button", class: "btn", id: "in-install", onclick: async () => {
           const r = await doPrompt();

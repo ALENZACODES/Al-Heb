@@ -84,7 +84,7 @@ test("say it: pick through a full round, see explanations, score is saved with S
     const want = i % 2 === 0 ? "natural" : "stiff";
     await opts.find((b) => b.attrs["data-role"] === want).click(); await waitFor(() => (i % 2 === 0 ? /Natural\. / : /Correct Hebrew, but stiff/).test(root.text) && root.find((n) => n.attrs.id === "il-next").length > 0, { message: "(i % 2 === 0 ? /Natural\\. / : /Correct Hebrew, but stiff/).test(root.text) && root.find((n) => n.attrs.id === \"il-next\").length > 0" });
     assert.match(root.text, i % 2 === 0 ? /Natural\. / : /Correct Hebrew, but stiff/);
-    assert.match(root.text, /Wrong register: /); // explanations for all three are shown
+    assert.match(root.text, /Different register: /); // explanations for all three are shown
     const next = root.find((n) => n.attrs.id === "il-next")[0]; assert.ok(next); assert.equal(globalThis.__focused, next, "focus moves to Next");
     await next.click(); await waitFor(() => i === 7 ? /natural \(/.test(root.text) : btnsWith(root, "data-role").length === 3, { message: "next question or final score" });
   }
@@ -114,4 +114,17 @@ test("every interactive control is a real button or link with a name", async () 
 test("unmount removes the view; unknown section falls back to the overview", async () => {
   const { root, un } = await mountSec("nonsense");
   assert.match(root.text, /Register ladder/); un(); assert.equal(root.children.length, 0);
+});
+
+test("shared learner gender: unset or both shows both forms on speaker lines (never masculine by default); m or f shows one form; the control writes the setting", async () => {
+  const run = async (gender) => {
+    const root = new Node_("div"); const store = memStore(); const set = [];
+    const settings = { get: (k) => (k === "gender" ? gender : undefined), set: (p) => { set.push(p); return []; } };
+    const un = mount(root, { store, query: { sec: "ladder" }, settings, t: (k) => k }); await ready(root); return { root, set, un };
+  };
+  for (const g of [null, "both"]) { const { root, un } = await run(g); assert.match(root.text, /Forms for a man or a woman speaking/, String(g)); assert.doesNotMatch(root.text, /Form for a man speaking/, String(g)); assert.match(root.text, /If you are a woman:/); un(); }
+  const m = await run("m"); assert.match(m.root.text, /Form for a man speaking/); assert.doesNotMatch(m.root.text, /If you are a woman:/); m.un();
+  const f = await run("f"); assert.match(f.root.text, /Form for a woman speaking/); assert.doesNotMatch(f.root.text, /Forms for a man or a woman/); 
+  const both = btnsWith(f.root, "data-v").find((b) => b.getAttribute("data-v") === "both"); assert.ok(both, "Show both forms control exists"); await both.click();
+  assert.deepEqual(f.set.at(-1), { gender: "both" }); f.un();
 });

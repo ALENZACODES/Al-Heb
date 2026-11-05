@@ -6,6 +6,9 @@ reject if CER > --max-cer (default 0.10). Writes tools/tts/verify-report.csv (ov
   python3 tools/tts/verify.py --engine mock ...    # stdlib only; "transcribes" the mock tone back to the plan text it encodes
 
 What the gate does and does NOT prove: it catches clips where the speech is missing, truncated, repeated or says something else.
+Respelled clips (Sephardi / Ashkenazi, source tts-respelled) have NO speech check at all: their target is a Latin-letter sound word, not
+Hebrew, so a Hebrew transcript cannot be compared with it. They are only checked for length (not too short, not too long). A respelled clip
+that passes is "not obviously broken", nothing more; the report marks it gate=duration-only and a native listener must judge it.
 It does NOT prove the vowels are right (the transcript has no niqqud) and it does not judge accent or voice quality; a speech
 recogniser also errs on short isolated words. Anything accepted still needs a human listening sample (docs/voices/tts-evaluation-protocol.md).
 """
@@ -110,28 +113,34 @@ def main(argv=None):
         mp3 = os.path.join(a.work, 'mp3', 'audio', it['voice'], it['tradition'], it['kind'], it['id'] + '.mp3')
         if not os.path.exists(mp3):
             none += 1; continue
+        src = it.get('source') or 'tts-hebrew'
         try:
             if engine == 'mock':
                 hyp, dur = mock_transcribe(mp3, plan_by_freq)
+                gate = 'mock-tone'
+            elif src == 'tts-respelled':
+                dur = duration_of(mp3); hyp = ''; gate = 'duration-only'
             else:
-                dur = duration_of(mp3)
+                dur = duration_of(mp3); gate = 'asr-cer'
                 segs, _ = model.transcribe(mp3, language='he', beam_size=5, vad_filter=False, condition_on_previous_text=False)
                 hyp = ' '.join(s.text.strip() for s in segs)
-            c = cer(it['text'], hyp)
+            c = None if gate == 'duration-only' else cer(it['text'], hyp)
             reason = ''
             if dur < a.min_seconds: reason = f'too short ({dur:.2f}s)'
             elif dur > a.max_seconds: reason = f'too long ({dur:.2f}s)'
+            elif gate == 'duration-only': reason = ''
             elif not norm(hyp): reason = 'no speech recognised'
             elif c > a.max_cer: reason = f'CER {c:.3f} > {a.max_cer}'
             verdict = 'reject' if reason else 'accept'
         except Exception as e:  # a clip that cannot be decoded or transcribed is rejected, never silently accepted
-            hyp, c, dur, reason, verdict = '', 1.0, 0.0, f'error: {e}', 'reject'
+            hyp, c, dur, reason, verdict, gate = '', 1.0, 0.0, f'error: {e}', 'reject', 'error'
         acc += verdict == 'accept'; rej += verdict == 'reject'
         rows.append({'voice': it['voice'], 'tradition': it['tradition'], 'kind': it['kind'], 'id': it['id'], 'path': it['path'], 'target': it['text'],
-                     'target_unpointed': strip_niqqud(it['text']), 'transcript': hyp, 'cer': f'{c:.4f}', 'seconds': f'{dur:.2f}',
-                     'verdict': verdict, 'reason': reason, 'engine': engine if engine == 'mock' else f'faster-whisper:{a.model}', 'max_cer': a.max_cer})
+                     'target_unpointed': strip_niqqud(it['text']), 'transcript': hyp, 'cer': '' if c is None else f'{c:.4f}', 'seconds': f'{dur:.2f}',
+                     'verdict': verdict, 'reason': reason, 'engine': engine if engine == 'mock' else f'faster-whisper:{a.model}', 'max_cer': a.max_cer,
+                     'source': src, 'gate': gate})
     os.makedirs(os.path.dirname(os.path.abspath(a.report)), exist_ok=True)
-    cols = ['voice', 'tradition', 'kind', 'id', 'path', 'target', 'target_unpointed', 'transcript', 'cer', 'seconds', 'verdict', 'reason', 'engine', 'max_cer']
+    cols = ['voice', 'tradition', 'kind', 'id', 'path', 'target', 'target_unpointed', 'transcript', 'cer', 'seconds', 'verdict', 'reason', 'engine', 'max_cer', 'source', 'gate']
     with open(a.report, 'w', newline='', encoding='utf-8') as f:
         w = csv.DictWriter(f, cols); w.writeheader(); w.writerows(rows)
     print(f'verify: {acc} accepted, {rej} rejected, {none} without an MP3 -> {a.report} (engine={engine})')

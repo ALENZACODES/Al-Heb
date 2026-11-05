@@ -41,7 +41,7 @@ export function audit(root = DEFAULT_ROOT) {
     const walk = (o, key, id, parent = '') => {
       if (typeof o === 'string') {
         const sample = o.length > 60 ? o.slice(0, 60) + '...' : o;
-        for (const f of findName(o)) out.push({ file, key, cls: classify(file, key, parent), kind: f.kind, id, sample });
+        for (const f of findName(o)) out.push({ file, key, cls: classify(file, key, parent), kind: f.compound ? `maqaf-${f.kind}` : f.kind, id, sample });
         if (hasLatinName(o)) out.push({ file, key, cls: 'latin-spelling', kind: 'latin', id, sample });
       } else if (Array.isArray(o)) o.forEach((v) => walk(v, key, id, parent));
       else if (o && typeof o === 'object') {

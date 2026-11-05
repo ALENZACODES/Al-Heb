@@ -87,7 +87,7 @@ export function migrateData(data, from, list = migrations, target = SCHEMA_VERSI
 export function createStore(opts = {}) {
   const prefix = opts.prefix ?? 'alef:';
   const usingDefault = opts.storage === undefined;
-  const primary = usingDefault ? (typeof localStorage !== 'undefined' ? safeLS() : null) : opts.storage;
+  const primary = usingDefault ? safeLS() : opts.storage;
   function safeLS() { try { return localStorage; } catch { return null; } } // touching localStorage can throw (cookies blocked)
   let backend = primary;
   let persistent = true;

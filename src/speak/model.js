@@ -24,7 +24,7 @@ export function normalizeHe(s) {
  * itself. Both the target and what was heard are folded to the spoken form before comparing, on normalized (unpointed) text, so
  * prefixed forms (ליהוה) are covered too.
  */
-export const spokenTarget = (s) => normalizeHe(s).replace(/יהוה/g, 'אדני');
+export const spokenTarget = (s) => normalizeHe(s).replace(/יהוה/g, 'אדני').replace(/(^| )ה(?= |$)/g, '$1אדני'); // a lone ה is the he+geresh abbreviation (normalizeHe drops the geresh)
 /** Pointed text with the divine name replaced by its spoken form, for the browser voice (same substitution the audio manifest uses). */
 export const spokenPointed = (he) => String(he ?? '').normalize('NFC').replace(/יְהוָה/g, 'אֲדֹנָי');
 
@@ -134,7 +134,7 @@ export function recordAttempt(state, a, now) {
 
 /** Counts for one set from the attempts list: items tried, matched (match or said), close, missed. */
 export function setSummary(attempts, setId) {
-  const mine = attempts.filter((a) => a.kind === 'say' && a.set === setId);
+  const mine = attempts.filter((a) => a.kind === 'say' && a.set === setId && a.outcome !== 'skip'); // a skip is not an attempt
   const byItem = new Map();
   for (const a of mine) byItem.set(a.itemId, a); // last attempt per item wins
   const last = [...byItem.values()];
@@ -205,12 +205,12 @@ export function soundReport(attempts, { min = 3 } = {}) {
 
 /** History rows for the screen: newest first, at most `limit`. */
 export function historyRows(attempts, limit = 30) {
-  return (attempts || []).slice().sort((a, b) => b.at - a.at).slice(0, limit);
+  return (attempts || []).filter((a) => a.outcome !== 'skip').sort((a, b) => b.at - a.at).slice(0, limit);
 }
 /** Day-by-day totals for say-it attempts (local date keys from the injected formatter). */
 export function dailyTotals(attempts, dayKey = (t) => new Date(t).toISOString().slice(0, 10)) {
   const days = new Map();
-  for (const a of attempts || []) { const k = dayKey(a.at); const d = days.get(k) || { day: k, say: 0, good: 0, drills: 0, drillRight: 0 }; if (a.kind === 'pair') { d.drills++; if (a.correct) d.drillRight++; } else { d.say++; if (a.outcome === 'match' || a.outcome === 'said') d.good++; } days.set(k, d); }
+  for (const a of attempts || []) { if (a.outcome === 'skip') continue; const k = dayKey(a.at); const d = days.get(k) || { day: k, say: 0, good: 0, drills: 0, drillRight: 0 }; if (a.kind === 'pair') { d.drills++; if (a.correct) d.drillRight++; } else { d.say++; if (a.outcome === 'match' || a.outcome === 'said') d.good++; } days.set(k, d); }
   return [...days.values()].sort((x, y) => y.day.localeCompare(x.day));
 }
 

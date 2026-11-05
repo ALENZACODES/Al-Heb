@@ -84,7 +84,7 @@ test('runbook is current, orders redo, cmd, inter with disk counts, and the inge
   const md = read('docs/images/RUNBOOK.md');
   assert.equal(md, renderRunbook(), 'RUNBOOK.md is stale: run node tools/images/build_runbook.mjs');
   assert.ok(md.indexOf('redo-01') < md.indexOf('cmd-036') && md.indexOf('cmd-036') < md.indexOf('inter-01'));
-  assert.match(md, /\| 1 \|.*\| 86 \|/); assert.match(md, /\| 3 \|.*\| 100 \|/);
+  assert.match(md, /\| 1 \|.*\| 177 \|/); assert.match(md, /\| 3 \|.*\| 100 \|/);
   assert.match(md, /match_inter\.mjs/);
   const doc = read('docs/images/INTER-INGEST.md');
   assert.match(doc, /I-01-img1\.png/); assert.match(doc, /match_inter\.mjs/); assert.match(doc, /manifest\.csv/);

@@ -11,7 +11,7 @@
     "blue":   [ { "kind": "signs", "count": 15, "label": "All 15 signs" }, { "kind": "decode", "entries": ["shema-2"], "label": "Shema line 2 decodable" } ],
     "purple": [ { "kind": "decode", "entries": ["shema-1", "vahavta-full", "torah-bless-1", "modeh-ani-1", "mah-tovu-1", "kiddush-wine-1"], "label": "Basic prayers decodable" } ],
     "brown":  [ { "kind": "decode", "entries": ["avot-1", "mi-chamocha-1", "aleinu-1", "kaddish-1", "adon-olam-1", "birkat-hamazon-1"], "label": "Higher prayers decodable" } ],
-    "grey":   [ { "kind": "unmeasured", "label": "A siddur page read inside a time limit (no timed read in the app yet)" } ],
+    "grey":   [ { "kind": "unmeasured", "label": "A prayer book page read inside a time limit (no timed read in the app yet)" } ],
     "black":  [ { "kind": "unmeasured", "label": "Fluency target by timed reads (no timed read in the app yet)" } ]
   },
   "nameLesson": "r15"

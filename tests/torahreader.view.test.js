@@ -219,8 +219,9 @@ test('trope legend: reference-only notice, both naming systems, class and level,
   assert.equal(sel(root, '[data-view="legend"]').attrs['aria-pressed'], 'true');
   const t = root.textContent;
   assert.ok(t.includes(LEGEND_NOTICE));
-  assert.match(LEGEND_NOTICE, /not a chanting teacher/);
+  assert.match(LEGEND_NOTICE, /does not describe or play any melody/);
   assert.match(t, /Reference, not a chanting teacher/);
+  assert.equal((t.match(/not a chanting teacher/gi) || []).length, 1, 'the legend notice says it once');
   const tables = root.queryAll('table'); assert.equal(tables.length, 3);
   const rows = root.queryAll('tbody tr');
   assert.equal(rows.length, table.prose.length);
@@ -250,4 +251,40 @@ test('bad stored state is ignored', async () => {
   const { root } = await make({ stored: { passage: 'zzz', speed: 99, showTrope: 'x' } });
   assert.equal(words(root).length, 35);
   assert.match(sel(root, '[data-toggle="showTrope"]').attrs['aria-pressed'], /true/);
+});
+
+test('the selected word details open inside the verse of that word, and large letters are drawn for Deuteronomy 6:4 only', async () => {
+  const { root, un } = await make({ stored: { passage: 'shema' } });
+  const w = words(root);
+  assert.equal(root.queryAll('.trd-lg').length, 2);
+  assert.equal(root.queryAll('.trd-lgnote').length, 1);
+  await tick(); await w[7].click(); await tick();
+  const slots = root.queryAll('.trd-slot');
+  assert.equal(slots.filter((s) => s.children.length).length, 1);
+  assert.ok(slots[1].children.length === 1);
+  assert.equal(root.queryAll('#trd-detail').length, 1);
+  un();
+});
+
+test('secondary controls (toggles, text size, pace, Read with me, legend button) are in a closed details; verses are outside it', async () => {
+  const { root } = await make();
+  const ctl = root.queryAll('details.trd-ctl')[0];
+  assert.ok(ctl && ctl.attrs.open === undefined);
+  for (const q of ['.trd-toggle', '.trd-size', '.trd-speed', '.trd-run', '[data-view="legend"]']) assert.ok(ctl.queryAll(q).length >= 1, q);
+  assert.equal(ctl.queryAll('.trd-verse').length, 0);
+  assert.equal(root.queryAll('.trd-verse').length, 6);
+});
+
+test('text size: stored, applied as a scale on the wrapper, survives remount; word buttons keep a 44px tap size in the CSS', async () => {
+  const { root, store } = await make();
+  assert.match(root.queryAll('.alef-trd')[0].attrs.style, /--trd-scale:1$/);
+  await sel(root, '[data-size="largest"]').click();
+  assert.equal(store.m['torahreader.v1'].size, 'largest');
+  assert.match(root.queryAll('.alef-trd')[0].attrs.style, /--trd-scale:1\.7$/);
+  assert.equal(sel(root, '[data-size="largest"]').attrs['aria-pressed'], 'true');
+  const again = await make({ stored: store.m['torahreader.v1'] });
+  assert.match(again.root.queryAll('.alef-trd')[0].attrs.style, /--trd-scale:1\.7$/);
+  const css = fs.readFileSync(new URL('../src/torahreader/torahreader.view.js', import.meta.url), 'utf8');
+  assert.match(css, /\.trd-w\{[^}]*min-inline-size:max\(44px/);
+  assert.match(css, /button\{min-block-size:max\(44px/);
 });

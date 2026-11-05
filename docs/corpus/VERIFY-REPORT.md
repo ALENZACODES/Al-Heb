@@ -15,11 +15,11 @@ These are machine checks of character-level consistency and of agreement with th
 | Snapshot re-derivation (source-snapshot.json raw lines through normalize.js) | equal 66, clip 4 |
 | Hebrew licence label taken from Sefaria metadata (unverified) | 42 |
 | English licence label (JPS 1917 "Public Domain") taken from Sefaria metadata (unverified) | 26 |
-| Metsudah siddur (1981) records, labelled CC-BY by Sefaria | 10 |
+| Metsudah siddur (1981) records, labelled CC-BY by Sefaria | 9 |
 | Licence label "Public Domain / copy without restriction (tanach.us/License.html)" | 28 |
-| Licence label "Public Domain" | 16 |
+| Licence label "Public Domain" | 17 |
 | Licence label "CC0" | 16 |
-| Licence label "CC-BY" | 10 |
+| Licence label "CC-BY" | 9 |
 
 Cross-check statuses: `equal` every line equals the UXLC verse after the registry normalisation; `clip` the record is a contiguous run of words inside the verse range (records that quote part of a verse); `mismatch` neither; `no-ref` the ref is not Book chapter:verse; `no-xml` the UXLC cache is not on disk (it is gitignored, so a fresh clone shows this). Snapshot statuses: `equal` re-derived from the raw snapshot line with the record's `transforms`; `clip` a word run of that derivation; `derived` the record is derived from another record and has no snapshot item.
 
@@ -75,7 +75,7 @@ Cross-check statuses: `equal` every line equals the UXLC verse after the registr
 | `vezot-hatorah` | Siddur: V'zot haTorah (Deuteronomy 4:44, Numbers 9:23) | siddur | 43 | 13 | 0 | 2 | - | - | no-ref quotes 0/2 | equal |
 | `etz-chaim` | Siddur: Etz chaim hi (Proverbs 3:18, 3:17, 3:16, Isaiah 42:21) | siddur | 114 | 26 | 0 | 4 | - | - | no-ref quotes 1/4 | equal |
 | `brich-shmei` | Siddur: Berich shmei (Zohar, Vayakhel) | siddur | 531 | 129 | 11 | 1 | - | - | no-ref | equal |
-| `hagomel` | Siddur: Birkat Hagomel | siddur | 78 | 20 | 1 | 2 | - | - | no-ref | equal |
+| `hagomel` | Siddur: Birkat Hagomel | siddur | 78 | 20 | 0 | 2 | - | - | no-ref | equal |
 | `avot-closing` | Siddur: Amidah, first blessing, closing lines | siddur | 36 | 9 | 0 | 1 | - | - | no-ref | equal |
 | `amidah-yihyu` | Siddur: Amidah, closing verse (Psalm 19:15) | siddur | 43 | 10 | 0 | 1 | - | - | no-ref quotes 0/1 | equal |
 | `amidah-elohai-netzor` | Siddur: Amidah, Elohai netzor | siddur | 247 | 57 | 0 | 3 | - | - | no-ref | equal |
@@ -126,7 +126,7 @@ The Hebrew licence label of every record below is what Sefaria's API reported fo
 | `vezot-hatorah` | Public Domain | Torat Emet 357 via Sefaria: Siddur Sefard, Rosh Chodesh, Torah Reading | https://www.sefaria.org/Siddur_Sefard%2C_Rosh_Chodesh%2C_Torah_Reading |
 | `etz-chaim` | Public Domain | Torat Emet 357 via Sefaria: Siddur Sefard, Rosh Chodesh, Torah Reading | https://www.sefaria.org/Siddur_Sefard%2C_Rosh_Chodesh%2C_Torah_Reading |
 | `brich-shmei` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Removing the Torah from Ark, Berich Shmei | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Removing_the_Torah_from_Ark%2C_Berich_Shmei |
-| `hagomel` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Birkat Hagomel | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Birkat_Hagomel |
+| `hagomel` | Public Domain | Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Morning Services, Thanksgiving Blessing | https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Morning_Services%2C_Thanksgiving_Blessing |
 | `avot-closing` | Public Domain | Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Morning Services, Amidah | https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Morning_Services%2C_Amidah |
 | `amidah-yihyu` | Public Domain | Torat Emet 357 via Sefaria: Siddur Sefard, Various Prayers & Segulot, Prayer of the Shelah | https://www.sefaria.org/Siddur_Sefard%2C_Various_Prayers_%26_Segulot%2C_Prayer_of_the_Shelah |
 | `amidah-elohai-netzor` | CC-BY | The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Amidah, Concluding Passage | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Concluding_Passage |
@@ -161,7 +161,6 @@ The Metsudah siddur is a 1981 publication. Sefaria labels its digitisation CC-BY
 | `kaddish-1` | Siddur: Mourner's Kaddish | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Concluding_Prayers%2C_Mourner%27s_Kaddish |
 | `vayehi-binsoa` | Siddur: Vayehi binsoa (Numbers 10:35, Isaiah 2:3, blessing) | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Removing_the_Torah_from_Ark%2C_Vayehi_Binsoa |
 | `brich-shmei` | Siddur: Berich shmei (Zohar, Vayakhel) | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Removing_the_Torah_from_Ark%2C_Berich_Shmei |
-| `hagomel` | Siddur: Birkat Hagomel | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Birkat_Hagomel |
 | `amidah-elohai-netzor` | Siddur: Amidah, Elohai netzor | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Concluding_Passage |
 | `sim-shalom` | Siddur: Amidah, Sim shalom (morning) | https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Peace |
 | `lecha-dodi-1` | Siddur: Lecha Dodi, refrain and first verse | https://www.sefaria.org/Siddur_Ashkenaz%2C_Shabbat%2C_Kabbalat_Shabbat%2C_Lekha_Dodi |

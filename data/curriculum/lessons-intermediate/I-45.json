@@ -72,7 +72,7 @@
   },
   {
    "he": "קוֹמָה",
-   "en": "floor",
+   "en": "story, floor",
    "translit": null,
    "pronunciation": {
     "israeli": "komah"
@@ -330,7 +330,6 @@
    "options": [
     "formal",
     "neutral",
-    "casual",
     "slang"
    ]
   }

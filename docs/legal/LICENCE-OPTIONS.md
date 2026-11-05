@@ -29,7 +29,7 @@ Split by origin, because the licence differs by row.
 | Part | Today | Options |
 |---|---|---|
 | Project-written curriculum text, lesson text, phrasebook | `project-original`: owner's, none chosen; pointing and glosses unreviewed by a Hebrew educator | Proprietary, or CC BY 4.0 / CC BY-NC-SA only if you want to give it away (NC-SA would itself block a sale of that part; do not pick NC for anything you may sell) |
-| Vocabulary data (`data/vocab/*`, about 6,027 of 6,297 records) | Adaptation of Wiktionary and FrequencyWords, both CC BY-SA 4.0 | Cannot be closed. Either ship it as a separate CC BY-SA 4.0 data set (A), replace it with original or permissive data (B), or keep it only in a free layer and sell only what you wrote (C). See `DECISIONS-FOR-JOHN.md` section 2. |
+| Vocabulary data (`data/vocab/*`, about 6,033 of 6,303 records) | Adaptation of Wiktionary and FrequencyWords, both CC BY-SA 4.0 | Cannot be closed. Either ship it as a separate CC BY-SA 4.0 data set (A), replace it with original or permissive data (B), or keep it only in a free layer and sell only what you wrote (C). See `DECISIONS-FOR-JOHN.md` section 2. |
 | Example sentences | Tatoeba, CC BY 2.0 FR, per-sentence author credit | Keep authors with each example; interaction with the SA set is a lawyer question |
 | Hebrew Tanakh text | UXLC: "viewed or copied without restriction" | Safe for sale; do not call it the WLC |
 | English scripture | JPS 1917, public domain by US age label | US age rule read; non-US not checked |

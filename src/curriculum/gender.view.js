@@ -7,6 +7,7 @@ import { loadGender, orderFor, buildQuiz, gradeTap, genderedForms, composeParadi
 import { GENDER_KEY, saveGender, setLearnerGender } from "./actions.js";
 import { tokenize } from "./fade.js";
 import { draftNotice, voiceSelector, voiceButton, audioStatus, settingVoice } from "./ex-ui.js";
+import { isAudioFree, SKIP_NOTE } from "../shell/audiofree.js";
 
 const WHO = { m: "man", f: "woman" };
 const GRAMMAR_NOTE = "These sentences and forms are drafts; the Hebrew has not been checked by a native speaker.";
@@ -38,7 +39,8 @@ export function mountGender(root, ctx, mode = "pairs", q = {}) {
   (async () => {
     const [g, saved] = await Promise.all([loadGender(), storeGet(ctx, GENDER_KEY, {})]);
     if (!alive) return;
-    let iAm = saved?.iAm === "f" ? "f" : saved?.iAm === "m" ? "m" : ctx?.settings?.get?.("gender") === "f" ? "f" : "m";
+    const shared = ctx?.settings?.get?.("gender"); // the shared Settings choice wins; "both" or unset only affects which form is listed first (both forms are always shown)
+    let iAm = shared === "f" || shared === "m" ? shared : saved?.iAm === "f" ? "f" : "m";
     const head = () => [draftNotice(ctx, GRAMMAR_NOTE, voiceHonesty), el("div", { class: "row" }, sel.node, iAmChooser())];
     function iAmChooser() {
       return el("div", { class: "alef-iam row", role: "radiogroup", "aria-label": "I am" }, el("span", { class: "muted" }, "I am: "),
@@ -60,7 +62,7 @@ export function mountGender(root, ctx, mode = "pairs", q = {}) {
     }
 
     function renderQuiz() {
-      const listenOk = (p, form) => !!p.audio[form] && audioStatus(ctx, "word", p.audio[form], sel.get()).source !== "none";
+      const listenOk = (p, form) => !isAudioFree(ctx) && !!p.audio[form] && audioStatus(ctx, "word", p.audio[form], sel.get()).source !== "none";
       const qs = buildQuiz(g.pairs, { seed: Number(q.seed) || Date.now() % 100000, count: 8, listen: listenOk });
       const results = [];
       let pos = 0;
@@ -80,7 +82,12 @@ export function mountGender(root, ctx, mode = "pairs", q = {}) {
           const label = p.who === "speaker" ? "said by" : "said to";
           const prompt = qu.mode === "listen" ? `Listen, then say who it is ${label}.` : `No audio yet for this item, so this is a reading question. Who is it ${label}?`;
           const btns = ["m", "f"].map((v) => el("button", { type: "button", class: "btn secondary alef-opt", "data-answer": v, onclick: () => { btns.forEach((b) => { b.disabled = true; }); finish(v === qu.answer); } }, `${v === "m" ? "1" : "2"}. A ${WHO[v]}`));
-          body = [el("p", {}, prompt), qu.mode === "listen" ? audioLine(ctx, p, qu.form, sel.get, note) : heText(p.forms[qu.form].he, "alef-he alef-word-big"), p.who === "speaker" ? null : el("p", { class: "muted" }, "Think about who is being spoken to."), el("div", { class: "row" }, ...btns)];
+          const written = el("div", { class: "alef-written-alt" });
+          const showWritten = () => { written.replaceChildren(heText(p.forms[qu.form].he, "alef-he alef-word-big")); showBtn.hidden = true; };
+          const showBtn = el("button", { type: "button", class: "btn secondary", "data-act": "show-written", onclick: showWritten }, "I cannot listen: show the word written");
+          const skipBtn = el("button", { type: "button", class: "btn secondary", "data-act": "skip", onclick: () => { pos++; ask(); } }, "Skip this question");
+          body = [el("p", {}, prompt), qu.mode === "listen" ? audioLine(ctx, p, qu.form, sel.get, note) : heText(p.forms[qu.form].he, "alef-he alef-word-big"), p.who === "speaker" ? null : el("p", { class: "muted" }, "Think about who is being spoken to."), qu.mode === "listen" ? written : null, el("div", { class: "row" }, ...btns),
+            qu.mode === "listen" ? el("div", { class: "row" }, showBtn, skipBtn) : null, qu.mode === "listen" ? el("p", { class: "muted" }, SKIP_NOTE) : null];
         } else {
           const chosen = new Set(); let n = 0;
           const chips = tokenize(p.forms[qu.form].he).map((t) => t.type === "sep" ? t.text : el("span", { class: "alef-gword", dir: "rtl", lang: "he" }, ...t.clusters.map((cl) => { const i = n++;

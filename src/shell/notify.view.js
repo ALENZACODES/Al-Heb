@@ -3,6 +3,7 @@
 // Shows: time, weekdays, Shabbat quiet toggle, permission button, "Send a test notification", and an honest status line.
 // Prefs are stored under "notify.prefs" (src/shell/notify.js normalizePrefs). The timer only runs while this app is open,
 // and the card says so. Tests inject ctx.notify (the notify module surface) and ctx.now.
+import { plain } from "./plain-copy.js";
 import { el, storeGet, storeSet } from "../curriculum/dom.js";
 import * as defaultNotify from "./notify.js";
 
@@ -64,7 +65,7 @@ export function mount(root, ctx) {
     }
     if (st.permission === "denied") return "Notifications are blocked for this site in the browser's settings. Allow them there, then come back.";
     if (st.permission !== "granted") return "Notifications are not allowed yet. Tap \"Allow notifications\" below.";
-    return "Reminders fire only while ALEF is open in this browser (an open tab, or the installed app in the foreground). Nothing can wake it when it is closed; for that, import the calendar's reminder file into your phone's calendar.";
+    return plain("notifyOpenOnly");
   }
 
   function render() {
@@ -98,7 +99,7 @@ export function mount(root, ctx) {
       onchange: async (e) => { prefs = notify.normalizePrefs({ ...prefs, yomTovQuiet: e.target.checked }); await save(); await arm(); } });
     const quietNote = loc
       ? `Quiet from candle lighting to havdalah in ${loc.name} (${loc.candleMinutes} minutes before Friday sunset, until ${loc.havdalah?.mode === "minutes" ? `${loc.havdalah.minutes} minutes after Saturday sunset` : `the sun is ${loc.havdalah?.degrees ?? 8.5} degrees below the horizon on Saturday`}). Change the city on the Calendar screen.`
-      : "No city is set, so Shabbat quiet hours cannot be computed. Pick a city on the Calendar screen; until then reminders are not held back on Shabbat.";
+      : "No city is set, so Shabbat quiet hours cannot be computed. Pick a city on the Calendar screen; until then reminders are not held back on Shabbat. Friday and Saturday are off by default for that reason; tick them above if you want reminders on those days.";
 
     const enable = el("input", { type: "checkbox", id: "nt-enabled", checked: prefs.enabled ? true : null, disabled: canUse ? null : true,
       onchange: async (e) => { prefs = notify.normalizePrefs({ ...prefs, enabled: e.target.checked }); await save(); await arm(); say(prefs.enabled ? "Reminders on, while ALEF is open." : "Reminders off."); } });

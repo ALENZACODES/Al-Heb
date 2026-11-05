@@ -1,10 +1,1074 @@
 {
  "tool": "tools/a11y/newviews.mjs",
  "axe": "4.14.0",
- "when": "2026-11-04T13:37:54.055Z",
+ "when": "2026-11-05T00:01:39.232Z",
  "viewport": "390x844",
  "note": "Measured with Chromium + axe-core + DOM/CSS checks. No screen reader, no real device, no keyboard on a physical phone.",
  "routes": {
+  "/": {
+   "light": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/",
+    "rendered": {
+     "text": 355,
+     "h1": "ALEF אלף"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "ALEF אלף"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "ALEF",
+    "liveRegions": [],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 1,
+    "focus": {
+     "count": 7,
+     "order": [
+      "a#today-continue:Learn your first let",
+      "summary:Study goal: 5 min",
+      "a:Letters",
+      "a:WordsPreview",
+      "a:ReadPreview",
+      "a:Progress",
+      "button#home-more:More"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": []
+   },
+   "dark": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/",
+    "rendered": {
+     "text": 355,
+     "h1": "ALEF אלף"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "ALEF אלף"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "ALEF",
+    "liveRegions": [],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 1,
+    "focus": {
+     "count": 7,
+     "order": [
+      "a#today-continue:Learn your first let",
+      "summary:Study goal: 5 min",
+      "a:Letters",
+      "a:WordsPreview",
+      "a:ReadPreview",
+      "a:Progress",
+      "button#home-more:More"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": []
+   }
+  },
+  "/learn": {
+   "light": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/learn",
+    "rendered": {
+     "text": 5361,
+     "h1": "Lessons"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Lessons"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Learn - ALEF",
+    "liveRegions": [
+     {
+      "sel": "p.alef-progress",
+      "role": "status",
+      "live": null,
+      "hidden": false
+     },
+     {
+      "sel": "p.alef-due",
+      "role": "status",
+      "live": null,
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 71,
+    "focus": {
+     "count": 10,
+     "order": [
+      "button#alef-tab-read:Read the prayer book",
+      "button#alef-tab-israel:Speak in Israel",
+      "a:Words you can alread",
+      "a:Look-alike checkpoin",
+      "a:Syllable ladder",
+      "a:Fade-out recall",
+      "a:Read without English",
+      "a:Intermediate lessons",
+      "button:Start Shin and Bet: ",
+      "button:Mark complete: Shin "
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": []
+   },
+   "dark": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/learn",
+    "rendered": {
+     "text": 5361,
+     "h1": "Lessons"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Lessons"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Learn - ALEF",
+    "liveRegions": [
+     {
+      "sel": "p.alef-progress",
+      "role": "status",
+      "live": null,
+      "hidden": false
+     },
+     {
+      "sel": "p.alef-due",
+      "role": "status",
+      "live": null,
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 71,
+    "focus": {
+     "count": 10,
+     "order": [
+      "button#alef-tab-read:Read the prayer book",
+      "button#alef-tab-israel:Speak in Israel",
+      "a:Words you can alread",
+      "a:Look-alike checkpoin",
+      "a:Syllable ladder",
+      "a:Fade-out recall",
+      "a:Read without English",
+      "a:Intermediate lessons",
+      "button:Start Shin and Bet: ",
+      "button:Mark complete: Shin "
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": []
+   }
+  },
+  "/letters": {
+   "light": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/letters",
+    "rendered": {
+     "text": 3261,
+     "h1": "Letters"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": [
+      {
+       "id": "color-contrast",
+       "impact": "serious",
+       "help": "Elements must meet minimum color contrast ratio thresholds",
+       "nodes": [
+        {
+         "target": "text",
+         "html": "<text x=\"695\" y=\"274\" text-anchor=\"middle\" font-size=\"34\" fill=\"#fff\" font-family=\"sans-serif\" font-weight=\"bold\">1</tex",
+         "summary": "Element content is too short to determine if it is actual text content"
+        }
+       ],
+       "count": 1
+      }
+     ]
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Letters"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Letters - ALEF",
+    "liveRegions": [
+     {
+      "sel": "div.feedback",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     },
+     {
+      "sel": "div.row",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 32,
+    "focus": {
+     "count": 41,
+     "order": [
+      "button:Trace",
+      "button:Look-alikes",
+      "button:Typing",
+      "button:Alef",
+      "button:Bet",
+      "button:Gimel",
+      "button:Dalet",
+      "button:He",
+      "button:Vav",
+      "button:Zayin",
+      "button:Chet",
+      "button:Tet",
+      "button:Yod",
+      "button:Kaf",
+      "button:Lamed",
+      "button:Mem",
+      "button:Nun",
+      "button:Samekh",
+      "button:Ayin",
+      "button:Pe",
+      "button:Tsadi",
+      "button:Qof",
+      "button:Resh",
+      "button:Shin",
+      "button:Tav",
+      "button:Final Kaf",
+      "button:Final Mem",
+      "button:Final Nun",
+      "button:Final Pe",
+      "button:Final Tsadi",
+      "button:Animate",
+      "button:Hint",
+      "button:Start over",
+      "button:Print",
+      "button:Cursive",
+      "button:Strict",
+      "button:Outline",
+      "button:Show me, stroke by s",
+      "summary:Remember it",
+      "a:Shin ש",
+      "a:Bet ב"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 1,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": [
+     "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+   },
+   "dark": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/letters",
+    "rendered": {
+     "text": 3261,
+     "h1": "Letters"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": [
+      {
+       "id": "color-contrast",
+       "impact": "serious",
+       "help": "Elements must meet minimum color contrast ratio thresholds",
+       "nodes": [
+        {
+         "target": "text",
+         "html": "<text x=\"695\" y=\"274\" text-anchor=\"middle\" font-size=\"34\" fill=\"#fff\" font-family=\"sans-serif\" font-weight=\"bold\">1</tex",
+         "summary": "Element content is too short to determine if it is actual text content"
+        }
+       ],
+       "count": 1
+      }
+     ]
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Letters"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Letters - ALEF",
+    "liveRegions": [
+     {
+      "sel": "div.feedback",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     },
+     {
+      "sel": "div.row",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 32,
+    "focus": {
+     "count": 41,
+     "order": [
+      "button:Trace",
+      "button:Look-alikes",
+      "button:Typing",
+      "button:Alef",
+      "button:Bet",
+      "button:Gimel",
+      "button:Dalet",
+      "button:He",
+      "button:Vav",
+      "button:Zayin",
+      "button:Chet",
+      "button:Tet",
+      "button:Yod",
+      "button:Kaf",
+      "button:Lamed",
+      "button:Mem",
+      "button:Nun",
+      "button:Samekh",
+      "button:Ayin",
+      "button:Pe",
+      "button:Tsadi",
+      "button:Qof",
+      "button:Resh",
+      "button:Shin",
+      "button:Tav",
+      "button:Final Kaf",
+      "button:Final Mem",
+      "button:Final Nun",
+      "button:Final Pe",
+      "button:Final Tsadi",
+      "button:Animate",
+      "button:Hint",
+      "button:Start over",
+      "button:Print",
+      "button:Cursive",
+      "button:Strict",
+      "button:Outline",
+      "button:Show me, stroke by s",
+      "summary:Remember it",
+      "a:Shin ש",
+      "a:Bet ב"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 1,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": [
+     "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+   }
+  },
+  "/letters/atlas": {
+   "light": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/letters/atlas",
+    "rendered": {
+     "text": 1931,
+     "h1": "Letter atlas"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Letter atlas"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Letter atlas - ALEF",
+    "liveRegions": [
+     {
+      "sel": "div.status",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 31,
+    "focus": {
+     "count": 32,
+     "order": [
+      "button:Quiz me: find the le",
+      "button:אAlef/ʔ/",
+      "button:בּBet/b/",
+      "button:בVet/v/",
+      "button:גGimel/ɡ/",
+      "button:דDalet/d/",
+      "button:הHe/h/",
+      "button:וVav/v/",
+      "button:זZayin/z/",
+      "button:חChet",
+      "button:טTet/t/",
+      "button:יYod/j/",
+      "button:כּKaf/k/",
+      "button:כKhaf",
+      "button:לLamed/l/",
+      "button:מMem/m/",
+      "button:נNun/n/",
+      "button:סSamekh/s/",
+      "button:עAyin",
+      "button:פּPe/p/",
+      "button:פFe/f/",
+      "button:צTsadi/ts/",
+      "button:קQof/k/",
+      "button:רResh",
+      "button:שׁShin/ʃ/",
+      "button:שׂSin/s/",
+      "button:תTav/t/",
+      "button:ךFinal Kaf",
+      "button:םFinal Mem/m/",
+      "button:ןFinal Nun/n/",
+      "button:ףFinal Pe/p ~ f/",
+      "button:ץFinal Tsadi/ts/"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": [
+     "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+   },
+   "dark": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/letters/atlas",
+    "rendered": {
+     "text": 1931,
+     "h1": "Letter atlas"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Letter atlas"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Letter atlas - ALEF",
+    "liveRegions": [
+     {
+      "sel": "div.status",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 31,
+    "focus": {
+     "count": 32,
+     "order": [
+      "button:Quiz me: find the le",
+      "button:אAlef/ʔ/",
+      "button:בּBet/b/",
+      "button:בVet/v/",
+      "button:גGimel/ɡ/",
+      "button:דDalet/d/",
+      "button:הHe/h/",
+      "button:וVav/v/",
+      "button:זZayin/z/",
+      "button:חChet",
+      "button:טTet/t/",
+      "button:יYod/j/",
+      "button:כּKaf/k/",
+      "button:כKhaf",
+      "button:לLamed/l/",
+      "button:מMem/m/",
+      "button:נNun/n/",
+      "button:סSamekh/s/",
+      "button:עAyin",
+      "button:פּPe/p/",
+      "button:פFe/f/",
+      "button:צTsadi/ts/",
+      "button:קQof/k/",
+      "button:רResh",
+      "button:שׁShin/ʃ/",
+      "button:שׂSin/s/",
+      "button:תTav/t/",
+      "button:ךFinal Kaf",
+      "button:םFinal Mem/m/",
+      "button:ןFinal Nun/n/",
+      "button:ףFinal Pe/p ~ f/",
+      "button:ץFinal Tsadi/ts/"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": [
+     "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+   }
+  },
+  "/letters/bet": {
+   "light": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/letters/bet",
+    "rendered": {
+     "text": 3259,
+     "h1": "Letter"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": [
+      {
+       "id": "color-contrast",
+       "impact": "serious",
+       "help": "Elements must meet minimum color contrast ratio thresholds",
+       "nodes": [
+        {
+         "target": "text",
+         "html": "<text x=\"268\" y=\"265\" text-anchor=\"middle\" font-size=\"34\" fill=\"#fff\" font-family=\"sans-serif\" font-weight=\"bold\">1</tex",
+         "summary": "Element content is too short to determine if it is actual text content"
+        }
+       ],
+       "count": 1
+      }
+     ]
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Letter"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Letter Bet - ALEF",
+    "liveRegions": [
+     {
+      "sel": "div.feedback",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     },
+     {
+      "sel": "div.row",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 32,
+    "focus": {
+     "count": 41,
+     "order": [
+      "button:Trace",
+      "button:Look-alikes",
+      "button:Typing",
+      "button:Alef",
+      "button:Bet",
+      "button:Gimel",
+      "button:Dalet",
+      "button:He",
+      "button:Vav",
+      "button:Zayin",
+      "button:Chet",
+      "button:Tet",
+      "button:Yod",
+      "button:Kaf",
+      "button:Lamed",
+      "button:Mem",
+      "button:Nun",
+      "button:Samekh",
+      "button:Ayin",
+      "button:Pe",
+      "button:Tsadi",
+      "button:Qof",
+      "button:Resh",
+      "button:Shin",
+      "button:Tav",
+      "button:Final Kaf",
+      "button:Final Mem",
+      "button:Final Nun",
+      "button:Final Pe",
+      "button:Final Tsadi",
+      "button:Animate",
+      "button:Hint",
+      "button:Start over",
+      "button:Print",
+      "button:Cursive",
+      "button:Strict",
+      "button:Outline",
+      "button:Show me, stroke by s",
+      "summary:Remember it",
+      "a:Shin ש",
+      "a:Bet ב"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 1,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": [
+     "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+   },
+   "dark": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/letters/bet",
+    "rendered": {
+     "text": 3259,
+     "h1": "Letter"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": [
+      {
+       "id": "color-contrast",
+       "impact": "serious",
+       "help": "Elements must meet minimum color contrast ratio thresholds",
+       "nodes": [
+        {
+         "target": "text",
+         "html": "<text x=\"268\" y=\"265\" text-anchor=\"middle\" font-size=\"34\" fill=\"#fff\" font-family=\"sans-serif\" font-weight=\"bold\">1</tex",
+         "summary": "Element content is too short to determine if it is actual text content"
+        }
+       ],
+       "count": 1
+      }
+     ]
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Letter"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Letter Bet - ALEF",
+    "liveRegions": [
+     {
+      "sel": "div.feedback",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     },
+     {
+      "sel": "div.row",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 32,
+    "focus": {
+     "count": 41,
+     "order": [
+      "button:Trace",
+      "button:Look-alikes",
+      "button:Typing",
+      "button:Alef",
+      "button:Bet",
+      "button:Gimel",
+      "button:Dalet",
+      "button:He",
+      "button:Vav",
+      "button:Zayin",
+      "button:Chet",
+      "button:Tet",
+      "button:Yod",
+      "button:Kaf",
+      "button:Lamed",
+      "button:Mem",
+      "button:Nun",
+      "button:Samekh",
+      "button:Ayin",
+      "button:Pe",
+      "button:Tsadi",
+      "button:Qof",
+      "button:Resh",
+      "button:Shin",
+      "button:Tav",
+      "button:Final Kaf",
+      "button:Final Mem",
+      "button:Final Nun",
+      "button:Final Pe",
+      "button:Final Tsadi",
+      "button:Animate",
+      "button:Hint",
+      "button:Start over",
+      "button:Print",
+      "button:Cursive",
+      "button:Strict",
+      "button:Outline",
+      "button:Show me, stroke by s",
+      "summary:Remember it",
+      "a:Shin ש",
+      "a:Bet ב"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 1,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": [
+     "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+   }
+  },
+  "/progress": {
+   "light": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/progress",
+    "rendered": {
+     "text": 10795,
+     "h1": "Your progress"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Your progress"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Progress - ALEF",
+    "liveRegions": [
+     {
+      "sel": "p.muted",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     },
+     {
+      "sel": "#pg-bk-status",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 2,
+     "order": [
+      "a:Open",
+      "a:Open"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": []
+   },
+   "dark": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/progress",
+    "rendered": {
+     "text": 10795,
+     "h1": "Your progress"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Your progress"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Progress - ALEF",
+    "liveRegions": [
+     {
+      "sel": "p.muted",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     },
+     {
+      "sel": "#pg-bk-status",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 2,
+     "order": [
+      "a:Open",
+      "a:Open"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": []
+   }
+  },
   "/firstday": {
    "light": {
     "states": {},
@@ -14,7 +1078,7 @@
     },
     "hash": "#/firstday",
     "rendered": {
-     "text": 308,
+     "text": 830,
      "h1": "Your first 10 minutes"
     },
     "axe": {
@@ -43,11 +1107,17 @@
     "dynamicNoLive": [],
     "hebrewIssues": [],
     "hebrewIssueCount": 0,
-    "hebrewSpans": 0,
+    "hebrewSpans": 2,
     "focus": {
-     "count": 1,
+     "count": 7,
      "order": [
-      "button:Next"
+      "button:Hear it",
+      "a#fd-trace:Trace it",
+      "a#fd-trace-bet:Trace Bet",
+      "button:Samekh",
+      "button:Shin",
+      "button:Lamed",
+      "summary:Why?"
      ],
      "positiveTabindex": 0,
      "noFocusRing": [],
@@ -68,7 +1138,9 @@
      "clientWidth": 195,
      "overflowing": []
     },
-    "pageErrors": []
+    "pageErrors": [
+     "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
    },
    "dark": {
     "states": {},
@@ -78,7 +1150,7 @@
     },
     "hash": "#/firstday",
     "rendered": {
-     "text": 308,
+     "text": 4971,
      "h1": "Your first 10 minutes"
     },
     "axe": {
@@ -98,59 +1170,17 @@
     "pageTitle": "Your first 10 minutes - ALEF",
     "liveRegions": [
      {
-      "sel": "div",
+      "sel": "p.mc-cap",
       "role": "status",
       "live": "polite",
       "hidden": false
-     }
-    ],
-    "dynamicNoLive": [],
-    "hebrewIssues": [],
-    "hebrewIssueCount": 0,
-    "hebrewSpans": 0,
-    "focus": {
-     "count": 1,
-     "order": [
-      "button:Next"
-     ],
-     "positiveTabindex": 0,
-     "noFocusRing": [],
-     "smallTargets": [],
-     "visualOrderJumps": 0,
-     "zeroSizeStops": []
-    },
-    "motionUnderReduce": [],
-    "pageErrors": []
-   }
-  },
-  "/firstday/ladder": {
-   "light": {
-    "states": {},
-    "focusOnNav": {
-     "onHeading": true,
-     "active": "h1#ladder-title"
-    },
-    "hash": "#/firstday/ladder",
-    "rendered": {
-     "text": 391,
-     "h1": "Pointed to unpointed ladder"
-    },
-    "axe": {
-     "violations": [],
-     "incomplete": []
-    },
-    "unnamed": [],
-    "radioGroupsWithoutName": [],
-    "placeholderOnly": [],
-    "h1": [
+     },
      {
-      "id": "ladder-title",
-      "text": "Pointed to unpointed ladder"
-     }
-    ],
-    "headingSkips": [],
-    "pageTitle": "Pointed to unpointed ladder - ALEF",
-    "liveRegions": [
+      "sel": "p.mc-small",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     },
      {
       "sel": "div",
       "role": "status",
@@ -161,837 +1191,19 @@
     "dynamicNoLive": [],
     "hebrewIssues": [],
     "hebrewIssueCount": 0,
-    "hebrewSpans": 1,
-    "focus": {
-     "count": 4,
-     "order": [
-      "button:Hear it, step 1",
-      "button:I read it, step 1 co",
-      "button:Not yet, step 1",
-      "button:Next"
-     ],
-     "positiveTabindex": 0,
-     "noFocusRing": [],
-     "smallTargets": [],
-     "visualOrderJumps": 0,
-     "zeroSizeStops": []
-    },
-    "motionUnderReduce": [],
-    "reflow320": {
-     "pageScrollsSideways": false,
-     "scrollWidth": 320,
-     "clientWidth": 320,
-     "overflowing": []
-    },
-    "reflow195": {
-     "pageScrollsSideways": false,
-     "scrollWidth": 195,
-     "clientWidth": 195,
-     "overflowing": []
-    },
-    "pageErrors": []
-   },
-   "dark": {
-    "states": {},
-    "focusOnNav": {
-     "onHeading": true,
-     "active": "h1#ladder-title"
-    },
-    "hash": "#/firstday/ladder",
-    "rendered": {
-     "text": 391,
-     "h1": "Pointed to unpointed ladder"
-    },
-    "axe": {
-     "violations": [],
-     "incomplete": []
-    },
-    "unnamed": [],
-    "radioGroupsWithoutName": [],
-    "placeholderOnly": [],
-    "h1": [
-     {
-      "id": "ladder-title",
-      "text": "Pointed to unpointed ladder"
-     }
-    ],
-    "headingSkips": [],
-    "pageTitle": "Pointed to unpointed ladder - ALEF",
-    "liveRegions": [
-     {
-      "sel": "div",
-      "role": "status",
-      "live": "polite",
-      "hidden": false
-     }
-    ],
-    "dynamicNoLive": [],
-    "hebrewIssues": [],
-    "hebrewIssueCount": 0,
-    "hebrewSpans": 1,
-    "focus": {
-     "count": 4,
-     "order": [
-      "button:Hear it, step 1",
-      "button:I read it, step 1 co",
-      "button:Not yet, step 1",
-      "button:Next"
-     ],
-     "positiveTabindex": 0,
-     "noFocusRing": [],
-     "smallTargets": [],
-     "visualOrderJumps": 0,
-     "zeroSizeStops": []
-    },
-    "motionUnderReduce": [],
-    "pageErrors": []
-   }
-  },
-  "/placement": {
-   "light": {
-    "states": {
-     "after the start button": {
-      "axe": {
-       "violations": [],
-       "incomplete": []
-      },
-      "unnamed": [],
-      "radioGroupsWithoutName": [],
-      "placeholderOnly": [],
-      "h1": [
-       {
-        "id": "view-title",
-        "text": "Placement check (draft)"
-       }
-      ],
-      "headingSkips": [],
-      "pageTitle": "Placement check (draft) - ALEF",
-      "liveRegions": [
-       {
-        "sel": "div",
-        "role": "status",
-        "live": "polite",
-        "hidden": false
-       }
-      ],
-      "dynamicNoLive": [],
-      "hebrewIssues": [],
-      "hebrewIssueCount": 0,
-      "hebrewSpans": 1,
-      "focus": {
-       "count": 5,
-       "order": [
-        "button:Final Kaf",
-        "button:Bet",
-        "button:Tet",
-        "button:Vav",
-        "button:Not sure"
-       ],
-       "positiveTabindex": 0,
-       "noFocusRing": [],
-       "smallTargets": [],
-       "visualOrderJumps": 0,
-       "zeroSizeStops": []
-      }
-     }
-    },
-    "focusOnNav": {
-     "onHeading": true,
-     "active": "h1#view-title"
-    },
-    "hash": "#/placement",
-    "rendered": {
-     "text": 395,
-     "h1": "Placement check (draft)"
-    },
-    "axe": {
-     "violations": [],
-     "incomplete": []
-    },
-    "unnamed": [],
-    "radioGroupsWithoutName": [],
-    "placeholderOnly": [],
-    "h1": [
-     {
-      "id": "view-title",
-      "text": "Placement check (draft)"
-     }
-    ],
-    "headingSkips": [],
-    "pageTitle": "Placement check (draft) - ALEF",
-    "liveRegions": [
-     {
-      "sel": "div",
-      "role": "status",
-      "live": "polite",
-      "hidden": false
-     }
-    ],
-    "dynamicNoLive": [],
-    "hebrewIssues": [],
-    "hebrewIssueCount": 0,
-    "hebrewSpans": 0,
-    "focus": {
-     "count": 2,
-     "order": [
-      "button#placement-start:Start",
-      "a:Skip: start at the b"
-     ],
-     "positiveTabindex": 0,
-     "noFocusRing": [],
-     "smallTargets": [],
-     "visualOrderJumps": 0,
-     "zeroSizeStops": []
-    },
-    "motionUnderReduce": [],
-    "reflow320": {
-     "pageScrollsSideways": false,
-     "scrollWidth": 320,
-     "clientWidth": 320,
-     "overflowing": []
-    },
-    "reflow195": {
-     "pageScrollsSideways": false,
-     "scrollWidth": 195,
-     "clientWidth": 195,
-     "overflowing": []
-    },
-    "pageErrors": []
-   },
-   "dark": {
-    "states": {
-     "after the start button": {
-      "axe": {
-       "violations": [],
-       "incomplete": []
-      },
-      "unnamed": [],
-      "radioGroupsWithoutName": [],
-      "placeholderOnly": [],
-      "h1": [
-       {
-        "id": "view-title",
-        "text": "Placement check (draft)"
-       }
-      ],
-      "headingSkips": [],
-      "pageTitle": "Placement check (draft) - ALEF",
-      "liveRegions": [
-       {
-        "sel": "div",
-        "role": "status",
-        "live": "polite",
-        "hidden": false
-       }
-      ],
-      "dynamicNoLive": [],
-      "hebrewIssues": [],
-      "hebrewIssueCount": 0,
-      "hebrewSpans": 1,
-      "focus": {
-       "count": 5,
-       "order": [
-        "button:Final Kaf",
-        "button:Bet",
-        "button:Tet",
-        "button:Vav",
-        "button:Not sure"
-       ],
-       "positiveTabindex": 0,
-       "noFocusRing": [],
-       "smallTargets": [],
-       "visualOrderJumps": 0,
-       "zeroSizeStops": []
-      }
-     }
-    },
-    "focusOnNav": {
-     "onHeading": true,
-     "active": "h1#view-title"
-    },
-    "hash": "#/placement",
-    "rendered": {
-     "text": 395,
-     "h1": "Placement check (draft)"
-    },
-    "axe": {
-     "violations": [],
-     "incomplete": []
-    },
-    "unnamed": [],
-    "radioGroupsWithoutName": [],
-    "placeholderOnly": [],
-    "h1": [
-     {
-      "id": "view-title",
-      "text": "Placement check (draft)"
-     }
-    ],
-    "headingSkips": [],
-    "pageTitle": "Placement check (draft) - ALEF",
-    "liveRegions": [
-     {
-      "sel": "div",
-      "role": "status",
-      "live": "polite",
-      "hidden": false
-     }
-    ],
-    "dynamicNoLive": [],
-    "hebrewIssues": [],
-    "hebrewIssueCount": 0,
-    "hebrewSpans": 0,
-    "focus": {
-     "count": 2,
-     "order": [
-      "button#placement-start:Start",
-      "a:Skip: start at the b"
-     ],
-     "positiveTabindex": 0,
-     "noFocusRing": [],
-     "smallTargets": [],
-     "visualOrderJumps": 0,
-     "zeroSizeStops": []
-    },
-    "motionUnderReduce": [],
-    "pageErrors": []
-   }
-  },
-  "/speak": {
-   "light": {
-    "states": {},
-    "focusOnNav": {
-     "onHeading": true,
-     "active": "h1#view-title"
-    },
-    "hash": "#/speak",
-    "rendered": {
-     "text": 3047,
-     "h1": "Say it"
-    },
-    "axe": {
-     "violations": [],
-     "incomplete": []
-    },
-    "unnamed": [],
-    "radioGroupsWithoutName": [],
-    "placeholderOnly": [],
-    "h1": [
-     {
-      "id": "view-title",
-      "text": "Say it"
-     }
-    ],
-    "headingSkips": [],
-    "pageTitle": "Say it - ALEF",
-    "liveRegions": [
-     {
-      "sel": "div.sk-status",
-      "role": "status",
-      "live": "polite",
-      "hidden": false
-     }
-    ],
-    "dynamicNoLive": [],
-    "hebrewIssues": [],
-    "hebrewIssueCount": 0,
-    "hebrewSpans": 0,
+    "hebrewSpans": 2,
     "focus": {
      "count": 9,
      "order": [
-      "a:Say it",
-      "a:Listening drills",
-      "a:Sounds by tradition",
-      "a:Read a prayer aloud",
-      "a:Shadowing",
-      "a:History",
-      "select#speak-set:Set",
-      "input#speak-mode-asr:Let the browser list",
-      "button#speak-start:Start"
-     ],
-     "positiveTabindex": 0,
-     "noFocusRing": [],
-     "smallTargets": [],
-     "visualOrderJumps": 0,
-     "zeroSizeStops": []
-    },
-    "motionUnderReduce": [],
-    "reflow320": {
-     "pageScrollsSideways": false,
-     "scrollWidth": 320,
-     "clientWidth": 320,
-     "overflowing": []
-    },
-    "reflow195": {
-     "pageScrollsSideways": false,
-     "scrollWidth": 195,
-     "clientWidth": 195,
-     "overflowing": []
-    },
-    "pageErrors": []
-   },
-   "dark": {
-    "states": {},
-    "focusOnNav": {
-     "onHeading": true,
-     "active": "h1#view-title"
-    },
-    "hash": "#/speak",
-    "rendered": {
-     "text": 3073,
-     "h1": "Say it"
-    },
-    "axe": {
-     "violations": [],
-     "incomplete": []
-    },
-    "unnamed": [],
-    "radioGroupsWithoutName": [],
-    "placeholderOnly": [],
-    "h1": [
-     {
-      "id": "view-title",
-      "text": "Say it"
-     }
-    ],
-    "headingSkips": [],
-    "pageTitle": "Say it - ALEF",
-    "liveRegions": [
-     {
-      "sel": "div.sk-status",
-      "role": "status",
-      "live": "polite",
-      "hidden": false
-     }
-    ],
-    "dynamicNoLive": [],
-    "hebrewIssues": [],
-    "hebrewIssueCount": 0,
-    "hebrewSpans": 0,
-    "focus": {
-     "count": 9,
-     "order": [
-      "a:Say it",
-      "a:Listening drills",
-      "a:Sounds by tradition",
-      "a:Read a prayer aloud",
-      "a:Shadowing",
-      "a:History",
-      "select#speak-set:Set",
-      "input#speak-mode-asr:Let the browser list",
-      "button#speak-start:Start"
-     ],
-     "positiveTabindex": 0,
-     "noFocusRing": [],
-     "smallTargets": [],
-     "visualOrderJumps": 0,
-     "zeroSizeStops": []
-    },
-    "motionUnderReduce": [],
-    "pageErrors": []
-   }
-  },
-  "/welcome": {
-   "light": {
-    "states": {
-     "step 2 after Continue": {
-      "axe": {
-       "violations": [],
-       "incomplete": []
-      },
-      "unnamed": [],
-      "radioGroupsWithoutName": [],
-      "placeholderOnly": [],
-      "h1": [
-       {
-        "id": "view-title",
-        "text": "Welcome to ALEF אלף"
-       }
-      ],
-      "headingSkips": [],
-      "pageTitle": "Welcome - ALEF",
-      "liveRegions": [
-       {
-        "sel": "#ob-status",
-        "role": "status",
-        "live": "polite",
-        "hidden": false
-       }
-      ],
-      "dynamicNoLive": [],
-      "hebrewIssues": [],
-      "hebrewIssueCount": 0,
-      "hebrewSpans": 1,
-      "focus": {
-       "count": 3,
-       "order": [
-        "input#ob-letters-none:No, start from the b",
-        "button#ob-letters-continue:Continue",
-        "a:How this works"
-       ],
-       "positiveTabindex": 0,
-       "noFocusRing": [],
-       "smallTargets": [],
-       "visualOrderJumps": 0,
-       "zeroSizeStops": []
-      }
-     }
-    },
-    "focusOnNav": {
-     "onHeading": true,
-     "active": "h1#view-title"
-    },
-    "hash": "#/welcome",
-    "rendered": {
-     "text": 448,
-     "h1": "Welcome to ALEF אלף"
-    },
-    "axe": {
-     "violations": [],
-     "incomplete": []
-    },
-    "unnamed": [],
-    "radioGroupsWithoutName": [],
-    "placeholderOnly": [],
-    "h1": [
-     {
-      "id": "view-title",
-      "text": "Welcome to ALEF אלף"
-     }
-    ],
-    "headingSkips": [],
-    "pageTitle": "Welcome - ALEF",
-    "liveRegions": [
-     {
-      "sel": "#ob-status",
-      "role": "status",
-      "live": "polite",
-      "hidden": false
-     }
-    ],
-    "dynamicNoLive": [],
-    "hebrewIssues": [],
-    "hebrewIssueCount": 0,
-    "hebrewSpans": 1,
-    "focus": {
-     "count": 3,
-     "order": [
-      "input#ob-letters-none:No, start from the b",
-      "button#ob-letters-continue:Continue",
-      "a:How this works"
-     ],
-     "positiveTabindex": 0,
-     "noFocusRing": [],
-     "smallTargets": [],
-     "visualOrderJumps": 0,
-     "zeroSizeStops": []
-    },
-    "motionUnderReduce": [],
-    "reflow320": {
-     "pageScrollsSideways": false,
-     "scrollWidth": 320,
-     "clientWidth": 320,
-     "overflowing": []
-    },
-    "reflow195": {
-     "pageScrollsSideways": false,
-     "scrollWidth": 195,
-     "clientWidth": 195,
-     "overflowing": []
-    },
-    "pageErrors": []
-   },
-   "dark": {
-    "states": {
-     "step 2 after Continue": {
-      "axe": {
-       "violations": [],
-       "incomplete": []
-      },
-      "unnamed": [],
-      "radioGroupsWithoutName": [],
-      "placeholderOnly": [],
-      "h1": [
-       {
-        "id": "view-title",
-        "text": "Welcome to ALEF אלף"
-       }
-      ],
-      "headingSkips": [],
-      "pageTitle": "Welcome - ALEF",
-      "liveRegions": [
-       {
-        "sel": "#ob-status",
-        "role": "status",
-        "live": "polite",
-        "hidden": false
-       }
-      ],
-      "dynamicNoLive": [],
-      "hebrewIssues": [],
-      "hebrewIssueCount": 0,
-      "hebrewSpans": 1,
-      "focus": {
-       "count": 3,
-       "order": [
-        "input#ob-letters-none:No, start from the b",
-        "button#ob-letters-continue:Continue",
-        "a:How this works"
-       ],
-       "positiveTabindex": 0,
-       "noFocusRing": [],
-       "smallTargets": [],
-       "visualOrderJumps": 0,
-       "zeroSizeStops": []
-      }
-     }
-    },
-    "focusOnNav": {
-     "onHeading": true,
-     "active": "h1#view-title"
-    },
-    "hash": "#/welcome",
-    "rendered": {
-     "text": 448,
-     "h1": "Welcome to ALEF אלף"
-    },
-    "axe": {
-     "violations": [],
-     "incomplete": []
-    },
-    "unnamed": [],
-    "radioGroupsWithoutName": [],
-    "placeholderOnly": [],
-    "h1": [
-     {
-      "id": "view-title",
-      "text": "Welcome to ALEF אלף"
-     }
-    ],
-    "headingSkips": [],
-    "pageTitle": "Welcome - ALEF",
-    "liveRegions": [
-     {
-      "sel": "#ob-status",
-      "role": "status",
-      "live": "polite",
-      "hidden": false
-     }
-    ],
-    "dynamicNoLive": [],
-    "hebrewIssues": [],
-    "hebrewIssueCount": 0,
-    "hebrewSpans": 1,
-    "focus": {
-     "count": 3,
-     "order": [
-      "input#ob-letters-none:No, start from the b",
-      "button#ob-letters-continue:Continue",
-      "a:How this works"
-     ],
-     "positiveTabindex": 0,
-     "noFocusRing": [],
-     "smallTargets": [],
-     "visualOrderJumps": 0,
-     "zeroSizeStops": []
-    },
-    "motionUnderReduce": [],
-    "pageErrors": []
-   }
-  },
-  "/reminders": {
-   "light": {
-    "states": {
-     "Allow button (permission default)": {
-      "axe": {
-       "violations": [],
-       "incomplete": []
-      },
-      "unnamed": [],
-      "radioGroupsWithoutName": [],
-      "placeholderOnly": [],
-      "h1": [
-       {
-        "id": "view-title",
-        "text": "Study reminders"
-       }
-      ],
-      "headingSkips": [],
-      "pageTitle": "Study reminders - ALEF",
-      "liveRegions": [
-       {
-        "sel": "p.nt-status",
-        "role": "status",
-        "live": "polite",
-        "hidden": false
-       }
-      ],
-      "dynamicNoLive": [],
-      "hebrewIssues": [],
-      "hebrewIssueCount": 0,
-      "hebrewSpans": 0,
-      "focus": {
-       "count": 2,
-       "order": [
-        "input#nt-time:Time",
-        "input#nt-time:Time"
-       ],
-       "positiveTabindex": 0,
-       "noFocusRing": [],
-       "smallTargets": [],
-       "visualOrderJumps": 0,
-       "zeroSizeStops": []
-      }
-     }
-    },
-    "focusOnNav": {
-     "onHeading": true,
-     "active": "h1#view-title"
-    },
-    "hash": "#/reminders",
-    "rendered": {
-     "text": 895,
-     "h1": "Study reminders"
-    },
-    "axe": {
-     "violations": [],
-     "incomplete": []
-    },
-    "unnamed": [],
-    "radioGroupsWithoutName": [],
-    "placeholderOnly": [],
-    "h1": [
-     {
-      "id": "view-title",
-      "text": "Study reminders"
-     }
-    ],
-    "headingSkips": [],
-    "pageTitle": "Study reminders - ALEF",
-    "liveRegions": [
-     {
-      "sel": "p.nt-status",
-      "role": "status",
-      "live": "polite",
-      "hidden": false
-     }
-    ],
-    "dynamicNoLive": [],
-    "hebrewIssues": [],
-    "hebrewIssueCount": 0,
-    "hebrewSpans": 0,
-    "focus": {
-     "count": 2,
-     "order": [
-      "input#nt-time:Time",
-      "input#nt-time:Time"
-     ],
-     "positiveTabindex": 0,
-     "noFocusRing": [],
-     "smallTargets": [],
-     "visualOrderJumps": 0,
-     "zeroSizeStops": []
-    },
-    "motionUnderReduce": [],
-    "reflow320": {
-     "pageScrollsSideways": false,
-     "scrollWidth": 320,
-     "clientWidth": 320,
-     "overflowing": []
-    },
-    "reflow195": {
-     "pageScrollsSideways": false,
-     "scrollWidth": 195,
-     "clientWidth": 195,
-     "overflowing": []
-    },
-    "pageErrors": []
-   },
-   "dark": {
-    "states": {
-     "Allow button (permission default)": {
-      "axe": {
-       "violations": [],
-       "incomplete": []
-      },
-      "unnamed": [],
-      "radioGroupsWithoutName": [],
-      "placeholderOnly": [],
-      "h1": [
-       {
-        "id": "view-title",
-        "text": "Study reminders"
-       }
-      ],
-      "headingSkips": [],
-      "pageTitle": "Study reminders - ALEF",
-      "liveRegions": [
-       {
-        "sel": "p.nt-status",
-        "role": "status",
-        "live": "polite",
-        "hidden": false
-       }
-      ],
-      "dynamicNoLive": [],
-      "hebrewIssues": [],
-      "hebrewIssueCount": 0,
-      "hebrewSpans": 0,
-      "focus": {
-       "count": 2,
-       "order": [
-        "input#nt-time:Time",
-        "input#nt-time:Time"
-       ],
-       "positiveTabindex": 0,
-       "noFocusRing": [],
-       "smallTargets": [],
-       "visualOrderJumps": 0,
-       "zeroSizeStops": []
-      }
-     }
-    },
-    "focusOnNav": {
-     "onHeading": true,
-     "active": "h1#view-title"
-    },
-    "hash": "#/reminders",
-    "rendered": {
-     "text": 895,
-     "h1": "Study reminders"
-    },
-    "axe": {
-     "violations": [],
-     "incomplete": []
-    },
-    "unnamed": [],
-    "radioGroupsWithoutName": [],
-    "placeholderOnly": [],
-    "h1": [
-     {
-      "id": "view-title",
-      "text": "Study reminders"
-     }
-    ],
-    "headingSkips": [],
-    "pageTitle": "Study reminders - ALEF",
-    "liveRegions": [
-     {
-      "sel": "p.nt-status",
-      "role": "status",
-      "live": "polite",
-      "hidden": false
-     }
-    ],
-    "dynamicNoLive": [],
-    "hebrewIssues": [],
-    "hebrewIssueCount": 0,
-    "hebrewSpans": 0,
-    "focus": {
-     "count": 2,
-     "order": [
-      "input#nt-time:Time",
-      "input#nt-time:Time"
+      "button:Shin: show the pictu",
+      "button:Play the chain: pict",
+      "button:Hear it",
+      "a#fd-trace:Trace it",
+      "a#fd-trace-bet:Trace Bet",
+      "button:Samekh",
+      "button:Shin",
+      "button:Lamed",
+      "summary:Why?"
      ],
      "positiveTabindex": 0,
      "noFocusRing": [],
@@ -1121,6 +1333,332 @@
     "pageErrors": []
    }
   },
+  "/credits": {
+   "light": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/credits",
+    "rendered": {
+     "text": 14963,
+     "h1": "Credits and licences"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Credits and licences"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Credits and licences - ALEF",
+    "liveRegions": [],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 26,
+     "order": [
+      "summary:What the status valu",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Privacy",
+      "a:About",
+      "a:How this works"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": []
+   },
+   "dark": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/credits",
+    "rendered": {
+     "text": 14963,
+     "h1": "Credits and licences"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Credits and licences"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Credits and licences - ALEF",
+    "liveRegions": [],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 26,
+     "order": [
+      "summary:What the status valu",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Source page",
+      "a:Privacy",
+      "a:About",
+      "a:How this works"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": []
+   }
+  },
+  "/privacy": {
+   "light": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/privacy",
+    "rendered": {
+     "text": 8346,
+     "h1": "Privacy"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": [
+      {
+       "id": "color-contrast",
+       "impact": "serious",
+       "help": "Elements must meet minimum color contrast ratio thresholds",
+       "nodes": [
+        {
+         "target": "th[scope=\"col\"]:nth-child(3)",
+         "html": "<th scope=\"col\">Source file</th>",
+         "summary": "Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+         "target": "tr:nth-child(1) > td:nth-child(3)",
+         "html": "<td>src/shell/settings.js</td>",
+         "summary": "Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+         "target": "tr:nth-child(2) > td:nth-child(3)",
+         "html": "<td>src/onboarding/model.js</td>",
+         "summary": "Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+         "target": "tr:nth-child(3) > td:nth-child(3)",
+         "html": "<td>src/home/today.js</td>",
+         "summary": "Element's background color could not be determined because it's partially obscured by another element"
+        }
+       ],
+       "count": 47
+      }
+     ]
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Privacy"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Privacy - ALEF",
+    "liveRegions": [],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 6,
+     "order": [
+      "div:Stored keys",
+      "a:Open Settings",
+      "a:Progress",
+      "a:Credits and licences",
+      "a:How this works",
+      "a:About"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": []
+   },
+   "dark": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/privacy",
+    "rendered": {
+     "text": 8346,
+     "h1": "Privacy"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": [
+      {
+       "id": "color-contrast",
+       "impact": "serious",
+       "help": "Elements must meet minimum color contrast ratio thresholds",
+       "nodes": [
+        {
+         "target": "th[scope=\"col\"]:nth-child(3)",
+         "html": "<th scope=\"col\">Source file</th>",
+         "summary": "Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+         "target": "tr:nth-child(1) > td:nth-child(3)",
+         "html": "<td>src/shell/settings.js</td>",
+         "summary": "Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+         "target": "tr:nth-child(2) > td:nth-child(3)",
+         "html": "<td>src/onboarding/model.js</td>",
+         "summary": "Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+         "target": "tr:nth-child(3) > td:nth-child(3)",
+         "html": "<td>src/home/today.js</td>",
+         "summary": "Element's background color could not be determined because it's partially obscured by another element"
+        }
+       ],
+       "count": 47
+      }
+     ]
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Privacy"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Privacy - ALEF",
+    "liveRegions": [],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 6,
+     "order": [
+      "div:Stored keys",
+      "a:Open Settings",
+      "a:Progress",
+      "a:Credits and licences",
+      "a:How this works",
+      "a:About"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": []
+   }
+  },
   "/offline": {
    "light": {
     "states": {},
@@ -1130,7 +1668,7 @@
     },
     "hash": "#/offline",
     "rendered": {
-     "text": 1708,
+     "text": 2150,
      "h1": "Use ALEF offline"
     },
     "axe": {
@@ -1196,7 +1734,7 @@
     },
     "hash": "#/offline",
     "rendered": {
-     "text": 1708,
+     "text": 2150,
      "h1": "Use ALEF offline"
     },
     "axe": {
@@ -1243,17 +1781,17 @@
     "pageErrors": []
    }
   },
-  "/vocab/themes": {
+  "/settings": {
    "light": {
     "states": {},
     "focusOnNav": {
      "onHeading": true,
      "active": "h1#view-title"
     },
-    "hash": "#/vocab/themes",
+    "hash": "#/settings",
     "rendered": {
-     "text": 3162,
-     "h1": "Theme packs"
+     "text": 1923,
+     "h1": "Settings"
     },
     "axe": {
      "violations": [],
@@ -1265,14 +1803,26 @@
     "h1": [
      {
       "id": "view-title",
-      "text": "Theme packs"
+      "text": "Settings"
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Theme packs - ALEF",
+    "pageTitle": "Settings - ALEF",
     "liveRegions": [
      {
-      "sel": "div.th-status",
+      "sel": "#s-storage-notice",
+      "role": "alert",
+      "live": null,
+      "hidden": true
+     },
+     {
+      "sel": "#s-persist",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     },
+     {
+      "sel": "p.muted",
       "role": "status",
       "live": "polite",
       "hidden": false
@@ -1283,48 +1833,30 @@
     "hebrewIssueCount": 0,
     "hebrewSpans": 0,
     "focus": {
-     "count": 40,
+     "count": 22,
      "order": [
-      "button:Arts and sports, set",
-      "button:Body and health, set",
-      "button:Clothes and shopping",
-      "button:Describing words, se",
-      "button:Describing words, se",
-      "button:Describing words, se",
-      "button:Doing verbs, set 1 o",
-      "button:Doing verbs, set 2 o",
-      "button:Doing verbs, set 3 o",
-      "button:Doing verbs, set 4 o",
-      "button:Doing verbs, set 5 o",
-      "button:Doing verbs, set 6 o",
-      "button:Doing verbs, set 7 o",
-      "button:Doing verbs, set 8 o",
-      "button:Feelings and mind, s",
-      "button:Food and drink, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:Home things, set 1 o",
-      "button:Moving and doing, se",
-      "button:Nature and animals, ",
-      "button:People and family, s",
-      "button:Places and travel, s",
-      "button:Religion and prayer,",
-      "button:School and learning,",
-      "button:Science and ideas, s",
-      "button:Small words, set 1 o",
-      "button:Society, work and la",
-      "button:Talking and asking, ",
-      "button:Tech and media, set ",
-      "button:Time and numbers, se"
+      "button:Download backup",
+      "button#s-import-label:Restore from backup ",
+      "button:Ask the browser to p",
+      "input#s-voice-f:Woman (Noa)",
+      "input#s-congregation-sephardi:Sephardi (the usual ",
+      "input#s-goal-read:Read in synagogue",
+      "input#s-bva:Use my browser's voi",
+      "input#s-israel:Include Israel lesso",
+      "input#s-script-print:Print",
+      "input#s-theme-auto:Match device",
+      "input#s-writeGodAsGd:Write \"G-d\" in Engli",
+      "input#s-haptics:Vibrate on exercise ",
+      "input#s-soundEffects:Sound effects on exe",
+      "input#s-lat:Latitude",
+      "input#s-lon:Longitude",
+      "button:Use my current locat",
+      "button:Clear",
+      "input#s-wipe-word:Type DELETE",
+      "input#s-wipe-sw:Also remove the offl",
+      "input#s-showUnapprovedImages:Show images that hav",
+      "button:Reset settings to de",
+      "a:Run the first-time s"
      ],
      "positiveTabindex": 0,
      "noFocusRing": [],
@@ -1353,10 +1885,10 @@
      "onHeading": true,
      "active": "h1#view-title"
     },
-    "hash": "#/vocab/themes",
+    "hash": "#/settings",
     "rendered": {
-     "text": 3162,
-     "h1": "Theme packs"
+     "text": 1923,
+     "h1": "Settings"
     },
     "axe": {
      "violations": [],
@@ -1368,14 +1900,26 @@
     "h1": [
      {
       "id": "view-title",
-      "text": "Theme packs"
+      "text": "Settings"
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Theme packs - ALEF",
+    "pageTitle": "Settings - ALEF",
     "liveRegions": [
      {
-      "sel": "div.th-status",
+      "sel": "#s-storage-notice",
+      "role": "alert",
+      "live": null,
+      "hidden": true
+     },
+     {
+      "sel": "#s-persist",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     },
+     {
+      "sel": "p.muted",
       "role": "status",
       "live": "polite",
       "hidden": false
@@ -1386,48 +1930,30 @@
     "hebrewIssueCount": 0,
     "hebrewSpans": 0,
     "focus": {
-     "count": 40,
+     "count": 22,
      "order": [
-      "button:Arts and sports, set",
-      "button:Body and health, set",
-      "button:Clothes and shopping",
-      "button:Describing words, se",
-      "button:Describing words, se",
-      "button:Describing words, se",
-      "button:Doing verbs, set 1 o",
-      "button:Doing verbs, set 2 o",
-      "button:Doing verbs, set 3 o",
-      "button:Doing verbs, set 4 o",
-      "button:Doing verbs, set 5 o",
-      "button:Doing verbs, set 6 o",
-      "button:Doing verbs, set 7 o",
-      "button:Doing verbs, set 8 o",
-      "button:Feelings and mind, s",
-      "button:Food and drink, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:General things, set ",
-      "button:Home things, set 1 o",
-      "button:Moving and doing, se",
-      "button:Nature and animals, ",
-      "button:People and family, s",
-      "button:Places and travel, s",
-      "button:Religion and prayer,",
-      "button:School and learning,",
-      "button:Science and ideas, s",
-      "button:Small words, set 1 o",
-      "button:Society, work and la",
-      "button:Talking and asking, ",
-      "button:Tech and media, set ",
-      "button:Time and numbers, se"
+      "button:Download backup",
+      "button#s-import-label:Restore from backup ",
+      "button:Ask the browser to p",
+      "input#s-voice-f:Woman (Noa)",
+      "input#s-congregation-sephardi:Sephardi (the usual ",
+      "input#s-goal-read:Read in synagogue",
+      "input#s-bva:Use my browser's voi",
+      "input#s-israel:Include Israel lesso",
+      "input#s-script-print:Print",
+      "input#s-theme-auto:Match device",
+      "input#s-writeGodAsGd:Write \"G-d\" in Engli",
+      "input#s-haptics:Vibrate on exercise ",
+      "input#s-soundEffects:Sound effects on exe",
+      "input#s-lat:Latitude",
+      "input#s-lon:Longitude",
+      "button:Use my current locat",
+      "button:Clear",
+      "input#s-wipe-word:Type DELETE",
+      "input#s-wipe-sw:Also remove the offl",
+      "input#s-showUnapprovedImages:Show images that hav",
+      "button:Reset settings to de",
+      "a:Run the first-time s"
      ],
      "positiveTabindex": 0,
      "noFocusRing": [],
@@ -1439,17 +1965,61 @@
     "pageErrors": []
    }
   },
-  "/progress": {
+  "/welcome": {
    "light": {
-    "states": {},
+    "states": {
+     "step 2 after Continue": {
+      "axe": {
+       "violations": [],
+       "incomplete": []
+      },
+      "unnamed": [],
+      "radioGroupsWithoutName": [],
+      "placeholderOnly": [],
+      "h1": [
+       {
+        "id": "view-title",
+        "text": "Welcome to ALEF אלף"
+       }
+      ],
+      "headingSkips": [],
+      "pageTitle": "Welcome - ALEF",
+      "liveRegions": [
+       {
+        "sel": "#ob-status",
+        "role": "status",
+        "live": "polite",
+        "hidden": false
+       }
+      ],
+      "dynamicNoLive": [],
+      "hebrewIssues": [],
+      "hebrewIssueCount": 0,
+      "hebrewSpans": 1,
+      "focus": {
+       "count": 4,
+       "order": [
+        "input#ob-goal-read:Read prayers or Tora",
+        "input#ob-letters-none:No, start from the b",
+        "button#ob-letters-continue:Continue",
+        "a:How this works"
+       ],
+       "positiveTabindex": 0,
+       "noFocusRing": [],
+       "smallTargets": [],
+       "visualOrderJumps": 0,
+       "zeroSizeStops": []
+      }
+     }
+    },
     "focusOnNav": {
      "onHeading": true,
      "active": "h1#view-title"
     },
-    "hash": "#/progress",
+    "hash": "#/welcome",
     "rendered": {
-     "text": 10585,
-     "h1": "Your progress"
+     "text": 305,
+     "h1": "Welcome to ALEF אלף"
     },
     "axe": {
      "violations": [],
@@ -1461,20 +2031,182 @@
     "h1": [
      {
       "id": "view-title",
-      "text": "Your progress"
+      "text": "Welcome to ALEF אלף"
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Progress - ALEF",
+    "pageTitle": "Welcome - ALEF",
     "liveRegions": [
      {
-      "sel": "p.muted",
+      "sel": "#ob-status",
       "role": "status",
       "live": "polite",
       "hidden": false
-     },
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 1,
+    "focus": {
+     "count": 4,
+     "order": [
+      "input#ob-goal-read:Read prayers or Tora",
+      "input#ob-letters-none:No, start from the b",
+      "button#ob-letters-continue:Continue",
+      "a:How this works"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": []
+   },
+   "dark": {
+    "states": {
+     "step 2 after Continue": {
+      "axe": {
+       "violations": [],
+       "incomplete": []
+      },
+      "unnamed": [],
+      "radioGroupsWithoutName": [],
+      "placeholderOnly": [],
+      "h1": [
+       {
+        "id": "view-title",
+        "text": "Welcome to ALEF אלף"
+       }
+      ],
+      "headingSkips": [],
+      "pageTitle": "Welcome - ALEF",
+      "liveRegions": [
+       {
+        "sel": "#ob-status",
+        "role": "status",
+        "live": "polite",
+        "hidden": false
+       }
+      ],
+      "dynamicNoLive": [],
+      "hebrewIssues": [],
+      "hebrewIssueCount": 0,
+      "hebrewSpans": 1,
+      "focus": {
+       "count": 4,
+       "order": [
+        "input#ob-goal-read:Read prayers or Tora",
+        "input#ob-letters-none:No, start from the b",
+        "button#ob-letters-continue:Continue",
+        "a:How this works"
+       ],
+       "positiveTabindex": 0,
+       "noFocusRing": [],
+       "smallTargets": [],
+       "visualOrderJumps": 0,
+       "zeroSizeStops": []
+      }
+     }
+    },
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/welcome",
+    "rendered": {
+     "text": 305,
+     "h1": "Welcome to ALEF אלף"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
      {
-      "sel": "#pg-bk-status",
+      "id": "view-title",
+      "text": "Welcome to ALEF אלף"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Welcome - ALEF",
+    "liveRegions": [
+     {
+      "sel": "#ob-status",
+      "role": "status",
+      "live": "polite",
+      "hidden": false
+     }
+    ],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 1,
+    "focus": {
+     "count": 4,
+     "order": [
+      "input#ob-goal-read:Read prayers or Tora",
+      "input#ob-letters-none:No, start from the b",
+      "button#ob-letters-continue:Continue",
+      "a:How this works"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": []
+   }
+  },
+  "/search": {
+   "light": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/search",
+    "rendered": {
+     "text": 125,
+     "h1": "Search"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "Search"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "Search - ALEF",
+    "liveRegions": [
+     {
+      "sel": "#search-status",
       "role": "status",
       "live": "polite",
       "hidden": false
@@ -1485,10 +2217,9 @@
     "hebrewIssueCount": 0,
     "hebrewSpans": 0,
     "focus": {
-     "count": 2,
+     "count": 1,
      "order": [
-      "a:Open",
-      "a:Open"
+      "input#search-q:Search pages, letter"
      ],
      "positiveTabindex": 0,
      "noFocusRing": [],
@@ -1517,10 +2248,10 @@
      "onHeading": true,
      "active": "h1#view-title"
     },
-    "hash": "#/progress",
+    "hash": "#/search",
     "rendered": {
-     "text": 10585,
-     "h1": "Your progress"
+     "text": 125,
+     "h1": "Search"
     },
     "axe": {
      "violations": [],
@@ -1532,20 +2263,14 @@
     "h1": [
      {
       "id": "view-title",
-      "text": "Your progress"
+      "text": "Search"
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Progress - ALEF",
+    "pageTitle": "Search - ALEF",
     "liveRegions": [
      {
-      "sel": "p.muted",
-      "role": "status",
-      "live": "polite",
-      "hidden": false
-     },
-     {
-      "sel": "#pg-bk-status",
+      "sel": "#search-status",
       "role": "status",
       "live": "polite",
       "hidden": false
@@ -1556,10 +2281,117 @@
     "hebrewIssueCount": 0,
     "hebrewSpans": 0,
     "focus": {
-     "count": 2,
+     "count": 1,
      "order": [
-      "a:Open",
-      "a:Open"
+      "input#search-q:Search pages, letter"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "pageErrors": []
+   }
+  },
+  "/about": {
+   "light": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/about",
+    "rendered": {
+     "text": 1053,
+     "h1": "About ALEF"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "About ALEF"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "About - ALEF",
+    "liveRegions": [],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 3,
+     "order": [
+      "a:How this works",
+      "a:Credits and licences",
+      "a:Privacy"
+     ],
+     "positiveTabindex": 0,
+     "noFocusRing": [],
+     "smallTargets": [],
+     "visualOrderJumps": 0,
+     "zeroSizeStops": []
+    },
+    "motionUnderReduce": [],
+    "reflow320": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 320,
+     "clientWidth": 320,
+     "overflowing": []
+    },
+    "reflow195": {
+     "pageScrollsSideways": false,
+     "scrollWidth": 195,
+     "clientWidth": 195,
+     "overflowing": []
+    },
+    "pageErrors": []
+   },
+   "dark": {
+    "states": {},
+    "focusOnNav": {
+     "onHeading": true,
+     "active": "h1#view-title"
+    },
+    "hash": "#/about",
+    "rendered": {
+     "text": 1053,
+     "h1": "About ALEF"
+    },
+    "axe": {
+     "violations": [],
+     "incomplete": []
+    },
+    "unnamed": [],
+    "radioGroupsWithoutName": [],
+    "placeholderOnly": [],
+    "h1": [
+     {
+      "id": "view-title",
+      "text": "About ALEF"
+     }
+    ],
+    "headingSkips": [],
+    "pageTitle": "About - ALEF",
+    "liveRegions": [],
+    "dynamicNoLive": [],
+    "hebrewIssues": [],
+    "hebrewIssueCount": 0,
+    "hebrewSpans": 0,
+    "focus": {
+     "count": 3,
+     "order": [
+      "a:How this works",
+      "a:Credits and licences",
+      "a:Privacy"
      ],
      "positiveTabindex": 0,
      "noFocusRing": [],
@@ -1572,10 +2404,55 @@
    }
   }
  },
- "findings": [],
+ "findings": [
+  {
+   "route": "/letters",
+   "theme": "light",
+   "kind": "page-error",
+   "detail": "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "route": "/letters",
+   "theme": "dark",
+   "kind": "page-error",
+   "detail": "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "route": "/letters/atlas",
+   "theme": "light",
+   "kind": "page-error",
+   "detail": "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "route": "/letters/atlas",
+   "theme": "dark",
+   "kind": "page-error",
+   "detail": "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "route": "/letters/bet",
+   "theme": "light",
+   "kind": "page-error",
+   "detail": "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "route": "/letters/bet",
+   "theme": "dark",
+   "kind": "page-error",
+   "detail": "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "route": "/firstday",
+   "theme": "light",
+   "kind": "page-error",
+   "detail": "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  }
+ ],
  "summary": {
-  "routes": 10,
-  "findings": 0,
-  "byKind": {}
+  "routes": 15,
+  "findings": 7,
+  "byKind": {
+   "page-error": 7
+  }
  }
 }

@@ -2,7 +2,7 @@
 
 The safe, mechanical fixes are in `data/vocab/corrections.json` (applied by `tools/vocab/apply_corrections.mjs`): 2 exact-duplicate records removed, 65 transliterations that lost an h restored, 2 missing transliterations filled. Nothing below was changed. Each item has my recommendation; none of the recommendations has been checked by a Hebrew reader, and glosses suggested here are mine, from general knowledge.
 
-Counts are for the corrected `words.json` (6,297 records).
+Counts are for the corrected `words.json` (6,303 records).
 
 ## 1. Rank holders that are probably wrong (ranks 1-100)
 
@@ -70,7 +70,7 @@ Apply as `overrides` in the build (so a rebuild keeps them), not by editing `wor
 
 ## Addendum (2026-11-04): offensive or wrong English glosses, divine-name spellings
 
-Scan: a word list (profanity, slurs, sexual terms, ethnic and disability terms, Jehovah/Yahweh/YHWH) over `en`, every `alt` and the example sentence of all 6,297 records of `data/vocab/words.json` (packs and index are copies). Changes are 35 appended entries in `data/vocab/corrections.json` (fields `en`, `alt`, `flags.hidden`, `example`), applied by `tools/vocab/apply_corrections.mjs`, which now also updates the `en` column of `index.json`. `tools/vocab/deck_order.mjs` and `tools/vocab/theme_packs.mjs` skip records with `flags.hidden`. Nothing here is a native review; every row stays unreviewed.
+Scan: a word list (profanity, slurs, sexual terms, ethnic and disability terms, Jehovah/Yahweh/YHWH) over `en`, every `alt` and the example sentence of all 6,303 records of `data/vocab/words.json` (packs and index are copies). Changes are 35 appended entries in `data/vocab/corrections.json` (fields `en`, `alt`, `flags.hidden`, `example`), applied by `tools/vocab/apply_corrections.mjs`, which now also updates the `en` column of `index.json`. `tools/vocab/deck_order.mjs` and `tools/vocab/theme_packs.mjs` skip records with `flags.hidden`. Nothing here is a native review; every row stays unreviewed.
 
 Gloss replaced with a neutral one (meaning certain from the record's own other senses or the gloss itself):
 - `h31ff5eef` debili: "Retarded, mentally defective" -> "Pointless, foolish" (its own second sense).

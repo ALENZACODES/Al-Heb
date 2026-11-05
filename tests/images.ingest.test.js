@@ -53,8 +53,8 @@ test('csv: quoted commas, doubled quotes and newlines round-trip', () => {
 test('the real manifest parses and every stem is safe and unique', async () => {
   const { loadManifest } = await import('../tools/images/ingest_lib.mjs');
   const rows = loadManifest(new URL('../data/images/manifest.csv', import.meta.url).pathname);
-  assert.equal(rows.length, 797);
-  assert.equal(new Set(rows.map((r) => r.stem)).size, 797);
+  assert.equal(rows.length, 1797); // 797 original rows + the 1000 Run 3 rows (data/images/run3.csv)
+  assert.equal(new Set(rows.map((r) => r.stem)).size, 1797);
 });
 test('classifyName: exact, case, plain duplicate suffix; generator default names are never matched', () => {
   const stems = new Set(['L05_dalet_quirky', 'L01_alef_print_mnemonic']);
@@ -109,7 +109,7 @@ test('ingest end to end: matching, checks, web copies, metadata stripped, proven
   const rep = await ingest({ paths, inputs: [inDir], ocr: false, now: '2026-11-05T00:00:00.000Z' });
   const ids = rep.ingested.map((x) => x.id).sort();
   assert.deepEqual(ids, ['ICON_t06', 'T01_cup', 'T02_wide', 'T05_var']);
-  assert.equal(rep.rejectedFiles.length, 1); assert.match(rep.rejectedFiles[0].reason, /aspect mismatch/);
+  assert.equal(rep.rejectedFiles.length, 1, JSON.stringify(rep.rejectedFiles)); assert.match(rep.rejectedFiles[0].reason, /aspect mismatch/);
   assert.equal(rep.unmatched.length, 1); assert.match(rep.unmatched[0].file, /Generated Image/);
   assert.equal(rep.unmatched[0].width, 1024);
   assert.ok(rep.contentDuplicates.some((d) => d.sameAs?.includes('T01_cup.png')), 'identical " (1)" copy reported as duplicate, not re-ingested');

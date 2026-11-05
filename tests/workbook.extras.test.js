@@ -62,8 +62,8 @@ test('answer key: ladder 20, 27 letters, cursive + niqqud words match the sheets
 
 test('build_all plan runs every tool; flags drop core/cards', () => {
   const names = (a) => plan(a).map((s) => s.join(' '));
-  assert.equal(plan([]).length, 8); assert.match(names([])[0], /^workbook\.mjs --mnemonics/);
-  assert.equal(plan(['--skip-core', '--skip-cards']).length, 5);
+  assert.equal(plan([]).length, 10); assert.match(names([])[0], /^workbook\.mjs --mnemonics/);
+  assert.equal(plan(['--skip-core', '--skip-cards']).length, 6);
   assert.ok(plan(['--html-only']).every((s) => s.includes('--html-only')));
   assert.ok(names([]).some((s) => s === 'flashcard_sheets.mjs --light'));
 });

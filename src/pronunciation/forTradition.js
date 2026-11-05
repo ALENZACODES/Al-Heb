@@ -84,7 +84,7 @@ export function audioNote(tradition, { hasRecording = false } = {}) {
   const t = normalize(tradition);
   if (hasRecording) return '';
   if (t === 'israeli') return 'No recording yet: this plays the device voice, which speaks Israeli Hebrew.';
-  return `No ${LABELS[t]} recording yet: the device voice speaks Israeli Hebrew, so it will not match your ${LABELS[t]} setting. Read the respelling instead.`;
+  return `There is no ${LABELS[t]} recording yet. The device voice speaks Israeli Hebrew, so it will not match your ${LABELS[t]} setting. Read the English-letter spelling instead.`;
 }
 
 /** Tradition for content that exists only in Modern Israeli Hebrew (phrasebook, Israel track): never the congregation. */
@@ -111,5 +111,16 @@ export function playLine(r, tradition, what = 'this') {
 /** Line for views that cannot know whether a recording exists: names the setting and what is shown instead. */
 export function settingLine(tradition) {
   const t = normalize(tradition);
-  return `Your setting: ${LABELS[t]}. The respelling below follows it${t === 'israeli' ? '' : ` (rule-generated, not checked by a native ${LABELS[t]} speaker)`}.`;
+  return `Your setting: ${LABELS[t]}. The English-letter spelling below follows it${t === 'israeli' ? '' : ` (made by rules, not checked by a native ${LABELS[t]} speaker)`}.`;
+}
+
+/**
+ * The one-sentence beginner line for a letter in a tradition ("Bet says B, like the b in ball; no dot, V as in van.").
+ * Reads `say` from data/pronunciation/consonants.json; falls back to letterSound() wording when a record has none.
+ * @param {any} rec @param {string} tradition @param {{fallbackEn?: string}} [opts]
+ */
+export function saySound(rec, tradition, { fallbackEn = '' } = {}) {
+  const t = normalize(tradition);
+  const s = rec?.say?.[t] || rec?.say?.israeli;
+  return s || letterSound(rec, t, { fallbackEn }).en;
 }

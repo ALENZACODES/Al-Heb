@@ -252,7 +252,7 @@ function evaluate(target, user, leniency, outlineVisible, tscale) {
 export function feedbackFor(result, extra = {}) {
   if (!result || result.ok) return { key: 'trace.good', text: 'Good!' };
   if (extra.wrongOrder) return { key: 'trace.order', text: 'That is a different stroke. Follow the numbered order.' };
-  if (result.backwards) return { key: 'trace.backwards', text: 'Right shape, wrong direction. Start at the green dot.' };
+  if (result.backwards) return { key: 'trace.backwards', text: 'Right shape. Try the other direction. Start at the green dot.' };
   const f = result.failed || [];
   if (f.includes('tooShort')) return { key: 'trace.tooShort', text: 'Draw a longer line.' };
   if (f.includes('direction')) return { key: 'trace.direction', text: 'Check the direction of the arrow.' };
@@ -395,13 +395,13 @@ export function createTracer(container, letter, script, opts = {}) {
   function drawGuide() {
     clear(gGuide);
     if (options.showOutline === false) return;
-    if (block.outline) gGuide.appendChild(el('path', { d: block.outline, fill: '#e8e8ee', stroke: 'none' }));
-    else for (const s of block.strokes) gGuide.appendChild(el('path', { d: s.path, fill: 'none', stroke: '#e8e8ee', 'stroke-width': sw, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }));
+    if (block.outline) gGuide.appendChild(el('path', { d: block.outline, fill: '#8f8fa0', stroke: 'none' }));
+    else for (const s of block.strokes) gGuide.appendChild(el('path', { d: s.path, fill: 'none', stroke: '#8f8fa0', 'stroke-width': sw, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }));
     // start dot for the current stroke
     const st = session.getState();
     if (!st.done) {
       const m = block.strokes[st.index].median;
-      gGuide.appendChild(el('circle', { cx: m[0][0], cy: m[0][1], r: 30, fill: '#2ca02c', opacity: 0.85 }));
+      gGuide.appendChild(el('circle', { cx: m[0][0], cy: m[0][1], r: 30, fill: '#1a7f37', opacity: 1 }));
       gGuide.appendChild(el('text', { x: m[0][0], y: m[0][1] + 12, 'text-anchor': 'middle', 'font-size': 34, fill: '#fff', 'font-family': 'sans-serif', 'font-weight': 'bold' })).textContent = String(st.index + 1);
     }
   }
@@ -466,6 +466,8 @@ export function createTracer(container, letter, script, opts = {}) {
     node.appendChild(path);
     const now = () => (typeof performance !== 'undefined' ? performance.now() : Date.now());
     const t0 = now();
+    // prefers-reduced-motion: show the finished stroke at once instead of sweeping it (the strokes still appear one after another)
+    if ((typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches) || (typeof document !== 'undefined' && document.documentElement?.hasAttribute?.('data-calm'))) { path.setAttribute('d', 'M' + pts.map(p => p[0].toFixed(0) + ' ' + p[1].toFixed(0)).join('L')); if (done) done(); return path; }
     const raf = typeof requestAnimationFrame === 'function' ? requestAnimationFrame : (fn => setTimeout(() => fn(now()), 16));
     const step = () => {
       if (destroyed) return;
@@ -482,7 +484,7 @@ export function createTracer(container, letter, script, opts = {}) {
     clear(gHint);
     const st = session.getState();
     if (st.done) return;
-    animateMedian(gHint, block.strokes[st.index].median, '#e67e22', () => schedule(() => clear(gHint), 800));
+    animateMedian(gHint, block.strokes[st.index].median, '#b45309', () => schedule(() => clear(gHint), 800));
   }
 
   /** Play the whole letter's stroke order, one stroke after another. Resolves when finished. */
@@ -495,10 +497,10 @@ export function createTracer(container, letter, script, opts = {}) {
         if (destroyed) return resolve(undefined);
         if (i >= block.strokes.length) { schedule(() => { clear(gHint); resolve(undefined); }, 600); return; }
         const idx = i++;
-        animateMedian(gHint, block.strokes[idx].median, '#e67e22', () => schedule(next, options.delayBetweenStrokes));
+        animateMedian(gHint, block.strokes[idx].median, '#b45309', () => schedule(next, options.delayBetweenStrokes));
         // number badge at start
         const s = block.strokes[idx].median[0];
-        gHint.appendChild(el('text', { x: s[0], y: s[1] - 36, 'text-anchor': 'middle', 'font-size': 44, fill: '#e67e22', 'font-family': 'sans-serif', 'font-weight': 'bold' })).textContent = String(idx + 1);
+        gHint.appendChild(el('text', { x: s[0], y: s[1] - 36, 'text-anchor': 'middle', 'font-size': 44, fill: '#b45309', 'font-family': 'sans-serif', 'font-weight': 'bold' })).textContent = String(idx + 1);
       };
       next();
     });

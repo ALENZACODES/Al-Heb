@@ -40,9 +40,14 @@ function doneSet(manifest) {
     };
     if (Array.isArray(j.records)) j.records.filter((r) => r.role === 'matched').forEach((r) => walk(r.matched_manifest_file));
     else walk(j.matched ?? j.matches ?? j.manifest ?? j);
-    const known = new Set(manifest.map((r) => r.file));
+    const known = new Set(manifest.filter((r) => Number(r.command) <= 101).map((r) => r.file));
     const hit = new Set([...names].filter((n) => known.has(n)));
-    if (hit.size) return { done: hit, source: `docs/images/codex-batch-01.json (${hit.size} matched manifest names)` };
+    // Also done: every manifest row already ingested (data/images/provenance.json), whichever batch it came from.
+    const pv = join(ROOT, 'data/images/provenance.json');
+    const ingested = new Set();
+    if (existsSync(pv)) { const P = JSON.parse(readFileSync(pv, 'utf8')); for (const id of Object.keys(P.images ?? P)) if (known.has(`${id}.png`)) ingested.add(`${id}.png`); }
+    const all = new Set([...hit, ...ingested]);
+    if (hit.size) return { done: all, source: `docs/images/codex-batch-01.json (${hit.size} matched manifest names) plus ${all.size - hit.size} more already in data/images/provenance.json` };
   }
   return { done: new Set(manifest.filter((r) => Number(r.command) <= 27).map((r) => r.file)), source: 'assumed: every manifest row of commands 1-27 (codex-batch-01.json not found)' };
 }
@@ -51,11 +56,12 @@ export function build() {
   const manifest = parseCsv(readFileSync(join(ROOT, 'data/images/manifest.csv'), 'utf8'));
   const pg = JSON.parse(readFileSync(join(ROOT, 'data/images/prompt-groups.json'), 'utf8')).groups;
   const { done, source } = doneSet(manifest);
-  const remaining = manifest.filter((r) => !done.has(r.file));
+  // Only the original plan (commands 1-101). Rows appended later for ingest (Run 3 = commands 150-249, intermediate, block J) have their own paste files and runbook steps.
+  const remaining = manifest.filter((r) => Number(r.command) <= 101 && !done.has(r.file));
   const next = buildNext();
-  const need = TARGET - remaining.length;
   const newRows = next.flatMap((g) => g.rows);
-  if (need > newRows.length) throw new Error(`need ${need} new rows but spec_next has ${newRows.length}; add commands to spec_next.mjs`);
+  // TARGET is a ceiling: as images get ingested, fewer unfinished rows remain and spec_next may not hold enough block H rows to refill to 1000.
+  const need = Math.max(0, Math.min(TARGET - remaining.length, newRows.length));
   const keepNew = newRows.slice(0, need);
   const keepSet = new Set(keepNew.map((r) => r.file));
   const byCmd = new Map();

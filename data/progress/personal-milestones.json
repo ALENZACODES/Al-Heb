@@ -5,8 +5,8 @@
   "milestones": [
     { "id": "words-100", "kind": "words", "count": 100, "label": "First 100 words started in review", "href": "#/vocab" },
     { "id": "prayer-read", "kind": "prayerRead", "label": "First prayer text read aloud and timed (self-reported)", "href": "#/timedread" },
-    { "id": "siddur-25", "kind": "coverage", "pct": 25, "label": "Siddur coverage: 25% of a service's lines", "href": "#/service" },
-    { "id": "siddur-50", "kind": "coverage", "pct": 50, "label": "Siddur coverage: 50% of a service's lines", "href": "#/service" },
-    { "id": "siddur-75", "kind": "coverage", "pct": 75, "label": "Siddur coverage: 75% of a service's lines", "href": "#/service" }
+    { "id": "siddur-25", "kind": "coverage", "pct": 25, "label": "Prayer book coverage: 25% of a service's lines", "href": "#/service" },
+    { "id": "siddur-50", "kind": "coverage", "pct": 50, "label": "Prayer book coverage: 50% of a service's lines", "href": "#/service" },
+    { "id": "siddur-75", "kind": "coverage", "pct": 75, "label": "Prayer book coverage: 75% of a service's lines", "href": "#/service" }
   ]
 }

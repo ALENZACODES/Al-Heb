@@ -185,7 +185,7 @@ if (phases.has('interact')) {
   // --- stroke tracing: drag along each stroke's median with synthetic mouse events
   for (const [id, script] of [['alef', 'print'], ['bet', 'print'], ['shin', 'print']]) {
     const L = letters.find((l) => l.id === id); const pg = await mk('/letters/' + id);
-    const svg = pg.locator('.alef-trace svg[role=img]').first();
+    const svg = pg.locator('.alef-trace .stage svg[role=img]').first();
     const have = await svg.count();
     if (!have) { rec(`trace ${id}: svg present`, false, 'no tracing svg'); await pg.close(); continue; }
     await svg.scrollIntoViewIfNeeded(); const box = await svg.boundingBox(); const strokes = L[script].strokes;
@@ -213,7 +213,7 @@ if (phases.has('interact')) {
   }
   // touch-style pointer events too (pointerType touch via CDP)
   {
-    const pg = await mk('/letters/alef'); const L = letters[0]; const svg = pg.locator('.alef-trace svg[role=img]').first(); await svg.scrollIntoViewIfNeeded(); const box = await svg.boundingBox();
+    const pg = await mk('/letters/alef'); const L = letters[0]; const svg = pg.locator('.alef-trace .stage svg[role=img]').first(); await svg.scrollIntoViewIfNeeded(); const box = await svg.boundingBox();
     const cdp = await ctx.newCDPSession(pg); const m = L.print.strokes[0].median; const toPx = (p) => [box.x + (p[0] / 1000) * box.width, box.y + (p[1] / 1000) * box.height];
     const ev = (type, p) => cdp.send('Input.dispatchTouchEvent', { type, touchPoints: type === 'touchEnd' ? [] : [{ x: toPx(p)[0], y: toPx(p)[1] }] });
     await ev('touchStart', m[0]); for (const p of m.slice(1)) await ev('touchMove', p); await ev('touchEnd', m.at(-1)); await pg.waitForTimeout(200);
@@ -245,6 +245,7 @@ if (phases.has('interact')) {
     rec('soundgap: no page errors', pg.errs.length === 0, pg.errs.join('; ')); await pg.close(); } catch (e) { rec('Sound gap: completed without exception', false, e.message.split('\n')[0]); }
   // --- Vowel board
   try { const pg = await mk('/vowelboard'); const tray = pg.locator('[role=group][aria-label="Signs to place"] button'); const fam = pg.locator('[role=group][aria-label="Families"] button');
+    await tray.first().waitFor({ timeout: 6000 }).catch(() => {}); // the board mounts after data loads; do not sample it at tray=0
     const modes = pg.locator('[role=group][aria-label="Mode"] button'); const modeNames = await modes.allInnerTexts();
     rec('vowelboard: mounts with tray and modes', (await tray.count()) > 0 || modeNames.length > 0, `tray=${await tray.count()} modes=${modeNames.join('|')}`);
     if (await tray.count()) { await tray.first().click(); await pg.waitForTimeout(150); const st1 = await pg.locator('main [role=status]').first().innerText().catch(() => '');

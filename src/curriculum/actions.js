@@ -1,27 +1,54 @@
 /** Store-backed learning actions shared by the Lane 1 views and the home screen. */
 import { storeGet, storeSet, PROGRESS_KEY, CARDS_KEY, STREAK_KEY } from "./dom.js";
-import { ensureCards, recordActivity, currentStreak, applyOutcomesToCards, syllableCardId, lineCardId, genderCardId } from "./progress.js";
+import { loadState } from "./state.js";
+import { ensureCards, recordActivity, applyOutcomesToCards, syllableCardId, lineCardId, genderCardId } from "./progress.js";
 import { review, newCard } from "./srs.js";
 import { nextScaffold, SCAFFOLD_KEY } from "./scaffold.js";
 import { nextFadeLevel } from "./fade.js";
-
-export async function loadState(ctx, now = Date.now()) {
-  const progress = await storeGet(ctx, PROGRESS_KEY, { completed: {} });
-  const cards = await storeGet(ctx, CARDS_KEY, {});
-  const streak = await storeGet(ctx, STREAK_KEY, null);
-  const normCards = Array.isArray(cards) ? Object.fromEntries(cards.filter((c) => c?.id).map((c) => [c.id, c])) : cards;
-  return { completed: progress.completed || {}, cards: normCards, streak: currentStreak(streak, now), rawStreak: streak };
-}
+import { memoryCardsFor, ensureMemoryCards } from "../letters/memory.core.js";
+import { loadContent } from "./content.js";
+export { loadState };
 
 /** Mark a lesson complete, create its SRS cards, count today as active. Idempotent for cards. */
 export async function completeLesson(ctx, lesson, now = Date.now()) {
   const st = await loadState(ctx, now);
   const completed = { ...st.completed, [lesson.id]: st.completed[lesson.id] || now };
-  const { cards, added } = ensureCards(st.cards, lesson, now);
+  const { cards: base, added } = ensureCards(st.cards, lesson, now);
+  const cards = await withMemoryCards(base, lesson.letters, now); // memory-chain cards for the lesson's letters (none when the chain is absent)
   await storeSet(ctx, PROGRESS_KEY, { completed });
   await storeSet(ctx, CARDS_KEY, cards);
   await storeSet(ctx, STREAK_KEY, recordActivity(st.rawStreak, now));
   return { added, completed };
+}
+
+/**
+ * Add the memory-chain cards (mem:<letter>:<type>) for these letters. They fall due on a staggered schedule (see MEM_DELAY_DAYS).
+ * Without data/letters/memory-chain.json, or for a letter it does not cover, nothing is added. Never throws.
+ */
+export async function withMemoryCards(cards, letterIds, now = Date.now()) {
+  try {
+    const c = await loadContent();
+    if (!c.chain?.size) return cards;
+    return ensureMemoryCards(cards, memoryCardsFor(letterIds, c.chain, c.letters), now).cards;
+  } catch { return cards; }
+}
+/** Register memory cards for every letter taught by a completed lesson (idempotent; covers lessons finished before the chain existed). */
+export async function syncMemoryCards(ctx, lessonList, now = Date.now()) {
+  const st = await loadState(ctx, now);
+  const taught = [...taughtFromCompleted(st.completed, lessonList)];
+  const next = await withMemoryCards(st.cards, taught, now);
+  const added = Object.keys(next).length - Object.keys(st.cards).length;
+  if (added > 0) await storeSet(ctx, CARDS_KEY, next);
+  return { added, taught };
+}
+/** Count one look-alike pair outcome from a memory question: the pair (target, other) gets a trial, and an error when `other` was picked wrongly. */
+export async function savePairOutcome(ctx, targetId, otherIds, pickedId) {
+  const pairs = await storeGet(ctx, PAIRS_KEY, {}), next = { ...pairs };
+  for (const o of otherIds) {
+    const k = [targetId, o].sort().join("|");
+    next[k] = { errors: (next[k]?.errors || 0) + (o === pickedId ? 1 : 0), trials: (next[k]?.trials || 0) + 1 };
+  }
+  await storeSet(ctx, PAIRS_KEY, next);
 }
 
 /** Create the lesson's cards without completing it (used by the practice deep link). */
@@ -42,6 +69,27 @@ export async function rateCard(ctx, cardId, rating, now = Date.now()) {
   await storeSet(ctx, STREAK_KEY, recordActivity(st.rawStreak, now));
   if (cardId.startsWith("word:")) await updateScaffold(ctx, cardId, rating, next, now);
   return next;
+}
+
+/**
+ * Undo support for one review rating (a slipped tap on Again/Hard/Good/Easy). `snapshotRating` is taken just before `rateCard`; `restoreRating`
+ * puts that one card (and, for a word card, its scaffold entry) back exactly as it was. The streak is left alone: the learner did study.
+ */
+export async function snapshotRating(ctx, cardId) {
+  const st = await loadState(ctx);
+  const scaffold = cardId.startsWith("word:") ? ((await storeGet(ctx, SCAFFOLD_KEY, {})) || {})[cardId] : undefined;
+  return { cardId, card: st.cards[cardId], scaffold };
+}
+export async function restoreRating(ctx, snap) {
+  if (!snap || !snap.card) return false;
+  const st = await loadState(ctx);
+  await storeSet(ctx, CARDS_KEY, { ...st.cards, [snap.cardId]: snap.card });
+  if (snap.cardId.startsWith("word:")) {
+    const map = { ...((await storeGet(ctx, SCAFFOLD_KEY, {})) || {}) };
+    if (snap.scaffold === undefined) delete map[snap.cardId]; else map[snap.cardId] = snap.scaffold;
+    await storeSet(ctx, SCAFFOLD_KEY, map);
+  }
+  return true;
 }
 
 // ---- practice features: hints, loanwords, Spot It, checkpoint (storage keys documented in docs/curriculum/onramp-drills-dialogues.md)
@@ -148,6 +196,7 @@ export async function saveGender(ctx, results, now = Date.now()) {
 export async function setLearnerGender(ctx, iAm) {
   const g = (await storeGet(ctx, GENDER_KEY, {})) || {};
   await storeSet(ctx, GENDER_KEY, { ...g, iAm });
+  try { ctx?.settings?.set?.({ gender: iAm }); } catch { /* best effort */ } // keep the one shared setting in step (Settings > My gender)
 }
 
 /** Update a word card's transliteration scaffold after a review (see scaffold.js). */

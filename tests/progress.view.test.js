@@ -27,7 +27,7 @@ test('siddur coverage line: fresh learner shows 0% for Shabbat morning (the serv
   const line = root.querySelector('.pg-siddur');
   assert.ok(line, 'line rendered');
   assert.equal(line.attrs['data-pct'], '0'); assert.equal(line.attrs['data-order'], 'shabbat-morning');
-  assert.match(line.textContent, /^Siddur coverage: 0% of the phrases in Shabbat morning you can read/);
+  assert.match(line.textContent, /^Prayer book coverage: 0% of the phrases in Shabbat morning you can read/);
   assert.equal(line.queryAll('a')[0].attrs.href, '#/service');
   assert.match(section(root, 'pg-h-read').textContent, /not that you read them fluently/);
 });
@@ -36,7 +36,7 @@ test('siddur coverage line follows the saved service choice and rises with compl
   const { root } = await show({ ...allRead(), 'service.prefs': { order: 'friday-night' } });
   const line = root.querySelector('.pg-siddur');
   assert.equal(line.attrs['data-order'], 'friday-night');
-  assert.match(line.textContent, /Siddur coverage: \d+% of the phrases in Friday evening you can read/);
+  assert.match(line.textContent, /Prayer book coverage: \d+% of the phrases in Friday evening you can read/);
   assert.ok(Number(line.attrs['data-pct']) > 0, 'all read lessons done: some lines decodable');
   const { root: r2 } = await show({ 'service.prefs': { order: 'weekday-morning' } }); // not a follow order: falls back to the default
   assert.equal(r2.querySelector('.pg-siddur').attrs['data-order'], 'shabbat-morning');
@@ -105,7 +105,7 @@ const { inspectProgressBackup, exportProgressJSON } = await import('../src/progr
 test('export button produces a progress file whose checksum verifies; import is checked, confirmed, then applied and the screen rebuilt', async () => {
   const { root, store } = await show({ ...allRead(), 'timedread.v1': { v: 1, reads: [read(), read(), read()] } });
   const bk = section(root, 'pg-h-bk');
-  assert.match(bk.textContent, /carries a checksum/);
+  assert.match(bk.textContent, /built-in check/);
   await bk.querySelector('#pg-bk-export').click();
   const box = bk.querySelector('.pg-bk-text'); // shown both with a download link (Blob present) and without
   assert.ok(box, 'file text shown'); const file = inspectProgressBackup(box.value); assert.equal(file.ok, true); assert.ok(file.keys.includes('timedread.v1')); assert.ok(file.keys.includes('progress.milestones.v1'), 'reached milestones travel with the progress file');
@@ -114,11 +114,11 @@ test('export button produces a progress file whose checksum verifies; import is 
   const bk2 = section(r2, 'pg-h-bk');
   bk2.querySelector('#pg-bk-paste').value = box.value;
   await bk2.querySelector('#pg-bk-check').click();
-  assert.match(bk2.querySelector('#pg-bk-status').textContent, /Checked: 4 progress keys.*Checksum matches\. Nothing is changed until you confirm/);
+  assert.match(bk2.querySelector('#pg-bk-status').textContent, /Checked: 4 saved items.*The file check passed\. Nothing is changed until you confirm/);
   assert.equal(s2.m['timedread.v1'], undefined, 'nothing written before confirm');
   await bk2.querySelector('#pg-bk-go').click();
   assert.equal(s2.m['timedread.v1'].reads.length, 3);
-  assert.match(r2.querySelector('#pg-bk-status').textContent, /Imported 4 keys/);
+  assert.match(r2.querySelector('#pg-bk-status').textContent, /Imported 4 saved items/);
   assert.match(section(r2, 'pg-h-belts').textContent, /Grey belt: Earned/, 'screen rebuilt from the imported data');
 });
 test('a tampered pasted file is refused with the checksum message and no confirm button appears', async () => {

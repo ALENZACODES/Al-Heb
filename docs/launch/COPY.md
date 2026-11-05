@@ -23,8 +23,8 @@ ALEF is a free Hebrew course that runs in your browser and works offline once lo
 
 ## What it is not yet
 
-- **No recorded audio.** 0 of 16,710 planned clips exist. Sound comes from your device's own Hebrew voice, if it has one; that is a device voice, not a teacher, and it may be missing or poor on your phone.
-- **Not reviewed.** The Hebrew (lessons, vocabulary, vowel points, transliterations, prayer texts, tradition comparisons) was assembled by programs and has not been checked by a native speaker, Hebrew teacher, rabbi or cantor. 0 of 7,039 review rows have come back. Expect mistakes. Do not rely on it for liturgical use without checking a trusted printed siddur or your own teacher.
+- **No recorded audio.** 0 of 24,900 listed clips exist. Sound comes from your device's own Hebrew voice, if it has one; that is a device voice, not a teacher, and it may be missing or poor on your phone.
+- **Not reviewed.** The Hebrew (lessons, vocabulary, vowel points, transliterations, prayer texts, tradition comparisons) was assembled by programs and has not been checked by a native speaker, Hebrew teacher, rabbi or cantor. 0 of 3,718 review rows have come back. Expect mistakes. Do not rely on it for liturgical use without checking a trusted printed siddur or your own teacher.
 - **Not tested with learners or on real devices.** Layout checks were done in emulation, not on actual phones, and no learner has used it.
 - **Not a full course.** Trope (cantillation) is only partly covered, and the vocabulary list is machine-built and ordered by frequency, not by teaching sense.
 - **Licences are not settled.** Some word data and some prayer texts come from sources whose licences are still being sorted out (`docs/legal/CONTENT-LICENCE-AUDIT.md`); this is not legal advice.

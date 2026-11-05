@@ -17,12 +17,13 @@ export const WARN_RATIO = 0.7, CRITICAL_RATIO = 0.9;
 export const GROUPS = Object.freeze([
   { id: "calendar", label: "Calendar and reminders", test: /^(src\/curriculum\/(calendar|reminders)[^/]*|data\/calendar\/.*)$/, route: "#/calendar" },
   { id: "lessons", label: "Lessons, review and Israel dialogues", test: /^(src\/curriculum\/|data\/curriculum\/|data\/speak\/|src\/israel\/|data\/israel\/|src\/firstday\/|data\/firstday\/|src\/placement\/|data\/placement\/|src\/speak\/|src\/listen\/|data\/listen\/|src\/typing\/|data\/typing\/|src\/trope\/|data\/trope-trainer\/|src\/home\/)/, route: "#/learn" },
-  { id: "letters", label: "Letters and tracing", test: /^(src\/letters\/|data\/letters\/|src\/wordtrace\/|data\/wordtrace\/)/, route: "#/letters" },
+  { id: "letters", label: "Letters and tracing", test: /^(src\/letters\/|data\/letters\/|assets\/letters\/|src\/wordtrace\/|data\/wordtrace\/)/, route: "#/letters" },
   { id: "pronunciation", label: "Sounds and pronunciation", test: /^(src\/pronunciation\/|data\/pronunciation\/)/, route: "#/sounds" },
   { id: "reading", label: "Reading, Torah and prayer", test: /^(src\/corpus\/|data\/corpus\/|src\/torahread\/|data\/torahread\/|src\/torahreader\/|src\/festivals\/|data\/festivals\/|src\/grammar\/|data\/grammar\/|src\/service\/|src\/morning\/|data\/morning-verses\.json|data\/service\/|src\/timedread\/|data\/timedread\/)/, route: "#/read" },
   { id: "vocab", label: "Vocabulary and Word Sprint", test: /^(src\/vocab\/|data\/vocab\/|src\/sprint\/|data\/sprint\/)/, route: "#/vocab", needs: ["vocab-packs"] },
   { id: "photo", label: "Scan a photo", test: /^(src\/photo\/|data\/photo\/)/, route: "#/scan", needs: ["ocr"] },
   { id: "progress", label: "Progress, class track and sharing", test: /^(src\/progress\/|data\/progress\/|src\/classtrack\/|data\/classtrack\/|src\/teacher\/|src\/traditions\/|data\/traditions\/)/, route: "#/progress" },
+  { id: "practice", label: "Vowel points, roots, gender, record-and-compare, review-spacing preview, known-word checker, syllabus and time budget", test: /^(src\/(nikkudfade|roots|genderdrill|recordcompare|hebrewtext|fsrs|knownwords|coursemap)\/)/, route: "#/nikkud-fade" },
   { id: "shell", label: "App shell, settings and install", test: /^(index\.html|offline\.html|manifest\.webmanifest|src\/(app|store)\.js|src\/shell\/|src\/img\/|data\/img\/|data\/images\/|data\/legal\/|src\/audio\/|data\/audio\/|src\/onboarding\/|data\/onboarding\/|assets\/)/, route: "#/" },
 ]);
 export const groupOf = (path) => GROUPS.find((g) => g.test.test(path))?.id || "other";
@@ -31,9 +32,9 @@ export const groupOf = (path) => GROUPS.find((g) => g.test.test(path))?.id || "o
 export function optionalGroups(tradition = "sephardi") {
   const t = ["israeli", "sephardi", "ashkenazi"].includes(tradition) ? tradition : "sephardi";
   return [
-    { id: "audio-shard", label: `Word audio index (${t})`, urls: [`data/audio/manifest-words-${t}.json`], approxMB: 0.9 },
+    { id: "audio-shard", label: `Word audio list (${t})`, urls: [`data/audio/manifest-words-${t}.json`], approxMB: 0.9 },
     { id: "vocab-packs", label: "Vocabulary lists (5,000 words)", urls: [500, 1000, 2000, 5000].map((n) => `data/vocab/packs/vocab5k-tier-${n}.json`), approxMB: 0.95 },
-    { id: "ocr", label: "Photo reader engine (OCR)", urls: ["assets/vendor/_tesseract/tesseract.esm.min.js", "assets/vendor/_tesseract/worker.min.js", "assets/vendor/_tesseract/tesseract-core-simd-lstm.wasm.js", "assets/vendor/_tesseract/heb.traineddata"], approxMB: 5.0 },
+    { id: "ocr", label: "Photo reader (text recognition)", urls: ["assets/vendor/_tesseract/tesseract.esm.min.js", "assets/vendor/_tesseract/worker.min.js", "assets/vendor/_tesseract/tesseract-core-simd-lstm.wasm.js", "assets/vendor/_tesseract/heb.traineddata"], approxMB: 5.0 },
   ];
 }
 
@@ -44,12 +45,14 @@ export function optionalGroups(tradition = "sephardi") {
  * First match wins; anything unmatched lands in "More pages and data".
  */
 export const ON_DEMAND_GROUPS = Object.freeze([
+  { id: "od-practice", label: "Vowel-point, root, gender, known-word and record-and-compare practice data", test: /^data\/(nikkudfade|roots|gender|knownwords)\//, approxMB: 1.2 },
   { id: "od-vocab", label: "Vocabulary data and theme packs", test: /^data\/vocab\//, approxMB: 5.9 },
-  { id: "od-audio-index", label: "Audio clip index (core)", test: /^data\/audio\//, approxMB: 1.8 },
+  { id: "od-audio-index", label: "Audio clip list (core)", test: /^data\/audio\//, approxMB: 1.8 },
   { id: "od-pronunciation", label: "Sounds and pronunciation data", test: /^data\/pronunciation\//, approxMB: 0.8 },
   { id: "od-speak", label: "Speaking, Israel dialogues, listening, typing, word tracing", test: /^data\/(speak|israel|listen|typing|wordtrace)\//, approxMB: 0.5 },
-  { id: "od-reading", label: "Reading, festivals, calendar, grammar and traditions data", test: /^data\/(corpus|torahread|festivals|calendar|grammar|traditions|trope-trainer)\//, approxMB: 0.5 },
+  { id: "od-reading", label: "Reading, festivals, calendar, grammar and pronunciation-style data", test: /^data\/(corpus|torahread|festivals|calendar|grammar|traditions|trope-trainer)\//, approxMB: 0.5 },
   { id: "od-intermediate", label: "Intermediate lessons and class track", test: /^data\/curriculum\//, approxMB: 0.6 },
+  { id: "od-letter-pictures", label: "Letter memory pictures (the rest of the alphabet)", test: /^assets\/letters\/morph\//, approxMB: 0.09 },
   { id: "od-screens", label: "Install-prompt screenshots", test: /^assets\/screen(s|shots)\//, approxMB: 0.5 },
 ]);
 /** Group a list of ALEF_ON_DEMAND paths into optional-download entries ({id,label,urls,approxMB}); empty groups are dropped. */

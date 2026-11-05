@@ -1,9 +1,9 @@
 {
- "generated": "2026-11-03",
+ "generated": "2026-11-05",
  "root": ".",
- "totalItems": 6353,
- "totalHours": 66.64505555555556,
- "phaseOneHours": 41.0895,
+ "totalItems": 8541,
+ "totalHours": 94.49581944444444,
+ "phaseOneHours": 68.95304166666665,
  "overheadMultiplier": 1.15,
  "areas": [
   {
@@ -30,8 +30,8 @@
    "group": "prayers",
    "reviewer": "clergy / cantor / Hebrew educator",
    "items": 140,
-   "hebrewWords": 2252,
-   "hours": 12.199583333333333,
+   "hebrewWords": 2257,
+   "hours": 12.212361111111111,
    "files": {
     "csv": "02-prayers.csv",
     "html": "02-prayers.html",
@@ -93,9 +93,9 @@
    "priority": 3,
    "group": "curriculum",
    "reviewer": "Hebrew teacher",
-   "items": 380,
-   "hebrewWords": 347,
-   "hours": 3.0347222222222223,
+   "items": 1065,
+   "hebrewWords": 1194,
+   "hours": 8.505208333333332,
    "files": {
     "csv": "06-lessons.csv",
     "html": "06-lessons.html",
@@ -167,24 +167,56 @@
    }
   },
   {
-   "slug": "israel-everyday",
+   "slug": "intermediate",
    "n": 11,
+   "title": "Intermediate lessons I-01 to I-50: exercises (lesson titles and words are in the lessons area)",
+   "priority": 3,
+   "group": "curriculum",
+   "reviewer": "Hebrew teacher; clergy or cantor for the prayer units",
+   "items": 752,
+   "hebrewWords": 2405,
+   "hours": 11.913680555555555,
+   "files": {
+    "csv": "11-intermediate.csv",
+    "html": "11-intermediate.html",
+    "pdf": "11-intermediate.pdf"
+   }
+  },
+  {
+   "slug": "firstday",
+   "n": 12,
+   "title": "First day: first-10-minutes path, baby-step on-ramp, 20-word reading ladder",
+   "priority": 3,
+   "group": "curriculum",
+   "reviewer": "Hebrew teacher",
+   "items": 43,
+   "hebrewWords": 57,
+   "hours": 0.618125,
+   "files": {
+    "csv": "12-firstday.csv",
+    "html": "12-firstday.html",
+    "pdf": "12-firstday.pdf"
+   }
+  },
+  {
+   "slug": "israel-everyday",
+   "n": 13,
    "title": "How Israelis say it: fillers, etiquette, register ladder, scenarios, learner giveaways",
    "priority": 4,
    "group": "phrasebook",
    "reviewer": "Israeli native speaker",
    "items": 133,
-   "hebrewWords": 1573,
+   "hebrewWords": 1527,
    "hours": 3.1864583333333334,
    "files": {
-    "csv": "11-israel-everyday.csv",
-    "html": "11-israel-everyday.html",
-    "pdf": "11-israel-everyday.pdf"
+    "csv": "13-israel-everyday.csv",
+    "html": "13-israel-everyday.html",
+    "pdf": "13-israel-everyday.pdf"
    }
   },
   {
    "slug": "phrasebook",
-   "n": 12,
+   "n": 14,
    "title": "Survival phrasebook",
    "priority": 4,
    "group": "phrasebook",
@@ -193,14 +225,30 @@
    "hebrewWords": 407,
    "hours": 1.9549999999999998,
    "files": {
-    "csv": "12-phrasebook.csv",
-    "html": "12-phrasebook.html",
-    "pdf": "12-phrasebook.pdf"
+    "csv": "14-phrasebook.csv",
+    "html": "14-phrasebook.html",
+    "pdf": "14-phrasebook.pdf"
+   }
+  },
+  {
+   "slug": "speak",
+   "n": 15,
+   "title": "Speaking practice: minimal-pair contrasts and the nine speak-aloud prayers",
+   "priority": 4,
+   "group": "phrasebook",
+   "reviewer": "Israeli native speaker / Hebrew teacher",
+   "items": 18,
+   "hebrewWords": 392,
+   "hours": 0.345,
+   "files": {
+    "csv": "15-speak.csv",
+    "html": "15-speak.html",
+    "pdf": "15-speak.pdf"
    }
   },
   {
    "slug": "letter-strokes",
-   "n": 13,
+   "n": 16,
    "title": "Letter strokes (print and cursive, shape + order)",
    "priority": 4,
    "group": "letters",
@@ -209,30 +257,30 @@
    "hebrewWords": 54,
    "hours": 2.5875,
    "files": {
-    "csv": "13-letter-strokes.csv",
-    "html": "13-letter-strokes.html",
-    "pdf": "13-letter-strokes.pdf"
+    "csv": "16-letter-strokes.csv",
+    "html": "16-letter-strokes.html",
+    "pdf": "16-letter-strokes.pdf"
    }
   },
   {
    "slug": "mnemonics",
-   "n": 14,
+   "n": 17,
    "title": "Letter mnemonics (example words and name claims)",
    "priority": 4,
    "group": "letters",
    "reviewer": "Hebrew teacher",
-   "items": 31,
-   "hebrewWords": 31,
-   "hours": 1.4854166666666666,
+   "items": 69,
+   "hebrewWords": 58,
+   "hours": 3.3062499999999995,
    "files": {
-    "csv": "14-mnemonics.csv",
-    "html": "14-mnemonics.html",
-    "pdf": "14-mnemonics.pdf"
+    "csv": "17-mnemonics.csv",
+    "html": "17-mnemonics.html",
+    "pdf": "17-mnemonics.pdf"
    }
   },
   {
    "slug": "pron-soundgap",
-   "n": 15,
+   "n": 18,
    "title": "Pronunciation: sound-gap lab",
    "priority": 5,
    "group": "pronunciation",
@@ -241,14 +289,14 @@
    "hebrewWords": 48,
    "hours": 0.45999999999999996,
    "files": {
-    "csv": "15-pron-soundgap.csv",
-    "html": "15-pron-soundgap.html",
-    "pdf": "15-pron-soundgap.pdf"
+    "csv": "18-pron-soundgap.csv",
+    "html": "18-pron-soundgap.html",
+    "pdf": "18-pron-soundgap.pdf"
    }
   },
   {
    "slug": "pron-prayerwords",
-   "n": 16,
+   "n": 19,
    "title": "Pronunciation: prayer words in three accents",
    "priority": 5,
    "group": "pronunciation",
@@ -257,14 +305,14 @@
    "hebrewWords": 10,
    "hours": 0.38333333333333336,
    "files": {
-    "csv": "16-pron-prayerwords.csv",
-    "html": "16-pron-prayerwords.html",
-    "pdf": "16-pron-prayerwords.pdf"
+    "csv": "19-pron-prayerwords.csv",
+    "html": "19-pron-prayerwords.html",
+    "pdf": "19-pron-prayerwords.pdf"
    }
   },
   {
    "slug": "pron-vowels",
-   "n": 17,
+   "n": 20,
    "title": "Pronunciation: vowel and consonant data, plene pairs, stress, dot hints",
    "priority": 5,
    "group": "pronunciation",
@@ -273,14 +321,14 @@
    "hebrewWords": 87,
    "hours": 1.0733333333333333,
    "files": {
-    "csv": "17-pron-vowels.csv",
-    "html": "17-pron-vowels.html",
-    "pdf": "17-pron-vowels.pdf"
+    "csv": "20-pron-vowels.csv",
+    "html": "20-pron-vowels.html",
+    "pdf": "20-pron-vowels.pdf"
    }
   },
   {
    "slug": "pron-traditions",
-   "n": 18,
+   "n": 21,
    "title": "Pronunciation traditions guide: \"which should I learn?\" and per-sound comparison",
    "priority": 5,
    "group": "pronunciation",
@@ -289,14 +337,30 @@
    "hebrewWords": 11,
    "hours": 1.1979166666666667,
    "files": {
-    "csv": "18-pron-traditions.csv",
-    "html": "18-pron-traditions.html",
-    "pdf": "18-pron-traditions.pdf"
+    "csv": "21-pron-traditions.csv",
+    "html": "21-pron-traditions.html",
+    "pdf": "21-pron-traditions.pdf"
+   }
+  },
+  {
+   "slug": "pron-rules",
+   "n": 22,
+   "title": "Pronunciation rules and a stratified sample of the rule-generated respellings (not the 6,630 derived rows)",
+   "priority": 5,
+   "group": "pronunciation",
+   "reviewer": "Hebrew teacher; cantor for Sephardi and Ashkenazi",
+   "items": 656,
+   "hebrewWords": 1362,
+   "hours": 7.695416666666666,
+   "files": {
+    "csv": "22-pron-rules.csv",
+    "html": "22-pron-rules.html",
+    "pdf": "22-pron-rules.pdf"
    }
   },
   {
    "slug": "calendar",
-   "n": 19,
+   "n": 23,
    "title": "Calendar texts (holiday and month names)",
    "priority": 5,
    "group": "calendar",
@@ -305,39 +369,39 @@
    "hebrewWords": 95,
    "hours": 2.3,
    "files": {
-    "csv": "19-calendar.csv",
-    "html": "19-calendar.html",
-    "pdf": "19-calendar.pdf"
+    "csv": "23-calendar.csv",
+    "html": "23-calendar.html",
+    "pdf": "23-calendar.pdf"
    }
   },
   {
    "slug": "vocab-top1000",
-   "n": 20,
+   "n": 24,
    "title": "Vocabulary, ranks 1-1000 (pointing and glosses)",
    "priority": 6,
    "group": "vocab",
    "reviewer": "Hebrew teacher / native speaker",
-   "items": 1000,
-   "hebrewWords": 1006,
-   "hours": 6.388888888888889,
+   "items": 998,
+   "hebrewWords": 1004,
+   "hours": 6.376111111111111,
    "files": {
-    "csv": "20-vocab-top1000.csv",
-    "html": "20-vocab-top1000.html",
-    "pdf": "20-vocab-top1000.pdf"
+    "csv": "24-vocab-top1000.csv",
+    "html": "24-vocab-top1000.html",
+    "pdf": "24-vocab-top1000.pdf"
    }
   },
   {
    "slug": "vocab-rest",
-   "n": 21,
+   "n": 25,
    "title": "Vocabulary, ranks 1001-5000 (pointing and glosses) - sheet only",
    "priority": 7,
    "group": "vocab",
    "reviewer": "Hebrew teacher / native speaker",
-   "items": 4000,
-   "hebrewWords": 4000,
-   "hours": 25.555555555555557,
+   "items": 3998,
+   "hebrewWords": 3998,
+   "hours": 25.54277777777778,
    "files": {
-    "csv": "21-vocab-rest.csv"
+    "csv": "25-vocab-rest.csv"
    }
   }
  ],
@@ -373,12 +437,449 @@
     "total": 1
    },
    {
+    "file": "data/curriculum/intermediate-index.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-01.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-02.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-03.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-04.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-05.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-06.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-07.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-08.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-09.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-10.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-11.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-12.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-13.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-14.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-15.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-16.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-17.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-18.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-19.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-20.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-21.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-22.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-23.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-24.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-25.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-26.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-27.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-28.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-29.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-30.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-31.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-32.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-33.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-34.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-35.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-36.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-37.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-38.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-39.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-40.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-41.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-42.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-43.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-44.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-45.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-46.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-47.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-48.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-49.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-50.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2
+   },
+   {
+    "file": "data/curriculum/lessons.json",
+    "flags": {
+     "proofread": 50,
+     "needsNativeReview": 50
+    },
+    "total": 100
+   },
+   {
     "file": "data/curriculum/loanwords.json",
     "flags": {
      "proofread": 30,
      "needsNativeReview": 1
     },
     "total": 31
+   },
+   {
+    "file": "data/firstday/first10.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/firstday/ladder.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/firstday/onramp.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
    },
    {
     "file": "data/israel/etiquette.json",
@@ -429,12 +930,208 @@
     "total": 108
    },
    {
+    "file": "data/letters/memory-chain.json",
+    "flags": {
+     "needsNativeReview": 1
+    },
+    "total": 1
+   },
+   {
     "file": "data/letters/mnemonics.json",
     "flags": {
      "proofread": 1,
      "needsNativeReview": 1
     },
     "total": 2
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-001.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-002.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-003.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-004.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-005.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-006.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-007.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-008.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-009.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-010.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-011.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-012.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-013.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-014.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-015.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-016.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-017.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-018.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_syllables-001.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_syllables-002.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_syllables-003.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_syllables-004.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_syllables-005.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_syllables-006.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/_syllables-007.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/index.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/derived/ssml-profile.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
    },
    {
     "file": "data/pronunciation/dial-words.json",
@@ -465,6 +1162,41 @@
     "total": 1
    },
    {
+    "file": "data/pronunciation/runtime/index.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/runtime/picks.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/runtime/quiz-pool.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/runtime/reasons.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/runtime/rules.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
     "file": "data/pronunciation/soundgap.json",
     "flags": {
      "proofread": 1
@@ -477,6 +1209,62 @@
      "proofread": 1
     },
     "total": 1
+   },
+   {
+    "file": "data/pronunciation/variants/_corpus-1.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/variants/_index.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/variants/_vocab-1.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/variants/_vocab-2.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/variants/_vocab-3.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/pronunciation/variants/_vocab-4.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/speak/minimal-pairs.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/speak/prayers.json",
+    "flags": {
+     "proofread": 9
+    },
+    "total": 9
    },
    {
     "file": "data/torahread/verses.json",
@@ -503,6 +1291,55 @@
     "file": "data/traditions/sounds.json",
     "flags": {
      "draft": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/vocab/corrections.json",
+    "flags": {
+     "needsNativeReview": 13
+    },
+    "total": 13
+   },
+   {
+    "file": "data/vocab/packs/describing-words-1.json",
+    "flags": {
+     "needsNativeReview": 1
+    },
+    "total": 1
+   },
+   {
+    "file": "data/vocab/packs/doing-verbs-1.json",
+    "flags": {
+     "needsNativeReview": 4
+    },
+    "total": 4
+   },
+   {
+    "file": "data/vocab/packs/doing-verbs-5.json",
+    "flags": {
+     "needsNativeReview": 2
+    },
+    "total": 2
+   },
+   {
+    "file": "data/vocab/packs/general-things-1.json",
+    "flags": {
+     "needsNativeReview": 2
+    },
+    "total": 2
+   },
+   {
+    "file": "data/vocab/packs/general-things-4.json",
+    "flags": {
+     "needsNativeReview": 3
+    },
+    "total": 3
+   },
+   {
+    "file": "data/vocab/packs/religion-prayer-1.json",
+    "flags": {
+     "needsNativeReview": 1
     },
     "total": 1
    },
@@ -540,16 +1377,43 @@
      "proofread": 5000
     },
     "total": 5000
+   },
+   {
+    "file": "data/vocab/words.json",
+    "flags": {
+     "needsNativeReview": 13
+    },
+    "total": 13
    }
   ],
   "docsWithMarkers": [
    {
-    "file": "docs/STATUS.md",
+    "file": "docs/A11Y.md",
+    "markers": 3
+   },
+   {
+    "file": "docs/HANDOFF.md",
+    "markers": 5
+   },
+   {
+    "file": "docs/NEXT-STEPS-JOHN.md",
     "markers": 1
+   },
+   {
+    "file": "docs/STATUS.md",
+    "markers": 7
    },
    {
     "file": "docs/TOOLING.md",
     "markers": 1
+   },
+   {
+    "file": "docs/a11y/NEWVIEWS.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/accents/PLAN.md",
+    "markers": 2
    },
    {
     "file": "docs/book/INDESIGN-HANDOFF.md",
@@ -561,19 +1425,175 @@
    },
    {
     "file": "docs/book/QA.md",
-    "markers": 10
+    "markers": 14
+   },
+   {
+    "file": "docs/book/REBUILD-NEEDED.md",
+    "markers": 5
    },
    {
     "file": "docs/corpus/LICENSES.md",
     "markers": 4
    },
    {
+    "file": "docs/corpus/VERIFY-REPORT.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/curriculum/INTEGRITY.md",
+    "markers": 4
+   },
+   {
+    "file": "docs/curriculum/INTERMEDIATE-ROUTES.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/curriculum/INTERMEDIATE.md",
+    "markers": 8
+   },
+   {
+    "file": "docs/curriculum/PATH.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/curriculum/SYLLABUS.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/curriculum/calendar-notes.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/curriculum/class-track/PEDAGOGY-MAP.md",
+    "markers": 3
+   },
+   {
+    "file": "docs/curriculum/class-track/SOURCES.md",
+    "markers": 1
+   },
+   {
     "file": "docs/curriculum/onramp-drills-dialogues.md",
+    "markers": 8
+   },
+   {
+    "file": "docs/data/README.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/drafts/IMAGE-PROMPTS.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/drafts/INBOX-REPORT.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/drafts/README.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/drafts/SIX-LANES-2.md",
+    "markers": 11
+   },
+   {
+    "file": "docs/drafts/SIX-LANES.md",
+    "markers": 10
+   },
+   {
+    "file": "docs/drafts/WELCOME-STATEMENT.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/feel/FEEL.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/festivals/FESTIVALS.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/firstday/LADDER-ROUTE.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/firstday/ROUTES.md",
+    "markers": 4
+   },
+   {
+    "file": "docs/grammar/GAPS.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/grammar/ROUTES.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/host-kit/facilitator-guide.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/host-kit/feedback-form.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/host-kit/outreach-drafts.md",
+    "markers": 11
+   },
+   {
+    "file": "docs/host-kit/partner-sheet.html",
+    "markers": 6
+   },
+   {
+    "file": "docs/host-kit/settings-sheet.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/img/INTEGRATION.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/israel/README.md",
+    "markers": 5
+   },
+   {
+    "file": "docs/launch/CHECKLIST.md",
+    "markers": 4
+   },
+   {
+    "file": "docs/launch/COPY.md",
     "markers": 7
+   },
+   {
+    "file": "docs/launch/LIMITATIONS.md",
+    "markers": 5
+   },
+   {
+    "file": "docs/legal/CONTENT-LICENCE-AUDIT.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/legal/DECISIONS-FOR-JOHN.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/legal/LICENCE-OPTIONS.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/legal/SALE-READINESS.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/letters/MEMORY-SYSTEM.md",
+    "markers": 3
    },
    {
     "file": "docs/letters/REVIEW-LIST.md",
     "markers": 2
+   },
+   {
+    "file": "docs/letters/REVIEW-SHEET.html",
+    "markers": 57
    },
    {
     "file": "docs/letters/STROKE-RULES.md",
@@ -688,16 +1708,172 @@
     "markers": 4
    },
    {
+    "file": "docs/onboarding/FLOW.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/onboarding/HOME.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/onramp/ONRAMP.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/placement/ROUTES.md",
+    "markers": 4
+   },
+   {
+    "file": "docs/progress/timed-read-spec.md",
+    "markers": 1
+   },
+   {
     "file": "docs/pronunciation/README.md",
     "markers": 2
    },
    {
+    "file": "docs/pronunciation/VARIANTS.md",
+    "markers": 4
+   },
+   {
     "file": "docs/pronunciation/round4.md",
+    "markers": 3
+   },
+   {
+    "file": "docs/qa/DARK-MODE-QA.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/qa/DEVICE-FIXES.md",
+    "markers": 7
+   },
+   {
+    "file": "docs/qa/DEVICES.md",
+    "markers": 6
+   },
+   {
+    "file": "docs/qa/FIRST-SCREENS.md",
+    "markers": 4
+   },
+   {
+    "file": "docs/qa/HOME-QA.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/qa/INTERMEDIATE-QA.md",
     "markers": 2
+   },
+   {
+    "file": "docs/qa/JOURNEY.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/qa/LETTERS-QA.md",
+    "markers": 5
+   },
+   {
+    "file": "docs/qa/MEMORY-CARD-QA.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/qa/READING-PATH-QA.md",
+    "markers": 1
    },
    {
     "file": "docs/qa/REPORT.md",
     "markers": 2
+   },
+   {
+    "file": "docs/qa/REVIEW-PROGRESS-QA.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/qa/STREAK-FREEZE.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/qa/SWEEP.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/qa/TRADITION-SWEEP.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/qa/TRAINERS-QA.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/qa/V0-WALK.md",
+    "markers": 7
+   },
+   {
+    "file": "docs/record-kit/README.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/release/PRE-PUSH-INVENTORY.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/research/B-gender-drill.md",
+    "markers": 3
+   },
+   {
+    "file": "docs/research/B-nikkud-fade.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/research/B-record-compare.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/research/B-roots-binyanim.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/research/B2-coursemap.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/research/B2-fsrs6.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/research/BOARD.md",
+    "markers": 19
+   },
+   {
+    "file": "docs/research/CODE-MAP.md",
+    "markers": 3
+   },
+   {
+    "file": "docs/sensitivity/CONVENTIONS.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/service/README.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/speak/README.md",
+    "markers": 6
+   },
+   {
+    "file": "docs/sprint/README.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/strategy/COMPETITOR-REVIEW.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/strategy/DUOLINGO-100.md",
+    "markers": 9
+   },
+   {
+    "file": "docs/teacher/README.md",
+    "markers": 1
    },
    {
     "file": "docs/torahread/README.md",
@@ -712,7 +1888,39 @@
     "markers": 2
    },
    {
+    "file": "docs/trope/ROUTES.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/typing/ROUTES.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/v0/LAUNCH-NOTE.md",
+    "markers": 4
+   },
+   {
+    "file": "docs/v0/SCOPE.md",
+    "markers": 3
+   },
+   {
+    "file": "docs/vocab/ATTRIBUTION.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/vocab/AUDIT-RESPONSE.md",
+    "markers": 1
+   },
+   {
     "file": "docs/vocab/COVERAGE.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/vocab/FIRST-500-CHECK.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/vocab/JUDGEMENT.md",
     "markers": 1
    },
    {
@@ -728,6 +1936,10 @@
     "markers": 2
    },
    {
+    "file": "docs/voices/FIRST-100.md",
+    "markers": 3
+   },
+   {
     "file": "docs/voices/buyout-contract-terms.md",
     "markers": 1
    },
@@ -736,8 +1948,408 @@
     "markers": 1
    },
    {
+    "file": "docs/voices/donor-recording-guide.html",
+    "markers": 3
+   },
+   {
+    "file": "docs/voices/donor-recording-guide.md",
+    "markers": 2
+   },
+   {
+    "file": "docs/voices/donor-rights-grant.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/donor-rights-grant.md",
+    "markers": 1
+   },
+   {
+    "file": "docs/voices/recording/priority_summary.md",
+    "markers": 3
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-f/index.html",
+    "markers": 2
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-f/session-01.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-f/session-02.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-f/session-03.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-f/session-04.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-f/session-05.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-f/session-06.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-f/session-07.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-f/session-08.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-f/session-09.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-f/session-10.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-f/session-11.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-f/session-12.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-f/session-13.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-f/session-14.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-f/session-15.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-f/session-16.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-f/session-17.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-f/session-18.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-m/index.html",
+    "markers": 2
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-m/session-01.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-m/session-02.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-m/session-03.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-m/session-04.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-m/session-05.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-m/session-06.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-m/session-07.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-m/session-08.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-m/session-09.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-m/session-10.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-m/session-11.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-m/session-12.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-m/session-13.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-m/session-14.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-m/session-15.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-m/session-16.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-m/session-17.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/ashkenazi-m/session-18.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-f/index.html",
+    "markers": 2
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-f/session-01.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-f/session-02.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-f/session-03.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-f/session-04.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-f/session-05.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-f/session-06.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-f/session-07.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-f/session-08.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-f/session-09.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-f/session-10.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-f/session-11.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-f/session-12.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-f/session-13.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-f/session-14.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-f/session-15.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-f/session-16.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-f/session-17.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-f/session-18.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-m/index.html",
+    "markers": 2
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-m/session-01.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-m/session-02.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-m/session-03.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-m/session-04.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-m/session-05.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-m/session-06.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-m/session-07.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-m/session-08.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-m/session-09.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-m/session-10.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-m/session-11.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-m/session-12.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-m/session-13.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-m/session-14.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-m/session-15.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-m/session-16.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-m/session-17.html",
+    "markers": 4
+   },
+   {
+    "file": "docs/voices/recording/sheets/israeli-m/session-18.html",
+    "markers": 4
+   },
+   {
     "file": "docs/wordtrace/README.md",
     "markers": 3
+   },
+   {
+    "file": "docs/workbook/FIRSTDAY-PAGES.md",
+    "markers": 4
+   },
+   {
+    "file": "docs/workbook/html/alef-answer-key-a4.html",
+    "markers": 12
+   },
+   {
+    "file": "docs/workbook/html/alef-answer-key-letter.html",
+    "markers": 12
+   },
+   {
+    "file": "docs/workbook/html/alef-cursive-words-a4.html",
+    "markers": 43
+   },
+   {
+    "file": "docs/workbook/html/alef-cursive-words-letter.html",
+    "markers": 43
+   },
+   {
+    "file": "docs/workbook/html/alef-firstday-a4.html",
+    "markers": 12
+   },
+   {
+    "file": "docs/workbook/html/alef-firstday-letter.html",
+    "markers": 12
+   },
+   {
+    "file": "docs/workbook/html/alef-flashcards-a4.html",
+    "markers": 432
+   },
+   {
+    "file": "docs/workbook/html/alef-flashcards-letter.html",
+    "markers": 432
+   },
+   {
+    "file": "docs/workbook/html/alef-flashcards-letters-a4.html",
+    "markers": 8
+   },
+   {
+    "file": "docs/workbook/html/alef-flashcards-letters-letter.html",
+    "markers": 8
+   },
+   {
+    "file": "docs/workbook/html/alef-flashcards-light-a4.html",
+    "markers": 95
+   },
+   {
+    "file": "docs/workbook/html/alef-flashcards-light-letter.html",
+    "markers": 95
+   },
+   {
+    "file": "docs/workbook/html/alef-memory-chain-a4.html",
+    "markers": 1
+   },
+   {
+    "file": "docs/workbook/html/alef-memory-chain-letter.html",
+    "markers": 1
+   },
+   {
+    "file": "docs/workbook/html/alef-niqqud-a4.html",
+    "markers": 17
+   },
+   {
+    "file": "docs/workbook/html/alef-niqqud-letter.html",
+    "markers": 17
+   },
+   {
+    "file": "docs/workbook/html/alef-readaloud-a4.html",
+    "markers": 62
+   },
+   {
+    "file": "docs/workbook/html/alef-readaloud-letter.html",
+    "markers": 62
    },
    {
     "file": "docs/workbook/html/alef-workbook-cursive-a4-mnemonics.html",
@@ -770,8 +2382,793 @@
    {
     "file": "docs/workbook/html/alef-workbook-print-letter.html",
     "markers": 16
+   },
+   {
+    "file": "docs/workbook/index.html",
+    "markers": 3
    }
   ],
-  "dataFilesNotCoveredByAnyArea": []
+  "dataFilesNotCoveredByAnyArea": [],
+  "dataFilesClaimedWithoutRows": [
+   {
+    "file": "data/curriculum/intermediate-index.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-01.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-02.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-03.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-04.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-05.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-06.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-07.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-08.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-09.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-10.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-11.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-12.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-13.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-14.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-15.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-16.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-17.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-18.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-19.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-20.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-21.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-22.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-23.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-24.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-25.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-26.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-27.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-28.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-29.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-30.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-31.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-32.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-33.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-34.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-35.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-36.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-37.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-38.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-39.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-40.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-41.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-42.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-43.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-44.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-45.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-46.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-47.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-48.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-49.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/curriculum/lessons-intermediate/I-50.json",
+    "flags": {
+     "proofread": 1,
+     "needsNativeReview": 1
+    },
+    "total": 2,
+    "area": "lessons"
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-001.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-002.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-003.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-004.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-005.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-006.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-007.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-008.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-009.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-010.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-011.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-012.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-013.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-014.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-015.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-016.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-017.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_ssml-018.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_syllables-001.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_syllables-002.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_syllables-003.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_syllables-004.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_syllables-005.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_syllables-006.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/_syllables-007.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/index.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/derived/ssml-profile.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/runtime/index.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/runtime/picks.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/runtime/quiz-pool.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/runtime/reasons.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/pronunciation/variants/_index.json",
+    "flags": {
+     "proofread": 1
+    },
+    "total": 1,
+    "area": "pron-rules"
+   },
+   {
+    "file": "data/vocab/corrections.json",
+    "flags": {
+     "needsNativeReview": 13
+    },
+    "total": 13,
+    "area": "vocab-top1000"
+   },
+   {
+    "file": "data/vocab/packs/describing-words-1.json",
+    "flags": {
+     "needsNativeReview": 1
+    },
+    "total": 1,
+    "area": "vocab-top1000"
+   },
+   {
+    "file": "data/vocab/packs/doing-verbs-1.json",
+    "flags": {
+     "needsNativeReview": 4
+    },
+    "total": 4,
+    "area": "vocab-top1000"
+   },
+   {
+    "file": "data/vocab/packs/doing-verbs-5.json",
+    "flags": {
+     "needsNativeReview": 2
+    },
+    "total": 2,
+    "area": "vocab-top1000"
+   },
+   {
+    "file": "data/vocab/packs/general-things-1.json",
+    "flags": {
+     "needsNativeReview": 2
+    },
+    "total": 2,
+    "area": "vocab-top1000"
+   },
+   {
+    "file": "data/vocab/packs/general-things-4.json",
+    "flags": {
+     "needsNativeReview": 3
+    },
+    "total": 3,
+    "area": "vocab-top1000"
+   },
+   {
+    "file": "data/vocab/packs/religion-prayer-1.json",
+    "flags": {
+     "needsNativeReview": 1
+    },
+    "total": 1,
+    "area": "vocab-top1000"
+   },
+   {
+    "file": "data/vocab/words.json",
+    "flags": {
+     "needsNativeReview": 13
+    },
+    "total": 13,
+    "area": "vocab-top1000"
+   }
+  ]
  }
 }

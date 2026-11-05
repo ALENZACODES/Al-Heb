@@ -2,6 +2,7 @@
 // Small DOM + audio + storage helpers shared by the Torah-reading views. Plain DOM, no dependencies.
 import { spokenForm, hasDivineName } from './pointing.js';
 import { fileLabel } from '../shell/audio-labels.js';
+import { speechText } from '../shell/names.js';
 
 export function el(tag, attrs = {}, ...kids) {
   const e = document.createElement(tag);
@@ -20,23 +21,26 @@ export const DRAFT_NOTICE = 'Draft. Not reviewed by a rabbi, cantor or Hebrew te
 
 export const CSS = `
 .trd{max-inline-size:60rem;margin-inline:auto}
-.trd h1{margin-block:.2em .3em}
+.trd h1{margin-block:.2em .3em;font-size:1.5rem}
 .trd h2{margin-block:.9em .3em}
 .trd-draft{background:var(--warn-bg,#fff1c2);color:var(--warn-fg,#5b4200);padding:.5rem .8rem;border-radius:8px;margin-block:.5rem;font-size:.95rem}
-.trd-tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-block:.6rem 1rem}
-.trd-tab,.trd-btn,.trd-w,.trd-rate{font:inherit;min-block-size:var(--tap,48px);padding:.35rem .9rem;border-radius:999px;border:2px solid var(--accent,#1f3a5f);background:transparent;color:var(--accent,#1f3a5f);cursor:pointer}
+.trd-tabs{display:flex;gap:.3rem;flex-wrap:wrap;margin-block:.4rem .6rem}
+.trd-tab,.trd-btn,.trd-w,.trd-rate{font:inherit;min-block-size:max(44px,var(--tap,48px));padding:.3rem .75rem;border-radius:999px;border:2px solid var(--accent,#1f3a5f);background:transparent;color:var(--accent,#1f3a5f);cursor:pointer}
 .trd-tab[aria-pressed="true"],.trd-btn[aria-pressed="true"],.trd-rate[aria-pressed="true"]{background:var(--accent,#1f3a5f);color:var(--accent-fg,#fffaf0);font-weight:700}
 .trd-tab:focus-visible,.trd-btn:focus-visible,.trd-w:focus-visible,.trd-rate:focus-visible,.trd select:focus-visible,.trd summary:focus-visible{outline:3px solid var(--focus,#b45309);outline-offset:2px}
 .trd select{font:inherit;min-block-size:var(--tap,48px);max-inline-size:100%;padding:.3rem .6rem;border-radius:8px;border:2px solid var(--border,#d9cdb3);background:var(--card,#fffaf0);color:inherit}
-.trd-levels{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;margin-block:.6rem}
+.trd-levels{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,10rem),1fr));gap:.4rem;margin-block:.6rem}
 .trd-levels .trd-btn{border-radius:12px;text-align:start}
 .trd-card{border:1px solid var(--border,#d9cdb3);background:var(--card,#fffaf0);border-radius:12px;padding:.7rem 1rem;margin-block:.6rem}
 .trd-card h3{margin-block:.1em .3em}
 .trd-line{display:flex;flex-wrap:wrap;gap:.5rem .7rem;direction:rtl;margin-block:.8rem;align-items:flex-start}
 .trd-cell{display:inline-flex;flex-direction:column;align-items:center;gap:.1rem}
+.trd-wrow{display:inline-flex;flex-wrap:nowrap;align-items:center;direction:rtl}
+.trd-stop{font-family:var(--font-he,serif);font-size:2rem;line-height:1.6;margin-inline-start:-.35rem}
 .trd-w{font-family:var(--font-he,serif);font-size:2rem;line-height:1.6;padding:.05rem .5rem;border-radius:10px;border-color:transparent;color:inherit;direction:rtl}
 .trd-w:hover{border-color:var(--accent,#1f3a5f)}
 .trd-w[aria-pressed="true"]{background:var(--warn-bg,#fff1c2);color:var(--warn-fg,#5b4200);border-color:var(--focus,#b45309)}
+.trd-lg{font-size:1.6em;line-height:1}
 .trd-tr{font-size:.85rem;color:var(--muted,#5a6275);direction:ltr}
 .trd-he{font-family:var(--font-he,serif);font-size:1.8rem;line-height:1.7;direction:rtl}
 .trd-muted{color:var(--muted,#5a6275);font-size:.92rem}
@@ -50,6 +54,11 @@ export const CSS = `
 .trd-big{font-family:var(--font-he,serif);font-size:2.4rem;line-height:1.5;direction:rtl}
 .trd-sr{position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .trd details{margin-block:.5rem}
+.trd-tabs .trd-tab{padding:.2rem .5rem;font-size:.88rem}
+#trd-item-h{font-size:1.15rem;margin-block:.5em .2em}
+#trd-item-h .trd-muted{display:block;font-size:.9rem;font-weight:400}
+.trd-fold{border:1px solid var(--border,#d9cdb3);border-radius:8px;padding:0 .7rem;margin-block:.4rem}
+.trd-fold>summary{font-weight:700;min-block-size:44px}
 .trd summary{cursor:pointer;min-block-size:var(--tap,48px);display:flex;align-items:center}
 .trd-foot{margin-block:1.5rem 0;font-size:.9rem;color:var(--muted,#5a6275);border-block-start:1px solid var(--border,#d9cdb3);padding-block-start:.75rem}
 .trd-unk{font-style:italic}
@@ -96,7 +105,7 @@ export async function playHook(ctx, statusEl, kind, id, text, label) {
   const set = (m) => { statusEl.textContent = m; };
   if (!ctx || !ctx.audio || typeof ctx.audio.play !== 'function') { set(`No audio yet for ${label}: this build has no audio player.`); return null; }
   try {
-    const r = await ctx.audio.play(kind, id, { text });
+    const r = await ctx.audio.play(kind, id, { text: typeof text === 'string' ? speechText(text) : text });
     set(describeAudio(r, label));
     return r;
   } catch (e) { set(`Audio error for ${label}: ${e?.message || e}`); return null; }

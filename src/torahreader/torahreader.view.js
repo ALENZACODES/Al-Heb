@@ -15,17 +15,18 @@ import { el, storeGet, storeSet } from '../curriculum/dom.js';
 import { transliterate } from '../pronunciation/transliterate.js';
 import { loadAll, loadJson } from './loader.js';
 import { uiEnglish } from '../shell/names.js';
-import { playLine } from '../pronunciation/forTradition.js';
+import { playLine, LABELS as TRAD_LABELS } from '../pronunciation/forTradition.js';
 import {
-  STORE_KEY, PASSAGE_IDS, SPEEDS, DEFAULT_STATE, normaliseState, speedMs, flatten, display, plainOf, spokenText, audioIndex,
-  tropeById, tropeName, legend, markGlyph, stepIndex,
+  STORE_KEY, PASSAGE_IDS, SPEEDS, DEFAULT_STATE, normaliseState, speedMs, flatten, plainOf, spokenText, audioIndex,
+  tropeById, tropeName, legend, markGlyph, stepIndex, largePositions, displayParts, SIZES, sizeScale,
 } from './model.js';
 
 export const NOTICE = 'Draft, not checked by a cantor, rabbi or Hebrew teacher. The Hebrew and the cantillation marks come from the Leningrad Codex (UXLC, tanach.us); a program read the marks, and this screen shows which mark sits on which word and what kind of mark it is. It does not teach melodies and plays no chanting.';
-export const LEGEND_NOTICE = 'Reference only, not a chanting teacher. This page names the marks and says whether each one pauses or joins. It does not describe or play any melody, because melodies are passed on by ear and differ between communities, and nobody qualified has reviewed this table. To learn to chant, work with a cantor or teacher from your own community.';
+export const LEGEND_NOTICE = 'This page names the marks and says whether each one pauses or joins. It does not describe or play any melody, because melodies are passed on by ear and differ between communities, and nobody qualified has reviewed this table. To learn to chant, work with a cantor or teacher from your own community.';
 export const PACE_NOTE = 'The highlight moves at the pace you pick. It is not synchronised with any audio or chanting.';
 const TRAD = { israeli: 1, sephardi: 1, ashkenazi: 1 };
 const PASSAGE_LABEL = { 'priestly-blessing': 'Priestly Blessing (Numbers 6:22-27)', shema: 'Shema and V’ahavta (Deuteronomy 6:4-9)' };
+const PASSAGE_SHORT = { 'priestly-blessing': 'Priestly Blessing', shema: 'Shema and V’ahavta' };
 const CLS_LABEL = { disjunctive: 'pauses (disjunctive)', conjunctive: 'joins to the next word (conjunctive)', 'secondary-stress': 'stress mark (not a trope)', separator: 'separator (not a melody)', 'verse-end': 'verse end (punctuation)' };
 
 const CSS = `
@@ -33,22 +34,34 @@ const CSS = `
 .alef-trd *{box-sizing:border-box}
 .alef-trd .trd-notice{border-inline-start:6px solid currentColor;padding-inline-start:.6rem;margin-block:.75rem}
 .alef-trd .trd-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin-block:.75rem}
-.alef-trd button{min-block-size:var(--tap,48px);min-inline-size:var(--tap,48px);padding:.4rem .8rem;font:inherit;border:2px solid var(--border,#767676);border-radius:8px;background:var(--card,#fff);color:inherit;cursor:pointer}
+.alef-trd .trd-top{margin-block:.25rem .5rem}
+.alef-trd .trd-top .trd-tab{flex:1 1 9rem;min-inline-size:0}
+.alef-trd h1{font-size:1.4rem;line-height:1.25;margin-block:.4rem}
+.alef-trd button{min-block-size:max(44px,var(--tap,48px));min-inline-size:max(44px,var(--tap,48px));padding:.4rem .8rem;font:inherit;border:2px solid var(--border,#767676);border-radius:8px;background:var(--card,#fff);color:inherit;cursor:pointer}
 .alef-trd button[aria-pressed="true"]{border-width:3px;font-weight:700;text-decoration:underline}
 .alef-trd button:focus-visible{outline:3px solid currentColor;outline-offset:2px}
 .alef-trd .trd-verse{margin-block:1rem;padding:.5rem;border:1px solid var(--border,#bbb);border-radius:8px}
 .alef-trd .trd-vlabel{font-size:.9rem;font-weight:700;margin:0 0 .25rem}
-.alef-trd .trd-line{direction:rtl;font-size:2rem;line-height:2.2;margin:.25rem 0;display:flex;flex-wrap:wrap;gap:.25rem .5rem}
-.alef-trd .trd-w{font-size:inherit;line-height:1.6;min-inline-size:var(--tap,48px)}
+.alef-trd .trd-line{direction:rtl;font-size:calc(2rem * var(--trd-scale,1));line-height:2.2;margin:.25rem 0;display:flex;flex-wrap:wrap;gap:.25rem .5rem}
+.alef-trd .trd-w{white-space:nowrap;font-size:inherit;line-height:1.6;min-inline-size:max(44px,var(--tap,48px))}
 .alef-trd .trd-w.trd-cur{border-width:4px;border-style:double;background:var(--hl,#ffe9a8);color:var(--hl-ink,#000)}
 .alef-trd .trd-w.trd-sel{border-style:dashed}
-.alef-trd .trd-stop{font-size:2rem;line-height:1.6}
+.alef-trd .trd-stop{font-size:calc(2rem * var(--trd-scale,1));line-height:1.6}
 .alef-trd .trd-en{margin:.25rem 0;font-style:italic}
 .alef-trd .trd-detail{border:2px solid currentColor;border-radius:8px;padding:.6rem;margin-block:1rem}
-.alef-trd .trd-big{font-size:2.4rem;direction:rtl}
+.alef-trd .trd-big{font-size:calc(2.4rem * var(--trd-scale,1));direction:rtl}
+.alef-trd .trd-lg{font-size:1.6em;line-height:1}
+.alef-trd .trd-lgnote{font-size:.9rem;margin:.25rem 0}
 .alef-trd table{border-collapse:collapse;inline-size:100%}
 .alef-trd th,.alef-trd td{border:1px solid var(--border,#999);padding:.3rem .4rem;text-align:start;vertical-align:top}
-.alef-trd .trd-glyph{font-size:2rem;direction:rtl}
+.alef-trd .trd-scroll{overflow-x:auto;max-inline-size:100%;margin-block:.5rem}
+.alef-trd .trd-scroll table{inline-size:100%;min-inline-size:36rem}
+.alef-trd .trd-glyph{font-size:calc(2rem * var(--trd-scale,1));direction:rtl}
+.alef-trd .trd-ctl{margin-block:.5rem;border:1px solid var(--border,#bbb);border-radius:8px;padding:0 .6rem}
+.alef-trd .trd-ctl>summary,.alef-trd .trd-notice-d>summary{cursor:pointer;min-block-size:max(44px,var(--tap,48px));display:flex;align-items:center;font-weight:700}
+.alef-trd summary:focus-visible{outline:3px solid currentColor;outline-offset:2px}
+.alef-trd .trd-notice-d{border-inline-start:6px solid currentColor;padding-inline-start:.6rem;margin-block:.25rem}
+.alef-trd .trd-notice-d p{margin-block:.25rem}
 .alef-trd footer{margin-block-start:1.5rem;font-size:.85rem}
 `;
 function injectStyle() {
@@ -67,11 +80,11 @@ export function mount(root, ctx) {
   const body = el('div', { class: 'trd-body' });
   const status = el('div', { class: 'trd-status', role: 'status', 'aria-live': 'polite' });
   const footer = el('footer', {});
-  wrap.append(h1, el('p', { class: 'trd-notice' }, NOTICE), body, status, footer);
+  wrap.append(h1, el('details', { class: 'trd-notice-d' }, el('summary', {}, 'Draft, not checked by a cantor or teacher'), el('p', { class: 'trd-notice' }, NOTICE)), body, status, footer);
   root.append(wrap);
 
   let alive = true, data = null, state = { ...DEFAULT_STATE }, error = null;
-  let items = [], idx = null, btns = new Map(), cur = null, sel = null, timer = null, legendOnlyHere = false;
+  let items = [], idx = null, btns = new Map(), cur = null, sel = null, timer = null, legendOnlyHere = false, ctlOpen = false;
   const say = (t) => { status.textContent = t; };
   const save = () => storeSet(ctx, STORE_KEY, state);
   const passage = () => data.passages[state.passage];
@@ -135,19 +148,22 @@ export function mount(root, ctx) {
   }, label);
   function focusSel(sel) { try { wrap.querySelector(sel)?.focus?.(); } catch { /* ignore */ } }
 
-  function tabs() {
-    const bar = el('div', { class: 'trd-bar', role: 'group', 'aria-label': 'Choose a passage or the legend' });
+  function tabs(withLegend = true) {
+    const bar = el('div', { class: 'trd-bar trd-top', role: 'group', 'aria-label': 'Choose a passage or the legend' });
     for (const id of PASSAGE_IDS) {
       bar.append(el('button', {
-        type: 'button', class: 'trd-tab', 'data-passage': id, 'aria-pressed': state.view === 'reader' && state.passage === id ? 'true' : 'false',
+        type: 'button', class: 'trd-tab', 'data-passage': id, 'aria-label': PASSAGE_LABEL[id], 'aria-pressed': state.view === 'reader' && state.passage === id ? 'true' : 'false',
         onclick: () => { stopTimer(); cur = null; sel = null; setState({ passage: id, view: 'reader' }); render(); focusSel(`[data-passage="${id}"]`); },
-      }, PASSAGE_LABEL[id]));
+      }, PASSAGE_SHORT[id]));
     }
-    bar.append(el('button', {
+    if (withLegend) bar.append(legendBtn());
+    return bar;
+  }
+  function legendBtn() {
+    return (el('button', {
       type: 'button', class: 'trd-tab', 'data-view': 'legend', 'aria-pressed': state.view === 'legend' ? 'true' : 'false',
       onclick: () => { stopTimer(); setState({ view: 'legend' }); render(); focusSel('[data-view="legend"]'); },
     }, 'Trope legend'));
-    return bar;
   }
 
   function renderReader() {
@@ -167,55 +183,71 @@ export function mount(root, ctx) {
         onclick: () => { setState({ speed: s.id }); if (timer != null) { startRun(); } else say(`Pace set to ${s.id}, about ${(s.ms / 1000).toFixed(1)} seconds a word.`); render(); focusSel(`[data-speed="${s.id}"]`); },
       }, `${s.label} (${(s.ms / 1000).toFixed(1)} s)`));
     }
+    const sizes = el('div', { class: 'trd-bar', role: 'group', 'aria-label': 'Hebrew text size' });
+    for (const z of SIZES) {
+      sizes.append(el('button', {
+        type: 'button', class: 'trd-size', 'data-size': z.id, 'aria-pressed': state.size === z.id ? 'true' : 'false',
+        onclick: () => { setState({ size: z.id }); say(`Hebrew text size: ${z.label.toLowerCase()}.`); render(); focusSel(`[data-size="${z.id}"]`); },
+      }, `Text: ${z.label}`));
+    }
     runBtn = el('button', { type: 'button', class: 'trd-run', 'aria-pressed': 'false', onclick: () => (timer != null ? pauseRun() : startRun()) }, 'Read with me');
     const stepBar = el('div', { class: 'trd-bar', role: 'group', 'aria-label': 'Read with me controls' },
       el('button', { type: 'button', class: 'trd-prev', onclick: () => manualStep(-1) }, 'Previous word'),
       runBtn,
       el('button', { type: 'button', class: 'trd-next', onclick: () => manualStep(1) }, 'Next word'));
 
-    const detail = el('div', { class: 'trd-detail', id: 'trd-detail', role: 'region', 'aria-label': 'Selected word', 'aria-live': 'polite' },
-      el('p', {}, 'Tap or press a word to see it with its vowel points and mark, its transliteration (', trad, ' tradition) and to hear it.'));
+    // The detail box sits directly under the verse of the selected word, so on a phone it is on screen when a word is tapped.
+    const detail = el('div', { class: 'trd-detail', id: 'trd-detail', role: 'region', 'aria-label': 'Selected word', 'aria-live': 'polite' });
+    const slots = new Map();
 
     const verses = el('div', { class: 'trd-verses' });
     p.verses.forEach((v, vi) => {
       const unit = p.readingUnits.find((u) => u.id === v.unit);
       const label = el('p', { class: 'trd-vlabel' }, `${v.ref}${unit && /narrative/.test(unit.label) ? ' (narrative, not part of the blessing)' : ''}`);
       const line = el('p', { class: 'trd-line', dir: 'rtl', lang: 'he', role: 'group', 'aria-label': `${v.ref}, Hebrew` });
+      const large = largePositions(v);
       for (const it of items.filter((x) => x.verseIndex === vi)) {
         const tr = translit(plainOf(it));
+        const parts = displayParts(it, opts, large);
+        const shown = parts.map((x) => x.t).join(''); // WCAG 2.5.3: the visible text leads the accessible name
         const b = el('button', {
           type: 'button', class: 'trd-w' + (cur === it.n ? ' trd-cur' : '') + (sel === it.n ? ' trd-sel' : ''), lang: 'he', dir: 'rtl',
           'data-n': it.n, tabindex: (cur ?? sel ?? 0) === it.n ? '0' : '-1',
-          'aria-label': `${tr}, word ${it.n + 1} of ${items.length}`, 'aria-current': cur === it.n ? 'true' : 'false',
+          'aria-label': `${shown}, ${tr}, word ${it.n + 1} of ${items.length}`, 'aria-current': cur === it.n ? 'true' : 'false',
           onclick: () => select(it.n),
           onkeydown: (e) => onKey(e, it.n),
-        }, display(it, opts));
+        }, ...parts.map((x) => (x.big ? el('span', { class: 'trd-lg' }, x.t) : x.t)));
         btns.set(it.n, b);
         line.append(b);
       }
       line.append(el('span', { class: 'trd-stop', 'aria-hidden': 'true' }, '׃'));
       const lineId = idx.lines.get(v.verse);
       const hear = el('button', { type: 'button', class: 'trd-hearline', onclick: () => playAudio('line', lineId || `torahreader-${p.id}-${v.verse}`, spokenText(v.he), `${v.ref}`) }, `Hear ${v.ref}`);
-      verses.append(el('div', { class: 'trd-verse', 'data-verse': v.verse }, label, line,
-        v.english ? el('p', { class: 'trd-en' }, uiEnglish(ctx, v.english)) : null, hear));
+      const slot = el('div', { class: 'trd-slot' }); slots.set(vi, slot);
+      const lgNote = large.length ? el('p', { class: 'trd-lgnote' }, 'Written large in the source text: ', ...(v.largeLetters || []).flatMap((c, i) => [i ? ', ' : '', el('span', { lang: 'he', dir: 'rtl' }, c)]), '.') : null;
+      verses.append(el('div', { class: 'trd-verse', 'data-verse': v.verse }, label, line, lgNote,
+        v.english ? el('p', { class: 'trd-en' }, uiEnglish(ctx, v.english)) : null, slot, hear));
     });
 
-    function select(n) {
+    function select(n) { showDetail(n); say(`Selected word ${n + 1}: ${translit(plainOf(items[n]))}`); }
+    function showDetail(n) {
       sel = n;
       const it = items[n];
+      for (const [k, sl] of slots) if (k !== it.verseIndex) sl.replaceChildren();
+      slots.get(it.verseIndex).replaceChildren(detail);
       for (const [k, b] of btns) { b.className = b.className.replace(' trd-sel', '') + (k === n ? ' trd-sel' : ''); b.setAttribute('tabindex', k === n ? '0' : '-1'); }
       const row = tropeRow(it);
       const marks = it.words.flatMap((w) => w.marks).filter((m, i, a) => a.indexOf(m) === i);
       const wid = idx.words.get(`${it.verse.verse}:${it.token.t}`);
       detail.replaceChildren(...[
-        el('p', { class: 'trd-big', dir: 'rtl', lang: 'he' }, display(it, { showTrope: true, showNiqqud: true })),
+        el('p', { class: 'trd-big', dir: 'rtl', lang: 'he' }, ...displayParts(it, { showTrope: true, showNiqqud: true }, largePositions(it.verse)).map((x) => (x.big ? el('span', { class: 'trd-lg' }, x.t) : x.t))),
         el('p', { class: 'trd-translit' }, el('strong', {}, 'Say it (' + trad + ' tradition): '), translit(plainOf(it)) || 'no transliteration'),
+        el('p', { class: 'trd-translit-note' }, `Respelling follows your ${TRAD_LABELS[trad]} setting. It is rule-generated, not checked by a native speaker, and does not mark which syllable is stressed.${trad === 'ashkenazi' ? '' : ' The Israeli and Sephardi settings give the same letters here.'}`),
         it.token.gloss ? el('p', { class: 'trd-gloss' }, el('strong', {}, 'Literal gloss: '), it.token.gloss) : el('p', { class: 'trd-gloss' }, 'No literal gloss is stored for this word.'),
         row ? el('p', { class: 'trd-trope' }, el('strong', {}, 'Mark: '), `${tropeName(row, trad)} (${trad === 'ashkenazi' ? 'Ashkenazi' : 'Sephardi'} name), ${CLS_LABEL[row.cls] || row.cls}.`)
           : el('p', { class: 'trd-trope' }, el('strong', {}, 'Mark: '), 'none of its own.'),
         marks.length > 1 ? el('p', { class: 'trd-marks' }, 'All marks on this word: ' + marks.join(', ') + '.') : null,
         el('button', { type: 'button', class: 'trd-hear', onclick: () => playAudio('word', wid || `torahreader-${p.id}-${it.verse.verse}-${it.token.t + 1}`, spokenText(plainOf(it)), 'this word') }, 'Hear it')].filter(Boolean));
-      say(`Selected word ${n + 1}: ${translit(plainOf(it))}`);
     }
     function tropeRow(it) {
       const t = it.token.trope; const m = tropeById(data.table);
@@ -233,7 +265,13 @@ export function mount(root, ctx) {
       btns.get(to)?.focus?.();
     }
 
-    return [switches, speeds, stepBar, el('p', { class: 'trd-pace' }, PACE_NOTE), verses, detail];
+    if (sel != null && sel < items.length) showDetail(sel);
+    // Secondary controls sit in a closed details so the first verse is on the first screen of a phone.
+    const ctl = el('details', { class: 'trd-ctl', open: ctlOpen ? '' : null, ontoggle: (e) => { ctlOpen = !!(e?.target?.open); } },
+      el('summary', {}, 'Marks, text size, Read with me, legend'),
+      el('p', { class: 'trd-hint' }, 'Tap or press a word to see it with its vowel points and mark, its transliteration (', trad, ' tradition) and to hear it. The details open under that verse.'),
+      switches, sizes, speeds, stepBar, el('p', { class: 'trd-pace' }, PACE_NOTE), legendBtn());
+    return [ctl, verses];
   }
 
   function renderLegend() {
@@ -257,7 +295,8 @@ export function mount(root, ctx) {
           el('td', {}, CLS_LABEL[r.cls] || r.cls, r.level ? `, level ${r.level}` : '', r.note ? `. ${r.note}.` : ''),
           el('td', {}, r.placement),
           el('td', {}, String(counts[r.id] || 0))))));
-      out.push(table);
+      // The table is wider than a phone screen: it scrolls sideways inside its own box (focusable, so a keyboard can scroll it).
+      out.push(el('div', { class: 'trd-scroll', tabindex: '0', role: 'region', 'aria-label': `${g.title}: table, scrolls sideways` }, table));
     }
     out.push(el('p', {}, 'The poetic-book marks (Psalms, Proverbs, Job) are not used in these two passages and are not listed here.'));
     return out;
@@ -268,7 +307,8 @@ export function mount(root, ctx) {
     if (error) { body.replaceChildren(el('p', { class: 'trd-error', role: 'alert' }, `The reader data could not be loaded (${error}). Check your connection and reload.`)); return; }
     if (!data) { body.replaceChildren(el('p', {}, 'Loading…')); return; }
     stopTimerIfLegend();
-    body.replaceChildren(tabs(), ...(state.view === 'legend' ? renderLegend() : renderReader()));
+    wrap.setAttribute('style', `--trd-scale:${sizeScale(state.size)}`);
+    body.replaceChildren(tabs(state.view === 'legend'), ...(state.view === 'legend' ? renderLegend() : renderReader()));
     if (state.view === 'reader') refreshRun();
     const p = state.view === 'reader' ? passage() : null;
     footer.replaceChildren(el('p', {}, p ? p.attribution : 'Mark names: a project table built from common Ashkenazi and Sephardi lists; no cantor has reviewed it. Mark positions: Unicode/XML Leningrad Codex (Tanach.us, copy without restriction).'),

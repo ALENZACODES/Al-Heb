@@ -97,7 +97,7 @@
   },
   {
    "he": "הוֹדָעָה",
-   "en": "message, notice",
+   "en": "notice",
    "translit": null,
    "pronunciation": {
     "israeli": "hoda'ah"
@@ -328,7 +328,6 @@
    "options": [
     "formal",
     "neutral",
-    "casual",
     "slang"
    ]
   },

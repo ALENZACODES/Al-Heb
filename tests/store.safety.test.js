@@ -157,15 +157,16 @@ test('delete all: typed confirmation required; clears store, flags, caches; unre
   assert.equal(confirmMatches(''), false); assert.equal(confirmMatches('delet'), false); assert.equal(confirmMatches(' delete '), true); assert.equal(confirmMatches('DELETE'), true);
   const mkEnv = () => {
     const ls = createMemoryStorage(); const t = createStore({ storage: ls, window: null }); t.set('settings', { voice: 'm' }); t.set('srs.cards', { a: 1 }); ls.setItem('alef.audioBannerSeen.v1', '1'); ls.setItem('other.site', 'x');
-    const cs = new Set(['alef-shell-v1', 'alef-audio']); const caches = { keys: async () => [...cs], delete: async (k) => cs.delete(k) };
+    const cs = new Set(['alef-shell-v1', 'alef-runtime-v1', 'alef-audio']); const caches = { keys: async () => [...cs], delete: async (k) => cs.delete(k) };
     let unreg = 0; const navigator = { serviceWorker: { getRegistrations: async () => [{ unregister: async () => { unreg++; return true; } }] } };
     return { ls, t, caches, navigator, cs, unreg: () => unreg };
   };
   let e = mkEnv(); let r = await wipeAllData({ store: e.t, caches: e.caches, navigator: e.navigator, storage: e.ls });
-  assert.deepEqual([r.store, r.extraKeys > 0, r.caches, r.serviceWorkers, r.errors], [true, true, 2, 0, []]);
+  assert.deepEqual([r.store, r.extraKeys > 0, r.caches, r.serviceWorkers, r.errors], [true, true, 1, 0, []]);
+  assert.deepEqual([...e.cs].sort(), ['alef-runtime-v1', 'alef-shell-v1']); // app copy and static runtime cache kept (no learner data in them)
   assert.equal(e.t.keys().length, 0); assert.equal(e.ls.getItem('other.site'), 'x'); assert.equal(e.ls.getItem('alef.audioBannerSeen.v1'), null); assert.equal(e.unreg(), 0);
   e = mkEnv(); r = await wipeAllData({ store: e.t, caches: e.caches, navigator: e.navigator, storage: e.ls, unregisterServiceWorker: true });
-  assert.equal(r.serviceWorkers, 1);
+  assert.equal(r.serviceWorkers, 1); assert.equal(e.cs.size, 0); // worker removed: its caches go too
   e = mkEnv(); r = await wipeAllData({ store: e.t, caches: { keys: async () => { throw new Error('no caches'); } }, navigator: e.navigator, storage: e.ls });
   assert.equal(r.store, true); assert.equal(r.errors.length, 1); // one failing step does not stop the others
 });

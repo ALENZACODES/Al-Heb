@@ -3,6 +3,7 @@
 // send audio to the browser vendor's servers (Chromium does); the screen says so before the first use.
 // ALEF has not measured how well any browser recognizer hears Hebrew: treat its text as a hint.
 
+import { speechText } from '../shell/names.js';
 const g = () => /** @type {any} */ (globalThis);
 
 /**
@@ -56,23 +57,25 @@ export function createRecorder(o = {}) {
   const maxMs = o.maxMs || 6000;
   const setT = o.setTimeout || ((f, ms) => g().setTimeout(f, ms)), clearT = o.clearTimeout || ((h) => g().clearTimeout(h));
   const now = o.now || (() => Date.now());
-  let mr = null, stream = null, chunks = [], urls = [], startedAt = 0, timer = null, stopping = null;
+  let mr = null, stream = null, chunks = [], urls = [], startedAt = 0, timer = null, stopping = null, held = null; // held: the take that the maxMs timer ended, kept until the caller's next stop()
   const supported = !!(MR && gum);
   async function start() {
     if (!supported) return { ok: false, error: 'unsupported' };
+    held = null; // an earlier take nobody collected is dropped; its object URL is still revoked by dispose()
     if (mr) await stop();
     try { stream = await gum({ audio: true }); } catch (e) { return { ok: false, error: e?.name === 'NotAllowedError' ? 'not-allowed' : 'audio-capture' }; }
     try { mr = new MR(stream); } catch { release(); return { ok: false, error: 'unsupported' }; }
     chunks = []; startedAt = now();
     mr.ondataavailable = (ev) => { if (ev?.data) chunks.push(ev.data); };
     try { mr.start(); } catch { release(); return { ok: false, error: 'start-failed' }; }
-    timer = setT(() => { stop(); }, maxMs);
+    timer = setT(() => { timer = null; held = stop(); }, maxMs);
     return { ok: true };
   }
   function release() { try { for (const t of stream?.getTracks?.() || []) t.stop?.(); } catch { /* ignore */ } stream = null; mr = null; if (timer != null) { clearT(timer); timer = null; } }
   function stop() {
+    if (!mr && held) { const h = held; held = null; return h; }
     if (!mr) return Promise.resolve({ ok: false, error: 'not-recording' });
-    if (stopping) return stopping;
+    if (stopping) { if (held === stopping) held = null; return stopping; }
     const r = mr;
     stopping = new Promise((resolve) => {
       r.onstop = () => {
@@ -86,8 +89,8 @@ export function createRecorder(o = {}) {
     });
     return stopping;
   }
-  function dispose() { if (mr) { try { mr.stop(); } catch { /* ignore */ } } release(); for (const u of urls) { try { URLImpl?.revokeObjectURL?.(u); } catch { /* ignore */ } } urls = []; }
-  return { supported, start, stop, dispose, get recording() { return !!mr; } };
+  function dispose() { held = null; if (mr) { try { mr.stop(); } catch { /* ignore */ } } release(); for (const u of urls) { try { URLImpl?.revokeObjectURL?.(u); } catch { /* ignore */ } } urls = []; }
+  return { supported, start, stop, dispose, get recording() { return !!mr || !!held; } };
 }
 
 /**
@@ -102,7 +105,7 @@ export function createSpeaker(o = {}) {
     if (!supported) return Promise.resolve({ ok: false, error: 'no-speech-synthesis' });
     return new Promise((resolve) => {
       let u;
-      try { u = new U(String(text)); } catch { return resolve({ ok: false, error: 'speech-threw' }); }
+      try { u = new U(speechText(String(text))); } catch { return resolve({ ok: false, error: 'speech-threw' }); }
       u.lang = 'he-IL'; if (typeof rate === 'number') u.rate = rate;
       u.onend = () => resolve({ ok: true });
       u.onerror = (ev) => resolve({ ok: false, error: ev?.error || 'speech-error' });

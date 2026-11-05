@@ -27,6 +27,16 @@ export function wordsOfLine(line) {
 }
 
 /**
+ * Same split as wordsOfLine, but each word also says whether the source text has a sof pasuq right after it, so a view can
+ * draw it as a plain mark next to the word. The word itself never carries it.
+ * @param {string} line
+ * @returns {{word:string, stop:boolean}[]}
+ */
+export function wordsWithStops(line) {
+  return line.split(/\s+/).map((raw) => ({ word: raw.replace(new RegExp(SOF_PASUQ, 'g'), ''), stop: raw.includes(SOF_PASUQ) })).filter((x) => /[א-ת]/.test(x.word));
+}
+
+/**
  * What one word shows at a ladder level.
  *   level 1 -> pointed;  level 2 -> pointed only on some words (stage 1 hides every third word's points, stage 2 keeps
  *   every third word only);  level 3 -> unpointed.

@@ -44,6 +44,8 @@ const PREFIX_LETTERS = new Set(['ו', 'ב', 'ל', 'מ', 'ה', 'ש', 'כ']);
 const SONORANTS = new Set(['ר', 'ל', 'מ', 'ם', 'נ', 'ן', 'י']);
 const BEGADKEFAT = new Set(['ב', 'ג', 'ד', 'כ', 'ך', 'פ', 'ף', 'ת']);
 const NO_GEMINATE = new Set(['א', 'ע', 'ח', 'ר', 'ה']);
+/** Cluster i+1 is a shuruk vav (vav with dagesh and no vowel). */
+const nextIsShurukVav = (clusters, i) => { const nx = clusters[i + 1]; return !!nx && nx.ch === 'ו' && (nx.dagesh && !nx.vowel); };
 
 const SCHEMES = ['siddur', 'academic', 'ashkenazi-siddur'];
 const TRADITIONS = ['israeli', 'sephardi', 'ashkenazi'];
@@ -178,6 +180,7 @@ function transliterateWord(word, o) {
       if (pv === 'chirik') skip[i] = true;
       else if (pv === 'tzere') { skip[i] = true; vowelOf[i - 1] = 'tzere-male'; }
       else if (pv === 'segol') skip[i] = true;
+      else if (nextIsShurukVav(clusters, i)) { /* consonantal yod before a shuruk vav (hayu, not hai): leave it; the vav then supplies its vowel */ }
       else if (pv === 'kamatz' || pv === 'patach' || pv === 'cholam' || pv === 'kubutz') {
         const nextIsFinalVav = i + 1 === n - 1 && clusters[i + 1].ch === 'ו' && !clusters[i + 1].vowel && !clusters[i + 1].dagesh;
         skip[i] = true;

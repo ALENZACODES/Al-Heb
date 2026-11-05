@@ -9,6 +9,7 @@ import { runPipeline } from './pipeline.js';
 import { loadLane3Shva } from './syllabify.js';
 import { buildWordCards, loadTransliterator, loadLetterInfo, TRADITIONS } from './word-card.js';
 import { isLocalHelperUrl } from './engines/local-server.js';
+import { speechText } from '../shell/names.js';
 
 export const ACCURACY_NOTICE = 'Accuracy notice: this reader has only been tested on 145 computer-generated images (about 88% of letters right there). It has not been measured on real photos, so expect mistakes, especially with vowel points, curved pages, glare or small print. Treat the result as a study aid, check it against the page, and do not rely on it for anything important (medical, legal, kashrut, prayer text for a ritual).';
 export const NO_TRANSLATION_NOTICE = 'Translation unavailable offline. This app has no built-in Hebrew-to-English translator (the available model is about 132 MB and does not run in a browser). Prayer lines that match the built-in texts show the stored translation; everything else shows no English. Nothing was sent anywhere to try.';
@@ -51,7 +52,7 @@ export function mount(root, ctx = {}) {
   if (!forced) wrap.append(el('p', { class: 'photo-privacy' }, 'The photo is read on this device (first use downloads about 5 MB of OCR data, then it is cached). It is not uploaded. Accuracy on real photos has not been measured yet: check what was read against the page.'));
   const onlineBox = el('input', { type: 'checkbox', id: 'photo-online' });
   if (!forced) wrap.append(el('label', { class: 'photo-online', for: 'photo-online', style: 'margin:0.5em 0' }, onlineBox, ' Add vowels to unpointed text online. This sends the recognised Hebrew text (not the photo) to Dicta (dicta.org.il).'));
-  const helperInput = el('input', { type: 'url', id: 'photo-helper', placeholder: 'http://127.0.0.1:8787', 'aria-label': 'Local translation helper address (optional)', style: 'width:14em' });
+  const helperInput = el('input', { type: 'url', id: 'photo-helper', placeholder: 'http://127.0.0.1:8787', 'aria-label': 'Helper address (this computer only), for local translation, optional', style: 'width:14em' });
   const helperMsg = el('span', { class: 'photo-helper-msg', role: 'status' });
   if (!forced) wrap.append(el('details', { class: 'photo-translate-setup' },
     el('summary', {}, 'Translation: off. How to turn it on (optional)'),
@@ -69,7 +70,7 @@ export function mount(root, ctx = {}) {
     const synth = root.ownerDocument.defaultView?.speechSynthesis;
     if (!synth) return false;
     const Utter = root.ownerDocument.defaultView.SpeechSynthesisUtterance;
-    const u = new Utter(text); u.lang = 'he-IL'; synth.speak(u); return true;
+    const u = new Utter(speechText(text)); u.lang = 'he-IL'; synth.speak(u); return true;
   };
   const playSyllable = (s, note) => {
     if (typeof ctx.audio?.playSequence === 'function') { ctx.audio.playSequence([{ kind: 'syllable', id: s.he, text: s.he }]); return; }

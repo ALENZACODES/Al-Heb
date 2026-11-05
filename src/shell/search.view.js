@@ -2,6 +2,7 @@
 // Preview pages (router.js tier) are still found but carry a "Preview" label (span.menu-tag[data-tier=preview]).
 import { t, tHe } from './i18n.js';
 import { h, heSpan } from './ui.js';
+import { uiEnglish } from './names.js';
 import './nav.strings.js';
 import { ROUTES } from './router.js';
 import { VIEW_FILES } from './views.generated.js';
@@ -30,8 +31,8 @@ export function mount(root, ctx) {
         e.tier === 'preview' ? ' ' : null, e.tier === 'preview' ? h('span', { class: 'menu-tag menu-desc', 'data-tier': 'preview' }, '(' + t('search.preview') + ')') : null),
       e.desc ? h('span', { class: 'menu-desc' }, e.desc) : null,
       h('span', { class: 'menu-desc' }, t('nav.section.' + e.section)))));
-    const ls = (letters ? searchLetters(letters, q) : []).map((l) => h('li', {}, h('a', { href: '#/letters/' + l.id }, heSpan(l.he, 'he search-he'), ' ', h('span', { class: 'menu-label' }, l.name), l.nameHe ? heSpan(' ' + l.nameHe, 'he nav-he') : null, h('span', { class: 'menu-desc' }, l.sound?.en || ''))));
-    const ws = searchWords(words, q).map((e) => h('li', {}, h('a', { href: '#/vocab' }, heSpan(e.pointed || e.lemma, 'he search-he'), ' ', h('span', { class: 'menu-label' }, e.gloss || ''), h('span', { class: 'menu-desc' }, [e.pos, e.topic].filter(Boolean).join(', ')))));
+    const ls = (letters ? searchLetters(letters, q) : []).map((l) => h('li', {}, h('a', { href: '#/letters/' + l.id }, heSpan(l.he, 'he search-he'), ' ', h('span', { class: 'menu-label' }, l.name), l.nameHe ? heSpan(' ' + l.nameHe, 'he nav-he') : null, h('span', { class: 'menu-desc' }, uiEnglish(ctx, l.sound?.en || '')))));
+    const ws = searchWords(words, q).map((e) => h('li', {}, h('a', { href: '#/vocab' }, heSpan(e.pointed || e.lemma, 'he search-he'), ' ', h('span', { class: 'menu-label' }, uiEnglish(ctx, e.gloss || '')), h('span', { class: 'menu-desc' }, [e.pos, e.topic].filter(Boolean).join(', ')))));
     const total = pages.length + ls.length + ws.length;
     out.append(...[group(t('search.pages'), pages), group(t('search.letters'), ls), group(t('search.words'), ws)].filter(Boolean));
     if (!total && loadedWords >= 4) out.append(h('p', {}, t('search.none')));

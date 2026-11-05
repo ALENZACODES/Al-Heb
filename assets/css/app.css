@@ -14,7 +14,8 @@
 :root[data-theme="light"] { color-scheme: light; }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
-body { margin: 0; background: var(--bg); color: var(--fg); font: 1.0625rem/1.55 var(--font-ui); padding-block-end: env(safe-area-inset-bottom); }
+html { font-size: calc(100% * var(--text-scale, 1)); } /* comfort: Settings > Reading comfort (src/shell/comfort.js); 100% keeps the browser's own text size */
+body { margin: 0; background: var(--bg); color: var(--fg); font: 1.0625rem/var(--line-height, 1.55) var(--font-ui); letter-spacing: var(--letter-spacing, normal); padding-block-end: env(safe-area-inset-bottom); }
 .he, [lang="he"] { font-family: var(--font-he); direction: rtl; unicode-bidi: isolate; font-size: 1.15em; }
 :root[data-script="cursive"] .he, :root[data-script="cursive"] [lang="he"] { font-family: var(--font-he-cursive); }
 bdi, .num { unicode-bidi: isolate; }
@@ -22,7 +23,7 @@ a { color: var(--accent); }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
 main:focus, h1:focus { outline: none; }
 h1[tabindex="-1"]:focus, h1[tabindex="-1"]:focus-visible { outline: none; }
-.skip-link { position: absolute; inset-inline-start: .5rem; inset-block-start: -4rem; background: var(--accent); color: var(--accent-fg); padding: .75rem 1rem; z-index: 100; border-radius: 8px; }
+.skip-link { position: absolute; inset-inline-start: .5rem; inset-block-start: -12rem; background: var(--accent); color: var(--accent-fg); padding: .75rem 1rem; z-index: 100; border-radius: 8px; }
 .skip-link:focus { inset-block-start: .5rem; }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .site-header { padding: 0 1rem; padding-inline: max(1rem, env(safe-area-inset-left)); display: flex; align-items: center; }
@@ -32,7 +33,7 @@ h1[tabindex="-1"]:focus, h1[tabindex="-1"]:focus-visible { outline: none; }
 .site-nav a { display: flex; flex-direction: column; align-items: center; justify-content: center; min-block-size: var(--tap); min-inline-size: var(--tap); padding: .25rem .75rem; text-decoration: none; color: var(--fg); border-radius: 8px; font-size: .9rem; line-height: 1.2; }
 .site-nav a[aria-current="page"] { background: var(--accent); color: var(--accent-fg); }
 .nav-he { font-size: .85em; opacity: .85; }
-main { max-inline-size: 46rem; margin-inline: auto; padding: 1rem; padding-inline: max(1rem, env(safe-area-inset-left)); }
+main { max-inline-size: var(--measure, 46rem); margin-inline: auto; padding: 1rem; padding-inline: max(1rem, env(safe-area-inset-left)); }
 .stack > * + *, main > * + * { margin-block-start: var(--gap); }
 .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; }
 h1 { font-size: 1.6rem; margin-block: 0 .5rem; line-height: 1.2; }
@@ -152,7 +153,7 @@ main .alef-trace .notice, main .alef-atlas .warn { color: #1b1b1f; }
   main .alef-trace > div:has(> .stage) > * { order: 20; margin-block: 0 .6rem; }
   main .alef-trace > div:has(> .stage) > .tabs { order: 1; }
   main .alef-trace > div:has(> .stage) > .grid { order: 2; display: flex !important; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x proximity; gap: .4rem; padding-block-end: .35rem; -webkit-overflow-scrolling: touch; }
-  main .alef-trace > div:has(> .stage) > .grid > button { flex: 0 0 3rem; min-block-size: 48px; scroll-snap-align: center; }
+  main .alef-trace > div:has(> .stage) > .grid > button { flex: 0 0 max(3rem, var(--tap, 48px)); min-block-size: var(--tap, 48px); scroll-snap-align: center; }
   main .alef-trace > div:has(> .stage) > .grid + .row { order: 8; }            /* print / cursive / strict / outline toggles */
   main .alef-trace > div:has(> .stage) > .row:has(> .big) { order: 3; }            /* the chosen letter and its name */
   main .alef-trace > div:has(> .stage) > .stage { order: 5; }
@@ -169,7 +170,7 @@ input[type="file"] { min-block-size: 44px; max-inline-size: 100%; font: inherit;
 input[type="file"]::file-selector-button { min-block-size: 44px; padding-inline: 1rem; margin-inline-end: .75rem; font: inherit; font-weight: 600; border-radius: 999px; border: 2px solid var(--accent); background: transparent; color: var(--accent); cursor: pointer; }
 /* labels that wrap a checkbox/radio deeper than a direct child (Vocab "Show word forms", Scan options) and plain text/url/search inputs: 44px */
 main label:has(input[type=radio], input[type=checkbox]) { display: inline-flex; align-items: center; gap: .4rem; min-block-size: 44px; white-space: normal; }
-main input[type=url], main input[type=text], main input[type=search], main input:not([type]) { min-block-size: 44px; }
+main input[type=url], main input[type=text], main input[type=search], main input:not([type]) { min-block-size: 44px; min-inline-size: 0; max-inline-size: 100%; }
 
 /* a11y round (lane 8, 2026-11-03): contrast fixes found by tools/a11y/run.mjs.
    Opacity on text blends it toward the background (muted text at .7-.8 opacity measured 3.5-3.8:1 against the 4.5:1 needed), so text keeps full opacity and the muted colour carries the de-emphasis. */
@@ -203,6 +204,8 @@ main { padding-inline: max(1rem, env(safe-area-inset-left), env(safe-area-inset-
 @media (max-width: 719.98px) {
   /* text zoom / large system font: reserve the bar height in rem so the last card is never hidden behind it */
   body { padding-block-end: calc(4.5rem + env(safe-area-inset-bottom)); }
+  /* a focused or scrolled-to control (first Listen button, last button) stops above the fixed tab bar, not under it */
+  html { scroll-padding-block-end: calc(4.5rem + env(safe-area-inset-bottom)); }
   .site-nav { padding-inline: env(safe-area-inset-left) env(safe-area-inset-right); }
   /* the bar is capped at 14px labels: at 200% text a 5-tab bar cannot hold larger words without breaking them mid-word (page text still scales) */
   .site-nav a, .more-btn { min-block-size: 3.5rem; font-size: min(.75rem, 14px); }
@@ -224,6 +227,9 @@ main { padding-inline: max(1rem, env(safe-area-inset-left), env(safe-area-inset-
   .more-btn { border: 1px solid ButtonText; }
 }
 @media (prefers-contrast: more) { :root { --border: currentColor; --muted: var(--fg); } }
+/* Dark/forced-colors QA 2026-11-04: toggle buttons and tabs (Letters, Atlas, others) lost their pressed/selected look when forced colors replaced the author background, and the bottom-tab focus ring was cut off by the screen edge. */
+@media (forced-colors: active) { button[aria-pressed="true"], button[aria-selected="true"], [role="tab"][aria-selected="true"] { background: Highlight; color: HighlightText; border-color: Highlight; forced-color-adjust: none; } }
+@media (max-width: 719.98px) { .site-nav a:focus-visible, .more-btn:focus-visible { outline-offset: -4px; } }
 
 /* ---- Navigation: section tabs + grouped More menu + search (src/shell/nav.js, menu.js, search.view.js; docs/nav/NAV.md) ---- */
 .more-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; min-block-size: var(--tap); padding: .25rem .75rem; border: 0; background: transparent; color: var(--fg); font: inherit; font-size: .9rem; line-height: 1.2; cursor: pointer; border-radius: 8px; }
@@ -252,6 +258,161 @@ main { padding-inline: max(1rem, env(safe-area-inset-left), env(safe-area-inset-
   .more-btn { flex: 0 0 4.5rem; inline-size: auto; border-radius: 0; min-block-size: 56px; padding: .2rem .1rem; font-size: .75rem; }
   .site-nav .nav-more { inset-block-start: auto; inset-block-end: 100%; border-radius: 12px 12px 0 0; border-block-end: 0; max-block-size: calc(100dvh - 8rem); box-shadow: 0 -6px 16px rgba(0,0,0,.18); }
   .site-nav .nav-more.open { display: flex; grid-template-columns: none; }
-  .nav-more .menu-link { min-block-size: 48px; border-radius: 10px; font-size: .95rem; }
+  .nav-more .menu-link { min-block-size: var(--tap, 48px); border-radius: 10px; font-size: .95rem; }
   .nav-group .menu-list { grid-template-columns: 1fr; }
 }
+
+/* One compact sound bar: status sentence (up to two lines, tap for all), "Details" link and dismiss, each a 44px target. */
+.sound-bar { min-block-size: 44px; box-sizing: border-box; }
+.sound-bar p { padding-block: 0; }
+.sound-bar[hidden] { display: none; }
+.sound-bar p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; white-space: normal; text-overflow: clip; }
+.sound-bar p.open { -webkit-line-clamp: unset; line-clamp: unset; display: block; }
+.sound-bar a.sound-bar-details { display: inline-flex; align-items: center; justify-content: center; min-inline-size: 44px; min-block-size: 44px; padding-block: 0; margin-block: 0; }
+.sound-bar-x { flex: none; min-inline-size: 44px; min-block-size: 44px; margin-inline-end: -.5rem; background: none; border: 0; color: inherit; font-size: 1.4rem; line-height: 1; cursor: pointer; }
+
+/* ---- v0 accessibility pass (docs/qa/A11Y-V0.md): fixes seen at 375x667 and at 200% text ---- */
+/* Letters tab row (Trace / Look-alikes / Typing) did not wrap, so at 200% text the last tab sat past the edge and main{overflow-x:clip} cut it off */
+main .alef-trace .tabs { flex-wrap: wrap; }
+/* long unbroken credit titles overflowed their list item at 200% text and were clipped */
+.credits li, #priv-flows li { overflow-wrap: anywhere; }
+.credits li a { display: inline-flex; align-items: center; min-block-size: 44px; }
+/* Progress: row links ("Open", "Go", "Time a read") were 21px tall; the import file field was 26px */
+.pg li a:not(.btn) { display: inline-flex; align-items: center; justify-content: center; min-block-size: 44px; min-inline-size: 44px; }
+.pg input[type="file"] { min-block-size: 44px; }
+/* wide tables (Privacy "Stored keys") scroll inside their own box instead of being cut off by main{overflow-x:clip} */
+.table-wrap:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+/* Links inside running text: padding on an inline box adds tap area (about 45px high) without changing the line height, so the text does not move */
+main :is(p, li, dd, td) > a:not(.btn):not(.skip-link) { padding-block: 10px; }
+.credits li > a, .pg li > a:not(.btn) { padding-block: 0; }
+
+/* Sources line under word meanings and example sentences (src/shell/sources.js): small, wraps, link keeps the 44px target from the rule above */
+.src-line { font-size: .875rem; color: var(--muted); margin-block: .5rem; overflow-wrap: anywhere; }
+.src-line a { color: inherit; text-decoration: underline; }
+/* Memory card (src/letters/memorycard.js): on phones it sits after the stage and its toggles, never above the tracing stage. */
+@media (max-width: 600px) { main .alef-trace > div:has(> .stage) > .mc { order: 8; } main .alef-trace > div:has(> .stage) > .mc[data-first] { order: 4; } main .alef-trace > div:has(> .stage) > .mc-fallback { order: 8; } }
+
+/* ==== Colour-blind and low-vision round (docs/a11y/colourblind.md; measured by tools/a11y/contrast.mjs) ==== */
+/* 1. Right / wrong line colours as tokens, so views can follow the theme. Colour is never the only cue: see the marks in section 3. */
+:root { --ok-line: #1a7f37; --bad-line: #b3261e; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ok-line: #6fd18a; --bad-line: #ff8a80; } }
+:root[data-theme="dark"] { --ok-line: #6fd18a; --bad-line: #ff8a80; }
+
+/* 2. High-contrast themes. Settings > Theme has "High contrast, light" (black on white) and "High contrast, dark" (white on black).
+   With "Match device" the same palettes switch on by themselves when the device asks for more contrast (prefers-contrast: more).
+   Windows forced-colors mode is handled separately below and wins over both. */
+:root[data-theme="contrast"] { --bg: #ffffff; --fg: #000000; --muted: #3d3d3d; --card: #ffffff; --border: #000000; --accent: #00227a; --accent-fg: #ffffff; --focus: #8a2d00; --warn-bg: #ffe9a0; --warn-fg: #000000; --ok-line: #0b5a22; --bad-line: #9a1b13; color-scheme: light; }
+:root[data-theme="contrast-dark"] { --bg: #000000; --fg: #ffffff; --muted: #e0e0e0; --card: #000000; --border: #ffffff; --accent: #9ec5ff; --accent-fg: #000000; --focus: #ffd400; --warn-bg: #2b2200; --warn-fg: #ffe680; --ok-line: #8ef0a8; --bad-line: #ff9e94; color-scheme: dark; }
+@media (prefers-contrast: more) {
+  :root:not([data-theme]) { --bg: #ffffff; --fg: #000000; --muted: #3d3d3d; --card: #ffffff; --border: #000000; --accent: #00227a; --accent-fg: #ffffff; --focus: #8a2d00; --warn-bg: #ffe9a0; --warn-fg: #000000; --ok-line: #0b5a22; --bad-line: #9a1b13; }
+}
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) { --bg: #000000; --fg: #ffffff; --muted: #e0e0e0; --card: #000000; --border: #ffffff; --accent: #9ec5ff; --accent-fg: #000000; --focus: #ffd400; --warn-bg: #2b2200; --warn-fg: #ffe680; --ok-line: #8ef0a8; --bad-line: #ff9e94; }
+}
+/* Controls and cards get a solid edge in the high-contrast themes; links stay underlined; the focus ring is thicker. */
+:root[data-theme^="contrast"] :focus-visible { outline-width: 4px; }
+@media (prefers-contrast: more) { :root:not([data-theme]) :focus-visible { outline-width: 4px; } }
+:root[data-theme^="contrast"] .card, :root[data-theme^="contrast"] .tile, :root[data-theme^="contrast"] .alef-lesson { border-width: 2px; }
+:root[data-theme^="contrast"] main a:not(.btn):not(.alef-btn):not(.alef-link):not(.tile):not(.skip-link) { text-decoration: underline; text-decoration-thickness: .1em; }
+/* native radios and checkboxes are nearly invisible on black in the dark scheme: draw them with a solid edge in the text colour */
+:root[data-theme^="contrast"] input[type="radio"], :root[data-theme^="contrast"] input[type="checkbox"] { appearance: none; -webkit-appearance: none; background: var(--bg); border: 2px solid var(--fg); border-radius: 50%; display: inline-grid; place-content: center; }
+:root[data-theme^="contrast"] input[type="checkbox"] { border-radius: 4px; }
+:root[data-theme^="contrast"] input[type="radio"]:checked::before { content: ""; inline-size: .7rem; block-size: .7rem; border-radius: 50%; background: var(--fg); }
+:root[data-theme^="contrast"] input[type="checkbox"]:checked::before { content: "\2713"; font-weight: 700; line-height: 1; color: var(--fg); }
+:root[data-theme^="contrast"] .alef-pb-fill { background: var(--fg); }
+:root[data-theme^="contrast"] .alef-pb { border-color: var(--fg); }
+/* the state-colour buttons and cells in learn.css keep their own pairs; in the high-contrast themes they use the plain theme pair with a heavy edge */
+html:root[data-theme="contrast"] .alef-rate-1, html:root[data-theme="contrast"] .alef-rate-2 { background: #000; border-color: #000; color: #fff; }
+html:root[data-theme="contrast-dark"] .alef-rate-1, html:root[data-theme="contrast-dark"] .alef-rate-2 { background: #fff; border-color: #fff; color: #000; }
+html:root[data-theme="contrast"] .alef-spot-cell.alef-spot-hit { background: #fff; color: #000; border-color: #0b5a22; }
+html:root[data-theme="contrast"] .alef-spot-cell.alef-spot-wrong { background: #fff; color: #000; border-color: #9a1b13; }
+html:root[data-theme="contrast"] .alef-spot-cell.alef-spot-missed { border-color: #8a2d00; }
+html:root[data-theme="contrast-dark"] .alef-spot-cell.alef-spot-hit { background: #000; color: #fff; border-color: #8ef0a8; }
+html:root[data-theme="contrast-dark"] .alef-spot-cell.alef-spot-wrong { background: #000; color: #fff; border-color: #ff9e94; }
+html:root[data-theme="contrast-dark"] .alef-spot-cell.alef-spot-missed { border-color: #ffd400; }
+/* 3. Second cues for right and wrong. A mark after the tile or cell content, plus the word the screen already prints ("Good!", "Natural.", "That is ...").
+   A tick is a tick and a cross is a cross in any colour vision. The marks are drawn as text, so forced-colors keeps them. */
+main .alef-atlas .tile.right::after { content: "\2713\00a0Right"; display: block; direction: ltr; unicode-bidi: isolate; text-align: center; font-size: .75rem; font-weight: 700; color: #0b4a1c; }
+main .alef-atlas .tile.wrong::after { content: "\2717\00a0Not this"; display: block; direction: ltr; unicode-bidi: isolate; text-align: center; font-size: .75rem; font-weight: 700; color: #7a1710; }
+main .alef-atlas .tile.right { border-width: 3px; }
+main .alef-atlas .tile.wrong { border-width: 3px; border-style: dashed; }
+main .wt .nq-cell[data-state=ok]::after { content: "\2713"; display: block; font-family: var(--font-ui); font-size: 1rem; line-height: 1; font-weight: 700; color: var(--fg); }
+main .wt .nq-cell[data-state=bad]::after { content: "\2717"; display: block; font-family: var(--font-ui); font-size: 1rem; line-height: 1; font-weight: 700; color: var(--fg); }
+main .wt .nq-cell[data-state=ok] { border-color: var(--ok-line); }
+main .wt .nq-cell[data-state=bad] { border-color: var(--bad-line); }
+main .wt .cell[data-done=true] { border-color: var(--ok-line); }
+.il-opt[data-state="natural"]::before { content: "\2713\00a0"; font-weight: 700; }
+.il-opt[data-state="picked-wrong"]::before { content: "\2717\00a0"; font-weight: 700; }
+.il-opt[data-state="picked-wrong"] { border-style: dashed; }
+main .il-opt[data-state="natural"] { border-color: var(--ok-line); }
+main .il-opt[data-state="picked-wrong"] { border-color: var(--bad-line); }
+.il-label.il-right::before { content: "\2713\00a0"; }
+.il-label.il-wrong::before { content: "\2717\00a0"; }
+:root[data-theme="dark"] .il-wrong, :root[data-theme="dark"] .il-right { text-decoration: none; }
+
+/* 4. Windows high-contrast (forced colors): keep the right / wrong marks, the tracing guide and the memory pictures readable.
+   SVG fills and strokes are replaced by system colours here, so the tracing guide is drawn as an outline instead of a grey fill. */
+@media (forced-colors: active) {
+  main .alef-atlas .tile.right::after, main .alef-atlas .tile.wrong::after { color: CanvasText; }
+  .mc .mc-art { border: 2px solid CanvasText; }
+}
+
+/* ---- Calm mode and reading comfort (src/shell/comfort.js; docs/a11y/COGNITIVE.md) ----
+   Calm mode (Settings > Calm and quiet) sets data-calm on the root: no animation, no transition, no smooth scroll anywhere.
+   The system "reduce motion" rule above applies whether or not calm mode is on. Reading comfort values arrive as CSS variables on the root. */
+:root[data-calm], :root[data-calm] *, :root[data-calm] *::before, :root[data-calm] *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+button, input, select, textarea { letter-spacing: inherit; }
+.he, [lang="he"], .alef-he, .mc-svg { letter-spacing: normal; }
+
+/* ---- Touch and movement (motor lane, 2026-11-04). Settings: targetSize, bottomActions (src/shell/motor.js). ---- */
+/* Measured at 375x667 with tools/a11y/targets.mjs. Buttons that sit next to each other keep at least 8px between them, so a slipped finger does not hit the neighbour. */
+.row { gap: .5rem; }
+.alef-cardpair, .alef-chips, .alef-gap-options, .alef-voice-select, .alef-tabs { gap: .5rem; }
+.alef-draft summary { min-block-size: 44px; padding-block: .6rem; }
+/* Large buttons and links (Settings > Touch and movement). The variable --tap is set to 64px on the root; these rules make every kind of target honour it. */
+:root[data-target-size="large"] :is(button, .btn, a.btn, summary, select, [role="tab"], [role="button"], .tile, .menu-link, .alef-btn, .alef-play, .alef-link, .alef-tab, .alef-chip, .alef-opt, .alef-card-opt, .alef-voice-choice, .alef-spot-cell) { min-block-size: var(--hit, 64px); min-inline-size: var(--hit, 64px); }
+:root[data-target-size="large"] :is(input[type="number"], input[type="text"], input[type="search"], input[type="url"], input:not([type]), input[type="range"], input[type="file"]) { min-block-size: var(--hit, 64px); }
+:root[data-target-size="large"] main label:has(input[type="radio"], input[type="checkbox"]), :root[data-target-size="large"] .opt { min-block-size: var(--hit, 64px); padding-block: .25rem; }
+:root[data-target-size="large"] input[type="radio"], :root[data-target-size="large"] input[type="checkbox"] { inline-size: 2rem; block-size: 2rem; }
+:root[data-target-size="large"] .row, :root[data-target-size="large"] .alef-tabs, :root[data-target-size="large"] .alef-cardpair, :root[data-target-size="large"] .alef-chips, :root[data-target-size="large"] .alef-ratings, :root[data-target-size="large"] .alef-actionbar, :root[data-target-size="large"] .alef-lesson-list, :root[data-target-size="large"] .tiles { gap: 1rem; }
+:root[data-target-size="large"] main :is(p, li, dd, td) > a:not(.btn):not(.skip-link) { padding-block: 18px; }
+@media (max-width: 719.98px) {
+  :root[data-target-size="large"] body { padding-block-end: calc(5.5rem + env(safe-area-inset-bottom)); }
+  :root[data-target-size="large"] { scroll-padding-block-end: calc(5.5rem + env(safe-area-inset-bottom)); }
+  :root[data-target-size="large"] .site-nav a, :root[data-target-size="large"] .more-btn { min-block-size: 4.25rem; }
+  :root[data-target-size="large"] .alef-actionbar { inset-block-end: calc(4.4rem + env(safe-area-inset-bottom)); }
+}
+/* Main buttons at the bottom (Settings > Touch and movement): Show answer, ratings, Continue and Next stay above the tab bar, in thumb reach. Lessons already do this with .alef-actionbar. */
+:root[data-bottom-actions] :is(.alef-review .alef-ratings, .alef-review .alef-mem-actions, .alef-sprint .sp-row:has(#sprint-next), .alef-sprint .sp-row:has(#sprint-reveal)) { position: sticky; inset-block-end: 0; z-index: 40; background: var(--card); padding: .5rem; border-block-start: 1px solid var(--border); }
+/* a lone button keeps its own colours; a halo of the card colour keeps text from showing through behind it */
+:root[data-bottom-actions] :is(.alef-review .alef-card > button.btn, #fd-next) { position: sticky; inset-block-end: .5rem; z-index: 40; box-shadow: 0 0 0 .5rem var(--card); }
+@media (max-width: 719.98px) {
+  :root[data-bottom-actions] :is(.alef-review .alef-ratings, .alef-review .alef-mem-actions, .alef-sprint .sp-row:has(#sprint-next), .alef-sprint .sp-row:has(#sprint-reveal)) { inset-block-end: calc(3.6rem + env(safe-area-inset-bottom)); }
+  :root[data-bottom-actions] :is(.alef-review .alef-card > button.btn, #fd-next) { inset-block-end: calc(4.1rem + env(safe-area-inset-bottom)); }
+}
+/* "Check answer" (Settings > Ask me to confirm each answer): the marked choice is outlined with a thick border and a tick, not by colour alone */
+.alef-int-opt[aria-pressed="true"] { outline: 4px solid var(--focus); outline-offset: 2px; font-weight: 700; }
+.alef-int-opt[aria-pressed="true"]::before { content: "\2713\00a0"; }
+/* Letters > Typing: the on-screen keyboard was 13 keys of 34px in a 343px row, so the outer keys were cut off and every key was under 44px wide. On a phone the rows wrap and each key is 44px wide, with 8px between keys. */
+@media (max-width: 599.98px) {
+  main .alef-trace .kb { gap: 8px; }
+  main .alef-trace .kb .r { flex-wrap: wrap; gap: 8px; }
+  main .alef-trace .kb .k { flex: 0 0 44px; min-inline-size: 44px; min-block-size: 56px; }
+}
+/* Calendar day buttons were 43px wide on a 375px phone (the card padding left 309px for 7 columns). Let the grid use the card's side padding so each day is at least 44px. */
+@media (max-width: 480px) { main .alef-cal-table { inline-size: calc(100% + 2rem); margin-inline: -1rem; } }
+/* Space between neighbouring targets: buttons placed one after another outside a flex row (Home daily goal, About and Privacy link buttons) and stacked radio/checkbox rows touched each other. */
+main :is(p:not(.row), #today-goal) > .btn + .btn { margin-inline-start: .5rem; }
+main .btn { margin-block: 2px; }
+main .opt, main label:has(> input[type="radio"], > input[type="checkbox"]) { margin-block: 3px; }
+main .opt, main label:has(> input[type="radio"], > input[type="checkbox"]) { margin-inline-end: .75rem; }
+main details { margin-block: 4px; }
+main label > :is(select, input[type="url"], input[type="file"]) { margin-block: 4px; }
+/* large mode: header, sound bar and list links too */
+:root[data-target-size="large"] :is(.brand, .sound-bar-details, .sound-bar-x, .pg li a:not(.btn), .credits li a, .search-list a, .nav-more a) { min-block-size: var(--hit, 64px); min-inline-size: var(--hit, 64px); }
+:root[data-target-size="large"] main .alef-trace .kb .k { flex-basis: 56px; min-inline-size: 56px; min-block-size: 64px; }
+/* Letters on a phone: "Strokes in words" kept the default order 20 and so sat below "Remember it" on screen while coming before it for Tab (the DOM ranks it 8.2). Same place in both now. */
+@media (max-width: 719.98px) { main .alef-trace > div:has(> .stage) > .sw-wrap { order: 9; } }
+/* ...and the Print / Cursive / Strict / Outline row lost its "after the grid" order (the letter-card row now sits between them), so it fell to the bottom on screen while it is above "Strokes in words" for Tab. */
+@media (max-width: 719.98px) { main .alef-trace > div:has(> .stage) > .script-toggles { order: 8; } }

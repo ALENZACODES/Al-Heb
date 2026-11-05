@@ -30,7 +30,7 @@
    "id": "hc444e8d9",
    "he": "יְכֹלֶת",
    "translit": "yekholet",
-   "en": "Ability, capability, power",
+   "en": "ability, capability, power",
    "kind": "word",
    "audioId": "hc444e8d9",
    "source": "data/vocab/words.json"
@@ -54,21 +54,12 @@
    "source": "data/vocab/words.json"
   },
   {
-   "id": "ha5b5601c",
-   "he": "לוֹם",
-   "translit": "lom",
-   "en": "a crowbar",
-   "kind": "word",
-   "audioId": "ha5b5601c",
-   "source": "data/vocab/words.json"
-  },
-  {
    "id": "hbe4076c4",
    "he": "כִי",
    "translit": "khi",
    "en": "chi",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hbe4076c4",
    "source": "data/vocab/words.json"
   },
   {
@@ -77,7 +68,7 @@
    "translit": "rekhev",
    "en": "vehicle, chariot",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hdd46eaf9",
    "source": "data/vocab/words.json"
   },
   {
@@ -114,6 +105,15 @@
    "en": "ox",
    "kind": "word",
    "audioId": "h26f014a5",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h9e95ccc3",
+   "he": "מֹר",
+   "translit": "mor",
+   "en": "myrrh",
+   "kind": "word",
+   "audioId": null,
    "source": "data/vocab/words.json"
   }
  ]

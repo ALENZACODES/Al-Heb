@@ -3,7 +3,7 @@
  "id": "speak-survival-lesson-israel-1",
  "title": "Survival: lesson israel",
  "theme": "talking-asking",
- "level": "A1",
+ "level": "A2",
  "track": "israel",
  "pack": "survival-lesson-israel-1",
  "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
@@ -12,9 +12,45 @@
    "id": "p0962becf",
    "he": "אַחַת",
    "translit": "achat",
-   "en": "one (f., counting)",
+   "en": "one (f.)",
    "kind": "word",
    "audioId": "il04-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p71df0447",
+   "he": "שָׁלוֹשׁ",
+   "translit": "shalosh",
+   "en": "three (f.)",
+   "kind": "word",
+   "audioId": "il04-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p92bccc56",
+   "he": "שְׁתַּיִם",
+   "translit": "shtayim",
+   "en": "two (f.)",
+   "kind": "word",
+   "audioId": "il04-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pc34fd630",
+   "he": "אַרְבַּע",
+   "translit": "arba",
+   "en": "four (f.)",
+   "kind": "word",
+   "audioId": "il04-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pcee847e3",
+   "he": "תֵּשַׁע",
+   "translit": "tesha",
+   "en": "nine (f.)",
+   "kind": "word",
+   "audioId": "il04-w9",
    "source": "data/vocab/words.json"
   },
   {
@@ -54,15 +90,6 @@
    "source": "data/vocab/words.json"
   },
   {
-   "id": "pcee847e3",
-   "he": "תֵּשַׁע",
-   "translit": "tesha",
-   "en": "nine (f.)",
-   "kind": "word",
-   "audioId": "il04-w9",
-   "source": "data/vocab/words.json"
-  },
-  {
    "id": "p4b2a6eaf",
    "he": "רָאִיתִי",
    "translit": "ra'iti",
@@ -72,39 +99,12 @@
    "source": "data/vocab/words.json"
   },
   {
-   "id": "p71df0447",
-   "he": "שָׁלוֹשׁ",
-   "translit": "shalosh",
-   "en": "three (f.)",
-   "kind": "word",
-   "audioId": "il04-w3",
-   "source": "data/vocab/words.json"
-  },
-  {
    "id": "p8ee06166",
    "he": "רַכֶּבֶת",
    "translit": "rakevet",
    "en": "train",
    "kind": "word",
    "audioId": "il10-w3",
-   "source": "data/vocab/words.json"
-  },
-  {
-   "id": "pc34fd630",
-   "he": "אַרְבַּע",
-   "translit": "arba",
-   "en": "four (f.)",
-   "kind": "word",
-   "audioId": "il04-w4",
-   "source": "data/vocab/words.json"
-  },
-  {
-   "id": "p92bccc56",
-   "he": "שְׁתַּיִם",
-   "translit": "shtayim",
-   "en": "two (f.)",
-   "kind": "word",
-   "audioId": "il04-w2",
    "source": "data/vocab/words.json"
   },
   {

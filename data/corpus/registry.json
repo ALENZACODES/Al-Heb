@@ -1416,17 +1416,17 @@
    "category": "siddur",
    "level": "inter-1",
    "language": "hebrew",
-   "he": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַגּוֹמֵל לְחַיָּבִים טוֹבוֹת שֶׁגְּמָלַנִי כָּל טוֹב׃\nמִי שֶׁגְּמָלְךָ טוֹב הוּא יִגְמָלְךָ כָּל־טוֹב סֶלָה׃",
+   "he": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַגּוֹמֵל לְחַיָּבִים טוֹבוֹת שֶׁגְּמָלַנִי כָּל טוֹב׃\nמִי שֶׁגְּמָלְךָ טוֹב הוּא יִגְמָלְךָ כָּל טוֹב סֶלָה׃",
    "lines": 2,
    "english": "Blessed are you, LORD our God, king of the world, who bestows good things on the undeserving, and has bestowed every good on me.\nMay the one who has bestowed good on you bestow on you every good. Selah.",
    "englishSource": "original-gloss",
    "englishLicense": "original (project-owned)",
-   "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Torah Reading, Reading from Sefer, Birkat Hagomel",
-   "sourceUrl": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Reading_from_Sefer%2C_Birkat_Hagomel",
-   "license": "CC-BY",
-   "attribution": "Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.",
+   "source": "Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Morning Services, Thanksgiving Blessing",
+   "sourceUrl": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Morning_Services%2C_Thanksgiving_Blessing",
+   "license": "Public Domain",
+   "attribution": "Hebrew text: Torat Emet 357 (toratemetfreeware.com), as digitised on Sefaria where it is labelled Public Domain. Label not independently verified; the toratemetfreeware.com home page carries an all-rights-reserved footer (read 2026-11-04). English: original literal gloss.",
    "status": "verified",
-   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Torah%20Reading%2C%20Reading%20from%20Sefer%2C%20Birkat%20Hagomel?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
+   "verifiedAgainst": "Normalised he equals the programmatic normalisation (src/corpus/normalize.js) of the raw string fetched on 2026-11-04 from https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Shabbat%20Morning%20Services%2C%20Thanksgiving%20Blessing?version=hebrew%7Call. This is a machine comparison against the cited source, NOT proofreading by a Hebrew educator (see proofread).",
    "proofread": false,
    "retrieved": "2026-11-04",
    "typedFromMemory": false,
@@ -1434,12 +1434,22 @@
    "snapshotId": "hagomel",
    "transforms": {
     "dropTokens": [
-     "והקהל",
-     "עונימ"
+     "הקהל",
+     "עונה",
+     "אמנ",
+     "ואומרימ"
     ]
    },
-   "nusach": "Ashkenaz (Metsudah)",
-   "notes": "The second line is the congregation's answer. The source rubric (\"the congregation answers\") is removed. Line 1 is said by the person giving thanks, usually after the Torah reading."
+   "nusach": "Sefard (Torat Emet 357); consonants identical to the Ashkenaz (Metsudah) text this record carried before 2026-11-04",
+   "notes": "The second line is the congregation's answer. The source rubric (\"the congregation answers\") is removed. Line 1 is said by the person giving thanks, usually after the Torah reading.",
+   "resourced": {
+    "from": "The Metsudah siddur, 1981",
+    "on": "2026-11-04",
+    "by": "tools/corpus/resource_metsudah.mjs",
+    "wordsChanged": 0,
+    "punctuationChanged": 1,
+    "previousStatus": "verified"
+   }
   },
   {
    "id": "avot-closing",

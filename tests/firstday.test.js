@@ -90,8 +90,8 @@ test("unpointed score counts only unpointed steps", () => {
   assert.equal(M.unpointedScore(ladder, {}).pct, 0);
 });
 
-test("view mounts with injected data, shows the draft notice and steps through", async () => {
-  let doc; try { ({ JSDOM: doc } = await import("jsdom")); } catch { return; }
+test("view mounts with injected data, shows the draft notice and steps through", async (t) => {
+  let doc; try { ({ JSDOM: doc } = await import("jsdom")); } catch { return t.skip("jsdom not installed (the app has no dependencies; npm i --no-save jsdom to run this)"); }
   const dom = new doc("<body></body>"); globalThis.document = dom.window.document;
   const V = await import("../src/firstday/firstday.view.js");
   const root = document.body; const un = V.mount(root, { firstdayData: { first10, ladder } });
@@ -100,8 +100,8 @@ test("view mounts with injected data, shows the draft notice and steps through",
   un(); delete globalThis.document;
 });
 
-test("last step has a next-step button and a way home, and no stale check message", async () => {
-  let doc; try { ({ JSDOM: doc } = await import("jsdom")); } catch { return; }
+test("last step has a next-step button and a way home, and no stale check message", async (t) => {
+  let doc; try { ({ JSDOM: doc } = await import("jsdom")); } catch { return t.skip("jsdom not installed (the app has no dependencies; npm i --no-save jsdom to run this)"); }
   const dom = new doc("<body></body>"); globalThis.document = dom.window.document;
   const V = await import("../src/firstday/firstday.view.js");
   const store = { m: { "firstday.progress": { ...M.emptyProgress(), step: first10.steps.length - 1 } }, get(k) { return this.m[k]; }, set(k, v) { this.m[k] = v; } };

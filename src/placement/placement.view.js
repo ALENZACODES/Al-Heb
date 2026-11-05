@@ -8,6 +8,7 @@ import { audioAccess } from '../shell/audio-access.js';
 import { el, heText, storeGet, storeSet, PROGRESS_KEY } from '../curriculum/dom.js';
 import { loadPlacementData } from './loader.js';
 import { STORE_KEY, buildItems, nextItem, openStart, recommend, seeded } from './model.js';
+import { isAudioFree } from '../shell/audiofree.js';
 
 export const DRAFT_NOTE = 'Draft, unreviewed: no Hebrew teacher has checked this check and no learner has tried it. The cutoffs that pick your starting lesson are untested guesses. You can always start at lesson r01 or pick any lesson yourself.';
 
@@ -53,7 +54,7 @@ export function mount(root, ctx) {
       fb.textContent = correct ? 'Yes.' : 'Not this time. That is fine; it only helps pick your starting point.';
       next.hidden = false; status.textContent = fb.textContent; focus(next);
     };
-    const play = it.audio && ctx?.audio?.play && audioAccess(ctx.audio, it.audio.kind, it.audio.id).level !== 'none' ? el('button', { type: 'button', class: 'btn', onclick: async () => { try { await ctx.audio.play(it.audio.kind, it.audio.id); } catch { status.textContent = 'No audio yet'; } } }, 'Listen (device voice, not a recorded teacher)') : null;
+    const play = it.audio && !isAudioFree(ctx) && ctx?.audio?.play && audioAccess(ctx.audio, it.audio.kind, it.audio.id).level !== 'none' ? el('button', { type: 'button', class: 'btn', onclick: async () => { try { await ctx.audio.play(it.audio.kind, it.audio.id); } catch { status.textContent = 'No audio yet'; } } }, 'Listen (device voice, not a recorded teacher)') : null;
     set(
       el('p', { class: 'muted' }, `Question ${answers.length + 1} of up to ${items.length}`),
       el('p', {}, it.prompt), el('p', { class: 'ps-he' }, heText(it.he)), play,

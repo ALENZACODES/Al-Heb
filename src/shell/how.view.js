@@ -12,12 +12,12 @@ export function mount(root, ctx) {
       h('p', { class: 'muted' }, 'What ALEF teaches, how it schedules practice, and what is and is not finished. Credits and licences are on the ', h('a', { href: '#/about' }, 'About page'), '.')),
 
     sec('scope', '1. Scope: Modern and Biblical Hebrew',
-      h('p', {}, 'ALEF has two tracks. "Read the siddur" teaches you to decode pointed (vowelled) Hebrew so you can read prayers and Torah text aloud with a congregation. "Speak in Israel" covers everyday Modern Hebrew. They are different things: the reading track uses Biblical and liturgical text, the speaking track uses Modern Hebrew.'),
+      h('p', {}, 'ALEF has two tracks. "Read the prayer book" teaches you to read Hebrew with vowel marks, so you can read prayers and Torah text aloud in synagogue. "Speak in Israel" covers everyday Modern Hebrew. They are different things: the reading track uses Biblical and liturgical text, the speaking track uses Modern Hebrew.'),
       h('p', {}, 'ALEF is not a Biblical Hebrew grammar course and not a complete Modern Hebrew course. The research behind it found that learners often confuse Biblical and Modern Hebrew (pronunciation and vocabulary) and that one review site recommends learning Modern Hebrew first; ALEF keeps the two tracks separate and says which one you are in.')),
 
-    sec('tradition', '2. Pronunciation traditions',
-      h('p', {}, 'You choose Israeli, Sephardi or Ashkenazi. "American synagogue" in the setup screen is stored as Sephardi, because the common American-synagogue pronunciation uses Sephardi/Israeli vowel values; if your congregation differs, pick the one that matches.'),
-      h('p', {}, 'Vowel descriptions and prayer transliteration follow your choice. In the research for this project, no competing product page or review that we read stated which pronunciation tradition its audio uses (the one exception was a text-to-speech Bible reader offering three dialects), so ALEF names it.'),
+    sec('tradition', '2. Pronunciation styles',
+      h('p', {}, 'You choose Israeli, Sephardi or Ashkenazi. "American synagogue" in the setup screen is stored as Sephardi, because the common American-synagogue pronunciation uses Sephardi/Israeli vowel values; if your synagogue differs, pick the one that matches.'),
+      h('p', {}, 'Vowel descriptions and prayer transliteration follow your choice. In the research for this project, no competing product page or review that we read stated which pronunciation style its audio uses (the one exception was a text-to-speech Bible reader offering three dialects), so ALEF names it.'),
       h('p', { id: 'how-sound' }, h('strong', {}, 'Sound, honestly. '), 'No human or studio recordings exist yet, and no synthetic voice files exist either. Every sound you hear today is your browser\'s built-in text-to-speech Hebrew voice, if your device has one. That voice reads Modern Israeli pronunciation, and its gender and accent are chosen by your device, so the Man (Ari) / Woman (Noa) choice cannot change it yet. The bar at the top of every screen tells you what played last: a recorded file, the browser voice, or nothing.')),
 
     sec('science', '3. What the research says, and how ALEF uses it',
@@ -47,8 +47,8 @@ export function mount(root, ctx) {
     sec('draft', '4. What is draft or unreviewed',
       h('ul', {},
         li('Hebrew interface labels are machine-drafted and need a native speaker.'),
-        li('Lesson vocabulary, English glosses and pointing have not yet been reviewed by a native speaker.'),
-        li('Torah and prayer texts match their cited sources (checked by tests), but no Hebrew educator has proofread them and the licence labels for the siddur sources are the source site\'s own labels, not independently verified.'),
+        li('The lesson words, their English meanings and the vowel marks have not yet been checked by a native speaker.'),
+        li('Torah and prayer texts match their cited sources (checked by tests), but no Hebrew educator has proofread them and the licence labels for the prayer book sources are the source site\'s own labels, not independently verified.'),
         li('The opening prayer slot on the home screen is a placeholder pending review by clergy or an educator.'),
         li('Letter stroke data for tracing is a draft, not validated by a native writer or a school model.'),
         li('The survival phrasebook was written for this project and needs native review.'),

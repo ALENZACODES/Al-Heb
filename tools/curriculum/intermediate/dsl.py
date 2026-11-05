@@ -43,7 +43,7 @@ def spot(line, target, en, line_index=None):
     return d
 
 def register(he, en, answer):
-    return {"type": "register", "he": he, "en": en, "answer": answer, "options": ["formal", "neutral", "casual", "slang"]}
+    return {"type": "register", "he": he, "en": en, "answer": answer, "options": ["formal", "neutral", "slang"]}
 
 def lesson(id, unit, title, words, prayer_lines, goals, est, prereqs, exercises, note=None, level=None, track=None):
     return {

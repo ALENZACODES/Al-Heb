@@ -20,15 +20,17 @@ Both scripts only need Node; PDFs need Playwright with Chromium (the same one `b
 
 ## What the scan covers
 
-`build_packet.mjs` walks `data/**/*.json` for records carrying the flags above, and reads three things that live outside data files: `book/opening-prayer.txt`, the holiday/month names in `src/curriculum/calendar.js` and the parasha names in `data/calendar/parsha.json`. It also lists every `docs/**` file that mentions a flag in prose (57 files on the last run, mostly generated worksheets and QA notes; see `manifest.json` > `audit.docsWithMarkers`). Docs are reported, not turned into rows, except `docs/letters/REVIEW-LIST.md`, whose per-letter doubts are copied into the stroke cards.
+`build_packet.mjs` walks `data/**/*.json` for records carrying the flags above, and reads three things that live outside data files: `book/opening-prayer.txt`, the holiday/month names in `src/curriculum/calendar.js` and the parasha names in `data/calendar/parsha.json`. It also lists every `docs/**` file that mentions a flag in prose (221 files on the last run, mostly generated worksheets and QA notes; see `manifest.json` > `audit.docsWithMarkers`). Docs are reported, not turned into rows, except `docs/letters/REVIEW-LIST.md`, whose per-letter doubts are copied into the stroke cards.
 
-Safety net: any flagged data file that no dedicated area knows about is picked up by the generic `other-flagged` area, so newly added data is never silently skipped. On the last run that area was empty. `manifest.json` > `audit.dataFilesNotCoveredByAnyArea` lists any flagged file that still ends up with no area.
+Every flagged data file is either turned into rows by an area or listed in `CLAIMS` (`tools/review/config.mjs`) with a reason; `manifest.json` > `audit.dataFilesClaimedWithoutRows` lists the claimed ones (91 files on the last run: 51 for `lessons`, 32 for `pron-rules`, 8 for `vocab-top1000`). The generic `other-flagged` area is only a safety net for a flagged file that is neither: on the last run it was empty, it has no sheet while empty, and `tests/review.coverage.test.js` fails if it ever is not empty or if `audit.dataFilesNotCoveredByAnyArea` lists a file, so new flagged data cannot go unnoticed.
 
-Not covered, on purpose: audio (none exists yet), `data/wordtrace/words.json` (derived from lesson/vocab words, pointing marked `course-data`), the Wiktionary-derived vocabulary beyond rank 5000, and any record already marked `proofread:true`.
+Derived pronunciation output is not reviewed row by row. `data/pronunciation/variants/` holds 6,630 rule-generated records x 3 traditions; reviewers get the rule list and a stratified sample instead (area `pron-rules`: 49 rule rows, 200 sample rows per tradition chosen so that every rule that occurs for that tradition is on at least two rows, and the 7 learner-facing rule pages of `data/pronunciation/runtime/rules.json`). Each sample row names its rule ids (`sign:` = a written sign found in the Hebrew, `stress:` = the rule the generator stored for the stressed syllable, `flag:` = a generator flag). The `sign:` ids are detected from the characters, so they say which signs the word contains, not that the generator used that rule. `data/pronunciation/derived/` and the other `runtime/` shards are built from the same rules and are claimed without rows.
+
+Not covered, on purpose: the other ~6,000 derived respellings (see above), audio (none exists yet), `data/wordtrace/words.json` (derived from lesson/vocab words, pointing marked `course-data`), the Wiktionary-derived vocabulary beyond rank 5000, and any record already marked `proofread:true`.
 
 ## The areas, in priority order
 
-Counts and hours are from the run on 2026-11-03 (`docs/review/out/manifest.json`). Re-run the builder for current numbers: other lanes were still adding data while this was written.
+Counts and hours are from the run on 2026-11-04 (`docs/review/out/manifest.json`). Re-run the builder for current numbers: other lanes were still adding data while this was written.
 
 | # | Area (suggested reviewer) | Priority | Items | Est. hours |
 |---|---|---|---|---|
@@ -37,32 +39,41 @@ Counts and hours are from the run on 2026-11-03 (`docs/review/out/manifest.json`
 | 3 | `prayer-prompts` (clergy / Hebrew educator) | P2 | 41 | 1.4 |
 | 4 | `prayer-guide` (clergy) | P2 | 17 | 1.3 |
 | 5 | `torahread` (Hebrew teacher / clergy) | P3 | 37 | 0.6 |
-| 6 | `lessons` (Hebrew teacher) | P3 | 380 | 3.0 |
+| 6 | `lessons` (Hebrew teacher) | P3 | 1065 | 8.5 |
 | 7 | `dialogues` (Israeli native speaker / teacher) | P3 | 54 | 0.7 |
 | 8 | `gender-pairs` (Hebrew teacher) | P3 | 22 | 0.3 |
 | 9 | `loanwords` (Israeli native speaker) | P3 | 26 | 0.2 |
 | 10 | `hints` (Hebrew teacher) | P3 | 6 | 0.1 |
-| 11 | `israel-everyday` (Israeli native speaker) | P4 | 133 | 3.2 |
-| 12 | `phrasebook` (Israeli native speaker) | P4 | 204 | 2.0 |
-| 13 | `letter-strokes` (Israeli primary-school teacher) | P4 | 54 | 2.6 |
-| 14 | `mnemonics` (Hebrew teacher) | P4 | 31 | 1.5 |
-| 15 | `pron-soundgap` (native speaker / speech teacher) | P5 | 32 | 0.5 |
-| 16 | `pron-prayerwords` (native speaker + Ashkenazi-trained reader) | P5 | 10 | 0.4 |
-| 17 | `pron-vowels` (Hebrew teacher) | P5 | 56 | 1.1 |
-| 18 | `pron-traditions` (linguist / cantor / Hebrew teacher) | P5 | 25 | 1.2 |
-| 19 | `calendar` (Hebrew teacher / clergy) | P5 | 80 | 2.3 |
-| 20 | `vocab-top1000` (Hebrew teacher / native speaker) | P6 | 1000 | 6.4 |
-| 21 | `vocab-rest` (Hebrew teacher / native speaker), sheet only | P7 | 4000 | 25.6 |
-| | **Total** | | **6353** | **66.6** |
+| 11 | `intermediate` (Hebrew teacher; clergy or cantor for the prayer units) | P3 | 752 | 11.9 |
+| 12 | `firstday` (Hebrew teacher) | P3 | 43 | 0.6 |
+| 13 | `israel-everyday` (Israeli native speaker) | P4 | 133 | 3.2 |
+| 14 | `phrasebook` (Israeli native speaker) | P4 | 204 | 2.0 |
+| 15 | `speak` (Israeli native speaker / Hebrew teacher) | P4 | 18 | 0.3 |
+| 16 | `letter-strokes` (Israeli primary-school teacher) | P4 | 54 | 2.6 |
+| 17 | `mnemonics` (Hebrew teacher) | P4 | 68 | 3.3 |
+| 18 | `pron-soundgap` (native speaker / speech teacher) | P5 | 32 | 0.5 |
+| 19 | `pron-prayerwords` (native speaker + Ashkenazi-trained reader) | P5 | 10 | 0.4 |
+| 20 | `pron-vowels` (Hebrew teacher) | P5 | 56 | 1.1 |
+| 21 | `pron-traditions` (linguist / cantor / Hebrew teacher) | P5 | 25 | 1.2 |
+| 22 | `pron-rules` (Hebrew teacher; cantor for Sephardi and Ashkenazi) | P5 | 656 | 7.7 |
+| 23 | `calendar` (Hebrew teacher / clergy) | P5 | 80 | 2.3 |
+| 24 | `vocab-top1000` (Hebrew teacher / native speaker) | P6 | 998 | 6.4 |
+| 25 | `vocab-rest` (Hebrew teacher / native speaker) sheet only | P7 | 3998 | 25.5 |
+| | **Total** | | **8540** | **94.4** |
 
-Phase one (P1 to P6, everything except `vocab-rest`) is 2,353 items, about 41 hours. `vocab-rest` is deliberately phase two and has a CSV but no PDF.
+Phase one (P1 to P6, everything except `vocab-rest`) is 4,542 items, about 69 hours. `vocab-rest` is deliberately phase two and has a CSV but no PDF.
 
 Notes on what is inside:
 
 * `prayers` has 70 registry texts (27 older plus the 43 liturgy records added in commit 449b068, which nobody has read) and 70 clergy-note rows (`prayers:meta:<id>`: where in the service, delivery, use per denomination). The five records with status `transcribed-needs-check` (`vayehi-binsoa`, `vezot-hatorah`, `etz-chaim`, `yigdal`, `haftarah-after`) are sorted to the top.
-* `lessons` has one row per lesson (title and goals) plus one per lesson word; `dialogues` one row per spoken line.
+* `lessons` has one row per lesson (title and goals) plus one per lesson word, for the core lessons and for I-01 to I-50 (1,065 rows; 685 of them are intermediate). `intermediate` adds the 752 exercises of I-01 to I-50, read from the entries registered in `lessons.json`; `data/curriculum/lessons-intermediate/I-NN.json` and `intermediate-index.json` are generated copies (a test checks they are identical) and are claimed, not extracted twice. If an `ok` is applied to an exercise, regenerate or re-sync those copies from `tools/curriculum/intermediate/` or the next build undoes it.
+* `firstday` has the first-10-minutes path (18), the baby-step on-ramp (5) and the 20-step reading ladder; `speak` has the 9 minimal-pair contrasts and the 9 speak-aloud prayers.
+* `pron-rules` rows are report-only (nothing to flip): an `ok` is recorded in the ledger and a person fixes the rule or generator by hand.
+* `dialogues` has one row per spoken line.
 * `letter-strokes` has 54 cards (27 letters x print and cursive) with a drawn diagram: grey outline, coloured pen path, numbered start dots, arrows.
 * `vocab-top1000` rows carry the pointed lemma, an app-generated transliteration (labelled as such in the check text) and the gloss.
+* Hidden records: vocabulary records the data hides from learners (`flags.hidden`, 4 in `vocab5000.json` and `words.json`) are not in `vocab-top1000` / `vocab-rest` (998 and 3,998 rows) nor in pack 03 (1,000 visible words); pack 03 lists their ids in one `q:vocab:hidden-excluded` row so the exclusion is visible.
+* Reviewer questions from the 2026-11-04 notes live in `tools/review/questions.mjs` and are written into the packs as report-only rows or lines: hook replacements and tradition claims from `docs/review/LETTERS-CONTENT-CHECK.md` are `QUESTION FOR THE REVIEWER` lines on the `mnemonics` cards (16 letters) plus 5 general `mnemonics:q-*` cards; sensitive-vocabulary questions from `docs/sensitivity/OPEN.md` are `q:sens:*` rows in pack 03, and the 13 replacement example sentences flagged `needsNativeReview` are `vocab-example:<id>` rows there; the divine-name questions are `q:divine:*` rows in pack 04; the doubling-policy questions from `docs/pronunciation/DOUBLING-POLICY.md` are `q:pron:*` rows in pack 05. These are questions for a person, not findings. The lint-baseline strings from `docs/review/HEBREW-LINT-BASELINE.md` (all ranked above 1000, so not rows of their own) are one `q:lint:lint-baseline` row in pack 03, and the erev-reminder default (14:00) from `docs/review/ENGAGEMENT-CHECK.md` is one `q:cal:erev-reminder-1400` row in pack 07. Packs: 03 has 1,019 rows, 04 has 174, 05 has 655, 07 has 164.
 * `calendar` and the opening prayer have no data flag to flip. They are review-only: an `ok` is recorded in the ledger, and a person edits the source by hand.
 
 ## How to give this to a reviewer
@@ -82,10 +93,10 @@ Where to start: do the areas in the order of the table. A reviewer who only has 
 These are my estimates from a per-item time model in `tools/review/config.mjs`. **They were not measured with a real reviewer.** Assumptions:
 
 * The reviewer is fluent, reads each Hebrew line aloud once, compares it with what they know (or a printed text on the desk), and types a status. They do not research from scratch.
-* Seconds per item: vocabulary 20, lesson word 25, phrasebook 30, dialogue line 40, gender pair 40, `israel-everyday` 75, stroke card 150 (they have to look at the drawing), mnemonic 150, clergy-note row 150, guide section 240; prayers 150 plus 10 seconds per Hebrew word (a 100-word text is about 19 minutes), prompts 60 plus 8 per word.
+* Seconds per item: `pron-rules` rule row 120 and sample row 30, `intermediate` exercise 40 plus 3 per Hebrew word, `firstday` 45, `speak` 60, vocabulary 20, lesson word 25, phrasebook 30, dialogue line 40, gender pair 40, `israel-everyday` 75, stroke card 150 (they have to look at the drawing), mnemonic 150, clergy-note row 150, guide section 240; prayers 150 plus 10 seconds per Hebrew word (a 100-word text is about 19 minutes), prompts 60 plus 8 per word.
 * A 15% overhead is added for breaks and notes.
 * Not included: setup, second opinions, the time to fix the rows marked `fix`, or consulting a printed siddur for every line. If the clergy reviewer verifies each text against a printed siddur of the named nusach, expect the `prayers` area to roughly double.
-* Subtotals by reviewer type, from the table: clergy-type areas 1 to 5 about 15.7 hours; teacher and native-speaker areas 6 to 19 about 19 hours; vocabulary top 1000 about 6.4 hours; `vocab-rest` about 25.6 hours.
+* Subtotals by reviewer type, from the table: clergy-type areas 1 to 5 about 15.8 hours; teacher and native-speaker areas 6 to 23 about 45.2 hours; vocabulary top 1000 about 6.4 hours; `vocab-rest` about 25.5 hours.
 
 ## What reviewers must NOT be asked to do
 
@@ -116,7 +127,7 @@ Ask these once, early. The answers decide how the rest should be judged.
 **For clergy and cantors**
 
 1. **Which tradition for "Ashkenazi"?** The app has an Ashkenazi setting (kamatz read as "aw", tav without dagesh as "s", penultimate stress: `BO-rukh`, `Shabbos`, `sholom`). Is that the reading you want taught: Lithuanian ("Litvish"), Polish/Hasidic, Hungarian, or another? Do you say tav as `s` or `t`; cholam as `oy` or `o`; and what vowel for kamatz in "Shabbos"? Affects `pron-prayerwords`, `pron-soundgap`, `pron-traditions`.
-2. **Which nusach per text?** The registry mixes three: Ashkenaz (Metsudah, 21 texts), Edot HaMizrach (Shaliehsaboo, 15) and Sefard (Torat Emet, 6), plus 28 verse texts from the Leningrad Codex. Should each card say its nusach (the book footers name the source)? Are the mixed Torah-service pages (Ashkenaz plus Mizrahi haftarah blessings) acceptable, or should one nusach be used per chapter?
+2. **Which nusach per text?** The registry mixes three: Ashkenaz (Metsudah, 9 texts), Edot HaMizrach (Shaliehsaboo, 16) and Sefard (Torat Emet, 17), counted by source label, plus 28 verse texts from the Leningrad Codex. Should each card say its nusach (the book footers name the source)? Are the mixed Torah-service pages (Ashkenaz plus Mizrahi haftarah blessings) acceptable, or should one nusach be used per chapter?
 3. **The divine name.** The verse texts print `יְהוָה` (82 times in the registry) as in the Leningrad Codex; liturgy usually shows `יְיָ` or `אֲדֹנָי` and is read "Adonai". Should the app and book print the four-letter form at all, replace it with `אֲדֹנָי` or `ה׳`, and should the app tell learners to say "Adonai"? Also: does a printed beginner's book with divine names need any note about handling (shemot)? Affects every registry text.
 4. **Missing and clipped text.** Which prayers must a first-year attendee be able to follow that are not in the registry (the gap list is `data/corpus/gaps.json`: Modim, the middle Amidah blessings, Hallel, Kabbalat Shabbat psalms)? Is `avot-1` acceptable cut before its closing clause, with `avot-closing` supplying the rest?
 5. **Gender-neutral and feminine forms.** Daily prompts have a `heFemale` variant of Modeh Ani (מוֹדָה אֲנִי). Is that the form you want, and are there others that should be offered (for example the Amidah matriarchs, or non-binary-inclusive wording)?
@@ -168,8 +179,10 @@ Also review the `git diff` of `data/` before committing. `quality: "draft"` on s
 
 * `tools/review/build_packet.mjs`: builds packets (`--root`, `--out`, `--only a,b`, `--no-pdf`, `--date`).
 * `tools/review/apply_review.mjs`: importer (`--apply`, `--reviewer`, `--date`, `--report FILE`, `--root`).
+* `tools/review/questions.mjs`: the reviewer questions above.
 * `tools/review/config.mjs`: areas, priority order, time model, the 43 liturgy-addition ids, `VOCAB_TOP` (1000).
-* `tools/review/lib/`: `extract.mjs` (one extractor per area plus the generic one), `render.mjs` (HTML), `csv.mjs`, `jsonspan.mjs` (span-aware JSON patcher).
+* `tools/review/lib/`: `extract.mjs` (one extractor per area plus the generic one), `pronrules.mjs` (rule list and stratified sample, shared with `build-packs.mjs`), `render.mjs` (HTML), `csv.mjs`, `jsonspan.mjs` (span-aware JSON patcher).
+* `CLAIMS` in `config.mjs`: flagged files claimed without rows, each with its reason.
 * `tests/review.*.test.js`: tests on a fake repo built in a temp dir, plus a smoke test that runs the extractors on the real data (read-only).
 * `docs/review/out/`: generated packets. The sheet columns are `id, area, hebrew, transliteration, english, what_to_check, status, corrected_text, reviewer_notes, reviewer, review_date, priority, source`.
 * `docs/review/.gitignore`: keeps the generated PDFs and the 1 MB `vocab-rest` sheet out of git; they are rebuilt by the command above.

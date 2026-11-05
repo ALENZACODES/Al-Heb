@@ -11,6 +11,15 @@ export async function fetchCoreManifest(fetchFn, url = MANIFEST_URL) {
   return list;
 }
 
+/** Fetch the tiny shipped clip-count summary; rejects on anything but {recorded:number, tts:number}. */
+export async function fetchAudioSummary(fetchFn, url = 'data/audio/summary.json') {
+  const res = await fetchFn(url);
+  if (!res || !res.ok) throw new Error('audio summary HTTP ' + (res && res.status));
+  const t = await res.json();
+  if (!t || typeof t.recorded !== 'number' || typeof t.tts !== 'number') throw new Error('audio summary malformed');
+  return t;
+}
+
 /** Run fn after the browser has had a chance to paint: next frame, then an idle slot (max waitMs), else a timeout. */
 export function afterPaint(fn, { win = globalThis, waitMs = 1500 } = {}) {
   const idle = () => ('requestIdleCallback' in win ? win.requestIdleCallback(fn, { timeout: waitMs }) : win.setTimeout(fn, 0));

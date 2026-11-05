@@ -4,12 +4,12 @@ Commands 301 to 378. 1000 images that do not repeat the manifest, next1000 or in
 
 | Part | Images | Source of the key |
 |---|---|---|
-| Vocabulary theme packs (most concrete words per pack, 12 each plus top-ups) | 559 | word id in data/vocab/themes/*.json |
+| Vocabulary theme packs (most concrete words per pack, 12 each plus top-ups) | 560 | word id in data/vocab/themes/*.json |
 | Festivals, Shabbat table, Havdalah, synagogue interior | 120 | intermediate lesson id (data/curriculum/intermediate-index.json) |
 | One extra scene per intermediate lesson I-01 to I-50 | 50 | lesson id |
 | Second memory picture per letter (27) | 27 | letter id in data/letters/letters.json |
 | Second memory picture per vowel (15) | 15 | vowel set name in data/images/manifest.csv |
-| Flashcard pictures from data/vocab/deck-order.json not already in a pack | 229 | word id |
+| Flashcard pictures from data/vocab/deck-order.json not already in a pack | 228 | word id |
 
 Files: `data/images/block-j.csv` (id, file, block, command, set, slot, kind, key, aspect, width, height, status, alt, prompt), `docs/images/paste/j-NN.txt`, `docs/images/paste/J-MASTER.txt`. Start with `docs/images/paste/J-MASTER.txt`, then `j-01.txt`.
 
@@ -64,34 +64,34 @@ Files: `data/images/block-j.csv` (id, file, block, command, set, slot, kind, key
 | j-47.txt | 347 | 14 | J-0595.png | J-0608.png |
 | j-48.txt | 348 | 13 | J-0609.png | J-0621.png |
 | j-49.txt | 349 | 13 | J-0622.png | J-0634.png |
-| j-50.txt | 350 | 13 | J-0635.png | J-0647.png |
-| j-51.txt | 351 | 13 | J-0648.png | J-0660.png |
-| j-52.txt | 352 | 13 | J-0661.png | J-0673.png |
-| j-53.txt | 353 | 12 | J-0674.png | J-0685.png |
-| j-54.txt | 354 | 12 | J-0686.png | J-0697.png |
-| j-55.txt | 355 | 12 | J-0698.png | J-0709.png |
-| j-56.txt | 356 | 12 | J-0710.png | J-0721.png |
-| j-57.txt | 357 | 12 | J-0722.png | J-0733.png |
-| j-58.txt | 358 | 12 | J-0734.png | J-0745.png |
-| j-59.txt | 359 | 12 | J-0746.png | J-0757.png |
-| j-60.txt | 360 | 12 | J-0758.png | J-0769.png |
-| j-61.txt | 361 | 13 | J-0770.png | J-0782.png |
-| j-62.txt | 362 | 13 | J-0783.png | J-0795.png |
-| j-63.txt | 363 | 13 | J-0796.png | J-0808.png |
-| j-64.txt | 364 | 13 | J-0809.png | J-0821.png |
-| j-65.txt | 365 | 13 | J-0822.png | J-0834.png |
-| j-66.txt | 366 | 13 | J-0835.png | J-0847.png |
-| j-67.txt | 367 | 13 | J-0848.png | J-0860.png |
-| j-68.txt | 368 | 13 | J-0861.png | J-0873.png |
-| j-69.txt | 369 | 13 | J-0874.png | J-0886.png |
-| j-70.txt | 370 | 13 | J-0887.png | J-0899.png |
-| j-71.txt | 371 | 13 | J-0900.png | J-0912.png |
-| j-72.txt | 372 | 13 | J-0913.png | J-0925.png |
-| j-73.txt | 373 | 13 | J-0926.png | J-0938.png |
-| j-74.txt | 374 | 13 | J-0939.png | J-0951.png |
-| j-75.txt | 375 | 13 | J-0952.png | J-0964.png |
-| j-76.txt | 376 | 13 | J-0965.png | J-0977.png |
-| j-77.txt | 377 | 13 | J-0978.png | J-0990.png |
-| j-78.txt | 378 | 10 | J-0991.png | J-1000.png |
+| j-50.txt | 350 | 14 | J-0635.png | J-0648.png |
+| j-51.txt | 351 | 13 | J-0649.png | J-0661.png |
+| j-52.txt | 352 | 13 | J-0662.png | J-0674.png |
+| j-53.txt | 353 | 12 | J-0675.png | J-0686.png |
+| j-54.txt | 354 | 12 | J-0687.png | J-0698.png |
+| j-55.txt | 355 | 12 | J-0699.png | J-0710.png |
+| j-56.txt | 356 | 12 | J-0711.png | J-0722.png |
+| j-57.txt | 357 | 12 | J-0723.png | J-0734.png |
+| j-58.txt | 358 | 12 | J-0735.png | J-0746.png |
+| j-59.txt | 359 | 12 | J-0747.png | J-0758.png |
+| j-60.txt | 360 | 12 | J-0759.png | J-0770.png |
+| j-61.txt | 361 | 13 | J-0771.png | J-0783.png |
+| j-62.txt | 362 | 13 | J-0784.png | J-0796.png |
+| j-63.txt | 363 | 13 | J-0797.png | J-0809.png |
+| j-64.txt | 364 | 13 | J-0810.png | J-0822.png |
+| j-65.txt | 365 | 13 | J-0823.png | J-0835.png |
+| j-66.txt | 366 | 13 | J-0836.png | J-0848.png |
+| j-67.txt | 367 | 13 | J-0849.png | J-0861.png |
+| j-68.txt | 368 | 13 | J-0862.png | J-0874.png |
+| j-69.txt | 369 | 13 | J-0875.png | J-0887.png |
+| j-70.txt | 370 | 13 | J-0888.png | J-0900.png |
+| j-71.txt | 371 | 13 | J-0901.png | J-0913.png |
+| j-72.txt | 372 | 13 | J-0914.png | J-0926.png |
+| j-73.txt | 373 | 13 | J-0927.png | J-0939.png |
+| j-74.txt | 374 | 13 | J-0940.png | J-0952.png |
+| j-75.txt | 375 | 13 | J-0953.png | J-0965.png |
+| j-76.txt | 376 | 13 | J-0966.png | J-0978.png |
+| j-77.txt | 377 | 13 | J-0979.png | J-0991.png |
+| j-78.txt | 378 | 9 | J-0992.png | J-1000.png |
 
 Word selections are by rule (concrete nouns, everyday actions, plain qualities, counts and times) and are not reviewed by a native speaker; check each picture against its Hebrew word before use.

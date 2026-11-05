@@ -7,7 +7,7 @@
 //        who: per talent (voice x tradition) and content group, what is still missing and who can supply it (human vs TTS-possible)
 // Reads data/audio/manifest.json only (run build_manifest.mjs first so it reflects files on disk). Makes no network calls.
 import { loadManifestFull } from './manifest_io.mjs';
-import { STATUS_LABELS } from '../../src/shell/audio-labels.js';
+import { STATUS_LABELS, isSyntheticStatus } from '../../src/shell/audio-labels.js';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -35,7 +35,8 @@ export function suppliers(e) {
 
 /** state of one entry: recorded | tts | via-equivalent | via-alias | missing */
 export function entryState(e, index) {
-  if (e.status === 'recorded' || e.status === 'tts') return e.status;
+  if (e.status === 'recorded') return 'recorded';
+  if (isSyntheticStatus(e.status)) return 'tts'; // any synthetic status counts in the tts column
   if (e.aliasOf) {
     const [k, ...r] = e.aliasOf.split('/');
     const t = index.get(`${e.voice}|${e.tradition}|${k}|${r.join('/')}`);

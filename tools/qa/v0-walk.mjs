@@ -4,7 +4,7 @@
 // SCRIPTED EMULATION, NOT REAL LEARNERS. It records what a script could see and do: the route, whether the expected next action is
 // visible within one screen (375x667), taps the script needed, console errors, a screenshot. It says nothing about comprehension,
 // taste or audio quality, and it does not check any Hebrew content.
-// Usage: node tools/qa/v0-walk.mjs [--cong israeli,sephardi,ashkenazi] [--out /tmp/v0walk] [--report docs/qa/V0-WALK.md]
+// Usage: node tools/qa/v0-walk.mjs [--cong israeli,sephardi,ashkenazi] [--size 375x667] [--out /tmp/v0walk] [--report docs/qa/V0-WALK.md]
 // Browser: Playwright (same lookup as journey.mjs). Chromium from QA_CHROME, the Playwright cache, or a system Chrome/Chromium.
 // If no browser can be launched the script writes a SKIPPED report and exits 0 (exit 2 when Playwright itself is missing).
 import { createRequire } from 'node:module';
@@ -20,7 +20,7 @@ const arg = (n, d) => (args.includes(n) ? args[args.indexOf(n) + 1] : d);
 const outDir = resolve(arg('--out', '/tmp/v0walk'));
 const reportPath = resolve(root, arg('--report', 'docs/qa/V0-WALK.md'));
 const CONGS = arg('--cong', 'israeli,sephardi,ashkenazi').split(',');
-const W = 375, H = 667;
+const [W, H] = arg('--size', '375x667').split('x').map(Number);
 mkdirSync(outDir, { recursive: true });
 
 let chromium;
@@ -90,7 +90,8 @@ async function walk(cong) {
     try {
       await fn({
         expectNext: async (loc, label) => {
-          const g = await geom(loc);
+          let g = await geom(loc);
+          for (let i = 0; i < 8 && (!g || !g.visible); i++) { await sleep(250); g = await geom(loc); } // a route change can render a beat late
           cur.expect = label;
           if (!g || !g.visible) { cur.nextFound = false; cur.nextWhere = 'not found'; cur.result = 'fail'; cur.notes.push(`expected next action not on screen: ${label}`); return false; }
           cur.nextFound = true;
@@ -107,7 +108,7 @@ async function walk(cong) {
     await settle();
     obs = await observe();
     cur.routeEnd = await route();
-    if (obs.overflowX) { if (cur.result === 'pass') cur.result = 'warn'; cur.notes.push('page is wider than 375px (horizontal overflow)'); }
+    if (obs.overflowX) { if (cur.result === 'pass') cur.result = 'warn'; cur.notes.push(`page is wider than ${W}px (horizontal overflow)`); }
     cur.title = obs.h1; cur.text = obs.text; cur.controlsEnd = obs.controls.slice(0, 14).map((c) => c.label + (c.disabled ? ' [disabled]' : ''));
     cur.errors = [...new Set(errBucket)];
     if (cur.errors.length) { if (cur.result === 'pass') cur.result = 'warn'; cur.notes.push(`${cur.errors.length} console/network error(s)`); }

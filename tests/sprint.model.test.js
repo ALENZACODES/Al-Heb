@@ -12,8 +12,9 @@ const dests = M.buildDestinations(index, registry, scenarios);
 const seeded = (seed = 7) => () => { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; };
 const translit = (e) => (e.pointed ? e.pointed.length + ":" + e.id : "");
 
-test("all five thousand entries load from the four packs in rank order", () => {
-  assert.equal(entries.length, 5000);
+test("the visible entries load from the four packs in rank order (5000 minus the 4 flags.hidden records, ranks 43, 169, 1160 and 3834, suppressed pending native review)", () => {
+  assert.equal(entries.length, 5000 - 4);
+  assert.ok(!entries.some((e) => [43, 169, 1160, 3834].includes(e.rank)));
   assert.ok(entries.every((e, i) => i === 0 || entries[i - 1].rank <= e.rank));
 });
 

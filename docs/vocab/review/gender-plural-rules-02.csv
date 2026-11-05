@@ -1,4 +1,6 @@
 ﻿id,hebrew,niqqud,pos,gender_current,gender_rule,plural_current,plural_rule,rule,flag,reviewer_ok,reviewer_note
+hcca0c99f,פרץ,פֶּרֶץ,noun,m,,,פרצים,m > +im,plural:rule-unpointed,,
+h0bb25934,טרף,טֶרֶף,noun,m,,,טרפים,m > +im,plural:rule-unpointed,,
 h1cb65f59,חויה,חֲוָיָה,noun,f,,,חויות,-a > -ot,plural:rule-unpointed,,
 hbfa5d44f,עזר,עֵזֶר,noun,m,,,עזרים,m > +im,plural:rule-unpointed,,
 h6017de54,ותק,וֶתֶק,noun,m,,,ותקים,m > +im,plural:rule-unpointed,,
@@ -247,5 +249,3 @@ h240c42b9,זהירות,זְהִירוּת,noun,f,,,זהירויות,-ut > -uyot,
 h27e25546,עוגב,עוּגָב,noun,m,,,עוגבים,m > +im,plural:rule-unpointed,,
 h44240342,שוא,שְׁוָא,noun,m,,,שואים,m > +im,plural:rule-unpointed,,
 he7e481a8,סושי,סוּשִׁי,noun,m,,,סושיים,m > +im,plural:rule-unpointed,,
-hc05a3c7f,בוץ,בּוּץ,noun,m,,,בוצים,m > +im,plural:rule-unpointed,,
-hf1bcc30a,אספירין,אַסְפִּירִין,noun,m,,,אספירינים,m > +im,plural:rule-unpointed,,

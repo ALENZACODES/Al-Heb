@@ -47,5 +47,8 @@ test('no vocab record carries a duplicate-mark any more', () => {
 
 test('FIXES.md lists every open vocab definite finding by record id', () => {
   const md = fs.readFileSync(path.join(root, 'docs/hebrew-lint/FIXES.md'), 'utf8');
-  for (const i of [2575, 2661, 3144, 3451, 4530, 5701]) assert.ok(md.includes(words[i].id), words[i].id);
+  for (const id of ['h448338e7', 'heb3f471a', 'h1da16296', 'h9167dfb6', 'h654755af', 'h48fc3422']) {
+    assert.ok(words.some((w) => w.id === id), `${id} exists in words.json`);
+    assert.ok(md.includes(id), id);
+  }
 });

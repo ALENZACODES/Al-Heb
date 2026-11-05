@@ -96,3 +96,22 @@ test('legal files contain no AI product names (same pattern as tools/meta/text.m
   for (const f of ['docs/legal/CONTENT-LICENCE-AUDIT.md', 'docs/legal/DECISIONS-FOR-JOHN.md', 'data/legal/attributions.json', 'tests/legal.test.js'])
     for (const [i, ln] of read(f).split('\n').entries()) assert.ok(!TEXT_RE.test(ln), `${f}:${i + 1}`);
 });
+
+test('new data and picture files have a provenance row, and the data derived from the vocabulary is share-alike', () => {
+  for (const id of ['morph-pictures', 'memory-chain-text', 'practice-data-from-vocab']) assert.ok(byId.has(id), id);
+  assert.equal(byId.get('practice-data-from-vocab').shareAlike, true);
+  assert.match(byId.get('morph-pictures').licence, /John Khan/);
+  for (const f of ['data/roots/families.json', 'data/roots/verbs.json', 'data/gender/templates.json', 'data/nikkudfade/reading-set.json', 'data/nikkudfade/homographs.json'])
+    assert.equal(JSON.parse(read(f)).source, 'data/vocab/words.json', f);
+});
+
+test('ts-fsrs MIT notice: credits entry, licence file and audit row agree', () => {
+  const e = byId.get('ts-fsrs-weights');
+  assert.ok(e, 'missing ts-fsrs-weights entry');
+  assert.match(e.licence, /MIT/);
+  const notice = read('docs/licenses/MIT-ts-fsrs.txt');
+  for (const phrase of ['Permission is hereby granted, free of charge', 'The above copyright notice and this permission notice shall be included', 'THE SOFTWARE IS PROVIDED "AS IS"'])
+    { assert.ok(notice.includes(phrase), phrase); assert.ok(e.attributionText.includes(phrase), `credits text: ${phrase}`); }
+  assert.match(e.attributionText, /ts-fsrs/);
+  assert.ok(read('src/fsrs/fsrs6.js').includes('ts-fsrs'), 'module still names its source');
+});

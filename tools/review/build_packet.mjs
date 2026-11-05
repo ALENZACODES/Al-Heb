@@ -9,8 +9,8 @@ import { join, dirname, resolve, relative } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createRequire } from 'node:module';
 import { existsSync } from 'node:fs';
-import { AREAS, COLUMNS, OVERHEAD, estimateSeconds } from './config.mjs';
-import { extractAll, auditScan } from './lib/extract.mjs';
+import { AREAS, COLUMNS, OVERHEAD, estimateSeconds, claimFor } from './config.mjs';
+import { extractAll, auditScan, coveredFiles } from './lib/extract.mjs';
 import { toCsv } from './lib/csv.mjs';
 import { renderArea, renderIndex } from './lib/render.mjs';
 
@@ -89,18 +89,15 @@ export async function buildPackets(opts = {}) {
   if (browser) await browser.close();
 
   const audit = await auditScan(root);
-  const covered = new Set();
-  for (const it of Object.values(byArea).flat()) {
-    covered.add(it.source.split('#')[0].split(' ')[0]);
-    for (const t of [it.flip?.target, ...(it.flip?.targets || []), ...Object.values(it.fields || {}).flatMap((f) => f.targets)].filter(Boolean)) covered.add(t.file);
-  }
-  const uncovered = audit.data.filter((d) => !covered.has(d.file));
+  const covered = coveredFiles(byArea);
+  const uncovered = audit.data.filter((d) => !covered.has(d.file) && !claimFor(d.file));
+  const claimed = audit.data.filter((d) => !covered.has(d.file) && claimFor(d.file)).map((d) => ({ ...d, area: claimFor(d.file).area }));
   const total = areas.reduce((s, a) => s + a.items, 0);
   const manifest = {
     generated: date, root: root === DEFAULT_ROOT ? '.' : root, totalItems: total,
     totalHours: areas.reduce((s, a) => s + a.hours, 0),
     phaseOneHours: areas.filter((a) => a.priority <= 6).reduce((s, a) => s + a.hours, 0),
-    overheadMultiplier: OVERHEAD, areas, audit: { dataFilesWithFlags: audit.data, docsWithMarkers: audit.docs, dataFilesNotCoveredByAnyArea: uncovered },
+    overheadMultiplier: OVERHEAD, areas, audit: { dataFilesWithFlags: audit.data, docsWithMarkers: audit.docs, dataFilesNotCoveredByAnyArea: uncovered, dataFilesClaimedWithoutRows: claimed },
   };
   await writeFile(join(out, 'manifest.json'), JSON.stringify(manifest, null, 1) + '\n');
   await writeFile(join(out, 'index.html'), renderIndex(manifest));

@@ -7,6 +7,8 @@ import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { parseCsv } from '../record-kit/lib.mjs';
 import { speechText } from '../../src/shell/names.js';
+import { isSyntheticStatus } from '../../src/shell/audio-labels.js';
+import { buildPool } from '../../src/listen/model.js';
 import { buildScripts } from '../pronunciation/recording_script.mjs';
 import {
   TRADITIONS, VOICES, KINDS, LETTERS, FINAL_LETTERS, VARIANT_LETTERS, GRID_MARKS, GRID_VOWELS, GRID_VOWEL_IPA_ISRAELI,
@@ -141,6 +143,12 @@ export function buildEntries({ root = ROOT, existsFn, ...opts } = {}) {
   }
   const les = readJson(root, 'data/curriculum/lessons.json');
   notes.push(les.note);
+  // ONE id mapping: lesson word `<lessonId>-w<n>` <-> vocab id, from data/curriculum/word-vocab-map.json (key `<lessonId>:<n>`, built by
+  // tools/curriculum/word_ids.mjs by exact pointed-Hebrew match). Lesson-word entries carry `vocabId`; src/audio/player.js links both ids.
+  const wvm = readJson(root, 'data/curriculum/word-vocab-map.json');
+  notes.push(wvm.note);
+  const vocabOf = (wvm.data && wvm.data.map) || {};
+  const vocabLinks = new Map(); // vocab id -> [lesson word ids]
   for (const lesson of listItems(les.data)) {
     for (const [field, kind] of [['words', 'word'], ['prayerLines', 'line']]) {
       for (const w of lesson[field] || []) {
@@ -152,7 +160,13 @@ export function buildEntries({ root = ROOT, existsFn, ...opts } = {}) {
     // Lesson vocabulary has no ids in lessons.json: the app requests kind 'word', id `<lessonId>-w<n>` (1-based).
     // Words of track 'israel' lessons are conversational Modern Hebrew: israeli-only, like the phrasebook. Track 'read' words keep all traditions.
     if (lesson.id && Array.isArray(lesson.words)) {
-      lesson.words.forEach((w, i) => { if (w && typeof w === 'object' && !w.id) add('word', `${lesson.id}-w${i + 1}`, w.he, 'curriculum(word)', { group: 'lesson-word', ...(lesson.track === 'israel' ? { israeliOnly: true } : {}) }); });
+      lesson.words.forEach((w, i) => {
+        if (!w || typeof w !== 'object' || w.id) return;
+        const vid = vocabOf[`${lesson.id}:${i + 1}`];
+        const wid = normalizeId(`${lesson.id}-w${i + 1}`);
+        if (vid) { if (!vocabLinks.has(vid)) vocabLinks.set(vid, []); vocabLinks.get(vid).push({ wid, israeliOnly: lesson.track === 'israel' }); }
+        add('word', wid, w.he, 'curriculum(word)', { group: 'lesson-word', ...(vid ? { vocabId: vid } : {}), ...(lesson.track === 'israel' ? { israeliOnly: true } : {}) });
+      });
     }
   }
 
@@ -184,6 +198,31 @@ export function buildEntries({ root = ROOT, existsFn, ...opts } = {}) {
     for (const r of sw) add('word', r.id, r.he, 'recording-script', { group: 'vocab-word', ipaAll: r.ipa });
   }
 
+  // --- vocab-id entries for words Listen / the vocab screens / review can ask for under a vocab id (data/vocab/words.json) that the donor
+  // script does not carry: every vocab id in the lesson-word map, plus the Listen drill pool. Same text, voices and traditions as the rest.
+  //   group 'vocab-alias': the id is mapped from a lesson word; entry has `aliasOf: word/<lesson word id>` (copyOf semantics: the same
+  //     reading; excluded from "required" counts; tools/record-kit/ingest.mjs copies a recording to it when the text is the same).
+  //   group 'vocab-extra': a Listen pool word that no lesson word maps to; a real, required recording need (it has no other source).
+  if (opts.vocabAliases !== false) {
+    const vw = readJson(root, 'data/vocab/words.json');
+    notes.push(vw.note);
+    const vocabById = new Map(((vw.data && vw.data.words) || []).map((w) => [w.id, w]));
+    const lcfg = readJson(root, 'data/listen/config.json');
+    const pool = vw.data && lcfg.data ? buildPool(vw.data.words, lcfg.data) : [];
+    const wanted = [...new Set([...vocabLinks.keys(), ...pool.map((w) => w.id)])].sort();
+    for (const id of wanted) {
+      const w = vocabById.get(id);
+      if (!w || !w.he) { warnings.push(`word-vocab-map: vocab id ${id} not in words.json, skipped`); continue; }
+      const nid = normalizeId(id);
+      if (seen.has(`word/${nid}`)) continue;
+      const lw = vocabLinks.get(id);
+      if (lw) {
+        const target = lw.find((x) => !x.israeliOnly) || lw[0];
+        add('word', id, w.he, 'word-vocab-map', { group: 'vocab-alias', aliasOf: `word/${target.wid}` });
+      } else add('word', id, w.he, 'listen-pool', { group: 'vocab-extra' });
+    }
+  }
+
   // --- equivalence rules (human-reviewed only)
   const eq = readJson(root, 'data/audio/equivalence.json');
   notes.push(eq.note);
@@ -196,15 +235,17 @@ export function buildEntries({ root = ROOT, existsFn, ...opts } = {}) {
     const e = { path: p, voice, tradition, kind: b.kind, id: b.id, text: b.text };
     const ipa = (b.ipa && b.ipa[tradition]) || (b.ipaAll && b.ipaAll[tradition]);
     if (ipa) e.ipa = ipa;
-    let status = 'missing', source = 'none';
+    let status = 'missing', source = 'none', synth = null;
     if (exists(p)) {
       status = 'recorded'; source = 'file-present-provenance-unverified';
       const metaRel = `${p}.meta.json`;
       if (exists(metaRel)) {
         try {
           const m = JSON.parse(fs.readFileSync(path.join(root, metaRel), 'utf8'));
-          if (['tts', 'recorded'].includes(m.status)) status = m.status;
+          if (m.status === 'recorded' || isSyntheticStatus(m.status)) status = m.status;
           if (m.source) source = String(m.source);
+          // How a synthetic clip was made (written by tools/tts/manifest_update.mjs); never for a human clip.
+          if (isSyntheticStatus(m.status) && m.synth && typeof m.synth === 'object') synth = m.synth;
         } catch { warnings.push(`${metaRel}: unreadable`); }
       }
     }
@@ -213,9 +254,11 @@ export function buildEntries({ root = ROOT, existsFn, ...opts } = {}) {
     if (b.israeliOnly) e.scope = 'israeli-only';
     if (b.optional) e.optional = true;
     if (b.aliasOf) e.aliasOf = b.aliasOf;
+    if (b.vocabId) e.vocabId = b.vocabId;
     const eqTo = rules.filter((r) => r.to !== tradition && r.from === tradition
       && (!r.kinds || r.kinds.includes(b.kind)) && (!r.ids || r.ids.includes(b.id))).map((r) => r.to);
     if (eqTo.length) e.equivalentTo = [...new Set(eqTo)];
+    if (synth) e.synth = synth; // last key, so tools/tts/manifest_update.mjs (which appends it) and a rebuild give the same bytes
     out.push(e);
   }
   return { entries: out, notes, warnings };
@@ -224,7 +267,7 @@ export function buildEntries({ root = ROOT, existsFn, ...opts } = {}) {
 // Size budget: the eagerly loaded data/audio/manifest.json must stay under 2 MiB. Reader word clips (group 'prayer-word', one per word of
 // every corpus record, x2 voices x3 traditions) are ~70% of all entries, so they live in lazily loaded per-tradition shards
 // data/audio/manifest-words-<tradition>.json. Everything else (letters, vowels, syllables, lines, prayers, lesson/phrasebook/anchor words) is core.
-export const SHARD_GROUPS = ['prayer-word', 'vocab-word'];
+export const SHARD_GROUPS = ['prayer-word', 'vocab-word', 'vocab-alias', 'vocab-extra'];
 export const SHARD_GROUP = 'prayer-word';
 export function splitEntries(entries) {
   const core = entries.filter((e) => !SHARD_GROUPS.includes(e.group));
@@ -232,13 +275,17 @@ export function splitEntries(entries) {
   for (const t of TRADITIONS) shards[t] = entries.filter((e) => SHARD_GROUPS.includes(e.group) && e.tradition === t);
   return { core, shards };
 }
+// Tiny precached summary (a few bytes) so the shell can still say "no recordings exist" when the big core manifest is not available offline.
+export const SUMMARY_FILE = 'data/audio/summary.json';
+export const summaryOf = (entries) => ({ total: entries.length, recorded: entries.filter((e) => e.status === 'recorded').length, tts: entries.filter((e) => isSyntheticStatus(e.status)).length });
 export const shardFile = (t) => `data/audio/manifest-words-${t}.json`;
 
 export function main(argv = process.argv.slice(2)) {
   const check = argv.includes('--check');
   const { entries, notes, warnings } = buildEntries();
   const { core, shards } = splitEntries(entries);
-  const files = [['data/audio/manifest.json', JSON.stringify(core, null, 1) + '\n'], ...TRADITIONS.map((t) => [shardFile(t), JSON.stringify(shards[t], null, 1) + '\n'])];
+  const files = [['data/audio/manifest.json', JSON.stringify(core, null, 1) + '\n'], ...TRADITIONS.map((t) => [shardFile(t), JSON.stringify(shards[t], null, 1) + '\n']),
+    [SUMMARY_FILE, JSON.stringify(summaryOf(entries)) + '\n']];
   if (check) {
     for (const [rel, text] of files) {
       const t = path.join(ROOT, rel);

@@ -46,7 +46,7 @@ CONF = {
  "bet":["kaf","pe"],"kaf":["bet","pe"],"pe":["bet","kaf"],
  "gimel":["nun"],"nun":["gimel"],
  "dalet":["resh","kaf-final"],"resh":["dalet","kaf-final"],"kaf-final":["dalet","resh"],
- "vav":["zayin","nun-final","yod"],"zayin":["vav","nun-final"],"nun-final":["vav","zayin"],"yod":["vav"],
+ "vav":["zayin","nun-final","yod"],"zayin":["vav","nun-final","yod"],"nun-final":["vav","zayin","yod"],"yod":["vav","zayin","nun-final"],
  "he":["chet","tav"],"chet":["he","tav"],"tav":["he","chet"],
  "samekh":["mem-final"],"mem-final":["samekh"],
  "tsadi":["ayin"],"ayin":["tsadi"],

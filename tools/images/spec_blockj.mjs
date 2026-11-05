@@ -329,7 +329,7 @@ export const LETTER_ALTS = {
   dalet: ['1:1', 'A wooden diving board overhanging a pool, held up by a single thick post.'],
   he: ['1:1', 'A small hut with a window whose left shutter is missing, and a figure leaning out to call, seen from behind.'],
   vav: ['1:1', 'A single straight violin bow standing upright on its tip, with a small vacuum cleaner humming beside it.'],
-  zayin: ['1:1', 'A short dagger stuck upright in a stone, with a spark of lightning around the hilt.'],
+  zayin: ['1:1', 'A zipper pull standing upright on a jacket zipper, being zipped up.'],
   chet: ['1:1', 'A closed arched garden gate with no gap, a hissing cat peeking behind a bush.'],
   tet: ['1:1', 'A round-bellied teapot with its spout curling inward, steam rising.'],
   yod: ['1:1', 'A small yo-yo on a string dangling from a small hand, high on the page.'],
@@ -340,7 +340,7 @@ export const LETTER_ALTS = {
   samekh: ['1:1', 'A sesame bagel, perfectly round and closed, on a plate.'],
   ayin: ['1:1', 'A big cartoon eye winking above a cup with a straw, a finger against closed lips.'],
   pe: ['1:1', 'A party horn unrolling as someone blows, a stream of confetti.'],
-  tsadi: ['1:1', 'A kneeling figure seen from the side with arms raised, a dropped pizza slice on the floor.'],
+  tsadi: ['1:1', 'A cat sitting upright with pointed ears, seen from the side, beside a slice of pizza.'],
   qof: ['2:3', 'A kite in the sky whose long string droops far below the frame\'s middle line.'],
   resh: ['1:1', 'A wooden ramp with a smooth curved end, a ball rolling down.'],
   shin: ['1:1', 'A birthday cake with three lit candles and a finger held to the lips.'],
@@ -349,7 +349,7 @@ export const LETTER_ALTS = {
   'mem-final': ['1:1', 'A tightly wrapped gift box tied with ribbon, a closed square shape.'],
   'nun-final': ['2:3', 'A single long iron nail driven straight down into a wooden plank.'],
   'pe-final': ['2:3', 'A long party horn fully unrolled to a very long curl, with a feather floating above it.'],
-  'tsadi-final': ['2:3', 'A tsetse fly standing on one tall stilt, wings spread above, fork-shaped.'],
+  'tsadi-final': ['2:3', 'A cat sitting tall on one long pole, pointed ears forming a fork shape.'],
 };
 export const VOWEL_ALTS = {
   'vowel_01_kamatz': ['1:1', 'A lion yawning with its mouth wide open, the sound "ah", with a doctor\'s wooden tongue depressor beside it.'],

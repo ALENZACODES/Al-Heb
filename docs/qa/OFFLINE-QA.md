@@ -1,13 +1,30 @@
 # Offline, update and storage QA (scripted, Chromium)
 
+**Update later on 2026-11-04 (from the harness diff and lane notes; not re-run by me):**
+- Firefox persist check: the harness (`tools/qa/offline.mjs`) now wraps `persist` on the prototype and accepts Firefox's case where the request is made but the promise stays pending (the permission prompt is unanswered, so there is no result and no log line). The "FAILED" line in the latest-run section below therefore predates the harness fix; I did not re-run Firefox after it. A granted persist result was not observed in either engine.
+- `data/audio/summary.json` (a 37-byte clip-count file, read by `fetchAudioSummary` in `src/shell/audio-manifest.js`) is to be precached so the offline idle sound line can be shown without the 1.9 MB manifest. Note: the working-tree `precache-manifest.js` does not list it yet (precache not regenerated, by instruction), so that is not verified.
+- The audio manifest is not warmed after install. Only the learner's word shard is warmed (`warmShardAfterInstall` in `src/shell/audio-shards.js`, and a new scenario-A check in the harness). The offline sound line without the core manifest was not re-tested.
+- The harness gained `--engine`, `--viewport` and `--offline stop-server` options and a `QA_MANIFEST` override; the "delete all" check now expects the shell cache to remain.
+
 Script: `node tools/qa/offline.mjs` (writes `/tmp/offlineqa/results.json`, two screenshots, and a temp copy of the site).
-Last run: 81 of 81 checks passed, against precache version `5482c771dbe9` (527 precache entries), Google Chrome via Playwright, headless, desktop Linux.
+Last run (2026-11-04, tree copied to a temp directory and the precache regenerated there; repo untouched): 83 of 83 checks passed in Chromium (system Chrome 153), 82 of 83 in Firefox 155 (Playwright). Both at 375x667, version `cbd305137542`, 284 installed precache entries (246 on demand). WebKit is not installed here, so it was not run.
+The 2026-11-04 run does not repeat sections 3 to 6 below in detail; those sections are from the earlier run (version `5482c771dbe9`, 527 entries) and were not re-verified, apart from the persist checks noted in the results block.
 This is scripted emulation. Nothing here was run on a phone, in Safari, or against a real host.
 
 ## How it was run
 - The script copies only the files in `precache-manifest.js` (plus `sw.js`, the manifest itself, and the three `data/audio/manifest-words-*.json` shards) into a temp directory and serves that with `tools/serve.mjs`. The repo files are not modified.
 - "A new version" was simulated by changing `ALEF_VERSION` in the temp copy's `precache-manifest.js` (to `qa-v2`) and calling `registration.update()`. A real release would also change other files; only the version string changed here.
 - Offline is Playwright `context.setOffline(true)`, not an airplane-mode device.
+
+## Latest run (2026-11-04, single sound bar, changed boot/store/SW lifecycle)
+Command: `node tools/qa/offline.mjs --engine <chromium|firefox> --viewport 375x667` (default, setOffline) from a temp copy after `build-precache` there.
+- First load: worker reached active, page controlled after one reload, shell cache held all 284 listed entries (Chromium and Firefox).
+- Update banner path: new worker waited with the old one still controlling; banner appeared ("A new version of ALEF is ready ... Reload now | Later"); "Later" hid it; it came back after a reload; "Reload now" left no waiting worker, kept only the new shell cache, banner gone. Passed in both engines.
+- Offline reload of the 15 v0 routes (`/`, `/learn`, `/letters`, `/letters/atlas`, `/letters/alef`, `/progress`, `/firstday`, `/install`, `/credits`, `/privacy`, `/offline`, `/settings`, `/welcome`, `/search`, `/about`), scenarios A (offline right after install) and B (one more online load first): all 15 rendered an h1 with 0 failed requests in both engines, in both scenarios. The word shard was in `alef-runtime-v1` before going offline in scenario A in both engines (the earlier shard gap did not reproduce).
+- Sound line offline: Chromium read "Sound: the list of recordings could not be loaded (offline?) ..."; Firefox read "No recordings yet. Uses your device's Hebrew voice ..." and, on some pages, "Sound: checking which recordings exist...". Reported as seen, not judged.
+- Sound bar shows once (ad hoc script, not part of `offline.mjs`): after boot and across `#/`, `#/learn`, `#/letters`, `#/settings`, `#/how`, `#/progress` there was exactly 1 `.sound-bar` and 1 `#sound-status`, visible, in Chromium and Firefox. After clicking the dismiss button and reloading, 0 bars were visible (both engines). Only this one viewport and these routes were checked.
+- Persist checks: Chromium passed all three (no request during boot; one request on the first real save, result `false`; none on later saves). Firefox: no request during boot and none on later saves passed; "first real save requests persistence once" FAILED (`result=undefined`, no log line). I did not investigate why; it may be Firefox-specific or a check artifact.
+- Not run: WebKit (not installed), other viewports, the busy-exercise guard, multiple tabs.
 
 ## 1. Service worker update flow (observed)
 - First visit: worker reached `active`; after one reload the page was controlled. Shell cache `alef-shell-<version>` held 527 of 527 listed entries.
@@ -34,7 +51,7 @@ Routes loaded offline in a fresh tab as `#/<route>`: `/`, `/learn`, `/letters`, 
 ## 4. Backup, delete all, restore (observed)
 Seeded keys `progress`, `srs`, `streak` plus settings (`congregation`, `theme`), then in Settings:
 - "Download backup" produced `alef-backup-<date>.json` with app, checksum and data (4 keys).
-- "Delete all my data" button stays disabled until `DELETE` is typed; afterwards no `alef*` localStorage keys remained and the cache list was empty (`["alef-shell-..."]` before, `[]` after).
+- "Delete all my data" button stays disabled until `DELETE` is typed; afterwards no `alef*` localStorage keys remained. The earlier note here said the cache list was empty after (`["alef-shell-..."]` before, `[]` after); that no longer matches the app or the harness. Delete all keeps the offline copy of the app shell (it holds no learner data) unless the box "Also remove the offline copy of the app" is ticked; `tools/qa/offline.mjs` checks the unticked case (read from the script, not run by me) (the `alef-shell-` cache is still there and only `alef-shell-`/`alef-runtime-` caches exist). The ticked case (caches and service worker removed) is not covered by that check and I did not run it.
 - Restore showed a preview ("This backup was made on ... holds 4 saved items. 4 will be added ...") before changing anything. After "Replace my progress with this backup" the store export equalled the pre-delete export (same keys and values), and the data survived a reload.
 - A truncated file was rejected ("Could not restore: Not valid JSON.") and a file with edited data was rejected ("The checksum does not match ..."); stored data unchanged in both cases.
 - One earlier run recorded one cache still present after Delete all (before=1, after=1); I did not capture the cache names in that run and it did not recur in the two later runs. Possibly a worker write racing the delete; unconfirmed.

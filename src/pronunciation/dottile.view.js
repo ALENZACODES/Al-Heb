@@ -45,7 +45,7 @@ export function mount(root, ctx = {}) {
           h('p', { class: 'muted' }, s.hint), ui.audioButton('syllable', `dot-${p.id}-${i}`, s.english));
         tile.append(half);
       });
-      const sw = h('button', { type: 'button', role: 'switch', 'aria-checked': state === 0, 'aria-label': p.kind === 'dagesh' ? 'Dot (dagesh) on' : 'Dot on the right (shin)' },
+      const sw = h('button', { type: 'button', role: 'switch', 'aria-checked': state === 0 },
         p.kind === 'dagesh' ? (state === 0 ? 'Dot on' : 'Dot off') : (state === 0 ? 'Right dot (shin)' : 'Left dot (sin)'));
       on(sw, 'click', () => { state = state === 0 ? 1 : 0; const s = p.states[state]; ui.status.textContent = `${s.label}: ${s.english}.`; ui.tryPlay('syllable', `dot-${p.id}-${state}`); refocus = true; render(); });
       const big = h('div', { class: 'card' }, ui.he(p.states[state].glyph), h('p', {}, `${p.states[state].english}`));

@@ -4,8 +4,11 @@
  * Words: data/vocab/words.json (machine-built DRAFT). Store key "listen.v1". ctx extras for tests: ctx.listenData {words, config}, ctx.rng.
  */
 import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
+import { uiEnglish } from '../shell/names.js';
+import { sourcesLine } from '../shell/sources.js';
 import { congregationOf, audioNote, playLine, LABELS } from '../pronunciation/forTradition.js';
 import { KEY, normState, buildPool, buildRound, applyAnswer } from './model.js';
+import { isAudioFree, AUDIO_FREE_NOTE, SKIP_NOTE } from '../shell/audiofree.js';
 
 const CSS = `
 .alef-listen{max-inline-size:36rem;margin-inline:auto;overflow-wrap:anywhere}
@@ -34,7 +37,7 @@ export function mount(root, ctx) {
   const status = el('div', { class: 'ls-status', role: 'status', 'aria-live': 'polite' });
   let cfg = null;
   const notice = el('p', { class: 'ls-draft' }, 'Draft: loading...');
-  wrap.append(h1, notice, body, status);
+  wrap.append(h1, notice, body, status, el('footer', {}, sourcesLine(el)));
   root.append(wrap);
   let alive = true, state = normState(null), pool = [], mode = 'read', qs = [], qi = 0, right = 0, answered = false;
   const say = (t) => { status.textContent = t; };
@@ -56,9 +59,14 @@ export function mount(root, ctx) {
   }
 
   function home() {
-    const withAudio = pool.filter((w) => audioHas(w.id));
+    const silent = isAudioFree(ctx);
+    const withAudio = silent ? [] : pool.filter((w) => audioHas(w.id));
     const nodes = [];
-    if (withAudio.length >= 4) {
+    if (silent) {
+      nodes.push(el('p', { class: 'ls-note', role: 'note' }, AUDIO_FREE_NOTE),
+        el('p', {}, 'Instead of listening, you see the meaning and pick the written word. It trains the same thing you need for reading: telling look-alike words apart by their letters.'),
+        el('button', { class: 'btn', type: 'button', onclick: () => start('read', pool) }, 'Start read-and-match'));
+    } else if (withAudio.length >= 4) {
       nodes.push(el('p', {}, `${withAudio.length} words have audio for your ${LABELS[trad()]} setting. You hear a word and pick how it is written.`),
         el('button', { class: 'btn', type: 'button', onclick: () => start('audio', withAudio) }, 'Start listening drill'));
     } else {
@@ -86,8 +94,13 @@ export function mount(root, ctx) {
     const head = mode === 'audio'
       ? [el('p', {}, `Word ${qi + 1} of ${qs.length}. Press Play, then pick the written word.`),
         el('button', { class: 'btn', type: 'button', onclick: () => play(q.id) }, 'Play')]
-      : [el('p', {}, `Word ${qi + 1} of ${qs.length}. Which written word means: ${q.prompt}?`)];
-    set(...head, opts);
+      : [el('p', {}, `Word ${qi + 1} of ${qs.length}. Which written word means: ${uiEnglish(ctx, q.prompt)}?`)];
+    // Skipping is always possible and records nothing: not a miss, not an answer. A listening round can also be swapped for reading questions.
+    const skipRow = el('div', { class: 'ls-skip' },
+      el('button', { class: 'btn secondary', type: 'button', 'data-act': 'skip', onclick: () => { qi++; if (qi < qs.length) show(); else done(); } }, 'Skip this word'),
+      mode === 'audio' ? el('button', { class: 'btn secondary', type: 'button', 'data-act': 'to-read', onclick: () => start('read', pool) }, 'I cannot listen: use reading questions') : null,
+      el('p', { class: 'muted' }, SKIP_NOTE));
+    set(...head, opts, skipRow);
     focusLead();
     if (mode === 'audio') play(q.id);
   }
@@ -102,6 +115,7 @@ export function mount(root, ctx) {
     const msg = ok ? 'Right.' : `Not this time. The word was ${q.answer}. It will come back later.`;
     say(msg);
     const next = el('button', { class: 'btn', type: 'button', onclick: () => { qi++; if (qi < qs.length) show(); else done(); } }, qi + 1 < qs.length ? 'Next word' : 'Finish');
+    try { body.querySelector?.('.ls-skip')?.remove?.(); } catch { /* optional */ }
     body.append(el('p', {}, msg), next); next.focus?.();
   }
   // After the list is replaced the focused button is gone; move focus to the new first paragraph so keyboard and screen reader users keep their place.

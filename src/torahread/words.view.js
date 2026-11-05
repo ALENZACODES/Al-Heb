@@ -3,6 +3,7 @@
 import { el, heEl, playHook } from './ui.js';
 import { recordedLine } from './ladder.view.js';
 import { spokenForm } from './pointing.js';
+import { uiEnglish } from '../shell/names.js';
 
 export function renderWords(host, env) {
   const { ctx, course, translit } = env;
@@ -31,11 +32,11 @@ export function renderWords(host, env) {
         const d = el('div', { id: `trd-wd-${w.rank}`, class: 'trd-answer' });
         d.append(heEl('p', w.pointed, 'trd-big'));
         const tr = translit(w.say ? spokenForm(w.pointed) : w.pointed); if (tr) d.append(el('p', { class: 'trd-tr' }, tr));
-        d.append(el('p', {}, el('strong', {}, w.gloss)));
+        d.append(el('p', {}, el('strong', {}, uiEnglish(ctx, w.gloss))));
         if (w.say) d.append(el('p', { class: 'trd-muted' }, 'Written as the four-letter name; read aloud as ', heEl('span', w.say)));
         if (w.others.length) {
           d.append(el('p', { class: 'trd-muted' }, 'Same letters, other readings in the Torah:'),
-            el('ul', {}, ...w.others.map((o) => el('li', {}, heEl('span', o.he), ` ${o.count}x`, o.gloss ? `: ${o.gloss}` : ': (no meaning given here)'))));
+            el('ul', {}, ...w.others.map((o) => el('li', {}, heEl('span', o.he), ` ${o.count}x`, o.gloss ? `: ${uiEnglish(ctx, o.gloss)}` : ': (no meaning given here)'))));
         }
         if (w.vocabId) d.append(el('p', { class: 'trd-muted' }, `Also in the Vocabulary list (entry ${w.vocabId}).`));
         const status = el('p', { class: 'trd-status', role: 'status', 'aria-live': 'polite' });

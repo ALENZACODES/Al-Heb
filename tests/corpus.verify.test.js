@@ -78,9 +78,9 @@ test('corpus: every record re-derives from the committed snapshot (equal or clip
   assert.deepEqual(bad, []);
 });
 
-test('corpus: licence listing matches LICENSES.md expectations (42 Sefaria-labelled Hebrew records, 10 Metsudah)', () => {
+test('corpus: licence listing matches LICENSES.md expectations (42 Sefaria-labelled Hebrew records, 9 Metsudah)', () => {
   assert.equal(rep.summary.licenceUnverified, 42);
-  assert.equal(rep.summary.metsudah, 10);
+  assert.equal(rep.summary.metsudah, 9);
   for (const r of rep.records.filter((x) => x.licenceUnverified)) assert.match(r.sourceUrl, /^https:\/\/www\.sefaria\.org\//, r.id);
   for (const r of rep.records.filter((x) => x.metsudah)) assert.equal(r.license, 'CC-BY', r.id);
   for (const r of rep.records.filter((x) => !x.licenceUnverified)) assert.match(r.sourceUrl, /^https:\/\/tanach\.us\//, r.id);

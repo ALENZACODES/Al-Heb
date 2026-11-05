@@ -98,12 +98,12 @@ test('size budget: core manifest and every word shard stay under 2 MiB; shards h
   const MiB = 1048576;
   const core = JSON.parse(fs.readFileSync(new URL('../data/audio/manifest.json', import.meta.url), 'utf8'));
   assert.ok(fs.statSync(new URL('../data/audio/manifest.json', import.meta.url)).size < 2 * MiB, 'core manifest < 2 MiB');
-  assert.ok(core.every((e) => !['prayer-word', 'vocab-word'].includes(e.group)), 'core has no reader or donor-script word clips');
+  assert.ok(core.every((e) => !['prayer-word', 'vocab-word', 'vocab-alias', 'vocab-extra'].includes(e.group)), 'core has no reader or donor-script word clips');
   for (const t of ['israeli', 'sephardi', 'ashkenazi']) {
     const f = new URL(`../data/audio/manifest-words-${t}.json`, import.meta.url);
     assert.ok(fs.statSync(f).size < 2 * MiB, `${t} shard < 2 MiB`);
     const sh = JSON.parse(fs.readFileSync(f, 'utf8'));
-    assert.ok(sh.length > 1000 && sh.every((e) => ['prayer-word', 'vocab-word'].includes(e.group) && e.tradition === t));
+    assert.ok(sh.length > 1000 && sh.every((e) => ['prayer-word', 'vocab-word', 'vocab-alias', 'vocab-extra'].includes(e.group) && e.tradition === t));
   }
   assert.equal(manifest.length, core.length + 3 * JSON.parse(fs.readFileSync(new URL('../data/audio/manifest-words-israeli.json', import.meta.url), 'utf8')).length);
 });
@@ -137,4 +137,16 @@ test('sin letter name follows canonical mark order (vowel before sin dot)', () =
   const sin = manifest.find((e) => e.id === 'sin' && e.kind === 'letter');
   assert.equal(sin.text, sin.text.normalize('NFC'));
   assert.equal(sin.text, '\u05E9\u05B4\u05C2\u05D9\u05DF');
+});
+
+test('vocab ids: every mapped or Listen-pool vocab id has a word entry for every voice and tradition; aliases point at a lesson word', async () => {
+  const words = JSON.parse(fs.readFileSync(new URL('../data/vocab/words.json', import.meta.url), 'utf8')).words;
+  const cfg = JSON.parse(fs.readFileSync(new URL('../data/listen/config.json', import.meta.url), 'utf8'));
+  const { buildPool } = await import('../src/listen/model.js');
+  const map = JSON.parse(fs.readFileSync(new URL('../data/curriculum/word-vocab-map.json', import.meta.url), 'utf8')).map;
+  const have = new Set(manifest.filter((e) => e.kind === 'word').map((e) => `${e.voice}|${e.tradition}|${e.id}`));
+  const ids = new Set([...Object.values(map), ...buildPool(words, cfg).map((w) => w.id)]);
+  for (const id of ids) for (const t of ['israeli', 'sephardi', 'ashkenazi']) for (const v of ['m', 'f']) assert.ok(have.has(`${v}|${t}|${id}`), `${v}/${t}/${id}`);
+  assert.ok(manifest.filter((x) => x.group === 'vocab-alias').every((e) => /^word\/[a-z0-9._-]+-w\d+$/.test(e.aliasOf)));
+  assert.ok(manifest.filter((x) => x.group === 'vocab-alias' || x.group === 'vocab-extra').every((e) => e.status === 'missing' || e.status === 'recorded' || e.status === 'tts'));
 });

@@ -128,6 +128,10 @@ function isOpen(syl) {
   return syl.letters.slice(h + 1).every((e) => e.mater || e.silent);
 }
 
+/** Everyday respelling policy (docs/pronunciation/DOUBLING-POLICY.md): dagesh chazak is NOT written as a doubled letter,
+ *  in any tradition, so the Compare lookup agrees with the stored words.json translit. Doubling is only for a scholarly "rules" display. */
+export const GEMINATE = false;
+
 /**
  * Render one pointed Hebrew word (no spaces, no maqaf).
  * @param {string} he
@@ -143,8 +147,8 @@ export function renderWord(he, ctx) {
   if (substituted) flags.add('divine-name');
   if (!probe.length) {
     flags.add('unpointed');
-    const simple = transliterate(w, { scheme: 'siddur', geminate: true });
-    const simpleA = transliterate(w, { scheme: 'ashkenazi-siddur', cholam: 'oy', geminate: true });
+    const simple = transliterate(w, { scheme: 'siddur', geminate: GEMINATE });
+    const simpleA = transliterate(w, { scheme: 'ashkenazi-siddur', cholam: 'oy', geminate: GEMINATE });
     return {
       he: w.normalize('NFC'), syllables: [],
       variants: {
@@ -295,8 +299,8 @@ export function renderWord(he, ctx) {
   }
 
   // --- simple Latin (existing transliterator)
-  const simpleIS = transliterate(w, { scheme: 'siddur', geminate: true, finalHe: 'show' });
-  let simpleA = transliterate(w, { scheme: 'ashkenazi-siddur', cholam: 'oy', geminate: true, finalHe: 'show' }).replace(/oyy/g, 'oy');
+  const simpleIS = transliterate(w, { scheme: 'siddur', geminate: GEMINATE, finalHe: 'show' });
+  let simpleA = transliterate(w, { scheme: 'ashkenazi-siddur', cholam: 'oy', geminate: GEMINATE, finalHe: 'show' }).replace(/oyy/g, 'oy');
   if (ashReduce) {
     if (/oh$/.test(simpleA)) simpleA = simpleA.replace(/oh$/, 'eh');
     else if (/o$/.test(simpleA)) simpleA = simpleA.replace(/o$/, 'eh');

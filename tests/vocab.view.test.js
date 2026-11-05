@@ -106,6 +106,7 @@ test("browse: draft notice, attribution footer, RTL pointed Hebrew, transliterat
   const un = mount(root, ctx); await idle(root);
   assert.ok(root.text.includes(DRAFT_NOTICE));
   assert.ok(root.find((n) => n.tag === "footer")[0].text.includes(ATTRIBUTION));
+  assert.ok(root.find((n) => n.tag === "a" && n.attrs.href === "#/credits").length === 1, "footer links to #/credits");
   assert.match(ATTRIBUTION, /CC BY-SA 4\.0/); assert.match(ATTRIBUTION, /Hermit Dave/); assert.match(ATTRIBUTION, /Wiktionary/);
   assert.equal(byId(root, "view-title").tag, "h1");
   const lis = items(root); assert.equal(lis.length, 40);
@@ -115,7 +116,7 @@ test("browse: draft notice, attribution footer, RTL pointed Hebrew, transliterat
   assert.match(lis[0].text, /rank 1/);
   const listen = btn(lis[0], /Listen/);
   assert.match(listen.text, /computer voice/); assert.match(listen.attrs["aria-label"], /computer voice/);
-  assert.match(root.text, /Showing 40 of 499 words/);
+  assert.match(root.text, /Showing 40 of 497 words/);
   // every control has a label
   for (const id of ["vc-tier", "vc-topic", "vc-search"]) assert.ok(root.find((n) => n.tag === "label" && n.attrs.for === id).length === 1);
   un();
@@ -164,7 +165,7 @@ test("add one word, and a batch, to reviews (stored under srs.vocab)", async () 
   assert.equal(store.m["srs.cards"], undefined);
   await byId(root, "vc-add-all").click();
   assert.equal(Object.keys(store.m["srs.vocab"]).length, 101);
-  assert.match(root.text, /Added 100 words.*392 more/);
+  assert.match(root.text, /Added 100 words.*390 more/);
   assert.match(root.text, /Review \(101 due\)/);
 });
 

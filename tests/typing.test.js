@@ -233,13 +233,30 @@ test("view: on-screen keyboard is one roving tab stop with arrow-key movement, e
   byId(root, "ty-drill-letters").click(); await waitFor(() => byId(root, "ty-kb"));
   const kb = byId(root, "ty-kb"); const keys = kb.find((n) => n.tag === "button");
   assert.equal(keys.length, 27 + 2); assert.equal(keys.filter((k) => k.attrs.tabindex === "0").length, 1);
-  const alefKey = keys.find((k) => k.attrs["data-key"] === "א"); assert.match(alefKey.text, /א/); assert.match(alefKey.text, /alef/); assert.equal(alefKey.attrs["aria-label"], undefined, "name comes from content, so the visible letter is part of it");
+  const alefKey = keys.find((k) => k.attrs["data-key"] === "א"); assert.match(alefKey.text, /א/);
+  // Deliberate change (44 px key redesign): every key has an explicit aria-label that starts with the visible letter (label-in-name) and then names it in English.
+  assert.equal(alefKey.attrs["aria-label"], "א alef");
+  assert.ok(keys.every((k) => k.attrs["aria-label"]), "every on-screen key, including Space and Delete, has an aria-label");
+  assert.deepEqual(["ך", "ם", "ן", "ף", "ץ"].map((c) => keys.find((k) => k.attrs["data-key"] === c).attrs["aria-label"]), ["ך kaf (final form)", "ם mem (final form)", "ן nun (final form)", "ף pe (final form)", "ץ tsadi (final form)"]);
+  assert.equal(keys.find((k) => k.attrs["data-key"] === " ").attrs["aria-label"], "Space"); assert.equal(keys.find((k) => k.attrs["data-key"] === "BS").attrs["aria-label"], "Delete last letter");
   const first = keys.find((k) => k.attrs.tabindex === "0"); const e = kb.fire("keydown", { target: first, key: "ArrowRight" });
   assert.equal(e.prevented, true); assert.equal(keys.filter((k) => k.attrs.tabindex === "0").length, 1); assert.notEqual(keys.find((k) => k.attrs.tabindex === "0"), first);
   kb.fire("keydown", { target: keys.find((k) => k.attrs.tabindex === "0"), key: "ArrowDown" });
   assert.equal(keys.find((k) => k.attrs.tabindex === "0").attrs["data-r"], "1");
   const bs = keys.find((k) => k.attrs["data-key"] === "BS"); const inp = byId(root, "ty-input"); inp.value = "אב"; bs.click(); assert.equal(inp.value, "א");
   unmount();
+});
+
+test("keyboard CSS: keys are at least 44 px both ways; narrow screens use a wrapping grid, not sideways scroll", async () => {
+  const { CSS, KEY_MIN } = await import("../src/typing/typing.view.js");
+  assert.equal(KEY_MIN, 44);
+  const key = CSS.match(/\.ty-key\{([^}]*)\}/)[1];
+  assert.match(key, /min-inline-size:44px/); assert.match(key, /min-block-size:max\(44px,/);
+  const narrow = CSS.slice(CSS.indexOf("@media (max-width:32rem)"));
+  assert.match(narrow, /grid-template-columns:repeat\(auto-fill,minmax\(44px,1fr\)\)/, "7 keys per line at 375 px, each >= 44 px");
+  assert.match(narrow, /\.ty-kr:not\(:last-child\)\{display:contents\}/);
+  assert.doesNotMatch(CSS, /\.ty-kb\{[^}]*overflow-x/, "the keyboard never scrolls sideways");
+  assert.match(CSS, /\.ty-check\{[^}]*min-block-size:44px/, "the Israeli-key-positions checkbox row is a 44 px target");
 });
 
 test("view: practice box inserts a vowel mark at the cursor; stored state is restored; load failure is an alert", async () => {

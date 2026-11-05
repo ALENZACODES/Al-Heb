@@ -47,7 +47,7 @@ export function buildCourse({ ladder, verses, words30, aliyah, trope, corpus }) 
       english: rec.english, englishLines: enLines.length === lines.length ? enLines : [String(rec.english ?? '')],
       source: rec.source, license: rec.license, attribution: rec.attribution, englishSource: rec.englishSource,
       englishLicense: rec.englishLicense, proofread: !!rec.proofread, status: rec.status ?? 'draft',
-      wordCount: lines.reduce((n, l) => n + wordsOfLine(l).length, 0), ...extra,
+      largeLetters: Array.isArray(rec.largeLetters) ? rec.largeLetters : [], wordCount: lines.reduce((n, l) => n + wordsOfLine(l).length, 0), ...extra,
     };
   };
   const groups = ladder.groups.map((g) => ({

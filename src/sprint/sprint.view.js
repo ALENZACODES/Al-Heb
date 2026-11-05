@@ -6,12 +6,19 @@
  * Timer: local, pauses while the page is hidden. Time running out never cuts a question in half: the current one is finished first.
  * ctx extras for tests: ctx.clock {now,setInterval,clearInterval}, ctx.rng, ctx.sprintData {entries,registry,scenarios}.
  */
+import { plain } from '../shell/plain-copy.js';
 import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
 import { transliterate } from '../pronunciation/transliterate.js';
 import { ATTRIBUTION } from '../vocab/vocab.view.js';
 import { count } from '../shell/plural.js';
+import { uiEnglish } from '../shell/names.js';
+import { calmOn } from '../shell/comfort.js';
+import { untimedOn } from '../shell/motor.js';
+/** No countdown and no time limit: calm mode, or Settings > "No time limits". */
+const noClock = (ctx) => calmOn(ctx) || untimedOn(ctx);
 import { loadAllVocab, loadRegistry, loadScenarios } from './loader.js';
 import { VOCAB_CARDS_KEY, LAST_KEY, TOP, buildIndex, buildDestinations, buildQueue, buildQuestion, applyAnswer, knownCount, isKnown, cardId, createTimer, clockText } from './model.js';
+import { isAudioFree } from '../shell/audiofree.js';
 
 export const UNVERIFIED = 'Unverified vocabulary: the word list was built by a program from Wiktionary and subtitle counts. No Hebrew teacher has checked it, so a gloss or vowel point may be wrong.';
 const TRAD = { israeli: 1, sephardi: 1, ashkenazi: 1 };
@@ -88,12 +95,12 @@ export function mount(root, ctx) {
     sel.value = chosenId;
     sel.addEventListener('change', (e) => { chosenId = e.target.value; });
     setBody(
-      el('p', {}, 'Five minutes of short word cards. Pick where you are heading and the sprint chooses words from it first, mixed with the most common words.'),
+      el('p', {}, noClock(ctx) ? 'Short word cards, with no timer. Pick where you are heading. Press Finish now whenever you want to stop.' : 'Five minutes of short word cards. Pick where you are heading and the sprint chooses words from it first, mixed with the most common words.'),
       el('p', { class: 'draft-flag', role: 'note' }, UNVERIFIED),
       el('label', { for: 'sprint-dest' }, 'Destination'),
       sel,
-      el('p', { class: 'muted' }, 'Words counted for a destination are the ones our list recognises in that line, not every word in it. Wrong answers just bring the word back later.'),
-      el('div', { class: 'sp-row' }, el('button', { type: 'button', class: 'btn', id: 'sprint-start', onclick: start }, 'Start 5 minutes')),
+      el('p', { class: 'muted' }, plain('sprintNote')),
+      el('div', { class: 'sp-row' }, el('button', { type: 'button', class: 'btn', id: 'sprint-start', onclick: start }, noClock(ctx) ? 'Start' : 'Start 5 minutes')),
     );
     say('');
     focusNode(h1);
@@ -105,7 +112,7 @@ export function mount(root, ctx) {
     queue = buildQueue({ entries: data.entries, cards, dest, now });
     knownBefore = dest ? knownCount(dest.words, cards) : 0;
     results = []; qi = 0; timeUp = false; answered = false;
-    timer = createTimer(); timer.start(now);
+    timer = noClock(ctx) ? createTimer(Infinity) : createTimer(); timer.start(now); // calm mode: no time limit and no countdown
     if (document.hidden) timer.pause(now);
     tick = clock.setInterval(onTick, 1000);
     if (!queue.length) return end();
@@ -128,13 +135,13 @@ export function mount(root, ctx) {
     answered = false;
     const entry = queue[qi];
     const q = buildQuestion({ entry, entries: data.entries, card: cards[cardId(entry)], translit, rng });
-    timerNode = el('p', { class: 'sp-timer' }, timerText());
+    timerNode = noClock(ctx) ? null : el('p', { class: 'sp-timer' }, timerText());
     const finish = el('button', { type: 'button', class: 'btn secondary', id: 'sprint-finish', onclick: () => end() }, 'Finish now');
     const hear = q.type === 'hear-meaning';
-    const prompt = { 'hear-meaning': 'What does this word mean?', 'pick-sound': 'How is this word pronounced? (approximate spelling in Latin letters)', 'point-to-english': 'Look at the word, say it if you can, then check the meaning.' }[q.type];
+    const prompt = { 'hear-meaning': 'What does this word mean?', 'pick-sound': 'How is this word pronounced? (approximate spelling in Latin letters)', 'point-to-english': isAudioFree(ctx) ? 'Look at the word and read it in the way you read, then check the meaning.' : 'Look at the word, say it if you can, then check the meaning.' }[q.type];
     const heNode = el('div', { class: 'sp-he' }, heText(entry.pointed));
     let audioNode = null;
-    if (hear) {
+    if (hear && !isAudioFree(ctx)) {
       audioNode = audioHas(entry)
         ? el('button', { type: 'button', class: 'btn secondary', 'aria-label': `Listen to this word`, onclick: async () => { try { await ctx.audio.play('word', entry.id); } catch { say('The audio could not play.'); } } }, 'Listen')
         : el('p', { class: 'muted' }, 'No audio yet for this word.');
@@ -161,9 +168,9 @@ export function mount(root, ctx) {
       const reveal = el('button', { type: 'button', class: 'btn', id: 'sprint-reveal', onclick: () => {
         reveal.remove?.();
         area.replaceChildren(
-          el('p', {}, el('strong', {}, entry.gloss)),
-          el('button', { type: 'button', class: 'btn', id: 'sprint-knew', onclick: () => settle(true, `${entry.gloss}.`) }, 'I knew it'),
-          el('button', { type: 'button', class: 'btn secondary', id: 'sprint-notyet', onclick: () => settle(false, `${entry.gloss}.`) }, 'Not yet'));
+          el('p', {}, el('strong', {}, uiEnglish(ctx, entry.gloss))),
+          el('button', { type: 'button', class: 'btn', id: 'sprint-knew', onclick: () => settle(true, `${uiEnglish(ctx, entry.gloss)}.`) }, 'I knew it'),
+          el('button', { type: 'button', class: 'btn secondary', id: 'sprint-notyet', onclick: () => settle(false, `${uiEnglish(ctx, entry.gloss)}.`) }, 'Not yet'));
         focusNode(area.children[1]);
       } }, 'Show meaning');
       area.replaceChildren(reveal);

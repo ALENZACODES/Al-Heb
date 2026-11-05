@@ -176,6 +176,8 @@ export function createLadderSession(ladder, { seed = 1, level = 1 } = {}) {
       }
       return { correct, correctId: p.item.id, event, level: lvl, finished: cleared };
     },
+    /** Skip the card on screen with no penalty: not answered, not missed, streak and level untouched; a new card is drawn next. */
+    skip() { if (!pending) return false; pending = null; n--; asked.pop(); return true; },
     state: () => ({ level: lvl, best, streak, wrongRun, cleared, answered: n - (pending ? 1 : 0), missed: [...missed], right: [...right] }),
   };
 }

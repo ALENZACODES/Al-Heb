@@ -4,11 +4,15 @@
  "note": "Deterministic, safe corrections to data/vocab/words.json, applied by tools/vocab/apply_corrections.mjs. Each entry: id, field, old, new, reason. Judgement calls are NOT here: see docs/vocab/JUDGEMENT.md.",
  "counts": {
   "removed": 2,
-  "translit": 165,
+  "translit": 173,
   "forms": 1,
-  "glosses": 20,
-  "hidden": 2,
-  "examples": 18
+  "glosses": 54,
+  "hidden": 4,
+  "examples": 56,
+  "ipa": 23,
+  "added": 6,
+  "patched": 28,
+  "rank": 12
  },
  "corrections": [
   {
@@ -1861,6 +1865,2482 @@
    "old": "uvekhal",
    "new": "uvekhol",
    "reason": "V0-CONTENT-CHECK X2: kamatz after conjunctive vav plus prefix before כָּל is kamatz katan (V'ahavta reading); engine rule extended in src/pronunciation/kamatz-katan.js. Needs native review."
+  },
+  {
+   "id": "p526c2f8a",
+   "field": "translit",
+   "old": "kadesho",
+   "new": "kodsho",
+   "reason": "V0-CONTENT-CHECK X1: lesson r32 teaches this kamatz as katan (o) with a silent shva; engine exact-form entry in src/pronunciation/kamatz-katan.js. Needs native review."
+  },
+  {
+   "id": "hcdd4b7fc",
+   "field": "translit",
+   "old": "konegres",
+   "new": "kongeres",
+   "reason": "Engine rule change in src/pronunciation/shva.js: the first of two shvas in a row is silent and the second is vocal, so the old translit that voiced the first shva is replaced by the engine output. Needs native review."
+  },
+  {
+   "id": "h72b7f908",
+   "field": "translit",
+   "old": "beinel'umi",
+   "new": "beinle'umi",
+   "reason": "Engine rule change in src/pronunciation/shva.js: the first of two shvas in a row is silent and the second is vocal, so the old translit that voiced the first shva is replaced by the engine output. Needs native review."
+  },
+  {
+   "id": "h3ff52ddc",
+   "field": "translit",
+   "old": "pinegvin",
+   "new": "pingevin",
+   "reason": "Engine rule change in src/pronunciation/shva.js: the first of two shvas in a row is silent and the second is vocal, so the old translit that voiced the first shva is replaced by the engine output. Needs native review."
+  },
+  {
+   "id": "hc23d32fb",
+   "field": "translit",
+   "old": "konespiratzeyah",
+   "new": "konsepiratzeyah",
+   "reason": "Engine rule change in src/pronunciation/shva.js: the first of two shvas in a row is silent and the second is vocal, so the old translit that voiced the first shva is replaced by the engine output. Needs native review."
+  },
+  {
+   "id": "h2c9d6f05",
+   "field": "translit",
+   "old": "osetrali",
+   "new": "osterali",
+   "reason": "Engine rule change in src/pronunciation/shva.js: the first of two shvas in a row is silent and the second is vocal, so the old translit that voiced the first shva is replaced by the engine output. Needs native review."
+  },
+  {
+   "id": "hbbff81ef",
+   "field": "translit",
+   "old": "khiruregyah",
+   "new": "khirurgeyah",
+   "reason": "Engine rule change in src/pronunciation/shva.js: the first of two shvas in a row is silent and the second is vocal, so the old translit that voiced the first shva is replaced by the engine output. Needs native review."
+  },
+  {
+   "id": "h7f6db81e",
+   "field": "translit",
+   "old": "bisekvit",
+   "new": "biskevit",
+   "reason": "Engine rule change in src/pronunciation/shva.js: the first of two shvas in a row is silent and the second is vocal, so the old translit that voiced the first shva is replaced by the engine output. Needs native review."
+  },
+  {
+   "id": "h5d60ac4a",
+   "field": "en",
+   "old": "to stop, to cease, to desist, to terminate. (See usage note below.)",
+   "new": "to stop, to cease, to desist, to terminate",
+   "reason": "gloss clean-up (FIRST-500-CHECK): wiki markup / usage-note pointer removed from the Wiktionary text; no words added or changed"
+  },
+  {
+   "id": "ha45fab71",
+   "field": "en",
+   "old": "to stop, to stop moving, to halt, to stop the motion of. (See usage note below.)",
+   "new": "to stop, to stop moving, to halt, to stop the motion of",
+   "reason": "gloss clean-up (FIRST-500-CHECK): wiki markup / usage-note pointer removed from the Wiktionary text; no words added or changed"
+  },
+  {
+   "id": "h07407da8",
+   "field": "en",
+   "old": "lest, [[[in order that|in order]]] that … not, for otherwise",
+   "new": "lest, in order that … not, for otherwise",
+   "reason": "gloss clean-up (FIRST-500-CHECK): wiki markup / usage-note pointer removed from the Wiktionary text; no words added or changed"
+  },
+  {
+   "id": "ha8f1d06f",
+   "field": "en",
+   "old": "Introduces a subordinate clause",
+   "new": "introduces a subordinate clause",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "hc014796a",
+   "field": "en",
+   "old": "Introduces a subordinate clause",
+   "new": "introduces a subordinate clause",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "hb1265621",
+   "field": "en",
+   "old": "Introduces a subordinate clause, that, which, who",
+   "new": "introduces a subordinate clause, that, which, who",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "h50cf3648",
+   "field": "en",
+   "old": "Day",
+   "new": "day",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "h4b81aad7",
+   "field": "en",
+   "old": "Needing, in need of (something)",
+   "new": "needing, in need of (something)",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "heabe1020",
+   "field": "en",
+   "old": "Vocative particle preceding a noun, especially a slur or pejorative",
+   "new": "vocative particle preceding a noun, especially a slur or pejorative",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "h6ad3ddd8",
+   "field": "en",
+   "old": "Order, the state of being well-arranged, in the sense of putting things in order",
+   "new": "order, the state of being well-arranged, in the sense of putting things in order",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "h749f736f",
+   "field": "en",
+   "old": "Always, regularly",
+   "new": "always, regularly",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "h324e6752",
+   "field": "en",
+   "old": "Through, via, by way of",
+   "new": "through, via, by way of",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "hd6219bc1",
+   "field": "en",
+   "old": "Outside (of)",
+   "new": "outside (of)",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "hba98874f",
+   "field": "en",
+   "old": "Right, correct",
+   "new": "right, correct",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "hfb819565",
+   "field": "en",
+   "old": "Wind, a wind",
+   "new": "wind, a wind",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "h7be38218",
+   "field": "en",
+   "old": "Little, small, diminutive",
+   "new": "little, small, diminutive",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "h5795e8db",
+   "field": "en",
+   "old": "Strength",
+   "new": "strength",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "h1d7368c3",
+   "field": "en",
+   "old": "Expresses a warning not to do something",
+   "new": "expresses a warning not to do something",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "h5f280d64",
+   "field": "en",
+   "old": "Confident, sure, certain",
+   "new": "confident, sure, certain",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "hc444e8d9",
+   "field": "en",
+   "old": "Ability, capability, power",
+   "new": "ability, capability, power",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "h54cf41d4",
+   "field": "en",
+   "old": "Less, fewer",
+   "new": "less, fewer",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "h04345345",
+   "field": "en",
+   "old": "Multiplicative particle",
+   "new": "multiplicative particle",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "hdcbb6117",
+   "field": "en",
+   "old": "Anyone",
+   "new": "anyone",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "h79df22f0",
+   "field": "en",
+   "old": "Whither",
+   "new": "whither",
+   "reason": "gloss clean-up (FIRST-500-CHECK): leading capital lower-cased, as for the other common-noun/verb/adjective glosses; no words changed"
+  },
+  {
+   "id": "h511bbb6f",
+   "field": "en",
+   "old": "feel, sense",
+   "new": "to feel, sense",
+   "reason": "gloss clean-up (FIRST-500-CHECK): verb gloss lacked the infinitive marker \"to\" that every other verb gloss has; no other word added"
+  },
+  {
+   "id": "h07f9e1d9",
+   "field": "en",
+   "old": "Succeed",
+   "new": "to succeed",
+   "reason": "gloss clean-up (FIRST-500-CHECK): verb gloss lacked the infinitive marker \"to\" that every other verb gloss has; no other word added; capital lower-cased"
+  },
+  {
+   "id": "hfa69f51c",
+   "field": "en",
+   "old": "see each other",
+   "new": "to see each other",
+   "reason": "gloss clean-up (FIRST-500-CHECK): verb gloss lacked the infinitive marker \"to\" that every other verb gloss has; no other word added"
+  },
+  {
+   "id": "ha98ef61d",
+   "field": "en",
+   "old": "return (something)",
+   "new": "to return (something)",
+   "reason": "gloss clean-up (FIRST-500-CHECK): verb gloss lacked the infinitive marker \"to\" that every other verb gloss has; no other word added"
+  },
+  {
+   "id": "h1301ecc3",
+   "field": "en",
+   "old": "a",
+   "new": "child, a kid, a boy",
+   "reason": "gloss was truncated to \"a\" (the parenthesis \"(male)\" cut the clause); replaced by the gloss the 5,000-word build already shows for this word, \"child, a kid, a boy\", which is the first Wiktionary gloss without its \"(male)\" qualifier and trailing parenthetical (the qualifier is a judgement for a native reviewer)"
+  },
+  {
+   "id": "ha3cf2c46",
+   "field": "example",
+   "old": {
+    "he": "עדי יהוה ידועים בהטפה מדלת לדלת.",
+    "en": "Jehovah's Witnesses are known for their door-to-door preaching.",
+    "hePointed": false,
+    "translit": null,
+    "match": "יהוה",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1892504,
+     "enId": 1587756,
+     "heAuthor": "fekundulo",
+     "enAuthor": "Bilberry",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1892504",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "example is for a different word and quotes the four-letter divine name (Jehovah's Witnesses sentence matched by consonants only to the \"constitute\" verb record); removed rather than shown against this headword"
+  },
+  {
+   "id": "heabe1020",
+   "field": "example",
+   "old": {
+    "he": "אני רוצה י\"ש.",
+    "en": "I want cognac.",
+    "hePointed": false,
+    "translit": null,
+    "match": "י",
+    "source": {
+     "type": "tatoeba",
+     "heId": 13102866,
+     "enId": 11897872,
+     "heAuthor": "fekundulo",
+     "enAuthor": "CK",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/13102866",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "example matched a single letter inside the abbreviation י\"ש (cognac), not this word; removed"
+  },
+  {
+   "id": "hf8d6ef2c",
+   "field": "alt",
+   "old": [
+    "to cum, ejaculate, have an orgasm",
+    "to be through or done"
+   ],
+   "new": [
+    "to be through or done"
+   ],
+   "reason": "audit 2026-11-04 (sensitivity, ranks 1-1500): the alt \"to cum, ejaculate, have an orgasm\" is a vulgar sexual sense, removed from the beginner entry; \"to finish, complete\" stays. Pending clergy/native review (docs/sensitivity/OPEN.md)."
+  },
+  {
+   "id": "h327ac347",
+   "field": "alt",
+   "old": [
+    "to have sex"
+   ],
+   "new": [],
+   "reason": "audit 2026-11-04 (sensitivity, ranks 1-1500): the alt \"to have sex\" is a sexual sense listed beside \"to lie down\", removed from the beginner entry. Pending clergy/native review (docs/sensitivity/OPEN.md)."
+  },
+  {
+   "id": "h5b57ed79",
+   "field": "alt",
+   "old": [
+    "body, person",
+    "male genitals"
+   ],
+   "new": [
+    "body, person"
+   ],
+   "reason": "audit 2026-11-04 (sensitivity, ranks 1-1500): the alt \"male genitals\" is a sexual/anatomical sense of \"flesh, meat\", removed from the beginner entry. Pending clergy/native review (docs/sensitivity/OPEN.md)."
+  },
+  {
+   "id": "hc3a83879",
+   "field": "alt",
+   "old": [
+    "penis",
+    "pinion, wing"
+   ],
+   "new": [
+    "pinion, wing"
+   ],
+   "reason": "audit 2026-11-04 (sensitivity, ranks 1-1500): the alt \"penis\" is a sexual/anatomical sense, removed from the beginner entry; the alt \"pinion, wing\" stays. Pending clergy/native review (docs/sensitivity/OPEN.md)."
+  },
+  {
+   "id": "h38459da3",
+   "field": "alt",
+   "old": [
+    "to pour",
+    "to ejaculate (semen)"
+   ],
+   "new": [
+    "to pour"
+   ],
+   "reason": "audit 2026-11-04 (sensitivity, ranks 1-1500): the alt \"to ejaculate (semen)\" is a sexual sense of \"to pour\", removed from the beginner entry. Pending clergy/native review (docs/sensitivity/OPEN.md)."
+  },
+  {
+   "id": "hdb3c45eb",
+   "field": "example",
+   "old": {
+    "he": "יש לך רגליים מאד סקסיות.",
+    "en": "You have very sexy legs.",
+    "hePointed": false,
+    "translit": null,
+    "match": "רגליים",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1386031,
+     "enId": 618405,
+     "heAuthor": "MrShoval",
+     "enAuthor": "TRANG",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1386031",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "audit 2026-11-04 (sensitivity, ranks 1-1500): the example \"You have very sexy legs.\" is a sexual remark; removed (no replacement written: the Hebrew has to come from a sourced sentence)."
+  },
+  {
+   "id": "h68cc83f7",
+   "field": "example",
+   "old": {
+    "he": "בדתות רבות אוננות נחשבת לחטא ולמעשה טמא.",
+    "en": "In many religions, masturbation is considered a sin and an impure act.",
+    "hePointed": false,
+    "translit": null,
+    "match": "טמא",
+    "source": {
+     "type": "tatoeba",
+     "heId": 2573558,
+     "enId": 4882210,
+     "heAuthor": "VirtuOZ",
+     "enAuthor": "AlanF_US",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/2573558",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "audit 2026-11-04 (sensitivity, ranks 1-1500): the example is about masturbation; removed from the beginner entry."
+  },
+  {
+   "id": "h595f9b33",
+   "field": "example",
+   "old": {
+    "he": "אני בעצמי הרגתי את ישו.",
+    "en": "I personally killed Jesus.",
+    "hePointed": false,
+    "translit": null,
+    "match": "ישו",
+    "source": {
+     "type": "tatoeba",
+     "heId": 13843295,
+     "enId": 11252606,
+     "heAuthor": "rul",
+     "enAuthor": "shekitten",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/13843295",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "audit 2026-11-04 (sensitivity, ranks 1-1500): the example \"I personally killed Jesus.\" is a sectarian remark unsuitable for a learner app used by synagogue communities; removed."
+  },
+  {
+   "id": "heabe1020",
+   "field": "flags.hidden",
+   "old": null,
+   "new": true,
+   "reason": "suppress entry: audit 2026-11-04 (sensitivity, ranks 1-1500): the gloss says the particle is used before a slur or pejorative (rank 41 is also implausible for it); hidden from learner lists pending native review (docs/vocab/JUDGEMENT.md, addendum). Ranks stay stable."
+  },
+  {
+   "id": "h8ea4d152",
+   "field": "flags.hidden",
+   "old": null,
+   "new": true,
+   "reason": "suppress entry: audit 2026-11-04 (sensitivity, ranks 1-1500): mild curse (interjection); the example and vulgar alt were already removed; hidden from learner lists pending native review (docs/vocab/JUDGEMENT.md, addendum). Ranks stay stable."
+  },
+  {
+   "id": "h81e8c0d1",
+   "field": "ipa",
+   "old": "/ˈhe.leχ/",
+   "new": "/ha.ˈlaχ/",
+   "reason": "rank 34: the stored ipa is for a different reading than the pointed form הָלַךְ; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "hf3ec3b23",
+   "field": "ipa",
+   "old": "/kmo/",
+   "new": "/ke.ˈmo/",
+   "reason": "rank 50: the stored ipa is for a different reading than the pointed form כְּמוֹ; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "h8f42d584",
+   "field": "ipa",
+   "old": "/zman/",
+   "new": "/ze.ˈman/",
+   "reason": "rank 61: the stored ipa is for a different reading than the pointed form זְמַן; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "h4f9b4058",
+   "field": "ipa",
+   "old": "/ˈlekaχ/",
+   "new": "/la.ˈkaχ/",
+   "reason": "rank 72: the stored ipa is for a different reading than the pointed form לָקַח; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "h40502f8d",
+   "field": "ipa",
+   "old": "/lifˈne(j)/",
+   "new": "/lif.ˈne/",
+   "reason": "rank 86: the stored ipa is for a different reading than the pointed form לִפְנֵי; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "hf9a1a55b",
+   "field": "ipa",
+   "old": "/ˈʃnajim/",
+   "new": "/ʃe.na.ˈjim/",
+   "reason": "rank 104: the stored ipa is for a different reading than the pointed form שְׁנַיִם; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "h5ae20314",
+   "field": "ipa",
+   "old": "/daˈʁaχ/",
+   "new": "/ˈde.ʁeχ/",
+   "reason": "rank 217: the stored ipa is for a different reading than the pointed form דֶּרֶךְ; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "h324e6752",
+   "field": "ipa",
+   "old": "/daˈʁaχ/",
+   "new": "/ˈde.ʁeχ/",
+   "reason": "rank 223: the stored ipa is for a different reading than the pointed form דֶּרֶךְ; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "h4237207f",
+   "field": "ipa",
+   "old": "/ˈje.led/",
+   "new": "/ja.ˈlad/",
+   "reason": "rank 227: the stored ipa is for a different reading than the pointed form יָלַד; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "h15d39df8",
+   "field": "ipa",
+   "old": "/(ʔ)aˈla/",
+   "new": "/o.ˈla/",
+   "reason": "rank 229: the stored ipa is for a different reading than the pointed form עֹלָה; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "hb5c944d2",
+   "field": "ipa",
+   "old": "/ˈeʁev/",
+   "new": "/a.ˈʁav/",
+   "reason": "rank 231: the stored ipa is for a different reading than the pointed form עָרַב; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "h31c26fec",
+   "field": "ipa",
+   "old": "/ˈ(ʔ)e.ʁeχ/",
+   "new": "/a.ˈʁaχ/",
+   "reason": "rank 237: the stored ipa is for a different reading than the pointed form עָרַךְ; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "hc7113076",
+   "field": "ipa",
+   "old": "/daˈvaʁ/",
+   "new": "/da.ˈbaʁ/",
+   "reason": "rank 248: the stored ipa is for a different reading than the pointed form דַּבָּר; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "hb88ee2ce",
+   "field": "ipa",
+   "old": "/ˈhefeχ/",
+   "new": "/ha.ˈfaχ/",
+   "reason": "rank 289: the stored ipa is for a different reading than the pointed form הָפַךְ; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "h2f9c8fe9",
+   "field": "ipa",
+   "old": "/zaˈʁa/",
+   "new": "/ˈze.ʁa/",
+   "reason": "rank 307: the stored ipa is for a different reading than the pointed form זֶרַע; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "h39b463af",
+   "field": "ipa",
+   "old": "/bʁit/",
+   "new": "/be.ˈʁit/",
+   "reason": "rank 312: the stored ipa is for a different reading than the pointed form בְּרִית; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "h3dfe9831",
+   "field": "ipa",
+   "old": "/ʃloˈʃa/",
+   "new": "/ʃe.lo.ˈʃa/",
+   "reason": "rank 313: the stored ipa is for a different reading than the pointed form שְׁלוֹשָׁה; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "h13673f80",
+   "field": "ipa",
+   "old": "/ˈt͡se.dek/",
+   "new": "/tsa.ˈdak/",
+   "reason": "rank 348: the stored ipa is for a different reading than the pointed form צָדַק; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "hfb9cb2bb",
+   "field": "ipa",
+   "old": "/heχ(e)ˈzik/",
+   "new": "/heχ.ˈzik/",
+   "reason": "rank 399: the stored ipa is for a different reading than the pointed form הֶחְזִיק; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "h1475ee81",
+   "field": "ipa",
+   "old": "/kvaʁ/",
+   "new": "/ke.ˈvaʁ/",
+   "reason": "rank 409: the stored ipa is for a different reading than the pointed form כְּבָר; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "hc9977e17",
+   "field": "ipa",
+   "old": "/ˈje.t͡seʁ/",
+   "new": "/ja.ˈtsaʁ/",
+   "reason": "rank 410: the stored ipa is for a different reading than the pointed form יָצַר; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "hff7d24c0",
+   "field": "ipa",
+   "old": "/ˈreχev/",
+   "new": "/ʁa.ˈχav/",
+   "reason": "rank 483: the stored ipa is for a different reading than the pointed form רָכַב; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "h01c48de6",
+   "field": "ipa",
+   "old": "/stam/",
+   "new": "/sa.ˈtam/",
+   "reason": "rank 496: the stored ipa is for a different reading than the pointed form סָתַם; replaced by the Israeli IPA of the rule builder (build_variants.mjs renderWord, stored stress marks ignored). Rule-generated, needs-native-review"
+  },
+  {
+   "id": "hd5bcfcb8",
+   "field": "example",
+   "old": {
+    "he": "לך בעקבות חלומותיך לקצות תבל.",
+    "en": "Follow your dreams to the ends of the earth.",
+    "hePointed": false,
+    "translit": null,
+    "match": "תבל",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1529701,
+     "enId": 1529678,
+     "heAuthor": "Eldad",
+     "enAuthor": "erikspen",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1529701",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": {
+    "he": "באין מים הפרחים נובלים.",
+    "en": "Flowers wither without water.",
+    "hePointed": false,
+    "translit": null,
+    "match": "נובלים",
+    "source": {
+     "type": "tatoeba",
+     "heId": 2132272,
+     "enId": 5295399,
+     "heAuthor": "MrShoval",
+     "enAuthor": "AlanF_US",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/2132272",
+     "note": "Hebrew text is unpointed in Tatoeba; replaces a spelling-only match (FIRST-500-CHECK section 4); the English line was read against the record gloss (wither) and the Hebrew token is a regular form of the headword; not read by a native speaker"
+    },
+    "flags": {
+     "senseChecked": true,
+     "ambiguousMatch": false,
+     "needsNativeReview": true
+    }
+   },
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). Replaced by Tatoeba 2132272/5295399: its English line carries the sense \"wither\" and the token נובלים is a form of נָבַל; senseChecked true for that reading only. Needs native review."
+  },
+  {
+   "id": "h93f568f7",
+   "field": "example",
+   "old": {
+    "he": "שה מטופש למדי.",
+    "en": "This is rather foolish.",
+    "hePointed": false,
+    "translit": null,
+    "match": "שה",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1486504,
+     "enId": 1486425,
+     "heAuthor": "MrShoval",
+     "enAuthor": "Spamster",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1486504",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "h5c96df63",
+   "field": "example",
+   "old": {
+    "he": "יש להם משהו מן המשותף.",
+    "en": "They have something in common.",
+    "hePointed": false,
+    "translit": null,
+    "match": "מן",
+    "source": {
+     "type": "tatoeba",
+     "heId": 583900,
+     "enId": 306754,
+     "heAuthor": "rafaga",
+     "enAuthor": "CK",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/583900",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "h22a20328",
+   "field": "example",
+   "old": {
+    "he": "מכונת הכתיבה הזאת לא פועלת.",
+    "en": "This typewriter doesn't work.",
+    "hePointed": false,
+    "translit": null,
+    "match": "מכונת",
+    "source": {
+     "type": "tatoeba",
+     "heId": 6018889,
+     "enId": 2261495,
+     "heAuthor": "fekundulo",
+     "enAuthor": "_undertoad",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/6018889",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "h8e3fbf43",
+   "field": "example",
+   "old": {
+    "he": "זה לא מתאים לשום תחום.",
+    "en": "This doesn't fit into any category.",
+    "hePointed": false,
+    "translit": null,
+    "match": "לשום",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1384080,
+     "enId": 1006157,
+     "heAuthor": "MrShoval",
+     "enAuthor": "datrukup",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1384080",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "h1797f84f",
+   "field": "example",
+   "old": {
+    "he": "פעולה מיידית מונעת צרות בעתיד.",
+    "en": "Prompt action prevents trouble in the future.",
+    "hePointed": false,
+    "translit": null,
+    "match": "צרות",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1392122,
+     "enId": 270667,
+     "heAuthor": "MrShoval",
+     "enAuthor": "CM",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1392122",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "hba8920a3",
+   "field": "example",
+   "old": {
+    "he": "דומה שיש לך מחשבות שניות.",
+    "en": "You seem to be having second thoughts.",
+    "hePointed": false,
+    "translit": null,
+    "match": "מחשבות",
+    "source": {
+     "type": "tatoeba",
+     "heId": 6000460,
+     "enId": 3405531,
+     "heAuthor": "fekundulo",
+     "enAuthor": "CK",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/6000460",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "h13c6683f",
+   "field": "example",
+   "old": {
+    "he": "אולי כדאי שנבטל את הכל.",
+    "en": "Maybe we should call the whole thing off.",
+    "hePointed": false,
+    "translit": null,
+    "match": "הכל",
+    "source": {
+     "type": "tatoeba",
+     "heId": 567882,
+     "enId": 565813,
+     "heAuthor": "Geek_God",
+     "enAuthor": "darinmex",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/567882",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": {
+    "he": "התיבה הכילה מטבעות זהב.",
+    "en": "The chest contained gold coins.",
+    "hePointed": false,
+    "translit": null,
+    "match": "הכילה",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1725639,
+     "enId": 1725345,
+     "heAuthor": "MrShoval",
+     "enAuthor": "belgavox",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1725639",
+     "note": "Hebrew text is unpointed in Tatoeba; replaces a spelling-only match (FIRST-500-CHECK section 4); the English line was read against the record gloss (contain) and the Hebrew token is a regular form of the headword; not read by a native speaker"
+    },
+    "flags": {
+     "senseChecked": true,
+     "ambiguousMatch": false,
+     "needsNativeReview": true
+    }
+   },
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). Replaced by Tatoeba 1725639/1725345: its English line carries the sense \"contain\" and the token הכילה is a form of הֵכִיל; senseChecked true for that reading only. Needs native review."
+  },
+  {
+   "id": "h0aeb9756",
+   "field": "example",
+   "old": {
+    "he": "היא סובלת מלחץ דם נמוך.",
+    "en": "She suffers from low blood pressure.",
+    "hePointed": false,
+    "translit": null,
+    "match": "דם",
+    "source": {
+     "type": "tatoeba",
+     "heId": 827552,
+     "enId": 310004,
+     "heAuthor": "Eldad",
+     "enAuthor": "Eldad",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/827552",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "h3b32dc48",
+   "field": "example",
+   "old": {
+    "he": "לטעות זה לא תמיד שגוי.",
+    "en": "To make mistakes is not always wrong.",
+    "hePointed": false,
+    "translit": null,
+    "match": "שגוי",
+    "source": {
+     "type": "tatoeba",
+     "heId": 2072622,
+     "enId": 20850,
+     "heAuthor": "Eldad",
+     "enAuthor": "Zifre",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/2072622",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": true
+    }
+   },
+   "new": {
+    "he": "תום הוא גוי.",
+    "en": "Tom is a gentile.",
+    "hePointed": false,
+    "translit": null,
+    "match": "גוי",
+    "source": {
+     "type": "tatoeba",
+     "heId": 13577778,
+     "enId": 13571655,
+     "heAuthor": "rul",
+     "enAuthor": "rul",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/13577778",
+     "note": "Hebrew text is unpointed in Tatoeba; replaces a spelling-only match (FIRST-500-CHECK section 4); the English line was read against the record gloss (gentile) and the Hebrew token is a regular form of the headword; not read by a native speaker"
+    },
+    "flags": {
+     "senseChecked": true,
+     "ambiguousMatch": false,
+     "needsNativeReview": true
+    }
+   },
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). Replaced by Tatoeba 13577778/13571655: its English line carries the sense \"gentile\" and the token גוי is a form of גּוֹי; senseChecked true for that reading only. Needs native review."
+  },
+  {
+   "id": "h15d39df8",
+   "field": "example",
+   "old": {
+    "he": "בואו נרקוד על עלות השחר!",
+    "en": "Let's dance till the break of dawn!",
+    "hePointed": false,
+    "translit": null,
+    "match": "עלות",
+    "source": {
+     "type": "tatoeba",
+     "heId": 2213130,
+     "enId": 588198,
+     "heAuthor": "MrShoval",
+     "enAuthor": "Ploomich",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/2213130",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "h2b39dcf2",
+   "field": "example",
+   "old": {
+    "he": "איך היה מבחן הבד שלך?",
+    "en": "How was your audition?",
+    "hePointed": false,
+    "translit": null,
+    "match": "הבד",
+    "source": {
+     "type": "tatoeba",
+     "heId": 4070901,
+     "enId": 2646600,
+     "heAuthor": "Eldad",
+     "enAuthor": "CK",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/4070901",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": {
+    "he": "הבד הזה עשוי מכותנה.",
+    "en": "This fabric is made of cotton.",
+    "hePointed": false,
+    "translit": null,
+    "match": "הבד",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1447454,
+     "enId": 11256826,
+     "heAuthor": "MrShoval",
+     "enAuthor": "mutskt",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1447454",
+     "note": "Hebrew text is unpointed in Tatoeba; replaces a spelling-only match (FIRST-500-CHECK section 4); the English line was read against the record gloss (fabric, cloth) and the Hebrew token is a regular form of the headword; not read by a native speaker"
+    },
+    "flags": {
+     "senseChecked": true,
+     "ambiguousMatch": false,
+     "needsNativeReview": true
+    }
+   },
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). Replaced by Tatoeba 1447454/11256826: its English line carries the sense \"fabric, cloth\" and the token הבד is a form of בַּד; senseChecked true for that reading only. Needs native review."
+  },
+  {
+   "id": "h6c9f6f29",
+   "field": "example",
+   "old": {
+    "he": "הוא רק רצה רובים ותחמושת.",
+    "en": "He only wanted guns and ammunition.",
+    "hePointed": false,
+    "translit": null,
+    "match": "רובים",
+    "source": {
+     "type": "tatoeba",
+     "heId": 4957978,
+     "enId": 803091,
+     "heAuthor": "fekundulo",
+     "enAuthor": "Source_VOA",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/4957978",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": {
+    "he": "ירבו כמותך.",
+    "en": "They'll multiply just like you.",
+    "hePointed": false,
+    "translit": null,
+    "match": "ירבו",
+    "source": {
+     "type": "tatoeba",
+     "heId": 565013,
+     "enId": 12199536,
+     "heAuthor": "SHLOMO",
+     "enAuthor": "Miktsoanit",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/565013",
+     "note": "Hebrew text is unpointed in Tatoeba; replaces a spelling-only match (FIRST-500-CHECK section 4); the English line was read against the record gloss (multiply) and the Hebrew token is a regular form of the headword; not read by a native speaker"
+    },
+    "flags": {
+     "senseChecked": true,
+     "ambiguousMatch": false,
+     "needsNativeReview": true
+    }
+   },
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). Replaced by Tatoeba 565013/12199536: its English line carries the sense \"multiply\" and the token ירבו is a form of רָבָה; senseChecked true for that reading only. Needs native review."
+  },
+  {
+   "id": "hea4f6fcc",
+   "field": "example",
+   "old": {
+    "he": "יש חנות בגן החיות הזה?",
+    "en": "Is there a shop at this zoo?",
+    "hePointed": false,
+    "translit": null,
+    "match": "חנות",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1075777,
+     "enId": 456057,
+     "heAuthor": "Nakhum",
+     "enAuthor": "lukaszpp",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1075777",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": {
+    "he": "לתום קורן חן.",
+    "en": "Tom has charm.",
+    "hePointed": false,
+    "translit": null,
+    "match": "חן",
+    "source": {
+     "type": "tatoeba",
+     "heId": 13083815,
+     "enId": 11931824,
+     "heAuthor": "fekundulo",
+     "enAuthor": "CK",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/13083815",
+     "note": "Hebrew text is unpointed in Tatoeba; replaces a spelling-only match (FIRST-500-CHECK section 4); the English line was read against the record gloss (charm) and the Hebrew token is a regular form of the headword; not read by a native speaker"
+    },
+    "flags": {
+     "senseChecked": true,
+     "ambiguousMatch": false,
+     "needsNativeReview": true
+    }
+   },
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). Replaced by Tatoeba 13083815/11931824: its English line carries the sense \"charm\" and the token חן is a form of חֵן; senseChecked true for that reading only. Needs native review."
+  },
+  {
+   "id": "h6a579e02",
+   "field": "example",
+   "old": {
+    "he": "נותנים הבטחות כדי להפר אותן.",
+    "en": "Promises are made to be broken.",
+    "hePointed": false,
+    "translit": null,
+    "match": "הבטחות",
+    "source": {
+     "type": "tatoeba",
+     "heId": 2438803,
+     "enId": 324186,
+     "heAuthor": "Eldad",
+     "enAuthor": "CK",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/2438803",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "h2f12d5bf",
+   "field": "example",
+   "old": {
+    "he": "הוא עזר לי כשעברתי דירה.",
+    "en": "He helped me move.",
+    "hePointed": false,
+    "translit": null,
+    "match": "דירה",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1359209,
+     "enId": 1276151,
+     "heAuthor": "Eldad",
+     "enAuthor": "CK",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1359209",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "h7715384f",
+   "field": "example",
+   "old": {
+    "he": "העיר תשתנה עוד עשר שנים.",
+    "en": "The town will change in another ten years.",
+    "hePointed": false,
+    "translit": null,
+    "match": "תשתנה",
+    "source": {
+     "type": "tatoeba",
+     "heId": 6016605,
+     "enId": 31733,
+     "heAuthor": "fekundulo",
+     "enAuthor": "AlanF_US",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/6016605",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": true
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "h3e8123a0",
+   "field": "example",
+   "old": {
+    "he": "האם מותר לנו לצלם כאן?",
+    "en": "Are we allowed to take pictures here?",
+    "hePointed": false,
+    "translit": null,
+    "match": "מותר",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1044996,
+     "enId": 61886,
+     "heAuthor": "Eldad",
+     "enAuthor": "CK",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1044996",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": {
+    "he": "היא ויתרה על תכניותיה בניגוד לרצונה.",
+    "en": "She gave up her plans against her will.",
+    "hePointed": false,
+    "translit": null,
+    "match": "ויתרה",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1390461,
+     "enId": 314633,
+     "heAuthor": "MrShoval",
+     "enAuthor": "CK",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1390461",
+     "note": "Hebrew text is unpointed in Tatoeba; replaces a spelling-only match (FIRST-500-CHECK section 4); the English line was read against the record gloss (give up) and the Hebrew token is a regular form of the headword; not read by a native speaker"
+    },
+    "flags": {
+     "senseChecked": true,
+     "ambiguousMatch": false,
+     "needsNativeReview": true
+    }
+   },
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). Replaced by Tatoeba 1390461/314633: its English line carries the sense \"give up\" and the token ויתרה is a form of וִתֵּר; senseChecked true for that reading only. Needs native review."
+  },
+  {
+   "id": "he9d6c9ab",
+   "field": "example",
+   "old": {
+    "he": "אני אכלתי כריך עם עוף.",
+    "en": "I ate a turkey sandwich.",
+    "hePointed": false,
+    "translit": null,
+    "match": "כריך",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1804453,
+     "enId": 1804044,
+     "heAuthor": "MrShoval",
+     "enAuthor": "Spamster",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1804453",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": {
+    "he": "תום נרדם מיד לאחר שראשו נח על הכר.",
+    "en": "Tom fell asleep the moment his head hit the pillow.",
+    "hePointed": false,
+    "translit": null,
+    "match": "הכר",
+    "source": {
+     "type": "tatoeba",
+     "heId": 5511417,
+     "enId": 5388992,
+     "heAuthor": "fekundulo",
+     "enAuthor": "Hybrid",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/5511417",
+     "note": "Hebrew text is unpointed in Tatoeba; replaces a spelling-only match (FIRST-500-CHECK section 4); the English line was read against the record gloss (pillow (the alt gloss of this record)) and the Hebrew token is a regular form of the headword; not read by a native speaker"
+    },
+    "flags": {
+     "senseChecked": true,
+     "ambiguousMatch": false,
+     "needsNativeReview": true
+    }
+   },
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). Replaced by Tatoeba 5511417/5388992: its English line carries the sense \"pillow (the alt gloss of this record)\" and the token הכר is a form of כַּר; senseChecked true for that reading only. Needs native review."
+  },
+  {
+   "id": "h84ac4111",
+   "field": "example",
+   "old": {
+    "he": "אני רואה בה אישה ישרה.",
+    "en": "I consider her to be an honest woman.",
+    "hePointed": false,
+    "translit": null,
+    "match": "ישרה",
+    "source": {
+     "type": "tatoeba",
+     "heId": 3270929,
+     "enId": 512231,
+     "heAuthor": "Eldad",
+     "enAuthor": "CK",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/3270929",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": true
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "ha5b5601c",
+   "field": "example",
+   "old": {
+    "he": "עבודה קשה הביאה אותו עד הלום.",
+    "en": "Hard work has brought him where he is.",
+    "hePointed": false,
+    "translit": null,
+    "match": "הלום",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1927770,
+     "enId": 18851,
+     "heAuthor": "fekundulo",
+     "enAuthor": "Zifre",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1927770",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": {
+    "he": "קח לום ברזל.",
+    "en": "Get a crowbar.",
+    "hePointed": false,
+    "translit": null,
+    "match": "לום",
+    "source": {
+     "type": "tatoeba",
+     "heId": 13083983,
+     "enId": 11930476,
+     "heAuthor": "fekundulo",
+     "enAuthor": "CK",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/13083983",
+     "note": "Hebrew text is unpointed in Tatoeba; replaces a spelling-only match (FIRST-500-CHECK section 4); the English line was read against the record gloss (crowbar) and the Hebrew token is a regular form of the headword; not read by a native speaker"
+    },
+    "flags": {
+     "senseChecked": true,
+     "ambiguousMatch": false,
+     "needsNativeReview": true
+    }
+   },
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). Replaced by Tatoeba 13083983/11930476: its English line carries the sense \"crowbar\" and the token לום is a form of לוֹם; senseChecked true for that reading only. Needs native review."
+  },
+  {
+   "id": "h264da105",
+   "field": "example",
+   "old": {
+    "he": "בגיל שבעים הוא עדיין פעיל.",
+    "en": "At the age of 70, he's still active.",
+    "hePointed": false,
+    "translit": null,
+    "match": "שבעים",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1489286,
+     "enId": 12731544,
+     "heAuthor": "MrShoval",
+     "enAuthor": "rul",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1489286",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": {
+    "he": "אכלנו עד ששבענו.",
+    "en": "We ate until we were satisfied.",
+    "hePointed": false,
+    "translit": null,
+    "match": "ששבענו",
+    "source": {
+     "type": "tatoeba",
+     "heId": 5715037,
+     "enId": 954462,
+     "heAuthor": "fekundulo",
+     "enAuthor": "CK",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/5715037",
+     "note": "Hebrew text is unpointed in Tatoeba; replaces a spelling-only match (FIRST-500-CHECK section 4); the English line was read against the record gloss (satisfied (the alt gloss of this record)) and the Hebrew token is a regular form of the headword; not read by a native speaker"
+    },
+    "flags": {
+     "senseChecked": true,
+     "ambiguousMatch": false,
+     "needsNativeReview": true
+    }
+   },
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). Replaced by Tatoeba 5715037/954462: its English line carries the sense \"satisfied (the alt gloss of this record)\" and the token ששבענו is a form of שָׂבַע; senseChecked true for that reading only. Needs native review."
+  },
+  {
+   "id": "h40e5a2de",
+   "field": "example",
+   "old": {
+    "he": "איך היה סוף השבוע שלך?",
+    "en": "How was your weekend?",
+    "hePointed": false,
+    "translit": null,
+    "match": "איך",
+    "source": {
+     "type": "tatoeba",
+     "heId": 556424,
+     "enId": 466007,
+     "heAuthor": "Eldad",
+     "enAuthor": "CK",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/556424",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": true
+    }
+   },
+   "new": {
+    "he": "איה בני?",
+    "en": "Where is my son?",
+    "hePointed": false,
+    "translit": null,
+    "match": "איה",
+    "source": {
+     "type": "tatoeba",
+     "heId": 2310391,
+     "enId": 2093443,
+     "heAuthor": "fekundulo",
+     "enAuthor": "gleki",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/2310391",
+     "note": "Hebrew text is unpointed in Tatoeba; replaces a spelling-only match (FIRST-500-CHECK section 4); the English line was read against the record gloss (where) and the Hebrew token is a regular form of the headword; not read by a native speaker"
+    },
+    "flags": {
+     "senseChecked": true,
+     "ambiguousMatch": false,
+     "needsNativeReview": true
+    }
+   },
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). Replaced by Tatoeba 2310391/2093443: its English line carries the sense \"where\" and the token איה is a form of אַיֵּה; senseChecked true for that reading only. Needs native review."
+  },
+  {
+   "id": "he1477da0",
+   "field": "example",
+   "old": {
+    "he": "מר גריי לא נהנה מעבודתו.",
+    "en": "Mr Grey did not enjoy his job.",
+    "hePointed": false,
+    "translit": null,
+    "match": "גריי",
+    "source": {
+     "type": "tatoeba",
+     "heId": 684414,
+     "enId": 62779,
+     "heAuthor": "Eldad",
+     "enAuthor": "sundown",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/684414",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "h0cdd730a",
+   "field": "example",
+   "old": {
+    "he": "אוי, התקלקל לי המחשב!",
+    "en": "Aaah!! My computer is broken!",
+    "hePointed": false,
+    "translit": null,
+    "match": "אוי",
+    "source": {
+     "type": "tatoeba",
+     "heId": 337757,
+     "enId": 1910,
+     "heAuthor": "gkh",
+     "enAuthor": "AlanF_US",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/337757",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "h8aa6404d",
+   "field": "example",
+   "old": {
+    "he": "איל לעזאזל היה עליי לדעת?",
+    "en": "How the hell should I know?",
+    "hePointed": false,
+    "translit": null,
+    "match": "איל",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1796103,
+     "enId": 1795460,
+     "heAuthor": "MrShoval",
+     "enAuthor": "Spamster",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1796103",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": true
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "h277eae86",
+   "field": "example",
+   "old": {
+    "he": "העלים על העצים הפכו אדומים.",
+    "en": "The leaves of the trees have turned red.",
+    "hePointed": false,
+    "translit": null,
+    "match": "העלים",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1627842,
+     "enId": 323601,
+     "heAuthor": "thetzk",
+     "enAuthor": "CM",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1627842",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "hab586bfa",
+   "field": "example",
+   "old": {
+    "he": "הוא כמעט קפץ מתוך עורו.",
+    "en": "He almost jumped out of his skin.",
+    "hePointed": false,
+    "translit": null,
+    "match": "מתוך",
+    "source": {
+     "type": "tatoeba",
+     "heId": 2802246,
+     "enId": 1078160,
+     "heAuthor": "Ramiav",
+     "enAuthor": "keira_n",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/2802246",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "h60dd9be7",
+   "field": "example",
+   "old": {
+    "he": "תשכב על צד ימין שלך.",
+    "en": "Lie on your right side.",
+    "hePointed": false,
+    "translit": null,
+    "match": "ימין",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1747389,
+     "enId": 27068,
+     "heAuthor": "MrShoval",
+     "enAuthor": "CK",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1747389",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "h3674f19e",
+   "field": "example",
+   "old": {
+    "he": "נסיך בא על סוס לבן.",
+    "en": "A prince came on a white horse.",
+    "hePointed": false,
+    "translit": null,
+    "match": "נסיך",
+    "source": {
+     "type": "tatoeba",
+     "heId": 2136271,
+     "enId": 1907646,
+     "heAuthor": "fekundulo",
+     "enAuthor": "Spamster",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/2136271",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": {
+    "he": "קיומנו הוא נס בפני עצמו.",
+    "en": "Our existence is a miracle in itself.",
+    "hePointed": false,
+    "translit": null,
+    "match": "נס",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1829870,
+     "enId": 247628,
+     "heAuthor": "Eldad",
+     "enAuthor": "AlanF_US",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1829870",
+     "note": "Hebrew text is unpointed in Tatoeba; replaces a spelling-only match (FIRST-500-CHECK section 4); the English line was read against the record gloss (miracle) and the Hebrew token is a regular form of the headword; not read by a native speaker"
+    },
+    "flags": {
+     "senseChecked": true,
+     "ambiguousMatch": false,
+     "needsNativeReview": true
+    }
+   },
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). Replaced by Tatoeba 1829870/247628: its English line carries the sense \"miracle\" and the token נס is a form of נֵס; senseChecked true for that reading only. Needs native review."
+  },
+  {
+   "id": "hf4758d4d",
+   "field": "example",
+   "old": {
+    "he": "אני רוצה לנגן בלהקת רוק.",
+    "en": "I want to be in a rock band.",
+    "hePointed": false,
+    "translit": null,
+    "match": "רוק",
+    "source": {
+     "type": "tatoeba",
+     "heId": 5603119,
+     "enId": 5193557,
+     "heAuthor": "fekundulo",
+     "enAuthor": "CK",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/5603119",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "h19702c85",
+   "field": "example",
+   "old": {
+    "he": "אני מקווה לשמוע ממך בקרוב.",
+    "en": "I hope to hear from you soon.",
+    "hePointed": false,
+    "translit": null,
+    "match": "מקווה",
+    "source": {
+     "type": "tatoeba",
+     "heId": 564616,
+     "enId": 52109,
+     "heAuthor": "Eldad",
+     "enAuthor": "CK",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/564616",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": null,
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). The Tatoeba snapshot has no sentence (3-8 Hebrew tokens, English line 8-80 characters) whose English carries this sense, so the example is removed and the record keeps no example. Needs native review."
+  },
+  {
+   "id": "hae413d41",
+   "field": "example",
+   "old": {
+    "he": "את תהיי רעיה טובה.",
+    "en": "You will make a good wife.",
+    "hePointed": false,
+    "translit": null,
+    "match": "רעיה",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1980278,
+     "enId": 66734,
+     "heAuthor": "MrShoval",
+     "enAuthor": "CK",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1980278",
+     "note": "Hebrew text is unpointed in Tatoeba; sense of the headword in the sentence was not verified"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": false
+    }
+   },
+   "new": {
+    "he": "הפרות רעו באחו.",
+    "en": "The cows grazed in the pasture.",
+    "hePointed": false,
+    "translit": null,
+    "match": "רעו",
+    "source": {
+     "type": "tatoeba",
+     "heId": 1366471,
+     "enId": 3890545,
+     "heAuthor": "MrShoval",
+     "enAuthor": "AlanF_US",
+     "license": "CC BY 2.0 FR",
+     "url": "https://tatoeba.org/en/sentences/show/1366471",
+     "note": "Hebrew text is unpointed in Tatoeba; replaces a spelling-only match (FIRST-500-CHECK section 4); the English line was read against the record gloss (graze (the second Wiktionary sense, kept as the alt gloss of this record)) and the Hebrew token is a regular form of the headword; not read by a native speaker"
+    },
+    "flags": {
+     "senseChecked": true,
+     "ambiguousMatch": false,
+     "needsNativeReview": true
+    }
+   },
+   "reason": "FIRST-500-CHECK section 4: the old example matched the spelling only (wrong word). Replaced by Tatoeba 1366471/3890545: its English line carries the sense \"graze (the second Wiktionary sense, kept as the alt gloss of this record)\" and the token רעו is a form of רָעָה; senseChecked true for that reading only. Needs native review."
+  },
+  {
+   "id": "ha270e7f7",
+   "field": "(add)",
+   "old": null,
+   "new": {
+    "id": "ha270e7f7",
+    "kind": "word",
+    "he": "הֵם",
+    "heUnpointed": "הם",
+    "translit": "hem",
+    "ipa": null,
+    "en": "they",
+    "alt": [],
+    "enNote": "the third-person masculine plural personal pronoun",
+    "pos": "pron",
+    "gender": "m",
+    "number": "pl",
+    "root": null,
+    "track": "israel",
+    "topic": "small-words",
+    "frequencyRank": null,
+    "level": "A1",
+    "modernRank": 24,
+    "readRank": null,
+    "register": null,
+    "unlockLesson": "r08",
+    "pack": "small-words-1",
+    "example": null,
+    "source": {
+     "dictionary": "wiktionary",
+     "frequency": [
+      "opensubtitles-he-2018"
+     ]
+    },
+    "flags": {
+     "pointedFromSource": true,
+     "pointedSource": "wiktionary",
+     "needsReview": true,
+     "reasons": [
+      "added by a correction from the Wiktionary snapshot (kaikki-hebrew.jsonl); gloss, pointing and rank not native-reviewed (needs-native-review)",
+      "no example sentence found"
+     ]
+    }
+   },
+   "reason": "FIRST-500-CHECK section 9: no record for הם. Added from the Wiktionary snapshot (pron \"הֵם • (hem) m pl\": \"they (the third-person masculine plural personal pronoun, masculine plural of הוא)\"); modernRank 24 = 1 + the number of lemma scores above 660972 (build_lexicon.py scale), where 660972 = 582297 for the exact spelling הם + 78675 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword, counted in tools/vocab/.cache/he_full.txt (OpenSubtitles); the (rerank) entry assigns frequencyRank. vocab5000.json patched this word by an 'additions' entry in overrides.json with a hand-picked priority, not a measured one. Needs native review."
+  },
+  {
+   "id": "hdee3e527",
+   "field": "(add)",
+   "old": null,
+   "new": {
+    "id": "hdee3e527",
+    "kind": "word",
+    "he": "אֲנַחְנוּ",
+    "heUnpointed": "אנחנו",
+    "translit": "anachnu",
+    "ipa": null,
+    "en": "we",
+    "alt": [],
+    "enNote": "the subject form of the first-person plural personal pronoun",
+    "pos": "pron",
+    "gender": null,
+    "number": "pl",
+    "root": null,
+    "track": "israel",
+    "topic": "small-words",
+    "frequencyRank": null,
+    "level": "A1",
+    "modernRank": 21,
+    "readRank": null,
+    "register": null,
+    "unlockLesson": "r21",
+    "pack": "small-words-1",
+    "example": null,
+    "source": {
+     "dictionary": "wiktionary",
+     "frequency": [
+      "opensubtitles-he-2018"
+     ]
+    },
+    "flags": {
+     "pointedFromSource": true,
+     "pointedSource": "wiktionary",
+     "needsReview": true,
+     "reasons": [
+      "added by a correction from the Wiktionary snapshot (kaikki-hebrew.jsonl); gloss, pointing and rank not native-reviewed (needs-native-review)",
+      "no example sentence found"
+     ]
+    }
+   },
+   "reason": "FIRST-500-CHECK section 9: no record for אנחנו. Added from the Wiktionary snapshot (pron \"אֲנַחְנוּ • (anákhnu) m pl or f pl\": \"We; the subject form of the first-person plural personal pronoun.\"); modernRank 21 = 1 + the number of lemma scores above 845691 (build_lexicon.py scale), where 845691 = 703852 for the exact spelling אנחנו + 141839 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword, counted in tools/vocab/.cache/he_full.txt (OpenSubtitles); the (rerank) entry assigns frequencyRank. vocab5000.json patched this word by an 'additions' entry in overrides.json with a hand-picked priority, not a measured one. Needs native review."
+  },
+  {
+   "id": "hea14727f",
+   "field": "(add)",
+   "old": null,
+   "new": {
+    "id": "hea14727f",
+    "kind": "word",
+    "he": "זֹאת",
+    "heUnpointed": "זאת",
+    "translit": "zot",
+    "ipa": null,
+    "en": "this (feminine)",
+    "alt": [],
+    "enNote": "feminine singular of זֶה (zé), which the same snapshot glosses \"this, this one\"",
+    "pos": "pron",
+    "posAlt": [
+     "det"
+    ],
+    "gender": "f",
+    "number": "sg",
+    "root": null,
+    "track": "israel",
+    "topic": "small-words",
+    "frequencyRank": null,
+    "level": "A1",
+    "modernRank": 38,
+    "readRank": null,
+    "register": null,
+    "unlockLesson": "r23",
+    "pack": "small-words-2",
+    "example": null,
+    "source": {
+     "dictionary": "wiktionary",
+     "frequency": [
+      "opensubtitles-he-2018"
+     ]
+    },
+    "flags": {
+     "pointedFromSource": true,
+     "pointedSource": "wiktionary",
+     "needsReview": true,
+     "reasons": [
+      "added by a correction from the Wiktionary snapshot (kaikki-hebrew.jsonl); gloss, pointing and rank not native-reviewed (needs-native-review)",
+      "no example sentence found"
+     ]
+    }
+   },
+   "reason": "FIRST-500-CHECK section 9: no record for זאת. Added from the Wiktionary snapshot (pron and det \"זֹאת • (zót) f sg\": \"feminine singular of זֶה (zé)\"); modernRank 38 = 1 + the number of lemma scores above 469913 (build_lexicon.py scale), where 469913 = 317659 for the exact spelling זאת + 152254 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword, counted in tools/vocab/.cache/he_full.txt (OpenSubtitles); the (rerank) entry assigns frequencyRank. vocab5000.json patched this word by an 'additions' entry in overrides.json with a hand-picked priority, not a measured one. Needs native review."
+  },
+  {
+   "id": "h4397b702",
+   "field": "(add)",
+   "old": null,
+   "new": {
+    "id": "h4397b702",
+    "kind": "word",
+    "he": "לָכֵן",
+    "heUnpointed": "לכן",
+    "translit": "lakhen",
+    "ipa": null,
+    "en": "therefore, so",
+    "alt": [],
+    "enNote": "for that reason",
+    "pos": "adv",
+    "gender": null,
+    "number": null,
+    "root": null,
+    "track": "israel",
+    "topic": "small-words",
+    "frequencyRank": null,
+    "level": "A1",
+    "modernRank": 414,
+    "readRank": null,
+    "register": null,
+    "unlockLesson": "r12",
+    "pack": "small-words-1",
+    "example": null,
+    "source": {
+     "dictionary": "wiktionary",
+     "frequency": [
+      "opensubtitles-he-2018"
+     ]
+    },
+    "flags": {
+     "pointedFromSource": true,
+     "pointedSource": "wiktionary",
+     "needsReview": true,
+     "reasons": [
+      "added by a correction from the Wiktionary snapshot (kaikki-hebrew.jsonl); gloss, pointing and rank not native-reviewed (needs-native-review)",
+      "no example sentence found"
+     ]
+    }
+   },
+   "reason": "FIRST-500-CHECK section 9: no record for לכן. Added from the Wiktionary snapshot (adv \"לָכֵן • (lakhén)\": \"Therefore, so: for that reason.\"); modernRank 414 = 1 + the number of lemma scores above 48367 (build_lexicon.py scale), where 48367 = 33932 for the exact spelling לכן + 14435 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword, counted in tools/vocab/.cache/he_full.txt (OpenSubtitles); the (rerank) entry assigns frequencyRank. vocab5000.json patched this word by an 'additions' entry in overrides.json with a hand-picked priority, not a measured one. Needs native review."
+  },
+  {
+   "id": "hb43259df",
+   "field": "(add)",
+   "old": null,
+   "new": {
+    "id": "hb43259df",
+    "kind": "word",
+    "he": "בְּלִי",
+    "heUnpointed": "בלי",
+    "translit": "beli",
+    "ipa": null,
+    "en": "without",
+    "alt": [],
+    "pos": "prep",
+    "gender": null,
+    "number": null,
+    "root": null,
+    "track": "israel",
+    "topic": "small-words",
+    "frequencyRank": null,
+    "level": "A1",
+    "modernRank": 266,
+    "readRank": null,
+    "register": null,
+    "unlockLesson": "r10",
+    "pack": "small-words-1",
+    "example": null,
+    "source": {
+     "dictionary": "wiktionary",
+     "frequency": [
+      "opensubtitles-he-2018"
+     ]
+    },
+    "flags": {
+     "pointedFromSource": true,
+     "pointedSource": "wiktionary",
+     "needsReview": true,
+     "reasons": [
+      "added by a correction from the Wiktionary snapshot (kaikki-hebrew.jsonl); gloss, pointing and rank not native-reviewed (needs-native-review)",
+      "no example sentence found"
+     ]
+    }
+   },
+   "reason": "FIRST-500-CHECK section 9: no record for בלי. Added from the Wiktionary snapshot (prep \"בְּלִי • (b'lí)\": \"without\"); modernRank 266 = 1 + the number of lemma scores above 83300 (build_lexicon.py scale), where 83300 = 79822 for the exact spelling בלי + 3478 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword, counted in tools/vocab/.cache/he_full.txt (OpenSubtitles); the (rerank) entry assigns frequencyRank. vocab5000.json patched this word by an 'additions' entry in overrides.json with a hand-picked priority, not a measured one. Needs native review."
+  },
+  {
+   "id": "h52191bbf",
+   "field": "(add)",
+   "old": null,
+   "new": {
+    "id": "h52191bbf",
+    "kind": "word",
+    "he": "לְלֹא",
+    "heUnpointed": "ללא",
+    "translit": "lelo",
+    "ipa": null,
+    "en": "without",
+    "alt": [],
+    "pos": "prep",
+    "gender": null,
+    "number": null,
+    "root": null,
+    "track": "israel",
+    "topic": "small-words",
+    "frequencyRank": null,
+    "level": "A1",
+    "modernRank": 343,
+    "readRank": null,
+    "register": null,
+    "unlockLesson": "r10",
+    "pack": "small-words-1",
+    "example": null,
+    "source": {
+     "dictionary": "wiktionary",
+     "frequency": [
+      "opensubtitles-he-2018"
+     ]
+    },
+    "flags": {
+     "pointedFromSource": true,
+     "pointedSource": "wiktionary",
+     "needsReview": true,
+     "reasons": [
+      "added by a correction from the Wiktionary snapshot (kaikki-hebrew.jsonl); gloss, pointing and rank not native-reviewed (needs-native-review)",
+      "no example sentence found"
+     ]
+    }
+   },
+   "reason": "FIRST-500-CHECK section 9: no record for ללא. Added from the Wiktionary snapshot (prep \"לְלֹא • (l'ló)\": \"without\"); modernRank 343 = 1 + the number of lemma scores above 61163 (build_lexicon.py scale), where 61163 = 59201 for the exact spelling ללא + 1962 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword, counted in tools/vocab/.cache/he_full.txt (OpenSubtitles); the (rerank) entry assigns frequencyRank. vocab5000.json patched this word by an 'additions' entry in overrides.json with a hand-picked priority, not a measured one. Needs native review."
+  },
+  {
+   "id": "pefce5ddb",
+   "field": "pos",
+   "old": "unknown",
+   "new": "noun",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: noun \"כֹּל • (kól) m or f (singular construct כָּל־)\"; frequency source (he_full.txt, OpenSubtitles): 854228 for the exact spelling(s) כל + 439220 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 1293448, so modernRank 13 (1 + lemma scores above 1293448, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pefce5ddb",
+   "field": "en",
+   "old": "all",
+   "new": "all, whole, everything",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: noun \"כֹּל • (kól) m or f (singular construct כָּל־)\"; frequency source (he_full.txt, OpenSubtitles): 854228 for the exact spelling(s) כל + 439220 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 1293448, so modernRank 13 (1 + lemma scores above 1293448, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pefce5ddb",
+   "field": "enNote",
+   "old": null,
+   "new": "found almost exclusively in singular definite and singular construct forms; used to translate English all, each, every",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: noun \"כֹּל • (kól) m or f (singular construct כָּל־)\"; frequency source (he_full.txt, OpenSubtitles): 854228 for the exact spelling(s) כל + 439220 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 1293448, so modernRank 13 (1 + lemma scores above 1293448, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pefce5ddb",
+   "field": "modernRank",
+   "old": null,
+   "new": 13,
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: noun \"כֹּל • (kól) m or f (singular construct כָּל־)\"; frequency source (he_full.txt, OpenSubtitles): 854228 for the exact spelling(s) כל + 439220 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 1293448, so modernRank 13 (1 + lemma scores above 1293448, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pefce5ddb",
+   "field": "flags.reasons",
+   "old": [
+    "pointing and gloss not native-reviewed"
+   ],
+   "new": [
+    "pointing and gloss not native-reviewed",
+    "added/patched from the Wiktionary snapshot by a correction; pos, gloss and rank not native-reviewed (needs-native-review)"
+   ],
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: noun \"כֹּל • (kól) m or f (singular construct כָּל־)\"; frequency source (he_full.txt, OpenSubtitles): 854228 for the exact spelling(s) כל + 439220 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 1293448, so modernRank 13 (1 + lemma scores above 1293448, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p7f7d7b8f",
+   "field": "pos",
+   "old": "unknown",
+   "new": "noun",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: noun \"מַיִם • (máyim) m pl\": \"(uncountable) water\"; frequency source (he_full.txt, OpenSubtitles): 26171 for the exact spelling(s) מים + 26330 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 52501, so modernRank 396 (1 + lemma scores above 52501, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p7f7d7b8f",
+   "field": "gender",
+   "old": null,
+   "new": "m",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: noun \"מַיִם • (máyim) m pl\": \"(uncountable) water\"; frequency source (he_full.txt, OpenSubtitles): 26171 for the exact spelling(s) מים + 26330 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 52501, so modernRank 396 (1 + lemma scores above 52501, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p7f7d7b8f",
+   "field": "number",
+   "old": null,
+   "new": "pl",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: noun \"מַיִם • (máyim) m pl\": \"(uncountable) water\"; frequency source (he_full.txt, OpenSubtitles): 26171 for the exact spelling(s) מים + 26330 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 52501, so modernRank 396 (1 + lemma scores above 52501, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p7f7d7b8f",
+   "field": "modernRank",
+   "old": null,
+   "new": 396,
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: noun \"מַיִם • (máyim) m pl\": \"(uncountable) water\"; frequency source (he_full.txt, OpenSubtitles): 26171 for the exact spelling(s) מים + 26330 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 52501, so modernRank 396 (1 + lemma scores above 52501, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p7f7d7b8f",
+   "field": "flags.reasons",
+   "old": [
+    "pointing and gloss not native-reviewed"
+   ],
+   "new": [
+    "pointing and gloss not native-reviewed",
+    "added/patched from the Wiktionary snapshot by a correction; pos, gloss and rank not native-reviewed (needs-native-review)"
+   ],
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: noun \"מַיִם • (máyim) m pl\": \"(uncountable) water\"; frequency source (he_full.txt, OpenSubtitles): 26171 for the exact spelling(s) מים + 26330 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 52501, so modernRank 396 (1 + lemma scores above 52501, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p580df509",
+   "field": "pos",
+   "old": "unknown",
+   "new": "intj",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: intj \"בְּבַקָּשָׁה • (b'vakashá)\": \"please (said in expressing a request)\"; \"you’re welcome (said when one is thanked)\"; \"here you are (said when you hand something over)\"; frequency source (he_full.txt, OpenSubtitles): 210405 for the exact spelling(s) בבקשה + 964 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 211369, so modernRank 108 (1 + lemma scores above 211369, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p580df509",
+   "field": "enNote",
+   "old": null,
+   "new": "also: here you are (said when you hand something over)",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: intj \"בְּבַקָּשָׁה • (b'vakashá)\": \"please (said in expressing a request)\"; \"you’re welcome (said when one is thanked)\"; \"here you are (said when you hand something over)\"; frequency source (he_full.txt, OpenSubtitles): 210405 for the exact spelling(s) בבקשה + 964 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 211369, so modernRank 108 (1 + lemma scores above 211369, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p580df509",
+   "field": "modernRank",
+   "old": null,
+   "new": 108,
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: intj \"בְּבַקָּשָׁה • (b'vakashá)\": \"please (said in expressing a request)\"; \"you’re welcome (said when one is thanked)\"; \"here you are (said when you hand something over)\"; frequency source (he_full.txt, OpenSubtitles): 210405 for the exact spelling(s) בבקשה + 964 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 211369, so modernRank 108 (1 + lemma scores above 211369, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p580df509",
+   "field": "flags.reasons",
+   "old": [
+    "pointing and gloss not native-reviewed"
+   ],
+   "new": [
+    "pointing and gloss not native-reviewed",
+    "added/patched from the Wiktionary snapshot by a correction; pos, gloss and rank not native-reviewed (needs-native-review)"
+   ],
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: intj \"בְּבַקָּשָׁה • (b'vakashá)\": \"please (said in expressing a request)\"; \"you’re welcome (said when one is thanked)\"; \"here you are (said when you hand something over)\"; frequency source (he_full.txt, OpenSubtitles): 210405 for the exact spelling(s) בבקשה + 964 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 211369, so modernRank 108 (1 + lemma scores above 211369, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p0962becf",
+   "field": "pos",
+   "old": "unknown",
+   "new": "num",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"אחת\": \"feminine of אֶחָד (ekhád)\"; the pron heading gives the pointing אַחַת (akhát); frequency source (he_full.txt, OpenSubtitles): 137608 for the exact spelling(s) אחת + 11760 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 149368, so modernRank 143 (1 + lemma scores above 149368, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p0962becf",
+   "field": "en",
+   "old": "one (f., counting)",
+   "new": "one (f.)",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"אחת\": \"feminine of אֶחָד (ekhád)\"; the pron heading gives the pointing אַחַת (akhát); frequency source (he_full.txt, OpenSubtitles): 137608 for the exact spelling(s) אחת + 11760 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 149368, so modernRank 143 (1 + lemma scores above 149368, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p0962becf",
+   "field": "enNote",
+   "old": null,
+   "new": "feminine of אֶחָד (ekhád)",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"אחת\": \"feminine of אֶחָד (ekhád)\"; the pron heading gives the pointing אַחַת (akhát); frequency source (he_full.txt, OpenSubtitles): 137608 for the exact spelling(s) אחת + 11760 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 149368, so modernRank 143 (1 + lemma scores above 149368, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p0962becf",
+   "field": "gender",
+   "old": null,
+   "new": "f",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"אחת\": \"feminine of אֶחָד (ekhád)\"; the pron heading gives the pointing אַחַת (akhát); frequency source (he_full.txt, OpenSubtitles): 137608 for the exact spelling(s) אחת + 11760 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 149368, so modernRank 143 (1 + lemma scores above 149368, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p0962becf",
+   "field": "modernRank",
+   "old": null,
+   "new": 143,
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"אחת\": \"feminine of אֶחָד (ekhád)\"; the pron heading gives the pointing אַחַת (akhát); frequency source (he_full.txt, OpenSubtitles): 137608 for the exact spelling(s) אחת + 11760 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 149368, so modernRank 143 (1 + lemma scores above 149368, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p0962becf",
+   "field": "flags.reasons",
+   "old": [
+    "pointing and gloss not native-reviewed"
+   ],
+   "new": [
+    "pointing and gloss not native-reviewed",
+    "added/patched from the Wiktionary snapshot by a correction; pos, gloss and rank not native-reviewed (needs-native-review)"
+   ],
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"אחת\": \"feminine of אֶחָד (ekhád)\"; the pron heading gives the pointing אַחַת (akhát); frequency source (he_full.txt, OpenSubtitles): 137608 for the exact spelling(s) אחת + 11760 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 149368, so modernRank 143 (1 + lemma scores above 149368, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p92bccc56",
+   "field": "pos",
+   "old": "unknown",
+   "new": "num",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"שתיים\": \"feminine of שניים / שְׁנַיִם\"; \"שתים\": \"defective spelling of שתיים\"; frequency source (he_full.txt, OpenSubtitles): 25192 for the exact spelling(s) שתיים + שתים + 3010 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 28202, so modernRank 657 (1 + lemma scores above 28202, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p92bccc56",
+   "field": "enNote",
+   "old": null,
+   "new": "feminine of שניים / שְׁנַיִם",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"שתיים\": \"feminine of שניים / שְׁנַיִם\"; \"שתים\": \"defective spelling of שתיים\"; frequency source (he_full.txt, OpenSubtitles): 25192 for the exact spelling(s) שתיים + שתים + 3010 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 28202, so modernRank 657 (1 + lemma scores above 28202, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p92bccc56",
+   "field": "gender",
+   "old": null,
+   "new": "f",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"שתיים\": \"feminine of שניים / שְׁנַיִם\"; \"שתים\": \"defective spelling of שתיים\"; frequency source (he_full.txt, OpenSubtitles): 25192 for the exact spelling(s) שתיים + שתים + 3010 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 28202, so modernRank 657 (1 + lemma scores above 28202, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p92bccc56",
+   "field": "modernRank",
+   "old": null,
+   "new": 657,
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"שתיים\": \"feminine of שניים / שְׁנַיִם\"; \"שתים\": \"defective spelling of שתיים\"; frequency source (he_full.txt, OpenSubtitles): 25192 for the exact spelling(s) שתיים + שתים + 3010 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 28202, so modernRank 657 (1 + lemma scores above 28202, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p92bccc56",
+   "field": "flags.reasons",
+   "old": [
+    "pointing and gloss not native-reviewed"
+   ],
+   "new": [
+    "pointing and gloss not native-reviewed",
+    "added/patched from the Wiktionary snapshot by a correction; pos, gloss and rank not native-reviewed (needs-native-review)"
+   ],
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"שתיים\": \"feminine of שניים / שְׁנַיִם\"; \"שתים\": \"defective spelling of שתיים\"; frequency source (he_full.txt, OpenSubtitles): 25192 for the exact spelling(s) שתיים + שתים + 3010 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 28202, so modernRank 657 (1 + lemma scores above 28202, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p71df0447",
+   "field": "pos",
+   "old": "unknown",
+   "new": "num",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"שָׁלוֹשׁ • (shalósh) f\": \"feminine of שְׁלוֹשָׁה (three)\"; frequency source (he_full.txt, OpenSubtitles): 44383 for the exact spelling(s) שלוש + 7379 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 51762, so modernRank 405 (1 + lemma scores above 51762, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p71df0447",
+   "field": "enNote",
+   "old": null,
+   "new": "feminine of שְׁלוֹשָׁה (sh'loshá)",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"שָׁלוֹשׁ • (shalósh) f\": \"feminine of שְׁלוֹשָׁה (three)\"; frequency source (he_full.txt, OpenSubtitles): 44383 for the exact spelling(s) שלוש + 7379 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 51762, so modernRank 405 (1 + lemma scores above 51762, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p71df0447",
+   "field": "gender",
+   "old": null,
+   "new": "f",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"שָׁלוֹשׁ • (shalósh) f\": \"feminine of שְׁלוֹשָׁה (three)\"; frequency source (he_full.txt, OpenSubtitles): 44383 for the exact spelling(s) שלוש + 7379 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 51762, so modernRank 405 (1 + lemma scores above 51762, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p71df0447",
+   "field": "modernRank",
+   "old": null,
+   "new": 405,
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"שָׁלוֹשׁ • (shalósh) f\": \"feminine of שְׁלוֹשָׁה (three)\"; frequency source (he_full.txt, OpenSubtitles): 44383 for the exact spelling(s) שלוש + 7379 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 51762, so modernRank 405 (1 + lemma scores above 51762, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "p71df0447",
+   "field": "flags.reasons",
+   "old": [
+    "pointing and gloss not native-reviewed"
+   ],
+   "new": [
+    "pointing and gloss not native-reviewed",
+    "added/patched from the Wiktionary snapshot by a correction; pos, gloss and rank not native-reviewed (needs-native-review)"
+   ],
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"שָׁלוֹשׁ • (shalósh) f\": \"feminine of שְׁלוֹשָׁה (three)\"; frequency source (he_full.txt, OpenSubtitles): 44383 for the exact spelling(s) שלוש + 7379 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 51762, so modernRank 405 (1 + lemma scores above 51762, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pc34fd630",
+   "field": "pos",
+   "old": "unknown",
+   "new": "num",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"אַרְבַּע • (arbá') f\": \"feminine of אַרְבָּעָה (arba'á, four)\"; frequency source (he_full.txt, OpenSubtitles): 21005 for the exact spelling(s) ארבע + 4289 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 25294, so modernRank 706 (1 + lemma scores above 25294, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pc34fd630",
+   "field": "enNote",
+   "old": null,
+   "new": "feminine of אַרְבָּעָה (arba'á)",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"אַרְבַּע • (arbá') f\": \"feminine of אַרְבָּעָה (arba'á, four)\"; frequency source (he_full.txt, OpenSubtitles): 21005 for the exact spelling(s) ארבע + 4289 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 25294, so modernRank 706 (1 + lemma scores above 25294, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pc34fd630",
+   "field": "gender",
+   "old": null,
+   "new": "f",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"אַרְבַּע • (arbá') f\": \"feminine of אַרְבָּעָה (arba'á, four)\"; frequency source (he_full.txt, OpenSubtitles): 21005 for the exact spelling(s) ארבע + 4289 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 25294, so modernRank 706 (1 + lemma scores above 25294, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pc34fd630",
+   "field": "modernRank",
+   "old": null,
+   "new": 706,
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"אַרְבַּע • (arbá') f\": \"feminine of אַרְבָּעָה (arba'á, four)\"; frequency source (he_full.txt, OpenSubtitles): 21005 for the exact spelling(s) ארבע + 4289 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 25294, so modernRank 706 (1 + lemma scores above 25294, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pc34fd630",
+   "field": "flags.reasons",
+   "old": [
+    "pointing and gloss not native-reviewed"
+   ],
+   "new": [
+    "pointing and gloss not native-reviewed",
+    "added/patched from the Wiktionary snapshot by a correction; pos, gloss and rank not native-reviewed (needs-native-review)"
+   ],
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"אַרְבַּע • (arbá') f\": \"feminine of אַרְבָּעָה (arba'á, four)\"; frequency source (he_full.txt, OpenSubtitles): 21005 for the exact spelling(s) ארבע + 4289 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 25294, so modernRank 706 (1 + lemma scores above 25294, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pcee847e3",
+   "field": "pos",
+   "old": "unknown",
+   "new": "num",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"תֵּשַׁע • (tésha') f\": \"feminine of תִּשְׁעָה (tish'á, nine)\"; frequency source (he_full.txt, OpenSubtitles): 7405 for the exact spelling(s) תשע + 2124 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 9529, so modernRank 1395 (1 + lemma scores above 9529, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pcee847e3",
+   "field": "enNote",
+   "old": null,
+   "new": "feminine of תִּשְׁעָה (tish'á)",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"תֵּשַׁע • (tésha') f\": \"feminine of תִּשְׁעָה (tish'á, nine)\"; frequency source (he_full.txt, OpenSubtitles): 7405 for the exact spelling(s) תשע + 2124 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 9529, so modernRank 1395 (1 + lemma scores above 9529, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pcee847e3",
+   "field": "gender",
+   "old": null,
+   "new": "f",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"תֵּשַׁע • (tésha') f\": \"feminine of תִּשְׁעָה (tish'á, nine)\"; frequency source (he_full.txt, OpenSubtitles): 7405 for the exact spelling(s) תשע + 2124 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 9529, so modernRank 1395 (1 + lemma scores above 9529, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pcee847e3",
+   "field": "modernRank",
+   "old": null,
+   "new": 1395,
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"תֵּשַׁע • (tésha') f\": \"feminine of תִּשְׁעָה (tish'á, nine)\"; frequency source (he_full.txt, OpenSubtitles): 7405 for the exact spelling(s) תשע + 2124 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 9529, so modernRank 1395 (1 + lemma scores above 9529, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pcee847e3",
+   "field": "flags.reasons",
+   "old": [
+    "pointing and gloss not native-reviewed"
+   ],
+   "new": [
+    "pointing and gloss not native-reviewed",
+    "added/patched from the Wiktionary snapshot by a correction; pos, gloss and rank not native-reviewed (needs-native-review)"
+   ],
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"תֵּשַׁע • (tésha') f\": \"feminine of תִּשְׁעָה (tish'á, nine)\"; frequency source (he_full.txt, OpenSubtitles): 7405 for the exact spelling(s) תשע + 2124 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 9529, so modernRank 1395 (1 + lemma scores above 9529, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pc9b3fcc6",
+   "field": "pos",
+   "old": "unknown",
+   "new": "num",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"שִׁישָּׁה • (shishá) m (defective spelling שִׁשָּׁה)\": \"six\"; frequency source (he_full.txt, OpenSubtitles): 11873 for the exact spelling(s) שישה + ששה + 1965 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 13838, so modernRank 1090 (1 + lemma scores above 13838, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pc9b3fcc6",
+   "field": "en",
+   "old": "six (6)",
+   "new": "six",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"שִׁישָּׁה • (shishá) m (defective spelling שִׁשָּׁה)\": \"six\"; frequency source (he_full.txt, OpenSubtitles): 11873 for the exact spelling(s) שישה + ששה + 1965 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 13838, so modernRank 1090 (1 + lemma scores above 13838, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pc9b3fcc6",
+   "field": "enNote",
+   "old": null,
+   "new": "defective spelling of שִׁישָּׁה (shishá, \"six\")",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"שִׁישָּׁה • (shishá) m (defective spelling שִׁשָּׁה)\": \"six\"; frequency source (he_full.txt, OpenSubtitles): 11873 for the exact spelling(s) שישה + ששה + 1965 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 13838, so modernRank 1090 (1 + lemma scores above 13838, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pc9b3fcc6",
+   "field": "gender",
+   "old": null,
+   "new": "m",
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"שִׁישָּׁה • (shishá) m (defective spelling שִׁשָּׁה)\": \"six\"; frequency source (he_full.txt, OpenSubtitles): 11873 for the exact spelling(s) שישה + ששה + 1965 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 13838, so modernRank 1090 (1 + lemma scores above 13838, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pc9b3fcc6",
+   "field": "modernRank",
+   "old": null,
+   "new": 1090,
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"שִׁישָּׁה • (shishá) m (defective spelling שִׁשָּׁה)\": \"six\"; frequency source (he_full.txt, OpenSubtitles): 11873 for the exact spelling(s) שישה + ששה + 1965 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 13838, so modernRank 1090 (1 + lemma scores above 13838, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "pc9b3fcc6",
+   "field": "flags.reasons",
+   "old": [
+    "pointing and gloss not native-reviewed"
+   ],
+   "new": [
+    "pointing and gloss not native-reviewed",
+    "added/patched from the Wiktionary snapshot by a correction; pos, gloss and rank not native-reviewed (needs-native-review)"
+   ],
+   "reason": "FIRST-500-CHECK section 9: pos unknown and no rank. Wiktionary snapshot: num \"שִׁישָּׁה • (shishá) m (defective spelling שִׁשָּׁה)\": \"six\"; frequency source (he_full.txt, OpenSubtitles): 11873 for the exact spelling(s) שישה + ששה + 1965 for the same word after one proclitic (ו ה ב ל מ כ ש) when that token is not itself a Wiktionary headword = 13838, so modernRank 1090 (1 + lemma scores above 13838, build_lexicon.py scale). vocab5000.json patched this word by an 'additions' entry (or a form entry) with a hand-picked priority. Needs native review."
+  },
+  {
+   "id": "hd5bcfcb8",
+   "field": "modernRank",
+   "old": 24,
+   "new": 1521,
+   "reason": "FIRST-500-CHECK section 1: 99% of this entry's modern frequency mass (720657 in the attribution run of tools/vocab/build_lexicon.py) comes from tokens that are not its own spelling and are the headwords of other entries (אבל: 704684); the mass left (8276, which includes 1114 for the token that is the entry's own spelling) supports modernRank 1521 (1 + lemma scores above 8276). The record's priority becomes min(1521, 1.5 x readRank 424), and the (rerank) entry moves its frequencyRank from 31. Needs native review."
+  },
+  {
+   "id": "hd5bcfcb8",
+   "field": "flags.reasons",
+   "old": [
+    "homograph: other dictionary entries share the unpointed spelling"
+   ],
+   "new": [
+    "homograph: other dictionary entries share the unpointed spelling",
+    "rank lowered: its frequency mass was another entry's word (FIRST-500-CHECK section 1); needs-native-review"
+   ],
+   "reason": "FIRST-500-CHECK section 1: note on the rank lowering of נָבַל (see its modernRank correction). Needs native review."
+  },
+  {
+   "id": "ha5b5601c",
+   "field": "modernRank",
+   "old": 279,
+   "new": 1906,
+   "reason": "FIRST-500-CHECK section 1: 93% of this entry's modern frequency mass (78771 in the attribution run of tools/vocab/build_lexicon.py) comes from tokens that are not its own spelling and are the headwords of other entries (כלום and שלום, read as proclitic + לום: 73346 together); the mass left (5605, which includes 180 for the token that is the entry's own spelling) supports modernRank 1906 (1 + lemma scores above 5605). The record's priority becomes min(1906, 1.5 x readRank 1557), and the (rerank) entry moves its frequencyRank from 370. Needs native review."
+  },
+  {
+   "id": "ha5b5601c",
+   "field": "flags.reasons",
+   "old": [],
+   "new": [
+    "rank lowered: its frequency mass was another entry's word (FIRST-500-CHECK section 1); needs-native-review"
+   ],
+   "reason": "FIRST-500-CHECK section 1: note on the rank lowering of לוֹם (see its modernRank correction). Needs native review."
+  },
+  {
+   "id": "*",
+   "field": "(rerank)",
+   "old": null,
+   "new": "sort ranked records by min(modernRank, 1.5 x readRank), ties by old frequencyRank then id; ranks 1..n contiguous; level from the build bands",
+   "reason": "Applies the build_words.mjs ranking rule to the records added or patched above and to the two modernRank corrections, then renumbers frequencyRank and level; unchanged records keep their order. The two gaps left by the removed duplicates are closed."
   }
  ]
 }

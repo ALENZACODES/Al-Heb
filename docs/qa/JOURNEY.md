@@ -28,7 +28,34 @@ Exact defects and observations from this run:
 5. v0 tiering: speak, typing and listen show the "Preview: unreviewed, may change" banner at the top; Home, Learn, Progress, first-10 and Settings are v0 and show none. No dead end seen at either tier.
 6. Quick-check scores are low (0 to 50 percent first try) because the script answers choice questions by position, not by knowledge; not an app result.
 
+Follow-up fixes after the fourth pass (re-run for personas A and C only: `node tools/qa/journey.mjs --persona A,C`, 7 days, console errors 0):
+- Defect 1 (plan vs Today): cause was two separate pickers. The plan walked the lesson array from the start lesson, one per day, while Today takes the first open lesson (prerequisites met, not done), so any learner who finished a lesson early or out of array order drifted apart. Both now use `src/home/nextlesson.js`; the plan is built from finished lessons on every view, so plan day 1 is Today's lesson and each later day is Today's lesson after the earlier ones are done. `tests/nextlesson.shared.test.js` simulates 7 days for the read, israel and both goals. The harness now re-opens the plan each day (a plan read once and held for a week cannot follow a learner who goes faster); in that run plan and Today agreed on 7 of 7 days for A and for C. Still true: a plan assumes one lesson a day.
+- Defect 2 (C day 1, "Nothing due"): the link was the "Review now" button on the lesson-complete summary, which was always shown, even when no card was due (the Today card correctly said "No reviews due"). It is now hidden when the due count is 0 (`dueCount` in `summaryNode`). The re-run found no empty review session for C.
+- Defect 5 (preview banner): a probe over all 62 static and 14 parameterised routes found no preview route without the banner and no v0 route with one after load. One real gap was fixed: views that rebuild `#main` after an interaction dropped the banner; `mountPreviewBanner` now restores it. Not verified on a real device.
+
 Not covered: real audio, microphone, installed PWA, restore from a backup file (only the download was checked), screen readers, a real phone, real learners. Persona E's first letter, first word and review cards were not exercised.
+
+## Fifth pass (2026-11-04): five personas after the onboarding, audio banner, first-day, settings, typing and reader changes
+
+Run: `node tools/qa/journey.mjs` (A, B, C, D, E; 7 days, D runs 13), 390x844, against a temporary copy of the working tree with a freshly generated precache manifest, scripted emulation as described at the top, not real learners. Console errors, page errors, failed requests: 0 for all five.
+
+Harness drift found and fixed in `tools/qa/journey.mjs` (the first run of this pass was wrong because of it): onboarding is now two question screens, then the plan card. The congregation Continue goes straight to the plan card, and the goal question and minutes live behind the plan card's "Change minutes a day" button (`#ob-change-minutes`, then `#ob-form-minutes`). The script still waited for the minutes screen after Continue, timed out ("SCRIPT PROBLEM: onboarding" for all five personas), never set the Israel goal for C, and then reported a false MEDIUM "first-run card ignores goal" for C. The driver now opens "Change minutes a day" when the persona's goal is not read or its minutes are not 10. After the fix that finding does not appear. Also: the Today card now carries the Israel goal (C's first card reads "Start: Hello, thanks, sorry").
+
+| Persona | First letter | First word | Review cards | Backup | Dead end |
+|---|---|---|---|---|---|
+| A: beginner, Ashkenazi | Pass: first-10 from "Learn your first letter: Shin" | Pass: first-10 completed, then "Continue: Lamed, final Mem and Vav: Shalom" | Pass: 34 cards stored; 8 lessons completed by day 7 | Pass: 11 keys, curriculum and cards present | None |
+| B: placement, Sephardi, 15 min | Via lessons: placement says r13, `start` is r01, B starts r01 | Via lessons | Pass: Today says "Review N due cards first" on days 5 and 7 (27 and 26 due); 46 cards; 10 lessons | Pass: 12 keys | None |
+| C: Israel goal, 10 min | Not applicable (Israel track): plan start "Start lesson il01", first card "Start: Hello, thanks, sorry" | Pass: il lessons, 7 completed | Pass: 45 cards; "Review 20 due cards first" on day 5 | Pass: 11 keys | None |
+| D: away 10 days | Pass (as A) | Pass (as A) | Pass: day 13 Home said "Welcome back", "16 cards due" and the script reviewed 16 | Pass: 11 keys | None. Streak line "Paused. Your best streak was 2 days"; the main button was the next lesson, with the 16 due cards as a secondary link |
+| E: reads /read only | Not exercised | Not exercised | Not exercised: 0 cards, 0 lessons | Downloads; 3 keys, no curriculum or cards, as expected | None. 7-day streak from reading, reader opened each day with Hebrew present |
+
+Plan vs Today card agreement (days where the script compared them): A 7 of 7, B 6 of 6, C 7 of 7, D 3 of 3.
+
+Observations and findings in this run:
+1. LOW, headless-only: "No sound: the browser voice reported an error." in the sound bar and "No sound: speech-error." in the lesson Listen note (A, B, C, D); first-10 "Hear it" says "Sound is not available on this device yet." Headless Chromium has no voices, so a real browser was not checked.
+2. LOW, C first-run card: the Today card for the Israel goal still opens with "Welcome. One small step at a time: the first is one letter, about 2 minutes." above a button that starts an Israel lesson ("Start: Hello, thanks, sorry"). The sentence mentions a letter; the button does not. Wording only.
+3. Harness drift, fixed (reader): the reader now keeps the text picker, show/hide switches, Play all and letter highlights inside a closed "Change text, show or hide, highlight letters" details (`details.crp-ctl`). Persona E's first re-run in this pass therefore opened "The Priestly Blessing (Birkat Kohanim)" all 7 days because the script's picker, switch and highlight actions silently hit hidden controls. The driver now opens that details first. Re-run for E only (`--persona E`): seven different texts opened on days 1 to 7 (Priestly Blessing, Shema Yisrael, V'ahavta verse 1, V'ahavta verses 2-3, V'ahavta, Shema and V'ahavta, Baruch shem), letter highlight works each day, 7-day streak, 0 console errors, 0 findings. The E row above and its counts are from the first full run; the E results are unchanged by the re-run.
+4. Not checked: the new audio banner, the settings page and the typing keys changes are not exercised by this script beyond the backup download (the v0 walk covers Settings and restore; typing is only opened on day 1 and 3 here).
 
 ## What was emulated
 
@@ -149,3 +176,21 @@ Lessons whose quick check has no letters (r04 "Shabbat Shalom", r05, r08 and oth
 
 ### Still not fixed
 Raw "speech-error" wording (low, headless only, not my files). The microphone path, real audio, installed PWA and real learners were not covered.
+
+## Sixth pass (2026-11-04): five personas after the goal-first onboarding, short Home, sound bar and action bar changes
+
+Scripted emulation, not real learners. `node tools/qa/journey.mjs` (A to E, 7 days, D runs 13) at 390x844 against a temp copy with a freshly built precache; the copy was deleted afterwards. Console errors, page errors, failed requests: 0 for all five.
+
+Harness changes (drift, not product): (1) the short Home draws the streak line only when the count or best is 2 or more (`src/home/today.js`), so on day 2 the script read an empty line as "0" and raised `streak-vs-rule` and `streak-vs-actions` for A, B, C, D; it now skips those checks when no line is drawn and records a note. (2) Persona E looks for the reader from the full Home's Opening card; first-run Home shows a Read tile instead, so the script falls back to `#home-rest a[href="#/read"]` (it had raised `read-no-link-from-home`). Before these two changes the first run flagged those findings; the numbers below are from the second run.
+
+| Persona | Steps | Findings | Backup |
+|---|---|---|---|
+| A: beginner, Ashkenazi | 91 | 1 low (`raw-speech-error`) | downloaded, 11 keys, curriculum and cards present |
+| B: placement, Sephardi | 86 | 1 low (same) | 12 keys, curriculum and cards present |
+| C: Israel goal | 85 | 1 low (same) | 10 keys, curriculum and cards present |
+| D: away 10 days | 57 | 1 low (same) | 11 keys, curriculum and cards present |
+| E: reader only | 28 | none | 3 keys, no curriculum or cards (as expected) |
+
+Open product finding (low, unchanged from before): in a lesson, Listen shows "No sound: speech-error." (raw code) while the sound bar says "No sound: the browser voice reported an error." Headless Chromium has no speech voices, so this is not checked in a real browser. Repro: open any lesson, tap Listen.
+
+Not covered by this run: the streak line on the short Home is no longer checked at 1 day (it is not shown); whether hiding it at 1 day is intended was not judged. `src/letters/trace.view.js` changed after the temp copy was made, so it was not in this run.

@@ -130,22 +130,22 @@
    "id": "tav",
    "title": "Tav without a dot (ת)",
    "nav": "Tav",
-   "summary": "A tav with no dagesh dot is t in the Israeli and Sephardi readings. In the Ashkenazi reading it is s, which is why שַׁבָּת is shabbat in one and shabbos in the other. A tav with a dot is t in all three.",
+   "summary": "A tav with no dagesh dot is t in the Israeli and Sephardi readings. In the Ashkenazi reading it is s, which is why שַׁבָּת is shabat in one and shabos in the other. A tav with a dot is t in all three.",
    "rows": [
     [
      "israeli",
      "t",
-     "shabbat"
+     "shabat"
     ],
     [
      "sephardi",
      "t",
-     "shabbat"
+     "shabat"
     ],
     [
      "ashkenazi",
      "s",
-     "shabbos"
+     "shabos"
     ]
    ],
    "who": "Rule-generated: Ashkenazi s for a tav without dagesh, as in the cited description (\"ungeminated tav is pronounced [s]\"). Some Sephardi communities say th or d here; those are not generated.",
@@ -160,7 +160,7 @@
      "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
     }
    ],
-   "why": "Tav without a dagesh (ת): t in Israeli and Sephardi, but s in Ashkenazi (shabbat / shabbos).",
+   "why": "Tav without a dagesh (ת): t in Israeli and Sephardi, but s in Ashkenazi (shabat / shabos).",
    "examples": [
     {
      "he": "אֵת",
@@ -215,6 +215,19 @@
      ]
     },
     {
+     "he": "זֹאת",
+     "gloss": "this (feminine)",
+     "ipa": [
+      "ˈzot",
+      "ˈzot",
+      "ˈzojs"
+     ],
+     "simple": [
+      "zot",
+      "zoys"
+     ]
+    },
+    {
      "he": "מֵת",
      "gloss": "to die",
      "ipa": [
@@ -225,19 +238,6 @@
      "simple": [
       "met",
       "meis"
-     ]
-    },
-    {
-     "he": "הִתְחִיל",
-     "gloss": "to start, to begin",
-     "ipa": [
-      "hit.ˈχil",
-      "hit.ˈħil",
-      "ˈhis.xil"
-     ],
-     "simple": [
-      "hitchil",
-      "hischil"
      ]
     }
    ]
@@ -344,16 +344,16 @@
      ]
     },
     {
-     "he": "הוֹדָה",
-     "gloss": "to admit, acknowledge, confess",
+     "he": "זֹאת",
+     "gloss": "this (feminine)",
      "ipa": [
-      "ho.ˈda",
-      "ho.ˈda",
-      "ˈhoj.də"
+      "ˈzot",
+      "ˈzot",
+      "ˈzojs"
      ],
      "simple": [
-      "hodah",
-      "hoydeh"
+      "zot",
+      "zoys"
      ]
     }
    ]
@@ -399,6 +399,19 @@
    "why": "Het (ח): [χ] in Israeli, a deeper throat sound [ħ] in Sephardi, [x] in Ashkenazi.",
    "examples": [
     {
+     "he": "אֲנַחְנוּ",
+     "gloss": "we",
+     "ipa": [
+      "a.naχ.ˈnu",
+      "ʔa.naħ.ˈnu",
+      "a.ˈnax.nu"
+     ],
+     "simple": [
+      "anachnu",
+      "anachnu"
+     ]
+    },
+    {
      "he": "חָשַׁב",
      "gloss": "to think",
      "ipa": [
@@ -412,24 +425,11 @@
      ]
     },
     {
-     "he": "אֶחָד",
-     "gloss": "one, one of",
-     "ipa": [
-      "e.ˈχad",
-      "ʔe.ˈħad",
-      "ˈe.xɔd"
-     ],
-     "simple": [
-      "echad",
-      "echod"
-     ]
-    },
-    {
      "he": "לָקַח",
      "gloss": "to take (grasp with the hands)",
      "ipa": [
-      "ˈla.kaχ",
-      "ˈla.kaħ",
+      "la.ˈkaχ",
+      "la.ˈkaħ",
       "ˈlɔ.kax"
      ],
      "simple": [
@@ -579,8 +579,8 @@
       "hi.ˈɡi.a"
      ],
      "simple": [
-      "higgi'a",
-      "higgi'a"
+      "higi'a",
+      "higi'a"
      ]
     },
     {
@@ -640,7 +640,7 @@
    "examples": [
     {
      "he": "אֲשֶׁר",
-     "gloss": "Introduces a subordinate clause",
+     "gloss": "introduces a subordinate clause",
      "ipa": [
       "a.ˈʃeʁ",
       "ʔa.ˈʃer",
@@ -666,7 +666,7 @@
     },
     {
      "he": "צָרִיךְ",
-     "gloss": "Needing, in need of (something)",
+     "gloss": "needing, in need of (something)",
      "ipa": [
       "tsa.ˈʁiχ",
       "tsa.ˈrix",
@@ -712,8 +712,8 @@
       "ˈsi.dejr"
      ],
      "simple": [
-      "sidder",
-      "siddeir"
+      "sider",
+      "sideir"
      ]
     }
    ]
@@ -821,7 +821,7 @@
     },
     {
      "he": "צָרִיךְ",
-     "gloss": "Needing, in need of (something)",
+     "gloss": "needing, in need of (something)",
      "ipa": [
       "tsa.ˈʁiχ",
       "tsa.ˈrix",

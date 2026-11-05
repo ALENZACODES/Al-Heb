@@ -23,7 +23,7 @@ export const CODES = {
   ko: { text: 'Short o (kamatz katan or chataf-kamatz): [o] in Israeli, [ɔ] in Sephardi and Ashkenazi. The difference is small.' },
   tz: { text: 'Tzere (ֵ): a plain e in Israeli and Sephardi, but "ay" [ej] in Ashkenazi.' },
   ho: { text: 'Cholam (ֹ): o in Israeli and Sephardi, but "oy" [oj] in the Polish-style Ashkenazi reading used here (other Ashkenazi readings differ and are not shown).' },
-  tv: { text: 'Tav without a dagesh (ת): t in Israeli and Sephardi, but s in Ashkenazi (shabbat / shabbos).' },
+  tv: { text: 'Tav without a dagesh (ת): t in Israeli and Sephardi, but s in Ashkenazi (shabat / shabos).' },
   ch: { text: 'Het (ח): [χ] in Israeli, a deeper throat sound [ħ] in Sephardi, [x] in Ashkenazi.' },
   kh: { text: 'Khaf without a dagesh (כ / ך): [χ] in Israeli, [x] in Sephardi and Ashkenazi.' },
   ay: { text: 'Ayin (ע): silent in Israeli and Ashkenazi, a throat sound [ʕ] in Sephardi.' },

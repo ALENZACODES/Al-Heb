@@ -1,6 +1,7 @@
 // Fallback audio used when src/audio/player.js is missing or fails to load.
 // Same interface as lane 4's player: {play(kind,id,opts?), playSequence([...]), has(kind,id), flags}.
 // Speaks via speechSynthesis (he-IL) and flags 'tts-fallback'. No recorded audio is involved.
+import { speechText } from './names.js';
 export function createStubAudio({ settings } = {}) {
   /** @type {Record<string,string>|null} */
   let texts = null;
@@ -27,7 +28,7 @@ export function createStubAudio({ settings } = {}) {
       const text = opts.text ?? await lookup(kind, id) ?? (kind === 'word' || kind === 'line' ? id : undefined);
       if (!text || !synth) return { played: false, flags: api.flags, reason: !synth ? 'no speechSynthesis' : 'no text for ' + kind + ':' + id };
       return new Promise((resolve) => {
-        const u = new SpeechSynthesisUtterance(text);
+        const u = new SpeechSynthesisUtterance(speechText(text));
         u.lang = 'he-IL'; u.rate = 0.85;
         u.onend = () => resolve({ played: true, flags: api.flags });
         u.onerror = () => resolve({ played: false, flags: api.flags, reason: 'tts error' });

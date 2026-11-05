@@ -130,6 +130,9 @@ export async function runChecks(root) {
   check('X-Content-Type-Options: nosniff', star.get('x-content-type-options')?.value === 'nosniff');
   check('Referrer-Policy set', !!star.get('referrer-policy'));
   check('Permissions-Policy set', !!star.get('permissions-policy'));
+  const pp = star.get('permissions-policy')?.value ?? '';
+  check('Permissions-Policy allows the microphone for the app origin only (microphone=(self)), not everyone and not blocked', /(^|,\s*)microphone=\(self\)(,|$)/.test(pp), pp);
+  check('Permissions-Policy still denies payment, usb, bluetooth, serial', ['payment', 'usb', 'bluetooth', 'serial'].every((f) => new RegExp(`(^|,\\s*)${f}=\\(\\)(,|$)`).test(pp)));
 
   check('_headers sets Content-Type application/manifest+json for /manifest.webmanifest explicitly (the local server has a built-in MIME map, so this is checked on the file, not just the response)', headersFor(rules, '/manifest.webmanifest').get('content-type')?.value === 'application/manifest+json');
 
@@ -180,7 +183,7 @@ export async function runChecks(root) {
     check('sw.js: 200, JavaScript MIME', sw.r.status === 200 && /^(text|application)\/javascript/.test(sw.ct), sw.ct);
     check('sw.js: Cache-Control no-cache (browsers also bypass HTTP cache for it, but proxies should not keep it)', sw.cc === 'no-cache', sw.cc);
     const appJs = existsSync(join(root, 'src/app.js')) ? readFileSync(join(root, 'src/app.js'), 'utf8') : '';
-    const reg = /serviceWorker\.register\(\s*['"]([^'"]+)['"](?:\s*,\s*(\{[^}]*\}))?/.exec(appJs);
+    const reg = /(?:serviceWorker|swc)\.register\(\s*['"]([^'"]+)['"](?:\s*,\s*(\{[^}]*\}))?/.exec(appJs);
     check("app registers 'sw.js' relative to the page with no custom scope option", reg && reg[1] === 'sw.js' && !reg[2], reg ? reg[0] : 'registration not found in src/app.js');
     const man = await get('/manifest.webmanifest');
     check('manifest: Content-Type application/manifest+json', /^application\/manifest\+json/.test(man.ct), man.ct);

@@ -1,0 +1,60 @@
+ALEF IMAGE RUN - REDO 08: regenerate flagged images (17 of 177)
+
+No attachments are needed; everything is described in words below. These images were made once already and are being REDONE because the first versions had text in them, came out square instead of wide, or used the wrong backdrop. Follow the size, the backdrop and the no-text rule literally.
+
+STYLE GUIDE v1 (applies to EVERY image below):
+STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left.
+
+CHARACTERS (keep identical across images):
+CHARACTER SHEET A 'Ari': a friendly Israeli man around 35, short dark curly hair, trimmed beard, warm brown skin tone, navy T-shirt, simple silver chain; expression open and encouraging; no kippah by default.
+CHARACTER SHEET B 'Noa': a friendly Israeli woman around 32, shoulder-length wavy dark hair, olive skin, terracotta blouse, small gold hoop earrings; expression warm and confident.
+MASCOT 'Rimon': a small round pomegranate-red sprite with a gold crown-shaped calyx on top, two olive-green leaf ears, big friendly dot eyes, tiny arms and feet, thick charcoal outline; expressive but never any writing.
+
+BACKDROPS: none of the items below uses a background scene.
+
+REFERENCES: nothing is attached. Where a prompt says "the same keyword object as the mnemonic image", draw the keyword object named in that prompt. Keep the characters identical to the CHARACTER SHEET descriptions.
+
+TASK: generate 17 separate images in STYLE GUIDE v1, in this order. Each item gives the exact filename (label the image with it in your reply, never inside the image), the aspect hint, why it is being redone, and the full prompt.
+
+1. FILENAME: V06_cholam_male_card.png | SIZE: use 1:1 (target 1024x1024) | REDO BECAUSE: aspect substituted (square delivered, wide asked)
+   PROMPT: The keyword object (Open door with a ball, already described) placed in the blank square of the already described flashcard frame. MUST be square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank.
+2. FILENAME: V07_cholam_chaser_card.png | SIZE: use 1:1 (target 1024x1024) | REDO BECAUSE: aspect substituted (square delivered, wide asked)
+   PROMPT: The keyword object (Globe, already described) placed in the blank square of the already described flashcard frame. MUST be square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank.
+3. FILENAME: V08_kubutz_card.png | SIZE: use 1:1 (target 1024x1024) | REDO BECAUSE: aspect substituted (square delivered, wide asked)
+   PROMPT: The keyword object (Boot, already described) placed in the blank square of the already described flashcard frame. MUST be square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank.
+4. FILENAME: V09_shuruk_card.png | SIZE: use 1:1 (target 1024x1024) | REDO BECAUSE: aspect substituted (square delivered, wide asked)
+   PROMPT: The keyword object (Moon, already described) placed in the blank square of the already described flashcard frame. MUST be square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank.
+5. FILENAME: V10_shva_card.png | SIZE: use 1:1 (target 1024x1024) | REDO BECAUSE: aspect substituted (square delivered, wide asked)
+   PROMPT: The keyword object (a finger on closed lips, and a second tiny 'uh' hiccup bubble, already described) placed in the blank square of the already described flashcard frame. MUST be square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank.
+6. FILENAME: V11_chataf_patach_card.png | SIZE: use 1:1 (target 1024x1024) | REDO BECAUSE: aspect substituted (square delivered, wide asked)
+   PROMPT: The keyword object (Open palm with a running figure (speed), already described) placed in the blank square of the already described flashcard frame. MUST be square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank.
+7. FILENAME: V12_chataf_segol_card.png | SIZE: use 1:1 (target 1024x1024) | REDO BECAUSE: aspect substituted (square delivered, wide asked)
+   PROMPT: The keyword object (Bed with a running figure, already described) placed in the blank square of the already described flashcard frame. MUST be square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank.
+8. FILENAME: V12_chataf_segol_keyword.png | SIZE: use 1:1 (target 1024x1024) | REDO BECAUSE: contains_text (OCR hit)
+   PROMPT: Keyword object: Bed with a running figure. MUST be square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank.
+9. FILENAME: V13_chataf_kamatz_card.png | SIZE: use 1:1 (target 1024x1024) | REDO BECAUSE: aspect substituted (square delivered, wide asked)
+   PROMPT: The keyword object (Globe with a running figure, already described) placed in the blank square of the already described flashcard frame. MUST be square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank.
+10. FILENAME: V14_dagesh_card.png | SIZE: use 1:1 (target 1024x1024) | REDO BECAUSE: aspect substituted (square delivered, wide asked)
+   PROMPT: The keyword object (a Drum (hard beat) beside a soft Pillow, already described) placed in the blank square of the already described flashcard frame. MUST be square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank.
+11. FILENAME: V15_shin_sin_dots_card.png | SIZE: use 1:1 (target 1024x1024) | REDO BECAUSE: contains_text (OCR hit); aspect substituted (square delivered, wide asked)
+   PROMPT: The keyword object (Shark fin (right dot, 'sh') and Sun (left dot, 's'), already described) placed in the blank square of the already described flashcard frame. MUST be square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank.
+12. FILENAME: VOC_numbers_08.png | SIZE: use 1:1 (target 1024x1024) | REDO BECAUSE: contains_text (OCR hit)
+   PROMPT: One centred image: eight falafel balls. No people unless the item is an action. MUST be square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank.
+13. FILENAME: VOC_numbers_09.png | SIZE: use 1:1 (target 1024x1024) | REDO BECAUSE: contains_text (OCR hit)
+   PROMPT: One centred image: nine stars. No people unless the item is an action. MUST be square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank.
+14. FILENAME: TROPE_etnachta_card.png | SIZE: use 1:1 (target 1024x1024) | REDO BECAUSE: aspect substituted (square delivered, wide asked)
+   PROMPT: Command 150 (Trope set 1 — the common rests): Etnachta (a crescent moon resting in a hammock); Sof Pasuk (two fence posts at a garden gate — the end of the verse); Tifcha (a hand tipping a small tray); Zakef Katan (a small upright torch); Zakef Gadol (a tall upright torch). Image 2 of 10: the same crescent moon resting in a hammock on a FRAME_lettercard card, for the trope mark Etnachta. Square 1024x1024. No text of any kind anywhere in the image. MUST be square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank.
+15. FILENAME: TROPE_sof_pasuk_card.png | SIZE: use 1:1 (target 1024x1024) | REDO BECAUSE: aspect substituted (square delivered, wide asked)
+   PROMPT: Command 150 (Trope set 1 — the common rests): Etnachta (a crescent moon resting in a hammock); Sof Pasuk (two fence posts at a garden gate — the end of the verse); Tifcha (a hand tipping a small tray); Zakef Katan (a small upright torch); Zakef Gadol (a tall upright torch). Image 4 of 10: the same two fence posts at a garden gate — the end of the verse on a FRAME_lettercard card, for the trope mark Sof Pasuk. Square 1024x1024. No text of any kind anywhere in the image. MUST be square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank.
+16. FILENAME: TROPE_tifcha_card.png | SIZE: use 1:1 (target 1024x1024) | REDO BECAUSE: aspect substituted (square delivered, wide asked)
+   PROMPT: Command 150 (Trope set 1 — the common rests): Etnachta (a crescent moon resting in a hammock); Sof Pasuk (two fence posts at a garden gate — the end of the verse); Tifcha (a hand tipping a small tray); Zakef Katan (a small upright torch); Zakef Gadol (a tall upright torch). Image 6 of 10: the same hand tipping a small tray on a FRAME_lettercard card, for the trope mark Tifcha. Square 1024x1024. No text of any kind anywhere in the image. MUST be square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank.
+17. FILENAME: TROPE_zakef_gadol_card.png | SIZE: use 1:1 (target 1024x1024) | REDO BECAUSE: aspect substituted (square delivered, wide asked)
+   PROMPT: Command 150 (Trope set 1 — the common rests): Etnachta (a crescent moon resting in a hammock); Sof Pasuk (two fence posts at a garden gate — the end of the verse); Tifcha (a hand tipping a small tray); Zakef Katan (a small upright torch); Zakef Gadol (a tall upright torch). Image 10 of 10: the same tall upright torch on a FRAME_lettercard card, for the trope mark Zakef Gadol. Square 1024x1024. No text of any kind anywhere in the image. MUST be square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank.
+
+RULES (again):
+- NEVER put any text in any image. ABSOLUTELY NO TEXT OF ANY KIND anywhere in the image: no Hebrew, no nikkud, no Latin letters, no numerals, no writing, no lettering-like marks, no logos, no signage, no labels, no price tags. Every sign, board, awning, screen, page, book, scroll and label must be completely blank.
+- Allowed aspects are ONLY 1:1, 3:2 and 2:3: follow the size hint on each item exactly. A "3:2 (wide)" item must come out clearly wider than tall; never deliver a square for it.
+- Backdrops: when an item names a BG_... scene, use exactly that scene as described above; never swap in a different scene.
+- Generate exactly 17 separate images, one per numbered item, each as its own image (never a collage or grid). Do not skip or merge items.
+
+When all images are done, reply ONLY with the numbered list of filenames (item number, exact filename) and the count, then STOP and wait for me to say "next". Do not start any other command.

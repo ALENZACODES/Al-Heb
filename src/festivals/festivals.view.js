@@ -9,6 +9,7 @@
  * Offline; reads repo data only. Links are shown only when the route exists in this build (ctx.hasRoute).
  */
 import { h, heSpan } from "../shell/ui.js";
+import { uiEnglish } from "../shell/names.js";
 import { loadJSON } from "../curriculum/data.js";
 import { CAL_PREFS_KEY } from "../curriculum/calendar.locations.js";
 import { weekCard, linksFor, shabbatReady, packById, PACK_OF } from "./model.js";
@@ -95,7 +96,7 @@ function packView(ctx, D, pack) {
     ctx.img?.(h, { kind: 'festival', id: pack.id, class: 'fv-pic', width: 900 }),
     h("p", { class: "fv-muted" }, `${pl(pack.size, "word", "words")} from ALEF's vocabulary list; ${pack.withLine} with a reading line copied from ALEF's texts. ${pack.short ? `Short by ${pack.short}: the list has no entry for the terms below.` : ""}`),
     h("ul", { class: "fv-plain", "data-part": "words" }, ...pack.words.map((w) => h("li", { class: "fv-card", "data-word": w.id },
-      h("div", {}, heSpan(w.he), " ", h("strong", {}, w.en), h("span", { class: "fv-muted" }, ` (${w.translit}, ${w.pos})`)),
+      h("div", {}, heSpan(w.he), " ", h("strong", {}, uiEnglish(ctx, w.en)), h("span", { class: "fv-muted" }, ` (${w.translit}, ${w.pos})`)),
       w.senseNote ? h("p", { class: "fv-muted" }, w.senseNote) : null,
       w.line ? h("div", { class: "fv-line" }, h("div", {}, heSpan(w.line.he)), h("div", { class: "fv-muted" }, `From ${w.line.title}. `, hasRoute(ctx)("text") && w.line.source === "registry" && D.registryById.has(w.line.id) ? h("a", { href: `#/read/${w.line.id}` }, "Open the text") : null)) : h("p", { class: "fv-muted" }, "No reading line in ALEF's texts yet.")))),
   ];
@@ -123,7 +124,7 @@ async function readyView(ctx, D) {
     h("ul", { class: "fv-plain", "data-part": "phrases" }, ...r.phrases.map((p) => h("li", { class: "fv-card", "data-phrase": p.id },
       h("h2", {}, p.label), h("p", { class: "fv-muted" }, p.moment),
       ...p.he.map((l) => h("div", {}, heSpan(l))),
-      p.english ? h("p", { class: "fv-muted" }, p.english) : null,
+      p.english ? h("p", { class: "fv-muted" }, uiEnglish(ctx, p.english)) : null,
       h("p", { "data-coverage": p.decodable === null ? "unknown" : p.decodable ? "full" : "partial" },
         p.decodable === null ? "Coverage unknown." : p.decodable ? "You have been taught every letter and sign in it." : `${p.full} of ${pl(p.lines, "line", "lines")} use only what you have been taught${p.almost ? `; ${p.almost} more ${p.almost === 1 ? "is" : "are"} one step away` : ""}.`),
       hasRoute(ctx)("text") ? h("a", { class: "btn secondary", href: p.href }, "Open and read it") : null))),

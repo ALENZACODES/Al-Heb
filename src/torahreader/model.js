@@ -6,6 +6,7 @@
 //   legend      rows for the trope reference page
 // Data comes from data/corpus/reader/*.json, data/corpus/trope/*.json (tools/corpus/trope.mjs).
 
+import { speechText, SPOKEN_NAME } from '../shell/names.js';
 export const STORE_KEY = 'torahreader.v1';
 export const PASSAGE_IDS = ['priestly-blessing', 'shema'];
 export const VIEWS = ['reader', 'legend'];
@@ -15,7 +16,14 @@ export const SPEEDS = [
   { id: 'medium', ms: 1500, label: 'Medium' },
   { id: 'fast', ms: 900, label: 'Fast' },
 ];
-export const DEFAULT_STATE = { v: 1, passage: 'priestly-blessing', view: 'reader', showTrope: true, showNiqqud: true, speed: 'medium' };
+/** Hebrew text size steps. `scale` multiplies the 2rem verse size (and the word detail and legend marks), so the small trope marks get bigger too. */
+export const SIZES = [
+  { id: 'normal', scale: 1, label: 'Normal' },
+  { id: 'large', scale: 1.35, label: 'Large' },
+  { id: 'largest', scale: 1.7, label: 'Largest' },
+];
+export const sizeScale = (id) => (SIZES.find((x) => x.id === id) || SIZES[0]).scale;
+export const DEFAULT_STATE = { v: 1, passage: 'priestly-blessing', view: 'reader', showTrope: true, showNiqqud: true, speed: 'medium', size: 'normal' };
 
 /** Anything unknown or malformed in a stored value falls back to the default. */
 export function normaliseState(raw) {
@@ -26,6 +34,7 @@ export function normaliseState(raw) {
   if (typeof raw.showTrope === 'boolean') s.showTrope = raw.showTrope;
   if (typeof raw.showNiqqud === 'boolean') s.showNiqqud = raw.showNiqqud;
   if (SPEEDS.some((x) => x.id === raw.speed)) s.speed = raw.speed;
+  if (SIZES.some((x) => x.id === raw.size)) s.size = raw.size;
   return s;
 }
 export const speedMs = (id) => (SPEEDS.find((x) => x.id === id) || SPEEDS[1]).ms;
@@ -35,8 +44,9 @@ const NIQQUD_RE = /[ְ-ׇֻּׁׂ]/g;
 export const stripNiqqud = (s) => s.replace(NIQQUD_RE, '');
 export const TETRAGRAMMATON = 'יְהוָה';
 /** The spoken form of the divine name, as the audio manifest writes it. */
-export const SPOKEN_NAME = 'אֲדֹנָי';
-export const spokenText = (he) => he.split(TETRAGRAMMATON).join(SPOKEN_NAME);
+export { SPOKEN_NAME };
+/** Speech text: the single shared rule in src/shell/names.js (bare, maqaf-compound and prefixed forms all become the spoken name). */
+export const spokenText = (he) => speechText(he);
 
 /** Flat list of reading tokens: { n (0-based, whole passage), verseIndex, tokenIndex, verse, token, words[], last (last token of verse) }. */
 export function flatten(passage) {
@@ -53,10 +63,61 @@ export function flatten(passage) {
  * Text of one token for the switches. With cantillation on, the UXLC form (trope marks, meteg, paseq) is used and the sof pasuq
  * is left off (the view prints it once at the end of the verse); with it off, the plain registry form is used.
  */
+/** The source writes a paseq with a space before it; the per-word forms carry it attached, so the space is put back. Nothing else changes. */
+export const spacePaseq = (t) => t.replace(/([^\s])\u05C0/g, '$1 \u05C0');
 export function display(item, { showTrope, showNiqqud }) {
-  let t = item.words.map((w) => (showTrope ? w.heTrope.replace(/׃/g, '') : w.he)).join('');
+  let t = item.words.map((w) => (showTrope ? spacePaseq(w.heTrope.replace(/׃/g, '')) : w.he)).join('');
   if (!showNiqqud) t = stripNiqqud(t);
   return t;
+}
+const isLetter = (c) => c >= '\u05D0' && c <= '\u05EA';
+const isMark = (c) => (c >= '\u0591' && c <= '\u05BD') || c === '\u05BF' || c === '\u05C1' || c === '\u05C2' || (c >= '\u05C4' && c <= '\u05C7');
+/**
+ * Where the letters written large sit in a list of word strings: [{ wi (index into words), ln (0-based count of Hebrew letters in that word) }].
+ * `letters` lists the base letters in reading order; each is matched to its next occurrence, scanning forward.
+ */
+export function largePositionsIn(words, letters = []) {
+  const out = []; let wi = 0, ln = 0;
+  for (const ch of letters || []) {
+    let found = false;
+    while (!found && wi < words.length) {
+      const ls = [...words[wi]].filter(isLetter);
+      for (; ln < ls.length; ln++) if (ls[ln] === ch) { out.push({ wi, ln }); found = true; ln++; break; }
+      if (!found) { wi++; ln = 0; }
+    }
+  }
+  return out;
+}
+/** Same for a reader verse (verse.words[].he, verse.largeLetters). */
+export const largePositions = (verse) => largePositionsIn(verse.words.map((w) => w.he), verse.largeLetters);
+/** One word's text as [{ t, big }] pieces; `want` is a Set of 0-based letter numbers drawn large (the letter plus its points and marks). */
+export function bigParts(t, want) {
+  if (!want || !want.size) return [{ t, big: false }];
+  const parts = []; let n = -1, cur = '', big = false;
+  const flush = () => { if (cur) parts.push({ t: cur, big }); cur = ''; };
+  for (const c of t) {
+    if (isLetter(c)) { flush(); n++; big = want.has(n); cur = c; }
+    else if (isMark(c)) cur += c;
+    else { flush(); big = false; cur = c; flush(); }
+  }
+  flush();
+  return parts;
+}
+const mergeParts = (parts) => parts.reduce((a, p) => { const l = a[a.length - 1]; if (l && l.big === p.big) l.t += p.t; else a.push({ ...p }); return a; }, []);
+/** Pieces for a list of word strings with large positions from largePositionsIn (for /read and /torahread). */
+export function wordPartsLarge(words, letters) {
+  const pos = largePositionsIn(words, letters);
+  return words.map((w, i) => mergeParts(bigParts(w, new Set(pos.filter((p) => p.wi === i).map((p) => p.ln)))));
+}
+/** Like display(), but as [{ t, big }] pieces so the view can draw the large letters (letter plus its points and marks) bigger. */
+export function displayParts(item, opts, large = []) {
+  const parts = [];
+  for (const w of item.words) {
+    let t = opts.showTrope ? spacePaseq(w.heTrope.replace(/׃/g, '')) : w.he;
+    if (!opts.showNiqqud) t = stripNiqqud(t);
+    parts.push(...bigParts(t, new Set(large.filter((l) => l.wi === w.i).map((l) => l.ln))));
+  }
+  return mergeParts(parts);
 }
 /** Pointed text without cantillation, joined, for transliteration and audio. */
 export const plainOf = (item) => item.token.he;

@@ -27,26 +27,26 @@
     },
     {
       "id": "kamatz", "kind": "vowel", "minutes": 2, "vowel": "kamatz", "he": "בָ",
-      "title": "Your first vowel sign: the small T",
-      "action": "Look under the letter. The small T-shaped mark is a vowel sign. Tap Hear it.",
-      "win": "Win 3 of 5: your first vowel sign.",
+      "title": "Your first vowel mark: the small T",
+      "action": "Look under the letter. The small T-shaped mark is a vowel mark. Tap Hear it.",
+      "win": "Win 3 of 5: your first vowel mark.",
       "why": "vowel",
       "source": "data/pronunciation/niqqud.json (kamatz.shape = base letter bet with the sign); the sound line comes from the same record in your tradition",
-      "check": { "max": 1, "from": "pick", "prompt": "Which one has the vowel sign under it?", "options": [{ "he": "בָ", "right": true }, { "he": "ב" }], "sources": "niqqud.json kamatz.shape; letters.json bet.he" }
+      "check": { "max": 1, "from": "pick", "prompt": "Which one has the vowel mark under it?", "options": [{ "he": "בָ", "right": true }, { "he": "ב" }], "sources": "niqqud.json kamatz.shape; letters.json bet.he" }
     },
     {
       "id": "sha", "kind": "syllable", "minutes": 2, "he": "שָׁ", "parts": ["shin", "kamatz"],
       "title": "Your first syllable",
-      "action": "Letter first, then the sign under it. Shin plus the small T. Say it aloud, then tap Hear it.",
+      "action": "Letter first, then the vowel mark under it. Shin plus the small T. Say it aloud, then tap Hear it.",
       "win": "Win 4 of 5: you read a syllable.",
       "why": "syllable",
       "source": "data/pronunciation/derived/_syllables-001.json (first syllable of שָׁנָה and שָׁמַע)",
-      "check": { "max": 1, "from": "pick", "prompt": "Which one is Shin with the vowel sign?", "options": [{ "he": "שָׁ", "right": true }, { "he": "בָ" }], "sources": "derived syllables; niqqud.json kamatz.shape" }
+      "check": { "max": 1, "from": "pick", "prompt": "Which one is Shin with its vowel mark?", "options": [{ "he": "שָׁ", "right": true }, { "he": "בָ" }], "sources": "derived syllables; niqqud.json kamatz.shape" }
     },
     {
       "id": "shav", "kind": "word", "minutes": 2, "he": "שָׁב", "en": "he returned", "lessonWord": 1,
       "title": "Your first word",
-      "action": "Shin with the sign, then Bet with no dot inside. Say it aloud, then tap Hear it.",
+      "action": "Shin with its vowel mark, then Bet with no dot inside. Say it aloud, then tap Hear it.",
       "win": "Win 5 of 5: you read a real Hebrew word.",
       "why": "word",
       "source": "data/curriculum/lessons.json r01.words[0]; respelling from data/vocab/words.json h842147e5 (translit shav) via the transliteration engine for your tradition",

@@ -12,7 +12,7 @@
  "words": [
   {
    "he": "הוֹדָעָה",
-   "en": "message",
+   "en": "notice",
    "translit": null,
    "pronunciation": {
     "israeli": "hoda'ah"
@@ -314,7 +314,6 @@
    "options": [
     "formal",
     "neutral",
-    "casual",
     "slang"
    ]
   },

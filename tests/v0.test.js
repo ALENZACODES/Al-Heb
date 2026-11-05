@@ -66,7 +66,8 @@ test('More sheet DOM (fake DOM): preview group is last, collapsed, labelled hone
   const details = pv.children[0];
   assert.equal(details.tag, 'details'); assert.equal(details.getAttribute('open'), null, 'collapsed on a v0 page');
   assert.ok(pv.querySelector('summary').textContent.includes('Preview (unreviewed, work in progress)'));
-  for (const g of groups.slice(0, -1)) { assert.notEqual(g.getAttribute('data-section'), 'preview'); for (const a of g.queryAll('a')) assert.equal(by(a.getAttribute('href').slice(2) === '' ? 'home' : ROUTES.find((r) => '#' + r.pattern === a.getAttribute('href'))?.name)?.tier, 'v0'); }
+  // The one documented exception (docs/v0/SCOPE.md): the Accessibility page, a preview page, also has a quick row under Settings.
+  for (const g of groups.slice(0, -1).filter((x) => x.getAttribute('data-quick') !== 'accessibility')) { assert.notEqual(g.getAttribute('data-section'), 'preview'); for (const a of g.queryAll('a')) assert.equal(by(a.getAttribute('href').slice(2) === '' ? 'home' : ROUTES.find((r) => '#' + r.pattern === a.getAttribute('href'))?.name)?.tier, 'v0'); }
   const links = pv.queryAll('a').map((a) => a.getAttribute('href'));
   assert.ok(links.includes('#/calendar') && links.includes('#/read') && !links.includes('#/settings'));
   assert.ok(pv.queryAll('.menu-preview-note').length >= 4, 'one note per section');

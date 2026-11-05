@@ -32,7 +32,7 @@ test('converts known words into the chosen tradition (default from settings), wi
   await run(root, 'שַׁבָּת תּוֹרָה');
   const rows = all(root, (x) => x.tagName === 'TR' && x.children.some((c) => c.tagName === 'TD'));
   assert.equal(rows.length, 2);
-  assert.match(text(rows[0]), /shabbos/); assert.match(text(rows[0]), /ʃa\.bɔs/); assert.match(text(rows[1]), /toyreh/);
+  assert.match(text(rows[0]), /shabos/); assert.match(text(rows[0]), /ʃa\.bɔs/); assert.match(text(rows[1]), /toyreh/);
   assert.ok(all(rows[0], (x) => x.tagName === 'STRONG').length === 1);
   assert.match(text(root), /Ashkenazi respelling/); assert.doesNotMatch(text(root), /Israeli respelling/);
   assert.deepEqual(mem[READ_KEY], { text: 'שַׁבָּת תּוֹרָה', tradition: 'ashkenazi' });
@@ -44,10 +44,10 @@ test('changing the tradition re-renders and writes the congregation setting; "al
   const sel = byTag(root, 'SELECT')[0]; sel.value = 'israeli'; sel.dispatch('change'); await waitFor(() => set.length > 0, { message: 'congregation setting never written' });
   assert.deepEqual(set, [['congregation', 'israeli']]);
   const sheetOf = () => text(all(root, (x) => (x.getAttribute('class') || '').includes('rmw-sheet'))[0]);
-  await waitFor(() => /shabbat/.test(sheetOf()), { message: 'sheet never re-rendered in the Israeli tradition' });
-  assert.match(sheetOf(), /shabbat/); assert.doesNotMatch(sheetOf(), /shabbos/);
+  await waitFor(() => /shabat/.test(sheetOf()), { message: 'sheet never re-rendered in the Israeli tradition' });
+  assert.match(sheetOf(), /shabat/); assert.doesNotMatch(sheetOf(), /shabos/);
   const box = byTag(root, 'INPUT').find((x) => x.getAttribute('type') === 'checkbox'); box.checked = true; box.dispatch('change'); await waitFor(() => /Sephardi respelling/.test(text(root)), { message: 'extra columns never rendered' });
-  assert.match(sheetOf(), /Israeli respelling/); assert.match(sheetOf(), /Sephardi respelling/); assert.match(sheetOf(), /shabbos/);
+  assert.match(sheetOf(), /Israeli respelling/); assert.match(sheetOf(), /Sephardi respelling/); assert.match(sheetOf(), /shabos/);
 });
 
 test('unknown and unpointed words are flagged, not guessed; known words are still converted', async () => {

@@ -13,10 +13,10 @@
 .alef-btn-secondary, .alef-play, .alef-link { background: transparent; color: var(--accent); }
 .alef-btn[disabled] { cursor: not-allowed; background: transparent; color: var(--muted); border-color: var(--border); }
 .alef-items { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; }
-.alef-item { display: grid; grid-template-columns: auto 1fr; gap: .25rem .8rem; align-items: center; padding-block: .4rem; border-block-end: 1px solid var(--border); }
+.alef-item { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .25rem .8rem; align-items: center; padding-block: .4rem; border-block-end: 1px solid var(--border); }
 .alef-item:last-child { border-block-end: 0; }
 .alef-item-body { min-inline-size: 0; }
-.alef-item-actions { grid-column: 2; display: flex; flex-wrap: wrap; gap: .5rem; }
+.alef-item-actions { min-inline-size: 0; grid-column: 2; display: flex; flex-wrap: wrap; gap: .5rem; }
 .alef-he { font-family: var(--font-he); unicode-bidi: isolate; }
 .alef-big { font-size: 3rem; line-height: 1.3; min-inline-size: 4rem; text-align: center; }
 .alef-word { font-size: 1.8rem; line-height: 1.6; }
@@ -26,7 +26,7 @@
 
 .alef-answer { display: grid; gap: .4rem; justify-items: center; border-block-start: 1px solid var(--border); padding-block-start: .75rem; inline-size: 100%; }
 .alef-answer:focus { outline: none; }
-.alef-ratings { display: grid; grid-template-columns: repeat(2, 1fr); gap: .5rem; inline-size: 100%; }
+.alef-ratings { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; inline-size: 100%; }
 .alef-rate-n { font-variant-numeric: tabular-nums; opacity: .8; }
 .alef-rate-1 { background: #8a1c1c; border-color: #8a1c1c; color: #fff; }
 .alef-rate-2 { background: #7a4a00; border-color: #7a4a00; color: #fff; }
@@ -110,3 +110,70 @@
 }
 @keyframes alef-nudge { 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } }
 @media (prefers-reduced-motion: reduce) { .alef-pb-fill, .alef-ex-card { transition: none; animation: none; } }
+
+/* first-day steps: keep the quick check and Next inside the first 375x667 screen */
+.alef-firstday .fd-card { margin: 0.25rem 0; padding: 0.25rem; }
+.alef-firstday .fd-big.alef-huge { font-size: 3.25rem; line-height: 1.25; } /* 1.1 let the vowel marks of a pointed word (shin+qamats, shva, dagesh) hang 1 to 4 px below the line box; 1.25 keeps them inside (docs/qa/HEBREW-RENDER-QA.md) */
+.alef-firstday .fd-why, .alef-firstday .fd-audio-note { margin: 0.25rem 0; }
+.alef-firstday h1 { font-size: 1.15rem; margin: 0.25rem 0; }
+.alef-firstday h2 { font-size: 1.1rem; margin: 0.25rem 0; }
+.alef-firstday .fd-body p { margin: 0.35rem 0; }
+.alef-firstday .fd-draft { margin: 0.15rem 0; }
+
+/* Match exercise: Hebrew phrase beside one select, so 4 to 5 pairs fit on about one phone screen. */
+.alef-int-match { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .35rem .75rem; margin-block: .35rem; }
+.alef-int-label { flex: 1 1 11rem; min-width: 0; }
+.alef-int-pick { width: 100%; min-height: var(--tap); font: inherit; }
+
+/* Sticky action bar (Check / Next / Undo / Skip) of the exercise cards: stays on screen above the fixed tab bar,
+   so the primary action never sits below the first 375x667 screen. 3.6rem = the tab bar's 3.5rem plus its border. */
+.alef-actionbar { position: sticky; inset-block-end: 0; z-index: 40; margin-block-start: .5rem; padding: .5rem; background: var(--card); border-block-start: 1px solid var(--border); border-radius: 0 0 var(--radius) var(--radius); }
+.alef-actionbar-lead { display: contents; }
+.alef-actionbar .btn { min-block-size: 44px; }
+.alef-ex-card [role="status"], .alef-ex-card .alef-fb, .alef-ex-card .alef-why, .alef-ex-card .alef-int-opt { scroll-margin-block-end: calc(9rem + env(safe-area-inset-bottom)); }
+:root:has(.alef-actionbar) { scroll-padding-block-end: calc(9rem + env(safe-area-inset-bottom)); }
+@media (max-width: 719.98px) {
+  .alef-actionbar { inset-block-end: calc(3.6rem + env(safe-area-inset-bottom)); }
+  body:has(input:focus, textarea:focus, select:focus) .alef-actionbar { inset-block-end: env(safe-area-inset-bottom); }
+}
+@media (max-height: 480px) and (max-width: 719.98px) { .alef-actionbar { inset-block-end: env(safe-area-inset-bottom); } }
+/* Zoomed to 400% a 1280x800 window is 320x200 CSS px: a pinned bar would cover a third of what is left, so the bar scrolls with the page there. */
+@media (max-height: 320px) { .alef-actionbar { position: static; } :root:has(.alef-actionbar) { scroll-padding-block-end: 0; } .alef-ex-card [role="status"], .alef-ex-card .alef-fb, .alef-ex-card .alef-why, .alef-ex-card .alef-int-opt { scroll-margin-block-end: 0; } }
+@media (forced-colors: active) { .alef-actionbar { border-block-start: 2px solid CanvasText; } }
+.alef-actionbar .alef-int-rate { flex: 1 1 100%; display: grid; grid-template-columns: repeat(2, 1fr); gap: .5rem; }
+.alef-actionbar .alef-int-rate[hidden] { display: none; }
+@media (min-width: 560px) { .alef-actionbar .alef-int-rate { grid-template-columns: repeat(4, 1fr); } }
+.alef-int-answer { scroll-margin-block-end: calc(9rem + env(safe-area-inset-bottom)); }
+
+/* lesson page: compact top so the first Listen and the first teaching content are above the fold on a 375x667 phone */
+.alef-meta { margin-block: .15rem .4rem; }
+.alef-draft { padding: 0 .75rem; margin-block: .25rem; }
+.alef-draft summary { min-block-size: 44px; padding-block: .6rem; font-size: .95rem; }
+.alef-draft p { margin: 0 0 .5rem; font-weight: 400; }
+.alef-goals { padding-block: 0; margin-block: .5rem; }
+.alef-goals summary { font-weight: 700; }
+.alef-goals ul { margin-block: 0 .5rem; }
+.alef-onramp { padding: .5rem .75rem; margin-block: .5rem; }
+.alef-onramp .btn { margin-block-start: .25rem; }
+main > section.card[aria-labelledby] { padding: .6rem 1rem; margin-block: .5rem; }
+main > section.card[aria-labelledby] > h2 { margin-block: 0 .25rem; font-size: 1.15rem; }
+main > section.card[aria-labelledby] .alef-item { padding-block: .2rem; }
+.alef-onramp .btn { min-block-size: 44px; }
+main > section.card[aria-labelledby] .alef-items { gap: .2rem; }
+main > section.card[aria-labelledby] .alef-item { row-gap: .1rem; }
+.alef-draft-h { font-size: 1rem; margin-block: .25rem 0; }
+.alef-draft ul { margin-block: 0 .5rem; font-weight: 400; }
+
+/* memory-chain retrieval cards (src/letters/memory.view.js) */
+.alef-mem-prompt { margin: 0; font-weight: 600; }
+.alef-mem-cue { font-size: 1.4rem; margin: 0; }
+.alef-mem-pic-box { display: grid; justify-items: center; gap: .5rem; }
+.alef-mem-pic { inline-size: min(60vw, 14rem); block-size: auto; color: var(--fg, currentColor); }
+.alef-mem-opts { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: .5rem; inline-size: 100%; }
+.alef-mem-opt { display: grid; justify-items: center; gap: .1rem; min-block-size: 44px; }
+.alef-mem-glyph { font-size: 2rem; line-height: 1.1; }
+.alef-mem-optn { font-size: .8rem; }
+.alef-mem-right { outline: 3px solid currentColor; outline-offset: 1px; }
+.alef-mem-miss { outline: 2px dashed currentColor; outline-offset: 1px; }
+.alef-mem-fb { display: grid; gap: .4rem; inline-size: 100%; text-align: start; }
+.alef-mem-actions { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; }

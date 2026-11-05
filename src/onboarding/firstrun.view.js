@@ -10,11 +10,11 @@
 import { h, heSpan } from '../shell/ui.js';
 import { loadOnboardingData } from './loader.js';
 import { STORE_KEY, PLACEMENT_KEY, LETTERS_QUESTION, LETTER_ANSWERS, DENOMINATIONS, PRONUNCIATIONS, SETTINGS_KEY_PRONUNCIATION,
-  normalize, answerLetters, setDenomination, setMinutes, setStep, suggestedPronunciation, answerById, placementLesson, buildPlan } from './model.js';
+  GOAL_QUESTION, GOAL_CHOICES, normalize, answerLetters, setDenomination, setMinutes, setStep, suggestedPronunciation, answerById, placementLesson, buildPlan } from './model.js';
 import { DAILY_GOAL_KEY, DAILY_GOALS } from '../home/today.js';
 import { PROGRESS_KEY } from '../curriculum/dom.js';
 
-export const DRAFT_NOTE = 'Draft: this plan has not been tried by a learner. Minutes are targets, not measurements. Every link goes to an existing screen. This is a pacing guide, rebuilt from the lessons you have finished: its first lesson is the one the Today card on Home shows, and it assumes one lesson a day.';
+export const DRAFT_NOTE = 'Draft: no learner has tried this plan yet. The minutes are goals, not measurements. The plan has one lesson a day and starts with the lesson shown on Home. It updates as you finish lessons.';
 
 export function mount(root, ctx) {
   const { settings, store } = ctx;
@@ -46,20 +46,26 @@ export function mount(root, ctx) {
   // ---- Stage 1 ----
   function renderLetters() {
     let picked = null;
-    const fs = fieldset(LETTERS_QUESTION, rec ? 'This replaces your saved starting point.' : 'One question. It is asked only once; you can change it later from this screen.',
+    const prevGoal = settings.get('goal') || null;
+    let goal = GOAL_CHOICES.some((g) => g.id === prevGoal) ? prevGoal : 'read'; // preselected: the current setting (default read), so a learner who skips it gets the old flow
+    const goalFs = fieldset(GOAL_QUESTION, null, ...GOAL_CHOICES.map((g) => radio('goal', g.id, g.label, '', goal === g.id, (v) => { goal = v; })));
+    const fs = fieldset(LETTERS_QUESTION, rec ? 'This replaces your saved starting point.' : null, // no intro line on first run: it kept Continue below the tab bar
       ...LETTER_ANSWERS.map((a) => radio('letters', a.id, a.label, a.desc, false, (v) => { picked = v; })));
-    const form = h('form', { id: 'ob-form-letters', onsubmit: (e) => { e.preventDefault(); submit(); } }, fs,
+    const form = h('form', { id: 'ob-form-letters', onsubmit: (e) => { e.preventDefault(); submit(); } }, goalFs, fs,
       h('div', { class: 'row' }, h('button', { type: 'submit', class: 'btn', id: 'ob-letters-continue' }, 'Continue'),
         rec ? h('button', { type: 'button', class: 'btn secondary', onclick: () => go('plan') }, 'Keep my current starting point') : null));
     const submit = () => {
       if (!picked) { say('Choose one answer to continue.'); focus(form.querySelector('#ob-letters-none')); return; }
       rec = answerLetters(rec, picked, nowISO());
       save();
-      try { settings.set({ onboarded: true }); } catch { /* settings may be read-only in tests */ }
-      say(`Saved. Your starting point is ${answerById(picked).start === '/placement' ? 'the placement check' : 'your first 10 minutes'}.`);
-      go('congregation');
+      const israelNow = goal === 'israel';
+      const patch = { onboarded: true, goal };
+      if (israelNow && prevGoal !== 'israel') patch[SETTINGS_KEY_PRONUNCIATION] = 'israeli'; // speaking in Israel: Israeli sounds, so the Sephardi/Ashkenazi question is not asked
+      try { settings.set(patch); } catch { /* settings may be read-only in tests */ }
+      say(`Saved. Your starting point is ${answerById(picked).start === '/placement' ? 'the placement check' : 'your first 10 minutes'}.${israelNow ? ' Israeli pronunciation is set; change it in Settings.' : ''}`);
+      go(israelNow ? 'plan' : 'congregation');
     };
-    body.replaceChildren(form, h('p', { class: 'muted' }, 'Your answer is saved only on this device. ', h('a', { href: '#/how' }, 'How this works'), '.'));
+    body.replaceChildren(form, h('p', { class: 'muted' }, 'Your answer is saved only on this device. ', h('a', { href: '#/how' }, 'How this works'), '. ', h('a', { href: '#/accessibility', id: 'ob-a11y-link' }, 'Accessibility options'), '.'));
   }
 
   // ---- Stage 2 ----
@@ -73,33 +79,35 @@ export function mount(root, ctx) {
       if (s && !pronPicked) { pron = s; setPronRadio(s); say(`Suggested pronunciation: ${PRONUNCIATIONS.find((p) => p.id === s).label}. Change it below if your synagogue differs.`); }
       else if (!s) say(DENOMINATIONS.find((d) => d.id === v).changes);
     };
-    const denomFs = fieldset('Which synagogue stream do you belong to? (optional)', 'Each line says what the choice changes in the app.',
+    const denomFs = fieldset('Which branch of Judaism are you part of? (optional)', 'Optional. It does not change your lessons.',
       ...DENOMINATIONS.map((d) => radio('denomination', d.id, d.label, d.changes, denom === d.id, onDenom)));
-    const pronFs = fieldset('Which pronunciation does your synagogue use?', 'This is the "Prayer pronunciation" setting; you can change it any time in Settings or on the Sounds screen.',
+    const denomMore = h('details', { class: 'ob-more' }, h('summary', {}, 'Optional: your branch of Judaism'), denomFs); // kept out of the first screen so Continue and Skip stay visible
+    const pronFs = fieldset('Which pronunciation style do you want?', 'It changes the sounds you hear and read. Change it any time in Settings.',
       ...PRONUNCIATIONS.map((p) => { const l = radio('pron', p.id, p.label, p.changes, pron === p.id, (v) => { pron = v; pronPicked = true; }); pronInputs[p.id] = l.querySelector(`#ob-pron-${p.id}`) || l.children?.[0]; return l; }));
     const apply = () => {
       rec = setDenomination(rec, denom); save();
       const rejected = settings.set({ [SETTINGS_KEY_PRONUNCIATION]: pron });
       if (Array.isArray(rejected) && rejected.length) say('The pronunciation could not be saved; pick it again in Settings.');
       else say(`Saved: ${PRONUNCIATIONS.find((p) => p.id === pron)?.label || pron} pronunciation.`);
-      go('minutes');
+      go('plan'); // minutes a day and goal keep their defaults; "Change minutes a day" on the plan card (and Settings) change them
     };
-    const form = h('form', { id: 'ob-form-congregation', onsubmit: (e) => { e.preventDefault(); apply(); } }, denomFs, pronFs,
+    const form = h('form', { id: 'ob-form-congregation', onsubmit: (e) => { e.preventDefault(); apply(); } }, pronFs,
       h('div', { class: 'row' }, h('button', { type: 'submit', class: 'btn', id: 'ob-congregation-continue' }, 'Continue'),
-        h('button', { type: 'button', class: 'btn secondary', id: 'ob-congregation-skip', onclick: () => { say('Skipped. Pronunciation stays as it is.'); go('minutes'); } }, 'Skip')));
-    body.replaceChildren(h('h2', {}, 'Your synagogue'), form, skipNow());
+        h('button', { type: 'button', class: 'btn secondary', id: 'ob-congregation-skip', onclick: () => { say('Skipped. Pronunciation stays as it is; you can change it in Settings.'); go('plan'); } }, 'Skip')),
+      skipNow(), denomMore);
+    body.replaceChildren(form);
   }
 
   // ---- Stage 3: minutes ----
   function renderMinutes() {
-    if (!D) { body.replaceChildren(h('p', {}, loadError ? 'The plan data could not be loaded. You can still start.' : 'Loading...'), skipNow()); return; }
+    if (!D) { body.replaceChildren(h('p', {}, loadError ? 'The plan did not load. You can still start.' : 'Loading...'), skipNow()); return; }
     const opts = D.plans.minutesOptions;
     let mins = rec.minutesPerDay || D.plans.defaultMinutes;
     let goal = settings.get('goal') || 'read';
     const goalFs = fieldset('What do you want Hebrew for?', 'This chooses which lessons your week and the Today card start with. You can change it later in Settings.',
-      ...[['read', 'Reading the siddur', 'Prayer book Hebrew: letters, vowels, prayer lines.'], ['israel', 'Speaking in Israel', 'Everyday words and phrases.'], ['both', 'Both', 'Reading lessons first, speaking lessons alongside.']]
+      ...[['read', 'Reading the prayer book (siddur)', 'Letters, vowels and prayer lines.'], ['israel', 'Speaking in Israel', 'Everyday words and phrases.'], ['both', 'Both', 'Reading lessons first, speaking lessons alongside.']]
         .map(([id, label, d]) => radio('goal', id, label, d, goal === id, (v) => { goal = v; })));
-    const fs = fieldset('How many minutes a day?', 'This is your own study goal. Your week plan is one lesson a day.',
+    const fs = fieldset('How many minutes a day?', 'This is your own daily goal. Your week plan is one lesson a day.',
       ...opts.map((m) => radio('minutes', String(m), `${m} minutes`, '', mins === m, (v) => { mins = Number(v); })));
     const form = h('form', { id: 'ob-form-minutes', onsubmit: (e) => { e.preventDefault(); rec = setMinutes(rec, mins, D.plans); save(); try { settings.set({ goal }); } catch { /* best effort */ } if (DAILY_GOALS.includes(rec.minutesPerDay)) { try { store.set(DAILY_GOAL_KEY, rec.minutesPerDay); } catch { /* best effort */ } } say(`Planned for ${rec.minutesPerDay} minutes a day. This is your study goal on Home; the streak counts a day at 5 minutes.`); go('plan'); } }, goalFs, fs,
       h('div', { class: 'row' }, h('button', { type: 'submit', class: 'btn', id: 'ob-minutes-continue' }, 'Show my week')));
@@ -113,24 +121,25 @@ export function mount(root, ctx) {
     const plan = D ? buildPlan({ record: rec, placement, lessons: D.lessons, plans: D.plans, hasRoute: ctx.hasRoute, completed, goal: settings.get('goal') }) : null;
     const placed = plan && (plan.source === 'placement' || settings.get('goal') === 'israel') ? plan.startLesson : null;
     const primaryHref = placed ? '#/learn?lesson=' + encodeURIComponent(placed) : startHref();
-    const primaryLabel = placed ? `Start lesson ${placed}` : `Start: ${startTitle()}`;
+    const placedTitle = placed ? D?.lessons?.find((l) => l.id === placed)?.title : null;
+    const primaryLabel = placed ? (placedTitle ? `Start: ${placedTitle}` : `Start lesson ${placed}`) : `Start: ${startTitle()}`;
     const dayNode = (d) => h('li', {}, h('strong', {}, d.label), h('span', { class: 'muted' }, ` (${d.minutes} min)`),
       h('ul', {}, ...d.items.map((i) => h('li', {}, h('a', { href: i.href }, i.title), i.kind === 'lesson' && i.parts > 1 ? ` (part ${i.part} of ${i.parts})` : '', h('span', { class: 'muted' }, ` ${i.minutes} min`)))));
     const card = plan
       ? h('section', { class: 'card ob-plan', 'aria-labelledby': 'ob-plan-h' },
         h('h2', { id: 'ob-plan-h' }, 'Your week'),
         h('p', { class: 'draft-flag', role: 'note' }, DRAFT_NOTE),
-        h('p', {}, `${plan.minutesPerDay} minutes a day, about ${plan.totalMinutes} minutes this week. ${plan.note}`),
+        h('p', {}, `Your goal is ${plan.minutesPerDay} minutes a day. The lessons below add up to about ${plan.totalMinutes} minutes this week. ${plan.note}`),
         h('ol', { class: 'ob-days' }, ...plan.days.map(dayNode)))
-      : h('p', { role: 'note' }, loadError ? 'The plan data could not be loaded, so there is no week card yet. Your starting point still works.' : 'Building your week...');
+      : h('p', { role: 'note' }, loadError ? 'The plan did not load, so there is no week plan yet. Your starting point still works.' : 'Building your week...');
     const changeStart = h('button', { type: 'button', class: 'btn secondary', id: 'ob-change-start', onclick: () => { say('Answer the question again to change your starting point.'); go('letters'); } }, 'Change my starting point');
     body.replaceChildren(
-      h('p', {}, `Starting point: ${startTitle()}. ${rec.denomination ? DENOMINATIONS.find((d) => d.id === rec.denomination).label + '; ' : ''}${PRONUNCIATIONS.find((p) => p.id === settings.get(SETTINGS_KEY_PRONUNCIATION))?.label || 'Sephardi'} pronunciation.`),
+      h('p', {}, `Starting point: ${placedTitle && settings.get('goal') === 'israel' ? placedTitle : startTitle()}. ${rec.denomination ? DENOMINATIONS.find((d) => d.id === rec.denomination).label + '; ' : ''}${PRONUNCIATIONS.find((p) => p.id === settings.get(SETTINGS_KEY_PRONUNCIATION))?.label || 'Sephardi'} pronunciation.`),
       h('div', { class: 'row' }, h('a', { class: 'btn', id: 'ob-start', href: primaryHref }, primaryLabel)), // start button first: within the first screen
       card,
       h('div', { class: 'row' }, changeStart,
-        h('button', { type: 'button', class: 'btn secondary', id: 'ob-change-congregation', onclick: () => go('congregation') }, 'Change synagogue or pronunciation'),
-        h('button', { type: 'button', class: 'btn secondary', id: 'ob-change-minutes', onclick: () => go('minutes') }, 'Change minutes a day')),
+        h('button', { type: 'button', class: 'btn secondary', id: 'ob-change-congregation', onclick: () => go('congregation') }, 'Change pronunciation style'),
+        h('button', { type: 'button', class: 'btn secondary', id: 'ob-change-minutes', onclick: () => go('minutes') }, 'Change goal or minutes a day')),
       h('p', { class: 'muted' }, 'Saved only on this device. Settings has the full list of choices.'));
   }
 

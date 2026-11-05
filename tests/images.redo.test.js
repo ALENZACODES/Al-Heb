@@ -117,7 +117,7 @@ test('alt text: the manifest carries one entry per ingested image, matching a fr
   const interIds = loadSlots().map((s) => s.id);
   const jIds = loadBlockJ().map((r) => r.id);
   const run3Ids = loadRun3().map((r) => r.id);
-  assert.deepEqual(Object.keys(man.altText).sort(), [...Object.keys(prov), ...interIds, ...jIds, ...run3Ids].sort());
+  assert.deepEqual(Object.keys(man.altText).sort(), [...new Set([...Object.keys(prov), ...interIds, ...jIds, ...run3Ids])].sort()); // Run 3 ids that are already ingested appear in both lists
   assert.deepEqual(man.altText, buildAltText({ images: prov }, loadSlots(), loadBlockJ(), loadRun3()), 'altText is stale: run node tools/images/alt_text.mjs');
   for (const [id, t] of Object.entries(man.altText)) {
     assert.ok(typeof t === 'string' && t.length >= 12 && t.length <= MAX_LEN, `${id}: ${t}`);
@@ -188,7 +188,8 @@ const VOWEL_SLOTS = ['keyword', 'ari', 'noa', 'position', 'card'];
 const manifestRows = parseCsv(readFileSync(join(ROOT, 'data/images/manifest.csv'), 'utf8'));
 const nextRows = parseCsv(readFileSync(join(ROOT, 'data/images/next1000.csv'), 'utf8'));
 const planned = new Map(); // file -> 'done' | 'pending'
-for (const r of manifestRows) planned.set(r.file, prov[r.file.replace(/\.png$/, '')] ? 'done' : 'unplanned');
+// Rows of commands 150+ (Run 3, data/images/run3.csv) are planned by their own paste route (RUNBOOK step 5), not by next1000.
+for (const r of manifestRows) if (Number(r.command) <= 101) planned.set(r.file, prov[r.file.replace(/\.png$/, '')] ? 'done' : 'unplanned');
 for (const r of nextRows) planned.set(r.file, 'pending');
 
 test('next1000: every unfinished manifest row is in next1000 and nothing is planned twice', () => {

@@ -58,7 +58,7 @@
    "id": "speak-survival-lesson-israel-1",
    "title": "Survival: lesson israel",
    "theme": "talking-asking",
-   "level": "A1",
+   "level": "A2",
    "track": "israel",
    "pack": "survival-lesson-israel-1",
    "size": 12,
@@ -192,7 +192,7 @@
    "track": "both",
    "pack": "general-things-1",
    "size": 12,
-   "withClip": 9
+   "withClip": 10
   },
   {
    "id": "speak-nature-animals-1",
@@ -402,7 +402,7 @@
    "track": "both",
    "pack": "people-family-2",
    "size": 12,
-   "withClip": 7
+   "withClip": 8
   },
   {
    "id": "speak-places-travel-2",
@@ -572,7 +572,7 @@
    "track": "israel",
    "pack": "science-ideas-3",
    "size": 12,
-   "withClip": 9
+   "withClip": 11
   },
   {
    "id": "speak-general-things-3",

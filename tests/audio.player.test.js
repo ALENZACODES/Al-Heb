@@ -137,3 +137,68 @@ test('stop() cancels a running sequence and speech', async () => {
 test('normalizeId matches the tool-side normalizer', () => {
   for (const s of ['Num 6:24', 'bet-a', 'A_B', ' x/y ']) assert.equal(normalizeId(s), toolNormalize(s));
 });
+
+// ---- one id mapping: lesson-word id <-> vocab id (manifest `vocabId`, data/curriculum/word-vocab-map.json)
+test('a clip recorded under the lesson-word id r01-w1 resolves for its vocab id (synthetic manifest)', async () => {
+  const m = [e('m', 'sephardi', 'word', 'r01-w1', 'recorded', { vocabId: 'h842147e5' }), e('m', 'sephardi', 'word', 'h842147e5')];
+  const { audio, speech } = make(m, { voice: 'm', congregation: 'sephardi' });
+  assert.equal(audio.has('word', 'h842147e5'), true);
+  assert.equal(audio.has('word', 'r01-w1'), true);
+  const r = await audio.play('word', 'h842147e5');
+  assert.equal(r.source, 'file'); assert.equal(r.viaId, 'r01-w1'); assert.equal(r.id, 'h842147e5');
+  assert.deepEqual(FakeAudio.log, ['/app/audio/m/sephardi/word/r01-w1.mp3']);
+  assert.equal(speech.spoken.length, 0);
+});
+
+test('a clip recorded under the vocab id resolves for the lesson-word id, and for a second lesson word with the same vocab id', () => {
+  const m = [e('m', 'israeli', 'word', 'r02-w1', 'missing', { vocabId: 'h0eb811da' }), e('m', 'israeli', 'word', 'r04-w1', 'missing', { vocabId: 'h0eb811da' }),
+    e('m', 'israeli', 'word', 'h0eb811da', 'recorded')];
+  const { audio } = make(m, { voice: 'm', congregation: 'israeli' });
+  assert.equal(audio.status('word', 'r02-w1').url, '/app/audio/m/israeli/word/h0eb811da.mp3');
+  assert.equal(audio.status('word', 'r04-w1').viaId, 'h0eb811da');
+});
+
+test('the exact id wins over a linked id; voice and tradition are never crossed by a link; links added by extend() work', () => {
+  const m = [e('m', 'israeli', 'word', 'r01-w1', 'recorded', { vocabId: 'hx' }), e('m', 'israeli', 'word', 'hx', 'recorded'),
+    e('f', 'israeli', 'word', 'r01-w1', 'recorded', { vocabId: 'hx' }), e('m', 'sephardi', 'word', 'hx')];
+  const { audio } = make(m, { voice: 'm', congregation: 'israeli' });
+  assert.equal(audio.status('word', 'hx').path, 'audio/m/israeli/word/hx.mp3'); assert.equal(audio.status('word', 'hx').viaId, undefined);
+  assert.equal(audio.has('word', 'hx', { tradition: 'sephardi' }), false); // sephardi has no file under either id
+  assert.equal(audio.status('word', 'hx', { voice: 'f' }).path, 'audio/f/israeli/word/r01-w1.mp3'); // woman's file, not the man's
+  const late = make([e('m', 'israeli', 'word', 'hy', 'recorded')], { voice: 'm', congregation: 'israeli' }).audio;
+  assert.equal(late.has('word', 'r09-w1'), false);
+  late.extend([e('m', 'israeli', 'word', 'r09-w1', 'missing', { vocabId: 'hy' })]);
+  assert.equal(late.has('word', 'r09-w1'), true);
+});
+
+test('real manifest: every lesson word with a vocab id carries it, and that vocab id has an entry for every voice and tradition it is expected in', async () => {
+  const { readFileSync } = await import('node:fs');
+  const { loadManifestFull } = await import('../tools/audio/manifest_io.mjs');
+  const man = loadManifestFull();
+  const map = JSON.parse(readFileSync(new URL('../data/curriculum/word-vocab-map.json', import.meta.url), 'utf8')).map;
+  const byKey = new Map(man.map((x) => [`${x.voice}|${x.tradition}|${x.kind}|${x.id}`, x]));
+  let n = 0;
+  for (const [k, vid] of Object.entries(map)) {
+    const [lid, i] = k.split(':'); const w = byKey.get(`m|israeli|word|${normalizeId(`${lid}-w${i}`)}`);
+    if (!w) continue; // lesson not in the manifest
+    n++; assert.equal(w.vocabId, vid, k);
+    for (const v of ['m', 'f']) assert.ok(byKey.has(`${v}|israeli|word|${vid}`), `${v} israeli word/${vid}`);
+  }
+  assert.equal(n, Object.keys(map).length); assert.ok(n > 500, `checked ${n}`);
+  // wiring: pretend r01-w1 was recorded; the vocab id then resolves
+  const rec = man.filter((x) => x.kind === 'word' && ['r01-w1', map['r01:1']].includes(x.id)).map((x) => (x.id === 'r01-w1' ? { ...x, status: 'recorded' } : x));
+  const { audio } = make(rec, { voice: 'm', congregation: 'israeli' });
+  assert.equal(audio.has('word', map['r01:1']), true);
+});
+
+test('failed clip file with only a non-Hebrew browser voice: no "browser voice" claim', async () => {
+  const m = [e('m', 'israeli', 'letter', 'bet', 'recorded')];
+  const { audio, speech } = make(m, { voice: 'm', congregation: 'israeli' }, { speech: fakeSpeech([{ lang: 'en-US' }]) });
+  FakeAudio.failUrls.add('/app/audio/m/israeli/letter/bet.mp3');
+  const r = await audio.play('letter', 'bet');
+  assert.equal(r.source, 'none'); assert.equal(r.reason, 'no-hebrew-browser-voice'); assert.equal(r.fileError, 'file-error');
+  assert.equal(speech.spoken.length, 0);
+  const ok = make(m, { voice: 'm', congregation: 'israeli' }, { speech: fakeSpeech([{ lang: 'he-IL' }]) });
+  FakeAudio.failUrls.add('/app/audio/m/israeli/letter/bet.mp3');
+  assert.equal((await ok.audio.play('letter', 'bet')).source, 'tts-fallback');
+});

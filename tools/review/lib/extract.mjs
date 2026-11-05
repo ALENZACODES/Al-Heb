@@ -5,7 +5,9 @@
 import { readFile, readdir, stat } from 'node:fs/promises';
 import { join, relative, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { AREAS, VOCAB_TOP, LITURGY_ADDITIONS } from '../config.mjs';
+import { AREAS, VOCAB_TOP, LITURGY_ADDITIONS, claimFor } from '../config.mjs';
+import { HOOK_QUESTIONS, LETTER_GENERAL_QUESTIONS, CHAIN_GENERAL_QUESTIONS } from '../questions.mjs';
+import { loadVariants, ruleList, sampleFor, TRADITIONS, SAMPLE_PER_TRADITION } from './pronrules.mjs';
 
 // ------------------------------------------------------------------ flag detection
 const DRAFT_RE = /draft|needs[- ]?(native|check|review|verif|clergy)|transcribed-needs-check|native-speaker-needed|unreviewed|not (yet )?(been )?(proofread|reviewed|checked|validated)/i;
@@ -417,15 +419,16 @@ async function letterStrokes(ctx) {
 async function mnemonics(ctx) {
   const F = 'data/letters/mnemonics.json';
   const j = await ctx.json(F);
-  if (!j || !j.letters) return [];
-  const mf = ownFlags(j.meta || {});
-  if (!mf.length) return [];
   const items = [];
+  await memoryChain(ctx, items);
+  if (!j || !j.letters) return items;
+  const mf = ownFlags(j.meta || {});
+  if (!mf.length) return items;
   const rec = (arr, key) => arr.forEach((m, i) => {
     if (isReviewedTrue(m)) return;
     items.push(mk('mnemonics', m.id, {
       he: m.word, translit: first(m.wordSound, ctx.tr(m.word)), en: `${m.wordMeaning}\nName/shape claim: ${m.reason}\nStory: ${m.story}`,
-      check: `Letter "${m.name}". (1) Pointing, spelling and meaning of the example word. (2) The claim about the letter NAME's meaning/origin: is it accurate and suitably hedged? (3) English story is only a memory hook; flag anything wrong about Hebrew sounds. Sound given: ${m.sound}.`,
+      check: `Letter "${m.name}". (1) Pointing, spelling and meaning of the example word. (2) The claim about the letter NAME's meaning/origin: is it accurate and suitably hedged? (3) English story is only a memory hook; flag anything wrong about Hebrew sounds. Sound given: ${m.sound}.${HOOK_QUESTIONS[m.id] ? '\nQUESTION FOR THE REVIEWER: ' + HOOK_QUESTIONS[m.id] : ''}`,
       flags: mf, source: `${F}#${key}[${i}]`, words: 0,
       flip: { kind: 'proofread', target: tgt(F, [key, i]) },
       fields: { he: fieldOf(F, [key, i, 'word'], m.word), translit: fieldOf(F, [key, i, 'wordSound'], m.wordSound), en: fieldOf(F, [key, i, 'wordMeaning'], m.wordMeaning) },
@@ -433,7 +436,31 @@ async function mnemonics(ctx) {
   });
   rec(j.letters, 'letters');
   if (Array.isArray(j.variants)) rec(j.variants, 'variants');
+  for (const [id, text] of LETTER_GENERAL_QUESTIONS) items.push(mk('mnemonics', id, {
+    check: `QUESTION FOR THE REVIEWER (report-only, nothing to flip): ${text}`, flags: ['question from docs/review/LETTERS-CONTENT-CHECK.md (report-only)'], source: 'docs/review/LETTERS-CONTENT-CHECK.md', words: 0,
+  }));
   return items;
+}
+
+// Report-only rows for data/letters/memory-chain.json (picture, hook, word chains). Nothing here flips a flag.
+async function memoryChain(ctx, items) {
+  const F = 'data/letters/memory-chain.json';
+  const c = await ctx.json(F);
+  if (!c || !Array.isArray(c.letters)) return;
+  const cf = ownFlags(c.meta || {});
+  if (!cf.length) return;
+  c.letters.forEach((l, i) => {
+    const trad = ['israeli', 'sephardi', 'ashkenazi'].map((t) => `${t}: ${l.sound.perTradition[t]}`).join('\n');
+    items.push(mk('mnemonics', `chain:${l.id}`, {
+      he: l.word.he, translit: l.word.translit,
+      en: `${l.word.gloss} (vocabulary rank ${l.word.rank})\nPicture: ${l.picture.idea}\nHook: ${l.sound.hook} (${l.sound.hookPosition}). ${l.sound.line}\nStory: ${l.story}\nTip: ${l.tip}\n${trad}`,
+      check: `Memory chain for "${l.name}". (1) Pointing and meaning of the word (it must ${l.word.position === 'final' ? 'END' : 'START'} with the letter). (2) Does the picture suit the letter shape and is it fine for adults and children? (3) Does the story or the sound line say anything untrue about this letter in any of the three traditions? Points noted: ${(l.risk || []).join(' ') || 'none'}`,
+      flags: cf, source: `${F}#letters[${i}]`, words: 0,
+    }));
+  });
+  for (const [id, text] of CHAIN_GENERAL_QUESTIONS) items.push(mk('mnemonics', id, {
+    check: `QUESTION FOR THE REVIEWER (report-only, nothing to flip): ${text}`, flags: ['question about data/letters/memory-chain.json (report-only)'], source: F, words: 0,
+  }));
 }
 
 // ------------------------------------------------------------------ pronunciation
@@ -690,6 +717,7 @@ async function vocab(ctx, slug) {
   j.entries.forEach((e, i) => {
     const fl = ownFlags(e);
     if (!fl.length) return;
+    if (e.flags && e.flags.hidden === true) return; // hidden from learners: never shown, so not sent to a reviewer
     const top = e.rank <= VOCAB_TOP;
     if ((slug === 'vocab-top1000') !== top) return;
     const all = [{ file: F, path: ['entries', i] }, ...(copies.get(e.id) || [])];
@@ -803,14 +831,118 @@ async function israelEveryday(ctx) {
   return items;
 }
 
+
+// ------------------------------------------------------------------ intermediate lessons, first day, speak, pronunciation rules
+/** Exercises of lessons I-01..I-50 as registered in lessons.json (the app reads that file). Titles and words are in `lessons`. */
+async function intermediate(ctx) {
+  const F = 'data/curriculum/lessons.json';
+  const j = await ctx.json(F);
+  if (!j || !Array.isArray(j.lessons)) return [];
+  const fileFlag = hardFlags(j);
+  const items = [];
+  j.lessons.forEach((l, i) => {
+    if (!/^I-\d+$/.test(l.id)) return;
+    const fl = [...hardFlags(l), ...(isReviewedTrue(l) ? [] : fileFlag)];
+    if (!fl.length || isReviewedTrue(l)) return;
+    (l.exercises || []).forEach((e, k) => {
+      if (isReviewedTrue(e)) return;
+      const d = describeRecord(e);
+      const only = Object.keys(d.fields).length === 1 ? Object.keys(d.fields)[0] : null;
+      items.push(mk('intermediate', e.id || `${l.id}-x${k + 1}`, {
+        he: d.he, translit: d.translit, en: d.en, words: countWords(d.he),
+        check: `Exercise ${k + 1} of ${l.id} (unit ${l.unit}: ${l.title}). Pointing and spelling of every Hebrew line; the English matches it; the exercise type (${e.type || '?'}) makes sense for it. For prayer units compare with a printed siddur or chumash of the nusach in the lesson; the English cue and hint wording is original text, judge whether it is accurate.`,
+        flags: fl, source: `${F}#lessons[${i}].exercises[${k}]`, defaultField: only,
+        flip: { kind: 'proofread', target: tgt(F, ['lessons', i, 'exercises', k]) },
+        fields: Object.fromEntries(Object.entries(d.fields).map(([f, v]) => [f, fieldOf(F, ['lessons', i, 'exercises', k, ...v.rel], v.current)])),
+      }));
+    });
+  });
+  return items;
+}
+
+async function firstday(ctx) {
+  const items = [];
+  for (const f of ['first10', 'onramp']) items.push(...(await genericFile(ctx, 'firstday', `data/firstday/${f}.json`)));
+  const F = 'data/firstday/ladder.json';
+  const j = await ctx.json(F);
+  if (j && Array.isArray(j.steps)) {
+    const fileFlag = hardFlags(j);
+    j.steps.forEach((st, i) => {
+      if (isReviewedTrue(st)) return;
+      const fl = [...hardFlags(st), ...fileFlag];
+      if (!fl.length) return;
+      items.push(mk('firstday', `firstday/ladder:step${st.n ?? i + 1}`, {
+        he: st.shown && st.shown !== st.word ? `${st.word}\nshown: ${st.shown}` : st.word, translit: '', en: `${st.gloss}\nstage: ${st.stage}; unpointed form: ${st.bare}`,
+        check: `Reading ladder step ${st.n ?? i + 1} (${st.stage}). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.`,
+        flags: fl, source: `${F}#steps.${i}`,
+        flip: { kind: 'proofread', target: tgt(F, ['steps', i]) },
+        fields: { he: fieldOf(F, ['steps', i, 'word'], st.word), en: fieldOf(F, ['steps', i, 'gloss'], st.gloss) }, defaultField: 'he',
+      }));
+    });
+  }
+  return items;
+}
+
+async function speak(ctx) {
+  const items = [];
+  for (const f of ['minimal-pairs', 'prayers']) items.push(...(await genericFile(ctx, 'speak', `data/speak/${f}.json`)));
+  return items;
+}
+
+const slugId = (s) => String(s).replace(/[^A-Za-z0-9:.]+/g, '-').replace(/^-+|-+$/g, '');
+const DERIVED_FLAG = ['derived: rule-generated respelling, no data flag to flip (report-only; fixes go in the rules or the generator)'];
+
+/** Rule list + stratified ~200-row sample per tradition + the learner-facing rule pages. Replaces row-by-row review of data/pronunciation/variants. */
+async function pronRules(ctx) {
+  const items = [];
+  const data = loadVariants(ctx.root);
+  if (data) {
+    const samples = Object.fromEntries(TRADITIONS.map((t) => [t, sampleFor(data, t, SAMPLE_PER_TRADITION)]));
+    const rules = ruleList(ctx.root, data);
+    for (const r of rules) {
+      const ex = [];
+      for (const t of TRADITIONS) { const hit = samples[t].filter((x) => x.rules.includes(r.id)).sort((a, b) => String(a.rec.he).length - String(b.rec.he).length || (a.rec.id < b.rec.id ? -1 : 1))[0]; if (hit && !ex.some((e) => e.rec.id === hit.rec.id)) ex.push({ ...hit, t }); }
+      const used = TRADITIONS.filter((t) => r.count[t] > 0);
+      items.push(mk('pron-rules', `rule:${slugId(r.id)}`, {
+        he: ex.map((e) => e.rec.he).join('\n'),
+        translit: ex.slice(0, 2).map((e) => TRADITIONS.map((t) => `${t}: ${e.rec.variants[t]?.simple ?? ''}`).join(' | ')).join('\n'),
+        en: `Rule ${r.id} (${r.kind}): ${r.label}\n${r.text}\nRecords using it: ${used.length ? used.map((t) => `${t} ${r.count[t]}`).join(', ') : 'none in the current data'}.`,
+        check: `Rule ${r.id}. Is this the right rule for the tradition(s) named, in how its sound is spelled and where the stress falls? Say which tradition or community you judge by. If the rule is wrong, say what you would say instead; the example words are only illustrations.`,
+        flags: DERIVED_FLAG, source: 'docs/pronunciation/VARIANTS.md', secs: 120, words: 0,
+      }));
+    }
+    for (const t of TRADITIONS) for (const x of samples[t]) {
+      const v = x.rec.variants[t];
+      const st = (v.stress || []).filter(Boolean).map((s) => `stressed syllable ${s.syllable} of ${s.of} (${s.rule})`).join('; ');
+      items.push(mk('pron-rules', `s:${t}:${x.rec.id}`, {
+        he: x.rec.he, translit: `${t}: ${v.simple}${v.ipa ? `  /${v.ipa}/` : ''}`, en: String(x.rec.en || ''),
+        check: `RULES ON THIS ROW: ${x.rules.join(', ')} (flag: rules are record-level and may concern another tradition). Tradition: ${t}. Does the respelling follow from the pointing by the rules of this tradition (vowels, consonants, stress)? ${st ? 'Stress: ' + st + '. ' : ''}Judge how it sounds, not the spelling system.`,
+        flags: DERIVED_FLAG, source: `${x.rec._file}#records.${x.rec._i}`, secs: 30, words: 0,
+      }));
+    }
+  }
+  items.push(...(await genericFile(ctx, 'pron-rules', 'data/pronunciation/runtime/rules.json')));
+  return items;
+}
+
 // ------------------------------------------------------------------ driver
 const EXTRACTORS = {
   'opening-prayer': openingPrayer, prayers, 'prayer-prompts': prayerPrompts, 'prayer-guide': prayerGuide,
   'israel-everyday': israelEveryday, lessons, dialogues, 'gender-pairs': genderPairs, loanwords, hints, phrasebook,
   'letter-strokes': letterStrokes, mnemonics, 'pron-soundgap': soundgap, 'pron-prayerwords': prayerWords,
-  'pron-vowels': pronVowels, 'pron-traditions': pronTraditions, calendar, torahread,
+  'pron-vowels': pronVowels, 'pron-traditions': pronTraditions, calendar, torahread, intermediate, firstday, speak, 'pron-rules': pronRules,
   'vocab-top1000': (c) => vocab(c, 'vocab-top1000'), 'vocab-rest': (c) => vocab(c, 'vocab-rest'),
 };
+
+/** Data files that some extracted item names (as its source or as a flip/fix target). */
+export function coveredFiles(byArea) {
+  const covered = new Set();
+  for (const it of Object.values(byArea).flat()) {
+    covered.add(it.source.split('#')[0].split(' ')[0]);
+    for (const t of [it.flip?.target, ...(it.flip?.targets || []), ...Object.values(it.fields || {}).flatMap((f) => f.targets || [])].filter(Boolean)) covered.add(t.file);
+  }
+  return covered;
+}
 
 /** Extract all areas. Returns { items, byArea }. Throws on duplicate ids. */
 export async function extractAll(root, only) {
@@ -829,14 +961,10 @@ export async function extractAll(root, only) {
   // catch-all: any data file with flagged records that no dedicated area claimed is picked up generically,
   // so newly added data is never silently skipped.
   if (!only || only.includes('other-flagged')) {
-    const covered = new Set();
-    for (const it of Object.values(byArea).flat()) {
-      covered.add(it.source.split('#')[0].split(' ')[0]);
-      for (const t of [it.flip?.target, ...(it.flip?.targets || []), ...Object.values(it.fields || {}).flatMap((f) => f.targets)].filter(Boolean)) covered.add(t.file);
-    }
+    const covered = coveredFiles(byArea);
     const audit = await auditScan(root);
     const extra = [];
-    for (const d of audit.data) if (!covered.has(d.file)) extra.push(...(await genericFile(ctx, 'other-flagged', d.file)));
+    for (const d of audit.data) if (!covered.has(d.file) && !claimFor(d.file)) extra.push(...(await genericFile(ctx, 'other-flagged', d.file)));
     for (const it of extra) { if (seen.has(it.id)) throw new Error(`duplicate item id ${it.id}`); seen.add(it.id); }
     byArea['other-flagged'] = extra;
   }

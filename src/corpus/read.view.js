@@ -7,6 +7,11 @@
 // Plain DOM, RTL Hebrew (lang="he" dir="rtl"), keyboard and screen-reader friendly.
 import { loadCorpus, letterInventory } from './corpus.js';
 import { versionLabel } from '../shell/names.js';
+import { silentReadingNode } from '../shell/silent-reading.js';
+import { isAudioFree } from '../shell/audiofree.js';
+import { uiEnglish } from '../shell/names.js';
+import { speechText } from '../shell/names.js';
+import { largePositionsIn } from '../torahreader/model.js';
 import { LETTER_ID, isHebrewLetter, FINAL_OF } from './normalize.js';
 
 const LETTER_NAME = {
@@ -16,8 +21,6 @@ const LETTER_NAME = {
   'kaf-final': 'Final Kaf', 'mem-final': 'Final Mem', 'nun-final': 'Final Nun', 'pe-final': 'Final Pe', 'tsadi-final': 'Final Tsadi',
 };
 const LETTER_CHAR = Object.fromEntries(Object.entries(LETTER_ID).map(([c, id]) => [id, c]));
-const TETRAGRAMMATON_SKELETON = 'יהוה';
-const SPOKEN_ADONAI = 'אֲדֹנָי';
 
 /** Composite passages shown first. Everything else in the registry is a single-record passage. */
 const COMPOSITES = [
@@ -30,6 +33,9 @@ const CSS = `
 .crp-tabs{display:flex;gap:.5rem;margin-block:.5rem 1rem;flex-wrap:wrap}
 .crp-tab,.crp-chip,.crp-play,.crp-ltr{font:inherit;min-block-size:var(--tap,48px);padding:.4rem .9rem;border-radius:999px;border:2px solid var(--accent,#1f3a5f);background:transparent;color:var(--accent,#1f3a5f);cursor:pointer}
 .crp-tab[aria-selected="true"],.crp-chip[aria-pressed="true"],.crp-ltr[aria-pressed="true"]{background:var(--accent,#1f3a5f);color:var(--accent-fg,#fffaf0);font-weight:700}
+.crp-ctl{border:1px solid var(--border,#d9cdb3);border-radius:8px;padding:0 .7rem;margin-block:.4rem}
+.crp-ctl>summary{cursor:pointer;font-weight:700;min-block-size:max(44px,var(--tap,48px));display:flex;align-items:center}
+.crp-ctl>summary:focus-visible{outline:3px solid var(--focus,#b45309);outline-offset:2px}
 .crp-bar{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;margin-block:.5rem}
 .crp-bar label{display:inline-flex;gap:.4rem;align-items:center}
 .crp select,.crp input[type=search]{font:inherit;min-block-size:var(--tap,48px);padding:.3rem .6rem;border-radius:8px;border:2px solid var(--border,#d9cdb3);background:var(--card,#fffaf0);color:inherit}
@@ -40,6 +46,8 @@ const CSS = `
 .crp-w:focus-visible,.crp-tab:focus-visible,.crp-chip:focus-visible,.crp-play:focus-visible,.crp-ltr:focus-visible{outline:3px solid var(--focus,#b45309);outline-offset:2px}
 .crp-w[data-playing="true"]{background:var(--warn-bg,#fff1c2)}
 .crp-l.crp-hl{background:var(--warn-bg,#fff1c2);color:var(--warn-fg,#5b4200);text-decoration:underline;text-decoration-thickness:.12em;text-underline-offset:.18em;border-radius:4px;box-shadow:0 0 0 2px var(--focus,#b45309)}
+.crp-lg{font-size:1.6em;line-height:1}
+.crp-lgnote{font-size:.9rem;margin:.25rem 0}
 .crp-tr{font-size:.95rem;color:var(--muted,#5a6275);direction:ltr}
 .crp-gl{font-size:.85rem;color:var(--muted,#5a6275);direction:ltr;max-inline-size:9rem}
 .crp-en{margin-block:.2rem 1rem;font-style:italic;direction:ltr}
@@ -92,7 +100,6 @@ export function clusters(word) {
   return out;
 }
 
-const skeletonOf = (w) => [...w].filter(isHebrewLetter).join('');
 
 /** Read the congregation setting from either settings shape. */
 function congregationOf(settings) {
@@ -135,7 +142,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
   const state = {
     tab: 'read',
     passageId: passages.some((p) => p.id === ctx.params?.textId) ? ctx.params.textId : passages[0].id,
-    translit: true, english: true,
+    translit: true, english: true, ctlOpen: false,
     letters: /** @type {Set<string>} */ (new Set()),
     situation: corpus.situations()[0], register: 'all', gender: 'm', query: '',
   };
@@ -181,9 +188,13 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
       el('label', {}, el('input', { type: 'checkbox', checked: state.translit ? '' : null, onchange: (e) => { state.translit = e.target.checked; render(); } }), `Transliteration (${trad})`),
       el('label', {}, el('input', { type: 'checkbox', checked: state.english ? '' : null, onchange: (e) => { state.english = e.target.checked; render(); } }), 'English'),
       el('button', { type: 'button', class: 'crp-play', onclick: () => playAll(p) }, 'Play all'));
-    host.append(el('h2', { id: 'crp-h' }, p.title), el('p', {}, el('strong', {}, p.ref), p.records.some((r) => r.language === 'aramaic') ? el('span', { class: 'crp-badge' }, 'Aramaic, not Hebrew') : null), bar);
+    // Secondary controls (text picker, show/hide switches, Play all, letter highlights) sit in a closed details so the text is on the first screen of a phone.
+    const ctl = el('details', { class: 'crp-ctl', open: state.ctlOpen ? '' : null, ontoggle: (e) => { state.ctlOpen = !!(e?.target?.open); } },
+      el('summary', {}, 'Change text, show or hide, highlight letters'));
+    host.append(el('h2', { id: 'crp-h' }, p.title), el('p', {}, el('strong', {}, p.ref), p.records.some((r) => r.language === 'aramaic') ? el('span', { class: 'crp-badge' }, 'Aramaic, not Hebrew') : null), ctl);
+    ctl.append(bar);
 
-    if (state.translit && !translitFn) host.append(el('p', { class: 'crp-warn' }, 'Transliteration needs src/pronunciation/transliterate.js, which is not available here.'));
+    if (state.translit && !translitFn) ctl.append(el('p', { class: 'crp-warn' }, 'Transliteration needs src/pronunciation/transliterate.js, which is not available here.'));
 
     // letter highlight control
     const lettersBox = el('div', { class: 'crp-letters', role: 'group', 'aria-label': 'Highlight a letter: choose a letter name to mark every occurrence' });
@@ -192,15 +203,17 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
       lettersBox.append(el('button', { type: 'button', class: 'crp-ltr', 'aria-pressed': state.letters.has(id) ? 'true' : 'false', 'data-letter': id, title: `${n} time${n === 1 ? '' : 's'}`, onclick: () => toggleLetter(id, n) },
         heEl('span', LETTER_CHAR[id], 'he'), el('span', {}, LETTER_NAME[id]), el('small', {}, String(n))));
     }
-    host.append(el('p', {}, el('strong', {}, 'Find the letters: '), 'tap a letter name to highlight it everywhere in the text.'), lettersBox,
+    ctl.append(el('p', {}, el('strong', {}, 'Find the letters: '), 'tap a letter name to highlight it everywhere in the text.'), lettersBox,
       el('button', { type: 'button', class: 'crp-chip', onclick: () => { state.letters.clear(); applyHighlights(); syncLetterButtons(); say('Highlights cleared.'); } }, 'Clear highlights'));
 
     // text, line by line
     const textBox = el('div', { id: 'crp-text' });
     p.records.forEach((rec) => {
       const lines = rec.he.split('\n');
-      const enLines = String(rec.english).split('\n');
+      const enLines = uiEnglish(ctx, String(rec.english)).split('\n');
       let wi = 0;
+      const recWords = lines.flatMap((l) => l.split(/\s+/).filter((w) => /[א-ת]/.test(w)));
+      const large = Array.isArray(rec.largeLetters) && rec.largeLetters.length ? largePositionsIn(recWords, rec.largeLetters) : [];
       lines.forEach((line, li) => {
         const words = line.split(/\s+/).filter((w) => /[א-ת]/.test(w));
         const row = el('div', { class: 'crp-line', dir: 'rtl', role: 'group', 'aria-label': `${rec.ref}${lines.length > 1 ? ' line ' + (li + 1) : ''}` });
@@ -209,7 +222,9 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
           const idx = wi;
           const btn = el('button', { type: 'button', class: 'crp-w', lang: 'he', dir: 'rtl', 'aria-label': `${clusters(w).map((c) => c.text).join('')}: play word ${idx}`,
             onclick: (e) => playWord(e.currentTarget, rec, idx, w) });
-          for (const c of clusters(w)) btn.append(el('span', { class: 'crp-l', 'data-lid': c.id || '' }, c.text));
+          const bigLn = new Set(large.filter((l) => l.wi === idx - 1).map((l) => l.ln));
+          let ln = -1;
+          for (const c of clusters(w)) { if (c.id) ln++; btn.append(el('span', { class: 'crp-l' + (c.id && bigLn.has(ln) ? ' crp-lg' : ''), 'data-lid': c.id || '' }, c.text)); }
           const cell = el('span', { class: 'crp-cell' }, btn);
           if (state.translit) { const tr = transliterateWord(w); if (tr) cell.append(el('span', { class: 'crp-tr' }, tr)); }
           if (state.english && rec.wordGlosses && rec.wordGlosses[idx - 1] && lines.length === 1) cell.append(el('span', { class: 'crp-gl' }, rec.wordGlosses[idx - 1]));
@@ -217,9 +232,10 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
         });
         const lineBtn = el('button', { type: 'button', class: 'crp-play', onclick: () => playLine(rec, li, line) }, `Play ${lines.length > 1 ? 'line ' + (li + 1) : 'line'}`);
         textBox.append(row, el('div', { class: 'crp-bar' }, lineBtn));
-        if (state.english) textBox.append(el('p', { class: 'crp-en', lang: 'en' }, enLines.length === lines.length ? enLines[li] : (li === 0 ? rec.english : '')));
+        if (state.english) textBox.append(el('p', { class: 'crp-en', lang: 'en' }, enLines.length === lines.length ? enLines[li] : (li === 0 ? enLines.join('\n') : '')));
       });
     });
+    for (const rec of p.records) if (Array.isArray(rec.largeLetters) && rec.largeLetters.length) textBox.append(el('p', { class: 'crp-lgnote' }, `${p.records.length > 1 ? rec.ref + ': ' : ''}Written large in the source text: `, ...rec.largeLetters.flatMap((c, i) => [i ? ', ' : '', heEl('span', c, 'he')]), '.'));
     for (const rec of p.records) if (rec.variants?.f) textBox.append(el('p', {}, el('strong', {}, 'Women say: '), heEl('span', rec.variants.f.he, 'he'), el('span', { class: 'crp-badge' }, 'derived, needs check')));
     host.append(textBox, status);
     for (const rec of p.records) { const mb = metaBlock(rec); if (mb) host.append(el('h3', {}, p.records.length > 1 ? `About: ${rec.title}` : 'About this prayer'), mb); }
@@ -254,13 +270,13 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
 
   async function playWord(btn, rec, idx, word) {
     btn.setAttribute('data-playing', 'true');
-    const spoken = skeletonOf(word) === TETRAGRAMMATON_SKELETON ? SPOKEN_ADONAI : word;
+    const spoken = speechText(word);
     await playItem('word', `${rec.id}-w${idx}`, spoken, `word ${idx}`);
     btn.removeAttribute('data-playing');
   }
   async function playLine(rec, li, line, keepSeq = false) {
     const lines = rec.he.split('\n');
-    const text = line.split(/\s+/).map((w) => (skeletonOf(w) === TETRAGRAMMATON_SKELETON ? SPOKEN_ADONAI : w)).join(' ');
+    const text = speechText(line);
     await playItem('line', lines.length === 1 ? rec.id : `${rec.id}-l${li + 1}`, text, `${rec.ref}${lines.length > 1 ? ' line ' + (li + 1) : ''}`, keepSeq);
   }
   async function playAll(p) {
@@ -353,7 +369,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
         el('div', { class: 'meta' }, el('div', {}, el('strong', {}, p.en), el('span', { class: 'crp-badge' }, p.register), p.register === 'slang' ? el('span', { class: 'crp-badge' }, 'native review needed') : null),
           state.translit ? el('div', { class: 'crp-tr' }, tr) : null,
           p.notes ? el('div', { class: 'crp-gl' }, p.notes) : null),
-        el('button', { type: 'button', class: 'crp-play', 'aria-label': `Play: ${p.en}`, onclick: () => playItem(/\s/.test(he) ? 'line' : 'word', p.gendered ? `${p.id}-${state.gender}` : p.id, he, p.en) }, 'Play'));
+        isAudioFree(ctx) ? null : el('button', { type: 'button', class: 'crp-play', 'aria-label': `Play: ${p.en}`, onclick: () => playItem(/\s/.test(he) ? 'line' : 'word', p.gendered ? `${p.id}-${state.gender}` : p.id, he, p.en) }, 'Play'));
       host.append(card);
     }
     host.append(status);
@@ -371,7 +387,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
           onkeydown: (e) => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { const ks = [...tabs.querySelectorAll('[role=tab]')].map((b) => b.id.slice(8)); const d = e.key === 'ArrowRight' ? 1 : -1; state.tab = ks[(ks.indexOf(state.tab) + d + ks.length) % ks.length]; render(); wrap.querySelector(`#crp-tab-${state.tab}`)?.focus(); } } }, label)));
     const panel = el('div', { id: 'crp-panel', role: 'tabpanel', 'aria-labelledby': `crp-tab-${state.tab}` });
     if (state.tab === 'read') renderReader(panel); else if (state.tab === 'guide') renderGuide(panel); else renderPhrasebook(panel);
-    wrap.replaceChildren(el('h1', { id: 'view-title', tabindex: '-1' }, 'Read'), tabs, panel, live);
+    wrap.replaceChildren(el('h1', { id: 'view-title', tabindex: '-1' }, 'Read'), silentReadingNode(el, ctx), tabs, panel, live);
     if (keepFocus) wrap.querySelector('#' + CSS_escape(keepFocus))?.focus();
   }
   const CSS_escape = (s) => (globalThis.CSS?.escape ? globalThis.CSS.escape(s) : s.replace(/[^\w-]/g, '\\$&'));

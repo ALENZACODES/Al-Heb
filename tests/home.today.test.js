@@ -51,14 +51,14 @@ test('hasRoute guards every link: no morning link, no firstday link, no learn li
   const R = T.renderToday(none, t); assert.deepEqual(hrefs(R), []);
 });
 test('render: every href is a real route, one primary button with text, due/streak wording kept for the smoke check', () => {
-  const m = T.buildToday(base({ completedIds: ['r01'], dueCount: 6, streak: { count: 1, activeToday: false } }));
+  const m = T.buildToday(base({ completedIds: ['r01'], dueCount: 6, streak: { count: 2, activeToday: false } }));
   const R = T.renderToday(m, t);
   for (const h of hrefs(R)) if (h !== '#/festivals') assert.ok(matchRoute(h).route, h); // /festivals: route not in router.js yet (main adds it); hasRoute hides the link until then
-  assert.match(R.textContent, /6 cards due/); assert.match(R.textContent, /1 day\. Today is not counted yet/);
+  assert.match(R.textContent, /6 cards due/); assert.match(R.textContent, /2 days\. Study for 5 minutes today to add a day/);
   const primary = R.queryAll('a.btn'); assert.equal(primary.length, 1); assert.match(primary[0].textContent, /^Continue: /);
   assert.equal(R.attrs['aria-labelledby'], 'h-today'); assert.equal(R.queryAll('h2').length, 1);
   const one = T.renderToday(T.buildToday(base({ completedIds: ['r01'], dueCount: 1 })), t); assert.match(one.textContent, /1 card due/);
-  const fresh = T.renderToday(T.buildToday(base()), t); assert.match(fresh.textContent, /No reviews due/); assert.match(fresh.textContent, /No streak yet/);
+  const fresh = T.renderToday(T.buildToday(base()), t); assert.match(fresh.textContent, /No reviews due/); assert.equal(fresh.querySelector('#today-streak'), null, 'brand-new learner: no streak line');
   assert.equal(fresh.queryAll('a.btn')[0].attrs.href, '#/firstday');
 });
 
@@ -76,6 +76,24 @@ test('home view: first run shows Today with Continue -> #/firstday; existing sec
   assert.ok(root.queryAll('nav').length >= 1 && root.querySelector('#h-quick'));
   assert.equal(JSON.stringify(store.m), before, 'mounting Home writes nothing');
   un();
+});
+test('home view: baby-step layout for a new learner (Today card, four destinations, More; no prayer card, no streak, no tile wall)', async () => {
+  const { root, ctx } = mk();
+  const un = mount(root, ctx); await waitFor(() => root.querySelector('#today-continue'));
+  assert.deepEqual(root.queryAll('.home-dests a').map((a) => a.attrs.href), ['#/letters', '#/vocab', '#/read', '#/progress']);
+  assert.ok(root.querySelector('#home-more'), 'More button');
+  assert.equal(root.querySelector('.opening'), null, 'opening prayer draft card is not on a new learner Home');
+  assert.equal(root.querySelector('#today-streak'), null);
+  assert.ok(root.queryAll('a').length <= 8, 'few links on first screen: ' + root.queryAll('a').length);
+  un();
+});
+test('home view: a returning learner keeps the full sections; the opening prayer card only for a reading goal', async () => {
+  const day = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  const init = { 'curriculum.progress': { completed: { r01: 1 } }, 'srs.cards': {}, streak: { count: 2, best: 2, last: day(new Date()) } };
+  const a = mk(init); mount(a.root, a.ctx); await waitFor(() => a.root.querySelector('#h-more'));
+  assert.ok(a.root.querySelector('.opening'), 'default goal read: card present');
+  const b = mk(init); b.ctx.settings.set({ goal: 'israel' }); mount(b.root, b.ctx); await waitFor(() => b.root.querySelector('#h-more'));
+  assert.equal(b.root.querySelector('.opening'), null, 'Israel goal: no prayer card');
 });
 test('daily goal: defaults to 5, offers 5/10/15/20/30, click writes only onboarding.v1.dailyGoal and keeps focus', async () => {
   assert.equal(T.buildToday(base()).dailyGoal, 5); assert.equal(T.buildToday(base({ dailyGoal: 15 })).dailyGoal, 15); assert.equal(T.buildToday(base({ dailyGoal: 7 })).dailyGoal, 5);
@@ -115,13 +133,17 @@ test('first-run Today card never points at a locked placed lesson (r13 case) and
 });
 test('streak copy states the real 5-minute rule; a paused streak shows the best; goal is labelled as study goal', () => {
   const txt = (streak) => T.renderToday(T.buildToday(base({ completedIds: ['r01'], streak })), t).textContent;
-  assert.match(txt({ count: 0, best: 3 }), /Paused\. Your best streak was 3 days/);
+  assert.match(txt({ count: 0, best: 3 }), /Your best streak was 3 days\. A new one starts the next time you study for 5 minutes/);
   assert.doesNotMatch(txt({ count: 0, best: 3 }), /No streak yet/);
-  assert.match(txt({ count: 0, best: 0 }), /No streak yet\. A day counts after 5 minutes/);
-  assert.match(txt({ count: 2, best: 2, activeToday: false }), /2 days\. Today is not counted yet\. A day counts after 5 minutes/);
+  // hidden until a streak of 2 days exists (or a paused one that reached 2): nothing for a brand-new learner or a streak of 1
+  assert.doesNotMatch(txt({ count: 0, best: 0 }), /Streak:|No streak yet/);
+  assert.doesNotMatch(txt({ count: 1, best: 1, activeToday: true }), /Streak:/);
+  assert.match(txt({ count: 2, best: 2, activeToday: false }), /2 days\. Study for 5 minutes today to add a day\. A day counts when you study for 5 minutes/);
   assert.match(txt({ count: 2, best: 2, activeToday: true }), /and counting/);
+  const rest = txt({ count: 2, best: 2, activeToday: false, restToday: true });
+  assert.match(rest, /2 days\. Today is a rest day/); assert.doesNotMatch(rest, /Study for 5 minutes today/);
   assert.doesNotMatch(txt({ count: 0, best: 0 }), /Finish a lesson or review a card to start one/);
-  assert.match(txt({ count: 0 }), /Study goal:/); assert.match(txt({ count: 0 }), /streak always counts a day at 5 minutes/);
+  assert.match(txt({ count: 0 }), /Daily goal:/); assert.match(txt({ count: 0 }), /streak always counts a day at 5 minutes/);
   assert.deepEqual([...T.DAILY_GOALS], [5, 10, 15, 20, 30]);
 });
 
@@ -147,4 +169,63 @@ test('I-xx lessons go to #/intermediate/<id> when that route exists, else the Le
   for (const x of m.more) assert.equal(/\(Preview\)$/.test(x.label), preview(x.name), x.name);
   assert.equal(/\(Preview\)$/.test(m.morning.label), preview('morning'));
   assert.equal(T.previewTag('learn'), ''); assert.equal(T.previewTag('nope'), '');
+});
+
+test('first-run reassurance line matches the button: a lesson names its minutes, the placement check names the check, only the on-ramp says "one letter"', () => {
+  const whyOf = (m) => T.renderToday(m, t, null).textContent;
+  const isr = T.buildToday(base({ goal: 'israel' }));
+  assert.equal(isr.primary.kind, 'lesson'); assert.ok(isr.primary.minutes > 0);
+  assert.match(whyOf(isr), new RegExp(`first takes about ${isr.primary.minutes} minutes`)); assert.doesNotMatch(whyOf(isr), /one letter/);
+  assert.match(whyOf(T.buildToday(base({ onboarding: { start: '/placement' } }))), /short check finds the lesson/);
+  assert.match(whyOf(T.buildToday(base())), /one letter, about 2 minutes/);
+});
+
+// ---- journey findings B (repeat), D (welcome back), E (Read destination) ----
+test('B: after a review session today, a remaining backlog no longer displaces the next unfinished lesson', () => {
+  const o = { completedIds: ['r01', 'r02'], dueCount: 32, streak: { count: 2, activeToday: true, best: 2 } };
+  const before = T.buildToday(base(o));
+  assert.equal(before.primary.kind, 'review'); assert.match(before.primary.label, /Review 32 due cards first/);
+  const after = T.buildToday(base({ ...o, reviewedToday: 20 }));
+  assert.equal(after.backlog, false); assert.equal(after.primary.kind, 'lesson'); assert.equal(after.primary.href, '#/learn?lesson=r03');
+  assert.equal(after.due.href, '#/learn?review=1'); // the cards stay one tap away
+  assert.equal(T.buildToday(base({ ...o, reviewedToday: 3 })).primary.kind, 'review'); // a couple of cards is not a session
+});
+test('B: a finished lesson is never the main action; the next open one is', () => {
+  for (const done of [['r01'], ['r01', 'r02'], ['r01', 'r02', 'r03']]) {
+    const m = T.buildToday(base({ completedIds: done, dueCount: 5, reviewedToday: 20 }));
+    const id = decodeURIComponent(m.primary.href.split('lesson=')[1]);
+    assert.ok(!done.includes(id), `${id} is already done`);
+    assert.ok(m.lessons.every((l) => !done.includes(l.id)));
+  }
+});
+test('B: with every lesson done and a reviewed backlog, review stays the main action (nothing else to offer)', () => {
+  const m = T.buildToday(base({ completedIds: lessons.map((l) => l.id), dueCount: 30, reviewedToday: 20 }));
+  assert.equal(m.primary.kind, 'review');
+});
+test('daysAway / reviewedToday: whole local days from the streak record and card reviews', () => {
+  const now = new Date(2026, 10, 23, 9, 0).getTime();
+  assert.equal(T.daysAway({ last: '2026-11-13', cards: {}, now }), 10);
+  assert.equal(T.daysAway({ last: '2026-11-13', cards: { a: { lastReview: new Date(2026, 10, 20, 8).getTime() } }, now }), 3); // the later of the two
+  assert.equal(T.daysAway({ now }), 0); assert.equal(T.daysAway({ last: 'junk', cards: null, now }), 0);
+  assert.equal(T.reviewedToday({ a: { lastReview: now - 3600e3 }, b: { lastReview: now - 2 * 86400e3 }, c: { lastReview: null } }, now), 1);
+});
+test('D: after 7+ days away Home greets warmly, offers a gentle review, and shows no streak line', () => {
+  const o = { completedIds: ['r01', 'r02'], dueCount: 24, streak: { count: 0, best: 2 } };
+  const gone = T.buildToday(base({ ...o, daysAway: 10 }));
+  assert.equal(gone.welcomeBack, true);
+  const node = T.renderToday(gone, t, () => {}); const txt = node.textContent;
+  assert.match(txt, /Welcome back/); assert.match(txt, /nothing to catch up/i); assert.match(txt, /few review cards/);
+  assert.equal(node.querySelector('#today-streak'), null); assert.doesNotMatch(txt, /Paused|missed|behind|lost|Streak:/i);
+  assert.match(gone.primary.label, /Ease back in/);
+  assert.equal(T.buildToday(base({ ...o, daysAway: 6 })).welcomeBack, false);
+  assert.equal(T.buildToday(base({ ...o, daysAway: 7 })).welcomeBack, true);
+  assert.equal(T.buildToday(base({ daysAway: 30 })).welcomeBack, false); // a brand-new learner is welcomed by the first-run text, not "back"
+  const lessonFirst = T.buildToday(base({ ...o, dueCount: 5, daysAway: 10 }));
+  assert.equal(lessonFirst.primary.kind, 'lesson'); assert.ok(T.renderToday(lessonFirst, t, () => {}).queryAll('a').some((a) => /review a few cards/.test(a.textContent)));
+});
+test('E: a first-run Home shows Read in the destination row under the title (not only in More)', async () => {
+  const { root, ctx } = mk(); const un = mount(root, ctx); await waitFor(() => root.querySelector('#today-continue'));
+  const row = root.querySelector('#home-dests-host');
+  assert.ok(row.queryAll('a').some((a) => a.attrs.href === '#/read'), 'Read tile in the row');
+  assert.match(row.textContent, /Read/); un();
 });

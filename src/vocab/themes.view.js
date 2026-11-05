@@ -16,6 +16,8 @@ import { visibleRecords } from './loader.js';
 import { addCards, VOCAB_CARDS_KEY, POS_LABEL } from './model.js';
 import { ATTRIBUTION, DRAFT_NOTICE } from './vocab.view.js';
 import { fileLabel } from '../shell/audio-labels.js';
+import { speechText, uiEnglish } from '../shell/names.js';
+import { sourcesLine, exampleCredit } from '../shell/sources.js';
 
 export const STORE_KEY = 'vocab.themes.v1';
 export const SENSE_NOTE = 'Example lines are copied from ALEF\'s own texts (prayers, phrasebook, lessons). Whether the word means the same thing in the line was not checked.';
@@ -65,7 +67,7 @@ export function mount(root, ctx) {
   const notice = el('p', { class: 'th-muted' }, DRAFT_NOTICE);
   const body = el('div', { class: 'th-body' });
   const status = el('div', { class: 'th-status', role: 'status', 'aria-live': 'polite' });
-  const footer = el('footer', {}, el('p', {}, ATTRIBUTION));
+  const footer = el('footer', {}, el('p', {}, ATTRIBUTION), sourcesLine(el, { examples: true }));
   wrap.append(h1, notice, body, status, footer);
   root.append(wrap);
 
@@ -96,11 +98,11 @@ export function mount(root, ctx) {
     const voices = typeof g.speechSynthesis.getVoices === 'function' ? g.speechSynthesis.getVoices() : [];
     if (voices?.length && !voices.some((v) => /^he([-_]|$)/i.test(v.lang || ''))) { noteEl.textContent = 'No sound: your device has no Hebrew voice installed, and there is no recording of this word.'; return; }
     try {
-      const u = new g.SpeechSynthesisUtterance(String(w.he).replace(/־/g, ' ')); u.lang = 'he-IL';
+      const u = new g.SpeechSynthesisUtterance(speechText(String(w.he).replace(/־/g, ' '))); u.lang = 'he-IL';
       const rate = ctx?.settings?.get?.('ttsRate'); if (typeof rate === 'number') u.rate = rate;
       g.speechSynthesis.cancel?.(); g.speechSynthesis.speak(u);
       noteEl.textContent = 'Computer voice: your browser\'s text-to-speech, not a recording. It reads Israeli pronunciation and may ignore the vowel points.';
-    } catch { noteEl.textContent = 'No sound: the browser voice failed.'; }
+    } catch { noteEl.textContent = 'No sound: the browser voice did not work.'; }
   }
 
   function showList() {
@@ -123,13 +125,13 @@ export function mount(root, ctx) {
     const listen = el('button', { type: 'button', class: 'btn secondary', 'aria-label': `Listen to ${w.en}${rec ? '' : ' (computer voice)'}`, onclick: () => playWord(w, note) },
       el('span', { 'aria-hidden': 'true' }, '▶'), ' ', rec ? 'Listen' : 'Listen (computer voice)');
     const ex = w.example ? el('blockquote', { class: 'th-ex' },
-      heText(w.example.he), w.example.en ? el('div', {}, w.example.en) : null,
-      el('div', { class: 'th-muted' }, `From the ${SOURCE_LABEL[w.example.source?.channel] || 'ALEF texts'} (${w.example.source?.ref ?? ''}). ${SENSE_NOTE}`)) : el('p', { class: 'th-muted' }, 'No example line: this word does not appear in a full line of ALEF\'s texts.');
+      heText(w.example.he), w.example.en ? el('div', {}, uiEnglish(ctx, w.example.en)) : null,
+      el('div', { class: 'th-muted' }, `From the ${SOURCE_LABEL[w.example.source?.channel] || 'ALEF texts'} (${w.example.source?.ref ?? ''}). ${SENSE_NOTE}`), exampleCredit(el, w.example)) : el('p', { class: 'th-muted' }, 'No example line: this word does not appear in a full line of ALEF\'s texts.');
     const flags = w.flags?.includes('exampleSpellingShared') ? el('p', { class: 'th-muted' }, 'The spelling is shared with another word, so the line may show that other word.') : null;
     return el('li', { class: 'th-word', 'data-id': w.id },
       ctx.img?.(el, { kind: 'word', id: w.id, class: 'th-pic', width: 400 }),
       el('div', { class: 'th-he' }, heText(w.he)),
-      el('div', {}, [w.translit, `${w.en}`, POS_LABEL[w.pos] || w.pos].filter(Boolean).join(' · ')),
+      el('div', {}, [w.translit, `${uiEnglish(ctx, w.en)}`, POS_LABEL[w.pos] || w.pos].filter(Boolean).join(' · ')),
       listen, note, ex, flags);
   }
 

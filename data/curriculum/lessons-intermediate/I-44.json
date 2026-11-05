@@ -147,7 +147,7 @@
   },
   {
    "he": "תּוֹר",
-   "en": "turn, appointment",
+   "en": "appointment, turn",
    "translit": null,
    "pronunciation": {
     "israeli": "tor"
@@ -321,7 +321,6 @@
    "options": [
     "formal",
     "neutral",
-    "casual",
     "slang"
    ]
   },

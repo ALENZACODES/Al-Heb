@@ -45,8 +45,9 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
   function render() {
     cleanup(); body.replaceChildren();
     wrap.replaceChildren(el('h1', { id: 'view-title', tabindex: '-1' }, 'Torah reading'),
-      el('p', { class: 'trd-draft', role: 'note' }, DRAFT_NOTICE),
-      el('p', { class: 'trd-muted' }, 'Goal: read Torah and prayers aloud with a congregation. A Torah scroll has no vowel points and no cantillation marks; siddurim are pointed.'),
+      el('details', { class: 'trd-fold' }, el('summary', {}, 'Draft, not reviewed by a person'),
+        el('p', { class: 'trd-draft', role: 'note' }, DRAFT_NOTICE),
+        el('p', { class: 'trd-muted' }, 'Goal: read Torah and prayers aloud with a congregation. A Torah scroll has no vowel points and no cantillation marks; siddurim are pointed.')),
       nav(), body, live,
       el('p', { class: 'trd-foot' }, 'Hebrew from the registry and from tanach.us (public domain / copy without restriction); see Sources. No audio recordings exist yet for this course.'));
     const env = { ctx, course, translit, progress, save, announce, params: { item: ctx.query?.item } };

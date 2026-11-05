@@ -1,22 +1,52 @@
 // One shared label table for the audio manifest statuses. Every screen, report or doc that names a clip's status
-// reads from here, so the wording cannot drift. The status values themselves do not change: the manifest and the
-// TTS lane write 'recorded' or 'tts'; anything else counts as 'missing' (see summarizeManifest in ./audio.js).
+// reads from here, so the wording cannot drift. Status values the manifest may hold:
+//   recorded              a human reader's recording
+//   tts                   older synthetic Israeli-Hebrew clip (kept readable)
+//   synthetic-unreviewed  synthetic clip from the local text-to-speech pipeline, no human has listened to it
+//   synthetic-reviewed    same, after a human marked it reviewed (no tool does that yet; edit by hand)
+// Anything else counts as 'missing' (see summarizeManifest in ./audio.js).
 export const STATUS_LABELS = Object.freeze({
   recorded: 'Recorded by a human reader',
   tts: 'Synthetic voice (Israeli only), not a recorded teacher',
   missing: 'No audio yet',
 });
 
-/** Label for a manifest status value; anything that is not 'recorded' or 'tts' is 'missing'. */
-export function statusLabel(status) {
-  return STATUS_LABELS[status === 'recorded' || status === 'tts' ? status : 'missing'];
+export const SYNTHETIC_STATUSES = Object.freeze(['tts', 'synthetic-unreviewed', 'synthetic-reviewed']);
+/** True for every status that means "a computer-made clip". Use this, never `=== 'tts'`, to tell synthetic from human. */
+export const isSyntheticStatus = (status) => SYNTHETIC_STATUSES.includes(status);
+
+const TRAD_STYLE = Object.freeze({ israeli: 'Israeli', sephardi: 'Sephardi', ashkenazi: 'Ashkenazi' });
+
+/**
+ * Honest label for a synthetic-unreviewed/-reviewed clip. `tradition` is the tradition of the FILE (not the learner's setting);
+ * `source` is the manifest source when known ('tts-respelled...' or 'tts-hebrew...'); without it, Israeli means made from
+ * pointed Hebrew and the other traditions mean made from a respelling (the only way the pipeline makes them).
+ */
+export function syntheticLabel(status, tradition, source) {
+  const style = TRAD_STYLE[tradition];
+  const respelled = typeof source === 'string' && source.startsWith('tts-respelled') ? true
+    : typeof source === 'string' && source.startsWith('tts-hebrew') ? false
+    : style ? tradition !== 'israeli' : null;
+  const made = respelled === null ? '' : respelled ? 'made from a respelling' : 'made from pointed Hebrew';
+  const reviewed = status === 'synthetic-reviewed' ? 'reviewed by a listener' : 'unreviewed';
+  const parts = [style ? `${style} style` : '', made, 'not a recorded teacher', reviewed].filter(Boolean);
+  return `Synthetic voice (${parts.join('; ').replace('style; ', 'style, ')})`;
+}
+
+/** Label for a manifest status value; anything that is not 'recorded' or synthetic is 'missing'. */
+export function statusLabel(status, tradition, source) {
+  if (status === 'recorded') return STATUS_LABELS.recorded;
+  if (status === 'tts') return STATUS_LABELS.tts;
+  if (status === 'synthetic-unreviewed' || status === 'synthetic-reviewed') return syntheticLabel(status, tradition, source);
+  return STATUS_LABELS.missing;
 }
 
 /**
  * Label for a clip that is being (or can be) played from a file. The player reports the manifest status as
- * `entryStatus`; a file entry is 'tts' or 'recorded', so anything but 'tts' is the human label (the same rule the
- * views applied before this table existed).
+ * `entryStatus`; with no status at all (a bare "has a file" answer) it is the human label, as before. A synthetic status
+ * is never shown as a human recording.
  */
-export function fileLabel(entryStatus) {
-  return entryStatus === 'tts' ? STATUS_LABELS.tts : STATUS_LABELS.recorded;
+export function fileLabel(entryStatus, tradition, source) {
+  if (isSyntheticStatus(entryStatus)) return statusLabel(entryStatus, tradition, source);
+  return STATUS_LABELS.recorded;
 }

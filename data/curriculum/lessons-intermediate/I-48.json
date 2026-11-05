@@ -12,7 +12,7 @@
  "words": [
   {
    "he": "חֶשְׁבּוֹן",
-   "en": "account",
+   "en": "account; bill",
    "translit": null,
    "pronunciation": {
     "israeli": "cheshbon"
@@ -313,7 +313,6 @@
    "options": [
     "formal",
     "neutral",
-    "casual",
     "slang"
    ]
   },

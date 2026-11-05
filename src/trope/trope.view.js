@@ -6,6 +6,7 @@
  */
 import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
 import { loadTropeData } from './loader.js';
+import { SETTING_LABELS } from '../traditions/model.js';
 import { STORE_KEY, systemFor, nameMap, collectWords, frequency, buildQuestion, normaliseState, applyAnswer } from './model.js';
 
 export const DRAFT_NOTICE = 'Draft, unreviewed: the words and mark names come from a machine parse of the Leningrad Codex text (UXLC). No cantor or Hebrew teacher has checked them yet.';
@@ -13,7 +14,9 @@ export const MELODY_NOTE = 'Melodies differ by community, and this trainer teach
 const CSS = `
 .alef-trope{max-inline-size:36rem;margin-inline:auto;overflow-wrap:anywhere}
 .alef-trope *{box-sizing:border-box;max-inline-size:100%}
-.alef-trope .tr-he{font-size:2.8rem;line-height:1.5;text-align:center;margin-block:.5rem}
+.alef-trope .tr-he{font-size:2.4rem;line-height:1.3;text-align:center;margin-block:.25rem}
+.alef-trope h2{font-size:1.05rem;margin-block:.5rem .25rem}
+.alef-trope .tr-name-he{font-size:1.15em;margin-inline-start:.25rem}
 .alef-trope .tr-opts{display:grid;gap:.5rem;margin-block:.75rem}
 .alef-trope button.btn,.alef-trope select{min-block-size:var(--tap,48px);min-inline-size:44px;inline-size:100%;font:inherit;white-space:normal}
 .alef-trope select{padding:.4rem .6rem;border:2px solid var(--border,#999);border-radius:8px;background:var(--card,#fff);color:inherit}
@@ -48,10 +51,11 @@ export function mount(root, ctx) {
     setBody(el('p', {}, 'Loading marks...'));
     try {
       const d = ctx?.tropeData || await loadTropeData();
-      const system = systemFor(ctx?.settings?.get?.('congregation'));
+      const settingId = ctx?.settings?.get?.('congregation');
+      const system = systemFor(settingId);
       const names = nameMap(d.table, system);
       const words = collectWords(d.passages, names);
-      data = { names, words, freq: frequency(words), levels: d.levels, system };
+      data = { names, words, freq: frequency(words), levels: d.levels, system, settingId };
       state = normaliseState(await storeGet(ctx, STORE_KEY, null));
     } catch {
       if (alive) setBody(el('p', { role: 'alert' }, 'The trope data could not be loaded. Check your connection and reload; nothing was lost.'));
@@ -77,17 +81,19 @@ export function mount(root, ctx) {
         const ok = o.id === q.answer, right = data.names.get(q.answer);
         state = applyAnswer(state, q.answer, ok); save();
         for (const b of area.children) b.setAttribute?.('disabled', '');
-        say(ok ? `Right. This is ${right.name}.` : `Not yet. This one is ${right.name}.`);
+        const nm = right.he ? `${right.name} (${right.he})` : right.name;
+        say(ok ? `Right. This is ${nm}.` : `Not yet. This one is ${nm}.`);
         nextRow.append(next); focusNode(next);
-      } }, o.label));
+      } }, o.label, o.he ? [' ', heText(o.he, 'alef-he tr-name-he')] : null));
     }
+    // Compact first screen: question, word and options come first; the level picker and source line sit below.
     setBody(
-      el('label', { for: 'trope-level' }, 'Level (by how often the mark occurs in the corpus passages)'), sel,
       el('h2', { id: 'trope-q', tabindex: '-1' }, 'What is the name of the mark on this word?'),
       el('div', { class: 'tr-he' }, heText(q.word.text)),
-      el('p', { class: 'muted' }, `From ${q.word.ref}. Names: ${data.system === 'ashkenazi' ? 'Ashkenazi' : 'Sephardi/Mizrahi'} (change in settings).`),
       area, nextRow,
-      el('p', { class: 'muted', id: 'trope-score' }, `Answered ${state.answered}, right ${state.correct}. Saved on this device.`));
+      el('p', { class: 'muted', id: 'trope-score' }, `Answered ${state.answered}, right ${state.correct}. Saved on this device.`),
+      el('p', { class: 'muted' }, `From ${q.word.ref}. Names: ${data.system === 'ashkenazi' ? 'Ashkenazi' : `Sephardi/Mizrahi, used with your ${SETTING_LABELS[data.settingId] || 'current'} setting`} (change in settings).`),
+      el('label', { for: 'trope-level' }, 'Level (by how often the mark occurs in the corpus passages)'), sel);
     focusNode(body.querySelector?.('#trope-q'));
   }
 

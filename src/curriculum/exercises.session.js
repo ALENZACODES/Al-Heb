@@ -8,8 +8,10 @@
  *    never also correct.
  *  - feedback hooks (haptics, sound) that are off unless the learner turned them on, and never vibrate under reduced motion.
  */
+import { plain } from "../shell/plain-copy.js";
 import { rng, shuffled, decoysFor } from "./spotit.js";
 import { letterSound } from "../pronunciation/forTradition.js";
+import { shapeLabel, wordLabel } from "../letters/shapetext.js";
 
 // ------------------------------------------------------------------------------------------------ variety
 /** Can `rest` be arranged with no equal types adjacent, starting with something other than `prev`? */
@@ -41,13 +43,15 @@ export function sequenceExercises(exs) {
 export const backToBack = (exs) => exs.reduce((n, e, i) => n + (i > 0 && exs[i - 1].type === e.type ? 1 : 0), 0);
 
 // ------------------------------------------------------------------------------------------------ session
-/** @param {{id:string}[]} items  @param {{retry?:boolean}} [o] */
+/** @param {{id:string}[]} items  @param {{retry?:boolean, carry?:{it:{id:string}, right:boolean}[]}} [o] */
 export function createSession(items, o = {}) {
   const retry = o.retry !== false;
   const queue = items.map((it) => ({ it, attempt: 1, skips: 0 }));
   const first = {};          // id -> boolean, first attempt only
   const skipped = new Set(); // ids dropped after a second skip (never answered)
   let resolved = 0, total = items.length, last = null, retried = 0, retriedRight = 0;
+  // carry: answers already given in an earlier visit ({ it, right }). They count as answered; a miss comes back once at the end, as it would have.
+  for (const c of o.carry || []) { first[c.it.id] = !!c.right; resolved++; total++; if (!c.right && retry) { queue.push({ it: c.it, attempt: 2, skips: 0 }); total++; } }
   const api = {
     current: () => queue[0]?.it ?? null,
     isRetry: () => (queue[0]?.attempt ?? 1) > 1,
@@ -106,17 +110,17 @@ export function feedbackText(correct, { retry = false, streak = 0, n = 0 } = {})
 /** Closing line for the summary, from first-attempt accuracy. Never claims mastery. */
 export function closingLine(accuracy, missedN) {
   if (accuracy == null) return "Nothing answered yet.";
-  if (accuracy === 1) return "Every answer right first time. Come back to review in a day or two to see what stuck.";
-  if (accuracy >= 0.7) return `Solid. ${missedN} to look at again; they are in your review.`;
-  return `That was a tough one. ${missedN} to look at again; they are in your review, and trying the lesson once more is fine.`;
+  if (accuracy === 1) return plain("closingPerfect");
+  if (accuracy >= 0.7) return plain("closingSolid", { n: missedN });
+  return plain("closingTough", { n: missedN });
 }
 
 // ------------------------------------------------------------------------------------------------ feel hooks
 export const reducedMotion = (win = globalThis) => !!win?.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
 /** Opt-in: settings "haptics" must be true. Never under reduced motion. */
-export const hapticsOn = (ctx, win = globalThis) => ctx?.settings?.get?.("haptics") === true && !reducedMotion(win) && typeof win?.navigator?.vibrate === "function";
+export const hapticsOn = (ctx, win = globalThis) => ctx?.settings?.get?.("haptics") === true && ctx?.settings?.get?.("calmMode") !== true && !reducedMotion(win) && typeof win?.navigator?.vibrate === "function";
 /** Opt-in: settings "soundEffects" must be true and the shell must offer ctx.sfx.play(name). */
-export const soundOn = (ctx) => ctx?.settings?.get?.("soundEffects") === true && typeof ctx?.sfx?.play === "function";
+export const soundOn = (ctx) => ctx?.settings?.get?.("soundEffects") === true && ctx?.settings?.get?.("calmMode") !== true && ctx?.settings?.get?.("audioFree") !== true && typeof ctx?.sfx?.play === "function"; // a sound is never the only cue: the verdict is also written (feedbackText) and marked on the answer
 /** Fire the feedback hooks for one answer. Returns what it did (for tests). Never throws. */
 export function fireFeedback(ctx, correct, win = globalThis) {
   const did = { haptic: false, sound: false };
@@ -229,23 +233,24 @@ const MIN_EARLIER = 8;
  * one per word (Hebrew -> meaning, options drawn from other lessons' words with a different meaning).
  * Question: { id, kind, prompt, promptHe?, options:[{text,he?}], answerIndex, why, cardId? }
  */
-export function buildChoiceQuestions(lesson, { letters, confusables, consonants, wordPool = [], lessons: order }, { seed = 1, optionCount = 3, tradition, lessons: order2 } = {}) {
+export function buildChoiceQuestions(lesson, { letters, confusables, consonants, mnemonics, wordPool = [], lessons: order }, { seed = 1, optionCount = 3, tradition, lessons: order2 } = {}) {
   const soundEn = (id, L) => letterSound(consonants?.get?.(id), tradition, { fallbackEn: L.sound?.en || "" }).en;
   const rand = rng(seed), qs = [];
+  const shapeOf = (x) => shapeLabel(letters.get(x), mnemonics?.get?.(x)); // '' when there is no shape text; then the plain glyph is all there is
   const meaningKeys = new Set(lesson.words.map((w) => norm(w.en)));
   lesson.letters.forEach((id, i) => {
     const L = letters.get(id); if (!L) return;
     const names = [id, ...letterDistractors(id, letters, confusables, rand, { n: optionCount - 1 })];
     const named = placeOptions(names.map((x) => letters.get(x).name), L.name, rand);
     const hint = (confusables?.sets || []).find((s) => s.letters.includes(id))?.hint;
-    qs.push({ id: `${lesson.id}-q-name-${id}`, kind: "letter-name", prompt: "Which letter is this?", promptHe: L.he,
+    qs.push({ id: `${lesson.id}-q-name-${id}`, kind: "letter-name", prompt: "Which letter is this?", promptHe: L.he, promptLabel: shapeOf(id),
       options: named.options.map((text) => ({ text })), answerIndex: named.answerIndex,
       why: `This is ${L.name}${soundEn(id, L) ? `, which sounds like ${soundEn(id, L)}` : ""}.${hint ? " Tip: " + hint : ""}`, cardId: `letter:${id}`, cardKind: "letter" });
     if (L.sound?.en) {
       const ids = [id, ...letterDistractors(id, letters, confusables, rand, { n: optionCount - 1, bySound: true, consonants, tradition })];
       const g = placeOptions(ids.map((x) => letters.get(x).he), L.he, rand);
       qs.push({ id: `${lesson.id}-q-sound-${id}`, kind: "letter-sound", prompt: `Which letter sounds like: ${soundEn(id, L)}`,
-        options: g.options.map((text) => ({ text, he: true })), answerIndex: g.answerIndex, why: `${L.he} is ${L.name}.`, cardId: `letter:${id}`, cardKind: "letter" });
+        options: g.options.map((text) => ({ text, he: true, label: shapeOf(ids[ids.findIndex((x) => letters.get(x).he === text)]) })), answerIndex: g.answerIndex, why: `${L.he} is ${L.name}.`, cardId: `letter:${id}`, cardKind: "letter" });
     }
   });
   lesson.words.forEach((w, i) => {
@@ -262,7 +267,7 @@ export function buildChoiceQuestions(lesson, { letters, confusables, consonants,
     const uniq = pick(list.slice(0, k));
     if (uniq.length < optionCount - 1) return;
     const opts = placeOptions([w.en, ...uniq.slice(0, optionCount - 1).map((p) => p.en)], w.en, rand);
-    qs.push({ id: `${lesson.id}-q-word-${i + 1}`, kind: "word-meaning", prompt: "What does this mean?", promptHe: w.he,
+    qs.push({ id: `${lesson.id}-q-word-${i + 1}`, kind: "word-meaning", prompt: "What does this mean?", promptHe: w.he, promptLabel: wordLabel(w.he, tradition),
       options: opts.options.map((text) => ({ text })), answerIndex: opts.answerIndex, why: `${w.he} means "${w.en}".`, cardId: `word:${lesson.id}:${i + 1}`, cardKind: "word" });
   });
   return sequenceExercises(qs.map((q) => ({ ...q, type: q.kind })));

@@ -154,7 +154,7 @@ idx = {
         "dialogue": "2 to 5 lines {speaker, he, en}; task says which speaker the learner voices.",
         "fade": "Fade-out recall of a registry line (line id; lineIndex for multi-line entries; maps to line: SRS cards).",
         "spot": "Find target (a token of the registry line) in the line.",
-        "register": "Pick the register (formal/neutral/casual/slang) of a phrasebook line.",
+        "register": "Pick the register (formal/neutral/slang) of a phrasebook line.",
     },
     "units": {"synagogue": [i for i in index if i['unit'] == 'synagogue'], "israel": [i for i in index if i['unit'] == 'israel']},
     "lessons": index,

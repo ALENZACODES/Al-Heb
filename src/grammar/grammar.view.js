@@ -88,7 +88,7 @@ export function mount(root, ctx) {
       el('h2', {}, 'The idea'), el('p', {}, t.explanation),
       el('h2', {}, 'Six examples'), examples, extra,
       el('h2', {}, 'Practice'), t.examples.length < 6 ? el('p', { class: 'muted' }, 'Fewer than six examples could be built from the current data.') : null, start,
-      el('p', {}, el('a', { href: '#/grammar' }, 'All grammar notes')));
+      el('a', { class: 'btn gr-link', href: '#/grammar' }, 'All grammar notes'));
     say(''); focusNode(h1);
   }
 

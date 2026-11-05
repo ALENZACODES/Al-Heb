@@ -155,6 +155,24 @@ test('createRecognizer: he-IL, alternatives returned, errors and timeouts report
   const c = await slow.listen(); assert.equal(c.error, 'timeout');
   assert.deepEqual(await R.createRecognizer({ Ctor: null }).listen(), { ok: false, error: 'unsupported' });
 });
+test('createRecorder: a take that reaches maxMs is kept and handed back by the next stop(); it is not dropped', async () => {
+  const f = fakeRecorder();
+  let fire = null, t = 0;
+  const rec = R.createRecorder({ MediaRecorderCtor: f.MR, getUserMedia: f.getUserMedia, URL: f.URL, BlobCtor: f.BlobCtor, maxMs: 6000, now: () => (t += 2000), setTimeout: (fn) => { fire = fn; return 1; }, clearTimeout: () => {} });
+  assert.deepEqual(await rec.start(), { ok: true });
+  fire(); // the maxMs timer
+  await new Promise((r) => setTimeout(r, 5));
+  assert.equal(f.tracks[0].stopped, 1, 'microphone released at the limit');
+  assert.equal(rec.recording, true, 'the finished take is still waiting to be collected');
+  const r = await rec.stop();
+  assert.equal(r.ok, true); assert.equal(r.url, 'blob:fake-0'); assert.equal(r.ms, 2000);
+  assert.equal(rec.recording, false);
+  assert.deepEqual(await rec.stop(), { ok: false, error: 'not-recording' }, 'collected once only');
+  // a manual stop before the limit still works, and a new start discards an uncollected take
+  assert.deepEqual(await rec.start(), { ok: true }); fire(); await new Promise((r2) => setTimeout(r2, 5));
+  assert.deepEqual(await rec.start(), { ok: true }); assert.equal((await rec.stop()).ok, true);
+  rec.dispose(); assert.ok(f.urls.revoked.includes('blob:fake-0'));
+});
 test('createRecorder: records, hands back an object URL, stops tracks, revokes on dispose; permission refusal is reported', async () => {
   const f = fakeRecorder();
   let t = 0;
@@ -446,6 +464,13 @@ test('tabFromLocation: query wins; #/speak/read, #/speak?tab=read and aliases wo
   assert.equal(tabFromLocation({ tab: 'nope' }, '#/vocab'), 'say');
   assert.equal(tabFromLocation(null, undefined), 'say');
 });
+test('sources line: Wiktionary credit with a link to the credits screen', async () => {
+  const { root, unmount } = await boot();
+  assert.match(root.text, /Word meanings: Wiktionary contributors \(CC BY-SA 4\.0\)/);
+  assert.equal(root.find((n) => n.tag === 'a' && n.attrs.href === '#/credits').length, 1);
+  unmount();
+});
+
 test('hash tabs open the right screen without any router entry, and clicking a tab updates the hash without a reload', async () => {
   const calls = [];
   globalThis.location = { hash: '#/speak/read' }; globalThis.history = { replaceState: (a, b, u) => calls.push(u) };
@@ -532,9 +557,9 @@ test('createRecognizer.listen accepts a per-call timeout', async () => {
   const r = R.createRecognizer({ Ctor: class { start() {} abort() {} }, timeoutMs: 60000 });
   assert.equal((await r.listen({ timeoutMs: 5 })).error, 'timeout');
 });
-test('data/speak/prayers.json: 8 prayers, every line verbatim from the corpus registry, with licence and draft status carried over', () => {
+test('data/speak/prayers.json: 9 prayers, every line verbatim from the corpus registry, with licence and draft status carried over', () => {
   const pr = rd('data/speak/prayers.json');
-  assert.equal(pr.prayers.length, 8); assert.match(pr.note, /NOT proofread/);
+  assert.equal(pr.prayers.length, 9); assert.match(pr.note, /NOT proofread/);
   const reg = new Map(rd('data/corpus/registry.json').entries.map((e) => [e.id, e]));
   for (const p of pr.prayers) {
     const e = reg.get(p.id); assert.ok(e, p.id);
@@ -603,9 +628,9 @@ test('read aloud errors and no recognizer: not-allowed offers self-judging; self
   await waitFor(() => byId(b.root, 'read-summary'));
   assert.match(byId(b.root, 'read-summary').text, /1 line tried, 1 read in full/);
 });
-test('read aloud start screen: prayer select with label, eight prayers, tradition accent warning, draft note', async () => {
+test('read aloud start screen: prayer select with label, nine prayers, tradition accent warning, draft note', async () => {
   const { root } = await boot({ query: { tab: 'read' } });
-  assert.equal(byId(root, 'speak-prayer').find((n) => n.tag === 'option').length, 8);
+  assert.equal(byId(root, 'speak-prayer').find((n) => n.tag === 'option').length, 9);
   assert.ok(root.find((n) => n.tag === 'label' && n.attrs.for === 'speak-prayer').length);
   assert.match(root.text, /Sephardi or Ashkenazi style/); assert.ok(root.text.includes(PRAYER_NOTE));
   assert.equal(root.find((n) => n.tag === 'input' && n.attrs.type === 'radio').length, 3);

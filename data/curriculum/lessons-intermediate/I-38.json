@@ -24,7 +24,7 @@
   },
   {
    "he": "חָמוּד",
-   "en": "cute, sweet",
+   "en": "cute, sweet, charming",
    "translit": null,
    "pronunciation": {
     "israeli": "chamud"
@@ -60,7 +60,7 @@
   },
   {
    "he": "חָבֵר",
-   "en": "friend; boyfriend",
+   "en": "friend (m)",
    "translit": null,
    "pronunciation": {
     "israeli": "chaver"
@@ -72,7 +72,7 @@
   },
   {
    "he": "חֲבֵרָה",
-   "en": "friend; girlfriend",
+   "en": "friend (f)",
    "translit": null,
    "pronunciation": {
     "israeli": "chaverah"
@@ -147,7 +147,7 @@
   },
   {
    "he": "בְּשִׂמְחָה",
-   "en": "gladly",
+   "en": "gladly, with pleasure",
    "translit": null,
    "pronunciation": {
     "israeli": "besimchah"
@@ -271,7 +271,6 @@
    "options": [
     "formal",
     "neutral",
-    "casual",
     "slang"
    ]
   },
@@ -284,7 +283,6 @@
    "options": [
     "formal",
     "neutral",
-    "casual",
     "slang"
    ]
   },

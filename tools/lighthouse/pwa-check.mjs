@@ -1,5 +1,5 @@
 // PWA checks in headless Chromium (no Lighthouse needed): installability (Chromium's own CDP verdict), offline reload on N routes with
-// the service worker, update flow (a new precache version activates and replaces the old cache), persistence API, clear-site-data behaviour.
+// the service worker, update flow (a new precache version installs and waits, then activates on SKIP_WAITING and replaces the old cache), persistence API, clear-site-data behaviour.
 // Usage: node tools/lighthouse/pwa-check.mjs [--quick] [--out file]   -> prints ok/FAIL lines, writes tools/lighthouse/pwa-run.json, exit 1 on FAIL
 // Honest limits: headless Chromium on Linux over http://localhost (a secure context); no real device, no iOS/Android install flow.
 import { createRequire } from 'node:module';
@@ -83,21 +83,26 @@ for (const r of routes) {
 }
 await ctx.setOffline(false);
 
-// ---- 4. update flow: a new version of the precache list installs, takes over, and the old cache is removed
+// ---- 4. update flow: a new version of the precache list installs and waits, takes over on SKIP_WAITING, and the old cache is removed
 const oldKeys = await page.evaluate(async () => (await caches.keys()).filter((k) => k.startsWith('alef-shell-')));
 versionOverride = 'update-test-v2';
 const upd = await page.evaluate(async () => {
   const reg = await navigator.serviceWorker.getRegistration();
-  const states = []; let changed = false;
+  let changed = false;
   navigator.serviceWorker.addEventListener('controllerchange', () => { changed = true; });
   await reg.update();
-  const w = reg.installing || reg.waiting; if (w) w.addEventListener('statechange', () => states.push(w.state));
-  for (let i = 0; i < 150 && !(reg.active && reg.active.state === 'activated' && !reg.installing && !reg.waiting && (await caches.keys()).some((k) => k.endsWith('update-test-v2'))); i++) await new Promise((r) => setTimeout(r, 200));
-  return { keys: (await caches.keys()), changed, activeState: reg.active?.state, sawNew: !!w };
+  const has2 = async () => (await caches.keys()).some((k) => k.endsWith('update-test-v2'));
+  for (let i = 0; i < 150 && !(reg.waiting && reg.waiting.state === 'installed' && (await has2())); i++) await new Promise((r) => setTimeout(r, 200));
+  // the new worker installs and WAITS: the open page keeps its old cache and controller until the learner consents
+  const waiting = { sawWaiting: !!reg.waiting, keysWhileWaiting: await caches.keys(), changedWhileWaiting: changed };
+  if (reg.waiting) reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+  for (let i = 0; i < 150 && !(changed && reg.active && reg.active.state === 'activated' && !reg.waiting && !(await caches.keys()).some((k) => !k.endsWith('update-test-v2') && k.startsWith('alef-shell-'))); i++) await new Promise((r) => setTimeout(r, 200));
+  return { ...waiting, keys: (await caches.keys()), changed, activeState: reg.active?.state };
 });
-note('update: a changed precache version installs a new SW and activates it (skipWaiting)', upd.sawNew && upd.activeState === 'activated' && upd.keys.some((k) => k.endsWith('update-test-v2')), JSON.stringify(upd.keys));
+note('update: a changed precache version installs a new SW and it waits (no takeover without consent)', upd.sawWaiting && upd.keysWhileWaiting.some((k) => k.endsWith('update-test-v2')) && !upd.changedWhileWaiting, JSON.stringify(upd.keysWhileWaiting));
+note('update: after SKIP_WAITING the new SW activates', upd.activeState === 'activated' && upd.keys.some((k) => k.endsWith('update-test-v2')), JSON.stringify(upd.keys));
 note('update: the old shell cache is deleted on activate', !upd.keys.some((k) => oldKeys.includes(k)), `old=${oldKeys.join(',')}`);
-note('update: the open page receives controllerchange (it can offer a reload)', upd.changed, upd.changed ? '' : 'no controllerchange seen (page has the new SW only after reload, or events missed)');
+note('update: the open page receives controllerchange after SKIP_WAITING (it can offer a reload)', upd.changed, upd.changed ? '' : 'no controllerchange seen after SKIP_WAITING');
 const hasPrompt = await page.evaluate(() => /update|new version|reload/i.test(document.getElementById('announcer').textContent + document.body.innerText));
 note('update: the app tells the learner a new version is ready', hasPrompt, hasPrompt ? '' : 'no visible update notice: the tab keeps running old code until reloaded', true);
 versionOverride = null;
@@ -123,7 +128,7 @@ await page.goto(base + '#/settings'); await page.waitForSelector('#s-import');
 // a bad file is refused and changes nothing
 const badPath = join((await import('node:os')).tmpdir(), 'alef-pwa-bad.json'); (await import('node:fs')).writeFileSync(badPath, '{"hello":1}');
 await page.setInputFiles('#s-import', badPath); await page.waitForTimeout(300);
-note('restore: a file that is not an ALEF backup is refused with a message and changes nothing', /not an ALEF backup/.test(await page.textContent('main')) && await page.evaluate(() => !localStorage.getItem('alef:curriculum.progress')));
+note('restore: a file that is not an ALEF backup is refused with a message and changes nothing', /not an ALEF backup/i.test(await page.textContent('main')) && await page.evaluate(() => !localStorage.getItem('alef:curriculum.progress')));
 // a good file: nothing happens until the learner confirms
 await page.setInputFiles('#s-import', backupPath); await page.waitForTimeout(300);
 note('restore: choosing a good file only asks for confirmation (nothing is written yet)', await page.isVisible('button:has-text("Replace my progress")') && await page.evaluate(() => !localStorage.getItem('alef:curriculum.progress')));

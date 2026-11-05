@@ -13,19 +13,19 @@
     "front",
     "strokeorder",
     "letters",
-    "strokeorder",
-    "letters",
-    "strokeorder",
-    "letters",
-    "confusables",
     "syllables",
     "words",
     "words",
-    "words"
+    "words",
+    "strokeorder",
+    "letters",
+    "strokeorder",
+    "letters",
+    "confusables"
    ],
    "html": "html/alef-workbook-print-a4.html",
    "pdf": "alef-workbook-print-a4.pdf",
-   "bytes": 569138
+   "bytes": 564173
   },
   {
    "id": "alef-workbook-print-letter",
@@ -37,19 +37,19 @@
     "front",
     "strokeorder",
     "letters",
-    "strokeorder",
-    "letters",
-    "strokeorder",
-    "letters",
-    "confusables",
     "syllables",
     "words",
     "words",
-    "words"
+    "words",
+    "strokeorder",
+    "letters",
+    "strokeorder",
+    "letters",
+    "confusables"
    ],
    "html": "html/alef-workbook-print-letter.html",
    "pdf": "alef-workbook-print-letter.pdf",
-   "bytes": 569134
+   "bytes": 564069
   },
   {
    "id": "alef-workbook-cursive-a4",
@@ -61,20 +61,20 @@
     "front",
     "strokeorder",
     "letters",
-    "strokeorder",
-    "letters",
-    "strokeorder",
-    "letters",
-    "confusables",
-    "confusables",
     "syllables",
     "words",
     "words",
-    "words"
+    "words",
+    "strokeorder",
+    "letters",
+    "strokeorder",
+    "letters",
+    "confusables",
+    "confusables"
    ],
    "html": "html/alef-workbook-cursive-a4.html",
    "pdf": "alef-workbook-cursive-a4.pdf",
-   "bytes": 607471
+   "bytes": 602935
   },
   {
    "id": "alef-workbook-cursive-letter",
@@ -86,20 +86,20 @@
     "front",
     "strokeorder",
     "letters",
-    "strokeorder",
-    "letters",
-    "strokeorder",
-    "letters",
-    "confusables",
-    "confusables",
     "syllables",
     "words",
     "words",
-    "words"
+    "words",
+    "strokeorder",
+    "letters",
+    "strokeorder",
+    "letters",
+    "confusables",
+    "confusables"
    ],
    "html": "html/alef-workbook-cursive-letter.html",
    "pdf": "alef-workbook-cursive-letter.pdf",
-   "bytes": 607856
+   "bytes": 603299
   },
   {
    "id": "alef-workbook-print-a4-mnemonics",
@@ -111,19 +111,19 @@
     "front",
     "strokeorder",
     "letters",
-    "strokeorder",
-    "letters",
-    "strokeorder",
-    "letters",
-    "confusables",
     "syllables",
     "words",
     "words",
-    "words"
+    "words",
+    "strokeorder",
+    "letters",
+    "strokeorder",
+    "letters",
+    "confusables"
    ],
    "html": "html/alef-workbook-print-a4-mnemonics.html",
    "pdf": "alef-workbook-print-a4-mnemonics.pdf",
-   "bytes": 605645
+   "bytes": 600501
   },
   {
    "id": "alef-workbook-print-letter-mnemonics",
@@ -135,19 +135,19 @@
     "front",
     "strokeorder",
     "letters",
-    "strokeorder",
-    "letters",
-    "strokeorder",
-    "letters",
-    "confusables",
     "syllables",
     "words",
     "words",
-    "words"
+    "words",
+    "strokeorder",
+    "letters",
+    "strokeorder",
+    "letters",
+    "confusables"
    ],
    "html": "html/alef-workbook-print-letter-mnemonics.html",
    "pdf": "alef-workbook-print-letter-mnemonics.pdf",
-   "bytes": 605611
+   "bytes": 600424
   },
   {
    "id": "alef-workbook-cursive-a4-mnemonics",
@@ -159,20 +159,20 @@
     "front",
     "strokeorder",
     "letters",
-    "strokeorder",
-    "letters",
-    "strokeorder",
-    "letters",
-    "confusables",
-    "confusables",
     "syllables",
     "words",
     "words",
-    "words"
+    "words",
+    "strokeorder",
+    "letters",
+    "strokeorder",
+    "letters",
+    "confusables",
+    "confusables"
    ],
    "html": "html/alef-workbook-cursive-a4-mnemonics.html",
    "pdf": "alef-workbook-cursive-a4-mnemonics.pdf",
-   "bytes": 644315
+   "bytes": 639756
   },
   {
    "id": "alef-workbook-cursive-letter-mnemonics",
@@ -184,20 +184,20 @@
     "front",
     "strokeorder",
     "letters",
-    "strokeorder",
-    "letters",
-    "strokeorder",
-    "letters",
-    "confusables",
-    "confusables",
     "syllables",
     "words",
     "words",
-    "words"
+    "words",
+    "strokeorder",
+    "letters",
+    "strokeorder",
+    "letters",
+    "confusables",
+    "confusables"
    ],
    "html": "html/alef-workbook-cursive-letter-mnemonics.html",
    "pdf": "alef-workbook-cursive-letter-mnemonics.pdf",
-   "bytes": 644643
+   "bytes": 640106
   }
  ]
 }

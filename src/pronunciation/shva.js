@@ -120,6 +120,8 @@ export function classifyShvas(clusters, opts = {}) {
       v = V(i, false, 'B2'); // final shva (and the second of two final shvas) is silent
     } else if (isShva(i - 1) && out.get(i - 1)?.na === false) {
       v = V(i, true, 'B2'); // second of two shvas in a row
+    } else if (isShva(i + 1) && i + 1 < n - 1) {
+      v = V(i, false, 'B3'); // first of two shvas in a row is silent whatever precedes it; L1-L4 do not override
     } else {
       v = V(i, false, 'B3');
       if (level >= 2) {

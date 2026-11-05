@@ -11,9 +11,9 @@ const ctx = { stress: loadStressData() };
 const built = memoDisk('pron-buildAll', PRON_ROOTS, () => buildAll());
 const word = (he) => renderWord(he, ctx).variants;
 
-test('known examples: shabbat/shabbos, torah/toyreh, bereshit/bereishis', () => {
+test('known examples: shabat/shabos, torah/toyreh, bereshit/bereishis', () => {
   const sh = word('שַׁבָּת');
-  assert.equal(sh.israeli.simple, 'shabbat'); assert.equal(sh.sephardi.simple, 'shabbat'); assert.equal(sh.ashkenazi.simple, 'shabbos');
+  assert.equal(sh.israeli.simple, 'shabat'); assert.equal(sh.sephardi.simple, 'shabat'); assert.equal(sh.ashkenazi.simple, 'shabos');
   assert.equal(sh.israeli.ipa, 'ʃa.ˈbat'); assert.equal(sh.ashkenazi.ipa, 'ˈʃa.bɔs');
   const to = word('תּוֹרָה');
   assert.equal(to.israeli.simple, 'torah'); assert.equal(to.ashkenazi.simple, 'toyreh');

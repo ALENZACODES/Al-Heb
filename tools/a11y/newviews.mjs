@@ -16,8 +16,12 @@ const here = fileURLToPath(new URL('.', import.meta.url)); const root = join(her
 const axeSource = readFileSync(join(here, 'node_modules/axe-core/axe.min.js'), 'utf8');
 const argv = process.argv.slice(2);
 const arg = (k) => { const i = argv.indexOf(k); return i >= 0 ? argv[i + 1] : null; };
-export const ROUTES = ['/firstday', '/firstday/ladder', '/placement', '/speak', '/welcome', '/reminders', '/install', '/offline', '/vocab/themes', '/progress'];
+export const ROUTES = ['/firstday', '/firstday/ladder', '/placement', '/speak', '/welcome', '/reminders', '/install', '/offline', '/vocab/themes', '/progress', '/accessibility',
+  // preview-tier features (not v0 routes); on a build whose views.generated.js predates them the shell answers with a not-found page
+  '/nikkud-fade', '/roots', '/gender-drill', '/record-compare'];
 const routes = arg('--routes') ? arg('--routes').split(',') : ROUTES;
+// --viewport 375x667 runs every context at that size (default 390x844); the JSON records which one was used
+const [VW, VH] = (arg('--viewport') || '390x844').split('x').map(Number);
 const outFile = arg('--out') || join(here, 'newviews-run.json');
 
 /** In-page audit. Runs inside Chromium; returns plain data. */
@@ -138,21 +142,27 @@ const STATES = {
   '/placement': [{ name: 'after the start button', run: async (p) => { await p.getByRole('button', { name: /start|begin|first/i }).first().click({ timeout: 1500 }); await p.waitForTimeout(600); } }],
   '/reminders': [{ name: 'Allow button (permission default)', run: async (p) => { await p.waitForSelector('#nt-time', { timeout: 2000 }); } }],
   '/firstday/ladder': [],
+  // preview features: the first screen is only a chooser, so also audit the state after a choice (labels, status line, 44px targets)
+  '/gender-drill': [{ name: 'after choosing I am a woman', run: async (p) => { await p.getByRole('button', { name: /^I am a woman/ }).click({ timeout: 1500 }); await p.waitForTimeout(400); } },
+    { name: 'after Show both forms', run: async (p) => { await p.getByRole('button', { name: /^Show both forms/ }).click({ timeout: 1500 }); await p.waitForTimeout(400); } }],
+  '/nikkud-fade': [{ name: 'after I read it', run: async (p) => { await p.getByRole('button', { name: /^I read it/ }).first().click({ timeout: 1500 }); await p.waitForTimeout(400); } }],
+  '/roots': [{ name: 'second mode tab', run: async (p) => { await p.locator('main .btn.secondary').nth(1).click({ timeout: 1500 }); await p.waitForTimeout(400); } }],
+  '/record-compare': [{ name: 'after the first answer', run: async (p) => { await p.getByRole('button', { name: /hear|difference|same/i }).nth(1).click({ timeout: 1500 }); await p.waitForTimeout(400); } }],
 };
 
 const server = createAppServer({ root }); await new Promise((r) => server.listen(0, r));
 const base = `http://localhost:${server.address().port}/`;
 const browser = await chromium.launch();
-const result = { tool: 'tools/a11y/newviews.mjs', axe: JSON.parse(readFileSync(join(here, 'node_modules/axe-core/package.json'), 'utf8')).version, when: new Date().toISOString(), viewport: '390x844', note: 'Measured with Chromium + axe-core + DOM/CSS checks. No screen reader, no real device, no keyboard on a physical phone.', routes: {} };
+const result = { tool: 'tools/a11y/newviews.mjs', axe: JSON.parse(readFileSync(join(here, 'node_modules/axe-core/package.json'), 'utf8')).version, when: new Date().toISOString(), viewport: `${VW}x${VH}`, note: 'Measured with Chromium + axe-core + DOM/CSS checks. No screen reader, no real device, no keyboard on a physical phone.', routes: {} };
 
 for (const theme of ['light', 'dark']) {
-  const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, colorScheme: theme });
+  const ctx = await browser.newContext({ viewport: { width: VW, height: VH }, deviceScaleFactor: 2, colorScheme: theme });
   await ctx.addInitScript(() => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); });
   for (const route of routes) {
     const page = await ctx.newPage(); const errors = []; page.on('pageerror', (e) => errors.push(e.message)); page.on('console', (m) => { if (m.type() === 'error') errors.push('console: ' + m.text().slice(0, 120)); });
     const rec = ((result.routes[route] ||= {})[theme] = { states: {} });
     // in-app navigation (home first, then the hash changes) because the shell deliberately does not move focus on the very first load
-    await page.goto(base + '#/'); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(300);
+    await page.goto(base + (route === '/' ? '#/how' : '#/')); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(300); // home is reached from another page: setting the hash to the one already showing is not a navigation
     await page.evaluate((h) => { location.hash = h; }, route); await settle(page);
     rec.focusOnNav = await page.evaluate(() => ({ onHeading: document.activeElement?.id === 'view-title' || document.activeElement === document.querySelector('main h1'), active: document.activeElement ? document.activeElement.tagName.toLowerCase() + (document.activeElement.id ? '#' + document.activeElement.id : '') : null }));
     rec.hash = await page.evaluate(() => location.hash);
@@ -169,7 +179,7 @@ for (const theme of ['light', 'dark']) {
       try { await st.run(page); rec.states[st.name] = await audit(st.name, page); } catch (e) { rec.states[st.name] = { skipped: String(e.message).split('\n')[0] }; }
     }
     // reduced motion (separate context so the media query applies from load)
-    const rctx = await browser.newContext({ viewport: { width: 390, height: 844 }, colorScheme: theme, reducedMotion: 'reduce' });
+    const rctx = await browser.newContext({ viewport: { width: VW, height: VH }, colorScheme: theme, reducedMotion: 'reduce' });
     await rctx.addInitScript(() => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); });
     const rp = await rctx.newPage(); await rp.goto(base + '#' + route); await rp.waitForSelector('body[data-ready="1"]'); await settle(rp);
     rec.motionUnderReduce = await reducedMotion(rp); await rctx.close();

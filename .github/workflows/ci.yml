@@ -23,11 +23,11 @@ jobs:
       # setup-python gives a pip that is not "externally managed" (the system python on the image refuses `pip install`).
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - name: System tools used by some unit tests (ffmpeg, pdfinfo, tesseract + Hebrew data); tests skip without them
+      - name: System tools used by some unit tests (ffmpeg, pdfinfo, rsvg-convert, tesseract + Hebrew data); tests skip without them
         continue-on-error: true
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y --no-install-recommends ffmpeg poppler-utils tesseract-ocr tesseract-ocr-heb
+          sudo apt-get install -y --no-install-recommends ffmpeg poppler-utils librsvg2-bin tesseract-ocr tesseract-ocr-heb
       - name: Python deps (segno pinned for the book QR test; Pillow, pypdf, numpy, OpenCV for the image, PDF and QR-decode tests)
         run: python -m pip install --disable-pip-version-check -r tools/test/requirements-ci.txt
       - name: Toolchain report

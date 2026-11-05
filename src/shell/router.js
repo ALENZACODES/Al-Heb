@@ -99,6 +99,7 @@ export const ROUTES = [
   { name: 'known-words', pattern: '/known-words', module: '../knownwords/knownwords.view.js', tier: 'preview', title: 'Known-word checker', owner: 'builder2', group: 'learn', quick: 'nav.route.known-words' },
   { name: 'syllabus', pattern: '/syllabus', module: '../coursemap/syllabus.view.js', tier: 'preview', title: 'Syllabus and goals', owner: 'builder2', group: 'progress', quick: 'nav.route.syllabus' },
   { name: 'time-budget', pattern: '/time-budget', module: '../coursemap/timebudget.view.js', tier: 'preview', title: 'Time budget', owner: 'builder2', group: 'progress', quick: 'nav.route.time-budget' },
+  { name: 'daily', pattern: '/daily', module: '../../preview/loops/daily.view.js', tier: 'preview', title: 'Daily goal and quests', owner: 'loops', group: 'progress', quick: 'nav.route.daily' },
   { name: 'search',   pattern: '/search',         module: './search.view.js', tier: 'v0',                    title: 'Search', owner: 'nav' },
   { name: 'about',    pattern: '/about',          module: './about.view.js', tier: 'v0',                     nav: 'nav.about',    title: 'About', owner: 'lane8' },
 ];

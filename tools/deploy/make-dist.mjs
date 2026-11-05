@@ -26,6 +26,7 @@ export const EXTRAS = [
   ['data/audio/manifest-words-israeli.json', 'lazy audio word shard'],
   ['data/audio/manifest-words-sephardi.json', 'lazy audio word shard'],
   ['assets/img', 'illustrations: NOT referenced by any file in src/ today (16 MiB of placeholders), so only shipped with --with-img'],
+  ['preview/loops', 'preview-tier daily goal, rhythm, quests and progress page: loaded on demand, not in the first-install list'],
   ['audio', 'recorded clips, when they exist (audio/<voice>/<tradition>/<kind>/<id>.mp3)'],
 ];
 const OFL_TEXTS = /^assets\/fonts\/[^/]+-OFL\.txt$/; // font licences must travel with the woff2 files

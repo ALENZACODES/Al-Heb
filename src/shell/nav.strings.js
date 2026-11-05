@@ -19,6 +19,7 @@ export const NAV_EN = {
   'nav.route.known-words': 'Known-word checker',
   'nav.route.syllabus': 'Syllabus and goals',
   'nav.route.time-budget': 'Time budget',
+  'nav.route.daily': 'Daily goal and quests',
   'nav.accessibility': 'Accessibility',
   'nav.route.welcome': 'Welcome', 'nav.route.how': 'How this works', 'nav.route.search': 'Search',
   'nav.route.traditions-guide': 'Which pronunciation style should I learn?', 'nav.route.traditions-hear': 'Hear the difference',

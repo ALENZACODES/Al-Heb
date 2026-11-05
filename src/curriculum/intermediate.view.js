@@ -374,6 +374,8 @@ function mountLesson(root, ctx, id) {
         nextHref: nextL ? `#/intermediate/${nextL.id}` : null, nextLabel: "Next lesson",
         extraLinks: [el("a", { class: "btn secondary", href: "#/intermediate" }, "All intermediate lessons")] }));
       body.querySelector?.("#alef-int-ex")?.focus?.();
+      // Preview-only daily goal card, loaded on demand; any failure leaves the summary as it is.
+      if (all) import("../../preview/loops/hook.js").then((m) => { const n = alive ? m.lessonFinished(ctx, { lessonId: lesson.id }) : null; if (n) body.append(n); }).catch(() => {});
     }
 
     body.replaceChildren(...intro());

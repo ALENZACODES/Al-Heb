@@ -23,6 +23,7 @@ export const KEYS = Object.freeze({
   misses: 'pron.misses', state: 'progress.state',
   timedRead: 'timedread.v1', servicePrefs: 'service.prefs', firstday: 'firstday.progress', firstdayLadder: 'firstday.ladder',
   speak: 'speak.v1', placement: 'placement.v1', milestones: 'progress.milestones.v1',
+  loops: 'loops.v1',
 });
 
 const obj = (v) => (v && typeof v === 'object' && !Array.isArray(v) ? v : {});

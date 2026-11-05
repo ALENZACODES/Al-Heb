@@ -60,11 +60,30 @@ These are properties of the code, not outcomes. No retention, learning or satisf
 
 ## 4. What was built in this pass (preview tier)
 
-Filled in at the end of the work (see the final report). Planned location: `preview/loops/`, one new preview route `/daily` and one hook in the intermediate lesson summary. Storage key: `loops.v1`.
+Built and unit-tested (fake DOM and Node; 35 new tests in `tests/loops.core.test.js` and `tests/loops.page.test.js`; nothing was opened in a real browser, on a phone or with a screen reader):
+
+| Loop | Rows above it covers | Files |
+|---|---|---|
+| Points, daily goal ring, weekly summary | XP, daily goal, weekly rhythm summary | `preview/loops/points.js`, `store.js`, `derive.js` |
+| Forgiving rhythm: earned rest days, free repair | Streak, streak repair | `preview/loops/rhythm.js` |
+| Three small daily quests | Daily quests | `preview/loops/quests.js` |
+| Lesson-finished card | Celebrations | `preview/loops/celebrate.js`, `hook.js` (called from the intermediate lesson summary only) |
+| Progress page with heatmap and table alternative | Statistics | `preview/loops/stats.js`, `daily.view.js`, route `/daily` |
+
+Not built: leagues, friends, friend streaks (need a server; owner decisions 1 above), hearts and gems (rejected on purpose), push reminders, a visual path, more Stories, any change to the Home streak.
+
+Limits you should know about:
+- Reviews and minutes are lower bounds. The review store keeps only each card's latest review time, so a card reviewed on two days counts once. Lessons, timed reads and speaking tries are exact. The page says so.
+- Points for reviews done in the v0 review screen appear only after `/daily` or a finished intermediate lesson reads the store; there is no hook in v0 code.
+- "Known" letters and words mean answered right at least twice and not currently being relearned. Review accuracy is an upper bound, because the scheduler does not count a first wrong answer on a brand-new card as a lapse.
+- Point weights, the 5-point practice day, the rest-day earning rate (every 5th day, bank of 3) and the quest pool are my guesses, not tuned on any learner.
+- The rhythm is separate from the Home streak, so a learner can see two different numbers. That is owner decision 3.
 
 ## 5. Install-size note
 
-`preview/loops/` is outside the folders the precache builder walks (`src`, `assets`, `data`), so the first-install list does not grow. The files are fetched the first time `/daily` is opened and then cached by the service worker's ordinary same-origin rule. Consequence: a learner who has never opened `/daily` online will not have it offline, and "Download everything" does not list it. `tools/deploy/make-dist.mjs` gets one `EXTRAS` row so the host build ships the folder. Whether to move these files into the offline download group is an owner decision (it touches the deferral list, which I did not change).
+`preview/loops/` is outside the folders the precache builder walks (`src`, `assets`, `data`), so none of its 9 files are in the first-install list. They are fetched the first time `/daily` is opened (or the first lesson summary after the hook runs) and then cached by the service worker's ordinary same-origin rule. The wiring lines (router row, menu section entry, menu string, privacy row, backup key, the one hook line) are in `src/`, so the first-install list grew by 732 bytes (4,085,501 to 4,086,233 bytes by my measurement with `computeManifest`). The first-install size test passed after `node tools/build-precache.mjs` in this checkout.
+
+Consequence: a learner who has never opened `/daily` online will not have it offline, and "Download everything" does not list it. The hook fails silently in that case and the lesson summary is unchanged. `tools/deploy/make-dist.mjs` gets one `EXTRAS` row so the host build ships the folder; I did not run the host build. Whether to move these files into the offline download group is an owner decision (it touches the deferral list, which I did not change).
 
 ## 6. Sources fetched on 2026-11-05
 

@@ -19,7 +19,7 @@ export const SECTION_ROUTES = {
     'soundgap', 'vowelboard', 'niqquddial', 'dottile', 'syllablechips', 'nikkud-fade', 'roots', 'gender-drill', 'scheduler', 'known-words'],
   read: ['read', 'text', 'torahread', 'torahreadsec', 'torahreader', 'service', 'trope', 'timedread', 'morning', 'scan'],
   speak: ['speak', 'listen', 'compare', 'tradition-quiz', 'read-my-way', 'traditions', 'traditions-guide', 'traditions-hear', 'record-compare'],
-  progress: ['progress', 'placement', 'calendar', 'festivals', 'festival', 'reminders', 'share', 'classsummary', 'syllabus', 'time-budget'],
+  progress: ['progress', 'placement', 'calendar', 'festivals', 'festival', 'reminders', 'share', 'classsummary', 'syllabus', 'time-budget', 'daily'],
   more: ['search', 'settings', 'accessibility', 'workbook', 'install', 'offline', 'about', 'how', 'credits', 'privacy', 'welcome'],
 };
 

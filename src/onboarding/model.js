@@ -12,9 +12,9 @@ export const PLACEMENT_KEY = 'placement.v1'; // written by src/placement (read h
 export const LETTERS_QUESTION = 'Can you already read the Hebrew letters?';
 /** Stage 1 answers. `start` is the route each answer leads to. */
 export const LETTER_ANSWERS = Object.freeze([
-  { id: 'none',   label: 'No, start from the beginning', start: '/firstday',  desc: 'Your first 10 minutes: five baby steps of about 2 minutes, one letter at a time, ending with your first word.' },
+  { id: 'none',   label: 'No, start from the beginning', start: '/firstday',  desc: 'Your first 10 minutes: five short steps of about 2 minutes, one letter at a time, ending with your first word.' },
   { id: 'some',   label: 'Some',                         start: '/placement', desc: 'A short placement check picks the lesson to start from.' },
-  { id: 'vowels', label: 'Yes, I read with vowels',      start: '/placement', desc: 'The placement check confirms where to start so you skip what you know.' },
+  { id: 'vowels', label: 'Yes, I read with vowels',      start: '/placement', desc: 'The draft placement check suggests a starting lesson. You can choose an earlier lesson.' },
 ]);
 export const STEPS = Object.freeze(['letters', 'congregation', 'minutes', 'plan']);
 

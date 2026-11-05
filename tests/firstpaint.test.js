@@ -5,6 +5,7 @@ import { readFileSync } from 'node:fs';
 import { createAudio } from '../src/audio/player.js';
 import { createShellAudio } from '../src/shell/audio.js';
 import { fetchCoreManifest, fetchAudioSummary, afterPaint } from '../src/shell/audio-manifest.js';
+import { wireSoundBar } from '../src/shell/audio-access.js';
 
 const entry = { path: 'audio/m/israeli/letter/bet.mp3', voice: 'm', tradition: 'israeli', kind: 'letter', id: 'bet', text: 'בֵּית', status: 'recorded', source: 'x' };
 const settings = { get: (k) => ({ voice: 'm', congregation: 'israeli' })[k] };
@@ -134,4 +135,28 @@ test('the audio manifest is on demand and its loader module is still precached f
   const pre = readFileSync(new URL('../precache-manifest.js', import.meta.url), 'utf8');
   assert.ok(pre.includes('"data/audio/manifest.json"') && pre.indexOf('"data/audio/manifest.json"') > pre.indexOf('ALEF_ON_DEMAND'), 'the audio manifest is listed as on demand (runtime-cached), not installed');
   assert.ok(pre.includes('"src/shell/audio-manifest.js"'));
+});
+
+test('sound bar: nothing is shown until the list has been asked for; a real failure is shown', async () => {
+  const d = deferred();
+  const a = make(() => d.p);
+  assert.equal(a.state.pending, true, 'nothing asked yet: the "not loaded yet" line is flagged pending, not news');
+  const bar = { hidden: true, querySelector: () => null };
+  const doc = { querySelector: (q) => (q === '.sound-bar' ? bar : null), getElementById: () => null };
+  const w = wireSoundBar(a, { doc, storage: { getItem: () => null, setItem() {} } });
+  assert.equal(bar.hidden, true, 'hidden on the first screen');
+  a.has('word', 'x');
+  assert.equal(a.state.pending, true, 'still loading: still hidden');
+  w.show(a.state.mode, !!a.state.pending); assert.equal(bar.hidden, true);
+  d.rej(new Error('offline')); await a.ensureManifest();
+  assert.equal(a.manifestState, 'offline'); assert.ok(!a.state.pending);
+  w.show(a.state.mode, !!a.state.pending); assert.equal(bar.hidden, false, 'a failed load is shown');
+  assert.match(a.state.text, /could not be loaded/);
+  const ok = make(async () => [entry]); await ok.ensureManifest();
+  assert.ok(!ok.state.pending, 'once loaded the status is the real one');
+});
+test('index.html ships the sound bar hidden, and app.js hides it while the state is pending', () => {
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  assert.match(html, /<div class="sound-bar" hidden /);
+  assert.match(readFileSync(new URL('../src/app.js', import.meta.url), 'utf8'), /soundBar\.show\(s\.mode, !!s\.pending\)/);
 });

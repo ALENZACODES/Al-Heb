@@ -94,8 +94,8 @@ let soundBar = null; // the one sound bar's dismiss control, set once audio-acce
 function wireSoundStatus(audio) {
   const el = document.getElementById('sound-status');
   if (!el) return;
-  if (typeof audio.subscribe === 'function') audio.subscribe((s) => { el.textContent = s.text; el.dataset.mode = s.mode; soundBar?.show(s.mode); });
-  else { el.textContent = "Sound: your browser's text-to-speech voice (fallback player). No recordings."; el.dataset.mode = 'tts'; }
+  if (typeof audio.subscribe === 'function') audio.subscribe((s) => { el.textContent = s.text; el.dataset.mode = s.mode; if (soundBar) soundBar.show(s.mode, !!s.pending); else { const bar = el.closest('.sound-bar'); if (bar) bar.hidden = !!s.pending; } });
+  else { el.textContent = "Sound: your browser's text-to-speech voice (fallback player). No recordings."; el.dataset.mode = 'tts'; const bar = el.closest('.sound-bar'); if (bar) bar.hidden = false; }
 }
 
 /** The word-clip shard for the learner's congregation is fetched only when something asks about a 'word' clip (audio.onNeed), and

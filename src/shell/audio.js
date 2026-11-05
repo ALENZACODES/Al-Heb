@@ -99,7 +99,7 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
   const subs = new Set(), mSubs = new Set();
   const needSubs = new Set();
   let mstate = !manifest && typeof loadManifest === 'function' ? 'idle' : 'ready';
-  let state = mstate === 'idle' ? { mode: 'idle', text: IDLE_TEXT } : initialText(summary);
+  let state = mstate === 'idle' ? { mode: 'idle', pending: true, text: IDLE_TEXT } : initialText(summary); // pending: nothing has been asked yet, so the sound bar stays hidden
   let note = '', raw = state, pending = null;
   const compose = (s) => (note ? { ...s, text: `${s.text} (${note})` } : s);
   const publish = (s) => { raw = s; state = compose(s); for (const f of subs) { try { f(state); } catch { /* ignore */ } } };
@@ -111,7 +111,7 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
     if (mstate === 'ready') return Promise.resolve(true);
     if (pending) return pending;
     if (typeof loadManifest !== 'function') return Promise.resolve(false);
-    if (mstate !== 'checking') { setM('checking'); publish({ mode: 'idle', text: 'Sound: checking which recordings exist...' }); }
+    if (mstate !== 'checking') { setM('checking'); publish({ mode: 'idle', pending: true, text: 'Sound: checking which recordings exist...' }); }
     pending = Promise.resolve().then(loadManifest).then((list) => {
       inner.extend(list); summary = summarizeManifest(list);
       setM('ready'); publish(initialText(summary)); return true;

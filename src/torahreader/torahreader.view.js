@@ -308,7 +308,7 @@ export function mount(root, ctx) {
 
   function render() {
     if (!alive) return;
-    if (error) { body.replaceChildren(el('p', { class: 'trd-error', role: 'alert' }, `The reader data could not be loaded (${error}). Check your connection and reload.`)); return; }
+    if (error) { body.replaceChildren(el('p', { class: 'trd-error', role: 'alert' }, 'The reader data could not be loaded. Check your connection and reload.')); return; }
     if (!data) { body.replaceChildren(el('p', {}, 'Loading…')); return; }
     stopTimerIfLegend();
     wrap.setAttribute('style', `--trd-scale:${sizeScale(state.size)}`);

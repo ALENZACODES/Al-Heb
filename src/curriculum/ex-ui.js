@@ -51,7 +51,7 @@ export function voiceButton(ctx, kind, id, voice, label, note) {
       if (st.checking && typeof ctx.audio.ensureManifest === "function") { if (note) note.textContent = st.label; await ctx.audio.ensureManifest(); st = audioStatus(ctx, kind, id, voice); }
       if (st.source === "none") { if (note) note.textContent = st.label; return; }
       try { const r = await ctx.audio.play(kind, id, { voice }); if (note) note.textContent = describePlay(r) + (st.source === "tts-fallback" ? " The voice gender is chosen by your device, not by this button." : ""); }
-      catch (e) { if (note) note.textContent = "No sound: " + (e?.message || e); }
+      catch (e) { if (note) note.textContent = "No sound: the browser could not play this."; }
     } }, el("span", { "aria-hidden": "true" }, "▶"), " ", label);
 }
 

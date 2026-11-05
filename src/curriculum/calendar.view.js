@@ -273,7 +273,7 @@ export function mount(root, ctx) {
       const text = toICS(items, { now: nowDate() });
       const started = downloadICS(text, `alef-calendar-${isoDate(today().g)}.ics`);
       status = `${started ? "Downloaded" : "Prepared"} ${items.length} events for ${exportDays} days.` + (notes.length ? ` ${notes[0]}` : "") + " Import the file into your phone's calendar; alarm behaviour depends on the calendar app.";
-    } catch (e) { status = `Could not build the file: ${e.message}`; }
+    } catch (e) { status = "Could not build the calendar file. Try again, or choose fewer days."; }
     renderReminders();
   }
 

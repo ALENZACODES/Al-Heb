@@ -47,6 +47,6 @@ export function mountLoanwords(root, ctx, groupId) {
       el("ul", { class: "alef-items" }, ...items),
       el("p", { class: "muted" }, loanwordMeta.note.split(". ").slice(0, 1).join(". ") + "."),
       el("div", { class: "row" }, el("a", { class: "btn secondary", href: "#/learn?loanwords=1" }, "All word groups"), el("a", { class: "btn secondary", href: "#/learn" }, "All lessons")));
-  })().catch((e) => { wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not load: " + (e?.message || e))); });
+  })().catch((e) => { wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not load this page. Check your connection, then try again.")); });
   return () => { alive = false; wrap.remove(); };
 }

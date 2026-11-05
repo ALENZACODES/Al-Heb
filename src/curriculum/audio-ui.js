@@ -23,6 +23,6 @@ export function playButton(ctx, kind, id, label, note, extra = {}) {
     onclick: async () => {
       if (!ctx?.audio?.play) { if (note) note.textContent = "Audio is not available in this build."; return; }
       try { const r = await ctx.audio.play(kind, id, extra); if (note) note.textContent = describePlay(r); }
-      catch (e) { if (note) note.textContent = "No sound: " + (e?.message || e); }
+      catch (e) { if (note) note.textContent = "No sound: the browser could not play this."; }
     } }, el("span", { "aria-hidden": "true" }, "▶"), " ", tr(ctx, "learn.play", "Listen"));
 }

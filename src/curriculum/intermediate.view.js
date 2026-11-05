@@ -57,7 +57,7 @@ function playBtn(ctx, kind, id, label, note, lesson) {
       if (st.checking && typeof ctx.audio?.ensureManifest === "function") { await ctx.audio.ensureManifest(); st = audioStatus(ctx, kind, id, voice); }
       if (st.source === "none") { note.textContent = st.label; return; }
       try { note.textContent = describePlay(await ctx.audio.play(kind, id, { voice, tradition: trad })); }
-      catch (e) { note.textContent = "No sound: " + (e?.message || e); }
+      catch (e) { note.textContent = "No sound: the browser could not play this."; }
     } }, el("span", { "aria-hidden": "true" }, "▶"), " Listen");
 }
 
@@ -243,7 +243,7 @@ function mountList(root, ctx) {
       el("p", { class: "draft-flag", role: "note" }, DRAFT_TEXT), el("p", { class: "draft-flag", role: "note" }, REVIEW_FLAG),
       el("p", { role: "status" }, `${doneN} of ${all.length} lessons finished.`),
       ...units.flatMap((u) => [el("h2", {}, u || "Lessons"), el("ul", { class: "alef-linelist" }, ...all.filter((l) => l.unit === u).map(item))]));
-  })().catch((e) => wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not load the list: " + (e?.message || e))));
+  })().catch((e) => wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not load the list. Check your connection, then try again.")));
   return () => { alive = false; wrap.remove(); };
 }
 
@@ -378,7 +378,7 @@ function mountLesson(root, ctx, id) {
 
     body.replaceChildren(...intro());
     replaceKeepingFocus(wrap, h1, body);
-  })().catch((e) => wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not load lesson: " + (e?.message || e))));
+  })().catch((e) => wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not load this lesson. Check your connection, then try again.")));
   return stop;
 }
 

@@ -84,7 +84,7 @@ export function mount(root, ctx = {}) {
     on(modeBtn, 'click', () => { testing = !testing; test = null; modeBtn.setAttribute('aria-pressed', testing); ui.status.textContent = testing ? 'Test started.' : 'Back to the tile.'; render(); });
     wrap.replaceChildren(ui.title, ui.draftNotice(), h('p', {}, tr('dottile.intro', 'One dot changes the sound of four letters. Toggle it and compare.')), ui.traditionSwitch('dottile-trad'), modeBtn, ui.status, body);
     render();
-  }).catch((e) => { wrap.replaceChildren(ui.title, ui.draftNotice(), h('p', { role: 'alert' }, `Could not load the data: ${e.message}`)); });
+  }).catch((e) => { wrap.replaceChildren(ui.title, ui.draftNotice(), h('p', { role: 'alert' }, 'Could not load the data. Check your connection, then try again.')); });
 
   return ui.unmount;
 }

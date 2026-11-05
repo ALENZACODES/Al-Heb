@@ -253,7 +253,7 @@ export function mount(root, ctx = {}) {
   const dataPromise = ctx.pronunciationData ? Promise.resolve(ctx.pronunciationData) : loadPronunciationData();
   dataPromise.then((data) => { if (alive) build(data); }).catch((err) => {
     if (!alive) return;
-    wrap.replaceChildren(h('h2', {}, tr('sounds.title', 'Vowels and sounds')), h('p', { role: 'alert' }, `Could not load pronunciation data: ${err.message}`));
+    wrap.replaceChildren(h('h2', {}, tr('sounds.title', 'Vowels and sounds')), h('p', { role: 'alert' }, 'Could not load the pronunciation data. Check your connection, then try again.'));
   });
 
   return () => {

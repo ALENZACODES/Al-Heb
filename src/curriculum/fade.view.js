@@ -117,6 +117,6 @@ export function mountFade(root, ctx, which = "1", q = {}) {
     }
     offKeys = onKeys((e) => { if (state && !state.done && state.openGap != null && /^[1-4]$/.test(e.key)) { const b = state.optionNodes?.[Number(e.key) - 1]; if (b && !b.disabled) { e.preventDefault(); b.click(); } } });
     stage();
-  })().catch((e) => { wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not start: " + (e?.message || e))); });
+  })().catch((e) => { wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not start this practice. Reload the page, then try again.")); });
   return () => { alive = false; offKeys(); wrap.remove(); };
 }

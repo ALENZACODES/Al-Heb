@@ -106,7 +106,7 @@ export function mount(root, ctx = {}) {
     if (unmounted) return;
     body.textContent = '';
     body.appendChild(h('h1', { id: 'view-title', tabindex: '-1' }, t('wt.title', 'Trace words')));
-    body.appendChild(h('p', { role: 'alert', text: t('wt.loadError', 'Could not load word data: ') + (err && err.message) }));
+    body.appendChild(h('p', { role: 'alert', text: t('wt.loadError', 'Could not load the word data. Check your connection, then try again.') }));
   });
 
   // ------------------------------------------------------------ helpers

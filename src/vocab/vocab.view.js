@@ -274,7 +274,7 @@ export function mount(root, ctx) {
       const id = ++gen; status.textContent = 'Loading words…'; list.replaceChildren(); moreRow.replaceChildren(); addRow.replaceChildren();
       try { all = await entriesFor(sel.tier); } catch (err) {
         if (!alive || id !== gen) return;
-        status.textContent = ''; list.replaceChildren(); addRow.replaceChildren(el('p', { role: 'alert' }, `Could not load the word list (${err?.message || err}). Check your connection, then try again.`), el('button', { type: 'button', class: 'btn', onclick: reload }, 'Try again')); return;
+        status.textContent = ''; list.replaceChildren(); addRow.replaceChildren(el('p', { role: 'alert' }, 'Could not load the word list. Check your connection, then try again.'), el('button', { type: 'button', class: 'btn', onclick: reload }, 'Try again')); return;
       }
       if (!alive || id !== gen) return;
       fillTopics(); refilter();
@@ -303,7 +303,7 @@ export function mount(root, ctx) {
     const queueCards = dueNow().slice(0, SESSION);
     const byTier = {};
     try { for (const t of new Set(queueCards.map((c) => c.tier))) for (const e of await load(t)) { byTier[e.id] = e; known.set(e.id, e); } }
-    catch (err) { if (!alive || my !== gen) return; body.replaceChildren(el('p', { role: 'alert' }, `Could not load the word list (${err?.message || err}).`), el('button', { type: 'button', class: 'btn', onclick: renderReview }, 'Try again')); return; }
+    catch (err) { if (!alive || my !== gen) return; body.replaceChildren(el('p', { role: 'alert' }, 'Could not load the word list. Check your connection, then try again.'), el('button', { type: 'button', class: 'btn', onclick: renderReview }, 'Try again')); return; }
     if (!alive || my !== gen) return;
     const queue = queueCards.map((c) => c.id).filter((id) => byTier[id.slice(CARD_PREFIX.length)]);
     rv = { queue, pos: 0, revealed: false, stats: { 1: 0, 2: 0, 3: 0, 4: 0 }, byTier, requeued: new Set() };

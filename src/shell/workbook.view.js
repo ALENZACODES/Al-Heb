@@ -14,7 +14,7 @@ export async function mount(root, ctx) {
         h('strong', {}, `${LABEL[f.script] ?? f.script}, ${f.paper}${f.mnemonics ? ', with memory hooks' : ''}`),
         h('span', { class: 'block muted' }, `${f.pages} pages, ${mb(f.bytes)}`),
         h('a', { class: 'btn', href: new URL('../../assets/workbook/' + f.pdf, import.meta.url).href, download: f.pdf, 'aria-label': `Download PDF: ${LABEL[f.script] ?? f.script} workbook, ${f.paper}${f.mnemonics ? ', with memory hooks' : ''}` }, 'Download PDF'))))
-    : h('p', { class: 'muted', role: 'status' }, err ? `The workbook list could not be loaded (${err.message}). It may not be available offline: PDFs are not stored for offline use until you open them once.` : 'No workbook files are listed in this build.');
+    : h('p', { class: 'muted', role: 'status' }, err ? `The workbook list could not be loaded. It may not be available offline: PDFs are not stored for offline use until you open them once.` : 'No workbook files are listed in this build.');
   root.replaceChildren(h('article', { class: 'stack' },
     h('section', { class: 'card' },
       h('h1', { id: 'view-title', tabindex: '-1' }, 'Printable workbook'),

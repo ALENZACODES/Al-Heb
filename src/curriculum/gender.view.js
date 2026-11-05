@@ -132,6 +132,6 @@ export function mountGender(root, ctx, mode = "pairs", q = {}) {
       draw();
     }
     render();
-  })().catch((e) => { wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not start: " + (e?.message || e))); });
+  })().catch((e) => { wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not start this practice. Reload the page, then try again.")); });
   return () => { alive = false; wrap.remove(); };
 }

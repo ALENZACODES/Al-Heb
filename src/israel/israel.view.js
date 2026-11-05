@@ -228,7 +228,7 @@ export function mount(root, ctx = {}) {
     }
 
     ({ "": overview, ladder, fillers, giveaways, say: () => say(ctx?.query?.seed), etiquette })[sec]();
-  })().catch((e) => { wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not load: " + (e?.message || e))); });
+  })().catch((e) => { wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not load this page. Check your connection, then try again.")); });
   return () => { alive = false; wrap.remove(); };
 }
 export default mount;

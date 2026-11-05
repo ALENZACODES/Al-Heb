@@ -104,7 +104,7 @@ export function mount(root, ctx = {}) {
     on(modeBtn, 'click', () => { quiz = !quiz; modeBtn.setAttribute('aria-pressed', quiz); ui.status.textContent = quiz ? 'Quiz on.' : 'Back to the dial.'; render(); });
     wrap.replaceChildren(ui.title, ui.draftNotice(), h('p', {}, tr('niqquddial.intro', 'Israelis usually write without points. Turn the dial to see which marks are added.')), ui.traditionSwitch('niqquddial-trad'), modeBtn, ui.status, body);
     render();
-  }).catch((e) => { wrap.replaceChildren(ui.title, ui.draftNotice(), h('p', { role: 'alert' }, `Could not load the data: ${e.message}`)); });
+  }).catch((e) => { wrap.replaceChildren(ui.title, ui.draftNotice(), h('p', { role: 'alert' }, 'Could not load the data. Check your connection, then try again.')); });
 
   return ui.unmount;
 }

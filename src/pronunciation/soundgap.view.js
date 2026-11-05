@@ -182,7 +182,7 @@ export function mount(root, ctx = {}) {
   const dataPromise = ctx.soundgapData ? Promise.resolve(ctx.soundgapData) : loadSoundgapData();
   dataPromise.then((d) => { if (alive) build(d); }).catch((err) => {
     if (!alive) return;
-    wrap.replaceChildren(h('h2', {}, tr('soundgap.title', 'Sound-gap lab')), h('p', { role: 'alert' }, `Could not load sound-gap data: ${err.message}`));
+    wrap.replaceChildren(h('h2', {}, tr('soundgap.title', 'Sound-gap lab')), h('p', { role: 'alert' }, 'Could not load the sound-gap data. Check your connection, then try again.'));
   });
 
   return () => {

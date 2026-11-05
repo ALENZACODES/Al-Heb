@@ -42,6 +42,6 @@ export function mountDialogues(root, ctx, id) {
       el("div", { class: "row" }, toggle("Transliteration", () => showTr, (v) => { showTr = v; }), toggle("English", () => showEn, (v) => { showEn = v; })),
       list, el("p", { class: "muted" }, "Tip: cover the English, read the Hebrew aloud, then check."),
       el("div", { class: "row" }, el("a", { class: "btn secondary", href: "#/learn?dialogues=1" }, "All dialogues"), el("a", { class: "btn secondary", href: "#/learn" }, "All lessons")));
-  })().catch((e) => { wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not load: " + (e?.message || e))); });
+  })().catch((e) => { wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not load this page. Check your connection, then try again.")); });
   return () => { alive = false; wrap.remove(); };
 }

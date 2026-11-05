@@ -244,7 +244,7 @@ test("load failure shows an alert with retry; unmount stops late renders", async
   const vocabLoader = { loadTier: async (t) => { if (fail) throw new Error("offline"); return tier500; } };
   const { root, ctx } = mk(); ctx.vocabLoader = vocabLoader;
   mount(root, ctx); await idle(root);
-  assert.ok(root.find((n) => n.attrs.role === "alert")[0].text.includes("offline"));
+  { const said = root.find((n) => n.attrs.role === "alert")[0].text; assert.match(said, /Could not load the word list/); assert.ok(!said.includes("offline"), "the raw error text is not shown to the learner"); }
   fail = false; await btn(root, /Try again/).click(); await waitFor(() => items(root).length > 0, { message: 'items(root).length > 0' });
   assert.ok(items(root).length > 0);
   const m = mk(); m.ctx.vocabLoader = { loadTier: async () => { await tick(20); return tier500; } };

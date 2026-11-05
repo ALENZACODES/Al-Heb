@@ -172,7 +172,7 @@ export function mount(root, ctx = {}) {
       render(result);
       if (engines.disclosure?.length) out.append(el('p', { class: 'photo-disclosure' }, engines.disclosure.join(' ')));
       out.dataset.done = '1';
-    } catch (e) { status.textContent = ''; out.textContent = `Could not process the photo: ${e.message}`; out.dataset.done = '1'; }
+    } catch (e) { status.textContent = ''; out.textContent = 'Could not read this photo. Try a clearer, closer photo, or type the word instead.'; out.dataset.done = '1'; }
   };
   const onChange = async () => {
     const f = input.files?.[0];

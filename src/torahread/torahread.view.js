@@ -27,7 +27,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
   let course;
   try { course = await loadTorahRead(); }
   catch (err) {
-    wrap.replaceChildren(el('h1', { id: 'view-title', tabindex: '-1' }, 'Torah reading'), el('p', { class: 'trd-draft', role: 'alert' }, `The course data could not be loaded (${err?.message || err}).`));
+    wrap.replaceChildren(el('h1', { id: 'view-title', tabindex: '-1' }, 'Torah reading'), el('p', { class: 'trd-draft', role: 'alert' }, 'The course data could not be loaded. Check your connection, then reload the page.'));
     return () => {};
   }
   const translit = await loadTranslit(ctx.settings);

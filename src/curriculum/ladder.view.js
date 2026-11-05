@@ -41,7 +41,7 @@ export function mountLadder(root, ctx, q = {}) {
       const it = cur.item;
       const st = audioStatus(ctx, it.audioKind, it.audioId, ctx?.settings?.get?.("voice"));
       if (!ctx?.audio?.play || st.source === "none") { note.textContent = st.source === "none" ? st.label + " Read the cards and guess; the answer will be shown." : ""; return; }
-      ctx.audio.play(it.audioKind, it.audioId).then((r) => { if (alive) note.textContent = describePlay(r); }).catch((e) => { if (alive) note.textContent = "No sound: " + (e?.message || e); });
+      ctx.audio.play(it.audioKind, it.audioId).then((r) => { if (alive) note.textContent = describePlay(r); }).catch((e) => { if (alive) note.textContent = "No sound: the browser could not play this."; });
     }
     function draw() {
       if (!alive) return;
@@ -97,6 +97,6 @@ export function mountLadder(root, ctx, q = {}) {
       else if (e.key === "r" || e.key === "R") play();
     });
     draw();
-  })().catch((e) => { wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not start the ladder: " + (e?.message || e))); });
+  })().catch((e) => { wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not start the ladder. Reload the page, then try again.")); });
   return () => { alive = false; offKeys(); saveOnLeave?.(); wrap.remove(); };
 }

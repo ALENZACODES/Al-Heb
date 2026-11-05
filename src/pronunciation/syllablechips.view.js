@@ -95,7 +95,7 @@ export function mount(root, ctx = {}) {
       h('p', {}, tr('syllablechips.intro', 'Most Hebrew words are stressed on the last syllable. A few common ones are not, and the chips show which.')),
       ui.traditionSwitch('syllablechips-trad'), modes, hideBtn, ui.status, body);
     render();
-  }).catch((e) => { wrap.replaceChildren(ui.title, ui.draftNotice(), h('p', { role: 'alert' }, `Could not load the data: ${e.message}`)); });
+  }).catch((e) => { wrap.replaceChildren(ui.title, ui.draftNotice(), h('p', { role: 'alert' }, 'Could not load the data. Check your connection, then try again.')); });
 
   return ui.unmount;
 }

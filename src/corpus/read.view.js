@@ -115,7 +115,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
   let corpus;
   try { corpus = await loadCorpus(); }
   catch (err) {
-    wrap.replaceChildren(el('h1', { id: 'view-title', tabindex: '-1' }, 'Read'), el('p', { class: 'crp-warn', role: 'alert' }, `The text corpus could not be loaded (${err?.message || err}).`));
+    wrap.replaceChildren(el('h1', { id: 'view-title', tabindex: '-1' }, 'Read'), el('p', { class: 'crp-warn', role: 'alert' }, 'The text corpus could not be loaded. Check your connection, then reload the page.'));
     return () => {};
   }
 

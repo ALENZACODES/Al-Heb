@@ -58,6 +58,6 @@ export function mountCheckpoint(root, ctx, seed0 = 1) {
         el("div", { class: "row" }, el("a", { class: "btn", href: "#/learn?review=1" }, "Review now"), el("a", { class: "btn secondary", href: "#/learn" }, "All lessons")));
     }
     ask();
-  })().catch((e) => { wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not start: " + (e?.message || e))); });
+  })().catch((e) => { wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not start this check. Reload the page, then try again.")); });
   return () => { alive = false; wrap.remove(); };
 }

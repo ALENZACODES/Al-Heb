@@ -496,7 +496,7 @@ export function mount(root, ctx = {}) {
     render();
   }).catch((err) => {
     if (!alive) return;
-    wrap.replaceChildren(title, h('p', { role: 'alert' }, `Could not load the traditions data: ${err.message}`));
+    wrap.replaceChildren(title, h('p', { role: 'alert' }, 'Could not load the traditions data. Check your connection, then try again.'));
   });
 
   return () => {

@@ -59,6 +59,6 @@ export function mountSpotIt(root, ctx, letterId, seed0 = 1) {
       el("p", { class: "muted" }, "Read each line right to left. Some letters look similar on purpose. Tap again to undo."),
       ...lineEls, check, result);
   }
-  round().catch((e) => { wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not start: " + (e?.message || e))); });
+  round().catch((e) => { wrap.replaceChildren(h1, el("p", { role: "alert" }, "Could not start this practice. Reload the page, then try again.")); });
   return () => { alive = false; wrap.remove(); };
 }

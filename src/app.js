@@ -284,5 +284,5 @@ async function boot() {
 window.addEventListener('error', (e) => { document.body.dataset.lastError = e.message; });
 boot().catch((e) => {
   console.error(e);
-  document.getElementById('main').textContent = 'ALEF failed to start: ' + e.message;
+  document.getElementById('main').textContent = 'ALEF could not start. Reload the page. If it keeps happening, try another browser.';
 });

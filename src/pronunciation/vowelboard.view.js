@@ -150,7 +150,7 @@ export function mount(root, ctx = {}) {
     ui.tradListeners.push(render);
     wrap.replaceChildren(ui.title, ui.draftNotice(), note, ui.traditionSwitch('vowelboard-trad'), modes, ui.status, body);
     render();
-  }).catch((e) => { wrap.replaceChildren(ui.title, ui.draftNotice(), h('p', { role: 'alert' }, `Could not load the vowel data: ${e.message}`)); });
+  }).catch((e) => { wrap.replaceChildren(ui.title, ui.draftNotice(), h('p', { role: 'alert' }, 'Could not load the vowel data. Check your connection, then try again.')); });
 
   return ui.unmount;
 }

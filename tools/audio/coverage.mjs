@@ -108,7 +108,7 @@ export function renderMarkdown(manifest) {
   L.push('## Notes', '',
     '- Phrasebook, mnemonic anchor words and the vocabulary of `israel`-track lessons are `scope: israeli-only` (Modern conversational Hebrew): they have no sephardi/ashkenazi entries, and the player plays the israeli clip whatever the congregation setting. This is a product decision recorded in the manifest, not a linguistic finding; change it in tools/audio/build_manifest.mjs if the owner disagrees.',
     '- Sephardi clips are all missing: data/audio/equivalence.json is empty on purpose (no authority has decided which Israeli clips may stand in for Sephardi ones).',
-    '- "who can supply": isolated sounds, letter/vowel names and syllables are human-only. Israeli words/lines/phrases could come from TTS only after the listening test in docs/voices/tts-evaluation-protocol.md passes; Ashkenazi and Sephardi have no TTS source at all.', '');
+    '- "who can supply": isolated sounds, letter/vowel names and syllables are human-only. Israeli words/lines/phrases could come from TTS only after the listening test in docs/voices/tts-evaluation-protocol.md passes; Ashkenazi and Sephardi clips can only be made as synthetic voice from a Latin-letter respelling ("sound words", docs/tts/SOUNDWORDS.md); that method is an experiment, and how it sounds is unknown until a native listener hears it (docs/tts/PRODUCTION-ORDER.md steps 8 and 9). No such clip exists yet, so the column above still says human only for them.', '');
   return L.join('\n');
 }
 

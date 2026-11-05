@@ -19,7 +19,7 @@ Other trims: `node book/build.mjs --pdf --print --trim 8x10|8.5x8.5|6x9`. Only 8
 - Bleed 0.125in; with bleed page width = trim + 0.125in, height = trim + 2 x 0.125in.
 - Inside margin minimum by page count: 24-150 pages 0.375in, 151-300 0.5in, 301-500 0.625in. Top/bottom/outside minimum 0.25in without bleed, 0.375in with bleed.
 - This build: inside 0.75in, outside 0.75in, top 0.7in, bottom 0.8in (all above the minima for up to 500 pages). Margins are measured on rendered pages (see QA.md), not just read from CSS.
-- KDP page-count limits depend on ink/paper; this book is about 68 interior pages (the page counts in QA.md are the real ones).
+- KDP page-count limits depend on ink/paper; this book's KDP interior (`book/out/alef-book-8.5x11-print.pdf`) is 384 pages (`pdfinfo`, 2026-11-04 build). The page counts in docs/book/QA.md (62) predate this build and are stale.
 - Fonts are embedded (checked with pdffonts). KDP's stance on Type 3 fonts was not checked: the variable Noto Serif Hebrew is embedded as Type 3 by Chromium. If a previewer objects, make static instances (fontTools instancer) or typeset in InDesign.
 - Premium colour (not standard colour) for Hebrew titles and RTL paperback only were claims in the original research; not re-verified here.
 

@@ -9,7 +9,7 @@ Israeli (pointed Hebrew) only. Sephardi and Ashkenazi clips come from respelling
 | | Value |
 |---|---|
 | Disk, raw WAV | not measured |
-| Disk, MP3 | not measured (the encoder is set to 64 kbps, which is 8 KB per second of speech; clip length not measured) |
+| Disk, MP3 | not measured (the encoder is set to 96 kbps, which is 12 KB per second of speech; clip length not measured) |
 | Disk, model weights, Python packages, caches | not measured |
 | Time, render / encode / check | not measured; fill in from your first 20 clips (table in RUN-ON-YOUR-PC.md) |
 

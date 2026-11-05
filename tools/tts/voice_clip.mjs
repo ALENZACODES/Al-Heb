@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// Clip each rendered word: trim leading and trailing silence (small margin), normalise loudness exactly as tools/tts/post.mjs does (two-pass, -16 LUFS,
-// true-peak limit -1.5 dBTP), encode mono 44.1 kHz mp3, strip all metadata, verify with ffprobe. Output names are the manifest's own:
+// Clip each rendered word: trim leading and trailing silence (80 ms kept at each end), normalise loudness exactly as tools/tts/post.mjs does (two-pass, -16 LUFS,
+// true-peak limit -1 dBTP), encode mono 44.1 kHz 96 kbps mp3, strip all metadata, verify with ffprobe. Output names are the manifest's own:
 //   <work>/clips/take<N>/audio/<voice>/<tradition>/<kind>/<id>.mp3     (voice = m|f; the id and slots are neutral, no vendor or voice name in any file name or tag)
 //   node tools/tts/voice_clip.mjs [--work DIR] [--take 1|2] [--jobs N] [--limit N] [--force]
 // It reads the render log, not the plan: only clips that were really rendered (and whose raw file still matches the logged hash) are clipped.

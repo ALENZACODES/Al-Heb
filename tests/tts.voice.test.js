@@ -217,7 +217,7 @@ ffTest('clip: mono 44.1 kHz mp3, no metadata, neutral names that are the manifes
     assert.equal(r.clipped, 8); assert.equal(r.failed, 0);
     for (const it of plan.items) {
       const f = workPaths(work).clip(1, it); assert.ok(f.endsWith(it.path.replace('audio/', `audio${path.sep}`).split('/').join(path.sep)) || f.endsWith(it.path), f);
-      const c = checkMp3(f); assert.ok(c.ok, c.problems.join()); const buf = fs.readFileSync(f); assert.ok(!buf.includes('Lavf') && !buf.includes('LAME') && buf.slice(0, 3).toString('latin1') !== 'ID3');
+      const c = checkMp3(f); assert.ok(c.ok, c.problems.join()); assert.ok(c.info.bit_rate >= 80000 && c.info.bit_rate <= 112000, `bitrate ${c.info.bit_rate}`); const buf = fs.readFileSync(f); assert.ok(!buf.includes('Lavf') && !buf.includes('LAME') && buf.slice(0, 3).toString('latin1') !== 'ID3');
     }
     assert.equal((await clipAll({ work, take: 1, log: () => {} })).skipped, 8, 'resumable');
     // a raw file changed after logging is refused, not clipped

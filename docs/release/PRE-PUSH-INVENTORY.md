@@ -1,5 +1,7 @@
 # Pre-push inventory (2026-11-04)
 
+> **Superseded / stale since 2026-11-05: see [`STATUS.md`](../STATUS.md).** The working-tree counts below (modified, deleted, untracked) describe the checkout of 2026-11-04 and have not been re-run.
+
 Read-only checks run against the working tree; nothing was staged, committed or pushed.
 
 ## Counts (git status --short)

@@ -1,5 +1,7 @@
 # ALEF handoff for John (checked 2026-11-04, refreshed about 21:15)
 
+> **Superseded / stale since 2026-11-05: see [`STATUS.md`](STATUS.md).** Counts in this file were read on 2026-11-04. For current counts (re-run 2026-11-05) use `STATUS.md`.
+
 Every line below was read from the repo or produced by a command run today. Nothing here says the Hebrew is correct, that a learner has used the app, or that it runs well on a real phone. Counts drift while others edit; the commands are in `docs/STATUS.md`.
 
 ## What each part is

@@ -1,5 +1,7 @@
 # CI gap: local green versus a clean runner
 
+> **Superseded / stale since 2026-11-05: see [`STATUS.md`](../STATUS.md).** It was written against an older commit and its numbers (test counts, failing lines) have not been re-run.
+
 CI (`.github/workflows/ci.yml`, `pages.yml`) runs `node --test` on ubuntu-latest, Node 22, no install step. Local Node is v22.23.4, so the major version matches. The smoke job (Playwright) is `continue-on-error` and was not reproduced here.
 
 Method: `git clone --no-local <repo> /tmp/ci-clone`, then `node --test` (full run saved in `/tmp/ci-run.txt`). A clone holds committed HEAD only, so gitignored and untracked files are absent.

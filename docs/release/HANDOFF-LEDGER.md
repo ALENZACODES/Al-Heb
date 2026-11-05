@@ -1,5 +1,7 @@
 # Handoff ledger: 38-item audit of main f924b24
 
+> **Superseded / stale since 2026-11-05: see [`STATUS.md`](../STATUS.md).** The ledger audits `main` at f924b24 (2026-11-04); the repo has moved on and the item statuses were not re-checked.
+
 Audit baseline: main `f924b24` (4 November 2026). Ledger written 4 November 2026 (evening), read-only against two trees:
 
 - **gh/main**: a fresh scratch clone of the private repository at `f924b24` (`/tmp/ledger`, nothing in the live repo was touched).

@@ -1,5 +1,7 @@
 # Merge plan: local work vs GitHub main f924b24
 
+> **Superseded / stale since 2026-11-05: see [`STATUS.md`](../STATUS.md).** Written for a local branch `master` whose history shared no ancestor with GitHub `main`. A fresh clone now has only `main` (and `.github/workflows/pages.yml` triggers on `main` only), so the `master` steps below are not a current to-do. Do not run `tools/release/push-clean.sh`. Counts and hashes below are from 2026-11-04.
+
 Written 2026-11-04. Analysis only. Nothing in this repo was committed, staged, reset or merged while writing it. All measurements come from throwaway directories under `/tmp/merge-plan/` (outside the repo). Other lanes were editing the working tree, so every working-tree number below is a snapshot (taken 2026-11-04, about 2,130 changed paths) and must be re-measured before the real merge.
 
 ## 1. Situation, as measured

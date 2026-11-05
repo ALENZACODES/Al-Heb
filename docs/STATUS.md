@@ -1,43 +1,50 @@
-# ALEF status (measured 2026-11-04; counts table partly refreshed 2026-11-05; `main` tip 2b5ee8e on 2026-11-05 before branch `ship/improve-what-we-can`)
+# ALEF status (counts re-run 2026-11-05 on `main` 0f0daea; prose sections below carry their own dates)
 
-The numbers in the first table were produced by the command beside it, run in this checkout on 2026-11-04 (the "Re-run" column says which ones were re-run in the 21:05 to 21:15 refresh and which carry an earlier value from today). Several lanes were still editing during the refresh (pictures, book outputs, the audit board), so any count can already be out of date. Nothing here says the content is correct, reviewed, heard by a learner or run on a real phone. Other agents are editing the repo at the same time, so counts can drift.
+How to read this file. The Counts table was re-run on 2026-11-05 in a fresh clone of `main` at 0f0daea; the command is beside each figure. Anything not re-run is marked STALE and keeps its older date. Other agents and a bot push to `main` all day, so any count can already be out of date. `docs/INDEX.md` has the per-folder file counts (checked by `node tools/docs/index.mjs --check`). Nothing here says the content is correct, reviewed, heard by a learner or run on a real phone.
 
 ## Counts
 
-| Fact | Value | Command | Re-run in this refresh |
-|---|---|---|---|
-| Routes in the route table | 87 on 2026-11-05 (10 with a nav entry, 45 marked optional; 15 tier `v0`, the other 72 `preview`; it was 86 on 2026-11-04) | `node -e "import('./src/shell/router.js').then(m=>console.log(m.ROUTES.length, m.ROUTES.filter(r=>r.nav).length, m.ROUTES.filter(r=>r.optional).length, m.ROUTES.filter(r=>r.tier==='v0').length))"` | yes (2026-11-05) |
-| View files | 79 (re-run during the honesty audit) | `find src -name '*.view.js' \| wc -l` | yes |
-| JS files under src | 268 (re-run during the honesty audit) | `find src -name '*.js' \| wc -l` | yes |
-| Core lessons | 125 | `node -e "console.log(JSON.parse(require('fs').readFileSync('data/curriculum/lessons.json')).lessons.length)"` | yes |
-| Intermediate lessons | 50 (I-01 to I-50) | `ls data/curriculum/lessons-intermediate \| grep -c '^I-[0-9]*\.json$'` | yes |
-| Vocabulary records | 6,303 (was 6,297 earlier today: the first-500 follow-up added six records) | `node -e "console.log(JSON.parse(require('fs').readFileSync('data/vocab/meta.json')).counts.total)"` | yes |
-| Corpus (reader) records | 70 in `data/corpus/registry.json`; 2 full reader texts with trope (`shema`, `priestly-blessing`) | `ls data/corpus/reader` | reader files yes; 70 is the earlier value |
-| Image prompts in the manifest | 1,797 rows | `wc -l data/images/manifest.csv` (1,798 lines, header included) | yes |
-| Images by ingest status | 1,797 rows: ingested 914, approved 0, rejected 0, flagged 187, not yet generated 883 | `node tools/images/ingest.mjs status` (the ALL row; the column header calls the last column `missing`) | yes |
-| Images approved | 0 (`approvals` is `{}` in `data/images/approvals.json`), so no generated image is shown to learners | `data/images/approvals.json` | yes (file read) |
-| Image files on disk | 1,828 in `assets/img/gen`, 797 in `assets/img/placeholders`, 54 in `assets/img/refs` (the `gen` count was 1,664 earlier today: other agents are still adding) | `for d in gen placeholders refs; do find assets/img/$d -type f \| wc -l; done` | yes |
-| Audio clips listed in the manifests | 24,906 (my script over the four manifest files; the earlier value today was 24,900, and I did not split the six extra by file; it was 22,716 before that) | `node -e` over `data/audio/manifest.json` and `data/audio/manifest-words-{ashkenazi,israeli,sephardi}.json` (arrays) | yes |
-| Audio clips recorded | 0 of 24,906 (every entry has status `missing`); no `.mp3`, `.ogg`, `.m4a` or `.opus` file exists under `assets/` (checked during the honesty audit) | same script, grouped by `status` | yes |
-| Test files | 272 `*.test.js` in `tests/` (2026-11-05; counts files, not passes; was 252) | `ls tests/*.test.js \| wc -l` | yes (2026-11-05) |
-| Docs | 2,110 files under `docs/` (2026-11-05; was 1,223 on 2026-11-04; per-folder split not re-run) | `find docs -type f \| wc -l` | total yes (2026-11-05) |
-| Text scan for tool names | PASS (6,411 tracked files, 20 allowlisted; 2026-11-05) | `node tools/meta/scan.mjs --text` | yes (2026-11-05) |
-| Deploy build | 819 files, 46.10 MiB; install list (precache) 336 files, 3.90 MiB (version c71cea74e07b); 2026-11-05. A build only: nothing is deployed | `node tools/deploy/build_site.mjs` | yes (2026-11-05) |
-| Deploy check | 46 of 46 pass, 7 warnings (origins named in code), against the 2026-11-05 `dist/` | `node tools/deploy/check-deploy.mjs --root dist` | yes (2026-11-05) |
+All rows re-run 2026-11-05 unless marked STALE.
+
+| Fact | Value | Command |
+|---|---|---|
+| Routes in the route table | 87 (10 with a nav entry, 45 marked optional; 15 tier `v0`, 72 `preview`) | `node -e "import('./src/shell/router.js').then(m=>console.log(m.ROUTES.length, m.ROUTES.filter(r=>r.nav).length, m.ROUTES.filter(r=>r.optional).length, m.ROUTES.filter(r=>r.tier==='v0').length))"` |
+| View files | 79 | `find src -name '*.view.js' \| wc -l` |
+| JS files under src | 270 | `find src -name '*.js' \| wc -l` |
+| Core lessons | 125 | `node -e "console.log(JSON.parse(require('fs').readFileSync('data/curriculum/lessons.json')).lessons.length)"` |
+| Intermediate lessons | 50 (I-01 to I-50) | `ls data/curriculum/lessons-intermediate \| grep -c '^I-[0-9]*\.json$'` |
+| Vocabulary records | 6,303 | `node -e "console.log(JSON.parse(require('fs').readFileSync('data/vocab/meta.json')).counts.total)"` |
+| Corpus (reader) records | 70 entries in `data/corpus/registry.json`; 2 full reader texts with trope (`shema`, `priestly-blessing`) | `registry.json` `.entries.length`; `ls data/corpus/reader` |
+| Image prompts in the manifest | 1,797 rows | `wc -l data/images/manifest.csv` (1,798 lines, header included) |
+| Images by ingest status | 1,797 rows: ingested 914, approved 0, rejected 0, flagged 187, not yet generated 883 | `node tools/images/ingest.mjs status` (ALL row) |
+| Images approved | 0 (`approvals` is `{}` in `data/images/approvals.json`), so no generated image is shown to learners | read `data/images/approvals.json` |
+| Draft image review copies | 1,500 PNG files under `docs/drafts/images-review`: draft copies, not approved, not wired into the app | `find docs/drafts/images-review -type f -name '*.png' \| wc -l` |
+| Draft animation poses | 764 SVG files under `docs/drafts/animation-poses` (plus 13 JSON and 1 README): drafts, not approved, not wired into the app | `find docs/drafts/animation-poses -type f -name '*.svg' \| wc -l` |
+| Image files on disk | 1,828 in `assets/img/gen`, 797 in `assets/img/placeholders`, 54 in `assets/img/refs` | `for d in gen placeholders refs; do find assets/img/$d -type f \| wc -l; done` |
+| Audio clips listed in the manifests | 24,906 (6,384 in `manifest.json`; 6,174 in each of the three `manifest-words-*.json`) | `node -e` over `data/audio/manifest.json` and `data/audio/manifest-words-{ashkenazi,israeli,sephardi}.json` |
+| Audio clips recorded | 0 of 24,906 (every entry has status `missing`); no `.mp3`, `.ogg`, `.m4a`, `.opus` or `.wav` file exists under `assets/` | same script, grouped by `status`; `find assets -name '*.mp3' -o -name '*.ogg' -o -name '*.m4a' -o -name '*.opus' -o -name '*.wav'` |
+| Test files | 276 `*.test.js` in `tests/` (counts files, not passes) | `ls tests/*.test.js \| wc -l` |
+| Docs | 3,594 files under `docs/` (2,346 in `docs/drafts`, 402 in `docs/qa`, 205 in `docs/images`; the rest in `docs/INDEX.md`) | `find docs -type f \| wc -l` |
+| Metadata scan | PASS: zero findings; 914 allowlisted | `node tools/meta/scan.mjs` |
+| Text scan for tool names | PASS (7,901 tracked files, 20 allowlisted) | `node tools/meta/scan.mjs --text` |
+| Deploy build | 822 files, 46.12 MiB; install list (precache) 338 files, 3.91 MiB (version 30882f835280). A local build only: nothing is deployed; `dist/` was deleted afterwards | `node tools/deploy/build_site.mjs` |
+| Deploy check | 46 of 46 pass, 3 warnings (42 files with no Cache-Control rule; two origins named in `src/photo/engines/web.js`), against that `dist/` | `node tools/deploy/check-deploy.mjs --root dist` |
+| GitHub Actions on `main` | Latest runs listed at 10:20 UTC on 2026-11-05: `pages` success (three of three), `ci` unfinished in two and cancelled in one (a newer push cancels the older run). Read with `gh run list`; not a statement that CI is green | `gh run list --limit 6` |
 
 ## Tests
 
-I did not run the full suite in this refresh. Re-run by me at about 21:05 (each file with `node --test`): the 18 non-browser `tests/letters.*.test.js` files together (223 tests, 222 pass, 0 fail, 1 skipped), `tests/workbook.extras.test.js` (7 pass), `tests/perf.test.js` (4 pass), and `tests/integration.test.js` with `tests/offline.test.js` (63 tests, 60 pass, 3 fail: `views.generated.js lists exactly the *.view.js files on disk`, `precache: skips vendor, PDFs and files over the size limit`, `letter memory pictures: installed ones count under Letters`; each message says to run `node tools/build-precache.mjs`, which the committed `precache-manifest.js` (last written 15:59) still needs). The audit board records a full unit run by one of its auditors at about 20:50 (2,287 tests, 2,276 pass, 7 fail; `docs/research/BOARD.md`, M audit round 6), which I did not repeat; some of its failures have been fixed since (the letters picture tests pass in my run above). An earlier saved full run today (`/tmp/fulltest3.txt`, 10:45) reported 1,730 tests, 1,728 pass, 1 fail (the journey-doc test); it is stale. What the lanes recorded in their own docs, each for the files named there only:
+Re-run 2026-11-05: the unit tier, `node tools/test/run.mjs unit` (tests/ files that `tools/test/tiers.mjs` lists as unit), in a fresh clone. Result: 2,661 tests, 2,652 pass, 1 fail, 8 skipped. The one failure was `audio.tts.test.js` "renderBatch writes file + tts meta" with `ENOSPC: no space left on device` (the shared disk filled during the run); that file re-run alone passes (8 of 8). So the unit tier passed apart from a disk-space error, in one run. The browser tier (`npm run test:browser`) was not run.
 
-- `tests/engagement.dst.test.js` (new): 31 pass; `morning`, `notify`, `credits`: 65 pass (`docs/review/ENGAGEMENT-CHECK.md`).
+STALE (2026-11-04) figures that earlier versions of this file carried, kept only as history: a full run of 1,730 tests with 1 failure at 10:45, and a board-recorded run of 2,287 tests with 7 failures at about 20:50 (`docs/research/BOARD.md`). The sentences below were recorded by lanes in their own docs on 2026-11-04 and not re-run for this refresh:
+
+- `tests/engagement.dst.test.js`: 31 pass; `morning`, `notify`, `credits`: 65 pass (`docs/review/ENGAGEMENT-CHECK.md`).
 - `tests/letters.*`, `workbook.*`, `book.*`: 128 tests, 127 pass, 1 skipped (`docs/review/LETTERS-CONTENT-CHECK.md`).
 - `tests/streak.freeze.test.js`: 21 pass; `tests/calendar.festivals.test.js`: 14 pass (`docs/qa/STREAK-FREEZE.md`, `docs/qa/CALENDAR-QA.md`).
 - Sensitivity and names tests: 562 of 562 pass after the speech-text edits; nothing was run in a browser (`docs/sensitivity/OPEN.md`).
-- Copy audit: about 520 tests in 44 files; one failure, the precache test, because `precache-manifest.js` is stale (`docs/review/COPY-AUDIT.md`).
-- Accessibility pass: 68 pass, 1 fail (`data/wordtrace/words.json is current`) (`docs/qa/A11Y-V0.md`).
-- CI triage: 9 test files re-run on a copy of the working tree; all pass except one image alt-text test, `images.redo` #653 (`docs/test/CI-FAILURE-TRIAGE.md`). Whether CI passes after a push has not been observed.
+- Copy audit: about 520 tests in 44 files (`docs/review/COPY-AUDIT.md`). Accessibility pass: 68 pass, 1 fail (`docs/qa/A11Y-V0.md`). Both were against a tree that has since changed.
+- CI triage of run 41899215557 on c2dc882 (`docs/test/CI-FAILURE-TRIAGE.md`, now marked stale).
 
-## What kind of thing each part is (added by the honesty audit, 2026-11-04)
+## What kind of thing each part is (added by the honesty audit, 2026-11-04; the counts in it match the Counts table above as of 2026-11-05 except where it says otherwise)
 
 Read this before quoting any count above. A folder full of files is not a finished course.
 
@@ -76,7 +83,7 @@ Read this before quoting any count above. A folder full of files is not a finish
 - `docs/audio/NO-AUDIO.md`: three honest states when no clip exists (file, device voice, none) and the one sound bar; tested with fake audio objects and a stubbed speech engine, with route-level button counts inconclusive.
 - `docs/test/CI-FAILURE-TRIAGE.md` and `docs/deploy/GO-LIVE-CHECKLIST.md`: see the sections below.
 
-## Known gaps (pulled from the named docs; not re-verified here)
+## Known gaps (pulled from the named docs on 2026-11-04; STALE, not re-verified in the 2026-11-05 refresh)
 
 From `docs/qa/SWEEP.md` (sweep of 71 routes, 426 page loads, 2026-11-04, emulation only; 12 ranked findings; written before several of the fixes in the other QA docs, which of its items are still open was not re-measured):
 - `/settings`: focus lands on an invisible control (`input#s-import`). (`A11Y-V0.md` records a later change to a real button; not re-run against the sweep.)
@@ -113,8 +120,8 @@ From `docs/tts/README.md`:
 
 From `docs/deploy/CLOUDFLARE-PAGES.md`, `docs/deploy/CI-GAP.md`, `docs/deploy/GO-LIVE-CHECKLIST.md` and `docs/test/CI-FAILURE-TRIAGE.md`:
 - Nothing on the checklist has been done. Headers, CSP and the nested `_tesseract` folder behaviour on a real host are unverified; the checklist's live-URL checks are manual (the checker only serves a local folder).
-- CI run 41899215557 (pages run 41899215538) on pushed commit c2dc882: 17 failing lines traced to stale committed generated data or a missing runner Python module (`segno`, Pillow); no real code bug found. Most fixes are uncommitted working-tree changes and take effect only when committed and pushed. One test still fails on the working tree: image alt text for `L18_tsadi_print_mnemonic` (#653), which needs a decision on the wording before `node tools/images/alt_text.mjs` is run. The "Precache manifest is current" CI step was not run.
-- The local branch and `origin/main` share no common ancestor (142 commits each side, per the triage).
+- STALE (2026-11-04, superseded: see the Actions row in Counts): CI run 41899215557 (pages run 41899215538) on pushed commit c2dc882: 17 failing lines traced to stale committed generated data or a missing runner Python module (`segno`, Pillow); no real code bug found. Most fixes are uncommitted working-tree changes and take effect only when committed and pushed. One test still fails on the working tree: image alt text for `L18_tsadi_print_mnemonic` (#653), which needs a decision on the wording before `node tools/images/alt_text.mjs` is run. The "Precache manifest is current" CI step was not run.
+- STALE (2026-11-04): the local branch and `origin/main` shared no common ancestor (142 commits each side, per the triage).
 - The update banner (`src/shell/update.js`) is tested with a fake service worker and a simulated version change only, never on a real device. Capacitor wrapper is a desk review only; 12 listed gaps.
 - `docs/deploy/CI-GAP.md` was written against an older commit.
 

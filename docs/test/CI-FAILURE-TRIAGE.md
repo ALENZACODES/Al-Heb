@@ -1,5 +1,7 @@
 # CI failure triage: ci run 41899215557 / pages run 41899215538
 
+> **Superseded / stale since 2026-11-05: see [`STATUS.md`](../STATUS.md).** It triages one CI run on commit c2dc882 (2026-11-04). The fixes it lists were uncommitted at the time; whether each is now on `main` was not re-checked here. It is not the current CI state.
+
 Pushed commit: c2dc882 (origin/main). Reproduced in a fresh clone of that commit
 (Node 22, no extra installs) by running the failing test files one by one, then re-ran the
 same files against a copy of the current working tree.

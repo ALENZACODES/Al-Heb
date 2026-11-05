@@ -1,5 +1,7 @@
 # Push gate: interim rehearsal (not a final verdict)
 
+> **Superseded / stale since 2026-11-05: see [`STATUS.md`](../STATUS.md).** This was an interim rehearsal with a NO-GO verdict on a moving tree; it has not been re-run, so it is not the current state of the gate.
+
 Verdict at the time of the run: NO-GO. Reason: the working tree never went quiet while it ran, so the results describe a moving snapshot, not a releasable state. This note was written from the gate lane's report; nothing here was re-run by the person who wrote it.
 
 ## What was run (in a temp copy)

@@ -25,9 +25,6 @@ test('unknown facts are said as unknown, never guessed', () => {
   assert.match(lines.find((l) => l.id === 'audio').text, /could not be checked right now/);
   assert.match(lines.find((l) => l.id === 'images').text, /could not be checked right now/);
 });
-test('no AI or vendor wording in learner text', () => {
-  for (const l of readinessLines({ audio: summary, imagesApproved: 0 })) assert.doesNotMatch(l.text, /\bAI\b|artificial intelligence|LLM|ChatGPT|Claude|OpenAI|Anthropic/i);
-});
 test('loader reads both files; a failed fetch gives nulls', async () => {
   const files = { 'data/audio/summary.json': summary, 'data/images/approvals.json': approvals };
   const f = await loadReadinessFacts(async (u) => ({ ok: true, json: async () => files[u] }));

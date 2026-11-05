@@ -1,7 +1,7 @@
 // Cloudflare Pages deploy tooling: _headers is valid and safe, make-dist ships only runtime files, check-deploy can fail.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, mkdtempSync, cpSync, writeFileSync, rmSync, existsSync } from 'node:fs';
+import { readFileSync, mkdtempSync, cpSync, writeFileSync, rmSync, existsSync, readdirSync, statSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
@@ -9,6 +9,7 @@ import { parseHeaders, headersFor, cacheRuleCount, runChecks, woff2Coverage } fr
 import { listShipFiles } from '../tools/deploy/make-dist.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+const readdirSyncRec = (d) => readdirSync(d).flatMap((n) => (statSync(join(d, n)).isDirectory() ? readdirSyncRec(join(d, n)) : [join(d, n)]));
 const rules = parseHeaders(readFileSync(join(root, '_headers'), 'utf8'));
 
 test('_headers: within Cloudflare limits, CSP has no third-party origin', () => {
@@ -33,6 +34,17 @@ test('make-dist ships runtime files only', () => {
   const files = listShipFiles();
   for (const must of ['index.html', 'sw.js', '_headers', 'manifest.webmanifest', 'assets/fonts/web/heebo.woff2', 'assets/vendor/_tesseract/heb.traineddata', 'src/app.js']) assert.ok(files.includes(must), must);
   for (const f of files) assert.ok(!/^(docs|tests|tools|book|research|assets\/images|node_modules)\//.test(f) && !/\.test\.js$/.test(f), f);
+});
+test('make-dist ships clip mp3s but never *.meta.json sidecars or ingest reports', () => {
+  const files = listShipFiles();
+  const audio = files.filter((f) => f.startsWith('audio/'));
+  for (const f of audio) assert.match(f, /\.(mp3|m4a|ogg)$/i, f);
+  const bad = files.filter((f) => /\.meta\.json$/i.test(f) || /ingest-report/i.test(f));
+  assert.deepEqual(bad, []);
+  if (existsSync(join(root, 'audio'))) {
+    const onDisk = readdirSyncRec(join(root, 'audio')).filter((f) => /\.mp3$/i.test(f));
+    assert.equal(audio.filter((f) => /\.mp3$/i.test(f)).length, onDisk.length, 'every mp3 on disk still ships');
+  }
 });
 test('check-deploy passes on a build and FAILS when the headers are broken', { timeout: 120000 }, async (t) => {
   const tmp = mkdtempSync(join(tmpdir(), 'alef-deploy-'));

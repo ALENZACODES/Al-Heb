@@ -245,6 +245,8 @@ ${(dr.drills ?? []).map((d) => `<div class="card2"><b>${esc(d.title)}.</b> <span
   const alphabet = `<section class="chapter" id="ch-alphabet"><h2>The alphabet at a glance</h2><table class="alphabet"><thead><tr><th>#</th><th>Print</th><th>Cursive</th><th>Name</th><th>Sound</th><th>Page</th></tr></thead><tbody>
 ${LETTERS.map((L) => `<tr><td>${L.nn}</td><td class="he" lang="he" dir="rtl">${glyphFor(L.id, lettersJson)}</td><td class="he he-cursive" lang="he" dir="rtl">${glyphFor(L.id, lettersJson)}</td><td>${esc(L.title)}</td><td>${esc(L.sound)}</td><td><a href="#letter-${L.id}">${pg('letter-' + L.id)}</a></td></tr>`).join('')}</tbody></table></section>`;
 
+  // Writing space for the learner: per row, a few grey letters to trace, then empty ruled cells (7 cells across the 7in text block).
+  const writingRow = (g, nTrace) => `<div class="wrow">${Array.from({ length: 7 }, (_, i) => `<span class="wc${i < nTrace ? ' tr' : ''}">${i < nTrace ? g : ''}</span>`).join('')}</div>`;
   const letterPages = LETTERS.map((L) => {
     const tok = letterToken(L), base = `L${L.nn}_${tok}_print`;
     const glyph = glyphFor(L.id, lettersJson);
@@ -262,9 +264,10 @@ ${LETTERS.map((L) => `<tr><td>${L.nn}</td><td class="he" lang="he" dir="rtl">${g
 <div class="glyph-card cursive"><span class="label">Cursive (ktav yad)</span>${he(glyph, 'he-cursive')}<span class="note">Gveret Levin (OFL font); stroke data below is draft</span></div>
 <div class="stroke"><div class="pair"><div>${sp.svg}<div class="cap">${sp.real ? `Print: ${sp.n} stroke${sp.n > 1 ? 's' : ''}` : 'Print strokes: none'}</div></div><div>${sc.svg}<div class="cap">${sc.real ? `Cursive: ${sc.n} (${esc(sc.quality ?? '')})` : 'Cursive strokes: none'}</div></div></div></div>
 <div class="mnemonic">${overlay}</div>
-<div class="side"><div class="mnemonic-cap"><b>Find it:</b> ${esc(L.keyword)}. The letter's shape: ${esc(L.shape)}. <span class="small">(image: ${R.isReal(`${base}_mnemonic`) ? 'final' : 'AI-image placeholder'})</span></div>
+<div class="side"><div class="mnemonic-cap"><b>Find it:</b> ${esc(L.keyword)}. The letter's shape: ${esc(L.shape)}. <span class="small">(image: ${R.isReal(`${base}_mnemonic`) ? 'final' : 'placeholder'})</span></div>
 <div class="slot link-slot">${qrBox('letter_' + L.id, 'qr')}<div class="url"><b>Open it &amp; trace it:</b><br/>${esc(url)}${ph ? '<span class="ph">placeholder host, not a live site</span>' : ''}</div></div></div>
-<div class="vocab">${vocab}</div>${sound}</section>`;
+<div class="vocab">${vocab}</div>
+<div class="writing" aria-label="Writing space"><div class="wlabel">Trace the grey letters, then write your own</div>${writingRow(he(glyph), 3)}${writingRow(he(glyph, 'he-cursive'), 3)}</div>${sound}</section>`;
   }).join('\n');
 
   // ---- Remember every letter: one mnemonic card per letter (data/letters/mnemonics.json, read fresh) ----

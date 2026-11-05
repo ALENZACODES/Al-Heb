@@ -1,8 +1,22 @@
-# Book visual QA log (2026-11-03, Round 2)
+# Book QA log
+
+## Current page counts (read with `pdfinfo` on 2026-11-04; supersedes every page-count table below)
+| File | Pages |
+|---|---|
+| book/out/alef-book-8.5x11-print.pdf | 384 |
+| book/out/alef-book-8.5x11-print-bleed.pdf | 384 |
+| book/out/alef-book-8.5x11-print-bleed-rtlspreads.pdf | 386 |
+| book/out/alef-book-8.5x11-print-bleed-REVERSED-ingram-lulu.pdf | 386 |
+| book/out/alef-book-draft.pdf (with placeholder cover) | 386 |
+| book/out/alef-mnemonic-flashcards-letter.pdf and -a4.pdf | 7 each |
+
+The tables and "pp" figures in the rounds below (62, 63, 68, 81, 120) were true for the builds of those rounds and are kept as history only. They are stale. A rebuild changes the count whenever the content or the page CSS changes, so re-read it with `pdfinfo` after every build instead of copying a number from this file. Page-by-page notes in the rounds below (for example "letter pages 7-33") refer to those old layouts; in the 384-page print file the 27 letter pages are 22 to 48 (see docs/qa/BOOK-PRINT-INSPECTION.md).
+
+# Round 2 (2026-11-03)
 
 Method: build PDF -> `python3 book/contact_sheets.py FILE.pdf OUTDIR` (pdftoppm, 70 dpi, 6 pages per sheet, plus 110 dpi single pages on request) -> looked at the sheets with the image viewer, fixed, rebuilt, looked again. Only what is listed under "looked at" was inspected by eye; automated checks are listed separately. Nothing was checked by a Hebrew reader or a printer's previewer.
 
-## Page counts (final build)
+## Page counts (final build; STALE, see "Current page counts" at the top)
 | File | Pages |
 |---|---|
 | book/out/alef-book-draft.pdf (with cover) | 63 |
@@ -48,7 +62,7 @@ Layout of the 8.5x11 interior: opening prayer 1, Priestly Blessing 2, how-to + c
 
 # Round 3 addendum (2026-11-03, lane 7): "Remember every letter" chapter, mnemonic flashcards, quirky image prompts
 
-## Page counts (this build)
+## Page counts (this build; STALE, see "Current page counts" at the top)
 | File | Pages |
 |---|---|
 | book/out/alef-book-draft.pdf (with cover) | 68 (was 63) |
@@ -79,7 +93,7 @@ All pictures (the quirky mnemonics included: prompts exist, no images), cover, Q
 ## Decision
 Include all 70 texts (not a curated 27). Page count stays well under the 100-page ceiling, and the extra texts are the ones a learner meets first in a synagogue (Torah service, Amidah closings, Kiddush, Havdalah, Hanukkah). The prayers are now 5 chapters (`PRAYER_GROUPS` in book/build.mjs): Shema/Blessing/daily words (16 texts), **The Torah service** (18, its own chapter), Amidah/Kedushah/closing prayers (14), Shabbat/Psalms/table (18), Hanukkah (4). Any registry id not listed lands in an automatic "More prayers and verses" chapter, so new records cannot silently drop out. Each card footer now shows Hebrew source + licence, English source + licence, status, `proofread` and `typedFromMemory` flags (all 70 are proofread:false, typedFromMemory:false in the data), and the text tradition (nusach) where the record has one. Hebrew in cards over 300 / 700 characters is set smaller (12.5 / 10.5pt) and cards never split across pages.
 
-## Page counts (this build)
+## Page counts (this build; STALE, see "Current page counts" at the top)
 | File | Pages |
 |---|---|
 | alef-book-draft.pdf (with cover) | 81 (was 68) |
@@ -104,7 +118,7 @@ Contact sheets (55 dpi) of the KDP interior pages 41-64 and 73-80; full-page 80 
 
 # Round 4 audit (2026-11-03): class section, 5,000-word list, tagged PDF
 
-## Page counts
+## Page counts (STALE, see "Current page counts" at the top)
 Draft with cover: 120 pages. Print interiors (no-bleed, bleed, rtl-spreads, reversed): 120 each (even; no pad page needed this time). Was 81 / 68 before.
 
 ## Looked at by eye

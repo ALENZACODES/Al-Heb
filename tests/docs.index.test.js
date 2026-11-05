@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { scan, render, splice, START, END, listFiles, countsNear } from '../tools/docs/index.mjs';
+import { scan, render, splice, START, END, listFiles, countsNear, diffIndex } from '../tools/docs/index.mjs';
 import { checkFile } from '../tools/docs/linkcheck.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -35,15 +35,24 @@ test('splice replaces only the generated block and demands both markers', () => 
 
 test('docs/INDEX.md lists exactly the folders and top-level files on disk, with counts close to the tree', () => {
   const text = fs.readFileSync(path.join(ROOT, 'docs', 'INDEX.md'), 'utf8');
-  const s = scan(ROOT);
-  const listed = [...text.matchAll(/^\| \[`([^`]+)\/`\]\([^)]*\) \| (\d+) \|/gm)].map((m) => [m[1], Number(m[2])]);
-  assert.deepEqual(listed.map((l) => l[0]), s.folders.map((f) => f.name), 'folder list is stale: run node tools/docs/index.mjs');
-  // Other people add files all the time, so counts only need to be near; `node tools/docs/index.mjs --check --exact` is the exact test.
-  for (const [name, n] of listed) {
-    const now = s.folders.find((f) => f.name === name).count;
-    assert.ok(countsNear(n, now), `${name}/ count ${n} is far from ${now}: run node tools/docs/index.mjs`);
-  }
-  for (const f of s.files) assert.ok(text.includes(`[\`${f.name}\`]`), `${f.name} missing from the index`);
+  // The folder list and the top-level file list must match the tree exactly (a new folder or file is a real change to the index).
+  // Per-folder counts only need to be near, because other lanes add files all the time; `node tools/docs/index.mjs --check --exact` is the exact test.
+  assert.deepEqual(diffIndex(text, scan(ROOT)), []);
+});
+
+test('countsNear: small folders get a floor, big folders a percentage, and a real jump still fails', () => {
+  assert.ok(countsNear(2, 10));
+  assert.ok(!countsNear(2, 32));
+  assert.ok(countsNear(100, 109));
+  assert.ok(!countsNear(100, 125));
+});
+
+test('diffIndex names the folder or file that drifted and the fix command', () => {
+  const s = { folders: [{ name: 'a', count: 3 }], files: [{ name: 'X.md' }] };
+  const good = `${START}\n| [\`a/\`](a/) | 3 | t |\n| [\`X.md\`](X.md) | h |\n${END}`;
+  assert.deepEqual(diffIndex(good, s), []);
+  const bad = diffIndex(good, { folders: [...s.folders, { name: 'new', count: 1 }], files: [...s.files, { name: 'Y.md' }] });
+  assert.ok(bad.some((m) => m.includes('docs/new/')) && bad.some((m) => m.includes('docs/Y.md')) && bad.at(-1).includes('node tools/docs/index.mjs'));
 });
 
 test('docs/INDEX.md has no broken relative links', () => {

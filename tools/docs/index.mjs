@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Builds the folder map inside docs/INDEX.md. Zero dependencies.
 //   node tools/docs/index.mjs           rewrite the generated block between the index markers
-//   node tools/docs/index.mjs --check   exit 1 when the folder/file lists differ or a count is far from the tree (same tolerance as tests/docs.index.test.js)
+//   node tools/docs/index.mjs --check   exit 1 when the folder/file lists differ or a count is far from the tree (same rules as tests/docs.index.test.js; prints each problem and the one command that fixes it)
 //   node tools/docs/index.mjs --check --exact   exit 1 when the block differs at all (exact counts)
 // Only the block between <!-- index:start --> and <!-- index:end --> is generated; the reading guide above it is written by hand.
 // The first-heading text of a folder comes from its README.md, else its first Markdown file (sorted by name).
@@ -70,11 +70,43 @@ export function render({ folders, files, total }) {
   return L.join('\n');
 }
 
-/** Counts only need to be near: other people add files all the time. Shared by --check and the unit test. */
-export const countsNear = (listed, now) => Math.abs(now - listed) <= Math.max(5, Math.ceil(now * 0.1));
+/**
+ * Counts only need to be near: other lanes add files all the time. The folder LIST and the top-level FILE list must still match exactly.
+ * Tolerance: at least 10 files, or 25% of the larger count for folders under 40 files, or 10% for bigger ones.
+ */
+export const countsNear = (listed, now) => {
+  const big = Math.max(listed, now);
+  return Math.abs(now - listed) <= Math.max(10, Math.ceil(big * (big < 40 ? 0.25 : 0.1)));
+};
 
 /** Parse the folder rows of a rendered block: [[name, count], ...]. */
 export const listedFolders = (text) => [...text.matchAll(/^\| \[`([^`]+)\/`\]\([^)]*\) \| (\d+) \|/gm)].map((m) => [m[1], Number(m[2])]);
+
+/** Top-level file rows of a rendered block: [name, ...]. */
+export const listedFiles = (text) => [...text.matchAll(/^\| \[`([^`/]+)`\]\([^)]*\) \|/gm)].map((m) => m[1]);
+
+export const FIX = 'run `node tools/docs/index.mjs` and commit docs/INDEX.md';
+
+/** Compare INDEX.md text with a scan. Returns a list of human-readable problems (empty when the index is good enough). */
+export function diffIndex(text, s) {
+  const out = [];
+  if (!text.includes(START) || !text.includes(END)) out.push(`docs/INDEX.md is missing its generated-block markers ${START} / ${END}`);
+  const listed = listedFolders(text);
+  const names = new Set(listed.map((l) => l[0]));
+  const disk = new Set(s.folders.map((f) => f.name));
+  for (const f of s.folders) if (!names.has(f.name)) out.push(`folder docs/${f.name}/ is on disk but not in the index`);
+  for (const n of names) if (!disk.has(n)) out.push(`folder docs/${n}/ is in the index but not on disk`);
+  for (const [name, n] of listed) {
+    const f = s.folders.find((x) => x.name === name);
+    if (f && !countsNear(n, f.count)) out.push(`${name}/ lists ${n} files but has ${f.count} on disk (more than the allowed drift)`);
+  }
+  const files = new Set(listedFiles(text));
+  const diskFiles = new Set(s.files.map((f) => f.name));
+  for (const f of diskFiles) if (!files.has(f)) out.push(`top-level file docs/${f} is on disk but not in the index`);
+  for (const f of files) if (!diskFiles.has(f)) out.push(`top-level file docs/${f} is in the index but not on disk`);
+  if (out.length) out.push(`fix: ${FIX}`);
+  return out;
+}
 
 export function splice(text, block) {
   const a = text.indexOf(START), b = text.indexOf(END);
@@ -87,15 +119,14 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const next = splice(readFileSync(file, 'utf8'), render(scan()));
   if (process.argv.includes('--check')) {
     const cur = readFileSync(file, 'utf8');
-    let stale = next !== cur;
-    if (stale && !process.argv.includes('--exact')) {
-      const a = listedFolders(cur), b = listedFolders(next);
-      const sameLists = JSON.stringify(a.map((x) => x[0])) === JSON.stringify(b.map((x) => x[0]));
-      const files = (t) => [...t.matchAll(/^\| \[`([^`]+)`\]\([^)]*\) \|/gm)].map((m) => m[1]).filter((n) => !n.endsWith('/'));
-      stale = !(sameLists && a.every(([, n], i) => countsNear(n, b[i][1])) && JSON.stringify(files(cur)) === JSON.stringify(files(next)));
+    let problems = [];
+    if (process.argv.includes('--exact')) {
+      if (next !== cur) problems = ['the generated block differs from the tree (exact check)', `fix: ${FIX}`];
+    } else {
+      problems = diffIndex(cur, scan());
     }
-    if (stale) {
-      console.error('docs/INDEX.md is stale: run node tools/docs/index.mjs and commit the result');
+    if (problems.length) {
+      console.error(`docs/INDEX.md is stale:\n  ${problems.join('\n  ')}`);
       process.exit(1);
     }
     console.log(next === cur ? 'docs/INDEX.md is current' : 'docs/INDEX.md is close enough (counts within tolerance); run without --check to refresh exactly');

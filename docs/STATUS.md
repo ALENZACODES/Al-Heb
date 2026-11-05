@@ -1,4 +1,4 @@
-# ALEF status (measured 2026-11-04, refreshed about 21:15 local)
+# ALEF status (measured 2026-11-04; counts table partly refreshed 2026-11-05 about 04:45 local, tip 3ebc1c5 plus local doc commits)
 
 The numbers in the first table were produced by the command beside it, run in this checkout on 2026-11-04 (the "Re-run" column says which ones were re-run in the 21:05 to 21:15 refresh and which carry an earlier value from today). Several lanes were still editing during the refresh (pictures, book outputs, the audit board), so any count can already be out of date. Nothing here says the content is correct, reviewed, heard by a learner or run on a real phone. Other agents are editing the repo at the same time, so counts can drift.
 
@@ -6,7 +6,7 @@ The numbers in the first table were produced by the command beside it, run in th
 
 | Fact | Value | Command | Re-run in this refresh |
 |---|---|---|---|
-| Routes in the route table | 86 when re-run during the honesty audit (10 with a nav entry, 45 marked optional; 15 tier `v0`, the other 71 `preview`; it was 85 and 77 earlier today) | `node -e "import('./src/shell/router.js').then(m=>console.log(m.ROUTES.length, m.ROUTES.filter(r=>r.nav).length, m.ROUTES.filter(r=>r.optional).length, m.ROUTES.filter(r=>r.tier==='v0').length))"` | yes |
+| Routes in the route table | 87 on 2026-11-05 (10 with a nav entry, 45 marked optional; 15 tier `v0`, the other 72 `preview`; it was 86 on 2026-11-04) | `node -e "import('./src/shell/router.js').then(m=>console.log(m.ROUTES.length, m.ROUTES.filter(r=>r.nav).length, m.ROUTES.filter(r=>r.optional).length, m.ROUTES.filter(r=>r.tier==='v0').length))"` | yes (2026-11-05) |
 | View files | 79 (re-run during the honesty audit) | `find src -name '*.view.js' \| wc -l` | yes |
 | JS files under src | 268 (re-run during the honesty audit) | `find src -name '*.js' \| wc -l` | yes |
 | Core lessons | 125 | `node -e "console.log(JSON.parse(require('fs').readFileSync('data/curriculum/lessons.json')).lessons.length)"` | yes |
@@ -19,11 +19,11 @@ The numbers in the first table were produced by the command beside it, run in th
 | Image files on disk | 1,828 in `assets/img/gen`, 797 in `assets/img/placeholders`, 54 in `assets/img/refs` (the `gen` count was 1,664 earlier today: other agents are still adding) | `for d in gen placeholders refs; do find assets/img/$d -type f \| wc -l; done` | yes |
 | Audio clips listed in the manifests | 24,906 (my script over the four manifest files; the earlier value today was 24,900, and I did not split the six extra by file; it was 22,716 before that) | `node -e` over `data/audio/manifest.json` and `data/audio/manifest-words-{ashkenazi,israeli,sephardi}.json` (arrays) | yes |
 | Audio clips recorded | 0 of 24,906 (every entry has status `missing`); no `.mp3`, `.ogg`, `.m4a` or `.opus` file exists under `assets/` (checked during the honesty audit) | same script, grouped by `status` | yes |
-| Test files | 252 `*.test.js` in `tests/` (re-run during the honesty audit; counts files, not passes) | `ls tests/*.test.js \| wc -l` | yes |
-| Docs | 1,223 files under `docs/` (377 in `qa`, 205 in `images`, 106 in `voices`, 105 in `review`, 65 in `letters`, 56 in `workbook`, 51 in `vocab`, 35 in `screens`; 10 top-level `docs/*.md`) | `find docs -type f \| wc -l`; `for d in docs/*/; do echo "$(find $d -type f \| wc -l) $d"; done \| sort -rn` | yes |
-| Text scan for tool names | PASS (4,294 tracked files, 24 allowlisted; run again at about 21:10) | `node tools/meta/scan.mjs --text` | yes |
-| Deploy build | 723 files, 59.76 MiB; install list 284 files, 3.36 MiB; 246 more files (10.46 MiB) fetched on demand (stale: measured before the eight new routes, the memory-chain changes and the later pictures; not re-run because the build writes `dist/`) | `node tools/deploy/build_site.mjs` | no (earlier run today) |
-| Deploy check | 44 of 44 pass, 6 warnings (origins named in code), against the earlier `dist/` | `node tools/deploy/check-deploy.mjs --root dist` | no (earlier run today; `docs/deploy/GO-LIVE-CHECKLIST.md` quotes the same result) |
+| Test files | 272 `*.test.js` in `tests/` (2026-11-05; counts files, not passes; was 252) | `ls tests/*.test.js \| wc -l` | yes (2026-11-05) |
+| Docs | 2,110 files under `docs/` (2026-11-05; was 1,223 on 2026-11-04; per-folder split not re-run) | `find docs -type f \| wc -l` | total yes (2026-11-05) |
+| Text scan for tool names | PASS (6,411 tracked files, 20 allowlisted; 2026-11-05) | `node tools/meta/scan.mjs --text` | yes (2026-11-05) |
+| Deploy build | 819 files, 46.10 MiB; install list (precache) 336 files, 3.90 MiB (version c71cea74e07b); 2026-11-05. A build only: nothing is deployed | `node tools/deploy/build_site.mjs` | yes (2026-11-05) |
+| Deploy check | 46 of 46 pass, 7 warnings (origins named in code), against the 2026-11-05 `dist/` | `node tools/deploy/check-deploy.mjs --root dist` | yes (2026-11-05) |
 
 ## Tests
 

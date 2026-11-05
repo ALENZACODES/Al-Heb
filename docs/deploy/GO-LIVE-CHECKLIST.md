@@ -3,7 +3,7 @@
 Nothing here has been done yet. Background and limits are in `docs/deploy/CLOUDFLARE-PAGES.md`. The local build and check were run on 2026-11-04 (`node tools/deploy/build_site.mjs` then `node tools/deploy/check-deploy.mjs --root dist`: 44 of 44 checks passed, 6 warnings about origins named in code, which are expected).
 
 ## Before you start (1 minute)
-1. The repository on GitHub is `ALENZACODES/Al-Heb` (private). Make sure the code you want live is pushed. The local checkout is on `master`; GitHub's recent runs used `main`. Use whichever branch you actually push, and enter that same name in step 6.
+1. The repository on GitHub is `ALENZACODES/Al-Heb` (private). Make sure the code you want live is pushed. The default branch is `main`. Push to `main`, and enter `main` in step 6.
 2. Optional local dry run: `node tools/deploy/build_site.mjs && node tools/deploy/check-deploy.mjs --root dist`. Every line must say PASS.
 
 ## Steps
@@ -16,7 +16,7 @@ Nothing here has been done yet. Background and limits are in `docs/deploy/CLOUDF
    - Build command: `node tools/deploy/build_site.mjs`
    - Build output directory: `dist`
    - Root directory (advanced): leave empty
-6. Production branch: type your branch (`main` or `master`).
+6. Production branch: type `main`.
 7. Environment variables (optional): `NODE_VERSION` = `22`. Nothing else is needed; there are no dependencies to install.
 8. Click **Save and Deploy**. Watch the log. It should end with "precache check: all N URLs exist in dist". If it prints "OVER A CLOUDFLARE PAGES LIMIT" or "MISSING from dist", the build fails on purpose; send me the log.
 9. Headers: nothing to configure. The file `_headers` in the repo is copied into `dist/` by the build and Cloudflare applies it automatically (CSP, nosniff, cache rules, MIME). Do not add a `_headers` rule in the dashboard.

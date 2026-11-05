@@ -7,7 +7,7 @@ name: pages
 # The unit tests run in ci.yml, not here, so a test failure cannot block a deploy and is not reported twice.
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read

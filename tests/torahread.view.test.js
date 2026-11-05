@@ -86,7 +86,7 @@ test('words section: 30 cards, covered until tapped; trope + sources sections re
   await btn(root, /Trope: not taught/).click();
   assert.match(root.textContent, /not taught here/i); assert.match(root.textContent, /cantor/);
   await btn(root, /^Sources$/).click();
-  assert.match(root.textContent, /Leningrad Codex/); assert.match(root.textContent, /Public Domain/); assert.match(root.textContent, /CC-BY/);
+  assert.match(root.textContent, /Leningrad Codex/); assert.match(root.textContent, /Public Domain/); assert.match(root.textContent, /CC BY-SA/);
 });
 
 test('section can be chosen by route param', async () => {

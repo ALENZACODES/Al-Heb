@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -111,7 +112,7 @@ test('every rule is classified with a reason; synthetic scan and report work, fi
 });
 
 test('baseline: no NEW definite errors in data/ (style findings never fail)', () => {
-  const root = new URL('../', import.meta.url).pathname;
+  const root = fileURLToPath(new URL('../', import.meta.url));
   const base = JSON.parse(fs.readFileSync(new URL('../tools/hebrew-lint/baseline.json', import.meta.url), 'utf8'));
   const known = new Map(); for (const f of base.definiteFingerprints) known.set(f, (known.get(f) || 0) + 1);
   const res = scanDir(path.join(root, 'data'), root);

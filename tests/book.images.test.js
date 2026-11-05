@@ -92,7 +92,9 @@ test('every row: pending status, prompt contains no-text rule, refs point at man
 test('manifest.csv has one line per row plus header, same order', () => {
   const lines = readFileSync(new URL('../data/images/manifest.csv', import.meta.url), 'utf8').trim().split('\n');
   assert.match(lines[0], /^file,set,command,block/);
-  assert.equal(lines.filter((l) => /^[A-Za-z0-9_]+\.png,/.test(l)).length, rows.length);
+  const names = lines.filter((l) => /^[A-Za-z0-9_]+\.png,/.test(l)).map(l => l.split(',')[0]);
+  assert.equal(new Set(names).size, names.length);
+  assert.deepEqual(names.slice(0, rows.length), rows.map(r => r.file));
 });
 test('placeholder exists for every manifest row', () => {
   for (const r of rows) assert.ok(existsSync(new URL(`../assets/img/placeholders/${r.file.replace(/\.png$/, '.svg')}`, import.meta.url)), r.file);

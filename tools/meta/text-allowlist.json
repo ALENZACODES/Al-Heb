@@ -67,7 +67,7 @@
     },
     {
       "path": "tests/curriculum.intermediate.test.js",
-      "reason": "Test guarding against machine-specific paths (/home/claude)."
+      "reason": "Test guarding against machine-specific paths (/home/assistant)."
     },
     {
       "path": "tools/youtube/fetch-slow.py",

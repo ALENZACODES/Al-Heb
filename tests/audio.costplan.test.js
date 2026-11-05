@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -8,7 +9,7 @@ import * as azure from '../tools/audio/tts/azure.mjs';
 import * as google from '../tools/audio/tts/google.mjs';
 import * as eleven from '../tools/audio/tts/elevenlabs.mjs';
 
-const R = new URL('..', import.meta.url).pathname;
+const R = fileURLToPath(new URL('..', import.meta.url));
 const { manifest, prices, vocab } = load(R);
 
 test('price file: every row has source + evidence + verified flag; unverified items are listed, not hidden', () => {

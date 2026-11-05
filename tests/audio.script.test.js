@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import { test } from 'node:test';
 import { loadManifestFull } from '../tools/audio/manifest_io.mjs';
 import assert from 'node:assert/strict';
@@ -7,7 +8,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { renderMarkdown, renderCsv, TAKES } from '../tools/audio/recording_script.mjs';
 
-const R = new URL('..', import.meta.url).pathname;
+const R = fileURLToPath(new URL('..', import.meta.url));
 const manifest = loadManifestFull(R);
 
 test('script paths match manifest paths exactly', () => {

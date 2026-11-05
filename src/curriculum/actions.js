@@ -1,17 +1,12 @@
 /** Store-backed learning actions shared by the Lane 1 views and the home screen. */
 import { storeGet, storeSet, PROGRESS_KEY, CARDS_KEY, STREAK_KEY } from "./dom.js";
-import { ensureCards, recordActivity, currentStreak, applyOutcomesToCards, syllableCardId, lineCardId, genderCardId } from "./progress.js";
+import { ensureCards, recordActivity, applyOutcomesToCards, syllableCardId, lineCardId, genderCardId } from "./progress.js";
 import { review, newCard } from "./srs.js";
 import { nextScaffold, SCAFFOLD_KEY } from "./scaffold.js";
 import { nextFadeLevel } from "./fade.js";
 
-export async function loadState(ctx, now = Date.now()) {
-  const progress = await storeGet(ctx, PROGRESS_KEY, { completed: {} });
-  const cards = await storeGet(ctx, CARDS_KEY, {});
-  const streak = await storeGet(ctx, STREAK_KEY, null);
-  const normCards = Array.isArray(cards) ? Object.fromEntries(cards.filter((c) => c?.id).map((c) => [c.id, c])) : cards;
-  return { completed: progress.completed || {}, cards: normCards, streak: currentStreak(streak, now), rawStreak: streak };
-}
+import { loadState } from "./state.js";
+export { loadState } from "./state.js";
 
 /** Mark a lesson complete, create its SRS cards, count today as active. Idempotent for cards. */
 export async function completeLesson(ctx, lesson, now = Date.now()) {

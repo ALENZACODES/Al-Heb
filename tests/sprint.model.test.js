@@ -12,8 +12,10 @@ const dests = M.buildDestinations(index, registry, scenarios);
 const seeded = (seed = 7) => () => { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; };
 const translit = (e) => (e.pointed ? e.pointed.length + ":" + e.id : "");
 
-test("all five thousand entries load from the four packs in rank order", () => {
-  assert.equal(entries.length, 5000);
+test("all eligible entries load from the four packs in rank order, excluding hidden records", async () => {
+  const { readFile } = await import('node:fs/promises');
+  const all = JSON.parse(await readFile(new URL('../data/vocab/vocab5000.json', import.meta.url), 'utf8')).entries;
+  assert.deepEqual(new Set(entries.map(e => e.id)), new Set(all.filter(e => !e.hidden && !e.flags?.hidden).map(e => e.id)));
   assert.ok(entries.every((e, i) => i === 0 || entries[i - 1].rank <= e.rank));
 });
 

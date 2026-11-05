@@ -4,7 +4,7 @@
  "note": "Deterministic, safe corrections to data/vocab/words.json, applied by tools/vocab/apply_corrections.mjs. Each entry: id, field, old, new, reason. Judgement calls are NOT here: see docs/vocab/JUDGEMENT.md.",
  "counts": {
   "removed": 2,
-  "translit": 165,
+  "translit": 166,
   "forms": 1,
   "glosses": 20,
   "hidden": 2,
@@ -1861,6 +1861,13 @@
    "old": "uvekhal",
    "new": "uvekhol",
    "reason": "V0-CONTENT-CHECK X2: kamatz after conjunctive vav plus prefix before כָּל is kamatz katan (V'ahavta reading); engine rule extended in src/pronunciation/kamatz-katan.js. Needs native review."
+  },
+  {
+   "id": "p526c2f8a",
+   "field": "translit",
+   "old": "kadesho",
+   "new": "kodsho",
+   "reason": "Regenerate the transliteration from the existing pointed Hebrew using the shared siddur scheme; keep the record unreviewed."
   }
  ]
 }

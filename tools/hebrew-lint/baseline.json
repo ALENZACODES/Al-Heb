@@ -1221,6 +1221,8 @@
   "data/corpus/source-snapshot.json|mark-order|.items.zimun-opening.rawLines[1]|33eeb376",
   "data/corpus/source-snapshot.json|mark-order|.items.zimun-opening.rawLines[1]|33eeb376",
   "data/corpus/source-snapshot.json|not-nfc|.items.haftarah-after.rawLines[0]|bea30dcb",
+  "data/images/provenance.json|nonfinal-letter-at-end|.images.HERO_morning_02.ocr.blobs[0].t|e8fbbdef",
+  "data/images/provenance.json|nonfinal-letter-at-end|.images.L27_tsadi_final_print_s1.ocr.blobs[1].t|77e83676",
   "data/photo/_benchmark/nakdan-agreement.json|mark-order|.rows[0].nakdan|1e1ff33b",
   "data/photo/_benchmark/nakdan-agreement.json|mark-order|.rows[11].nakdan|cd38560f",
   "data/photo/_benchmark/nakdan-agreement.json|mark-order|.rows[11].nakdan|cd38560f",

@@ -40,7 +40,7 @@ export function mount(root, ctx) {
   // Lane 1 data (fetch-based loaders; modules shared with the Learn screen). Best effort: a missing module leaves the placeholder.
   // The Today card only reads other modules' stores (curriculum progress, SRS cards, streak, firstday.progress, onboarding.v1, placement.v1).
   (async () => {
-    const [cur, act, srs] = await Promise.all([tryImport(['../curriculum/lessons.js']), tryImport(['../curriculum/actions.js']), tryImport(['../curriculum/srs.js'])]);
+    const [cur, act, srs] = await Promise.all([tryImport(['../curriculum/lessons.js']), tryImport(['../curriculum/state.js']), tryImport(['../curriculum/srs.js'])]);
     if (!alive || !cur?.lessons?.length || !act?.loadState) return;
     const st = await act.loadState(ctx);
     const get = async (k) => { try { const v = await store.get(k); return v ?? null; } catch { return null; } };

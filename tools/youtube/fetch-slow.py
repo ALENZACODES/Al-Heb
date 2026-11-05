@@ -4,7 +4,7 @@ On HTTP 429 or bot check: exponential back-off (5, 10, 20, 40 min, capped), and 
 Gives up after --max-block consecutive blocked attempts or --budget-min minutes in total and says so. Log: research_notes/youtube/fetch4.json
 Usage: python3 fetch-slow.py [--max-block 3] [--budget-min 25] [--limit N]"""
 import json, os, glob, subprocess, time, random, sys
-R = '/home/claude/research_notes/youtube/'
+R = os.path.join(os.environ.get('ALEF_RESEARCH_DIR', 'research_notes'), 'youtube', '')
 top = json.load(open(R + 'top100.json'))
 LOG = R + 'fetch4.json'
 log = json.load(open(LOG)) if os.path.exists(LOG) else {}

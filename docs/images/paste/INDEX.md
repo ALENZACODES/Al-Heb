@@ -1,13 +1,11 @@
 # Paste file index
 
-282 images are already done (rows 1-282 of manifest.csv, matched in docs/images/codex-batch-01.json). The next command to paste is **36** (Fe sofit print set (partial: rows 2-10 remaining)), file `cmd-036.txt`.
+Ingested images are excluded using data/images/provenance.json. The next command to paste is **38** (Alef cursive set), file `cmd-038.txt`.
 
-117 files, 1000 images. Files over 12000 characters are split into -a/-b parts (paste in order): cmd-101-a.txt, cmd-101-b.txt, cmd-101-c.txt, cmd-101-d.txt.
+115 files, 981 images. Files over 12000 characters are split into -a/-b parts (paste in order): cmd-101-a.txt, cmd-101-b.txt, cmd-101-c.txt, cmd-101-d.txt.
 
 | Cmd | Title | Images | File |
 |---|---|---|---|
-| 36 | Fe sofit print set (partial: rows 2-10 remaining) | 9 | `cmd-036.txt` |
-| 37 | Tsadi sofit print set | 10 | `cmd-037.txt` |
 | 38 | Alef cursive set | 6 | `cmd-038.txt` |
 | 39 | Bet / Vet cursive set | 6 | `cmd-039.txt` |
 | 40 | Gimel cursive set | 6 | `cmd-040.txt` |

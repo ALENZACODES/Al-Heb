@@ -1,6 +1,6 @@
 // ALEF Service screen: (1) Siddur Coverage % per service, (2) Follow the service, page-turn cards.
 // mount(root, ctx) -> unmount. ctx: { store, settings?, audio?, query? }. Offline; reads only repo data files.
-import { h, heSpan } from '../shell/ui.js';
+import { h, heSpan, audioButton } from '../shell/ui.js';
 import { loadCorpus } from '../corpus/corpus.js';
 import { loadProgressData } from '../progress/data.js';
 import { readSnapshot, readableNow } from '../progress/model.js';
@@ -101,6 +101,7 @@ export async function mount(root, ctx) {
     const toggle = h('button', { type: 'button', class: 'btn secondary', id: 'sv-toggle-tr', 'aria-pressed': st.showTr ? 'false' : 'true', onclick: () => { st.showTr = !st.showTr; save(); render('sv-toggle-tr'); } }, st.showTr ? 'Hide transliteration' : 'Show transliteration');
 
     const clip = clipFor(ctx.audio, c, st.tradition);
+    const playKind = c.he.length > 1 ? 'prayer' : 'line';
     const marks = c.markerKnown
       ? h('div', { class: 'sv-marks' }, ...c.markers.map((m) => h('p', { class: 'small' }, h('span', { class: 'sv-mark', 'data-kind': m.kind }, MARKER_LABELS[m.kind]), `Torah service guide: "${m.quote}"`)))
       : h('p', { class: 'small muted sv-varies' }, VARIES);
@@ -116,7 +117,7 @@ export async function mount(root, ctx) {
       h('p', { class: 'sv-en' }, c.en.join(' ')),
       c.englishSource ? h('p', { class: 'small muted' }, `English: ${c.englishSource}`) : null,
       marks,
-      clip ? h('button', { type: 'button', class: 'btn secondary', id: 'sv-play', onclick: () => { Promise.resolve(ctx.audio.play(clip.kind, clip.id, { tradition: st.tradition })).catch(() => {}); } }, 'Play') : null);
+      audioButton(h, ctx, { kind: clip ? clip.kind : playKind, id: clip ? clip.id : c.id, tradition: st.tradition, text: c.he.join(' '), label: 'Play', buttonId: 'sv-play' }));
 
     const nav = h('div', { class: 'sv-row' },
       h('button', { type: 'button', class: 'btn secondary', id: 'sv-prev', disabled: st.i === 0 ? true : null, onclick: () => go(-1) }, 'Previous'),

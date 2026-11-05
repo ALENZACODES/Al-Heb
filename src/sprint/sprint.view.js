@@ -19,6 +19,7 @@ const noClock = (ctx) => calmOn(ctx) || untimedOn(ctx);
 import { loadAllVocab, loadRegistry, loadScenarios } from './loader.js';
 import { VOCAB_CARDS_KEY, LAST_KEY, TOP, buildIndex, buildDestinations, buildQueue, buildQuestion, applyAnswer, knownCount, isKnown, cardId, createTimer, clockText } from './model.js';
 import { isAudioFree } from '../shell/audiofree.js';
+import { audioButton } from '../shell/audio-access.js';
 
 export const UNVERIFIED = 'Unverified vocabulary: the word list was built by a program from Wiktionary and subtitle counts. No Hebrew teacher has checked it, so a gloss or vowel point may be wrong.';
 const TRAD = { israeli: 1, sephardi: 1, ashkenazi: 1 };
@@ -48,7 +49,6 @@ export function mount(root, ctx) {
   const rng = ctx?.rng || Math.random;
   const tradition = () => { const c = ctx?.settings?.get?.('congregation'); return TRAD[c] ? c : 'sephardi'; };
   const translit = (e) => { if (!e.pointed) return ''; try { return transliterate(e.pointed, { scheme: 'siddur', tradition: tradition() }); } catch { return ''; } };
-  const audioHas = (e) => { try { return !!ctx?.audio?.has?.('word', e.id); } catch { return false; } };
 
   const wrap = el('section', { class: 'alef-sprint', 'aria-labelledby': 'view-title' });
   const h1 = el('h1', { id: 'view-title', tabindex: '-1' }, 'Word Sprint');
@@ -142,9 +142,7 @@ export function mount(root, ctx) {
     const heNode = el('div', { class: 'sp-he' }, heText(entry.pointed));
     let audioNode = null;
     if (hear && !isAudioFree(ctx)) {
-      audioNode = audioHas(entry)
-        ? el('button', { type: 'button', class: 'btn secondary', 'aria-label': `Listen to this word`, onclick: async () => { try { await ctx.audio.play('word', entry.id); } catch { say('The audio could not play.'); } } }, 'Listen')
-        : el('p', { class: 'muted' }, 'No audio yet for this word.');
+      audioNode = audioButton(el, ctx, { kind: 'word', id: entry.id, text: String(entry.pointed || '').replace(/־/g, ' '), label: 'Listen' });
     }
     const area = el('div', { class: 'sp-opts', role: 'group', 'aria-label': 'Answers' });
     const next = el('button', { type: 'button', class: 'btn', id: 'sprint-next', onclick: advance }, 'Next word');

@@ -148,6 +148,15 @@ for (const [name, mount] of Object.entries(VIEWS)) {
     assert.doesNotMatch(root.textContent, /no audio yet/i);
     un();
   });
+  if (name === 'niqquddial' || name === 'dottile') test(`${name}: with only a device voice the shared button is offered, labelled as a device voice, and plays`, async () => {
+    const root = newRoot(); const { ctx, played } = makeCtx({ audio: { status: () => ({ source: 'tts-fallback' }), play: (k, id) => { played.push([k, id]); return Promise.resolve({ source: 'tts-fallback' }); } } });
+    const un = mount(root, ctx); await loaded(root);
+    const dev = all(root, (e) => e.tagName === 'BUTTON' && e.getAttribute('data-audio-state') === 'device');
+    assert.ok(dev.length > 0); assert.match(dev[0].getAttribute('aria-label'), /Device voice, not a recorded teacher; Israeli-style only/);
+    assert.doesNotMatch(root.textContent, /no audio yet/i);
+    click(dev[0]); await tick(); assert.equal(played.length, 1);
+    un();
+  });
   test(`${name}: follows the congregation setting`, async () => {
     const root = newRoot(); const { ctx } = makeCtx(); const un = mount(root, ctx); await loaded(root);
     const ash = all(root, (e) => e.tagName === 'INPUT' && e.getAttribute('value') === 'ashkenazi')[0];

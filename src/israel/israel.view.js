@@ -10,9 +10,10 @@
  */
 import { learnerGender, setLearnerGenderSetting } from "../shell/settings.js";
 import { el, heText, replaceKeepingFocus, storeGet, storeSet } from "../curriculum/dom.js";
-import { loadIsrael, validate, formFor, audioHook, lineAudioId, pickScenarios, orderedOptions, gradePick, scoreSession,
+import { loadIsrael, validate, formFor, lineAudioId, pickScenarios, orderedOptions, gradePick, scoreSession,
   applyResults, dueCount, CARDS_KEY, STATS_KEY } from "./model.js";
 import { injectStyle } from "./style.js";
+import { audioButton } from "../shell/audio-access.js";
 
 const SECTIONS = [
   ["ladder", "Register ladder"], ["fillers", "Fillers"], ["giveaways", "Gives you away"], ["say", "Say it"], ["etiquette", "Etiquette"],
@@ -26,12 +27,9 @@ export const DRAFT = "Draft written from general knowledge. No native Hebrew spe
 export const NO_AUDIO = "There is no audio for any of this yet. Capitals in the transliteration mark the stressed syllable.";
 
 const badge = (c) => el("span", { class: "il-badge" + (c === "low" ? " il-low" : ""), title: "Confidence of the author, not a review result" }, `Confidence: ${c}${c === "low" ? " (verify before use)" : ""}`);
-const noAudio = (ctx, id, voice) => {
-  const a = audioHook(ctx, id, voice);
-  return a.available
-    ? el("button", { type: "button", class: "btn secondary", onclick: () => ctx.audio.play("line", id, { voice }).catch(() => {}) }, "Play")
-    : el("span", { class: "il-noaudio" }, a.label);
-};
+const noAudio = (ctx, id, voice, text) => audioButton(el, ctx, { kind: "line", id, voice, text, label: "Play", noneClass: "il-noaudio" });
+/** The pointed Hebrew the screen shows for a line; when both gendered forms are shown, the one matching the voice setting. */
+const lineText = (forms, voice) => { const hit = forms.find(([w]) => w && w === WHO[voice]) || forms[0]; return hit ? hit[1].he : ""; };
 const seg = (label, value, set, items) => {
   const btns = items.map(([v, t]) => el("button", { type: "button", "aria-pressed": String(v === value()), "data-v": v,
     onclick: () => { set(v); btns.forEach((b) => b.setAttribute("aria-pressed", String(b.getAttribute("data-v") === value()))); } }, t));
@@ -75,7 +73,7 @@ export function mount(root, ctx = {}) {
       return el("div", { class: "il-line", "data-register": l.register, "data-side": label.toLowerCase() },
         el("div", {}, el("span", { class: "il-label" }, label), " ", el("span", { class: "il-badge" }, REG[l.register]),
           l.gender !== "none" ? el("span", { class: "il-badge" }, l.gender === "speaker" ? (forms.length > 1 ? "Forms for a man or a woman speaking" : `Form for ${WHO[who]} speaking`) : `Form for talking to ${WHO[who]}`) : null),
-        ...forms.flatMap(([w, f]) => [w ? el("div", { class: "muted" }, `If you are ${w}:`) : null, heText(f.he, "alef-he il-he"), el("div", { class: "il-tr" }, f.translit)]), el("div", {}, l.en), noAudio(ctx, id, prefs.voice));
+        ...forms.flatMap(([w, f]) => [w ? el("div", { class: "muted" }, `If you are ${w}:`) : null, heText(f.he, "alef-he il-he"), el("div", { class: "il-tr" }, f.translit)]), el("div", {}, l.en), noAudio(ctx, id, prefs.voice, lineText(forms, prefs.voice)));
     };
 
     // ------------------------------------------------------------ overview
@@ -124,7 +122,7 @@ export function mount(root, ctx = {}) {
           el("p", {}, f.en), el("p", { class: "muted" }, f.usage),
           el("div", { class: "il-line", "data-register": f.register }, heText(f.example.he, "alef-he il-he"), el("div", { class: "il-tr" }, f.example.translit), el("div", {}, f.example.en)),
           el("p", {}, f.note), f.confidence !== "high" ? el("p", { class: "muted" }, "Why not high: " + f.confidenceReason) : null,
-          noAudio(ctx, lineAudioId(f.id), prefs.voice)))));
+          noAudio(ctx, lineAudioId(f.id), prefs.voice, f.he)))));
       show();
     }
 

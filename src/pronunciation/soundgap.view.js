@@ -6,12 +6,13 @@
 //
 // Same ctx contract as sounds.view.js. Extra assumptions:
 //   - ctx.soundgapData (optional) = { soundgap, prayerwords } parsed JSON, used by tests; otherwise fetched.
-//   - Play buttons are shown only when ctx.audio.has('word', id) is true. No recordings for these ids exist
+//   - Play buttons are the shared audio button: a file button when a clip exists, a labelled device-voice button when only a he-IL voice does, otherwise a one-line No audio yet. No recordings for these ids exist
 //     yet, so today the view shows a "no audio yet" note instead of a button that would do nothing.
 //   - The data is flagged proofread:false; the view shows that badge.
 
 import { normalizeTradition, TRADITION_LABELS, TRADITIONS } from './sounds.model.js';
 import { setCongregation } from './forTradition.js';
+import { audioButton as sharedAudioButton } from '../shell/audio-access.js';
 
 /** @param {typeof fetch} [fetchImpl] */
 export async function loadSoundgapData(fetchImpl = globalThis.fetch) {
@@ -111,16 +112,13 @@ export function mount(root, ctx = {}) {
     else if (typeof s.addEventListener === 'function') { s.addEventListener('change', cb); cleanups.push(() => s.removeEventListener?.('change', cb)); }
   }
 
-  const audioButton = (label, id) => {
-    let can = false;
-    try { can = !!ctx.audio?.has?.('word', id); } catch { can = false; }
-    if (!can) return h('small', {}, ' (no audio yet)');
-    const btn = h('button', { type: 'button', 'aria-label': `Play ${label}` }, 'Play');
-    const on = () => { try { ctx.audio.play('word', id); } catch { /* best effort */ } };
-    btn.addEventListener('click', on);
-    cleanups.push(() => btn.removeEventListener('click', on));
-    return btn;
+  const hOn = (tag, attrs = {}, ...kids) => {
+    const { onclick, ...rest } = attrs; const el = h(tag, rest, ...kids);
+    if (typeof onclick === 'function') { el.addEventListener('click', onclick); cleanups.push(() => el.removeEventListener('click', onclick)); }
+    return el;
   };
+  // Shared audio button (src/shell/audio-access.js): file, device voice (Israeli-style only), or one line "No audio yet".
+  const audioButton = (label, id, text) => sharedAudioButton(hOn, ctx, { kind: 'word', id, label: 'Play', name: label, text });
 
   const build = ({ soundgap, prayerwords }) => {
     wrap.replaceChildren(h('h2', { id: 'alef-soundgap-title' }, tr('soundgap.title', 'Sound-gap lab')));
@@ -153,8 +151,8 @@ export function mount(root, ctx = {}) {
           else if (p.kind === 'alternation') verdict = 'same root, letter changes sound';
           else verdict = 'different sounds';
           pbody.append(h('tr', {},
-            h('td', {}, he(p.a.he), ' ', p.a.translit, ' (', p.a.gloss, ') ', audioButton(`${p.a.translit}`, pairAudioId(gap.id, i, 'a'))),
-            h('td', {}, he(p.b.he), ' ', p.b.translit, ' (', p.b.gloss, ') ', audioButton(`${p.b.translit}`, pairAudioId(gap.id, i, 'b'))),
+            h('td', {}, he(p.a.he), ' ', p.a.translit, ' (', p.a.gloss, ') ', audioButton(`${p.a.translit}`, pairAudioId(gap.id, i, 'a'), p.a.he)),
+            h('td', {}, he(p.b.he), ' ', p.b.translit, ' (', p.b.gloss, ') ', audioButton(`${p.b.translit}`, pairAudioId(gap.id, i, 'b'), p.b.he)),
             h('td', {}, verdict, p.note ? h('small', {}, ' - ', p.note) : '')));
         });
       };

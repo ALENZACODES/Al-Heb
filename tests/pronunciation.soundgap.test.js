@@ -117,6 +117,7 @@ class El extends N {
   removeEventListener(t, f) { this.listeners[t]?.delete(f); }
   dispatch(t) { for (const f of [...(this.listeners[t] ?? [])]) f({ target: this }); }
   get textContent() { return this.children.map((c) => c.textContent).join(''); }
+  set textContent(v) { this.children = [new T(String(v))]; }
 }
 class Doc { createElement(t) { return new El(t, this); } createTextNode(s) { return new T(s); } }
 const all = (n, pred, r = []) => { if (n.nodeType === 1 && pred(n)) r.push(n); for (const c of n.children ?? []) all(c, pred, r); return r; };
@@ -129,7 +130,7 @@ test('view renders every gap, shows not-proofread badge, no audio buttons when a
   assert.equal(all(root, (e) => e.tagName === 'DETAILS').length, 8);
   assert.match(root.textContent, /not proofread/);
   assert.equal(all(root, (e) => e.tagName === 'BUTTON').length, 0);
-  assert.match(root.textContent, /no audio yet/);
+  assert.match(root.textContent, /no audio yet/i);
   for (const e of all(root, (e) => e.attrs.lang === 'he')) assert.equal(e.attrs.dir, 'rtl');
   assert.match(root.textContent, /Ten prayer words/);
   un();
@@ -173,4 +174,17 @@ test('model helpers', () => {
   assert.equal(gapNoteFor(g, 'ashkenazi').americanText, '');
   assert.equal(pairHeardIn(g.pairs[4], 'israeli'), false);
   assert.equal(pairHeardIn(g.pairs[4], 'sephardi'), true);
+});
+
+test('view: with only a device voice, play buttons are labelled as a device voice and receive the shown Hebrew', async () => {
+  const calls = [];
+  const audio = { status: () => ({ source: 'tts-fallback' }), play: async (k, id, o) => { calls.push([k, id, o && o.text]); return { source: 'tts-fallback' }; } };
+  const root = new El('div', new Doc());
+  const un = mount(root, { settings: { congregation: 'israeli' }, audio, soundgapData: { soundgap, prayerwords } });
+  await waitFor(() => /said the same here/.test(root.textContent), { message: 'soundgap rendered' });
+  const b = all(root, (e) => e.tagName === 'BUTTON')[0];
+  assert.equal(b.attrs['data-audio-state'], 'device'); assert.match(b.attrs['aria-label'], /Device voice, not a recorded teacher; Israeli-style only/);
+  b.dispatch('click'); await new Promise((r) => setTimeout(r, 10));
+  assert.equal(calls.length, 1); assert.ok(inBlock(calls[0][2].replace(/[\s'"]/g, '')));
+  un();
 });

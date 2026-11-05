@@ -44,8 +44,20 @@ test("audio hook: a play button appears only when the player reports a file", as
   const root = new Node_("div"); let played = null;
   const audio = { status: (k, id) => ({ source: id === "il-lad-hello-textbook" ? "file" : "none" }), play: async (k, id) => { played = id; } };
   const un = mount(root, { store: memStore(), audio, query: { sec: "ladder" }, settings: {} }); await ready(root);
-  const plays = root.find((n) => n.tag === "button" && n.text === "Play");
+  const plays = root.find((n) => n.tag === "button" && /Play$/.test(n.text));
   assert.equal(plays.length, 1); await plays[0].click(); assert.equal(played, "il-lad-hello-textbook"); un();
+});
+
+test("device voice: with no clip but a he-IL voice, a line gets a device-labelled button that speaks the shown Hebrew", async () => {
+  const { createAudio } = await import("../src/audio/player.js");
+  class Utt { constructor(t) { this.text = t; } }
+  const said = []; const speech = { getVoices: () => [{ lang: "he-IL" }], speak(u) { said.push(u.text); queueMicrotask(() => u.onend?.()); }, cancel() {} };
+  const audio = createAudio({ settings: { voice: "m", congregation: "israeli" }, manifest: [], AudioCtor: class {}, speech, UtteranceCtor: Utt });
+  const root = new Node_("div"); const un = mount(root, { store: memStore(), audio, query: { sec: "ladder" }, settings: {} }); await ready(root);
+  const plays = root.find((n) => n.tag === "button" && /Play$/.test(n.text));
+  assert.ok(plays.length >= 100); assert.match(plays[0].attrs["aria-label"], /Device voice, not a recorded teacher; Israeli-style only/);
+  assert.ok(!/sephardi|ashkenazi/i.test(plays[0].attrs["aria-label"]));
+  await plays[0].click(); assert.equal(said.length, 1); assert.match(said[0], /[\u05d0-\u05ea]/); un();
 });
 
 test("ladder: gender controls switch the displayed form", async () => {

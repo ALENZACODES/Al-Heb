@@ -5,11 +5,12 @@
 import { el, heText } from "../curriculum/dom.js";
 import { streakVisible } from "../shell/comfort.js";
 import { createMorningModel } from "./model.js";
-import { verseFor, modehAniFor, modehAniClip, checkVerses, VERSES_URL } from "./verses.js";
+import { verseFor, modehAniFor, MODEH_ANI_ID, checkVerses, VERSES_URL } from "./verses.js";
 import { morningItems, TITLE } from "./plan.js";
 import { uiEnglish } from "../shell/names.js";
 import { notificationSupport, requestNotificationPermission, scheduleLocalNotifications } from "../curriculum/reminders.notify.js";
 import { clock } from "../curriculum/streak.js";
+import { audioButton } from "../shell/audio-access.js";
 
 export const MORNING_CSS = `
 .mrn { display: grid; gap: 1rem; } .mrn * { min-inline-size: 0; overflow-wrap: anywhere; }
@@ -72,7 +73,7 @@ export async function mount(root, ctx) {
   const render = () => {
     const prefs = model.prefs(), voice = ctx.settings && ctx.settings.get ? ctx.settings.get("voice") : "m";
     const v = verses.length ? verseFor(verses, now()) : null;
-    const modeh = modehAniFor(registry, voice), clip = modeh && modehAniClip(ctx.audio);
+    const modeh = modehAniFor(registry, voice);
     const settings = settingsForm(model, ctx, () => { schedule(); render(); });
     wrap.replaceChildren(
       el("p", { class: "mrn-flag", role: "note" }, "Draft wording and layout; final text to be approved."),
@@ -80,7 +81,7 @@ export async function mount(root, ctx) {
         : el("section", {}, el("p", {}, problem ? "Today's verse is unavailable right now." : "Loading...")),
       modeh ? el("section", { "aria-labelledby": "mrn-mh" }, el("h2", { id: "mrn-mh" }, "Modeh Ani"), heText(modeh.he, "mrn-he"), translitLine(translit, modeh.he, ctx), el("p", {}, modeh.english),
         modeh.needsCheck ? el("p", { class: "mrn-flag" }, "The feminine form is derived and not yet checked by a Hebrew educator.") : null,
-        clip ? el("button", { type: "button", class: "btn", onclick: () => ctx.audio.play("line", "modeh-ani-1") }, "Play") : null) : null,
+        audioButton(el, ctx, { kind: "line", id: MODEH_ANI_ID, text: modeh.he, label: "Play", class: "btn alef-play" })) : null,
       streakVisible(ctx) ? el("section", { "aria-labelledby": "mrn-sh" }, el("h2", { id: "mrn-sh" }, "Your streak"), streakPanel(model)) : null,
       settings);
     model.markSeen();

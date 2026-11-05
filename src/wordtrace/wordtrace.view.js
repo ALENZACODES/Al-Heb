@@ -5,6 +5,7 @@
 // @ts-check
 import { createTracer, MODES } from '../letters/trace.js';
 import { sourcesLine } from '../shell/sources.js';
+import { audioButton } from '../shell/audio-access.js';
 import { createProgress } from '../letters/progress.js';
 import { cellsOf } from '../curriculum/hebrew.js';
 import { LEVELS, eligibleWords, knownLetters, pickNext, suggestLevel, FINAL_OF } from './bank.js';
@@ -217,7 +218,7 @@ export function mount(root, ctx = {}) {
     const nodes = [
       ...header(),
       h('div', { class: 'row' }, h('button', { 'data-act': 'back', onclick: () => renderPick() }, t('wt.back', 'Back to words')),
-        S.word.audio && ctx.audio && ctx.audio.has && ctx.audio.has('word', S.word.audio) ? h('button', { 'data-act': 'listen', onclick: () => playWord() }, t('wt.listen', 'Hear the word')) : null),
+        S.word.audio ? audioButton(h, ctx, { kind: 'word', id: S.word.audio, text: S.word.he, label: t('wt.listen', 'Hear the word'), class: 'alef-play' }) : null),
       h('div', { class: 'target', dir: 'rtl', lang: 'he', 'data-role': 'target' }, w.he),
       h('p', { 'data-role': 'round' }, `${t('wt.round', 'Round')} ${roundNo}: `, h('strong', {}, t('wt.guide.' + guide, { solid: 'solid guide', dotted: 'dotted guide', blank: 'no guide' }[guide])), ` (${GUIDES.indexOf(guide) + 1} / ${GUIDES.length}). ${w.en ? w.en + '.' : ''}`),
       h('p', { class: 'muted' }, S.mode === 'step' ? t('wt.stepHelp', 'Press "Next stroke" to have each stroke drawn for you in order. Drawing practice is not checked in this mode.') : t('wt.drawHelp', 'Trace the letters from the right, one after another. The orange border shows the letter to trace.')),
@@ -235,7 +236,7 @@ export function mount(root, ctx = {}) {
     set(nodes, { keep: true });
   }
 
-  function playWord() { try { const p = ctx.audio && ctx.audio.play && ctx.audio.play('word', S.word.audio); if (p && p.catch) p.catch(() => {}); } catch (e) { /* optional */ } }
+  function playWord() { try { const p = ctx.audio && ctx.audio.play && ctx.audio.play('word', S.word.audio, { text: S.word.he }); if (p && p.catch) p.catch(() => {}); } catch (e) { /* optional */ } }
 
   function stepStroke(cellEls) {
     const tr = tracers[S.activeCell]; if (!tr) return;

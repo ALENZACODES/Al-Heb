@@ -18,7 +18,7 @@ const traced = (...ids) => ({ 'letters.progress': Object.fromEntries(ids.map(id 
 async function open(opts = {}) {
   const root = newRoot(doc); const store = opts.store || mkStore(traced('alef', 'bet'));
   const played = [];
-  const ctx = { store, t: k => k, letters, wordtrace: bank, query: opts.query || {}, settings: { script: opts.script || 'print' }, audio: { has: () => false, play: (k, id) => played.push([k, id]) } };
+  const ctx = { store, t: k => k, letters, wordtrace: bank, query: opts.query || {}, settings: { script: opts.script || 'print' }, audio: opts.audio || { has: () => false, play: (k, id) => played.push([k, id]) } };
   const unmount = mount(root, ctx);
   await waitFor(() => root.children.length > 0 && !/Loading words/.test(root.textContent), { message: "word trace view finished loading" });
   return { root, store, unmount, played };
@@ -29,6 +29,21 @@ const cells = (root) => all(strip(root), n => n.getAttribute('data-index') !== n
 const svgOf = (cell) => all(cell, n => n.tagName === 'svg')[0];
 function traceCell(cell, id, script = 'print') { for (const s of byId[id][script].strokes) drag(svgOf(cell), s.median); }
 const txt = (n) => n.textContent;
+
+test('hear-the-word uses the shared audio button: file clip plays, device voice is labelled, no voice says No audio yet', async () => {
+  const calls = [];
+  const mkAudio = (src) => ({ status: () => ({ source: src, reason: 'x' }), play: async (k, id, o) => { calls.push([k, id, o && o.text]); return { source: src }; } });
+  const clip = await open({ query: { word: BA, level: 'two' }, audio: mkAudio('file') });
+  const b = sel(clip.root, '[data-audio=word\\/r07-w2]') || all(clip.root, n => n.getAttribute('data-audio') === 'word/r07-w2')[0];
+  assert.ok(b); assert.equal(b.getAttribute('data-audio-state'), 'file'); await b.dispatch('click');
+  await waitFor(() => calls.length === 1, { message: 'play called' }); assert.deepEqual(calls[0].slice(0, 2), ['word', 'r07-w2']); clip.unmount();
+  const dev = await open({ query: { word: BA, level: 'two' }, audio: mkAudio('tts-fallback') });
+  const d = all(dev.root, n => n.getAttribute('data-audio') === 'word/r07-w2')[0];
+  assert.equal(d.getAttribute('data-audio-state'), 'device'); assert.match(d.getAttribute('aria-label'), /Device voice, not a recorded teacher; Israeli-style only/); dev.unmount();
+  const none = await open({ query: { word: BA, level: 'two' }, audio: mkAudio('none') });
+  assert.equal(all(none.root, n => n.getAttribute('data-audio') === 'word/r07-w2').length, 0);
+  assert.match(none.root.textContent, /No audio yet/); none.unmount();
+});
 
 test('empty state: with no traced letters there are no words and the screen says so honestly', async () => {
   const { root, unmount } = await open({ store: mkStore() });

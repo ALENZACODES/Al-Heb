@@ -140,6 +140,16 @@ test("audio: honest 'No audio yet' when no clip, Listen button only when a clip 
   assert.equal(played.length, 1);
 });
 
+test("audio: with no clip and a he-IL device voice, Listen is a device-labelled button that speaks the shown word", async () => {
+  const said = [];
+  const audio = { status: () => ({ source: "tts-fallback" }), play: async (k, id, o) => { said.push([id, o && o.text]); return { source: "tts-fallback" }; } };
+  const { root } = await boot({ audio });
+  byId(root, "sprint-start").click();
+  const b = btn(root, /Listen/); assert.ok(b);
+  assert.match(b.attrs["aria-label"], /Device voice, not a recorded teacher; Israeli-style only/);
+  b.click(); await flush(); assert.equal(said.length, 1); assert.ok(said[0][1] && /[\u05d0-\u05ea]/.test(said[0][1]));
+});
+
 test("timer pauses while the page is hidden and resumes", async () => {
   const { root, clock } = await boot();
   byId(root, "sprint-start").click();

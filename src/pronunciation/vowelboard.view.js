@@ -68,8 +68,8 @@ export function mount(root, ctx = {}) {
           const tt = ui.tradition === 'ashkenazi' ? 'ashkenazi' : 'israeli';
           const a = transliterate(p.defective, { tradition: tt }), b = transliterate(p.plene, { tradition: tt });
           const same = a === b || a.replace(/ei/g, 'e') === b.replace(/ei/g, 'e'); // siddur style writes tzere+yod as 'ei'
-          row.append(h('p', {}, h('strong', {}, 'defective: '), ui.he(p.defective, 'he-small'), ui.audioButton('word', `plene-${f.family}-defective`, p.defective), ' ',
-            h('strong', {}, 'plene: '), ui.he(p.plene, 'he-small'), ui.audioButton('word', `plene-${f.family}-plene`, p.plene)),
+          row.append(h('p', {}, h('strong', {}, 'defective: '), ui.he(p.defective, 'he-small'), ui.audioButton('word', `plene-${f.family}-defective`, p.defective, p.defective), ' ',
+            h('strong', {}, 'plene: '), ui.he(p.plene, 'he-small'), ui.audioButton('word', `plene-${f.family}-plene`, p.plene, p.plene)),
             h('p', { class: 'muted' }, `${p.gloss}. ${p.note}. ${same ? (a === b ? 'Both spellings give the same respelling.' : `Respellings ${a} and ${b} differ only because the siddur style writes a tzere plus yod as ei; in Israeli speech they sound the same.`) : 'Respellings differ here: check.'}`));
         } else if (sp) {
           row.append(h('p', { class: 'muted' }, sp.pairNote));

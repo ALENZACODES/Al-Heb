@@ -5,6 +5,7 @@
 
 import { TRADITIONS, TRADITION_LABELS, normalizeTradition } from './sounds.model.js';
 import { setCongregation } from './forTradition.js';
+import { audioButton as sharedAudioButton } from '../shell/audio-access.js';
 
 export const DRAFT_NOTICE = 'Draft, unreviewed: the pointing, sounds, respellings, stress marks and hints on this screen are drafts from published sources and have NOT been checked by a native speaker or a Hebrew teacher. There is no recorded audio for this screen yet.';
 
@@ -119,15 +120,11 @@ export function createView(root, ctx, o) {
     return fs;
   };
 
-  /** Play button only when a real file exists; otherwise an honest note. */
-  const audioButton = (kind, id, label) => {
-    let can = false;
-    try { can = !!ctx.audio?.has?.(kind, id); } catch { can = false; }
-    if (!can) return h('small', { class: 'muted' }, ` ${tr('r4.noAudio', '(no audio yet)')}`);
-    const btn = h('button', { type: 'button', 'aria-label': `${tr('r4.play', 'Play')} ${label}` }, tr('r4.play', 'Play'));
-    on(btn, 'click', () => { try { ctx.audio.play(kind, id); } catch { /* best effort */ } });
-    return btn;
-  };
+  /** `h` that also wires onclick (this view helper sets attributes only), registered for cleanup through `on`. */
+  const hOn = (tag, attrs = {}, ...kids) => { const { onclick, ...rest } = attrs; const el = h(tag, rest, ...kids); if (typeof onclick === 'function') on(el, 'click', onclick); return el; };
+
+  /** The shared audio button (src/shell/audio-access.js): a file button, a device-voice button, or one line "No audio yet". `text` is the pointed Hebrew shown, when the item may not be in the recording list. */
+  const audioButton = (kind, id, label, text) => sharedAudioButton(hOn, ctx, { kind, id, label: tr('r4.play', 'Play'), name: label, text });
 
   /** Tap-to-hear hook: calls ctx.audio.play only when a file exists; returns whether it played. */
   const tryPlay = (kind, id) => {

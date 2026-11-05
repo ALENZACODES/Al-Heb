@@ -38,7 +38,7 @@ export function mount(root, ctx = {}) {
         });
         card.append(line, h('p', { class: 'muted' }, 'Underlined letters are vowel letters (vav, yod, he, alef used as vowels). Dotted underline: a vowel letter that the pointed spelling leaves out.'));
       } else card.append(ui.he(w.full));
-      card.append(h('p', {}, w.gloss), ui.audioButton('word', `dial-${w.id}`, w.gloss));
+      card.append(h('p', {}, w.gloss), ui.audioButton('word', `dial-${w.id}`, w.gloss, w.full));
       return card;
     };
 

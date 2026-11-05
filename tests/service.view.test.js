@@ -88,7 +88,19 @@ test('audio button appears only for a real clip and plays it', async () => {
   await root.querySelector('#sv-play').click();
   assert.deepEqual(played[0].slice(0, 2), ['line', 'candle-shabbat']);
   await root.querySelector('#sv-next').click();
+  // no clip here, but the fake player reports a device voice: the button is offered and labelled as a device voice, never as a recording
+  const dev = root.querySelector('#sv-play');
+  assert.equal(dev.getAttribute('data-audio-state'), 'device');
+  assert.match(dev.getAttribute('aria-label'), /Device voice, not a recorded teacher; Israeli-style only/);
+});
+
+test('no clip and no usable voice: no play button, a one-line No audio yet', async () => {
+  const audio = { status: () => ({ source: 'none', reason: 'no-speech-synthesis' }), play: () => Promise.resolve({ source: 'none' }) };
+  const { root, ctx } = mk({ audio });
+  await mount(root, ctx);
+  await root.querySelector('[data-follow="friday-night"]').click();
   assert.equal(root.querySelector('#sv-play'), null);
+  assert.match(root.textContent, /No audio yet/);
 });
 
 test('every control is a real button/select/summary (keyboard operable) and Hebrew is always lang=he', async () => {

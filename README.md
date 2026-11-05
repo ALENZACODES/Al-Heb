@@ -1,8 +1,26 @@
 # ALEF
 
+[![CI on main: test, browser, build-dist](https://github.com/ALENZACODES/Al-Heb/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ALENZACODES/Al-Heb/actions/workflows/ci.yml?query=branch%3Amain)
+
 An interactive Hebrew course (web app plus a companion book) with two goals: read Torah and prayers aloud with a
 congregation, and get around in Israel without sounding like an outsider. It is a zero-dependency static PWA: plain ES
-modules, no build step, served by any static file server.
+modules, no build step, served by any static file server. The course is called ALEF. This private repository is Al-Heb.
+
+## Inspiration
+
+This project was inspired by Rabbi Bill Tepper (IJL class) and Rabbi Eliza McCaroll (Holy Blossom Temple).
+
+## Screens
+
+Four screens of the running app, from [`assets/screens/`](assets/screens/) (1280×800, last committed 2026-11-04). They were captured by the repo's screenshot script, not photographed on a phone. The banner on each one says no recordings exist. Nothing in them has been reviewed.
+
+| Home | Letters |
+|---|---|
+| ![Wide home. ALEF, tagline Read Hebrew aloud. Speak it in Israel. Today's lesson is the first 10 minutes. A banner says no recordings exist yet.](assets/screens/wide-home.png) | ![Wide letters. A quiz titled find the letter, with Hebrew tiles and Latin names.](assets/screens/wide-letters.png) |
+| Review | Torah reading |
+| ![Wide review. Card 1 of 6, Shin and Bet, asks to name the letter bet and say its sound.](assets/screens/wide-lesson.png) | ![Wide Torah reading. A draft banner says the page is not reviewed. A ladder for reading the Priestly Blessing without vowels.](assets/screens/wide-torah-line.png) |
+
+A 1280×640 crop of the wide home screen sits at [`.github/social-preview.png`](.github/social-preview.png), for a later upload as the GitHub social preview. GitHub does not pick that file up by itself.
 
 ## Status
 
@@ -71,7 +89,6 @@ Folder-by-folder guide to the docs: [docs/INDEX.md](docs/INDEX.md).
 Architecture: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). Build contract: [docs/CONTRACT.md](docs/CONTRACT.md).
 Tooling notes: [docs/TOOLING.md](docs/TOOLING.md). Handoff: [docs/HANDOFF.md](docs/HANDOFF.md).
 Hosting: [docs/DEPLOY.md](docs/DEPLOY.md) and [docs/deploy/CLOUDFLARE-PAGES.md](docs/deploy/CLOUDFLARE-PAGES.md).
-There is no single docs index file; `docs/` has top-level files plus one folder per lane, many with their own `README.md`.
 
 ## Decisions needed
 

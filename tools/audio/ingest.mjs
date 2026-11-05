@@ -342,7 +342,7 @@ export function deliveryAudit(root = ROOT) {
     const m1 = /const AUDIO = \/(.+)\/([a-z]*);/.exec(sw); const m2 = /const RUNTIME = '([^']+)'/.exec(sw);
     let matches = false; try { matches = !!m1 && new RegExp(m1[1], m1[2]).test('/audio/m/israeli/word/x.mp3'); } catch { /* */ }
     add(matches && !!m2 && /AUDIO\.test\(url\.pathname\) \? RUNTIME/.test(sw), matches && m2 ? `sw.js: .mp3 matches its AUDIO pattern and is cached cache-first at runtime in "${m2[1]}", filled only when a clip is requested` : 'sw.js: could not confirm that audio files are cached at runtime only');
-    res.items.push({ ok: true, text: /headers\.has\('range'\)/.test(sw) ? 'sw.js lets Range requests go to the network uncached, so a browser that plays audio with Range requests may never fill the cache (not tested here)' : 'sw.js has no Range-request bypass' });
+    res.items.push({ ok: true, text: /headers\.has\('range'\)/.test(sw) ? (/function audioRange/.test(sw) ? 'sw.js answers Range requests for audio from a cached full copy (206 slice) and fills the cache in the background for small clips; other Range requests go to the network (see docs/audio/RANGE-AND-OFFLINE.md)' : 'sw.js lets Range requests go to the network uncached, so a browser that plays audio with Range requests may never fill the cache (not tested here)') : 'sw.js has no Range-request bypass' });
   } else add(false, 'sw.js not found');
   const bs = path.join(root, 'tools', 'build-static.mjs');
   if (fs.existsSync(bs)) res.items.push({ ok: true, text: /SHIP_DIRS = \[[^\]]*'audio'/.test(fs.readFileSync(bs, 'utf8')) ? 'tools/build-static.mjs ships audio/ in the static site folder (clips are served, not precached): hosting size counts them' : 'tools/build-static.mjs does not list audio/ in SHIP_DIRS' });

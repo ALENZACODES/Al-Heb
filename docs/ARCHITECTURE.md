@@ -34,8 +34,9 @@ screen calls lane 1 `due(cards, now)`). IndexedDB intentionally not used yet.
 `tools/build-precache.mjs` writes `precache-manifest.js` (shell, `src/`, `assets/` minus `assets/img/`, `data/**/*.json`
 minus `_`-prefixed dirs; content-hash version). `sw.js`: precache on install, delete old `alef-shell-*` caches on activate,
 navigation network-first with cached `index.html` then `offline.html`, media (audio/images/fonts) cache-first filled at
-runtime, other same-origin GETs stale-while-revalidate. Range requests bypass the cache, so audio that was never fully
-fetched is not available offline; a pre-download of the audio set is not implemented.
+runtime, other same-origin GETs stale-while-revalidate. Range requests for audio are answered from a cached full copy (206 slice) or passed to the network, and
+small clips are then fetched whole in the background and cached (512 KiB per file, 600 clips, see `docs/audio/RANGE-AND-OFFLINE.md`); Range requests for
+other files bypass the cache. A clip never played on the device is not available offline; a pre-download of the audio set is not implemented.
 
 ## Lane hooks the home screen guesses
 Lane 1: tries `src/curriculum/index.js` then `lessons.js` for `export const lessons`; `srs.js` `due`. If lane 1 ships a

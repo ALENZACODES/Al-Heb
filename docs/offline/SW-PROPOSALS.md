@@ -29,7 +29,8 @@ Originally read from `sw.js` on 2026-11-04. **Item 1 has since been applied** (r
 **Change:** none required; but add `navigationPreload` only if first-paint on slow networks matters (it adds a request per navigation and was not measured). Listed so nobody "fixes" the hash behaviour by accident.
 
 ## 6. Range requests for audio
-**Now:** requests with a `Range` header bypass the worker (`if (req.headers.has('range')) return;`), so a clip played via `<audio>` on Safari, which always sends Range, is never served from the cache and fails offline.
+**Done 2026-11-05 for audio files** (see `docs/audio/RANGE-AND-OFFLINE.md`): cached clips are served as 206 slices and the cache is filled by a background full GET (512 KiB cap, 600 clips). The text below is the original proposal; Safari is still untested.
+**Was:** requests with a `Range` header bypass the worker (`if (req.headers.has('range')) return;`), so a clip played via `<audio>` on Safari, which always sends Range, is never served from the cache and fails offline.
 **Change:** for cached full responses, build a 206 from the cached blob (`new Response(blob.slice(start, end+1), {status:206, headers:{'Content-Range': ...}})`). Only needed once audio clips exist; there are none today. **Unverified:** Safari's behaviour is from memory of WebKit's long-standing Range requirement, not re-tested.
 
 ## 7. Version visibility

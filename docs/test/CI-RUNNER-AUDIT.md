@@ -17,8 +17,8 @@ Scope: `.github/workflows/ci.yml`, `.github/workflows/pages.yml`, `package.json`
 | 3 | Playwright | Not a dependency. Tests and tools look for it with `require('playwright')` and fall back to `/opt/npm-tools/...` or `/usr/lib/node_modules/...`, which do not exist on a runner. | `browser` job runs `npm install --no-save --no-package-lock playwright@1.63.0` (the version present locally) then `npx playwright install --with-deps chromium`. Unit-tier tests that use it (`a11y.fixes`, `record-kit`, `book.cards`) skip with a message when it is absent. |
 | 4 | axe-core | `tests/a11y.*`, `sweep` need `tools/a11y/node_modules/axe-core` (gitignored). `tools/a11y/package-lock.json` is tracked. | `browser` job runs `npm ci --prefix tools/a11y`. |
 | 5 | `dist/` | Gitignored. `tests/deploy.smoke.test.js` skips without it; `deploy.test.js` already skips with a message. | `browser` job runs `node tools/deploy/build_site.mjs` before the tier so `deploy.smoke` runs instead of skipping. |
-| 6 | Python | The runner's system `python3` is Debian-style "externally managed", so the previous bare `pip install segno` could fail. | `actions/setup-python@v5` (3.12) plus `tools/test/requirements-ci.txt` (new). Step is `continue-on-error`; the Toolchain report step prints what is actually importable. |
-| 7 | Python modules imported by tests and tools | See the list below. | Installed: segno (pinned 1.6.6), Pillow, pypdf, numpy, opencv-python-headless (ranges, not pins: not yet resolved on a runner). |
+| 6 | Python | The runner's system `python3` is Debian-style "externally managed", so the previous bare `pip install segno` could fail. | `actions/setup-python@v5` (3.12) plus `tools/test/requirements-ci.txt` (new). The pip step now fails visibly (a failed install is no longer ignored); the Toolchain report step prints what is actually importable. |
+| 7 | Python modules imported by tests and tools | See the list below. | Installed: segno (pinned 1.6.6), Pillow, pypdf, numpy, opencv-python-headless (Pillow is pinned to 11.3.0, the version the green main CI used; the others are ranges, not pins). |
 | 8 | poppler (`pdfinfo`) | Used by `tests/meta.test.js` and `tools/meta/lib.mjs`; the test is skipped when absent. | `apt-get install poppler-utils`. |
 | 9 | ffmpeg / ffprobe | Used by `audio.script`, `meta`, `record-kit`, `tts.pipeline`; each skips when absent (`tts.pipeline` skips with "python3/ffmpeg/ffprobe not available"). | `apt-get install ffmpeg`. |
 | 10 | tesseract + Hebrew data | `images.ingest` OCR tests skip with "Pillow or tesseract (heb) not installed". | `apt-get install tesseract-ocr tesseract-ocr-heb`. |
@@ -31,7 +31,7 @@ Scope: `.github/workflows/ci.yml`, `.github/workflows/pages.yml`, `package.json`
 | 17 | Gitignored files tests need | `dist/` (handled, 5), `tools/a11y/node_modules` (handled, 4), `node_modules` (only for Playwright, handled, 3). `data/images/sheets/`, `data/images/review/`, `dist-test/` are produced by the tests themselves into temp folders or recreated (`integration.test.js` writes and removes `dist-test/`); the clean copy lacked them and those tests passed. The UXLC XML cache for `corpus.verify` is gitignored; those 2 tests skip with a message. | No change. |
 | 18 | jsdom | Not installed anywhere; two tests in `firstday.test.js` and one in `firstday.ladder.test.js` need it. The two in `firstday.test.js` used `return`, so they reported as passed without asserting anything. | Changed both to `t.skip('jsdom not installed ...')`, so the skip is visible. jsdom is not installed in CI (the app has no dependencies). |
 | 19 | Job time | No `timeout-minutes` anywhere (default is 360). | Added: `test` 20, `build-dist` 10, `browser` 45, `pages` jobs 10. |
-| 20 | Browser tier | Was the `smoke` job, `needs: test`, `continue-on-error: true`, installed Playwright, did not install axe, did not build `dist/`. | Now a standalone `browser` job (runs in parallel with `test`), installs Playwright and axe, builds `dist/`, runs `npm run test:browser` then `tools/smoke.mjs`, uploads `docs/screens`. Still `continue-on-error: true`; see flip criteria. |
+| 20 | Browser tier | Was the `smoke` job, `needs: test`, `continue-on-error: true`, installed Playwright, did not install axe, did not build `dist/`. | Now a standalone `browser` job (runs in parallel with `test`), installs Playwright and axe, builds `dist/`, runs `npm run test:browser` then `tools/smoke.mjs`, uploads `docs/screens`. Required: `continue-on-error` was removed when merging main (browser regressions must be visible); the remote's green `smoke` job used the same Playwright install, but this `browser` job (axe, dist build, pinned Playwright) has not yet run on a GitHub runner, so watch its first run. |
 | 21 | Concurrency | None, so duplicate pushes queued full runs. | `concurrency` group per ref with cancel-in-progress added to `ci.yml`. |
 | 22 | Token scope | No `permissions:` in `ci.yml`. | `permissions: contents: read` added. |
 
@@ -46,12 +46,12 @@ Unit tier (all guarded by a skip unless noted): `segno` (`book/make_qr.py`, `boo
 - `build_site.mjs` then `check-deploy.mjs --root dist`: 44/44 passed, 6 warnings (origins named in code), 722 files, 60.48 MiB.
 - Skips seen (all with a message): a11y browser test (no Playwright/axe), two UXLC cache tests, `deploy.test` dist copy, jsdom view test, `LETTERS_REVIEW_FULL` review sheets.
 
-## Flip criteria for the `browser` job
+## Former flip criteria for the `browser` job
 
-Remove `continue-on-error: true` only after one run of that job on GitHub shows all of these green: the Playwright/Chromium install, `npm ci --prefix tools/a11y`, `npm run test:browser`, and `tools/smoke.mjs`. Until then a failure there is an install or environment problem first. Known risks I could not test: Chromium sandbox on the runner, `--with-deps` apt time, the 45 minute budget for the one-file-at-a-time tier, and `perf.test.js` / `journey.test.js` thresholds on slower shared CPUs.
+The merge with main made this job required (no `continue-on-error`). These are the checks its first GitHub run has to show green: one run of that job on GitHub shows all of these green: the Playwright/Chromium install, `npm ci --prefix tools/a11y`, `npm run test:browser`, and `tools/smoke.mjs`. Until then a failure there is an install or environment problem first. Known risks I could not test: Chromium sandbox on the runner, `--with-deps` apt time, the 45 minute budget for the one-file-at-a-time tier, and `perf.test.js` / `journey.test.js` thresholds on slower shared CPUs.
 
 ## Remaining caveats
 
-- `requirements-ci.txt` uses version ranges for everything except segno; tighten after the first green run.
+- `requirements-ci.txt` pins segno and Pillow; the rest are ranges; tighten after the first green run.
 - If any apt or pip step fails, the job continues and the affected tests skip. The Toolchain report step is where to look.
-- `pages.yml` needs nothing beyond Node 22; its deploy job only runs when the repository variable `PAGES_ENABLED` is `true`.
+- `pages.yml` needs nothing beyond Node 22; its deploy job only runs when the repository variable `ENABLE_GITHUB_PAGES` is `true`.

@@ -21,7 +21,7 @@ export const LETTERS_QUESTION = 'Can you already read the Hebrew letters?';
 export const LETTER_ANSWERS = Object.freeze([
   { id: 'none',   label: 'No, start from the beginning', start: '/firstday',  desc: 'Your first 10 minutes, one letter at a time.' },
   { id: 'some',   label: 'Some',                         start: '/placement', desc: '' },
-  { id: 'vowels', label: 'Yes, I can read with vowel marks',      start: '/placement', desc: '' },
+  { id: 'vowels', label: 'Yes, I can read with vowel marks',      start: '/placement', desc: 'The draft placement check suggests a starting lesson. You can choose an earlier lesson.' },
 ]);
 export const STEPS = Object.freeze(['letters', 'congregation', 'minutes', 'plan']);
 

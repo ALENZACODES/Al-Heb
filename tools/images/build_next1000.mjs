@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Builds data/images/next1000.csv, data/images/next1000-groups.json and docs/images/NEXT_1000_COMMANDS.md.
-// Pending = manifest rows not yet done + block H (spec_next.mjs, commands 102-149), trimmed to exactly 1000.
-// "Done" = names matched in docs/images/codex-batch-01.json if that file exists, else every manifest row of commands 1-27.
+// Pending = manifest rows of the original plan (commands 1-101) not yet done + block H (spec_next.mjs, commands 102-149), at most 1000 (a ceiling: completed work is never re-queued to fill it).
+// "Done" = every image already ingested (data/images/provenance.json) if that file exists, else names matched in docs/images/codex-batch-01.json, else every manifest row of commands 1-27.
 import { writeFileSync, readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -29,6 +29,11 @@ const csvCell = (v) => { const s = String(v); return /[",\n]/.test(s) ? `"${s.re
 
 /** Returns { done:Set<string>|null, source } */
 function doneSet(manifest) {
+  const provenance = join(ROOT, 'data/images/provenance.json');
+  if (existsSync(provenance)) {
+    const images = JSON.parse(readFileSync(provenance, 'utf8')).images;
+    return { done: new Set(Object.keys(images).map(id => `${id}.png`)), source: 'data/images/provenance.json (ingested images)' };
+  }
   const p = join(ROOT, 'docs/images/codex-batch-01.json');
   if (existsSync(p)) {
     const j = JSON.parse(readFileSync(p, 'utf8'));
@@ -53,14 +58,17 @@ function doneSet(manifest) {
 }
 
 export function build() {
-  const manifest = parseCsv(readFileSync(join(ROOT, 'data/images/manifest.csv'), 'utf8'));
+  // Commands 150+ have their own run-3 queue; this queue covers the original series.
+  const manifest = parseCsv(readFileSync(join(ROOT, 'data/images/manifest.csv'), 'utf8')).filter(r => +r.command < 150);
   const pg = JSON.parse(readFileSync(join(ROOT, 'data/images/prompt-groups.json'), 'utf8')).groups;
   const { done, source } = doneSet(manifest);
   // Only the original plan (commands 1-101). Rows appended later for ingest (Run 3 = commands 150-249, intermediate, block J) have their own paste files and runbook steps.
   const remaining = manifest.filter((r) => Number(r.command) <= 101 && !done.has(r.file));
   const next = buildNext();
-  const newRows = next.flatMap((g) => g.rows);
-  // TARGET is a ceiling: as images get ingested, fewer unfinished rows remain and spec_next may not hold enough block H rows to refill to 1000.
+  const existing = new Set(manifest.map((r) => r.file));
+  // Completed or already-listed work is never queued again just to fill the batch.
+  const newRows = next.flatMap((g) => g.rows).filter((r) => !done.has(r.file) && !existing.has(r.file));
+  // TARGET is a ceiling ("up to"): as images get ingested, fewer unfinished rows remain and spec_next may not hold enough block H rows to refill to 1000.
   const need = Math.max(0, Math.min(TARGET - remaining.length, newRows.length));
   const keepNew = newRows.slice(0, need);
   const keepSet = new Set(keepNew.map((r) => r.file));

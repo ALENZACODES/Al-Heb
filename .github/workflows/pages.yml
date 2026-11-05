@@ -2,7 +2,7 @@ name: pages
 # Always builds the Cloudflare-style dist/ and runs the deploy check (headers, MIME, service worker scope, fonts, CSP, size limits).
 # Publishing to GitHub Pages is OFF by default: GitHub Pages is not available on a private repo without a paid plan, and the
 # deploy step fails with "Pages not enabled" when it is off. To turn it on: enable Pages (Settings -> Pages -> Source: GitHub Actions)
-# and add the repository variable PAGES_ENABLED = true (Settings -> Secrets and variables -> Actions -> Variables).
+# and add the repository variable ENABLE_GITHUB_PAGES = true (Settings -> Secrets and variables -> Actions -> Variables).
 # The primary host is Cloudflare Pages (docs/deploy/GO-LIVE-CHECKLIST.md), which builds from the repo itself and does not use this workflow.
 # The unit tests run in ci.yml, not here, so a test failure cannot block a deploy and is not reported twice.
 on:
@@ -27,13 +27,13 @@ jobs:
       - name: Deploy check
         run: node tools/deploy/check-deploy.mjs --root dist
       - name: Upload Pages artifact
-        if: ${{ vars.PAGES_ENABLED == 'true' }}
+        if: ${{ vars.ENABLE_GITHUB_PAGES == 'true' }}
         uses: actions/upload-pages-artifact@v3
         with: { path: dist }
   deploy:
     needs: build
     timeout-minutes: 10
-    if: ${{ vars.PAGES_ENABLED == 'true' }}
+    if: ${{ vars.ENABLE_GITHUB_PAGES == 'true' }}
     runs-on: ubuntu-latest
     permissions:
       pages: write

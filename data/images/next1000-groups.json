@@ -1,8 +1,8 @@
 {
  "meta": {
-  "doneCount": 468,
+  "doneCount": 914,
   "total": 814,
-  "doneSource": "docs/images/codex-batch-01.json (282 matched manifest names) plus 186 more already in data/images/provenance.json",
+  "doneSource": "data/images/provenance.json (ingested images)",
   "remainingManifest": 329,
   "newRows": 485,
   "generatedBy": "tools/images/build_next1000.mjs"

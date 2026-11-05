@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { pathToFileURL } from 'node:url';
 // Pre-deploy check for Cloudflare Pages. Serves a built folder (default dist/, from make-dist.mjs) on a local port, applying its
 // _headers file with Cloudflare's documented rules, then verifies headers, MIME types, service-worker scope, the Hebrew web fonts,
 // the manifest, the CSP and Cloudflare's file limits.
@@ -243,7 +244,7 @@ export async function runChecks(root) {
   return { results, warnings, summary: { files: files.length, bytes: total, rules: rules.length } };
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const args = process.argv.slice(2); const i = args.indexOf('--root');
   const root = resolve(i >= 0 ? args[i + 1] : join(REPO, 'dist'));
   if (!existsSync(root)) { console.error(`No build folder at ${root}. Run: node tools/deploy/make-dist.mjs`); process.exit(2); }

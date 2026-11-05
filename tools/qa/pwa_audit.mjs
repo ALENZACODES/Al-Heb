@@ -56,12 +56,13 @@ for (const s of mf.shortcuts || []) note(`shortcut inside scope: ${s.name}`, new
 const sw = readFileSync(join(root, 'sw.js'), 'utf8'); const pre = readFileSync(join(root, 'precache-manifest.js'), 'utf8');
 note('sw.js has a fetch handler (required for installability)', /addEventListener\('fetch'/.test(sw));
 note('sw.js lives at the site root, so its scope covers manifest scope', existsSync(join(root, 'sw.js')));
-note('sw.js registered with a relative URL', /(?:serviceWorker|swc)\.register\('sw\.js'\)/.test(readFileSync(join(root, 'src/app.js'), 'utf8')));
+note('sw.js registered with a relative URL', /serviceWorker\.register\('sw\.js'\)/.test(readFileSync(join(root, 'src/app.js'), 'utf8')));
 note('offline.html exists', existsSync(join(root, 'offline.html')));
 note('offline.html is in the precache list', /"offline\.html"/.test(pre));
 note('index.html and manifest are in the precache list', /"index\.html"/.test(pre) && /"manifest\.webmanifest"/.test(pre));
 note('sw.js navigation fallback chain ends in offline.html', /caches\.match\('offline\.html'\)/.test(sw));
-const listed = [...(/ALEF_PRECACHE = (\[[\s\S]*?\]);/.exec(pre)?.[1] ?? '').matchAll(/^ "([^"]+)",?$/gm)].map((m) => m[1]); // installed list only; ALEF_ON_DEMAND files are not installed
+const precache = pre.match(/self\.ALEF_PRECACHE = \[([\s\S]*?)\];/)?.[1] || "";
+const listed = [...precache.matchAll(/^ "([^"]+)",?$/gm)].map((m) => m[1]);
 const missing = listed.filter((f) => !existsSync(join(root, f)));
 note('every precache entry exists on disk', missing.length === 0, missing.length ? missing.slice(0, 5).join(', ') : `${listed.length} entries`);
 note('offline.html is self-contained (no external requests)', !/(src|href)="https?:/.test(readFileSync(join(root, 'offline.html'), 'utf8')));

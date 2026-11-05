@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
@@ -107,7 +108,7 @@ test('area config: unique slugs, numbered by priority order, priorities non-decr
 });
 
 test('real repo smoke: extractors run on the real data folder with unique ids and no thrown errors', async () => {
-  const real = new URL('..', import.meta.url).pathname;
+  const real = fileURLToPath(new URL('..', import.meta.url));
   const { existsSync } = await import('node:fs');
   if (!existsSync(join(real, 'data/corpus/registry.json'))) return;
   const { byArea, items } = await extractAll(real);

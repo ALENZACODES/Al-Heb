@@ -214,7 +214,11 @@ export function mountReview(root, ctx, { lessonId } = {}) {
       if (!revealed) return;
       const id = queue[pos]; revealed = false;
       let snap = null; try { snap = await snapshotRating(ctx, id); } catch { snap = null; }
-      try { await rateCard(ctx, id, n); lastRate = snap ? { snap, n } : null; undoBtn.hidden = !lastRate; undoNote.textContent = ""; } catch (e) { note.textContent = "That answer could not be saved. Please try again."; }
+      try { await rateCard(ctx, id, n); lastRate = snap ? { snap, n } : null; undoBtn.hidden = !lastRate; undoNote.textContent = ""; } catch (e) {
+        // A failed save must leave this card revealed and retryable: do not count the review or advance the queue.
+        if (alive) { note.textContent = "Could not save: " + (e?.message || e) + ". Try rating this card again."; revealed = true; }
+        return;
+      }
       stats[n]++; pos++;
       // Interference hint only after the learner's own miss (rating Again), at most once per error kind per session.
       let panel = null;

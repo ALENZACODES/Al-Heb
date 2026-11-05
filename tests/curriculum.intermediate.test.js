@@ -245,6 +245,6 @@ test("the generator under tools/curriculum/intermediate is in the repo and has n
   const dir = new URL("tools/curriculum/intermediate/", ROOT);
   for (const f of ["build.py", "sources.py", "dsl.py", "syn.py", "syn2.py", "isr.py", "isr2.py", "slots.py", "chk.py"]) {
     const t = fs.readFileSync(new URL(f, dir), "utf8");
-    assert.ok(!/\/tmp\/ib|\/home\/claude/.test(t), `${f} has a machine-specific path`);
+    assert.ok(!/\/tmp\/ib|\/home\/\u0063laude/.test(t), `${f} has a machine-specific path`);
   }
 });

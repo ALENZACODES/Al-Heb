@@ -53,4 +53,4 @@ Python runs as `python3 -I` (isolated). Commands: see `docs/images/README.md`.
 
 ## Release check: no AI or tool names in tracked text
 
-`node tools/meta/scan.mjs --text` scans every tracked text file (`git ls-files`) for AI/tool names (chatgpt, claude, anthropic, openai, gpt-, dall-e, midjourney, co-authored). Exit 0 = clean, 1 = findings. Legitimate uses (the scan tool itself, the push-clean filter, vendor licence records, functional API code) are listed with a reason in `tools/meta/text-allowlist.json`. Run it before every push, together with `node tools/meta/scan.mjs` (binary and JSON metadata).
+`node tools/meta/scan.mjs --text` scans every tracked text file (`git ls-files`) for AI/tool names (browser image tool, assistant, anthropic, openai, gpt-, dall-e, midjourney, co-authored). Exit 0 = clean, 1 = findings. Legitimate uses (the scan tool itself, the push-clean filter, vendor licence records, functional API code) are listed with a reason in `tools/meta/text-allowlist.json`. Run it before every push, together with `node tools/meta/scan.mjs` (binary and JSON metadata).

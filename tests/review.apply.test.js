@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, writeFile, stat } from 'node:fs/promises';
@@ -230,7 +231,7 @@ test('CLI: exits 0 on a clean dry run, 1 when rows are rejected, and prints the 
     const rows = await s.load(sheetName('prayers'));
     const a = pick(rows, 'prayers:shema-1'); a.status = 'ok'; a.reviewer = 'R'; a.review_date = '2026-02-03';
     await s.save([a]);
-    const cli = new URL('../tools/review/apply_review.mjs', import.meta.url).pathname;
+    const cli = fileURLToPath(new URL('../tools/review/apply_review.mjs', import.meta.url));
     const good = await exec('node', [cli, s.sheetPath, '--root', s.root]);
     assert.match(good.stdout, /DRY RUN/);
     a.review_date = '';

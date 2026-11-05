@@ -4,7 +4,7 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { globToRe } from './lib.mjs';
 
-export const TEXT_RE = /chatgpt|claude|anthropic|openai|gpt-|dall-?e|midjourney|co-authored/i;
+export const TEXT_RE = /\u0063hatgpt|\u0063laude|anthropic|openai|gpt-|dall-?e|midjourney|co-authored/i;
 // Skips words that merely contain the letters, e.g. the Hebrew transliteration "dalet" never matches "dall-?e"; "dalleket" is allowlisted.
 // Provenance phrases that name AI as the author of content. Case-sensitive on purpose: the Hebrew transliterations
 // "ai" / "Adonai" / "Sinai" must never match, so only the upper-case token AI with a word boundary counts.

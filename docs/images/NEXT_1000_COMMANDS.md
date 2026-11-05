@@ -1,10 +1,8 @@
 # Next 1000 images: command runbook
 
 Pending list: **814 images** = 329 unfinished manifest rows (commands 38-101) + 485 new block H images (commands 102-149).
-
-Decision: 1000 is a ceiling, not a target; with the 1797-row manifest there are no more block H rows to refill the list, so it stays at the count above and tests derive counts from data/images/manifest.csv and the builder.
-Done set used: docs/images/codex-batch-01.json (282 matched manifest names) plus 186 more already in data/images/provenance.json.
-**468 images are already done.** The next command to run is **38** (Alef cursive set), file `cmd-038.txt`.
+Done set used: data/images/provenance.json (ingested images).
+**914 images are already done.** The next command to run is **38** (Alef cursive set), file `cmd-038.txt`.
 
 Files: `data/images/next1000.csv` (same columns as manifest.csv, all pending, command order), `data/images/next1000-groups.json` (per-command prompts, file lists, refs). Rebuild with `node tools/images/build_next1000.mjs`.
 

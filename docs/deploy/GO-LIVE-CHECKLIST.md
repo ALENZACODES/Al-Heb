@@ -51,4 +51,4 @@ App (browser):
 ## If something fails
 - Build fails on Cloudflare but passes locally: compare the Node version in the log with 22.
 - Pages shows an old version: hard reload, or in DevTools Application click Unregister and reload (the service worker caches).
-- Remember GitHub Actions is separate: `ci.yml` runs the tests and the same build and check on every push; `pages.yml` only publishes to GitHub Pages when the repository variable `PAGES_ENABLED` is `true`, and does nothing harmful otherwise.
+- Remember GitHub Actions is separate: `ci.yml` runs the tests and the same build and check on every push; `pages.yml` only publishes to GitHub Pages when the repository variable `ENABLE_GITHUB_PAGES` is `true`, and does nothing harmful otherwise.

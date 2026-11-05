@@ -57,7 +57,7 @@ test('audio hook is null for fuzzy / unmatched lines', () => {
 });
 test('notices are honest: synthetic-only, real photos unmeasured; translation unavailable stated; helper URL must be local', () => {
   assert.match(ACCURACY_NOTICE, /145 computer-generated/); assert.match(ACCURACY_NOTICE, /not been measured on real photos/);
-  assert.match(NO_TRANSLATION_NOTICE, /unavailable offline/); assert.match(NO_TRANSLATION_NOTICE, /Nothing was sent/);
+  assert.match(NO_TRANSLATION_NOTICE, /no built-in Hebrew-to-English translator/); assert.match(NO_TRANSLATION_NOTICE, /Nothing was sent/);
   assert.ok(isLocalHelperUrl('http://127.0.0.1:8787')); assert.ok(isLocalHelperUrl('http://localhost:8787'));
   assert.ok(!isLocalHelperUrl('https://translate.example.com')); assert.ok(!isLocalHelperUrl('http://127.0.0.1.evil.com')); assert.ok(!isLocalHelperUrl('nonsense'));
 });

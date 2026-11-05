@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -66,6 +67,6 @@ test('renderBatch writes file + tts meta (fake fetch, temp dir, no network)', as
   assert.deepEqual([meta.status, meta.source, meta.redistributionCleared], ['tts', 'tts:azure', false]);
 });
 test('CLI defaults to dry run and makes no network call', () => {
-  const r = spawnSync(process.execPath, ['tools/audio/render_tts.mjs', '--provider', 'elevenlabs', '--voice', 'f', '--limit', '2'], { cwd: new URL('..', import.meta.url).pathname, encoding: 'utf8', env: { PATH: process.env.PATH } });
+  const r = spawnSync(process.execPath, ['tools/audio/render_tts.mjs', '--provider', 'elevenlabs', '--voice', 'f', '--limit', '2'], { cwd: fileURLToPath(new URL('..', import.meta.url)), encoding: 'utf8', env: { PATH: process.env.PATH } });
   assert.equal(r.status, 0, r.stderr); assert.match(r.stdout, /DRY RUN/); assert.match(r.stdout, /No network calls made/); assert.match(r.stdout, /list price verified on fetched pages 2026-11-03/);
 });

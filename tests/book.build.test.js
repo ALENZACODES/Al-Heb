@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync, mkdtempSync, writeFileSync, rmSync } from 'node:fs';
@@ -9,7 +10,7 @@ import { vocabFor, wordPool, skeleton, registryEntries, phrasebook } from '../bo
 import { LETTERS } from '../tools/images/spec.mjs';
 
 const BASE = { alef: 'א', bet: 'ב', gimel: 'ג', dalet: 'ד', he: 'ה', vav: 'ו', zayin: 'ז', chet: 'ח', tet: 'ט', yod: 'י', kaf: 'כ', lamed: 'ל', mem: 'מ', nun: 'נ', samekh: 'ס', ayin: 'ע', pe: 'פ', tsadi: 'צ', qof: 'ק', resh: 'ר', shin: 'ש', tav: 'ת' };
-const root = new URL('..', import.meta.url).pathname;
+const root = fileURLToPath(new URL('..', import.meta.url));
 const html = buildHtml(parseArgs(['--no-qr']));
 const read = (p) => readFileSync(new URL('../' + p, import.meta.url), 'utf8');
 const py = (code, ...args) => spawnSync('python3', ['-c', code, ...args], { encoding: 'utf8' });
@@ -119,12 +120,12 @@ test('book HTML with QR embeds one inline QR per letter page and per prayer', { 
 test('pdf_tools: reverse puts the last page first and refuses odd page counts; pad-even adds one blank', { skip: !hasPy('pypdf') && 'pypdf not installed' }, () => {
   const dir = mkdtempSync(join(tmpdir(), 'alef-pdf-'));
   try {
-    const mk = (n, f) => py(`from pypdf import PdfWriter\nw=PdfWriter()\nfor i in range(${n}): w.add_blank_page(100+i*10,200)\nw.write('${f}')`);
+    const mk = (n, f) => py(`from pypdf import PdfWriter\nw=PdfWriter()\nfor i in range(${n}): w.add_blank_page(100+i*10,200)\nw.write(${JSON.stringify(f)})`);
     const a = join(dir, 'a.pdf'), b = join(dir, 'b.pdf'), o = join(dir, 'o.pdf');
     mk(4, a); mk(3, b);
     const tool = join(root, 'book/pdf_tools.py');
     assert.equal(spawnSync('python3', [tool, 'reverse', a, o]).status, 0);
-    const w = JSON.parse(py(`from pypdf import PdfReader;import json;print(json.dumps([float(p.mediabox.width) for p in PdfReader('${o}').pages]))`).stdout);
+    const w = JSON.parse(py(`from pypdf import PdfReader;import json;print(json.dumps([float(p.mediabox.width) for p in PdfReader(${JSON.stringify(o)}).pages]))`).stdout);
     assert.deepEqual(w, [130, 120, 110, 100]);
     assert.notEqual(spawnSync('python3', [tool, 'reverse', b, o]).status, 0);
     assert.equal(spawnSync('python3', [tool, 'pad-even', b]).status, 0);

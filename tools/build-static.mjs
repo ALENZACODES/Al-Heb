@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { pathToFileURL } from 'node:url';
 // Static build for GitHub Pages (or any static host): copies the runtime files into dist/, regenerates the precache
 // manifest for what is actually shipped, and checks that nothing assumes the site is served from the domain root.
 //
@@ -77,7 +78,7 @@ export function build({ out = 'dist', base = '/' } = {}) {
   return { dist, files: all.length, bytes, precacheFiles: m.files.length, precacheBytes, version: m.version, problems };
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const args = process.argv.slice(2);
   const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
   const r = build({ out: opt('--out', 'dist'), base: opt('--base', '/') });

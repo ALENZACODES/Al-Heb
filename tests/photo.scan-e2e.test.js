@@ -18,7 +18,7 @@ test('e2e #/scan: prayer image -> real OCR text, corpus match, word cards, no ex
   assert.ok(r.matches.some((m) => /Numbers 6:25/.test(m)));
   assert.deepEqual(r.externalOrigins, []);
   assert.match(r.accuracyNotice, /not been measured on real photos/);
-  assert.match(r.noTranslation, /Translation unavailable offline/);
+  assert.match(r.noTranslation, /no built-in Hebrew-to-English translator/);
   assert.ok(r.translateSetup);
   assert.ok(r.letterButtons >= 8 && r.hearButtons >= 4);
   assert.ok(r.translitRows.length >= 4 && r.translitRows[0].filter((t, i) => i % 2 === 0).join() === 'Israeli,Sephardi,Ashkenazi');

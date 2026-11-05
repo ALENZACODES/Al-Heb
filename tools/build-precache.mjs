@@ -1,3 +1,4 @@
+import { pathToFileURL } from 'node:url';
 // Generates precache-manifest.js (list of app-shell + data files and a content-hash version) for sw.js.
 // Run: node tools/build-precache.mjs   (re-run whenever files under src/, data/, assets/ change)
 import { readdirSync, readFileSync, writeFileSync, statSync } from 'node:fs';
@@ -66,7 +67,7 @@ export function writeViewList(root = repoRoot) {
   return views;
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   writeViewList();
   const m = computeManifest();
   const root = repoRoot;

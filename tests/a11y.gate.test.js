@@ -22,7 +22,9 @@ test('every settings key has a hub control (or is listed as not an accessibility
     assert.equal(validate(k, v).ok, true, `${k}: its own default is rejected, so it could never be saved`);
     assert.equal(validate(k, { bad: 1 }).ok, false, `${k} accepts garbage`);
   }
-  assert.deepEqual(s.set(Object.fromEntries(Object.entries(DEFAULTS).filter(([k]) => k !== 'onboarded'))), []);
+  // set() only writes when a value changes, so a patch of pure defaults stores nothing: change one value (voice) to force the write
+  assert.deepEqual(s.set({ ...Object.fromEntries(Object.entries(DEFAULTS).filter(([k]) => k !== 'onboarded')), voice: 'm' }), []);
+  assert.equal(st.m.settings.voice, 'm', 'the changed value is stored');
   assert.deepEqual(Object.keys(st.m.settings).sort(), Object.keys(DEFAULTS).sort(), 'every key is stored');
 });
 

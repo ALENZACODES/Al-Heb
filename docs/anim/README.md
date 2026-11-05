@@ -55,3 +55,7 @@ No preview-tier demo route was added. A route needs entries in `src/shell/router
 - No designer or native reader has looked at any pose. Letter outlines are hand-traced polygons and some do not look like the printed letters; the middle poses of each morph are rough. The checker proves structure only.
 - The checker does not test visual quality, colour contrast, the "at most 6 units of movement" rule for k6, or that descriptions are accurate.
 - The player was tested with a fake DOM and a fake frame clock in Node. It was not run in a browser, on a phone, or with a screen reader.
+
+## Morph check (DRAFT)
+
+`tools/anim/morph_check.mjs` renders the first transition of each letter from the candidate outlines in `docs/drafts/animation-poses-v2/` into the old k2 and measures crossings, area jumps, point moves and centroid wobble. Result and notes: `docs/anim/MORPH-CHECK.md`; contact sheets: `docs/anim/morph-sheets/`; proposals: `docs/drafts/animation-poses-v2/FIXES.md`; start-shifted candidates: `docs/drafts/animation-poses-v2b/`. Run `node tools/anim/morph_check.mjs --self-test` and `node --test tests/anim.morph_check.test.js`. No designer has reviewed any of it.

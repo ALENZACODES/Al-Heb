@@ -77,3 +77,27 @@ test('loadImageResolver survives missing files: returns a resolver that yields n
   const R = await loadImageResolver(async () => { throw new Error('offline'); });
   assert.equal(R.resolve('letter', 'alef'), null);
 });
+
+// data/img/index.json (235 KB) was fetched on every load although, with nothing approved and the review-bypass setting off, it cannot change any view.
+const fakeFetch = (approvals) => { const urls = []; return { urls, f: async (u) => { urls.push(u); if (/approvals/.test(u)) return { approvals }; if (/index/.test(u)) return index; throw new Error('404'); } }; };
+const fakeSettings = (on = false) => { let fn = null; const s = { on, get: (k) => (k === 'showUnapprovedImages' ? s.on : undefined), subscribe: (f) => { fn = f; }, flip: (v) => { s.on = v; fn?.({}, ['showUnapprovedImages']); } }; return s; };
+test('loadImageResolver does not fetch the image index while nothing is approved and unapproved images are off', async () => {
+  const { urls, f } = fakeFetch({});
+  const R = await loadImageResolver(f, { settings: fakeSettings(false) });
+  assert.deepEqual(urls, ['data/images/approvals.json']);
+  assert.equal(R.resolve('letter', 'alef'), null);
+});
+test('loadImageResolver fetches the index when an image is approved, or when unapproved images are switched on', async () => {
+  const a = fakeFetch({ L01_alef_print_mnemonic: { status: 'approved' } });
+  const R1 = await loadImageResolver(a.f, { settings: fakeSettings(false) });
+  assert.ok(a.urls.includes('data/img/index.json'));
+  assert.ok(R1.resolve('id', 'L01_alef_print_mnemonic'));
+  const b = fakeFetch({}); const s = fakeSettings(false);
+  const R2 = await loadImageResolver(b.f, { settings: s });
+  assert.equal(R2.resolve('id', 'L01_alef_print_ari'), null);
+  s.flip(true); await R2.ensureIndex();
+  assert.ok(b.urls.includes('data/img/index.json'));
+  assert.equal(R2.resolve('id', 'L01_alef_print_ari').approved, false);
+  const c = fakeFetch({}); await loadImageResolver(c.f, { settings: fakeSettings(true) });
+  assert.ok(c.urls.includes('data/img/index.json'));
+});

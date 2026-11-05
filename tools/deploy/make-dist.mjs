@@ -22,6 +22,7 @@ export const EXTRAS = [
   ['assets/vendor', 'vendored Tesseract OCR (lazy, runtime-cached; includes licence texts)'],
   ['assets/workbook', 'printable workbook PDFs + manifest (linked from the app, downloaded on demand)'],
   ['data/vocab/packs', 'vocab packs (fetched when a pack is opened)'],
+  ['data/vocab/words.json', 'full word list (7 MB): fetched on demand by /listen, /grammar and /placement; over the 2 MiB precache cap, so never installed up front'],
   ['data/audio/manifest-words-ashkenazi.json', 'lazy audio word shard'],
   ['data/audio/manifest-words-israeli.json', 'lazy audio word shard'],
   ['data/audio/manifest-words-sephardi.json', 'lazy audio word shard'],

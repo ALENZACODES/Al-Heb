@@ -113,7 +113,7 @@ export function wireSoundBar(audio, { doc = globalThis.document, storage = globa
   const x = bar.querySelector('.sound-bar-x'), link = bar.querySelector('.sound-bar-details');
   if (link) link.title = bannerText(audio && audio.summary, deviceVoiceState(speech, Utt));
   let gone = soundBarDismissed(storage);
-  const apply = (mode) => { bar.hidden = gone && (!mode || mode === 'idle'); };
+  const apply = (mode, pending = !!(audio && audio.state && audio.state.pending)) => { bar.hidden = pending || (gone && (!mode || mode === 'idle')); };
   apply('idle');
   if (x) x.addEventListener('click', () => {
     gone = true; try { storage && storage.setItem(KEY, '1'); } catch { /* ignore */ }

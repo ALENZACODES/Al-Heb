@@ -10,6 +10,7 @@ import { sourcesLine } from '../shell/sources.js';
 import { congregationOf, audioNote, playLine, LABELS } from '../pronunciation/forTradition.js';
 import { KEY, normState, buildPool, buildRound, applyAnswer } from './model.js';
 import { isAudioFree, AUDIO_FREE_NOTE, SKIP_NOTE } from '../shell/audiofree.js';
+import { loadFailureText } from '../shell/load-error.js';
 
 export const TITLE_LISTEN = 'Listen and pick';
 export const TITLE_READ = 'Read and match';
@@ -62,7 +63,7 @@ export function mount(root, ctx) {
       notice.textContent = cfg.draftNotice;
       pool = buildPool(words, cfg);
       home();
-    } catch (e) { if (alive) set(el('p', { role: 'alert' }, 'Could not load the word list. Check your connection and try again.')); }
+    } catch (e) { if (alive) set(el('p', { role: 'alert' }, loadFailureText(e, 'Could not load the word list', 'Could not load the word list. Check your connection and try again.'))); }
   }
 
   function home() {

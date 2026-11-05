@@ -21,7 +21,7 @@ test('no learner-facing text calls self-rating or completion measured mastery', 
 
 test('every place that speaks about voices says no recordings exist and that browser speech is not a recording', () => {
   const must = [
-    ['src/shell/plain-copy.js', /does not change the sound yet/],
+    ['src/shell/plain-copy.js', /synthetic clip plays.*never changes your device voice/], // was /does not change the sound yet/, which was false for Man + Israeli
     ['src/shell/about.view.js', /audioTruthNode/], // the about line (no recorded teacher, synthetic clips) is built in src/shell/audio-truth.js; tests/audio.truth.test.js
     ['src/shell/settings.view.js', /audioTruthNode/],
     ['src/shell/audio-truth.js', /no recorded teacher/],

@@ -301,7 +301,7 @@ async function tabTo(page, match, max = 120) {
 {
   const f = 'sound status';
   const { ctx, page } = await open('/');
-  await page.evaluate(() => { const el = document.getElementById('sound-status'); el.textContent = 'Sound: ' + 'this is a long status message that needs more than two lines on a phone. '.repeat(6); });
+  await page.evaluate(() => { document.querySelector('.sound-bar').hidden = false; /* the bar stays hidden until a real status exists (src/shell/audio.js pending); this walk tests the control, so show it as the app does for a real status */ const el = document.getElementById('sound-status'); el.textContent = 'Sound: ' + 'this is a long status message that needs more than two lines on a phone. '.repeat(6); });
   const clipped = () => page.evaluate(() => { const el = document.getElementById('sound-status'); return el.scrollHeight - el.clientHeight > 1; });
   const wasClipped = await clipped();
   const n = await tabTo(page, (a) => /^full message$/i.test(a.name) && a.tag === 'button', 12);

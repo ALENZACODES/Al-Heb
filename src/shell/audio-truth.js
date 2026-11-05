@@ -28,8 +28,10 @@ export function audioTruthLine(a) {
 
 /** Second sentence for About and Settings: how the clips are labelled (in their manifest entries and sidecars). Only said when clips exist. @param {any} a */
 export function audioTruthDetail(a) {
+  // Every counted clip is the Man (Ari) voice in the Israeli style: tests/audio.truth.test.js fails if the manifests ever say otherwise,
+  // and then this sentence must be updated. The count is the one read from the summary.
   return hasAudioCounts(a) && a.recorded === 0 && a.tts > 0
-    ? 'The clips are labelled synthetic and Israeli style; the Israeli style has not been verified.'
+    ? `The clips are labelled synthetic and Israeli style; the Israeli style has not been verified. All ${n(a.tts)} use the Man (Ari) voice, so the Man and Woman choice changes the sound only for Man with the Israeli style, where those words play a clip. With any other choice no clip plays, and your device voice, whose gender and accent your device sets, is never changed by it.`
     : '';
 }
 

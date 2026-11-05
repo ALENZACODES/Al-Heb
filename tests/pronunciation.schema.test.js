@@ -140,3 +140,35 @@ test('easy.json: every displayed fact has a source link', () => {
   const ids = easy.facts.map((f) => f.id);
   for (const id of ['five-vowels', 'twenty-seven', 'no-capitals']) assert.ok(ids.includes(id), id);
 });
+
+// Beginner "say" line: one plain sentence per letter and tradition, same template, no IPA/jargon.
+test('consonants.json say: 27 letters x 3 traditions, one plain sentence of at most 15 words', () => {
+  const JARGON = /[\[\]\/ʔʕħχʁɡʃ∅]|\b(ipa|pharyngeal|glottal|uvular|alveolar|fricative|dagesh|phoneme)\b/i;
+  for (const id of LETTER_IDS) {
+    const l = consonants.letters[id];
+    for (const t of TRADS) {
+      const s = l.say?.[t];
+      assert.ok(nonEmpty(s), `${id}.say.${t}`);
+      assert.ok(s.trim().split(/\s+/).length <= 15, `${id}.say.${t} too long: ${s}`);
+      assert.ok(/ says /.test(s), `${id}.say.${t} must follow "<Name> says ..."`);
+      assert.ok(/[.]$/.test(s) && !/[.] /.test(s), `${id}.say.${t} must be a single sentence`);
+      assert.ok(!JARGON.test(s), `${id}.say.${t} has jargon: ${s}`);
+    }
+  }
+  assert.equal(consonants.sayNeedsNativeReview, true);
+});
+
+test('consonants.json say: tradition-true wording for the tricky letters', () => {
+  const s = (id, t) => consonants.letters[id].say[t];
+  assert.match(s('tav', 'ashkenazi'), /S, a hiss.*Shabbos.*dot, T/);
+  assert.match(s('tav', 'israeli'), /T, like the t in table/);
+  assert.match(s('resh', 'israeli'), /back of your throat/);
+  assert.match(s('resh', 'sephardi'), /Spanish r.*tongue tip/);
+  assert.match(s('chet', 'israeli'), /clear your throat softly/);
+  assert.match(s('chet', 'sephardi'), /deeper in the throat/);
+  assert.match(s('ayin', 'ashkenazi'), /says nothing/);
+  assert.match(s('ayin', 'sephardi'), /squeezed throat/);
+  assert.match(s('kaf', 'israeli'), /clear your throat softly/);
+  assert.match(s('qof', 'israeli'), /K, like the k in kite.*tongue/);
+  assert.match(s('tsadi', 'israeli'), /T sliding into S/);
+});

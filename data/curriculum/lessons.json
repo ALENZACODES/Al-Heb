@@ -4415,7 +4415,7 @@
     },
     {
      "he": "עָלֵינוּ",
-     "en": "upon us",
+     "en": "it is upon us",
      "translit": null,
      "pronunciation": {
       "israeli": "aleinu",
@@ -4617,7 +4617,7 @@
    "words": [
     {
      "he": "נֵר",
-     "en": "candle, lamp",
+     "en": "oil lamp, candle",
      "translit": null,
      "pronunciation": {
       "israeli": "ner",
@@ -4788,7 +4788,7 @@
     },
     {
      "he": "לְחַיִּים",
-     "en": "cheers! (to life)",
+     "en": "cheers!",
      "translit": null,
      "pronunciation": {
       "israeli": "lechayim",
@@ -4802,7 +4802,7 @@
     },
     {
      "he": "שַׁבָּת שָׁלוֹם",
-     "en": "Shabbat shalom",
+     "en": "peaceful Sabbath (greeting from Friday afternoon to Saturday)",
      "translit": null,
      "pronunciation": {
       "israeli": "shabat shalom",
@@ -5178,7 +5178,7 @@
     },
     {
      "he": "שָׁבוּעַ טוֹב",
-     "en": "a good week (the greeting after Shabbat)",
+     "en": "good week",
      "translit": null,
      "pronunciation": {
       "israeli": "shavu'a tov",
@@ -6651,7 +6651,7 @@
     },
     {
      "he": "הַגּוֹמֵל",
-     "en": "who bestows (good)",
+     "en": "who bestows good",
      "translit": null,
      "pronunciation": {
       "israeli": "hagomel",
@@ -6683,7 +6683,7 @@
     },
     {
      "he": "כֵּן יְהִי רָצוֹן",
-     "en": "may it be so (so may it be his will)",
+     "en": "may it be so",
      "translit": null,
      "pronunciation": {
       "israeli": "ken yehi ratzon",
@@ -7276,7 +7276,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     }
@@ -7684,7 +7683,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     },
@@ -7697,7 +7695,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     }
@@ -8087,7 +8084,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     }
@@ -8519,7 +8515,7 @@
     },
     {
      "he": "יָשָׁר",
-     "en": "straight ahead",
+     "en": "right, straight",
      "translit": null,
      "pronunciation": {
       "israeli": "yashar"
@@ -8943,7 +8939,7 @@
     },
     {
      "he": "הוֹדָעָה",
-     "en": "message",
+     "en": "notice",
      "translit": null,
      "pronunciation": {
       "israeli": "hoda'ah"
@@ -9314,7 +9310,7 @@
     },
     {
      "he": "קוֹמָה",
-     "en": "floor (storey)",
+     "en": "story, floor",
      "translit": null,
      "pronunciation": {
       "israeli": "komah"
@@ -9919,7 +9915,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     },
@@ -9932,7 +9927,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     },
@@ -9945,7 +9939,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     },
@@ -10017,7 +10010,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     },
@@ -10030,7 +10022,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     },
@@ -10068,7 +10059,7 @@
    "words": [
     {
      "he": "שַׁבָּת שָׁלוֹם",
-     "en": "Shabbat shalom",
+     "en": "peaceful Sabbath (greeting from Friday afternoon to Saturday)",
      "translit": null,
      "pronunciation": {
       "israeli": "shabat shalom"
@@ -10080,7 +10071,7 @@
     },
     {
      "he": "שָׁבוּעַ טוֹב",
-     "en": "a good week",
+     "en": "good week",
      "translit": null,
      "pronunciation": {
       "israeli": "shavu'a tov"
@@ -10445,7 +10436,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     }
@@ -10481,7 +10471,7 @@
     },
     {
      "he": "רוֹפֵא",
-     "en": "doctor (m)",
+     "en": "medical doctor, physician",
      "translit": null,
      "pronunciation": {
       "israeli": "rofe"
@@ -11290,7 +11280,7 @@
     },
     {
      "he": "תּוֹר",
-     "en": "queue, turn",
+     "en": "appointment, turn",
      "translit": null,
      "pronunciation": {
       "israeli": "tor"
@@ -11898,7 +11888,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     }
@@ -12403,7 +12392,7 @@
     },
     {
      "he": "חֹדֶשׁ",
-     "en": "a month",
+     "en": "month",
      "translit": null,
      "pronunciation": {
       "israeli": "chodesh"
@@ -12628,7 +12617,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     },
@@ -12641,7 +12629,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     },
@@ -12791,7 +12778,7 @@
     },
     {
      "he": "גַּדְּלוּ",
-     "en": "magnify! (the leader's call)",
+     "en": "magnify! (leader's invitation)",
      "translit": null,
      "pronunciation": {
       "israeli": "gadelu",
@@ -12842,7 +12829,7 @@
     },
     {
      "he": "עֲלִיָּה",
-     "en": "aliyah",
+     "en": "aliyah (being called up to the Torah)",
      "translit": null,
      "pronunciation": {
       "israeli": "aliyah",
@@ -13180,7 +13167,7 @@
     },
     {
      "he": "יִמְלֹךְ",
-     "en": "will reign",
+     "en": "he will reign",
      "translit": null,
      "pronunciation": {
       "israeli": "yimlokh",
@@ -13602,7 +13589,7 @@
     },
     {
      "he": "שָׁנָה טוֹבָה",
-     "en": "a good year (greeting)",
+     "en": "happy new year (Rosh Hashana greeting)",
      "translit": null,
      "pronunciation": {
       "israeli": "shanah tovah",
@@ -13824,7 +13811,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     },
@@ -14983,7 +14969,7 @@
     },
     {
      "he": "נֵר",
-     "en": "candle, light",
+     "en": "oil lamp, candle",
      "translit": null,
      "pronunciation": {
       "israeli": "ner",
@@ -16499,7 +16485,7 @@
     },
     {
      "he": "הוֹדָעָה",
-     "en": "message, notice",
+     "en": "notice",
      "translit": null,
      "pronunciation": {
       "israeli": "hoda'ah"
@@ -16730,7 +16716,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     },
@@ -17105,7 +17090,7 @@
     },
     {
      "he": "חָמוּד",
-     "en": "cute, sweet",
+     "en": "cute, sweet, charming",
      "translit": null,
      "pronunciation": {
       "israeli": "chamud"
@@ -17141,7 +17126,7 @@
     },
     {
      "he": "חָבֵר",
-     "en": "friend; boyfriend",
+     "en": "friend (m)",
      "translit": null,
      "pronunciation": {
       "israeli": "chaver"
@@ -17153,7 +17138,7 @@
     },
     {
      "he": "חֲבֵרָה",
-     "en": "friend; girlfriend",
+     "en": "friend (f)",
      "translit": null,
      "pronunciation": {
       "israeli": "chaverah"
@@ -17228,7 +17213,7 @@
     },
     {
      "he": "בְּשִׂמְחָה",
-     "en": "gladly",
+     "en": "gladly, with pleasure",
      "translit": null,
      "pronunciation": {
       "israeli": "besimchah"
@@ -17352,7 +17337,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     },
@@ -17365,7 +17349,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     },
@@ -17547,7 +17530,7 @@
     },
     {
      "he": "יָשָׁר",
-     "en": "straight",
+     "en": "right, straight",
      "translit": null,
      "pronunciation": {
       "israeli": "yashar"
@@ -18562,7 +18545,7 @@
     },
     {
      "he": "חָמוּד",
-     "en": "cute",
+     "en": "cute, sweet, charming",
      "translit": null,
      "pronunciation": {
       "israeli": "chamud"
@@ -19057,7 +19040,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     },
@@ -19219,7 +19201,7 @@
     },
     {
      "he": "תּוֹר",
-     "en": "turn, appointment",
+     "en": "appointment, turn",
      "translit": null,
      "pronunciation": {
       "israeli": "tor"
@@ -19393,7 +19375,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     },
@@ -19480,7 +19461,7 @@
     },
     {
      "he": "קוֹמָה",
-     "en": "floor",
+     "en": "story, floor",
      "translit": null,
      "pronunciation": {
       "israeli": "komah"
@@ -19738,7 +19719,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     }
@@ -19855,7 +19835,7 @@
     },
     {
      "he": "רוֹפֵא",
-     "en": "doctor",
+     "en": "medical doctor, physician",
      "translit": null,
      "pronunciation": {
       "israeli": "rofe"
@@ -20390,7 +20370,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     },
@@ -20417,7 +20396,7 @@
    "words": [
     {
      "he": "חֶשְׁבּוֹן",
-     "en": "account",
+     "en": "account; bill",
      "translit": null,
      "pronunciation": {
       "israeli": "cheshbon"
@@ -20718,7 +20697,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     },
@@ -20745,7 +20723,7 @@
    "words": [
     {
      "he": "הוֹדָעָה",
-     "en": "message",
+     "en": "notice",
      "translit": null,
      "pronunciation": {
       "israeli": "hoda'ah"
@@ -21047,7 +21025,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     },
@@ -21074,7 +21051,7 @@
    "words": [
     {
      "he": "שַׁבָּת שָׁלוֹם",
-     "en": "Shabbat greeting (Friday to Saturday)",
+     "en": "peaceful Sabbath (greeting from Friday afternoon to Saturday)",
      "translit": null,
      "pronunciation": {
       "israeli": "shabat shalom"
@@ -21086,7 +21063,7 @@
     },
     {
      "he": "שָׁבוּעַ טוֹב",
-     "en": "a good week (after Shabbat)",
+     "en": "good week",
      "translit": null,
      "pronunciation": {
       "israeli": "shavu'a tov"
@@ -21110,7 +21087,7 @@
     },
     {
      "he": "שָׁנָה טוֹבָה",
-     "en": "a good year (Rosh Hashana)",
+     "en": "happy new year (Rosh Hashana greeting)",
      "translit": null,
      "pronunciation": {
       "israeli": "shanah tovah"
@@ -21206,7 +21183,7 @@
     },
     {
      "he": "סְלִיחָה",
-     "en": "sorry",
+     "en": "forgiveness, pardon",
      "translit": null,
      "pronunciation": {
       "israeli": "selichah"
@@ -21384,7 +21361,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     },
@@ -21397,7 +21373,6 @@
      "options": [
       "formal",
       "neutral",
-      "casual",
       "slang"
      ]
     },

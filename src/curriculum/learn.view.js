@@ -8,10 +8,11 @@
  * ctx: {store (sync or async get/set), route(path), t(key), settings?, audio?, query?}.
  * Storage keys: see progress.js.
  */
+import { plain } from "../shell/plain-copy.js";
 import { lessons, belts } from "./lessons.js";
 import { due } from "./srs.js";
 import { plural } from "../shell/plural.js";
-import { el, heText, tr, replaceKeepingFocus } from "./dom.js";
+import { el, heText, tr, replaceKeepingFocus, levelLabel } from "./dom.js";
 import { loadState, completeLesson } from "./actions.js";
 import { mountLesson } from "./lesson.view.js";
 import { mountReview } from "./review.view.js";
@@ -23,6 +24,7 @@ import { mountLadder } from "./ladder.view.js";
 import { mountFade } from "./fade.view.js";
 import { mountGender } from "./gender.view.js";
 import { mountScaffold } from "./scaffold.view.js";
+import { streakVisible } from "../shell/comfort.js";
 
 export function mount(root, ctx) {
   const q = ctx?.query || {};
@@ -50,6 +52,7 @@ function mountMap(root, ctx) {
   let alive = true;
   const goal = ctx?.settings?.get?.("goal");
   let track = goal === "israel" ? "israel" : "read";
+  let showAll = false; // a long lesson list shows the next few lessons first; "Show all" opens the rest
   const wrap = el("section", { class: "alef-learn", "aria-labelledby": "view-title" });
   const h1 = el("h1", { id: "view-title", tabindex: "-1", class: "alef-h" }, tr(ctx, "learn.title", "Lessons"));
   wrap.append(h1);
@@ -62,10 +65,12 @@ function mountMap(root, ctx) {
     const dueCount = due(Object.values(st.cards), Date.now()).length;
     const list = lessons.filter((l) => l.track === track);
     const doneInTrack = list.filter((l) => done.has(l.id)).length;
+    const firstOpen = Math.max(0, list.findIndex((l) => !done.has(l.id)));
+    const far = (i) => list.length > 8 && !showAll && (i < firstOpen - 1 || i > firstOpen + 5);
 
     replaceKeepingFocus(wrap, h1,
       el("div", { class: "alef-tabs", role: "group", "aria-label": tr(ctx, "learn.tracks", "Tracks") },
-        ...[["read", tr(ctx, "learn.track.read", "Read the siddur")], ["israel", tr(ctx, "learn.track.israel", "Speak in Israel")]].map(([id, label]) =>
+        ...[["read", tr(ctx, "learn.track.read", "Read the prayer book")], ["israel", tr(ctx, "learn.track.israel", "Speak in Israel")]].map(([id, label]) =>
           el("button", { type: "button", class: "alef-tab", "aria-pressed": String(track === id), id: `alef-tab-${id}`,
             onclick: () => { track = id; render(); } }, label))),
       el("p", { class: "alef-progress", role: "status" }, `${doneInTrack} / ${list.length} ${tr(ctx, "learn.lessonsDone", "lessons done")}`),
@@ -73,25 +78,25 @@ function mountMap(root, ctx) {
         ? dueCount === 1 ? "1 review due" : `${dueCount} ${tr(ctx, "learn.dueReviews", "reviews due")}`
         : tr(ctx, "learn.noDue", "No reviews due"), " ",
         dueCount ? el("a", { class: "btn", href: "#/learn?review=1" }, "Review now") : null),
-      el("p", { class: "alef-streak" }, st.streak.count ? `Streak: ${st.streak.count} day${st.streak.count === 1 ? "" : "s"}${st.streak.activeToday ? "" : " (5 minutes today keeps it)"}` : (st.streak.best ? `Paused. Your best streak was ${st.streak.best} day${st.streak.best === 1 ? "" : "s"}. A day counts after 5 minutes of study.` : "No streak yet. A day counts after 5 minutes of study on a lesson, review or practice screen.")),
+      !streakVisible(ctx) ? null : el("p", { class: "alef-streak" }, st.streak.count ? `Streak: ${st.streak.count} day${st.streak.count === 1 ? "" : "s"}.${st.streak.activeToday ? " Today counts." : " Study for 5 minutes today to add a day."}` : (st.streak.best ? `Your best streak was ${st.streak.best} day${st.streak.best === 1 ? "" : "s"}. A new one starts the next time you study for 5 minutes.` : plain("streakNone"))),
       track === "read" ? beltStrip(done) : null,
-      el("p", { class: "row alef-extras" },
+      el("details", { class: "alef-more-practice" }, el("summary", {}, "More ways to practise"), el("p", { class: "row alef-extras" },
         track === "read" ? el("a", { class: "btn secondary", href: "#/learn?loanwords=1" }, "Words you can already read") : null,
         track === "read" ? el("a", { class: "btn secondary", href: "#/learn?checkpoint=1" }, "Look-alike checkpoint") : null,
         track === "read" ? el("a", { class: "btn secondary", href: "#/learn?ladder=1" }, "Syllable ladder") : null,
         track === "read" ? el("a", { class: "btn secondary", href: "#/learn?fade=1" }, "Fade-out recall") : null,
-        el("a", { class: "btn secondary", href: "#/learn?scaffold=1" }, "Read without Latin"),
+        el("a", { class: "btn secondary", href: "#/learn?scaffold=1" }, "Read without English letters"),
         ctx?.hasRoute?.("intermediate") ? el("a", { class: "btn secondary", href: "#/intermediate" }, "Intermediate lessons") : null,
         track === "israel" ? el("a", { class: "btn secondary", href: "#/learn?gender=pairs" }, "Gender pairs") : null,
         track === "israel" ? el("a", { class: "btn secondary", href: "#/learn?gender=roles" }, "Say it as me") : null,
-        track === "israel" ? el("a", { class: "btn secondary", href: "#/learn?dialogues=1" }, "Dialogues") : null),
+        track === "israel" ? el("a", { class: "btn secondary", href: "#/learn?dialogues=1" }, "Dialogues") : null)),
       el("ol", { class: "alef-lesson-list", "aria-label": track === "read" ? "Reading lessons" : "Israel lessons" },
-        ...list.map((l) => {
+        ...list.map((l, idx) => {
           const ready = l.prerequisites.every((p) => done.has(p));
           const isDone = done.has(l.id);
           const state = isDone ? "done" : ready ? "available" : "locked";
-          return el("li", { class: `alef-lesson alef-lesson-${state}`, "data-lesson": l.id },
-            el("span", { class: "alef-level" }, l.level), " ",
+          return el("li", { class: `alef-lesson alef-lesson-${state}`, "data-lesson": l.id, hidden: far(idx) ? "" : null },
+            el("span", { class: "alef-level" }, levelLabel(l.level)), " ",
             el("strong", {}, l.title), " ",
             el("span", { class: "alef-min" }, `${l.estMinutes} min`), " ",
             l.words[0] ? heText(l.words[0].he) : null, " ",
@@ -100,13 +105,14 @@ function mountMap(root, ctx) {
               onclick: () => ctx && ctx.route && ctx.route(`/learn?lesson=${l.id}`) }, state === "done" ? tr(ctx, "learn.review", "Review") : tr(ctx, "learn.start", "Start")),
             " ",
             state === "available" ? el("button", { type: "button", class: "alef-btn alef-btn-secondary", "aria-label": `Mark complete: ${l.title}`,
-              onclick: async () => { await completeLesson(ctx, l); render(); } }, tr(ctx, "learn.markDone", "Mark complete")) : null);
-        })));
+              onclick: async () => { await completeLesson(ctx, l); await render(); if (alive) h1.focus?.({ preventScroll: true }); } }, tr(ctx, "learn.markDone", "Mark complete")) : null);
+        })),
+      list.length > 8 ? el("p", {}, el("button", { type: "button", class: "btn secondary", id: "alef-show-all", "aria-pressed": String(showAll), onclick: () => { showAll = !showAll; render().then(() => { if (alive) wrap.querySelector?.("#alef-show-all")?.focus?.(); }); } }, showAll ? "Show fewer lessons" : `Show all ${list.length} lessons`)) : null);
   }
 
   function beltStrip(done) {
     const current = belts.belts.find((b) => b.lessons && !lessonsOfBelt(b).every((id) => done.has(id)));
-    return el("p", { class: "alef-belt" }, `${tr(ctx, "learn.belt", "Current belt")}: ${current ? current.name : "Black (fluency practice)"}`);
+    return el("p", { class: "alef-belt" }, `${tr(ctx, "learn.belt", "Your level")}: ${current ? current.name + " belt" : "Black belt (practice for fluency)"}. `, el("span", { class: "muted" }, "Belts are ALEF's own levels, like in martial arts. Each one covers a set of lessons."));
   }
   render();
   return () => { alive = false; wrap.remove(); };

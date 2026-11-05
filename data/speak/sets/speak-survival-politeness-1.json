@@ -9,6 +9,15 @@
  "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
  "items": [
   {
+   "id": "p580df509",
+   "he": "בְּבַקָּשָׁה",
+   "translit": "bevakashah",
+   "en": "please / you're welcome",
+   "kind": "word",
+   "audioId": "il01-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
    "id": "pb100e90c",
    "he": "אַחִי",
    "translit": "achi",
@@ -42,15 +51,6 @@
    "en": "cool / great / fine by me",
    "kind": "word",
    "audioId": "i-18-w11",
-   "source": "data/vocab/words.json"
-  },
-  {
-   "id": "p580df509",
-   "he": "בְּבַקָּשָׁה",
-   "translit": "bevakashah",
-   "en": "please / you're welcome",
-   "kind": "word",
-   "audioId": "il01-w3",
    "source": "data/vocab/words.json"
   },
   {

@@ -1,6 +1,7 @@
 // ALEF boot: wires store, settings, audio, router, and lazily mounted views.
 import { store } from './store.js';
 import { createSettings } from './shell/settings.js';
+import { applyComfort, COMFORT_KEYS } from './shell/comfort.js';
 import { createRouter, ROUTES, loadRouteModule, availableRoutes } from './shell/router.js';
 import { VIEW_FILES } from './shell/views.generated.js';
 import { renderNav as renderNavBar } from './shell/nav.js';
@@ -8,68 +9,116 @@ import { mountPreviewBanner } from './shell/preview-banner.js';
 import { t, tHe } from './shell/i18n.js';
 import { createStubAudio } from './shell/audio-stub.js';
 import { createShellAudio } from './shell/audio.js';
-import { createShardLoader } from './shell/audio-shards.js';
-import { fetchCoreManifest, afterPaint } from './shell/audio-manifest.js';
+import { createShardLoader, warmShardAfterInstall } from './shell/audio-shards.js';
+import { isRealProgressWrite } from './shell/persist-gate.js';
+import { fetchCoreManifest, fetchAudioSummary, afterPaint } from './shell/audio-manifest.js';
 import { h, heSpan, unavailableCard } from './shell/ui.js';
 import { loadImageResolver, img as imgEl } from './img/resolve.js';
+import { applyMotor, MOTOR_KEYS } from './shell/motor.js';
 
 const settings = createSettings(store);
 
-/** The player module is small and loads at boot; the ~1.3 MB core manifest does NOT: it resolves after first paint (see scheduleManifest). */
+/** The player module is small and loads at boot; the ~1.9 MB core manifest does NOT: it loads on first need (see scheduleManifest). */
 async function makeAudio() {
   try {
     const m = await import('./audio/player.js');
     if (typeof m.createAudio !== 'function') throw new Error('player unavailable');
-    return createShellAudio({ settings, loadManifest: () => fetchCoreManifest((u) => fetch(u)), createAudio: m.createAudio });
+    return createShellAudio({ settings, loadManifest: () => fetchCoreManifest((u) => fetch(u)), loadSummary: () => fetchAudioSummary((u) => fetch(u)), createAudio: m.createAudio });
   } catch (e) { console.warn('lane 4 audio player not used:', e?.message); }
   return createStubAudio({ settings });
 }
 let lastCtx = null, lastMatch = null, touched = false;
+// Finer-grained than `touched`, for the late-manifest retry: a gesture outside a text field, or an edit to any field.
+let touchedOutsideField = false, fieldEdited = false;
+/** serviceWorker is read inside try: some browsers throw on the property itself (blocked storage / cookies), and boot must never depend on it. */
+function swContainer() { try { return location.protocol !== 'file:' && 'serviceWorker' in navigator ? navigator.serviceWorker || null : null; } catch { return null; } }
 // Scroll restore on Back (src/shell/scroll-restore.js): loaded lazily; until it loads (or offline before it is precached) every
 // navigation just scrolls to the top as before. Links and ctx.route() mark a forward navigation; an unmarked hashchange is Back/Forward.
 let scrollKeeper = null, lastHashShown = null;
 import('./shell/scroll-restore.js').then((m) => { scrollKeeper = m.createScrollRestore(); }).catch(() => {});
-document.addEventListener('click', (e) => { const a = e.target instanceof Element ? e.target.closest('a[href^="#"]') : null; if (a && !a.getAttribute('href').startsWith('#main')) scrollKeeper?.markForward(); }, true);
+document.addEventListener('click', (e) => {
+  const a = e.target instanceof Element ? e.target.closest('a[href^="#"]') : null;
+  if (!a || a.getAttribute('href').startsWith('#main')) return;
+  // Only a click that will change the hash marks a forward navigation; otherwise the flag would stay set and make the next Back skip its restore.
+  if (e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || (a.target && a.target !== '_self') || a.hasAttribute('download') || a.getAttribute('href') === location.hash) return;
+  scrollKeeper?.markForward();
+}, true);
 // Progress protection (mobile FINDINGS item 4): ask for persistent storage the first time real progress (any non-settings key)
-// is written, not only when Settings is opened. Once per page load; the answer is logged once and never shown as an error.
+// is written (boot-time bookkeeping such as an empty streak record does not count), not only when Settings is opened. Once per page load; the answer is logged once and never shown as an error.
 let persistAsked = false;
 store.subscribe((key, _value, info) => {
-  if (persistAsked || key === 'settings' || info?.external) return;
+  if (persistAsked || info?.external || !isRealProgressWrite(key, _value)) return;
   persistAsked = true;
   import('./shell/backup.js').then((m) => m.requestPersistence()).then((r) => { if (r?.supported) console.info(`storage persistence after first save of "${key}": ${r.persisted ? 'granted' : 'not granted (keep a backup file)'}`); }).catch(() => {});
 });
-/** After the first route has rendered: load the core manifest in an idle slot; if it arrives and the learner has not touched the
- * page since the route mounted, re-render that route once so audio buttons reflect the real manifest. Otherwise they keep the
- * honest "checking" state until the next navigation (never a claim that a clip exists). */
+/** The core manifest is NOT fetched at boot: the shell audio loads it the first time a view asks about a clip (status/has/play) or a
+ * button calls ensureManifest. This watches that load: when it lands and the learner has not touched the page since the route
+ * mounted, re-render that route once so audio buttons reflect the real list (otherwise they keep the honest "checking" state until
+ * the next navigation, never a claim that a clip exists). window.alefManifest resolves once the first route has painted and any
+ * load that is already in flight has settled; it never starts a load itself. */
 function scheduleManifest(audio) {
-  if (typeof audio.ensureManifest !== 'function') return;
-  const go = async () => {
-    const was = lastMatch;
-    const ok = await audio.ensureManifest();
-    document.body.dataset.audioManifest = audio.manifestState;
-    if (ok && was && was === lastMatch && !touched && lastCtx) show(was, lastCtx, { quiet: true });
-  };
-  window.alefManifest = new Promise((res) => { shownFirst.then(() => afterPaint(() => go().then(res, res))); });
+  document.body.dataset.audioManifest = audio.manifestState || 'ready';
+  let wasAtStart = null;
+  if (typeof audio.onManifestState === 'function') {
+    audio.onManifestState((st) => {
+      document.body.dataset.audioManifest = st;
+      if (st === 'checking') wasAtStart = lastMatch;
+      else if (st === 'ready') refreshWhenCalm(wasAtStart || lastMatch);
+    });
+  }
+  window.alefManifest = new Promise((res) => { shownFirst.then(() => afterPaint(() => Promise.resolve(audio.loading).then(() => audio.manifestState === 'ready').then(res, res))); });
+}
+/** Re-render `was` once so audio buttons reflect the manifest, unless that would clobber the learner. Settings has no audio buttons and
+ * holds live form state (a file picked for Restore, a half-typed value), so it is never refreshed. While a text field has focus the
+ * refresh waits and retries on blur: it fires once focus has left every control in the view, the learner has made no edit and no
+ * gesture outside a field, and the route is unchanged. Focus moving to another control (Tab) keeps waiting, so focus is never dropped. */
+let disarmRefresh = () => {};
+function refreshWhenCalm(was) {
+  if (!was || was !== lastMatch || touched || !lastCtx || was.route?.name === 'settings') return;
+  const main = document.getElementById('main');
+  const a = document.activeElement;
+  if (!(main && a && main.contains(a) && /^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName || ''))) { show(was, lastCtx, { quiet: true }); return; }
+  disarmRefresh();
+  const onOut = () => setTimeout(() => {
+    if (was !== lastMatch || touchedOutsideField || fieldEdited) { disarmRefresh(); return; }
+    const now = document.activeElement;
+    if (now && now !== document.body && main.contains(now)) return; // focus moved to another control: keep waiting
+    disarmRefresh(); show(was, lastCtx, { quiet: true });
+  }, 0);
+  main.addEventListener('focusout', onOut);
+  disarmRefresh = () => { main.removeEventListener('focusout', onOut); disarmRefresh = () => {}; };
 }
 let shownFirstResolve; const shownFirst = new Promise((r) => { shownFirstResolve = r; });
+let soundBar = null; // the one sound bar's dismiss control, set once audio-access.js has loaded (until then the bar shows)
 function wireSoundStatus(audio) {
   const el = document.getElementById('sound-status');
   if (!el) return;
-  if (typeof audio.subscribe === 'function') audio.subscribe((s) => { el.textContent = s.text; el.dataset.mode = s.mode; });
+  if (typeof audio.subscribe === 'function') audio.subscribe((s) => { el.textContent = s.text; el.dataset.mode = s.mode; soundBar?.show(s.mode); });
   else { el.textContent = "Sound: your browser's text-to-speech voice (fallback player). No recordings."; el.dataset.mode = 'tts'; }
 }
 
-/** After first paint: lazily load the word-clip shard for the learner's congregation, and reload it when the setting changes. */
+/** The word-clip shard for the learner's congregation is fetched only when something asks about a 'word' clip (audio.onNeed), and
+ * again when the congregation setting changes after that. A route that never asks about word clips never downloads it. */
 function startShardLoading(audio) {
-  if (typeof audio.extend !== 'function') return; // stub player: nothing to extend
+  if (typeof audio.extend !== 'function' || typeof audio.onNeed !== 'function') return; // stub player: nothing to extend
+  let asked = false, wasAtAsk = null;
   const loader = createShardLoader({
     fetch: (u) => fetch(u), audio, settings,
-    onState: (s) => { audio.setNote?.(s.note); document.body.dataset.audioShard = s.state; },
+    onState: (s) => {
+      audio.setNote?.(s.note); document.body.dataset.audioShard = s.state;
+      if (s.state === 'loaded' || s.state === 'fallback') refreshWhenCalm(wasAtAsk || lastMatch);
+    },
   });
-  loader.watch();
+  loader.watch(() => asked);
   window.alefShards = loader;
-  const go = () => { loader.load(); };
-  requestAnimationFrame(() => setTimeout(() => ('requestIdleCallback' in window ? requestIdleCallback(go, { timeout: 2000 }) : go()), 0));
+  audio.onNeed((kind) => {
+    if (asked || kind !== 'word') return;
+    asked = true; wasAtAsk = lastMatch;
+    loader.load();
+  });
+  // Fresh install: store the shard through the worker once it controls the page (the first load bypassed it).
+  const swc = swContainer();
+  if (swc) warmShardAfterInstall({ fetch: (u) => fetch(u), settings, serviceWorker: swc }).then((r) => { document.body.dataset.audioShardWarm = r; }).catch(() => {});
 }
 
 // Install prompt (Chromium). Not supported on iOS Safari (Add to Home Screen is manual).
@@ -82,6 +131,8 @@ function applyTheme() {
   if (th === 'auto') document.documentElement.removeAttribute('data-theme'); else document.documentElement.setAttribute('data-theme', th);
 }
 function applyScript() { document.documentElement.dataset.script = settings.get('script'); }
+// Calm mode and reading comfort: CSS variables and data-calm on the root (src/shell/comfort.js)
+function applyComfortNow() { applyComfort(document.documentElement, settings.all()); }
 
 /** Names of routes whose view file exists in this build (from the generated view list). */
 let available = availableRoutes(VIEW_FILES);
@@ -121,15 +172,22 @@ document.addEventListener('focusin', (e) => {
 
 let unmount = () => {};
 let navToken = 0;
+let heldFocusId = '';
+let navFocusOwed = false; // a real navigation has begun but its heading has not been focused yet (a quiet re-render that supersedes it must still do that)
 let firstShow = true; // do not steal focus on the initial page load (keyboard users start at the skip link)
 
 async function show(match, ctxBase, { quiet = false } = {}) {
   const token = ++navToken;
   const root = document.getElementById('main');
+  if (!quiet) navFocusOwed = true;
+  if (quiet && root.contains(document.activeElement) && document.activeElement.id) heldFocusId = document.activeElement.id; // a quiet re-render must not drop focus the learner already has (kept across a quiet render that a second one supersedes)
   try { unmount(); } catch (e) { console.warn('unmount failed', e); }
   unmount = () => {};
   const { route, params, query, path } = match;
-  if (!quiet) { lastMatch = match; lastCtx = ctxBase; touched = false; if (lastHashShown != null) scrollKeeper?.leave(lastHashShown); lastHashShown = location.hash; }
+  disarmRefresh();
+  // lastHashShown is the page actually on screen; it moves to the new hash only once that page has rendered (finish), so a navigation
+  // superseded before it rendered cannot file the previous page's scroll position under the wrong path.
+  if (!quiet) { lastMatch = match; lastCtx = ctxBase; touched = false; touchedOutsideField = false; fieldEdited = false; if (lastHashShown != null) scrollKeeper?.leave(lastHashShown); }
   const live = document.getElementById('announcer');
   if (!route) {
     root.replaceChildren(h('section', { class: 'card' }, h('h1', { id: 'view-title', tabindex: '-1' }, t('notfound.title')), h('p', { class: 'mono' }, path), h('a', { class: 'btn', href: '#/' }, t('nav.home'))));
@@ -152,12 +210,20 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     if (typeof mod.mount !== 'function') throw new Error('module has no mount(root, ctx) export');
     root.replaceChildren();
     const u = await mod.mount(root, ctx);
+    // Superseded while mounting: this view's cleanup would never be registered (unmount now belongs to the newer navigation), so run it here.
+    if (token !== navToken) { if (typeof u === 'function') { try { u(); } catch (e) { console.warn('unmount failed', e); } } return; }
     if (typeof u === 'function') unmount = u;
-    mountPreviewBanner(root, route); // preview-tier pages (docs/v0/SCOPE.md) get a small "unreviewed, may change" note on top
   } catch (err) {
+    if (token !== navToken) { console.warn(`view ${route.name} failed after being superseded`, err); return; }
     console.error(`view ${route.name} failed`, err);
     unavailableCard(root, { title: route.title, t, module: route.module, error: err?.message, kind: 'error' });
   }
+  if (route.name === 'letter' && params?.id && token === navToken) { // "Letter Bet - ALEF" rather than a generic title; falls back to the id, then to the route title
+    let nm = '';
+    try { const L = await (await fetch(new URL('../data/letters/letters.json', import.meta.url))).json(); nm = (Array.isArray(L) ? L : L.letters || []).find((x) => x.id === params.id)?.name || ''; } catch { /* keep the generic title */ }
+    if (token === navToken) document.title = `${route.title} ${nm || params.id.charAt(0).toUpperCase() + params.id.slice(1)} - ALEF`;
+  }
+  try { mountPreviewBanner(root, route); } catch (e) { console.warn('preview banner failed', e); } // preview-tier note (docs/v0/SCOPE.md); a banner fault must not replace a view that mounted
   root.removeAttribute('aria-busy');
   finish();
 
@@ -169,9 +235,11 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     }
     // focus management on navigation: move focus to the view heading, announce title, reset scroll
     const hd = root.querySelector('#view-title, h1');
-    if (hd && !firstShow && !quiet) { if (!hd.hasAttribute('tabindex')) hd.setAttribute('tabindex', '-1'); hd.focus({ preventScroll: true }); }
-    firstShow = false;
-    if (!quiet) { live.textContent = document.title; if (scrollKeeper) scrollKeeper.arrive(location.hash); else window.scrollTo(0, 0); }
+    if (hd && !firstShow && (!quiet || navFocusOwed)) { if (!hd.hasAttribute('tabindex')) hd.setAttribute('tabindex', '-1'); hd.focus({ preventScroll: true }); }
+    firstShow = false; navFocusOwed = false;
+    if (quiet && heldFocusId && (!document.activeElement || document.activeElement === document.body)) document.getElementById(heldFocusId)?.focus({ preventScroll: true });
+    heldFocusId = '';
+    if (!quiet) { live.textContent = document.title; if (scrollKeeper) scrollKeeper.arrive(location.hash); else window.scrollTo(0, 0); lastHashShown = location.hash; }
     document.body.dataset.route = route?.name ?? 'notfound';
     document.body.dataset.ready = '1';
     shownFirstResolve();
@@ -181,17 +249,21 @@ async function show(match, ctxBase, { quiet = false } = {}) {
 async function boot() {
   // The skip link's #main href would be read by the hash router as the route "/main"; focus <main> directly instead.
   document.querySelector('.skip-link')?.addEventListener('click', (e) => { e.preventDefault(); document.getElementById('main')?.focus(); });
-  applyTheme(); applyScript(); wireChrome();
-  settings.subscribe((_, changed) => { if (changed.includes('theme')) applyTheme(); if (changed.includes('script')) applyScript(); });
+  applyTheme(); applyScript(); applyComfortNow(); applyMotor(document.documentElement, settings.all()); wireChrome();
+  settings.subscribe((all, changed) => { if (changed.some((k) => MOTOR_KEYS.includes(k))) applyMotor(document.documentElement, all); if (changed.includes('theme')) applyTheme(); if (changed.includes('script')) applyScript(); if (changed.some((k) => COMFORT_KEYS.includes(k))) applyComfortNow(); });
   const audio = await makeAudio();
-  document.getElementById('main').addEventListener('pointerdown', () => { touched = true; }, true);
-  document.getElementById('main').addEventListener('keydown', () => { touched = true; }, true);
+  const mainEl = document.getElementById('main');
+  const gesture = (e) => { touched = true; if (!(e.target instanceof Element && e.target.closest('input, textarea, select'))) touchedOutsideField = true; };
+  mainEl.addEventListener('pointerdown', gesture, true);
+  mainEl.addEventListener('keydown', gesture, true);
+  mainEl.addEventListener('input', () => { fieldEdited = true; }, true);
+  mainEl.addEventListener('change', () => { fieldEdited = true; }, true);
   // iOS audio unlock: prime the sound engines synchronously inside the first gesture (src/shell/audio.js createAudioUnlock)
   const unlockOnce = () => { try { audio.unlock?.(); } catch { /* ignore */ } for (const t of ['pointerdown', 'keydown', 'touchend']) document.removeEventListener(t, unlockOnce, true); };
   for (const t of ['pointerdown', 'keydown', 'touchend']) document.addEventListener(t, unlockOnce, true);
   available = availableRoutes(VIEW_FILES);
   wireSoundStatus(audio);
-  import('./shell/audio-access.js').then((m) => import('./shell/ui.js').then((u) => m.mountAudioBanner(u.h, audio))).catch(() => {});
+  import('./shell/audio-access.js').then((m) => { soundBar = m.wireSoundBar(audio); }).catch(() => {});
   let router;
   let images = null;
   try { images = await loadImageResolver((u) => fetch(u).then((r) => { if (!r.ok) throw new Error(String(r.status)); return r.json(); }), { settings }); } catch { images = null; }
@@ -203,9 +275,8 @@ async function boot() {
   import('./morning/boot.js').then((m) => m.startMorning({ store, audio })).catch(() => {});
   scheduleManifest(audio);
   startShardLoading(audio);
-  if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-    navigator.serviceWorker.register('sw.js').catch((e) => console.warn('service worker not registered', e));
-  }
+  const swc = swContainer();
+  if (swc) { try { swc.register('sw.js').catch((e) => console.warn('service worker not registered', e)); } catch (e) { console.warn('service worker not registered', e); } }
   // Always: the storage notice (private mode, quota) matters most where there is no service worker; the update banner is inert there.
   import('./shell/update.js').then((m) => { window.alef.update = m.startUpdateBanner().handle; }).catch(() => {});
 }

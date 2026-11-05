@@ -6,36 +6,54 @@
 // Tests inject ctx.typingData, ctx.keyboard, ctx.rng, ctx.clock {now}.
 import { el, storeGet, storeSet } from "../curriculum/dom.js";
 import { loadJSON } from "../curriculum/data.js";
-import { TYPING_KEY, DRILLS, normalizeState, recordRound, buildRound, checkAnswer, summarise, fmtClock, physicalMap, mapKeyEvent, screenRows, hasLatin } from "./typing.js";
+import { uiEnglish } from "../shell/names.js";
+import { TYPING_KEY, DRILLS, normalizeState, recordRound, buildRound, checkAnswer, summarise, fmtClock, physicalMap, mapKeyEvent, screenRows, hasLatin, letterName } from "./typing.js";
 import { PLATFORMS, GENERAL, DOTTED_CIRCLE, niqqudRows } from "./guide.js";
 
-const CSS = `
+// On-screen key target: at least 44x44 CSS px. Wide screens (>= 32rem) keep the three physical rows (8, 10, 9 keys);
+// narrower screens flow all 27 keys into a wrapping grid (7 per line at 375 px) because 10 keys of 44 px do not fit in 343 px.
+export const KEY_MIN = 44;
+export const CSS = `
 .alef-typing{max-inline-size:40rem;margin-inline:auto;overflow-wrap:anywhere}
 .alef-typing *{box-sizing:border-box;max-inline-size:100%}
 .alef-typing .ty-card{border:1px solid var(--border,#999);border-radius:12px;padding:1rem;background:var(--card,#fff);margin-block:1rem}
+.alef-typing .btn .muted{color:inherit}
 .alef-typing .ty-grid{display:grid;gap:.5rem;margin-block:.75rem}
 .alef-typing button.btn{min-block-size:var(--tap,48px);inline-size:100%;white-space:normal;text-align:center}
 .alef-typing .ty-prompt{font-size:2.6rem;line-height:1.4;text-align:center;margin-block:.5rem}
 .alef-typing input[type=text]{inline-size:100%;min-block-size:var(--tap,48px);font:inherit;font-size:1.6rem;padding:.4rem .6rem;border:2px solid var(--border,#999);border-radius:8px;background:var(--card,#fff);color:inherit}
 .alef-typing .ty-kb{display:grid;gap:.3rem;direction:ltr;margin-block:.75rem}
 .alef-typing .ty-kr{display:flex;gap:.3rem;justify-content:center}
-.alef-typing .ty-key{flex:1 1 0;min-inline-size:0;min-block-size:var(--tap,48px);font:inherit;font-size:1.3rem;border:2px solid var(--border,#999);border-radius:8px;background:var(--card,#fff);color:inherit;padding:.1rem;display:grid;place-items:center;line-height:1.1}
+.alef-typing .ty-key{flex:1 1 0;min-inline-size:44px;min-block-size:max(44px,var(--tap,48px));font:inherit;font-size:1.3rem;border:2px solid var(--border,#999);border-radius:8px;background:var(--card,#fff);color:inherit;padding:.1rem;display:grid;place-items:center;line-height:1.1}
 .alef-typing .ty-key small{font-size:.6rem;color:var(--muted,#555)}
 .alef-typing .ty-wide{flex:3 1 0}
-.alef-typing .muted{color:var(--muted,#555);font-size:.9rem}
-.alef-typing .btn .muted{color:inherit}
-.alef-typing .ty-scroll{overflow-x:auto}
-.alef-typing .ty-scroll table{max-inline-size:none;min-inline-size:28rem}
-.alef-typing table{border-collapse:collapse;inline-size:100%}
-.alef-typing th,.alef-typing td{border:1px solid var(--border,#999);padding:.3rem .5rem;text-align:start}
-.alef-typing .ty-warn{border-inline-start:6px solid currentColor;padding-inline-start:.5rem}
+.alef-typing .ty-check{display:flex;align-items:center;gap:.5rem;min-block-size:44px}
+.alef-typing .ty-check input{inline-size:1.5rem;block-size:1.5rem;flex:none;margin:0}
+@media (max-width:32rem){
+.alef-typing .ty-kb{grid-template-columns:repeat(auto-fill,minmax(44px,1fr))}
+.alef-typing .ty-kb>.ty-kr:not(:last-child){display:contents}
+.alef-typing .ty-kb>.ty-kr:not(:last-child) .ty-key{min-inline-size:0}
+.alef-typing .ty-kb>.ty-kr:last-child{grid-column:1/-1}
+}
 `;
 function injectStyle() {
   try { if (!document.head || document.getElementById?.("alef-typing-style")) return; const s = document.createElement("style"); s.id = "alef-typing-style"; s.textContent = CSS; document.head.append(s); } catch { /* optional */ }
 }
 const he = (text, extra = {}) => el("span", { lang: "he", dir: "rtl", ...extra }, text);
 const sr = (text) => el("span", { class: "visually-hidden" }, text);
-const focusNode = (n) => { try { n?.focus?.(); } catch { /* ignore */ } };
+/** Nearest key on the next/previous visual line (keys wrap on narrow screens). Null when layout is unavailable (no geometry), so callers fall back to row/column. */
+function visualNeighbour(all, from, down) {
+  try {
+    const box = (b) => b.getBoundingClientRect(); const f = box(from); if (!f || !(f.width > 0)) return null;
+    const cy = f.top + f.height / 2, cx = f.left + f.width / 2;
+    const cand = all.filter((b) => { const r = box(b); return down ? r.top > cy + 1 && r.top + r.height / 2 > f.bottom - 1 : r.bottom < cy - 1 && r.top + r.height / 2 < f.top + 1; });
+    if (!cand.length) return null;
+    const line = (b) => Math.abs(box(b).top + box(b).height / 2 - cy), nearest = Math.min(...cand.map(line));
+    const row = cand.filter((b) => line(b) - nearest < 4);
+    return row.reduce((a, b) => (Math.abs(box(b).left + box(b).width / 2 - cx) < Math.abs(box(a).left + box(a).width / 2 - cx) ? b : a));
+  } catch { return null; }
+}
+const focusNode = (n, opt) => { try { n?.focus?.(opt); } catch { /* ignore */ } };
 
 /** @param {HTMLElement} root @param {any} ctx @returns {() => void} unmount */
 export function mount(root, ctx) {
@@ -113,11 +131,11 @@ export function mount(root, ctx) {
 
   function kbRows() {
     const rows = screenRows(layout);
-    const press = (ch) => { insertText(ch); focusNode(inputEl); onInput(); };
-    const rowEls = rows.map((r, ri) => el("div", { class: "ty-kr", role: "group", "aria-label": `Keyboard row ${ri + 1}` }, r.map((k, ci) => el("button", { type: "button", class: "ty-key", tabindex: ri === 0 && ci === 0 ? "0" : "-1", "data-key": k.char, "data-r": ri, "data-c": ci, onclick: () => press(k.char) }, he(k.char), el("small", { "aria-hidden": "true" }, k.qwerty), sr(k.name)))));
+    const press = (ch) => { insertText(ch); focusNode(inputEl, { preventScroll: true }); onInput(); };
+    const rowEls = rows.map((r, ri) => el("div", { class: "ty-kr", role: "group", "aria-label": `Keyboard row ${ri + 1}` }, r.map((k, ci) => el("button", { type: "button", class: "ty-key", tabindex: ri === 0 && ci === 0 ? "0" : "-1", "data-key": k.char, "data-r": ri, "data-c": ci, "aria-label": `${k.char} ${letterName(k.name)}`, onclick: () => press(k.char) }, he(k.char), el("small", { "aria-hidden": "true" }, k.qwerty)))));
     const bottom = el("div", { class: "ty-kr", role: "group", "aria-label": "Space and delete" },
-      el("button", { type: "button", class: "ty-key ty-wide", tabindex: "-1", "data-key": " ", "data-r": rows.length, "data-c": 0, onclick: () => press(" ") }, "Space"),
-      el("button", { type: "button", class: "ty-key", tabindex: "-1", "data-key": "BS", "data-r": rows.length, "data-c": 1, onclick: () => { const v = String(inputEl.value ?? ""); inputEl.value = [...v].slice(0, -1).join(""); focusNode(inputEl); onInput(); } }, "Delete"));
+      el("button", { type: "button", class: "ty-key ty-wide", tabindex: "-1", "data-key": " ", "data-r": rows.length, "data-c": 0, "aria-label": "Space", onclick: () => press(" ") }, "Space"),
+      el("button", { type: "button", class: "ty-key", tabindex: "-1", "data-key": "BS", "data-r": rows.length, "data-c": 1, "aria-label": "Delete last letter", onclick: () => { const v = String(inputEl.value ?? ""); inputEl.value = [...v].slice(0, -1).join(""); focusNode(inputEl, { preventScroll: true }); onInput(); } }, "Delete"));
     const kb = el("div", { class: "ty-kb", id: "ty-kb", role: "group", "aria-label": "On-screen Hebrew keyboard, Israeli key positions. One tab stop; arrow keys move between keys." }, ...rowEls, bottom);
     // roving tabindex: arrows move, the group is a single Tab stop
     kb.addEventListener("keydown", (ev) => {
@@ -128,7 +146,7 @@ export function mount(root, ctx) {
       const rowLen = (rr) => all.filter((b) => +b.getAttribute("data-r") === rr).length;
       let n = null;
       if (ev.key === "ArrowRight") n = at(r, Math.min(rowLen(r) - 1, c + 1)); else if (ev.key === "ArrowLeft") n = at(r, Math.max(0, c - 1));
-      else if (ev.key === "ArrowDown") n = at(Math.min(rows.length, r + 1), Math.min(c, rowLen(Math.min(rows.length, r + 1)) - 1)); else if (ev.key === "ArrowUp") n = at(Math.max(0, r - 1), Math.min(c, rowLen(Math.max(0, r - 1)) - 1));
+      else if (ev.key === "ArrowDown" || ev.key === "ArrowUp") n = visualNeighbour(all, t, ev.key === "ArrowDown") || (ev.key === "ArrowDown" ? at(Math.min(rows.length, r + 1), Math.min(c, rowLen(Math.min(rows.length, r + 1)) - 1)) : at(Math.max(0, r - 1), Math.min(c, rowLen(Math.max(0, r - 1)) - 1)));
       else if (ev.key === "Home") n = at(r, 0); else if (ev.key === "End") n = at(r, rowLen(r) - 1);
       if (n) { ev.preventDefault?.(); all.forEach((b) => b.setAttribute("tabindex", "-1")); n.setAttribute("tabindex", "0"); focusNode(n); }
     });
@@ -149,7 +167,7 @@ export function mount(root, ctx) {
       el("p", { id: "ty-progress" }, `Item ${round.i + 1} of ${round.items.length}`),
       el("div", { class: "ty-card" },
         el("div", { class: "ty-prompt", id: "ty-prompt" }, it.promptIsHebrew ? he(it.prompt) : it.prompt),
-        el("p", { class: "muted", id: "ty-gloss" }, it.gloss), label, inputEl,
+        el("p", { class: "muted", id: "ty-gloss" }, uiEnglish(ctx, it.gloss)), label, inputEl,
         el("div", { class: "ty-grid" },
           single ? null : el("button", { type: "button", class: "btn", id: "ty-check", onclick: () => (round.answered ? next() : check()) }, "Check"),
           el("button", { type: "button", class: "btn secondary", id: "ty-skip", onclick: () => skip() }, "Skip"),
@@ -157,7 +175,7 @@ export function mount(root, ctx) {
       el("div", { id: "ty-feedback", class: "ty-card", hidden: true }),
       kbRows(),
       el("p", { class: "muted" }, "The keys follow the Israeli keyboard (SI-1452). Vowel points are not needed in these drills."));
-    say(`Item ${round.i + 1} of ${round.items.length}. ${it.label}${it.drill === "letters" || it.drill === "finals" ? "" : ": " + it.gloss}`);
+    say(`Item ${round.i + 1} of ${round.items.length}. ${it.label}${it.drill === "letters" || it.drill === "finals" ? "" : ": " + uiEnglish(ctx, it.gloss)}`);
     if (focusInput) focusNode(inputEl);
   }
 

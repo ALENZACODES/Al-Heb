@@ -1,6 +1,7 @@
 // Offline / update / storage QA. Runs a scripted Chromium against a COPY of the shipped files (precache list only) in a temp dir,
 // so the "new version" can be simulated by changing the copy's precache-manifest.js version without touching the repo.
 // Records only what the script observed. Usage: node tools/qa/offline.mjs [--out /tmp/offlineqa] [--json /tmp/offlineqa/results.json]
+// Options: --engine chromium|firefox|webkit (default chromium), --viewport WxH (default 375x667), --offline setoffline|stop-server (default setoffline; stop-server stops the static server instead of calling context.setOffline, which WebKit cannot combine with a service worker). Firefox runs without isMobile (unsupported there).
 // Browser: QA_CHROME, system Chrome/Chromium, or Playwright default (same lookup as v0-walk.mjs).
 import { createRequire } from 'node:module';
 import { mkdirSync, writeFileSync, readFileSync, copyFileSync, existsSync, rmSync } from 'node:fs';
@@ -14,15 +15,25 @@ const args = process.argv.slice(2);
 const arg = (n, d) => (args.includes(n) ? args[args.indexOf(n) + 1] : d);
 const out = resolve(arg('--out', '/tmp/offlineqa'));
 const jsonOut = resolve(arg('--json', join(out, 'results.json')));
+const engine = arg('--engine', 'chromium');
+if (!['chromium', 'firefox', 'webkit'].includes(engine)) { console.error('--engine must be chromium|firefox|webkit'); process.exit(2); }
+const vm = /^(\d+)x(\d+)$/.exec(arg('--viewport', '375x667'));
+if (!vm) { console.error('--viewport must be WxH'); process.exit(2); }
+const VP = { width: +vm[1], height: +vm[2] };
+const offlineMode = arg('--offline', 'setoffline');
+if (!['setoffline', 'stop-server'].includes(offlineMode)) { console.error('--offline must be setoffline|stop-server'); process.exit(2); }
+const MOBILE = engine !== 'firefox'; // isMobile is not supported by Playwright Firefox
 rmSync(out, { recursive: true, force: true }); mkdirSync(out, { recursive: true });
 
-let chromium;
-for (const p of ['playwright', '/opt/npm-tools/node_modules/playwright']) { try { ({ chromium } = require(p)); break; } catch { /* next */ } }
+let pw;
+for (const p of ['playwright', '/opt/npm-tools/node_modules/playwright']) { try { pw = require(p); break; } catch { /* next */ } }
+const chromium = pw && pw[engine];
 if (!chromium) { console.error('playwright not found'); process.exit(2); }
 
 // ---- build the site copy from the precache list (+ sw.js, manifest, headers) ----
 const site = join(out, 'site');
-const manifestSrc = readFileSync(join(root, 'precache-manifest.js'), 'utf8');
+// QA_MANIFEST: optional path to a freshly generated precache-manifest.js (kept outside the repo) when the committed one is stale.
+const manifestSrc = readFileSync(process.env.QA_MANIFEST || join(root, 'precache-manifest.js'), 'utf8');
 const files = JSON.parse(/ALEF_PRECACHE = (\[[\s\S]*?\]);/.exec(manifestSrc)[1]);
 // ALEF_ON_DEMAND files are not installed but the real host serves them (fetched later / by Download everything), so ship them in the copy too.
 const onDemand = JSON.parse((/ALEF_ON_DEMAND = (\[[\s\S]*?\]);/.exec(manifestSrc) || [0, '[]'])[1]);
@@ -32,27 +43,30 @@ import { readdirSync } from 'node:fs';
 const shards = existsSync(join(root, 'data/audio')) ? readdirSync(join(root, 'data/audio')).filter((n) => /^manifest-words-[a-z]+\.json$/.test(n)).map((n) => 'data/audio/' + n) : [];
 files.push(...[]);
 for (const f of [...files, ...onDemand, ...shards, 'sw.js', 'precache-manifest.js']) {
-  const s = join(root, f); if (!existsSync(s)) { missing.push(f); continue; }
+  const s = f === 'precache-manifest.js' && process.env.QA_MANIFEST ? process.env.QA_MANIFEST : join(root, f); if (!existsSync(s)) { missing.push(f); continue; }
   mkdirSync(dirname(join(site, f)), { recursive: true }); copyFileSync(s, join(site, f));
 }
 const origVersion = /ALEF_VERSION = "([^"]+)"/.exec(manifestSrc)[1];
 
-const server = createAppServer({ root: site });
+let server = createAppServer({ root: site });
 await new Promise((r) => server.listen(0, '127.0.0.1', r));
-const base = `http://127.0.0.1:${server.address().port}/`;
+const port = server.address().port;
+const base = `http://127.0.0.1:${port}/`;
+const goOffline = async (ctx) => { if (offlineMode === 'setoffline') return ctx.setOffline(true); await new Promise((r) => { server.close(r); server.closeAllConnections?.(); }); };
+const goOnline = async () => { if (offlineMode === 'stop-server') { server = createAppServer({ root: site }); await new Promise((r) => server.listen(port, '127.0.0.1', r)); } };
 
 const R = { base, precacheFiles: files.length, lazyShardsServed: shards, missingFromPrecacheList: missing, origVersion, checks: [] };
 const rec = (area, name, ok, detail = '') => { R.checks.push({ area, name, ok, detail }); console.log(`${ok ? 'PASS' : 'FAIL'} [${area}] ${name}${detail ? ' :: ' + detail : ''}`); };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const waitFor = async (fn, ms = 10000, step = 150) => { const t = Date.now(); for (;;) { try { const v = await fn(); if (v) return v; } catch { /* retry */ } if (Date.now() - t > ms) return false; await sleep(step); } };
 
-const tries = []; if (process.env.QA_CHROME) tries.push({ executablePath: process.env.QA_CHROME });
-for (const p of ['/usr/bin/google-chrome', '/usr/bin/chromium', '/usr/bin/chromium-browser']) if (existsSync(p)) tries.push({ executablePath: p });
+const tries = []; if (engine === 'chromium') { if (process.env.QA_CHROME) tries.push({ executablePath: process.env.QA_CHROME });
+for (const p of ['/usr/bin/google-chrome', '/usr/bin/chromium', '/usr/bin/chromium-browser']) if (existsSync(p)) tries.push({ executablePath: p }); }
 tries.push({});
 let browser, how;
 for (const t of tries) { try { browser = await chromium.launch(t); how = t.executablePath || 'playwright default'; break; } catch { /* next */ } }
 if (!browser) { console.error('no browser'); process.exit(2); }
-R.browser = `${how} ${browser.version()}`;
+R.offlineMode = offlineMode; R.browser = `${engine} ${how} ${browser.version()}`; R.engine = engine; R.viewport = VP;
 
 const watch = (page, bag) => {
   page.on('pageerror', (e) => bag.pageerrors.push(String(e.message).slice(0, 200)));
@@ -65,7 +79,7 @@ const waitControlled = (page) => waitFor(() => page.evaluate(async () => { const
 
 // ================= 1. install + update flow =================
 {
-  const ctx = await browser.newContext({ viewport: { width: 375, height: 667 } });
+  const ctx = await browser.newContext({ viewport: VP });
   const page = await ctx.newPage(); const b = bag(); watch(page, b);
   await page.goto(base); await page.waitForSelector('#view-title, h1', { timeout: 15000 });
   // first load: worker installs; it controls this page only after claim
@@ -119,13 +133,14 @@ writeFileSync(join(site, 'precache-manifest.js'), manifestSrc);
 // Scenario B: same, plus one more online page load under the worker's control (this is when the lazy word shard gets cached), then offline.
 const V0 = ['/', '/learn', '/letters', '/letters/atlas', '/letters/alef', '/progress', '/firstday', '/install', '/credits', '/privacy', '/offline', '/settings', '/welcome', '/search', '/about'];
 for (const scen of ['A', 'B']) {
-  const ctx = await browser.newContext({ viewport: { width: 375, height: 667 } });
+  const ctx = await browser.newContext({ viewport: VP });
   const page = await ctx.newPage(); const b = bag(); watch(page, b);
   await page.goto(base); await page.waitForSelector('h1', { timeout: 15000 });
   const ctl = await waitControlled(page);
   if (scen === 'B') { await page.reload(); await page.waitForSelector('h1'); await sleep(1500); }
+  else await waitFor(() => page.evaluate(() => !!document.body.dataset.audioShardWarm), 15000); // app warms the shard through the worker after a fresh install
   const rtKeys = await page.evaluate(async () => { const k = await caches.keys(); const o = {}; for (const n of k) o[n] = (await (await caches.open(n)).keys()).filter((r) => /manifest-words/.test(r.url)).length; return o; });
-  await ctx.setOffline(true);
+  await goOffline(ctx);
   const rows = [];
   for (const r of V0) {
     const p2 = await ctx.newPage(); const b2 = bag(); watch(p2, b2);
@@ -146,6 +161,7 @@ for (const scen of ['A', 'B']) {
   R['offlineRoutes' + scen] = rows; R['shardCacheBeforeOffline' + scen] = rtKeys;
   rec('offline', `scenario ${scen}: worker controls the page before going offline`, !!ctl, `word-shard entries per cache before offline: ${JSON.stringify(rtKeys)}`);
   for (const x of rows) rec('offline', `scenario ${scen}: first load offline ${x.route}`, x.loaded && !!x.title && !x.errText && x.pageerrors === 0, `title="${x.title}" failedRequests=${x.failed}${x.failed ? ' ' + x.failedUrls.join(' ') : ''}${x.snippet ? ' PAGE_TEXT=' + x.snippet : ''}`);
+  if (scen === 'A') rec('offline', 'scenario A: active tradition word shard is in a cache before going offline (fresh-install warm-up)', Object.values(rtKeys).some((n) => n >= 1), JSON.stringify(rtKeys));
   const uniq = [...new Set(rows.map((x) => x.soundLine))];
   rec('offline', `info: scenario ${scen} sound-status line offline`, true, uniq.join(' || ').slice(0, 300));
   if (scen === 'B') {
@@ -156,23 +172,59 @@ for (const scen of ['A', 'B']) {
     rec('offline', 'info: offline navigation to /letters/alef (deep path, not an app URL) returns the cached shell document', r3 === 200, `status=${r3} h1 count=${await p3.locator('h1').count()} (0 online too, see report)`);
   }
   await ctx.close();
+  await goOnline();
+}
+
+// ================= 2b. letter memory card offline right after install =================
+// The chain data and code are installed; only the first-day letters' pictures are (tools/build-precache.mjs FIRST_DAY_LETTERS). Install, go offline at once
+// (no second online load, so nothing came from the runtime cache), open the card for installed letters (picture must show) and for a later letter (picture is
+// on demand: the card must still render and nothing may throw).
+{
+  const ctx = await browser.newContext({ viewport: VP });
+  const page = await ctx.newPage(); const b = bag(); watch(page, b);
+  await page.goto(base); await page.waitForSelector('h1', { timeout: 15000 });
+  const ctl = await waitControlled(page);
+  await goOffline(ctx);
+  rec('memory-card', 'worker controls the page before going offline', !!ctl);
+  for (const [route, label, wantPicture] of [['/firstday', 'first-day step (shin)', true], ['/letters/shin', 'letter page shin', true], ['/letters/tav', 'letter page tav (lesson r02)', true], ['/letters/kaf', 'letter page kaf (picture on demand)', false]]) {
+    const p2 = await ctx.newPage(); const b2 = bag(); watch(p2, b2);
+    let navOk = true;
+    try { await p2.goto(base + '#' + route, { waitUntil: 'load', timeout: 15000 }); } catch (e) { navOk = false; }
+    const gotCard = navOk && await waitFor(() => p2.locator('.mc').first().isVisible(), 8000);
+    await sleep(900);
+    const info = navOk ? await p2.evaluate(() => ({ card: !!document.querySelector('.mc'), picture: !!document.querySelector('.mc .mc-svg svg'), art: !!document.querySelector('.mc .mc-art') })) : { card: false, picture: false, art: false };
+    // Firefox with context.setOffline: the worker's own network requests still go out (seen: kaf.svg arrived), so "picture NOT shown" cannot be judged there; use --offline stop-server.
+    const cannotJudgeAbsence = !wantPicture && engine === 'firefox' && offlineMode === 'setoffline';
+    rec('memory-card', `offline right after install: ${label}: card renders${wantPicture ? ' with its picture' : ' (picture not installed: letter and idea text only)'}${cannotJudgeAbsence ? ' [Firefox setoffline: absence not judged]' : ''}`, navOk && !!gotCard && info.card && (cannotJudgeAbsence || info.picture === wantPicture) && b2.pageerrors.length === 0, `card=${info.card} picture=${info.picture} pageerrors=${b2.pageerrors.length} failedRequests=${b2.failed.length}${b2.failed.length ? ' ' + b2.failed.slice(0, 3).join(' ') : ''}`);
+    await p2.close();
+  }
+  await ctx.close();
+  await goOnline();
 }
 
 // ================= 3. persistence request =================
 {
-  const ctx = await browser.newContext({ viewport: { width: 375, height: 667 } });
+  const ctx = await browser.newContext({ viewport: VP });
   await ctx.addInitScript(() => {
     window.__persistCalls = 0;
-    const sm = navigator.storage; const orig = sm.persist.bind(sm);
-    sm.persist = async () => { window.__persistCalls++; const v = await orig(); window.__persistResult = v; return v; };
+    try { // wrap on the prototype (Firefox rejects/aborts the instance-level rebind); never throw from the init script
+      const proto = Object.getPrototypeOf(navigator.storage); const orig = proto.persist;
+      proto.persist = async function () { window.__persistCalls++; const v = await orig.call(this); window.__persistResult = v; return v; };
+    } catch (e) { window.__persistWrapError = String(e); }
   });
   const page = await ctx.newPage(); const b = bag(); watch(page, b);
   await page.goto(base); await page.waitForSelector('h1');
   await sleep(800);
   const c0 = await page.evaluate(() => window.__persistCalls);
-  // The app itself writes a non-settings key (streak) during boot, which already triggers the request; record that rather than assume otherwise.
-  rec('persist', 'navigator.storage.persist() is requested once, triggered by the first non-settings save (boot writes one)', c0 === 1 && b.persistInfo.length === 1, `calls after load=${c0} result=${await page.evaluate(() => window.__persistResult)} log="${b.persistInfo.join(' | ')}"`);
-  await page.evaluate(() => window.alef.store.set('qa-progress', { n: 1 })); await sleep(400);
+  // Boot writes an empty streak record; that must not count as progress. The first real save asks, once.
+  rec('persist', 'navigator.storage.persist() is NOT requested during boot (no real progress yet)', c0 === 0 && b.persistInfo.length === 0, `calls after load=${c0}`);
+  await page.evaluate(() => window.alef.store.set('qa-progress', { n: 1 })); await sleep(600);
+  // Firefox shows a permission prompt and the persist() promise stays pending until someone answers it (confirmed: still pending after 5 s,
+  // headless), so there is no result and no log line there. The request itself (one call) is what the app controls; the log line needs a result.
+  const pCalls = await page.evaluate(() => window.__persistCalls), pRes = await page.evaluate(() => window.__persistResult);
+  const pendingPrompt = engine === 'firefox' && pRes === undefined && b.persistInfo.length === 0;
+  rec('persist', 'first real (non-settings, non-boot) save requests persistence once', pCalls === 1 && (b.persistInfo.length === 1 || pendingPrompt), `calls=${pCalls} result=${pRes}${pendingPrompt ? ' (Firefox: prompt unanswered, promise pending)' : ''} log="${b.persistInfo.join(' | ')}"`);
+  await page.evaluate(() => window.alef.store.set('qa-progress', { n: 2 })); await sleep(400);
   rec('persist', 'later saves do not ask again (once per page load)', (await page.evaluate(() => window.__persistCalls)) === 1);
   R.persistGranted = await page.evaluate(() => navigator.storage.persisted());
   await ctx.close();
@@ -180,7 +232,7 @@ for (const scen of ['A', 'B']) {
 
 // ================= 4. backup -> delete all -> restore =================
 {
-  const ctx = await browser.newContext({ viewport: { width: 375, height: 667 }, acceptDownloads: true });
+  const ctx = await browser.newContext({ viewport: VP, acceptDownloads: true });
   const page = await ctx.newPage(); const b = bag(); watch(page, b);
   await page.goto(base); await page.waitForSelector('h1'); await page.reload(); await waitControlled(page);
   const seed = { progress: { done: ['alef', 'bet'], n: 7 }, srs: { cards: { alef: { due: 12345, ease: 2.5 } } }, streak: { days: 3, last: '2026-11-03' } };
@@ -200,7 +252,7 @@ for (const scen of ['A', 'B']) {
   const wiped = await waitFor(() => page.evaluate(() => Object.keys(localStorage).filter((k) => k.startsWith('alef')).length === 0), 6000);
   const cachesAfterNames = await cacheKeys(page); const cachesAfter = cachesAfterNames.length;
   rec('backup', 'delete all empties alef localStorage keys', !!wiped, `remaining=${await page.evaluate(() => Object.keys(localStorage).filter((k) => k.startsWith('alef')).join(','))}`);
-  rec('backup', 'delete all removes offline caches', cachesBefore > 0 && cachesAfter === 0, `before=${JSON.stringify(cachesBeforeNames)} after=${JSON.stringify(cachesAfterNames)}`);
+  rec('backup', 'delete all keeps the app shell cache (offline copy has no learner data) and removes no learner-specific cache (alef-data-* holds word shards, images, fonts: no learner data)', cachesBefore > 0 && cachesAfterNames.some((n) => n.startsWith('alef-shell-')) && cachesAfterNames.every((n) => /^alef-(shell|runtime|data)-/.test(n)), `before=${JSON.stringify(cachesBeforeNames)} after=${JSON.stringify(cachesAfterNames)}`);
   rec('backup', 'delete-all status text shown', /Deleted all saved progress/.test(await page.locator('[role=status], #s-status').allInnerTexts().then((a) => a.join(' '))), '');
   // restore
   await page.locator('#s-import').setInputFiles(file);
@@ -241,7 +293,7 @@ for (const scen of ['A', 'B']) {
     ['alef:settings = huge-theme garbage values', { 'alef:settings': JSON.stringify({ theme: { x: 1 }, congregation: 42, lat: 'abc', voice: [] }) }],
   ];
   for (const [name, kv] of cases) {
-    const ctx = await browser.newContext({ viewport: { width: 375, height: 667 } });
+    const ctx = await browser.newContext({ viewport: VP });
     const page = await ctx.newPage(); const b = bag(); watch(page, b);
     await page.goto(base); await page.waitForSelector('h1'); await sleep(500);
     await page.evaluate((o) => { for (const [k, v] of Object.entries(o)) localStorage.setItem(k, v); }, kv);
@@ -262,7 +314,7 @@ for (const scen of ['A', 'B']) {
 // ================= 6. install notice on an iOS-like UA =================
 {
   const IOS_UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Mobile/15E148 Safari/604.1';
-  const mk = (extra = {}) => browser.newContext({ viewport: { width: 375, height: 667 }, userAgent: IOS_UA, hasTouch: true, isMobile: true, ...extra });
+  const mk = (extra = {}) => browser.newContext({ viewport: VP, userAgent: IOS_UA, hasTouch: true, ...(MOBILE ? { isMobile: true } : {}), ...extra });
   const notice = (p) => p.locator('aside[aria-label="Keep your progress"]');
   // a. first visit: not shown
   let ctx = await mk(); let page = await ctx.newPage(); let b = bag(); watch(page, b);

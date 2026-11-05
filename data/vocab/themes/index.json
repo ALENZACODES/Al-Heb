@@ -4,9 +4,9 @@
  "count": 40,
  "themeSize": 125,
  "counts": {
-  "words": 4782,
-  "withExample": 1044,
-  "withoutExample": 3738,
+  "words": 4786,
+  "withExample": 1047,
+  "withoutExample": 3739,
   "droppedFromWordsJson": 1513
  },
  "themes": [
@@ -294,8 +294,8 @@
    "id": "small-words-set01",
    "topic": "small-words",
    "title": "Small words, set 1 of 1",
-   "size": 121,
-   "withExample": 49,
+   "size": 125,
+   "withExample": 52,
    "file": "small-words-set01.json"
   },
   {

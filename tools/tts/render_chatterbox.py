@@ -14,11 +14,19 @@ Voice: Chatterbox clones the voice of a reference WAV (--ref-m / --ref-f). Use o
 rights grant (docs/voices/donor-rights-grant.md). Without refs the model's built-in voice is used for both m and f (refused
 unless --allow-default-voice, because m/f would then sound the same).
 
+What is spoken (plan schema 2): each item carries `speak` (the text to speak) and `language` (the language token given to the model).
+  source tts-hebrew     Israeli only: `speak` is the pointed Hebrew, language 'he'.
+  source tts-respelled  Sephardi / Ashkenazi: `speak` is a "sound word", a Latin-letter respelling of the Hebrew, spoken with the configured
+                        language token (plan --lang-tokens, or --lang-token here). Whether that sounds like Sephardi or Ashkenazi Hebrew is
+                        UNKNOWN: nobody has listened. Every clip is logged as synthetic and unreviewed.
+Letters, vowels and syllables are never in a plan. Every render-log.jsonl line records source, speak, sound word, language, model name and
+version, voice-reference digest, so manifest_update.mjs can say how each clip was made.
+
 Hebrew text: the manifest text is already pointed (niqqud). Chatterbox's own Hebrew pre-processing may call an optional
 diacritizer (dicta_onnx) that would silently rewrite our pointing; this script switches that off unless --internal-diacritizer.
 --vocalize runs Nakdimon only on text that has NO niqqud.
 """
-import argparse, json, math, os, re, struct, sys, time, wave, zlib
+import argparse, hashlib, json, math, os, re, struct, sys, time, wave, zlib
 
 NIQQUD = re.compile('[ְ-ׇּׁׂ]')
 SR_MOCK = 24000
@@ -27,6 +35,48 @@ SR_MOCK = 24000
 def load_plan(path):
     with open(path, encoding='utf-8') as f:
         return json.load(f)
+
+
+def speak_text(it):
+    """The text handed to the model. Schema 1 plans (Israeli only) have no `speak`; they speak `text`."""
+    return it.get('speak') if it.get('speak') is not None else it['text']
+
+
+def check_item(i):
+    """Refuse anything the factory is not allowed to synthesise. Returns the source ('tts-hebrew' or 'tts-respelled')."""
+    name = f"{i.get('voice')}/{i.get('tradition')}/{i.get('kind')}/{i.get('id')}"
+    if i.get('route') != 'tts':
+        raise SystemExit(f"refusing non-TTS item {name}: only items routed 'tts' by plan.mjs may be synthesised")
+    if i.get('voice') not in ('m', 'f') or i.get('tradition') not in TRADITIONS:
+        raise SystemExit(f"refusing item {name}: unknown voice or tradition")
+    if i.get('kind') in ('letter', 'vowel', 'syllable'):
+        raise SystemExit(f"refusing {name}: letters, vowels and syllables are human-only in every tradition")
+    src = i.get('source') or ('tts-hebrew' if i['tradition'] == 'israeli' else None)
+    if i['tradition'] == 'israeli':
+        if src != 'tts-hebrew' or (i.get('language') or 'he') != 'he':
+            raise SystemExit(f"refusing {name}: Israeli items must be tts-hebrew with language 'he'")
+        if HEBREW_LETTER.search(speak_text(i)) is None:
+            raise SystemExit(f"refusing {name}: Israeli item has no Hebrew text to speak")
+    else:
+        if src != 'tts-respelled':
+            raise SystemExit(f"refusing {name}: {i['tradition']} items must be tts-respelled (a sound word), never Hebrew text")
+        sw = (i.get('sound_word') or '').strip()
+        if not sw or sw != (i.get('speak') or '').strip() or HEBREW_LETTER.search(sw):
+            raise SystemExit(f"refusing {name}: tts-respelled needs a Latin-letter sound_word equal to speak")
+        if not re.fullmatch('[a-z]{2}', i.get('language') or ''):
+            raise SystemExit(f"refusing {name}: missing or malformed language token")
+    return src
+
+
+def ref_digest(path):
+    """First 12 hex of the SHA-256 of a reference WAV: identifies WHICH reference was used without recording its path or name."""
+    if not path:
+        return None
+    h = hashlib.sha256()
+    with open(path, 'rb') as f:
+        for chunk in iter(lambda: f.read(1 << 20), b''):
+            h.update(chunk)
+    return h.hexdigest()[:12]
 
 
 def raw_path(work, it):
@@ -68,8 +118,20 @@ class Chatterbox:
         if 't3_model' in inspect.signature(ChatterboxMultilingualTTS.from_pretrained).parameters:
             kw['t3_model'] = 'v3'  # newer releases; older pip releases only have the v2 checkpoint
             self.model_tag = 'chatterbox-multilingual-v3'
+            self.model_version = 'v3'
         else:
             self.model_tag = 'chatterbox-multilingual-v2'
+            self.model_version = 'v2'
+        try:
+            from importlib.metadata import version as _v
+            self.package_version = 'chatterbox-tts ' + _v('chatterbox-tts')
+        except Exception:
+            self.package_version = None
+        try:
+            from chatterbox.mtl_tts import SUPPORTED_LANGUAGES
+            self.languages = set(SUPPORTED_LANGUAGES)
+        except Exception:
+            self.languages = None  # cannot check; the model will raise on an unknown token
         self.model = ChatterboxMultilingualTTS.from_pretrained(device=device, **kw)
         self.refs, self.allow_default, self.seed_base = refs, allow_default, seed_base
         self.cur = None
@@ -78,7 +140,10 @@ class Chatterbox:
         ref = self.refs.get(it['voice'])
         if ref is None and not self.allow_default:
             raise SystemExit(f"no reference WAV for voice '{it['voice']}': pass --ref-{it['voice']} (or --allow-default-voice)")
-        kw = {'language_id': 'he'}
+        lang = it.get('language') or 'he'
+        if self.languages is not None and lang not in self.languages:
+            raise SystemExit(f"language token '{lang}' is not supported by the installed model (supported: {', '.join(sorted(self.languages))})")
+        kw = {'language_id': lang}
         if ref:
             kw['audio_prompt_path'] = ref
         seed = (zlib.crc32(f"{it['voice']}/{it['tradition']}/{it['kind']}/{it['id']}".encode()) + self.seed_base) & 0x7FFFFFFF
@@ -103,18 +168,28 @@ def main(argv=None):
     ap.add_argument('--seed', type=int, default=0)
     ap.add_argument('--limit', type=int); ap.add_argument('--tier', type=int, help='only items up to this tier')
     ap.add_argument('--voice', choices=['m', 'f'])
+    ap.add_argument('--tradition', help='only these traditions (comma list or all); default: every tradition in the plan')
+    ap.add_argument('--confidence', choices=['high', 'all'], default='all', help='high: only items the plan marked high-confidence')
+    ap.add_argument('--lang-token', help='override the language token of every tts-respelled item (default: the plan\'s)')
     a = ap.parse_args(argv)
     engine = 'mock' if a.mock else a.engine
     plan = load_plan(a.plan)
-    items = [i for i in plan['items'] if (not a.voice or i['voice'] == a.voice) and (not a.tier or i['tier'] <= a.tier)]
+    wanted = None if not a.tradition or a.tradition == 'all' else set(x.strip() for x in a.tradition.split(',') if x.strip())
+    if wanted and not wanted <= set(TRADITIONS):
+        raise SystemExit(f"unknown tradition in --tradition: {sorted(wanted - set(TRADITIONS))}")
+    items = [i for i in plan['items'] if (not a.voice or i['voice'] == a.voice) and (not a.tier or i['tier'] <= a.tier)
+             and (wanted is None or i['tradition'] in wanted) and (a.confidence == 'all' or i.get('confidence') == 'high')]
     if a.limit:
         items = items[:a.limit]
     for i in items:
-        if i.get('route') != 'tts' or i['tradition'] != 'israeli':
-            raise SystemExit(f"refusing non-TTS item {i['voice']}/{i['tradition']}/{i['kind']}/{i['id']}: only the Israeli tradition may be synthesised")
+        i['source'] = check_item(i)
+        if a.lang_token and i['source'] == 'tts-respelled':
+            i['language'] = a.lang_token
+    if engine == 'chatterbox' and a.ref_m and a.ref_f and ref_digest(a.ref_m) == ref_digest(a.ref_f) and not a.allow_default_voice:
+        raise SystemExit('--ref-m and --ref-f are the same audio: the man and woman voices must differ (use two different voices you own or whose donor signed docs/voices/donor-rights-grant.md)')
     os.makedirs(a.work, exist_ok=True)
     nak = None
-    if a.vocalize and any(not NIQQUD.search(i['text']) for i in items):
+    if a.vocalize and any(i['source'] == 'tts-hebrew' and not NIQQUD.search(speak_text(i)) for i in items):
         from nakdimon import diacritize as nak  # pip install nakdimon (MIT licence file seen; see docs/tts/README.md)
     eng = None
     if engine == 'chatterbox':
@@ -132,9 +207,9 @@ def main(argv=None):
         out = raw_path(a.work, it)
         if os.path.exists(out) and os.path.getsize(out) > 44:
             skipped += 1; continue  # resumable: a finished WAV is never redone
-        text = it['text']
+        text = speak_text(it)
         vocalized = False
-        if nak and not NIQQUD.search(text):
+        if nak and it['source'] == 'tts-hebrew' and not NIQQUD.search(text):
             text = nak(text); vocalized = True
         it = dict(it, _text=text)
         seed = None
@@ -146,7 +221,13 @@ def main(argv=None):
         else:
             samples, sr, seed = eng.render(it)
         write_wav(out, samples, sr)
-        log.write(json.dumps({'voice': it['voice'], 'tradition': it['tradition'], 'kind': it['kind'], 'id': it['id'], 'engine': engine,
+        rec = {'voice': it['voice'], 'tradition': it['tradition'], 'kind': it['kind'], 'id': it['id'], 'path': it.get('path'), 'engine': engine,
+               'source': it['source'] + (':mock' if engine == 'mock' else ''), 'sound_word': it.get('sound_word'), 'sound_model': it.get('sound_model'), 'language': it.get('language') or 'he',
+               'confidence': it.get('confidence'), 'flags': it.get('flags') or [],
+               'model_name': 'mock' if engine == 'mock' else 'chatterbox-multilingual', 'model_version': 'mock' if engine == 'mock' else eng.model_version,
+               'package': None if engine == 'mock' else eng.package_version,
+               'ref_digest': None if engine == 'mock' else ref_digest(eng.refs.get(it['voice']))}
+        log.write(json.dumps({**rec,
                               'model': getattr(eng, 'model_tag', 'mock'), 'rendered_text': text, 'vocalized': vocalized, 'seed': seed,
                               'sr': sr, 'seconds': round(len(samples) / sr, 3), 'at': time.strftime('%Y-%m-%dT%H:%M:%S%z')}, ensure_ascii=False) + '\n')
         log.flush(); done += 1

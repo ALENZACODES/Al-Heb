@@ -7,6 +7,8 @@ import { loadProgressData } from '../progress/data.js';
 import { readSnapshot, readableNow } from '../progress/model.js';
 import { HONEST_NOTE, countWords, wordList, makeRead, rangeFor, describeRange, trickyWords, accuracy, wpm, seconds, speechSupport } from './model.js';
 import { loadState, saveRead, clearReads } from './store.js';
+import { isAudioFree } from '../shell/audiofree.js';
+import { calmOn } from '../shell/comfort.js';
 
 export const CSS = `
 .tdr { display: grid; gap: 1rem; } .tdr * { min-inline-size: 0; overflow-wrap: anywhere; }
@@ -85,13 +87,13 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     if (S.phase === 'ready') {
       return el('section', { 'aria-labelledby': 'tdr-ln' }, el('h2', { id: 'tdr-ln', tabindex: '-1' }, it.label),
         el('p', { class: 'tdr-plain', lang: 'he', dir: 'rtl' }, it.he),
-        el('p', {}, `${it.words} words. Read it once through in your normal voice, aloud, then press Stop. Press Start when you are ready; there is no pass or fail.`),
+        el('p', {}, `${it.words} words. ${isAudioFree(ctx) ? 'Read it once through in the way you normally read (aloud, or not), then press Stop.' : 'Read it once through in your normal voice, aloud, then press Stop.'} Press Start when you are ready; there is no pass or fail.`),
         el('div', { class: 'tdr-row' }, el('button', { type: 'button', class: 'btn', id: 'tdr-start', onclick: start }, 'Start timer')));
     }
     if (S.phase === 'running') {
       return el('section', { 'aria-labelledby': 'tdr-ln' }, el('h2', { id: 'tdr-ln', tabindex: '-1' }, 'Reading...'),
         el('p', { class: 'tdr-plain', lang: 'he', dir: 'rtl' }, it.he),
-        el('p', { class: 'tdr-clock', 'aria-hidden': 'true', id: 'tdr-clock' }, '0:00'),
+        el('p', { class: 'tdr-clock', 'aria-hidden': 'true', id: 'tdr-clock', hidden: calmOn(ctx) ? '' : null }, '0:00'),
         el('div', { class: 'tdr-row' }, el('button', { type: 'button', class: 'btn', id: 'tdr-stop', onclick: stopRead }, 'Stop - I finished'), el('button', { type: 'button', class: 'btn', id: 'tdr-cancel', onclick: cancel }, 'Cancel, do not save')));
     }
     if (S.phase === 'mark') {
@@ -123,9 +125,8 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
   function start() {
     S.startedAt = nowMs(); S.phase = 'running'; S.marked = new Set(); render();
     const c = body.querySelector?.('#tdr-clock');
-    timer = setInterval(() => { if (c) c.textContent = clock(nowMs() - S.startedAt); }, 250);
-    timer.unref?.();
-    say('Timer started. Read aloud, then press Stop.');
+    if (!calmOn(ctx)) { timer = setInterval(() => { if (c) c.textContent = clock(nowMs() - S.startedAt); }, 250); timer.unref?.(); } // calm mode: the time is still measured, but no running clock is shown
+    say(isAudioFree(ctx) ? 'Timer started. Read the line, then press Stop.' : 'Timer started. Read aloud, then press Stop.');
     body.querySelector?.('#tdr-stop')?.focus?.();
   }
   function stopRead() { stop(); S.ms = nowMs() - S.startedAt; S.phase = 'mark'; render(); say(`Stopped at ${(S.ms / 1000).toFixed(1)} seconds. Now mark any words you stumbled on.`); body.querySelector?.('#tdr-all')?.focus?.(); }

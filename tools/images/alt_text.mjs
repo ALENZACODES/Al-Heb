@@ -100,7 +100,7 @@ export function altTextFor(id, prompt) {
     } else if ((m = /^MOUTH_(\w+)$/.exec(id))) out = `Close-up mouth shape for the vowel sound ${MOUTH[m[1]] ?? m[1]}`;
     else if (/^STYLE_/.test(id)) out = `Style sample: ${p.charAt(0).toLowerCase()}${p.slice(1).replace(/\.$/, '')}`;
   }
-  if (!out) out = p.replace(/\(attached\)|the attached /g, '').trim() || id.replace(/_/g, ' ');
+  if (!out) out = p.replace(/, attached\)/g, ')').replace(/\(attached\)|the attached /g, '').trim() || id.replace(/_/g, ' ');
   out = clean(out);
   if (out.length > MAX_LEN) out = `${out.slice(0, MAX_LEN - 1).replace(/[,;:\s]+\S*$/, '')}.`;
   return out;

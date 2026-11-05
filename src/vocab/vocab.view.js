@@ -12,6 +12,8 @@ import { TIER_LABEL, POS_LABEL, VOCAB_CARDS_KEY, filterEntries, stripPoints, add
 import { isFunction } from './vocab.js';
 import { plural } from '../shell/plural.js';
 import { fileLabel } from '../shell/audio-labels.js';
+import { speechText, uiEnglish } from '../shell/names.js';
+import { sourcesLine } from '../shell/sources.js';
 
 const PAGE = 40;          // cards rendered per page
 const ADD_LIMIT = 100;    // words added to reviews per click
@@ -87,7 +89,7 @@ export function mount(root, ctx) {
   const notice = el('p', { class: 'draft-flag', role: 'note' }, DRAFT_NOTICE);
   const audioNote = el('p', { class: 'muted', role: 'status', 'aria-live': 'polite' }, '');
   const body = el('div', { class: 'vc-body' });
-  const footer = el('footer', {}, el('p', { class: 'vc-attrib' }, ATTRIBUTION), el('p', {},
+  const footer = el('footer', {}, el('p', { class: 'vc-attrib' }, ATTRIBUTION), sourcesLine(el), el('p', {},
     el('a', { href: 'https://creativecommons.org/licenses/by-sa/4.0/', rel: 'license noopener' }, 'CC BY-SA 4.0'), ' · ',
     el('a', { href: 'https://github.com/hermitdave/FrequencyWords', rel: 'noopener' }, 'FrequencyWords'), ' · ',
     el('a', { href: 'https://www.wiktionary.org/', rel: 'noopener' }, 'Wiktionary'), ' · ',
@@ -117,7 +119,7 @@ export function mount(root, ctx) {
       }
     } catch { /* fall through to the browser voice */ }
     const g = globalThis;
-    const text = String(e.pointed || e.lemma).replace(/־/g, ' ');
+    const text = speechText(String(e.pointed || e.lemma).replace(/־/g, ' '));
     if (!g.speechSynthesis || !g.SpeechSynthesisUtterance) { audioNote.textContent = 'No sound: this browser has no speech synthesis, and there is no recording of this word.'; return; }
     const voices = typeof g.speechSynthesis.getVoices === 'function' ? g.speechSynthesis.getVoices() : [];
     if (voices?.length && !voices.some((v) => /^he([-_]|$)/i.test(v.lang || ''))) { audioNote.textContent = 'No sound: your device has no Hebrew voice installed, and there is no recording of this word.'; return; }
@@ -127,11 +129,11 @@ export function mount(root, ctx) {
       g.speechSynthesis.cancel?.(); g.speechSynthesis.speak(u);
       const t = tradition();
       audioNote.textContent = `Computer voice: your browser's text-to-speech, not a recording. It reads Israeli pronunciation${t !== 'israeli' ? `, not ${TRAD[t]}` : ''}, and may ignore the vowel points.`;
-    } catch { audioNote.textContent = 'No sound: the browser voice failed.'; }
+    } catch { audioNote.textContent = 'No sound: the browser voice did not work.'; }
   }
   function listenButton(e) {
     const rec = !!ctx?.audio?.has?.('word', e.id);
-    return el('button', { type: 'button', class: 'btn secondary', 'aria-label': `Listen to ${e.gloss}${rec ? '' : ' (computer voice)'}`, onclick: () => playWord(e) },
+    return el('button', { type: 'button', class: 'btn secondary', 'aria-label': `Listen${rec ? '' : ' (computer voice)'}: ${e.gloss}`, onclick: () => playWord(e) },
       el('span', { 'aria-hidden': 'true' }, '▶'), ' ', rec ? 'Listen' : 'Listen (computer voice)');
   }
   const heWord = (e, cls) => e.pointed ? heText(e.pointed, cls) : heText(e.lemma, cls);
@@ -143,7 +145,7 @@ export function mount(root, ctx) {
   /** Wrap runs of Hebrew letters (with points) inside an English string in lang=he spans. */
   const HE_RUN = /[\u0590-\u05FF\uFB1D-\uFB4F]+(?:[\s\u05BE\u05F3\u05F4'\"-]+[\u0590-\u05FF\uFB1D-\uFB4F]+)*/g;
   const glossNodes = (text) => {
-    const str = String(text ?? ''); const out = []; let last = 0;
+    const str = uiEnglish(ctx, String(text ?? '')); const out = []; let last = 0;
     for (const m of str.matchAll(HE_RUN)) {
       if (m.index > last) out.push(str.slice(last, m.index));
       out.push(el('span', { lang: 'he', dir: 'rtl' }, m[0])); last = m.index + m[0].length;
@@ -205,7 +207,7 @@ export function mount(root, ctx) {
     const formsBox = el('input', { id: 'vc-forms', type: 'checkbox' });
     if (sel.showForms) formsBox.setAttribute('checked', '');
     formsBox.checked = sel.showForms;
-    const heading = el('h2', { class: 'vc-group' });
+    const heading = el('h2', { class: 'vc-group' }); heading.hidden = true; // filled (and shown) by renderRows only for the function-words group; hidden until then so no empty heading exists while words load
     const search = el('input', { id: 'vc-search', type: 'search', dir: 'auto', autocomplete: 'off', placeholder: 'שלום or hello' });
     search.value = sel.query;
     const status = el('p', { role: 'status', 'aria-live': 'polite', class: 'muted' }, 'Loading words…');

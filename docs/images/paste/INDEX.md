@@ -1,13 +1,11 @@
 # Paste file index
 
-282 images are already done (rows 1-282 of manifest.csv, matched in docs/images/codex-batch-01.json). The next command to paste is **36** (Fe sofit print set (partial: rows 2-10 remaining)), file `cmd-036.txt`.
+282 images are already done (rows 1-282 of manifest.csv, matched in docs/images/codex-batch-01.json). The next command to paste is **38** (Alef cursive set), file `cmd-038.txt`.
 
-117 files, 1000 images. Files over 12000 characters are split into -a/-b parts (paste in order): cmd-101-a.txt, cmd-101-b.txt, cmd-101-c.txt, cmd-101-d.txt.
+91 files, 814 images. Files over 12000 characters are split into -a/-b parts (paste in order): cmd-101-a.txt, cmd-101-b.txt, cmd-101-c.txt, cmd-101-d.txt.
 
 | Cmd | Title | Images | File |
 |---|---|---|---|
-| 36 | Fe sofit print set (partial: rows 2-10 remaining) | 9 | `cmd-036.txt` |
-| 37 | Tsadi sofit print set | 10 | `cmd-037.txt` |
 | 38 | Alef cursive set | 6 | `cmd-038.txt` |
 | 39 | Bet / Vet cursive set | 6 | `cmd-039.txt` |
 | 40 | Gimel cursive set | 6 | `cmd-040.txt` |
@@ -35,31 +33,7 @@
 | 62 | Nun sofit cursive set | 6 | `cmd-062.txt` |
 | 63 | Fe sofit cursive set | 6 | `cmd-063.txt` |
 | 64 | Tsadi sofit cursive set | 6 | `cmd-064.txt` |
-| 65 | Kamatz vowel set | 5 | `cmd-065.txt` |
-| 66 | Patach vowel set | 5 | `cmd-066.txt` |
-| 67 | Tzere vowel set | 5 | `cmd-067.txt` |
-| 68 | Segol vowel set | 5 | `cmd-068.txt` |
-| 69 | Chirik vowel set | 5 | `cmd-069.txt` |
-| 70 | Cholam male vowel set | 5 | `cmd-070.txt` |
-| 71 | Cholam chaser vowel set | 5 | `cmd-071.txt` |
-| 72 | Kubutz vowel set | 5 | `cmd-072.txt` |
-| 73 | Shuruk vowel set | 5 | `cmd-073.txt` |
-| 74 | Shva vowel set | 5 | `cmd-074.txt` |
-| 75 | Chataf patach vowel set | 5 | `cmd-075.txt` |
-| 76 | Chataf segol vowel set | 5 | `cmd-076.txt` |
-| 77 | Chataf kamatz vowel set | 5 | `cmd-077.txt` |
-| 78 | Dagesh vowel set | 5 | `cmd-078.txt` |
-| 79 | Shin and sin dots vowel set | 5 | `cmd-079.txt` |
-| 80 | Greetings & fillers pack | 10 | `cmd-080.txt` |
-| 81 | Cafe & ordering pack | 10 | `cmd-081.txt` |
-| 82 | Numbers 1-10 pack | 10 | `cmd-082.txt` |
-| 83 | Market & shopping pack | 10 | `cmd-083.txt` |
-| 84 | Directions & city pack | 10 | `cmd-084.txt` |
-| 85 | Transport & travel pack | 10 | `cmd-085.txt` |
-| 86 | Home & family pack | 10 | `cmd-086.txt` |
-| 87 | Body & health pack | 10 | `cmd-087.txt` |
-| 88 | Colours & days pack | 10 | `cmd-088.txt` |
-| 89 | Synagogue objects pack | 10 | `cmd-089.txt` |
+| 89 | Synagogue objects pack (partial: rows 3-10 remaining) | 8 | `cmd-089.txt` |
 | 90 | Shabbat table pack | 10 | `cmd-090.txt` |
 | 91 | Holidays pack | 10 | `cmd-091.txt` |
 | 92 | Prayer verbs & actions pack | 10 | `cmd-092.txt` |

@@ -9,12 +9,19 @@ import { lessonQueue } from '../home/nextlesson.js';
 export const STORE_KEY = 'onboarding.v1';
 export const PLACEMENT_KEY = 'placement.v1'; // written by src/placement (read here, never written)
 
+/** First setup question: the goal decides the defaults (Israel -> Israeli pronunciation, no Sephardi/Ashkenazi question). Values are the existing `goal` setting. */
+export const GOAL_QUESTION = 'What do you want to do first?';
+export const GOAL_CHOICES = Object.freeze([
+  { id: 'read',   label: 'Read prayers or Torah' },
+  { id: 'israel', label: 'Speak in Israel' },
+  { id: 'both',   label: 'Both, or not sure' },
+]);
 export const LETTERS_QUESTION = 'Can you already read the Hebrew letters?';
 /** Stage 1 answers. `start` is the route each answer leads to. */
 export const LETTER_ANSWERS = Object.freeze([
-  { id: 'none',   label: 'No, start from the beginning', start: '/firstday',  desc: 'Your first 10 minutes: five baby steps of about 2 minutes, one letter at a time, ending with your first word.' },
-  { id: 'some',   label: 'Some',                         start: '/placement', desc: 'A short placement check picks the lesson to start from.' },
-  { id: 'vowels', label: 'Yes, I read with vowels',      start: '/placement', desc: 'The placement check confirms where to start so you skip what you know.' },
+  { id: 'none',   label: 'No, start from the beginning', start: '/firstday',  desc: 'Your first 10 minutes, one letter at a time.' },
+  { id: 'some',   label: 'Some',                         start: '/placement', desc: '' },
+  { id: 'vowels', label: 'Yes, I can read with vowel marks',      start: '/placement', desc: '' },
 ]);
 export const STEPS = Object.freeze(['letters', 'congregation', 'minutes', 'plan']);
 
@@ -24,16 +31,16 @@ export const STEPS = Object.freeze(['letters', 'congregation', 'minutes', 'plan'
  * `changes` is the honest one-line statement of what the choice does in the app.
  */
 export const DENOMINATIONS = Object.freeze([
-  { id: 'reform',            label: 'Reform',            suggests: 'sephardi', changes: 'Saved with your plan and suggests Sephardi pronunciation below. Lessons and the calendar do not change (festival days are set in Calendar).' },
-  { id: 'conservative',      label: 'Conservative',      suggests: 'sephardi', changes: 'Saved with your plan and suggests Sephardi pronunciation below. Lessons and the calendar do not change (festival days are set in Calendar).' },
-  { id: 'reconstructionist', label: 'Reconstructionist', suggests: 'sephardi', changes: 'Saved with your plan and suggests Sephardi pronunciation below. Lessons and the calendar do not change (festival days are set in Calendar).' },
-  { id: 'orthodox',          label: 'Orthodox',          suggests: null,       changes: 'Saved with your plan. Orthodox congregations vary (many use Ashkenazi, many Modern Orthodox use Sephardi or Israeli), so pick the pronunciation you hear at your synagogue.' },
+  { id: 'reform',            label: 'Reform',            suggests: 'sephardi', changes: 'Saved with your plan. Suggests Sephardi sounds; your lessons stay the same.' },
+  { id: 'conservative',      label: 'Conservative',      suggests: 'sephardi', changes: 'Saved with your plan. Suggests Sephardi sounds; your lessons stay the same.' },
+  { id: 'reconstructionist', label: 'Reconstructionist', suggests: 'sephardi', changes: 'Saved with your plan. Suggests Sephardi sounds; your lessons stay the same.' },
+  { id: 'orthodox',          label: 'Orthodox',          suggests: null,       changes: 'Saved with your plan. Orthodox congregations vary, so pick the sounds you hear at yours.' },
 ]);
 /** Stage 2: pronunciation. Ids are the existing `congregation` setting values (src/shell/settings.js ENUMS.congregation). */
 export const PRONUNCIATIONS = Object.freeze([
-  { id: 'sephardi',  label: 'Sephardi',  changes: 'Prayer transliteration, the Sounds screen and vocabulary use Sephardi vowel values (the default for most American synagogues).' },
-  { id: 'ashkenazi', label: 'Ashkenazi', changes: 'Kamatz reads as "aw" and tav without a dot as "s" in transliteration, the Sounds screen and vocabulary.' },
-  { id: 'israeli',   label: 'Israeli',   changes: 'Modern Israeli vowel values everywhere; this is also how the browser voice speaks when no recording exists.' },
+  { id: 'sephardi',  label: 'Sephardi',  changes: 'The default. These are the vowel sounds most American synagogues use.' },
+  { id: 'ashkenazi', label: 'Ashkenazi', changes: 'The older European style. For example, tav without a dot sounds like "s".' },
+  { id: 'israeli',   label: 'Israeli',   changes: 'Spoken in Israel today. Also the voice you hear when no recording exists.' },
 ]);
 export const SETTINGS_KEY_PRONUNCIATION = 'congregation';
 
@@ -119,10 +126,11 @@ export function buildPlan(o) {
     }
     days.push({ label: plans.dayLabels[d] || `Day ${d + 1}`, minutes: items.reduce((a, i) => a + i.minutes, 0), items });
   }
+  const firstLessonItem = days.flatMap((d) => d.items).find((i) => i.kind === 'lesson');
   const note = needsPlacement
     ? `Lessons from ${plans.firstLesson} are a placeholder until you take the placement check; this plan is rebuilt from its result.`
     : open && open.locked ? `The placement check fit you to ${open.wanted}, which is locked until earlier lessons are done, so lessons start at ${placed}.`
-    : placed ? `Lessons start at ${placed}, the placement check's suggestion (draft cutoffs, untested).` : `Lessons start at ${plans.firstLesson}.`;
+    : placed ? `Lessons start at ${placed}, the placement check's suggestion (a draft guess).` : firstLessonItem ? `The first lesson is "${firstLessonItem.title}".` : `Lessons start at ${plans.firstLesson}.`;
   return { v: 1, draft: true, minutesPerDay: minutes, startLesson, source: placed ? 'placement' : 'default', letters: rec.letters, days, totalMinutes: days.reduce((a, x) => a + x.minutes, 0), note };
 }
 

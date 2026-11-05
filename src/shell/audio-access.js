@@ -5,6 +5,7 @@
 //   none   - neither: show "No audio yet" and the written respelling instead of a button
 // Pure of the DOM except audioButton(), which takes a `h` element factory.
 import { fileLabel, STATUS_LABELS } from './audio-labels.js';
+import { isAudioFree } from './audiofree.js';
 export const DEVICE_LABEL = 'Device voice, not a recorded teacher; Israeli-style only';
 export const NO_AUDIO = STATUS_LABELS.missing;
 
@@ -26,7 +27,7 @@ export function audioAccess(audio, kind, id, o = {}) {
   try {
     const s = typeof audio.status === 'function' ? audio.status(kind, id, o) : null;
     if (s) {
-      if (s.source === 'file') return { level: 'file', label: fileLabel(s.entryStatus) };
+      if (s.source === 'file') return { level: 'file', label: fileLabel(s.entryStatus, s.fileTradition || s.tradition, s.entrySource) };
       if (s.source === 'tts-fallback') return { level: 'device', label: DEVICE_LABEL };
       return { level: 'none', label: NO_AUDIO, reason: s.reason || 'unavailable', checking: s.reason === 'checking audio...' };
     }
@@ -46,6 +47,7 @@ export function chipText(a) { return a.level === 'none' ? NO_AUDIO : a.label; }
  */
 export function audioButton(h, ctx, o) {
   const { kind, id, label = 'Listen', respelling } = o;
+  if (isAudioFree(ctx)) return h('span', { class: 'audio-off', hidden: '' }); // "I do not use audio": no button, no "No audio yet" line
   const opt = {}; if (o.voice) opt.voice = o.voice; if (o.tradition) opt.tradition = o.tradition;
   const a = audioAccess(ctx && ctx.audio, kind, id, opt);
   if (a.level === 'none' && !a.checking) {
@@ -67,23 +69,35 @@ export function audioButton(h, ctx, o) {
   return h('span', { class: 'audio-wrap' }, btn, ' ', note);
 }
 
-/** Pure: text for the one-time first-run banner, from the shell audio summary + device voice state. */
+/** Pure: text for the full notice (the one-line banner links to it; it is also the link's title). */
 export function bannerText(summary, voice) {
   const rec = (summary && (summary.recorded || 0)) || 0;
   if (rec > 0) return 'Some words have recorded audio. Anything else is read by your device voice, which is not a recorded teacher.';
   const dev = voice === 'yes' ? 'Your device has a Hebrew voice, so ALEF can read words aloud with it. It is a device voice, not a recorded teacher, and Israeli-style only.'
     : voice === 'unknown' ? 'ALEF will try your device\'s Hebrew voice if it has one. It would be a device voice, not a recorded teacher, and Israeli-style only.'
-    : 'Your device has no Hebrew voice, so there is no sound here. Read the written respelling shown with each word instead.';
+    : 'Your device has no Hebrew voice, so there is no sound here. Read the English-letter spelling shown with each word instead.';
   return `There are no recorded teacher clips yet. ${dev}`;
 }
 
 const KEY = 'alef.audioBannerSeen.v1';
-/** Show the banner once (dismissal remembered in localStorage). Returns the node or null. */
-export function mountAudioBanner(h, audio, { doc = globalThis.document, storage = globalThis.localStorage, speech, Utt } = {}) {
-  try { if (!doc || (storage && storage.getItem(KEY))) return null; } catch { /* storage blocked: show it */ }
-  const host = doc.querySelector('.sound-bar'); if (!host) return null;
-  const node = h('div', { class: 'audio-banner', role: 'region', 'aria-label': 'Audio status', style: 'padding:.5rem 1rem;font-size:.9rem;border-block-end:1px solid var(--border)' },
-    h('strong', {}, 'About sound: '), bannerText(audio && audio.summary, deviceVoiceState(speech, Utt)), ' ',
-    h('button', { type: 'button', class: 'btn secondary', onclick: () => { try { storage && storage.setItem(KEY, '1'); } catch { /* ignore */ } node.remove(); } }, 'Got it'));
-  host.after(node); return node;
+/** Pure: is the bar dismissed (remembered in storage)? Storage blocked: not dismissed. */
+export function soundBarDismissed(storage = globalThis.localStorage) { try { return !!(storage && storage.getItem(KEY)); } catch { return false; } }
+/**
+ * Wire the ONE sound bar (index.html .sound-bar: #sound-status role=status + Details link + dismiss button).
+ * Dismiss hides the bar, remembers it, and moves focus to `focusTo` so it is not lost. The bar comes back for a
+ * non-idle status (a play error, "list could not be loaded"), because those are things the learner needs to know.
+ * @returns {{show:(mode:string)=>void, dismissed:()=>boolean}|null}
+ */
+export function wireSoundBar(audio, { doc = globalThis.document, storage = globalThis.localStorage, speech, Utt, focusTo } = {}) {
+  const bar = doc && doc.querySelector('.sound-bar'); if (!bar) return null;
+  const x = bar.querySelector('.sound-bar-x'), link = bar.querySelector('.sound-bar-details');
+  if (link) link.title = bannerText(audio && audio.summary, deviceVoiceState(speech, Utt));
+  let gone = soundBarDismissed(storage);
+  const apply = (mode) => { bar.hidden = gone && (!mode || mode === 'idle'); };
+  apply('idle');
+  if (x) x.addEventListener('click', () => {
+    gone = true; try { storage && storage.setItem(KEY, '1'); } catch { /* ignore */ }
+    apply('idle'); const t = focusTo || doc.getElementById('main'); if (t && t.focus) t.focus();
+  });
+  return { show: apply, dismissed: () => gone };
 }

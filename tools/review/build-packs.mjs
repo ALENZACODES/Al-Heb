@@ -30,7 +30,15 @@ export function run(o) {
     files[`packs/${p.file}.html`] = toHtml(p, p.rows);
   }
   files['INSTRUCTIONS.md'] = instructionsMd(all);
-  files['STATUS.md'] = statusMd(all, sum);
+  let packet = null;
+  const mf = path.join(o.root, 'docs', 'review', 'out', 'manifest.json');
+  if (fs.existsSync(mf)) {
+    const m = JSON.parse(fs.readFileSync(mf, 'utf8'));
+    packet = { totalItems: m.totalItems, totalHours: m.totalHours, phaseOneHours: m.phaseOneHours, areas: m.areas.length,
+      phaseOneItems: m.areas.filter((a) => a.priority <= 6).reduce((n, a) => n + a.items, 0),
+      otherFlagged: (m.areas.find((a) => a.slug === 'other-flagged') || { items: 0 }).items, uncovered: m.audit.dataFilesNotCoveredByAnyArea.length };
+  }
+  files['STATUS.md'] = statusMd(all, sum, packet);
   if (!o.dry) for (const [rel, txt] of Object.entries(files)) {
     const f = path.join(o.out, rel);
     fs.mkdirSync(path.dirname(f), { recursive: true });

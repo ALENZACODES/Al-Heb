@@ -1,5 +1,5 @@
 // Lazy per-tradition word-clip shards (data/audio/manifest-words-<tradition>.json, group prayer-word).
-// The core manifest loads at boot; this loads ONLY the shard for the learner's congregation setting, after first paint,
+// This loads ONLY the shard for the learner's congregation setting, when the shell first needs a word clip (see app.js),
 // and feeds it to player.extend(). Pure of DOM: fetch/settings/audio are injected so it can be tested with a fake fetch.
 export const SHARD_TRADITIONS = ['israeli', 'sephardi', 'ashkenazi'];
 export const OFFLINE_NOTE = 'audio info unavailable offline';
@@ -53,8 +53,39 @@ export function createShardLoader({ fetch, audio, settings, onState = () => {} }
     return last;
   }
 
-  function watch() {
-    return settings.subscribe?.((_, changed) => { if (Array.isArray(changed) && changed.includes('congregation')) load(); });
+  /** reload when the congregation setting changes; `enabled()` (default always) lets the shell hold this back until a shard was ever asked for */
+  function watch(enabled = () => true) {
+    return settings.subscribe?.((_, changed) => { if (Array.isArray(changed) && changed.includes('congregation') && enabled()) load(); });
   }
   return { load, watch, get state() { return last; }, isLoaded: (t) => loaded.has(t) };
+}
+
+/**
+ * Fresh install: the first page load is not controlled by the service worker, so its shard fetch bypasses the worker's runtime
+ * cache. Once the worker is active and controlling this page, fetch the active tradition's shard once more (through the worker)
+ * so it is stored for offline use. Keeps the core precache small; only the learner's own shard is fetched. Never throws.
+ * Skipped when the page was already controlled at load (the normal fetch already went through the worker).
+ * @param {{ fetch: Function, settings: {get:Function}, serviceWorker?: any, timeoutMs?: number }} o
+ * @returns {Promise<'skipped'|'warmed'|'unavailable'>}
+ */
+export async function warmShardAfterInstall({ fetch, settings, serviceWorker, timeoutMs = 20000 }) {
+  try {
+    if (!serviceWorker || serviceWorker.controller) return 'skipped';
+    const tradition = settings.get('congregation');
+    if (!SHARD_TRADITIONS.includes(tradition)) return 'skipped';
+    await serviceWorker.ready;
+    if (!serviceWorker.controller) { // activate() claims clients; wait for that, but not forever
+      await new Promise((res) => {
+        const t = setTimeout(res, timeoutMs);
+        serviceWorker.addEventListener?.('controllerchange', () => { clearTimeout(t); res(); }, { once: true });
+        if (serviceWorker.controller) { clearTimeout(t); res(); }
+      });
+    }
+    if (!serviceWorker.controller) return 'unavailable';
+    let res = await fetch(shardPath(tradition));
+    if (res.status === 404 && tradition === 'sephardi') res = await fetch(shardPath('israeli'));
+    if (!res.ok) return 'unavailable';
+    await res.arrayBuffer?.();
+    return 'warmed';
+  } catch { return 'unavailable'; }
 }

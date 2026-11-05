@@ -3,15 +3,15 @@
 Why Cloudflare Pages: docs/ research (competitor analysis, item 39) picks it as the PWA host because audio clips are static files and the Free plan has no bandwidth charge for static requests. That claim comes from the research; the only Cloudflare numbers re-read for this document are in the table below.
 
 ## Limits (read from developers.cloudflare.com/pages/platform/limits and /pages/configuration/build-image on 2026-11-03)
-| Limit | Value | ALEF today (`node tools/deploy/make-dist.mjs`) |
+| Limit | Value | ALEF today (`node tools/deploy/build_site.mjs`, run 2026-11-04) |
 |---|---|---|
-| Files per site (Free) | 20,000 (paid plans up to 100,000 with `PAGES_WRANGLER_MAJOR_VERSION=4`) | 720 files (59.74 MiB) |
+| Files per site (Free) | 20,000 (paid plans up to 100,000 with `PAGES_WRANGLER_MAJOR_VERSION=4`) | 723 files (59.76 MiB) |
 | Size of one file | 25 MiB | largest is 8.86 MiB (`assets/workbook/alef-flashcards-letter.pdf`); the largest script is 3.72 MiB (`assets/vendor/_tesseract/tesseract-core-simd-lstm.wasm.js`) |
 | Builds per month (Free) | 500; one build at a time; 20 minute timeout | not applicable yet |
 | `_headers` | 100 rules, 2,000 characters per header | 18 rules, longest header 343 characters |
 | `_redirects` | 2,000 static + 100 dynamic | no file (see below) |
 | Build image Node.js | default 22.23.4; override with env var `NODE_VERSION` or a `.node-version` file | scripts need Node 18+ |
-Re-open the limits page on deploy day: quotas change. Planned audio (about 14,000 clips) is far under both limits (mp3 clips are small; 14,000 files is under 20,000 only if nothing else grows much: **file count is the limit to watch**, not size).
+Re-open the limits page on deploy day: quotas change. The audio manifests list 24,900 clips (core 6,384 plus three word shards of 6,172), none recorded. If every listed clip became its own file the site would hold 723 + 24,900 = 25,623 files, over the 20,000 Free limit (paid plans allow more). Not all of them are planned for the first release (the priority set is in `docs/voices/recording/priority_summary.md`), but **file count is the limit to watch**, not size.
 The `_headers` merge rules (all matching rules apply, a header named twice is comma-joined, `! Name` detaches) were taken from memory of the Cloudflare docs; that page was not fetched here. `check-deploy` therefore avoids depending on them: no file may match two rules that both set Cache-Control.
 
 ## Files added for this
@@ -19,12 +19,12 @@ The `_headers` merge rules (all matching rules apply, a header named twice is co
 |---|---|
 | `_headers` | CSP with no third-party origin, nosniff, no-referrer, Permissions-Policy, frame and opener protection, cache rules |
 | `tools/deploy/make-dist.mjs` | copies only runtime files to `dist/`, writes a fresh `precache-manifest.js` for what ships, prints a size report |
-| `tools/deploy/check-deploy.mjs` | serves `dist/` locally with `_headers` applied and checks it (42 checks) |
+| `tools/deploy/check-deploy.mjs` | serves `dist/` locally with `_headers` applied and checks it (44 checks on 2026-11-04: 44 passed, 6 warnings about origins named in code) |
 | `tests/deploy.test.js` | the same logic as unit tests, including a case where the check must fail |
 No `_redirects` (the hash router needs no rewrites; with no `404.html` Pages serves `index.html` for unknown paths) and no `wrangler.toml` (a repo-level Wrangler file changes how the dashboard treats the project; add one only if you move to `wrangler pages deploy`).
 
 ## What ships and what does not
-Ships: the precache list (527 files, 13.81 MiB, measured 2026-11-04; the first install downloads all of it: data/vocab 5.9 MiB, data/audio manifest 1.8 MiB, data/curriculum 1.1 MiB), `sw.js`, `_headers`, the OCR runtime `assets/vendor/` (4.8 MiB, loaded on the first photo), `assets/workbook/` PDFs (29.5 MiB, not precached), `data/vocab/packs/`, the three `data/audio/manifest-words-*.json` shards, the OFL font licence texts, and `audio/` once it exists.
+Ships: the install (precache) list, now a small core: 284 files, 3.36 MiB (measured 2026-11-04 from `dist/precache-manifest.js`; `build_site` prints "precache 284 files, 3.36 MiB"). A further 246 files, 10.46 MiB (`ALEF_ON_DEMAND`: vocabulary, pronunciation, speak, calendar and other data that only preview routes read, the audio manifest, intermediate lessons, screenshots) are not installed up front; `sw.js` caches them the first time a page asks for them, or all at once from the offline page's download-everything button (`tools/build-precache.mjs`, `src/shell/offline.js`). The committed root `precache-manifest.js` is stale and was not regenerated; `build_site` writes a fresh one inside `dist/`. Also shipped: `sw.js`, `_headers`, the OCR runtime `assets/vendor/` (4.8 MiB, loaded on the first photo), `assets/workbook/` PDFs (29.5 MiB, not precached), `data/vocab/packs/`, the three `data/audio/manifest-words-*.json` shards, the OFL font licence texts, and `audio/` once it exists.
 Does not ship: docs, tests, tools, book, research, `assets/images/` (219 MB of incoming photos), `*.test.js`, `.md` files (except the vendored licences), and `assets/img/` (about 42 MB on disk of placeholder SVG/WebP that no file in `src/` references; add `--with-img` when the app starts using them).
 
 ## Steps

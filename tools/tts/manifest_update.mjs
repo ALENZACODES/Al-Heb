@@ -1,16 +1,18 @@
 #!/usr/bin/env node
 // Mark accepted TTS clips in the audio manifest the app reads, and copy their MP3s into <root>/audio/.
 //   node tools/tts/manifest_update.mjs [--report tools/tts/verify-report.csv] [--work ~/alef-tts-work] [--root <repo>] [--no-copy] [--dry-run] [--allow-mock]
-// Status written: "tts" (the app's existing synthetic-voice value, shown with the label in src/shell/audio-labels.js). It NEVER writes
-// "recorded", and it never touches an entry whose status is already "recorded" (a human clip). It also never marks a clip that is
-// not in the report as accepted. After it runs, `node tools/audio/build_manifest.mjs --check` must still pass (the sidecar .meta.json
-// written next to each MP3 makes a rebuild give the same status and source).
-// Why not "recorded-tts": src/shell/audio.js and src/audio/player.js only know recorded|tts|missing. An unknown status would be counted as
-// missing in the summary and given the human-recording label by describeResult, and build_manifest.mjs would fall back to "recorded". See docs/tts/README.md.
+// Status written: "synthetic-unreviewed" (a computer-made clip that no human has listened to). It NEVER writes "recorded", it never touches an
+// entry whose status is already "recorded" (a human clip) or "synthetic-reviewed", and it never marks a clip that is not in the report as accepted.
+// How each clip was made is written into the manifest entry and the sidecar <clip>.mp3.meta.json:
+//   source  "tts-hebrew" (Israeli: pointed Hebrew spoken) or "tts-respelled" (Sephardi/Ashkenazi: a Latin-letter sound word spoken); mock runs add ":mock"
+//   synth   { soundWord, languageToken, model, modelVersion, package, confidence, flags, gate, refDigest }  copied from <work>/render-log.jsonl, which the
+//           renderer fills. A clip with no render-log record is NOT marked (its provenance cannot be stated).
+// After it runs, `node tools/audio/build_manifest.mjs --check` must still pass (the sidecar makes a rebuild give the same status, source and synth).
+// The app reads the status through src/shell/audio-labels.js (see docs/tts/README.md): it never presents these clips as recorded.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { REPO_ROOT, TTS_DIR, defaultWork, parseArgs, parseCsv, TTS_STATUS, HUMAN_STATUS } from './lib.mjs';
+import { REPO_ROOT, TTS_DIR, defaultWork, parseArgs, parseCsv, TTS_STATUS, REVIEWED_STATUS, HUMAN_STATUS, SOURCES, readRenderLog, clipKey } from './lib.mjs';
 import { checkMp3 } from './post.mjs';
 
 export const SHARDS = ['israeli', 'sephardi', 'ashkenazi'];
@@ -24,30 +26,44 @@ export function update({ root = REPO_ROOT, work = defaultWork(), reportPath, cop
   const files = manifestFiles(root).map((rel) => ({ rel, list: JSON.parse(fs.readFileSync(path.join(root, rel), 'utf8')), changed: false }));
   const byPath = new Map();
   for (const f of files) for (const e of f.list) byPath.set(e.path, { e, f });
-  const res = { marked: 0, skippedHuman: [], notInManifest: [], noMp3: [], badMp3: [], mockRefused: 0, rejected: rows.length - accepted.length, notIsraeli: [] };
+  const log = readRenderLog(work);
+  const res = { marked: 0, skippedHuman: [], skippedReviewed: [], notInManifest: [], noMp3: [], badMp3: [], noProvenance: [], mockRefused: 0, rejected: rows.length - accepted.length, wrongTradition: [] };
   for (const r of accepted) {
     const hit = byPath.get(r.path);
     if (!hit) { res.notInManifest.push(r.path); continue; }
     const { e, f } = hit;
-    if (e.tradition !== 'israeli') { res.notIsraeli.push(r.path); continue; }
     if (e.status === HUMAN_STATUS) { res.skippedHuman.push(r.path); continue; }
-    if (/^mock$/.test(r.engine) && !allowMock) { res.mockRefused++; continue; }
+    if (e.status === REVIEWED_STATUS) { res.skippedReviewed.push(r.path); continue; }
+    const mock = /^mock$/.test(r.engine);
+    if (mock && !allowMock) { res.mockRefused++; continue; }
+    const rec = log.get(clipKey(e));
+    const base = rec && String(rec.source || '').replace(/:mock$/, '');
+    if (!rec || !SOURCES.includes(base) || (rec.source.endsWith(':mock') !== mock)) { res.noProvenance.push(r.path); continue; }
+    // A tradition may only carry its own kind of source: Israeli = pointed Hebrew, the others = respelling.
+    if ((e.tradition === 'israeli') !== (base === 'tts-hebrew') || (base === 'tts-respelled' && !rec.sound_word)) { res.wrongTradition.push(r.path); continue; }
     const src = path.join(work, 'mp3', r.path);
     if (!fs.existsSync(src)) { res.noMp3.push(r.path); continue; }
     const chk = checkMp3(src);
     if (!chk.ok) { res.badMp3.push(`${r.path}: ${chk.problems.join('; ')}`); continue; }
-    const source = r.engine === 'mock' ? 'tts:mock' : 'tts:chatterbox';
+    const synth = {
+      ...(base === 'tts-respelled' ? { soundWord: rec.sound_word, soundModel: rec.sound_model || null } : {}),
+      languageToken: rec.language, model: rec.model_name, modelVersion: rec.model_version, package: rec.package || null,
+      confidence: rec.confidence || null, flags: rec.flags || [], gate: r.gate || (mock ? 'mock-tone' : 'asr-cer'), refDigest: rec.ref_digest || null,
+    };
+    const source = rec.source;
     if (!dry) {
       if (copy) {
         const dst = path.join(root, r.path);
         fs.mkdirSync(path.dirname(dst), { recursive: true });
         fs.copyFileSync(src, dst);
         fs.writeFileSync(`${dst}.meta.json`, JSON.stringify({
-          status: TTS_STATUS, source, renderedAt: now(), engine: r.engine, cer: Number(r.cer), redistributionCleared: false,
-          note: 'Synthetic voice. Not a human recording. Chatterbox output carries an inaudible PerTh watermark. Redistribution/sale clearance per docs/tts/README.md.',
+          status: TTS_STATUS, source, synth, renderedAt: now(), engine: r.engine, cer: r.cer === '' || r.cer == null ? null : Number(r.cer), reviewed: false, redistributionCleared: false,
+          note: base === 'tts-respelled'
+            ? 'Synthetic voice made from a respelling (sound word) of the Hebrew. Not a human recording. No human has listened to it; how it sounds is unknown. Chatterbox output carries an inaudible PerTh watermark. Redistribution/sale clearance per docs/tts/README.md.'
+            : 'Synthetic voice made from pointed Hebrew. Not a human recording. No human has listened to it. Chatterbox output carries an inaudible PerTh watermark. Redistribution/sale clearance per docs/tts/README.md.',
         }, null, 1) + '\n');
       }
-      e.status = TTS_STATUS; e.source = source; f.changed = true;
+      e.status = TTS_STATUS; e.source = source; e.synth = synth; f.changed = true;
     }
     res.marked++;
   }

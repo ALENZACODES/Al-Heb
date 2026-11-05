@@ -3,6 +3,7 @@
  * mount(root, ctx) -> unmount. ctx: { store, settings, audio?, now?() }. No network except two same-origin JSON files.
  */
 import { el, heText } from "../curriculum/dom.js";
+import { streakVisible } from "../shell/comfort.js";
 import { createMorningModel } from "./model.js";
 import { verseFor, modehAniFor, modehAniClip, checkVerses, VERSES_URL } from "./verses.js";
 import { morningItems, TITLE } from "./plan.js";
@@ -20,7 +21,6 @@ export const MORNING_CSS = `
 .mrn-ring circle { fill: none; stroke-width: 4; } .mrn-ring .bg { stroke: var(--border, #ccc); } .mrn-ring .fg { stroke: currentColor; stroke-linecap: round; }
 .mrn-strip { display: flex; gap: .4rem; list-style: none; padding: 0; margin: .5rem 0 0; }
 .mrn-strip li { text-align: center; min-inline-size: 2.2rem; } .mrn-strip .g { display: block; font-size: 1.2rem; }
-.mrn-banner { border: 1px solid var(--border); border-radius: var(--radius); padding: .5rem .8rem; }
 .mrn-flag { font-size: .85rem; font-style: italic; }
 .mrn label { display: inline-flex; align-items: center; gap: .4rem; min-block-size: var(--tap, 48px); }
 .mrn input[type=time] { min-block-size: var(--tap, 48px); min-inline-size: 8rem; padding: .4rem .6rem; font: inherit; box-sizing: border-box; }
@@ -43,8 +43,8 @@ export function streakPanel(model) {
   const p = model.project(), strip = model.strip();
   const sec = Math.min(p.todaySeconds, p.goal);
   const label = p.activeToday ? "Today is done" : p.restToday ? "Resting today" : `${clock(sec)} of ${clock(p.goal)} today`;
-  const msg = p.restToday ? "Your streak rests when you do. Shabbat and festival days never break an ALEF streak. (draft)"
-    : p.broken ? "New streak starts today. One day at a time. (draft)" : null;
+  const msg = p.restToday ? "Resting today. A rest day never breaks your streak."
+    : p.broken ? "New streak starts today. One day at a time." : null;
   return el("div", { class: "mrn-streak", role: "group", "aria-label": "Streak" },
     flame(), el("span", { class: "mrn-count", "aria-label": `${p.count} day streak` }, String(p.count)), el("span", {}, p.count === 1 ? "day" : "days"),
     ring(sec, p.goal), el("span", { role: "status" }, label),
@@ -54,14 +54,6 @@ export function streakPanel(model) {
     })),
     msg ? el("p", { class: "mrn-flag" }, msg) : null);
 }
-/** Evening rescue banner node, or null. Marks the evening as shown so it appears once. */
-export function rescueBanner(model) {
-  const r = model.rescue();
-  if (!r.banner) return null;
-  model.markRescueShown();
-  return el("div", { class: "mrn-banner", role: "status" }, r.text, " ", el("a", { class: "btn", href: "#/learn?review=1" }, "Start a review"), " ", el("span", { class: "mrn-flag" }, "(draft)"));
-}
-
 async function getJson(path) { const res = await fetch(new URL(path, import.meta.url)); if (!res.ok) throw new Error(`${path}: HTTP ${res.status}`); return res.json(); }
 
 export async function mount(root, ctx) {
@@ -89,7 +81,7 @@ export async function mount(root, ctx) {
       modeh ? el("section", { "aria-labelledby": "mrn-mh" }, el("h2", { id: "mrn-mh" }, "Modeh Ani"), heText(modeh.he, "mrn-he"), translitLine(translit, modeh.he, ctx), el("p", {}, modeh.english),
         modeh.needsCheck ? el("p", { class: "mrn-flag" }, "The feminine form is derived and not yet checked by a Hebrew educator.") : null,
         clip ? el("button", { type: "button", class: "btn", onclick: () => ctx.audio.play("line", "modeh-ani-1") }, "Play") : null) : null,
-      el("section", { "aria-labelledby": "mrn-sh" }, el("h2", { id: "mrn-sh" }, "Your streak"), streakPanel(model)),
+      streakVisible(ctx) ? el("section", { "aria-labelledby": "mrn-sh" }, el("h2", { id: "mrn-sh" }, "Your streak"), streakPanel(model)) : null,
       settings);
     model.markSeen();
   };
@@ -116,15 +108,18 @@ function settingsForm(model, ctx, changed) {
   const time = el("input", { type: "time", id: "mrn-time", value: prefs.time, onchange: (e) => { model.setPrefs({ time: e.target.value }); changed(); } });
   const obs = el("input", { type: "checkbox", id: "mrn-obs", checked: model.observant() ? "" : null, onchange: (e) => { model.setPrefs({ observant: e.target.checked }); changed(); } });
   const frz = el("input", { type: "checkbox", id: "mrn-frz", checked: model.freeze() ? "" : null, onchange: (e) => { model.setPrefs({ freeze: e.target.checked }); changed(); } });
-  const res = el("input", { type: "time", id: "mrn-res", value: prefs.rescueTime, onchange: (e) => { model.setPrefs({ rescueTime: e.target.value }); changed(); } });
+  const erev = el("input", { type: "time", id: "mrn-erev", value: prefs.eravLatest, onchange: (e) => { model.setPrefs({ eravLatest: e.target.value }); changed(); } });
   const status = el("p", { role: "status", class: "mrn-flag" }, sup.supported ? (sup.permission === "denied" ? "Notifications are blocked; you will see a banner when you open ALEF instead." : "") : "This browser has no notifications; you will see a banner when you open ALEF instead.");
   return el("section", { "aria-labelledby": "mrn-set" }, el("h2", { id: "mrn-set" }, "Reminder and streak settings"),
-    el("p", { class: "small" }, "Reminders fire only while ALEF is open; there is no server. (draft)"),
+    el("p", { class: "small" }, "Reminders fire only while ALEF is open; there is no server."),
     el("p", {}, el("label", {}, on, " Morning reminder"), " ", el("label", {}, "at ", time)),
     sup.supported && sup.permission === "default" ? el("button", { type: "button", class: "btn secondary", onclick: async () => { const r = await requestNotificationPermission(); status.textContent = r === "granted" ? "Notifications on while ALEF is open." : "No notifications; the in-app banner will be used."; changed(); } }, "Allow notifications") : null,
     status,
     el("p", {}, el("label", {}, obs, " Observant mode: no reminders on Shabbat or festivals; a reminder before sundown on the eve instead")),
     el("p", {}, el("label", {}, frz, " Streak rests on Shabbat and festival days")),
-    el("p", { class: "small" }, "Your streak rests when you do. Shabbat and festival days never break an ALEF streak. Reddit and Duolingo do not do this. (draft)"),
-    el("p", {}, el("label", {}, "Evening nudge at ", res)));
+    el("p", { class: "small" }, model.freeze()
+      ? "Shabbat and festival days are rest days: they never add to your streak and never break it. You can also take any other day as a rest day on the Progress screen."
+      : "With this box off, a Saturday or festival you do not study counts as a missed day. Turn it on and those days become rest days that neither add to nor break your streak. You can also take any other day as a rest day on the Progress screen."),
+    model.observant() ? el("p", {}, el("label", {}, "Latest time for the reminder on the eve of Shabbat or a festival ", erev)) : null,
+    model.observant() ? el("p", { class: "small" }, "The eve reminder is sent at your chosen time or at this time, whichever is earlier. The default is early so it arrives well before candle lighting; candle lighting depends on your city and the season, so check it against your local time.") : null);
 }

@@ -9,11 +9,23 @@ Files owned by this lane: `src/onboarding/*`, `src/shell/onboarding.view.js` (fi
 
 ## Stages
 
-1. **Letters question** — "Can you already read the Hebrew letters?"
+1. **Goal and letters (one screen)** — "What do you want to do first?" with three choices (Read prayers or Torah /
+   Speak in Israel / Both, or not sure), then "Can you already read the Hebrew letters?". The goal is the existing
+   `goal` setting (`read` | `israel` | `both`), preselected to its current value (default `read`), so a learner who
+   skips it gets the old flow. Defaults it derives, all changeable later (Settings, or "Change synagogue or
+   pronunciation" and "Change goal or minutes a day" on the plan card):
+   - Israel -> `congregation` is set to `israeli` (only when the goal was not already Israel, so a later re-answer
+     does not overwrite a pick), stage 2 is skipped, and the flow goes straight to the plan card
+     ("Israeli pronunciation", Start button = first Israel lesson).
+   - Read or Both -> stage 2 as below (Sephardi / Ashkenazi / Israeli asked, Sephardi preselected).
+   The goal choices have no descriptions and the "Some" / "Yes" letter answers have none either, so Continue
+   stays above the tab bar at 375x667 (it was measured at y526-574 with the audio notice showing; with the long
+   descriptions it sat under the bar).
+   Letters question: "Can you already read the Hebrew letters?"
    - "No, start from the beginning" -> `#/firstday`
    - "Some" -> `#/placement`
    - "Yes, I read with vowels" -> `#/placement`
-   Continue saves `onboarding.v1` and sets `settings.onboarded = true`, then shows stage 2. The question is never
+   Continue saves `onboarding.v1` and sets `settings.onboarded = true` and `goal`, then shows stage 2 (or the plan card for Israel). The question is never
    shown again by itself: a return visit to `#/welcome` shows the plan card. The only way back is the
    "Change my starting point" button on that card (it rewrites `letters`/`start`, keeps denomination and minutes).
    The destination is reached by the plan card's primary button, or by "Skip the rest and start now" on stages 2-3.
@@ -35,7 +47,7 @@ Files owned by this lane: `src/onboarding/*`, `src/shell/onboarding.view.js` (fi
    is missing from the build are hidden via `ctx.hasRoute`. Before the placement check is taken the lessons are a
    placeholder from r01 and the card says so; after it, the card rebuilds from the recommended lesson and the
    primary button becomes "Start lesson rNN".
-4. **Tests** — `tests/onboarding.test.js` (18 tests, fake DOM): answer->route mapping, storage, never-re-ask,
+4. **Tests** — `tests/onboarding.test.js` (fake DOM; includes the goal question, Israel skipping stage 2, read/both still asking): answer->route mapping, storage, never-re-ask,
    settings wiring, plan shape and route validity, hasRoute filtering, labels/legends/button types/unique ids.
 
 ## Store keys
@@ -54,8 +66,8 @@ optionally rename `settings.redo` in `src/shell/i18n.js`. The "Reset settings to
 ## Not done / needs other lanes
 - Precache: `src/onboarding/*` and `data/onboarding/plans.json` must be in `precache-manifest.js` for offline
   first run (`npm run precache`, not run by this lane).
-- Voice (Man/Woman) and goal (synagogue/Israel/both) are no longer asked at first run; they remain in Settings.
-  `goal` therefore stays at its default `read` unless changed in Settings.
+- Voice (Man/Woman) is not asked at first run; it remains in Settings. The goal is asked on the first screen
+  (see Stage 1); it is also still on the optional minutes screen ("Change goal or minutes a day").
 - `tools/smoke.mjs` (first-run block, ~lines 86-92) and `tools/a11y/keyboard.mjs` (onboarding flow, ~lines 40-56)
   still look for "Man (Ari)", "Both" and a "Start learning" button and expect Enter to leave `#/welcome`.
   Needed update (owner: lane 8): check the radio labelled "No, start from the beginning", press the button

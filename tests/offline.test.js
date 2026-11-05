@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, statSync } from "node:fs";
 import * as O from "../src/shell/offline.js";
 import * as U from "../src/shell/update.js";
 
@@ -47,6 +47,18 @@ test("on-demand files: every one in precache-manifest.js is on disk, none is ins
   assert.deepEqual(groups.flatMap((g) => g.urls).sort(), [...onDemand].sort());
   assert.deepEqual(O.onDemandGroups([]), []);
   assert.equal(O.onDemandGroups(["data/zzz/new.json"])[0].id, "od-other");
+});
+
+test("letter memory pictures: installed ones count under Letters, the rest are a named on-demand group", () => {
+  assert.equal(O.groupOf("assets/letters/morph/shin.svg"), "letters");
+  assert.equal(O.groupOf("data/letters/memory-chain.json"), "letters");
+  const g = O.onDemandGroups(["assets/letters/morph/kaf.svg", "assets/letters/morph/sin.svg"]);
+  assert.equal(g.length, 1); assert.equal(g[0].id, "od-letter-pictures"); assert.equal(g[0].urls.length, 2);
+  const { onDemand } = O.parsePrecacheText(manifestText);
+  const pics = onDemand.filter((u) => u.startsWith("assets/letters/morph/"));
+  assert.ok(pics.length >= 15, "run node tools/build-precache.mjs");
+  const bytes = pics.reduce((a, u) => a + statSync(new URL("../" + u, import.meta.url)).size, 0);
+  assert.ok(Math.abs(bytes / 1e6 - O.ON_DEMAND_GROUPS.find((x) => x.id === "od-letter-pictures").approxMB) < 0.02, "approxMB of od-letter-pictures is a hint measured from the repo: update it (" + (bytes / 1e6).toFixed(2) + " MB)");
 });
 
 // ---------- cache report ----------
@@ -240,8 +252,8 @@ test("card: lists groups with honest states, optional downloads, version, and st
   assert.match(g.text, /Scan a photo not saved yet \(0 of 1 files/); assert.match(g.text, /Needs an optional download/);
   assert.match(g.text, /Letters and tracing not saved yet \(0 of 1 files/);
   assert.match(g.text, /2 of 4 files are saved/); assert.match(g.text, /not been tested in airplane mode/);
-  assert.match(byId(root, "of-extras").text, /Word audio index \(israeli\): 1 of 1 not saved/);
-  assert.match(byId(root, "of-sw").text, /running on this page/); assert.match(byId(root, "of-sw").text, /Version v123/);
+  assert.match(byId(root, "of-extras").text, /Word audio list \(israeli\): 1 of 1 not saved/);
+  assert.match(byId(root, "of-sw").text, /switched on for this page/); assert.match(byId(root, "of-sw").text, /Version v123/);
   assert.match(byId(root, "of-usage").text, /1\.0 MB of about 1024\.0 MB/);
   assert.match(byId(root, "of-persist").text, /not protected/);
   unmount();
@@ -254,7 +266,7 @@ test("card: files the manifest lists as ALEF_ON_DEMAND appear under optional dow
   const root = new El("div");
   const unmount = mount(root, { env: { fetch, caches: fakeCaches(map), navigator: { onLine: true, serviceWorker: { controller: {} } }, localStorage: fakeLS({}) }, settings: { get: () => "israeli" } });
   await waitFor(() => byId(root, "of-groups"));
-  assert.match(byId(root, "of-extras").text, /Vocabulary data and theme packs: 2 of 2 not saved/); assert.match(byId(root, "of-extras").text, /Audio clip index \(core\): 1 of 1 not saved/);
+  assert.match(byId(root, "of-extras").text, /Vocabulary data and theme packs: 2 of 2 not saved/); assert.match(byId(root, "of-extras").text, /Audio clip list \(core\): 1 of 1 not saved/);
   assert.match(byId(root, "of-groups").text, /2 of 4 files are saved/, "on-demand files do not count against the installed list");
   await byId(root, "of-download").click(); await waitFor(() => /Saved \d+ files/.test(byId(root, "of-status").text));
   for (const u of od) assert.ok(fetched.includes(u), u);
@@ -262,11 +274,11 @@ test("card: files the manifest lists as ALEF_ON_DEMAND appear under optional dow
   unmount();
 });
 test("card: uncontrolled page says to reload; browser without service workers says so; unreadable manifest is an alert and the button is disabled", async () => {
-  const a = await boot({ navigator: { serviceWorker: { controller: null } } }); assert.match(byId(a.root, "of-sw").text, /not controlling this page/); a.unmount();
+  const a = await boot({ navigator: { serviceWorker: { controller: null } } }); assert.match(byId(a.root, "of-sw").text, /not switched on for this page/); a.unmount();
   const b = await boot({ navigator: { serviceWorker: undefined } }); assert.match(byId(b.root, "of-sw").text, /cannot keep an offline copy/); b.unmount();
   const root = new El("div");
   const m = mount(root, { env: { fetch: async () => resp("", { ok: false, status: 500 }), caches: fakeCaches({}), navigator: {}, localStorage: fakeLS({}) } });
-  await waitFor(() => byId(root, "of-error")); assert.match(byId(root, "of-error").text, /HTTP 500/); assert.ok("disabled" in byId(root, "of-download").attrs); m();
+  await waitFor(() => byId(root, "of-error")); assert.match(byId(root, "of-error").text, /did not load/); assert.ok("disabled" in byId(root, "of-download").attrs); m();
 });
 test("card: Download everything fetches the missing files and extras only, then shows the new state", async () => {
   const { root, fetched, unmount } = await boot();
@@ -275,7 +287,7 @@ test("card: Download everything fetches the missing files and extras only, then 
   const dl = fetched.filter((u) => u !== "precache-manifest.js");
   assert.ok(dl.includes("src/letters/a.js")); assert.ok(dl.includes("src/photo/scan.view.js")); assert.ok(!dl.includes("index.html")); assert.ok(dl.includes("data/audio/manifest-words-israeli.json")); assert.ok(dl.includes("assets/vendor/_tesseract/heb.traineddata"));
   await waitFor(() => /4 of 4 files are saved/.test(byId(root, "of-groups").text));
-  assert.match(byId(root, "of-extras").text, /Word audio index \(israeli\): saved/);
+  assert.match(byId(root, "of-extras").text, /Word audio list \(israeli\): saved/);
   await byId(root, "of-download").click();
   await waitFor(() => /already saved/.test(byId(root, "of-status").text));
   unmount();

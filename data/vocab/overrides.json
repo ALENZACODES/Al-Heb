@@ -1478,6 +1478,32 @@
     "hidden": true
    }
   },
+  "vedf291d8": {
+   "rank": 43,
+   "lemma": "יא",
+   "reason": "audit 2026-11-04 (sensitivity): the gloss says the particle is used before a slur or pejorative; words.json rank 41 is hidden for the same reason; flags.hidden mirrors the words.json flag (corrections.json) so the vocab views (src/vocab/loader.js) drop the record; kept in its slot so ranks stay stable; needs a reviewer (docs/sensitivity/OPEN.md)",
+   "gloss": "vocative particle preceding a noun, especially a slur or pejorative",
+   "addTags": [
+    "needs-check",
+    "colloquial"
+   ],
+   "flags": {
+    "hidden": true
+   }
+  },
+  "v96491b44": {
+   "rank": 168,
+   "lemma": "לעזאזל",
+   "reason": "audit 2026-11-04 (sensitivity): mild curse (interjection); words.json rank 165 is hidden for the same reason; flags.hidden mirrors the words.json flag (corrections.json) so the vocab views (src/vocab/loader.js) drop the record; kept in its slot so ranks stay stable; needs a reviewer (docs/sensitivity/OPEN.md)",
+   "gloss": "an exclamation of anger or dismissal (a mild curse)",
+   "addTags": [
+    "needs-check",
+    "colloquial"
+   ],
+   "flags": {
+    "hidden": true
+   }
+  },
   "v66f62b1a": {
    "rank": 604,
    "lemma": "עכשיו",
@@ -1492,6 +1518,17 @@
    "lemma": "צועני",
    "reason": "audit 2026-11-04: words.json gloss is \"a Romani person\" (corrections.json h950879c7); the build lower-cased the proper adjective because \"romani\" occurs in lower case elsewhere in words.json",
    "gloss": "Romani person"
+  },
+  "v620a2741": {
+   "rank": 18,
+   "lemma": "כל",
+   "reason": "words.json now has a ranked record for כָּל (added by corrections.json, FIRST-500-CHECK section 9; Wiktionary heading noun). This override gives it the determiner typing the former hand 'additions' entry for כל had (pos det, gloss all, every, whole), and that entry was removed so the word is not listed twice",
+   "pos": "det",
+   "gloss": "all, every, whole",
+   "fn": "determiner",
+   "tags": [
+    "function"
+   ]
   }
  },
  "additions": [
@@ -1518,19 +1555,6 @@
     "function"
    ],
    "reason": "missing from the ranked pool; only the formal אנו was present"
-  },
-  {
-   "lemma": "כל",
-   "pos": "det",
-   "kaikkiPos": "noun",
-   "gloss": "all, every, whole",
-   "topic": "Misc Nouns",
-   "priority": 20,
-   "fn": "determiner",
-   "tags": [
-    "function"
-   ],
-   "reason": "missing from the ranked pool (pos unknown upstream)"
   },
   {
    "lemma": "מים",

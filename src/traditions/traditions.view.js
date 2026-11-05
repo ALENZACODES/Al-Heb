@@ -17,6 +17,8 @@ import {
   clipPlan, textDrillItems, makeTextQuestion, audioDrillPool, makeAudioQuestion, loadTraditionsData, sourceIndex, pick,
 } from './model.js';
 import { setCongregation, congregationOf } from '../pronunciation/forTradition.js';
+import { uiEnglish } from '../shell/names.js';
+import { isAudioFree, AUDIO_FREE_NOTE, SKIP_NOTE } from '../shell/audiofree.js';
 
 export const TABS = [
   { id: 'compare', label: 'Compare', key: 'trad.tab.compare' },
@@ -257,7 +259,7 @@ export function mount(root, ctx = {}) {
     body.append(
       h('h3', {}, `${entry.title} `, h('span', { class: 'muted' }, `(${entry.ref})`)),
       h('p', { class: 'he-big', dir: 'rtl', lang: 'he' }, lines.map((l, i) => h('span', { class: 'he-lines', dir: 'rtl', lang: 'he' }, l))),
-      entry.english ? h('p', { class: 'muted' }, entry.english, entry.englishSource ? ` (${entry.englishSource})` : '') : null,
+      entry.english ? h('p', { class: 'muted' }, uiEnglish(ctx, entry.english), entry.englishSource ? ` (${entry.englishSource})` : '') : null,
     );
     const resp = Object.fromEntries(TRADITIONS.map((t) => [t, respellLines(entry.he, t)]));
     const lineBlock = (t) => h('p', { class: 'say', lang: 'en' }, resp[t].map((l, i) => h('span', { style: 'display:block' }, l)));
@@ -295,7 +297,7 @@ export function mount(root, ctx = {}) {
     if (!w) return;
     const row = { he: w.he };
     body.append(
-      h('h3', {}, w.id, ' ', h('span', { class: 'muted' }, `- ${w.gloss}`)),
+      h('h3', {}, w.id, ' ', h('span', { class: 'muted' }, `- ${uiEnglish(ctx, w.gloss)}`)),
       h('p', { class: 'he-big', dir: 'rtl', lang: 'he' }, w.he));
     const stressNote = (s) => (s ? h('small', { class: 'muted' }, ` stress: ${s}`) : null);
     const engine = (t) => h('p', { class: 'muted', lang: 'en' }, `Engine respelling: ${respellLines(w.he, t)[0]}`);
@@ -394,7 +396,7 @@ export function mount(root, ctx = {}) {
     if (drill.mode) return;
     drill.pool = audioDrillPool(ctx, data.registry);
     drill.items = textDrillItems(data.prayerwords, data.registry);
-    drill.mode = drill.pool.length ? 'listen' : 'read';
+    drill.mode = drill.pool.length && !isAudioFree(ctx) ? 'listen' : 'read';
   };
 
   const nextQuestion = () => {
@@ -408,7 +410,9 @@ export function mount(root, ctx = {}) {
     ensureDrill();
     if (!drill.q) nextQuestion();
     body.append(h('h3', {}, tr('trad.hearTitle', 'Hear the difference')));
-    if (!drill.pool.length) {
+    if (isAudioFree(ctx)) {
+      body.append(h('p', { class: 'draft-flag', role: 'note' }, AUDIO_FREE_NOTE + ' This is the reading drill: you compare written respellings.'));
+    } else if (!drill.pool.length) {
       body.append(h('p', { class: 'draft-flag', role: 'note' }, tr('trad.hearNoAudio',
         'No audio yet. None of the Israeli, American-synagogue or Ashkenazi recordings for this app exist, so there is nothing to listen to. Below is a reading drill instead: you compare written respellings, which trains the eye, not the ear.')));
     } else {
@@ -432,9 +436,12 @@ export function mount(root, ctx = {}) {
         playRow.append(b);
       }
       body.append(playRow);
+      const skipL = h('button', { type: 'button', 'data-act': 'skip' }, 'Skip this question');
+      on(skipL, 'click', () => { drill.q = null; nextQuestion(); render(); });
+      body.append(skipL, h('p', { class: 'muted' }, SKIP_NOTE));
     } else {
       body.append(h('p', {}, 'Reading drill (no sound). Which respelling is the Ashkenazi reading?'),
-        h('p', { class: 'he-big', dir: 'rtl', lang: 'he' }, q.item.he), q.item.gloss ? h('p', { class: 'muted' }, q.item.gloss) : null,
+        h('p', { class: 'he-big', dir: 'rtl', lang: 'he' }, q.item.he), q.item.gloss ? h('p', { class: 'muted' }, uiEnglish(ctx, q.item.gloss)) : null,
         h('ul', { class: 'word-list', style: 'list-style:none;padding:0' }, q.options.map((o) => h('li', { style: 'display:block' }, h('strong', {}, `${o.label}: `), h('span', { lang: 'en', class: 'say' }, o.text)))));
     }
 

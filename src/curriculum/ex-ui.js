@@ -1,13 +1,16 @@
 /** Shared bits for the round-4 exercise screens (ladder, fade-out, gender, scaffold). Plain DOM, no dependencies. */
+import { plain } from "../shell/plain-copy.js";
 import { el, tr } from "./dom.js";
 import { describePlay } from "./audio-ui.js";
 import { fileLabel } from "../shell/audio-labels.js";
+import { isAudioFree } from "../shell/audiofree.js";
+import { shortcutsOn } from "../shell/motor.js";
 
 /** Draft / unreviewed notice shown on every exercise screen. `extra` adds screen-specific honesty lines. */
 export function draftNotice(ctx, ...extra) {
   return el("div", { class: "alef-draft-notice card", role: "note" },
     el("p", {}, el("strong", {}, tr(ctx, "ex.draft", "Draft. ")),
-      "This exercise and its content are drafts. Nothing here has been reviewed by a native Hebrew speaker or tested with learners."),
+      plain("exDraft")),
     ...extra.filter(Boolean).map((t) => el("p", { class: "muted" }, t)));
 }
 
@@ -41,6 +44,7 @@ export function audioStatus(ctx, kind, id, voice) {
 
 /** A play button that plays (kind,id) in `voice` and writes the honest outcome into `note`. */
 export function voiceButton(ctx, kind, id, voice, label, note) {
+  if (isAudioFree(ctx)) return el("span", { class: "muted alef-noaudio" }, "Sound is switched off in Settings (I do not use audio).");
   return el("button", { type: "button", class: "btn secondary alef-play alef-voice-btn", "data-voice": voice, "data-audio": `${kind}/${id}`, "aria-label": label,
     onclick: async () => {
       let st = audioStatus(ctx, kind, id, voice);
@@ -66,6 +70,7 @@ export function voiceSelector(ctx, initial) {
 /** Add a keydown listener on document; returns a remover. Ignores keys typed in form fields and modified keys. */
 export function onKeys(handler) {
   const f = (e) => {
+    if (!shortcutsOn()) return; // Settings > "Single-key shortcuts" is off
     if (e.ctrlKey || e.metaKey || e.altKey || /^(INPUT|TEXTAREA|SELECT)$/.test(e.target?.tagName || "")) return;
     handler(e);
   };

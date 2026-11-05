@@ -1,5 +1,7 @@
+import { plain } from './plain-copy.js';
 import { h } from './ui.js';
 import { ENUMS, DEFAULTS } from './settings.js';
+import { AUDIO_FREE_LABEL, AUDIO_FREE_HELP } from './audiofree.js';
 import { requestPersistence, storageStatus } from './backup.js';
 import { describePreview, storageNotice, wipeAllData, confirmMatches, CONFIRM_WORD, backupFileName } from './settings.data.js';
 
@@ -15,6 +17,16 @@ export function mount(root, ctx) {
     }
     return fs;
   };
+  // Learner gender: one shared value for every page that shows first-person Hebrew forms. Not chosen is the default and is never read as masculine.
+  const genderRow = () => {
+    const fs = h('fieldset', { class: 'field', id: 's-gender-set' }, h('legend', {}, 'My gender, for Hebrew forms'));
+    for (const [v, label] of [[null, 'Not chosen yet'], ['m', 'I am a man'], ['f', 'I am a woman'], ['both', 'Show me both forms']]) {
+      const id = `s-gender-${v ?? 'unset'}`;
+      fs.append(h('label', { class: 'opt', for: id }, h('input', { type: 'radio', name: 'gender', id, value: v ?? '', checked: settings.get('gender') === v ? true : null, onchange: () => settings.set({ gender: v }) }), h('span', {}, label)));
+    }
+    fs.append(h('p', { class: 'muted', id: 's-gender-help' }, 'Hebrew words change with the speaker\'s gender. "I am a student" is different for a man and a woman. The gender drill and the "Sound like a local" pages use this choice, so you only say it once. Until you choose, pages show both forms or ask you. ALEF never assumes masculine. The choice stays on this device and is included in your backup.'));
+    return fs;
+  };
   // one checkbox row per boolean setting (plain English labels; the i18n table is owned by another lane)
   const boolRow = (key, label, help) => h('div', { class: 'field' },
     h('label', { class: 'opt', for: 's-' + key }, h('input', { type: 'checkbox', id: 's-' + key, checked: settings.get(key) ? true : null, onchange: (e) => settings.set({ [key]: e.target.checked }) }), h('span', {}, label)),
@@ -28,7 +40,7 @@ export function mount(root, ctx) {
   const status = h('p', { role: 'status', 'aria-live': 'polite', class: 'muted' });
   // Restore is a two-step action: choosing a file only inspects it (nothing changes), then the learner confirms the replacement.
   const restoreBox = h('div', { class: 'field', role: 'group', 'aria-label': 'Restore confirmation', hidden: true });
-  const fileInput = h('input', { type: 'file', accept: 'application/json,.json', id: 's-import', class: 'visually-hidden', tabindex: '-1',
+  const fileInput = h('input', { type: 'file', accept: 'application/json,.json', id: 's-import', class: 'visually-hidden', tabindex: '-1', 'aria-label': t('settings.import'),
     onchange: async (e) => {
       const f = e.target.files?.[0]; if (!f) return;
       let text = ''; try { text = await f.text(); } catch { text = ''; }
@@ -42,7 +54,7 @@ export function mount(root, ctx) {
         root.querySelector('#s-import-label')?.focus();
       } }, 'Replace my progress with this backup');
       const cancel = h('button', { type: 'button', class: 'btn secondary', onclick: () => { restoreBox.hidden = true; restoreBox.replaceChildren(); status.textContent = 'Restore cancelled. Nothing was changed.'; root.querySelector('#s-import-label')?.focus(); } }, 'Cancel');
-      restoreBox.replaceChildren(h('p', {}, 'Preview. Nothing has changed yet.'), ...describePreview(info).map((l) => h('p', {}, l)), h('p', {}, 'Restoring replaces the progress and settings on this device. If you are unsure, press Cancel and download a backup of what is here now first.'), h('div', { class: 'row' }, go, cancel));
+      restoreBox.replaceChildren(h('p', {}, 'Preview. Nothing has changed yet.'), ...describePreview(info).map((l) => h('p', {}, l)), h('p', {}, plain('restoreWarn')), h('div', { class: 'row' }, go, cancel));
       restoreBox.hidden = false; go.focus();
     } });
   const persistLine = h('p', { class: 'muted', role: 'status', 'aria-live': 'polite', id: 's-persist' }, 'Checking whether this browser keeps your progress...');
@@ -53,9 +65,9 @@ export function mount(root, ctx) {
   } }, 'Ask the browser to protect my progress');
   async function showPersist() {
     const s = await storageStatus();
-    persistLine.textContent = !s.supported ? 'This browser does not offer protected storage. Progress is saved on this device only; download a backup now and then.'
-      : s.persisted ? 'Your progress is protected from automatic browser clean-up. Clearing site data in browser settings still deletes it, so keep a backup file.'
-      : 'Your progress is saved on this device but the browser may remove it when space is short or after a long time unused. Download a backup now and then.';
+    persistLine.textContent = !s.supported ? plain('persistNo')
+      : s.persisted ? plain('persistYes')
+      : plain('persistMaybe');
     persistBtn.hidden = !s.supported || !!s.persisted;
   }
   showPersist();
@@ -85,37 +97,81 @@ export function mount(root, ctx) {
     const a = h('a', { href: url, download: backupFileName() }); document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
     status.textContent = `Backup saved: ${a.getAttribute('download')} was downloaded. Keep the file somewhere safe; Restore reads it back.`;
   } }, t('settings.export'));
-  const resetBtn = h('button', { type: 'button', class: 'btn secondary', onclick: () => { settings.reset(); settings.set({ onboarded: true }); mount(root, ctx); } }, t('settings.reset'));
+  // Reset settings changes many choices at once, so it asks first (a slipped tap should not undo a person's set-up)
+  const resetAsk = h('div', { class: 'row', role: 'group', 'aria-label': 'Confirm reset', hidden: true });
+  const resetBtn = h('button', { type: 'button', class: 'btn secondary', 'aria-controls': 's-reset-ask', onclick: () => { resetAsk.hidden = false; resetBtn.hidden = true; resetAsk.querySelector('button.secondary')?.focus(); } }, t('settings.reset'));
+  resetAsk.id = 's-reset-ask';
+  resetAsk.append(h('p', { class: 'muted' }, 'This puts every setting back to how it started. Your progress is not deleted.'),
+    h('button', { type: 'button', class: 'btn secondary', onclick: () => { resetAsk.hidden = true; resetBtn.hidden = false; resetBtn.focus(); } }, 'Keep my settings'),
+    h('button', { type: 'button', class: 'btn', onclick: () => { settings.reset(); settings.set({ onboarded: true }); mount(root, ctx); } }, 'Yes, reset settings'));
 
+  // Progressive disclosure: a closed group shows its name and one short line. Controls inside keep their ids whether or not the group is open.
+  const group = (id, title, hint, kids) => h('details', { class: 'card s-group', id: 's-g-' + id },
+    h('summary', {}, h('strong', {}, title), ' ', h('span', { class: 'muted' }, hint)), ...kids.filter(Boolean));
+  const labelled = (key, legend, labels) => {
+    const fs = h('fieldset', { class: 'field', id: 's-set-' + key }, h('legend', {}, legend));
+    for (const v of ENUMS[key]) {
+      const id = `s-${key}-${v}`;
+      fs.append(h('label', { class: 'opt', for: id }, h('input', { type: 'radio', name: key, id, value: v, checked: settings.get(key) === v ? true : null, onchange: () => settings.set({ [key]: v }) }), h('span', {}, labels[v])));
+    }
+    return fs;
+  };
+  const calmRows = () => [
+    boolRow('calmMode', 'Calm mode', 'Turns off movement, sound effects and vibration. Hides streaks, timers and countdowns. Shows one thing at a time. Your device\'s "reduce motion" choice is always followed, with or without this.'),
+    boolRow('shortSession', 'Short sessions', 'Lessons come in small parts. Your place is saved after each part, so you can stop and come back to the same spot.'),
+    boolRow('showStreak', 'Show my streak', 'Turn this off to hide streak lines. Missing a day never removes lessons or review cards.'),
+    boolRow('haptics', 'Vibrate on answers', 'Only on devices that can vibrate. Always off in calm mode.'),
+    boolRow('soundEffects', 'Sound effects on answers', 'No sound effect files are included yet, so this does nothing for now. Always off in calm mode.')];
+  const readRows = () => [
+    h('p', { class: 'muted' }, 'Changes apply at once. These use fonts already on your device. We have not tested them with groups of readers, so try them and keep what feels easy for you.'),
+    labelled('readFont', 'Font', { default: 'Standard', clear: 'System font (Verdana or similar)' }),
+    labelled('textSize', 'Text size', { normal: 'Normal', large: 'Large', larger: 'Larger', largest: 'Largest' }),
+    labelled('lineSpacing', 'Space between lines', { normal: 'Normal', relaxed: 'More', wide: 'Most' }),
+    labelled('letterSpacing', 'Space between letters (not used for Hebrew)', { normal: 'Normal', wide: 'More', wider: 'Most' }),
+    labelled('lineLength', 'Line length', { normal: 'Normal', narrow: 'Short lines' })];
   root.replaceChildren(h('article', { class: 'card' },
     h('h1', { id: 'view-title', tabindex: '-1' }, t('settings.title')),
-    h('p', { class: 'muted' }, 'No recorded voices exist yet: the Man/Woman choice is a saved preference. Sound currently comes from your browser\'s text-to-speech voice. See "How this works".'),
-    h('fieldset', { class: 'field' }, h('legend', {}, t('settings.backup')),
-      h('div', { class: 'row' }, exportBtn, h('label', { class: 'btn secondary', id: 's-import-label', for: 's-import', tabindex: '0', role: 'button',
-        onkeydown: (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); } } }, t('settings.import')), fileInput),
-      notice, h('div', { class: 'row' }, retryBtn), restoreBox, persistLine, h('div', { class: 'row' }, persistBtn),
-      store.persistent ? null : h('p', { class: 'muted' }, t('settings.persist.no'))),
+    h('p', {}, h('a', { href: '#/accessibility', id: 's-a11y-link' }, 'Accessibility: text, sound, colour, touch and calm settings')),
+    h('p', { class: 'muted' }, plain('settingsIntro')),
     status, // right under the backup buttons so a confirmation is visible without scrolling
     radioGroup('voice', 'settings.voice'),
+    h('p', { class: 'muted', id: 's-pron-help' }, 'Pronunciation style is the way Hebrew sounds are said. It changes the sounds you hear and read. Pick the one your synagogue or teacher uses.'),
     radioGroup('congregation', 'settings.congregation'),
     radioGroup('goal', 'settings.goal'),
-    h('div', { class: 'field' }, h('label', { class: 'opt', for: 's-bva' }, h('input', { type: 'checkbox', id: 's-bva', checked: settings.get('browserVoiceAnyway') ? true : null, onchange: (e) => settings.set({ browserVoiceAnyway: e.target.checked }) }), h('span', {}, t('settings.browserVoiceAnyway')))),
-    h('div', { class: 'field' }, h('label', { class: 'opt', for: 's-israel' }, toggle, h('span', {}, t('settings.israelTrack')))),
+    // Progressive disclosure: only the three basic choices are open. Each group below opens on its own, so no screen shows a long list at once.
+    group('calm', 'Calm and quiet', 'Less movement, no sounds, no timers, one thing at a time', calmRows()),
+    group('read', 'Reading comfort', 'Text size, spacing and font', readRows()),
+    group('audio', 'Sound', 'For learners who do not use audio', [boolRow('audioFree', AUDIO_FREE_LABEL, AUDIO_FREE_HELP)]),
+    group('look', 'Look and sound', 'Colours, Hebrew letter style and voice', [
     radioGroup('script', 'settings.script'),
     radioGroup('theme', 'settings.theme'),
+    h('div', { class: 'field' }, h('label', { class: 'opt', for: 's-bva' }, h('input', { type: 'checkbox', id: 's-bva', checked: settings.get('browserVoiceAnyway') ? true : null, onchange: (e) => settings.set({ browserVoiceAnyway: e.target.checked }) }), h('span', {}, t('settings.browserVoiceAnyway')))),
+    ]),
+    group('forms', 'Hebrew forms and names', 'Your gender for Hebrew forms and the English divine name', [
+    genderRow(),
+    h('div', { class: 'field' }, h('label', { class: 'opt', for: 's-israel' }, toggle, h('span', {}, t('settings.israelTrack')))),
     boolRow('writeGodAsGd', 'Write "G-d" in English text', 'Writes the English word in that form in titles and translation lines. Hebrew text is never changed. Off by default: it is a personal and communal custom.'),
-    boolRow('haptics', 'Vibrate on exercise feedback', 'Only on devices that support it, and never when your system asks for reduced motion.'),
-    boolRow('soundEffects', 'Sound effects on exercise feedback', 'No sound files ship yet; this only takes effect once the app has them.'),
+    ]),
+    group('place', 'Place (for candle times)', 'Optional', [
     h('fieldset', { class: 'field' }, h('legend', {}, t('settings.location')),
       num('lat', t('settings.lat'), -90, 90), num('lon', t('settings.lon'), -180, 180), h('div', { class: 'row' }, geoBtn, clearBtn)),
+    ]),
+    group('data', 'Back up, restore or delete', 'Your progress stays on this device', [
+    h('fieldset', { class: 'field' }, h('legend', {}, t('settings.backup')),
+      h('div', { class: 'row' }, exportBtn, h('button', { type: 'button', class: 'btn secondary', id: 's-import-label', 'aria-controls': 's-import', onclick: () => fileInput.click() }, t('settings.import')), fileInput),
+      notice, h('div', { class: 'row' }, retryBtn), restoreBox, persistLine, h('div', { class: 'row' }, persistBtn),
+      store.persistent ? null : h('p', { class: 'muted' }, t('settings.persist.no'))),
     h('fieldset', { class: 'field' }, h('legend', {}, 'Delete all my data'),
-      h('p', { id: 's-wipe-help' }, `This permanently deletes your progress, review cards, streaks and settings from this device, and the offline copies of the app. It cannot be undone, so download a backup first. Type ${CONFIRM_WORD} to enable the button.`),
+      h('p', { id: 's-wipe-help' }, plain('wipeHelp', { word: CONFIRM_WORD })),
       h('label', { class: 'field' }, `Type ${CONFIRM_WORD}`, wipeInput),
-      h('label', { class: 'opt', for: 's-wipe-sw' }, wipeSw, h('span', {}, 'Also remove the offline service worker (the app will need a connection to load next time)')),
+      h('label', { class: 'opt', for: 's-wipe-sw' }, wipeSw, h('span', {}, 'Also remove the offline copy of the app (ALEF will need a connection to open next time)')),
       h('div', { class: 'row' }, wipeGo)),
+    ]),
+    group('adv', 'Advanced', 'For reviewers', [
     h('fieldset', { class: 'field' }, h('legend', {}, 'Advanced'),
       boolRow('showUnapprovedImages', 'Show images that have not passed review', 'Pictures still waiting for a reviewer may be wrong or unsuitable. Leave this off unless you are reviewing them.')),
-    h('div', { class: 'row' }, resetBtn, h('a', { class: 'btn secondary', href: '#/welcome' }, t('settings.redo')))));
+    ]),
+    h('div', { class: 'row' }, resetBtn, resetAsk, h('a', { class: 'btn secondary', href: '#/welcome' }, t('settings.redo')))));
   return () => { try { offStatus?.(); } catch { /* ignore */ } };
 }
 void DEFAULTS;

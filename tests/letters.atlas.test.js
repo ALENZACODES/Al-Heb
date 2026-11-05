@@ -43,7 +43,7 @@ test('atlas view: renders 31 tiles, tapping one calls ctx.audio.play with its so
   assert.equal(root.find(n => n.tag === 'button' && n.attrs['data-tile']).length, 31);
   await tile(root, 'nun').click();
   assert.deepEqual(played[0], ['letter', 'nun-sound']);
-  assert.match(body(root), /kneeling in prayer/);
+  assert.match(body(root), /cat curled up asleep in a box/);
   await tile(root, 'sin').click();
   assert.deepEqual(played[1], ['letter', 'sin-sound']);
   await tile(root, 'nun-final').click();
@@ -86,4 +86,34 @@ test('atlas quiz: look-alike warning appears only AFTER a wrong tap on a real lo
     assert.ok(!/Look-alike:/.test(body(root)));
     assert.match(body(root), /Good!/);
   } finally { Math.random = orig; }
+});
+
+test('buildTiles: slash IPA is kept for Israeli and dropped (not invented) where the tradition record does not start with the same symbol', () => {
+  const cons = rd('../pronunciation/consonants.json');
+  const ipaOf = (tradition, id) => buildTiles(data.letters, data.mnemonics, { consonants: cons, tradition }).find(t => t.id === id).ipa;
+  assert.equal(ipaOf('israeli', 'resh'), 'ʁ'); assert.equal(ipaOf('israeli', 'chet'), 'χ');
+  for (const t of ['sephardi', 'ashkenazi']) for (const id of ['resh', 'ayin']) assert.equal(ipaOf(t, id), '', t + ' ' + id);
+  assert.equal(ipaOf('sephardi', 'chet'), ''); assert.equal(ipaOf('ashkenazi', 'tav'), ''); assert.equal(ipaOf('sephardi', 'tav'), 't');
+  assert.equal(ipaOf('ashkenazi', 'nun'), 'n'); assert.equal(ipaOf('ashkenazi', 'khaf'), '');
+});
+
+test('atlas view: where the memory chain has an entry the old mnemonics story and word are hidden; variants show the parent card and a note; no chain keeps the old text', async () => {
+  const chain = rd('memory-chain.json');
+  const root = new El('div'); const un = mount(root, { ...data, memoryChain: chain, t: (k, f) => f ?? k });
+  await waitFor(() => tiles(root).length === 31, { message: '31 tiles' });
+  await tile(root, 'kaf').click();
+  const kaf = data.mnemonics.letters.find((x) => x.id === 'kaf');
+  assert.equal(root.find((n) => n.attrs['data-memory-card'] === 'kaf').length, 1);
+  assert.ok(!body(root).includes(kaf.story), 'old kaf story not shown'); assert.ok(!root.find((n) => n.tag === 'button' && /Another picture/.test(n.text)).length);
+  assert.ok(body(root).includes(kaf.shape) || !kaf.shape, 'shape line kept');
+  for (const [v, parent] of [['vet', 'bet'], ['khaf', 'kaf'], ['fe', 'pe'], ['sin', 'shin']]) {
+    await tile(root, v).click();
+    assert.equal(root.find((n) => n.attrs['data-memory-card'] === parent).length, 1, v + ' shows ' + parent + ' card');
+    assert.equal(root.find((n) => n.attrs['data-variant-note'] === v).length, 1, v + ' note');
+    assert.ok(!body(root).includes(data.mnemonics.variants.find((x) => x.id === v).story), v + ' old story hidden');
+  }
+  un();
+  const r2 = new El('div'); const u2 = mount(r2, { ...data, memoryChain: null, t: (k, f) => f ?? k });
+  await waitFor(() => tiles(r2).length === 31, { message: 'tiles, no chain' }); await tile(r2, 'kaf').click();
+  assert.ok(body(r2).includes(data.mnemonics.letters.find((x) => x.id === 'kaf').story)); u2();
 });

@@ -51,7 +51,7 @@ export function mount(root, ctx) {
 
   async function refresh() {
     try { const l = await O.loadPrecacheList(env.fetch); files = l.files; onDemand = l.onDemand || []; version = l.version; loadError = ""; }
-    catch (e) { loadError = `Could not read the list of offline files (${e?.message || e}). Open ALEF once while online, then try again.`; files = []; onDemand = []; }
+    catch (e) { loadError = `The list of offline files did not load. Open ALEF once while online, then try again.`; files = []; onDemand = []; }
     report = await O.cacheReport(files, { caches: env.caches });
     extraReport = await O.cacheReport(extraUrls(), { caches: env.caches, measure: false });
     health = await O.storageHealth({ navigator: nav, localStorage: env.localStorage, hasRoute: ctx?.hasRoute });
@@ -66,7 +66,7 @@ export function mount(root, ctx) {
         onProgress: (p) => { job = { done: p.done, total: job.total || p.total }; updateProgress(); } });
       last = r;
       say(r.offline ? "You are offline, so nothing could be downloaded. Try again with a connection." : r.aborted ? "Download cancelled. What was saved stays saved." : r.failed.length ? `${r.ok} files saved, ${r.failed.length} failed. You can try again; saved files are skipped.` : r.requested === 0 ? "Everything was already saved on this device." : `Saved ${r.ok} files (${O.fmtBytes(r.bytes)}).`);
-    } catch (e) { last = { failed: [{ url: "(list)", reason: String(e?.message || e) }], ok: 0, aborted: false, offline: false, requested: 0, skipped: 0, bytes: 0 }; say(`Download failed: ${e?.message || e}`); }
+    } catch (e) { last = { failed: [{ url: "(list)", reason: String(e?.message || e) }], ok: 0, aborted: false, offline: false, requested: 0, skipped: 0, bytes: 0 }; say("The download did not finish. Check your connection and try again."); }
     job = null; ac = null;
     await refresh(); if (alive) render();
   }
@@ -81,7 +81,7 @@ export function mount(root, ctx) {
     const kids = [];
     const controlled = !!nav?.serviceWorker?.controller;
     const swLine = !nav?.serviceWorker ? "This browser cannot keep an offline copy of ALEF."
-      : controlled ? "The offline helper is running on this page." : "The offline helper is not controlling this page yet. Reload once while online; until then ALEF needs a connection.";
+      : controlled ? "Offline use is switched on for this page." : "Offline use is not switched on for this page yet. Reload once while online; until then ALEF needs a connection.";
     kids.push(el("p", {}, "ALEF keeps a copy of itself on this device so it can open without a connection."), el("p", { class: "muted", id: "of-sw" }, swLine + (version ? ` Version ${version}.` : "")));
     if (loadError) kids.push(el("p", { role: "alert", id: "of-error" }, loadError));
 
@@ -117,7 +117,7 @@ export function mount(root, ctx) {
       const o = health.origin, l = health.local;
       const rows = [];
       rows.push(el("p", { id: "of-usage" }, o.usage != null ? `This site uses ${O.fmtBytes(o.usage)} of about ${O.fmtBytes(o.quota)} the browser allows.` : "This browser does not report storage use."));
-      rows.push(el("p", { id: "of-local" }, l.supported ? `Saved progress and settings: about ${O.fmtBytes(l.alefChars * 2)} (${Math.round((l.ratio || 0) * 100)}% of the small space browsers give a site for that, assumed ${(l.limitChars / 1e6).toFixed(0)} million characters).` : "Could not read saved progress size."));
+      rows.push(el("p", { id: "of-local" }, l.supported ? `Saved progress and settings: about ${O.fmtBytes(l.alefChars * 2)} (about ${Math.round((l.ratio || 0) * 100)}% of the small space browsers allow for this; we assume ${(l.limitChars / 1e6).toFixed(0)} million characters).` : "Could not read saved progress size."));
       rows.push(el("p", { class: "muted", id: "of-persist" }, !health.persist.supported ? "This browser cannot be asked to protect storage." : health.persist.persisted ? "Your progress is protected from automatic browser clean-up." : "Your progress is not protected from automatic browser clean-up yet."));
       if (health.persist.supported && !health.persist.persisted) rows.push(el("div", { class: "of-row" }, el("button", { type: "button", class: "btn secondary", id: "of-protect", onclick: async () => {
         const r = await O.protectProgress(nav); health = await O.storageHealth({ navigator: nav, localStorage: env.localStorage, hasRoute: ctx?.hasRoute });

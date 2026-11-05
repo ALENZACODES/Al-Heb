@@ -26,19 +26,19 @@ Read directly on 2026-11-04:
 - hebcal.com/home/about: "Except where otherwise noted, content on this site is licensed under a Creative Commons Attribution 4.0 International License." (page dated March 29, 2026).
 - en.wikipedia.org/wiki/Wikipedia:Copyrights: points reusers to CC BY-SA 4.0 and GFDL.
 
-**Not read or not verifiable by me today:** Sefaria's own terms of use (the /terms page returned no readable licence text); Open Siddur and toratemetfreeware.com pages (so the upstream basis for the Torat Emet, Edot HaMizrach and JPS labels); the actual rights position of the 1981 Metsudah publication; OpenSubtitles' position on derived word counts; the Tatoeba per-sentence licence of each of the 5,315 sentences used (the repo records CC BY 2.0 FR for all; I did not test each against Tatoeba); upstream terms for the Tesseract Hebrew model, xkeyboard-config and the image tools; the Debian copyright file named in a repo note; whether the CC licences interact as hoped (see section 4). Anything about law outside the pages above is general background, not something I verified.
+**Not read or not verifiable by me today:** Sefaria's own terms of use (the /terms page returned no readable licence text); Open Siddur and toratemetfreeware.com pages (so the upstream basis for the Torat Emet, Edot HaMizrach and JPS labels); the actual rights position of the 1981 Metsudah publication; OpenSubtitles' position on derived word counts; the Tatoeba per-sentence licence of each of the 5,272 sentences used (the repo records CC BY 2.0 FR for all; I did not test each against Tatoeba); upstream terms for the Tesseract Hebrew model, xkeyboard-config and the image tools; the Debian copyright file named in a repo note; whether the CC licences interact as hoped (see section 4). Anything about law outside the pages above is general background, not something I verified.
 
 ## 2. Source register
 
 | id | Source | Used for | Licence | Commercial sale | Share-alike effect | Credit required | Status |
 |---|---|---|---|---|---|---|---|
-| `wiktionary` | Wiktionary contributors | lemmas, glosses, pointed headwords, POS, forms in `data/vocab/*` (6,027 of 6,297 word records) | CC BY-SA 4.0 and GFDL (dual) | Yes-with-conditions | Yes. Adapted material must be shared under CC BY-SA 4.0 or a BY-SA-compatible licence: the vocabulary data set as distributed | Yes: attribution, licence link, indicate changes | verified-primary |
+| `wiktionary` | Wiktionary contributors | lemmas, glosses, pointed headwords, POS, forms in `data/vocab/*` (6,033 of 6,303 word records) | CC BY-SA 4.0 and GFDL (dual) | Yes-with-conditions | Yes. Adapted material must be shared under CC BY-SA 4.0 or a BY-SA-compatible licence: the vocabulary data set as distributed | Yes: attribution, licence link, indicate changes | verified-primary |
 | `kaikki-wiktextract` | kaikki.org Hebrew extract | the dump the vocab build read | same as Wiktionary (CC BY-SA, GFDL) | Yes-with-conditions | Same as Wiktionary | Yes (credit Wiktionary; mention Wiktextract/kaikki) | verified-primary |
 | `frequencywords-opensubtitles` | FrequencyWords 2018 he (Hermit Dave), derived from OpenSubtitles2018 | rank order | CC BY-SA 4.0 (content), MIT (code) | Yes-with-conditions as far as the README goes | Yes: rank order is a derivative; same data set as above | Yes | partly-verified (README read; the underlying subtitle corpus rights not checked) |
-| `tatoeba` | Tatoeba sentences | example sentences on 5,315 records | CC BY 2.0 FR | Yes-with-conditions (attribution only is named) | No share-alike of its own; open question whether it can sit inside a CC BY-SA data set (see section 4) | Yes, per sentence: author named with the sentence | partly-verified |
+| `tatoeba` | Tatoeba sentences | example sentences on 5,272 records | CC BY 2.0 FR | Yes-with-conditions (attribution only is named) | No share-alike of its own; open question whether it can sit inside a CC BY-SA data set (see section 4) | Yes, per sentence: author named with the sentence | partly-verified |
 | `uxlc` | Unicode/XML Leningrad Codex 2.6, Tanach.us | Hebrew of all Tanakh verses; 434 vocab examples; cantillation data | "copied without restriction" | Yes | No | Not required; citation appreciated; do not call it WLC | verified-primary |
 | `jps-1917` | JPS 1917 English Bible | English of 26 reader records and the morning verses | Public domain (label; 1917 publication) | Yes in the US by age; other countries not checked | No | Not required; credit is courteous | partly-verified |
-| `metsudah-siddur` | Metsudah siddur 1981, via Sefaria | Hebrew of 21 prayer records | CC-BY (Sefaria label) | Unknown. CC-BY itself allows it, but whether Sefaria could grant it for a 1981 vocalised publication is not confirmed | No | Yes if the label holds: credit publisher, licence link, indicate changes | partly-verified |
+| `metsudah-siddur` | Metsudah siddur 1981, via Sefaria | Hebrew of 9 prayer records | CC-BY (Sefaria label) | Unknown. CC-BY itself allows it, but whether Sefaria could grant it for a 1981 vocalised publication is not confirmed | No | Yes if the label holds: credit publisher, licence link, indicate changes | partly-verified |
 | `torat-emet-357` | Torat Emet 357, via Sefaria | Hebrew of 6 prayer records | Public Domain (Sefaria label; Ashkenaz row says unknown) | Unknown | No | Courtesy only | partly-verified |
 | `edot-hamizrach-shaliehsaboo` | Siddur Edot HaMizrach, Shaliehsaboo Edition, via Sefaria | Hebrew of 15 prayer records | CC0 (one row; another row for the same title says unknown) | Unknown (CC0 would permit it; provenance of the text is only "sefaria.org") | No | Courtesy only | partly-verified |
 | `sefaria-platform` | Sefaria | delivery channel for the four rows above | per-version labels; terms not read | Unknown | Unknown | Credit Sefaria as source (as the repo does) | unverified |
@@ -57,8 +57,12 @@ Read directly on 2026-11-04:
 | `generated-images` | image tools | illustrations (pipeline built, repo says none ingested for real yet) | tool terms; copyright in machine-made images uncertain | Unknown | No | Disclosure line recommended in the repo | unverified |
 | `audio-voices` | recordings / synthetic speech | nothing today (0 of 16,290 clips exist per `docs/voices/coverage.md`) | n/a | n/a | n/a | n/a | not-present |
 | `dicta-nakdan` | Dicta online vowel service | optional, off by default, sends text to a third party | no terms could be read (repo note) | Unknown | No | n/a | unverified |
+| `ts-fsrs-weights` | ts-fsrs 6.0.0 (open-spaced-repetition) | 21 default FSRS-6 weights in `src/fsrs/fsrs6.js` | MIT | Yes-with-conditions | No | Keep the MIT notice (`docs/licenses/MIT-ts-fsrs.txt`) | partly-verified |
 | `project-original` | Project-written text and code | phrasebook, glosses, guides, code | owner's; none chosen | n/a | No | n/a | project-owned |
 | `lessons-unstated-licence` | `data/curriculum/lessons.json` | 117 records merged into the vocabulary set | none stated | Unknown | They sit inside a CC BY-SA data set without a stated basis | n/a | unverified |
+| `morph-pictures` | Letter-memory pictures (`assets/letters/morph/*.svg`) | the picture for each letter | original works by John Khan, no third-party sources (owner's statement); letter outlines inside come from DejaVu Sans | n/a | No (but see dejavu-outlines notice) | n/a | project-owned |
+| `memory-chain-text` | Memory hooks and stories (`data/letters/memory-chain.json`, `mnemonics.json`) | English hooks, picture ideas, stories; example words copied from vocab | original text (owner's statement); example words from Wiktionary data | n/a | Only for the copied example words | n/a | project-owned |
+| `practice-data-from-vocab` | `data/roots/*`, `data/gender/templates.json`, `data/nikkudfade/*`, `data/speak/minimal-pairs.json` | roots, gender, vowel-fade, record-and-compare pairs | derived from `data/vocab/words.json`, so CC BY-SA 4.0 | Yes-with-conditions | Yes, as the vocabulary data | Yes: as Wiktionary | partly-verified |
 | `reference-only-sites` | Pealim, Chabad.org, BJPA | cited by URL only | not open | n/a | n/a | n/a | not-present |
 
 ## 3. Per-source notes
@@ -82,7 +86,7 @@ Strongest source in the repo. Do not describe it as the WLC. The repo records a 
 Sefaria's label is Public Domain and links to an Open Siddur page, which I did not open. The US rule for pre-1931 publications is confirmed by the Cornell guide; the position outside the US was not checked. Sefaria's digitised text may differ from the 1917 print in typography, which I did not examine.
 
 ### metsudah-siddur
-Highest-risk source. 21 of 70 corpus records use it (about 30 percent), including the Kaddish, Modeh Ani, Adon Olam, Barchu and Lecha Dodi. Today's live Sefaria data confirms the CC-BY label and shows the National Library of Israel record as the source, which is a catalogue entry for a 1981 book, not a rights statement. If the product is sold, either obtain written confirmation from the rights holder or replace these 21 records (the repo audit already suggests a pre-1929 public-domain transcription).
+Highest-risk source. 9 of 70 corpus records use it (about 13 percent), including the Kaddish, Modeh Ani, Adon Olam, Barchu and Lecha Dodi. Today's live Sefaria data confirms the CC-BY label and shows the National Library of Israel record as the source, which is a catalogue entry for a 1981 book, not a rights statement. If the product is sold, either obtain written confirmation from the rights holder or replace these 9 records (the repo audit already suggests a pre-1929 public-domain transcription).
 
 ### torat-emet-357
 Sefaria shows Public Domain on the Siddur Sefard page and `unknown` on the Siddur Ashkenaz page for the same title. The source is a freeware download site; its terms were not read.
@@ -122,6 +126,18 @@ Phrasebook entries and lesson glosses state "original (project-owned)" but their
 
 ### lessons-unstated-licence
 117 vocabulary records come from `data/curriculum/lessons.json`, which states no licence. They are bundled into the data set that is declared CC BY-SA. Decide: state a licence (the owner can release them under CC BY-SA 4.0 explicitly) or remove them.
+
+### morph-pictures
+The 28 files in `assets/letters/morph/` are stated by the project owner to be original works by John Khan with no third-party sources. What I checked: the files contain no credit line, licence text or external link, and 27 of the 28 embed path data that matches the print outline in `data/letters/letters.json` (`sin.svg` did not match in my check; I did not look further). That outline is extracted from DejaVu Sans (see `dejavu-outlines`), so the Bitstream Vera notice should travel with the pictures. I could not check from the repo how the pictures were produced; if any tool generated them, the open question for `generated-images` (copyrightability of machine-made images) applies.
+
+### memory-chain-text
+Hooks, picture ideas and stories were written for this project (owner's statement; no third-party sources recorded in `docs/letters/MEMORY-SYSTEM.md`). `mnemonics.json` notes that its hooks follow the keyword-mnemonic method and cites a study for the idea only; no text is quoted from it. The Hebrew word, pointing, gloss and rank in `memory-chain.json` are copied from `data/vocab/words.json`.
+
+### practice-data-from-vocab
+Each file names `data/vocab/words.json` as its source and copies Hebrew, pointing, glosses, roots, binyan labels, gender tags and verb forms from it (the roots and gender notes say the labels come from the dictionary source, unreviewed). I found no example sentences in these files, so no Tatoeba credit is carried. `data/roots/verified.json` is empty by design. The fade schedule numbers are design choices, not research.
+
+### ts-fsrs-weights
+The weights are copied from the published defaults of ts-fsrs 6.0.0 (MIT, per `docs/research/B2-fsrs6.md`). The exact copyright line in the project's LICENSE file was not read; the notice file marks that line as to be replaced. The algorithm code is a hand port.
 
 ### reference-only-sites
 Linked, not copied (per the repo's own source notes). No attribution duty is created by a link.

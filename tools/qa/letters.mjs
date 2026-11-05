@@ -25,6 +25,19 @@ await go('/letters'); await page.screenshot({ path: join(shots, 'grid.png') });
 R.grid = await page.evaluate(() => { const b = [...document.querySelectorAll('.alef-trace .grid button')]; return { count: b.length, labels: b.map((x) => x.getAttribute('aria-label')), min: Math.min(...b.map((x) => { const r = x.getBoundingClientRect(); return Math.min(r.width, r.height); })) }; });
 R.grid.overflow = await overflow(); R.grid.small = await small();
 
+// first screen: where the tracing stage starts at 375x667 (fresh load, nothing opened), and the first-look path from Today
+R.firstScreen = {};
+for (const id of ['alef', 'shin', 'bet']) { await go('/letters/' + id); R.firstScreen[id] = await page.evaluate(() => { const r = document.querySelector('.stage').getBoundingClientRect(); return { stageTop: Math.round(r.top + scrollY), stageH: Math.round(r.height), remember: document.querySelector('details.remember')?.open, firstLook: [...document.querySelectorAll('[data-firstlook-id]')].map((a) => a.dataset.firstlookId), noticeBeforeStage: !!document.querySelector('.notice') }; }); }
+await page.screenshot({ path: join(shots, 'bet-first-screen.png') });
+R.firstLook = {};
+await page.goto(base + '#/'); await page.waitForTimeout(600);
+R.firstLook.todayPrimary = await page.evaluate(() => { const a = [...document.querySelectorAll('main a')].find((x) => /firstday/.test(x.getAttribute('href') || '')); return a ? { href: a.getAttribute('href'), text: a.textContent.trim().slice(0, 40) } : null; });
+if (R.firstLook.todayPrimary) {
+  await page.click('main a[href*="firstday"]'); await page.waitForSelector('#fd-trace', { timeout: 6000 }).catch(() => {});
+  R.firstLook.tap1 = page.url().split('#')[1];
+  if (await page.$('#fd-trace')) { await page.click('#fd-trace'); await page.waitForSelector('.alef-trace .stage svg', { timeout: 6000 }).catch(() => {}); R.firstLook.tap2 = page.url().split('#')[1]; R.firstLook.tap2Big = await page.evaluate(() => document.querySelector('.alef-trace .big')?.textContent); }
+  if (await page.$('[data-firstlook-id=bet]')) { await page.click('[data-firstlook-id=bet]'); await page.waitForTimeout(300); R.firstLook.tap3 = page.url().split('#')[1]; R.firstLook.tap3Big = await page.evaluate(() => document.querySelector('.alef-trace .big')?.textContent); }
+}
 for (const l of letters) {
   const o = { id: l.id, issues: [] };
   await go('/letters/' + l.id);
@@ -118,6 +131,7 @@ await ctx.setOffline(false);
 R.pageErrors = errs;
 writeFileSync(join(shots, 'letters-results.json'), JSON.stringify(R, null, 1));
 const bad = R.letters.filter((l) => l.issues.length);
+console.log('firstScreen', JSON.stringify(R.firstScreen), 'firstLook', JSON.stringify(R.firstLook));
 console.log('grid', R.grid.count, 'min', R.grid.min, 'small', R.grid.small.length, 'atlas', R.atlas.tiles, 'letters w/ issues', bad.length, 'errs', errs.length);
 for (const b of bad) console.log(b.id, b.issues.join('; '));
 await browser.close(); server.close();

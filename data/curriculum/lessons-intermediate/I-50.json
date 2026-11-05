@@ -12,7 +12,7 @@
  "words": [
   {
    "he": "שַׁבָּת שָׁלוֹם",
-   "en": "Shabbat greeting (Friday to Saturday)",
+   "en": "peaceful Sabbath (greeting from Friday afternoon to Saturday)",
    "translit": null,
    "pronunciation": {
     "israeli": "shabat shalom"
@@ -24,7 +24,7 @@
   },
   {
    "he": "שָׁבוּעַ טוֹב",
-   "en": "a good week (after Shabbat)",
+   "en": "good week",
    "translit": null,
    "pronunciation": {
     "israeli": "shavu'a tov"
@@ -48,7 +48,7 @@
   },
   {
    "he": "שָׁנָה טוֹבָה",
-   "en": "a good year (Rosh Hashana)",
+   "en": "happy new year (Rosh Hashana greeting)",
    "translit": null,
    "pronunciation": {
     "israeli": "shanah tovah"
@@ -144,7 +144,7 @@
   },
   {
    "he": "סְלִיחָה",
-   "en": "sorry",
+   "en": "forgiveness, pardon",
    "translit": null,
    "pronunciation": {
     "israeli": "selichah"
@@ -322,7 +322,6 @@
    "options": [
     "formal",
     "neutral",
-    "casual",
     "slang"
    ]
   },
@@ -335,7 +334,6 @@
    "options": [
     "formal",
     "neutral",
-    "casual",
     "slang"
    ]
   },

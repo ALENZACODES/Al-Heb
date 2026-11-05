@@ -49,6 +49,8 @@ test('lists all 40 packs as real buttons, with the draft notice and CC BY-SA att
   for (const b of packs) assert.equal(b.attrs.type, 'button');
   assert.ok(root.text.includes(DRAFT_NOTICE));
   assert.ok(root.text.includes(ATTRIBUTION));
+  assert.match(root.text, /Tatoeba contributors \(CC BY 2\.0 FR\)/);
+  assert.equal(root.find((n) => n.tag === 'a' && n.attrs.href === '#/credits').length, 1);
   assert.equal(root.find((n) => n.tag === 'h1').length, 1);
 });
 

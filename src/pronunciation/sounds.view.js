@@ -15,6 +15,8 @@
 
 import { TRADITIONS, TRADITION_LABELS, normalizeTradition, describeSign, soundChangingLetters, pairFormFor } from './sounds.model.js';
 import { setCongregation } from './forTradition.js';
+import { loadSoundTextData, letterSoundText, vowelSoundText, soundTextNode } from './soundtext.js';
+import { isAudioFree } from '../shell/audiofree.js';
 
 const FILES = ['niqqud', 'consonants', 'drills', 'easy'];
 
@@ -142,7 +144,7 @@ export function mount(root, ctx = {}) {
     live.textContent = NOTES[tradition];
 
     // --- vowel chart
-    wrap.append(h('h3', {}, tr('sounds.chart', 'Vowel chart')), h('p', {}, tr('sounds.chart.hint', 'Tap a sign to hear it. The sounds below follow the tradition you picked.')));
+    wrap.append(h('h3', {}, tr('sounds.chart', 'Vowel chart')), h('p', {}, isAudioFree(ctx) ? 'The sounds below follow the tradition you picked.' : tr('sounds.chart.hint', 'Tap a sign to hear it. The sounds below follow the tradition you picked.')));
     const grid = h('ul', { class: 'vowel-grid' });
     for (const rec of data.niqqud.records) {
       const info = h('p', {});
@@ -189,6 +191,22 @@ export function mount(root, ctx = {}) {
     tradListeners.push(crow);
     crow();
     wrap.append(h('h3', {}, 'Letters whose sound depends on a dot or the tradition'), h('div', { class: 'table-wrap', tabindex: '0', role: 'region', 'aria-label': 'Letter sounds (scrolls sideways)' }, h('table', {}, h('thead', {}, h('tr', {}, h('th', { scope: 'col' }, 'Letter'), h('th', { scope: 'col' }, 'IPA'), h('th', { scope: 'col' }, 'Sounds like'))), tbody)));
+
+    // --- every letter and vowel, described in words (no audio needed)
+    const wordsBox = h('div', { id: 'sounds-in-words' });
+    wrap.append(h('h3', {}, 'How each sound is said, in words'),
+      h('p', {}, isAudioFree(ctx) ? 'You chose "I do not use audio", so the Tap-to-hear parts are left out and the sounds are written here.' : 'For when you cannot or do not want to listen: each letter and vowel described in words, with a comparison to English.'), wordsBox);
+    let sdata = null;
+    const fillWords = () => {
+      if (!alive || !sdata) return;
+      const all = { consonants: data.consonants, niqqud: data.niqqud, soundgap: sdata.soundgap };
+      const nodes = [...Object.keys(data.consonants?.letters || {}).map((id) => soundTextNode(h, letterSoundText(id, all, tradition))),
+        ...(data.niqqud?.records || []).map((r) => soundTextNode(h, vowelSoundText(r.id, all, tradition)))].filter(Boolean);
+      if (isAudioFree(ctx)) nodes.forEach((n) => n.setAttribute('open', ''));
+      wordsBox.replaceChildren(...nodes);
+    };
+    tradListeners.push(fillWords); // the written descriptions follow the tradition switcher
+    (ctx.soundTextData ? Promise.resolve(ctx.soundTextData) : loadSoundTextData()).then((sd) => { sdata = sd; fillWords(); }).catch(() => {});
 
     // --- it's easy
     wrap.append(h('h3', {}, "Why this is easier than it looks"));

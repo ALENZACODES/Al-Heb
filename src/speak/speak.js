@@ -20,12 +20,15 @@
  */
 import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
 import { count } from '../shell/plural.js';
+import { uiEnglish } from '../shell/names.js';
+import { sourcesLine } from '../shell/sources.js';
 import { loadSetsIndex, loadSet, loadPairs, loadPrayers, loadTraditionPairs } from './loader.js';
 import { STORE_KEY, MODES, capabilities, pickMode, compare, usableItems, coerceState, recordAttempt, setSummary, soundReport, historyRows, dailyTotals, spokenPointed, wordsOf, compareLine, missedWordsReport } from './model.js';
 import { createRecognizer, createRecorder, createSpeaker } from './recognizer.js';
 import { contrastById, drillQueue, drillQuestion } from './pairs.js';
 import { loadDailyCard, dayKeyLocal, DAILY_PREFIX } from './daily.js';
 import { respell, congregationOf, audioNote, settingLine, LABELS as TRAD_NAMES } from '../pronunciation/forTradition.js';
+import { isAudioFree, AUDIO_FREE_NOTE, SKIP_NOTE } from '../shell/audiofree.js';
 import { TRADITIONS, TRADITION_LABEL, tradition as normTradition, traditionSummary, pairLine, tradQueue, tradQuestion } from './tradition.js';
 
 export const TAB_LIST = [['say', 'Say it'], ['drills', 'Listening drills'], ['sounds', 'Sounds by tradition'], ['read', 'Read a prayer aloud'], ['shadow', 'Shadowing'], ['history', 'History']];
@@ -79,11 +82,12 @@ function injectStyle() {
 }
 const focusNode = (n) => { try { n?.focus?.(); } catch { /* ignore */ } };
 const ERRORS = {
-  'not-allowed': 'The microphone was not allowed. You can allow it in the browser\'s site settings, or switch to "No microphone" below.',
+  'not-allowed': 'The microphone was not allowed. You can allow it in the browser\'s site settings, or judge it yourself with the buttons below.',
   'audio-capture': 'No microphone could be opened.',
   'no-speech': 'Nothing was heard. Try again a little louder, or closer to the microphone.',
   network: 'The browser\'s recognizer needs a network connection and could not reach it.',
   timeout: 'The recognizer gave no answer in time.',
+  'speech-timeout': 'the browser voice gave no answer. It may have no Hebrew voice installed, so use the respelling and judge it yourself.',
   aborted: 'Listening was stopped.',
   unsupported: 'This browser cannot do that.',
   'service-not-allowed': 'The browser\'s recognition service is not allowed here.',
@@ -113,6 +117,7 @@ export function mount(root, ctx) {
   const body = el('div', { class: 'sk-body' });
   const status = el('div', { class: 'sk-status', role: 'status', 'aria-live': 'polite' });
   const footer = el('footer', {}, el('p', {}, 'Vocabulary: data/vocab/words.json (Wiktionary, CC BY-SA 4.0, and ALEF\'s own phrasebook), a machine-built draft. Speech recognition and the fallback voice are your browser\'s; neither is verified for Hebrew by ALEF.'));
+  footer.append(sourcesLine(el));
   wrap.append(h1, tabs, body, status, footer);
   root.append(wrap);
 
@@ -123,6 +128,9 @@ export function mount(root, ctx) {
   const setBody = (...n) => { body.replaceChildren(...n.filter(Boolean)); };
   const save = () => storeSet(ctx, STORE_KEY, state);
   const record = (a) => { state = recordAttempt(state, a, clock.now()); return save(); };
+  const silent = () => isAudioFree(ctx);
+  /** For "I do not use audio": one honest line at the top of each practice screen, and the promise that skipping costs nothing. */
+  const silentNote = () => (silent() ? el('div', { class: 'card', role: 'note', id: 'speak-audiofree' }, el('p', {}, AUDIO_FREE_NOTE), el('p', { class: 'muted' }, 'Every item here can be skipped. ' + SKIP_NOTE)) : null);
 
   function renderTabs() {
     tabs.replaceChildren(...TAB_LIST.map(([id, label]) =>
@@ -178,7 +186,8 @@ export function mount(root, ctx) {
       fs.append(el('label', { for: `speak-mode-${m}` }, input, el('span', {}, MODE_LABEL[m] + (ok[m] ? '' : ' (not available in this browser)'))));
     }
     setBody(
-      el('p', {}, 'Hear a word, say it out loud, then check. Twelve words or phrases a set.'),
+      silentNote(),
+      el('p', {}, silent() ? 'See a word, say it in the way you speak, then mark it yourself. Twelve words or phrases a set. Skip any item.' : 'Hear a word, say it out loud, then check. Twelve words or phrases a set.'),
       el('p', { class: 'draft-flag', role: 'note' }, DRAFT),
       el('p', { class: 'muted', id: 'speak-caps' }, capsText()),
       el('label', { for: 'speak-set' }, 'Set'),
@@ -209,8 +218,15 @@ export function mount(root, ctx) {
     if (busy) return; busy = true; if (btn) btn.setAttribute('disabled', '');
     try {
       const trad = congregationOf(ctx?.settings), mism = trad === 'israeli' ? '' : ` ${audioNote(trad)}`;
-      if (audioId && rate == null && audioHas(kind, audioId)) { const r = await ctx.audio.play(kind, audioId); say(r?.source === 'file' ? 'Played a recorded clip.' : `Played the browser\'s voice, not a recording.${mism}`); }
-      else if (speaker.supported) { const r = await speaker.speak(spokenPointed(he), { rate: rate ?? ctx?.settings?.get?.('ttsRate') }); say(r.ok ? `Played the browser\'s voice, not a recording; its Hebrew is unverified.${mism}` : `No sound: ${errorText(r.error)}`); }
+      if (audioId && rate == null && audioHas(kind, audioId)) { const r = await ctx.audio.play(kind, audioId); say(r?.source === 'file' ? `${/^(tts|synthetic-)/.test(r.entryStatus || '') ? 'Played a synthetic-voice clip (a computer voice, not a recording).' : 'Played a recorded clip.'}${r.fileTradition && r.fileTradition !== trad ? ` It is the ${TRAD_NAMES[r.fileTradition] || r.fileTradition} reading, used here as a stand-in for ${TRAD_NAMES[trad]}.` : ''}` : `Played the browser\'s voice, not a recording.${mism}`); }
+      else if (speaker.supported) {
+        const text = spokenPointed(he);
+        // A browser with no usable voice can accept speak() and never answer; without a limit "Listen" would stay disabled for good.
+        let timer = null; const limit = new Promise((res) => { timer = setTimeout(() => { speaker.cancel(); res({ ok: false, error: 'speech-timeout' }); }, 4000 + 700 * text.split(/\s+/).length); });
+        const r = await Promise.race([speaker.speak(text, { rate: rate ?? ctx?.settings?.get?.('ttsRate') }), limit]); clearTimeout(timer);
+        const noHe = r.ok && caps.hebrewVoice === false ? ' This browser lists no Hebrew voice, so it may have used a voice for another language.' : '';
+        say(r.ok ? `Played the browser\'s voice, not a recording; its Hebrew is unverified.${noHe}${mism}` : `No sound: ${errorText(r.error)}`);
+      }
       else say('No sound: this browser has no speech synthesis and no clip exists for this item yet.');
     } catch { say('The audio could not play.'); }
     busy = false; if (btn) btn.removeAttribute?.('disabled');
@@ -219,7 +235,7 @@ export function mount(root, ctx) {
   function question() {
     const item = items[qi], m = pickMode(caps, mode);
     const n = qi + 1;
-    const listen = el('button', { type: 'button', class: 'btn secondary', id: 'speak-listen', 'aria-label': `Listen to the model pronunciation of ${(respell(item.he, congregationOf(ctx?.settings)) || item.translit) || 'this item'}`, onclick: () => playModel(item.he, item.audioId, listen) }, 'Listen');
+    const listen = el('button', { type: 'button', class: 'btn secondary', id: 'speak-listen', 'aria-label': `Listen to the model pronunciation of ${(respell(item.he, congregationOf(ctx?.settings)) || item.translit) || 'this item'}`, onclick: () => playModel(item.he, item.audioId, listen), hidden: silent() ? '' : null }, 'Listen');
     const area = el('div', { class: 'sk-opts', role: 'group', 'aria-label': 'Your attempt' });
     const verdict = el('div', { class: 'sk-verdict', id: 'speak-verdict', hidden: true });
     const nextRow = el('div', { class: 'sk-row' });
@@ -232,7 +248,7 @@ export function mount(root, ctx) {
       const i = results.findIndex((x) => x.item === item);
       if (i >= 0) results[i] = { item, ...r }; else results.push({ item, ...r });
       for (const b of attemptButtons) b.setAttribute?.('disabled', '');
-      await record({ kind: 'say', set: set.id, itemId: item.id, he: item.he, mode: m, outcome: r.outcome, score: r.score, heard: r.heard });
+      if (r.outcome !== 'skip') await record({ kind: 'say', set: set.id, itemId: item.id, he: item.he, mode: m, outcome: r.outcome, score: r.score, heard: r.heard }); // a skip records nothing
       nextRow.replaceChildren(next);
       focusNode(next);
     };
@@ -294,9 +310,9 @@ export function mount(root, ctx) {
     }
     setBody(
       el('p', { class: 'muted' }, `${set.title}: ${n} of ${items.length}`),
-      el('h2', { tabindex: '-1', id: 'speak-q' }, m === 'self' ? 'Listen, then say it out loud' : 'Listen, then say it'),
+      el('h2', { tabindex: '-1', id: 'speak-q' }, silent() ? 'Say it, or skip it' : m === 'self' ? 'Listen, then say it out loud' : 'Listen, then say it'),
       el('div', { class: 'sk-he' }, heText(item.he)),
-      el('p', { class: 'sk-sub' }, el('span', { lang: 'he-Latn' }, (respell(item.he, congregationOf(ctx?.settings)) || item.translit) || ''), (respell(item.he, congregationOf(ctx?.settings)) || item.translit) ? ' - ' : '', item.en),
+      el('p', { class: 'sk-sub' }, el('span', { lang: 'he-Latn' }, (respell(item.he, congregationOf(ctx?.settings)) || item.translit) || ''), (respell(item.he, congregationOf(ctx?.settings)) || item.translit) ? ' - ' : '', uiEnglish(ctx, item.en)),
       el('div', { class: 'sk-row' }, listen),
       area, verdict, nextRow,
       el('div', { class: 'sk-row' }, skip, el('button', { type: 'button', class: 'btn secondary', id: 'speak-finish', onclick: () => end() }, 'Finish now')),
@@ -331,6 +347,13 @@ export function mount(root, ctx) {
     setBody(el('p', {}, 'Loading drills...'));
     try { await ensurePairs(); } catch { if (alive) setBody(el('p', { role: 'alert' }, 'The drills could not be loaded. Check your connection and reload.')); return; }
     if (!alive || tab !== 'drills') return;
+    if (silent()) { // minimal-pair drills are heard, not read: say so and point to the written versions
+      setBody(silentNote(), el('h2', { tabindex: '-1', id: 'speak-drills-h' }, 'Listening drills'),
+        el('p', {}, 'These drills play two words and ask which one you heard. They cannot be done without hearing, so they are left out.'),
+        el('p', {}, 'The same pairs are written out, with the difference described in words, in the Sound-gap lab. You can also read how each tradition says a word under "Sounds by tradition".'),
+        el('div', { class: 'sk-row' }, el('a', { class: 'btn', href: '#/soundgap' }, 'Sound-gap lab (written)'), el('button', { type: 'button', class: 'btn secondary', id: 'speak-to-sounds', onclick: () => go('sounds') }, 'Sounds by tradition')));
+      say(''); focusNode(byIdIn('speak-drills-h') || h1); return;
+    }
     const sel = el('select', { id: 'speak-contrast', name: 'contrast' });
     for (const c of pairs.contrasts) { const n = pairs.items.filter((i) => i.contrast === c.id).length; sel.append(el('option', { value: c.id, selected: c.id === chosenContrast }, `${c.title} (${count(n, 'item')})`)); }
     if (!pairs.contrasts.some((c) => c.id === chosenContrast)) chosenContrast = pairs.contrasts[0].id;
@@ -377,7 +400,7 @@ export function mount(root, ctx) {
       el('p', { class: 'muted' }, `${c.title}: ${di + 1} of ${dq.length}`),
       el('h2', { tabindex: '-1', id: 'drill-q' }, q.prompt),
       shown,
-      c.byEar ? null : el('p', { class: 'muted' }, `Hint: ${q.item.en}`),
+      c.byEar ? null : el('p', { class: 'muted' }, `Hint: ${uiEnglish(ctx, q.item.en)}`),
       el('div', { class: 'sk-row' }, listen),
       area, verdict, nextRow,
       el('div', { class: 'sk-row' }, el('button', { type: 'button', class: 'btn secondary', id: 'drill-finish', onclick: endDrill }, 'Finish now')),
@@ -424,7 +447,7 @@ export function mount(root, ctx) {
       kids.push(el('p', { class: 'sk-contrast-sum' }, `${s.distinct} of ${s.shown} listed pairs sound different in ${label}; ${s.same} sound the same.${s.available > s.shown ? ` (${s.available} exist in the list.)` : ''}`));
       kids.push(el('ul', { class: 'sk-list', 'aria-label': `${s.title} pairs` }, c.pairs.slice(0, 6).map((p) => {
         const l = pairLine(p, tdata, trad), cut = (t) => (t.length > 36 ? t.slice(0, 35) + '...' : t);
-        return el('li', {}, heText(l.he[0]), ` (${l.simple[0]}, ${cut(l.en[0])}) and `, heText(l.he[1]), ` (${l.simple[1]}, ${cut(l.en[1])}): `, el('strong', {}, l.distinct ? 'sound different' : 'sound the same'));
+        return el('li', {}, heText(l.he[0]), ` (${l.simple[0]}, ${cut(uiEnglish(ctx, l.en[0]))}) and `, heText(l.he[1]), ` (${l.simple[1]}, ${cut(uiEnglish(ctx, l.en[1]))}): `, el('strong', {}, l.distinct ? 'sound different' : 'sound the same'));
       })));
     }
     const nDistinct = sum.reduce((n, s) => n + s.distinct, 0);
@@ -487,6 +510,13 @@ export function mount(root, ctx) {
     setBody(el('p', {}, 'Loading prayers...'));
     try { prayers = prayers || (inj.data?.prayers || await loadPrayers()).prayers; } catch { if (alive) setBody(el('p', { role: 'alert' }, 'The prayer texts could not be loaded. Check your connection and reload.')); return; }
     if (!alive || tab !== kind) return;
+    if (kind === 'shadow' && silent()) { // shadowing = hear a line and repeat it straight away
+      setBody(silentNote(), el('h2', { tabindex: '-1', id: 'shadow-h' }, 'Shadowing'),
+        el('p', {}, 'Shadowing means hearing a line and repeating it straight away, so it is left out.'),
+        el('p', {}, 'To work on a prayer line without hearing it, use "Read a prayer aloud" (you read the printed line and mark it yourself), or open the reader, which has a written guide for reading a line.'),
+        el('div', { class: 'sk-row' }, el('button', { type: 'button', class: 'btn', id: 'shadow-to-read', onclick: () => go('read') }, 'Read a prayer aloud'), el('a', { class: 'btn secondary', href: '#/read' }, 'Open the reader')));
+      say(''); focusNode(byIdIn('shadow-h') || h1); return;
+    }
     if (!prayers.some((x) => x.id === chosenPrayer)) chosenPrayer = ctx?.query?.prayer && prayers.some((x) => x.id === ctx.query.prayer) ? ctx.query.prayer : prayers[0].id;
     const sel = el('select', { id: 'speak-prayer', name: 'prayer' });
     for (const x of prayers) sel.append(el('option', { value: x.id, selected: x.id === chosenPrayer }, `${x.title} (${count(x.lines.length, 'line')})`));
@@ -503,6 +533,7 @@ export function mount(root, ctx) {
       }
     }
     setBody(
+      silentNote(),
       el('p', {}, read ? 'Read a short prayer out loud, one line at a time. The browser writes down what it heard and your line is compared with the printed words; words it did not hear are underlined.'
         : 'Listen to a line, say it right after, then rate yourself from 1 to 3. Nobody checks this but you.'),
       el('p', { class: 'draft-flag', role: 'note' }, PRAYER_NOTE),
@@ -518,9 +549,9 @@ export function mount(root, ctx) {
     rLines = prayer.lines.map((he, i) => ({ he, i })); ri = 0; rres = [];
     prayerLine(kind);
   }
-  const lineClip = () => (prayer.lineAudio ? prayer.lineAudio : null);
+  const lineClip = () => (prayer.lineAudio ? prayer.lineAudio : (prayer.lineClips && prayer.lineClips[ri]) || null);
   function listenButton(id, line, rate, text) {
-    const b = el('button', { type: 'button', class: rate ? 'btn secondary' : 'btn secondary', id, 'aria-label': rate ? 'Listen to this line slowly in the browser voice' : 'Listen to this line' }, text);
+    const b = el('button', { type: 'button', class: rate ? 'btn secondary' : 'btn secondary', id, hidden: silent() ? '' : null, 'aria-label': rate ? 'Listen to this line slowly in the browser voice' : 'Listen to this line' }, text);
     b.addEventListener('click', () => { const c = lineClip(); playModel(line.he, c ? c.id : null, b, { kind: c ? c.kind : 'line', rate }); });
     return b;
   }
@@ -596,7 +627,10 @@ export function mount(root, ctx) {
       el('div', { class: 'sk-row' }, ...controls),
       kind === 'shadow' ? area : el('div', { class: 'sk-opts', role: 'group', 'aria-label': 'Your reading' }),
       verdict, nextRow,
-      el('div', { class: 'sk-row' }, el('button', { type: 'button', class: 'btn secondary', id: `${kind}-finish`, onclick: () => endPrayer(kind) }, 'Finish now')));
+      el('div', { class: 'sk-row' },
+        el('button', { type: 'button', class: 'btn secondary', id: `${kind}-skip`, onclick: () => { recognizer.stop(); if (last) return endPrayer(kind); ri++; prayerLine(kind); } }, 'Skip this line'), // records nothing
+        el('button', { type: 'button', class: 'btn secondary', id: `${kind}-finish`, onclick: () => endPrayer(kind) }, 'Finish now')),
+      el('p', { class: 'muted' }, SKIP_NOTE));
     say('');
     focusNode(byIdIn(`${kind}-q`));
   }

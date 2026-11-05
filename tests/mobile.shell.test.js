@@ -68,7 +68,7 @@ test('app.js wiring: leave before unmount, arrive instead of scrollTo(0,0), link
   assert.match(app, /scrollKeeper\?\.leave\(lastHashShown\)/);
   assert.match(app, /scrollKeeper\.arrive\(location\.hash\)/);
   assert.match(app, /else window\.scrollTo\(0, 0\)/, 'still scrolls to the top until the module has loaded');
-  assert.match(app, /closest\('a\[href\^="#"\]'\)[^\n]*markForward/);
+  assert.match(app, /closest\('a\[href\^="#"\]'\)[\s\S]*?markForward/);
   assert.match(app, /route: \(p\) => \{ scrollKeeper\?\.markForward\(\); router\.go\(p\); \}/);
   assert.doesNotMatch(app, /popstate/, 'popstate also fires on location.hash writes, so it is not the signal');
 });
@@ -106,7 +106,7 @@ test('stub audio has unlock too; app.js calls audio.unlock on the first gesture,
 
 // ---------- persistence after the first progress save; banners without a service worker ----------
 test('app.js asks for persistent storage once, on the first non-settings write, not for other tabs\' writes', () => {
-  assert.match(app, /store\.subscribe\(\(key, _value, info\) => \{\s*if \(persistAsked \|\| key === 'settings' \|\| info\?\.external\) return;\s*persistAsked = true;/);
+  assert.match(app, /store\.subscribe\(\(key, _value, info\) => \{\s*if \(persistAsked \|\| info\?\.external \|\| !isRealProgressWrite\(key, _value\)\) return;\s*persistAsked = true;/);
   assert.match(app, /requestPersistence\(\)/);
   assert.equal((app.match(/console\.info\(`storage persistence/g) || []).length, 1, 'logged once');
 });

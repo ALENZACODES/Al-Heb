@@ -31,7 +31,7 @@ test('every pack has rows, the required columns and globally unique ids', () => 
     }
   }
   assert.equal(all.find((p) => p.key === 'inter').rows.length > 0, true);
-  assert.equal(all.find((p) => p.key === 'vocab').rows.length, 1000);
+  assert.equal(all.find((p) => p.key === 'vocab').rows.filter((r) => r.id.startsWith('vocab:')).length, 1000, 'top-1000 words (hidden records excluded); examples and questions are extra rows');
 });
 
 test('CSV round-trips, including commas, quotes and Hebrew', () => {
@@ -131,4 +131,13 @@ test('new review files contain no AI or tool names', () => {
 
 test('idIndex covers every row', () => {
   assert.equal(idIndex(all).size, all.reduce((n, p) => n + p.rows.length, 0));
+});
+
+test('hidden vocabulary is excluded from packs and this session\'s questions are present', () => {
+  const words = JSON.parse(fs.readFileSync(path.join(root, 'data/vocab/words.json'), 'utf8')).words;
+  const hidden = words.filter((w) => w.flags && w.flags.hidden === true);
+  const rows = all.find((p) => p.key === 'vocab').rows;
+  for (const w of hidden) assert.ok(!rows.some((r) => r.id === `vocab:${w.id}`), 'hidden word in pack: ' + w.id);
+  const ids = new Set(all.flatMap((p) => p.rows.map((r) => r.id)));
+  for (const k of ['q:sens:goy', 'q:divine:divine-prefixed', 'q:pron:doubling-sephardi', 'q:pron:clitic-stress']) assert.ok(ids.has(k), k);
 });

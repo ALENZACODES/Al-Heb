@@ -1,8 +1,10 @@
 # Next 1000 images: command runbook
 
-Pending list: **1000 images** = 515 unfinished manifest rows (commands 36-101) + 485 new block H images (commands 102-149).
-Done set used: docs/images/codex-batch-01.json (282 matched manifest names).
-**282 images are already done.** The next command to run is **36** (Fe sofit print set (partial: rows 2-10 remaining)), file `cmd-036.txt`.
+Pending list: **814 images** = 329 unfinished manifest rows (commands 38-101) + 485 new block H images (commands 102-149).
+
+Decision: 1000 is a ceiling, not a target; with the 1797-row manifest there are no more block H rows to refill the list, so it stays at the count above and tests derive counts from data/images/manifest.csv and the builder.
+Done set used: docs/images/codex-batch-01.json (282 matched manifest names) plus 186 more already in data/images/provenance.json.
+**468 images are already done.** The next command to run is **38** (Alef cursive set), file `cmd-038.txt`.
 
 Files: `data/images/next1000.csv` (same columns as manifest.csv, all pending, command order), `data/images/next1000-groups.json` (per-command prompts, file lists, refs). Rebuild with `node tools/images/build_next1000.mjs`.
 
@@ -30,8 +32,6 @@ For several commands in a row, paste the first pending file, wait for the filena
 
 | Cmd | Block | Title | Images | Size | Refs to attach |
 |---|---|---|---|---|---|
-| 36 | B | Fe sofit print set (partial: rows 2-10 remaining) | 9 | 1024x1024/1792x1024 | CHAR_ari_sheet.png, L26_pe_final_print_mnemonic.png, CHAR_noa_sheet.png +3 |
-| 37 | B | Tsadi sofit print set | 10 | 1024x1024/1792x1024 | CHAR_ari_sheet.png, L27_tsadi_final_print_mnemonic.png, CHAR_noa_sheet.png +3 |
 | 38 | C | Alef cursive set | 6 | 1024x1024 | REF_cursive_alef.png, CHAR_ari_sheet.png, CHAR_noa_sheet.png +1 |
 | 39 | C | Bet / Vet cursive set | 6 | 1024x1024 | REF_cursive_bet.png, CHAR_ari_sheet.png, CHAR_noa_sheet.png +1 |
 | 40 | C | Gimel cursive set | 6 | 1024x1024 | REF_cursive_gimel.png, CHAR_ari_sheet.png, CHAR_noa_sheet.png +1 |
@@ -59,31 +59,7 @@ For several commands in a row, paste the first pending file, wait for the filena
 | 62 | C | Nun sofit cursive set | 6 | 1024x1024 | REF_cursive_nun_final.png, CHAR_ari_sheet.png, CHAR_noa_sheet.png +1 |
 | 63 | C | Fe sofit cursive set | 6 | 1024x1024 | REF_cursive_pe_final.png, CHAR_ari_sheet.png, CHAR_noa_sheet.png +1 |
 | 64 | C | Tsadi sofit cursive set | 6 | 1024x1024 | REF_cursive_tsadi_final.png, CHAR_ari_sheet.png, CHAR_noa_sheet.png +1 |
-| 65 | D | Kamatz vowel set | 5 | 1024x1024 | CHAR_ari_sheet.png, MOUTH_ah.png, CHAR_noa_sheet.png +2 |
-| 66 | D | Patach vowel set | 5 | 1024x1024 | CHAR_ari_sheet.png, MOUTH_ah.png, CHAR_noa_sheet.png +2 |
-| 67 | D | Tzere vowel set | 5 | 1024x1024 | CHAR_ari_sheet.png, MOUTH_eh.png, CHAR_noa_sheet.png +2 |
-| 68 | D | Segol vowel set | 5 | 1024x1024 | CHAR_ari_sheet.png, MOUTH_eh.png, CHAR_noa_sheet.png +2 |
-| 69 | D | Chirik vowel set | 5 | 1024x1024 | CHAR_ari_sheet.png, MOUTH_ee.png, CHAR_noa_sheet.png +2 |
-| 70 | D | Cholam male vowel set | 5 | 1024x1024 | CHAR_ari_sheet.png, MOUTH_oh.png, CHAR_noa_sheet.png +2 |
-| 71 | D | Cholam chaser vowel set | 5 | 1024x1024 | CHAR_ari_sheet.png, MOUTH_oh.png, CHAR_noa_sheet.png +2 |
-| 72 | D | Kubutz vowel set | 5 | 1024x1024 | CHAR_ari_sheet.png, MOUTH_oo.png, CHAR_noa_sheet.png +2 |
-| 73 | D | Shuruk vowel set | 5 | 1024x1024 | CHAR_ari_sheet.png, MOUTH_oo.png, CHAR_noa_sheet.png +2 |
-| 74 | D | Shva vowel set | 5 | 1024x1024 | CHAR_ari_sheet.png, MOUTH_none.png, CHAR_noa_sheet.png +2 |
-| 75 | D | Chataf patach vowel set | 5 | 1024x1024 | CHAR_ari_sheet.png, MOUTH_ah.png, CHAR_noa_sheet.png +2 |
-| 76 | D | Chataf segol vowel set | 5 | 1024x1024 | CHAR_ari_sheet.png, MOUTH_eh.png, CHAR_noa_sheet.png +2 |
-| 77 | D | Chataf kamatz vowel set | 5 | 1024x1024 | CHAR_ari_sheet.png, MOUTH_oh.png, CHAR_noa_sheet.png +2 |
-| 78 | D | Dagesh vowel set | 5 | 1024x1024 | CHAR_ari_sheet.png, MOUTH_none.png, CHAR_noa_sheet.png +2 |
-| 79 | D | Shin and sin dots vowel set | 5 | 1024x1024 | CHAR_ari_sheet.png, MOUTH_none.png, CHAR_noa_sheet.png +2 |
-| 80 | E | Greetings & fillers pack | 10 | 1024x1024 | - |
-| 81 | E | Cafe & ordering pack | 10 | 1024x1024 | - |
-| 82 | E | Numbers 1-10 pack | 10 | 1024x1024 | - |
-| 83 | E | Market & shopping pack | 10 | 1024x1024 | - |
-| 84 | E | Directions & city pack | 10 | 1024x1024 | - |
-| 85 | E | Transport & travel pack | 10 | 1024x1024 | - |
-| 86 | E | Home & family pack | 10 | 1024x1024 | - |
-| 87 | E | Body & health pack | 10 | 1024x1024 | - |
-| 88 | E | Colours & days pack | 10 | 1024x1024 | - |
-| 89 | E | Synagogue objects pack | 10 | 1024x1024 | - |
+| 89 | E | Synagogue objects pack (partial: rows 3-10 remaining) | 8 | 1024x1024 | - |
 | 90 | E | Shabbat table pack | 10 | 1024x1024 | - |
 | 91 | E | Holidays pack | 10 | 1024x1024 | - |
 | 92 | E | Prayer verbs & actions pack | 10 | 1024x1024 | - |

@@ -129,19 +129,27 @@ async function runPersona(cfg) {
     await page.click('#ob-letters-continue').catch(() => {});
     const msg = await text('#ob-status');
     log('Continue with no answer', { status: msg });
+    // the goal question is on this first screen (preselected: read); Israel skips the pronunciation step and sets Israeli sounds
+    await page.click(`label[for=ob-goal-${cfg.goal}]`).catch(() => {});
     await page.check(`#ob-letters-${cfg.letters}`).catch(() => {});
     await page.click('#ob-letters-continue');
-    await page.waitForSelector('#ob-form-congregation', { timeout: 5000 }).catch(() => {});
+    await page.waitForSelector(cfg.goal === 'israel' ? '.ob-plan' : '#ob-form-congregation', { timeout: 5000 }).catch(() => {});
+    if (cfg.goal !== 'israel') {
     if (cfg.denom) await page.check(`#ob-denomination-${cfg.denom}`).catch(() => {});
     const suggested = await page.evaluate(() => document.querySelector('input[name=pron]:checked')?.value || null);
     log('pronunciation preselected after denomination', { denom: cfg.denom, suggested, wanted: cfg.pron });
     await page.check(`#ob-pron-${cfg.pron}`).catch(() => {});
     await page.click('#ob-congregation-continue');
-    await page.waitForSelector('#ob-form-minutes', { timeout: 5000 }).catch(() => {});
-    await sleep(600); // the minutes screen re-renders once its plan data has loaded
-    await page.click(`label[for=ob-goal-${cfg.goal}]`).catch(() => {}); // the goal question (read | israel | both) is on the minutes screen
-    await page.check(`#ob-minutes-${cfg.minutes}`).catch(() => {});
-    await page.click('#ob-minutes-continue');
+    }
+    // the congregation screen now goes straight to the plan card; minutes a day and the goal live behind "Change minutes a day" (#ob-change-minutes)
+    await page.waitForSelector('.ob-plan', { timeout: 8000 }).catch(() => {});
+    if (cfg.minutes !== 10) {
+      await page.click('#ob-change-minutes').catch(() => {});
+      await page.waitForSelector('#ob-form-minutes', { timeout: 5000 }).catch(() => {});
+      await sleep(600); // the minutes screen re-renders once its plan data has loaded
+      await page.check(`#ob-minutes-${cfg.minutes}`).catch(() => {});
+      await page.click('#ob-minutes-continue');
+    }
     await page.waitForSelector('.ob-plan', { timeout: 8000 }).catch(() => {});
     P.plan = await page.evaluate(() => ({
       text: (document.querySelector('.ob-plan')?.innerText || '').replace(/\s+/g, ' ').trim(),
@@ -265,7 +273,7 @@ async function runPersona(cfg) {
       const q = await text('.alef-placement p.muted');
       if (!/Question \d+/.test(q)) break;
       const it = items[asked];
-      // this learner reads letters and vowels well (answered "Yes, I read with vowels"): right on letters, vowels and syllables (one vowel slip), then wrong or "Not sure" on words and phrases
+      // this learner reads letters and vowels well (answered "Yes, I can read with vowel marks"): right on letters, vowels and syllables (one vowel slip), then wrong or "Not sure" on words and phrases
       let want = 'wrong';
       if (it.cat === 'letters' || it.cat === 'syllables') want = 'right'; else if (it.cat === 'vowels') want = (vowelN.n++ % 3 === 2) ? 'wrong' : 'right'; else want = asked % 2 ? 'notsure' : 'wrong';
       const correct = it.options.find((o) => o.correct); const wrong = it.options.find((o) => !o.correct);
@@ -375,10 +383,12 @@ async function runPersona(cfg) {
     const t = await snapToday('open (E never presses it)'); day.today = t; day.todayShot = await shot('today');
     P.streakShown[d] = t.streak;
     // from Home, the way a siddur reader would: the Opening card link
-    const link = page.locator('.opening a.btn').first();
+    const link = page.locator('.opening a.btn, #home-dests-host a[href="#/read"], #home-rest a[href="#/read"]').first(); // full Home: Opening card; short Home: the Read tile in the row under the title
     if (await link.count()) { await link.click(); await sleep(500); } else { await go('#/read'); F('medium', 'read-no-link-from-home', 'Home has no visible link to the reader', ['Open Home'], { text: t.text.slice(0, 160) }); }
     await page.waitForFunction(() => document.body.dataset.ready === '1', null, { timeout: 8000 }).catch(() => {});
-    await page.waitForSelector('#crp-pick', { timeout: 6000 }).catch(() => {});
+    await page.waitForSelector('#crp-pick', { state: 'attached', timeout: 6000 }).catch(() => {});
+    // the text picker, show/hide switches and letter highlights now sit in a closed <details class="crp-ctl">; open it the way a reader would
+    if (!(await vis('#crp-pick'))) { await page.click('.crp-ctl > summary').catch(() => {}); await sleep(200); }
     const opts = await page.locator('#crp-pick option').allInnerTexts().catch(() => []);
     const pickIdx = opts.length ? (d - 1) % opts.length : 0;
     if (opts.length) { await page.selectOption('#crp-pick', { index: pickIdx }).catch(() => {}); await sleep(300); }
@@ -430,11 +440,21 @@ async function runPersona(cfg) {
     const shownN = Number((t.streak?.match(/^Streak:\s*(\d+) day/) || [])[1] || 0);
     if (d > 1 && shownN === 0 && /No streak yet/.test(t.streak || '') && (stNow?.best || 0) > 0) F('medium', 'streak-lost-wording', `Home says "No streak yet" to a learner whose best streak is ${stNow.best} days`, [`Persona ${cfg.key}: build a streak, then ${cfg.skipDay ? 'skip day ' + cfg.skipDay : 'do only a short review on day ' + cfg.lightDay}`, 'Open Home the next day'], { line: t.streak, best: stNow.best, progressOffers: 'Progress has "Count yesterday as a rest day" (not shown on Home)', shot: day.todayShot });
     day.streakCheck = { shown: shownN, learnerExpected, ruleExpected, line: t.streak };
-    if (d > 1 && shownN !== ruleExpected && shownN !== learnerExpected) F('medium', 'streak-vs-rule', `Home streak shows ${shownN} but the 5-minute rule predicts ${ruleExpected}`, [`Persona ${cfg.key}`, `Open Home on day ${d}`], { line: t.streak, shot: day.todayShot });
-    if (d > 1 && shownN !== learnerExpected && !/5 minutes/.test(t.streak || '')) F(shownN < learnerExpected ? 'high' : 'medium', 'streak-vs-actions', `Home streak shows ${shownN} but the learner did something on ${learnerExpected} consecutive days`, [`Persona ${cfg.key}: on days ${Object.keys(P.didSomething).filter((k) => P.didSomething[k] && !P.dwelled[k]).join(',') || '(none)'} only a short activity (under 5 min) was done`, `Open Home on day ${d}`], { line: t.streak, learnerExpected, ruleExpected, shot: day.todayShot });
-    if (d > 1 && shownN !== ruleExpected) P.notes.push(`day ${d}: streak shown ${shownN}, rule (>=300 s engaged on each past day) predicts ${ruleExpected}`);
-    // plan vs Today
-    if (P.plan?.days?.[d - 1]) { const planned = P.plan.days[d - 1].items.map((i) => i.h); const first = t.primaryHref; day.planCompare = { plan: P.plan.days[d - 1], today: t.primaryLabel, todayHref: first, match: planned.some((h) => h && first && h.replace(/^#?/, '#') === first) }; }
+    // short Home: the streak line is only drawn once the count or best is 2+ (src/home/today.js), so an absent line is not a wrong number
+    const streakLineShown = t.streak != null && t.streak !== '';
+    if (!streakLineShown) day.streakCheck.note = 'no streak line on Home (drawn only at 2+ days)';
+    if (streakLineShown && d > 1 && shownN !== ruleExpected && shownN !== learnerExpected) F('medium', 'streak-vs-rule', `Home streak shows ${shownN} but the 5-minute rule predicts ${ruleExpected}`, [`Persona ${cfg.key}`, `Open Home on day ${d}`], { line: t.streak, shot: day.todayShot });
+    if (streakLineShown && d > 1 && shownN !== learnerExpected && !/5 minutes/.test(t.streak || '')) F(shownN < learnerExpected ? 'high' : 'medium', 'streak-vs-actions', `Home streak shows ${shownN} but the learner did something on ${learnerExpected} consecutive days`, [`Persona ${cfg.key}: on days ${Object.keys(P.didSomething).filter((k) => P.didSomething[k] && !P.dwelled[k]).join(',') || '(none)'} only a short activity (under 5 min) was done`, `Open Home on day ${d}`], { line: t.streak, learnerExpected, ruleExpected, shot: day.todayShot });
+    if (streakLineShown && d > 1 && shownN !== ruleExpected) P.notes.push(`day ${d}: streak shown ${shownN}, rule (>=300 s engaged on each past day) predicts ${ruleExpected}`);
+    // plan vs Today: "Your week" is rebuilt from finished lessons on every view, so re-open it (return visit to #/welcome) and compare its day 1
+    // with what Today says now. A plan read once on day 1 and held for a week is a projection that cannot follow a learner who goes faster.
+    if (P.plan?.days?.length) {
+      const nextLink = await page.evaluate(() => document.querySelector('.next-lesson-link')?.getAttribute('href') || null).catch(() => null);
+      await go('#/welcome'); await page.waitForSelector('.ob-plan .ob-days', { timeout: 6000 }).catch(() => {}); await sleep(300);
+      const fresh = await page.evaluate(() => [...document.querySelectorAll('.ob-days > li')].map((li) => ({ label: li.querySelector('strong')?.innerText, items: [...li.querySelectorAll('ul a')].map((a) => ({ t: a.innerText, h: a.getAttribute('href') })) }))).catch(() => []);
+      await go('#/');
+      if (fresh[0]) { const planned = fresh[0].items.map((i) => i.h); const first = t.primaryHref; const ok = (h) => h && planned.some((p) => p && p.replace(/^#?/, '#') === h.replace(/^#?/, '#')); day.planCompare = { plan: fresh[0], today: t.primaryLabel, todayHref: first, match: ok(first) || (/review=1/.test(first || '') && ok(nextLink)) }; }
+    }
     if (day.planCompare && !day.planCompare.match) P.notes.push(`day ${d}: plan card says [${day.planCompare.plan.items.map((i) => i.t).join(' | ')}] but Today says "${t.primaryLabel}"`);
     if (cfg.goalProbe === d) { // the learner picks a longer daily goal on the Today card, then studies about six minutes
       await page.click('#today-goal-box summary').catch(() => {}); await page.click('#today-goal [data-goal="20"]').catch(() => {}); await sleep(250);

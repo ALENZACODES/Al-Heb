@@ -1,4 +1,6 @@
 ﻿id,hebrew,niqqud,pos,gender_current,gender_rule,plural_current,plural_rule,rule,flag,reviewer_ok,reviewer_note
+hd7dea2f9,אינסולין,אִינְסוּלִין,noun,m,,,אינסולינים,m > +im,plural:rule-unpointed,,
+h062e424f,יואן,יוּאָן,noun,m,,,יואנים,m > +im,plural:rule-unpointed,,
 hbbff81ef,כירורגיה,כִירוּרְגְּיָה,noun,f,,,כירורגיות,-a > -ot,plural:rule-unpointed,,
 hee340cca,היפנוזה,הִיפְּנוֹזָה,noun,f,,,היפנוזות,-a > -ot,plural:rule-unpointed,,
 h205cae13,קפאון,קִפָּאוֹן,noun,m,,,קפאונים,m > +im,plural:rule-unpointed,,

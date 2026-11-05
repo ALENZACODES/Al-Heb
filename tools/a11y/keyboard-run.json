@@ -1,5 +1,5 @@
 {
- "when": "2026-11-04T16:48:33.090Z",
+ "when": "2026-11-05T02:42:07.576Z",
  "results": [
   {
    "flow": "onboarding",
@@ -10,10 +10,17 @@
   },
   {
    "flow": "onboarding",
-   "name": "Tab reaches the letters question radio group",
+   "name": "Tab reaches the goal question radio group (a choice is preselected)",
    "ok": true,
    "gap": false,
    "detail": "8 Tab presses"
+  },
+  {
+   "flow": "onboarding",
+   "name": "Tab reaches the letters question radio group",
+   "ok": true,
+   "gap": false,
+   "detail": "1 Tab presses"
   },
   {
    "flow": "onboarding",
@@ -48,7 +55,7 @@
    "name": "Tab reaches \"Skip the rest and start now\" (no trap)",
    "ok": true,
    "gap": false,
-   "detail": "5 more presses"
+   "detail": "4 more presses"
   },
   {
    "flow": "onboarding",
@@ -69,7 +76,7 @@
    "name": "Tab reaches the Animate (\"show me the stroke order\") button",
    "ok": true,
    "gap": false,
-   "detail": "44 presses"
+   "detail": "14 presses"
   },
   {
    "flow": "trace",
@@ -87,10 +94,10 @@
   },
   {
    "flow": "trace",
-   "name": "a user who cannot draw can finish a letter with the keyboard (\"Show me, stroke by stroke\" toggle + \"Next stroke\")",
+   "name": "a user who cannot draw can finish a letter with the keyboard (\"Walk me through it with buttons\" toggle + \"Next stroke\")",
    "ok": true,
    "gap": false,
-   "detail": "toggle=3; Perfect! Alef You used the stroke buttons, so this is recorded as walked through, not as d"
+   "detail": "toggle=6; Perfect! Alef You used the stroke buttons, so this is recorded as walked through, not as d"
   },
   {
    "flow": "trace",
@@ -104,14 +111,14 @@
    "name": "Tab reaches \"Quiz me\"",
    "ok": true,
    "gap": false,
-   "detail": "8 presses"
+   "detail": "9 presses"
   },
   {
    "flow": "atlas quiz",
    "name": "Enter starts the quiz and shows a question",
    "ok": true,
    "gap": false,
-   "detail": "Find: Tav /t/"
+   "detail": "Find: Ayin"
   },
   {
    "flow": "atlas quiz",
@@ -174,7 +181,7 @@
    "name": "Tab reaches the reader tabs",
    "ok": true,
    "gap": false,
-   "detail": "8 presses"
+   "detail": "9 presses"
   },
   {
    "flow": "reader",
@@ -182,6 +189,13 @@
    "ok": true,
    "gap": false,
    "detail": "Torah service guide"
+  },
+  {
+   "flow": "reader",
+   "name": "Enter on the \"Change text, show or hide, highlight letters\" summary opens the controls",
+   "ok": true,
+   "gap": false,
+   "detail": "1 presses"
   },
   {
    "flow": "reader",
@@ -230,7 +244,7 @@
    "name": "first Tab after More moves into the sheet (a group heading, link or button)",
    "ok": true,
    "gap": false,
-   "detail": "Learn לימוד(5)Lessons, letters, vocabulary, grammar and typi"
+   "detail": "Settings הגדרות"
   },
   {
    "flow": "calendar + More sheet",
@@ -244,7 +258,7 @@
    "name": "tabbing forwards out of the open sheet closes it",
    "ok": true,
    "gap": false,
-   "detail": "10 presses to leave the nav"
+   "detail": "12 presses to leave the nav"
   },
   {
    "flow": "calendar + More sheet",
@@ -265,7 +279,7 @@
    "name": "Tab reaches the \"Preview\" group heading without passing through collapsed links",
    "ok": true,
    "gap": false,
-   "detail": "9 presses"
+   "detail": "11 presses"
   },
   {
    "flow": "calendar + More sheet",
@@ -279,7 +293,7 @@
    "name": "Tab reaches the Calendar link inside the expanded group",
    "ok": true,
    "gap": false,
-   "detail": "42 presses"
+   "detail": "49 presses"
   },
   {
    "flow": "calendar + More sheet",
@@ -301,6 +315,713 @@
    "ok": true,
    "gap": false,
    "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/: Tab walk ends (no trap) after 18 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "18 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "18 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/learn: Tab walk ends (no trap) after 18 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "18 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/learn: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "18 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/learn: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/learn: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/learn?lesson=r01: Tab walk ends (no trap) after 28 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "28 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/learn?lesson=r01: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "28 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/learn?lesson=r01: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/learn?lesson=r01: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/learn?review=1: Tab walk ends (no trap) after 8 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "8 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/learn?review=1: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "8 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/learn?review=1: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/learn?review=1: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/letters: Tab walk ends (no trap) after 26 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "26 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/letters: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "26 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/letters: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/letters: order in the page does not jump back up",
+   "ok": false,
+   "gap": false,
+   "detail": "Walk me through it with buttons -> Strokes in words (no drawing needed)"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/letters/alef: Tab walk ends (no trap) after 26 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "26 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/letters/alef: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "26 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/letters/alef: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/letters/alef: order in the page does not jump back up",
+   "ok": false,
+   "gap": false,
+   "detail": "Walk me through it with buttons -> Strokes in words (no drawing needed)"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/letters?tab=type: Tab walk ends (no trap) after 11 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "11 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/letters?tab=type: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "11 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/letters?tab=type: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/letters?tab=type: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/letters/atlas: Tab walk ends (no trap) after 39 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "39 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/letters/atlas: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "39 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/letters/atlas: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/letters/atlas: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/progress: Tab walk ends (no trap) after 40 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "40 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/progress: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "40 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/progress: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/progress: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/firstday: Tab walk ends (no trap) after 16 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "16 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/firstday: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "16 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/firstday: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/firstday: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/install: Tab walk ends (no trap) after 7 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "7 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/install: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "7 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/install: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/install: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/credits: Tab walk ends (no trap) after 34 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "34 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/credits: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "34 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/credits: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/credits: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/privacy: Tab walk ends (no trap) after 12 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "12 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/privacy: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "12 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/privacy: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/privacy: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/offline: Tab walk ends (no trap) after 9 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "9 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/offline: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "9 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/offline: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/offline: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/settings: Tab walk ends (no trap) after 47 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "47 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/settings: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "47 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/settings: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/settings: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/accessibility: Tab walk ends (no trap) after 30 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "30 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/accessibility: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "30 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/accessibility: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/accessibility: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/welcome: Tab walk ends (no trap) after 11 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "11 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/welcome: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "11 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/welcome: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/welcome: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/search: Tab walk ends (no trap) after 7 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "7 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/search: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "7 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/search: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/search: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/about: Tab walk ends (no trap) after 11 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "11 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/about: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "11 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/about: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/about: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/vocab: Tab walk ends (no trap) after 100 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "100 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/vocab: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "100 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/vocab: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/vocab: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/sounds: Tab walk ends (no trap) after 84 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "84 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/sounds: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "84 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/sounds: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/sounds: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/read/priestly-blessing: Tab walk ends (no trap) after 49 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "49 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/read/priestly-blessing: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "49 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/read/priestly-blessing: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/read/priestly-blessing: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/calendar: Tab walk ends (no trap) after 77 stops",
+   "ok": true,
+   "gap": false,
+   "detail": "77 presses"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/calendar: every visible control gets focus by Tab",
+   "ok": true,
+   "gap": false,
+   "detail": "77 stops"
+  },
+  {
+   "flow": "tab walk",
+   "name": "/calendar: every stop shows a focus mark",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "tab walk",
+   "name": "/calendar: order in the page does not jump back up",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "motor features",
+   "name": "settings: Enter on \"Reset settings to defaults\" opens a confirmation and puts focus on the safe choice (\"Keep my settings\")",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "motor features",
+   "name": "settings: Enter on \"Keep my settings\" closes it and returns focus to the reset button",
+   "ok": true,
+   "gap": false,
+   "detail": ""
+  },
+  {
+   "flow": "motor features",
+   "name": "lesson: Tab reaches \"Start quick check\" and Enter starts it",
+   "ok": true,
+   "gap": false,
+   "detail": "25 presses"
+  },
+  {
+   "flow": "motor features",
+   "name": "lesson (confirm answers on): Space marks a choice and grades nothing yet",
+   "ok": true,
+   "gap": false,
+   "detail": "1 presses"
+  },
+  {
+   "flow": "motor features",
+   "name": "lesson: Tab reaches \"Check answer\", Enter grades, focus moves to Continue",
+   "ok": true,
+   "gap": false,
+   "detail": "3 presses; focus \"Continue\""
+  },
+  {
+   "flow": "motor features",
+   "name": "lesson: Tab reaches Undo, Enter returns to the unanswered question",
+   "ok": true,
+   "gap": false,
+   "detail": "1 presses"
+  },
+  {
+   "flow": "motor features",
+   "name": "review: Tab to Show answer, Tab to the Good button, Enter rates and shows the next card",
+   "ok": true,
+   "gap": false,
+   "detail": "1+4 presses"
+  },
+  {
+   "flow": "motor features",
+   "name": "review: Tab reaches \"Undo last rating\", Enter puts the card back (Card 1 of ...)",
+   "ok": true,
+   "gap": false,
+   "detail": "5 presses"
+  },
+  {
+   "flow": "motor features",
+   "name": "letters: \"Animate\" is reached in few Tab presses (letter strip is one stop; was 40)",
+   "ok": true,
+   "gap": false,
+   "detail": "14 presses"
   }
  ]
 }

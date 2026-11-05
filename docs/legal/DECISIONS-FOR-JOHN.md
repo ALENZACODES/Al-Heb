@@ -21,7 +21,7 @@ Decision needed: ______ (proprietary / MIT / Apache-2.0).
 ## 2. Licence for the content
 
 ### What is forced on you today
-- The vocabulary data set (`data/vocab/*`, 6,027 of 6,297 records) is an adaptation of Wiktionary and FrequencyWords. The CC BY-SA 4.0 text (read 2026-11-04) requires that adaptations you share carry CC BY-SA 4.0 or a compatible licence, with attribution and a statement of changes. Selling is not forbidden by that text (I found no non-commercial term), but you cannot close that data set. Practical effect: someone else may legally copy your vocabulary list and examples, with credit, and sell their own product.
+- The vocabulary data set (`data/vocab/*`, 6,033 of 6,303 records) is an adaptation of Wiktionary and FrequencyWords. The CC BY-SA 4.0 text (read 2026-11-04) requires that adaptations you share carry CC BY-SA 4.0 or a compatible licence, with attribution and a statement of changes. Selling is not forbidden by that text (I found no non-commercial term), but you cannot close that data set. Practical effect: someone else may legally copy your vocabulary list and examples, with credit, and sell their own product.
 - Open question for a lawyer: whether the app code or a combined bundle becomes share-alike as a whole, whether app-store protections clash with the licence's "no technological measures that restrict the rights" clause, and how Tatoeba (CC BY 2.0 FR) sentences sit inside the CC BY-SA set.
 
 ### Options

@@ -30,13 +30,18 @@ const TWO_SOUNDS = {
   pe: { hard: ['Pe', 'פ' + MARK.dagesh, 'p'], soft: ['Fe', 'פ', 'f'] },
   shin: { hard: ['Shin', 'ש' + MARK.shin, 'ʃ'], soft: ['Sin', 'ש' + MARK.sin, 's'] }
 };
-const GROUPS = [
-  ['alef', 'bet', 'gimel', 'dalet', 'he', 'vav', 'zayin', 'chet', 'tet'],
-  ['yod', 'kaf', 'lamed', 'mem', 'nun', 'samekh', 'ayin', 'pe', 'tsadi'],
-  ['qof', 'resh', 'shin', 'tav', 'kaf-final', 'mem-final', 'nun-final', 'pe-final', 'tsadi-final']
-];
+// Baby-step teaching order (docs/v0/SCOPE.md): Shin, Bet first, then the letters in the order lessons r01.. of data/curriculum/lessons.json
+// introduce them (r01..r10 = shin bet tav lamed mem-final vav yod alef he resh mem kaf kaf-final, then r11.. nun pe chet dalet gimel ayin ...).
+// Every letter of letters.json appears exactly once; any letter no lesson introduces would be appended in alphabet order.
+export function teachingOrder(letters = JSON.parse(readFileSync(join(root, 'data/letters/letters.json'), 'utf8')), lessons = JSON.parse(readFileSync(join(root, 'data/curriculum/lessons.json'), 'utf8')).lessons) {
+  const have = new Set(letters.map((l) => l.id)); const order = [];
+  for (const les of lessons) if (/^r\d+$/.test(les.id)) for (const id of les.letters || []) if (have.has(id) && !order.includes(id)) order.push(id);
+  for (const l of letters) if (!order.includes(l.id)) order.push(l.id);
+  return order;
+}
+const GROUPS = (() => { const o = teachingOrder(); return [o.slice(0, 9), o.slice(9, 18), o.slice(18)]; })();
 const VOWEL_ROWS = ['kamatz', 'patach', 'tzere', 'segol', 'chirik', 'cholam', 'kubutz', 'shuruk'];
-const SYL_CONSONANTS = ['ב', 'ל', 'מ', 'ר', 'ת'];
+const SYL_CONSONANTS = ['ב', 'ת', 'ל', 'י', 'ה']; // all from the first section (bet, tav, lamed, yod, he)
 const NIQQUD_RE = /[֑-ׇ]/g;
 
 /** Pure data model of the workbook (no layout). */
@@ -53,9 +58,10 @@ export function buildModel(script, opts = {}) {
     const m = row.kind === 'variant' ? mnAll.variants.find((v) => v.parent === row.letterId) : mnAll.letters.find((x) => x.id === row.letterId);
     return m && m.caption;
   };
-  const alphaIndex = Object.fromEntries(letters.map((l, i) => [l.id, i + 1]));
+  const ordered = GROUPS.flat().map((id) => byId[id]);
+  const alphaIndex = Object.fromEntries(ordered.map((l, i) => [l.id, i + 1]));
   const letterRows = [];
-  for (const l of letters) {
+  for (const l of ordered) {
     const num = alphaIndex[l.id];
     const common = { letterId: l.id, number: String(num), gematria: l.gematria, gematriaIsConvention: !!l.gematriaIsConvention };
     if (TWO_SOUNDS[l.id]) {
@@ -203,25 +209,25 @@ export function buildHtml(script, paperId, opts = {}) {
   // front page
   const chart = model.letterRows.filter((r) => r.kind === 'letter').map((r) => `<div><span class="he">${esc(r.glyph)}</span><small>${esc(r.number)}. ${esc(r.label)}</small><span class="dots">&#9711;&#9711;&#9711;</span></div>`).join('');
   pages.push({ kind: 'front', title: 'Start here', fields: true, body: `<h1>Learn to write the Hebrew letters</h1>
-<p>Hebrew is written and read from <b>right to left</b>. In every practice row, the first (black) model letter is at the <b>right</b>: trace it, then keep writing to the left. The letters fade from solid grey, to dotted, to empty, so you finish by writing on your own.</p>
+<p>The letters are in <b>teaching order</b>, not alphabet order: Shin and Bet first, then the letters of lessons 1 to 10 of the course, then the rest. The vowel kamatz and your first syllables come right after the first nine letters. Hebrew is written and read from <b>right to left</b>. In every practice row, the first (black) model letter is at the <b>right</b>: trace it, then keep writing to the left. The letters fade from solid grey, to dotted, to empty, so you finish by writing on your own.</p>
 <h2>How to use this workbook</h2>
 <ol><li>Look at the stroke-order page at the start of each section. The numbers show the order; the arrow shows where each stroke ends.</li>
 <li>In each row, trace the grey and dotted letters, then fill the empty space.</li>
 <li>Tick the box at the left of the row when you can write that letter <b>3 times without looking</b> at the model.</li>
 <li>Colour in one circle in the progress chart below each time you do that (three circles per letter).</li></ol>
 <div class="notice"><b>DRAFT:</b> stroke order not yet reviewed by a native teacher. The numbered strokes in this workbook were computed from fonts and checked only against one outside reference; if your teacher shows a different order, follow your teacher. ${script === 'cursive' ? 'Cursive shapes come from the font Gveret Levin (Israeli handwriting style); real handwriting also joins and varies.' : 'Print stroke order is a proposal; Israeli schools may teach print letters mainly for reading.'}</div>
-<h2>My progress (27 letters, right to left)</h2><div class="chart">${chart}</div>
+<h2>My progress (27 letters, in teaching order)</h2><div class="chart">${chart}</div>
 ${opts.mnemonics ? '<div class="notice"><b>Memory hooks (DRAFT):</b> the italic line on each row is a sound-alike memory trick, not the history of the letter, and has not been checked by a Hebrew teacher.</div>' : ''}<p style="font-size:7.5pt;margin-top:3mm">* The values 500-900 for the five final (sofit) letters are a widely used convention, not confirmed by a source consulted here. Gematria = the number value of a letter. Letters with two sounds (Bet/Vet, Kaf/Khaf, Pe/Fe, Shin/Sin) have two rows; the row marked "b" is the second sound.</p>` });
 
+  const syllablePage = ({ kind: 'syllables', title: 'Letter + vowel', fields: true, body: '<p>A consonant plus a vowel mark makes a syllable. Write the vowel marks small and exactly under (or above) the letter. Models use the print font so the marks are clear.</p>' + model.sylRows.map((r) => sylHtml(r, S)).join('') });
   // sections: stroke order page + row page(s)
   model.sections.forEach((sec) => {
     const cells = sec.ids.map((id) => { const l = byId[id]; return `<div class="so-cell"><span class="he">${esc(l.he)}</span> <b>${esc(SOFIT[id] || l.name)}</b>${strokeOrderCell(l, script)}<span>${l[script].strokes.length} stroke${l[script].strokes.length > 1 ? 's' : ''}</span></div>`; }).join('');
     pages.push({ kind: 'strokeorder', title: `Section ${sec.index}: stroke order`, fields: false, body: `<h2>${esc(sec.title)}</h2><p>Circle with a number = where each stroke starts; arrowhead = where it ends. <b>Draft order, not teacher-reviewed.</b></p><div class="so-grid">${cells}</div>` });
     chunk(sec.rows, per(21.5)).forEach((rows) => pages.push({ kind: 'letters', title: `Section ${sec.index}: practice`, fields: true, body: rows.map((r) => rowHtml(r, S)).join('') }));
+    if (sec.index === 1) { pages.push(syllablePage); chunk(model.wordRows, per(27.5)).forEach((rows, i) => pages.push({ kind: 'words', title: 'Words', fields: true, body: (i === 0 ? '<p>Copy the word, then write it again in the blank space. Write how it sounds on the last line.</p>' : '') + rows.map((r, j) => wordHtml(r, i * per(27.5) + j, S)).join('') })); } // baby steps: Shin, Bet, then kamatz, the first syllables and the first words, before the later letters
   });
   chunk(model.confRows, per(22.5)).forEach((rows, i) => pages.push({ kind: 'confusables', title: 'Look-alike letters', fields: true, body: (i === 0 ? '<p>Letters that are easy to mix up. Trace a whole set in a row, then write the set from memory.</p>' : '') + rows.map((r) => confHtml(r, S)).join('') }));
-  pages.push({ kind: 'syllables', title: 'Letter + vowel', fields: true, body: '<p>A consonant plus a vowel mark makes a syllable. Write the vowel marks small and exactly under (or above) the letter. Models use the print font so the marks are clear.</p>' + model.sylRows.map((r) => sylHtml(r, S)).join('') });
-  chunk(model.wordRows, per(27.5)).forEach((rows, i) => pages.push({ kind: 'words', title: 'Words', fields: true, body: (i === 0 ? '<p>Copy the word, then write it again in the blank space. Write how it sounds on the last line.</p>' : '') + rows.map((r, j) => wordHtml(r, i * per(27.5) + j, S)).join('') }));
 
   const total = pages.length;
   const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>ALEF ${esc(S.label)} workbook (${paper.label})</title><style>${CSS(paper, S)}</style></head><body>${pages.map((p, i) => pageShell({ paper, S, title: p.title, body: p.body, n: i + 1, total, fields: p.fields })).join('')}</body></html>`;

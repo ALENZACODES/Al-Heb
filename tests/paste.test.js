@@ -45,9 +45,17 @@ test('size hints map to image-tool aspect ratios', () => {
   }
 });
 
-test('index names the first pending command and 282 done images', () => {
+test('every command has paste file(s) and no stray command files exist', () => {
+  const keys = [...new Set(names.map((f) => f.slice(4, 7)))].sort();
+  assert.deepEqual(keys, groups.map((g) => String(g.number).padStart(3, '0')).sort());
+  const total = parseCsv(readFileSync(join(ROOT, 'data/images/next1000.csv'), 'utf8')).length;
+  assert.equal(groups.flatMap((g) => g.rows).length, total);
+});
+
+test('index names the first pending command, the file and image counts, and every paste file', () => {
   const idx = readFileSync(join(DIR, 'INDEX.md'), 'utf8');
-  assert.match(idx, /282 images are already done/);
+  const total = parseCsv(readFileSync(join(ROOT, 'data/images/next1000.csv'), 'utf8')).length;
+  assert.match(idx, new RegExp(`${names.length} files, ${total} images`));
   assert.match(idx, new RegExp(`\\*\\*${groups[0].number}\\*\\*`));
-  assert.ok(names.includes('cmd-036.txt') && !names.includes('cmd-028.txt'));
+  for (const f of names) assert.ok(idx.includes(f), `${f} missing from INDEX.md`);
 });

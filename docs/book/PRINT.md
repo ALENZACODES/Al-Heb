@@ -12,6 +12,9 @@ Nothing here has been uploaded to KDP, IngramSpark or Lulu. "Correct" below mean
 | ...-bleed-REVERSED-ingram-lulu.pdf | the RTL-spreads file with page order reversed (last logical page = PDF page 1) |
 Other trims: `node book/build.mjs --pdf --print --trim 8x10|8.5x8.5|6x9`. Only 8.5x11 is the designed layout. The letter pages are scaled with CSS `zoom` for other trims; I looked at six 8.5x8.5 letter pages (text gets small, about 6pt notes) and nothing else at other trims. A real square layout would need redesign. 8.5x8.5 with Hebrew titles is also limited by KDP's colour-ink page-count rules.
 
+## Which alef-book.html is left in book/out
+`node book/make_print.mjs` leaves the bleed variant of `book/out/alef-book.html` (page 8.625x11.25in, right-to-left mirrored spreads) because the last print variant it builds writes that HTML. The copy committed in git HEAD is the 0-bleed HTML. The two differ, and a plain `node book/build.mjs` does not reproduce the bleed one. John must choose which to keep: bleed with right-to-left spreads, or the zero-bleed one (DECISIONS-NEEDED item 10 lists the same choice). Until he decides, do not treat the file in book/out as the committed one.
+
 ## Numbers used (KDP, read 2026-11-03 from kdp.amazon.com/help/topic/GVBQ3CMEQW3W2VL6)
 - Bleed 0.125in; with bleed page width = trim + 0.125in, height = trim + 2 x 0.125in.
 - Inside margin minimum by page count: 24-150 pages 0.375in, 151-300 0.5in, 301-500 0.625in. Top/bottom/outside minimum 0.25in without bleed, 0.375in with bleed.

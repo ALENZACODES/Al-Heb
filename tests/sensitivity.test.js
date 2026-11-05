@@ -33,10 +33,10 @@ test('findName finds whole words in a sentence with punctuation', () => {
   assert.deepEqual(hits.map((h) => h.kind), ['exact', 'prefixed']);
 });
 
-test('speechText replaces the bare name with the spoken substitute and leaves prefixed forms for review', () => {
+test('speechText replaces the bare name and prefixed forms (prefix kept as written) with the spoken substitute', () => {
   assert.equal(speechText(`x ${NAME} y`), `x ${SPOKEN_NAME} y`);
   assert.equal(speechText(`${NAME_PLAIN}`), SPOKEN_NAME);
-  assert.equal(speechText(`a ${LA_NAME}`), `a ${LA_NAME}`);
+  assert.equal(speechText(`a ${LA_NAME}`), `a ${LA_NAME.slice(0, 2)}${SPOKEN_NAME}`);
   assert.equal(speechText('no name here'), 'no name here');
   assert.equal(speechText(''), '');
 });
@@ -120,4 +120,57 @@ test('English UI strings in src name God only where listed (a "G-d" setting is a
   const expected = ['src/morning/plan.js', 'src/shell/router.js'];
   const extra = hits.filter((h) => !expected.includes(h));
   assert.deepEqual(extra, [], 'new English UI text uses the word God; route it through englishGod() from src/shell/names.js');
+});
+
+// ---- one shared speech rule: bare, maqaf-compound and prefixed forms; no written name reaches a voice ----
+const MAQAF = '\u05BE';
+
+test('speechText substitutes inside maqaf compounds and prefixed forms, keeps the maqaf and the prefix as written', () => {
+  const compound = `כְּבוֹד${MAQAF}${NAME}`;
+  assert.equal(speechText(compound), `כְּבוֹד${MAQAF}${SPOKEN_NAME}`);
+  assert.equal(speechText(`${NAME}${MAQAF}${NAME_PLAIN}`), `${SPOKEN_NAME}${MAQAF}${SPOKEN_NAME}`);
+  assert.equal(speechText(`x${MAQAF}${LA_NAME} y`), `x${MAQAF}${LA_NAME.slice(0, 2)}${SPOKEN_NAME} y`);
+  assert.equal(speechText(`${NAME}\u05C3`), `${SPOKEN_NAME}\u05C3`, 'sof pasuq after the name is kept');
+  assert.equal(speechText('כְּבוֹד'), 'כְּבוֹד', 'other words are untouched');
+  assert.equal(speechText(speechText(compound)), speechText(compound), 'idempotent');
+  // display is not speech: a name inside a compound is left as written in abbrev mode
+  assert.equal(displayHebrew(compound, 'abbrev'), compound);
+  assert.ok(findName(compound).some((h) => h.compound && h.kind === 'exact'));
+});
+
+test('speech rule over every registry and reader Hebrew string: zero written-name occurrences reach speech', () => {
+  const J = (f) => JSON.parse(fs.readFileSync(path.join(root, f), 'utf8'));
+  const strings = [];
+  for (const e of J('data/corpus/registry.json').entries) for (const l of String(e.he).split('\n')) strings.push(l);
+  for (const f of fs.readdirSync(path.join(root, 'data/corpus/reader'))) {
+    const r = J('data/corpus/reader/' + f);
+    for (const v of r.verses) { if (typeof v.he === 'string') strings.push(v.he); for (const t of v.tokens || []) if (typeof t.he === 'string') strings.push(t.he); }
+  }
+  assert.ok(strings.length >= 159, `expected at least 159 strings, got ${strings.length}`);
+  let withName = 0;
+  for (const str of strings) {
+    const hits = findName(str).filter((h) => h.kind !== 'abbrev');
+    if (hits.length) withName++;
+    const spoken = speechText(str);
+    // no word (or maqaf part) of the spoken text is the name or a prefixed name
+    assert.deepEqual(findName(spoken).filter((h) => h.kind !== 'abbrev'), [], `written name reaches speech: ${str}`);
+    // the rule changes nothing when the string has no name
+    if (!hits.length) assert.equal(spoken, str);
+  }
+  assert.ok(withName > 0, 'the corpus contains the name, so this test is not vacuous');
+});
+
+test('the Torah reader and /read use the shared rule from names.js', async () => {
+  const model = await import('../src/torahreader/model.js');
+  const sample = `כְּבוֹד${MAQAF}${NAME} ${NAME} ${LA_NAME}`;
+  assert.equal(model.spokenText(sample), speechText(sample));
+  const read = fs.readFileSync(path.join(root, 'src/corpus/read.view.js'), 'utf8');
+  assert.match(read, /import \{ speechText \} from '\.\.\/shell\/names\.js'/);
+  assert.ok(!/SPOKEN_ADONAI|TETRAGRAMMATON_SKELETON/.test(read), '/read keeps no private copy of the rule');
+  assert.ok(!/split\(TETRAGRAMMATON\)/.test(fs.readFileSync(path.join(root, 'src/torahreader/model.js'), 'utf8')));
+});
+
+test('writeGodAsGd: only the word "God" is rewritten; upper-case "GOD" (for example "THE LORD OUR GOD") is left as is on every route', () => {
+  assert.equal(englishGod('THE LORD OUR GOD', true), 'THE LORD OUR GOD');
+  assert.equal(englishGod('The LORD our God', true), 'The LORD our G-d');
 });

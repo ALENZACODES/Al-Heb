@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="morph morph-tet" viewBox="0 0 200 200" role="img" aria-labelledby="tet-t tet-d">
+<title id="tet-t">Tet becomes a round teapot full of tea with its top curling in</title>
+<desc id="tet-d">A round teapot with tea inside, a lid with a knob, a wisp of steam and a saucer. The letter is the pot: round belly with the top curling in.</desc>
+<style>/*morph-contract 1*/
+svg.morph{--m-ink:var(--morph-ink,currentColor);--m-1:var(--morph-1,#d9480f);--m-2:var(--morph-2,#1b3a6b);--m-3:var(--morph-3,#ffd966);--m-4:var(--morph-4,#2f9e44)}
+@media (prefers-color-scheme:dark){svg.morph{--m-ink:var(--morph-ink,#f3ecdc);--m-1:var(--morph-1,#ff8a4c);--m-2:var(--morph-2,#8db8ff);--m-3:var(--morph-3,#ffe08a);--m-4:var(--morph-4,#69db7c)}}
+@media (forced-colors:active){svg.morph{--m-ink:CanvasText;--m-1:Highlight;--m-2:CanvasText;--m-3:GrayText;--m-4:LinkText}}
+svg.morph .morph-a{opacity:0}
+svg.morph .morph-b{opacity:1}
+svg.morph.morph-show-a .morph-a{opacity:1}
+svg.morph.morph-show-a .morph-b{opacity:0}
+svg.morph .morph-strokes{fill:none;stroke:var(--m-ink);stroke-width:85;stroke-linecap:round;stroke-linejoin:round}
+svg.morph .morph-trace{opacity:.6;stroke-width:14}
+svg.morph.morph-show-a .morph-trace{opacity:1;stroke-width:85}
+svg.morph .mk,svg.morph .ml{fill:none;stroke-linecap:round;stroke-linejoin:round}
+svg.morph .mk{stroke-width:85}
+svg.morph .ml{stroke-width:var(--w,24)}
+svg.morph .mfi{fill:var(--m-ink)}
+svg.morph .mf1{fill:var(--m-1)}
+svg.morph .mf2{fill:var(--m-2)}
+svg.morph .mf3{fill:var(--m-3)}
+svg.morph .mf4{fill:var(--m-4)}
+svg.morph .msi{stroke:var(--m-ink)}
+svg.morph .ms1{stroke:var(--m-1)}
+svg.morph .ms2{stroke:var(--m-2)}
+svg.morph .ms3{stroke:var(--m-3)}
+svg.morph .ms4{stroke:var(--m-4)}
+svg.morph .mb{stroke-linecap:butt}
+svg.morph .mtile{fill:var(--m-ink);fill-opacity:.09}
+svg.morph .mshade{fill:var(--m-ink);fill-opacity:.3}
+svg.morph .morph-pop{transform-box:fill-box;transform-origin:50% 50%}
+@media (prefers-reduced-motion:no-preference){
+svg.morph.morph-play .morph-a{animation:morph-a 8s ease-in-out infinite}
+svg.morph.morph-play .morph-a.morph-trace{animation-name:morph-trace}
+svg.morph.morph-play .morph-b{animation:morph-b 8s ease-in-out infinite}
+svg.morph.morph-play .morph-pop{animation:morph-pop 8s ease-in-out infinite}
+svg.morph.morph-play .morph-pop-late{animation-delay:.2s}
+svg.morph.morph-show-a *{animation:none!important}}
+@keyframes morph-a{0%,18%{opacity:1}38%,86%{opacity:0}100%{opacity:1}}
+@keyframes morph-b{0%,18%{opacity:0}38%,86%{opacity:1}100%{opacity:0}}
+@keyframes morph-trace{0%,18%{opacity:1;stroke-width:85}38%,86%{opacity:.6;stroke-width:14}100%{opacity:1;stroke-width:85}}
+@keyframes morph-pop{0%,22%{opacity:0;transform:scale(.3)}42%,86%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.3)}}
+@media (prefers-reduced-motion:reduce){svg.morph,svg.morph *{animation:none!important;transition:none!important}}
+svg.morph-tet .L{fill:none;stroke:var(--m-2);stroke-width:64;stroke-linecap:round;stroke-linejoin:round}
+svg.morph-tet .o{fill:none;stroke:var(--m-ink);stroke-width:14;stroke-linecap:round;stroke-linejoin:round}
+svg.morph-tet .s{fill:var(--m-ink);fill-opacity:.3}
+svg.morph-tet .p{fill:var(--m-2);fill-opacity:.25}
+svg.morph-tet .t{fill:none;stroke:var(--m-ink);stroke-width:10;stroke-linecap:round}
+svg.morph-tet .d{fill:var(--m-ink)}
+svg.morph-tet .m{fill:none;stroke:var(--m-ink);stroke-opacity:.5;stroke-linecap:round}
+svg.morph-tet .g{fill:none;stroke:var(--m-ink);stroke-width:9;stroke-dasharray:28 22;stroke-linecap:round;opacity:.55}
+@media (forced-colors:active){svg.morph-tet .s,svg.morph-tet .p{fill:Canvas;fill-opacity:1}}</style>
+<g transform="translate(-20.45 -8.97) scale(0.2413)">
+<g class="morph-a morph-strokes"><path d="M297 240 C297 283 294 433 297 500 C300 567 298 603 312 640 C326 677 349 704 380 722 C411 740 460 745 500 745 C540 745 588 740 620 722 C652 704 676 677 690 640 C704 603 705 545 705 500 C705 455 701 406 690 370 C679 334 662 305 640 285 C618 265 586 254 560 250 C534 246 498 257 485 258"/></g>
+<g class="morph-b"><g class="morph-pop"><path class="L" d="M300 420C150 380 130 600 305 610" style="stroke-width:34"/><path class="s o" d="M690 470L800 330L850 360L710 600Z"/><path class="p" d="M297 240 C297 283 294 433 297 500 C300 567 298 603 312 640 C326 677 349 704 380 722 C411 740 460 745 500 745 C540 745 588 740 620 722 C652 704 676 677 690 640 C704 603 705 545 705 500 C705 455 701 406 690 370 C679 334 662 305 640 285 C618 265 586 254 560 250 C534 246 498 257 485 258Z"/><path class="t" d="M345 430Q390 400 435 430T525 430T615 430"/><path class="s o" d="M285 245C300 170 470 165 500 255Z"/><circle class="s o" cx="392" cy="172" r="26"/><path class="t" d="M430 150C405 130 450 118 425 100M480 150C455 130 500 118 475 100"/><ellipse class="s o" cx="500" cy="800" rx="270" ry="30"/></g><path class="L" d="M297 240 C297 283 294 433 297 500 C300 567 298 603 312 640 C326 677 349 704 380 722 C411 740 460 745 500 745 C540 745 588 740 620 722 C652 704 676 677 690 640 C704 603 705 545 705 500 C705 455 701 406 690 370 C679 334 662 305 640 285 C618 265 586 254 560 250 C534 246 498 257 485 258"/><path class="g" d="M297 240 C297 283 294 433 297 500 C300 567 298 603 312 640 C326 677 349 704 380 722 C411 740 460 745 500 745 C540 745 588 740 620 722 C652 704 676 677 690 640 C704 603 705 545 705 500 C705 455 701 406 690 370 C679 334 662 305 640 285 C618 265 586 254 560 250 C534 246 498 257 485 258"/></g>
+</g>
+</svg>

@@ -96,7 +96,7 @@
   },
   {
    "he": "שָׁנָה טוֹבָה",
-   "en": "a good year (greeting)",
+   "en": "happy new year (Rosh Hashana greeting)",
    "translit": null,
    "pronunciation": {
     "israeli": "shanah tovah",
@@ -318,7 +318,6 @@
    "options": [
     "formal",
     "neutral",
-    "casual",
     "slang"
    ]
   },

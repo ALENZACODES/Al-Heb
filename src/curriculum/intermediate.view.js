@@ -35,6 +35,15 @@ export const DRAFT_TEXT = "Draft. This lesson has not been reviewed by a native 
 export const listIntermediate = () => lessons.filter((l) => A.isIntermediateId(l.id));
 const emptyStore = () => ({ lessons: {} });
 const loadProgress = async (ctx) => { const s = await storeGet(ctx, STORE_KEY, null); return s && s.lessons ? s : emptyStore(); };
+/** Name of a prerequisite for the "finish ... first" notes: intermediate lessons by id (their titles are long), others by title. */
+const prereqName = (x) => {
+  if (A.isIntermediateId(x)) return x;
+  const t = byId[x]?.title;
+  if (!t) return x;
+  // The course's "belt" wording is not explained on these screens, so say it as a plain beginner lesson.
+  const plain = t.replace(/\b[A-Za-z]+[- ]belt\s*/i, "").trim();
+  return `the beginner ${plain ? plain.toLowerCase() : "lesson"} (lesson ${x})`;
+};
 const tradition = (ctx, lesson) => (lesson.track === "israel" ? "israeli" : ctx?.settings?.get?.("congregation") || "sephardi");
 /** Latin pronunciation line of a lesson word for the learner's tradition (falls back to the Israeli form). */
 export const pronLine = (w, trad) => w?.pronunciation?.[trad] || (trad === "israeli" ? "" : respell(w?.he, trad)) || w?.pronunciation?.israeli || w?.translit || "";
@@ -64,9 +73,10 @@ function heRow(ctx, lesson, note, he, { audio } = {}) {
 // ------------------------------------------------------------------------------------------------ exercise renderers
 // Each renderer returns a node and calls finish(correct:boolean) exactly once. `env` = { ctx, lesson, note, corpus, seed }.
 function selfRate(finish, revealed) {
-  return el("div", { class: "alef-int-rate row", role: "group", "aria-label": "How did you do?" },
+  const group = el("div", { class: "alef-int-rate row", role: "group", "aria-label": "How did you do?" },
     ...RATINGS.map(([n, t]) => el("button", { type: "button", class: "btn secondary", "data-rating": String(n), "aria-label": `${n}: ${t}`,
-      onclick: () => { if (revealed()) finish(A.gradeExercise({ type: "recall" }, n).correct); } }, `${n} ${t}`)));
+      onclick: () => { if (revealed()) { finish(A.gradeExercise({ type: "recall" }, n).correct); group.hidden = true; group.setAttribute("hidden", ""); } } }, `${n} ${t}`)));
+  return group;
 }
 
 function revealable(env, ex, promptNodes, answerNodes, finish) {
@@ -74,8 +84,19 @@ function revealable(env, ex, promptNodes, answerNodes, finish) {
   const answer = el("div", { class: "alef-int-answer", hidden: "", "aria-live": "polite" }, ...answerNodes);
   const rate = selfRate(finish, () => shown);
   rate.setAttribute("hidden", "");
-  const btn = el("button", { type: "button", class: "btn", onclick: () => { shown = true; answer.hidden = false; answer.removeAttribute?.("hidden"); rate.hidden = false; rate.removeAttribute?.("hidden"); btn.hidden = true; btn.setAttribute("hidden", ""); } }, "Show answer");
-  return el("div", {}, ...promptNodes, btn, answer, rate);
+  const btn = el("button", { type: "button", class: "btn", onclick: () => { shown = true; answer.hidden = false; answer.removeAttribute?.("hidden"); rate.hidden = false; rate.removeAttribute?.("hidden"); btn.hidden = true; btn.setAttribute("hidden", ""); answer.scrollIntoView?.({ block: "nearest" }); } }, "Show answer");
+  // Show answer goes in the sticky action bar (env.lead) when the lesson player gives one, so it stays on screen.
+  // The rating buttons sit there too (they hide once rated), so the answering step is on screen as well.
+  if (env.lead) env.lead.append(btn, rate);
+  return el("div", {}, ...promptNodes, env.lead ? null : btn, answer, env.lead ? null : rate);
+}
+
+/** Keyboard focus on an option: the browser's own focus scroll stops at the viewport edge, i.e. under the sticky bar (it ignores scroll-margin) and runs after this event, so re-scroll a tick later. */
+export const optFocus = (e) => { const b = e.currentTarget; setTimeout(() => { try { if (b.matches(":focus-visible")) b.scrollIntoView?.({ block: "nearest" }); } catch { /* engines without :focus-visible */ } }, 0); };
+
+/** Mark the answer buttons after a one-tap answer: the right one data-state=right, a wrong pick data-state=wrong (styled in learn.css). */
+function markOpts(group, isRight, isPicked) {
+  for (const b of [...(group.querySelectorAll?.(".alef-int-opt") ?? group.children ?? [])]) { if (isRight(b)) b.setAttribute("data-state", "right"); else if (isPicked(b)) b.setAttribute("data-state", "wrong"); }
 }
 
 const R = {
@@ -88,10 +109,11 @@ const R = {
     const opts = fairProduceOptions(ex);
     const out = el("p", { role: "status", "aria-live": "polite" });
     let done = false;
-    const group = el("div", { class: "alef-int-options col", role: "group", "aria-label": "Choices" }, ...opts.map((o, i) => el("button", { type: "button", class: "btn secondary alef-int-opt", "data-n": String(i + 1), lang: "he", dir: "rtl",
+    const group = el("div", { class: "alef-int-options col", role: "group", "aria-label": "Choices" }, ...opts.map((o, i) => el("button", { type: "button", class: "btn secondary alef-int-opt", onfocus: optFocus, "data-n": String(i + 1), lang: "he", dir: "rtl",
       onclick: () => {
         if (done) return; done = true;
         const ok = A.gradeExercise(ex, o.text).correct;
+        markOpts(group, (b) => A.heKey(b.textContent) === A.heKey(ex.options[ex.answer]), b => b.textContent === o.text);
         out.textContent = ok ? "Correct." : `Not quite. The answer is ${ex.options[ex.answer]}.`;
         finish(ok);
       } }, o.text)));
@@ -100,36 +122,43 @@ const R = {
   match(env, ex, finish) {
     const cols = A.matchColumns(ex, env.seed), chosen = {}; let done = false;
     const out = el("p", { role: "status", "aria-live": "polite" });
-    const rows = ex.pairs.map((p) => {
-      const btns = cols.right.map((en) => el("button", { type: "button", class: "btn secondary alef-int-opt", "aria-pressed": "false",
-        onclick: () => { if (done) return; chosen[p.he] = en; btns.forEach((b) => b.setAttribute("aria-pressed", String(b.text === G(env.ctx, en)))); } }, G(env.ctx, en)));
-      return el("div", { class: "alef-int-match", role: "group", "aria-label": p.he }, heText(p.he, "alef-he alef-word"), el("div", { class: "row" }, ...btns));
+    // One select per Hebrew phrase: the whole exercise stays about one screen tall, so Check is reachable without long scrolling.
+    const rows = ex.pairs.map((p, i) => {
+      const id = `alef-int-m${i}`;
+      const sel = el("select", { id, class: "alef-int-pick", "data-pair": String(i),
+        onchange: (e) => { if (done) return; const en = cols.right.find((r) => G(env.ctx, r) === e.currentTarget.value); if (en === undefined) delete chosen[p.he]; else chosen[p.he] = en; } },
+        el("option", { value: "" }, "Choose the meaning"), ...cols.right.map((en) => el("option", { value: G(env.ctx, en) }, G(env.ctx, en))));
+      return el("div", { class: "alef-int-match", role: "group", "aria-label": p.he }, heText(p.he, "alef-he alef-word"), el("label", { class: "alef-int-label", for: id }, el("span", { class: "visually-hidden" }, "Meaning of " + p.he), sel));
     });
     const check = el("button", { type: "button", class: "btn", onclick: () => {
       if (done) return;
       if (Object.keys(chosen).length < ex.pairs.length) { out.textContent = "Match every Hebrew phrase first."; return; }
-      done = true; const ok = A.gradeExercise(ex, chosen).correct;
+      done = true; check.hidden = true; check.setAttribute("hidden", ""); const ok = A.gradeExercise(ex, chosen).correct;
       out.textContent = ok ? "All matched." : "Not all right. " + ex.pairs.map((p) => `${p.he} = ${G(env.ctx, p.en)}`).join("; ");
       finish(ok);
     } }, "Check");
-    return el("div", {}, el("p", {}, "Match each Hebrew phrase with its meaning."), ...rows, check, out);
+    // Check goes in the sticky action bar (env.lead) when the lesson player gives one, so it stays on screen.
+    if (env.lead) env.lead.append(check);
+    return el("div", {}, el("p", {}, "Match each Hebrew phrase with its meaning."), ...rows, env.lead ? null : check, out);
   },
   order(env, ex, finish) {
     const pool = A.orderPuzzle(ex, env.seed), placed = []; let done = false;
-    const line = el("p", { class: "alef-int-line", lang: "he", dir: "rtl", "aria-label": "Your order" });
+    const line = el("p", { class: "alef-int-line", role: "group", lang: "he", dir: "rtl", "aria-label": "Your order" });
     const out = el("p", { role: "status", "aria-live": "polite" });
-    const poolBtns = pool.map((t, i) => { const b = el("button", { type: "button", class: "btn secondary alef-int-opt", lang: "he", dir: "rtl", "data-i": String(i),
+    const poolBtns = pool.map((t, i) => { const b = el("button", { type: "button", class: "btn secondary alef-int-opt", onfocus: optFocus, lang: "he", dir: "rtl", "data-i": String(i),
       onclick: () => { if (done || b.disabled) return; placed.push({ t, b }); b.disabled = true; b.setAttribute("disabled", ""); sync(); } }, t); return b; });
     function sync() { line.textContent = placed.map((p) => p.t).join(" "); }
+    // Undo and Check go in the sticky action bar (env.lead) when the lesson player gives one, so they stay on screen.
     const undo = el("button", { type: "button", class: "btn secondary", onclick: () => { if (done) return; const p = placed.pop(); if (p) { p.b.disabled = false; p.b.removeAttribute?.("disabled"); } sync(); } }, "Undo");
     const check = el("button", { type: "button", class: "btn", onclick: () => {
       if (done) return;
       if (placed.length < pool.length) { out.textContent = "Place every word first."; return; }
-      done = true; const ok = A.gradeExercise(ex, placed.map((p) => p.t)).correct;
+      done = true; for (const b of [check, undo]) { b.hidden = true; b.setAttribute("hidden", ""); } const ok = A.gradeExercise(ex, placed.map((p) => p.t)).correct;
       out.textContent = ok ? "Right order." : `Not quite. The order is: ${ex.he}`;
       finish(ok);
     } }, "Check");
-    return el("div", {}, el("p", {}, "Put the words in order: ", el("strong", {}, G(env.ctx, ex.en))), el("div", { class: "alef-int-pool row", role: "group", "aria-label": "Words" }, ...poolBtns), line, el("div", { class: "row" }, undo, check), out);
+    if (env.lead) env.lead.append(undo, check);
+    return el("div", {}, el("p", {}, "Put the words in order: ", el("strong", {}, G(env.ctx, ex.en))), el("div", { class: "alef-int-pool row", role: "group", "aria-label": "Words" }, ...poolBtns), line, env.lead ? null : el("div", { class: "row" }, undo, check), out);
   },
   respond(env, ex, finish) {
     const prompt = ex.prompt ? [heRow(env.ctx, env.lesson, env.note, ex.prompt.he), el("p", { class: "muted" }, G(env.ctx, ex.prompt.en))] : [];
@@ -154,13 +183,13 @@ const R = {
   spot(env, ex, finish) {
     const r = env.corpus?.get(ex.line), text = r ? lineText(r, ex) : ex.target;
     const toks = text.split(/\s+/).flatMap((t) => t.split(/(?<=־)/)).filter(Boolean), out = el("p", { role: "status", "aria-live": "polite" }); let done = false;
-    const row = el("div", { class: "alef-int-pool row", role: "group", "aria-label": "Words of the line" }, ...toks.map((t) => el("button", { type: "button", class: "btn secondary alef-int-opt", lang: "he", dir: "rtl",
-      onclick: () => { if (done) return; done = true; const ok = A.gradeExercise(ex, t).correct; out.textContent = ok ? "Found it." : `Not quite. The word is ${ex.target}.`; finish(ok); } }, t)));
+    const row = el("div", { class: "alef-int-pool row", role: "group", "aria-label": "Words of the line" }, ...toks.map((t) => { const btn = el("button", { type: "button", class: "btn secondary alef-int-opt", onfocus: optFocus, lang: "he", dir: "rtl",
+      onclick: () => { if (done) return; done = true; const ok = A.gradeExercise(ex, t).correct; markOpts(row, (b) => A.heKey(b.textContent) === A.heKey(ex.target), (b) => b === btn); out.textContent = ok ? "Found it." : `Not quite. The word is ${ex.target}.`; finish(ok); } }, t); return btn; }));
     return el("div", {}, el("p", {}, "Find the word that means: ", el("strong", {}, G(env.ctx, ex.en))), row, out);
   },
   register(env, ex, finish) {
     let done = false; const out = el("p", { role: "status", "aria-live": "polite" });
-    const group = el("div", { class: "alef-int-options row", role: "group", "aria-label": "Register" }, ...ex.options.map((o) => el("button", { type: "button", class: "btn secondary alef-int-opt", "data-register": o,
+    const group = el("div", { class: "alef-int-options row", role: "group", "aria-label": "Register" }, ...ex.options.map((o) => el("button", { type: "button", class: "btn secondary alef-int-opt", onfocus: optFocus, "data-register": o,
       onclick: () => { if (done) return; done = true; const ok = A.gradeExercise(ex, o).correct; out.textContent = ok ? "Yes." : `Not quite. This is ${ex.answer}.`; finish(ok); } }, o)));
     return el("div", {}, el("p", {}, "How formal is this phrase? ", el("em", {}, G(env.ctx, ex.en))), heRow(env.ctx, env.lesson, env.note, ex.he), group, out);
   },
@@ -208,7 +237,7 @@ function mountList(root, ctx) {
       return el("li", { "data-lesson": l.id }, el("a", { href: `#/intermediate/${l.id}` }, `${l.id} ${l.title}`), " ",
         el("span", { class: "muted" }, p?.done ? `done, ${p.score} of ${p.total}` : answered ? `${answered} of ${total} answered` : `${total} exercises`),
         l.needsNativeReview ? el("span", { class: "alef-flag muted" }, " · needs native review") : null,
-        unmet.length ? el("span", { class: "alef-locked muted" }, " · finish " + unmet.map((x) => byId[x]?.title || x).join(", ") + " first") : null);
+        unmet.length ? el("span", { class: "alef-locked muted" }, " · finish " + unmet.map(prereqName).join(", ") + " first") : null);
     };
     replaceKeepingFocus(wrap, h1,
       el("p", { class: "draft-flag", role: "note" }, DRAFT_TEXT), el("p", { class: "draft-flag", role: "note" }, REVIEW_FLAG),
@@ -240,13 +269,13 @@ function mountLesson(root, ctx, id) {
     const exs = sequenceExercises(lesson.exercises), corpus = content.corpus;
     const unmet = lesson.prerequisites.filter((p) => !st.completed[p]);
     let results = { ...mine.results }, session = null, t0 = 0, cardsUpdated = 0, shown = 0;
-    let started = false;
+    let started = false, base = 0;
 
     const begin = () => {
       // Resume at the first unanswered exercise; a finished lesson starts a fresh round.
       let todo = exs.filter((e) => !(e.id in results));
       if (!todo.length) { results = {}; todo = exs; }
-      session = createSession(todo); t0 = Date.now(); cardsUpdated = 0; shown = exs.length - todo.length;
+      session = createSession(todo); base = todo.length; t0 = Date.now(); cardsUpdated = 0; shown = exs.length - todo.length;
     };
 
     const intro = () => [
@@ -254,7 +283,8 @@ function mountLesson(root, ctx, id) {
       el("p", { class: "draft-flag", role: "note" }, DRAFT_TEXT),
       exs.length ? null : el("p", { class: "alef-locked", role: "note" }, "This lesson has no exercises yet, so it cannot be completed."),
       lesson.needsNativeReview ? el("p", { class: "draft-flag alef-needs-review", role: "note" }, REVIEW_FLAG) : null,
-      unmet.length ? el("p", { class: "alef-locked", role: "note" }, `Finish ${unmet.map((p) => byId[p]?.title || p).join(", ")} first. You can still look around.`) : null,
+      unmet.length ? el("p", { class: "alef-locked", role: "note" }, `Finish ${unmet.map(prereqName).join(", ")} first. You can still look around.`) : null,
+      exs.length ? el("p", {}, el("button", { type: "button", class: "btn secondary", "data-act": "jump-start", onclick: () => { const b = document.getElementById("alef-int-start"); b?.scrollIntoView?.({ block: "center" }); b?.focus?.(); } }, "Jump to the exercises")) : null,
       el("section", { class: "card", "aria-labelledby": "i-goals" }, el("h2", { id: "i-goals" }, "Goals"), el("ul", {}, ...lesson.goals.map((g) => el("li", {}, G(ctx, g))))),
       el("section", { class: "card", "aria-labelledby": "i-words" }, el("h2", { id: "i-words" }, "Words"),
         el("p", { class: "muted" }, lesson.track === "israel" ? "Pronunciation lines are the Israeli form." : `Pronunciation lines follow your tradition setting (${trad}).`),
@@ -264,12 +294,15 @@ function mountLesson(root, ctx, id) {
       note,
       el("div", { class: "row alef-actions" }, el("button", { type: "button", class: "btn", id: "alef-int-start", disabled: exs.length ? null : "", onclick: () => { started = true; offKeys(); begin(); show(); } }, mine.done ? "Practise again" : Object.keys(results).length ? "Continue" : "Start exercises"),
         el("a", { class: "btn secondary", href: "#/intermediate" }, "All intermediate lessons")),
-    ];
+    ].filter(Boolean); // replaceChildren turns a raw null into the text "null"
 
     async function persist(extra = {}) {
       prog.lessons[lesson.id] = { ...(prog.lessons[lesson.id] || {}), results: { ...results }, done: mine.done, ...extra };
       await storeSet(ctx, STORE_KEY, prog);
     }
+
+    /** Stable counts: `first` exercises answered once (never grows), `extra` retries queued so far, `retried` retries done. */
+    const counts = () => { const p = session.progress(), retried = session.stats().retried; return { first: shown + p.resolved - retried, extra: p.total - base, retried }; };
 
     function show() {
       if (!alive) return;
@@ -280,7 +313,7 @@ function mountLesson(root, ctx, id) {
       // The SRS update waits for "Next", so Undo costs nothing.
       const flush = async () => { if (pending) { const p = pending; pending = null; cardsUpdated += await applyToSrs(ctx, lesson, { [p.id]: p.correct }); } };
       const bar = progressBar("Lesson progress");
-      const refresh = () => { const p = session.progress(), tot = p.total + shown; bar.update((p.resolved + shown) / tot, `${p.resolved + shown} of ${tot} done`); };
+      const refresh = () => { const c = counts(); bar.update(Math.min(1, c.first / exs.length), `${c.first} of ${exs.length} done` + (c.extra ? `, ${Math.max(0, c.extra - c.retried)} to retry` : "")); };
       refresh();
       const status = el("p", { class: "alef-int-next alef-fb", role: "status", "aria-live": "polite" });
       const why = el("p", { class: "muted alef-why" });
@@ -298,18 +331,21 @@ function mountLesson(root, ctx, id) {
         fireFeedback(ctx, !!correct);
         sec.setAttribute("data-result", correct ? "right" : "wrong");
         status.textContent = (retry ? feedbackText(!!correct, { retry: true }) : correct ? "Marked as known." : "Marked to review.") + (r.requeued ? " You will see it once more at the end." : "");
-        why.textContent = uiEnglish(ctx, whyLine(ex, lesson, trad));
+        const whyText = uiEnglish(ctx, whyLine(ex, lesson, trad)); why.textContent = whyText;
         refresh();
         for (const b of [next, undo]) { b.hidden = false; b.removeAttribute?.("hidden"); }
         skip.hidden = true; skip.setAttribute("hidden", "");
         if (!retry) { results[ex.id] = !!correct; pending = { id: ex.id, correct: !!correct }; await persist(); }
         next.textContent = session.done() ? "Finish" : "Next";
-        next.focus?.();
+        next.focus?.({ preventScroll: true });
+        (whyText ? why : status).scrollIntoView?.({ block: "nearest" }); // one call (a second would cancel the smooth scroll): the explanation sits last above the sticky bar, so clearing it keeps the verdict above it in view
       };
-      const node = R[ex.type](Object.assign({ ctx, lesson, note, corpus, seed: (lesson.exercises.indexOf(ex) + 1) }, {}), ex, finish);
-      const p0 = session.progress();
-      const title = el("h2", { id: "alef-int-ex", tabindex: "-1" }, `${retry ? "Try again - " : ""}${TYPE_LABEL[ex.type] || ex.type}: ${Math.min(shown + p0.resolved + 1, p0.total + shown)} of ${p0.total + shown}`);
-      const sec = el("section", { class: "card alef-ex-card", "aria-labelledby": "alef-int-ex", "data-type": ex.type, "data-ex": ex.id }, node, status, why, el("div", { class: "row" }, next, undo, skip));
+      const lead = el("span", { class: "alef-actionbar-lead" });
+      const node = R[ex.type](Object.assign({ ctx, lesson, note, corpus, lead, seed: (lesson.exercises.indexOf(ex) + 1) }, {}), ex, finish);
+      const c0 = counts();
+      const where = retry ? `retry ${Math.min(c0.retried + 1, c0.extra)} of ${c0.extra}` : `question ${Math.min(c0.first + 1, exs.length)} of ${exs.length}` + (c0.extra ? `, plus ${c0.extra} to retry` : "");
+      const title = el("h2", { id: "alef-int-ex", tabindex: "-1" }, `${retry ? "Try again - " : ""}${TYPE_LABEL[ex.type] || ex.type}: ${where}`);
+      const sec = el("section", { class: "card alef-ex-card", "aria-labelledby": "alef-int-ex", "data-type": ex.type, "data-ex": ex.id }, node, status, why, el("div", { class: "row alef-actionbar" }, lead, next, undo, skip));
       body.replaceChildren(bar.node, title, sec, note,
         el("p", {}, el("a", { href: `#/intermediate/${lesson.id}` , onclick: (e) => { e?.preventDefault?.(); offKeys(); body.replaceChildren(...intro()); } }, "Back to the words")));
       title.focus?.();

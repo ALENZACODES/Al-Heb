@@ -12,7 +12,7 @@
   },
   "paths": {
     "read": {
-      "title": "Read the siddur and Torah",
+      "title": "Read the prayer book and Torah",
       "milestones": [
         { "id": "rd-words", "kind": "decodeWords", "words": ["שַׁבָּת", "שָׁלוֹם"], "label": "Read Shabbat and Shalom yourself", "href": "#/learn" },
         { "id": "rd-l9", "kind": "letters", "count": 9, "label": "Know your first 9 letters", "href": "#/learn" },

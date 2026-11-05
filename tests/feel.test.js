@@ -190,6 +190,20 @@ test("quick check player: bar, per-answer feedback with the right answer and why
   assert.equal(sum.find((n) => n.tag === "a")[0].attrs.href, "#/learn?lesson=r02", "next is the first/primary action");
   off();
 });
+test("quick check player: Continue, Undo and Skip live in the sticky action bar, and after an answer the explanation (the last line above the bar) is scrolled into view", async () => {
+  const qs = S.buildChoiceQuestions(byId.r01, { ...content, wordPool }).slice(0, 2);
+  const host = new Node_("div"); const off = UI.mountQuiz(host, { questions: qs, ctx: lessonCtx(memStore()), onFinish: () => {} });
+  const bar = host.find((n) => /\balef-actionbar\b/.test(n.className))[0];
+  assert.ok(bar, "action bar present");
+  assert.deepEqual(bar.find((n) => n.attrs["data-act"]).map((n) => n.attrs["data-act"]), ["next", "undo", "skip"], "DOM (tab) order: Continue, Undo, Skip");
+  const optBtns = by(host, (b) => b.tag === "button" && b.attrs["data-n"]);
+  assert.ok(optBtns.length >= 2 && optBtns.every((b) => (b.listeners.focus || []).length === 1), "every option re-scrolls itself on keyboard focus (the browser's own focus scroll leaves it under the bar)");
+  const scrolled = []; const orig = Node_.prototype.scrollIntoView; Node_.prototype.scrollIntoView = function (o) { scrolled.push({ cls: this.className, block: o?.block }); };
+  try { await by(host, (b) => b.attrs["data-n"] === "1")[0].click(); } finally { Node_.prototype.scrollIntoView = orig; }
+  assert.equal(scrolled.length, 1, "one scroll call (a second would cancel the smooth scroll of the first)");
+  assert.match(scrolled[0].cls, /alef-why/); assert.equal(scrolled[0].block, "nearest");
+  off();
+});
 test("quick check player: number keys answer, S skips (nothing recorded), and a dropped item is reported, not graded", async () => {
   const qs = S.buildChoiceQuestions(byId.r01, { ...content, wordPool }).slice(0, 2);
   const host = new Node_("div"); let fin; const off = UI.mountQuiz(host, { questions: qs, ctx: lessonCtx(memStore()), onFinish: (r) => { fin = r; } });
@@ -226,6 +240,28 @@ test("a lesson without exercises cannot be completed by a tap; the quick check c
   assert.ok(lapsed.length >= 1, "first-attempt misses lapse their cards");
   assert.ok(store.m.streak.count >= 1);
   off();
+});
+test("beginner lesson: tapping Start brings the quiz card up and moves focus to its heading without a second scroll", async () => {
+  const store = memStore(); const ctx = lessonCtx(store, { query: { lesson: "r01" } });
+  const root = new Node_("div");
+  Node_.prototype.querySelector = function (sel) { const f = sel.startsWith("#") ? (n) => n.attrs.id === sel.slice(1) : (n) => new RegExp("\\b" + sel.slice(1) + "\\b").test(n.className); return this.find(f)[0] ?? null; };
+  const scrolled = [], focused = [];
+  const origS = Node_.prototype.scrollIntoView, origF = Node_.prototype.focus;
+  Node_.prototype.scrollIntoView = function (o) { scrolled.push({ cls: this.className, o }); };
+  Node_.prototype.focus = function (o) { focused.push({ id: this.attrs.id, o }); };
+  const off = mountLesson(root, ctx, "r01");
+  try {
+    await waitFor(() => by(root, (b) => b.attrs.id === "alef-quick-start")[0]);
+    scrolled.length = 0; focused.length = 0;
+    await by(root, (b) => b.attrs.id === "alef-quick-start")[0].click();
+    assert.equal(scrolled.length, 1, "one scroll call");
+    assert.match(scrolled[0].cls, /alef-ex-card/); assert.equal(scrolled[0].o.block, "start");
+    assert.ok(!("behavior" in scrolled[0].o), "no forced behaviour: CSS scroll-behavior decides, and it is auto under reduced motion");
+    const f = focused.filter((x) => x.id === "alef-q-title");
+    assert.equal(f.length, 1, "the question heading takes focus"); assert.deepEqual(f[0].o, { preventScroll: true });
+  } finally { Node_.prototype.scrollIntoView = origS; Node_.prototype.focus = origF; delete Node_.prototype.querySelector; off(); }
+  const { readFileSync } = await import("node:fs");
+  assert.match(readFileSync(new URL("../assets/css/app.css", import.meta.url), "utf8"), /prefers-reduced-motion: reduce\)[^\n]*scroll-behavior: auto !important/);
 });
 test("saveQuickCheck refuses to complete with no questions or no answers", async () => {
   const store = memStore(); const ctx = lessonCtx(store);

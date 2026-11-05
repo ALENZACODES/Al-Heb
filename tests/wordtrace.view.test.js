@@ -34,6 +34,7 @@ test('empty state: with no traced letters there are no words and the screen says
   const { root, unmount } = await open({ store: mkStore() });
   assert.ok(sel(root, '[data-role=empty]'));
   assert.match(txt(sel(root, '[data-role=summary]')), /0 words/);
+  assert.match(root.textContent, /Word meanings: Wiktionary contributors \(CC BY-SA 4\.0\)/);
   assert.equal(btn(root, 'next-word'), null);
   assert.ok(sel(root, '.notice'), 'draft notice present');
   assert.match(txt(sel(root, '.notice')), /DRAFT/);

@@ -14,6 +14,9 @@ test('index.html: language, skip link first, banner, labelled nav, status region
   assert.match(html, /<header[^>]*role="banner"/); assert.match(html, /<nav[^>]*aria-label="Main"/);
   assert.equal((html.match(/<main\b/g) || []).length, 1); assert.match(html, /<main id="main" tabindex="-1"/);
   assert.match(html, /id="sound-status" role="status" aria-live="polite"/);
+  assert.equal((html.match(/class="sound-bar"/g) || []).length, 1, 'exactly one sound bar');
+  assert.match(html, /class="sound-bar-details" href="#\/how"[^>]*>Details</);
+  assert.match(html, /<button type="button" class="sound-bar-x" aria-label="Dismiss audio notice">/);
   assert.doesNotMatch(html, /user-scalable=no|maximum-scale=1\b/, 'zoom is not disabled');
 });
 test('More sheet markup: a button with aria-expanded and aria-controls pointing at a labelled list', () => {
@@ -29,6 +32,10 @@ test('CSS: visible focus ring, no outline:none without a replacement, reduced-mo
   assert.match(css, /:focus-visible\s*\{\s*outline:\s*3px solid var\(--focus\)/);
   assert.match(css, /prefers-reduced-motion/); assert.match(css, /forced-colors/);
   assert.match(css, /label\.btn:has\(\+ input\[type=file\]:focus-visible\)/, 'the hidden file input shows its focus on its label');
+});
+test('CSS: forced colors keep pressed/selected buttons visible, and bottom-tab focus ring stays inside the screen', () => {
+  assert.match(css, /forced-colors: active\) \{ button\[aria-pressed="true"\], button\[aria-selected="true"\][^}]*background: Highlight; color: HighlightText/);
+  assert.match(css, /\.site-nav a:focus-visible, \.more-btn:focus-visible \{ outline-offset: -4px; \}/);
 });
 test('CSS: text is never made muted with opacity in the shell stylesheet overrides (opacity blends text below 4.5:1)', () => {
   const block = css.slice(css.indexOf('a11y round (lane 8'));
@@ -57,4 +64,16 @@ test('tools/a11y/keyboard.mjs walks the six flows and checks for a non-pointer t
 test('docs/A11Y.md says what automated checks cannot show', () => {
   const d = read('docs/A11Y.md');
   assert.match(d, /screen reader/i); assert.match(d, /VoiceOver|TalkBack|NVDA/); assert.match(d, /Only a real phone/i);
+});
+
+test('lesson meta line uses the learner-facing level label, not a bare code', () => {
+  const src = read('src/curriculum/lesson.view.js');
+  assert.match(src, /levelLabel\(lesson\.level\)/);
+  assert.doesNotMatch(src, /\$\{lesson\.level\} ·/);
+});
+
+test('phone layout: the page reserves the tab bar height and scrolls controls clear of it', () => {
+  const css = read('assets/css/app.css');
+  assert.match(css, /html \{ scroll-padding-block-end: calc\(4\.5rem \+ env\(safe-area-inset-bottom\)\); \}/);
+  assert.match(css, /body \{ padding-block-end: calc\(4\.5rem \+ env\(safe-area-inset-bottom\)\); \}/);
 });

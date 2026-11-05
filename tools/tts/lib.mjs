@@ -8,9 +8,23 @@ export const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url
 export const TTS_DIR = path.join(REPO_ROOT, 'tools', 'tts');
 /** Work dir lives OUTSIDE the repo: raw WAV and staged MP3 are large and must not be committed. */
 export const defaultWork = () => process.env.ALEF_TTS_WORK || path.join(os.homedir(), 'alef-tts-work');
-/** The only status this factory ever writes. It is the app's existing synthetic-voice value (see docs/tts/README.md). */
-export const TTS_STATUS = 'tts';
+/** The only status this factory ever writes: synthetic, and nobody has listened. Never 'recorded'. (Older clips may say 'tts'; the app still reads it.) */
+export const TTS_STATUS = 'synthetic-unreviewed';
+export const REVIEWED_STATUS = 'synthetic-reviewed';
 export const HUMAN_STATUS = 'recorded';
+export const SOURCES = Object.freeze(['tts-hebrew', 'tts-respelled']);
+
+/** render-log.jsonl -> Map clipKey -> the LAST record for that clip (a re-render replaces the earlier line). */
+export function readRenderLog(work) {
+  const p = path.join(work, 'render-log.jsonl');
+  const m = new Map();
+  if (!fs.existsSync(p)) return m;
+  for (const line of fs.readFileSync(p, 'utf8').split('\n')) {
+    if (!line.trim()) continue;
+    try { const r = JSON.parse(line); m.set(clipKey(r), r); } catch { /* a torn last line is ignored */ }
+  }
+  return m;
+}
 
 /** Remove niqqud, cantillation, maqaf, sof pasuq and punctuation; keep consonants and spaces. */
 export const stripNiqqud = (s) => String(s ?? '').replace(/[֑-ׇ]/g, '').replace(/[־׃]/g, ' ').replace(/[^א-ת\s]/g, ' ').replace(/\s+/g, ' ').trim();

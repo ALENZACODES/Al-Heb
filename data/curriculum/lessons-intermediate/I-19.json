@@ -12,7 +12,7 @@
  "words": [
   {
    "he": "שַׁבָּת שָׁלוֹם",
-   "en": "Shabbat shalom",
+   "en": "peaceful Sabbath (greeting from Friday afternoon to Saturday)",
    "translit": null,
    "pronunciation": {
     "israeli": "shabat shalom"
@@ -24,7 +24,7 @@
   },
   {
    "he": "שָׁבוּעַ טוֹב",
-   "en": "a good week",
+   "en": "good week",
    "translit": null,
    "pronunciation": {
     "israeli": "shavu'a tov"
@@ -389,7 +389,6 @@
    "options": [
     "formal",
     "neutral",
-    "casual",
     "slang"
    ]
   }

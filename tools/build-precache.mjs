@@ -21,10 +21,17 @@ const SKIP = (rel) => rel.startsWith('assets/img/') || rel.startsWith('assets/im
 // are cached the first time a learner opens the page that needs them, or all at once from "Use ALEF offline" -> Download everything
 // (they are listed in precache-manifest.js as ALEF_ON_DEMAND; src/shell/offline.js ON_DEMAND_GROUPS names them for the learner).
 // Source code under src/ is never deferred (its import graph is shared with the v0 routes). Everything NOT listed here stays in the install.
-const KEEP_DATA = new Set(['data/pronunciation/consonants.json', 'data/pronunciation/niqqud.json', 'data/calendar/locations.json', 'data/audio/equivalence.json']);
-const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/pronunciation/', 'data/speak/', 'data/israel/', 'data/calendar/', 'data/festivals/', 'data/torahread/', 'data/typing/',
+// Letter memory pictures (assets/letters/morph/<id>.svg, 4 to 5 KB each, 28 files, about 125 KB): data/letters/memory-chain.json and the code stay installed (the card
+// works from text alone); only the pictures of the letters a learner meets on day one are installed: the first-day on-ramp (shin, bet), the older
+// first-ten preview (shin, lamed, vav, mem, he), lessons r01 to r03 (shin, bet, tav, lamed, final mem, vav) and alef (the first card the letters pages show). The other pictures (and sin.svg, which no
+// view reads) are fetched the first time a letter page, the atlas or a review card shows them (sw.js caches them) or by "Download everything".
+// tests/offline.test.js checks this list against data/firstday and data/curriculum/lessons.json.
+export const FIRST_DAY_LETTERS = ['shin', 'bet', 'lamed', 'vav', 'mem', 'he', 'tav', 'mem-final', 'alef'];
+const KEEP_DATA = new Set(['data/pronunciation/consonants.json', 'data/pronunciation/niqqud.json', 'data/calendar/locations.json', 'data/audio/equivalence.json',
+  ...FIRST_DAY_LETTERS.map((id) => `assets/letters/morph/${id}.svg`)]);
+const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'data/nikkudfade/', 'data/gender/', 'data/pronunciation/', 'data/speak/', 'data/israel/', 'data/calendar/', 'data/festivals/', 'data/torahread/', 'data/typing/',
   'data/traditions/', 'data/trope-trainer/', 'data/listen/', 'data/grammar/', 'data/wordtrace/', 'data/corpus/reader/', 'data/corpus/trope/', 'data/curriculum/lessons-intermediate/',
-  'assets/screens/', 'assets/screenshots/'];
+  'assets/screens/', 'assets/screenshots/', 'assets/letters/morph/'];
 const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json']);
 export const isOnDemand = (rel) => !KEEP_DATA.has(rel) && (ON_DEMAND_FILES.has(rel) || /^data\/curriculum\/resource-concepts-/.test(rel) || ON_DEMAND_PREFIXES.some((p) => rel.startsWith(p)));
 const DATA_ONLY_JSON = (rel) => !rel.startsWith('data/') || rel.endsWith('.json');

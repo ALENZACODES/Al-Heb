@@ -47,7 +47,7 @@ export function render(dir = PASTE, root = ROOT) {
   L.push('| Step | Files | Images | Why |');
   L.push('|---|---|---|---|');
   L.push(`| 1 | \`redo-01.txt\` to \`redo-${String(redo.length).padStart(2, '0')}.txt\` | ${sum(redo)} | Regenerate the flagged images (text, square-for-wide, wrong backdrop). Same file names as the originals. |`);
-  L.push(`| 2 | \`cmd-036.txt\` onward (${cmd.length} files, see \`paste/INDEX.md\`) | ${sum(cmd)} | The pending 1000-image list, in command order. |`);
+  L.push(`| 2 | \`cmd-036.txt\` onward (${cmd.length} files, see \`paste/INDEX.md\`) | ${sum(cmd)} | The pending image list (next1000), in command order. |`);
   L.push(`| 3 | \`inter-01.txt\` to \`inter-${String(inter.length).padStart(2, '0')}.txt\` | ${sum(inter)} | Two scene pictures per intermediate lesson (I-01 to I-50). |`);
   if (J) L.push(`| 4 | \`J-MASTER.txt\` (read first), then \`j-01.txt\` to \`j-${String(J.files.length).padStart(2, '0')}.txt\` | ${sum(J.files)} | Block J: ${J.rows} further pictures, \`J-0001.png\` to \`J-${String(J.rows).padStart(4, '0')}.png\`, one paste file per command (301 and up). |`);
   if (R) L.push(`| 5 | \`tools/images/run3-source.md\` (commands 150 to 249, pasted one command per message; see \`RUN3.md\`) | ${R.rows} | Run 3: ${R.commands} commands x 10 images, named by the commands themselves (\`TROPE_<name>_mnemonic.png\`, \`CRAFT_bimah_01.png\` ... \`FINALE_set_10.png\`); rows in \`data/images/run3.csv\`. |`);

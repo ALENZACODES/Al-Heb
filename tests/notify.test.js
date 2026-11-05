@@ -56,7 +56,7 @@ test("requestPermission(): unsupported without Notification; otherwise returns w
 
 test("normalizePrefs: defaults, clamping, de-duplicated sorted days, unknown keys dropped", () => {
   const d = N.normalizePrefs(null);
-  assert.deepEqual(d, { v: 1, enabled: false, hour: 19, minute: 0, days: [0, 1, 2, 3, 4, 6], shabbatQuiet: true, yomTovQuiet: true });
+  assert.deepEqual(d, { v: 1, enabled: false, hour: 19, minute: 0, days: [0, 1, 2, 3, 4], shabbatQuiet: true, yomTovQuiet: true });
   const p = N.normalizePrefs({ enabled: true, hour: 25, minute: 7, days: [6, 6, 2, 9, -1, "x"], shabbatQuiet: false, junk: 1 });
   assert.deepEqual(p, { v: 1, enabled: true, hour: 19, minute: 7, days: [2, 6], shabbatQuiet: false, yomTovQuiet: true });
   assert.deepEqual(N.normalizePrefs({ days: [] }).days, []);
@@ -99,7 +99,7 @@ test("scheduleStudyReminder: fires at the chosen time via the injected show(), t
   assert.equal(shown.length, 0);
   t.advanceTo(local(2026, 11, 4, 9, 0));
   assert.equal(shown.length, 1);
-  assert.equal(shown[0].title, "ALEF: time to study");
+  assert.equal(shown[0].title, "ALEF: a few minutes of Hebrew");
   assert.equal(shown[0].o.route, "#/learn");
   assert.deepEqual(fired, [local(2026, 11, 4, 9, 0)]);
   assert.equal(N.status().next.getTime(), local(2026, 11, 5, 9, 0), "re-armed for Thursday");
@@ -335,19 +335,19 @@ test("card: Allow button requests permission on click only, then enables and sch
   const time = byId(root, "nt-time"); time.value = "07:15"; time.fire("change");
   await waitFor(() => mem["notify.prefs"].hour === 7 && mem["notify.prefs"].minute === 15);
   await waitFor(() => N.status().next?.getTime() === local(2026, 11, 5, 7, 15));
-  // untick Thursday => Saturday night is next (default days include Saturday; no city so no quiet hours)
+  // untick Thursday => Sunday is next (Saturday is not in the default days)
   const thu = byId(root, "nt-day-4"); thu.checked = false; thu.fire("change");
   await waitFor(() => !mem["notify.prefs"].days.includes(4));
-  await waitFor(() => N.status().next?.getTime() === local(2026, 11, 7, 7, 15));
+  await waitFor(() => N.status().next?.getTime() === local(2026, 11, 8, 7, 15));
   assert.match(byId(root, "nt-quiet-note").text, /No city is set/);
   // invalid time is flagged and ignored
   time.value = "late"; time.fire("change"); assert.equal(time.attrs["aria-invalid"], "true"); assert.equal(mem["notify.prefs"].hour, 7);
   // leaving the card keeps the schedule running
   unmount();
   assert.equal(N.status().scheduled, 1);
-  t.advanceTo(local(2026, 11, 7, 7, 15));
+  t.advanceTo(local(2026, 11, 8, 7, 15));
   assert.equal(F.made.length, 1, "fired via the page constructor (no service worker in the fake)");
-  assert.equal(F.made[0].title, "ALEF: time to study");
+  assert.equal(F.made[0].title, "ALEF: a few minutes of Hebrew");
 });
 
 test("card: test-notification button shows one immediately; denied permission is explained", async () => {
@@ -447,4 +447,8 @@ test("armFromPrefs skips a Yom Kippur slot using the calendar observance and cit
   mem["notify.prefs"].yomTovQuiet = false; mem["notify.prefs"].shabbatQuiet = false;
   const r2 = await N.armFromPrefs({ store: { get: (k) => mem[k] } }, { globalThis: g, now: t.nowFn, setTimer: t.setTimer, clearTimer: t.clearTimer });
   assert.ok(r2.next.getTime() <= r.next.getTime());
+});
+test("default days leave Saturday and Friday off; the no-city note says so", () => {
+  assert.ok(!N.DEFAULT_PREFS.days.includes(6) && !N.DEFAULT_PREFS.days.includes(5));
+  assert.deepEqual(N.normalizePrefs({ days: [0, 6] }).days, [0, 6], "a learner who picks Saturday keeps it");
 });

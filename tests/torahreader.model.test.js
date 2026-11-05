@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {
-  STORE_KEY, DEFAULT_STATE, SPEEDS, normaliseState, speedMs, stripNiqqud, spokenText, flatten, display, audioIndex, tropeById, tropeName, legend, markGlyph, stepIndex,
+  STORE_KEY, DEFAULT_STATE, SPEEDS, normaliseState, speedMs, stripNiqqud, spokenText, flatten, display, audioIndex, tropeById, tropeName, legend, markGlyph, stepIndex, spacePaseq, largePositions, displayParts, SIZES, sizeScale, largePositionsIn, bigParts, wordPartsLarge,
 } from '../src/torahreader/model.js';
 
 const root = new URL('../', import.meta.url);
@@ -18,7 +18,9 @@ test('store key and state normalisation', () => {
   assert.equal(STORE_KEY, 'torahreader.v1');
   assert.deepEqual(normaliseState(null), DEFAULT_STATE);
   assert.deepEqual(normaliseState('x'), DEFAULT_STATE);
-  assert.deepEqual(normaliseState({ passage: 'shema', view: 'legend', showTrope: false, showNiqqud: false, speed: 'fast' }), { v: 1, passage: 'shema', view: 'legend', showTrope: false, showNiqqud: false, speed: 'fast' });
+  assert.deepEqual(normaliseState({ passage: 'shema', view: 'legend', showTrope: false, showNiqqud: false, speed: 'fast', size: 'largest' }), { v: 1, passage: 'shema', view: 'legend', showTrope: false, showNiqqud: false, speed: 'fast', size: 'largest' });
+  assert.equal(normaliseState({ size: 'huge' }).size, 'normal');
+  assert.ok(SIZES.length === 3 && sizeScale('normal') === 1 && sizeScale('largest') > sizeScale('large') && sizeScale('bogus') === 1);
   assert.deepEqual(normaliseState({ passage: 'nope', view: 3, showTrope: 'yes', speed: 'warp' }), DEFAULT_STATE);
   assert.ok(SPEEDS.every((s) => s.ms > 0) && speedMs('slow') > speedMs('medium') && speedMs('medium') > speedMs('fast'));
   assert.equal(speedMs('bogus'), speedMs('medium'));
@@ -98,4 +100,61 @@ test('stepIndex', () => {
   assert.equal(stepIndex(2, 5, 1), 3);
   assert.equal(stepIndex(4, 5, 1), null);
   assert.equal(stepIndex(0, 5, -1), null);
+});
+
+test('large letters: Deuteronomy 6:4 puts the large ayin on the last letter of the first word and the large dalet on the last letter of the last word', () => {
+  const v = sh.verses[0];
+  assert.deepEqual(v.largeLetters, ['ע', 'ד']);
+  const pos = largePositions(v);
+  assert.equal(pos.length, 2);
+  assert.deepEqual(pos[0], { wi: 0, ln: 2 });
+  assert.deepEqual(pos[1], { wi: v.words.length - 1, ln: 2 });
+  assert.deepEqual(largePositions(sh.verses[1]), []);
+  assert.deepEqual(largePositions(pb.verses[2]), []);
+});
+
+test('displayParts: joins back to display() and marks only the large letter (with its points and marks) as big', () => {
+  const v = sh.verses[0]; const items = flatten(sh).filter((x) => x.verseIndex === 0); const pos = largePositions(v);
+  for (const opts of [{ showTrope: true, showNiqqud: true }, { showTrope: false, showNiqqud: true }, { showTrope: true, showNiqqud: false }, { showTrope: false, showNiqqud: false }]) {
+    for (const it of items) assert.equal(displayParts(it, opts, pos).map((p) => p.t).join(''), display(it, opts));
+  }
+  const big = items.flatMap((it) => displayParts(it, { showTrope: true, showNiqqud: true }, pos)).filter((p) => p.big);
+  assert.equal(big.length, 2);
+  assert.equal(big[0].t.replace(/[^א-ת]/g, ''), 'ע');
+  assert.equal(big[1].t.replace(/[^א-ת]/g, ''), 'ד');
+  assert.equal(displayParts(items[1], { showTrope: true, showNiqqud: true }, pos).some((p) => p.big), false);
+});
+
+test('largePositionsIn / wordPartsLarge work on plain word lists (used by /read and /torahread) and agree with the reader verse', () => {
+  const v = sh.verses[0];
+  assert.deepEqual(largePositionsIn(v.words.map((w) => w.he), v.largeLetters), largePositions(v));
+  const words = 'שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד'.split(' ');
+  const parts = wordPartsLarge(words, ['ע', 'ד']);
+  assert.equal(parts.length, words.length);
+  assert.deepEqual(parts.map((p) => p.map((x) => x.t).join('')), words, 'pieces join back to the word');
+  assert.deepEqual(parts[0].filter((x) => x.big).map((x) => x.t), ['ע']);
+  assert.deepEqual(parts[5].filter((x) => x.big).map((x) => x.t), ['ד']);
+  assert.ok(parts.slice(1, 5).every((p) => p.every((x) => !x.big)));
+  assert.deepEqual(wordPartsLarge(words, []).flat().filter((x) => x.big), []);
+  assert.deepEqual(bigParts('אב', new Set()), [{ t: 'אב', big: false }]);
+});
+
+test('paseq keeps the space the source has before it; displayed verse text equals the source heTrope (sof pasuq and the source space after a maqaf aside)', () => {
+  assert.equal(spacePaseq('א\u05C0'), 'א \u05C0');
+  assert.equal(spacePaseq('א \u05C0'), 'א \u05C0', 'already spaced: unchanged');
+  let paseqs = 0;
+  for (const p of [pb, sh]) {
+    const items = flatten(p);
+    for (const [vi, v] of p.verses.entries()) {
+      const shown = items.filter((x) => x.verseIndex === vi).map((x) => display(x, { showTrope: true, showNiqqud: true })).join(' ');
+      const parts = items.filter((x) => x.verseIndex === vi).map((x) => displayParts(x, { showTrope: true, showNiqqud: true }).map((q) => q.t).join('')).join(' ');
+      const src = v.heTrope.replace(/׃/g, '').replace(/־ /g, '־').trim();
+      assert.equal(shown, src, v.ref);
+      assert.equal(parts, shown, v.ref);
+      paseqs += (shown.match(/\u05C0/g) || []).length;
+      assert.ok(!/[^\s]\u05C0/.test(shown), `${v.ref}: every paseq follows a space`);
+    }
+  }
+  assert.equal(paseqs, 3, 'the three paseqs of the two passages (Deut 6:4, Num 6:25, Num 6:26) are all kept');
+  assert.ok(!/\u05C0/.test(display(flatten(sh)[0], { showTrope: false, showNiqqud: true })));
 });

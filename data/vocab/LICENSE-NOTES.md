@@ -4,7 +4,7 @@ This is a plain list of the obligations that `docs/vocab/LICENSES.md` and `docs/
 
 ## Share-alike (CC BY-SA 4.0)
 
-Applies to 6,027 of 6,297 records in `words.json`, and to the whole file as distributed.
+Applies to 6,033 of 6,303 records in `words.json`, and to the whole file as distributed.
 
 1. Wiktionary contributors, via Wiktextract / kaikki.org Hebrew extract: lemma, gloss, pointed headword, part of speech, forms. Licence stated in LICENSES.md: CC BY-SA 4.0 (and GFDL); kaikki.org states its extracts follow the same terms.
 2. hermitdave/FrequencyWords 2018 Hebrew (OpenSubtitles2018): the rank order. Licence stated: "CC-by-sa-4.0 for content".
@@ -13,7 +13,7 @@ Obligations (LICENSES.md, "Share-alike consequence"): (a) give the attribution b
 
 ## Attribution only (no share-alike of its own)
 
-3. Tatoeba example sentences, CC BY 2.0 FR: 5,315 records carry one. Each record keeps the Hebrew and English sentence ids, both authors and the sentence URL (in `words.json` under `example.source`, and in `attribution.json`). The attribution must name the authors per sentence; the Hebrew side is unpointed in Tatoeba.
+3. Tatoeba example sentences, CC BY 2.0 FR: 5,272 records carry one. Each record keeps the Hebrew and English sentence ids, both authors and the sentence URL (in `words.json` under `example.source`, and in `attribution.json`). The attribution must name the authors per sentence; the Hebrew side is unpointed in Tatoeba.
 4. Leningrad Codex (UXLC 2.6, tanach.us): 434 verse examples and the Tanakh word counts. Public domain / copy without restriction; citation appreciated; do not represent the text as the WLC (docs/corpus/LICENSES.md).
 
 ## Project text

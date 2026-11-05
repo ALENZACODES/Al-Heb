@@ -2,14 +2,16 @@
 import { loadJSON } from "./data.js";
 import { loadLadder, allItems } from "./ladder.js";
 import { loadGender } from "./gender.js";
+import { indexChain } from "../letters/memory.core.js";
 
 let content;
 export function loadContent() {
   content ??= (async () => {
-    const [letters, niq, registry, confusables, mn, ladder, gender, cons] = await Promise.all([
+    const [letters, niq, registry, confusables, mn, ladder, gender, cons, chainRaw] = await Promise.all([
       loadJSON("data/letters/letters.json"), loadJSON("data/pronunciation/niqqud.json"),
       loadJSON("data/corpus/registry.json"), loadJSON("data/letters/confusables.json"), loadJSON("data/letters/mnemonics.json"), loadLadder(), loadGender(),
       loadJSON("data/pronunciation/consonants.json"),
+      loadJSON("data/letters/memory-chain.json").catch(() => null), // optional: without it there are no memory-chain cards
     ]);
     return {
       letters: new Map(letters.map((l) => [l.id, l])),
@@ -19,6 +21,7 @@ export function loadContent() {
       confusables,
       mnemonics: new Map((mn.letters || []).map((m) => [m.id, m])),
       mnemonicsMeta: mn.meta || {},
+      chain: indexChain(chainRaw),
       ladderItems: new Map(allItems(ladder).map((i) => [i.id, i])),
       genderPairs: new Map(gender.pairs.map((p) => [p.id, p])),
     };

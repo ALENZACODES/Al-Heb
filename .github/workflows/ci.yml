@@ -1,12 +1,43 @@
 name: ci
+# The app itself has zero npm dependencies (no package-lock.json by design), so there is no `npm ci` step for it.
+# What the tests do need beyond Node 22 is listed in docs/test/CI-RUNNER-AUDIT.md. Every optional tool below is installed
+# best-effort; a test whose tool is missing SKIPS with a message (it does not fail), and the "Toolchain report" step prints
+# which tools the runner really has so a skip is never a surprise.
 on: [push, pull_request]
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      LANG: C.UTF-8
+      TZ: UTC
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
+      # setup-python gives a pip that is not "externally managed" (the system python on the image refuses `pip install`).
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: System tools used by some unit tests (ffmpeg, pdfinfo, tesseract + Hebrew data); tests skip without them
+        continue-on-error: true
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y --no-install-recommends ffmpeg poppler-utils tesseract-ocr tesseract-ocr-heb
+      - name: Python deps (segno pinned for the book QR test; Pillow, pypdf, numpy, OpenCV for the image, PDF and QR-decode tests)
+        run: python -m pip install --disable-pip-version-check -r tools/test/requirements-ci.txt
+        continue-on-error: true
+      - name: Toolchain report
+        run: |
+          node -v; python3 -V
+          for m in segno PIL pypdf numpy cv2; do python3 -c "import $m" 2>/dev/null && echo "python $m: yes" || echo "python $m: NO (dependent tests skip)"; done
+          for t in ffmpeg ffprobe pdfinfo tesseract rsvg-convert; do command -v $t >/dev/null && echo "$t: yes" || echo "$t: NO (dependent tests skip)"; done
+          tesseract --list-langs 2>/dev/null | grep -qx heb && echo "tesseract heb: yes" || echo "tesseract heb: NO (OCR ingest tests skip)"
+          echo "TZ=$TZ LANG=$LANG"; date
       - name: Unit tier (fast)
         run: npm test
       - name: Precache manifest is current
@@ -15,27 +46,38 @@ jobs:
     # Builds dist/ exactly as the Cloudflare Pages build command does, verifies every precache URL exists in it,
     # then runs the local deploy check (headers, MIME, service worker scope, fonts, CSP, size limits).
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
       - run: node tools/deploy/build_site.mjs
       - run: node tools/deploy/check-deploy.mjs --root dist
-  smoke:
-    # Playwright browser smoke. continue-on-error because the browser download (`playwright install --with-deps`) needs the network
-    # and apt on the runner and has NOT been run on GitHub yet; a failure here is an install problem until proven otherwise.
-    # The `test` job does not depend on it: browser tests inside `node --test` skip cleanly when Playwright or axe-core is absent.
+  browser:
+    # Browser tier (Playwright + Chromium + axe-core) as its own job, in parallel with `test`.
+    # continue-on-error stays true until this job has gone green on GitHub at least once: the Chromium download and
+    # `--with-deps` apt install have NOT been run on a GitHub runner yet (see docs/test/CI-RUNNER-AUDIT.md for the
+    # flip criteria). `test` does not depend on it; browser tests inside `node --test` skip when Playwright/axe are absent.
     runs-on: ubuntu-latest
-    needs: test
+    timeout-minutes: 45
     continue-on-error: true
+    env:
+      LANG: C.UTF-8
+      TZ: UTC
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
-      - run: npm install --no-save --no-package-lock playwright && npx playwright install --with-deps chromium
+      - name: Playwright (installed here only, never saved, not an app dependency) and Chromium with its system libraries
+        run: npm install --no-save --no-package-lock playwright@1.63.0 && npx playwright install --with-deps chromium
+      - name: axe-core for the a11y tests (lockfile tracked, node_modules gitignored)
+        run: npm ci --prefix tools/a11y
+      - name: Build dist/ (deploy.smoke needs it; it is gitignored)
+        run: node tools/deploy/build_site.mjs
       - name: Browser tier
         run: npm run test:browser
-      - run: node tools/smoke.mjs
+      - name: Browser smoke
+        run: node tools/smoke.mjs
       - uses: actions/upload-artifact@v4
         if: always()
-        with: { name: screens, path: docs/screens }
+        with: { name: screens, path: docs/screens, if-no-files-found: ignore }

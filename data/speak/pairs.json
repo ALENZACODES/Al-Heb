@@ -362,31 +362,6 @@
    "audioId": "r23-w2"
   },
   {
-   "id": "bet-vet:hd5bcfcb8",
-   "contrast": "bet-vet",
-   "type": "sound",
-   "he": "נָבַל",
-   "en": "to wither, wilt, dry out",
-   "translit": "naval",
-   "answer": "v",
-   "slot": 1,
-   "marked": [
-    {
-     "text": "נ",
-     "mark": false
-    },
-    {
-     "text": "ב",
-     "mark": true
-    },
-    {
-     "text": "ל",
-     "mark": false
-    }
-   ],
-   "audioId": "hd5bcfcb8"
-  },
-  {
    "id": "bet-vet:h93bb64ad",
    "contrast": "bet-vet",
    "type": "sound",
@@ -621,6 +596,27 @@
    "audioId": "he6287163"
   },
   {
+   "id": "bet-vet:hba8920a3",
+   "contrast": "bet-vet",
+   "type": "sound",
+   "he": "חֻשַּׁב",
+   "en": "to be calculated",
+   "translit": "chushav",
+   "answer": "v",
+   "slot": 2,
+   "marked": [
+    {
+     "text": "חש",
+     "mark": false
+    },
+    {
+     "text": "ב",
+     "mark": true
+    }
+   ],
+   "audioId": "hba8920a3"
+  },
+  {
    "id": "het-khaf:he0cb7690",
    "contrast": "het-khaf",
    "type": "pair",
@@ -685,6 +681,31 @@
     "translit": "sakhar",
     "answer": "khaf"
    }
+  },
+  {
+   "id": "het-khaf:hdee3e527",
+   "contrast": "het-khaf",
+   "type": "sound",
+   "he": "אֲנַחְנוּ",
+   "en": "we",
+   "translit": "anachnu",
+   "answer": "het",
+   "slot": 2,
+   "marked": [
+    {
+     "text": "אנ",
+     "mark": false
+    },
+    {
+     "text": "?",
+     "mark": true
+    },
+    {
+     "text": "נו",
+     "mark": false
+    }
+   ],
+   "audioId": "haftarah-after-w126"
   },
   {
    "id": "het-khaf:h66252016",
@@ -842,27 +863,6 @@
    "audioId": "habcfc77f"
   },
   {
-   "id": "het-khaf:hba8920a3",
-   "contrast": "het-khaf",
-   "type": "sound",
-   "he": "חֻשַּׁב",
-   "en": "to be calculated",
-   "translit": "chushav",
-   "answer": "het",
-   "slot": 0,
-   "marked": [
-    {
-     "text": "?",
-     "mark": true
-    },
-    {
-     "text": "שב",
-     "mark": false
-    }
-   ],
-   "audioId": "hba8920a3"
-  },
-  {
    "id": "het-khaf:h9f3ab68a",
    "contrast": "het-khaf",
    "type": "sound",
@@ -980,7 +980,7 @@
    "contrast": "het-khaf",
    "type": "sound",
    "he": "צָרִיךְ",
-   "en": "Needing, in need of (something)",
+   "en": "needing, in need of (something)",
    "translit": "tzarikh",
    "answer": "khaf",
    "slot": 3,
@@ -1214,7 +1214,7 @@
    "contrast": "het-khaf",
    "type": "sound",
    "he": "דֶּרֶךְ",
-   "en": "Through, via, by way of",
+   "en": "through, via, by way of",
    "translit": "derekh",
    "answer": "khaf",
    "slot": 2,
@@ -2093,6 +2093,27 @@
    "audioId": "h28a30a60"
   },
   {
+   "id": "kamatz:pefce5ddb",
+   "contrast": "kamatz",
+   "type": "sound",
+   "he": "כָּל",
+   "en": "all, whole, everything",
+   "translit": "kol",
+   "answer": "a",
+   "slot": 0,
+   "marked": [
+    {
+     "text": "כ",
+     "mark": true
+    },
+    {
+     "text": "ל",
+     "mark": false
+    }
+   ],
+   "audioId": "r32-w1"
+  },
+  {
    "id": "kamatz:hf28ba308",
    "contrast": "kamatz",
    "type": "sound",
@@ -2202,7 +2223,7 @@
    "contrast": "kamatz",
    "type": "sound",
    "he": "יָא",
-   "en": "Vocative particle preceding a noun, especially a slur or pejorative",
+   "en": "vocative particle preceding a noun, especially a slur or pejorative",
    "translit": "ya",
    "answer": "a",
    "slot": 0,
@@ -2286,27 +2307,6 @@
    "audioId": "aleinu-1-w18"
   },
   {
-   "id": "kamatz:hbd0751bc",
-   "contrast": "kamatz",
-   "type": "sound",
-   "he": "פָּנִים",
-   "en": "face",
-   "translit": "panim",
-   "answer": "a",
-   "slot": 0,
-   "marked": [
-    {
-     "text": "פ",
-     "mark": true
-    },
-    {
-     "text": "נים",
-     "mark": false
-    }
-   ],
-   "audioId": "hbd0751bc"
-  },
-  {
    "id": "kamatz:h8e3e6f50",
    "contrast": "kamatz",
    "type": "sound",
@@ -2326,6 +2326,27 @@
     }
    ],
    "audioId": "r07-w4"
+  },
+  {
+   "id": "kamatz:hea14727f",
+   "contrast": "kamatz",
+   "type": "sound",
+   "he": "זֹאת",
+   "en": "this (feminine)",
+   "translit": "zot",
+   "answer": "o",
+   "slot": 0,
+   "marked": [
+    {
+     "text": "ז",
+     "mark": true
+    },
+    {
+     "text": "את",
+     "mark": false
+    }
+   ],
+   "audioId": "hea14727f"
   },
   {
    "id": "kamatz:h4fed6814",
@@ -2529,7 +2550,7 @@
    "contrast": "kamatz",
    "type": "sound",
    "he": "כֹּחַ",
-   "en": "Strength",
+   "en": "strength",
    "translit": "koach",
    "answer": "o",
    "slot": 0,
@@ -2544,27 +2565,6 @@
     }
    ],
    "audioId": "h5795e8db"
-  },
-  {
-   "id": "kamatz:h44d68d1e",
-   "contrast": "kamatz",
-   "type": "sound",
-   "he": "חֹק",
-   "en": "law, statute",
-   "translit": "chok",
-   "answer": "o",
-   "slot": 0,
-   "marked": [
-    {
-     "text": "ח",
-     "mark": true
-    },
-    {
-     "text": "ק",
-     "mark": false
-    }
-   ],
-   "audioId": "h44d68d1e"
   },
   {
    "id": "shin-sin:h39d32f55",
@@ -3051,7 +3051,7 @@
    "contrast": "shin-sin",
    "type": "sound",
    "he": "אֲשֶׁר",
-   "en": "Introduces a subordinate clause",
+   "en": "introduces a subordinate clause",
    "translit": "asher",
    "answer": "sh",
    "slot": 1,

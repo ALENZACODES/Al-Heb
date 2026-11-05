@@ -73,3 +73,13 @@ test('view: load failure shows a kind alert', async () => {
   await waitFor(() => sel(root, '[role=alert]'), { message: "load-failure alert" });
   assert.ok(sel(root, '[role=alert]'));
 });
+
+test('view: the source line names the active setting, so Israeli is not shown as Sephardi/Mizrahi only', async () => {
+  for (const [setting, want] of [['israeli', /Sephardi\/Mizrahi, used with your Modern Israeli setting/], ['ashkenazi', /Names: Ashkenazi \(change/]]) {
+    const root = newRoot(doc);
+    const un = mount(root, { tropeData: data, rng: seeded(9), store: memStore(), settings: { get: () => setting } });
+    await waitFor(() => /Names:/.test(root.textContent), { message: 'names line' });
+    assert.match(root.textContent, want, setting);
+    un && un();
+  }
+});

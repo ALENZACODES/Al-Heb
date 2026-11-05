@@ -8,6 +8,7 @@
  *   #/israel/etiquette       short etiquette cards
  * Everything here is a DRAFT: not reviewed by a native speaker, and there is no audio.
  */
+import { learnerGender, setLearnerGenderSetting } from "../shell/settings.js";
 import { el, heText, replaceKeepingFocus, storeGet, storeSet } from "../curriculum/dom.js";
 import { loadIsrael, validate, formFor, audioHook, lineAudioId, pickScenarios, orderedOptions, gradePick, scoreSession,
   applyResults, dueCount, CARDS_KEY, STATS_KEY } from "./model.js";
@@ -19,7 +20,7 @@ const SECTIONS = [
 const PREFS_KEY = "israel.prefs";
 const WHO = { m: "a man", f: "a woman" };
 const REG = { formal: "Formal", neutral: "Neutral", casual: "Casual", slang: "Slang" };
-const ROLE_LABEL = { natural: "Natural", stiff: "Stiff", off: "Wrong register" };
+const ROLE_LABEL = { natural: "Natural", stiff: "Stiff", off: "Different register" };
 
 export const DRAFT = "Draft written from general knowledge. No native Hebrew speaker has checked the Hebrew, pointing, transliteration, register labels or gender forms. Not tested with learners.";
 export const NO_AUDIO = "There is no audio for any of this yet. Capitals in the transliteration mark the stressed syllable.";
@@ -54,21 +55,27 @@ export function mount(root, ctx = {}) {
     const data = await loadIsrael();
     if (!alive) return;
     const problems = validate(data);
-    const prefs = Object.assign({ iAm: ctx?.settings?.get?.("gender") === "f" ? "f" : "m", talkingTo: "m", voice: ctx?.settings?.get?.("voice") === "f" ? "f" : "m" }, await storeGet(ctx, PREFS_KEY, {}));
+    const prefs = Object.assign({ iAm: null, talkingTo: "m", voice: ctx?.settings?.get?.("voice") === "f" ? "f" : "m" }, await storeGet(ctx, PREFS_KEY, {}));
     const savePrefs = () => storeSet(ctx, PREFS_KEY, prefs);
+    // The learner's own gender is the shared Settings value. Unset or 'both' never means masculine: first-person lines then show both forms.
+    // Without a settings object (tests) the old local copy in israel.prefs is used, and only when it was an explicit m or f.
+    const hasSettings = typeof ctx?.settings?.get === "function";
+    const iAm = () => (hasSettings ? learnerGender(ctx) : prefs.iAm === "m" || prefs.iAm === "f" ? prefs.iAm : null);
+    const setIAm = (v) => { if (!setLearnerGenderSetting(ctx, v)) { prefs.iAm = v; savePrefs(); } };
+    const speakerForms = (l, who) => (l.forms && who !== "m" && who !== "f" ? [["a man", formFor(l, "m")], ["a woman", formFor(l, "f")]] : [[null, formFor(l, who)]]);
     const cards = () => storeGet(ctx, CARDS_KEY, {});
     const show = (...nodes) => replaceKeepingFocus(wrap, h1, notice, nav, problems.length ? el("p", { role: "alert" }, `Data check found ${problems.length} problem(s): ${problems[0]}`) : null, body, ...nodes);
 
     const genderControls = (redraw, talking = true) => el("div", {},
-      seg("I am", () => prefs.iAm, (v) => { prefs.iAm = v; savePrefs(); redraw(); }, [["m", "A man"], ["f", "A woman"]]),
+      seg("I am", iAm, (v) => { setIAm(v); redraw(); }, [["m", "A man"], ["f", "A woman"], ["both", "Show both forms"]]),
       !talking ? null : seg("I am talking to", () => prefs.talkingTo, (v) => { prefs.talkingTo = v; savePrefs(); redraw(); }, [["m", "A man"], ["f", "A woman"]]));
     const lineNode = (l, label, id) => {
-      const who = l.gender === "speaker" ? prefs.iAm : l.gender === "addressee" ? prefs.talkingTo : "m";
-      const f = formFor(l, who);
+      const who = l.gender === "speaker" ? iAm() : l.gender === "addressee" ? prefs.talkingTo : "m";
+      const forms = speakerForms(l, who);
       return el("div", { class: "il-line", "data-register": l.register, "data-side": label.toLowerCase() },
         el("div", {}, el("span", { class: "il-label" }, label), " ", el("span", { class: "il-badge" }, REG[l.register]),
-          l.gender !== "none" ? el("span", { class: "il-badge" }, l.gender === "speaker" ? `Form for ${WHO[who]} speaking` : `Form for talking to ${WHO[who]}`) : null),
-        heText(f.he, "alef-he il-he"), el("div", { class: "il-tr" }, f.translit), el("div", {}, l.en), noAudio(ctx, id, prefs.voice));
+          l.gender !== "none" ? el("span", { class: "il-badge" }, l.gender === "speaker" ? (forms.length > 1 ? "Forms for a man or a woman speaking" : `Form for ${WHO[who]} speaking`) : `Form for talking to ${WHO[who]}`) : null),
+        ...forms.flatMap(([w, f]) => [w ? el("div", { class: "muted" }, `If you are ${w}:`) : null, heText(f.he, "alef-he il-he"), el("div", { class: "il-tr" }, f.translit)]), el("div", {}, l.en), noAudio(ctx, id, prefs.voice));
     };
 
     // ------------------------------------------------------------ overview
@@ -146,7 +153,7 @@ export function mount(root, ctx = {}) {
           el("div", { role: "group", "aria-label": `Drill ${n}` }, el("p", {}, el("strong", {}, "Drill: "), g.drill.prompt), ...opts, fb),
           el("p", { class: "muted" }, "Not proofread. Needs native review."));
       };
-      body.replaceChildren(el("p", { class: "muted" }, "Fifteen things that tend to mark a learner. Tap an answer in each drill. Wrong answers go into your Say it review queue."),
+      body.replaceChildren(el("p", { class: "muted" }, "Fifteen things that tend to mark a learner. Tap an answer in each drill. Answers you miss go into your Say it review queue."),
         el("ul", { class: "il-list" }, ...data.giveaways.items.map((g, i) => item(g, i + 1))));
       show();
     }
@@ -165,11 +172,10 @@ export function mount(root, ctx = {}) {
         const s = set[pos];
         const fb = el("div", { role: "status", "aria-live": "polite" });
         const list = orderedOptions(s, seed);
-        const form = (o) => formFor(o, prefs.iAm);
         const btns = list.map((o) => {
-          const f = form(o);
+          const forms = speakerForms(o, iAm());
           return el("button", { type: "button", class: "il-opt", "data-index": String(o.index), "data-role": o.role,
-            onclick: () => pick(o.index) }, heText(f.he, "alef-he il-he"), el("div", { class: "il-tr" }, f.translit), el("div", { class: "muted" }, o.en));
+            onclick: () => pick(o.index) }, ...forms.flatMap(([w, f]) => [w ? el("div", { class: "muted" }, `If you are ${w}:`) : null, heText(f.he, "alef-he il-he"), el("div", { class: "il-tr" }, f.translit)]), el("div", { class: "muted" }, o.en));
         });
         let answered = false;
         function pick(index) {
@@ -181,7 +187,7 @@ export function mount(root, ctx = {}) {
             b.setAttribute("data-state", o.role === "natural" ? "natural" : o === g.picked ? "picked-wrong" : "other");
             b.append(el("div", {}, el("strong", {}, ROLE_LABEL[o.role] + ": "), o.explain)); });
           const nextBtn = el("button", { type: "button", class: "btn", id: "il-next", onclick: () => { pos++; ask(); } }, pos + 1 === set.length ? "See score" : "Next");
-          fb.replaceChildren(el("p", {}, el("strong", {}, g.correct ? "Natural. " : g.picked.role === "stiff" ? "Correct Hebrew, but stiff. " : "Wrong register. "), g.correct ? "That is the reply we think is most natural." : "The natural reply is highlighted."), nextBtn);
+          fb.replaceChildren(el("p", {}, el("strong", {}, g.correct ? "Natural. " : g.picked.role === "stiff" ? "Correct Hebrew, but stiff. " : "Different register. "), g.correct ? "That is the reply we think is most natural." : "The natural reply is highlighted."), nextBtn);
           nextBtn.focus?.();
         }
         body.replaceChildren(
@@ -202,7 +208,7 @@ export function mount(root, ctx = {}) {
         st.sessions = [...(st.sessions || []), { at: Date.now(), right: sc.right, total: sc.total }].slice(-50);
         await storeSet(ctx, STATS_KEY, st);
         if (!alive) return;
-        body.replaceChildren(el("h2", {}, "Score"), el("p", { role: "status" }, `${sc.right} of ${sc.total} natural (${sc.pct}%). Stiff: ${sc.byRole.stiff}. Wrong register: ${sc.byRole.off}.`),
+        body.replaceChildren(el("h2", {}, "Score"), el("p", { role: "status" }, `${sc.right} of ${sc.total} natural (${sc.pct}%). Stiff: ${sc.byRole.stiff}. Different register: ${sc.byRole.off}.`),
           el("p", {}, sc.message), el("p", { class: "muted" }, `Your picks were scheduled for spaced review. ${dueCount(next)} due now. Stiff picks come back sooner than natural ones.`),
           el("div", { class: "il-row" }, el("button", { type: "button", class: "btn", onclick: () => say() }, "Another round"), el("a", { class: "btn secondary", href: "#/israel" }, "Back")));
         show();

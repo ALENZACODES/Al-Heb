@@ -18,6 +18,15 @@
    "source": "data/vocab/words.json"
   },
   {
+   "id": "hea14727f",
+   "he": "זֹאת",
+   "translit": "zot",
+   "en": "this (feminine)",
+   "kind": "word",
+   "audioId": "hea14727f",
+   "source": "data/vocab/words.json"
+  },
+  {
    "id": "hbd079057",
    "he": "קְצָת",
    "translit": "ketzat",
@@ -93,7 +102,7 @@
    "id": "h324e6752",
    "he": "דֶּרֶךְ",
    "translit": "derekh",
-   "en": "Through, via, by way of",
+   "en": "through, via, by way of",
    "kind": "word",
    "audioId": "r18-w4",
    "source": "data/vocab/words.json"
@@ -105,15 +114,6 @@
    "en": "after",
    "kind": "word",
    "audioId": "i-14-w12",
-   "source": "data/vocab/words.json"
-  },
-  {
-   "id": "h04cd3011",
-   "he": "אֲבָל",
-   "translit": "aval",
-   "en": "but",
-   "kind": "word",
-   "audioId": "fillers-12",
    "source": "data/vocab/words.json"
   }
  ]

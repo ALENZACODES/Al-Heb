@@ -13,17 +13,20 @@ import { buildPairs } from './pairs.js';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const rd = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
 const SET_COUNT = 60, ITEMS_PER_SET = 12;
-export const PRAYER_IDS = ['shema-2', 'hamotzi', 'kiddush-wine-1', 'candle-shabbat', 'modeh-ani-1', 'torah-barchu', 'oseh-shalom', 'shehecheyanu'];
+export const PRAYER_IDS = ['shema-1', 'shema-2', 'hamotzi', 'kiddush-wine-1', 'candle-shabbat', 'modeh-ani-1', 'torah-barchu', 'oseh-shalom', 'shehecheyanu'];
 
 /** The read-aloud prayers: Hebrew lines are the registry's own (split on newline, nothing edited). */
-export function buildPrayers(registry) {
+export function buildPrayers(registry, manifest = []) {
+  const lineIds = new Set(manifest.filter((m) => m.kind === 'line').map((m) => m.id));
   const byId = new Map(registry.map((e) => [e.id, e]));
   const prayers = PRAYER_IDS.map((id) => {
     const e = byId.get(id);
     if (!e) throw new Error('prayer missing from registry: ' + id);
     const lines = e.he.split('\n').map((l) => l.trim()).filter(Boolean);
     return { id: e.id, title: e.title, ref: e.ref, level: e.level, lines, english: e.english, registryStatus: e.status, proofread: !!e.proofread, license: e.license, attribution: e.attribution, source: e.source,
-      lineAudio: lines.length === 1 ? { kind: 'line', id: e.id } : null };
+      lineAudio: lines.length === 1 ? { kind: 'line', id: e.id } : null,
+      // multi-line prayers: per-line manifest ids <id>-l<n>, only when every line has one (else null: no clip is guessed)
+      lineClips: lines.length > 1 && lines.every((_, i) => lineIds.has(`${e.id}-l${i + 1}`)) ? lines.map((_, i) => ({ kind: 'line', id: `${e.id}-l${i + 1}` })) : null };
   });
   return { schema: 'alef-speak-prayers/1', note: 'Hebrew lines are copied verbatim from data/corpus/registry.json (Sefaria Metsudah siddur text, machine-compared to the source, NOT proofread by a Hebrew educator). The recognizer compares letters only, in modern Israeli pronunciation.', prayers };
 }
@@ -77,7 +80,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   writeFileSync(join(root, 'data/speak/sets.json'), JSON.stringify(index, null, 1) + '\n');
   const pairs = buildPairs(words, manifestTexts);
   writeFileSync(join(root, 'data/speak/pairs.json'), JSON.stringify(pairs, null, 1) + '\n');
-  const prayers = buildPrayers(rd('data/corpus/registry.json').entries);
+  const prayers = buildPrayers(rd('data/corpus/registry.json').entries, rd('data/audio/manifest.json'));
   writeFileSync(join(root, 'data/speak/prayers.json'), JSON.stringify(prayers, null, 1) + '\n');
   console.log(`wrote ${sets.length} sets (${sets.reduce((n, s) => n + s.items.length, 0)} items) and ${pairs.items.length} drill items across ${pairs.contrasts.length} contrasts`);
 }

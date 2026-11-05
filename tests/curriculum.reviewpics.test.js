@@ -73,6 +73,9 @@ const ctxFor = (store, extra) => ({ store, route: () => {}, t: (k) => k, setting
   audio: { status: () => ({ source: "tts-fallback" }), play: async () => ({ source: "tts-fallback" }) }, ...extra });
 
 async function reviewLesson(lessonId, ctx) {
+  // a deep link only creates cards for a completed lesson, so complete it first (as a learner would)
+  const { completeLesson } = await import("../src/curriculum/actions.js"); const { byId } = await import("../src/curriculum/lessons.js");
+  await completeLesson(ctx, byId[lessonId]);
   const root = new Node_("div"); const un = mountReview(root, ctx, { lessonId });
   await until(root, /Card 1 of/);
   const seen = []; // one record per card: { he, before, after }

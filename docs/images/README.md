@@ -45,3 +45,11 @@ Several different files claiming one id are all put in the CSV (ambiguous), none
 - OCR is cheap and tuned on synthetic text. It will miss text that is stylised, rotated, tiny or a single large letter, and will over-flag some busy art. It is a screen, not a guarantee: still zoom in on every image (checklist in `RIGHTS.md`).
 - `--replace` of an image resets its approval. `approve` of a many-ids glob does not look at images: use the sheets.
 - Image decoding uses Pillow (already installed; see `docs/TOOLING.md`). Python 3 with Pillow and the tesseract CLI are required on the machine that ingests.
+
+## Rebuilding prompt groups (`build_prompt_groups.mjs`)
+
+`node tools/images/build_prompt_groups.mjs [--manifest FILE] [--groups FILE]` rewrites `data/images/prompt-groups.json` from `tools/images/spec.mjs` and **merges** the spec rows into `data/images/manifest.csv`. It does not regenerate the manifest: the manifest also holds rows added by later builders (inter, block J, run3 and others) and status edits made by ingest, and an earlier version that rewrote it from the 797 spec rows alone cut it from 1797 rows to 797.
+
+Merge rules: a spec row whose `file` is already in the manifest gets only its `prompt` column updated; every other column and every non-spec row is kept in order; spec rows missing from the manifest are appended; no row is ever removed. When nothing changes, the manifest file is not written at all. The command prints the resulting row count, prompts updated and rows appended.
+
+Covered by `tests/images.promptgroups.test.js` (runs the builder on a temp copy of the manifest and checks row count and untouched columns).

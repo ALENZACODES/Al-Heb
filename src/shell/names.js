@@ -21,12 +21,24 @@ const HEB_LETTER = /[א-ת]/;
 const PREFIX_LETTERS = 'ובלמכשה';
 const consonants = (s) => [...String(s)].filter((c) => HEB_LETTER.test(c)).join('');
 
-/** Hebrew words (maximal runs of letters and points) in a string: [{word, index}]. */
+const MAQAF = '\u05BE';
+/**
+ * Hebrew words in a string: [{word, index, compound}]. A word is a maximal run of letters and points; a maqaf (U+05BE) ends a
+ * word, so each part of a maqaf compound is its own word (compound true), and the maqaf itself stays in the surrounding text.
+ */
 function hebrewWords(text) {
   const out = [];
   const re = /[א-ת֑-ׇ]+/g;
   let m;
-  while ((m = re.exec(String(text)))) out.push({ word: m[0], index: m.index });
+  while ((m = re.exec(String(text)))) {
+    const run = m[0];
+    if (!run.includes(MAQAF)) { out.push({ word: run, index: m.index, compound: false }); continue; }
+    let at = 0;
+    for (const part of run.split(MAQAF)) {
+      if (part) out.push({ word: part, index: m.index + at, compound: true });
+      at += part.length + 1;
+    }
+  }
   return out;
 }
 
@@ -55,17 +67,33 @@ export function findName(text) {
 /** True when a Latin-script string spells the four-letter name (Yahweh, Yehovah, Jehovah, YHWH ...). */
 export const hasLatinName = (s) => /\b(?:yhwh|yhvh|yahweh|yahveh|yahwe|jehovah|yehovah|yehova|yehwah)\b/i.test(String(s));
 
+/** Characters that may trail the name in the source and are kept in speech text: paseq, sof pasuq, nun hafukha. */
+const TRAILING_PUNCT = /[\u05C0\u05C3\u05C6]+$/;
+
 /**
- * Text for speech (audio targets, speechSynthesis). Whole-word occurrences of the name become the spoken substitute.
- * Prefixed forms (for example with a lamed or bet) are NOT rewritten, because the right pointing is a liturgical
- * question for clergy; use findName(text) and treat any 'prefixed' hit as needs-review.
+ * Text for speech (audio targets, speechSynthesis). The ONE rule for what is spoken: the written four-letter name is never
+ * sent to a voice. Every occurrence becomes the spoken substitute: the bare word, the word inside a maqaf compound
+ * (for example "glory of the Name" written with a maqaf), and prefixed forms (the prefix letters and their points stay as
+ * written, then the substitute). The prefix pointing is kept from the source and not re-derived; clergy review is pending
+ * (docs/sensitivity/REVIEW-FOR-CLERGY.md question 2b). The two-yod abbreviation is not the name and is left as written.
+ * Paseq and sof pasuq after the name are kept.
  */
 export function speechText(he) {
   const s = String(he);
   let out = '', last = 0;
   for (const w of findName(s)) {
-    if (w.kind !== 'exact') continue;
-    out += s.slice(last, w.index) + SPOKEN_NAME;
+    if (w.kind === 'abbrev') continue;
+    let head = '';
+    if (w.kind === 'prefixed') {
+      // keep the prefix letters with their points, cut where the name's first letter starts
+      let seen = 0, cut = w.word.length;
+      for (let i = 0; i < w.word.length; i++) {
+        if (HEB_LETTER.test(w.word[i]) && seen++ === w.prefix.length) { cut = i; break; }
+      }
+      head = w.word.slice(0, cut);
+    }
+    const tail = (TRAILING_PUNCT.exec(w.word) || [''])[0];
+    out += s.slice(last, w.index) + head + SPOKEN_NAME + tail;
     last = w.index + w.word.length;
   }
   return out + s.slice(last);
@@ -80,7 +108,7 @@ export function displayHebrew(he, mode = 'source') {
   const s = String(he);
   let out = '', last = 0;
   for (const w of findName(s)) {
-    if (w.kind !== 'exact') continue;
+    if (w.kind !== 'exact' || w.compound) continue;
     out += s.slice(last, w.index) + NAME_ABBREV;
     last = w.index + w.word.length;
   }

@@ -1,0 +1,4 @@
+{
+  "_doc": "Hosts a draft may cite as a source. Anything else is an error in check_inbox.mjs. Add a host here only after a person has looked at it.",
+  "hosts": ["en.wikipedia.org", "he.wikipedia.org", "www.sefaria.org", "cldr.unicode.org", "www.unicode.org"]
+}

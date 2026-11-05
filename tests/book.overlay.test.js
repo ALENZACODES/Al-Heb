@@ -1,7 +1,9 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { overlaySvg, overlayAllStates, GLYPHS, LETTER_IDS, STATES, glyphFor } from '../tools/images/overlay.mjs';
+import { spawnSync } from 'node:child_process';
 import { buildHtml, parseArgs, letterUrl } from '../book/build.mjs';
+const hasSegno = spawnSync('python3', ['-I', '-c', 'import segno'], { stdio: 'ignore' }).status === 0;
 
 // minimal well-formedness check: balanced tags, single root, no stray ampersands
 function wellFormed(xml) {
@@ -41,7 +43,7 @@ test('glyphFor uses letters.json record when valid, else built-in', () => {
   assert.equal(glyphFor('bet', [{ id: 'bet', he: 'ב' }]), 'ב');
   assert.equal(glyphFor('bet', [{ id: 'bet', he: 'x' }]), GLYPHS.bet);
 });
-test('book HTML: 27 letter pages, RTL Hebrew spans, draft opening prayer block, URL map', () => {
+test('book HTML: 27 letter pages, RTL Hebrew spans, draft opening prayer block, URL map', { skip: !hasSegno && 'python module segno not installed (CI installs segno==1.6.6; locally: pip install segno)' }, () => {
   const html = buildHtml(parseArgs([]));
   assert.equal((html.match(/<section class="letter"/g) || []).length, 27);
   assert.match(html, /lang="he" dir="rtl"/);

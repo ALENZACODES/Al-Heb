@@ -108,13 +108,19 @@ export const README = `# Image paste files
 5. If the tool puts any text in an image, ask it to redo that item without text. Rebuild these files with \`node tools/images/build_paste_files.mjs\`.
 `;
 
-export function indexMd(files) {
+/** Images already done: manifest rows matched to a delivered image in docs/images/codex-batch-01.json (read from the file, not hardcoded). */
+export function doneImages(batch = JSON.parse(readFileSync(join(ROOT, 'docs/images/codex-batch-01.json'), 'utf8'))) {
+  const rows = [...new Set((batch.records || []).filter((r) => r.role === 'matched' && Number.isInteger(r.manifest_row)).map((r) => r.manifest_row))].sort((a, b) => a - b);
+  return { count: rows.length, first: rows[0] ?? 0, last: rows[rows.length - 1] ?? 0 };
+}
+
+export function indexMd(files, done = doneImages()) {
   const rows = files.map((f) => `| ${f.number} | ${f.title} | ${f.count} | \`${f.name}\`${f.split ? ' (split)' : ''} |`);
   const total = files.reduce((a, f) => a + f.count, 0);
   const splits = files.filter((f) => f.split).map((f) => f.name).join(', ');
   return `# Paste file index
 
-282 images are already done (rows 1-282 of manifest.csv, matched in docs/images/codex-batch-01.json). The next command to paste is **${files[0].number}** (${files[0].title}), file \`${files[0].name}\`.
+${done.count} images are already done (rows ${done.first}-${done.last} of manifest.csv, matched in docs/images/codex-batch-01.json). The next command to paste is **${files[0].number}** (${files[0].title}), file \`${files[0].name}\`.
 
 ${files.length} files, ${total} images. Files over ${MAX_CHARS} characters are split into -a/-b parts (paste in order): ${splits || 'none'}.
 

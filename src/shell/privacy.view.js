@@ -12,10 +12,12 @@ export const FLOWS = [
 
 /** Things the code does on your device only. */
 export const LOCAL_ONLY = [
-  'Progress, settings, review cards and streaks are written to your browser\'s localStorage (table below). There is no account and no server-side profile.',
-  'Photo text recognition runs in your browser with a vendored copy of Tesseract (about 5 MB of recognition data are downloaded from the ALEF site on first use, then cached).',
-  'Speech output uses your device\'s built-in voice (speechSynthesis).',
-  'Location is read only when you press the button in Settings (navigator.geolocation). The latitude and longitude are saved in your settings and used on your device for candle-lighting times. Nothing in the code sends them anywhere. You can type numbers instead, or clear them.',
+  'Your progress, settings, review cards and streaks are saved in your browser, on this device (see the table below). There is no account, and no profile is kept on a server.',
+  'Reading text from a photo happens in your browser. The first time, it downloads about 5 MB of reading data from the ALEF site and keeps it for later.',
+  'Spoken audio uses your browser\'s built-in speech voice. ALEF sends no text to any server for this. Which voice is used, and whether a particular voice runs on your device or online, is decided by your browser and device, and ALEF cannot tell which.',
+  'Record and compare asks your browser for microphone permission only when you press Record. The recording is kept in the page\'s memory as a temporary in-browser file so you can play it back. ALEF does not save it to storage, does not upload it and does not send it anywhere; it is dropped when you press Next or leave the screen. Only counts of your "heard a difference" answers are saved. On the hosted site the Permissions-Policy header in _headers sets microphone=(self), so a browser following it allows the microphone for ALEF\'s own address only and no embedded or third-party content; this was read in the file, not tested live.',
+  'Your gender setting for Hebrew forms (optional) and your word-roots, vowel-fade and gender-drill counts are saved in the settings and keys listed below. They are used on your device only.',
+  'Your location is read only when you press the button in Settings. The latitude and longitude are saved in your settings and used on your device for candle-lighting times. Nothing in the code sends them anywhere. You can type numbers instead, or clear them.',
   'Reminders: the app shows notifications while it is open or via the service worker only after you allow them. No push server is configured (the push key is empty in src/shell/notify.js), so nothing is pushed to you from a server.',
   'Calendar and progress files are made in your browser and handed to you as downloads. The Teacher screen can copy a code to your clipboard when you press its button.',
   'A service worker (sw.js) keeps an offline copy of the app in the browser\'s Cache Storage.',
@@ -23,7 +25,7 @@ export const LOCAL_ONLY = [
 
 /** localStorage keys (all written with the prefix "alef:"). `file` is one source file that defines or uses the key. */
 export const STORE_KEYS = [
-  ['settings', 'Settings: language, script, theme, voice, congregation, saved latitude and longitude', 'src/shell/settings.js'],
+  ['settings', 'Settings: language, script, theme, accessibility options (as listed on the Accessibility screen), voice, pronunciation style, your gender for Hebrew forms (optional), saved latitude and longitude', 'src/shell/settings.js'],
   ['onboarding.v1', 'Setup answers and plan', 'src/onboarding/model.js'],
   ['onboarding.v1.dailyGoal', 'Daily goal', 'src/home/today.js'],
   ['placement.v1', 'Placement check result', 'src/placement/placement.view.js'],
@@ -31,6 +33,7 @@ export const STORE_KEYS = [
   ['srs.cards', 'Review cards for lessons', 'src/curriculum/dom.js'],
   ['srs.vocab', 'Review cards for vocabulary', 'src/vocab/themes.view.js'],
   ['streak', 'Study streak', 'src/curriculum/dom.js'],
+  ['lesson.resume.v1', 'Where you stopped in a lesson: the part you were on and the quick-check answers you already gave, so the lesson opens in the same place', 'src/curriculum/chunks.js'],
   ['curriculum.hints.suppressed', 'Hints you dismissed', 'src/curriculum/hints.js'],
   ['curriculum.pairs', 'Look-alike letter error counts', 'src/curriculum/actions.js'],
   ['curriculum.checkpoints', 'Checkpoint results', 'src/curriculum/actions.js'],
@@ -53,10 +56,14 @@ export const STORE_KEYS = [
   ['speak.v1', 'Say-it results (not recordings)', 'src/speak/model.js'],
   ['sprint.last', 'Last word sprint', 'src/sprint/model.js'],
   ['typing.v1', 'Typing practice results', 'src/typing/typing.js'],
-  ['trope.v1', 'Trope trainer results', 'src/trope/trope.view.js'],
+  ['trope.v1', 'Chanting-mark trainer results', 'src/trope/trope.view.js'],
+  ['nikkudfade.v1', 'Vowel-fade practice progress (which words you saw pointed, and which you revealed)', 'src/nikkudfade/model.js'],
+  ['roots.v1', 'Word-roots drill counts', 'src/roots/model.js'],
+  ['gender.v1', 'Gender drill: checked-question counts (your gender choice itself is kept in the settings row above; older copies of it in this row, in Gender pair practice and in Sound-like-a-local preferences are read once and then no longer used)', 'src/genderdrill/model.js'],
+  ['recordcompare.v1', 'Record-and-compare: counts of your own answers (no recordings are stored)', 'src/recordcompare/model.js'],
   ['grammar.v1', 'Grammar notes progress', 'src/grammar/grammar.view.js'],
-  ['compare.v1', 'Compare-traditions choices', 'src/pronunciation/compare.view.js'],
-  ['pron.quiz.v1', 'Tradition quiz results', 'src/pronunciation/tradquiz.view.js'],
+  ['compare.v1', 'Compare-pronunciation-styles choices', 'src/pronunciation/compare.view.js'],
+  ['pron.quiz.v1', 'Pronunciation-style quiz results', 'src/pronunciation/tradquiz.view.js'],
   ['pron.readmyway.v1', 'Read-it-my-way choices', 'src/pronunciation/readmyway.view.js'],
   ['pron.misses', 'Pronunciation misses', 'src/progress/model.js'],
   ['torahreader.v1', 'Torah reader position', 'src/torahreader/model.js'],
@@ -68,12 +75,12 @@ export const STORE_KEYS = [
   ['install.v1', 'Install prompt state', 'src/shell/install.js'],
   ['alef.audioBannerSeen.v1', 'Whether you dismissed the audio notice (saved under this exact name, without the "alef:" prefix)', 'src/shell/audio-access.js'],
   ['alef.storage-notice.v1', 'Storage notice state and whether you dismissed it (saved under this exact name, without the "alef:" prefix)', 'src/shell/install-notice.js'],
-  ['alef.scroll.v1', 'Scroll position per screen, so Back returns you to the same place (saved under this exact name, without the "alef:" prefix)', 'src/shell/scroll-restore.js'],
+  ['alef.scroll.v1', 'Scroll position per screen, so Back returns you to the same place. Unlike every other row it is kept in sessionStorage, not localStorage: it is tied to this browser tab and is gone when the tab closes (exact name, without the "alef:" prefix)', 'src/shell/scroll-restore.js'],
 ];
 
-const table = (caption, head, rows) => h('table', { class: 'priv-table' }, h('caption', {}, caption),
+const table = (caption, head, rows) => h('div', { class: 'table-wrap', role: 'region', 'aria-label': caption, tabindex: '0' }, h('table', { class: 'priv-table' }, h('caption', {}, caption),
   h('thead', {}, h('tr', {}, ...head.map((x) => h('th', { scope: 'col' }, x)))),
-  h('tbody', {}, ...rows.map((r) => h('tr', {}, ...r.map((c, i) => (i === 0 ? h('th', { scope: 'row' }, c) : h('td', {}, c)))))));
+  h('tbody', {}, ...rows.map((r) => h('tr', {}, ...r.map((c, i) => (i === 0 ? h('th', { scope: 'row' }, c) : h('td', {}, c))))))));
 const sec = (id, title, ...kids) => h('section', { class: 'card', id: `priv-${id}`, 'aria-labelledby': `priv-${id}-h` }, h('h2', { id: `priv-${id}-h` }, title), ...kids);
 
 export function mount(root, ctx) {
@@ -81,8 +88,8 @@ export function mount(root, ctx) {
   const offDevice = FLOWS.filter((f) => f.sendsUserData);
   root.replaceChildren(h('article', { class: 'stack' },
     h('header', { class: 'card' }, h('h1', { id: 'view-title', tabindex: '-1' }, t('nav.privacy', 'Privacy')),
-      h('p', { class: 'draft-flag', role: 'note' }, 'Plain-language summary of what this version of ALEF does with your data, written from reading its source code. It is not legal advice and not a compliance statement. It describes this build; if you were given a different build, ask the person who gave it to you.'),
-      h('p', {}, 'Short version: ALEF has no account, no analytics and no advertising code (searched for in the source). By default your progress stays in your browser. Two optional features can send something off your device, and they are described below: online vowel points on the Scan screen, and your browser\'s own speech recogniser on the Say it screen.')),
+      h('p', { class: 'draft-flag', role: 'note' }, 'This is a plain summary of what this version of ALEF does with your data. It was written by reading the app\'s code. It is not legal advice. If you were given a different version, ask the person who gave it to you.'),
+      h('p', {}, 'Short version: ALEF has no account, no analytics and no advertising code (searched for in the source). By default your progress stays in your browser. Two optional features can send something off your device, and they are described below: online vowel points on the Scan screen, and your browser\'s own speech recognition on the Say it screen.')),
     sec('flows', 'What can leave your device',
       h('p', {}, `${offDevice.length} of the ${FLOWS.length} kinds of network request below can carry something you typed, scanned or said. Everything else only fetches ALEF's own files.`),
       h('ul', {}, ...FLOWS.map((f) => h('li', { id: `flow-${f.id}`, 'data-sends-user-data': String(f.sendsUserData) },
@@ -92,14 +99,14 @@ export function mount(root, ctx) {
       h('p', {}, 'The source was searched for analytics or tracking libraries, cookies, beacons, push subscriptions with a live key, camera or microphone uploads by ALEF itself, and any request that sends progress or settings anywhere. None was found in this build. The Vision OCR adapter in src/photo/engines/web.js exists as code but nothing in the app creates it. This is a code reading, not a network capture on a live site.'),
       h('p', {}, 'Your browser, your device vendor and the site\'s host can still log ordinary things such as your IP address when the app loads. ALEF cannot see or control that.')),
     sec('keys', 'What is stored in your browser',
-      h('p', {}, 'Stored in localStorage on this device. Each key below is saved with the prefix "alef:". If localStorage is unavailable (for example private browsing), the app keeps this data in memory only and it is lost when you close the tab. Review cards, progress and settings contain what you did in the app, not your name or account.'),
+      h('p', {}, 'Stored in localStorage on this device (one row, the scroll position, uses sessionStorage as it says). Each key below is saved with the prefix "alef:", except the three rows that say they use an exact name. ALEF uses no IndexedDB and no cookies; the only other place it keeps data is the browser\'s Cache Storage, which holds copies of ALEF\'s own files (and audio files, if any) and no progress or settings. If localStorage is unavailable (for example private browsing), the app keeps this data in memory only and it is lost when you close the tab. Review cards, progress and settings contain what you did in the app, not your name or account.'),
       table('Stored keys', ['Key', 'What it holds', 'Source file'], STORE_KEYS)),
     sec('control', 'Export and delete your data',
       h('ul', {},
         h('li', {}, h('strong', {}, 'Export: '), 'Settings > Backup > "Download backup" saves every alef: key as one JSON file. The Progress screen can also save a progress-only file. ', h('a', { href: '#/settings' }, 'Open Settings'), ' or ', h('a', { href: '#/progress' }, 'Progress'), '.'),
         h('li', {}, h('strong', {}, 'Clear your saved location: '), 'Settings, the clear button next to latitude and longitude.'),
         h('li', {}, h('strong', {}, 'Reset settings: '), '"Reset settings to defaults" in Settings resets settings only. It does not delete progress or review cards.'),
-        h('li', {}, h('strong', {}, 'Delete everything: '), 'there is no single "delete all" button in the app. Clear this site\'s data in your browser settings (this also removes the offline copy and the saved progress), or uninstall the app if you installed it. Download a backup first if you want to keep your progress.'))),
+        h('li', {}, h('strong', {}, 'Delete everything: '), 'Settings has a "Delete all my data" button. You type DELETE to confirm. It removes your progress, review cards, streaks and settings from this device, and it can also remove the offline copy of the app. You can also clear this site\'s data in your browser settings, or uninstall the app if you installed it. Download a backup first if you want to keep your progress.'))),
     h('p', {}, h('a', { class: 'btn secondary', href: '#/credits' }, 'Credits and licences'), ' ', h('a', { class: 'btn secondary', href: '#/how' }, 'How this works'), ' ', h('a', { class: 'btn secondary', href: '#/about' }, 'About'))));
   return () => {};
 }

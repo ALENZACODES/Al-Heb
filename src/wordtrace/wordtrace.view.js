@@ -4,6 +4,7 @@
 // DRAFT: stroke order is unreviewed (docs/letters/STROKE-RULES.md); word pointing comes from course data / Wiktionary-derived vocab, not proofread.
 // @ts-check
 import { createTracer, MODES } from '../letters/trace.js';
+import { sourcesLine } from '../shell/sources.js';
 import { createProgress } from '../letters/progress.js';
 import { cellsOf } from '../curriculum/hebrew.js';
 import { LEVELS, eligibleWords, knownLetters, pickNext, suggestLevel, FINAL_OF } from './bank.js';
@@ -33,7 +34,7 @@ const CSS = `
 .wt h1{font-size:1.5rem;margin:.2em 0}
 .wt button{font:inherit;cursor:pointer;border:1px solid var(--border,#9aa);background:var(--card,#fff);color:var(--fg,#1b1b1f);border-radius:8px;padding:8px 12px;min-height:44px}
 .wt button[aria-pressed=true]{background:var(--accent,#1f4e9c);color:var(--accent-fg,#fff);border-color:var(--accent,#1f4e9c)}
-.wt button:focus-visible{outline:3px solid var(--focus,#e67e22);outline-offset:2px}
+.wt button:focus-visible{outline:3px solid var(--focus,#b45309);outline-offset:2px}
 .wt button[disabled]{opacity:.55;cursor:default}
 .wt .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}
 .wt .notice{background:var(--warn-bg,#fff4e0);color:var(--warn-fg,#3a2a00);border:1px solid #e0b060;border-radius:8px;padding:8px 10px;font-size:.9rem;margin:6px 0}
@@ -41,7 +42,7 @@ const CSS = `
 .wt .target{font-size:2.6rem;line-height:1.3;margin:4px 0}
 .wt .strip{display:grid;direction:rtl;gap:8px;margin:8px 0}
 .wt .cell{border:3px solid var(--border,#ccd);border-radius:12px;background:var(--card,#fff);padding:3px;min-width:0}
-.wt .cell[data-active=true]{border-color:var(--focus,#e67e22)}
+.wt .cell[data-active=true]{border-color:var(--focus,#b45309)}
 .wt .cell[data-done=true]{border-color:#1a7f37}
 .wt .box{background:#fff;border-radius:8px}
 .wt .box svg{display:block;width:100%;height:auto;aspect-ratio:1/1;max-width:none}
@@ -86,7 +87,7 @@ export function mount(root, ctx = {}) {
   const wrap = h('div', { class: 'wt' });
   wrap.appendChild(h('style', { text: CSS }));
   const body = h('div', {});
-  wrap.appendChild(body); root.appendChild(wrap);
+  wrap.appendChild(body); wrap.appendChild(h('footer', {}, sourcesLine(h))); root.appendChild(wrap);
   body.appendChild(h('h1', { id: 'view-title', tabindex: '-1' }, t('wt.title', 'Trace words')));
   body.appendChild(h('p', { role: 'status', text: t('wt.loading', 'Loading words...') }));
 
@@ -144,7 +145,7 @@ export function mount(root, ctx = {}) {
         ...LEVELS.map(lv => h('button', { 'data-level': lv.id, 'aria-pressed': S.level === lv.id, onclick: () => { S.level = lv.id; S.phase = 'pick'; render(); } }, t('wt.lv.' + lv.id, lv.label)))),
       h('div', { class: 'row', role: 'group', 'aria-label': t('wt.how', 'How to practise') },
         h('button', { 'data-act': 'mode-draw', 'aria-pressed': S.mode === 'draw', onclick: () => { S.mode = 'draw'; render(); } }, t('wt.modeDraw', 'Draw with finger or pen')),
-        h('button', { 'data-act': 'mode-step', 'aria-pressed': S.mode === 'step', onclick: () => { S.mode = 'step'; render(); } }, t('wt.modeStep', 'Show me, stroke by stroke (buttons)')),
+        h('button', { 'data-act': 'mode-step', 'aria-pressed': S.mode === 'step', onclick: () => { S.mode = 'step'; render(); } }, t('wt.modeStep', 'Walk me through it with buttons')),
         h('button', { 'data-act': 'strict', 'aria-pressed': S.strict, onclick: () => { S.strict = !S.strict; render(); } }, t('wt.strict', 'Strict'))),
       h('label', { class: 'row' }, h('input', { type: 'checkbox', 'data-act': 'any-letters', checked: S.anyLetters || undefined, onchange: (e) => { S.anyLetters = !!e.target.checked; render(); } }), ' ' + t('wt.anyLetters', 'Include letters I have not traced yet'))
     ];
@@ -266,7 +267,7 @@ export function mount(root, ctx = {}) {
     if (res.missed) S.totals.missedRounds++;
     if (res.assisted) S.totals.assistedRounds++;
     const msg = res.assisted ? t('wt.roundAssisted', 'You used the stroke buttons, so this round does not move the guide forward.')
-      : res.missed ? t('wt.roundMissed', 'That round had several wrong strokes. Try it again with the same guide.')
+      : res.missed ? t('wt.roundMissed', 'That round had several strokes off the path. Try it again with the same guide.')
       : res.finished ? t('wt.roundFinished', 'Clean round with no guide. Now the vowel marks.')
       : t('wt.roundClean', 'Clean round. The guide fades for the next one.');
     const fb = body.querySelector('.feedback'); if (fb) fb.textContent = msg;

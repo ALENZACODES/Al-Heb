@@ -16,7 +16,8 @@
 import { writeFileSync, mkdirSync, readdirSync, unlinkSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { buildAll, ROOT, TRADITIONS, STATUS, RULES_VERSION, SHARD_SIZE } from './build_variants.mjs';
+import { speechText } from '../../src/shell/names.js';
+import { buildAll, renderWord, loadStressData, ROOT, TRADITIONS, STATUS, RULES_VERSION, SHARD_SIZE } from './build_variants.mjs';
 
 export const DERIVED_DIR = join(ROOT, 'data', 'pronunciation', 'derived');
 export const SHARD_BYTES = 190000;
@@ -27,9 +28,22 @@ const xml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 export const phOf = (ipa) => ipa.replace(/\./g, '');
 const isPlain = (s) => !/[֐-׿]/.test(s);
 
-/** SSML for one record and tradition. Words without IPA (unpointed) stay as plain text. */
+let stressCtx = null;
+/**
+ * SSML for one record and tradition. Words without IPA (unpointed) stay as plain text.
+ * Every word goes through speechText() (src/shell/names.js) first, so the written four-letter name (bare, in a maqaf
+ * compound or prefixed) never appears in the SSML: both the inner text and the ph attribute are for the spoken substitute.
+ */
 export function ssmlFor(rendered, trad) {
-  const parts = rendered.perWord.map((w) => (w.ipa[trad] ? `<phoneme alphabet="ipa" ph="${xml(phOf(w.ipa[trad]))}">${xml(w.he)}</phoneme>` : xml(w.he)));
+  const parts = rendered.perWord.map((w) => {
+    const spoken = speechText(w.he);
+    let ipa = w.ipa[trad];
+    if (spoken !== w.he) { // re-render the substitute so the ph matches the spoken form (prefix letters kept)
+      stressCtx ??= { stress: loadStressData() };
+      ipa = renderWord(spoken, stressCtx).variants[trad].ipa;
+    }
+    return ipa ? `<phoneme alphabet="ipa" ph="${xml(phOf(ipa))}">${xml(spoken)}</phoneme>` : xml(spoken);
+  });
   return `<speak version="1.1" xml:lang="${LANG[trad]}">${parts.join(' ')}</speak>`;
 }
 

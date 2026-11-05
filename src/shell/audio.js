@@ -2,7 +2,7 @@
 // The wrapper keeps the player's interface (play, playSequence, has, status, stop) and publishes what is actually
 // being used for sound: a recorded file, the browser's text-to-speech voice, or nothing.
 // Status wording comes from ./audio-labels.js (one table for every screen and report).
-import { fileLabel, STATUS_LABELS } from './audio-labels.js';
+import { fileLabel, isSyntheticStatus, STATUS_LABELS } from './audio-labels.js';
 export const REASONS = {
   'no-hebrew-browser-voice': 'your browser has no Hebrew voice installed',
   'tts-pronunciation-mismatch': 'the browser voice only reads Israeli pronunciation and you chose another tradition',
@@ -19,7 +19,7 @@ const TRAD = { israeli: 'Israeli', sephardi: 'Sephardi', ashkenazi: 'Ashkenazi' 
 /** Pure: summarise the manifest ({total, recorded, tts, missing}). */
 export function summarizeManifest(manifest) {
   const s = { total: manifest.length, recorded: 0, tts: 0, missing: 0 };
-  for (const e of manifest) { if (e.status === 'recorded') s.recorded++; else if (e.status === 'tts') s.tts++; else s.missing++; }
+  for (const e of manifest) { if (e.status === 'recorded') s.recorded++; else if (isSyntheticStatus(e.status)) s.tts++; else s.missing++; }
   return s;
 }
 
@@ -27,7 +27,7 @@ export function summarizeManifest(manifest) {
 export function describeResult(r, congregation = 'israeli') {
   if (!r) return { mode: 'none', text: '' };
   if (r.source === 'file') {
-    return { mode: 'file', text: `Sound: ${fileLabel(r.entryStatus)} (${r.voice === 'm' ? 'man' : 'woman'}, ${TRAD[r.fileTradition || r.tradition] || r.tradition}).` };
+    return { mode: 'file', text: `Sound: ${fileLabel(r.entryStatus, r.fileTradition || r.tradition, r.entrySource)} (${r.voice === 'm' ? 'man' : 'woman'}, ${TRAD[r.fileTradition || r.tradition] || r.tradition}).` };
   }
   if (r.source === 'tts-fallback' || r.played === true) {
     const mismatch = r.mismatch || (r.tradition && r.tradition !== 'israeli');
@@ -73,25 +73,31 @@ export function createAudioUnlock(g = globalThis) {
 }
 
 const CHECKING = 'checking audio...';
+const IDLE_TEXT = "Sound: the list has not been loaded yet."; // one short line: the sound bar is one line at 360px; Details explains
 const initialText = (summary) => (summary.recorded + summary.tts > 0
   ? { mode: 'idle', text: `Sound: ${summary.recorded} clips listed as "${STATUS_LABELS.recorded}" and ${summary.tts} as "${STATUS_LABELS.tts}"; anything else uses your browser's voice.` }
-  : { mode: 'idle', text: "Sound: no recordings exist yet. Audio uses your browser's Hebrew text-to-speech voice, if your device has one." });
+  : { mode: 'idle', text: "No recordings yet. Uses your device's Hebrew voice, if it has one." });
 
 /**
- * @param {{settings:any, manifest?:any[], loadManifest?:()=>Promise<any[]>, createAudio?:Function}} o
- * Give `manifest` for an already-loaded list (state 'ready'), or `loadManifest` to resolve it lazily: until it resolves,
- * `manifestState` is 'checking', has() is false and status() says "checking audio..." for anything not already known to be a
- * file, and play() waits for the list. A failed load gives 'offline' (and is retried on the next play/ensureManifest).
+ * @param {{settings:any, manifest?:any[], loadManifest?:()=>Promise<any[]>, loadSummary?:()=>Promise<{recorded:number,tts:number}>, createAudio?:Function}} o
+ * `loadSummary` (optional) is only called when the list fails to load: a {recorded:0,tts:0} answer keeps the idle "No recordings yet" line.
+ * Give `manifest` for an already-loaded list (state 'ready'), or `loadManifest` to resolve it lazily. Nothing is fetched at
+ * creation: `manifestState` starts 'idle' (status text says no list is loaded). The first status()/has()/play()/playSequence()/
+ * ensureManifest() moves it to 'checking' and starts the load; until it resolves has() is false and status() says "checking audio..."
+ * for anything not already known to be a file, and play() waits for the list. A failed load gives 'offline' (retried on the next
+ * play/ensureManifest, not on every status()). onNeed(fn) calls fn(kind) whenever something asks about a clip of that kind (the shell
+ * uses it to load the word shard only when a word clip is asked about).
  */
-export function createShellAudio({ settings, manifest, loadManifest, createAudio }) {
+export function createShellAudio({ settings, manifest, loadManifest, loadSummary, createAudio }) {
   let summary = summarizeManifest(manifest || []);
   const inner = createAudio({
     settings: { get voice() { return settings.get('voice'); }, get congregation() { return settings.get('congregation'); } },
     manifest: manifest || [],
   });
   const subs = new Set(), mSubs = new Set();
-  let mstate = !manifest && typeof loadManifest === 'function' ? 'checking' : 'ready';
-  let state = mstate === 'checking' ? { mode: 'idle', text: 'Sound: checking which recordings exist...' } : initialText(summary);
+  const needSubs = new Set();
+  let mstate = !manifest && typeof loadManifest === 'function' ? 'idle' : 'ready';
+  let state = mstate === 'idle' ? { mode: 'idle', text: IDLE_TEXT } : initialText(summary);
   let note = '', raw = state, pending = null;
   const compose = (s) => (note ? { ...s, text: `${s.text} (${note})` } : s);
   const publish = (s) => { raw = s; state = compose(s); for (const f of subs) { try { f(state); } catch { /* ignore */ } } };
@@ -107,12 +113,23 @@ export function createShellAudio({ settings, manifest, loadManifest, createAudio
     pending = Promise.resolve().then(loadManifest).then((list) => {
       inner.extend(list); summary = summarizeManifest(list);
       setM('ready'); publish(initialText(summary)); return true;
-    }).catch(() => {
-      setM('offline'); publish({ mode: 'none', text: "Sound: the list of recordings could not be loaded (offline?). Only your browser's voice is available, where your device has one." }); return false;
+    }).catch(async () => {
+      setM('offline');
+      // The big list is not here (offline, not cached). If the tiny shipped summary says no clip exists at all, there is nothing the
+      // list could add: stay with the honest idle line instead of an alarming "could not be loaded". Unknown summary: say it could not load.
+      let none = false;
+      try { if (typeof loadSummary === 'function') { const t = await loadSummary(); none = !!t && t.recorded === 0 && t.tts === 0; } } catch { none = false; }
+      publish(none ? initialText({ recorded: 0, tts: 0 }) : { mode: 'none', text: "Sound: the list of recordings could not be loaded (offline?). Only your browser's voice is available, where your device has one." });
+      return false;
     }).finally(() => { pending = null; });
     return pending;
   }
-  const settle = () => (mstate === 'checking' ? ensureManifest() : Promise.resolve());
+  const settle = () => (mstate === 'checking' || mstate === 'idle' ? ensureManifest() : Promise.resolve());
+  /** something asked about a clip: start the lazy load the first time, and tell the shell which kind (it may load a shard) */
+  const need = (kind) => {
+    if (mstate === 'idle') ensureManifest();
+    for (const f of needSubs) { try { f(kind); } catch { /* ignore */ } }
+  };
   const checking = (kind, id) => ({ source: 'none', reason: CHECKING, kind, id });
   const gate = (r, kind, id) => (mstate === 'checking' && r.source !== 'file' ? checking(kind, id) : r);
 
@@ -122,17 +139,22 @@ export function createShellAudio({ settings, manifest, loadManifest, createAudio
     unlock: createAudioUnlock(globalThis),
     get summary() { return summary; },
     get state() { return state; },
-    /** 'ready' | 'checking' | 'offline' - whether the core recording list is known. */
+    /** 'idle' (not asked for yet) | 'checking' | 'ready' | 'offline' - whether the core recording list is known. */
     get manifestState() { return mstate; },
     ensureManifest,
+    /** the in-flight load (or null); never starts one */
+    get loading() { return pending; },
+    /** fn(kind) whenever status/has/play/playSequence is asked about a clip; returns an unsubscribe function */
+    onNeed(fn) { needSubs.add(fn); return () => needSubs.delete(fn); },
     /** fn(state) on every manifest state change; returns an unsubscribe function. */
     onManifestState(fn) { mSubs.add(fn); return () => mSubs.delete(fn); },
     /** short extra note appended to the sound-status line (e.g. 'audio info unavailable offline'); '' clears it */
     setNote(n) { note = n || ''; publish(raw); },
     subscribe(fn) { subs.add(fn); fn(state); return () => subs.delete(fn); },
-    status: (kind, id, o) => gate(inner.status(kind, id, opts(o)), kind, id),
-    has: (kind, id, o) => inner.has(kind, id, opts(o)),
+    status: (kind, id, o) => { need(kind); return gate(inner.status(kind, id, opts(o)), kind, id); },
+    has: (kind, id, o) => { need(kind); return inner.has(kind, id, opts(o)); },
     async play(kind, id, o) {
+      need(kind);
       await settle();
       const o2 = opts(o);
       publish(describeResult(inner.status(kind, id, o2)));      // what WILL be used, before it speaks
@@ -141,6 +163,7 @@ export function createShellAudio({ settings, manifest, loadManifest, createAudio
       return r;
     },
     async playSequence(items, so) {
+      for (const it of items) need(Array.isArray(it) ? it[0] : it && it.kind);
       await settle();
       const res = await inner.playSequence(items.map((it) => ({ ...(Array.isArray(it) ? { kind: it[0], id: it[1] } : it), ...opts() })), so);
       if (res.length) publish(describeResult(res[res.length - 1]));

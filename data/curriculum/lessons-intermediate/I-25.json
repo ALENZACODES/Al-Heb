@@ -101,7 +101,7 @@
   },
   {
    "he": "חֹדֶשׁ",
-   "en": "a month",
+   "en": "month",
    "translit": null,
    "pronunciation": {
     "israeli": "chodesh"
@@ -326,7 +326,6 @@
    "options": [
     "formal",
     "neutral",
-    "casual",
     "slang"
    ]
   },
@@ -339,7 +338,6 @@
    "options": [
     "formal",
     "neutral",
-    "casual",
     "slang"
    ]
   },

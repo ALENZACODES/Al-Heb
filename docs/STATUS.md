@@ -1,62 +1,91 @@
-# ALEF status (measured 2026-11-04)
+# ALEF status (measured 2026-11-04, refreshed about 21:15 local)
 
-Every number below was produced by the command beside it, run in this checkout on 2026-11-04. Nothing here says the content is correct, reviewed, heard by a learner or run on a real phone. Other agents are editing the repo at the same time, so counts can drift.
+The numbers in the first table were produced by the command beside it, run in this checkout on 2026-11-04 (the "Re-run" column says which ones were re-run in the 21:05 to 21:15 refresh and which carry an earlier value from today). Several lanes were still editing during the refresh (pictures, book outputs, the audit board), so any count can already be out of date. Nothing here says the content is correct, reviewed, heard by a learner or run on a real phone. Other agents are editing the repo at the same time, so counts can drift.
 
 ## Counts
 
-| Fact | Value | Command |
-|---|---|---|
-| Routes in the route table | 73 (10 with a nav entry, 42 marked optional) | `node -e "import('./src/shell/router.js').then(m=>console.log(m.ROUTES.length, m.ROUTES.filter(r=>r.nav).length, m.ROUTES.filter(r=>r.optional).length))"` |
-| View files | 65 | `find src -name '*.view.js' \| wc -l` |
-| JS files under src | 205 | `find src -name '*.js' \| wc -l` |
-| Core lessons | 125 | `node -e "console.log(JSON.parse(require('fs').readFileSync('data/curriculum/lessons.json')).lessons.length)"` |
-| Intermediate lessons | 50 (I-01 to I-50) | `ls data/curriculum/lessons-intermediate \| grep -c '^I-[0-9]*\.json$'` (index lists 50 in `data/curriculum/intermediate-index.json`) |
-| Vocabulary records | 6,297 (6,027 words + 270 phrases) | `node -e "const m=JSON.parse(require('fs').readFileSync('data/vocab/meta.json'));console.log(m.counts.total,m.counts.words,m.counts.phrases)"`; `words.json` itself has 6,297 entries |
-| Corpus (reader) records | 70 in `data/corpus/registry.json`; 2 full reader texts with trope (`shema`, `priestly-blessing`) | `node -e "console.log(JSON.parse(require('fs').readFileSync('data/corpus/registry.json')).entries.length)"`; `ls data/corpus/reader` |
-| Image prompts in the manifest | 797 rows, all `pending` in the CSV | `wc -l data/images/manifest.csv` (header included); `awk -F, 'NR>1{print $7}' data/images/manifest.csv \| sort \| uniq -c` (a naive comma split; the prompt column holds commas, but column 7 is status) |
-| Images by ingest status | ingested 282, approved 0, rejected 0, flagged 89, not yet generated 515 | `node tools/images/ingest.mjs status` |
-| Images approved in the approvals file | 0 | `data/images/approvals.json`, `approvals` is empty (`node -e "console.log(JSON.parse(require('fs').readFileSync('data/images/approvals.json')).approvals)"`) |
-| Generated images listed for the app | 0 (manifest `count` is 0: only approved images are listed) | `data/images/generated-manifest.json` |
-| Image files on disk | 564 in `assets/img/gen`, 797 in `assets/img/placeholders`, 54 in `assets/img/refs` | `for d in gen placeholders refs; do find assets/img/$d -type f \| wc -l; done` |
-| Audio clips listed in the manifests | 16,710 (core 6,384 + three word shards of 3,442) | `node -e` over `data/audio/manifest.json` and `data/audio/manifest-words-{ashkenazi,israeli,sephardi}.json` |
-| Audio clips recorded | 0 of 16,710 (every entry has status `missing`) | same script, grouped by `status`; also `find . \( -name '*.mp3' -o -name '*.opus' -o -name '*.m4a' -o -name '*.ogg' -o -name '*.wav' \) \| wc -l` gives 0 |
-| Test files | 172 `*.test.js` in `tests/` | `ls tests/*.test.js \| wc -l` |
-| Docs | 998 files under `docs/` (287 in `qa`, 221 in `images`, 103 in `voices`, 85 in `review`, 49 in `vocab`, 48 in `workbook`, 35 in `screens`, 33 in `letters`, 13 in `wordtrace`, 10 each in `israel` and `curriculum`; every other area 7 or fewer; 7 top-level `docs/*.md`) | `find docs -type f \| wc -l`; `for d in docs/*/; do echo "$(find $d -type f \| wc -l) $d"; done \| sort -rn` |
-| Text scan for tool names | PASS (3,695 tracked files, 24 allowlisted) | `node tools/meta/scan.mjs --text` |
+| Fact | Value | Command | Re-run in this refresh |
+|---|---|---|---|
+| Routes in the route table | 85 (10 with a nav entry, 45 marked optional; 15 tier `v0`, the other 70 `preview`; it was 77 earlier today, the audit board added eight preview routes) | `node -e "import('./src/shell/router.js').then(m=>console.log(m.ROUTES.length, m.ROUTES.filter(r=>r.nav).length, m.ROUTES.filter(r=>r.optional).length, m.ROUTES.filter(r=>r.tier==='v0').length))"` | yes |
+| View files | 78 | `find src -name '*.view.js' \| wc -l` | yes |
+| JS files under src | 253 | `find src -name '*.js' \| wc -l` | yes |
+| Core lessons | 125 | `node -e "console.log(JSON.parse(require('fs').readFileSync('data/curriculum/lessons.json')).lessons.length)"` | yes |
+| Intermediate lessons | 50 (I-01 to I-50) | `ls data/curriculum/lessons-intermediate \| grep -c '^I-[0-9]*\.json$'` | yes |
+| Vocabulary records | 6,303 (was 6,297 earlier today: the first-500 follow-up added six records) | `node -e "console.log(JSON.parse(require('fs').readFileSync('data/vocab/meta.json')).counts.total)"` | yes |
+| Corpus (reader) records | 70 in `data/corpus/registry.json`; 2 full reader texts with trope (`shema`, `priestly-blessing`) | `ls data/corpus/reader` | reader files yes; 70 is the earlier value |
+| Image prompts in the manifest | 1,797 rows | `wc -l data/images/manifest.csv` (1,798 lines, header included) | yes |
+| Images by ingest status | 1,797 rows: ingested 914, approved 0, rejected 0, flagged 187, not yet generated 883 | `node tools/images/ingest.mjs status` (the ALL row; the column header calls the last column `missing`) | yes |
+| Images approved | 0 (`approvals` is `{}` in `data/images/approvals.json`), so no generated image is shown to learners | `data/images/approvals.json` | yes (file read) |
+| Image files on disk | 1,828 in `assets/img/gen`, 797 in `assets/img/placeholders`, 54 in `assets/img/refs` (the `gen` count was 1,664 earlier today: other agents are still adding) | `for d in gen placeholders refs; do find assets/img/$d -type f \| wc -l; done` | yes |
+| Audio clips listed in the manifests | 24,906 (my script over the four manifest files; the earlier value today was 24,900, and I did not split the six extra by file; it was 22,716 before that) | `node -e` over `data/audio/manifest.json` and `data/audio/manifest-words-{ashkenazi,israeli,sephardi}.json` (arrays) | yes |
+| Audio clips recorded | 0 of 24,906 (every entry has status `missing`) | same script, grouped by `status` | yes |
+| Test files | 241 `*.test.js` in `tests/` | `ls tests/*.test.js \| wc -l` | yes |
+| Docs | 1,223 files under `docs/` (377 in `qa`, 205 in `images`, 106 in `voices`, 105 in `review`, 65 in `letters`, 56 in `workbook`, 51 in `vocab`, 35 in `screens`; 10 top-level `docs/*.md`) | `find docs -type f \| wc -l`; `for d in docs/*/; do echo "$(find $d -type f \| wc -l) $d"; done \| sort -rn` | yes |
+| Text scan for tool names | PASS (4,294 tracked files, 24 allowlisted; run again at about 21:10) | `node tools/meta/scan.mjs --text` | yes |
+| Deploy build | 723 files, 59.76 MiB; install list 284 files, 3.36 MiB; 246 more files (10.46 MiB) fetched on demand (stale: measured before the eight new routes, the memory-chain changes and the later pictures; not re-run because the build writes `dist/`) | `node tools/deploy/build_site.mjs` | no (earlier run today) |
+| Deploy check | 44 of 44 pass, 6 warnings (origins named in code), against the earlier `dist/` | `node tools/deploy/check-deploy.mjs --root dist` | no (earlier run today; `docs/deploy/GO-LIVE-CHECKLIST.md` quotes the same result) |
 
 ## Tests
 
-I did not run the full suite (it is running elsewhere). The latest `/tmp/fulltest.txt` is dated Wed Nov 4 09:39:59 EST 2026 and holds only the start of a run: 94 lines, 5 results, no summary line, so it is partial. In it, `a11y.browser.test.js` test 1 fails (axe `link-name` on `<a class="tile" href="#/rules/:rule">` in the open More sheet; the sweep in `docs/qa/SWEEP.md` lists the same link on `/`), tests 2 to 5 pass. No pass or fail total for the whole suite is available from that file. The most recent full result written in the older notes below (598 pass, 0 fail) is from 2026-11-03 and is not current.
+I did not run the full suite in this refresh. Re-run by me at about 21:05 (each file with `node --test`): the 18 non-browser `tests/letters.*.test.js` files together (223 tests, 222 pass, 0 fail, 1 skipped), `tests/workbook.extras.test.js` (7 pass), `tests/perf.test.js` (4 pass), and `tests/integration.test.js` with `tests/offline.test.js` (63 tests, 60 pass, 3 fail: `views.generated.js lists exactly the *.view.js files on disk`, `precache: skips vendor, PDFs and files over the size limit`, `letter memory pictures: installed ones count under Letters`; each message says to run `node tools/build-precache.mjs`, which the committed `precache-manifest.js` (last written 15:59) still needs). The audit board records a full unit run by one of its auditors at about 20:50 (2,287 tests, 2,276 pass, 7 fail; `docs/research/BOARD.md`, M audit round 6), which I did not repeat; some of its failures have been fixed since (the letters picture tests pass in my run above). An earlier saved full run today (`/tmp/fulltest3.txt`, 10:45) reported 1,730 tests, 1,728 pass, 1 fail (the journey-doc test); it is stale. What the lanes recorded in their own docs, each for the files named there only:
+
+- `tests/engagement.dst.test.js` (new): 31 pass; `morning`, `notify`, `credits`: 65 pass (`docs/review/ENGAGEMENT-CHECK.md`).
+- `tests/letters.*`, `workbook.*`, `book.*`: 128 tests, 127 pass, 1 skipped (`docs/review/LETTERS-CONTENT-CHECK.md`).
+- `tests/streak.freeze.test.js`: 21 pass; `tests/calendar.festivals.test.js`: 14 pass (`docs/qa/STREAK-FREEZE.md`, `docs/qa/CALENDAR-QA.md`).
+- Sensitivity and names tests: 562 of 562 pass after the speech-text edits; nothing was run in a browser (`docs/sensitivity/OPEN.md`).
+- Copy audit: about 520 tests in 44 files; one failure, the precache test, because `precache-manifest.js` is stale (`docs/review/COPY-AUDIT.md`).
+- Accessibility pass: 68 pass, 1 fail (`data/wordtrace/words.json is current`) (`docs/qa/A11Y-V0.md`).
+- CI triage: 9 test files re-run on a copy of the working tree; all pass except one image alt-text test, `images.redo` #653 (`docs/test/CI-FAILURE-TRIAGE.md`). Whether CI passes after a push has not been observed.
 
 ## Deployed and reviewed
 
-- Deployed: nothing. No host account exists (`docs/deploy/CLOUDFLARE-PAGES.md`, `docs/DEPLOY.md`). No learner has used the app.
-- Reviewed by native speakers, teachers or clergy: 0 of 7,039 rows in the review packs (`docs/review/STATUS.md`, generated by `node tools/review/build-packs.mjs`).
-- Real-device testing: none. The device and route sweeps are headless Chromium emulation (`docs/qa/DEVICES.md`, `docs/qa/SWEEP.md`).
+- Deployed: nothing. No host account exists (`docs/deploy/CLOUDFLARE-PAGES.md`, `docs/deploy/GO-LIVE-CHECKLIST.md`, `docs/DEPLOY.md`). No learner has used the app.
+- v0 tiering: 15 routes are tier `v0`, 70 are `preview` and carry a banner (`docs/v0/SCOPE.md`). Promotion needs native review, tests, a real-phone check and the scan, none of which has happened for any route.
+- Reviewed by native speakers, teachers or clergy: 0 of 3,718 rows in the seven review packs (`docs/review/STATUS.md`, generated by `node tools/review/build-packs.mjs`). The area packets (`docs/review/README.md`, `docs/review/out/manifest.json`) list 8,508 items in 25 areas, about 92.9 reviewer hours by a per-item time model (phase one: 4,510 items, 67.4 h); the hours are an estimate, not a measurement. The older figure of 7,039 rows in earlier copies of this file is superseded by the 3,718 in `docs/review/STATUS.md`.
+- Real-device testing: none. Cross-engine run (Chromium, Firefox, WebKit, emulation): `docs/qa/CROSS-ENGINE.md`; WebKit offline checks failed there for an undetermined reason, so Safari offline is unverified. The device and route sweeps are headless Chromium emulation (`docs/qa/DEVICES.md`, `docs/qa/SWEEP.md`).
 - Code licence: none chosen (no `LICENSE` file: `ls LICENSE*` finds nothing).
+
+## What the QA docs cover (all scripted emulation, headless Chromium unless noted)
+
+- `docs/qa/REPORT.md` (walk of 57 paths, 285 visits; written before later changes): 14 defects found, 8 fixed, 6 open at that time; `docs/qa/DEFECTS.md` lists F1 to F8 and F14 as fixed and "none known" open from that walk.
+- `docs/qa/V0-WALK.md`: scripted first-release path at 375x667 for each of the three pronunciation settings; the israeli table shows 13 pass, 0 warn, 0 fail; a second viewport (360x640) is in the same file. It does not judge Hebrew, audio or wording.
+- `docs/qa/JOURNEY.md`: five personas over 7 simulated days (fifth pass), 0 console, page or request errors; the plan and the Today card agreed on every compared day (A 7 of 7, B 6 of 6, C 7 of 7, D 3 of 3). Persona E (reader only) did not exercise first letter, first word or review cards. Open there: the Israel-goal first-run card still opens with a sentence about a letter (wording only); "No sound: speech-error" appears in headless only.
+- `docs/qa/A11Y-V0.md` (15 v0 routes, 375x667): one `h1` per route, no unnamed controls, Hebrew has `lang=he` and `dir=rtl`, after its first-pass fixes, axe light and dark found 0 violations on 14 routes and 1 minor on `/settings`; the doc lists seven first-pass fixes and seven second-pass items (most re-measured by script, two only changed in code). Still open there: forced-colours contrast checked by eye on `/` only; no streak announcement on the screens that count the day. Not checked: any real screen reader, 400% zoom, landscape, the 62 preview routes.
+- `docs/qa/HOME-QA.md`, `LETTERS-QA.md`, `TYPING-QA.md`, `TRAINERS-QA.md`, `READER-QA.md`, `LISTEN-SPEAK-QA.md`, `REVIEW-PROGRESS-QA.md`, `OFFLINE-QA.md`, `CALENDAR-QA.md`, `STREAK-FREEZE.md`, `DEVICE-FIXES.md`: per-area passes. Examples of what they report: review grade buttons were hidden behind the bottom bar on part of the cards and were fixed (20 of 20 reachable in each setting afterwards); typing keys are now at least 44 px; trainers 21 screens with 0 axe violations; offline script 81 of 81 checks passed against 527 precache entries (fake "new version", not a real release); letter tracing accepts all 54 stored stroke sets (this does not show the strokes are right); the Home screen's first screen carries the sound strip above the Today button (noted in `HOME-QA.md`, from the shell).
+
+## Content checks written by the repo (not by reviewers)
+
+- `docs/review/COPY-AUDIT.md`: reading-level and jargon pass on the 15 v0 routes (tool `tools/docs/readlevel.mjs`; files above grade 7 went from 1 to 0; strings of 8+ words above grade 9 from 18 to 13). Seven decisions are left open (section 7).
+- `docs/review/ENGAGEMENT-CHECK.md`: outbound requests, notification timing, streak copy and rest days, time-zone and daylight-saving test. Read and tested in source; nothing run on a phone or a deployed site. Two source files edited (`src/morning/morning.view.js`, `src/shell/notify.js`), so the precache needs the usual rebuild by whoever owns it; not run here.
+- `docs/review/LETTERS-CONTENT-CHECK.md`: mechanical fixes (Final Kaf and Final Pe naming, two respellings, three confusable lists) and seven hook replacements, all marked needs-native-review. Generated images of the old hooks were not redrawn; `book/out/alef-book.html` and its PDFs were not rebuilt.
+- `docs/vocab/FIRST-500-CHECK.md`: audit of ranks 1 to 500 plus a same-day follow-up (90 corrections: six basic words added, 33 wrong-sense examples handled, two rank holders lowered). Every row still `proofread: false`; `docs/vocab/REVIEW-PACK.md` and `JUDGEMENT.md` counts were not refreshed.
+- `docs/pronunciation/DOUBLING-POLICY.md`: respellings write a doubling dot as a single letter in all three settings; claims about how Sephardi and Ashkenazi readers speak are marked uncertain, needs-native-review. Several of the 23 replaced IPA values are careful-reading forms.
+- `docs/sensitivity/OPEN.md`: divine-name handling in audio targets and speech sinks; 72 manifest targets still carry prefixed forms until clergy decide; vocabulary scan with 67 candidates, a few hidden or trimmed, `גּוֹי` left for a reviewer.
+- `docs/audio/NO-AUDIO.md`: three honest states when no clip exists (file, device voice, none) and the one sound bar; tested with fake audio objects and a stubbed speech engine, with route-level button counts inconclusive.
+- `docs/test/CI-FAILURE-TRIAGE.md` and `docs/deploy/GO-LIVE-CHECKLIST.md`: see the sections below.
 
 ## Known gaps (pulled from the named docs; not re-verified here)
 
-From `docs/qa/SWEEP.md` (sweep of 71 routes, 426 page loads, 2026-11-04, emulation only; 12 ranked findings):
-- `/settings`: focus lands on an invisible control (`input#s-import`).
+From `docs/qa/SWEEP.md` (sweep of 71 routes, 426 page loads, 2026-11-04, emulation only; 12 ranked findings; written before several of the fixes in the other QA docs, which of its items are still open was not re-measured):
+- `/settings`: focus lands on an invisible control (`input#s-import`). (`A11Y-V0.md` records a later change to a real button; not re-run against the sweep.)
 - `/letters/atlas` and `/ladder`: axe label-content-name-mismatch (31 nodes on the atlas).
 - Home `/`: a link with no accessible text (`a[href$="#/rules/:rule"]`).
 - Horizontal overflow at 320 px on `/classsummary`, `/typing`, `/rules/kamatz`; at 390 px on `/rules/kamatz`.
 - `/typing`: colour contrast at 320 px.
 - Touch targets under 44 px on `/words/trace`, `/rules`, `/morning`, `/reminders`.
-- `/calendar`: parasha names clipped with an ellipsis at 320 px.
+- `/calendar`: parasha names clipped with an ellipsis at 320 px (`docs/qa/DEVICE-FIXES.md` has the CSS fix list and says some items are not fixable from there).
 - Focus moves off-screen on `/progress`, `/traditions` and others (shared fix suggested).
 - Not covered by the sweep: progress-dependent states, audio, hover, drag, any screen reader.
 
-`docs/qa/JOURNEY.md`: does not exist yet.
+From `docs/qa/JOURNEY.md`: the placement-to-locked-lesson problem is recorded as no longer occurring in the fourth and fifth passes (persona B starts at r01); not re-run since.
 
 From `docs/hebrew-lint/REPORT.md` (460 data files scanned; it checks code points and spacing only, not correctness):
-- Definite errors: mark-order 1,082 (7 files), stray-mark 108, conflicting-marks 72 (19 files), duplicate-mark 24, final-letter-mid-word 23, nonfinal-letter-at-end 53, not-nfc 5. The report states passing it would not prove the Hebrew correct.
+- Definite errors: mark-order 1,082 (7 files), stray-mark 108, conflicting-marks 72 (19 files), duplicate-mark 24, final-letter-mid-word 23, nonfinal-letter-at-end 53, not-nfc 5. The report states passing it would not prove the Hebrew correct. (The CI triage says the lint baseline test passes on the working tree.)
 - Style items: nonfinal-pe-at-end 333, maqaf-spacing 111, ascii-gershayim 75, ascii-geresh 22, ascii-hyphen 19, double-space 2.
 
 From `docs/legal/CONTENT-LICENCE-AUDIT.md` (not legal advice; no lawyer has reviewed it):
-- Vocabulary data (6,027 of 6,297 records) is derived from Wiktionary and FrequencyWords, so it is share-alike (CC BY-SA 4.0); whether that reaches the app or a bundle is an open legal question.
-- Metsudah-sourced prayers (21 of 70 corpus records) rest on Sefaria's CC-BY label only; Torat Emet 357 and Shaliehsaboo labels disagree between Sefaria pages.
+- Vocabulary data (6,033 of 6,303 records per `docs/legal/CONTENT-LICENCE-AUDIT.md` and `data/vocab/LICENSE-NOTES.md`) is derived from Wiktionary and FrequencyWords, so it is share-alike (CC BY-SA 4.0); whether that reaches the app or a bundle is an open legal question.
+- Metsudah-sourced prayers (9 of 70 corpus records, counted from the `source` field of `data/corpus/registry.json` on 2026-11-04) rest on Sefaria's CC-BY label only; Torat Emet 357 and Shaliehsaboo labels disagree between Sefaria pages.
 - 117 lesson-derived vocabulary records state no licence.
 - Sefaria terms, Open Siddur pages and OpenSubtitles were not read; per-sentence Tatoeba licences were not tested.
 - Generated images: terms and copyrightability unverified. Pointing and glosses written by machine are unreviewed.
@@ -68,48 +97,38 @@ From `docs/tts/README.md`:
 - The acceptance gate (character error rate by Whisper) does not check vowels, accent or voice quality.
 - Licence rows for Chatterbox weights, Nakdimon and ffmpeg are declarations read from their pages, to be confirmed by counsel.
 - Voice-actor kits in `docs/voices/kit/` are plans only; no talent contacted, nothing recorded.
+- A volunteer record kit exists (`tools/record-kit/recorder.html`, `docs/record-kit/README.md`) with a first-100-clips list per tradition (`docs/voices/FIRST-100.md`, `docs/voices/first-100.csv`) and a walkthrough for John (`docs/voices/JOHN-RECORDING-GUIDE.md`). It was tested with a fake microphone only; no real recording has been made, and its consent wording is a draft for a lawyer.
 
-From `docs/deploy/CLOUDFLARE-PAGES.md` and `docs/deploy/CI-GAP.md`:
-- Headers, CSP and nested `_tesseract` folder behaviour on a real host are unverified.
-- No "new version" notice for installed copies. Capacitor wrapper is a desk review only; 12 listed gaps.
-- CI gap notes were written against an older commit; re-clone and re-run is still needed.
+From `docs/deploy/CLOUDFLARE-PAGES.md`, `docs/deploy/CI-GAP.md`, `docs/deploy/GO-LIVE-CHECKLIST.md` and `docs/test/CI-FAILURE-TRIAGE.md`:
+- Nothing on the checklist has been done. Headers, CSP and the nested `_tesseract` folder behaviour on a real host are unverified; the checklist's live-URL checks are manual (the checker only serves a local folder).
+- CI run 41899215557 (pages run 41899215538) on pushed commit c2dc882: 17 failing lines traced to stale committed generated data or a missing runner Python module (`segno`, Pillow); no real code bug found. Most fixes are uncommitted working-tree changes and take effect only when committed and pushed. One test still fails on the working tree: image alt text for `L18_tsadi_print_mnemonic` (#653), which needs a decision on the wording before `node tools/images/alt_text.mjs` is run. The "Precache manifest is current" CI step was not run.
+- The local branch and `origin/main` share no common ancestor (142 commits each side, per the triage).
+- The update banner (`src/shell/update.js`) is tested with a fake service worker and a simulated version change only, never on a real device. Capacitor wrapper is a desk review only; 12 listed gaps.
+- `docs/deploy/CI-GAP.md` was written against an older commit.
 
-## Older notes (lane 8, before this refresh; kept for history, not re-verified today)
+## Letter memory chain (added 2026-11-04, draft; refreshed about 21:15)
 
-## Audio shard lazy loading (lane 8, 2026-11-03)
-- Boot loads the core manifest only (1.29 MiB, precached). `src/shell/audio-shards.js` then fetches just the learner's `manifest-words-<congregation>.json` (0.81-0.83 MiB) after first paint and calls `player.extend`; re-loads when the congregation setting changes. Sephardi shard exists now; if absent, israeli shard is used. Offline/uncached: sound bar note "audio info unavailable offline", no error.
-- Precache skips the three shards; `sw.js` runtime-caches them (stale-while-revalidate). Precache is now 149 files.
-- Tests: precache skip rule asserted; new fake-fetch loader test (only learner shard fetched, no refetch, change reloads, sephardi fallback, offline, non-JSON answer); `setNote` test. Full `node --test`: 598 pass, 0 fail.
-- Checked in Chromium: `walk.mjs --quick` run to /tmp: hardFailures 0; own script on /read/ein-kamocha with ashkenazi and browserVoiceAnyway off: status `none/unknown-item` with the shard blocked (note shown), `none/tts-pronunciation-mismatch` once loaded; screenshot of the offline case viewed. Not verified: real offline reload serving a shard from the runtime cache (the cache rule is simple but not exercised in a browser), and every shard entry is currently status "missing" (no recordings exist), so no shard word plays a file yet.
+- **What exists.** `data/letters/memory-chain.json` (27 forms, generated by `tools/letters/build_memory_chain.mjs` from `tools/letters/memory-chain.source.json`; each entry has a sound hook, a `perTradition` sound line for the three settings, one Hebrew word, and a short story with a `storyByTradition` version for each setting). `assets/letters/morph/*.svg` (28 pictures, one shared contract, `docs/letters/MORPH-USAGE.md`). Code: `src/letters/memory.js`, `memory.view.js`, `memorycard.js`. Memory card on the letter page; picture-to-sound-to-word practice cards in review; poster, letter flashcards and a section in the book (`docs/letters/MEMORY-SYSTEM.md`).
+- **Hooks changed since the first version (read from the data file at 21:05).** Chet and final kaf: loch; he: hut; kaf: cup; mem: mailbox; samekh: swim ring; shin: shortcake; final pe: feather; final tsadi: nuts. Others read from the file: alef uh-oh, bet ball, gimel grumpy, dalet dive, vav vine, zayin zipper, tet tea, yod yo-yo, lamed lamp, nun nap, ayin eye, pe pop, tsadi pizza, qof kite, resh round, tav table, final mem mom, final nun nail. The old chet hook "Chanukah" no longer appears in the file.
+- **Stories per tradition.** The builder writes the Israeli story and replaces the word's transliteration with the rule respelling for the others (checked in the file for alef, nun, chet and final tsadi: for example "cholov", "Neir", "Eitz" in the Ashkenazi text). This addresses finding 4 of `docs/qa/MEMORY-CARD-QA.md`. Whether the respellings are right for an Ashkenazi reader has not been checked by one.
+- **Card position and the tracing-stage trade-off.** In `src/letters/trace.view.js` the compact card (`data-first`) now sits above the tracing stage for a letter the learner has not traced yet, and below the toggles once traced. Measured by me at about 21:10 (headless Chromium, synthetic, fresh profile with the tradition stored as israeli and as ashkenazi (I did not confirm that the stored key took effect), letters alef, bet, shin, final kaf and final tsadi, no page errors): the card is 90 px tall and starts at y 316 to 433; the stage starts at y 415 to 533 (about 99 px below the card top) and is 326 px tall at 375x667 and 311 px at 360x640. Without scrolling, 160 to 252 px of the stage is visible at 375x667 (107 to 225 px at 360x640). The y position varies by letter because some letters carry a review notice above the card. I did not measure the stage before the move in the same run, so "about 99 px lower" is the card block's height, not a before and after. Whether tracing is harder with less of the box visible has not been tried by anyone.
+- **Pictures in the install list.** `tools/build-precache.mjs` installs 9 of the 28 pictures (shin, bet, lamed, vav, mem, he, tav, final mem, alef; the letters of the first-day path, lessons r01 to r03 and the first card); the other 19, including `sin.svg`, load on demand when a letter page, the atlas or a review card shows them, or from "Download everything". The chain data and the code stay in the install list. The committed `precache-manifest.js` (15:59) contains no memory-chain file, card module or picture (grep count 0), so a build is owed before any release.
+- **Run in this refresh (about 21:05).** `node --test` per file: `letters.memorychain` 10 pass; `letters.morph` 46; `letters.morph2` 9; `letters.morph3` 12; `letters.morph.contract` 35; `letters.memorycard` 17; `letters.memory` 14; `letters.memory.flow` 5; `letters.memory.core` 3; `letters.trace` 14; `letters.trace.remember` 1; `workbook.extras` 7. All 18 non-browser `letters.*` files together: 223 tests, 222 pass, 0 fail, 1 skipped. `letters.memorycard.fallback.browser.test.js` was not run. `node tools/letters/build_memory_chain.mjs --check`: 27 chains verified, file up to date. `node tools/letters/build_morph_sheet.mjs --check`: all 28 files follow the contract. These numbers replace the earlier ones in this file (10, 46, 9, 12, 35, 13, 14, 5, 7 at 19:42); do not quote those.
+- **Reports (written by the repo, not by reviewers).**
+  - `docs/qa/MEMORY-CARD-QA.md` (20:32, written against the card below the stage): 10 findings. Status now: 1 (card below the tracing box) addressed by the move above; 4 (Ashkenazi story text) addressed in the data; 5 (final kaf sound line names a dagesh) not changed, the line still reads "Same sound: kh as in loch (k with dagesh, as in the last word of the Priestly Blessing)"; 8 (precache lacks the card files) still true. Findings 2, 3, 6, 7, 9 and 10 were not re-checked.
+  - `docs/review/MORPH-RECOGNITION.md` (first blind read, 28 files) is superseded by `docs/review/MORPH-RECOGNITION-2.md` (20:32, after the first redraw): 22 G, 6 Y (alef, he, lamed, mem-final, pe-final, tav), 0 R. The art lane then changed 10 more files (alef, he, lamed, mem-final, pe-final, tav at 20:43 to 20:46; bet, nun, tet, vav at 20:38 to 20:39) and nobody has re-run that read. I looked once at the six weak ones at 200 px, light mode: my read is a handstand mime, a hut on a mountain with a person at the gap, a lamp with its bulb inside the frame, a tent with a mother at the door, a large feather held off a nose, a table with a baby. That is one viewer, not blind to the intended objects.
+  - `docs/review/MEMORY-CHAIN-AUDIT.md` (19:57, draft) was written before the hook changes and redraws; its four blocking items are not re-audited. What I can see now: the chet "Chanukah" hook is gone from the data; the picture-text mismatch is reported fixed in `MORPH-RECOGNITION-2.md` (not re-checked by me); the ayin picture was redrawn as an eye (seen in that review, and in the file list above).
+- **Book.** The book outputs were rebuilt by another lane between about 20:52 and 21:08; `book/out/alef-book.html` (21:06) contains the chapter "Letters you will never forget". Details and what was not checked: `docs/book/REBUILD-NEEDED.md`.
+- **Workbook PDFs.** The manifest `assets/workbook/manifest.json` (20:50) lists 26 PDFs totalling 13,919,486 bytes (13.27 MiB) against the 31 MiB cap in `tests/workbook.extras.test.js`; the 30.53 MiB figure in earlier copies of this file is out of date. I did not look into what changed.
+- **Not done:** no native or teacher review (reviewer rows are in the `mnemonics` area of the review packs), no learner test, no real phone, no audio check of the sound lines, no claim that it improves recall. Pictures are self-rated.
 
-# ALEF status (lane 8, shell/QA-fix round, 2026-11-04)
+## Audit board outcomes (read 2026-11-04 about 21:10; `docs/research/BOARD.md`)
 
-## This round (lane 8)
-- Precache test: `precache: skips vendor, PDFs and files over the size limit` failed because `precache-manifest.js` was stale, not because of a rule bug. Other lanes were adding and removing files under `data/` (corpus gaps/prayer-meta/torah-service-guide came and went) and `data/audio/manifest.json` was rewritten (it measured 3.9 MB at one point, over the 2 MiB cap, so the builder dropped it; at the last look it is 1.78 MB, so it is back in). Fix: re-ran `node tools/build-precache.mjs`. It will go stale again whenever any lane adds a file under `src/`, `assets/` or `data/`; re-run it last.
-- QA defect O1 (tracing stage ~1660px down on a phone): fixed in CSS only (`assets/css/app.css`, phone widths), without editing lane 2's files. The 27-letter grid becomes a one-row horizontal strip, and the stage is moved up under the letter name; toggles, draft notice and the "Remember it" panel are below it. Measured in a screenshot at 390x844: stage starts at about y=390 and is on screen without scrolling (before: about 1660). Caveat: this depends on the child order of lane 2's markup (documented in ARCHITECTURE.md); if lane 2 changes that markup the reorder may need a tweak.
-- Chrome compaction: content now starts at y=71 on a phone (was y=203). Header is one 44px row; the sound bar is one line with an ellipsis (tap it for the full text; the full text is still in the DOM for screen readers); the five main sections (Home, Learn, Letters, Sounds, Read) are a fixed bottom tab bar with a "More" button that opens a sheet with Scan, Calendar, Workbook, Settings, About. At 720px and wider the old top nav (all sections in one row) is used. Escape and an outside tap close the sheet.
-- Tap targets: range sliders, file inputs (and their button), text/url inputs and select are at least 44px; the sound-bar link is 44px (QA walk `--quick`: 0 small targets on 8 routes).
-- Not fixed by me (other lanes' markup, see below): the two checkbox rows whose label is a sibling, not a wrapper.
-- Verified: `node tools/qa/walk.mjs --quick` 0 hard failures; full `node --test`: 596 tests, 593 pass, 3 fail, all three in the audio lane (`audio manifest resolves corpus words/lines...`, `Tetragrammaton lines/words are stored with the spoken substitute...`, `audio hook ids agree with the audio manifest...`), which was being edited at the same time. Screenshots viewed at 390px: home, letters/alef, learn, vocab, About with the More sheet open, and About at 1280px. Not viewed: dark mode after this change, other routes. `tools/smoke.mjs` and `tools/a11y/run.mjs` were not re-run after the nav change (a11y run still finds `#nav a`).
-- Limits: headless Chromium only; the bottom bar was not checked against an iOS Safari toolbar or a real notch; the "More" sheet is a non-modal disclosure (no focus trap), and the one-line sound status can only be expanded by tap/click, not by keyboard.
+Two auditors (R: recommendations and audits, M: placement map and code audits) and two builders (B and B2) worked from a competitor and gap analysis. I read the board and quote its own words about status; I re-ran only the tests named in the other sections of this file. "Built" below means the code exists and its own tests passed in the board's logs, not that anything was reviewed or tried by a learner. Every new route is `preview`.
 
-
-Checked this run: `node --test` -> 502 tests, 0 failing at the last run (the precache file-list test fails whenever any lane adds a file under src/, assets/ or data/ until `node tools/build-precache.mjs` is re-run; re-run it last). `node tools/smoke.mjs` (Chromium, 390x844 @2x) exits 0: no uncaught page errors, offline reload of the app shell works once with the service worker, first-run setup persists, lesson -> review flow works.
-
-## Routes
-Data-driven in `src/shell/router.js`. New this round (lane 1 sub-screens; they re-use `curriculum/learn.view.js` by injecting its query, so `#/learn?loanwords=1` etc. still work):
-`#/loanwords`, `#/loanwords/:group`, `#/spotit/:letter`, `#/checkpoint`, `#/dialogues`, `#/dialogues/:id`. They are not in the nav bar (Learn stays highlighted); Home has a "More ways to learn" card with Words you can read, Look-alike check, Israel dialogues. Spot It is linked from lessons (it needs a letter). `#/letters/atlas`, `#/soundgap`, `#/vocab` mount and have Home tiles (their view files now exist).
-
-## Screenshots actually viewed at 390px (docs/screens/)
-spotit (seeded, tapped and checked), loanwords lw1 (seeded), checkpoint (seeded), dialogues d-cafe, atlas, soundgap, workbook, home. NOT viewed: dialogues list, vocab, about credits (checked only that it mounts), dark mode, desktop width.
-Fixed after viewing: Spot It target line read backwards (RTL container), "(missed)" labels wrapped cells, dialogue lines wrapped mid-sentence, Sound-gap fieldset widened the page to 414px, duplicate workbook labels (the memory-hook PDFs now say so), uneven Home tiles.
-
-## Open defects that are not lane 8's
-- From the QA list (docs/qa/DEFECTS.md): O2 ladder progress bar overlaps its status line (lane 1, `ladder.view.js`); O3 Hebrew letters in vocab glosses lack `lang=he` (lane 9); O4 unknown letter/text ids silently show a default, `?tab=drill|type` ignored (lanes 2, 5); O5 remainder: `#photo-online` (lane 6, scan.view.js) and `#vc-forms` (lane 9, vocab.view.js) are checkboxes with a sibling `<label for>`, so the click target is under 44px: wrap the input in the label; O6 plural copy "1 reviews due" (lanes 1, 9).
-- `data/audio/manifest.json` is 1.78 MB and is precached only while under 2 MiB; it is also fetched on every boot by `src/app.js`. Lane 4 should consider splitting it.
-- `src/curriculum/spotit.view.js` (lane 1): after "Check" the result shows the literal text "null" because `result.replaceChildren(..., fooled.length ? el(...) : null, ...)` stringifies null. Filter nulls.
-- Sound gap table is slightly wider than 390px and is clipped by `main{overflow-x:clip}` rather than scrolled; the view should wrap it in `.table-wrap`.
-- Atlas and Sound gap use their own inline CSS with fixed colours; dark mode not checked.
-
-## Not verified
-iOS/Android, install prompt, screen readers, keyboard-only walkthrough, CI on GitHub, correctness of Hebrew UI labels (all machine-drafted; new labels nav.loanwords/checkpoint/dialogues are drafts), the credits text has not been legally reviewed.
+- **Built (preview routes):** nikkud fade practice (`src/nikkudfade`, lesson-aware sessions, a two-option "which reading" check for 66 look-alike words, homograph lookup); roots and verb families (`src/roots`, families flagged loose or rule-checked, `data/roots/verified.json` empty); gender drill (`src/genderdrill`) with learner gender now one Settings value (`gender`: unset, m, f, both); record-and-compare (`src/recordcompare`, unscored, memory only); FSRS-6 calculator page (`src/fsrs/fsrs6.js`, route `scheduler`); known-words coverage check (`src/knownwords`, `tools/knownwords/check.mjs`); syllabus and time-budget pages (`src/coursemap`, generated `docs/curriculum/SYLLABUS.md`). Also a shared helper marking Hebrew runs inside English prompts (`src/hebrewtext/mixed.js`).
+- **Draft or unproven:** every Hebrew string in these features is unreviewed. The FSRS-6 port equals the reference library on the board's fixture and on an auditor's 4,239 random steps, but it is NOT wired into `src/curriculum/srs.js`, so the live review still uses the older hand-chosen constants; wiring needs a decision on how the old difficulty (5.5 for a Good first review) maps to FSRS-6 (about 2.1). The 66-item look-alike flag and the 79-noun irregular-gender list come from dictionary data; the board lists nine of the first 60 quiz nouns as unsuitable for a beginner. Four root families (for example the one under the letters ס־פ־ר) still mix senses. The syllabus page's 400 to 600 hour range is a planning figure derived from a language-difficulty table, not a study, and not ALEF's goal; the 50 intermediate lessons are not in the 55.4 lesson hours.
+- **Not built:** past-tense import (1,789 of 1,820 verbs have one complete table in a Wiktionary extract, measured by an auditor; blocked on a share-alike licence decision), conjugation drill, local speech recognition, the 20-word listening test, a stage on the review card, machine-pointed sentences.
+- **Open defects the board found:** two malformed pointed strings copied into `data/roots/` make the Hebrew-lint baseline test fail; known-words loads the 7 MB `words.json`; a take that hits the time limit in `src/speak/recognizer.js` is lost (confirmed by reading; file not edited); `tests/a11y.newviews.test.js` count out of step with the tool; the settings-defaults snapshot test was reported fixed at 21:05.
+- **Cost.** The board measured about 2,500 hand-written lines added in about an hour, mostly small preview modules (its own measurement of this session).
+- **Human inputs the board lists:** licence decision for share-alike verb data, a 20-clip speech bench and phone timing, the 20-word listening test, a reader's pass on the loose root families and irregular-gender nouns, and positioning (liturgical reading versus general Modern Hebrew).

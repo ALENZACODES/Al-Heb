@@ -1,9 +1,14 @@
 // @ts-check
+import { speechText } from '../shell/names.js';
 // ALEF audio player. Resolution order for play(kind, id):
 //   1. exact file (same voice + tradition) whose manifest status is not "missing"
 //   2. same voice, OTHER tradition, only if the manifest entry lists it in `equivalentTo`
 //   3. Web Speech API (speechSynthesis, he-IL) speaking the pointed text
 //   4. nothing
+// Ids: a word clip may be asked for under its lesson-word id (r01-w1) or its vocabulary id (h842147e5, data/vocab/words.json).
+// Manifest word entries carry `vocabId` (lesson-word entries whose pointed text maps to one vocab entry, see
+// data/curriculum/word-vocab-map.json). The player links the two ids both ways and, for steps 1-2, tries the requested id
+// first, then every linked id (same kind, same voice and tradition). An exact-id file always wins over a linked one.
 // A man voice is never swapped for a woman voice by the file logic. The Web Speech fallback cannot
 // guarantee gender or tradition (browser voices expose neither); results say so via `voiceGuaranteed`.
 // Results always carry `source`: 'file' | 'tts-fallback' | 'none'.
@@ -45,6 +50,27 @@ export function createAudio(opts) {
     if (!textBy.has(`${e.kind}|${e.id}`) && e.text) textBy.set(`${e.kind}|${e.id}`, e.text);
   } };
   addEntries(manifest);
+  // kind|id -> Set of kind|id linked to it (lesson-word id <-> vocab id); built from entries' `vocabId`.
+  const links = new Map();
+  const link = (a, b) => {
+    if (a === b) return;
+    if (!links.has(a)) links.set(a, new Set());
+    if (!links.has(b)) links.set(b, new Set());
+    links.get(a).add(b); links.get(b).add(a);
+  };
+  const addLinks = (list) => { for (const e of list) if (e.vocabId) link(`${e.kind}|${e.id}`, `${e.kind}|${normalizeId(e.vocabId)}`); };
+  addLinks(manifest);
+  /** The requested id first, then every id reachable through the links (so two lesson words sharing one vocab id also meet). */
+  function candidates(kind, id) {
+    const out = [id]; const seenIds = new Set([`${kind}|${id}`]); const queue = [`${kind}|${id}`];
+    while (queue.length) {
+      for (const n of links.get(queue.shift()) || []) {
+        if (seenIds.has(n)) continue;
+        seenIds.add(n); queue.push(n); out.push(n.slice(kind.length + 1));
+      }
+    }
+    return out;
+  }
 
   let current = null;     // {audio} currently playing
   let stopped = 0;        // generation counter for cancelling sequences
@@ -57,6 +83,31 @@ export function createAudio(opts) {
     return { voice, tradition };
   }
 
+  /** File step for ONE id: exact, then alias, then equivalent tradition. Returns a partial plan or null. */
+  function fileFor(voice, tradition, kind, id) {
+    const exact = index.get(`${voice}|${tradition}|${kind}|${id}`);
+    if (exact && exact.status !== 'missing') {
+      return { source: 'file', path: exact.path, url: url(exact.path), entryStatus: exact.status, via: 'exact' };
+    }
+    // alias (e.g. a one-line 'prayer' record is the same clip as its 'line'): only when the target file exists
+    if (exact && exact.aliasOf) {
+      const [ak, ...rest] = String(exact.aliasOf).split('/');
+      const target = index.get(`${voice}|${tradition}|${ak}|${rest.join('/')}`);
+      if (target && target.status !== 'missing') {
+        return { source: 'file', path: target.path, url: url(target.path), entryStatus: target.status, via: 'alias' };
+      }
+    }
+    if (exact && Array.isArray(exact.equivalentTo)) {
+      for (const t of exact.equivalentTo) {
+        const alt = index.get(`${voice}|${t}|${kind}|${id}`);
+        if (alt && alt.status !== 'missing') {
+          return { source: 'file', path: alt.path, url: url(alt.path), fileTradition: t, entryStatus: alt.status, via: 'equivalent' };
+        }
+      }
+    }
+    return null;
+  }
+
   /** Decide the source without playing. */
   function plan(kind, rawId, o = {}) {
     const id = normalizeId(rawId);
@@ -67,43 +118,36 @@ export function createAudio(opts) {
     if (!VOICES.includes(voice)) return { source: 'none', reason: 'invalid-voice', kind, id, voice, tradition };
     if (!TRADITIONS.includes(tradition)) return { source: 'none', reason: 'invalid-tradition', kind, id, voice, tradition };
     const exact = index.get(`${voice}|${tradition}|${kind}|${id}`);
-    if (exact && exact.status !== 'missing') {
-      return { source: 'file', path: exact.path, url: url(exact.path), kind, id, voice, tradition, entryStatus: exact.status, via: 'exact' };
+    // Same-tradition files (exact, alias) under any linked id beat another tradition's file under the requested id.
+    let stand = null;
+    for (const cid of candidates(kind, id)) {
+      const hit = fileFor(voice, tradition, kind, cid);
+      if (!hit) continue;
+      const found = { ...hit, kind, id, voice, tradition, ...(cid !== id ? { viaId: cid } : {}) };
+      if (hit.via !== 'equivalent') return found;
+      if (!stand) stand = found;
     }
-    // alias (e.g. a one-line 'prayer' record is the same clip as its 'line'): only when the target file exists
-    if (exact && exact.aliasOf) {
-      const [ak, ...rest] = String(exact.aliasOf).split('/');
-      const target = index.get(`${voice}|${tradition}|${ak}|${rest.join('/')}`);
-      if (target && target.status !== 'missing') {
-        return { source: 'file', path: target.path, url: url(target.path), kind, id, voice, tradition, entryStatus: target.status, via: 'alias' };
-      }
-    }
-    if (exact && Array.isArray(exact.equivalentTo)) {
-      for (const t of exact.equivalentTo) {
-        const alt = index.get(`${voice}|${t}|${kind}|${id}`);
-        if (alt && alt.status !== 'missing') {
-          return { source: 'file', path: alt.path, url: url(alt.path), kind, id, voice, tradition, fileTradition: t, entryStatus: alt.status, via: 'equivalent' };
-        }
-      }
-    }
-    const text = (exact && exact.text) || textBy.get(`${kind}|${id}`);
+    if (stand) return stand;
+    const text = (exact && exact.text) || textBy.get(`${kind}|${id}`) || (typeof o.text === 'string' && o.text.trim() ? o.text : '');
     if (!text) return { source: 'none', reason: 'unknown-item', kind, id, voice, tradition };
     if (!speech || !UtteranceCtor) return { source: 'none', reason: 'no-speech-synthesis', kind, id, voice, tradition };
     if (tradition !== 'israeli' && !allowMismatchedTts && !o.allowMismatchedTts) {
       // Web Speech reads Modern Israeli Hebrew only; do not present it as sephardi/ashkenazi audio.
       return { source: 'none', reason: 'tts-pronunciation-mismatch', kind, id, voice, tradition, text };
     }
-    if (typeof speech.getVoices === 'function') {
-      const vs = speech.getVoices();
-      if (vs && vs.length && !vs.some((v) => /^he([-_]|$)/i.test(v.lang || ''))) {
-        return { source: 'none', reason: 'no-hebrew-browser-voice', kind, id, voice, tradition, text };
-      }
-    }
+    if (noHebrewVoice()) return { source: 'none', reason: 'no-hebrew-browser-voice', kind, id, voice, tradition, text };
     return {
       source: 'tts-fallback', text, kind, id, voice, tradition,
       voiceGuaranteed: false, // browser voice gender/tradition cannot be selected reliably
       mismatch: tradition !== 'israeli',
     };
+  }
+
+  /** True only when the browser lists voices and none is Hebrew (an empty list is unknown, so it is not a refusal). */
+  function noHebrewVoice() {
+    if (!speech || typeof speech.getVoices !== 'function') return false;
+    const vs = speech.getVoices();
+    return !!(vs && vs.length && !vs.some((v) => /^he([-_]|$)/i.test(v.lang || '')));
   }
 
   function playFile(p) {
@@ -122,7 +166,7 @@ export function createAudio(opts) {
 
   function speak(p) {
     return new Promise((resolve) => {
-      const u = new UtteranceCtor(p.text);
+      const u = new UtteranceCtor(speechText(p.text));
       u.lang = 'he-IL';
       if (typeof settings.ttsRate === 'number') u.rate = settings.ttsRate;
       current = { stop: () => { try { speech.cancel(); } catch { /* ignore */ } resolve({ ok: true, stopped: true }); } };
@@ -161,10 +205,11 @@ export function createAudio(opts) {
     const c2 = context(o);
     const { voice } = c2;
     const tradition = israeliOnly.has(`${kind}|${id}`) ? 'israeli' : c2.tradition;
-    const text = textBy.get(`${kind}|${id}`);
+    const text = textBy.get(`${kind}|${id}`) || (typeof o.text === 'string' && o.text.trim() ? o.text : '');
     if (!text) return { source: 'none', reason: 'unknown-item', kind, id, voice, tradition };
     if (!speech || !UtteranceCtor) return { source: 'none', reason: 'no-speech-synthesis', kind, id, voice, tradition };
     if (tradition !== 'israeli' && !allowMismatchedTts && !o.allowMismatchedTts) return { source: 'none', reason: 'tts-pronunciation-mismatch', kind, id, voice, tradition, text };
+    if (noHebrewVoice()) return { source: 'none', reason: 'no-hebrew-browser-voice', kind, id, voice, tradition, text };
     return { source: 'tts-fallback', text, kind, id, voice, tradition, voiceGuaranteed: false, mismatch: tradition !== 'israeli' };
   }
 
@@ -197,6 +242,6 @@ export function createAudio(opts) {
     /** what play() would use right now, without playing. */
     status: (kind, id, o) => plan(kind, id, o),
     /** add entries after creation (the lazily loaded data/audio/manifest-words-<tradition>.json shards). Safe to call repeatedly. */
-    extend: (entries) => addEntries(entries || []),
+    extend: (entries) => { addEntries(entries || []); addLinks(entries || []); },
   };
 }

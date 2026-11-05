@@ -27,7 +27,7 @@ export const DEFAULT_PREFS = Object.freeze({
   v: 1,
   enabled: false,
   hour: 19, minute: 0,
-  days: Object.freeze([0, 1, 2, 3, 4, 6]), // Sunday to Thursday and Saturday night; Friday evening is Shabbat in most zones
+  days: Object.freeze([0, 1, 2, 3, 4]), // Sunday to Thursday. Friday and Saturday are off until the learner picks them: Shabbat quiet needs a city, so no default can be safe
   shabbatQuiet: true,
   yomTovQuiet: true,
 });
@@ -188,7 +188,7 @@ export function scheduleStudyReminder(p, opt = {}) {
     if (late < 0) return arm(); // woke early (long delay was clamped, or the clock moved)
     if (late <= LATE_GRACE_MS) {
       const when = entry.target;
-      Promise.resolve(show(opt.title ?? "ALEF: time to study", opt.body ?? "A few minutes of Hebrew keeps the streak going.", { route: opt.route ?? "#/learn" })).catch(() => {});
+      Promise.resolve(show(opt.title ?? "ALEF: a few minutes of Hebrew", opt.body ?? "Only if you feel like it. Your lessons and review cards stay as they are.", { route: opt.route ?? "#/learn" })).catch(() => {});
       try { opt.onFire?.(when); } catch { /* listener bug must not stop the chain */ }
     }
     arm(); // either fired, or missed (tab was frozen): move to the next occurrence, never fire late

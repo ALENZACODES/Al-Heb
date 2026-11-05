@@ -10,20 +10,6 @@
 Adding a browser test: name it `something.browser.test.js` (auto-detected) or add it to `BROWSER`.
 `tests/helpers/memo.js` (`memoDisk`) caches deterministic JSON-safe builder output in the OS temp dir, keyed on file sizes and mtimes under `data/`, `src/` and the builder folder; set `ALEF_NO_TEST_CACHE=1` to bypass it. Tests that assert determinism still call the builder directly.
 
-## Exact YAML change (for the workflow owner; not applied here)
+## Workflow layout
 
-In `.github/workflows/ci.yml`, job `test`, replace the step `run: node --test` with:
-
-```yaml
-      - name: Unit tier (fast)
-        run: npm test
-```
-
-In job `smoke`, after the Playwright install step and before `node tools/smoke.mjs`, add:
-
-```yaml
-      - name: Browser tier
-        run: npm run test:browser
-```
-
-In `.github/workflows/pages.yml`, step "Tests", replace `run: node --test` with `run: npm test` (the browser tier stays in the smoke job; it needs Playwright, which the deploy build does not install).
+`.github/workflows/ci.yml` has three jobs: `test` (unit tier, then the precache-is-current check), `build-dist` (the Cloudflare-style build and deploy check) and `browser` (Playwright, Chromium and axe-core, browser tier, then `tools/smoke.mjs`; `continue-on-error: true` until it has gone green on GitHub once). `pages.yml` only builds and checks `dist/`. What each runner needs, and every gap found, is in `CI-RUNNER-AUDIT.md`.

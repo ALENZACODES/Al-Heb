@@ -36,6 +36,7 @@ first release cannot ship without (settings with backup/restore/delete, about, c
 - A small banner at the top of the page, "Preview: unreviewed, may change" (`src/shell/preview-banner.js`, mounted from
   `show()` in `src/app.js`).
 - Still searchable; search results carry a "(Preview)" label.
+- One exception: `accessibility` (/accessibility, the accessibility settings and statement) is a preview route that also has a quick row under Settings in the More sheet, and is linked from Settings and the first-run screen, because help with using the app should not sit inside a collapsed "unreviewed" group. It still carries the Preview banner and is not a v0 route.
 - Still opens by direct link; nothing is removed or gated.
 
 ## Exit criteria: promoting a preview route to v0

@@ -41,6 +41,10 @@ export function renderMenu(listEl, { routes, available, current }) {
   const settingsRoute = routes.find((r) => r.name === 'settings');
   const quick = settingsRoute && available.has('settings')
     ? rowsOf([settingsRoute]).map((li) => { li.setAttribute('class', 'nav-quick'); li.setAttribute('data-quick', 'settings'); return li; }) : [];
+  // Accessibility is a preview page (docs/v0/SCOPE.md) but help with the app itself should not sit inside a collapsed "unreviewed" group,
+  // so it also gets one quick row under Settings. Same row style, no extra weight; it is the only preview page listed outside the Preview group.
+  const a11yRoute = routes.find((r) => r.name === 'accessibility');
+  if (a11yRoute && available.has('accessibility')) quick.push(...rowsOf([a11yRoute]).map((li) => { li.setAttribute('class', 'nav-quick'); li.setAttribute('data-quick', 'accessibility'); return li; }));
   listEl.replaceChildren(...quick, ...groups);
   return quick.length + groups.length;
 }

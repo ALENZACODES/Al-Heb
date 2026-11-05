@@ -86,11 +86,51 @@ test('words section: 30 cards, covered until tapped; trope + sources sections re
   await btn(root, /Trope: not taught/).click();
   assert.match(root.textContent, /not taught here/i); assert.match(root.textContent, /cantor/);
   await btn(root, /^Sources$/).click();
-  assert.match(root.textContent, /Leningrad Codex/); assert.match(root.textContent, /Public Domain/); assert.match(root.textContent, /CC-BY/);
+  assert.match(root.textContent, /Leningrad Codex/); assert.match(root.textContent, /Public Domain/); assert.match(root.textContent, /CC0/);
 });
 
 test('section can be chosen by route param', async () => {
   const { root, ctx } = mk(); ctx.params = { section: 'trope' };
   await mount(root, ctx);
   assert.equal(root.queryAll('.trd-tab').find((b) => b.attrs['aria-pressed'] === 'true').attrs['data-section'], 'trope');
+});
+
+test('large letters: the Shema line draws the ayin and dalet large with a note; other lines draw none; points toggles keep them', async () => {
+  const { root, ctx } = mk();
+  await mount(root, ctx);
+  assert.equal(root.queryAll('.trd-lg').length, 0, 'the Priestly Blessing line has no large letters');
+  const pick = root.queryAll('#trd-pick')[0];
+  const shema = pick.all((n) => n.tag === 'option' && /Shema Yisrael/.test(n.textContent))[0];
+  pick.attrs.value = shema.attrs.value;
+  await pick.fire('change', { target: { value: shema.attrs.value } });
+  const big = root.queryAll('.trd-lg');
+  assert.deepEqual(big.map((b) => b.textContent.replace(/[ְ-ׇ]/g, '')), ['ע', 'ד']);
+  assert.match(root.queryAll('.trd-lgnote')[0].textContent, /Written large in the source text: ע, ד\./);
+  await root.queryAll('[data-level="3"]')[0].click();
+  assert.deepEqual(root.queryAll('.trd-lg').map((b) => b.textContent), ['ע', 'ד']);
+});
+
+test('secondary controls sit in a closed details; the line itself is outside it', async () => {
+  const { root, ctx } = mk();
+  await mount(root, ctx);
+  const ctl = root.queryAll('details.trd-ctl')[0];
+  assert.ok(ctl && ctl.attrs.open === undefined, 'closed by default');
+  assert.ok(ctl.queryAll('#trd-pick').length === 1 && ctl.queryAll('[data-level="1"]').length === 1);
+  assert.equal(ctl.queryAll('.trd-line').length, 0);
+  assert.ok(root.queryAll('.trd-line').length >= 1);
+});
+
+test('ladder: the sof pasuq the source has at the line end is drawn as a mark, not a tap target; word count is unchanged (audio text comes from item.he, untouched)', async () => {
+  const { root, ctx } = mk();
+  await mount(root, ctx);
+  const words = () => root.queryAll('.trd-w').length;
+  const stops = () => root.queryAll('.trd-stop');
+  const n1 = words();
+  assert.equal(stops().length, 1, 'the Priestly Blessing line ends with a sof pasuq in the source');
+  assert.equal(stops()[0].textContent, '\u05C3');
+  assert.equal(stops()[0].attrs['aria-hidden'], 'true');
+  assert.ok(!root.queryAll('.trd-w').some((w) => w.textContent.includes('\u05C3')), 'no word button carries it');
+  await root.queryAll('[data-level="3"]')[0].click();
+  assert.equal(stops().length, 1, 'also shown at the unpointed step');
+  assert.equal(words(), n1);
 });

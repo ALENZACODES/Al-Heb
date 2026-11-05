@@ -10,8 +10,18 @@ const NO_TEXT = 'No text, letters or numerals anywhere in the image.';
 const mByFile = new Map(manifest.map((r) => [r.file, r]));
 const fresh = [...next].filter((r) => !mByFile.has(r.file));
 
-test('exactly 1000 pending rows, command order', () => {
-  assert.equal(next.length, TARGET);
+const meta = JSON.parse(read('data/images/next1000-groups.json')).meta;
+const inherited = next.filter((r) => mByFile.has(r.file));
+
+// Decision: TARGET (1000) is a ceiling. The 1797-row manifest leaves no more block H rows to refill,
+// so the pending list is whatever remains (inherited manifest rows + fresh block H rows), not a fixed 1000.
+test('pending rows are all pending, within the ceiling, in command order', () => {
+  assert.ok(next.length > 0 && next.length <= TARGET);
+  assert.equal(next.length, inherited.length + fresh.length);
+  assert.equal(next.length, build().rows.length);
+  assert.equal(meta.total, next.length);
+  assert.equal(meta.remainingManifest, inherited.length);
+  assert.equal(meta.newRows, fresh.length);
   assert.ok(next.every((r) => r.status === 'pending'));
   for (let i = 1; i < next.length; i++) assert.ok(+next[i].command >= +next[i - 1].command, `order at ${i}`);
 });
@@ -33,15 +43,16 @@ test('sizes limited to the three allowed (new rows)', () => {
 });
 test('groups json agrees with csv and a fresh build', () => {
   const g = JSON.parse(read('data/images/next1000-groups.json'));
-  assert.equal(g.groups.flatMap((x) => x.rows).length, TARGET);
+  assert.equal(g.groups.flatMap((x) => x.rows).length, next.length);
   assert.deepEqual(g.groups.flatMap((x) => x.expectedFiles), next.map((r) => r.file));
   assert.deepEqual(build().rows.map((r) => r.file), next.map((r) => r.file));
 });
-test('partly done command lists only pending rows and notes the remaining range', () => {
-  const g = JSON.parse(read('data/images/next1000-groups.json')).groups[0];
-  assert.equal(g.number, 36);
-  assert.match(g.title, /partial: rows 2-10 remaining/);
-  assert.equal(g.rows.length, 9);
-  assert.equal(g.rows[0].file, 'L26_pe_final_print_ari.png');
-  assert.equal(JSON.parse(read('data/images/next1000-groups.json')).meta.doneCount, 282);
+test('groups are in ascending command order and each group lists only its pending rows', () => {
+  const groups = JSON.parse(read('data/images/next1000-groups.json')).groups;
+  for (let i = 1; i < groups.length; i++) assert.ok(groups[i].number > groups[i - 1].number, `group order at ${i}`);
+  for (const g of groups) {
+    assert.ok(g.rows.length > 0 || g.textOutputs.length > 0, `group ${g.number}`); // text-only commands (e.g. 100) have no rows
+    for (const r of g.rows) { assert.equal(+r.command, g.number); assert.equal(r.status, 'pending'); }
+  }
+  assert.equal(groups[0].number, +next[0].command);
 });

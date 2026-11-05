@@ -40,7 +40,9 @@ test('router table: module files for lane 8 exist; others are in the contract pa
   }
 });
 test('settings defaults and validation', () => {
-  assert.deepEqual({ ...DEFAULTS }, { voice: 'f', congregation: 'sephardi', israelTrack: false, script: 'print', theme: 'auto', lat: null, lon: null, goal: 'read', onboarded: false, browserVoiceAnyway: true, showUnapprovedImages: false, writeGodAsGd: false, haptics: false, soundEffects: false });
+  // Each lane adds its own settings keys, so this checks the long-standing defaults one by one instead of the whole object (new keys have their own tests).
+  const expectedDefaults = { voice: 'f', congregation: 'sephardi', israelTrack: false, script: 'print', theme: 'auto', lat: null, lon: null, gender: null, goal: 'read', onboarded: false, browserVoiceAnyway: true, showUnapprovedImages: false, writeGodAsGd: false, haptics: false, soundEffects: false, gender: null };
+  for (const [k, v] of Object.entries(expectedDefaults)) assert.deepEqual(DEFAULTS[k], v, 'default for ' + k);
   const s = createSettings(createStore({ storage: createMemoryStorage() }));
   assert.equal(s.congregation, 'sephardi');
   assert.deepEqual(s.set({ voice: 'x', lat: 200, script: 'cursive' }), ['voice', 'lat']);
@@ -273,6 +275,7 @@ test('precache: first install is the v0 core only (under 4 MiB); preview data an
   const m = computeManifest();
   const bytes = m.files.reduce((a, f) => a + statSync(join(root, f)).size, 0);
   assert.ok(bytes < 4 * 1048576, `first-install precache is ${(bytes / 1048576).toFixed(2)} MiB, budget 4 MiB`);
+  assert.ok(bytes < 3.75 * 1048576, `first-install precache is ${(bytes / 1048576).toFixed(2)} MiB: keep 0.25 MiB of headroom under the 4 MiB budget (move something to ON_DEMAND in tools/build-precache.mjs)`);
   assert.equal(m.files.filter((f) => m.onDemand.includes(f)).length, 0);
   assert.ok(m.files.every((f) => !isOnDemand(f)) && m.onDemand.every(isOnDemand));
   assert.ok(m.onDemand.some((f) => f.startsWith('data/vocab/')) && !m.files.some((f) => f.startsWith('data/vocab/')), 'vocab data is on demand');
@@ -281,6 +284,24 @@ test('precache: first install is the v0 core only (under 4 MiB); preview data an
     'data/pronunciation/consonants.json', 'data/pronunciation/niqqud.json', 'data/firstday/first10.json', 'data/firstday/onramp.json', 'data/firstday/ladder.json', 'data/progress/milestones.json', 'data/progress/belt-gates.json',
     'data/onboarding/plans.json', 'data/legal/attributions.json', 'data/corpus/registry.json', 'data/corpus/phrasebook.json', 'data/img/index.json', 'data/calendar/locations.json', 'data/placement/config.json',
     'data/service/orders.json', 'data/timedread/gates.json', 'src/curriculum/lesson.view.js', 'src/letters/trace.view.js', 'src/shell/offline.view.js']) assert.ok(m.files.includes(f), `v0 file not installed: ${f}`);
+});
+
+test('precache: letter memory chain: data + code installed, only first-day pictures installed, the rest of the pictures on demand', async () => {
+  const { computeManifest, FIRST_DAY_LETTERS } = await import('../tools/build-precache.mjs');
+  const m = computeManifest();
+  for (const f of ['data/letters/memory-chain.json', 'src/letters/memory.js', 'src/letters/memory.core.js', 'src/letters/memorycard.js', 'src/letters/memory.view.js']) assert.ok(m.files.includes(f), `memory chain file not installed: ${f}`);
+  // the first-day set is derived from the course data, so it cannot drift from what the first lessons teach
+  const rd2 = (f) => JSON.parse(readFileSync(join(root, f), 'utf8'));
+  const want = new Set([...rd2('data/firstday/onramp.json').steps.filter((s) => s.kind === 'letter').map((s) => s.letter), ...rd2('data/firstday/first10.json').letters.map((l) => l.id),
+    ...rd2('data/curriculum/lessons.json').lessons.filter((l) => ['r01', 'r02', 'r03'].includes(l.id)).flatMap((l) => l.letters), 'alef' /* the card #/letters opens on */]);
+  assert.deepEqual([...FIRST_DAY_LETTERS].sort(), [...want].sort(), 'FIRST_DAY_LETTERS (tools/build-precache.mjs) must be the letters of the on-ramp, the first-ten preview, lessons r01 to r03 and alef');
+  const chain = rd2('data/letters/memory-chain.json');
+  const pics = new Map(chain.letters.map((e) => [e.id, e.picture.svg]));
+  for (const id of FIRST_DAY_LETTERS) assert.ok(m.files.includes(pics.get(id)), `first-day picture not installed: ${id}`);
+  const rest = [...pics.values()].filter((f) => !FIRST_DAY_LETTERS.some((id) => pics.get(id) === f));
+  assert.ok(rest.length >= 15);
+  for (const f of rest) assert.ok(m.onDemand.includes(f) && !m.files.includes(f), `later-letter picture should be on demand: ${f}`);
+  assert.ok(m.files.filter((f) => f.startsWith('assets/letters/morph/')).length === FIRST_DAY_LETTERS.length);
 });
 
 test('router: lane 1 sub-screens inject the query learn.view.js dispatches on', () => {

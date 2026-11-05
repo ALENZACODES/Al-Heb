@@ -245,9 +245,11 @@ test("14-day simulated calendar, observant: 0 notifications on Shabbat/Yom Tov, 
   assert.equal(fri.title, "Start your day with God");
   assert.equal(new Set(items.map((i) => i.uid)).size, items.length);
 });
-test("erev time is the earlier of the chosen time and 16:00; non-observant gets every day at the chosen time", () => {
+test("erev time is the earlier of the chosen time and the cap (default 14:00, learner can change it); non-observant gets every day at the chosen time", () => {
   const late = P.normalizePrefs({ on: true, time: "18:30" }), early = P.normalizePrefs({ on: true, time: "06:45" });
-  assert.equal(P.reminderOn("2026-11-06", late, { observant: true }).time, "16:00");
+  assert.equal(P.reminderOn("2026-11-06", late, { observant: true }).time, "14:00");
+  assert.equal(P.reminderOn("2026-11-06", P.normalizePrefs({ on: true, time: "18:30", eravLatest: "12:15" }), { observant: true }).time, "12:15");
+  assert.equal(P.normalizePrefs({ eravLatest: "bad" }).eravLatest, "14:00");
   assert.equal(P.reminderOn("2026-11-06", early, { observant: true }).time, "06:45");
   assert.equal(P.reminderOn("2026-11-07", late, { observant: true }).fire, false);
   const all = P.morningItems("2026-11-02", 14, late, verses, { observant: false });
@@ -255,7 +257,7 @@ test("erev time is the earlier of the chosen time and 16:00; non-observant gets 
   assert.equal(P.morningItems("2026-11-02", 3, P.normalizePrefs({ on: false }), verses, { observant: true }).length, 0);
 });
 test("fake-clock fire test: Friday 15:59 fires the before-Shabbat reminder; Saturday 08:00 schedules nothing", () => {
-  const prefs = P.normalizePrefs({ on: true, time: "18:30" });
+  const prefs = P.normalizePrefs({ on: true, time: "18:30", eravLatest: "16:00" }); // learner raised the default 14:00 cap
   const fired = []; class N { static permission = "granted"; constructor(t, o) { fired.push([t, o.body]); } }
   const timers = [];
   const run = (now) => scheduleLocalNotifications(P.morningItems(iso(now.getFullYear(), now.getMonth() + 1, now.getDate()), 1, prefs, verses, { observant: true }), { now, Notification: N, setTimer: (fn, ms) => (timers.push([fn, ms]), timers.length), clearTimer() {} });
@@ -298,4 +300,9 @@ test("no third-party origins or analytics in the morning/streak code", () => {
     assert.ok(!/https?:\/\//.test(src), `${f} has a URL`);
     assert.ok(!/gtag|analytics|sendBeacon|XMLHttpRequest|WebSocket/i.test(src), `${f} has tracking-like code`);
   }
+});
+test("the unmounted rescue banner and the evening-nudge setting are gone; no draft marker in settings copy", async () => {
+  const V = await import("../src/morning/morning.view.js");
+  assert.equal(V.rescueBanner, undefined);
+  assert.equal(P.rescueState(new Date(2026, 10, 10, 21), { v: 2 }, P.normalizePrefs({}), {}).text, undefined);
 });

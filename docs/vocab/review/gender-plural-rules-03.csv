@@ -1,4 +1,6 @@
 ﻿id,hebrew,niqqud,pos,gender_current,gender_rule,plural_current,plural_rule,rule,flag,reviewer_ok,reviewer_note
+hc05a3c7f,בוץ,בּוּץ,noun,m,,,בוצים,m > +im,plural:rule-unpointed,,
+hf1bcc30a,אספירין,אַסְפִּירִין,noun,m,,,אספירינים,m > +im,plural:rule-unpointed,,
 he23d1ce6,קרום,קְרוּם,noun,m,,,קרומים,m > +im,plural:rule-unpointed,,
 hf513deba,אכסניה,אַכְסַנְיָה,noun,f,,,אכסניות,-a > -ot,plural:rule-unpointed,,
 h69c0e2df,טבק,טַבָּק,noun,m,,,טבקים,m > +im,plural:rule-unpointed,,
@@ -247,5 +249,3 @@ hc385ff1b,היסטריה,הִיסְטֶרְיָה,noun,f,,,היסטריות,-a >
 h562ccff2,צרות,צָרוּת,noun,f,,,צרויות,-ut > -uyot,plural:rule-unpointed,,
 h9f2d54bb,סינר,סִינָר,noun,m,,,סינרים,m > +im,plural:rule-unpointed,,
 h140fc606,כולסטרול,כּוֹלֶסְטֶרוֹל,noun,m,,,כולסטרולים,m > +im,plural:rule-unpointed,,
-hd7dea2f9,אינסולין,אִינְסוּלִין,noun,m,,,אינסולינים,m > +im,plural:rule-unpointed,,
-h062e424f,יואן,יוּאָן,noun,m,,,יואנים,m > +im,plural:rule-unpointed,,

@@ -12,6 +12,7 @@
  * ctx extras for tests: ctx.compareData {index, shards:{file:json}, reasons, picks}, ctx.speech, ctx.UtteranceCtor, ctx.compareSsml.
  */
 import { TRADITIONS, TRADITION_LABELS, STORE_KEY, NOTICE, tokenize, shardOf, shardFile, variantsOf, syllablesOf, describeDifferences, speechPlan, joinWords } from './compare.model.js';
+import { speechText } from '../shell/names.js';
 
 const DIR = new URL('../../data/pronunciation/runtime/', import.meta.url);
 const CSS = `
@@ -46,13 +47,13 @@ export function mount(root, ctx) {
   const UtteranceCtor = () => ctx?.UtteranceCtor || globalThis.SpeechSynthesisUtterance;
 
   const style = h('style', {}, CSS);
-  const title = h('h1', { id: 'view-title', tabindex: '-1' }, 'Compare traditions');
+  const title = h('h1', { id: 'view-title', tabindex: '-1' }, 'Compare pronunciations');
   const notice = h('p', { class: 'cmp-flag', role: 'note' }, NOTICE);
   const input = h('input', { type: 'text', id: 'cmp-text', class: 'cmp-input', dir: 'rtl', lang: 'he', autocomplete: 'off', spellcheck: 'false', 'aria-describedby': 'cmp-help' });
   const help = h('p', { id: 'cmp-help', class: 'cmp-note' }, 'Type or paste a Hebrew word or phrase with its vowel points, or pick an example. Only words from the course vocabulary, phrasebook and prayer texts are in the table.');
   const select = h('select', { id: 'cmp-pick' });
   const go = h('button', { type: 'submit', class: 'btn' }, 'Compare');
-  const form = h('form', { role: 'search', 'aria-label': 'Compare traditions' },
+  const form = h('form', { role: 'search', 'aria-label': 'Compare pronunciations' },
     h('label', { for: 'cmp-text' }, 'Hebrew word or phrase'), input, help,
     h('label', { for: 'cmp-pick' }, 'Or pick an example'), select, go);
   const status = h('div', { role: 'status', 'aria-live': 'polite', class: 'cmp-note' });
@@ -114,7 +115,7 @@ export function mount(root, ctx) {
         if (Array.isArray(v) && v.length && !v.some((x) => /^he/i.test(x.lang || ''))) { say('No Hebrew voice was found on this device, so this is text only.'); return; }
       }
       s.cancel?.();
-      const u = new U(plan.text); u.lang = plan.lang; u.rate = 0.85;
+      const u = new U(speechText(plan.text)); u.lang = plan.lang; u.rate = 0.85;
       s.speak(u);
       say(`Playing ${TRADITION_LABELS[trad]}: ${plan.note}.`);
     } catch { say('The voice could not play this, so it is text only.'); }

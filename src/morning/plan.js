@@ -8,15 +8,16 @@ import { verseFor } from "./verses.js";
 
 export const PREFS_KEY = "morning.prefs";
 export const TITLE = "Start your day with God";
-export const ERAV_LATEST = "16:00";
-export const DEFAULT_PREFS = Object.freeze({ v: 1, on: false, time: "07:00", rescueTime: "20:00", observant: null, freeze: null, lastSeen: null, lastRescue: null });
+/** Default cap for the eve-of-Shabbat/festival reminder. Conservative and earlier than any candle lighting; NEEDS REVIEW by an observant reader. Learner can change it (prefs.eravLatest). */
+export const ERAV_LATEST = "14:00";
+export const DEFAULT_PREFS = Object.freeze({ v: 1, on: false, time: "07:00", rescueTime: "20:00", eravLatest: ERAV_LATEST, observant: null, freeze: null, lastSeen: null, lastRescue: null });
 const hhmm = (v, d) => (typeof v === "string" && /^([01]\d|2[0-3]):[0-5]\d$/.test(v) ? v : d);
 const isoOrNull = (v) => (typeof v === "string" && /^\d{4}-\d\d-\d\d$/.test(v) ? v : null);
 
 export function normalizePrefs(raw) {
   const r = raw && typeof raw === "object" ? raw : {};
   const d = DEFAULT_PREFS;
-  return { v: 1, on: r.on === true, time: hhmm(r.time, d.time), rescueTime: hhmm(r.rescueTime, d.rescueTime),
+  return { v: 1, on: r.on === true, time: hhmm(r.time, d.time), rescueTime: hhmm(r.rescueTime, d.rescueTime), eravLatest: hhmm(r.eravLatest, d.eravLatest),
     observant: typeof r.observant === "boolean" ? r.observant : null, freeze: typeof r.freeze === "boolean" ? r.freeze : null,
     lastSeen: isoOrNull(r.lastSeen), lastRescue: isoOrNull(r.lastRescue) };
 }
@@ -34,7 +35,7 @@ const fmt = (m) => `${String(Math.floor(m / 60)).padStart(2, "0")}:${String(m % 
  * What happens on `iso` for the morning reminder.
  * @returns {{fire:boolean, time:string|null, label:string|null, why:string}}
  *  - observant and iso is Shabbat/Yom Tov: no ping (why "rest-day")
- *  - observant and tomorrow is a rest day (an erev): ONE ping at min(chosen, 16:00), label "before Shabbat" / "before the festival"
+ *  - observant and tomorrow is a rest day (an erev): ONE ping at min(chosen, prefs.eravLatest, default 14:00), label "before Shabbat" / "before the festival"
  *  - otherwise: one ping at the chosen time
  */
 export function reminderOn(iso, prefs, { observant, mode = "reform" }) {
@@ -43,7 +44,7 @@ export function reminderOn(iso, prefs, { observant, mode = "reform" }) {
   if (isRestDay(iso, mode)) return { fire: false, time: null, label: null, why: "rest-day" };
   const next = addDaysISO(iso, 1);
   if (isRestDay(next, mode)) {
-    const t = fmt(Math.min(minutes(prefs.time), minutes(ERAV_LATEST)));
+    const t = fmt(Math.min(minutes(prefs.time), minutes(prefs.eravLatest || ERAV_LATEST)));
     const shabbat = new Date(`${next}T12:00:00Z`).getUTCDay() === 6;
     return { fire: true, time: t, label: shabbat ? "before Shabbat" : "before the festival", why: "erev" };
   }
@@ -93,5 +94,5 @@ export function rescueState(now, streakRecord, prefs, { observant, mode = "refor
   const p = projectStreak(streakRecord, now, extraRest);
   const late = d.getHours() * 60 + d.getMinutes() >= minutes(prefs.rescueTime);
   const needs = !p.activeToday && !p.restToday && p.count > 0 && !(observant && isRestDay(today, mode));
-  return { badge: needs && late, banner: needs && late && prefs.lastRescue !== today, text: "5 minutes keeps your streak. A quick review counts." };
+  return { badge: needs && late, banner: needs && late && prefs.lastRescue !== today };
 }

@@ -1,10 +1,15 @@
 #!/usr/bin/env node
-// Builds data/images/prompt-groups.json and data/images/manifest.csv from tools/images/spec.mjs.
-// Usage: node tools/images/build_prompt_groups.mjs   (writes files)   |  import { buildGroups }
+// Builds data/images/prompt-groups.json from tools/images/spec.mjs and MERGES the spec rows into data/images/manifest.csv.
+// The manifest is NOT regenerated: it also holds rows from later builders (inter, block J, run3, ...) and ingest status edits.
+// Merge rules: a spec row whose file exists in the manifest only has its prompt column updated (all other columns and all
+// non-spec rows are kept, in order); spec rows missing from the manifest are appended; nothing is ever dropped.
+// If nothing changes the manifest file is not touched.
+// Usage: node tools/images/build_prompt_groups.mjs [--manifest FILE] [--groups FILE]   |  import { buildGroups, mergeManifest }
 import { writeFileSync, mkdirSync, readFileSync } from 'node:fs';
-import { dirname, join } from 'node:path';
+import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as S from './spec.mjs';
+import { parseCsv, toCsv as csvOf, writeTextAtomic } from './ingest_lib.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const SQ = [1024, 1024];
@@ -225,11 +230,37 @@ export function toCsv(data) {
   return lines.join('\n') + '\n';
 }
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
+const HEAD = ['file', 'set', 'command', 'block', 'width', 'height', 'status', 'prompt'];
+
+/** Pure: merge the spec rows into existing manifest text. Returns { text, changed, updated, appended, rows }. */
+export function mergeManifest(existingText, data) {
+  const [head, ...body] = parseCsv(existingText);
+  if (!head || HEAD.some((h) => !head.includes(h))) throw new Error(`manifest header must contain ${HEAD.join(',')}`);
+  const at = Object.fromEntries(head.map((h, i) => [h, i]));
+  const byFile = new Map(body.map((r) => [r[at.file], r]));
+  let updated = 0; const add = [];
+  for (const g of data.groups) for (const r of g.rows) {
+    const have = byFile.get(r.file);
+    if (have) { if (have[at.prompt] !== String(r.prompt)) { have[at.prompt] = String(r.prompt); updated++; } }
+    else { const n = head.map((h) => String(r[h] ?? '')); byFile.set(r.file, n); add.push(n); }
+  }
+  if (!updated && !add.length) return { text: existingText, changed: false, updated: 0, appended: 0, rows: body.length };
+  const rows = body.concat(add);
+  return { text: csvOf(head, rows), changed: true, updated, appended: add.length, rows: rows.length };
+}
+
+export function run({ manifest = join(ROOT, 'data/images/manifest.csv'), groups = join(ROOT, 'data/images/prompt-groups.json') } = {}) {
   const data = buildGroups();
-  mkdirSync(join(ROOT, 'data/images'), { recursive: true });
-  writeFileSync(join(ROOT, 'data/images/prompt-groups.json'), JSON.stringify(data, null, 1) + '\n');
-  writeFileSync(join(ROOT, 'data/images/manifest.csv'), toCsv(data));
+  writeTextAtomic(groups, JSON.stringify(data, null, 1) + '\n');
+  const m = mergeManifest(readFileSync(manifest, 'utf8'), data);
+  if (m.changed) writeTextAtomic(manifest, m.text);
+  return { data, merge: m };
+}
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  const a = process.argv.slice(2), opt = (k) => { const i = a.indexOf(k); return i >= 0 ? resolve(a[i + 1]) : undefined; };
+  const { data, merge } = run({ ...(opt('--manifest') && { manifest: opt('--manifest') }), ...(opt('--groups') && { groups: opt('--groups') }) });
   console.log('computed counts', data.meta.computedCounts, 'groups', data.meta.groups);
+  console.log(`manifest: ${merge.changed ? 'merged' : 'unchanged'}, rows ${merge.rows}, prompts updated ${merge.updated}, rows appended ${merge.appended}`);
   console.log('discrepancies vs doc:', JSON.stringify(data.meta.discrepancies, null, 1));
 }

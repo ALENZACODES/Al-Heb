@@ -6,7 +6,7 @@ textbook readings, not any one community's practice. Treat the files as a draft 
 
 ## What is produced
 
-`node tools/pronunciation/build_variants.mjs` reads `data/vocab/words.json` (6,297 records: 6,140 words, 157 phrases),
+`node tools/pronunciation/build_variants.mjs` reads `data/vocab/words.json` (6,303 records: 6,146 words, 157 phrases),
 `data/corpus/phrasebook.json` (204 entries) and `data/corpus/registry.json` (70 entries, 129 lines; one record per
 line, ids `<entry>` or `<entry>-l<n>` as the audio manifest uses) and writes
 
@@ -26,9 +26,8 @@ Record shape:
 ```
 `ipa` is a broad transcription: `.` between syllables, `ˈ` before the stressed syllable, words separated by spaces,
 maqaf written `-`. `simple` is the existing siddur-style romanisation from `src/pronunciation/transliterate.js`
-(`siddur` scheme for Israeli and Sephardi, `ashkenazi-siddur` with `cholam:'oy'` for Ashkenazi, `geminate:true` so
-that דַּגֵּשׁ חָזָק doubles the letter: shabbat, sukkah; digraphs double too, e.g. hashshamayim, which is a known
-cosmetic limitation of that option). Israeli and Sephardi `simple` are identical by design of that transliterator;
+(`siddur` scheme for Israeli and Sephardi, `ashkenazi-siddur` with `cholam:'oy'` for Ashkenazi, `geminate:false`: since the doubling policy
+(`docs/pronunciation/DOUBLING-POLICY.md`) a dagesh chazak is written as a single letter in every tradition: shabat, sukka(h) -> sukah) Israeli and Sephardi `simple` are identical by design of that transliterator;
 their IPA differs. The output is deterministic (no timestamps; the test rebuilds and compares byte for byte).
 
 ## Reused code and data (nothing in `src/` was changed)

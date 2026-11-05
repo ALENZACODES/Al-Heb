@@ -3,8 +3,8 @@
   "rule": "exact pointed-Hebrew (NFC) match, unique vocab entry only; no fuzzy matching",
   "counts": {
     "lessonWords": 940,
-    "mapped": 648,
-    "unmatched": 259,
+    "mapped": 649,
+    "unmatched": 258,
     "ambiguous": 33
   },
   "map": {
@@ -341,6 +341,7 @@
     "I-13:5": "p2de095da",
     "I-13:6": "h35be21c5",
     "I-13:7": "h7631737e",
+    "I-13:8": "hb43259df",
     "I-13:9": "hdd2bd792",
     "I-13:10": "h7be38218",
     "I-13:11": "p2b2c75da",
@@ -768,7 +769,6 @@
     "I-11:8",
     "I-11:10",
     "I-12:12",
-    "I-13:8",
     "I-13:14",
     "I-14:3",
     "I-14:5",

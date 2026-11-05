@@ -45,15 +45,6 @@
    "source": "data/vocab/words.json"
   },
   {
-   "id": "hd5bcfcb8",
-   "he": "נָבַל",
-   "translit": "naval",
-   "en": "to wither, wilt, dry out",
-   "kind": "word",
-   "audioId": "hd5bcfcb8",
-   "source": "data/vocab/words.json"
-  },
-  {
    "id": "h8982ad83",
    "he": "נָתַן",
    "translit": "natan",
@@ -114,6 +105,15 @@
    "en": "to contain",
    "kind": "word",
    "audioId": "h13c6683f",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h95fec412",
+   "he": "אָבַל",
+   "translit": "aval",
+   "en": "to bewail",
+   "kind": "word",
+   "audioId": "h95fec412",
    "source": "data/vocab/words.json"
   }
  ]

@@ -31,8 +31,8 @@ const btn = (root, re) => root.find((n) => n.tag === "button" && re.test((n.attr
 
 
 /** Complete a lesson through its quick check: pick the first option every time (misses are repeated once), press Continue. */
-async function completeViaQuiz(root, doneRe = /Lesson complete/) {
-  await btn(root, /Start quick check/).click();
+async function completeViaQuiz(root, doneRe = /Lesson complete/, started = false) {
+  if (!started) await btn(root, /Start quick check/).click();
   for (let g = 0; g < 80 && !doneRe.test(root.text); g++) {
     const cont = root.find((n) => n.tag === "button" && n.attrs["data-act"] === "next" && !n.hidden)[0];
     if (cont) { await cont.click(); continue; }
@@ -55,10 +55,18 @@ function ctxFor(store, query, extra = {}) {
 
 test("lesson deep link shows letters/vowels/words with audio, completes, creates cards and a streak", async () => {
   const store = memStore(); const ctx = ctxFor(store, { lesson: "r01" });
-  const root = new Node_("div"); const un = mount(root, ctx); await until(root, /Draft content/);
+  const root = new Node_("div"); const un = mount(root, ctx); await until(root, /This is a draft\. A native Hebrew speaker/);
   assert.match(root.text, /Shin and Bet/);
   assert.match(root.text, /Letters/); assert.match(root.text, /Vowels and marks/); assert.match(root.text, /Words/);
-  assert.match(root.text, /Draft content/); assert.doesNotMatch(root.text, /null|undefined/);
+  assert.match(root.text, /This is a draft\. A native Hebrew speaker/); assert.doesNotMatch(root.text, /null|undefined/);
+  // compact top (first Listen above the fold on a phone): the draft disclosure and goals sit in one collapsed "About this lesson", the full draft sentence stays reachable
+  const about = root.find((n) => n.tag === "details" && /draft-flag/.test(n.className || n.attrs.class || ""))[0];
+  assert.ok(about, "draft disclosure is a collapsed details"); assert.equal(about.attrs.open, undefined);
+  assert.match(about.text, /About this lesson/); assert.match(about.text, /A native Hebrew speaker has not checked the meanings or vowel marks yet/); assert.match(about.text, /Goals/);
+  // primary action is in the sticky action bar (reachable above the fold), first in tab order within it, and the bar steps aside while the quiz runs
+  const cls = (n) => n.className || n.attrs.class || "";
+  const bar = root.find((n) => /alef-actionbar/.test(cls(n)))[0];
+  assert.ok(bar, "lesson page has the sticky action bar"); assert.equal(bar.children[0], btn(root, /Start quick check/), "Start quick check is the first control in the bar");
   // audio: play the first letter -> ctx.audio.play('letter','shin') and an honest status line appears
   await btn(root, /Listen to Shin/).click(); await waitFor(() => ctx.played.at(-1)?.[1] === "shin", { message: "Shin audio never played" });
   assert.deepEqual(ctx.played.at(-1), ["letter", "shin"]);
@@ -68,9 +76,14 @@ test("lesson deep link shows letters/vowels/words with audio, completes, creates
   // complete
   assert.equal(btn(root, /Start quick check/).attrs.disabled, undefined);
   assert.equal(store.m["curriculum.progress"], undefined, "nothing is completed before the quick check");
-  await completeViaQuiz(root); await waitFor(() => store.m["curriculum.progress"]?.completed?.r01, { message: "lesson never completed" });
+  await btn(root, /Start quick check/).click();
+  assert.equal(root.find((n) => /alef-actionbar/.test(cls(n)) && n.children.includes(btn(root, /Start quick check|Check again/))).length, 0, "no sticky lesson bar while the quiz (with its own bar) is open");
+  await completeViaQuiz(root, /Lesson complete/, true); await waitFor(() => store.m["curriculum.progress"]?.completed?.r01, { message: "lesson never completed" });
   assert.ok(store.m["curriculum.progress"].completed.r01);
-  assert.equal(Object.keys(store.m["srs.cards"]).length, 6);
+  // the lesson itself schedules 6 cards (2 letters, 3 vowels, 1 word); the memory chain adds 4 staggered cards per letter (8), none of them due on day 0 (first one is due the next day)
+  const all = Object.values(store.m["srs.cards"]), lessonCards = all.filter((c) => !c.id.startsWith("mem:")), mem = all.filter((c) => c.id.startsWith("mem:"));
+  assert.equal(lessonCards.length, 6); assert.equal(mem.length, 8);
+  assert.equal(mem.filter((c) => c.due <= Date.now()).length, 0, "memory-chain cards must not join a beginner's first review (baby steps: it stays at the lesson's 6 cards)");
   assert.equal(store.m.streak.count, 1);
   assert.match(root.text, /review cards? updated/); assert.match(root.text, /Accuracy/); assert.match(root.text, /Next lesson/);
   un();
@@ -113,12 +126,11 @@ test("review deep link: queue from completed lesson, reveal, keyboard rating, pe
   un(); assert.equal((docListeners.keydown || new Set()).size, 0, "keydown listener removed on unmount");
 });
 
-test("practice deep link creates the lesson's cards without completing it", async () => {
+test("practice deep link for an uncompleted lesson creates no cards and says to finish the lesson", async () => {
   const store = memStore(); const root = new Node_("div");
-  mount(root, ctxFor(store, { lesson: "r01", review: "1" })); await until(root, /Card 1 of 6/);
-  assert.match(root.text, /Card 1 of 6/);
+  mount(root, ctxFor(store, { lesson: "r01", review: "1" })); await until(root, /Finish this lesson/);
   assert.equal(store.m["curriculum.progress"], undefined);
-  assert.equal(Object.keys(store.m["srs.cards"]).length, 6);
+  assert.equal(store.m["srs.cards"], undefined, "no cards for an uncompleted lesson");
 });
 
 test("empty review says nothing is due", async () => {

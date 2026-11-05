@@ -135,7 +135,7 @@ test('flow: a legacy record mid-way keeps the older flow; ?part=preview opens it
   const store = memStore({ 'firstday.progress': { step: 3, readWords: [], checkCorrect: null, done: false } });
   const root = new N('div'); const un = mount(root, ctxFor(store));
   await waitFor(() => /Preview\. Step 4 of 8/.test(root.textContent));
-  assert.match(root.textContent, /Ashkenazi respelling/);
+  assert.match(root.textContent, /Ashkenazi style/);
   un();
   const root2 = new N('div'); const un2 = mount(root2, ctxFor(memStore(), { query: { part: 'preview' } }));
   await waitFor(() => /Preview\. Step 1 of 8/.test(root2.textContent));
@@ -146,7 +146,7 @@ test('Today card: first recommendation is the first letter, then counts wins, th
   const T = await import('../src/home/today.js');
   const base = (o = {}) => ({ completedIds: [], lessons, goal: 'read', dueCount: 0, streak: { count: 0 }, hasRoute: () => true, ...o });
   assert.equal(T.buildToday(base()).primary.label, 'Learn your first letter: Shin (2 min)');
-  const mid = T.buildToday(base({ firstday: { v: 2, wins: ['shin', 'bet'], next: { n: 3, title: 'Your first vowel sign: the small T', minutes: 2 } } }));
+  const mid = T.buildToday(base({ firstday: { v: 2, wins: ['shin', 'bet'], next: { n: 3, title: 'Your first vowel mark: the small T', minutes: 2 } } }));
   assert.equal(mid.primary.href, '#/firstday'); assert.match(mid.primary.label, /step 3 of 5/);
   assert.match(T.renderToday(mid, (k) => k).textContent, /2 of 5 wins/);
   const after = T.buildToday(base({ completedIds: ['r01'], firstday: { v: 2, wins: ['shin', 'bet', 'kamatz', 'sha', 'shav'], done: true } }));

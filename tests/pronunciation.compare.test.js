@@ -44,8 +44,8 @@ test('lookup covers the words of the course vocabulary, phrasebook and prayer re
   for (const e of reg.slice(0, 20)) for (const t of tokenize(e.he)) if (t.pointed) assert.ok(lookup(t.he), t.he);
 });
 
-test('known examples: shabbat/shabbos, torah/toyreh, bereshit/bereishis', () => {
-  assert.deepEqual([variantsOf(lookup('שַׁבָּת')).israeli.simple, variantsOf(lookup('שַׁבָּת')).ashkenazi.simple], ['shabbat', 'shabbos']);
+test('known examples: shabat/shabos, torah/toyreh, bereshit/bereishis', () => {
+  assert.deepEqual([variantsOf(lookup('שַׁבָּת')).israeli.simple, variantsOf(lookup('שַׁבָּת')).ashkenazi.simple], ['shabat', 'shabos']);
   assert.equal(variantsOf(lookup('תּוֹרָה')).ashkenazi.simple, 'toyreh');
   assert.equal(variantsOf(lookup('בְּרֵאשִׁית')).ashkenazi.simple, 'bereishis');
   assert.equal(variantsOf(lookup('שַׁבָּת')).ashkenazi.ipa, 'ˈʃa.bɔs');
@@ -67,7 +67,7 @@ test('model: key ignores accents, tokenizer splits on space and maqaf and drops 
 test('speech plan: Hebrew voice for Israeli, labelled English-voice respelling for the others, SSML only when asked', () => {
   const w = [{ he: 'שַׁבָּת', entry: lookup('שַׁבָּת') }];
   assert.deepEqual(speechPlan('israeli', w), { kind: 'hebrew', lang: 'he-IL', text: 'שַׁבָּת', note: 'a Hebrew voice reading the pointed text' });
-  const a = speechPlan('ashkenazi', w); assert.equal(a.kind, 'respelling'); assert.equal(a.text, 'shabbos'); assert.equal(a.lang, 'en-US'); assert.match(a.note, /approximation/);
+  const a = speechPlan('ashkenazi', w); assert.equal(a.kind, 'respelling'); assert.equal(a.text, 'shabos'); assert.equal(a.lang, 'en-US'); assert.match(a.note, /approximation/);
   assert.equal(speechPlan('sephardi', w).kind, 'respelling');
   const s = speechPlan('ashkenazi', w, { ssml: true }); assert.equal(s.kind, 'ssml'); assert.match(s.text, /ph="ˈʃabɔs"/);
   assert.equal(ssmlFor([{ he: 'a&b', entry: null }], 'israeli'), '<speak version="1.1" xml:lang="he-IL">a&amp;b</speak>');
@@ -95,7 +95,7 @@ test('view: typing a word shows three labelled readings with stress, the notice,
   inputOf(root).value = 'שַׁבָּת'; submit(root); await waitFor(() => mem[STORE_KEY]?.text === 'שַׁבָּת' && all(root, (x) => x.tagName === 'SECTION' && x.getAttribute('data-tradition')).length === 3, { message: "result cards and stored state" });
   const cards = all(root, (x) => x.tagName === 'SECTION' && x.getAttribute('data-tradition'));
   assert.deepEqual(cards.map((c) => c.getAttribute('data-tradition')), ['israeli', 'sephardi', 'ashkenazi']);
-  assert.match(textOf(cards[0]), /ʃa\.bat/); assert.match(textOf(cards[2]), /ʃa\.bɔs/); assert.match(textOf(cards[2]), /shabbos/);
+  assert.match(textOf(cards[0]), /ʃa\.bat/); assert.match(textOf(cards[2]), /ʃa\.bɔs/); assert.match(textOf(cards[2]), /shabos/);
   assert.ok(all(cards[2], (x) => x.tagName === 'STRONG').length === 1); // exactly one stressed syllable marked
   assert.match(textOf(root), /What differs and why/); assert.match(textOf(root), /Tav without a dagesh/);
   assert.deepEqual(mem[STORE_KEY], { text: 'שַׁבָּת', recent: ['שַׁבָּת'] });
@@ -106,7 +106,7 @@ test('view: Listen buttons speak Hebrew for Israeli and the respelling (en-US) f
   await loaded(root); inputOf(root).value = 'שַׁבָּת'; submit(root); await waitFor(() => all(root, (x) => x.tagName === 'BUTTON' && x.getAttribute('data-play') === 'ashkenazi').length === 1, { message: "all(root, (x) => x.tagName === 'BUTTON' && x.getAttribute('data-play') === 'ashkenazi').length === 1" });
   const play = (t) => all(root, (x) => x.tagName === 'BUTTON' && x.getAttribute('data-play') === t)[0];
   click(play('israeli')); click(play('ashkenazi'));
-  assert.deepEqual(spoken.map((u) => [u.text, u.lang]), [['שַׁבָּת', 'he-IL'], ['shabbos', 'en-US']]);
+  assert.deepEqual(spoken.map((u) => [u.text, u.lang]), [['שַׁבָּת', 'he-IL'], ['shabos', 'en-US']]);
   assert.match(textOf(root), /approximation/);
 });
 
@@ -122,7 +122,7 @@ test('view: phrase with an unknown or unpointed word reports it and compares the
   const { root } = setup();
   await loaded(root); inputOf(root).value = 'שַׁבָּת שלום'; submit(root); await waitFor(() => /Not in the table, so left out: שלום/.test(textOf(root)), { message: "/Not in the table, so left out: \u05e9\u05dc\u05d5\u05dd/.test(textOf(root))" });
   assert.match(textOf(root), /Not in the table, so left out: שלום/); assert.match(textOf(root), /need vowel points/);
-  assert.match(textOf(root), /shabbos/);
+  assert.match(textOf(root), /shabos/);
   inputOf(root).value = 'zzz'; submit(root); await waitFor(() => /Type a Hebrew word/.test(textOf(root)), { message: "/Type a Hebrew word/.test(textOf(root))" });
   assert.match(textOf(root), /Type a Hebrew word/);
   inputOf(root).value = 'אֲבַרַקְדַבְרָא'; submit(root); await waitFor(() => /Not in the table/.test(textOf(root)) && !/Type a Hebrew word/.test(textOf(root)), { message: "unknown-word result replaces the empty-input message" });
@@ -157,4 +157,32 @@ test('view: lookup data that cannot load shows a calm message, not a crash', asy
   mount(root, { compareData: { index: undefined }, store: null });
   const orig = globalThis.fetch; globalThis.fetch = async () => ({ ok: false, status: 500 });
   try { await waitFor(() => /could not be loaded|Loading|Type a Hebrew/.test(textOf(root)), { message: 'no load message' }); assert.match(textOf(root), /could not be loaded|Loading|Type a Hebrew/); } finally { globalThis.fetch = orig; }
+});
+
+// Doubling policy (docs/pronunciation/DOUBLING-POLICY.md): one engine, one answer for the everyday respelling.
+const first500 = JSON.parse(fs.readFileSync(new URL('../data/vocab/words.json', import.meta.url), 'utf8')).words
+  .filter((w) => w.frequencyRank && w.frequencyRank <= 500);
+
+test('doubling policy: for ranks 1-500 the Compare lookup respelling equals the stored translit; none is missing', () => {
+  assert.equal(first500.length, 500);
+  const missing = []; const differ = [];
+  for (const w of first500) {
+    const e = lookup(w.he);
+    if (!e) { missing.push(w.he); continue; }
+    const strip = (s) => s.replace(/^-+|-+$/g, '');
+    if (strip(e[3]) !== strip(w.translit)) differ.push(`${w.frequencyRank} ${w.he} ${w.translit} / ${e[3]}`);
+  }
+  assert.deepEqual(missing, []);
+  assert.deepEqual(differ, []);
+});
+
+test('doubling policy: no everyday respelling in the lookup doubles a consonant after a dagesh (sider, ishah, chayim, atah)', () => {
+  const r = (he) => variantsOf(lookup(he));
+  assert.equal(r('סִדֵּר').israeli.simple, 'sider'); assert.equal(r('אִשָּׁה').israeli.simple, 'ishah');
+  assert.equal(r('חַיִּים').israeli.simple, 'chayim'); assert.equal(r('אַתָּה').israeli.simple, 'atah');
+  assert.doesNotMatch(r('אִשָּׁה').ashkenazi.simple, /shsh/); assert.equal(r('אִשָּׁה').ashkenazi.simple, 'isheh');
+});
+
+test('bound prefixes with a trailing maqaf resolve to their lookup entry', () => {
+  for (const he of ['לְ־', 'בְּ־', 'מִ־', 'שֶׁ־', 'הֲ־', 'וְ־', 'דְּ־']) assert.ok(lookup(he), he);
 });

@@ -16,8 +16,8 @@ export function plan(argv) {
   const has = (f) => argv.includes(f); const html = has('--html-only') ? ['--html-only'] : [];
   const steps = [];
   if (!has('--skip-core')) steps.push(['workbook.mjs', ...(has('--no-mnemonics') ? [] : ['--mnemonics']), ...html]);
-  for (const t of ['firstday_pages', 'cursive_words', 'niqqud_workbook', 'readaloud_sheets', 'answer_key']) steps.push([t + '.mjs', ...html]);
-  if (!has('--skip-cards')) { steps.push(['flashcard_sheets.mjs', ...html]); steps.push(['flashcard_sheets.mjs', '--light', ...html]); }
+  for (const t of ['firstday_pages', 'memory_chain', 'cursive_words', 'niqqud_workbook', 'readaloud_sheets', 'answer_key']) steps.push([t + '.mjs', ...html]);
+  if (!has('--skip-cards')) { steps.push(['flashcard_sheets.mjs', '--letters', ...html]); steps.push(['flashcard_sheets.mjs', ...html]); steps.push(['flashcard_sheets.mjs', '--light', ...html]); }
   return steps;
 }
 function run(cmd, args) { const r = spawnSync(cmd, args, { stdio: 'inherit', cwd: root }); if (r.status !== 0) { console.error('FAILED:', cmd, args.join(' ')); process.exit(r.status || 1); } }

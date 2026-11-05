@@ -85,6 +85,17 @@ test('activate deletes older shell caches, keeps the runtime cache, and claims c
   assert.equal(w.calls.claim, 1);
 });
 
+test('activate drops the previous version data cache and non-audio entries left in the runtime cache by older workers', async () => {
+  const w = boot({ caches: ['alef-shell-v1', 'alef-data-v1', 'alef-runtime-v1'] });
+  const rt = await w.self.caches.open('alef-runtime-v1');
+  rt.keys = async () => [...rt.entries.keys()].map((url) => ({ url }));
+  rt.delete = async (r) => rt.entries.delete(r.url);
+  await rt.put('https://alef.test/data/vocab/packs/vocab5k-tier-500.json', new Response('old')); await rt.put('https://alef.test/audio/a.mp3', new Response('clip'));
+  await w.fire('activate');
+  assert.ok(w.calls.deleted.includes('alef-data-v1') && w.calls.deleted.includes('alef-shell-v1'));
+  assert.deepEqual([...rt.entries.keys()], ['https://alef.test/audio/a.mp3']);
+});
+
 test('offline navigation falls back to the precached index.html; a missing shell gives offline.html', async () => {
   const w = boot();
   await w.fire('install');

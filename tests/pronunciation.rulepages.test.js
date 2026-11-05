@@ -49,7 +49,7 @@ test('index page links to all seven rule pages and to Compare', async () => {
 
 test('a rule page shows the summary, a three-row table, "Who says it this way", limits, six example rows, sources and prev/next links', async () => {
   const root = await page('tav');
-  assert.match(text(root), /Tav without a dot/); assert.match(text(root), /shabbos/);
+  assert.match(text(root), /Tav without a dot/); assert.match(text(root), /shabos/);
   assert.match(text(root), /Who says it this way\? Rule-generated/); assert.match(text(root), /Limits\./);
   const tables = all(root, (x) => x.tagName === 'TABLE');
   assert.equal(tables.length, 2);

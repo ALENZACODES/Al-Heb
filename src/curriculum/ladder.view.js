@@ -5,6 +5,8 @@ import { loadContent } from "./content.js";
 import { LADDER_KEY, saveLadder } from "./actions.js";
 import { draftNotice, audioStatus, onKeys } from "./ex-ui.js";
 import { describePlay } from "./audio-ui.js";
+import { SETTING_LABELS } from "../traditions/model.js";
+import { isAudioFree, SKIP_NOTE, AUDIO_FREE_NOTE, syllableByName } from "../shell/audiofree.js";
 
 export function mountLadder(root, ctx, q = {}) {
   let alive = true, offKeys = () => {}, saveOnLeave = null;
@@ -21,11 +23,12 @@ export function mountLadder(root, ctx, q = {}) {
     let locked = false, cards = [], cur = null, finished = false;
     saveOnLeave = () => { const st = session.state(); if (!finished && st.answered) saveLadder(ctx, st).catch(() => {}); };
     const note = el("p", { class: "alef-audio-note muted", role: "status", "aria-live": "polite" });
+    const silent = isAudioFree(ctx);
     const fb = el("div", { class: "alef-feedback", role: "status", "aria-live": "polite" });
     
 
     const intro = [draftNotice(ctx,
-      `Sounds come from the "${congregation}" tradition setting. No recorded audio exists yet: if there is no file, you hear your browser's built-in voice or nothing, and the note under the cards says which.`,
+      silent ? AUDIO_FREE_NOTE : `Sounds come from your tradition setting (${SETTING_LABELS[congregation] || congregation}). No recorded audio exists yet: if there is no file, you hear your browser's built-in voice or nothing, and the note under the cards says which.`,
       "Look-alike and sound-alike choices come from the letter and vowel data files; the sound-alike rules are drafts not checked by a native speaker.")];
 
     function glyphWithHighlight(item) {
@@ -34,7 +37,7 @@ export function mountLadder(root, ctx, q = {}) {
       return el("p", { class: "alef-breakdown" }, heText(item.glyph, "alef-he alef-huge"), " = ", L ? L.name : item.letter, item.vowel ? ` + ${item.vowel}` : " (final form)");
     }
     function play() {
-      if (!cur) return;
+      if (!cur || silent) return;
       const it = cur.item;
       const st = audioStatus(ctx, it.audioKind, it.audioId, ctx?.settings?.get?.("voice"));
       if (!ctx?.audio?.play || st.source === "none") { note.textContent = st.source === "none" ? st.label + " Read the cards and guess; the answer will be shown." : ""; return; }
@@ -53,10 +56,15 @@ export function mountLadder(root, ctx, q = {}) {
         el("div", { class: "alef-levelbar" },
           el("progress", { max: String(ladder.levels.length), value: String(cur.level), "aria-label": "Ladder level", style: "display:block;inline-size:100%;block-size:10px" })),
         el("p", { role: "status", class: "alef-levelstatus", style: "margin:.4rem 0" }, `Level ${cur.level} of ${ladder.levels.length}. ${s.streak} of ${STREAK_UP} in a row.`),
-        el("p", {}, tr(ctx, "ladder.prompt", "Listen, then choose the matching card.")),
-        el("button", { type: "button", class: "btn alef-play", onclick: play }, el("span", { "aria-hidden": "true" }, "▶"), " Listen again (R)"),
+        silent
+          ? el("p", { class: "alef-silent-prompt" }, `Find the card for: ${syllableByName(content.letters.get(cur.item.letter)?.name || cur.item.letter, cur.item.vowel)}. (Reading version: you chose "I do not use audio".)`)
+          : el("p", {}, tr(ctx, "ladder.prompt", "Listen, then choose the matching card.")),
+        silent ? null : el("button", { type: "button", class: "btn alef-play", onclick: play }, el("span", { "aria-hidden": "true" }, "▶"), " Listen again (R)"),
         el("div", { class: "row alef-cardpair", dir: "rtl" }, ...cards), note, fb,
-        el("p", { class: "row" }, el("button", { type: "button", class: "btn secondary", onclick: finish }, "Finish and save")),
+        el("p", { class: "row" },
+          el("button", { type: "button", class: "btn secondary", "data-act": "skip", onclick: () => { if (locked || finished) return; session.skip(); draw(); } }, "Skip this card"),
+          el("button", { type: "button", class: "btn secondary", onclick: finish }, "Finish and save")),
+        el("p", { class: "muted" }, SKIP_NOTE),
         el("p", { class: "muted alef-keys" }, "Keyboard: 1 or 2 picks a card, R plays the sound again."));
       play();
     }
@@ -64,7 +72,7 @@ export function mountLadder(root, ctx, q = {}) {
       if (locked || finished) return; locked = true;
       const r = session.answer(id), item = cur.item;
       cards.forEach((b) => { b.disabled = true; if (b.getAttribute("data-option") === item.id) b.className += " alef-correct"; else if (b.getAttribute("data-option") === id) b.className += " alef-wrong"; });
-      const msg = r.correct ? "Right." : "Not quite: the sound was the other card.";
+      const msg = r.correct ? "Right." : (silent ? "Not quite: it was the other card." : "Not quite: the sound was the other card.");
       const ev = r.event === "advance" ? ` Level up to ${r.level}.` : r.event === "drop" ? ` Two misses in a row: back to level ${r.level}.` : r.event === "cleared" ? " You cleared the ladder." : "";
       fb.replaceChildren(el("p", {}, msg + ev), glyphWithHighlight(item),
         el("button", { type: "button", class: "btn alef-next", onclick: () => (r.finished ? finish() : draw()) }, r.finished ? "See results" : "Next"));

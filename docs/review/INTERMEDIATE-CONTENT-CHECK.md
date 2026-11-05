@@ -23,6 +23,17 @@ After the edits below: `node tools/curriculum/integrity.mjs` has 0 FAIL, and the
 
 The review packs under `docs/review/packs` and `docs/review/out` were not regenerated (build step not run); they still show the old gloss until the next pack build.
 
+## Second pass (mechanical fixes applied)
+
+Status: DONE, tests and integrity re-run (see end of this section). Edited `lessons-intermediate/I-xx.json` and mirrored with `tools/curriculum/intermediate/register.py` (mirror verified identical for I-01..I-50).
+
+- Glosses: 36 word entries across 23 Hebrew words now agree course-wide. Where the word links to `data/vocab/words.json` the vocab gloss was used (for example נֵר "oil lamp, candle", שַׁבָּת שָׁלוֹם "peaceful Sabbath (greeting from Friday afternoon to Saturday)", סְלִיחָה "forgiveness, pardon", הוֹדָעָה "notice", שָׁנָה טוֹבָה "happy new year (Rosh Hashana greeting)"). Words with no vocab entry (יִמְלֹךְ, גַּדְּלוּ, הַגּוֹמֵל, כֵּן יְהִי רָצוֹן, בְּשִׂמְחָה) take one of their existing lesson glosses. Three deliberate exceptions where the vocab gloss would mislead in context: עֲלִיָּה kept "aliyah (being called up to the Torah)" (vocab: "ascent"), חֶשְׁבּוֹן kept "account; bill" (vocab: "arithmetic, mathematics"), תּוֹר kept "appointment, turn" (vocab: "a turn"). Needs native: these three vocab glosses look weak for the course.
+- I-38 חָבֵר / חֲבֵרָה: glosses now "friend (m)" / "friend (f)", matching I-37 and I-49; this removes the contradiction with the I-38 note.
+- `register` items: the unused "casual" option was removed from all 25 items (options are now formal / neutral / slang) and from `dsl.py`, `build.py` and `intermediate-index.json`. The label judgement calls in section E still need a reader.
+- Not changed, for native review: בְּטַח / בֶּטַח (vocab file has בֶּטַח, the phrasebook the register items must match has בְּטַח); מֶרְקַחַת / הַמִּרְקַחַת (indefinite in the vocab word, definite in the phrasebook sentence; both attested, likely no defect); אִישַׁן vs registry אִישָׁן and גּוֹאֲלִי with/without dagesh (the corpus snapshot has both forms; changing them also changes the stored Ashkenazi respelling and the text recorded in `data/audio/manifest.json`).
+- Not regenerated: review packs and audio manifest.
+- Run after the edits: tests/curriculum.*.test.js plus tests/intermediate.links.test.js 141/141 pass; hebrew-lint and grammar test files 23/23 pass; `node tools/curriculum/integrity.mjs` 0 violations; `node tools/meta/scan.mjs --text` PASS.
+
 ## Findings
 
 Needs native = needs a Hebrew teacher or Israeli native reader to decide. "Dev" = a code or data-pipeline fix, no Hebrew judgement.
@@ -45,17 +56,17 @@ Needs native = needs a Hebrew teacher or Israeli native reader to decide. "Dev" 
 
 | Finding | File | Proposed fix | Needs native |
 |---|---|---|---|
-| "surely, of course": five exercises use בְּטַח (shva) and I-38-e09 uses בֶּטַח (segol, the form in `words.json`): I-12-e14, I-13-e06, I-13-e16, I-23-e02, I-35-e14 vs I-38-e09. | those exercises | Pick one pointing course-wide (the vocabulary file has בֶּטַח). | yes |
-| "pharmacy": the word item is בֵּית מֶרְקַחַת (the form used in the vocabulary file) but I-14-e01 uses בֵּית הַמִּרְקַחַת. | I-14 | Make the exercise agree with the word item, or the reverse, after a reader decides. | yes |
-| Adon Olam: I-09 word and I-09-e10 have אִישַׁן (patach) where the registry line has אִישָׁן (kamatz); the word גּוֹאֲלִי carries a dagesh in the gimel that the registry text does not. Changing the pointing also changes the stored Ashkenazi respelling (ishan vs ishon) and the audio id, so it was not edited. | I-09 | Align with the registry once a reader confirms. | yes (cantor or teacher) |
+| "surely, of course": five exercises use בְּטַח (shva) and I-38-e09 uses בֶּטַח (segol, the form in `words.json`): I-12-e14, I-13-e06, I-13-e16, I-23-e02, I-35-e14 vs I-38-e09. | those exercises | Pick one pointing course-wide (the vocabulary file has בֶּטַח). STATUS: open, left for native review (phrasebook has בְּטַח). | yes |
+| "pharmacy": the word item is בֵּית מֶרְקַחַת (the form used in the vocabulary file) but I-14-e01 uses בֵּית הַמִּרְקַחַת. | I-14 | Make the exercise agree with the word item, or the reverse, after a reader decides. STATUS: open, left for native review. | yes |
+| Adon Olam: I-09 word and I-09-e10 have אִישַׁן (patach) where the registry line has אִישָׁן (kamatz); the word גּוֹאֲלִי carries a dagesh in the gimel that the registry text does not. Changing the pointing also changes the stored Ashkenazi respelling (ishan vs ishon) and the audio id, so it was not edited. | I-09 | Align with the registry once a reader confirms. STATUS: open, left for native review. | yes (cantor or teacher) |
 | Divine-name lesson words that copy source pointing (I-07 `יָּהּ` with dagesh vs `יָהּ` in the corpus) are source-faithful; no action. | I-07 | none | no |
 
 ### D. Glosses and examples
 
 | Finding | File | Proposed fix | Needs native |
 |---|---|---|---|
-| I-38 note says boyfriend/girlfriend "are not in any source file", yet the word glosses are "friend; boyfriend" and "friend; girlfriend". Other lessons (I-37, I-49, the I-38 match) say "friend (m)" / "friend (f)". | I-38 words חָבֵר, חֲבֵרָה | Use "friend (m)" / "friend (f)" in the word glosses, or drop the claim from the note. | yes |
-| Same Hebrew, different gloss across lessons (23 words). Most are harmless context shifts (סְלִיחָה "forgiveness, pardon" in I-28 vs "sorry" in I-50; תּוֹר three wordings; חֹדֶשׁ "a month" vs "month"). Worth aligning: שַׁבָּת שָׁלוֹם is a plain "Shabbat shalom" in I-05/I-19 but "Shabbat greeting (Friday to Saturday)" in I-50; הוֹדָעָה "message" vs "message, notice". List is reproducible by grouping `words[]` by `he`. | I-05, I-19, I-50, I-16, I-36, I-49 | Choose one gloss per word; keep context notes in `note`. | no |
+| I-38 note says boyfriend/girlfriend "are not in any source file", yet the word glosses are "friend; boyfriend" and "friend; girlfriend". Other lessons (I-37, I-49, the I-38 match) say "friend (m)" / "friend (f)". | I-38 words חָבֵר, חֲבֵרָה | Use "friend (m)" / "friend (f)" in the word glosses, or drop the claim from the note. STATUS: DONE (friend (m) / friend (f)). | yes |
+| Same Hebrew, different gloss across lessons (23 words). Most are harmless context shifts (סְלִיחָה "forgiveness, pardon" in I-28 vs "sorry" in I-50; תּוֹר three wordings; חֹדֶשׁ "a month" vs "month"). Worth aligning: שַׁבָּת שָׁלוֹם is a plain "Shabbat shalom" in I-05/I-19 but "Shabbat greeting (Friday to Saturday)" in I-50; הוֹדָעָה "message" vs "message, notice". List is reproducible by grouping `words[]` by `he`. | I-05, I-19, I-50, I-16, I-36, I-49 | Choose one gloss per word; keep context notes in `note`. STATUS: DONE, see Second pass. | no |
 | 38 `match` glosses are shorter than the lesson's word gloss (for example "candle" vs "candle, lamp"; "his great name" vs "his great name (Aramaic)"). Grading is by Hebrew so nothing breaks; the match screen simply drops the qualifier. | I-04, I-05, I-10, I-18, I-20, I-26, I-28, I-30 and others | none needed | no |
 | 51 `fade` English lines differ from the registry English; 29 of them are deliberate abridgements ending in an ellipsis (long Aleinu, Vayehi Binsoa, Kedushat HaYom, Hanerot Halalu lines), the rest are re-wordings of the JPS 1917 text ("my Lord" for "O Lord", "heights" for "high places"). The Hebrew shown is the whole line, so the abridged English can read as if the line were short. | I-06, I-08, I-26, I-27, I-32, I-33 and others | Add "(first part)" or show the full registry English for long lines. | no |
 | Nearly all `respond` and `dialogue` Hebrew uses masculine forms (אֲנִי צָרִיךְ, רוֹצֶה, לֹא יוֹדֵעַ). Only 31 `gender` items give the feminine. Not wrong, but a female learner practises male forms for most lines. | I-11 to I-25, I-36 to I-50 | A short note on the first Israel lesson, or a feminine variant in `answer`. | no |
@@ -68,7 +79,7 @@ Needs native = needs a Hebrew teacher or Israeli native reader to decide. "Dev" 
 |---|---|---|---|
 | I-34-e07, prompt "in peace": the answer is בַּשָּׁלוֹם but the distractor לְשָׁלוֹם is glossed "to peace, in peace" in the same lesson, so a learner who reads the gloss can defend either. | I-34 | Change the distractor, or the word gloss to "to peace (as in go in peace)". | yes |
 | I-17-e12, prompt "a big apartment": a distractor is the bare word דִּירָה "apartment", a weak distractor rather than an ambiguity. | I-17 | Replace with another noun phrase. | no |
-| `register` items offer formal / neutral / casual / slang, but "casual" is never the answer in the 25 items and overlaps both neutral and slang. Several labels are judgement calls: בְּטַח neutral (I-13-e16), מָה נִשְׁמָע neutral (I-25-e10) vs מָה הַמַּצָּב slang (I-18-e05) and מָה קוֹרֶה slang, בְּעֶזְרַת הַשֵּׁם neutral inside the army-slang lesson (I-18-e14), סְלִיחָה neutral (I-28-e10). | I-12 to I-50 register items | Drop "casual" or define the four labels on screen; reader to confirm each label. | yes |
+| `register` items offer formal / neutral / casual / slang, but "casual" is never the answer in the 25 items and overlaps both neutral and slang. Several labels are judgement calls: בְּטַח neutral (I-13-e16), מָה נִשְׁמָע neutral (I-25-e10) vs מָה הַמַּצָּב slang (I-18-e05) and מָה קוֹרֶה slang, בְּעֶזְרַת הַשֵּׁם neutral inside the army-slang lesson (I-18-e14), סְלִיחָה neutral (I-28-e10). | I-12 to I-50 register items | Drop "casual" or define the four labels on screen; reader to confirm each label. STATUS: "casual" dropped; label judgement still open. | yes |
 | Six `spot` items have the target word twice in the line (I-05-e04, I-05-e14, I-06-e09, I-08-e05, I-26-e03, I-32-e11). The grader compares the Hebrew key, so either occurrence is accepted; no defect, noted for completeness. | as listed | none | no |
 
 ### F. Grammar topics (`data/grammar/notes.json`, `src/grammar/model.js`)

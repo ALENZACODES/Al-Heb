@@ -37,7 +37,7 @@ Risk order: things that make the launch illegal or untrustworthy first, then thi
 
 | # | Item | Owner | Command or file to open | Done |
 |---|---|---|---|---|
-| 15 | Send the review packs to at least one clergy or cantor (liturgy and trope) and one Hebrew teacher (core lessons) | JOHN | `docs/review/INSTRUCTIONS.md`, packs in `docs/review/packs/`, status in `docs/review/STATUS.md` (0 of 7,039 rows reviewed on 2026-11-04) | [ ] |
+| 15 | Send the review packs to at least one clergy or cantor (liturgy and trope) and one Hebrew teacher (core lessons) | JOHN | `docs/review/INSTRUCTIONS.md`, packs in `docs/review/packs/`, status in `docs/review/STATUS.md` (0 of 3,718 rows reviewed on 2026-11-04) | [ ] |
 | 16 | Apply returned reviews | MAIN | `node tools/review/ingest.mjs returned.csv --reviewer NAME --type teacher\|cantor\|native --date YYYY-MM-DD` (dry run), then `--write` | [ ] |
 | 17 | Fix the code-point errors the Hebrew lint found (mark order, stray marks, final letters). Passing the lint does not prove the Hebrew is right | MAIN | `docs/hebrew-lint/REPORT.md` | [ ] |
 | 18 | Keep the launch copy honest: no "native audio", "accurate", "approved" | ANY | `docs/launch/COPY.md`, "Wording rules" | [ ] |

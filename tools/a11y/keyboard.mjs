@@ -42,11 +42,14 @@ async function tabTo(page, match, max = 120) {
   const { ctx, page } = await open('/', { fresh: true });
   const f = 'onboarding';
   note(f, 'a first visit lands on the welcome screen', await page.evaluate(() => location.hash === '#/welcome'));
-  const n1 = await tabTo(page, (a) => a.type === 'radio');
+  // the first screen asks the goal question (a preselected radio group) and then the letters question; this walk answers the letters one
+  const n0 = await tabTo(page, (a) => a.type === 'radio' && /^ob-goal-/.test(a.id));
+  note(f, 'Tab reaches the goal question radio group (a choice is preselected)', n0 > 0 && await page.evaluate(() => document.querySelectorAll('input[name=goal]:checked').length === 1), `${n0} Tab presses`);
+  const n1 = await tabTo(page, (a) => a.type === 'radio' && /^ob-letters-/.test(a.id));
   note(f, 'Tab reaches the letters question radio group', n1 > 0, `${n1} Tab presses`);
-  const before = await page.evaluate(() => [...document.querySelectorAll('input[type=radio]:checked')].map((i) => i.value).join(','));
+  const before = await page.evaluate(() => [...document.querySelectorAll('input[name=letters]:checked')].map((i) => i.value).join(','));
   await page.keyboard.press('ArrowDown');
-  const after = await page.evaluate(() => [...document.querySelectorAll('input[type=radio]:checked')].map((i) => i.value).join(','));
+  const after = await page.evaluate(() => [...document.querySelectorAll('input[name=letters]:checked')].map((i) => i.value).join(','));
   note(f, 'arrow keys change the radio choice', before !== after, `${before} -> ${after}`);
   const n2 = await tabTo(page, (a) => a.tag === 'button' && /^continue$/i.test(a.name), 40);
   note(f, 'Tab reaches "Continue" (no trap)', n2 > 0, `${n2} more presses`);
@@ -76,8 +79,8 @@ async function tabTo(page, match, max = 120) {
   note(f, 'Hint button is keyboard reachable', nH > 0, `${nH} presses`);
   const count = async () => page.evaluate(() => document.querySelector('.alef-trace .row [role=status], .alef-trace .progress')?.textContent || document.body.innerText.match(/\d+\s*\/\s*\d+/)?.[0] || '');
   // Is there any keyboard way to actually register the strokes (and so mark the letter done)? Look for focusable controls on/near the tracing area.
-  let toggle = -1; // the toggle sits above the controls used earlier in this flow: walk backwards with Shift+Tab
-  for (let i = 1; i <= 40 && toggle < 0; i++) { await page.keyboard.press('Shift+Tab'); const x = await active(page); if (x && x.tag === 'button' && /stroke by stroke/i.test(x.name)) toggle = i; }
+  // the script/step toggles now follow the Animate/Hint rows in the DOM (tab order matches the drawn order): walk forward from Hint
+  const toggle = await tabTo(page, (x) => x.tag === 'button' && /walk me through/i.test(x.name), 40);
   const alt = { toggle };
   let walked = '';
   if (alt.toggle > 0) {
@@ -85,7 +88,7 @@ async function tabTo(page, match, max = 120) {
     const n = await tabTo(page, (x) => x.tag === 'button' && /^next stroke$/i.test(x.name), 90);
     if (n > 0) { for (let i = 0; i < 12; i++) { await page.keyboard.press('Enter'); await page.waitForTimeout(150); const t = await page.evaluate(() => document.querySelector('.alef-trace .feedback')?.textContent || ''); if (/walked through/i.test(t)) { walked = t; break; } } }
   }
-  note(f, 'a user who cannot draw can finish a letter with the keyboard ("Show me, stroke by stroke" toggle + "Next stroke")', !!walked, `toggle=${alt.toggle}; ` + (walked || await page.evaluate(() => document.querySelector('.alef-trace .feedback')?.textContent)).slice(0, 90));
+  note(f, 'a user who cannot draw can finish a letter with the keyboard ("Walk me through it with buttons" toggle + "Next stroke")', !!walked, `toggle=${alt.toggle}; ` + (walked || await page.evaluate(() => document.querySelector('.alef-trace .feedback')?.textContent)).slice(0, 90));
   await page.keyboard.press('Escape');
   // the typing tab is the keyboard alternative for recognition, not for shape
   await page.goto(base + '#/letters?tab=type'); await page.waitForTimeout(500);
@@ -148,6 +151,10 @@ async function tabTo(page, match, max = 120) {
   await page.keyboard.press('ArrowRight'); const a1 = await active(page);
   note(f, 'arrow keys move between tabs (WAI-ARIA tabs pattern)', a1?.role === 'tab' && /guide|phrase/i.test(a1.name), a1?.name);
   await page.keyboard.press('ArrowLeft'); await page.waitForTimeout(300);
+  // The letter chips live inside a closed <details> ("Change text, show or hide, highlight letters"); open it with the keyboard first.
+  const nS = await tabTo(page, (a) => a.tag === 'summary', 10);
+  await page.keyboard.press('Enter'); await page.waitForTimeout(200);
+  note(f, 'Enter on the "Change text, show or hide, highlight letters" summary opens the controls', nS > 0 && await page.evaluate(() => !!document.querySelector('.crp-ctl')?.open), `${nS} presses`);
   const nC = await tabTo(page, (a) => a.tag === 'button' && a.pressed !== null && !!a.letter, 30);
   const letter = await page.evaluate(() => document.activeElement.dataset.letter || '');
   const pr = () => page.evaluate((l) => document.querySelector(`[data-letter="${l}"]`)?.getAttribute('aria-pressed'), letter);
@@ -199,6 +206,95 @@ async function tabTo(page, match, max = 120) {
   note(f, 'calendar shows dates/holidays as text, and any controls it has (day grid) are real buttons reachable by Tab', cal.text && cal.buttonsOnly, JSON.stringify(cal));
   note(f, 'calendar "Set your location in Settings" is a link, not just text', cal.hasSettingsLink, '', true);
   await ctx.close();
+}
+
+// ---- 7. Full Tab walk of every v0 screen, the letters, a lesson, the review and settings (keyboard only after the page loads).
+// For each screen: (a) every visible, enabled control can take focus by Tab or, inside a roving group (letter strip), by the arrow keys; (b) Tab never gets stuck
+// (the walk ends when focus returns to the top of the page); (c) every stop shows a visible focus mark; (d) the order inside <main> does not jump back up the page.
+// (b) is checked up to 400 presses. This is not a screen-reader or switch-device test.
+{
+  const SCREENS = ['/', '/learn', '/learn?lesson=r01', '/learn?review=1', '/letters', '/letters/alef', '/letters?tab=type', '/letters/atlas', '/progress', '/firstday', '/install', '/credits', '/privacy', '/offline', '/settings', '/accessibility', '/welcome', '/search', '/about', '/vocab', '/sounds', '/read/priestly-blessing', '/calendar'];
+  const f = 'tab walk';
+  for (const route of SCREENS) {
+    const { ctx, page } = await open(route, { fresh: route === '/welcome' }).catch(() => ({}));
+    if (!page) { note(f, route, false, 'did not open'); continue; }
+    await page.evaluate(() => document.querySelectorAll('main details').forEach((d) => { d.open = true; })); // the walk is of the controls; a closed group is tested by the More-sheet flow
+    await page.waitForTimeout(150);
+    const stops = []; let done = false, presses = 0;
+    // start at the very top: the skip link is the first stop (sequential focus would otherwise start after the heading the router focused)
+    await page.evaluate(() => { window.scrollTo(0, 0); window.__seenSkip = false; document.querySelector('.skip-link')?.focus(); });
+    for (; presses < 400; presses++) {
+      await page.keyboard.press('Tab');
+      const st = await page.evaluate(() => {
+        const a = document.activeElement; if (!a || a === document.body) return { end: true };
+        if (a.classList.contains('skip-link')) { if (window.__seenSkip) return { end: true }; window.__seenSkip = true; }
+        a.setAttribute('data-kbd-seen', '1');
+        const cs = getComputedStyle(a); const r = a.getBoundingClientRect();
+        const ring = (cs.outlineStyle !== 'none' && parseFloat(cs.outlineWidth) > 0) || cs.boxShadow !== 'none' || (a.matches('input[type=file]') && !!a.labels?.[0]);
+        // a visually hidden input that stands for a visible label (file picker, radio) shows its ring on the label
+        const lab = a.labels?.[0]; const lcs = lab ? getComputedStyle(lab) : null;
+        const labelRing = !!lcs && ((lcs.outlineStyle !== 'none' && parseFloat(lcs.outlineWidth) > 0) || lcs.boxShadow !== 'none');
+        return { name: (a.getAttribute('aria-label') || a.textContent || a.value || a.id || a.tagName).trim().replace(/\s+/g, ' ').slice(0, 40), tag: a.tagName.toLowerCase(), top: r.top + scrollY, left: r.left, inMain: !!a.closest('main'), floating: ['sticky', 'fixed'].includes(cs.position) || !!a.closest('.alef-actionbar'), ring: ring || labelRing || a.matches('input[type=time], input[type=date]'), hidden: r.width === 0 && r.height === 0 };
+      });
+      if (st.end) { done = true; break; }
+      stops.push(st);
+    }
+    const unreached = await page.evaluate(() => {
+      const vis = (e) => { const cs = getComputedStyle(e); const r = e.getBoundingClientRect(); return cs.visibility !== 'hidden' && cs.display !== 'none' && r.width > 0 && r.height > 0 && !e.closest('[hidden],[inert]'); };
+      const radioSeen = (e) => e.type === 'radio' && [...document.querySelectorAll(`input[type=radio][name="${e.name}"]`)].some((r) => r.hasAttribute('data-kbd-seen')); // a radio group is one Tab stop; the arrow keys move inside it
+      const arrowGroup = (e) => e.getAttribute('tabindex') === '-1' && !!e.closest('[role=tablist], .grid, .kb'); // letter strip and tabs: one stop, arrow keys inside; the on-screen typing keys are for touch (a physical keyboard types the key itself)
+      return [...document.querySelectorAll('a[href],button:not([disabled]),input:not([disabled]):not([type=hidden]),select:not([disabled]),textarea:not([disabled]),summary,[tabindex]:not([tabindex="-1"])')].filter((e) => vis(e) && !e.hasAttribute('data-kbd-seen') && !e.closest('.visually-hidden, .skip-link') && !radioSeen(e) && !arrowGroup(e)).map((e) => (e.getAttribute('aria-label') || e.textContent || e.id || e.tagName).trim().replace(/\s+/g, ' ').slice(0, 30) + (e.getAttribute('tabindex') === '-1' ? ' [-1]' : ''));
+    });
+    const noRing = stops.filter((x) => !x.ring && !x.hidden).map((x) => x.name);
+    const mainStops = stops.filter((x) => x.inMain && !x.floating); let jumps = 0; const jumpEx = [];
+    for (let i = 1; i < mainStops.length; i++) if (mainStops[i - 1].top - mainStops[i].top > 80) { jumps++; if (jumpEx.length < 2) jumpEx.push(`${mainStops[i - 1].name} -> ${mainStops[i].name}`); }
+    note(f, `${route}: Tab walk ends (no trap) after ${stops.length} stops`, done, `${presses} presses`);
+    note(f, `${route}: every visible control gets focus by Tab`, unreached.length === 0, unreached.length ? `${unreached.length} not reached: ${unreached.slice(0, 5).join(' | ')}` : `${stops.length} stops`);
+    note(f, `${route}: every stop shows a focus mark`, noRing.length === 0, noRing.slice(0, 4).join(' | '));
+    note(f, `${route}: order in the page does not jump back up`, jumps === 0, jumpEx.join(' | '));
+    await ctx.close();
+  }
+}
+
+// ---- 8. Settings and the new motor features, keyboard only
+{
+  const f = 'motor features';
+  // Reset settings asks first
+  { const { ctx, page } = await open('/settings');
+    await page.focus('button:has-text("Reset settings")'); await page.keyboard.press('Enter');
+    const asked = await page.evaluate(() => !document.getElementById('s-reset-ask').hidden && document.activeElement?.textContent.includes('Keep'));
+    note(f, 'settings: Enter on "Reset settings to defaults" opens a confirmation and puts focus on the safe choice ("Keep my settings")', asked);
+    await page.keyboard.press('Enter');
+    note(f, 'settings: Enter on "Keep my settings" closes it and returns focus to the reset button', await page.evaluate(() => document.getElementById('s-reset-ask').hidden && /reset settings/i.test(document.activeElement?.textContent || '')));
+    await ctx.close(); }
+  // Quick check with confirmation: arrows/Space to mark, Tab to Check answer, Enter to submit; then Undo
+  { const { ctx, page } = await open('/learn?lesson=r01');
+    await page.evaluate(() => { const s = JSON.parse(localStorage.getItem('alef:settings') || '{}'); s.confirmAnswers = true; localStorage.setItem('alef:settings', JSON.stringify(s)); });
+    await page.reload(); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(400);
+    const nQ = await tabTo(page, (a) => /start quick check/i.test(a.name), 80); await page.keyboard.press('Enter'); await page.waitForTimeout(400);
+    note(f, 'lesson: Tab reaches "Start quick check" and Enter starts it', nQ > 0 && (await page.locator('.alef-int-opt').count()) > 0, `${nQ} presses`);
+    const nO = await tabTo(page, (a) => a.name.length > 0 && a.inMain && a.tag === 'button' && a.pressed === 'false', 30); await page.keyboard.press('Space'); await page.waitForTimeout(200);
+    note(f, 'lesson (confirm answers on): Space marks a choice and grades nothing yet', nO > 0 && await page.locator('[data-result]').count() === 0 && await page.locator('.alef-int-opt[aria-pressed="true"]').count() === 1, `${nO} presses`);
+    const nC = await tabTo(page, (a) => /^check answer$/i.test(a.name), 12); await page.keyboard.press('Enter'); await page.waitForTimeout(300);
+    note(f, 'lesson: Tab reaches "Check answer", Enter grades, focus moves to Continue', nC > 0 && await page.locator('[data-result]').count() === 1 && /^(continue|finish)$/i.test((await active(page))?.name || ''), `${nC} presses; focus ${JSON.stringify((await active(page))?.name)}`);
+    const nU = await tabTo(page, (a) => /^undo$/i.test(a.name), 6); await page.keyboard.press('Enter'); await page.waitForTimeout(300);
+    note(f, 'lesson: Tab reaches Undo, Enter returns to the unanswered question', nU > 0 && await page.locator('[data-result]').count() === 0, `${nU} presses`);
+    await ctx.close(); }
+  // Review: Show answer, rate with Enter on a button, Undo last rating by keyboard
+  { const { ctx, page } = await open('/learn');
+    await page.evaluate(async () => { const A = await import('/src/curriculum/actions.js'); const L = await import('/src/curriculum/lessons.js'); await A.completeLesson({ store: window.alef.store, settings: window.alef.settings }, L.lessons[0], Date.now() - 3 * 864e5); });
+    await page.goto(base + '#/learn?review=1'); await page.waitForTimeout(700);
+    const nS = await tabTo(page, (a) => /show answer/i.test(a.name), 20); await page.keyboard.press('Enter'); await page.waitForTimeout(250);
+    const nG = await tabTo(page, (a) => /good/i.test(a.name) && a.tag === 'button', 20); await page.keyboard.press('Enter'); await page.waitForTimeout(400);
+    note(f, 'review: Tab to Show answer, Tab to the Good button, Enter rates and shows the next card', nS > 0 && nG > 0 && /Card 2 of/.test(await page.locator('main').innerText()), `${nS}+${nG} presses`);
+    const nU = await tabTo(page, (a) => /undo last rating/i.test(a.name), 30); await page.keyboard.press('Enter'); await page.waitForTimeout(400);
+    note(f, 'review: Tab reaches "Undo last rating", Enter puts the card back (Card 1 of ...)', nU > 0 && /Card 1 of/.test(await page.locator('main').innerText()), `${nU} presses`);
+    await ctx.close(); }
+  // Letters: strip is one stop + arrows
+  { const { ctx, page } = await open('/letters/alef');
+    const n = await tabTo(page, (a) => /^animate/i.test(a.name), 60);
+    note(f, 'letters: "Animate" is reached in few Tab presses (letter strip is one stop; was 40)', n > 0 && n <= 15, `${n} presses`);
+    await ctx.close(); }
 }
 
 await browser.close(); server.close();

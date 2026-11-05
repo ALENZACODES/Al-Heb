@@ -20,7 +20,10 @@ test('new views: axe, focus, names, live regions, reduced motion, reflow, Hebrew
   const r = spawnSync('node', ['tools/a11y/newviews.mjs', '--out', out, '--json'], { cwd: root, encoding: 'utf8', timeout: 320000 });
   assert.equal(r.status, 0, (r.stdout + r.stderr).slice(-600));
   const run = JSON.parse(readFileSync(out, 'utf8'));
-  assert.equal(run.summary.routes, 10);
+  // the tool's own route list (parsed from its source: the tool runs a browser on import, so it cannot be imported)
+  const listed = /export const ROUTES = \[([\s\S]*?)\];/.exec(readFileSync(join(root, 'tools/a11y/newviews.mjs'), 'utf8'))[1].match(/'\/[^']*'/g);
+  assert.equal(run.summary.routes, listed.length);
+  assert.deepEqual(Object.keys(run.routes).sort(), listed.map((x) => x.slice(1, -1)).sort());
   for (const [route, cfg] of Object.entries(run.routes)) {
     assert.deepEqual(Object.keys(cfg).sort(), ['dark', 'light'], route);
     for (const rec of Object.values(cfg)) assert.ok(rec.rendered.text > 100, `${route} rendered something`);

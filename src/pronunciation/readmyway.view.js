@@ -20,6 +20,8 @@ const CSS = `
 .alef-rmw textarea{min-block-size:7rem;font-size:1.4rem}
 .alef-rmw select{min-block-size:var(--tap,48px)}
 .alef-rmw label{display:block;font-weight:600;margin-block:.75rem .25rem}
+.alef-rmw label:has(input[type=checkbox]){display:flex;align-items:center;gap:.5rem;min-block-size:var(--tap,48px);font-weight:400}
+.alef-rmw input[type=checkbox]{inline-size:1.5rem;block-size:1.5rem;flex:none}
 .alef-rmw button{min-block-size:var(--tap,48px);min-inline-size:var(--tap,48px);font:inherit;padding:.4rem .9rem;margin-block:.4rem;margin-inline-end:.4rem}
 .alef-rmw :focus-visible{outline:3px solid currentColor;outline-offset:2px}
 .alef-rmw .rmw-flag{border-inline-start:6px solid currentColor;padding-inline-start:.5rem}

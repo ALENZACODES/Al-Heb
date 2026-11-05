@@ -1,7 +1,9 @@
 // ALEF Progress screen: what you can read now, today (streak, gentle goal, rest day), your path per goal, belts, weak spots.
 // Everything is computed offline from the store (see model.js). Nothing here is estimated: reading speed comes only from
 // the learner's own timed reads (#/timedread), which are self-reported, and is labelled so (see docs/progress/timed-read-spec.md).
+import { plain } from '../shell/plain-copy.js';
 import { h, heSpan } from '../shell/ui.js';
+import { streakVisible } from '../shell/comfort.js';
 import { loadProgressData } from './data.js';
 import { readSnapshot, makeContext, evaluatePath, evaluateBelts, streakInfo, goalInfo, lessonCounts, dayKey, addDays, teacherLesson, niceId, siddurCoverage, timedReadSummary, readNowSummary, ALL_LETTERS, ALL_SIGNS } from './model.js';
 import { setRestDay, setGoalTarget, exportProgressJSON, progressFileName, inspectProgressBackup, importProgress, recordMilestones } from './store.js';
@@ -72,6 +74,7 @@ export async function mount(root, ctx) {
   const now = () => Date.now();
   const status = h('p', { class: 'muted', role: 'status', 'aria-live': 'polite' });
 
+  const showStreak = streakVisible(ctx);
   const todaySection = h('section', { class: 'card', 'aria-labelledby': 'pg-h-today' });
   function renderToday(focusId) {
     const s = readSnapshot(store), t = now(), st = streakInfo(s, t), g = goalInfo(s, t, d.milestones.settings.defaultGoal);
@@ -79,7 +82,7 @@ export async function mount(root, ctx) {
     const missedYesterday = !s.rest.includes(yesterday) && streakInfo({ ...s, rest: [...s.rest, yesterday] }, t).count > st.count;
     const streakLine = st.count > 0
       ? `${plural(st.count, 'day', 'days')} in a row${st.restToday ? ' (resting today)' : st.activeToday ? ', including today' : ''}. Best so far: ${st.best}.`
-      : st.restToday ? 'Resting today. Your streak is waiting for you.' : 'No streak running right now. A day counts after 5 minutes of study on a lesson, review or practice screen.';
+      : st.restToday ? 'Resting today. Your streak is waiting for you.' : plain('progressNoStreak');
     const goalLine = g.lessonsToday > 0 ? `Today's goal is met: you finished ${plural(g.lessonsToday, 'lesson', 'lessons')}.`
       : g.cards >= g.target ? `Today's goal is met: ${plural(g.cards, 'card', 'cards')} reviewed.`
       : `${g.cards} of ${g.target} cards today. Any amount counts.`;
@@ -87,13 +90,13 @@ export async function mount(root, ctx) {
       ...[...new Set([...d.milestones.settings.goalChoices, g.target])].sort((a, b) => a - b).map((n) => h('option', { value: String(n), selected: n === g.target ? true : null }, `${n} cards a day`)));
     todaySection.replaceChildren(
       h('h2', { id: 'pg-h-today' }, 'Today'),
-      h('p', { class: 'pg-big' }, streakLine),
+      showStreak ? h('p', { class: 'pg-big' }, streakLine) : null,
       h('p', {}, goalLine),
       h('progress', { max: String(g.target), value: String(g.met ? g.target : Math.min(g.cards, g.target)), 'aria-label': 'Cards reviewed today' }),
-      h('p', { class: 'small muted' }, 'A rest day does not break your streak. The streak counts a day after 5 minutes of study. The card goal below is a separate, gentle target.'),
+      showStreak ? h('p', { class: 'small muted' }, plain('progressRestNote')) : null,
       h('div', { class: 'pg-row' },
         h('label', { for: 'pg-goal' }, 'Daily goal '), sel),
-      h('div', { class: 'pg-row' },
+      !showStreak ? null : h('div', { class: 'pg-row' },
         h('button', { type: 'button', class: 'btn secondary', id: 'pg-rest', 'aria-pressed': st.restToday ? 'true' : 'false', onclick: () => { setRestDay(store, today, !st.restToday); status.textContent = st.restToday ? 'Rest day removed for today.' : 'Today is a rest day. Your streak is safe.'; renderToday('pg-rest'); } }, st.restToday ? 'Today is a rest day (tap to undo)' : 'Take today as a rest day'),
         missedYesterday ? h('button', { type: 'button', class: 'btn secondary', id: 'pg-rest-y', onclick: () => { setRestDay(store, yesterday, true); status.textContent = 'Yesterday counted as a rest day.'; renderToday('pg-rest-y'); } }, 'Count yesterday as a rest day') : null),
       status);
@@ -103,7 +106,7 @@ export async function mount(root, ctx) {
   function build() {
     const s = readSnapshot(store), c = makeContext(s, d, now());
     const sections = [];
-    sections.push(h('p', { class: 'draft-flag', role: 'note' }, 'Draft: milestones, belt gates and thresholds are ALEF\'s own and not expert-reviewed. Hebrew pointing is a draft and awaits native-speaker review.'));
+    sections.push(h('p', { class: 'draft-flag', role: 'note' }, 'Draft: the milestones and levels here are ALEF\'s own, and no expert has reviewed them. A native Hebrew speaker has not yet checked the vowel marks.'));
 
     // 1. what can I read now: one summary over every lane (letters, lines, vocabulary, timed reads, siddur, first day)
     const HREF_ROUTE = { '#/learn': 'learn', '#/read': 'read', '#/vocab': 'vocab', '#/timedread': 'timedread', '#/service': 'service', '#/firstday': 'firstday', '#/firstday/ladder': 'firstday-ladder' };
@@ -140,7 +143,7 @@ export async function mount(root, ctx) {
     }
     const sc = siddurCoverage(s, d, c);
     if (sc) readSec.append(h('p', { class: 'pg-siddur', 'data-pct': String(sc.pct), 'data-order': sc.orderId },
-      `Siddur coverage: ${sc.pct}% of the phrases in ${sc.title} you can read`, ' ', h('a', { href: '#/service' }, 'See the service')),
+      `Prayer book coverage: ${sc.pct}% of the phrases in ${sc.title} you can read`, ' ', h('a', { href: '#/service' }, 'See the service')),
       h('p', { class: 'small muted' }, `${sc.full} of the ${sc.lines} lines ALEF holds for ${sc.title.toLowerCase()} use only letters and signs you have been taught. That says you can sound them out, not that you read them fluently; ${plural(sc.gaps, 'part', 'parts')} of a typical service ${sc.gaps === 1 ? 'is' : 'are'} not in ALEF yet.`));
     sections.push(readSec);
 
@@ -189,7 +192,7 @@ export async function mount(root, ctx) {
     const stateText = { earned: 'Earned', ready: 'Ready: only a check the app cannot make is left', current: 'Working on', later: 'Later' };
     const timedBelts = belts.filter((b) => b.gates.some((g) => g.kind === 'timedRead'));
     sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-belts' }, h('h2', { id: 'pg-h-belts' }, 'Belts'),
-      h('p', { class: 'small muted' }, `ALEF's own belts (names borrowed, gates are ours). A belt means you have met every letter and sign in its texts and finished its lessons.${timedBelts.length ? ` The ${timedBelts.map((b) => b.name).join(' and ')} belt${timedBelts.length === 1 ? '' : 's'} also ask for timed read-alouds, which you time and mark yourself (self-reported, not measured by the app).` : ''}`),
+      h('p', { class: 'small muted' }, `Belts are ALEF's own levels, named after colours, like in martial arts. A belt means you have met every letter and vowel sign in its texts and finished its lessons.${timedBelts.length ? ` The ${timedBelts.map((b) => b.name).join(' and ')} belt${timedBelts.length === 1 ? '' : 's'} also ask for timed read-alouds, which you time and mark yourself (self-reported, not measured by the app).` : ''}`),
       ...belts.map((b) => h('details', { open: b.state === 'current' ? true : null }, h('summary', {}, `${b.name} belt: ${stateText[b.state]}`),
         h('p', { class: 'small' }, b.gate),
         h('ul', {}, ...b.gates.map((g) => h('li', { class: 'small', 'data-gate': g.kind }, `${g.label}: `, g.measurable ? (g.done ? 'met' : `${g.have} of ${g.need}`) : 'cannot be checked in the app yet',
@@ -214,13 +217,13 @@ export async function mount(root, ctx) {
         ...row('Letters taught by lessons', `${k.taughtLetters.size} of ${ALL_LETTERS.length}`),
         ...row('Signs taught by lessons', `${k.signs.size} of ${ALL_SIGNS.length}`),
         ...row('Lessons completed', `${cnt.read.done + cnt.israel.done} of ${cnt.read.total + cnt.israel.total}`),
-        ...row('Review cards: new / learning / mature', `${c.srs.new} / ${c.srs.learning} / ${c.srs.mature}`),
+        ...row('Review cards: new / learning / well known', `${c.srs.new} / ${c.srs.learning} / ${c.srs.mature}`),
         ...row('Vocabulary band', bands.reached ? `working in the first ${bands.reached.toLocaleString('en-US')}` : bands.started ? 'just started' : 'not started'),
         ...row('Spot It clean rounds', sp.cleanAtLeast === null ? 'no rounds yet' : `at least ${Math.round(sp.cleanAtLeast * 100)}% of ${sp.trials}`),
         ...row('Look-alike checkpoints passed', cp.passed.length ? cp.passed.map((n) => `${n}`).join(', ') + ' of 1, 2, 3' : 'none yet'),
         ...row('Timed reads (self-reported)', tr.reads ? `${plural(tr.reads, 'read', 'reads')} of ${plural(tr.texts, 'text', 'texts')}` : 'none yet'),
         ...row('Reading speed (self-reported)', tr.best ? `about ${tr.best.medianWpm} clean words a minute on ${tr.best.textId}, median of your last reads` : 'not measured')),
-      h('p', { class: 'small muted' }, 'Mature means a card the scheduler expects you to remember for 21 days or more. "Learning" is every other card you have started. Reading speed comes only from timed reads you timed and marked yourself; the app measures nothing but the clock.')));
+      h('p', { class: 'small muted' }, 'Review cards come back after longer and longer gaps while you keep remembering them. "Well known" means a card you should remember for 21 days or more. "Learning" is every other card you have started. Reading speed comes only from timed reads you timed and marked yourself; the app measures nothing but the clock.')));
 
     sections.push(backupSection());
 
@@ -243,15 +246,15 @@ export async function mount(root, ctx) {
     bkStatus.replaceChildren('Copy this text into a file to keep it. ', out);
   }
   function backupSection() {
-    const fileIn = h('input', { type: 'file', id: 'pg-bk-file', accept: '.json,application/json', 'aria-label': 'Choose a progress file to import' });
-    const modeSel = h('select', { id: 'pg-bk-mode', 'aria-label': 'How to import' }, h('option', { value: 'replace' }, 'Replace my progress with the file'), h('option', { value: 'merge' }, 'Add the file to my progress (keys in the file win)'));
+    const fileIn = h('input', { type: 'file', id: 'pg-bk-file', accept: '.json,application/json', 'aria-label': 'Import a progress file: choose a file' });
+    const modeSel = h('select', { id: 'pg-bk-mode', 'aria-label': 'How to import' }, h('option', { value: 'replace' }, 'Replace my progress with the file'), h('option', { value: 'merge' }, 'Add the file to my progress (if both have the same item, the file wins)'));
     const confirmBox = h('div', { class: 'pg-row', id: 'pg-bk-confirm', hidden: true });
     let pending = null;
     const onText = (text) => {
       const r = inspectProgressBackup(text);
       if (!r.ok) { pending = null; confirmBox.hidden = true; confirmBox.replaceChildren(); bkStatus.textContent = r.error; return; }
       pending = text;
-      bkStatus.textContent = `Checked: ${plural(r.keys.length, 'progress key', 'progress keys')}${r.exportedAt ? `, saved ${r.exportedAt.slice(0, 10)}` : ''}${r.ignored.length ? `; ${plural(r.ignored.length, 'other key', 'other keys')} will be ignored` : ''}. Checksum matches. Nothing is changed until you confirm.`;
+      bkStatus.textContent = `Checked: ${plural(r.keys.length, 'saved item', 'saved items')}${r.exportedAt ? `, saved ${r.exportedAt.slice(0, 10)}` : ''}${r.ignored.length ? `; ${plural(r.ignored.length, 'other key', 'other keys')} will be ignored` : ''}. The file check passed. Nothing is changed until you confirm.`;
       confirmBox.hidden = false;
       confirmBox.replaceChildren(
         h('button', { type: 'button', class: 'btn', id: 'pg-bk-go', onclick: () => {
@@ -259,9 +262,9 @@ export async function mount(root, ctx) {
           const res = importProgress(store, pending, { mode: modeSel.value === 'merge' ? 'merge' : 'replace' });
           pending = null; confirmBox.hidden = true; confirmBox.replaceChildren();
           if (!res.ok) { bkStatus.textContent = res.error; return; }
-          bkStatus.textContent = `Imported ${plural(res.imported, 'key', 'keys')}${res.removed ? `, cleared ${res.removed} not in the file` : ''}. Rebuilding this screen.`;
+          bkStatus.textContent = `Imported ${plural(res.imported, 'saved item', 'saved items')}${res.removed ? `, cleared ${res.removed} not in the file` : ''}. Updating this screen.`;
           try { build(); } catch { /* build reports its own failure */ }
-          main.querySelector('#pg-bk-status')?.replaceChildren(`Imported ${plural(res.imported, 'key', 'keys')}${res.removed ? `, cleared ${res.removed} not in the file` : ''}.`);
+          main.querySelector('#pg-bk-status')?.replaceChildren(`Imported ${plural(res.imported, 'saved item', 'saved items')}${res.removed ? `, cleared ${res.removed} not in the file` : ''}.`);
         } }, 'Confirm import'),
         h('button', { type: 'button', class: 'btn secondary', onclick: () => { pending = null; confirmBox.hidden = true; confirmBox.replaceChildren(); bkStatus.textContent = 'Import cancelled. Nothing was changed.'; } }, 'Cancel'));
     };
@@ -275,7 +278,7 @@ export async function mount(root, ctx) {
       h('p', {}, 'Everything on this screen, including rest days and your goal, is saved with your other data. Back up or restore the whole app from Settings.'),
       h('a', { class: 'btn secondary', href: '#/settings' }, 'Open Settings'),
       h('h3', {}, 'Progress only'),
-      h('p', { class: 'small muted' }, 'A smaller file with just what this screen reads (lessons, cards, tracing, checkpoints, timed reads, first-day work, rest days and goal). It carries a checksum, so a cut-short or edited file is refused before anything changes.'),
+      h('p', { class: 'small muted' }, 'A smaller file with just what this screen reads (lessons, cards, tracing, checkpoints, timed reads, first-day work, rest days and goal). It has a built-in check, so a file that was cut short or edited is refused before anything changes.'),
       h('div', { class: 'pg-row' },
         h('button', { type: 'button', class: 'btn secondary', id: 'pg-bk-export', onclick: () => { try { downloadJSON(exportProgressJSON(store, now()), progressFileName(now())); } catch { bkStatus.textContent = 'The progress file could not be made.'; } } }, 'Export progress file')),
       h('div', { class: 'pg-row' }, h('label', { for: 'pg-bk-file' }, 'Import a progress file '), fileIn),
@@ -283,6 +286,6 @@ export async function mount(root, ctx) {
       h('div', { class: 'pg-row' }, h('label', { for: 'pg-bk-mode' }, 'When importing '), modeSel),
       confirmBox, bkStatus);
   }
-  try { build(); } catch (e) { console.error('progress build failed', e); main.replaceChildren(h('p', { class: 'muted' }, 'Progress could not be computed from the saved data. Your learning is not affected.')); }
+  try { build(); } catch (e) { console.error('progress build failed', e); main.replaceChildren(h('p', { class: 'muted' }, 'Progress could not be shown right now. Your saved learning is not affected.')); }
   return () => { alive = false; };
 }

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="morph morph-pe-final" viewBox="0 0 200 200" role="img" aria-labelledby="pe-final-t pe-final-d">
+<title id="pe-final-t">Final pe becomes a big feather held off the tip of a nose</title>
+<desc id="pe-final-d">A big feather with a pointed tip, split edges and a thick quill is pinched by a hand and held just off the tip of a nose in profile. The letter's round top is the feather and its long stem is the quill.</desc>
+<style>/*morph-contract 1*/
+svg.morph{--m-ink:var(--morph-ink,currentColor);--m-1:var(--morph-1,#d9480f);--m-2:var(--morph-2,#1b3a6b);--m-3:var(--morph-3,#ffd966);--m-4:var(--morph-4,#2f9e44)}
+@media (prefers-color-scheme:dark){svg.morph{--m-ink:var(--morph-ink,#f3ecdc);--m-1:var(--morph-1,#ff8a4c);--m-2:var(--morph-2,#8db8ff);--m-3:var(--morph-3,#ffe08a);--m-4:var(--morph-4,#69db7c)}}
+@media (forced-colors:active){svg.morph{--m-ink:CanvasText;--m-1:Highlight;--m-2:CanvasText;--m-3:GrayText;--m-4:LinkText}}
+svg.morph .morph-a{opacity:0}
+svg.morph .morph-b{opacity:1}
+svg.morph.morph-show-a .morph-a{opacity:1}
+svg.morph.morph-show-a .morph-b{opacity:0}
+svg.morph .morph-strokes{fill:none;stroke:var(--m-ink);stroke-width:85;stroke-linecap:round;stroke-linejoin:round}
+svg.morph .morph-trace{opacity:.6;stroke-width:14}
+svg.morph.morph-show-a .morph-trace{opacity:1;stroke-width:85}
+svg.morph .mk,svg.morph .ml{fill:none;stroke-linecap:round;stroke-linejoin:round}
+svg.morph .mk{stroke-width:85}
+svg.morph .ml{stroke-width:var(--w,24)}
+svg.morph .mfi{fill:var(--m-ink)}
+svg.morph .mf1{fill:var(--m-1)}
+svg.morph .mf2{fill:var(--m-2)}
+svg.morph .mf3{fill:var(--m-3)}
+svg.morph .mf4{fill:var(--m-4)}
+svg.morph .msi{stroke:var(--m-ink)}
+svg.morph .ms1{stroke:var(--m-1)}
+svg.morph .ms2{stroke:var(--m-2)}
+svg.morph .ms3{stroke:var(--m-3)}
+svg.morph .ms4{stroke:var(--m-4)}
+svg.morph .mb{stroke-linecap:butt}
+svg.morph .mtile{fill:var(--m-ink);fill-opacity:.09}
+svg.morph .mshade{fill:var(--m-ink);fill-opacity:.3}
+svg.morph .morph-pop{transform-box:fill-box;transform-origin:50% 50%}
+@media (prefers-reduced-motion:no-preference){
+svg.morph.morph-play .morph-a{animation:morph-a 8s ease-in-out infinite}
+svg.morph.morph-play .morph-a.morph-trace{animation-name:morph-trace}
+svg.morph.morph-play .morph-b{animation:morph-b 8s ease-in-out infinite}
+svg.morph.morph-play .morph-pop{animation:morph-pop 8s ease-in-out infinite}
+svg.morph.morph-play .morph-pop-late{animation-delay:.2s}
+svg.morph.morph-show-a *{animation:none!important}}
+@keyframes morph-a{0%,18%{opacity:1}38%,86%{opacity:0}100%{opacity:1}}
+@keyframes morph-b{0%,18%{opacity:0}38%,86%{opacity:1}100%{opacity:0}}
+@keyframes morph-trace{0%,18%{opacity:1;stroke-width:85}38%,86%{opacity:.6;stroke-width:14}100%{opacity:1;stroke-width:85}}
+@keyframes morph-pop{0%,22%{opacity:0;transform:scale(.3)}42%,86%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.3)}}
+@media (prefers-reduced-motion:reduce){svg.morph,svg.morph *{animation:none!important;transition:none!important}}
+svg.morph-pe-final .morph-pop{transform-origin:50% 100%}@media (forced-colors:active){svg.morph-pe-final .morph-b *{stroke:CanvasText;stroke-width:.8}}</style>
+<defs><clipPath id="pe-final-c"><rect x="6" y="6" width="188" height="188" rx="26"/></clipPath><path id="pe-final-g" fill-rule="evenodd" d="M725 465V960H636V464Q636 364 601 326Q566 287 485 287H364V402Q364 437 381 454Q398 470 433 470Q453 470 485 464V537Q446 545 414 545Q349 545 312 509Q275 474 275 389V218H485Q616 218 670 277Q725 336 725 465Z"/></defs><g class="morph-b"><rect class="mtile" x="6" y="6" width="188" height="188" rx="26"/>
+<path clip-path="url(#pe-final-c)" class="mf1 msi" style="fill-opacity:.35;stroke-width:3;stroke-linejoin:round" d="M200 58Q182 62 170 80Q164 92 160 104Q150 114 142 130Q130 148 128 158Q130 166 142 168Q150 168 156 166Q158 176 152 182Q150 190 158 200H200Z"/>
+<ellipse class="mfi" cx="177" cy="94" rx="4" ry="5.5"/><path class="ml msi" style="--w:3" d="M168 84Q177 79 186 85M139 160Q141 156 145 158"/>
+<path class="mf2 ms2" style="fill-opacity:.25;stroke-width:2.5;stroke-linejoin:round" d="M122 8C146 22 150 46 144 60L128 60L146 68C140 84 120 92 100 98C70 92 40 80 32 56L48 52L30 44C32 28 60 12 122 8Z"/>
+<path class="ml ms2" style="--w:1.4;stroke-opacity:.8" d="M100 90Q82 84 62 72M100 90Q118 86 136 76M100 78Q78 72 50 58M100 78Q120 74 140 66M100 66Q80 60 44 46M100 66Q120 62 136 52M100 54Q84 48 60 36M100 54Q116 50 132 40M100 40Q88 34 78 24M100 40Q112 36 124 28"/>
+<use href="#pe-final-g" transform="translate(22 32.5) scale(.115)" class="mf2"/>
+<path class="mf1 msi" style="fill-opacity:.35;stroke-width:2;stroke-linejoin:round" d="M6 146L84 124L90 138L6 168Z"/><ellipse class="mf1 msi" style="fill-opacity:.35;stroke-width:2" cx="104" cy="131" rx="14" ry="6" transform="rotate(-12 104 131)"/><ellipse class="mf1 msi" style="fill-opacity:.35;stroke-width:2" cx="96" cy="140" rx="10" ry="5" transform="rotate(8 96 140)"/>
+<g class="morph-pop"><path class="ml ms2" style="--w:3" d="M122 140Q112 146 116 152M120 150Q114 156 118 162"/></g></g><g class="morph-a"><use href="#pe-final-g" transform="translate(22 32.5) scale(.115)" class="mfi"/></g>
+</svg>

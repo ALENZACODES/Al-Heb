@@ -81,7 +81,7 @@ test('torah reader: respelling and the Hear-it label follow the tradition; only 
     un();
   }
   assert.match(out.ashkenazi.status, /Recorded by a human reader/);
-  assert.match(out.sephardi.status, /No Sephardi recording yet: the device voice speaks Israeli Hebrew/);
+  assert.match(out.sephardi.status, /There is no Sephardi recording yet\. The device voice speaks Israeli Hebrew/);
   assert.match(out.israeli.status, /browser voice: a computer voice, not a person\. It speaks Israeli Hebrew and may ignore/);
   for (const t of ['sephardi', 'israeli']) assert.doesNotMatch(out[t].status, /Recorded by a human/);
   assert.notEqual(out.ashkenazi.say, out.israeli.say, 'respelling differs for Ashkenazi on the first word');
@@ -114,8 +114,8 @@ test('listen: clip count and honesty notes follow the tradition (clips exist for
   for (const t of ['sephardi', 'israeli']) {
     const r = await open(t);
     assert.match(r.root.textContent, /Audio not recorded yet/); assert.doesNotMatch(r.root.textContent, /words have audio/);
-    if (t === 'sephardi') assert.match(r.root.textContent, /No Sephardi recording yet: the device voice speaks Israeli Hebrew/);
-    else assert.doesNotMatch(r.root.textContent, /recording yet: the device voice/);
+    if (t === 'sephardi') assert.match(r.root.textContent, /There is no Sephardi recording yet\. The device voice speaks Israeli Hebrew/);
+    else assert.doesNotMatch(r.root.textContent, /recording yet\. The device voice/);
     r.un();
   }
 });
@@ -139,7 +139,7 @@ test('speak read aloud and shadowing: respelling line, setting line and Listen n
     assert.equal(rs.replace(/\s+/g, ' ').trim(), respell(line, t).replace(/\s+/g, ' ').trim(), `${tab}/${t}`);
     assert.ok(rs.length > 0);
     assert.match(byId(root, `${tab}-setting`).textContent, new RegExp(`Your setting: ${LABELS[t]}`));
-    assert.equal(/rule-generated/.test(byId(root, `${tab}-setting`).textContent), t !== 'israeli');
+    assert.equal(/made by rules/.test(byId(root, `${tab}-setting`).textContent), t !== 'israeli');
     byId(root, `${tab}-listen`).click();
     const st = () => root.find((n) => n.attrs.role === 'status').map((n) => n.textContent).join(' ');
     await waitFor(() => /Played the browser/.test(st()));

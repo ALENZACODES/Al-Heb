@@ -49,7 +49,7 @@ export async function mount(root, ctx) {
   let data;
   try { data = await load(ctx); } catch (err) {
     root.replaceChildren(h('article', { class: 'stack' }, h('h1', { id: 'view-title', tabindex: '-1' }, t('nav.credits', 'Credits & licences')),
-      h('p', { role: 'alert' }, 'The credits list could not be loaded (' + String(err && err.message || err) + '). Try again when you are online or reload the app.')));
+      h('p', { role: 'alert' }, 'The credits list did not load. Please reload the app, or try again when you are online.')));
     return () => {};
   }
   const entries = data.entries || [];
@@ -64,10 +64,10 @@ export async function mount(root, ctx) {
   root.replaceChildren(h('article', { class: 'stack', id: 'credits' },
     h('section', { class: 'card' },
       h('h1', { id: 'view-title', tabindex: '-1' }, t('nav.credits', 'Credits & licences')),
-      h('p', { class: 'draft-flag', role: 'note' }, 'This is not legal advice and no lawyer has reviewed it. Licence labels are what each source says about itself. Where a row says "unverified" or "partly verified", nobody has confirmed the right from the original owner. No native speaker, rabbi or educator has reviewed the Hebrew, pointing, transliteration or translations.'),
+      h('p', { class: 'draft-flag', role: 'note' }, 'This is not legal advice, and no lawyer has reviewed it. Licence labels are what each source says about itself. If a row says "unverified" or "partly verified", nobody has confirmed the right with the original owner. No native speaker, rabbi or teacher has reviewed the Hebrew, the vowel marks, the English spelling of Hebrew words, or the translations.'),
       h('p', {}, `${entries.length} sources listed: ${counts['verified-primary'] || 0} verified, ${counts['partly-verified'] || 0} partly verified, ${counts.unverified || 0} unverified, ${(counts['project-owned'] || 0) + (counts['not-present'] || 0)} project-written or not present.`),
       data.notLegalAdvice ? h('details', {}, h('summary', {}, 'What the status values mean'), h('p', {}, data.notLegalAdvice)) : null,
-      h('p', {}, 'The software licence for ALEF\'s own code and original text has not been chosen: until one is added, all rights are reserved.')),
+      h('p', {}, 'ALEF has no software licence for its own code and original text yet. Until one is added, all rights are reserved.')),
     ...sections,
     h('p', {}, h('a', { class: 'btn secondary', href: '#/privacy' }, 'Privacy'), ' ', h('a', { class: 'btn secondary', href: '#/about' }, 'About'), ' ', h('a', { class: 'btn secondary', href: '#/how' }, 'How this works'))));
   return () => {};

@@ -66,9 +66,9 @@ test('withheld slang glosses are not printed as the bare word "slang"', () => {
     const list = Array.isArray(pack) ? pack : pack.entries;
     for (const e of list) { if (isHiddenRecord(e)) hiddenInTiers.push(e.id); assert.ok(!visibleRecords(list).some((x) => x.id === e.id && isHiddenRecord(x))); }
   }
-  assert.deepEqual(hiddenInTiers.sort(), ['v73a6f0a9', 'v86404c39']);
+  assert.deepEqual(hiddenInTiers.sort(), ['v73a6f0a9', 'v86404c39', 'v96491b44', 'vedf291d8']); // + ranks 168 and 43, hidden by the sensitivity pass (docs/sensitivity/OPEN.md)
 });
 
-test('rank 937 is the month, not the "energy" noun (different pointing)', () => {
-  const e = byRank(937); assert.equal(e.lemma, 'מרץ'); assert.equal(e.pointed, 'מֶרְץ'); assert.equal(e.topic, 'Months'); assert.equal(e.curatedCore, true);
+test('the month מרץ (curated core), not the "energy" noun, holds that spelling (different pointing); it was rank 937 before the first-500 additions moved the ranks', () => {
+  const e = vocab.find((x) => x.lemma === 'מרץ' && x.curatedCore); assert.equal(e.lemma, 'מרץ'); assert.equal(e.pointed, 'מֶרְץ'); assert.equal(e.topic, 'Months'); assert.equal(e.curatedCore, true);
 });

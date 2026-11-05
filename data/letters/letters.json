@@ -2869,7 +2869,8 @@
   },
   "confusableWith": [
    "vav",
-   "nun-final"
+   "nun-final",
+   "yod"
   ],
   "print": {
    "strokes": [
@@ -4561,7 +4562,9 @@
    "en": "y as in yes"
   },
   "confusableWith": [
-   "vav"
+   "vav",
+   "zayin",
+   "nun-final"
   ],
   "print": {
    "strokes": [
@@ -12862,7 +12865,8 @@
   },
   "confusableWith": [
    "vav",
-   "zayin"
+   "zayin",
+   "yod"
   ],
   "print": {
    "strokes": [

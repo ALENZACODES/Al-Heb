@@ -6,10 +6,6 @@
       "reason": "The scan tool itself: defines the patterns."
     },
     {
-      "path": "tools/meta/scan.mjs",
-      "reason": "The scan tool itself."
-    },
-    {
       "path": "tools/meta/lib.mjs",
       "reason": "The metadata scan: defines tool-name patterns."
     },
@@ -24,10 +20,6 @@
     {
       "path": "tools/release/push-clean.sh",
       "reason": "Filter patterns that strip attribution trailers from commits before publishing; must name them."
-    },
-    {
-      "path": "data/pronunciation/variants/_vocab-3.json",
-      "reason": "False positive: the Hebrew word dalleket (transliteration) matches the dall-e pattern."
     },
     {
       "path": "data/images/provenance.json",
@@ -72,10 +64,6 @@
     {
       "path": "tools/youtube/fetch-slow.py",
       "reason": "Machine path of a local research folder (user name in path); not published content."
-    },
-    {
-      "path": "data/pronunciation/runtime/lookup-01.json",
-      "reason": "Hebrew word dalleket (inflammation) transliteration matches an image-model pattern by accident."
     },
     {
       "path": "docs/TOOLING.md",

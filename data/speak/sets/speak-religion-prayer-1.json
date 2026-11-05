@@ -12,7 +12,7 @@
    "id": "h50cf3648",
    "he": "יוֹם",
    "translit": "yom",
-   "en": "Day",
+   "en": "day",
    "kind": "word",
    "audioId": "kiddush-shabbat-eve-w22",
    "source": "data/vocab/words.json"
@@ -21,7 +21,7 @@
    "id": "h6ad3ddd8",
    "he": "סֵדֶר",
    "translit": "seder",
-   "en": "Order, the state of being well-arranged, in the sense of putting things in order",
+   "en": "order, the state of being well-arranged, in the sense of putting things in order",
    "kind": "word",
    "audioId": "i-29-w4",
    "source": "data/vocab/words.json"

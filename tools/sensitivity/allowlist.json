@@ -6,36 +6,36 @@
    "key": "text",
    "cls": "audio-target",
    "kind": "prefixed",
-   "max": 8,
-   "status": "known-issue",
-   "reason": "Audio target for a prefixed form (lamed, bet, vav + the name): spokenText()/spoken() in the manifest builder only rewrite the bare word. Owner: audio lane. The pointing of the spoken form needs clergy approval; do not invent it."
+   "max": 0,
+   "status": "fixed",
+   "reason": "Was prefixed audio targets (kedushah-baruch word and prefixed forms). Fixed by the audio lane: speechText() in names.js now substitutes inside maqaf compounds and prefixed forms and the manifest builder uses it; the prefix pointing is kept from the source (clergy review pending). Kept at max 0 so any return fails the gate."
   },
   {
    "file": "data/audio/manifest-words-israeli.json",
    "key": "text",
    "cls": "audio-target",
    "kind": "prefixed",
-   "max": 8,
-   "status": "known-issue",
-   "reason": "Audio target for a prefixed form (lamed, bet, vav + the name): spokenText()/spoken() in the manifest builder only rewrite the bare word. Owner: audio lane. The pointing of the spoken form needs clergy approval; do not invent it."
+   "max": 0,
+   "status": "fixed",
+   "reason": "Was prefixed audio targets (kedushah-baruch word and prefixed forms). Fixed by the audio lane: speechText() in names.js now substitutes inside maqaf compounds and prefixed forms and the manifest builder uses it; the prefix pointing is kept from the source (clergy review pending). Kept at max 0 so any return fails the gate."
   },
   {
    "file": "data/audio/manifest-words-sephardi.json",
    "key": "text",
    "cls": "audio-target",
    "kind": "prefixed",
-   "max": 8,
-   "status": "known-issue",
-   "reason": "Audio target for a prefixed form (lamed, bet, vav + the name): spokenText()/spoken() in the manifest builder only rewrite the bare word. Owner: audio lane. The pointing of the spoken form needs clergy approval; do not invent it."
+   "max": 0,
+   "status": "fixed",
+   "reason": "Was prefixed audio targets (kedushah-baruch word and prefixed forms). Fixed by the audio lane: speechText() in names.js now substitutes inside maqaf compounds and prefixed forms and the manifest builder uses it; the prefix pointing is kept from the source (clergy review pending). Kept at max 0 so any return fails the gate."
   },
   {
    "file": "data/audio/manifest.json",
    "key": "text",
    "cls": "audio-target",
    "kind": "prefixed",
-   "max": 48,
-   "status": "known-issue",
-   "reason": "Audio target for a prefixed form (lamed, bet, vav + the name): spokenText()/spoken() in the manifest builder only rewrite the bare word. Owner: audio lane. The pointing of the spoken form needs clergy approval; do not invent it."
+   "max": 0,
+   "status": "fixed",
+   "reason": "Was prefixed audio targets (kedushah-baruch word and prefixed forms). Fixed by the audio lane: speechText() in names.js now substitutes inside maqaf compounds and prefixed forms and the manifest builder uses it; the prefix pointing is kept from the source (clergy review pending). Kept at max 0 so any return fails the gate."
   },
   {
    "file": "data/audio/manifest.json",
@@ -47,6 +47,42 @@
    "reason": "Was 54 bare-name audio targets (lesson word clips). Fixed by the audio lane: the manifest now uses the spoken substitute. Kept at max 0 so any return of a bare-name target fails the gate."
   },
   {
+   "file": "data/audio/manifest-words-ashkenazi.json",
+   "key": "text",
+   "cls": "audio-target",
+   "kind": "maqaf-exact",
+   "max": 0,
+   "status": "fixed",
+   "reason": "Was maqaf-exact audio targets (kedushah-baruch word and prefixed forms). Fixed by the audio lane: speechText() in names.js now substitutes inside maqaf compounds and prefixed forms and the manifest builder uses it; the prefix pointing is kept from the source (clergy review pending). Kept at max 0 so any return fails the gate."
+  },
+  {
+   "file": "data/audio/manifest-words-israeli.json",
+   "key": "text",
+   "cls": "audio-target",
+   "kind": "maqaf-exact",
+   "max": 0,
+   "status": "fixed",
+   "reason": "Was maqaf-exact audio targets (kedushah-baruch word and prefixed forms). Fixed by the audio lane: speechText() in names.js now substitutes inside maqaf compounds and prefixed forms and the manifest builder uses it; the prefix pointing is kept from the source (clergy review pending). Kept at max 0 so any return fails the gate."
+  },
+  {
+   "file": "data/audio/manifest-words-sephardi.json",
+   "key": "text",
+   "cls": "audio-target",
+   "kind": "maqaf-exact",
+   "max": 0,
+   "status": "fixed",
+   "reason": "Was maqaf-exact audio targets (kedushah-baruch word and prefixed forms). Fixed by the audio lane: speechText() in names.js now substitutes inside maqaf compounds and prefixed forms and the manifest builder uses it; the prefix pointing is kept from the source (clergy review pending). Kept at max 0 so any return fails the gate."
+  },
+  {
+   "file": "data/audio/manifest.json",
+   "key": "text",
+   "cls": "audio-target",
+   "kind": "maqaf-exact",
+   "max": 0,
+   "status": "fixed",
+   "reason": "Was maqaf-exact audio targets (kedushah-baruch word and prefixed forms). Fixed by the audio lane: speechText() in names.js now substitutes inside maqaf compounds and prefixed forms and the manifest builder uses it; the prefix pointing is kept from the source (clergy review pending). Kept at max 0 so any return fails the gate."
+  },
+  {
    "file": "data/corpus/registry.json",
    "key": "notes",
    "cls": "latin-spelling",
@@ -54,168 +90,6 @@
    "max": 1,
    "status": "accepted",
    "reason": "English source gloss or build note that spells the name (from the vocabulary source). Not a transliteration prompt. Review wording with clergy (see REVIEW-FOR-CLERGY.md)."
-  },
-  {
-   "file": "data/pronunciation/derived/_ssml-015.json",
-   "key": "ashkenazi",
-   "cls": "audio-target",
-   "kind": "exact",
-   "max": 2,
-   "status": "accepted",
-   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
-  },
-  {
-   "file": "data/pronunciation/derived/_ssml-015.json",
-   "key": "israeli",
-   "cls": "audio-target",
-   "kind": "exact",
-   "max": 2,
-   "status": "accepted",
-   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
-  },
-  {
-   "file": "data/pronunciation/derived/_ssml-015.json",
-   "key": "sephardi",
-   "cls": "audio-target",
-   "kind": "exact",
-   "max": 2,
-   "status": "accepted",
-   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
-  },
-  {
-   "file": "data/pronunciation/derived/_ssml-016.json",
-   "key": "ashkenazi",
-   "cls": "audio-target",
-   "kind": "exact",
-   "max": 36,
-   "status": "accepted",
-   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
-  },
-  {
-   "file": "data/pronunciation/derived/_ssml-016.json",
-   "key": "ashkenazi",
-   "cls": "audio-target",
-   "kind": "prefixed",
-   "max": 3,
-   "status": "known-issue",
-   "reason": "The ph attribute for the prefixed form (lamed, shin + the name) is an as-written reading (lajhoˈva, ʃejaˈva), not the substitute. Owner: pronunciation lane. Needs a clergy-approved spoken form."
-  },
-  {
-   "file": "data/pronunciation/derived/_ssml-016.json",
-   "key": "israeli",
-   "cls": "audio-target",
-   "kind": "exact",
-   "max": 36,
-   "status": "accepted",
-   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
-  },
-  {
-   "file": "data/pronunciation/derived/_ssml-016.json",
-   "key": "israeli",
-   "cls": "audio-target",
-   "kind": "prefixed",
-   "max": 3,
-   "status": "known-issue",
-   "reason": "The ph attribute for the prefixed form (lamed, shin + the name) is an as-written reading (lajhoˈva, ʃejaˈva), not the substitute. Owner: pronunciation lane. Needs a clergy-approved spoken form."
-  },
-  {
-   "file": "data/pronunciation/derived/_ssml-016.json",
-   "key": "sephardi",
-   "cls": "audio-target",
-   "kind": "exact",
-   "max": 36,
-   "status": "accepted",
-   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
-  },
-  {
-   "file": "data/pronunciation/derived/_ssml-016.json",
-   "key": "sephardi",
-   "cls": "audio-target",
-   "kind": "prefixed",
-   "max": 3,
-   "status": "known-issue",
-   "reason": "The ph attribute for the prefixed form (lamed, shin + the name) is an as-written reading (lajhoˈva, ʃejaˈva), not the substitute. Owner: pronunciation lane. Needs a clergy-approved spoken form."
-  },
-  {
-   "file": "data/pronunciation/derived/_ssml-017.json",
-   "key": "ashkenazi",
-   "cls": "audio-target",
-   "kind": "exact",
-   "max": 39,
-   "status": "accepted",
-   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
-  },
-  {
-   "file": "data/pronunciation/derived/_ssml-017.json",
-   "key": "ashkenazi",
-   "cls": "audio-target",
-   "kind": "prefixed",
-   "max": 1,
-   "status": "known-issue",
-   "reason": "The ph attribute for the prefixed form (lamed, shin + the name) is an as-written reading (lajhoˈva, ʃejaˈva), not the substitute. Owner: pronunciation lane. Needs a clergy-approved spoken form."
-  },
-  {
-   "file": "data/pronunciation/derived/_ssml-017.json",
-   "key": "israeli",
-   "cls": "audio-target",
-   "kind": "exact",
-   "max": 39,
-   "status": "accepted",
-   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
-  },
-  {
-   "file": "data/pronunciation/derived/_ssml-017.json",
-   "key": "israeli",
-   "cls": "audio-target",
-   "kind": "prefixed",
-   "max": 1,
-   "status": "known-issue",
-   "reason": "The ph attribute for the prefixed form (lamed, shin + the name) is an as-written reading (lajhoˈva, ʃejaˈva), not the substitute. Owner: pronunciation lane. Needs a clergy-approved spoken form."
-  },
-  {
-   "file": "data/pronunciation/derived/_ssml-017.json",
-   "key": "sephardi",
-   "cls": "audio-target",
-   "kind": "exact",
-   "max": 39,
-   "status": "accepted",
-   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
-  },
-  {
-   "file": "data/pronunciation/derived/_ssml-017.json",
-   "key": "sephardi",
-   "cls": "audio-target",
-   "kind": "prefixed",
-   "max": 1,
-   "status": "known-issue",
-   "reason": "The ph attribute for the prefixed form (lamed, shin + the name) is an as-written reading (lajhoˈva, ʃejaˈva), not the substitute. Owner: pronunciation lane. Needs a clergy-approved spoken form."
-  },
-  {
-   "file": "data/pronunciation/derived/_ssml-018.json",
-   "key": "ashkenazi",
-   "cls": "audio-target",
-   "kind": "exact",
-   "max": 7,
-   "status": "accepted",
-   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
-  },
-  {
-   "file": "data/pronunciation/derived/_ssml-018.json",
-   "key": "israeli",
-   "cls": "audio-target",
-   "kind": "exact",
-   "max": 7,
-   "status": "accepted",
-   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
-  },
-  {
-   "file": "data/pronunciation/derived/_ssml-018.json",
-   "key": "sephardi",
-   "cls": "audio-target",
-   "kind": "exact",
-   "max": 7,
-   "status": "accepted",
-   "reason": "The phoneme ph attribute carries the substitute (adonai IPA); the inner Hebrew is the source word shown as a fallback. An engine that ignores ph would read the letters: check per engine before use."
   },
   {
    "file": "data/pronunciation/runtime/lookup-02.json",
@@ -369,6 +243,24 @@
    "max": 2,
    "status": "accepted",
    "reason": "Recognition item (the Name, read aloud as Adonai) with translit adonai and a note not to pronounce the letters. Not in speak sets or deck-order. Must stay out of any produce/say-it prompt."
+  },
+  {
+   "file": "data/vocab/corrections.json",
+   "key": "en",
+   "cls": "latin-spelling",
+   "kind": "latin",
+   "max": 1,
+   "status": "accepted",
+   "reason": "Audit record of a removed example (the old value, or the reason for removing it) that quotes a source sentence with 'Jehovah's Witnesses'. It is a log of a removal, not shown to learners. Review wording with clergy (see REVIEW-FOR-CLERGY.md question 12)."
+  },
+  {
+   "file": "data/vocab/corrections.json",
+   "key": "reason",
+   "cls": "latin-spelling",
+   "kind": "latin",
+   "max": 1,
+   "status": "accepted",
+   "reason": "Audit record of a removed example (the old value, or the reason for removing it) that quotes a source sentence with 'Jehovah's Witnesses'. It is a log of a removal, not shown to learners. Review wording with clergy (see REVIEW-FOR-CLERGY.md question 12)."
   }
  ]
 }

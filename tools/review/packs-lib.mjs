@@ -2,6 +2,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { PACKS, instructionsFor, REVIEWER_TYPES, HOW_TO_MARK, VERDICTS } from './instructions.mjs';
+import { VOCAB_QUESTIONS, CORPUS_QUESTIONS, PRON_QUESTIONS, LINT_QUESTIONS, CALENDAR_QUESTIONS } from './questions.mjs';
+import { loadVariants, ruleList, sampleFor, TRADITIONS, SAMPLE_PER_TRADITION, SAMPLE_SOURCE_LABEL } from './lib/pronrules.mjs';
 
 export const COLUMNS = ['id', 'hebrew', 'transliteration', 'english', 'tradition', 'where_used', 'verdict', 'correction', 'notes'];
 export const TRADS = ['israeli', 'sephardi', 'ashkenazi'];
@@ -48,15 +50,34 @@ function packInter(root) {
   return out;
 }
 
+const isHidden = (w) => w && w.flags && typeof w.flags === 'object' && w.flags.hidden === true;
+const qrow = (kind, id, text, where) => row(`q:${kind}:${id}`, '', '', text, 'question for the reviewer', where);
+
 function packVocab(root) {
-  const ws = rd(root, 'data/vocab/words.json').words.filter((w) => w.frequencyRank != null);
+  const all = rd(root, 'data/vocab/words.json').words.filter((w) => w.frequencyRank != null);
+  // Records the data hides from learners (flags.hidden) are not sent to reviewers: they are never shown.
+  const ws = all.filter((w) => !isHidden(w));
   ws.sort((a, b) => a.frequencyRank - b.frequencyRank || (a.id < b.id ? -1 : 1));
-  return ws.slice(0, 1000).map((w) => {
+  const out = ws.slice(0, 1000).map((w) => {
     const refs = [...(w.lessonRefs || [])];
     if (w.unlockLesson && !refs.includes(w.unlockLesson)) refs.unshift(w.unlockLesson);
     const where = `frequency rank ${w.frequencyRank}; theme ${w.topic}; pack ${w.pack || 'none'}; ${w.pos || 'pos ?'}; lessons: ${refs.join(', ') || 'none'}`;
     return row(`vocab:${w.id}`, w.he, w.translit, w.en, 'israeli', where);
   });
+  // Replacement example sentences flagged for native review (flags.needsNativeReview on the example). The sentence is
+  // Tatoeba text, unpointed, chosen by an English-gloss match: the question is whether the Hebrew sentence really uses the headword in that sense.
+  for (const w of ws) {
+    const e = w.example;
+    if (!e || !e.flags || e.flags.needsNativeReview !== true) continue;
+    out.push(row(`vocab-example:${w.id}`, e.he, '', `Headword ${w.he} (${w.en}). Example translation: ${e.en}`, 'israeli',
+      `Example sentence for frequency rank ${w.frequencyRank}, flagged needsNativeReview. Is the sentence natural Hebrew, does it use this headword in this sense, and is it suitable for all ages?${e.note ? ' Note: ' + e.note : ''}`));
+  }
+  // Hidden records are listed by id only so the exclusion is visible.
+  const hidden = all.filter(isHidden).sort((a, b) => a.frequencyRank - b.frequencyRank);
+  if (hidden.length) out.push(qrow('vocab', 'hidden-excluded', `${hidden.length} vocabulary records are hidden from learners (flags.hidden) and are not in this pack: ${hidden.map((w) => w.id + ' (rank ' + w.frequencyRank + ')').join(', ')}. No action needed unless you think one should come back.`, 'data/vocab/words.json flags.hidden; docs/sensitivity/OPEN.md'));
+  for (const [id, text] of VOCAB_QUESTIONS) out.push(qrow('sens', id, text, 'docs/sensitivity/OPEN.md (sensitive vocabulary senses and examples)'));
+  for (const [id, text] of LINT_QUESTIONS) out.push(qrow('lint', id, text, 'docs/review/HEBREW-LINT-BASELINE.md'));
+  return out;
 }
 
 function packCorpus(root) {
@@ -70,7 +91,7 @@ function packCorpus(root) {
     const m = meta[e.id] || {};
     const lessons = usage.get(e.id) || [];
     const where = `${e.ref}; ${e.title}; ${(m.service || []).join(', ') || 'not placed in a service'}${lessons.length ? '; lessons: ' + lessons.join(', ') : ''}`;
-    he.forEach((line, i) => out.push(row(`corpus:${e.id}:l${i + 1}`, line, '', split ? en[i] : (i === 0 ? `[whole passage] ${s(e.english).replace(/\n/g, ' ')}` : ''), e.nusach || 'verse text (no nusach)', where)));
+    he.forEach((line, i) => out.push(row(`corpus:${e.id}:l${i + 1}`, line, '', split ? en[i] : (i === 0 ? `[whole passage] ${s(e.english).replace(/\n/g, ' ')}` : ''), (e.nusach || 'verse text (no nusach)') + (/Metsudah/i.test(s(e.source)) ? ' [licence unverified: Metsudah 1981 source]' : ''), where)));
   }
   if (has(root, 'data/corpus/trope/table.json')) {
     const t = rd(root, 'data/corpus/trope/table.json');
@@ -82,23 +103,31 @@ function packCorpus(root) {
       for (const v of tj.verses) out.push(row(`trope:${f}:${v.chapter}:${v.verse}`, v.raw, '', '', 'cantillation (UXLC)', `${v.ref}; cantillated verse for ${tj.title}`));
     }
   }
+  for (const [id, text] of CORPUS_QUESTIONS) out.push(qrow('divine', id, text, 'docs/sensitivity/OPEN.md (divine-name forms awaiting clergy)'));
   return out;
 }
 
-function packPron(root, trad) {
+// Pronunciation: the rule list, then a stratified sample per tradition (see lib/pronrules.mjs). The remaining
+// ~6,600 derived respellings are produced by the same rules and are not sent row by row.
+function packPron(root) {
   const out = [];
-  const top = new Set(packVocab(root).map((r) => r.id.slice(6)));
-  const dir = 'data/pronunciation/variants';
-  const idx = rd(root, `${dir}/_index.json`);
-  for (const sh of idx.shards) {
-    for (const r of rd(root, `${dir}/${sh.file}`).records) {
-      if (r.source === 'vocab' && !top.has(r.id)) continue; // vocab respellings only for the top-1000 pack words
-      const v = r.variants && r.variants[trad];
-      if (!v) continue;
-      const fl = (r.flags || []).length ? `; flags: ${r.flags.join(', ')}` : '';
-      out.push(row(`pron:${r.source}:${r.id}:${trad}`, r.he, v.simple, r.en, trad, `${({ phrasebook: 'Phrasebook', corpus: 'Prayer/Torah corpus', vocab: 'Vocabulary top 1000' })[r.source] || r.source} ${r.id}${fl}`));
-    }
+  const data = loadVariants(root);
+  if (!data) return out;
+  const samples = Object.fromEntries(TRADITIONS.map((t) => [t, sampleFor(data, t, SAMPLE_PER_TRADITION)]));
+  for (const r of ruleList(root, data)) {
+    const used = TRADITIONS.filter((t) => r.count[t] > 0);
+    const ex = TRADITIONS.map((t) => samples[t].filter((x) => x.rules.includes(r.id)).sort((a, b) => s(a.rec.he).length - s(b.rec.he).length || (a.rec.id < b.rec.id ? -1 : 1))[0]).filter(Boolean);
+    const first = ex[0];
+    out.push(row(`pronrule:${r.id.replace(/[^A-Za-z0-9:.]+/g, '-').replace(/^-+|-+$/g, '')}`, first ? first.rec.he : '',
+      first ? TRADITIONS.map((t) => `${t}: ${first.rec.variants[t]?.simple ?? ''}`).join(' | ') : '',
+      `Rule ${r.id} (${r.kind}): ${r.label}. ${r.text} Records using it: ${used.length ? used.map((t) => `${t} ${r.count[t]}`).join(', ') : 'none in the current data'}.`,
+      used.join('+') || 'none', `Rule list, docs/pronunciation/VARIANTS.md; rule id ${r.id}`));
   }
+  for (const trad of TRADITIONS) for (const x of samples[trad]) {
+    const r = x.rec, v = r.variants[trad];
+    out.push(row(`pron:${r.source}:${r.id}:${trad}`, r.he, v.simple, r.en, trad, `rules: ${x.rules.join(', ')}; ${SAMPLE_SOURCE_LABEL[r.source] || r.source} ${r.id}${(r.flags || []).length ? `; flags: ${r.flags.join(', ')}` : ''}`));
+  }
+  for (const [id, text] of PRON_QUESTIONS) out.push(qrow('pron', id, text, 'docs/pronunciation/DOUBLING-POLICY.md'));
   return out;
 }
 
@@ -127,6 +156,7 @@ function packFest(root) {
       if (w.line) out.push(row(`fest:${p.id}:${w.id}:line`, w.line.he, '', '', 'as in source line', `Festival ${p.id}; reading line for "${w.he}" from ${w.line.source} ${w.line.id}${w.line.title ? ` (${w.line.title})` : ''}`));
     }
   }
+  for (const [id, text] of CALENDAR_QUESTIONS) out.push(qrow('cal', id, text, 'docs/review/ENGAGEMENT-CHECK.md; src/morning/plan.js ERAV_LATEST'));
   return out;
 }
 
@@ -138,7 +168,8 @@ export function buildPack(root, pack) {
     case 'corpus': return packCorpus(root);
     case 'speak': return packSpeak(root);
     case 'fest': return packFest(root);
-    default: if (pack.key.startsWith('pron-')) return packPron(root, pack.tradition); throw new Error('unknown pack ' + pack.key);
+    case 'pron-rules': return packPron(root);
+    default: throw new Error('unknown pack ' + pack.key);
   }
 }
 

@@ -11,7 +11,9 @@
  * "<lessonId>-w<n>"). Round 4 adds "syllable:<id>", "line:<corpusId>" (fade-out recall, extra field fadeLevel) and "gender:<pairId>" cards; lessons still schedule no prayer lines.
  */
 import { newCard, due, interleave, review } from "./srs.js";
-import { projectStreak } from "./streak.js";
+import { currentStreak } from "./state.js";
+export { currentStreak };
+import { parseMemCardId, mergeMemoryIntoQueue, partnersOf } from "../letters/memory.core.js";
 
 export const letterCardId = (id) => `letter:${id}`;
 export const vowelCardId = (id) => `vowel:${id}`;
@@ -24,6 +26,8 @@ export function parseCardId(id) {
   if (m) return { kind: m[1], key: m[2] };
   const x = /^(syllable|line|gender):(.+)$/.exec(id);
   if (x) return { kind: x[1] === "line" ? "prayerLine" : x[1], key: x[2] };
+  const mem = parseMemCardId(id);
+  if (mem) return mem;
   const w = /^word:([^:]+):(\d+)$/.exec(id);
   if (w) return { kind: "word", key: id, lessonId: w[1], n: Number(w[2]) };
   return null;
@@ -87,10 +91,18 @@ export function buildQueue(cards, now, { lessonId, lessons, confusables, limit =
   if (lessonId) {
     const lesson = (lessons || []).find((l) => l.id === lessonId);
     const ids = new Set(lesson ? cardsForLesson(lesson).map((d) => d.id) : []);
-    list = list.filter((c) => ids.has(c.id));
+    const mine = new Set(lesson ? lesson.letters : []);
+    list = list.filter((c) => ids.has(c.id) || mine.has(parseMemCardId(c.id)?.letterId));
   }
   list = list.slice(0, limit);
-  return interleave(list, confusableMap(confusables));
+  // memory-chain cards (mem:<letter>:<type>) are kept APART from their look-alikes in time (the questions put the look-alikes among the choices);
+  // every other card keeps the old rule of sitting next to its look-alikes
+  const isMem = (c) => c.id.startsWith("mem:");
+  const mem = list.filter(isMem);
+  if (!mem.length) return interleave(list, confusableMap(confusables));
+  const others = interleave(list.filter((c) => !isMem(c)), confusableMap(confusables));
+  const byId = new Map(list.map((c) => [c.id, c]));
+  return mergeMemoryIntoQueue(others.map((c) => c.id), mem.map((c) => c.id), (id) => partnersOf(confusables, id)).map((id) => byId.get(id));
 }
 
 /** Local calendar day key. */
@@ -111,12 +123,3 @@ export function recordActivity(streak, now) {
   return { count, best: Math.max(s.best || 0, count), last: today };
 }
 
-/** Streak to DISPLAY now: 0 when the last activity day is before yesterday. */
-export function currentStreak(streak, now) {
-  if (streak && streak.v === 2) { const p = projectStreak(streak, now); return { count: p.count, activeToday: p.activeToday, best: p.best }; }
-  if (!streak || !streak.last) return { count: 0, activeToday: false, best: streak?.best || 0 };
-  const gap = dayNumber(dayKey(now)) - dayNumber(streak.last);
-  if (gap === 0) return { count: streak.count, activeToday: true, best: streak.best };
-  if (gap === 1) return { count: streak.count, activeToday: false, best: streak.best };
-  return { count: 0, activeToday: false, best: streak.best };
-}

@@ -13,8 +13,19 @@ Limits, stated plainly: this is emulation, not a real phone. Byte counts, reques
 ## Budget
 
 Metric: JS bytes transferred (script resources, headers included) on a cold load of `/`, measured after the audio manifest has settled plus 1 s.
-Baseline (median of 3 runs, this machine, 2026-11-04): **234197 B** in 38 requests. Runs seen while developing the tool ranged from 215 to 234 KB, because late-loading modules land inside or outside the settle window.
+Original baseline (median of 3 runs, this machine, 2026-11-04): **234197 B** in 38 requests. Runs seen while developing the tool ranged from 215 to 234 KB, because late-loading modules land inside or outside the settle window.
 Budget: baseline x 1.15 rounded up to 10 KB = **276480 B** (`docs/perf/budget.json`). The 15 % margin is a choice to absorb the run-to-run spread above, not a target from users. The test fails if one cold load exceeds it. Raising it needs a written reason in this file, then `node tools/qa/perf.mjs --set-budget`.
+
+### Budget bump, 2026-11-04 (re-baselined)
+
+Re-measured with `node tools/qa/perf.mjs --quick --runs 3 --set-budget`: **301214 B** in 51 requests (was 234197 B in 38). The old budget of 276480 B was exceeded by 24.7 KB at that point (the measure was 299.4 to 299.8 KB in the first runs of the day).
+Why: since the first baseline the home page gained eager modules (shell/nav-model, preview-banner, audio-labels, scroll-restore, names, a larger update.js and others, mostly small, 13 more requests in all). Each is needed at boot or by the router/home view.
+What was tried first: `shell/install-notice.js` no longer loads `shell/install.js` (6.1 KB) unless the notice can actually show (not dismissed and a day or more since the first visit), which removed that request from a first load. Loading `settings.data.js` lazily from `update.js` was tried and reverted (a test requires the storage notice synchronously, and it saved only 5 KB); `shell/menu.js` stays eager because `renderNav` builds the menu synchronously and the More button visibility depends on its result. The rest of the home-page JS (calendar, streak, store, router, today, morning engagement timer) is used on first paint or by the engagement timer.
+Headroom is tightened to 5 % (budget 317440 B) instead of 15 %, so that the bump is not also a licence to grow. This was measured in emulation only, like the rest of this file.
+
+### Home JS reduction, 2026-11-04 (no re-baseline)
+
+The cold load of `/` had grown to 346346 B in 55 requests (budget 317440 B). Cause: `home.view.js` imported `curriculum/actions.js` only for `loadState`, which pulled in the whole practice chain (progress, scaffold, fade, hints, checkpoint, content, ladder, gender, spotit, hebrew, memory.core, about 47 KB). `loadState` and `currentStreak` now live in `curriculum/state.js`; `actions.js` and `progress.js` re-export them, and Home imports `state.js`. Measured after: 277 KB in 44 requests (`node tools/qa/perf.mjs --quick`, emulated, this machine). Budget and baseline are unchanged.
 
 ## Numbers (slow 4G, 4x CPU, median of 3)
 

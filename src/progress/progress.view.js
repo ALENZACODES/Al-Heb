@@ -46,6 +46,8 @@ const CSS = `
 .pg-now .pg-now-v { font-weight: 600; }
 .pg-now .pg-now-d { grid-column: 1 / -1; }
 .pg-now .pg-self { font-size: .75rem; font-weight: 700; padding: 0 .4rem; border: 1px solid var(--border); border-radius: 6px; margin-inline-start: .4rem; }
+/* Phone: the value ("0 of 27 letters, 0 of 15 signs") took half the row and broke the label one word per line at 360px. Stack label, value and detail. */
+@media (max-width: 480px) { .pg-now li { grid-template-columns: minmax(0, 1fr); } .pg-now .pg-now-v { grid-row: 2; } .pg-now .pg-now-d { grid-row: 3; } }
 `;
 
 const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;

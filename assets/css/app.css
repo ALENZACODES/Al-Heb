@@ -417,3 +417,22 @@ main label > :is(select, input[type="url"], input[type="file"]) { margin-block: 
 @media (max-width: 719.98px) { main .alef-trace > div:has(> .stage) > .sw-wrap { order: 9; } }
 /* ...and the Print / Cursive / Strict / Outline row lost its "after the grid" order (the letter-card row now sits between them), so it fell to the bottom on screen while it is above "Strokes in words" for Tab. */
 @media (max-width: 719.98px) { main .alef-trace > div:has(> .stage) > .script-toggles { order: 8; } }
+
+/* ---- Phone QA round (2026-11-05): 48px floor, narrow-screen fixes ----
+   Several controls were still 44px because later, more specific 44px rules beat the --tap token (for example "main label:has(input)" beat ".opt").
+   These rules re-point them at --tap, so the Settings > Touch and movement size still applies. */
+.brand { min-block-size: var(--tap, 48px); }
+.sound-bar { min-block-size: var(--tap, 48px); }
+.sound-bar a.sound-bar-details, .sound-bar-more, .sound-bar-x { min-block-size: var(--tap, 48px); }
+.sound-bar a.sound-bar-details, .sound-bar-x { min-inline-size: var(--tap, 48px); }
+main summary, .alef-draft summary, main .alef-trace .strokewords summary { min-block-size: var(--tap, 48px); }
+main label:has(input[type=radio], input[type=checkbox]), main label.opt { min-block-size: var(--tap, 48px); }
+main select, main input[type=url], main input[type=text], main input[type=search], main input:not([type]), input[type="file"], input[type="file"]::file-selector-button { min-block-size: var(--tap, 48px); }
+main .alef-trace button:not(.k), main .alef-atlas .row button, main .mc .mc-btn { min-block-size: var(--tap, 48px); }
+.credits li a, .pg li a:not(.btn) { min-block-size: var(--tap, 48px); }
+.pg li a:not(.btn) { min-inline-size: var(--tap, 48px); }
+/* The sound bar's message was squeezed to two letters at the largest text size because the buttons took the whole row. Let it wrap onto its own line. */
+.sound-bar { flex-wrap: wrap; row-gap: 0; column-gap: .5rem; } /* the 48px buttons are 4px wider; a smaller gap keeps the message at the same length at 360px */
+.sound-bar p { flex: 1 1 6rem; }
+/* Welcome at tablet width: "main label:has(input)" turned the two-line answers inline, so they flowed side by side with uneven widths. Keep each answer on its own row. */
+main label.opt-block:has(input) { display: flex; }

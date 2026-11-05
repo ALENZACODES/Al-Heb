@@ -244,7 +244,7 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
 
 ## Israel and everyday Hebrew track
 
-### A1 (9 lessons, 210 min)
+### Stage 1 (9 lessons, 210 min)
 
 - **il01** Hello, thanks, sorry (20 min)
   - Greet and thank in Hebrew without switching to English
@@ -266,7 +266,7 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
 - **il09** Paying, change and bags (20 min)
   - Handle the checkout exchange
 
-### A2 (9 lessons, 245 min)
+### Stage 2 (9 lessons, 245 min)
 
 - **il10** Taxi and public transport (25 min)
   - Say where you are going and ask the price or the stop
@@ -288,7 +288,7 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
 - **il18** Help, health and not understanding (30 min)
   - Repair a conversation instead of switching language
 
-### B1 (36 lessons, 995 min)
+### Stage 3 (36 lessons, 995 min)
 
 - **il19** Past tense (A2/B1 bridge) (35 min)
   - Tell what you did yesterday in 5 sentences

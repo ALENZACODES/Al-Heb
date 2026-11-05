@@ -100,6 +100,21 @@ export function speechText(he) {
 }
 
 /**
+ * Text for speech synthesis, failing closed when a written divine name (or a Latin spelling of it) cannot be
+ * resolved to the spoken substitute. Callers must not speak when ok is false.
+ * @returns {{ok:true, text:string}|{ok:false, reason:string, text:string}}
+ */
+export function speechSafeText(he) {
+  const s = String(he);
+  if (hasLatinName(s)) return { ok: false, reason: 'unresolved-liturgical-name', text: '' };
+  const text = speechText(s);
+  if (findName(text).some((h) => h.kind === 'exact' || h.kind === 'prefixed')) {
+    return { ok: false, reason: 'unresolved-liturgical-name', text: '' };
+  }
+  return { ok: true, text };
+}
+
+/**
  * Hebrew text for display. mode 'source' (default) returns it unchanged; 'abbrev' writes whole-word occurrences as he+geresh.
  * Prefixed forms are left as in the source in both modes.
  */

@@ -9,7 +9,7 @@ import { runPipeline } from './pipeline.js';
 import { loadLane3Shva, CONFIDENCE_REASONS } from './syllabify.js';
 import { buildWordCards, loadTransliterator, loadLetterInfo, TRADITIONS } from './word-card.js';
 import { isLocalHelperUrl } from './engines/local-server.js';
-import { speechText } from '../shell/names.js';
+import { speechSafeText } from '../shell/names.js';
 
 export const ACCURACY_NOTICE = 'Accuracy notice: this reader has only been tested on 145 computer-generated images (about 88% of letters right there). It has not been measured on real photos, so expect mistakes, especially with vowel points, curved pages, glare or small print. Treat the result as a study aid, check it against the page, and do not rely on it for anything important (medical, legal, kashrut, prayer text for a ritual).';
 export const NO_TRANSLATION_NOTICE = 'This app has no built-in Hebrew-to-English translator. Prayer lines that match the built-in texts show the stored translation; everything else shows no English. Nothing was sent anywhere to try.';
@@ -50,8 +50,8 @@ export function mount(root, ctx = {}) {
   wrap.append(el('p', { class: 'photo-accuracy', role: 'note', style: 'border-left:4px solid #b26a00;padding:0.4em 0.8em;background:rgba(178,106,0,0.10)' }, ACCURACY_NOTICE));
   wrap.append(el('p', { class: 'photo-scope' }, 'Printed text only. Handwriting is not supported.'));
   if (!forced) wrap.append(el('p', { class: 'photo-privacy' }, 'The photo is read on this device (first use downloads about 5 MB of OCR data, then it is cached). It is not uploaded. Accuracy on real photos has not been measured yet: check what was read against the page.'));
-  const onlineBox = el('input', { type: 'checkbox', id: 'photo-online' });
-  if (!forced) wrap.append(el('label', { class: 'photo-online', for: 'photo-online', style: 'margin:0.5em 0' }, onlineBox, ' Add vowels to unpointed text online. This sends the recognised Hebrew text (not the photo) to Dicta (dicta.org.il).'));
+  // Online vowels (Dicta) are not offered: CSP connect-src in _headers does not list Dicta, so the call cannot work on the hosted site.
+  if (!forced) wrap.append(el('p', { class: 'photo-online-off muted', role: 'note' }, 'Adding vowels online is not available in this build. Unpointed text stays as read on this device.'));
   const helperInput = el('input', { type: 'url', id: 'photo-helper', placeholder: 'http://127.0.0.1:8787', 'aria-label': 'Helper address (this computer only), for local translation, optional', style: 'width:14em' });
   const helperMsg = el('span', { class: 'photo-helper-msg', role: 'status' });
   if (!forced) wrap.append(el('details', { class: 'photo-translate-setup' },
@@ -69,8 +69,10 @@ export function mount(root, ctx = {}) {
   const speak = (text) => {
     const synth = root.ownerDocument.defaultView?.speechSynthesis;
     if (!synth) return false;
+    const safe = speechSafeText(text);
+    if (!safe.ok) return false;
     const Utter = root.ownerDocument.defaultView.SpeechSynthesisUtterance;
-    const u = new Utter(speechText(text)); u.lang = 'he-IL'; synth.speak(u); return true;
+    const u = new Utter(safe.text); u.lang = 'he-IL'; synth.speak(u); return true;
   };
   const playSyllable = (s, note) => {
     if (typeof ctx.audio?.playSequence === 'function') { ctx.audio.playSequence([{ kind: 'syllable', id: s.he, text: s.he }]); return; }
@@ -159,7 +161,7 @@ export function mount(root, ctx = {}) {
         if (typed && !isLocalHelperUrl(typed)) { helperMsg.textContent = ' Only an address on this computer (localhost or 127.0.0.1) is accepted; translation stays off.'; }
         else helperMsg.textContent = '';
         const helperUrl = typed && isLocalHelperUrl(typed) ? typed : (ctx.photoLocalServer || null);
-        engines = createPhotoEngines({ online: onlineBox.checked, localServerUrl: helperUrl,
+        engines = createPhotoEngines({ online: false, localServerUrl: helperUrl,
           onProgress: (m) => { if (m?.status) status.textContent = `${m.status}${typeof m.progress === 'number' ? ` ${Math.round(m.progress * 100)}%` : ''}`; } });
         activeEngines = engines;
       }

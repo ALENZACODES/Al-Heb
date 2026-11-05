@@ -37,7 +37,7 @@ test('budget: arithmetic on the range, never negative, weeks only when hours per
   const real = budget(timeTotals(LESSONS)); assert.equal(real.lessonHours, 55.4); assert.ok(real.lessonShareOfLow < 20, 'the written lessons are a small part of the range');
   assert.deepEqual(DEFAULT_RANGE, { low: 400, high: 600 });
 });
-test('levelName: belts get "belt", cefr codes stay', () => { assert.equal(levelName('white'), 'White belt'); assert.equal(levelName('A2'), 'A2'); assert.equal(levelName('intermediate'), 'Intermediate'); });
+test('levelName: belts get "belt", israel codes use course-stage names', () => { assert.equal(levelName('white'), 'White belt'); assert.equal(levelName('A2'), 'Stage 2'); assert.equal(levelName('A1'), 'Stage 1'); assert.equal(levelName('B1'), 'Stage 3'); assert.equal(levelName('intermediate'), 'Intermediate'); });
 test('docs/curriculum/SYLLABUS.md equals the generator output (stale file fails; fix with node tools/syllabus/build.mjs)', () => {
   assert.equal(rd('docs/curriculum/SYLLABUS.md'), toMarkdown(LESSONS) + '\n');
   const r = spawnSync('node', ['tools/syllabus/build.mjs', '--check'], { cwd: new URL('..', import.meta.url).pathname, encoding: 'utf8' }); assert.equal(r.status, 0, r.stderr);

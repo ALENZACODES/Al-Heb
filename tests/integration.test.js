@@ -129,7 +129,7 @@ ifFile('data/corpus/registry.json', (d) => {
 });
 ifFile('data/audio/manifest.json', (d) => {
   assert.ok(Array.isArray(d));
-  for (const e of d) { assert.ok(['m', 'f'].includes(e.voice), e.path); assert.ok(['israeli', 'sephardi', 'ashkenazi'].includes(e.tradition), e.path); assert.ok(['missing', 'tts', 'recorded'].includes(e.status), e.path); assert.equal(e.path, `audio/${e.voice}/${e.tradition}/${e.kind}/${e.id}.mp3`); }
+  for (const e of d) { assert.ok(['m', 'f'].includes(e.voice), e.path); assert.ok(['israeli', 'sephardi', 'ashkenazi'].includes(e.tradition), e.path); assert.ok(['missing', 'tts', 'synthetic-unreviewed', 'recorded'].includes(e.status), e.path); assert.equal(e.path, `audio/${e.voice}/${e.tradition}/${e.kind}/${e.id}.mp3`); }
   const letterIds = new Set(d.filter((e) => e.kind === 'letter').map((e) => e.id));
   for (const id of letterIds) assert.ok(LETTERS.includes(id.replace(/-sound$/, '')) || ['vet', 'khaf', 'fe', 'sin'].includes(id.replace(/-sound$/, '')), 'audio letter id not in shared ids: ' + id);
 });
@@ -179,7 +179,7 @@ test('shell audio: honest status text for tts, file and refusal; manifest summar
   assert.match(describeResult({ source: 'tts-fallback', tradition: 'sephardi', mismatch: true }).text, /reads Israeli pronunciation, not Sephardi/);
   assert.match(describeResult({ source: 'file', voice: 'f', tradition: 'israeli', entryStatus: 'recorded' }).text, /Recorded by a human reader \(woman, Israeli\)/);
   assert.match(describeResult({ source: 'none', reason: 'no-hebrew-browser-voice' }).text, /no Hebrew voice/);
-  const s = summarizeManifest(manifest); assert.equal(s.recorded, 0); assert.equal(s.tts, 0); assert.equal(s.total, manifest.length);
+  const s = summarizeManifest(manifest); assert.equal(s.recorded, 0); assert.equal(s.tts, manifest.filter((e) => e.status === 'tts' || e.status === 'synthetic-unreviewed').length); assert.ok(manifest.every((e) => e.status !== 'recorded')); assert.equal(s.total, manifest.length);
 });
 test('shell audio: sephardi learner gets the labelled browser voice (not silence) unless they opt out', async () => {
   const spoken = []; const speech = { speak(u) { spoken.push(u.text); setTimeout(() => u.onend(), 0); }, cancel() {} };

@@ -20,7 +20,7 @@ test('committed manifest has contract fields, valid paths, hebrew code points', 
     assert.equal(e.path, `audio/${e.voice}/${e.tradition}/${e.kind}/${e.id}.mp3`);
     assert.match(e.id, /^[a-z0-9][a-z0-9._-]*$/);
     assert.match(e.text, /[֐-׿]/);
-    assert.ok(['missing', 'tts', 'recorded'].includes(e.status));
+    assert.ok(['missing', 'tts', 'synthetic-unreviewed', 'recorded'].includes(e.status));
     assert.ok(typeof e.source === 'string');
     assert.ok(!seen.has(e.path), `dup ${e.path}`); seen.add(e.path);
   }
@@ -39,9 +39,15 @@ test('covers 31 letter forms (27 + 4 variants), 15 vowels, 22x5 syllable grid fo
   }
 });
 
-test('no file exists in this repo yet, so everything is missing (never claims audio)', () => {
-  assert.equal(fs.existsSync(new URL('../audio', import.meta.url)), false);
-  assert.ok(manifest.every((e) => e.status === 'missing' && e.source === 'none'));
+test('only ingested synthetic clips exist: every non-missing entry is synthetic-unreviewed, has its file, and none is recorded', () => {
+  for (const e of manifest) {
+    if (e.status === 'missing') { assert.equal(e.source, 'none', e.path); assert.equal(fs.existsSync(new URL('../' + e.path, import.meta.url)), false, e.path); continue; }
+    assert.equal(e.status, 'synthetic-unreviewed', e.path);
+    assert.equal(e.source, 'outside-synthetic', e.path);
+    assert.equal(e.synth && e.synth.reviewed, false, e.path);
+    assert.equal(fs.existsSync(new URL('../' + e.path, import.meta.url)), true, e.path);
+  }
+  assert.equal(manifest.filter((e) => e.status === 'recorded').length, 0, 'no human recording exists');
 });
 
 test('syllable text is a letter + vowel mark; bet/kaf/pe carry dagesh, shin carries shin dot', () => {
@@ -118,7 +124,7 @@ test('every id in every donor recording script resolves to a missing manifest en
     for (const r of rows) for (const v of ['m', 'f']) {
       const e = idx.get(`audio/${v}/${t}/word/${r.id}.mp3`);
       assert.ok(e, `${t}/${v}/${r.id} missing from manifest`);
-      assert.deepEqual([e.kind, e.voice, e.tradition, e.status], ['word', v, t, 'missing']);
+      assert.deepEqual([e.kind, e.voice, e.tradition], ['word', v, t]); assert.ok(['missing', 'synthetic-unreviewed'].includes(e.status));
     }
   }
   assert.deepEqual(ids.israeli, ids.sephardi); assert.deepEqual(ids.israeli, ids.ashkenazi);

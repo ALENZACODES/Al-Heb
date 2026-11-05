@@ -27026,10 +27026,21 @@
   "kind": "word",
   "id": "r07-w1",
   "text": "אַבָּא",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
-  "vocabId": "h0a70642a"
+  "vocabId": "h0a70642a",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "84267e8f2ff4f6a30499d7b8c2fe8f8390bc643cd02275a5d7a1f7a73da86dcd",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/m/sephardi/word/r07-w1.mp3",
@@ -35036,10 +35047,21 @@
   "kind": "word",
   "id": "r38-w2",
   "text": "בָּחַר",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
-  "vocabId": "h23e0b2a4"
+  "vocabId": "h23e0b2a4",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "a0db08e08fa6bdb68d83d2f2208c2d9040e1c0d33b40fd982c21e158c845c9e9",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/m/sephardi/word/r38-w2.mp3",
@@ -35180,10 +35202,21 @@
   "kind": "word",
   "id": "r38-w4",
   "text": "נָתַן",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
-  "vocabId": "h8982ad83"
+  "vocabId": "h8982ad83",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "6807d696f5648bec54f3409672a2a752256e68c2e503fe95cb806fd61d8421cc",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/m/sephardi/word/r38-w4.mp3",
@@ -38048,10 +38081,21 @@
   "kind": "word",
   "id": "r47-w4",
   "text": "חֵן",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
-  "vocabId": "hea4f6fcc"
+  "vocabId": "hea4f6fcc",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "0c2ff17a3f16824c8d00820af6ab911036becee913d8bcd6fc41ac8840949fba",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/m/sephardi/word/r47-w4.mp3",
@@ -39676,11 +39720,22 @@
   "kind": "word",
   "id": "il07-w6",
   "text": "תֵּה",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "h1643d708"
+  "vocabId": "h1643d708",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "9df8e8425895958cfd74df206663d172df8c3c43b9df475fe40c5eb06c68d14d",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/il07-w6.mp3",
@@ -40062,11 +40117,22 @@
   "kind": "word",
   "id": "il10-w4",
   "text": "תַּחֲנָה",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "h447bb433"
+  "vocabId": "h447bb433",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "03adbdead40e6f64c495ce8ca6e21109a79c56453b7160628f5cdf569640e1c0",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/il10-w4.mp3",
@@ -40784,11 +40850,22 @@
   "kind": "word",
   "id": "il15-w3",
   "text": "גֶּשֶׁם",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "hc5e80001"
+  "vocabId": "hc5e80001",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "a81096726db6ddc16619c0aef0214493156ca62b93fd3dbae3b7b2934312087c",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/il15-w3.mp3",
@@ -41044,11 +41121,22 @@
   "kind": "word",
   "id": "il17-w3",
   "text": "לַיְלָה",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "hf5bee50d"
+  "vocabId": "hf5bee50d",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "a4d8bff5a94daf96d137feac6e661de62cde13d5bb25deba2ac74d22d8f660b2",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/il17-w3.mp3",
@@ -41486,11 +41574,22 @@
   "kind": "word",
   "id": "il20-w4",
   "text": "אוּלַי",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "hdcd31646"
+  "vocabId": "hdcd31646",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "7790a45be237fa6a2171d0da5e9e68678323ee788d065331e585e74eda94bdc0",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/il20-w4.mp3",
@@ -41824,11 +41923,22 @@
   "kind": "word",
   "id": "il23-w2",
   "text": "חַיִּים",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "h51ed2ee5"
+  "vocabId": "h51ed2ee5",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "9b39ba62d3289bd3bdddbc8d7aab7f16df5012b1fe597d6686b206ddd143c93d",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/il23-w2.mp3",
@@ -51524,10 +51634,21 @@
   "kind": "word",
   "id": "i-14-w5",
   "text": "כְּאֵב רֹאשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
-  "scope": "israeli-only"
+  "scope": "israeli-only",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "cce1d07f9a55a209ef2c85a46ee5e31e1fd741c21ec3f13898b21afeac9a2e89",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-14-w5.mp3",
@@ -52336,11 +52457,22 @@
   "kind": "word",
   "id": "i-16-w6",
   "text": "סִיסְמָה",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "hd6d93430"
+  "vocabId": "hd6d93430",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "079b9e5c8bc55148c22d51cc7eefef235d567fd5694bd3b35f4e3280251897e3",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-16-w6.mp3",
@@ -52636,11 +52768,22 @@
   "kind": "word",
   "id": "i-17-w4",
   "text": "קוֹמָה",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "hfcbe3a9c"
+  "vocabId": "hfcbe3a9c",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "73783cc7760d70fa5bba168f1645f3b6ab0b1e1e0af33fe5efccafa19b8ee214",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-17-w4.mp3",
@@ -52688,11 +52831,22 @@
   "kind": "word",
   "id": "i-17-w6",
   "text": "חֲנָיָה",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "hd7b6e838"
+  "vocabId": "hd7b6e838",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "62212125a27b90ca1ba4138cd6fddd97f503caa3516536c9a150435f2cd9472f",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-17-w6.mp3",
@@ -52764,10 +52918,21 @@
   "kind": "word",
   "id": "i-17-w9",
   "text": "וַעַד בַּיִת",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
-  "scope": "israeli-only"
+  "scope": "israeli-only",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "d14930a95d665be2b23db7aceb56a461bb4a1af13ec7a7cd5ef87f3dec58f511",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-17-w9.mp3",
@@ -52862,10 +53027,21 @@
   "kind": "word",
   "id": "i-17-w13",
   "text": "טוֹבָה",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
-  "scope": "israeli-only"
+  "scope": "israeli-only",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "81f006da357248272a4cfb2ffea747d59538fb9eca43cea20e78453f25970432",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-17-w13.mp3",
@@ -53036,11 +53212,22 @@
   "kind": "word",
   "id": "i-18-w6",
   "text": "בָּסִיס",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "h37908437"
+  "vocabId": "h37908437",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "8605a08e930149c77969d23d43695e51cc652d43b7c7846fb406b909b015b2e3",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-18-w6.mp3",
@@ -53140,11 +53327,22 @@
   "kind": "word",
   "id": "i-18-w10",
   "text": "יַאלְלָה",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "h89be12e3"
+  "vocabId": "h89be12e3",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "683fcf222e8a62579c206067bf7c54bfaae9a006880f1b67c1b698abff88855a",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-18-w10.mp3",
@@ -53524,10 +53722,21 @@
   "kind": "word",
   "id": "i-19-w9",
   "text": "מָתַי לָבוֹא?",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
-  "scope": "israeli-only"
+  "scope": "israeli-only",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "00454bea40c458250c7e73df1856dbef8a1ad13b18673657743335434ff04c6e",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-19-w9.mp3",
@@ -53830,10 +54039,21 @@
   "kind": "word",
   "id": "i-20-w7",
   "text": "כּוֹאֵב",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
-  "scope": "israeli-only"
+  "scope": "israeli-only",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "ab34e79eee99fe2777524619a8d50f0d4aff16086b81e4cb2d10e58c59c6818f",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-20-w7.mp3",
@@ -54008,11 +54228,22 @@
   "kind": "word",
   "id": "i-21-w1",
   "text": "בַּנְק",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "hf19f0a88"
+  "vocabId": "hf19f0a88",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "f9224c2dd9883022d07cf81afd1727ec44ce618ec3f6e7f220328cd08e037a14",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-21-w1.mp3",
@@ -55188,11 +55419,22 @@
   "kind": "word",
   "id": "i-24-w7",
   "text": "עָנָן",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "h770abeb5"
+  "vocabId": "h770abeb5",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "9b45d559846a6df811d161cc17a74c1a1fd8dcd2d1eeddde13c00bea18b4305e",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-24-w7.mp3",
@@ -55448,10 +55690,21 @@
   "kind": "word",
   "id": "i-25-w2",
   "text": "קוֹרְאִים לִי",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
-  "scope": "israeli-only"
+  "scope": "israeli-only",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "4fbdd130af21dd14e7b534f90b95f8071515ab53ab3fa630f614b7664c895861",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-25-w2.mp3",
@@ -55524,10 +55777,21 @@
   "kind": "word",
   "id": "i-25-w5",
   "text": "כַּמָּה זְמַן",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
-  "scope": "israeli-only"
+  "scope": "israeli-only",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "efa144f935816673be9473bbd26858fda619c4dae87aa6d5e78e91c9b674be22",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-25-w5.mp3",
@@ -55572,11 +55836,22 @@
   "kind": "word",
   "id": "i-25-w7",
   "text": "שָׁבוּעַ",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "h92151b55"
+  "vocabId": "h92151b55",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "7b78a5396520cbace7438e1a5b9f2ed2a9203e7f417e39f51d44a61ee66d82da",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-25-w7.mp3",
@@ -55648,11 +55923,22 @@
   "kind": "word",
   "id": "i-25-w10",
   "text": "עִבְרִית",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "h2796e605"
+  "vocabId": "h2796e605",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "1881b51eaedb1b435596e5311414377640ee28119fcdac15a1043d1314c7f30b",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-25-w10.mp3",
@@ -57820,10 +58106,21 @@
   "kind": "word",
   "id": "i-28-w6",
   "text": "תְּשׁוּבָה",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
-  "vocabId": "hf3d6a0bb"
+  "vocabId": "hf3d6a0bb",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "c48c0dadc1dc055e393f3fb550ed3172a92120f1c0de7d6e81a2296bfdc5cc07",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/m/sephardi/word/i-28-w6.mp3",
@@ -64508,11 +64805,22 @@
   "kind": "word",
   "id": "i-38-w2",
   "text": "חָמוּד",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "h4105e713"
+  "vocabId": "h4105e713",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "56cf1dc39a1713a3823ccbfef263e0d3e3327a97f955e19ecb4d9e4d4b13bdbc",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-38-w2.mp3",
@@ -64534,11 +64842,22 @@
   "kind": "word",
   "id": "i-38-w3",
   "text": "מִסְעָדָה",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "h6d121ed3"
+  "vocabId": "h6d121ed3",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "5a5b523cbce6c030555523156e7cc6679482a36e84d5b3ba007a95391ff404a3",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-38-w3.mp3",
@@ -64788,11 +65107,22 @@
   "kind": "word",
   "id": "i-39-w1",
   "text": "מְכוֹנִית",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "h5fc50b7a"
+  "vocabId": "h5fc50b7a",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "a9e8d317e6a1e99f8cc19e9d93fb7797ab99e76fabf1df45ce022f971a724add",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-39-w1.mp3",
@@ -64918,11 +65248,22 @@
   "kind": "word",
   "id": "i-39-w6",
   "text": "מָנוֹעַ",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "h411fe0c1"
+  "vocabId": "h411fe0c1",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "97033534dafbbbd105fa154d8eedd84f6dc7ef79bdae5182152faf8a2e021b41",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-39-w6.mp3",
@@ -65202,11 +65543,22 @@
   "kind": "word",
   "id": "i-40-w5",
   "text": "שְׁבִיל",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "vocabId": "h8ccd0ca9"
+  "vocabId": "h8ccd0ca9",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "8709c64995f11debaf450efa5585fe9cea656dc5f4d23c15d3865d8183e55f08",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/i-40-w5.mp3",
@@ -72732,10 +73084,21 @@
   "kind": "word",
   "id": "numbers-03-m",
   "text": "שְׁלוֹשָׁה",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "phrasebook",
-  "scope": "israeli-only"
+  "scope": "israeli-only",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "7c53e1fa19f48db8148353ad1c37a582fe791ef00b848631120af6cbd42c93a2",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/numbers-03-m.mp3",
@@ -72780,10 +73143,21 @@
   "kind": "word",
   "id": "numbers-04-m",
   "text": "אַרְבָּעָה",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "phrasebook",
-  "scope": "israeli-only"
+  "scope": "israeli-only",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "d41233771d02ae37c4e0d919059b609408a145d79aa14b3db17d74629e6f4666",
+   "ingestedAt": "2026-11-05T15:07:41.325Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/numbers-04-m.mp3",

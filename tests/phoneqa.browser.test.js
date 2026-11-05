@@ -63,7 +63,11 @@ test('browser: the sound bar message stays readable (not squeezed to a few lette
   await withApp(async ({ browser, base }) => {
     for (const vp of [{ width: 360, height: 640 }, { width: 390, height: 844 }]) {
       const { ctx, page } = await open(browser, base, '/learn', vp, { textSize: 'largest' });
-      const w = await page.evaluate(() => { const p = document.querySelector('#sound-status'); return p.getBoundingClientRect().width; });
+      // The bar stays hidden until something asks for the recording list (pending), so a measurement here is 0px.
+      // Ask the way a play button does (ensureManifest), then measure the status the learner actually sees.
+      await page.evaluate(() => window.alef.audio.ensureManifest());
+      await page.waitForFunction(() => { const bar = document.querySelector('.sound-bar'); return bar && !bar.hidden; });
+      const w = await page.evaluate(() => document.querySelector('#sound-status').getBoundingClientRect().width);
       assert.ok(w >= 100, `sound message is ${w}px wide at ${vp.width} (it was 29px before the fix)`);
       await ctx.close();
     }

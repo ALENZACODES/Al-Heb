@@ -193,3 +193,19 @@ Also review the `git diff` of `data/` before committing. `quality: "draft"` on s
 * Transliteration in the sheets is produced by the app's own `src/pronunciation/transliterate.js` wherever the data has none. It is a check on the pointing, not independent evidence.
 * PDFs were checked by looking at rendered pages (prayers p1, letter strokes p1, vocabulary p2, `israel-everyday` p1), not every page. Long Hebrew texts (Yigdal, Berich shmei) are set smaller to fit a card.
 * Time estimates are a model, not a measurement.
+
+## Audio listening packet (synthetic clips)
+
+For the synthetic, unreviewed clips in `audio/` (see `docs/audio/INGEST-REPORT-83.md` and `-88.md`). Separate from the text packets above: it is about how a clip sounds, not about a Hebrew record. Files are in `docs/review/audio-packet/`.
+
+```
+node tools/review/build_audio_packet.mjs                          # writes listen.html + listen-sheet.csv there (the page reaches the clips at ../../../audio/)
+node tools/review/build_audio_packet.mjs --zip /tmp/alef-audio-review.zip   # one command: send-ready zip = page + sheet + guide + the clips
+node tools/review/build_audio_packet.mjs --check                  # exit 1 if the committed page or sheet is out of date
+node tools/review/import_audio_review.mjs returned.csv --patch /tmp/patch.json --report /tmp/report.md   # reads answers, applies NOTHING
+```
+
+- `REVIEWER-GUIDE.md` is the one-page guide for listeners. The page works offline from the folder, with the mp3s referenced relatively and never copied into `docs/`. Use `--audio DIR` to point it at another audio folder.
+- The importer checks each row against the manifest (Hebrew text, clip file hash, status still `synthetic-unreviewed`, named reviewer and date), and writes a report plus a proposal file. Only plain `approve` answers with no objection become proposals; reject, cannot-tell, notes and conflicts are listed for the owner.
+- It never edits `audio/` or `data/` and refuses to write there. Approval is the existing manual step: a person sets the clip's sidecar `.mp3.meta.json` to `synthetic-reviewed`, then runs `node tools/audio/build_manifest.mjs` (the report spells this out). Until then every clip stays unreviewed, and licence clearance is a separate question.
+- Tests: `node --test tests/review.audio-packet.test.js` (fake repo; no sound is played).

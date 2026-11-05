@@ -11,8 +11,8 @@ import { loadTier, TIER_BANDS } from './loader.js';
 import { TIER_LABEL, POS_LABEL, VOCAB_CARDS_KEY, filterEntries, stripPoints, addCards, cardId, CARD_PREFIX } from './model.js';
 import { isFunction } from './vocab.js';
 import { plural } from '../shell/plural.js';
-import { fileLabel } from '../shell/audio-labels.js';
-import { speechText, uiEnglish } from '../shell/names.js';
+import { audioButton } from '../shell/audio-access.js';
+import { uiEnglish } from '../shell/names.js';
 import { sourcesLine } from '../shell/sources.js';
 
 const PAGE = 40;          // cards rendered per page
@@ -108,34 +108,10 @@ export function mount(root, ctx) {
   async function loadCards() { const c = await storeGet(ctx, VOCAB_CARDS_KEY, {}); cards = Array.isArray(c) ? Object.fromEntries(c.filter((x) => x?.id).map((x) => [x.id, x])) : (c || {}); refreshModeLabel(); }
   async function saveCards(next) { cards = next; await storeSet(ctx, VOCAB_CARDS_KEY, next); refreshModeLabel(); }
 
-  // ---- audio: a recording if the manifest has one for this id, else the browser's Hebrew voice, labelled as such
-  async function playWord(e) {
-    audioNote.textContent = '';
-    try { ctx?.audio?.stop?.(); } catch { /* ignore */ }
-    try {
-      if (ctx?.audio?.has?.('word', e.id)) {
-        const r = await ctx.audio.play('word', e.id);
-        if (r?.source === 'file') { audioNote.textContent = `Playing: ${fileLabel(r.entryStatus)}.`; return; }
-      }
-    } catch { /* fall through to the browser voice */ }
-    const g = globalThis;
-    const text = speechText(String(e.pointed || e.lemma).replace(/־/g, ' '));
-    if (!g.speechSynthesis || !g.SpeechSynthesisUtterance) { audioNote.textContent = 'No sound: this browser has no speech synthesis, and there is no recording of this word.'; return; }
-    const voices = typeof g.speechSynthesis.getVoices === 'function' ? g.speechSynthesis.getVoices() : [];
-    if (voices?.length && !voices.some((v) => /^he([-_]|$)/i.test(v.lang || ''))) { audioNote.textContent = 'No sound: your device has no Hebrew voice installed, and there is no recording of this word.'; return; }
-    try {
-      const u = new g.SpeechSynthesisUtterance(text); u.lang = 'he-IL';
-      const rate = ctx?.settings?.get?.('ttsRate'); if (typeof rate === 'number') u.rate = rate;
-      g.speechSynthesis.cancel?.(); g.speechSynthesis.speak(u);
-      const t = tradition();
-      audioNote.textContent = `Computer voice: your browser's text-to-speech, not a recording. It reads Israeli pronunciation${t !== 'israeli' ? `, not ${TRAD[t]}` : ''}, and may ignore the vowel points.`;
-    } catch { audioNote.textContent = 'No sound: the browser voice did not work.'; }
-  }
-  function listenButton(e) {
-    const rec = !!ctx?.audio?.has?.('word', e.id);
-    return el('button', { type: 'button', class: 'btn secondary', 'aria-label': `Listen${rec ? '' : ' (computer voice)'}: ${e.gloss}`, onclick: () => playWord(e) },
-      el('span', { 'aria-hidden': 'true' }, '▶'), ' ', rec ? 'Listen' : 'Listen (computer voice)');
-  }
+  // ---- audio: the shared button (src/shell/audio-access.js). A recording when the list has one; else the device voice reads the
+  // word's own pointed text (Israeli only, labelled as such); else "No audio yet" with the respelling. Nothing is spoken here directly.
+  const listenButton = (e) => audioButton(el, ctx, { kind: 'word', id: e.id, text: String(e.pointed || e.lemma || '').replace(/־/g, ' '),
+    label: 'Listen', name: e.gloss, respelling: translitFor(e, tradition()) || undefined });
   const heWord = (e, cls) => e.pointed ? heText(e.pointed, cls) : heText(e.lemma, cls);
   const translitLine = (e) => {
     const tl = translitFor(e, tradition());

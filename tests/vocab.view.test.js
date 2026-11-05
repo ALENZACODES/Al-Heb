@@ -114,8 +114,9 @@ test("browse: draft notice, attribution footer, RTL pointed Hebrew, transliterat
   assert.equal(he.attrs.dir, "rtl"); assert.equal(he.text, tier500[0].pointed);
   assert.match(lis[0].text, /Transliteration \(Sephardi, approximate\): et/);
   assert.match(lis[0].text, /rank 1/);
-  const listen = btn(lis[0], /Listen/);
-  assert.match(listen.text, /computer voice/); assert.match(listen.attrs["aria-label"], /computer voice/);
+  // no audio engine: no dead Listen button; one honest line with the respelling instead
+  assert.equal(btn(lis[0], /Listen/), undefined);
+  assert.match(lis[0].text, /No audio yet - say it as written: et/);
   assert.match(root.text, /Showing 40 of 497 words/);
   // every control has a label
   for (const id of ["vc-tier", "vc-topic", "vc-search"]) assert.ok(root.find((n) => n.tag === "label" && n.attrs.for === id).length === 1);
@@ -211,32 +212,41 @@ test("review: keys are ignored before the answer is shown; empty state points to
   assert.equal(b.store.m["srs.vocab"][cardId(tier500[0])].reps, 0);
 });
 
-test("audio: recording used when ctx.audio has the id; otherwise browser Hebrew voice with an honest label", async () => {
+test("audio: shared button; recording when ctx.audio has the id, device voice reads the caller text (Israeli only), else No audio yet", async () => {
   const played = [];
   const audio = { has: (k, id) => id === tier500[0].id, play: async (k, id) => { played.push([k, id]); return { source: "file", entryStatus: "recorded" }; }, stop() {} };
   const a = mk({ audio });
   mount(a.root, a.ctx); await idle(a.root);
   const lis = items(a.root);
-  assert.doesNotMatch(btn(lis[0], /Listen/).text, /computer voice/);
   await btn(lis[0], /Listen/).click();
   assert.deepEqual(played, [["word", tier500[0].id]]);
-  assert.match(a.root.text, /Playing: Recorded by a human reader/);
+  assert.equal(btn(lis[1], /Listen/), undefined, "no dead button for a word with no sound");
+  assert.match(lis[1].text, /No audio yet/);
 
+  // the real player: the word is not in the recording list, so the device voice reads the word's own pointed text
+  const { createAudio } = await import("../src/audio/player.js");
   const utter = [];
-  globalThis.SpeechSynthesisUtterance = class { constructor(t) { this.text = t; } };
-  globalThis.speechSynthesis = { getVoices: () => [{ lang: "he-IL" }], cancel() {}, speak: (u) => utter.push(u) };
-  const b = mk({ cong: "ashkenazi" });
+  class Utt { constructor(t) { this.text = t; } }
+  const sp = (langs) => ({ getVoices: () => langs.map((lang) => ({ lang })), cancel() {}, speak: (u) => { utter.push(u); queueMicrotask(() => u.onend?.()); } });
+  const real = (cong, langs) => createAudio({ settings: { voice: "m", congregation: cong }, manifest: [], AudioCtor: class {}, speech: sp(langs), UtteranceCtor: Utt });
+  const b = mk({ cong: "israeli", audio: real("israeli", ["he-IL"]) });
   mount(b.root, b.ctx); await idle(b.root);
-  await btn(items(b.root)[1], /Listen/).click();
+  const b1 = btn(items(b.root)[1], /Listen/);
+  assert.equal(b1.attrs["data-audio-state"], "device"); assert.match(b1.attrs["aria-label"], /Device voice, not a recorded teacher/);
+  await b1.click();
   assert.equal(utter.length, 1); assert.equal(utter[0].lang, "he-IL"); assert.equal(utter[0].text, tier500[1].pointed.replace(/־/g, " "));
-  assert.match(b.root.text, /Computer voice: .*not a recording.*not Ashkenazi/);
 
-  globalThis.speechSynthesis = { getVoices: () => [{ lang: "en-US" }], cancel() {}, speak: () => utter.push(1) };
-  const c = mk();
+  // Ashkenazi setting: the device voice is Israeli only, so no button; the respelling is offered instead
+  const c = mk({ cong: "ashkenazi", audio: real("ashkenazi", ["he-IL"]) });
   mount(c.root, c.ctx); await idle(c.root);
-  await btn(items(c.root)[0], /Listen/).click();
-  assert.equal(utter.length, 1); assert.match(c.root.text, /No sound: your device has no Hebrew voice/);
-  delete globalThis.speechSynthesis; delete globalThis.SpeechSynthesisUtterance;
+  assert.equal(btn(items(c.root)[1], /Listen/), undefined);
+  assert.match(items(c.root)[1].text, /No audio yet/);
+
+  // only non-Hebrew voices: no button
+  const d = mk({ cong: "israeli", audio: real("israeli", ["en-US"]) });
+  mount(d.root, d.ctx); await idle(d.root);
+  assert.equal(btn(items(d.root)[0], /Listen/), undefined);
+  assert.equal(utter.length, 1);
 });
 
 test("load failure shows an alert with retry; unmount stops late renders", async () => {

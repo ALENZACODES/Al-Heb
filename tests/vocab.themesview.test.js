@@ -54,7 +54,7 @@ test('lists all 40 packs as real buttons, with the draft notice and CC BY-SA att
   assert.equal(root.find((n) => n.tag === 'h1').length, 1);
 });
 
-test('opening a pack lists its words with a listen button each and the verbatim example when present', async () => {
+test('opening a pack lists its words with a listen button (or an honest no-audio line) each and the verbatim example when present', async () => {
   const { root, played } = await setup({ recorded: [readPack('food-drink-set01').words[0].id] });
   await root.find((n) => n.attrs['data-pack'] === 'food-drink-set01')[0].click();
   const pack = readPack('food-drink-set01');
@@ -65,7 +65,9 @@ test('opening a pack lists its words with a listen button each and the verbatim 
     const li = lis[i];
     assert.equal(li.attrs['data-id'], w.id);
     assert.ok(li.text.includes(w.he) && li.text.includes(w.en));
-    assert.ok(li.find((n) => n.tag === 'button' && /Listen/.test(n.text)).length === 1);
+    // shared audio button: a Listen button when sound is possible (here: the recorded word), else one honest "No audio yet" line
+    const hasBtn = li.find((n) => n.tag === 'button' && /Listen/.test(n.text)).length === 1;
+    assert.ok(i === 0 ? hasBtn : (hasBtn || /No audio yet/.test(li.text)), `word ${i}: a Listen button or "No audio yet"`);
     if (w.example) { assert.ok(li.text.includes(w.example.he), 'verbatim example shown'); assert.ok(li.text.includes(SENSE_NOTE)); }
     else assert.ok(/No example line/.test(li.text));
   });

@@ -3,7 +3,7 @@
 import { readdirSync } from 'node:fs';
 export const BROWSER = [
   'a11y.newviews', 'a11y.browser', 'perf', 'pwa.browser', 'qa.walk', 'journey', 'sweep', 'qa.devices',
-  'deploy.smoke', 'photo.scan-e2e', 'a11y.gate',
+  'deploy.smoke', 'deploy.subpath', 'photo.scan-e2e', 'a11y.gate',
 ].map((n) => `tests/${n}.test.js`);
 // Convention: any tests/*.browser.test.js is browser tier too.
 const isBrowser = (f) => BROWSER.includes(f) || f.endsWith('.browser.test.js');

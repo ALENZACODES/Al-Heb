@@ -1,5 +1,6 @@
 // Smoke test of the built site: serves dist/ WITH its _headers (so the real CSP applies), loads /, checks the service worker
-// registers, no CSP violation is reported on a few routes, and an offline reload works. Skipped without Playwright or dist/.
+// registers, no CSP violation is reported on a few routes, and an offline reload works. Skipped locally without Playwright or dist/;
+// with ALEF_REQUIRE_BROWSER=1 (set in the CI browser job) a missing browser or dist/ FAILS.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
@@ -13,7 +14,10 @@ const dist = join(root, 'dist');
 const require = createRequire(import.meta.url);
 let chromium = null;
 for (const p of ['playwright', '/opt/npm-tools/node_modules/playwright', '/opt/node-tools/node_modules/playwright', '/usr/lib/node_modules/playwright']) { try { ({ chromium } = require(p)); break; } catch { /* next */ } }
-const skip = !chromium ? 'Playwright not installed' : !existsSync(join(dist, 'index.html')) ? 'dist/ not built (node tools/deploy/build_site.mjs)' : false;
+const must = process.env.ALEF_REQUIRE_BROWSER === '1';
+const missing = !chromium ? 'Playwright not installed' : !existsSync(join(dist, 'index.html')) ? 'dist/ not built (node tools/deploy/build_site.mjs)' : false;
+const skip = must ? false : missing;
+test('dist smoke prerequisites are present (only enforced when ALEF_REQUIRE_BROWSER=1)', () => { if (must) assert.equal(missing, false, String(missing)); });
 
 test('dist smoke: CSP clean, service worker registers, offline reload works', { skip, timeout: 120000 }, async () => {
   const srv = await startServer(dist, parseHeaders(readFileSync(join(dist, '_headers'), 'utf8')));
@@ -27,7 +31,6 @@ test('dist smoke: CSP clean, service worker registers, offline reload works', { 
     await page.goto(base, { waitUntil: 'load' });
     await page.waitForSelector('body[data-ready="1"]', { timeout: 15000 });
     await page.evaluate(() => navigator.serviceWorker.ready);
-    await page.waitForFunction(() => !!navigator.serviceWorker.controller || true);
     for (const r of ['/learn', '/letters/alef', '/sounds', '/scan', '/settings', '/']) { await page.goto(`${base}#${r}`); await page.waitForTimeout(500); }
     assert.deepEqual(await page.evaluate(() => window.__csp), [], 'CSP violations');
     assert.deepEqual(errors, []);

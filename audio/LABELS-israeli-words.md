@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 5258 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 5263 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-5258 English labels; 1640 UNKNOWN.
+5263 English labels; 1645 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -4401,6 +4401,11 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [il10-w6](m/israeli/word/il10-w6.mp3) | נְסִיעָה | UNKNOWN | nesi'ah |
 | [il11-w1](m/israeli/word/il11-w1.mp3) | יָמִינָה | UNKNOWN | yaminah |
 | [il11-w2](m/israeli/word/il11-w2.mp3) | שְׂמֹאלָה | UNKNOWN | semolah |
+| [il11-w3](m/israeli/word/il11-w3.mp3) | יָשָׁר | UNKNOWN | yashar |
+| [il11-w4](m/israeli/word/il11-w4.mp3) | קָרוֹב | UNKNOWN | karov |
+| [il11-w5](m/israeli/word/il11-w5.mp3) | רָחוֹק | UNKNOWN | rachok |
+| [il11-w6](m/israeli/word/il11-w6.mp3) | אֵיפֹה | UNKNOWN | eifoh |
+| [il12-w1](m/israeli/word/il12-w1.mp3) | הַיּוֹם | UNKNOWN | hayom |
 | [kaddish-1-w1](m/israeli/word/kaddish-1-w1.mp3) | יִתְגַּדַּל | may it be magnified | yitgadal |
 | [kaddish-1-w10](m/israeli/word/kaddish-1-w10.mp3) | מַלְכוּתֵהּ | his kingdom | malkhuteh |
 | [kaddish-1-w11](m/israeli/word/kaddish-1-w11.mp3) | בְּחַיֵּיכוֹן | in your lifetime | bechayeikhon |
@@ -5864,4 +5869,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 9661 produced clips in INDEX.csv have an English label; 1640 UNKNOWN. Filenames and IDs are unchanged.
+All 9677 produced clips in INDEX.csv have an English label; 1645 UNKNOWN. Filenames and IDs are unchanged.

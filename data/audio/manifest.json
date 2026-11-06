@@ -41507,12 +41507,13 @@
   "kind": "word",
   "id": "il11-w3",
   "text": "יָשָׁר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h38dc1dcd",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yashar"
  },
  {
   "path": "audio/f/israeli/word/il11-w3.mp3",
@@ -41536,11 +41537,12 @@
   "kind": "word",
   "id": "il11-w4",
   "text": "קָרוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "karov"
  },
  {
   "path": "audio/f/israeli/word/il11-w4.mp3",
@@ -41563,11 +41565,12 @@
   "kind": "word",
   "id": "il11-w5",
   "text": "רָחוֹק",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "rachok"
  },
  {
   "path": "audio/f/israeli/word/il11-w5.mp3",
@@ -41590,12 +41593,13 @@
   "kind": "word",
   "id": "il11-w6",
   "text": "אֵיפֹה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hf4b5a979",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "eifoh"
  },
  {
   "path": "audio/f/israeli/word/il11-w6.mp3",
@@ -41619,12 +41623,13 @@
   "kind": "word",
   "id": "il12-w1",
   "text": "הַיּוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h5350449f",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "hayom"
  },
  {
   "path": "audio/f/israeli/word/il12-w1.mp3",

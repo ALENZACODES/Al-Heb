@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 997,
+ "count": 1004,
  "images": {
   "BADGE_03": {
    "w": 512,
@@ -1936,6 +1936,18 @@
     }
    ]
   },
+  "GAME_art_10": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GAME_art_10.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GRAM_ask_01": {
    "w": 512,
    "h": 512,
@@ -2027,6 +2039,18 @@
     {
      "edge": 512,
      "file": "GRAM_link_01.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_link_03": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_link_03.512.webp",
      "w": 512,
      "h": 512
     }
@@ -2219,6 +2243,18 @@
     {
      "edge": 512,
      "file": "HEAD_two_03.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "HEAD_two_09": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HEAD_two_09.512.webp",
      "w": 512,
      "h": 293
     }
@@ -10156,6 +10192,18 @@
     }
    ]
   },
+  "PLACE_eilat_01": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_eilat_01.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_eilat_02": {
    "w": 512,
    "h": 293,
@@ -10163,6 +10211,18 @@
     {
      "edge": 512,
      "file": "PLACE_eilat_02.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_eilat_05": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_eilat_05.512.webp",
      "w": 512,
      "h": 293
     }
@@ -10271,6 +10331,18 @@
     {
      "edge": 512,
      "file": "PLACE_jerusalem_01.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_negev_03": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_negev_03.512.webp",
      "w": 512,
      "h": 293
     }
@@ -12215,6 +12287,18 @@
     {
      "edge": 512,
      "file": "STREAK_art_02.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "STREAK_art_06": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "STREAK_art_06.512.webp",
      "w": 512,
      "h": 512
     }

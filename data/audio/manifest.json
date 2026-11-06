@@ -78726,9 +78726,10 @@
   "kind": "word",
   "id": "i-01-w1",
   "text": "בָּרְכוּ",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "borkhu"
  },
  {
   "path": "audio/m/ashkenazi/word/i-01-w2.mp3",
@@ -78748,9 +78749,10 @@
   "kind": "word",
   "id": "i-01-w2",
   "text": "הַמְּבֹרָךְ",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "hamevorokh"
  },
  {
   "path": "audio/m/ashkenazi/word/i-01-w3.mp3",
@@ -78770,9 +78772,10 @@
   "kind": "word",
   "id": "i-01-w3",
   "text": "שְׁמַע",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "shema"
  },
  {
   "path": "audio/m/ashkenazi/word/i-01-w4.mp3",
@@ -78793,10 +78796,11 @@
   "kind": "word",
   "id": "i-01-w4",
   "text": "יִשְׂרָאֵל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p41545921"
+  "vocabId": "p41545921",
+  "phonetic": "yisro'eil"
  },
  {
   "path": "audio/m/ashkenazi/word/i-01-w5.mp3",
@@ -78817,10 +78821,11 @@
   "kind": "word",
   "id": "i-01-w5",
   "text": "אֱלֹהֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p29823ceb"
+  "vocabId": "p29823ceb",
+  "phonetic": "eloheinu"
  },
  {
   "path": "audio/m/ashkenazi/word/i-01-w6.mp3",
@@ -78840,9 +78845,10 @@
   "kind": "word",
   "id": "i-01-w6",
   "text": "אֶחָד",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "echod"
  },
  {
   "path": "audio/m/ashkenazi/word/i-01-w7.mp3",
@@ -78863,10 +78869,11 @@
   "kind": "word",
   "id": "i-01-w7",
   "text": "שֵׁם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h65a05fb2"
+  "vocabId": "h65a05fb2",
+  "phonetic": "sheim"
  },
  {
   "path": "audio/m/ashkenazi/word/i-01-w8.mp3",
@@ -78886,9 +78893,10 @@
   "kind": "word",
   "id": "i-01-w8",
   "text": "כְּבוֹד",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "kevod"
  },
  {
   "path": "audio/m/ashkenazi/word/i-01-w9.mp3",
@@ -78909,10 +78917,11 @@
   "kind": "word",
   "id": "i-01-w9",
   "text": "מַלְכוּתוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "pc8f262be"
+  "vocabId": "pc8f262be",
+  "phonetic": "malkhuso"
  },
  {
   "path": "audio/m/ashkenazi/word/i-01-w10.mp3",
@@ -78932,9 +78941,10 @@
   "kind": "word",
   "id": "i-01-w10",
   "text": "לְעוֹלָם וָעֶד",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "le'olom vo'ed"
  },
  {
   "path": "audio/m/ashkenazi/word/i-01-w11.mp3",
@@ -78955,10 +78965,11 @@
   "kind": "word",
   "id": "i-01-w11",
   "text": "וְאָהַבְתָּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "pd4b665ac"
+  "vocabId": "pd4b665ac",
+  "phonetic": "ve'ohavto"
  },
  {
   "path": "audio/m/ashkenazi/word/i-01-w12.mp3",
@@ -78979,10 +78990,11 @@
   "kind": "word",
   "id": "i-01-w12",
   "text": "לְבָבְךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p2bee7060"
+  "vocabId": "p2bee7060",
+  "phonetic": "levovekho"
  },
  {
   "path": "audio/m/ashkenazi/word/i-02-w1.mp3",
@@ -79003,10 +79015,11 @@
   "kind": "word",
   "id": "i-02-w1",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p996ad12f"
+  "vocabId": "p996ad12f",
+  "phonetic": "adonoy"
  },
  {
   "path": "audio/m/ashkenazi/word/i-02-w2.mp3",
@@ -79208,9 +79221,10 @@
   "kind": "word",
   "id": "i-02-w10",
   "text": "וְהַנּוֹרָא",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "vehanoro"
  },
  {
   "path": "audio/m/ashkenazi/word/i-02-w11.mp3",
@@ -79231,10 +79245,11 @@
   "kind": "word",
   "id": "i-02-w11",
   "text": "מָגֵן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h344eb438"
+  "vocabId": "h344eb438",
+  "phonetic": "mogein"
  },
  {
   "path": "audio/m/ashkenazi/word/i-02-w12.mp3",
@@ -79255,10 +79270,11 @@
   "kind": "word",
   "id": "i-02-w12",
   "text": "קָדוֹשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h39244df3"
+  "vocabId": "h39244df3",
+  "phonetic": "kodosh"
  },
  {
   "path": "audio/m/ashkenazi/word/i-02-w13.mp3",
@@ -79278,9 +79294,10 @@
   "kind": "word",
   "id": "i-02-w13",
   "text": "כְּבוֹדוֹ",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "kevodo"
  },
  {
   "path": "audio/m/ashkenazi/word/i-02-w14.mp3",

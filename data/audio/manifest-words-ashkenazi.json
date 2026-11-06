@@ -30322,8 +30322,8 @@
   "kind": "word",
   "id": "kiddush-shabbat-eve-w6",
   "text": "הָעוֹלָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the world",
   "phonetic": "ha'olam"
@@ -30348,8 +30348,8 @@
   "kind": "word",
   "id": "kiddush-shabbat-eve-w7",
   "text": "אֲשֶׁר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "introduces a subordinate clause",
   "phonetic": "asher"

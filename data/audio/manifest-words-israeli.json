@@ -54101,8 +54101,8 @@
   "id": "h0f231144",
   "text": "אִם",
   "ipa": "ˈim",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "if, whether; in case, if; or",
   "phonetic": "im"
@@ -58245,8 +58245,8 @@
   "id": "h0fc2ca76",
   "text": "הִתְחִיל",
   "ipa": "hit.ˈχil",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "to start, to begin; to hit on someone, make a move",
   "phonetic": "hitchil"
@@ -58441,8 +58441,8 @@
   "id": "h0faf39fb",
   "text": "מִישֶׁהוּ",
   "ipa": "ˈmi.ʃe.hu",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "someone, somebody; anyone, anybody",
   "phonetic": "mishehu"

@@ -41216,8 +41216,8 @@
   "kind": "word",
   "id": "havdalah-spices-w7",
   "text": "בּוֹרֵא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "creator",
   "phonetic": "bore"
@@ -41242,8 +41242,8 @@
   "kind": "word",
   "id": "havdalah-spices-w8",
   "text": "מִינֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "kinds of",
   "phonetic": "minei"
@@ -41268,8 +41268,8 @@
   "kind": "word",
   "id": "havdalah-spices-w9",
   "text": "בְשָׂמִים׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "spices",
   "phonetic": "vesamim"

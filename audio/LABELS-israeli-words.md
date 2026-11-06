@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 5034 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 5039 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-5034 English labels; 1416 UNKNOWN.
+5039 English labels; 1421 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -4177,6 +4177,11 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [i-37-w12](m/israeli/word/i-37-w12.mp3) | חָבֵר | UNKNOWN | chaver |
 | [i-37-w2](m/israeli/word/i-37-w2.mp3) | מוֹרֶה | UNKNOWN | moreh |
 | [i-37-w3](m/israeli/word/i-37-w3.mp3) | מְרַצֶּה | UNKNOWN | meratzeh |
+| [i-37-w4](m/israeli/word/i-37-w4.mp3) | פְּרוֹפֶסוֹר | UNKNOWN | perofesor |
+| [i-37-w5](m/israeli/word/i-37-w5.mp3) | מִבְחָן | UNKNOWN | mivchan |
+| [i-37-w6](m/israeli/word/i-37-w6.mp3) | שִׁעוּר | UNKNOWN | shi'ur |
+| [i-37-w7](m/israeli/word/i-37-w7.mp3) | סֵפֶר | UNKNOWN | sefer |
+| [i-37-w8](m/israeli/word/i-37-w8.mp3) | מִלְגָּה | UNKNOWN | milgah |
 | [kaddish-1-w1](m/israeli/word/kaddish-1-w1.mp3) | יִתְגַּדַּל | may it be magnified | yitgadal |
 | [kaddish-1-w10](m/israeli/word/kaddish-1-w10.mp3) | מַלְכוּתֵהּ | his kingdom | malkhuteh |
 | [kaddish-1-w11](m/israeli/word/kaddish-1-w11.mp3) | בְּחַיֵּיכוֹן | in your lifetime | bechayeikhon |
@@ -5640,4 +5645,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 8995 produced clips in INDEX.csv have an English label; 1416 UNKNOWN. Filenames and IDs are unchanged.
+All 9011 produced clips in INDEX.csv have an English label; 1421 UNKNOWN. Filenames and IDs are unchanged.

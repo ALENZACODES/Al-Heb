@@ -56606,12 +56606,13 @@
   "kind": "word",
   "id": "i-37-w4",
   "text": "פְּרוֹפֶסוֹר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h6a5b4bd8",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "perofesor"
  },
  {
   "path": "audio/f/israeli/word/i-37-w4.mp3",
@@ -56635,12 +56636,13 @@
   "kind": "word",
   "id": "i-37-w5",
   "text": "מִבְחָן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h5f517008",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "mivchan"
  },
  {
   "path": "audio/f/israeli/word/i-37-w5.mp3",
@@ -56664,12 +56666,13 @@
   "kind": "word",
   "id": "i-37-w6",
   "text": "שִׁעוּר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hc4654a6b",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shi'ur"
  },
  {
   "path": "audio/f/israeli/word/i-37-w6.mp3",
@@ -56693,12 +56696,13 @@
   "kind": "word",
   "id": "i-37-w7",
   "text": "סֵפֶר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h231c624a",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "sefer"
  },
  {
   "path": "audio/f/israeli/word/i-37-w7.mp3",
@@ -56722,12 +56726,13 @@
   "kind": "word",
   "id": "i-37-w8",
   "text": "מִלְגָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h16a54d9c",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "milgah"
  },
  {
   "path": "audio/f/israeli/word/i-37-w8.mp3",

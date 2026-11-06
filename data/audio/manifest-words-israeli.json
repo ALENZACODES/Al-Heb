@@ -46032,7 +46032,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "again, once more; again and again, repeatedly; also, additionally, furthermore"
+  "english": "again, once more; again and again, repeatedly; also, additionally, furthermore",
+  "phonetic": "od"
  },
  {
   "path": "audio/f/israeli/word/h14635975.mp3",
@@ -46042,10 +46043,11 @@
   "id": "h14635975",
   "text": "עוֹד",
   "ipa": "ˈod",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "again, once more; again and again, repeatedly; also, additionally, furthermore"
+  "english": "again, once more; again and again, repeatedly; also, additionally, furthermore",
+  "phonetic": "od"
  },
  {
   "path": "audio/m/israeli/word/h020c4fa8.mp3",
@@ -53720,7 +53722,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a slave, a serf; a servant, a worshipper (of God)"
+  "english": "a slave, a serf; a servant, a worshipper (of God)",
+  "phonetic": "eved"
  },
  {
   "path": "audio/f/israeli/word/h1414a3a2.mp3",
@@ -53730,10 +53733,11 @@
   "id": "h1414a3a2",
   "text": "עֶבֶד",
   "ipa": "ˈe.ved",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "a slave, a serf; a servant, a worshipper (of God)"
+  "english": "a slave, a serf; a servant, a worshipper (of God)",
+  "phonetic": "eved"
  },
  {
   "path": "audio/m/israeli/word/h92e1aa5f.mp3",
@@ -57400,7 +57404,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to contain"
+  "english": "to contain",
+  "phonetic": "hekhil"
  },
  {
   "path": "audio/f/israeli/word/h13c6683f.mp3",
@@ -57410,10 +57415,11 @@
   "id": "h13c6683f",
   "text": "הֵכִיל",
   "ipa": "he.ˈχil",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to contain"
+  "english": "to contain",
+  "phonetic": "hekhil"
  },
  {
   "path": "audio/m/israeli/word/hd04514bf.mp3",
@@ -66092,7 +66098,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "might"
+  "english": "might",
+  "phonetic": "alul"
  },
  {
   "path": "audio/f/israeli/word/h13b625ed.mp3",
@@ -66102,10 +66109,11 @@
   "id": "h13b625ed",
   "text": "עָלוּל",
   "ipa": "a.ˈlul",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "might"
+  "english": "might",
+  "phonetic": "alul"
  },
  {
   "path": "audio/m/israeli/word/h0a99b68d.mp3",
@@ -69260,7 +69268,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "along, forward, onward, next; farther, further, beyond; away, off, hence"
+  "english": "along, forward, onward, next; farther, further, beyond; away, off, hence",
+  "phonetic": "hale'ah"
  },
  {
   "path": "audio/f/israeli/word/h146d3d91.mp3",
@@ -69270,10 +69279,11 @@
   "id": "h146d3d91",
   "text": "הָלְאָה",
   "ipa": "ha.ˈle.a",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "along, forward, onward, next; farther, further, beyond; away, off, hence"
+  "english": "along, forward, onward, next; farther, further, beyond; away, off, hence",
+  "phonetic": "hale'ah"
  },
  {
   "path": "audio/m/israeli/word/h2d4006ef.mp3",

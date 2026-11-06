@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 5629 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 5634 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-5629 English labels; 1933 UNKNOWN.
+5634 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -682,6 +682,11 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [h13673f80](f/israeli/word/h13673f80.mp3) | צָדַק | to be right | tzadak |
 | [h139c94a9](f/israeli/word/h139c94a9.mp3) | שָׁהָה | to stay, spend (time); to delay, be late, tarry | shahah |
 | [h13b46b09](f/israeli/word/h13b46b09.mp3) | קֵס | kahen; any rabbi of Beta Israel origin | kes |
+| [h13b625ed](f/israeli/word/h13b625ed.mp3) | עָלוּל | might | alul |
+| [h13c6683f](f/israeli/word/h13c6683f.mp3) | הֵכִיל | to contain | hekhil |
+| [h1414a3a2](f/israeli/word/h1414a3a2.mp3) | עֶבֶד | a slave, a serf; a servant, a worshipper (of God) | eved |
+| [h14635975](f/israeli/word/h14635975.mp3) | עוֹד | again, once more; again and again, repeatedly; also, additionally, furthermore | od |
+| [h146d3d91](f/israeli/word/h146d3d91.mp3) | הָלְאָה | along, forward, onward, next; farther, further, beyond; away, off, hence | hale'ah |
 | [haftarah-after-w1](f/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](f/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](f/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -6235,4 +6240,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 10779 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 10793 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 7621 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 7622 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-7621 English labels; 1934 UNKNOWN.
+7622 English labels; 1935 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -6291,6 +6291,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [i-36-w9](m/israeli/word/i-36-w9.mp3) | מָחָר | UNKNOWN | machar |
 | [i-37-w1](m/israeli/word/i-37-w1.mp3) | אוּנִיבֶרְסִיטָה | UNKNOWN | universitah |
 | [i-37-w10](m/israeli/word/i-37-w10.mp3) | הַיּוֹם | UNKNOWN | hayom |
+| [i-37-w11](m/israeli/word/i-37-w11.mp3) | מָחָר | UNKNOWN | machar |
 | [i-37-w12](m/israeli/word/i-37-w12.mp3) | חָבֵר | UNKNOWN | chaver |
 | [i-37-w2](m/israeli/word/i-37-w2.mp3) | מוֹרֶה | UNKNOWN | moreh |
 | [i-37-w3](m/israeli/word/i-37-w3.mp3) | מְרַצֶּה | UNKNOWN | meratzeh |
@@ -8227,4 +8228,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 17302 produced clips in INDEX.csv have an English label; 3019 UNKNOWN. Filenames and IDs are unchanged.
+All 17419 produced clips in INDEX.csv have an English label; 3136 UNKNOWN. Filenames and IDs are unchanged.

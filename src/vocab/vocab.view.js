@@ -165,7 +165,7 @@ export function mount(root, ctx) {
   const showWord = (w) => { sel.tier = 'all'; sel.topic = ''; sel.tag = ''; sel.showForms = true; sel.query = stripPoints(w.lemma); setMode('browse'); };
 
   // ---- browse
-  const sel = { tier: '500', topic: '', tag: '', showForms: false, query: '' };
+  const sel = { tier: 'all', topic: '', tag: '', showForms: false, query: '' };
   let gen = 0;
   async function entriesFor(tierSel) {
     const tiers = tierSel === 'all' ? TIER_BANDS : [Number(tierSel)];

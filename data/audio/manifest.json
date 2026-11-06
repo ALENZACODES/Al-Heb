@@ -27069,8 +27069,8 @@
   "kind": "line",
   "id": "yigdal-l2",
   "text": "אֶחָד וְאֵין יָחִיד כְּיִחוּדוֹ נֶעְלָם וְגַם אֵין סוֹף לְאַחְדּוּתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "He is one, and there is no unity like his unity; hidden, and without end to his oneness.",
   "phonetic": "echad ve'ein yachid keyichudo nelam vegam ein sof le'achduto"
@@ -27147,8 +27147,8 @@
   "kind": "line",
   "id": "yigdal-l3",
   "text": "אֵין לוֹ דְמוּת הַגּוּף וְאֵינוֹ גוּף לֹא נַעֲרֹךְ אֵלָיו קְדֻשָּׁתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "He has no bodily form and is not a body; his holiness cannot be compared.",
   "phonetic": "ein lo demut haguf ve'eino guf lo na'arokh elav kedushato"
@@ -27771,8 +27771,8 @@
   "kind": "line",
   "id": "yigdal-l11",
   "text": "גּוֹמֵל לְאִישׁ חֶסֶד כְּמִפְעָלוֹ נוֹתֵן לְרָשָׁע רָע כְּרִשְׁעָתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "He repays a person with kindness according to his deeds; he gives the wicked evil according to his wickedness.",
   "phonetic": "gomel le'ish chesed kemif'alo noten lerasha ra kerish'ato"
@@ -27849,8 +27849,8 @@
   "kind": "line",
   "id": "yigdal-l12",
   "text": "יִשְׁלַח לְקֵץ הַיָּמִין מְשִׁיחֵנוּ לִפְדּוֹת מְחַכֵּי קֵץ יְשׁוּעָתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "At the end of days he will send our anointed one, to redeem those who await the end of his salvation.",
   "phonetic": "yishlach leketz hayamin meshichenu lifdot mechakei ketz yeshu'ato"
@@ -27927,8 +27927,8 @@
   "kind": "line",
   "id": "yigdal-l13",
   "text": "מֵתִים יְחַיֶּה אֵל בְּרֹב חַסְדּוֹ בָּרוּךְ עֲדֵי עַד שֵׁם תְּהִלָּתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "God will revive the dead in his great kindness; blessed for ever is his praised name.",
   "phonetic": "metim yechayeh el berov chasdo barukh adei ad shem tehilato"
@@ -51165,12 +51165,13 @@
   "kind": "word",
   "id": "i-23-w2",
   "text": "לְאָן?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "p8b9e1490",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "le'an?"
  },
  {
   "path": "audio/m/israeli/word/i-23-w3.mp3",
@@ -51192,11 +51193,12 @@
   "kind": "word",
   "id": "i-23-w3",
   "text": "לִשְׂדֵה הַתְּעוּפָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "lisdeh hate'ufah"
  },
  {
   "path": "audio/m/israeli/word/i-23-w4.mp3",
@@ -51219,12 +51221,13 @@
   "kind": "word",
   "id": "i-23-w4",
   "text": "לַמָּלוֹן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "p9cf5c34c",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "lamalon"
  },
  {
   "path": "audio/m/israeli/word/i-23-w5.mp3",
@@ -51247,12 +51250,13 @@
   "kind": "word",
   "id": "i-23-w5",
   "text": "לַתַּחֲנָה הַמֶּרְכָּזִית",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "p7f189e26",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "latachanah hamerkazit"
  },
  {
   "path": "audio/m/israeli/word/i-23-w6.mp3",
@@ -51275,12 +51279,13 @@
   "kind": "word",
   "id": "i-23-w6",
   "text": "מוֹנֶה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h33e8c3ac",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "moneh"
  },
  {
   "path": "audio/m/israeli/word/i-23-w7.mp3",
@@ -51303,12 +51308,13 @@
   "kind": "word",
   "id": "i-23-w7",
   "text": "כַּמָּה זֶה יַעֲלֶה?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "p955decf7",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kamah zeh ya'aleh?"
  },
  {
   "path": "audio/m/israeli/word/i-23-w8.mp3",
@@ -51415,11 +51421,12 @@
   "kind": "word",
   "id": "i-23-w11",
   "text": "מְמַהֵר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "memaher"
  },
  {
   "path": "audio/m/israeli/word/i-23-w12.mp3",
@@ -51442,12 +51449,13 @@
   "kind": "word",
   "id": "i-23-w12",
   "text": "שֵׁרוּת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hea59fdfe",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "sherut"
  },
  {
   "path": "audio/m/israeli/word/i-23-w13.mp3",
@@ -51470,12 +51478,13 @@
   "kind": "word",
   "id": "i-23-w13",
   "text": "חַלּוֹן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h495d2c04",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chalon"
  },
  {
   "path": "audio/m/israeli/word/i-24-w1.mp3",

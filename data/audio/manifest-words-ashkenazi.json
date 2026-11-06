@@ -2229,8 +2229,8 @@
   "kind": "word",
   "id": "shema-vahavta-w4",
   "text": "אֱלֹהֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "our-God",
   "phonetic": "eloheinu"
@@ -3113,8 +3113,8 @@
   "kind": "word",
   "id": "shema-vahavta-w38",
   "text": "עֵינֶיךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "your eyes",
   "phonetic": "einekha"
@@ -3139,8 +3139,8 @@
   "kind": "word",
   "id": "shema-vahavta-w39",
   "text": "וּכְתַבְתָּם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and you shall write them",
   "phonetic": "ukhetavtam"
@@ -3165,8 +3165,8 @@
   "kind": "word",
   "id": "shema-vahavta-w40",
   "text": "עַל־מְזוּזֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "upon the doorposts",
   "phonetic": "al-mezuzot"

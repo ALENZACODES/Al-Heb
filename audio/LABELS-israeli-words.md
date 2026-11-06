@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 5183 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 5188 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-5183 English labels; 1565 UNKNOWN.
+5188 English labels; 1570 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -4326,6 +4326,11 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [i-49-w8](m/israeli/word/i-49-w8.mp3) | חֲבֵרָה | UNKNOWN | chaverah |
 | [i-49-w9](m/israeli/word/i-49-w9.mp3) | אֶפְשָׁר לִשְׁלֹחַ | UNKNOWN | efshar lishloach |
 | [i-50-w1](m/israeli/word/i-50-w1.mp3) | שַׁבָּת שָׁלוֹם | UNKNOWN | shabat shalom |
+| [i-50-w10](m/israeli/word/i-50-w10.mp3) | בְּעֶזְרַת הַשֵּׁם | UNKNOWN | be'ezrat hashem |
+| [i-50-w11](m/israeli/word/i-50-w11.mp3) | יוֹם נָעִים | UNKNOWN | yom na'im |
+| [i-50-w12](m/israeli/word/i-50-w12.mp3) | סְלִיחָה | UNKNOWN | selichah |
+| [i-50-w2](m/israeli/word/i-50-w2.mp3) | שָׁבוּעַ טוֹב | UNKNOWN | shavu'a tov |
+| [i-50-w3](m/israeli/word/i-50-w3.mp3) | חַג שָׂמֵחַ | UNKNOWN | chag sameach |
 | [kaddish-1-w1](m/israeli/word/kaddish-1-w1.mp3) | יִתְגַּדַּל | may it be magnified | yitgadal |
 | [kaddish-1-w10](m/israeli/word/kaddish-1-w10.mp3) | מַלְכוּתֵהּ | his kingdom | malkhuteh |
 | [kaddish-1-w11](m/israeli/word/kaddish-1-w11.mp3) | בְּחַיֵּיכוֹן | in your lifetime | bechayeikhon |
@@ -5789,4 +5794,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 9439 produced clips in INDEX.csv have an English label; 1565 UNKNOWN. Filenames and IDs are unchanged.
+All 9453 produced clips in INDEX.csv have an English label; 1570 UNKNOWN. Filenames and IDs are unchanged.

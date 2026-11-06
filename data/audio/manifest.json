@@ -61140,12 +61140,13 @@
   "kind": "word",
   "id": "i-50-w2",
   "text": "שָׁבוּעַ טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "p67242f56",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shavu'a tov"
  },
  {
   "path": "audio/f/israeli/word/i-50-w2.mp3",
@@ -61169,12 +61170,13 @@
   "kind": "word",
   "id": "i-50-w3",
   "text": "חַג שָׂמֵחַ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "p6e9bcf25",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chag sameach"
  },
  {
   "path": "audio/f/israeli/word/i-50-w3.mp3",
@@ -61370,12 +61372,13 @@
   "kind": "word",
   "id": "i-50-w10",
   "text": "בְּעֶזְרַת הַשֵּׁם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "pf23db329",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "be'ezrat hashem"
  },
  {
   "path": "audio/f/israeli/word/i-50-w10.mp3",
@@ -61399,12 +61402,13 @@
   "kind": "word",
   "id": "i-50-w11",
   "text": "יוֹם נָעִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "pd9dae8d2",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yom na'im"
  },
  {
   "path": "audio/f/israeli/word/i-50-w11.mp3",
@@ -61428,12 +61432,13 @@
   "kind": "word",
   "id": "i-50-w12",
   "text": "סְלִיחָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h33cf0d1b",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "selichah"
  },
  {
   "path": "audio/f/israeli/word/i-50-w12.mp3",

@@ -57162,6 +57162,372 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "PLACE_eilat_06": {
+   "id": "PLACE_eilat_06",
+   "file": "PLACE_eilat_06.png",
+   "command": 207,
+   "set": "Eilat & the Red Sea",
+   "block": "N",
+   "prompt": "Command 207 (Eilat & the Red Sea): Coral reef seen through clear water with coloured fish (underwater, stylised); a glass-bottom boat over the reef; red granite mountains behind a bay; a desert island fort in the sea (distant); palm beach with shade sails; a marina of small sailboats; a flamingo lagoon at a salt flat; snorkellers' fins and masks above bright water; a night market lane of lights (no signs); the bay at dawn with four countries' shores suggested only by distant hills (no flags, no labels). Image 6 of 10: a marina of small sailboats. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "8ec046112547d19dfb5ccf14af957b4947e8f8a8bf6cc9fafecff863e96cb9fd",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:28:15.620Z",
+   "sourceFile": "img-0480.png",
+   "sourceFileDate": "2026-11-06T21:28:15.303Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "ed01f82ad2b3e6648ffc9c2bf56e82aa6e53f9cc4ea36f82e69ed6f49c0e22fe",
+   "originalFormat": "PNG",
+   "originalBytes": 202322,
+   "originalFile": "PLACE_eilat_06.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_eilat_06.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 34054
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "pipet",
+      "conf": 50.4,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "BADGE_trad_09": {
+   "id": "BADGE_trad_09",
+   "file": "BADGE_trad_09.png",
+   "command": 244,
+   "set": "Traditions badges",
+   "block": "R",
+   "prompt": "Command 244 (Traditions badges): Ten round enamel-pin style badges matching command 97's ring and ribbon, no text — a dedicated family for the three tradition tracks and their milestones: a single lit candle on blue (Israeli track start); a shofar on cream (Ashkenazi track start); a hand-held drum (tapuf-style frame drum) on terracotta (Sephardi track start); two candles crossed light; an open scroll with a yad; a dome and a palm tree; a spice tower; a pomegranate split open with seeds; a crown over an open book; a gold sun rising over a gate (all three tracks complete). Files BADGE_trad_01 … _10, plus a greyed locked version of each named _locked (the locked versions are variants, not counted in the 10). Image 9 of 10: a crown over an open book. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "de3e9c3f91b723951d501f2f9039d7b7795b969e3d99d78b8b0ebfdfe3d81fc4",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:28:15.620Z",
+   "sourceFile": "img-0834.png",
+   "sourceFileDate": "2026-11-06T21:28:15.241Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "125a8d7903d31ba081ce8ff527e92ee1b3c904b7b401e3b97765e2d49284980e",
+   "originalFormat": "PNG",
+   "originalBytes": 258327,
+   "originalFile": "BADGE_trad_09.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "BADGE_trad_09.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 20056
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HEAD_one_08": {
+   "id": "HEAD_one_08",
+   "file": "HEAD_one_08.png",
+   "command": 246,
+   "set": "Book chapter headers I",
+   "block": "R",
+   "prompt": "Command 246 (Book chapter headers I): Ten wide 1024×512-style banner scenes (use 1792×1024 and we crop) — a spot scene per book part, no text: letters as landscape — hills shaped like rounded strokes (abstract shapes only, never letterforms); a river of vowels — coloured dots flowing under a bridge (dots only); a market of words — stalls of objects; a city of sentences — houses along a street; a garden of verbs — figures acting among plants; a sea of reading — a boat of an open book on waves; a mountain of fluency — a path switchbacking up; a table of prayer — candles and a book on a cloth; a house of song — musicians on a balcony; a gate opening onto light. Files HEAD_one_01 … _10. Image 8 of 10: a table of prayer — candles and a book on a cloth. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "011c9fe1f94347b0475073e3d89164eb6ddb78a48459c91b180a3478c5a2ef13",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:28:15.620Z",
+   "sourceFile": "img-0992.png",
+   "sourceFileDate": "2026-11-06T21:28:15.265Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "89c7f0e3c81953c5503c93d6316430df1bc3bf3cafe29dfae04190f61b6f1628",
+   "originalFormat": "PNG",
+   "originalBytes": 159262,
+   "originalFile": "HEAD_one_08.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HEAD_one_08.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 18422
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "BADGE_05": {
+   "id": "BADGE_05",
+   "file": "BADGE_05.png",
+   "command": 97,
+   "set": "badges",
+   "block": "F",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Round enamel-pin style level badge 5 of 8: a pomegranate. Same ring and ribbon on every badge; colour progression cream > gold > blue > red across levels (level 5). No text, letters or numerals anywhere in the image.",
+   "promptSha256": "3fbb67bfbb4201a3ec6356b5708a0f1ca780f5c3186b9707dff9031a263a021a",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:28:15.620Z",
+   "sourceFile": "img-1065.png",
+   "sourceFileDate": "2026-11-06T21:28:15.329Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "a0e933d4cf53223ffac68106eb4d4f9332ad74e1be430e09d882173fe20438cb",
+   "originalFormat": "PNG",
+   "originalBytes": 292743,
+   "originalFile": "BADGE_05.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "BADGE_05.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 36018
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "MAS_states_07": {
+   "id": "MAS_states_07",
+   "file": "MAS_states_07.png",
+   "command": 240,
+   "set": "Rimon — full state sheet II",
+   "block": "R",
+   "prompt": "Command 240 (Rimon — full state sheet II): Ten square portraits of the mascot only, one state each, continuing Run 2's dashboard set without repeating it: Rimon with a tiny knitted kippah; Rimon with a small tallit; Rimon holding a shofar nearly as big as itself; Rimon under an umbrella in first rain; Rimon with sunglasses and a beach bucket; Rimon carrying a book stack taller than itself; Rimon blowing a dandelion clock; Rimon in a chef's hat tasting from a spoon; Rimon planting a seedling; Rimon waving a small blank flag. Files MAS_states_01 … _10. Image 7 of 10: Rimon blowing a dandelion clock. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "14ac0ccf2bfe327fef0311ee19970173dace4c41bee58af16d5b19ac309bcc9d",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:28:15.620Z",
+   "sourceFile": "img-1117.png",
+   "sourceFileDate": "2026-11-06T21:28:15.316Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "23edeec82b6400af85b49c65bfb2439a52ad3dc1044c9fabe7f73c72b78eaeb1",
+   "originalFormat": "PNG",
+   "originalBytes": 218970,
+   "originalFile": "MAS_states_07.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "MAS_states_07.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 14456
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_negev_08": {
+   "id": "PLACE_negev_08",
+   "file": "PLACE_negev_08.png",
+   "command": 206,
+   "set": "The Negev",
+   "block": "N",
+   "prompt": "Command 206 (The Negev): A vast erosion crater (makhtesh) in bands of colour; a desert town on the crater's rim at sunrise; Bedouin tents and a camel resting in shade; a solar tower glowing in a field of mirrors (distant); acacia trees in a dry wadi; a canyon of red rock with a thin stream; desert agriculture — greenhouse rows in the sand; a night sky of impossible stars over dunes; a Nabataean-style ruined city of carved stone doorways (generic, empty); a lone tree on a hill at Sde Boker-style overlook above a canyon. Image 8 of 10: a night sky of impossible stars over dunes. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "bb253b10b3bb9a46e7335c5228f9fa7fbbe5962bb8b63d4585882fe9f800ffcb",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:28:15.620Z",
+   "sourceFile": "img-1137.png",
+   "sourceFileDate": "2026-11-06T21:28:15.208Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "81ff232521151eadd59c3eaef191f7b1537788101b30437c6aa2ca566ca539d3",
+   "originalFormat": "PNG",
+   "originalBytes": 171347,
+   "originalFile": "PLACE_negev_08.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_negev_08.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 27652
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_own_08": {
+   "id": "GRAM_own_08",
+   "file": "GRAM_own_08.png",
+   "command": 213,
+   "set": "Mine, yours, ours",
+   "block": "O",
+   "prompt": "Command 213 (Mine, yours, ours): Ari hugging his own blue cup while Noa points at her red cup; two identical bags — one beside Ari, one beside Noa; a child holding a parent's hand beside a lunch box; Rimon guarding a tiny bowl; a shared umbrella over both narrators; a coat on a hook between two name-blank tags; a dog choosing its own bed among three; a family table with a place set for each person (plates counted visually); Noa handing Ari his scarf; a group photo pose with everyone's hats on their own heads (hats as the possessive cue). Image 8 of 10: a family table with a place set for each person (plates counted visually). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "2012390fda330862e70b221d8240e4a1b90e0593761196df62b9ea318f365f55",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:28:15.620Z",
+   "sourceFile": "img-1250.png",
+   "sourceFileDate": "2026-11-06T21:28:15.218Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "3c19006865740153279bf0e94d0db648d46819f6b78bef3854d46f5560780631",
+   "originalFormat": "PNG",
+   "originalBytes": 327856,
+   "originalFile": "GRAM_own_08.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_own_08.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 47042
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "RES",
+      "conf": 60.9,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "contains_text"
+   ],
+   "humanApproved": true
   }
  }
 }

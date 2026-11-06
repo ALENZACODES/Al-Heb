@@ -5098,6 +5098,42 @@
   "L26_pe_final_cursive_ari": {
    "status": "approved",
    "at": "2026-11-06T21:27:07.884Z"
+  },
+  "BADGE_trad_09": {
+   "status": "approved",
+   "at": "2026-11-06T21:28:34.305Z"
+  },
+  "HEAD_one_08": {
+   "status": "approved",
+   "at": "2026-11-06T21:28:34.305Z"
+  },
+  "BADGE_05": {
+   "status": "approved",
+   "at": "2026-11-06T21:28:34.305Z"
+  },
+  "MAS_states_07": {
+   "status": "approved",
+   "at": "2026-11-06T21:28:34.305Z"
+  },
+  "PLACE_negev_08": {
+   "status": "approved",
+   "at": "2026-11-06T21:28:34.305Z"
+  },
+  "PLACE_eilat_06": {
+   "status": "approved",
+   "at": "2026-11-06T21:28:34.899Z",
+   "note": "contains_text flag eye-checked at full size Nov 6: no text present (detector false positive)",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "GRAM_own_08": {
+   "status": "approved",
+   "at": "2026-11-06T21:28:34.899Z",
+   "note": "contains_text flag eye-checked at full size Nov 6: no text present (detector false positive)",
+   "forcedDespite": [
+    "contains_text"
+   ]
   }
  }
 }

@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 969,
+ "count": 976,
  "images": {
   "BADGE_03": {
    "w": 512,
@@ -11,6 +11,30 @@
     {
      "edge": 512,
      "file": "BADGE_03.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "BADGE_05": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "BADGE_05.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "BADGE_trad_09": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "BADGE_trad_09.512.webp",
      "w": 512,
      "h": 512
     }
@@ -2044,6 +2068,18 @@
     }
    ]
   },
+  "GRAM_own_08": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_own_08.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GRAM_there_03": {
    "w": 512,
    "h": 512,
@@ -2053,6 +2089,18 @@
      "file": "GRAM_there_03.512.webp",
      "w": 512,
      "h": 512
+    }
+   ]
+  },
+  "HEAD_one_08": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HEAD_one_08.512.webp",
+     "w": 512,
+     "h": 293
     }
    ]
   },
@@ -7942,6 +7990,18 @@
     }
    ]
   },
+  "MAS_states_07": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "MAS_states_07.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "MAS_states_08": {
    "w": 512,
    "h": 512,
@@ -9904,6 +9964,18 @@
     }
    ]
   },
+  "PLACE_eilat_06": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_eilat_06.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_everyday_01": {
    "w": 512,
    "h": 293,
@@ -10007,6 +10079,18 @@
     {
      "edge": 512,
      "file": "PLACE_negev_06.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_negev_08": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_negev_08.512.webp",
      "w": 512,
      "h": 293
     }

@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 7332 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 7334 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-7332 English labels; 1933 UNKNOWN.
+7334 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -5539,6 +5539,8 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hc8e03f62](m/israeli/word/hc8e03f62.mp3) | רוֹפֵא | medical doctor, physician | rofe |
 | [hc8edded2](m/israeli/word/hc8edded2.mp3) | הֶחְלִיט | to opt, choose, decide | hechlit |
 | [hc91c0d80](m/israeli/word/hc91c0d80.mp3) | הַר | mountain (mass of earth and rock) | har |
+| [hc941edff](m/israeli/word/hc941edff.mp3) | דַּק | thin; skinny, lean; fine, faint | dak |
+| [hc957eb01](m/israeli/word/hc957eb01.mp3) | בְּדִיחָה | joke (amusing story) | bedichah |
 | [help-01](m/israeli/word/help-01.mp3) | עֶזְרָה! | help! | ezrah! |
 | [i-01-w1](m/israeli/word/i-01-w1.mp3) | בָּרְכוּ | UNKNOWN | barkhu |
 | [i-01-w10](m/israeli/word/i-01-w10.mp3) | לְעוֹלָם וָעֶד | UNKNOWN | le'olam va'ed |
@@ -7938,4 +7940,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 15936 produced clips in INDEX.csv have an English label; 2024 UNKNOWN. Filenames and IDs are unchanged.
+All 15941 produced clips in INDEX.csv have an English label; 2025 UNKNOWN. Filenames and IDs are unchanged.

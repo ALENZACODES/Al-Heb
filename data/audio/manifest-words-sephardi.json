@@ -32688,8 +32688,8 @@
   "kind": "word",
   "id": "yigdal-w31",
   "text": "אֲשֶׁר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "introduces a subordinate clause",
   "phonetic": "asher"
@@ -32714,8 +32714,8 @@
   "kind": "word",
   "id": "yigdal-w32",
   "text": "נִבְרָא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to be created",
   "phonetic": "nivra"

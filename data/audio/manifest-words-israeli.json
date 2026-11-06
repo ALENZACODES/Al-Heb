@@ -60709,8 +60709,8 @@
   "id": "hc941edff",
   "text": "דַּק",
   "ipa": "ˈdak",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "thin; skinny, lean; fine, faint",
   "phonetic": "dak"
@@ -70453,8 +70453,8 @@
   "id": "hc957eb01",
   "text": "בְּדִיחָה",
   "ipa": "be.di.ˈχa",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "joke (amusing story)",
   "phonetic": "bedichah"

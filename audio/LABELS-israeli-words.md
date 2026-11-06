@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 5263 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 5329 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-5263 English labels; 1645 UNKNOWN.
+5329 English labels; 1711 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -4406,6 +4406,68 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [il11-w5](m/israeli/word/il11-w5.mp3) | רָחוֹק | UNKNOWN | rachok |
 | [il11-w6](m/israeli/word/il11-w6.mp3) | אֵיפֹה | UNKNOWN | eifoh |
 | [il12-w1](m/israeli/word/il12-w1.mp3) | הַיּוֹם | UNKNOWN | hayom |
+| [il12-w3](m/israeli/word/il12-w3.mp3) | אֶתְמוֹל | UNKNOWN | etmol |
+| [il12-w4](m/israeli/word/il12-w4.mp3) | שָׁעָה | UNKNOWN | sha'ah |
+| [il12-w5](m/israeli/word/il12-w5.mp3) | יוֹם רִאשׁוֹן | UNKNOWN | yom rishon |
+| [il12-w6](m/israeli/word/il12-w6.mp3) | שַׁבָּת | UNKNOWN | shabat |
+| [il13-w1](m/israeli/word/il13-w1.mp3) | מַה נִּשְׁמָע | UNKNOWN | mah nishma |
+| [il13-w2](m/israeli/word/il13-w2.mp3) | הַכֹּל בְּסֵדֶר | UNKNOWN | hakol beseder |
+| [il13-w3](m/israeli/word/il13-w3.mp3) | מַה קּוֹרֶה | UNKNOWN | mah koreh |
+| [il13-w4](m/israeli/word/il13-w4.mp3) | בְּרוּךְ הַשֵּׁם | UNKNOWN | berukh hashem |
+| [il13-w5](m/israeli/word/il13-w5.mp3) | לֹא רַע | UNKNOWN | lo ra |
+| [il14-w1](m/israeli/word/il14-w1.mp3) | מִשְׁפָּחָה | UNKNOWN | mishpachah |
+| [il14-w2](m/israeli/word/il14-w2.mp3) | אָח | UNKNOWN | ach |
+| [il14-w3](m/israeli/word/il14-w3.mp3) | אָחוֹת | UNKNOWN | achot |
+| [il14-w4](m/israeli/word/il14-w4.mp3) | יֶלֶד | UNKNOWN | yeled |
+| [il14-w5](m/israeli/word/il14-w5.mp3) | יַלְדָּה | UNKNOWN | yaldah |
+| [il14-w6](m/israeli/word/il14-w6.mp3) | נָשׂוּי | UNKNOWN | nasuy |
+| [il15-w1](m/israeli/word/il15-w1.mp3) | חַם | UNKNOWN | cham |
+| [il15-w2](m/israeli/word/il15-w2.mp3) | קַר | UNKNOWN | kar |
+| [il15-w3](m/israeli/word/il15-w3.mp3) | גֶּשֶׁם | UNKNOWN | geshem |
+| [il15-w4](m/israeli/word/il15-w4.mp3) | שֶׁמֶשׁ | UNKNOWN | shemesh |
+| [il15-w5](m/israeli/word/il15-w5.mp3) | מֶזֶג אֲוִיר | UNKNOWN | mezeg avir |
+| [il16-w1](m/israeli/word/il16-w1.mp3) | אֲנִי הוֹלֵךְ | UNKNOWN | ani holekh |
+| [il16-w2](m/israeli/word/il16-w2.mp3) | אֲנִי אוֹכֵל | UNKNOWN | ani okhel |
+| [il16-w3](m/israeli/word/il16-w3.mp3) | אֲנִי לוֹמֵד | UNKNOWN | ani lomed |
+| [il16-w4](m/israeli/word/il16-w4.mp3) | אֲנִי כּוֹתֵב | UNKNOWN | ani kotev |
+| [il16-w5](m/israeli/word/il16-w5.mp3) | אֲנִי מְדַבֵּר | UNKNOWN | ani medaber |
+| [il17-w1](m/israeli/word/il17-w1.mp3) | חֶדֶר | UNKNOWN | cheder |
+| [il17-w2](m/israeli/word/il17-w2.mp3) | הַזְמָנָה | UNKNOWN | hazmanah |
+| [il17-w3](m/israeli/word/il17-w3.mp3) | לַיְלָה | UNKNOWN | laylah |
+| [il17-w4](m/israeli/word/il17-w4.mp3) | מַפְתֵּחַ | UNKNOWN | mafteach |
+| [il17-w5](m/israeli/word/il17-w5.mp3) | אַרוּחַת בֹּקֶר | UNKNOWN | aruchat boker |
+| [il18-w1](m/israeli/word/il18-w1.mp3) | אֲנִי לֹא מֵבִין | UNKNOWN | ani lo mevin |
+| [il18-w2](m/israeli/word/il18-w2.mp3) | אֶפְשָׁר לְדַבֵּר לְאַט | UNKNOWN | efshar ledaber le'at |
+| [il18-w3](m/israeli/word/il18-w3.mp3) | תַּגִּידוּ בְּאַנְגְּלִית | UNKNOWN | tagidu be'angelit |
+| [il18-w4](m/israeli/word/il18-w4.mp3) | רוֹפֵא | UNKNOWN | rofe |
+| [il18-w5](m/israeli/word/il18-w5.mp3) | בֵּית מֶרְקַחַת | UNKNOWN | beit merkachat |
+| [il18-w6](m/israeli/word/il18-w6.mp3) | עֶזְרָה | UNKNOWN | ezrah |
+| [il19-w1](m/israeli/word/il19-w1.mp3) | הָלַכְתִּי | UNKNOWN | halakhti |
+| [il19-w2](m/israeli/word/il19-w2.mp3) | אָכַלְתִּי | UNKNOWN | akhalti |
+| [il19-w3](m/israeli/word/il19-w3.mp3) | רָאִיתִי | UNKNOWN | ra'iti |
+| [il19-w4](m/israeli/word/il19-w4.mp3) | אָמַרְתִּי | UNKNOWN | amarti |
+| [il19-w5](m/israeli/word/il19-w5.mp3) | הָיָה | UNKNOWN | hayah |
+| [il20-w1](m/israeli/word/il20-w1.mp3) | אֲנִי אֵלֵךְ | UNKNOWN | ani elekh |
+| [il20-w2](m/israeli/word/il20-w2.mp3) | אֲנִי אֹכַל | UNKNOWN | ani okhal |
+| [il20-w3](m/israeli/word/il20-w3.mp3) | נִתְרָאֶה | UNKNOWN | nitra'eh |
+| [il20-w4](m/israeli/word/il20-w4.mp3) | אוּלַי | UNKNOWN | ulai |
+| [il20-w5](m/israeli/word/il20-w5.mp3) | בְּעוֹד שָׁבוּעַ | UNKNOWN | be'od shavu'a |
+| [il21-w1](m/israeli/word/il21-w1.mp3) | אֲנִי חוֹשֵׁב שֶׁ... | UNKNOWN | ani choshev she... |
+| [il21-w2](m/israeli/word/il21-w2.mp3) | לְדַעְתִּי | UNKNOWN | ledati |
+| [il21-w3](m/israeli/word/il21-w3.mp3) | אֲנִי מַעֲדִיף | UNKNOWN | ani ma'adif |
+| [il21-w4](m/israeli/word/il21-w4.mp3) | מַסְכִּים | UNKNOWN | maskim |
+| [il21-w5](m/israeli/word/il21-w5.mp3) | לֹא מַסְכִּים | UNKNOWN | lo maskim |
+| [il22-w1](m/israeli/word/il22-w1.mp3) | הַלּוֹ | UNKNOWN | halo |
+| [il22-w2](m/israeli/word/il22-w2.mp3) | לְהִתְקַשֵּׁר | UNKNOWN | lehitkasher |
+| [il22-w3](m/israeli/word/il22-w3.mp3) | פְּגִישָׁה | UNKNOWN | pegishah |
+| [il22-w4](m/israeli/word/il22-w4.mp3) | לְקַבֵּעַ | UNKNOWN | lekabe'a |
+| [il22-w5](m/israeli/word/il22-w5.mp3) | הוֹדָעָה | UNKNOWN | hoda'ah |
+| [il23-w1](m/israeli/word/il23-w1.mp3) | רֹאשׁ | UNKNOWN | rosh |
+| [il23-w2](m/israeli/word/il23-w2.mp3) | חַיִּים | UNKNOWN | chayim |
+| [il23-w3](m/israeli/word/il23-w3.mp3) | מַה שְׁלוֹמְךָ | UNKNOWN | mah shelomekha |
+| [il24-w1](m/israeli/word/il24-w1.mp3) | מַה קָרָה | UNKNOWN | mah karah |
+| [il24-w2](m/israeli/word/il24-w2.mp3) | תַּסְבִּיר לִי | UNKNOWN | tasbir li |
+| [il24-w3](m/israeli/word/il24-w3.mp3) | בּוֹא נַחֲלִיט | UNKNOWN | bo nachalit |
 | [kaddish-1-w1](m/israeli/word/kaddish-1-w1.mp3) | יִתְגַּדַּל | may it be magnified | yitgadal |
 | [kaddish-1-w10](m/israeli/word/kaddish-1-w10.mp3) | מַלְכוּתֵהּ | his kingdom | malkhuteh |
 | [kaddish-1-w11](m/israeli/word/kaddish-1-w11.mp3) | בְּחַיֵּיכוֹן | in your lifetime | bechayeikhon |
@@ -4828,6 +4890,10 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [politeness-16](m/israeli/word/politeness-16.mp3) | יוֹפִי | great / nice | yofi |
 | [politeness-19](m/israeli/word/politeness-19.mp3) | דַּי | enough / stop it | dai |
 | [politeness-20](m/israeli/word/politeness-20.mp3) | רֶגַע | one moment | rega |
+| [r01-w1](m/israeli/word/r01-w1.mp3) | שָׁב | UNKNOWN | shav |
+| [r02-w1](m/israeli/word/r02-w1.mp3) | שַׁבָּת | UNKNOWN | shabat |
+| [r02-w2](m/israeli/word/r02-w2.mp3) | בַּת | UNKNOWN | bat |
+| [r03-w1](m/israeli/word/r03-w1.mp3) | שָׁלוֹם | UNKNOWN | shalom |
 | [shehecheyanu-w1](m/israeli/word/shehecheyanu-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [shehecheyanu-w10](m/israeli/word/shehecheyanu-w10.mp3) | לַזְּמַן | to the time | lazeman |
 | [shehecheyanu-w11](m/israeli/word/shehecheyanu-w11.mp3) | הַזֶּה׃ | this | hazeh |
@@ -5869,4 +5935,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 9677 produced clips in INDEX.csv have an English label; 1645 UNKNOWN. Filenames and IDs are unchanged.
+All 9880 produced clips in INDEX.csv have an English label; 1711 UNKNOWN. Filenames and IDs are unchanged.

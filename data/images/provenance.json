@@ -57878,6 +57878,714 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "GRAM_move_05": {
+   "id": "GRAM_move_05",
+   "file": "GRAM_move_05.png",
+   "command": 211,
+   "set": "Prepositions — movement",
+   "block": "O",
+   "prompt": "Command 211 (Prepositions — movement): Rimon jumping into a box; Rimon climbing out of the box; a ball rolling across a table; a bird flying over a wall; a fish swimming through a hoop of seaweed; Ari walking toward Noa with a gift; Noa walking away from a door waving; a cat slipping between two chair legs; water pouring from a jug into a glass; a letter (blank envelope) going into a post box. Image 5 of 10: a fish swimming through a hoop of seaweed. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "1badfd82aaa73dcc58fa2291ddd48e3bfb36e42525b37896e2c02c4a19e00fb5",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:30:49.034Z",
+   "sourceFile": "img-0058.png",
+   "sourceFileDate": "2026-11-06T21:30:48.911Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "e15524d2b3e27778b78ad104117ae8035be95a1ee9bd4e5db52fb569cdbf3491",
+   "originalFormat": "PNG",
+   "originalBytes": 254894,
+   "originalFile": "GRAM_move_05.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_move_05.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 24196
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_link_09": {
+   "id": "GRAM_link_09",
+   "file": "GRAM_link_09.png",
+   "command": 219,
+   "set": "Connectors & little words",
+   "block": "O",
+   "prompt": "Command 219 (Connectors & little words): And — two baskets joined by a rope; or — a fork in a path with a cake on one side and fruit on the other; but — a sunny picnic with one black cloud; because — rain above, umbrella open below (cause readable); also — a third chair being added to a table of two; only — one gold apple among green apples; already — an empty plate with crumbs and a satisfied Rimon; not yet — a cake in an oven half risen; here — a gold map pin shape over a café table scene (pin as object); there — the same pin small and far on a hill. Image 9 of 10: here — a gold map pin shape over a café table scene (pin as object). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "fcf81cf6278182ae8b6780b90e130506ffc7075ce6e8809a2a0018eb2066e19d",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:30:49.034Z",
+   "sourceFile": "img-0145.png",
+   "sourceFileDate": "2026-11-06T21:30:48.901Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "0d30ccd0b0939845fb8b144ca47bb6d782ea4834134c1ae82253c65c95d517af",
+   "originalFormat": "PNG",
+   "originalBytes": 264765,
+   "originalFile": "GRAM_link_09.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_link_09.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 29076
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_telaviv_03": {
+   "id": "PLACE_telaviv_03",
+   "file": "PLACE_telaviv_03.png",
+   "command": 201,
+   "set": "Tel Aviv–Jaffa",
+   "block": "N",
+   "prompt": "Command 201 (Tel Aviv–Jaffa): A white Bauhaus building with curved balconies; a beach boulevard with palms and cyclists; an old port with fishing boats (Jaffa side); a clock tower on a rise above old streets (clock face blank, hands only); a flea-market lane of furniture and rugs (no signs); a boulevard of ficus trees with benches; a beach at sunset with a lifeguard tower; a modern tower cluster seen from the beach (distant, generic); a café row under awnings at night with string lights; a hilltop view where the old port meets the new skyline across the bay. Image 3 of 10: an old port with fishing boats (Jaffa side). Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "1ebb3c848d246c7eace06a78cbd52b69927f39c02f0c9720727416e04834a61c",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:30:49.034Z",
+   "sourceFile": "img-0238.png",
+   "sourceFileDate": "2026-11-06T21:30:48.897Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "d0aeb8350e0c47de9f183fd16780ae967bacf58de1813fa691c351c7fd8e665c",
+   "originalFormat": "PNG",
+   "originalBytes": 221612,
+   "originalFile": "PLACE_telaviv_03.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_telaviv_03.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 41246
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "ale",
+      "conf": 69.4,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "GRAM_ask_02": {
+   "id": "GRAM_ask_02",
+   "file": "GRAM_ask_02.png",
+   "command": 214,
+   "set": "Questions",
+   "block": "O",
+   "prompt": "Command 214 (Questions): A giant gold question-mark SHAPE made of ribbon floating over a market stall (shape only, no letters — a sculptural question mark is a symbol, allowed as an object); who — Rimon peeking from behind three doors; where — one scene: Ari looking for something, with a table, an open box and a shelf all in frame; when — Noa pointing at a blank clock and a blank calendar; what — hands open over three covered dishes; why — a child pointing at rain; how many — hands counting pomegranate seeds; how — a puzzled look at a folded paper crane; which — two doors, one gold one blue, hand hovering; whose — a lost glove held up to a crowd. Image 2 of 10: who — Rimon peeking from behind three doors. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "aa8ccd280b0120e0f2eb9bac5e18fc5061d5de9737806fda3fc0e0ea299c790e",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:30:49.034Z",
+   "sourceFile": "img-0299.png",
+   "sourceFileDate": "2026-11-06T21:30:48.892Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "574b5ffa41b995e27f8bd42f93aa86dc6df9af199987a0fdb0038ef0f4e75f65",
+   "originalFormat": "PNG",
+   "originalBytes": 208672,
+   "originalFile": "GRAM_ask_02.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_ask_02.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 14168
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_deadsea_09": {
+   "id": "PLACE_deadsea_09",
+   "file": "PLACE_deadsea_09.png",
+   "command": 205,
+   "set": "The Dead Sea & Masada",
+   "block": "N",
+   "prompt": "Command 205 (The Dead Sea & Masada): A salt-white shoreline with strange salt formations; a figure floating on their back reading a blank newspaper (the classic, comic and gentle); mud-dark pools beside the bright shore; a fortress plateau seen from below at dawn; a winding snake path up the plateau; the plateau top with low stone ruins and a huge view; a cable car crossing the cliff face; palm oases in a canyon with a waterfall (Ein Gedi style); ibex goats on a cliff ledge; the lowest road on earth — a road sign shape left completely blank beside the shore road. Image 9 of 10: ibex goats on a cliff ledge. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "4dbe90c318f8652d8d14e3aa2fc31b70bcf0bc2156a03afda09eb1c7b9dcf05f",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:30:49.034Z",
+   "sourceFile": "img-0792.png",
+   "sourceFileDate": "2026-11-06T21:30:48.909Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "924b7a565402e4bef8203b0159c74b5cbd67d348b4a50742293574608b81b17d",
+   "originalFormat": "PNG",
+   "originalBytes": 188283,
+   "originalFile": "PLACE_deadsea_09.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_deadsea_09.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 29402
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "MAS_states_05": {
+   "id": "MAS_states_05",
+   "file": "MAS_states_05.png",
+   "command": 240,
+   "set": "Rimon — full state sheet II",
+   "block": "R",
+   "prompt": "Command 240 (Rimon — full state sheet II): Ten square portraits of the mascot only, one state each, continuing Run 2's dashboard set without repeating it: Rimon with a tiny knitted kippah; Rimon with a small tallit; Rimon holding a shofar nearly as big as itself; Rimon under an umbrella in first rain; Rimon with sunglasses and a beach bucket; Rimon carrying a book stack taller than itself; Rimon blowing a dandelion clock; Rimon in a chef's hat tasting from a spoon; Rimon planting a seedling; Rimon waving a small blank flag. Files MAS_states_01 … _10. Image 5 of 10: Rimon with sunglasses and a beach bucket. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "f7d6e1dc05040cd032134c48d16515f7870aef87a9d0a5d795dabca50fd09b74",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:30:49.034Z",
+   "sourceFile": "img-0802.png",
+   "sourceFileDate": "2026-11-06T21:30:48.900Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "c827210bfea2c0465af34e4154290978974b5bd33ec6e61225bc5f1b4ffda4c1",
+   "originalFormat": "PNG",
+   "originalBytes": 222232,
+   "originalFile": "MAS_states_05.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "MAS_states_05.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 14958
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_modals_04": {
+   "id": "GRAM_modals_04",
+   "file": "GRAM_modals_04.png",
+   "command": 217,
+   "set": "Want, need, can",
+   "block": "O",
+   "prompt": "Command 217 (Want, need, can): Want — Noa reaching toward a cake in a window with hearts in her eyes (one small heart shape); need — Ari in rain reaching for an umbrella; can — Rimon lifting a tiny barbell successfully, smiling; cannot — Rimon under the same barbell, flat comic squish (gentle); must — a hand raised at a red traffic light shape (a plain red circle light, no text); may I — a child with a hand half-raised at a table; let's — both narrators pointing the same way at a path; try — Rimon looking at a high step with a determined face; again — a circular pair of gold arrows around a cup (symbol only); first/then — two footprints panels: shoes by a door, then the same shoes on a path. Image 4 of 10: cannot — Rimon under the same barbell, flat comic squish (gentle). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "d1a1a612fd7c2a922ad8abdf316804ec596231a090064a8f491ba748bf4801b8",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:30:49.034Z",
+   "sourceFile": "img-0844.png",
+   "sourceFileDate": "2026-11-06T21:30:48.891Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "2793970962e22b8c0f0b237752b509429d6ad81a822d1041927183ec4dfb9f4b",
+   "originalFormat": "PNG",
+   "originalBytes": 198074,
+   "originalFile": "GRAM_modals_04.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_modals_04.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 10906
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "STATE_art_02": {
+   "id": "STATE_art_02",
+   "file": "STATE_art_02.png",
+   "command": 243,
+   "set": "Empty, error & success states",
+   "block": "R",
+   "prompt": "Command 243 (Empty, error & success states): Ten friendly square states: Rimon holding an empty basket (nothing here yet); Rimon fishing in an empty bucket (no results); Rimon untangling a ball of string (something went wrong); Rimon with a bandaged head bump sitting on a cushion (offline — rest and retry); a gold check seal breaking through a ribbon (success, no text); Rimon watering a pot where nothing has sprouted yet (keep going); a blank map with one gold pin and a lot of dotted path (journey started); Rimon holding a \"closed\" shutter door gently ajar from inside (locked level preview — door only, no signs); a finish-line ribbon across a path with confetti shapes; Rimon asleep on a \"done\" stack of finished books. Files STATE_art_01 … _10. Image 2 of 10: Rimon fishing in an empty bucket (no results). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "e4f3c9143ec8ca317a7c26230284d56194613b8f8fa063b13540cd737d7cf4bc",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:30:49.034Z",
+   "sourceFile": "img-0878.png",
+   "sourceFileDate": "2026-11-06T21:30:48.892Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "c762aa057b872f3d2f88faf83790bb9d889569c523c920f47d578fec6c38d0d7",
+   "originalFormat": "PNG",
+   "originalBytes": 217308,
+   "originalFile": "STATE_art_02.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "STATE_art_02.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 15270
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_compare_02": {
+   "id": "GRAM_compare_02",
+   "file": "GRAM_compare_02.png",
+   "command": 215,
+   "set": "Comparatives",
+   "block": "O",
+   "prompt": "Command 215 (Comparatives): Two towers, one taller, a gold ribbon measuring both; two cups of tea, one steaming more; two bags, one heavier on a sagging arm; a small hill vs a great mountain with the same hiker figure for scale; two candles, one brighter with larger glow; two loaves, one fresher with a crisp crust sheen; the same road shorter through a tunnel vs longer over the hill (one wide image); two dogs, one faster shown with motion lines (plain curves, no text); a young tree vs the same tree grown (pair = 2 images). Count check: 8 singles + 1 pair (2) = 10. Image 2 of 10: two cups of tea, one steaming more. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "259bdf80b2f19e424c9d4a96b849ffbd2f4a8a70a33a0e32e3a7bb95e07e2210",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:30:49.034Z",
+   "sourceFile": "img-1000.png",
+   "sourceFileDate": "2026-11-06T21:30:48.910Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "016374ff23da79716b68f93f03b1a5a1c17aa8dc83746b6957c75c112acc8e6a",
+   "originalFormat": "PNG",
+   "originalBytes": 220657,
+   "originalFile": "GRAM_compare_02.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_compare_02.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 15914
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HERO_psalms2_02": {
+   "id": "HERO_psalms2_02",
+   "file": "HERO_psalms2_02.png",
+   "command": 196,
+   "set": "Psalms heroes II & Hallel",
+   "block": "M",
+   "prompt": "Command 196 (Psalms heroes II & Hallel): Psalm 113 — from the rising of the sun, one arc of light over hills; Psalm 114 — the sea fleeing — waves parting before mountains (echo of Exodus, wide); Psalm 118 — a cornerstone being set into a wall by builders; Psalm 121 — eyes lifted to the hills at dusk; Psalm 122 — the walls and towers of a peaceful city; Psalm 126 — sowers with seed bags, tearful, and reapers with sheaves, joyful, in one field split by light; Psalm 130 — out of the depths: a diver of light rising from deep blue water toward the surface; Psalm 136 — a long table of creation: sun, moon, sea, harvest in bands; Psalm 145 — an open hand giving grain to birds; Psalm 150 — every instrument gathered: shofar, harp, drum, cymbals and strings in a sunlit court. Image 2 of 10: Psalm 114 — the sea fleeing — waves parting before mountains (echo of Exodus, wide). Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "e06d43c48c6032d2c8d9b9721a043ebced22267b278a515a33f8723acbeb3ba8",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:30:49.034Z",
+   "sourceFile": "img-1080.png",
+   "sourceFileDate": "2026-11-06T21:30:48.909Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "a6ea2113829b6827515b018f40b9a40800f7efd71d5bb8b6c5f7667c2ccd0e16",
+   "originalFormat": "PNG",
+   "originalBytes": 164502,
+   "originalFile": "HERO_psalms2_02.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HERO_psalms2_02.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 18548
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HERO_calendar_10": {
+   "id": "HERO_calendar_10",
+   "file": "HERO_calendar_10.png",
+   "command": 198,
+   "set": "Counting & calendar moments",
+   "block": "M",
+   "prompt": "Command 198 (Counting & calendar moments): An omer sheaf of barley standing in a clay jar; seven small jars in a row with the last one gold (the weeks counted — objects only); Lag BaOmer — a small safe bonfire with children roasting sticks at a distance; a bride and groom under a white canopy outdoors (modest, joyful, from behind); a brit/naming — a cushioned chair and a cup on a table, flowers around (objects only, no baby close-up); a bar mitzvah boy reading with a yad, family behind (backs); a bat mitzvah girl reading, family behind (backs); a wedding ring on a cushion under the canopy; a housewarming — a mezuzah being fixed to a new doorpost; a first day of school — a new bag and a honey-dipped apple on a plate (the sweet-learning custom). Image 10 of 10: a first day of school — a new bag and a honey-dipped apple on a plate (the sweet-learning custom). Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "249faae0776ab1c75d1894ce66ac89f6e95bdc8c4adab892a22a047c579b2fa9",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:30:49.034Z",
+   "sourceFile": "img-1145.png",
+   "sourceFileDate": "2026-11-06T21:30:48.910Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "83b3c18fd4d10b1ac5927e31a9c3e1534dffdf39d14d24ee3c36b62120ab2bcd",
+   "originalFormat": "PNG",
+   "originalBytes": 183414,
+   "originalFile": "HERO_calendar_10.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HERO_calendar_10.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 25000
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_deadsea_03": {
+   "id": "PLACE_deadsea_03",
+   "file": "PLACE_deadsea_03.png",
+   "command": 205,
+   "set": "The Dead Sea & Masada",
+   "block": "N",
+   "prompt": "Command 205 (The Dead Sea & Masada): A salt-white shoreline with strange salt formations; a figure floating on their back reading a blank newspaper (the classic, comic and gentle); mud-dark pools beside the bright shore; a fortress plateau seen from below at dawn; a winding snake path up the plateau; the plateau top with low stone ruins and a huge view; a cable car crossing the cliff face; palm oases in a canyon with a waterfall (Ein Gedi style); ibex goats on a cliff ledge; the lowest road on earth — a road sign shape left completely blank beside the shore road. Image 3 of 10: mud-dark pools beside the bright shore. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "2aa15f997dc9348091dc9e106585afae63e839c21fa34676aed77a65f5e46719",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:30:49.034Z",
+   "sourceFile": "img-1208.png",
+   "sourceFileDate": "2026-11-06T21:30:48.907Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "c92ae8f2670bbf42faf07054e59ba186d483d376d1deaf7adc85ec7ecf7238f5",
+   "originalFormat": "PNG",
+   "originalBytes": 167127,
+   "originalFile": "PLACE_deadsea_03.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_deadsea_03.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 22496
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_haifa_04": {
+   "id": "PLACE_haifa_04",
+   "file": "PLACE_haifa_04.png",
+   "command": 202,
+   "set": "Haifa & Akko",
+   "block": "N",
+   "prompt": "Command 202 (Haifa & Akko): Terraced gardens descending a green mountainside toward the sea (symmetrical terraces, fountains); a port with cranes below the terraces; a mountainside neighbourhood of red roofs; a cable car cabin over the slope; Akko — a crusader-era stone hall with great arches (interior, empty); Akko's sea wall with waves; a fishing harbour inside old walls; a lighthouse on the old wall at dusk; a market lane in a stone vault; the bay at night with two cities of lights across the water. Image 4 of 10: a cable car cabin over the slope. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "ca4ee856fdf831242da6a3f4f8f2df89a85ba15c029b436e59a6525c67448f1d",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:30:49.034Z",
+   "sourceFile": "img-1318.png",
+   "sourceFileDate": "2026-11-06T21:30:48.894Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "9a3346d28e0737fc83b3eb93c4286943d05a7eb733aa67d99e040a8c20b87979",
+   "originalFormat": "PNG",
+   "originalBytes": 196353,
+   "originalFile": "PLACE_haifa_04.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_haifa_04.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 32678
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HEAD_two_03": {
+   "id": "HEAD_two_03",
+   "file": "HEAD_two_03.png",
+   "command": 247,
+   "set": "Book chapter headers II",
+   "block": "R",
+   "prompt": "Command 247 (Book chapter headers II): Ten more banners: a bridge of translation between two shores; a workshop of writing — pens and blank pages as carpentry; a lighthouse of listening — sound arcs from a tower; a train of travel phrases crossing a plain; a kitchen of grammar — ingredients becoming a meal; a orchard of blessings — fruit trees in rows; a night sky of psalms — stars over a shepherd; a museum of holidays — doors in a row, each with a seasonal object; a harbour of arrival — boats coming in at dawn; a final banner — all the earlier motifs tiny along one horizon at sunrise. Files HEAD_two_01 … _10. Image 3 of 10: a lighthouse of listening — sound arcs from a tower. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "fa1ba3d3e8f0d18a5a6f99d4b11863147bca89b08db3217e23d7b2540f15522d",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:30:49.034Z",
+   "sourceFile": "img-1480.png",
+   "sourceFileDate": "2026-11-06T21:30:48.891Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "ae6d3118c3c62d48bcddbe58ea5d020b1be032e2fd600bfff9ad3235a5a65074",
+   "originalFormat": "PNG",
+   "originalBytes": 126224,
+   "originalFile": "HEAD_two_03.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HEAD_two_03.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 9402
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

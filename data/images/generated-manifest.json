@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 983,
+ "count": 997,
  "images": {
   "BADGE_03": {
    "w": 512,
@@ -1948,6 +1948,18 @@
     }
    ]
   },
+  "GRAM_ask_02": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_ask_02.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GRAM_ask_03": {
    "w": 512,
    "h": 512,
@@ -1996,6 +2008,18 @@
     }
    ]
   },
+  "GRAM_compare_02": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_compare_02.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GRAM_link_01": {
    "w": 512,
    "h": 512,
@@ -2003,6 +2027,18 @@
     {
      "edge": 512,
      "file": "GRAM_link_01.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_link_09": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_link_09.512.webp",
      "w": 512,
      "h": 512
     }
@@ -2027,6 +2063,18 @@
     {
      "edge": 512,
      "file": "GRAM_modals_03.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_modals_04": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_modals_04.512.webp",
      "w": 512,
      "h": 512
     }
@@ -2075,6 +2123,18 @@
     {
      "edge": 512,
      "file": "GRAM_move_04.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_move_05": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_move_05.512.webp",
      "w": 512,
      "h": 512
     }
@@ -2147,6 +2207,18 @@
     {
      "edge": 512,
      "file": "HEAD_one_08.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "HEAD_two_03": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HEAD_two_03.512.webp",
      "w": 512,
      "h": 293
     }
@@ -2543,6 +2615,18 @@
     {
      "edge": 512,
      "file": "HERO_calendar_08.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "HERO_calendar_10": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HERO_calendar_10.512.webp",
      "w": 512,
      "h": 293
     }
@@ -3067,6 +3151,18 @@
      "file": "HERO_psalms2_01.512.webp",
      "w": 512,
      "h": 292
+    }
+   ]
+  },
+  "HERO_psalms2_02": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HERO_psalms2_02.512.webp",
+     "w": 512,
+     "h": 293
     }
    ]
   },
@@ -8050,6 +8146,18 @@
     }
    ]
   },
+  "MAS_states_05": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "MAS_states_05.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "MAS_states_07": {
    "w": 512,
    "h": 512,
@@ -10000,6 +10108,18 @@
     }
    ]
   },
+  "PLACE_deadsea_03": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_deadsea_03.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_deadsea_07": {
    "w": 512,
    "h": 293,
@@ -10007,6 +10127,18 @@
     {
      "edge": 512,
      "file": "PLACE_deadsea_07.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_deadsea_09": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_deadsea_09.512.webp",
      "w": 512,
      "h": 293
     }
@@ -10120,6 +10252,18 @@
     }
    ]
   },
+  "PLACE_haifa_04": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_haifa_04.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_jerusalem_01": {
    "w": 512,
    "h": 293,
@@ -10192,6 +10336,18 @@
     }
    ]
   },
+  "PLACE_telaviv_03": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_telaviv_03.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_telaviv_07": {
    "w": 512,
    "h": 293,
@@ -10213,6 +10369,18 @@
      "file": "PLACE_tzfat_01.512.webp",
      "w": 512,
      "h": 293
+    }
+   ]
+  },
+  "STATE_art_02": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "STATE_art_02.512.webp",
+     "w": 512,
+     "h": 512
     }
    ]
   },

@@ -5162,6 +5162,66 @@
   "MORN_card_04": {
    "status": "approved",
    "at": "2026-11-06T21:29:52.927Z"
+  },
+  "GRAM_move_05": {
+   "status": "approved",
+   "at": "2026-11-06T21:31:12.120Z"
+  },
+  "GRAM_link_09": {
+   "status": "approved",
+   "at": "2026-11-06T21:31:12.120Z"
+  },
+  "GRAM_ask_02": {
+   "status": "approved",
+   "at": "2026-11-06T21:31:12.120Z"
+  },
+  "PLACE_deadsea_09": {
+   "status": "approved",
+   "at": "2026-11-06T21:31:12.120Z"
+  },
+  "MAS_states_05": {
+   "status": "approved",
+   "at": "2026-11-06T21:31:12.120Z"
+  },
+  "GRAM_modals_04": {
+   "status": "approved",
+   "at": "2026-11-06T21:31:12.120Z"
+  },
+  "STATE_art_02": {
+   "status": "approved",
+   "at": "2026-11-06T21:31:12.120Z"
+  },
+  "GRAM_compare_02": {
+   "status": "approved",
+   "at": "2026-11-06T21:31:12.120Z"
+  },
+  "HERO_psalms2_02": {
+   "status": "approved",
+   "at": "2026-11-06T21:31:12.120Z"
+  },
+  "HERO_calendar_10": {
+   "status": "approved",
+   "at": "2026-11-06T21:31:12.120Z"
+  },
+  "PLACE_deadsea_03": {
+   "status": "approved",
+   "at": "2026-11-06T21:31:12.120Z"
+  },
+  "PLACE_haifa_04": {
+   "status": "approved",
+   "at": "2026-11-06T21:31:12.120Z"
+  },
+  "HEAD_two_03": {
+   "status": "approved",
+   "at": "2026-11-06T21:31:12.120Z"
+  },
+  "PLACE_telaviv_03": {
+   "status": "approved",
+   "at": "2026-11-06T21:31:12.722Z",
+   "note": "contains_text flag eye-checked at full size Nov 6: no text present (detector false positive)",
+   "forcedDespite": [
+    "contains_text"
+   ]
   }
  }
 }

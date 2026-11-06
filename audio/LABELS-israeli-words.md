@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 7622 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 7624 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-7622 English labels; 1935 UNKNOWN.
+7624 English labels; 1937 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -6419,6 +6419,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [i-47-w6](m/israeli/word/i-47-w6.mp3) | מְחִיר | UNKNOWN | mechir |
 | [i-47-w7](m/israeli/word/i-47-w7.mp3) | רִבִּית | UNKNOWN | ribit |
 | [i-47-w8](m/israeli/word/i-47-w8.mp3) | הַיּוֹם | UNKNOWN | hayom |
+| [i-47-w9](m/israeli/word/i-47-w9.mp3) | מָחָר | UNKNOWN | machar |
 | [i-48-w1](m/israeli/word/i-48-w1.mp3) | חֶשְׁבּוֹן | UNKNOWN | cheshbon |
 | [i-48-w10](m/israeli/word/i-48-w10.mp3) | הַלְוָאָה | UNKNOWN | halva'ah |
 | [i-48-w11](m/israeli/word/i-48-w11.mp3) | כֶּסֶף | UNKNOWN | kesef |
@@ -7117,6 +7118,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [r31-w4](m/israeli/word/r31-w4.mp3) | אַתָּה | UNKNOWN | atah |
 | [r32-w1](m/israeli/word/r32-w1.mp3) | כָּל | UNKNOWN | kol |
 | [r32-w2](m/israeli/word/r32-w2.mp3) | חָכְמָה | UNKNOWN | chokhmah |
+| [r32-w3](m/israeli/word/r32-w3.mp3) | קָדְשׁוֹ | UNKNOWN | kodsho |
 | [r33-w1](m/israeli/word/r33-w1.mp3) | וְהָיָה | UNKNOWN | vehayah |
 | [r33-w2](m/israeli/word/r33-w2.mp3) | בַּבַּיִת | UNKNOWN | babayit |
 | [r33-w3](m/israeli/word/r33-w3.mp3) | לַמֶּלֶךְ | UNKNOWN | lamelekh |
@@ -8228,4 +8230,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 17419 produced clips in INDEX.csv have an English label; 3136 UNKNOWN. Filenames and IDs are unchanged.
+All 17532 produced clips in INDEX.csv have an English label; 3249 UNKNOWN. Filenames and IDs are unchanged.

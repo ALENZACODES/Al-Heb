@@ -39363,11 +39363,12 @@
   "kind": "word",
   "id": "r46-w2",
   "text": "עוֹלָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "ha39cf3c9",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "olam"
  },
  {
   "path": "audio/f/israeli/word/r46-w2.mp3",
@@ -39390,11 +39391,12 @@
   "kind": "word",
   "id": "r46-w3",
   "text": "מָלַךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "heba57078",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "malakh"
  },
  {
   "path": "audio/f/israeli/word/r46-w3.mp3",
@@ -39417,11 +39419,12 @@
   "kind": "word",
   "id": "r46-w4",
   "text": "בְּטֶרֶם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "pdf2ee05f",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "beterem"
  },
  {
   "path": "audio/f/israeli/word/r46-w4.mp3",
@@ -39444,11 +39447,12 @@
   "kind": "word",
   "id": "r46-w5",
   "text": "יְצִיר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h7ad9f575",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yetzir"
  },
  {
   "path": "audio/f/israeli/word/r46-w5.mp3",

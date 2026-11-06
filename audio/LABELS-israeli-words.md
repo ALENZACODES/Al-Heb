@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 5482 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 5486 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-5482 English labels; 1864 UNKNOWN.
+5486 English labels; 1868 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -5047,6 +5047,10 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [r45-w3](m/israeli/word/r45-w3.mp3) | שְׁמֵהּ | UNKNOWN | shemeh |
 | [r45-w4](m/israeli/word/r45-w4.mp3) | רַבָּא | UNKNOWN | raba |
 | [r46-w1](m/israeli/word/r46-w1.mp3) | אֲדוֹן | UNKNOWN | adon |
+| [r46-w2](m/israeli/word/r46-w2.mp3) | עוֹלָם | UNKNOWN | olam |
+| [r46-w3](m/israeli/word/r46-w3.mp3) | מָלַךְ | UNKNOWN | malakh |
+| [r46-w4](m/israeli/word/r46-w4.mp3) | בְּטֶרֶם | UNKNOWN | beterem |
+| [r46-w5](m/israeli/word/r46-w5.mp3) | יְצִיר | UNKNOWN | yetzir |
 | [shehecheyanu-w1](m/israeli/word/shehecheyanu-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [shehecheyanu-w10](m/israeli/word/shehecheyanu-w10.mp3) | לַזְּמַן | to the time | lazeman |
 | [shehecheyanu-w11](m/israeli/word/shehecheyanu-w11.mp3) | הַזֶּה׃ | this | hazeh |
@@ -6088,4 +6092,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 10331 produced clips in INDEX.csv have an English label; 1864 UNKNOWN. Filenames and IDs are unchanged.
+All 10345 produced clips in INDEX.csv have an English label; 1868 UNKNOWN. Filenames and IDs are unchanged.

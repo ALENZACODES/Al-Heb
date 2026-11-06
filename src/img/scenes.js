@@ -3,11 +3,17 @@
 
 export const SCENE = Object.freeze({
   minuteOne: 'GAME_minute_one_celebration',
+  minuteOneVariant: 'GAME_minute_one_celebration_02',
   letterRush: 'GAME_letter_rush',
+  letterRushRound: 'GAME_letter_rush_02',
   sofitSniper: 'GAME_sofit_sniper',
+  sofitSniperLevel: 'GAME_sofit_sniper_02',
   niqqudFade: 'GAME_niqqud_fade',
   traditionDetective: 'GAME_tradition_detective',
+  traditionDetectiveListen: 'GAME_tradition_detective_02',
   storyPostcard: 'GAME_story_postcard',
+  storySeaside: 'GAME_story_seaside_market',
+  karaokeListen: 'GAME_karaoke_listen',
 });
 
 /** Which shipped SPEAK candidate belongs on this practice set. Never returns a hold id. */

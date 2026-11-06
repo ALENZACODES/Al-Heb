@@ -353,7 +353,7 @@ export function mount(root, ctx = {}) {
     let target = pool[0], ok = 0, n = 0;
     const quiet = !motionOk(ctx);
     let left = 60, timer = null;
-    const art = picture(h, ctx, 'id', SCENE.letterRush, { width: 640, class: 'scene-art' });
+    const art = picture(h, ctx, 'id', SCENE.letterRushRound, { width: 640, class: 'scene-art' });
     const prompt = h('p', { class: 'big', id: 'rush-prompt' });
     const score = h('p', { role: 'status' });
     const clock = h('p', { class: 'muted', id: 'rush-clock' });

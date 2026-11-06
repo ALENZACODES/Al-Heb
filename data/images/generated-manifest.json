@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 548,
+ "count": 554,
  "images": {
   "BG_cafe": {
    "w": 1659,
@@ -1372,6 +1372,24 @@
     }
    ]
   },
+  "GAME_karaoke_listen": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_karaoke_listen.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_karaoke_listen.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
   "GAME_letter_rush": {
    "w": 1254,
    "h": 1254,
@@ -1390,6 +1408,24 @@
     }
    ]
   },
+  "GAME_letter_rush_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_letter_rush_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_letter_rush_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
   "GAME_minute_one_celebration": {
    "w": 1254,
    "h": 1254,
@@ -1403,6 +1439,24 @@
     {
      "edge": 1254,
      "file": "GAME_minute_one_celebration.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "GAME_minute_one_celebration_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_minute_one_celebration_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_minute_one_celebration_02.1254.webp",
      "w": 1254,
      "h": 1254
     }
@@ -1444,6 +1498,24 @@
     }
    ]
   },
+  "GAME_sofit_sniper_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_sofit_sniper_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_sofit_sniper_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
   "GAME_story_postcard": {
    "w": 1254,
    "h": 1254,
@@ -1462,6 +1534,24 @@
     }
    ]
   },
+  "GAME_story_seaside_market": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_story_seaside_market.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_story_seaside_market.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
   "GAME_tradition_detective": {
    "w": 1254,
    "h": 1254,
@@ -1475,6 +1565,24 @@
     {
      "edge": 1254,
      "file": "GAME_tradition_detective.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "GAME_tradition_detective_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_tradition_detective_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_tradition_detective_02.1254.webp",
      "w": 1254,
      "h": 1254
     }
@@ -12444,6 +12552,12 @@
   "GAME_niqqud_fade": "Scene for vowel marks fading off pointed Hebrew.",
   "GAME_tradition_detective": "Scene for telling the reading traditions apart.",
   "GAME_story_postcard": "Postcard scene for a letter memory story.",
+  "GAME_minute_one_celebration_02": "Celebration art for the first Hebrew word, second still.",
+  "GAME_letter_rush_02": "Scene for Letter Rush, second round.",
+  "GAME_sofit_sniper_02": "Scene for final-letter practice, second level.",
+  "GAME_tradition_detective_02": "Listening case for telling the reading traditions apart.",
+  "GAME_karaoke_listen": "Listen scene for prayer karaoke.",
+  "GAME_story_seaside_market": "Seaside market scene for story mode.",
   "SPEAK_04_table_shabbat": "A Shabbat table scene for Say it.",
   "SPEAK_05_table_welcome": "A welcome-at-the-table scene for Say it.",
   "SPEAK_08_street_taxi": "A street taxi scene for Say it.",

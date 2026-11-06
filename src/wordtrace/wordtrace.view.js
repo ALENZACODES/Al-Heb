@@ -163,6 +163,7 @@ export function mount(root, ctx = {}) {
     const nodes = [
       ...header(),
       picture(h, ctx, 'id', SCENE.sofitSniper, { width: 640, class: 'scene-art' }),
+      picture(h, ctx, 'id', SCENE.sofitSniperLevel, { width: 640, class: 'scene-art' }),
       h('p', { class: 'muted' }, t('wt.sofitGame', 'Sofit sniper: a final letter is used only as the last letter of a word.')),
       ...controls(),
       h('p', { class: 'muted', role: 'status', 'data-role': 'summary' },

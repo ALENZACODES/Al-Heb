@@ -56332,6 +56332,330 @@
     "ocr_not_run"
    ],
    "humanApproved": true
+  },
+  "GAME_karaoke_listen": {
+   "id": "GAME_karaoke_listen",
+   "file": "GAME_karaoke_listen.png",
+   "command": 9041,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "Listen scene for prayer karaoke. No text.",
+   "promptSha256": "76bbe7d70594f05504c4fa377dd6a5a670553ae8b5b14a8755dcb2fc2f7eab3e",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T13:14:34.449Z",
+   "sourceFile": "GAME_karaoke_listen.png",
+   "sourceFileDate": "2026-11-06T13:14:29.982Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "a04f1279212f96b3a3c02cf0c177ceefc78e8f752634c4bb9b9aa3e3894af170",
+   "originalFormat": "PNG",
+   "originalBytes": 1455833,
+   "originalFile": "GAME_karaoke_listen.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_karaoke_listen.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 56278
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_karaoke_listen.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 95010
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "GAME_letter_rush_02": {
+   "id": "GAME_letter_rush_02",
+   "file": "GAME_letter_rush_02.png",
+   "command": 9038,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "Scene for Letter Rush",
+   "promptSha256": "6bb13d27140b3b67a2f732d4c0503cbefc9156131d4117c5b89a05f620a4bce0",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T13:14:34.449Z",
+   "sourceFile": "GAME_letter_rush_02.png",
+   "sourceFileDate": "2026-11-06T13:14:29.974Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "43f06b2ed487ccdee42cada27ea4e58adbbe7d4902a310690c2026c1f77fb7e6",
+   "originalFormat": "PNG",
+   "originalBytes": 1522372,
+   "originalFile": "GAME_letter_rush_02.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_letter_rush_02.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 62668
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_letter_rush_02.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 107018
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "GAME_minute_one_celebration_02": {
+   "id": "GAME_minute_one_celebration_02",
+   "file": "GAME_minute_one_celebration_02.png",
+   "command": 9037,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "Celebration art for the first Hebrew word",
+   "promptSha256": "ee3a6f5e0f28da3cc7a2aeac5a456adad78e4b32e5b0e147af80b6972a7a2902",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T13:14:34.449Z",
+   "sourceFile": "GAME_minute_one_celebration_02.png",
+   "sourceFileDate": "2026-11-06T13:14:29.974Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "682d3ff55c8eab3af7085664e738f43d378c646fa48821a64ee912df0b40cf46",
+   "originalFormat": "PNG",
+   "originalBytes": 1564913,
+   "originalFile": "GAME_minute_one_celebration_02.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_minute_one_celebration_02.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 52118
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_minute_one_celebration_02.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 88360
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "GAME_sofit_sniper_02": {
+   "id": "GAME_sofit_sniper_02",
+   "file": "GAME_sofit_sniper_02.png",
+   "command": 9039,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "Scene for final-letter practice",
+   "promptSha256": "819e2cd05b2ce51e07a173c2952b461d3c0b1674bdd09e678d25e82102868b7c",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T13:14:34.449Z",
+   "sourceFile": "GAME_sofit_sniper_02.png",
+   "sourceFileDate": "2026-11-06T13:14:29.978Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "2bfe92d813ccb4b1c125eb5731248ce2346735a8dd45a62ebb1558eb69e60b1d",
+   "originalFormat": "PNG",
+   "originalBytes": 1420495,
+   "originalFile": "GAME_sofit_sniper_02.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_sofit_sniper_02.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 51814
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_sofit_sniper_02.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 88814
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "GAME_story_seaside_market": {
+   "id": "GAME_story_seaside_market",
+   "file": "GAME_story_seaside_market.png",
+   "command": 9042,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "Seaside market scene for story mode. No text.",
+   "promptSha256": "041aa081b2052697299cf4f1d65cc0d598d1c2fb6544cf0ebec7b789a9fea4b9",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T13:14:34.449Z",
+   "sourceFile": "GAME_story_seaside_market.png",
+   "sourceFileDate": "2026-11-06T13:14:29.986Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "c31fd5766d75aa0651177bbe73623d352ca762d73a3b949f476b1d95ed8581f5",
+   "originalFormat": "PNG",
+   "originalBytes": 1584544,
+   "originalFile": "GAME_story_seaside_market.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_story_seaside_market.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 71948
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_story_seaside_market.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 122134
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "GAME_tradition_detective_02": {
+   "id": "GAME_tradition_detective_02",
+   "file": "GAME_tradition_detective_02.png",
+   "command": 9040,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "Listening case for telling the reading traditions apart. No text.",
+   "promptSha256": "c47d956f889206909855c16149aa538c3b8f2f5496c29d4809574c6e88b04b58",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T13:14:34.449Z",
+   "sourceFile": "GAME_tradition_detective_02.png",
+   "sourceFileDate": "2026-11-06T13:14:29.982Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "7611b0ef3ca68e8ac09d31fb84d46561a417832ffcd94795ace009de3f99ea4f",
+   "originalFormat": "PNG",
+   "originalBytes": 1536123,
+   "originalFile": "GAME_tradition_detective_02.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_tradition_detective_02.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 65364
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_tradition_detective_02.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 110006
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
   }
  }
 }

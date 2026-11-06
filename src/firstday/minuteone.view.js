@@ -280,7 +280,12 @@ export async function mount(root, ctx) {
     ensureCelebrateStyle(globalThis.document);
     const kids = [
       h('h1', { id: 'view-title', tabindex: '-1' }, 'You did it'),
-      (() => { const art = picture(h, ctx, 'id', SCENE.minuteOne, { class: 'scene-art', width: 720 }); return art ? h('div', { class: 'lp-cele', 'data-motion': 'fade' }, art) : null; })(),
+      (() => {
+        const art = picture(h, ctx, 'id', SCENE.minuteOne, { class: 'scene-art', width: 480 });
+        const variant = picture(h, ctx, 'id', SCENE.minuteOneVariant, { class: 'scene-art', width: 480 });
+        if (!art && !variant) return null;
+        return h('div', { class: 'lp-cele', 'data-motion': 'fade', style: 'display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center' }, art, variant);
+      })(),
     ];
     // Beat 0: gratitude (siyum) before self-congratulation
     if (celebrateStep >= 0) {

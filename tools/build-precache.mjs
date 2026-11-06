@@ -11,6 +11,8 @@ const INCLUDE_DIRS = ['src', 'assets', 'data'];
 // Files bigger than this are runtime-cached (or not cached) instead of installed up front, so first install stays small.
 export const MAX_FILE_BYTES = 2 * 1024 * 1024;
 const SKIP = (rel) => rel.startsWith('assets/img/') || rel.startsWith('assets/images/') || rel.startsWith('data/images/sheets/') || rel.startsWith('assets/vendor/') /* OCR engine + language data: opt-in, runtime-cached */
+  || rel.startsWith('assets/letter-cartoons/') || rel.startsWith('assets/speak-candidates/') || rel.startsWith('assets/speak-hold/') || rel.startsWith('assets/chatgpt-overnight/') /* authoring PNGs; the learner app loads the ingested webp copies under assets/img/gen, which are runtime-cached */
+  || rel === 'data/letters/art-concept-map.json' /* test and docs input; no view fetches it */ || rel === 'data/audio/english-glosses.json' /* audio-label build input */
   || rel.startsWith('assets/workbook/') /* printable PDFs (several MB): downloaded on demand */ || /\.pdf$/i.test(rel)
   || rel.startsWith('data/vocab/packs/') /* ~150 pack files: fetched when a pack is opened, then cached at runtime */ /* big, runtime-cached */ || rel.split('/').some((p) => p.startsWith('_') || p === 'node_modules')
   || rel.endsWith('.py') || rel.endsWith('.md') || /\.(mp3|wav|ogg|m4a|svg\.src|ttf|otf|txt)$/i.test(rel)  // original TTFs and licence texts are not precached; woff2 in assets/fonts/web/ is
@@ -34,7 +36,7 @@ const KEEP_DATA = new Set(['data/pronunciation/consonants.json', 'data/pronuncia
 const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'data/nikkudfade/', 'data/gender/', 'data/pronunciation/', 'data/speak/', 'data/israel/', 'data/calendar/', 'data/festivals/', 'data/torahread/', 'data/typing/',
   'data/traditions/', 'data/trope-trainer/', 'data/listen/', 'data/grammar/', 'data/wordtrace/', 'data/corpus/reader/', 'data/corpus/trope/', 'data/curriculum/lessons-intermediate/',
   'assets/screens/', 'assets/screenshots/', 'assets/letters/morph/'];
-const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json']);
+const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/morning-verses.json', 'data/curriculum/gender-pairs.json', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json']);
 export const isOnDemand = (rel) => !KEEP_DATA.has(rel) && (ON_DEMAND_FILES.has(rel) || /^data\/curriculum\/resource-concepts-/.test(rel) || ON_DEMAND_PREFIXES.some((p) => rel.startsWith(p)));
 const DATA_ONLY_JSON = (rel) => !rel.startsWith('data/') || rel.endsWith('.json');
 
@@ -49,7 +51,7 @@ function walk(dir, out = [], root = repoRoot) {
 /** @param {string} [root] site root to scan (repo root by default; tools/build-static.mjs passes dist/) */
 export function computeManifest(root = repoRoot) {
   const all = ['index.html', 'offline.html', 'manifest.webmanifest'];
-  for (const d of INCLUDE_DIRS) { try { all.push(...walk(join(root, d), [], root).filter((r) => !SKIP(r) && DATA_ONLY_JSON(r) && statSync(join(root, r)).size <= MAX_FILE_BYTES)); } catch { /* dir missing */ } }
+  for (const d of INCLUDE_DIRS) { try { all.push(...walk(join(root, d), [], root).filter((r) => !SKIP(r) && DATA_ONLY_JSON(r) && (statSync(join(root, r)).size <= MAX_FILE_BYTES || r === 'data/audio/manifest.json'))); } catch { /* dir missing */ } }
   const files = all.filter((f) => !isOnDemand(f)), onDemand = all.filter(isOnDemand);
   const hash = createHash('sha256'); // covers on-demand files too, so a change to them still raises the update banner as before
   for (const f of all) { hash.update(f); hash.update(readFileSync(join(root, f))); }

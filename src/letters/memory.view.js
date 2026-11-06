@@ -120,8 +120,10 @@ export async function mountMemoryPractice(host, ctx, { onExit, size = 8 } = {}) 
   const outcomes = [];
   const box = el("div", { class: "alef-mem-practice" });
   const card = picture(el, ctx, "id", SCENE.storyPostcard, { width: 640, class: "scene-art" });
+  const market = picture(el, ctx, "id", SCENE.storySeaside, { width: 640, class: "scene-art" });
   host.replaceChildren(box);
   if (card) box.append(card);
+  if (market) box.append(market);
   let keyHandler = null;
   const done = () => { document.removeEventListener("keydown", keyHandler); keyHandler = null; };
 

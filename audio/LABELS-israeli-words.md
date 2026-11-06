@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 6303 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 6306 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-6303 English labels; 1933 UNKNOWN.
+6306 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -1732,6 +1732,9 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hc3060738](f/israeli/word/hc3060738.mp3) | נָטוּי | Extended, stretched forth; Bent, leaning, bowing; inflected, declined | natuy |
 | [hc30c99f6](f/israeli/word/hc30c99f6.mp3) | חִכָּה | to wait, wait for | chikah |
 | [hc3279140](f/israeli/word/hc3279140.mp3) | הִסְבִּיר | to explain; to clarify | hisbir |
+| [hc33f7702](f/israeli/word/hc33f7702.mp3) | מוֹחַ | mind; brain | moach |
+| [hc35a1f96](f/israeli/word/hc35a1f96.mp3) | חֹמֶר | a homer, a former Hebrew unit of dry volume, about equal to 230 L or 6½ bushels; material, substance, stuff, matter, chemical agent; clay, (especially architecture) mortar | chomer |
+| [hc35fb5dd](f/israeli/word/hc35fb5dd.mp3) | חִפֵּשׂ | to look for, search for, seek | chipes |
 | [help-01](f/israeli/word/help-01.mp3) | עֶזְרָה! | help! | ezrah! |
 | [i-01-w1](f/israeli/word/i-01-w1.mp3) | בָּרְכוּ | UNKNOWN | barkhu |
 | [i-01-w10](f/israeli/word/i-01-w10.mp3) | לְעוֹלָם וָעֶד | UNKNOWN | le'olam va'ed |
@@ -6909,4 +6912,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 12819 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 12828 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

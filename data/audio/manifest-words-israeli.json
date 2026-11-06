@@ -58938,7 +58938,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to look for, search for, seek"
+  "english": "to look for, search for, seek",
+  "phonetic": "chipes"
  },
  {
   "path": "audio/f/israeli/word/hc35fb5dd.mp3",
@@ -58948,10 +58949,11 @@
   "id": "hc35fb5dd",
   "text": "חִפֵּשׂ",
   "ipa": "χi.ˈpes",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to look for, search for, seek"
+  "english": "to look for, search for, seek",
+  "phonetic": "chipes"
  },
  {
   "path": "audio/m/israeli/word/hd11a9c4c.mp3",
@@ -64054,7 +64056,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "mind; brain"
+  "english": "mind; brain",
+  "phonetic": "moach"
  },
  {
   "path": "audio/f/israeli/word/hc33f7702.mp3",
@@ -64064,10 +64067,11 @@
   "id": "hc33f7702",
   "text": "מוֹחַ",
   "ipa": "ˈmo.aχ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "mind; brain"
+  "english": "mind; brain",
+  "phonetic": "moach"
  },
  {
   "path": "audio/m/israeli/word/hb65cf584.mp3",
@@ -67120,7 +67124,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a homer, a former Hebrew unit of dry volume, about equal to 230 L or 6½ bushels; material, substance, stuff, matter, chemical agent; clay, (especially architecture) mortar"
+  "english": "a homer, a former Hebrew unit of dry volume, about equal to 230 L or 6½ bushels; material, substance, stuff, matter, chemical agent; clay, (especially architecture) mortar",
+  "phonetic": "chomer"
  },
  {
   "path": "audio/f/israeli/word/hc35a1f96.mp3",
@@ -67130,10 +67135,11 @@
   "id": "hc35a1f96",
   "text": "חֹמֶר",
   "ipa": "ˈχo.meʁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "a homer, a former Hebrew unit of dry volume, about equal to 230 L or 6½ bushels; material, substance, stuff, matter, chemical agent; clay, (especially architecture) mortar"
+  "english": "a homer, a former Hebrew unit of dry volume, about equal to 230 L or 6½ bushels; material, substance, stuff, matter, chemical agent; clay, (especially architecture) mortar",
+  "phonetic": "chomer"
  },
  {
   "path": "audio/m/israeli/word/h3c6a06b3.mp3",

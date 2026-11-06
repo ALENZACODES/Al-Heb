@@ -47544,7 +47544,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "vine, grapevine"
+  "english": "vine, grapevine",
+  "phonetic": "gefen"
  },
  {
   "path": "audio/f/israeli/word/h85cda534.mp3",
@@ -47554,10 +47555,11 @@
   "id": "h85cda534",
   "text": "גֶּפֶן",
   "ipa": "ˈɡe.fen",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "vine, grapevine"
+  "english": "vine, grapevine",
+  "phonetic": "gefen"
  },
  {
   "path": "audio/m/israeli/word/h1be0a47a.mp3",
@@ -50718,7 +50720,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Happy, content"
+  "english": "Happy, content",
+  "phonetic": "me'ushar"
  },
  {
   "path": "audio/f/israeli/word/h8633259a.mp3",
@@ -50728,10 +50731,11 @@
   "id": "h8633259a",
   "text": "מְאֻשָּׁר",
   "ipa": "me.u.ˈʃaʁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "Happy, content"
+  "english": "Happy, content",
+  "phonetic": "me'ushar"
  },
  {
   "path": "audio/m/israeli/word/h3777d988.mp3",
@@ -51360,7 +51364,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "tooth; clove (piece of garlic)"
+  "english": "tooth; clove (piece of garlic)",
+  "phonetic": "shen"
  },
  {
   "path": "audio/f/israeli/word/h85ac8666.mp3",
@@ -51370,10 +51375,11 @@
   "id": "h85ac8666",
   "text": "שֵׁן",
   "ipa": "ˈʃen",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "tooth; clove (piece of garlic)"
+  "english": "tooth; clove (piece of garlic)",
+  "phonetic": "shen"
  },
  {
   "path": "audio/m/israeli/word/h326c520d.mp3",
@@ -66724,7 +66730,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "wing; fender, mudguard"
+  "english": "wing; fender, mudguard",
+  "phonetic": "kanaf"
  },
  {
   "path": "audio/f/israeli/word/h850a3966.mp3",
@@ -66734,10 +66741,11 @@
   "id": "h850a3966",
   "text": "כָּנָף",
   "ipa": "ka.ˈnaf",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "wing; fender, mudguard"
+  "english": "wing; fender, mudguard",
+  "phonetic": "kanaf"
  },
  {
   "path": "audio/m/israeli/word/hc35a1f96.mp3",

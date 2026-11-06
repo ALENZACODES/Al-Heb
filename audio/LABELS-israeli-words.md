@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 6077 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 6081 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-6077 English labels; 1933 UNKNOWN.
+6081 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -1130,6 +1130,10 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [h84ac4111](f/israeli/word/h84ac4111.mp3) | שָׂרָה | to be or become great, prince-like; to contend, struggle, wrestle, overcome | sarah |
 | [h84e47f20](f/israeli/word/h84e47f20.mp3) | אֵיךְ | how; the manner in which, the way how; way, manner (followed by שֶׁ־) | eikh |
 | [h84e985fd](f/israeli/word/h84e985fd.mp3) | מוֹעֵד | appointed or agreed-upon time; year; meeting | mo'ed |
+| [h850a3966](f/israeli/word/h850a3966.mp3) | כָּנָף | wing; fender, mudguard | kanaf |
+| [h85ac8666](f/israeli/word/h85ac8666.mp3) | שֵׁן | tooth; clove (piece of garlic) | shen |
+| [h85cda534](f/israeli/word/h85cda534.mp3) | גֶּפֶן | vine, grapevine | gefen |
+| [h8633259a](f/israeli/word/h8633259a.mp3) | מְאֻשָּׁר | Happy, content | me'ushar |
 | [haftarah-after-w1](f/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](f/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](f/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -6683,4 +6687,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 12127 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 12137 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

@@ -15164,8 +15164,8 @@
   "kind": "word",
   "id": "gadlu-w3",
   "text": "אִתִּי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "with me",
   "phonetic": "iti"
@@ -15190,8 +15190,8 @@
   "kind": "word",
   "id": "gadlu-w4",
   "text": "וּנְרוֹמְמָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and let us exalt",
   "phonetic": "uneromemah"
@@ -15216,8 +15216,8 @@
   "kind": "word",
   "id": "gadlu-w5",
   "text": "שְׁמוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "his name",
   "phonetic": "shemo"
@@ -47544,7 +47544,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "vine, grapevine"
+  "english": "vine, grapevine",
+  "phonetic": "gefen"
  },
  {
   "path": "audio/f/ashkenazi/word/h85cda534.mp3",
@@ -47557,7 +47558,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "vine, grapevine"
+  "english": "vine, grapevine",
+  "phonetic": "gefen"
  },
  {
   "path": "audio/m/ashkenazi/word/h1be0a47a.mp3",
@@ -50718,7 +50720,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Happy, content"
+  "english": "Happy, content",
+  "phonetic": "me'ushar"
  },
  {
   "path": "audio/f/ashkenazi/word/h8633259a.mp3",
@@ -50731,7 +50734,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Happy, content"
+  "english": "Happy, content",
+  "phonetic": "me'ushar"
  },
  {
   "path": "audio/m/ashkenazi/word/h3777d988.mp3",
@@ -51360,7 +51364,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "tooth; clove (piece of garlic)"
+  "english": "tooth; clove (piece of garlic)",
+  "phonetic": "shen"
  },
  {
   "path": "audio/f/ashkenazi/word/h85ac8666.mp3",
@@ -51373,7 +51378,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "tooth; clove (piece of garlic)"
+  "english": "tooth; clove (piece of garlic)",
+  "phonetic": "shen"
  },
  {
   "path": "audio/m/ashkenazi/word/h326c520d.mp3",
@@ -66724,7 +66730,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "wing; fender, mudguard"
+  "english": "wing; fender, mudguard",
+  "phonetic": "kanaf"
  },
  {
   "path": "audio/f/ashkenazi/word/h850a3966.mp3",
@@ -66737,7 +66744,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "wing; fender, mudguard"
+  "english": "wing; fender, mudguard",
+  "phonetic": "kanaf"
  },
  {
   "path": "audio/m/ashkenazi/word/hc35a1f96.mp3",

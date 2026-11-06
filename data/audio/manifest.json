@@ -69259,10 +69259,11 @@
   "kind": "word",
   "id": "r45-w1",
   "text": "יִתְגַּדַּל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "pb2b00765"
+  "vocabId": "pb2b00765",
+  "phonetic": "yitgadal"
  },
  {
   "path": "audio/f/sephardi/word/r45-w1.mp3",

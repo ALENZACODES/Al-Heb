@@ -1,0 +1,31 @@
+/* ALEF mini-games — scoped styles (.game-*, .tug-*, .catcher-*). */
+
+.game-card { overflow: hidden; }
+.game-status { font-weight: 600; margin-block: .5rem; }
+.game-prompt { font-size: 1.1rem; }
+.game-he { font-size: 1.9rem; font-weight: 700; }
+.game-he-sm { font-size: 1.3rem; font-weight: 700; }
+.game-choices { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .8rem; }
+.game-choice { min-width: 9rem; }
+.game-card-img { max-width: 100%; height: auto; border-radius: 10px; margin-top: .6rem; }
+.game-stars { font-size: 1.8rem; color: #d9a441; letter-spacing: .2rem; }
+
+/* Tug-of-War */
+.tug-track { display: flex; align-items: center; gap: .6rem; margin-block: .8rem; }
+.tug-team { font-weight: 700; font-size: .8rem; padding: .25rem .5rem; border-radius: 999px; }
+.tug-you { background: #1c4023; color: #f6f1e7; }
+.tug-them { background: #b0373b; color: #f6f1e7; }
+.tug-rope { position: relative; flex: 1; height: 10px; border-radius: 999px;
+  background: linear-gradient(90deg, #1c4023 0 46%, #8a6d3b 46% 54%, #b0373b 54% 100%); }
+.tug-marker { position: absolute; top: 50%; translate: -50% -50%; font-size: 1.3rem; color: #d9a441;
+  transition: inset-inline-start .35s ease; text-shadow: 0 1px 2px rgba(0,0,0,.5); }
+
+/* Vowel Catcher — night sky, gold stars (echoes the start theme) */
+.catcher-sky { position: relative; height: 340px; border-radius: 14px; overflow: hidden;
+  background: radial-gradient(90% 60% at 50% 0%, rgba(217,164,65,.18), rgba(217,164,65,0) 60%),
+              linear-gradient(180deg, #0d1f33 0%, #122a17 130%); }
+.catcher-star { position: absolute; translate: -50% 0; font-size: 1.9rem; color: #e8c97a;
+  text-shadow: 0 0 12px rgba(232,201,122,.8); pointer-events: none; }
+.catcher-basket { position: absolute; bottom: 4%; translate: -50% 0; font-size: 3rem; font-weight: 700;
+  color: #f6f1e7; background: rgba(217,164,65,.16); border: 2px solid #d9a441; border-radius: 12px;
+  padding: .1rem .8rem; line-height: 1.15; pointer-events: none; }

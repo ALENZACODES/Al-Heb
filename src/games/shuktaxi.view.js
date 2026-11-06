@@ -1,6 +1,7 @@
 // Game 11 — Shuk Taxi: road signs use only attested Hebrew direction phrases.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, speak, resultsCard } from './engine.js';
+import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.shuktaxi.v1';
 export function buildTaxiDeck(data) {
@@ -10,6 +11,7 @@ export function buildTaxiDeck(data) {
 export function isTaxiSign(prompt, sign) { return prompt?.id === sign?.id; }
 export const SCENES = Object.freeze(['PLACE_jerusalem_01','PLACE_haifa_01','PLACE_galilee_01']);
 export function mount(root, ctx) {
+  const leaveSfx = sfx.enter(ctx);
   let alive = true, deck = [], images = null, round = 0, session = createSession({ store:ctx?.store,storeKey:STORE_KEY,par:6 });
   const status = h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading direction signs…');
   const board=h('div',{class:'game-board'});
@@ -25,7 +27,7 @@ export function mount(root, ctx) {
     if(picture)stage.append(h('img',{src:picture.src,alt:picture.alt,width:picture.width,height:picture.height,class:'game-card-img','data-img-id':picture.id}));
     const opts=shuffled([wanted,...shuffled(deck.filter(r=>r.id!==wanted.id)).slice(0,2)]);
     const buttons=opts.map(sign=>h('button',{type:'button',class:'btn secondary game-choice',onclick:()=>{
-      if(!alive)return;const ok=isTaxiSign(wanted,sign);session.answer(ok);
+      if(!alive)return;const ok=isTaxiSign(wanted,sign);session.answer(ok); sfx.play(ok ? 'success' : 'miss');
       status.textContent=ok?'Correct direction: next junction.':'Wrong sign: return to the junction.';
       if(ok){round++;void speak(ctx,sign.he);}paint();
     }},heSpan(sign.he,'he game-he-sm')));
@@ -36,5 +38,5 @@ export function mount(root, ctx) {
     if(!alive||!article.isConnected)return;deck=shuffled(buildTaxiDeck(data));images=R;
     if(deck.length<3){status.textContent='Insufficient real direction signs.';return;}paint();
   }).catch(()=>{if(alive)status.textContent='Directions unavailable.';});
-  return ()=>{alive=false;};
+  return ()=>{alive=false; leaveSfx();};
 }

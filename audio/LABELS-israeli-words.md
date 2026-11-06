@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 7619 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 7621 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-7619 English labels; 1933 UNKNOWN.
+7621 English labels; 1934 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -4322,6 +4322,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [brich-shmei-w85](m/israeli/word/brich-shmei-w85.mp3) | אֱלָהָא | God | elaha |
 | [brich-shmei-w86](m/israeli/word/brich-shmei-w86.mp3) | קְשׁוֹט | truth | keshot |
 | [brich-shmei-w87](m/israeli/word/brich-shmei-w87.mp3) | וְאוֹרַיְתֵהּ | and his Torah | ve'orayteh |
+| [brich-shmei-w88](m/israeli/word/brich-shmei-w88.mp3) | קְשׁוֹט | truth | keshot |
 | [brich-shmei-w89](m/israeli/word/brich-shmei-w89.mp3) | וּנְבִיאוֹהִי | and his prophets | unevi'ohi |
 | [brich-shmei-w9](m/israeli/word/brich-shmei-w9.mp3) | רְעוּתָךְ | your good will | re'utakh |
 | [brich-shmei-w90](m/israeli/word/brich-shmei-w90.mp3) | קְשׁוֹט | truth | keshot |
@@ -5840,6 +5841,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [i-02-w14](m/israeli/word/i-02-w14.mp3) | מִמְּקוֹמוֹ | UNKNOWN | mimekomo |
 | [i-02-w15](m/israeli/word/i-02-w15.mp3) | יִמְלֹךְ | UNKNOWN | yimlokh |
 | [i-02-w2](m/israeli/word/i-02-w2.mp3) | שְׂפָתַי | UNKNOWN | sefatai |
+| [i-02-w3](m/israeli/word/i-02-w3.mp3) | תִּפְתָּח | UNKNOWN | tiftach |
 | [i-02-w4](m/israeli/word/i-02-w4.mp3) | אֲבוֹתֵינוּ | UNKNOWN | avoteinu |
 | [i-02-w5](m/israeli/word/i-02-w5.mp3) | אַבְרָהָם | UNKNOWN | avraham |
 | [i-02-w6](m/israeli/word/i-02-w6.mp3) | יִצְחָק | UNKNOWN | yitzchak |
@@ -8225,4 +8227,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 17082 produced clips in INDEX.csv have an English label; 2800 UNKNOWN. Filenames and IDs are unchanged.
+All 17302 produced clips in INDEX.csv have an English label; 3019 UNKNOWN. Filenames and IDs are unchanged.

@@ -25304,8 +25304,8 @@
   "kind": "word",
   "id": "brich-shmei-w88",
   "text": "קְשׁוֹט",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "truth",
   "phonetic": "keshot"

@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 3613 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 3623 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-3613 English labels; 4 UNKNOWN.
+3623 English labels; 5 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -955,6 +955,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [havdalah-spices-w8](f/israeli/word/havdalah-spices-w8.mp3) | מִינֵי | kinds of | minei |
 | [havdalah-spices-w9](f/israeli/word/havdalah-spices-w9.mp3) | בְשָׂמִים׃ | spices | vesamim |
 | [help-01](f/israeli/word/help-01.mp3) | עֶזְרָה! | help! | ezrah! |
+| [i-01-w1](f/israeli/word/i-01-w1.mp3) | בָּרְכוּ | UNKNOWN | barkhu |
 | [kaddish-1-w1](f/israeli/word/kaddish-1-w1.mp3) | יִתְגַּדַּל | may it be magnified | yitgadal |
 | [kaddish-1-w10](f/israeli/word/kaddish-1-w10.mp3) | מַלְכוּתֵהּ | his kingdom | malkhuteh |
 | [kaddish-1-w11](f/israeli/word/kaddish-1-w11.mp3) | בְּחַיֵּיכוֹן | in your lifetime | bechayeikhon |
@@ -3629,6 +3630,15 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [yigdal-w96](m/israeli/word/yigdal-w96.mp3) | לִפְדּוֹת | to redeem | lifdot |
 | [yigdal-w97](m/israeli/word/yigdal-w97.mp3) | מְחַכֵּי | those who await | mechakei |
 | [yigdal-w98](m/israeli/word/yigdal-w98.mp3) | קֵץ | an end, a finish | ketz |
+| [yigdal-w99](m/israeli/word/yigdal-w99.mp3) | יְשׁוּעָתוֹ׃ | of his salvation | yeshu'ato |
+| [zimun-opening-w1](m/israeli/word/zimun-opening-w1.mp3) | רַבּוֹתַי | gentlemen | rabotai |
+| [zimun-opening-w2](m/israeli/word/zimun-opening-w2.mp3) | נְבָרֵךְ׃ | let us bless | nevarekh |
+| [zimun-opening-w3](m/israeli/word/zimun-opening-w3.mp3) | יְהִי | may be | yehi |
+| [zimun-opening-w4](m/israeli/word/zimun-opening-w4.mp3) | שֵׁם | a name; a first name | shem |
+| [zimun-opening-w5](m/israeli/word/zimun-opening-w5.mp3) | אֲדֹנָי | the LORD | adonai |
+| [zimun-opening-w6](m/israeli/word/zimun-opening-w6.mp3) | מְבֹרָךְ | blessed | mevorakh |
+| [zimun-opening-w7](m/israeli/word/zimun-opening-w7.mp3) | מֵעַתָּה | from now | me'atah |
+| [zimun-opening-w8](m/israeli/word/zimun-opening-w8.mp3) | וְעַד־עוֹלָם׃ | and forever | ve'ad-olam |
 
 ## Israeli reading lines
 
@@ -4219,4 +4229,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 5017 produced clips in INDEX.csv have an English label; 4 UNKNOWN. Filenames and IDs are unchanged.
+All 5037 produced clips in INDEX.csv have an English label; 5 UNKNOWN. Filenames and IDs are unchanged.

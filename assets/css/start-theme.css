@@ -12,18 +12,6 @@ body:has(.card.onboarding) {
   background-attachment: fixed;
 }
 
-body:has(.card.onboarding) .site-header .brand,
-body:has(.card.onboarding) .site-header .brand .he {
-  color: #e8c97a;
-}
-body:has(.card.onboarding) .site-nav a {
-  color: #d8e2c4;
-}
-body:has(.card.onboarding) .site-nav a[aria-current],
-body:has(.card.onboarding) .site-nav a:hover {
-  color: #e8c97a;
-}
-
 .card.onboarding {
   background: linear-gradient(180deg, #17351e 0%, #122a17 100%);
   border: 1.5px solid #d9a441;

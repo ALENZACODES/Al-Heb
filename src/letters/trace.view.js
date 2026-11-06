@@ -357,6 +357,7 @@ export function mount(root, ctx = {}) {
     const artNext = picture(h, ctx, 'id', SCENE.letterRushRound03, { width: 640, class: 'scene-art' });
     const art04 = picture(h, ctx, 'id', SCENE.letterRushRound04, { width: 640, class: 'scene-art' });
     const art05 = picture(h, ctx, 'id', SCENE.letterRushRound05, { width: 640, class: 'scene-art' });
+    const art06 = picture(h, ctx, 'id', SCENE.letterRushRound06, { width: 640, class: 'scene-art' });
     const prompt = h('p', { class: 'big', id: 'rush-prompt' });
     const score = h('p', { role: 'status' });
     const clock = h('p', { class: 'muted', id: 'rush-clock' });
@@ -375,6 +376,7 @@ export function mount(root, ctx = {}) {
     if (artNext) body.appendChild(artNext);
     if (art04) body.appendChild(art04);
     if (art05) body.appendChild(art05);
+    if (art06) body.appendChild(art06);
     body.appendChild(h('h2', {}, t('trace.rushTitle', 'Letter Rush')));
     body.appendChild(h('p', {}, t('trace.rushHelp', 'Tap the letter that is named. Ten right is a win.')));
     body.appendChild(prompt); body.appendChild(grid); body.appendChild(score); body.appendChild(clock);

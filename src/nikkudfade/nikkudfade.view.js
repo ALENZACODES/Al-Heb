@@ -25,7 +25,8 @@ export function mount(root, ctx) {
   const sceneStill = picture(el, ctx, 'id', SCENE.niqqudFadeStill, { width: 720, class: 'scene-art' });
   const sceneStill03 = picture(el, ctx, 'id', SCENE.niqqudFadeStill03, { width: 720, class: 'scene-art' });
   const sceneStill04 = picture(el, ctx, 'id', SCENE.niqqudFadeStill04, { width: 720, class: 'scene-art' });
-  wrap.append(h1, ...(scene ? [scene] : []), ...(sceneStill ? [sceneStill] : []), ...(sceneStill03 ? [sceneStill03] : []), ...(sceneStill04 ? [sceneStill04] : []), el('p', { class: 'nf-draft' }, DRAFT_NOTE), controls, body, status, el('footer', {}, sourcesLine(el)));
+  const sceneStill05 = picture(el, ctx, 'id', SCENE.niqqudFadeStill05, { width: 720, class: 'scene-art' });
+  wrap.append(h1, ...(scene ? [scene] : []), ...(sceneStill ? [sceneStill] : []), ...(sceneStill03 ? [sceneStill03] : []), ...(sceneStill04 ? [sceneStill04] : []), ...(sceneStill05 ? [sceneStill05] : []), el('p', { class: 'nf-draft' }, DRAFT_NOTE), controls, body, status, el('footer', {}, sourcesLine(el)));
   root.append(wrap);
   let alive = true, set = null, sched = DEFAULT_SCHEDULE, st = normalizeState(null), queue = [], idx = 0, revealed = false, answered = false, round = 1, reached = 10, anyWord = false, asking = null;
   const say = (t) => { status.textContent = t; };

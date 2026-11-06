@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 959,
+ "count": 969,
  "images": {
   "BADGE_03": {
    "w": 512,
@@ -1852,6 +1852,18 @@
     }
    ]
   },
+  "GAME_art_03": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GAME_art_03.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GAME_art_08": {
    "w": 512,
    "h": 512,
@@ -1883,6 +1895,18 @@
     {
      "edge": 512,
      "file": "GRAM_ask_01.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_ask_03": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_ask_03.512.webp",
      "w": 512,
      "h": 512
     }
@@ -1960,6 +1984,18 @@
     }
    ]
   },
+  "GRAM_move_03": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_move_03.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GRAM_move_04": {
    "w": 512,
    "h": 512,
@@ -1972,6 +2008,18 @@
     }
    ]
   },
+  "GRAM_move_07": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_move_07.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GRAM_move_09": {
    "w": 512,
    "h": 512,
@@ -1979,6 +2027,30 @@
     {
      "edge": 512,
      "file": "GRAM_move_09.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_own_06": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_own_06.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_there_03": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_there_03.512.webp",
      "w": 512,
      "h": 512
     }
@@ -2902,6 +2974,18 @@
     }
    ]
   },
+  "HERO_psalms2_08": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HERO_psalms2_08.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "HERO_psalms2_10": {
    "w": 512,
    "h": 293,
@@ -2945,6 +3029,18 @@
     {
      "edge": 512,
      "file": "HERO_sights_06.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "HERO_sights_07": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HERO_sights_07.512.webp",
      "w": 512,
      "h": 293
     }
@@ -7474,6 +7570,18 @@
     }
    ]
   },
+  "L26_pe_final_cursive_ari": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "L26_pe_final_cursive_ari.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "L26_pe_final_print_ari": {
    "w": 1254,
    "h": 1254,
@@ -11761,6 +11869,18 @@
      "file": "STORY_prophets_10.1600.webp",
      "w": 1600,
      "h": 914
+    }
+   ]
+  },
+  "STREAK_art_02": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "STREAK_art_02.512.webp",
+     "w": 512,
+     "h": 512
     }
    ]
   },

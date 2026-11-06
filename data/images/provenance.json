@@ -56662,6 +56662,506 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "GRAM_move_07": {
+   "id": "GRAM_move_07",
+   "file": "GRAM_move_07.png",
+   "command": 211,
+   "set": "Prepositions — movement",
+   "block": "O",
+   "prompt": "Command 211 (Prepositions — movement): Rimon jumping into a box; Rimon climbing out of the box; a ball rolling across a table; a bird flying over a wall; a fish swimming through a hoop of seaweed; Ari walking toward Noa with a gift; Noa walking away from a door waving; a cat slipping between two chair legs; water pouring from a jug into a glass; a letter (blank envelope) going into a post box. Image 7 of 10: Noa walking away from a door waving. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "9ba65feaa836a68851afc75616ab7c0f5e6819a7396f1b3e0b619e0dbb730ac8",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:26:49.694Z",
+   "sourceFile": "img-0051.png",
+   "sourceFileDate": "2026-11-06T21:26:49.434Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "1cb945c50908aef943af52f5821fdab22fa407e66667329535bd44a8c5d148a1",
+   "originalFormat": "PNG",
+   "originalBytes": 226659,
+   "originalFile": "GRAM_move_07.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_move_07.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 14828
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_own_06": {
+   "id": "GRAM_own_06",
+   "file": "GRAM_own_06.png",
+   "command": 213,
+   "set": "Mine, yours, ours",
+   "block": "O",
+   "prompt": "Command 213 (Mine, yours, ours): Ari hugging his own blue cup while Noa points at her red cup; two identical bags — one beside Ari, one beside Noa; a child holding a parent's hand beside a lunch box; Rimon guarding a tiny bowl; a shared umbrella over both narrators; a coat on a hook between two name-blank tags; a dog choosing its own bed among three; a family table with a place set for each person (plates counted visually); Noa handing Ari his scarf; a group photo pose with everyone's hats on their own heads (hats as the possessive cue). Image 6 of 10: a coat on a hook between two name-blank tags. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "16cf82690c4a19a7b55b1b9f4b3b395e804bfbd99aa05954ac6d8e5f3702e99d",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:26:49.694Z",
+   "sourceFile": "img-0232.png",
+   "sourceFileDate": "2026-11-06T21:26:49.390Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "79d936f7bbcc0e58039c7bbb7d7828a481d5cf29f5153d25247c298596e35e9c",
+   "originalFormat": "PNG",
+   "originalBytes": 217551,
+   "originalFile": "GRAM_own_06.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_own_06.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 13882
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HERO_psalms2_08": {
+   "id": "HERO_psalms2_08",
+   "file": "HERO_psalms2_08.png",
+   "command": 196,
+   "set": "Psalms heroes II & Hallel",
+   "block": "M",
+   "prompt": "Command 196 (Psalms heroes II & Hallel): Psalm 113 — from the rising of the sun, one arc of light over hills; Psalm 114 — the sea fleeing — waves parting before mountains (echo of Exodus, wide); Psalm 118 — a cornerstone being set into a wall by builders; Psalm 121 — eyes lifted to the hills at dusk; Psalm 122 — the walls and towers of a peaceful city; Psalm 126 — sowers with seed bags, tearful, and reapers with sheaves, joyful, in one field split by light; Psalm 130 — out of the depths: a diver of light rising from deep blue water toward the surface; Psalm 136 — a long table of creation: sun, moon, sea, harvest in bands; Psalm 145 — an open hand giving grain to birds; Psalm 150 — every instrument gathered: shofar, harp, drum, cymbals and strings in a sunlit court. Image 8 of 10: Psalm 136 — a long table of creation: sun, moon, sea, harvest in bands. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "ad759e22512d984a77d911ed5a1c2d01c39785dafe64b62cc1f90069eefe8868",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:26:49.694Z",
+   "sourceFile": "img-0581.png",
+   "sourceFileDate": "2026-11-06T21:26:49.435Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "4ba14c5eacb92fb08df03dddfbca7d8315063da62208a19bf64d0ce18f09020a",
+   "originalFormat": "PNG",
+   "originalBytes": 206874,
+   "originalFile": "HERO_psalms2_08.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HERO_psalms2_08.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 34434
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_ask_03": {
+   "id": "GRAM_ask_03",
+   "file": "GRAM_ask_03.png",
+   "command": 214,
+   "set": "Questions",
+   "block": "O",
+   "prompt": "Command 214 (Questions): A giant gold question-mark SHAPE made of ribbon floating over a market stall (shape only, no letters — a sculptural question mark is a symbol, allowed as an object); who — Rimon peeking from behind three doors; where — one scene: Ari looking for something, with a table, an open box and a shelf all in frame; when — Noa pointing at a blank clock and a blank calendar; what — hands open over three covered dishes; why — a child pointing at rain; how many — hands counting pomegranate seeds; how — a puzzled look at a folded paper crane; which — two doors, one gold one blue, hand hovering; whose — a lost glove held up to a crowd. Image 3 of 10: where — one scene: Ari looking for something, with a table, an open box and a shelf all in frame. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "550f821fcf4b1febd24b7f08f79ec24ca4a5ec69a713ddc1505f87856b2f6001",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:26:49.694Z",
+   "sourceFile": "img-0596.png",
+   "sourceFileDate": "2026-11-06T21:26:49.436Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "e51c0a1302267be53348b6bd37e11a534cfd1b01fdcb4806e18a037fb9a175f9",
+   "originalFormat": "PNG",
+   "originalBytes": 258492,
+   "originalFile": "GRAM_ask_03.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_ask_03.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 25302
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HERO_sights_07": {
+   "id": "HERO_sights_07",
+   "file": "HERO_sights_07.png",
+   "command": 197,
+   "set": "Blessings on sights & occasions",
+   "block": "M",
+   "prompt": "Command 197 (Blessings on sights & occasions): A rainbow after rain over fields (shehecheyanu of sight); the open sea horizon from a cliff; a fruit tree in full first blossom; tasting the first fruit of the season from a small bowl; new clothes laid out on a bed with light on them; a scholar's house with a lit study window at night; a rainbow-coloured thunderstorm clearing over a town (awe); mountains of Judea-style hills in morning haze; a great river in flood season, powerful and calm; meeting an old friend on a street after years — two figures stopping in delighted surprise. Image 7 of 10: a rainbow-coloured thunderstorm clearing over a town (awe). Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "a600d1e5dbba1807172fed9f286177759346343620141120b94d9a487688a499",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:26:49.694Z",
+   "sourceFile": "img-0597.png",
+   "sourceFileDate": "2026-11-06T21:26:49.437Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "63da12e6cb0db47a07551909edfccaef822895b8d919b192fe570fe4d0e69fb8",
+   "originalFormat": "PNG",
+   "originalBytes": 189782,
+   "originalFile": "HERO_sights_07.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HERO_sights_07.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 30914
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GAME_art_03": {
+   "id": "GAME_art_03",
+   "file": "GAME_art_03.png",
+   "command": 248,
+   "set": "Workbook game art",
+   "block": "R",
+   "prompt": "Command 248 (Workbook game art): Ten square game assets: a memory-match card back (pomegranate pattern); a second card back (candle pattern); a spot-the-difference base scene — a market stall drawn once, rich in small objects (the pair difference is made later in code — deliver the base and a list in NOTES of 8 small objects that could change); a maze page — a hedge maze with a clear start gap and end gap, no letters; a tracing path — a dotted road from a house to a synagogue (dots only); a dice pair showing dots only (one and six); a spinner wheel divided in colour segments, blank; a bingo-style grid card with nine small object pictures (one per cell: cup, dog, sun, book, fish, key, star, leaf, shoe); a reward sticker sheet of 9 tiny motifs in a grid (counted as one image); a finish flag on a pole with confetti shapes. Files GAME_art_01 … _10. Image 3 of 10: a spot-the-difference base scene — a market stall drawn once, rich in small objects (the pair difference is made later in code — deliver the base and a list in NOTES of 8 small objects that could change). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "e5ac4f14e2dbadef6219c181b4a135a3af7cf8c49869d37cda3eb2ea469de26e",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:26:49.694Z",
+   "sourceFile": "img-0634.png",
+   "sourceFileDate": "2026-11-06T21:26:49.434Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "03f47976bec3436ab0459afc1ebfbffa3d6aeb2087297d504c6dd7e34cf498c0",
+   "originalFormat": "PNG",
+   "originalBytes": 289566,
+   "originalFile": "GAME_art_03.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GAME_art_03.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 38584
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_there_03": {
+   "id": "GRAM_there_03",
+   "file": "GRAM_there_03.png",
+   "command": 216,
+   "set": "There is / there isn't",
+   "block": "O",
+   "prompt": "Command 216 (There is / there isn't): A table with a cat on it (there is); the same table empty with Rimon shrugging (there isn't); a fridge open with milk inside; the same fridge with one empty shelf circled by light (nothing there); a garden with a hidden bird (find-it); a sky with no clouds and a puzzled bird; a pocket turned out empty; a pocket with coins (blank); a chair with a siddur left on it (someone was here); an empty chair by a set table (someone missing). Image 3 of 10: a fridge open with milk inside. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "9d5dc5491e24e9579cf63a89959d45ab4870675e68ebcb1927dbcfd1d6943b05",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:26:49.694Z",
+   "sourceFile": "img-0726.png",
+   "sourceFileDate": "2026-11-06T21:26:49.433Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "80d1baaebb35c07d8a263e435ab2931718452d015e29153ab032246348a3235f",
+   "originalFormat": "PNG",
+   "originalBytes": 208641,
+   "originalFile": "GRAM_there_03.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_there_03.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 13356
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "STREAK_art_02": {
+   "id": "STREAK_art_02",
+   "file": "STREAK_art_02.png",
+   "command": 242,
+   "set": "Streak & calendar art",
+   "block": "R",
+   "prompt": "Command 242 (Streak & calendar art): Ten images for the streak system: a row of seven small flames, the seventh gold (the week kept); a flame sheltered under a glass cover (the Shabbat freeze — flame resting, not out); a seedling with one new leaf (day one); the same seedling taller at three growth stages (3 images); a moon with a small flame on its edge (the evening rescue reminder); a path of footprints with one gap filled by a gold star (a saved day); Rimon warming hands at a small campfire of one steady flame; a year path winding up a hill dotted with small flames into the distance. Count check: 2 + 1 + 3 + 1 + 1 + 1 + 1 = 10. Files STREAK_art_01 … _10. Image 2 of 10: a flame sheltered under a glass cover (the Shabbat freeze — flame resting, not out). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "7c166ba5375aeeac56922417ed8fd5a16c0917ab15031347d4b0b235acef023b",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:26:49.694Z",
+   "sourceFile": "img-0779.png",
+   "sourceFileDate": "2026-11-06T21:26:49.432Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "e5c1375bfd38a985db00817dbdd114343cb96d6dd06a47be816426a502acc816",
+   "originalFormat": "PNG",
+   "originalBytes": 211204,
+   "originalFile": "STREAK_art_02.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "STREAK_art_02.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 12784
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_move_03": {
+   "id": "GRAM_move_03",
+   "file": "GRAM_move_03.png",
+   "command": 211,
+   "set": "Prepositions — movement",
+   "block": "O",
+   "prompt": "Command 211 (Prepositions — movement): Rimon jumping into a box; Rimon climbing out of the box; a ball rolling across a table; a bird flying over a wall; a fish swimming through a hoop of seaweed; Ari walking toward Noa with a gift; Noa walking away from a door waving; a cat slipping between two chair legs; water pouring from a jug into a glass; a letter (blank envelope) going into a post box. Image 3 of 10: a ball rolling across a table. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "a2cad3c1913457a3e1f21642b294dfe961dff4d92bfb52bda0273c1a916cc28c",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:26:49.694Z",
+   "sourceFile": "img-0971.png",
+   "sourceFileDate": "2026-11-06T21:26:49.435Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "c48bb34cea29cad7bcd4754f5bf86c51a4a76c601c0139d6fa29f8838618fb61",
+   "originalFormat": "PNG",
+   "originalBytes": 183900,
+   "originalFile": "GRAM_move_03.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_move_03.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 8406
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "L26_pe_final_cursive_ari": {
+   "id": "L26_pe_final_cursive_ari",
+   "file": "L26_pe_final_cursive_ari.png",
+   "command": 63,
+   "set": "letter_26_pe_final_cursive",
+   "block": "C",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. CHARACTER SHEET A 'Ari': a friendly Israeli man around 35, short dark curly hair, trimmed beard, warm brown skin tone, navy T-shirt, simple silver chain; expression open and encouraging; no kippah by default. Ari writing on a blank notepad, pen mid-stroke, page empty. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "56d9254c4a5cfa30882e0c9c88e85dc7e57b78ecad39a036ecbe8a090d3d6d0d",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:26:49.694Z",
+   "sourceFile": "img-1128.png",
+   "sourceFileDate": "2026-11-06T21:26:49.387Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "b9f5495938d0fca9d1cb6af96217c93b03b9df7d8230d3fdba54504742cff78f",
+   "originalFormat": "PNG",
+   "originalBytes": 184482,
+   "originalFile": "L26_pe_final_cursive_ari.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "L26_pe_final_cursive_ari.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 6622
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

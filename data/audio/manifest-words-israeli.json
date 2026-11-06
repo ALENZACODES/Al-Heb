@@ -25762,8 +25762,8 @@
   "kind": "word",
   "id": "hagomel-w1",
   "text": "בָּרוּךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "blessed",
   "phonetic": "barukh"
@@ -34595,8 +34595,8 @@
   "kind": "word",
   "id": "haftarah-before-w7",
   "text": "אֲשֶׁר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "introduces a subordinate clause",
   "phonetic": "asher"
@@ -34621,8 +34621,8 @@
   "kind": "word",
   "id": "haftarah-before-w8",
   "text": "בָּחַר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to choose, to opt, to select; to prefer; to appoint",
   "phonetic": "bachar"
@@ -34647,8 +34647,8 @@
   "kind": "word",
   "id": "haftarah-before-w9",
   "text": "בִּנְבִיאִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "UNKNOWN"
  },

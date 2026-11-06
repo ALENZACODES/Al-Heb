@@ -57417,8 +57417,8 @@
   "kind": "word",
   "id": "cafe-09",
   "text": "מַיִם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
   "english": "UNKNOWN"
@@ -57443,8 +57443,8 @@
   "kind": "word",
   "id": "cafe-11",
   "text": "בִּירָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
   "english": "UNKNOWN"
@@ -57469,8 +57469,8 @@
   "kind": "word",
   "id": "cafe-12",
   "text": "יַיִן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
   "english": "UNKNOWN"
@@ -57495,8 +57495,8 @@
   "kind": "word",
   "id": "cafe-13",
   "text": "לְחַיִּים!",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
   "english": "UNKNOWN"

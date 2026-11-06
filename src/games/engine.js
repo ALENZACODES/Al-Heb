@@ -115,3 +115,20 @@ export function resultsCard(h, heSpan, session, { title, onAgain, homeHref = '#/
       h('button', { type: 'button', class: 'btn', onclick: onAgain }, 'Play again'),
       h('a', { class: 'btn secondary', href: homeHref }, 'Back to Learn')));
 }
+
+// Use only the existing app player and recorded, correctly labelled files for
+// listening-dependent game rounds. Browser TTS is not interchangeable with a clip.
+// No new audio stack, no tradition substitution, and no sound on missing media.
+export async function playRecordedClip(ctx, kind, id, options = {}) {
+  try {
+    if (!ctx?.audio || typeof ctx.audio.status !== 'function' || typeof ctx.audio.play !== 'function') return false;
+    const status = ctx.audio.status(kind, id, options);
+    if (!status || status.source !== 'file') return false;
+    const result = await ctx.audio.play(kind, id, options);
+    return result?.source === 'file';
+  } catch { return false; }
+}
+export function hasRecordedClip(ctx, kind, id, options = {}) {
+  try { return ctx?.audio?.status?.(kind, id, options)?.source === 'file'; }
+  catch { return false; }
+}

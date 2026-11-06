@@ -13158,10 +13158,11 @@
   "kind": "line",
   "id": "bless-priestly-1",
   "text": "יְבָרֶכְךָ אֲדֹנָי וְיִשְׁמְרֶךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "The LORD bless thee, and keep thee;"
+  "english": "The LORD bless thee, and keep thee;",
+  "phonetic": "yevarekhkha adonai veyishmerekha"
  },
  {
   "path": "audio/f/ashkenazi/line/bless-priestly-1.mp3",
@@ -13317,10 +13318,11 @@
   "kind": "line",
   "id": "bless-priestly-2",
   "text": "יָאֵר אֲדֹנָי פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "The LORD make His face to shine upon thee, and be gracious unto thee;"
+  "english": "The LORD make His face to shine upon thee, and be gracious unto thee;",
+  "phonetic": "ya'er adonai panav elekha vichuneka"
  },
  {
   "path": "audio/f/ashkenazi/line/bless-priestly-2.mp3",
@@ -13475,10 +13477,11 @@
   "kind": "line",
   "id": "bless-priestly-3",
   "text": "יִשָּׂא אֲדֹנָי פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "The LORD lift up His countenance upon thee, and give thee peace."
+  "english": "The LORD lift up His countenance upon thee, and give thee peace.",
+  "phonetic": "yisa adonai panav elekha veyasem lekha shalom"
  },
  {
   "path": "audio/f/ashkenazi/line/bless-priestly-3.mp3",
@@ -15309,10 +15312,11 @@
   "kind": "line",
   "id": "bless-formula-1",
   "text": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "Blessed are you, LORD our God, king of the world,"
+  "english": "Blessed are you, LORD our God, king of the world,",
+  "phonetic": "barukh atah adonai eloheinu melekh ha'olam"
  },
  {
   "path": "audio/f/ashkenazi/line/bless-formula-1.mp3",
@@ -16559,10 +16563,11 @@
   "kind": "line",
   "id": "candle-shabbat",
   "text": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "Blessed are you, LORD our God, king of the world, who made us holy with his commandments and commanded us to light the lamp of Shabbat."
+  "english": "Blessed are you, LORD our God, king of the world, who made us holy with his commandments and commanded us to light the lamp of Shabbat.",
+  "phonetic": "barukh atah adonai eloheinu melekh ha'olam asher kideshanu bemitzvotav vetzivanu lehadlik ner shel shabat"
  },
  {
   "path": "audio/f/ashkenazi/line/candle-shabbat.mp3",
@@ -17274,10 +17279,11 @@
   "kind": "line",
   "id": "amidah-lips",
   "text": "אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "My Lord, open my lips, and my mouth will declare your praise."
+  "english": "My Lord, open my lips, and my mouth will declare your praise.",
+  "phonetic": "adonoy sefosai tiftoch ufi yagid tehilosekho"
  },
  {
   "path": "audio/m/israeli/prayer/amidah-lips.mp3",
@@ -17592,10 +17598,11 @@
   "kind": "line",
   "id": "aleinu-1",
   "text": "עָלֵינוּ לְשַׁבֵּחַ לַאֲדוֹן הַכֹּל לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית שֶׁלֹּא עָשָׂנוּ כְּגוֹיֵי הָאֲרָצוֹת וְלֹא שָׂמָנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה שֶׁלֹּא שָׂם חֶלְקֵנוּ כָּהֶם וְגוֹרָלֵנוּ כְּכָל־הֲמוֹנָם שֶׁהֵם מִשְׁתַּחֲוִים לָהֶבֶל וָרִיק וּמִתְפַּלְּלִים אֶל־אֵל לֹא יוֹשִׁיעַ וַאֲנַחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא שֶׁהוּא נוֹטֶה שָׁמַיִם וְיוֹסֵד אָרֶץ וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַיִם מִמַּעַל וּשְׁכִינַת עֻזּוֹ בְּגָבְהֵי מְרוֹמִים הוּא אֱלֹהֵינוּ וְאֵין עוֹד אַחֵר אֱמֶת מַלְכֵּנוּ וְאֶפֶס זוּלָתוֹ כַּכָּתוּב בַּתּוֹרָה וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל־לְבָבֶךָ כִּי אֲדֹנָי הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל־הָאָרֶץ מִתָּחַת אֵין עוֹד׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "It is our duty to praise the Master of all, to ascribe greatness to the Creator of the beginning: that he has not made us like the nations of the lands and has not placed us like the families of the earth, that he has not set our portion like theirs nor our lot like all their multitude. For they bow to vanity and emptiness and pray to a god who does not save; but we bow before the King of kings of kings, the Holy One, blessed be he, who stretches out the heavens and founds the earth, whose seat of glory is in the heavens above and the presence of his might in the loftiest heights. He is our God; there is no other. Truly he is our king; there is nothing besides him. As it is written in the Torah: \"You shall know this day and take it to heart that the LORD is God, in the heavens above and on the earth beneath; there is no other.\""
+  "english": "It is our duty to praise the Master of all, to ascribe greatness to the Creator of the beginning: that he has not made us like the nations of the lands and has not placed us like the families of the earth, that he has not set our portion like theirs nor our lot like all their multitude. For they bow to vanity and emptiness and pray to a god who does not save; but we bow before the King of kings of kings, the Holy One, blessed be he, who stretches out the heavens and founds the earth, whose seat of glory is in the heavens above and the presence of his might in the loftiest heights. He is our God; there is no other. Truly he is our king; there is nothing besides him. As it is written in the Torah: \"You shall know this day and take it to heart that the LORD is God, in the heavens above and on the earth beneath; there is no other.\"",
+  "phonetic": "oleinu leshabeiach la'adon hakol loseis geduloh leyotzeir bereishis shelo osonu kegoyei ho'arotzos velo somonu kemishpechos ho'adomoh shelo som chelkeinu kohem vegoroleinu kekhol-hamonom sheheim mishtachavim lohevel vorik umispalelim el-eil lo yoshi'a va'anachnu mishtachavim lifnei melekh malkhei hamelokhim hakodosh borukh hu shehu noteh shomayim veyoseid oretz umoshav yekoro bashomayim mima'al ushekhinas uzo begovehei meromim hu eloheinu ve'ein od acheir emes malkeinu ve'efes zuloso kakosuv batoroh veyodato hayom vahasheivoso el-levovekho ki adonoy hu ho'elohim bashomayim mima'al ve'al-ho'oretz mitochas ein od"
  },
  {
   "path": "audio/m/israeli/prayer/aleinu-1.mp3",
@@ -17985,10 +17992,11 @@
   "kind": "line",
   "id": "adon-olam-1-l2",
   "text": "לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "le'eis na'asoh vecheftzo kol azai melekh shemo nikro"
  },
  {
   "path": "audio/m/israeli/line/adon-olam-1-l3.mp3",
@@ -18060,10 +18068,11 @@
   "kind": "line",
   "id": "adon-olam-1-l3",
   "text": "וְאַחֲרֵי כִּכְלוֹת הַכֹּל לְבַדּוֹ יִמְלֹךְ נוֹרָא׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ve'acharei kikhlos hakol levado yimlokh noro"
  },
  {
   "path": "audio/m/israeli/line/adon-olam-1-l4.mp3",
@@ -18211,10 +18220,11 @@
   "kind": "line",
   "id": "adon-olam-1-l5",
   "text": "וְהוּא אֶחָד וְאֵין שֵׁנִי לְהַמְשִׁיל לוֹ לְהַחְבִּירָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "vehu echod ve'ein sheini lehamshil lo lehachbiroh"
  },
  {
   "path": "audio/m/israeli/line/adon-olam-1-l6.mp3",
@@ -18286,10 +18296,11 @@
   "kind": "line",
   "id": "adon-olam-1-l6",
   "text": "בְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "beli reishis beli sakhlis velo ho'oz vehamisroh"
  },
  {
   "path": "audio/m/israeli/line/adon-olam-1-l7.mp3",
@@ -18361,10 +18372,11 @@
   "kind": "line",
   "id": "adon-olam-1-l7",
   "text": "וְהוּא אֵלִי וְחַי גוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "vehu eili vechai go'ali vetzur chevli be'eis tzoroh"
  },
  {
   "path": "audio/m/israeli/line/adon-olam-1-l8.mp3",
@@ -18436,10 +18448,11 @@
   "kind": "line",
   "id": "adon-olam-1-l8",
   "text": "וְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "vehu nisi umonos li menos kosi beyom ekro"
  },
  {
   "path": "audio/m/israeli/line/adon-olam-1-l9.mp3",
@@ -18511,10 +18524,11 @@
   "kind": "line",
   "id": "adon-olam-1-l9",
   "text": "בְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישָׁן וְאָעִירָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "beyodo afkid ruchi be'eis ishon ve'o'iroh"
  },
  {
   "path": "audio/m/israeli/line/adon-olam-1-l10.mp3",
@@ -18586,10 +18600,11 @@
   "kind": "line",
   "id": "adon-olam-1-l10",
   "text": "וְעִם רוּחִי גְּוִיָּתִי אֲדֹנָי לִי וְלֹא אִירָא׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ve'im ruchi geviyosi adonoy li velo iro"
  },
  {
   "path": "audio/m/israeli/prayer/adon-olam-1.mp3",
@@ -19322,10 +19337,11 @@
   "kind": "line",
   "id": "birkat-hamazon-1",
   "text": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַזָּן אֶת הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ בְּחֵן בְּחֶסֶד וּבְרַחֲמִים הוּא נוֹתֵן לֶחֶם לְכָל בָּשָׂר כִּי לְעוֹלָם חַסְדּוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "Blessed are you, LORD our God, king of the world, who feeds the whole world, all of it, in his goodness, with grace, kindness and mercy. He gives bread to all flesh, for his kindness is for ever."
+  "english": "Blessed are you, LORD our God, king of the world, who feeds the whole world, all of it, in his goodness, with grace, kindness and mercy. He gives bread to all flesh, for his kindness is for ever.",
+  "phonetic": "barukh atah adonai eloheinu melekh ha'olam hazan et ha'olam kulo betuvo bechen bechesed uverachamim hu noten lechem lekhol basar ki le'olam chasdo"
  },
  {
   "path": "audio/f/ashkenazi/line/birkat-hamazon-1.mp3",
@@ -19480,10 +19496,11 @@
   "kind": "line",
   "id": "ein-kamocha",
   "text": "אֵין־כָּמוֹךָ בָאֱלֹהִים אֲדֹנָי וְאֵין כְּמַעֲשֶׂיךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "There is none like unto Thee among the gods, O Lord, And there are no works like Thine."
+  "english": "There is none like unto Thee among the gods, O Lord, And there are no works like Thine.",
+  "phonetic": "ein-kamokha va'elohim adonai ve'ein kema'asekha"
  },
  {
   "path": "audio/f/ashkenazi/line/ein-kamocha.mp3",
@@ -19809,10 +19826,11 @@
   "kind": "line",
   "id": "adonai-oz",
   "text": "אֲדֹנָי עֹז לְעַמּוֹ יִתֵּן אֲדֹנָי יְבָרֵךְ אֶת־עַמּוֹ בַשָּׁלוֹם׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "The LORD will give strength unto His people; The LORD will bless his people with peace."
+  "english": "The LORD will give strength unto His people; The LORD will bless his people with peace.",
+  "phonetic": "adonoy oz le'amo yitein adonoy yevoreikh es-amo vasholom"
  },
  {
   "path": "audio/m/israeli/prayer/adonai-oz.mp3",
@@ -21749,10 +21767,11 @@
   "kind": "line",
   "id": "ashrei-144-15",
   "text": "אַשְׁרֵי הָעָם שֶׁכָּכָה לּוֹ אַשְׁרֵי הָעָם שֶׁאֲדֹנָי אֱלֹהָיו׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "Happy is the people that is in such a case. Yea, happy is the people whose God is the LORD."
+  "english": "Happy is the people that is in such a case. Yea, happy is the people whose God is the LORD.",
+  "phonetic": "ashrei ho'om shekokhoh lo ashrei ho'om she'adonoy elohov"
  },
  {
   "path": "audio/m/israeli/prayer/ashrei-144-15.mp3",
@@ -23515,10 +23534,11 @@
   "kind": "line",
   "id": "brich-shmei",
   "text": "בְּרִיךְ שְׁמֵהּ דְּמָרֵא עָלְמָא בְּרִיךְ כִּתְרָךְ וְאַתְרָךְ יְהֵא רְעוּתָךְ עִם עַמָּךְ יִשְׂרָאֵל לְעָלַם וּפֻרְקַן יְמִינָךְ אַחֲזֵי לְעַמָּךְ בְּבֵית מַקְדְּשָׁךְ וּלְאַמְטוּיֵי לָנָא מִטּוּב נְהוֹרָךְ וּלְקַבֵּל צְלוֹתָנָא בְּרַחֲמִין יְהֵא רַעֲוָא קֳדָמָךְ דְּתוֹרִיךְ לָן חַיִּין בְּטִיבוּ וְלֶהֱוֵי אֲנָא פְקִידָא בְּגוֹ צַדִּיקַיָּא לְמִרְחַם עָלַי וּלְמִנְטַר יָתִי וְיַת־כָּל־דִּי־לִי וְדִי־לְעַמָּךְ יִשְׂרָאֵל אַנְתְּ הוּא זָן לְכֹלָּא וּמְפַרְנֵס לְכֹלָּא אַנְתְּ הוּא שַׁלִּיט עַל־כֹּלָּא אַנְתְּ הוּא דְּשַׁלִּיט עַל־מַלְכַיָּא וּמַלְכוּתָא דִּילָךְ הִיא אֲנָא עַבְדָּא דְקֻדְשָׁא בְּרִיךְ הוּא דְּסָגִידְנָא קַמֵּהּ וּמִקַּמֵּי דִּיקַר אוֹרַיְתֵהּ בְּכָל־עִדָּן וְעִדָּן לָא עַל־אֱנָשׁ רָחִיצְנָא וְלָא עַל־בַּר־אֱלָהִין סָמִיכְנָא אֶלָּא בֵּאלָהָא דִשְׁמַיָּא דְּהוּא אֱלָהָא קְשׁוֹט וְאוֹרַיְתֵהּ קְשׁוֹט וּנְבִיאוֹהִי קְשׁוֹט וּמַסְגֵּא לְמֶעְבַּד טָבְוָן וּקְשׁוֹט בֵּהּ אֲנָא רָחִיץ וְלִשְׁמֵהּ קַדִּישָׁא יַקִּירָא אֲנָא אֵמַר תֻּשְׁבְּחָן יְהֵא רַעֲוָא קֳדָמָךְ דְּתִפְתַּח לִבָּאי בְּאוֹרַיְתָא וְתַשְׁלִים מִשְׁאֲלִין דְּלִבָּאי וְלִבָּא דְכָל־עַמָּךְ יִשְׂרָאֵל לְטָב וּלְחַיִּין וְלִשְׁלָם׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "Blessed is the name of the Master of the world; blessed is your crown and your place. May your good will be with your people Israel for ever; show your people the redemption of your right hand in your Temple, bring us of the goodness of your light, and accept our prayer in mercy. May it be your will to lengthen our life in goodness, and let me be counted among the righteous, so that you have mercy on me and guard me and all that is mine and your people Israel's. You feed and sustain all; you rule over all; you rule over kings, and the kingdom is yours. I am a servant of the Holy One, blessed be he, before whom and before whose glorious Torah I bow at every time. Not in any person do I trust, and not on any angel do I rely, but on the God of heaven, who is the God of truth, whose Torah is truth and whose prophets are truth, and who abounds in deeds of goodness and truth. In him I trust, and to his holy and glorious name I utter praises. May it be your will to open my heart to Torah, to fulfil the requests of my heart and the heart of all your people Israel, for good, for life and for peace."
+  "english": "Blessed is the name of the Master of the world; blessed is your crown and your place. May your good will be with your people Israel for ever; show your people the redemption of your right hand in your Temple, bring us of the goodness of your light, and accept our prayer in mercy. May it be your will to lengthen our life in goodness, and let me be counted among the righteous, so that you have mercy on me and guard me and all that is mine and your people Israel's. You feed and sustain all; you rule over all; you rule over kings, and the kingdom is yours. I am a servant of the Holy One, blessed be he, before whom and before whose glorious Torah I bow at every time. Not in any person do I trust, and not on any angel do I rely, but on the God of heaven, who is the God of truth, whose Torah is truth and whose prophets are truth, and who abounds in deeds of goodness and truth. In him I trust, and to his holy and glorious name I utter praises. May it be your will to open my heart to Torah, to fulfil the requests of my heart and the heart of all your people Israel, for good, for life and for peace.",
+  "phonetic": "berikh shemeh demare alema berikh kitrakh ve'atrakh yehe re'utakh im amakh yisra'el le'alam ufurkan yeminakh achazei le'amakh beveit makdeshakh ule'amtuyei lana mituv nehorakh ulekabel tzelotana berachamin yehe ra'ava kodamakh detorikh lan chayin betivu velehevei ana fekida bego tzadikaya lemircham alai ulemintar yati veyat-kol-di-li vedi-le'amakh yisra'el ant hu zan lekhola umefarnes lekhola ant hu shalit al-kola ant hu deshalit al-malkhaya umalkhuta dilakh hi ana avda dekudsha berikh hu desagidena kameh umikamei dikar orayteh bekhol-idan ve'idan la al-enash rachitzena vela al-bar-elahin samikhena ela belaha dishmaya dehu elaha keshot ve'orayteh keshot unevi'ohi keshot umasge lemebad tavevan ukeshot beh ana rachitz velishmeh kadisha yakira ana emar tushbechan yehe ra'ava kodamakh detiftach libay be'orayta vetashlim mish'alin delibay veliba dekhal-amakh yisra'el letav ulechayin velishlam"
  },
  {
   "path": "audio/f/ashkenazi/line/brich-shmei.mp3",
@@ -24073,10 +24093,11 @@
   "kind": "line",
   "id": "amidah-yihyu",
   "text": "יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ אֲדֹנָי צוּרִי וְגוֹאֲלִי׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "May the words of my mouth and the thoughts of my heart be acceptable before you, LORD, my rock and my redeemer."
+  "english": "May the words of my mouth and the thoughts of my heart be acceptable before you, LORD, my rock and my redeemer.",
+  "phonetic": "yihyu lerotzon imrei fi vehegyon libi lefonekho adonoy tzuri vego'ali"
  },
  {
   "path": "audio/m/israeli/prayer/amidah-yihyu.mp3",
@@ -24232,10 +24253,11 @@
   "kind": "line",
   "id": "amidah-elohai-netzor",
   "text": "אֱלֹהַי נְצוֹר לְשׁוֹנִי מֵרָע וּשְׂפָתַי מִדַּבֵּר מִרְמָה וְלִמְקַלְלַי נַפְשִׁי תִדּוֹם וְנַפְשִׁי כֶּעָפָר לַכֹּל תִּהְיֶה פְּתַח לִבִּי בְּתוֹרָתֶךָ וּבְמִצְוֹתֶיךָ תִּרְדֹּף נַפְשִׁי וְכֹל הַחוֹשְׁבִים עָלַי רָעָה מְהֵרָה הָפֵר עֲצָתָם וְקַלְקֵל מַחֲשַׁבְתָּם׃ עֲשֵׂה לְמַעַן שְׁמֶךָ עֲשֵׂה לְמַעַן יְמִינֶךָ עֲשֵׂה לְמַעַן קְדֻשָּׁתֶךָ עֲשֵׂה לְמַעַן תּוֹרָתֶךָ לְמַעַן יֵחָלְצוּן יְדִידֶיךָ הוֹשִׁיעָה יְמִינְךָ וַעֲנֵנִי׃ יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ אֲדֹנָי צוּרִי וְגוֹאֲלִי׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "My God, guard my tongue from evil and my lips from speaking deceit. To those who curse me, let my soul be silent; let my soul be like dust to all. Open my heart to your Torah, and let my soul pursue your commandments. As for all who plan evil against me, quickly annul their counsel and frustrate their plans. Act for the sake of your name; act for the sake of your right hand; act for the sake of your holiness; act for the sake of your Torah. That your beloved may be rescued, save with your right hand and answer me. May the words of my mouth and the thoughts of my heart be acceptable before you, LORD, my rock and my redeemer."
+  "english": "My God, guard my tongue from evil and my lips from speaking deceit. To those who curse me, let my soul be silent; let my soul be like dust to all. Open my heart to your Torah, and let my soul pursue your commandments. As for all who plan evil against me, quickly annul their counsel and frustrate their plans. Act for the sake of your name; act for the sake of your right hand; act for the sake of your holiness; act for the sake of your Torah. That your beloved may be rescued, save with your right hand and answer me. May the words of my mouth and the thoughts of my heart be acceptable before you, LORD, my rock and my redeemer.",
+  "phonetic": "elohai netzor leshoni meiro usefosai midabeir mirmoh velimkalelai nafshi sidom venafshi ke'ofor lakol tihyeh pesach libi besorosekho uvemitzvosekho tirdof nafshi vekhol hachoshevim olai ro'oh meheiroh hofeir atzosom vekalkeil machashavtom aseih lema'an shemekho aseih lema'an yeminekho aseih lema'an kedushosekho aseih lema'an torosekho lema'an yeicholtzun yedidekho hoshi'oh yeminekho va'aneini yihyu lerotzon imrei fi vehegyon libi lefonekho adonoy tzuri vego'ali"
  },
  {
   "path": "audio/m/israeli/prayer/amidah-elohai-netzor.mp3",

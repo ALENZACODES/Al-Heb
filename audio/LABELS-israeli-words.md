@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 3409 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 3438 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-3409 English labels; 4 UNKNOWN.
+3438 English labels; 4 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -3425,6 +3425,35 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [vahavta-2-w7](m/israeli/word/vahavta-2-w7.mp3) | הַיּוֹם | and with all your might | hayom |
 | [vahavta-2-w8](m/israeli/word/vahavta-2-w8.mp3) | עַל־לְבָבֶךָ׃ | upon your heart | al-levavekha |
 | [vahavta-2-w9](m/israeli/word/vahavta-2-w9.mp3) | וְשִׁנַּנְתָּם | and you shall teach them | veshinantam |
+| [vahavta-full-w1](m/israeli/word/vahavta-full-w1.mp3) | וְאָהַבְתָּ | and you shall love | ve'ahavta |
+| [vahavta-full-w10](m/israeli/word/vahavta-full-w10.mp3) | הָאֵלֶּה | these | ha'eleh |
+| [vahavta-full-w11](m/israeli/word/vahavta-full-w11.mp3) | אֲשֶׁר | introduces a subordinate clause | asher |
+| [vahavta-full-w12](m/israeli/word/vahavta-full-w12.mp3) | אָנֹכִי | I (first-person singular nominative pronoun) | anokhi |
+| [vahavta-full-w13](m/israeli/word/vahavta-full-w13.mp3) | מְצַוְּךָ | I command you | metzavekha |
+| [vahavta-full-w14](m/israeli/word/vahavta-full-w14.mp3) | הַיּוֹם | today | hayom |
+| [vahavta-full-w15](m/israeli/word/vahavta-full-w15.mp3) | עַל־לְבָבֶךָ׃ | upon your heart | al-levavekha |
+| [vahavta-full-w16](m/israeli/word/vahavta-full-w16.mp3) | וְשִׁנַּנְתָּם | and you shall teach them | veshinantam |
+| [vahavta-full-w17](m/israeli/word/vahavta-full-w17.mp3) | לְבָנֶיךָ | to your children | levanekha |
+| [vahavta-full-w18](m/israeli/word/vahavta-full-w18.mp3) | וְדִבַּרְתָּ | and you shall talk | vedibarta |
+| [vahavta-full-w19](m/israeli/word/vahavta-full-w19.mp3) | בָּם | of them | bam |
+| [vahavta-full-w2](m/israeli/word/vahavta-full-w2.mp3) | אֵת | used to introduce a semantically definite direct object; to, with | et |
+| [vahavta-full-w20](m/israeli/word/vahavta-full-w20.mp3) | בְּשִׁבְתְּךָ | when you sit | beshivtekha |
+| [vahavta-full-w21](m/israeli/word/vahavta-full-w21.mp3) | בְּבֵיתֶךָ | in your house | beveitekha |
+| [vahavta-full-w22](m/israeli/word/vahavta-full-w22.mp3) | וּבְלֶכְתְּךָ | and when you walk | uvelekhtekha |
+| [vahavta-full-w23](m/israeli/word/vahavta-full-w23.mp3) | בַדֶּרֶךְ | on the way | vaderekh |
+| [vahavta-full-w24](m/israeli/word/vahavta-full-w24.mp3) | וּבְשָׁכְבְּךָ | and when you lie down | uveshakhbekha |
+| [vahavta-full-w25](m/israeli/word/vahavta-full-w25.mp3) | וּבְקוּמֶךָ׃ | and when you rise | uvekumekha |
+| [vahavta-full-w26](m/israeli/word/vahavta-full-w26.mp3) | וּקְשַׁרְתָּם | and you shall bind them | ukeshartam |
+| [vahavta-full-w27](m/israeli/word/vahavta-full-w27.mp3) | לְאוֹת | for a sign | le'ot |
+| [vahavta-full-w28](m/israeli/word/vahavta-full-w28.mp3) | עַל־יָדֶךָ | upon your hand | al-yadekha |
+| [vahavta-full-w29](m/israeli/word/vahavta-full-w29.mp3) | וְהָיוּ | and they shall be | vehayu |
+| [vahavta-full-w3](m/israeli/word/vahavta-full-w3.mp3) | אֲדֹנָי | the LORD | adonai |
+| [vahavta-full-w30](m/israeli/word/vahavta-full-w30.mp3) | לְטֹטָפֹת | for frontlets | letotafot |
+| [vahavta-full-w31](m/israeli/word/vahavta-full-w31.mp3) | בֵּין | between, among, amid | bein |
+| [vahavta-full-w32](m/israeli/word/vahavta-full-w32.mp3) | עֵינֶיךָ׃ | your eyes | einekha |
+| [vahavta-full-w33](m/israeli/word/vahavta-full-w33.mp3) | וּכְתַבְתָּם | and you shall write them | ukhetavtam |
+| [vahavta-full-w34](m/israeli/word/vahavta-full-w34.mp3) | עַל־מְזוּזֹת | upon the doorposts | al-mezuzot |
+| [vahavta-full-w35](m/israeli/word/vahavta-full-w35.mp3) | בֵּיתֶךָ | your house | beitekha |
 
 ## Israeli reading lines
 
@@ -4015,4 +4044,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 4409 produced clips in INDEX.csv have an English label; 19 UNKNOWN. Filenames and IDs are unchanged.
+All 4460 produced clips in INDEX.csv have an English label; 27 UNKNOWN. Filenames and IDs are unchanged.

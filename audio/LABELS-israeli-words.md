@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 5407 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 5412 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-5407 English labels; 1789 UNKNOWN.
+5412 English labels; 1794 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -4972,6 +4972,11 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [r26-w1](m/israeli/word/r26-w1.mp3) | יִשָּׂא | UNKNOWN | yisa |
 | [r26-w2](m/israeli/word/r26-w2.mp3) | וְיָשֵׂם | UNKNOWN | veyasem |
 | [r26-w3](m/israeli/word/r26-w3.mp3) | שָׁלוֹם | UNKNOWN | shalom |
+| [r27-w1](m/israeli/word/r27-w1.mp3) | בִּרְכַּת כֹּהֲנִים | UNKNOWN | birkat kohanim |
+| [r28-w1](m/israeli/word/r28-w1.mp3) | בָּרוּךְ | UNKNOWN | barukh |
+| [r28-w2](m/israeli/word/r28-w2.mp3) | אַתָּה | UNKNOWN | atah |
+| [r28-w3](m/israeli/word/r28-w3.mp3) | אֱלֹהֵינוּ | UNKNOWN | eloheinu |
+| [r28-w4](m/israeli/word/r28-w4.mp3) | מֶלֶךְ | UNKNOWN | melekh |
 | [shehecheyanu-w1](m/israeli/word/shehecheyanu-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [shehecheyanu-w10](m/israeli/word/shehecheyanu-w10.mp3) | לַזְּמַן | to the time | lazeman |
 | [shehecheyanu-w11](m/israeli/word/shehecheyanu-w11.mp3) | הַזֶּה׃ | this | hazeh |
@@ -6013,4 +6018,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 10107 produced clips in INDEX.csv have an English label; 1789 UNKNOWN. Filenames and IDs are unchanged.
+All 10122 produced clips in INDEX.csv have an English label; 1794 UNKNOWN. Filenames and IDs are unchanged.

@@ -37252,11 +37252,12 @@
   "kind": "word",
   "id": "r27-w1",
   "text": "בִּרְכַּת כֹּהֲנִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "pbc01a362",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "birkat kohanim"
  },
  {
   "path": "audio/f/israeli/word/r27-w1.mp3",
@@ -37279,11 +37280,12 @@
   "kind": "word",
   "id": "r28-w1",
   "text": "בָּרוּךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h70669df5",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "barukh"
  },
  {
   "path": "audio/f/israeli/word/r28-w1.mp3",
@@ -37306,11 +37308,12 @@
   "kind": "word",
   "id": "r28-w2",
   "text": "אַתָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h36d595e4",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "atah"
  },
  {
   "path": "audio/f/israeli/word/r28-w2.mp3",
@@ -37333,11 +37336,12 @@
   "kind": "word",
   "id": "r28-w3",
   "text": "אֱלֹהֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p29823ceb",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "eloheinu"
  },
  {
   "path": "audio/f/israeli/word/r28-w3.mp3",
@@ -37360,11 +37364,12 @@
   "kind": "word",
   "id": "r28-w4",
   "text": "מֶלֶךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h58d8d8fe",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "melekh"
  },
  {
   "path": "audio/f/israeli/word/r28-w4.mp3",

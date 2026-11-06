@@ -1,6 +1,7 @@
 // Game 15 — structured rental listings from existing Hebrew property word records.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, resultsCard } from './engine.js';
+import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY='games.rentalagent.v1';
 export function buildRentalFields(lesson) {
@@ -19,6 +20,7 @@ export function buildRentalFields(lesson) {
 export function listingMatches(listing,requirement){return !!listing?.features?.some(f=>f.id===requirement?.id);}
 const ART=Object.freeze({balcony:'CTX_house_02',floor:'CTX_house_03'});
 export function mount(root,ctx) {
+  const leaveSfx = sfx.enter(ctx);
   let alive=true,features=[],R=null,round=0,session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:5});
   const status=h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading rental vocabulary…');
   const board=h('div',{class:'game-board'});
@@ -36,7 +38,7 @@ export function mount(root,ctx) {
     const choices=listings.map(listing=>{
       const feature=listing.features[0],picture=imgOf(R,'id',ART[feature.id]);
       const button=h('button',{type:'button',class:'btn secondary game-rental-listing',onclick:()=>{
-        const ok=listingMatches(listing,target);session.answer(ok);
+        const ok=listingMatches(listing,target);session.answer(ok); sfx.play(ok ? 'success' : 'miss');
         status.textContent=ok?'Listing satisfies the requested feature.':'Listing lacks that Hebrew feature.';
         if(ok)round++;paint();
       }},heSpan(feature.he,'he game-he-sm'));
@@ -51,5 +53,5 @@ export function mount(root,ctx) {
     if(!alive||!article.isConnected)return;features=buildRentalFields(data);R=images;
     if(features.length<4){status.textContent='Insufficient source features.';return;}paint();
   }).catch(()=>{if(alive)status.textContent='Rental vocabulary unavailable.';});
-  return ()=>{alive=false;};
+  return ()=>{alive=false; leaveSfx();};
 }

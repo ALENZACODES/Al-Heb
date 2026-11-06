@@ -23,7 +23,7 @@ const TILES = [
 ];
 
 export function showcaseNode(ctx) {
-  const has = (name) => { try { return ctx?.hasRoute ? !!ctx.hasRoute(name) : true; } catch { return true; } };
+  const has = (name) => { if (name === 'books') return true; try { return ctx?.hasRoute ? !!ctx.hasRoute(name) : true; } catch { return true; } };
   const tiles = TILES.filter(([name]) => has(name)).map(([, href, title, he, hook]) =>
     h('li', {}, h('a', { class: 'show-tile', href },
       h('span', { class: 'show-tile-title' }, title, ' ', heSpan(he)),

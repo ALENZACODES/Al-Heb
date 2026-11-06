@@ -41,11 +41,12 @@ export function mount(root,ctx) {
     const seconds=Math.max(0,Math.floor((deadline.getTime()-Date.now())/1000));
     const hours=Math.floor(seconds/3600),minutes=Math.floor((seconds%3600)/60);
     timer.textContent='Time until local Friday sunset: '+hours+'h '+minutes+'m';
-    if(seconds===0){stopClock();status.textContent='Sunset reached. Run ended.';}
+    if(seconds===0){stopClock();status.textContent='Sunset reached. Run ended.';board.replaceChildren(h('p',{},'The timed collection has ended.'));}
   }
   function paint(){
     if(!alive||!article.isConnected)return;
-    if(round>=8){stopClock();board.replaceChildren(resultsCard(h,heSpan,session,{title:'Shabbat collection finished',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});paint();}}));return;}
+    if(deadline && deadline.getTime()<=Date.now()){paintTimer();return;}
+    if(round>=8){stopClock();board.replaceChildren(resultsCard(h,heSpan,session,{title:'Shabbat collection finished',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});paintTimer();if(deadline && deadline.getTime()>Date.now()){stopClock();clock=setInterval(paintTimer,1000);paint();}else status.textContent='Sunset has passed; no timed replay.';}}));return;}
     cue=CATEGORIES[round%CATEGORIES.length];
     const correct=shuffled(deck.filter(w=>w.topic===cue.id))[0];
     const wrong=shuffled(deck.filter(w=>w.topic!==cue.id)).slice(0,2);

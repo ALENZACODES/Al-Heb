@@ -91,3 +91,5 @@
  .game-conveyor-box {animation:none}
  .game-bridge-span {transition:none}
 }
+
+.game-arch-option-svg{width:100px;max-width:24vw;height:88px;display:block;color:#1f3a5f}

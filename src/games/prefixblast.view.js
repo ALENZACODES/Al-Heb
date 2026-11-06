@@ -3,6 +3,7 @@ import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, speak, resultsCard } from './engine.js';
 import { loadGrammarData } from '../grammar/loader.js';
 import { buildTopics } from '../grammar/model.js';
+import { sfx } from '../audio/sfx.js';
 
 export const STORE_KEY = 'games.prefixblast.v1';
 export const PREFIXES = Object.freeze([
@@ -20,6 +21,7 @@ export function completePrefix(record, prefix) {
   return record && PREFIXES.some(p => p.id === prefix) && record.prefix === prefix ? record.he : null;
 }
 export function mount(root, ctx) {
+  const leaveSfx = sfx.enter(ctx);
   let alive = true, deck = [], R = null, index = 0, session;
   const status = h('p', { role: 'status', 'aria-live': 'polite' }, 'Loading attested phrases…');
   const board = h('div', { class: 'game-board' });
@@ -46,8 +48,11 @@ export function mount(root, ctx) {
     const bubbles = h('div', { class: 'prefix-bubbles' }, ...shuffled(PREFIXES).map(p =>
       h('button', { type: 'button', class: 'prefix-bubble', onclick: () => {
         if (!alive || deck[index] !== r) return;
+        sfx.play('bubble_pop');
         const phrase = completePrefix(r, p.id);
         session.answer(!!phrase);
+        sfx.play(phrase ? 'success' : 'error');
+        if (phrase && session.streak >= 3 && session.streak % 3 === 0) sfx.play('streak');
         if (!phrase) { status.textContent = 'Try another prefix. Phrase still unfinished.'; return; }
         index++;
         void speak(ctx, phrase);
@@ -64,5 +69,5 @@ export function mount(root, ctx) {
     if (!deck.length) { status.textContent = 'No usable attested prefix records available.'; return; }
     start();
   }).catch(() => { if (alive) status.textContent = 'Phrase data unavailable. Try again when online.'; });
-  return () => { alive = false; };
+  return () => { alive = false; leaveSfx(); };
 }

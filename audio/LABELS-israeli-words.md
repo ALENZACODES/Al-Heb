@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 4878 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 4907 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-4878 English labels; 1260 UNKNOWN.
+4907 English labels; 1289 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -4021,6 +4021,35 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [i-24-w2](m/israeli/word/i-24-w2.mp3) | חַם | UNKNOWN | cham |
 | [i-24-w3](m/israeli/word/i-24-w3.mp3) | קַר | UNKNOWN | kar |
 | [i-24-w4](m/israeli/word/i-24-w4.mp3) | גֶּשֶׁם | UNKNOWN | geshem |
+| [i-24-w5](m/israeli/word/i-24-w5.mp3) | שֶׁמֶשׁ | UNKNOWN | shemesh |
+| [i-24-w6](m/israeli/word/i-24-w6.mp3) | רוּחַ | UNKNOWN | ruach |
+| [i-24-w7](m/israeli/word/i-24-w7.mp3) | עָנָן | UNKNOWN | anan |
+| [i-24-w8](m/israeli/word/i-24-w8.mp3) | שֶׁלֶג | UNKNOWN | sheleg |
+| [i-24-w9](m/israeli/word/i-24-w9.mp3) | לַח | UNKNOWN | lach |
+| [i-25-w1](m/israeli/word/i-25-w1.mp3) | מַה שִּׁמְךָ? | UNKNOWN | mah shimkha? |
+| [i-25-w10](m/israeli/word/i-25-w10.mp3) | עִבְרִית | UNKNOWN | ivrit |
+| [i-25-w11](m/israeli/word/i-25-w11.mp3) | מָה אַתָּה עוֹשֶׂה? | UNKNOWN | mah atah oseh? |
+| [i-25-w12](m/israeli/word/i-25-w12.mp3) | מָה נִשְׁמָע? | UNKNOWN | mah nishma? |
+| [i-25-w13](m/israeli/word/i-25-w13.mp3) | הַכֹּל בְּסֵדֶר | UNKNOWN | hakol beseder |
+| [i-25-w14](m/israeli/word/i-25-w14.mp3) | נָעִים מְאֹד | UNKNOWN | na'im me'od |
+| [i-25-w15](m/israeli/word/i-25-w15.mp3) | לְהִתְרָאוֹת | UNKNOWN | lehitra'ot |
+| [i-25-w2](m/israeli/word/i-25-w2.mp3) | קוֹרְאִים לִי | UNKNOWN | kore'im li |
+| [i-25-w3](m/israeli/word/i-25-w3.mp3) | מֵאֵיפֹה אַתָּה? | UNKNOWN | me'eifoh atah? |
+| [i-25-w4](m/israeli/word/i-25-w4.mp3) | אֲנִי מִקָּנָדָה | UNKNOWN | ani mikanadah |
+| [i-25-w5](m/israeli/word/i-25-w5.mp3) | כַּמָּה זְמַן | UNKNOWN | kamah zeman |
+| [i-25-w6](m/israeli/word/i-25-w6.mp3) | בָּאָרֶץ | UNKNOWN | ba'aretz |
+| [i-25-w7](m/israeli/word/i-25-w7.mp3) | שָׁבוּעַ | UNKNOWN | shavu'a |
+| [i-25-w8](m/israeli/word/i-25-w8.mp3) | חֹדֶשׁ | UNKNOWN | chodesh |
+| [i-25-w9](m/israeli/word/i-25-w9.mp3) | לוֹמֵד | UNKNOWN | lomed |
+| [i-26-w1](m/israeli/word/i-26-w1.mp3) | אֵין כָּמוֹךָ | UNKNOWN | ein kamokha |
+| [i-26-w10](m/israeli/word/i-26-w10.mp3) | לְעַמּוֹ | UNKNOWN | le'amo |
+| [i-26-w11](m/israeli/word/i-26-w11.mp3) | עֵץ חַיִּים | UNKNOWN | etz chayim |
+| [i-26-w12](m/israeli/word/i-26-w12.mp3) | הֲשִׁיבֵנוּ | UNKNOWN | hashivenu |
+| [i-26-w2](m/israeli/word/i-26-w2.mp3) | וַיְהִי בִּנְסֹעַ הָאָרֹן | UNKNOWN | vayhi binso'a ha'aron |
+| [i-26-w3](m/israeli/word/i-26-w3.mp3) | מִצִּיּוֹן תֵּצֵא תוֹרָה | UNKNOWN | mitziyon tetze torah |
+| [i-26-w4](m/israeli/word/i-26-w4.mp3) | בְּרִיךְ שְׁמֵהּ | UNKNOWN | berikh shemeh |
+| [i-26-w5](m/israeli/word/i-26-w5.mp3) | גַּדְּלוּ | UNKNOWN | gadelu |
+| [i-26-w6](m/israeli/word/i-26-w6.mp3) | לְךָ אֲדֹנָי הַגְּדֻלָּה | UNKNOWN | lekha adonai hagedulah |
 | [kaddish-1-w1](m/israeli/word/kaddish-1-w1.mp3) | יִתְגַּדַּל | may it be magnified | yitgadal |
 | [kaddish-1-w10](m/israeli/word/kaddish-1-w10.mp3) | מַלְכוּתֵהּ | his kingdom | malkhuteh |
 | [kaddish-1-w11](m/israeli/word/kaddish-1-w11.mp3) | בְּחַיֵּיכוֹן | in your lifetime | bechayeikhon |
@@ -5484,4 +5513,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 8537 produced clips in INDEX.csv have an English label; 1260 UNKNOWN. Filenames and IDs are unchanged.
+All 8624 produced clips in INDEX.csv have an English label; 1289 UNKNOWN. Filenames and IDs are unchanged.

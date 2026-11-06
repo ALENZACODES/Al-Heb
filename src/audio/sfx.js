@@ -1,11 +1,18 @@
 // Short, opt-in game feedback only. Never touches the Hebrew/prayer voice player.
-// Public files must be supplied separately from the licensed CC0 staging pack.
+// Kenney CC0 asset names reconciled against the 30-entry staged MAP.json.
+// Runtime files are deployed separately; missing files fail silently.
 export const SFX_FILES = Object.freeze({
   click: 'click.mp3', tick: 'tick.mp3', pop: 'pop.mp3',
   success: 'success.mp3', error: 'error.mp3', miss: 'miss.mp3',
   whoosh: 'whoosh.mp3', swoosh: 'swoosh.mp3', streak: 'streak.mp3',
   bubble_pop: 'bubble_pop.mp3', flipper: 'flipper.mp3',
   catch: 'catch.mp3', collect: 'collect.mp3', pluck: 'pluck.mp3',
+  back: 'back.mp3', click_soft: 'click_soft.mp3', click_hard: 'click_hard.mp3',
+  close: 'close.mp3', confirm: 'confirm.mp3', drop: 'drop.mp3',
+  error_soft: 'error_soft.mp3', glitch: 'glitch.mp3', maximize: 'maximize.mp3',
+  minimize: 'minimize.mp3', open: 'open.mp3', question: 'question.mp3',
+  scroll: 'scroll.mp3', select: 'select.mp3', select_alt: 'select_alt.mp3',
+  toggle: 'toggle.mp3',
 });
 export const HOT_SFX = Object.freeze([
   'click', 'tick', 'pop', 'success', 'error',

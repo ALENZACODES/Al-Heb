@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { buildArchDeck, acceptStroke } from '../src/games/archbuilder.view.js';
-import { hebrewLetters, correctBeamPath } from '../src/games/lasermaze.view.js';
+import { hebrewLetters, correctBeamPath, correctBeamStep, buildMazeDeck } from '../src/games/lasermaze.view.js';
 import { buildRootDeck, isRootLeaf } from '../src/games/roottree.view.js';
 import { pluralSuffix, buildBridgeDeck, bridgeHolds } from '../src/games/letterbridge.view.js';
 import { buildShadowDeck, shadowMatches } from '../src/games/shadowcraft.view.js';
@@ -25,6 +25,10 @@ test('laser path follows source RTL letter order; mirror reversal fails', () => 
   assert.deepEqual(hebrewLetters('שָׁלוֹם'),['ש','ל','ו','ם']);
   assert.equal(correctBeamPath('שָׁלוֹם',['ש','ל','ו','ם']),true);
   assert.equal(correctBeamPath('שָׁלוֹם',['ם','ו','ל','ש']),false);
+  assert.equal(correctBeamStep('שָׁלוֹם',0,0),true);
+  assert.equal(correctBeamStep('שָׁלוֹם',3,0),false);
+  const deck=buildMazeDeck({fields:['id','he','en'],rows:[['a','שָׁלוֹם','peace'],['b','אֲבָב','invented repeated letters']]});
+  assert.equal(deck.length,1);
 });
 test('root tree accepts only literal source membership', () => {
   const f = {root:'כ־ת־ב',words:[

@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 2973 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 3087 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-2973 English labels; 2 UNKNOWN.
+3087 English labels; 2 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -2305,6 +2305,16 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [brich-shmei-w97](m/israeli/word/brich-shmei-w97.mp3) | רָחִיץ | trust | rachitz |
 | [brich-shmei-w98](m/israeli/word/brich-shmei-w98.mp3) | וְלִשְׁמֵהּ | and to his name | velishmeh |
 | [brich-shmei-w99](m/israeli/word/brich-shmei-w99.mp3) | קַדִּישָׁא | holy | kadisha |
+| [cafe-05](m/israeli/word/cafe-05.mp3) | אֶסְפְּרֶסוֹ | espresso | espereso |
+| [cafe-09](m/israeli/word/cafe-09.mp3) | מַיִם | water | mayim |
+| [cafe-11](m/israeli/word/cafe-11.mp3) | בִּירָה | beer | birah |
+| [cafe-12](m/israeli/word/cafe-12.mp3) | יַיִן | wine | yayin |
+| [cafe-13](m/israeli/word/cafe-13.mp3) | לְחַיִּים! | cheers! | lechayim! |
+| [cafe-16](m/israeli/word/cafe-16.mp3) | חוּמוּס | hummus | chumus |
+| [cafe-17](m/israeli/word/cafe-17.mp3) | פָלָאפֶל | falafel | falafel |
+| [cafe-18](m/israeli/word/cafe-18.mp3) | שַׁקְשׁוּקָה | shakshuka (eggs poached in tomato sauce) | shakshukah |
+| [cafe-19](m/israeli/word/cafe-19.mp3) | פִּיתָה | pita bread | pitah |
+| [cafe-20](m/israeli/word/cafe-20.mp3) | סָלָט | salad | salat |
 | [candle-shabbat-w1](m/israeli/word/candle-shabbat-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [candle-shabbat-w10](m/israeli/word/candle-shabbat-w10.mp3) | וְצִוָּנוּ | and commanded us | vetzivanu |
 | [candle-shabbat-w11](m/israeli/word/candle-shabbat-w11.mp3) | לְהַדְלִיק | to light | lehadlik |
@@ -2319,6 +2329,11 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [candle-shabbat-w7](m/israeli/word/candle-shabbat-w7.mp3) | אֲשֶׁר | introduces a subordinate clause | asher |
 | [candle-shabbat-w8](m/israeli/word/candle-shabbat-w8.mp3) | קִדְּשָׁנוּ | made us holy | kideshanu |
 | [candle-shabbat-w9](m/israeli/word/candle-shabbat-w9.mp3) | בְּמִצְוֹתָיו | with his commandments | bemitzvotav |
+| [directions-05](m/israeli/word/directions-05.mp3) | יָשָׁר | straight ahead | yashar |
+| [directions-06](m/israeli/word/directions-06.mp3) | שְׂמֹאלָה | left | semolah |
+| [directions-07](m/israeli/word/directions-07.mp3) | יָמִינָה | right | yaminah |
+| [directions-12](m/israeli/word/directions-12.mp3) | מוּל | opposite | mul |
+| [directions-13](m/israeli/word/directions-13.mp3) | בַּפִּנָּה | on the corner | bapinah |
 | [ein-kamocha-w1](m/israeli/word/ein-kamocha-w1.mp3) | אֵין־כָּמוֹךָ | none like you | ein-kamokha |
 | [ein-kamocha-w2](m/israeli/word/ein-kamocha-w2.mp3) | בָאֱלֹהִים | among the gods | va'elohim |
 | [ein-kamocha-w3](m/israeli/word/ein-kamocha-w3.mp3) | אֲדֹנָי | the LORD | adonai |
@@ -2350,12 +2365,29 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [etz-chaim-w7](m/israeli/word/etz-chaim-w7.mp3) | מְאֻשָּׁר׃ | Happy, content | me'ushar |
 | [etz-chaim-w8](m/israeli/word/etz-chaim-w8.mp3) | דְּרָכֶיהָ | its ways | derakheha |
 | [etz-chaim-w9](m/israeli/word/etz-chaim-w9.mp3) | דַרְכֵי | ways of | darkhei |
+| [fillers-02](m/israeli/word/fillers-02.mp3) | נוּ | well? / come on | nu |
+| [fillers-03](m/israeli/word/fillers-03.mp3) | טוֹב | OK / well / good | tov |
+| [fillers-04](m/israeli/word/fillers-04.mp3) | נָכוֹן | right / correct | nakhon |
+| [fillers-06](m/israeli/word/fillers-06.mp3) | בֶּאֱמֶת? | really? | be'emet? |
+| [fillers-07](m/israeli/word/fillers-07.mp3) | מַמָּשׁ | really / truly / very | mamash |
+| [fillers-08](m/israeli/word/fillers-08.mp3) | פָּשׁוּט | simply / just | pashut |
+| [fillers-09](m/israeli/word/fillers-09.mp3) | סְתָם | just (because) / for no reason | setam |
+| [fillers-10](m/israeli/word/fillers-10.mp3) | בְּעֶצֶם | actually / in fact | be'etzem |
+| [fillers-11](m/israeli/word/fillers-11.mp3) | כְּלוֹמַר | that is / I mean | kelomar |
+| [fillers-12](m/israeli/word/fillers-12.mp3) | אֲבָל | but | aval |
 | [gadlu-w1](m/israeli/word/gadlu-w1.mp3) | גַּדְּלוּ | magnify | gadelu |
 | [gadlu-w2](m/israeli/word/gadlu-w2.mp3) | לַאֲדֹנָי | the LORD | la'adonai |
 | [gadlu-w3](m/israeli/word/gadlu-w3.mp3) | אִתִּי | with me | iti |
 | [gadlu-w4](m/israeli/word/gadlu-w4.mp3) | וּנְרוֹמְמָה | and let us exalt | uneromemah |
 | [gadlu-w5](m/israeli/word/gadlu-w5.mp3) | שְׁמוֹ | his name | shemo |
 | [gadlu-w6](m/israeli/word/gadlu-w6.mp3) | יַחְדָּו׃ | together | yachdav |
+| [greetings-01](m/israeli/word/greetings-01.mp3) | שָׁלוֹם | hello / goodbye / peace | shalom |
+| [greetings-02](m/israeli/word/greetings-02.mp3) | הֵי | hi | hei |
+| [greetings-15](m/israeli/word/greetings-15.mp3) | בְּסֵדֶר | OK / fine / alright | beseder |
+| [greetings-16](m/israeli/word/greetings-16.mp3) | מְצֻיָּן | excellent | metzuyan |
+| [greetings-20](m/israeli/word/greetings-20.mp3) | לְהִתְרָאוֹת | see you (later) | lehitra'ot |
+| [greetings-25](m/israeli/word/greetings-25.mp3) | בְּהַצְלָחָה | good luck / all the best | behatzlachah |
+| [greetings-26](m/israeli/word/greetings-26.mp3) | לִבְרִיאוּת | bless you (after a sneeze) / to your health | livri'ut |
 | [haftarah-after-w1](m/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](m/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](m/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -2732,6 +2764,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [havdalah-spices-w7](m/israeli/word/havdalah-spices-w7.mp3) | בּוֹרֵא | creator | bore |
 | [havdalah-spices-w8](m/israeli/word/havdalah-spices-w8.mp3) | מִינֵי | kinds of | minei |
 | [havdalah-spices-w9](m/israeli/word/havdalah-spices-w9.mp3) | בְשָׂמִים׃ | spices | vesamim |
+| [help-01](m/israeli/word/help-01.mp3) | עֶזְרָה! | help! | ezrah! |
 | [kaddish-1-w1](m/israeli/word/kaddish-1-w1.mp3) | יִתְגַּדַּל | may it be magnified | yitgadal |
 | [kaddish-1-w10](m/israeli/word/kaddish-1-w10.mp3) | מַלְכוּתֵהּ | his kingdom | malkhuteh |
 | [kaddish-1-w11](m/israeli/word/kaddish-1-w11.mp3) | בְּחַיֵּיכוֹן | in your lifetime | bechayeikhon |
@@ -2959,6 +2992,87 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [kiddush-zachor-w30](m/israeli/word/kiddush-zachor-w30.mp3) | וְאֶת־הָאָרֶץ | and the earth | ve'et-ha'aretz |
 | [kiddush-zachor-w31](m/israeli/word/kiddush-zachor-w31.mp3) | אֶת־הַיָּם | the sea | et-hayam |
 | [kiddush-zachor-w32](m/israeli/word/kiddush-zachor-w32.mp3) | וְאֶת־כָּל־אֲשֶׁר־בָּם | and all that is in them | ve'et-kol-asher-bam |
+| [kiddush-zachor-w33](m/israeli/word/kiddush-zachor-w33.mp3) | וַיָּנַח | and rested | vayanach |
+| [kiddush-zachor-w34](m/israeli/word/kiddush-zachor-w34.mp3) | בַּיּוֹם | on the day | bayom |
+| [kiddush-zachor-w35](m/israeli/word/kiddush-zachor-w35.mp3) | הַשְּׁבִיעִי | the seventh | hashevi'i |
+| [kiddush-zachor-w36](m/israeli/word/kiddush-zachor-w36.mp3) | עַל־כֵּן | therefore | al-ken |
+| [kiddush-zachor-w37](m/israeli/word/kiddush-zachor-w37.mp3) | בֵּרַךְ | blessed | berakh |
+| [kiddush-zachor-w38](m/israeli/word/kiddush-zachor-w38.mp3) | אֲדֹנָי | the LORD | adonai |
+| [kiddush-zachor-w39](m/israeli/word/kiddush-zachor-w39.mp3) | אֶת־יוֹם | the day | et-yom |
+| [kiddush-zachor-w4](m/israeli/word/kiddush-zachor-w4.mp3) | לְקַדְּשׁוֹ | to keep it holy | lekadesho |
+| [kiddush-zachor-w40](m/israeli/word/kiddush-zachor-w40.mp3) | הַשַׁבָּת | the sabbath | hashabat |
+| [kiddush-zachor-w41](m/israeli/word/kiddush-zachor-w41.mp3) | וַיְקַדְּשֵׁהוּ׃ | and hallowed it | vaykadeshehu |
+| [kiddush-zachor-w5](m/israeli/word/kiddush-zachor-w5.mp3) | שֵׁשֶׁת | six | sheshet |
+| [kiddush-zachor-w6](m/israeli/word/kiddush-zachor-w6.mp3) | יָמִים | days | yamim |
+| [kiddush-zachor-w7](m/israeli/word/kiddush-zachor-w7.mp3) | תַּעֲבֹד | you shall labour | ta'avod |
+| [kiddush-zachor-w8](m/israeli/word/kiddush-zachor-w8.mp3) | וְעָשִׂיתָ | and do | ve'asita |
+| [kiddush-zachor-w9](m/israeli/word/kiddush-zachor-w9.mp3) | כָּל־מְלַאכְתֶּךָ | all your work | kol-melakhtekha |
+| [lecha-dodi-1-w1](m/israeli/word/lecha-dodi-1-w1.mp3) | לְכָה | come | lekhah |
+| [lecha-dodi-1-w10](m/israeli/word/lecha-dodi-1-w10.mp3) | בְּדִבּוּר | in an utterance | bedibur |
+| [lecha-dodi-1-w11](m/israeli/word/lecha-dodi-1-w11.mp3) | אֶחָד | one | echad |
+| [lecha-dodi-1-w12](m/israeli/word/lecha-dodi-1-w12.mp3) | הִשְׁמִיעָנוּ | made us hear | hishmi'anu |
+| [lecha-dodi-1-w13](m/israeli/word/lecha-dodi-1-w13.mp3) | אֵל | god; strength | el |
+| [lecha-dodi-1-w14](m/israeli/word/lecha-dodi-1-w14.mp3) | הַמְיוּחָד | the One | hamyuchad |
+| [lecha-dodi-1-w15](m/israeli/word/lecha-dodi-1-w15.mp3) | אֲדֹנָי | the LORD | adonai |
+| [lecha-dodi-1-w16](m/israeli/word/lecha-dodi-1-w16.mp3) | אֶחָד | one | echad |
+| [lecha-dodi-1-w17](m/israeli/word/lecha-dodi-1-w17.mp3) | וּשְׁמוֹ | and his name | ushemo |
+| [lecha-dodi-1-w18](m/israeli/word/lecha-dodi-1-w18.mp3) | אֶחָד | one | echad |
+| [lecha-dodi-1-w19](m/israeli/word/lecha-dodi-1-w19.mp3) | לְשֵׁם | for renown | leshem |
+| [lecha-dodi-1-w2](m/israeli/word/lecha-dodi-1-w2.mp3) | דוֹדִי | my beloved | dodi |
+| [lecha-dodi-1-w20](m/israeli/word/lecha-dodi-1-w20.mp3) | וּלְתִפְאֶרֶת | and for glory | uletif'eret |
+| [lecha-dodi-1-w21](m/israeli/word/lecha-dodi-1-w21.mp3) | וְלִתְהִלָּה׃ | and for praise | velithilah |
+| [lecha-dodi-1-w3](m/israeli/word/lecha-dodi-1-w3.mp3) | לִקְרַאת | to meet; opposite | likrat |
+| [lecha-dodi-1-w4](m/israeli/word/lecha-dodi-1-w4.mp3) | כַּלָּה | bride; daughter-in-law | kalah |
+| [lecha-dodi-1-w5](m/israeli/word/lecha-dodi-1-w5.mp3) | פְּנֵי | the presence of | penei |
+| [lecha-dodi-1-w6](m/israeli/word/lecha-dodi-1-w6.mp3) | שַׁבָּת | Shabbat, Sabbath; Saturday; week (Mishnaic Hebrew) | shabat |
+| [lecha-dodi-1-w7](m/israeli/word/lecha-dodi-1-w7.mp3) | נְקַבְּלָה׃ | let us welcome | nekabelah |
+| [lecha-dodi-1-w8](m/israeli/word/lecha-dodi-1-w8.mp3) | שָׁמוֹר | keep | shamor |
+| [lecha-dodi-1-w9](m/israeli/word/lecha-dodi-1-w9.mp3) | וְזָכוֹר | and remember | vezakhor |
+| [lecha-hashem-w1](m/israeli/word/lecha-hashem-w1.mp3) | לְךָ | for you | lekha |
+| [lecha-hashem-w10](m/israeli/word/lecha-hashem-w10.mp3) | בַּשָּׁמַיִם | in the heavens | bashamayim |
+| [lecha-hashem-w11](m/israeli/word/lecha-hashem-w11.mp3) | וּבָאָרֶץ׃ | and in the earth | uva'aretz |
+| [lecha-hashem-w12](m/israeli/word/lecha-hashem-w12.mp3) | לְךָ | for you | lekha |
+| [lecha-hashem-w13](m/israeli/word/lecha-hashem-w13.mp3) | אֲדֹנָי | the LORD | adonai |
+| [lecha-hashem-w14](m/israeli/word/lecha-hashem-w14.mp3) | הַמַּמְלָכָה | the kingdom | hamamlakhah |
+| [lecha-hashem-w15](m/israeli/word/lecha-hashem-w15.mp3) | וְהַמִּתְנַשֵּׂא | and the exalted | vehamitnase |
+| [lecha-hashem-w16](m/israeli/word/lecha-hashem-w16.mp3) | לְכֹל | over all | lekhol |
+| [lecha-hashem-w17](m/israeli/word/lecha-hashem-w17.mp3) | לְרֹאשׁ׃ | as head | lerosh |
+| [lecha-hashem-w18](m/israeli/word/lecha-hashem-w18.mp3) | רוֹמְמוּ | exalt | romemu |
+| [lecha-hashem-w19](m/israeli/word/lecha-hashem-w19.mp3) | אֲדֹנָי | the LORD | adonai |
+| [lecha-hashem-w2](m/israeli/word/lecha-hashem-w2.mp3) | אֲדֹנָי | the LORD | adonai |
+| [lecha-hashem-w20](m/israeli/word/lecha-hashem-w20.mp3) | אֱלֹהֵינוּ | our-God | eloheinu |
+| [lecha-hashem-w21](m/israeli/word/lecha-hashem-w21.mp3) | וְהִשְׁתַּחֲווּ | and bow | vehishtachavu |
+| [lecha-hashem-w22](m/israeli/word/lecha-hashem-w22.mp3) | לַהֲדֹם | at the footstool | lahadom |
+| [lecha-hashem-w23](m/israeli/word/lecha-hashem-w23.mp3) | רַגְלָיו | his feet | raglav |
+| [lecha-hashem-w24](m/israeli/word/lecha-hashem-w24.mp3) | קָדוֹשׁ | holy; a saint | kadosh |
+| [lecha-hashem-w25](m/israeli/word/lecha-hashem-w25.mp3) | הוּא׃ | he; used as a copula | hu |
+| [lecha-hashem-w26](m/israeli/word/lecha-hashem-w26.mp3) | רוֹמְמוּ | exalt | romemu |
+| [lecha-hashem-w27](m/israeli/word/lecha-hashem-w27.mp3) | אֲדֹנָי | the LORD | adonai |
+| [lecha-hashem-w28](m/israeli/word/lecha-hashem-w28.mp3) | אֱלֹהֵינוּ | our-God | eloheinu |
+| [lecha-hashem-w29](m/israeli/word/lecha-hashem-w29.mp3) | וְהִשְׁתַּחֲווּ | and bow | vehishtachavu |
+| [lecha-hashem-w3](m/israeli/word/lecha-hashem-w3.mp3) | הַגְּדֻלָּה | the greatness | hagedulah |
+| [lecha-hashem-w30](m/israeli/word/lecha-hashem-w30.mp3) | לְהַר | at the mountain | lehar |
+| [lecha-hashem-w31](m/israeli/word/lecha-hashem-w31.mp3) | קָדְשׁוֹ | His holiness | kodsho |
+| [lecha-hashem-w32](m/israeli/word/lecha-hashem-w32.mp3) | כִּי | because, for, since; that; when, as, at the time that | ki |
+| [lecha-hashem-w33](m/israeli/word/lecha-hashem-w33.mp3) | קָדוֹשׁ | holy; a saint | kadosh |
+| [lecha-hashem-w34](m/israeli/word/lecha-hashem-w34.mp3) | אֲדֹנָי | the LORD | adonai |
+| [lecha-hashem-w35](m/israeli/word/lecha-hashem-w35.mp3) | אֱלֹהֵינוּ׃ | our-God | eloheinu |
+| [lecha-hashem-w4](m/israeli/word/lecha-hashem-w4.mp3) | וְהַגְּבוּרָה | and the might | vehagevurah |
+| [lecha-hashem-w5](m/israeli/word/lecha-hashem-w5.mp3) | וְהַתִּפְאֶרֶת | and the splendour | vehatif'eret |
+| [lecha-hashem-w6](m/israeli/word/lecha-hashem-w6.mp3) | וְהַנֵּצַח | and the victory | vehanetzach |
+| [lecha-hashem-w7](m/israeli/word/lecha-hashem-w7.mp3) | וְהַהוֹד | and the majesty | vehahod |
+| [lecha-hashem-w8](m/israeli/word/lecha-hashem-w8.mp3) | כִּי | because, for, since; that; when, as, at the time that | ki |
+| [lecha-hashem-w9](m/israeli/word/lecha-hashem-w9.mp3) | כֹל | everything | khol |
+| [mah-tovu-1-w1](m/israeli/word/mah-tovu-1-w1.mp3) | מַה־טֹּבוּ | how goodly | mah-tovu |
+| [mah-tovu-1-w2](m/israeli/word/mah-tovu-1-w2.mp3) | אֹהָלֶיךָ | your tents | ohalekha |
+| [mah-tovu-1-w3](m/israeli/word/mah-tovu-1-w3.mp3) | יַעֲקֹב | Jacob | ya'akov |
+| [mah-tovu-1-w4](m/israeli/word/mah-tovu-1-w4.mp3) | מִשְׁכְּנֹתֶיךָ | your dwellings | mishkenotekha |
+| [mah-tovu-1-w5](m/israeli/word/mah-tovu-1-w5.mp3) | יִשְׂרָאֵל׃ | Israel | yisra'el |
+| [malchutcha-w1](m/israeli/word/malchutcha-w1.mp3) | מַלְכוּתְךָ | your kingdom | malkhutekha |
+| [malchutcha-w2](m/israeli/word/malchutcha-w2.mp3) | מַלְכוּת | kingship, queenship; monarchy; kingdom | malkhut |
+| [malchutcha-w3](m/israeli/word/malchutcha-w3.mp3) | כָּל־עֹלָמִים | all ages | kol-olamim |
+| [malchutcha-w4](m/israeli/word/malchutcha-w4.mp3) | וּמֶמְשֶׁלְתְּךָ | and your dominion | umemsheltekha |
+| [malchutcha-w5](m/israeli/word/malchutcha-w5.mp3) | בְּכָל־דּוֹר | in all generations | bekhol-dor |
 | [numbers-01-f](m/israeli/word/numbers-01-f.mp3) | אַחַת | one (f.) | achat |
 | [numbers-01-m](m/israeli/word/numbers-01-m.mp3) | אֶחָד | one | echad |
 | [numbers-02-f](m/israeli/word/numbers-02-f.mp3) | שְׁתַּיִם | two (f.) | shtayim |
@@ -3579,4 +3693,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 3933 produced clips in INDEX.csv have an English label; 2 UNKNOWN. Filenames and IDs are unchanged.
+All 4061 produced clips in INDEX.csv have an English label; 2 UNKNOWN. Filenames and IDs are unchanged.

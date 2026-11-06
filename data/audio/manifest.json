@@ -12956,8 +12956,8 @@
     "kind": "line",
     "id": "vahavta-1",
     "text": "וְאָהַבְתָּ אֵת אֲדֹנָי אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -15596,8 +15596,8 @@
     "kind": "line",
     "id": "torah-bless-1",
     "text": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל־הָעַמִּים וְנָתַן לָנוּ אֶת־תּוֹרָתוֹ בָּרוּךְ אַתָּה אֲדֹנָי נוֹתֵן הַתּוֹרָה׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -15740,8 +15740,8 @@
     "kind": "line",
     "id": "torah-barchu-l1",
     "text": "בָּרְכוּ אֶת אֲדֹנָי הַמְּבֹרָךְ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -15806,8 +15806,8 @@
     "kind": "line",
     "id": "torah-barchu-l2",
     "text": "בָּרוּךְ אֲדֹנָי הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -15944,8 +15944,8 @@
     "kind": "line",
     "id": "torah-bless-2",
     "text": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר נָתַן לָנוּ תּוֹרַת אֱמֶת וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵנוּ׃ בָּרוּךְ אַתָּה אֲדֹנָי נוֹתֵן הַתּוֹרָה׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -20672,8 +20672,8 @@
     "kind": "line",
     "id": "shir-hamaalot-l1",
     "text": "שִׁיר הַמַּעֲלוֹת בְּשׁוּב אֲדֹנָי אֶת־שִׁיבַת צִיּוֹן הָיִינוּ כְּחֹלְמִים׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -20738,8 +20738,8 @@
     "kind": "line",
     "id": "shir-hamaalot-l2",
     "text": "אָז יִמָּלֵא שְׂחוֹק פִּינוּ וּלְשׁוֹנֵנוּ רִנָּה אָז יֹאמְרוּ בַגּוֹיִם הִגְדִּיל אֲדֹנָי לַעֲשׂוֹת עִם־אֵלֶּה׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -20804,8 +20804,8 @@
     "kind": "line",
     "id": "shir-hamaalot-l3",
     "text": "הִגְדִּיל אֲדֹנָי לַעֲשׂוֹת עִמָּנוּ הָיִינוּ שְׂמֵחִים׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -20870,8 +20870,8 @@
     "kind": "line",
     "id": "shir-hamaalot-l4",
     "text": "שׁוּבָה אֲדֹנָי אֶת־שְׁבִיתֵנוּ כַּאֲפִיקִים בַּנֶּגֶב׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -20936,8 +20936,8 @@
     "kind": "line",
     "id": "shir-hamaalot-l5",
     "text": "הַזֹּרְעִים בְּדִמְעָה בְּרִנָּה יִקְצֹרוּ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -21002,8 +21002,8 @@
     "kind": "line",
     "id": "shir-hamaalot-l6",
     "text": "הָלוֹךְ יֵלֵךְ וּבָכֹה נֹשֵׂא מֶשֶׁךְ־הַזָּרַע בֹּא־יָבוֹא בְרִנָּה נֹשֵׂא אֲלֻמֹּתָיו׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -22640,8 +22640,8 @@
     "kind": "line",
     "id": "sim-shalom-l1",
     "text": "שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה חֵן וָחֶסֶד וְרַחֲמִים עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל עַמֶּךָ בָּרְכֵנוּ אָבִינוּ כֻּלָּנוּ כְּאֶחָד בְּאוֹר פָּנֶיךָ כִּי בְאוֹר פָּנֶיךָ נָתַתָּ לָּנוּ אֲדֹנָי אֱלֹהֵינוּ תּוֹרַת חַיִּים וְאַהֲבַת חֶסֶד וּצְדָקָה וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם וְטוֹב בְּעֵינֶיךָ לְבָרֵךְ אֶת עַמְּךָ יִשְׂרָאֵל בְּכָל־עֵת וּבְכָל־שָׁעָה בִּשְׁלוֹמֶךָ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -22706,8 +22706,8 @@
     "kind": "line",
     "id": "sim-shalom-l2",
     "text": "בָּרוּךְ אַתָּה אֲדֹנָי הַמְבָרֵךְ אֶת־עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {

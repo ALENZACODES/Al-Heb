@@ -281,10 +281,11 @@ export async function mount(root, ctx) {
     const kids = [
       h('h1', { id: 'view-title', tabindex: '-1' }, 'You did it'),
       (() => {
-        const art = picture(h, ctx, 'id', SCENE.minuteOne, { class: 'scene-art', width: 480 });
-        const variant = picture(h, ctx, 'id', SCENE.minuteOneVariant, { class: 'scene-art', width: 480 });
-        if (!art && !variant) return null;
-        return h('div', { class: 'lp-cele', 'data-motion': 'fade', style: 'display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center' }, art, variant);
+        const stills = [SCENE.minuteOne, SCENE.minuteOneVariant, SCENE.minuteOneStill03, SCENE.minuteOneStill04, SCENE.minuteOneStill05]
+          .map((id) => picture(h, ctx, 'id', id, { class: 'scene-art', width: 480 }))
+          .filter(Boolean);
+        if (!stills.length) return null;
+        return h('div', { class: 'lp-cele', 'data-motion': 'fade', style: 'display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center' }, ...stills);
       })(),
     ];
     // Beat 0: gratitude (siyum) before self-congratulation

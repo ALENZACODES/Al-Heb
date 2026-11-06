@@ -56656,6 +56656,180 @@
     "ocr_not_run"
    ],
    "humanApproved": true
+  },
+  "GAME_minute_one_celebration_03": {
+   "id": "GAME_minute_one_celebration_03",
+   "file": "GAME_minute_one_celebration_03.png",
+   "command": 9043,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "Celebration art for the first Hebrew word, third still. No text.",
+   "promptSha256": "522d7ad4326d08d9571efcc294570e0a2509d0041eee24382afb65ad6dc2297e",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T14:03:53.949Z",
+   "sourceFile": "GAME_minute_one_celebration_03.png",
+   "sourceFileDate": "2026-11-06T14:03:39.514Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "70f7e0395ab29c3711293be7aa3d8a1ccc39981d825c009f4b9157ce0bed78a5",
+   "originalFormat": "PNG",
+   "originalBytes": 1861047,
+   "originalFile": "GAME_minute_one_celebration_03.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_minute_one_celebration_03.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 61106
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_minute_one_celebration_03.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 106838
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GAME_minute_one_celebration_04": {
+   "id": "GAME_minute_one_celebration_04",
+   "file": "GAME_minute_one_celebration_04.png",
+   "command": 9044,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "Celebration art for the first Hebrew word, fourth still. No text.",
+   "promptSha256": "4c6ee78ab722daa03f77ed386c243244f5fbf179658abbda7150aa28b1481a1a",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T14:03:53.949Z",
+   "sourceFile": "GAME_minute_one_celebration_04.png",
+   "sourceFileDate": "2026-11-06T14:03:39.514Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "2a65b5aaed4f8ef6bcce1b549e2208b3d4bbbd518f86ad15b5a05ea5443f6713",
+   "originalFormat": "PNG",
+   "originalBytes": 1814238,
+   "originalFile": "GAME_minute_one_celebration_04.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_minute_one_celebration_04.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 71332
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_minute_one_celebration_04.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 119036
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GAME_minute_one_celebration_05": {
+   "id": "GAME_minute_one_celebration_05",
+   "file": "GAME_minute_one_celebration_05.png",
+   "command": 9045,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "Celebration art for the first Hebrew word, fifth still. No text.",
+   "promptSha256": "1826f58d7f1aada79952d3961ef7d46ce020dbdee4a40ed63c74f49b6d83756b",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T14:03:53.949Z",
+   "sourceFile": "GAME_minute_one_celebration_05.png",
+   "sourceFileDate": "2026-11-06T14:03:39.518Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "33542deffc70320191b29ec821f664c0d77e116dd1a855befc7cb20b4f17a01b",
+   "originalFormat": "PNG",
+   "originalBytes": 1812035,
+   "originalFile": "GAME_minute_one_celebration_05.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_minute_one_celebration_05.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 71428
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_minute_one_celebration_05.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 118566
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

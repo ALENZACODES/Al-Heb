@@ -4,6 +4,9 @@
 export const SCENE = Object.freeze({
   minuteOne: 'GAME_minute_one_celebration',
   minuteOneVariant: 'GAME_minute_one_celebration_02',
+  minuteOneStill03: 'GAME_minute_one_celebration_03',
+  minuteOneStill04: 'GAME_minute_one_celebration_04',
+  minuteOneStill05: 'GAME_minute_one_celebration_05',
   letterRush: 'GAME_letter_rush',
   letterRushRound: 'GAME_letter_rush_02',
   sofitSniper: 'GAME_sofit_sniper',

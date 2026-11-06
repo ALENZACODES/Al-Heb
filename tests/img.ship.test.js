@@ -25,7 +25,7 @@ test('letter lessons resolve a meet cartoon, and the screens\' gen art resolves'
     assert.match(r.src, /^assets\/img\/gen\/.+\.webp$/);
   }
   assert.match(R.resolve('letter', 'alef').id, /_print_meet$/);
-  for (const id of [SCENE.minuteOne, SCENE.minuteOneVariant, SCENE.letterRush, SCENE.letterRushRound, SCENE.sofitSniper, SCENE.sofitSniperLevel, SCENE.niqqudFade, SCENE.traditionDetective, SCENE.traditionDetectiveListen, SCENE.storyPostcard, SCENE.storySeaside, SCENE.karaokeListen, 'SPEAK_04_table_shabbat', 'SPEAK_05_table_welcome', 'SPEAK_08_street_taxi', 'BG_cafe', 'CHAR_ari_neutral', 'CHAR_ari_celebrate', 'MOUTH_ah', 'CHAR_noa_speak']) {
+  for (const id of [SCENE.minuteOne, SCENE.minuteOneVariant, SCENE.minuteOneStill03, SCENE.minuteOneStill04, SCENE.minuteOneStill05, SCENE.letterRush, SCENE.letterRushRound, SCENE.sofitSniper, SCENE.sofitSniperLevel, SCENE.niqqudFade, SCENE.traditionDetective, SCENE.traditionDetectiveListen, SCENE.storyPostcard, SCENE.storySeaside, SCENE.karaokeListen, 'SPEAK_04_table_shabbat', 'SPEAK_05_table_welcome', 'SPEAK_08_street_taxi', 'BG_cafe', 'CHAR_ari_neutral', 'CHAR_ari_celebrate', 'MOUTH_ah', 'CHAR_noa_speak']) {
     const r = R.resolve('id', id);
     assert.ok(r, id);
     assert.equal(r.approved, true);

@@ -60,6 +60,8 @@ export const STORE_KEYS = [
   ['timedread.v1', 'Timed read-aloud results', 'src/progress/model.js'],
   ['speak.v1', 'Say-it results (not recordings)', 'src/speak/model.js'],
   ['sprint.last', 'Last word sprint', 'src/sprint/model.js'],
+  ['games.tugowar.v1', 'Antonym Tug-of-War: best score, how many times you have played, and the star rating of the last game (on this device only)', 'src/games/tugowar.view.js'],
+  ['games.vowelcatcher.v1', 'Vowel Catcher: best score, how many times you have played, and the star rating of the last game (on this device only)', 'src/games/vowelcatcher.view.js'],
   ['typing.v1', 'Typing practice results', 'src/typing/typing.js'],
   ['trope.v1', 'Chanting-mark trainer results', 'src/trope/trope.view.js'],
   ['nikkudfade.v1', 'Vowel-fade practice progress (which words you saw pointed, and which you revealed)', 'src/nikkudfade/model.js'],

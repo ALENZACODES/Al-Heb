@@ -102,6 +102,9 @@ export const ROUTES = [
   { name: 'daily', pattern: '/daily', module: '../../preview/loops/daily.view.js', tier: 'preview', title: 'Daily goal and quests', owner: 'loops', group: 'progress', quick: 'nav.route.daily' },
   { name: 'search',   pattern: '/search',         module: './search.view.js', tier: 'v0',                    title: 'Search', owner: 'nav' },
   { name: 'about',    pattern: '/about',          module: './about.view.js', tier: 'v0',                     nav: 'nav.about',    title: 'About', owner: 'lane8' },
+  // Games stay preview until the verification gate in GAMES-START-HERE.md passes.
+  { name: 'tugowar', pattern: '/tugowar', module: '../games/tugowar.view.js', tier: 'preview', title: 'Antonym Tug-of-War', owner: 'games' },
+  { name: 'vowelcatcher', pattern: '/vowelcatcher', module: '../games/vowelcatcher.view.js', tier: 'preview', title: 'Vowel Catcher', owner: 'games' },
 ];
 
 /**

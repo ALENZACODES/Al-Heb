@@ -14,6 +14,9 @@
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, loadGameImages, imgOf, pull, pick, resultsCard } from './engine.js';
 
+/** Best score, play count, last star rating. Device-local, listed on the privacy page. */
+export const STORE_KEY = 'games.tugowar.v1';
+
 // [hebrew, transliteration, gloss, oppositeHebrew, oppositeTranslit, oppositeGloss]
 export const PAIRS = Object.freeze([
   ['גָּדוֹל', 'gadol', 'big', 'קָטָן', 'katan', 'small'],
@@ -33,11 +36,13 @@ export const PAIRS = Object.freeze([
 const ROUNDS = 10;
 
 export function mount(root, ctx) {
-  const session = createSession({ store: ctx?.store, storeKey: 'games.tugowar.v1', par: 8 });
+  const session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 8 });
   let R = null;
   let pos = 0; // rope position: -1 (theirs) .. +1 (yours)
   let round = 0;
   let current = null; // {pair, choices, answer}
+  let timer = 0;
+  let alive = true;
 
   const stage = h('div', { class: 'game-stage tug' });
   const status = h('p', { class: 'game-status', role: 'status', 'aria-live': 'polite' }, 'Pull the rope: match the opposite.');
@@ -60,26 +65,30 @@ export function mount(root, ctx) {
     const order = [0, 1, 2].sort(() => 0.5 - Math.random());
     current = { pair, answer: pair };
     const img = imgOf(R, 'id', pair.img);
-    board.replaceChildren(
-      h('p', { class: 'game-prompt' }, 'Opposite of ', heSpan(pair[0], 'he game-he'), ` (${pair[1]} — ${pair[2]})?`),
-      img ? h('img', { class: 'game-card-img', src: img.src, alt: img.alt, width: img.width, height: img.height }) : null,
-      h('div', { class: 'game-choices' }, ...order.map((i) => {
-        const c = choices[i];
-        return h('button', { type: 'button', class: 'btn secondary game-choice', onclick: () => answer(c) },
-          heSpan(c[3], 'he game-he-sm'), h('span', { class: 'muted' }, ` ${c[4]} · ${c[5]}`));
-      })),
-    );
+    // replaceChildren stringifies a null child as the text "null", so omit the picture node.
+    const nodes = [h('p', { class: 'game-prompt' }, 'Opposite of ', heSpan(pair[0], 'he game-he'), ` (${pair[1]} — ${pair[2]})?`)];
+    if (img) nodes.push(h('img', { class: 'game-card-img', src: img.src, alt: img.alt, width: img.width, height: img.height }));
+    nodes.push(h('div', { class: 'game-choices' }, ...order.map((i) => {
+      const c = choices[i];
+      return h('button', { type: 'button', class: 'btn secondary game-choice', onclick: () => answer(c) },
+        heSpan(c[3], 'he game-he-sm'), h('span', { class: 'muted' }, ` ${c[4]} · ${c[5]}`));
+    })));
+    board.replaceChildren(...nodes);
     status.textContent = `Round ${round} of ${ROUNDS} · Score ${session.score} · Streak ${session.streak}`;
     paintRope();
   }
 
   function answer(choice) {
+    if (!alive || !current) return;
+    const pair = current.pair;
     const ok = choice === current.answer;
+    current = null;
     session.answer(ok);
     pos = pull(pos, ok ? 1 : -1, 0.14);
-    status.textContent = ok ? `Yes — ${current.pair[0]} × ${current.pair[3]}. Your team pulls!` : `Not that one. The opposite of ${current.pair[0]} is ${current.pair[3]}.`;
+    status.textContent = ok ? `Yes — ${pair[0]} × ${pair[3]}. Your team pulls!` : `Not that one. The opposite of ${pair[0]} is ${pair[3]}.`;
     paintRope();
-    setTimeout(nextRound, ok ? 450 : 1100);
+    clearTimeout(timer);
+    timer = setTimeout(() => { if (alive) nextRound(); }, ok ? 450 : 1100);
   }
 
   function finish() {
@@ -97,7 +106,7 @@ export function mount(root, ctx) {
       h('p', { class: 'muted' }, 'Match the Hebrew opposite. Every right answer pulls the rope your way; a miss pulls it theirs.'),
       ropeWrap, status, board));
   paintRope();
-  loadGameImages(ctx).then((r) => { R = r; });
+  loadGameImages(ctx).then((r) => { if (alive) R = r; });
   nextRound();
-  return () => {};
+  return () => { alive = false; clearTimeout(timer); };
 }

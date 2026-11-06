@@ -45,6 +45,8 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `vocab-themes` | keep | Theme packs (shared audio button). |
 | `speak` | keep | Say it. |
 | `sprint` | keep | Word Sprint. |
+| `tugowar` | keep | Antonym Tug-of-War. Preview until the games verification gate. |
+| `vowelcatcher` | keep | Shooting Star Vowel Catcher. Preview until the games verification gate. |
 | `gender` | merge | With `roles` and `gender-drill` into one gender page. |
 | `roles` | merge | Into the gender page. |
 | `scaffold` | keep | Read without Latin letters. |

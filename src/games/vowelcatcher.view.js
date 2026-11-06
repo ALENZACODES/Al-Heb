@@ -13,6 +13,9 @@
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, speak, resultsCard } from './engine.js';
 
+/** Best score, play count, last star rating. Device-local, listed on the privacy page. */
+export const STORE_KEY = 'games.vowelcatcher.v1';
+
 const MARKS = Object.freeze([
   { name: 'kamatz', glyph: '◌ָ', point: 'ָ', sound: 'a' },
   { name: 'patach', glyph: '◌ַ', point: 'ַ', sound: 'a' },
@@ -31,8 +34,14 @@ const LETTERS = Object.freeze([
 ]);
 const TARGETS_PER_GAME = 12;
 
+// The router keeps the cleanup from the first mount. Play again mounts
+// again on the same root, so the latest stop function has to be what that
+// first cleanup calls.
+const liveCleanup = new WeakMap();
+
 export function mount(root, ctx) {
-  const session = createSession({ store: ctx?.store, storeKey: 'games.vowelcatcher.v1', par: 9 });
+  liveCleanup.get(root)?.();
+  const session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 9 });
   const letter = LETTERS[Math.floor(Math.random() * LETTERS.length)];
   let target = null; // current MARKS entry
   let targetsDone = 0;
@@ -119,5 +128,12 @@ export function mount(root, ctx) {
 
   newTarget();
   raf = requestAnimationFrame(step);
-  return () => { alive = false; cancelAnimationFrame(raf); document.removeEventListener('keydown', keys); };
+  const stop = () => {
+    alive = false;
+    cancelAnimationFrame(raf);
+    document.removeEventListener('keydown', keys);
+    if (liveCleanup.get(root) === stop) liveCleanup.delete(root);
+  };
+  liveCleanup.set(root, stop);
+  return () => liveCleanup.get(root)?.();
 }

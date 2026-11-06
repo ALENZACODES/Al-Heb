@@ -1,6 +1,7 @@
 // Game 20 — point-to-unpointed cipher over source-verified corpus lines.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, resultsCard } from './engine.js';
+import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 import { stripPoints } from '../typing/typing.js';
 export const STORE_KEY = 'games.ciphergrid.v1';
@@ -14,6 +15,7 @@ export function matchCipher(row, pointed) {
   return !!row && pointed === row.he && stripPoints(pointed) === row.unpointed;
 }
 export function mount(root, ctx) {
+  const leaveSfx = sfx.enter(ctx);
   let alive = true, deck = [], round = 0, session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 6 });
   const status = h('p', { class: 'game-status', role: 'status', 'aria-live': 'polite' }, 'Loading source-aligned corpus…');
   const board = h('div', { class: 'game-board' });
@@ -33,7 +35,7 @@ export function mount(root, ctx) {
     const prompt = h('div', { class: 'game-cipher-prompt' }, heSpan(row.unpointed, 'he game-he'));
     const options = shuffled([row, ...other]).map(opt => h('button', {
       type: 'button', class: 'btn secondary game-choice', onclick: () => {
-        const ok = matchCipher(row, opt.he); session.answer(ok);
+        const ok = matchCipher(row, opt.he); session.answer(ok); sfx.play(ok ? 'success' : 'miss');
         status.textContent = ok ? 'Exact pointed source restored.' : 'Those points do not match this source line.';
         if (ok) round++; paint();
       } }, heSpan(opt.he, 'he game-he-sm')));
@@ -45,5 +47,5 @@ export function mount(root, ctx) {
     if (deck.length < 8) { status.textContent = 'Insufficient verified-source corpus text.'; return; }
     paint();
   }).catch(() => { if (alive) status.textContent = 'Corpus unavailable.'; });
-  return () => { alive = false; };
+  return () => { alive = false; leaveSfx(); };
 }

@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 3765 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 3774 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-3765 English labels; 147 UNKNOWN.
+3774 English labels; 156 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -1098,6 +1098,15 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [i-12-w13](f/israeli/word/i-12-w13.mp3) | אֶקַּח אֶת זֶה | UNKNOWN | ekach et zeh |
 | [i-12-w14](f/israeli/word/i-12-w14.mp3) | מְזֻמָּן | UNKNOWN | mezuman |
 | [i-12-w15](f/israeli/word/i-12-w15.mp3) | שַׂקִּית | UNKNOWN | sakit |
+| [i-12-w2](f/israeli/word/i-12-w2.mp3) | כַּמָּה זֶה עוֹלֶה? | UNKNOWN | kamah zeh oleh? |
+| [i-12-w3](f/israeli/word/i-12-w3.mp3) | מָה הַמְּחִיר? | UNKNOWN | mah hamechir? |
+| [i-12-w4](f/israeli/word/i-12-w4.mp3) | זֶה יָקָר | UNKNOWN | zeh yakar |
+| [i-12-w5](f/israeli/word/i-12-w5.mp3) | זֶה זוֹל | UNKNOWN | zeh zol |
+| [i-12-w6](f/israeli/word/i-12-w6.mp3) | יֵשׁ הַנָּחָה? | UNKNOWN | yesh hanachah? |
+| [i-12-w7](f/israeli/word/i-12-w7.mp3) | חֲצִי | UNKNOWN | chatzi |
+| [i-12-w8](f/israeli/word/i-12-w8.mp3) | טָרִי | UNKNOWN | tari |
+| [i-12-w9](f/israeli/word/i-12-w9.mp3) | עַגְבָנִיָּה | UNKNOWN | agvaniyah |
+| [i-13-w1](f/israeli/word/i-13-w1.mp3) | אֶפְשָׁר לְהַזְמִין? | UNKNOWN | efshar lehazmin? |
 | [kaddish-1-w1](f/israeli/word/kaddish-1-w1.mp3) | יִתְגַּדַּל | may it be magnified | yitgadal |
 | [kaddish-1-w10](f/israeli/word/kaddish-1-w10.mp3) | מַלְכוּתֵהּ | his kingdom | malkhuteh |
 | [kaddish-1-w11](f/israeli/word/kaddish-1-w11.mp3) | בְּחַיֵּיכוֹן | in your lifetime | bechayeikhon |
@@ -4371,4 +4380,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 5319 produced clips in INDEX.csv have an English label; 147 UNKNOWN. Filenames and IDs are unchanged.
+All 5339 produced clips in INDEX.csv have an English label; 156 UNKNOWN. Filenames and IDs are unchanged.

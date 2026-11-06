@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 5785 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 5856 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-5785 English labels; 1933 UNKNOWN.
+5856 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -838,6 +838,77 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [h38459da3](f/israeli/word/h38459da3.mp3) | שָׁפַךְ | to spill (a fluid, a powder, or the like); to pour; to ejaculate (semen) | shafakh |
 | [h386e6ad7](f/israeli/word/h386e6ad7.mp3) | קְרָב | battle, war; fight | kerav |
 | [h38dc1dcd](f/israeli/word/h38dc1dcd.mp3) | יָשָׁר | right, straight; right, correct (complying with justice); honestly, straightforwardly, forthrightly | yashar |
+| [h39244df3](f/israeli/word/h39244df3.mp3) | קָדוֹשׁ | holy; a saint | kadosh |
+| [h39a5cc8a](f/israeli/word/h39a5cc8a.mp3) | הִקְרִיב | to bring, to present, to offer; to sacrifice, to offer a sacrifice | hikriv |
+| [h39b463af](f/israeli/word/h39b463af.mp3) | בְּרִית | covenant, alliance; brit milah, bris, circumcision ritual | berit |
+| [h39d32f55](f/israeli/word/h39d32f55.mp3) | שָׂם | to put, place; to turn on; to put on, don (gloves) | sam |
+| [h39e6c15a](f/israeli/word/h39e6c15a.mp3) | עֲבוּר | because of, for, for the sake of, in order to | avur |
+| [h3a6be4d0](f/israeli/word/h3a6be4d0.mp3) | סֹלֶת | fine flower; semolina | solet |
+| [h3a77b486](f/israeli/word/h3a77b486.mp3) | גָּמָל | camel | gamal |
+| [h3a789358](f/israeli/word/h3a789358.mp3) | נוֹתַר | to be left, to remain | notar |
+| [h3b09d299](f/israeli/word/h3b09d299.mp3) | זָר | alien, foreigner; foreign | zar |
+| [h3b32dc48](f/israeli/word/h3b32dc48.mp3) | גּוֹי | gentile (a non-Jewish person), goy; a nation; a nation other than Israel | goy |
+| [h3c6a06b3](f/israeli/word/h3c6a06b3.mp3) | חֲלוֹם | dream | chalom |
+| [h3c9f9b9b](f/israeli/word/h3c9f9b9b.mp3) | אֹהֶל | a collective term for all that covers a dead body or that a dead body covers; ohel | ohel |
+| [h3d1c89af](f/israeli/word/h3d1c89af.mp3) | חָדַר | to penetrate, imbue, infuse; to invade | chadar |
+| [h3db72062](f/israeli/word/h3db72062.mp3) | גַּלְעֵד | a cairn | gal'ed |
+| [h3dcbac32](f/israeli/word/h3dcbac32.mp3) | חֲתִיכָה | piece, chunk; item; large piece, large hunk | chatikhah |
+| [h3dfe9831](f/israeli/word/h3dfe9831.mp3) | שְׁלוֹשָׁה | three | sheloshah |
+| [h3e375762](f/israeli/word/h3e375762.mp3) | רַע | bad; evil, wicked; an evil, trouble | ra |
+| [h3e44d72d](f/israeli/word/h3e44d72d.mp3) | מוּזָר | strange, odd, bizarre, unusual, weird | muzar |
+| [h3e4e6cff](f/israeli/word/h3e4e6cff.mp3) | חָלָה | to become sick, to be ill | chalah |
+| [h3e5331a2](f/israeli/word/h3e5331a2.mp3) | פֻּמְבִּי | public | pumbi |
+| [h3e5d0f9c](f/israeli/word/h3e5d0f9c.mp3) | תְּקוּפָה | an era, age, epoch, period | tekufah |
+| [h3e763177](f/israeli/word/h3e763177.mp3) | תִּינֹקֶת | baby, infant (female) | tinoket |
+| [h3e8123a0](f/israeli/word/h3e8123a0.mp3) | וִתֵּר | to give up (on) | viter |
+| [h3e9837b3](f/israeli/word/h3e9837b3.mp3) | זָרַח | to shine (emit light); to rise | zarach |
+| [h3ea8601d](f/israeli/word/h3ea8601d.mp3) | כְּלִי | armory; dishes | keli |
+| [h3ed1bb74](f/israeli/word/h3ed1bb74.mp3) | רָשָׁע | someone who is evil, wicked; criminal | rasha |
+| [h3f2d70f7](f/israeli/word/h3f2d70f7.mp3) | יָרַד | to go down, descend; to go down, decline, decrease; to criticize, lambaste, roast [with על (al) ‘on’] | yarad |
+| [h3f469e92](f/israeli/word/h3f469e92.mp3) | אַנְגְּלִי | English; Englishman | angeli |
+| [h3f5ee27e](f/israeli/word/h3f5ee27e.mp3) | גָּנַב | to steal | ganav |
+| [h3fbb59c8](f/israeli/word/h3fbb59c8.mp3) | קָדַם | to precede, to come before | kadam |
+| [h40319b13](f/israeli/word/h40319b13.mp3) | יַמִּי | marine, of the sea | yami |
+| [h404d10ed](f/israeli/word/h404d10ed.mp3) | פֶּרֶד | mule, hinny; dried pomegranate seeds; odd number | pered |
+| [h40502f8d](f/israeli/word/h40502f8d.mp3) | לִפְנֵי | before, in advance of, prior to; before, in front of, facing; ago | lifnei |
+| [h40790488](f/israeli/word/h40790488.mp3) | הֶחְזִיר | to return, restore | hechzir |
+| [h40e5a2de](f/israeli/word/h40e5a2de.mp3) | אַיֵּה | where | ayeh |
+| [h4105e713](f/israeli/word/h4105e713.mp3) | חָמוּד | cute, sweet, charming | chamud |
+| [h412b4a37](f/israeli/word/h412b4a37.mp3) | בֵּין | between, among, amid | bein |
+| [h41683f4b](f/israeli/word/h41683f4b.mp3) | הִסְתַּכֵּל | to look at | histakel |
+| [h42410d5e](f/israeli/word/h42410d5e.mp3) | שֵׁנִי | second | sheni |
+| [h426417f9](f/israeli/word/h426417f9.mp3) | עֵצָה | a piece of advice or counsel, a suggestion; xylem; the meaning of this term is uncertain. Possibilities include | etzah |
+| [h426c201d](f/israeli/word/h426c201d.mp3) | דִּיּוּק | accuracy, precision | diyuk |
+| [h42829564](f/israeli/word/h42829564.mp3) | סָמַךְ | to trust, rely on | samakh |
+| [h4299f50f](f/israeli/word/h4299f50f.mp3) | יְשׁוּעָה | salvation, help, rescue | yeshu'ah |
+| [h432cf2d0](f/israeli/word/h432cf2d0.mp3) | הֲ־ | an interrogative particle, introducing a yes-no question | ha- |
+| [h4397b702](f/israeli/word/h4397b702.mp3) | לָכֵן | therefore, so | lakhen |
+| [h447bb433](f/israeli/word/h447bb433.mp3) | תַּחֲנָה | a station, such as a bus station, a train station, or a space station; an outpost, a station; a stage, a phase | tachanah |
+| [h447cab37](f/israeli/word/h447cab37.mp3) | קְבוּצָה | group; team; set | kevutzah |
+| [h448b5d1a](f/israeli/word/h448b5d1a.mp3) | יָרָה | to flow as water (that is, to rain); to lay or throw | yarah |
+| [h44d68d1e](f/israeli/word/h44d68d1e.mp3) | חֹק | law, statute; rule; chok, a Jewish religious rule which doesn't have a rational explanation | chok |
+| [h450c4832](f/israeli/word/h450c4832.mp3) | עֶרְוָה | nakedness, nudity; genitalia, pudenda; a sexually forbidden relation | ervah |
+| [h453ca6b4](f/israeli/word/h453ca6b4.mp3) | קָרִיר | cool, cold in a pleasant way | karir |
+| [h45474028](f/israeli/word/h45474028.mp3) | הֵרָיוֹן | pregnancy | heraivon |
+| [h4548c2ea](f/israeli/word/h4548c2ea.mp3) | אֶפְשָׁרוּת | Possibility; a possibility; a possibility, an option | efsharut |
+| [h4589871d](f/israeli/word/h4589871d.mp3) | עֲשָׂרָה | ten | asarah |
+| [h46266386](f/israeli/word/h46266386.mp3) | לְמַטָּה | down, downward; down there, downstairs; below, hereafter | lematah |
+| [h4639e00e](f/israeli/word/h4639e00e.mp3) | גָּלַל | to roll (literally or figuratively); to scroll | galal |
+| [h4640fc14](f/israeli/word/h4640fc14.mp3) | שָׁעָה | hour; time | sha'ah |
+| [h4646b41c](f/israeli/word/h4646b41c.mp3) | כַּף | palm, paw; power, control; socket, cavity, hollow | kaf |
+| [h4692cd32](f/israeli/word/h4692cd32.mp3) | יָם | sea; a lot; the bottom grindstone (used for grinding flour) | yam |
+| [h46a5a512](f/israeli/word/h46a5a512.mp3) | גְּבוּל | a border, a boundary, a limit, a line; the area within a set of borders; an edge, an end, a limit | gevul |
+| [h46c75bab](f/israeli/word/h46c75bab.mp3) | פָּתַח | to open (something); to start | patach |
+| [h46f7979e](f/israeli/word/h46f7979e.mp3) | עַד | until, till, up until (a time); by (a time); to | ad |
+| [h470c7870](f/israeli/word/h470c7870.mp3) | רָצוֹן | will, volition, desire; a surname; a male given name | ratzon |
+| [h4739925f](f/israeli/word/h4739925f.mp3) | חֵמָה | rage, wrath, fury; venom, poison | chemah |
+| [h4760a2a0](f/israeli/word/h4760a2a0.mp3) | פְּנִימָה | inwards, inside | penimah |
+| [h495d2c04](f/israeli/word/h495d2c04.mp3) | חַלּוֹן | a window; a free period | chalon |
+| [h49a493f0](f/israeli/word/h49a493f0.mp3) | בְּדִיּוּק | exactly, precisely; just, just now | bediyuk |
+| [h4a2ee830](f/israeli/word/h4a2ee830.mp3) | שִׁנָּה | to change, to alter; to matter, to make a difference | shinah |
+| [h4a3da4c1](f/israeli/word/h4a3da4c1.mp3) | חֵץ | arrow | chetz |
+| [h4aa6ad2a](f/israeli/word/h4aa6ad2a.mp3) | בֵּן | son; a direct male descendant; a guy, a boy | ben |
+| [h4b14c918](f/israeli/word/h4b14c918.mp3) | לַק | nail polish | lak |
 | [haftarah-after-w1](f/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](f/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](f/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -6391,4 +6462,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 11248 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 11461 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

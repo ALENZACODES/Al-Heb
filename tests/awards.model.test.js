@@ -91,19 +91,35 @@ test('assessment adapter rejects completion flags, self-marks, legacy progress, 
   assert.equal(rejected.record.evidence.length, 0);
 });
 
-test('certificate rule can pass only with reviewed criteria and objective hits, and the shipped decision cannot', () => {
+test('certificate rule rejects omitted confirmation, foreign rubrics, and non-candidate lists', () => {
   const items = rubric.items.slice(0, 2);
   const evidence = items.map((it, i) => acceptAssessmentEvent(event({ itemId: it.id, evidenceId: 'obj-item-' + i + 'xx' })).evidence);
-  assert.equal(evaluateProposedCertificate({ criteriaReviewed: true, items, evidence }).issuable, true);
-  assert.equal(evaluateProposedCertificate({ criteriaReviewed: true, confirmed: false, items, evidence }).issuable, false);
-  assert.equal(evaluateProposedCertificate({ criteriaReviewed: true, confirmed: false, items, evidence }).reason, 'criteria-not-confirmed');
-  assert.equal(evaluateProposedCertificate({ criteriaReviewed: true, confirmed: false, items, evidence }).confirmed, false);
-  assert.equal(evaluateProposedCertificate({ criteriaReviewed: true, items, evidence: evidence.map((e) => ({ ...e, correct: false })) }).issuable, false);
-  assert.equal(evaluateProposedCertificate({ criteriaReviewed: false, items, evidence }).reason, 'criteria-awaiting-review');
-  assert.equal(evaluateProposedCertificate({ criteriaReviewed: true, items: [], evidence }).reason, 'no-criteria');
+  assert.equal(evaluateProposedCertificate({ criteriaReviewed: true, items, evidence }).issuable, false);
+  assert.equal(evaluateProposedCertificate({ criteriaReviewed: true, items, evidence }).reason, 'not-canonical-candidate');
+  assert.equal(evaluateProposedCertificate({ criteriaReviewed: true, confirmed: true, items, evidence }).reason, 'not-canonical-candidate');
+  for (const confirmed of [undefined, null, false]) {
+    const closed = evaluateProposedCertificate({ criteriaReviewed: true, confirmed, items: rubric.items, evidence: [] });
+    assert.equal(closed.issuable, false, String(confirmed));
+    assert.equal(closed.confirmed, false);
+  }
+  assert.equal(evaluateProposedCertificate({ criteriaReviewed: true, confirmed: false, items, evidence }).reason, 'not-canonical-candidate');
+  assert.equal(evaluateProposedCertificate({ criteriaReviewed: false, items: rubric.items, evidence }).reason, 'criteria-awaiting-review');
+  assert.equal(evaluateProposedCertificate({ criteriaReviewed: true, confirmed: true, items: [], evidence }).reason, 'no-criteria');
+  const sparse = [rubric.items[0], , rubric.items[1]];
+  assert.equal(evaluateProposedCertificate({ criteriaReviewed: true, confirmed: true, items: sparse, evidence }).reason, 'not-canonical-candidate');
+  const foreign = [{ ...evidence[0], rubricId: 'other-rubric', itemId: rubric.items[0].id }];
+  assert.equal(itemSatisfied(foreign, rubric.items[0].id), false);
+  assert.equal(itemSatisfied([{ ...evidence[0], rubricId: undefined }], rubric.items[0].id), false);
   const full = rubric.items.map((it, i) => acceptAssessmentEvent(event({ itemId: it.id, evidenceId: ('obj-full-' + i).padEnd(8, '0') })).evidence);
+  const hypothetical = evaluateProposedCertificate({ criteriaReviewed: true, confirmed: true, items: rubric.items, evidence: full });
+  assert.equal(hypothetical.issuable, true);
+  assert.equal(hypothetical.reason, 'objective-evidence');
+  assert.equal(hypothetical.confirmed, true);
+  const omitted = evaluateProposedCertificate({ criteriaReviewed: true, items: rubric.items, evidence: full });
+  assert.equal(omitted.issuable, false);
+  assert.equal(omitted.reason, 'criteria-not-confirmed');
   const record = { ...emptyRecord(), evidence: full };
-  const flipped = { ...rubric, criteriaReviewed: true, reviewStatus: 'reviewed' };
+  const flipped = { ...rubric, criteriaReviewed: true, reviewStatus: 'reviewed', confirmed: true };
   const decision = certificateDecision(record, flipped);
   assert.equal(decision.issuable, false);
   assert.equal(decision.reason, 'criteria-awaiting-review');
@@ -238,14 +254,24 @@ test('sample PDF is landscape, watermarked, and does not turn a sample into an i
   assert.match(Buffer.from(marked).toString('latin1'), /SAMPLE/);
   assert.equal(modelNeedsWatermark(sampleModel()), true);
   const issued = renderCertificatePdf({
-    ...sampleModel({ displayName: 'Ada', now: T }),
+    displayName: 'Ada',
+    nameEntered: true,
     sample: false,
     issuable: true,
+    earned: true,
     kicker: 'Record',
-    statement: ['This rule-test file is the issued layout seam.'],
-    disclaimers: ['Kept on this device.'],
+    brand: 'ALEF',
+    subtitle: 'Beginner reading',
+    disclaimer: 'Kept on this device.',
+    artNote: 'Temporary layout.',
+    dateLabel: 'Preview date: 6 November 2026 UTC',
   });
-  assert.doesNotMatch(Buffer.from(issued).toString('latin1'), /SAMPLE/);
+  const issuedText = Buffer.from(issued).toString('latin1');
+  assert.match(issuedText, /SAMPLE/);
+  assert.match(issuedText, /NOT EARNED/);
+  assert.equal(modelNeedsWatermark(undefined), true);
+  assert.equal(modelNeedsWatermark(null), true);
+  assert.equal(modelNeedsWatermark({ sample: false, issuable: true }), true);
   const hebrew = renderCertificatePdf(sampleModel({ displayName: 'שלום', now: T }));
   assert.match(Buffer.from(hebrew).toString('latin1'), /\?/);
   assert.equal(pdfLiteral('a(b)\\c'), '(a\\(b\\)\\\\c)');

@@ -44,9 +44,18 @@ Rejected: `completed`, `lessonComplete`, `selfMarked`, `win`, `xp`, `passed`, an
 
 There is no function that turns a completion flag into an award. The page does not offer a control that submits a fake pass.
 
-`evaluateProposedCertificate` is a pure check. The page calls `certificateDecision`, which passes `confirmed: false` and does not issue. `confirmed: false` is not issuable even when `criteriaReviewed` is passed as true. That flag is not approval. `CRITERIA_REVIEWED` stays false.
+`evaluateProposedCertificate` does not issue unless `confirmed` is the boolean true, `criteriaReviewed` is the boolean true, the item list is exactly the shipped 40-id candidate with no holes or substitutions, and every item has objective evidence whose `rubricId` is `beginner-white-v1`. Omitted, null, and false `confirmed` do not issue. A short, empty, or rewritten list is not that candidate. The page calls `certificateDecision`, which passes `confirmed: false`, and `CRITERIA_REVIEWED` stays false, so this hypothetical check does not unlock a certificate.
 
-`source` and `trust` on an event are strings the caller wrote. Comparing them to `assessment-engine` and `objective` does not identify the caller and is not authentication. Stored evidence is local-only in `awards.v1`. It has no learner id, no key, and no network send. Copying the record to another browser is still just local data. This document does not claim the record can detect tampering.
+`source` and `trust` on an event are strings the caller wrote. Comparing them to `assessment-engine` and `objective` does not identify the caller and is not authentication. Evidence from a different `rubricId` does not satisfy an item. Stored evidence is local-only in `awards.v1`. It has no learner id, no key, and no network send. Copying the record to another browser is still just local data. This document does not claim the record can detect tampering.
+
+Every PDF this module writes is a sample. Passing `sample: false` or `issuable: true` still prints SAMPLE / NOT EARNED. There is no non-sample export until a separate issuance design is reviewed.
+
+## Unresolved choices
+
+Not decided here:
+
+- A later miss under a new evidence id does not clear an earlier `correct: true`. Whether a miss replaces a pass is a mastery rule for a later review.
+- Which of the three draft bars is the checklist, whether a word id should follow the Hebrew string instead of `word:<lesson>:<index>`, and whether evidence needs a question id, are curriculum corrections for MAIN. This lane does not adopt them.
 
 ## Proposal for MAIN criteria review
 

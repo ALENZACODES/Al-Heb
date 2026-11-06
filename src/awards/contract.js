@@ -88,6 +88,7 @@ export function acceptAssessmentEvent(event) {
 export function itemSatisfied(evidence, itemId) {
   return (evidence || []).some((e) => e
     && e.itemId === itemId
+    && e.rubricId === RUBRIC_ID
     && e.correct === true
     && e.trust === TRUSTED_TRUST
     && e.source === TRUSTED_SOURCE

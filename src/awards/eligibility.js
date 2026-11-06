@@ -5,8 +5,24 @@
 
 import { itemSatisfied } from './contract.js';
 import { observeGames } from './observe.js';
-import { CRITERIA_REVIEWED, REVIEW_STATUS } from './rubric.js';
+import { CRITERIA_REVIEWED, REVIEW_STATUS, RUBRIC_ID, deriveBeginnerRubric } from './rubric.js';
 import { cleanRecord, readAwards, toStored, writeAwards } from './record.js';
+import { lessons as shippedLessons, belts as shippedBelts } from '../curriculum/lessons.js';
+
+/** Ids of the shipped white-belt proposal. Not a reviewed standard. A shorter or edited list is not this candidate. */
+export const CANONICAL_CANDIDATE_IDS = Object.freeze(
+  deriveBeginnerRubric({ lessons: shippedLessons }, shippedBelts).items.map((it) => it.id),
+);
+
+function isCanonicalCandidate(items) {
+  if (!Array.isArray(items) || items.length !== CANONICAL_CANDIDATE_IDS.length) return false;
+  for (let i = 0; i < items.length; i++) {
+    if (!Object.prototype.hasOwnProperty.call(items, i)) return false;
+    const it = items[i];
+    if (!it || it.id !== CANONICAL_CANDIDATE_IDS[i]) return false;
+  }
+  return true;
+}
 
 export const PRACTICE_BADGES = Object.freeze([
   {
@@ -76,22 +92,25 @@ export function planPractice(record, games, now) {
 }
 
 /**
- * Pure certificate rule. `criteriaReviewed` must be exactly true, and every item needs an
- * objective correct event. An empty item list does not pass. `confirmed: false` never issues,
- * even when the reviewed flag is true. Omitting `confirmed` leaves the older pure check in place
- * for a hypothetical call. This function does not write, and the page does not use it to issue.
+ * Pure certificate rule. Does not write. The page does not call this to issue.
+ * `confirmed` must be the boolean true. Omitted, null, and false do not issue.
+ * `items` must be the shipped white-belt candidate, in order, with no holes and no substitutions.
+ * A shorter, empty, or rewritten list is not that candidate. `CRITERIA_REVIEWED` stays false,
+ * and `certificateDecision` always passes `confirmed: false`, so this does not unlock issuance.
  */
 export function evaluateProposedCertificate({ criteriaReviewed, confirmed, items, evidence }) {
   const required = Array.isArray(items) ? items : [];
   const ev = Array.isArray(evidence) ? evidence : [];
   const satisfied = required.filter((it) => it && itemSatisfied(ev, it.id));
   const missing = required.filter((it) => it && !itemSatisfied(ev, it.id));
-  const base = { satisfied: satisfied.length, required: required.length, missingIds: missing.map((it) => it.id) };
-  if (!required.length) return { issuable: false, confirmed: false, reason: 'no-criteria', ...base };
-  if (criteriaReviewed !== true) return { issuable: false, confirmed: false, reason: 'criteria-awaiting-review', ...base };
-  if (missing.length) return { issuable: false, confirmed: confirmed === true, reason: 'evidence-missing', ...base };
-  if (confirmed === false) return { issuable: false, confirmed: false, reason: 'criteria-not-confirmed', ...base };
-  return { issuable: true, confirmed: confirmed === true, reason: 'objective-evidence', ...base };
+  const base = { satisfied: satisfied.length, required: required.length, missingIds: missing.map((it) => it && it.id).filter(Boolean) };
+  const confirmedOk = confirmed === true;
+  if (!required.length) return { issuable: false, confirmed: confirmedOk, reason: 'no-criteria', ...base };
+  if (!isCanonicalCandidate(items)) return { issuable: false, confirmed: confirmedOk, reason: 'not-canonical-candidate', ...base };
+  if (criteriaReviewed !== true) return { issuable: false, confirmed: confirmedOk, reason: 'criteria-awaiting-review', ...base };
+  if (missing.length) return { issuable: false, confirmed: confirmedOk, reason: 'evidence-missing', ...base };
+  if (!confirmedOk) return { issuable: false, confirmed: false, reason: 'criteria-not-confirmed', ...base };
+  return { issuable: true, confirmed: true, reason: 'objective-evidence', ...base };
 }
 
 /**
@@ -118,8 +137,8 @@ export function certificateDecision(record, rubric) {
 
 export function evidenceLabel(item, evidence) {
   const rows = (evidence || []).filter((e) => e && e.itemId === item.id);
-  const pass = rows.some((e) => e.correct === true && e.trust === 'objective');
-  const fail = rows.some((e) => e.correct === false);
+  const pass = rows.some((e) => e.correct === true && e.trust === 'objective' && e.rubricId === RUBRIC_ID);
+  const fail = rows.some((e) => e.correct === false && e.rubricId === RUBRIC_ID);
   if (pass) return { state: 'recorded', text: 'Objective correct answer recorded. The criteria are still awaiting review, so this does not earn a certificate.' };
   if (fail) return { state: 'not-correct', text: 'An objective answer was recorded as not correct. That does not earn this item. Evidence missing for a pass.' };
   return { state: 'missing', text: 'Evidence missing.' };

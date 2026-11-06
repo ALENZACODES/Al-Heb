@@ -104,9 +104,9 @@ function wrap(text, width) {
   return lines;
 }
 
-/** Watermark unless a caller has an issued, non-sample model. The page never builds one of those. */
-export function modelNeedsWatermark(model) {
-  return !(model && model.issuable === true && model.sample !== true);
+/** Every PDF from this helper is a sample. There is no non-sample export until a reviewed issuance design exists. */
+export function modelNeedsWatermark(_model) {
+  return true;
 }
 
 /** Note when the PDF cannot draw the typed name. The HTML certificate still shows it. */

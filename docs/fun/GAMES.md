@@ -12,7 +12,7 @@ XP (joyful only): **+1** micro · **+3** lesson exit · **+5** drill PB. Sacred 
 - **Skill:** Assemble א+ב+א; meet niqqud; survive first fade.  
 - **Play:** ~7 beats, &lt;60s, no hearts.  
 - **Win:** Word built + fade seen.  
-- **Finish order:** haptic → large Hebrew → accuracy+time → Day-1 streak → share card → Save (Create profile | Later equal) → personalise.  
+- **Finish order (t1040u):** gratitude → large Hebrew → accuracy+time → Day-1 streak → share card → Save (Create profile | Later equal) → personalise.  
 - **Route:** `#/firstwin`  
 - **Register:** Joyful.
 

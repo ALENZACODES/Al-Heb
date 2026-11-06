@@ -51,7 +51,7 @@ test('More sheet model: open groups hold only v0 pages; every available static p
     const prev = previewGroups(ROUTES, av);
     for (const g of prev) { assert.ok(en[g.noteKey], g.noteKey); for (const r of g.items) assert.equal(r.tier, 'preview'); }
     const listed = new Set([...open, ...prev.flatMap((g) => g.items)].map((r) => r.name));
-    for (const r of ROUTES) if (isStatic(r) && av.has(r.name) && r.name !== 'welcome' && !PREVIEW_HIDDEN.has(r.name)) assert.ok(listed.has(r.name), `${r.name} not in the sheet`);
+    for (const r of ROUTES) if (isStatic(r) && av.has(r.name) && r.name !== 'welcome' && r.name !== 'firstwin' && !PREVIEW_HIDDEN.has(r.name)) assert.ok(listed.has(r.name), `${r.name} not in the sheet`);
     for (const n of PREVIEW_HIDDEN) assert.ok(!listed.has(n), `${n} is triaged hidden but still in the sheet`);
   }
   for (const s of SECTIONS) assert.ok(en['nav.preview.note.' + s.id], 'note for ' + s.id);

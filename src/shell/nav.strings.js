@@ -21,7 +21,7 @@ export const NAV_EN = {
   'nav.route.time-budget': 'Time budget',
   'nav.route.daily': 'Daily goal and quests',
   'nav.accessibility': 'Accessibility',
-  'nav.route.welcome': 'Welcome', 'nav.route.how': 'How this works', 'nav.route.search': 'Search',
+  'nav.route.welcome': 'Welcome', 'nav.route.firstwin': 'Your first Hebrew word', 'nav.route.how': 'How this works', 'nav.route.search': 'Search',
   'nav.route.traditions-guide': 'Which pronunciation style should I learn?', 'nav.route.traditions-hear': 'Hear the difference',
   'search.title': 'Search', 'search.label': 'Search pages, letters and words',
   'search.hint': 'Try a page name, a letter name such as bet, a Hebrew letter or word, or an English word.',

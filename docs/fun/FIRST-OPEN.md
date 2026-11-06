@@ -1,4 +1,4 @@
-# ALEF — First open (LOCKED t1039u)
+# ALEF — First open (LOCKED t1040u)
 
 **Formula:** value before ask — a **real win in under 60 seconds** → designed celebration.  
 **Order:** **TRY → SAVE → PERSONALISE.** Never account, paywall, or tour before the win.
@@ -11,20 +11,33 @@
 1. **Joyful game** — drills, letter builds, sprints (light XP/seeds OK).  
 2. **Reverent quiet** — prayer lines, siyum, sacred close (speak last lines, gratitude, open next). **No XP, no mascots, no streak fireworks on sacred text.**
 
+**Source:** Best App Starts research (t1040u). Open questions → `docs/fun/OPEN-QUESTIONS.md`. Steal table → `docs/fun/STEALS.md`.
+
 ---
 
-## Minute one (0:00–0:60) — own the first five minutes of Hebrew
+## Seconds 0–3 — splash *is* the product (Calm + Sefaria)
 
-Hebrew “start” is unowned in the market. ALEF owns it by making the first minute a **construction win**, not a questionnaire.
+- Cream card. No logo wait. No sign-up.  
+- Letters of **שָׁלוֹם** assemble **right-to-left** while native/fallback audio says the word.  
+- One line: “You just heard your first Hebrew word.” → **Begin** (or auto-advance ~3s).  
+- Kavod at the threshold — then the short routing screens.
 
-### Cold start (0–5s)
-- Splash = the product: cream card, ALEF + אלף (DOM text).  
-- One line: **“Build your first Hebrew word.”**  
-- No goal quiz, no denomination, no tradition ask, no permissions yet.  
-- Auto or one tap → `#/firstwin` (Minute One).
+## Seconds 3–~45 — at most 4 pre-lesson screens (every answer changes the next)
 
-### Inside the lesson (~30–40s of real play; Duolingo-shaped)
-Hebrew on screen within ~5s. About **7 quick beats**, no fail-state hearts:
+No account, no paywall, no permissions, no “how did you hear about us.” Progress dots only.
+
+| # | Screen | Steal | Effect on next |
+|---|--------|-------|----------------|
+| 1 | **What brings you to Hebrew?** Prayer / Talk / Family / Bible | Headspace | Framing + Busuu promise target change |
+| 2 | **Can you read Hebrew letters?** Not yet / Slowly / Yes | Brilliant self-select | Routes copy; **not** a fail placement test |
+| 3 | **How much time a day?** 3 / 5 / 10 (default 5) | Busuu | Live date: “At 5 min/day you will [target] by [date]” |
+| 4 | (implicit) Start first lesson | — | → Minute One builder |
+
+Minute One **word stays אַבָּא** for everyone (construction win). Motivation changes framing and the concrete plan date, not the Identity Test.
+
+## Inside the lesson (~30–40s of real play)
+
+Hebrew build within seconds of entering the lesson. About **7 quick beats**, no fail-state hearts:
 
 | # | Beat | Skill |
 |---|------|--------|
@@ -33,51 +46,43 @@ Hebrew on screen within ~5s. About **7 quick beats**, no fail-state hearts:
 | 3 | Tap **ב** | Bet |
 | 4 | Tap final **א** | Build א+ב+א → אבא |
 | 5 | Confirm the word with **niqqud on** (אַבָּא) | Vowels as helpers |
-| 6 | **Fade:** points dim; bare **אבא** still readable | First fade |
-| 7 | Hear (tradition default Israeli for minute one) → optional Say → Done | Production |
+| 6 | **Fade:** points dim; bare **אבא** still readable | First fade (“Dots help you read — they'll fade…”) |
+| 7 | Hear (Israeli default for minute one) → optional Say → Done | Production |
 
-Wrong tile: soft shake + “try the other one” — **never** a heart loss, never session-kill. Skip-sound path equal dignity.
+Wrong tile: soft shake + “try the other one” — **never** a heart loss. Skip-sound path equal dignity.
 
-**Win condition:** אבא assembled and fade seen (Say optional). Elapsed target &lt; 60s.
-
-### Steal (what we take, not copy)
-| Source | Steal | ALEF fit |
-|--------|-------|----------|
-| Duolingo | Hebrew fast; ~7 micro-Qs; lesson before account | Minute One builder |
-| Finch | Emotional hatch/name &lt;40s; never dies | Celebration tone; no shame streak |
-| Drops | Visual / zero-translation beats | Letter tiles before English gloss |
-| Calm | Splash = product; quote-card finish | Shareable end card |
-| Busuu | Concrete study-plan date | After save: “Your plan starts …” |
-| Babbel | Permissions at peak motivation | Mic/haptics asks *after* win |
-| Pimsleur | Spoken day one | Hear → Say beat 7 |
+**Win condition:** אבא assembled and fade seen (Say optional). Elapsed target &lt; 60s of *lesson* play (splash + ≤4 screens sit just before).
 
 ---
 
 ## Finish order (exact — do not reorder)
 
-After the win, run this sequence **once**:
+Siyum heart + Duolingo chain. **One haptic only**, timed to the streak/reveal.
 
-1. **Haptic celebration** (if haptics allowed / not reduced-motion; else visual pulse only).  
-2. **Hebrew words learned** shown large: **אַבָּא / אבא** (+ gloss “dad / papa” in smaller muted English).  
-3. **Accuracy + time** — plain, kind: e.g. “7 of 7 · 42 seconds” (never a public rank).  
-4. **Day-1 streak created** — calm copy: “Day 1 — you showed up.” No shame language. Shabbat freeze rules still apply later.  
-5. **Calm-style shareable card** — cream card with the Hebrew word + one line (“My first Hebrew word on ALEF”). Share/download optional; not required.  
-6. **ONLY THEN — “Save your progress”**  
-   - **Create profile** and **Later** as **equal-weight** buttons (same visual weight).  
-   - Create profile = local name/backup export path (no forced cloud account in this build).  
-   - Later = continue with device storage; can save anytime in Settings.  
-7. **THEN personalise** (tradition / goal / minutes) — short, skippable; Israel goal may lock Israeli pronunciation.
+1. **Gratitude** (siyum) — thankfulness / the text first; not “YOU CRUSHED IT +XP.”  
+2. **Hebrew words learned LARGE:** **אַבָּא / אבא** (+ muted gloss). “Four minutes ago, these were just shapes.”  
+3. **Accuracy + time** — kind; words already led (Chess.com: best first).  
+4. **Day-1 streak created** — Finch: “Day 1 of your seder is lit. A missed day never shames you — your place stays held.” **← sole haptic.**  
+5. **Calm-style shareable card** — cream card, the Hebrew word + one line. Not a score screenshot.  
+6. **Open next in the same breath (siyum / Zeigarnik):** greyed **אִמָּא** tease — tomorrow completes the family.  
+7. **ONLY THEN — “Save your progress”**  
+   - **Create profile** and **Later** as **equal-weight** buttons.  
+   - Later = genuinely guilt-free device storage.  
+8. **THEN personalise** (`#/welcome?personalise=1`) — tradition / deeper goals; short, skippable.
 
-Permissions (mic, motion, notifications): ask only at peak motivation — after step 6 if the learner chose Create profile or started Say with mic.
+Permissions (mic, motion, notifications): Babbel-style — only at peak motivation after Save if Create profile or Say with mic.
+
+**Sacred register later:** no XP / mascots / streak fireworks on prayer text. Hadran gratitude → celebrate → open next unit.
 
 ---
 
 ## After minute one — Home
 - Primary CTA remains a doorway (“Speak today — about a minute” / Continue).  
-- Today’s Mix, quests, Detective, Album: **progressive depth** — still hidden until spoken-turn thresholds.  
-- Questionnaire-heavy `#/welcome` becomes **Personalise** after the win, not the cold start.
+- Today’s Mix, quests, Detective, Album: **progressive depth**.  
+- Questionnaire-heavy `#/welcome` is **Personalise after the win**, not the cold start.  
+- Pre-lesson motivation/level/minutes are stored on `firstwin.routing` for plan copy.
 
 ## Identity / freeze checks
-- Swapping cast art or production voices would still feel like ALEF only if mechanics carry it — **do not swap**.  
-- Feather-green / owl / Duo UI patterns = research, not skin.  
-- Prayer karaoke later uses **reverent register** (no seed burst on Amen).
+- Do not swap Ari/Noa/Rimon or production voices.  
+- Feather-green / owl / Duo UI = research, not skin.  
+- Prayer karaoke uses **reverent register** (no seed burst on Amen).

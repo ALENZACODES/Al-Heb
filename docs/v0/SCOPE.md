@@ -10,6 +10,7 @@ the v0 list below matches the code, so edit both together.
 One line per route; the backtick name is the route `name` in `ROUTES` (the test parses these lines).
 
 - `welcome` (/welcome) - first-run onboarding: pick tradition and script, then land on Home.
+- `firstwin` (/firstwin) - Minute One cold start: splash שָׁלוֹם, short routing, build אַבָּא, then Save (Create profile | Later).
 - `home` (/) - Home with the Today card; the only landing page.
 - `firstday` (/firstday) - the on-ramp: "your first 10 minutes" before lesson 1.
 - `learn` (/learn) - the lesson path r01 to r10 and, with `?review=1`, the spaced review of due cards (review has no separate route).

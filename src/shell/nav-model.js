@@ -13,7 +13,7 @@ export const SECTIONS = [
 
 /** Route names per section, in display order. */
 export const SECTION_ROUTES = {
-  learn: ['home', 'firstday', 'learn', 'letters', 'atlas', 'letter', 'sounds', 'rules', 'rules-page', 'loanwords', 'loanword', 'spotit', 'checkpoint',
+  learn: ['home', 'firstwin', 'firstday', 'learn', 'letters', 'atlas', 'letter', 'sounds', 'rules', 'rules-page', 'loanwords', 'loanword', 'spotit', 'checkpoint',
     'ladder', 'fade', 'fadeline', 'scaffold', 'gender', 'roles', 'firstday-ladder', 'vocab', 'vocab-themes', 'sprint', 'wordtrace', 'dialogues', 'dialogue',
     'israel', 'israelsec', 'intermediate', 'intermediatelesson', 'grammar', 'grammartopic', 'typing', 'classtrack', 'classtrackweek', 'classtrackmode',
     'soundgap', 'vowelboard', 'niqquddial', 'dottile', 'syllablechips', 'nikkud-fade', 'roots', 'gender-drill', 'scheduler', 'known-words'],
@@ -34,7 +34,7 @@ export const PARENT = {
 };
 
 /** Hidden from the menu (still searchable): first-run onboarding. */
-const MENU_HIDDEN = new Set(['welcome']);
+const MENU_HIDDEN = new Set(['welcome', 'firstwin']);
 /**
  * Lean v0 (docs/v0/PREVIEW-TRIAGE.md): the lowest-value preview pages are kept out of the More sheet's Preview group and Home's
  * "More ways to learn" so a new learner meets fewer half-finished screens. They still open by direct link, still carry the Preview

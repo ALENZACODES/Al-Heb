@@ -24,13 +24,14 @@ export function buildRequest({ text, voice, ssml = false, speakingRate, env: e =
   if (e.GOOGLE_TTS_ACCESS_TOKEN) headers.Authorization = `Bearer ${e.GOOGLE_TTS_ACCESS_TOKEN}`;
   else if (e.GOOGLE_TTS_API_KEY) headers['X-Goog-Api-Key'] = e.GOOGLE_TTS_API_KEY;
   else throw new Error('google: set GOOGLE_TTS_API_KEY or GOOGLE_TTS_ACCESS_TOKEN');
+  if (name.includes('Chirp3') && ssml) throw new Error('google: Chirp 3 HD requires plain text, not SSML');
   const payload = ssml ? `<speak>${esc(text)}</speak>` : text;
   const body = {
     input: ssml ? { ssml: payload } : { text: payload },
     voice: { languageCode: lang, name },
-    audioConfig: { audioEncoding: outputFormat, ...(speakingRate ? { speakingRate } : {}) },
+    audioConfig: { audioEncoding: outputFormat, ...(!name.includes('Chirp3') && speakingRate ? { speakingRate } : {}) },
   };
-  return { url: 'https://texttospeech.googleapis.com/v1/text:synthesize', method: 'POST', headers, body: JSON.stringify(body), billedChars: payload.length, voiceName: name, languageCode: lang };
+  return { url: 'https://texttospeech.googleapis.com/v1/text:synthesize', method: 'POST', headers, body: JSON.stringify(body), billedChars: text.length, voiceName: name, languageCode: lang, usdPerMillionChars: name.includes('Chirp3') ? 30 : 16 };
 }
 export async function parseResponse(res) {
   if (!res.ok) throw new Error(`google: HTTP ${res.status} ${await res.text()}`);

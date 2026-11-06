@@ -62882,6 +62882,364 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "PLACE_telaviv_04": {
+   "id": "PLACE_telaviv_04",
+   "file": "PLACE_telaviv_04.png",
+   "command": 201,
+   "set": "Tel Aviv–Jaffa",
+   "block": "N",
+   "prompt": "Command 201 (Tel Aviv–Jaffa): A white Bauhaus building with curved balconies; a beach boulevard with palms and cyclists; an old port with fishing boats (Jaffa side); a clock tower on a rise above old streets (clock face blank, hands only); a flea-market lane of furniture and rugs (no signs); a boulevard of ficus trees with benches; a beach at sunset with a lifeguard tower; a modern tower cluster seen from the beach (distant, generic); a café row under awnings at night with string lights; a hilltop view where the old port meets the new skyline across the bay. Image 4 of 10: a clock tower on a rise above old streets (clock face blank, hands only). Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "8e344a99a4847d7e3d2a425100730a57bcd8ba8fa894d99e63d0bbe335ad2954",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:51:24.884Z",
+   "sourceFile": "img-0023.png",
+   "sourceFileDate": "2026-11-06T21:51:24.599Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "0b9fafcf5ebe2901d751c8d1871a5ee85befd1b530c52cfc78244c9cb335ef1b",
+   "originalFormat": "PNG",
+   "originalBytes": 206396,
+   "originalFile": "PLACE_telaviv_04.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_telaviv_04.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 35102
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "CTX_clothes_04": {
+   "id": "CTX_clothes_04",
+   "file": "CTX_clothes_04.png",
+   "command": 231,
+   "set": "Clothing in context",
+   "block": "Q",
+   "prompt": "Command 231 (Clothing in context): A shop window of summer dresses on blank mannequins; trying on a hat before a mirror; a tailor pinning a trouser hem; wet shoes lined up by a door on a rainy day; a laundry line of shirts over an alley; a scarf being chosen from a market rail; a suit jacket on a chair before a wedding (flowers nearby); children sized for new school shoes (feet measured with a wooden measure, no numbers); a coat handed to a guest at a door; Rimon trying on a tiny knitted kippah before a mirror. Image 4 of 10: wet shoes lined up by a door on a rainy day. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "a9f6b2c96daa92b045ec1643baa6c3db3adacdc263331bffed734cbce74df99b",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:51:24.884Z",
+   "sourceFile": "img-0356.png",
+   "sourceFileDate": "2026-11-06T21:51:24.597Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "c45e2b00ed69b1dd540322301685c022b42117c5f1e5de4f8506dd6d97c5898a",
+   "originalFormat": "PNG",
+   "originalBytes": 190613,
+   "originalFile": "CTX_clothes_04.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "CTX_clothes_04.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 29114
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "any",
+      "conf": 87.4,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "MORN_card_01": {
+   "id": "MORN_card_01",
+   "file": "MORN_card_01.png",
+   "command": 241,
+   "set": "Morning card art",
+   "block": "R",
+   "prompt": "Command 241 (Morning card art): Ten wide 1792×1024 gentle dawn scenes for the daily morning card (the Modeh Ani feature), each with a large calm blank space in the lower third where the day's quote is typeset later: sunrise over Jerusalem rooftops; sunrise over the sea at Tel Aviv; first light in a Galilee valley; a rooster on a farm fence at dawn; light through a bedroom window with a plant on the sill; a kitchen at dawn with a kettle just steaming; dew on a pomegranate leaf close up; birds leaving a tree against a pink sky; a synagogue window catching first light; a path through fields at first light with a distant figure walking. Files MORN_card_01 … _10. Image 1 of 10: sunrise over Jerusalem rooftops. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "14df0c80f49a30013a479740f82e0e3d6882f2359b3b0b476c65a87137d7b79d",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:51:24.884Z",
+   "sourceFile": "img-0372.png",
+   "sourceFileDate": "2026-11-06T21:51:24.436Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "786030d3c3fff2768ed4d1d924deccc64be43d9b0ac4b96a38a778d72e65fc65",
+   "originalFormat": "PNG",
+   "originalBytes": 150744,
+   "originalFile": "MORN_card_01.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "MORN_card_01.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 16892
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_telaviv_01": {
+   "id": "PLACE_telaviv_01",
+   "file": "PLACE_telaviv_01.png",
+   "command": 201,
+   "set": "Tel Aviv–Jaffa",
+   "block": "N",
+   "prompt": "Command 201 (Tel Aviv–Jaffa): A white Bauhaus building with curved balconies; a beach boulevard with palms and cyclists; an old port with fishing boats (Jaffa side); a clock tower on a rise above old streets (clock face blank, hands only); a flea-market lane of furniture and rugs (no signs); a boulevard of ficus trees with benches; a beach at sunset with a lifeguard tower; a modern tower cluster seen from the beach (distant, generic); a café row under awnings at night with string lights; a hilltop view where the old port meets the new skyline across the bay. Image 1 of 10: A white Bauhaus building with curved balconies. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "f3a69a53265e548bb38afe783b97a31a67f45c6ccfbcfb13788dc76d69dfd280",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:51:24.884Z",
+   "sourceFile": "img-0623.png",
+   "sourceFileDate": "2026-11-06T21:51:24.542Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "f1b0a76af92f93671162b395372d6bbcc8d3b95cd6cff0d48f48568842a169c3",
+   "originalFormat": "PNG",
+   "originalBytes": 200996,
+   "originalFile": "PLACE_telaviv_01.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_telaviv_01.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 32852
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_telaviv_06": {
+   "id": "PLACE_telaviv_06",
+   "file": "PLACE_telaviv_06.png",
+   "command": 201,
+   "set": "Tel Aviv–Jaffa",
+   "block": "N",
+   "prompt": "Command 201 (Tel Aviv–Jaffa): A white Bauhaus building with curved balconies; a beach boulevard with palms and cyclists; an old port with fishing boats (Jaffa side); a clock tower on a rise above old streets (clock face blank, hands only); a flea-market lane of furniture and rugs (no signs); a boulevard of ficus trees with benches; a beach at sunset with a lifeguard tower; a modern tower cluster seen from the beach (distant, generic); a café row under awnings at night with string lights; a hilltop view where the old port meets the new skyline across the bay. Image 6 of 10: a boulevard of ficus trees with benches. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "96a1ef694e945992d4bbbaf4e73c7ca4bed4e1eacd695ed58de0c1ed0846e1f2",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:51:24.884Z",
+   "sourceFile": "img-1122.png",
+   "sourceFileDate": "2026-11-06T21:51:24.534Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "13695d61830b8dd57bcb7b56740250c60c38b17c8fb5819ae7992eb8bd9138a8",
+   "originalFormat": "PNG",
+   "originalBytes": 239718,
+   "originalFile": "PLACE_telaviv_06.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_telaviv_06.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 44496
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_compare_07": {
+   "id": "GRAM_compare_07",
+   "file": "GRAM_compare_07.png",
+   "command": 215,
+   "set": "Comparatives",
+   "block": "O",
+   "prompt": "Command 215 (Comparatives): Two towers, one taller, a gold ribbon measuring both; two cups of tea, one steaming more; two bags, one heavier on a sagging arm; a small hill vs a great mountain with the same hiker figure for scale; two candles, one brighter with larger glow; two loaves, one fresher with a crisp crust sheen; the same road shorter through a tunnel vs longer over the hill (one wide image); two dogs, one faster shown with motion lines (plain curves, no text); a young tree vs the same tree grown (pair = 2 images). Count check: 8 singles + 1 pair (2) = 10. Image 7 of 10: the same road shorter through a tunnel vs longer over the hill (one wide image). Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "ba50606df422c7070686e34ae52d9451b47f723c97ad9d4683e120f1d4a85569",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:51:24.884Z",
+   "sourceFile": "img-1225.png",
+   "sourceFileDate": "2026-11-06T21:51:24.451Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "68f3f7147c7eb5a70cdcabe9dde1043d7da181979bed3fc3c590566e5686d791",
+   "originalFormat": "PNG",
+   "originalBytes": 134279,
+   "originalFile": "GRAM_compare_07.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_compare_07.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 11712
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HERO_night_09": {
+   "id": "HERO_night_09",
+   "file": "HERO_night_09.png",
+   "command": 194,
+   "set": "Night, travel & healing texts",
+   "block": "M",
+   "prompt": "Command 194 (Night, travel & healing texts): Bedtime Shema — a child in bed with a parent reading from a blank book by lamplight; angels of the night — four soft points of light around a bed (abstract, comforting); the Traveler's Prayer — a road opening between hills at dawn with a small figure and a staff; a safe arrival — the same figure at a lit gate at dusk; Mi Sheberach — hands holding a small bowl of water beside a resting elder, window open to a garden; a community circle of chairs with one empty chair draped with a tallit (for the absent sick, gentle); stars over a sleeping town; a guardian lamp in a hallway; a boat crossing calm water toward a lighthouse; home again — a door opening into warm light. Image 9 of 10: a boat crossing calm water toward a lighthouse. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "5f4ed1d7cfc4b49a48f5c328fe6c9f8eecdf25e2c145ff56fa4b90e96f2e106a",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:51:24.884Z",
+   "sourceFile": "img-1411.png",
+   "sourceFileDate": "2026-11-06T21:51:24.425Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "63ec1a4199affdc2caaad701292be0b6929a89e418675549d978b99551f1bff7",
+   "originalFormat": "PNG",
+   "originalBytes": 163502,
+   "originalFile": "HERO_night_09.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HERO_night_09.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 20162
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

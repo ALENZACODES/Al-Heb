@@ -5606,6 +5606,38 @@
    "forcedDespite": [
     "contains_text"
    ]
+  },
+  "PLACE_telaviv_04": {
+   "status": "approved",
+   "at": "2026-11-06T21:51:41.335Z"
+  },
+  "MORN_card_01": {
+   "status": "approved",
+   "at": "2026-11-06T21:51:41.335Z"
+  },
+  "PLACE_telaviv_01": {
+   "status": "approved",
+   "at": "2026-11-06T21:51:41.335Z"
+  },
+  "PLACE_telaviv_06": {
+   "status": "approved",
+   "at": "2026-11-06T21:51:41.335Z"
+  },
+  "GRAM_compare_07": {
+   "status": "approved",
+   "at": "2026-11-06T21:51:41.335Z"
+  },
+  "HERO_night_09": {
+   "status": "approved",
+   "at": "2026-11-06T21:51:41.335Z"
+  },
+  "CTX_clothes_04": {
+   "status": "approved",
+   "at": "2026-11-06T21:51:42.206Z",
+   "note": "contains_text flag eye-checked at full size Nov 6: no text present (detector false positive)",
+   "forcedDespite": [
+    "contains_text"
+   ]
   }
  }
 }

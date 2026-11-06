@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 1081,
+ "count": 1088,
  "images": {
   "BADGE_01": {
    "w": 512,
@@ -1504,6 +1504,18 @@
     }
    ]
   },
+  "CTX_clothes_04": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "CTX_clothes_04.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "CTX_nature_08": {
    "w": 512,
    "h": 293,
@@ -2149,6 +2161,18 @@
      "file": "GRAM_compare_02.512.webp",
      "w": 512,
      "h": 512
+    }
+   ]
+  },
+  "GRAM_compare_07": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_compare_07.512.webp",
+     "w": 512,
+     "h": 293
     }
    ]
   },
@@ -3559,6 +3583,18 @@
      "file": "HERO_night_07.1600.webp",
      "w": 1600,
      "h": 914
+    }
+   ]
+  },
+  "HERO_night_09": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HERO_night_09.512.webp",
+     "w": 512,
+     "h": 293
     }
    ]
   },
@@ -8770,6 +8806,18 @@
     }
    ]
   },
+  "MORN_card_01": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "MORN_card_01.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "MORN_card_04": {
    "w": 512,
    "h": 293,
@@ -11176,6 +11224,18 @@
     }
    ]
   },
+  "PLACE_telaviv_01": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_telaviv_01.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_telaviv_02": {
    "w": 512,
    "h": 293,
@@ -11195,6 +11255,30 @@
     {
      "edge": 512,
      "file": "PLACE_telaviv_03.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_telaviv_04": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_telaviv_04.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_telaviv_06": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_telaviv_06.512.webp",
      "w": 512,
      "h": 293
     }

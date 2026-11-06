@@ -1,0 +1,23 @@
+/* Little books: shelf + read-along reader. Scoped to .book-* classes. */
+.book-shelf { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.book-card { display: block; text-decoration: none; color: inherit; overflow: hidden; padding: 0; }
+.book-cover { aspect-ratio: 7 / 4; background: var(--warn-bg); display: grid; place-items: center; overflow: hidden; }
+.book-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.book-cover-title { font-size: 1.5rem; padding: 1rem; text-align: center; }
+.book-meta { display: grid; gap: .2rem; padding: .75rem 1rem 1rem; }
+.book-title-he { font-size: 1.25rem; font-weight: 700; }
+.book-title-en { font-weight: 600; }
+.book-badges { font-size: .85rem; color: var(--muted); }
+
+.book-stage { display: grid; gap: .75rem; justify-items: center; text-align: center; }
+.book-page-img { width: 100%; max-inline-size: 44rem; aspect-ratio: 7 / 4; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); background: var(--card); }
+.book-page-pending { display: grid; place-items: center; }
+.book-line { font-size: 2rem; line-height: 1.5; font-weight: 700; }
+.book-translit { font-size: 1.1rem; margin: 0; }
+.book-en { margin: 0; }
+.book-listen-row { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; justify-content: center; }
+.book-listen { min-block-size: var(--tap); }
+.book-nav { display: flex; gap: 1rem; align-items: center; justify-content: space-between; width: 100%; max-inline-size: 44rem; }
+.book-dots { display: flex; gap: .4rem; justify-content: center; padding-block: .5rem; flex-wrap: wrap; }
+.book-dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--accent); background: transparent; padding: 0; cursor: pointer; }
+.book-dot.on { background: var(--accent); }

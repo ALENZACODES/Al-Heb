@@ -1,0 +1,155 @@
+{
+ "id": "book5",
+ "titleHe": "הַבַּיִת הֶחָדָשׁ",
+ "titleTranslit": "Ha-Bayit Ha-Chadash",
+ "titleEn": "The New Home",
+ "level": "Grade 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "זֶה הַסָּלוֹן.",
+   "translit": "Zeh ha-salon.",
+   "en": "This is the living room.",
+   "img": "assets/books/book5/BOOK5_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book5-p01.mp3",
+    "m": "audio/m/israeli/book/book5-p01.mp3"
+   },
+   "illustration": "a minimalist sketch of an empty room, sunlight cutting across the floor."
+  },
+  {
+   "n": 2,
+   "he": "הַשֻּׁלְחָן חָדָשׁ.",
+   "translit": "Ha-shulchan chadash.",
+   "en": "The table is new.",
+   "img": "assets/books/book5/BOOK5_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book5-p02.mp3",
+    "m": "audio/m/israeli/book/book5-p02.mp3"
+   },
+   "illustration": "a clean modern oak table standing proudly in the center of the room."
+  },
+  {
+   "n": 3,
+   "he": "הַסֵּפֶר עַל הַשֻּׁלְחָן.",
+   "translit": "Ha-sefer al ha-shulchan.",
+   "en": "The book is on the table.",
+   "img": "assets/books/book5/BOOK5_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book5-p03.mp3",
+    "m": "audio/m/israeli/book/book5-p03.mp3"
+   },
+   "illustration": "close-up of a single book resting neatly on the wooden surface."
+  },
+  {
+   "n": 4,
+   "he": "אֲנִי יוֹשֵׁב וְקוֹרֵא.",
+   "translit": "Ani yoshev ve-koreh.",
+   "en": "I sit and read.",
+   "img": "assets/books/book5/BOOK5_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book5-p04.mp3",
+    "m": "audio/m/israeli/book/book5-p04.mp3"
+   },
+   "illustration": "comfortable shoes near a wooden chair; someone settled, at peace."
+  },
+  {
+   "n": 5,
+   "he": "זֶה הַמִּטְבָּח.",
+   "translit": "Zeh ha-mitbach.",
+   "en": "This is the kitchen.",
+   "img": "assets/books/book5/BOOK5_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book5-p05.mp3",
+    "m": "audio/m/israeli/book/book5-p05.mp3"
+   },
+   "illustration": "a small bright kitchen, one plant on the counter, morning light."
+  },
+  {
+   "n": 6,
+   "he": "הַכִּסֵּא לְיַד הַשֻּׁלְחָן.",
+   "translit": "Ha-kiseh leyad ha-shulchan.",
+   "en": "The chair is beside the table.",
+   "img": "assets/books/book5/BOOK5_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book5-p06.mp3",
+    "m": "audio/m/israeli/book/book5-p06.mp3"
+   },
+   "illustration": "the chair pulled up to the oak table, ready."
+  },
+  {
+   "n": 7,
+   "he": "הַמִּטָּה בַּחֶדֶר.",
+   "translit": "Ha-mitah ba-cheder.",
+   "en": "The bed is in the room.",
+   "img": "assets/books/book5/BOOK5_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book5-p07.mp3",
+    "m": "audio/m/israeli/book/book5-p07.mp3"
+   },
+   "illustration": "a simple bed with a folded blanket, a small lamp beside it."
+  },
+  {
+   "n": 8,
+   "he": "הַחַלּוֹן גָּדוֹל. הַשֶּׁמֶשׁ בָּאָה.",
+   "translit": "Ha-chalon gadol. Ha-shemesh ba-ah.",
+   "en": "The window is big. The sun comes in.",
+   "img": "assets/books/book5/BOOK5_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book5-p08.mp3",
+    "m": "audio/m/israeli/book/book5-p08.mp3"
+   },
+   "illustration": "a wide window with sunlight pooling on the floorboards."
+  },
+  {
+   "n": 9,
+   "he": "אֲנִי יוֹשֵׁב בַּסָּלוֹן וְקוֹרֵא.",
+   "translit": "Ani yoshev ba-salon ve-koreh.",
+   "en": "I sit in the living room and read.",
+   "img": "assets/books/book5/BOOK5_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book5-p09.mp3",
+    "m": "audio/m/israeli/book/book5-p09.mp3"
+   },
+   "illustration": "the reader in the chair from page 4, book open, shoes off."
+  },
+  {
+   "n": 10,
+   "he": "הַבַּיִת חָדָשׁ. הַלֵּב שָׁקֵט.",
+   "translit": "Ha-bayit chadash. Ha-lev shaket.",
+   "en": "The house is new. The heart is quiet.",
+   "img": "assets/books/book5/BOOK5_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book5-p10.mp3",
+    "m": "audio/m/israeli/book/book5-p10.mp3"
+   },
+   "illustration": "the room at golden hour, calm and spare, one cup on the table."
+  },
+  {
+   "n": 11,
+   "he": "מָחָר אֲנִי קוֹרֵא פֹּה גַּם כֵּן.",
+   "translit": "Machar ani koreh po gam ken.",
+   "en": "Tomorrow I will read here too.",
+   "img": "assets/books/book5/BOOK5_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book5-p11.mp3",
+    "m": "audio/m/israeli/book/book5-p11.mp3"
+   },
+   "illustration": "the book left open on the table, a ribbon marking the page."
+  },
+  {
+   "n": 12,
+   "he": "זֶה הַבַּיִת שֶׁלִּי.",
+   "translit": "Zeh ha-bayit sheli.",
+   "en": "This is my home.",
+   "img": "assets/books/book5/BOOK5_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book5-p12.mp3",
+    "m": "audio/m/israeli/book/book5-p12.mp3"
+   },
+   "illustration": "the house from outside at dusk, the living-room window warm with light."
+  }
+ ],
+ "hasImages": false,
+ "hasAudio": false
+}

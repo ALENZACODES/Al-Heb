@@ -1,0 +1,54 @@
+{
+ "books": [
+  {
+   "id": "book1",
+   "titleHe": "הַקּוֹף שֶׁלֹּא יָדַע",
+   "titleTranslit": "Ha-Kof She-Lo Yado",
+   "titleEn": "The Monkey Who Didn't Know",
+   "level": "Grade 1",
+   "pageCount": 12,
+   "hasImages": true,
+   "hasAudio": false
+  },
+  {
+   "id": "book2",
+   "titleHe": "שָׁרָשִׁים שֶׁל כֶּסֶף",
+   "titleTranslit": "Shorashim shel Kesef",
+   "titleEn": "Roots of Silver",
+   "level": "Grade 1",
+   "pageCount": 12,
+   "hasImages": false,
+   "hasAudio": false
+  },
+  {
+   "id": "book3",
+   "titleHe": "מַה יֵּשׁ בַּתִּיק?",
+   "titleTranslit": "Mah Yesh Ba-Tik?",
+   "titleEn": "What's in the Bag?",
+   "level": "Grade 1",
+   "pageCount": 12,
+   "hasImages": false,
+   "hasAudio": false
+  },
+  {
+   "id": "book4",
+   "titleHe": "לַיְלָה טוֹב, תֵּל אָבִיב",
+   "titleTranslit": "Laila Tov, Tel Aviv",
+   "titleEn": "Good Night, Tel Aviv",
+   "level": "Grade 1",
+   "pageCount": 12,
+   "hasImages": false,
+   "hasAudio": false
+  },
+  {
+   "id": "book5",
+   "titleHe": "הַבַּיִת הֶחָדָשׁ",
+   "titleTranslit": "Ha-Bayit Ha-Chadash",
+   "titleEn": "The New Home",
+   "level": "Grade 1",
+   "pageCount": 12,
+   "hasImages": false,
+   "hasAudio": false
+  }
+ ]
+}

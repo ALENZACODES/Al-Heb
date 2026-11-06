@@ -1,0 +1,155 @@
+{
+ "id": "book4",
+ "titleHe": "לַיְלָה טוֹב, תֵּל אָבִיב",
+ "titleTranslit": "Laila Tov, Tel Aviv",
+ "titleEn": "Good Night, Tel Aviv",
+ "level": "Grade 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "לַיְלָה טוֹב לַשּׁוּק.",
+   "translit": "Laila tov la-shuk.",
+   "en": "Good night to the market.",
+   "img": "assets/books/book4/BOOK4_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book4-p01.mp3",
+    "m": "audio/m/israeli/book/book4-p01.mp3"
+   },
+   "illustration": "empty fruit stalls in warm amber lantern light under an indigo sky."
+  },
+  {
+   "n": 2,
+   "he": "לַיְלָה טוֹב לַיָּם.",
+   "translit": "Laila tov la-yam.",
+   "en": "Good night to the sea.",
+   "img": "assets/books/book4/BOOK4_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book4-p02.mp3",
+    "m": "audio/m/israeli/book/book4-p02.mp3"
+   },
+   "illustration": "gentle waves on the Tel Aviv coast under a silver crescent moon."
+  },
+  {
+   "n": 3,
+   "he": "הַחָתוּל הוֹלֵךְ בָּרְחוֹב.",
+   "translit": "Ha-chatul holech ba-rechov.",
+   "en": "The cat walks in the street.",
+   "img": "assets/books/book4/BOOK4_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book4-p03.mp3",
+    "m": "audio/m/israeli/book/book4-p03.mp3"
+   },
+   "illustration": "a sleek stray cat stepping softly across warm limestone pavement."
+  },
+  {
+   "n": 4,
+   "he": "הַלְּבָנָה מְאִירָה עַל הַבַּיִת.",
+   "translit": "Ha-levana mairah al ha-bayit.",
+   "en": "The moon shines upon the house.",
+   "img": "assets/books/book4/BOOK4_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book4-p04.mp3",
+    "m": "audio/m/israeli/book/book4-p04.mp3"
+   },
+   "illustration": "moonlight resting on a quiet, flat-roofed Mediterranean home."
+  },
+  {
+   "n": 5,
+   "he": "לַיְלָה טוֹב לַחָתוּל.",
+   "translit": "Laila tov la-chatul.",
+   "en": "Good night to the cat.",
+   "img": "assets/books/book4/BOOK4_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book4-p05.mp3",
+    "m": "audio/m/israeli/book/book4-p05.mp3"
+   },
+   "illustration": "the cat curled asleep on a doorstep, tail over its nose."
+  },
+  {
+   "n": 6,
+   "he": "לַיְלָה טוֹב לָרְחוֹב.",
+   "translit": "Laila tov la-rechov.",
+   "en": "Good night to the street.",
+   "img": "assets/books/book4/BOOK4_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book4-p06.mp3",
+    "m": "audio/m/israeli/book/book4-p06.mp3"
+   },
+   "illustration": "the empty street, one lamp glowing, shutters closing."
+  },
+  {
+   "n": 7,
+   "he": "לַיְלָה טוֹב לַחַלּוֹן.",
+   "translit": "Laila tov la-chalon.",
+   "en": "Good night to the window.",
+   "img": "assets/books/book4/BOOK4_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book4-p07.mp3",
+    "m": "audio/m/israeli/book/book4-p07.mp3"
+   },
+   "illustration": "one last lit window in a dark building; a plant on its sill."
+  },
+  {
+   "n": 8,
+   "he": "לַיְלָה טוֹב לָעֵץ בָּרְחוֹב.",
+   "translit": "Laila tov la-etz ba-rechov.",
+   "en": "Good night to the tree on the street.",
+   "img": "assets/books/book4/BOOK4_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book4-p08.mp3",
+    "m": "audio/m/israeli/book/book4-p08.mp3"
+   },
+   "illustration": "a street tree silvered by moonlight, leaves still."
+  },
+  {
+   "n": 9,
+   "he": "הַיָּם שָׁקֵט. הַשּׁוּק שָׁקֵט.",
+   "translit": "Ha-yam shaket. Ha-shuk shaket.",
+   "en": "The sea is quiet. The market is quiet.",
+   "img": "assets/books/book4/BOOK4_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book4-p09.mp3",
+    "m": "audio/m/israeli/book/book4-p09.mp3"
+   },
+   "illustration": "split view — flat calm sea, shuttered market stalls, same moon over both."
+  },
+  {
+   "n": 10,
+   "he": "לַיְלָה טוֹב לַבַּיִת.",
+   "translit": "Laila tov la-bayit.",
+   "en": "Good night to the house.",
+   "img": "assets/books/book4/BOOK4_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book4-p10.mp3",
+    "m": "audio/m/israeli/book/book4-p10.mp3"
+   },
+   "illustration": "the house from page 4, its windows now dark, moon higher."
+  },
+  {
+   "n": 11,
+   "he": "לַיְלָה טוֹב לִתֵל אָבִיב.",
+   "translit": "Laila tov le-Tel Aviv.",
+   "en": "Good night to Tel Aviv.",
+   "img": "assets/books/book4/BOOK4_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book4-p11.mp3",
+    "m": "audio/m/israeli/book/book4-p11.mp3"
+   },
+   "illustration": "the whole coastline at night, a curve of small lights under the moon."
+  },
+  {
+   "n": 12,
+   "he": "לַיְלָה טוֹב. חֲלוֹמוֹת טוֹבִים.",
+   "translit": "Laila tov. Chalomot tovim.",
+   "en": "Good night. Sweet dreams.",
+   "img": "assets/books/book4/BOOK4_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book4-p12.mp3",
+    "m": "audio/m/israeli/book/book4-p12.mp3"
+   },
+   "illustration": "a child's window from outside, curtains drawn, one star above the roof."
+  }
+ ],
+ "hasImages": false,
+ "hasAudio": false
+}

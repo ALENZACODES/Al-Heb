@@ -18118,8 +18118,8 @@
   "kind": "line",
   "id": "candle-shabbat",
   "text": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Blessed are you, LORD our God, king of the world, who made us holy with his commandments and commanded us to light the lamp of Shabbat.",
   "phonetic": "barukh atah adonai eloheinu melekh ha'olam asher kideshanu bemitzvotav vetzivanu lehadlik ner shel shabat"
@@ -19155,8 +19155,8 @@
   "kind": "line",
   "id": "aleinu-1",
   "text": "עָלֵינוּ לְשַׁבֵּחַ לַאֲדוֹן הַכֹּל לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית שֶׁלֹּא עָשָׂנוּ כְּגוֹיֵי הָאֲרָצוֹת וְלֹא שָׂמָנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה שֶׁלֹּא שָׂם חֶלְקֵנוּ כָּהֶם וְגוֹרָלֵנוּ כְּכָל־הֲמוֹנָם שֶׁהֵם מִשְׁתַּחֲוִים לָהֶבֶל וָרִיק וּמִתְפַּלְּלִים אֶל־אֵל לֹא יוֹשִׁיעַ וַאֲנַחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא שֶׁהוּא נוֹטֶה שָׁמַיִם וְיוֹסֵד אָרֶץ וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַיִם מִמַּעַל וּשְׁכִינַת עֻזּוֹ בְּגָבְהֵי מְרוֹמִים הוּא אֱלֹהֵינוּ וְאֵין עוֹד אַחֵר אֱמֶת מַלְכֵּנוּ וְאֶפֶס זוּלָתוֹ כַּכָּתוּב בַּתּוֹרָה וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל־לְבָבֶךָ כִּי אֲדֹנָי הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל־הָאָרֶץ מִתָּחַת אֵין עוֹד׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "It is our duty to praise the Master of all, to ascribe greatness to the Creator of the beginning: that he has not made us like the nations of the lands and has not placed us like the families of the earth, that he has not set our portion like theirs nor our lot like all their multitude. For they bow to vanity and emptiness and pray to a god who does not save; but we bow before the King of kings of kings, the Holy One, blessed be he, who stretches out the heavens and founds the earth, whose seat of glory is in the heavens above and the presence of his might in the loftiest heights. He is our God; there is no other. Truly he is our king; there is nothing besides him. As it is written in the Torah: \"You shall know this day and take it to heart that the LORD is God, in the heavens above and on the earth beneath; there is no other.\"",
   "phonetic": "aleinu leshabeach la'adon hakol latet gedulah leyotzer bereshit shelo asanu kegoyei ha'aratzot velo samanu kemishpechot ha'adamah shelo sam chelkenu kahem vegoralenu kekhol-hamonam shehem mishtachavim lahevel varik umitpalelim el-el lo yoshi'a va'anachnu mishtachavim lifnei melekh malkhei hamelakhim hakadosh barukh hu shehu noteh shamayim veyosed aretz umoshav yekaro bashamayim mima'al ushekhinat uzo begavehei meromim hu eloheinu ve'ein od acher emet malkenu ve'efes zulato kakatuv batorah veyadata hayom vahashevota el-levavekha ki adonai hu ha'elohim bashamayim mima'al ve'al-ha'aretz mitachat ein od"
@@ -21136,8 +21136,8 @@
   "kind": "line",
   "id": "ein-kamocha",
   "text": "אֵין־כָּמוֹךָ בָאֱלֹהִים אֲדֹנָי וְאֵין כְּמַעֲשֶׂיךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "There is none like unto Thee among the gods, O Lord, And there are no works like Thine.",
   "phonetic": "ein-kamokha va'elohim adonai ve'ein kema'asekha"
@@ -25312,8 +25312,8 @@
   "kind": "line",
   "id": "brich-shmei",
   "text": "בְּרִיךְ שְׁמֵהּ דְּמָרֵא עָלְמָא בְּרִיךְ כִּתְרָךְ וְאַתְרָךְ יְהֵא רְעוּתָךְ עִם עַמָּךְ יִשְׂרָאֵל לְעָלַם וּפֻרְקַן יְמִינָךְ אַחֲזֵי לְעַמָּךְ בְּבֵית מַקְדְּשָׁךְ וּלְאַמְטוּיֵי לָנָא מִטּוּב נְהוֹרָךְ וּלְקַבֵּל צְלוֹתָנָא בְּרַחֲמִין יְהֵא רַעֲוָא קֳדָמָךְ דְּתוֹרִיךְ לָן חַיִּין בְּטִיבוּ וְלֶהֱוֵי אֲנָא פְקִידָא בְּגוֹ צַדִּיקַיָּא לְמִרְחַם עָלַי וּלְמִנְטַר יָתִי וְיַת־כָּל־דִּי־לִי וְדִי־לְעַמָּךְ יִשְׂרָאֵל אַנְתְּ הוּא זָן לְכֹלָּא וּמְפַרְנֵס לְכֹלָּא אַנְתְּ הוּא שַׁלִּיט עַל־כֹּלָּא אַנְתְּ הוּא דְּשַׁלִּיט עַל־מַלְכַיָּא וּמַלְכוּתָא דִּילָךְ הִיא אֲנָא עַבְדָּא דְקֻדְשָׁא בְּרִיךְ הוּא דְּסָגִידְנָא קַמֵּהּ וּמִקַּמֵּי דִּיקַר אוֹרַיְתֵהּ בְּכָל־עִדָּן וְעִדָּן לָא עַל־אֱנָשׁ רָחִיצְנָא וְלָא עַל־בַּר־אֱלָהִין סָמִיכְנָא אֶלָּא בֵּאלָהָא דִשְׁמַיָּא דְּהוּא אֱלָהָא קְשׁוֹט וְאוֹרַיְתֵהּ קְשׁוֹט וּנְבִיאוֹהִי קְשׁוֹט וּמַסְגֵּא לְמֶעְבַּד טָבְוָן וּקְשׁוֹט בֵּהּ אֲנָא רָחִיץ וְלִשְׁמֵהּ קַדִּישָׁא יַקִּירָא אֲנָא אֵמַר תֻּשְׁבְּחָן יְהֵא רַעֲוָא קֳדָמָךְ דְּתִפְתַּח לִבָּאי בְּאוֹרַיְתָא וְתַשְׁלִים מִשְׁאֲלִין דְּלִבָּאי וְלִבָּא דְכָל־עַמָּךְ יִשְׂרָאֵל לְטָב וּלְחַיִּין וְלִשְׁלָם׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Blessed is the name of the Master of the world; blessed is your crown and your place. May your good will be with your people Israel for ever; show your people the redemption of your right hand in your Temple, bring us of the goodness of your light, and accept our prayer in mercy. May it be your will to lengthen our life in goodness, and let me be counted among the righteous, so that you have mercy on me and guard me and all that is mine and your people Israel's. You feed and sustain all; you rule over all; you rule over kings, and the kingdom is yours. I am a servant of the Holy One, blessed be he, before whom and before whose glorious Torah I bow at every time. Not in any person do I trust, and not on any angel do I rely, but on the God of heaven, who is the God of truth, whose Torah is truth and whose prophets are truth, and who abounds in deeds of goodness and truth. In him I trust, and to his holy and glorious name I utter praises. May it be your will to open my heart to Torah, to fulfil the requests of my heart and the heart of all your people Israel, for good, for life and for peace.",
   "phonetic": "berikh shemeh demare alema berikh kitrakh ve'atrakh yehe re'utakh im amakh yisra'el le'alam ufurkan yeminakh achazei le'amakh beveit makdeshakh ule'amtuyei lana mituv nehorakh ulekabel tzelotana berachamin yehe ra'ava kodamakh detorikh lan chayin betivu velehevei ana fekida bego tzadikaya lemircham alai ulemintar yati veyat-kol-di-li vedi-le'amakh yisra'el ant hu zan lekhola umefarnes lekhola ant hu shalit al-kola ant hu deshalit al-malkhaya umalkhuta dilakh hi ana avda dekudsha berikh hu desagidena kameh umikamei dikar orayteh bekhol-idan ve'idan la al-enash rachitzena vela al-bar-elahin samikhena ela belaha dishmaya dehu elaha keshot ve'orayteh keshot unevi'ohi keshot umasge lemebad tavevan ukeshot beh ana rachitz velishmeh kadisha yakira ana emar tushbechan yehe ra'ava kodamakh detiftach libay be'orayta vetashlim mish'alin delibay veliba dekhal-amakh yisra'el letav ulechayin velishlam"
@@ -44764,10 +44764,11 @@
   "kind": "word",
   "id": "i-06-w3",
   "text": "בְשָׂמִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "vesamim"
  },
  {
   "path": "audio/m/israeli/word/i-06-w4.mp3",
@@ -44788,10 +44789,11 @@
   "kind": "word",
   "id": "i-06-w4",
   "text": "מִינֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "minei"
  },
  {
   "path": "audio/m/israeli/word/i-06-w5.mp3",
@@ -44812,10 +44814,11 @@
   "kind": "word",
   "id": "i-06-w5",
   "text": "מְאוֹרֵי הָאֵשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "me'orei ha'esh"
  },
  {
   "path": "audio/m/israeli/word/i-06-w6.mp3",
@@ -44836,10 +44839,11 @@
   "kind": "word",
   "id": "i-06-w6",
   "text": "הַמַּבְדִּיל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "hamavdil"
  },
  {
   "path": "audio/m/israeli/word/i-06-w7.mp3",
@@ -44861,11 +44865,12 @@
   "kind": "word",
   "id": "i-06-w7",
   "text": "קֹדֶשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h6a0c1de1",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kodesh"
  },
  {
   "path": "audio/m/israeli/word/i-06-w8.mp3",
@@ -44886,10 +44891,11 @@
   "kind": "word",
   "id": "i-06-w8",
   "text": "לְחוֹל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "lechol"
  },
  {
   "path": "audio/m/israeli/word/i-06-w9.mp3",
@@ -44910,10 +44916,11 @@
   "kind": "word",
   "id": "i-06-w9",
   "text": "אוֹר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "or"
  },
  {
   "path": "audio/m/israeli/word/i-06-w10.mp3",
@@ -44988,10 +44995,11 @@
   "kind": "word",
   "id": "i-07-w1",
   "text": "כִּי לְעוֹלָם חַסְדּוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ki le'olam chasdo"
  },
  {
   "path": "audio/m/israeli/word/i-07-w2.mp3",
@@ -45204,10 +45212,11 @@
   "kind": "word",
   "id": "i-07-w10",
   "text": "הַלְלוּ אֶת־אֲדֹנָי כָּל־גּוֹיִם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "halelu et-adonai kol-goyim"
  },
  {
   "path": "audio/m/israeli/word/i-07-w11.mp3",

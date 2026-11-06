@@ -29022,8 +29022,8 @@
   "kind": "word",
   "id": "sim-shalom-w5",
   "text": "חֵן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "charm, grace, likeability",
   "phonetic": "chen"
@@ -30140,8 +30140,8 @@
   "kind": "word",
   "id": "sim-shalom-w48",
   "text": "יִשְׂרָאֵל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "Israel",
   "phonetic": "yisra'el"
@@ -30166,8 +30166,8 @@
   "kind": "word",
   "id": "sim-shalom-w49",
   "text": "בַּשָּׁלוֹם׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "with peace",
   "phonetic": "bashalom"

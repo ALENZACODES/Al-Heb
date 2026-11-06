@@ -28866,8 +28866,8 @@
   "kind": "word",
   "id": "oseh-shalom-w11",
   "text": "וְאִמְרוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and say",
   "phonetic": "ve'imru"
@@ -28892,8 +28892,8 @@
   "kind": "word",
   "id": "oseh-shalom-w12",
   "text": "אָמֵן׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "used to express agreement with what was just stated",
   "phonetic": "amen"

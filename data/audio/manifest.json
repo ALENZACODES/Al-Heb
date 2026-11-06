@@ -52136,12 +52136,13 @@
   "kind": "word",
   "id": "i-24-w2",
   "text": "חַם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h5c2548dc",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "cham"
  },
  {
   "path": "audio/f/israeli/word/i-24-w2.mp3",
@@ -52165,12 +52166,13 @@
   "kind": "word",
   "id": "i-24-w3",
   "text": "קַר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h35a8fcbe",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kar"
  },
  {
   "path": "audio/f/israeli/word/i-24-w3.mp3",
@@ -52194,12 +52196,13 @@
   "kind": "word",
   "id": "i-24-w4",
   "text": "גֶּשֶׁם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hc5e80001",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "geshem"
  },
  {
   "path": "audio/f/israeli/word/i-24-w4.mp3",
@@ -52428,12 +52431,13 @@
   "kind": "word",
   "id": "i-24-w12",
   "text": "אָבִיב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h8f56fc93",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "aviv"
  },
  {
   "path": "audio/f/israeli/word/i-24-w12.mp3",
@@ -52457,12 +52461,13 @@
   "kind": "word",
   "id": "i-24-w13",
   "text": "סְתָו",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h30a2fa5c",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "setav"
  },
  {
   "path": "audio/f/israeli/word/i-24-w13.mp3",
@@ -52486,12 +52491,13 @@
   "kind": "word",
   "id": "i-24-w14",
   "text": "כּוֹבַע",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h60aa7df9",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kova"
  },
  {
   "path": "audio/f/israeli/word/i-24-w14.mp3",
@@ -52515,12 +52521,13 @@
   "kind": "word",
   "id": "i-24-w15",
   "text": "מְעִיל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h02f1f226",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "me'il"
  },
  {
   "path": "audio/f/israeli/word/i-24-w15.mp3",

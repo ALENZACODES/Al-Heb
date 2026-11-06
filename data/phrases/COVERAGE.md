@@ -16,9 +16,9 @@ A numerator counts a phrase when the grammatical form for that gender (or the on
 Phrases with no exact normal clip in any tradition or voice: **1** of 50.
 - role-gpar-04: Can I help you? (draft-needs-native-review)
 
-Slow recordings in this batch: **0**. The catalogue has no separate slow file for these lines. The unmerged playback contract can play one clip at 0.7× (`rate: 'slow'`). This build does not do that, and a normal file is not counted as a slow clip.
+Separate slow files: **0**. That count is files only. It is not a claim that a shared 0.7× control could not play a normal file more slowly. This build does not play audio at any speed. A normal file is not entered in the slow column.
 
-Review status is copied from the source (`native-speaker-needed: …` on phrasebook lines, `draft-needs-native-review` on the role-play line). No line is marked human-reviewed or native-reviewed. Clips that match are catalogue status `tts` (synthetic, not a recorded teacher).
+Review status is copied from the source (`native-speaker-needed: …` on phrasebook lines, `draft-needs-native-review` on the role-play line). No line is marked human-reviewed or native-reviewed. Israeli clips that match are synthetic text-to-speech files (catalogue status `tts`, source `paid-cloud`). They are not native human recordings.
 
 Playback: `docs/audio/PLAYBACK-CONTRACT.md` on unmerged branch `chatgpt/games-enrich-2026-11-06` (commit 8f37d4ba) is not in this checkout. This page does not call the current player, because that player can substitute a tradition or a device voice. Catalogue rows are listed. The control says audio unavailable until that contract is merged.
 

@@ -116,17 +116,24 @@ function categoryLabel(batch, id) {
   return row.label;
 }
 
+/** The phrasebook note names who is addressed, not who narrates. */
+function noteAddresses(note) {
+  return /to a man/i.test(note || '') && /to a woman/i.test(note || '');
+}
+
 function fromPhrasebook(ref, entry, batch, index) {
   if (!entry) throw new Error(`phrasebook id not found: ${ref.sourceId}`);
   if (typeof entry.en !== 'string' || !entry.en.trim()) throw new Error(`phrasebook ${ref.sourceId} has no English`);
   if (typeof entry.review !== 'string' || !entry.review.trim()) throw new Error(`phrasebook ${ref.sourceId} has no review status`);
+  const notes = typeof entry.notes === 'string' ? entry.notes.trim() : '';
+  const addressed = noteAddresses(notes);
   const gendered = !!(entry.gendered && entry.forms?.m?.he && entry.forms?.f?.he);
   const forms = gendered
     ? ['m', 'f'].map((g) => ({
       key: g,
       gender: g,
       speaker: null,
-      addressee: null,
+      addressee: addressed ? g : null,
       he: entry.forms[g].he,
       translit: translitOf(entry.forms[g].translit),
       audio: slotsFor(entry.forms[g].he, index, `${ref.sourceId}-${g}`),
@@ -135,7 +142,7 @@ function fromPhrasebook(ref, entry, batch, index) {
       key: 'same',
       gender: null,
       speaker: null,
-      addressee: null,
+      addressee: addressed ? 'm' : null,
       he: entry.he,
       translit: translitOf(entry.translit),
       audio: slotsFor(entry.he, index, ref.sourceId),
@@ -148,6 +155,7 @@ function fromPhrasebook(ref, entry, batch, index) {
     sourceSituation: entry.situation || null,
     en: entry.en.trim(),
     review: entry.review,
+    notes,
     forms,
   };
 }
@@ -173,6 +181,7 @@ function fromParadigm(ref, par, fileStatus, batch, index) {
     sourceSituation: null,
     en: par.en.trim(),
     review: fileStatus,
+    notes: '',
     forms,
   };
 }
@@ -213,9 +222,49 @@ export function cellClip(phrase, tradition, voice, speed = 'normal') {
 export function formLabel(form) {
   const who = (g) => (g === 'f' ? 'a woman' : 'a man');
   if (form.speaker && form.addressee) return `Said by ${who(form.speaker)} to ${who(form.addressee)}`;
+  if (form.addressee) return `Said to ${who(form.addressee)}`;
   if (form.gender === 'm') return 'Masculine form';
   if (form.gender === 'f') return 'Feminine form';
   return '';
+}
+
+/** The feminine spelling named in a phrasebook note, or null. Not a stored form. */
+export function womanNoteSpelling(note) {
+  const m = /to a woman:\s*([^.]*)/i.exec(note || '');
+  if (!m) return null;
+  const s = m[1].trim().replace(/[.\s]+$/, '');
+  return s || null;
+}
+
+function spellingTokens(s) {
+  return String(s || '').trim().split(/\s+/).filter(Boolean);
+}
+
+/**
+ * Learner notices taken from the phrasebook note and the stored forms.
+ * They do not add a feminine line, and they do not treat the note as a checked correction.
+ */
+export function addressNotices(phrase) {
+  const note = (phrase?.notes || '').trim();
+  if (!note || !/to a man/i.test(note)) return [];
+  const spelling = womanNoteSpelling(note);
+  const storedF = (phrase.forms || []).find((f) => f.key === 'f');
+  if (!storedF) {
+    if (!spelling) return [];
+    return [{
+      id: 'masculine-addressee',
+      text: `This stored line addresses a man. The phrasebook note says: "${note}" No complete pointed feminine line is stored, so that note is not a form to practise. Choosing a man or a woman as narrator does not change who is addressed. A native speaker has not checked this phrase.`,
+    }];
+  }
+  if (!spelling) return [];
+  const stored = spellingTokens(storedF.translit);
+  const named = spellingTokens(spelling);
+  const matches = named.length > 0 && named.every((t) => stored.includes(t));
+  if (matches) return [];
+  return [{
+    id: 'spelling-inconsistency',
+    text: `The phrasebook note and the stored feminine spelling do not match. Note: "${note}" Stored feminine spelling: "${storedF.translit || ''}". The note is not a verified correction. The line shown is the stored form. A native speaker has not checked this phrase.`,
+  }];
 }
 
 /** Learner-facing line. Uses the shared status label for Israeli tts. Never calls a clip reviewed unless its status already says so. */
@@ -340,9 +389,9 @@ export function coverageMarkdown(phrases) {
   lines.push(`Phrases with no exact normal clip in any tradition or voice: **${none.length}** of ${n}.`);
   if (none.length) lines.push(none.map((p) => `- ${p.id}: ${p.en} (${p.review})`).join('\n'));
   lines.push('');
-  lines.push('Slow recordings in this batch: **0**. The catalogue has no separate slow file for these lines. The unmerged playback contract can play one clip at 0.7× (`rate: \'slow\'`). This build does not do that, and a normal file is not counted as a slow clip.');
+  lines.push('Separate slow files: **0**. That count is files only. It is not a claim that a shared 0.7× control could not play a normal file more slowly. This build does not play audio at any speed. A normal file is not entered in the slow column.');
   lines.push('');
-  lines.push('Review status is copied from the source (`native-speaker-needed: …` on phrasebook lines, `draft-needs-native-review` on the role-play line). No line is marked human-reviewed or native-reviewed. Clips that match are catalogue status `tts` (synthetic, not a recorded teacher).');
+  lines.push('Review status is copied from the source (`native-speaker-needed: …` on phrasebook lines, `draft-needs-native-review` on the role-play line). No line is marked human-reviewed or native-reviewed. Israeli clips that match are synthetic text-to-speech files (catalogue status `tts`, source `paid-cloud`). They are not native human recordings.');
   lines.push('');
   lines.push('Playback: `docs/audio/PLAYBACK-CONTRACT.md` on unmerged branch `chatgpt/games-enrich-2026-11-06` (commit 8f37d4ba) is not in this checkout. This page does not call the current player, because that player can substitute a tradition or a device voice. Catalogue rows are listed. The control says audio unavailable until that contract is merged.');
   lines.push('');

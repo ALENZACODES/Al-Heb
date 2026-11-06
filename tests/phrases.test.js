@@ -8,7 +8,8 @@ import { loadManifestFull } from '../tools/audio/manifest_io.mjs';
 import { genderedForms } from '../src/curriculum/gender.js';
 import {
   TRADITIONS, VOICES, SPEEDS, hasPointedHebrew, pickClip, buildPhrases, auditPhrase, cellClip,
-  clipSpeed, coverageMarkdown, loadPhraseScreen, playPhraseClip, playbackCall, PLAYBACK_CONTRACT_LANDED, nfc,
+  clipSpeed, coverageMarkdown, loadPhraseScreen, playPhraseClip, playbackCall, PLAYBACK_CONTRACT_LANDED,
+  addressNotices, formLabel, formServes, nfc,
 } from '../src/phrases/model.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -207,7 +208,10 @@ test('coverage markdown matches the cells', () => {
   const file = fs.readFileSync(path.join(root, 'data/phrases/COVERAGE.md'), 'utf8');
   assert.equal(file, md);
   assert.match(md, /not every Hebrew phrase/i);
-  assert.match(md, /Slow recordings in this batch: \*\*0\*\*/);
+  assert.match(md, /Separate slow files: \*\*0\*\*/);
+  assert.match(md, /not a claim that a shared 0\.7× control could not play a normal file more slowly/);
+  assert.match(md, /not native human recordings/);
+  assert.doesNotMatch(md, /could not play one clip at 0\.7×/);
   assert.match(md, /No line is marked human-reviewed or native-reviewed/);
   const n = phrases.length;
   for (const tradition of TRADITIONS) for (const voice of VOICES) {
@@ -304,7 +308,7 @@ test('phrase list and a phrase page show the pointed line, the meaning, and an h
   assert.match(text, /good morning/);
   assert.match(text, /בֹּקֶר טוֹב/);
   assert.match(text, /Audio unavailable/);
-  assert.match(text, /Slow recording: not available/);
+  assert.match(text, /No separate slow recording/);
   assert.match(text, /not a recorded teacher/i);
   assert.equal(detail.find((n) => n.attrs && n.attrs['data-clip-id'] === 'greetings-03').length, 1);
   assert.equal(/Ari|Noa|Rimon/.test(text), false);
@@ -326,6 +330,79 @@ test('phrase list and a phrase page show the pointed line, the meaning, and an h
   assert.match(gap, /Can I help you/);
   assert.match(gap, /No audio yet/);
   assert.equal(none.find((n) => n.tag === 'button' && n.textContent === 'Listen').length, 0);
-  assert.match(gap, /Slow recording: not available/);
+  assert.match(gap, /No separate slow recording/);
   un3();
+});
+
+test('help-09 stays a masculine addressee line for either narrator; help-03 shows the note clash without adopting it', async () => {
+  const book = new Map(read('data/corpus/phrasebook.json').entries.map((e) => [e.id, e]));
+  const phone = phrases.find((p) => p.id === 'pb-help-09');
+  const police = phrases.find((p) => p.id === 'pb-help-03');
+  const ambulance = phrases.find((p) => p.id === 'pb-help-04');
+  const straight = phrases.find((p) => p.id === 'pb-directions-08');
+  assert.equal(phone.review, book.get('help-09').review);
+  assert.match(phone.review, /native-speaker-needed/);
+  assert.equal(phone.forms.length, 1);
+  assert.equal(phone.forms[0].he, book.get('help-09').he);
+  assert.equal(phone.forms[0].translit, book.get('help-09').translit);
+  assert.equal(phone.forms[0].addressee, 'm');
+  assert.equal(formLabel(phone.forms[0]), 'Said to a man');
+  const phoneNotes = addressNotices(phone);
+  assert.deepEqual(phoneNotes.map((n) => n.id), ['masculine-addressee']);
+  assert.match(phoneNotes[0].text, /addresses a man/);
+  assert.match(phoneNotes[0].text, /To a man; to a woman: shelach/);
+  assert.match(phoneNotes[0].text, /narrator does not change who is addressed/);
+  assert.match(phoneNotes[0].text, /not checked/);
+  assert.equal(/[֐-׿]/.test(phoneNotes[0].text), false);
+  for (const voice of VOICES) assert.equal(phone.forms.filter((f) => formServes(f, voice)).length, 1);
+
+  assert.equal(police.forms.find((f) => f.key === 'f').he, book.get('help-03').forms.f.he);
+  assert.equal(police.forms.find((f) => f.key === 'f').translit, "tikre'i lamishtara");
+  assert.equal(formLabel(police.forms.find((f) => f.key === 'm')), 'Said to a man');
+  assert.equal(formLabel(police.forms.find((f) => f.key === 'f')), 'Said to a woman');
+  const clash = addressNotices(police);
+  assert.deepEqual(clash.map((n) => n.id), ['spelling-inconsistency']);
+  assert.match(clash[0].text, /tikri/);
+  assert.match(clash[0].text, /tikre'i lamishtara/);
+  assert.match(clash[0].text, /not a verified correction/);
+  assert.match(clash[0].text, /not checked/);
+  assert.equal(clash[0].text.includes(police.forms.find((f) => f.key === 'f').he), false);
+  assert.equal(addressNotices(ambulance).length, 0);
+  assert.equal(addressNotices(straight).length, 0);
+  assert.equal(formLabel(straight.forms.find((f) => f.key === 'f')), 'Said to a woman');
+  assert.match(police.review, /native-speaker-needed/);
+
+  const { mount } = await import('../src/phrases/phrases.view.js');
+  const shown = {};
+  for (const voice of ['f', 'm']) {
+    const root = new N('main');
+    const un = mount(root, { params: { id: 'pb-help-09' }, query: { tradition: 'israeli', voice }, settings: { get: () => undefined } });
+    let text = '';
+    for (let i = 0; i < 50 && !text.includes('addresses a man'); i++) { await new Promise((r) => setTimeout(r, 20)); text = root.textContent; }
+    const note = root.find((n) => n.attrs && n.attrs['data-notice'] === 'masculine-addressee')[0];
+    assert.ok(note, voice);
+    assert.match(note.textContent, /addresses a man/);
+    assert.match(note.textContent, /shelach/);
+    assert.match(text, /Said to a man/);
+    assert.match(text, /Narrator/);
+    shown[voice] = root.find((n) => n.attrs && n.attrs.lang === 'he').map((n) => n.textContent).join('|');
+    un();
+  }
+  assert.equal(shown.f, shown.m);
+  assert.equal(shown.f.includes(phone.forms[0].he), true);
+
+  const root = new N('main');
+  const un = mount(root, { params: { id: 'pb-help-03' }, query: { tradition: 'israeli', voice: 'f' }, settings: { get: () => undefined } });
+  let text = '';
+  for (let i = 0; i < 50 && !text.includes('not a verified correction'); i++) { await new Promise((r) => setTimeout(r, 20)); text = root.textContent; }
+  const clashNode = root.find((n) => n.attrs && n.attrs['data-notice'] === 'spelling-inconsistency')[0];
+  assert.ok(clashNode);
+  assert.match(clashNode.textContent, /tikri/);
+  assert.match(clashNode.textContent, /not a verified correction/);
+  assert.match(text, /Said to a woman/);
+  assert.match(text, /Said to a man/);
+  const hebrew = root.find((n) => n.attrs && n.attrs.lang === 'he').map((n) => n.textContent);
+  assert.ok(hebrew.includes(book.get('help-03').forms.f.he));
+  assert.ok(hebrew.includes(book.get('help-03').forms.m.he));
+  un();
 });

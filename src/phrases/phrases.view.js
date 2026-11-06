@@ -3,12 +3,12 @@
 // does not play on this checkout.
 import { h, heSpan } from '../shell/ui.js';
 import {
-  TRADITIONS, VOICES, TRAD_LABEL, VOICE_LABEL, loadPhraseScreen, formLabel, audioHonesty, contentHonesty, cellClip, playPhraseClip,
+  TRADITIONS, VOICES, TRAD_LABEL, VOICE_LABEL, loadPhraseScreen, formLabel, addressNotices, audioHonesty, contentHonesty, cellClip, playPhraseClip,
 } from './model.js';
 
 const NO_AUDIO = 'No audio yet';
 const UNAVAILABLE = 'Audio unavailable. Shared playback is not in this build, so this clip is not played.';
-const SLOW_MISSING = 'Slow recording: not available.';
+const SLOW_MISSING = 'No separate slow recording. This build does not play the normal file more slowly.';
 
 function readChoice(ctx, key, allowed, fallback) {
   const q = ctx?.query?.[key];
@@ -145,8 +145,10 @@ export function mount(root, ctx) {
       const sourceLine = phrase.source.kind === 'gender-paradigm'
         ? 'Role-play line from the existing “say it as me” set. No catalogue clip matches these sentences.'
         : 'Phrasebook line. The spelling, when shown, is the one stored with that line.';
+      const notices = addressNotices(phrase).map((n) => h('p', { class: 'draft-flag', role: 'note', 'data-notice': n.id }, n.text));
       wrap.replaceChildren(h1, ...intro(), selectors(), note, practiceRow(),
         h('p', { class: 'muted' }, sourceLine),
+        ...notices,
         ...blocks,
         meaning,
         h('p', { class: 'muted' }, contentHonesty(phrase.review)),

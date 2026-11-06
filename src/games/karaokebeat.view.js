@@ -2,7 +2,7 @@
 // No prayer or cantorial recordings are used for arcade scores.
 // Syllable-to-recording timestamps are not available; the registry's audio sync gate remains open.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, resultsCard } from './engine.js';
+import { shuffled } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.karaokebeat.v1';
@@ -18,7 +18,7 @@ export function cadenceIsComplete(record, taps) {
 export function mount(root, ctx) {
   const leaveSfx = sfx.enter(ctx);
   let alive = true, deck = [], round = 0, beats = 0, previous = 0, intervals = [];
-  let session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 5 });
+
   const status = h('p', { class:'game-status', role:'status', 'aria-live':'polite' }, 'Loading sourced speaking phrases…');
   const board = h('div', { class:'game-board' });
   const article = h('article', { class:'card game-card game-karaokebeat' },
@@ -29,10 +29,12 @@ export function mount(root, ctx) {
   function paint() {
     if (!alive || !article.isConnected) return;
     if (round >= Math.min(8, deck.length)) {
-      board.replaceChildren(resultsCard(h, heSpan, session, { title:'Rhythm study finished', onAgain: () => {
-        round = 0; beats = 0; previous = 0; intervals = [];
-        session = createSession({store:ctx?.store,storeKey:STORE_KEY,par:5}); paint();
-      } }));
+      board.replaceChildren(h('section', { class:'game-results' },
+        h('h2', {}, 'Manual rhythm practice finished'),
+        h('p', {}, 'Unscored: no source-synchronised syllable recording was available.'),
+        h('button', { type:'button', class:'btn', onclick: () => {
+          round = 0; beats = 0; previous = 0; intervals = []; paint();
+        } }, 'Practice again')));
       return;
     }
     const record = deck[round], words = h('div',{class:'game-karaoke-tokens',dir:'rtl'},
@@ -49,9 +51,9 @@ export function mount(root, ctx) {
         const mean = intervals.length ? intervals.reduce((a,b)=>a+b,0)/intervals.length : 0;
         const variation = mean > 0 ? Math.max(...intervals.map(t=>Math.abs(t-mean)/mean)) : 1;
         const ok = intervals.length >= 2 && mean >= 180 && mean <= 1800 && variation <= 0.4;
-        session.answer(ok); sfx.play(ok ? 'success' : 'miss'); status.textContent = ok ?
-          'Consistent manual tempo; no recording synchronization assessed.' :
-          'Try a steadier manual rhythm.';
+        sfx.play('tick'); status.textContent = ok ?
+          'Consistent manual tempo. Unscored without syllable-aligned audio.' :
+          'Try a steadier manual rhythm. This practice is unscored.';
         if (ok) round++;
         beats = 0; previous = 0; intervals = []; paint(); return;
       }

@@ -103,6 +103,7 @@ export const ROUTES = [
   { name: 'search',   pattern: '/search',         module: './search.view.js', tier: 'v0',                    title: 'Search', owner: 'nav' },
   { name: 'about',    pattern: '/about',          module: './about.view.js', tier: 'v0',                     nav: 'nav.about',    title: 'About', owner: 'lane8' },
   // Games stay preview until the verification gate in GAMES-START-HERE.md passes.
+  { name: 'memorypalace', pattern: '/memorypalace', module: '../games/memorypalace.view.js', tier: 'preview', title: 'The Memory Palace Courtyard', owner: 'games' },
   { name: 'prefixblast', pattern: '/prefixblast', module: '../games/prefixblast.view.js', tier: 'preview', title: 'Bubble Pop Prefix Blast', owner: 'games' },
   { name: 'tugowar', pattern: '/tugowar', module: '../games/tugowar.view.js', tier: 'preview', title: 'Antonym Tug-of-War', owner: 'games' },
   { name: 'vowelcatcher', pattern: '/vowelcatcher', module: '../games/vowelcatcher.view.js', tier: 'preview', title: 'Vowel Catcher', owner: 'games' },

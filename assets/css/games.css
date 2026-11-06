@@ -44,3 +44,8 @@
 .prefix-pedestal { text-align:center; padding:1rem; border-bottom:8px solid #D9A441; }
 @keyframes prefix-float { to { transform:translateY(-12px); } }
 @media (prefers-reduced-motion:reduce) { .prefix-bubble { animation:none; } }
+
+.palace-courtyard { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:1rem; padding:1rem; background-size:cover; }
+.palace-station { border:3px solid #6B7F3A; border-radius:1rem; background:#F6F1E7; color:#1F3A5F; padding:.5rem; cursor:pointer; min-height:150px; }
+.palace-station img { width:100%; height:120px; object-fit:contain; }
+.palace-active { outline:5px solid #D9A441; outline-offset:3px; opacity:1; }

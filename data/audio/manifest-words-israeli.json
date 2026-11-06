@@ -55936,7 +55936,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "medicine, medication, medicament, drug"
+  "english": "medicine, medication, medicament, drug",
+  "phonetic": "terufah"
  },
  {
   "path": "audio/f/israeli/word/h0047024c.mp3",
@@ -55946,10 +55947,11 @@
   "id": "h0047024c",
   "text": "תְּרוּפָה",
   "ipa": "te.ʁu.ˈfa",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "medicine, medication, medicament, drug"
+  "english": "medicine, medication, medicament, drug",
+  "phonetic": "terufah"
  },
  {
   "path": "audio/m/israeli/word/pc34fd630.mp3",

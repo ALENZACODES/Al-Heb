@@ -39475,11 +39475,12 @@
   "kind": "word",
   "id": "r46-w6",
   "text": "נִבְרָא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "hb77664ca",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "nivra"
  },
  {
   "path": "audio/f/israeli/word/r46-w6.mp3",
@@ -39502,11 +39503,12 @@
   "kind": "word",
   "id": "r47-w1",
   "text": "הַזָּן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "pb5035285",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "hazan"
  },
  {
   "path": "audio/f/israeli/word/r47-w1.mp3",
@@ -39529,11 +39531,12 @@
   "kind": "word",
   "id": "r47-w2",
   "text": "כֻּלּוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p05fe27e4",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kulo"
  },
  {
   "path": "audio/f/israeli/word/r47-w2.mp3",
@@ -39556,11 +39559,12 @@
   "kind": "word",
   "id": "r47-w3",
   "text": "בְּטוּבוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p7fceebe3",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "betuvo"
  },
  {
   "path": "audio/f/israeli/word/r47-w3.mp3",
@@ -39583,11 +39587,12 @@
   "kind": "word",
   "id": "r47-w4",
   "text": "חֵן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "hea4f6fcc",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chen"
  },
  {
   "path": "audio/f/israeli/word/r47-w4.mp3",
@@ -39610,11 +39615,12 @@
   "kind": "word",
   "id": "r47-w5",
   "text": "חֶסֶד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "hba22ae3e",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chesed"
  },
  {
   "path": "audio/f/israeli/word/r47-w5.mp3",
@@ -39637,11 +39643,12 @@
   "kind": "word",
   "id": "r47-w6",
   "text": "וּבְרַחֲמִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p527b9357",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "uverachamim"
  },
  {
   "path": "audio/f/israeli/word/r47-w6.mp3",
@@ -39664,11 +39671,12 @@
   "kind": "word",
   "id": "r48-w1",
   "text": "בִּרְכַּת כֹּהֲנִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "pbc01a362",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "birkat kohanim"
  },
  {
   "path": "audio/f/israeli/word/r48-w1.mp3",
@@ -39691,11 +39699,12 @@
   "kind": "word",
   "id": "r49-w1",
   "text": "וְאָהַבְתָּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "pd4b665ac",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ve'ahavta"
  },
  {
   "path": "audio/f/israeli/word/r49-w1.mp3",
@@ -39718,11 +39727,12 @@
   "kind": "word",
   "id": "r50-w1",
   "text": "תְּפִלָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h8c95843f",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "tefilah"
  },
  {
   "path": "audio/f/israeli/word/r50-w1.mp3",
@@ -39745,11 +39755,12 @@
   "kind": "word",
   "id": "r51-w1",
   "text": "סִדּוּר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h65f4ae84",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "sidur"
  },
  {
   "path": "audio/f/israeli/word/r51-w1.mp3",
@@ -62348,8 +62359,8 @@
   "kind": "word",
   "id": "fillers-01",
   "text": "אָז",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
   "english": "so",
@@ -64252,11 +64263,12 @@
   "kind": "word",
   "id": "anchor-alef",
   "text": "אַבָּא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "aba"
  },
  {
   "path": "audio/f/israeli/word/anchor-alef.mp3",
@@ -64265,11 +64277,12 @@
   "kind": "word",
   "id": "anchor-alef",
   "text": "אַבָּא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "aba"
  },
  {
   "path": "audio/m/israeli/word/anchor-bet.mp3",
@@ -64278,11 +64291,12 @@
   "kind": "word",
   "id": "anchor-bet",
   "text": "בַּיִת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "bayit"
  },
  {
   "path": "audio/f/israeli/word/anchor-bet.mp3",
@@ -64291,11 +64305,12 @@
   "kind": "word",
   "id": "anchor-bet",
   "text": "בַּיִת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "bayit"
  },
  {
   "path": "audio/m/israeli/word/anchor-gimel.mp3",
@@ -64304,11 +64319,12 @@
   "kind": "word",
   "id": "anchor-gimel",
   "text": "גָּמָל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "gamal"
  },
  {
   "path": "audio/f/israeli/word/anchor-gimel.mp3",
@@ -64317,11 +64333,12 @@
   "kind": "word",
   "id": "anchor-gimel",
   "text": "גָּמָל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "gamal"
  },
  {
   "path": "audio/m/israeli/word/anchor-dalet.mp3",
@@ -64330,11 +64347,12 @@
   "kind": "word",
   "id": "anchor-dalet",
   "text": "דֶּלֶת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "delet"
  },
  {
   "path": "audio/f/israeli/word/anchor-dalet.mp3",
@@ -64343,11 +64361,12 @@
   "kind": "word",
   "id": "anchor-dalet",
   "text": "דֶּלֶת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "delet"
  },
  {
   "path": "audio/m/israeli/word/anchor-he.mp3",
@@ -64356,11 +64375,12 @@
   "kind": "word",
   "id": "anchor-he",
   "text": "הַר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "har"
  },
  {
   "path": "audio/f/israeli/word/anchor-he.mp3",
@@ -64369,11 +64389,12 @@
   "kind": "word",
   "id": "anchor-he",
   "text": "הַר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "har"
  },
  {
   "path": "audio/m/israeli/word/anchor-vav.mp3",
@@ -64382,11 +64403,12 @@
   "kind": "word",
   "id": "anchor-vav",
   "text": "וֶרֶד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "vered"
  },
  {
   "path": "audio/f/israeli/word/anchor-vav.mp3",
@@ -64395,11 +64417,12 @@
   "kind": "word",
   "id": "anchor-vav",
   "text": "וֶרֶד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "vered"
  },
  {
   "path": "audio/m/israeli/word/anchor-zayin.mp3",
@@ -64408,11 +64431,12 @@
   "kind": "word",
   "id": "anchor-zayin",
   "text": "זָהָב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "zahav"
  },
  {
   "path": "audio/f/israeli/word/anchor-zayin.mp3",
@@ -64421,11 +64445,12 @@
   "kind": "word",
   "id": "anchor-zayin",
   "text": "זָהָב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "zahav"
  },
  {
   "path": "audio/m/israeli/word/anchor-chet.mp3",
@@ -64434,11 +64459,12 @@
   "kind": "word",
   "id": "anchor-chet",
   "text": "חָלָב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chalav"
  },
  {
   "path": "audio/f/israeli/word/anchor-chet.mp3",
@@ -64447,11 +64473,12 @@
   "kind": "word",
   "id": "anchor-chet",
   "text": "חָלָב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chalav"
  },
  {
   "path": "audio/m/israeli/word/anchor-tet.mp3",
@@ -64460,11 +64487,12 @@
   "kind": "word",
   "id": "anchor-tet",
   "text": "טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "tov"
  },
  {
   "path": "audio/f/israeli/word/anchor-tet.mp3",
@@ -64473,11 +64501,12 @@
   "kind": "word",
   "id": "anchor-tet",
   "text": "טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "tov"
  },
  {
   "path": "audio/m/israeli/word/anchor-yod.mp3",
@@ -64486,11 +64515,12 @@
   "kind": "word",
   "id": "anchor-yod",
   "text": "יָד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yad"
  },
  {
   "path": "audio/f/israeli/word/anchor-yod.mp3",
@@ -64499,11 +64529,12 @@
   "kind": "word",
   "id": "anchor-yod",
   "text": "יָד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yad"
  },
  {
   "path": "audio/m/israeli/word/anchor-kaf.mp3",
@@ -64512,11 +64543,12 @@
   "kind": "word",
   "id": "anchor-kaf",
   "text": "כֶּלֶב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kelev"
  },
  {
   "path": "audio/f/israeli/word/anchor-kaf.mp3",
@@ -64525,11 +64557,12 @@
   "kind": "word",
   "id": "anchor-kaf",
   "text": "כֶּלֶב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kelev"
  },
  {
   "path": "audio/m/israeli/word/anchor-lamed.mp3",
@@ -64538,11 +64571,12 @@
   "kind": "word",
   "id": "anchor-lamed",
   "text": "לֶחֶם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "lechem"
  },
  {
   "path": "audio/f/israeli/word/anchor-lamed.mp3",
@@ -64551,11 +64585,12 @@
   "kind": "word",
   "id": "anchor-lamed",
   "text": "לֶחֶם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "lechem"
  },
  {
   "path": "audio/m/israeli/word/anchor-mem.mp3",
@@ -64564,11 +64599,12 @@
   "kind": "word",
   "id": "anchor-mem",
   "text": "מַיִם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "mayim"
  },
  {
   "path": "audio/f/israeli/word/anchor-mem.mp3",
@@ -64577,11 +64613,12 @@
   "kind": "word",
   "id": "anchor-mem",
   "text": "מַיִם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "mayim"
  },
  {
   "path": "audio/m/israeli/word/anchor-nun.mp3",
@@ -64590,11 +64627,12 @@
   "kind": "word",
   "id": "anchor-nun",
   "text": "נֵר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ner"
  },
  {
   "path": "audio/f/israeli/word/anchor-nun.mp3",
@@ -64603,11 +64641,12 @@
   "kind": "word",
   "id": "anchor-nun",
   "text": "נֵר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ner"
  },
  {
   "path": "audio/m/israeli/word/anchor-samekh.mp3",
@@ -64616,11 +64655,12 @@
   "kind": "word",
   "id": "anchor-samekh",
   "text": "סֵפֶר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "sefer"
  },
  {
   "path": "audio/f/israeli/word/anchor-samekh.mp3",
@@ -64629,11 +64669,12 @@
   "kind": "word",
   "id": "anchor-samekh",
   "text": "סֵפֶר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "sefer"
  },
  {
   "path": "audio/m/israeli/word/anchor-ayin.mp3",
@@ -64642,11 +64683,12 @@
   "kind": "word",
   "id": "anchor-ayin",
   "text": "עַיִן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ayin"
  },
  {
   "path": "audio/f/israeli/word/anchor-ayin.mp3",
@@ -64655,11 +64697,12 @@
   "kind": "word",
   "id": "anchor-ayin",
   "text": "עַיִן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ayin"
  },
  {
   "path": "audio/m/israeli/word/anchor-pe.mp3",
@@ -64668,11 +64711,12 @@
   "kind": "word",
   "id": "anchor-pe",
   "text": "פֶּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "peh"
  },
  {
   "path": "audio/f/israeli/word/anchor-pe.mp3",
@@ -64681,11 +64725,12 @@
   "kind": "word",
   "id": "anchor-pe",
   "text": "פֶּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "peh"
  },
  {
   "path": "audio/m/israeli/word/anchor-tsadi.mp3",
@@ -64694,11 +64739,12 @@
   "kind": "word",
   "id": "anchor-tsadi",
   "text": "צִפּוֹר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "tzipor"
  },
  {
   "path": "audio/f/israeli/word/anchor-tsadi.mp3",
@@ -64707,11 +64753,12 @@
   "kind": "word",
   "id": "anchor-tsadi",
   "text": "צִפּוֹר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "tzipor"
  },
  {
   "path": "audio/m/israeli/word/anchor-qof.mp3",
@@ -64720,11 +64767,12 @@
   "kind": "word",
   "id": "anchor-qof",
   "text": "קוֹף",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kof"
  },
  {
   "path": "audio/f/israeli/word/anchor-qof.mp3",
@@ -64733,11 +64781,12 @@
   "kind": "word",
   "id": "anchor-qof",
   "text": "קוֹף",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kof"
  },
  {
   "path": "audio/m/israeli/word/anchor-resh.mp3",
@@ -64746,11 +64795,12 @@
   "kind": "word",
   "id": "anchor-resh",
   "text": "רֹאשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "rosh"
  },
  {
   "path": "audio/f/israeli/word/anchor-resh.mp3",
@@ -64759,11 +64809,12 @@
   "kind": "word",
   "id": "anchor-resh",
   "text": "רֹאשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "rosh"
  },
  {
   "path": "audio/m/israeli/word/anchor-shin.mp3",
@@ -64772,11 +64823,12 @@
   "kind": "word",
   "id": "anchor-shin",
   "text": "שָׁלוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shalom"
  },
  {
   "path": "audio/f/israeli/word/anchor-shin.mp3",
@@ -64785,11 +64837,12 @@
   "kind": "word",
   "id": "anchor-shin",
   "text": "שָׁלוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shalom"
  },
  {
   "path": "audio/m/israeli/word/anchor-tav.mp3",
@@ -64798,11 +64851,12 @@
   "kind": "word",
   "id": "anchor-tav",
   "text": "תּוֹדָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "todah"
  },
  {
   "path": "audio/f/israeli/word/anchor-tav.mp3",
@@ -64811,11 +64865,12 @@
   "kind": "word",
   "id": "anchor-tav",
   "text": "תּוֹדָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "todah"
  },
  {
   "path": "audio/m/israeli/word/anchor-kaf-final.mp3",
@@ -64824,11 +64879,12 @@
   "kind": "word",
   "id": "anchor-kaf-final",
   "text": "מֶלֶךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "melekh"
  },
  {
   "path": "audio/f/israeli/word/anchor-kaf-final.mp3",
@@ -64837,11 +64893,12 @@
   "kind": "word",
   "id": "anchor-kaf-final",
   "text": "מֶלֶךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "melekh"
  },
  {
   "path": "audio/m/israeli/word/anchor-mem-final.mp3",
@@ -64850,11 +64907,12 @@
   "kind": "word",
   "id": "anchor-mem-final",
   "text": "יָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yam"
  },
  {
   "path": "audio/f/israeli/word/anchor-mem-final.mp3",
@@ -64863,11 +64921,12 @@
   "kind": "word",
   "id": "anchor-mem-final",
   "text": "יָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yam"
  },
  {
   "path": "audio/m/israeli/word/anchor-nun-final.mp3",
@@ -64876,11 +64935,12 @@
   "kind": "word",
   "id": "anchor-nun-final",
   "text": "גַּן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "gan"
  },
  {
   "path": "audio/f/israeli/word/anchor-nun-final.mp3",
@@ -64889,11 +64949,12 @@
   "kind": "word",
   "id": "anchor-nun-final",
   "text": "גַּן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "gan"
  },
  {
   "path": "audio/m/israeli/word/anchor-pe-final.mp3",
@@ -64902,11 +64963,12 @@
   "kind": "word",
   "id": "anchor-pe-final",
   "text": "כַּף",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kaf"
  },
  {
   "path": "audio/f/israeli/word/anchor-pe-final.mp3",
@@ -64915,11 +64977,12 @@
   "kind": "word",
   "id": "anchor-pe-final",
   "text": "כַּף",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kaf"
  },
  {
   "path": "audio/m/israeli/word/anchor-tsadi-final.mp3",
@@ -64928,11 +64991,12 @@
   "kind": "word",
   "id": "anchor-tsadi-final",
   "text": "אֶרֶץ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "eretz"
  },
  {
   "path": "audio/f/israeli/word/anchor-tsadi-final.mp3",
@@ -64941,11 +65005,12 @@
   "kind": "word",
   "id": "anchor-tsadi-final",
   "text": "אֶרֶץ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "anchor-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "eretz"
  },
  {
   "path": "audio/m/sephardi/word/r01-w1.mp3",

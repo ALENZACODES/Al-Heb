@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 5486 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 5553 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-5486 English labels; 1868 UNKNOWN.
+5553 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -246,6 +246,33 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [amidah-yihyu-w7](f/israeli/word/amidah-yihyu-w7.mp3) | לְפָנֶיךָ | before you | lefanekha |
 | [amidah-yihyu-w8](f/israeli/word/amidah-yihyu-w8.mp3) | אֲדֹנָי | the LORD | adonai |
 | [amidah-yihyu-w9](f/israeli/word/amidah-yihyu-w9.mp3) | צוּרִי | my rock | tzuri |
+| [anchor-alef](f/israeli/word/anchor-alef.mp3) | אַבָּא | UNKNOWN | aba |
+| [anchor-ayin](f/israeli/word/anchor-ayin.mp3) | עַיִן | UNKNOWN | ayin |
+| [anchor-bet](f/israeli/word/anchor-bet.mp3) | בַּיִת | UNKNOWN | bayit |
+| [anchor-chet](f/israeli/word/anchor-chet.mp3) | חָלָב | UNKNOWN | chalav |
+| [anchor-dalet](f/israeli/word/anchor-dalet.mp3) | דֶּלֶת | UNKNOWN | delet |
+| [anchor-gimel](f/israeli/word/anchor-gimel.mp3) | גָּמָל | UNKNOWN | gamal |
+| [anchor-he](f/israeli/word/anchor-he.mp3) | הַר | UNKNOWN | har |
+| [anchor-kaf-final](f/israeli/word/anchor-kaf-final.mp3) | מֶלֶךְ | UNKNOWN | melekh |
+| [anchor-kaf](f/israeli/word/anchor-kaf.mp3) | כֶּלֶב | UNKNOWN | kelev |
+| [anchor-lamed](f/israeli/word/anchor-lamed.mp3) | לֶחֶם | UNKNOWN | lechem |
+| [anchor-mem-final](f/israeli/word/anchor-mem-final.mp3) | יָם | UNKNOWN | yam |
+| [anchor-mem](f/israeli/word/anchor-mem.mp3) | מַיִם | UNKNOWN | mayim |
+| [anchor-nun-final](f/israeli/word/anchor-nun-final.mp3) | גַּן | UNKNOWN | gan |
+| [anchor-nun](f/israeli/word/anchor-nun.mp3) | נֵר | UNKNOWN | ner |
+| [anchor-pe-final](f/israeli/word/anchor-pe-final.mp3) | כַּף | UNKNOWN | kaf |
+| [anchor-pe](f/israeli/word/anchor-pe.mp3) | פֶּה | UNKNOWN | peh |
+| [anchor-qof](f/israeli/word/anchor-qof.mp3) | קוֹף | UNKNOWN | kof |
+| [anchor-resh](f/israeli/word/anchor-resh.mp3) | רֹאשׁ | UNKNOWN | rosh |
+| [anchor-samekh](f/israeli/word/anchor-samekh.mp3) | סֵפֶר | UNKNOWN | sefer |
+| [anchor-shin](f/israeli/word/anchor-shin.mp3) | שָׁלוֹם | UNKNOWN | shalom |
+| [anchor-tav](f/israeli/word/anchor-tav.mp3) | תּוֹדָה | UNKNOWN | todah |
+| [anchor-tet](f/israeli/word/anchor-tet.mp3) | טוֹב | UNKNOWN | tov |
+| [anchor-tsadi-final](f/israeli/word/anchor-tsadi-final.mp3) | אֶרֶץ | UNKNOWN | eretz |
+| [anchor-tsadi](f/israeli/word/anchor-tsadi.mp3) | צִפּוֹר | UNKNOWN | tzipor |
+| [anchor-vav](f/israeli/word/anchor-vav.mp3) | וֶרֶד | UNKNOWN | vered |
+| [anchor-yod](f/israeli/word/anchor-yod.mp3) | יָד | UNKNOWN | yad |
+| [anchor-zayin](f/israeli/word/anchor-zayin.mp3) | זָהָב | UNKNOWN | zahav |
 | [ashrei-144-15-w1](f/israeli/word/ashrei-144-15-w1.mp3) | אַשְׁרֵי | happy is/was/will be | ashrei |
 | [ashrei-144-15-w2](f/israeli/word/ashrei-144-15-w2.mp3) | הָעָם | the people | ha'am |
 | [ashrei-144-15-w3](f/israeli/word/ashrei-144-15-w3.mp3) | שֶׁכָּכָה | that is in such a case | shekakhah |
@@ -578,6 +605,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [greetings-20](f/israeli/word/greetings-20.mp3) | לְהִתְרָאוֹת | see you (later) | lehitra'ot |
 | [greetings-25](f/israeli/word/greetings-25.mp3) | בְּהַצְלָחָה | good luck / all the best | behatzlachah |
 | [greetings-26](f/israeli/word/greetings-26.mp3) | לִבְרִיאוּת | bless you (after a sneeze) / to your health | livri'ut |
+| [h0047024c](f/israeli/word/h0047024c.mp3) | תְּרוּפָה | medicine, medication, medicament, drug | terufah |
 | [haftarah-after-w1](f/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](f/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](f/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -2998,6 +3026,33 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [amidah-yihyu-w7](m/israeli/word/amidah-yihyu-w7.mp3) | לְפָנֶיךָ | before you | lefanekha |
 | [amidah-yihyu-w8](m/israeli/word/amidah-yihyu-w8.mp3) | אֲדֹנָי | the LORD | adonai |
 | [amidah-yihyu-w9](m/israeli/word/amidah-yihyu-w9.mp3) | צוּרִי | my rock | tzuri |
+| [anchor-alef](m/israeli/word/anchor-alef.mp3) | אַבָּא | UNKNOWN | aba |
+| [anchor-ayin](m/israeli/word/anchor-ayin.mp3) | עַיִן | UNKNOWN | ayin |
+| [anchor-bet](m/israeli/word/anchor-bet.mp3) | בַּיִת | UNKNOWN | bayit |
+| [anchor-chet](m/israeli/word/anchor-chet.mp3) | חָלָב | UNKNOWN | chalav |
+| [anchor-dalet](m/israeli/word/anchor-dalet.mp3) | דֶּלֶת | UNKNOWN | delet |
+| [anchor-gimel](m/israeli/word/anchor-gimel.mp3) | גָּמָל | UNKNOWN | gamal |
+| [anchor-he](m/israeli/word/anchor-he.mp3) | הַר | UNKNOWN | har |
+| [anchor-kaf-final](m/israeli/word/anchor-kaf-final.mp3) | מֶלֶךְ | UNKNOWN | melekh |
+| [anchor-kaf](m/israeli/word/anchor-kaf.mp3) | כֶּלֶב | UNKNOWN | kelev |
+| [anchor-lamed](m/israeli/word/anchor-lamed.mp3) | לֶחֶם | UNKNOWN | lechem |
+| [anchor-mem-final](m/israeli/word/anchor-mem-final.mp3) | יָם | UNKNOWN | yam |
+| [anchor-mem](m/israeli/word/anchor-mem.mp3) | מַיִם | UNKNOWN | mayim |
+| [anchor-nun-final](m/israeli/word/anchor-nun-final.mp3) | גַּן | UNKNOWN | gan |
+| [anchor-nun](m/israeli/word/anchor-nun.mp3) | נֵר | UNKNOWN | ner |
+| [anchor-pe-final](m/israeli/word/anchor-pe-final.mp3) | כַּף | UNKNOWN | kaf |
+| [anchor-pe](m/israeli/word/anchor-pe.mp3) | פֶּה | UNKNOWN | peh |
+| [anchor-qof](m/israeli/word/anchor-qof.mp3) | קוֹף | UNKNOWN | kof |
+| [anchor-resh](m/israeli/word/anchor-resh.mp3) | רֹאשׁ | UNKNOWN | rosh |
+| [anchor-samekh](m/israeli/word/anchor-samekh.mp3) | סֵפֶר | UNKNOWN | sefer |
+| [anchor-shin](m/israeli/word/anchor-shin.mp3) | שָׁלוֹם | UNKNOWN | shalom |
+| [anchor-tav](m/israeli/word/anchor-tav.mp3) | תּוֹדָה | UNKNOWN | todah |
+| [anchor-tet](m/israeli/word/anchor-tet.mp3) | טוֹב | UNKNOWN | tov |
+| [anchor-tsadi-final](m/israeli/word/anchor-tsadi-final.mp3) | אֶרֶץ | UNKNOWN | eretz |
+| [anchor-tsadi](m/israeli/word/anchor-tsadi.mp3) | צִפּוֹר | UNKNOWN | tzipor |
+| [anchor-vav](m/israeli/word/anchor-vav.mp3) | וֶרֶד | UNKNOWN | vered |
+| [anchor-yod](m/israeli/word/anchor-yod.mp3) | יָד | UNKNOWN | yad |
+| [anchor-zayin](m/israeli/word/anchor-zayin.mp3) | זָהָב | UNKNOWN | zahav |
 | [ashrei-144-15-w1](m/israeli/word/ashrei-144-15-w1.mp3) | אַשְׁרֵי | happy is/was/will be | ashrei |
 | [ashrei-144-15-w2](m/israeli/word/ashrei-144-15-w2.mp3) | הָעָם | the people | ha'am |
 | [ashrei-144-15-w3](m/israeli/word/ashrei-144-15-w3.mp3) | שֶׁכָּכָה | that is in such a case | shekakhah |
@@ -3305,6 +3360,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [etz-chaim-w7](m/israeli/word/etz-chaim-w7.mp3) | מְאֻשָּׁר׃ | Happy, content | me'ushar |
 | [etz-chaim-w8](m/israeli/word/etz-chaim-w8.mp3) | דְּרָכֶיהָ | its ways | derakheha |
 | [etz-chaim-w9](m/israeli/word/etz-chaim-w9.mp3) | דַרְכֵי | ways of | darkhei |
+| [fillers-01](m/israeli/word/fillers-01.mp3) | אָז | so | az |
 | [fillers-02](m/israeli/word/fillers-02.mp3) | נוּ | well? / come on | nu |
 | [fillers-03](m/israeli/word/fillers-03.mp3) | טוֹב | OK / well / good | tov |
 | [fillers-04](m/israeli/word/fillers-04.mp3) | נָכוֹן | right / correct | nakhon |
@@ -5051,6 +5107,17 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [r46-w3](m/israeli/word/r46-w3.mp3) | מָלַךְ | UNKNOWN | malakh |
 | [r46-w4](m/israeli/word/r46-w4.mp3) | בְּטֶרֶם | UNKNOWN | beterem |
 | [r46-w5](m/israeli/word/r46-w5.mp3) | יְצִיר | UNKNOWN | yetzir |
+| [r46-w6](m/israeli/word/r46-w6.mp3) | נִבְרָא | UNKNOWN | nivra |
+| [r47-w1](m/israeli/word/r47-w1.mp3) | הַזָּן | UNKNOWN | hazan |
+| [r47-w2](m/israeli/word/r47-w2.mp3) | כֻּלּוֹ | UNKNOWN | kulo |
+| [r47-w3](m/israeli/word/r47-w3.mp3) | בְּטוּבוֹ | UNKNOWN | betuvo |
+| [r47-w4](m/israeli/word/r47-w4.mp3) | חֵן | UNKNOWN | chen |
+| [r47-w5](m/israeli/word/r47-w5.mp3) | חֶסֶד | UNKNOWN | chesed |
+| [r47-w6](m/israeli/word/r47-w6.mp3) | וּבְרַחֲמִים | UNKNOWN | uverachamim |
+| [r48-w1](m/israeli/word/r48-w1.mp3) | בִּרְכַּת כֹּהֲנִים | UNKNOWN | birkat kohanim |
+| [r49-w1](m/israeli/word/r49-w1.mp3) | וְאָהַבְתָּ | UNKNOWN | ve'ahavta |
+| [r50-w1](m/israeli/word/r50-w1.mp3) | תְּפִלָּה | UNKNOWN | tefilah |
+| [r51-w1](m/israeli/word/r51-w1.mp3) | סִדּוּר | UNKNOWN | sidur |
 | [shehecheyanu-w1](m/israeli/word/shehecheyanu-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [shehecheyanu-w10](m/israeli/word/shehecheyanu-w10.mp3) | לַזְּמַן | to the time | lazeman |
 | [shehecheyanu-w11](m/israeli/word/shehecheyanu-w11.mp3) | הַזֶּה׃ | this | hazeh |
@@ -6092,4 +6159,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 10345 produced clips in INDEX.csv have an English label; 1868 UNKNOWN. Filenames and IDs are unchanged.
+All 10551 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

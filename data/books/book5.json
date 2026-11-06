@@ -17,7 +17,7 @@
    },
    "illustration": "a minimalist sketch of an empty room, sunlight cutting across the floor.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 2,
@@ -31,7 +31,7 @@
    },
    "illustration": "a clean modern oak table standing proudly in the center of the room.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 3,
@@ -45,7 +45,7 @@
    },
    "illustration": "close-up of a single book resting neatly on the wooden surface.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 4,
@@ -59,7 +59,7 @@
    },
    "illustration": "comfortable shoes near a wooden chair; someone settled, at peace.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 5,
@@ -73,7 +73,7 @@
    },
    "illustration": "a small bright kitchen, one plant on the counter, morning light.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 6,
@@ -87,7 +87,7 @@
    },
    "illustration": "the chair pulled up to the oak table, ready.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 7,
@@ -101,7 +101,7 @@
    },
    "illustration": "a simple bed with a folded blanket, a small lamp beside it.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 8,
@@ -115,7 +115,7 @@
    },
    "illustration": "a wide window with sunlight pooling on the floorboards.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 9,
@@ -129,7 +129,7 @@
    },
    "illustration": "the reader in the chair from page 4, book open, shoes off.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 10,
@@ -143,7 +143,7 @@
    },
    "illustration": "the room at golden hour, calm and spare, one cup on the table.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 11,
@@ -157,7 +157,7 @@
    },
    "illustration": "the book left open on the table, a ribbon marking the page.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 12,
@@ -171,9 +171,9 @@
    },
    "illustration": "the house from outside at dusk, the living-room window warm with light.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   }
  ],
  "hasImages": true,
- "hasAudio": false
+ "hasAudio": true
 }

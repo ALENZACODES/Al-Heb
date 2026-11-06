@@ -129,7 +129,7 @@
    },
    "illustration": "leaves streaming sideways in one long gust, Eli's beard lifted by it.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 10,
@@ -143,7 +143,7 @@
    },
    "illustration": "Eli seated on the stone blocks, hands on his knees, eyes closed.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 11,
@@ -157,7 +157,7 @@
    },
    "illustration": "a scatter of silver-green leaves turning in the air above the courtyard.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 12,
@@ -171,9 +171,9 @@
    },
    "illustration": "the tree at first light again, Eli's footprints in the dust of the courtyard.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   }
  ],
  "hasImages": true,
- "hasAudio": false
+ "hasAudio": true
 }

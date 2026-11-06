@@ -17,7 +17,7 @@
    },
    "illustration": "empty fruit stalls in warm amber lantern light under an indigo sky.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 2,
@@ -31,7 +31,7 @@
    },
    "illustration": "gentle waves on the Tel Aviv coast under a silver crescent moon.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 3,
@@ -45,7 +45,7 @@
    },
    "illustration": "a sleek stray cat stepping softly across warm limestone pavement.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 4,
@@ -59,7 +59,7 @@
    },
    "illustration": "moonlight resting on a quiet, flat-roofed Mediterranean home.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 5,
@@ -73,7 +73,7 @@
    },
    "illustration": "the cat curled asleep on a doorstep, tail over its nose.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 6,
@@ -87,7 +87,7 @@
    },
    "illustration": "the empty street, one lamp glowing, shutters closing.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 7,
@@ -101,7 +101,7 @@
    },
    "illustration": "one last lit window in a dark building; a plant on its sill.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 8,
@@ -115,7 +115,7 @@
    },
    "illustration": "a street tree silvered by moonlight, leaves still.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 9,
@@ -129,7 +129,7 @@
    },
    "illustration": "split view — flat calm sea, shuttered market stalls, same moon over both.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 10,
@@ -143,7 +143,7 @@
    },
    "illustration": "the house from page 4, its windows now dark, moon higher.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 11,
@@ -157,7 +157,7 @@
    },
    "illustration": "the whole coastline at night, a curve of small lights under the moon.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 12,
@@ -171,9 +171,9 @@
    },
    "illustration": "a child's window from outside, curtains drawn, one star above the roof.",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   }
  ],
  "hasImages": false,
- "hasAudio": false
+ "hasAudio": true
 }

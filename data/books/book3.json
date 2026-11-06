@@ -17,7 +17,7 @@
    },
    "illustration": "a worn leather messenger bag on a wooden bench at a Tel Aviv train station.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 2,
@@ -31,7 +31,7 @@
    },
    "illustration": "a polished red apple lifted out of the bag against a crisp teal background.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 3,
@@ -45,7 +45,7 @@
    },
    "illustration": "a thick hardcover book resting beside the apple.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 4,
@@ -59,7 +59,7 @@
    },
    "illustration": "an old brass key glinting in sunlight on top of the open bag.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 5,
@@ -73,7 +73,7 @@
    },
    "illustration": "a single yellow pencil laid across the open bag's flap.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 6,
@@ -87,7 +87,7 @@
    },
    "illustration": "a banana curved over the apple like a smile.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 7,
@@ -101,7 +101,7 @@
    },
    "illustration": "round reading glasses folded on top of the big book.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 8,
@@ -115,7 +115,7 @@
    },
    "illustration": "the bag stands open and empty-looking; a hand lifts the book from behind it.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 9,
@@ -129,7 +129,7 @@
    },
    "illustration": "wide view of the bench — the book sits at its far end, in a patch of sun.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 10,
@@ -143,7 +143,7 @@
    },
    "illustration": "the traveller steps into frame at the bench, waving at the reader.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 11,
@@ -157,7 +157,7 @@
    },
    "illustration": "the bag packed neatly — apple, book, key, pencil, banana, glasses in a row above it.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 12,
@@ -171,9 +171,9 @@
    },
    "illustration": "the traveller walks down the platform, bag on shoulder, train lights ahead.",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   }
  ],
  "hasImages": true,
- "hasAudio": false
+ "hasAudio": true
 }

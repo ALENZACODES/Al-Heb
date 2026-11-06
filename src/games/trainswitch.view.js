@@ -1,6 +1,6 @@
 // Game 19 — SVO switchboard: only exact sourced paradigm word order reaches the station.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, imgOf, resultsCard } from './engine.js';
+import { createSession, shuffled, resultsCard } from './engine.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY='games.trainswitch.v1';
 export function buildSvoDeck(data) {
@@ -17,7 +17,7 @@ export function trainValid(row,sequence) {
     row.cars.every((word,i)=>sequence[i]===word);
 }
 export function mount(root,ctx){
-  let alive=true,deck=[],R=null,round=0,chosen=[],used=[];
+  let alive=true,deck=[],round=0,chosen=[],used=[];
   let session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:5});
   const status=h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading attested sentence order…');
   const board=h('div',{class:'game-board'});
@@ -40,13 +40,12 @@ export function mount(root,ctx){
       if(ok)round++;chosen=[];used=[];paint();
     }},'Send train');
     const reset=h('button',{type:'button',class:'btn secondary',onclick:()=>{chosen=[];used=[];paint();}},'Reset switches');
-    const pic=imgOf(R,'lesson','I-17');
+    // The gender paradigm has no linked lesson image ID: leave the station picture absent.
     const station=h('div',{class:'game-train-station'},h('p',{},row.gloss));
-    if(pic)station.append(h('img',{src:pic.src,alt:pic.alt,width:pic.width,height:pic.height,class:'game-card-img','data-img-id':pic.id}));
     board.replaceChildren(station,chosenCarriages,h('div',{class:'game-choices game-rtl-grid'},...buttons),dispatch,reset);
   }
-  Promise.all([loadJson('data/curriculum/gender-pairs.json'),loadGameImages(ctx)]).then(([data,images])=>{
-    if(!alive||!article.isConnected)return;deck=shuffled(buildSvoDeck(data));R=images;
+  loadJson('data/curriculum/gender-pairs.json').then((data)=>{
+    if(!alive||!article.isConnected)return;deck=shuffled(buildSvoDeck(data));
     if(deck.length<4){status.textContent='No source SVO paradigms with all grammatical roles.';return;}paint();
   }).catch(()=>{if(alive)status.textContent='Sentence order data unavailable.';});
   return ()=>{alive=false;};

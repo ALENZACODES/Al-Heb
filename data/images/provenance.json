@@ -59444,6 +59444,414 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "PLACE_everyday_05": {
+   "id": "PLACE_everyday_05",
+   "file": "PLACE_everyday_05.png",
+   "command": 208,
+   "set": "Coast, valleys & everyday Israel",
+   "block": "N",
+   "prompt": "Command 208 (Coast, valleys & everyday Israel): A shady moshav lane with citrus groves; a water tower in a farming town square; a railway crossing in the Jezreel valley with green fields; the Carmel forest after rain, green and misted; a beach town promenade in winter with one kite; an Arab village on a Galilee hill with a minaret silhouette and church tower in one frame (both distant, respectful); a Haredi neighbourhood street at Friday afternoon rush (people small, modest dress, no signs); a university campus lawn with students on the grass (books blank); a hospital entrance with a garden (no signs); a small town's main street at the blue hour. Image 5 of 10: a beach town promenade in winter with one kite. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "a352ff752605c0fb77d7581fdf301a7a656b0f11b2b7f2fa4b17d2e3790e8135",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:35:16.536Z",
+   "sourceFile": "img-0156.png",
+   "sourceFileDate": "2026-11-06T21:35:16.121Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "e0656eded79d4ea3fd6eb2bda57362bc6a5359597e2fc0603c74bf818f4c5c63",
+   "originalFormat": "PNG",
+   "originalBytes": 207109,
+   "originalFile": "PLACE_everyday_05.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_everyday_05.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 32616
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "VOC_weather_04": {
+   "id": "VOC_weather_04",
+   "file": "VOC_weather_04.png",
+   "command": 94,
+   "set": "vocab_weather",
+   "block": "E",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One centred image: a clock face without numbers. No people unless the item is an action. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "e1b8ff7c415e2b22dcea14e474e0cbfcb4bb59240e1985e0e7207de07ccf4405",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:35:16.536Z",
+   "sourceFile": "img-0303.png",
+   "sourceFileDate": "2026-11-06T21:35:16.188Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "e83f1f0b553698fa7cdb1b011ff86861041e8190d1fa5c49f8c0c6c01df457a3",
+   "originalFormat": "PNG",
+   "originalBytes": 232974,
+   "originalFile": "VOC_weather_04.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "VOC_weather_04.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 20540
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "MAS_states_06": {
+   "id": "MAS_states_06",
+   "file": "MAS_states_06.png",
+   "command": 240,
+   "set": "Rimon — full state sheet II",
+   "block": "R",
+   "prompt": "Command 240 (Rimon — full state sheet II): Ten square portraits of the mascot only, one state each, continuing Run 2's dashboard set without repeating it: Rimon with a tiny knitted kippah; Rimon with a small tallit; Rimon holding a shofar nearly as big as itself; Rimon under an umbrella in first rain; Rimon with sunglasses and a beach bucket; Rimon carrying a book stack taller than itself; Rimon blowing a dandelion clock; Rimon in a chef's hat tasting from a spoon; Rimon planting a seedling; Rimon waving a small blank flag. Files MAS_states_01 … _10. Image 6 of 10: Rimon carrying a book stack taller than itself. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "31babdf21c8c130a5097196f3f08cad4ed415e75a1f79aafcad5d6df26ab1c87",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:35:16.536Z",
+   "sourceFile": "img-0357.png",
+   "sourceFileDate": "2026-11-06T21:35:16.034Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "2403ed1ee85466029c83f2c6e23ad8a7b5c81259d339e446a29b743d56cb0107",
+   "originalFormat": "PNG",
+   "originalBytes": 219481,
+   "originalFile": "MAS_states_06.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "MAS_states_06.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 14876
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_there_07": {
+   "id": "GRAM_there_07",
+   "file": "GRAM_there_07.png",
+   "command": 216,
+   "set": "There is / there isn't",
+   "block": "O",
+   "prompt": "Command 216 (There is / there isn't): A table with a cat on it (there is); the same table empty with Rimon shrugging (there isn't); a fridge open with milk inside; the same fridge with one empty shelf circled by light (nothing there); a garden with a hidden bird (find-it); a sky with no clouds and a puzzled bird; a pocket turned out empty; a pocket with coins (blank); a chair with a siddur left on it (someone was here); an empty chair by a set table (someone missing). Image 7 of 10: a pocket turned out empty. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "15eddd7234a5a14f96d2ee8a151ed8c402719b6f62911c94111a42617c9a08ea",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:35:16.536Z",
+   "sourceFile": "img-0537.png",
+   "sourceFileDate": "2026-11-06T21:35:16.124Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "8a9500a0a1c7e578d280ae2b88cc18e8c8bec9e445e0ed0819430ed0389d3742",
+   "originalFormat": "PNG",
+   "originalBytes": 251857,
+   "originalFile": "GRAM_there_07.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_there_07.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 23696
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_ask_04": {
+   "id": "GRAM_ask_04",
+   "file": "GRAM_ask_04.png",
+   "command": 214,
+   "set": "Questions",
+   "block": "O",
+   "prompt": "Command 214 (Questions): A giant gold question-mark SHAPE made of ribbon floating over a market stall (shape only, no letters — a sculptural question mark is a symbol, allowed as an object); who — Rimon peeking from behind three doors; where — one scene: Ari looking for something, with a table, an open box and a shelf all in frame; when — Noa pointing at a blank clock and a blank calendar; what — hands open over three covered dishes; why — a child pointing at rain; how many — hands counting pomegranate seeds; how — a puzzled look at a folded paper crane; which — two doors, one gold one blue, hand hovering; whose — a lost glove held up to a crowd. Image 4 of 10: when — Noa pointing at a blank clock and a blank calendar. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "42458a8c7315fd78956b5310a8127effda3fd26ac10cbd5e8d0cced68dbe9041",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:35:16.536Z",
+   "sourceFile": "img-0542.png",
+   "sourceFileDate": "2026-11-06T21:35:16.110Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "a52091640375b97e08e94940bf5b99cced3309c519d14d0b40a5cdc1d3dc135b",
+   "originalFormat": "PNG",
+   "originalBytes": 261345,
+   "originalFile": "GRAM_ask_04.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_ask_04.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 26984
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "OO0000",
+      "conf": 29.3,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "GRAM_place_07": {
+   "id": "GRAM_place_07",
+   "file": "GRAM_place_07.png",
+   "command": 210,
+   "set": "Prepositions — place",
+   "block": "O",
+   "prompt": "Command 210 (Prepositions — place): Rimon on a chair; Rimon under the chair; Rimon inside a box; Rimon beside the box; Rimon behind a curtain (paws visible); Rimon in front of a door; Rimon between two books; a cup on a table vs the same cup under the table (2 images); one wide image of a lane with a house at the far end — Ari small beside the far house and a second Ari large close to the viewer beside an identical near house (distance readable in a single frame). Image 7 of 10: Rimon between two books. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "18fb38fb48488aa4537018707c561805f434395eb591cb9e113d74f7d47922ee",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:35:16.536Z",
+   "sourceFile": "img-0758.png",
+   "sourceFileDate": "2026-11-06T21:35:16.039Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "926bc0a737e2430e7330bcfec97998180dedbe3bb1ab739c1cb499f36241fcdd",
+   "originalFormat": "PNG",
+   "originalBytes": 192940,
+   "originalFile": "GRAM_place_07.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_place_07.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 10352
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HERO_psalms2_03": {
+   "id": "HERO_psalms2_03",
+   "file": "HERO_psalms2_03.png",
+   "command": 196,
+   "set": "Psalms heroes II & Hallel",
+   "block": "M",
+   "prompt": "Command 196 (Psalms heroes II & Hallel): Psalm 113 — from the rising of the sun, one arc of light over hills; Psalm 114 — the sea fleeing — waves parting before mountains (echo of Exodus, wide); Psalm 118 — a cornerstone being set into a wall by builders; Psalm 121 — eyes lifted to the hills at dusk; Psalm 122 — the walls and towers of a peaceful city; Psalm 126 — sowers with seed bags, tearful, and reapers with sheaves, joyful, in one field split by light; Psalm 130 — out of the depths: a diver of light rising from deep blue water toward the surface; Psalm 136 — a long table of creation: sun, moon, sea, harvest in bands; Psalm 145 — an open hand giving grain to birds; Psalm 150 — every instrument gathered: shofar, harp, drum, cymbals and strings in a sunlit court. Image 3 of 10: Psalm 118 — a cornerstone being set into a wall by builders. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "705d96092eec4d9956c3d2e7c7adf54fca2c6b6a3b05dbfac7cee3aec005abf9",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:35:16.536Z",
+   "sourceFile": "img-0773.png",
+   "sourceFileDate": "2026-11-06T21:35:16.090Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "153b228a7348d6fb391400ed2fff64d560f588e1fea6169dd59f84711423f403",
+   "originalFormat": "PNG",
+   "originalBytes": 233860,
+   "originalFile": "HERO_psalms2_03.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HERO_psalms2_03.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 41538
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_there_04": {
+   "id": "GRAM_there_04",
+   "file": "GRAM_there_04.png",
+   "command": 216,
+   "set": "There is / there isn't",
+   "block": "O",
+   "prompt": "Command 216 (There is / there isn't): A table with a cat on it (there is); the same table empty with Rimon shrugging (there isn't); a fridge open with milk inside; the same fridge with one empty shelf circled by light (nothing there); a garden with a hidden bird (find-it); a sky with no clouds and a puzzled bird; a pocket turned out empty; a pocket with coins (blank); a chair with a siddur left on it (someone was here); an empty chair by a set table (someone missing). Image 4 of 10: the same fridge with one empty shelf circled by light (nothing there). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "c0d179905fecb29b749fbb3cf0c653d098150231e678f4a2f53715eec72bac75",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:35:16.536Z",
+   "sourceFile": "img-0781.png",
+   "sourceFileDate": "2026-11-06T21:35:16.127Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "abab943a6633928a2c7cfb80048b0bded271678b2a4c3c75bc8a5e43ddccb575",
+   "originalFormat": "PNG",
+   "originalBytes": 210394,
+   "originalFile": "GRAM_there_04.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_there_04.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 13850
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

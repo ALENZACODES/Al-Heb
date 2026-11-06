@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 1014,
+ "count": 1022,
  "images": {
   "BADGE_03": {
    "w": 512,
@@ -1996,6 +1996,18 @@
     }
    ]
   },
+  "GRAM_ask_04": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_ask_04.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GRAM_ask_05": {
    "w": 512,
    "h": 512,
@@ -2224,6 +2236,18 @@
     }
    ]
   },
+  "GRAM_place_07": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_place_07.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GRAM_there_03": {
    "w": 512,
    "h": 512,
@@ -2231,6 +2255,30 @@
     {
      "edge": 512,
      "file": "GRAM_there_03.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_there_04": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_there_04.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_there_07": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_there_07.512.webp",
      "w": 512,
      "h": 512
     }
@@ -3233,6 +3281,18 @@
     {
      "edge": 512,
      "file": "HERO_psalms2_02.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "HERO_psalms2_03": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HERO_psalms2_03.512.webp",
      "w": 512,
      "h": 293
     }
@@ -8242,6 +8302,18 @@
     }
    ]
   },
+  "MAS_states_06": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "MAS_states_06.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "MAS_states_07": {
    "w": 512,
    "h": 512,
@@ -10307,6 +10379,18 @@
     {
      "edge": 512,
      "file": "PLACE_everyday_03.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_everyday_05": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_everyday_05.512.webp",
      "w": 512,
      "h": 293
     }
@@ -17653,6 +17737,18 @@
      "file": "VOC_transport_10.1254.webp",
      "w": 1254,
      "h": 1254
+    }
+   ]
+  },
+  "VOC_weather_04": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "VOC_weather_04.512.webp",
+     "w": 512,
+     "h": 512
     }
    ]
   }

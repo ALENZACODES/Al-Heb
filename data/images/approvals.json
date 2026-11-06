@@ -5294,6 +5294,42 @@
   "GAME_art_06": {
    "status": "approved",
    "at": "2026-11-06T21:34:00.516Z"
+  },
+  "PLACE_everyday_05": {
+   "status": "approved",
+   "at": "2026-11-06T21:35:32.536Z"
+  },
+  "VOC_weather_04": {
+   "status": "approved",
+   "at": "2026-11-06T21:35:32.536Z"
+  },
+  "MAS_states_06": {
+   "status": "approved",
+   "at": "2026-11-06T21:35:32.536Z"
+  },
+  "GRAM_there_07": {
+   "status": "approved",
+   "at": "2026-11-06T21:35:32.536Z"
+  },
+  "GRAM_place_07": {
+   "status": "approved",
+   "at": "2026-11-06T21:35:32.536Z"
+  },
+  "HERO_psalms2_03": {
+   "status": "approved",
+   "at": "2026-11-06T21:35:32.536Z"
+  },
+  "GRAM_there_04": {
+   "status": "approved",
+   "at": "2026-11-06T21:35:32.536Z"
+  },
+  "GRAM_ask_04": {
+   "status": "approved",
+   "at": "2026-11-06T21:35:33.208Z",
+   "note": "contains_text flag eye-checked at full size Nov 6: clock and calendar are blank, no text present (detector false positive)",
+   "forcedDespite": [
+    "contains_text"
+   ]
   }
  }
 }

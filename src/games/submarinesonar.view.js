@@ -1,6 +1,7 @@
 // Game 7 — audio to exact pointed reading; recorded clip is mandatory for scoring.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, hasRecordedClip, playRecordedClip, resultsCard } from './engine.js';
+import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.submarinesonar.v1';
 export function buildSonarDeck(index) {
@@ -21,6 +22,7 @@ export function gateMatches(target, selected) {
   return !!target?.id && target.id === selected?.id && target.he === selected.he;
 }
 export function mount(root,ctx) {
+  const leaveSfx = sfx.enter(ctx);
   let alive = true, groups = [], R = null, round = 0;
   let session = createSession({ store:ctx?.store,storeKey:STORE_KEY,par:6 });
   const status = h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading recorded sonar targets…');
@@ -38,7 +40,7 @@ export function mount(root,ctx) {
       const pic=imgOf(R,'word',option.id);
       const b=h('button',{type:'button',class:'btn secondary game-choice game-sonar-gate',onclick:()=>{
         if(!alive || !heard)return;
-        const ok=gateMatches(target,option);session.answer(ok);
+        const ok=gateMatches(target,option);session.answer(ok); sfx.play(ok ? 'success' : 'miss');
         status.textContent=ok?'Sonar gate unlocked.':'Wrong vowel points: gate closed.';
         if(ok)round++;void paint();
       }},heSpan(option.he,'he game-he-sm'));
@@ -61,5 +63,5 @@ export function mount(root,ctx) {
     if(!groups.length){status.textContent='No exact pair of recorded pointed spellings. Sonar rounds are disabled.';return;}
     void paint();
   }).catch(()=>{if(alive)status.textContent='Sonar word data unavailable.';});
-  return ()=>{alive=false;ctx?.audio?.stop?.();};
+  return ()=>{alive=false; leaveSfx();ctx?.audio?.stop?.();};
 }

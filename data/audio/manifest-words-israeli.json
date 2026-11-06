@@ -36647,8 +36647,8 @@
     "kind": "word",
     "id": "hanerot-halalu-w3",
     "text": "אֲנַחְנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -36669,8 +36669,8 @@
     "kind": "word",
     "id": "hanerot-halalu-w4",
     "text": "מַדְלִיקִין",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -36691,8 +36691,8 @@
     "kind": "word",
     "id": "hanerot-halalu-w5",
     "text": "עַל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -36713,8 +36713,8 @@
     "kind": "word",
     "id": "hanerot-halalu-w6",
     "text": "הַנִּסִּים",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -36735,8 +36735,8 @@
     "kind": "word",
     "id": "hanerot-halalu-w7",
     "text": "וְעַל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -36757,8 +36757,8 @@
     "kind": "word",
     "id": "hanerot-halalu-w8",
     "text": "הַתְּשׁוּעוֹת",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -36779,8 +36779,8 @@
     "kind": "word",
     "id": "hanerot-halalu-w9",
     "text": "וְעַל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -37219,8 +37219,8 @@
     "kind": "word",
     "id": "hanerot-halalu-w29",
     "text": "לִרְאוֹתָם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -37241,8 +37241,8 @@
     "kind": "word",
     "id": "hanerot-halalu-w30",
     "text": "בִּלְבָד",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -37263,8 +37263,8 @@
     "kind": "word",
     "id": "hanerot-halalu-w31",
     "text": "כְּדֵי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -37285,8 +37285,8 @@
     "kind": "word",
     "id": "hanerot-halalu-w32",
     "text": "לְהוֹדוֹת",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -37307,8 +37307,8 @@
     "kind": "word",
     "id": "hanerot-halalu-w33",
     "text": "לִשְׁמֶךָ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -37329,8 +37329,8 @@
     "kind": "word",
     "id": "hanerot-halalu-w34",
     "text": "עַל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -37351,8 +37351,8 @@
     "kind": "word",
     "id": "hanerot-halalu-w35",
     "text": "נִסֶּיךָ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -37373,8 +37373,8 @@
     "kind": "word",
     "id": "hanerot-halalu-w36",
     "text": "נִפְלְאוֹתֶיךָ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -37395,8 +37395,8 @@
     "kind": "word",
     "id": "hanerot-halalu-w37",
     "text": "וִישׁוּעוֹתֶיךָ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {

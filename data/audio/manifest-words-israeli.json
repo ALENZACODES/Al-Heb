@@ -50840,7 +50840,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a time; a step, a footstep, a pace; a stroke, a beat, as a heartbeat"
+  "english": "a time; a step, a footstep, a pace; a stroke, a beat, as a heartbeat",
+  "phonetic": "pa'am"
  },
  {
   "path": "audio/f/israeli/word/h00fd9c4f.mp3",
@@ -50850,10 +50851,11 @@
   "id": "h00fd9c4f",
   "text": "פַּעַם",
   "ipa": "ˈpa.am",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "a time; a step, a footstep, a pace; a stroke, a beat, as a heartbeat"
+  "english": "a time; a step, a footstep, a pace; a stroke, a beat, as a heartbeat",
+  "phonetic": "pa'am"
  },
  {
   "path": "audio/m/israeli/word/h04c271fe.mp3",
@@ -57706,7 +57708,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "pharaoh"
+  "english": "pharaoh",
+  "phonetic": "par'oh"
  },
  {
   "path": "audio/f/israeli/word/h0073b076.mp3",
@@ -57716,10 +57719,11 @@
   "id": "h0073b076",
   "text": "פַּרְעֹה",
   "ipa": "paʁ.ˈo",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "pharaoh"
+  "english": "pharaoh",
+  "phonetic": "par'oh"
  },
  {
   "path": "audio/m/israeli/word/h26a32615.mp3",
@@ -61606,7 +61610,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "about, regarding, in connection with, with respect to"
+  "english": "about, regarding, in connection with, with respect to",
+  "phonetic": "legabei"
  },
  {
   "path": "audio/f/israeli/word/h00bec4fa.mp3",
@@ -61616,10 +61621,11 @@
   "id": "h00bec4fa",
   "text": "לְגַבֵּי",
   "ipa": "le.ɡa.ˈbe",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "about, regarding, in connection with, with respect to"
+  "english": "about, regarding, in connection with, with respect to",
+  "phonetic": "legabei"
  },
  {
   "path": "audio/m/israeli/word/h34d7be76.mp3",
@@ -68158,7 +68164,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "completely, totally"
+  "english": "completely, totally",
+  "phonetic": "lachalutin"
  },
  {
   "path": "audio/f/israeli/word/h00ca167b.mp3",
@@ -68168,10 +68175,11 @@
   "id": "h00ca167b",
   "text": "לַחֲלוּטִין",
   "ipa": "la.χa.lu.ˈtin",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "completely, totally"
+  "english": "completely, totally",
+  "phonetic": "lachalutin"
  },
  {
   "path": "audio/m/israeli/word/h15edfdd8.mp3",
@@ -70524,7 +70532,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "spoiled, rotten (of food or similar); spoiled (of a child); out of order, broken (not functioning properly)"
+  "english": "spoiled, rotten (of food or similar); spoiled (of a child); out of order, broken (not functioning properly)",
+  "phonetic": "mekulkal"
  },
  {
   "path": "audio/f/israeli/word/h00cdb883.mp3",
@@ -70534,10 +70543,11 @@
   "id": "h00cdb883",
   "text": "מְקֻלְקָל",
   "ipa": "me.kul.ˈkal",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "spoiled, rotten (of food or similar); spoiled (of a child); out of order, broken (not functioning properly)"
+  "english": "spoiled, rotten (of food or similar); spoiled (of a child); out of order, broken (not functioning properly)",
+  "phonetic": "mekulkal"
  },
  {
   "path": "audio/m/israeli/word/hf228052b.mp3",

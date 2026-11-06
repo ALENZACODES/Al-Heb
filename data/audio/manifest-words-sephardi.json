@@ -22067,8 +22067,8 @@
   "kind": "word",
   "id": "vezot-hatorah-w2",
   "text": "הַתּוֹרָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the Torah",
   "phonetic": "hatorah"
@@ -22093,8 +22093,8 @@
   "kind": "word",
   "id": "vezot-hatorah-w3",
   "text": "אֲשֶׁר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "introduces a subordinate clause",
   "phonetic": "asher"
@@ -22119,8 +22119,8 @@
   "kind": "word",
   "id": "vezot-hatorah-w4",
   "text": "שָׂם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to put, place; to turn on; to put on, don (gloves)",
   "phonetic": "sam"
@@ -22145,8 +22145,8 @@
   "kind": "word",
   "id": "vezot-hatorah-w5",
   "text": "מֹשֶׁה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "Moses",
   "phonetic": "mosheh"
@@ -22353,8 +22353,8 @@
   "kind": "word",
   "id": "vezot-hatorah-w13",
   "text": "מֹשֶׁה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "of Moses",
   "phonetic": "mosheh"
@@ -50840,7 +50840,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a time; a step, a footstep, a pace; a stroke, a beat, as a heartbeat"
+  "english": "a time; a step, a footstep, a pace; a stroke, a beat, as a heartbeat",
+  "phonetic": "pa'am"
  },
  {
   "path": "audio/f/sephardi/word/h00fd9c4f.mp3",
@@ -50853,7 +50854,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a time; a step, a footstep, a pace; a stroke, a beat, as a heartbeat"
+  "english": "a time; a step, a footstep, a pace; a stroke, a beat, as a heartbeat",
+  "phonetic": "pa'am"
  },
  {
   "path": "audio/m/sephardi/word/h04c271fe.mp3",
@@ -57706,7 +57708,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "pharaoh"
+  "english": "pharaoh",
+  "phonetic": "par'oh"
  },
  {
   "path": "audio/f/sephardi/word/h0073b076.mp3",
@@ -57719,7 +57722,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "pharaoh"
+  "english": "pharaoh",
+  "phonetic": "par'oh"
  },
  {
   "path": "audio/m/sephardi/word/h26a32615.mp3",
@@ -61606,7 +61610,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "about, regarding, in connection with, with respect to"
+  "english": "about, regarding, in connection with, with respect to",
+  "phonetic": "legabei"
  },
  {
   "path": "audio/f/sephardi/word/h00bec4fa.mp3",
@@ -61619,7 +61624,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "about, regarding, in connection with, with respect to"
+  "english": "about, regarding, in connection with, with respect to",
+  "phonetic": "legabei"
  },
  {
   "path": "audio/m/sephardi/word/h34d7be76.mp3",
@@ -68158,7 +68164,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "completely, totally"
+  "english": "completely, totally",
+  "phonetic": "lachalutin"
  },
  {
   "path": "audio/f/sephardi/word/h00ca167b.mp3",
@@ -68171,7 +68178,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "completely, totally"
+  "english": "completely, totally",
+  "phonetic": "lachalutin"
  },
  {
   "path": "audio/m/sephardi/word/h15edfdd8.mp3",
@@ -70524,7 +70532,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "spoiled, rotten (of food or similar); spoiled (of a child); out of order, broken (not functioning properly)"
+  "english": "spoiled, rotten (of food or similar); spoiled (of a child); out of order, broken (not functioning properly)",
+  "phonetic": "mekulkal"
  },
  {
   "path": "audio/f/sephardi/word/h00cdb883.mp3",
@@ -70537,7 +70546,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "spoiled, rotten (of food or similar); spoiled (of a child); out of order, broken (not functioning properly)"
+  "english": "spoiled, rotten (of food or similar); spoiled (of a child); out of order, broken (not functioning properly)",
+  "phonetic": "mekulkal"
  },
  {
   "path": "audio/m/sephardi/word/hf228052b.mp3",

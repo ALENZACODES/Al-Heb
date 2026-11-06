@@ -34755,8 +34755,8 @@
   "kind": "word",
   "id": "zimun-opening-w1",
   "text": "רַבּוֹתַי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "gentlemen",
   "phonetic": "rabotai"
@@ -34781,8 +34781,8 @@
   "kind": "word",
   "id": "zimun-opening-w2",
   "text": "נְבָרֵךְ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "let us bless",
   "phonetic": "nevarekh"
@@ -34807,8 +34807,8 @@
   "kind": "word",
   "id": "zimun-opening-w3",
   "text": "יְהִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "may be",
   "phonetic": "yehi"
@@ -34833,8 +34833,8 @@
   "kind": "word",
   "id": "zimun-opening-w4",
   "text": "שֵׁם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "a name; a first name",
   "phonetic": "shem"
@@ -34859,8 +34859,8 @@
   "kind": "word",
   "id": "zimun-opening-w5",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the LORD",
   "phonetic": "adonai"
@@ -50840,7 +50840,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a time; a step, a footstep, a pace; a stroke, a beat, as a heartbeat"
+  "english": "a time; a step, a footstep, a pace; a stroke, a beat, as a heartbeat",
+  "phonetic": "pa'am"
  },
  {
   "path": "audio/f/ashkenazi/word/h00fd9c4f.mp3",
@@ -50853,7 +50854,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a time; a step, a footstep, a pace; a stroke, a beat, as a heartbeat"
+  "english": "a time; a step, a footstep, a pace; a stroke, a beat, as a heartbeat",
+  "phonetic": "pa'am"
  },
  {
   "path": "audio/m/ashkenazi/word/h04c271fe.mp3",
@@ -57706,7 +57708,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "pharaoh"
+  "english": "pharaoh",
+  "phonetic": "par'oh"
  },
  {
   "path": "audio/f/ashkenazi/word/h0073b076.mp3",
@@ -57719,7 +57722,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "pharaoh"
+  "english": "pharaoh",
+  "phonetic": "par'oh"
  },
  {
   "path": "audio/m/ashkenazi/word/h26a32615.mp3",
@@ -61606,7 +61610,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "about, regarding, in connection with, with respect to"
+  "english": "about, regarding, in connection with, with respect to",
+  "phonetic": "legabei"
  },
  {
   "path": "audio/f/ashkenazi/word/h00bec4fa.mp3",
@@ -61619,7 +61624,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "about, regarding, in connection with, with respect to"
+  "english": "about, regarding, in connection with, with respect to",
+  "phonetic": "legabei"
  },
  {
   "path": "audio/m/ashkenazi/word/h34d7be76.mp3",
@@ -68158,7 +68164,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "completely, totally"
+  "english": "completely, totally",
+  "phonetic": "lachalutin"
  },
  {
   "path": "audio/f/ashkenazi/word/h00ca167b.mp3",
@@ -68171,7 +68178,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "completely, totally"
+  "english": "completely, totally",
+  "phonetic": "lachalutin"
  },
  {
   "path": "audio/m/ashkenazi/word/h15edfdd8.mp3",
@@ -70524,7 +70532,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "spoiled, rotten (of food or similar); spoiled (of a child); out of order, broken (not functioning properly)"
+  "english": "spoiled, rotten (of food or similar); spoiled (of a child); out of order, broken (not functioning properly)",
+  "phonetic": "mekulkal"
  },
  {
   "path": "audio/f/ashkenazi/word/h00cdb883.mp3",
@@ -70537,7 +70546,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "spoiled, rotten (of food or similar); spoiled (of a child); out of order, broken (not functioning properly)"
+  "english": "spoiled, rotten (of food or similar); spoiled (of a child); out of order, broken (not functioning properly)",
+  "phonetic": "mekulkal"
  },
  {
   "path": "audio/m/ashkenazi/word/hf228052b.mp3",

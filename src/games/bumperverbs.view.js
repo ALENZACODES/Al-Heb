@@ -1,6 +1,7 @@
 // Game 9 — agreement bumper: only attested gender-paired verb forms are used.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, resultsCard } from './engine.js';
+import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY='games.bumperverbs.v1';
 export function buildBumperDeck(data) {
@@ -10,6 +11,7 @@ export function buildBumperDeck(data) {
 }
 export function agrees(row, driver, phrase) { return driver==='ari' ? row?.masculine===phrase : driver==='noa' && row?.feminine===phrase; }
 export function mount(root,ctx){
+  const leaveSfx = sfx.enter(ctx);
   let alive=true,deck=[],R=null,round=0,session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});
   const status=h('p',{role:'status',class:'game-status','aria-live':'polite'},'Loading attested agreement forms…');
   const board=h('div',{class:'game-board'});
@@ -25,7 +27,7 @@ export function mount(root,ctx){
     const dashboard=h('div',{class:'game-bumper-dashboard'},h('strong',{},driver==='ari'?'Ari':'Noa'),h('span',{},row.en));
     if(picture)dashboard.append(h('img',{class:'game-card-img',src:picture.src,alt:picture.alt,width:picture.width,height:picture.height,'data-img-id':picture.id}));
     const choices=shuffled([row.masculine,row.feminine]).map(phrase=>h('button',{type:'button',class:'btn secondary game-choice game-bumper-car',onclick:()=>{
-      const ok=agrees(row,driver,phrase);session.answer(ok);
+      const ok=agrees(row,driver,phrase);session.answer(ok); sfx.play(ok ? 'success' : 'miss');
       status.textContent=ok?'Agreement matches: bumper hit.':'Wrong conjugation: bumper bounces away.';
       if(ok)round++;paint();
     }},heSpan(phrase,'he game-he-sm')));
@@ -35,5 +37,5 @@ export function mount(root,ctx){
     if(!alive||!article.isConnected)return;deck=shuffled(buildBumperDeck(data));R=images;
     if(deck.length<4){status.textContent='No usable attested verb-agreement pairs.';return;}paint();
   }).catch(()=>{if(alive)status.textContent='Verb agreement data unavailable.';});
-  return ()=>{alive=false;};
+  return ()=>{alive=false; leaveSfx();};
 }

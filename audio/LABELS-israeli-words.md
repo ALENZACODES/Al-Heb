@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 3273 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 3356 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-3273 English labels; 4 UNKNOWN.
+3356 English labels; 4 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -3278,10 +3278,78 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [shir-hamaalot-w30](m/israeli/word/shir-hamaalot-w30.mp3) | אֶת־שְׁבִיתֵנוּ | our captivity | et-shevitenu |
 | [shir-hamaalot-w31](m/israeli/word/shir-hamaalot-w31.mp3) | כַּאֲפִיקִים | as streams | ka'afikim |
 | [shir-hamaalot-w32](m/israeli/word/shir-hamaalot-w32.mp3) | בַּנֶּגֶב׃ | in the dry land | banegev |
+| [shir-hamaalot-w33](m/israeli/word/shir-hamaalot-w33.mp3) | הַזֹּרְעִים | who sow | hazore'im |
+| [shir-hamaalot-w34](m/israeli/word/shir-hamaalot-w34.mp3) | בְּדִמְעָה | in tears | bedim'ah |
+| [shir-hamaalot-w35](m/israeli/word/shir-hamaalot-w35.mp3) | בְּרִנָּה | with joy | berinah |
+| [shir-hamaalot-w36](m/israeli/word/shir-hamaalot-w36.mp3) | יִקְצֹרוּ׃ | shall reap | yiktzoru |
+| [shir-hamaalot-w37](m/israeli/word/shir-hamaalot-w37.mp3) | הָלוֹךְ | going | halokh |
+| [shir-hamaalot-w38](m/israeli/word/shir-hamaalot-w38.mp3) | יֵלֵךְ | goes | yelekh |
+| [shir-hamaalot-w39](m/israeli/word/shir-hamaalot-w39.mp3) | וּבָכֹה | and weeps | uvakhoh |
+| [shir-hamaalot-w4](m/israeli/word/shir-hamaalot-w4.mp3) | אֲדֹנָי | the LORD | adonai |
+| [shir-hamaalot-w40](m/israeli/word/shir-hamaalot-w40.mp3) | נֹשֵׂא | bearing | nose |
+| [shir-hamaalot-w41](m/israeli/word/shir-hamaalot-w41.mp3) | מֶשֶׁךְ־הַזָּרַע | the measure of seed | meshekh-hazara |
+| [shir-hamaalot-w42](m/israeli/word/shir-hamaalot-w42.mp3) | בֹּא־יָבוֹא | shall come | bo-yavo |
+| [shir-hamaalot-w43](m/israeli/word/shir-hamaalot-w43.mp3) | בְרִנָּה | with joy | verinah |
+| [shir-hamaalot-w44](m/israeli/word/shir-hamaalot-w44.mp3) | נֹשֵׂא | bearing | nose |
+| [shir-hamaalot-w45](m/israeli/word/shir-hamaalot-w45.mp3) | אֲלֻמֹּתָיו׃ | his sheaves | alumotav |
+| [shir-hamaalot-w5](m/israeli/word/shir-hamaalot-w5.mp3) | אֶת־שִׁיבַת | the returned | et-shivat |
+| [shir-hamaalot-w6](m/israeli/word/shir-hamaalot-w6.mp3) | צִיּוֹן | Zion | tziyon |
+| [shir-hamaalot-w7](m/israeli/word/shir-hamaalot-w7.mp3) | הָיִינוּ | we were | hayinu |
+| [shir-hamaalot-w8](m/israeli/word/shir-hamaalot-w8.mp3) | כְּחֹלְמִים׃ | like dreamers | kecholemim |
+| [shir-hamaalot-w9](m/israeli/word/shir-hamaalot-w9.mp3) | אָז | so, therefore, then, thus; then, next; then, at that time | az |
 | [shop-12](m/israeli/word/shop-12.mp3) | מְזֻמָּן | cash | mezuman |
 | [shop-16](m/israeli/word/shop-16.mp3) | פָּתוּחַ | open | patuach |
 | [shop-17](m/israeli/word/shop-17.mp3) | סָגוּר | closed | sagur |
 | [shop-19](m/israeli/word/shop-19.mp3) | שֶׁקֶל | shekel (Israeli currency) | shekel |
+| [sim-shalom-w1](m/israeli/word/sim-shalom-w1.mp3) | שִׂים | grant | sim |
+| [sim-shalom-w10](m/israeli/word/sim-shalom-w10.mp3) | כָּל־יִשְׂרָאֵל | all Israel | kol-yisra'el |
+| [sim-shalom-w11](m/israeli/word/sim-shalom-w11.mp3) | עַמֶּךָ | your people | amekha |
+| [sim-shalom-w12](m/israeli/word/sim-shalom-w12.mp3) | בָּרְכֵנוּ | bless us | barekhenu |
+| [sim-shalom-w13](m/israeli/word/sim-shalom-w13.mp3) | אָבִינוּ | our father | avinu |
+| [sim-shalom-w14](m/israeli/word/sim-shalom-w14.mp3) | כֻּלָּנוּ | all of us | kulanu |
+| [sim-shalom-w15](m/israeli/word/sim-shalom-w15.mp3) | כְּאֶחָד | as one | ke'echad |
+| [sim-shalom-w16](m/israeli/word/sim-shalom-w16.mp3) | בְּאוֹר | with the light | be'or |
+| [sim-shalom-w17](m/israeli/word/sim-shalom-w17.mp3) | פָּנֶיךָ | of your face | panekha |
+| [sim-shalom-w18](m/israeli/word/sim-shalom-w18.mp3) | כִּי | because, for, since; that; when, as, at the time that | ki |
+| [sim-shalom-w19](m/israeli/word/sim-shalom-w19.mp3) | בְאוֹר | with the light | ve'or |
+| [sim-shalom-w2](m/israeli/word/sim-shalom-w2.mp3) | שָׁלוֹם | peace | shalom |
+| [sim-shalom-w20](m/israeli/word/sim-shalom-w20.mp3) | פָּנֶיךָ | of your face | panekha |
+| [sim-shalom-w21](m/israeli/word/sim-shalom-w21.mp3) | נָתַתָּ | you gave | natata |
+| [sim-shalom-w22](m/israeli/word/sim-shalom-w22.mp3) | לָּנוּ | us | lanu |
+| [sim-shalom-w23](m/israeli/word/sim-shalom-w23.mp3) | אֲדֹנָי | the LORD | adonai |
+| [sim-shalom-w24](m/israeli/word/sim-shalom-w24.mp3) | אֱלֹהֵינוּ | our-God | eloheinu |
+| [sim-shalom-w25](m/israeli/word/sim-shalom-w25.mp3) | תּוֹרַת | a Torah of | torat |
+| [sim-shalom-w26](m/israeli/word/sim-shalom-w26.mp3) | חַיִּים | life; life (state of being alive) | chayim |
+| [sim-shalom-w27](m/israeli/word/sim-shalom-w27.mp3) | וְאַהֲבַת | and love of | ve'ahavat |
+| [sim-shalom-w28](m/israeli/word/sim-shalom-w28.mp3) | חֶסֶד | loving kindness, benevolence, goodness; shame, reproach | chesed |
+| [sim-shalom-w29](m/israeli/word/sim-shalom-w29.mp3) | וּצְדָקָה | and righteousness | utzedakah |
+| [sim-shalom-w3](m/israeli/word/sim-shalom-w3.mp3) | טוֹבָה | goodness | tovah |
+| [sim-shalom-w30](m/israeli/word/sim-shalom-w30.mp3) | וּבְרָכָה | and blessing | uverakhah |
+| [sim-shalom-w31](m/israeli/word/sim-shalom-w31.mp3) | וְרַחֲמִים | and mercy | verachamim |
+| [sim-shalom-w32](m/israeli/word/sim-shalom-w32.mp3) | וְחַיִּים | and life | vechayim |
+| [sim-shalom-w33](m/israeli/word/sim-shalom-w33.mp3) | וְשָׁלוֹם | and peace | veshalom |
+| [sim-shalom-w34](m/israeli/word/sim-shalom-w34.mp3) | וְטוֹב | and good | vetov |
+| [sim-shalom-w35](m/israeli/word/sim-shalom-w35.mp3) | בְּעֵינֶיךָ | in your eyes | be'einekha |
+| [sim-shalom-w36](m/israeli/word/sim-shalom-w36.mp3) | לְבָרֵךְ | to bless | levarekh |
+| [sim-shalom-w37](m/israeli/word/sim-shalom-w37.mp3) | אֶת | the direct object | et |
+| [sim-shalom-w38](m/israeli/word/sim-shalom-w38.mp3) | עַמְּךָ | your people | amekha |
+| [sim-shalom-w39](m/israeli/word/sim-shalom-w39.mp3) | יִשְׂרָאֵל | Israel | yisra'el |
+| [sim-shalom-w4](m/israeli/word/sim-shalom-w4.mp3) | וּבְרָכָה | and blessing | uverakhah |
+| [sim-shalom-w40](m/israeli/word/sim-shalom-w40.mp3) | בְּכָל־עֵת | at every time | bekhol-et |
+| [sim-shalom-w41](m/israeli/word/sim-shalom-w41.mp3) | וּבְכָל־שָׁעָה | and at every hour | uvekhol-sha'ah |
+| [sim-shalom-w42](m/israeli/word/sim-shalom-w42.mp3) | בִּשְׁלוֹמֶךָ׃ | with your peace | bishlomekha |
+| [sim-shalom-w43](m/israeli/word/sim-shalom-w43.mp3) | בָּרוּךְ | blessed | barukh |
+| [sim-shalom-w44](m/israeli/word/sim-shalom-w44.mp3) | אַתָּה | you, thou | atah |
+| [sim-shalom-w45](m/israeli/word/sim-shalom-w45.mp3) | אֲדֹנָי | the LORD | adonai |
+| [sim-shalom-w46](m/israeli/word/sim-shalom-w46.mp3) | הַמְבָרֵךְ | who blesses | hamvarekh |
+| [sim-shalom-w47](m/israeli/word/sim-shalom-w47.mp3) | אֶת־עַמּוֹ | his people | et-amo |
+| [sim-shalom-w48](m/israeli/word/sim-shalom-w48.mp3) | יִשְׂרָאֵל | Israel | yisra'el |
+| [sim-shalom-w49](m/israeli/word/sim-shalom-w49.mp3) | בַּשָּׁלוֹם׃ | with peace | bashalom |
+| [sim-shalom-w5](m/israeli/word/sim-shalom-w5.mp3) | חֵן | charm, grace, likeability | chen |
+| [sim-shalom-w6](m/israeli/word/sim-shalom-w6.mp3) | וָחֶסֶד | and kindness | vachesed |
+| [sim-shalom-w7](m/israeli/word/sim-shalom-w7.mp3) | וְרַחֲמִים | and mercy | verachamim |
+| [sim-shalom-w8](m/israeli/word/sim-shalom-w8.mp3) | עָלֵינוּ | it is upon us | aleinu |
+| [sim-shalom-w9](m/israeli/word/sim-shalom-w9.mp3) | וְעַל | and upon | ve'al |
 | [small-talk-15-f](m/israeli/word/small-talk-15-f.mp3) | תִּרְגְּעִי | chill / calm down | tirge'i |
 | [small-talk-15-m](m/israeli/word/small-talk-15-m.mp3) | תִּרְגַּע | UNKNOWN | tirga |
 | [small-talk-18-f](m/israeli/word/small-talk-18-f.mp3) | חֲבֵרָה | friend | chaverah |
@@ -3289,6 +3357,21 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [taxi-02](m/israeli/word/taxi-02.mp3) | לְאָן? | where to? | le'an? |
 | [taxi-05](m/israeli/word/taxi-05.mp3) | לַמָּלוֹן | to the hotel | lamalon |
 | [taxi-06](m/israeli/word/taxi-06.mp3) | לַכּוֹתֶל | to the Western Wall | lakotel |
+| [torah-barchu-w1](m/israeli/word/torah-barchu-w1.mp3) | בָּרְכוּ | bless | barkhu |
+| [torah-barchu-w2](m/israeli/word/torah-barchu-w2.mp3) | אֶת | the direct object | et |
+| [torah-barchu-w3](m/israeli/word/torah-barchu-w3.mp3) | אֲדֹנָי | the LORD | adonai |
+| [torah-barchu-w4](m/israeli/word/torah-barchu-w4.mp3) | הַמְּבֹרָךְ׃ | the blessed one | hamevorakh |
+| [torah-barchu-w5](m/israeli/word/torah-barchu-w5.mp3) | בָּרוּךְ | blessed | barukh |
+| [torah-barchu-w6](m/israeli/word/torah-barchu-w6.mp3) | אֲדֹנָי | the LORD | adonai |
+| [torah-barchu-w7](m/israeli/word/torah-barchu-w7.mp3) | הַמְּבֹרָךְ | the blessed one | hamevorakh |
+| [torah-barchu-w8](m/israeli/word/torah-barchu-w8.mp3) | לְעוֹלָם | eternally, forever | le'olam |
+| [torah-barchu-w9](m/israeli/word/torah-barchu-w9.mp3) | וָעֶד׃ | and ever | va'ed |
+| [torah-bless-1-w1](m/israeli/word/torah-bless-1-w1.mp3) | בָּרוּךְ | blessed | barukh |
+| [torah-bless-1-w10](m/israeli/word/torah-bless-1-w10.mp3) | מִכָּל־הָעַמִּים | from all the peoples | mikol-ha'amim |
+| [torah-bless-1-w11](m/israeli/word/torah-bless-1-w11.mp3) | וְנָתַן | and gave | venatan |
+| [torah-bless-1-w12](m/israeli/word/torah-bless-1-w12.mp3) | לָנוּ | us | lanu |
+| [torah-bless-1-w13](m/israeli/word/torah-bless-1-w13.mp3) | אֶת־תּוֹרָתוֹ | his Torah | et-torato |
+| [torah-bless-1-w14](m/israeli/word/torah-bless-1-w14.mp3) | בָּרוּךְ | blessed | barukh |
 
 ## Israeli reading lines
 
@@ -3879,4 +3962,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 4247 produced clips in INDEX.csv have an English label; 4 UNKNOWN. Filenames and IDs are unchanged.
+All 4330 produced clips in INDEX.csv have an English label; 4 UNKNOWN. Filenames and IDs are unchanged.

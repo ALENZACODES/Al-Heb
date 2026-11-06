@@ -1,6 +1,7 @@
 // Game 19 — SVO switchboard: only exact sourced paradigm word order reaches the station.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, resultsCard } from './engine.js';
+import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY='games.trainswitch.v1';
 export function buildSvoDeck(data) {
@@ -17,6 +18,7 @@ export function trainValid(row,sequence) {
     row.cars.every((word,i)=>sequence[i]===word);
 }
 export function mount(root,ctx){
+  const leaveSfx = sfx.enter(ctx);
   let alive=true,deck=[],round=0,chosen=[],used=[];
   let session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:5});
   const status=h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading attested sentence order…');
@@ -35,7 +37,7 @@ export function mount(root,ctx){
       chosen.push(car);used.push(car.i);status.textContent='Switchboard has '+chosen.length+' carriage(s).';paint();
     }},heSpan(car.he,'he game-he-sm')));
     const dispatch=h('button',{type:'button',class:'btn',disabled:chosen.length!==row.cars.length,onclick:()=>{
-      const ok=trainValid(row,chosen.map(x=>x.he));session.answer(ok);
+      const ok=trainValid(row,chosen.map(x=>x.he));session.answer(ok); sfx.play(ok ? 'success' : 'miss');
       status.textContent=ok?'Canonical SVO route accepted.':'Wrong word order: train diverted.';
       if(ok)round++;chosen=[];used=[];paint();
     }},'Send train');
@@ -48,5 +50,5 @@ export function mount(root,ctx){
     if(!alive||!article.isConnected)return;deck=shuffled(buildSvoDeck(data));
     if(deck.length<4){status.textContent='No source SVO paradigms with all grammatical roles.';return;}paint();
   }).catch(()=>{if(alive)status.textContent='Sentence order data unavailable.';});
-  return ()=>{alive=false;};
+  return ()=>{alive=false; leaveSfx();};
 }

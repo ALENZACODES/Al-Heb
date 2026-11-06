@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { N, tick, btn, memStore } from './torahread.fakedom.js';
 import * as M from '../src/roots/model.js';
-import { build, badMarks } from '../tools/roots/build.mjs';
+import { build, badMarks, inExplorer } from '../tools/roots/build.mjs';
 import { rootFamilies } from '../src/grammar/model.js';
 
 const rd = (p) => readFileSync(new URL('../' + p, import.meta.url), 'utf8');
@@ -29,12 +29,31 @@ test('a family is exactly the set of visible rows sharing a root string; none in
   assert.ok(!words.some((w) => w.root === null && inFam.has(w.id)), 'rows with root null are never in a family');
 });
 
-test('coverage numbers equal a fresh count of words.json', () => {
+test('coverage numbers equal a fresh count of words.json, and the explorer sentence uses that count plus the browsable list', () => {
   const c = FAM.coverage, verbs = words.filter((w) => w.pos === 'verb');
   assert.equal(c.verbs, verbs.length); assert.equal(c.verbsWithRoot, verbs.filter((w) => w.root).length);
   assert.equal(c.verbsWithBinyan, verbs.filter((w) => w.binyan).length);
   assert.equal(c.familiesOf3Plus, FAM.families.filter((f) => f.size >= 3).length);
-  assert.match(M.coverageText(c), /Roots are listed for 501 of 1820 verbs \(28%\)/);
+  const text = M.coverageText(c, VERBS.verbs);
+  const withRoot = VERBS.verbs.filter((v) => v.root).length;
+  assert.match(text, new RegExp(`Roots are listed for ${c.verbsWithRoot} of ${c.verbs} verbs in the word list`));
+  assert.match(text, new RegExp(`This explorer shows ${withRoot} of ${VERBS.verbs.length} verbs you can open here`));
+  assert.match(text, new RegExp(`${c.verbs - VERBS.verbs.length} word-list verbs are not in this explorer`));
+  assert.match(text, /frequency rank of 5000 or better/);
+  assert.ok(FAM.note.includes(M.EXPLORER_VERB_RULE) && VERBS.note.includes(M.EXPLORER_VERB_RULE));
+});
+
+test('the explorer verb file is exactly the documented build rule, not a fixed leftover count', () => {
+  const ok = words.filter((w) => w.kind === 'word' && !(w.flags && w.flags.hidden));
+  const groups = new Map();
+  for (const w of ok) if (w.root) { if (!groups.has(w.root)) groups.set(w.root, []); groups.get(w.root).push(w); }
+  const inFam = new Set();
+  for (const [, rows] of groups) if (rows.length >= 2) for (const w of rows) inFam.add(w.id);
+  const verbsAll = ok.filter((w) => w.pos === 'verb');
+  const included = verbsAll.filter((w) => inExplorer(w, inFam.has(w.id)));
+  assert.deepEqual(included.map((w) => w.id).sort(), VERBS.verbs.map((v) => v.id).sort());
+  assert.equal(verbsAll.length - included.length, FAM.coverage.verbs - VERBS.verbs.length);
+  assert.ok(verbsAll.length - included.length > 0, 'the exclusion is visible in this dataset');
 });
 
 test('verb rows hold only forms from the vocabulary file; verbTable never adds a past tense', () => {
@@ -97,7 +116,8 @@ test('view: draft note, coverage, labelled 44px controls, root opens with verb t
   const V = await import('../src/roots/roots.view.js');
   const root = new N('main'); const store = memStore();
   const un = V.mount(root, { store, rootsData: data }); await tick();
-  assert.match(root.textContent, /Draft and unreviewed/); assert.match(root.textContent, /Roots are listed for 501 of 1820/);
+  assert.match(root.textContent, /Draft and unreviewed/);
+  assert.ok(root.textContent.includes(M.coverageText(data.families.coverage, data.verbs.verbs)));
   for (const b of root.all((n) => n.tag === 'button')) assert.match(b.attrs.style || '', /min-height:44px/);
   assert.ok(root.queryAll('label')[0].attrs.for === 'rt-q' && root.queryAll('#rt-q').length === 1);
   const f = data.families.families.find((x) => x.words.some((w) => w.forms));

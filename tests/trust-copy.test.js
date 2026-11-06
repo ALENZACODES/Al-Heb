@@ -6,7 +6,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { createAudio } from '../src/audio/player.js';
 import { audioTruthDetail } from '../src/shell/audio-truth.js';
-import { readinessLines, loadReadinessFacts } from '../src/shell/readiness.js';
+import { readinessLines, loadReadinessFacts, imageInventory } from '../src/shell/readiness.js';
 import { audioSupport } from '../src/pronunciation/forTradition.js';
 import { plain } from '../src/shell/plain-copy.js';
 
@@ -18,20 +18,25 @@ const listOf = (m) => (Array.isArray(m) ? m : (m.entries || m.clips || Object.va
 const all = [json('data/audio/manifest.json'), ...['israeli', 'sephardi', 'ashkenazi'].map((t) => json(`data/audio/manifest-words-${t}.json`))].flatMap(listOf);
 const clips = all.filter((e) => e.status !== 'missing');
 
-test('About: pictures line does not deny the pictures that are shown; the count is read from data/letters/memory-chain.json', async () => {
+test('About: picture counts name catalogue, approvals and shown separately; letter memory pictures stay their own count', async () => {
   const chain = json('data/letters/memory-chain.json');
   const n = chain.letters.filter((l) => l.picture && l.picture.svg).length;
   assert.ok(n > 0);
   for (const l of chain.letters) assert.ok(existsSync(join(root, l.picture.svg)), `${l.id} picture file ships in the repo`);
   const facts = await loadReadinessFacts(async (u) => ({ ok: true, json: async () => json(u) }));
   assert.equal(facts.memoryPictures, n);
+  const images = imageInventory(json('data/img/index.json'), json('data/images/approvals.json'));
+  assert.deepEqual(facts.images, images);
   const text = readinessLines(facts).find((l) => l.id === 'images').text;
-  assert.match(text, /none approved yet, so no generated picture is shown/);
+  assert.match(text, new RegExp(`${images.shown} shown \\(approved and the picture file is in the app\\)`));
+  assert.match(text, new RegExp(`${images.approved} approvals`));
+  assert.match(text, new RegExp(`${images.catalogued} catalogued`));
+  if (images.pending > 0) assert.match(text, new RegExp(`${images.pending} approved but not in the app yet`));
+  assert.doesNotMatch(text, /approved by a reviewer and shown/);
   assert.ok(text.includes(`the ${n} letter memory pictures are drawings made for this app and are shown as unreviewed drafts`), text);
-  // the shipped data really has no approved generated picture, which is what the first sentence says
-  assert.equal(Object.values(json('data/images/approvals.json').approvals).filter((a) => a && a.status === 'approved').length, 0);
-  // without the memory-chain file the line stays true and carries no number
+  // without the memory-chain file, and with no approvals, the line stays true and carries no number
   const bare = readinessLines({ imagesApproved: 0 }).find((l) => l.id === 'images').text;
+  assert.match(bare, /none approved yet, so no generated picture is shown/);
   assert.ok(/the letter memory pictures are drawings/.test(bare) && !/\d/.test(bare));
 });
 

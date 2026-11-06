@@ -911,9 +911,9 @@
     "hookPosition": "initial",
     "line": "SH like Shortcake, with the dot on the upper right. Dot on the left: S (sin).",
     "perTradition": {
-     "israeli": "Same sound: sh with the right dot, s with the left dot",
-     "sephardi": "Same sound: sh with the right dot, s with the left dot",
-     "ashkenazi": "Same sound: sh with the right dot, s with the left dot"
+     "israeli": "Same sound: sh with the right dot (shin), s with the left dot (sin)",
+     "sephardi": "Same sound: sh with the right dot (shin), s with the left dot (sin)",
+     "ashkenazi": "Same sound: sh with the right dot (shin), s with the left dot (sin)"
     },
     "matches": {
      "israeli": true,

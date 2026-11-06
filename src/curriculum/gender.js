@@ -73,6 +73,24 @@ export function composeParadigm(par, speaker, addressee) {
 export function genderedForms(par) {
   return ROLES.flatMap((s) => ROLES.map((a) => ({ paradigm: par.id, ...composeParadigm(par, s, a) })));
 }
+
+/** Pair cards, paradigms and composed forms as separate counts. Numbers come from the arrays the page renders. */
+export function genderInventory(pairs, paradigms) {
+  const list = Array.isArray(pairs) ? pairs : [];
+  const pars = Array.isArray(paradigms) ? paradigms : [];
+  const authored = list.filter((p) => p.source === 'authored').length;
+  const phrasebook = list.filter((p) => p.source === 'phrasebook').length;
+  return {
+    pairs: list.length, authored, phrasebook, other: list.length - authored - phrasebook,
+    paradigms: pars.length, composedForms: pars.reduce((n, p) => n + genderedForms(p).length, 0),
+  };
+}
+
+/** Learner line. Pair cards are not paradigms and not composed forms. No rounded-up pair claim. */
+export function genderCountText(inv) {
+  const extra = inv.other ? ` and ${inv.other} from another listed source` : '';
+  return `${inv.pairs} pair cards: ${inv.authored} written for this page and ${inv.phrasebook} from the phrasebook${extra}. ${inv.paradigms} paradigms, counted separately from the pair cards, make ${inv.composedForms} composed forms (four speaker and addressee combinations each).`;
+}
 /** Indices (in the composed part list) that differ between two role pairs: should equal the role-dependent parts. */
 export function differingParts(par, s1, a1, s2, a2) {
   return par.parts.map((p, i) => [p, i]).filter(([p]) => !p.fixed && ((p.by === "speaker" && s1 !== s2) || (p.by === "addressee" && a1 !== a2))).map(([, i]) => i);

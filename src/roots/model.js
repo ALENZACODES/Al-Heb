@@ -49,10 +49,33 @@ export function searchFamilies(families, q, limit = 30) {
   return families.filter((f) => (heQ ? stripRoot(f.root).includes(letters) : f.words.some((w) => w.en.toLowerCase().includes(s) || w.translit.toLowerCase().includes(s)))).slice(0, limit);
 }
 
-/** On-screen coverage statement; honest about how few verbs have a root in the data. */
-export function coverageText(c) {
+/**
+ * Why data/roots/verbs.json is smaller than the word-list verb count in families.json `coverage`.
+ * The build (tools/roots/build.mjs) keeps a verb only when it has a binyan, at least one form, and
+ * either modernRank <= 5000 or a place in a root family of two or more words (any part of speech).
+ */
+export const EXPLORER_VERB_RULE = 'A verb is listed in the explorer only when it has a pattern (binyan), at least one listed form, and either a frequency rank of 5000 or better or a place in a root family of two or more words (any part of speech). Verbs that fail that rule stay in the word-list totals and are not browsable in the explorer.';
+
+/**
+ * On-screen coverage. The word-list totals stay labelled as the word list. When the browsable verb
+ * rows are passed (the verbs.json list the explorer actually opens), their count is stated separately.
+ * @param {any} c families.json coverage
+ * @param {any[]|{verbs?: any[]}|null} [browsable] verb rows the page can open
+ */
+export function coverageText(c, browsable) {
   const pct = (a, b) => (b ? Math.round((100 * a) / b) : 0);
-  return `Roots are listed for ${c.verbsWithRoot} of ${c.verbs} verbs (${pct(c.verbsWithRoot, c.verbs)}%); a verb pattern is listed for ${c.verbsWithBinyan}. ${c.familiesOf2Plus} groups of two or more words share root letters, and ${c.familiesOf3Plus} groups have three or more. ${c.familiesRuleChecked} groups pass a stricter check made by rules. A Hebrew reader has confirmed ${c.familiesVerified} groups. Verbs without a root are not grouped.`;
+  const list = Array.isArray(browsable) ? browsable : (browsable && Array.isArray(browsable.verbs) ? browsable.verbs : null);
+  const wordList = `Roots are listed for ${c.verbsWithRoot} of ${c.verbs} verbs in the word list (${pct(c.verbsWithRoot, c.verbs)}%).`;
+  let explorer = '';
+  if (list) {
+    const shown = list.length;
+    const withRoot = list.filter((v) => v && v.root).length;
+    const leftOut = Number.isFinite(c.verbs) ? c.verbs - shown : null;
+    explorer = leftOut > 0
+      ? ` This explorer shows ${withRoot} of ${shown} verbs you can open here (${leftOut} word-list verbs are not in this explorer).`
+      : ` This explorer shows the same ${shown} verbs (${withRoot} with a root listed).`;
+  }
+  return `${wordList}${explorer} ${EXPLORER_VERB_RULE} A verb pattern is listed for ${c.verbsWithBinyan} verbs in the word list. ${c.familiesOf2Plus} groups of two or more words share root letters, and ${c.familiesOf3Plus} groups have three or more. ${c.familiesRuleChecked} groups pass a stricter check made by rules. A Hebrew reader has confirmed ${c.familiesVerified} groups. Verbs without a root are not grouped.`;
 }
 
 /** Prompt wording: a claim of "root" only for a verified family; otherwise a statement about the word list. */

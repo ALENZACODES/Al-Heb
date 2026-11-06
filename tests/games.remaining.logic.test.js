@@ -69,6 +69,7 @@ test('barter price parsing and haggle arithmetic are exact', () => {
     {id:'numbers-02',he:'שְׁנַיִם',en:'two (2)',situation:'numbers'}]});
   assert.deepEqual(items.map(x=>x.n),[1,2]);
   assert.equal(validOffer(20,10,10),true);
+  assert.equal(validOffer(20,9,10),false); // No multiple "correct" guessing options
   assert.equal(validOffer(20,30,10),false);
   assert.equal(validOffer(20,11,10),false);
 });

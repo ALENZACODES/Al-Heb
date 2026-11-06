@@ -46244,7 +46244,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to speak (say words)"
+  "english": "to speak (say words)",
+  "phonetic": "diber"
  },
  {
   "path": "audio/f/israeli/word/h5e4080cc.mp3",
@@ -46254,10 +46255,11 @@
   "id": "h5e4080cc",
   "text": "דִּבֵּר",
   "ipa": "di.ˈbeʁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to speak (say words)"
+  "english": "to speak (say words)",
+  "phonetic": "diber"
  },
  {
   "path": "audio/m/israeli/word/hffd88aa2.mp3",
@@ -46534,7 +46536,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to hear, to be able to hear; to listen"
+  "english": "to hear, to be able to hear; to listen",
+  "phonetic": "shama"
  },
  {
   "path": "audio/f/israeli/word/h5d62592f.mp3",
@@ -46544,10 +46547,11 @@
   "id": "h5d62592f",
   "text": "שָׁמַע",
   "ipa": "ʃa.ˈma",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to hear, to be able to hear; to listen"
+  "english": "to hear, to be able to hear; to listen",
+  "phonetic": "shama"
  },
  {
   "path": "audio/m/israeli/word/h4299f50f.mp3",
@@ -51792,7 +51796,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "air"
+  "english": "air",
+  "phonetic": "avir"
  },
  {
   "path": "audio/f/israeli/word/h5dbeb151.mp3",
@@ -51802,10 +51807,11 @@
   "id": "h5dbeb151",
   "text": "אֲוִיר",
   "ipa": "a.ˈviʁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "air"
+  "english": "air",
+  "phonetic": "avir"
  },
  {
   "path": "audio/m/israeli/word/h8f0ac707.mp3",
@@ -64836,7 +64842,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a handgun, pistol, revolver"
+  "english": "a handgun, pistol, revolver",
+  "phonetic": "ekdach"
  },
  {
   "path": "audio/f/israeli/word/h5db22897.mp3",
@@ -64846,10 +64853,11 @@
   "id": "h5db22897",
   "text": "אֶקְדָּח",
   "ipa": "ek.ˈdaχ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "a handgun, pistol, revolver"
+  "english": "a handgun, pistol, revolver",
+  "phonetic": "ekdach"
  },
  {
   "path": "audio/m/israeli/word/h6066f5e4.mp3",

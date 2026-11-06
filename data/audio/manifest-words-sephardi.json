@@ -18388,8 +18388,8 @@
   "kind": "word",
   "id": "ashrei-144-15-w1",
   "text": "אַשְׁרֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "happy is/was/will be",
   "phonetic": "ashrei"
@@ -18414,8 +18414,8 @@
   "kind": "word",
   "id": "ashrei-144-15-w2",
   "text": "הָעָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the people",
   "phonetic": "ha'am"
@@ -27020,8 +27020,8 @@
   "kind": "word",
   "id": "amidah-yihyu-w7",
   "text": "לְפָנֶיךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "before you",
   "phonetic": "lefanekha"
@@ -27046,8 +27046,8 @@
   "kind": "word",
   "id": "amidah-yihyu-w8",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the LORD",
   "phonetic": "adonai"
@@ -27072,8 +27072,8 @@
   "kind": "word",
   "id": "amidah-yihyu-w9",
   "text": "צוּרִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "my rock",
   "phonetic": "tzuri"
@@ -46244,7 +46244,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to speak (say words)"
+  "english": "to speak (say words)",
+  "phonetic": "diber"
  },
  {
   "path": "audio/f/sephardi/word/h5e4080cc.mp3",
@@ -46257,7 +46258,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to speak (say words)"
+  "english": "to speak (say words)",
+  "phonetic": "diber"
  },
  {
   "path": "audio/m/sephardi/word/hffd88aa2.mp3",
@@ -46534,7 +46536,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to hear, to be able to hear; to listen"
+  "english": "to hear, to be able to hear; to listen",
+  "phonetic": "shama"
  },
  {
   "path": "audio/f/sephardi/word/h5d62592f.mp3",
@@ -46547,7 +46550,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to hear, to be able to hear; to listen"
+  "english": "to hear, to be able to hear; to listen",
+  "phonetic": "shama"
  },
  {
   "path": "audio/m/sephardi/word/h4299f50f.mp3",
@@ -51792,7 +51796,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "air"
+  "english": "air",
+  "phonetic": "avir"
  },
  {
   "path": "audio/f/sephardi/word/h5dbeb151.mp3",
@@ -51805,7 +51810,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "air"
+  "english": "air",
+  "phonetic": "avir"
  },
  {
   "path": "audio/m/sephardi/word/h8f0ac707.mp3",
@@ -64836,7 +64842,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a handgun, pistol, revolver"
+  "english": "a handgun, pistol, revolver",
+  "phonetic": "ekdach"
  },
  {
   "path": "audio/f/sephardi/word/h5db22897.mp3",
@@ -64849,7 +64856,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a handgun, pistol, revolver"
+  "english": "a handgun, pistol, revolver",
+  "phonetic": "ekdach"
  },
  {
   "path": "audio/m/sephardi/word/h6066f5e4.mp3",

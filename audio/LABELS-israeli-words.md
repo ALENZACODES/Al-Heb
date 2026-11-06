@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 5927 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 5931 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-5927 English labels; 1933 UNKNOWN.
+5931 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -980,6 +980,10 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [h5cc95d6e](f/israeli/word/h5cc95d6e.mp3) | נְחֹשֶׁת | copper | nechoshet |
 | [h5d30bc42](f/israeli/word/h5d30bc42.mp3) | כָּתַב | to write | katav |
 | [h5d60ac4a](f/israeli/word/h5d60ac4a.mp3) | הִפְסִיק | to stop, to cease, to desist, to terminate | hifsik |
+| [h5d62592f](f/israeli/word/h5d62592f.mp3) | שָׁמַע | to hear, to be able to hear; to listen | shama |
+| [h5db22897](f/israeli/word/h5db22897.mp3) | אֶקְדָּח | a handgun, pistol, revolver | ekdach |
+| [h5dbeb151](f/israeli/word/h5dbeb151.mp3) | אֲוִיר | air | avir |
+| [h5e4080cc](f/israeli/word/h5e4080cc.mp3) | דִּבֵּר | to speak (say words) | diber |
 | [haftarah-after-w1](f/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](f/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](f/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -6533,4 +6537,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 11677 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 11690 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

@@ -25876,8 +25876,8 @@
   "kind": "word",
   "id": "brich-shmei-w110",
   "text": "וְתַשְׁלִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and fulfil",
   "phonetic": "vetashlim"
@@ -25902,8 +25902,8 @@
   "kind": "word",
   "id": "brich-shmei-w111",
   "text": "מִשְׁאֲלִין",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "requests",
   "phonetic": "mish'alin"
@@ -25928,8 +25928,8 @@
   "kind": "word",
   "id": "brich-shmei-w112",
   "text": "דְּלִבָּאי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "of my heart",
   "phonetic": "delibay"
@@ -25954,8 +25954,8 @@
   "kind": "word",
   "id": "brich-shmei-w113",
   "text": "וְלִבָּא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and the heart",
   "phonetic": "veliba"
@@ -46244,7 +46244,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to speak (say words)"
+  "english": "to speak (say words)",
+  "phonetic": "diber"
  },
  {
   "path": "audio/f/ashkenazi/word/h5e4080cc.mp3",
@@ -46257,7 +46258,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to speak (say words)"
+  "english": "to speak (say words)",
+  "phonetic": "diber"
  },
  {
   "path": "audio/m/ashkenazi/word/hffd88aa2.mp3",
@@ -46534,7 +46536,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to hear, to be able to hear; to listen"
+  "english": "to hear, to be able to hear; to listen",
+  "phonetic": "shama"
  },
  {
   "path": "audio/f/ashkenazi/word/h5d62592f.mp3",
@@ -46547,7 +46550,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to hear, to be able to hear; to listen"
+  "english": "to hear, to be able to hear; to listen",
+  "phonetic": "shama"
  },
  {
   "path": "audio/m/ashkenazi/word/h4299f50f.mp3",
@@ -51792,7 +51796,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "air"
+  "english": "air",
+  "phonetic": "avir"
  },
  {
   "path": "audio/f/ashkenazi/word/h5dbeb151.mp3",
@@ -51805,7 +51810,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "air"
+  "english": "air",
+  "phonetic": "avir"
  },
  {
   "path": "audio/m/ashkenazi/word/h8f0ac707.mp3",
@@ -64836,7 +64842,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a handgun, pistol, revolver"
+  "english": "a handgun, pistol, revolver",
+  "phonetic": "ekdach"
  },
  {
   "path": "audio/f/ashkenazi/word/h5db22897.mp3",
@@ -64849,7 +64856,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a handgun, pistol, revolver"
+  "english": "a handgun, pistol, revolver",
+  "phonetic": "ekdach"
  },
  {
   "path": "audio/m/ashkenazi/word/h6066f5e4.mp3",

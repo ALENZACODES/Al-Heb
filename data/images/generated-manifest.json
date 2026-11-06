@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 1030,
+ "count": 1044,
  "images": {
   "BADGE_03": {
    "w": 512,
@@ -1492,6 +1492,18 @@
     }
    ]
   },
+  "CTX_nature_10": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "CTX_nature_10.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "EMOTE_one_01": {
    "w": 1254,
    "h": 1254,
@@ -1852,6 +1864,30 @@
     }
    ]
   },
+  "FINALE_set_04": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "FINALE_set_04.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "FINALE_set_10": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "FINALE_set_10.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "FRAME_lettercard": {
    "w": 1122,
    "h": 1402,
@@ -2099,6 +2135,18 @@
     {
      "edge": 512,
      "file": "GRAM_link_03.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_link_07": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_link_07.512.webp",
      "w": 512,
      "h": 512
     }
@@ -2375,6 +2423,18 @@
     {
      "edge": 512,
      "file": "HEAD_two_03.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "HEAD_two_06": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HEAD_two_06.512.webp",
      "w": 512,
      "h": 293
     }
@@ -2771,6 +2831,18 @@
     {
      "edge": 512,
      "file": "HERO_calendar_04.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "HERO_calendar_07": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HERO_calendar_07.512.webp",
      "w": 512,
      "h": 293
     }
@@ -3286,6 +3358,18 @@
     }
    ]
   },
+  "HERO_psalms1_01": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HERO_psalms1_01.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "HERO_psalms1_02": {
    "w": 512,
    "h": 293,
@@ -3305,6 +3389,18 @@
     {
      "edge": 512,
      "file": "HERO_psalms1_06.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "HERO_psalms1_07": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HERO_psalms1_07.512.webp",
      "w": 512,
      "h": 293
     }
@@ -3389,6 +3485,18 @@
     {
      "edge": 512,
      "file": "HERO_sights_01.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "HERO_sights_02": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HERO_sights_02.512.webp",
      "w": 512,
      "h": 293
     }
@@ -5251,6 +5359,18 @@
      "file": "L10_yod_print_v3.1254.webp",
      "w": 1254,
      "h": 1254
+    }
+   ]
+  },
+  "L10_yod_quirky": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "L10_yod_quirky.512.webp",
+     "w": 512,
+     "h": 512
     }
    ]
   },
@@ -10564,6 +10684,18 @@
     }
    ]
   },
+  "PLACE_jerusalem_03": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_jerusalem_03.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_negev_03": {
    "w": 512,
    "h": 293,
@@ -10660,6 +10792,18 @@
     }
    ]
   },
+  "PLACE_seasons_04": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_seasons_04.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_telaviv_03": {
    "w": 512,
    "h": 293,
@@ -10708,6 +10852,18 @@
     }
    ]
   },
+  "PLACE_tzfat_09": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_tzfat_09.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "STATE_art_02": {
    "w": 512,
    "h": 512,
@@ -10727,6 +10883,18 @@
     {
      "edge": 512,
      "file": "STATE_art_04.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "STATE_art_05": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "STATE_art_05.512.webp",
      "w": 512,
      "h": 512
     }

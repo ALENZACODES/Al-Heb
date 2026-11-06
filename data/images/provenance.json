@@ -60268,6 +60268,738 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "HERO_calendar_07": {
+   "id": "HERO_calendar_07",
+   "file": "HERO_calendar_07.png",
+   "command": 198,
+   "set": "Counting & calendar moments",
+   "block": "M",
+   "prompt": "Command 198 (Counting & calendar moments): An omer sheaf of barley standing in a clay jar; seven small jars in a row with the last one gold (the weeks counted — objects only); Lag BaOmer — a small safe bonfire with children roasting sticks at a distance; a bride and groom under a white canopy outdoors (modest, joyful, from behind); a brit/naming — a cushioned chair and a cup on a table, flowers around (objects only, no baby close-up); a bar mitzvah boy reading with a yad, family behind (backs); a bat mitzvah girl reading, family behind (backs); a wedding ring on a cushion under the canopy; a housewarming — a mezuzah being fixed to a new doorpost; a first day of school — a new bag and a honey-dipped apple on a plate (the sweet-learning custom). Image 7 of 10: a bat mitzvah girl reading, family behind (backs). Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "1ee18412e63acbefad01229386b0852ad4f4c2733165e546fe012558bbdf345b",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:38:00.589Z",
+   "sourceFile": "img-0040.png",
+   "sourceFileDate": "2026-11-06T21:38:00.008Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "4f97d4315f89e1426f301423ad246cf827ea8a5f183f2f56a06f8f08c1a3614f",
+   "originalFormat": "PNG",
+   "originalBytes": 177609,
+   "originalFile": "HERO_calendar_07.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HERO_calendar_07.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 24520
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_tzfat_09": {
+   "id": "PLACE_tzfat_09",
+   "file": "PLACE_tzfat_09.png",
+   "command": 204,
+   "set": "Tzfat & the north",
+   "block": "N",
+   "prompt": "Command 204 (Tzfat & the north): A blue-painted alley with artists' easels left blank; stone synagogues lane at morning light; a mountain town above clouds (the town in mist); candle-lit windows on a steep lane at dusk; the highest hilltop with a citadel ruin; a gallery doorway with pottery outside (blank canvases); Mount Meron green in the distance; a forest of pines on a ridge; a Druze village on a green hill with a market square (no signs); snow dusting the far northern peak (Hermon) over green valleys. Image 9 of 10: a Druze village on a green hill with a market square (no signs). Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "3fc6206bef2a4dbf1ef8ab2da385b1d312abf781474fa467fd7f508b7768c9aa",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:38:00.589Z",
+   "sourceFile": "img-0298.png",
+   "sourceFileDate": "2026-11-06T21:38:00.030Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "83d6906e8b09e33884626324fa8384590b9a9512ed0dad5df82a717ccfeeea55",
+   "originalFormat": "PNG",
+   "originalBytes": 219770,
+   "originalFile": "PLACE_tzfat_09.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_tzfat_09.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 40206
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "coll",
+      "conf": 67.8,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "HERO_psalms1_07": {
+   "id": "HERO_psalms1_07",
+   "file": "HERO_psalms1_07.png",
+   "command": 195,
+   "set": "Psalms heroes I",
+   "block": "M",
+   "prompt": "Command 195 (Psalms heroes I): Psalm 1 — a tree by streams of water; Psalm 8 — a child looking up at a huge starry sky; Psalm 19 — the sun's tent across the heavens, dawn to dusk in one sky; Psalm 23 — a shepherd with a staff beside still waters; Psalm 23 II — a table set in a green valley at evening; Psalm 42 — a deer at a stream in a dry land; Psalm 84 — a swallow's nest under an eave of a great house; Psalm 90 — hands counting grains of sand through an hourglass shape (sand only, abstract); Psalm 92 — a palm tree and a cedar side by side, flourishing; Psalm 100 — gates entered with musicians and dancers (small figures, joyful). Image 7 of 10: Psalm 84 — a swallow's nest under an eave of a great house. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "87537f38a7a7088dcf0943ee87327ede4dc03802e10fa6972a013cc268dfb65d",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:38:00.589Z",
+   "sourceFile": "img-0353.png",
+   "sourceFileDate": "2026-11-06T21:37:59.987Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "2b714e73685a223012118d186ed8effa6eed4812aab1c59928985bff16542d4c",
+   "originalFormat": "PNG",
+   "originalBytes": 196047,
+   "originalFile": "HERO_psalms1_07.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HERO_psalms1_07.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 29316
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "LOSER",
+      "conf": 19.4,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "HERO_psalms1_01": {
+   "id": "HERO_psalms1_01",
+   "file": "HERO_psalms1_01.png",
+   "command": 195,
+   "set": "Psalms heroes I",
+   "block": "M",
+   "prompt": "Command 195 (Psalms heroes I): Psalm 1 — a tree by streams of water; Psalm 8 — a child looking up at a huge starry sky; Psalm 19 — the sun's tent across the heavens, dawn to dusk in one sky; Psalm 23 — a shepherd with a staff beside still waters; Psalm 23 II — a table set in a green valley at evening; Psalm 42 — a deer at a stream in a dry land; Psalm 84 — a swallow's nest under an eave of a great house; Psalm 90 — hands counting grains of sand through an hourglass shape (sand only, abstract); Psalm 92 — a palm tree and a cedar side by side, flourishing; Psalm 100 — gates entered with musicians and dancers (small figures, joyful). Image 1 of 10: Psalm 1 — a tree by streams of water. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "b0e4945de158f524d665e9a7053d3b529ca2a753f68c20140d85cd0a0bb96179",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:38:00.589Z",
+   "sourceFile": "img-0431.png",
+   "sourceFileDate": "2026-11-06T21:38:00.092Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "831a4cf781141a985622c1ce44381842be834c7f494ba19dcf88cf03b6dfd813",
+   "originalFormat": "PNG",
+   "originalBytes": 210262,
+   "originalFile": "HERO_psalms1_01.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HERO_psalms1_01.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 33214
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HEAD_two_06": {
+   "id": "HEAD_two_06",
+   "file": "HEAD_two_06.png",
+   "command": 247,
+   "set": "Book chapter headers II",
+   "block": "R",
+   "prompt": "Command 247 (Book chapter headers II): Ten more banners: a bridge of translation between two shores; a workshop of writing — pens and blank pages as carpentry; a lighthouse of listening — sound arcs from a tower; a train of travel phrases crossing a plain; a kitchen of grammar — ingredients becoming a meal; a orchard of blessings — fruit trees in rows; a night sky of psalms — stars over a shepherd; a museum of holidays — doors in a row, each with a seasonal object; a harbour of arrival — boats coming in at dawn; a final banner — all the earlier motifs tiny along one horizon at sunrise. Files HEAD_two_01 … _10. Image 6 of 10: a orchard of blessings — fruit trees in rows. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "1d945b2cef758cc2e342cdb7fd6eec8fc689a5772393ea6b45b6dd5bb3ee9ab1",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:38:00.589Z",
+   "sourceFile": "img-0501.png",
+   "sourceFileDate": "2026-11-06T21:38:00.038Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "24bef8da9c6c93edb09a0a9e2ef04ed5ff6033d876129135f46af26517ca145b",
+   "originalFormat": "PNG",
+   "originalBytes": 197011,
+   "originalFile": "HEAD_two_06.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HEAD_two_06.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 31442
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HERO_sights_02": {
+   "id": "HERO_sights_02",
+   "file": "HERO_sights_02.png",
+   "command": 197,
+   "set": "Blessings on sights & occasions",
+   "block": "M",
+   "prompt": "Command 197 (Blessings on sights & occasions): A rainbow after rain over fields (shehecheyanu of sight); the open sea horizon from a cliff; a fruit tree in full first blossom; tasting the first fruit of the season from a small bowl; new clothes laid out on a bed with light on them; a scholar's house with a lit study window at night; a rainbow-coloured thunderstorm clearing over a town (awe); mountains of Judea-style hills in morning haze; a great river in flood season, powerful and calm; meeting an old friend on a street after years — two figures stopping in delighted surprise. Image 2 of 10: the open sea horizon from a cliff. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "826355463b7e9d7bc2348b07c5178062d91c4f47a16420806dfdd2effe6da432",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:38:00.589Z",
+   "sourceFile": "img-0625.png",
+   "sourceFileDate": "2026-11-06T21:37:59.937Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "c5ce3faf04a0df8efff308dea656906449ef80090904f118406520eac8e1b52b",
+   "originalFormat": "PNG",
+   "originalBytes": 138977,
+   "originalFile": "HERO_sights_02.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HERO_sights_02.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 12996
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_link_07": {
+   "id": "GRAM_link_07",
+   "file": "GRAM_link_07.png",
+   "command": 219,
+   "set": "Connectors & little words",
+   "block": "O",
+   "prompt": "Command 219 (Connectors & little words): And — two baskets joined by a rope; or — a fork in a path with a cake on one side and fruit on the other; but — a sunny picnic with one black cloud; because — rain above, umbrella open below (cause readable); also — a third chair being added to a table of two; only — one gold apple among green apples; already — an empty plate with crumbs and a satisfied Rimon; not yet — a cake in an oven half risen; here — a gold map pin shape over a café table scene (pin as object); there — the same pin small and far on a hill. Image 7 of 10: already — an empty plate with crumbs and a satisfied Rimon. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "bc746212b0f9fae2faff5b21fefe39b906ff3653b9967e8807515a95b68e424f",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:38:00.589Z",
+   "sourceFile": "img-0639.png",
+   "sourceFileDate": "2026-11-06T21:38:00.133Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "7b03f5238679b3d4334e40dcec921210f87be50307b185dbfa93acc758612f42",
+   "originalFormat": "PNG",
+   "originalBytes": 233192,
+   "originalFile": "GRAM_link_07.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_link_07.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 18922
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_jerusalem_03": {
+   "id": "PLACE_jerusalem_03",
+   "file": "PLACE_jerusalem_03.png",
+   "command": 200,
+   "set": "Jerusalem beyond the courtyard",
+   "block": "N",
+   "prompt": "Command 200 (Jerusalem beyond the courtyard): A narrow stepped alley of golden stone; rooftops and domes seen from a terrace (distant, generic); an ancient city gate with people passing small beneath; a market lane of spice pyramids in baskets (no signs); the walls at sunset from across a valley; a courtyard with an old olive tree and laundry lines; stone steps worn smooth leading up between houses; a small synagogue courtyard with a lemon tree; a watchtower view over hills at dawn; night — warm windows scattered over the dark hillside city. Image 3 of 10: an ancient city gate with people passing small beneath. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "dafc259c522c50b7aea4547606e433632c6852c5981efae3a965b24100ba7549",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:38:00.589Z",
+   "sourceFile": "img-1056.png",
+   "sourceFileDate": "2026-11-06T21:38:00.100Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "6d964a087f4e760707fd5be9a716d417811764064b1602412c06a75c8d0dd3cd",
+   "originalFormat": "PNG",
+   "originalBytes": 198856,
+   "originalFile": "PLACE_jerusalem_03.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_jerusalem_03.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 37140
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "090",
+      "conf": 70.3,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "STATE_art_05": {
+   "id": "STATE_art_05",
+   "file": "STATE_art_05.png",
+   "command": 243,
+   "set": "Empty, error & success states",
+   "block": "R",
+   "prompt": "Command 243 (Empty, error & success states): Ten friendly square states: Rimon holding an empty basket (nothing here yet); Rimon fishing in an empty bucket (no results); Rimon untangling a ball of string (something went wrong); Rimon with a bandaged head bump sitting on a cushion (offline — rest and retry); a gold check seal breaking through a ribbon (success, no text); Rimon watering a pot where nothing has sprouted yet (keep going); a blank map with one gold pin and a lot of dotted path (journey started); Rimon holding a \"closed\" shutter door gently ajar from inside (locked level preview — door only, no signs); a finish-line ribbon across a path with confetti shapes; Rimon asleep on a \"done\" stack of finished books. Files STATE_art_01 … _10. Image 5 of 10: a gold check seal breaking through a ribbon (success, no text). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "24cbc27f21a863a3dcd02aae7815c71ddea42b73c6302275c119e1f006c7c08b",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:38:00.589Z",
+   "sourceFile": "img-1107.png",
+   "sourceFileDate": "2026-11-06T21:38:00.046Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "1aecc5cc719f8a657fb3118d8d80b5136d9c166a956bab05316a6109b16f48f4",
+   "originalFormat": "PNG",
+   "originalBytes": 220873,
+   "originalFile": "STATE_art_05.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "STATE_art_05.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 16264
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "CTX_nature_10": {
+   "id": "CTX_nature_10",
+   "file": "CTX_nature_10.png",
+   "command": 234,
+   "set": "Nature in context",
+   "block": "Q",
+   "prompt": "Command 234 (Nature in context): A wadi stream after rain with frogs on stones; anemones and cyclamen under pine trees; a hoopoe bird on a lawn (Israel's national bird, stylised); ibex on a cliff at dawn; a vineyard at pruning season; the sea at winter storm with one surfer far out; a date palm being harvested with a lift basket; a desert spring pool with reeds; storks resting in a flooded field; a garden after the first rain, everything washed bright. Image 10 of 10: a garden after the first rain, everything washed bright. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "e03e49c49fefc4b3a39d1e670a29c7ee4913687df8a13ca6db8751d9a4cda615",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:38:00.589Z",
+   "sourceFile": "img-1118.png",
+   "sourceFileDate": "2026-11-06T21:38:00.111Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "8c8e743d7d4de84a021309be7a10dc2bed9472c7c8eb0735989f700c18e1affa",
+   "originalFormat": "PNG",
+   "originalBytes": 176069,
+   "originalFile": "CTX_nature_10.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "CTX_nature_10.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 26132
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_seasons_04": {
+   "id": "PLACE_seasons_04",
+   "file": "PLACE_seasons_04.png",
+   "command": 209,
+   "set": "Seasons of the land",
+   "block": "N",
+   "prompt": "Command 209 (Seasons of the land): Almond blossom hills in late winter; red anemones carpeting a field in spring; a wheat field gold before harvest; summer — cicada-hot dry hills and one green oasis; the first rain darkening Jerusalem stone; autumn vineyards turning red and gold; winter snow on the northern hills with a single red-roof house; a storm sea at the Jaffa wall; migrating birds in V-formations over a valley at dawn; the land at rest — an empty field under a huge sky in the seventh-year mood (fallow, peaceful, one tree). After command 209, print the 100-place index: set, place name, file — for the app's atlas page. Image 4 of 10: summer — cicada-hot dry hills and one green oasis. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "2840495788ebe40dee1947a257bcaaba3a9a8246f257a85852af9cfae8d24ef4",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:38:00.589Z",
+   "sourceFile": "img-1265.png",
+   "sourceFileDate": "2026-11-06T21:38:00.193Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "874641b3a839b3bc0874d4768a52a07fdce32990598027b06e6c91d7f90dc62f",
+   "originalFormat": "PNG",
+   "originalBytes": 169634,
+   "originalFile": "PLACE_seasons_04.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_seasons_04.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 25116
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "L10_yod_quirky": {
+   "id": "L10_yod_quirky",
+   "file": "L10_yod_quirky.png",
+   "command": 101,
+   "set": "quirky_mnemonics",
+   "block": "G",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a yo-yo on a string dangling from a tiny hand. Let the subject's overall silhouette loosely echo this letter shape: The smallest letter: a tiny comma that floats at the top of the line. Sound it helps remember: y as in 'yes'. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "cf648d3b3b1bb800c6c21f9841d5152131346dec39645119a33390cd6313da7b",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:38:00.589Z",
+   "sourceFile": "img-1371.png",
+   "sourceFileDate": "2026-11-06T21:38:00.205Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "d854e08ef51dc68ee14eb7e4b605e5f6c507afb46a26b28af76b15a160a4680f",
+   "originalFormat": "PNG",
+   "originalBytes": 186095,
+   "originalFile": "L10_yod_quirky.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "L10_yod_quirky.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 6100
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "FINALE_set_04": {
+   "id": "FINALE_set_04",
+   "file": "FINALE_set_04.png",
+   "command": 249,
+   "set": "Finale — the whole course in one world",
+   "block": "R",
+   "prompt": "Command 249 (Finale — the whole course in one world): Ten wide 1792×1024 \"map of the course\" scenes, the art for the completion screen and the book's endpapers: the café, market, beach and synagogue joined in one panorama town; Ari and Noa walking the whole town at dawn; the same town at Shabbat candle-lighting time, windows warm; the town in festival season with sukkot and flags of blank bunting; Rimon at a crossroads with four blank signpost shapes pointing four ways; a hot-air balloon (pomegranate-shaped, no writing) rising over the town; the town seen from the balloon at evening; a night map of the town as lit windows only; the town in the rain with umbrellas of many colours; the town at sunrise one year later, a new small figure arriving with a suitcase. Files FINALE_set_01 … _10. Image 4 of 10: the town in festival season with sukkot and flags of blank bunting. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "4b9024409a1fd071201bc6e00276b2df15cebea531e4954a85334b95ab8fa974",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:38:00.589Z",
+   "sourceFile": "img-1427.png",
+   "sourceFileDate": "2026-11-06T21:37:59.993Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "a22349d35097963dc22251e4eef510912cedd77a905be249501d798f809c7666",
+   "originalFormat": "PNG",
+   "originalBytes": 256686,
+   "originalFile": "FINALE_set_04.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "FINALE_set_04.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 47738
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "FINALE_set_10": {
+   "id": "FINALE_set_10",
+   "file": "FINALE_set_10.png",
+   "command": 249,
+   "set": "Finale — the whole course in one world",
+   "block": "R",
+   "prompt": "Command 249 (Finale — the whole course in one world): Ten wide 1792×1024 \"map of the course\" scenes, the art for the completion screen and the book's endpapers: the café, market, beach and synagogue joined in one panorama town; Ari and Noa walking the whole town at dawn; the same town at Shabbat candle-lighting time, windows warm; the town in festival season with sukkot and flags of blank bunting; Rimon at a crossroads with four blank signpost shapes pointing four ways; a hot-air balloon (pomegranate-shaped, no writing) rising over the town; the town seen from the balloon at evening; a night map of the town as lit windows only; the town in the rain with umbrellas of many colours; the town at sunrise one year later, a new small figure arriving with a suitcase. Files FINALE_set_01 … _10. Image 10 of 10: the town at sunrise one year later, a new small figure arriving with a suitcase. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "d83e20280f3227373db8c8cc0d493fd8b73dbb389b6fe4f63460c4ad5bef6959",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:38:00.589Z",
+   "sourceFile": "img-1495.png",
+   "sourceFileDate": "2026-11-06T21:38:00.126Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "8f22de1dce869db8884f2fad25ffa3246926176f921ffe93309c69ee0d7a94f6",
+   "originalFormat": "PNG",
+   "originalBytes": 247888,
+   "originalFile": "FINALE_set_10.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "FINALE_set_10.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 45480
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "Seley",
+      "conf": 36.3,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "contains_text"
+   ],
+   "humanApproved": true
   }
  }
 }

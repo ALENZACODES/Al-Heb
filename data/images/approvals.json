@@ -5370,6 +5370,78 @@
    "forcedDespite": [
     "contains_text"
    ]
+  },
+  "HERO_calendar_07": {
+   "status": "approved",
+   "at": "2026-11-06T21:38:29.823Z"
+  },
+  "HERO_psalms1_01": {
+   "status": "approved",
+   "at": "2026-11-06T21:38:29.823Z"
+  },
+  "HEAD_two_06": {
+   "status": "approved",
+   "at": "2026-11-06T21:38:29.823Z"
+  },
+  "HERO_sights_02": {
+   "status": "approved",
+   "at": "2026-11-06T21:38:29.823Z"
+  },
+  "GRAM_link_07": {
+   "status": "approved",
+   "at": "2026-11-06T21:38:29.823Z"
+  },
+  "STATE_art_05": {
+   "status": "approved",
+   "at": "2026-11-06T21:38:29.823Z"
+  },
+  "CTX_nature_10": {
+   "status": "approved",
+   "at": "2026-11-06T21:38:29.823Z"
+  },
+  "PLACE_seasons_04": {
+   "status": "approved",
+   "at": "2026-11-06T21:38:29.823Z"
+  },
+  "L10_yod_quirky": {
+   "status": "approved",
+   "at": "2026-11-06T21:38:29.823Z"
+  },
+  "FINALE_set_04": {
+   "status": "approved",
+   "at": "2026-11-06T21:38:29.823Z"
+  },
+  "PLACE_tzfat_09": {
+   "status": "approved",
+   "at": "2026-11-06T21:38:30.409Z",
+   "note": "contains_text flag eye-checked at full size Nov 6: no text present (detector false positive)",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "HERO_psalms1_07": {
+   "status": "approved",
+   "at": "2026-11-06T21:38:30.409Z",
+   "note": "contains_text flag eye-checked at full size Nov 6: no text present (detector false positive)",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "PLACE_jerusalem_03": {
+   "status": "approved",
+   "at": "2026-11-06T21:38:30.409Z",
+   "note": "contains_text flag eye-checked at full size Nov 6: no text present (detector false positive)",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "FINALE_set_10": {
+   "status": "approved",
+   "at": "2026-11-06T21:38:30.409Z",
+   "note": "contains_text flag eye-checked at full size Nov 6: no text present (detector false positive)",
+   "forcedDespite": [
+    "contains_text"
+   ]
   }
  }
 }

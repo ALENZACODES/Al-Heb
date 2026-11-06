@@ -48,7 +48,9 @@ There is no function that turns a completion flag into an award. The page does n
 
 `source` and `trust` on an event are strings the caller wrote. Comparing them to `assessment-engine` and `objective` does not identify the caller and is not authentication. Evidence from a different `rubricId` does not satisfy an item. Stored evidence is local-only in `awards.v1`. It has no learner id, no key, and no network send. Copying the record to another browser is still just local data. This document does not claim the record can detect tampering.
 
-Every PDF this module writes is a sample. Passing `sample: false` or `issuable: true` still prints SAMPLE / NOT EARNED. There is no non-sample export until a separate issuance design is reviewed.
+Every PDF and HTML certificate from this module is a sample. The banner and the diagonal both say SAMPLE / NOT EARNED. A caller watermark such as EARNED is ignored. Passing `sample: false` or `issuable: true` still prints that mark. There is no non-sample export until a separate issuance design is reviewed.
+
+Matching the 40 shipped ids is not a content check and not approval. The evaluator still accepts those ids when the Hebrew, gloss, or requirement text on the items has been rewritten. It does not authenticate evidence. `CRITERIA_REVIEWED` stays false.
 
 ## Unresolved choices
 

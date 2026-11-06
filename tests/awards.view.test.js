@@ -144,3 +144,23 @@ test('storage denied and a second reload do not invent an earned certificate', a
   const src = readFileSync(new URL('../src/awards/gallery.view.js', import.meta.url), 'utf8');
   assert.doesNotMatch(src, /mailto:|innerHTML|fetch\(/);
 });
+
+test('direct HTML caller cannot replace the sample watermark with EARNED', async () => {
+  const { h } = await import('../src/shell/ui.js');
+  const { renderCertificate, sampleModel, shareText, SAMPLE_MARK } = await import('../src/awards/certificate.js');
+  const node = renderCertificate(h, {
+    ...sampleModel({ displayName: 'QA', now: T }),
+    nameEntered: true,
+    watermark: 'EARNED',
+    earned: true,
+    issuable: true,
+    sample: false,
+  });
+  assert.equal(node.getAttribute('data-sample'), 'true');
+  assert.equal(node.getAttribute('data-earned'), 'false');
+  assert.equal(node.querySelector('#aw-cert-banner').textContent, SAMPLE_MARK);
+  assert.equal(node.querySelector('[data-watermark]').textContent, SAMPLE_MARK);
+  assert.equal(node.querySelector('#aw-cert-banner').textContent, 'SAMPLE / NOT EARNED');
+  assert.doesNotMatch(node.querySelector('#aw-cert-banner').textContent, /^EARNED$/);
+  assert.equal(shareText({ watermark: 'EARNED' }).startsWith('SAMPLE / NOT EARNED'), true);
+});

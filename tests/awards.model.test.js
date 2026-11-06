@@ -132,6 +132,15 @@ test('certificate rule rejects omitted confirmation, foreign rubrics, and non-ca
   assert.equal(reviewedButUnconfirmed.satisfied, rubric.items.length);
 });
 
+test('same canonical ids with rewritten Hebrew, gloss, or requirements still pass the id check', () => {
+  const rewritten = rubric.items.map((it) => ({ ...it, he: 'CHANGED', gloss: 'changed gloss', requirement: 'changed requirement' }));
+  const evidence = rewritten.map((it, i) => acceptAssessmentEvent(event({ itemId: it.id, evidenceId: ('obj-rewrite-' + i).padEnd(8, '0') })).evidence);
+  const result = evaluateProposedCertificate({ criteriaReviewed: true, confirmed: true, items: rewritten, evidence });
+  assert.equal(result.issuable, true);
+  assert.equal(result.reason, 'objective-evidence');
+  assert.equal(certificateDecision({ ...emptyRecord(), evidence }, { ...rubric, items: rewritten, criteriaReviewed: true, confirmed: true }).issuable, false);
+});
+
 test('draft r01-r09 proposal records known bars and does not approve them', () => {
   assert.equal(rubric.confirmed, false);
   assert.equal(rubric.criteriaReviewed, false);

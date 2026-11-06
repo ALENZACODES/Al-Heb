@@ -15,6 +15,8 @@ export function formatPreviewDate(now) {
 }
 
 export const PDF_FILENAME = 'alef-beginner-certificate-SAMPLE.pdf';
+/** Fixed sample mark. Callers cannot replace it with an earned claim. */
+export const SAMPLE_MARK = 'SAMPLE / NOT EARNED';
 /** A4 landscape, points. Margins stay at or beyond PRINT_MARGIN. */
 export const PDF_PAGE = Object.freeze({ width: 841.89, height: 595.28, margin: 40 });
 export const PRINT_MARGIN = 40;
@@ -34,7 +36,7 @@ export function sampleModel(o = {}) {
     sample: true,
     issuable: false,
     earned: false,
-    watermark: 'SAMPLE / NOT EARNED',
+    watermark: SAMPLE_MARK,
     displayName: name,
     nameEntered: !!name,
     dateLabel: `Preview date: ${formatPreviewDate(o.now ?? Date.now())}`,
@@ -61,9 +63,9 @@ export const SAMPLE_PAGE_NOTES = Object.freeze([
   ART_NOTE,
 ]);
 
-/** Learner-facing share blurb. Always says the sheet is a sample. */
-export function shareText(model) {
-  return `${model.watermark}. Not an earned certificate. ALEF does not email this and does not upload it.`;
+/** Learner-facing share blurb. Ignores any caller watermark. */
+export function shareText(_model) {
+  return `${SAMPLE_MARK}. Not an earned certificate. ALEF does not email this and does not upload it.`;
 }
 
 export function shareAvailability(nav) {
@@ -243,7 +245,6 @@ export function renderGuilloche() {
  * @param {Function} h
  */
 export function renderCertificate(h, model) {
-  const watermark = modelNeedsWatermark(model);
   const name = h('p', { class: 'aw-name', 'data-cert-name': '1' });
   name.textContent = model.displayName || '';
   const panelKids = [name];
@@ -251,15 +252,15 @@ export function renderCertificate(h, model) {
   return h('article', {
     class: 'aw-cert',
     id: 'award-certificate',
-    'data-sample': watermark ? 'true' : 'false',
+    'data-sample': 'true',
     'data-earned': 'false',
     'data-layout': 'landscape',
     'aria-labelledby': 'aw-cert-title',
   },
   renderGuilloche(),
-  watermark ? h('p', { class: 'aw-cert-banner', id: 'aw-cert-banner', tabindex: '-1' }, model.watermark) : null,
+  h('p', { class: 'aw-cert-banner', id: 'aw-cert-banner', tabindex: '-1' }, SAMPLE_MARK),
   h('div', { class: 'aw-cert-frame' },
-    watermark ? h('p', { class: 'aw-watermark', 'aria-hidden': 'true', 'data-watermark': '1' }, 'SAMPLE NOT EARNED') : null,
+    h('p', { class: 'aw-watermark', 'aria-hidden': 'true', 'data-watermark': '1' }, SAMPLE_MARK),
     renderSeal(h),
     h('p', { class: 'aw-brand' }, model.brand),
     h('h2', { id: 'aw-cert-title' }, model.subtitle),

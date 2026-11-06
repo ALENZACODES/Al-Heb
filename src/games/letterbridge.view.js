@@ -20,7 +20,7 @@ export function buildBridgeDeck(families) {
 export function bridgeHolds(row, joint) { return !!row && row.joint === joint; }
 export function mount(root, ctx) {
   const leaveSfx = sfx.enter(ctx);
-  let alive = true, deck = [], images = null, round = 0;
+  let alive = true, deck = [], images = null, round = 0, locked = false, nextTimer = 0;
   let session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 6 });
   const status = h('p', { class: 'game-status', role: 'status', 'aria-live': 'polite' }, 'Loading documented plural forms…');
   const board = h('div', { class: 'game-board' });
@@ -32,7 +32,8 @@ export function mount(root, ctx) {
     if (!alive || !article.isConnected) return;
     if (round >= 8) {
       board.replaceChildren(resultsCard(h, heSpan, session, { title: 'Bridge complete', onAgain: () => {
-        round = 0; session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 6 }); paint();
+        clearTimeout(nextTimer); round = 0; locked = false;
+        session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 6 }); paint();
       } }));
       return;
     }
@@ -42,10 +43,18 @@ export function mount(root, ctx) {
       width: picture.width, height: picture.height, 'data-img-id': picture.id }));
     const span = h('div', { class: 'game-bridge-span' + (broken ? ' game-bridge-broken' : '') }, '╞════╡');
     const options = ['im','ot'].map(joint => h('button', { type: 'button', class: 'btn secondary game-choice', onclick: () => {
+      if (!alive || locked) return;
+      locked = true;
       const ok = bridgeHolds(r, joint); session.answer(ok); sfx.play(ok ? 'success' : 'miss');
-      if (!ok) { status.textContent = 'Mismatched joint! Bridge sags.'; paint(true); return; }
+      if (!ok) {
+        status.textContent = 'Mismatched joint: bridge collapses. This attempt is over.';
+        span.classList.add('game-bridge-broken');
+        board.querySelectorAll('button.game-choice').forEach(b => { b.disabled = true; });
+        nextTimer = setTimeout(() => { if (!alive) return; round++; locked = false; paint(); }, 750);
+        return;
+      }
       status.replaceChildren('Bridge holds: ', heSpan(r.plural));
-      round++; paint();
+      round++; locked = false; paint();
     } }, joint === 'im' ? heSpan('־ים') : heSpan('־ות')));
     board.replaceChildren(entry, span, h('p', {}, 'Which joint is present in the attested plural?'),
       h('div', { class: 'game-choices' }, ...options));
@@ -56,5 +65,5 @@ export function mount(root, ctx) {
     if (deck.length < 8) { status.textContent = 'Insufficient sourced plural nouns.'; return; }
     paint();
   }).catch(() => { if (alive) status.textContent = 'Plural records unavailable.'; });
-  return () => { alive = false; leaveSfx(); };
+  return () => { alive = false; clearTimeout(nextTimer); leaveSfx(); };
 }

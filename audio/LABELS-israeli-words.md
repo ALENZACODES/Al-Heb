@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 7115 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 7147 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-7115 English labels; 1933 UNKNOWN.
+7147 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -4946,6 +4946,38 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [h8e3fbf43](m/israeli/word/h8e3fbf43.mp3) | שָׁם | to assess, appraise | sham |
 | [h8eec7f08](m/israeli/word/h8eec7f08.mp3) | אָנֹכִי | I (first-person singular nominative pronoun) | anokhi |
 | [h8f0ac707](m/israeli/word/h8f0ac707.mp3) | הֶחְלִיף | to swap, exchange, change; to grow new branches; to change one's mind | hechlif |
+| [h8f42d584](m/israeli/word/h8f42d584.mp3) | זְמַן | time; a time (duration of time); a time | zeman |
+| [h8f6944f1](m/israeli/word/h8f6944f1.mp3) | רֶגַע | a moment; a hand gesture indicating waiting or patience; a minute (one sixtieth of an hour of time), or a very short amount of time | rega |
+| [h8ff6123b](m/israeli/word/h8ff6123b.mp3) | קָרָא | to read; to call; to crow | kara |
+| [h9034f8b8](m/israeli/word/h9034f8b8.mp3) | מָוֶת | death | mavet |
+| [h90377d47](m/israeli/word/h90377d47.mp3) | שֶׁקֶל | shekel, the name of Israel's currency unit since 24 February 1980 | shekel |
+| [h91ac0d37](m/israeli/word/h91ac0d37.mp3) | נָהָר | river | nahar |
+| [h91e9b8f2](m/israeli/word/h91e9b8f2.mp3) | טָס | to fly; to zoom (move rapidly) | tas |
+| [h92151b55](m/israeli/word/h92151b55.mp3) | שָׁבוּעַ | week, period of seven days | shavu'a |
+| [h921e79c9](m/israeli/word/h921e79c9.mp3) | גַּג | roof; circumflex; maximum | gag |
+| [h9247f58c](m/israeli/word/h9247f58c.mp3) | מַדָּעִי | scientific | mada'i |
+| [h92e1aa5f](m/israeli/word/h92e1aa5f.mp3) | מַשֶּׁהוּ | something; anything | mashehu |
+| [h9324911c](m/israeli/word/h9324911c.mp3) | חָצֵר | yard, courtyard | chatzer |
+| [h93bb64ad](m/israeli/word/h93bb64ad.mp3) | חָשַׁב | to think | chashav |
+| [h93f568f7](m/israeli/word/h93f568f7.mp3) | שֶׂה | lamb, kid (young of Caprinae) | seh |
+| [h943beaa8](m/israeli/word/h943beaa8.mp3) | יַקִּיר | dear, beloved | yakir |
+| [h9499a4fd](m/israeli/word/h9499a4fd.mp3) | חָמוּץ | sour; a pickle | chamutz |
+| [h94b9c92d](m/israeli/word/h94b9c92d.mp3) | נָח | to rest | nach |
+| [h950019e4](m/israeli/word/h950019e4.mp3) | פָּקַד | to count; to visit, befall, remember; to muster troops, to assemble, to summon | pakad |
+| [h955b62a0](m/israeli/word/h955b62a0.mp3) | טִפֵּשׁ | fool | tipesh |
+| [h95c52e9c](m/israeli/word/h95c52e9c.mp3) | מִלָּה | word | milah |
+| [h95c54aba](m/israeli/word/h95c54aba.mp3) | אוֹקֵי | OK, okay | okei |
+| [h95d75fdd](m/israeli/word/h95d75fdd.mp3) | יָעֵל | ibex | ya'el |
+| [h95fec412](m/israeli/word/h95fec412.mp3) | אָבַל | to bewail | aval |
+| [h9618213e](m/israeli/word/h9618213e.mp3) | כָּרַת | to cut down, to cut off | karat |
+| [h967f68e9](m/israeli/word/h967f68e9.mp3) | צְדָקָה | charity; tzedakah; righteousness | tzedakah |
+| [h9720c378](m/israeli/word/h9720c378.mp3) | סַם | drug, narcotic; poison; an aromatic, sweet-smelling spice used to make incense | sam |
+| [h975e3b85](m/israeli/word/h975e3b85.mp3) | סָגֹל | violet, purple | sagol |
+| [h9790d078](m/israeli/word/h9790d078.mp3) | מָתוֹק | Sweet | matok |
+| [h97be2e78](m/israeli/word/h97be2e78.mp3) | אֲפִלּוּ | even | afilu |
+| [h97dc517a](m/israeli/word/h97dc517a.mp3) | מַבָּט | glance, look (the act of looking); gaze, look | mabat |
+| [h97e97e5b](m/israeli/word/h97e97e5b.mp3) | פְּעֻלָּה | an action, a move | pe'ulah |
+| [h982871fa](m/israeli/word/h982871fa.mp3) | שָׁכַן | to dwell, reside; to be housed, located | shakhan |
 | [haftarah-after-w1](m/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](m/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](m/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -7721,4 +7753,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 15280 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 15455 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

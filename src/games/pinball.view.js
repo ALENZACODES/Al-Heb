@@ -2,6 +2,7 @@
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, speak, resultsCard } from './engine.js';
 import { loadJson } from '../grammar/loader.js';
+import { sfx } from '../audio/sfx.js';
 
 export const STORE_KEY = 'games.pinball.v1';
 export function buildPinballDeck(letters) {
@@ -32,6 +33,7 @@ export function stepBall(ball, dt, targets, expectedId) {
   return null;
 }
 export function mount(root, ctx) {
+  const leaveSfx = sfx.enter(ctx);
   let alive = true, raf = 0, last = 0, deck = [], R = null, choices = [], expected, aim = 1, rounds = 0, session, running = false;
   const ball = { x: 50, y: 90, vx: 0, vy: 0, armed: false };
   const status = h('p', { role: 'status', 'aria-live': 'polite' }, 'Loading letter records…');
@@ -42,7 +44,11 @@ export function mount(root, ctx) {
   const controls = h('div', { class: 'row' });
   function flip() {
     if (!alive || !running) return;
-    if (launchBall(ball, choices[aim].x)) status.textContent = `Shot launched · Find ${expected.name}`;
+    sfx.play('flipper');
+    if (launchBall(ball, choices[aim].x)) {
+      sfx.play('whoosh');
+      status.textContent = `Shot launched · Find ${expected.name}`;
+    }
   }
   for (const side of ['Left flipper', 'Right flipper']) controls.append(h('button', { type: 'button', class: 'btn', onclick: flip }, side));
   root.replaceChildren(h('article', { class: 'card game-card' },
@@ -76,11 +82,13 @@ export function mount(root, ctx) {
     marble.style.left = `${ball.x}%`; marble.style.top = `${ball.y}%`;
     if (hit) {
       session.answer(hit.correct);
+      sfx.play(hit.correct ? 'collect' : 'miss');
       const letter = choices.find(c => c.id === hit.id);
       if (letter) void speak(ctx, letter.he);
       resetBall();
       if (hit.correct) rounds++;
       if (rounds >= 8) {
+        sfx.play('streak');
         running = false;
         board.replaceChildren(resultsCard(h, heSpan, session, { title: 'Eight matching shots!', onAgain: start }));
         status.textContent = 'Table complete.'; return;
@@ -104,5 +112,5 @@ export function mount(root, ctx) {
     if (deck.length < 3) { status.textContent = 'At least three complete letter records are required.'; return; }
     start();
   }).catch(() => { if (alive) status.textContent = 'Letter data unavailable. Try again when online.'; });
-  return () => { alive = false; running = false; cancelAnimationFrame(raf); window.removeEventListener('keydown', key); };
+  return () => { alive = false; running = false; cancelAnimationFrame(raf); window.removeEventListener('keydown', key); leaveSfx(); };
 }

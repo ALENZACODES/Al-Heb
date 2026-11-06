@@ -38,7 +38,7 @@ test('make-dist ships runtime files only', () => {
 test('make-dist ships clip mp3s but never *.meta.json sidecars or ingest reports', () => {
   const files = listShipFiles();
   const audio = files.filter((f) => f.startsWith('audio/'));
-  for (const f of audio) assert.match(f, /\.(mp3|m4a|ogg)$/i, f);
+  for (const f of audio) assert.match(f, /\.(mp3|m4a|ogg|oga)$/i, f);
   const bad = files.filter((f) => /\.meta\.json$/i.test(f) || /ingest-report/i.test(f));
   assert.deepEqual(bad, []);
   if (existsSync(join(root, 'audio'))) {

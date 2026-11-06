@@ -3,6 +3,7 @@
 // being used for sound: a recorded file, the browser's text-to-speech voice, or nothing.
 // Status wording comes from ./audio-labels.js (one table for every screen and report).
 import { fileLabel, isSyntheticStatus, STATUS_LABELS } from './audio-labels.js';
+import { gameMusic } from '../audio/music.js';
 export const REASONS = {
   'no-hebrew-browser-voice': 'your browser has no Hebrew voice installed',
   'tts-pronunciation-mismatch': 'the browser voice only reads Israeli pronunciation and you chose another tradition',
@@ -135,8 +136,12 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
   const checking = (kind, id) => ({ source: 'none', reason: CHECKING, kind, id });
   const gate = (r, kind, id) => (mstate === 'checking' && r.source !== 'file' ? checking(kind, id) : r);
 
+  let speechDepth = 0;
+  const speechBegin = () => { speechDepth += 1; gameMusic.setSpeech(true); };
+  const speechEnd = () => { speechDepth = Math.max(0, speechDepth - 1); if (!speechDepth) gameMusic.setSpeech(false); };
   return {
     ...inner,
+    stop() { speechDepth = 0; gameMusic.setSpeech(false); return inner.stop(); },
     /** call synchronously inside the first user gesture (see createAudioUnlock); safe to call again */
     unlock: createAudioUnlock(globalThis),
     get summary() { return summary; },
@@ -160,16 +165,22 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
       await settle();
       const o2 = opts(o);
       publish(describeResult(inner.status(kind, id, o2)));      // what WILL be used, before it speaks
-      const r = await inner.play(kind, id, o2);
-      publish(describeResult(r));
-      return r;
+      speechBegin();
+      try {
+        const r = await inner.play(kind, id, o2);
+        publish(describeResult(r));
+        return r;
+      } finally { speechEnd(); }
     },
     async playSequence(items, so) {
       for (const it of items) need(Array.isArray(it) ? it[0] : it && it.kind);
       await settle();
-      const res = await inner.playSequence(items.map((it) => ({ ...(Array.isArray(it) ? { kind: it[0], id: it[1] } : it), ...opts() })), so);
-      if (res.length) publish(describeResult(res[res.length - 1]));
-      return res;
+      speechBegin();
+      try {
+        const res = await inner.playSequence(items.map((it) => ({ ...(Array.isArray(it) ? { kind: it[0], id: it[1] } : it), ...opts() })), so);
+        if (res.length) publish(describeResult(res[res.length - 1]));
+        return res;
+      } finally { speechEnd(); }
     },
   };
 }

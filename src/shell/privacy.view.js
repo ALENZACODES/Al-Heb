@@ -26,7 +26,7 @@ export const LOCAL_ONLY = [
 
 /** localStorage keys (all written with the prefix "alef:"). `file` is one source file that defines or uses the key. */
 export const STORE_KEYS = [
-  ['settings', 'Settings: language, script, theme, accessibility options (as listed on the Accessibility screen), voice, pronunciation style, your gender for Hebrew forms (optional), saved latitude and longitude', 'src/shell/settings.js'],
+  ['settings', 'Settings: language, script, theme, accessibility options (as listed on the Accessibility screen), voice, pronunciation style, your gender for Hebrew forms (optional), saved latitude and longitude, and whether optional game music is on, with its volume, mute and track', 'src/shell/settings.js'],
   ['onboarding.v1', 'Setup answers and plan', 'src/onboarding/model.js'],
   ['onboarding.v1.dailyGoal', 'Daily goal', 'src/home/today.js'],
   ['backup.reminder.v1', 'When you last downloaded a backup file, and "Not now" on the backup reminder', 'src/shell/backup-reminder.js'],
@@ -61,6 +61,9 @@ export const STORE_KEYS = [
   ['speak.v1', 'Say-it results (not recordings)', 'src/speak/model.js'],
   ['sprint.last', 'Last word sprint', 'src/sprint/model.js'],
   ['games.tugowar.v1', 'Antonym Tug-of-War: best score, how many times you have played, and the star rating of the last game (on this device only)', 'src/games/tugowar.view.js'],
+  ['games.pinball.v1', 'Hebrew Pinball: best score, how many times you have played, and the star rating of the last game (on this device only)', 'src/games/pinball.view.js'],
+  ['games.memorypalace.v1', 'Memory Palace: best score, how many times you have played, and the star rating of the last game (on this device only)', 'src/games/memorypalace.view.js'],
+  ['games.prefixblast.v1', 'Prefix Blast: best score, how many times you have played, and the star rating of the last game (on this device only)', 'src/games/prefixblast.view.js'],
   ['games.vowelcatcher.v1', 'Vowel Catcher: best score, how many times you have played, and the star rating of the last game (on this device only)', 'src/games/vowelcatcher.view.js'],
   ['typing.v1', 'Typing practice results', 'src/typing/typing.js'],
   ['trope.v1', 'Chanting-mark trainer results', 'src/trope/trope.view.js'],

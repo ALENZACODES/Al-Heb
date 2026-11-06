@@ -13,6 +13,8 @@ import { fetchCoreManifest, fetchAudioSummary, afterPaint } from './shell/audio-
 import { h, heSpan, unavailableCard } from './shell/ui.js';
 import { loadImageResolver, img as imgEl } from './img/resolve.js';
 import { applyMotor, MOTOR_KEYS } from './shell/motor.js';
+import { gameMusic } from './audio/music.js';
+import { mountGameMusic, syncGameMusic } from './audio/music-bar.js';
 
 const settings = createSettings(store);
 
@@ -245,6 +247,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     heldFocusId = '';
     if (!quiet) { live.textContent = document.title; if (scrollKeeper) scrollKeeper.arrive(location.hash); else window.scrollTo(0, 0); lastHashShown = location.hash; }
     document.body.dataset.route = route?.name ?? 'notfound';
+    try { syncGameMusic(route, settings); } catch (e) { console.warn('game music bar failed', e); }
     document.body.dataset.ready = '1';
     shownFirstResolve();
   }
@@ -256,6 +259,18 @@ async function boot() {
   applyTheme(); applyScript(); applyComfortNow(); applyMotor(document.documentElement, settings.all()); wireChrome();
   settings.subscribe((all, changed) => { if (changed.some((k) => MOTOR_KEYS.includes(k))) applyMotor(document.documentElement, all); if (changed.includes('theme')) applyTheme(); if (changed.includes('script')) applyScript(); if (changed.some((k) => COMFORT_KEYS.includes(k))) applyComfortNow(); });
   const audio = await makeAudio();
+  gameMusic.usePrefs({
+    readPrefs: () => ({
+      want: settings.get('gameMusic') === true,
+      muted: settings.get('gameMusicMuted') === true,
+      volume: settings.get('gameMusicVolume'),
+      trackId: settings.get('gameMusicTrack'),
+    }),
+    writePrefs: (p) => settings.set({
+      gameMusic: !!p.want, gameMusicMuted: !!p.muted, gameMusicVolume: p.volume, gameMusicTrack: p.trackId,
+    }),
+  });
+  try { mountGameMusic(document.body); } catch { /* the bar appears once a game route asks for it */ }
   const mainEl = document.getElementById('main');
   const gesture = (e) => { touched = true; if (!(e.target instanceof Element && e.target.closest('input, textarea, select'))) touchedOutsideField = true; };
   mainEl.addEventListener('pointerdown', gesture, true);

@@ -24,6 +24,10 @@ export const DEFAULTS = Object.freeze({
   writeGodAsGd: false, // write the English divine name as "G-d" in UI and translation text (names.englishGod); a personal custom, off by default
   haptics: false,      // vibration on exercise feedback (exercises.session.js hapticsOn); opt-in, never under reduced motion
   soundEffects: false, // sound on exercise feedback (exercises.session.js soundOn); opt-in; needs ctx.sfx from the shell
+  gameMusic: false, // optional secular game bed; off until the learner turns it on (src/audio/music.js)
+  gameMusicMuted: false,
+  gameMusicVolume: 0.4,
+  gameMusicTrack: 'night_at_the_beach',
   // Calm and reading comfort (src/shell/comfort.js). All off or normal by default; none asks anything about the person.
   calmMode: false,     // no animation, no sound effects, no vibration, no streak or timer pressure; one thing at a time
   shortSession: false, // lessons are shown in small parts (about 2 to 3 minutes each) and your place is saved after every part
@@ -47,6 +51,7 @@ export const ENUMS = Object.freeze({
   script: ['print', 'cursive'],
   theme: ['auto', 'light', 'dark', 'contrast', 'contrast-dark'], // 'contrast' = black on white, 'contrast-dark' = white on black (high-contrast options)
   goal: ['read', 'israel', 'both'],
+  gameMusicTrack: ['night_at_the_beach', 'flowing_rocks', 'mission_plausible'],
   readFont: ['default', 'clear'],
   lineSpacing: ['normal', 'relaxed', 'wide'],
   letterSpacing: ['normal', 'wide', 'wider'],
@@ -56,7 +61,7 @@ export const ENUMS = Object.freeze({
 });
 export const GENDER_VALUES = Object.freeze(['m', 'f', 'both']);
 
-const BOOL_KEYS = new Set(['israelTrack', 'onboarded', 'browserVoiceAnyway', 'showUnapprovedImages', 'writeGodAsGd', 'haptics', 'soundEffects', 'calmMode', 'shortSession', 'showStreak', 'audioFree', 'bottomActions', 'untimed', 'confirmAnswers', 'keyShortcuts']);
+const BOOL_KEYS = new Set(['israelTrack', 'onboarded', 'browserVoiceAnyway', 'showUnapprovedImages', 'writeGodAsGd', 'haptics', 'soundEffects', 'gameMusic', 'gameMusicMuted', 'calmMode', 'shortSession', 'showStreak', 'audioFree', 'bottomActions', 'untimed', 'confirmAnswers', 'keyShortcuts']);
 
 /** @param {string} key @param {any} v @returns {{ok:boolean,value?:any}} */
 export function validate(key, v) {
@@ -66,6 +71,7 @@ export function validate(key, v) {
   if (key === 'gender') return v === null || GENDER_VALUES.includes(v) ? { ok: true, value: v } : { ok: false };
   if (key === 'lat') return v === null || (typeof v === 'number' && v >= -90 && v <= 90) ? { ok: true, value: v } : { ok: false };
   if (key === 'lon') return v === null || (typeof v === 'number' && v >= -180 && v <= 180) ? { ok: true, value: v } : { ok: false };
+  if (key === 'gameMusicVolume') return typeof v === 'number' && v >= 0 && v <= 1 ? { ok: true, value: v } : { ok: false };
   return { ok: false };
 }
 

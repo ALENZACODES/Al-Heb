@@ -51,6 +51,7 @@ export const ROUTES = [
   { name: 'festivals', pattern: '/festivals', module: '../festivals/festivals.view.js', title: 'This week in the Jewish year', owner: 'festivals', optional: true, group: 'learn', quick: 'nav.festivals' },
   { name: 'festival', pattern: '/festivals/:id', module: '../festivals/festivals.view.js', title: 'Festival words', owner: 'festivals', optional: true, paramQuery: { id: 'id' } },
   { name: 'listen', pattern: '/listen', module: '../listen/listen.view.js', title: 'Listen and pick', owner: 'listen', optional: true, group: 'learn', quick: 'nav.listen' },
+  { name: 'listen-shelf', pattern: '/listen/shelf', module: '../listen/shelf.view.js', title: 'Sacred listen', owner: 'listen', optional: true, group: 'learn', quick: 'nav.route.listen-shelf' },
   { name: 'trope', pattern: '/trope', module: '../trope/trope.view.js', title: 'Trope trainer', owner: 'trope', optional: true, group: 'learn', quick: 'nav.trope' },
   { name: 'tradition-quiz', pattern: '/tradition-quiz', module: '../pronunciation/quiz.view.js', title: 'Which tradition is this?', owner: 'pronunciation', optional: true, group: 'learn', quick: 'nav.traditionquiz' },
   { name: 'read-my-way', pattern: '/read-my-way', module: '../pronunciation/convert.view.js', title: 'Read it my way', owner: 'pronunciation', optional: true, group: 'learn', quick: 'nav.readmyway' },

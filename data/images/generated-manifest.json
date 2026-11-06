@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 976,
+ "count": 983,
  "images": {
   "BADGE_03": {
    "w": 512,
@@ -1480,6 +1480,18 @@
     }
    ]
   },
+  "CTX_nature_08": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "CTX_nature_08.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "EMOTE_one_01": {
    "w": 1254,
    "h": 1254,
@@ -1888,6 +1900,18 @@
     }
    ]
   },
+  "GAME_art_07": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GAME_art_07.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GAME_art_08": {
    "w": 512,
    "h": 512,
@@ -1948,6 +1972,18 @@
     }
    ]
   },
+  "GRAM_ask_08": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_ask_08.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GRAM_ask_09": {
    "w": 512,
    "h": 512,
@@ -1979,6 +2015,18 @@
     {
      "edge": 512,
      "file": "GRAM_modals_02.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_modals_03": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_modals_03.512.webp",
      "w": 512,
      "h": 512
     }
@@ -7810,6 +7858,18 @@
     }
    ]
   },
+  "L27_tsadi_final_cursive_trace": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "L27_tsadi_final_cursive_trace.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "L27_tsadi_final_print_ari": {
    "w": 1254,
    "h": 1254,
@@ -8011,6 +8071,18 @@
      "file": "MAS_states_08.512.webp",
      "w": 512,
      "h": 512
+    }
+   ]
+  },
+  "MORN_card_04": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "MORN_card_04.512.webp",
+     "w": 512,
+     "h": 293
     }
    ]
   },
@@ -10031,6 +10103,18 @@
     {
      "edge": 512,
      "file": "PLACE_everyday_08.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_haifa_01": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_haifa_01.512.webp",
      "w": 512,
      "h": 293
     }

@@ -5134,6 +5134,34 @@
    "forcedDespite": [
     "contains_text"
    ]
+  },
+  "GRAM_ask_08": {
+   "status": "approved",
+   "at": "2026-11-06T21:29:52.927Z"
+  },
+  "GAME_art_07": {
+   "status": "approved",
+   "at": "2026-11-06T21:29:52.927Z"
+  },
+  "CTX_nature_08": {
+   "status": "approved",
+   "at": "2026-11-06T21:29:52.927Z"
+  },
+  "GRAM_modals_03": {
+   "status": "approved",
+   "at": "2026-11-06T21:29:52.927Z"
+  },
+  "PLACE_haifa_01": {
+   "status": "approved",
+   "at": "2026-11-06T21:29:52.927Z"
+  },
+  "L27_tsadi_final_cursive_trace": {
+   "status": "approved",
+   "at": "2026-11-06T21:29:52.927Z"
+  },
+  "MORN_card_04": {
+   "status": "approved",
+   "at": "2026-11-06T21:29:52.927Z"
   }
  }
 }

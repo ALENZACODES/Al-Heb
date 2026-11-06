@@ -57528,6 +57528,356 @@
     "contains_text"
    ],
    "humanApproved": true
+  },
+  "GRAM_ask_08": {
+   "id": "GRAM_ask_08",
+   "file": "GRAM_ask_08.png",
+   "command": 214,
+   "set": "Questions",
+   "block": "O",
+   "prompt": "Command 214 (Questions): A giant gold question-mark SHAPE made of ribbon floating over a market stall (shape only, no letters — a sculptural question mark is a symbol, allowed as an object); who — Rimon peeking from behind three doors; where — one scene: Ari looking for something, with a table, an open box and a shelf all in frame; when — Noa pointing at a blank clock and a blank calendar; what — hands open over three covered dishes; why — a child pointing at rain; how many — hands counting pomegranate seeds; how — a puzzled look at a folded paper crane; which — two doors, one gold one blue, hand hovering; whose — a lost glove held up to a crowd. Image 8 of 10: how — a puzzled look at a folded paper crane. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "44bcb0a756013fc3f6a2e2df83936040215a5e6e65e70e94835f128944154359",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:29:38.703Z",
+   "sourceFile": "img-0219.png",
+   "sourceFileDate": "2026-11-06T21:29:38.101Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "b2a7561e7fb08db3c280018be515a5c3d7535aa611a0a32b3c0645c24267151e",
+   "originalFormat": "PNG",
+   "originalBytes": 263374,
+   "originalFile": "GRAM_ask_08.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_ask_08.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 27738
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GAME_art_07": {
+   "id": "GAME_art_07",
+   "file": "GAME_art_07.png",
+   "command": 248,
+   "set": "Workbook game art",
+   "block": "R",
+   "prompt": "Command 248 (Workbook game art): Ten square game assets: a memory-match card back (pomegranate pattern); a second card back (candle pattern); a spot-the-difference base scene — a market stall drawn once, rich in small objects (the pair difference is made later in code — deliver the base and a list in NOTES of 8 small objects that could change); a maze page — a hedge maze with a clear start gap and end gap, no letters; a tracing path — a dotted road from a house to a synagogue (dots only); a dice pair showing dots only (one and six); a spinner wheel divided in colour segments, blank; a bingo-style grid card with nine small object pictures (one per cell: cup, dog, sun, book, fish, key, star, leaf, shoe); a reward sticker sheet of 9 tiny motifs in a grid (counted as one image); a finish flag on a pole with confetti shapes. Files GAME_art_01 … _10. Image 7 of 10: a spinner wheel divided in colour segments, blank. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "e85e99a75863d1ea18db200c6accab0e88893a4b8731742a1f0e8db866912c0e",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:29:38.703Z",
+   "sourceFile": "img-0230.png",
+   "sourceFileDate": "2026-11-06T21:29:38.090Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "64e440fd17d7930674edd2094264af5f89c04c51c389213d7a8b25638fc24801",
+   "originalFormat": "PNG",
+   "originalBytes": 215589,
+   "originalFile": "GAME_art_07.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GAME_art_07.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 13180
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "CTX_nature_08": {
+   "id": "CTX_nature_08",
+   "file": "CTX_nature_08.png",
+   "command": 234,
+   "set": "Nature in context",
+   "block": "Q",
+   "prompt": "Command 234 (Nature in context): A wadi stream after rain with frogs on stones; anemones and cyclamen under pine trees; a hoopoe bird on a lawn (Israel's national bird, stylised); ibex on a cliff at dawn; a vineyard at pruning season; the sea at winter storm with one surfer far out; a date palm being harvested with a lift basket; a desert spring pool with reeds; storks resting in a flooded field; a garden after the first rain, everything washed bright. Image 8 of 10: a desert spring pool with reeds. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "1e73a9392262a86a06b9cde9487c7064e3bc84d6ef7eef2845873a5ad7397922",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:29:38.703Z",
+   "sourceFile": "img-0239.png",
+   "sourceFileDate": "2026-11-06T21:29:38.126Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "4c25dd65fa52e3cd4495644687ee5932d97d5267c6a88cb61ffcec26d1a9d1bc",
+   "originalFormat": "PNG",
+   "originalBytes": 200756,
+   "originalFile": "CTX_nature_08.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "CTX_nature_08.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 31740
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_modals_03": {
+   "id": "GRAM_modals_03",
+   "file": "GRAM_modals_03.png",
+   "command": 217,
+   "set": "Want, need, can",
+   "block": "O",
+   "prompt": "Command 217 (Want, need, can): Want — Noa reaching toward a cake in a window with hearts in her eyes (one small heart shape); need — Ari in rain reaching for an umbrella; can — Rimon lifting a tiny barbell successfully, smiling; cannot — Rimon under the same barbell, flat comic squish (gentle); must — a hand raised at a red traffic light shape (a plain red circle light, no text); may I — a child with a hand half-raised at a table; let's — both narrators pointing the same way at a path; try — Rimon looking at a high step with a determined face; again — a circular pair of gold arrows around a cup (symbol only); first/then — two footprints panels: shoes by a door, then the same shoes on a path. Image 3 of 10: can — Rimon lifting a tiny barbell successfully, smiling. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "845313044c62d429c9de5cfe37653bbbea16e6d2a0e444ebee0d34aa0e2e7684",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:29:38.703Z",
+   "sourceFile": "img-0464.png",
+   "sourceFileDate": "2026-11-06T21:29:37.938Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "ebaef63a2ee0454e1d93243d9fd3690111bf4f0117257ace03c1dab375215fa8",
+   "originalFormat": "PNG",
+   "originalBytes": 213500,
+   "originalFile": "GRAM_modals_03.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_modals_03.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 13022
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_haifa_01": {
+   "id": "PLACE_haifa_01",
+   "file": "PLACE_haifa_01.png",
+   "command": 202,
+   "set": "Haifa & Akko",
+   "block": "N",
+   "prompt": "Command 202 (Haifa & Akko): Terraced gardens descending a green mountainside toward the sea (symmetrical terraces, fountains); a port with cranes below the terraces; a mountainside neighbourhood of red roofs; a cable car cabin over the slope; Akko — a crusader-era stone hall with great arches (interior, empty); Akko's sea wall with waves; a fishing harbour inside old walls; a lighthouse on the old wall at dusk; a market lane in a stone vault; the bay at night with two cities of lights across the water. Image 1 of 10: Terraced gardens descending a green mountainside toward the sea (symmetrical terraces, fountains). Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "1a94fa23c31a5a01381c640a040a56a998103c36c30bcd56a285f5325231c2db",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:29:38.703Z",
+   "sourceFile": "img-1046.png",
+   "sourceFileDate": "2026-11-06T21:29:38.045Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "7b88a40e6c936bc9bbaaf32a8ae8301d2d4341931a91d7f553572bf86c560338",
+   "originalFormat": "PNG",
+   "originalBytes": 205743,
+   "originalFile": "PLACE_haifa_01.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_haifa_01.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 36466
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "L27_tsadi_final_cursive_trace": {
+   "id": "L27_tsadi_final_cursive_trace",
+   "file": "L27_tsadi_final_cursive_trace.png",
+   "command": 64,
+   "set": "letter_27_tsadi_final_cursive",
+   "block": "C",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Close-up of an index finger tracing on a tablet screen that shows only a faint dotted guide area, no letter. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "6f4e6598c7ed320df2ff41d086417fc0472ce5ea77b2a949df16d9e400ef0543",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:29:38.703Z",
+   "sourceFile": "img-1156.png",
+   "sourceFileDate": "2026-11-06T21:29:38.191Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "c75e5a3598a386f6e8e0d11240b81e894198a2e5e329c9a565fc0b7ed6c95198",
+   "originalFormat": "PNG",
+   "originalBytes": 218604,
+   "originalFile": "L27_tsadi_final_cursive_trace.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "L27_tsadi_final_cursive_trace.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 14298
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "MORN_card_04": {
+   "id": "MORN_card_04",
+   "file": "MORN_card_04.png",
+   "command": 241,
+   "set": "Morning card art",
+   "block": "R",
+   "prompt": "Command 241 (Morning card art): Ten wide 1792×1024 gentle dawn scenes for the daily morning card (the Modeh Ani feature), each with a large calm blank space in the lower third where the day's quote is typeset later: sunrise over Jerusalem rooftops; sunrise over the sea at Tel Aviv; first light in a Galilee valley; a rooster on a farm fence at dawn; light through a bedroom window with a plant on the sill; a kitchen at dawn with a kettle just steaming; dew on a pomegranate leaf close up; birds leaving a tree against a pink sky; a synagogue window catching first light; a path through fields at first light with a distant figure walking. Files MORN_card_01 … _10. Image 4 of 10: a rooster on a farm fence at dawn. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "25e2dd73fdcfdd2863c7f150d3620c4cf70e0682d05fd67ca62e9cae02c8b33e",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:29:38.703Z",
+   "sourceFile": "img-1310.png",
+   "sourceFileDate": "2026-11-06T21:29:37.930Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "03be5863e0646f0c6e8ea744d4fad9e75f058f3013837aa0eb4f21cf1649108f",
+   "originalFormat": "PNG",
+   "originalBytes": 152956,
+   "originalFile": "MORN_card_04.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "MORN_card_04.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 17798
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

@@ -12746,8 +12746,8 @@
   "kind": "word",
   "id": "kaddish-1-w20",
   "text": "אָמֵן׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "used to express agreement with what was just stated",
   "phonetic": "amen"
@@ -12772,8 +12772,8 @@
   "kind": "word",
   "id": "kaddish-1-w21",
   "text": "יְהֵא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "may",
   "phonetic": "yehe"
@@ -12798,8 +12798,8 @@
   "kind": "word",
   "id": "kaddish-1-w22",
   "text": "שְׁמֵהּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "His name (Aramaic)",
   "phonetic": "shemeh"
@@ -48948,7 +48948,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to; to, for; of"
+  "english": "to; to, for; of",
+  "phonetic": "le-"
  },
  {
   "path": "audio/f/ashkenazi/word/he9919e02.mp3",
@@ -48961,7 +48962,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to; to, for; of"
+  "english": "to; to, for; of",
+  "phonetic": "le-"
  },
  {
   "path": "audio/m/ashkenazi/word/h66c2ffb6.mp3",
@@ -60532,7 +60534,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "cushion; pillow"
+  "english": "cushion; pillow",
+  "phonetic": "kar"
  },
  {
   "path": "audio/f/ashkenazi/word/he9d6c9ab.mp3",
@@ -60545,7 +60548,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "cushion; pillow"
+  "english": "cushion; pillow",
+  "phonetic": "kar"
  },
  {
   "path": "audio/m/ashkenazi/word/h69a35691.mp3",
@@ -70496,7 +70500,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "list"
+  "english": "list",
+  "phonetic": "reshimah"
  },
  {
   "path": "audio/f/ashkenazi/word/he973e381.mp3",
@@ -70509,7 +70514,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "list"
+  "english": "list",
+  "phonetic": "reshimah"
  },
  {
   "path": "audio/m/ashkenazi/word/h2299e4b3.mp3",

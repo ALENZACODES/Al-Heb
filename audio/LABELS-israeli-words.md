@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 6451 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 6454 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-6451 English labels; 1933 UNKNOWN.
+6454 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -1880,6 +1880,9 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [he943571e](f/israeli/word/he943571e.mp3) | אִשָּׁה | woman (an adult female human); wife; a female animal | ishah |
 | [he945f31c](f/israeli/word/he945f31c.mp3) | חֶרֶב | sword; sabre | cherev |
 | [he964bca4](f/israeli/word/he964bca4.mp3) | הִשְׁתַּחֲוָה | to bow; to bow down, to prostrate oneself | hishtachavah |
+| [he973e381](f/israeli/word/he973e381.mp3) | רְשִׁימָה | list | reshimah |
+| [he9919e02](f/israeli/word/he9919e02.mp3) | לְ־ | to; to, for; of | le- |
+| [he9d6c9ab](f/israeli/word/he9d6c9ab.mp3) | כַּר | cushion; pillow | kar |
 | [help-01](f/israeli/word/help-01.mp3) | עֶזְרָה! | help! | ezrah! |
 | [i-01-w1](f/israeli/word/i-01-w1.mp3) | בָּרְכוּ | UNKNOWN | barkhu |
 | [i-01-w10](f/israeli/word/i-01-w10.mp3) | לְעוֹלָם וָעֶד | UNKNOWN | le'olam va'ed |
@@ -7057,4 +7060,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 13274 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 13282 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

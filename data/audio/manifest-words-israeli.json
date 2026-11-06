@@ -48948,7 +48948,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to; to, for; of"
+  "english": "to; to, for; of",
+  "phonetic": "le-"
  },
  {
   "path": "audio/f/israeli/word/he9919e02.mp3",
@@ -48958,10 +48959,11 @@
   "id": "he9919e02",
   "text": "לְ־",
   "ipa": "ˈle-",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to; to, for; of"
+  "english": "to; to, for; of",
+  "phonetic": "le-"
  },
  {
   "path": "audio/m/israeli/word/h66c2ffb6.mp3",
@@ -60532,7 +60534,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "cushion; pillow"
+  "english": "cushion; pillow",
+  "phonetic": "kar"
  },
  {
   "path": "audio/f/israeli/word/he9d6c9ab.mp3",
@@ -60542,10 +60545,11 @@
   "id": "he9d6c9ab",
   "text": "כַּר",
   "ipa": "ˈkaʁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "cushion; pillow"
+  "english": "cushion; pillow",
+  "phonetic": "kar"
  },
  {
   "path": "audio/m/israeli/word/h69a35691.mp3",
@@ -70496,7 +70500,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "list"
+  "english": "list",
+  "phonetic": "reshimah"
  },
  {
   "path": "audio/f/israeli/word/he973e381.mp3",
@@ -70506,10 +70511,11 @@
   "id": "he973e381",
   "text": "רְשִׁימָה",
   "ipa": "ʁe.ʃi.ˈma",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "list"
+  "english": "list",
+  "phonetic": "reshimah"
  },
  {
   "path": "audio/m/israeli/word/h2299e4b3.mp3",

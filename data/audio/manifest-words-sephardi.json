@@ -44128,8 +44128,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w35",
   "text": "נִסֶּיךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "for your miracles",
   "phonetic": "nisekha"
@@ -44154,8 +44154,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w36",
   "text": "נִפְלְאוֹתֶיךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "your wonders",
   "phonetic": "nifle'otekha"
@@ -48948,7 +48948,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to; to, for; of"
+  "english": "to; to, for; of",
+  "phonetic": "le-"
  },
  {
   "path": "audio/f/sephardi/word/he9919e02.mp3",
@@ -48961,7 +48962,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to; to, for; of"
+  "english": "to; to, for; of",
+  "phonetic": "le-"
  },
  {
   "path": "audio/m/sephardi/word/h66c2ffb6.mp3",
@@ -60532,7 +60534,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "cushion; pillow"
+  "english": "cushion; pillow",
+  "phonetic": "kar"
  },
  {
   "path": "audio/f/sephardi/word/he9d6c9ab.mp3",
@@ -60545,7 +60548,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "cushion; pillow"
+  "english": "cushion; pillow",
+  "phonetic": "kar"
  },
  {
   "path": "audio/m/sephardi/word/h69a35691.mp3",
@@ -70496,7 +70500,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "list"
+  "english": "list",
+  "phonetic": "reshimah"
  },
  {
   "path": "audio/f/sephardi/word/he973e381.mp3",
@@ -70509,7 +70514,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "list"
+  "english": "list",
+  "phonetic": "reshimah"
  },
  {
   "path": "audio/m/sephardi/word/h2299e4b3.mp3",

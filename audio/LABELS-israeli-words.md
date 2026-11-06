@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 4798 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 4805 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-4798 English labels; 1180 UNKNOWN.
+4805 English labels; 1187 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -3941,6 +3941,13 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [i-18-w4](m/israeli/word/i-18-w4.mp3) | מִלּוּאִים | UNKNOWN | milu'im |
 | [i-18-w5](m/israeli/word/i-18-w5.mp3) | מְפַקֵּד | UNKNOWN | mefaked |
 | [i-18-w6](m/israeli/word/i-18-w6.mp3) | בָּסִיס | UNKNOWN | basis |
+| [i-18-w7](m/israeli/word/i-18-w7.mp3) | נֶשֶׁק | UNKNOWN | neshek |
+| [i-18-w8](m/israeli/word/i-18-w8.mp3) | שְׁמִירָה | UNKNOWN | shemirah |
+| [i-18-w9](m/israeli/word/i-18-w9.mp3) | חֻפְשָׁה | UNKNOWN | chufshah |
+| [i-19-w1](m/israeli/word/i-19-w1.mp3) | שַׁבָּת שָׁלוֹם | UNKNOWN | shabat shalom |
+| [i-19-w10](m/israeli/word/i-19-w10.mp3) | הַשָּׁעָה שֶׁבַע | UNKNOWN | hasha'ah sheva |
+| [i-19-w11](m/israeli/word/i-19-w11.mp3) | טָעִים מְאֹד | UNKNOWN | ta'im me'od |
+| [i-19-w12](m/israeli/word/i-19-w12.mp3) | לְחַיִּים! | UNKNOWN | lechayim! |
 | [kaddish-1-w1](m/israeli/word/kaddish-1-w1.mp3) | יִתְגַּדַּל | may it be magnified | yitgadal |
 | [kaddish-1-w10](m/israeli/word/kaddish-1-w10.mp3) | מַלְכוּתֵהּ | his kingdom | malkhuteh |
 | [kaddish-1-w11](m/israeli/word/kaddish-1-w11.mp3) | בְּחַיֵּיכוֹן | in your lifetime | bechayeikhon |
@@ -5404,4 +5411,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 8299 produced clips in INDEX.csv have an English label; 1180 UNKNOWN. Filenames and IDs are unchanged.
+All 8320 produced clips in INDEX.csv have an English label; 1187 UNKNOWN. Filenames and IDs are unchanged.

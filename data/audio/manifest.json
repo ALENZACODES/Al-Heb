@@ -49828,12 +49828,13 @@
   "kind": "word",
   "id": "i-18-w7",
   "text": "נֶשֶׁק",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "ha457bf9e",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "neshek"
  },
  {
   "path": "audio/f/israeli/word/i-18-w7.mp3",
@@ -49857,12 +49858,13 @@
   "kind": "word",
   "id": "i-18-w8",
   "text": "שְׁמִירָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h859bd8c7",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shemirah"
  },
  {
   "path": "audio/f/israeli/word/i-18-w8.mp3",
@@ -49886,12 +49888,13 @@
   "kind": "word",
   "id": "i-18-w9",
   "text": "חֻפְשָׁה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h3b6e7044",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chufshah"
  },
  {
   "path": "audio/f/israeli/word/i-18-w9.mp3",
@@ -50123,12 +50126,13 @@
   "kind": "word",
   "id": "i-19-w1",
   "text": "שַׁבָּת שָׁלוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "p425f3263",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shabat shalom"
  },
  {
   "path": "audio/f/israeli/word/i-19-w1.mp3",
@@ -50378,11 +50382,12 @@
   "kind": "word",
   "id": "i-19-w10",
   "text": "הַשָּׁעָה שֶׁבַע",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "hasha'ah sheva"
  },
  {
   "path": "audio/f/israeli/word/i-19-w10.mp3",
@@ -50405,12 +50410,13 @@
   "kind": "word",
   "id": "i-19-w11",
   "text": "טָעִים מְאֹד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "p189bffd6",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ta'im me'od"
  },
  {
   "path": "audio/f/israeli/word/i-19-w11.mp3",
@@ -50434,12 +50440,13 @@
   "kind": "word",
   "id": "i-19-w12",
   "text": "לְחַיִּים!",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "pf3ba64a2",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "lechayim!"
  },
  {
   "path": "audio/f/israeli/word/i-19-w12.mp3",

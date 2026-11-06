@@ -1,6 +1,7 @@
 // Game 8 — real Friday sunset countdown, recorded category cues, and timed collections.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, hasRecordedClip, playRecordedClip, resultsCard } from './engine.js';
+import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 import { fridayOnOrAfter, sunset } from '../curriculum/calendar.js';
 export const STORE_KEY='games.shabbatrush.v1';
@@ -27,6 +28,7 @@ export function buildRushItems(index) {
     .map(r=>({id:r[id],he:r[he],en:r[en],topic:r[topic]}));
 }
 export function mount(root,ctx) {
+  const leaveSfx = sfx.enter(ctx);
   let alive=true,deadline=null,clock=0,deck=[],R=null,cue=null,round=0,session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});
   const status=h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading sunset and word clips…');
   const board=h('div',{class:'game-board'}),timer=h('p',{class:'game-rush-timer',role:'timer'});
@@ -53,7 +55,7 @@ export function mount(root,ctx) {
       const picture=imgOf(R,'word',item.id);
       const button=h('button',{type:'button',class:'btn secondary game-rush-collectible',disabled:true,onclick:()=>{
         if(!heard || deadline.getTime()<=Date.now())return;
-        const ok=correctCollect(cue,item);session.answer(ok);
+        const ok=correctCollect(cue,item);session.answer(ok); sfx.play(ok ? 'success' : 'miss');
         status.textContent=ok?'Correct collectible.':'Not in the announced category.';
         if(ok)round++;paint();
       }},heSpan(item.he,'he game-he-sm'));
@@ -82,5 +84,5 @@ export function mount(root,ctx) {
     }
     paintTimer();clock=setInterval(paintTimer,1000);paint();
   }).catch(()=>{if(alive)status.textContent='Shabbat data unavailable.';});
-  return ()=>{alive=false;stopClock();ctx?.audio?.stop?.();};
+  return ()=>{alive=false; leaveSfx();stopClock();ctx?.audio?.stop?.();};
 }

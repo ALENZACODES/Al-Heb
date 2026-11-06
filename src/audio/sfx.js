@@ -1,11 +1,18 @@
 // Short, opt-in game feedback only. Never touches the Hebrew/prayer voice player.
 // Public files must be supplied separately from the licensed CC0 staging pack.
+import { mediaPolicy } from './policy.js';
 export const SFX_FILES = Object.freeze({
   click: 'click.mp3', tick: 'tick.mp3', pop: 'pop.mp3',
   success: 'success.mp3', error: 'error.mp3', miss: 'miss.mp3',
   whoosh: 'whoosh.mp3', swoosh: 'swoosh.mp3', streak: 'streak.mp3',
   bubble_pop: 'bubble_pop.mp3', flipper: 'flipper.mp3',
   catch: 'catch.mp3', collect: 'collect.mp3', pluck: 'pluck.mp3',
+  back: 'back.mp3', click_soft: 'click_soft.mp3', click_hard: 'click_hard.mp3',
+  close: 'close.mp3', confirm: 'confirm.mp3', drop: 'drop.mp3',
+  error_soft: 'error_soft.mp3', glitch: 'glitch.mp3', maximize: 'maximize.mp3',
+  minimize: 'minimize.mp3', open: 'open.mp3', question: 'question.mp3',
+  scroll: 'scroll.mp3', select: 'select.mp3', select_alt: 'select_alt.mp3',
+  toggle: 'toggle.mp3',
 });
 export const HOT_SFX = Object.freeze([
   'click', 'tick', 'pop', 'success', 'error',
@@ -75,7 +82,10 @@ export function createSfxController({
       return true;
     } catch { return false; }
   }
-  function mute(flag) { manualMute = !!flag; }
+  function pause() {
+    for (const pool of pools.values()) for (const a of pool) { try { a.pause(); } catch { /* ignore */ } }
+  }
+  function mute(flag) { manualMute = !!flag; if (manualMute) pause(); }
   function volume(v) {
     level = clamp(v);
     for (const pool of pools.values()) for (const a of pool) {
@@ -83,6 +93,35 @@ export function createSfxController({
     }
     return level;
   }
-  return Object.freeze({ enter, play, mute, volume, preload, enabled });
+  return Object.freeze({ enter, play, pause, mute, volume, preload, enabled });
 }
-export const sfx = createSfxController();
+
+const TWIN = { success: 'Correct', miss: 'Not this time', streak: 'Streak' };
+function showTwin(kind) {
+  const text = TWIN[kind];
+  if (!text) return;
+  try {
+    let node = globalThis.document?.getElementById?.('media-twin');
+    if (!node && globalThis.document?.body) {
+      node = globalThis.document.createElement('p');
+      node.id = 'media-twin';
+      node.setAttribute('role', 'status');
+      node.setAttribute('aria-live', 'polite');
+      globalThis.document.body.append(node);
+    }
+    if (node) node.textContent = text;
+  } catch { /* a missing status line must not block the game */ }
+}
+const rawSfx = createSfxController();
+/** Games call this singleton. The small feedback set is correct, gentle miss, and streak. */
+export const sfx = Object.freeze({
+  ...rawSfx,
+  pause: () => rawSfx.pause(),
+  play(name) {
+    const kind = mediaPolicy.feedbackName(name);
+    mediaPolicy.observe(name);
+    if (kind) showTwin(kind);
+    if (!kind || !mediaPolicy.allowsSfx()) return false;
+    return rawSfx.play(kind);
+  },
+});

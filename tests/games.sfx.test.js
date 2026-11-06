@@ -64,6 +64,20 @@ test('volume clamps and missing/error/unknown files silently no-op', () => {
   assert.equal(p.player.play('click'), false);
   assert.ok(Object.hasOwn(SFX_FILES, 'click'));
 });
+test('curated Kenney manifest exposes all 30 stable keys without preloading them', () => {
+  const expected = [
+    'back', 'bubble_pop', 'catch', 'click', 'click_hard', 'click_soft',
+    'close', 'collect', 'confirm', 'drop', 'error', 'error_soft',
+    'flipper', 'glitch', 'maximize', 'minimize', 'miss', 'open',
+    'pluck', 'pop', 'question', 'scroll', 'select', 'select_alt',
+    'streak', 'success', 'swoosh', 'tick', 'toggle', 'whoosh',
+  ];
+  assert.deepEqual(Object.keys(SFX_FILES).sort(), expected.sort());
+  assert.equal(HOT_SFX.length, 10);
+  assert.ok(HOT_SFX.every((name) => Object.hasOwn(SFX_FILES, name)));
+  assert.ok(Object.values(SFX_FILES).every((name) => /^[a-z_]+\.mp3$/.test(name)));
+  assert.equal(Object.keys(SFX_FILES).length, 30);
+});
 test('unmounted game does not play, and no Audio environment does not throw', () => {
   const p = make(); const leave = p.connect(); leave();
   assert.equal(p.player.play('click'), false);

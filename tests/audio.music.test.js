@@ -27,6 +27,7 @@ function controller(extra = {}) {
     makeAudio: media.make,
     readPrefs: () => stored,
     writePrefs: (p) => { stored = { ...p }; },
+    policy: { allowsMusic: () => true, snapshot: () => ({}), quiet: () => false },
     ...extra,
   });
   return { media, music, stored: () => stored };

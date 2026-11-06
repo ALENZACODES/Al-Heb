@@ -38,6 +38,7 @@ export function mount(root, ctx = {}) {
           h('h3', {}, item.title),
           h('p', {}, `Performer: ${item.performer}. ${item.performerNote}`),
           h('p', {}, `Tradition: ${item.tradition}.`),
+          item.historical ? h('p', {}, item.historical) : null,
           h('p', {}, `Licence: ${item.licence}.`, item.licenceUrl ? h('a', { href: item.licenceUrl }, ' Licence terms.') : null),
           h('p', {}, 'Source: ', h('a', { href: item.sourceUrl }, item.source), '.'),
           item.shareAlike ? h('p', {}, 'Adapting this recording keeps the same licence.') : null,

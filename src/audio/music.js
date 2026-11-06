@@ -1,6 +1,7 @@
 // Optional secular game beds. Off until the learner turns them on.
 // Prayer, cantorial listen, and learner speech all pause the bed. Speech is never ducked.
 import { MUSIC_BASE, MUSIC_TRACKS, SACRED_ROUTES } from '../listen/catalog.js';
+import { mediaPolicy } from './policy.js';
 
 const clamp = (v) => Math.max(0, Math.min(1, Number.isFinite(Number(v)) ? Number(v) : 0));
 
@@ -10,6 +11,7 @@ export function createMusicController({
   tracks = MUSIC_TRACKS,
   readPrefs: readArg = () => null,
   writePrefs: writeArg = () => {},
+  policy = mediaPolicy,
 } = {}) {
   let readPrefs = readArg;
   let writePrefs = writeArg;
@@ -37,7 +39,7 @@ export function createMusicController({
   applyStored(readPrefs());
   function track() { return tracks.find((t) => t.id === prefs.trackId) || tracks[0] || null; }
   function allowed() {
-    return armed && prefs.want && !prefs.muted && prefs.volume > 0 && !speech && !sacred && game && !quiet && !!track();
+    return armed && prefs.want && !prefs.muted && prefs.volume > 0 && !speech && !sacred && game && !quiet && policy.allowsMusic() && !!track();
   }
   function halt(next) {
     try { audio?.pause?.(); } catch { /* ignore */ }
@@ -67,7 +69,7 @@ export function createMusicController({
     return audio;
   }
   function start() {
-    if (!allowed()) { halt(sacred || quiet ? 'blocked' : (prefs.want ? 'paused' : 'off')); return false; }
+    if (!allowed()) { halt(sacred || quiet || !policy.allowsMusic() ? 'blocked' : (prefs.want ? 'paused' : 'off')); return false; }
     const node = ensure();
     if (!node) return false;
     node.volume = prefs.volume;
@@ -139,6 +141,11 @@ export function createMusicController({
       else emit();
       return prefs.volume;
     },
+    notePolicy() {
+      if (policy.allowsMusic() || phase !== 'playing') return;
+      const snap = policy.snapshot?.() || {};
+      halt(policy.quiet?.() || snap.routeSacred || snap.cantorial ? 'blocked' : 'paused');
+    },
     choose(id) {
       if (!tracks.some((t) => t.id === id)) return false;
       prefs.trackId = id;
@@ -154,6 +161,7 @@ export function createMusicController({
 }
 
 export const gameMusic = createMusicController();
+mediaPolicy.subscribe(() => gameMusic.notePolicy());
 export function musicContextFor(route, { calm = false, audioFree = false } = {}) {
   const name = route?.name || '';
   return {

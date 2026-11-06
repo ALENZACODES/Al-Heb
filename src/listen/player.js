@@ -1,5 +1,6 @@
 // One sacred-listen recording at a time. Nothing plays until the learner presses Play.
-// A missing file or a refused play() is reported; it does not throw.
+// A missing file or a refused play() is reported; it does not throw. Playback never loops.
+import { mediaPolicy } from '../audio/policy.js';
 
 export function createShelfPlayer({ makeAudio = (url) => new globalThis.Audio(url), base = 'audio/listen/' } = {}) {
   let node = null;
@@ -15,8 +16,10 @@ export function createShelfPlayer({ makeAudio = (url) => new globalThis.Audio(ur
     try { node.removeAttribute?.('src'); node.load?.(); node.remove?.(); } catch { /* ignore */ }
     node = null;
   }
+  function releaseLayer() { mediaPolicy.setCantorial(false); }
   function stop() {
     clearNode();
+    releaseLayer();
     currentId = null;
     phase = 'idle';
     error = '';
@@ -58,9 +61,10 @@ export function createShelfPlayer({ makeAudio = (url) => new globalThis.Audio(ur
     });
     audio.addEventListener?.('playing', () => { if (still()) { phase = 'playing'; error = ''; emit(); } });
     audio.addEventListener?.('pause', () => { if (still() && phase === 'playing') { phase = 'paused'; emit(); } });
-    audio.addEventListener?.('ended', () => { if (still()) { phase = 'ended'; emit(); } });
+    audio.addEventListener?.('ended', () => { if (still()) { phase = 'ended'; releaseLayer(); emit(); } });
     phase = 'loading';
     error = '';
+    mediaPolicy.setCantorial(true);
     emit();
     try {
       const pending = audio.play?.();
@@ -81,6 +85,7 @@ export function createShelfPlayer({ makeAudio = (url) => new globalThis.Audio(ur
   function pause() {
     if (!node) return;
     try { node.pause(); } catch { /* ignore */ }
+    releaseLayer();
     if (phase === 'playing' || phase === 'loading') { phase = 'paused'; emit(); }
   }
   function toggle(item) {

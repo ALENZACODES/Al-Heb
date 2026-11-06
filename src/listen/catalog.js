@@ -52,9 +52,11 @@ export const SACRED_ROUTES = new Set([
 ]);
 
 function item(id, title, shelf, kind, performer, performerNote, tradition, licence, licenceUrl, sourceUrl, sha, shareAlike = false, originalFile = '') {
+  const year = /^pd_.*_(\d{4})$/.exec(id)?.[1];
   return {
     id, file: `${id}.ogg`, ...(originalFile ? { originalFile } : {}), shelf, kind, title, performer, performerNote, tradition,
     licence, ...(licenceUrl ? { licenceUrl } : {}), source: 'Wikimedia Commons', sourceUrl, sha256_16: sha, shareAlike,
+    ...(year ? { historical: `Published ${year}. Early commercial recording, not a modern studio take.` } : {}),
   };
 }
 

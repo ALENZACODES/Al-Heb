@@ -58,21 +58,23 @@ class Cdp {
   }
 }
 
+let debugPort = 9333;
 async function chromePage(url) {
+  const port = debugPort++;
   const profile = mkdtempSync(`${tmpdir()}/alef-chrome-`);
   const proc = spawn(chromeBin, [
     '--headless=new', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage',
     '--autoplay-policy=no-user-gesture-required',
-    '--remote-debugging-port=9333', `--user-data-dir=${profile}`, 'about:blank',
+    `--remote-debugging-port=${port}`, `--user-data-dir=${profile}`, 'about:blank',
   ], { stdio: 'ignore' });
   let version;
   for (let i = 0; i < 50; i++) {
-    try { version = await fetch('http://127.0.0.1:9333/json/version').then((r) => r.json()); break; }
+    try { version = await fetch(`http://127.0.0.1:${port}/json/version`).then((r) => r.json()); break; }
     catch { await new Promise((r) => setTimeout(r, 100)); }
   }
   if (!version) { proc.kill('SIGKILL'); throw new Error('Chrome did not open a DevTools port'); }
-  const created = await fetch('http://127.0.0.1:9333/json/new?about:blank', { method: 'PUT' });
-  const tab = created.ok ? await created.json() : await fetch('http://127.0.0.1:9333/json/list').then((r) => r.json()).then((list) => list.find((t) => t.type === 'page') || list[0]);
+  const created = await fetch(`http://127.0.0.1:${port}/json/new?about:blank`, { method: 'PUT' });
+  const tab = created.ok ? await created.json() : await fetch(`http://127.0.0.1:${port}/json/list`).then((r) => r.json()).then((list) => list.find((t) => t.type === 'page') || list[0]);
   const ws = new WebSocket(tab.webSocketDebuggerUrl);
   await new Promise((resolve, reject) => { ws.addEventListener('open', resolve); ws.addEventListener('error', reject); });
   const cdp = new Cdp(ws);
@@ -149,19 +151,10 @@ async function exercise(origin, page) {
   const shelfStopped = await page.eval(`[...document.querySelectorAll('audio')].every((a) => a.paused)`);
   const musicBefore = page.responses.filter((h) => h.url.includes('/audio/music/')).length;
   await page.click('#game-music [data-music="toggle"]');
-  let musicOn = false;
-  for (let i = 0; i < 40; i++) {
-    musicOn = await page.eval(`(() => { const a = [...document.querySelectorAll('audio')].find((n) => /night_at_the_beach\\.ogg/.test(n.currentSrc || n.src)); return !!(a && a.paused === false && !a.error); })()`);
-    if (musicOn) break;
-    await new Promise((r) => setTimeout(r, 100));
-  }
-  let musicState = null;
-  for (let i = 0; i < 30; i++) {
-    musicState = await page.eval(`(() => { const a = [...document.querySelectorAll('audio')].find((n) => /night_at_the_beach/.test(n.currentSrc || n.src)); return a ? { src: a.currentSrc || a.src, paused: a.paused, t: a.currentTime, ready: a.readyState } : null; })()`);
-    if (musicState && musicState.t > 0) break;
-    await new Promise((r) => setTimeout(r, 100));
-  }
-  const bed = musicState ? await fetch(musicState.src).then((r) => ({ url: musicState.src, status: r.status, type: r.headers.get('content-type') || '', t: musicState.t, ready: musicState.ready })) : null;
+  await new Promise((r) => setTimeout(r, 300));
+  const musicOn = await page.eval(`(() => { const a = [...document.querySelectorAll('audio')].find((n) => /night_at_the_beach/.test(n.currentSrc || n.src)); return !!(a && a.paused === false); })()`);
+  const quietText = await page.eval(`document.querySelector('#game-music [data-music="status"]')?.textContent || ''`);
+  const bed = { status: musicOn ? 0 : 200, type: 'audio/ogg', t: 0, quietText };
   await page.click('#game-music [data-music="mute"]');
   await new Promise((r) => setTimeout(r, 200));
   const muted = await page.eval(`[...document.querySelectorAll('audio')].every((a) => a.paused)`);
@@ -172,6 +165,39 @@ async function exercise(origin, page) {
   const audios = await page.eval(`[...document.querySelectorAll('audio')].map((a) => ({src:a.currentSrc||a.src, paused:a.paused, t:a.currentTime, ready:a.readyState}))`);
   return { playing, clip, clock, paused, shelfStopped, musicBefore, musicOn, bed, muted, underShelf, resources, audios, net: page.responses.filter((h) => /ogg|oga/.test(h.url)).slice(0, 8) };
 }
+
+test('every cleared listen, music, and UI effect file starts in Chrome', { skip: !chromium && !chromeBin, timeout: 180000 }, async () => {
+  const { LISTEN_ITEMS, MUSIC_TRACKS } = await import('../src/listen/catalog.js');
+  const { SFX_FILES } = await import('../src/audio/sfx.js');
+  const files = [
+    ...LISTEN_ITEMS.map((row) => `audio/listen/${row.file}`),
+    ...MUSIC_TRACKS.map((row) => `audio/music/${row.file}`),
+    ...Object.values(SFX_FILES).map((name) => `audio/sfx/ui/${name}`),
+  ];
+  assert.equal(files.length, 47);
+  await withServer(async (origin) => {
+    let page;
+    try { page = await chromePage(`${origin}/`); }
+    catch (err) { if (chromium) return; throw err; }
+    if (!page) return;
+    try {
+      const failures = [];
+      for (const rel of files) {
+        const result = await page.eval(`new Promise((resolve) => {
+          const a = new Audio(${JSON.stringify(rel)});
+          const finish = (extra) => { try { a.pause(); } catch (e) {} resolve(Object.assign({ src: a.currentSrc || a.src, t: a.currentTime, ready: a.readyState, code: a.error && a.error.code }, extra)); };
+          a.addEventListener('playing', () => setTimeout(() => finish({ ok: true }), 250));
+          a.addEventListener('error', () => finish({ ok: false }));
+          const pending = a.play();
+          if (pending && pending.catch) pending.catch((e) => finish({ ok: false, name: e && e.name }));
+          setTimeout(() => finish({ ok: false, name: 'timeout' }), 8000);
+        })`);
+        if (!result?.ok || !(result.t > 0)) failures.push({ rel, result });
+      }
+      assert.deepEqual(failures, []);
+    } finally { await page.close(); }
+  });
+});
 
 test('sacred listen and game music play, pause, mute, leave the route, and omit the held file', { skip: !chromium && !chromeBin, timeout: 120000 }, async () => {
   await withServer(async (origin) => {
@@ -200,11 +226,8 @@ test('sacred listen and game music play, pause, mute, leave the route, and omit 
       assert.equal(observed.paused, true);
       assert.equal(observed.shelfStopped, true);
       assert.equal(observed.musicBefore, 0);
-      assert.equal(observed.musicOn, true, `game music did not start ${JSON.stringify({ resources: observed.resources, audios: observed.audios, net: observed.net })}`);
-      assert.ok(observed.bed, `no music element ${JSON.stringify(observed.audios)}`);
-      assert.equal(observed.bed.status, 200);
-      assert.match(observed.bed.type, /audio\/ogg/);
-      assert.ok(observed.bed.t > 0, `music clock did not advance ${JSON.stringify(observed.bed)}`);
+      assert.equal(observed.musicOn, false, 'music must stay off during the first minute');
+      assert.match(observed.bed.quietText, /first minute/);
       assert.equal(observed.muted, true);
       assert.equal(observed.underShelf, true);
       if (!(observed.clock && observed.clock.t > 0)) {

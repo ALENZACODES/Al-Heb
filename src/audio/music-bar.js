@@ -1,6 +1,7 @@
 // Secular music controls for game routes only. Hidden on prayer and sacred listen.
 import { h } from '../shell/ui.js';
 import { gameMusic, musicContextFor } from './music.js';
+import { mediaPolicy } from './policy.js';
 
 const CSS = `
 #game-music{position:sticky;inset-block-end:0;z-index:4;margin:1rem 0 0;padding:.75rem 1rem;background:var(--card,#fff);border:1px solid var(--line,#d7d0c4);border-radius:.75rem;display:grid;gap:.5rem}
@@ -28,10 +29,11 @@ function paint(state) {
   if (status) {
     status.textContent = state.error
       ? state.error
-      : state.phase === 'playing' ? 'Music is playing.'
-        : state.phase === 'blocked' ? 'Music stays off on this screen.'
-          : state.phase === 'paused' && state.speech ? 'Music is paused while speech plays.'
-            : 'Music is off.';
+      : mediaPolicy.quiet() ? 'Music stays off for the first minute.'
+        : state.phase === 'playing' ? 'Music is playing.'
+          : state.phase === 'blocked' ? 'Music stays off on this screen.'
+            : state.phase === 'paused' && state.speech ? 'Music is paused while speech plays.'
+              : 'Music is off.';
   }
 }
 
@@ -69,6 +71,7 @@ export function syncGameMusic(route, settings) {
     calm: settings?.get?.('calmMode') === true,
     audioFree: settings?.get?.('audioFree') === true,
   });
+  mediaPolicy.setRoute(route?.name);
   gameMusic.setContext(ctx);
   if (!root && ctx.game && !ctx.sacred && !ctx.quiet) mountGameMusic();
   if (!root) return;

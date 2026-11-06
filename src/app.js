@@ -15,6 +15,7 @@ import { loadImageResolver, img as imgEl } from './img/resolve.js';
 import { applyMotor, MOTOR_KEYS } from './shell/motor.js';
 import { gameMusic } from './audio/music.js';
 import { mountGameMusic, syncGameMusic } from './audio/music-bar.js';
+import { mountMediaPrompt } from './audio/media-prompt.js';
 
 const settings = createSettings(store);
 
@@ -271,6 +272,7 @@ async function boot() {
     }),
   });
   try { mountGameMusic(document.body); } catch { /* the bar appears once a game route asks for it */ }
+  try { mountMediaPrompt(document.body, settings); } catch { /* the prompt is optional */ }
   const mainEl = document.getElementById('main');
   const gesture = (e) => { touched = true; if (!(e.target instanceof Element && e.target.closest('input, textarea, select'))) touchedOutsideField = true; };
   mainEl.addEventListener('pointerdown', gesture, true);

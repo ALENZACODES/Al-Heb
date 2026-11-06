@@ -4,6 +4,8 @@
 // Status wording comes from ./audio-labels.js (one table for every screen and report).
 import { fileLabel, isSyntheticStatus, STATUS_LABELS } from './audio-labels.js';
 import { gameMusic } from '../audio/music.js';
+import { sfx } from '../audio/sfx.js';
+import { mediaPolicy } from '../audio/policy.js';
 export const REASONS = {
   'no-hebrew-browser-voice': 'your browser has no Hebrew voice installed',
   'tts-pronunciation-mismatch': 'the browser voice only reads Israeli pronunciation and you chose another tradition',
@@ -137,11 +139,19 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
   const gate = (r, kind, id) => (mstate === 'checking' && r.source !== 'file' ? checking(kind, id) : r);
 
   let speechDepth = 0;
-  const speechBegin = () => { speechDepth += 1; gameMusic.setSpeech(true); };
-  const speechEnd = () => { speechDepth = Math.max(0, speechDepth - 1); if (!speechDepth) gameMusic.setSpeech(false); };
+  const speechBegin = () => {
+    speechDepth += 1;
+    mediaPolicy.setSpeech(true);
+    try { sfx.pause(); } catch { /* ignore */ }
+    gameMusic.setSpeech(true);
+  };
+  const speechEnd = () => {
+    speechDepth = Math.max(0, speechDepth - 1);
+    if (!speechDepth) { mediaPolicy.clearSpeech(); gameMusic.setSpeech(false); }
+  };
   return {
     ...inner,
-    stop() { speechDepth = 0; gameMusic.setSpeech(false); return inner.stop(); },
+    stop() { speechDepth = 0; mediaPolicy.clearSpeech(); gameMusic.setSpeech(false); return inner.stop(); },
     /** call synchronously inside the first user gesture (see createAudioUnlock); safe to call again */
     unlock: createAudioUnlock(globalThis),
     get summary() { return summary; },

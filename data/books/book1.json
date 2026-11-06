@@ -16,7 +16,8 @@
     "m": "audio/m/israeli/book/book1-p01.mp3"
    },
    "illustration": "a curious monkey looking at two contrasting hats against a warm ochre background.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": true
   },
   {
    "n": 2,
@@ -29,7 +30,8 @@
     "m": "audio/m/israeli/book/book1-p02.mp3"
    },
    "illustration": "the monkey pushes away a vibrant red fedora, theatrically unimpressed.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": true
   },
   {
    "n": 3,
@@ -42,7 +44,8 @@
     "m": "audio/m/israeli/book/book1-p03.mp3"
    },
    "illustration": "the monkey inspects an olive-green cap and shakes its head.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": true
   },
   {
    "n": 4,
@@ -55,7 +58,8 @@
     "m": "audio/m/israeli/book/book1-p04.mp3"
    },
    "illustration": "the monkey proudly wears a tall chef's hat topped with melting dark chocolate.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": true
   },
   {
    "n": 5,
@@ -68,7 +72,8 @@
     "m": "audio/m/israeli/book/book1-p05.mp3"
    },
    "illustration": "the tiny hat balanced on one of the monkey's fingers; he stares at it.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": true
   },
   {
    "n": 6,
@@ -81,7 +86,8 @@
     "m": "audio/m/israeli/book/book1-p06.mp3"
    },
    "illustration": "the huge hat covers the monkey's whole body; only his tail sticks out.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": true
   },
   {
    "n": 7,
@@ -94,7 +100,8 @@
     "m": "audio/m/israeli/book/book1-p07.mp3"
    },
    "illustration": "the monkey holds the blue hat at arm's length, one eyebrow raised.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": true
   },
   {
    "n": 8,
@@ -107,7 +114,8 @@
     "m": "audio/m/israeli/book/book1-p08.mp3"
    },
    "illustration": "two hats side by side, white and black; the monkey walks past both.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": true
   },
   {
    "n": 9,
@@ -120,7 +128,8 @@
     "m": "audio/m/israeli/book/book1-p09.mp3"
    },
    "illustration": "the monkey sits and thinks, chin in hand, surrounded by the rejected hats.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": true
   },
   {
    "n": 10,
@@ -133,7 +142,8 @@
     "m": "audio/m/israeli/book/book1-p10.mp3"
    },
    "illustration": "a hat with a banana perched on top; the monkey reaches for it, grinning.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": true
   },
   {
    "n": 11,
@@ -146,7 +156,8 @@
     "m": "audio/m/israeli/book/book1-p11.mp3"
    },
    "illustration": "the monkey points past the banana hat to the chef's hat from page 4.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": true
   },
   {
    "n": 12,
@@ -159,9 +170,10 @@
     "m": "audio/m/israeli/book/book1-p12.mp3"
    },
    "illustration": "the monkey, chocolate in hand, chef's hat beside him, perfectly content.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": true
   }
  ],
  "hasImages": true,
- "hasAudio": false
+ "hasAudio": true
 }

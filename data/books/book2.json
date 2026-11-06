@@ -16,7 +16,8 @@
     "m": "audio/m/israeli/book/book2-p01.mp3"
    },
    "illustration": "an ancient, gnarled olive tree in golden morning light.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": true
   },
   {
    "n": 2,
@@ -29,7 +30,8 @@
     "m": "audio/m/israeli/book/book2-p02.mp3"
    },
    "illustration": "an elderly man with a white beard stands barefoot on weathered sandstone, looking up.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": true
   },
   {
    "n": 3,
@@ -42,7 +44,8 @@
     "m": "audio/m/israeli/book/book2-p03.mp3"
    },
    "illustration": "swirling indigo and gold strokes; a single silver-green leaf floats down.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": true
   },
   {
    "n": 4,
@@ -55,7 +58,8 @@
     "m": "audio/m/israeli/book/book2-p04.mp3"
    },
    "illustration": "Eli rests both palms flat against the wide trunk.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": true
   },
   {
    "n": 5,
@@ -68,7 +72,8 @@
     "m": "audio/m/israeli/book/book2-p05.mp3"
    },
    "illustration": "close view — one silver-green leaf resting on the warm stone.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": true
   },
   {
    "n": 6,
@@ -81,7 +86,8 @@
     "m": "audio/m/israeli/book/book2-p06.mp3"
    },
    "illustration": "Eli cups water from a small stone basin beside the tree.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": true
   },
   {
    "n": 7,
@@ -94,7 +100,8 @@
     "m": "audio/m/israeli/book/book2-p07.mp3"
    },
    "illustration": "half the courtyard in gold light, half in deep olive shade under the canopy.",
-   "hasImg": false
+   "hasImg": false,
+   "hasAudio": true
   },
   {
    "n": 8,
@@ -107,7 +114,8 @@
     "m": "audio/m/israeli/book/book2-p08.mp3"
    },
    "illustration": "a small bird on a high branch, the courtyard quiet below.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": true
   },
   {
    "n": 9,
@@ -120,7 +128,8 @@
     "m": "audio/m/israeli/book/book2-p09.mp3"
    },
    "illustration": "leaves streaming sideways in one long gust, Eli's beard lifted by it.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 10,
@@ -133,7 +142,8 @@
     "m": "audio/m/israeli/book/book2-p10.mp3"
    },
    "illustration": "Eli seated on the stone blocks, hands on his knees, eyes closed.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 11,
@@ -146,7 +156,8 @@
     "m": "audio/m/israeli/book/book2-p11.mp3"
    },
    "illustration": "a scatter of silver-green leaves turning in the air above the courtyard.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 12,
@@ -159,7 +170,8 @@
     "m": "audio/m/israeli/book/book2-p12.mp3"
    },
    "illustration": "the tree at first light again, Eli's footprints in the dust of the courtyard.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   }
  ],
  "hasImages": false,

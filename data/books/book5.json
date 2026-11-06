@@ -16,7 +16,8 @@
     "m": "audio/m/israeli/book/book5-p01.mp3"
    },
    "illustration": "a minimalist sketch of an empty room, sunlight cutting across the floor.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 2,
@@ -29,7 +30,8 @@
     "m": "audio/m/israeli/book/book5-p02.mp3"
    },
    "illustration": "a clean modern oak table standing proudly in the center of the room.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 3,
@@ -42,7 +44,8 @@
     "m": "audio/m/israeli/book/book5-p03.mp3"
    },
    "illustration": "close-up of a single book resting neatly on the wooden surface.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 4,
@@ -55,7 +58,8 @@
     "m": "audio/m/israeli/book/book5-p04.mp3"
    },
    "illustration": "comfortable shoes near a wooden chair; someone settled, at peace.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 5,
@@ -68,7 +72,8 @@
     "m": "audio/m/israeli/book/book5-p05.mp3"
    },
    "illustration": "a small bright kitchen, one plant on the counter, morning light.",
-   "hasImg": false
+   "hasImg": false,
+   "hasAudio": false
   },
   {
    "n": 6,
@@ -81,7 +86,8 @@
     "m": "audio/m/israeli/book/book5-p06.mp3"
    },
    "illustration": "the chair pulled up to the oak table, ready.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 7,
@@ -94,7 +100,8 @@
     "m": "audio/m/israeli/book/book5-p07.mp3"
    },
    "illustration": "a simple bed with a folded blanket, a small lamp beside it.",
-   "hasImg": false
+   "hasImg": false,
+   "hasAudio": false
   },
   {
    "n": 8,
@@ -107,7 +114,8 @@
     "m": "audio/m/israeli/book/book5-p08.mp3"
    },
    "illustration": "a wide window with sunlight pooling on the floorboards.",
-   "hasImg": false
+   "hasImg": false,
+   "hasAudio": false
   },
   {
    "n": 9,
@@ -120,7 +128,8 @@
     "m": "audio/m/israeli/book/book5-p09.mp3"
    },
    "illustration": "the reader in the chair from page 4, book open, shoes off.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 10,
@@ -133,7 +142,8 @@
     "m": "audio/m/israeli/book/book5-p10.mp3"
    },
    "illustration": "the room at golden hour, calm and spare, one cup on the table.",
-   "hasImg": false
+   "hasImg": false,
+   "hasAudio": false
   },
   {
    "n": 11,
@@ -146,7 +156,8 @@
     "m": "audio/m/israeli/book/book5-p11.mp3"
    },
    "illustration": "the book left open on the table, a ribbon marking the page.",
-   "hasImg": false
+   "hasImg": false,
+   "hasAudio": false
   },
   {
    "n": 12,
@@ -159,7 +170,8 @@
     "m": "audio/m/israeli/book/book5-p12.mp3"
    },
    "illustration": "the house from outside at dusk, the living-room window warm with light.",
-   "hasImg": false
+   "hasImg": false,
+   "hasAudio": false
   }
  ],
  "hasImages": false,

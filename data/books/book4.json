@@ -16,7 +16,8 @@
     "m": "audio/m/israeli/book/book4-p01.mp3"
    },
    "illustration": "empty fruit stalls in warm amber lantern light under an indigo sky.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 2,
@@ -29,7 +30,8 @@
     "m": "audio/m/israeli/book/book4-p02.mp3"
    },
    "illustration": "gentle waves on the Tel Aviv coast under a silver crescent moon.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 3,
@@ -42,7 +44,8 @@
     "m": "audio/m/israeli/book/book4-p03.mp3"
    },
    "illustration": "a sleek stray cat stepping softly across warm limestone pavement.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 4,
@@ -55,7 +58,8 @@
     "m": "audio/m/israeli/book/book4-p04.mp3"
    },
    "illustration": "moonlight resting on a quiet, flat-roofed Mediterranean home.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 5,
@@ -68,7 +72,8 @@
     "m": "audio/m/israeli/book/book4-p05.mp3"
    },
    "illustration": "the cat curled asleep on a doorstep, tail over its nose.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 6,
@@ -81,7 +86,8 @@
     "m": "audio/m/israeli/book/book4-p06.mp3"
    },
    "illustration": "the empty street, one lamp glowing, shutters closing.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 7,
@@ -94,7 +100,8 @@
     "m": "audio/m/israeli/book/book4-p07.mp3"
    },
    "illustration": "one last lit window in a dark building; a plant on its sill.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 8,
@@ -107,7 +114,8 @@
     "m": "audio/m/israeli/book/book4-p08.mp3"
    },
    "illustration": "a street tree silvered by moonlight, leaves still.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 9,
@@ -120,7 +128,8 @@
     "m": "audio/m/israeli/book/book4-p09.mp3"
    },
    "illustration": "split view — flat calm sea, shuttered market stalls, same moon over both.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 10,
@@ -133,7 +142,8 @@
     "m": "audio/m/israeli/book/book4-p10.mp3"
    },
    "illustration": "the house from page 4, its windows now dark, moon higher.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 11,
@@ -146,7 +156,8 @@
     "m": "audio/m/israeli/book/book4-p11.mp3"
    },
    "illustration": "the whole coastline at night, a curve of small lights under the moon.",
-   "hasImg": true
+   "hasImg": true,
+   "hasAudio": false
   },
   {
    "n": 12,
@@ -159,7 +170,8 @@
     "m": "audio/m/israeli/book/book4-p12.mp3"
    },
    "illustration": "a child's window from outside, curtains drawn, one star above the roof.",
-   "hasImg": false
+   "hasImg": false,
+   "hasAudio": false
   }
  ],
  "hasImages": false,

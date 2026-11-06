@@ -1,6 +1,7 @@
 // Game 17 — plural bridge: only the source-attested plural completes the span.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, resultsCard } from './engine.js';
+import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.letterbridge.v1';
 export const pluralSuffix = (text) => String(text || '').normalize('NFD').replace(/[\u0591-\u05C7]/gu, '').endsWith('ים') ? 'im'
@@ -18,6 +19,7 @@ export function buildBridgeDeck(families) {
 }
 export function bridgeHolds(row, joint) { return !!row && row.joint === joint; }
 export function mount(root, ctx) {
+  const leaveSfx = sfx.enter(ctx);
   let alive = true, deck = [], images = null, round = 0;
   let session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 6 });
   const status = h('p', { class: 'game-status', role: 'status', 'aria-live': 'polite' }, 'Loading documented plural forms…');
@@ -40,7 +42,7 @@ export function mount(root, ctx) {
       width: picture.width, height: picture.height, 'data-img-id': picture.id }));
     const span = h('div', { class: 'game-bridge-span' + (broken ? ' game-bridge-broken' : '') }, '╞════╡');
     const options = ['im','ot'].map(joint => h('button', { type: 'button', class: 'btn secondary game-choice', onclick: () => {
-      const ok = bridgeHolds(r, joint); session.answer(ok);
+      const ok = bridgeHolds(r, joint); session.answer(ok); sfx.play(ok ? 'success' : 'miss');
       if (!ok) { status.textContent = 'Mismatched joint! Bridge sags.'; paint(true); return; }
       status.replaceChildren('Bridge holds: ', heSpan(r.plural));
       round++; paint();
@@ -54,5 +56,5 @@ export function mount(root, ctx) {
     if (deck.length < 8) { status.textContent = 'Insufficient sourced plural nouns.'; return; }
     paint();
   }).catch(() => { if (alive) status.textContent = 'Plural records unavailable.'; });
-  return () => { alive = false; };
+  return () => { alive = false; leaveSfx(); };
 }

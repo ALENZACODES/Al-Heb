@@ -56803,8 +56803,8 @@
   "id": "h0047024c",
   "text": "תְּרוּפָה",
   "ipa": "tə.ˈru.fə",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "medicine, medication, medicament, drug",
   "phonetic": "terufah"
@@ -58707,8 +58707,8 @@
   "id": "h0073b076",
   "text": "פַּרְעֹה",
   "ipa": "ˈpar.oj",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "pharaoh",
   "phonetic": "par'oh"
@@ -62907,8 +62907,8 @@
   "id": "h00bec4fa",
   "text": "לְגַבֵּי",
   "ipa": "lə.ˈɡa.bej",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "about, regarding, in connection with, with respect to",
   "phonetic": "legabei"

@@ -8230,4 +8230,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 17532 produced clips in INDEX.csv have an English label; 3249 UNKNOWN. Filenames and IDs are unchanged.
+All 17687 produced clips in INDEX.csv have an English label; 3401 UNKNOWN. Filenames and IDs are unchanged.

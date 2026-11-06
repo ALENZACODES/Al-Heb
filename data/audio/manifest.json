@@ -30876,11 +30876,12 @@
   "kind": "line",
   "id": "taxi-01-m",
   "text": "אֲנִי צָרִיךְ מוֹנִית",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I need a taxi"
+  "english": "I need a taxi",
+  "phonetic": "ani tzarikh monit"
  },
  {
   "path": "audio/f/israeli/line/taxi-01-m.mp3",
@@ -30903,11 +30904,12 @@
   "kind": "line",
   "id": "taxi-01-f",
   "text": "אֲנִי צְרִיכָה מוֹנִית",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I need a taxi"
+  "english": "I need a taxi",
+  "phonetic": "ani tzerikhah monit"
  },
  {
   "path": "audio/f/israeli/line/taxi-01-f.mp3",
@@ -30930,11 +30932,12 @@
   "kind": "line",
   "id": "taxi-03",
   "text": "לִשְׂדֵה הַתְּעוּפָה, בְּבַקָּשָׁה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "to the airport, please"
+  "english": "to the airport, please",
+  "phonetic": "lisdeh hate'ufah, bevakashah"
  },
  {
   "path": "audio/f/israeli/line/taxi-03.mp3",
@@ -30957,11 +30960,12 @@
   "kind": "line",
   "id": "taxi-04",
   "text": "לַתַּחֲנָה הַמֶּרְכָּזִית",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "to the central station"
+  "english": "to the central station",
+  "phonetic": "latachanah hamerkazit"
  },
  {
   "path": "audio/f/israeli/line/taxi-04.mp3",
@@ -30984,11 +30988,12 @@
   "kind": "line",
   "id": "taxi-07",
   "text": "אֶפְשָׁר מוֹנֶה, בְּבַקָּשָׁה?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "can you use the meter, please?"
+  "english": "can you use the meter, please?",
+  "phonetic": "efshar moneh, bevakashah?"
  },
  {
   "path": "audio/f/israeli/line/taxi-07.mp3",
@@ -31011,11 +31016,12 @@
   "kind": "line",
   "id": "taxi-08",
   "text": "כַּמָּה זֶה יַעֲלֶה?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "how much will it cost?"
+  "english": "how much will it cost?",
+  "phonetic": "kamah zeh ya'aleh?"
  },
  {
   "path": "audio/f/israeli/line/taxi-08.mp3",
@@ -31038,11 +31044,12 @@
   "kind": "line",
   "id": "taxi-09-m",
   "text": "עֲצֹר כָּאן, בְּבַקָּשָׁה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "stop here, please"
+  "english": "stop here, please",
+  "phonetic": "atzor kan, bevakashah"
  },
  {
   "path": "audio/f/israeli/line/taxi-09-m.mp3",
@@ -31065,11 +31072,12 @@
   "kind": "line",
   "id": "taxi-09-f",
   "text": "עִצְרִי כָּאן, בְּבַקָּשָׁה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "stop here, please"
+  "english": "stop here, please",
+  "phonetic": "itzri kan, bevakashah"
  },
  {
   "path": "audio/f/israeli/line/taxi-09-f.mp3",
@@ -31092,11 +31100,12 @@
   "kind": "line",
   "id": "taxi-10",
   "text": "אֵיפֹה תַּחֲנַת הָאוֹטוֹבּוּס?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "where is the bus stop?"
+  "english": "where is the bus stop?",
+  "phonetic": "eifoh tachanat ha'otobus?"
  },
  {
   "path": "audio/f/israeli/line/taxi-10.mp3",
@@ -31119,11 +31128,12 @@
   "kind": "line",
   "id": "taxi-11",
   "text": "אֵיזֶה אוֹטוֹבּוּס הוֹלֵךְ לְ...?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "which bus goes to ...?"
+  "english": "which bus goes to ...?",
+  "phonetic": "eizeh otobus holekh le...?"
  },
  {
   "path": "audio/f/israeli/line/taxi-11.mp3",
@@ -31146,11 +31156,12 @@
   "kind": "line",
   "id": "taxi-12",
   "text": "מָתַי הָרַכֶּבֶת הַבָּאָה?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "when is the next train?"
+  "english": "when is the next train?",
+  "phonetic": "matai harakevet haba'ah?"
  },
  {
   "path": "audio/f/israeli/line/taxi-12.mp3",
@@ -31173,11 +31184,12 @@
   "kind": "line",
   "id": "taxi-13",
   "text": "כַּרְטִיס אֶחָד לְ..., בְּבַקָּשָׁה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "one ticket to ..., please"
+  "english": "one ticket to ..., please",
+  "phonetic": "kartis echad le..., bevakashah"
  },
  {
   "path": "audio/f/israeli/line/taxi-13.mp3",
@@ -31200,11 +31212,12 @@
   "kind": "line",
   "id": "taxi-14",
   "text": "הַאִם זֶה הָאוֹטוֹבּוּס לְ...?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "is this the bus to ...?"
+  "english": "is this the bus to ...?",
+  "phonetic": "ha'im zeh ha'otobus le...?"
  },
  {
   "path": "audio/f/israeli/line/taxi-14.mp3",
@@ -31227,11 +31240,12 @@
   "kind": "line",
   "id": "taxi-15",
   "text": "הַנְּסִיעָה הָיְתָה נָעִימָה, תּוֹדָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "it was a pleasant ride, thanks"
+  "english": "it was a pleasant ride, thanks",
+  "phonetic": "hanesi'ah hayetah na'imah, todah"
  },
  {
   "path": "audio/f/israeli/line/taxi-15.mp3",
@@ -31842,11 +31856,12 @@
   "kind": "line",
   "id": "small-talk-01-m",
   "text": "מַה שִּׁמְךָ?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "what's your name?"
+  "english": "what's your name?",
+  "phonetic": "mah shimkha?"
  },
  {
   "path": "audio/f/israeli/line/small-talk-01-m.mp3",
@@ -31869,11 +31884,12 @@
   "kind": "line",
   "id": "small-talk-01-f",
   "text": "מַה שְּׁמֵךְ?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "what's your name?"
+  "english": "what's your name?",
+  "phonetic": "mah shemekh?"
  },
  {
   "path": "audio/f/israeli/line/small-talk-01-f.mp3",
@@ -31896,11 +31912,12 @@
   "kind": "line",
   "id": "small-talk-02",
   "text": "קוֹרְאִים לִי ...",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "my name is ... (lit. they call me ...)"
+  "english": "my name is ... (lit. they call me ...)",
+  "phonetic": "kore'im li ..."
  },
  {
   "path": "audio/f/israeli/line/small-talk-02.mp3",
@@ -31923,11 +31940,12 @@
   "kind": "line",
   "id": "small-talk-03-m",
   "text": "מֵאֵיפֹה אַתָּה?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "where are you from?"
+  "english": "where are you from?",
+  "phonetic": "me'eifoh atah?"
  },
  {
   "path": "audio/f/israeli/line/small-talk-03-m.mp3",
@@ -31950,11 +31968,12 @@
   "kind": "line",
   "id": "small-talk-03-f",
   "text": "מֵאֵיפֹה אַתְּ?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "where are you from?"
+  "english": "where are you from?",
+  "phonetic": "me'eifoh at?"
  },
  {
   "path": "audio/f/israeli/line/small-talk-03-f.mp3",
@@ -31977,11 +31996,12 @@
   "kind": "line",
   "id": "small-talk-04",
   "text": "אֲנִי מִקָּנָדָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm from Canada"
+  "english": "I'm from Canada",
+  "phonetic": "ani mikanadah"
  },
  {
   "path": "audio/f/israeli/line/small-talk-04.mp3",
@@ -32004,11 +32024,12 @@
   "kind": "line",
   "id": "small-talk-05-m",
   "text": "אֲנִי תַּיָּר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm a tourist"
+  "english": "I'm a tourist",
+  "phonetic": "ani tayar"
  },
  {
   "path": "audio/f/israeli/line/small-talk-05-m.mp3",
@@ -32031,11 +32052,12 @@
   "kind": "line",
   "id": "small-talk-05-f",
   "text": "אֲנִי תַּיֶּרֶת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm a tourist"
+  "english": "I'm a tourist",
+  "phonetic": "ani tayeret"
  },
  {
   "path": "audio/f/israeli/line/small-talk-05-f.mp3",
@@ -32058,11 +32080,12 @@
   "kind": "line",
   "id": "small-talk-06",
   "text": "זֹאת הַפַּעַם הָרִאשׁוֹנָה שֶׁלִּי בְּיִשְׂרָאֵל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "it's my first time in Israel"
+  "english": "it's my first time in Israel",
+  "phonetic": "zot hapa'am harishonah sheli beyisra'el"
  },
  {
   "path": "audio/f/israeli/line/small-talk-06.mp3",
@@ -32085,11 +32108,12 @@
   "kind": "line",
   "id": "small-talk-07-m",
   "text": "מָה אַתָּה עוֹשֶׂה?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "what do you do (for work)?"
+  "english": "what do you do (for work)?",
+  "phonetic": "mah atah oseh?"
  },
  {
   "path": "audio/f/israeli/line/small-talk-07-m.mp3",
@@ -32112,11 +32136,12 @@
   "kind": "line",
   "id": "small-talk-07-f",
   "text": "מָה אַתְּ עוֹשָׂה?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "what do you do (for work)?"
+  "english": "what do you do (for work)?",
+  "phonetic": "mah at osah?"
  },
  {
   "path": "audio/f/israeli/line/small-talk-07-f.mp3",
@@ -32139,11 +32164,12 @@
   "kind": "line",
   "id": "small-talk-08-m",
   "text": "בֶּן כַּמָּה אַתָּה?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "how old are you? (lit. son of how much)"
+  "english": "how old are you? (lit. son of how much)",
+  "phonetic": "ben kamah atah?"
  },
  {
   "path": "audio/f/israeli/line/small-talk-08-m.mp3",
@@ -32166,11 +32192,12 @@
   "kind": "line",
   "id": "small-talk-08-f",
   "text": "בַּת כַּמָּה אַתְּ?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "how old are you? (lit. son of how much)"
+  "english": "how old are you? (lit. son of how much)",
+  "phonetic": "bat kamah at?"
  },
  {
   "path": "audio/f/israeli/line/small-talk-08-f.mp3",
@@ -32193,11 +32220,12 @@
   "kind": "line",
   "id": "small-talk-09-m",
   "text": "אֲנִי רָעֵב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm hungry"
+  "english": "I'm hungry",
+  "phonetic": "ani ra'ev"
  },
  {
   "path": "audio/f/israeli/line/small-talk-09-m.mp3",
@@ -32220,11 +32248,12 @@
   "kind": "line",
   "id": "small-talk-09-f",
   "text": "אֲנִי רְעֵבָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm hungry"
+  "english": "I'm hungry",
+  "phonetic": "ani re'evah"
  },
  {
   "path": "audio/f/israeli/line/small-talk-09-f.mp3",
@@ -32247,11 +32276,12 @@
   "kind": "line",
   "id": "small-talk-10-m",
   "text": "אֲנִי צָמֵא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm thirsty"
+  "english": "I'm thirsty",
+  "phonetic": "ani tzame"
  },
  {
   "path": "audio/f/israeli/line/small-talk-10-m.mp3",
@@ -32274,11 +32304,12 @@
   "kind": "line",
   "id": "small-talk-10-f",
   "text": "אֲנִי צְמֵאָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm thirsty"
+  "english": "I'm thirsty",
+  "phonetic": "ani tzeme'ah"
  },
  {
   "path": "audio/f/israeli/line/small-talk-10-f.mp3",
@@ -32301,11 +32332,12 @@
   "kind": "line",
   "id": "small-talk-11-m",
   "text": "אֲנִי עָיֵף",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm tired"
+  "english": "I'm tired",
+  "phonetic": "ani ayef"
  },
  {
   "path": "audio/f/israeli/line/small-talk-11-m.mp3",
@@ -32328,11 +32360,12 @@
   "kind": "line",
   "id": "small-talk-11-f",
   "text": "אֲנִי עֲיֵפָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm tired"
+  "english": "I'm tired",
+  "phonetic": "ani ayefah"
  },
  {
   "path": "audio/f/israeli/line/small-talk-11-f.mp3",
@@ -32355,11 +32388,12 @@
   "kind": "line",
   "id": "small-talk-12",
   "text": "חַם לִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm hot"
+  "english": "I'm hot",
+  "phonetic": "cham li"
  },
  {
   "path": "audio/f/israeli/line/small-talk-12.mp3",
@@ -32382,11 +32416,12 @@
   "kind": "line",
   "id": "small-talk-13",
   "text": "קַר לִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm cold"
+  "english": "I'm cold",
+  "phonetic": "kar li"
  },
  {
   "path": "audio/f/israeli/line/small-talk-13.mp3",
@@ -32409,11 +32444,12 @@
   "kind": "line",
   "id": "small-talk-14-m",
   "text": "הַכֹּל בְּסֵדֶר אִתְּךָ?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "are you OK?"
+  "english": "are you OK?",
+  "phonetic": "hakol beseder itekha?"
  },
  {
   "path": "audio/f/israeli/line/small-talk-14-m.mp3",
@@ -32436,11 +32472,12 @@
   "kind": "line",
   "id": "small-talk-14-f",
   "text": "הַכֹּל בְּסֵדֶר אִתָּךְ?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "are you OK?"
+  "english": "are you OK?",
+  "phonetic": "hakol beseder itakh?"
  },
  {
   "path": "audio/f/israeli/line/small-talk-14-f.mp3",
@@ -32463,11 +32500,12 @@
   "kind": "line",
   "id": "small-talk-16",
   "text": "מָה הַמַּצָּב?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "how's it going? (lit. what's the situation)"
+  "english": "how's it going? (lit. what's the situation)",
+  "phonetic": "mah hamatzav?"
  },
  {
   "path": "audio/f/israeli/line/small-talk-16.mp3",
@@ -32490,11 +32528,12 @@
   "kind": "line",
   "id": "small-talk-17",
   "text": "אֵין מָה לַעֲשׂוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "there's nothing to be done"
+  "english": "there's nothing to be done",
+  "phonetic": "ein mah la'asot"
  },
  {
   "path": "audio/f/israeli/line/small-talk-17.mp3",
@@ -32517,11 +32556,12 @@
   "kind": "line",
   "id": "small-talk-19-m",
   "text": "אֶתְגַּעְגֵּעַ אֵלֶיךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'll miss you"
+  "english": "I'll miss you",
+  "phonetic": "etgage'a elekha"
  },
  {
   "path": "audio/f/israeli/line/small-talk-19-m.mp3",
@@ -32544,11 +32584,12 @@
   "kind": "line",
   "id": "small-talk-19-f",
   "text": "אֶתְגַּעְגֵּעַ אֵלַיִךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'll miss you"
+  "english": "I'll miss you",
+  "phonetic": "etgage'a elayikh"
  },
  {
   "path": "audio/f/israeli/line/small-talk-19-f.mp3",

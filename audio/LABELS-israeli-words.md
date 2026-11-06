@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 2895 clips. **Reading lines:** 539 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 2973 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-2895 English labels; 2 UNKNOWN.
+2973 English labels; 2 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -2881,6 +2881,84 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [kiddush-shabbat-eve-w31](m/israeli/word/kiddush-shabbat-eve-w31.mp3) | בָחַרְתָּ | you chose | vacharta |
 | [kiddush-shabbat-eve-w32](m/israeli/word/kiddush-shabbat-eve-w32.mp3) | וְאוֹתָנוּ | and us | ve'otanu |
 | [kiddush-shabbat-eve-w33](m/israeli/word/kiddush-shabbat-eve-w33.mp3) | קִדַּשְׁתָּ | you made holy | kidashta |
+| [kiddush-shabbat-eve-w34](m/israeli/word/kiddush-shabbat-eve-w34.mp3) | מִכָּל | from all | mikol |
+| [kiddush-shabbat-eve-w35](m/israeli/word/kiddush-shabbat-eve-w35.mp3) | הָעַמִּים | the peoples | ha'amim |
+| [kiddush-shabbat-eve-w36](m/israeli/word/kiddush-shabbat-eve-w36.mp3) | וְשַׁבַּת | and Shabbat | veshabat |
+| [kiddush-shabbat-eve-w37](m/israeli/word/kiddush-shabbat-eve-w37.mp3) | קָדְשְׁךָ | your holiness | kadshekha |
+| [kiddush-shabbat-eve-w38](m/israeli/word/kiddush-shabbat-eve-w38.mp3) | בְּאַהֲבָה | in love | be'ahavah |
+| [kiddush-shabbat-eve-w39](m/israeli/word/kiddush-shabbat-eve-w39.mp3) | וּבְרָצוֹן | and favour | uveratzon |
+| [kiddush-shabbat-eve-w4](m/israeli/word/kiddush-shabbat-eve-w4.mp3) | אֱלֹהֵינוּ | our-God | eloheinu |
+| [kiddush-shabbat-eve-w40](m/israeli/word/kiddush-shabbat-eve-w40.mp3) | הִנְחַלְתָּנוּ׃ | you gave us as an inheritance | hinchaltanu |
+| [kiddush-shabbat-eve-w41](m/israeli/word/kiddush-shabbat-eve-w41.mp3) | בָּרוּךְ | blessed | barukh |
+| [kiddush-shabbat-eve-w42](m/israeli/word/kiddush-shabbat-eve-w42.mp3) | אַתָּה | you, thou | atah |
+| [kiddush-shabbat-eve-w43](m/israeli/word/kiddush-shabbat-eve-w43.mp3) | אֲדֹנָי | the LORD | adonai |
+| [kiddush-shabbat-eve-w44](m/israeli/word/kiddush-shabbat-eve-w44.mp3) | מְקַדֵּשׁ | who makes holy | mekadesh |
+| [kiddush-shabbat-eve-w45](m/israeli/word/kiddush-shabbat-eve-w45.mp3) | הַשַּׁבָּת׃ | the Shabbat | hashabat |
+| [kiddush-shabbat-eve-w5](m/israeli/word/kiddush-shabbat-eve-w5.mp3) | מֶלֶךְ | king | melekh |
+| [kiddush-shabbat-eve-w6](m/israeli/word/kiddush-shabbat-eve-w6.mp3) | הָעוֹלָם | the world | ha'olam |
+| [kiddush-shabbat-eve-w7](m/israeli/word/kiddush-shabbat-eve-w7.mp3) | אֲשֶׁר | introduces a subordinate clause | asher |
+| [kiddush-shabbat-eve-w8](m/israeli/word/kiddush-shabbat-eve-w8.mp3) | קִדְּשָׁנוּ | made us holy | kideshanu |
+| [kiddush-shabbat-eve-w9](m/israeli/word/kiddush-shabbat-eve-w9.mp3) | בְּמִצְוֹתָיו | with his commandments | bemitzvotav |
+| [kiddush-veshamru-w1](m/israeli/word/kiddush-veshamru-w1.mp3) | וְשָׁמְרוּ | shall keep | veshamru |
+| [kiddush-veshamru-w10](m/israeli/word/kiddush-veshamru-w10.mp3) | וּבֵין | and between | uvein |
+| [kiddush-veshamru-w11](m/israeli/word/kiddush-veshamru-w11.mp3) | בְּנֵי | the children of | benei |
+| [kiddush-veshamru-w12](m/israeli/word/kiddush-veshamru-w12.mp3) | יִשְׂרָאֵל | Israel | yisra'el |
+| [kiddush-veshamru-w13](m/israeli/word/kiddush-veshamru-w13.mp3) | אוֹת | a sign, an omen; a signal, a cue; letter (symbol) | ot |
+| [kiddush-veshamru-w14](m/israeli/word/kiddush-veshamru-w14.mp3) | הִוא | it | hiv |
+| [kiddush-veshamru-w15](m/israeli/word/kiddush-veshamru-w15.mp3) | לְעֹלָם | for ever | le'olam |
+| [kiddush-veshamru-w16](m/israeli/word/kiddush-veshamru-w16.mp3) | כִּי־שֵׁשֶׁת | for six | ki-sheshet |
+| [kiddush-veshamru-w17](m/israeli/word/kiddush-veshamru-w17.mp3) | יָמִים | days | yamim |
+| [kiddush-veshamru-w18](m/israeli/word/kiddush-veshamru-w18.mp3) | עָשָׂה | to do (to perform an action, to accomplish a thing); to make; to make (to cause to be) | asah |
+| [kiddush-veshamru-w19](m/israeli/word/kiddush-veshamru-w19.mp3) | אֲדֹנָי | the LORD | adonai |
+| [kiddush-veshamru-w2](m/israeli/word/kiddush-veshamru-w2.mp3) | בְנֵי־יִשְׂרָאֵל | the children of Israel | venei-yisra'el |
+| [kiddush-veshamru-w20](m/israeli/word/kiddush-veshamru-w20.mp3) | אֶת־הַשָּׁמַיִם | the heavens | et-hashamayim |
+| [kiddush-veshamru-w21](m/israeli/word/kiddush-veshamru-w21.mp3) | וְאֶת־הָאָרֶץ | and the earth | ve'et-ha'aretz |
+| [kiddush-veshamru-w22](m/israeli/word/kiddush-veshamru-w22.mp3) | וּבַיּוֹם | and on the day | uvayom |
+| [kiddush-veshamru-w23](m/israeli/word/kiddush-veshamru-w23.mp3) | הַשְּׁבִיעִי | the seventh | hashevi'i |
+| [kiddush-veshamru-w24](m/israeli/word/kiddush-veshamru-w24.mp3) | שָׁבַת | to stop working, to rest; to go on strike | shavat |
+| [kiddush-veshamru-w25](m/israeli/word/kiddush-veshamru-w25.mp3) | וַיִּנָּפַשׁ׃ | and rested | vayinafash |
+| [kiddush-veshamru-w3](m/israeli/word/kiddush-veshamru-w3.mp3) | אֶת־הַשַּׁבָּת | the sabbath | et-hashabat |
+| [kiddush-veshamru-w4](m/israeli/word/kiddush-veshamru-w4.mp3) | לַעֲשׂוֹת | to observe | la'asot |
+| [kiddush-veshamru-w5](m/israeli/word/kiddush-veshamru-w5.mp3) | אֶת־הַשַּׁבָּת | the sabbath | et-hashabat |
+| [kiddush-veshamru-w6](m/israeli/word/kiddush-veshamru-w6.mp3) | לְדֹרֹתָם | throughout their generations | ledorotam |
+| [kiddush-veshamru-w7](m/israeli/word/kiddush-veshamru-w7.mp3) | בְּרִית | covenant, alliance; brit milah, bris, circumcision ritual | berit |
+| [kiddush-veshamru-w8](m/israeli/word/kiddush-veshamru-w8.mp3) | עוֹלָם׃ | world; a world; Ever, eternity | olam |
+| [kiddush-veshamru-w9](m/israeli/word/kiddush-veshamru-w9.mp3) | בֵּינִי | between Me | beini |
+| [kiddush-wine-1-w1](m/israeli/word/kiddush-wine-1-w1.mp3) | בָּרוּךְ | blessed | barukh |
+| [kiddush-wine-1-w2](m/israeli/word/kiddush-wine-1-w2.mp3) | אַתָּה | you, thou | atah |
+| [kiddush-wine-1-w3](m/israeli/word/kiddush-wine-1-w3.mp3) | אֲדֹנָי | the LORD | adonai |
+| [kiddush-wine-1-w4](m/israeli/word/kiddush-wine-1-w4.mp3) | אֱלֹהֵינוּ | our-God | eloheinu |
+| [kiddush-wine-1-w5](m/israeli/word/kiddush-wine-1-w5.mp3) | מֶלֶךְ | king | melekh |
+| [kiddush-wine-1-w6](m/israeli/word/kiddush-wine-1-w6.mp3) | הָעוֹלָם | the world | ha'olam |
+| [kiddush-wine-1-w7](m/israeli/word/kiddush-wine-1-w7.mp3) | בּוֹרֵא | creator | bore |
+| [kiddush-wine-1-w8](m/israeli/word/kiddush-wine-1-w8.mp3) | פְּרִי | fruit | peri |
+| [kiddush-wine-1-w9](m/israeli/word/kiddush-wine-1-w9.mp3) | הַגָּפֶן׃ | the vine | hagafen |
+| [kiddush-zachor-w1](m/israeli/word/kiddush-zachor-w1.mp3) | זָכוֹר | remember | zakhor |
+| [kiddush-zachor-w10](m/israeli/word/kiddush-zachor-w10.mp3) | וְיוֹם | and the day | veyom |
+| [kiddush-zachor-w11](m/israeli/word/kiddush-zachor-w11.mp3) | הַשְּׁבִיעִי | the seventh | hashevi'i |
+| [kiddush-zachor-w12](m/israeli/word/kiddush-zachor-w12.mp3) | שַׁבָּת | Shabbat, Sabbath; Saturday; week (Mishnaic Hebrew) | shabat |
+| [kiddush-zachor-w13](m/israeli/word/kiddush-zachor-w13.mp3) | לַאֲדֹנָי | to the LORD | la'adonai |
+| [kiddush-zachor-w14](m/israeli/word/kiddush-zachor-w14.mp3) | אֱלֹהֶיךָ | your God | elohekha |
+| [kiddush-zachor-w15](m/israeli/word/kiddush-zachor-w15.mp3) | לֹא־תַעֲשֶׂה | you shall not do | lo-ta'aseh |
+| [kiddush-zachor-w16](m/israeli/word/kiddush-zachor-w16.mp3) | כָל־מְלָאכָה | any work | khol-melakhah |
+| [kiddush-zachor-w17](m/israeli/word/kiddush-zachor-w17.mp3) | אַתָּה | you, thou | atah |
+| [kiddush-zachor-w18](m/israeli/word/kiddush-zachor-w18.mp3) | וּבִנְךָ־וּבִתֶּךָ | and your son and your daughter | uvinkha-uvitekha |
+| [kiddush-zachor-w19](m/israeli/word/kiddush-zachor-w19.mp3) | עַבְדְּךָ | your servant | avdekha |
+| [kiddush-zachor-w2](m/israeli/word/kiddush-zachor-w2.mp3) | אֶת־יוֹם | the day | et-yom |
+| [kiddush-zachor-w20](m/israeli/word/kiddush-zachor-w20.mp3) | וַאֲמָתְךָ | and your maid-servant | va'amatekha |
+| [kiddush-zachor-w21](m/israeli/word/kiddush-zachor-w21.mp3) | וּבְהֶמְתֶּךָ | and your cattle | uvehemtekha |
+| [kiddush-zachor-w22](m/israeli/word/kiddush-zachor-w22.mp3) | וְגֵרְךָ | and your stranger | vegerekha |
+| [kiddush-zachor-w23](m/israeli/word/kiddush-zachor-w23.mp3) | אֲשֶׁר | introduces a subordinate clause | asher |
+| [kiddush-zachor-w24](m/israeli/word/kiddush-zachor-w24.mp3) | בִּשְׁעָרֶיךָ | within your gates | bish'arekha |
+| [kiddush-zachor-w25](m/israeli/word/kiddush-zachor-w25.mp3) | כִּי | because, for, since; that; when, as, at the time that | ki |
+| [kiddush-zachor-w26](m/israeli/word/kiddush-zachor-w26.mp3) | שֵׁשֶׁת־יָמִים | six days | sheshet-yamim |
+| [kiddush-zachor-w27](m/israeli/word/kiddush-zachor-w27.mp3) | עָשָׂה | to do (to perform an action, to accomplish a thing); to make; to make (to cause to be) | asah |
+| [kiddush-zachor-w28](m/israeli/word/kiddush-zachor-w28.mp3) | אֲדֹנָי | the LORD | adonai |
+| [kiddush-zachor-w29](m/israeli/word/kiddush-zachor-w29.mp3) | אֶת־הַשָּׁמַיִם | the heavens | et-hashamayim |
+| [kiddush-zachor-w3](m/israeli/word/kiddush-zachor-w3.mp3) | הַשַׁבָּת | the sabbath | hashabat |
+| [kiddush-zachor-w30](m/israeli/word/kiddush-zachor-w30.mp3) | וְאֶת־הָאָרֶץ | and the earth | ve'et-ha'aretz |
+| [kiddush-zachor-w31](m/israeli/word/kiddush-zachor-w31.mp3) | אֶת־הַיָּם | the sea | et-hayam |
+| [kiddush-zachor-w32](m/israeli/word/kiddush-zachor-w32.mp3) | וְאֶת־כָּל־אֲשֶׁר־בָּם | and all that is in them | ve'et-kol-asher-bam |
 | [numbers-01-f](m/israeli/word/numbers-01-f.mp3) | אַחַת | one (f.) | achat |
 | [numbers-01-m](m/israeli/word/numbers-01-m.mp3) | אֶחָד | one | echad |
 | [numbers-02-f](m/israeli/word/numbers-02-f.mp3) | שְׁתַּיִם | two (f.) | shtayim |
@@ -2914,7 +2992,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli reading lines
 
-539 English labels; 0 UNKNOWN.
+580 English labels; 0 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -3426,6 +3504,47 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [shop-20](m/israeli/line/shop-20.mp3) | אֵיפֹה הַשֵּׁרוּתִים? | where is the restroom? | eifoh hasherutim? |
 | [sim-shalom-l1](m/israeli/line/sim-shalom-l1.mp3) | שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה חֵן וָחֶסֶד וְרַחֲמִים עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל עַמֶּךָ בָּרְכֵנוּ אָבִינוּ כֻּלָּנוּ כְּאֶחָד בְּאוֹר פָּנֶיךָ כִּי בְאוֹר פָּנֶיךָ נָתַתָּ לָּנוּ אֲדֹנָי אֱלֹהֵינוּ תּוֹרַת חַיִּים וְאַהֲבַת חֶסֶד וּצְדָקָה וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם וְטוֹב בְּעֵינֶיךָ לְבָרֵךְ אֶת עַמְּךָ יִשְׂרָאֵל בְּכָל־עֵת וּבְכָל־שָׁעָה בִּשְׁלוֹמֶךָ׃ | Grant peace, goodness and blessing, grace, kindness and mercy upon us and upon all Israel your people. Bless us, our father, all of us as one, with the light of your face; for by the light of your face you gave us, LORD our God, a Torah of life, love of kindness, righteousness, blessing, mercy, life and peace. And may it be good in your eyes to bless your people Israel at every time and every hour with your peace. | sim shalom tovah uverakhah chen vachesed verachamim aleinu ve'al kol-yisra'el amekha barekhenu avinu kulanu ke'echad be'or panekha ki ve'or panekha natata lanu adonai eloheinu torat chayim ve'ahavat chesed utzedakah uverakhah verachamim vechayim veshalom vetov be'einekha levarekh et amekha yisra'el bekhol-et uvekhol-sha'ah bishlomekha |
 | [sim-shalom-l2](m/israeli/line/sim-shalom-l2.mp3) | בָּרוּךְ אַתָּה אֲדֹנָי הַמְבָרֵךְ אֶת־עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם׃ | Blessed are you, LORD, who blesses his people Israel with peace. | barukh atah adonai hamvarekh et-amo yisra'el bashalom |
+| [small-talk-01-f](m/israeli/line/small-talk-01-f.mp3) | מַה שְּׁמֵךְ? | what's your name? | mah shemekh? |
+| [small-talk-01-m](m/israeli/line/small-talk-01-m.mp3) | מַה שִּׁמְךָ? | what's your name? | mah shimkha? |
+| [small-talk-02](m/israeli/line/small-talk-02.mp3) | קוֹרְאִים לִי ... | my name is ... (lit. they call me ...) | kore'im li ... |
+| [small-talk-03-f](m/israeli/line/small-talk-03-f.mp3) | מֵאֵיפֹה אַתְּ? | where are you from? | me'eifoh at? |
+| [small-talk-03-m](m/israeli/line/small-talk-03-m.mp3) | מֵאֵיפֹה אַתָּה? | where are you from? | me'eifoh atah? |
+| [small-talk-04](m/israeli/line/small-talk-04.mp3) | אֲנִי מִקָּנָדָה | I'm from Canada | ani mikanadah |
+| [small-talk-05-f](m/israeli/line/small-talk-05-f.mp3) | אֲנִי תַּיֶּרֶת | I'm a tourist | ani tayeret |
+| [small-talk-05-m](m/israeli/line/small-talk-05-m.mp3) | אֲנִי תַּיָּר | I'm a tourist | ani tayar |
+| [small-talk-06](m/israeli/line/small-talk-06.mp3) | זֹאת הַפַּעַם הָרִאשׁוֹנָה שֶׁלִּי בְּיִשְׂרָאֵל | it's my first time in Israel | zot hapa'am harishonah sheli beyisra'el |
+| [small-talk-07-f](m/israeli/line/small-talk-07-f.mp3) | מָה אַתְּ עוֹשָׂה? | what do you do (for work)? | mah at osah? |
+| [small-talk-07-m](m/israeli/line/small-talk-07-m.mp3) | מָה אַתָּה עוֹשֶׂה? | what do you do (for work)? | mah atah oseh? |
+| [small-talk-08-f](m/israeli/line/small-talk-08-f.mp3) | בַּת כַּמָּה אַתְּ? | how old are you? (lit. son of how much) | bat kamah at? |
+| [small-talk-08-m](m/israeli/line/small-talk-08-m.mp3) | בֶּן כַּמָּה אַתָּה? | how old are you? (lit. son of how much) | ben kamah atah? |
+| [small-talk-09-f](m/israeli/line/small-talk-09-f.mp3) | אֲנִי רְעֵבָה | I'm hungry | ani re'evah |
+| [small-talk-09-m](m/israeli/line/small-talk-09-m.mp3) | אֲנִי רָעֵב | I'm hungry | ani ra'ev |
+| [small-talk-10-f](m/israeli/line/small-talk-10-f.mp3) | אֲנִי צְמֵאָה | I'm thirsty | ani tzeme'ah |
+| [small-talk-10-m](m/israeli/line/small-talk-10-m.mp3) | אֲנִי צָמֵא | I'm thirsty | ani tzame |
+| [small-talk-11-f](m/israeli/line/small-talk-11-f.mp3) | אֲנִי עֲיֵפָה | I'm tired | ani ayefah |
+| [small-talk-11-m](m/israeli/line/small-talk-11-m.mp3) | אֲנִי עָיֵף | I'm tired | ani ayef |
+| [small-talk-12](m/israeli/line/small-talk-12.mp3) | חַם לִי | I'm hot | cham li |
+| [small-talk-13](m/israeli/line/small-talk-13.mp3) | קַר לִי | I'm cold | kar li |
+| [small-talk-14-f](m/israeli/line/small-talk-14-f.mp3) | הַכֹּל בְּסֵדֶר אִתָּךְ? | are you OK? | hakol beseder itakh? |
+| [small-talk-14-m](m/israeli/line/small-talk-14-m.mp3) | הַכֹּל בְּסֵדֶר אִתְּךָ? | are you OK? | hakol beseder itekha? |
+| [small-talk-16](m/israeli/line/small-talk-16.mp3) | מָה הַמַּצָּב? | how's it going? (lit. what's the situation) | mah hamatzav? |
+| [small-talk-17](m/israeli/line/small-talk-17.mp3) | אֵין מָה לַעֲשׂוֹת | there's nothing to be done | ein mah la'asot |
+| [small-talk-19-f](m/israeli/line/small-talk-19-f.mp3) | אֶתְגַּעְגֵּעַ אֵלַיִךְ | I'll miss you | etgage'a elayikh |
+| [small-talk-19-m](m/israeli/line/small-talk-19-m.mp3) | אֶתְגַּעְגֵּעַ אֵלֶיךָ | I'll miss you | etgage'a elekha |
+| [taxi-01-f](m/israeli/line/taxi-01-f.mp3) | אֲנִי צְרִיכָה מוֹנִית | I need a taxi | ani tzerikhah monit |
+| [taxi-01-m](m/israeli/line/taxi-01-m.mp3) | אֲנִי צָרִיךְ מוֹנִית | I need a taxi | ani tzarikh monit |
+| [taxi-03](m/israeli/line/taxi-03.mp3) | לִשְׂדֵה הַתְּעוּפָה, בְּבַקָּשָׁה | to the airport, please | lisdeh hate'ufah, bevakashah |
+| [taxi-04](m/israeli/line/taxi-04.mp3) | לַתַּחֲנָה הַמֶּרְכָּזִית | to the central station | latachanah hamerkazit |
+| [taxi-07](m/israeli/line/taxi-07.mp3) | אֶפְשָׁר מוֹנֶה, בְּבַקָּשָׁה? | can you use the meter, please? | efshar moneh, bevakashah? |
+| [taxi-08](m/israeli/line/taxi-08.mp3) | כַּמָּה זֶה יַעֲלֶה? | how much will it cost? | kamah zeh ya'aleh? |
+| [taxi-09-f](m/israeli/line/taxi-09-f.mp3) | עִצְרִי כָּאן, בְּבַקָּשָׁה | stop here, please | itzri kan, bevakashah |
+| [taxi-09-m](m/israeli/line/taxi-09-m.mp3) | עֲצֹר כָּאן, בְּבַקָּשָׁה | stop here, please | atzor kan, bevakashah |
+| [taxi-10](m/israeli/line/taxi-10.mp3) | אֵיפֹה תַּחֲנַת הָאוֹטוֹבּוּס? | where is the bus stop? | eifoh tachanat ha'otobus? |
+| [taxi-11](m/israeli/line/taxi-11.mp3) | אֵיזֶה אוֹטוֹבּוּס הוֹלֵךְ לְ...? | which bus goes to ...? | eizeh otobus holekh le...? |
+| [taxi-12](m/israeli/line/taxi-12.mp3) | מָתַי הָרַכֶּבֶת הַבָּאָה? | when is the next train? | matai harakevet haba'ah? |
+| [taxi-13](m/israeli/line/taxi-13.mp3) | כַּרְטִיס אֶחָד לְ..., בְּבַקָּשָׁה | one ticket to ..., please | kartis echad le..., bevakashah |
+| [taxi-14](m/israeli/line/taxi-14.mp3) | הַאִם זֶה הָאוֹטוֹבּוּס לְ...? | is this the bus to ...? | ha'im zeh ha'otobus le...? |
+| [taxi-15](m/israeli/line/taxi-15.mp3) | הַנְּסִיעָה הָיְתָה נָעִימָה, תּוֹדָה | it was a pleasant ride, thanks | hanesi'ah hayetah na'imah, todah |
 | [torah-barchu-l1](m/israeli/line/torah-barchu-l1.mp3) | בָּרְכוּ אֶת אֲדֹנָי הַמְּבֹרָךְ׃ | Bless the LORD, the blessed one. | barkhu et adonai hamevorakh |
 | [torah-barchu-l2](m/israeli/line/torah-barchu-l2.mp3) | בָּרוּךְ אֲדֹנָי הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃ | Blessed is the LORD, the blessed one, for ever and ever. | barukh adonai hamevorakh le'olam va'ed |
 | [torah-bless-1](m/israeli/line/torah-bless-1.mp3) | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל־הָעַמִּים וְנָתַן לָנוּ אֶת־תּוֹרָתוֹ בָּרוּךְ אַתָּה אֲדֹנָי נוֹתֵן הַתּוֹרָה׃ | Blessed are you, LORD our God, king of the world, who chose us from all the peoples and gave us his Torah. Blessed are you, LORD, giver of the Torah. | barukh atah adonai eloheinu melekh ha'olam asher bachar banu mikol-ha'amim venatan lanu et-torato barukh atah adonai noten hatorah |
@@ -3460,4 +3579,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 3814 produced clips in INDEX.csv have an English label; 2 UNKNOWN. Filenames and IDs are unchanged.
+All 3933 produced clips in INDEX.csv have an English label; 2 UNKNOWN. Filenames and IDs are unchanged.

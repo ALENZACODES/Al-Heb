@@ -1,6 +1,7 @@
 // Game 13 — weather teleprompter uses existing authored course phrases, never composes Hebrew.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, speak, resultsCard } from './engine.js';
+import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY='games.weatherstudio.v1';
 export function buildWeatherDeck(lesson) {
@@ -15,6 +16,7 @@ export function buildWeatherDeck(lesson) {
 }
 export function weatherMatch(row,choice){return !!row && row.script===choice;}
 export function mount(root,ctx) {
+  const leaveSfx = sfx.enter(ctx);
   let alive=true,deck=[],images=null,round=0,session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:4});
   const status=h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading authentic course teleprompter phrases…');
   const board=h('div',{class:'game-board'});
@@ -29,7 +31,7 @@ export function mount(root,ctx) {
     const stage=h('div',{class:'game-weather-stage'},h('p',{},row.en));
     if(pic)stage.append(h('img',{src:pic.src,alt:pic.alt,width:pic.width,height:pic.height,class:'game-card-img','data-img-id':pic.id}));
     const options=shuffled(row.options).map(option=>h('button',{type:'button',class:'btn secondary game-choice',onclick:()=>{
-      const ok=weatherMatch(row,option);session.answer(ok);
+      const ok=weatherMatch(row,option);session.answer(ok); sfx.play(ok ? 'success' : 'miss');
       status.textContent=ok?'Correct source script read.':'That line describes another forecast.';
       if(ok){round++;void speak(ctx,option);}paint();
     }},heSpan(option,'he game-he-sm')));
@@ -39,5 +41,5 @@ export function mount(root,ctx) {
     if(!alive||!article.isConnected)return;deck=shuffled(buildWeatherDeck(data));images=R;
     if(deck.length<4){status.textContent='Not enough weather-language source exercises.';return;}paint();
   }).catch(()=>{if(alive)status.textContent='Weather phrases unavailable.';});
-  return ()=>{alive=false;};
+  return ()=>{alive=false; leaveSfx();};
 }

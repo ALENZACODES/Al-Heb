@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 3356 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 3400 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-3356 English labels; 4 UNKNOWN.
+3400 English labels; 4 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -3372,6 +3372,50 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [torah-bless-1-w12](m/israeli/word/torah-bless-1-w12.mp3) | לָנוּ | us | lanu |
 | [torah-bless-1-w13](m/israeli/word/torah-bless-1-w13.mp3) | אֶת־תּוֹרָתוֹ | his Torah | et-torato |
 | [torah-bless-1-w14](m/israeli/word/torah-bless-1-w14.mp3) | בָּרוּךְ | blessed | barukh |
+| [torah-bless-1-w15](m/israeli/word/torah-bless-1-w15.mp3) | אַתָּה | you, thou | atah |
+| [torah-bless-1-w16](m/israeli/word/torah-bless-1-w16.mp3) | אֲדֹנָי | the LORD | adonai |
+| [torah-bless-1-w17](m/israeli/word/torah-bless-1-w17.mp3) | נוֹתֵן | gives | noten |
+| [torah-bless-1-w18](m/israeli/word/torah-bless-1-w18.mp3) | הַתּוֹרָה׃ | the Torah | hatorah |
+| [torah-bless-1-w2](m/israeli/word/torah-bless-1-w2.mp3) | אַתָּה | you, thou | atah |
+| [torah-bless-1-w3](m/israeli/word/torah-bless-1-w3.mp3) | אֲדֹנָי | the LORD | adonai |
+| [torah-bless-1-w4](m/israeli/word/torah-bless-1-w4.mp3) | אֱלֹהֵינוּ | our-God | eloheinu |
+| [torah-bless-1-w5](m/israeli/word/torah-bless-1-w5.mp3) | מֶלֶךְ | king | melekh |
+| [torah-bless-1-w6](m/israeli/word/torah-bless-1-w6.mp3) | הָעוֹלָם | the world | ha'olam |
+| [torah-bless-1-w7](m/israeli/word/torah-bless-1-w7.mp3) | אֲשֶׁר | introduces a subordinate clause | asher |
+| [torah-bless-1-w8](m/israeli/word/torah-bless-1-w8.mp3) | בָּחַר | to choose, to opt, to select; to prefer; to appoint | bachar |
+| [torah-bless-1-w9](m/israeli/word/torah-bless-1-w9.mp3) | בָּנוּ | us | banu |
+| [torah-bless-2-w1](m/israeli/word/torah-bless-2-w1.mp3) | בָּרוּךְ | blessed | barukh |
+| [torah-bless-2-w10](m/israeli/word/torah-bless-2-w10.mp3) | תּוֹרַת | a Torah of | torat |
+| [torah-bless-2-w11](m/israeli/word/torah-bless-2-w11.mp3) | אֱמֶת | truth | emet |
+| [torah-bless-2-w12](m/israeli/word/torah-bless-2-w12.mp3) | וְחַיֵּי | and life | vechayei |
+| [torah-bless-2-w13](m/israeli/word/torah-bless-2-w13.mp3) | עוֹלָם | world; a world; Ever, eternity | olam |
+| [torah-bless-2-w14](m/israeli/word/torah-bless-2-w14.mp3) | נָטַע | to plant, implant (also figurative); to strike in, fix | nata |
+| [torah-bless-2-w15](m/israeli/word/torah-bless-2-w15.mp3) | בְּתוֹכֵנוּ׃ | within us | betokhenu |
+| [torah-bless-2-w16](m/israeli/word/torah-bless-2-w16.mp3) | בָּרוּךְ | blessed | barukh |
+| [torah-bless-2-w17](m/israeli/word/torah-bless-2-w17.mp3) | אַתָּה | you, thou | atah |
+| [torah-bless-2-w18](m/israeli/word/torah-bless-2-w18.mp3) | אֲדֹנָי | the LORD | adonai |
+| [torah-bless-2-w19](m/israeli/word/torah-bless-2-w19.mp3) | נוֹתֵן | gives | noten |
+| [torah-bless-2-w2](m/israeli/word/torah-bless-2-w2.mp3) | אַתָּה | you, thou | atah |
+| [torah-bless-2-w20](m/israeli/word/torah-bless-2-w20.mp3) | הַתּוֹרָה׃ | the Torah | hatorah |
+| [torah-bless-2-w3](m/israeli/word/torah-bless-2-w3.mp3) | אֲדֹנָי | the LORD | adonai |
+| [torah-bless-2-w4](m/israeli/word/torah-bless-2-w4.mp3) | אֱלֹהֵינוּ | our-God | eloheinu |
+| [torah-bless-2-w5](m/israeli/word/torah-bless-2-w5.mp3) | מֶלֶךְ | king | melekh |
+| [torah-bless-2-w6](m/israeli/word/torah-bless-2-w6.mp3) | הָעוֹלָם | the world | ha'olam |
+| [torah-bless-2-w7](m/israeli/word/torah-bless-2-w7.mp3) | אֲשֶׁר | introduces a subordinate clause | asher |
+| [torah-bless-2-w8](m/israeli/word/torah-bless-2-w8.mp3) | נָתַן | to give; to allow, permit, let; to put, place | natan |
+| [torah-bless-2-w9](m/israeli/word/torah-bless-2-w9.mp3) | לָנוּ | us | lanu |
+| [vahavta-1-w1](m/israeli/word/vahavta-1-w1.mp3) | וְאָהַבְתָּ | and you shall love | ve'ahavta |
+| [vahavta-1-w6](m/israeli/word/vahavta-1-w6.mp3) | וּבְכָל־נַפְשְׁךָ | and with all your soul | uvekhol-nafshekha |
+| [vahavta-1-w7](m/israeli/word/vahavta-1-w7.mp3) | וּבְכָל־מְאֹדֶךָ׃ | and with all your might | uvekhol-me'odekha |
+| [vahavta-2-w1](m/israeli/word/vahavta-2-w1.mp3) | וְהָיוּ | and shall be | vehayu |
+| [vahavta-2-w10](m/israeli/word/vahavta-2-w10.mp3) | לְבָנֶיךָ | to your children | levanekha |
+| [vahavta-2-w11](m/israeli/word/vahavta-2-w11.mp3) | וְדִבַּרְתָּ | and you shall talk | vedibarta |
+| [vahavta-2-w12](m/israeli/word/vahavta-2-w12.mp3) | בָּם | of them | bam |
+| [vahavta-2-w13](m/israeli/word/vahavta-2-w13.mp3) | בְּשִׁבְתְּךָ | when you sit | beshivtekha |
+| [vahavta-2-w14](m/israeli/word/vahavta-2-w14.mp3) | בְּבֵיתֶךָ | in your house | beveitekha |
+| [vahavta-2-w15](m/israeli/word/vahavta-2-w15.mp3) | וּבְלֶכְתְּךָ | and when you walk | uvelekhtekha |
+| [vahavta-2-w16](m/israeli/word/vahavta-2-w16.mp3) | בַדֶּרֶךְ | on the way | vaderekh |
+| [vahavta-2-w17](m/israeli/word/vahavta-2-w17.mp3) | וּבְשָׁכְבְּךָ | and when you lie down | uveshakhbekha |
 
 ## Israeli reading lines
 
@@ -3962,4 +4006,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 4330 produced clips in INDEX.csv have an English label; 4 UNKNOWN. Filenames and IDs are unchanged.
+All 4394 produced clips in INDEX.csv have an English label; 18 UNKNOWN. Filenames and IDs are unchanged.

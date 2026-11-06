@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 7407 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 7469 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-7407 English labels; 1933 UNKNOWN.
+7469 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -5614,6 +5614,68 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hddeaa2ed](m/israeli/word/hddeaa2ed.mp3) | אָוֶן | evil, wickedness | aven |
 | [hde2302bb](m/israeli/word/hde2302bb.mp3) | חוֹף | beach, shore, coast | chof |
 | [hde82cf75](m/israeli/word/hde82cf75.mp3) | הִטָּה | to tilt, slant; to inflect | hitah |
+| [hde989655](m/israeli/word/hde989655.mp3) | סָתַר | to contradict; to refute; to neutralize, to counteract | satar |
+| [hde9b27c8](m/israeli/word/hde9b27c8.mp3) | חֻקָּה | statute, law; constitution | chukah |
+| [hdea05db5](m/israeli/word/hdea05db5.mp3) | עֵבֶר | side, direction, way; the other side [of], the region beyond or across from | ever |
+| [hdebf05db](m/israeli/word/hdebf05db.mp3) | הִשְׁאִיר | to leave over, to spare, to leave behind | hish'ir |
+| [hdee3e527](m/israeli/word/hdee3e527.mp3) | אֲנַחְנוּ | we | anachnu |
+| [hdf8bcf60](m/israeli/word/hdf8bcf60.mp3) | תׇּכְנִית | a program, a plan; plan; a program, a show (on television, radio, or similar) | tokhnit |
+| [he028e6f0](m/israeli/word/he028e6f0.mp3) | אַרְיֵה | lion | aryeh |
+| [he038b6aa](m/israeli/word/he038b6aa.mp3) | הוֹלִיד | to give birth, to sire, to beget | holid |
+| [he0448a86](m/israeli/word/he0448a86.mp3) | פֹּה | here, this place, at this place, in this place | poh |
+| [he078c9e6](m/israeli/word/he078c9e6.mp3) | מַשְׁקֶה | drink (a beverage) | mashkeh |
+| [he0949da8](m/israeli/word/he0949da8.mp3) | לָשׁוֹן | tongue; language | lashon |
+| [he0b2f96b](m/israeli/word/he0b2f96b.mp3) | תּוֹדָה | gratitude | todah |
+| [he0fc258b](m/israeli/word/he0fc258b.mp3) | עֵז | female goat, she-goat | ez |
+| [he1477da0](m/israeli/word/he1477da0.mp3) | גֵּר | foreigner, stranger; convert to Judaism, proselyte; adventitious | ger |
+| [he15e52d3](m/israeli/word/he15e52d3.mp3) | טֶלֶפוֹן | telephone, phone | telefon |
+| [he19222ad](m/israeli/word/he19222ad.mp3) | יָמִין | right; the right hand; south | yamin |
+| [he1a5e616](m/israeli/word/he1a5e616.mp3) | בֶּגֶד | clothing, garment | beged |
+| [he21208a3](m/israeli/word/he21208a3.mp3) | מְשֻׁגָּע | mad, crazy, insane | meshuga |
+| [he22b4a86](m/israeli/word/he22b4a86.mp3) | שַׂר | captain, commander; cabinet minister; guardian angel | sar |
+| [he2aec699](m/israeli/word/he2aec699.mp3) | תָּקַף | to attack | takaf |
+| [he314ca8e](m/israeli/word/he314ca8e.mp3) | כַּדּוּר | a ball or orb or other spherical object; a ball; a sphere | kadur |
+| [he34bd325](m/israeli/word/he34bd325.mp3) | בְּהֵמָה | beast, animal (usually domesticated), livestock; beast, a person who behaves in an uncivilized manner | behemah |
+| [he38160e3](m/israeli/word/he38160e3.mp3) | רֵיקָם | Having nothing at hand; not having accomplished its purpose; for no reason, on no basis | reikam |
+| [he3b1acbd](m/israeli/word/he3b1acbd.mp3) | עִיר | city | ir |
+| [he43ad309](m/israeli/word/he43ad309.mp3) | שָׁפַט | to judge; to sentence; to referee | shafat |
+| [he43ec7f7](m/israeli/word/he43ec7f7.mp3) | בָּנָה | to build, to construct, to raise, to erect; to prepare, to raise, to lay the foundation of, to develop | banah |
+| [he527093f](m/israeli/word/he527093f.mp3) | חֹם | Heat, warmth; Heat; Warmth, fever, feverishness | chom |
+| [he53429ef](m/israeli/word/he53429ef.mp3) | שְׂמָאלִי | on the left; left-wing; left-handed | semali |
+| [he53d1d1d](m/israeli/word/he53d1d1d.mp3) | אֶבֶן | stone; gem; token, tile, piece | even |
+| [he54faf96](m/israeli/word/he54faf96.mp3) | שָׁלַט | to rule; to control; to master, to have under control | shalat |
+| [he5c23387](m/israeli/word/he5c23387.mp3) | אֱמֶת | truth | emet |
+| [he6287163](m/israeli/word/he6287163.mp3) | זָבַח | to slaughter, to kill; to sacrifice, to slaughter (for sacrifice) | zavach |
+| [he6d29dfd](m/israeli/word/he6d29dfd.mp3) | פָּתוּחַ | Open; Open (in various senses) | patuach |
+| [he78a3b3f](m/israeli/word/he78a3b3f.mp3) | חָרִיף | spicy (of food); sharp, harsh, sharply critical (of criticism, or of text) | charif |
+| [he7f4c5c3](m/israeli/word/he7f4c5c3.mp3) | רֶגֶשׁ | emotion, feeling | regesh |
+| [he801fe52](m/israeli/word/he801fe52.mp3) | שְׁבִיעִי | seventh | shevi'i |
+| [he8dfed90](m/israeli/word/he8dfed90.mp3) | נִשְׁאַר | to stay, to remain; to be left | nish'ar |
+| [he90efaca](m/israeli/word/he90efaca.mp3) | בַּי | bye | bai |
+| [he943571e](m/israeli/word/he943571e.mp3) | אִשָּׁה | woman (an adult female human); wife; a female animal | ishah |
+| [he945f31c](m/israeli/word/he945f31c.mp3) | חֶרֶב | sword; sabre | cherev |
+| [he964bca4](m/israeli/word/he964bca4.mp3) | הִשְׁתַּחֲוָה | to bow; to bow down, to prostrate oneself | hishtachavah |
+| [he973e381](m/israeli/word/he973e381.mp3) | רְשִׁימָה | list | reshimah |
+| [he9919e02](m/israeli/word/he9919e02.mp3) | לְ־ | to; to, for; of | le- |
+| [he9d6c9ab](m/israeli/word/he9d6c9ab.mp3) | כַּר | cushion; pillow | kar |
+| [hea14727f](m/israeli/word/hea14727f.mp3) | זֹאת | this (feminine) | zot |
+| [hea4f6fcc](m/israeli/word/hea4f6fcc.mp3) | חֵן | charm, grace, likeability | chen |
+| [hea59fdfe](m/israeli/word/hea59fdfe.mp3) | שֵׁרוּת | a service | sherut |
+| [hea72b7d7](m/israeli/word/hea72b7d7.mp3) | אִמֵּן | to train | imen |
+| [heaa07285](m/israeli/word/heaa07285.mp3) | אִחֵר | to be late | icher |
+| [heb070da2](m/israeli/word/heb070da2.mp3) | קָנָה | to buy, to purchase; to get, to appoint, to obtain, to acquire, to assign; to be appointed to a position, assigned a certain work | kanah |
+| [heb8a3bc1](m/israeli/word/heb8a3bc1.mp3) | הֵן | lo! as expressing surprise; yes, yea, aye; as well as | hen |
+| [hec9c6f65](m/israeli/word/hec9c6f65.mp3) | מְסֻגָּל | Able, capable | mesugal |
+| [heca8ed1e](m/israeli/word/heca8ed1e.mp3) | טַבַּעַת | ring | taba'at |
+| [hee07e419](m/israeli/word/hee07e419.mp3) | נֶחְמָד | nice, pleasant, lovely; nice, kind, friendly, pleasant | nechmad |
+| [hee0f6bea](m/israeli/word/hee0f6bea.mp3) | בָּרִיא | healthy, well (in good health); healthy, healthful; used adverbially | bari |
+| [heece315f](m/israeli/word/heece315f.mp3) | חַיָּה | animal (organism other than man); animal (person who behaves wildly) | chayah |
+| [hef13c381](m/israeli/word/hef13c381.mp3) | חַוָּה | farm | chavah |
+| [hef13f241](m/israeli/word/hef13f241.mp3) | גִּלָּה | to discover; to reveal | gilah |
+| [hef6e1613](m/israeli/word/hef6e1613.mp3) | אִישׁ | a man, adult male human being; husband | ish |
+| [hef745501](m/israeli/word/hef745501.mp3) | יַעַר | forest | ya'ar |
+| [hef7b6946](m/israeli/word/hef7b6946.mp3) | מִשְׁטָרָה | police | mishtarah |
+| [hefbbc2c7](m/israeli/word/hefbbc2c7.mp3) | זוֹנָה | female prostitute (who has sex for pay); slut | zonah |
 | [help-01](m/israeli/word/help-01.mp3) | עֶזְרָה! | help! | ezrah! |
 | [i-01-w1](m/israeli/word/i-01-w1.mp3) | בָּרְכוּ | UNKNOWN | barkhu |
 | [i-01-w10](m/israeli/word/i-01-w10.mp3) | לְעוֹלָם וָעֶד | UNKNOWN | le'olam va'ed |
@@ -8013,4 +8075,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 16156 produced clips in INDEX.csv have an English label; 2097 UNKNOWN. Filenames and IDs are unchanged.
+All 16358 produced clips in INDEX.csv have an English label; 2226 UNKNOWN. Filenames and IDs are unchanged.

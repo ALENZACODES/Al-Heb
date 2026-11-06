@@ -61000,6 +61000,606 @@
     "contains_text"
    ],
    "humanApproved": true
+  },
+  "HERO_week_08": {
+   "id": "HERO_week_08",
+   "file": "HERO_week_08.png",
+   "command": 199,
+   "set": "Motzei Shabbat & the week opening",
+   "block": "M",
+   "prompt": "Command 199 (Motzei Shabbat & the week opening): Three stars in a deep blue sky over rooftops; a braided candle lit on a table (objects); spices in a small tower box held to the light; a cup overflowing into a saucer by candlelight; hands held to the flame's light (the custom, from behind); a doorway with the week's first lamplight; a market stall opening its shutters on Sunday morning; a bus leaving a station into sunrise; work tools laid ready on a bench; Rimon waving at a calendar page left blank on a kitchen wall. Image 8 of 10: a bus leaving a station into sunrise. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "d50f166db6ece0f940d089165fdbb2222dbd88ab340117f3f87be37dbae82d82",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:39:45.695Z",
+   "sourceFile": "img-0050.png",
+   "sourceFileDate": "2026-11-06T21:39:44.936Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "643c769c7171cfd36bab31692d1f377f3359fd7e41563551eb5c47a85e41d468",
+   "originalFormat": "PNG",
+   "originalBytes": 173191,
+   "originalFile": "HERO_week_08.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HERO_week_08.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 23656
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_own_07": {
+   "id": "GRAM_own_07",
+   "file": "GRAM_own_07.png",
+   "command": 213,
+   "set": "Mine, yours, ours",
+   "block": "O",
+   "prompt": "Command 213 (Mine, yours, ours): Ari hugging his own blue cup while Noa points at her red cup; two identical bags — one beside Ari, one beside Noa; a child holding a parent's hand beside a lunch box; Rimon guarding a tiny bowl; a shared umbrella over both narrators; a coat on a hook between two name-blank tags; a dog choosing its own bed among three; a family table with a place set for each person (plates counted visually); Noa handing Ari his scarf; a group photo pose with everyone's hats on their own heads (hats as the possessive cue). Image 7 of 10: a dog choosing its own bed among three. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "ef04ad89f266c9001f103cd96e8086b165ad66421b738de4a4b292df7440d6ff",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:39:45.695Z",
+   "sourceFile": "img-0228.png",
+   "sourceFileDate": "2026-11-06T21:39:44.996Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "53c83787b564d7cb328a2b3e4ad8e2ff2ebdb5ac2b0af8b53f84b60bd3d257c9",
+   "originalFormat": "PNG",
+   "originalBytes": 253300,
+   "originalFile": "GRAM_own_07.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_own_07.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 25440
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_haifa_10": {
+   "id": "PLACE_haifa_10",
+   "file": "PLACE_haifa_10.png",
+   "command": 202,
+   "set": "Haifa & Akko",
+   "block": "N",
+   "prompt": "Command 202 (Haifa & Akko): Terraced gardens descending a green mountainside toward the sea (symmetrical terraces, fountains); a port with cranes below the terraces; a mountainside neighbourhood of red roofs; a cable car cabin over the slope; Akko — a crusader-era stone hall with great arches (interior, empty); Akko's sea wall with waves; a fishing harbour inside old walls; a lighthouse on the old wall at dusk; a market lane in a stone vault; the bay at night with two cities of lights across the water. Image 10 of 10: the bay at night with two cities of lights across the water. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "e67a9abeb7ad8bdf5883c69b01d7d73ba2f1a713617bd38993bc5b7484c5fa5b",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:39:45.695Z",
+   "sourceFile": "img-0724.png",
+   "sourceFileDate": "2026-11-06T21:39:45.197Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "4a5bd773e54f3430591ec8c90dbbbfee67e50afdd1912276177dd393903ab986",
+   "originalFormat": "PNG",
+   "originalBytes": 168700,
+   "originalFile": "PLACE_haifa_10.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_haifa_10.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 22588
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_link_04": {
+   "id": "GRAM_link_04",
+   "file": "GRAM_link_04.png",
+   "command": 219,
+   "set": "Connectors & little words",
+   "block": "O",
+   "prompt": "Command 219 (Connectors & little words): And — two baskets joined by a rope; or — a fork in a path with a cake on one side and fruit on the other; but — a sunny picnic with one black cloud; because — rain above, umbrella open below (cause readable); also — a third chair being added to a table of two; only — one gold apple among green apples; already — an empty plate with crumbs and a satisfied Rimon; not yet — a cake in an oven half risen; here — a gold map pin shape over a café table scene (pin as object); there — the same pin small and far on a hill. Image 4 of 10: because — rain above, umbrella open below (cause readable). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "7cd1b6a3463dca5e12106b6032b0e9bf1d1b955986949f323e76becc138ebcd2",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:39:45.695Z",
+   "sourceFile": "img-0750.png",
+   "sourceFileDate": "2026-11-06T21:39:45.020Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "977a7b14b684a25b30860bcd641a5b1dc12b2cc9120364ffe012c5bf66a7a80d",
+   "originalFormat": "PNG",
+   "originalBytes": 240411,
+   "originalFile": "GRAM_link_04.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_link_04.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 19438
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_jerusalem_07": {
+   "id": "PLACE_jerusalem_07",
+   "file": "PLACE_jerusalem_07.png",
+   "command": 200,
+   "set": "Jerusalem beyond the courtyard",
+   "block": "N",
+   "prompt": "Command 200 (Jerusalem beyond the courtyard): A narrow stepped alley of golden stone; rooftops and domes seen from a terrace (distant, generic); an ancient city gate with people passing small beneath; a market lane of spice pyramids in baskets (no signs); the walls at sunset from across a valley; a courtyard with an old olive tree and laundry lines; stone steps worn smooth leading up between houses; a small synagogue courtyard with a lemon tree; a watchtower view over hills at dawn; night — warm windows scattered over the dark hillside city. Image 7 of 10: stone steps worn smooth leading up between houses. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "f2f814fa137e32f7bfde3c7fefcf1be731655b08a501b5e5cd731e8b71f89429",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:39:45.695Z",
+   "sourceFile": "img-1116.png",
+   "sourceFileDate": "2026-11-06T21:39:45.037Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "3b6f9b85ef1ce103c719bfa4fc5fd033ce6e6aaabc45247ba97f2d50e6aa3bf0",
+   "originalFormat": "PNG",
+   "originalBytes": 205734,
+   "originalFile": "PLACE_jerusalem_07.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_jerusalem_07.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 34020
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_link_06": {
+   "id": "GRAM_link_06",
+   "file": "GRAM_link_06.png",
+   "command": 219,
+   "set": "Connectors & little words",
+   "block": "O",
+   "prompt": "Command 219 (Connectors & little words): And — two baskets joined by a rope; or — a fork in a path with a cake on one side and fruit on the other; but — a sunny picnic with one black cloud; because — rain above, umbrella open below (cause readable); also — a third chair being added to a table of two; only — one gold apple among green apples; already — an empty plate with crumbs and a satisfied Rimon; not yet — a cake in an oven half risen; here — a gold map pin shape over a café table scene (pin as object); there — the same pin small and far on a hill. Image 6 of 10: only — one gold apple among green apples. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "3ed1a10c0eb8503ec7e3aac5e77abbb57a758ce0b84bc6db0c7af9a26dd36918",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:39:45.695Z",
+   "sourceFile": "img-1129.png",
+   "sourceFileDate": "2026-11-06T21:39:45.032Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "cb79cbda39956f701609d91363658dadfeead581e351ff0dba3814d5904781f1",
+   "originalFormat": "PNG",
+   "originalBytes": 249739,
+   "originalFile": "GRAM_link_06.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_link_06.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 21256
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_jerusalem_08": {
+   "id": "PLACE_jerusalem_08",
+   "file": "PLACE_jerusalem_08.png",
+   "command": 200,
+   "set": "Jerusalem beyond the courtyard",
+   "block": "N",
+   "prompt": "Command 200 (Jerusalem beyond the courtyard): A narrow stepped alley of golden stone; rooftops and domes seen from a terrace (distant, generic); an ancient city gate with people passing small beneath; a market lane of spice pyramids in baskets (no signs); the walls at sunset from across a valley; a courtyard with an old olive tree and laundry lines; stone steps worn smooth leading up between houses; a small synagogue courtyard with a lemon tree; a watchtower view over hills at dawn; night — warm windows scattered over the dark hillside city. Image 8 of 10: a small synagogue courtyard with a lemon tree. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "97bc0f038600c7fe32ac6fc49b0cfcb18ea566e1d3e10c475035fc026e2a1207",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:39:45.695Z",
+   "sourceFile": "img-1188.png",
+   "sourceFileDate": "2026-11-06T21:39:45.136Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "ebb8ce7a10f02aaf43a0960542baedb19af1926a60d6c36e095b78b8f0702830",
+   "originalFormat": "PNG",
+   "originalBytes": 201385,
+   "originalFile": "PLACE_jerusalem_08.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_jerusalem_08.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 35748
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_place_04": {
+   "id": "GRAM_place_04",
+   "file": "GRAM_place_04.png",
+   "command": 210,
+   "set": "Prepositions — place",
+   "block": "O",
+   "prompt": "Command 210 (Prepositions — place): Rimon on a chair; Rimon under the chair; Rimon inside a box; Rimon beside the box; Rimon behind a curtain (paws visible); Rimon in front of a door; Rimon between two books; a cup on a table vs the same cup under the table (2 images); one wide image of a lane with a house at the far end — Ari small beside the far house and a second Ari large close to the viewer beside an identical near house (distance readable in a single frame). Image 4 of 10: Rimon beside the box. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "b8fb261cdef28921657c2aa586f9d2056f044f8cd63c0433f6c93c64363da740",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:39:45.695Z",
+   "sourceFile": "img-1222.png",
+   "sourceFileDate": "2026-11-06T21:39:45.125Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "8901607fb1a91fec8abd266a36fd25c42c55949a9a2c3c320b03b0f2595aa724",
+   "originalFormat": "PNG",
+   "originalBytes": 206036,
+   "originalFile": "GRAM_place_04.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_place_04.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 11614
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "STREAK_art_01": {
+   "id": "STREAK_art_01",
+   "file": "STREAK_art_01.png",
+   "command": 242,
+   "set": "Streak & calendar art",
+   "block": "R",
+   "prompt": "Command 242 (Streak & calendar art): Ten images for the streak system: a row of seven small flames, the seventh gold (the week kept); a flame sheltered under a glass cover (the Shabbat freeze — flame resting, not out); a seedling with one new leaf (day one); the same seedling taller at three growth stages (3 images); a moon with a small flame on its edge (the evening rescue reminder); a path of footprints with one gap filled by a gold star (a saved day); Rimon warming hands at a small campfire of one steady flame; a year path winding up a hill dotted with small flames into the distance. Count check: 2 + 1 + 3 + 1 + 1 + 1 + 1 = 10. Files STREAK_art_01 … _10. Image 1 of 10: a row of seven small flames, the seventh gold (the week kept). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "96763d6aa7eccaa128837d995cd5a1cdebd44464938b4d306b7cb4547317d9f5",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:39:45.695Z",
+   "sourceFile": "img-1317.png",
+   "sourceFileDate": "2026-11-06T21:39:45.142Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "a8df01c3c20bc800e98e22aa67ff5e3b369caee2867ed55f9e6c53344d0471af",
+   "originalFormat": "PNG",
+   "originalBytes": 195012,
+   "originalFile": "STREAK_art_01.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "STREAK_art_01.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 9202
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "BADGE_01": {
+   "id": "BADGE_01",
+   "file": "BADGE_01.png",
+   "command": 97,
+   "set": "badges",
+   "block": "F",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Round enamel-pin style level badge 1 of 8: a single candle. Same ring and ribbon on every badge; colour progression cream > gold > blue > red across levels (level 1). No text, letters or numerals anywhere in the image.",
+   "promptSha256": "0b7b3a70fffead601aba63436526e37859f16fb0b36b8ad13dd775b6452e390b",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:39:45.695Z",
+   "sourceFile": "img-1372.png",
+   "sourceFileDate": "2026-11-06T21:39:45.110Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "0b7ab722e611dcce82250fed3a98c183343d0c6364909d3338fd34980f8b94f8",
+   "originalFormat": "PNG",
+   "originalBytes": 236694,
+   "originalFile": "BADGE_01.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "BADGE_01.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 19934
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HERO_sights_04": {
+   "id": "HERO_sights_04",
+   "file": "HERO_sights_04.png",
+   "command": 197,
+   "set": "Blessings on sights & occasions",
+   "block": "M",
+   "prompt": "Command 197 (Blessings on sights & occasions): A rainbow after rain over fields (shehecheyanu of sight); the open sea horizon from a cliff; a fruit tree in full first blossom; tasting the first fruit of the season from a small bowl; new clothes laid out on a bed with light on them; a scholar's house with a lit study window at night; a rainbow-coloured thunderstorm clearing over a town (awe); mountains of Judea-style hills in morning haze; a great river in flood season, powerful and calm; meeting an old friend on a street after years — two figures stopping in delighted surprise. Image 4 of 10: tasting the first fruit of the season from a small bowl. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "1dd0031db8e6e248a2705e96a40bf9a293cc790705d0e3963415a1ba8e72c83a",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:39:45.695Z",
+   "sourceFile": "img-1472.png",
+   "sourceFileDate": "2026-11-06T21:39:45.128Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "d1ad08cf2bbbfb85ea6a651ccd3e659a858537d229ea50d965b667fed86d2795",
+   "originalFormat": "PNG",
+   "originalBytes": 143141,
+   "originalFile": "HERO_sights_04.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HERO_sights_04.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 14192
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "STATE_art_08": {
+   "id": "STATE_art_08",
+   "file": "STATE_art_08.png",
+   "command": 243,
+   "set": "Empty, error & success states",
+   "block": "R",
+   "prompt": "Command 243 (Empty, error & success states): Ten friendly square states: Rimon holding an empty basket (nothing here yet); Rimon fishing in an empty bucket (no results); Rimon untangling a ball of string (something went wrong); Rimon with a bandaged head bump sitting on a cushion (offline — rest and retry); a gold check seal breaking through a ribbon (success, no text); Rimon watering a pot where nothing has sprouted yet (keep going); a blank map with one gold pin and a lot of dotted path (journey started); Rimon holding a \"closed\" shutter door gently ajar from inside (locked level preview — door only, no signs); a finish-line ribbon across a path with confetti shapes; Rimon asleep on a \"done\" stack of finished books. Files STATE_art_01 … _10. Image 8 of 10: Rimon holding a \"closed\" shutter door gently ajar from inside (locked level preview — door only, no signs). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "28951e6b066a6afd4bbf1fcfa18f252a8def0d07452999d0157a08e2e17f43ed",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:39:45.695Z",
+   "sourceFile": "img-1484.png",
+   "sourceFileDate": "2026-11-06T21:39:45.188Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "6cdc05bd4d0364644298c5cf57cd39f72032fff1548e0020d0e71708d0b7e5ad",
+   "originalFormat": "PNG",
+   "originalBytes": 185620,
+   "originalFile": "STATE_art_08.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "STATE_art_08.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 6810
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

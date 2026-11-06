@@ -2,8 +2,20 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 1044,
+ "count": 1056,
  "images": {
+  "BADGE_01": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "BADGE_01.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "BADGE_03": {
    "w": 512,
    "h": 512,
@@ -2140,6 +2152,30 @@
     }
    ]
   },
+  "GRAM_link_04": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_link_04.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_link_06": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_link_06.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GRAM_link_07": {
    "w": 512,
    "h": 512,
@@ -2308,6 +2344,18 @@
     }
    ]
   },
+  "GRAM_own_07": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_own_07.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GRAM_own_08": {
    "w": 512,
    "h": 512,
@@ -2315,6 +2363,18 @@
     {
      "edge": 512,
      "file": "GRAM_own_08.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_place_04": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_place_04.512.webp",
      "w": 512,
      "h": 512
     }
@@ -3502,6 +3562,18 @@
     }
    ]
   },
+  "HERO_sights_04": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HERO_sights_04.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "HERO_sights_05": {
    "w": 512,
    "h": 293,
@@ -3545,6 +3617,18 @@
     {
      "edge": 512,
      "file": "HERO_week_07.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "HERO_week_08": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HERO_week_08.512.webp",
      "w": 512,
      "h": 293
     }
@@ -10672,6 +10756,18 @@
     }
    ]
   },
+  "PLACE_haifa_10": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_haifa_10.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_jerusalem_01": {
    "w": 512,
    "h": 293,
@@ -10691,6 +10787,30 @@
     {
      "edge": 512,
      "file": "PLACE_jerusalem_03.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_jerusalem_07": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_jerusalem_07.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_jerusalem_08": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_jerusalem_08.512.webp",
      "w": 512,
      "h": 293
     }
@@ -10907,6 +11027,18 @@
     {
      "edge": 512,
      "file": "STATE_art_07.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "STATE_art_08": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "STATE_art_08.512.webp",
      "w": 512,
      "h": 512
     }
@@ -12733,6 +12865,18 @@
      "file": "STORY_prophets_10.1600.webp",
      "w": 1600,
      "h": 914
+    }
+   ]
+  },
+  "STREAK_art_01": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "STREAK_art_01.512.webp",
+     "w": 512,
+     "h": 512
     }
    ]
   },

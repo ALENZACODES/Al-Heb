@@ -5442,6 +5442,54 @@
    "forcedDespite": [
     "contains_text"
    ]
+  },
+  "HERO_week_08": {
+   "status": "approved",
+   "at": "2026-11-06T21:42:20.398Z"
+  },
+  "GRAM_own_07": {
+   "status": "approved",
+   "at": "2026-11-06T21:42:20.398Z"
+  },
+  "PLACE_haifa_10": {
+   "status": "approved",
+   "at": "2026-11-06T21:42:20.398Z"
+  },
+  "GRAM_link_04": {
+   "status": "approved",
+   "at": "2026-11-06T21:42:20.398Z"
+  },
+  "PLACE_jerusalem_07": {
+   "status": "approved",
+   "at": "2026-11-06T21:42:20.398Z"
+  },
+  "GRAM_link_06": {
+   "status": "approved",
+   "at": "2026-11-06T21:42:20.398Z"
+  },
+  "PLACE_jerusalem_08": {
+   "status": "approved",
+   "at": "2026-11-06T21:42:20.398Z"
+  },
+  "GRAM_place_04": {
+   "status": "approved",
+   "at": "2026-11-06T21:42:20.398Z"
+  },
+  "STREAK_art_01": {
+   "status": "approved",
+   "at": "2026-11-06T21:42:20.398Z"
+  },
+  "BADGE_01": {
+   "status": "approved",
+   "at": "2026-11-06T21:42:20.398Z"
+  },
+  "HERO_sights_04": {
+   "status": "approved",
+   "at": "2026-11-06T21:42:20.398Z"
+  },
+  "STATE_art_08": {
+   "status": "approved",
+   "at": "2026-11-06T21:42:20.398Z"
   }
  }
 }

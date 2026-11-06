@@ -42,23 +42,23 @@ const CSS = `
 .alef-trd button{min-block-size:max(44px,var(--tap,48px));min-inline-size:max(44px,var(--tap,48px));padding:.4rem .8rem;font:inherit;border:2px solid var(--border,#767676);border-radius:8px;background:var(--card,#fff);color:inherit;cursor:pointer}
 .alef-trd button[aria-pressed="true"]{border-width:3px;font-weight:700;text-decoration:underline}
 .alef-trd button:focus-visible{outline:3px solid currentColor;outline-offset:2px}
-.alef-trd .trd-verse{margin-block:1rem;padding:.5rem;border:1px solid var(--border,#bbb);border-radius:8px}
-.alef-trd .trd-vlabel{font-size:.9rem;font-weight:700;margin:0 0 .25rem}
-.alef-trd .trd-line{direction:rtl;font-size:calc(2rem * var(--trd-scale,1));line-height:2.2;margin:.25rem 0;display:flex;flex-wrap:wrap;gap:.25rem .5rem}
-.alef-trd .trd-w{white-space:nowrap;font-size:inherit;line-height:1.6;min-inline-size:max(44px,var(--tap,48px))}
+.alef-trd .trd-verse{margin-block:.55rem;padding:.4rem .5rem;border:1px solid var(--border,#bbb);border-radius:8px}
+.alef-trd .trd-vlabel{font-size:.9rem;font-weight:700;margin:0 0 .15rem}
+.alef-trd .trd-line{direction:rtl;font-size:calc(1.5rem * var(--trd-scale,1));line-height:1.8;margin:.15rem 0;display:flex;flex-wrap:wrap;gap:.2rem .4rem}
+.alef-trd .trd-w{white-space:nowrap;font-size:inherit;line-height:1.6;min-inline-size:max(44px,var(--tap,48px));padding:.1rem .4rem}
 .alef-trd .trd-w.trd-cur{border-width:4px;border-style:double;background:var(--hl,#ffe9a8);color:var(--hl-ink,#000)}
 .alef-trd .trd-w.trd-sel{border-style:dashed}
-.alef-trd .trd-stop{font-size:calc(2rem * var(--trd-scale,1));line-height:1.6}
-.alef-trd .trd-en{margin:.25rem 0;font-style:italic}
+.alef-trd .trd-stop{font-size:calc(1.5rem * var(--trd-scale,1));line-height:1.6}
+.alef-trd .trd-en{margin:.15rem 0;font-style:italic}
 .alef-trd .trd-detail{border:2px solid currentColor;border-radius:8px;padding:.6rem;margin-block:1rem}
-.alef-trd .trd-big{font-size:calc(2.4rem * var(--trd-scale,1));direction:rtl}
+.alef-trd .trd-big{font-size:calc(1.9rem * var(--trd-scale,1));direction:rtl}
 .alef-trd .trd-lg{font-size:1.6em;line-height:1}
 .alef-trd .trd-lgnote{font-size:.9rem;margin:.25rem 0}
 .alef-trd table{border-collapse:collapse;inline-size:100%}
 .alef-trd th,.alef-trd td{border:1px solid var(--border,#999);padding:.3rem .4rem;text-align:start;vertical-align:top}
 .alef-trd .trd-scroll{overflow-x:auto;max-inline-size:100%;margin-block:.5rem}
 .alef-trd .trd-scroll table{inline-size:100%;min-inline-size:36rem}
-.alef-trd .trd-glyph{font-size:calc(2rem * var(--trd-scale,1));direction:rtl}
+.alef-trd .trd-glyph{font-size:calc(1.5rem * var(--trd-scale,1));direction:rtl}
 .alef-trd .trd-ctl{margin-block:.5rem;border:1px solid var(--border,#bbb);border-radius:8px;padding:0 .6rem}
 .alef-trd .trd-ctl>summary,.alef-trd .trd-notice-d>summary{cursor:pointer;min-block-size:max(44px,var(--tap,48px));display:flex;align-items:center;font-weight:700}
 .alef-trd summary:focus-visible{outline:3px solid currentColor;outline-offset:2px}

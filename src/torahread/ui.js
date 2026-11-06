@@ -32,18 +32,18 @@ export const CSS = `
 .trd select{font:inherit;min-block-size:var(--tap,48px);max-inline-size:100%;padding:.3rem .6rem;border-radius:8px;border:2px solid var(--border,#d9cdb3);background:var(--card,#fffaf0);color:inherit}
 .trd-levels{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,10rem),1fr));gap:.4rem;margin-block:.6rem}
 .trd-levels .trd-btn{border-radius:12px;text-align:start}
-.trd-card{border:1px solid var(--border,#d9cdb3);background:var(--card,#fffaf0);border-radius:12px;padding:.45rem .7rem;margin-block:.35rem}
+.trd-card{border:1px solid var(--border,#d9cdb3);background:var(--card,#fffaf0);border-radius:12px;padding:.7rem 1rem;margin-block:.6rem}
 .trd-card h3{margin-block:.1em .3em}
-.trd-line{display:flex;flex-wrap:wrap;gap:.3rem .45rem;direction:rtl;margin-block:.3rem;align-items:flex-start}
+.trd-line{display:flex;flex-wrap:wrap;gap:.5rem .7rem;direction:rtl;margin-block:.8rem;align-items:flex-start}
 .trd-cell{display:inline-flex;flex-direction:column;align-items:center;gap:.1rem}
 .trd-wrow{display:inline-flex;flex-wrap:nowrap;align-items:center;direction:rtl}
-.trd-stop{font-family:var(--font-he,serif);font-size:1.5rem;line-height:1.35;margin-inline-start:-.35rem}
-.trd-w{font-family:var(--font-he,serif);font-size:1.5rem;line-height:1.35;padding:.02rem .35rem;border-radius:10px;border-color:transparent;color:inherit;direction:rtl}
+.trd-stop{font-family:var(--font-he,serif);font-size:2rem;line-height:1.6;margin-inline-start:-.35rem}
+.trd-w{font-family:var(--font-he,serif);font-size:2rem;line-height:1.6;padding:.05rem .5rem;border-radius:10px;border-color:transparent;color:inherit;direction:rtl}
 .trd-w:hover{border-color:var(--accent,#1f3a5f)}
 .trd-w[aria-pressed="true"]{background:var(--warn-bg,#fff1c2);color:var(--warn-fg,#5b4200);border-color:var(--focus,#b45309)}
 .trd-lg{font-size:1.6em;line-height:1}
 .trd-tr{font-size:.85rem;color:var(--muted,#5a6275);direction:ltr}
-.trd-he{font-family:var(--font-he,serif);font-size:1.55rem;line-height:1.55;direction:rtl}
+.trd-he{font-family:var(--font-he,serif);font-size:1.8rem;line-height:1.7;direction:rtl}
 .trd-muted{color:var(--muted,#5a6275);font-size:.92rem}
 .trd-badge{display:inline-block;font-size:.78rem;border:1px solid currentColor;border-radius:999px;padding:0 .5rem;margin-inline-start:.4rem}
 .trd-status{min-block-size:1.4em;margin-block:.4rem;font-size:.95rem}
@@ -56,7 +56,7 @@ export const CSS = `
 .trd-sr{position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .trd details{margin-block:.5rem}
 .trd-tabs .trd-tab{padding:.2rem .5rem;font-size:.88rem}
-#trd-item-h{font-size:1.05rem;margin-block:.4em .15em}
+#trd-item-h{font-size:1.15rem;margin-block:.5em .2em}
 #trd-item-h .trd-muted{display:block;font-size:.9rem;font-weight:400}
 .trd-fold{border:1px solid var(--border,#d9cdb3);border-radius:8px;padding:0 .7rem;margin-block:.4rem}
 .trd-fold>summary{font-weight:700;min-block-size:44px}

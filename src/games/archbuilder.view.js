@@ -37,9 +37,20 @@ export function mount(root, ctx) {
     const picture = imgOf(images, 'letter', letter.id, { variant: 'print', role: 'mnemonic' });
     if (picture) reference.append(h('img', { src: picture.src, alt: picture.alt, width: picture.width,
       height: picture.height, class: 'game-card-img', 'data-img-id': picture.id }));
-    const diagram = h('svg', { viewBox: '0 0 1000 1000', class: 'game-arch-svg', 'aria-label': 'Locked authentic letter strokes' });
-    for (const stroke of letter.strokes.slice(0, step))
-      diagram.append(h('path', { d: stroke.path, fill: 'none', stroke: 'currentColor', 'stroke-width': 65, 'stroke-linecap': 'round' }));
+    const svgNS = 'http://www.w3.org/2000/svg';
+    const diagram = document.createElementNS(svgNS, 'svg');
+    diagram.setAttribute('viewBox', '0 0 1000 1000');
+    diagram.setAttribute('class', 'game-arch-svg');
+    diagram.setAttribute('aria-label', 'Locked authentic letter strokes');
+    for (const stroke of letter.strokes.slice(0, step)) {
+      const path = document.createElementNS(svgNS, 'path');
+      path.setAttribute('d', stroke.path);
+      path.setAttribute('fill', 'none');
+      path.setAttribute('stroke', 'currentColor');
+      path.setAttribute('stroke-width', '65');
+      path.setAttribute('stroke-linecap', 'round');
+      diagram.append(path);
+    }
     const choices = shuffled(letter.strokes).map((stroke, i) =>
       h('button', { type: 'button', class: 'btn secondary game-choice', onclick: () => {
         if (!alive) return;

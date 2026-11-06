@@ -6,6 +6,7 @@
 // Pure of the DOM except audioButton(), which takes a `h` element factory.
 import { fileLabel, STATUS_LABELS } from './audio-labels.js';
 import { isAudioFree } from './audiofree.js';
+import { learnerFields, englishSay, clipPhonetic, FILE_RATES, SPEED_CHOICES, SAY_LEGEND } from './clip-labels.js';
 export const DEVICE_LABEL = 'Device voice, not a recorded teacher; Israeli-style only';
 export const NO_AUDIO = STATUS_LABELS.missing;
 
@@ -39,6 +40,44 @@ export function audioAccess(audio, kind, id, o = {}) {
 /** One-line status chip text for an access result ('' when nothing to say). */
 export function chipText(a) { return a.level === 'none' ? NO_AUDIO : a.label; }
 
+function playRate(ctx, opt) {
+  const rate = FILE_RATES[ctx?.settings?.get?.('playbackRate')];
+  return rate && rate !== 1 ? { ...opt, playbackRate: rate } : opt;
+}
+
+/** Learner lines and a speed control for a word or line. Appended after the button so existing child order stays put. */
+function clipTail(h, ctx, kind, id, opt) {
+  if (kind !== 'word' && kind !== 'line') return [];
+  let info = null;
+  try { info = ctx?.audio?.clipInfo?.(kind, id, opt) || null; } catch { info = null; }
+  const fields = learnerFields(info) || { text: '', english: '', phonetic: '', say: '' };
+  const trad = opt?.tradition || ctx?.settings?.get?.('congregation') || 'sephardi';
+  if (!fields.phonetic && typeof opt?.text === 'string' && opt.text.trim()) {
+    fields.phonetic = clipPhonetic(opt.text, trad);
+    fields.say = englishSay(fields.phonetic);
+    if (!fields.text) fields.text = opt.text.trim();
+  }
+  const cur = ctx?.settings?.get?.('playbackRate') || 'normal';
+  const set = (rateId) => {
+    const s = ctx?.settings;
+    if (!s || typeof s.set !== 'function' || !FILE_RATES[rateId]) return;
+    if (s.set.length >= 2) s.set('playbackRate', rateId);
+    else s.set({ playbackRate: rateId });
+  };
+  const bits = [];
+  if (fields.text) bits.push(h('span', { class: 'clip-he', dir: 'rtl', lang: 'he' }, fields.text));
+  if (fields.english) bits.push(h('span', { class: 'clip-en', lang: 'en' }, `Meaning: ${fields.english}`));
+  if (fields.phonetic) bits.push(h('span', { class: 'clip-ph', lang: 'en' }, `Phonetic: ${fields.phonetic}`));
+  if (fields.say) bits.push(h('span', { class: 'clip-say', lang: 'en' }, `Say it: ${fields.say}`));
+  bits.push(h('details', { class: 'clip-legend' }, h('summary', {}, 'How to read the English sounds'), h('p', {}, SAY_LEGEND)));
+  bits.push(h('span', { class: 'clip-speed', role: 'group', 'aria-label': 'Playback speed' },
+    ...SPEED_CHOICES.map(([rateId, name]) => h('button', {
+      type: 'button', class: 'clip-speed-btn', 'data-rate': rateId,
+      'aria-pressed': cur === rateId ? 'true' : 'false', onclick: () => set(rateId),
+    }, name))));
+  return bits;
+}
+
 /**
  * A play button that is only a button when sound is possible. Otherwise a one-line "No audio yet" with the respelling.
  * @param {Function} h element factory (src/shell/ui.js h)
@@ -55,7 +94,7 @@ export function audioButton(h, ctx, o) {
   if (typeof o.text === 'string' && o.text.trim()) opt.text = o.text;
   const a = audioAccess(ctx && ctx.audio, kind, id, opt);
   if (a.level === 'none' && !a.checking) {
-    return h('span', { class: 'audio-none muted', 'data-audio-state': 'none' }, NO_AUDIO, respelling ? ` - say it as written: ${respelling}` : '');
+    return h('span', { class: 'audio-none muted', 'data-audio-state': 'none' }, NO_AUDIO, respelling ? ` - say it as written: ${respelling}` : '', ...clipTail(h, ctx, kind, id, opt));
   }
   const note = o.note || h('span', { class: 'audio-chip muted', role: 'status', 'aria-live': 'polite' }, a.checking ? 'Checking audio...' : a.label);
   const btn = h('button', { type: 'button', class: o.class || 'btn secondary alef-play', 'data-audio': `${kind}/${id}`, 'data-audio-state': a.level,
@@ -66,11 +105,11 @@ export function audioButton(h, ctx, o) {
         const now = audioAccess(ctx.audio, kind, id, opt);
         if (now.level === 'none') { note.textContent = respelling ? `${NO_AUDIO}. Say it as written: ${respelling}` : NO_AUDIO; return; }
         note.textContent = now.label;
-        const r = await ctx.audio.play(kind, id, opt);
+        const r = await ctx.audio.play(kind, id, playRate(ctx, opt));
         if (r && r.source === 'none') note.textContent = `${NO_AUDIO}${respelling ? `. Say it as written: ${respelling}` : ''}`;
       } catch { note.textContent = NO_AUDIO; }
     } }, h('span', { 'aria-hidden': 'true' }, '▶'), ' ', label);
-  return h('span', { class: 'audio-wrap' }, btn, ' ', note);
+  return h('span', { class: 'audio-wrap' }, btn, ' ', note, ...clipTail(h, ctx, kind, id, opt));
 }
 
 /** Pure: text for the full notice (the one-line banner links to it; it is also the link's title). */

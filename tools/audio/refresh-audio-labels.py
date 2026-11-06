@@ -1,3 +1,6 @@
+# Word and line learner labels (tradition phonetic, English meaning, English sounds) are rebuilt by
+# tools/audio/apply-clip-labels.mjs. This script only fills Israeli English glosses and must not copy
+# Israeli phonetics onto Ashkenazi or Sephardi rows.
 from pathlib import Path
 import json,csv,re
 R=Path('/workspace/shared/al-heb/voice-sprint-2026-11-05')

@@ -1,5 +1,7 @@
 // @ts-check
 import { speechSafeText } from '../shell/names.js';
+import { englishSay, FILE_RATES } from '../shell/clip-labels.js';
+export { FILE_RATES };
 // ALEF audio player. Resolution order for play(kind, id):
 //   1. exact file (same voice + tradition) whose manifest status is not "missing"
 //   2. same voice, OTHER tradition, only if the manifest entry lists it in `equivalentTo`
@@ -74,6 +76,7 @@ export function createAudio(opts) {
 
   let current = null;     // {audio} currently playing
   let stopped = 0;        // generation counter for cancelling sequences
+  const extSubs = new Set();
 
   const url = (p) => (basePath ? basePath.replace(/\/+$/, '') + '/' : '') + p.replace(/^\/+/, '');
 
@@ -152,12 +155,11 @@ export function createAudio(opts) {
     return !!(vs && vs.length && !vs.some((v) => /^he([-_]|$)/i.test(v.lang || '')));
   }
 
-  const RATE = { normal: 1, slow: 0.85, slower: 0.7 };
   function fileRate(o = {}) {
     if (typeof o.playbackRate === 'number' && o.playbackRate > 0) return o.playbackRate;
     if (typeof o.rate === 'number' && o.rate > 0) return o.rate;
     const key = (settings && settings.playbackRate) || 'normal';
-    return RATE[key] || 1;
+    return FILE_RATES[key] || 1;
   }
   function playFile(p, o = {}) {
     return new Promise((resolve) => {
@@ -181,7 +183,7 @@ export function createAudio(opts) {
       const u = new UtteranceCtor(safe.text);
       u.lang = 'he-IL';
       if (typeof settings.ttsRate === 'number') u.rate = settings.ttsRate;
-      else if (settings && settings.playbackRate && RATE[settings.playbackRate]) u.rate = RATE[settings.playbackRate];
+      else if (settings && settings.playbackRate && FILE_RATES[settings.playbackRate]) u.rate = FILE_RATES[settings.playbackRate];
       current = { stop: () => { try { speech.cancel(); } catch { /* ignore */ } resolve({ ok: true, stopped: true }); } };
       u.onend = () => resolve({ ok: true });
       u.onerror = () => resolve({ ok: false, error: 'speech-error' });
@@ -257,6 +259,35 @@ export function createAudio(opts) {
     /** what play() would use right now, without playing. */
     status: (kind, id, o) => plan(kind, id, o),
     /** add entries after creation (the lazily loaded data/audio/manifest-words-<tradition>.json shards). Safe to call repeatedly. */
-    extend: (entries) => { addEntries(entries || []); addLinks(entries || []); },
+    extend: (entries) => {
+      addEntries(entries || []); addLinks(entries || []);
+      for (const f of extSubs) { try { f(); } catch { /* ignore */ } }
+    },
+    /** fn() after extend(); returns an unsubscribe function. Label screens refresh when a word shard arrives. */
+    onExtended(fn) { extSubs.add(fn); return () => extSubs.delete(fn); },
+    /**
+     * Learner label for the clip this voice and tradition would play.
+     * @returns {{text:string, english:string, phonetic:string, say:string, voice:string, tradition:string, id:string, kind:string}|null}
+     */
+    clipInfo(kind, rawId, o = {}) {
+      const id = normalizeId(rawId);
+      const ctxt = context(o);
+      const { voice, tradition } = ctxt;
+      if (!VOICES.includes(voice) || !TRADITIONS.includes(tradition)) return null;
+      for (const cid of candidates(kind, id)) {
+        const e = index.get(`${voice}|${tradition}|${kind}|${cid}`);
+        if (!e) continue;
+        const text = String(e.text || '').trim();
+        const englishRaw = String(e.english || '').trim();
+        const phonetic = String(e.phonetic || '').trim();
+        const say = String(e.say || '').trim() || englishSay(phonetic);
+        if (!text && !englishRaw && !phonetic) continue;
+        return {
+          text, phonetic, say, voice: e.voice, tradition: e.tradition, id: e.id, kind: e.kind,
+          english: englishRaw && englishRaw !== 'UNKNOWN' ? englishRaw : '',
+        };
+      }
+      return null;
+    },
   };
 }

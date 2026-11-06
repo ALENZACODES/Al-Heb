@@ -10,6 +10,8 @@ import { sourcesLine } from '../shell/sources.js';
 import { congregationOf, audioNote, playLine, LABELS } from '../pronunciation/forTradition.js';
 import { KEY, normState, buildPool, buildRound, applyAnswer } from './model.js';
 import { isAudioFree, AUDIO_FREE_NOTE, SKIP_NOTE } from '../shell/audiofree.js';
+import { learnerFields } from '../shell/clip-labels.js';
+import { playbackSpeedControl } from '../curriculum/audio-ui.js';
 
 export const TITLE_LISTEN = 'Listen and pick';
 export const TITLE_READ = 'Read and match';
@@ -108,8 +110,8 @@ export function mount(root, ctx) {
     const opts = el('div', { class: 'ls-opts', role: 'group', 'aria-label': 'Choices' },
       q.choices.map((c, i) => el('button', { class: 'btn', type: 'button', lang: 'he', dir: 'rtl', 'aria-label': `Choice ${i + 1}: ${c.he}`, onclick: () => pick(c, opts) }, heText(c.he))));
     const head = mode === 'audio'
-      ? [el('p', {}, `Word ${qi + 1} of ${qs.length}. Press Play, then pick the written word.`),
-        el('button', { class: 'btn', type: 'button', onclick: () => play(q.id) }, 'Play')]
+      ? [el('p', {}, `Word ${qi + 1} of ${qs.length}. Press Play, then pick the written word. Slow plays the same clip more slowly.`),
+        el('div', { class: 'ls-play' }, playbackSpeedControl(ctx), el('button', { class: 'btn', type: 'button', onclick: () => play(q.id) }, 'Play'))]
       : [el('p', {}, `Word ${qi + 1} of ${qs.length}. Which written word means: ${uiEnglish(ctx, q.prompt)}?`)];
     // Skipping is always possible and records nothing: not a miss, not an answer. A listening round can also be swapped for reading questions.
     const skipRow = el('div', { class: 'ls-skip' },
@@ -136,9 +138,22 @@ export function mount(root, ctx) {
     state = applyAnswer(state, q.id, ok, Date.now(), mode); await storeSet(ctx, KEY, state);
     const msg = ok ? 'Right.' : `Not this time. The word was ${q.answer}. It will come back later.`;
     say(msg);
+    let labels = null;
+    if (mode === 'audio') {
+      try {
+        const f = learnerFields(ctx?.audio?.clipInfo?.('word', q.id));
+        if (f && (f.text || f.english || f.phonetic || f.say)) {
+          labels = el('div', { class: 'clip-face' },
+            f.text ? el('p', { class: 'clip-he', lang: 'he', dir: 'rtl' }, f.text) : null,
+            f.english ? el('p', { lang: 'en' }, `Meaning: ${f.english}`) : null,
+            f.phonetic ? el('p', { lang: 'en' }, `Phonetic: ${f.phonetic}`) : null,
+            f.say ? el('p', { lang: 'en' }, `Say it: ${f.say}`) : null);
+        }
+      } catch { labels = null; }
+    }
     const next = el('button', { class: 'btn', type: 'button', onclick: () => { qi++; if (qi < qs.length) show(); else done(); } }, qi + 1 < qs.length ? 'Next word' : 'Finish');
     try { body.querySelector?.('.ls-skip')?.remove?.(); } catch { /* optional */ }
-    body.append(el('p', {}, msg), next); next.focus?.();
+    body.append(el('p', {}, msg), labels, next); next.focus?.();
   }
   // After the list is replaced the focused button is gone; move focus to the new first paragraph so keyboard and screen reader users keep their place.
   function focusLead() { const lead = body.querySelector?.('p'); if (lead) { lead.setAttribute('tabindex', '-1'); lead.focus?.(); } }

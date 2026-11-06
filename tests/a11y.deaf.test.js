@@ -191,7 +191,11 @@ test('play buttons: drawn normally, replaced by a hidden empty span for audioFre
   const { playButton } = await import('../src/curriculum/audio-ui.js');
   const audio = { has: () => true, status: () => ({ source: 'file' }), play: async () => ({ source: 'file' }) };
   const on = playButton({ audio }, 'word', 'x', 'Listen', null);
-  assert.equal(on.tag, 'button');
+  const btn = on.tag === 'button' ? on : on.find((n) => n.tag === 'button' && /Listen/.test(n.text))[0];
+  assert.equal(btn.tag, 'button');
+  assert.equal(on.tag, 'div', 'a word clip shows its learner label and speed control with the Listen button');
+  assert.match(on.text, /Slow/);
+  assert.match(on.text, /How to read the English sounds/);
   const off = playButton({ audio, settings: settingsOf({ audioFree: true }) }, 'word', 'x', 'Listen', null);
   assert.equal(off.tag, 'span'); assert.equal(off.text, ''); assert.ok('hidden' in off.attrs);
   const { audioButton } = await import('../src/shell/audio-access.js');

@@ -12,7 +12,8 @@
  * The returned unmount function carries .ready (a promise that settles when data is loaded and the first render is done).
  */
 import { el, storeGet, storeSet } from '../curriculum/dom.js';
-import { transliterate } from '../pronunciation/transliterate.js';
+import { clipPhonetic, englishSay } from '../shell/clip-labels.js';
+import { playbackSpeedControl } from '../curriculum/audio-ui.js';
 import { loadAll, loadJson } from './loader.js';
 import { uiEnglish } from '../shell/names.js';
 import { calmOn } from '../shell/comfort.js';
@@ -75,7 +76,7 @@ export function mount(root, ctx) {
   injectStyle();
   const clock = ctx?.clock || { setInterval: (f, ms) => globalThis.setInterval(f, ms), clearInterval: (h) => globalThis.clearInterval(h) };
   const tradition = () => { const c = ctx?.settings?.get ? ctx.settings.get('congregation') : ctx?.settings?.congregation; return TRAD[c] ? c : 'sephardi'; };
-  const translit = (he) => { try { return transliterate(he, { scheme: 'siddur', tradition: tradition() }); } catch { return ''; } };
+  const translit = (he) => { try { return clipPhonetic(he, tradition()); } catch { return ''; } };
 
   const wrap = el('section', { class: 'alef-trd', 'aria-labelledby': 'view-title' });
   const h1 = el('h1', { id: 'view-title', tabindex: '-1' }, 'Torah reader: Priestly Blessing and Shema');
@@ -226,7 +227,7 @@ export function mount(root, ctx) {
       }
       line.append(el('span', { class: 'trd-stop', 'aria-hidden': 'true' }, '׃'));
       const lineId = idx.lines.get(v.verse);
-      const hear = el('button', { type: 'button', class: 'trd-hearline', onclick: () => playAudio('line', lineId || `torahreader-${p.id}-${v.verse}`, spokenText(v.he), `${v.ref}`) }, `Hear ${v.ref}`);
+      const hear = el('div', { class: 'trd-hearline-row' }, playbackSpeedControl(ctx), el('button', { type: 'button', class: 'trd-hearline', onclick: () => playAudio('line', lineId || `torahreader-${p.id}-${v.verse}`, spokenText(v.he), `${v.ref}`) }, `Hear ${v.ref}`));
       const slot = el('div', { class: 'trd-slot' }); slots.set(vi, slot);
       const lgNote = large.length ? el('p', { class: 'trd-lgnote' }, 'Written large in the source text: ', ...(v.largeLetters || []).flatMap((c, i) => [i ? ', ' : '', el('span', { lang: 'he', dir: 'rtl' }, c)]), '.') : null;
       verses.append(el('div', { class: 'trd-verse', 'data-verse': v.verse }, label, line, lgNote,
@@ -245,12 +246,14 @@ export function mount(root, ctx) {
       const wid = idx.words.get(`${it.verse.verse}:${it.token.t}`);
       detail.replaceChildren(...[
         el('p', { class: 'trd-big', dir: 'rtl', lang: 'he' }, ...displayParts(it, { showTrope: true, showNiqqud: true }, largePositions(it.verse)).map((x) => (x.big ? el('span', { class: 'trd-lg' }, x.t) : x.t))),
-        el('p', { class: 'trd-translit' }, el('strong', {}, 'Say it (' + trad + ' tradition): '), translit(plainOf(it)) || 'no transliteration'),
-        el('p', { class: 'trd-translit-note' }, `Respelling follows your ${TRAD_LABELS[trad]} setting. It is rule-generated, not checked by a native speaker, and does not mark which syllable is stressed.${trad === 'ashkenazi' ? '' : ' The Israeli and Sephardi settings give the same letters here.'}`),
+        el('p', { class: 'trd-translit' }, el('strong', {}, `Phonetic (${trad} tradition): `), translit(plainOf(it)) || 'no transliteration'),
+        el('p', { class: 'trd-say', lang: 'en' }, el('strong', {}, 'Say it: '), englishSay(translit(plainOf(it))) || 'no English sounds'),
+        el('p', { class: 'trd-translit-note' }, `The phonetic follows your ${TRAD_LABELS[trad]} setting. Sephardi is a Moroccan-adjacent reading (throat h, a marked ayin, q, and th for tav without a dot). Ashkenazi uses siddur values such as o for kamatz and s for tav without a dot. It is rule-generated, not checked by a native speaker, and does not mark which syllable is stressed.`),
         it.token.gloss ? el('p', { class: 'trd-gloss' }, el('strong', {}, 'Literal gloss: '), it.token.gloss) : el('p', { class: 'trd-gloss' }, 'No literal gloss is stored for this word.'),
         row ? el('p', { class: 'trd-trope' }, el('strong', {}, 'Mark: '), `${tropeName(row, trad)} (${trad === 'ashkenazi' ? 'Ashkenazi' : 'Sephardi'} name), ${CLS_LABEL[row.cls] || row.cls}.`)
           : el('p', { class: 'trd-trope' }, el('strong', {}, 'Mark: '), 'none of its own.'),
         marks.length > 1 ? el('p', { class: 'trd-marks' }, 'All marks on this word: ' + marks.join(', ') + '.') : null,
+        playbackSpeedControl(ctx),
         el('button', { type: 'button', class: 'trd-hear', onclick: () => playAudio('word', wid || `torahreader-${p.id}-${it.verse.verse}-${it.token.t + 1}`, spokenText(plainOf(it)), 'this word') }, 'Hear it')].filter(Boolean));
     }
     function tropeRow(it) {

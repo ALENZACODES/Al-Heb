@@ -17,7 +17,8 @@ import { hintPanel } from "./hint-ui.js";
 import { uiEnglish } from "../shell/names.js";
 import { errorKindForCard } from "./hints.js";
 import { fade } from "./fade.js";
-import { letterSound, respell, LABELS } from "../pronunciation/forTradition.js";
+import { letterSound } from "../pronunciation/forTradition.js";
+import { clipPhonetic, englishSay } from "../shell/clip-labels.js";
 import { buildMemoryQuestion } from "../letters/memory.js";
 import { choiceBlock, cueNodes, feedbackNodes, recallAnswerNodes } from "../letters/memory.view.js";
 import { hashSeed } from "./exercises.session.js";
@@ -74,7 +75,7 @@ export function describeCard(cardId, c, congregation, wordVocab = null, opts = {
   const lesson = byId[p.lessonId]; const w = lesson?.words[p.n - 1]; if (!w) return null;
   const vocabId = wordVocab?.[`${p.lessonId}:${p.n}`] || null;
   return { kind: "word", prompt: "Read this word aloud, then recall what it means.", he: w.he, big: false, audio: ["word", wordAudioId(p.lessonId, p.n)],
-    answer: [w.en], answerHe: "", respelling: respell(w.he, congregation) || "", hint: "", hook: { he: w.he }, frontLabel: wordLabel(w.he, congregation), ...(vocabId ? { vocabId } : {}) };
+    answer: [w.en], answerHe: "", respelling: clipPhonetic(w.he, congregation) || "", say: englishSay(clipPhonetic(w.he, congregation)), hint: "", hook: { he: w.he }, frontLabel: wordLabel(w.he, congregation), ...(vocabId ? { vocabId } : {}) };
 }
 
 /** The memory hook line, the same wording and place on every letter card and example-word card. Nothing when the chain has no entry. */
@@ -203,7 +204,7 @@ export function mountReview(root, ctx, { lessonId } = {}) {
       const pic = d.vocabId ? ctx.img?.(el, { kind: "word", id: d.vocabId, class: "alef-review-pic", width: 400 }) : null;
       if (d.kind === "mem") answerBox.replaceChildren(...recallAnswerNodes(d.q), playButton(ctx, d.audio[0], d.audio[1], "Listen", note));
       else answerBox.replaceChildren(...[pic, ...(d.answerHe ? [heText(d.answerHe, "alef-he alef-word")] : []), ...d.answer.filter(Boolean).map((a, i) => el(i === 0 ? "strong" : "p", {}, uiEnglish(ctx, a))),
-        d.respelling ? el("p", { class: "alef-respell", lang: "en" }, `Sounds like: ${d.respelling} (${LABELS[congregation] || congregation} style)`) : null,
+        d.respelling ? el("p", { class: "alef-respell", lang: "en" }, `Phonetic: ${d.respelling}`, d.say ? el("span", {}, ` Say it: ${d.say}`) : null) : null,
         hookNode(d.hook ? hookLine(content.chain, congregation, d.hook) : null),
         d.hint ? el("p", { class: "muted alef-hint" }, d.hint) : null, playButton(ctx, d.audio[0], d.audio[1], "Listen", note)].filter(Boolean));
       answerBox.hidden = false; ratingBox.hidden = false; show.hidden = true;

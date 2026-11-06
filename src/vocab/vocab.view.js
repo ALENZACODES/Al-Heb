@@ -6,7 +6,7 @@
  */
 import { el, heText, tr, storeGet, storeSet } from '../curriculum/dom.js';
 import { review, due, MS_DAY } from '../curriculum/srs.js';
-import { transliterate } from '../pronunciation/transliterate.js';
+import { clipPhonetic, englishSay } from '../shell/clip-labels.js';
 import { loadTier, TIER_BANDS } from './loader.js';
 import { TIER_LABEL, POS_LABEL, VOCAB_CARDS_KEY, filterEntries, stripPoints, addCards, cardId, CARD_PREFIX } from './model.js';
 import { isFunction } from './vocab.js';
@@ -71,10 +71,10 @@ function injectStyle() {
 }
 const focusNode = (n) => { try { n?.focus?.({ preventScroll: false }); } catch { /* ignore */ } };
 
-/** Transliteration for an entry in the learner's tradition; '' when the word has no vowel points. */
+/** Transliteration for an entry in the learner's tradition; '' when the word has no vowel points. Sephardi is Moroccan-adjacent, not a copy of Israeli. */
 export function translitFor(e, tradition) {
   if (!e.pointed) return '';
-  try { return transliterate(e.pointed, { scheme: 'siddur', tradition: TRAD[tradition] ? tradition : 'sephardi' }); } catch { return ''; }
+  try { return clipPhonetic(e.pointed, TRAD[tradition] ? tradition : 'sephardi'); } catch { return ''; }
 }
 
 /** @param {HTMLElement} root @param {any} ctx */
@@ -115,7 +115,9 @@ export function mount(root, ctx) {
   const heWord = (e, cls) => e.pointed ? heText(e.pointed, cls) : heText(e.lemma, cls);
   const translitLine = (e) => {
     const tl = translitFor(e, tradition());
-    return el('p', { class: 'vc-meta' }, `Transliteration (${TRAD[tradition()]}, approximate): `, tl ? el('i', {}, tl) : '(not available: this word has no vowel points yet)');
+    const say = tl ? englishSay(tl) : '';
+    return el('p', { class: 'vc-meta' }, `Transliteration (${TRAD[tradition()]}, approximate): `, tl ? el('i', {}, tl) : '(not available: this word has no vowel points yet)',
+      say ? el('span', { lang: 'en' }, ` Say it: ${say}.`) : '');
   };
   const known = new Map(); // id -> entry, for every tier loaded so far (cross-references)
   /** Wrap runs of Hebrew letters (with points) inside an English string in lang=he spans. */

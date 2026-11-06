@@ -97,7 +97,9 @@ test("addCards: new SRS cards with vocab: ids, no duplicates, limit respected", 
 });
 
 test("translitFor uses the learner's tradition and says nothing for unpointed words", () => {
-  assert.equal(translitFor({ pointed: "בֹּקֶר" }, "sephardi"), "boker");
+  assert.equal(translitFor({ pointed: "בֹּקֶר" }, "sephardi"), "boqer");
+  assert.equal(translitFor({ pointed: "בֹּקֶר" }, "ashkenazi"), "boker");
+  assert.equal(translitFor({ pointed: "בֹּקֶר" }, "israeli"), "boker");
   assert.equal(translitFor({ pointed: null }, "sephardi"), "");
 });
 

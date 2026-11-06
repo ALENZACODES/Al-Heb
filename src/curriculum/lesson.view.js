@@ -8,7 +8,8 @@ import { buildChoiceQuestions } from "./exercises.session.js";
 import { mountQuiz, summaryNode } from "./exercises.ui.js";
 import { wordAudioId } from "./progress.js";
 import { playButton } from "./audio-ui.js";
-import { saySound, respell, LABELS } from "../pronunciation/forTradition.js";
+import { saySound } from "../pronunciation/forTradition.js";
+import { clipPhonetic, englishSay } from "../shell/clip-labels.js";
 import { loadSoundTextData, letterSoundText, vowelSoundText, soundTextNode } from "../pronunciation/soundtext.js";
 import { isAudioFree } from "../shell/audiofree.js";
 import { plain } from "../shell/plain-copy.js";
@@ -113,7 +114,10 @@ export function mountLesson(root, ctx, lessonId) {
       ...lesson.words.map((w, i) => el("li", { class: "alef-item" },
         heText(w.he, "alef-he alef-word"),
         // a pointed word gets its respelling as text (a screen reader may have no Hebrew voice); the English meaning stays first
-        el("div", { class: "alef-item-body" }, el("span", {}, w.en), hookNode(el, hookLine(c.chain, congregation, { he: w.he })), (() => { const r = respell(w.he, congregation); return r ? el("div", { class: "muted alef-respell", lang: "en" }, `Sounds like: ${r} (${LABELS[congregation] || congregation} style)`) : null; })()),
+        el("div", { class: "alef-item-body" }, el("span", {}, w.en), hookNode(el, hookLine(c.chain, congregation, { he: w.he })), (() => {
+          const r = clipPhonetic(w.he, congregation); const say = englishSay(r);
+          return r ? el("div", { class: "muted alef-respell", lang: "en" }, `Phonetic: ${r}`, say ? el("div", {}, `Say it: ${say}`) : null) : null;
+        })()),
         el("div", { class: "alef-item-actions" }, playButton(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${w.en}`, note)))))));
     if (lesson.prayerLines.length) parts.push(section("l-lines", "Prayer lines", el("ul", { class: "alef-items" },
       ...lesson.prayerLines.map((id) => {

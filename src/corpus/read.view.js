@@ -13,6 +13,8 @@ import { uiEnglish } from '../shell/names.js';
 import { speechText } from '../shell/names.js';
 import { largePositionsIn } from '../torahreader/model.js';
 import { LETTER_ID, isHebrewLetter, FINAL_OF } from './normalize.js';
+import { clipPhonetic, englishSay } from '../shell/clip-labels.js';
+import { playbackSpeedControl } from '../curriculum/audio-ui.js';
 
 const LETTER_NAME = {
   alef: 'Alef', bet: 'Bet', gimel: 'Gimel', dalet: 'Dalet', he: 'He', vav: 'Vav', zayin: 'Zayin', chet: 'Chet', tet: 'Tet',
@@ -169,9 +171,8 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
   }
 
   function transliterateWord(word) {
-    if (!translitFn) return null;
     const trad = congregationOf(ctx.settings);
-    try { return translitFn(word, { scheme: 'siddur', tradition: trad }); } catch { return null; }
+    try { return clipPhonetic(word, trad) || (translitFn ? translitFn(word, { scheme: 'siddur', tradition: trad }) : null); } catch { return null; }
   }
 
   // ---------- reader ----------
@@ -195,7 +196,8 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     ctl.append(bar);
 
     if (state.translit && !translitFn) ctl.append(el('p', { class: 'crp-warn' }, 'Transliteration needs src/pronunciation/transliterate.js, which is not available here.'));
-    if (state.translit && translitFn) ctl.append(el('p', { class: 'crp-translit-note', role: 'note' }, 'Transliteration is a draft made by spelling rules, not checked by a native speaker. Stress is not marked, and some silent or vocal shvas may be wrong.'));
+    if (state.translit && translitFn) ctl.append(el('p', { class: 'crp-translit-note', role: 'note' }, 'Transliteration is a draft made by spelling rules, not checked by a native speaker. Sephardi is a Moroccan-adjacent reading, not a copy of Israeli. Stress is not marked, and some silent or vocal shvas may be wrong.'));
+    if (!isAudioFree(ctx)) ctl.append(playbackSpeedControl(ctx, el));
 
     // letter highlight control
     const lettersBox = el('div', { class: 'crp-letters', role: 'group', 'aria-label': 'Highlight a letter: choose a letter name to mark every occurrence' });
@@ -227,7 +229,10 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
           let ln = -1;
           for (const c of clusters(w)) { if (c.id) ln++; btn.append(el('span', { class: 'crp-l' + (c.id && bigLn.has(ln) ? ' crp-lg' : ''), 'data-lid': c.id || '' }, c.text)); }
           const cell = el('span', { class: 'crp-cell' }, btn);
-          if (state.translit) { const tr = transliterateWord(w); if (tr) cell.append(el('span', { class: 'crp-tr' }, tr)); }
+          if (state.translit) {
+            const tr = transliterateWord(w);
+            if (tr) cell.append(el('span', { class: 'crp-tr' }, tr), el('span', { class: 'crp-say', lang: 'en' }, ` Say it: ${englishSay(tr)}`));
+          }
           if (state.english && rec.wordGlosses && rec.wordGlosses[idx - 1] && lines.length === 1) cell.append(el('span', { class: 'crp-gl' }, rec.wordGlosses[idx - 1]));
           row.append(cell);
         });

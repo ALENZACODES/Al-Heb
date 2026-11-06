@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { STATUS_LABELS, statusLabel, fileLabel, syntheticLabel, isSyntheticStatus } from '../src/shell/audio-labels.js';
+import { clipPhonetic, englishSay, FILE_RATES } from '../src/shell/clip-labels.js';
 import { describeResult, summarizeManifest } from '../src/shell/audio.js';
 import { audioAccess, NO_AUDIO } from '../src/shell/audio-access.js';
 import { renderMarkdown } from '../tools/audio/coverage.mjs';
@@ -56,6 +57,28 @@ test('shell status line and access helper use the table', () => {
 test('coverage report names the same labels', () => {
   const md = renderMarkdown([{ id: 'a', kind: 'word', voice: 'm', tradition: 'israeli', status: 'tts', group: 'vocab-word', path: 'x.mp3' }]);
   for (const l of Object.values(STATUS_LABELS)) assert.ok(md.includes(l), l);
+});
+
+test('clip phonetics follow the tradition, and the English sounds are readable', () => {
+  assert.equal(clipPhonetic('אֲדֹנָי', 'ashkenazi'), 'adonoy');
+  assert.equal(clipPhonetic('אֲדֹנָי', 'israeli'), 'adonai');
+  assert.equal(clipPhonetic('עוֹלָם', 'ashkenazi'), 'olom');
+  assert.equal(clipPhonetic('מָלַךְ', 'ashkenazi'), 'molakh');
+  assert.equal(clipPhonetic('מָלַךְ', 'israeli'), 'malakh');
+  assert.equal(clipPhonetic('שַׁבָּת', 'israeli'), 'shabat');
+  assert.equal(clipPhonetic('שַׁבָּת', 'ashkenazi'), 'shabos');
+  assert.equal(clipPhonetic('שַׁבָּת', 'sephardi'), 'shabath');
+  assert.notEqual(clipPhonetic('שַׁבָּת', 'sephardi'), clipPhonetic('שַׁבָּת', 'israeli'));
+  assert.notEqual(clipPhonetic('עוֹלָם', 'sephardi'), clipPhonetic('עוֹלָם', 'israeli'));
+  assert.equal(englishSay('adon'), 'ah-dohn');
+  assert.equal(englishSay('adonoy'), 'ah-doh-noy');
+  assert.equal(englishSay('olom'), 'oh-lohm');
+  assert.equal(englishSay('molakh'), 'moh-lahkh');
+  assert.equal(englishSay('shabos'), 'shah-bohs');
+  assert.equal(englishSay('shabath'), 'shah-bahth');
+  assert.equal(englishSay('adon olom asher molakh'), 'ah-dohn oh-lohm ah-shehr moh-lahkh');
+  assert.deepEqual(FILE_RATES, { normal: 1, slow: 0.85, slower: 0.7 });
+  assert.ok(FILE_RATES.slow < 1 && FILE_RATES.slower < FILE_RATES.slow);
 });
 
 test('no ad-hoc status phrasings remain in src/ (everything goes through audio-labels.js)', () => {

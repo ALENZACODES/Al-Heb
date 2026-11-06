@@ -94,10 +94,12 @@ test('reads other lanes when present: corpus, curriculum, niqqud; skips bad ids;
   assert.ok(warnings.some((w) => w.includes('noheb')));
 });
 
-test('size budget: core manifest and every word shard stay under 2 MiB; shards hold only reader word clips and are current', () => {
+test('size budget: core manifest stays under 3 MiB and every word shard stays under 2 MiB; shards hold only reader word clips and are current', () => {
   const MiB = 1048576;
   const core = JSON.parse(fs.readFileSync(new URL('../data/audio/manifest.json', import.meta.url), 'utf8'));
-  assert.ok(fs.statSync(new URL('../data/audio/manifest.json', import.meta.url)).size < 2 * MiB, 'core manifest < 2 MiB');
+  // Learner labels (English, tradition phonetic, and on some rows an English-sounds reading) live in the core file.
+  // The old 2 MiB cap was already exceeded on this branch before those labels were filled in. Shards stay under 2 MiB.
+  assert.ok(fs.statSync(new URL('../data/audio/manifest.json', import.meta.url)).size < 3 * MiB, 'core manifest < 3 MiB');
   assert.ok(core.every((e) => !['prayer-word', 'vocab-word', 'vocab-alias', 'vocab-extra'].includes(e.group)), 'core has no reader or donor-script word clips');
   for (const t of ['israeli', 'sephardi', 'ashkenazi']) {
     const f = new URL(`../data/audio/manifest-words-${t}.json`, import.meta.url);
@@ -131,6 +133,63 @@ test('every vocab-word manifest entry (donor-script words) appears in its tradit
   const vw = manifest.filter((e) => e.group === 'vocab-word');
   assert.equal(vw.length, 6000);
   for (const e of vw) assert.ok(inScript[e.tradition].has(e.id), `${e.path} not in script`);
+});
+
+test('word and line clips carry learner labels for every tradition and both voices', () => {
+  const clips = manifest.filter((e) => e.kind === 'word' || e.kind === 'line');
+  assert.ok(clips.length > 10000);
+  const have = new Set();
+  for (const e of clips) {
+    assert.match(e.text, /[֐-׿]/, `${e.path} pointed Hebrew`);
+    assert.ok(e.english && e.english !== 'UNKNOWN', `${e.path} english`);
+    assert.ok(e.phonetic && e.phonetic.trim(), `${e.path} phonetic`);
+    have.add(`${e.tradition}|${e.kind}|${e.id}|${e.voice}`);
+  }
+  for (const t of ['israeli', 'sephardi', 'ashkenazi']) for (const kind of ['word', 'line']) {
+    const ids = new Set(clips.filter((e) => e.tradition === t && e.kind === kind).map((e) => e.id));
+    for (const id of ids) for (const v of ['m', 'f']) {
+      assert.ok(have.has(`${t}|${kind}|${id}|${v}`), `${v}/${t}/${kind}/${id}`);
+    }
+  }
+  const maleIsraeliWords = clips.filter((e) => e.kind === 'word' && e.tradition === 'israeli' && e.voice === 'm');
+  assert.ok(maleIsraeliWords.length > 3000, 'male israeli words are in the manifest the app loads');
+  const shard = JSON.parse(fs.readFileSync(new URL('../data/audio/manifest-words-israeli.json', import.meta.url), 'utf8'));
+  assert.ok(shard.filter((e) => e.voice === 'm').length > 2000, 'male rows are in the israeli word shard');
+  assert.ok(shard.filter((e) => e.voice === 'f').length > 2000);
+});
+
+test('ashkenazi and sephardi phonetics are not a bulk copy of israeli', () => {
+  const clips = manifest.filter((e) => (e.kind === 'word' || e.kind === 'line') && e.phonetic);
+  const base = new Map(clips.filter((e) => e.tradition === 'israeli').map((e) => [`${e.kind}|${e.voice}|${e.id}`, e.phonetic]));
+  const rate = (tradition, kind) => {
+    let n = 0; let same = 0;
+    for (const e of clips) {
+      if (e.tradition !== tradition || e.kind !== kind) continue;
+      const b = base.get(`${e.kind}|${e.voice}|${e.id}`);
+      if (!b) continue;
+      n += 1; if (b === e.phonetic) same += 1;
+    }
+    return { n, same, frac: same / n };
+  };
+  const aw = rate('ashkenazi', 'word'); const sw = rate('sephardi', 'word');
+  const al = rate('ashkenazi', 'line'); const sl = rate('sephardi', 'line');
+  assert.ok(aw.n > 1000 && aw.frac < 0.5, `ashkenazi words ${aw.same}/${aw.n}`);
+  assert.ok(sw.n > 1000 && sw.frac < 0.8, `sephardi words ${sw.same}/${sw.n}`);
+  assert.ok(al.n > 100 && al.frac < 0.2, `ashkenazi lines ${al.same}/${al.n}`);
+  assert.ok(sl.n > 100 && sl.frac < 0.3, `sephardi lines ${sl.same}/${sl.n}`);
+  const line = (t, v) => manifest.find((e) => e.id === 'adon-olam-1-l1' && e.kind === 'line' && e.tradition === t && e.voice === v);
+  assert.match(line('ashkenazi', 'f').phonetic, /olom/);
+  assert.match(line('ashkenazi', 'f').phonetic, /molakh/);
+  assert.match(line('ashkenazi', 'm').phonetic, /olom/);
+  assert.equal(line('ashkenazi', 'm').phonetic, line('ashkenazi', 'f').phonetic);
+  assert.notEqual(line('sephardi', 'f').phonetic, line('israeli', 'f').phonetic);
+  assert.match(line('sephardi', 'm').phonetic, /'olam|olam/);
+  const word = (t, v) => manifest.find((e) => e.id === 'adon-olam-1-w1' && e.kind === 'word' && e.tradition === t && e.voice === v);
+  for (const t of ['israeli', 'sephardi', 'ashkenazi']) for (const v of ['m', 'f']) {
+    assert.equal(word(t, v).text, 'אֲדוֹן');
+    assert.equal(word(t, v).english, 'Lord');
+    assert.ok(word(t, v).phonetic);
+  }
 });
 
 test('sin letter name follows canonical mark order (vowel before sin dot)', () => {

@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { waitFor } from './helpers/waitfor.js';
-import { createAudio, normalizeId } from '../src/audio/player.js';
+import { createAudio, normalizeId, FILE_RATES } from '../src/audio/player.js';
 import { normalizeId as toolNormalize } from '../tools/audio/hebrew_data.mjs';
 
 class FakeAudio {
@@ -24,6 +24,36 @@ function make(manifest, settings, extra = {}) {
   const audio = createAudio({ settings, manifest, basePath: '/app/', AudioCtor: FakeAudio, speech, UtteranceCtor: FakeUtterance, wait: async () => {}, ...extra.opts });
   return { audio, speech };
 }
+
+test('word and line playback uses the speed setting for every tradition and both voices', async () => {
+  const seen = [];
+  class RateAudio extends FakeAudio {
+    set playbackRate(v) { seen.push(v); }
+    get playbackRate() { return 1; }
+  }
+  const manifest = [];
+  for (const voice of ['m', 'f']) for (const tradition of ['israeli', 'sephardi', 'ashkenazi']) for (const kind of ['word', 'line']) {
+    manifest.push(e(voice, tradition, kind, 'shalom', 'recorded', {
+      text: 'שָׁלוֹם', english: 'peace', phonetic: tradition === 'ashkenazi' ? 'sholom' : 'shalom', say: 'shah-lohm',
+    }));
+  }
+  for (const voice of ['m', 'f']) for (const tradition of ['israeli', 'sephardi', 'ashkenazi']) for (const kind of ['word', 'line']) {
+    seen.length = 0;
+    const { audio } = make(manifest, { voice, congregation: tradition, playbackRate: 'slower' }, { opts: { AudioCtor: RateAudio } });
+    const r = await audio.play(kind, 'shalom');
+    assert.equal(r.source, 'file');
+    assert.equal(r.voice, voice);
+    assert.equal(r.tradition, tradition);
+    assert.deepEqual(seen, [FILE_RATES.slower]);
+    const info = audio.clipInfo(kind, 'shalom');
+    assert.equal(info.text, 'שָׁלוֹם');
+    assert.equal(info.english, 'peace');
+    assert.equal(info.phonetic, tradition === 'ashkenazi' ? 'sholom' : 'shalom');
+    assert.equal(info.say, 'shah-lohm');
+    assert.equal(info.voice, voice);
+    assert.equal(info.tradition, tradition);
+  }
+});
 
 test('exact file wins and reports source file', async () => {
   const { audio, speech } = make([e('m', 'israeli', 'letter', 'bet', 'recorded')], { voice: 'm', congregation: 'israeli' });

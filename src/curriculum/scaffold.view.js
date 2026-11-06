@@ -4,7 +4,7 @@ import { byId } from "./lessons.js";
 import { parseCardId } from "./progress.js";
 import { loadState, rateCard, setScaffoldPin } from "./actions.js";
 import { SCAFFOLD_KEY, effectiveLevel, LEVEL_NAMES, startLevel } from "./scaffold.js";
-import { transliterate } from "../pronunciation/transliterate.js";
+import { clipPhonetic, englishSay } from "../shell/clip-labels.js";
 import { draftNotice, onKeys } from "./ex-ui.js";
 import { due } from "./srs.js";
 import { playButton } from "./audio-ui.js";
@@ -45,7 +45,8 @@ export function mountScaffold(root, ctx) {
       const map = (await storeGet(ctx, SCAFFOLD_KEY, {})) || {};
       if (!alive) return;
       const entry = map[id], level = effectiveLevel(entry, start);
-      const latin = transliterate(w.he, { scheme: "siddur", tradition });
+      const latin = clipPhonetic(w.he, tradition);
+      const say = englishSay(latin);
       tapShown = false; revealed = false;
       const latinBox = el("p", { class: "alef-latin alef-latin-" + level, "aria-live": "polite" });
       const tapBtn = el("button", { type: "button", class: "btn secondary alef-tap", onclick: () => { tapShown = true; paint(); } }, "Show the Latin letters");
@@ -58,7 +59,7 @@ export function mountScaffold(root, ctx) {
       const answer = el("div", { class: "alef-answer", hidden: "" });
       const ratings = el("div", { class: "alef-ratings", role: "group", "aria-label": "How well did you read it?", hidden: "" }, ...RATINGS.map(([n, label]) =>
         el("button", { type: "button", class: "btn alef-rate", "data-rating": String(n), onclick: () => rate(n) }, `${n} ${label}`)));
-      const show = el("button", { type: "button", class: "btn", onclick: () => { revealed = true; answer.replaceChildren(el("strong", {}, w.en), el("p", {}, latin), playButton(ctx, "word", wordAudioId(p.lessonId, p.n), "Listen", el("span", {}))); answer.hidden = false; ratings.hidden = false; show.hidden = true; } }, "Show meaning");
+      const show = el("button", { type: "button", class: "btn", onclick: () => { revealed = true; answer.replaceChildren(el("strong", {}, w.en), el("p", {}, latin), say ? el("p", { lang: "en" }, `Say it: ${say}`) : null, playButton(ctx, "word", wordAudioId(p.lessonId, p.n), "Listen", el("span", {}), { text: w.he, english: w.en })); answer.hidden = false; ratings.hidden = false; show.hidden = true; } }, "Show meaning");
       const pinned = !!entry?.pinned;
       const pin = el("button", { type: "button", class: "btn secondary alef-pin", "aria-pressed": String(pinned), onclick: async () => { await setScaffoldPin(ctx, id, !pinned); draw(); } }, pinned ? "Unpin (let it fade)" : "Pin the Latin letters on");
       async function rate(n) {

@@ -69,6 +69,9 @@ function resolveOptions(opts = {}) {
     kamatz: opts.kamatz ?? 'o',
     cholam: opts.cholam ?? 'o',
     capitalize: opts.capitalize ?? false,
+    // Audio-label only. Default sephardi stays identical to israeli (tests and respell() depend on that).
+    // Moroccan-adjacent: chet is a throat h (hh), ayin is always marked, qof is q, undotted tav is th as in "this".
+    moroccan: opts.moroccan === true && tradition === 'sephardi',
   };
 }
 
@@ -103,7 +106,7 @@ function consonantLatin(c, o) {
     case 'ה': return 'h';
     case 'ו': return 'v';
     case 'ז': return 'z';
-    case 'ח': return o.academic ? 'ẖ' : 'ch';
+    case 'ח': return o.moroccan ? 'hh' : (o.academic ? 'ẖ' : 'ch');
     case 'ט': return 't';
     case 'י': return 'y';
     case 'כ': case 'ך': return dag ? 'k' : 'kh';
@@ -113,10 +116,10 @@ function consonantLatin(c, o) {
     case 'ס': return 's';
     case 'פ': case 'ף': return dag ? 'p' : 'f';
     case 'צ': case 'ץ': return o.academic ? 'ts' : 'tz';
-    case 'ק': return 'k';
+    case 'ק': return o.moroccan ? 'q' : 'k';
     case 'ר': return 'r';
     case 'ש': return c.dot === 'sin' ? 's' : 'sh'; // an unmarked shin is read as shin
-    case 'ת': return !dag && o.ashk ? 's' : 't';
+    case 'ת': return !dag && o.ashk ? 's' : (!dag && o.moroccan ? 'th' : 't');
     default: return '';
   }
 }
@@ -208,6 +211,7 @@ function transliterateWord(word, o) {
     // consonant
     let cons;
     if (vowelOf[i] === 'shuruk-solo') cons = '';
+    else if (c.ch === 'ע' && o.moroccan) cons = "'"; // Moroccan ayin is heard, including at the start and end of a word
     else if (c.ch === 'א' || c.ch === 'ע') cons = !isFirst && vid ? "'" : '';
     else if (c.ch === 'ה') {
       // mappiq he is always pronounced; a final he without mappiq is a vowel letter

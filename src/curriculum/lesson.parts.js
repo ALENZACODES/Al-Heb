@@ -14,6 +14,7 @@ import { mountQuiz, summaryNode, progressBar } from "./exercises.ui.js";
 import { wordAudioId } from "./progress.js";
 import { playButton } from "./audio-ui.js";
 import { saySound } from "../pronunciation/forTradition.js";
+import { clipPhonetic, englishSay } from "../shell/clip-labels.js";
 import { hookLine, hookNode } from "../letters/hookline.js";
 import { RESUME_KEY, planChunks, getResume, setResume, clearResume, statsFromResults } from "./chunks.js";
 
@@ -67,7 +68,10 @@ export function mountChunkedLesson(root, ctx, lessonId) {
     const wordItem = (i) => {
       const w = lesson.words[i];
       return el("li", { class: "alef-item" }, heText(w.he, "alef-he alef-word"),
-        el("div", { class: "alef-item-body" }, el("span", {}, w.en), hookNode(el, hookLine(c.chain, congregation, { he: w.he }))),
+        el("div", { class: "alef-item-body" }, el("span", {}, w.en), hookNode(el, hookLine(c.chain, congregation, { he: w.he })), (() => {
+          const r = clipPhonetic(w.he, congregation); const say = englishSay(r);
+          return r ? el("div", { class: "muted alef-respell", lang: "en" }, `Phonetic: ${r}`, say ? el("div", {}, `Say it: ${say}`) : null) : null;
+        })()),
         el("div", { class: "alef-item-actions" }, playButton(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${w.en}`, note)));
     };
     const lineItem = (id) => {

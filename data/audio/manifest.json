@@ -38708,11 +38708,12 @@
   "kind": "word",
   "id": "r41-w3",
   "text": "הַגָּפֶן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "pca1d1a55",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "hagafen"
  },
  {
   "path": "audio/m/israeli/word/r41-w4.mp3",
@@ -38734,11 +38735,12 @@
   "kind": "word",
   "id": "r41-w4",
   "text": "יַיִן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h03763c94",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yayin"
  },
  {
   "path": "audio/m/israeli/word/r42-w1.mp3",
@@ -38760,11 +38762,12 @@
   "kind": "word",
   "id": "r42-w1",
   "text": "אֱלֹהֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "pb62c5467",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "elohei"
  },
  {
   "path": "audio/m/israeli/word/r42-w2.mp3",
@@ -38786,11 +38789,12 @@
   "kind": "word",
   "id": "r42-w2",
   "text": "אַבְרָהָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p86e5156c",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "avraham"
  },
  {
   "path": "audio/m/israeli/word/r42-w3.mp3",
@@ -38812,11 +38816,12 @@
   "kind": "word",
   "id": "r42-w3",
   "text": "יִצְחָק",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p728a4c88",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yitzchak"
  },
  {
   "path": "audio/m/israeli/word/r42-w4.mp3",
@@ -38838,11 +38843,12 @@
   "kind": "word",
   "id": "r42-w4",
   "text": "יַעֲקֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p07b88d14",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ya'akov"
  },
  {
   "path": "audio/m/israeli/word/r43-w1.mp3",
@@ -38864,11 +38870,12 @@
   "kind": "word",
   "id": "r43-w1",
   "text": "מִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h8913b4db",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "mi"
  },
  {
   "path": "audio/m/israeli/word/r43-w2.mp3",
@@ -38890,11 +38897,12 @@
   "kind": "word",
   "id": "r43-w2",
   "text": "כָּמֹכָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "pb561109e",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kamokhah"
  },
  {
   "path": "audio/m/israeli/word/r43-w3.mp3",
@@ -38916,11 +38924,12 @@
   "kind": "word",
   "id": "r43-w3",
   "text": "נֶאְדָּר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p054b41e0",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "nedar"
  },
  {
   "path": "audio/m/israeli/word/r43-w4.mp3",

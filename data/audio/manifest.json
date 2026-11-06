@@ -57895,7 +57895,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "thank you"
+  "english": "thank you",
+  "phonetic": "todah"
  },
  {
   "path": "audio/f/israeli/word/politeness-01.mp3",
@@ -57908,7 +57909,8 @@
   "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "thank you"
+  "english": "thank you",
+  "phonetic": "todah"
  },
  {
   "path": "audio/m/israeli/word/politeness-03.mp3",
@@ -57921,7 +57923,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "please / you're welcome"
+  "english": "please / you're welcome",
+  "phonetic": "bevakashah"
  },
  {
   "path": "audio/f/israeli/word/politeness-03.mp3",
@@ -57934,7 +57937,8 @@
   "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "please / you're welcome"
+  "english": "please / you're welcome",
+  "phonetic": "bevakashah"
  },
  {
   "path": "audio/m/israeli/word/politeness-06.mp3",
@@ -57947,7 +57951,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "excuse me / sorry"
+  "english": "excuse me / sorry",
+  "phonetic": "selichah"
  },
  {
   "path": "audio/f/israeli/word/politeness-06.mp3",
@@ -57960,7 +57965,8 @@
   "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "excuse me / sorry"
+  "english": "excuse me / sorry",
+  "phonetic": "selichah"
  },
  {
   "path": "audio/m/israeli/word/politeness-08.mp3",
@@ -57973,7 +57979,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "yes"
+  "english": "yes",
+  "phonetic": "ken"
  },
  {
   "path": "audio/f/israeli/word/politeness-08.mp3",
@@ -57986,7 +57993,8 @@
   "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "yes"
+  "english": "yes",
+  "phonetic": "ken"
  },
  {
   "path": "audio/m/israeli/word/politeness-09.mp3",
@@ -57999,7 +58007,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "no"
+  "english": "no",
+  "phonetic": "lo"
  },
  {
   "path": "audio/f/israeli/word/politeness-09.mp3",
@@ -58012,7 +58021,8 @@
   "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "no"
+  "english": "no",
+  "phonetic": "lo"
  },
  {
   "path": "audio/m/israeli/word/politeness-10.mp3",
@@ -58025,7 +58035,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "maybe"
+  "english": "maybe",
+  "phonetic": "ulai"
  },
  {
   "path": "audio/f/israeli/word/politeness-10.mp3",
@@ -58038,7 +58049,8 @@
   "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "maybe"
+  "english": "maybe",
+  "phonetic": "ulai"
  },
  {
   "path": "audio/m/israeli/word/politeness-11.mp3",
@@ -58051,7 +58063,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "sure / of course"
+  "english": "sure / of course",
+  "phonetic": "betach"
  },
  {
   "path": "audio/f/israeli/word/politeness-11.mp3",
@@ -58064,7 +58077,8 @@
   "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "sure / of course"
+  "english": "sure / of course",
+  "phonetic": "betach"
  },
  {
   "path": "audio/m/israeli/word/politeness-12.mp3",
@@ -58077,7 +58091,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "cool / great / fine by me"
+  "english": "cool / great / fine by me",
+  "phonetic": "sabavah"
  },
  {
   "path": "audio/f/israeli/word/politeness-12.mp3",
@@ -58086,11 +58101,12 @@
   "kind": "word",
   "id": "politeness-12",
   "text": "סַבָּבָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "cool / great / fine by me"
+  "english": "cool / great / fine by me",
+  "phonetic": "sabavah"
  },
  {
   "path": "audio/m/israeli/word/politeness-13.mp3",
@@ -58103,7 +58119,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "come on / let's go / OK then"
+  "english": "come on / let's go / OK then",
+  "phonetic": "yalelah"
  },
  {
   "path": "audio/f/israeli/word/politeness-13.mp3",
@@ -58112,11 +58129,12 @@
   "kind": "word",
   "id": "politeness-13",
   "text": "יַאלְלָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "come on / let's go / OK then"
+  "english": "come on / let's go / OK then",
+  "phonetic": "yalelah"
  },
  {
   "path": "audio/m/israeli/word/politeness-14.mp3",
@@ -58129,7 +58147,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "really? / wow / honestly"
+  "english": "really? / wow / honestly",
+  "phonetic": "vavlah"
  },
  {
   "path": "audio/f/israeli/word/politeness-14.mp3",
@@ -58138,11 +58157,12 @@
   "kind": "word",
   "id": "politeness-14",
   "text": "וָואלָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "really? / wow / honestly"
+  "english": "really? / wow / honestly",
+  "phonetic": "vavlah"
  },
  {
   "path": "audio/m/israeli/word/politeness-15.mp3",
@@ -58155,7 +58175,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "my brother (bro)"
+  "english": "my brother (bro)",
+  "phonetic": "achi"
  },
  {
   "path": "audio/f/israeli/word/politeness-15.mp3",
@@ -58164,11 +58185,12 @@
   "kind": "word",
   "id": "politeness-15",
   "text": "אַחִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "my brother (bro)"
+  "english": "my brother (bro)",
+  "phonetic": "achi"
  },
  {
   "path": "audio/m/israeli/word/politeness-16.mp3",
@@ -58181,7 +58203,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "great / nice"
+  "english": "great / nice",
+  "phonetic": "yofi"
  },
  {
   "path": "audio/f/israeli/word/politeness-16.mp3",
@@ -58190,11 +58213,12 @@
   "kind": "word",
   "id": "politeness-16",
   "text": "יוֹפִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "great / nice"
+  "english": "great / nice",
+  "phonetic": "yofi"
  },
  {
   "path": "audio/m/israeli/word/politeness-19.mp3",
@@ -58207,7 +58231,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "enough / stop it"
+  "english": "enough / stop it",
+  "phonetic": "dai"
  },
  {
   "path": "audio/f/israeli/word/politeness-19.mp3",
@@ -58216,11 +58241,12 @@
   "kind": "word",
   "id": "politeness-19",
   "text": "דַּי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "enough / stop it"
+  "english": "enough / stop it",
+  "phonetic": "dai"
  },
  {
   "path": "audio/m/israeli/word/politeness-20.mp3",
@@ -58233,7 +58259,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "one moment"
+  "english": "one moment",
+  "phonetic": "rega"
  },
  {
   "path": "audio/f/israeli/word/politeness-20.mp3",
@@ -58242,11 +58269,12 @@
   "kind": "word",
   "id": "politeness-20",
   "text": "רֶגַע",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "one moment"
+  "english": "one moment",
+  "phonetic": "rega"
  },
  {
   "path": "audio/m/israeli/word/fillers-01.mp3",
@@ -58847,7 +58875,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "cash"
+  "english": "cash",
+  "phonetic": "mezuman"
  },
  {
   "path": "audio/f/israeli/word/shop-12.mp3",
@@ -58856,11 +58885,12 @@
   "kind": "word",
   "id": "shop-12",
   "text": "מְזֻמָּן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "cash"
+  "english": "cash",
+  "phonetic": "mezuman"
  },
  {
   "path": "audio/m/israeli/word/shop-16.mp3",
@@ -58873,7 +58903,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "open"
+  "english": "open",
+  "phonetic": "patuach"
  },
  {
   "path": "audio/f/israeli/word/shop-16.mp3",
@@ -58882,11 +58913,12 @@
   "kind": "word",
   "id": "shop-16",
   "text": "פָּתוּחַ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "open"
+  "english": "open",
+  "phonetic": "patuach"
  },
  {
   "path": "audio/m/israeli/word/shop-17.mp3",
@@ -58899,7 +58931,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "closed"
+  "english": "closed",
+  "phonetic": "sagur"
  },
  {
   "path": "audio/f/israeli/word/shop-17.mp3",
@@ -58908,11 +58941,12 @@
   "kind": "word",
   "id": "shop-17",
   "text": "סָגוּר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "closed"
+  "english": "closed",
+  "phonetic": "sagur"
  },
  {
   "path": "audio/m/israeli/word/shop-19.mp3",
@@ -58925,7 +58959,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "shekel (Israeli currency)"
+  "english": "shekel (Israeli currency)",
+  "phonetic": "shekel"
  },
  {
   "path": "audio/f/israeli/word/shop-19.mp3",
@@ -58934,11 +58969,12 @@
   "kind": "word",
   "id": "shop-19",
   "text": "שֶׁקֶל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "shekel (Israeli currency)"
+  "english": "shekel (Israeli currency)",
+  "phonetic": "shekel"
  },
  {
   "path": "audio/m/israeli/word/taxi-02.mp3",
@@ -60035,7 +60071,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "chill / calm down"
+  "english": "chill / calm down",
+  "phonetic": "tirge'i"
  },
  {
   "path": "audio/f/israeli/word/small-talk-15-f.mp3",
@@ -60044,11 +60081,12 @@
   "kind": "word",
   "id": "small-talk-15-f",
   "text": "תִּרְגְּעִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "chill / calm down"
+  "english": "chill / calm down",
+  "phonetic": "tirge'i"
  },
  {
   "path": "audio/m/israeli/word/small-talk-18-m.mp3",

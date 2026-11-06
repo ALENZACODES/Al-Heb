@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 2588 clips. **Reading lines:** 421 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 2612 clips. **Reading lines:** 421 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-2588 English labels; 0 UNKNOWN.
+2612 English labels; 0 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -1363,13 +1363,20 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [oseh-shalom-w7](f/israeli/word/oseh-shalom-w7.mp3) | עָלֵינוּ | it is upon us | aleinu |
 | [oseh-shalom-w8](f/israeli/word/oseh-shalom-w8.mp3) | וְעַל | and for | ve'al |
 | [oseh-shalom-w9](f/israeli/word/oseh-shalom-w9.mp3) | כָּל | all, whole, everything | kol |
-| [politeness-01](f/israeli/word/politeness-01.mp3) | תּוֹדָה | thank you |  |
-| [politeness-03](f/israeli/word/politeness-03.mp3) | בְּבַקָּשָׁה | please / you're welcome |  |
-| [politeness-06](f/israeli/word/politeness-06.mp3) | סְלִיחָה | excuse me / sorry |  |
-| [politeness-08](f/israeli/word/politeness-08.mp3) | כֵּן | yes |  |
-| [politeness-09](f/israeli/word/politeness-09.mp3) | לֹא | no |  |
-| [politeness-10](f/israeli/word/politeness-10.mp3) | אוּלַי | maybe |  |
-| [politeness-11](f/israeli/word/politeness-11.mp3) | בְּטַח | sure / of course |  |
+| [politeness-01](f/israeli/word/politeness-01.mp3) | תּוֹדָה | thank you | todah |
+| [politeness-03](f/israeli/word/politeness-03.mp3) | בְּבַקָּשָׁה | please / you're welcome | bevakashah |
+| [politeness-06](f/israeli/word/politeness-06.mp3) | סְלִיחָה | excuse me / sorry | selichah |
+| [politeness-08](f/israeli/word/politeness-08.mp3) | כֵּן | yes | ken |
+| [politeness-09](f/israeli/word/politeness-09.mp3) | לֹא | no | lo |
+| [politeness-10](f/israeli/word/politeness-10.mp3) | אוּלַי | maybe | ulai |
+| [politeness-11](f/israeli/word/politeness-11.mp3) | בְּטַח | sure / of course | betach |
+| [politeness-12](f/israeli/word/politeness-12.mp3) | סַבָּבָה | cool / great / fine by me | sabavah |
+| [politeness-13](f/israeli/word/politeness-13.mp3) | יַאלְלָה | come on / let's go / OK then | yalelah |
+| [politeness-14](f/israeli/word/politeness-14.mp3) | וָואלָה | really? / wow / honestly | vavlah |
+| [politeness-15](f/israeli/word/politeness-15.mp3) | אַחִי | my brother (bro) | achi |
+| [politeness-16](f/israeli/word/politeness-16.mp3) | יוֹפִי | great / nice | yofi |
+| [politeness-19](f/israeli/word/politeness-19.mp3) | דַּי | enough / stop it | dai |
+| [politeness-20](f/israeli/word/politeness-20.mp3) | רֶגַע | one moment | rega |
 | [shehecheyanu-w1](f/israeli/word/shehecheyanu-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [shehecheyanu-w10](f/israeli/word/shehecheyanu-w10.mp3) | לַזְּמַן | to the time | lazeman |
 | [shehecheyanu-w11](f/israeli/word/shehecheyanu-w11.mp3) | הַזֶּה׃ | this | hazeh |
@@ -1480,6 +1487,10 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [shir-hamaalot-w7](f/israeli/word/shir-hamaalot-w7.mp3) | הָיִינוּ | we were | hayinu |
 | [shir-hamaalot-w8](f/israeli/word/shir-hamaalot-w8.mp3) | כְּחֹלְמִים׃ | like dreamers | kecholemim |
 | [shir-hamaalot-w9](f/israeli/word/shir-hamaalot-w9.mp3) | אָז | so, therefore, then, thus; then, next; then, at that time | az |
+| [shop-12](f/israeli/word/shop-12.mp3) | מְזֻמָּן | cash | mezuman |
+| [shop-16](f/israeli/word/shop-16.mp3) | פָּתוּחַ | open | patuach |
+| [shop-17](f/israeli/word/shop-17.mp3) | סָגוּר | closed | sagur |
+| [shop-19](f/israeli/word/shop-19.mp3) | שֶׁקֶל | shekel (Israeli currency) | shekel |
 | [sim-shalom-w1](f/israeli/word/sim-shalom-w1.mp3) | שִׂים | grant | sim |
 | [sim-shalom-w10](f/israeli/word/sim-shalom-w10.mp3) | כָּל־יִשְׂרָאֵל | all Israel | kol-yisra'el |
 | [sim-shalom-w11](f/israeli/word/sim-shalom-w11.mp3) | עַמֶּךָ | your people | amekha |
@@ -1529,6 +1540,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [sim-shalom-w7](f/israeli/word/sim-shalom-w7.mp3) | וְרַחֲמִים | and mercy | verachamim |
 | [sim-shalom-w8](f/israeli/word/sim-shalom-w8.mp3) | עָלֵינוּ | it is upon us | aleinu |
 | [sim-shalom-w9](f/israeli/word/sim-shalom-w9.mp3) | וְעַל | and upon | ve'al |
+| [small-talk-15-f](f/israeli/word/small-talk-15-f.mp3) | תִּרְגְּעִי | chill / calm down | tirge'i |
 | [torah-barchu-w1](f/israeli/word/torah-barchu-w1.mp3) | בָּרְכוּ | bless | barkhu |
 | [torah-barchu-w2](f/israeli/word/torah-barchu-w2.mp3) | אֶת | the direct object | et |
 | [torah-barchu-w3](f/israeli/word/torah-barchu-w3.mp3) | אֲדֹנָי | the LORD | adonai |
@@ -2574,6 +2586,18 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hanerot-halalu-w7](m/israeli/word/hanerot-halalu-w7.mp3) | וְעַל | and for | ve'al |
 | [hanerot-halalu-w8](m/israeli/word/hanerot-halalu-w8.mp3) | הַתְּשׁוּעוֹת | the deliverances | hateshu'ot |
 | [hanerot-halalu-w9](m/israeli/word/hanerot-halalu-w9.mp3) | וְעַל | and for | ve'al |
+| [hanukkah-candle-w1](m/israeli/word/hanukkah-candle-w1.mp3) | בָּרוּךְ | blessed | barukh |
+| [hanukkah-candle-w10](m/israeli/word/hanukkah-candle-w10.mp3) | וְצִוָּנוּ | and commanded us | vetzivanu |
+| [hanukkah-candle-w11](m/israeli/word/hanukkah-candle-w11.mp3) | לְהַדְלִיק | to light | lehadlik |
+| [hanukkah-candle-w12](m/israeli/word/hanukkah-candle-w12.mp3) | נֵר | oil lamp, candle | ner |
+| [hanukkah-candle-w13](m/israeli/word/hanukkah-candle-w13.mp3) | חֲנֻכָּה׃ | consecration, dedication, inauguration | chanukah |
+| [hanukkah-candle-w2](m/israeli/word/hanukkah-candle-w2.mp3) | אַתָּה | you, thou | atah |
+| [hanukkah-candle-w3](m/israeli/word/hanukkah-candle-w3.mp3) | אֲדֹנָי | the LORD | adonai |
+| [hanukkah-candle-w4](m/israeli/word/hanukkah-candle-w4.mp3) | אֱלֹהֵינוּ | our-God | eloheinu |
+| [hanukkah-candle-w5](m/israeli/word/hanukkah-candle-w5.mp3) | מֶלֶךְ | king | melekh |
+| [hanukkah-candle-w6](m/israeli/word/hanukkah-candle-w6.mp3) | הָעוֹלָם | the world | ha'olam |
+| [hanukkah-candle-w7](m/israeli/word/hanukkah-candle-w7.mp3) | אֲשֶׁר | who/that | asher |
+| [hanukkah-candle-w8](m/israeli/word/hanukkah-candle-w8.mp3) | קִדְּשָׁנוּ | made us holy | kideshanu |
 | [numbers-01-f](m/israeli/word/numbers-01-f.mp3) | אַחַת | one (f.) | achat |
 | [numbers-01-m](m/israeli/word/numbers-01-m.mp3) | אֶחָד | one | echad |
 | [numbers-02-f](m/israeli/word/numbers-02-f.mp3) | שְׁתַּיִם | two (f.) | shtayim |
@@ -3035,4 +3059,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 3389 produced clips in INDEX.csv have an English label; 0 UNKNOWN. Filenames and IDs are unchanged.
+All 3413 produced clips in INDEX.csv have an English label; 0 UNKNOWN. Filenames and IDs are unchanged.

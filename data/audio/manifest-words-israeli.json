@@ -43944,8 +43944,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w27",
   "text": "בָּהֶם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "in them",
   "phonetic": "bahem"
@@ -43970,8 +43970,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w28",
   "text": "אֶלָּא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "but, except",
   "phonetic": "ela"

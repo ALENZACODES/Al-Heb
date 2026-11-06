@@ -1,6 +1,7 @@
 // Game 21 — rhyme keys are computed from source transliteration, no fabricated phonology.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, hasRecordedClip, playRecordedClip, resultsCard } from './engine.js';
+import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.rhymelab.v1';
 export function rhymeKey(text) {
@@ -20,6 +21,7 @@ export function buildRhymeDeck(index) {
 }
 export function rhymes(a,b) { return a?.id !== b?.id && !!a?.key && a.key === b?.key; }
 export function mount(root,ctx) {
+  const leaveSfx = sfx.enter(ctx);
   let alive=true,deck=[],images=null,round=0;
   let session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});
   const status=h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading real rhyme recordings…');
@@ -39,7 +41,7 @@ export function mount(root,ctx) {
       const pic=imgOf(images,'word',item.id);
       const b=h('button',{type:'button',class:'btn secondary game-rhyme-tube',disabled:true,onclick:()=>{
         if(!heard)return;
-        const ok=rhymes(word,item);session.answer(ok);
+        const ok=rhymes(word,item);session.answer(ok); sfx.play(ok ? 'success' : 'miss');
         status.textContent=ok?'The source endings rhyme.':'Different ending. Listen again.';
         if(ok)round++;paint();
       }},heSpan(item.he,'he game-he-sm'));
@@ -60,5 +62,5 @@ export function mount(root,ctx) {
     if(deck.length<6){status.textContent='Not enough recorded word-rhyme pairs; listening rounds disabled.';return;}
     paint();
   }).catch(()=>{if(alive)status.textContent='Rhyme data unavailable.';});
-  return ()=>{alive=false;ctx?.audio?.stop?.();};
+  return ()=>{alive=false; leaveSfx();ctx?.audio?.stop?.();};
 }

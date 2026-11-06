@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 6678 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 6737 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-6678 English labels; 1933 UNKNOWN.
+6737 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -4509,6 +4509,65 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [h1e92d681](m/israeli/word/h1e92d681.mp3) | שְׁכֶם | shoulder, upper part of the back | shekhem |
 | [h1ef19acb](m/israeli/word/h1ef19acb.mp3) | הוּא | he; used as a copula | hu |
 | [h1f23dde2](m/israeli/word/h1f23dde2.mp3) | רָחוֹק | far | rachok |
+| [h1f510ba1](m/israeli/word/h1f510ba1.mp3) | מָלֵא | to fill, to become full; to complete; to reach an age, to become a number of years old | male |
+| [h1fad8eb0](m/israeli/word/h1fad8eb0.mp3) | פָּעַל | to do; to make; to act | pa'al |
+| [h2035ee1a](m/israeli/word/h2035ee1a.mp3) | חָטָא | to sin | chata |
+| [h2056d9ad](m/israeli/word/h2056d9ad.mp3) | קָצֶה | tip, end | katzeh |
+| [h2111adc7](m/israeli/word/h2111adc7.mp3) | לֹג | a unit of liquid measurement | log |
+| [h215beb3e](m/israeli/word/h215beb3e.mp3) | כֶּסֶף | silver; money | kesef |
+| [h21e009ad](m/israeli/word/h21e009ad.mp3) | אַף | nose; the region of the nose, the face; nostril | af |
+| [h22100765](m/israeli/word/h22100765.mp3) | אוֹת | a sign, an omen; a signal, a cue; letter (symbol) | ot |
+| [h2280b9b6](m/israeli/word/h2280b9b6.mp3) | חָבֵר | a (male) friend; a (male) fellow, associate, companion, comrade; a boyfriend | chaver |
+| [h2299e4b3](m/israeli/word/h2299e4b3.mp3) | אֶרֶז | cedar (chiefly Cedrus libani); scholar, renowned person; a tree of the genus Cedrus | erez |
+| [h22a20328](m/israeli/word/h22a20328.mp3) | כִּוֵּן | to direct (as traffic) | kiven |
+| [h231c624a](m/israeli/word/h231c624a.mp3) | סֵפֶר | book; a writing | sefer |
+| [h233116f1](m/israeli/word/h233116f1.mp3) | יַלְדוּתִי | childish (suitable for a child); juvenile, immature | yalduti |
+| [h2334782c](m/israeli/word/h2334782c.mp3) | זוּג | pair, couple, twosome; pair, two-of-a-kind | zug |
+| [h233af6f2](m/israeli/word/h233af6f2.mp3) | כּוֹכָב | star; relating to fame | kokhav |
+| [h23d5cdb5](m/israeli/word/h23d5cdb5.mp3) | מָהִיר | fast, quick, swift; skilled, skillful, proficient (in a craft or task); prompt, ready, diligent | mahir |
+| [h23e0b2a4](m/israeli/word/h23e0b2a4.mp3) | בָּחַר | to choose, to opt, to select; to prefer; to appoint | bachar |
+| [h23f7ab73](m/israeli/word/h23f7ab73.mp3) | כְּלוּם | anything; used to turn a statement of fact into a question of fact | kelum |
+| [h23fb4faa](m/israeli/word/h23fb4faa.mp3) | עִנְיָן | interest, something one finds interesting; matter, issue; business | inyan |
+| [h24b72cb6](m/israeli/word/h24b72cb6.mp3) | אֵצֶל | at or to the home or office of (a person), or the like; with, in the possession of; Next to, by, alongside | etzel |
+| [h24f17330](m/israeli/word/h24f17330.mp3) | מֵת | to die; to be crazy or mad about something | met |
+| [h25e14407](m/israeli/word/h25e14407.mp3) | מָשַׁח | to anoint with oil | mashach |
+| [h26154c1a](m/israeli/word/h26154c1a.mp3) | אֶלֶף | thousand, one thousand | elef |
+| [h264da105](m/israeli/word/h264da105.mp3) | שָׂבַע | to be sated; to be satisfied | sava |
+| [h26f014a5](m/israeli/word/h26f014a5.mp3) | שׁוֹר | ox | shor |
+| [h277eae86](m/israeli/word/h277eae86.mp3) | עֹל | a yoke; servitude, subjugation | ol |
+| [h27d68eba](m/israeli/word/h27d68eba.mp3) | פּוֹל | broad bean, fava bean, fava (Vicia faba) | pol |
+| [h28ecb454](m/israeli/word/h28ecb454.mp3) | רָאָה | to see, to have vision; to observe, look at | ra'ah |
+| [h293be884](m/israeli/word/h293be884.mp3) | חוֹמָה | a wall, a structure built for defense around a city, castle, etc | chomah |
+| [h29a2e2b8](m/israeli/word/h29a2e2b8.mp3) | וָו | hook | vav |
+| [h29e4f547](m/israeli/word/h29e4f547.mp3) | דַּי | enough, sufficient, adequate; stop!, enough!, cease! | dai |
+| [h29ebe493](m/israeli/word/h29ebe493.mp3) | קָשֶׁה | hard (resistant to pressure); hard (difficult); hard | kasheh |
+| [h2a58afab](m/israeli/word/h2a58afab.mp3) | רֵאשִׁית | first of all, first | reshit |
+| [h2adc37eb](m/israeli/word/h2adc37eb.mp3) | עֻבְדָּה | fact | uvdah |
+| [h2adc4b80](m/israeli/word/h2adc4b80.mp3) | מִ־ | from, of, from inside; Than, more than; without, without the existence or presence of | mi- |
+| [h2b39dcf2](m/israeli/word/h2b39dcf2.mp3) | בַּד | fabric, cloth, linen; screen (film or television); liars | bad |
+| [h2b9299a8](m/israeli/word/h2b9299a8.mp3) | הוֹדִיעַ | to inform, to announce, to make known | hodi'a |
+| [h2c1f5534](m/israeli/word/h2c1f5534.mp3) | נָשַׁר | to fall, to drop, to shed; to drop out, to quit | nashar |
+| [h2c8086bd](m/israeli/word/h2c8086bd.mp3) | בִּנְיָן | building; building, construction; a conjugation pattern, a construction | binyan |
+| [h2cd963e3](m/israeli/word/h2cd963e3.mp3) | הָיָה | to be; to happen, take place, occur | hayah |
+| [h2ce7109c](m/israeli/word/h2ce7109c.mp3) | סִימָן | mark; sign (indication); paragraph | siman |
+| [h2d1e4a74](m/israeli/word/h2d1e4a74.mp3) | סוֹף | an end, a finish | sof |
+| [h2d27796a](m/israeli/word/h2d27796a.mp3) | עֶשְׂרִים | twenty | esrim |
+| [h2d4006ef](m/israeli/word/h2d4006ef.mp3) | צַיָּד | hunter | tzayad |
+| [h2d58afb3](m/israeli/word/h2d58afb3.mp3) | חַי | to live (to be alive, to have life); to live | chai |
+| [h2d90f840](m/israeli/word/h2d90f840.mp3) | אֲדָמָה | earth, soil, land | adamah |
+| [h2e1e8caf](m/israeli/word/h2e1e8caf.mp3) | נַחֲלָה | estate, territory; legacy; inheritance, estate | nachalah |
+| [h2eaba841](m/israeli/word/h2eaba841.mp3) | אַשּׁוּר | boxwood, box tree | ashur |
+| [h2f12d5bf](m/israeli/word/h2f12d5bf.mp3) | דָּר | to dwell | dar |
+| [h2f27d2ce](m/israeli/word/h2f27d2ce.mp3) | הֵכִין | to prepare (something) | hekhin |
+| [h2f9c8fe9](m/israeli/word/h2f9c8fe9.mp3) | זֶרַע | seed; semen; offspring, descendants, scions | zera |
+| [h319721ae](m/israeli/word/h319721ae.mp3) | אִכְפַּת | used to indicate someone's care or concern about something | ikhpat |
+| [h31c26fec](m/israeli/word/h31c26fec.mp3) | עָרַךְ | to organize, manage, handle, arrange, set up; to formulate, draw up; to lead (a ceremony) | arakh |
+| [h31e27ee8](m/israeli/word/h31e27ee8.mp3) | רַב | many, much; Great; Enough | rav |
+| [h320463c0](m/israeli/word/h320463c0.mp3) | חָזַר | to return; to repeat | chazar |
+| [h32049c3e](m/israeli/word/h32049c3e.mp3) | כְּדַאי | fitting, suitable; convenient, desirable, worthwhile (impersonal) | keday |
+| [h32580d06](m/israeli/word/h32580d06.mp3) | נִלְחַם | to fight, wage war | nilcham |
+| [h326c520d](m/israeli/word/h326c520d.mp3) | הִשְׁתַּמֵּשׁ | to use, to make use of | hishtamesh |
+| [h327ac347](m/israeli/word/h327ac347.mp3) | שָׁכַב | to lie down, to be lying down, to recline; to have sex | shakhav |
 | [haftarah-after-w1](m/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](m/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](m/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -7284,4 +7343,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 13949 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 14146 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

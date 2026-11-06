@@ -54652,11 +54652,12 @@
   "kind": "word",
   "id": "i-31-w2",
   "text": "פּוּר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "he1fb2094",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "pur"
  },
  {
   "path": "audio/f/israeli/word/i-31-w2.mp3",
@@ -54679,11 +54680,12 @@
   "kind": "word",
   "id": "i-31-w3",
   "text": "שָׂמֵחַ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h57665cd9",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "sameach"
  },
  {
   "path": "audio/f/israeli/word/i-31-w3.mp3",
@@ -54706,10 +54708,11 @@
   "kind": "word",
   "id": "i-31-w4",
   "text": "נִסִּים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "nisim"
  },
  {
   "path": "audio/f/israeli/word/i-31-w4.mp3",
@@ -54858,11 +54861,12 @@
   "kind": "word",
   "id": "i-31-w10",
   "text": "מַשְׁקֶה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "he078c9e6",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "mashkeh"
  },
  {
   "path": "audio/f/israeli/word/i-31-w10.mp3",
@@ -54885,10 +54889,11 @@
   "kind": "word",
   "id": "i-31-w11",
   "text": "לְחַיִּים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "lechayim"
  },
  {
   "path": "audio/f/israeli/word/i-31-w11.mp3",

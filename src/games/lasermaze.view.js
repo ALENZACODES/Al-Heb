@@ -5,6 +5,10 @@ import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.lasermaze.v1';
 export const hebrewLetters = (word) => Array.from(String(word || '').normalize('NFD')).filter(c => /[\u05D0-\u05EA]/u.test(c));
+export function correctBeamStep(word, index, step) {
+  const letters = hebrewLetters(word);
+  return Number.isInteger(index) && index === step && step >= 0 && step < letters.length;
+}
 export function correctBeamPath(word, path) {
   const ordered = hebrewLetters(word);
   return Array.isArray(path) && ordered.length === path.length && ordered.every((letter, i) => letter === path[i]);
@@ -14,7 +18,8 @@ export function buildMazeDeck(index) {
   const id = fields.indexOf('id'), he = fields.indexOf('he'), en = fields.indexOf('en');
   if (Math.min(id, he, en) < 0) return [];
   return rows.filter(r => typeof r[he] === 'string' && hebrewLetters(r[he]).length >= 3 &&
-    hebrewLetters(r[he]).length <= 5).map(r => ({ id: r[id], he: r[he], en: r[en] }));
+    hebrewLetters(r[he]).length <= 5 &&
+    new Set(hebrewLetters(r[he])).size === hebrewLetters(r[he]).length).map(r => ({ id: r[id], he: r[he], en: r[en] }));
 }
 export function mount(root, ctx) {
   const leaveSfx = sfx.enter(ctx);
@@ -42,8 +47,7 @@ export function mount(root, ctx) {
       h('button', { type: 'button', class: 'btn secondary game-choice', disabled: used.includes(choice.i),
         onclick: () => {
           if (!alive || used.includes(choice.i)) return;
-          const expected = letters[selected.length];
-          const ok = expected === choice.letter;
+          const ok = correctBeamStep(item.he, choice.i, selected.length);
           session.answer(ok); sfx.play(ok ? 'success' : 'miss');
           if (ok) { selected.push(choice.letter); used.push(choice.i); }
           status.textContent = ok ? 'Beam reflected to the next RTL letter.' : 'Wrong mirror: RTL path rejected.';

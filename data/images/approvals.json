@@ -5330,6 +5330,46 @@
    "forcedDespite": [
     "contains_text"
    ]
+  },
+  "GRAM_move_08": {
+   "status": "approved",
+   "at": "2026-11-06T21:36:57.024Z"
+  },
+  "GRAM_link_02": {
+   "status": "approved",
+   "at": "2026-11-06T21:36:57.024Z"
+  },
+  "GRAM_plural_09": {
+   "status": "approved",
+   "at": "2026-11-06T21:36:57.024Z"
+  },
+  "PLACE_seasons_03": {
+   "status": "approved",
+   "at": "2026-11-06T21:36:57.024Z"
+  },
+  "HEAD_one_03": {
+   "status": "approved",
+   "at": "2026-11-06T21:36:57.024Z"
+  },
+  "STREAK_art_05": {
+   "status": "approved",
+   "at": "2026-11-06T21:36:57.024Z"
+  },
+  "PLACE_deadsea_05": {
+   "status": "approved",
+   "at": "2026-11-06T21:36:57.990Z",
+   "note": "contains_text flag eye-checked at full size Nov 6: no text present (detector false positive)",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "GAME_art_05": {
+   "status": "approved",
+   "at": "2026-11-06T21:36:57.990Z",
+   "note": "contains_text flag eye-checked at full size Nov 6: no text present (detector false positive)",
+   "forcedDespite": [
+    "contains_text"
+   ]
   }
  }
 }

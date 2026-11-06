@@ -59852,6 +59852,422 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "GRAM_move_08": {
+   "id": "GRAM_move_08",
+   "file": "GRAM_move_08.png",
+   "command": 211,
+   "set": "Prepositions — movement",
+   "block": "O",
+   "prompt": "Command 211 (Prepositions — movement): Rimon jumping into a box; Rimon climbing out of the box; a ball rolling across a table; a bird flying over a wall; a fish swimming through a hoop of seaweed; Ari walking toward Noa with a gift; Noa walking away from a door waving; a cat slipping between two chair legs; water pouring from a jug into a glass; a letter (blank envelope) going into a post box. Image 8 of 10: a cat slipping between two chair legs. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "10d7b9db4cd1cf368bad6fc9bace36440f21a60189e564f3150e6a5a51081fb6",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:36:39.186Z",
+   "sourceFile": "img-0071.png",
+   "sourceFileDate": "2026-11-06T21:36:38.525Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "734c9a087e48d0d9605b22570a62387a22dee6505d25cfb5a1b93f5ca6d5f294",
+   "originalFormat": "PNG",
+   "originalBytes": 234304,
+   "originalFile": "GRAM_move_08.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_move_08.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 19860
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_link_02": {
+   "id": "GRAM_link_02",
+   "file": "GRAM_link_02.png",
+   "command": 219,
+   "set": "Connectors & little words",
+   "block": "O",
+   "prompt": "Command 219 (Connectors & little words): And — two baskets joined by a rope; or — a fork in a path with a cake on one side and fruit on the other; but — a sunny picnic with one black cloud; because — rain above, umbrella open below (cause readable); also — a third chair being added to a table of two; only — one gold apple among green apples; already — an empty plate with crumbs and a satisfied Rimon; not yet — a cake in an oven half risen; here — a gold map pin shape over a café table scene (pin as object); there — the same pin small and far on a hill. Image 2 of 10: or — a fork in a path with a cake on one side and fruit on the other. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "0379feb2927ef829a6fa433a9df66bdd9df2897a1d6bb60c9aa4368c94acec21",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:36:39.186Z",
+   "sourceFile": "img-0305.png",
+   "sourceFileDate": "2026-11-06T21:36:38.695Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "9367bd6b3461a68d2d6520e9a4ab137c1fe681e0a7e86483ea51563f7d729b6f",
+   "originalFormat": "PNG",
+   "originalBytes": 247103,
+   "originalFile": "GRAM_link_02.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_link_02.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 24406
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_deadsea_05": {
+   "id": "PLACE_deadsea_05",
+   "file": "PLACE_deadsea_05.png",
+   "command": 205,
+   "set": "The Dead Sea & Masada",
+   "block": "N",
+   "prompt": "Command 205 (The Dead Sea & Masada): A salt-white shoreline with strange salt formations; a figure floating on their back reading a blank newspaper (the classic, comic and gentle); mud-dark pools beside the bright shore; a fortress plateau seen from below at dawn; a winding snake path up the plateau; the plateau top with low stone ruins and a huge view; a cable car crossing the cliff face; palm oases in a canyon with a waterfall (Ein Gedi style); ibex goats on a cliff ledge; the lowest road on earth — a road sign shape left completely blank beside the shore road. Image 5 of 10: a winding snake path up the plateau. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "e731bb90f8600255b7abc3b0e52542006a87a1eb0b23e31f105c2470cd88507b",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:36:39.186Z",
+   "sourceFile": "img-0734.png",
+   "sourceFileDate": "2026-11-06T21:36:38.715Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "5d0f597d46ebe919a989398991df10c7c3e7371901b415cfc4c515c71f2a3d6b",
+   "originalFormat": "PNG",
+   "originalBytes": 213276,
+   "originalFile": "PLACE_deadsea_05.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_deadsea_05.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 37152
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "WSs",
+      "conf": 69.2,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "GRAM_plural_09": {
+   "id": "GRAM_plural_09",
+   "file": "GRAM_plural_09.png",
+   "command": 212,
+   "set": "Plurals & counting grammar",
+   "block": "O",
+   "prompt": "Command 212 (Plurals & counting grammar): One apple vs a crate of apples (pair = 2 images); one chair vs a classroom of chairs (2); one child vs a line of children holding hands (2); one tallit vs a rack of tallitot in many colours (1); one fish vs a school of fish (1); one toothbrush vs a cup of brushes (1); one irregular pair — one foot vs two feet in socks (1). Count check: 2+2+2+1+1+1+1 = 10. Image 9 of 10: one toothbrush vs a cup of brushes. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "c85b6d0eea1213a9899d6ae8bff63752064f66db8f949570257e09d78e74be9d",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:36:39.186Z",
+   "sourceFile": "img-0923.png",
+   "sourceFileDate": "2026-11-06T21:36:38.728Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "1b98e511c26e04d081931da5d37b966ee95df2b69abf335ebc41f6bb540f6efd",
+   "originalFormat": "PNG",
+   "originalBytes": 224565,
+   "originalFile": "GRAM_plural_09.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_plural_09.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 16066
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_seasons_03": {
+   "id": "PLACE_seasons_03",
+   "file": "PLACE_seasons_03.png",
+   "command": 209,
+   "set": "Seasons of the land",
+   "block": "N",
+   "prompt": "Command 209 (Seasons of the land): Almond blossom hills in late winter; red anemones carpeting a field in spring; a wheat field gold before harvest; summer — cicada-hot dry hills and one green oasis; the first rain darkening Jerusalem stone; autumn vineyards turning red and gold; winter snow on the northern hills with a single red-roof house; a storm sea at the Jaffa wall; migrating birds in V-formations over a valley at dawn; the land at rest — an empty field under a huge sky in the seventh-year mood (fallow, peaceful, one tree). After command 209, print the 100-place index: set, place name, file — for the app's atlas page. Image 3 of 10: a wheat field gold before harvest. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "cc2e48668de4c1ee88fc14c2090e2a60ef22d1370f4aacccad515f255bf99fc6",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:36:39.186Z",
+   "sourceFile": "img-1192.png",
+   "sourceFileDate": "2026-11-06T21:36:38.594Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "1e2f85dc0b525b8dacb89ed5aff04e4a7bcf9dabfcc9f5c98dec1b2ec5d561e6",
+   "originalFormat": "PNG",
+   "originalBytes": 202979,
+   "originalFile": "PLACE_seasons_03.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_seasons_03.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 39838
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HEAD_one_03": {
+   "id": "HEAD_one_03",
+   "file": "HEAD_one_03.png",
+   "command": 246,
+   "set": "Book chapter headers I",
+   "block": "R",
+   "prompt": "Command 246 (Book chapter headers I): Ten wide 1024×512-style banner scenes (use 1792×1024 and we crop) — a spot scene per book part, no text: letters as landscape — hills shaped like rounded strokes (abstract shapes only, never letterforms); a river of vowels — coloured dots flowing under a bridge (dots only); a market of words — stalls of objects; a city of sentences — houses along a street; a garden of verbs — figures acting among plants; a sea of reading — a boat of an open book on waves; a mountain of fluency — a path switchbacking up; a table of prayer — candles and a book on a cloth; a house of song — musicians on a balcony; a gate opening onto light. Files HEAD_one_01 … _10. Image 3 of 10: a market of words — stalls of objects. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "fe25552e759516f24616f83ead582121eea801c538827fbee7a24ca9f3ae8128",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:36:39.186Z",
+   "sourceFile": "img-1314.png",
+   "sourceFileDate": "2026-11-06T21:36:38.703Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "f82e5acf2da9401e38fdffe69c3e10054225143757f3320a89a90216c38ae622",
+   "originalFormat": "PNG",
+   "originalBytes": 184786,
+   "originalFile": "HEAD_one_03.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HEAD_one_03.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 27452
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GAME_art_05": {
+   "id": "GAME_art_05",
+   "file": "GAME_art_05.png",
+   "command": 248,
+   "set": "Workbook game art",
+   "block": "R",
+   "prompt": "Command 248 (Workbook game art): Ten square game assets: a memory-match card back (pomegranate pattern); a second card back (candle pattern); a spot-the-difference base scene — a market stall drawn once, rich in small objects (the pair difference is made later in code — deliver the base and a list in NOTES of 8 small objects that could change); a maze page — a hedge maze with a clear start gap and end gap, no letters; a tracing path — a dotted road from a house to a synagogue (dots only); a dice pair showing dots only (one and six); a spinner wheel divided in colour segments, blank; a bingo-style grid card with nine small object pictures (one per cell: cup, dog, sun, book, fish, key, star, leaf, shoe); a reward sticker sheet of 9 tiny motifs in a grid (counted as one image); a finish flag on a pole with confetti shapes. Files GAME_art_01 … _10. Image 5 of 10: a tracing path — a dotted road from a house to a synagogue (dots only). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "94b73b3df2f782409f143f1a85e3372ec10d87570bc524ef16e7adad414b3d8f",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:36:39.186Z",
+   "sourceFile": "img-1352.png",
+   "sourceFileDate": "2026-11-06T21:36:38.620Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "a28bf827a59c4cb4064d11228b06563b53d80b3568d1bc9e831f4c4e86eb62d1",
+   "originalFormat": "PNG",
+   "originalBytes": 227287,
+   "originalFile": "GAME_art_05.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GAME_art_05.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 16812
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "Ceccccee,",
+      "conf": 15.1,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "STREAK_art_05": {
+   "id": "STREAK_art_05",
+   "file": "STREAK_art_05.png",
+   "command": 242,
+   "set": "Streak & calendar art",
+   "block": "R",
+   "prompt": "Command 242 (Streak & calendar art): Ten images for the streak system: a row of seven small flames, the seventh gold (the week kept); a flame sheltered under a glass cover (the Shabbat freeze — flame resting, not out); a seedling with one new leaf (day one); the same seedling taller at three growth stages (3 images); a moon with a small flame on its edge (the evening rescue reminder); a path of footprints with one gap filled by a gold star (a saved day); Rimon warming hands at a small campfire of one steady flame; a year path winding up a hill dotted with small flames into the distance. Count check: 2 + 1 + 3 + 1 + 1 + 1 + 1 = 10. Files STREAK_art_01 … _10. Image 5 of 10: the same seedling taller at three growth stages (second of 3). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "21bed023bda36c21ada30354d36f8ed285a57178e98bb8f0598c4daf2133dc7d",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:36:39.186Z",
+   "sourceFile": "img-1355.png",
+   "sourceFileDate": "2026-11-06T21:36:38.588Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "7350c6ffa3d3bf245c6bb48755af5673ce60fbee9c1a8e58666fef451ca6aacf",
+   "originalFormat": "PNG",
+   "originalBytes": 210091,
+   "originalFile": "STREAK_art_05.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "STREAK_art_05.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 11274
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

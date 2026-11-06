@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 1022,
+ "count": 1030,
  "images": {
   "BADGE_03": {
    "w": 512,
@@ -1900,6 +1900,18 @@
     }
    ]
   },
+  "GAME_art_05": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GAME_art_05.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GAME_art_06": {
    "w": 512,
    "h": 512,
@@ -2068,6 +2080,18 @@
     }
    ]
   },
+  "GRAM_link_02": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_link_02.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GRAM_link_03": {
    "w": 512,
    "h": 512,
@@ -2200,6 +2224,18 @@
     }
    ]
   },
+  "GRAM_move_08": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_move_08.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GRAM_move_09": {
    "w": 512,
    "h": 512,
@@ -2243,6 +2279,18 @@
     {
      "edge": 512,
      "file": "GRAM_place_07.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_plural_09": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_plural_09.512.webp",
      "w": 512,
      "h": 512
     }
@@ -2293,6 +2341,18 @@
      "file": "GRAM_there_08.512.webp",
      "w": 512,
      "h": 512
+    }
+   ]
+  },
+  "HEAD_one_03": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HEAD_one_03.512.webp",
+     "w": 512,
+     "h": 293
     }
    ]
   },
@@ -10276,6 +10336,18 @@
     }
    ]
   },
+  "PLACE_deadsea_05": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_deadsea_05.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_deadsea_07": {
    "w": 512,
    "h": 293,
@@ -10571,6 +10643,18 @@
     {
      "edge": 512,
      "file": "PLACE_negev_10.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_seasons_03": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_seasons_03.512.webp",
      "w": 512,
      "h": 293
     }
@@ -12491,6 +12575,18 @@
     {
      "edge": 512,
      "file": "STREAK_art_02.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "STREAK_art_05": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "STREAK_art_05.512.webp",
      "w": 512,
      "h": 512
     }

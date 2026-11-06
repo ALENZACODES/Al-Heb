@@ -54388,6 +54388,296 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "OPP_gap_expensive_cheap": {
+   "id": "OPP_gap_expensive_cheap",
+   "file": "OPP_gap_expensive_cheap.png",
+   "command": 250,
+   "set": "Opposites gap",
+   "block": "K",
+   "prompt": "Command 250 (Opposites gap): Five side-by-side opposition scenes for Tug-of-War pairs that have no picture in Opposites I or II: a white mug beside a black mug; a jeweled crown on a red cushion beside a plain paper cup; a stone tower beside a shaky stick frame; a smiling face beside a crying face; a large lighthouse in the foreground and a small lighthouse far across the water. Image 2 of 5: A jeweled crown on a red cushion beside a plain paper cup. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "8301b2ef30593a19dd6b72584137d4418f0097e6695287fec28dca6daa318fff",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T13:30:19.788Z",
+   "sourceFile": "OPP_gap_expensive_cheap.png",
+   "sourceFileDate": "2026-11-06T13:30:16.399Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "68af3270cdae449fe78c6737cc60f99e6d5abc98e79af2812920c508a428e097",
+   "originalFormat": "PNG",
+   "originalBytes": 1395969,
+   "originalFile": "OPP_gap_expensive_cheap.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "OPP_gap_expensive_cheap.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 48744
+    },
+    {
+     "edge": 1254,
+     "file": "OPP_gap_expensive_cheap.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 83688
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "OPP_gap_happy_sad": {
+   "id": "OPP_gap_happy_sad",
+   "file": "OPP_gap_happy_sad.png",
+   "command": 250,
+   "set": "Opposites gap",
+   "block": "K",
+   "prompt": "Command 250 (Opposites gap): Five side-by-side opposition scenes for Tug-of-War pairs that have no picture in Opposites I or II: a white mug beside a black mug; a jeweled crown on a red cushion beside a plain paper cup; a stone tower beside a shaky stick frame; a smiling face beside a crying face; a large lighthouse in the foreground and a small lighthouse far across the water. Image 4 of 5: A smiling face beside a crying face. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "30142f3fd71062fdba75c12d687b5656d4db14cd7762594eaef15ade499e458f",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T13:30:19.788Z",
+   "sourceFile": "OPP_gap_happy_sad.png",
+   "sourceFileDate": "2026-11-06T13:30:16.403Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "0dbbeac29bee1a32b61895d811f738b083fc33570cb345717d65a5bc3cf85000",
+   "originalFormat": "PNG",
+   "originalBytes": 1259574,
+   "originalFile": "OPP_gap_happy_sad.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "OPP_gap_happy_sad.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 28842
+    },
+    {
+     "edge": 1254,
+     "file": "OPP_gap_happy_sad.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 47606
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "OPP_gap_near_far": {
+   "id": "OPP_gap_near_far",
+   "file": "OPP_gap_near_far.png",
+   "command": 250,
+   "set": "Opposites gap",
+   "block": "K",
+   "prompt": "Command 250 (Opposites gap): Five side-by-side opposition scenes for Tug-of-War pairs that have no picture in Opposites I or II: a white mug beside a black mug; a jeweled crown on a red cushion beside a plain paper cup; a stone tower beside a shaky stick frame; a smiling face beside a crying face; a large lighthouse in the foreground and a small lighthouse far across the water. Image 5 of 5: A large lighthouse in the foreground and a small lighthouse far across the water. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "3f870aafcd7ad1689c93fad2522368de8725efa6a8bf9a5b5c1d6fa6a3aee1ee",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T13:30:19.788Z",
+   "sourceFile": "OPP_gap_near_far.png",
+   "sourceFileDate": "2026-11-06T13:30:16.407Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "b7f6e70b1ca72f3a0ce68a7ca7506071a687995bcd0cc7a369f45f706ecb86dd",
+   "originalFormat": "PNG",
+   "originalBytes": 1283740,
+   "originalFile": "OPP_gap_near_far.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "OPP_gap_near_far.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 27738
+    },
+    {
+     "edge": 1254,
+     "file": "OPP_gap_near_far.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 47538
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "OPP_gap_strong_weak": {
+   "id": "OPP_gap_strong_weak",
+   "file": "OPP_gap_strong_weak.png",
+   "command": 250,
+   "set": "Opposites gap",
+   "block": "K",
+   "prompt": "Command 250 (Opposites gap): Five side-by-side opposition scenes for Tug-of-War pairs that have no picture in Opposites I or II: a white mug beside a black mug; a jeweled crown on a red cushion beside a plain paper cup; a stone tower beside a shaky stick frame; a smiling face beside a crying face; a large lighthouse in the foreground and a small lighthouse far across the water. Image 3 of 5: A stone tower beside a shaky stick frame. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "3fbcee3028be09f4949df4624033aef85afa085b61426ebbf3b19233a6eace91",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T13:30:19.788Z",
+   "sourceFile": "OPP_gap_strong_weak.png",
+   "sourceFileDate": "2026-11-06T13:30:16.403Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "943efc0807e151ac90c2e5a0358c0263b1f401ae8ff4f940d1df52d007ce548c",
+   "originalFormat": "PNG",
+   "originalBytes": 1357101,
+   "originalFile": "OPP_gap_strong_weak.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "OPP_gap_strong_weak.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 44376
+    },
+    {
+     "edge": 1254,
+     "file": "OPP_gap_strong_weak.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 76236
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "OPP_gap_white_black": {
+   "id": "OPP_gap_white_black",
+   "file": "OPP_gap_white_black.png",
+   "command": 250,
+   "set": "Opposites gap",
+   "block": "K",
+   "prompt": "Command 250 (Opposites gap): Five side-by-side opposition scenes for Tug-of-War pairs that have no picture in Opposites I or II: a white mug beside a black mug; a jeweled crown on a red cushion beside a plain paper cup; a stone tower beside a shaky stick frame; a smiling face beside a crying face; a large lighthouse in the foreground and a small lighthouse far across the water. Image 1 of 5: A white mug beside a black mug. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "dda8de85007e6e0a2b47d31c22274bbc4b8e47171463d913158e31d27815dcd5",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T13:30:19.788Z",
+   "sourceFile": "OPP_gap_white_black.png",
+   "sourceFileDate": "2026-11-06T13:30:16.399Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "03aee6d7eb1d8aa75fdab49b7fe4fcc1d082b43d0b53464ba650d9cf0193487a",
+   "originalFormat": "PNG",
+   "originalBytes": 1173280,
+   "originalFile": "OPP_gap_white_black.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "OPP_gap_white_black.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 18934
+    },
+    {
+     "edge": 1254,
+     "file": "OPP_gap_white_black.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 32344
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

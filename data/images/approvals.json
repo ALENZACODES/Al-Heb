@@ -4838,6 +4838,31 @@
    "forcedDespite": [
     "contains_text"
    ]
+  },
+  "OPP_gap_white_black": {
+   "status": "approved",
+   "at": "2026-11-06T13:30:32.997Z",
+   "note": "Tug-of-War Opposites gap fill (white/black, expensive/cheap, strong/weak, happy/sad, near/far)"
+  },
+  "OPP_gap_expensive_cheap": {
+   "status": "approved",
+   "at": "2026-11-06T13:30:32.997Z",
+   "note": "Tug-of-War Opposites gap fill (white/black, expensive/cheap, strong/weak, happy/sad, near/far)"
+  },
+  "OPP_gap_strong_weak": {
+   "status": "approved",
+   "at": "2026-11-06T13:30:32.997Z",
+   "note": "Tug-of-War Opposites gap fill (white/black, expensive/cheap, strong/weak, happy/sad, near/far)"
+  },
+  "OPP_gap_happy_sad": {
+   "status": "approved",
+   "at": "2026-11-06T13:30:32.997Z",
+   "note": "Tug-of-War Opposites gap fill (white/black, expensive/cheap, strong/weak, happy/sad, near/far)"
+  },
+  "OPP_gap_near_far": {
+   "status": "approved",
+   "at": "2026-11-06T13:30:32.997Z",
+   "note": "Tug-of-War Opposites gap fill (white/black, expensive/cheap, strong/weak, happy/sad, near/far)"
   }
  }
 }

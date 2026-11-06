@@ -1,19 +1,37 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { existsSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
 import { PAIRS } from '../src/games/tugowar.view.js';
 import { buildVowelDeck } from '../src/games/vowelcatcher.view.js';
 
 const json = async (path) => JSON.parse(await readFile(new URL(path, import.meta.url), 'utf8'));
+const GAP_IDS = ['OPP_gap_white_black', 'OPP_gap_expensive_cheap', 'OPP_gap_strong_weak', 'OPP_gap_happy_sad', 'OPP_gap_near_far'];
 
-test('Tug-of-War pictures are exact known Opposites index entries', async () => {
+test('Tug-of-War Opposites pictures cover at least 10 of 12 pairs', async () => {
   const index = await json('../data/img/index.json');
-  const valid = new Set(Object.entries(index.g).filter(([k]) => k === 'asset:Opposites I' || k === 'asset:Opposites II')
+  const approvals = await json('../data/images/approvals.json');
+  const groups = ['asset:Opposites I', 'asset:Opposites II', 'asset:Opposites gap'];
+  const valid = new Set(Object.entries(index.g).filter(([k]) => groups.includes(k))
     .flatMap(([, [prefix, rows]]) => rows.map((r) => prefix + r[0])));
   const mapped = PAIRS.filter((p) => p.img !== null);
   assert.equal(PAIRS.length, 12);
-  assert.equal(mapped.length, 7); // Known semantic matches; remaining five must not be mislabelled.
-  for (const pair of mapped) assert.ok(valid.has(pair.img), pair.img);
+  assert.ok(mapped.length >= 10, `image gate: ${mapped.length}/12`);
+  assert.equal(mapped.length, 12);
+  for (const pair of mapped) {
+    assert.ok(valid.has(pair.img), pair.img);
+    assert.equal(approvals.approvals[pair.img]?.status, 'approved', pair.img);
+  }
+  const byGloss = Object.fromEntries(PAIRS.map((p) => [p[2], p.img]));
+  assert.deepEqual([byGloss.white, byGloss.expensive, byGloss.strong, byGloss.happy, byGloss.near], GAP_IDS);
+  assert.equal(byGloss['old (thing)'], 'OPP_two_05');
+  assert.ok(PAIRS.every((p) => p.img !== 'OPP_two_04'));
+  for (const id of GAP_IDS) {
+    for (const edge of [800, 1254]) {
+      assert.ok(existsSync(fileURLToPath(new URL(`../assets/img/gen/${id}.${edge}.webp`, import.meta.url))), id);
+    }
+  }
   for (const pair of PAIRS) assert.ok(Object.hasOwn(pair, 'img'));
 });
 

@@ -3,8 +3,8 @@
 // for the other side. First side to drag the marker past its line wins;
 // otherwise the closer side wins after 10 rounds.
 //
-// Images are drawn only from the indexed Opposites I / II asset packs.
-// Unmatched pairs intentionally have img: null; no unrelated picture substitutes.
+// Images are indexed Opposites pictures: packs I and II, plus the five gap fills.
+// Old/new stays on OPP_two_05. Every pair has an img id.
 
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, loadGameImages, imgOf, pull, pick, resultsCard } from './engine.js';
@@ -16,14 +16,14 @@ export const STORE_KEY = 'games.tugowar.v1';
 export const PAIRS = Object.freeze([
   Object.assign(['גָּדוֹל', 'gadol', 'big', 'קָטָן', 'katan', 'small'], { img: 'OPP_one_01' }),
   Object.assign(['חַם', 'cham', 'hot', 'קַר', 'kar', 'cold'], { img: 'OPP_two_01' }),
-  Object.assign(['לָבָן', 'lavan', 'white', 'שָׁחֹר', 'shachor', 'black'], { img: null }),
+  Object.assign(['לָבָן', 'lavan', 'white', 'שָׁחֹר', 'shachor', 'black'], { img: 'OPP_gap_white_black' }),
   Object.assign(['גָּבוֹהַּ', 'gavoha', 'tall / high', 'נָמוּךְ', 'namukh', 'low'], { img: 'OPP_one_02' }),
   Object.assign(['מָהִיר', 'mahir', 'fast', 'אִטִּי', 'iti', 'slow'], { img: 'OPP_two_02' }),
-  Object.assign(['יָקָר', 'yakar', 'expensive', 'זוֹל', 'zol', 'cheap'], { img: null }),
-  Object.assign(['חָזָק', 'chazak', 'strong', 'חַלָּשׁ', 'chalash', 'weak'], { img: null }),
-  Object.assign(['שָׂמֵחַ', 'sameach', 'happy', 'עָצוּב', 'atzuv', 'sad'], { img: null }),
+  Object.assign(['יָקָר', 'yakar', 'expensive', 'זוֹל', 'zol', 'cheap'], { img: 'OPP_gap_expensive_cheap' }),
+  Object.assign(['חָזָק', 'chazak', 'strong', 'חַלָּשׁ', 'chalash', 'weak'], { img: 'OPP_gap_strong_weak' }),
+  Object.assign(['שָׂמֵחַ', 'sameach', 'happy', 'עָצוּב', 'atzuv', 'sad'], { img: 'OPP_gap_happy_sad' }),
   Object.assign(['יָשָׁן', 'yashan', 'old (thing)', 'חָדָשׁ', 'chadash', 'new'], { img: 'OPP_two_05' }),
-  Object.assign(['קָרוֹב', 'karov', 'near', 'רָחוֹק', 'rachok', 'far'], { img: null }),
+  Object.assign(['קָרוֹב', 'karov', 'near', 'רָחוֹק', 'rachok', 'far'], { img: 'OPP_gap_near_far' }),
   Object.assign(['מָלֵא', 'male', 'full', 'רֵיק', 'reik', 'empty'], { img: 'OPP_one_08' }),
   Object.assign(['אוֹר', 'or', 'light', 'חֹשֶׁךְ', 'choshekh', 'darkness'], { img: 'OPP_two_03' }),
 ]);

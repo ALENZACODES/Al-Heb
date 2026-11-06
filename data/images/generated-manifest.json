@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 914,
+ "count": 919,
  "images": {
   "BG_cafe": {
    "w": 1659,
@@ -9071,6 +9071,96 @@
     {
      "edge": 1254,
      "file": "NUM_time_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "OPP_gap_expensive_cheap": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "OPP_gap_expensive_cheap.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "OPP_gap_expensive_cheap.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "OPP_gap_happy_sad": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "OPP_gap_happy_sad.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "OPP_gap_happy_sad.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "OPP_gap_near_far": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "OPP_gap_near_far.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "OPP_gap_near_far.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "OPP_gap_strong_weak": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "OPP_gap_strong_weak.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "OPP_gap_strong_weak.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "OPP_gap_white_black": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "OPP_gap_white_black.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "OPP_gap_white_black.1254.webp",
      "w": 1254,
      "h": 1254
     }

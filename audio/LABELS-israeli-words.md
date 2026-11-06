@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 4907 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 4960 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-4907 English labels; 1289 UNKNOWN.
+4960 English labels; 1342 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -4050,6 +4050,59 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [i-26-w4](m/israeli/word/i-26-w4.mp3) | בְּרִיךְ שְׁמֵהּ | UNKNOWN | berikh shemeh |
 | [i-26-w5](m/israeli/word/i-26-w5.mp3) | גַּדְּלוּ | UNKNOWN | gadelu |
 | [i-26-w6](m/israeli/word/i-26-w6.mp3) | לְךָ אֲדֹנָי הַגְּדֻלָּה | UNKNOWN | lekha adonai hagedulah |
+| [i-26-w7](m/israeli/word/i-26-w7.mp3) | סֵפֶר תּוֹרָה | UNKNOWN | sefer torah |
+| [i-26-w8](m/israeli/word/i-26-w8.mp3) | עֲלִיָּה | UNKNOWN | aliyah |
+| [i-26-w9](m/israeli/word/i-26-w9.mp3) | וְזֹאת הַתּוֹרָה | UNKNOWN | vezot hatorah |
+| [i-27-w1](m/israeli/word/i-27-w1.mp3) | קָדוֹשׁ | UNKNOWN | kadosh |
+| [i-27-w10](m/israeli/word/i-27-w10.mp3) | יִהְיוּ לְרָצוֹן | UNKNOWN | yihyu leratzon |
+| [i-27-w11](m/israeli/word/i-27-w11.mp3) | אֱלֹהַי נְצוֹר לְשׁוֹנִי | UNKNOWN | elohai netzor leshoni |
+| [i-27-w12](m/israeli/word/i-27-w12.mp3) | עֹשֶׂה שָׁלוֹם | UNKNOWN | oseh shalom |
+| [i-27-w13](m/israeli/word/i-27-w13.mp3) | צוּרִי וְגוֹאֲלִי | UNKNOWN | tzuri vego'ali |
+| [i-27-w2](m/israeli/word/i-27-w2.mp3) | מְלֹא כָל הָאָרֶץ | UNKNOWN | melo khol ha'aretz |
+| [i-27-w3](m/israeli/word/i-27-w3.mp3) | כְּבוֹדוֹ | UNKNOWN | kevodo |
+| [i-27-w4](m/israeli/word/i-27-w4.mp3) | מִמְּקוֹמוֹ | UNKNOWN | mimekomo |
+| [i-27-w5](m/israeli/word/i-27-w5.mp3) | יִמְלֹךְ | UNKNOWN | yimlokh |
+| [i-27-w6](m/israeli/word/i-27-w6.mp3) | שִׂים שָׁלוֹם | UNKNOWN | sim shalom |
+| [i-27-w7](m/israeli/word/i-27-w7.mp3) | בָּרְכֵנוּ | UNKNOWN | barekhenu |
+| [i-27-w8](m/israeli/word/i-27-w8.mp3) | בְּאוֹר פָּנֶיךָ | UNKNOWN | be'or panekha |
+| [i-27-w9](m/israeli/word/i-27-w9.mp3) | הַמְבָרֵךְ אֶת עַמּוֹ | UNKNOWN | hamvarekh et amo |
+| [i-28-w1](m/israeli/word/i-28-w1.mp3) | כִּפּוּר | UNKNOWN | kipur |
+| [i-28-w10](m/israeli/word/i-28-w10.mp3) | מָגֵן | UNKNOWN | magen |
+| [i-28-w11](m/israeli/word/i-28-w11.mp3) | שָׁלוֹם | UNKNOWN | shalom |
+| [i-28-w12](m/israeli/word/i-28-w12.mp3) | רַחֲמִים | UNKNOWN | rachamim |
+| [i-28-w2](m/israeli/word/i-28-w2.mp3) | צוֹם | UNKNOWN | tzom |
+| [i-28-w3](m/israeli/word/i-28-w3.mp3) | שׁוֹפָר | UNKNOWN | shofar |
+| [i-28-w4](m/israeli/word/i-28-w4.mp3) | סְלִיחָה | UNKNOWN | selichah |
+| [i-28-w5](m/israeli/word/i-28-w5.mp3) | סְלִיחוֹת | UNKNOWN | selichot |
+| [i-28-w6](m/israeli/word/i-28-w6.mp3) | תְּשׁוּבָה | UNKNOWN | teshuvah |
+| [i-28-w7](m/israeli/word/i-28-w7.mp3) | שָׁנָה טוֹבָה | UNKNOWN | shanah tovah |
+| [i-28-w8](m/israeli/word/i-28-w8.mp3) | בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ | UNKNOWN | barukh shem kevod malkhuto |
+| [i-28-w9](m/israeli/word/i-28-w9.mp3) | שְׁמַע יִשְׂרָאֵל | UNKNOWN | shema yisra'el |
+| [i-29-w1](m/israeli/word/i-29-w1.mp3) | פֶּסַח | UNKNOWN | pesach |
+| [i-29-w10](m/israeli/word/i-29-w10.mp3) | עֲבָדִים | UNKNOWN | avadim |
+| [i-29-w11](m/israeli/word/i-29-w11.mp3) | מִצְרַיִם | UNKNOWN | mitzrayim |
+| [i-29-w12](m/israeli/word/i-29-w12.mp3) | קִדּוּשׁ | UNKNOWN | kidush |
+| [i-29-w2](m/israeli/word/i-29-w2.mp3) | מַצָּה | UNKNOWN | matzah |
+| [i-29-w3](m/israeli/word/i-29-w3.mp3) | חָמֵץ | UNKNOWN | chametz |
+| [i-29-w4](m/israeli/word/i-29-w4.mp3) | סֵדֶר | UNKNOWN | seder |
+| [i-29-w5](m/israeli/word/i-29-w5.mp3) | חַג שָׂמֵחַ | UNKNOWN | chag sameach |
+| [i-29-w6](m/israeli/word/i-29-w6.mp3) | זֵכֶר לִיצִיאַת מִצְרָיִם | UNKNOWN | zekher litzi'at mitzrayim |
+| [i-29-w7](m/israeli/word/i-29-w7.mp3) | מִי כָמֹכָה | UNKNOWN | mi khamokhah |
+| [i-29-w8](m/israeli/word/i-29-w8.mp3) | שֶׁהֶחֱיָינוּ | UNKNOWN | shehecheyainu |
+| [i-29-w9](m/israeli/word/i-29-w9.mp3) | בּוֹרֵא פְּרִי הַגָּפֶן | UNKNOWN | bore peri hagafen |
+| [i-30-w1](m/israeli/word/i-30-w1.mp3) | סֻכָּה | UNKNOWN | sukah |
+| [i-30-w10](m/israeli/word/i-30-w10.mp3) | שִׂמְחָה | UNKNOWN | simchah |
+| [i-30-w11](m/israeli/word/i-30-w11.mp3) | הוֹשִׁיעָה | UNKNOWN | hoshi'ah |
+| [i-30-w12](m/israeli/word/i-30-w12.mp3) | אוֹרְחִים | UNKNOWN | orechim |
+| [i-30-w2](m/israeli/word/i-30-w2.mp3) | חַג | UNKNOWN | chag |
+| [i-30-w3](m/israeli/word/i-30-w3.mp3) | חַג שָׂמֵחַ | UNKNOWN | chag sameach |
+| [i-30-w4](m/israeli/word/i-30-w4.mp3) | שֶׁהֶחֱיָינוּ | UNKNOWN | shehecheyainu |
+| [i-30-w5](m/israeli/word/i-30-w5.mp3) | לַזְּמַן הַזֶּה | UNKNOWN | lazeman hazeh |
+| [i-30-w6](m/israeli/word/i-30-w6.mp3) | בּוֹרֵא פְּרִי הַגָּפֶן | UNKNOWN | bore peri hagafen |
+| [i-30-w7](m/israeli/word/i-30-w7.mp3) | הַמּוֹצִיא לֶחֶם | UNKNOWN | hamotzi lechem |
+| [i-30-w8](m/israeli/word/i-30-w8.mp3) | מִצְוָה | UNKNOWN | mitzvah |
+| [i-30-w9](m/israeli/word/i-30-w9.mp3) | בְּמִצְוֹתָיו | UNKNOWN | bemitzvotav |
+| [i-31-w1](m/israeli/word/i-31-w1.mp3) | פּוּרִים | UNKNOWN | purim |
 | [kaddish-1-w1](m/israeli/word/kaddish-1-w1.mp3) | יִתְגַּדַּל | may it be magnified | yitgadal |
 | [kaddish-1-w10](m/israeli/word/kaddish-1-w10.mp3) | מַלְכוּתֵהּ | his kingdom | malkhuteh |
 | [kaddish-1-w11](m/israeli/word/kaddish-1-w11.mp3) | בְּחַיֵּיכוֹן | in your lifetime | bechayeikhon |
@@ -5513,4 +5566,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 8624 produced clips in INDEX.csv have an English label; 1289 UNKNOWN. Filenames and IDs are unchanged.
+All 8774 produced clips in INDEX.csv have an English label; 1342 UNKNOWN. Filenames and IDs are unchanged.

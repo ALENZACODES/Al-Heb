@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 7405 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 7407 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-7405 English labels; 1933 UNKNOWN.
+7407 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -5612,6 +5612,8 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hddb5189f](m/israeli/word/hddb5189f.mp3) | שַׁעַר | gateway (entrance); gateway (beginning); market value | sha'ar |
 | [hddb7aae9](m/israeli/word/hddb7aae9.mp3) | אָדוֹן | lord; Mr | adon |
 | [hddeaa2ed](m/israeli/word/hddeaa2ed.mp3) | אָוֶן | evil, wickedness | aven |
+| [hde2302bb](m/israeli/word/hde2302bb.mp3) | חוֹף | beach, shore, coast | chof |
+| [hde82cf75](m/israeli/word/hde82cf75.mp3) | הִטָּה | to tilt, slant; to inflect | hitah |
 | [help-01](m/israeli/word/help-01.mp3) | עֶזְרָה! | help! | ezrah! |
 | [i-01-w1](m/israeli/word/i-01-w1.mp3) | בָּרְכוּ | UNKNOWN | barkhu |
 | [i-01-w10](m/israeli/word/i-01-w10.mp3) | לְעוֹלָם וָעֶד | UNKNOWN | le'olam va'ed |
@@ -8011,4 +8013,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 16150 produced clips in INDEX.csv have an English label; 2095 UNKNOWN. Filenames and IDs are unchanged.
+All 16156 produced clips in INDEX.csv have an English label; 2097 UNKNOWN. Filenames and IDs are unchanged.

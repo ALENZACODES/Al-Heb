@@ -34352,8 +34352,8 @@
   "kind": "word",
   "id": "yigdal-w95",
   "text": "מְשִׁיחֵנוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "our anointed one",
   "phonetic": "meshichenu"
@@ -34378,8 +34378,8 @@
   "kind": "word",
   "id": "yigdal-w96",
   "text": "לִפְדּוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to redeem",
   "phonetic": "lifdot"

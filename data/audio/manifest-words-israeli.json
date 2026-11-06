@@ -57013,8 +57013,8 @@
   "id": "hde2302bb",
   "text": "חוֹף",
   "ipa": "ˈχof",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "beach, shore, coast",
   "phonetic": "chof"
@@ -62557,8 +62557,8 @@
   "id": "hde82cf75",
   "text": "הִטָּה",
   "ipa": "hi.ˈta",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "to tilt, slant; to inflect",
   "phonetic": "hitah"

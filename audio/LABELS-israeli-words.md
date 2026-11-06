@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 7517 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 7518 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-7517 English labels; 1933 UNKNOWN.
+7518 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -5725,6 +5725,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hf9a1a55b](m/israeli/word/hf9a1a55b.mp3) | שְׁנַיִם | two | shenayim |
 | [hfa69f51c](m/israeli/word/hfa69f51c.mp3) | הִתְרָאָה | to see each other | hitra'ah |
 | [hfa746c05](m/israeli/word/hfa746c05.mp3) | עֲדַיִן | still, yet | adayin |
+| [hfa9e08b8](m/israeli/word/hfa9e08b8.mp3) | עָף | to fly (by one's own power, like a bird); to get out, to get lost | af |
 | [i-01-w1](m/israeli/word/i-01-w1.mp3) | בָּרְכוּ | UNKNOWN | barkhu |
 | [i-01-w10](m/israeli/word/i-01-w10.mp3) | לְעוֹלָם וָעֶד | UNKNOWN | le'olam va'ed |
 | [i-01-w11](m/israeli/word/i-01-w11.mp3) | וְאָהַבְתָּ | UNKNOWN | ve'ahavta |
@@ -8123,4 +8124,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 16546 produced clips in INDEX.csv have an English label; 2366 UNKNOWN. Filenames and IDs are unchanged.
+All 16549 produced clips in INDEX.csv have an English label; 2368 UNKNOWN. Filenames and IDs are unchanged.

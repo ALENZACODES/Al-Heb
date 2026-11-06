@@ -63817,8 +63817,8 @@
   "id": "hfa9e08b8",
   "text": "עָף",
   "ipa": "ˈaf",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "to fly (by one's own power, like a bird); to get out, to get lost",
   "phonetic": "af"

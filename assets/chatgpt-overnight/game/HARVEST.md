@@ -19,3 +19,17 @@ Frozen Noa is the character sheet: wavy dark hair, gold hoops, terracotta collar
 | `hold/GAME_minute_one_celebration_15.png` | Noa wears a bright orange crew-neck t-shirt, not the terracotta collared blouse. 1312×1199. |
 
 Ari stays in the navy shirt and chain on these frames. Rimon’s leaf count still varies; that alone is not why these are held. No composite was attached with this batch.
+
+## Held 2026-11-06 later (Noa crew-neck)
+
+Same freeze. Noa’s sheet is a terracotta collared blouse, not a crew-neck t-shirt. These seven are unique 1254×1254 originals with no text. Ari stays in the navy shirt and chain, and the hoops are gold, but the shirt is a short-sleeve crew neck, so they are not approved and not wired.
+
+| File | Why held |
+|---|---|
+| `hold/GAME_letter_rush_07.png` | Noa wears a red-orange crew-neck t-shirt, not the terracotta collared blouse. |
+| `hold/GAME_letter_rush_08.png` | Noa wears an orange crew-neck t-shirt, not the terracotta collared blouse. |
+| `hold/GAME_letter_rush_09.png` | Noa wears a red-orange crew-neck t-shirt, not the terracotta collared blouse. |
+| `hold/GAME_letter_rush_10.png` | Noa wears an orange crew-neck t-shirt, not the terracotta collared blouse. |
+| `hold/GAME_minute_one_celebration_16.png` | Noa wears a red-orange crew-neck t-shirt, not the terracotta collared blouse. |
+| `hold/GAME_minute_one_celebration_17.png` | Noa wears a red-orange crew-neck t-shirt, not the terracotta collared blouse. |
+| `hold/GAME_minute_one_celebration_18.png` | Noa wears an orange crew-neck t-shirt, not the terracotta collared blouse. |

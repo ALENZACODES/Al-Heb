@@ -6,7 +6,7 @@ Reading this table: "required" counts the clips the app can ask for (optional wh
 
 Status labels (the same table the app shows, src/shell/audio-labels.js): recorded = "Recorded by a human reader"; tts = "Synthetic voice (Israeli only), not a recorded teacher"; missing = "No audio yet".
 
-**Overall: 3007 of 22512 required clips exist (13.4%); Recorded by a human reader: 0; Synthetic voice (Israeli only), not a recorded teacher: 3007; No audio yet: 19505.**
+**Overall: 3019 of 22512 required clips exist (13.4%); Recorded by a human reader: 0; Synthetic voice (Israeli only), not a recorded teacher: 3019; No audio yet: 19493.**
 
 ## By talent and group
 
@@ -77,7 +77,7 @@ Required 4286; have 2158; missing 2128.
 
 ### Ari (man), Israeli  (voice=m, tradition=israeli)
 
-Required 4286; have 847; missing 3439.
+Required 4286; have 859; missing 3427.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -92,7 +92,7 @@ Required 4286; have 847; missing 3439.
 | lesson-word | 940 | 0 | 0 | 0 | 940 | 0/0 | human or TTS (TTS unvetted) |
 | phrasebook | 250 | 0 | 32 | 0 | 218 | 0/0 | human or TTS (TTS unvetted) |
 | prayer-line | 129 | 0 | 129 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
-| prayer-word | 1723 | 0 | 504 | 0 | 1219 | 0/0 | human or TTS (TTS unvetted) |
+| prayer-word | 1723 | 0 | 516 | 0 | 1207 | 0/0 | human or TTS (TTS unvetted) |
 | prayer-whole | 0 | 0 | 0 | 0 | 0 | 18/18 | human or TTS (TTS unvetted) |
 | vocab-word | 1000 | 0 | 0 | 0 | 1000 | 0/0 | human or TTS (TTS unvetted) |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |

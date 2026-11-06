@@ -40679,12 +40679,13 @@
   "kind": "word",
   "id": "il07-w5",
   "text": "סָלָט",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "p5e953ba9",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "salat"
  },
  {
   "path": "audio/m/israeli/word/il07-w6.mp3",
@@ -40707,12 +40708,13 @@
   "kind": "word",
   "id": "il07-w6",
   "text": "תֵּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h1643d708",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "teh"
  },
  {
   "path": "audio/m/israeli/word/il08-w1.mp3",
@@ -40735,12 +40737,13 @@
   "kind": "word",
   "id": "il08-w1",
   "text": "כַּמָּה זֶה עוֹלֶה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "pfd539aaf",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kamah zeh oleh"
  },
  {
   "path": "audio/m/israeli/word/il08-w2.mp3",
@@ -40763,12 +40766,13 @@
   "kind": "word",
   "id": "il08-w2",
   "text": "יָקָר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hd9cf2fa5",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yakar"
  },
  {
   "path": "audio/m/israeli/word/il08-w3.mp3",
@@ -40791,12 +40795,13 @@
   "kind": "word",
   "id": "il08-w3",
   "text": "זוֹל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hfaa15644",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "zol"
  },
  {
   "path": "audio/m/israeli/word/il08-w4.mp3",
@@ -40846,11 +40851,12 @@
   "kind": "word",
   "id": "il08-w5",
   "text": "יֵשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yesh"
  },
  {
   "path": "audio/m/israeli/word/il08-w6.mp3",
@@ -40873,12 +40879,13 @@
   "kind": "word",
   "id": "il08-w6",
   "text": "אֵין",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h8828bfb6",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ein"
  },
  {
   "path": "audio/m/israeli/word/il09-w1.mp3",
@@ -40901,12 +40908,13 @@
   "kind": "word",
   "id": "il09-w1",
   "text": "מְזֻמָּן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hcfabdf1c",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "mezuman"
  },
  {
   "path": "audio/m/israeli/word/il09-w2.mp3",
@@ -40929,12 +40937,13 @@
   "kind": "word",
   "id": "il09-w2",
   "text": "כַּרְטִיס אַשְׁרַאי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "p41740a5e",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kartis ashray"
  },
  {
   "path": "audio/m/israeli/word/il09-w3.mp3",

@@ -157,28 +157,41 @@ test("browse: English search is on the gloss; pointed Hebrew search finds the un
   assert.ok(items(root).some((li) => /good/i.test(li.text)));
 });
 
-test("search Hi lists the real transliteration before words that only contain the letters", async () => {
+test("search Hi leads with the shalom greeting, then the she transliteration, and hides letter matches", async () => {
   const { root, ctx } = mk();
   mount(root, ctx); await idle(root);
   const search = byId(root, "vc-search");
-  search.value = "  HI! "; await search.fire("input");
-  assert.match(root.text, /No exact English gloss for “HI!”/);
-  assert.match(root.text, /1 exact transliteration match/);
+  search.value = "Hi"; await search.fire("input");
+  assert.match(root.text, /1 English greeting match/);
+  assert.match(root.text, /transliteration/);
+  assert.match(root.text, /Also show words that only contain these letters/);
   const lis = items(root);
-  assert.match(lis[0].text, /הִיא/);
-  assert.match(lis[0].text, /she, it/);
-  assert.equal(lis[0].attrs["data-band"], "4");
-  assert.match(lis[1].text, /this, this one/);
-  assert.equal(lis[1].attrs["data-band"], "6");
-  const bands = lis.slice(0, 8).map((li) => Number(li.attrs["data-band"]));
-  const firstRelated = bands.findIndex((b) => b > 4);
-  assert.ok(firstRelated > 0);
-  assert.ok(bands.slice(0, firstRelated).every((b) => b <= 4));
-  assert.ok(bands.slice(firstRelated).every((b) => b > 4));
+  assert.match(lis[0].text, /שָׁלוֹם|שלום/);
+  assert.match(lis[0].text, /peace/);
+  assert.match(lis[0].text, /English greeting/);
+  assert.equal(lis[0].attrs["data-match"], "alias");
+  assert.match(lis[1].text, /she, it/);
+  assert.equal(lis[1].attrs["data-match"], "translit");
+  assert.equal(lis.some((li) => /this, this one/.test(li.text)), false);
+  search.value = "hello"; await search.fire("input");
+  assert.equal(items(root)[0].attrs["data-match"], "alias");
+  assert.match(items(root)[0].text, /peace/);
+  search.value = "peace"; await search.fire("input");
+  assert.equal(items(root)[0].attrs["data-match"], "gloss");
+  assert.match(items(root)[0].text, /peace/);
+  assert.equal(items(root)[0].text.includes("English greeting"), false);
+  search.value = "she"; await search.fire("input");
+  assert.match(items(root)[0].text, /she, it/);
+  assert.equal(items(root).some((li) => /English greeting/.test(li.text)), false);
+  search.value = "שָׁלוֹם"; await search.fire("input");
+  assert.equal(items(root)[0].attrs["data-match"], "hebrew");
   search.value = ""; await search.fire("input");
-  assert.match(root.text, /Showing 40 of \d+ words/);
-  search.value = "..."; await search.fire("input");
-  assert.match(root.text, /No words match/);
+  assert.match(root.text, /Showing 40 of 4992 words/);
+  search.value = "Hi"; await search.fire("input");
+  const broad = byId(root, "vc-broad");
+  broad.checked = true; await broad.fire("change");
+  assert.ok(items(root).some((li) => /this, this one/.test(li.text)));
+  assert.equal(items(root)[0].attrs["data-match"], "alias");
 });
 
 test("add one word, and a batch, to reviews (stored under srs.vocab)", async () => {

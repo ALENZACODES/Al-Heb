@@ -4,8 +4,11 @@ import { readFileSync, existsSync } from 'node:fs';
 import { stripPoints, filterEntries } from '../src/vocab/model.js';
 import { fold, matchBand, rankEntries, isExactBand, BAND } from '../src/vocab/rank.js';
 import { transliterate } from '../src/pronunciation/transliterate.js';
-import { buildClipLookup, lookupClip, planIsExactFile, CLIP_RATES } from '../src/vocab/clips.js';
+import { buildClipLookup, lookupClip, planIsExactFile, CLIP_RATES, PLAYBACK_DEPENDENCY } from '../src/vocab/clips.js';
 import { lookupFromDisk } from '../tools/vocab/build-clip-lookup.mjs';
+import { aliasHits, GREETING_ALIAS } from '../src/vocab/aliases.js';
+import { applyRanked } from '../src/vocab/vocab.view.js';
+import { createAudio } from '../src/audio/player.js';
 
 const words = JSON.parse(readFileSync(new URL('../data/vocab/vocab5000.json', import.meta.url), 'utf8')).entries;
 const content = words.filter((e) => !e.isForm);
@@ -31,25 +34,49 @@ test('fold matches stripPoints, and punctuation is not a regular expression', ()
   assert.equal(matchBand({ gloss: 'this' }, '(hi)'), BAND.substring);
 });
 
-test('Hi: no English gloss is the greeting; היא is the transliteration; letter matches follow', () => {
-  const ranked = rankEntries(content, 'Hi', tradOf('sephardi'));
-  const exact = ranked.filter((x) => isExactBand(x.band));
-  const related = ranked.filter((x) => !isExactBand(x.band));
-  assert.deepEqual(show(exact), [[BAND.translit, 38, 'היא', 'she, it']]);
-  assert.equal(exact.some((x) => x.band <= BAND.sense), false);
-  assert.ok(related.length > 200);
-  assert.deepEqual(show(related.slice(0, 6)), [
-    [BAND.substring, 3, 'זה', 'this, this one'],
-    [BAND.substring, 8, 'אשר', 'that, which, who (relative; formal)'],
-    [BAND.substring, 32, 'צריך', 'needing, in need of (something)'],
-    [BAND.substring, 34, 'חשב', 'to think'],
-    [BAND.substring, 37, 'כאן', 'here, at this place'],
-    [BAND.substring, 47, 'דבר', 'thing'],
-  ]);
-  assert.ok(related.every((x) => x.band > exact[0].band));
-  const shalom = content.find((e) => e.lemma === 'שלום' && e.pos === 'noun');
+test('Hi and hello lead with the phrasebook greeting; she and peace stay glosses; short queries hide letter matches', () => {
+  const book = JSON.parse(readFileSync(new URL('../' + GREETING_ALIAS.provenance.file, import.meta.url), 'utf8'));
+  const line = book.entries.find((e) => e.id === GREETING_ALIAS.provenance.id);
+  const hiLine = book.entries.find((e) => e.id === GREETING_ALIAS.provenance.hiLine);
+  assert.equal(line.he, GREETING_ALIAS.provenance.he);
+  assert.equal(line.en, GREETING_ALIAS.provenance.en);
+  assert.equal(hiLine.he, GREETING_ALIAS.provenance.hiHe);
+  assert.equal(hiLine.en, GREETING_ALIAS.provenance.hiEn);
+  const shalom = content.find((e) => e.id === GREETING_ALIAS.targetId);
   assert.equal(shalom.gloss, 'peace');
-  assert.equal(ranked.some((x) => x.entry.id === shalom.id), false);
+  assert.equal(shalom.pointed, line.he);
+  for (const q of ['hi', 'hello', '  HI! ']) {
+    const hits = aliasHits(content, q, fold);
+    assert.deepEqual(hits.map((x) => x.entry.id), [shalom.id]);
+    const shown = applyRanked(words, { query: q }, tradOf('sephardi'));
+    assert.equal(shown[0].entry.id, shalom.id);
+    assert.equal(shown[0].band, BAND.alias);
+    assert.equal(shown[0].entry.gloss, 'peace');
+    assert.equal(shown.some((x) => x.band >= BAND.prefix), false);
+  }
+  const hiShown = applyRanked(words, { query: 'hi' }, tradOf('sephardi'));
+  const tl = hiShown.find((x) => x.band === BAND.translit);
+  assert.equal(tl.entry.lemma, 'היא');
+  assert.equal(tl.entry.gloss, 'she, it');
+  assert.ok(hiShown.indexOf(hiShown[0]) < hiShown.indexOf(tl));
+  const broad = applyRanked(words, { query: 'hi', broad: true }, tradOf('sephardi'));
+  assert.ok(broad.some((x) => x.entry.lemma === 'זה' && x.band === BAND.substring));
+  const peace = applyRanked(words, { query: 'peace' }, tradOf('sephardi'));
+  assert.equal(peace[0].entry.id, shalom.id);
+  assert.equal(peace[0].band, BAND.gloss);
+  assert.equal(peace[0].alias, undefined);
+  const she = applyRanked(words, { query: 'she' }, tradOf('sephardi'));
+  assert.equal(she[0].entry.lemma, 'היא');
+  assert.ok(she[0].band <= BAND.sense);
+  assert.equal(she.some((x) => x.entry.id === shalom.id), false);
+  assert.equal(she.some((x) => x.band >= BAND.prefix), false);
+  const pointed = applyRanked(words, { query: 'שָׁלוֹם' }, tradOf('sephardi'));
+  const bare = applyRanked(words, { query: 'שלום' }, tradOf('sephardi'));
+  assert.equal(pointed[0].entry.id, shalom.id);
+  assert.equal(pointed[0].band, BAND.hebrew);
+  assert.equal(bare[0].entry.id, shalom.id);
+  assert.equal(bare[0].band, BAND.hebrew);
+  assert.equal(applyRanked(words, { query: '' }, tradOf('sephardi')).filter((x) => x.band === BAND.alias).length, 0);
 });
 
 test('hello is not an exact 5,000-list gloss; shalom and sholom follow the tradition spelling', () => {
@@ -126,6 +153,9 @@ test('clip lookup plays one real id for the selected voice and tradition', () =>
   assert.equal(planIsExactFile({ source: 'file', via: 'exact', url: '/x', voice: 'f', tradition: 'sephardi', id: fSep.id }, { voice: 'f', tradition: 'sephardi', id: fSep.id }), true);
   assert.equal(planIsExactFile({ source: 'file', via: 'equivalent', fileTradition: 'israeli', url: '/x', voice: 'f', tradition: 'sephardi', id: 'other' }, { voice: 'f', tradition: 'sephardi', id: fSep.id }), false);
   assert.equal(planIsExactFile({ source: 'tts-fallback', voice: 'f', tradition: 'sephardi' }, { voice: 'f', tradition: 'sephardi', id: fSep.id }), false);
+  assert.equal(PLAYBACK_DEPENDENCY.appliedByThisTree, false);
+  assert.equal(PLAYBACK_DEPENDENCY.slowMeans, 0.7);
+  assert.equal(PLAYBACK_DEPENDENCY.contractCommit, '8f37d4ba');
   const rows = [
     { id: 'a', kind: 'word', voice: 'f', tradition: 'israeli', path: 'a.mp3', status: 'tts', text: 'הִיא' },
     { id: 'b', kind: 'word', voice: 'm', tradition: 'israeli', path: 'b.mp3', status: 'tts', text: 'הִיא' },
@@ -133,4 +163,46 @@ test('clip lookup plays one real id for the selected voice and tradition', () =>
   const small = buildClipLookup(rows, () => true);
   assert.equal(lookupClip(small, 'הִיא', 'f', 'sephardi'), null);
   assert.equal(lookupClip(small, 'הִיא', 'm', 'israeli').id, 'b');
+});
+
+test('the screen list is 5000 minus hidden rows and word forms, with nothing padded back', async () => {
+  const { loadTier, TIER_BANDS, isHiddenRecord } = await import('../src/vocab/loader.js');
+  const hidden = words.filter(isHiddenRecord);
+  const forms = words.filter((e) => e.isForm && !isHiddenRecord(e));
+  assert.equal(words.length, 5000);
+  assert.equal(new Set(words.map((e) => e.rank)).size, 5000);
+  assert.equal(new Set(words.map((e) => e.id)).size, 5000);
+  assert.deepEqual(hidden.map((e) => [e.rank, e.id, e.lemma]), [
+    [43, 'vedf291d8', 'יא'],
+    [169, 'v96491b44', 'לעזאזל'],
+    [1160, 'v86404c39', 'מזדין'],
+    [3834, 'v73a6f0a9', 'זין'],
+  ]);
+  assert.equal(forms.length, 4);
+  let loaded = 0;
+  for (const t of TIER_BANDS) loaded += (await loadTier(t)).length;
+  assert.equal(loaded, 5000 - hidden.length);
+  assert.equal(loaded - forms.length, 4992);
+});
+
+test('this tree’s player ignores options.rate; 0.7× is only the unmerged contract', async () => {
+  const made = [];
+  class A {
+    constructor(url) { this.url = url; this.playbackRate = 1; made.push(this); }
+    play() { queueMicrotask(() => this.onended?.()); return Promise.resolve(); }
+  }
+  const audio = createAudio({
+    settings: { voice: 'f', congregation: 'sephardi' },
+    manifest: [{ kind: 'word', id: 'i-10-w12', voice: 'f', tradition: 'sephardi', status: 'tts', path: 'audio/f/sephardi/word/i-10-w12.mp3', text: 'שָׁלוֹם' }],
+    AudioCtor: A,
+    speech: null,
+    UtteranceCtor: null,
+  });
+  const result = await audio.play('word', 'i-10-w12', { voice: 'f', tradition: 'sephardi', rate: 'slow' });
+  assert.equal(result.source, 'file');
+  assert.equal(result.id, 'i-10-w12');
+  assert.equal(made.length, 1);
+  assert.equal(made[0].playbackRate, 1);
+  assert.notEqual(made[0].playbackRate, PLAYBACK_DEPENDENCY.slowMeans);
+  assert.equal(PLAYBACK_DEPENDENCY.appliedByThisTree, false);
 });

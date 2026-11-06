@@ -8,7 +8,8 @@ import { el, heText, tr, storeGet, storeSet } from '../curriculum/dom.js';
 import { review, due, MS_DAY } from '../curriculum/srs.js';
 import { transliterate } from '../pronunciation/transliterate.js';
 import { loadTier, TIER_BANDS } from './loader.js';
-import { TIER_LABEL, POS_LABEL, VOCAB_CARDS_KEY, stripPoints, addCards, cardId, CARD_PREFIX, rankEntries, isExactBand, BAND } from './model.js';
+import { TIER_LABEL, POS_LABEL, VOCAB_CARDS_KEY, stripPoints, addCards, cardId, CARD_PREFIX, rankEntries, isExactBand, isShortQuery, keepBand, fold, BAND } from './model.js';
+import { aliasHits, aliasNote } from './aliases.js';
 import { isFunction } from './vocab.js';
 import { plural } from '../shell/plural.js';
 import { NO_AUDIO, DEVICE_LABEL } from '../shell/audio-access.js';
@@ -19,7 +20,7 @@ import { loadJson } from '../speak/loader.js';
 import { lookupClip, planIsExactFile, clipCaption, unavailableLine, CLIP_RATES, SPEED_BUTTONS, CHECKING } from './clips.js';
 
 /** Shown under the search box. The 5,000 glosses are not rewritten by this screen. */
-export const SENSE_NOTE = 'A result is exact when your whole search is a gloss, one of its senses, the Hebrew word, or the transliteration. Letters inside another word are listed afterwards as related. Glosses in the 5,000-word list are the stored sense, often only the first dictionary sense, and this search does not rewrite them.';
+export const SENSE_NOTE = 'A greeting search such as hi or hello can lead with a word whose stored gloss is different. That lead is labelled, and the gloss on the card is not changed. An exact transliteration is labelled separately. For a short search, words that only contain those letters stay hidden until you ask for them. Glosses in the 5,000-word list are the stored sense, often only the first dictionary sense.';
 
 const PAGE = 40;          // cards rendered per page
 const ADD_LIMIT = 100;    // words added to reviews per click
@@ -32,13 +33,17 @@ export const FN_TOPIC = '__function';
 /** Words that "Add to reviews" in bulk skips: forms of another word and rare senses. A single card's own button still adds them. */
 export const skippedInBulk = (e) => !!e.isForm || hasTag(e, 'rare-sense');
 /** Browse filter: tag, word forms, and topic, then relevance order. Returns {entry, band}. */
-export function applyRanked(entries, { tag = '', topic = '', showForms = false, query = '' } = {}, translitOf) {
+export function applyRanked(entries, { tag = '', topic = '', showForms = false, query = '', broad = false } = {}, translitOf) {
   let out = entries;
   if (!showForms) out = out.filter((e) => !e.isForm);
   if (tag) out = out.filter((e) => hasTag(e, tag));
   if (topic === FN_TOPIC) out = out.filter(isFunction);
   else if (topic) out = out.filter((e) => !isFunction(e) && e.topic === topic);
-  return rankEntries(out, query, translitOf);
+  const ranked = rankEntries(out, query, translitOf);
+  const aliases = aliasHits(out, query, fold);
+  const aliasIds = new Set(aliases.map((x) => x.entry.id));
+  const merged = [...aliases, ...ranked.filter((x) => !aliasIds.has(x.entry.id))];
+  return merged.filter((x) => keepBand(x.band, query, broad));
 }
 /** Same rows as applyRanked, entries only, for callers that do not need the band. */
 export function applyFilters(entries, sel) {
@@ -236,7 +241,7 @@ export function mount(root, ctx) {
   const showWord = (w) => { sel.tier = 'all'; sel.topic = ''; sel.tag = ''; sel.showForms = true; sel.query = stripPoints(w.lemma); setMode('browse'); };
 
   // ---- browse
-  const sel = { tier: 'all', topic: '', tag: '', showForms: false, query: '' };
+  const sel = { tier: 'all', topic: '', tag: '', showForms: false, broad: false, query: '' };
   let gen = 0;
   async function entriesFor(tierSel) {
     const tiers = tierSel === 'all' ? TIER_BANDS : [Number(tierSel)];
@@ -254,6 +259,9 @@ export function mount(root, ctx) {
     const formsBox = el('input', { id: 'vc-forms', type: 'checkbox' });
     if (sel.showForms) formsBox.setAttribute('checked', '');
     formsBox.checked = sel.showForms;
+    const broadBox = el('input', { id: 'vc-broad', type: 'checkbox' });
+    if (sel.broad) broadBox.setAttribute('checked', '');
+    broadBox.checked = sel.broad;
     const heading = el('h2', { class: 'vc-group' }); heading.hidden = true; // filled (and shown) by renderRows only for the function-words group; hidden until then so no empty heading exists while words load
     const search = el('input', { id: 'vc-search', type: 'search', dir: 'auto', autocomplete: 'off', placeholder: 'שלום or hello or hi' });
     search.value = sel.query;
@@ -269,8 +277,9 @@ export function mount(root, ctx) {
         el('div', {}, el('label', { for: 'vc-tag' }, 'Kind of word'), tagSel),
         el('div', {}, el('label', { for: 'vc-search' }, 'Search (Hebrew with or without vowel points, English, or transliteration)'), search)),
       el('div', { class: 'vc-check' }, el('label', { for: 'vc-forms' }, formsBox, ' Show word forms (spellings that are only a form of another word)')),
+      el('div', { class: 'vc-check' }, el('label', { for: 'vc-broad' }, broadBox, ' Also show words that only contain these letters')),
       sense, status, addRow, heading, list, moreRow);
-    let all = [], ranked = [], matches = [], shown = 0;
+    let all = [], ranked = [], matches = [], shown = 0, hiddenNoise = 0;
 
     const fillTopics = () => {
       const topics = [...new Set(all.filter((e) => !isFunction(e)).map((e) => e.topic))].sort();
@@ -278,14 +287,21 @@ export function mount(root, ctx) {
       if (!topics.includes(sel.topic) && sel.topic !== FN_TOPIC) sel.topic = '';
       topicSel.value = sel.topic;
     };
-    const cardItem = (e, band) => {
+    const cardItem = (row) => {
+      const e = row.entry;
+      const band = row.band;
+      const alias = row.alias;
       const bandAttr = band == null ? '' : String(band);
       const inRev = !!cards[cardId(e)];
       const add = el('button', { type: 'button', class: 'btn secondary', 'aria-label': inRev ? `In reviews: ${e.gloss}` : `Add to reviews: ${e.gloss}`, ...(inRev ? { disabled: true } : {}),
         onclick: async () => { const r = addCards(cards, [e], Date.now()); await saveCards(r.cards); add.setAttribute('disabled', ''); add.textContent = 'In reviews'; add.setAttribute('aria-label', `In reviews: ${e.gloss}`); updateAdd(); } }, inRev ? 'In reviews' : 'Add to reviews');
-      return el('li', { class: 'card vc-card', 'data-id': e.id, 'data-kind': 'word', 'data-band': bandAttr },
+      const match = band === BAND.alias ? 'alias' : band === BAND.translit ? 'translit' : (band != null && band <= BAND.sense) ? 'gloss' : (band === BAND.hebrew) ? 'hebrew' : (band == null ? '' : 'related');
+      return el('li', { class: 'card vc-card', 'data-id': e.id, 'data-kind': 'word', 'data-band': bandAttr, 'data-match': match },
         ctx.img?.(el, { kind: 'word', id: e.id, class: 'vc-pic', width: 400 }),
-        heWord(e, 'vc-he'), el('p', { tabindex: '-1', class: 'vc-gloss' }, ...glossNodes(e.gloss)), metaLine(e), ...noteLines(e), translitLine(e),
+        heWord(e, 'vc-he'), el('p', { tabindex: '-1', class: 'vc-gloss' }, ...glossNodes(e.gloss)),
+        alias ? el('p', { class: 'vc-alias' }, aliasNote(alias)) : null,
+        band === BAND.translit ? el('p', { class: 'vc-meta' }, 'Transliteration match. This is not an English gloss.') : null,
+        metaLine(e), ...noteLines(e), translitLine(e),
         el('div', { class: 'row' }, listenButton(e), add));
     };
     const updateAdd = () => {
@@ -306,15 +322,20 @@ export function mount(root, ctx) {
     const statusText = () => {
       const q = sel.query.trim();
       if (!q) return `Showing ${shown} of ${ranked.length} word${ranked.length === 1 ? '' : 's'}.`;
-      if (!ranked.length) return 'No words match. Try fewer letters, or another tier or topic.';
-      const glossN = ranked.filter((x) => x.band != null && x.band <= BAND.sense).length;
+      if (!ranked.length && !hiddenNoise) return 'No words match. Try fewer letters, or another tier or topic.';
+      const aliasN = ranked.filter((x) => x.band === BAND.alias).length;
+      const glossN = ranked.filter((x) => x.band != null && x.band >= BAND.gloss && x.band <= BAND.sense).length;
       const heN = ranked.filter((x) => x.band === BAND.hebrew).length;
       const tlN = ranked.filter((x) => x.band === BAND.translit).length;
-      const relW = ranked.filter((x) => !isExactBand(x.band)).length;
-      let s = glossN ? `${glossN} exact gloss ${glossN === 1 ? 'match' : 'matches'} in the 5,000-word list. ` : `No exact English gloss for “${q}” in the 5,000-word list. `;
+      const relW = ranked.filter((x) => x.band != null && x.band > BAND.translit).length;
+      let s = '';
+      if (aliasN) s += `${aliasN} English greeting ${aliasN === 1 ? 'match' : 'matches'} (the stored gloss is not that English word). `;
+      if (glossN) s += `${glossN} exact gloss ${glossN === 1 ? 'match' : 'matches'}. `;
+      else if (!aliasN) s += `No exact English gloss for “${q}” in the 5,000-word list. `;
       if (heN) s += `${heN} exact Hebrew ${heN === 1 ? 'match' : 'matches'}. `;
-      if (tlN) s += `${tlN} exact transliteration ${tlN === 1 ? 'match' : 'matches'}. `;
+      if (tlN) s += `${tlN} transliteration ${tlN === 1 ? 'match' : 'matches'} (not an English gloss). `;
       if (relW) s += `${relW} related (those letters sit inside another word). `;
+      if (hiddenNoise) s += `${hiddenNoise} more words only contain those letters. Tick “Also show words that only contain these letters” to list them. `;
       s += `Showing ${shown} of ${ranked.length} word${ranked.length === 1 ? '' : 's'}.`;
       return s;
     };
@@ -323,18 +344,20 @@ export function mount(root, ctx) {
       shown = Math.min(n, ranked.length);
       heading.textContent = sel.topic === FN_TOPIC || sel.tag === 'function' ? 'Function words (closed class; topic does not apply)' : '';
       heading.hidden = !heading.textContent;
-      list.replaceChildren(...ranked.slice(0, shown).map((x) => cardItem(x.entry, x.band)));
+      list.replaceChildren(...ranked.slice(0, shown).map(cardItem));
       status.textContent = statusText();
       moreRow.replaceChildren(...(shown < ranked.length ? [el('button', { type: 'button', class: 'btn secondary', id: 'vc-more', onclick: () => {
         const from = shown; shown = Math.min(shown + PAGE, ranked.length);
-        list.append(...ranked.slice(from, shown).map((x) => cardItem(x.entry, x.band)));
+        list.append(...ranked.slice(from, shown).map(cardItem));
         status.textContent = statusText();
         if (shown >= ranked.length) moreRow.replaceChildren();
         focusNode(list.children?.[from]?.querySelector?.('.vc-gloss'));
       } }, `Show ${Math.min(PAGE, ranked.length - shown)} more`)] : []));
     };
     const refilter = () => {
-      ranked = applyRanked(all, sel, translitOf);
+      const full = applyRanked(all, { ...sel, broad: true }, translitOf);
+      ranked = sel.broad ? full : applyRanked(all, sel, translitOf);
+      hiddenNoise = Math.max(0, full.length - ranked.length);
       matches = ranked.map((x) => x.entry);
       renderRows(false); updateAdd();
     };
@@ -349,6 +372,7 @@ export function mount(root, ctx) {
     };
     tagSel.addEventListener('change', () => { sel.tag = tagSel.value; refilter(); });
     formsBox.addEventListener('change', () => { sel.showForms = !!formsBox.checked; refilter(); });
+    broadBox.addEventListener('change', () => { sel.broad = !!broadBox.checked; refilter(); });
     tierSel.addEventListener('change', () => { sel.tier = tierSel.value; sel.topic = ''; reload(); });
     topicSel.addEventListener('change', () => { sel.topic = topicSel.value; refilter(); });
     search.addEventListener('input', () => { sel.query = search.value; refilter(); });

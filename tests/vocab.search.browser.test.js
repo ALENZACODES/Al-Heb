@@ -14,7 +14,7 @@ for (const p of ['playwright', '/usr/lib/node_modules/playwright']) {
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const chrome = process.env.CHROME_PATH || '/opt/google/chrome/chrome';
 
-test('browser: #/vocab search for Hi ranks the transliteration before letter matches', { skip: !chromium, timeout: 120000 }, async () => {
+test('browser: #/vocab search for Hi leads with the shalom greeting, then the she transliteration', { skip: !chromium, timeout: 120000 }, async () => {
   const server = createAppServer({ root, prefix: '/' });
   await new Promise((r) => server.listen(0, r));
   const base = `http://127.0.0.1:${server.address().port}/`;
@@ -28,17 +28,19 @@ test('browser: #/vocab search for Hi ranks the transliteration before letter mat
     const before = await page.locator('#vc-status').innerText();
     assert.match(before, /Showing 40 of \d+ words/);
     await page.fill('#vc-search', 'Hi');
-    await page.waitForFunction(() => /No exact English gloss for “Hi”/.test(document.getElementById('vc-status')?.textContent || ''));
+    await page.waitForFunction(() => /English greeting match/.test(document.getElementById('vc-status')?.textContent || ''));
     const status = await page.locator('#vc-status').innerText();
-    assert.match(status, /No exact English gloss for “Hi”/);
-    assert.match(status, /1 exact transliteration match/);
-    assert.match(status, /related/);
-    const first = await page.locator('#vc-list li').first();
-    assert.equal(await first.getAttribute('data-band'), '4');
-    assert.match(await first.innerText(), /she, it/);
+    assert.match(status, /1 English greeting match/);
+    assert.match(status, /transliteration/);
+    assert.match(status, /only contain those letters/);
+    const first = page.locator('#vc-list li').first();
+    assert.equal(await first.getAttribute('data-match'), 'alias');
+    assert.match(await first.innerText(), /peace/);
+    assert.match(await first.innerText(), /English greeting/);
     const second = page.locator('#vc-list li').nth(1);
-    assert.equal(await second.getAttribute('data-band'), '6');
-    assert.match(await second.innerText(), /this, this one/);
+    assert.equal(await second.getAttribute('data-match'), 'translit');
+    assert.match(await second.innerText(), /she, it/);
+    assert.equal(await page.locator('#vc-list li').filter({ hasText: 'this, this one' }).count(), 0);
     await page.screenshot({ path: '/opt/cursor/artifacts/vocab-hi-after.png', fullPage: false });
     const ref = await page.evaluate(async () => {
       const t = await (await fetch('precache-manifest.js')).text();

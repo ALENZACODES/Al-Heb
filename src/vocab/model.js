@@ -25,7 +25,7 @@ export function filterEntries(entries, { topic = '', query = '', translitOf } = 
   return rankEntries(list, raw, translitOf).map((x) => x.entry);
 }
 
-export { fold, rankEntries, matchBand, BAND, EXACT_MAX, isExactBand } from './rank.js';
+export { fold, rankEntries, matchBand, BAND, EXACT_MAX, isExactBand, isShortQuery, keepBand } from './rank.js';
 
 export const cardId = (e) => CARD_PREFIX + e.id;
 

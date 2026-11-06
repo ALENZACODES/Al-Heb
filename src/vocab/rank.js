@@ -7,8 +7,9 @@ function stripMarks(s) {
   return String(s ?? '').normalize('NFD').replace(/[֑-ׇ־]/g, '').replace(/[‎‏"'`]/g, '').normalize('NFC');
 }
 
-/** Bands. Lower is a closer match. 0-4 are exact; 5-6 are related. */
+/** Bands. Lower is a closer match. Alias is a sourced English intent, not a stored gloss. 0-4 are exact list matches; 5-6 are letter matches. */
 export const BAND = Object.freeze({
+  alias: -1,
   gloss: 0,
   firstSense: 1,
   sense: 2,
@@ -18,6 +19,9 @@ export const BAND = Object.freeze({
   substring: 6,
 });
 export const EXACT_MAX = BAND.translit;
+/** Latin queries shorter than this do not use prefix or substring matches unless the learner asks. */
+export const SHORT_LATIN = 4;
+export const SHORT_HEBREW = 3;
 
 const HEBREW_LETTERS = /[א-ת]/;
 
@@ -96,4 +100,17 @@ export function rankEntries(entries, query, translitOf) {
   return out;
 }
 
-export const isExactBand = (band) => band != null && band <= EXACT_MAX;
+export const isExactBand = (band) => band != null && band >= BAND.gloss && band <= EXACT_MAX;
+
+/** True when prefix and substring hits are noise unless the learner asks for them. */
+export function isShortQuery(query) {
+  const q = fold(query);
+  if (!q) return false;
+  return HEBREW_LETTERS.test(q) ? [...q].length < SHORT_HEBREW : q.length < SHORT_LATIN;
+}
+
+export function keepBand(band, query, broad) {
+  if (band == null || band <= EXACT_MAX) return true;
+  if (broad) return true;
+  return !isShortQuery(query);
+}

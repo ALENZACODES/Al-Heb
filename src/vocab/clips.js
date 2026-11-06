@@ -11,8 +11,21 @@ import { t } from '../shell/i18n.js';
 
 export const VOICES = Object.freeze(['m', 'f']);
 export const TRADITIONS = Object.freeze(['israeli', 'sephardi', 'ashkenazi']);
-/** Values for ctx.audio.play options.rate. Slow is 0.7× inside the shared player, not here. */
+/** Values this screen passes as options.rate. */
 export const CLIP_RATES = Object.freeze(['normal', 'slow']);
+/**
+ * The unmerged player contract (PR #20, commit 8f37d4ba, docs/audio/PLAYBACK-CONTRACT.md
+ * on chatgpt/games-enrich-2026-11-06) maps slow to 0.7× and says "Playing" only after a
+ * playing event. The player in this tree does not read options.rate. appliedByThisTree stays false
+ * until that player is what this branch actually runs.
+ */
+export const PLAYBACK_DEPENDENCY = Object.freeze({
+  contractCommit: '8f37d4ba',
+  contractFile: 'docs/audio/PLAYBACK-CONTRACT.md',
+  branch: 'chatgpt/games-enrich-2026-11-06',
+  slowMeans: 0.7,
+  appliedByThisTree: false,
+});
 export const SPEED_BUTTONS = Object.freeze([['normal', 'Normal'], ['slow', 'Slow']]);
 
 const VOICE_KEY = { m: 'settings.voice.m', f: 'settings.voice.f' };

@@ -51,15 +51,29 @@ export function mount(root, ctx) {
       path.setAttribute('stroke-linecap', 'round');
       diagram.append(path);
     }
-    const choices = shuffled(letter.strokes).map((stroke, i) =>
-      h('button', { type: 'button', class: 'btn secondary game-choice', onclick: () => {
-        if (!alive) return;
-        const ok = acceptStroke(letter, stroke.id, step);
-        session.answer(ok);
-        if (ok) { step++; if (step === letter.strokes.length) { step = 0; round++; } }
-        status.textContent = ok ? 'Correct stroke locked.' : 'Incorrect stroke: the arch cannot lock.';
-        paint();
-      } }, 'Stroke ' + (letter.strokes.indexOf(stroke) + 1)));
+    // Shape-only options: never expose index/step order on the choice buttons.
+    const choices = shuffled(letter.strokes).map((stroke) => {
+      const miniature = document.createElementNS(svgNS, 'svg');
+      miniature.setAttribute('viewBox', '0 0 1000 1000');
+      miniature.setAttribute('class', 'game-arch-option-svg');
+      miniature.setAttribute('aria-hidden', 'true');
+      const shape = document.createElementNS(svgNS, 'path');
+      shape.setAttribute('d', stroke.path);
+      shape.setAttribute('fill', 'none');
+      shape.setAttribute('stroke', 'currentColor');
+      shape.setAttribute('stroke-width', '85');
+      shape.setAttribute('stroke-linecap', 'round');
+      miniature.append(shape);
+      return h('button', { type: 'button', class: 'btn secondary game-choice',
+        'aria-label': 'Try this stroke shape', onclick: () => {
+          if (!alive) return;
+          const ok = acceptStroke(letter, stroke.id, step);
+          session.answer(ok);
+          if (ok) { step++; if (step === letter.strokes.length) { step = 0; round++; } }
+          status.textContent = ok ? 'Correct stroke locked.' : 'Incorrect stroke: the arch cannot lock.';
+          paint();
+        } }, miniature);
+    });
     board.replaceChildren(reference, diagram, h('p', {}, 'Stroke ' + (step + 1) + ' of ' + letter.strokes.length),
       h('div', { class: 'game-choices' }, ...choices));
   }

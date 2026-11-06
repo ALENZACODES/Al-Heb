@@ -40,6 +40,6 @@ export function showcaseNode(ctx) {
           h('a', { class: 'btn show-btn', href: '#/firstday' }, 'Start your first 10 minutes'),
           ' ',
           h('a', { class: 'btn secondary show-btn2', href: '#/books' }, 'Read a story book')))),
-    h('p', { class: 'show-stats' }, '75 lessons \u00b7 5,000 words \u00b7 19,467 voice clips \u00b7 5 voiced story books \u00b7 3 traditions'),
+    h('p', { class: 'show-stats' }, '75 lessons \u00b7 5,000 words \u00b7 19,466 voice clips \u00b7 5 voiced story books \u00b7 3 traditions'),
     h('ul', { class: 'show-grid' }, ...tiles));
 }

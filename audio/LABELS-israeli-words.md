@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 3087 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 3193 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-3087 English labels; 2 UNKNOWN.
+3193 English labels; 4 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -3073,6 +3073,64 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [malchutcha-w3](m/israeli/word/malchutcha-w3.mp3) | כָּל־עֹלָמִים | all ages | kol-olamim |
 | [malchutcha-w4](m/israeli/word/malchutcha-w4.mp3) | וּמֶמְשֶׁלְתְּךָ | and your dominion | umemsheltekha |
 | [malchutcha-w5](m/israeli/word/malchutcha-w5.mp3) | בְּכָל־דּוֹר | in all generations | bekhol-dor |
+| [malchutcha-w6](m/israeli/word/malchutcha-w6.mp3) | וָדוֹר׃ | and generations | vador |
+| [maoz-tzur-1-w1](m/israeli/word/maoz-tzur-1-w1.mp3) | מָעוֹז | stronghold | ma'oz |
+| [maoz-tzur-1-w10](m/israeli/word/maoz-tzur-1-w10.mp3) | וְשָׁם | and there | vesham |
+| [maoz-tzur-1-w11](m/israeli/word/maoz-tzur-1-w11.mp3) | תּוֹדָה | gratitude | todah |
+| [maoz-tzur-1-w12](m/israeli/word/maoz-tzur-1-w12.mp3) | נְזַבֵּחַ | we will offer | nezabeach |
+| [maoz-tzur-1-w13](m/israeli/word/maoz-tzur-1-w13.mp3) | לְעֵת | at the time | le'et |
+| [maoz-tzur-1-w14](m/israeli/word/maoz-tzur-1-w14.mp3) | תָּכִין | you prepared | takhin |
+| [maoz-tzur-1-w15](m/israeli/word/maoz-tzur-1-w15.mp3) | מַטְבֵּחַ | slaughter | matbeach |
+| [maoz-tzur-1-w16](m/israeli/word/maoz-tzur-1-w16.mp3) | מִצָּר | the foe | mitzar |
+| [maoz-tzur-1-w17](m/israeli/word/maoz-tzur-1-w17.mp3) | הַמְנַבֵּחַ | the barking | hamnabeach |
+| [maoz-tzur-1-w18](m/israeli/word/maoz-tzur-1-w18.mp3) | אָז | so, therefore, then, thus; then, next; then, at that time | az |
+| [maoz-tzur-1-w19](m/israeli/word/maoz-tzur-1-w19.mp3) | אֶגְמוֹר | I shall complete | egmor |
+| [maoz-tzur-1-w2](m/israeli/word/maoz-tzur-1-w2.mp3) | צוּר | Rock | tzur |
+| [maoz-tzur-1-w20](m/israeli/word/maoz-tzur-1-w20.mp3) | בְּשִׁיר | with a song | beshir |
+| [maoz-tzur-1-w21](m/israeli/word/maoz-tzur-1-w21.mp3) | מִזְמוֹר | a psalm | mizmor |
+| [maoz-tzur-1-w22](m/israeli/word/maoz-tzur-1-w22.mp3) | חֲנֻכַּת | the dedication | chanukat |
+| [maoz-tzur-1-w23](m/israeli/word/maoz-tzur-1-w23.mp3) | הַמִּזְבֵּחַ׃ | of the altar | hamizbeach |
+| [maoz-tzur-1-w3](m/israeli/word/maoz-tzur-1-w3.mp3) | יְשׁוּעָתִי | of my salvation | yeshu'ati |
+| [maoz-tzur-1-w4](m/israeli/word/maoz-tzur-1-w4.mp3) | לְךָ | for you | lekha |
+| [maoz-tzur-1-w5](m/israeli/word/maoz-tzur-1-w5.mp3) | נָאֶה | handsome, fair; pleasant | na'eh |
+| [maoz-tzur-1-w6](m/israeli/word/maoz-tzur-1-w6.mp3) | לְשַׁבֵּחַ | to praise | leshabeach |
+| [maoz-tzur-1-w7](m/israeli/word/maoz-tzur-1-w7.mp3) | תִּכּוֹן | restore | tikon |
+| [maoz-tzur-1-w8](m/israeli/word/maoz-tzur-1-w8.mp3) | בֵּית | the house | beit |
+| [maoz-tzur-1-w9](m/israeli/word/maoz-tzur-1-w9.mp3) | תְּפִלָּתִי | of my prayer | tefilati |
+| [mi-chamocha-1-w1](m/israeli/word/mi-chamocha-1-w1.mp3) | מִי־כָמֹכָה | who is like you | mi-khamokhah |
+| [mi-chamocha-1-w10](m/israeli/word/mi-chamocha-1-w10.mp3) | עֹשֵׂה | doing | oseh |
+| [mi-chamocha-1-w11](m/israeli/word/mi-chamocha-1-w11.mp3) | פֶלֶא׃ | wonder | fele |
+| [mi-chamocha-1-w2](m/israeli/word/mi-chamocha-1-w2.mp3) | בָּאֵלִם | among the mighty | ba'elim |
+| [mi-chamocha-1-w3](m/israeli/word/mi-chamocha-1-w3.mp3) | אֲדֹנָי | the LORD | adonai |
+| [mi-chamocha-1-w4](m/israeli/word/mi-chamocha-1-w4.mp3) | מִי | who, what person or persons; the person or persons that | mi |
+| [mi-chamocha-1-w5](m/israeli/word/mi-chamocha-1-w5.mp3) | כָּמֹכָה | like you | kamokhah |
+| [mi-chamocha-1-w6](m/israeli/word/mi-chamocha-1-w6.mp3) | נֶאְדָּר | majestic | nedar |
+| [mi-chamocha-1-w7](m/israeli/word/mi-chamocha-1-w7.mp3) | בַּקֹּדֶשׁ | in holiness | bakodesh |
+| [mi-chamocha-1-w8](m/israeli/word/mi-chamocha-1-w8.mp3) | נוֹרָא | very | nora |
+| [mi-chamocha-1-w9](m/israeli/word/mi-chamocha-1-w9.mp3) | תְהִלֹּת | praises | tehilot |
+| [mi-sheberach-opening-w1](m/israeli/word/mi-sheberach-opening-w1.mp3) | מִי | who, what person or persons; the person or persons that | mi |
+| [mi-sheberach-opening-w2](m/israeli/word/mi-sheberach-opening-w2.mp3) | שֶׁבֵּרַךְ | who blessed | sheberakh |
+| [mi-sheberach-opening-w3](m/israeli/word/mi-sheberach-opening-w3.mp3) | אֲבוֹתֵינוּ | our ancestors | avoteinu |
+| [mi-sheberach-opening-w4](m/israeli/word/mi-sheberach-opening-w4.mp3) | אַבְרָהָם | Abraham | avraham |
+| [mi-sheberach-opening-w5](m/israeli/word/mi-sheberach-opening-w5.mp3) | יִצְחָק | Isaac | yitzchak |
+| [mi-sheberach-opening-w6](m/israeli/word/mi-sheberach-opening-w6.mp3) | וְיַעֲקֹב | and Jacob | veya'akov |
+| [modeh-ani-1-w1](m/israeli/word/modeh-ani-1-w1.mp3) | מוֹדֶה | grateful (m.) | modeh |
+| [modeh-ani-1-w10](m/israeli/word/modeh-ani-1-w10.mp3) | בְּחֶמְלָה | mercifully | bechemlah |
+| [modeh-ani-1-w11](m/israeli/word/modeh-ani-1-w11.mp3) | רַבָּה | a female rabbi in more liberal streams of Judaism | rabah |
+| [modeh-ani-1-w12](m/israeli/word/modeh-ani-1-w12.mp3) | אֱמוּנָתֶךָ׃ | your faithfulness | emunatekha |
+| [modeh-ani-1-w2](m/israeli/word/modeh-ani-1-w2.mp3) | אֲנִי | I | ani |
+| [modeh-ani-1-w3](m/israeli/word/modeh-ani-1-w3.mp3) | לְפָנֶיךָ | before you | lefanekha |
+| [modeh-ani-1-w4](m/israeli/word/modeh-ani-1-w4.mp3) | מֶלֶךְ | king | melekh |
+| [modeh-ani-1-w5](m/israeli/word/modeh-ani-1-w5.mp3) | חַי | to live (to be alive, to have life); to live | chai |
+| [modeh-ani-1-w6](m/israeli/word/modeh-ani-1-w6.mp3) | וְקַיָּם | and enduring | vekayam |
+| [modeh-ani-1-w7](m/israeli/word/modeh-ani-1-w7.mp3) | שֶׁהֶחֱזַרְתָּ | that you returned | shehechezarta |
+| [modeh-ani-1-w8](m/israeli/word/modeh-ani-1-w8.mp3) | בִּי | in me | bi |
+| [modeh-ani-1-w9](m/israeli/word/modeh-ani-1-w9.mp3) | נִשְׁמָתִי | my soul | nishmati |
+| [num-12-13-w1](m/israeli/word/num-12-13-w1.mp3) | אֵל | god; strength | el |
+| [num-12-13-w2](m/israeli/word/num-12-13-w2.mp3) | נָא | please, if you please | na |
+| [num-12-13-w3](m/israeli/word/num-12-13-w3.mp3) | רְפָא | heal | refa |
+| [num-12-13-w4](m/israeli/word/num-12-13-w4.mp3) | נָא | please, if you please | na |
+| [num-12-13-w5](m/israeli/word/num-12-13-w5.mp3) | לָהּ׃ | her | lah |
 | [numbers-01-f](m/israeli/word/numbers-01-f.mp3) | אַחַת | one (f.) | achat |
 | [numbers-01-m](m/israeli/word/numbers-01-m.mp3) | אֶחָד | one | echad |
 | [numbers-02-f](m/israeli/word/numbers-02-f.mp3) | שְׁתַּיִם | two (f.) | shtayim |
@@ -3103,6 +3161,54 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [numbers-20](m/israeli/word/numbers-20.mp3) | הַיּוֹם | today | hayom |
 | [numbers-21](m/israeli/word/numbers-21.mp3) | מָחָר | tomorrow | machar |
 | [numbers-22](m/israeli/word/numbers-22.mp3) | אֶתְמוֹל | yesterday | etmol |
+| [oseh-shalom-w1](m/israeli/word/oseh-shalom-w1.mp3) | עֹשֶׂה | who makes | oseh |
+| [oseh-shalom-w10](m/israeli/word/oseh-shalom-w10.mp3) | יִשְׂרָאֵל | Israel | yisra'el |
+| [oseh-shalom-w11](m/israeli/word/oseh-shalom-w11.mp3) | וְאִמְרוּ | and say | ve'imru |
+| [oseh-shalom-w12](m/israeli/word/oseh-shalom-w12.mp3) | אָמֵן׃ | used to express agreement with what was just stated | amen |
+| [oseh-shalom-w2](m/israeli/word/oseh-shalom-w2.mp3) | שָׁלוֹם | peace | shalom |
+| [oseh-shalom-w3](m/israeli/word/oseh-shalom-w3.mp3) | בִּמְרוֹמָיו | in his high places | bimromav |
+| [oseh-shalom-w4](m/israeli/word/oseh-shalom-w4.mp3) | הוּא | he; used as a copula | hu |
+| [oseh-shalom-w5](m/israeli/word/oseh-shalom-w5.mp3) | יַעֲשֶׂה | may he make | ya'aseh |
+| [oseh-shalom-w6](m/israeli/word/oseh-shalom-w6.mp3) | שָׁלוֹם | peace | shalom |
+| [oseh-shalom-w7](m/israeli/word/oseh-shalom-w7.mp3) | עָלֵינוּ | it is upon us | aleinu |
+| [oseh-shalom-w8](m/israeli/word/oseh-shalom-w8.mp3) | וְעַל | and for | ve'al |
+| [oseh-shalom-w9](m/israeli/word/oseh-shalom-w9.mp3) | כָּל | all, whole, everything | kol |
+| [politeness-01](m/israeli/word/politeness-01.mp3) | תּוֹדָה | thank you | todah |
+| [politeness-03](m/israeli/word/politeness-03.mp3) | בְּבַקָּשָׁה | please / you're welcome | bevakashah |
+| [politeness-06](m/israeli/word/politeness-06.mp3) | סְלִיחָה | excuse me / sorry | selichah |
+| [politeness-08](m/israeli/word/politeness-08.mp3) | כֵּן | yes | ken |
+| [politeness-09](m/israeli/word/politeness-09.mp3) | לֹא | no | lo |
+| [politeness-10](m/israeli/word/politeness-10.mp3) | אוּלַי | maybe | ulai |
+| [politeness-11](m/israeli/word/politeness-11.mp3) | בְּטַח | sure / of course | betach |
+| [politeness-12](m/israeli/word/politeness-12.mp3) | סַבָּבָה | cool / great / fine by me | sabavah |
+| [politeness-13](m/israeli/word/politeness-13.mp3) | יַאלְלָה | come on / let's go / OK then | yalelah |
+| [politeness-14](m/israeli/word/politeness-14.mp3) | וָואלָה | really? / wow / honestly | vavlah |
+| [politeness-15](m/israeli/word/politeness-15.mp3) | אַחִי | my brother (bro) | achi |
+| [politeness-16](m/israeli/word/politeness-16.mp3) | יוֹפִי | great / nice | yofi |
+| [politeness-19](m/israeli/word/politeness-19.mp3) | דַּי | enough / stop it | dai |
+| [politeness-20](m/israeli/word/politeness-20.mp3) | רֶגַע | one moment | rega |
+| [shehecheyanu-w1](m/israeli/word/shehecheyanu-w1.mp3) | בָּרוּךְ | blessed | barukh |
+| [shehecheyanu-w10](m/israeli/word/shehecheyanu-w10.mp3) | לַזְּמַן | to the time | lazeman |
+| [shehecheyanu-w11](m/israeli/word/shehecheyanu-w11.mp3) | הַזֶּה׃ | this | hazeh |
+| [shehecheyanu-w2](m/israeli/word/shehecheyanu-w2.mp3) | אַתָּה | you, thou | atah |
+| [shehecheyanu-w3](m/israeli/word/shehecheyanu-w3.mp3) | אֲדֹנָי | the LORD | adonai |
+| [shehecheyanu-w4](m/israeli/word/shehecheyanu-w4.mp3) | אֱלֹהֵינוּ | our-God | eloheinu |
+| [shehecheyanu-w5](m/israeli/word/shehecheyanu-w5.mp3) | מֶלֶךְ | king | melekh |
+| [shehecheyanu-w6](m/israeli/word/shehecheyanu-w6.mp3) | הָעוֹלָם | the world | ha'olam |
+| [shehecheyanu-w7](m/israeli/word/shehecheyanu-w7.mp3) | שֶׁהֶחֱיָינוּ | who has kept us alive | shehecheyainu |
+| [shehecheyanu-w8](m/israeli/word/shehecheyanu-w8.mp3) | וְקִיְּמָנוּ | and sustained us | vekiyemanu |
+| [shehecheyanu-w9](m/israeli/word/shehecheyanu-w9.mp3) | וְהִגִּיעָנוּ | and brought us | vehigi'anu |
+| [shop-12](m/israeli/word/shop-12.mp3) | מְזֻמָּן | cash | mezuman |
+| [shop-16](m/israeli/word/shop-16.mp3) | פָּתוּחַ | open | patuach |
+| [shop-17](m/israeli/word/shop-17.mp3) | סָגוּר | closed | sagur |
+| [shop-19](m/israeli/word/shop-19.mp3) | שֶׁקֶל | shekel (Israeli currency) | shekel |
+| [small-talk-15-f](m/israeli/word/small-talk-15-f.mp3) | תִּרְגְּעִי | chill / calm down | tirge'i |
+| [small-talk-15-m](m/israeli/word/small-talk-15-m.mp3) | תִּרְגַּע | UNKNOWN | tirga |
+| [small-talk-18-f](m/israeli/word/small-talk-18-f.mp3) | חֲבֵרָה | friend | chaverah |
+| [small-talk-18-m](m/israeli/word/small-talk-18-m.mp3) | חָבֵר | UNKNOWN | chaver |
+| [taxi-02](m/israeli/word/taxi-02.mp3) | לְאָן? | where to? | le'an? |
+| [taxi-05](m/israeli/word/taxi-05.mp3) | לַמָּלוֹן | to the hotel | lamalon |
+| [taxi-06](m/israeli/word/taxi-06.mp3) | לַכּוֹתֶל | to the Western Wall | lakotel |
 
 ## Israeli reading lines
 
@@ -3693,4 +3799,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 4061 produced clips in INDEX.csv have an English label; 2 UNKNOWN. Filenames and IDs are unchanged.
+All 4167 produced clips in INDEX.csv have an English label; 4 UNKNOWN. Filenames and IDs are unchanged.

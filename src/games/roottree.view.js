@@ -1,6 +1,7 @@
 // Game 16 — cultivated branches are sourced only from recorded root families.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, resultsCard } from './engine.js';
+import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.roottree.v1';
 export function buildRootDeck(data) {
@@ -10,6 +11,7 @@ export function buildRootDeck(data) {
 }
 export function isRootLeaf(family, word) { return !!word?.id && !!family?.words?.some(w => w.id === word.id); }
 export function mount(root, ctx) {
+  const leaveSfx = sfx.enter(ctx);
   let alive = true, deck = [], R = null, round = 0;
   let session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 6 });
   const status = h('p', { role: 'status', class: 'game-status', 'aria-live': 'polite' }, 'Loading root families…');
@@ -36,7 +38,7 @@ export function mount(root, ctx) {
       const choice = h('button', { type: 'button', class: 'btn secondary game-choice', onclick: () => {
         if (!alive) return;
         const ok = isRootLeaf(family, w);
-        session.answer(ok);
+        session.answer(ok); sfx.play(ok ? 'success' : 'miss');
         status.textContent = ok ? 'Real root derivative: branch grows.' : 'Not in this documented root family.';
         if (ok) round++;
         paint();
@@ -54,5 +56,5 @@ export function mount(root, ctx) {
     if (deck.length < 2) { status.textContent = 'Not enough source root families; no round started.'; return; }
     paint();
   }).catch(() => { if (alive) status.textContent = 'Root records unavailable.'; });
-  return () => { alive = false; };
+  return () => { alive = false; leaveSfx(); };
 }

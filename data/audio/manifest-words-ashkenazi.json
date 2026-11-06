@@ -19324,8 +19324,8 @@
   "kind": "word",
   "id": "shir-hamaalot-w2",
   "text": "הַמַּעֲלוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "of ascents",
   "phonetic": "hama'alot"
@@ -19766,8 +19766,8 @@
   "kind": "word",
   "id": "shir-hamaalot-w19",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the LORD",
   "phonetic": "adonai"
@@ -19792,8 +19792,8 @@
   "kind": "word",
   "id": "shir-hamaalot-w20",
   "text": "לַעֲשׂוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to do",
   "phonetic": "la'asot"
@@ -19818,8 +19818,8 @@
   "kind": "word",
   "id": "shir-hamaalot-w21",
   "text": "עִם־אֵלֶּה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "with these",
   "phonetic": "im-eleh"

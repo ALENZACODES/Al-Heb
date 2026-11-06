@@ -21196,8 +21196,8 @@
   "kind": "word",
   "id": "lecha-hashem-w4",
   "text": "וְהַגְּבוּרָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and the might",
   "phonetic": "vehagevurah"
@@ -21222,8 +21222,8 @@
   "kind": "word",
   "id": "lecha-hashem-w5",
   "text": "וְהַתִּפְאֶרֶת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and the splendour",
   "phonetic": "vehatif'eret"
@@ -21248,8 +21248,8 @@
   "kind": "word",
   "id": "lecha-hashem-w6",
   "text": "וְהַנֵּצַח",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and the victory",
   "phonetic": "vehanetzach"

@@ -24966,8 +24966,8 @@
   "kind": "word",
   "id": "brich-shmei-w75",
   "text": "לָא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "not",
   "phonetic": "la"
@@ -24992,8 +24992,8 @@
   "kind": "word",
   "id": "brich-shmei-w76",
   "text": "עַל־אֱנָשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "in any person",
   "phonetic": "al-enash"
@@ -25018,8 +25018,8 @@
   "kind": "word",
   "id": "brich-shmei-w77",
   "text": "רָחִיצְנָא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "I trust",
   "phonetic": "rachitzena"
@@ -53676,7 +53676,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "egg"
+  "english": "egg",
+  "phonetic": "beitzah"
  },
  {
   "path": "audio/f/sephardi/word/h9974efdc.mp3",
@@ -53689,7 +53690,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "egg"
+  "english": "egg",
+  "phonetic": "beitzah"
  },
  {
   "path": "audio/m/sephardi/word/h4105e713.mp3",
@@ -63544,7 +63546,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to dwell, reside; to be housed, located"
+  "english": "to dwell, reside; to be housed, located",
+  "phonetic": "shakhan"
  },
  {
   "path": "audio/f/sephardi/word/h982871fa.mp3",
@@ -63557,7 +63560,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to dwell, reside; to be housed, located"
+  "english": "to dwell, reside; to be housed, located",
+  "phonetic": "shakhan"
  },
  {
   "path": "audio/m/sephardi/word/haba8301e.mp3",
@@ -71894,7 +71898,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "reddish"
+  "english": "reddish",
+  "phonetic": "adamdam"
  },
  {
   "path": "audio/f/sephardi/word/h995f8ab2.mp3",
@@ -71907,7 +71912,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "reddish"
+  "english": "reddish",
+  "phonetic": "adamdam"
  },
  {
   "path": "audio/m/sephardi/word/h0986ff35.mp3",

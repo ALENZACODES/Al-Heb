@@ -53676,7 +53676,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "egg"
+  "english": "egg",
+  "phonetic": "beitzah"
  },
  {
   "path": "audio/f/israeli/word/h9974efdc.mp3",
@@ -53686,10 +53687,11 @@
   "id": "h9974efdc",
   "text": "בֵּיצָה",
   "ipa": "be.ˈtsa",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "egg"
+  "english": "egg",
+  "phonetic": "beitzah"
  },
  {
   "path": "audio/m/israeli/word/h4105e713.mp3",
@@ -63544,7 +63546,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to dwell, reside; to be housed, located"
+  "english": "to dwell, reside; to be housed, located",
+  "phonetic": "shakhan"
  },
  {
   "path": "audio/f/israeli/word/h982871fa.mp3",
@@ -63554,10 +63557,11 @@
   "id": "h982871fa",
   "text": "שָׁכַן",
   "ipa": "ʃa.ˈχan",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to dwell, reside; to be housed, located"
+  "english": "to dwell, reside; to be housed, located",
+  "phonetic": "shakhan"
  },
  {
   "path": "audio/m/israeli/word/haba8301e.mp3",
@@ -71894,7 +71898,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "reddish"
+  "english": "reddish",
+  "phonetic": "adamdam"
  },
  {
   "path": "audio/f/israeli/word/h995f8ab2.mp3",
@@ -71904,10 +71909,11 @@
   "id": "h995f8ab2",
   "text": "אֲדַמְדַּם",
   "ipa": "a.dam.ˈdam",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "reddish"
+  "english": "reddish",
+  "phonetic": "adamdam"
  },
  {
   "path": "audio/m/israeli/word/h0986ff35.mp3",

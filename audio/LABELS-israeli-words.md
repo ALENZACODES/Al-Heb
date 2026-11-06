@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 6149 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 6152 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-6149 English labels; 1933 UNKNOWN.
+6152 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -1202,6 +1202,9 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [h97be2e78](f/israeli/word/h97be2e78.mp3) | אֲפִלּוּ | even | afilu |
 | [h97dc517a](f/israeli/word/h97dc517a.mp3) | מַבָּט | glance, look (the act of looking); gaze, look | mabat |
 | [h97e97e5b](f/israeli/word/h97e97e5b.mp3) | פְּעֻלָּה | an action, a move | pe'ulah |
+| [h982871fa](f/israeli/word/h982871fa.mp3) | שָׁכַן | to dwell, reside; to be housed, located | shakhan |
+| [h995f8ab2](f/israeli/word/h995f8ab2.mp3) | אֲדַמְדַּם | reddish | adamdam |
+| [h9974efdc](f/israeli/word/h9974efdc.mp3) | בֵּיצָה | egg | beitzah |
 | [haftarah-after-w1](f/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](f/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](f/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -6755,4 +6758,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 12353 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 12362 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

@@ -36562,8 +36562,8 @@
   "kind": "word",
   "id": "haftarah-after-w37",
   "text": "נֶאֱמָן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "loyal, faithful, devoted; reliable, trustworthy; true (to something)",
   "phonetic": "ne'eman"
@@ -36588,8 +36588,8 @@
   "kind": "word",
   "id": "haftarah-after-w38",
   "text": "וְרַחֲמָן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and merciful",
   "phonetic": "verachaman"
@@ -36614,8 +36614,8 @@
   "kind": "word",
   "id": "haftarah-after-w39",
   "text": "אָתָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "you",
   "phonetic": "atah"
@@ -53676,7 +53676,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "egg"
+  "english": "egg",
+  "phonetic": "beitzah"
  },
  {
   "path": "audio/f/ashkenazi/word/h9974efdc.mp3",
@@ -53689,7 +53690,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "egg"
+  "english": "egg",
+  "phonetic": "beitzah"
  },
  {
   "path": "audio/m/ashkenazi/word/h4105e713.mp3",
@@ -63544,7 +63546,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to dwell, reside; to be housed, located"
+  "english": "to dwell, reside; to be housed, located",
+  "phonetic": "shakhan"
  },
  {
   "path": "audio/f/ashkenazi/word/h982871fa.mp3",
@@ -63557,7 +63560,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to dwell, reside; to be housed, located"
+  "english": "to dwell, reside; to be housed, located",
+  "phonetic": "shakhan"
  },
  {
   "path": "audio/m/ashkenazi/word/haba8301e.mp3",
@@ -71894,7 +71898,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "reddish"
+  "english": "reddish",
+  "phonetic": "adamdam"
  },
  {
   "path": "audio/f/ashkenazi/word/h995f8ab2.mp3",
@@ -71907,7 +71912,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "reddish"
+  "english": "reddish",
+  "phonetic": "adamdam"
  },
  {
   "path": "audio/m/ashkenazi/word/h0986ff35.mp3",

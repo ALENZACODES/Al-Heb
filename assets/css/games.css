@@ -29,3 +29,8 @@
 .catcher-basket { position: absolute; bottom: 4%; translate: -50% 0; font-size: 3rem; font-weight: 700;
   color: #f6f1e7; background: rgba(217,164,65,.16); border: 2px solid #d9a441; border-radius: 12px;
   padding: .1rem .8rem; line-height: 1.15; pointer-events: none; }
+
+/* Data-backed vowel HUD and indexed niqqud illustrations. */
+.game-catcher-hud { display: flex; gap: .75rem; align-items: center; min-height: 4rem; }
+.game-catcher-letter-img { width: 76px; height: 76px; object-fit: contain; }
+.game-catcher-mark-img { width: 58px; height: 58px; object-fit: contain; filter: drop-shadow(0 0 6px rgba(232,201,122,.6)); }

@@ -61916,6 +61916,206 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "PLACE_jerusalem_10": {
+   "id": "PLACE_jerusalem_10",
+   "file": "PLACE_jerusalem_10.png",
+   "command": 200,
+   "set": "Jerusalem beyond the courtyard",
+   "block": "N",
+   "prompt": "Command 200 (Jerusalem beyond the courtyard): A narrow stepped alley of golden stone; rooftops and domes seen from a terrace (distant, generic); an ancient city gate with people passing small beneath; a market lane of spice pyramids in baskets (no signs); the walls at sunset from across a valley; a courtyard with an old olive tree and laundry lines; stone steps worn smooth leading up between houses; a small synagogue courtyard with a lemon tree; a watchtower view over hills at dawn; night — warm windows scattered over the dark hillside city. Image 10 of 10: night — warm windows scattered over the dark hillside city. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "c80aaafe610de70222c4760aa34b85c6e42b465b5befd494ca43ee4f5c7d4cf1",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:44:55.591Z",
+   "sourceFile": "img-0032.png",
+   "sourceFileDate": "2026-11-06T21:44:55.191Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "9bac505b7b9f90bafd1c7368ee61aecb56d8b5f0647213b59fd0b96c44b16d4e",
+   "originalFormat": "PNG",
+   "originalBytes": 183076,
+   "originalFile": "PLACE_jerusalem_10.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_jerusalem_10.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 29468
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "STATE_art_01": {
+   "id": "STATE_art_01",
+   "file": "STATE_art_01.png",
+   "command": 243,
+   "set": "Empty, error & success states",
+   "block": "R",
+   "prompt": "Command 243 (Empty, error & success states): Ten friendly square states: Rimon holding an empty basket (nothing here yet); Rimon fishing in an empty bucket (no results); Rimon untangling a ball of string (something went wrong); Rimon with a bandaged head bump sitting on a cushion (offline — rest and retry); a gold check seal breaking through a ribbon (success, no text); Rimon watering a pot where nothing has sprouted yet (keep going); a blank map with one gold pin and a lot of dotted path (journey started); Rimon holding a \"closed\" shutter door gently ajar from inside (locked level preview — door only, no signs); a finish-line ribbon across a path with confetti shapes; Rimon asleep on a \"done\" stack of finished books. Files STATE_art_01 … _10. Image 1 of 10: Rimon holding an empty basket (nothing here yet). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "3fb7a986353cc73f49693ae1d5f0e5b353806fc22181c395c05fdf908f8efa4e",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:44:55.591Z",
+   "sourceFile": "img-0311.png",
+   "sourceFileDate": "2026-11-06T21:44:55.212Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "819101b86d97c79b51fe0825c258cb87db50e4dd3903005d379126eb9bd41f5e",
+   "originalFormat": "PNG",
+   "originalBytes": 216745,
+   "originalFile": "STATE_art_01.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "STATE_art_01.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 14172
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "L11_kaf_cursive_mnemonic": {
+   "id": "L11_kaf_cursive_mnemonic",
+   "file": "L11_kaf_cursive_mnemonic.png",
+   "command": 48,
+   "set": "letter_11_kaf_cursive",
+   "block": "C",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. The keyword object a cupped hand, drawn so its outline echoes the attached silhouette (REF_cursive_kaf.png). Draw the object only, never the letter. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "9e9a661d43f4a27821abf6a93aa1daf9983c0081f08086232e26e31b30d9d599",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:44:55.591Z",
+   "sourceFile": "img-1384.png",
+   "sourceFileDate": "2026-11-06T21:44:55.224Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "00ec5f956037fbe70db25406595b32cf1e9bd824b698ba7355d39bbe134f1a60",
+   "originalFormat": "PNG",
+   "originalBytes": 224318,
+   "originalFile": "L11_kaf_cursive_mnemonic.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "L11_kaf_cursive_mnemonic.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 17224
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "FINALE_set_02": {
+   "id": "FINALE_set_02",
+   "file": "FINALE_set_02.png",
+   "command": 249,
+   "set": "Finale — the whole course in one world",
+   "block": "R",
+   "prompt": "Command 249 (Finale — the whole course in one world): Ten wide 1792×1024 \"map of the course\" scenes, the art for the completion screen and the book's endpapers: the café, market, beach and synagogue joined in one panorama town; Ari and Noa walking the whole town at dawn; the same town at Shabbat candle-lighting time, windows warm; the town in festival season with sukkot and flags of blank bunting; Rimon at a crossroads with four blank signpost shapes pointing four ways; a hot-air balloon (pomegranate-shaped, no writing) rising over the town; the town seen from the balloon at evening; a night map of the town as lit windows only; the town in the rain with umbrellas of many colours; the town at sunrise one year later, a new small figure arriving with a suitcase. Files FINALE_set_01 … _10. Image 2 of 10: Ari and Noa walking the whole town at dawn. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "24b5bc679aed5430e51cdf537a2254c4c4c0229d3866aa32208249c10aef09f6",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:44:55.591Z",
+   "sourceFile": "img-1459.png",
+   "sourceFileDate": "2026-11-06T21:44:55.220Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "84773916d2e553b3b6f0f9108deb7c41043a71fe10df8699ed8d09e7af402849",
+   "originalFormat": "PNG",
+   "originalBytes": 244156,
+   "originalFile": "FINALE_set_02.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "FINALE_set_02.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 44342
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 1062,
+ "count": 1066,
  "images": {
   "BADGE_01": {
    "w": 512,
@@ -1873,6 +1873,18 @@
      "file": "EMOTE_two_10.1254.webp",
      "w": 1254,
      "h": 1254
+    }
+   ]
+  },
+  "FINALE_set_02": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "FINALE_set_02.512.webp",
+     "w": 512,
+     "h": 293
     }
    ]
   },
@@ -5489,6 +5501,18 @@
     {
      "edge": 512,
      "file": "L10_yod_quirky.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "L11_kaf_cursive_mnemonic": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "L11_kaf_cursive_mnemonic.512.webp",
      "w": 512,
      "h": 512
     }
@@ -10852,6 +10876,18 @@
     }
    ]
   },
+  "PLACE_jerusalem_10": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_jerusalem_10.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_negev_02": {
    "w": 512,
    "h": 293,
@@ -11053,6 +11089,18 @@
      "file": "PLACE_tzfat_09.512.webp",
      "w": 512,
      "h": 293
+    }
+   ]
+  },
+  "STATE_art_01": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "STATE_art_01.512.webp",
+     "w": 512,
+     "h": 512
     }
    ]
   },

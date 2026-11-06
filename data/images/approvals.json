@@ -5522,6 +5522,22 @@
    "forcedDespite": [
     "contains_text"
    ]
+  },
+  "PLACE_jerusalem_10": {
+   "status": "approved",
+   "at": "2026-11-06T21:45:09.599Z"
+  },
+  "STATE_art_01": {
+   "status": "approved",
+   "at": "2026-11-06T21:45:09.599Z"
+  },
+  "L11_kaf_cursive_mnemonic": {
+   "status": "approved",
+   "at": "2026-11-06T21:45:09.599Z"
+  },
+  "FINALE_set_02": {
+   "status": "approved",
+   "at": "2026-11-06T21:45:09.599Z"
   }
  }
 }

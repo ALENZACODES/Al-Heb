@@ -68,7 +68,7 @@
     "m": "audio/m/israeli/book/book3-p05.mp3"
    },
    "illustration": "a single yellow pencil laid across the open bag's flap.",
-   "hasImg": false
+   "hasImg": true
   },
   {
    "n": 6,
@@ -107,7 +107,7 @@
     "m": "audio/m/israeli/book/book3-p08.mp3"
    },
    "illustration": "the bag stands open and empty-looking; a hand lifts the book from behind it.",
-   "hasImg": false
+   "hasImg": true
   },
   {
    "n": 9,
@@ -159,9 +159,9 @@
     "m": "audio/m/israeli/book/book3-p12.mp3"
    },
    "illustration": "the traveller walks down the platform, bag on shoulder, train lights ahead.",
-   "hasImg": false
+   "hasImg": true
   }
  ],
- "hasImages": false,
+ "hasImages": true,
  "hasAudio": false
 }

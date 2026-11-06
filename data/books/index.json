@@ -29,9 +29,9 @@
    "titleEn": "What's in the Bag?",
    "level": "Grade 1",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": false,
-   "picturedPages": 9
+   "picturedPages": 12
   },
   {
    "id": "book4",

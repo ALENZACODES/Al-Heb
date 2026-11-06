@@ -29084,11 +29084,12 @@
   "kind": "line",
   "id": "politeness-02",
   "text": "תּוֹדָה רַבָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "thank you very much"
+  "english": "thank you very much",
+  "phonetic": "todah rabah"
  },
  {
   "path": "audio/f/israeli/line/politeness-02.mp3",
@@ -29111,11 +29112,12 @@
   "kind": "line",
   "id": "politeness-04",
   "text": "אֵין בְּעָיָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "no problem"
+  "english": "no problem",
+  "phonetic": "ein be'ayah"
  },
  {
   "path": "audio/f/israeli/line/politeness-04.mp3",
@@ -29138,11 +29140,12 @@
   "kind": "line",
   "id": "politeness-05",
   "text": "אֵין בַּעַד מָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "you're welcome (lit. nothing for what)"
+  "english": "you're welcome (lit. nothing for what)",
+  "phonetic": "ein ba'ad mah"
  },
  {
   "path": "audio/f/israeli/line/politeness-05.mp3",
@@ -29165,11 +29168,12 @@
   "kind": "line",
   "id": "politeness-07-m",
   "text": "אֲנִי מִצְטַעֵר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm sorry"
+  "english": "I'm sorry",
+  "phonetic": "ani mitzta'er"
  },
  {
   "path": "audio/f/israeli/line/politeness-07-m.mp3",
@@ -29192,11 +29196,12 @@
   "kind": "line",
   "id": "politeness-07-f",
   "text": "אֲנִי מִצְטַעֶרֶת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm sorry"
+  "english": "I'm sorry",
+  "phonetic": "ani mitzta'eret"
  },
  {
   "path": "audio/f/israeli/line/politeness-07-f.mp3",
@@ -29219,11 +29224,12 @@
   "kind": "line",
   "id": "politeness-17",
   "text": "חֲבָל עַל הַזְּמַן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "awesome (lit. a waste of the time)"
+  "english": "awesome (lit. a waste of the time)",
+  "phonetic": "chaval al hazeman"
  },
  {
   "path": "audio/f/israeli/line/politeness-17.mp3",
@@ -29246,11 +29252,12 @@
   "kind": "line",
   "id": "politeness-18",
   "text": "מָה פִּתְאוֹם?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "no way! / what do you mean?"
+  "english": "no way! / what do you mean?",
+  "phonetic": "mah pit'om?"
  },
  {
   "path": "audio/f/israeli/line/politeness-18.mp3",
@@ -29273,11 +29280,12 @@
   "kind": "line",
   "id": "politeness-21",
   "text": "בְּעֶזְרַת הַשֵּׁם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "God willing"
+  "english": "God willing",
+  "phonetic": "be'ezrat hashem"
  },
  {
   "path": "audio/f/israeli/line/politeness-21.mp3",
@@ -29300,11 +29308,12 @@
   "kind": "line",
   "id": "politeness-22",
   "text": "יִהְיֶה בְּסֵדֶר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "it'll be OK"
+  "english": "it'll be OK",
+  "phonetic": "yihyeh beseder"
  },
  {
   "path": "audio/f/israeli/line/politeness-22.mp3",
@@ -30391,11 +30400,12 @@
   "kind": "line",
   "id": "shop-01",
   "text": "כַּמָּה זֶה עוֹלֶה?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "how much does it cost?"
+  "english": "how much does it cost?",
+  "phonetic": "kamah zeh oleh?"
  },
  {
   "path": "audio/f/israeli/line/shop-01.mp3",
@@ -30418,11 +30428,12 @@
   "kind": "line",
   "id": "shop-02",
   "text": "מָה הַמְּחִיר?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "what is the price?"
+  "english": "what is the price?",
+  "phonetic": "mah hamechir?"
  },
  {
   "path": "audio/f/israeli/line/shop-02.mp3",
@@ -30445,11 +30456,12 @@
   "kind": "line",
   "id": "shop-03",
   "text": "זֶה יָקָר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "it's expensive"
+  "english": "it's expensive",
+  "phonetic": "zeh yakar"
  },
  {
   "path": "audio/f/israeli/line/shop-03.mp3",
@@ -30472,11 +30484,12 @@
   "kind": "line",
   "id": "shop-04",
   "text": "זֶה זוֹל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "it's cheap"
+  "english": "it's cheap",
+  "phonetic": "zeh zol"
  },
  {
   "path": "audio/f/israeli/line/shop-04.mp3",
@@ -30499,11 +30512,12 @@
   "kind": "line",
   "id": "shop-05",
   "text": "יֵשׁ הַנָּחָה?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "is there a discount?"
+  "english": "is there a discount?",
+  "phonetic": "yesh hanachah?"
  },
  {
   "path": "audio/f/israeli/line/shop-05.mp3",
@@ -30526,11 +30540,12 @@
   "kind": "line",
   "id": "shop-06-m",
   "text": "אֲנִי רַק מִסְתַּכֵּל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm just looking"
+  "english": "I'm just looking",
+  "phonetic": "ani rak mistakel"
  },
  {
   "path": "audio/f/israeli/line/shop-06-m.mp3",
@@ -30553,11 +30568,12 @@
   "kind": "line",
   "id": "shop-06-f",
   "text": "אֲנִי רַק מִסְתַּכֶּלֶת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm just looking"
+  "english": "I'm just looking",
+  "phonetic": "ani rak mistakelet"
  },
  {
   "path": "audio/f/israeli/line/shop-06-f.mp3",
@@ -30580,11 +30596,12 @@
   "kind": "line",
   "id": "shop-07",
   "text": "אֶקַּח אֶת זֶה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'll take this"
+  "english": "I'll take this",
+  "phonetic": "ekach et zeh"
  },
  {
   "path": "audio/f/israeli/line/shop-07.mp3",
@@ -30607,11 +30624,12 @@
   "kind": "line",
   "id": "shop-08",
   "text": "יֵשׁ לָכֶם ...?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "do you have ...?"
+  "english": "do you have ...?",
+  "phonetic": "yesh lakhem ...?"
  },
  {
   "path": "audio/f/israeli/line/shop-08.mp3",
@@ -30634,11 +30652,12 @@
   "kind": "line",
   "id": "shop-09",
   "text": "אֶפְשָׁר לִמְדֹּד?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "can I try it on?"
+  "english": "can I try it on?",
+  "phonetic": "efshar limdod?"
  },
  {
   "path": "audio/f/israeli/line/shop-09.mp3",
@@ -30661,11 +30680,12 @@
   "kind": "line",
   "id": "shop-10",
   "text": "מָה הַמִּדָּה?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "what size?"
+  "english": "what size?",
+  "phonetic": "mah hamidah?"
  },
  {
   "path": "audio/f/israeli/line/shop-10.mp3",
@@ -30688,11 +30708,12 @@
   "kind": "line",
   "id": "shop-11",
   "text": "יֵשׁ מִדָּה גְּדוֹלָה יוֹתֵר?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "is there a bigger size?"
+  "english": "is there a bigger size?",
+  "phonetic": "yesh midah gedolah yoter?"
  },
  {
   "path": "audio/f/israeli/line/shop-11.mp3",
@@ -30715,11 +30736,12 @@
   "kind": "line",
   "id": "shop-13",
   "text": "כַּרְטִיס אַשְׁרַאי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "credit card"
+  "english": "credit card",
+  "phonetic": "kartis ashray"
  },
  {
   "path": "audio/f/israeli/line/shop-13.mp3",
@@ -30742,11 +30764,12 @@
   "kind": "line",
   "id": "shop-14",
   "text": "אֶפְשָׁר קַבָּלָה?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "can I have a receipt?"
+  "english": "can I have a receipt?",
+  "phonetic": "efshar kabalah?"
  },
  {
   "path": "audio/f/israeli/line/shop-14.mp3",
@@ -30769,11 +30792,12 @@
   "kind": "line",
   "id": "shop-15",
   "text": "אֶפְשָׁר שַׂקִּית?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "can I have a bag?"
+  "english": "can I have a bag?",
+  "phonetic": "efshar sakit?"
  },
  {
   "path": "audio/f/israeli/line/shop-15.mp3",
@@ -30796,11 +30820,12 @@
   "kind": "line",
   "id": "shop-18",
   "text": "מָתַי אַתֶּם סוֹגְרִים?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "when do you close?"
+  "english": "when do you close?",
+  "phonetic": "matai atem sogerim?"
  },
  {
   "path": "audio/f/israeli/line/shop-18.mp3",
@@ -30823,11 +30848,12 @@
   "kind": "line",
   "id": "shop-20",
   "text": "אֵיפֹה הַשֵּׁרוּתִים?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "where is the restroom?"
+  "english": "where is the restroom?",
+  "phonetic": "eifoh hasherutim?"
  },
  {
   "path": "audio/f/israeli/line/shop-20.mp3",

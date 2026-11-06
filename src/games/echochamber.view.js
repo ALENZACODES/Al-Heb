@@ -1,6 +1,7 @@
 // Game 24 — exact one-consonant minimal-pair contrast, never random distractors.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, hasRecordedClip, playRecordedClip, resultsCard } from './engine.js';
+import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY='games.echochamber.v1';
 const PAIRS=Object.freeze([['ח','כ','chet','kaf'],['ט','ת','tet','tav'],['ע','א','ayin','alef']]);
@@ -44,6 +45,7 @@ export function buildEchoDeck(index,tradition) {
 }
 export function echoMatch(target,choice){return !!target?.id && target.id===choice?.id;}
 export function mount(root,ctx){
+  const leaveSfx = sfx.enter(ctx);
   let alive=true,deck=[],R=null,round=0,session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:5});
   const status=h('p',{class:'game-status',role:'status','aria-live':'polite'},'Checking actual minimal-pair recordings…');
   const board=h('div',{class:'game-board'});
@@ -60,7 +62,7 @@ export function mount(root,ctx){
       return image?h('img',{src:image.src,alt:image.alt,width:100,height:100,class:'game-card-img','data-img-id':image.id}):null;
     }).filter(Boolean);
     const buttons=shuffled([pair.first,pair.second]).map(word=>h('button',{type:'button',class:'btn secondary game-choice',disabled:true,onclick:()=>{
-      if(!played)return;const ok=echoMatch(target,word);session.answer(ok);
+      if(!played)return;const ok=echoMatch(target,word);session.answer(ok); sfx.play(ok ? 'success' : 'miss');
       status.textContent=ok?'Recorded phoneme identified.':'Different sound: replay the clip.';
       if(ok)round++;paint();
     }},heSpan(word.he,'he game-he-sm')));
@@ -81,5 +83,5 @@ export function mount(root,ctx){
     if(!deck.length){status.textContent='No audible, true minimal pair recorded for the selected tradition. No replacement accent or guessed rounds.';return;}
     paint();
   }).catch(()=>{if(alive)status.textContent='Minimal-pair data unavailable.';});
-  return ()=>{alive=false;ctx?.audio?.stop?.();};
+  return ()=>{alive=false; leaveSfx();ctx?.audio?.stop?.();};
 }

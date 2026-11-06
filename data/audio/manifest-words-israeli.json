@@ -1821,8 +1821,8 @@
     "kind": "word",
     "id": "shema-vahavta-w1",
     "text": "שְׁמַע",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -1843,8 +1843,8 @@
     "kind": "word",
     "id": "shema-vahavta-w2",
     "text": "יִשְׂרָאֵל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -1865,8 +1865,8 @@
     "kind": "word",
     "id": "shema-vahavta-w3",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -1887,8 +1887,8 @@
     "kind": "word",
     "id": "shema-vahavta-w4",
     "text": "אֱלֹהֵינוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -1909,8 +1909,8 @@
     "kind": "word",
     "id": "shema-vahavta-w5",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -1931,8 +1931,8 @@
     "kind": "word",
     "id": "shema-vahavta-w6",
     "text": "אֶחָד׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -1953,8 +1953,8 @@
     "kind": "word",
     "id": "shema-vahavta-w7",
     "text": "וְאָהַבְתָּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -1975,8 +1975,8 @@
     "kind": "word",
     "id": "shema-vahavta-w8",
     "text": "אֵת",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -1997,8 +1997,8 @@
     "kind": "word",
     "id": "shema-vahavta-w9",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2019,8 +2019,8 @@
     "kind": "word",
     "id": "shema-vahavta-w10",
     "text": "אֱלֹהֶיךָ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2041,8 +2041,8 @@
     "kind": "word",
     "id": "shema-vahavta-w11",
     "text": "בְּכָל־לְבָבְךָ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2063,8 +2063,8 @@
     "kind": "word",
     "id": "shema-vahavta-w12",
     "text": "וּבְכָל־נַפְשְׁךָ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2085,8 +2085,8 @@
     "kind": "word",
     "id": "shema-vahavta-w13",
     "text": "וּבְכָל־מְאֹדֶךָ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2107,8 +2107,8 @@
     "kind": "word",
     "id": "shema-vahavta-w14",
     "text": "וְהָיוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2129,8 +2129,8 @@
     "kind": "word",
     "id": "shema-vahavta-w15",
     "text": "הַדְּבָרִים",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2151,8 +2151,8 @@
     "kind": "word",
     "id": "shema-vahavta-w16",
     "text": "הָאֵלֶּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2173,8 +2173,8 @@
     "kind": "word",
     "id": "shema-vahavta-w17",
     "text": "אֲשֶׁר",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2195,8 +2195,8 @@
     "kind": "word",
     "id": "shema-vahavta-w18",
     "text": "אָנֹכִי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2217,8 +2217,8 @@
     "kind": "word",
     "id": "shema-vahavta-w19",
     "text": "מְצַוְּךָ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2239,8 +2239,8 @@
     "kind": "word",
     "id": "shema-vahavta-w20",
     "text": "הַיּוֹם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2261,8 +2261,8 @@
     "kind": "word",
     "id": "shema-vahavta-w21",
     "text": "עַל־לְבָבֶךָ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2283,8 +2283,8 @@
     "kind": "word",
     "id": "shema-vahavta-w22",
     "text": "וְשִׁנַּנְתָּם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2305,8 +2305,8 @@
     "kind": "word",
     "id": "shema-vahavta-w23",
     "text": "לְבָנֶיךָ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2327,8 +2327,8 @@
     "kind": "word",
     "id": "shema-vahavta-w24",
     "text": "וְדִבַּרְתָּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2349,8 +2349,8 @@
     "kind": "word",
     "id": "shema-vahavta-w25",
     "text": "בָּם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2371,8 +2371,8 @@
     "kind": "word",
     "id": "shema-vahavta-w26",
     "text": "בְּשִׁבְתְּךָ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2393,8 +2393,8 @@
     "kind": "word",
     "id": "shema-vahavta-w27",
     "text": "בְּבֵיתֶךָ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2415,8 +2415,8 @@
     "kind": "word",
     "id": "shema-vahavta-w28",
     "text": "וּבְלֶכְתְּךָ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2437,8 +2437,8 @@
     "kind": "word",
     "id": "shema-vahavta-w29",
     "text": "בַדֶּרֶךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2459,8 +2459,8 @@
     "kind": "word",
     "id": "shema-vahavta-w30",
     "text": "וּבְשָׁכְבְּךָ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2481,8 +2481,8 @@
     "kind": "word",
     "id": "shema-vahavta-w31",
     "text": "וּבְקוּמֶךָ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2503,8 +2503,8 @@
     "kind": "word",
     "id": "shema-vahavta-w32",
     "text": "וּקְשַׁרְתָּם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2525,8 +2525,8 @@
     "kind": "word",
     "id": "shema-vahavta-w33",
     "text": "לְאוֹת",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2547,8 +2547,8 @@
     "kind": "word",
     "id": "shema-vahavta-w34",
     "text": "עַל־יָדֶךָ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2569,8 +2569,8 @@
     "kind": "word",
     "id": "shema-vahavta-w35",
     "text": "וְהָיוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2591,8 +2591,8 @@
     "kind": "word",
     "id": "shema-vahavta-w36",
     "text": "לְטֹטָפֹת",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2613,8 +2613,8 @@
     "kind": "word",
     "id": "shema-vahavta-w37",
     "text": "בֵּין",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2635,8 +2635,8 @@
     "kind": "word",
     "id": "shema-vahavta-w38",
     "text": "עֵינֶיךָ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2657,8 +2657,8 @@
     "kind": "word",
     "id": "shema-vahavta-w39",
     "text": "וּכְתַבְתָּם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2679,8 +2679,8 @@
     "kind": "word",
     "id": "shema-vahavta-w40",
     "text": "עַל־מְזוּזֹת",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2701,8 +2701,8 @@
     "kind": "word",
     "id": "shema-vahavta-w41",
     "text": "בֵּיתֶךָ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -2723,8 +2723,8 @@
     "kind": "word",
     "id": "shema-vahavta-w42",
     "text": "וּבִשְׁעָרֶיךָ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16341,8 +16341,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w1",
     "text": "שִׁיר",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16363,8 +16363,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w2",
     "text": "הַמַּעֲלוֹת",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16385,8 +16385,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w3",
     "text": "בְּשׁוּב",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16407,8 +16407,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w4",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16429,8 +16429,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w5",
     "text": "אֶת־שִׁיבַת",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16451,8 +16451,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w6",
     "text": "צִיּוֹן",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16473,8 +16473,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w7",
     "text": "הָיִינוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16495,8 +16495,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w8",
     "text": "כְּחֹלְמִים׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16517,8 +16517,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w9",
     "text": "אָז",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16539,8 +16539,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w10",
     "text": "יִמָּלֵא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16561,8 +16561,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w11",
     "text": "שְׂחוֹק",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16583,8 +16583,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w12",
     "text": "פִּינוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16605,8 +16605,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w13",
     "text": "וּלְשׁוֹנֵנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16627,8 +16627,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w14",
     "text": "רִנָּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16649,8 +16649,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w15",
     "text": "אָז",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16671,8 +16671,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w16",
     "text": "יֹאמְרוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16693,8 +16693,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w17",
     "text": "בַגּוֹיִם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16715,8 +16715,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w18",
     "text": "הִגְדִּיל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16737,8 +16737,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w19",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16759,8 +16759,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w20",
     "text": "לַעֲשׂוֹת",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16781,8 +16781,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w21",
     "text": "עִם־אֵלֶּה׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16803,8 +16803,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w22",
     "text": "הִגְדִּיל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16825,8 +16825,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w23",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16847,8 +16847,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w24",
     "text": "לַעֲשׂוֹת",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16869,8 +16869,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w25",
     "text": "עִמָּנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16891,8 +16891,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w26",
     "text": "הָיִינוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16913,8 +16913,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w27",
     "text": "שְׂמֵחִים׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16935,8 +16935,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w28",
     "text": "שׁוּבָה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16957,8 +16957,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w29",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -16979,8 +16979,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w30",
     "text": "אֶת־שְׁבִיתֵנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -17001,8 +17001,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w31",
     "text": "כַּאֲפִיקִים",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -17023,8 +17023,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w32",
     "text": "בַּנֶּגֶב׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -17045,8 +17045,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w33",
     "text": "הַזֹּרְעִים",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -17067,8 +17067,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w34",
     "text": "בְּדִמְעָה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -17089,8 +17089,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w35",
     "text": "בְּרִנָּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -17111,8 +17111,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w36",
     "text": "יִקְצֹרוּ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -17133,8 +17133,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w37",
     "text": "הָלוֹךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -17155,8 +17155,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w38",
     "text": "יֵלֵךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -17177,8 +17177,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w39",
     "text": "וּבָכֹה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -17199,8 +17199,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w40",
     "text": "נֹשֵׂא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -17221,8 +17221,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w41",
     "text": "מֶשֶׁךְ־הַזָּרַע",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -17243,8 +17243,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w42",
     "text": "בֹּא־יָבוֹא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -17265,8 +17265,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w43",
     "text": "בְרִנָּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -17287,8 +17287,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w44",
     "text": "נֹשֵׂא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -17309,8 +17309,8 @@
     "kind": "word",
     "id": "shir-hamaalot-w45",
     "text": "אֲלֻמֹּתָיו׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -24481,8 +24481,8 @@
     "kind": "word",
     "id": "sim-shalom-w1",
     "text": "שִׂים",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -24679,8 +24679,8 @@
     "kind": "word",
     "id": "sim-shalom-w10",
     "text": "כָּל־יִשְׂרָאֵל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -24701,8 +24701,8 @@
     "kind": "word",
     "id": "sim-shalom-w11",
     "text": "עַמֶּךָ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -24723,8 +24723,8 @@
     "kind": "word",
     "id": "sim-shalom-w12",
     "text": "בָּרְכֵנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -24745,8 +24745,8 @@
     "kind": "word",
     "id": "sim-shalom-w13",
     "text": "אָבִינוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {

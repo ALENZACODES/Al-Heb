@@ -8,6 +8,7 @@
 
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, loadGameImages, imgOf, pull, pick, resultsCard } from './engine.js';
+import { sfx } from '../audio/sfx.js';
 
 /** Best score, play count, last star rating. Device-local, listed on the privacy page. */
 export const STORE_KEY = 'games.tugowar.v1';
@@ -31,6 +32,7 @@ export const PAIRS = Object.freeze([
 const ROUNDS = 10;
 
 export function mount(root, ctx) {
+  const leaveSfx = sfx.enter(ctx);
   const session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 8 });
   let R = null;
   let pos = 0; // rope position: -1 (theirs) .. +1 (yours)
@@ -90,6 +92,8 @@ export function mount(root, ctx) {
     current = null;
     session.answer(ok);
     pos = pull(pos, ok ? 1 : -1, 0.14);
+    sfx.play('tick');
+    sfx.play(ok ? 'success' : 'miss');
     status.textContent = ok ? `Yes — ${pair[0]} × ${pair[3]}. Your team pulls!` : `Not that one. The opposite of ${pair[0]} is ${pair[3]}.`;
     paintRope();
     clearTimeout(timer);
@@ -98,6 +102,7 @@ export function mount(root, ctx) {
 
   function finish() {
     const won = pos > 0;
+    if (won) sfx.play('streak');
     board.replaceChildren(resultsCard(h, heSpan, session, {
       title: won ? 'Your team wins the tug!' : 'Noa\'s team takes this one',
       onAgain: () => { pos = 0; round = 0; nextRound(); },
@@ -113,5 +118,5 @@ export function mount(root, ctx) {
   paintRope();
   loadGameImages(ctx).then((r) => { if (alive) { R = r; if (current) nextRoundImage(); } });
   nextRound();
-  return () => { alive = false; clearTimeout(timer); };
+  return () => { alive = false; clearTimeout(timer); leaveSfx(); };
 }

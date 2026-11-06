@@ -7,6 +7,7 @@
 import { warningAfterWrongTap } from './interference.js';
 import { letterSound, congregationOf } from '../pronunciation/forTradition.js';
 import { loadMemoryChain, entryFor, buildMemoryCard, memoryFallback } from './memorycard.js';
+import { SCENE, picture } from '../img/scenes.js';
 
 const DATA = (name) => new URL('../../data/letters/' + name, import.meta.url).href;
 const PRON = (name) => new URL('../../data/pronunciation/' + name, import.meta.url).href;
@@ -201,6 +202,7 @@ export function mount(root, ctx = {}) {
     if (q) {
       const tg = tileById(q.target);
       const box = h('div', { class: 'panel' },
+        picture(h, ctx, 'id', SCENE.letterRush, { width: 480, class: 'scene-art' }),
         h('strong', {}, t('atlas.find', 'Find: ') + tg.name + '  '), h('span', { class: 'muted' }, tg.ipa ? '/' + tg.ipa + '/' : ''),
         h('div', { class: 'row' }, h('button', { onclick: () => hear(tg.nameAudioId) }, t('atlas.hearName', 'Hear it'))),
         q.right ? h('p', {}, t('atlas.good', 'Good! ') + tg.name, ' ', h('button', { 'data-act': 'next', onclick: () => { startQuiz(); render(); } }, t('atlas.next', 'Next'))) : null,

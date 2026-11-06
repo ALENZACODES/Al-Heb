@@ -13,6 +13,8 @@ import { loadMemoryChain, entryFor, buildMemoryCard, memoryFallback } from './me
 import { describeLetterStrokes, STROKE_WORDS_NOTE } from './strokewords.js';
 import { shapeLabel } from './shapetext.js';
 import { makeRoving } from '../shell/roving.js';
+import { SCENE, picture } from '../img/scenes.js';
+import { motionOk } from '../motion/alive.js';
 
 /** Records whose LETTERFORM (not just the order) the builder doubts most: docs/letters/REVIEW-LIST.md "DOUBT (HIGH)". */
 export const HIGH_DOUBT = { 'pe-final': ['cursive'], 'tsadi-final': ['cursive'] };
@@ -105,7 +107,7 @@ export function mount(root, ctx = {}) {
     tab: 'trace', letterId: (ctx.params && typeof ctx.params.id === 'string' && ctx.params.id) || 'alef', script: (ctx.settings && (ctx.settings.script === 'cursive' || ctx.settings.script === 'print')) ? ctx.settings.script : 'print',
     strict: false, outline: true, step: false
   };
-  { const q = ctx.query && ctx.query.tab; if (q === 'drill') state.tab = 'drill'; else if (q === 'type' || q === 'typing') state.tab = 'typing'; }
+  { const q = ctx.query && ctx.query.tab; if (q === 'drill') state.tab = 'drill'; else if (q === 'type' || q === 'typing') state.tab = 'typing'; else if (q === 'rush') state.tab = 'rush'; }
   const progress0 = createProgress(ctx.store);
   let assistedRun = false; // true once "Next stroke" was used in this run: the run then counts as walked through, not drawn
   let attempt = []; // raw learner strokes since the last reset, for the whole-shape fallback hint
@@ -176,11 +178,12 @@ export function mount(root, ctx = {}) {
       return;
     }
     const tabs = h('div', { class: 'tabs', role: 'tablist', 'aria-label': t('trace.tabs', 'Letter practice') },
-      ...[['trace', t('trace.tabTrace', 'Trace')], ['drill', t('trace.tabDrill', 'Look-alikes')], ['typing', t('trace.tabTyping', 'Typing')]].map(([id, label]) =>
+      ...[['trace', t('trace.tabTrace', 'Trace')], ['rush', t('trace.tabRush', 'Letter Rush')], ['drill', t('trace.tabDrill', 'Look-alikes')], ['typing', t('trace.tabTyping', 'Typing')]].map(([id, label]) =>
         h('button', { role: 'tab', 'aria-selected': state.tab === id, onclick: () => { state.tab = id; render(); } }, label)));
     body.appendChild(tabs);
     body.appendChild(h('p', { class: 'notice' }, t('trace.draftNotice', 'Draft: an Israeli teacher has not yet checked the stroke order and shapes. If your school teaches a different order, follow your teacher.')));
     if (state.tab === 'trace') { renderTrace(); inVisualOrder(body); }
+    else if (state.tab === 'rush') renderRush();
     else if (state.tab === 'drill') renderDrill();
     else renderTyping();
   }
@@ -342,6 +345,46 @@ export function mount(root, ctx = {}) {
     det.appendChild(h('p', { class: 'sw-h' }, h('strong', {}, t('trace.swAll', 'All strokes, in order'))));
     det.appendChild(h('ol', { class: 'sw-list' }, ...d.strokes.map(s => h('li', {}, s.sentence))));
     return wrapEl;
+  }
+
+  function renderRush() {
+    const pool = (state.letters || []).filter((l) => l && l.he && l.id && !/-final$/.test(l.id));
+    if (!pool.length) { body.appendChild(h('p', {}, t('trace.rushEmpty', 'Letters are not loaded.'))); return; }
+    let target = pool[0], ok = 0, n = 0;
+    const quiet = !motionOk(ctx);
+    let left = 60, timer = null;
+    const art = picture(h, ctx, 'id', SCENE.letterRush, { width: 640, class: 'scene-art' });
+    const prompt = h('p', { class: 'big', id: 'rush-prompt' });
+    const score = h('p', { role: 'status' });
+    const clock = h('p', { class: 'muted', id: 'rush-clock' });
+    const grid = h('div', { class: 'grid', dir: 'rtl', 'aria-label': t('trace.rushGrid', 'Letters') });
+    const ask = () => {
+      target = pool[Math.floor(Math.random() * pool.length)];
+      prompt.textContent = target.name + ' ';
+      prompt.appendChild(he(target.he));
+      score.textContent = ok + ' / ' + n;
+    };
+    for (const l of pool) grid.appendChild(h('button', { type: 'button', 'aria-label': l.name, onclick: () => {
+      if (left <= 0 && !quiet) return;
+      n += 1; if (l.id === target.id) ok += 1; ask();
+    } }, he(l.he)));
+    if (art) body.appendChild(art);
+    body.appendChild(h('h2', {}, t('trace.rushTitle', 'Letter Rush')));
+    body.appendChild(h('p', {}, t('trace.rushHelp', 'Tap the letter that is named. Ten right is a win.')));
+    body.appendChild(prompt); body.appendChild(grid); body.appendChild(score); body.appendChild(clock);
+    ask();
+    if (quiet) { clock.textContent = t('trace.rushCalm', 'No timer.'); return; }
+    clock.textContent = left + 's';
+    timer = setInterval(() => {
+      if (unmounted || state.tab !== 'rush') { clearInterval(timer); return; }
+      left -= 1; clock.textContent = left + 's';
+      if (left <= 0) {
+        clearInterval(timer);
+        if (grid.querySelectorAll) for (const b of grid.querySelectorAll('button')) b.disabled = true;
+        clock.textContent = (ok >= 10 ? t('trace.rushWin', 'Win. ') : t('trace.rushTime', 'Time. ')) + ok + ' right.';
+      }
+    }, 1000);
+    cleanups.push(() => clearInterval(timer));
   }
 
   // ------------------------------------------------------------ look-alike drill

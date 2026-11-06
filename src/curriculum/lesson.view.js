@@ -16,6 +16,8 @@ import { chunkedLessons } from "../shell/comfort.js";
 import { RESUME_KEY, getResume, setResume, clearResume } from "./chunks.js";
 import { storeGet, storeSet, showSaveFailure } from "./dom.js";
 import { hookLine, hookNode } from "../letters/hookline.js";
+import { letterMeet, picture } from "../img/scenes.js";
+import { celebrateWin } from "../motion/alive.js";
 import { mountChunkedLesson } from "./lesson.parts.js";
 
 const A_ID = /^I-\d{2}$/;
@@ -66,7 +68,8 @@ export function mountLesson(root, ctx, lessonId) {
     if (lesson.letters.length) parts.push(section("l-letters", "Letters", el("ul", { class: "alef-items" },
       ...lesson.letters.map((id) => {
         const L = c.letters.get(id);
-        return el("li", { class: "alef-item" },
+        return el("li", { class: "alef-item", "data-live": "letter" },
+          letterMeet(el, ctx, id),
           heText(L?.he || "?", "alef-he alef-big"),
           el("div", { class: "alef-item-body" }, el("strong", {}, L?.name || id), " ", L?.nameHe ? heText(L.nameHe) : null,
             el("div", { class: "muted" }, saySound(c.consonants?.get(id), congregation, { fallbackEn: L?.sound?.en || "" })),
@@ -103,14 +106,16 @@ export function mountLesson(root, ctx, lessonId) {
     if (lesson.vowels.length) parts.push(section("l-vowels", "Vowels and marks", el("ul", { class: "alef-items" },
       ...lesson.vowels.map((id) => {
         const V = c.vowels.get(id);
-        return el("li", { class: "alef-item" },
+        return el("li", { class: "alef-item", "data-live": "vowel" },
+          picture(el, ctx, "vowel", id, { class: "vowel-pic", width: 360 }),
           heText(V?.shape || "?", "alef-he alef-big"),
           el("div", { class: "alef-item-body" }, el("strong", {}, V?.name || id), V?.nameHe ? " " : null, V?.nameHe ? heText(V.nameHe) : null,
             el("div", { class: "muted" }, vowelEnglish(V, congregation))),
           el("div", { class: "alef-item-actions" }, playButton(ctx, "vowel", id, `Listen to ${V?.name || id}`, note)));
       }))));
     if (lesson.words.length) parts.push(section("l-words", "Words", el("ul", { class: "alef-items" },
-      ...lesson.words.map((w, i) => el("li", { class: "alef-item" },
+      ...lesson.words.map((w, i) => el("li", { class: "alef-item", "data-live": "word" },
+        picture(el, ctx, "word", w.id, { class: "word-pic", width: 400 }),
         heText(w.he, "alef-he alef-word"),
         // a pointed word gets its respelling as text (a screen reader may have no Hebrew voice); the English meaning stays first
         el("div", { class: "alef-item-body" }, el("span", {}, w.en), hookNode(el, hookLine(c.chain, congregation, { he: w.he })), (() => { const r = respell(w.he, congregation); return r ? el("div", { class: "muted alef-respell", lang: "en" }, `Sounds like: ${r} (${LABELS[congregation] || congregation} style)`) : null; })()),
@@ -151,6 +156,7 @@ export function mountLesson(root, ctx, lessonId) {
           nextHref: next ? `#/learn?lesson=${next.id}` : "#/learn", nextLabel: next ? "Next lesson" : "All lessons",
           extraLinks: [el("a", { class: "btn secondary", href: `#/learn?lesson=${lesson.id}&review=1` }, "Review these cards")] }));
         quizHost.querySelector?.("#alef-int-ex")?.focus?.();
+        celebrateWin(ctx, quizHost, el, lesson.id);
         startBtn.textContent = "Check again"; startBtn.hidden = false; startBtn.removeAttribute?.("hidden");
         actions.className = "row alef-actions alef-actionbar";
       } });

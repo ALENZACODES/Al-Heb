@@ -11,6 +11,7 @@ import { lessons } from "../curriculum/lessons.js";
 import { loadMorphSvg } from "./memorycard.js";
 import { buildMemoryQuestion, memoryFeedback, memCardId, spreadConfusables, partnersOf, CHOICE_TYPES, MEM_TYPES, canAsk } from "./memory.js";
 import { congregationOf } from "../pronunciation/forTradition.js";
+import { SCENE, picture } from "../img/scenes.js";
 
 /**
  * The picture (assets/letters/morph/<id>.svg, shown in its picture state: the letter is hidden), fetched and sanitised by the memory card
@@ -118,7 +119,9 @@ export async function mountMemoryPractice(host, ctx, { onExit, size = 8 } = {}) 
   const byId = new Map(items.map((x) => [x.id, x.q]));
   const outcomes = [];
   const box = el("div", { class: "alef-mem-practice" });
+  const card = picture(el, ctx, "id", SCENE.storyPostcard, { width: 640, class: "scene-art" });
   host.replaceChildren(box);
+  if (card) box.append(card);
   let keyHandler = null;
   const done = () => { document.removeEventListener("keydown", keyHandler); keyHandler = null; };
 

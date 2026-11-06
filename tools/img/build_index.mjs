@@ -47,7 +47,7 @@ export function groupOf({ stem, set = '', kind = '', key = '' }) {
   if (kind === 'lesson-scene') return { key: `lesson:${key}` };
   if (kind === 'festival-scene') return { key: `festival:${String(set).replace(/^j_festival_/, '')}` };
   if (kind.startsWith('word-') || kind === 'srs-card') return { key: `word:${key}` };
-  if ((m = /^L\d\d_([a-z_]+?)_(print|cursive)_.+$/.exec(stem))) return { key: `letter:${hy(m[1])}:${m[2]}`, rank: /_mnemonic$/.test(stem) ? 0 : 1 };
+  if ((m = /^L\d\d_([a-z_]+?)_(print|cursive)_.+$/.exec(stem))) return { key: `letter:${hy(m[1])}:${m[2]}`, rank: /_meet$/.test(stem) ? -1 : /_mnemonic$/.test(stem) ? 0 : 1 };
   if ((m = /^L\d\d_([a-z_]+?)_quirky$/.exec(stem))) return { key: `letter:${hy(m[1])}:quirky` };
   if ((m = /^V\d\d_([a-z_]+?)_(keyword|ari|noa|position|card)$/.exec(stem))) return { key: `vowel:${hy(m[1])}`, rank: m[2] === 'keyword' ? 0 : 1 };
   if ((m = /^VOC_([a-z_]+)_\d+$/.exec(stem))) return { key: `theme:${hy(m[1])}` };

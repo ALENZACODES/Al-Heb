@@ -67,6 +67,8 @@ export function scopeSvgCss(css) {
     while (j < n && depth) { const c = css[j++]; if (c === '{') depth++; else if (c === '}') depth--; }
     const inner = css.slice(open + 1, j - 1); i = j;
     if (/^@(media|supports)\b/i.test(prelude)) { const body = scopeSvgCss(inner); if (body) out += prelude + '{' + body + '}'; continue; }
+    // The letter morph's own keyframes (morph-a, morph-b, morph-pop, morph-trace). Other @-rules stay dropped.
+    if (/^@keyframes\s+morph-[a-z0-9-]+$/i.test(prelude)) { out += prelude + '{' + inner + '}'; continue; }
     if (prelude.startsWith('@')) continue;
     const sel = prelude.split(',').map((x) => x.trim()).filter((x) => x && !/^(:root|html|body)\b/i.test(x)).map((x) => '.mc-svg ' + x);
     if (sel.length) out += sel.join(',') + '{' + inner + '}';
@@ -210,6 +212,9 @@ export const MEMORY_CARD_CSS = `
 .mc .mc-svg .morph-b{opacity:0;transition:opacity .4s ease}
 .mc .mc-art[aria-pressed=true] .mc-svg .morph-a{opacity:0}
 .mc .mc-art[aria-pressed=true] .mc-svg .morph-b{opacity:1}
+@media (prefers-reduced-motion:no-preference){
+.mc .mc-art[data-motion="play"] .mc-svg .morph-a,.mc .mc-art[data-motion="play"] .mc-svg .morph-b{opacity:unset;transition:none}
+}
 .mc .mc-side{min-inline-size:0;flex:1 1 8rem}
 .mc .mc-name{font-weight:700;margin:0}
 .mc .mc-cap{margin:2px 0 6px;font-size:.88rem;color:var(--mc-muted)}
@@ -306,8 +311,19 @@ export function buildMemoryCard(o) {
   // keep the opened card clear of the fixed tab bar on a phone (scroll-margin on .mc leaves room); no-op where scrollIntoView is missing
   const reveal = () => { try { card.scrollIntoView({ block: 'nearest' }); } catch { /* ignore */ } };
   const btn = (act, label, fn, primary) => h('button', { type: 'button', class: 'mc-btn' + (primary ? ' primary' : ''), 'data-act': act, onclick: fn }, label);
+  const motionWanted = () => {
+    try {
+      if (document.documentElement?.hasAttribute?.('data-calm')) return false;
+      if (globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches) return false;
+    } catch { /* keep still */ }
+    return true;
+  };
   function sync() {
     art.setAttribute('aria-pressed', String(pressed)); art.setAttribute('data-state', pressed ? 'b' : 'a'); card.setAttribute('data-stage', String(stage)); card.setAttribute('data-more', more ? '1' : '0');
+    const play = pressed && motionWanted();
+    art.setAttribute('data-motion', play ? 'play' : 'still');
+    const svg = typeof svgBox.querySelector === 'function' ? svgBox.querySelector('svg') : null;
+    if (svg?.classList) { if (play) svg.classList.add('morph-play'); else svg.classList.remove('morph-play'); }
     // without a picture file, the pressed state still shows the picture idea as words (honest fallback)
     glyphEl.textContent = svgReady ? '' : (pressed ? '' : glyph);
     ideaEl.textContent = !svgReady && pressed ? (pic.alt || pic.idea || '') : ''; // the shorter text fits the small button; the caption beside it has it in full

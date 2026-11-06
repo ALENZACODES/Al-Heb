@@ -9,6 +9,7 @@ import { TRADITION_LABELS, NOTICE, TRADITIONS } from './compare.model.js';
 import { createLoader } from './lookup.js';
 import { congregationOf, LABELS } from './forTradition.js';
 import { buildQuiz, isCorrect, applyRound, weakCodes, optionLabel, NOTE, QUIZ_KEY, QUESTIONS } from './tradquiz.model.js';
+import { SCENE, picture } from '../img/scenes.js';
 
 const CSS = `
 .alef-tq{max-inline-size:40rem;margin-inline:auto;overflow-wrap:anywhere}
@@ -38,7 +39,7 @@ export function mount(root, ctx) {
   const title = h('h1', { id: 'view-title', tabindex: '-1' }, 'Which tradition is this?');
   const status = h('div', { role: 'status', 'aria-live': 'polite' });
   const body = h('div', {});
-  const wrap = h('section', { class: 'alef-tq', 'aria-labelledby': 'view-title' }, title, h('p', { class: 'tq-flag', role: 'note' }, NOTICE), body, status);
+  const wrap = h('section', { class: 'alef-tq', 'aria-labelledby': 'view-title' }, title, picture(h, ctx, 'id', SCENE.traditionDetective, { width: 720, class: 'scene-art' }), h('p', { class: 'tq-flag', role: 'note' }, NOTICE), body, status);
   const style = h('style', {}, CSS);
   root.append(style, wrap);
   const setBody = (...n) => body.replaceChildren(...n.flat().filter(Boolean));

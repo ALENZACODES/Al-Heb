@@ -2,6 +2,7 @@ import { el, tr } from "./dom.js";
 import { audioAccess, NO_AUDIO } from "../shell/audio-access.js";
 import { REASONS } from "../shell/audio.js";
 import { isAudioFree } from "../shell/audiofree.js";
+import { startSpeaking } from "../motion/alive.js";
 
 /** Human wording for a play() failure code (e.g. "speech-error"); unknown codes pass through unchanged. */
 export function reasonText(code) { return REASONS[code] || code || "unavailable"; }
@@ -20,9 +21,12 @@ export function playButton(ctx, kind, id, label, note, extra = {}) {
   const acc = audioAccess(ctx?.audio, kind, id, extra);
   if (acc.level === "none" && !acc.checking) return el("span", { class: "audio-none muted", "data-audio-state": "none" }, NO_AUDIO);
   return el("button", { type: "button", class: "alef-play", "aria-label": label,
-    onclick: async () => {
+    onclick: async (ev) => {
       if (!ctx?.audio?.play) { if (note) note.textContent = "Audio is not available in this build."; return; }
+      const host = ev?.currentTarget?.closest?.("[data-live]") || ev?.currentTarget?.parentElement;
+      const stop = startSpeaking(ctx, host);
       try { const r = await ctx.audio.play(kind, id, extra); if (note) note.textContent = describePlay(r); }
       catch (e) { if (note) note.textContent = "No sound: the browser could not play this."; }
+      finally { stop(); }
     } }, el("span", { "aria-hidden": "true" }, "▶"), " ", tr(ctx, "learn.play", "Listen"));
 }

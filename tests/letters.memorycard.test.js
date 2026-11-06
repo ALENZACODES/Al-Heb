@@ -37,6 +37,13 @@ test('sanitizeSvg: scopes the file\'s own <style> to the card (no :root/body rul
   assert.doesNotMatch(out, /keyframes|:root|body/);
 });
 
+test('sanitizeSvg keeps the letter morph keyframes and still drops every other keyframe', () => {
+  const css = '@keyframes morph-a{0%,18%{opacity:1}100%{opacity:0}}@keyframes ma{0%{opacity:1}}';
+  const out = M.sanitizeSvg('<svg viewBox="0 0 9 9"><style>' + css + '</style><g class="morph-a"/></svg>');
+  assert.match(out, /@keyframes morph-a\{0%,18%\{opacity:1\}100%\{opacity:0\}\}/);
+  assert.doesNotMatch(out, /@keyframes ma/);
+});
+
 test('sanitizeSvg: rejects script, handlers, external references, foreignObject, DOCTYPE, images, remote css', () => {
   const bad = [
     '<svg><script>alert(1)</script></svg>', '<svg onload="x()"><g/></svg>', '<svg><g onclick = "x()"/></svg>',

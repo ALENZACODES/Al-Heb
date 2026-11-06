@@ -68,7 +68,7 @@
    "flags": [
     "contains_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "BG_jerusalem": {
    "id": "BG_jerusalem",
@@ -139,7 +139,7 @@
    "flags": [
     "contains_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "BG_market": {
    "id": "BG_market",
@@ -197,7 +197,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "BG_shabbat": {
    "id": "BG_shabbat",
@@ -259,7 +259,7 @@
    "flags": [
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "BG_synagogue": {
    "id": "BG_synagogue",
@@ -317,7 +317,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "BG_telaviv": {
    "id": "BG_telaviv",
@@ -375,7 +375,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_ari_celebrate": {
    "id": "CHAR_ari_celebrate",
@@ -433,7 +433,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_ari_listen": {
    "id": "CHAR_ari_listen",
@@ -491,7 +491,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_ari_neutral": {
    "id": "CHAR_ari_neutral",
@@ -549,7 +549,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_ari_sheet": {
    "id": "CHAR_ari_sheet",
@@ -610,7 +610,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_ari_speak": {
    "id": "CHAR_ari_speak",
@@ -668,7 +668,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_ari_synagogue": {
    "id": "CHAR_ari_synagogue",
@@ -726,7 +726,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_ari_telaviv": {
    "id": "CHAR_ari_telaviv",
@@ -850,7 +850,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_noa_listen": {
    "id": "CHAR_noa_listen",
@@ -908,7 +908,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_noa_neutral": {
    "id": "CHAR_noa_neutral",
@@ -966,7 +966,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_noa_sheet": {
    "id": "CHAR_noa_sheet",
@@ -1027,7 +1027,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_noa_speak": {
    "id": "CHAR_noa_speak",
@@ -1085,7 +1085,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_noa_synagogue": {
    "id": "CHAR_noa_synagogue",
@@ -1143,7 +1143,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_noa_telaviv": {
    "id": "CHAR_noa_telaviv",
@@ -1201,7 +1201,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "FRAME_lettercard": {
    "id": "FRAME_lettercard",
@@ -1259,7 +1259,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "FRAME_lettercard_dual": {
    "id": "FRAME_lettercard_dual",
@@ -1317,7 +1317,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L01_alef_print_ari": {
    "id": "L01_alef_print_ari",
@@ -16479,7 +16479,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "MOUTH_ee": {
    "id": "MOUTH_ee",
@@ -16537,7 +16537,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "MOUTH_eh": {
    "id": "MOUTH_eh",
@@ -16595,7 +16595,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "MOUTH_none": {
    "id": "MOUTH_none",
@@ -16653,7 +16653,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "MOUTH_oh": {
    "id": "MOUTH_oh",
@@ -16711,7 +16711,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "MOUTH_oo": {
    "id": "MOUTH_oo",
@@ -16769,7 +16769,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STYLE_sample_cup": {
    "id": "STYLE_sample_cup",
@@ -17078,7 +17078,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_bimah_03": {
    "id": "CRAFT_bimah_03",
@@ -17136,7 +17136,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_bimah_04": {
    "id": "CRAFT_bimah_04",
@@ -17194,7 +17194,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_bimah_05": {
    "id": "CRAFT_bimah_05",
@@ -17252,7 +17252,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_bimah_06": {
    "id": "CRAFT_bimah_06",
@@ -17310,7 +17310,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_bimah_07": {
    "id": "CRAFT_bimah_07",
@@ -17368,7 +17368,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_bimah_08": {
    "id": "CRAFT_bimah_08",
@@ -17631,7 +17631,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_haftarah_02": {
    "id": "CRAFT_haftarah_02",
@@ -17689,7 +17689,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_haftarah_03": {
    "id": "CRAFT_haftarah_03",
@@ -17747,7 +17747,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_haftarah_04": {
    "id": "CRAFT_haftarah_04",
@@ -17805,7 +17805,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_haftarah_05": {
    "id": "CRAFT_haftarah_05",
@@ -17863,7 +17863,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_haftarah_06": {
    "id": "CRAFT_haftarah_06",
@@ -17921,7 +17921,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_haftarah_07": {
    "id": "CRAFT_haftarah_07",
@@ -17979,7 +17979,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_haftarah_08": {
    "id": "CRAFT_haftarah_08",
@@ -18037,7 +18037,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_haftarah_09": {
    "id": "CRAFT_haftarah_09",
@@ -18095,7 +18095,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_haftarah_10": {
    "id": "CRAFT_haftarah_10",
@@ -18153,7 +18153,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_01": {
    "id": "CRAFT_practice_01",
@@ -18211,7 +18211,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_02": {
    "id": "CRAFT_practice_02",
@@ -18269,7 +18269,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_03": {
    "id": "CRAFT_practice_03",
@@ -18327,7 +18327,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_04": {
    "id": "CRAFT_practice_04",
@@ -18385,7 +18385,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_05": {
    "id": "CRAFT_practice_05",
@@ -18443,7 +18443,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_06": {
    "id": "CRAFT_practice_06",
@@ -18501,7 +18501,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_07": {
    "id": "CRAFT_practice_07",
@@ -18559,7 +18559,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_08": {
    "id": "CRAFT_practice_08",
@@ -18617,7 +18617,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_09": {
    "id": "CRAFT_practice_09",
@@ -18675,7 +18675,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_10": {
    "id": "CRAFT_practice_10",
@@ -18733,7 +18733,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_01": {
    "id": "CRAFT_qa_01",
@@ -18791,7 +18791,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_02": {
    "id": "CRAFT_qa_02",
@@ -18849,7 +18849,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_03": {
    "id": "CRAFT_qa_03",
@@ -18907,7 +18907,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_04": {
    "id": "CRAFT_qa_04",
@@ -18965,7 +18965,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_05": {
    "id": "CRAFT_qa_05",
@@ -19023,7 +19023,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_06": {
    "id": "CRAFT_qa_06",
@@ -19081,7 +19081,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_07": {
    "id": "CRAFT_qa_07",
@@ -19139,7 +19139,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_08": {
    "id": "CRAFT_qa_08",
@@ -19197,7 +19197,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_09": {
    "id": "CRAFT_qa_09",
@@ -19255,7 +19255,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_10": {
    "id": "CRAFT_qa_10",
@@ -19313,7 +19313,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_scroll_01": {
    "id": "CRAFT_scroll_01",
@@ -19437,7 +19437,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_scroll_03": {
    "id": "CRAFT_scroll_03",
@@ -19495,7 +19495,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_scroll_04": {
    "id": "CRAFT_scroll_04",
@@ -19553,7 +19553,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_scroll_05": {
    "id": "CRAFT_scroll_05",
@@ -19611,7 +19611,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_scroll_06": {
    "id": "CRAFT_scroll_06",
@@ -19669,7 +19669,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_scroll_07": {
    "id": "CRAFT_scroll_07",
@@ -19727,7 +19727,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_scroll_08": {
    "id": "CRAFT_scroll_08",
@@ -19785,7 +19785,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_scroll_09": {
    "id": "CRAFT_scroll_09",
@@ -19843,7 +19843,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_scroll_10": {
    "id": "CRAFT_scroll_10",
@@ -19901,7 +19901,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_01": {
    "id": "CRAFT_wheel_01",
@@ -19959,7 +19959,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_02": {
    "id": "CRAFT_wheel_02",
@@ -20017,7 +20017,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_03": {
    "id": "CRAFT_wheel_03",
@@ -20075,7 +20075,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_04": {
    "id": "CRAFT_wheel_04",
@@ -20133,7 +20133,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_05": {
    "id": "CRAFT_wheel_05",
@@ -20191,7 +20191,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_06": {
    "id": "CRAFT_wheel_06",
@@ -20249,7 +20249,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_07": {
    "id": "CRAFT_wheel_07",
@@ -20307,7 +20307,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_08": {
    "id": "CRAFT_wheel_08",
@@ -20365,7 +20365,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_09": {
    "id": "CRAFT_wheel_09",
@@ -20423,7 +20423,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_10": {
    "id": "CRAFT_wheel_10",
@@ -20481,7 +20481,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_one_01": {
    "id": "EMOTE_one_01",
@@ -21699,7 +21699,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false,
+   "humanApproved": true,
    "needsEye": true,
    "eyeNote": "three tents under stars; two attempts 185/186"
   },
@@ -21759,7 +21759,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah1_03": {
    "id": "HERO_amidah1_03",
@@ -21817,7 +21817,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah1_04": {
    "id": "HERO_amidah1_04",
@@ -21875,7 +21875,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah1_05": {
    "id": "HERO_amidah1_05",
@@ -21933,7 +21933,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah1_06": {
    "id": "HERO_amidah1_06",
@@ -21991,7 +21991,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah1_07": {
    "id": "HERO_amidah1_07",
@@ -22115,7 +22115,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah1_09": {
    "id": "HERO_amidah1_09",
@@ -22173,7 +22173,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah1_10": {
    "id": "HERO_amidah1_10",
@@ -22235,7 +22235,7 @@
    "flags": [
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah2_01": {
    "id": "HERO_amidah2_01",
@@ -22293,7 +22293,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah2_02": {
    "id": "HERO_amidah2_02",
@@ -22351,7 +22351,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah2_03": {
    "id": "HERO_amidah2_03",
@@ -22409,7 +22409,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah2_04": {
    "id": "HERO_amidah2_04",
@@ -22540,7 +22540,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah2_06": {
    "id": "HERO_amidah2_06",
@@ -22598,7 +22598,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah2_07": {
    "id": "HERO_amidah2_07",
@@ -22722,7 +22722,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah2_09": {
    "id": "HERO_amidah2_09",
@@ -22780,7 +22780,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah2_10": {
    "id": "HERO_amidah2_10",
@@ -22838,7 +22838,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_grace_01": {
    "id": "HERO_grace_01",
@@ -22896,7 +22896,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_grace_02": {
    "id": "HERO_grace_02",
@@ -22954,7 +22954,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_grace_03": {
    "id": "HERO_grace_03",
@@ -23012,7 +23012,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_grace_04": {
    "id": "HERO_grace_04",
@@ -23070,7 +23070,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_grace_05": {
    "id": "HERO_grace_05",
@@ -23194,7 +23194,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_grace_07": {
    "id": "HERO_grace_07",
@@ -23252,7 +23252,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_grace_08": {
    "id": "HERO_grace_08",
@@ -23310,7 +23310,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_grace_09": {
    "id": "HERO_grace_09",
@@ -23368,7 +23368,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_grace_10": {
    "id": "HERO_grace_10",
@@ -23426,7 +23426,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_morning_01": {
    "id": "HERO_morning_01",
@@ -23484,7 +23484,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_morning_02": {
    "id": "HERO_morning_02",
@@ -23608,7 +23608,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_morning_04": {
    "id": "HERO_morning_04",
@@ -23666,7 +23666,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_morning_05": {
    "id": "HERO_morning_05",
@@ -23724,7 +23724,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_morning_06": {
    "id": "HERO_morning_06",
@@ -23782,7 +23782,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_morning_07": {
    "id": "HERO_morning_07",
@@ -23840,7 +23840,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_morning_08": {
    "id": "HERO_morning_08",
@@ -23898,7 +23898,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_morning_09": {
    "id": "HERO_morning_09",
@@ -23956,7 +23956,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_morning_10": {
    "id": "HERO_morning_10",
@@ -24014,7 +24014,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_night_01": {
    "id": "HERO_night_01",
@@ -24072,7 +24072,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_night_02": {
    "id": "HERO_night_02",
@@ -24130,7 +24130,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_night_03": {
    "id": "HERO_night_03",
@@ -24188,7 +24188,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_night_04": {
    "id": "HERO_night_04",
@@ -24246,7 +24246,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_night_05": {
    "id": "HERO_night_05",
@@ -24304,7 +24304,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_night_06": {
    "id": "HERO_night_06",
@@ -24362,7 +24362,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_night_07": {
    "id": "HERO_night_07",
@@ -24420,7 +24420,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L26_pe_final_print_ari": {
    "id": "L26_pe_final_print_ari",
@@ -25626,7 +25626,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_day_02": {
    "id": "NUM_day_02",
@@ -25684,7 +25684,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_day_03": {
    "id": "NUM_day_03",
@@ -25808,7 +25808,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_day_05": {
    "id": "NUM_day_05",
@@ -25866,7 +25866,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_day_06": {
    "id": "NUM_day_06",
@@ -25924,7 +25924,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_day_07": {
    "id": "NUM_day_07",
@@ -25982,7 +25982,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_day_08": {
    "id": "NUM_day_08",
@@ -26040,7 +26040,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_day_09": {
    "id": "NUM_day_09",
@@ -26098,7 +26098,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_day_10": {
    "id": "NUM_day_10",
@@ -26156,7 +26156,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_money_01": {
    "id": "NUM_money_01",
@@ -26214,7 +26214,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_money_02": {
    "id": "NUM_money_02",
@@ -26272,7 +26272,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_money_03": {
    "id": "NUM_money_03",
@@ -26330,7 +26330,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_money_04": {
    "id": "NUM_money_04",
@@ -26388,7 +26388,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_money_05": {
    "id": "NUM_money_05",
@@ -26446,7 +26446,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_money_06": {
    "id": "NUM_money_06",
@@ -26504,7 +26504,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_money_07": {
    "id": "NUM_money_07",
@@ -26633,7 +26633,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_money_09": {
    "id": "NUM_money_09",
@@ -26691,7 +26691,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_money_10": {
    "id": "NUM_money_10",
@@ -26749,7 +26749,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months1_01": {
    "id": "NUM_months1_01",
@@ -26810,7 +26810,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months1_02": {
    "id": "NUM_months1_02",
@@ -26868,7 +26868,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months1_03": {
    "id": "NUM_months1_03",
@@ -26926,7 +26926,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months1_04": {
    "id": "NUM_months1_04",
@@ -26987,7 +26987,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months1_05": {
    "id": "NUM_months1_05",
@@ -27048,7 +27048,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months1_06": {
    "id": "NUM_months1_06",
@@ -27109,7 +27109,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months1_07": {
    "id": "NUM_months1_07",
@@ -27238,7 +27238,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months1_09": {
    "id": "NUM_months1_09",
@@ -27299,7 +27299,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months1_10": {
    "id": "NUM_months1_10",
@@ -27360,7 +27360,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months2_01": {
    "id": "NUM_months2_01",
@@ -27418,7 +27418,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months2_02": {
    "id": "NUM_months2_02",
@@ -27476,7 +27476,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months2_03": {
    "id": "NUM_months2_03",
@@ -27534,7 +27534,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months2_04": {
    "id": "NUM_months2_04",
@@ -27592,7 +27592,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months2_05": {
    "id": "NUM_months2_05",
@@ -27650,7 +27650,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months2_06": {
    "id": "NUM_months2_06",
@@ -27708,7 +27708,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months2_07": {
    "id": "NUM_months2_07",
@@ -27766,7 +27766,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months2_08": {
    "id": "NUM_months2_08",
@@ -27895,7 +27895,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months2_10": {
    "id": "NUM_months2_10",
@@ -27953,7 +27953,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false,
+   "humanApproved": true,
    "needsEye": true,
    "eyeNote": "year-wheel table; two near-identical attempts 52/53"
   },
@@ -28013,7 +28013,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_shapes_02": {
    "id": "NUM_shapes_02",
@@ -28071,7 +28071,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_shapes_03": {
    "id": "NUM_shapes_03",
@@ -28129,7 +28129,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_shapes_04": {
    "id": "NUM_shapes_04",
@@ -28187,7 +28187,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_shapes_05": {
    "id": "NUM_shapes_05",
@@ -28245,7 +28245,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_shapes_06": {
    "id": "NUM_shapes_06",
@@ -28303,7 +28303,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_shapes_07": {
    "id": "NUM_shapes_07",
@@ -28361,7 +28361,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_shapes_08": {
    "id": "NUM_shapes_08",
@@ -28419,7 +28419,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_shapes_09": {
    "id": "NUM_shapes_09",
@@ -28477,7 +28477,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_shapes_10": {
    "id": "NUM_shapes_10",
@@ -28535,7 +28535,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_teens_01": {
    "id": "NUM_teens_01",
@@ -28725,7 +28725,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_teens_04": {
    "id": "NUM_teens_04",
@@ -28783,7 +28783,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_teens_05": {
    "id": "NUM_teens_05",
@@ -28978,7 +28978,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_teens_08": {
    "id": "NUM_teens_08",
@@ -29036,7 +29036,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_teens_09": {
    "id": "NUM_teens_09",
@@ -29094,7 +29094,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_teens_10": {
    "id": "NUM_teens_10",
@@ -29156,7 +29156,7 @@
    "flags": [
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_tens_02": {
    "id": "NUM_tens_02",
@@ -29285,7 +29285,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_tens_04": {
    "id": "NUM_tens_04",
@@ -29713,7 +29713,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false,
+   "humanApproved": true,
    "needsEye": true,
    "eyeNote": "two files carry this id; this later one kept, earlier exec-43e2d2c3-8f6f-4584-be02-a2bab8f2fd65.png dropped; check by eye"
   },
@@ -29936,7 +29936,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_time_02": {
    "id": "NUM_time_02",
@@ -29994,7 +29994,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_time_03": {
    "id": "NUM_time_03",
@@ -30052,7 +30052,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_time_04": {
    "id": "NUM_time_04",
@@ -30110,7 +30110,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_time_05": {
    "id": "NUM_time_05",
@@ -30168,7 +30168,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_time_06": {
    "id": "NUM_time_06",
@@ -30226,7 +30226,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_time_07": {
    "id": "NUM_time_07",
@@ -30284,7 +30284,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_time_08": {
    "id": "NUM_time_08",
@@ -30342,7 +30342,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_time_09": {
    "id": "NUM_time_09",
@@ -30400,7 +30400,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_time_10": {
    "id": "NUM_time_10",
@@ -30458,7 +30458,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_one_01": {
    "id": "OPP_one_01",
@@ -31688,7 +31688,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_abraham_02": {
    "id": "STORY_abraham_02",
@@ -31746,7 +31746,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_abraham_03": {
    "id": "STORY_abraham_03",
@@ -31804,7 +31804,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_abraham_04": {
    "id": "STORY_abraham_04",
@@ -31862,7 +31862,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_abraham_05": {
    "id": "STORY_abraham_05",
@@ -31920,7 +31920,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_abraham_06": {
    "id": "STORY_abraham_06",
@@ -32048,7 +32048,7 @@
    "flags": [
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_abraham_08": {
    "id": "STORY_abraham_08",
@@ -32106,7 +32106,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_abraham_09": {
    "id": "STORY_abraham_09",
@@ -32164,7 +32164,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_abraham_10": {
    "id": "STORY_abraham_10",
@@ -32222,7 +32222,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_creation_01": {
    "id": "STORY_creation_01",
@@ -32280,7 +32280,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_creation_02": {
    "id": "STORY_creation_02",
@@ -32338,7 +32338,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_creation_03": {
    "id": "STORY_creation_03",
@@ -32396,7 +32396,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_creation_04": {
    "id": "STORY_creation_04",
@@ -32454,7 +32454,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_creation_05": {
    "id": "STORY_creation_05",
@@ -32512,7 +32512,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_creation_06": {
    "id": "STORY_creation_06",
@@ -32570,7 +32570,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_creation_07": {
    "id": "STORY_creation_07",
@@ -32694,7 +32694,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_creation_09": {
    "id": "STORY_creation_09",
@@ -32752,7 +32752,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_creation_10": {
    "id": "STORY_creation_10",
@@ -32876,7 +32876,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_jacob_02": {
    "id": "STORY_jacob_02",
@@ -32934,7 +32934,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_jacob_03": {
    "id": "STORY_jacob_03",
@@ -32992,7 +32992,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_jacob_04": {
    "id": "STORY_jacob_04",
@@ -33050,7 +33050,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_jacob_05": {
    "id": "STORY_jacob_05",
@@ -33108,7 +33108,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_jacob_06": {
    "id": "STORY_jacob_06",
@@ -33166,7 +33166,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_jacob_07": {
    "id": "STORY_jacob_07",
@@ -33224,7 +33224,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_jacob_08": {
    "id": "STORY_jacob_08",
@@ -33348,7 +33348,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_jacob_10": {
    "id": "STORY_jacob_10",
@@ -33472,7 +33472,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_joseph_02": {
    "id": "STORY_joseph_02",
@@ -33530,7 +33530,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_joseph_03": {
    "id": "STORY_joseph_03",
@@ -33588,7 +33588,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_joseph_04": {
    "id": "STORY_joseph_04",
@@ -33646,7 +33646,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_joseph_05": {
    "id": "STORY_joseph_05",
@@ -33704,7 +33704,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_joseph_06": {
    "id": "STORY_joseph_06",
@@ -33762,7 +33762,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_joseph_07": {
    "id": "STORY_joseph_07",
@@ -33952,7 +33952,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_joseph_10": {
    "id": "STORY_joseph_10",
@@ -34076,7 +34076,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_judges_02": {
    "id": "STORY_judges_02",
@@ -34134,7 +34134,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_judges_03": {
    "id": "STORY_judges_03",
@@ -34192,7 +34192,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_judges_04": {
    "id": "STORY_judges_04",
@@ -34250,7 +34250,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_judges_05": {
    "id": "STORY_judges_05",
@@ -34308,7 +34308,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_judges_06": {
    "id": "STORY_judges_06",
@@ -34366,7 +34366,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_judges_07": {
    "id": "STORY_judges_07",
@@ -34424,7 +34424,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_judges_08": {
    "id": "STORY_judges_08",
@@ -34482,7 +34482,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_judges_09": {
    "id": "STORY_judges_09",
@@ -34540,7 +34540,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_judges_10": {
    "id": "STORY_judges_10",
@@ -34598,7 +34598,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_kings_01": {
    "id": "STORY_kings_01",
@@ -34656,7 +34656,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_kings_02": {
    "id": "STORY_kings_02",
@@ -34714,7 +34714,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_kings_03": {
    "id": "STORY_kings_03",
@@ -34772,7 +34772,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_kings_04": {
    "id": "STORY_kings_04",
@@ -34896,7 +34896,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_kings_06": {
    "id": "STORY_kings_06",
@@ -34954,7 +34954,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_kings_07": {
    "id": "STORY_kings_07",
@@ -35012,7 +35012,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_kings_08": {
    "id": "STORY_kings_08",
@@ -35070,7 +35070,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_kings_09": {
    "id": "STORY_kings_09",
@@ -35128,7 +35128,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_kings_10": {
    "id": "STORY_kings_10",
@@ -35186,7 +35186,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses1_01": {
    "id": "STORY_moses1_01",
@@ -35244,7 +35244,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses1_02": {
    "id": "STORY_moses1_02",
@@ -35302,7 +35302,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses1_03": {
    "id": "STORY_moses1_03",
@@ -35360,7 +35360,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses1_04": {
    "id": "STORY_moses1_04",
@@ -35484,7 +35484,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses1_06": {
    "id": "STORY_moses1_06",
@@ -35542,7 +35542,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses1_07": {
    "id": "STORY_moses1_07",
@@ -35600,7 +35600,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses1_08": {
    "id": "STORY_moses1_08",
@@ -35724,7 +35724,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses1_10": {
    "id": "STORY_moses1_10",
@@ -35782,7 +35782,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses2_01": {
    "id": "STORY_moses2_01",
@@ -35840,7 +35840,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses2_02": {
    "id": "STORY_moses2_02",
@@ -35898,7 +35898,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses2_03": {
    "id": "STORY_moses2_03",
@@ -35956,7 +35956,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses2_04": {
    "id": "STORY_moses2_04",
@@ -36014,7 +36014,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses2_05": {
    "id": "STORY_moses2_05",
@@ -36072,7 +36072,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses2_06": {
    "id": "STORY_moses2_06",
@@ -36130,7 +36130,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses2_07": {
    "id": "STORY_moses2_07",
@@ -36256,7 +36256,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses2_09": {
    "id": "STORY_moses2_09",
@@ -36314,7 +36314,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false,
+   "humanApproved": true,
    "needsEye": true,
    "eyeNote": "dates and figs table; 645 near-identical, later kept"
   },
@@ -36374,7 +36374,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_noah_01": {
    "id": "STORY_noah_01",
@@ -36432,7 +36432,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_noah_02": {
    "id": "STORY_noah_02",
@@ -36490,7 +36490,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_noah_03": {
    "id": "STORY_noah_03",
@@ -36548,7 +36548,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_noah_04": {
    "id": "STORY_noah_04",
@@ -36606,7 +36606,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_noah_05": {
    "id": "STORY_noah_05",
@@ -36664,7 +36664,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_noah_06": {
    "id": "STORY_noah_06",
@@ -36722,7 +36722,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_noah_07": {
    "id": "STORY_noah_07",
@@ -36780,7 +36780,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_noah_08": {
    "id": "STORY_noah_08",
@@ -36838,7 +36838,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_noah_09": {
    "id": "STORY_noah_09",
@@ -37030,7 +37030,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_prophets_02": {
    "id": "STORY_prophets_02",
@@ -37092,7 +37092,7 @@
    "flags": [
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_prophets_03": {
    "id": "STORY_prophets_03",
@@ -37150,7 +37150,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_prophets_04": {
    "id": "STORY_prophets_04",
@@ -37212,7 +37212,7 @@
    "flags": [
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_prophets_05": {
    "id": "STORY_prophets_05",
@@ -37270,7 +37270,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_prophets_06": {
    "id": "STORY_prophets_06",
@@ -37328,7 +37328,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_prophets_07": {
    "id": "STORY_prophets_07",
@@ -37386,7 +37386,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_prophets_08": {
    "id": "STORY_prophets_08",
@@ -37444,7 +37444,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_prophets_09": {
    "id": "STORY_prophets_09",
@@ -37502,7 +37502,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_prophets_10": {
    "id": "STORY_prophets_10",
@@ -37560,7 +37560,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_etnachta_card": {
    "id": "TROPE_etnachta_card",
@@ -39985,7 +39985,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V01_kamatz_card": {
    "id": "V01_kamatz_card",
@@ -40046,7 +40046,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V01_kamatz_keyword": {
    "id": "V01_kamatz_keyword",
@@ -40104,7 +40104,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V01_kamatz_noa": {
    "id": "V01_kamatz_noa",
@@ -40162,7 +40162,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V01_kamatz_position": {
    "id": "V01_kamatz_position",
@@ -40220,7 +40220,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V02_patach_ari": {
    "id": "V02_patach_ari",
@@ -40278,7 +40278,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V02_patach_card": {
    "id": "V02_patach_card",
@@ -40339,7 +40339,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V02_patach_keyword": {
    "id": "V02_patach_keyword",
@@ -40397,7 +40397,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V02_patach_noa": {
    "id": "V02_patach_noa",
@@ -40455,7 +40455,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V02_patach_position": {
    "id": "V02_patach_position",
@@ -40513,7 +40513,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V03_tzere_ari": {
    "id": "V03_tzere_ari",
@@ -40571,7 +40571,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V03_tzere_card": {
    "id": "V03_tzere_card",
@@ -40632,7 +40632,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V03_tzere_keyword": {
    "id": "V03_tzere_keyword",
@@ -40690,7 +40690,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V03_tzere_noa": {
    "id": "V03_tzere_noa",
@@ -40748,7 +40748,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V03_tzere_position": {
    "id": "V03_tzere_position",
@@ -40806,7 +40806,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V04_segol_ari": {
    "id": "V04_segol_ari",
@@ -40868,7 +40868,7 @@
    "flags": [
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V04_segol_card": {
    "id": "V04_segol_card",
@@ -40929,7 +40929,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V04_segol_keyword": {
    "id": "V04_segol_keyword",
@@ -40987,7 +40987,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V04_segol_noa": {
    "id": "V04_segol_noa",
@@ -41045,7 +41045,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V04_segol_position": {
    "id": "V04_segol_position",
@@ -41103,7 +41103,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V05_chirik_ari": {
    "id": "V05_chirik_ari",
@@ -41161,7 +41161,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V05_chirik_card": {
    "id": "V05_chirik_card",
@@ -41222,7 +41222,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V05_chirik_keyword": {
    "id": "V05_chirik_keyword",
@@ -41280,7 +41280,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V05_chirik_noa": {
    "id": "V05_chirik_noa",
@@ -41338,7 +41338,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V05_chirik_position": {
    "id": "V05_chirik_position",
@@ -41396,7 +41396,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V06_cholam_male_ari": {
    "id": "V06_cholam_male_ari",
@@ -41454,7 +41454,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V06_cholam_male_card": {
    "id": "V06_cholam_male_card",
@@ -41515,7 +41515,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V06_cholam_male_keyword": {
    "id": "V06_cholam_male_keyword",
@@ -41573,7 +41573,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V06_cholam_male_noa": {
    "id": "V06_cholam_male_noa",
@@ -41631,7 +41631,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V06_cholam_male_position": {
    "id": "V06_cholam_male_position",
@@ -41689,7 +41689,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V07_cholam_chaser_ari": {
    "id": "V07_cholam_chaser_ari",
@@ -41747,7 +41747,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V07_cholam_chaser_card": {
    "id": "V07_cholam_chaser_card",
@@ -41808,7 +41808,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V07_cholam_chaser_keyword": {
    "id": "V07_cholam_chaser_keyword",
@@ -41866,7 +41866,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V07_cholam_chaser_noa": {
    "id": "V07_cholam_chaser_noa",
@@ -41924,7 +41924,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V07_cholam_chaser_position": {
    "id": "V07_cholam_chaser_position",
@@ -41982,7 +41982,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V08_kubutz_ari": {
    "id": "V08_kubutz_ari",
@@ -42040,7 +42040,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V08_kubutz_card": {
    "id": "V08_kubutz_card",
@@ -42101,7 +42101,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V08_kubutz_keyword": {
    "id": "V08_kubutz_keyword",
@@ -42159,7 +42159,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V08_kubutz_noa": {
    "id": "V08_kubutz_noa",
@@ -42217,7 +42217,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V08_kubutz_position": {
    "id": "V08_kubutz_position",
@@ -42275,7 +42275,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V09_shuruk_ari": {
    "id": "V09_shuruk_ari",
@@ -42333,7 +42333,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V09_shuruk_card": {
    "id": "V09_shuruk_card",
@@ -42394,7 +42394,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V09_shuruk_keyword": {
    "id": "V09_shuruk_keyword",
@@ -42452,7 +42452,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V09_shuruk_noa": {
    "id": "V09_shuruk_noa",
@@ -42510,7 +42510,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V09_shuruk_position": {
    "id": "V09_shuruk_position",
@@ -42568,7 +42568,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V10_shva_ari": {
    "id": "V10_shva_ari",
@@ -42626,7 +42626,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V10_shva_card": {
    "id": "V10_shva_card",
@@ -42687,7 +42687,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V10_shva_keyword": {
    "id": "V10_shva_keyword",
@@ -42745,7 +42745,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V10_shva_noa": {
    "id": "V10_shva_noa",
@@ -42803,7 +42803,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V10_shva_position": {
    "id": "V10_shva_position",
@@ -42861,7 +42861,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V11_chataf_patach_ari": {
    "id": "V11_chataf_patach_ari",
@@ -42919,7 +42919,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V11_chataf_patach_card": {
    "id": "V11_chataf_patach_card",
@@ -42980,7 +42980,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V11_chataf_patach_keyword": {
    "id": "V11_chataf_patach_keyword",
@@ -43038,7 +43038,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V11_chataf_patach_noa": {
    "id": "V11_chataf_patach_noa",
@@ -43096,7 +43096,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V11_chataf_patach_position": {
    "id": "V11_chataf_patach_position",
@@ -43154,7 +43154,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false,
+   "humanApproved": true,
    "needsEye": true,
    "eyeNote": "retry of position card; 359 earlier filled-square attempt"
   },
@@ -43214,7 +43214,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V12_chataf_segol_card": {
    "id": "V12_chataf_segol_card",
@@ -43275,7 +43275,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V12_chataf_segol_keyword": {
    "id": "V12_chataf_segol_keyword",
@@ -43399,7 +43399,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V12_chataf_segol_position": {
    "id": "V12_chataf_segol_position",
@@ -43457,7 +43457,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V13_chataf_kamatz_ari": {
    "id": "V13_chataf_kamatz_ari",
@@ -43515,7 +43515,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V13_chataf_kamatz_card": {
    "id": "V13_chataf_kamatz_card",
@@ -43576,7 +43576,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V13_chataf_kamatz_keyword": {
    "id": "V13_chataf_kamatz_keyword",
@@ -43634,7 +43634,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V13_chataf_kamatz_noa": {
    "id": "V13_chataf_kamatz_noa",
@@ -43692,7 +43692,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V13_chataf_kamatz_position": {
    "id": "V13_chataf_kamatz_position",
@@ -43750,7 +43750,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V14_dagesh_ari": {
    "id": "V14_dagesh_ari",
@@ -43808,7 +43808,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V14_dagesh_card": {
    "id": "V14_dagesh_card",
@@ -43869,7 +43869,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V14_dagesh_keyword": {
    "id": "V14_dagesh_keyword",
@@ -43927,7 +43927,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V14_dagesh_noa": {
    "id": "V14_dagesh_noa",
@@ -43985,7 +43985,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V14_dagesh_position": {
    "id": "V14_dagesh_position",
@@ -44043,7 +44043,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V15_shin_sin_dots_ari": {
    "id": "V15_shin_sin_dots_ari",
@@ -44101,7 +44101,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V15_shin_sin_dots_card": {
    "id": "V15_shin_sin_dots_card",
@@ -44227,7 +44227,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V15_shin_sin_dots_noa": {
    "id": "V15_shin_sin_dots_noa",
@@ -44285,7 +44285,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V15_shin_sin_dots_position": {
    "id": "V15_shin_sin_dots_position",
@@ -44343,7 +44343,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_01": {
    "id": "VERB_change_01",
@@ -44401,7 +44401,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_02": {
    "id": "VERB_change_02",
@@ -44459,7 +44459,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_03": {
    "id": "VERB_change_03",
@@ -44517,7 +44517,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_04": {
    "id": "VERB_change_04",
@@ -44575,7 +44575,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_05": {
    "id": "VERB_change_05",
@@ -44633,7 +44633,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_06": {
    "id": "VERB_change_06",
@@ -44691,7 +44691,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_07": {
    "id": "VERB_change_07",
@@ -44749,7 +44749,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_08": {
    "id": "VERB_change_08",
@@ -44807,7 +44807,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_09": {
    "id": "VERB_change_09",
@@ -44865,7 +44865,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_10": {
    "id": "VERB_change_10",
@@ -44923,7 +44923,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_eat_all_01": {
    "id": "VERB_eat_all_01",
@@ -44981,7 +44981,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_eat_all_02": {
    "id": "VERB_eat_all_02",
@@ -45039,7 +45039,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_eat_all_03": {
    "id": "VERB_eat_all_03",
@@ -45097,7 +45097,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_eat_all_04": {
    "id": "VERB_eat_all_04",
@@ -45155,7 +45155,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_eat_all_05": {
    "id": "VERB_eat_all_05",
@@ -45213,7 +45213,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_eat_all_06": {
    "id": "VERB_eat_all_06",
@@ -45271,7 +45271,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_eat_all_07": {
    "id": "VERB_eat_all_07",
@@ -45329,7 +45329,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_eat_all_08": {
    "id": "VERB_eat_all_08",
@@ -45453,7 +45453,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_eat_all_10": {
    "id": "VERB_eat_all_10",
@@ -45511,7 +45511,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_hand_01": {
    "id": "VERB_hand_01",
@@ -45569,7 +45569,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_hand_02": {
    "id": "VERB_hand_02",
@@ -45627,7 +45627,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_hand_03": {
    "id": "VERB_hand_03",
@@ -45685,7 +45685,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_hand_04": {
    "id": "VERB_hand_04",
@@ -45743,7 +45743,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_hand_05": {
    "id": "VERB_hand_05",
@@ -45867,7 +45867,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_hand_07": {
    "id": "VERB_hand_07",
@@ -45925,7 +45925,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_hand_08": {
    "id": "VERB_hand_08",
@@ -45983,7 +45983,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_hand_09": {
    "id": "VERB_hand_09",
@@ -46041,7 +46041,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_hand_10": {
    "id": "VERB_hand_10",
@@ -46099,7 +46099,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_home_01": {
    "id": "VERB_home_01",
@@ -46157,7 +46157,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_home_02": {
    "id": "VERB_home_02",
@@ -46215,7 +46215,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_home_03": {
    "id": "VERB_home_03",
@@ -46273,7 +46273,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_home_04": {
    "id": "VERB_home_04",
@@ -46399,7 +46399,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_home_06": {
    "id": "VERB_home_06",
@@ -46457,7 +46457,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_home_07": {
    "id": "VERB_home_07",
@@ -46515,7 +46515,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_home_08": {
    "id": "VERB_home_08",
@@ -46573,7 +46573,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_home_09": {
    "id": "VERB_home_09",
@@ -46631,7 +46631,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_home_10": {
    "id": "VERB_home_10",
@@ -46689,7 +46689,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_01": {
    "id": "VERB_kitchen_01",
@@ -46747,7 +46747,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_02": {
    "id": "VERB_kitchen_02",
@@ -46805,7 +46805,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_03": {
    "id": "VERB_kitchen_03",
@@ -46863,7 +46863,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_04": {
    "id": "VERB_kitchen_04",
@@ -46921,7 +46921,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_05": {
    "id": "VERB_kitchen_05",
@@ -46979,7 +46979,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_06": {
    "id": "VERB_kitchen_06",
@@ -47037,7 +47037,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_07": {
    "id": "VERB_kitchen_07",
@@ -47095,7 +47095,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_08": {
    "id": "VERB_kitchen_08",
@@ -47153,7 +47153,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_09": {
    "id": "VERB_kitchen_09",
@@ -47211,7 +47211,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_10": {
    "id": "VERB_kitchen_10",
@@ -47269,7 +47269,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_01": {
    "id": "VERB_mind_01",
@@ -47327,7 +47327,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_02": {
    "id": "VERB_mind_02",
@@ -47385,7 +47385,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_03": {
    "id": "VERB_mind_03",
@@ -47443,7 +47443,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_04": {
    "id": "VERB_mind_04",
@@ -47501,7 +47501,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_05": {
    "id": "VERB_mind_05",
@@ -47559,7 +47559,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_06": {
    "id": "VERB_mind_06",
@@ -47617,7 +47617,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_07": {
    "id": "VERB_mind_07",
@@ -47675,7 +47675,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_08": {
    "id": "VERB_mind_08",
@@ -47733,7 +47733,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_09": {
    "id": "VERB_mind_09",
@@ -47791,7 +47791,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_10": {
    "id": "VERB_mind_10",
@@ -47849,7 +47849,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_move_01": {
    "id": "VERB_move_01",
@@ -47907,7 +47907,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_move_02": {
    "id": "VERB_move_02",
@@ -47965,7 +47965,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_move_03": {
    "id": "VERB_move_03",
@@ -48023,7 +48023,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_move_04": {
    "id": "VERB_move_04",
@@ -48081,7 +48081,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_move_05": {
    "id": "VERB_move_05",
@@ -48139,7 +48139,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_move_06": {
    "id": "VERB_move_06",
@@ -48197,7 +48197,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_move_07": {
    "id": "VERB_move_07",
@@ -48255,7 +48255,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_move_08": {
    "id": "VERB_move_08",
@@ -48313,7 +48313,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_move_09": {
    "id": "VERB_move_09",
@@ -48437,7 +48437,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_talk_01": {
    "id": "VERB_talk_01",
@@ -48495,7 +48495,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_talk_02": {
    "id": "VERB_talk_02",
@@ -48553,7 +48553,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_talk_03": {
    "id": "VERB_talk_03",
@@ -48611,7 +48611,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_talk_04": {
    "id": "VERB_talk_04",
@@ -48669,7 +48669,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_talk_05": {
    "id": "VERB_talk_05",
@@ -48793,7 +48793,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_talk_07": {
    "id": "VERB_talk_07",
@@ -48851,7 +48851,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_talk_08": {
    "id": "VERB_talk_08",
@@ -48909,7 +48909,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_talk_09": {
    "id": "VERB_talk_09",
@@ -48967,7 +48967,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_talk_10": {
    "id": "VERB_talk_10",
@@ -49025,7 +49025,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_01": {
    "id": "VOC_body_01",
@@ -49083,7 +49083,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_02": {
    "id": "VOC_body_02",
@@ -49141,7 +49141,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_03": {
    "id": "VOC_body_03",
@@ -49199,7 +49199,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_04": {
    "id": "VOC_body_04",
@@ -49257,7 +49257,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_05": {
    "id": "VOC_body_05",
@@ -49315,7 +49315,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_07": {
    "id": "VOC_body_07",
@@ -49373,7 +49373,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_08": {
    "id": "VOC_body_08",
@@ -49431,7 +49431,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_09": {
    "id": "VOC_body_09",
@@ -49489,7 +49489,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_10": {
    "id": "VOC_body_10",
@@ -49547,7 +49547,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_06": {
    "id": "VOC_body_06",
@@ -49605,7 +49605,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_01": {
    "id": "VOC_cafe_01",
@@ -49663,7 +49663,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_02": {
    "id": "VOC_cafe_02",
@@ -49721,7 +49721,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_03": {
    "id": "VOC_cafe_03",
@@ -49779,7 +49779,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_04": {
    "id": "VOC_cafe_04",
@@ -49837,7 +49837,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_05": {
    "id": "VOC_cafe_05",
@@ -49895,7 +49895,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_06": {
    "id": "VOC_cafe_06",
@@ -49953,7 +49953,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_07": {
    "id": "VOC_cafe_07",
@@ -50011,7 +50011,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_08": {
    "id": "VOC_cafe_08",
@@ -50069,7 +50069,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_09": {
    "id": "VOC_cafe_09",
@@ -50127,7 +50127,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_10": {
    "id": "VOC_cafe_10",
@@ -50185,7 +50185,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_01": {
    "id": "VOC_colours_01",
@@ -50243,7 +50243,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_02": {
    "id": "VOC_colours_02",
@@ -50301,7 +50301,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_03": {
    "id": "VOC_colours_03",
@@ -50359,7 +50359,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_04": {
    "id": "VOC_colours_04",
@@ -50417,7 +50417,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_05": {
    "id": "VOC_colours_05",
@@ -50475,7 +50475,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_06": {
    "id": "VOC_colours_06",
@@ -50533,7 +50533,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_07": {
    "id": "VOC_colours_07",
@@ -50591,7 +50591,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_08": {
    "id": "VOC_colours_08",
@@ -50649,7 +50649,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_09": {
    "id": "VOC_colours_09",
@@ -50707,7 +50707,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_10": {
    "id": "VOC_colours_10",
@@ -50765,7 +50765,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_01": {
    "id": "VOC_directions_01",
@@ -50823,7 +50823,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_02": {
    "id": "VOC_directions_02",
@@ -50881,7 +50881,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_03": {
    "id": "VOC_directions_03",
@@ -50939,7 +50939,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_04": {
    "id": "VOC_directions_04",
@@ -50997,7 +50997,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_05": {
    "id": "VOC_directions_05",
@@ -51055,7 +51055,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_06": {
    "id": "VOC_directions_06",
@@ -51113,7 +51113,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_07": {
    "id": "VOC_directions_07",
@@ -51171,7 +51171,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_08": {
    "id": "VOC_directions_08",
@@ -51229,7 +51229,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_09": {
    "id": "VOC_directions_09",
@@ -51287,7 +51287,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_10": {
    "id": "VOC_directions_10",
@@ -51345,7 +51345,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_01": {
    "id": "VOC_greetings_01",
@@ -51403,7 +51403,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_02": {
    "id": "VOC_greetings_02",
@@ -51461,7 +51461,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_03": {
    "id": "VOC_greetings_03",
@@ -51519,7 +51519,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_04": {
    "id": "VOC_greetings_04",
@@ -51577,7 +51577,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_05": {
    "id": "VOC_greetings_05",
@@ -51635,7 +51635,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_06": {
    "id": "VOC_greetings_06",
@@ -51693,7 +51693,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_07": {
    "id": "VOC_greetings_07",
@@ -51751,7 +51751,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_08": {
    "id": "VOC_greetings_08",
@@ -51809,7 +51809,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_09": {
    "id": "VOC_greetings_09",
@@ -51867,7 +51867,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_10": {
    "id": "VOC_greetings_10",
@@ -51925,7 +51925,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_01": {
    "id": "VOC_home_01",
@@ -51983,7 +51983,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_02": {
    "id": "VOC_home_02",
@@ -52041,7 +52041,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_03": {
    "id": "VOC_home_03",
@@ -52099,7 +52099,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_04": {
    "id": "VOC_home_04",
@@ -52157,7 +52157,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_05": {
    "id": "VOC_home_05",
@@ -52215,7 +52215,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_06": {
    "id": "VOC_home_06",
@@ -52273,7 +52273,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_07": {
    "id": "VOC_home_07",
@@ -52331,7 +52331,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_08": {
    "id": "VOC_home_08",
@@ -52389,7 +52389,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_09": {
    "id": "VOC_home_09",
@@ -52447,7 +52447,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_10": {
    "id": "VOC_home_10",
@@ -52505,7 +52505,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_01": {
    "id": "VOC_market_01",
@@ -52563,7 +52563,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_02": {
    "id": "VOC_market_02",
@@ -52621,7 +52621,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_03": {
    "id": "VOC_market_03",
@@ -52679,7 +52679,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_04": {
    "id": "VOC_market_04",
@@ -52737,7 +52737,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_05": {
    "id": "VOC_market_05",
@@ -52795,7 +52795,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_06": {
    "id": "VOC_market_06",
@@ -52853,7 +52853,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_07": {
    "id": "VOC_market_07",
@@ -52911,7 +52911,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_08": {
    "id": "VOC_market_08",
@@ -52969,7 +52969,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_09": {
    "id": "VOC_market_09",
@@ -53027,7 +53027,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_10": {
    "id": "VOC_market_10",
@@ -53085,7 +53085,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_numbers_01": {
    "id": "VOC_numbers_01",
@@ -53143,7 +53143,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_numbers_02": {
    "id": "VOC_numbers_02",
@@ -53201,7 +53201,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_numbers_03": {
    "id": "VOC_numbers_03",
@@ -53259,7 +53259,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_numbers_04": {
    "id": "VOC_numbers_04",
@@ -53317,7 +53317,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_numbers_05": {
    "id": "VOC_numbers_05",
@@ -53375,7 +53375,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_numbers_06": {
    "id": "VOC_numbers_06",
@@ -53433,7 +53433,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_numbers_07": {
    "id": "VOC_numbers_07",
@@ -53491,7 +53491,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_numbers_08": {
    "id": "VOC_numbers_08",
@@ -53691,7 +53691,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_synagogue_01": {
    "id": "VOC_synagogue_01",
@@ -53749,7 +53749,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_synagogue_02": {
    "id": "VOC_synagogue_02",
@@ -53807,7 +53807,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_01": {
    "id": "VOC_transport_01",
@@ -53865,7 +53865,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_02": {
    "id": "VOC_transport_02",
@@ -53923,7 +53923,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_03": {
    "id": "VOC_transport_03",
@@ -53981,7 +53981,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_04": {
    "id": "VOC_transport_04",
@@ -54039,7 +54039,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_05": {
    "id": "VOC_transport_05",
@@ -54097,7 +54097,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_06": {
    "id": "VOC_transport_06",
@@ -54155,7 +54155,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_07": {
    "id": "VOC_transport_07",
@@ -54213,7 +54213,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_08": {
    "id": "VOC_transport_08",
@@ -54271,7 +54271,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_09": {
    "id": "VOC_transport_09",
@@ -54329,7 +54329,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_10": {
    "id": "VOC_transport_10",
@@ -54387,7 +54387,1951 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
+  },
+  "GAME_letter_rush": {
+   "id": "GAME_letter_rush",
+   "file": "GAME_letter_rush.png",
+   "command": 9032,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "Scene for the Letter Rush letter-recognition game. No text.",
+   "promptSha256": "fcc59f05063b3eaa935711c92e4bb6e950dabc2c5ec14f7fa867d029af34848d",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "GAME_letter_rush.png",
+   "sourceFileDate": "2026-11-06T12:39:55.251Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "44ed8f4f5a67247892a073749dfe0a01f9d4b167ad66711e4659dab1010bd621",
+   "originalFormat": "PNG",
+   "originalBytes": 1471570,
+   "originalFile": "GAME_letter_rush.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_letter_rush.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 58996
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_letter_rush.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 100552
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "GAME_minute_one_celebration": {
+   "id": "GAME_minute_one_celebration",
+   "file": "GAME_minute_one_celebration.png",
+   "command": 9031,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "Celebration art for the first Hebrew word. No text.",
+   "promptSha256": "edced340f0ca1792f9c4a4b1a508d7da8022d4e774b1c5de050d934e7116dbc4",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "GAME_minute_one_celebration.png",
+   "sourceFileDate": "2026-11-06T12:39:55.211Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "6ada7081ea05ff020d5815cb334eb3963721844b6414f14a9f890553b37a5136",
+   "originalFormat": "PNG",
+   "originalBytes": 1449005,
+   "originalFile": "GAME_minute_one_celebration.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_minute_one_celebration.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 56528
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_minute_one_celebration.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 96536
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "GAME_niqqud_fade": {
+   "id": "GAME_niqqud_fade",
+   "file": "GAME_niqqud_fade.png",
+   "command": 9034,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "Scene for vowel marks fading off pointed Hebrew. No text.",
+   "promptSha256": "569564b56c3fd622285d0ab047ac03af16ca998a7b7ede9d419b5ca3646b0e78",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "GAME_niqqud_fade.png",
+   "sourceFileDate": "2026-11-06T12:39:55.331Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "394e24ab76d9e0fb3ec53d1109e359b12946117b829b4fbf3ee4ffe07a4f39f0",
+   "originalFormat": "PNG",
+   "originalBytes": 1413804,
+   "originalFile": "GAME_niqqud_fade.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_niqqud_fade.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 49356
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_niqqud_fade.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 84298
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "GAME_sofit_sniper": {
+   "id": "GAME_sofit_sniper",
+   "file": "GAME_sofit_sniper.png",
+   "command": 9033,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "Scene for final-letter (sofit) practice. No text.",
+   "promptSha256": "d95c781315b3bba7d37503363c96ecd9924d188249d56b1386ad8011317d29c1",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "GAME_sofit_sniper.png",
+   "sourceFileDate": "2026-11-06T12:39:55.291Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "8b4896bb163fa8bc2c6cd2ab08918dcb7c205afb0a19d9f20225432ce8ab6678",
+   "originalFormat": "PNG",
+   "originalBytes": 1466117,
+   "originalFile": "GAME_sofit_sniper.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_sofit_sniper.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 60000
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_sofit_sniper.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 101620
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "GAME_story_postcard": {
+   "id": "GAME_story_postcard",
+   "file": "GAME_story_postcard.png",
+   "command": 9036,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "Postcard scene for a letter memory story. No text.",
+   "promptSha256": "f540b8a6b8092e21ae8feb77be29e41d58ef5536adca54973c687f59665418b9",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "GAME_story_postcard.png",
+   "sourceFileDate": "2026-11-06T12:39:55.407Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "0e850dd9a695cecdf8556e3d44116229c8a093f6669e4a0a231d3010780643bb",
+   "originalFormat": "PNG",
+   "originalBytes": 1644247,
+   "originalFile": "GAME_story_postcard.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_story_postcard.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 74850
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_story_postcard.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 127172
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "GAME_tradition_detective": {
+   "id": "GAME_tradition_detective",
+   "file": "GAME_tradition_detective.png",
+   "command": 9035,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "Scene for telling the reading traditions apart. No text.",
+   "promptSha256": "30ab0787411594f8879ecd73de50f9ff03d695a4cfadc0d7a0a478c1c77d9f1a",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "GAME_tradition_detective.png",
+   "sourceFileDate": "2026-11-06T12:39:55.371Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "6f3076cfb5867e8fab169ce2cd4c923b8361b6ce12b80b21fbd8d6a89a894460",
+   "originalFormat": "PNG",
+   "originalBytes": 1454354,
+   "originalFile": "GAME_tradition_detective.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_tradition_detective.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 57126
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_tradition_detective.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 99756
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L01_alef_print_meet": {
+   "id": "L01_alef_print_meet",
+   "file": "L01_alef_print_meet.png",
+   "command": 9001,
+   "set": "letter_01_alef_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for alef. No text.",
+   "promptSha256": "04f905dee02d25dd7961e5818de0429a6163c735c9420eec6b7c099582c7611f",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L01_alef_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:53.999Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "cd2f5a413201ed91a72a0859c0d00c04028aa264c39214bbc1e901210c4fe507",
+   "originalFormat": "PNG",
+   "originalBytes": 1556719,
+   "originalFile": "L01_alef_print_meet.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L01_alef_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 58142
+    },
+    {
+     "edge": 1254,
+     "file": "L01_alef_print_meet.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 98208
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L02_bet_print_meet": {
+   "id": "L02_bet_print_meet",
+   "file": "L02_bet_print_meet.png",
+   "command": 9002,
+   "set": "letter_02_bet_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for bet. No text.",
+   "promptSha256": "64ee335cf9f786fd788485b759c3ad80202dce5b7f558b09785fd10ed5e2e9a9",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L02_bet_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.047Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "02baba8529a47a0b91468609469496a27a22bf93e6ca739be15966975e9a8de4",
+   "originalFormat": "PNG",
+   "originalBytes": 1604550,
+   "originalFile": "L02_bet_print_meet.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L02_bet_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 53042
+    },
+    {
+     "edge": 1254,
+     "file": "L02_bet_print_meet.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 90986
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L03_gimel_print_meet": {
+   "id": "L03_gimel_print_meet",
+   "file": "L03_gimel_print_meet.png",
+   "command": 9005,
+   "set": "letter_03_gimel_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for gimel. No text.",
+   "promptSha256": "7074ff57fc593116134146aa7da4520fac45bb8f27e0685b001fbd0211e4ff07",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L03_gimel_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.183Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "bd530e5c0e7f4a43c3a52d58480182e3fd22419e0990a983d9b1c64044e8393b",
+   "originalFormat": "PNG",
+   "originalBytes": 1458119,
+   "originalFile": "L03_gimel_print_meet.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L03_gimel_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 46342
+    },
+    {
+     "edge": 1254,
+     "file": "L03_gimel_print_meet.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 80664
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L04_dalet_print_meet": {
+   "id": "L04_dalet_print_meet",
+   "file": "L04_dalet_print_meet.png",
+   "command": 9004,
+   "set": "letter_04_dalet_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for dalet. No text.",
+   "promptSha256": "b19cc1d616baced84252c90920e07ebcc7ae94463ff527ed8ad1bd071ea2ca74",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L04_dalet_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.143Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "053765df8aaa5e8014a5bbee5982e4622f8c9488420ba751e9d43fe4d79fe54c",
+   "originalFormat": "PNG",
+   "originalBytes": 1453472,
+   "originalFile": "L04_dalet_print_meet.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L04_dalet_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 47932
+    },
+    {
+     "edge": 1254,
+     "file": "L04_dalet_print_meet.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 81196
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L05_he_print_meet": {
+   "id": "L05_he_print_meet",
+   "file": "L05_he_print_meet.png",
+   "command": 9006,
+   "set": "letter_05_he_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for he. No text.",
+   "promptSha256": "667bfd0030f5d6d2a449ff85d671c6edf759d1d4a99052d69fe920521e4387af",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L05_he_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.223Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "01e7773756be3c5b42154ab6ede289190013c7e98a77d2cece48e456ecb6f56d",
+   "originalFormat": "PNG",
+   "originalBytes": 1442119,
+   "originalFile": "L05_he_print_meet.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L05_he_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 48752
+    },
+    {
+     "edge": 1254,
+     "file": "L05_he_print_meet.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 83180
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L06_vav_print_meet": {
+   "id": "L06_vav_print_meet",
+   "file": "L06_vav_print_meet.png",
+   "command": 9008,
+   "set": "letter_06_vav_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for vav. No text.",
+   "promptSha256": "502bb13b8c69823a6995ec5fab442d9fe4ce09a4a65cc063e09cc9e85ad6d9da",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L06_vav_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.303Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "7bb4936fc1f8596167974052de379daea91fa216863260322c6e8608a1d26fb7",
+   "originalFormat": "PNG",
+   "originalBytes": 1471169,
+   "originalFile": "L06_vav_print_meet.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L06_vav_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 51414
+    },
+    {
+     "edge": 1254,
+     "file": "L06_vav_print_meet.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 86472
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L07_zayin_print_meet": {
+   "id": "L07_zayin_print_meet",
+   "file": "L07_zayin_print_meet.png",
+   "command": 9010,
+   "set": "letter_07_zayin_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for zayin. No text.",
+   "promptSha256": "e13403d8b9f4372d506cb155ae802ae91edc2c21bec79105f83da58bc4c3130c",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L07_zayin_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.383Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "76588fdac4495e61f648737ca97a9c9e5c287f5a51b0d714f8780218d1222373",
+   "originalFormat": "PNG",
+   "originalBytes": 1397357,
+   "originalFile": "L07_zayin_print_meet.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L07_zayin_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 44596
+    },
+    {
+     "edge": 1254,
+     "file": "L07_zayin_print_meet.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 74534
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L08_chet_print_meet": {
+   "id": "L08_chet_print_meet",
+   "file": "L08_chet_print_meet.png",
+   "command": 9003,
+   "set": "letter_08_chet_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for chet. No text.",
+   "promptSha256": "4694959cac4b5d096011ac0e99515a69f809a3cc9669edc1252e8dfe70919b9b",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L08_chet_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.095Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "139101bb9f92aeaceca5463800af4cacb4f155389a67df76daf4317ccf8aa182",
+   "originalFormat": "PNG",
+   "originalBytes": 1513814,
+   "originalFile": "L08_chet_print_meet.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L08_chet_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 62600
+    },
+    {
+     "edge": 1254,
+     "file": "L08_chet_print_meet.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 104424
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L09_tet_print_meet": {
+   "id": "L09_tet_print_meet",
+   "file": "L09_tet_print_meet.png",
+   "command": 9007,
+   "set": "letter_09_tet_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for tet. No text.",
+   "promptSha256": "8ced33c107abd024ecd7d25595bae9cdb6044d58553d98a92c5aaec3040da41a",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L09_tet_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.263Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "f6cc2f1fa4e02e6a3bca68c74759a515d63d8e3eaddc66cdfcdf25f0469e2e55",
+   "originalFormat": "PNG",
+   "originalBytes": 1436287,
+   "originalFile": "L09_tet_print_meet.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L09_tet_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 56348
+    },
+    {
+     "edge": 1254,
+     "file": "L09_tet_print_meet.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 96502
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L10_yod_print_meet": {
+   "id": "L10_yod_print_meet",
+   "file": "L10_yod_print_meet.png",
+   "command": 9009,
+   "set": "letter_10_yod_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for yod. No text.",
+   "promptSha256": "12b20760b1d03b029baa6f62c1b9ba3e2cd7a82781493a90a94f583b2284c751",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L10_yod_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.343Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "089f1bd2bec970cb7e31c297547398d1eb6db0cfbc8471cd146e63ef803a49d2",
+   "originalFormat": "PNG",
+   "originalBytes": 1488343,
+   "originalFile": "L10_yod_print_meet.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L10_yod_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 55292
+    },
+    {
+     "edge": 1254,
+     "file": "L10_yod_print_meet.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 92718
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L11_kaf_print_meet": {
+   "id": "L11_kaf_print_meet",
+   "file": "L11_kaf_print_meet.png",
+   "command": 9013,
+   "set": "letter_11_kaf_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for kaf. No text.",
+   "promptSha256": "9e1c6afa981d81380f10dbc6883b1666c6d38d79769d2e235c40535961b3c788",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L11_kaf_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.499Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "d41f292b9fcbc86086efe9bd9f0994723c54b6b009b13765fd5cc04f3f3a2396",
+   "originalFormat": "PNG",
+   "originalBytes": 986500,
+   "originalFile": "L11_kaf_print_meet.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L11_kaf_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 50050
+    },
+    {
+     "edge": 1024,
+     "file": "L11_kaf_print_meet.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 66904
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L12_lamed_print_meet": {
+   "id": "L12_lamed_print_meet",
+   "file": "L12_lamed_print_meet.png",
+   "command": 9014,
+   "set": "letter_12_lamed_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for lamed. No text.",
+   "promptSha256": "330bedcfc0f3ec7d7c63de3c31a01f4aa9a2419baa07d6324326940bfe35557a",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L12_lamed_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.539Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "07df2322c0c6a081e83a15523def616cbff038345623e454cc4bf9f53acb2632",
+   "originalFormat": "PNG",
+   "originalBytes": 1021727,
+   "originalFile": "L12_lamed_print_meet.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L12_lamed_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 58074
+    },
+    {
+     "edge": 1024,
+     "file": "L12_lamed_print_meet.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 76744
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L13_mem_print_meet": {
+   "id": "L13_mem_print_meet",
+   "file": "L13_mem_print_meet.png",
+   "command": 9016,
+   "set": "letter_13_mem_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for mem. No text.",
+   "promptSha256": "5efdb3bba74ea84d36fb594970cf966d0ff211fc49ef9c256b025165ef5cc07f",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L13_mem_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.615Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "0c075a2b16134e883e6548c969312344f87fc4648ebcb92c3ec8528312a7633c",
+   "originalFormat": "PNG",
+   "originalBytes": 1004659,
+   "originalFile": "L13_mem_print_meet.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L13_mem_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 56304
+    },
+    {
+     "edge": 1024,
+     "file": "L13_mem_print_meet.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 75798
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L14_nun_print_meet": {
+   "id": "L14_nun_print_meet",
+   "file": "L14_nun_print_meet.png",
+   "command": 9018,
+   "set": "letter_14_nun_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for nun. No text.",
+   "promptSha256": "9cb39c7e77dded4989eab768c2961d5d38b233e0180749f4207e0e5283596e70",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L14_nun_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.691Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "0a2906bc412e2b60eeafed006baa053b5c146309a082070bafafe4cea2cdada5",
+   "originalFormat": "PNG",
+   "originalBytes": 1019886,
+   "originalFile": "L14_nun_print_meet.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L14_nun_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 53924
+    },
+    {
+     "edge": 1024,
+     "file": "L14_nun_print_meet.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 71862
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L15_samekh_print_meet": {
+   "id": "L15_samekh_print_meet",
+   "file": "L15_samekh_print_meet.png",
+   "command": 9020,
+   "set": "letter_15_samekh_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for samekh. No text.",
+   "promptSha256": "27112119ba3395c8bbf84c26c228ec76f4feedcb47cc8adee5e88a81c89d49e3",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L15_samekh_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.767Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "d016f1766d5ba6d236fc4682f53ff0f7e719d5a3608344c629fef5d2ed3c74d3",
+   "originalFormat": "PNG",
+   "originalBytes": 997850,
+   "originalFile": "L15_samekh_print_meet.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L15_samekh_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 49768
+    },
+    {
+     "edge": 1024,
+     "file": "L15_samekh_print_meet.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 66398
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L16_ayin_print_meet": {
+   "id": "L16_ayin_print_meet",
+   "file": "L16_ayin_print_meet.png",
+   "command": 9011,
+   "set": "letter_16_ayin_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for ayin. No text.",
+   "promptSha256": "c531a384041ee9ee2a77413d40c750357a727f680ca422f8f3391920cfa5d3c5",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L16_ayin_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.419Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "5431620ffe16537f382aa13715059bb1fb0c5771f4a12d7a545cd7aadd44c7a7",
+   "originalFormat": "PNG",
+   "originalBytes": 1007308,
+   "originalFile": "L16_ayin_print_meet.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L16_ayin_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 53360
+    },
+    {
+     "edge": 1024,
+     "file": "L16_ayin_print_meet.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 71646
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L17_pe_print_meet": {
+   "id": "L17_pe_print_meet",
+   "file": "L17_pe_print_meet.png",
+   "command": 9019,
+   "set": "letter_17_pe_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for pe. No text.",
+   "promptSha256": "51da7900edef5a36d9828309186ac99f5dff7c47e20eadbb1f73afd0c7b5836d",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L17_pe_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.731Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "4e2f8e232fb811a1bfa5d32e09a9a0cd7a5212992af4946cf8c0b5eefec8189a",
+   "originalFormat": "PNG",
+   "originalBytes": 1009644,
+   "originalFile": "L17_pe_print_meet.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L17_pe_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 53846
+    },
+    {
+     "edge": 1024,
+     "file": "L17_pe_print_meet.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 71722
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L18_tsadi_print_meet": {
+   "id": "L18_tsadi_print_meet",
+   "file": "L18_tsadi_print_meet.png",
+   "command": 9027,
+   "set": "letter_18_tsadi_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for tsadi. No text.",
+   "promptSha256": "4ee733bc935b2fc4e63081faa27a518d5fa90f1a20f1e1c0c5b91351d12795f7",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L18_tsadi_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:55.043Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "9c3cb85f1bccabf332f6abca3f620d7761456db763f1a826f8383348bd4f5466",
+   "originalFormat": "PNG",
+   "originalBytes": 1687214,
+   "originalFile": "L18_tsadi_print_meet.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L18_tsadi_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 70858
+    },
+    {
+     "edge": 1254,
+     "file": "L18_tsadi_print_meet.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 119442
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L19_qof_print_meet": {
+   "id": "L19_qof_print_meet",
+   "file": "L19_qof_print_meet.png",
+   "command": 9022,
+   "set": "letter_19_qof_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for qof. No text.",
+   "promptSha256": "857ea97bf4ca552d71874938922582edb2ea13ff0dc077abfa706e47703f3321",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L19_qof_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.847Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "4f0d863ec70ca62bd7f437b7e1b30bccf728212a202679f4c9cdc25963f6da2d",
+   "originalFormat": "PNG",
+   "originalBytes": 1561987,
+   "originalFile": "L19_qof_print_meet.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L19_qof_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 62052
+    },
+    {
+     "edge": 1254,
+     "file": "L19_qof_print_meet.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 104424
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L20_resh_print_meet": {
+   "id": "L20_resh_print_meet",
+   "file": "L20_resh_print_meet.png",
+   "command": 9023,
+   "set": "letter_20_resh_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for resh. No text.",
+   "promptSha256": "15b7b3cc237c58229fa7d17f387bee6bff83778ece9e1ba0519eeb938c0fef39",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L20_resh_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.887Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "86616a5d294b3a2dbda409fc24ccb3e7a4f046526d2a57a4454e41edc4b1bf85",
+   "originalFormat": "PNG",
+   "originalBytes": 1585639,
+   "originalFile": "L20_resh_print_meet.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L20_resh_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 64330
+    },
+    {
+     "edge": 1254,
+     "file": "L20_resh_print_meet.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 108726
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L21_shin_print_meet": {
+   "id": "L21_shin_print_meet",
+   "file": "L21_shin_print_meet.png",
+   "command": 9024,
+   "set": "letter_21_shin_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for shin. No text.",
+   "promptSha256": "26fca165a080a37f110bad4afeb12b8071a8395c9113d0a9be3114ef19f56ecf",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L21_shin_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.927Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "6e8c6e6365947d85aa6cd8a16e03f21c37df0b7265d17face6c8a59445981bb6",
+   "originalFormat": "PNG",
+   "originalBytes": 1652004,
+   "originalFile": "L21_shin_print_meet.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L21_shin_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 78422
+    },
+    {
+     "edge": 1254,
+     "file": "L21_shin_print_meet.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 129664
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L22_tav_print_meet": {
+   "id": "L22_tav_print_meet",
+   "file": "L22_tav_print_meet.png",
+   "command": 9025,
+   "set": "letter_22_tav_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for tav. No text.",
+   "promptSha256": "f4aa6043a7358bfef36f3c2d59ecd602272db59b41a9457ad0dabadfebccc7f7",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L22_tav_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.967Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "ddd2352ff3f7cfca1ededf0a8f30c4580060c4b2039098e633e39b367033426d",
+   "originalFormat": "PNG",
+   "originalBytes": 1602463,
+   "originalFile": "L22_tav_print_meet.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L22_tav_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 65134
+    },
+    {
+     "edge": 1254,
+     "file": "L22_tav_print_meet.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 109414
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L23_kaf_final_print_meet": {
+   "id": "L23_kaf_final_print_meet",
+   "file": "L23_kaf_final_print_meet.png",
+   "command": 9012,
+   "set": "letter_23_kaf_final_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for kaf final. No text.",
+   "promptSha256": "9e3fd33c115fd10b26f0d749b8e76584089c38c85ce80768c0454bece728bdc1",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L23_kaf_final_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.463Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "cb2078ecf7fbb883cc90661f5516505a19536e64f316942341f76ac097c733bb",
+   "originalFormat": "PNG",
+   "originalBytes": 996455,
+   "originalFile": "L23_kaf_final_print_meet.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L23_kaf_final_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 52654
+    },
+    {
+     "edge": 1024,
+     "file": "L23_kaf_final_print_meet.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 69938
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L24_mem_final_print_meet": {
+   "id": "L24_mem_final_print_meet",
+   "file": "L24_mem_final_print_meet.png",
+   "command": 9015,
+   "set": "letter_24_mem_final_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for mem final. No text.",
+   "promptSha256": "26f3eb468d9c325e57a35f2eb14d181bbed16e4918c545ee27cf1a49de5dcf1d",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L24_mem_final_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.575Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "217cfa384ea29912697c7482cb230f0273f4f281c9534c6541eedf1a02f20d75",
+   "originalFormat": "PNG",
+   "originalBytes": 981541,
+   "originalFile": "L24_mem_final_print_meet.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L24_mem_final_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 54930
+    },
+    {
+     "edge": 1024,
+     "file": "L24_mem_final_print_meet.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 73276
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L25_nun_final_print_meet": {
+   "id": "L25_nun_final_print_meet",
+   "file": "L25_nun_final_print_meet.png",
+   "command": 9017,
+   "set": "letter_25_nun_final_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for nun final. No text.",
+   "promptSha256": "d493b119644526f8b5be094d10c11bdc5b71158a632e3cfc671910ee83107b5f",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L25_nun_final_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.655Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "1602a39c86019c9a0d326916ef2b16f0b54c96848900dac5110a387fbd7cc9ed",
+   "originalFormat": "PNG",
+   "originalBytes": 1013401,
+   "originalFile": "L25_nun_final_print_meet.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L25_nun_final_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 54814
+    },
+    {
+     "edge": 1024,
+     "file": "L25_nun_final_print_meet.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 73840
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L26_pe_final_print_meet": {
+   "id": "L26_pe_final_print_meet",
+   "file": "L26_pe_final_print_meet.png",
+   "command": 9021,
+   "set": "letter_26_pe_final_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for pe final. No text.",
+   "promptSha256": "7064f89e92dce1941834b84e4d5f5a092d6f55d21a5d49ee451dd04a422af59e",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L26_pe_final_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:54.807Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "1396556bdcae64ae87153fcc1d35a09d10d7e1f869fbc703db10e5bf47523bab",
+   "originalFormat": "PNG",
+   "originalBytes": 1786767,
+   "originalFile": "L26_pe_final_print_meet.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L26_pe_final_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 61038
+    },
+    {
+     "edge": 1254,
+     "file": "L26_pe_final_print_meet.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 104280
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "L27_tsadi_final_print_meet": {
+   "id": "L27_tsadi_final_print_meet",
+   "file": "L27_tsadi_final_print_meet.png",
+   "command": 9026,
+   "set": "letter_27_tsadi_final_print",
+   "block": "G",
+   "prompt": "Meet-the-letter cartoon for tsadi final. No text.",
+   "promptSha256": "71dd9b935adf9c4810bfe32d9ce542172461d753633750fd7322763bb507dc97",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "L27_tsadi_final_print_meet.png",
+   "sourceFileDate": "2026-11-06T12:39:55.007Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "6a70bfcec4c64886fdbb29b547e82031ab99cbbfbd6adc1209241315caf2f828",
+   "originalFormat": "PNG",
+   "originalBytes": 1672520,
+   "originalFile": "L27_tsadi_final_print_meet.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L27_tsadi_final_print_meet.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 71080
+    },
+    {
+     "edge": 1254,
+     "file": "L27_tsadi_final_print_meet.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 118830
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "SPEAK_04_table_shabbat": {
+   "id": "SPEAK_04_table_shabbat",
+   "file": "SPEAK_04_table_shabbat.png",
+   "command": 9028,
+   "set": "speak_candidates",
+   "block": "G",
+   "prompt": "A Shabbat table scene for Say it. No text.",
+   "promptSha256": "cb60248ce43d55385fc97c39c134d18740293c5fedc0790d7265000290e95296",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "SPEAK_04_table_shabbat.png",
+   "sourceFileDate": "2026-11-06T12:39:55.087Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "2a2df0b94ddecab7175c57afb9ec83cb3372458fffda026c0e4e18b0cc6aa546",
+   "originalFormat": "PNG",
+   "originalBytes": 1957237,
+   "originalFile": "SPEAK_04_table_shabbat.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "SPEAK_04_table_shabbat.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 102908
+    },
+    {
+     "edge": 1254,
+     "file": "SPEAK_04_table_shabbat.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 167020
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "SPEAK_05_table_welcome": {
+   "id": "SPEAK_05_table_welcome",
+   "file": "SPEAK_05_table_welcome.png",
+   "command": 9029,
+   "set": "speak_candidates",
+   "block": "G",
+   "prompt": "A welcome-at-the-table scene for Say it. No text.",
+   "promptSha256": "a1b7d487e2ab881889c6bf08b6c28224bfd835fcf098430315547c15f9e9ea51",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "SPEAK_05_table_welcome.png",
+   "sourceFileDate": "2026-11-06T12:39:55.127Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "29c7ac0849df13cbfc9cc6a864bae6b75168bca316e38e72c9b7f9335eabe490",
+   "originalFormat": "PNG",
+   "originalBytes": 2012785,
+   "originalFile": "SPEAK_05_table_welcome.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "SPEAK_05_table_welcome.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 109176
+    },
+    {
+     "edge": 1254,
+     "file": "SPEAK_05_table_welcome.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 180494
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "SPEAK_08_street_taxi": {
+   "id": "SPEAK_08_street_taxi",
+   "file": "SPEAK_08_street_taxi.png",
+   "command": 9030,
+   "set": "speak_candidates",
+   "block": "G",
+   "prompt": "A street taxi scene for Say it. No text.",
+   "promptSha256": "eb818d2086446cc79fb645e32a58daec918fae6523bad469b4bd12d05c070360",
+   "tool": "chatgpt-2026-11-06",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:40:17.795Z",
+   "sourceFile": "SPEAK_08_street_taxi.png",
+   "sourceFileDate": "2026-11-06T12:39:55.167Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "b1a755d062001ae91b9c1668868cad9a17b11373c82bdcdbe6e168a9bd1c7cde",
+   "originalFormat": "PNG",
+   "originalBytes": 1880718,
+   "originalFile": "SPEAK_08_street_taxi.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "SPEAK_08_street_taxi.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 96100
+    },
+    {
+     "edge": 1254,
+     "file": "SPEAK_08_street_taxi.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 157168
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
   }
  }
 }

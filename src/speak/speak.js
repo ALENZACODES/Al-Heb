@@ -29,6 +29,8 @@ import { contrastById, drillQueue, drillQuestion } from './pairs.js';
 import { loadDailyCard, dayKeyLocal, DAILY_PREFIX } from './daily.js';
 import { respell, congregationOf, audioNote, settingLine, LABELS as TRAD_NAMES } from '../pronunciation/forTradition.js';
 import { isAudioFree, AUDIO_FREE_NOTE, SKIP_NOTE } from '../shell/audiofree.js';
+import { picture, speakSceneId } from '../img/scenes.js';
+import { startSpeaking } from '../motion/alive.js';
 import { TRADITIONS, TRADITION_LABEL, tradition as normTradition, traditionSummary, pairLine, tradQueue, tradQuestion } from './tradition.js';
 
 export const TAB_LIST = [['say', 'Say it'], ['drills', 'Listening drills'], ['sounds', 'Sounds by tradition'], ['read', 'Read a prayer aloud'], ['shadow', 'Shadowing'], ['history', 'History']];
@@ -114,7 +116,7 @@ export function mount(root, ctx) {
   const wrap = el('section', { class: 'alef-speak', 'aria-labelledby': 'view-title' });
   const h1 = el('h1', { id: 'view-title', tabindex: '-1' }, 'Say it');
   const tabs = el('ul', { class: 'sk-tabs', 'aria-label': 'Say it sections' });
-  const body = el('div', { class: 'sk-body' });
+  const body = el('div', { class: 'sk-body', 'data-live': 'speak' });
   const status = el('div', { class: 'sk-status', role: 'status', 'aria-live': 'polite' });
   const footer = el('footer', {}, el('p', {}, 'Vocabulary: data/vocab/words.json (Wiktionary, CC BY-SA 4.0, and ALEF\'s own phrasebook), a machine-built draft. Speech recognition and the fallback voice are your browser\'s; neither is verified for Hebrew by ALEF.'));
   footer.append(sourcesLine(el));
@@ -216,6 +218,8 @@ export function mount(root, ctx) {
 
   async function playModel(he, audioId, btn, { kind = 'word', rate } = {}) {
     if (busy) return; busy = true; if (btn) btn.setAttribute('disabled', '');
+    const host = btn?.closest?.('[data-live]');
+    const stop = startSpeaking(ctx, host);
     try {
       const trad = congregationOf(ctx?.settings), mism = trad === 'israeli' ? '' : ` ${audioNote(trad)}`;
       if (audioId && rate == null && audioHas(kind, audioId)) { const r = await ctx.audio.play(kind, audioId); say(r?.source === 'file' ? `${/^(tts|synthetic-)/.test(r.entryStatus || '') ? 'Played a synthetic-voice clip (a computer voice, not a recording).' : 'Played a recorded clip.'}${r.fileTradition && r.fileTradition !== trad ? ` It is the ${TRAD_NAMES[r.fileTradition] || r.fileTradition} reading, used here as a stand-in for ${TRAD_NAMES[trad]}.` : ''}` : `Played the browser\'s voice, not a recording.${mism}`); }
@@ -229,6 +233,7 @@ export function mount(root, ctx) {
       }
       else say('No sound: this browser has no speech synthesis and no clip exists for this item yet.');
     } catch { say('The audio could not play.'); }
+    finally { stop(); }
     busy = false; if (btn) btn.removeAttribute?.('disabled');
   }
 
@@ -309,6 +314,7 @@ export function mount(root, ctx) {
       area.append(...selfButtons());
     }
     setBody(
+      picture(el, ctx, 'id', speakSceneId(set?.id), { class: 'scene-art', width: 720 }),
       el('p', { class: 'muted' }, `${set.title}: ${n} of ${items.length}`),
       el('h2', { tabindex: '-1', id: 'speak-q' }, silent() ? 'Say it, or skip it' : m === 'self' ? 'Listen, then say it out loud' : 'Listen, then say it'),
       el('div', { class: 'sk-he' }, heText(item.he)),
@@ -327,7 +333,7 @@ export function mount(root, ctx) {
     recognizer.stop(); recorder.dispose();
     const sum = set ? setSummary(state.attempts, set.id) : { tried: 0, good: 0, close: 0, missed: 0 };
     const answered = results.filter((r) => r.outcome !== 'skip').length;
-    const kids = [el('h2', {}, answered ? 'Set done' : 'Nothing tried this time')];
+    const kids = [answered ? picture(el, ctx, 'id', 'CHAR_noa_celebrate', { width: 240, class: 'scene-art', decorative: true }) : null, el('h2', {}, answered ? 'Set done' : 'Nothing tried this time')];
     if (answered) kids.push(el('p', {}, `You tried ${count(answered, 'item')} this round. Across every round of "${set.title}": ${sum.good} said or matched, ${sum.close} close, ${sum.missed} not yet, of ${sum.tried} tried.`));
     else kids.push(el('p', {}, 'Nothing was recorded, so nothing changed.'));
     kids.push(el('p', { class: 'muted' }, 'A "match" means the browser\'s recognizer wrote the same letters, not that a teacher heard you.'));

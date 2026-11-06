@@ -7,7 +7,7 @@
   "sessionMinutes": 5,
   "tiles": 3,
   "costumes": [
-    { "id": "letter-rush", "title": "Letter Rush", "minutes": 1, "route": "letters", "href": "#/letters", "skill": "letter-recognition" },
+    { "id": "letter-rush", "title": "Letter Rush", "minutes": 1, "route": "letters", "href": "#/letters?tab=rush", "skill": "letter-recognition" },
     { "id": "say-it", "title": "Say it", "minutes": 2, "route": "speak", "href": "#/speak", "skill": "spoken-production" },
     { "id": "sprint", "title": "Word Sprint", "minutes": 2, "route": "sprint", "href": "#/sprint", "skill": "vocab-recall" },
     { "id": "tradition", "title": "Tradition Detective", "minutes": 2, "route": "tradition-quiz", "href": "#/tradition-quiz", "skill": "tradition-discrimination" },

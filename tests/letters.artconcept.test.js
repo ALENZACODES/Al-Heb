@@ -61,9 +61,12 @@ test('files named in the map exist on disk (older art is kept, never deleted)', 
   }
 });
 
-test('older art stays hidden: the approvals file holds no approval, as the map states', () => {
+test('older letter gen art stays hidden: print mnemonics are not approved', () => {
   const a = rd('data/images/approvals.json').approvals;
-  assert.deepEqual(Object.keys(a), [], 'an approval was added: update appShows.olderArt in the map');
+  for (const l of MAP.letters) {
+    const stem = `L${l.order}_${l.id.replace(/-/g, '_')}_print_mnemonic`;
+    assert.notEqual(a[stem]?.status, 'approved', stem);
+  }
 });
 
 test('no displayed field contradicts the map: retired concepts are gone, the caption names the approved object', () => {

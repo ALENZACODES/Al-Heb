@@ -163,21 +163,24 @@ export const sha256 = (buf) => createHash('sha256').update(buf).digest('hex');
 export function loadApprovals(p) { const d = readJson(p.approvals, null); return d?.approvals ? d : { version: 1, note: 'Default for every image is UNAPPROVED (absent). Edit with: node tools/images/ingest.mjs approve|reject <id...>', approvals: {} }; }
 export function loadProvenance(p) { const d = readJson(p.provenance, null); return d?.images ? d : { version: 1, note: 'One record per ingested image: tool, prompt snapshot, dates, hashes, checks. PNG originals are NOT in git (see originals path in docs/images/README.md).', images: {} }; }
 
-/** generated-manifest.json: ONLY approved images, so a consumer can trust everything listed. */
-export function buildGeneratedManifest(prov, approvals) {
+/** generated-manifest.json: ONLY approved images in `images`, so a consumer can trust that list.
+ *  `altText` is the index's alt-text source (tools/img/build_index.mjs) and is kept across rebuilds. */
+export function buildGeneratedManifest(prov, approvals, prev = {}) {
   const images = {};
   for (const stem of Object.keys(prov.images).sort()) {
     const rec = prov.images[stem];
     if (approvals.approvals[stem]?.status !== 'approved') continue;
     images[stem] = { w: rec.width, h: rec.height, files: rec.variants.map((v) => ({ edge: v.edge, file: v.file, w: v.width, h: v.height })) };
   }
-  return {
+  const out = {
     version: 1,
     note: 'APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.',
     dir: 'gen',
     count: Object.keys(images).length,
     images,
   };
+  if (prev.altText && typeof prev.altText === 'object' && Object.keys(prev.altText).length) out.altText = prev.altText;
+  return out;
 }
 
 // ---------- python helper ----------

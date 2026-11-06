@@ -23,7 +23,7 @@ import { basename, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   BLOCKING_FLAGS, BLOCKS, TOOL_DEFAULT, buildGeneratedManifest, checkAspect, classifyName, globToRe, isImageName, loadApprovals,
-  loadManifest, loadProvenance, makePaths, parseCsv, pool, py, sha256, suggestStems, toCsv, webCap, writeJsonAtomic, writeTextAtomic,
+  loadManifest, loadProvenance, makePaths, parseCsv, pool, py, readJson, sha256, suggestStems, toCsv, webCap, writeJsonAtomic, writeTextAtomic,
 } from './ingest_lib.mjs';
 import { writeSheets } from './ingest_sheets.mjs';
 
@@ -226,7 +226,7 @@ export async function ingest(opts) {
       writeJsonAtomic(paths.approvals, approvals);
       syncApprovalMirror(prov, approvals);
       writeJsonAtomic(paths.provenance, prov);
-      writeJsonAtomic(paths.generated, buildGeneratedManifest(prov, approvals));
+      writeJsonAtomic(paths.generated, buildGeneratedManifest(prov, approvals, readJson(paths.generated, {})));
     }
     writeJsonAtomic(paths.report, report);
     if (report.unmatched.length) writeTextAtomic(paths.assignCsv, assignmentCsv(report.unmatched));
@@ -277,7 +277,7 @@ export function decide(opts) {
     syncApprovalMirror(prov, approvals);
     writeJsonAtomic(paths.approvals, approvals);
     writeJsonAtomic(paths.provenance, prov);
-    writeJsonAtomic(paths.generated, buildGeneratedManifest(prov, approvals));
+    writeJsonAtomic(paths.generated, buildGeneratedManifest(prov, approvals, readJson(paths.generated, {})));
   }
   return res;
 }
@@ -365,7 +365,7 @@ export async function main(argv) {
     case 'manifest': {
       const prov = loadProvenance(paths); const ap = loadApprovals(paths);
       syncApprovalMirror(prov, ap); writeJsonAtomic(paths.provenance, prov);
-      const m = buildGeneratedManifest(prov, ap); writeJsonAtomic(paths.generated, m);
+      const m = buildGeneratedManifest(prov, ap, readJson(paths.generated, {})); writeJsonAtomic(paths.generated, m);
       say(`generated-manifest.json: ${m.count} approved image(s)`); return 0;
     }
     case 'sheets': {

@@ -10,6 +10,7 @@ import { cellsOf } from '../curriculum/hebrew.js';
 import { LEVELS, eligibleWords, knownLetters, pickNext, suggestLevel, FINAL_OF } from './bank.js';
 import { createFade, GUIDES, rateWord, saveOutcome, dueWordIds, sget, CARDS_KEY, PROGRESS_KEY, cardId } from './flow.js';
 import { createBoard, composeCell, MARKS, markLabel, hasNiqqud } from './niqqud.js';
+import { SCENE, picture } from '../img/scenes.js';
 
 const DATA = (name) => new URL('../../data/' + name, import.meta.url).href;
 async function loadJson(url) { const r = await fetch(url); if (!r.ok) throw new Error('HTTP ' + r.status + ' for ' + url); return r.json(); }
@@ -160,7 +161,10 @@ export function mount(root, ctx = {}) {
     const kn = k === null ? null : S.lettersList.filter(l => k.has(l.id) && !isFinalOnly(l, k)).length;
     const list = [...dueHere, ...words.filter(w => !due.has(w.he))].slice(0, 12);
     const nodes = [
-      ...header(), ...controls(),
+      ...header(),
+      picture(h, ctx, 'id', SCENE.sofitSniper, { width: 640, class: 'scene-art' }),
+      h('p', { class: 'muted' }, t('wt.sofitGame', 'Sofit sniper: a final letter is used only as the last letter of a word.')),
+      ...controls(),
       h('p', { class: 'muted', role: 'status', 'data-role': 'summary' },
         (kn === null ? t('wt.allLetters', 'Using all letters. ') : `${t('wt.knownLetters', 'Letters you have traced or learned:')} ${kn}. `) +
         `${words.length} ${t('wt.wordsHere', 'words at this level')}` + (dueHere.length ? `, ${dueHere.length} ${t('wt.dueRetrace', 'to retrace today')}` : '') + '.')

@@ -6,6 +6,9 @@
  * No fail hearts. Joyful register only for drills. ALEF cream/navy; no cast/voice changes.
  */
 import { h, heSpan } from '../shell/ui.js';
+import { SCENE, letterMeet, picture } from '../img/scenes.js';
+import { ensureMotionStyle, startSpeaking } from '../motion/alive.js';
+import { ensureStyle as ensureCelebrateStyle } from '../../preview/loops/celebrate.js';
 import {
   STORE_KEY, normalize, place, isComplete, finishRecord,
   promiseDateISO, formatPromiseDate, promiseLine,
@@ -273,8 +276,11 @@ export async function mount(root, ctx) {
   }
 
   function renderCelebrate() {
+    ensureMotionStyle();
+    ensureCelebrateStyle(globalThis.document);
     const kids = [
       h('h1', { id: 'view-title', tabindex: '-1' }, 'You did it'),
+      (() => { const art = picture(h, ctx, 'id', SCENE.minuteOne, { class: 'scene-art', width: 720 }); return art ? h('div', { class: 'lp-cele', 'data-motion': 'fade' }, art) : null; })(),
     ];
     // Beat 0: gratitude (siyum) before self-congratulation
     if (celebrateStep >= 0) {
@@ -322,7 +328,7 @@ export async function mount(root, ctx) {
       );
     }
     kids.push(h('p', { role: 'status', 'aria-live': 'polite', class: 'muted', id: 'fw-status' }, statusMsg));
-    shell.replaceChildren(...kids);
+    shell.replaceChildren(...kids.filter(Boolean));
   }
 
   function render() {
@@ -346,6 +352,10 @@ export async function mount(root, ctx) {
       }, heSpan(tile.he), ' ', h('span', { class: 'muted' }, tile.name)));
       const kids = [
         h('h1', { id: 'view-title', tabindex: '-1' }, 'Build your first Hebrew word'),
+        h('div', { class: 'row', 'data-live': 'letter', style: 'justify-content:center' },
+          letterMeet(h, ctx, 'alef', { width: 220 }),
+          letterMeet(h, ctx, 'bet', { width: 220 })),
+        phase === 'fade' ? picture(h, ctx, 'id', SCENE.niqqudFade, { width: 640, class: 'scene-art' }) : null,
         h('p', { class: 'muted' }, 'Under a minute. No hearts. Wrong tiles just ask you to try again.'),
         motivation ? h('p', { class: 'muted' }, `For: ${motivation.label}`) : null,
         h('p', { class: 'fw-target he', lang: 'he', dir: 'rtl', style: 'font-size:2.6rem;text-align:center;margin:0.5rem 0' }, shown),
@@ -355,7 +365,10 @@ export async function mount(root, ctx) {
       ].filter(Boolean);
       if (phase === 'say') {
         kids.push(
-          h('p', {}, h('button', { type: 'button', class: 'btn secondary', onclick: () => { try { ctx?.audio?.play?.(word.audio.kind, word.audio.id); } catch {} say('Playing.'); } }, 'Hear'),
+          h('p', {}, h('button', { type: 'button', class: 'btn secondary', onclick: async (ev) => {
+            const stop = startSpeaking(ctx, ev?.currentTarget?.closest?.('[data-live]') || shell);
+            try { await ctx?.audio?.play?.(word.audio.kind, word.audio.id); say('Playing.'); } catch { say('Playing.'); } finally { stop(); }
+          } }, 'Hear'),
             ' ',
             h('button', { type: 'button', class: 'btn', onclick: finishTry }, 'I said it — continue'),
             ' ',

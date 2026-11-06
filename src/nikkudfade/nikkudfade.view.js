@@ -8,6 +8,7 @@ import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
 import { sourcesLine } from '../shell/sources.js';
 import { loadReadingSet, loadSchedule } from './loader.js';
 import { STORE_KEY, STAGES, normalizeState, display, recordRead, setStage, setAuto, pickSession, summary, DEFAULT_SCHEDULE, lessonReached, filterByLesson, soundChoices, gradeSound } from './model.js';
+import { SCENE, picture } from '../img/scenes.js';
 
 export const DRAFT_NOTE = 'Draft and unreviewed: no Hebrew teacher has checked this practice. You decide whether you read each word; the app does not grade your reading.';
 export const REASON_TEXT = { full: 'Vowel marks shown: stage 1 shows every mark.', new: 'Vowel marks shown: this word is still new to you.', ambiguous: 'Vowel marks shown: another common word is spelled the same without them.', checked: 'Vowel marks shown so you can check your reading.', faded: 'No vowel marks on this word. Tap "Show the vowel marks" if you need them.' };
@@ -20,7 +21,8 @@ export function mount(root, ctx) {
   const controls = el('div', { class: 'nf-controls' });
   const body = el('div', { class: 'nf-body' });
   const status = el('p', { role: 'status', 'aria-live': 'polite', class: 'nf-status' });
-  wrap.append(h1, el('p', { class: 'nf-draft' }, DRAFT_NOTE), controls, body, status, el('footer', {}, sourcesLine(el)));
+  const scene = picture(el, ctx, 'id', SCENE.niqqudFade, { width: 720, class: 'scene-art' });
+  wrap.append(h1, ...(scene ? [scene] : []), el('p', { class: 'nf-draft' }, DRAFT_NOTE), controls, body, status, el('footer', {}, sourcesLine(el)));
   root.append(wrap);
   let alive = true, set = null, sched = DEFAULT_SCHEDULE, st = normalizeState(null), queue = [], idx = 0, revealed = false, answered = false, round = 1, reached = 10, anyWord = false, asking = null;
   const say = (t) => { status.textContent = t; };

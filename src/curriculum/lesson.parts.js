@@ -15,6 +15,8 @@ import { wordAudioId } from "./progress.js";
 import { playButton } from "./audio-ui.js";
 import { saySound } from "../pronunciation/forTradition.js";
 import { hookLine, hookNode } from "../letters/hookline.js";
+import { letterMeet, picture } from "../img/scenes.js";
+import { celebrateWin } from "../motion/alive.js";
 import { RESUME_KEY, planChunks, getResume, setResume, clearResume, statsFromResults } from "./chunks.js";
 
 const A_ID = /^I-\d{2}$/;
@@ -52,7 +54,7 @@ export function mountChunkedLesson(root, ctx, lessonId) {
     const section = (id, title, ...kids) => el("section", { class: "card", "aria-labelledby": id }, el("h2", { id }, title), ...kids);
     const letterItem = (id) => {
       const L = c.letters.get(id);
-      return el("li", { class: "alef-item" }, heText(L?.he || "?", "alef-he alef-big"),
+      return el("li", { class: "alef-item", "data-live": "letter" }, letterMeet(el, ctx, id), heText(L?.he || "?", "alef-he alef-big"),
         el("div", { class: "alef-item-body" }, el("strong", {}, L?.name || id), " ", L?.nameHe ? heText(L.nameHe) : null,
           el("div", { class: "muted" }, saySound(c.consonants?.get(id), congregation, { fallbackEn: L?.sound?.en || "" })),
           hookNode(el, hookLine(c.chain, congregation, { letterId: id }))),
@@ -60,13 +62,13 @@ export function mountChunkedLesson(root, ctx, lessonId) {
     };
     const vowelItem = (id) => {
       const V = c.vowels.get(id);
-      return el("li", { class: "alef-item" }, heText(V?.shape || "?", "alef-he alef-big"),
+      return el("li", { class: "alef-item", "data-live": "vowel" }, picture(el, ctx, "vowel", id, { class: "vowel-pic", width: 360 }), heText(V?.shape || "?", "alef-he alef-big"),
         el("div", { class: "alef-item-body" }, el("strong", {}, V?.name || id), V?.nameHe ? " " : null, V?.nameHe ? heText(V.nameHe) : null, el("div", { class: "muted" }, vowelEnglish(V, congregation))),
         el("div", { class: "alef-item-actions" }, playButton(ctx, "vowel", id, `Listen to ${V?.name || id}`, note)));
     };
     const wordItem = (i) => {
       const w = lesson.words[i];
-      return el("li", { class: "alef-item" }, heText(w.he, "alef-he alef-word"),
+      return el("li", { class: "alef-item", "data-live": "word" }, picture(el, ctx, "word", w.vocabId || w.id, { class: "word-pic", width: 400 }), heText(w.he, "alef-he alef-word"),
         el("div", { class: "alef-item-body" }, el("span", {}, w.en), hookNode(el, hookLine(c.chain, congregation, { he: w.he }))),
         el("div", { class: "alef-item-actions" }, playButton(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${w.en}`, note)));
     };
@@ -112,6 +114,7 @@ export function mountChunkedLesson(root, ctx, lessonId) {
         nextHref: next ? `#/learn?lesson=${next.id}` : "#/learn", nextLabel: next ? "Next lesson" : "All lessons",
         extraLinks: [el("a", { class: "btn secondary", href: `#/learn?lesson=${lesson.id}&review=1` }, "Review these cards")] }));
       wrap.querySelector?.("#alef-int-ex")?.focus?.();
+      celebrateWin(ctx, wrap, el, lesson.id);
     }
     async function finish(host) {
       let updated;

@@ -2,8 +2,9873 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 0,
- "images": {},
+ "count": 548,
+ "images": {
+  "BG_cafe": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "BG_cafe.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "BG_cafe.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "BG_jerusalem": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "BG_jerusalem.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "BG_jerusalem.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "BG_market": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "BG_market.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "BG_market.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "BG_shabbat": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "BG_shabbat.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "BG_shabbat.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "BG_synagogue": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "BG_synagogue.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "BG_synagogue.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "BG_telaviv": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "BG_telaviv.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "BG_telaviv.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "CHAR_ari_celebrate": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CHAR_ari_celebrate.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CHAR_ari_celebrate.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CHAR_ari_listen": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CHAR_ari_listen.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CHAR_ari_listen.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CHAR_ari_neutral": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CHAR_ari_neutral.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CHAR_ari_neutral.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CHAR_ari_sheet": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CHAR_ari_sheet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CHAR_ari_sheet.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CHAR_ari_speak": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CHAR_ari_speak.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CHAR_ari_speak.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CHAR_ari_synagogue": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CHAR_ari_synagogue.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CHAR_ari_synagogue.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CHAR_noa_celebrate": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CHAR_noa_celebrate.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CHAR_noa_celebrate.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CHAR_noa_listen": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CHAR_noa_listen.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CHAR_noa_listen.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CHAR_noa_neutral": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CHAR_noa_neutral.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CHAR_noa_neutral.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CHAR_noa_sheet": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CHAR_noa_sheet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CHAR_noa_sheet.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CHAR_noa_speak": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CHAR_noa_speak.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CHAR_noa_speak.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CHAR_noa_synagogue": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CHAR_noa_synagogue.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CHAR_noa_synagogue.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CHAR_noa_telaviv": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CHAR_noa_telaviv.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CHAR_noa_telaviv.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_bimah_02": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_bimah_02.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "CRAFT_bimah_02.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "CRAFT_bimah_03": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_bimah_03.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "CRAFT_bimah_03.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "CRAFT_bimah_04": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_bimah_04.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "CRAFT_bimah_04.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "CRAFT_bimah_05": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_bimah_05.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "CRAFT_bimah_05.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "CRAFT_bimah_06": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_bimah_06.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "CRAFT_bimah_06.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "CRAFT_bimah_07": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_bimah_07.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "CRAFT_bimah_07.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "CRAFT_haftarah_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_haftarah_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_haftarah_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_haftarah_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_haftarah_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_haftarah_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_haftarah_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_haftarah_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_haftarah_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_haftarah_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_haftarah_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_haftarah_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_haftarah_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_haftarah_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_haftarah_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_haftarah_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_haftarah_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_haftarah_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_haftarah_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_haftarah_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_haftarah_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_haftarah_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_haftarah_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_haftarah_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_haftarah_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_haftarah_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_haftarah_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_haftarah_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_haftarah_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_haftarah_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_practice_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_practice_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_practice_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_practice_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_practice_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_practice_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_practice_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_practice_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_practice_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_practice_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_practice_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_practice_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_practice_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_practice_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_practice_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_practice_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_practice_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_practice_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_practice_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_practice_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_practice_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_practice_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_practice_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_practice_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_practice_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_practice_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_practice_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_practice_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_practice_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_practice_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_qa_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_qa_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_qa_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_qa_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_qa_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_qa_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_qa_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_qa_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_qa_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_qa_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_qa_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_qa_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_qa_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_qa_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_qa_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_qa_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_qa_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_qa_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_qa_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_qa_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_qa_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_qa_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_qa_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_qa_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_qa_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_qa_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_qa_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_qa_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_qa_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_qa_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_scroll_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_scroll_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_scroll_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_scroll_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_scroll_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_scroll_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_scroll_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_scroll_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_scroll_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_scroll_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_scroll_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_scroll_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_scroll_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_scroll_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_scroll_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_scroll_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_scroll_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_scroll_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_scroll_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_scroll_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_scroll_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_scroll_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_scroll_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_scroll_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_scroll_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_scroll_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "CRAFT_scroll_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "CRAFT_wheel_01": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_wheel_01.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "CRAFT_wheel_01.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "CRAFT_wheel_02": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_wheel_02.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "CRAFT_wheel_02.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "CRAFT_wheel_03": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_wheel_03.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "CRAFT_wheel_03.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "CRAFT_wheel_04": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_wheel_04.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "CRAFT_wheel_04.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "CRAFT_wheel_05": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_wheel_05.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "CRAFT_wheel_05.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "CRAFT_wheel_06": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_wheel_06.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "CRAFT_wheel_06.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "CRAFT_wheel_07": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_wheel_07.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "CRAFT_wheel_07.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "CRAFT_wheel_08": {
+   "w": 1660,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_wheel_08.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "CRAFT_wheel_08.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "CRAFT_wheel_09": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_wheel_09.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "CRAFT_wheel_09.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "CRAFT_wheel_10": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "CRAFT_wheel_10.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "CRAFT_wheel_10.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "FRAME_lettercard": {
+   "w": 1122,
+   "h": 1402,
+   "files": [
+    {
+     "edge": 800,
+     "file": "FRAME_lettercard.800.webp",
+     "w": 640,
+     "h": 800
+    },
+    {
+     "edge": 1402,
+     "file": "FRAME_lettercard.1402.webp",
+     "w": 1122,
+     "h": 1402
+    }
+   ]
+  },
+  "FRAME_lettercard_dual": {
+   "w": 1122,
+   "h": 1402,
+   "files": [
+    {
+     "edge": 800,
+     "file": "FRAME_lettercard_dual.800.webp",
+     "w": 640,
+     "h": 800
+    },
+    {
+     "edge": 1402,
+     "file": "FRAME_lettercard_dual.1402.webp",
+     "w": 1122,
+     "h": 1402
+    }
+   ]
+  },
+  "GAME_letter_rush": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_letter_rush.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_letter_rush.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "GAME_minute_one_celebration": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_minute_one_celebration.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_minute_one_celebration.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "GAME_niqqud_fade": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_niqqud_fade.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_niqqud_fade.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "GAME_sofit_sniper": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_sofit_sniper.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_sofit_sniper.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "GAME_story_postcard": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_story_postcard.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_story_postcard.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "GAME_tradition_detective": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_tradition_detective.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_tradition_detective.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "HERO_amidah1_01": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_amidah1_01.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_amidah1_01.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_amidah1_02": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_amidah1_02.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_amidah1_02.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_amidah1_03": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_amidah1_03.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_amidah1_03.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_amidah1_04": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_amidah1_04.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_amidah1_04.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_amidah1_05": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_amidah1_05.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_amidah1_05.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_amidah1_06": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_amidah1_06.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_amidah1_06.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_amidah1_08": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_amidah1_08.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_amidah1_08.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_amidah1_09": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_amidah1_09.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_amidah1_09.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_amidah1_10": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_amidah1_10.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_amidah1_10.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_amidah2_01": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_amidah2_01.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_amidah2_01.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_amidah2_02": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_amidah2_02.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_amidah2_02.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_amidah2_03": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_amidah2_03.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_amidah2_03.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_amidah2_05": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_amidah2_05.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_amidah2_05.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_amidah2_06": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_amidah2_06.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_amidah2_06.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_amidah2_08": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_amidah2_08.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_amidah2_08.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_amidah2_09": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_amidah2_09.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_amidah2_09.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_amidah2_10": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_amidah2_10.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_amidah2_10.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_grace_01": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_grace_01.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_grace_01.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_grace_02": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_grace_02.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_grace_02.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_grace_03": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_grace_03.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_grace_03.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_grace_04": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_grace_04.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_grace_04.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_grace_06": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_grace_06.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_grace_06.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_grace_07": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_grace_07.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_grace_07.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_grace_08": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_grace_08.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_grace_08.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_grace_09": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_grace_09.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_grace_09.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_grace_10": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_grace_10.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_grace_10.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_morning_01": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_morning_01.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_morning_01.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_morning_03": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_morning_03.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_morning_03.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_morning_04": {
+   "w": 1660,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_morning_04.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_morning_04.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_morning_05": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_morning_05.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_morning_05.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_morning_06": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_morning_06.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_morning_06.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_morning_07": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_morning_07.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_morning_07.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_morning_08": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_morning_08.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_morning_08.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_morning_09": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_morning_09.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_morning_09.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_morning_10": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_morning_10.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_morning_10.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_night_01": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_night_01.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_night_01.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_night_02": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_night_02.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_night_02.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_night_03": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_night_03.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_night_03.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_night_04": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_night_04.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_night_04.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_night_05": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_night_05.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_night_05.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_night_06": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_night_06.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_night_06.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "HERO_night_07": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "HERO_night_07.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "HERO_night_07.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "L01_alef_print_meet": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L01_alef_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "L01_alef_print_meet.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "L02_bet_print_meet": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L02_bet_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "L02_bet_print_meet.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "L03_gimel_print_meet": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L03_gimel_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "L03_gimel_print_meet.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "L04_dalet_print_meet": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L04_dalet_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "L04_dalet_print_meet.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "L05_he_print_meet": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L05_he_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "L05_he_print_meet.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "L06_vav_print_meet": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L06_vav_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "L06_vav_print_meet.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "L07_zayin_print_meet": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L07_zayin_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "L07_zayin_print_meet.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "L08_chet_print_meet": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L08_chet_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "L08_chet_print_meet.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "L09_tet_print_meet": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L09_tet_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "L09_tet_print_meet.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "L10_yod_print_meet": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L10_yod_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "L10_yod_print_meet.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "L11_kaf_print_meet": {
+   "w": 1024,
+   "h": 1024,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L11_kaf_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1024,
+     "file": "L11_kaf_print_meet.1024.webp",
+     "w": 1024,
+     "h": 1024
+    }
+   ]
+  },
+  "L12_lamed_print_meet": {
+   "w": 1024,
+   "h": 1024,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L12_lamed_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1024,
+     "file": "L12_lamed_print_meet.1024.webp",
+     "w": 1024,
+     "h": 1024
+    }
+   ]
+  },
+  "L13_mem_print_meet": {
+   "w": 1024,
+   "h": 1024,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L13_mem_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1024,
+     "file": "L13_mem_print_meet.1024.webp",
+     "w": 1024,
+     "h": 1024
+    }
+   ]
+  },
+  "L14_nun_print_meet": {
+   "w": 1024,
+   "h": 1024,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L14_nun_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1024,
+     "file": "L14_nun_print_meet.1024.webp",
+     "w": 1024,
+     "h": 1024
+    }
+   ]
+  },
+  "L15_samekh_print_meet": {
+   "w": 1024,
+   "h": 1024,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L15_samekh_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1024,
+     "file": "L15_samekh_print_meet.1024.webp",
+     "w": 1024,
+     "h": 1024
+    }
+   ]
+  },
+  "L16_ayin_print_meet": {
+   "w": 1024,
+   "h": 1024,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L16_ayin_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1024,
+     "file": "L16_ayin_print_meet.1024.webp",
+     "w": 1024,
+     "h": 1024
+    }
+   ]
+  },
+  "L17_pe_print_meet": {
+   "w": 1024,
+   "h": 1024,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L17_pe_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1024,
+     "file": "L17_pe_print_meet.1024.webp",
+     "w": 1024,
+     "h": 1024
+    }
+   ]
+  },
+  "L18_tsadi_print_meet": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L18_tsadi_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "L18_tsadi_print_meet.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "L19_qof_print_meet": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L19_qof_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "L19_qof_print_meet.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "L20_resh_print_meet": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L20_resh_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "L20_resh_print_meet.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "L21_shin_print_meet": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L21_shin_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "L21_shin_print_meet.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "L22_tav_print_meet": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L22_tav_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "L22_tav_print_meet.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "L23_kaf_final_print_meet": {
+   "w": 1024,
+   "h": 1024,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L23_kaf_final_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1024,
+     "file": "L23_kaf_final_print_meet.1024.webp",
+     "w": 1024,
+     "h": 1024
+    }
+   ]
+  },
+  "L24_mem_final_print_meet": {
+   "w": 1024,
+   "h": 1024,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L24_mem_final_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1024,
+     "file": "L24_mem_final_print_meet.1024.webp",
+     "w": 1024,
+     "h": 1024
+    }
+   ]
+  },
+  "L25_nun_final_print_meet": {
+   "w": 1024,
+   "h": 1024,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L25_nun_final_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1024,
+     "file": "L25_nun_final_print_meet.1024.webp",
+     "w": 1024,
+     "h": 1024
+    }
+   ]
+  },
+  "L26_pe_final_print_meet": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L26_pe_final_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "L26_pe_final_print_meet.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "L27_tsadi_final_print_meet": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "L27_tsadi_final_print_meet.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "L27_tsadi_final_print_meet.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "MOUTH_ah": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "MOUTH_ah.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "MOUTH_ah.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "MOUTH_ee": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "MOUTH_ee.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "MOUTH_ee.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "MOUTH_eh": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "MOUTH_eh.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "MOUTH_eh.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "MOUTH_none": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "MOUTH_none.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "MOUTH_none.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "MOUTH_oh": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "MOUTH_oh.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "MOUTH_oh.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "MOUTH_oo": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "MOUTH_oo.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "MOUTH_oo.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_day_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_day_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_day_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_day_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_day_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_day_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_day_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_day_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_day_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_day_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_day_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_day_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_day_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_day_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_day_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_day_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_day_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_day_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_day_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_day_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_day_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_day_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_day_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_day_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_day_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_day_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_day_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_money_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_money_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_money_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_money_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_money_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_money_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_money_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_money_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_money_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_money_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_money_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_money_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_money_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_money_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_money_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_money_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_money_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_money_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_money_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_money_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_money_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_money_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_money_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_money_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_money_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_money_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_money_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_months1_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_months1_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_months1_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_months1_02": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_months1_02.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "NUM_months1_02.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "NUM_months1_03": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_months1_03.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "NUM_months1_03.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "NUM_months1_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_months1_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_months1_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_months1_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_months1_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_months1_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_months1_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_months1_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_months1_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_months1_08": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_months1_08.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "NUM_months1_08.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "NUM_months1_09": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_months1_09.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "NUM_months1_09.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "NUM_months1_10": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_months1_10.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "NUM_months1_10.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "NUM_months2_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_months2_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_months2_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_months2_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_months2_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_months2_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_months2_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_months2_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_months2_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_months2_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_months2_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_months2_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_months2_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_months2_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_months2_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_months2_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_months2_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_months2_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_months2_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_months2_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_months2_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_months2_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_months2_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_months2_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_months2_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_months2_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_months2_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_shapes_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_shapes_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_shapes_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_shapes_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_shapes_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_shapes_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_shapes_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_shapes_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_shapes_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_shapes_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_shapes_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_shapes_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_shapes_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_shapes_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_shapes_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_shapes_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_shapes_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_shapes_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_shapes_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_shapes_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_shapes_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_shapes_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_shapes_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_shapes_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_shapes_09": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_shapes_09.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "NUM_shapes_09.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "NUM_shapes_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_shapes_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_shapes_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_teens_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_teens_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_teens_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_teens_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_teens_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_teens_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_teens_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_teens_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_teens_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_teens_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_teens_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_teens_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_teens_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_teens_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_teens_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_teens_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_teens_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_teens_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_tens_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_tens_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_tens_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_tens_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_tens_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_tens_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_time_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_time_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_time_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_time_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_time_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_time_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_time_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_time_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_time_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_time_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_time_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_time_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_time_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_time_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_time_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_time_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_time_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_time_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_time_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_time_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_time_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_time_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_time_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_time_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_time_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_time_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_time_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "NUM_time_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "NUM_time_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "NUM_time_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "SPEAK_04_table_shabbat": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "SPEAK_04_table_shabbat.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "SPEAK_04_table_shabbat.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "SPEAK_05_table_welcome": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "SPEAK_05_table_welcome.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "SPEAK_05_table_welcome.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "SPEAK_08_street_taxi": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "SPEAK_08_street_taxi.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "SPEAK_08_street_taxi.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "STORY_abraham_01": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_abraham_01.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_abraham_01.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_abraham_02": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_abraham_02.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_abraham_02.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_abraham_03": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_abraham_03.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_abraham_03.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_abraham_04": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_abraham_04.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_abraham_04.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_abraham_05": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_abraham_05.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_abraham_05.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_abraham_07": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_abraham_07.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_abraham_07.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_abraham_08": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_abraham_08.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_abraham_08.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_abraham_09": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_abraham_09.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_abraham_09.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_abraham_10": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_abraham_10.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_abraham_10.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_creation_01": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_creation_01.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_creation_01.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_creation_02": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_creation_02.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_creation_02.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_creation_03": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_creation_03.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_creation_03.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_creation_04": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_creation_04.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_creation_04.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_creation_05": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_creation_05.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_creation_05.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_creation_06": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_creation_06.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_creation_06.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_creation_08": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_creation_08.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_creation_08.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_creation_09": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_creation_09.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_creation_09.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_jacob_01": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_jacob_01.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_jacob_01.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_jacob_02": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_jacob_02.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_jacob_02.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_jacob_03": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_jacob_03.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_jacob_03.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_jacob_04": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_jacob_04.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_jacob_04.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_jacob_05": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_jacob_05.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_jacob_05.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_jacob_06": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_jacob_06.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_jacob_06.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_jacob_07": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_jacob_07.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_jacob_07.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_jacob_09": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_jacob_09.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_jacob_09.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_joseph_01": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_joseph_01.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_joseph_01.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_joseph_02": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_joseph_02.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_joseph_02.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_joseph_03": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_joseph_03.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_joseph_03.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_joseph_04": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_joseph_04.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_joseph_04.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_joseph_05": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_joseph_05.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_joseph_05.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_joseph_06": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_joseph_06.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_joseph_06.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_joseph_09": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_joseph_09.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_joseph_09.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_judges_01": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_judges_01.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_judges_01.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_judges_02": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_judges_02.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_judges_02.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_judges_03": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_judges_03.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_judges_03.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_judges_04": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_judges_04.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_judges_04.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_judges_05": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_judges_05.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_judges_05.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_judges_06": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_judges_06.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_judges_06.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_judges_07": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_judges_07.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_judges_07.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_judges_08": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_judges_08.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_judges_08.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_judges_09": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_judges_09.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_judges_09.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_judges_10": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_judges_10.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_judges_10.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_kings_01": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_kings_01.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_kings_01.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_kings_02": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_kings_02.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_kings_02.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_kings_03": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_kings_03.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_kings_03.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_kings_05": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_kings_05.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_kings_05.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_kings_06": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_kings_06.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_kings_06.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_kings_07": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_kings_07.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_kings_07.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_kings_08": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_kings_08.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_kings_08.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_kings_09": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_kings_09.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_kings_09.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_kings_10": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_kings_10.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_kings_10.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_moses1_01": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_moses1_01.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_moses1_01.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_moses1_02": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_moses1_02.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_moses1_02.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_moses1_03": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_moses1_03.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_moses1_03.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_moses1_05": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_moses1_05.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_moses1_05.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_moses1_06": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_moses1_06.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_moses1_06.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_moses1_07": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_moses1_07.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_moses1_07.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_moses1_09": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_moses1_09.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_moses1_09.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_moses1_10": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_moses1_10.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_moses1_10.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_moses2_01": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_moses2_01.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_moses2_01.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_moses2_02": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_moses2_02.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_moses2_02.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_moses2_03": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_moses2_03.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_moses2_03.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_moses2_04": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_moses2_04.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_moses2_04.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_moses2_05": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_moses2_05.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_moses2_05.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_moses2_06": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_moses2_06.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_moses2_06.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_moses2_08": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_moses2_08.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_moses2_08.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_moses2_09": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_moses2_09.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_moses2_09.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_moses2_10": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_moses2_10.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_moses2_10.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_noah_01": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_noah_01.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_noah_01.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_noah_02": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_noah_02.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_noah_02.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_noah_03": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_noah_03.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_noah_03.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_noah_04": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_noah_04.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_noah_04.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_noah_05": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_noah_05.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_noah_05.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_noah_06": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_noah_06.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_noah_06.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_noah_07": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_noah_07.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_noah_07.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_noah_08": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_noah_08.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_noah_08.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_prophets_01": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_prophets_01.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_prophets_01.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_prophets_02": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_prophets_02.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_prophets_02.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_prophets_03": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_prophets_03.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_prophets_03.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_prophets_04": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_prophets_04.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_prophets_04.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_prophets_05": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_prophets_05.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_prophets_05.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_prophets_06": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_prophets_06.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_prophets_06.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_prophets_07": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_prophets_07.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_prophets_07.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_prophets_08": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_prophets_08.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_prophets_08.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_prophets_09": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_prophets_09.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_prophets_09.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "STORY_prophets_10": {
+   "w": 1659,
+   "h": 948,
+   "files": [
+    {
+     "edge": 800,
+     "file": "STORY_prophets_10.800.webp",
+     "w": 800,
+     "h": 457
+    },
+    {
+     "edge": 1600,
+     "file": "STORY_prophets_10.1600.webp",
+     "w": 1600,
+     "h": 914
+    }
+   ]
+  },
+  "V01_kamatz_ari": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V01_kamatz_ari.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V01_kamatz_ari.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V01_kamatz_card": {
+   "w": 1122,
+   "h": 1402,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V01_kamatz_card.800.webp",
+     "w": 640,
+     "h": 800
+    },
+    {
+     "edge": 1402,
+     "file": "V01_kamatz_card.1402.webp",
+     "w": 1122,
+     "h": 1402
+    }
+   ]
+  },
+  "V01_kamatz_keyword": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V01_kamatz_keyword.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V01_kamatz_keyword.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V01_kamatz_noa": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V01_kamatz_noa.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V01_kamatz_noa.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V01_kamatz_position": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V01_kamatz_position.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V01_kamatz_position.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V02_patach_ari": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V02_patach_ari.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V02_patach_ari.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V02_patach_card": {
+   "w": 1122,
+   "h": 1402,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V02_patach_card.800.webp",
+     "w": 640,
+     "h": 800
+    },
+    {
+     "edge": 1402,
+     "file": "V02_patach_card.1402.webp",
+     "w": 1122,
+     "h": 1402
+    }
+   ]
+  },
+  "V02_patach_keyword": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V02_patach_keyword.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V02_patach_keyword.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V02_patach_noa": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V02_patach_noa.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V02_patach_noa.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V02_patach_position": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V02_patach_position.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V02_patach_position.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V03_tzere_ari": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V03_tzere_ari.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V03_tzere_ari.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V03_tzere_card": {
+   "w": 1122,
+   "h": 1402,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V03_tzere_card.800.webp",
+     "w": 640,
+     "h": 800
+    },
+    {
+     "edge": 1402,
+     "file": "V03_tzere_card.1402.webp",
+     "w": 1122,
+     "h": 1402
+    }
+   ]
+  },
+  "V03_tzere_keyword": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V03_tzere_keyword.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V03_tzere_keyword.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V03_tzere_noa": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V03_tzere_noa.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V03_tzere_noa.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V03_tzere_position": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V03_tzere_position.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V03_tzere_position.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V04_segol_ari": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V04_segol_ari.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V04_segol_ari.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V04_segol_card": {
+   "w": 1122,
+   "h": 1402,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V04_segol_card.800.webp",
+     "w": 640,
+     "h": 800
+    },
+    {
+     "edge": 1402,
+     "file": "V04_segol_card.1402.webp",
+     "w": 1122,
+     "h": 1402
+    }
+   ]
+  },
+  "V04_segol_keyword": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V04_segol_keyword.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V04_segol_keyword.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V04_segol_noa": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V04_segol_noa.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V04_segol_noa.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V04_segol_position": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V04_segol_position.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V04_segol_position.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V05_chirik_ari": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V05_chirik_ari.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V05_chirik_ari.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V05_chirik_card": {
+   "w": 1122,
+   "h": 1402,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V05_chirik_card.800.webp",
+     "w": 640,
+     "h": 800
+    },
+    {
+     "edge": 1402,
+     "file": "V05_chirik_card.1402.webp",
+     "w": 1122,
+     "h": 1402
+    }
+   ]
+  },
+  "V05_chirik_keyword": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V05_chirik_keyword.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V05_chirik_keyword.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V05_chirik_noa": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V05_chirik_noa.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V05_chirik_noa.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V05_chirik_position": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V05_chirik_position.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V05_chirik_position.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V06_cholam_male_ari": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V06_cholam_male_ari.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V06_cholam_male_ari.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V06_cholam_male_card": {
+   "w": 1122,
+   "h": 1402,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V06_cholam_male_card.800.webp",
+     "w": 640,
+     "h": 800
+    },
+    {
+     "edge": 1402,
+     "file": "V06_cholam_male_card.1402.webp",
+     "w": 1122,
+     "h": 1402
+    }
+   ]
+  },
+  "V06_cholam_male_keyword": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V06_cholam_male_keyword.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V06_cholam_male_keyword.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V06_cholam_male_noa": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V06_cholam_male_noa.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V06_cholam_male_noa.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V06_cholam_male_position": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V06_cholam_male_position.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V06_cholam_male_position.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V07_cholam_chaser_ari": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V07_cholam_chaser_ari.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V07_cholam_chaser_ari.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V07_cholam_chaser_card": {
+   "w": 1122,
+   "h": 1402,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V07_cholam_chaser_card.800.webp",
+     "w": 640,
+     "h": 800
+    },
+    {
+     "edge": 1402,
+     "file": "V07_cholam_chaser_card.1402.webp",
+     "w": 1122,
+     "h": 1402
+    }
+   ]
+  },
+  "V07_cholam_chaser_keyword": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V07_cholam_chaser_keyword.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V07_cholam_chaser_keyword.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V07_cholam_chaser_noa": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V07_cholam_chaser_noa.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V07_cholam_chaser_noa.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V07_cholam_chaser_position": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V07_cholam_chaser_position.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V07_cholam_chaser_position.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V08_kubutz_ari": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V08_kubutz_ari.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V08_kubutz_ari.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V08_kubutz_card": {
+   "w": 1122,
+   "h": 1402,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V08_kubutz_card.800.webp",
+     "w": 640,
+     "h": 800
+    },
+    {
+     "edge": 1402,
+     "file": "V08_kubutz_card.1402.webp",
+     "w": 1122,
+     "h": 1402
+    }
+   ]
+  },
+  "V08_kubutz_keyword": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V08_kubutz_keyword.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V08_kubutz_keyword.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V08_kubutz_noa": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V08_kubutz_noa.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V08_kubutz_noa.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V08_kubutz_position": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V08_kubutz_position.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V08_kubutz_position.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V09_shuruk_ari": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V09_shuruk_ari.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V09_shuruk_ari.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V09_shuruk_card": {
+   "w": 1122,
+   "h": 1402,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V09_shuruk_card.800.webp",
+     "w": 640,
+     "h": 800
+    },
+    {
+     "edge": 1402,
+     "file": "V09_shuruk_card.1402.webp",
+     "w": 1122,
+     "h": 1402
+    }
+   ]
+  },
+  "V09_shuruk_keyword": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V09_shuruk_keyword.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V09_shuruk_keyword.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V09_shuruk_noa": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V09_shuruk_noa.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V09_shuruk_noa.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V09_shuruk_position": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V09_shuruk_position.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V09_shuruk_position.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V10_shva_ari": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V10_shva_ari.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V10_shva_ari.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V10_shva_card": {
+   "w": 1122,
+   "h": 1402,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V10_shva_card.800.webp",
+     "w": 640,
+     "h": 800
+    },
+    {
+     "edge": 1402,
+     "file": "V10_shva_card.1402.webp",
+     "w": 1122,
+     "h": 1402
+    }
+   ]
+  },
+  "V10_shva_keyword": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V10_shva_keyword.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V10_shva_keyword.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V10_shva_noa": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V10_shva_noa.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V10_shva_noa.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V10_shva_position": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V10_shva_position.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V10_shva_position.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V11_chataf_patach_ari": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V11_chataf_patach_ari.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V11_chataf_patach_ari.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V11_chataf_patach_card": {
+   "w": 1122,
+   "h": 1402,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V11_chataf_patach_card.800.webp",
+     "w": 640,
+     "h": 800
+    },
+    {
+     "edge": 1402,
+     "file": "V11_chataf_patach_card.1402.webp",
+     "w": 1122,
+     "h": 1402
+    }
+   ]
+  },
+  "V11_chataf_patach_keyword": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V11_chataf_patach_keyword.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V11_chataf_patach_keyword.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V11_chataf_patach_noa": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V11_chataf_patach_noa.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V11_chataf_patach_noa.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V11_chataf_patach_position": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V11_chataf_patach_position.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V11_chataf_patach_position.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V12_chataf_segol_ari": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V12_chataf_segol_ari.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V12_chataf_segol_ari.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V12_chataf_segol_card": {
+   "w": 1122,
+   "h": 1402,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V12_chataf_segol_card.800.webp",
+     "w": 640,
+     "h": 800
+    },
+    {
+     "edge": 1402,
+     "file": "V12_chataf_segol_card.1402.webp",
+     "w": 1122,
+     "h": 1402
+    }
+   ]
+  },
+  "V12_chataf_segol_noa": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V12_chataf_segol_noa.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V12_chataf_segol_noa.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V12_chataf_segol_position": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V12_chataf_segol_position.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V12_chataf_segol_position.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V13_chataf_kamatz_ari": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V13_chataf_kamatz_ari.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V13_chataf_kamatz_ari.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V13_chataf_kamatz_card": {
+   "w": 1122,
+   "h": 1402,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V13_chataf_kamatz_card.800.webp",
+     "w": 640,
+     "h": 800
+    },
+    {
+     "edge": 1402,
+     "file": "V13_chataf_kamatz_card.1402.webp",
+     "w": 1122,
+     "h": 1402
+    }
+   ]
+  },
+  "V13_chataf_kamatz_keyword": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V13_chataf_kamatz_keyword.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V13_chataf_kamatz_keyword.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V13_chataf_kamatz_noa": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V13_chataf_kamatz_noa.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V13_chataf_kamatz_noa.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V13_chataf_kamatz_position": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V13_chataf_kamatz_position.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V13_chataf_kamatz_position.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V14_dagesh_ari": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V14_dagesh_ari.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V14_dagesh_ari.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V14_dagesh_card": {
+   "w": 1122,
+   "h": 1402,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V14_dagesh_card.800.webp",
+     "w": 640,
+     "h": 800
+    },
+    {
+     "edge": 1402,
+     "file": "V14_dagesh_card.1402.webp",
+     "w": 1122,
+     "h": 1402
+    }
+   ]
+  },
+  "V14_dagesh_keyword": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V14_dagesh_keyword.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V14_dagesh_keyword.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V14_dagesh_noa": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V14_dagesh_noa.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V14_dagesh_noa.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V14_dagesh_position": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V14_dagesh_position.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V14_dagesh_position.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V15_shin_sin_dots_ari": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V15_shin_sin_dots_ari.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V15_shin_sin_dots_ari.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V15_shin_sin_dots_keyword": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V15_shin_sin_dots_keyword.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V15_shin_sin_dots_keyword.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V15_shin_sin_dots_noa": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V15_shin_sin_dots_noa.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V15_shin_sin_dots_noa.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "V15_shin_sin_dots_position": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "V15_shin_sin_dots_position.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "V15_shin_sin_dots_position.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_change_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_change_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_change_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_change_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_change_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_change_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_change_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_change_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_change_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_change_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_change_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_change_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_change_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_change_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_change_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_change_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_change_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_change_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_change_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_change_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_change_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_change_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_change_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_change_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_change_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_change_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_change_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_change_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_change_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_change_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_eat_all_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_eat_all_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_eat_all_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_eat_all_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_eat_all_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_eat_all_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_eat_all_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_eat_all_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_eat_all_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_eat_all_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_eat_all_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_eat_all_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_eat_all_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_eat_all_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_eat_all_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_eat_all_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_eat_all_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_eat_all_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_eat_all_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_eat_all_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_eat_all_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_eat_all_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_eat_all_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_eat_all_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_eat_all_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_eat_all_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_eat_all_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_hand_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_hand_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_hand_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_hand_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_hand_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_hand_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_hand_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_hand_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_hand_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_hand_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_hand_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_hand_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_hand_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_hand_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_hand_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_hand_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_hand_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_hand_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_hand_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_hand_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_hand_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_hand_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_hand_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_hand_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_hand_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_hand_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_hand_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_home_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_home_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_home_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_home_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_home_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_home_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_home_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_home_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_home_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_home_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_home_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_home_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_home_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_home_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_home_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_home_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_home_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_home_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_home_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_home_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_home_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_home_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_home_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_home_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_home_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_home_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_home_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_kitchen_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_kitchen_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_kitchen_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_kitchen_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_kitchen_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_kitchen_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_kitchen_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_kitchen_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_kitchen_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_kitchen_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_kitchen_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_kitchen_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_kitchen_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_kitchen_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_kitchen_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_kitchen_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_kitchen_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_kitchen_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_kitchen_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_kitchen_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_kitchen_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_kitchen_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_kitchen_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_kitchen_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_kitchen_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_kitchen_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_kitchen_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_kitchen_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_kitchen_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_kitchen_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_mind_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_mind_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_mind_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_mind_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_mind_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_mind_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_mind_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_mind_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_mind_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_mind_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_mind_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_mind_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_mind_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_mind_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_mind_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_mind_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_mind_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_mind_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_mind_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_mind_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_mind_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_mind_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_mind_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_mind_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_mind_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_mind_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_mind_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_mind_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_mind_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_mind_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_move_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_move_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_move_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_move_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_move_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_move_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_move_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_move_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_move_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_move_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_move_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_move_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_move_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_move_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_move_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_move_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_move_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_move_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_move_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_move_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_move_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_move_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_move_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_move_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_move_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_move_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_move_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_talk_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_talk_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_talk_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_talk_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_talk_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_talk_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_talk_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_talk_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_talk_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_talk_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_talk_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_talk_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_talk_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_talk_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_talk_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_talk_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_talk_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_talk_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_talk_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_talk_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_talk_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_talk_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_talk_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_talk_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VERB_talk_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VERB_talk_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VERB_talk_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_body_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_body_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_body_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_body_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_body_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_body_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_body_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_body_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_body_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_body_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_body_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_body_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_body_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_body_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_body_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_body_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_body_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_body_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_body_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_body_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_body_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_body_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_body_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_body_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_body_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_body_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_body_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_body_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_body_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_body_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_cafe_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_cafe_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_cafe_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_cafe_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_cafe_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_cafe_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_cafe_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_cafe_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_cafe_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_cafe_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_cafe_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_cafe_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_cafe_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_cafe_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_cafe_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_cafe_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_cafe_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_cafe_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_cafe_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_cafe_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_cafe_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_cafe_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_cafe_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_cafe_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_cafe_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_cafe_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_cafe_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_cafe_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_cafe_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_cafe_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_colours_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_colours_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_colours_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_colours_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_colours_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_colours_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_colours_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_colours_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_colours_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_colours_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_colours_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_colours_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_colours_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_colours_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_colours_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_colours_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_colours_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_colours_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_colours_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_colours_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_colours_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_colours_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_colours_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_colours_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_colours_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_colours_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_colours_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_colours_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_colours_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_colours_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_directions_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_directions_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_directions_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_directions_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_directions_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_directions_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_directions_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_directions_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_directions_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_directions_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_directions_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_directions_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_directions_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_directions_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_directions_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_directions_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_directions_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_directions_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_directions_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_directions_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_directions_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_directions_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_directions_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_directions_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_directions_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_directions_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_directions_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_directions_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_directions_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_directions_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_greetings_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_greetings_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_greetings_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_greetings_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_greetings_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_greetings_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_greetings_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_greetings_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_greetings_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_greetings_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_greetings_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_greetings_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_greetings_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_greetings_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_greetings_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_greetings_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_greetings_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_greetings_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_greetings_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_greetings_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_greetings_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_greetings_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_greetings_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_greetings_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_greetings_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_greetings_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_greetings_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_greetings_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_greetings_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_greetings_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_home_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_home_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_home_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_home_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_home_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_home_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_home_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_home_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_home_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_home_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_home_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_home_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_home_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_home_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_home_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_home_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_home_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_home_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_home_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_home_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_home_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_home_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_home_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_home_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_home_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_home_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_home_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_home_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_home_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_home_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_market_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_market_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_market_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_market_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_market_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_market_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_market_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_market_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_market_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_market_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_market_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_market_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_market_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_market_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_market_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_market_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_market_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_market_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_market_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_market_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_market_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_market_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_market_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_market_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_market_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_market_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_market_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_market_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_market_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_market_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_numbers_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_numbers_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_numbers_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_numbers_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_numbers_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_numbers_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_numbers_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_numbers_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_numbers_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_numbers_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_numbers_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_numbers_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_numbers_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_numbers_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_numbers_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_numbers_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_numbers_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_numbers_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_numbers_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_numbers_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_numbers_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_numbers_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_numbers_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_numbers_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_synagogue_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_synagogue_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_synagogue_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_synagogue_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_synagogue_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_synagogue_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_transport_01": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_transport_01.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_transport_01.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_transport_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_transport_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_transport_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_transport_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_transport_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_transport_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_transport_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_transport_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_transport_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_transport_05": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_transport_05.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_transport_05.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_transport_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_transport_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_transport_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_transport_07": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_transport_07.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_transport_07.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_transport_08": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_transport_08.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_transport_08.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_transport_09": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_transport_09.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_transport_09.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "VOC_transport_10": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "VOC_transport_10.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "VOC_transport_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  }
+ },
  "altText": {
   "BADGE_trad_01": "A single lit candle on blue (Israeli track start) (Traditions badges).",
   "BADGE_trad_02": "A shofar on cream (Ashkenazi track start) (Traditions badges).",
@@ -2572,6 +12437,42 @@
   "VOC_transport_07": "One centred image: a beach umbrella. No people unless the item is an action.",
   "VOC_transport_08": "One centred image: a hotel key card. No people unless the item is an action.",
   "VOC_transport_09": "One centred image: a backpack. No people unless the item is an action.",
-  "VOC_transport_10": "One centred image: a sunhat. No people unless the item is an action."
+  "VOC_transport_10": "One centred image: a sunhat. No people unless the item is an action.",
+  "GAME_minute_one_celebration": "Celebration art for the first Hebrew word.",
+  "GAME_letter_rush": "Scene for the Letter Rush letter-recognition game.",
+  "GAME_sofit_sniper": "Scene for final-letter (sofit) practice.",
+  "GAME_niqqud_fade": "Scene for vowel marks fading off pointed Hebrew.",
+  "GAME_tradition_detective": "Scene for telling the reading traditions apart.",
+  "GAME_story_postcard": "Postcard scene for a letter memory story.",
+  "SPEAK_04_table_shabbat": "A Shabbat table scene for Say it.",
+  "SPEAK_05_table_welcome": "A welcome-at-the-table scene for Say it.",
+  "SPEAK_08_street_taxi": "A street taxi scene for Say it.",
+  "L01_alef_print_meet": "Meet-the-letter cartoon for alef.",
+  "L02_bet_print_meet": "Meet-the-letter cartoon for bet.",
+  "L08_chet_print_meet": "Meet-the-letter cartoon for chet.",
+  "L04_dalet_print_meet": "Meet-the-letter cartoon for dalet.",
+  "L03_gimel_print_meet": "Meet-the-letter cartoon for gimel.",
+  "L05_he_print_meet": "Meet-the-letter cartoon for he.",
+  "L09_tet_print_meet": "Meet-the-letter cartoon for tet.",
+  "L06_vav_print_meet": "Meet-the-letter cartoon for vav.",
+  "L10_yod_print_meet": "Meet-the-letter cartoon for yod.",
+  "L07_zayin_print_meet": "Meet-the-letter cartoon for zayin.",
+  "L16_ayin_print_meet": "Meet-the-letter cartoon for ayin.",
+  "L23_kaf_final_print_meet": "Meet-the-letter cartoon for kaf final.",
+  "L11_kaf_print_meet": "Meet-the-letter cartoon for kaf.",
+  "L12_lamed_print_meet": "Meet-the-letter cartoon for lamed.",
+  "L24_mem_final_print_meet": "Meet-the-letter cartoon for mem final.",
+  "L13_mem_print_meet": "Meet-the-letter cartoon for mem.",
+  "L25_nun_final_print_meet": "Meet-the-letter cartoon for nun final.",
+  "L14_nun_print_meet": "Meet-the-letter cartoon for nun.",
+  "L17_pe_print_meet": "Meet-the-letter cartoon for pe.",
+  "L15_samekh_print_meet": "Meet-the-letter cartoon for samekh.",
+  "L26_pe_final_print_meet": "Meet-the-letter cartoon for pe final.",
+  "L19_qof_print_meet": "Meet-the-letter cartoon for qof.",
+  "L20_resh_print_meet": "Meet-the-letter cartoon for resh.",
+  "L21_shin_print_meet": "Meet-the-letter cartoon for shin.",
+  "L22_tav_print_meet": "Meet-the-letter cartoon for tav.",
+  "L27_tsadi_final_print_meet": "Meet-the-letter cartoon for tsadi final.",
+  "L18_tsadi_print_meet": "Meet-the-letter cartoon for tsadi."
  }
 }

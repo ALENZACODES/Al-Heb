@@ -14,6 +14,8 @@ import { loadFirst10, loadLadder, loadOnramp } from './loader.js';
 import { DRAFT_NOTICE, PROGRESS_KEY, advance, markRead, wordById, buildCheck, gradeCheck, audioEntries, playHook, totalMinutes } from './model.js';
 import { migrateProgress, winStep, recordAnswer, stepQuestions, stepIndex, onrampDone, totalMinutes as onrampMinutes } from './onramp.model.js';
 import { loadMemoryChain, entryFor, buildMemoryCard } from '../letters/memorycard.js';
+import { letterMeet, picture } from '../img/scenes.js';
+import { startSpeaking } from '../motion/alive.js';
 import { vowelSound, respell, congregationOf, audioNote, saySound, playLine, audioSupport, LABELS } from '../pronunciation/forTradition.js';
 import { isAudioFree } from '../shell/audiofree.js';
 
@@ -49,9 +51,13 @@ export function mount(root, ctx) {
   const focusLost = () => { const a = document.activeElement; return !a || a === document.body || !body.contains(a) || a.disabled; };
   const refocus = (sel) => { try { if (focusLost()) body.querySelector(sel)?.focus({ preventScroll: true }); } catch { /* ignore */ } };
   const hearNote = () => (isAudioFree(ctx) ? el('span', { hidden: '' }) : el('p', { class: 'muted small fd-audio-note' }, audioNote(tradition)));
-  const listen = (hook, label = 'Hear it') => isAudioFree(ctx) ? el('span', { hidden: '' }) : el('button', { class: 'btn', type: 'button', onclick: async () => {
-    const r = await playHook(ctx?.audio, hook);
-    say(playLine(r, tradition, 'it')); // one shared, tradition-aware sentence (never presents the Israeli device voice as the learner's style)
+  const listen = (hook, label = 'Hear it') => isAudioFree(ctx) ? el('span', { hidden: '' }) : el('button', { class: 'btn', type: 'button', onclick: async (ev) => {
+    const host = ev?.currentTarget?.closest?.('[data-live]');
+    const stop = startSpeaking(ctx, host);
+    try {
+      const r = await playHook(ctx?.audio, hook);
+      say(playLine(r, tradition, 'it')); // one shared, tradition-aware sentence (never presents the Israeli device voice as the learner's style)
+    } finally { stop(); }
   } }, label);
   const wantPreview = () => ctx?.query?.part === 'preview';
 
@@ -67,8 +73,9 @@ export function mount(root, ctx) {
     if (memCard) { memCard.destroy(); memCard = null; }
     const me = s.kind === 'letter' ? entryFor(chain, s.letter) : null; // memory card: the big letter turns into its picture; the chain follows
     if (me) memCard = buildMemoryCard({ entry: me, glyph: he, tradition, audio: ctx?.audio, compact: true, hideSoundLine: true });
+    const art = s.kind === 'letter' ? letterMeet(el, ctx, s.letter) : s.kind === 'vowel' ? picture(el, ctx, 'vowel', s.vowel, { width: 360 }) : picture(el, ctx, 'word', `firstday-${s.id}`, { width: 400 });
     const nodes = [el('p', { class: 'muted' }, `Step ${i + 1} of ${onramp.steps.length} · about ${s.minutes} min`), el('h2', {}, s.title),
-      memCard ? memCard.el : el('p', { class: 'fd-card alef-card', 'data-glyph-slot': '1' }, heText(he, 'alef-he alef-huge fd-big'))];
+      el('div', { 'data-live': s.kind || 'step' }, art, memCard ? memCard.el : el('p', { class: 'fd-card alef-card', 'data-glyph-slot': '1' }, heText(he, 'alef-he alef-huge fd-big')))];
     if (s.kind === 'letter' && chain === null) nodes.push(el('p', { class: 'mc-fallback muted small', role: 'status', 'data-memory-fallback': '1' }, 'Picture and word hint unavailable offline'));
     // one sound line, in the learner's tradition
     if (s.kind === 'letter') nodes.push(el('p', {}, saySound(content?.consonants?.get?.(s.letter), tradition, { fallbackEn: L?.sound?.en || '' })));

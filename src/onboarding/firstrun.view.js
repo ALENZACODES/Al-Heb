@@ -8,6 +8,7 @@
  * ctx used: settings.get/set(patch), store.get/set, route, t, hasRoute. Test extras: ctx.onboardingData {plans, lessons}, ctx.clock.now.
  */
 import { h, heSpan } from '../shell/ui.js';
+import { showcaseNode } from '../shell/showcase.js';
 import { loadOnboardingData } from './loader.js';
 import { STORE_KEY, PLACEMENT_KEY, LETTERS_QUESTION, LETTER_ANSWERS, DENOMINATIONS, PRONUNCIATIONS, SETTINGS_KEY_PRONUNCIATION,
   GOAL_QUESTION, GOAL_CHOICES, normalize, answerLetters, setDenomination, setMinutes, setStep, suggestedPronunciation, answerById, placementLesson, buildPlan } from './model.js';
@@ -28,7 +29,7 @@ export function mount(root, ctx) {
   const h1 = h('h1', { id: 'view-title', tabindex: '-1' }, t('welcome.title', 'Welcome to ALEF'), ' ', heSpan('אלף'));
   const body = h('div', { class: 'ob-body' });
   const status = h('p', { role: 'status', 'aria-live': 'polite', class: 'muted', id: 'ob-status' });
-  root.replaceChildren(h('article', { class: 'card onboarding' }, h1, body, status));
+  root.replaceChildren(showcaseNode(ctx), h('article', { class: 'card onboarding' }, h1, body, status));
   const say = (m) => { status.textContent = m; };
   const focus = (n) => { try { n?.focus?.({ preventScroll: true }); } catch { try { n?.focus?.(); } catch { /* ignore */ } } };
   const save = () => { try { store.set(STORE_KEY, rec); } catch { /* best effort */ } };

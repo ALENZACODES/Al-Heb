@@ -29,7 +29,7 @@
     "m": "audio/m/israeli/book/book4-p02.mp3"
    },
    "illustration": "gentle waves on the Tel Aviv coast under a silver crescent moon.",
-   "hasImg": false
+   "hasImg": true
   },
   {
    "n": 3,
@@ -42,7 +42,7 @@
     "m": "audio/m/israeli/book/book4-p03.mp3"
    },
    "illustration": "a sleek stray cat stepping softly across warm limestone pavement.",
-   "hasImg": false
+   "hasImg": true
   },
   {
    "n": 4,

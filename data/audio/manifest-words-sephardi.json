@@ -19298,8 +19298,8 @@
   "kind": "word",
   "id": "shir-hamaalot-w1",
   "text": "שִׁיר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "song; a poem",
   "phonetic": "shir"
@@ -19532,8 +19532,8 @@
   "kind": "word",
   "id": "shir-hamaalot-w10",
   "text": "יִמָּלֵא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "filled",
   "phonetic": "yimale"
@@ -19558,8 +19558,8 @@
   "kind": "word",
   "id": "shir-hamaalot-w11",
   "text": "שְׂחוֹק",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "laughter",
   "phonetic": "sechok"

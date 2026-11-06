@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 7003 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 7049 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-7003 English labels; 1933 UNKNOWN.
+7049 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -4834,6 +4834,52 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [h708c9d2f](m/israeli/word/h708c9d2f.mp3) | דֵּי | quite, fairly | dei |
 | [h7097c7a9](m/israeli/word/h7097c7a9.mp3) | צָפוֹן | north | tzafon |
 | [h7121d7fe](m/israeli/word/h7121d7fe.mp3) | אָז | so, therefore, then, thus; then, next; then, at that time | az |
+| [h720b8d19](m/israeli/word/h720b8d19.mp3) | אַמָּה | forearm; Hebrew cubit, usually 44.3 cm; middle finger | amah |
+| [h725d19e2](m/israeli/word/h725d19e2.mp3) | זִכָּרוֹן | memory; a memory; memory, computer memory | zikaron |
+| [h729919fd](m/israeli/word/h729919fd.mp3) | נַעַר | non-infant child; boy, physically able young man. Also, a servant; adolescent, teenager | na'ar |
+| [h72ac53a6](m/israeli/word/h72ac53a6.mp3) | צֹאן | sheep, flock of sheep | tzon |
+| [h730c9015](m/israeli/word/h730c9015.mp3) | הִצִּיעַ | Suggest, propose, recommend, offer; Spread | hitzi'a |
+| [h731d1356](m/israeli/word/h731d1356.mp3) | שָׂשׂ | to rejoice, be happy | sas |
+| [h731dbce2](m/israeli/word/h731dbce2.mp3) | לָקוֹחַ | client; customer | lakoach |
+| [h7410d5ab](m/israeli/word/h7410d5ab.mp3) | רִשְׁמִי | official; formal | rishmi |
+| [h7439bf9d](m/israeli/word/h7439bf9d.mp3) | מְכָל | container, bin | mekhol |
+| [h74789994](m/israeli/word/h74789994.mp3) | פְּצָצָה | bomb; a bombshell; someone who is very physically attractive | petzatzah |
+| [h7494d535](m/israeli/word/h7494d535.mp3) | זוֹ | this, this one; this | zo |
+| [h749f736f](m/israeli/word/h749f736f.mp3) | תָּמִיד | always, regularly | tamid |
+| [h75012f54](m/israeli/word/h75012f54.mp3) | שְׁאֵלָה | question | she'elah |
+| [h75485886](m/israeli/word/h75485886.mp3) | מְלָאכָה | sending, commission; occupation, business; handicrafts | melakhah |
+| [h75de47f9](m/israeli/word/h75de47f9.mp3) | הִכָּה | to hit, smite, strike | hikah |
+| [h761c6cb9](m/israeli/word/h761c6cb9.mp3) | זָהָב | gold (metal); gold | zahav |
+| [h761f6283](m/israeli/word/h761f6283.mp3) | הֵיכָן | Where | heikhan |
+| [h769a6c3e](m/israeli/word/h769a6c3e.mp3) | אַרְבָּעָה | four | arba'ah |
+| [h770abeb5](m/israeli/word/h770abeb5.mp3) | עָנָן | cloud | anan |
+| [h7715384f](m/israeli/word/h7715384f.mp3) | שָׁת | to place, set | shat |
+| [h779cc60c](m/israeli/word/h779cc60c.mp3) | מַטֶּה | stick, staff, wand; headquarters; tribe | mateh |
+| [h77ef11e1](m/israeli/word/h77ef11e1.mp3) | לָשׁ | to knead | lash |
+| [h7832f163](m/israeli/word/h7832f163.mp3) | יָרַשׁ | to inherit; to take possession of | yarash |
+| [h788c5f0a](m/israeli/word/h788c5f0a.mp3) | עֶצֶם | bone; a thing, object; gist, essence | etzem |
+| [h78cf1c7a](m/israeli/word/h78cf1c7a.mp3) | צָעִיר | Young (in the early part of life or growth); a young (male) person, a (male) youth | tza'ir |
+| [h78d6aa81](m/israeli/word/h78d6aa81.mp3) | שָׂמַח | to be happy, glad, joyous, cheerful, merry | samach |
+| [h7944f080](m/israeli/word/h7944f080.mp3) | חֲזָרָה | back | chazarah |
+| [h796a7887](m/israeli/word/h796a7887.mp3) | אֶזְרָחִי | civilian, nonmilitary; civilian, secular; civilian, civil | ezrachi |
+| [h79df22f0](m/israeli/word/h79df22f0.mp3) | לְאָן | whither | le'an |
+| [h79f1f8cd](m/israeli/word/h79f1f8cd.mp3) | עָמֹק | deep | amok |
+| [h7a29d871](m/israeli/word/h7a29d871.mp3) | צִוָּה | to command | tzivah |
+| [h7a3505d0](m/israeli/word/h7a3505d0.mp3) | רַעֲיוֹן | idea; concept; thought | ra'ayon |
+| [h7ab6c1a8](m/israeli/word/h7ab6c1a8.mp3) | סוּג | sort (kind, type); genus | sug |
+| [h7ac4d731](m/israeli/word/h7ac4d731.mp3) | לְמַעַן | for the sake (benefit or regard) of (a person or thing); with the intent or purpose of (a result) | lema'an |
+| [h7af5d439](m/israeli/word/h7af5d439.mp3) | תֵּבָה | Noah's ark; coffin, casket; rectangular cuboid | tevah |
+| [h7b44b8a0](m/israeli/word/h7b44b8a0.mp3) | עָשָׂר | -teen | asar |
+| [h7bacd4a2](m/israeli/word/h7bacd4a2.mp3) | אַלּוּף | major general; a champion (someone who has been winner in a contest); a close friend | aluf |
+| [h7be38218](m/israeli/word/h7be38218.mp3) | קָטָן | little, small, diminutive | katan |
+| [h7c9d2ffe](m/israeli/word/h7c9d2ffe.mp3) | אֵת | used to introduce a semantically definite direct object; to, with | et |
+| [h7d05bcca](m/israeli/word/h7d05bcca.mp3) | עַל | on, on top of; on; about | al |
+| [h7e5cc0c5](m/israeli/word/h7e5cc0c5.mp3) | עֲבוֹדָה | worship, service; work, job, labor; work | avodah |
+| [h7ef1471c](m/israeli/word/h7ef1471c.mp3) | קָם | to rise, stand up; to become in charge; to remain valid | kam |
+| [h7ef4abda](m/israeli/word/h7ef4abda.mp3) | הִנֵּה | here is, here’s; lo, behold; used as a copula | hineh |
+| [h7efa21d2](m/israeli/word/h7efa21d2.mp3) | קֶרַח | ice | kerach |
+| [h7efc375e](m/israeli/word/h7efc375e.mp3) | מָשַׁךְ | to pull; to stretch, to extend | mashakh |
+| [h7f894a5c](m/israeli/word/h7f894a5c.mp3) | קַו | line; bus line | kav |
 | [haftarah-after-w1](m/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](m/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](m/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -7609,4 +7655,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 15014 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 15065 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

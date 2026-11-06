@@ -942,8 +942,8 @@
   "kind": "word",
   "id": "vahavta-2-w9",
   "text": "וְשִׁנַּנְתָּם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and you shall teach them",
   "phonetic": "veshinantam"
@@ -1202,8 +1202,8 @@
   "kind": "word",
   "id": "vahavta-full-w1",
   "text": "וְאָהַבְתָּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and you shall love",
   "phonetic": "ve'ahavta"

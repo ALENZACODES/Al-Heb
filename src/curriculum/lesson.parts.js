@@ -16,6 +16,7 @@ import { playButton } from "./audio-ui.js";
 import { saySound } from "../pronunciation/forTradition.js";
 import { hookLine, hookNode } from "../letters/hookline.js";
 import { letterMeet, picture } from "../img/scenes.js";
+import { loadWordVocabMap } from "./review.view.js";
 import { celebrateWin } from "../motion/alive.js";
 import { RESUME_KEY, planChunks, getResume, setResume, clearResume, statsFromResults } from "./chunks.js";
 
@@ -34,7 +35,7 @@ export function mountChunkedLesson(root, ctx, lessonId) {
   const t0 = Date.now();
 
   (async () => {
-    const [c, st, raw] = await Promise.all([loadContent(), loadState(ctx), storeGet(ctx, RESUME_KEY, {})]);
+    const [c, st, raw, wordVocab] = await Promise.all([loadContent(), loadState(ctx), storeGet(ctx, RESUME_KEY, {}), loadWordVocabMap()]);
     if (!alive) return;
     let resumeAll = raw;
     const isDone = !!st.completed[lesson.id];
@@ -68,7 +69,7 @@ export function mountChunkedLesson(root, ctx, lessonId) {
     };
     const wordItem = (i) => {
       const w = lesson.words[i];
-      return el("li", { class: "alef-item", "data-live": "word" }, picture(el, ctx, "word", w.vocabId || w.id, { class: "word-pic", width: 400 }), heText(w.he, "alef-he alef-word"),
+      return el("li", { class: "alef-item", "data-live": "word" }, picture(el, ctx, "word", wordVocab[`${lesson.id}:${i + 1}`] || w.vocabId || w.id, { class: "word-pic", width: 400 }), heText(w.he, "alef-he alef-word"),
         el("div", { class: "alef-item-body" }, el("span", {}, w.en), hookNode(el, hookLine(c.chain, congregation, { he: w.he }))),
         el("div", { class: "alef-item-actions" }, playButton(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${w.en}`, note)));
     };

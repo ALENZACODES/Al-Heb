@@ -3,7 +3,7 @@
 //
 //   const R = createImageResolver({ index, approvals, showUnapproved: () => settings.get('showUnapprovedImages') === true });
 //   R.resolve('letter', 'alef')                       // {src, alt, approved, aspect, width, height, id} or null
-//   R.resolve('word', 'h1a2b3c4d')                    // vocabulary word id (data/vocab) -> its picture
+//   R.resolve('word', 'h1a2b3c4d')                    // vocabulary word id -> its own picture, or a reviewed cue (data/images/word-cues.json)
 //   R.resolve('theme', 'greetings', { slot: 3 })      // third picture of the "greetings" theme pack
 //   R.resolve('lesson', 'I-07')  R.resolve('festival', 'purim')  R.resolve('vowel', 'kamatz')  R.resolve('id', 'BG_cafe')
 //
@@ -38,11 +38,17 @@ function keysFor(kind, id, o) {
 /**
  * @param {{ index: any, approvals?: any, showUnapproved?: boolean | (() => boolean), base?: string, dir?: string }} opts
  *   index: parsed data/img/index.json. approvals: parsed data/images/approvals.json ({approvals:{id:{status}}}) or the inner map.
+ *   wordCues: data/images/word-cues.json, or its `cues` map (word id -> {asset, alt}). Used only when that word has no approved picture of its own.
  *   showUnapproved: boolean or getter (settings.showUnapprovedImages). base: URL prefix of assets/img (default 'assets/img').
  */
+function cueMap(raw) {
+  const cues = raw?.cues ?? raw ?? {};
+  return cues && typeof cues === 'object' && !Array.isArray(cues) ? cues : {};
+}
 export function createImageResolver(opts) {
   let index = opts.index || { p: [], a: [], g: {}, w: {} };
   let approvals = opts.approvals?.approvals ?? opts.approvals ?? {};
+  let wordCues = cueMap(opts.wordCues);
   const base = (opts.base ?? 'assets/img').replace(/\/$/, '');
   const dir = (opts.dir ?? 'gen').replace(/^\/|\/$/g, '');
   const show = () => (typeof opts.showUnapproved === 'function' ? !!opts.showUnapproved() : !!opts.showUnapproved);
@@ -70,6 +76,15 @@ export function createImageResolver(opts) {
     return `${base}/${dir}/${stem}.${(f.find((e) => e >= w) ?? f[f.length - 1])}.webp`;
   };
   const isApproved = (id) => approvals[id]?.status === 'approved';
+  const pack = (e, o, alt) => {
+    const approved = isApproved(e.id);
+    if (!approved && !show()) return null;
+    const [w, h] = e.aspect.split(':').map(Number);
+    const width = Math.round(Math.min(o.width ?? longEdge, Math.max(...e.edges)));
+    const wide = w >= h;
+    const W = wide ? width : Math.round(width * w / h), H = wide ? Math.round(width * h / w) : width;
+    return { id: e.id, src: pickSrc(e.id, e.edges, o.width), alt: alt || e.alt, approved, aspect: e.aspect, width: W, height: H };
+  };
 
   /**
    * @param {string} kind one of KINDS
@@ -87,16 +102,16 @@ export function createImageResolver(opts) {
       if (kind === 'theme') list = list.filter((e) => +(/(\d+)$/.exec(e.id)?.[1] ?? NaN) === n); // VOC_<theme>_<NN>
       else list = list[n - 1] ? [list[n - 1]] : [];
     }
-    const showAll = show();
     for (const e of list) {
       if (!e.edges.length) continue;                       // not ingested yet: nothing to show
-      const approved = isApproved(e.id);
-      if (!approved && !showAll) continue;                 // unapproved stays hidden
-      const [w, h] = e.aspect.split(':').map(Number);
-      const width = Math.round(Math.min(o.width ?? longEdge, Math.max(...e.edges)));
-      const wide = w >= h;
-      const W = wide ? width : Math.round(width * w / h), H = wide ? Math.round(width * h / w) : width;
-      return { id: e.id, src: pickSrc(e.id, e.edges, o.width), alt: e.alt, approved, aspect: e.aspect, width: W, height: H };
+      const hit = pack(e, o);
+      if (hit) return hit;                                 // an approved picture made for this id wins
+    }
+    // Reviewed cue: a different approved asset that was checked against this word. Unapproved and held ids stay null.
+    if (kind === 'word') {
+      const cue = wordCues[String(id)];
+      const e = cue?.asset ? byId.get(cue.asset) : null;
+      if (e?.edges.length && isApproved(e.id)) return pack(e, o, cue.alt);
     }
     return null;
   }
@@ -106,6 +121,7 @@ export function createImageResolver(opts) {
     /** True when resolve() would return an image. */
     has: (kind, id, o) => resolve(kind, id, o) != null,
     setApprovals(a) { approvals = a?.approvals ?? a ?? {}; },
+    setWordCues(c) { wordCues = cueMap(c); },
     setIndex(ix) { index = ix; rebuild(); },
     /** Number of images per state, for diagnostics: {total, ingested, approvedIngested}. */
     stats() { let ing = 0, ok = 0; for (const e of byId.values()) if (e.edges.length) { ing++; if (isApproved(e.id)) ok++; } return { total: byId.size, ingested: ing, approvedIngested: ok }; },
@@ -116,10 +132,16 @@ export function createImageResolver(opts) {
  * Load index + approvals and build a resolver. `fetchJson(url)` returns parsed JSON (the app passes (u) => fetch(u).then(r => r.json())).
  * Any failure yields a resolver that returns null for everything (views then render no image).
  */
-export async function loadImageResolver(fetchJson, { settings, base = 'assets/img', indexUrl = 'data/img/index.json', approvalsUrl = 'data/images/approvals.json' } = {}) {
-  let index = null, approvals = null;
-  try { [index, approvals] = await Promise.all([fetchJson(indexUrl), fetchJson(approvalsUrl).catch(() => ({}))]); } catch { index = null; }
-  return createImageResolver({ index: index || undefined, approvals, base, showUnapproved: () => settings?.get?.('showUnapprovedImages') === true });
+export async function loadImageResolver(fetchJson, { settings, base = 'assets/img', indexUrl = 'data/img/index.json', approvalsUrl = 'data/images/approvals.json', cuesUrl = 'data/images/word-cues.json' } = {}) {
+  let index = null, approvals = null, wordCues = null;
+  try {
+    [index, approvals, wordCues] = await Promise.all([
+      fetchJson(indexUrl),
+      fetchJson(approvalsUrl).catch(() => ({})),
+      fetchJson(cuesUrl).catch(() => ({})),
+    ]);
+  } catch { index = null; }
+  return createImageResolver({ index: index || undefined, approvals, wordCues, base, showUnapproved: () => settings?.get?.('showUnapprovedImages') === true });
 }
 
 /**

@@ -73,6 +73,17 @@ test('img helper: lazy attributes, no layout shift, alt from manifest, null rend
   assert.ok('data-unapproved' in img(h, { R: mk({}, { showUnapproved: true }), kind: 'letter', id: 'alef' }).attrs);
 });
 
+test('a reviewed cue fills a word with no approved picture of its own', () => {
+  const cues = { cues: { h0000aaaa: { asset: 'VOC_cafe_02', alt: 'A cup of coffee.' }, h0000bbbb: { asset: 'VOC_cafe_02', alt: 'A cup of coffee.' } } };
+  const cued = mk({ VOC_cafe_02: { status: 'approved' } }, { wordCues: cues }).resolve('word', 'h0000aaaa');
+  assert.equal(cued.id, 'VOC_cafe_02');
+  assert.equal(cued.alt, 'A cup of coffee.');
+  assert.equal(cued.approved, true);
+  assert.equal(mk(all, { wordCues: cues }).resolve('word', 'h0000aaaa').id, 'J-0001');
+  assert.equal(mk({ VOC_cafe_02: { status: 'approved' } }, { wordCues: cues }).resolve('word', 'missing-word'), null);
+  assert.equal(mk({}, { wordCues: cues, showUnapproved: true }).resolve('word', 'h0000bbbb'), null);
+});
+
 test('loadImageResolver survives missing files: returns a resolver that yields null', async () => {
   const R = await loadImageResolver(async () => { throw new Error('offline'); });
   assert.equal(R.resolve('letter', 'alef'), null);

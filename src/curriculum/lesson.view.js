@@ -19,6 +19,7 @@ import { hookLine, hookNode } from "../letters/hookline.js";
 import { letterMeet, picture } from "../img/scenes.js";
 import { celebrateWin } from "../motion/alive.js";
 import { mountChunkedLesson } from "./lesson.parts.js";
+import { loadWordVocabMap } from "./review.view.js";
 
 const A_ID = /^I-\d{2}$/;
 export const MAX_PER_STEP = 2;
@@ -46,7 +47,7 @@ export function mountLesson(root, ctx, lessonId) {
   const congregation = ctx.settings?.get?.("congregation") || "sephardi";
 
   (async () => {
-    const [c, st] = await Promise.all([loadContent(), loadState(ctx)]);
+    const [c, st, wordVocab] = await Promise.all([loadContent(), loadState(ctx), loadWordVocabMap()]);
     if (!alive) return;
     const isDone = !!st.completed[lesson.id];
     const unmet = lesson.prerequisites.filter((p) => !st.completed[p]);
@@ -115,7 +116,7 @@ export function mountLesson(root, ctx, lessonId) {
       }))));
     if (lesson.words.length) parts.push(section("l-words", "Words", el("ul", { class: "alef-items" },
       ...lesson.words.map((w, i) => el("li", { class: "alef-item", "data-live": "word" },
-        picture(el, ctx, "word", w.id, { class: "word-pic", width: 400 }),
+        picture(el, ctx, "word", wordVocab[`${lesson.id}:${i + 1}`] || w.vocabId || w.id, { class: "word-pic", width: 400 }),
         heText(w.he, "alef-he alef-word"),
         // a pointed word gets its respelling as text (a screen reader may have no Hebrew voice); the English meaning stays first
         el("div", { class: "alef-item-body" }, el("span", {}, w.en), hookNode(el, hookLine(c.chain, congregation, { he: w.he })), (() => { const r = respell(w.he, congregation); return r ? el("div", { class: "muted alef-respell", lang: "en" }, `Sounds like: ${r} (${LABELS[congregation] || congregation} style)`) : null; })()),

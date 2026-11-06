@@ -34,7 +34,7 @@ export function mount(root,ctx) {
       status.textContent=ok?'Phrase matches the actual source symptom.':'That phrase refers to a different symptom.';
       if(ok){round++;void speak(ctx,caseItem.symptom);}paint();
     }},heSpan(phrase,'he game-he-sm')));
-    board.replaceChildren(scene,h('p',{},'Symptom term: '),heSpan(caseItem.symptom,'he game-he'),
+    board.replaceChildren(scene,h('p',{},'Match the Hebrew phrase for: '+caseItem.en),
       h('div',{class:'game-choices game-rtl-grid'},...options));
   }
   Promise.all([loadJson('data/curriculum/lessons-intermediate/I-14.json'),loadGameImages(ctx)]).then(([data,R])=>{

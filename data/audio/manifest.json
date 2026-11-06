@@ -35102,10 +35102,11 @@
   "kind": "word",
   "id": "r03-w2",
   "text": "לוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "lo"
  },
  {
   "path": "audio/f/israeli/word/r03-w2.mp3",
@@ -35127,11 +35128,12 @@
   "kind": "word",
   "id": "r04-w1",
   "text": "שַׁבָּת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h0eb811da",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shabat"
  },
  {
   "path": "audio/f/israeli/word/r04-w1.mp3",
@@ -35154,11 +35156,12 @@
   "kind": "word",
   "id": "r04-w2",
   "text": "שָׁלוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "hf8c8316a",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shalom"
  },
  {
   "path": "audio/f/israeli/word/r04-w2.mp3",
@@ -35181,11 +35184,12 @@
   "kind": "word",
   "id": "r04-w3",
   "text": "שַׁבָּת שָׁלוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p425f3263",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shabat shalom"
  },
  {
   "path": "audio/f/israeli/word/r04-w3.mp3",
@@ -35208,11 +35212,12 @@
   "kind": "word",
   "id": "r05-w1",
   "text": "שָׁלוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "hf8c8316a",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shalom"
  },
  {
   "path": "audio/f/israeli/word/r05-w1.mp3",

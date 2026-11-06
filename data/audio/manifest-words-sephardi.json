@@ -19831,8 +19831,8 @@
   "kind": "word",
   "id": "shir-hamaalot-w21",
   "text": "עִם־אֵלֶּה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "with these",
   "phonetic": "im-eleh"
@@ -19857,8 +19857,8 @@
   "kind": "word",
   "id": "shir-hamaalot-w22",
   "text": "הִגְדִּיל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to enlarge, increase",
   "phonetic": "higdil"
@@ -19883,8 +19883,8 @@
   "kind": "word",
   "id": "shir-hamaalot-w23",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the LORD",
   "phonetic": "adonai"
@@ -19909,8 +19909,8 @@
   "kind": "word",
   "id": "shir-hamaalot-w24",
   "text": "לַעֲשׂוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to do",
   "phonetic": "la'asot"

@@ -5102,8 +5102,8 @@
   "kind": "word",
   "id": "hamotzi-w1",
   "text": "בָּרוּךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "blessed",
   "phonetic": "barukh"
@@ -5128,8 +5128,8 @@
   "kind": "word",
   "id": "hamotzi-w2",
   "text": "אַתָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "you, thou",
   "phonetic": "atah"
@@ -5154,8 +5154,8 @@
   "kind": "word",
   "id": "hamotzi-w3",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the LORD",
   "phonetic": "adonai"
@@ -5180,8 +5180,8 @@
   "kind": "word",
   "id": "hamotzi-w4",
   "text": "אֱלֹהֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "our-God",
   "phonetic": "eloheinu"
@@ -5206,8 +5206,8 @@
   "kind": "word",
   "id": "hamotzi-w5",
   "text": "מֶלֶךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "king",
   "phonetic": "melekh"
@@ -5232,8 +5232,8 @@
   "kind": "word",
   "id": "hamotzi-w6",
   "text": "הָעוֹלָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the world",
   "phonetic": "ha'olam"
@@ -5258,8 +5258,8 @@
   "kind": "word",
   "id": "hamotzi-w7",
   "text": "הַמּוֹצִיא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "who brings forth",
   "phonetic": "hamotzi"
@@ -5284,8 +5284,8 @@
   "kind": "word",
   "id": "hamotzi-w8",
   "text": "לֶחֶם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "bread; grain from which bread is made; food",
   "phonetic": "lechem"
@@ -5310,8 +5310,8 @@
   "kind": "word",
   "id": "hamotzi-w9",
   "text": "מִן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "from",
   "phonetic": "min"
@@ -5336,8 +5336,8 @@
   "kind": "word",
   "id": "hamotzi-w10",
   "text": "הָאָרֶץ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the earth",
   "phonetic": "ha'aretz"
@@ -26110,8 +26110,8 @@
   "kind": "word",
   "id": "hagomel-w1",
   "text": "בָּרוּךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "blessed",
   "phonetic": "barukh"
@@ -26136,8 +26136,8 @@
   "kind": "word",
   "id": "hagomel-w2",
   "text": "אַתָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "you, thou",
   "phonetic": "atah"
@@ -26162,8 +26162,8 @@
   "kind": "word",
   "id": "hagomel-w3",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the LORD",
   "phonetic": "adonai"
@@ -26188,8 +26188,8 @@
   "kind": "word",
   "id": "hagomel-w4",
   "text": "אֱלֹהֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "our-God",
   "phonetic": "eloheinu"
@@ -26214,8 +26214,8 @@
   "kind": "word",
   "id": "hagomel-w5",
   "text": "מֶלֶךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "king",
   "phonetic": "melekh"
@@ -26240,8 +26240,8 @@
   "kind": "word",
   "id": "hagomel-w6",
   "text": "הָעוֹלָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the world",
   "phonetic": "ha'olam"
@@ -26266,8 +26266,8 @@
   "kind": "word",
   "id": "hagomel-w7",
   "text": "הַגּוֹמֵל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "who bestows",
   "phonetic": "hagomel"
@@ -26292,8 +26292,8 @@
   "kind": "word",
   "id": "hagomel-w8",
   "text": "לְחַיָּבִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "for the undeserving",
   "phonetic": "lechayavim"
@@ -26318,8 +26318,8 @@
   "kind": "word",
   "id": "hagomel-w9",
   "text": "טוֹבוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "good things",
   "phonetic": "tovot"
@@ -26344,8 +26344,8 @@
   "kind": "word",
   "id": "hagomel-w10",
   "text": "שֶׁגְּמָלַנִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "who has bestowed on me",
   "phonetic": "shegemalani"
@@ -26370,8 +26370,8 @@
   "kind": "word",
   "id": "hagomel-w11",
   "text": "כָּל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "all, whole, everything",
   "phonetic": "kol"
@@ -26396,8 +26396,8 @@
   "kind": "word",
   "id": "hagomel-w12",
   "text": "טוֹב׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "good, fair, fine; kind; goodness, fairness",
   "phonetic": "tov"
@@ -26422,8 +26422,8 @@
   "kind": "word",
   "id": "hagomel-w13",
   "text": "מִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "who, what person or persons; the person or persons that",
   "phonetic": "mi"
@@ -26448,8 +26448,8 @@
   "kind": "word",
   "id": "hagomel-w14",
   "text": "שֶׁגְּמָלְךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "who has bestowed good on you",
   "phonetic": "shegemalekha"
@@ -26474,8 +26474,8 @@
   "kind": "word",
   "id": "hagomel-w15",
   "text": "טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "good, fair, fine; kind; goodness, fairness",
   "phonetic": "tov"
@@ -26500,8 +26500,8 @@
   "kind": "word",
   "id": "hagomel-w16",
   "text": "הוּא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "he; used as a copula",
   "phonetic": "hu"
@@ -26526,8 +26526,8 @@
   "kind": "word",
   "id": "hagomel-w17",
   "text": "יִגְמָלְךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "may he bestow on you",
   "phonetic": "yigmalekha"
@@ -26552,8 +26552,8 @@
   "kind": "word",
   "id": "hagomel-w18",
   "text": "כָּל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "all, whole, everything",
   "phonetic": "kol"
@@ -26578,8 +26578,8 @@
   "kind": "word",
   "id": "hagomel-w19",
   "text": "טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "good, fair, fine; kind; goodness, fairness",
   "phonetic": "tov"
@@ -26604,8 +26604,8 @@
   "kind": "word",
   "id": "hagomel-w20",
   "text": "סֶלָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "Selah",
   "phonetic": "selah"
@@ -35080,8 +35080,8 @@
   "kind": "word",
   "id": "haftarah-before-w6",
   "text": "הָעוֹלָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the world",
   "phonetic": "ha'olam"
@@ -35106,8 +35106,8 @@
   "kind": "word",
   "id": "haftarah-before-w7",
   "text": "אֲשֶׁר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "introduces a subordinate clause",
   "phonetic": "asher"
@@ -35132,8 +35132,8 @@
   "kind": "word",
   "id": "haftarah-before-w8",
   "text": "בָּחַר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to choose, to opt, to select; to prefer; to appoint",
   "phonetic": "bachar"
@@ -35158,8 +35158,8 @@
   "kind": "word",
   "id": "haftarah-before-w9",
   "text": "בִּנְבִיאִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "with prophets",
   "phonetic": "binvi'im"
@@ -43244,8 +43244,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w1",
   "text": "הַנֵּרוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the lights",
   "phonetic": "hanerot"
@@ -43270,8 +43270,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w2",
   "text": "הַלָּלוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "these",
   "phonetic": "halalu"
@@ -43296,8 +43296,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w3",
   "text": "אֲנַחְנוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "we",
   "phonetic": "anachnu"
@@ -43478,8 +43478,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w10",
   "text": "הַנִּפְלָאוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the wonders",
   "phonetic": "hanifla'ot"
@@ -43504,8 +43504,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w11",
   "text": "שֶׁעָשִׂיתָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "that you did",
   "phonetic": "she'asita"
@@ -43530,8 +43530,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w12",
   "text": "לַאֲבוֹתֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "for our ancestors",
   "phonetic": "la'avoteinu"
@@ -43556,8 +43556,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w13",
   "text": "עַל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "on, on top of; on; about",
   "phonetic": "al"
@@ -43582,8 +43582,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w14",
   "text": "יְדֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "through",
   "phonetic": "yedei"
@@ -43608,8 +43608,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w15",
   "text": "כֹּהֲנֶיךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "your priests",
   "phonetic": "kohanekha"
@@ -43634,8 +43634,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w16",
   "text": "הַקְּדוֹשִׁים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the holy",
   "phonetic": "hakedoshim"
@@ -43660,8 +43660,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w17",
   "text": "וְכָל־שְׁמוֹנַת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and the entire eight",
   "phonetic": "vekhol-shemonat"
@@ -43686,8 +43686,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w18",
   "text": "יְמֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "days of",
   "phonetic": "yemei"
@@ -43712,8 +43712,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w19",
   "text": "חֲנֻכָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "consecration, dedication, inauguration",
   "phonetic": "chanukah"
@@ -43738,8 +43738,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w20",
   "text": "הַנֵּרוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the lights",
   "phonetic": "hanerot"
@@ -43764,8 +43764,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w21",
   "text": "הַלָּלוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "these",
   "phonetic": "halalu"
@@ -43790,8 +43790,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w22",
   "text": "קֹדֶשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "sanctity, holiness",
   "phonetic": "kodesh"
@@ -43816,8 +43816,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w23",
   "text": "וְאֵין",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and not",
   "phonetic": "ve'ein"
@@ -43842,8 +43842,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w24",
   "text": "לָנוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to us",
   "phonetic": "lanu"
@@ -43868,8 +43868,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w25",
   "text": "רְשׁוּת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "permission, authorization; optional, elective; possession, domain",
   "phonetic": "reshut"
@@ -43894,8 +43894,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w26",
   "text": "לְהִשְׁתַּמֵּשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to use",
   "phonetic": "lehishtamesh"
@@ -43920,8 +43920,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w27",
   "text": "בָּהֶם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "in them",
   "phonetic": "bahem"
@@ -43946,8 +43946,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w28",
   "text": "אֶלָּא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "but, except",
   "phonetic": "ela"
@@ -43972,8 +43972,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w29",
   "text": "לִרְאוֹתָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to look at them",
   "phonetic": "lir'otam"
@@ -43998,8 +43998,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w30",
   "text": "בִּלְבָד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "only",
   "phonetic": "bilvad"
@@ -44024,8 +44024,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w31",
   "text": "כְּדֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "sufficient or appropriate for, sufficiently or appropriately for; in order",
   "phonetic": "kedei"
@@ -44050,8 +44050,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w32",
   "text": "לְהוֹדוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to thank",
   "phonetic": "lehodot"
@@ -44076,8 +44076,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w33",
   "text": "לִשְׁמֶךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to your name",
   "phonetic": "lishmekha"
@@ -44102,8 +44102,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w34",
   "text": "עַל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "on, on top of; on; about",
   "phonetic": "al"
@@ -45032,7 +45032,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to do (to perform an action, to accomplish a thing); to make; to make (to cause to be)"
+  "english": "to do (to perform an action, to accomplish a thing); to make; to make (to cause to be)",
+  "phonetic": "asah"
  },
  {
   "path": "audio/f/sephardi/word/hdd2efa8e.mp3",
@@ -45045,7 +45046,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to do (to perform an action, to accomplish a thing); to make; to make (to cause to be)"
+  "english": "to do (to perform an action, to accomplish a thing); to make; to make (to cause to be)",
+  "phonetic": "asah"
  },
  {
   "path": "audio/m/sephardi/word/hf8c8316a.mp3",
@@ -46084,7 +46086,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "truth"
+  "english": "truth",
+  "phonetic": "emet"
  },
  {
   "path": "audio/f/sephardi/word/he5c23387.mp3",
@@ -46097,7 +46100,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "truth"
+  "english": "truth",
+  "phonetic": "emet"
  },
  {
   "path": "audio/m/sephardi/word/h14635975.mp3",
@@ -46250,7 +46254,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "seventh"
+  "english": "seventh",
+  "phonetic": "shevi'i"
  },
  {
   "path": "audio/f/sephardi/word/he801fe52.mp3",
@@ -46263,7 +46268,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "seventh"
+  "english": "seventh",
+  "phonetic": "shevi'i"
  },
  {
   "path": "audio/m/sephardi/word/h4692cd32.mp3",
@@ -46522,7 +46528,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "lord; Mr"
+  "english": "lord; Mr",
+  "phonetic": "adon"
  },
  {
   "path": "audio/f/sephardi/word/hddb7aae9.mp3",
@@ -46535,7 +46542,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "lord; Mr"
+  "english": "lord; Mr",
+  "phonetic": "adon"
  },
  {
   "path": "audio/m/sephardi/word/h470c7870.mp3",
@@ -47046,7 +47054,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "we"
+  "english": "we",
+  "phonetic": "anachnu"
  },
  {
   "path": "audio/f/sephardi/word/hdee3e527.mp3",
@@ -47059,7 +47068,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "we"
+  "english": "we",
+  "phonetic": "anachnu"
  },
  {
   "path": "audio/m/sephardi/word/h2d58afb3.mp3",
@@ -47126,7 +47136,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "big, large; great, important"
+  "english": "big, large; great, important",
+  "phonetic": "gadol"
  },
  {
   "path": "audio/f/sephardi/word/hdd2bd792.mp3",
@@ -47139,7 +47150,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "big, large; great, important"
+  "english": "big, large; great, important",
+  "phonetic": "gadol"
  },
  {
   "path": "audio/m/sephardi/word/hb43259df.mp3",
@@ -47236,7 +47248,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "gratitude"
+  "english": "gratitude",
+  "phonetic": "todah"
  },
  {
   "path": "audio/f/sephardi/word/he0b2f96b.mp3",
@@ -47249,7 +47262,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "gratitude"
+  "english": "gratitude",
+  "phonetic": "todah"
  },
  {
   "path": "audio/m/sephardi/word/h7ef4abda.mp3",
@@ -47402,7 +47416,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to organize"
+  "english": "to organize",
+  "phonetic": "sider"
  },
  {
   "path": "audio/f/sephardi/word/hdbd6764a.mp3",
@@ -47415,7 +47430,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to organize"
+  "english": "to organize",
+  "phonetic": "sider"
  },
  {
   "path": "audio/m/sephardi/word/h6ad3ddd8.mp3",
@@ -48568,7 +48584,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "telephone, phone"
+  "english": "telephone, phone",
+  "phonetic": "telefon"
  },
  {
   "path": "audio/f/sephardi/word/he15e52d3.mp3",
@@ -48581,7 +48598,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "telephone, phone"
+  "english": "telephone, phone",
+  "phonetic": "telefon"
  },
  {
   "path": "audio/m/sephardi/word/h3674f19e.mp3",
@@ -49430,7 +49448,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Heat, warmth; Heat; Warmth, fever, feverishness"
+  "english": "Heat, warmth; Heat; Warmth, fever, feverishness",
+  "phonetic": "chom"
  },
  {
   "path": "audio/f/sephardi/word/he527093f.mp3",
@@ -49443,7 +49462,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Heat, warmth; Heat; Warmth, fever, feverishness"
+  "english": "Heat, warmth; Heat; Warmth, fever, feverishness",
+  "phonetic": "chom"
  },
  {
   "path": "audio/m/sephardi/word/h5ad2503a.mp3",
@@ -50010,7 +50030,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "bye"
+  "english": "bye",
+  "phonetic": "bai"
  },
  {
   "path": "audio/f/sephardi/word/he90efaca.mp3",
@@ -50023,7 +50044,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "bye"
+  "english": "bye",
+  "phonetic": "bai"
  },
  {
   "path": "audio/m/sephardi/word/h5658dbbe.mp3",
@@ -52480,7 +52502,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "maybe"
+  "english": "maybe",
+  "phonetic": "ulai"
  },
  {
   "path": "audio/f/sephardi/word/hdcd31646.mp3",
@@ -52493,7 +52516,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "maybe"
+  "english": "maybe",
+  "phonetic": "ulai"
  },
  {
   "path": "audio/m/sephardi/word/hb5913147.mp3",
@@ -52560,7 +52584,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "here, this place, at this place, in this place"
+  "english": "here, this place, at this place, in this place",
+  "phonetic": "poh"
  },
  {
   "path": "audio/f/sephardi/word/he0448a86.mp3",
@@ -52573,7 +52598,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "here, this place, at this place, in this place"
+  "english": "here, this place, at this place, in this place",
+  "phonetic": "poh"
  },
  {
   "path": "audio/m/sephardi/word/h19eb6a83.mp3",
@@ -53304,7 +53330,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to judge; to sentence; to referee"
+  "english": "to judge; to sentence; to referee",
+  "phonetic": "shafat"
  },
  {
   "path": "audio/f/sephardi/word/he43ad309.mp3",
@@ -53317,7 +53344,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to judge; to sentence; to referee"
+  "english": "to judge; to sentence; to referee",
+  "phonetic": "shafat"
  },
  {
   "path": "audio/m/sephardi/word/h80a03385.mp3",
@@ -53576,7 +53604,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "female goat, she-goat"
+  "english": "female goat, she-goat",
+  "phonetic": "ez"
  },
  {
   "path": "audio/f/sephardi/word/he0fc258b.mp3",
@@ -53589,7 +53618,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "female goat, she-goat"
+  "english": "female goat, she-goat",
+  "phonetic": "ez"
  },
  {
   "path": "audio/m/sephardi/word/he19222ad.mp3",
@@ -53602,7 +53632,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "right; the right hand; south"
+  "english": "right; the right hand; south",
+  "phonetic": "yamin"
  },
  {
   "path": "audio/f/sephardi/word/he19222ad.mp3",
@@ -53615,7 +53646,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "right; the right hand; south"
+  "english": "right; the right hand; south",
+  "phonetic": "yamin"
  },
  {
   "path": "audio/m/sephardi/word/h3b09d299.mp3",
@@ -53936,7 +53968,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Open; Open (in various senses)"
+  "english": "Open; Open (in various senses)",
+  "phonetic": "patuach"
  },
  {
   "path": "audio/f/sephardi/word/he6d29dfd.mp3",
@@ -53949,7 +53982,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Open; Open (in various senses)"
+  "english": "Open; Open (in various senses)",
+  "phonetic": "patuach"
  },
  {
   "path": "audio/m/sephardi/word/he38160e3.mp3",
@@ -53962,7 +53996,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Having nothing at hand; not having accomplished its purpose; for no reason, on no basis"
+  "english": "Having nothing at hand; not having accomplished its purpose; for no reason, on no basis",
+  "phonetic": "reikam"
  },
  {
   "path": "audio/f/sephardi/word/he38160e3.mp3",
@@ -53975,7 +54010,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Having nothing at hand; not having accomplished its purpose; for no reason, on no basis"
+  "english": "Having nothing at hand; not having accomplished its purpose; for no reason, on no basis",
+  "phonetic": "reikam"
  },
  {
   "path": "audio/m/sephardi/word/h0f231144.mp3",
@@ -55302,7 +55338,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "clothing, garment"
+  "english": "clothing, garment",
+  "phonetic": "beged"
  },
  {
   "path": "audio/f/sephardi/word/he1a5e616.mp3",
@@ -55315,7 +55352,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "clothing, garment"
+  "english": "clothing, garment",
+  "phonetic": "beged"
  },
  {
   "path": "audio/m/sephardi/word/h5f280d64.mp3",
@@ -55384,7 +55422,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "foreigner, stranger; convert to Judaism, proselyte; adventitious"
+  "english": "foreigner, stranger; convert to Judaism, proselyte; adventitious",
+  "phonetic": "ger"
  },
  {
   "path": "audio/f/sephardi/word/he1477da0.mp3",
@@ -55397,7 +55436,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "foreigner, stranger; convert to Judaism, proselyte; adventitious"
+  "english": "foreigner, stranger; convert to Judaism, proselyte; adventitious",
+  "phonetic": "ger"
  },
  {
   "path": "audio/m/sephardi/word/h5fc50b7a.mp3",
@@ -56360,7 +56400,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a ball or orb or other spherical object; a ball; a sphere"
+  "english": "a ball or orb or other spherical object; a ball; a sphere",
+  "phonetic": "kadur"
  },
  {
   "path": "audio/f/sephardi/word/he314ca8e.mp3",
@@ -56373,7 +56414,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a ball or orb or other spherical object; a ball; a sphere"
+  "english": "a ball or orb or other spherical object; a ball; a sphere",
+  "phonetic": "kadur"
  },
  {
   "path": "audio/m/sephardi/word/h233af6f2.mp3",
@@ -56606,7 +56648,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to contradict; to refute; to neutralize, to counteract"
+  "english": "to contradict; to refute; to neutralize, to counteract",
+  "phonetic": "satar"
  },
  {
   "path": "audio/f/sephardi/word/hde989655.mp3",
@@ -56619,7 +56662,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to contradict; to refute; to neutralize, to counteract"
+  "english": "to contradict; to refute; to neutralize, to counteract",
+  "phonetic": "satar"
  },
  {
   "path": "audio/m/sephardi/word/p92bccc56.mp3",
@@ -56878,7 +56922,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "beach, shore, coast"
+  "english": "beach, shore, coast",
+  "phonetic": "chof"
  },
  {
   "path": "audio/f/sephardi/word/hde2302bb.mp3",
@@ -56891,7 +56936,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "beach, shore, coast"
+  "english": "beach, shore, coast",
+  "phonetic": "chof"
  },
  {
   "path": "audio/m/sephardi/word/hc427aff6.mp3",
@@ -57016,7 +57062,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "drink (a beverage)"
+  "english": "drink (a beverage)",
+  "phonetic": "mashkeh"
  },
  {
   "path": "audio/f/sephardi/word/he078c9e6.mp3",
@@ -57029,7 +57076,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "drink (a beverage)"
+  "english": "drink (a beverage)",
+  "phonetic": "mashkeh"
  },
  {
   "path": "audio/m/sephardi/word/hfac8b79e.mp3",
@@ -57370,7 +57418,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "woman (an adult female human); wife; a female animal"
+  "english": "woman (an adult female human); wife; a female animal",
+  "phonetic": "ishah"
  },
  {
   "path": "audio/f/sephardi/word/he943571e.mp3",
@@ -57383,7 +57432,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "woman (an adult female human); wife; a female animal"
+  "english": "woman (an adult female human); wife; a female animal",
+  "phonetic": "ishah"
  },
  {
   "path": "audio/m/sephardi/word/hf1ccd0e6.mp3",
@@ -57476,7 +57526,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "city"
+  "english": "city",
+  "phonetic": "ir"
  },
  {
   "path": "audio/f/sephardi/word/he3b1acbd.mp3",
@@ -57489,7 +57540,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "city"
+  "english": "city",
+  "phonetic": "ir"
  },
  {
   "path": "audio/m/sephardi/word/h24f17330.mp3",
@@ -57696,7 +57748,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to slaughter, to kill; to sacrifice, to slaughter (for sacrifice)"
+  "english": "to slaughter, to kill; to sacrifice, to slaughter (for sacrifice)",
+  "phonetic": "zavach"
  },
  {
   "path": "audio/f/sephardi/word/he6287163.mp3",
@@ -57709,7 +57762,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to slaughter, to kill; to sacrifice, to slaughter (for sacrifice)"
+  "english": "to slaughter, to kill; to sacrifice, to slaughter (for sacrifice)",
+  "phonetic": "zavach"
  },
  {
   "path": "audio/m/sephardi/word/hf95a2330.mp3",
@@ -58360,7 +58414,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to leave, leave behind, depart; to leave alone; to abandon"
+  "english": "to leave, leave behind, depart; to leave alone; to abandon",
+  "phonetic": "azav"
  },
  {
   "path": "audio/f/sephardi/word/hdb9bd37f.mp3",
@@ -58373,7 +58428,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to leave, leave behind, depart; to leave alone; to abandon"
+  "english": "to leave, leave behind, depart; to leave alone; to abandon",
+  "phonetic": "azav"
  },
  {
   "path": "audio/m/sephardi/word/hbd47566a.mp3",
@@ -58638,7 +58694,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to forgive; to excuse"
+  "english": "to forgive; to excuse",
+  "phonetic": "salach"
  },
  {
   "path": "audio/f/sephardi/word/hdd847ae4.mp3",
@@ -58651,7 +58708,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to forgive; to excuse"
+  "english": "to forgive; to excuse",
+  "phonetic": "salach"
  },
  {
   "path": "audio/m/sephardi/word/h6bc4e030.mp3",
@@ -58748,7 +58806,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to stay, to remain; to be left"
+  "english": "to stay, to remain; to be left",
+  "phonetic": "nish'ar"
  },
  {
   "path": "audio/f/sephardi/word/he8dfed90.mp3",
@@ -58761,7 +58820,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to stay, to remain; to be left"
+  "english": "to stay, to remain; to be left",
+  "phonetic": "nish'ar"
  },
  {
   "path": "audio/m/sephardi/word/hf1da5ea6.mp3",
@@ -59442,7 +59502,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "sword; sabre"
+  "english": "sword; sabre",
+  "phonetic": "cherev"
  },
  {
   "path": "audio/f/sephardi/word/he945f31c.mp3",
@@ -59455,7 +59516,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "sword; sabre"
+  "english": "sword; sabre",
+  "phonetic": "cherev"
  },
  {
   "path": "audio/m/sephardi/word/h49a493f0.mp3",
@@ -59692,7 +59754,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "stone; gem; token, tile, piece"
+  "english": "stone; gem; token, tile, piece",
+  "phonetic": "even"
  },
  {
   "path": "audio/f/sephardi/word/he53d1d1d.mp3",
@@ -59705,7 +59768,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "stone; gem; token, tile, piece"
+  "english": "stone; gem; token, tile, piece",
+  "phonetic": "even"
  },
  {
   "path": "audio/m/sephardi/word/h386e6ad7.mp3",
@@ -60190,7 +60254,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "captain, commander; cabinet minister; guardian angel"
+  "english": "captain, commander; cabinet minister; guardian angel",
+  "phonetic": "sar"
  },
  {
   "path": "audio/f/sephardi/word/he22b4a86.mp3",
@@ -60203,7 +60268,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "captain, commander; cabinet minister; guardian angel"
+  "english": "captain, commander; cabinet minister; guardian angel",
+  "phonetic": "sar"
  },
  {
   "path": "audio/m/sephardi/word/hf94d4d72.mp3",
@@ -60242,7 +60308,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "gateway (entrance); gateway (beginning); market value"
+  "english": "gateway (entrance); gateway (beginning); market value",
+  "phonetic": "sha'ar"
  },
  {
   "path": "audio/f/sephardi/word/hddb5189f.mp3",
@@ -60255,7 +60322,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "gateway (entrance); gateway (beginning); market value"
+  "english": "gateway (entrance); gateway (beginning); market value",
+  "phonetic": "sha'ar"
  },
  {
   "path": "audio/m/sephardi/word/hdb3c45eb.mp3",
@@ -60268,7 +60336,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "foot, leg; leg (as of a table or chair); foot (unit of length)"
+  "english": "foot, leg; leg (as of a table or chair); foot (unit of length)",
+  "phonetic": "regel"
  },
  {
   "path": "audio/f/sephardi/word/hdb3c45eb.mp3",
@@ -60281,7 +60350,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "foot, leg; leg (as of a table or chair); foot (unit of length)"
+  "english": "foot, leg; leg (as of a table or chair); foot (unit of length)",
+  "phonetic": "regel"
  },
  {
   "path": "audio/m/sephardi/word/h36173537.mp3",
@@ -60738,7 +60808,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to leave over, to spare, to leave behind"
+  "english": "to leave over, to spare, to leave behind",
+  "phonetic": "hish'ir"
  },
  {
   "path": "audio/f/sephardi/word/hdebf05db.mp3",
@@ -60751,7 +60822,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to leave over, to spare, to leave behind"
+  "english": "to leave over, to spare, to leave behind",
+  "phonetic": "hish'ir"
  },
  {
   "path": "audio/m/sephardi/word/h2035ee1a.mp3",
@@ -60902,7 +60974,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a program, a plan; plan; a program, a show (on television, radio, or similar)"
+  "english": "a program, a plan; plan; a program, a show (on television, radio, or similar)",
+  "phonetic": "tokhnit"
  },
  {
   "path": "audio/f/sephardi/word/hdf8bcf60.mp3",
@@ -60915,7 +60988,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a program, a plan; plan; a program, a show (on television, radio, or similar)"
+  "english": "a program, a plan; plan; a program, a show (on television, radio, or similar)",
+  "phonetic": "tokhnit"
  },
  {
   "path": "audio/m/sephardi/word/h57ed7970.mp3",
@@ -61458,7 +61532,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "side, direction, way; the other side [of], the region beyond or across from"
+  "english": "side, direction, way; the other side [of], the region beyond or across from",
+  "phonetic": "ever"
  },
  {
   "path": "audio/f/sephardi/word/hdea05db5.mp3",
@@ -61471,7 +61546,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "side, direction, way; the other side [of], the region beyond or across from"
+  "english": "side, direction, way; the other side [of], the region beyond or across from",
+  "phonetic": "ever"
  },
  {
   "path": "audio/m/sephardi/word/h327ac347.mp3",
@@ -61624,7 +61700,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to build, to construct, to raise, to erect; to prepare, to raise, to lay the foundation of, to develop"
+  "english": "to build, to construct, to raise, to erect; to prepare, to raise, to lay the foundation of, to develop",
+  "phonetic": "banah"
  },
  {
   "path": "audio/f/sephardi/word/he43ec7f7.mp3",
@@ -61637,7 +61714,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to build, to construct, to raise, to erect; to prepare, to raise, to lay the foundation of, to develop"
+  "english": "to build, to construct, to raise, to erect; to prepare, to raise, to lay the foundation of, to develop",
+  "phonetic": "banah"
  },
  {
   "path": "audio/m/sephardi/word/h7a3505d0.mp3",
@@ -62144,7 +62222,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to purify"
+  "english": "to purify",
+  "phonetic": "tiher"
  },
  {
   "path": "audio/f/sephardi/word/hdc17acee.mp3",
@@ -62157,7 +62236,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to purify"
+  "english": "to purify",
+  "phonetic": "tiher"
  },
  {
   "path": "audio/m/sephardi/word/h19702c85.mp3",
@@ -62338,7 +62418,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to tilt, slant; to inflect"
+  "english": "to tilt, slant; to inflect",
+  "phonetic": "hitah"
  },
  {
   "path": "audio/f/sephardi/word/hde82cf75.mp3",
@@ -62351,7 +62432,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to tilt, slant; to inflect"
+  "english": "to tilt, slant; to inflect",
+  "phonetic": "hitah"
  },
  {
   "path": "audio/m/sephardi/word/hb59c5cdb.mp3",
@@ -63116,7 +63198,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to attack"
+  "english": "to attack",
+  "phonetic": "takaf"
  },
  {
   "path": "audio/f/sephardi/word/he2aec699.mp3",
@@ -63129,7 +63212,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to attack"
+  "english": "to attack",
+  "phonetic": "takaf"
  },
  {
   "path": "audio/m/sephardi/word/ha70e3427.mp3",
@@ -63616,7 +63700,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "lion"
+  "english": "lion",
+  "phonetic": "aryeh"
  },
  {
   "path": "audio/f/sephardi/word/he028e6f0.mp3",
@@ -63629,7 +63714,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "lion"
+  "english": "lion",
+  "phonetic": "aryeh"
  },
  {
   "path": "audio/m/sephardi/word/hcb7dfbf5.mp3",
@@ -64622,7 +64708,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to rule; to control; to master, to have under control"
+  "english": "to rule; to control; to master, to have under control",
+  "phonetic": "shalat"
  },
  {
   "path": "audio/f/sephardi/word/he54faf96.mp3",
@@ -64635,7 +64722,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to rule; to control; to master, to have under control"
+  "english": "to rule; to control; to master, to have under control",
+  "phonetic": "shalat"
  },
  {
   "path": "audio/m/sephardi/word/hde9b27c8.mp3",
@@ -64648,7 +64736,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "statute, law; constitution"
+  "english": "statute, law; constitution",
+  "phonetic": "chukah"
  },
  {
   "path": "audio/f/sephardi/word/hde9b27c8.mp3",
@@ -64661,7 +64750,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "statute, law; constitution"
+  "english": "statute, law; constitution",
+  "phonetic": "chukah"
  },
  {
   "path": "audio/m/sephardi/word/h999f1fb1.mp3",
@@ -64756,7 +64846,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to bow; to bow down, to prostrate oneself"
+  "english": "to bow; to bow down, to prostrate oneself",
+  "phonetic": "hishtachavah"
  },
  {
   "path": "audio/f/sephardi/word/he964bca4.mp3",
@@ -64769,7 +64860,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to bow; to bow down, to prostrate oneself"
+  "english": "to bow; to bow down, to prostrate oneself",
+  "phonetic": "hishtachavah"
  },
  {
   "path": "audio/m/sephardi/word/h3dcbac32.mp3",
@@ -65286,7 +65378,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to give birth, to sire, to beget"
+  "english": "to give birth, to sire, to beget",
+  "phonetic": "holid"
  },
  {
   "path": "audio/f/sephardi/word/he038b6aa.mp3",
@@ -65299,7 +65392,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to give birth, to sire, to beget"
+  "english": "to give birth, to sire, to beget",
+  "phonetic": "holid"
  },
  {
   "path": "audio/m/sephardi/word/h730c9015.mp3",
@@ -66040,7 +66134,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "evil, wickedness"
+  "english": "evil, wickedness",
+  "phonetic": "aven"
  },
  {
   "path": "audio/f/sephardi/word/hddeaa2ed.mp3",
@@ -66053,7 +66148,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "evil, wickedness"
+  "english": "evil, wickedness",
+  "phonetic": "aven"
  },
  {
   "path": "audio/m/sephardi/word/h572c48d4.mp3",
@@ -67904,7 +68000,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "mad, crazy, insane"
+  "english": "mad, crazy, insane",
+  "phonetic": "meshuga"
  },
  {
   "path": "audio/f/sephardi/word/he21208a3.mp3",
@@ -67917,7 +68014,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "mad, crazy, insane"
+  "english": "mad, crazy, insane",
+  "phonetic": "meshuga"
  },
  {
   "path": "audio/m/sephardi/word/hcef6e567.mp3",
@@ -68042,7 +68140,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "emotion, feeling"
+  "english": "emotion, feeling",
+  "phonetic": "regesh"
  },
  {
   "path": "audio/f/sephardi/word/he7f4c5c3.mp3",
@@ -68055,7 +68154,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "emotion, feeling"
+  "english": "emotion, feeling",
+  "phonetic": "regesh"
  },
  {
   "path": "audio/m/sephardi/word/h27d68eba.mp3",
@@ -69202,7 +69302,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "tongue; language"
+  "english": "tongue; language",
+  "phonetic": "lashon"
  },
  {
   "path": "audio/f/sephardi/word/he0949da8.mp3",
@@ -69215,7 +69316,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "tongue; language"
+  "english": "tongue; language",
+  "phonetic": "lashon"
  },
  {
   "path": "audio/m/sephardi/word/h0764a400.mp3",
@@ -69756,7 +69858,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "beast, animal (usually domesticated), livestock; beast, a person who behaves in an uncivilized manner"
+  "english": "beast, animal (usually domesticated), livestock; beast, a person who behaves in an uncivilized manner",
+  "phonetic": "behemah"
  },
  {
   "path": "audio/f/sephardi/word/he34bd325.mp3",
@@ -69769,7 +69872,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "beast, animal (usually domesticated), livestock; beast, a person who behaves in an uncivilized manner"
+  "english": "beast, animal (usually domesticated), livestock; beast, a person who behaves in an uncivilized manner",
+  "phonetic": "behemah"
  },
  {
   "path": "audio/m/sephardi/word/hd04dbb3d.mp3",
@@ -71778,7 +71882,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "spicy (of food); sharp, harsh, sharply critical (of criticism, or of text)"
+  "english": "spicy (of food); sharp, harsh, sharply critical (of criticism, or of text)",
+  "phonetic": "charif"
  },
  {
   "path": "audio/f/sephardi/word/he78a3b3f.mp3",
@@ -71791,7 +71896,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "spicy (of food); sharp, harsh, sharply critical (of criticism, or of text)"
+  "english": "spicy (of food); sharp, harsh, sharply critical (of criticism, or of text)",
+  "phonetic": "charif"
  },
  {
   "path": "audio/m/sephardi/word/h975e3b85.mp3",
@@ -71832,7 +71938,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "on the right; right-wing; right-handed"
+  "english": "on the right; right-wing; right-handed",
+  "phonetic": "yemani"
  },
  {
   "path": "audio/f/sephardi/word/hdaf2f831.mp3",
@@ -71845,7 +71952,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "on the right; right-wing; right-handed"
+  "english": "on the right; right-wing; right-handed",
+  "phonetic": "yemani"
  },
  {
   "path": "audio/m/sephardi/word/hf53c9bc7.mp3",
@@ -71940,7 +72048,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "on the left; left-wing; left-handed"
+  "english": "on the left; left-wing; left-handed",
+  "phonetic": "semali"
  },
  {
   "path": "audio/f/sephardi/word/he53429ef.mp3",
@@ -71953,7 +72062,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "on the left; left-wing; left-handed"
+  "english": "on the left; left-wing; left-handed",
+  "phonetic": "semali"
  },
  {
   "path": "audio/m/sephardi/word/h796a7887.mp3",

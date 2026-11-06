@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 6396 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 6451 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-6396 English labels; 1933 UNKNOWN.
+6451 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -1825,6 +1825,61 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hd9cf2fa5](f/israeli/word/hd9cf2fa5.mp3) | יָקָר | expensive (having a high price, cost); dear, precious | yakar |
 | [hd9ea111b](f/israeli/word/hd9ea111b.mp3) | רֵיק | empty; dull, boring | reik |
 | [hda5653dd](f/israeli/word/hda5653dd.mp3) | לְבַד | Alone, apart, not together, on one's own; Alone, sole, only | levad |
+| [hdaf2f831](f/israeli/word/hdaf2f831.mp3) | יְמָנִי | on the right; right-wing; right-handed | yemani |
+| [hdb3c45eb](f/israeli/word/hdb3c45eb.mp3) | רֶגֶל | foot, leg; leg (as of a table or chair); foot (unit of length) | regel |
+| [hdb9bd37f](f/israeli/word/hdb9bd37f.mp3) | עָזַב | to leave, leave behind, depart; to leave alone; to abandon | azav |
+| [hdbd6764a](f/israeli/word/hdbd6764a.mp3) | סִדֵּר | to organize | sider |
+| [hdc17acee](f/israeli/word/hdc17acee.mp3) | טִהֵר | to purify | tiher |
+| [hdcd31646](f/israeli/word/hdcd31646.mp3) | אוּלַי | maybe | ulai |
+| [hdd2bd792](f/israeli/word/hdd2bd792.mp3) | גָּדוֹל | big, large; great, important | gadol |
+| [hdd2efa8e](f/israeli/word/hdd2efa8e.mp3) | עָשָׂה | to do (to perform an action, to accomplish a thing); to make; to make (to cause to be) | asah |
+| [hdd847ae4](f/israeli/word/hdd847ae4.mp3) | סָלַח | to forgive; to excuse | salach |
+| [hddb5189f](f/israeli/word/hddb5189f.mp3) | שַׁעַר | gateway (entrance); gateway (beginning); market value | sha'ar |
+| [hddb7aae9](f/israeli/word/hddb7aae9.mp3) | אָדוֹן | lord; Mr | adon |
+| [hddeaa2ed](f/israeli/word/hddeaa2ed.mp3) | אָוֶן | evil, wickedness | aven |
+| [hde2302bb](f/israeli/word/hde2302bb.mp3) | חוֹף | beach, shore, coast | chof |
+| [hde82cf75](f/israeli/word/hde82cf75.mp3) | הִטָּה | to tilt, slant; to inflect | hitah |
+| [hde989655](f/israeli/word/hde989655.mp3) | סָתַר | to contradict; to refute; to neutralize, to counteract | satar |
+| [hde9b27c8](f/israeli/word/hde9b27c8.mp3) | חֻקָּה | statute, law; constitution | chukah |
+| [hdea05db5](f/israeli/word/hdea05db5.mp3) | עֵבֶר | side, direction, way; the other side [of], the region beyond or across from | ever |
+| [hdebf05db](f/israeli/word/hdebf05db.mp3) | הִשְׁאִיר | to leave over, to spare, to leave behind | hish'ir |
+| [hdee3e527](f/israeli/word/hdee3e527.mp3) | אֲנַחְנוּ | we | anachnu |
+| [hdf8bcf60](f/israeli/word/hdf8bcf60.mp3) | תׇּכְנִית | a program, a plan; plan; a program, a show (on television, radio, or similar) | tokhnit |
+| [he028e6f0](f/israeli/word/he028e6f0.mp3) | אַרְיֵה | lion | aryeh |
+| [he038b6aa](f/israeli/word/he038b6aa.mp3) | הוֹלִיד | to give birth, to sire, to beget | holid |
+| [he0448a86](f/israeli/word/he0448a86.mp3) | פֹּה | here, this place, at this place, in this place | poh |
+| [he078c9e6](f/israeli/word/he078c9e6.mp3) | מַשְׁקֶה | drink (a beverage) | mashkeh |
+| [he0949da8](f/israeli/word/he0949da8.mp3) | לָשׁוֹן | tongue; language | lashon |
+| [he0b2f96b](f/israeli/word/he0b2f96b.mp3) | תּוֹדָה | gratitude | todah |
+| [he0fc258b](f/israeli/word/he0fc258b.mp3) | עֵז | female goat, she-goat | ez |
+| [he1477da0](f/israeli/word/he1477da0.mp3) | גֵּר | foreigner, stranger; convert to Judaism, proselyte; adventitious | ger |
+| [he15e52d3](f/israeli/word/he15e52d3.mp3) | טֶלֶפוֹן | telephone, phone | telefon |
+| [he19222ad](f/israeli/word/he19222ad.mp3) | יָמִין | right; the right hand; south | yamin |
+| [he1a5e616](f/israeli/word/he1a5e616.mp3) | בֶּגֶד | clothing, garment | beged |
+| [he21208a3](f/israeli/word/he21208a3.mp3) | מְשֻׁגָּע | mad, crazy, insane | meshuga |
+| [he22b4a86](f/israeli/word/he22b4a86.mp3) | שַׂר | captain, commander; cabinet minister; guardian angel | sar |
+| [he2aec699](f/israeli/word/he2aec699.mp3) | תָּקַף | to attack | takaf |
+| [he314ca8e](f/israeli/word/he314ca8e.mp3) | כַּדּוּר | a ball or orb or other spherical object; a ball; a sphere | kadur |
+| [he34bd325](f/israeli/word/he34bd325.mp3) | בְּהֵמָה | beast, animal (usually domesticated), livestock; beast, a person who behaves in an uncivilized manner | behemah |
+| [he38160e3](f/israeli/word/he38160e3.mp3) | רֵיקָם | Having nothing at hand; not having accomplished its purpose; for no reason, on no basis | reikam |
+| [he3b1acbd](f/israeli/word/he3b1acbd.mp3) | עִיר | city | ir |
+| [he43ad309](f/israeli/word/he43ad309.mp3) | שָׁפַט | to judge; to sentence; to referee | shafat |
+| [he43ec7f7](f/israeli/word/he43ec7f7.mp3) | בָּנָה | to build, to construct, to raise, to erect; to prepare, to raise, to lay the foundation of, to develop | banah |
+| [he527093f](f/israeli/word/he527093f.mp3) | חֹם | Heat, warmth; Heat; Warmth, fever, feverishness | chom |
+| [he53429ef](f/israeli/word/he53429ef.mp3) | שְׂמָאלִי | on the left; left-wing; left-handed | semali |
+| [he53d1d1d](f/israeli/word/he53d1d1d.mp3) | אֶבֶן | stone; gem; token, tile, piece | even |
+| [he54faf96](f/israeli/word/he54faf96.mp3) | שָׁלַט | to rule; to control; to master, to have under control | shalat |
+| [he5c23387](f/israeli/word/he5c23387.mp3) | אֱמֶת | truth | emet |
+| [he6287163](f/israeli/word/he6287163.mp3) | זָבַח | to slaughter, to kill; to sacrifice, to slaughter (for sacrifice) | zavach |
+| [he6d29dfd](f/israeli/word/he6d29dfd.mp3) | פָּתוּחַ | Open; Open (in various senses) | patuach |
+| [he78a3b3f](f/israeli/word/he78a3b3f.mp3) | חָרִיף | spicy (of food); sharp, harsh, sharply critical (of criticism, or of text) | charif |
+| [he7f4c5c3](f/israeli/word/he7f4c5c3.mp3) | רֶגֶשׁ | emotion, feeling | regesh |
+| [he801fe52](f/israeli/word/he801fe52.mp3) | שְׁבִיעִי | seventh | shevi'i |
+| [he8dfed90](f/israeli/word/he8dfed90.mp3) | נִשְׁאַר | to stay, to remain; to be left | nish'ar |
+| [he90efaca](f/israeli/word/he90efaca.mp3) | בַּי | bye | bai |
+| [he943571e](f/israeli/word/he943571e.mp3) | אִשָּׁה | woman (an adult female human); wife; a female animal | ishah |
+| [he945f31c](f/israeli/word/he945f31c.mp3) | חֶרֶב | sword; sabre | cherev |
+| [he964bca4](f/israeli/word/he964bca4.mp3) | הִשְׁתַּחֲוָה | to bow; to bow down, to prostrate oneself | hishtachavah |
 | [help-01](f/israeli/word/help-01.mp3) | עֶזְרָה! | help! | ezrah! |
 | [i-01-w1](f/israeli/word/i-01-w1.mp3) | בָּרְכוּ | UNKNOWN | barkhu |
 | [i-01-w10](f/israeli/word/i-01-w10.mp3) | לְעוֹלָם וָעֶד | UNKNOWN | le'olam va'ed |
@@ -7002,4 +7057,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 13093 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 13274 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

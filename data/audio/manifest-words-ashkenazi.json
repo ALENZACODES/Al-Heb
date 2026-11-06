@@ -39526,8 +39526,8 @@
   "kind": "word",
   "id": "havdalah-opening-w2",
   "text": "אֵל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "god; strength",
   "phonetic": "el"
@@ -39838,8 +39838,8 @@
   "kind": "word",
   "id": "havdalah-opening-w14",
   "text": "לִישׁוּעָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "for salvation",
   "phonetic": "lishu'ah"
@@ -39864,8 +39864,8 @@
   "kind": "word",
   "id": "havdalah-opening-w15",
   "text": "וּשְׁאַבְתֶּם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and you will draw",
   "phonetic": "ushe'avtem"
@@ -39890,8 +39890,8 @@
   "kind": "word",
   "id": "havdalah-opening-w16",
   "text": "מַיִם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "water",
   "phonetic": "mayim"
@@ -39916,8 +39916,8 @@
   "kind": "word",
   "id": "havdalah-opening-w17",
   "text": "בְּשָׂשׁוֹן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "with joy",
   "phonetic": "besashon"
@@ -39942,8 +39942,8 @@
   "kind": "word",
   "id": "havdalah-opening-w18",
   "text": "מִמַּעַיְנֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "from the springs of",
   "phonetic": "mima'aynei"
@@ -39968,8 +39968,8 @@
   "kind": "word",
   "id": "havdalah-opening-w19",
   "text": "הַיְשׁוּעָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "salvation",
   "phonetic": "hayshu'ah"
@@ -39994,8 +39994,8 @@
   "kind": "word",
   "id": "havdalah-opening-w20",
   "text": "לַאֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to the LORD",
   "phonetic": "la'adonai"
@@ -40020,8 +40020,8 @@
   "kind": "word",
   "id": "havdalah-opening-w21",
   "text": "הַיְשׁוּעָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "salvation",
   "phonetic": "hayshu'ah"
@@ -40046,8 +40046,8 @@
   "kind": "word",
   "id": "havdalah-opening-w22",
   "text": "עַל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "on, on top of; on; about",
   "phonetic": "al"
@@ -40072,8 +40072,8 @@
   "kind": "word",
   "id": "havdalah-opening-w23",
   "text": "עַמְּךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "your people",
   "phonetic": "amekha"
@@ -40098,8 +40098,8 @@
   "kind": "word",
   "id": "havdalah-opening-w24",
   "text": "בִרְכָתֶךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "your blessing",
   "phonetic": "virkhatekha"
@@ -45306,7 +45306,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "country, land; territory, district, region; Earth"
+  "english": "country, land; territory, district, region; Earth",
+  "phonetic": "eretz"
  },
  {
   "path": "audio/f/ashkenazi/word/hd82a3079.mp3",
@@ -45319,7 +45320,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "country, land; territory, district, region; Earth"
+  "english": "country, land; territory, district, region; Earth",
+  "phonetic": "eretz"
  },
  {
   "path": "audio/m/ashkenazi/word/h9d36c656.mp3",
@@ -48648,7 +48650,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "empty; dull, boring"
+  "english": "empty; dull, boring",
+  "phonetic": "reik"
  },
  {
   "path": "audio/f/ashkenazi/word/hd9ea111b.mp3",
@@ -48661,7 +48664,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "empty; dull, boring"
+  "english": "empty; dull, boring",
+  "phonetic": "reik"
  },
  {
   "path": "audio/m/ashkenazi/word/ha74bd927.mp3",
@@ -48870,7 +48874,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "expensive (having a high price, cost); dear, precious"
+  "english": "expensive (having a high price, cost); dear, precious",
+  "phonetic": "yakar"
  },
  {
   "path": "audio/f/ashkenazi/word/hd9cf2fa5.mp3",
@@ -48883,7 +48888,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "expensive (having a high price, cost); dear, precious"
+  "english": "expensive (having a high price, cost); dear, precious",
+  "phonetic": "yakar"
  },
  {
   "path": "audio/m/ashkenazi/word/h447bb433.mp3",
@@ -49146,7 +49152,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to understand, to have understanding, to be one who understands"
+  "english": "to understand, to have understanding, to be one who understands",
+  "phonetic": "hevin"
  },
  {
   "path": "audio/f/ashkenazi/word/hd83852fd.mp3",
@@ -49159,7 +49166,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to understand, to have understanding, to be one who understands"
+  "english": "to understand, to have understanding, to be one who understands",
+  "phonetic": "hevin"
  },
  {
   "path": "audio/m/ashkenazi/word/ha7a8a47a.mp3",
@@ -50638,7 +50646,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a relative, a family member; close, near; coming, upcoming"
+  "english": "a relative, a family member; close, near; coming, upcoming",
+  "phonetic": "karov"
  },
  {
   "path": "audio/f/ashkenazi/word/hd53e0a60.mp3",
@@ -50651,7 +50660,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a relative, a family member; close, near; coming, upcoming"
+  "english": "a relative, a family member; close, near; coming, upcoming",
+  "phonetic": "karov"
  },
  {
   "path": "audio/m/ashkenazi/word/h6c2b8669.mp3",
@@ -51636,7 +51646,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to lose; to drop from memory, to forget; to destroy, obliterate"
+  "english": "to lose; to drop from memory, to forget; to destroy, obliterate",
+  "phonetic": "ibed"
  },
  {
   "path": "audio/f/ashkenazi/word/hd873a81e.mp3",
@@ -51649,7 +51660,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to lose; to drop from memory, to forget; to destroy, obliterate"
+  "english": "to lose; to drop from memory, to forget; to destroy, obliterate",
+  "phonetic": "ibed"
  },
  {
   "path": "audio/m/ashkenazi/word/hadfa84bd.mp3",
@@ -53372,7 +53384,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Alone, apart, not together, on one's own; Alone, sole, only"
+  "english": "Alone, apart, not together, on one's own; Alone, sole, only",
+  "phonetic": "levad"
  },
  {
   "path": "audio/f/ashkenazi/word/hda5653dd.mp3",
@@ -53385,7 +53398,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Alone, apart, not together, on one's own; Alone, sole, only"
+  "english": "Alone, apart, not together, on one's own; Alone, sole, only",
+  "phonetic": "levad"
  },
  {
   "path": "audio/m/ashkenazi/word/h3e4e6cff.mp3",
@@ -55676,7 +55690,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to drink; to drink alcohol"
+  "english": "to drink; to drink alcohol",
+  "phonetic": "shatah"
  },
  {
   "path": "audio/f/ashkenazi/word/hd59a2d59.mp3",
@@ -55689,7 +55704,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to drink; to drink alcohol"
+  "english": "to drink; to drink alcohol",
+  "phonetic": "shatah"
  },
  {
   "path": "audio/m/ashkenazi/word/h80d6f3f0.mp3",
@@ -57596,7 +57612,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to find"
+  "english": "to find",
+  "phonetic": "matza"
  },
  {
   "path": "audio/f/ashkenazi/word/hd8a5c2cf.mp3",
@@ -57609,7 +57626,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to find"
+  "english": "to find",
+  "phonetic": "matza"
  },
  {
   "path": "audio/m/ashkenazi/word/h9d6352ee.mp3",
@@ -58920,7 +58938,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "outside (of)"
+  "english": "outside (of)",
+  "phonetic": "chutz"
  },
  {
   "path": "audio/f/ashkenazi/word/hd6219bc1.mp3",
@@ -58933,7 +58952,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "outside (of)"
+  "english": "outside (of)",
+  "phonetic": "chutz"
  },
  {
   "path": "audio/m/ashkenazi/word/h07f9e1d9.mp3",
@@ -66074,7 +66094,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a relation, an association, a connection; an attitude, a treatment, a sentiment; a ratio"
+  "english": "a relation, an association, a connection; an attitude, a treatment, a sentiment; a ratio",
+  "phonetic": "yachas"
  },
  {
   "path": "audio/f/ashkenazi/word/hd8e09290.mp3",
@@ -66087,7 +66108,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a relation, an association, a connection; an attitude, a treatment, a sentiment; a ratio"
+  "english": "a relation, an association, a connection; an attitude, a treatment, a sentiment; a ratio",
+  "phonetic": "yachas"
  },
  {
   "path": "audio/m/ashkenazi/word/h7bacd4a2.mp3",
@@ -68482,7 +68504,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a river, stream, or canal, especially in Egypt, especially the Nile"
+  "english": "a river, stream, or canal, especially in Egypt, especially the Nile",
+  "phonetic": "ye'or"
  },
  {
   "path": "audio/f/ashkenazi/word/hd791f802.mp3",
@@ -68495,7 +68518,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a river, stream, or canal, especially in Egypt, especially the Nile"
+  "english": "a river, stream, or canal, especially in Egypt, especially the Nile",
+  "phonetic": "ye'or"
  },
  {
   "path": "audio/m/ashkenazi/word/h2ce7109c.mp3",
@@ -70312,7 +70336,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "intestine, gut, innard, entrail, bowel"
+  "english": "intestine, gut, innard, entrail, bowel",
+  "phonetic": "me'i"
  },
  {
   "path": "audio/f/ashkenazi/word/hd5fd5e2d.mp3",
@@ -70325,7 +70350,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "intestine, gut, innard, entrail, bowel"
+  "english": "intestine, gut, innard, entrail, bowel",
+  "phonetic": "me'i"
  },
  {
   "path": "audio/m/ashkenazi/word/h7af5d439.mp3",

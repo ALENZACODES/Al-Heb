@@ -45306,7 +45306,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "country, land; territory, district, region; Earth"
+  "english": "country, land; territory, district, region; Earth",
+  "phonetic": "eretz"
  },
  {
   "path": "audio/f/israeli/word/hd82a3079.mp3",
@@ -45316,10 +45317,11 @@
   "id": "hd82a3079",
   "text": "אֶרֶץ",
   "ipa": "ˈe.ʁets",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "country, land; territory, district, region; Earth"
+  "english": "country, land; territory, district, region; Earth",
+  "phonetic": "eretz"
  },
  {
   "path": "audio/m/israeli/word/h9d36c656.mp3",
@@ -48648,7 +48650,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "empty; dull, boring"
+  "english": "empty; dull, boring",
+  "phonetic": "reik"
  },
  {
   "path": "audio/f/israeli/word/hd9ea111b.mp3",
@@ -48658,10 +48661,11 @@
   "id": "hd9ea111b",
   "text": "רֵיק",
   "ipa": "ˈʁek",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "empty; dull, boring"
+  "english": "empty; dull, boring",
+  "phonetic": "reik"
  },
  {
   "path": "audio/m/israeli/word/ha74bd927.mp3",
@@ -48870,7 +48874,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "expensive (having a high price, cost); dear, precious"
+  "english": "expensive (having a high price, cost); dear, precious",
+  "phonetic": "yakar"
  },
  {
   "path": "audio/f/israeli/word/hd9cf2fa5.mp3",
@@ -48880,10 +48885,11 @@
   "id": "hd9cf2fa5",
   "text": "יָקָר",
   "ipa": "ja.ˈkaʁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "expensive (having a high price, cost); dear, precious"
+  "english": "expensive (having a high price, cost); dear, precious",
+  "phonetic": "yakar"
  },
  {
   "path": "audio/m/israeli/word/h447bb433.mp3",
@@ -49146,7 +49152,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to understand, to have understanding, to be one who understands"
+  "english": "to understand, to have understanding, to be one who understands",
+  "phonetic": "hevin"
  },
  {
   "path": "audio/f/israeli/word/hd83852fd.mp3",
@@ -49156,10 +49163,11 @@
   "id": "hd83852fd",
   "text": "הֵבִין",
   "ipa": "he.ˈvin",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to understand, to have understanding, to be one who understands"
+  "english": "to understand, to have understanding, to be one who understands",
+  "phonetic": "hevin"
  },
  {
   "path": "audio/m/israeli/word/ha7a8a47a.mp3",
@@ -50638,7 +50646,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a relative, a family member; close, near; coming, upcoming"
+  "english": "a relative, a family member; close, near; coming, upcoming",
+  "phonetic": "karov"
  },
  {
   "path": "audio/f/israeli/word/hd53e0a60.mp3",
@@ -50648,10 +50657,11 @@
   "id": "hd53e0a60",
   "text": "קָרוֹב",
   "ipa": "ka.ˈʁov",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "a relative, a family member; close, near; coming, upcoming"
+  "english": "a relative, a family member; close, near; coming, upcoming",
+  "phonetic": "karov"
  },
  {
   "path": "audio/m/israeli/word/h6c2b8669.mp3",
@@ -51636,7 +51646,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to lose; to drop from memory, to forget; to destroy, obliterate"
+  "english": "to lose; to drop from memory, to forget; to destroy, obliterate",
+  "phonetic": "ibed"
  },
  {
   "path": "audio/f/israeli/word/hd873a81e.mp3",
@@ -51646,10 +51657,11 @@
   "id": "hd873a81e",
   "text": "אִבֵּד",
   "ipa": "i.ˈbed",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to lose; to drop from memory, to forget; to destroy, obliterate"
+  "english": "to lose; to drop from memory, to forget; to destroy, obliterate",
+  "phonetic": "ibed"
  },
  {
   "path": "audio/m/israeli/word/hadfa84bd.mp3",
@@ -53372,7 +53384,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Alone, apart, not together, on one's own; Alone, sole, only"
+  "english": "Alone, apart, not together, on one's own; Alone, sole, only",
+  "phonetic": "levad"
  },
  {
   "path": "audio/f/israeli/word/hda5653dd.mp3",
@@ -53382,10 +53395,11 @@
   "id": "hda5653dd",
   "text": "לְבַד",
   "ipa": "le.ˈvad",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "Alone, apart, not together, on one's own; Alone, sole, only"
+  "english": "Alone, apart, not together, on one's own; Alone, sole, only",
+  "phonetic": "levad"
  },
  {
   "path": "audio/m/israeli/word/h3e4e6cff.mp3",
@@ -55676,7 +55690,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to drink; to drink alcohol"
+  "english": "to drink; to drink alcohol",
+  "phonetic": "shatah"
  },
  {
   "path": "audio/f/israeli/word/hd59a2d59.mp3",
@@ -55686,10 +55701,11 @@
   "id": "hd59a2d59",
   "text": "שָׁתָה",
   "ipa": "ʃa.ˈta",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to drink; to drink alcohol"
+  "english": "to drink; to drink alcohol",
+  "phonetic": "shatah"
  },
  {
   "path": "audio/m/israeli/word/h80d6f3f0.mp3",
@@ -57596,7 +57612,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to find"
+  "english": "to find",
+  "phonetic": "matza"
  },
  {
   "path": "audio/f/israeli/word/hd8a5c2cf.mp3",
@@ -57606,10 +57623,11 @@
   "id": "hd8a5c2cf",
   "text": "מָצָא",
   "ipa": "ma.ˈtsa",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to find"
+  "english": "to find",
+  "phonetic": "matza"
  },
  {
   "path": "audio/m/israeli/word/h9d6352ee.mp3",
@@ -58920,7 +58938,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "outside (of)"
+  "english": "outside (of)",
+  "phonetic": "chutz"
  },
  {
   "path": "audio/f/israeli/word/hd6219bc1.mp3",
@@ -58930,10 +58949,11 @@
   "id": "hd6219bc1",
   "text": "חוּץ",
   "ipa": "ˈχuts",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "outside (of)"
+  "english": "outside (of)",
+  "phonetic": "chutz"
  },
  {
   "path": "audio/m/israeli/word/h07f9e1d9.mp3",
@@ -66074,7 +66094,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a relation, an association, a connection; an attitude, a treatment, a sentiment; a ratio"
+  "english": "a relation, an association, a connection; an attitude, a treatment, a sentiment; a ratio",
+  "phonetic": "yachas"
  },
  {
   "path": "audio/f/israeli/word/hd8e09290.mp3",
@@ -66084,10 +66105,11 @@
   "id": "hd8e09290",
   "text": "יַחַס",
   "ipa": "ˈja.χas",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "a relation, an association, a connection; an attitude, a treatment, a sentiment; a ratio"
+  "english": "a relation, an association, a connection; an attitude, a treatment, a sentiment; a ratio",
+  "phonetic": "yachas"
  },
  {
   "path": "audio/m/israeli/word/h7bacd4a2.mp3",
@@ -68482,7 +68504,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a river, stream, or canal, especially in Egypt, especially the Nile"
+  "english": "a river, stream, or canal, especially in Egypt, especially the Nile",
+  "phonetic": "ye'or"
  },
  {
   "path": "audio/f/israeli/word/hd791f802.mp3",
@@ -68492,10 +68515,11 @@
   "id": "hd791f802",
   "text": "יְאוֹר",
   "ipa": "je.ˈoʁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "a river, stream, or canal, especially in Egypt, especially the Nile"
+  "english": "a river, stream, or canal, especially in Egypt, especially the Nile",
+  "phonetic": "ye'or"
  },
  {
   "path": "audio/m/israeli/word/h2ce7109c.mp3",
@@ -70312,7 +70336,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "intestine, gut, innard, entrail, bowel"
+  "english": "intestine, gut, innard, entrail, bowel",
+  "phonetic": "me'i"
  },
  {
   "path": "audio/f/israeli/word/hd5fd5e2d.mp3",
@@ -70322,10 +70347,11 @@
   "id": "hd5fd5e2d",
   "text": "מְעִי",
   "ipa": "me.ˈi",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "intestine, gut, innard, entrail, bowel"
+  "english": "intestine, gut, innard, entrail, bowel",
+  "phonetic": "me'i"
  },
  {
   "path": "audio/m/israeli/word/h7af5d439.mp3",

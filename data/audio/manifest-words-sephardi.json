@@ -34976,8 +34976,8 @@
   "kind": "word",
   "id": "haftarah-before-w2",
   "text": "אַתָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "you, thou",
   "phonetic": "atah"
@@ -35002,8 +35002,8 @@
   "kind": "word",
   "id": "haftarah-before-w3",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the LORD",
   "phonetic": "adonai"
@@ -35028,8 +35028,8 @@
   "kind": "word",
   "id": "haftarah-before-w4",
   "text": "אֱלֹהֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "our-God",
   "phonetic": "eloheinu"
@@ -35054,8 +35054,8 @@
   "kind": "word",
   "id": "haftarah-before-w5",
   "text": "מֶלֶךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "king",
   "phonetic": "melekh"
@@ -35444,8 +35444,8 @@
   "kind": "word",
   "id": "haftarah-before-w20",
   "text": "וּבְמֹשֶׁה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and with Moses",
   "phonetic": "uvemosheh"
@@ -35470,8 +35470,8 @@
   "kind": "word",
   "id": "haftarah-before-w21",
   "text": "עַבְדּוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "his servant",
   "phonetic": "avdo"
@@ -35496,8 +35496,8 @@
   "kind": "word",
   "id": "haftarah-before-w22",
   "text": "וּבְיִשְׂרָאֵל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and with Israel",
   "phonetic": "uveyisra'el"
@@ -35522,8 +35522,8 @@
   "kind": "word",
   "id": "haftarah-before-w23",
   "text": "עַמּוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "his people",
   "phonetic": "amo"
@@ -35548,8 +35548,8 @@
   "kind": "word",
   "id": "haftarah-before-w24",
   "text": "וּבִנְבִיאֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and with prophets",
   "phonetic": "uvinvi'ei"
@@ -35574,8 +35574,8 @@
   "kind": "word",
   "id": "haftarah-before-w25",
   "text": "הָאֱמֶת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "truth",
   "phonetic": "ha'emet"
@@ -35600,8 +35600,8 @@
   "kind": "word",
   "id": "haftarah-before-w26",
   "text": "וְהַצֶּדֶק׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and righteousness",
   "phonetic": "vehatzedek"
@@ -45306,7 +45306,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "country, land; territory, district, region; Earth"
+  "english": "country, land; territory, district, region; Earth",
+  "phonetic": "eretz"
  },
  {
   "path": "audio/f/sephardi/word/hd82a3079.mp3",
@@ -45319,7 +45320,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "country, land; territory, district, region; Earth"
+  "english": "country, land; territory, district, region; Earth",
+  "phonetic": "eretz"
  },
  {
   "path": "audio/m/sephardi/word/h9d36c656.mp3",
@@ -48648,7 +48650,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "empty; dull, boring"
+  "english": "empty; dull, boring",
+  "phonetic": "reik"
  },
  {
   "path": "audio/f/sephardi/word/hd9ea111b.mp3",
@@ -48661,7 +48664,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "empty; dull, boring"
+  "english": "empty; dull, boring",
+  "phonetic": "reik"
  },
  {
   "path": "audio/m/sephardi/word/ha74bd927.mp3",
@@ -48870,7 +48874,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "expensive (having a high price, cost); dear, precious"
+  "english": "expensive (having a high price, cost); dear, precious",
+  "phonetic": "yakar"
  },
  {
   "path": "audio/f/sephardi/word/hd9cf2fa5.mp3",
@@ -48883,7 +48888,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "expensive (having a high price, cost); dear, precious"
+  "english": "expensive (having a high price, cost); dear, precious",
+  "phonetic": "yakar"
  },
  {
   "path": "audio/m/sephardi/word/h447bb433.mp3",
@@ -49146,7 +49152,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to understand, to have understanding, to be one who understands"
+  "english": "to understand, to have understanding, to be one who understands",
+  "phonetic": "hevin"
  },
  {
   "path": "audio/f/sephardi/word/hd83852fd.mp3",
@@ -49159,7 +49166,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to understand, to have understanding, to be one who understands"
+  "english": "to understand, to have understanding, to be one who understands",
+  "phonetic": "hevin"
  },
  {
   "path": "audio/m/sephardi/word/ha7a8a47a.mp3",
@@ -50638,7 +50646,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a relative, a family member; close, near; coming, upcoming"
+  "english": "a relative, a family member; close, near; coming, upcoming",
+  "phonetic": "karov"
  },
  {
   "path": "audio/f/sephardi/word/hd53e0a60.mp3",
@@ -50651,7 +50660,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a relative, a family member; close, near; coming, upcoming"
+  "english": "a relative, a family member; close, near; coming, upcoming",
+  "phonetic": "karov"
  },
  {
   "path": "audio/m/sephardi/word/h6c2b8669.mp3",
@@ -51636,7 +51646,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to lose; to drop from memory, to forget; to destroy, obliterate"
+  "english": "to lose; to drop from memory, to forget; to destroy, obliterate",
+  "phonetic": "ibed"
  },
  {
   "path": "audio/f/sephardi/word/hd873a81e.mp3",
@@ -51649,7 +51660,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to lose; to drop from memory, to forget; to destroy, obliterate"
+  "english": "to lose; to drop from memory, to forget; to destroy, obliterate",
+  "phonetic": "ibed"
  },
  {
   "path": "audio/m/sephardi/word/hadfa84bd.mp3",
@@ -53372,7 +53384,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Alone, apart, not together, on one's own; Alone, sole, only"
+  "english": "Alone, apart, not together, on one's own; Alone, sole, only",
+  "phonetic": "levad"
  },
  {
   "path": "audio/f/sephardi/word/hda5653dd.mp3",
@@ -53385,7 +53398,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Alone, apart, not together, on one's own; Alone, sole, only"
+  "english": "Alone, apart, not together, on one's own; Alone, sole, only",
+  "phonetic": "levad"
  },
  {
   "path": "audio/m/sephardi/word/h3e4e6cff.mp3",
@@ -55676,7 +55690,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to drink; to drink alcohol"
+  "english": "to drink; to drink alcohol",
+  "phonetic": "shatah"
  },
  {
   "path": "audio/f/sephardi/word/hd59a2d59.mp3",
@@ -55689,7 +55704,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to drink; to drink alcohol"
+  "english": "to drink; to drink alcohol",
+  "phonetic": "shatah"
  },
  {
   "path": "audio/m/sephardi/word/h80d6f3f0.mp3",
@@ -57596,7 +57612,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to find"
+  "english": "to find",
+  "phonetic": "matza"
  },
  {
   "path": "audio/f/sephardi/word/hd8a5c2cf.mp3",
@@ -57609,7 +57626,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to find"
+  "english": "to find",
+  "phonetic": "matza"
  },
  {
   "path": "audio/m/sephardi/word/h9d6352ee.mp3",
@@ -58920,7 +58938,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "outside (of)"
+  "english": "outside (of)",
+  "phonetic": "chutz"
  },
  {
   "path": "audio/f/sephardi/word/hd6219bc1.mp3",
@@ -58933,7 +58952,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "outside (of)"
+  "english": "outside (of)",
+  "phonetic": "chutz"
  },
  {
   "path": "audio/m/sephardi/word/h07f9e1d9.mp3",
@@ -66074,7 +66094,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a relation, an association, a connection; an attitude, a treatment, a sentiment; a ratio"
+  "english": "a relation, an association, a connection; an attitude, a treatment, a sentiment; a ratio",
+  "phonetic": "yachas"
  },
  {
   "path": "audio/f/sephardi/word/hd8e09290.mp3",
@@ -66087,7 +66108,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a relation, an association, a connection; an attitude, a treatment, a sentiment; a ratio"
+  "english": "a relation, an association, a connection; an attitude, a treatment, a sentiment; a ratio",
+  "phonetic": "yachas"
  },
  {
   "path": "audio/m/sephardi/word/h7bacd4a2.mp3",
@@ -68482,7 +68504,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a river, stream, or canal, especially in Egypt, especially the Nile"
+  "english": "a river, stream, or canal, especially in Egypt, especially the Nile",
+  "phonetic": "ye'or"
  },
  {
   "path": "audio/f/sephardi/word/hd791f802.mp3",
@@ -68495,7 +68518,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a river, stream, or canal, especially in Egypt, especially the Nile"
+  "english": "a river, stream, or canal, especially in Egypt, especially the Nile",
+  "phonetic": "ye'or"
  },
  {
   "path": "audio/m/sephardi/word/h2ce7109c.mp3",
@@ -70312,7 +70336,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "intestine, gut, innard, entrail, bowel"
+  "english": "intestine, gut, innard, entrail, bowel",
+  "phonetic": "me'i"
  },
  {
   "path": "audio/f/sephardi/word/hd5fd5e2d.mp3",
@@ -70325,7 +70350,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "intestine, gut, innard, entrail, bowel"
+  "english": "intestine, gut, innard, entrail, bowel",
+  "phonetic": "me'i"
  },
  {
   "path": "audio/m/sephardi/word/h7af5d439.mp3",

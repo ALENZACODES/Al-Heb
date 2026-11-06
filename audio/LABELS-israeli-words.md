@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 6383 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 6396 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-6383 English labels; 1933 UNKNOWN.
+6396 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -1812,6 +1812,19 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hd502ab04](f/israeli/word/hd502ab04.mp3) | אִכֵּף | to saddle, to attach a saddle | ikef |
 | [hd51b5d78](f/israeli/word/hd51b5d78.mp3) | מֻרְכָּב | assembled, installed; made, composed, consisting; complicated, complex | murkav |
 | [hd522984d](f/israeli/word/hd522984d.mp3) | תִּינוֹק | infant, baby (male) | tinok |
+| [hd53e0a60](f/israeli/word/hd53e0a60.mp3) | קָרוֹב | a relative, a family member; close, near; coming, upcoming | karov |
+| [hd59a2d59](f/israeli/word/hd59a2d59.mp3) | שָׁתָה | to drink; to drink alcohol | shatah |
+| [hd5fd5e2d](f/israeli/word/hd5fd5e2d.mp3) | מְעִי | intestine, gut, innard, entrail, bowel | me'i |
+| [hd6219bc1](f/israeli/word/hd6219bc1.mp3) | חוּץ | outside (of) | chutz |
+| [hd791f802](f/israeli/word/hd791f802.mp3) | יְאוֹר | a river, stream, or canal, especially in Egypt, especially the Nile | ye'or |
+| [hd82a3079](f/israeli/word/hd82a3079.mp3) | אֶרֶץ | country, land; territory, district, region; Earth | eretz |
+| [hd83852fd](f/israeli/word/hd83852fd.mp3) | הֵבִין | to understand, to have understanding, to be one who understands | hevin |
+| [hd873a81e](f/israeli/word/hd873a81e.mp3) | אִבֵּד | to lose; to drop from memory, to forget; to destroy, obliterate | ibed |
+| [hd8a5c2cf](f/israeli/word/hd8a5c2cf.mp3) | מָצָא | to find | matza |
+| [hd8e09290](f/israeli/word/hd8e09290.mp3) | יַחַס | a relation, an association, a connection; an attitude, a treatment, a sentiment; a ratio | yachas |
+| [hd9cf2fa5](f/israeli/word/hd9cf2fa5.mp3) | יָקָר | expensive (having a high price, cost); dear, precious | yakar |
+| [hd9ea111b](f/israeli/word/hd9ea111b.mp3) | רֵיק | empty; dull, boring | reik |
+| [hda5653dd](f/israeli/word/hda5653dd.mp3) | לְבַד | Alone, apart, not together, on one's own; Alone, sole, only | levad |
 | [help-01](f/israeli/word/help-01.mp3) | עֶזְרָה! | help! | ezrah! |
 | [i-01-w1](f/israeli/word/i-01-w1.mp3) | בָּרְכוּ | UNKNOWN | barkhu |
 | [i-01-w10](f/israeli/word/i-01-w10.mp3) | לְעוֹלָם וָעֶד | UNKNOWN | le'olam va'ed |
@@ -6989,4 +7002,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 13057 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 13093 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

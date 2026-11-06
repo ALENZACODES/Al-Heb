@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 3438 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 3471 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-3438 English labels; 4 UNKNOWN.
+3471 English labels; 4 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -3454,6 +3454,39 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [vahavta-full-w33](m/israeli/word/vahavta-full-w33.mp3) | וּכְתַבְתָּם | and you shall write them | ukhetavtam |
 | [vahavta-full-w34](m/israeli/word/vahavta-full-w34.mp3) | עַל־מְזוּזֹת | upon the doorposts | al-mezuzot |
 | [vahavta-full-w35](m/israeli/word/vahavta-full-w35.mp3) | בֵּיתֶךָ | your house | beitekha |
+| [vahavta-full-w36](m/israeli/word/vahavta-full-w36.mp3) | וּבִשְׁעָרֶיךָ׃ | and upon your gates | uvish'arekha |
+| [vahavta-full-w4](m/israeli/word/vahavta-full-w4.mp3) | אֱלֹהֶיךָ | your God | elohekha |
+| [vahavta-full-w5](m/israeli/word/vahavta-full-w5.mp3) | בְּכָל־לְבָבְךָ | with all your heart | bekhol-levavekha |
+| [vahavta-full-w6](m/israeli/word/vahavta-full-w6.mp3) | וּבְכָל־נַפְשְׁךָ | and with all your soul | uvekhol-nafshekha |
+| [vahavta-full-w7](m/israeli/word/vahavta-full-w7.mp3) | וּבְכָל־מְאֹדֶךָ׃ | and with all your might | uvekhol-me'odekha |
+| [vahavta-full-w8](m/israeli/word/vahavta-full-w8.mp3) | וְהָיוּ | and shall be | vehayu |
+| [vahavta-full-w9](m/israeli/word/vahavta-full-w9.mp3) | הַדְּבָרִים | the words | hadevarim |
+| [vayehi-binsoa-w1](m/israeli/word/vayehi-binsoa-w1.mp3) | וַיְהִי | and it was | vayhi |
+| [vayehi-binsoa-w10](m/israeli/word/vayehi-binsoa-w10.mp3) | וְיָנֻסוּ | and may flee | veyanusu |
+| [vayehi-binsoa-w11](m/israeli/word/vayehi-binsoa-w11.mp3) | מְשַׂנְאֶיךָ | your haters | mesan'ekha |
+| [vayehi-binsoa-w12](m/israeli/word/vayehi-binsoa-w12.mp3) | מִפָּנֶיךָ׃ | before you | mipanekha |
+| [vayehi-binsoa-w13](m/israeli/word/vayehi-binsoa-w13.mp3) | כִּי | because, for, since; that; when, as, at the time that | ki |
+| [vayehi-binsoa-w14](m/israeli/word/vayehi-binsoa-w14.mp3) | מִצִּיּוֹן | from Zion | mitziyon |
+| [vayehi-binsoa-w15](m/israeli/word/vayehi-binsoa-w15.mp3) | תֵּצֵא | will go forth | tetze |
+| [vayehi-binsoa-w16](m/israeli/word/vayehi-binsoa-w16.mp3) | תוֹרָה | Torah | torah |
+| [vayehi-binsoa-w17](m/israeli/word/vayehi-binsoa-w17.mp3) | וּדְבַר | and the word of | udevar |
+| [vayehi-binsoa-w18](m/israeli/word/vayehi-binsoa-w18.mp3) | אֲדֹנָי | the LORD | adonai |
+| [vayehi-binsoa-w19](m/israeli/word/vayehi-binsoa-w19.mp3) | מִירוּשָׁלָםִ׃ | from Jerusalem | mirushalami |
+| [vayehi-binsoa-w2](m/israeli/word/vayehi-binsoa-w2.mp3) | בִּנְסֹעַ | at the setting out | binso'a |
+| [vayehi-binsoa-w20](m/israeli/word/vayehi-binsoa-w20.mp3) | בָּרוּךְ | blessed | barukh |
+| [vayehi-binsoa-w21](m/israeli/word/vayehi-binsoa-w21.mp3) | שֶׁנָּתַן | that he gave | shenatan |
+| [vayehi-binsoa-w22](m/israeli/word/vayehi-binsoa-w22.mp3) | תּוֹרָה | instruction, teaching; the Written Torah and Oral Torah; theory | torah |
+| [vayehi-binsoa-w23](m/israeli/word/vayehi-binsoa-w23.mp3) | לְעַמּוֹ | to his people | le'amo |
+| [vayehi-binsoa-w24](m/israeli/word/vayehi-binsoa-w24.mp3) | יִשְׂרָאֵל | Israel | yisra'el |
+| [vayehi-binsoa-w25](m/israeli/word/vayehi-binsoa-w25.mp3) | בִּקְדֻשָּׁתוֹ׃ | in his holiness | bikdushato |
+| [vayehi-binsoa-w3](m/israeli/word/vayehi-binsoa-w3.mp3) | הָאָרֹן | the ark | ha'aron |
+| [vayehi-binsoa-w4](m/israeli/word/vayehi-binsoa-w4.mp3) | וַיֹאמֶר | and said | vayomer |
+| [vayehi-binsoa-w5](m/israeli/word/vayehi-binsoa-w5.mp3) | מֹשֶׁה | Moses | mosheh |
+| [vayehi-binsoa-w6](m/israeli/word/vayehi-binsoa-w6.mp3) | קוּמָה | arise | kumah |
+| [vayehi-binsoa-w7](m/israeli/word/vayehi-binsoa-w7.mp3) | אֲדֹנָי | the LORD | adonai |
+| [vayehi-binsoa-w8](m/israeli/word/vayehi-binsoa-w8.mp3) | וְיָפֻצוּ | and may be scattered | veyafutzu |
+| [vayehi-binsoa-w9](m/israeli/word/vayehi-binsoa-w9.mp3) | אֹיְבֶיךָ | your enemies | oyevekha |
+| [vezot-hatorah-w1](m/israeli/word/vezot-hatorah-w1.mp3) | וְזֹאת | and this | vezot |
 
 ## Israeli reading lines
 
@@ -4044,4 +4077,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 4460 produced clips in INDEX.csv have an English label; 27 UNKNOWN. Filenames and IDs are unchanged.
+All 4519 produced clips in INDEX.csv have an English label; 36 UNKNOWN. Filenames and IDs are unchanged.

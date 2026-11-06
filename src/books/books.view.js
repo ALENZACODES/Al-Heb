@@ -33,7 +33,7 @@ export async function mount(root, ctx) {
     }
     const badges = [];
     badges.push(b.hasImages ? "Pictures ready" : (b.picturedPages ? `Pictures ${b.picturedPages} of ${b.pageCount}` : "Pictures coming"));
-    badges.push(b.hasAudio ? "Voices ready" : "Voices coming");
+    badges.push(b.hasAudio ? "Voices ready" : (b.audioPages ? `Voices ${b.audioPages} of ${b.pageCount} pages` : "Voices coming"));
     const card = h("a", { class: "card book-card", href: `#/book/${b.id}` },
       cover,
       h("div", { class: "book-meta" },

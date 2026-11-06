@@ -10,7 +10,7 @@ export function buildNumerals(data) {
 }
 export function validOffer(asking, offer, budget) {
   return Number.isInteger(asking) && Number.isInteger(offer) && Number.isInteger(budget) &&
-    offer < asking && offer > 0 && offer <= budget;
+    offer < asking && offer > 0 && offer === budget;
 }
 export const GOODS = Object.freeze(['CTX_food_01','CTX_food_02','CTX_food_03','CTX_food_04']);
 export function mount(root,ctx){
@@ -18,7 +18,7 @@ export function mount(root,ctx){
   const status=h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading Hebrew numerals…');
   const board=h('div',{class:'game-board'});
   const article=h('article',{class:'card game-card game-barter'},h('h1',{id:'view-title'},'The Israeli Flea Market Barter'),
-    h('p',{},'Read the Hebrew number. Offer less than the asking price without exceeding your budget.'),status,board);
+    h('p',{},'Read the Hebrew number. Make a counteroffer at your exact budget, below the asking price.'),status,board);
   root.replaceChildren(article);
   function paint(){
     if(!alive||!article.isConnected)return;
@@ -31,11 +31,11 @@ export function mount(root,ctx){
     const options=shuffled([target,ask,...sorted.filter(x=>x.n>target.n).slice(0,1)]);
     const buttons=options.map(x=>h('button',{type:'button',class:'btn secondary game-choice',onclick:()=>{
       const ok=validOffer(ask.n,x.n,budget);session.answer(ok);
-      status.textContent=ok?'Discount is within budget. Deal accepted.':'That offer is not below asking price within budget.';
+      status.textContent=ok?'Discount is within budget. Deal accepted.':'Counteroffer must equal your budget and undercut the asking price.';
       if(ok){round++;void speak(ctx,x.he);}paint();
     }},heSpan(x.he,'he game-he-sm')));
     board.replaceChildren(stage,h('p',{},'Asking price: ',heSpan(ask.he), ' ('+ask.n+' ₪)'),
-      h('p',{},'Maximum budget: '+budget+' ₪'),h('div',{class:'game-choices'},...buttons));
+      h('p',{},'Your counteroffer budget: '+budget+' ₪'),h('div',{class:'game-choices'},...buttons));
   }
   Promise.all([loadJson('data/corpus/phrasebook.json'),loadGameImages(ctx)]).then(([data,images])=>{
     if(!alive||!article.isConnected)return;deck=buildNumerals(data);R=images;

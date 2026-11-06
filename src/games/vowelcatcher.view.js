@@ -12,6 +12,7 @@
 
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, speak, loadGameImages, imgOf, resultsCard } from './engine.js';
+import { sfx } from '../audio/sfx.js';
 
 /** Best score, play count, last star rating. Device-local, listed on the privacy page. */
 export const STORE_KEY = 'games.vowelcatcher.v1';
@@ -64,6 +65,7 @@ const liveCleanup = new WeakMap();
 
 export function mount(root, ctx) {
   liveCleanup.get(root)?.();
+  const leaveSfx = sfx.enter(ctx);
   const session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 9 });
   let LETTERS = [], MARKS = [], letter = null, R = null;
   let target = null; // current MARKS entry
@@ -111,6 +113,9 @@ export function mount(root, ctx) {
       if (s.y > 84 && s.y < 96 && Math.abs(s.x - basketX) < 9) {
         const ok = s.mark === target;
         session.answer(ok);
+        sfx.play(ok ? 'catch' : 'miss');
+        if (ok) sfx.play('collect');
+        if (ok && session.streak >= 3 && session.streak % 3 === 0) sfx.play('streak');
         announce.replaceChildren(ok
           ? heSpan(letter.glyph + target.point, 'he game-he-sm')
           : `That was ${s.mark.name}. Catch ${target.name}.`,
@@ -167,6 +172,7 @@ export function mount(root, ctx) {
       ...(picture ? [h('img', { class: 'game-catcher-letter-img', src: picture.src, alt: picture.alt,
         width: 76, height: 76, 'data-img-id': picture.id })] : []));
     newTarget();
+    sfx.play('whoosh');
     raf = requestAnimationFrame(step);
   }).catch(() => { if (alive) announce.textContent = 'Vowel data unavailable.'; });
   const stop = () => {
@@ -175,6 +181,7 @@ export function mount(root, ctx) {
     document.removeEventListener('keydown', keys);
     sky.removeEventListener('pointermove', pointerMove);
     sky.removeEventListener('pointerdown', pointerMove);
+    leaveSfx();
     if (liveCleanup.get(root) === stop) liveCleanup.delete(root);
   };
   liveCleanup.set(root, stop);

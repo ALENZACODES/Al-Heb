@@ -42,7 +42,7 @@
    "pageCount": 12,
    "hasImages": false,
    "hasAudio": false,
-   "picturedPages": 9
+   "picturedPages": 10
   },
   {
    "id": "book5",
@@ -53,7 +53,7 @@
    "pageCount": 12,
    "hasImages": false,
    "hasAudio": false,
-   "picturedPages": 1
+   "picturedPages": 3
   }
  ]
 }

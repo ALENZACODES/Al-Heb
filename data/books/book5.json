@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book5-p01.mp3"
    },
    "illustration": "a minimalist sketch of an empty room, sunlight cutting across the floor.",
-   "hasImg": false
+   "hasImg": true
   },
   {
    "n": 2,
@@ -29,7 +29,7 @@
     "m": "audio/m/israeli/book/book5-p02.mp3"
    },
    "illustration": "a clean modern oak table standing proudly in the center of the room.",
-   "hasImg": false
+   "hasImg": true
   },
   {
    "n": 3,

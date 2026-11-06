@@ -197,7 +197,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "BG_shabbat": {
    "id": "BG_shabbat",
@@ -259,7 +259,7 @@
    "flags": [
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "BG_synagogue": {
    "id": "BG_synagogue",
@@ -317,7 +317,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "BG_telaviv": {
    "id": "BG_telaviv",
@@ -375,7 +375,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_ari_celebrate": {
    "id": "CHAR_ari_celebrate",
@@ -433,7 +433,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_ari_listen": {
    "id": "CHAR_ari_listen",
@@ -491,7 +491,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_ari_neutral": {
    "id": "CHAR_ari_neutral",
@@ -549,7 +549,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_ari_sheet": {
    "id": "CHAR_ari_sheet",
@@ -610,7 +610,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_ari_speak": {
    "id": "CHAR_ari_speak",
@@ -668,7 +668,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_ari_synagogue": {
    "id": "CHAR_ari_synagogue",
@@ -726,7 +726,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_ari_telaviv": {
    "id": "CHAR_ari_telaviv",
@@ -850,7 +850,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_noa_listen": {
    "id": "CHAR_noa_listen",
@@ -908,7 +908,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_noa_neutral": {
    "id": "CHAR_noa_neutral",
@@ -966,7 +966,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_noa_sheet": {
    "id": "CHAR_noa_sheet",
@@ -1027,7 +1027,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_noa_speak": {
    "id": "CHAR_noa_speak",
@@ -1085,7 +1085,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_noa_synagogue": {
    "id": "CHAR_noa_synagogue",
@@ -1143,7 +1143,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CHAR_noa_telaviv": {
    "id": "CHAR_noa_telaviv",
@@ -1201,7 +1201,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "FRAME_lettercard": {
    "id": "FRAME_lettercard",
@@ -1259,7 +1259,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "FRAME_lettercard_dual": {
    "id": "FRAME_lettercard_dual",
@@ -1317,7 +1317,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L01_alef_print_ari": {
    "id": "L01_alef_print_ari",
@@ -1375,7 +1375,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L01_alef_print_mnemonic": {
    "id": "L01_alef_print_mnemonic",
@@ -1433,7 +1433,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L01_alef_print_noa": {
    "id": "L01_alef_print_noa",
@@ -1491,7 +1491,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L01_alef_print_s1": {
    "id": "L01_alef_print_s1",
@@ -1620,7 +1620,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L01_alef_print_s3": {
    "id": "L01_alef_print_s3",
@@ -1681,7 +1681,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L01_alef_print_silhouette": {
    "id": "L01_alef_print_silhouette",
@@ -1739,7 +1739,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L01_alef_print_v1": {
    "id": "L01_alef_print_v1",
@@ -1863,7 +1863,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L01_alef_print_v3": {
    "id": "L01_alef_print_v3",
@@ -1921,7 +1921,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L02_bet_print_ari": {
    "id": "L02_bet_print_ari",
@@ -1979,7 +1979,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L02_bet_print_mnemonic": {
    "id": "L02_bet_print_mnemonic",
@@ -2037,7 +2037,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L02_bet_print_noa": {
    "id": "L02_bet_print_noa",
@@ -2095,7 +2095,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L02_bet_print_s1": {
    "id": "L02_bet_print_s1",
@@ -2156,7 +2156,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L02_bet_print_s2": {
    "id": "L02_bet_print_s2",
@@ -2285,7 +2285,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L02_bet_print_silhouette": {
    "id": "L02_bet_print_silhouette",
@@ -2343,7 +2343,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L02_bet_print_v1": {
    "id": "L02_bet_print_v1",
@@ -2401,7 +2401,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L02_bet_print_v2": {
    "id": "L02_bet_print_v2",
@@ -2459,7 +2459,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L02_bet_print_v3": {
    "id": "L02_bet_print_v3",
@@ -2517,7 +2517,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L03_gimel_print_ari": {
    "id": "L03_gimel_print_ari",
@@ -2575,7 +2575,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L03_gimel_print_mnemonic": {
    "id": "L03_gimel_print_mnemonic",
@@ -2633,7 +2633,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L03_gimel_print_noa": {
    "id": "L03_gimel_print_noa",
@@ -2691,7 +2691,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L03_gimel_print_s1": {
    "id": "L03_gimel_print_s1",
@@ -2893,7 +2893,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L03_gimel_print_silhouette": {
    "id": "L03_gimel_print_silhouette",
@@ -2951,7 +2951,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L03_gimel_print_v1": {
    "id": "L03_gimel_print_v1",
@@ -3009,7 +3009,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L03_gimel_print_v2": {
    "id": "L03_gimel_print_v2",
@@ -3067,7 +3067,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L03_gimel_print_v3": {
    "id": "L03_gimel_print_v3",
@@ -3125,7 +3125,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L04_dalet_print_ari": {
    "id": "L04_dalet_print_ari",
@@ -3183,7 +3183,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L04_dalet_print_mnemonic": {
    "id": "L04_dalet_print_mnemonic",
@@ -3241,7 +3241,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L04_dalet_print_noa": {
    "id": "L04_dalet_print_noa",
@@ -3299,7 +3299,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L04_dalet_print_s1": {
    "id": "L04_dalet_print_s1",
@@ -3568,7 +3568,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L04_dalet_print_v1": {
    "id": "L04_dalet_print_v1",
@@ -3626,7 +3626,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L04_dalet_print_v2": {
    "id": "L04_dalet_print_v2",
@@ -3684,7 +3684,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L04_dalet_print_v3": {
    "id": "L04_dalet_print_v3",
@@ -3742,7 +3742,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L05_he_print_ari": {
    "id": "L05_he_print_ari",
@@ -3800,7 +3800,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L05_he_print_mnemonic": {
    "id": "L05_he_print_mnemonic",
@@ -3858,7 +3858,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L05_he_print_noa": {
    "id": "L05_he_print_noa",
@@ -3916,7 +3916,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L05_he_print_s1": {
    "id": "L05_he_print_s1",
@@ -4118,7 +4118,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L05_he_print_silhouette": {
    "id": "L05_he_print_silhouette",
@@ -4176,7 +4176,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L05_he_print_v1": {
    "id": "L05_he_print_v1",
@@ -4234,7 +4234,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L05_he_print_v2": {
    "id": "L05_he_print_v2",
@@ -4292,7 +4292,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L05_he_print_v3": {
    "id": "L05_he_print_v3",
@@ -4350,7 +4350,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L06_vav_print_ari": {
    "id": "L06_vav_print_ari",
@@ -4408,7 +4408,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L06_vav_print_mnemonic": {
    "id": "L06_vav_print_mnemonic",
@@ -4466,7 +4466,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L06_vav_print_noa": {
    "id": "L06_vav_print_noa",
@@ -4524,7 +4524,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L06_vav_print_s1": {
    "id": "L06_vav_print_s1",
@@ -4585,7 +4585,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L06_vav_print_s2": {
    "id": "L06_vav_print_s2",
@@ -4646,7 +4646,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L06_vav_print_s3": {
    "id": "L06_vav_print_s3",
@@ -4774,7 +4774,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L06_vav_print_v1": {
    "id": "L06_vav_print_v1",
@@ -4832,7 +4832,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L06_vav_print_v2": {
    "id": "L06_vav_print_v2",
@@ -4890,7 +4890,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L06_vav_print_v3": {
    "id": "L06_vav_print_v3",
@@ -4948,7 +4948,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L07_zayin_print_ari": {
    "id": "L07_zayin_print_ari",
@@ -5072,7 +5072,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L07_zayin_print_noa": {
    "id": "L07_zayin_print_noa",
@@ -5130,7 +5130,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L07_zayin_print_s1": {
    "id": "L07_zayin_print_s1",
@@ -5259,7 +5259,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L07_zayin_print_s3": {
    "id": "L07_zayin_print_s3",
@@ -5320,7 +5320,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L07_zayin_print_silhouette": {
    "id": "L07_zayin_print_silhouette",
@@ -5378,7 +5378,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L07_zayin_print_v1": {
    "id": "L07_zayin_print_v1",
@@ -5436,7 +5436,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L07_zayin_print_v2": {
    "id": "L07_zayin_print_v2",
@@ -5494,7 +5494,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L07_zayin_print_v3": {
    "id": "L07_zayin_print_v3",
@@ -5552,7 +5552,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L08_chet_print_ari": {
    "id": "L08_chet_print_ari",
@@ -5610,7 +5610,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L08_chet_print_mnemonic": {
    "id": "L08_chet_print_mnemonic",
@@ -5668,7 +5668,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L08_chet_print_noa": {
    "id": "L08_chet_print_noa",
@@ -5726,7 +5726,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L08_chet_print_s1": {
    "id": "L08_chet_print_s1",
@@ -5787,7 +5787,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L08_chet_print_s2": {
    "id": "L08_chet_print_s2",
@@ -5851,7 +5851,7 @@
     "aspect_mismatch_allowed",
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L08_chet_print_s3": {
    "id": "L08_chet_print_s3",
@@ -5912,7 +5912,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L08_chet_print_silhouette": {
    "id": "L08_chet_print_silhouette",
@@ -5970,7 +5970,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L08_chet_print_v1": {
    "id": "L08_chet_print_v1",
@@ -6028,7 +6028,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L08_chet_print_v2": {
    "id": "L08_chet_print_v2",
@@ -6086,7 +6086,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L08_chet_print_v3": {
    "id": "L08_chet_print_v3",
@@ -6144,7 +6144,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L09_tet_print_ari": {
    "id": "L09_tet_print_ari",
@@ -6206,7 +6206,7 @@
    "flags": [
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L09_tet_print_mnemonic": {
    "id": "L09_tet_print_mnemonic",
@@ -6264,7 +6264,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L09_tet_print_noa": {
    "id": "L09_tet_print_noa",
@@ -6322,7 +6322,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L09_tet_print_s1": {
    "id": "L09_tet_print_s1",
@@ -6386,7 +6386,7 @@
     "aspect_mismatch_allowed",
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L09_tet_print_s2": {
    "id": "L09_tet_print_s2",
@@ -6520,7 +6520,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L09_tet_print_silhouette": {
    "id": "L09_tet_print_silhouette",
@@ -6578,7 +6578,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L09_tet_print_v1": {
    "id": "L09_tet_print_v1",
@@ -6636,7 +6636,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L09_tet_print_v2": {
    "id": "L09_tet_print_v2",
@@ -6760,7 +6760,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L10_yod_print_ari": {
    "id": "L10_yod_print_ari",
@@ -6818,7 +6818,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L10_yod_print_mnemonic": {
    "id": "L10_yod_print_mnemonic",
@@ -6876,7 +6876,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L10_yod_print_noa": {
    "id": "L10_yod_print_noa",
@@ -6934,7 +6934,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L10_yod_print_s1": {
    "id": "L10_yod_print_s1",
@@ -7063,7 +7063,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L10_yod_print_s3": {
    "id": "L10_yod_print_s3",
@@ -7189,7 +7189,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L10_yod_print_v1": {
    "id": "L10_yod_print_v1",
@@ -7247,7 +7247,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L10_yod_print_v2": {
    "id": "L10_yod_print_v2",
@@ -7305,7 +7305,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L10_yod_print_v3": {
    "id": "L10_yod_print_v3",
@@ -7363,7 +7363,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L11_kaf_print_ari": {
    "id": "L11_kaf_print_ari",
@@ -7421,7 +7421,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L11_kaf_print_mnemonic": {
    "id": "L11_kaf_print_mnemonic",
@@ -7479,7 +7479,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L11_kaf_print_noa": {
    "id": "L11_kaf_print_noa",
@@ -7537,7 +7537,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L11_kaf_print_s1": {
    "id": "L11_kaf_print_s1",
@@ -7598,7 +7598,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L11_kaf_print_s2": {
    "id": "L11_kaf_print_s2",
@@ -7659,7 +7659,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L11_kaf_print_s3": {
    "id": "L11_kaf_print_s3",
@@ -7720,7 +7720,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L11_kaf_print_silhouette": {
    "id": "L11_kaf_print_silhouette",
@@ -7778,7 +7778,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L11_kaf_print_v1": {
    "id": "L11_kaf_print_v1",
@@ -7836,7 +7836,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L11_kaf_print_v2": {
    "id": "L11_kaf_print_v2",
@@ -7894,7 +7894,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L11_kaf_print_v3": {
    "id": "L11_kaf_print_v3",
@@ -7952,7 +7952,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L12_lamed_print_ari": {
    "id": "L12_lamed_print_ari",
@@ -8010,7 +8010,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L12_lamed_print_mnemonic": {
    "id": "L12_lamed_print_mnemonic",
@@ -8068,7 +8068,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L12_lamed_print_noa": {
    "id": "L12_lamed_print_noa",
@@ -8126,7 +8126,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L12_lamed_print_s1": {
    "id": "L12_lamed_print_s1",
@@ -8187,7 +8187,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L12_lamed_print_s2": {
    "id": "L12_lamed_print_s2",
@@ -8251,7 +8251,7 @@
     "aspect_mismatch_allowed",
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L12_lamed_print_s3": {
    "id": "L12_lamed_print_s3",
@@ -8312,7 +8312,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L12_lamed_print_silhouette": {
    "id": "L12_lamed_print_silhouette",
@@ -8370,7 +8370,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L12_lamed_print_v1": {
    "id": "L12_lamed_print_v1",
@@ -8428,7 +8428,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L12_lamed_print_v2": {
    "id": "L12_lamed_print_v2",
@@ -8486,7 +8486,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L12_lamed_print_v3": {
    "id": "L12_lamed_print_v3",
@@ -8544,7 +8544,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L13_mem_print_ari": {
    "id": "L13_mem_print_ari",
@@ -8602,7 +8602,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L13_mem_print_mnemonic": {
    "id": "L13_mem_print_mnemonic",
@@ -8660,7 +8660,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L13_mem_print_noa": {
    "id": "L13_mem_print_noa",
@@ -8718,7 +8718,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L13_mem_print_s1": {
    "id": "L13_mem_print_s1",
@@ -8783,7 +8783,7 @@
     "aspect_mismatch_allowed",
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L13_mem_print_s2": {
    "id": "L13_mem_print_s2",
@@ -8844,7 +8844,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L13_mem_print_s3": {
    "id": "L13_mem_print_s3",
@@ -8905,7 +8905,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L13_mem_print_silhouette": {
    "id": "L13_mem_print_silhouette",
@@ -8963,7 +8963,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L13_mem_print_v1": {
    "id": "L13_mem_print_v1",
@@ -9021,7 +9021,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L13_mem_print_v2": {
    "id": "L13_mem_print_v2",
@@ -9079,7 +9079,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L13_mem_print_v3": {
    "id": "L13_mem_print_v3",
@@ -9207,7 +9207,7 @@
    "flags": [
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L14_nun_print_mnemonic": {
    "id": "L14_nun_print_mnemonic",
@@ -9265,7 +9265,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L14_nun_print_noa": {
    "id": "L14_nun_print_noa",
@@ -9323,7 +9323,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L14_nun_print_s1": {
    "id": "L14_nun_print_s1",
@@ -9387,7 +9387,7 @@
     "aspect_mismatch_allowed",
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L14_nun_print_s2": {
    "id": "L14_nun_print_s2",
@@ -9581,7 +9581,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L14_nun_print_v1": {
    "id": "L14_nun_print_v1",
@@ -9639,7 +9639,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L14_nun_print_v2": {
    "id": "L14_nun_print_v2",
@@ -9697,7 +9697,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L14_nun_print_v3": {
    "id": "L14_nun_print_v3",
@@ -9755,7 +9755,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L15_samekh_print_ari": {
    "id": "L15_samekh_print_ari",
@@ -9813,7 +9813,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L15_samekh_print_mnemonic": {
    "id": "L15_samekh_print_mnemonic",
@@ -9871,7 +9871,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L15_samekh_print_noa": {
    "id": "L15_samekh_print_noa",
@@ -9929,7 +9929,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L15_samekh_print_s1": {
    "id": "L15_samekh_print_s1",
@@ -10065,7 +10065,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L15_samekh_print_s3": {
    "id": "L15_samekh_print_s3",
@@ -10191,7 +10191,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L15_samekh_print_v1": {
    "id": "L15_samekh_print_v1",
@@ -10249,7 +10249,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L15_samekh_print_v2": {
    "id": "L15_samekh_print_v2",
@@ -10307,7 +10307,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L15_samekh_print_v3": {
    "id": "L15_samekh_print_v3",
@@ -10365,7 +10365,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L16_ayin_print_ari": {
    "id": "L16_ayin_print_ari",
@@ -10423,7 +10423,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L16_ayin_print_mnemonic": {
    "id": "L16_ayin_print_mnemonic",
@@ -10481,7 +10481,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L16_ayin_print_noa": {
    "id": "L16_ayin_print_noa",
@@ -10539,7 +10539,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L16_ayin_print_s1": {
    "id": "L16_ayin_print_s1",
@@ -10671,7 +10671,7 @@
     "aspect_mismatch_allowed",
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L16_ayin_print_s3": {
    "id": "L16_ayin_print_s3",
@@ -10732,7 +10732,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L16_ayin_print_silhouette": {
    "id": "L16_ayin_print_silhouette",
@@ -10790,7 +10790,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L16_ayin_print_v1": {
    "id": "L16_ayin_print_v1",
@@ -10848,7 +10848,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L16_ayin_print_v2": {
    "id": "L16_ayin_print_v2",
@@ -10906,7 +10906,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L16_ayin_print_v3": {
    "id": "L16_ayin_print_v3",
@@ -10964,7 +10964,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L17_pe_print_ari": {
    "id": "L17_pe_print_ari",
@@ -11022,7 +11022,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L17_pe_print_mnemonic": {
    "id": "L17_pe_print_mnemonic",
@@ -11080,7 +11080,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L17_pe_print_noa": {
    "id": "L17_pe_print_noa",
@@ -11138,7 +11138,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L17_pe_print_s1": {
    "id": "L17_pe_print_s1",
@@ -11272,7 +11272,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L17_pe_print_s3": {
    "id": "L17_pe_print_s3",
@@ -11398,7 +11398,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L17_pe_print_v1": {
    "id": "L17_pe_print_v1",
@@ -11456,7 +11456,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L17_pe_print_v2": {
    "id": "L17_pe_print_v2",
@@ -11514,7 +11514,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L17_pe_print_v3": {
    "id": "L17_pe_print_v3",
@@ -11572,7 +11572,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L18_tsadi_print_ari": {
    "id": "L18_tsadi_print_ari",
@@ -11630,7 +11630,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L18_tsadi_print_mnemonic": {
    "id": "L18_tsadi_print_mnemonic",
@@ -11688,7 +11688,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L18_tsadi_print_noa": {
    "id": "L18_tsadi_print_noa",
@@ -11746,7 +11746,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L18_tsadi_print_s1": {
    "id": "L18_tsadi_print_s1",
@@ -11807,7 +11807,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L18_tsadi_print_s2": {
    "id": "L18_tsadi_print_s2",
@@ -11936,7 +11936,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L18_tsadi_print_silhouette": {
    "id": "L18_tsadi_print_silhouette",
@@ -11994,7 +11994,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L18_tsadi_print_v1": {
    "id": "L18_tsadi_print_v1",
@@ -12052,7 +12052,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L18_tsadi_print_v2": {
    "id": "L18_tsadi_print_v2",
@@ -12110,7 +12110,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L18_tsadi_print_v3": {
    "id": "L18_tsadi_print_v3",
@@ -12168,7 +12168,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L19_qof_print_ari": {
    "id": "L19_qof_print_ari",
@@ -12226,7 +12226,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L19_qof_print_mnemonic": {
    "id": "L19_qof_print_mnemonic",
@@ -12284,7 +12284,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L19_qof_print_noa": {
    "id": "L19_qof_print_noa",
@@ -12342,7 +12342,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L19_qof_print_s1": {
    "id": "L19_qof_print_s1",
@@ -12474,7 +12474,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L19_qof_print_s3": {
    "id": "L19_qof_print_s3",
@@ -12600,7 +12600,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L19_qof_print_v1": {
    "id": "L19_qof_print_v1",
@@ -12658,7 +12658,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L19_qof_print_v2": {
    "id": "L19_qof_print_v2",
@@ -12716,7 +12716,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L19_qof_print_v3": {
    "id": "L19_qof_print_v3",
@@ -12774,7 +12774,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L20_resh_print_ari": {
    "id": "L20_resh_print_ari",
@@ -12832,7 +12832,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L20_resh_print_mnemonic": {
    "id": "L20_resh_print_mnemonic",
@@ -12890,7 +12890,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L20_resh_print_noa": {
    "id": "L20_resh_print_noa",
@@ -12948,7 +12948,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L20_resh_print_s1": {
    "id": "L20_resh_print_s1",
@@ -13012,7 +13012,7 @@
     "aspect_mismatch_allowed",
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L20_resh_print_s2": {
    "id": "L20_resh_print_s2",
@@ -13141,7 +13141,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L20_resh_print_silhouette": {
    "id": "L20_resh_print_silhouette",
@@ -13199,7 +13199,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L20_resh_print_v1": {
    "id": "L20_resh_print_v1",
@@ -13257,7 +13257,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L20_resh_print_v2": {
    "id": "L20_resh_print_v2",
@@ -13315,7 +13315,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L20_resh_print_v3": {
    "id": "L20_resh_print_v3",
@@ -13373,7 +13373,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L21_shin_print_ari": {
    "id": "L21_shin_print_ari",
@@ -13431,7 +13431,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L21_shin_print_mnemonic": {
    "id": "L21_shin_print_mnemonic",
@@ -13489,7 +13489,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L21_shin_print_noa": {
    "id": "L21_shin_print_noa",
@@ -13547,7 +13547,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L21_shin_print_s1": {
    "id": "L21_shin_print_s1",
@@ -13608,7 +13608,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L21_shin_print_s2": {
    "id": "L21_shin_print_s2",
@@ -13807,7 +13807,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L21_shin_print_v1": {
    "id": "L21_shin_print_v1",
@@ -13865,7 +13865,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L21_shin_print_v2": {
    "id": "L21_shin_print_v2",
@@ -13923,7 +13923,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L21_shin_print_v3": {
    "id": "L21_shin_print_v3",
@@ -13981,7 +13981,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L22_tav_print_ari": {
    "id": "L22_tav_print_ari",
@@ -14039,7 +14039,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L22_tav_print_mnemonic": {
    "id": "L22_tav_print_mnemonic",
@@ -14097,7 +14097,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L22_tav_print_noa": {
    "id": "L22_tav_print_noa",
@@ -14155,7 +14155,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L22_tav_print_s1": {
    "id": "L22_tav_print_s1",
@@ -14216,7 +14216,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L22_tav_print_s2": {
    "id": "L22_tav_print_s2",
@@ -14277,7 +14277,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L22_tav_print_s3": {
    "id": "L22_tav_print_s3",
@@ -14338,7 +14338,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L22_tav_print_silhouette": {
    "id": "L22_tav_print_silhouette",
@@ -14396,7 +14396,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L22_tav_print_v1": {
    "id": "L22_tav_print_v1",
@@ -14454,7 +14454,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L22_tav_print_v2": {
    "id": "L22_tav_print_v2",
@@ -14512,7 +14512,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L22_tav_print_v3": {
    "id": "L22_tav_print_v3",
@@ -14570,7 +14570,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L23_kaf_final_print_ari": {
    "id": "L23_kaf_final_print_ari",
@@ -14628,7 +14628,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L23_kaf_final_print_mnemonic": {
    "id": "L23_kaf_final_print_mnemonic",
@@ -14686,7 +14686,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L23_kaf_final_print_noa": {
    "id": "L23_kaf_final_print_noa",
@@ -14744,7 +14744,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L23_kaf_final_print_s1": {
    "id": "L23_kaf_final_print_s1",
@@ -14805,7 +14805,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L23_kaf_final_print_s2": {
    "id": "L23_kaf_final_print_s2",
@@ -14866,7 +14866,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L23_kaf_final_print_s3": {
    "id": "L23_kaf_final_print_s3",
@@ -14927,7 +14927,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L23_kaf_final_print_silhouette": {
    "id": "L23_kaf_final_print_silhouette",
@@ -14985,7 +14985,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L23_kaf_final_print_v1": {
    "id": "L23_kaf_final_print_v1",
@@ -15043,7 +15043,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L23_kaf_final_print_v2": {
    "id": "L23_kaf_final_print_v2",
@@ -15101,7 +15101,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L23_kaf_final_print_v3": {
    "id": "L23_kaf_final_print_v3",
@@ -15159,7 +15159,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L24_mem_final_print_ari": {
    "id": "L24_mem_final_print_ari",
@@ -15217,7 +15217,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L24_mem_final_print_mnemonic": {
    "id": "L24_mem_final_print_mnemonic",
@@ -15275,7 +15275,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L24_mem_final_print_noa": {
    "id": "L24_mem_final_print_noa",
@@ -15333,7 +15333,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L24_mem_final_print_s1": {
    "id": "L24_mem_final_print_s1",
@@ -15394,7 +15394,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L24_mem_final_print_s2": {
    "id": "L24_mem_final_print_s2",
@@ -15455,7 +15455,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L24_mem_final_print_s3": {
    "id": "L24_mem_final_print_s3",
@@ -15581,7 +15581,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L24_mem_final_print_v1": {
    "id": "L24_mem_final_print_v1",
@@ -15639,7 +15639,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L24_mem_final_print_v2": {
    "id": "L24_mem_final_print_v2",
@@ -15697,7 +15697,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L24_mem_final_print_v3": {
    "id": "L24_mem_final_print_v3",
@@ -15755,7 +15755,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L25_nun_final_print_ari": {
    "id": "L25_nun_final_print_ari",
@@ -15813,7 +15813,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L25_nun_final_print_mnemonic": {
    "id": "L25_nun_final_print_mnemonic",
@@ -15871,7 +15871,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L25_nun_final_print_noa": {
    "id": "L25_nun_final_print_noa",
@@ -15929,7 +15929,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L25_nun_final_print_s1": {
    "id": "L25_nun_final_print_s1",
@@ -16058,7 +16058,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L25_nun_final_print_s3": {
    "id": "L25_nun_final_print_s3",
@@ -16189,7 +16189,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L25_nun_final_print_v1": {
    "id": "L25_nun_final_print_v1",
@@ -16247,7 +16247,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L25_nun_final_print_v2": {
    "id": "L25_nun_final_print_v2",
@@ -16305,7 +16305,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L25_nun_final_print_v3": {
    "id": "L25_nun_final_print_v3",
@@ -16363,7 +16363,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L26_pe_final_print_mnemonic": {
    "id": "L26_pe_final_print_mnemonic",
@@ -16421,7 +16421,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "MOUTH_ah": {
    "id": "MOUTH_ah",
@@ -16479,7 +16479,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "MOUTH_ee": {
    "id": "MOUTH_ee",
@@ -16537,7 +16537,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "MOUTH_eh": {
    "id": "MOUTH_eh",
@@ -16595,7 +16595,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "MOUTH_none": {
    "id": "MOUTH_none",
@@ -16653,7 +16653,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "MOUTH_oh": {
    "id": "MOUTH_oh",
@@ -16711,7 +16711,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "MOUTH_oo": {
    "id": "MOUTH_oo",
@@ -16769,7 +16769,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STYLE_sample_cup": {
    "id": "STYLE_sample_cup",
@@ -16827,7 +16827,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TEST_consistency_1": {
    "id": "TEST_consistency_1",
@@ -16888,7 +16888,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TEST_consistency_2": {
    "id": "TEST_consistency_2",
@@ -16949,7 +16949,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_bimah_01": {
    "id": "CRAFT_bimah_01",
@@ -17078,7 +17078,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_bimah_03": {
    "id": "CRAFT_bimah_03",
@@ -17136,7 +17136,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_bimah_04": {
    "id": "CRAFT_bimah_04",
@@ -17194,7 +17194,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_bimah_05": {
    "id": "CRAFT_bimah_05",
@@ -17252,7 +17252,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_bimah_06": {
    "id": "CRAFT_bimah_06",
@@ -17310,7 +17310,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_bimah_07": {
    "id": "CRAFT_bimah_07",
@@ -17368,7 +17368,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_bimah_08": {
    "id": "CRAFT_bimah_08",
@@ -17631,7 +17631,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_haftarah_02": {
    "id": "CRAFT_haftarah_02",
@@ -17689,7 +17689,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_haftarah_03": {
    "id": "CRAFT_haftarah_03",
@@ -17747,7 +17747,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_haftarah_04": {
    "id": "CRAFT_haftarah_04",
@@ -17805,7 +17805,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_haftarah_05": {
    "id": "CRAFT_haftarah_05",
@@ -17863,7 +17863,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_haftarah_06": {
    "id": "CRAFT_haftarah_06",
@@ -17921,7 +17921,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_haftarah_07": {
    "id": "CRAFT_haftarah_07",
@@ -17979,7 +17979,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_haftarah_08": {
    "id": "CRAFT_haftarah_08",
@@ -18037,7 +18037,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_haftarah_09": {
    "id": "CRAFT_haftarah_09",
@@ -18095,7 +18095,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_haftarah_10": {
    "id": "CRAFT_haftarah_10",
@@ -18153,7 +18153,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_01": {
    "id": "CRAFT_practice_01",
@@ -18211,7 +18211,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_02": {
    "id": "CRAFT_practice_02",
@@ -18269,7 +18269,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_03": {
    "id": "CRAFT_practice_03",
@@ -18327,7 +18327,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_04": {
    "id": "CRAFT_practice_04",
@@ -18385,7 +18385,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_05": {
    "id": "CRAFT_practice_05",
@@ -18443,7 +18443,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_06": {
    "id": "CRAFT_practice_06",
@@ -18501,7 +18501,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_07": {
    "id": "CRAFT_practice_07",
@@ -18559,7 +18559,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_08": {
    "id": "CRAFT_practice_08",
@@ -18617,7 +18617,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_09": {
    "id": "CRAFT_practice_09",
@@ -18675,7 +18675,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_practice_10": {
    "id": "CRAFT_practice_10",
@@ -18733,7 +18733,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_01": {
    "id": "CRAFT_qa_01",
@@ -18791,7 +18791,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_02": {
    "id": "CRAFT_qa_02",
@@ -18849,7 +18849,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_03": {
    "id": "CRAFT_qa_03",
@@ -18907,7 +18907,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_04": {
    "id": "CRAFT_qa_04",
@@ -18965,7 +18965,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_05": {
    "id": "CRAFT_qa_05",
@@ -19023,7 +19023,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_06": {
    "id": "CRAFT_qa_06",
@@ -19081,7 +19081,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_07": {
    "id": "CRAFT_qa_07",
@@ -19139,7 +19139,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_08": {
    "id": "CRAFT_qa_08",
@@ -19197,7 +19197,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_09": {
    "id": "CRAFT_qa_09",
@@ -19255,7 +19255,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_qa_10": {
    "id": "CRAFT_qa_10",
@@ -19313,7 +19313,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_scroll_01": {
    "id": "CRAFT_scroll_01",
@@ -19437,7 +19437,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_scroll_03": {
    "id": "CRAFT_scroll_03",
@@ -19495,7 +19495,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_scroll_04": {
    "id": "CRAFT_scroll_04",
@@ -19553,7 +19553,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_scroll_05": {
    "id": "CRAFT_scroll_05",
@@ -19611,7 +19611,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_scroll_06": {
    "id": "CRAFT_scroll_06",
@@ -19669,7 +19669,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_scroll_07": {
    "id": "CRAFT_scroll_07",
@@ -19727,7 +19727,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_scroll_08": {
    "id": "CRAFT_scroll_08",
@@ -19785,7 +19785,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_scroll_09": {
    "id": "CRAFT_scroll_09",
@@ -19843,7 +19843,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_scroll_10": {
    "id": "CRAFT_scroll_10",
@@ -19901,7 +19901,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_01": {
    "id": "CRAFT_wheel_01",
@@ -19959,7 +19959,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_02": {
    "id": "CRAFT_wheel_02",
@@ -20017,7 +20017,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_03": {
    "id": "CRAFT_wheel_03",
@@ -20075,7 +20075,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_04": {
    "id": "CRAFT_wheel_04",
@@ -20133,7 +20133,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_05": {
    "id": "CRAFT_wheel_05",
@@ -20191,7 +20191,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_06": {
    "id": "CRAFT_wheel_06",
@@ -20249,7 +20249,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_07": {
    "id": "CRAFT_wheel_07",
@@ -20307,7 +20307,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_08": {
    "id": "CRAFT_wheel_08",
@@ -20365,7 +20365,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_09": {
    "id": "CRAFT_wheel_09",
@@ -20423,7 +20423,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "CRAFT_wheel_10": {
    "id": "CRAFT_wheel_10",
@@ -20481,7 +20481,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_one_01": {
    "id": "EMOTE_one_01",
@@ -20539,7 +20539,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_one_02": {
    "id": "EMOTE_one_02",
@@ -20597,7 +20597,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_one_03": {
    "id": "EMOTE_one_03",
@@ -20655,7 +20655,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_one_04": {
    "id": "EMOTE_one_04",
@@ -20713,7 +20713,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_one_05": {
    "id": "EMOTE_one_05",
@@ -20771,7 +20771,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_one_06": {
    "id": "EMOTE_one_06",
@@ -20829,7 +20829,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_one_07": {
    "id": "EMOTE_one_07",
@@ -20887,7 +20887,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_one_08": {
    "id": "EMOTE_one_08",
@@ -20945,7 +20945,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_one_09": {
    "id": "EMOTE_one_09",
@@ -21003,7 +21003,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_one_10": {
    "id": "EMOTE_one_10",
@@ -21061,7 +21061,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_two_01": {
    "id": "EMOTE_two_01",
@@ -21119,7 +21119,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_two_02": {
    "id": "EMOTE_two_02",
@@ -21177,7 +21177,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_two_03": {
    "id": "EMOTE_two_03",
@@ -21235,7 +21235,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_two_04": {
    "id": "EMOTE_two_04",
@@ -21293,7 +21293,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_two_05": {
    "id": "EMOTE_two_05",
@@ -21351,7 +21351,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_two_06": {
    "id": "EMOTE_two_06",
@@ -21409,7 +21409,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_two_07": {
    "id": "EMOTE_two_07",
@@ -21467,7 +21467,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_two_08": {
    "id": "EMOTE_two_08",
@@ -21525,7 +21525,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_two_09": {
    "id": "EMOTE_two_09",
@@ -21583,7 +21583,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "EMOTE_two_10": {
    "id": "EMOTE_two_10",
@@ -21641,7 +21641,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah1_01": {
    "id": "HERO_amidah1_01",
@@ -21699,7 +21699,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false,
+   "humanApproved": true,
    "needsEye": true,
    "eyeNote": "three tents under stars; two attempts 185/186"
   },
@@ -21759,7 +21759,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah1_03": {
    "id": "HERO_amidah1_03",
@@ -21817,7 +21817,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah1_04": {
    "id": "HERO_amidah1_04",
@@ -21875,7 +21875,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah1_05": {
    "id": "HERO_amidah1_05",
@@ -21933,7 +21933,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah1_06": {
    "id": "HERO_amidah1_06",
@@ -21991,7 +21991,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah1_07": {
    "id": "HERO_amidah1_07",
@@ -22115,7 +22115,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah1_09": {
    "id": "HERO_amidah1_09",
@@ -22173,7 +22173,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah1_10": {
    "id": "HERO_amidah1_10",
@@ -22235,7 +22235,7 @@
    "flags": [
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah2_01": {
    "id": "HERO_amidah2_01",
@@ -22293,7 +22293,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah2_02": {
    "id": "HERO_amidah2_02",
@@ -22351,7 +22351,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah2_03": {
    "id": "HERO_amidah2_03",
@@ -22409,7 +22409,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah2_04": {
    "id": "HERO_amidah2_04",
@@ -22540,7 +22540,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah2_06": {
    "id": "HERO_amidah2_06",
@@ -22598,7 +22598,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah2_07": {
    "id": "HERO_amidah2_07",
@@ -22722,7 +22722,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah2_09": {
    "id": "HERO_amidah2_09",
@@ -22780,7 +22780,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_amidah2_10": {
    "id": "HERO_amidah2_10",
@@ -22838,7 +22838,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_grace_01": {
    "id": "HERO_grace_01",
@@ -22896,7 +22896,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_grace_02": {
    "id": "HERO_grace_02",
@@ -22954,7 +22954,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_grace_03": {
    "id": "HERO_grace_03",
@@ -23012,7 +23012,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_grace_04": {
    "id": "HERO_grace_04",
@@ -23070,7 +23070,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_grace_05": {
    "id": "HERO_grace_05",
@@ -23194,7 +23194,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_grace_07": {
    "id": "HERO_grace_07",
@@ -23252,7 +23252,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_grace_08": {
    "id": "HERO_grace_08",
@@ -23310,7 +23310,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_grace_09": {
    "id": "HERO_grace_09",
@@ -23368,7 +23368,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_grace_10": {
    "id": "HERO_grace_10",
@@ -23426,7 +23426,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_morning_01": {
    "id": "HERO_morning_01",
@@ -23484,7 +23484,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_morning_02": {
    "id": "HERO_morning_02",
@@ -23608,7 +23608,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_morning_04": {
    "id": "HERO_morning_04",
@@ -23666,7 +23666,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_morning_05": {
    "id": "HERO_morning_05",
@@ -23724,7 +23724,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_morning_06": {
    "id": "HERO_morning_06",
@@ -23782,7 +23782,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_morning_07": {
    "id": "HERO_morning_07",
@@ -23840,7 +23840,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_morning_08": {
    "id": "HERO_morning_08",
@@ -23898,7 +23898,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_morning_09": {
    "id": "HERO_morning_09",
@@ -23956,7 +23956,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_morning_10": {
    "id": "HERO_morning_10",
@@ -24014,7 +24014,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_night_01": {
    "id": "HERO_night_01",
@@ -24072,7 +24072,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_night_02": {
    "id": "HERO_night_02",
@@ -24130,7 +24130,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_night_03": {
    "id": "HERO_night_03",
@@ -24188,7 +24188,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_night_04": {
    "id": "HERO_night_04",
@@ -24246,7 +24246,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_night_05": {
    "id": "HERO_night_05",
@@ -24304,7 +24304,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_night_06": {
    "id": "HERO_night_06",
@@ -24362,7 +24362,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "HERO_night_07": {
    "id": "HERO_night_07",
@@ -24420,7 +24420,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L26_pe_final_print_ari": {
    "id": "L26_pe_final_print_ari",
@@ -24478,7 +24478,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L26_pe_final_print_noa": {
    "id": "L26_pe_final_print_noa",
@@ -24536,7 +24536,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L26_pe_final_print_s1": {
    "id": "L26_pe_final_print_s1",
@@ -24597,7 +24597,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L26_pe_final_print_s2": {
    "id": "L26_pe_final_print_s2",
@@ -24793,7 +24793,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L26_pe_final_print_v1": {
    "id": "L26_pe_final_print_v1",
@@ -24851,7 +24851,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L26_pe_final_print_v2": {
    "id": "L26_pe_final_print_v2",
@@ -24909,7 +24909,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L26_pe_final_print_v3": {
    "id": "L26_pe_final_print_v3",
@@ -24967,7 +24967,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L27_tsadi_final_print_ari": {
    "id": "L27_tsadi_final_print_ari",
@@ -25025,7 +25025,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L27_tsadi_final_print_mnemonic": {
    "id": "L27_tsadi_final_print_mnemonic",
@@ -25083,7 +25083,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L27_tsadi_final_print_noa": {
    "id": "L27_tsadi_final_print_noa",
@@ -25141,7 +25141,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L27_tsadi_final_print_s1": {
    "id": "L27_tsadi_final_print_s1",
@@ -25275,7 +25275,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L27_tsadi_final_print_s3": {
    "id": "L27_tsadi_final_print_s3",
@@ -25336,7 +25336,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L27_tsadi_final_print_silhouette": {
    "id": "L27_tsadi_final_print_silhouette",
@@ -25394,7 +25394,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L27_tsadi_final_print_v1": {
    "id": "L27_tsadi_final_print_v1",
@@ -25452,7 +25452,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L27_tsadi_final_print_v2": {
    "id": "L27_tsadi_final_print_v2",
@@ -25510,7 +25510,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "L27_tsadi_final_print_v3": {
    "id": "L27_tsadi_final_print_v3",
@@ -25568,7 +25568,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_day_01": {
    "id": "NUM_day_01",
@@ -25626,7 +25626,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_day_02": {
    "id": "NUM_day_02",
@@ -25684,7 +25684,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_day_03": {
    "id": "NUM_day_03",
@@ -25808,7 +25808,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_day_05": {
    "id": "NUM_day_05",
@@ -25866,7 +25866,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_day_06": {
    "id": "NUM_day_06",
@@ -25924,7 +25924,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_day_07": {
    "id": "NUM_day_07",
@@ -25982,7 +25982,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_day_08": {
    "id": "NUM_day_08",
@@ -26040,7 +26040,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_day_09": {
    "id": "NUM_day_09",
@@ -26098,7 +26098,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_day_10": {
    "id": "NUM_day_10",
@@ -26156,7 +26156,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_money_01": {
    "id": "NUM_money_01",
@@ -26214,7 +26214,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_money_02": {
    "id": "NUM_money_02",
@@ -26272,7 +26272,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_money_03": {
    "id": "NUM_money_03",
@@ -26330,7 +26330,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_money_04": {
    "id": "NUM_money_04",
@@ -26388,7 +26388,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_money_05": {
    "id": "NUM_money_05",
@@ -26446,7 +26446,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_money_06": {
    "id": "NUM_money_06",
@@ -26504,7 +26504,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_money_07": {
    "id": "NUM_money_07",
@@ -26633,7 +26633,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_money_09": {
    "id": "NUM_money_09",
@@ -26691,7 +26691,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_money_10": {
    "id": "NUM_money_10",
@@ -26749,7 +26749,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months1_01": {
    "id": "NUM_months1_01",
@@ -26810,7 +26810,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months1_02": {
    "id": "NUM_months1_02",
@@ -26868,7 +26868,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months1_03": {
    "id": "NUM_months1_03",
@@ -26926,7 +26926,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months1_04": {
    "id": "NUM_months1_04",
@@ -26987,7 +26987,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months1_05": {
    "id": "NUM_months1_05",
@@ -27048,7 +27048,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months1_06": {
    "id": "NUM_months1_06",
@@ -27109,7 +27109,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months1_07": {
    "id": "NUM_months1_07",
@@ -27238,7 +27238,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months1_09": {
    "id": "NUM_months1_09",
@@ -27299,7 +27299,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months1_10": {
    "id": "NUM_months1_10",
@@ -27360,7 +27360,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months2_01": {
    "id": "NUM_months2_01",
@@ -27418,7 +27418,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months2_02": {
    "id": "NUM_months2_02",
@@ -27476,7 +27476,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months2_03": {
    "id": "NUM_months2_03",
@@ -27534,7 +27534,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months2_04": {
    "id": "NUM_months2_04",
@@ -27592,7 +27592,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months2_05": {
    "id": "NUM_months2_05",
@@ -27650,7 +27650,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months2_06": {
    "id": "NUM_months2_06",
@@ -27708,7 +27708,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months2_07": {
    "id": "NUM_months2_07",
@@ -27766,7 +27766,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months2_08": {
    "id": "NUM_months2_08",
@@ -27895,7 +27895,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_months2_10": {
    "id": "NUM_months2_10",
@@ -27953,7 +27953,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false,
+   "humanApproved": true,
    "needsEye": true,
    "eyeNote": "year-wheel table; two near-identical attempts 52/53"
   },
@@ -28013,7 +28013,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_shapes_02": {
    "id": "NUM_shapes_02",
@@ -28071,7 +28071,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_shapes_03": {
    "id": "NUM_shapes_03",
@@ -28129,7 +28129,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_shapes_04": {
    "id": "NUM_shapes_04",
@@ -28187,7 +28187,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_shapes_05": {
    "id": "NUM_shapes_05",
@@ -28245,7 +28245,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_shapes_06": {
    "id": "NUM_shapes_06",
@@ -28303,7 +28303,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_shapes_07": {
    "id": "NUM_shapes_07",
@@ -28361,7 +28361,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_shapes_08": {
    "id": "NUM_shapes_08",
@@ -28419,7 +28419,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_shapes_09": {
    "id": "NUM_shapes_09",
@@ -28477,7 +28477,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_shapes_10": {
    "id": "NUM_shapes_10",
@@ -28535,7 +28535,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_teens_01": {
    "id": "NUM_teens_01",
@@ -28725,7 +28725,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_teens_04": {
    "id": "NUM_teens_04",
@@ -28783,7 +28783,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_teens_05": {
    "id": "NUM_teens_05",
@@ -28978,7 +28978,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_teens_08": {
    "id": "NUM_teens_08",
@@ -29036,7 +29036,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_teens_09": {
    "id": "NUM_teens_09",
@@ -29094,7 +29094,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_teens_10": {
    "id": "NUM_teens_10",
@@ -29156,7 +29156,7 @@
    "flags": [
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_tens_02": {
    "id": "NUM_tens_02",
@@ -29285,7 +29285,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_tens_04": {
    "id": "NUM_tens_04",
@@ -29713,7 +29713,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false,
+   "humanApproved": true,
    "needsEye": true,
    "eyeNote": "two files carry this id; this later one kept, earlier exec-43e2d2c3-8f6f-4584-be02-a2bab8f2fd65.png dropped; check by eye"
   },
@@ -29936,7 +29936,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_time_02": {
    "id": "NUM_time_02",
@@ -29994,7 +29994,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_time_03": {
    "id": "NUM_time_03",
@@ -30052,7 +30052,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_time_04": {
    "id": "NUM_time_04",
@@ -30110,7 +30110,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_time_05": {
    "id": "NUM_time_05",
@@ -30168,7 +30168,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_time_06": {
    "id": "NUM_time_06",
@@ -30226,7 +30226,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_time_07": {
    "id": "NUM_time_07",
@@ -30284,7 +30284,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_time_08": {
    "id": "NUM_time_08",
@@ -30342,7 +30342,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_time_09": {
    "id": "NUM_time_09",
@@ -30400,7 +30400,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "NUM_time_10": {
    "id": "NUM_time_10",
@@ -30458,7 +30458,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_one_01": {
    "id": "OPP_one_01",
@@ -30516,7 +30516,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_one_02": {
    "id": "OPP_one_02",
@@ -30574,7 +30574,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_one_03": {
    "id": "OPP_one_03",
@@ -30632,7 +30632,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_one_04": {
    "id": "OPP_one_04",
@@ -30690,7 +30690,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_one_05": {
    "id": "OPP_one_05",
@@ -30748,7 +30748,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_one_06": {
    "id": "OPP_one_06",
@@ -30806,7 +30806,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_one_07": {
    "id": "OPP_one_07",
@@ -30864,7 +30864,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_one_08": {
    "id": "OPP_one_08",
@@ -30922,7 +30922,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_one_09": {
    "id": "OPP_one_09",
@@ -30980,7 +30980,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_one_10": {
    "id": "OPP_one_10",
@@ -31038,7 +31038,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_two_01": {
    "id": "OPP_two_01",
@@ -31096,7 +31096,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_two_02": {
    "id": "OPP_two_02",
@@ -31154,7 +31154,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_two_03": {
    "id": "OPP_two_03",
@@ -31212,7 +31212,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_two_04": {
    "id": "OPP_two_04",
@@ -31270,7 +31270,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_two_05": {
    "id": "OPP_two_05",
@@ -31332,7 +31332,7 @@
    "flags": [
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_two_06": {
    "id": "OPP_two_06",
@@ -31390,7 +31390,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_two_07": {
    "id": "OPP_two_07",
@@ -31448,7 +31448,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_two_08": {
    "id": "OPP_two_08",
@@ -31506,7 +31506,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "OPP_two_09": {
    "id": "OPP_two_09",
@@ -31630,7 +31630,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_abraham_01": {
    "id": "STORY_abraham_01",
@@ -31688,7 +31688,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_abraham_02": {
    "id": "STORY_abraham_02",
@@ -31746,7 +31746,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_abraham_03": {
    "id": "STORY_abraham_03",
@@ -31804,7 +31804,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_abraham_04": {
    "id": "STORY_abraham_04",
@@ -31862,7 +31862,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_abraham_05": {
    "id": "STORY_abraham_05",
@@ -31920,7 +31920,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_abraham_06": {
    "id": "STORY_abraham_06",
@@ -32048,7 +32048,7 @@
    "flags": [
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_abraham_08": {
    "id": "STORY_abraham_08",
@@ -32106,7 +32106,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_abraham_09": {
    "id": "STORY_abraham_09",
@@ -32164,7 +32164,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_abraham_10": {
    "id": "STORY_abraham_10",
@@ -32222,7 +32222,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_creation_01": {
    "id": "STORY_creation_01",
@@ -32280,7 +32280,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_creation_02": {
    "id": "STORY_creation_02",
@@ -32338,7 +32338,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_creation_03": {
    "id": "STORY_creation_03",
@@ -32396,7 +32396,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_creation_04": {
    "id": "STORY_creation_04",
@@ -32454,7 +32454,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_creation_05": {
    "id": "STORY_creation_05",
@@ -32512,7 +32512,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_creation_06": {
    "id": "STORY_creation_06",
@@ -32570,7 +32570,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_creation_07": {
    "id": "STORY_creation_07",
@@ -32694,7 +32694,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_creation_09": {
    "id": "STORY_creation_09",
@@ -32752,7 +32752,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_creation_10": {
    "id": "STORY_creation_10",
@@ -32876,7 +32876,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_jacob_02": {
    "id": "STORY_jacob_02",
@@ -32934,7 +32934,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_jacob_03": {
    "id": "STORY_jacob_03",
@@ -32992,7 +32992,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_jacob_04": {
    "id": "STORY_jacob_04",
@@ -33050,7 +33050,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_jacob_05": {
    "id": "STORY_jacob_05",
@@ -33108,7 +33108,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_jacob_06": {
    "id": "STORY_jacob_06",
@@ -33166,7 +33166,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_jacob_07": {
    "id": "STORY_jacob_07",
@@ -33224,7 +33224,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_jacob_08": {
    "id": "STORY_jacob_08",
@@ -33348,7 +33348,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_jacob_10": {
    "id": "STORY_jacob_10",
@@ -33472,7 +33472,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_joseph_02": {
    "id": "STORY_joseph_02",
@@ -33530,7 +33530,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_joseph_03": {
    "id": "STORY_joseph_03",
@@ -33588,7 +33588,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_joseph_04": {
    "id": "STORY_joseph_04",
@@ -33646,7 +33646,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_joseph_05": {
    "id": "STORY_joseph_05",
@@ -33704,7 +33704,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_joseph_06": {
    "id": "STORY_joseph_06",
@@ -33762,7 +33762,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_joseph_07": {
    "id": "STORY_joseph_07",
@@ -33952,7 +33952,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_joseph_10": {
    "id": "STORY_joseph_10",
@@ -34076,7 +34076,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_judges_02": {
    "id": "STORY_judges_02",
@@ -34134,7 +34134,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_judges_03": {
    "id": "STORY_judges_03",
@@ -34192,7 +34192,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_judges_04": {
    "id": "STORY_judges_04",
@@ -34250,7 +34250,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_judges_05": {
    "id": "STORY_judges_05",
@@ -34308,7 +34308,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_judges_06": {
    "id": "STORY_judges_06",
@@ -34366,7 +34366,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_judges_07": {
    "id": "STORY_judges_07",
@@ -34424,7 +34424,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_judges_08": {
    "id": "STORY_judges_08",
@@ -34482,7 +34482,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_judges_09": {
    "id": "STORY_judges_09",
@@ -34540,7 +34540,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_judges_10": {
    "id": "STORY_judges_10",
@@ -34598,7 +34598,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_kings_01": {
    "id": "STORY_kings_01",
@@ -34656,7 +34656,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_kings_02": {
    "id": "STORY_kings_02",
@@ -34714,7 +34714,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_kings_03": {
    "id": "STORY_kings_03",
@@ -34772,7 +34772,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_kings_04": {
    "id": "STORY_kings_04",
@@ -34896,7 +34896,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_kings_06": {
    "id": "STORY_kings_06",
@@ -34954,7 +34954,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_kings_07": {
    "id": "STORY_kings_07",
@@ -35012,7 +35012,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_kings_08": {
    "id": "STORY_kings_08",
@@ -35070,7 +35070,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_kings_09": {
    "id": "STORY_kings_09",
@@ -35128,7 +35128,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_kings_10": {
    "id": "STORY_kings_10",
@@ -35186,7 +35186,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses1_01": {
    "id": "STORY_moses1_01",
@@ -35244,7 +35244,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses1_02": {
    "id": "STORY_moses1_02",
@@ -35302,7 +35302,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses1_03": {
    "id": "STORY_moses1_03",
@@ -35360,7 +35360,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses1_04": {
    "id": "STORY_moses1_04",
@@ -35484,7 +35484,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses1_06": {
    "id": "STORY_moses1_06",
@@ -35542,7 +35542,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses1_07": {
    "id": "STORY_moses1_07",
@@ -35600,7 +35600,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses1_08": {
    "id": "STORY_moses1_08",
@@ -35724,7 +35724,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses1_10": {
    "id": "STORY_moses1_10",
@@ -35782,7 +35782,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses2_01": {
    "id": "STORY_moses2_01",
@@ -35840,7 +35840,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses2_02": {
    "id": "STORY_moses2_02",
@@ -35898,7 +35898,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses2_03": {
    "id": "STORY_moses2_03",
@@ -35956,7 +35956,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses2_04": {
    "id": "STORY_moses2_04",
@@ -36014,7 +36014,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses2_05": {
    "id": "STORY_moses2_05",
@@ -36072,7 +36072,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses2_06": {
    "id": "STORY_moses2_06",
@@ -36130,7 +36130,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses2_07": {
    "id": "STORY_moses2_07",
@@ -36256,7 +36256,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_moses2_09": {
    "id": "STORY_moses2_09",
@@ -36314,7 +36314,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false,
+   "humanApproved": true,
    "needsEye": true,
    "eyeNote": "dates and figs table; 645 near-identical, later kept"
   },
@@ -36374,7 +36374,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_noah_01": {
    "id": "STORY_noah_01",
@@ -36432,7 +36432,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_noah_02": {
    "id": "STORY_noah_02",
@@ -36490,7 +36490,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_noah_03": {
    "id": "STORY_noah_03",
@@ -36548,7 +36548,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_noah_04": {
    "id": "STORY_noah_04",
@@ -36606,7 +36606,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_noah_05": {
    "id": "STORY_noah_05",
@@ -36664,7 +36664,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_noah_06": {
    "id": "STORY_noah_06",
@@ -36722,7 +36722,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_noah_07": {
    "id": "STORY_noah_07",
@@ -36780,7 +36780,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_noah_08": {
    "id": "STORY_noah_08",
@@ -36838,7 +36838,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_noah_09": {
    "id": "STORY_noah_09",
@@ -37030,7 +37030,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_prophets_02": {
    "id": "STORY_prophets_02",
@@ -37092,7 +37092,7 @@
    "flags": [
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_prophets_03": {
    "id": "STORY_prophets_03",
@@ -37150,7 +37150,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_prophets_04": {
    "id": "STORY_prophets_04",
@@ -37212,7 +37212,7 @@
    "flags": [
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_prophets_05": {
    "id": "STORY_prophets_05",
@@ -37270,7 +37270,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_prophets_06": {
    "id": "STORY_prophets_06",
@@ -37328,7 +37328,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_prophets_07": {
    "id": "STORY_prophets_07",
@@ -37386,7 +37386,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_prophets_08": {
    "id": "STORY_prophets_08",
@@ -37444,7 +37444,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_prophets_09": {
    "id": "STORY_prophets_09",
@@ -37502,7 +37502,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "STORY_prophets_10": {
    "id": "STORY_prophets_10",
@@ -37560,7 +37560,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_etnachta_card": {
    "id": "TROPE_etnachta_card",
@@ -37621,7 +37621,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_etnachta_mnemonic": {
    "id": "TROPE_etnachta_mnemonic",
@@ -37679,7 +37679,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_hand_01": {
    "id": "TROPE_hand_01",
@@ -37737,7 +37737,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_hand_02": {
    "id": "TROPE_hand_02",
@@ -37795,7 +37795,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_hand_03": {
    "id": "TROPE_hand_03",
@@ -37853,7 +37853,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_hand_04": {
    "id": "TROPE_hand_04",
@@ -37911,7 +37911,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false,
+   "humanApproved": true,
    "needsEye": true,
    "eyeNote": "palm-up hand; 508 is near-identical retry, later kept"
   },
@@ -37971,7 +37971,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_hand_06": {
    "id": "TROPE_hand_06",
@@ -38029,7 +38029,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_hand_07": {
    "id": "TROPE_hand_07",
@@ -38087,7 +38087,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_hand_08": {
    "id": "TROPE_hand_08",
@@ -38145,7 +38145,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_hand_09": {
    "id": "TROPE_hand_09",
@@ -38203,7 +38203,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_hand_10": {
    "id": "TROPE_hand_10",
@@ -38261,7 +38261,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_kadma_card": {
    "id": "TROPE_kadma_card",
@@ -38322,7 +38322,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_kadma_mnemonic": {
    "id": "TROPE_kadma_mnemonic",
@@ -38380,7 +38380,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_karney_para_card": {
    "id": "TROPE_karney_para_card",
@@ -38441,7 +38441,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_karney_para_mnemonic": {
    "id": "TROPE_karney_para_mnemonic",
@@ -38499,7 +38499,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_mahapakh_card": {
    "id": "TROPE_mahapakh_card",
@@ -38560,7 +38560,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_mahapakh_mnemonic": {
    "id": "TROPE_mahapakh_mnemonic",
@@ -38618,7 +38618,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_mercha_card": {
    "id": "TROPE_mercha_card",
@@ -38679,7 +38679,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_mercha_mnemonic": {
    "id": "TROPE_mercha_mnemonic",
@@ -38737,7 +38737,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_munach_card": {
    "id": "TROPE_munach_card",
@@ -38798,7 +38798,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_munach_mnemonic": {
    "id": "TROPE_munach_mnemonic",
@@ -38856,7 +38856,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_pashta_card": {
    "id": "TROPE_pashta_card",
@@ -38917,7 +38917,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_pashta_mnemonic": {
    "id": "TROPE_pashta_mnemonic",
@@ -38975,7 +38975,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_pazer_card": {
    "id": "TROPE_pazer_card",
@@ -39036,7 +39036,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_pazer_mnemonic": {
    "id": "TROPE_pazer_mnemonic",
@@ -39094,7 +39094,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_segolta_card": {
    "id": "TROPE_segolta_card",
@@ -39155,7 +39155,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_segolta_mnemonic": {
    "id": "TROPE_segolta_mnemonic",
@@ -39213,7 +39213,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_sof_pasuk_card": {
    "id": "TROPE_sof_pasuk_card",
@@ -39274,7 +39274,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_sof_pasuk_mnemonic": {
    "id": "TROPE_sof_pasuk_mnemonic",
@@ -39332,7 +39332,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_telisha_card": {
    "id": "TROPE_telisha_card",
@@ -39393,7 +39393,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_telisha_mnemonic": {
    "id": "TROPE_telisha_mnemonic",
@@ -39451,7 +39451,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_tifcha_card": {
    "id": "TROPE_tifcha_card",
@@ -39512,7 +39512,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_tifcha_mnemonic": {
    "id": "TROPE_tifcha_mnemonic",
@@ -39570,7 +39570,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_zakef_gadol_card": {
    "id": "TROPE_zakef_gadol_card",
@@ -39631,7 +39631,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_zakef_gadol_mnemonic": {
    "id": "TROPE_zakef_gadol_mnemonic",
@@ -39689,7 +39689,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_zakef_katan_card": {
    "id": "TROPE_zakef_katan_card",
@@ -39750,7 +39750,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_zakef_katan_mnemonic": {
    "id": "TROPE_zakef_katan_mnemonic",
@@ -39808,7 +39808,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_zarka_card": {
    "id": "TROPE_zarka_card",
@@ -39869,7 +39869,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "TROPE_zarka_mnemonic": {
    "id": "TROPE_zarka_mnemonic",
@@ -39927,7 +39927,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V01_kamatz_ari": {
    "id": "V01_kamatz_ari",
@@ -39985,7 +39985,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V01_kamatz_card": {
    "id": "V01_kamatz_card",
@@ -40046,7 +40046,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V01_kamatz_keyword": {
    "id": "V01_kamatz_keyword",
@@ -40104,7 +40104,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V01_kamatz_noa": {
    "id": "V01_kamatz_noa",
@@ -40162,7 +40162,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V01_kamatz_position": {
    "id": "V01_kamatz_position",
@@ -40220,7 +40220,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V02_patach_ari": {
    "id": "V02_patach_ari",
@@ -40278,7 +40278,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V02_patach_card": {
    "id": "V02_patach_card",
@@ -40339,7 +40339,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V02_patach_keyword": {
    "id": "V02_patach_keyword",
@@ -40397,7 +40397,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V02_patach_noa": {
    "id": "V02_patach_noa",
@@ -40455,7 +40455,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V02_patach_position": {
    "id": "V02_patach_position",
@@ -40513,7 +40513,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V03_tzere_ari": {
    "id": "V03_tzere_ari",
@@ -40571,7 +40571,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V03_tzere_card": {
    "id": "V03_tzere_card",
@@ -40632,7 +40632,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V03_tzere_keyword": {
    "id": "V03_tzere_keyword",
@@ -40690,7 +40690,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V03_tzere_noa": {
    "id": "V03_tzere_noa",
@@ -40748,7 +40748,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V03_tzere_position": {
    "id": "V03_tzere_position",
@@ -40806,7 +40806,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V04_segol_ari": {
    "id": "V04_segol_ari",
@@ -40868,7 +40868,7 @@
    "flags": [
     "possible_text"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V04_segol_card": {
    "id": "V04_segol_card",
@@ -40929,7 +40929,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V04_segol_keyword": {
    "id": "V04_segol_keyword",
@@ -40987,7 +40987,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V04_segol_noa": {
    "id": "V04_segol_noa",
@@ -41045,7 +41045,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V04_segol_position": {
    "id": "V04_segol_position",
@@ -41103,7 +41103,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V05_chirik_ari": {
    "id": "V05_chirik_ari",
@@ -41161,7 +41161,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V05_chirik_card": {
    "id": "V05_chirik_card",
@@ -41222,7 +41222,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V05_chirik_keyword": {
    "id": "V05_chirik_keyword",
@@ -41280,7 +41280,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V05_chirik_noa": {
    "id": "V05_chirik_noa",
@@ -41338,7 +41338,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V05_chirik_position": {
    "id": "V05_chirik_position",
@@ -41396,7 +41396,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V06_cholam_male_ari": {
    "id": "V06_cholam_male_ari",
@@ -41454,7 +41454,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V06_cholam_male_card": {
    "id": "V06_cholam_male_card",
@@ -41515,7 +41515,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V06_cholam_male_keyword": {
    "id": "V06_cholam_male_keyword",
@@ -41573,7 +41573,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V06_cholam_male_noa": {
    "id": "V06_cholam_male_noa",
@@ -41631,7 +41631,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V06_cholam_male_position": {
    "id": "V06_cholam_male_position",
@@ -41689,7 +41689,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V07_cholam_chaser_ari": {
    "id": "V07_cholam_chaser_ari",
@@ -41747,7 +41747,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V07_cholam_chaser_card": {
    "id": "V07_cholam_chaser_card",
@@ -41808,7 +41808,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V07_cholam_chaser_keyword": {
    "id": "V07_cholam_chaser_keyword",
@@ -41866,7 +41866,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V07_cholam_chaser_noa": {
    "id": "V07_cholam_chaser_noa",
@@ -41924,7 +41924,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V07_cholam_chaser_position": {
    "id": "V07_cholam_chaser_position",
@@ -41982,7 +41982,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V08_kubutz_ari": {
    "id": "V08_kubutz_ari",
@@ -42040,7 +42040,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V08_kubutz_card": {
    "id": "V08_kubutz_card",
@@ -42101,7 +42101,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V08_kubutz_keyword": {
    "id": "V08_kubutz_keyword",
@@ -42159,7 +42159,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V08_kubutz_noa": {
    "id": "V08_kubutz_noa",
@@ -42217,7 +42217,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V08_kubutz_position": {
    "id": "V08_kubutz_position",
@@ -42275,7 +42275,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V09_shuruk_ari": {
    "id": "V09_shuruk_ari",
@@ -42333,7 +42333,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V09_shuruk_card": {
    "id": "V09_shuruk_card",
@@ -42394,7 +42394,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V09_shuruk_keyword": {
    "id": "V09_shuruk_keyword",
@@ -42452,7 +42452,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V09_shuruk_noa": {
    "id": "V09_shuruk_noa",
@@ -42510,7 +42510,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V09_shuruk_position": {
    "id": "V09_shuruk_position",
@@ -42568,7 +42568,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V10_shva_ari": {
    "id": "V10_shva_ari",
@@ -42626,7 +42626,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V10_shva_card": {
    "id": "V10_shva_card",
@@ -42687,7 +42687,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V10_shva_keyword": {
    "id": "V10_shva_keyword",
@@ -42745,7 +42745,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V10_shva_noa": {
    "id": "V10_shva_noa",
@@ -42803,7 +42803,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V10_shva_position": {
    "id": "V10_shva_position",
@@ -42861,7 +42861,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V11_chataf_patach_ari": {
    "id": "V11_chataf_patach_ari",
@@ -42919,7 +42919,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V11_chataf_patach_card": {
    "id": "V11_chataf_patach_card",
@@ -42980,7 +42980,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V11_chataf_patach_keyword": {
    "id": "V11_chataf_patach_keyword",
@@ -43038,7 +43038,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V11_chataf_patach_noa": {
    "id": "V11_chataf_patach_noa",
@@ -43096,7 +43096,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V11_chataf_patach_position": {
    "id": "V11_chataf_patach_position",
@@ -43154,7 +43154,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false,
+   "humanApproved": true,
    "needsEye": true,
    "eyeNote": "retry of position card; 359 earlier filled-square attempt"
   },
@@ -43214,7 +43214,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V12_chataf_segol_card": {
    "id": "V12_chataf_segol_card",
@@ -43275,7 +43275,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V12_chataf_segol_keyword": {
    "id": "V12_chataf_segol_keyword",
@@ -43399,7 +43399,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V12_chataf_segol_position": {
    "id": "V12_chataf_segol_position",
@@ -43457,7 +43457,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V13_chataf_kamatz_ari": {
    "id": "V13_chataf_kamatz_ari",
@@ -43515,7 +43515,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V13_chataf_kamatz_card": {
    "id": "V13_chataf_kamatz_card",
@@ -43576,7 +43576,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V13_chataf_kamatz_keyword": {
    "id": "V13_chataf_kamatz_keyword",
@@ -43634,7 +43634,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V13_chataf_kamatz_noa": {
    "id": "V13_chataf_kamatz_noa",
@@ -43692,7 +43692,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V13_chataf_kamatz_position": {
    "id": "V13_chataf_kamatz_position",
@@ -43750,7 +43750,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V14_dagesh_ari": {
    "id": "V14_dagesh_ari",
@@ -43808,7 +43808,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V14_dagesh_card": {
    "id": "V14_dagesh_card",
@@ -43869,7 +43869,7 @@
    "flags": [
     "aspect_mismatch_allowed"
    ],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V14_dagesh_keyword": {
    "id": "V14_dagesh_keyword",
@@ -43927,7 +43927,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V14_dagesh_noa": {
    "id": "V14_dagesh_noa",
@@ -43985,7 +43985,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V14_dagesh_position": {
    "id": "V14_dagesh_position",
@@ -44043,7 +44043,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V15_shin_sin_dots_ari": {
    "id": "V15_shin_sin_dots_ari",
@@ -44101,7 +44101,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V15_shin_sin_dots_card": {
    "id": "V15_shin_sin_dots_card",
@@ -44227,7 +44227,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V15_shin_sin_dots_noa": {
    "id": "V15_shin_sin_dots_noa",
@@ -44285,7 +44285,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "V15_shin_sin_dots_position": {
    "id": "V15_shin_sin_dots_position",
@@ -44343,7 +44343,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_01": {
    "id": "VERB_change_01",
@@ -44401,7 +44401,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_02": {
    "id": "VERB_change_02",
@@ -44459,7 +44459,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_03": {
    "id": "VERB_change_03",
@@ -44517,7 +44517,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_04": {
    "id": "VERB_change_04",
@@ -44575,7 +44575,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_05": {
    "id": "VERB_change_05",
@@ -44633,7 +44633,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_06": {
    "id": "VERB_change_06",
@@ -44691,7 +44691,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_07": {
    "id": "VERB_change_07",
@@ -44749,7 +44749,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_08": {
    "id": "VERB_change_08",
@@ -44807,7 +44807,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_09": {
    "id": "VERB_change_09",
@@ -44865,7 +44865,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_change_10": {
    "id": "VERB_change_10",
@@ -44923,7 +44923,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_eat_all_01": {
    "id": "VERB_eat_all_01",
@@ -44981,7 +44981,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_eat_all_02": {
    "id": "VERB_eat_all_02",
@@ -45039,7 +45039,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_eat_all_03": {
    "id": "VERB_eat_all_03",
@@ -45097,7 +45097,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_eat_all_04": {
    "id": "VERB_eat_all_04",
@@ -45155,7 +45155,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_eat_all_05": {
    "id": "VERB_eat_all_05",
@@ -45213,7 +45213,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_eat_all_06": {
    "id": "VERB_eat_all_06",
@@ -45271,7 +45271,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_eat_all_07": {
    "id": "VERB_eat_all_07",
@@ -45329,7 +45329,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_eat_all_08": {
    "id": "VERB_eat_all_08",
@@ -45453,7 +45453,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_eat_all_10": {
    "id": "VERB_eat_all_10",
@@ -45511,7 +45511,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_hand_01": {
    "id": "VERB_hand_01",
@@ -45569,7 +45569,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_hand_02": {
    "id": "VERB_hand_02",
@@ -45627,7 +45627,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_hand_03": {
    "id": "VERB_hand_03",
@@ -45685,7 +45685,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_hand_04": {
    "id": "VERB_hand_04",
@@ -45743,7 +45743,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_hand_05": {
    "id": "VERB_hand_05",
@@ -45867,7 +45867,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_hand_07": {
    "id": "VERB_hand_07",
@@ -45925,7 +45925,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_hand_08": {
    "id": "VERB_hand_08",
@@ -45983,7 +45983,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_hand_09": {
    "id": "VERB_hand_09",
@@ -46041,7 +46041,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_hand_10": {
    "id": "VERB_hand_10",
@@ -46099,7 +46099,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_home_01": {
    "id": "VERB_home_01",
@@ -46157,7 +46157,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_home_02": {
    "id": "VERB_home_02",
@@ -46215,7 +46215,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_home_03": {
    "id": "VERB_home_03",
@@ -46273,7 +46273,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_home_04": {
    "id": "VERB_home_04",
@@ -46399,7 +46399,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_home_06": {
    "id": "VERB_home_06",
@@ -46457,7 +46457,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_home_07": {
    "id": "VERB_home_07",
@@ -46515,7 +46515,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_home_08": {
    "id": "VERB_home_08",
@@ -46573,7 +46573,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_home_09": {
    "id": "VERB_home_09",
@@ -46631,7 +46631,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_home_10": {
    "id": "VERB_home_10",
@@ -46689,7 +46689,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_01": {
    "id": "VERB_kitchen_01",
@@ -46747,7 +46747,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_02": {
    "id": "VERB_kitchen_02",
@@ -46805,7 +46805,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_03": {
    "id": "VERB_kitchen_03",
@@ -46863,7 +46863,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_04": {
    "id": "VERB_kitchen_04",
@@ -46921,7 +46921,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_05": {
    "id": "VERB_kitchen_05",
@@ -46979,7 +46979,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_06": {
    "id": "VERB_kitchen_06",
@@ -47037,7 +47037,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_07": {
    "id": "VERB_kitchen_07",
@@ -47095,7 +47095,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_08": {
    "id": "VERB_kitchen_08",
@@ -47153,7 +47153,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_09": {
    "id": "VERB_kitchen_09",
@@ -47211,7 +47211,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_kitchen_10": {
    "id": "VERB_kitchen_10",
@@ -47269,7 +47269,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_01": {
    "id": "VERB_mind_01",
@@ -47327,7 +47327,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_02": {
    "id": "VERB_mind_02",
@@ -47385,7 +47385,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_03": {
    "id": "VERB_mind_03",
@@ -47443,7 +47443,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_04": {
    "id": "VERB_mind_04",
@@ -47501,7 +47501,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_05": {
    "id": "VERB_mind_05",
@@ -47559,7 +47559,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_06": {
    "id": "VERB_mind_06",
@@ -47617,7 +47617,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_07": {
    "id": "VERB_mind_07",
@@ -47675,7 +47675,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_08": {
    "id": "VERB_mind_08",
@@ -47733,7 +47733,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_09": {
    "id": "VERB_mind_09",
@@ -47791,7 +47791,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_mind_10": {
    "id": "VERB_mind_10",
@@ -47849,7 +47849,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_move_01": {
    "id": "VERB_move_01",
@@ -47907,7 +47907,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_move_02": {
    "id": "VERB_move_02",
@@ -47965,7 +47965,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_move_03": {
    "id": "VERB_move_03",
@@ -48023,7 +48023,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_move_04": {
    "id": "VERB_move_04",
@@ -48081,7 +48081,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_move_05": {
    "id": "VERB_move_05",
@@ -48139,7 +48139,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_move_06": {
    "id": "VERB_move_06",
@@ -48197,7 +48197,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_move_07": {
    "id": "VERB_move_07",
@@ -48255,7 +48255,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_move_08": {
    "id": "VERB_move_08",
@@ -48313,7 +48313,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_move_09": {
    "id": "VERB_move_09",
@@ -48437,7 +48437,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_talk_01": {
    "id": "VERB_talk_01",
@@ -48495,7 +48495,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_talk_02": {
    "id": "VERB_talk_02",
@@ -48553,7 +48553,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_talk_03": {
    "id": "VERB_talk_03",
@@ -48611,7 +48611,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_talk_04": {
    "id": "VERB_talk_04",
@@ -48669,7 +48669,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_talk_05": {
    "id": "VERB_talk_05",
@@ -48793,7 +48793,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_talk_07": {
    "id": "VERB_talk_07",
@@ -48851,7 +48851,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_talk_08": {
    "id": "VERB_talk_08",
@@ -48909,7 +48909,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_talk_09": {
    "id": "VERB_talk_09",
@@ -48967,7 +48967,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VERB_talk_10": {
    "id": "VERB_talk_10",
@@ -49025,7 +49025,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_01": {
    "id": "VOC_body_01",
@@ -49083,7 +49083,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_02": {
    "id": "VOC_body_02",
@@ -49141,7 +49141,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_03": {
    "id": "VOC_body_03",
@@ -49199,7 +49199,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_04": {
    "id": "VOC_body_04",
@@ -49257,7 +49257,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_05": {
    "id": "VOC_body_05",
@@ -49315,7 +49315,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_07": {
    "id": "VOC_body_07",
@@ -49373,7 +49373,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_08": {
    "id": "VOC_body_08",
@@ -49431,7 +49431,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_09": {
    "id": "VOC_body_09",
@@ -49489,7 +49489,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_10": {
    "id": "VOC_body_10",
@@ -49547,7 +49547,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_body_06": {
    "id": "VOC_body_06",
@@ -49605,7 +49605,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_01": {
    "id": "VOC_cafe_01",
@@ -49663,7 +49663,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_02": {
    "id": "VOC_cafe_02",
@@ -49721,7 +49721,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_03": {
    "id": "VOC_cafe_03",
@@ -49779,7 +49779,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_04": {
    "id": "VOC_cafe_04",
@@ -49837,7 +49837,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_05": {
    "id": "VOC_cafe_05",
@@ -49895,7 +49895,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_06": {
    "id": "VOC_cafe_06",
@@ -49953,7 +49953,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_07": {
    "id": "VOC_cafe_07",
@@ -50011,7 +50011,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_08": {
    "id": "VOC_cafe_08",
@@ -50069,7 +50069,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_09": {
    "id": "VOC_cafe_09",
@@ -50127,7 +50127,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_cafe_10": {
    "id": "VOC_cafe_10",
@@ -50185,7 +50185,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_01": {
    "id": "VOC_colours_01",
@@ -50243,7 +50243,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_02": {
    "id": "VOC_colours_02",
@@ -50301,7 +50301,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_03": {
    "id": "VOC_colours_03",
@@ -50359,7 +50359,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_04": {
    "id": "VOC_colours_04",
@@ -50417,7 +50417,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_05": {
    "id": "VOC_colours_05",
@@ -50475,7 +50475,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_06": {
    "id": "VOC_colours_06",
@@ -50533,7 +50533,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_07": {
    "id": "VOC_colours_07",
@@ -50591,7 +50591,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_08": {
    "id": "VOC_colours_08",
@@ -50649,7 +50649,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_09": {
    "id": "VOC_colours_09",
@@ -50707,7 +50707,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_colours_10": {
    "id": "VOC_colours_10",
@@ -50765,7 +50765,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_01": {
    "id": "VOC_directions_01",
@@ -50823,7 +50823,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_02": {
    "id": "VOC_directions_02",
@@ -50881,7 +50881,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_03": {
    "id": "VOC_directions_03",
@@ -50939,7 +50939,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_04": {
    "id": "VOC_directions_04",
@@ -50997,7 +50997,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_05": {
    "id": "VOC_directions_05",
@@ -51055,7 +51055,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_06": {
    "id": "VOC_directions_06",
@@ -51113,7 +51113,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_07": {
    "id": "VOC_directions_07",
@@ -51171,7 +51171,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_08": {
    "id": "VOC_directions_08",
@@ -51229,7 +51229,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_09": {
    "id": "VOC_directions_09",
@@ -51287,7 +51287,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_directions_10": {
    "id": "VOC_directions_10",
@@ -51345,7 +51345,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_01": {
    "id": "VOC_greetings_01",
@@ -51403,7 +51403,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_02": {
    "id": "VOC_greetings_02",
@@ -51461,7 +51461,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_03": {
    "id": "VOC_greetings_03",
@@ -51519,7 +51519,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_04": {
    "id": "VOC_greetings_04",
@@ -51577,7 +51577,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_05": {
    "id": "VOC_greetings_05",
@@ -51635,7 +51635,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_06": {
    "id": "VOC_greetings_06",
@@ -51693,7 +51693,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_07": {
    "id": "VOC_greetings_07",
@@ -51751,7 +51751,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_08": {
    "id": "VOC_greetings_08",
@@ -51809,7 +51809,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_09": {
    "id": "VOC_greetings_09",
@@ -51867,7 +51867,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_greetings_10": {
    "id": "VOC_greetings_10",
@@ -51925,7 +51925,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_01": {
    "id": "VOC_home_01",
@@ -51983,7 +51983,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_02": {
    "id": "VOC_home_02",
@@ -52041,7 +52041,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_03": {
    "id": "VOC_home_03",
@@ -52099,7 +52099,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_04": {
    "id": "VOC_home_04",
@@ -52157,7 +52157,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_05": {
    "id": "VOC_home_05",
@@ -52215,7 +52215,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_06": {
    "id": "VOC_home_06",
@@ -52273,7 +52273,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_07": {
    "id": "VOC_home_07",
@@ -52331,7 +52331,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_08": {
    "id": "VOC_home_08",
@@ -52389,7 +52389,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_09": {
    "id": "VOC_home_09",
@@ -52447,7 +52447,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_home_10": {
    "id": "VOC_home_10",
@@ -52505,7 +52505,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_01": {
    "id": "VOC_market_01",
@@ -52563,7 +52563,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_02": {
    "id": "VOC_market_02",
@@ -52621,7 +52621,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_03": {
    "id": "VOC_market_03",
@@ -52679,7 +52679,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_04": {
    "id": "VOC_market_04",
@@ -52737,7 +52737,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_05": {
    "id": "VOC_market_05",
@@ -52795,7 +52795,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_06": {
    "id": "VOC_market_06",
@@ -52853,7 +52853,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_07": {
    "id": "VOC_market_07",
@@ -52911,7 +52911,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_08": {
    "id": "VOC_market_08",
@@ -52969,7 +52969,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_09": {
    "id": "VOC_market_09",
@@ -53027,7 +53027,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_market_10": {
    "id": "VOC_market_10",
@@ -53085,7 +53085,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_numbers_01": {
    "id": "VOC_numbers_01",
@@ -53143,7 +53143,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_numbers_02": {
    "id": "VOC_numbers_02",
@@ -53201,7 +53201,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_numbers_03": {
    "id": "VOC_numbers_03",
@@ -53259,7 +53259,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_numbers_04": {
    "id": "VOC_numbers_04",
@@ -53317,7 +53317,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_numbers_05": {
    "id": "VOC_numbers_05",
@@ -53375,7 +53375,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_numbers_06": {
    "id": "VOC_numbers_06",
@@ -53433,7 +53433,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_numbers_07": {
    "id": "VOC_numbers_07",
@@ -53491,7 +53491,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_numbers_08": {
    "id": "VOC_numbers_08",
@@ -53691,7 +53691,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_synagogue_01": {
    "id": "VOC_synagogue_01",
@@ -53749,7 +53749,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_synagogue_02": {
    "id": "VOC_synagogue_02",
@@ -53807,7 +53807,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_01": {
    "id": "VOC_transport_01",
@@ -53865,7 +53865,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_02": {
    "id": "VOC_transport_02",
@@ -53923,7 +53923,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_03": {
    "id": "VOC_transport_03",
@@ -53981,7 +53981,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_04": {
    "id": "VOC_transport_04",
@@ -54039,7 +54039,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_05": {
    "id": "VOC_transport_05",
@@ -54097,7 +54097,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_06": {
    "id": "VOC_transport_06",
@@ -54155,7 +54155,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_07": {
    "id": "VOC_transport_07",
@@ -54213,7 +54213,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_08": {
    "id": "VOC_transport_08",
@@ -54271,7 +54271,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_09": {
    "id": "VOC_transport_09",
@@ -54329,7 +54329,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   },
   "VOC_transport_10": {
    "id": "VOC_transport_10",
@@ -54387,7 +54387,7 @@
     "possibleLetters": []
    },
    "flags": [],
-   "humanApproved": false
+   "humanApproved": true
   }
  }
 }

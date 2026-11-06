@@ -354,6 +354,7 @@ export function mount(root, ctx = {}) {
     const quiet = !motionOk(ctx);
     let left = 60, timer = null;
     const art = picture(h, ctx, 'id', SCENE.letterRushRound, { width: 640, class: 'scene-art' });
+    const artNext = picture(h, ctx, 'id', SCENE.letterRushRound03, { width: 640, class: 'scene-art' });
     const prompt = h('p', { class: 'big', id: 'rush-prompt' });
     const score = h('p', { role: 'status' });
     const clock = h('p', { class: 'muted', id: 'rush-clock' });
@@ -369,6 +370,7 @@ export function mount(root, ctx = {}) {
       n += 1; if (l.id === target.id) ok += 1; ask();
     } }, he(l.he)));
     if (art) body.appendChild(art);
+    if (artNext) body.appendChild(artNext);
     body.appendChild(h('h2', {}, t('trace.rushTitle', 'Letter Rush')));
     body.appendChild(h('p', {}, t('trace.rushHelp', 'Tap the letter that is named. Ten right is a win.')));
     body.appendChild(prompt); body.appendChild(grid); body.appendChild(score); body.appendChild(clock);

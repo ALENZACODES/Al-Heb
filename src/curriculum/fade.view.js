@@ -22,7 +22,7 @@ export function mountFade(root, ctx, which = "1", q = {}) {
     const sources = new Map([...lines.map((e) => [e.id, { ...e, audioKind: "line", origin: "corpus" }]),
       ...book.entries.filter((e) => e.pointed && !/\n/.test(e.he) && e.he.split(/\s+/).length <= 8).map((e) => [e.id, { id: e.id, he: e.he, title: e.en, english: e.en, audioKind: "word", origin: "phrasebook", status: "unreviewed", proofread: false }])]);
     const corpusNote = "Prayer text comes from the corpus registry, where it was compared with its cited source by a machine; it is not proofread by a Hebrew teacher, so a mistake is possible. Phrasebook lines are original drafts that still need a native speaker.";
-    const head = [picture(el, ctx, "id", SCENE.niqqudFade, { width: 720, class: "scene-art" }), draftNotice(ctx, corpusNote)];
+    const head = [picture(el, ctx, "id", SCENE.niqqudFade, { width: 720, class: "scene-art" }), picture(el, ctx, "id", SCENE.niqqudFadeStill, { width: 720, class: "scene-art" }), draftNotice(ctx, corpusNote)];
 
     if (which === "1" || !sources.has(which)) {
       const missing = which !== "1" ? el("p", { role: "alert" }, `There is no practice line "${which}".`) : null;

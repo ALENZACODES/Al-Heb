@@ -9,13 +9,18 @@ export const SCENE = Object.freeze({
   minuteOneStill05: 'GAME_minute_one_celebration_05',
   letterRush: 'GAME_letter_rush',
   letterRushRound: 'GAME_letter_rush_02',
+  letterRushRound03: 'GAME_letter_rush_03',
   sofitSniper: 'GAME_sofit_sniper',
   sofitSniperLevel: 'GAME_sofit_sniper_02',
+  sofitSniperLevel03: 'GAME_sofit_sniper_03',
   niqqudFade: 'GAME_niqqud_fade',
+  niqqudFadeStill: 'GAME_niqqud_fade_02',
   traditionDetective: 'GAME_tradition_detective',
   traditionDetectiveListen: 'GAME_tradition_detective_02',
+  traditionDetectiveCase: 'GAME_tradition_detective_03',
   storyPostcard: 'GAME_story_postcard',
   storySeaside: 'GAME_story_seaside_market',
+  storyEpisode: 'GAME_story_episode_02',
   karaokeListen: 'GAME_karaoke_listen',
 });
 

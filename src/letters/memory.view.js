@@ -121,9 +121,11 @@ export async function mountMemoryPractice(host, ctx, { onExit, size = 8 } = {}) 
   const box = el("div", { class: "alef-mem-practice" });
   const card = picture(el, ctx, "id", SCENE.storyPostcard, { width: 640, class: "scene-art" });
   const market = picture(el, ctx, "id", SCENE.storySeaside, { width: 640, class: "scene-art" });
+  const episode = picture(el, ctx, "id", SCENE.storyEpisode, { width: 640, class: "scene-art" });
   host.replaceChildren(box);
   if (card) box.append(card);
   if (market) box.append(market);
+  if (episode) box.append(episode);
   let keyHandler = null;
   const done = () => { document.removeEventListener("keydown", keyHandler); keyHandler = null; };
 
@@ -147,6 +149,9 @@ export async function mountMemoryPractice(host, ctx, { onExit, size = 8 } = {}) 
     if (keyHandler) document.removeEventListener("keydown", keyHandler);
     keyHandler = (e) => block.onKey(e); document.addEventListener("keydown", keyHandler);
     box.replaceChildren(
+      ...(card ? [card] : []),
+      ...(market ? [market] : []),
+      ...(episode ? [episode] : []),
       el("p", { class: "muted", role: "status" }, `Question ${Math.min(p.resolved + 1, p.total)} of ${p.total}`),
       el("div", { class: "card alef-card" }, el("p", { class: "alef-mem-prompt" }, q.prompt), ...cueNodes(q), block.node, fb, next),
       el("p", { class: "muted alef-keys" }, "Keyboard: press 1 to 4 to choose."));

@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 557,
+ "count": 562,
  "images": {
   "BG_cafe": {
    "w": 1659,
@@ -1426,6 +1426,24 @@
     }
    ]
   },
+  "GAME_letter_rush_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_letter_rush_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_letter_rush_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
   "GAME_minute_one_celebration": {
    "w": 1254,
    "h": 1254,
@@ -1534,6 +1552,24 @@
     }
    ]
   },
+  "GAME_niqqud_fade_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_niqqud_fade_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_niqqud_fade_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
   "GAME_sofit_sniper": {
    "w": 1254,
    "h": 1254,
@@ -1565,6 +1601,42 @@
     {
      "edge": 1254,
      "file": "GAME_sofit_sniper_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "GAME_sofit_sniper_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_sofit_sniper_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_sofit_sniper_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "GAME_story_episode_02": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_story_episode_02.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_story_episode_02.1254.webp",
      "w": 1254,
      "h": 1254
     }
@@ -1637,6 +1709,24 @@
     {
      "edge": 1254,
      "file": "GAME_tradition_detective_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "GAME_tradition_detective_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_tradition_detective_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_tradition_detective_03.1254.webp",
      "w": 1254,
      "h": 1254
     }
@@ -12604,6 +12694,7 @@
   "GAME_letter_rush": "Scene for the Letter Rush letter-recognition game.",
   "GAME_sofit_sniper": "Scene for final-letter (sofit) practice.",
   "GAME_niqqud_fade": "Scene for vowel marks fading off pointed Hebrew.",
+  "GAME_niqqud_fade_02": "Scene for vowel marks fading off pointed Hebrew, second still.",
   "GAME_tradition_detective": "Scene for telling the reading traditions apart.",
   "GAME_story_postcard": "Postcard scene for a letter memory story.",
   "GAME_minute_one_celebration_02": "Celebration art for the first Hebrew word, second still.",
@@ -12611,10 +12702,14 @@
   "GAME_minute_one_celebration_04": "Celebration art for the first Hebrew word, fourth still.",
   "GAME_minute_one_celebration_05": "Celebration art for the first Hebrew word, fifth still.",
   "GAME_letter_rush_02": "Scene for Letter Rush, second round.",
+  "GAME_letter_rush_03": "Scene for Letter Rush, third round.",
   "GAME_sofit_sniper_02": "Scene for final-letter practice, second level.",
+  "GAME_sofit_sniper_03": "Scene for final-letter practice, third level.",
   "GAME_tradition_detective_02": "Listening case for telling the reading traditions apart.",
+  "GAME_tradition_detective_03": "Listening case for telling the reading traditions apart, third case.",
   "GAME_karaoke_listen": "Listen scene for prayer karaoke.",
   "GAME_story_seaside_market": "Seaside market scene for story mode.",
+  "GAME_story_episode_02": "Story mode scene, second episode.",
   "SPEAK_04_table_shabbat": "A Shabbat table scene for Say it.",
   "SPEAK_05_table_welcome": "A welcome-at-the-table scene for Say it.",
   "SPEAK_08_street_taxi": "A street taxi scene for Say it.",

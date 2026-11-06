@@ -362,6 +362,7 @@ export async function mount(root, ctx) {
           letterMeet(h, ctx, 'alef', { width: 220 }),
           letterMeet(h, ctx, 'bet', { width: 220 })),
         phase === 'fade' ? picture(h, ctx, 'id', SCENE.niqqudFade, { width: 640, class: 'scene-art' }) : null,
+        phase === 'fade' ? picture(h, ctx, 'id', SCENE.niqqudFadeStill, { width: 640, class: 'scene-art' }) : null,
         h('p', { class: 'muted' }, 'Under a minute. No hearts. Wrong tiles just ask you to try again.'),
         motivation ? h('p', { class: 'muted' }, `For: ${motivation.label}`) : null,
         h('p', { class: 'fw-target he', lang: 'he', dir: 'rtl', style: 'font-size:2.6rem;text-align:center;margin:0.5rem 0' }, shown),

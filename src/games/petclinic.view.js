@@ -5,12 +5,13 @@ import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY='games.petclinic.v1';
 export function buildClinicDeck(lesson) {
-  const match=lesson?.exercises?.find(x=>x.id==='I-14-e02' && x.type==='match');
-  const aid=lesson?.exercises?.find(x=>x.id==='I-14-e05' && x.type==='produce');
-  if(!match?.pairs || !aid?.options)return [];
-  return match.pairs.map(pair=>{
-    const tool=aid.options.find(option=>option.includes(pair.he));
-    return tool ? {id:pair.he, symptom:pair.he, en:pair.en, tool} : null;
+  const symptoms = lesson?.exercises?.find(x => x.id === 'I-14-e02' && x.type === 'match')?.pairs || [];
+  const options = lesson?.exercises?.find(x => x.id === 'I-14-e05' && x.type === 'produce')?.options || [];
+  // Every answer phrase is copied verbatim from the source lesson. An option may
+  // describe one symptom only; never construct medical claims or invented treatments.
+  return symptoms.map(pair => {
+    const matches = options.filter(option => typeof option === 'string' && option.includes(pair.he));
+    return matches.length === 1 ? { id: pair.he, symptom: pair.he, en: pair.en, tool: matches[0] } : null;
   }).filter(Boolean);
 }
 export function clinicMatches(caseItem,toolPhrase) {

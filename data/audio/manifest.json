@@ -47957,12 +47957,13 @@
   "kind": "word",
   "id": "i-14-w2",
   "text": "תְּרוּפָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h0047024c",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "terufah"
  },
  {
   "path": "audio/f/israeli/word/i-14-w2.mp3",
@@ -47986,11 +47987,12 @@
   "kind": "word",
   "id": "i-14-w3",
   "text": "כַּדּוּרִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kadurim"
  },
  {
   "path": "audio/f/israeli/word/i-14-w3.mp3",
@@ -48013,12 +48015,13 @@
   "kind": "word",
   "id": "i-14-w4",
   "text": "מִרְשָׁם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "haf8e95dd",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "mirsham"
  },
  {
   "path": "audio/f/israeli/word/i-14-w4.mp3",
@@ -48042,11 +48045,12 @@
   "kind": "word",
   "id": "i-14-w5",
   "text": "כְּאֵב רֹאשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ke'ev rosh"
  },
  {
   "path": "audio/f/israeli/word/i-14-w5.mp3",
@@ -48237,12 +48241,13 @@
   "kind": "word",
   "id": "i-14-w12",
   "text": "אַחֲרֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "ha7a8a47a",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "acharei"
  },
  {
   "path": "audio/f/israeli/word/i-14-w12.mp3",
@@ -48266,12 +48271,13 @@
   "kind": "word",
   "id": "i-14-w13",
   "text": "לִפְנֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h40502f8d",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "lifnei"
  },
  {
   "path": "audio/f/israeli/word/i-14-w13.mp3",
@@ -48295,12 +48301,13 @@
   "kind": "word",
   "id": "i-14-w14",
   "text": "אָלֶרְגִּי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h375ca4cd",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "alergi"
  },
  {
   "path": "audio/f/israeli/word/i-14-w14.mp3",
@@ -48324,12 +48331,13 @@
   "kind": "word",
   "id": "i-14-w15",
   "text": "אַנְטִיבְּיוֹטִיקָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hdbc9b05f",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "antibeyotikah"
  },
  {
   "path": "audio/f/israeli/word/i-14-w15.mp3",

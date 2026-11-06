@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 4728 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 4736 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-4728 English labels; 1110 UNKNOWN.
+4736 English labels; 1118 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -3871,6 +3871,14 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [i-14-w1](m/israeli/word/i-14-w1.mp3) | בֵּית מֶרְקַחַת | UNKNOWN | beit merkachat |
 | [i-14-w10](m/israeli/word/i-14-w10.mp3) | פַּעַם בְּיוֹם | UNKNOWN | pa'am beyom |
 | [i-14-w11](m/israeli/word/i-14-w11.mp3) | פַּעֲמַיִם בְּיוֹם | UNKNOWN | pa'amayim beyom |
+| [i-14-w12](m/israeli/word/i-14-w12.mp3) | אַחֲרֵי | UNKNOWN | acharei |
+| [i-14-w13](m/israeli/word/i-14-w13.mp3) | לִפְנֵי | UNKNOWN | lifnei |
+| [i-14-w14](m/israeli/word/i-14-w14.mp3) | אָלֶרְגִּי | UNKNOWN | alergi |
+| [i-14-w15](m/israeli/word/i-14-w15.mp3) | אַנְטִיבְּיוֹטִיקָה | UNKNOWN | antibeyotikah |
+| [i-14-w2](m/israeli/word/i-14-w2.mp3) | תְּרוּפָה | UNKNOWN | terufah |
+| [i-14-w3](m/israeli/word/i-14-w3.mp3) | כַּדּוּרִים | UNKNOWN | kadurim |
+| [i-14-w4](m/israeli/word/i-14-w4.mp3) | מִרְשָׁם | UNKNOWN | mirsham |
+| [i-14-w5](m/israeli/word/i-14-w5.mp3) | כְּאֵב רֹאשׁ | UNKNOWN | ke'ev rosh |
 | [kaddish-1-w1](m/israeli/word/kaddish-1-w1.mp3) | יִתְגַּדַּל | may it be magnified | yitgadal |
 | [kaddish-1-w10](m/israeli/word/kaddish-1-w10.mp3) | מַלְכוּתֵהּ | his kingdom | malkhuteh |
 | [kaddish-1-w11](m/israeli/word/kaddish-1-w11.mp3) | בְּחַיֵּיכוֹן | in your lifetime | bechayeikhon |
@@ -5334,4 +5342,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 8087 produced clips in INDEX.csv have an English label; 1110 UNKNOWN. Filenames and IDs are unchanged.
+All 8110 produced clips in INDEX.csv have an English label; 1118 UNKNOWN. Filenames and IDs are unchanged.

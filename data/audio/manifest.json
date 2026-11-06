@@ -57221,12 +57221,13 @@
   "kind": "word",
   "id": "i-41-w4",
   "text": "גַּל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h90265ca3",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "gal"
  },
  {
   "path": "audio/m/israeli/word/i-41-w5.mp3",
@@ -57249,12 +57250,13 @@
   "kind": "word",
   "id": "i-41-w5",
   "text": "מַגֶּבֶת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hf1a3cd45",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "magevet"
  },
  {
   "path": "audio/m/israeli/word/i-41-w6.mp3",
@@ -57277,12 +57279,13 @@
   "kind": "word",
   "id": "i-41-w6",
   "text": "שֶׁמֶשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h86027352",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shemesh"
  },
  {
   "path": "audio/m/israeli/word/i-41-w7.mp3",
@@ -57305,12 +57308,13 @@
   "kind": "word",
   "id": "i-41-w7",
   "text": "מַיִם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "p7f7d7b8f",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "mayim"
  },
  {
   "path": "audio/m/israeli/word/i-41-w8.mp3",
@@ -57333,12 +57337,13 @@
   "kind": "word",
   "id": "i-41-w8",
   "text": "חַם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h5c2548dc",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "cham"
  },
  {
   "path": "audio/m/israeli/word/i-41-w9.mp3",
@@ -57361,12 +57366,13 @@
   "kind": "word",
   "id": "i-41-w9",
   "text": "קַר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h35a8fcbe",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kar"
  },
  {
   "path": "audio/m/israeli/word/i-41-w10.mp3",
@@ -57476,12 +57482,13 @@
   "kind": "word",
   "id": "i-42-w1",
   "text": "יֶלֶד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h1301ecc3",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yeled"
  },
  {
   "path": "audio/m/israeli/word/i-42-w2.mp3",
@@ -57724,12 +57731,13 @@
   "kind": "word",
   "id": "i-42-w10",
   "text": "אַבָּא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h0a70642a",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "aba"
  },
  {
   "path": "audio/m/israeli/word/i-42-w11.mp3",
@@ -57751,11 +57759,12 @@
   "kind": "word",
   "id": "i-42-w11",
   "text": "בֵּן כַּמָּה?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ben kamah?"
  },
  {
   "path": "audio/m/israeli/word/i-42-w12.mp3",
@@ -57778,12 +57787,13 @@
   "kind": "word",
   "id": "i-42-w12",
   "text": "חָמוּד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h4105e713",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chamud"
  },
  {
   "path": "audio/m/israeli/word/i-43-w1.mp3",

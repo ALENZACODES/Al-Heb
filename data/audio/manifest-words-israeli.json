@@ -12392,8 +12392,8 @@
     "kind": "word",
     "id": "ein-kamocha-w2",
     "text": "בָאֱלֹהִים",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -12414,8 +12414,8 @@
     "kind": "word",
     "id": "ein-kamocha-w3",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {

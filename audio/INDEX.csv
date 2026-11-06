@@ -2960,6 +2960,8 @@ tradition,voice,section,kind,id,takes,file,pointed_hebrew,ipa,direction,preferre
 "israeli","m","prayer-word","word","candle-shabbat-w8","1","audio/m/israeli/word/candle-shabbat-w8.mp3","קִדְּשָׁנוּ","","","","Prayer word, Israeli pronunciation.",""
 "israeli","m","prayer-word","word","candle-shabbat-w9","1","audio/m/israeli/word/candle-shabbat-w9.mp3","בְּמִצְוֹתָיו","","","","Prayer word, Israeli pronunciation.",""
 "israeli","m","prayer-word","word","ein-kamocha-w1","1","audio/m/israeli/word/ein-kamocha-w1.mp3","אֵין־כָּמוֹךָ","","","","Prayer word, Israeli pronunciation.",""
+"israeli","m","prayer-word","word","ein-kamocha-w2","1","audio/m/israeli/word/ein-kamocha-w2.mp3","בָאֱלֹהִים","","","","Prayer word, Israeli pronunciation.",""
+"israeli","m","prayer-word","word","ein-kamocha-w3","1","audio/m/israeli/word/ein-kamocha-w3.mp3","אֲדֹנָי","","","","Prayer word, Israeli pronunciation.",""
 "israeli","m","phrasebook","word","numbers-01-f","1","audio/m/israeli/word/numbers-01-f.mp3","אַחַת","","","","Word, Israeli pronunciation.",""
 "israeli","m","phrasebook","word","numbers-01-m","1","audio/m/israeli/word/numbers-01-m.mp3","אֶחָד","","","","Word, Israeli pronunciation.",""
 "israeli","m","phrasebook","word","numbers-02-f","1","audio/m/israeli/word/numbers-02-f.mp3","שְׁתַּיִם","","","","Word, Israeli pronunciation.",""

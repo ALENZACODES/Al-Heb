@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 940,
+ "count": 952,
  "images": {
   "BADGE_03": {
    "w": 512,
@@ -1876,6 +1876,18 @@
     }
    ]
   },
+  "GRAM_ask_01": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_ask_01.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GRAM_ask_09": {
    "w": 512,
    "h": 512,
@@ -1883,6 +1895,18 @@
     {
      "edge": 512,
      "file": "GRAM_ask_09.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_link_01": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_link_01.512.webp",
      "w": 512,
      "h": 512
     }
@@ -2269,6 +2293,18 @@
      "file": "HERO_amidah2_10.1600.webp",
      "w": 1600,
      "h": 914
+    }
+   ]
+  },
+  "HERO_calendar_02": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HERO_calendar_02.512.webp",
+     "w": 512,
+     "h": 293
     }
    ]
   },
@@ -4123,6 +4159,18 @@
      "file": "L07_zayin_print_v3.1254.webp",
      "w": 1254,
      "h": 1254
+    }
+   ]
+  },
+  "L07_zayin_quirky": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "L07_zayin_quirky.512.webp",
+     "w": 512,
+     "h": 512
     }
    ]
   },
@@ -7726,6 +7774,30 @@
     }
    ]
   },
+  "MAS_states_08": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "MAS_states_08.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "MORN_card_08": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "MORN_card_08.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "MOUTH_ah": {
    "w": 1254,
    "h": 1254,
@@ -9616,6 +9688,30 @@
     }
    ]
   },
+  "PLACE_deadsea_02": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_deadsea_02.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_deadsea_07": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_deadsea_07.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_deadsea_10": {
    "w": 512,
    "h": 293,
@@ -9647,6 +9743,18 @@
     {
      "edge": 512,
      "file": "PLACE_everyday_01.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_everyday_03": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_everyday_03.512.webp",
      "w": 512,
      "h": 293
     }
@@ -9688,6 +9796,30 @@
     }
    ]
   },
+  "PLACE_negev_04": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_negev_04.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_negev_05": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_negev_05.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_negev_06": {
    "w": 512,
    "h": 293,
@@ -9721,6 +9853,18 @@
      "file": "PLACE_tzfat_01.512.webp",
      "w": 512,
      "h": 293
+    }
+   ]
+  },
+  "STATE_art_07": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "STATE_art_07.512.webp",
+     "w": 512,
+     "h": 512
     }
    ]
   },

@@ -55712,6 +55712,606 @@
     "contains_text"
    ],
    "humanApproved": true
+  },
+  "GRAM_link_01": {
+   "id": "GRAM_link_01",
+   "file": "GRAM_link_01.png",
+   "command": 219,
+   "set": "Connectors & little words",
+   "block": "O",
+   "prompt": "Command 219 (Connectors & little words): And — two baskets joined by a rope; or — a fork in a path with a cake on one side and fruit on the other; but — a sunny picnic with one black cloud; because — rain above, umbrella open below (cause readable); also — a third chair being added to a table of two; only — one gold apple among green apples; already — an empty plate with crumbs and a satisfied Rimon; not yet — a cake in an oven half risen; here — a gold map pin shape over a café table scene (pin as object); there — the same pin small and far on a hill. Image 1 of 10: And — two baskets joined by a rope. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "72dd089b0c4e0f62d91e45a131242533737ec7a12561eb5a13b90b18da2f2467",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:22:12.434Z",
+   "sourceFile": "img-0075.png",
+   "sourceFileDate": "2026-11-06T21:22:11.969Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "2ed412d44a1b80817c09c4e1d64aa0fc831209cd18d54f92fb62891b85891b56",
+   "originalFormat": "PNG",
+   "originalBytes": 238482,
+   "originalFile": "GRAM_link_01.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_link_01.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 23534
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_everyday_03": {
+   "id": "PLACE_everyday_03",
+   "file": "PLACE_everyday_03.png",
+   "command": 208,
+   "set": "Coast, valleys & everyday Israel",
+   "block": "N",
+   "prompt": "Command 208 (Coast, valleys & everyday Israel): A shady moshav lane with citrus groves; a water tower in a farming town square; a railway crossing in the Jezreel valley with green fields; the Carmel forest after rain, green and misted; a beach town promenade in winter with one kite; an Arab village on a Galilee hill with a minaret silhouette and church tower in one frame (both distant, respectful); a Haredi neighbourhood street at Friday afternoon rush (people small, modest dress, no signs); a university campus lawn with students on the grass (books blank); a hospital entrance with a garden (no signs); a small town's main street at the blue hour. Image 3 of 10: a railway crossing in the Jezreel valley with green fields. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "ba1fd3ee113eb26308bc4ccefe664320337b29d69b5e79442d18dab7dd59c430",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:22:12.434Z",
+   "sourceFile": "img-0106.png",
+   "sourceFileDate": "2026-11-06T21:22:12.015Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "fe20cd97648e1dc8e3d17d4bc3dfc1c359b6492fc182f6a0382ac23c9e3be046",
+   "originalFormat": "PNG",
+   "originalBytes": 165340,
+   "originalFile": "PLACE_everyday_03.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_everyday_03.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 20992
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HERO_calendar_02": {
+   "id": "HERO_calendar_02",
+   "file": "HERO_calendar_02.png",
+   "command": 198,
+   "set": "Counting & calendar moments",
+   "block": "M",
+   "prompt": "Command 198 (Counting & calendar moments): An omer sheaf of barley standing in a clay jar; seven small jars in a row with the last one gold (the weeks counted — objects only); Lag BaOmer — a small safe bonfire with children roasting sticks at a distance; a bride and groom under a white canopy outdoors (modest, joyful, from behind); a brit/naming — a cushioned chair and a cup on a table, flowers around (objects only, no baby close-up); a bar mitzvah boy reading with a yad, family behind (backs); a bat mitzvah girl reading, family behind (backs); a wedding ring on a cushion under the canopy; a housewarming — a mezuzah being fixed to a new doorpost; a first day of school — a new bag and a honey-dipped apple on a plate (the sweet-learning custom). Image 2 of 10: seven small jars in a row with the last one gold (the weeks counted — objects only). Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "91dfc18e60cbaf0b18ca6520105bdebbc4eeac022be1c457371ed00fb2602972",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:22:12.434Z",
+   "sourceFile": "img-0360.png",
+   "sourceFileDate": "2026-11-06T21:22:12.089Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "76e15e3adba4becbf5b243bdac172f138d01bb39fe17836c8be8d0b1576dd0e5",
+   "originalFormat": "PNG",
+   "originalBytes": 125522,
+   "originalFile": "HERO_calendar_02.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HERO_calendar_02.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 10056
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_negev_04": {
+   "id": "PLACE_negev_04",
+   "file": "PLACE_negev_04.png",
+   "command": 206,
+   "set": "The Negev",
+   "block": "N",
+   "prompt": "Command 206 (The Negev): A vast erosion crater (makhtesh) in bands of colour; a desert town on the crater's rim at sunrise; Bedouin tents and a camel resting in shade; a solar tower glowing in a field of mirrors (distant); acacia trees in a dry wadi; a canyon of red rock with a thin stream; desert agriculture — greenhouse rows in the sand; a night sky of impossible stars over dunes; a Nabataean-style ruined city of carved stone doorways (generic, empty); a lone tree on a hill at Sde Boker-style overlook above a canyon. Image 4 of 10: a solar tower glowing in a field of mirrors (distant). Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "92f21b8792277a02b5fa22a65d33e6ae6fe5ba7e3005db3dd20a42afc3a08176",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:22:12.434Z",
+   "sourceFile": "img-0389.png",
+   "sourceFileDate": "2026-11-06T21:22:12.106Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "4eb8970339838fdd2ca67a43481f6acfe20525d7d36bd6b27526eee3e0e8c415",
+   "originalFormat": "PNG",
+   "originalBytes": 177469,
+   "originalFile": "PLACE_negev_04.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_negev_04.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 27570
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "STATE_art_07": {
+   "id": "STATE_art_07",
+   "file": "STATE_art_07.png",
+   "command": 243,
+   "set": "Empty, error & success states",
+   "block": "R",
+   "prompt": "Command 243 (Empty, error & success states): Ten friendly square states: Rimon holding an empty basket (nothing here yet); Rimon fishing in an empty bucket (no results); Rimon untangling a ball of string (something went wrong); Rimon with a bandaged head bump sitting on a cushion (offline — rest and retry); a gold check seal breaking through a ribbon (success, no text); Rimon watering a pot where nothing has sprouted yet (keep going); a blank map with one gold pin and a lot of dotted path (journey started); Rimon holding a \"closed\" shutter door gently ajar from inside (locked level preview — door only, no signs); a finish-line ribbon across a path with confetti shapes; Rimon asleep on a \"done\" stack of finished books. Files STATE_art_01 … _10. Image 7 of 10: a blank map with one gold pin and a lot of dotted path (journey started). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "c6de65c1a99f883681326505b8357a4104fbce56d9c712b70b054344dba6e4ac",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:22:12.434Z",
+   "sourceFile": "img-0432.png",
+   "sourceFileDate": "2026-11-06T21:22:12.001Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "41d0fbc1b0a5edb7d46c077fccb756959eb3b6646db9dfc682b120d2991c4786",
+   "originalFormat": "PNG",
+   "originalBytes": 216709,
+   "originalFile": "STATE_art_07.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "STATE_art_07.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 14390
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "MAS_states_08": {
+   "id": "MAS_states_08",
+   "file": "MAS_states_08.png",
+   "command": 240,
+   "set": "Rimon — full state sheet II",
+   "block": "R",
+   "prompt": "Command 240 (Rimon — full state sheet II): Ten square portraits of the mascot only, one state each, continuing Run 2's dashboard set without repeating it: Rimon with a tiny knitted kippah; Rimon with a small tallit; Rimon holding a shofar nearly as big as itself; Rimon under an umbrella in first rain; Rimon with sunglasses and a beach bucket; Rimon carrying a book stack taller than itself; Rimon blowing a dandelion clock; Rimon in a chef's hat tasting from a spoon; Rimon planting a seedling; Rimon waving a small blank flag. Files MAS_states_01 … _10. Image 8 of 10: Rimon in a chef's hat tasting from a spoon. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "dc15abfee414448222d92894379299a9586a3e227d18befbaac1c0fbb63741ed",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:22:12.434Z",
+   "sourceFile": "img-0608.png",
+   "sourceFileDate": "2026-11-06T21:22:11.992Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "2bd546de2aef44659375d1364846d76372ae788ec8d355e04b453fad8b78f042",
+   "originalFormat": "PNG",
+   "originalBytes": 216236,
+   "originalFile": "MAS_states_08.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "MAS_states_08.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 13036
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_negev_05": {
+   "id": "PLACE_negev_05",
+   "file": "PLACE_negev_05.png",
+   "command": 206,
+   "set": "The Negev",
+   "block": "N",
+   "prompt": "Command 206 (The Negev): A vast erosion crater (makhtesh) in bands of colour; a desert town on the crater's rim at sunrise; Bedouin tents and a camel resting in shade; a solar tower glowing in a field of mirrors (distant); acacia trees in a dry wadi; a canyon of red rock with a thin stream; desert agriculture — greenhouse rows in the sand; a night sky of impossible stars over dunes; a Nabataean-style ruined city of carved stone doorways (generic, empty); a lone tree on a hill at Sde Boker-style overlook above a canyon. Image 5 of 10: acacia trees in a dry wadi. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "2bb6a1c6c092eda4c7640a8defdd6f5ff28ffdc51de311ea04a7bd2fc554cde4",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:22:12.434Z",
+   "sourceFile": "img-0627.png",
+   "sourceFileDate": "2026-11-06T21:22:12.094Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "a5342ff1989534bf280bda4898384360c8750a1f5951ae860ecd943391a97012",
+   "originalFormat": "PNG",
+   "originalBytes": 179445,
+   "originalFile": "PLACE_negev_05.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_negev_05.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 26196
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_ask_01": {
+   "id": "GRAM_ask_01",
+   "file": "GRAM_ask_01.png",
+   "command": 214,
+   "set": "Questions",
+   "block": "O",
+   "prompt": "Command 214 (Questions): A giant gold question-mark SHAPE made of ribbon floating over a market stall (shape only, no letters — a sculptural question mark is a symbol, allowed as an object); who — Rimon peeking from behind three doors; where — one scene: Ari looking for something, with a table, an open box and a shelf all in frame; when — Noa pointing at a blank clock and a blank calendar; what — hands open over three covered dishes; why — a child pointing at rain; how many — hands counting pomegranate seeds; how — a puzzled look at a folded paper crane; which — two doors, one gold one blue, hand hovering; whose — a lost glove held up to a crowd. Image 1 of 10: A giant gold question-mark SHAPE made of ribbon floating over a market stall (shape only, no letters — a sculptural question mark is a symbol, allowed as an object). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "03b1f468e7b1a8a077ac578778b3c01f914356364831ccaba9999b13320ab480",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:22:12.434Z",
+   "sourceFile": "img-0662.png",
+   "sourceFileDate": "2026-11-06T21:22:12.140Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "392af6779a01b4360882f4cca56bae74ad1ca193160f30ca5cd2d14254da9c2f",
+   "originalFormat": "PNG",
+   "originalBytes": 241619,
+   "originalFile": "GRAM_ask_01.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_ask_01.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 22636
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "MORN_card_08": {
+   "id": "MORN_card_08",
+   "file": "MORN_card_08.png",
+   "command": 241,
+   "set": "Morning card art",
+   "block": "R",
+   "prompt": "Command 241 (Morning card art): Ten wide 1792×1024 gentle dawn scenes for the daily morning card (the Modeh Ani feature), each with a large calm blank space in the lower third where the day's quote is typeset later: sunrise over Jerusalem rooftops; sunrise over the sea at Tel Aviv; first light in a Galilee valley; a rooster on a farm fence at dawn; light through a bedroom window with a plant on the sill; a kitchen at dawn with a kettle just steaming; dew on a pomegranate leaf close up; birds leaving a tree against a pink sky; a synagogue window catching first light; a path through fields at first light with a distant figure walking. Files MORN_card_01 … _10. Image 8 of 10: birds leaving a tree against a pink sky. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "c62b508992761c8d70c6cc5a541cf6125f55deea7f08e011b4266aecd9e5d682",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:22:12.434Z",
+   "sourceFile": "img-1160.png",
+   "sourceFileDate": "2026-11-06T21:22:11.985Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "2371b3691898b642a10a44f861507d3aa5c0e231fc7e27aececac344776d4fd7",
+   "originalFormat": "PNG",
+   "originalBytes": 166072,
+   "originalFile": "MORN_card_08.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "MORN_card_08.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 20872
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_deadsea_02": {
+   "id": "PLACE_deadsea_02",
+   "file": "PLACE_deadsea_02.png",
+   "command": 205,
+   "set": "The Dead Sea & Masada",
+   "block": "N",
+   "prompt": "Command 205 (The Dead Sea & Masada): A salt-white shoreline with strange salt formations; a figure floating on their back reading a blank newspaper (the classic, comic and gentle); mud-dark pools beside the bright shore; a fortress plateau seen from below at dawn; a winding snake path up the plateau; the plateau top with low stone ruins and a huge view; a cable car crossing the cliff face; palm oases in a canyon with a waterfall (Ein Gedi style); ibex goats on a cliff ledge; the lowest road on earth — a road sign shape left completely blank beside the shore road. Image 2 of 10: a figure floating on their back reading a blank newspaper (the classic, comic and gentle). Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "b709409dc838bfca4ff9f98747b26a4e54dff715a4941408a80b6c4e21a3ebbf",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:22:12.434Z",
+   "sourceFile": "img-1236.png",
+   "sourceFileDate": "2026-11-06T21:22:12.125Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "24eaddb215cf3581e4782fd01ee38f5839bd7c43eda1b7cd853d65f2b2f93b5b",
+   "originalFormat": "PNG",
+   "originalBytes": 177792,
+   "originalFile": "PLACE_deadsea_02.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_deadsea_02.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 26952
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_deadsea_07": {
+   "id": "PLACE_deadsea_07",
+   "file": "PLACE_deadsea_07.png",
+   "command": 205,
+   "set": "The Dead Sea & Masada",
+   "block": "N",
+   "prompt": "Command 205 (The Dead Sea & Masada): A salt-white shoreline with strange salt formations; a figure floating on their back reading a blank newspaper (the classic, comic and gentle); mud-dark pools beside the bright shore; a fortress plateau seen from below at dawn; a winding snake path up the plateau; the plateau top with low stone ruins and a huge view; a cable car crossing the cliff face; palm oases in a canyon with a waterfall (Ein Gedi style); ibex goats on a cliff ledge; the lowest road on earth — a road sign shape left completely blank beside the shore road. Image 7 of 10: a cable car crossing the cliff face. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "1fc8352d3aa5c4e7d946c7c8773641e02711e9cc949f20c40b600a6a66823cf3",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:22:12.434Z",
+   "sourceFile": "img-1302.png",
+   "sourceFileDate": "2026-11-06T21:22:12.023Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "8c768e9e0b6603d2414d0ea329d777a2ec1ab42aa23598158c83fc388304f02d",
+   "originalFormat": "PNG",
+   "originalBytes": 174654,
+   "originalFile": "PLACE_deadsea_07.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_deadsea_07.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 27314
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "L07_zayin_quirky": {
+   "id": "L07_zayin_quirky",
+   "file": "L07_zayin_quirky.png",
+   "command": 101,
+   "set": "quirky_mnemonics",
+   "block": "G",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same limited palette in every image of the set, plain cream background, subject centred and large. Do not draw any letter or letter-like shape: the Hebrew letter is added later as vector type, so keep the image free of writing, signs, labels, speech-bubble text and numerals; any book, sign, page or screen in the picture stays completely blank. Hero subject: a zipper pull on a jacket zipper, being zipped up. Let the subject's overall silhouette loosely echo this letter shape: A short bar across the top and a straight stem down, like a zipper pull or a tiny T. Sound it helps remember: z as in 'zoo'. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "18af7fee549a5bded3e274fc1b7dfb33237f63248adf8643c025851c4cede1f5",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:22:12.434Z",
+   "sourceFile": "img-1467.png",
+   "sourceFileDate": "2026-11-06T21:22:12.147Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "3cd2111afe736c0968cc5b6ee5807210ade317081829bb2f17de7448a873da60",
+   "originalFormat": "PNG",
+   "originalBytes": 235774,
+   "originalFile": "L07_zayin_quirky.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "L07_zayin_quirky.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 19190
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

@@ -4982,6 +4982,54 @@
    "forcedDespite": [
     "contains_text"
    ]
+  },
+  "GRAM_link_01": {
+   "status": "approved",
+   "at": "2026-11-06T21:22:30.534Z"
+  },
+  "PLACE_everyday_03": {
+   "status": "approved",
+   "at": "2026-11-06T21:22:30.534Z"
+  },
+  "HERO_calendar_02": {
+   "status": "approved",
+   "at": "2026-11-06T21:22:30.534Z"
+  },
+  "PLACE_negev_04": {
+   "status": "approved",
+   "at": "2026-11-06T21:22:30.534Z"
+  },
+  "STATE_art_07": {
+   "status": "approved",
+   "at": "2026-11-06T21:22:30.534Z"
+  },
+  "MAS_states_08": {
+   "status": "approved",
+   "at": "2026-11-06T21:22:30.534Z"
+  },
+  "PLACE_negev_05": {
+   "status": "approved",
+   "at": "2026-11-06T21:22:30.534Z"
+  },
+  "GRAM_ask_01": {
+   "status": "approved",
+   "at": "2026-11-06T21:22:30.534Z"
+  },
+  "MORN_card_08": {
+   "status": "approved",
+   "at": "2026-11-06T21:22:30.534Z"
+  },
+  "PLACE_deadsea_02": {
+   "status": "approved",
+   "at": "2026-11-06T21:22:30.534Z"
+  },
+  "PLACE_deadsea_07": {
+   "status": "approved",
+   "at": "2026-11-06T21:22:30.534Z"
+  },
+  "L07_zayin_quirky": {
+   "status": "approved",
+   "at": "2026-11-06T21:22:30.534Z"
   }
  }
 }

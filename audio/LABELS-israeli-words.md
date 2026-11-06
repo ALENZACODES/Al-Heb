@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 3540 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 3549 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-3540 English labels; 4 UNKNOWN.
+3549 English labels; 4 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -3556,6 +3556,15 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [yigdal-w33](m/israeli/word/yigdal-w33.mp3) | רִאשׁוֹן | first; earliest; best | rishon |
 | [yigdal-w34](m/israeli/word/yigdal-w34.mp3) | וְאֵין | and no | ve'ein |
 | [yigdal-w35](m/israeli/word/yigdal-w35.mp3) | רֵאשִׁית | first of all, first | reshit |
+| [yigdal-w36](m/israeli/word/yigdal-w36.mp3) | לְרֵאשִׁיתוֹ׃ | to his beginning | lereshito |
+| [yigdal-w37](m/israeli/word/yigdal-w37.mp3) | הִנּוֹ | behold | hino |
+| [yigdal-w38](m/israeli/word/yigdal-w38.mp3) | אֲדוֹן | Master | adon |
+| [yigdal-w39](m/israeli/word/yigdal-w39.mp3) | עוֹלָם | world; a world; Ever, eternity | olam |
+| [yigdal-w4](m/israeli/word/yigdal-w4.mp3) | וְיִשְׁתַּבַּח | and praised | veyishtabach |
+| [yigdal-w40](m/israeli/word/yigdal-w40.mp3) | לְכָל־נוֹצָר | to every creature | lekhol-notzar |
+| [yigdal-w41](m/israeli/word/yigdal-w41.mp3) | יוֹרֶה | a (male) shooter; the first rain of the year | yoreh |
+| [yigdal-w42](m/israeli/word/yigdal-w42.mp3) | גְדֻלָּתוֹ | his greatness | gedulato |
+| [yigdal-w43](m/israeli/word/yigdal-w43.mp3) | וּמַלְכוּתוֹ׃ | and his sovereignty | umalkhuto |
 
 ## Israeli reading lines
 
@@ -4146,4 +4155,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 4866 produced clips in INDEX.csv have an English label; 4 UNKNOWN. Filenames and IDs are unchanged.
+All 4884 produced clips in INDEX.csv have an English label; 4 UNKNOWN. Filenames and IDs are unchanged.

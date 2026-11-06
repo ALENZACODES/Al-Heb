@@ -58944,6 +58944,506 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "PLACE_tzfat_03": {
+   "id": "PLACE_tzfat_03",
+   "file": "PLACE_tzfat_03.png",
+   "command": 204,
+   "set": "Tzfat & the north",
+   "block": "N",
+   "prompt": "Command 204 (Tzfat & the north): A blue-painted alley with artists' easels left blank; stone synagogues lane at morning light; a mountain town above clouds (the town in mist); candle-lit windows on a steep lane at dusk; the highest hilltop with a citadel ruin; a gallery doorway with pottery outside (blank canvases); Mount Meron green in the distance; a forest of pines on a ridge; a Druze village on a green hill with a market square (no signs); snow dusting the far northern peak (Hermon) over green valleys. Image 3 of 10: a mountain town above clouds (the town in mist). Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "e0cb60c4217e66a34598ee1aba5bc76614183c24a6618636c7ef1055607964b9",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:33:45.615Z",
+   "sourceFile": "img-0115.png",
+   "sourceFileDate": "2026-11-06T21:33:45.127Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "5f9739a64e6586fd3d0270ae1de77d8c31c9c01f7d1b907a6b8109aa609df44f",
+   "originalFormat": "PNG",
+   "originalBytes": 145796,
+   "originalFile": "PLACE_tzfat_03.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_tzfat_03.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 14288
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_there_08": {
+   "id": "GRAM_there_08",
+   "file": "GRAM_there_08.png",
+   "command": 216,
+   "set": "There is / there isn't",
+   "block": "O",
+   "prompt": "Command 216 (There is / there isn't): A table with a cat on it (there is); the same table empty with Rimon shrugging (there isn't); a fridge open with milk inside; the same fridge with one empty shelf circled by light (nothing there); a garden with a hidden bird (find-it); a sky with no clouds and a puzzled bird; a pocket turned out empty; a pocket with coins (blank); a chair with a siddur left on it (someone was here); an empty chair by a set table (someone missing). Image 8 of 10: a pocket with coins (blank). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "52410faebb32bab5cf0c7a2f9a9a8d5e1d4d443abfdd64cf531207ee8399d672",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:33:45.615Z",
+   "sourceFile": "img-0136.png",
+   "sourceFileDate": "2026-11-06T21:33:45.102Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "600e63ecdb8ef369f7c6bfbf37bf3b64357273dbda4bb20f5415eb602052f565",
+   "originalFormat": "PNG",
+   "originalBytes": 232359,
+   "originalFile": "GRAM_there_08.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_there_08.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 19466
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "STATE_art_04": {
+   "id": "STATE_art_04",
+   "file": "STATE_art_04.png",
+   "command": 243,
+   "set": "Empty, error & success states",
+   "block": "R",
+   "prompt": "Command 243 (Empty, error & success states): Ten friendly square states: Rimon holding an empty basket (nothing here yet); Rimon fishing in an empty bucket (no results); Rimon untangling a ball of string (something went wrong); Rimon with a bandaged head bump sitting on a cushion (offline — rest and retry); a gold check seal breaking through a ribbon (success, no text); Rimon watering a pot where nothing has sprouted yet (keep going); a blank map with one gold pin and a lot of dotted path (journey started); Rimon holding a \"closed\" shutter door gently ajar from inside (locked level preview — door only, no signs); a finish-line ribbon across a path with confetti shapes; Rimon asleep on a \"done\" stack of finished books. Files STATE_art_01 … _10. Image 4 of 10: Rimon with a bandaged head bump sitting on a cushion (offline — rest and retry). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "bc2e64af87e8d483b2917703cfd7a25f25ff974e6720c6e5c567b57adbebf9d6",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:33:45.615Z",
+   "sourceFile": "img-0405.png",
+   "sourceFileDate": "2026-11-06T21:33:45.120Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "845a7f4e11f8ee9a604df3ebbc50a7632a64fb8313769dd9ed0836e28222fcb5",
+   "originalFormat": "PNG",
+   "originalBytes": 217584,
+   "originalFile": "STATE_art_04.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "STATE_art_04.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 13454
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "L26_pe_final_cursive_mnemonic": {
+   "id": "L26_pe_final_cursive_mnemonic",
+   "file": "L26_pe_final_cursive_mnemonic.png",
+   "command": 63,
+   "set": "letter_26_pe_final_cursive",
+   "block": "C",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. The keyword object a flag on a tall pole, drawn so its outline echoes the attached silhouette (REF_cursive_pe_final.png). Draw the object only, never the letter. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "b400287102f6313aa6868e896ce11dc00a3c09724239173bfc25f17393af0b68",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:33:45.615Z",
+   "sourceFile": "img-0449.png",
+   "sourceFileDate": "2026-11-06T21:33:45.194Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "199f50d033d029a73671ddb86d3d5cbd135cc83e49a33554c7c3b4b107871370",
+   "originalFormat": "PNG",
+   "originalBytes": 185060,
+   "originalFile": "L26_pe_final_cursive_mnemonic.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "L26_pe_final_cursive_mnemonic.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 5878
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HERO_psalms1_06": {
+   "id": "HERO_psalms1_06",
+   "file": "HERO_psalms1_06.png",
+   "command": 195,
+   "set": "Psalms heroes I",
+   "block": "M",
+   "prompt": "Command 195 (Psalms heroes I): Psalm 1 — a tree by streams of water; Psalm 8 — a child looking up at a huge starry sky; Psalm 19 — the sun's tent across the heavens, dawn to dusk in one sky; Psalm 23 — a shepherd with a staff beside still waters; Psalm 23 II — a table set in a green valley at evening; Psalm 42 — a deer at a stream in a dry land; Psalm 84 — a swallow's nest under an eave of a great house; Psalm 90 — hands counting grains of sand through an hourglass shape (sand only, abstract); Psalm 92 — a palm tree and a cedar side by side, flourishing; Psalm 100 — gates entered with musicians and dancers (small figures, joyful). Image 6 of 10: Psalm 42 — a deer at a stream in a dry land. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "74def0cfd9226593e14c2f28f148f9bcc2a04b4a31a0a7d27a3d4dfbd5f7ca34",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:33:45.615Z",
+   "sourceFile": "img-0457.png",
+   "sourceFileDate": "2026-11-06T21:33:44.926Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "4f8f572932ebebc649f6d68ec707ba53d6a13e77414d4cf1ca5c63850a5d9de3",
+   "originalFormat": "PNG",
+   "originalBytes": 172961,
+   "originalFile": "HERO_psalms1_06.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HERO_psalms1_06.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 23166
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_galilee_06": {
+   "id": "PLACE_galilee_06",
+   "file": "PLACE_galilee_06.png",
+   "command": 203,
+   "set": "Galilee & the Kinneret",
+   "block": "N",
+   "prompt": "Command 203 (Galilee & the Kinneret): A calm freshwater lake at dawn with fishing boats; green hills with wildflowers in spring; an old synagogue of black basalt stones (ruin, respectful, empty); a hot spring steam rising beside the shore; a kibbutz dining hall exterior with lawns; a vineyard on a slope above the lake; Tiberias-style lakeside promenade at evening; banana groves along a road; the Jordan river narrow and green between trees; a hilltop view of the whole lake shaped like a harp. Image 6 of 10: a vineyard on a slope above the lake. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "d20c42e195bf055a95781f25bfa95285d442e82c5fe731971ece3fe88eacd39d",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:33:45.615Z",
+   "sourceFile": "img-0488.png",
+   "sourceFileDate": "2026-11-06T21:33:45.033Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "5ff4e8ecd0d4267591f8ff8af74b5c4d377e5295146f1692cbd5499d208c86ee",
+   "originalFormat": "PNG",
+   "originalBytes": 196845,
+   "originalFile": "PLACE_galilee_06.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_galilee_06.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 31288
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "STATE_art_10": {
+   "id": "STATE_art_10",
+   "file": "STATE_art_10.png",
+   "command": 243,
+   "set": "Empty, error & success states",
+   "block": "R",
+   "prompt": "Command 243 (Empty, error & success states): Ten friendly square states: Rimon holding an empty basket (nothing here yet); Rimon fishing in an empty bucket (no results); Rimon untangling a ball of string (something went wrong); Rimon with a bandaged head bump sitting on a cushion (offline — rest and retry); a gold check seal breaking through a ribbon (success, no text); Rimon watering a pot where nothing has sprouted yet (keep going); a blank map with one gold pin and a lot of dotted path (journey started); Rimon holding a \"closed\" shutter door gently ajar from inside (locked level preview — door only, no signs); a finish-line ribbon across a path with confetti shapes; Rimon asleep on a \"done\" stack of finished books. Files STATE_art_01 … _10. Image 10 of 10: Rimon asleep on a \"done\" stack of finished books. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "e121e8d4f5b8df17421134ba4c9e6c20fb783adaa2b5f864fd352495b1998412",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:33:45.615Z",
+   "sourceFile": "img-0881.png",
+   "sourceFileDate": "2026-11-06T21:33:44.994Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "4e87689af44e87dcefae26f495cbafb24ea1a4cc61a4a45df1729d2ea398a060",
+   "originalFormat": "PNG",
+   "originalBytes": 231564,
+   "originalFile": "STATE_art_10.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "STATE_art_10.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 19350
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_galilee_01": {
+   "id": "PLACE_galilee_01",
+   "file": "PLACE_galilee_01.png",
+   "command": 203,
+   "set": "Galilee & the Kinneret",
+   "block": "N",
+   "prompt": "Command 203 (Galilee & the Kinneret): A calm freshwater lake at dawn with fishing boats; green hills with wildflowers in spring; an old synagogue of black basalt stones (ruin, respectful, empty); a hot spring steam rising beside the shore; a kibbutz dining hall exterior with lawns; a vineyard on a slope above the lake; Tiberias-style lakeside promenade at evening; banana groves along a road; the Jordan river narrow and green between trees; a hilltop view of the whole lake shaped like a harp. Image 1 of 10: A calm freshwater lake at dawn with fishing boats. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "ac1ea43b0567b16467ce4e07d9651eb000ccb22a8fab420651932e5d5b13c7e8",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:33:45.615Z",
+   "sourceFile": "img-1069.png",
+   "sourceFileDate": "2026-11-06T21:33:45.188Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "629296f45ab5087302e7ff7c38c4b7bd4b118fca813379d1bc33e3ac23e635d7",
+   "originalFormat": "PNG",
+   "originalBytes": 185514,
+   "originalFile": "PLACE_galilee_01.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_galilee_01.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 25782
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_negev_07": {
+   "id": "PLACE_negev_07",
+   "file": "PLACE_negev_07.png",
+   "command": 206,
+   "set": "The Negev",
+   "block": "N",
+   "prompt": "Command 206 (The Negev): A vast erosion crater (makhtesh) in bands of colour; a desert town on the crater's rim at sunrise; Bedouin tents and a camel resting in shade; a solar tower glowing in a field of mirrors (distant); acacia trees in a dry wadi; a canyon of red rock with a thin stream; desert agriculture — greenhouse rows in the sand; a night sky of impossible stars over dunes; a Nabataean-style ruined city of carved stone doorways (generic, empty); a lone tree on a hill at Sde Boker-style overlook above a canyon. Image 7 of 10: desert agriculture — greenhouse rows in the sand. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "5c1f82ebc60a8d329ab972d290af47820f6f3984ac8fc6b6ddb0a2667c421381",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:33:45.615Z",
+   "sourceFile": "img-1079.png",
+   "sourceFileDate": "2026-11-06T21:33:45.091Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "66bede5ade401d329e847e39b3504b9a26733c0583650a5912c17550480271e0",
+   "originalFormat": "PNG",
+   "originalBytes": 194094,
+   "originalFile": "PLACE_negev_07.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_negev_07.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 29308
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GAME_art_06": {
+   "id": "GAME_art_06",
+   "file": "GAME_art_06.png",
+   "command": 248,
+   "set": "Workbook game art",
+   "block": "R",
+   "prompt": "Command 248 (Workbook game art): Ten square game assets: a memory-match card back (pomegranate pattern); a second card back (candle pattern); a spot-the-difference base scene — a market stall drawn once, rich in small objects (the pair difference is made later in code — deliver the base and a list in NOTES of 8 small objects that could change); a maze page — a hedge maze with a clear start gap and end gap, no letters; a tracing path — a dotted road from a house to a synagogue (dots only); a dice pair showing dots only (one and six); a spinner wheel divided in colour segments, blank; a bingo-style grid card with nine small object pictures (one per cell: cup, dog, sun, book, fish, key, star, leaf, shoe); a reward sticker sheet of 9 tiny motifs in a grid (counted as one image); a finish flag on a pole with confetti shapes. Files GAME_art_01 … _10. Image 6 of 10: a dice pair showing dots only (one and six). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "0417871e2baa5e6de8ef5ff3560c4db66fa595f793a39445da6416d75c55f9f0",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:33:45.615Z",
+   "sourceFile": "img-1233.png",
+   "sourceFileDate": "2026-11-06T21:33:45.037Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "cb935f338eb083c02588f7686b43ce4b6aabfcb79617575e4a8f8419195bcc74",
+   "originalFormat": "PNG",
+   "originalBytes": 188477,
+   "originalFile": "GAME_art_06.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GAME_art_06.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 7300
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

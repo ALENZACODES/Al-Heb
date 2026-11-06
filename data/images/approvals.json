@@ -5254,6 +5254,46 @@
    "forcedDespite": [
     "contains_text"
    ]
+  },
+  "PLACE_tzfat_03": {
+   "status": "approved",
+   "at": "2026-11-06T21:34:00.516Z"
+  },
+  "GRAM_there_08": {
+   "status": "approved",
+   "at": "2026-11-06T21:34:00.516Z"
+  },
+  "STATE_art_04": {
+   "status": "approved",
+   "at": "2026-11-06T21:34:00.516Z"
+  },
+  "L26_pe_final_cursive_mnemonic": {
+   "status": "approved",
+   "at": "2026-11-06T21:34:00.516Z"
+  },
+  "HERO_psalms1_06": {
+   "status": "approved",
+   "at": "2026-11-06T21:34:00.516Z"
+  },
+  "PLACE_galilee_06": {
+   "status": "approved",
+   "at": "2026-11-06T21:34:00.516Z"
+  },
+  "STATE_art_10": {
+   "status": "approved",
+   "at": "2026-11-06T21:34:00.516Z"
+  },
+  "PLACE_galilee_01": {
+   "status": "approved",
+   "at": "2026-11-06T21:34:00.516Z"
+  },
+  "PLACE_negev_07": {
+   "status": "approved",
+   "at": "2026-11-06T21:34:00.516Z"
+  },
+  "GAME_art_06": {
+   "status": "approved",
+   "at": "2026-11-06T21:34:00.516Z"
   }
  }
 }

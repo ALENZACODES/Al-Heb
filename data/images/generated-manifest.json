@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 1004,
+ "count": 1014,
  "images": {
   "BADGE_03": {
    "w": 512,
@@ -1900,6 +1900,18 @@
     }
    ]
   },
+  "GAME_art_06": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GAME_art_06.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GAME_art_07": {
    "w": 512,
    "h": 512,
@@ -2219,6 +2231,18 @@
     {
      "edge": 512,
      "file": "GRAM_there_03.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_there_08": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_there_08.512.webp",
      "w": 512,
      "h": 512
     }
@@ -3161,6 +3185,18 @@
     {
      "edge": 512,
      "file": "HERO_psalms1_02.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "HERO_psalms1_06": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HERO_psalms1_06.512.webp",
      "w": 512,
      "h": 293
     }
@@ -7810,6 +7846,18 @@
     }
    ]
   },
+  "L26_pe_final_cursive_mnemonic": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "L26_pe_final_cursive_mnemonic.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "L26_pe_final_print_ari": {
    "w": 1254,
    "h": 1254,
@@ -10300,6 +10348,30 @@
     }
    ]
   },
+  "PLACE_galilee_01": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_galilee_01.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_galilee_06": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_galilee_06.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_haifa_01": {
    "w": 512,
    "h": 293,
@@ -10384,6 +10456,18 @@
     }
    ]
   },
+  "PLACE_negev_07": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_negev_07.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_negev_08": {
    "w": 512,
    "h": 293,
@@ -10444,6 +10528,18 @@
     }
    ]
   },
+  "PLACE_tzfat_03": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_tzfat_03.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "STATE_art_02": {
    "w": 512,
    "h": 512,
@@ -10451,6 +10547,18 @@
     {
      "edge": 512,
      "file": "STATE_art_02.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "STATE_art_04": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "STATE_art_04.512.webp",
      "w": 512,
      "h": 512
     }
@@ -10475,6 +10583,18 @@
     {
      "edge": 512,
      "file": "STATE_art_09.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "STATE_art_10": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "STATE_art_10.512.webp",
      "w": 512,
      "h": 512
     }

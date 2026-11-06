@@ -42441,19 +42441,7 @@
   "status": "missing",
   "source": "none",
   "group": "prayer-word",
-  "english": [
-   null,
-   null,
-   null,
-   null,
-   null,
-   null,
-   null,
-   "made us holy",
-   "with his commandments",
-   "and commanded us",
-   "to light"
-  ],
+  "english": ",,,,,,,made us holy,with his commandments,and commanded us,to light",
   "phonetic": "asher"
  },
  {
@@ -42466,19 +42454,7 @@
   "status": "tts",
   "source": "paid-cloud",
   "group": "prayer-word",
-  "english": [
-   null,
-   null,
-   null,
-   null,
-   null,
-   null,
-   null,
-   "made us holy",
-   "with his commandments",
-   "and commanded us",
-   "to light"
-  ],
+  "english": ",,,,,,,made us holy,with his commandments,and commanded us,to light",
   "phonetic": "asher"
  },
  {

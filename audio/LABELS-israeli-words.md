@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 2563 clips. **Reading lines:** 421 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 2565 clips. **Reading lines:** 421 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-2563 English labels; 0 UNKNOWN.
+2565 English labels; 0 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -494,16 +494,16 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [brich-shmei-w97](f/israeli/word/brich-shmei-w97.mp3) | רָחִיץ | trust | rachitz |
 | [brich-shmei-w98](f/israeli/word/brich-shmei-w98.mp3) | וְלִשְׁמֵהּ | and to his name | velishmeh |
 | [brich-shmei-w99](f/israeli/word/brich-shmei-w99.mp3) | קַדִּישָׁא | holy | kadisha |
-| [cafe-05](f/israeli/word/cafe-05.mp3) | אֶסְפְּרֶסוֹ | espresso |  |
-| [cafe-09](f/israeli/word/cafe-09.mp3) | מַיִם | water |  |
-| [cafe-11](f/israeli/word/cafe-11.mp3) | בִּירָה | beer |  |
-| [cafe-12](f/israeli/word/cafe-12.mp3) | יַיִן | wine |  |
-| [cafe-13](f/israeli/word/cafe-13.mp3) | לְחַיִּים! | cheers! |  |
-| [cafe-16](f/israeli/word/cafe-16.mp3) | חוּמוּס | hummus |  |
-| [cafe-17](f/israeli/word/cafe-17.mp3) | פָלָאפֶל | falafel |  |
-| [cafe-18](f/israeli/word/cafe-18.mp3) | שַׁקְשׁוּקָה | shakshuka (eggs poached in tomato sauce) |  |
-| [cafe-19](f/israeli/word/cafe-19.mp3) | פִּיתָה | pita bread |  |
-| [cafe-20](f/israeli/word/cafe-20.mp3) | סָלָט | salad |  |
+| [cafe-05](f/israeli/word/cafe-05.mp3) | אֶסְפְּרֶסוֹ | espresso | espereso |
+| [cafe-09](f/israeli/word/cafe-09.mp3) | מַיִם | water | mayim |
+| [cafe-11](f/israeli/word/cafe-11.mp3) | בִּירָה | beer | birah |
+| [cafe-12](f/israeli/word/cafe-12.mp3) | יַיִן | wine | yayin |
+| [cafe-13](f/israeli/word/cafe-13.mp3) | לְחַיִּים! | cheers! | lechayim! |
+| [cafe-16](f/israeli/word/cafe-16.mp3) | חוּמוּס | hummus | chumus |
+| [cafe-17](f/israeli/word/cafe-17.mp3) | פָלָאפֶל | falafel | falafel |
+| [cafe-18](f/israeli/word/cafe-18.mp3) | שַׁקְשׁוּקָה | shakshuka (eggs poached in tomato sauce) | shakshukah |
+| [cafe-19](f/israeli/word/cafe-19.mp3) | פִּיתָה | pita bread | pitah |
+| [cafe-20](f/israeli/word/cafe-20.mp3) | סָלָט | salad | salat |
 | [candle-shabbat-w1](f/israeli/word/candle-shabbat-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [candle-shabbat-w10](f/israeli/word/candle-shabbat-w10.mp3) | וְצִוָּנוּ | and commanded us | vetzivanu |
 | [candle-shabbat-w11](f/israeli/word/candle-shabbat-w11.mp3) | לְהַדְלִיק | to light | lehadlik |
@@ -518,11 +518,11 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [candle-shabbat-w7](f/israeli/word/candle-shabbat-w7.mp3) | אֲשֶׁר | introduces a subordinate clause | asher |
 | [candle-shabbat-w8](f/israeli/word/candle-shabbat-w8.mp3) | קִדְּשָׁנוּ | made us holy | kideshanu |
 | [candle-shabbat-w9](f/israeli/word/candle-shabbat-w9.mp3) | בְּמִצְוֹתָיו | with his commandments | bemitzvotav |
-| [directions-05](f/israeli/word/directions-05.mp3) | יָשָׁר | straight ahead |  |
-| [directions-06](f/israeli/word/directions-06.mp3) | שְׂמֹאלָה | left |  |
-| [directions-07](f/israeli/word/directions-07.mp3) | יָמִינָה | right |  |
-| [directions-12](f/israeli/word/directions-12.mp3) | מוּל | opposite |  |
-| [directions-13](f/israeli/word/directions-13.mp3) | בַּפִּנָּה | on the corner |  |
+| [directions-05](f/israeli/word/directions-05.mp3) | יָשָׁר | straight ahead | yashar |
+| [directions-06](f/israeli/word/directions-06.mp3) | שְׂמֹאלָה | left | semolah |
+| [directions-07](f/israeli/word/directions-07.mp3) | יָמִינָה | right | yaminah |
+| [directions-12](f/israeli/word/directions-12.mp3) | מוּל | opposite | mul |
+| [directions-13](f/israeli/word/directions-13.mp3) | בַּפִּנָּה | on the corner | bapinah |
 | [ein-kamocha-w1](f/israeli/word/ein-kamocha-w1.mp3) | אֵין־כָּמוֹךָ | none like you | ein-kamokha |
 | [ein-kamocha-w2](f/israeli/word/ein-kamocha-w2.mp3) | בָאֱלֹהִים | among the gods | va'elohim |
 | [ein-kamocha-w3](f/israeli/word/ein-kamocha-w3.mp3) | אֲדֹנָי | the LORD | adonai |
@@ -554,30 +554,30 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [etz-chaim-w7](f/israeli/word/etz-chaim-w7.mp3) | מְאֻשָּׁר׃ | Happy, content | me'ushar |
 | [etz-chaim-w8](f/israeli/word/etz-chaim-w8.mp3) | דְּרָכֶיהָ | its ways | derakheha |
 | [etz-chaim-w9](f/israeli/word/etz-chaim-w9.mp3) | דַרְכֵי | ways of | darkhei |
-| [fillers-01](f/israeli/word/fillers-01.mp3) | אָז | so |  |
-| [fillers-02](f/israeli/word/fillers-02.mp3) | נוּ | well? / come on |  |
-| [fillers-03](f/israeli/word/fillers-03.mp3) | טוֹב | OK / well / good |  |
-| [fillers-04](f/israeli/word/fillers-04.mp3) | נָכוֹן | right / correct |  |
-| [fillers-06](f/israeli/word/fillers-06.mp3) | בֶּאֱמֶת? | really? |  |
-| [fillers-07](f/israeli/word/fillers-07.mp3) | מַמָּשׁ | really / truly / very |  |
-| [fillers-08](f/israeli/word/fillers-08.mp3) | פָּשׁוּט | simply / just |  |
-| [fillers-09](f/israeli/word/fillers-09.mp3) | סְתָם | just (because) / for no reason |  |
-| [fillers-10](f/israeli/word/fillers-10.mp3) | בְּעֶצֶם | actually / in fact |  |
-| [fillers-11](f/israeli/word/fillers-11.mp3) | כְּלוֹמַר | that is / I mean |  |
-| [fillers-12](f/israeli/word/fillers-12.mp3) | אֲבָל | but |  |
+| [fillers-01](f/israeli/word/fillers-01.mp3) | אָז | so | az |
+| [fillers-02](f/israeli/word/fillers-02.mp3) | נוּ | well? / come on | nu |
+| [fillers-03](f/israeli/word/fillers-03.mp3) | טוֹב | OK / well / good | tov |
+| [fillers-04](f/israeli/word/fillers-04.mp3) | נָכוֹן | right / correct | nakhon |
+| [fillers-06](f/israeli/word/fillers-06.mp3) | בֶּאֱמֶת? | really? | be'emet? |
+| [fillers-07](f/israeli/word/fillers-07.mp3) | מַמָּשׁ | really / truly / very | mamash |
+| [fillers-08](f/israeli/word/fillers-08.mp3) | פָּשׁוּט | simply / just | pashut |
+| [fillers-09](f/israeli/word/fillers-09.mp3) | סְתָם | just (because) / for no reason | setam |
+| [fillers-10](f/israeli/word/fillers-10.mp3) | בְּעֶצֶם | actually / in fact | be'etzem |
+| [fillers-11](f/israeli/word/fillers-11.mp3) | כְּלוֹמַר | that is / I mean | kelomar |
+| [fillers-12](f/israeli/word/fillers-12.mp3) | אֲבָל | but | aval |
 | [gadlu-w1](f/israeli/word/gadlu-w1.mp3) | גַּדְּלוּ | magnify | gadelu |
 | [gadlu-w2](f/israeli/word/gadlu-w2.mp3) | לַאֲדֹנָי | the LORD | la'adonai |
 | [gadlu-w3](f/israeli/word/gadlu-w3.mp3) | אִתִּי | with me | iti |
 | [gadlu-w4](f/israeli/word/gadlu-w4.mp3) | וּנְרוֹמְמָה | and let us exalt | uneromemah |
 | [gadlu-w5](f/israeli/word/gadlu-w5.mp3) | שְׁמוֹ | his name | shemo |
 | [gadlu-w6](f/israeli/word/gadlu-w6.mp3) | יַחְדָּו׃ | together | yachdav |
-| [greetings-01](f/israeli/word/greetings-01.mp3) | שָׁלוֹם | hello / goodbye / peace |  |
-| [greetings-02](f/israeli/word/greetings-02.mp3) | הֵי | hi |  |
-| [greetings-15](f/israeli/word/greetings-15.mp3) | בְּסֵדֶר | OK / fine / alright |  |
-| [greetings-16](f/israeli/word/greetings-16.mp3) | מְצֻיָּן | excellent |  |
-| [greetings-20](f/israeli/word/greetings-20.mp3) | לְהִתְרָאוֹת | see you (later) |  |
-| [greetings-25](f/israeli/word/greetings-25.mp3) | בְּהַצְלָחָה | good luck / all the best |  |
-| [greetings-26](f/israeli/word/greetings-26.mp3) | לִבְרִיאוּת | bless you (after a sneeze) / to your health |  |
+| [greetings-01](f/israeli/word/greetings-01.mp3) | שָׁלוֹם | hello / goodbye / peace | shalom |
+| [greetings-02](f/israeli/word/greetings-02.mp3) | הֵי | hi | hei |
+| [greetings-15](f/israeli/word/greetings-15.mp3) | בְּסֵדֶר | OK / fine / alright | beseder |
+| [greetings-16](f/israeli/word/greetings-16.mp3) | מְצֻיָּן | excellent | metzuyan |
+| [greetings-20](f/israeli/word/greetings-20.mp3) | לְהִתְרָאוֹת | see you (later) | lehitra'ot |
+| [greetings-25](f/israeli/word/greetings-25.mp3) | בְּהַצְלָחָה | good luck / all the best | behatzlachah |
+| [greetings-26](f/israeli/word/greetings-26.mp3) | לִבְרִיאוּת | bless you (after a sneeze) / to your health | livri'ut |
 | [haftarah-after-w1](f/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](f/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](f/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -954,7 +954,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [havdalah-spices-w7](f/israeli/word/havdalah-spices-w7.mp3) | בּוֹרֵא | creator | bore |
 | [havdalah-spices-w8](f/israeli/word/havdalah-spices-w8.mp3) | מִינֵי | kinds of | minei |
 | [havdalah-spices-w9](f/israeli/word/havdalah-spices-w9.mp3) | בְשָׂמִים׃ | spices | vesamim |
-| [help-01](f/israeli/word/help-01.mp3) | עֶזְרָה! | help! |  |
+| [help-01](f/israeli/word/help-01.mp3) | עֶזְרָה! | help! | ezrah! |
 | [kaddish-1-w1](f/israeli/word/kaddish-1-w1.mp3) | יִתְגַּדַּל | may it be magnified | yitgadal |
 | [kaddish-1-w10](f/israeli/word/kaddish-1-w10.mp3) | מַלְכוּתֵהּ | his kingdom | malkhuteh |
 | [kaddish-1-w11](f/israeli/word/kaddish-1-w11.mp3) | בְּחַיֵּיכוֹן | in your lifetime | bechayeikhon |
@@ -2549,6 +2549,8 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hanerot-halalu-w24](m/israeli/word/hanerot-halalu-w24.mp3) | לָנוּ | to us | lanu |
 | [hanerot-halalu-w25](m/israeli/word/hanerot-halalu-w25.mp3) | רְשׁוּת | permission, authorization; optional, elective; possession, domain | reshut |
 | [hanerot-halalu-w26](m/israeli/word/hanerot-halalu-w26.mp3) | לְהִשְׁתַּמֵּשׁ | to use | lehishtamesh |
+| [hanerot-halalu-w27](m/israeli/word/hanerot-halalu-w27.mp3) | בָּהֶם | in them | bahem |
+| [hanerot-halalu-w28](m/israeli/word/hanerot-halalu-w28.mp3) | אֶלָּא | but, except | ela |
 | [numbers-01-f](m/israeli/word/numbers-01-f.mp3) | אַחַת | one (f.) | achat |
 | [numbers-01-m](m/israeli/word/numbers-01-m.mp3) | אֶחָד | one | echad |
 | [numbers-02-f](m/israeli/word/numbers-02-f.mp3) | שְׁתַּיִם | two (f.) | shtayim |
@@ -2825,26 +2827,26 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [small-talk-11-m](f/israeli/line/small-talk-11-m.mp3) | אֲנִי עָיֵף | I'm tired | ani ayef |
 | [small-talk-12](f/israeli/line/small-talk-12.mp3) | חַם לִי | I'm hot | cham li |
 | [small-talk-13](f/israeli/line/small-talk-13.mp3) | קַר לִי | I'm cold | kar li |
-| [small-talk-14-f](f/israeli/line/small-talk-14-f.mp3) | הַכֹּל בְּסֵדֶר אִתָּךְ? | are you OK? |  |
-| [small-talk-14-m](f/israeli/line/small-talk-14-m.mp3) | הַכֹּל בְּסֵדֶר אִתְּךָ? | are you OK? |  |
-| [small-talk-16](f/israeli/line/small-talk-16.mp3) | מָה הַמַּצָּב? | how's it going? (lit. what's the situation) |  |
-| [small-talk-17](f/israeli/line/small-talk-17.mp3) | אֵין מָה לַעֲשׂוֹת | there's nothing to be done |  |
-| [small-talk-19-f](f/israeli/line/small-talk-19-f.mp3) | אֶתְגַּעְגֵּעַ אֵלַיִךְ | I'll miss you |  |
-| [small-talk-19-m](f/israeli/line/small-talk-19-m.mp3) | אֶתְגַּעְגֵּעַ אֵלֶיךָ | I'll miss you |  |
-| [taxi-01-f](f/israeli/line/taxi-01-f.mp3) | אֲנִי צְרִיכָה מוֹנִית | I need a taxi |  |
-| [taxi-01-m](f/israeli/line/taxi-01-m.mp3) | אֲנִי צָרִיךְ מוֹנִית | I need a taxi |  |
-| [taxi-03](f/israeli/line/taxi-03.mp3) | לִשְׂדֵה הַתְּעוּפָה, בְּבַקָּשָׁה | to the airport, please |  |
-| [taxi-04](f/israeli/line/taxi-04.mp3) | לַתַּחֲנָה הַמֶּרְכָּזִית | to the central station |  |
-| [taxi-07](f/israeli/line/taxi-07.mp3) | אֶפְשָׁר מוֹנֶה, בְּבַקָּשָׁה? | can you use the meter, please? |  |
-| [taxi-08](f/israeli/line/taxi-08.mp3) | כַּמָּה זֶה יַעֲלֶה? | how much will it cost? |  |
-| [taxi-09-f](f/israeli/line/taxi-09-f.mp3) | עִצְרִי כָּאן, בְּבַקָּשָׁה | stop here, please |  |
-| [taxi-09-m](f/israeli/line/taxi-09-m.mp3) | עֲצֹר כָּאן, בְּבַקָּשָׁה | stop here, please |  |
-| [taxi-10](f/israeli/line/taxi-10.mp3) | אֵיפֹה תַּחֲנַת הָאוֹטוֹבּוּס? | where is the bus stop? |  |
-| [taxi-11](f/israeli/line/taxi-11.mp3) | אֵיזֶה אוֹטוֹבּוּס הוֹלֵךְ לְ...? | which bus goes to ...? |  |
-| [taxi-12](f/israeli/line/taxi-12.mp3) | מָתַי הָרַכֶּבֶת הַבָּאָה? | when is the next train? |  |
-| [taxi-13](f/israeli/line/taxi-13.mp3) | כַּרְטִיס אֶחָד לְ..., בְּבַקָּשָׁה | one ticket to ..., please |  |
-| [taxi-14](f/israeli/line/taxi-14.mp3) | הַאִם זֶה הָאוֹטוֹבּוּס לְ...? | is this the bus to ...? |  |
-| [taxi-15](f/israeli/line/taxi-15.mp3) | הַנְּסִיעָה הָיְתָה נָעִימָה, תּוֹדָה | it was a pleasant ride, thanks |  |
+| [small-talk-14-f](f/israeli/line/small-talk-14-f.mp3) | הַכֹּל בְּסֵדֶר אִתָּךְ? | are you OK? | hakol beseder itakh? |
+| [small-talk-14-m](f/israeli/line/small-talk-14-m.mp3) | הַכֹּל בְּסֵדֶר אִתְּךָ? | are you OK? | hakol beseder itekha? |
+| [small-talk-16](f/israeli/line/small-talk-16.mp3) | מָה הַמַּצָּב? | how's it going? (lit. what's the situation) | mah hamatzav? |
+| [small-talk-17](f/israeli/line/small-talk-17.mp3) | אֵין מָה לַעֲשׂוֹת | there's nothing to be done | ein mah la'asot |
+| [small-talk-19-f](f/israeli/line/small-talk-19-f.mp3) | אֶתְגַּעְגֵּעַ אֵלַיִךְ | I'll miss you | etgage'a elayikh |
+| [small-talk-19-m](f/israeli/line/small-talk-19-m.mp3) | אֶתְגַּעְגֵּעַ אֵלֶיךָ | I'll miss you | etgage'a elekha |
+| [taxi-01-f](f/israeli/line/taxi-01-f.mp3) | אֲנִי צְרִיכָה מוֹנִית | I need a taxi | ani tzerikhah monit |
+| [taxi-01-m](f/israeli/line/taxi-01-m.mp3) | אֲנִי צָרִיךְ מוֹנִית | I need a taxi | ani tzarikh monit |
+| [taxi-03](f/israeli/line/taxi-03.mp3) | לִשְׂדֵה הַתְּעוּפָה, בְּבַקָּשָׁה | to the airport, please | lisdeh hate'ufah, bevakashah |
+| [taxi-04](f/israeli/line/taxi-04.mp3) | לַתַּחֲנָה הַמֶּרְכָּזִית | to the central station | latachanah hamerkazit |
+| [taxi-07](f/israeli/line/taxi-07.mp3) | אֶפְשָׁר מוֹנֶה, בְּבַקָּשָׁה? | can you use the meter, please? | efshar moneh, bevakashah? |
+| [taxi-08](f/israeli/line/taxi-08.mp3) | כַּמָּה זֶה יַעֲלֶה? | how much will it cost? | kamah zeh ya'aleh? |
+| [taxi-09-f](f/israeli/line/taxi-09-f.mp3) | עִצְרִי כָּאן, בְּבַקָּשָׁה | stop here, please | itzri kan, bevakashah |
+| [taxi-09-m](f/israeli/line/taxi-09-m.mp3) | עֲצֹר כָּאן, בְּבַקָּשָׁה | stop here, please | atzor kan, bevakashah |
+| [taxi-10](f/israeli/line/taxi-10.mp3) | אֵיפֹה תַּחֲנַת הָאוֹטוֹבּוּס? | where is the bus stop? | eifoh tachanat ha'otobus? |
+| [taxi-11](f/israeli/line/taxi-11.mp3) | אֵיזֶה אוֹטוֹבּוּס הוֹלֵךְ לְ...? | which bus goes to ...? | eizeh otobus holekh le...? |
+| [taxi-12](f/israeli/line/taxi-12.mp3) | מָתַי הָרַכֶּבֶת הַבָּאָה? | when is the next train? | matai harakevet haba'ah? |
+| [taxi-13](f/israeli/line/taxi-13.mp3) | כַּרְטִיס אֶחָד לְ..., בְּבַקָּשָׁה | one ticket to ..., please | kartis echad le..., bevakashah |
+| [taxi-14](f/israeli/line/taxi-14.mp3) | הַאִם זֶה הָאוֹטוֹבּוּס לְ...? | is this the bus to ...? | ha'im zeh ha'otobus le...? |
+| [taxi-15](f/israeli/line/taxi-15.mp3) | הַנְּסִיעָה הָיְתָה נָעִימָה, תּוֹדָה | it was a pleasant ride, thanks | hanesi'ah hayetah na'imah, todah |
 | [torah-barchu-l1](f/israeli/line/torah-barchu-l1.mp3) | בָּרְכוּ אֶת אֲדֹנָי הַמְּבֹרָךְ׃ | Bless the LORD, the blessed one. | barkhu et adonai hamevorakh |
 | [torah-barchu-l2](f/israeli/line/torah-barchu-l2.mp3) | בָּרוּךְ אֲדֹנָי הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃ | Blessed is the LORD, the blessed one, for ever and ever. | barukh adonai hamevorakh le'olam va'ed |
 | [torah-bless-1](f/israeli/line/torah-bless-1.mp3) | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל־הָעַמִּים וְנָתַן לָנוּ אֶת־תּוֹרָתוֹ בָּרוּךְ אַתָּה אֲדֹנָי נוֹתֵן הַתּוֹרָה׃ | Blessed are you, LORD our God, king of the world, who chose us from all the peoples and gave us his Torah. Blessed are you, LORD, giver of the Torah. | barukh atah adonai eloheinu melekh ha'olam asher bachar banu mikol-ha'amim venatan lanu et-torato barukh atah adonai noten hatorah |
@@ -3010,4 +3012,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 3364 produced clips in INDEX.csv have an English label; 0 UNKNOWN. Filenames and IDs are unchanged.
+All 3366 produced clips in INDEX.csv have an English label; 0 UNKNOWN. Filenames and IDs are unchanged.

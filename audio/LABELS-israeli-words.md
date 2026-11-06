@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 3549 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 3613 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-3549 English labels; 4 UNKNOWN.
+3613 English labels; 4 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -3405,6 +3405,10 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [torah-bless-2-w8](m/israeli/word/torah-bless-2-w8.mp3) | נָתַן | to give; to allow, permit, let; to put, place | natan |
 | [torah-bless-2-w9](m/israeli/word/torah-bless-2-w9.mp3) | לָנוּ | us | lanu |
 | [vahavta-1-w1](m/israeli/word/vahavta-1-w1.mp3) | וְאָהַבְתָּ | and you shall love | ve'ahavta |
+| [vahavta-1-w2](m/israeli/word/vahavta-1-w2.mp3) | אֵת | used to introduce a semantically definite direct object; to, with | et |
+| [vahavta-1-w3](m/israeli/word/vahavta-1-w3.mp3) | אֲדֹנָי | the LORD | adonai |
+| [vahavta-1-w4](m/israeli/word/vahavta-1-w4.mp3) | אֱלֹהֶיךָ | your God | elohekha |
+| [vahavta-1-w5](m/israeli/word/vahavta-1-w5.mp3) | בְּכָל־לְבָבְךָ | with all your heart | bekhol-levavekha |
 | [vahavta-1-w6](m/israeli/word/vahavta-1-w6.mp3) | וּבְכָל־נַפְשְׁךָ | and with all your soul | uvekhol-nafshekha |
 | [vahavta-1-w7](m/israeli/word/vahavta-1-w7.mp3) | וּבְכָל־מְאֹדֶךָ׃ | and with all your might | uvekhol-me'odekha |
 | [vahavta-2-w1](m/israeli/word/vahavta-2-w1.mp3) | וְהָיוּ | and shall be | vehayu |
@@ -3565,6 +3569,66 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [yigdal-w41](m/israeli/word/yigdal-w41.mp3) | יוֹרֶה | a (male) shooter; the first rain of the year | yoreh |
 | [yigdal-w42](m/israeli/word/yigdal-w42.mp3) | גְדֻלָּתוֹ | his greatness | gedulato |
 | [yigdal-w43](m/israeli/word/yigdal-w43.mp3) | וּמַלְכוּתוֹ׃ | and his sovereignty | umalkhuto |
+| [yigdal-w44](m/israeli/word/yigdal-w44.mp3) | שֶׁפַע | abundance | shefa |
+| [yigdal-w45](m/israeli/word/yigdal-w45.mp3) | נְבוּאָתוֹ | of his prophecy | nevu'ato |
+| [yigdal-w46](m/israeli/word/yigdal-w46.mp3) | נְתָנוֹ | he gave | netano |
+| [yigdal-w47](m/israeli/word/yigdal-w47.mp3) | אֶל | to, towards, into; at, by | el |
+| [yigdal-w48](m/israeli/word/yigdal-w48.mp3) | אַנְשֵׁי | the people | anshei |
+| [yigdal-w49](m/israeli/word/yigdal-w49.mp3) | סְגֻלָּתוֹ | he treasured | segulato |
+| [yigdal-w5](m/israeli/word/yigdal-w5.mp3) | נִמְצָא | to be found; to be discovered; to be present, to be located, to be situated | nimtza |
+| [yigdal-w50](m/israeli/word/yigdal-w50.mp3) | וְתִפְאַרְתּוֹ׃ | and his glory | vetif'arto |
+| [yigdal-w51](m/israeli/word/yigdal-w51.mp3) | לֹא | not; no | lo |
+| [yigdal-w52](m/israeli/word/yigdal-w52.mp3) | קָם | to rise, stand up; to become in charge; to remain valid | kam |
+| [yigdal-w53](m/israeli/word/yigdal-w53.mp3) | בְּיִשְׂרָאֵל | in Israel | beyisra'el |
+| [yigdal-w54](m/israeli/word/yigdal-w54.mp3) | כְּמֹשֶׁה | like Moses | kemosheh |
+| [yigdal-w55](m/israeli/word/yigdal-w55.mp3) | עוֹד | again, once more; again and again, repeatedly; also, additionally, furthermore | od |
+| [yigdal-w56](m/israeli/word/yigdal-w56.mp3) | נָבִיא | prophet | navi |
+| [yigdal-w57](m/israeli/word/yigdal-w57.mp3) | וּמַבִּיט | and who beheld | umabit |
+| [yigdal-w58](m/israeli/word/yigdal-w58.mp3) | אֶת־תְּמוּנָתוֹ׃ | his likeness | et-temunato |
+| [yigdal-w59](m/israeli/word/yigdal-w59.mp3) | תּוֹרַת | Torah of | torat |
+| [yigdal-w6](m/israeli/word/yigdal-w6.mp3) | וְאֵין | and not | ve'ein |
+| [yigdal-w60](m/israeli/word/yigdal-w60.mp3) | אֱמֶת | truth | emet |
+| [yigdal-w61](m/israeli/word/yigdal-w61.mp3) | נָתַן | to give; to allow, permit, let; to put, place | natan |
+| [yigdal-w62](m/israeli/word/yigdal-w62.mp3) | לְעַמּוֹ | to his people | le'amo |
+| [yigdal-w63](m/israeli/word/yigdal-w63.mp3) | אֵל | god; strength | el |
+| [yigdal-w64](m/israeli/word/yigdal-w64.mp3) | עַל | on, on top of; on; about | al |
+| [yigdal-w65](m/israeli/word/yigdal-w65.mp3) | יַד | by the hand | yad |
+| [yigdal-w66](m/israeli/word/yigdal-w66.mp3) | נְבִיאוֹ | of his prophet | nevi'o |
+| [yigdal-w67](m/israeli/word/yigdal-w67.mp3) | נֶאֱמַן | to be true or reliable; to be believed | ne'eman |
+| [yigdal-w68](m/israeli/word/yigdal-w68.mp3) | בֵּיתוֹ׃ | in his house | beito |
+| [yigdal-w69](m/israeli/word/yigdal-w69.mp3) | לֹא | not; no | lo |
+| [yigdal-w7](m/israeli/word/yigdal-w7.mp3) | עֵת | a time; a period of time, a season, an era | et |
+| [yigdal-w70](m/israeli/word/yigdal-w70.mp3) | יַחֲלִיף | will alter | yachalif |
+| [yigdal-w71](m/israeli/word/yigdal-w71.mp3) | הָאֵל | God | ha'el |
+| [yigdal-w72](m/israeli/word/yigdal-w72.mp3) | וְלֹא | and not | velo |
+| [yigdal-w73](m/israeli/word/yigdal-w73.mp3) | יָמִיר | will exchange | yamir |
+| [yigdal-w74](m/israeli/word/yigdal-w74.mp3) | דָּתוֹ | his law | dato |
+| [yigdal-w75](m/israeli/word/yigdal-w75.mp3) | לְעוֹלָמִים | for ever | le'olamim |
+| [yigdal-w76](m/israeli/word/yigdal-w76.mp3) | לְזוּלָתוֹ׃ | for any other | lezulato |
+| [yigdal-w77](m/israeli/word/yigdal-w77.mp3) | צוֹפֶה | a watchman, a lookout; a viewer, a spectator; a boy scout | tzofeh |
+| [yigdal-w78](m/israeli/word/yigdal-w78.mp3) | וְיוֹדֵעַ | and knows | veyode'a |
+| [yigdal-w79](m/israeli/word/yigdal-w79.mp3) | סְתָרֵינוּ | our secrets | setareinu |
+| [yigdal-w8](m/israeli/word/yigdal-w8.mp3) | אֶל | to, towards, into; at, by | el |
+| [yigdal-w80](m/israeli/word/yigdal-w80.mp3) | מַבִּיט | sees | mabit |
+| [yigdal-w81](m/israeli/word/yigdal-w81.mp3) | לְסוֹף | to the end | lesof |
+| [yigdal-w82](m/israeli/word/yigdal-w82.mp3) | דָּבָר | thing; speech; word (unit of language) | davar |
+| [yigdal-w83](m/israeli/word/yigdal-w83.mp3) | בְּקַדְמָתוֹ׃ | at its beginning | bekadmato |
+| [yigdal-w84](m/israeli/word/yigdal-w84.mp3) | גּוֹמֵל | repays | gomel |
+| [yigdal-w85](m/israeli/word/yigdal-w85.mp3) | לְאִישׁ | a person | le'ish |
+| [yigdal-w86](m/israeli/word/yigdal-w86.mp3) | חֶסֶד | loving kindness, benevolence, goodness; shame, reproach | chesed |
+| [yigdal-w87](m/israeli/word/yigdal-w87.mp3) | כְּמִפְעָלוֹ | according to his deeds | kemif'alo |
+| [yigdal-w88](m/israeli/word/yigdal-w88.mp3) | נוֹתֵן | gives | noten |
+| [yigdal-w89](m/israeli/word/yigdal-w89.mp3) | לְרָשָׁע | to the wicked | lerasha |
+| [yigdal-w9](m/israeli/word/yigdal-w9.mp3) | מְצִיאוּתוֹ׃ | his existence | metzi'uto |
+| [yigdal-w90](m/israeli/word/yigdal-w90.mp3) | רָע | evil | ra |
+| [yigdal-w91](m/israeli/word/yigdal-w91.mp3) | כְּרִשְׁעָתוֹ׃ | according to his wickedness | kerish'ato |
+| [yigdal-w92](m/israeli/word/yigdal-w92.mp3) | יִשְׁלַח | will send | yishlach |
+| [yigdal-w93](m/israeli/word/yigdal-w93.mp3) | לְקֵץ | at the end | leketz |
+| [yigdal-w94](m/israeli/word/yigdal-w94.mp3) | הַיָּמִין | the days | hayamin |
+| [yigdal-w95](m/israeli/word/yigdal-w95.mp3) | מְשִׁיחֵנוּ | our anointed one | meshichenu |
+| [yigdal-w96](m/israeli/word/yigdal-w96.mp3) | לִפְדּוֹת | to redeem | lifdot |
+| [yigdal-w97](m/israeli/word/yigdal-w97.mp3) | מְחַכֵּי | those who await | mechakei |
+| [yigdal-w98](m/israeli/word/yigdal-w98.mp3) | קֵץ | an end, a finish | ketz |
 
 ## Israeli reading lines
 
@@ -4155,4 +4219,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 4884 produced clips in INDEX.csv have an English label; 4 UNKNOWN. Filenames and IDs are unchanged.
+All 5017 produced clips in INDEX.csv have an English label; 4 UNKNOWN. Filenames and IDs are unchanged.

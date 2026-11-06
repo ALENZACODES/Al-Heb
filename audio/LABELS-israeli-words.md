@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 3480 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 3518 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-3480 English labels; 4 UNKNOWN.
+3518 English labels; 4 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -3496,6 +3496,44 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [vezot-hatorah-w4](m/israeli/word/vezot-hatorah-w4.mp3) | שָׂם | to put, place; to turn on; to put on, don (gloves) | sam |
 | [vezot-hatorah-w5](m/israeli/word/vezot-hatorah-w5.mp3) | מֹשֶׁה | Moses | mosheh |
 | [vezot-hatorah-w6](m/israeli/word/vezot-hatorah-w6.mp3) | לִפְנֵי | before, in advance of, prior to; before, in front of, facing; ago | lifnei |
+| [vezot-hatorah-w7](m/israeli/word/vezot-hatorah-w7.mp3) | בְּנֵי | the children of | benei |
+| [vezot-hatorah-w8](m/israeli/word/vezot-hatorah-w8.mp3) | יִשְׂרָאֵל׃ | Israel | yisra'el |
+| [vezot-hatorah-w9](m/israeli/word/vezot-hatorah-w9.mp3) | עַל | on, on top of; on; about | al |
+| [yehalelu-w1](m/israeli/word/yehalelu-w1.mp3) | יְהַלְלוּ | let praise | yehalelu |
+| [yehalelu-w10](m/israeli/word/yehalelu-w10.mp3) | וַיָּרֶם | and he lifted | vayarem |
+| [yehalelu-w11](m/israeli/word/yehalelu-w11.mp3) | קֶרֶן | horn; ray, beam; corner (exterior) | keren |
+| [yehalelu-w12](m/israeli/word/yehalelu-w12.mp3) | לְעַמּוֹ | for his people | le'amo |
+| [yehalelu-w13](m/israeli/word/yehalelu-w13.mp3) | תְּהִלָּה | praise, adoration; glory, splendor | tehilah |
+| [yehalelu-w14](m/israeli/word/yehalelu-w14.mp3) | לְכָל־חֲסִידָיו | for all his faithful | lekhol-chasidav |
+| [yehalelu-w15](m/israeli/word/yehalelu-w15.mp3) | לִבְנֵי | for the children of | livnei |
+| [yehalelu-w16](m/israeli/word/yehalelu-w16.mp3) | יִשְׂרָאֵל | Israel | yisra'el |
+| [yehalelu-w17](m/israeli/word/yehalelu-w17.mp3) | עַם־קְרֹבוֹ | a people close to him | am-kerovo |
+| [yehalelu-w18](m/israeli/word/yehalelu-w18.mp3) | הַלְלוּ־יָהּ׃ | Hallelujah | halelu-yah |
+| [yehalelu-w2](m/israeli/word/yehalelu-w2.mp3) | אֶת־שֵׁם | the name | et-shem |
+| [yehalelu-w3](m/israeli/word/yehalelu-w3.mp3) | אֲדֹנָי | the LORD | adonai |
+| [yehalelu-w4](m/israeli/word/yehalelu-w4.mp3) | כִּי־נִשְׂגָּב | for exalted | ki-nisgav |
+| [yehalelu-w5](m/israeli/word/yehalelu-w5.mp3) | שְׁמוֹ | his name | shemo |
+| [yehalelu-w6](m/israeli/word/yehalelu-w6.mp3) | לְבַדּוֹ | alone | levado |
+| [yehalelu-w7](m/israeli/word/yehalelu-w7.mp3) | הוֹדוֹ | his splendour | hodo |
+| [yehalelu-w8](m/israeli/word/yehalelu-w8.mp3) | עַל־אֶרֶץ | above earth | al-eretz |
+| [yehalelu-w9](m/israeli/word/yehalelu-w9.mp3) | וְשָׁמָיִם׃ | and heaven | veshamayim |
+| [yigdal-w1](m/israeli/word/yigdal-w1.mp3) | יִגְדַּל | may be magnified | yigdal |
+| [yigdal-w10](m/israeli/word/yigdal-w10.mp3) | אֶחָד | one | echad |
+| [yigdal-w100](m/israeli/word/yigdal-w100.mp3) | מֵתִים | the dead | metim |
+| [yigdal-w101](m/israeli/word/yigdal-w101.mp3) | יְחַיֶּה | will revive | yechayeh |
+| [yigdal-w102](m/israeli/word/yigdal-w102.mp3) | אֵל | god; strength | el |
+| [yigdal-w103](m/israeli/word/yigdal-w103.mp3) | בְּרֹב | in the greatness | berov |
+| [yigdal-w104](m/israeli/word/yigdal-w104.mp3) | חַסְדּוֹ | of his kindness | chasdo |
+| [yigdal-w105](m/israeli/word/yigdal-w105.mp3) | בָּרוּךְ | blessed | barukh |
+| [yigdal-w106](m/israeli/word/yigdal-w106.mp3) | עֲדֵי | for ever | adei |
+| [yigdal-w107](m/israeli/word/yigdal-w107.mp3) | עַד | until, till, up until (a time); by (a time); to | ad |
+| [yigdal-w108](m/israeli/word/yigdal-w108.mp3) | שֵׁם | a name; a first name | shem |
+| [yigdal-w109](m/israeli/word/yigdal-w109.mp3) | תְּהִלָּתוֹ׃ | his praised | tehilato |
+| [yigdal-w11](m/israeli/word/yigdal-w11.mp3) | וְאֵין | and there is no | ve'ein |
+| [yigdal-w12](m/israeli/word/yigdal-w12.mp3) | יָחִיד | individual; private individual, private owner; singular | yachid |
+| [yigdal-w13](m/israeli/word/yigdal-w13.mp3) | כְּיִחוּדוֹ | like his unity | keyichudo |
+| [yigdal-w14](m/israeli/word/yigdal-w14.mp3) | נֶעְלָם | hidden | nelam |
+| [yigdal-w15](m/israeli/word/yigdal-w15.mp3) | וְגַם | and also | vegam |
 
 ## Israeli reading lines
 
@@ -4086,4 +4124,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 4534 produced clips in INDEX.csv have an English label; 39 UNKNOWN. Filenames and IDs are unchanged.
+All 4824 produced clips in INDEX.csv have an English label; 4 UNKNOWN. Filenames and IDs are unchanged.

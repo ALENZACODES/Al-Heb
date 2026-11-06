@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 3471 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 3480 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-3471 English labels; 4 UNKNOWN.
+3480 English labels; 4 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -3487,6 +3487,15 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [vayehi-binsoa-w8](m/israeli/word/vayehi-binsoa-w8.mp3) | וְיָפֻצוּ | and may be scattered | veyafutzu |
 | [vayehi-binsoa-w9](m/israeli/word/vayehi-binsoa-w9.mp3) | אֹיְבֶיךָ | your enemies | oyevekha |
 | [vezot-hatorah-w1](m/israeli/word/vezot-hatorah-w1.mp3) | וְזֹאת | and this | vezot |
+| [vezot-hatorah-w10](m/israeli/word/vezot-hatorah-w10.mp3) | פִּי | multiplicative particle | pi |
+| [vezot-hatorah-w11](m/israeli/word/vezot-hatorah-w11.mp3) | אֲדֹנָי | the LORD | adonai |
+| [vezot-hatorah-w12](m/israeli/word/vezot-hatorah-w12.mp3) | בְּיַד | by the hand | beyad |
+| [vezot-hatorah-w13](m/israeli/word/vezot-hatorah-w13.mp3) | מֹשֶׁה׃ | of Moses | mosheh |
+| [vezot-hatorah-w2](m/israeli/word/vezot-hatorah-w2.mp3) | הַתּוֹרָה | the Torah | hatorah |
+| [vezot-hatorah-w3](m/israeli/word/vezot-hatorah-w3.mp3) | אֲשֶׁר | introduces a subordinate clause | asher |
+| [vezot-hatorah-w4](m/israeli/word/vezot-hatorah-w4.mp3) | שָׂם | to put, place; to turn on; to put on, don (gloves) | sam |
+| [vezot-hatorah-w5](m/israeli/word/vezot-hatorah-w5.mp3) | מֹשֶׁה | Moses | mosheh |
+| [vezot-hatorah-w6](m/israeli/word/vezot-hatorah-w6.mp3) | לִפְנֵי | before, in advance of, prior to; before, in front of, facing; ago | lifnei |
 
 ## Israeli reading lines
 
@@ -4077,4 +4086,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 4519 produced clips in INDEX.csv have an English label; 36 UNKNOWN. Filenames and IDs are unchanged.
+All 4534 produced clips in INDEX.csv have an English label; 39 UNKNOWN. Filenames and IDs are unchanged.

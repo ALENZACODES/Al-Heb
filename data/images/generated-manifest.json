@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 1075,
+ "count": 1081,
  "images": {
   "BADGE_01": {
    "w": 512,
@@ -35,6 +35,18 @@
     {
      "edge": 512,
      "file": "BADGE_05.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "BADGE_trad_01": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "BADGE_trad_01.512.webp",
      "w": 512,
      "h": 512
     }
@@ -2471,6 +2483,18 @@
     {
      "edge": 512,
      "file": "GRAM_place_09.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_plural_02": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_plural_02.512.webp",
      "w": 512,
      "h": 512
     }
@@ -10792,6 +10816,18 @@
     }
    ]
   },
+  "PLACE_eilat_07": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_eilat_07.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_everyday_01": {
    "w": 512,
    "h": 293,
@@ -11116,6 +11152,18 @@
     }
    ]
   },
+  "PLACE_seasons_06": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_seasons_06.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_seasons_09": {
    "w": 512,
    "h": 293,
@@ -11123,6 +11171,18 @@
     {
      "edge": 512,
      "file": "PLACE_seasons_09.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_telaviv_02": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_telaviv_02.512.webp",
      "w": 512,
      "h": 293
     }
@@ -13139,6 +13199,18 @@
     {
      "edge": 512,
      "file": "STREAK_art_06.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "STREAK_art_10": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "STREAK_art_10.512.webp",
      "w": 512,
      "h": 512
     }

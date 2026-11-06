@@ -62574,6 +62574,314 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "PLACE_eilat_07": {
+   "id": "PLACE_eilat_07",
+   "file": "PLACE_eilat_07.png",
+   "command": 207,
+   "set": "Eilat & the Red Sea",
+   "block": "N",
+   "prompt": "Command 207 (Eilat & the Red Sea): Coral reef seen through clear water with coloured fish (underwater, stylised); a glass-bottom boat over the reef; red granite mountains behind a bay; a desert island fort in the sea (distant); palm beach with shade sails; a marina of small sailboats; a flamingo lagoon at a salt flat; snorkellers' fins and masks above bright water; a night market lane of lights (no signs); the bay at dawn with four countries' shores suggested only by distant hills (no flags, no labels). Image 7 of 10: a flamingo lagoon at a salt flat. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "d51b7bb2c8687f1a87058d1cb2bc7757915ec40138cd5ac31213291d65533718",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:49:39.384Z",
+   "sourceFile": "img-0109.png",
+   "sourceFileDate": "2026-11-06T21:49:38.820Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "8ebc30eeb27594bfcf565b0b36f32bfd90943ca781b250128a8fcba5a483c7b9",
+   "originalFormat": "PNG",
+   "originalBytes": 178543,
+   "originalFile": "PLACE_eilat_07.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_eilat_07.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 26712
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "BADGE_trad_01": {
+   "id": "BADGE_trad_01",
+   "file": "BADGE_trad_01.png",
+   "command": 244,
+   "set": "Traditions badges",
+   "block": "R",
+   "prompt": "Command 244 (Traditions badges): Ten round enamel-pin style badges matching command 97's ring and ribbon, no text — a dedicated family for the three tradition tracks and their milestones: a single lit candle on blue (Israeli track start); a shofar on cream (Ashkenazi track start); a hand-held drum (tapuf-style frame drum) on terracotta (Sephardi track start); two candles crossed light; an open scroll with a yad; a dome and a palm tree; a spice tower; a pomegranate split open with seeds; a crown over an open book; a gold sun rising over a gate (all three tracks complete). Files BADGE_trad_01 … _10, plus a greyed locked version of each named _locked (the locked versions are variants, not counted in the 10). Image 1 of 10: a single lit candle on blue (Israeli track start). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "45833c33578677622024165f74cb11410271d6a052dc6c0dc04ac7d988ff7efe",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:49:39.384Z",
+   "sourceFile": "img-0124.png",
+   "sourceFileDate": "2026-11-06T21:49:38.814Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "87e68d4bebf366b8ce644c8d4a141745e241596a5eebec7a1454a2c70e095e21",
+   "originalFormat": "PNG",
+   "originalBytes": 197919,
+   "originalFile": "BADGE_trad_01.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "BADGE_trad_01.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 9190
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_plural_02": {
+   "id": "GRAM_plural_02",
+   "file": "GRAM_plural_02.png",
+   "command": 212,
+   "set": "Plurals & counting grammar",
+   "block": "O",
+   "prompt": "Command 212 (Plurals & counting grammar): One apple vs a crate of apples (pair = 2 images); one chair vs a classroom of chairs (2); one child vs a line of children holding hands (2); one tallit vs a rack of tallitot in many colours (1); one fish vs a school of fish (1); one toothbrush vs a cup of brushes (1); one irregular pair — one foot vs two feet in socks (1). Count check: 2+2+2+1+1+1+1 = 10. Image 2 of 10: One apple vs a crate of apples (second of 2). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "d7bb43d087249ad1abba58948d1ca358289897330346b79a908e17e53bbe0080",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:49:39.384Z",
+   "sourceFile": "img-0883.png",
+   "sourceFileDate": "2026-11-06T21:49:38.894Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "104f0a1b1851616ee802fdca60977589507ac125720692769ef7253217197300",
+   "originalFormat": "PNG",
+   "originalBytes": 227654,
+   "originalFile": "GRAM_plural_02.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_plural_02.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 19410
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_seasons_06": {
+   "id": "PLACE_seasons_06",
+   "file": "PLACE_seasons_06.png",
+   "command": 209,
+   "set": "Seasons of the land",
+   "block": "N",
+   "prompt": "Command 209 (Seasons of the land): Almond blossom hills in late winter; red anemones carpeting a field in spring; a wheat field gold before harvest; summer — cicada-hot dry hills and one green oasis; the first rain darkening Jerusalem stone; autumn vineyards turning red and gold; winter snow on the northern hills with a single red-roof house; a storm sea at the Jaffa wall; migrating birds in V-formations over a valley at dawn; the land at rest — an empty field under a huge sky in the seventh-year mood (fallow, peaceful, one tree). After command 209, print the 100-place index: set, place name, file — for the app's atlas page. Image 6 of 10: autumn vineyards turning red and gold. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "9f87b50fef22357782f8fbe0727b1819f11c1c96e977e58fce23c3520def8765",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:49:39.384Z",
+   "sourceFile": "img-1067.png",
+   "sourceFileDate": "2026-11-06T21:49:38.826Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "4db6de3a5cbf573aa8dedb37496fb959c01a7dc84d8625c19dbf74f3654aff34",
+   "originalFormat": "PNG",
+   "originalBytes": 223841,
+   "originalFile": "PLACE_seasons_06.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_seasons_06.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 40212
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "Sic",
+      "conf": 64.7,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "STREAK_art_10": {
+   "id": "STREAK_art_10",
+   "file": "STREAK_art_10.png",
+   "command": 242,
+   "set": "Streak & calendar art",
+   "block": "R",
+   "prompt": "Command 242 (Streak & calendar art): Ten images for the streak system: a row of seven small flames, the seventh gold (the week kept); a flame sheltered under a glass cover (the Shabbat freeze — flame resting, not out); a seedling with one new leaf (day one); the same seedling taller at three growth stages (3 images); a moon with a small flame on its edge (the evening rescue reminder); a path of footprints with one gap filled by a gold star (a saved day); Rimon warming hands at a small campfire of one steady flame; a year path winding up a hill dotted with small flames into the distance. Count check: 2 + 1 + 3 + 1 + 1 + 1 + 1 = 10. Files STREAK_art_01 … _10. Image 10 of 10: a year path winding up a hill dotted with small flames into the distance. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "210f3063d544748f5b320e08c0bb417c988e47d35769055109dd289fa121acb5",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:49:39.384Z",
+   "sourceFile": "img-1328.png",
+   "sourceFileDate": "2026-11-06T21:49:38.755Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "ebee1e17e1269031432b66682c274e4747f5037cafee0f2a8ac7359d65aef5a2",
+   "originalFormat": "PNG",
+   "originalBytes": 269175,
+   "originalFile": "STREAK_art_10.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "STREAK_art_10.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 29920
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_telaviv_02": {
+   "id": "PLACE_telaviv_02",
+   "file": "PLACE_telaviv_02.png",
+   "command": 201,
+   "set": "Tel Aviv–Jaffa",
+   "block": "N",
+   "prompt": "Command 201 (Tel Aviv–Jaffa): A white Bauhaus building with curved balconies; a beach boulevard with palms and cyclists; an old port with fishing boats (Jaffa side); a clock tower on a rise above old streets (clock face blank, hands only); a flea-market lane of furniture and rugs (no signs); a boulevard of ficus trees with benches; a beach at sunset with a lifeguard tower; a modern tower cluster seen from the beach (distant, generic); a café row under awnings at night with string lights; a hilltop view where the old port meets the new skyline across the bay. Image 2 of 10: a beach boulevard with palms and cyclists. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "4ddb1eccc01adcec16a6784dfa69fced64460d2298ed8f291ed44e455ab79bbb",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:49:39.384Z",
+   "sourceFile": "img-1481.png",
+   "sourceFileDate": "2026-11-06T21:49:38.908Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "b6028a8be0947eb526572d9c1b8a05495232b64a3dab16af13d1bf419cac292a",
+   "originalFormat": "PNG",
+   "originalBytes": 207735,
+   "originalFile": "PLACE_telaviv_02.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_telaviv_02.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 33704
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

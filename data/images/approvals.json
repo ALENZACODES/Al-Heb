@@ -5578,6 +5578,34 @@
    "forcedDespite": [
     "contains_text"
    ]
+  },
+  "PLACE_eilat_07": {
+   "status": "approved",
+   "at": "2026-11-06T21:49:59.614Z"
+  },
+  "BADGE_trad_01": {
+   "status": "approved",
+   "at": "2026-11-06T21:49:59.614Z"
+  },
+  "GRAM_plural_02": {
+   "status": "approved",
+   "at": "2026-11-06T21:49:59.614Z"
+  },
+  "STREAK_art_10": {
+   "status": "approved",
+   "at": "2026-11-06T21:49:59.614Z"
+  },
+  "PLACE_telaviv_02": {
+   "status": "approved",
+   "at": "2026-11-06T21:49:59.614Z"
+  },
+  "PLACE_seasons_06": {
+   "status": "approved",
+   "at": "2026-11-06T21:50:00.229Z",
+   "note": "contains_text flag eye-checked at full size Nov 6: no text present (detector false positive)",
+   "forcedDespite": [
+    "contains_text"
+   ]
   }
  }
 }

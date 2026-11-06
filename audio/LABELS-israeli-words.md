@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 3193 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 3273 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-3193 English labels; 4 UNKNOWN.
+3273 English labels; 4 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -3198,6 +3198,86 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [shehecheyanu-w7](m/israeli/word/shehecheyanu-w7.mp3) | שֶׁהֶחֱיָינוּ | who has kept us alive | shehecheyainu |
 | [shehecheyanu-w8](m/israeli/word/shehecheyanu-w8.mp3) | וְקִיְּמָנוּ | and sustained us | vekiyemanu |
 | [shehecheyanu-w9](m/israeli/word/shehecheyanu-w9.mp3) | וְהִגִּיעָנוּ | and brought us | vehigi'anu |
+| [shema-1-w1](m/israeli/word/shema-1-w1.mp3) | שְׁמַע | hear | shema |
+| [shema-1-w2](m/israeli/word/shema-1-w2.mp3) | יִשְׂרָאֵל | Israel | yisra'el |
+| [shema-1-w3](m/israeli/word/shema-1-w3.mp3) | אֲדֹנָי | the LORD | adonai |
+| [shema-1-w4](m/israeli/word/shema-1-w4.mp3) | אֱלֹהֵינוּ | our-God | eloheinu |
+| [shema-1-w5](m/israeli/word/shema-1-w5.mp3) | אֲדֹנָי | the LORD | adonai |
+| [shema-1-w6](m/israeli/word/shema-1-w6.mp3) | אֶחָד׃ | one | echad |
+| [shema-2-w1](m/israeli/word/shema-2-w1.mp3) | בָּרוּךְ | blessed | barukh |
+| [shema-2-w2](m/israeli/word/shema-2-w2.mp3) | שֵׁם | a name; a first name | shem |
+| [shema-2-w3](m/israeli/word/shema-2-w3.mp3) | כְּבוֹד | the glory | kevod |
+| [shema-2-w4](m/israeli/word/shema-2-w4.mp3) | מַלְכוּתוֹ | His kingdom | malkhuto |
+| [shema-2-w5](m/israeli/word/shema-2-w5.mp3) | לְעוֹלָם | eternally, forever | le'olam |
+| [shema-2-w6](m/israeli/word/shema-2-w6.mp3) | וָעֶד׃ | and ever | va'ed |
+| [shema-vahavta-w1](m/israeli/word/shema-vahavta-w1.mp3) | שְׁמַע | hear | shema |
+| [shema-vahavta-w10](m/israeli/word/shema-vahavta-w10.mp3) | אֱלֹהֶיךָ | your God | elohekha |
+| [shema-vahavta-w11](m/israeli/word/shema-vahavta-w11.mp3) | בְּכָל־לְבָבְךָ | with all your heart | bekhol-levavekha |
+| [shema-vahavta-w12](m/israeli/word/shema-vahavta-w12.mp3) | וּבְכָל־נַפְשְׁךָ | and with all your soul | uvekhol-nafshekha |
+| [shema-vahavta-w13](m/israeli/word/shema-vahavta-w13.mp3) | וּבְכָל־מְאֹדֶךָ׃ | and with all your might | uvekhol-me'odekha |
+| [shema-vahavta-w14](m/israeli/word/shema-vahavta-w14.mp3) | וְהָיוּ | and shall be | vehayu |
+| [shema-vahavta-w15](m/israeli/word/shema-vahavta-w15.mp3) | הַדְּבָרִים | the words | hadevarim |
+| [shema-vahavta-w16](m/israeli/word/shema-vahavta-w16.mp3) | הָאֵלֶּה | these | ha'eleh |
+| [shema-vahavta-w17](m/israeli/word/shema-vahavta-w17.mp3) | אֲשֶׁר | introduces a subordinate clause | asher |
+| [shema-vahavta-w18](m/israeli/word/shema-vahavta-w18.mp3) | אָנֹכִי | I (first-person singular nominative pronoun) | anokhi |
+| [shema-vahavta-w19](m/israeli/word/shema-vahavta-w19.mp3) | מְצַוְּךָ | I command you | metzavekha |
+| [shema-vahavta-w2](m/israeli/word/shema-vahavta-w2.mp3) | יִשְׂרָאֵל | Israel | yisra'el |
+| [shema-vahavta-w20](m/israeli/word/shema-vahavta-w20.mp3) | הַיּוֹם | today | hayom |
+| [shema-vahavta-w21](m/israeli/word/shema-vahavta-w21.mp3) | עַל־לְבָבֶךָ׃ | upon your heart | al-levavekha |
+| [shema-vahavta-w22](m/israeli/word/shema-vahavta-w22.mp3) | וְשִׁנַּנְתָּם | and you shall teach them | veshinantam |
+| [shema-vahavta-w23](m/israeli/word/shema-vahavta-w23.mp3) | לְבָנֶיךָ | to your children | levanekha |
+| [shema-vahavta-w24](m/israeli/word/shema-vahavta-w24.mp3) | וְדִבַּרְתָּ | and you shall talk | vedibarta |
+| [shema-vahavta-w25](m/israeli/word/shema-vahavta-w25.mp3) | בָּם | of them | bam |
+| [shema-vahavta-w26](m/israeli/word/shema-vahavta-w26.mp3) | בְּשִׁבְתְּךָ | when you sit | beshivtekha |
+| [shema-vahavta-w27](m/israeli/word/shema-vahavta-w27.mp3) | בְּבֵיתֶךָ | in your house | beveitekha |
+| [shema-vahavta-w28](m/israeli/word/shema-vahavta-w28.mp3) | וּבְלֶכְתְּךָ | and when you walk | uvelekhtekha |
+| [shema-vahavta-w29](m/israeli/word/shema-vahavta-w29.mp3) | בַדֶּרֶךְ | on the way | vaderekh |
+| [shema-vahavta-w3](m/israeli/word/shema-vahavta-w3.mp3) | אֲדֹנָי | the LORD | adonai |
+| [shema-vahavta-w30](m/israeli/word/shema-vahavta-w30.mp3) | וּבְשָׁכְבְּךָ | and when you lie down | uveshakhbekha |
+| [shema-vahavta-w31](m/israeli/word/shema-vahavta-w31.mp3) | וּבְקוּמֶךָ׃ | and when you rise | uvekumekha |
+| [shema-vahavta-w32](m/israeli/word/shema-vahavta-w32.mp3) | וּקְשַׁרְתָּם | and you shall bind them | ukeshartam |
+| [shema-vahavta-w33](m/israeli/word/shema-vahavta-w33.mp3) | לְאוֹת | for a sign | le'ot |
+| [shema-vahavta-w34](m/israeli/word/shema-vahavta-w34.mp3) | עַל־יָדֶךָ | upon your hand | al-yadekha |
+| [shema-vahavta-w35](m/israeli/word/shema-vahavta-w35.mp3) | וְהָיוּ | and they shall be | vehayu |
+| [shema-vahavta-w36](m/israeli/word/shema-vahavta-w36.mp3) | לְטֹטָפֹת | for frontlets | letotafot |
+| [shema-vahavta-w37](m/israeli/word/shema-vahavta-w37.mp3) | בֵּין | between, among, amid | bein |
+| [shema-vahavta-w38](m/israeli/word/shema-vahavta-w38.mp3) | עֵינֶיךָ׃ | your eyes | einekha |
+| [shema-vahavta-w39](m/israeli/word/shema-vahavta-w39.mp3) | וּכְתַבְתָּם | and you shall write them | ukhetavtam |
+| [shema-vahavta-w4](m/israeli/word/shema-vahavta-w4.mp3) | אֱלֹהֵינוּ | our-God | eloheinu |
+| [shema-vahavta-w40](m/israeli/word/shema-vahavta-w40.mp3) | עַל־מְזוּזֹת | upon the doorposts | al-mezuzot |
+| [shema-vahavta-w41](m/israeli/word/shema-vahavta-w41.mp3) | בֵּיתֶךָ | your house | beitekha |
+| [shema-vahavta-w42](m/israeli/word/shema-vahavta-w42.mp3) | וּבִשְׁעָרֶיךָ׃ | and upon your gates | uvish'arekha |
+| [shema-vahavta-w5](m/israeli/word/shema-vahavta-w5.mp3) | אֲדֹנָי | the LORD | adonai |
+| [shema-vahavta-w6](m/israeli/word/shema-vahavta-w6.mp3) | אֶחָד׃ | one | echad |
+| [shema-vahavta-w7](m/israeli/word/shema-vahavta-w7.mp3) | וְאָהַבְתָּ | and you shall love | ve'ahavta |
+| [shema-vahavta-w8](m/israeli/word/shema-vahavta-w8.mp3) | אֵת | used to introduce a semantically definite direct object; to, with | et |
+| [shema-vahavta-w9](m/israeli/word/shema-vahavta-w9.mp3) | אֲדֹנָי | the LORD | adonai |
+| [shir-hamaalot-w1](m/israeli/word/shir-hamaalot-w1.mp3) | שִׁיר | song; a poem | shir |
+| [shir-hamaalot-w10](m/israeli/word/shir-hamaalot-w10.mp3) | יִמָּלֵא | filled | yimale |
+| [shir-hamaalot-w11](m/israeli/word/shir-hamaalot-w11.mp3) | שְׂחוֹק | laughter | sechok |
+| [shir-hamaalot-w12](m/israeli/word/shir-hamaalot-w12.mp3) | פִּינוּ | our mouth | pinu |
+| [shir-hamaalot-w13](m/israeli/word/shir-hamaalot-w13.mp3) | וּלְשׁוֹנֵנוּ | and our tongue | uleshonenu |
+| [shir-hamaalot-w14](m/israeli/word/shir-hamaalot-w14.mp3) | רִנָּה | singing; joy | rinah |
+| [shir-hamaalot-w15](m/israeli/word/shir-hamaalot-w15.mp3) | אָז | so, therefore, then, thus; then, next; then, at that time | az |
+| [shir-hamaalot-w16](m/israeli/word/shir-hamaalot-w16.mp3) | יֹאמְרוּ | they said | yomru |
+| [shir-hamaalot-w17](m/israeli/word/shir-hamaalot-w17.mp3) | בַגּוֹיִם | among the nations | vagoyim |
+| [shir-hamaalot-w18](m/israeli/word/shir-hamaalot-w18.mp3) | הִגְדִּיל | to enlarge, increase | higdil |
+| [shir-hamaalot-w19](m/israeli/word/shir-hamaalot-w19.mp3) | אֲדֹנָי | the LORD | adonai |
+| [shir-hamaalot-w2](m/israeli/word/shir-hamaalot-w2.mp3) | הַמַּעֲלוֹת | of ascents | hama'alot |
+| [shir-hamaalot-w20](m/israeli/word/shir-hamaalot-w20.mp3) | לַעֲשׂוֹת | to do | la'asot |
+| [shir-hamaalot-w21](m/israeli/word/shir-hamaalot-w21.mp3) | עִם־אֵלֶּה׃ | with these | im-eleh |
+| [shir-hamaalot-w22](m/israeli/word/shir-hamaalot-w22.mp3) | הִגְדִּיל | to enlarge, increase | higdil |
+| [shir-hamaalot-w23](m/israeli/word/shir-hamaalot-w23.mp3) | אֲדֹנָי | the LORD | adonai |
+| [shir-hamaalot-w24](m/israeli/word/shir-hamaalot-w24.mp3) | לַעֲשׂוֹת | to do | la'asot |
+| [shir-hamaalot-w25](m/israeli/word/shir-hamaalot-w25.mp3) | עִמָּנוּ | with us | imanu |
+| [shir-hamaalot-w26](m/israeli/word/shir-hamaalot-w26.mp3) | הָיִינוּ | we were | hayinu |
+| [shir-hamaalot-w27](m/israeli/word/shir-hamaalot-w27.mp3) | שְׂמֵחִים׃ | glad | semechim |
+| [shir-hamaalot-w28](m/israeli/word/shir-hamaalot-w28.mp3) | שׁוּבָה | return | shuvah |
+| [shir-hamaalot-w29](m/israeli/word/shir-hamaalot-w29.mp3) | אֲדֹנָי | the LORD | adonai |
+| [shir-hamaalot-w3](m/israeli/word/shir-hamaalot-w3.mp3) | בְּשׁוּב | when brought back | beshuv |
+| [shir-hamaalot-w30](m/israeli/word/shir-hamaalot-w30.mp3) | אֶת־שְׁבִיתֵנוּ | our captivity | et-shevitenu |
+| [shir-hamaalot-w31](m/israeli/word/shir-hamaalot-w31.mp3) | כַּאֲפִיקִים | as streams | ka'afikim |
+| [shir-hamaalot-w32](m/israeli/word/shir-hamaalot-w32.mp3) | בַּנֶּגֶב׃ | in the dry land | banegev |
 | [shop-12](m/israeli/word/shop-12.mp3) | מְזֻמָּן | cash | mezuman |
 | [shop-16](m/israeli/word/shop-16.mp3) | פָּתוּחַ | open | patuach |
 | [shop-17](m/israeli/word/shop-17.mp3) | סָגוּר | closed | sagur |
@@ -3799,4 +3879,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 4167 produced clips in INDEX.csv have an English label; 4 UNKNOWN. Filenames and IDs are unchanged.
+All 4247 produced clips in INDEX.csv have an English label; 4 UNKNOWN. Filenames and IDs are unchanged.

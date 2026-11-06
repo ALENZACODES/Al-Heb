@@ -18948,8 +18948,8 @@
   "kind": "word",
   "id": "etz-chaim-w2",
   "text": "חַיִּים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word"
  },
  {
@@ -18970,8 +18970,8 @@
   "kind": "word",
   "id": "etz-chaim-w3",
   "text": "הִיא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word"
  },
  {
@@ -19278,8 +19278,8 @@
   "kind": "word",
   "id": "etz-chaim-w17",
   "text": "בִּשְׂמֹאלָהּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word"
  },
  {
@@ -19300,8 +19300,8 @@
   "kind": "word",
   "id": "etz-chaim-w18",
   "text": "עֹשֶׁר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word"
  },
  {
@@ -19322,8 +19322,8 @@
   "kind": "word",
   "id": "etz-chaim-w19",
   "text": "וְכָבוֹד׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word"
  },
  {
@@ -19344,8 +19344,8 @@
   "kind": "word",
   "id": "etz-chaim-w20",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word"
  },
  {
@@ -19366,8 +19366,8 @@
   "kind": "word",
   "id": "etz-chaim-w21",
   "text": "חָפֵץ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word"
  },
  {
@@ -19388,8 +19388,8 @@
   "kind": "word",
   "id": "etz-chaim-w22",
   "text": "לְמַעַן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word"
  },
  {
@@ -19410,8 +19410,8 @@
   "kind": "word",
   "id": "etz-chaim-w23",
   "text": "צִדְקוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word"
  },
  {
@@ -19432,8 +19432,8 @@
   "kind": "word",
   "id": "etz-chaim-w24",
   "text": "יַגְדִּיל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word"
  },
  {
@@ -19454,8 +19454,8 @@
   "kind": "word",
   "id": "etz-chaim-w25",
   "text": "תּוֹרָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word"
  },
  {
@@ -19476,8 +19476,8 @@
   "kind": "word",
   "id": "etz-chaim-w26",
   "text": "וְיַאְדִּיר׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word"
  },
  {

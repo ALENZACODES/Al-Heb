@@ -1,6 +1,7 @@
 // Game 5 — conveyor typing reuses the app's SI-1452 keyboard deck builder and checker.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, resultsCard } from './engine.js';
+import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 import { screenRows, buildRound, checkAnswer } from '../typing/typing.js';
 export const STORE_KEY='games.typewriter.v1';
@@ -9,6 +10,7 @@ export function buildConveyorDeck(drills,layout) {
 }
 export function checkConveyor(typed,answer) { return checkAnswer(typed,answer).ok; }
 export function mount(root,ctx) {
+  const leaveSfx = sfx.enter(ctx);
   let alive=true,deck=[],R=null,round=0,layout=null;
   let session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});
   const status=h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading shared Hebrew keyboard deck…');
@@ -28,7 +30,7 @@ export function mount(root,ctx) {
         h('button',{type:'button',class:'game-typewriter-key',onclick:()=>{input.value+=key.char;input.focus();}},
           heSpan(key.char),h('small',{},key.qwerty))))));
     const submit=()=>{
-      const ok=checkConveyor(input.value,item.answer);session.answer(ok);
+      const ok=checkConveyor(input.value,item.answer);session.answer(ok); sfx.play(ok ? 'success' : 'miss');
       status.textContent=ok?'Correct Hebrew typed: box packed.':'Not the same Hebrew letters. Try again.';
       if(ok)round++;paint();
     };
@@ -42,5 +44,5 @@ export function mount(root,ctx) {
     if(deck.length<5||!screenRows(kb).flat().length){status.textContent='Shared SI-1452 keyboard data unavailable.';return;}
     paint();
   }).catch(()=>{if(alive)status.textContent='Typing deck unavailable.';});
-  return ()=>{alive=false;};
+  return ()=>{alive=false; leaveSfx();};
 }

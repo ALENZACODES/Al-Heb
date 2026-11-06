@@ -4126,6 +4126,718 @@
    "status": "approved",
    "at": "2026-11-06T12:18:27.982Z",
    "note": "Owner approval for reviewer site"
+  },
+  "BG_cafe": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "BG_jerusalem": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "CHAR_ari_telaviv": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L01_alef_print_s1": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L01_alef_print_v1": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L02_bet_print_s2": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L03_gimel_print_s1": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L03_gimel_print_s2": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L04_dalet_print_s1": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L04_dalet_print_s2": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L04_dalet_print_s3": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L05_he_print_s1": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L05_he_print_s2": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L06_vav_print_s3": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L07_zayin_print_ari": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L07_zayin_print_s1": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L09_tet_print_s2": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L09_tet_print_v2": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L10_yod_print_s1": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L10_yod_print_s3": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L13_mem_print_v3": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L14_nun_print_s2": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L14_nun_print_s3": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L15_samekh_print_s1": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L15_samekh_print_s3": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L16_ayin_print_s1": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L17_pe_print_s1": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L17_pe_print_s3": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L18_tsadi_print_s2": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L19_qof_print_s1": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L19_qof_print_s3": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L20_resh_print_s2": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L21_shin_print_s2": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L21_shin_print_s3": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L24_mem_final_print_s3": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L25_nun_final_print_s1": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L25_nun_final_print_s3": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "CRAFT_bimah_01": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "CRAFT_bimah_08": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "CRAFT_bimah_09": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "CRAFT_bimah_10": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "CRAFT_scroll_01": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "HERO_amidah1_07": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "HERO_amidah2_04": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "HERO_amidah2_07": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "HERO_grace_05": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "HERO_morning_02": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L26_pe_final_print_s2": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L26_pe_final_print_s3": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "L27_tsadi_final_print_s1": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "NUM_day_03": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "NUM_money_07": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "NUM_months1_07": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "NUM_months2_08": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "NUM_teens_01": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "NUM_teens_02": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "NUM_teens_05": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "NUM_teens_06": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "NUM_tens_02": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "NUM_tens_04": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "NUM_tens_05": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "NUM_tens_06": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "NUM_tens_07": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "NUM_tens_08": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "NUM_tens_10": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "OPP_two_09": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "STORY_abraham_06": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "STORY_creation_07": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "STORY_creation_10": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "STORY_jacob_08": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "STORY_jacob_10": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "STORY_joseph_07": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "STORY_joseph_08": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "STORY_joseph_10": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "STORY_kings_04": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "STORY_moses1_04": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "STORY_moses1_08": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "STORY_moses2_07": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "STORY_noah_09": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "STORY_noah_10": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "V12_chataf_segol_keyword": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "V15_shin_sin_dots_card": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "VERB_eat_all_08": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "VERB_hand_05": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "VERB_home_04": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "VERB_move_09": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "VERB_talk_05": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "VOC_numbers_08": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "VOC_numbers_09": {
+   "status": "approved",
+   "at": "2026-11-06T12:21:14.615Z",
+   "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
+   "forcedDespite": [
+    "contains_text"
+   ]
   }
  }
 }

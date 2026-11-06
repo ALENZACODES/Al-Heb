@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 7614 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 7619 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-7614 English labels; 1933 UNKNOWN.
+7619 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -5702,6 +5702,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [he314ca8e](m/israeli/word/he314ca8e.mp3) | כַּדּוּר | a ball or orb or other spherical object; a ball; a sphere | kadur |
 | [he34bd325](m/israeli/word/he34bd325.mp3) | בְּהֵמָה | beast, animal (usually domesticated), livestock; beast, a person who behaves in an uncivilized manner | behemah |
 | [he38160e3](m/israeli/word/he38160e3.mp3) | רֵיקָם | Having nothing at hand; not having accomplished its purpose; for no reason, on no basis | reikam |
+| [he39d02eb](m/israeli/word/he39d02eb.mp3) | בָּקָר | bovine, cattle; beef | bakar |
 | [he3b1acbd](m/israeli/word/he3b1acbd.mp3) | עִיר | city | ir |
 | [he43ad309](m/israeli/word/he43ad309.mp3) | שָׁפַט | to judge; to sentence; to referee | shafat |
 | [he43ec7f7](m/israeli/word/he43ec7f7.mp3) | בָּנָה | to build, to construct, to raise, to erect; to prepare, to raise, to lay the foundation of, to develop | banah |
@@ -5728,8 +5729,10 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hea59fdfe](m/israeli/word/hea59fdfe.mp3) | שֵׁרוּת | a service | sherut |
 | [hea72b7d7](m/israeli/word/hea72b7d7.mp3) | אִמֵּן | to train | imen |
 | [heaa07285](m/israeli/word/heaa07285.mp3) | אִחֵר | to be late | icher |
+| [heabe1020](m/israeli/word/heabe1020.mp3) | יָא | vocative particle preceding a noun, especially a slur or pejorative | ya |
 | [heb070da2](m/israeli/word/heb070da2.mp3) | קָנָה | to buy, to purchase; to get, to appoint, to obtain, to acquire, to assign; to be appointed to a position, assigned a certain work | kanah |
 | [heb8a3bc1](m/israeli/word/heb8a3bc1.mp3) | הֵן | lo! as expressing surprise; yes, yea, aye; as well as | hen |
+| [heba0a42c](m/israeli/word/heba0a42c.mp3) | קָטֹן | to be or become small; to be unworthy | katon |
 | [hec9c6f65](m/israeli/word/hec9c6f65.mp3) | מְסֻגָּל | Able, capable | mesugal |
 | [heca8ed1e](m/israeli/word/heca8ed1e.mp3) | טַבַּעַת | ring | taba'at |
 | [hee07e419](m/israeli/word/hee07e419.mp3) | נֶחְמָד | nice, pleasant, lovely; nice, kind, friendly, pleasant | nechmad |
@@ -5768,6 +5771,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hf3ec3b23](m/israeli/word/hf3ec3b23.mp3) | כְּמוֹ | like, as | kemo |
 | [hf423b369](m/israeli/word/hf423b369.mp3) | תָּו | character, mark, sign (symbol); note | tav |
 | [hf4544f2a](m/israeli/word/hf4544f2a.mp3) | כַּנָּה | a mount, a stand, a base | kanah |
+| [hf4758d4d](m/israeli/word/hf4758d4d.mp3) | רֹק | saliva | rok |
 | [hf4b5a979](m/israeli/word/hf4b5a979.mp3) | אֵיפֹה | where; the place where; there, here (followed by שֶׁ־) | eifoh |
 | [hf53c9bc7](m/israeli/word/hf53c9bc7.mp3) | כַּמּוּבָן | of course, naturally, certainly | kamuvan |
 | [hf5a50e5d](m/israeli/word/hf5a50e5d.mp3) | אִי | an island; Egyptian jackal (Canis aureus lupaster) | i |
@@ -5798,6 +5802,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hfb819565](m/israeli/word/hfb819565.mp3) | רוּחַ | wind, a wind | ruach |
 | [hfb8d7482](m/israeli/word/hfb8d7482.mp3) | רֵיחַ | odor, scent, smell; trace, residue, iota | reiach |
 | [hfb9cb2bb](m/israeli/word/hfb9cb2bb.mp3) | הֶחְזִיק | to hold, to grab | hechzik |
+| [hfbe29a09](m/israeli/word/hfbe29a09.mp3) | דֻּבַּר | to be spoken | dubar |
 | [hfc2573fa](m/israeli/word/hfc2573fa.mp3) | נִמְצָא | to be found; to be discovered; to be present, to be located, to be situated | nimtza |
 | [hfcc1a370](m/israeli/word/hfcc1a370.mp3) | גּוֹרָל | a lot; One's allotted portion, the result of drawing lots; fate, destiny | goral |
 | [hfcd9d9b6](m/israeli/word/hfcd9d9b6.mp3) | יָשַׁב | to sit, to be in a position with the torso upright and the legs supported; to sit, to move into such a position; to settle, to establish a residence | yashav |
@@ -8220,4 +8225,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 16788 produced clips in INDEX.csv have an English label; 2511 UNKNOWN. Filenames and IDs are unchanged.
+All 16935 produced clips in INDEX.csv have an English label; 2653 UNKNOWN. Filenames and IDs are unchanged.

@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 5861 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 5927 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-5861 English labels; 1933 UNKNOWN.
+5927 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -914,6 +914,72 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [h4cedaa9e](f/israeli/word/h4cedaa9e.mp3) | סָבִיב | around | saviv |
 | [h4d33d20c](f/israeli/word/h4d33d20c.mp3) | סִיֵּם | to finish, to complete | siyem |
 | [h4d5ad9e4](f/israeli/word/h4d5ad9e4.mp3) | בִּשְׁבִיל | for, for the sake of, for the benefit of, in order for | bishvil |
+| [h4d766086](f/israeli/word/h4d766086.mp3) | יַחַד | together | yachad |
+| [h4d76dd5a](f/israeli/word/h4d76dd5a.mp3) | יָדִיד | a (male) friend; darling, beloved | yadid |
+| [h4e4b99b1](f/israeli/word/h4e4b99b1.mp3) | נָשִׂיא | a president; a prince; a chairman, a head | nasi |
+| [h4ebf1a3c](f/israeli/word/h4ebf1a3c.mp3) | מַצָּה | matzo, unleavened bread; dispute, quarrel, strife | matzah |
+| [h4ec736eb](f/israeli/word/h4ec736eb.mp3) | נָהַג | to do something out of habit or custom; to be customary; to behave (in a particular way) | nahag |
+| [h4f87a7b9](f/israeli/word/h4f87a7b9.mp3) | נֶדֶר | vow, promise, pledge, oath | neder |
+| [h4f9b4058](f/israeli/word/h4f9b4058.mp3) | לָקַח | to take (grasp with the hands); to take (carry somewhere, remove); to take (get possession of) | lakach |
+| [h4fa970c1](f/israeli/word/h4fa970c1.mp3) | לָן | to stay overnight (at a hotel or other lodging) | lan |
+| [h4fadd60b](f/israeli/word/h4fadd60b.mp3) | עִסְקִי | business; businesslike | iski |
+| [h4fed6814](f/israeli/word/h4fed6814.mp3) | רֹאשׁ | head; head, chief, leader, chairperson; head, beginning, start | rosh |
+| [h50ac3ea7](f/israeli/word/h50ac3ea7.mp3) | מֵצַר | strait, isthmus; distress, straits | metzar |
+| [h50cf3648](f/israeli/word/h50cf3648.mp3) | יוֹם | day | yom |
+| [h511bbb6f](f/israeli/word/h511bbb6f.mp3) | הִרְגִּישׁ | to feel, sense | hirgish |
+| [h516d731a](f/israeli/word/h516d731a.mp3) | נָשַׁם | to breathe; to be devastated | nasham |
+| [h5188f01f](f/israeli/word/h5188f01f.mp3) | שֵׁבֶט | a tribe; a wand, a staff; a troop | shevet |
+| [h519ce338](f/israeli/word/h519ce338.mp3) | קָצִיר | a harvest; a bough, tree branch | katzir |
+| [h51ed2ee5](f/israeli/word/h51ed2ee5.mp3) | חַיִּים | life; life (state of being alive) | chayim |
+| [h52191bbf](f/israeli/word/h52191bbf.mp3) | לְלֹא | without | lelo |
+| [h524464c5](f/israeli/word/h524464c5.mp3) | קָשַׁר | to tie, link together; to relate, associate; to conspire | kashar |
+| [h524e52f1](f/israeli/word/h524e52f1.mp3) | מַצָּב | a shape, a situation, a state | matzav |
+| [h5271b622](f/israeli/word/h5271b622.mp3) | עָווֹן | iniquity; an intentional sin, done for the purpose of pleasure | avon |
+| [h532fdc70](f/israeli/word/h532fdc70.mp3) | צָחַק | to laugh; to joke | tzachak |
+| [h5385f0f3](f/israeli/word/h5385f0f3.mp3) | סִבָּה | cause | sibah |
+| [h53c53bdf](f/israeli/word/h53c53bdf.mp3) | חָדָשׁ | new, recently made; new, current, recent (as opposed to former); grain from a new crop | chadash |
+| [h54170135](f/israeli/word/h54170135.mp3) | צָרַעַת | an affliction of the skin, clothes, or house as a punishment for sins of speech; leprosy | tzara'at |
+| [h54471e7b](f/israeli/word/h54471e7b.mp3) | צִבּוּרִי | Public | tziburi |
+| [h54cf41d4](f/israeli/word/h54cf41d4.mp3) | פָּחוֹת | less, fewer | pachot |
+| [h54d02a94](f/israeli/word/h54d02a94.mp3) | מָכַר | to sell | makhar |
+| [h558a0857](f/israeli/word/h558a0857.mp3) | חַשְׁמַלִּי | Electric, electrical | chashmali |
+| [h56319802](f/israeli/word/h56319802.mp3) | מוֹעֲדוֹן | club (association of members); club | mo'adon |
+| [h5658dbbe](f/israeli/word/h5658dbbe.mp3) | בֶּאֱמֶת | really, in truth; Really? | be'emet |
+| [h565b3652](f/israeli/word/h565b3652.mp3) | דּוֹקְטוֹר | doctor | doketor |
+| [h568e3e03](f/israeli/word/h568e3e03.mp3) | כִּסֵּא | chair | kise |
+| [h56eaa7d0](f/israeli/word/h56eaa7d0.mp3) | אֶמְצַע | middle, center | emtza |
+| [h57072da4](f/israeli/word/h57072da4.mp3) | סוֹד | secret | sod |
+| [h571c298a](f/israeli/word/h571c298a.mp3) | מַלְכָּה | queen (female monarch); queen | malkah |
+| [h572c48d4](f/israeli/word/h572c48d4.mp3) | יְחִידָה | a unit, an organizational unit; a unit, a unit of measure; a unit | yechidah |
+| [h5795e8db](f/israeli/word/h5795e8db.mp3) | כֹּחַ | strength | koach |
+| [h57ed7970](f/israeli/word/h57ed7970.mp3) | מְעַט | little, few (not much) | me'at |
+| [h57f79164](f/israeli/word/h57f79164.mp3) | תָּא | cell, cubicle, locker, stall; cell (basic unit of an organism) | ta |
+| [h58023e1f](f/israeli/word/h58023e1f.mp3) | חָל | to apply (of a law, method, etc.); to fall on, to occur, to take place (of an event); to wait | chal |
+| [h583b5633](f/israeli/word/h583b5633.mp3) | עִם | with; and also; near to, next to | im |
+| [h58d8d8fe](f/israeli/word/h58d8d8fe.mp3) | מֶלֶךְ | king | melekh |
+| [h595f9b33](f/israeli/word/h595f9b33.mp3) | נָשָׁה | to forget; to act as a usurer, to lend on interest | nashah |
+| [h5965e00c](f/israeli/word/h5965e00c.mp3) | נֶגֶד | against; opposite | neged |
+| [h59a7d1fc](f/israeli/word/h59a7d1fc.mp3) | גִּבּוֹר | hero; protagonist; strong, powerful | gibor |
+| [h5ad2503a](f/israeli/word/h5ad2503a.mp3) | מִצְרִי | Egyptian (person); Egyptian | mitzri |
+| [h5ad6806e](f/israeli/word/h5ad6806e.mp3) | עָזַר | to help, to assist | azar |
+| [h5ae20314](f/israeli/word/h5ae20314.mp3) | דֶּרֶךְ | a road, a path, a way; a journey; a custom | derekh |
+| [h5aed8aaa](f/israeli/word/h5aed8aaa.mp3) | יָכֹל | can, to be able to | yakhol |
+| [h5b150aaf](f/israeli/word/h5b150aaf.mp3) | אוֹר | to shine, be illuminated | or |
+| [h5b285a5d](f/israeli/word/h5b285a5d.mp3) | חֲמִשִּׁים | fifty | chamishim |
+| [h5b39e0f1](f/israeli/word/h5b39e0f1.mp3) | יָצָא | to come out, come away; to come out, result, be produced; to come out, turn out to be | yatza |
+| [h5b57ed79](f/israeli/word/h5b57ed79.mp3) | בָּשָׂר | flesh, meat; body, person; male genitals | basar |
+| [h5ba22cfa](f/israeli/word/h5ba22cfa.mp3) | דָּפַק | to knock; to beat; to get even (with someone), to get back (at someone) | dafak |
+| [h5ba7d704](f/israeli/word/h5ba7d704.mp3) | נוֹסַף | to be added | nosaf |
+| [h5bd1f5e1](f/israeli/word/h5bd1f5e1.mp3) | דֹּב | bear | dov |
+| [h5be380fa](f/israeli/word/h5be380fa.mp3) | אֲבִימֶלֶךְ | a ruler of a Philistine principality or town | avimelekh |
+| [h5bebb792](f/israeli/word/h5bebb792.mp3) | גִּבְעָה | a hill | giv'ah |
+| [h5c2548dc](f/israeli/word/h5c2548dc.mp3) | חַם | Hot | cham |
+| [h5c559f1a](f/israeli/word/h5c559f1a.mp3) | דְּרוֹמִי | South, southern, southerly | deromi |
+| [h5c96df63](f/israeli/word/h5c96df63.mp3) | מָן | manna | man |
+| [h5cae87cc](f/israeli/word/h5cae87cc.mp3) | בָּטַח | to rely on, to have faith in, to depend on | batach |
+| [h5cc95d6e](f/israeli/word/h5cc95d6e.mp3) | נְחֹשֶׁת | copper | nechoshet |
+| [h5d30bc42](f/israeli/word/h5d30bc42.mp3) | כָּתַב | to write | katav |
+| [h5d60ac4a](f/israeli/word/h5d60ac4a.mp3) | הִפְסִיק | to stop, to cease, to desist, to terminate | hifsik |
 | [haftarah-after-w1](f/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](f/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](f/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -6467,4 +6533,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 11475 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 11677 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 6737 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 6753 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-6737 English labels; 1933 UNKNOWN.
+6753 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -4528,25 +4528,37 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [h23e0b2a4](m/israeli/word/h23e0b2a4.mp3) | בָּחַר | to choose, to opt, to select; to prefer; to appoint | bachar |
 | [h23f7ab73](m/israeli/word/h23f7ab73.mp3) | כְּלוּם | anything; used to turn a statement of fact into a question of fact | kelum |
 | [h23fb4faa](m/israeli/word/h23fb4faa.mp3) | עִנְיָן | interest, something one finds interesting; matter, issue; business | inyan |
+| [h242d7d42](m/israeli/word/h242d7d42.mp3) | לוֹט | labdanum; the meaning of this term is uncertain. Usually taken to mean | lot |
 | [h24b72cb6](m/israeli/word/h24b72cb6.mp3) | אֵצֶל | at or to the home or office of (a person), or the like; with, in the possession of; Next to, by, alongside | etzel |
 | [h24f17330](m/israeli/word/h24f17330.mp3) | מֵת | to die; to be crazy or mad about something | met |
+| [h254a987e](m/israeli/word/h254a987e.mp3) | כִירוּרְגִּי | surgical | khiruregi |
+| [h25aa368e](m/israeli/word/h25aa368e.mp3) | צׇהֳרַיִם | Noon, midday | tzohorayim |
 | [h25e14407](m/israeli/word/h25e14407.mp3) | מָשַׁח | to anoint with oil | mashach |
 | [h26154c1a](m/israeli/word/h26154c1a.mp3) | אֶלֶף | thousand, one thousand | elef |
+| [h263f168c](m/israeli/word/h263f168c.mp3) | לַח | humid; moist, damp | lach |
 | [h264da105](m/israeli/word/h264da105.mp3) | שָׂבַע | to be sated; to be satisfied | sava |
+| [h26a32615](m/israeli/word/h26a32615.mp3) | הֶאֱמִין | to believe | he'emin |
+| [h26e6f8c5](m/israeli/word/h26e6f8c5.mp3) | שֻׁתָּף | partner, affiliate, copartner; roommate | shutaf |
 | [h26f014a5](m/israeli/word/h26f014a5.mp3) | שׁוֹר | ox | shor |
+| [h271a18af](m/israeli/word/h271a18af.mp3) | כְּנַעֲנִי | Canaanite; a Canaanite person | kena'ani |
 | [h277eae86](m/israeli/word/h277eae86.mp3) | עֹל | a yoke; servitude, subjugation | ol |
 | [h27d68eba](m/israeli/word/h27d68eba.mp3) | פּוֹל | broad bean, fava bean, fava (Vicia faba) | pol |
+| [h28a30a60](m/israeli/word/h28a30a60.mp3) | אָמַר | to say, tell; to intend; to mean | amar |
+| [h28d30511](m/israeli/word/h28d30511.mp3) | שָׁבוּר | Broken; Broken, dead | shavur |
 | [h28ecb454](m/israeli/word/h28ecb454.mp3) | רָאָה | to see, to have vision; to observe, look at | ra'ah |
 | [h293be884](m/israeli/word/h293be884.mp3) | חוֹמָה | a wall, a structure built for defense around a city, castle, etc | chomah |
 | [h29a2e2b8](m/israeli/word/h29a2e2b8.mp3) | וָו | hook | vav |
+| [h29aadfe4](m/israeli/word/h29aadfe4.mp3) | חֲמִשָּׁה | five | chamishah |
 | [h29e4f547](m/israeli/word/h29e4f547.mp3) | דַּי | enough, sufficient, adequate; stop!, enough!, cease! | dai |
 | [h29ebe493](m/israeli/word/h29ebe493.mp3) | קָשֶׁה | hard (resistant to pressure); hard (difficult); hard | kasheh |
+| [h2a0d492e](m/israeli/word/h2a0d492e.mp3) | שִׁפְחָה | maidservant, female slave, maid, handmaid | shifchah |
 | [h2a58afab](m/israeli/word/h2a58afab.mp3) | רֵאשִׁית | first of all, first | reshit |
 | [h2adc37eb](m/israeli/word/h2adc37eb.mp3) | עֻבְדָּה | fact | uvdah |
 | [h2adc4b80](m/israeli/word/h2adc4b80.mp3) | מִ־ | from, of, from inside; Than, more than; without, without the existence or presence of | mi- |
 | [h2b39dcf2](m/israeli/word/h2b39dcf2.mp3) | בַּד | fabric, cloth, linen; screen (film or television); liars | bad |
 | [h2b9299a8](m/israeli/word/h2b9299a8.mp3) | הוֹדִיעַ | to inform, to announce, to make known | hodi'a |
 | [h2c1f5534](m/israeli/word/h2c1f5534.mp3) | נָשַׁר | to fall, to drop, to shed; to drop out, to quit | nashar |
+| [h2c308e65](m/israeli/word/h2c308e65.mp3) | שִׁבְעִים | seventy | shiv'im |
 | [h2c8086bd](m/israeli/word/h2c8086bd.mp3) | בִּנְיָן | building; building, construction; a conjugation pattern, a construction | binyan |
 | [h2cd963e3](m/israeli/word/h2cd963e3.mp3) | הָיָה | to be; to happen, take place, occur | hayah |
 | [h2ce7109c](m/israeli/word/h2ce7109c.mp3) | סִימָן | mark; sign (indication); paragraph | siman |
@@ -4568,6 +4580,10 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [h32580d06](m/israeli/word/h32580d06.mp3) | נִלְחַם | to fight, wage war | nilcham |
 | [h326c520d](m/israeli/word/h326c520d.mp3) | הִשְׁתַּמֵּשׁ | to use, to make use of | hishtamesh |
 | [h327ac347](m/israeli/word/h327ac347.mp3) | שָׁכַב | to lie down, to be lying down, to recline; to have sex | shakhav |
+| [h32a7c780](m/israeli/word/h32a7c780.mp3) | נָגַע | to touch, lay a hand on; to reach, extend to; to be stricken | naga |
+| [h32c69c06](m/israeli/word/h32c69c06.mp3) | שֶׁל | of, belonging to, owned by, pertaining to | shel |
+| [h3312eae8](m/israeli/word/h3312eae8.mp3) | הִמְשִׁיךְ | to continue, to still do | himshikh |
+| [h331ea4dc](m/israeli/word/h331ea4dc.mp3) | נָקִי | clean; net | naki |
 | [haftarah-after-w1](m/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](m/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](m/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -7343,4 +7359,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 14146 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 14167 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

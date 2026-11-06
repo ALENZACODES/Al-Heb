@@ -30946,8 +30946,8 @@
   "kind": "word",
   "id": "kiddush-shabbat-eve-w30",
   "text": "בָנוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "us",
   "phonetic": "vanu"
@@ -30972,8 +30972,8 @@
   "kind": "word",
   "id": "kiddush-shabbat-eve-w31",
   "text": "בָחַרְתָּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "you chose",
   "phonetic": "vacharta"
@@ -30998,8 +30998,8 @@
   "kind": "word",
   "id": "kiddush-shabbat-eve-w32",
   "text": "וְאוֹתָנוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and us",
   "phonetic": "ve'otanu"

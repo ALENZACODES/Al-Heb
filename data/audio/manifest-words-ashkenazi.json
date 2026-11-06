@@ -14774,8 +14774,8 @@
   "kind": "word",
   "id": "malchutcha-w2",
   "text": "מַלְכוּת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "kingship, queenship; monarchy; kingdom",
   "phonetic": "malkhut"
@@ -14800,8 +14800,8 @@
   "kind": "word",
   "id": "malchutcha-w3",
   "text": "כָּל־עֹלָמִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "all ages",
   "phonetic": "kol-olamim"

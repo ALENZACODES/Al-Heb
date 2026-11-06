@@ -79,7 +79,7 @@ export function mount(root, ctx) {
 
   const announce = h('p', { class: 'game-status', role: 'status', 'aria-live': 'polite' });
   const speechNote = h('p', { class: 'muted', 'data-speech': 'catcher' });
-  const sky = h('div', { class: 'catcher-sky' });
+  const sky = h('div', { class: 'catcher-sky', role: 'group', 'aria-label': 'Vowel marks. Choose a mark, or move the basket.' });
   const basket = h('div', { class: 'catcher-basket', 'aria-hidden': 'true' });
   const hud = h('div', { class: 'game-catcher-hud' });
   sky.append(basket);
@@ -159,12 +159,28 @@ export function mount(root, ctx) {
   const pointerDown = (e) => { try { sky.setPointerCapture?.(e.pointerId); } catch { /* already released */ } move(e.clientX); };
   sky.addEventListener('pointermove', pointerMove);
   sky.addEventListener('pointerdown', pointerDown);
+  function nudge(dir) {
+    basketX = Math.max(4, Math.min(96, basketX + dir * 6));
+    basket.style.insetInlineStart = `${basketX}%`;
+    place.setAttribute('aria-valuenow', String(Math.round(basketX)));
+    place.setAttribute('aria-valuetext', `Basket at ${Math.round(basketX)} percent`);
+  }
   const keys = (e) => {
-    if (e.key === 'ArrowLeft') { basketX = Math.max(4, basketX - 6); basket.style.insetInlineStart = `${basketX}%`; }
-    if (e.key === 'ArrowRight') { basketX = Math.min(96, basketX + 6); basket.style.insetInlineStart = `${basketX}%`; }
+    if (!alive) return;
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+    if (!article.contains(e.target)) return;
+    if (e.target === place) return;
+    e.preventDefault();
+    nudge(e.key === 'ArrowLeft' ? -1 : 1);
   };
   document.addEventListener('keydown', keys);
   basket.style.insetInlineStart = '50%';
+  const place = h('input', {
+    type: 'range', class: 'catcher-place', min: '4', max: '96', value: '50', step: '6',
+    'aria-label': 'Basket position', 'aria-valuemin': '4', 'aria-valuemax': '96', 'aria-valuenow': '50',
+    'aria-valuetext': 'Basket at 50 percent',
+    oninput: (e) => { basketX = Number(e.target.value); basket.style.insetInlineStart = `${basketX}%`; place.setAttribute('aria-valuenow', String(Math.round(basketX))); place.setAttribute('aria-valuetext', `Basket at ${Math.round(basketX)} percent`); },
+  });
 
   const pauseBtn = h('button', { type: 'button', class: 'btn secondary', 'aria-pressed': 'false', onclick: () => {
     paused = !paused;
@@ -175,9 +191,9 @@ export function mount(root, ctx) {
   const article = h('article', { class: 'card game-card' },
       h('h1', { id: 'view-title', tabindex: '-1' }, 'Vowel Catcher'),
       h('p', { class: 'muted' }, reducedMotion
-        ? 'Reduced motion is on. Tap the named mark. The marks stay still.'
-        : 'Catch the named niqqud mark. Move with your finger, mouse, or arrow keys, or tap a mark.'),
-      h('div', { class: 'row' }, pauseBtn), hud, announce, speechNote, board);
+        ? 'Reduced motion is on. The marks stay still. Tab to a mark and press it, or move the basket and pause.'
+        : 'Catch the named niqqud mark. Tab to Move and Pause, or to a mark. Arrow keys move the basket while this game is focused.'),
+      h('div', { class: 'row' }, pauseBtn, place), hud, announce, speechNote, board);
   root.replaceChildren(article);
   Promise.all([loadDeck(ctx), loadGameImages(ctx)]).then(([deck, images]) => {
     if (!alive || !article.isConnected) return;

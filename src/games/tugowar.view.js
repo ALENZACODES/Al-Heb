@@ -38,7 +38,7 @@ export function dealTugPairs(pairs, rounds = ROUNDS, rnd = Math.random) {
 
 export function mount(root, ctx) {
   const leaveSfx = sfx.enter(ctx);
-  const session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 8 });
+  let session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 8 });
   let R = null;
   let pos = 0; // rope position: -1 (theirs) .. +1 (yours)
   let round = 0;
@@ -46,7 +46,7 @@ export function mount(root, ctx) {
   let timer = 0;
   let alive = true;
   let paused = false;
-  const deck = dealTugPairs(PAIRS, ROUNDS);
+  let deck = dealTugPairs(PAIRS, ROUNDS);
 
   const stage = h('div', { class: 'game-stage tug' });
   const status = h('p', { class: 'game-status', role: 'status', 'aria-live': 'polite' }, 'Pull the rope: match the opposite.');
@@ -131,7 +131,14 @@ export function mount(root, ctx) {
     if (won) sfx.play('streak');
     board.replaceChildren(resultsCard(h, heSpan, session, {
       title: won ? 'Your team wins the tug!' : 'Noa\'s team takes this one',
-      onAgain: () => { pos = 0; round = 0; nextRound(); },
+      onAgain: () => {
+        // New round score only. saveBest already wrote the device best and play count.
+        session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 8 });
+        deck = dealTugPairs(PAIRS, ROUNDS);
+        pos = 0; round = 0; current = null;
+        clearTimeout(timer);
+        nextRound();
+      },
     }));
     status.textContent = `Final rope: ${pos >= 0 ? '+' : ''}${pos.toFixed(2)} · ${session.correct} of ${session.rounds} right.`;
   }

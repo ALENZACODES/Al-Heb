@@ -27,6 +27,7 @@
 .catcher-star { position: absolute; translate: -50% 0; font-size: 1.9rem; color: #e8c97a;
   text-shadow: 0 0 12px rgba(232,201,122,.8); pointer-events: none; }
 button.catcher-star { pointer-events: auto; background: transparent; border: 0; padding: 0; cursor: pointer; color: inherit; }
+.catcher-place { min-width: 8rem; min-height: 44px; accent-color: #d9a441; }
 .catcher-basket { position: absolute; bottom: 4%; translate: -50% 0; font-size: 3rem; font-weight: 700;
   color: #f6f1e7; background: rgba(217,164,65,.16); border: 2px solid #d9a441; border-radius: 12px;
   padding: .1rem .8rem; line-height: 1.15; pointer-events: none; }

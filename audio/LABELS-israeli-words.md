@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 7147 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 7149 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-7147 English labels; 1933 UNKNOWN.
+7149 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -4978,6 +4978,8 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [h97dc517a](m/israeli/word/h97dc517a.mp3) | מַבָּט | glance, look (the act of looking); gaze, look | mabat |
 | [h97e97e5b](m/israeli/word/h97e97e5b.mp3) | פְּעֻלָּה | an action, a move | pe'ulah |
 | [h982871fa](m/israeli/word/h982871fa.mp3) | שָׁכַן | to dwell, reside; to be housed, located | shakhan |
+| [h995f8ab2](m/israeli/word/h995f8ab2.mp3) | אֲדַמְדַּם | reddish | adamdam |
+| [h9974efdc](m/israeli/word/h9974efdc.mp3) | בֵּיצָה | egg | beitzah |
 | [haftarah-after-w1](m/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](m/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](m/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -7753,4 +7755,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 15455 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 15461 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

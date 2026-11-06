@@ -682,8 +682,8 @@
   "kind": "word",
   "id": "vahavta-1-w6",
   "text": "וּבְכָל־נַפְשְׁךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and with all your soul",
   "phonetic": "uvekhol-nafshekha"
@@ -708,8 +708,8 @@
   "kind": "word",
   "id": "vahavta-1-w7",
   "text": "וּבְכָל־מְאֹדֶךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and with all your might",
   "phonetic": "uvekhol-me'odekha"

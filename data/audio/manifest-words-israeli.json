@@ -53933,8 +53933,8 @@
   "id": "h9974efdc",
   "text": "בֵּיצָה",
   "ipa": "be.ˈtsa",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "egg",
   "phonetic": "beitzah"
@@ -72693,8 +72693,8 @@
   "id": "h995f8ab2",
   "text": "אֲדַמְדַּם",
   "ipa": "a.dam.ˈdam",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "reddish",
   "phonetic": "adamdam"

@@ -33260,8 +33260,8 @@
   "kind": "word",
   "id": "yigdal-w53",
   "text": "בְּיִשְׂרָאֵל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "in Israel",
   "phonetic": "beyisra'el"
@@ -33286,8 +33286,8 @@
   "kind": "word",
   "id": "yigdal-w54",
   "text": "כְּמֹשֶׁה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "like Moses",
   "phonetic": "kemosheh"

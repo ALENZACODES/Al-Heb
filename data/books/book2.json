@@ -15,7 +15,8 @@
     "f": "audio/f/israeli/book/book2-p01.mp3",
     "m": "audio/m/israeli/book/book2-p01.mp3"
    },
-   "illustration": "an ancient, gnarled olive tree in golden morning light."
+   "illustration": "an ancient, gnarled olive tree in golden morning light.",
+   "hasImg": true
   },
   {
    "n": 2,
@@ -27,7 +28,8 @@
     "f": "audio/f/israeli/book/book2-p02.mp3",
     "m": "audio/m/israeli/book/book2-p02.mp3"
    },
-   "illustration": "an elderly man with a white beard stands barefoot on weathered sandstone, looking up."
+   "illustration": "an elderly man with a white beard stands barefoot on weathered sandstone, looking up.",
+   "hasImg": true
   },
   {
    "n": 3,
@@ -39,7 +41,8 @@
     "f": "audio/f/israeli/book/book2-p03.mp3",
     "m": "audio/m/israeli/book/book2-p03.mp3"
    },
-   "illustration": "swirling indigo and gold strokes; a single silver-green leaf floats down."
+   "illustration": "swirling indigo and gold strokes; a single silver-green leaf floats down.",
+   "hasImg": true
   },
   {
    "n": 4,
@@ -51,7 +54,8 @@
     "f": "audio/f/israeli/book/book2-p04.mp3",
     "m": "audio/m/israeli/book/book2-p04.mp3"
    },
-   "illustration": "Eli rests both palms flat against the wide trunk."
+   "illustration": "Eli rests both palms flat against the wide trunk.",
+   "hasImg": true
   },
   {
    "n": 5,
@@ -63,7 +67,8 @@
     "f": "audio/f/israeli/book/book2-p05.mp3",
     "m": "audio/m/israeli/book/book2-p05.mp3"
    },
-   "illustration": "close view — one silver-green leaf resting on the warm stone."
+   "illustration": "close view — one silver-green leaf resting on the warm stone.",
+   "hasImg": true
   },
   {
    "n": 6,
@@ -75,7 +80,8 @@
     "f": "audio/f/israeli/book/book2-p06.mp3",
     "m": "audio/m/israeli/book/book2-p06.mp3"
    },
-   "illustration": "Eli cups water from a small stone basin beside the tree."
+   "illustration": "Eli cups water from a small stone basin beside the tree.",
+   "hasImg": true
   },
   {
    "n": 7,
@@ -87,7 +93,8 @@
     "f": "audio/f/israeli/book/book2-p07.mp3",
     "m": "audio/m/israeli/book/book2-p07.mp3"
    },
-   "illustration": "half the courtyard in gold light, half in deep olive shade under the canopy."
+   "illustration": "half the courtyard in gold light, half in deep olive shade under the canopy.",
+   "hasImg": false
   },
   {
    "n": 8,
@@ -99,7 +106,8 @@
     "f": "audio/f/israeli/book/book2-p08.mp3",
     "m": "audio/m/israeli/book/book2-p08.mp3"
    },
-   "illustration": "a small bird on a high branch, the courtyard quiet below."
+   "illustration": "a small bird on a high branch, the courtyard quiet below.",
+   "hasImg": true
   },
   {
    "n": 9,
@@ -111,7 +119,8 @@
     "f": "audio/f/israeli/book/book2-p09.mp3",
     "m": "audio/m/israeli/book/book2-p09.mp3"
    },
-   "illustration": "leaves streaming sideways in one long gust, Eli's beard lifted by it."
+   "illustration": "leaves streaming sideways in one long gust, Eli's beard lifted by it.",
+   "hasImg": true
   },
   {
    "n": 10,
@@ -123,7 +132,8 @@
     "f": "audio/f/israeli/book/book2-p10.mp3",
     "m": "audio/m/israeli/book/book2-p10.mp3"
    },
-   "illustration": "Eli seated on the stone blocks, hands on his knees, eyes closed."
+   "illustration": "Eli seated on the stone blocks, hands on his knees, eyes closed.",
+   "hasImg": true
   },
   {
    "n": 11,
@@ -135,7 +145,8 @@
     "f": "audio/f/israeli/book/book2-p11.mp3",
     "m": "audio/m/israeli/book/book2-p11.mp3"
    },
-   "illustration": "a scatter of silver-green leaves turning in the air above the courtyard."
+   "illustration": "a scatter of silver-green leaves turning in the air above the courtyard.",
+   "hasImg": true
   },
   {
    "n": 12,
@@ -147,7 +158,8 @@
     "f": "audio/f/israeli/book/book2-p12.mp3",
     "m": "audio/m/israeli/book/book2-p12.mp3"
    },
-   "illustration": "the tree at first light again, Eli's footprints in the dust of the courtyard."
+   "illustration": "the tree at first light again, Eli's footprints in the dust of the courtyard.",
+   "hasImg": true
   }
  ],
  "hasImages": false,

@@ -38,7 +38,7 @@ export async function mount(root, ctx) {
     const p = book.pages[page];
     stage.replaceChildren();
     dots.replaceChildren();
-    if (book.hasImages) {
+    if (p.hasImg) {
       stage.append(h("img", { class: "book-page-img", src: p.img, alt: p.illustration || "" }));
     } else {
       stage.append(h("div", { class: "book-page-img book-page-pending" },

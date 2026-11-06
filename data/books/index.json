@@ -8,7 +8,8 @@
    "level": "Grade 1",
    "pageCount": 12,
    "hasImages": true,
-   "hasAudio": false
+   "hasAudio": false,
+   "picturedPages": 12
   },
   {
    "id": "book2",
@@ -18,7 +19,8 @@
    "level": "Grade 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false
+   "hasAudio": false,
+   "picturedPages": 11
   },
   {
    "id": "book3",
@@ -28,7 +30,8 @@
    "level": "Grade 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false
+   "hasAudio": false,
+   "picturedPages": 1
   },
   {
    "id": "book4",
@@ -38,7 +41,8 @@
    "level": "Grade 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false
+   "hasAudio": false,
+   "picturedPages": 1
   },
   {
    "id": "book5",
@@ -48,7 +52,8 @@
    "level": "Grade 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false
+   "hasAudio": false,
+   "picturedPages": 1
   }
  ]
 }

@@ -15,7 +15,8 @@
     "f": "audio/f/israeli/book/book3-p01.mp3",
     "m": "audio/m/israeli/book/book3-p01.mp3"
    },
-   "illustration": "a worn leather messenger bag on a wooden bench at a Tel Aviv train station."
+   "illustration": "a worn leather messenger bag on a wooden bench at a Tel Aviv train station.",
+   "hasImg": false
   },
   {
    "n": 2,
@@ -27,7 +28,8 @@
     "f": "audio/f/israeli/book/book3-p02.mp3",
     "m": "audio/m/israeli/book/book3-p02.mp3"
    },
-   "illustration": "a polished red apple lifted out of the bag against a crisp teal background."
+   "illustration": "a polished red apple lifted out of the bag against a crisp teal background.",
+   "hasImg": false
   },
   {
    "n": 3,
@@ -39,7 +41,8 @@
     "f": "audio/f/israeli/book/book3-p03.mp3",
     "m": "audio/m/israeli/book/book3-p03.mp3"
    },
-   "illustration": "a thick hardcover book resting beside the apple."
+   "illustration": "a thick hardcover book resting beside the apple.",
+   "hasImg": false
   },
   {
    "n": 4,
@@ -51,7 +54,8 @@
     "f": "audio/f/israeli/book/book3-p04.mp3",
     "m": "audio/m/israeli/book/book3-p04.mp3"
    },
-   "illustration": "an old brass key glinting in sunlight on top of the open bag."
+   "illustration": "an old brass key glinting in sunlight on top of the open bag.",
+   "hasImg": false
   },
   {
    "n": 5,
@@ -63,7 +67,8 @@
     "f": "audio/f/israeli/book/book3-p05.mp3",
     "m": "audio/m/israeli/book/book3-p05.mp3"
    },
-   "illustration": "a single yellow pencil laid across the open bag's flap."
+   "illustration": "a single yellow pencil laid across the open bag's flap.",
+   "hasImg": false
   },
   {
    "n": 6,
@@ -75,7 +80,8 @@
     "f": "audio/f/israeli/book/book3-p06.mp3",
     "m": "audio/m/israeli/book/book3-p06.mp3"
    },
-   "illustration": "a banana curved over the apple like a smile."
+   "illustration": "a banana curved over the apple like a smile.",
+   "hasImg": false
   },
   {
    "n": 7,
@@ -87,7 +93,8 @@
     "f": "audio/f/israeli/book/book3-p07.mp3",
     "m": "audio/m/israeli/book/book3-p07.mp3"
    },
-   "illustration": "round reading glasses folded on top of the big book."
+   "illustration": "round reading glasses folded on top of the big book.",
+   "hasImg": false
   },
   {
    "n": 8,
@@ -99,7 +106,8 @@
     "f": "audio/f/israeli/book/book3-p08.mp3",
     "m": "audio/m/israeli/book/book3-p08.mp3"
    },
-   "illustration": "the bag stands open and empty-looking; a hand lifts the book from behind it."
+   "illustration": "the bag stands open and empty-looking; a hand lifts the book from behind it.",
+   "hasImg": false
   },
   {
    "n": 9,
@@ -111,7 +119,8 @@
     "f": "audio/f/israeli/book/book3-p09.mp3",
     "m": "audio/m/israeli/book/book3-p09.mp3"
    },
-   "illustration": "wide view of the bench — the book sits at its far end, in a patch of sun."
+   "illustration": "wide view of the bench — the book sits at its far end, in a patch of sun.",
+   "hasImg": false
   },
   {
    "n": 10,
@@ -123,7 +132,8 @@
     "f": "audio/f/israeli/book/book3-p10.mp3",
     "m": "audio/m/israeli/book/book3-p10.mp3"
    },
-   "illustration": "the traveller steps into frame at the bench, waving at the reader."
+   "illustration": "the traveller steps into frame at the bench, waving at the reader.",
+   "hasImg": true
   },
   {
    "n": 11,
@@ -135,7 +145,8 @@
     "f": "audio/f/israeli/book/book3-p11.mp3",
     "m": "audio/m/israeli/book/book3-p11.mp3"
    },
-   "illustration": "the bag packed neatly — apple, book, key, pencil, banana, glasses in a row above it."
+   "illustration": "the bag packed neatly — apple, book, key, pencil, banana, glasses in a row above it.",
+   "hasImg": false
   },
   {
    "n": 12,
@@ -147,7 +158,8 @@
     "f": "audio/f/israeli/book/book3-p12.mp3",
     "m": "audio/m/israeli/book/book3-p12.mp3"
    },
-   "illustration": "the traveller walks down the platform, bag on shoulder, train lights ahead."
+   "illustration": "the traveller walks down the platform, bag on shoulder, train lights ahead.",
+   "hasImg": false
   }
  ],
  "hasImages": false,

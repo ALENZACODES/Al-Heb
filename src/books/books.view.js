@@ -32,7 +32,7 @@ export async function mount(root, ctx) {
       cover.append(heSpan(b.titleHe, "book-cover-title"));
     }
     const badges = [];
-    badges.push(b.hasImages ? "Pictures ready" : "Pictures coming");
+    badges.push(b.hasImages ? "Pictures ready" : (b.picturedPages ? `Pictures ${b.picturedPages} of ${b.pageCount}` : "Pictures coming"));
     badges.push(b.hasAudio ? "Voices ready" : "Voices coming");
     const card = h("a", { class: "card book-card", href: `#/book/${b.id}` },
       cover,

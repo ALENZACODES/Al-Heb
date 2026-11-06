@@ -1,6 +1,7 @@
 // Game 1 — Hebrew Arch-Builder: authentic letter print strokes from the canonical deck.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, resultsCard } from './engine.js';
+import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 
 export const STORE_KEY = 'games.archbuilder.v1';
@@ -15,6 +16,7 @@ export function acceptStroke(letter, chosen, step) {
   return !!letter?.strokes?.[step] && letter.strokes[step].id === chosen;
 }
 export function mount(root, ctx) {
+  const leaveSfx = sfx.enter(ctx);
   let alive = true, deck = [], images = null, round = 0, step = 0;
   let session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 6 });
   const status = h('p', { class: 'game-status', role: 'status', 'aria-live': 'polite' }, 'Loading authentic letter strokes…');
@@ -68,7 +70,7 @@ export function mount(root, ctx) {
         'aria-label': 'Try this stroke shape', onclick: () => {
           if (!alive) return;
           const ok = acceptStroke(letter, stroke.id, step);
-          session.answer(ok);
+          session.answer(ok); sfx.play(ok ? 'success' : 'miss');
           if (ok) { step++; if (step === letter.strokes.length) { step = 0; round++; } }
           status.textContent = ok ? 'Correct stroke locked.' : 'Incorrect stroke: the arch cannot lock.';
           paint();
@@ -83,5 +85,5 @@ export function mount(root, ctx) {
     if (deck.length < 3) { status.textContent = 'Not enough source letter geometry.'; return; }
     paint();
   }).catch(() => { if (alive) status.textContent = 'Letter data unavailable.'; });
-  return () => { alive = false; };
+  return () => { alive = false; leaveSfx(); };
 }

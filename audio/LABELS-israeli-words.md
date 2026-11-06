@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 6753 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 6815 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-6753 English labels; 1933 UNKNOWN.
+6815 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -4584,6 +4584,68 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [h32c69c06](m/israeli/word/h32c69c06.mp3) | שֶׁל | of, belonging to, owned by, pertaining to | shel |
 | [h3312eae8](m/israeli/word/h3312eae8.mp3) | הִמְשִׁיךְ | to continue, to still do | himshikh |
 | [h331ea4dc](m/israeli/word/h331ea4dc.mp3) | נָקִי | clean; net | naki |
+| [h333a5dcb](m/israeli/word/h333a5dcb.mp3) | אוֹיֵב | enemy | oyev |
+| [h3398235f](m/israeli/word/h3398235f.mp3) | אָדֹם | red | adom |
+| [h33f66dda](m/israeli/word/h33f66dda.mp3) | בְּדִיקָה | an examination, check-up, test, trial | bedikah |
+| [h342c3c55](m/israeli/word/h342c3c55.mp3) | צָב | turtle, tortoise; mastigure; a kind of carriage | tzav |
+| [h342fd0de](m/israeli/word/h342fd0de.mp3) | מָקוֹם | place (location or position); place, stead, lieu; the Omnipresent, God | makom |
+| [h3430ee89](m/israeli/word/h3430ee89.mp3) | הִכְנִיס | to let in, allow in, admit | hikhnis |
+| [h34530899](m/israeli/word/h34530899.mp3) | חוֹלָנִי | Slightly ill, sickly, weakened; Unhealthy, morbid | cholani |
+| [h346f78ec](m/israeli/word/h346f78ec.mp3) | רָם | high, important; loud | ram |
+| [h34aee9cc](m/israeli/word/h34aee9cc.mp3) | פֵּאָה | wig; a face (of a polyhedron); a sidelock | pe'ah |
+| [h34d7be76](m/israeli/word/h34d7be76.mp3) | שָׂפָה | lip; lip (rim of an open container); language, speech | safah |
+| [h352b83f7](m/israeli/word/h352b83f7.mp3) | כֹּה | thus, in this way | koh |
+| [h355e67cb](m/israeli/word/h355e67cb.mp3) | יַחְדָּו | together | yachdav |
+| [h35a8fcbe](m/israeli/word/h35a8fcbe.mp3) | קַר | cold | kar |
+| [h35fcbc75](m/israeli/word/h35fcbc75.mp3) | נִצֵּחַ | to win (in a game, an election, or the like); to beat (someone), to defeat (someone) (in a game, an election, or the like) | nitzeach |
+| [h36173537](m/israeli/word/h36173537.mp3) | אִלּוּ | if, should, had | ilu |
+| [h364cadf4](m/israeli/word/h364cadf4.mp3) | מָה | what; that which, the thing that; that (followed by שֶׁ־) | mah |
+| [h3674f19e](m/israeli/word/h3674f19e.mp3) | נֵס | a miracle; a flag, a standard, a banner; a staff, a pole, a flagpole | nes |
+| [h3676c260](m/israeli/word/h3676c260.mp3) | נָשָׂא | to lift; to bear, carry, support; to endure | nasa |
+| [h36d595e4](m/israeli/word/h36d595e4.mp3) | אַתָּה | you, thou | atah |
+| [h36dea5a7](m/israeli/word/h36dea5a7.mp3) | פּוֹלִיטִי | political | politi |
+| [h36fae7b2](m/israeli/word/h36fae7b2.mp3) | אֶדֶן | base, pedestal, socket | eden |
+| [h37034142](m/israeli/word/h37034142.mp3) | מְצֻיָּן | Exceptional | metzuyan |
+| [h372b7277](m/israeli/word/h372b7277.mp3) | רָחוֹק | far, distant | rachok |
+| [h3777d988](m/israeli/word/h3777d988.mp3) | כָּכָה | thus (in this way, like so) | kakhah |
+| [h378062a7](m/israeli/word/h378062a7.mp3) | תִּיק | bag, satchel; case; portfolio | tik |
+| [h37908437](m/israeli/word/h37908437.mp3) | בָּסִיס | a base | basis |
+| [h37cac81b](m/israeli/word/h37cac81b.mp3) | צִלֵּם | to photograph, to take a photograph of; to photocopy, to xerox, to copy, to make a copy of | tzilem |
+| [h3820d95e](m/israeli/word/h3820d95e.mp3) | עַמּוּד | pillar, column, post; page (of a book) | amud |
+| [h38459da3](m/israeli/word/h38459da3.mp3) | שָׁפַךְ | to spill (a fluid, a powder, or the like); to pour; to ejaculate (semen) | shafakh |
+| [h386e6ad7](m/israeli/word/h386e6ad7.mp3) | קְרָב | battle, war; fight | kerav |
+| [h38dc1dcd](m/israeli/word/h38dc1dcd.mp3) | יָשָׁר | right, straight; right, correct (complying with justice); honestly, straightforwardly, forthrightly | yashar |
+| [h39244df3](m/israeli/word/h39244df3.mp3) | קָדוֹשׁ | holy; a saint | kadosh |
+| [h39a5cc8a](m/israeli/word/h39a5cc8a.mp3) | הִקְרִיב | to bring, to present, to offer; to sacrifice, to offer a sacrifice | hikriv |
+| [h39b463af](m/israeli/word/h39b463af.mp3) | בְּרִית | covenant, alliance; brit milah, bris, circumcision ritual | berit |
+| [h39d32f55](m/israeli/word/h39d32f55.mp3) | שָׂם | to put, place; to turn on; to put on, don (gloves) | sam |
+| [h39e6c15a](m/israeli/word/h39e6c15a.mp3) | עֲבוּר | because of, for, for the sake of, in order to | avur |
+| [h3a6be4d0](m/israeli/word/h3a6be4d0.mp3) | סֹלֶת | fine flower; semolina | solet |
+| [h3a77b486](m/israeli/word/h3a77b486.mp3) | גָּמָל | camel | gamal |
+| [h3a789358](m/israeli/word/h3a789358.mp3) | נוֹתַר | to be left, to remain | notar |
+| [h3b09d299](m/israeli/word/h3b09d299.mp3) | זָר | alien, foreigner; foreign | zar |
+| [h3b32dc48](m/israeli/word/h3b32dc48.mp3) | גּוֹי | gentile (a non-Jewish person), goy; a nation; a nation other than Israel | goy |
+| [h3c6a06b3](m/israeli/word/h3c6a06b3.mp3) | חֲלוֹם | dream | chalom |
+| [h3c9f9b9b](m/israeli/word/h3c9f9b9b.mp3) | אֹהֶל | a collective term for all that covers a dead body or that a dead body covers; ohel | ohel |
+| [h3d1c89af](m/israeli/word/h3d1c89af.mp3) | חָדַר | to penetrate, imbue, infuse; to invade | chadar |
+| [h3db72062](m/israeli/word/h3db72062.mp3) | גַּלְעֵד | a cairn | gal'ed |
+| [h3dcbac32](m/israeli/word/h3dcbac32.mp3) | חֲתִיכָה | piece, chunk; item; large piece, large hunk | chatikhah |
+| [h3dfe9831](m/israeli/word/h3dfe9831.mp3) | שְׁלוֹשָׁה | three | sheloshah |
+| [h3e375762](m/israeli/word/h3e375762.mp3) | רַע | bad; evil, wicked; an evil, trouble | ra |
+| [h3e44d72d](m/israeli/word/h3e44d72d.mp3) | מוּזָר | strange, odd, bizarre, unusual, weird | muzar |
+| [h3e4e6cff](m/israeli/word/h3e4e6cff.mp3) | חָלָה | to become sick, to be ill | chalah |
+| [h3e5331a2](m/israeli/word/h3e5331a2.mp3) | פֻּמְבִּי | public | pumbi |
+| [h3e763177](m/israeli/word/h3e763177.mp3) | תִּינֹקֶת | baby, infant (female) | tinoket |
+| [h3e8123a0](m/israeli/word/h3e8123a0.mp3) | וִתֵּר | to give up (on) | viter |
+| [h3e9837b3](m/israeli/word/h3e9837b3.mp3) | זָרַח | to shine (emit light); to rise | zarach |
+| [h3ea8601d](m/israeli/word/h3ea8601d.mp3) | כְּלִי | armory; dishes | keli |
+| [h3ed1bb74](m/israeli/word/h3ed1bb74.mp3) | רָשָׁע | someone who is evil, wicked; criminal | rasha |
+| [h3f2d70f7](m/israeli/word/h3f2d70f7.mp3) | יָרַד | to go down, descend; to go down, decline, decrease; to criticize, lambaste, roast [with על (al) ‘on’] | yarad |
+| [h3f469e92](m/israeli/word/h3f469e92.mp3) | אַנְגְּלִי | English; Englishman | angeli |
+| [h3f5ee27e](m/israeli/word/h3f5ee27e.mp3) | גָּנַב | to steal | ganav |
+| [h3fbb59c8](m/israeli/word/h3fbb59c8.mp3) | קָדַם | to precede, to come before | kadam |
+| [h40319b13](m/israeli/word/h40319b13.mp3) | יַמִּי | marine, of the sea | yami |
+| [h404d10ed](m/israeli/word/h404d10ed.mp3) | פֶּרֶד | mule, hinny; dried pomegranate seeds; odd number | pered |
 | [haftarah-after-w1](m/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](m/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](m/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -7359,4 +7421,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 14167 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 14370 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

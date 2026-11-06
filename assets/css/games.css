@@ -34,3 +34,13 @@
 .game-catcher-hud { display: flex; gap: .75rem; align-items: center; min-height: 4rem; }
 .game-catcher-letter-img { width: 76px; height: 76px; object-fit: contain; }
 .game-catcher-mark-img { width: 58px; height: 58px; object-fit: contain; filter: drop-shadow(0 0 6px rgba(232,201,122,.6)); }
+
+
+/* Wave 1: objects and mechanics only. Cast and voices frozen. */
+.prefix-scene { background-size:cover; border-radius:1rem; padding:1rem; }
+.prefix-bubbles { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; min-height:10rem; align-items:center; }
+.prefix-bubble { border:3px solid #1F3A5F; border-radius:50%; width:5rem; height:5rem; background:#F6F1E7; color:#1F3A5F; display:grid; place-content:center; cursor:pointer; animation:prefix-float 3s ease-in-out infinite alternate; }
+.prefix-bubble:nth-child(even) { animation-delay:-1.5s; border-color:#B0373B; }
+.prefix-pedestal { text-align:center; padding:1rem; border-bottom:8px solid #D9A441; }
+@keyframes prefix-float { to { transform:translateY(-12px); } }
+@media (prefers-reduced-motion:reduce) { .prefix-bubble { animation:none; } }

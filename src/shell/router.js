@@ -103,6 +103,7 @@ export const ROUTES = [
   { name: 'search',   pattern: '/search',         module: './search.view.js', tier: 'v0',                    title: 'Search', owner: 'nav' },
   { name: 'about',    pattern: '/about',          module: './about.view.js', tier: 'v0',                     nav: 'nav.about',    title: 'About', owner: 'lane8' },
   // Games stay preview until the verification gate in GAMES-START-HERE.md passes.
+  { name: 'prefixblast', pattern: '/prefixblast', module: '../games/prefixblast.view.js', tier: 'preview', title: 'Bubble Pop Prefix Blast', owner: 'games' },
   { name: 'tugowar', pattern: '/tugowar', module: '../games/tugowar.view.js', tier: 'preview', title: 'Antonym Tug-of-War', owner: 'games' },
   { name: 'vowelcatcher', pattern: '/vowelcatcher', module: '../games/vowelcatcher.view.js', tier: 'preview', title: 'Vowel Catcher', owner: 'games' },
 ];
@@ -182,3 +183,4 @@ export function availableRoutes(files) {
   const norm = (m) => m.replace(/^\.\//, 'shell/').replace(/^\.\.\//, '');
   return new Set(ROUTES.filter((r) => (!r.optional || (r.module && have.has(norm(r.module)))) && (!r.needs || have.has(r.needs))).map((r) => r.name));
 }
+

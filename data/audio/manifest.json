@@ -46466,11 +46466,12 @@
   "kind": "word",
   "id": "i-10-w4",
   "text": "רְפוּאָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h3a561e77",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "refu'ah"
  },
  {
   "path": "audio/f/israeli/word/i-10-w4.mp3",
@@ -46493,11 +46494,12 @@
   "kind": "word",
   "id": "i-10-w5",
   "text": "חוֹלֶה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h8123d4c2",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "choleh"
  },
  {
   "path": "audio/f/israeli/word/i-10-w5.mp3",
@@ -46520,10 +46522,11 @@
   "kind": "word",
   "id": "i-10-w6",
   "text": "חוֹלָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "cholah"
  },
  {
   "path": "audio/f/israeli/word/i-10-w6.mp3",
@@ -46545,10 +46548,11 @@
   "kind": "word",
   "id": "i-10-w7",
   "text": "אֵל נָא רְפָא נָא לָהּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "el na refa na lah"
  },
  {
   "path": "audio/f/israeli/word/i-10-w7.mp3",
@@ -46570,10 +46574,11 @@
   "kind": "word",
   "id": "i-10-w8",
   "text": "הַגּוֹמֵל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "hagomel"
  },
  {
   "path": "audio/f/israeli/word/i-10-w8.mp3",
@@ -46595,10 +46600,11 @@
   "kind": "word",
   "id": "i-10-w9",
   "text": "שֶׁהֶחֱיָינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shehecheyainu"
  },
  {
   "path": "audio/f/israeli/word/i-10-w9.mp3",
@@ -46702,12 +46708,13 @@
   "kind": "word",
   "id": "i-11-w1",
   "text": "אוֹטוֹבּוּס",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hf524a1ad",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "otobus"
  },
  {
   "path": "audio/f/israeli/word/i-11-w1.mp3",
@@ -46959,11 +46966,12 @@
   "kind": "word",
   "id": "i-11-w10",
   "text": "יוֹרֶדֶת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yoredet"
  },
  {
   "path": "audio/f/israeli/word/i-11-w10.mp3",
@@ -46986,12 +46994,13 @@
   "kind": "word",
   "id": "i-11-w11",
   "text": "תָּפוּס",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h8572110b",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "tafus"
  },
  {
   "path": "audio/f/israeli/word/i-11-w11.mp3",

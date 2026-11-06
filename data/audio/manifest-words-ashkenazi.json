@@ -26942,8 +26942,8 @@
   "kind": "word",
   "id": "amidah-yihyu-w4",
   "text": "פִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "my mouth",
   "phonetic": "fi"
@@ -26968,8 +26968,8 @@
   "kind": "word",
   "id": "amidah-yihyu-w5",
   "text": "וְהֶגְיוֹן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and thoughts",
   "phonetic": "vehegyon"
@@ -26994,8 +26994,8 @@
   "kind": "word",
   "id": "amidah-yihyu-w6",
   "text": "לִבִּי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "my heart",
   "phonetic": "libi"
@@ -27020,8 +27020,8 @@
   "kind": "word",
   "id": "amidah-yihyu-w7",
   "text": "לְפָנֶיךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "before you",
   "phonetic": "lefanekha"
@@ -49294,7 +49294,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "right, straight; right, correct (complying with justice); honestly, straightforwardly, forthrightly"
+  "english": "right, straight; right, correct (complying with justice); honestly, straightforwardly, forthrightly",
+  "phonetic": "yashar"
  },
  {
   "path": "audio/f/ashkenazi/word/h38dc1dcd.mp3",
@@ -49307,7 +49308,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "right, straight; right, correct (complying with justice); honestly, straightforwardly, forthrightly"
+  "english": "right, straight; right, correct (complying with justice); honestly, straightforwardly, forthrightly",
+  "phonetic": "yashar"
  },
  {
   "path": "audio/m/ashkenazi/word/h64706707.mp3",
@@ -59068,7 +59070,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "battle, war; fight"
+  "english": "battle, war; fight",
+  "phonetic": "kerav"
  },
  {
   "path": "audio/f/ashkenazi/word/h386e6ad7.mp3",
@@ -59081,7 +59084,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "battle, war; fight"
+  "english": "battle, war; fight",
+  "phonetic": "kerav"
  },
  {
   "path": "audio/m/ashkenazi/word/h6fd09fff.mp3",
@@ -61758,7 +61762,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to photograph, to take a photograph of; to photocopy, to xerox, to copy, to make a copy of"
+  "english": "to photograph, to take a photograph of; to photocopy, to xerox, to copy, to make a copy of",
+  "phonetic": "tzilem"
  },
  {
   "path": "audio/f/ashkenazi/word/h37cac81b.mp3",
@@ -61771,7 +61776,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to photograph, to take a photograph of; to photocopy, to xerox, to copy, to make a copy of"
+  "english": "to photograph, to take a photograph of; to photocopy, to xerox, to copy, to make a copy of",
+  "phonetic": "tzilem"
  },
  {
   "path": "audio/m/ashkenazi/word/hc480edcd.mp3",
@@ -65836,7 +65842,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to spill (a fluid, a powder, or the like); to pour; to ejaculate (semen)"
+  "english": "to spill (a fluid, a powder, or the like); to pour; to ejaculate (semen)",
+  "phonetic": "shafakh"
  },
  {
   "path": "audio/f/ashkenazi/word/h38459da3.mp3",
@@ -65849,7 +65856,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to spill (a fluid, a powder, or the like); to pour; to ejaculate (semen)"
+  "english": "to spill (a fluid, a powder, or the like); to pour; to ejaculate (semen)",
+  "phonetic": "shafakh"
  },
  {
   "path": "audio/m/ashkenazi/word/hec9c6f65.mp3",
@@ -67884,7 +67892,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "pillar, column, post; page (of a book)"
+  "english": "pillar, column, post; page (of a book)",
+  "phonetic": "amud"
  },
  {
   "path": "audio/f/ashkenazi/word/h3820d95e.mp3",
@@ -67897,7 +67906,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "pillar, column, post; page (of a book)"
+  "english": "pillar, column, post; page (of a book)",
+  "phonetic": "amud"
  },
  {
   "path": "audio/m/ashkenazi/word/h80c149b6.mp3",

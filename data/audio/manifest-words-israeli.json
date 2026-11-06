@@ -49294,7 +49294,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "right, straight; right, correct (complying with justice); honestly, straightforwardly, forthrightly"
+  "english": "right, straight; right, correct (complying with justice); honestly, straightforwardly, forthrightly",
+  "phonetic": "yashar"
  },
  {
   "path": "audio/f/israeli/word/h38dc1dcd.mp3",
@@ -49304,10 +49305,11 @@
   "id": "h38dc1dcd",
   "text": "יָשָׁר",
   "ipa": "ja.ˈʃaʁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "right, straight; right, correct (complying with justice); honestly, straightforwardly, forthrightly"
+  "english": "right, straight; right, correct (complying with justice); honestly, straightforwardly, forthrightly",
+  "phonetic": "yashar"
  },
  {
   "path": "audio/m/israeli/word/h64706707.mp3",
@@ -59068,7 +59070,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "battle, war; fight"
+  "english": "battle, war; fight",
+  "phonetic": "kerav"
  },
  {
   "path": "audio/f/israeli/word/h386e6ad7.mp3",
@@ -59078,10 +59081,11 @@
   "id": "h386e6ad7",
   "text": "קְרָב",
   "ipa": "ke.ˈʁav",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "battle, war; fight"
+  "english": "battle, war; fight",
+  "phonetic": "kerav"
  },
  {
   "path": "audio/m/israeli/word/h6fd09fff.mp3",
@@ -61758,7 +61762,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to photograph, to take a photograph of; to photocopy, to xerox, to copy, to make a copy of"
+  "english": "to photograph, to take a photograph of; to photocopy, to xerox, to copy, to make a copy of",
+  "phonetic": "tzilem"
  },
  {
   "path": "audio/f/israeli/word/h37cac81b.mp3",
@@ -61768,10 +61773,11 @@
   "id": "h37cac81b",
   "text": "צִלֵּם",
   "ipa": "tsi.ˈlem",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to photograph, to take a photograph of; to photocopy, to xerox, to copy, to make a copy of"
+  "english": "to photograph, to take a photograph of; to photocopy, to xerox, to copy, to make a copy of",
+  "phonetic": "tzilem"
  },
  {
   "path": "audio/m/israeli/word/hc480edcd.mp3",
@@ -65836,7 +65842,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to spill (a fluid, a powder, or the like); to pour; to ejaculate (semen)"
+  "english": "to spill (a fluid, a powder, or the like); to pour; to ejaculate (semen)",
+  "phonetic": "shafakh"
  },
  {
   "path": "audio/f/israeli/word/h38459da3.mp3",
@@ -65846,10 +65853,11 @@
   "id": "h38459da3",
   "text": "שָׁפַךְ",
   "ipa": "ʃa.ˈfaχ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to spill (a fluid, a powder, or the like); to pour; to ejaculate (semen)"
+  "english": "to spill (a fluid, a powder, or the like); to pour; to ejaculate (semen)",
+  "phonetic": "shafakh"
  },
  {
   "path": "audio/m/israeli/word/hec9c6f65.mp3",
@@ -67884,7 +67892,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "pillar, column, post; page (of a book)"
+  "english": "pillar, column, post; page (of a book)",
+  "phonetic": "amud"
  },
  {
   "path": "audio/f/israeli/word/h3820d95e.mp3",
@@ -67894,10 +67903,11 @@
   "id": "h3820d95e",
   "text": "עַמּוּד",
   "ipa": "a.ˈmud",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "pillar, column, post; page (of a book)"
+  "english": "pillar, column, post; page (of a book)",
+  "phonetic": "amud"
  },
  {
   "path": "audio/m/israeli/word/h80c149b6.mp3",

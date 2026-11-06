@@ -7,7 +7,7 @@
 // Old/new stays on OPP_two_05. Every pair has an img id.
 
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, loadGameImages, imgOf, pull, pick, resultsCard } from './engine.js';
+import { createSession, loadGameImages, imgOf, pull, pick, shuffled, resultsCard } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 
 /** Best score, play count, last star rating. Device-local, listed on the privacy page. */
@@ -31,6 +31,11 @@ export const PAIRS = Object.freeze([
 
 const ROUNDS = 10;
 
+/** Ten rounds drawn from the whole pair list, so the last pairs are not stuck off-screen. */
+export function dealTugPairs(pairs, rounds = ROUNDS, rnd = Math.random) {
+  return shuffled(pairs, rnd).slice(0, Math.min(rounds, pairs.length));
+}
+
 export function mount(root, ctx) {
   const leaveSfx = sfx.enter(ctx);
   const session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 8 });
@@ -40,6 +45,8 @@ export function mount(root, ctx) {
   let current = null; // {pair, choices, answer}
   let timer = 0;
   let alive = true;
+  let paused = false;
+  const deck = dealTugPairs(PAIRS, ROUNDS);
 
   const stage = h('div', { class: 'game-stage tug' });
   const status = h('p', { class: 'game-status', role: 'status', 'aria-live': 'polite' }, 'Pull the rope: match the opposite.');
@@ -55,7 +62,7 @@ export function mount(root, ctx) {
   function nextRound() {
     round++;
     if (round > ROUNDS || Math.abs(pos) >= 1) return finish();
-    const pair = PAIRS[(round - 1) % PAIRS.length];
+    const pair = deck[(round - 1) % deck.length];
     const wrongs = pick(PAIRS.filter((p) => p !== pair), 2);
     const choices = [pair, ...wrongs];
     // present choices shuffled but deterministically per round render
@@ -65,10 +72,10 @@ export function mount(root, ctx) {
     // replaceChildren stringifies a null child as the text "null", so omit the picture node.
     const nodes = [h('p', { class: 'game-prompt' }, 'Opposite of ', heSpan(pair[0], 'he game-he'), ` (${pair[1]} — ${pair[2]})?`)];
     if (img) nodes.push(h('img', { class: 'game-card-img', src: img.src, alt: img.alt, width: img.width, height: img.height, 'data-img-id': img.id }));
-    nodes.push(h('div', { class: 'game-choices' }, ...order.map((i) => {
+    nodes.push(h('div', { class: 'game-choices' }, ...order.map((i, n) => {
       const c = choices[i];
-      return h('button', { type: 'button', class: 'btn secondary game-choice', onclick: () => answer(c) },
-        heSpan(c[3], 'he game-he-sm'), h('span', { class: 'muted' }, ` ${c[4]} · ${c[5]}`));
+      return h('button', { type: 'button', class: 'btn secondary game-choice', 'data-choice': String(n + 1), onclick: () => answer(c) },
+        h('span', { class: 'muted' }, `${n + 1}. `), heSpan(c[3], 'he game-he-sm'), h('span', { class: 'muted' }, ` ${c[4]} · ${c[5]}`));
     })));
     board.replaceChildren(...nodes);
     status.textContent = `Round ${round} of ${ROUNDS} · Score ${session.score} · Streak ${session.streak}`;
@@ -97,8 +104,27 @@ export function mount(root, ctx) {
     status.textContent = ok ? `Yes — ${pair[0]} × ${pair[3]}. Your team pulls!` : `Not that one. The opposite of ${pair[0]} is ${pair[3]}.`;
     paintRope();
     clearTimeout(timer);
-    timer = setTimeout(() => { if (alive) nextRound(); }, ok ? 450 : 1100);
+    timer = setTimeout(() => { if (alive && !paused) nextRound(); }, ok ? 450 : 1100);
   }
+
+  function togglePause() {
+    paused = !paused;
+    pauseBtn.textContent = paused ? 'Resume' : 'Pause';
+    pauseBtn.setAttribute('aria-pressed', String(paused));
+    if (!paused && alive && !current && round > 0 && round <= ROUNDS && Math.abs(pos) < 1) nextRound();
+  }
+  const pauseBtn = h('button', { type: 'button', class: 'btn secondary', 'aria-pressed': 'false', onclick: togglePause }, 'Pause');
+  const onKey = (e) => {
+    if (!alive || paused) return;
+    if (!/^[123]$/.test(e.key)) return;
+    const tag = e.target?.tagName || '';
+    if (/INPUT|TEXTAREA|SELECT/.test(tag)) return;
+    const button = board.querySelector(`[data-choice="${e.key}"]`);
+    if (!button) return;
+    e.preventDefault();
+    button.click();
+  };
+  document.addEventListener('keydown', onKey);
 
   function finish() {
     const won = pos > 0;
@@ -113,10 +139,10 @@ export function mount(root, ctx) {
   root.replaceChildren(
     h('article', { class: 'card game-card' },
       h('h1', { id: 'view-title', tabindex: '-1' }, 'Antonym Tug-of-War'),
-      h('p', { class: 'muted' }, 'Match the Hebrew opposite. Every right answer pulls the rope your way; a miss pulls it theirs.'),
-      ropeWrap, status, board));
+      h('p', { class: 'muted' }, 'Match the Hebrew opposite. Every right answer pulls the rope your way; a miss pulls it theirs. Keys 1, 2 and 3 choose.'),
+      ropeWrap, h('div', { class: 'row' }, pauseBtn), status, board));
   paintRope();
   loadGameImages(ctx).then((r) => { if (alive) { R = r; if (current) nextRoundImage(); } });
   nextRound();
-  return () => { alive = false; clearTimeout(timer); leaveSfx(); };
+  return () => { alive = false; clearTimeout(timer); document.removeEventListener('keydown', onKey); leaveSfx(); };
 }

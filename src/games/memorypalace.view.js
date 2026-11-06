@@ -25,6 +25,7 @@ export function mount(root, ctx) {
   const leaveSfx = sfx.enter(ctx);
   let alive = true, pool = [], stations = [], route = [], phase = 'study', index = 0, session, R;
   const studied = new Set();
+  const wrongThisStop = new Set();
   const status = h('p', { role: 'status', 'aria-live': 'polite' }, 'Resolving courtyard stations…');
   const board = h('div', { class: 'game-board' });
   root.replaceChildren(h('article', { class: 'card game-card' },
@@ -41,10 +42,15 @@ export function mount(root, ctx) {
     void speak(ctx, s.he);
     if (phase === 'study') { if (!studied.has(s.id)) sfx.play('pluck'); studied.add(s.id); paint(); return; }
     if (phase !== 'recall') return;
+    if (wrongThisStop.has(s.id)) {
+      status.textContent = 'That station was already tried for this stop.';
+      return;
+    }
     const ok = recallStation(route, index, s.id);
     session.answer(ok);
-    sfx.play(ok ? 'success' : 'error');
-    if (ok) index++;
+    sfx.play(ok ? 'success' : 'miss');
+    if (ok) { wrongThisStop.clear(); index++; }
+    else wrongThisStop.add(s.id);
     if (index === route.length) {
       phase = 'done';
       board.replaceChildren(resultsCard(h, heSpan, session, { title: 'Courtyard route recalled', onAgain: start }));
@@ -58,10 +64,11 @@ export function mount(root, ctx) {
     const scene = imgOf(R, 'id', 'GAME_memory_palace_courtyard');
     const grid = h('div', { class: 'palace-courtyard' }, ...stations.map(s => {
       const active = phase === 'route' && route[index].id === s.id;
+      const named = phase !== 'recall';
       return h('button', { type: 'button', class: 'palace-station' + (active ? ' palace-active' : ''),
-        'data-img-id': s.id, 'aria-label': phase === 'recall' ? s.image.alt : s.name,
-        disabled: phase === 'route', onclick: () => tap(s) },
-        h('img', { src: s.image.src, alt: s.image.alt, width: 140, height: 140 }),
+        'data-img-id': s.id, 'aria-label': named ? s.name : 'Picture station',
+        disabled: phase === 'route' || wrongThisStop.has(s.id), onclick: () => tap(s) },
+        h('img', { src: s.image.src, alt: named ? s.image.alt : '', width: 140, height: 140 }),
         phase === 'study' ? h('span', {}, heSpan(s.he), ` ${s.name}${studied.has(s.id) ? ' ✓' : ''}`) : null);
     }));
     if (scene) grid.style.backgroundImage = `url("${scene.src}")`;

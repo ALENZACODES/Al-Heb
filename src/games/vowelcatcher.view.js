@@ -74,6 +74,8 @@ export function mount(root, ctx) {
   let stars = []; // {el, mark, x, y, speed}
   let raf = 0, last = 0, spawnAt = 0;
   let alive = true;
+  let paused = false;
+  const reducedMotion = !!globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
 
   const announce = h('p', { class: 'game-status', role: 'status', 'aria-live': 'polite' });
   const sky = h('div', { class: 'catcher-sky' });
@@ -93,16 +95,34 @@ export function mount(root, ctx) {
   function spawn(now) {
     const mark = MARKS[Math.floor(Math.random() * MARKS.length)];
     const image = imgOf(R, mark.img.kind, mark.img.id, mark.img.opts);
-    const el = h('div', { class: 'catcher-star', 'aria-hidden': 'true' },
+    const star = { el: null, mark, x: 6 + Math.random() * 88, y: reducedMotion ? 30 : -8, speed: reducedMotion ? 0 : 22 + Math.random() * 16 };
+    if (reducedMotion) star.x = 8 + (stars.length % 5) * 18;
+    const el = h('button', { type: 'button', class: 'catcher-star', 'aria-label': `Catch ${mark.name}`, onclick: () => resolveStar(star) },
       image ? h('img', { class: 'game-catcher-mark-img', src: image.src, alt: '', width: 60, height: 60, 'data-img-id': image.id }) : heSpan(mark.glyph));
-    const x = 6 + Math.random() * 88;
+    star.el = el;
     sky.append(el);
-    stars.push({ el, mark, x, y: -8, speed: 22 + Math.random() * 16 }); // %/s
+    stars.push(star); // %/s
     spawnAt = now + 650 + Math.random() * 500;
+  }
+
+  function resolveStar(s) {
+    if (!alive || paused || !stars.includes(s) || !target) return;
+    const ok = s.mark === target;
+    session.answer(ok);
+    sfx.play(ok ? 'catch' : 'miss');
+    if (ok) sfx.play('collect');
+    if (ok && session.streak >= 3 && session.streak % 3 === 0) sfx.play('streak');
+    announce.replaceChildren(ok
+      ? heSpan(letter.glyph + target.point, 'he game-he-sm')
+      : `That was ${s.mark.name}. Catch ${target.name}.`,
+      ...(ok ? [` — yes! ${session.correct} caught · Score ${session.score}`] : []));
+    s.el.remove(); stars = stars.filter((x) => x !== s);
+    if (ok) { if (targetsDone >= TARGETS_PER_GAME) return finish(); newTarget(); }
   }
 
   function step(ts) {
     if (!alive || !sky.isConnected) { alive = false; return; }
+    if (paused) return;
     const dt = Math.min(0.05, (ts - last) / 1000 || 0); last = ts;
     if (ts >= spawnAt) spawn(ts);
     for (const s of [...stars]) {
@@ -110,18 +130,9 @@ export function mount(root, ctx) {
       s.el.style.insetInlineStart = `${s.x}%`;
       s.el.style.top = `${s.y}%`;
       // catch zone: near the bottom, close to basket x
-      if (s.y > 84 && s.y < 96 && Math.abs(s.x - basketX) < 9) {
-        const ok = s.mark === target;
-        session.answer(ok);
-        sfx.play(ok ? 'catch' : 'miss');
-        if (ok) sfx.play('collect');
-        if (ok && session.streak >= 3 && session.streak % 3 === 0) sfx.play('streak');
-        announce.replaceChildren(ok
-          ? heSpan(letter.glyph + target.point, 'he game-he-sm')
-          : `That was ${s.mark.name}. Catch ${target.name}.`,
-          ...(ok ? [` — yes! ${session.correct} caught · Score ${session.score}`] : []));
-        s.el.remove(); stars = stars.filter((x) => x !== s);
-        if (ok) { if (targetsDone >= TARGETS_PER_GAME) return finish(); newTarget(); }
+      if (!reducedMotion && s.y > 84 && s.y < 96 && Math.abs(s.x - basketX) < 9) {
+        resolveStar(s);
+        if (!alive) return;
       } else if (s.y >= 100) { s.el.remove(); stars = stars.filter((x) => x !== s); }
     }
     raf = requestAnimationFrame(step);
@@ -143,8 +154,9 @@ export function mount(root, ctx) {
     basket.style.insetInlineStart = `${basketX}%`;
   };
   const pointerMove = (e) => move(e.clientX);
+  const pointerDown = (e) => { try { sky.setPointerCapture?.(e.pointerId); } catch { /* already released */ } move(e.clientX); };
   sky.addEventListener('pointermove', pointerMove);
-  sky.addEventListener('pointerdown', pointerMove);
+  sky.addEventListener('pointerdown', pointerDown);
   const keys = (e) => {
     if (e.key === 'ArrowLeft') { basketX = Math.max(4, basketX - 6); basket.style.insetInlineStart = `${basketX}%`; }
     if (e.key === 'ArrowRight') { basketX = Math.min(96, basketX + 6); basket.style.insetInlineStart = `${basketX}%`; }
@@ -152,10 +164,18 @@ export function mount(root, ctx) {
   document.addEventListener('keydown', keys);
   basket.style.insetInlineStart = '50%';
 
+  const pauseBtn = h('button', { type: 'button', class: 'btn secondary', 'aria-pressed': 'false', onclick: () => {
+    paused = !paused;
+    pauseBtn.textContent = paused ? 'Resume' : 'Pause';
+    pauseBtn.setAttribute('aria-pressed', String(paused));
+    if (!paused && alive && letter) { last = 0; cancelAnimationFrame(raf); raf = requestAnimationFrame(step); }
+  } }, 'Pause');
   const article = h('article', { class: 'card game-card' },
       h('h1', { id: 'view-title', tabindex: '-1' }, 'Vowel Catcher'),
-      h('p', { class: 'muted' }, 'Catch the named niqqud mark. Move with your finger, mouse, or arrow keys.'),
-      hud, announce, board);
+      h('p', { class: 'muted' }, reducedMotion
+        ? 'Reduced motion is on. Tap the named mark. The marks stay still.'
+        : 'Catch the named niqqud mark. Move with your finger, mouse, or arrow keys, or tap a mark.'),
+      h('div', { class: 'row' }, pauseBtn), hud, announce, board);
   root.replaceChildren(article);
   Promise.all([loadDeck(ctx), loadGameImages(ctx)]).then(([deck, images]) => {
     if (!alive || !article.isConnected) return;
@@ -180,7 +200,7 @@ export function mount(root, ctx) {
     cancelAnimationFrame(raf);
     document.removeEventListener('keydown', keys);
     sky.removeEventListener('pointermove', pointerMove);
-    sky.removeEventListener('pointerdown', pointerMove);
+    sky.removeEventListener('pointerdown', pointerDown);
     leaveSfx();
     if (liveCleanup.get(root) === stop) liveCleanup.delete(root);
   };

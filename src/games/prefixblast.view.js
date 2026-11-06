@@ -45,19 +45,27 @@ export function mount(root, ctx) {
     const prompt = h('div', { class: 'prefix-pedestal' },
       heSpan(r.baseHe, 'he game-he'), h('p', {}, `Make: ${r.meaning}`));
     if (image) prompt.prepend(h('img', { class: 'game-card-img', src: image.src, alt: image.alt, 'data-img-id': image.id }));
-    const bubbles = h('div', { class: 'prefix-bubbles' }, ...shuffled(PREFIXES).map(p =>
-      h('button', { type: 'button', class: 'prefix-bubble', onclick: () => {
-        if (!alive || deck[index] !== r) return;
+    const bubbles = h('div', { class: 'prefix-bubbles' }, ...shuffled(PREFIXES).map(p => {
+      const button = h('button', { type: 'button', class: 'prefix-bubble', onclick: () => {
+        if (!alive || deck[index] !== r || button.disabled) return;
         sfx.play('bubble_pop');
         const phrase = completePrefix(r, p.id);
-        session.answer(!!phrase);
-        sfx.play(phrase ? 'success' : 'error');
-        if (phrase && session.streak >= 3 && session.streak % 3 === 0) sfx.play('streak');
-        if (!phrase) { status.textContent = 'Try another prefix. Phrase still unfinished.'; return; }
+        if (!phrase) {
+          button.disabled = true;
+          session.answer(false);
+          sfx.play('miss');
+          status.textContent = `${p.name} does not make that phrase. It stays unfinished. Score ${session.score}.`;
+          return;
+        }
+        session.answer(true);
+        sfx.play('success');
+        if (session.streak >= 3 && session.streak % 3 === 0) sfx.play('streak');
         index++;
         void speak(ctx, phrase);
         paint();
-      } }, heSpan(p.id), h('span', {}, p.name))));
+      } }, heSpan(p.id), h('span', {}, p.name));
+      return button;
+    }));
     const scene = h('div', { class: 'prefix-scene' }, bubbles, prompt);
     if (stage) scene.style.backgroundImage = `url("${stage.src}")`;
     board.replaceChildren(scene);

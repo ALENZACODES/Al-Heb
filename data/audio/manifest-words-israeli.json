@@ -19520,8 +19520,8 @@
     "kind": "word",
     "id": "brich-shmei-w2",
     "text": "שְׁמֵהּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -19542,8 +19542,8 @@
     "kind": "word",
     "id": "brich-shmei-w3",
     "text": "דְּמָרֵא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -19740,8 +19740,8 @@
     "kind": "word",
     "id": "brich-shmei-w12",
     "text": "יִשְׂרָאֵל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -19762,8 +19762,8 @@
     "kind": "word",
     "id": "brich-shmei-w13",
     "text": "לְעָלַם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -19784,8 +19784,8 @@
     "kind": "word",
     "id": "brich-shmei-w14",
     "text": "וּפֻרְקַן",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -19806,8 +19806,8 @@
     "kind": "word",
     "id": "brich-shmei-w15",
     "text": "יְמִינָךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -19828,8 +19828,8 @@
     "kind": "word",
     "id": "brich-shmei-w16",
     "text": "אַחֲזֵי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -19850,8 +19850,8 @@
     "kind": "word",
     "id": "brich-shmei-w17",
     "text": "לְעַמָּךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -19872,8 +19872,8 @@
     "kind": "word",
     "id": "brich-shmei-w18",
     "text": "בְּבֵית",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -19894,8 +19894,8 @@
     "kind": "word",
     "id": "brich-shmei-w19",
     "text": "מַקְדְּשָׁךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -19916,8 +19916,8 @@
     "kind": "word",
     "id": "brich-shmei-w20",
     "text": "וּלְאַמְטוּיֵי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -19938,8 +19938,8 @@
     "kind": "word",
     "id": "brich-shmei-w21",
     "text": "לָנָא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -19960,8 +19960,8 @@
     "kind": "word",
     "id": "brich-shmei-w22",
     "text": "מִטּוּב",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -19982,8 +19982,8 @@
     "kind": "word",
     "id": "brich-shmei-w23",
     "text": "נְהוֹרָךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -20004,8 +20004,8 @@
     "kind": "word",
     "id": "brich-shmei-w24",
     "text": "וּלְקַבֵּל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -20026,8 +20026,8 @@
     "kind": "word",
     "id": "brich-shmei-w25",
     "text": "צְלוֹתָנָא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -20048,8 +20048,8 @@
     "kind": "word",
     "id": "brich-shmei-w26",
     "text": "בְּרַחֲמִין",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -20070,8 +20070,8 @@
     "kind": "word",
     "id": "brich-shmei-w27",
     "text": "יְהֵא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -20092,8 +20092,8 @@
     "kind": "word",
     "id": "brich-shmei-w28",
     "text": "רַעֲוָא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -20114,8 +20114,8 @@
     "kind": "word",
     "id": "brich-shmei-w29",
     "text": "קֳדָמָךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -20136,8 +20136,8 @@
     "kind": "word",
     "id": "brich-shmei-w30",
     "text": "דְּתוֹרִיךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -20158,8 +20158,8 @@
     "kind": "word",
     "id": "brich-shmei-w31",
     "text": "לָן",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -20180,8 +20180,8 @@
     "kind": "word",
     "id": "brich-shmei-w32",
     "text": "חַיִּין",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -20202,8 +20202,8 @@
     "kind": "word",
     "id": "brich-shmei-w33",
     "text": "בְּטִיבוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -20224,8 +20224,8 @@
     "kind": "word",
     "id": "brich-shmei-w34",
     "text": "וְלֶהֱוֵי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -20246,8 +20246,8 @@
     "kind": "word",
     "id": "brich-shmei-w35",
     "text": "אֲנָא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -20268,8 +20268,8 @@
     "kind": "word",
     "id": "brich-shmei-w36",
     "text": "פְקִידָא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -20290,8 +20290,8 @@
     "kind": "word",
     "id": "brich-shmei-w37",
     "text": "בְּגוֹ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -21984,8 +21984,8 @@
     "kind": "word",
     "id": "brich-shmei-w114",
     "text": "דְכָל־עַמָּךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -22006,8 +22006,8 @@
     "kind": "word",
     "id": "brich-shmei-w115",
     "text": "יִשְׂרָאֵל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -22028,8 +22028,8 @@
     "kind": "word",
     "id": "brich-shmei-w116",
     "text": "לְטָב",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -22050,8 +22050,8 @@
     "kind": "word",
     "id": "brich-shmei-w117",
     "text": "וּלְחַיִּין",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -22072,8 +22072,8 @@
     "kind": "word",
     "id": "brich-shmei-w118",
     "text": "וְלִשְׁלָם׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {

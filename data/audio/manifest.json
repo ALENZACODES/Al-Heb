@@ -28440,11 +28440,12 @@
   "kind": "line",
   "id": "greetings-03",
   "text": "בֹּקֶר טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "good morning"
+  "english": "good morning",
+  "phonetic": "boker tov"
  },
  {
   "path": "audio/f/israeli/line/greetings-03.mp3",
@@ -28467,11 +28468,12 @@
   "kind": "line",
   "id": "greetings-04",
   "text": "צָהֳרַיִם טוֹבִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "good afternoon"
+  "english": "good afternoon",
+  "phonetic": "tzahorayim tovim"
  },
  {
   "path": "audio/f/israeli/line/greetings-04.mp3",
@@ -28494,11 +28496,12 @@
   "kind": "line",
   "id": "greetings-05",
   "text": "עֶרֶב טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "good evening"
+  "english": "good evening",
+  "phonetic": "erev tov"
  },
  {
   "path": "audio/f/israeli/line/greetings-05.mp3",
@@ -28521,11 +28524,12 @@
   "kind": "line",
   "id": "greetings-06",
   "text": "לַיְלָה טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "good night"
+  "english": "good night",
+  "phonetic": "laylah tov"
  },
  {
   "path": "audio/f/israeli/line/greetings-06.mp3",
@@ -28548,11 +28552,12 @@
   "kind": "line",
   "id": "greetings-07",
   "text": "שַׁבָּת שָׁלוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "peaceful Sabbath (greeting from Friday afternoon to Saturday)"
+  "english": "peaceful Sabbath (greeting from Friday afternoon to Saturday)",
+  "phonetic": "shabat shalom"
  },
  {
   "path": "audio/f/israeli/line/greetings-07.mp3",
@@ -28575,11 +28580,12 @@
   "kind": "line",
   "id": "greetings-08",
   "text": "שָׁבוּעַ טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "good week"
+  "english": "good week",
+  "phonetic": "shavu'a tov"
  },
  {
   "path": "audio/f/israeli/line/greetings-08.mp3",
@@ -28602,11 +28608,12 @@
   "kind": "line",
   "id": "greetings-09",
   "text": "חַג שָׂמֵחַ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "happy holiday"
+  "english": "happy holiday",
+  "phonetic": "chag sameach"
  },
  {
   "path": "audio/f/israeli/line/greetings-09.mp3",
@@ -28629,11 +28636,12 @@
   "kind": "line",
   "id": "greetings-10",
   "text": "שָׁנָה טוֹבָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "happy new year (Rosh Hashana greeting)"
+  "english": "happy new year (Rosh Hashana greeting)",
+  "phonetic": "shanah tovah"
  },
  {
   "path": "audio/f/israeli/line/greetings-10.mp3",
@@ -28656,11 +28664,12 @@
   "kind": "line",
   "id": "greetings-11-m",
   "text": "מַה שְׁלוֹמְךָ?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "how are you?"
+  "english": "how are you?",
+  "phonetic": "mah shelomekha?"
  },
  {
   "path": "audio/f/israeli/line/greetings-11-m.mp3",
@@ -28683,11 +28692,12 @@
   "kind": "line",
   "id": "greetings-11-f",
   "text": "מַה שְׁלוֹמֵךְ?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "how are you?"
+  "english": "how are you?",
+  "phonetic": "mah shelomekh?"
  },
  {
   "path": "audio/f/israeli/line/greetings-11-f.mp3",
@@ -28710,11 +28720,12 @@
   "kind": "line",
   "id": "greetings-12",
   "text": "מָה נִשְׁמָע?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "what's up? (lit. what is heard?)"
+  "english": "what's up? (lit. what is heard?)",
+  "phonetic": "mah nishma?"
  },
  {
   "path": "audio/f/israeli/line/greetings-12.mp3",
@@ -28737,11 +28748,12 @@
   "kind": "line",
   "id": "greetings-13",
   "text": "מָה קוֹרֶה?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "what's happening?"
+  "english": "what's happening?",
+  "phonetic": "mah koreh?"
  },
  {
   "path": "audio/f/israeli/line/greetings-13.mp3",
@@ -28764,11 +28776,12 @@
   "kind": "line",
   "id": "greetings-14",
   "text": "הַכֹּל בְּסֵדֶר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "everything is OK"
+  "english": "everything is OK",
+  "phonetic": "hakol beseder"
  },
  {
   "path": "audio/f/israeli/line/greetings-14.mp3",
@@ -29304,11 +29317,12 @@
   "kind": "line",
   "id": "fillers-05",
   "text": "לֹא נָכוֹן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "not right / wrong"
+  "english": "not right / wrong",
+  "phonetic": "lo nakhon"
  },
  {
   "path": "audio/f/israeli/line/fillers-05.mp3",
@@ -29331,11 +29345,12 @@
   "kind": "line",
   "id": "fillers-13-m",
   "text": "אֲנִי לֹא יוֹדֵעַ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I don't know"
+  "english": "I don't know",
+  "phonetic": "ani lo yode'a"
  },
  {
   "path": "audio/f/israeli/line/fillers-13-m.mp3",
@@ -29358,11 +29373,12 @@
   "kind": "line",
   "id": "fillers-13-f",
   "text": "אֲנִי לֹא יוֹדַעַת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I don't know"
+  "english": "I don't know",
+  "phonetic": "ani lo yoda'at"
  },
  {
   "path": "audio/f/israeli/line/fillers-13-f.mp3",
@@ -29385,11 +29401,12 @@
   "kind": "line",
   "id": "fillers-14-m",
   "text": "אֲנִי לֹא מֵבִין",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I don't understand"
+  "english": "I don't understand",
+  "phonetic": "ani lo mevin"
  },
  {
   "path": "audio/f/israeli/line/fillers-14-m.mp3",
@@ -29412,11 +29429,12 @@
   "kind": "line",
   "id": "fillers-14-f",
   "text": "אֲנִי לֹא מְבִינָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I don't understand"
+  "english": "I don't understand",
+  "phonetic": "ani lo mevinah"
  },
  {
   "path": "audio/f/israeli/line/fillers-14-f.mp3",
@@ -29439,11 +29457,12 @@
   "kind": "line",
   "id": "fillers-15-m",
   "text": "אֲנִי מֵבִין",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I understand"
+  "english": "I understand",
+  "phonetic": "ani mevin"
  },
  {
   "path": "audio/f/israeli/line/fillers-15-m.mp3",
@@ -29466,11 +29485,12 @@
   "kind": "line",
   "id": "fillers-15-f",
   "text": "אֲנִי מְבִינָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I understand"
+  "english": "I understand",
+  "phonetic": "ani mevinah"
  },
  {
   "path": "audio/f/israeli/line/fillers-15-f.mp3",
@@ -29493,11 +29513,12 @@
   "kind": "line",
   "id": "fillers-16-m",
   "text": "אַתָּה מְדַבֵּר אַנְגְּלִית?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "do you speak English?"
+  "english": "do you speak English?",
+  "phonetic": "atah medaber angelit?"
  },
  {
   "path": "audio/f/israeli/line/fillers-16-m.mp3",
@@ -29520,11 +29541,12 @@
   "kind": "line",
   "id": "fillers-16-f",
   "text": "אַתְּ מְדַבֶּרֶת אַנְגְּלִית?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "do you speak English?"
+  "english": "do you speak English?",
+  "phonetic": "at medaberet angelit?"
  },
  {
   "path": "audio/f/israeli/line/fillers-16-f.mp3",
@@ -29547,11 +29569,12 @@
   "kind": "line",
   "id": "fillers-17-m",
   "text": "אֲנִי לֹא מְדַבֵּר עִבְרִית טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I don't speak Hebrew well"
+  "english": "I don't speak Hebrew well",
+  "phonetic": "ani lo medaber ivrit tov"
  },
  {
   "path": "audio/f/israeli/line/fillers-17-m.mp3",
@@ -29574,11 +29597,12 @@
   "kind": "line",
   "id": "fillers-17-f",
   "text": "אֲנִי לֹא מְדַבֶּרֶת עִבְרִית טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I don't speak Hebrew well"
+  "english": "I don't speak Hebrew well",
+  "phonetic": "ani lo medaberet ivrit tov"
  },
  {
   "path": "audio/f/israeli/line/fillers-17-f.mp3",
@@ -29601,11 +29625,12 @@
   "kind": "line",
   "id": "fillers-18",
   "text": "אֶפְשָׁר לְדַבֵּר לְאַט?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "can you speak slowly?"
+  "english": "can you speak slowly?",
+  "phonetic": "efshar ledaber le'at?"
  },
  {
   "path": "audio/f/israeli/line/fillers-18.mp3",
@@ -29628,11 +29653,12 @@
   "kind": "line",
   "id": "fillers-19",
   "text": "אֶפְשָׁר לַחֲזֹר עַל זֶה?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "can you repeat that?"
+  "english": "can you repeat that?",
+  "phonetic": "efshar lachazor al zeh?"
  },
  {
   "path": "audio/f/israeli/line/fillers-19.mp3",
@@ -29655,11 +29681,12 @@
   "kind": "line",
   "id": "fillers-20",
   "text": "מָה זֶה?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "what is this?"
+  "english": "what is this?",
+  "phonetic": "mah zeh?"
  },
  {
   "path": "audio/f/israeli/line/fillers-20.mp3",
@@ -29682,11 +29709,12 @@
   "kind": "line",
   "id": "fillers-21",
   "text": "מָה זֶה אוֹמֵר?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "what does that mean?"
+  "english": "what does that mean?",
+  "phonetic": "mah zeh omer?"
  },
  {
   "path": "audio/f/israeli/line/fillers-21.mp3",
@@ -29709,11 +29737,12 @@
   "kind": "line",
   "id": "fillers-22",
   "text": "אֵיךְ אוֹמְרִים ... בְּעִבְרִית?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "how do you say ... in Hebrew?"
+  "english": "how do you say ... in Hebrew?",
+  "phonetic": "eikh omerim ... be'ivrit?"
  },
  {
   "path": "audio/f/israeli/line/fillers-22.mp3",
@@ -29736,11 +29765,12 @@
   "kind": "line",
   "id": "fillers-23",
   "text": "אֶפְשָׁר לִכְתֹּב אֶת זֶה?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "can you write that down?"
+  "english": "can you write that down?",
+  "phonetic": "efshar likhtov et zeh?"
  },
  {
   "path": "audio/f/israeli/line/fillers-23.mp3",
@@ -29819,11 +29849,12 @@
   "kind": "line",
   "id": "cafe-03-m",
   "text": "אֲנִי רוֹצֶה קָפֶה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I would like a coffee"
+  "english": "I would like a coffee",
+  "phonetic": "ani rotzeh kafeh"
  },
  {
   "path": "audio/f/israeli/line/cafe-03-m.mp3",
@@ -29846,11 +29877,12 @@
   "kind": "line",
   "id": "cafe-03-f",
   "text": "אֲנִי רוֹצָה קָפֶה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I would like a coffee"
+  "english": "I would like a coffee",
+  "phonetic": "ani rotzah kafeh"
  },
  {
   "path": "audio/f/israeli/line/cafe-03-f.mp3",
@@ -29873,11 +29905,12 @@
   "kind": "line",
   "id": "cafe-04",
   "text": "קָפֶה הָפוּךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "latte-style milky coffee (lit. upside-down coffee)"
+  "english": "latte-style milky coffee (lit. upside-down coffee)",
+  "phonetic": "kafeh hafukh"
  },
  {
   "path": "audio/f/israeli/line/cafe-04.mp3",
@@ -29900,11 +29933,12 @@
   "kind": "line",
   "id": "cafe-06",
   "text": "קָפֶה שָׁחוֹר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "black coffee"
+  "english": "black coffee",
+  "phonetic": "kafeh shachor"
  },
  {
   "path": "audio/f/israeli/line/cafe-06.mp3",
@@ -29927,11 +29961,12 @@
   "kind": "line",
   "id": "cafe-07",
   "text": "קָפֶה עִם חָלָב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "coffee with milk"
+  "english": "coffee with milk",
+  "phonetic": "kafeh im chalav"
  },
  {
   "path": "audio/f/israeli/line/cafe-07.mp3",
@@ -29954,11 +29989,12 @@
   "kind": "line",
   "id": "cafe-08",
   "text": "תֵּה עִם נַעֲנָע",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "tea with mint"
+  "english": "tea with mint",
+  "phonetic": "teh im na'ana"
  },
  {
   "path": "audio/f/israeli/line/cafe-08.mp3",
@@ -29981,11 +30017,12 @@
   "kind": "line",
   "id": "cafe-10",
   "text": "מַיִם קָרִים, בְּבַקָּשָׁה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "cold water, please"
+  "english": "cold water, please",
+  "phonetic": "mayim karim, bevakashah"
  },
  {
   "path": "audio/f/israeli/line/cafe-10.mp3",
@@ -30008,11 +30045,12 @@
   "kind": "line",
   "id": "cafe-14",
   "text": "אֶפְשָׁר לְהַזְמִין?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "can I order?"
+  "english": "can I order?",
+  "phonetic": "efshar lehazmin?"
  },
  {
   "path": "audio/f/israeli/line/cafe-14.mp3",
@@ -30035,11 +30073,12 @@
   "kind": "line",
   "id": "cafe-15",
   "text": "אֶפְשָׁר עוֹד אֶחָד?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "can I have another one?"
+  "english": "can I have another one?",
+  "phonetic": "efshar od echad?"
  },
  {
   "path": "audio/f/israeli/line/cafe-15.mp3",
@@ -30062,11 +30101,12 @@
   "kind": "line",
   "id": "cafe-21",
   "text": "טָעִים מְאֹד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "very tasty"
+  "english": "very tasty",
+  "phonetic": "ta'im me'od"
  },
  {
   "path": "audio/f/israeli/line/cafe-21.mp3",
@@ -30089,11 +30129,12 @@
   "kind": "line",
   "id": "cafe-22-m",
   "text": "אֲנִי צִמְחוֹנִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm vegetarian"
+  "english": "I'm vegetarian",
+  "phonetic": "ani tzimchoni"
  },
  {
   "path": "audio/f/israeli/line/cafe-22-m.mp3",
@@ -30116,11 +30157,12 @@
   "kind": "line",
   "id": "cafe-22-f",
   "text": "אֲנִי צִמְחוֹנִית",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm vegetarian"
+  "english": "I'm vegetarian",
+  "phonetic": "ani tzimchonit"
  },
  {
   "path": "audio/f/israeli/line/cafe-22-f.mp3",
@@ -30143,11 +30185,12 @@
   "kind": "line",
   "id": "cafe-23-m",
   "text": "אֲנִי טִבְעוֹנִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm vegan"
+  "english": "I'm vegan",
+  "phonetic": "ani tiv'oni"
  },
  {
   "path": "audio/f/israeli/line/cafe-23-m.mp3",
@@ -30170,11 +30213,12 @@
   "kind": "line",
   "id": "cafe-23-f",
   "text": "אֲנִי טִבְעוֹנִית",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm vegan"
+  "english": "I'm vegan",
+  "phonetic": "ani tiv'onit"
  },
  {
   "path": "audio/f/israeli/line/cafe-23-f.mp3",
@@ -30197,11 +30241,12 @@
   "kind": "line",
   "id": "cafe-24-m",
   "text": "אֲנִי אָלֶרְגִּי לְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm allergic to ..."
+  "english": "I'm allergic to ...",
+  "phonetic": "ani alergi le"
  },
  {
   "path": "audio/f/israeli/line/cafe-24-m.mp3",
@@ -30224,11 +30269,12 @@
   "kind": "line",
   "id": "cafe-24-f",
   "text": "אֲנִי אָלֶרְגִּית לְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm allergic to ..."
+  "english": "I'm allergic to ...",
+  "phonetic": "ani alergit le"
  },
  {
   "path": "audio/f/israeli/line/cafe-24-f.mp3",
@@ -30251,11 +30297,12 @@
   "kind": "line",
   "id": "cafe-25",
   "text": "לֶאֱכֹל כָּאן אוֹ לָקַחַת?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "eat here or take away?"
+  "english": "eat here or take away?",
+  "phonetic": "le'ekhol kan o lakachat?"
  },
  {
   "path": "audio/f/israeli/line/cafe-25.mp3",
@@ -30278,11 +30325,12 @@
   "kind": "line",
   "id": "cafe-26",
   "text": "הַחֶשְׁבּוֹן, בְּבַקָּשָׁה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "the bill, please"
+  "english": "the bill, please",
+  "phonetic": "hacheshbon, bevakashah"
  },
  {
   "path": "audio/f/israeli/line/cafe-26.mp3",
@@ -30305,11 +30353,12 @@
   "kind": "line",
   "id": "cafe-27",
   "text": "אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "can I pay by card?"
+  "english": "can I pay by card?",
+  "phonetic": "efshar leshalem bekhartis?"
  },
  {
   "path": "audio/f/israeli/line/cafe-27.mp3",
@@ -31169,11 +31218,12 @@
   "kind": "line",
   "id": "directions-01",
   "text": "אֵיפֹה ...?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "where is ...?"
+  "english": "where is ...?",
+  "phonetic": "eifoh ...?"
  },
  {
   "path": "audio/f/israeli/line/directions-01.mp3",
@@ -31196,11 +31246,12 @@
   "kind": "line",
   "id": "directions-02",
   "text": "אֵיךְ מַגִּיעִים לְ...?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "how do you get to ...?"
+  "english": "how do you get to ...?",
+  "phonetic": "eikh magi'im le...?"
  },
  {
   "path": "audio/f/israeli/line/directions-02.mp3",
@@ -31223,11 +31274,12 @@
   "kind": "line",
   "id": "directions-03",
   "text": "זֶה רָחוֹק?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "is it far?"
+  "english": "is it far?",
+  "phonetic": "zeh rachok?"
  },
  {
   "path": "audio/f/israeli/line/directions-03.mp3",
@@ -31250,11 +31302,12 @@
   "kind": "line",
   "id": "directions-04",
   "text": "זֶה קָרוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "it's near"
+  "english": "it's near",
+  "phonetic": "zeh karov"
  },
  {
   "path": "audio/f/israeli/line/directions-04.mp3",
@@ -31277,11 +31330,12 @@
   "kind": "line",
   "id": "directions-08-m",
   "text": "לֵךְ יָשָׁר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "go straight"
+  "english": "go straight",
+  "phonetic": "lekh yashar"
  },
  {
   "path": "audio/f/israeli/line/directions-08-m.mp3",
@@ -31304,11 +31358,12 @@
   "kind": "line",
   "id": "directions-08-f",
   "text": "לְכִי יָשָׁר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "go straight"
+  "english": "go straight",
+  "phonetic": "lekhi yashar"
  },
  {
   "path": "audio/f/israeli/line/directions-08-f.mp3",
@@ -31331,11 +31386,12 @@
   "kind": "line",
   "id": "directions-09-m",
   "text": "פְּנֵה שְׂמֹאלָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "turn left"
+  "english": "turn left",
+  "phonetic": "peneh semolah"
  },
  {
   "path": "audio/f/israeli/line/directions-09-m.mp3",
@@ -31358,11 +31414,12 @@
   "kind": "line",
   "id": "directions-09-f",
   "text": "פְּנִי שְׂמֹאלָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "turn left"
+  "english": "turn left",
+  "phonetic": "peni semolah"
  },
  {
   "path": "audio/f/israeli/line/directions-09-f.mp3",
@@ -31385,11 +31442,12 @@
   "kind": "line",
   "id": "directions-10-m",
   "text": "פְּנֵה יָמִינָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "turn right"
+  "english": "turn right",
+  "phonetic": "peneh yaminah"
  },
  {
   "path": "audio/f/israeli/line/directions-10-m.mp3",
@@ -31412,11 +31470,12 @@
   "kind": "line",
   "id": "directions-10-f",
   "text": "פְּנִי יָמִינָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "turn right"
+  "english": "turn right",
+  "phonetic": "peni yaminah"
  },
  {
   "path": "audio/f/israeli/line/directions-10-f.mp3",
@@ -31439,11 +31498,12 @@
   "kind": "line",
   "id": "directions-11",
   "text": "עַל יַד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "next to"
+  "english": "next to",
+  "phonetic": "al yad"
  },
  {
   "path": "audio/f/israeli/line/directions-11.mp3",
@@ -31466,11 +31526,12 @@
   "kind": "line",
   "id": "directions-14-m",
   "text": "אֲנִי אָבוּד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm lost"
+  "english": "I'm lost",
+  "phonetic": "ani avud"
  },
  {
   "path": "audio/f/israeli/line/directions-14-m.mp3",
@@ -31493,11 +31554,12 @@
   "kind": "line",
   "id": "directions-14-f",
   "text": "אֲנִי אֲבוּדָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I'm lost"
+  "english": "I'm lost",
+  "phonetic": "ani avudah"
  },
  {
   "path": "audio/f/israeli/line/directions-14-f.mp3",
@@ -31520,11 +31582,12 @@
   "kind": "line",
   "id": "directions-15",
   "text": "אֶפְשָׁר לְהַרְאוֹת לִי עַל הַמַּפָּה?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "can you show me on the map?"
+  "english": "can you show me on the map?",
+  "phonetic": "efshar lehar'ot li al hamapah?"
  },
  {
   "path": "audio/f/israeli/line/directions-15.mp3",
@@ -31547,11 +31610,12 @@
   "kind": "line",
   "id": "directions-16",
   "text": "כַּמָּה זְמַן זֶה לוֹקֵחַ?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "how long does it take?"
+  "english": "how long does it take?",
+  "phonetic": "kamah zeman zeh lokeach?"
  },
  {
   "path": "audio/f/israeli/line/directions-16.mp3",
@@ -31574,11 +31638,12 @@
   "kind": "line",
   "id": "directions-17",
   "text": "אֵיפֹה בֵּית הַחוֹלִים?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "where is the hospital?"
+  "english": "where is the hospital?",
+  "phonetic": "eifoh beit hacholim?"
  },
  {
   "path": "audio/f/israeli/line/directions-17.mp3",
@@ -31601,11 +31666,12 @@
   "kind": "line",
   "id": "directions-18",
   "text": "אֵיפֹה בֵּית הַמִּרְקַחַת?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "where is the pharmacy?"
+  "english": "where is the pharmacy?",
+  "phonetic": "eifoh beit hamirkachat?"
  },
  {
   "path": "audio/f/israeli/line/directions-18.mp3",
@@ -31628,11 +31694,12 @@
   "kind": "line",
   "id": "directions-19",
   "text": "אֵיפֹה הַמָּלוֹן?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "where is the hotel?"
+  "english": "where is the hotel?",
+  "phonetic": "eifoh hamalon?"
  },
  {
   "path": "audio/f/israeli/line/directions-19.mp3",
@@ -31655,11 +31722,12 @@
   "kind": "line",
   "id": "directions-20",
   "text": "אֵיפֹה הַתַּחֲנָה?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "where is the station?"
+  "english": "where is the station?",
+  "phonetic": "eifoh hatachanah?"
  },
  {
   "path": "audio/f/israeli/line/directions-20.mp3",

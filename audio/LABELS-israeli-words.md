@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 2661 clips. **Reading lines:** 423 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 2737 clips. **Reading lines:** 491 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-2661 English labels; 2 UNKNOWN.
+2737 English labels; 2 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -2647,6 +2647,82 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [havdalah-hamavdil-w19](m/israeli/word/havdalah-hamavdil-w19.mp3) | הַשְּׁבִיעִי | the seventh | hashevi'i |
 | [havdalah-hamavdil-w2](m/israeli/word/havdalah-hamavdil-w2.mp3) | אַתָּה | you, thou | atah |
 | [havdalah-hamavdil-w20](m/israeli/word/havdalah-hamavdil-w20.mp3) | לְשֵׁשֶׁת | who separates | lesheshet |
+| [havdalah-hamavdil-w21](m/israeli/word/havdalah-hamavdil-w21.mp3) | יְמֵי | days of | yemei |
+| [havdalah-hamavdil-w22](m/israeli/word/havdalah-hamavdil-w22.mp3) | הַמַּעֲשֶׂה | work | hama'aseh |
+| [havdalah-hamavdil-w23](m/israeli/word/havdalah-hamavdil-w23.mp3) | בָּרוּךְ | to the ordinary | barukh |
+| [havdalah-hamavdil-w24](m/israeli/word/havdalah-hamavdil-w24.mp3) | אַתָּה | you, thou | atah |
+| [havdalah-hamavdil-w25](m/israeli/word/havdalah-hamavdil-w25.mp3) | אֲדֹנָי | the LORD | adonai |
+| [havdalah-hamavdil-w26](m/israeli/word/havdalah-hamavdil-w26.mp3) | הַמַּבְדִּיל | who separates | hamavdil |
+| [havdalah-hamavdil-w27](m/israeli/word/havdalah-hamavdil-w27.mp3) | בֵּין | between, among, amid | bein |
+| [havdalah-hamavdil-w28](m/israeli/word/havdalah-hamavdil-w28.mp3) | קֹדֶשׁ | sanctity, holiness | kodesh |
+| [havdalah-hamavdil-w29](m/israeli/word/havdalah-hamavdil-w29.mp3) | לְחוֹל׃ | to the ordinary | lechol |
+| [havdalah-hamavdil-w3](m/israeli/word/havdalah-hamavdil-w3.mp3) | אֲדֹנָי | the LORD | adonai |
+| [havdalah-hamavdil-w4](m/israeli/word/havdalah-hamavdil-w4.mp3) | אֱלֹהֵינוּ | to the ordinary | eloheinu |
+| [havdalah-hamavdil-w5](m/israeli/word/havdalah-hamavdil-w5.mp3) | מֶלֶךְ | and between | melekh |
+| [havdalah-hamavdil-w6](m/israeli/word/havdalah-hamavdil-w6.mp3) | הָעוֹלָם | the world | ha'olam |
+| [havdalah-hamavdil-w7](m/israeli/word/havdalah-hamavdil-w7.mp3) | הַמַּבְדִּיל | who separates | hamavdil |
+| [havdalah-hamavdil-w8](m/israeli/word/havdalah-hamavdil-w8.mp3) | בֵּין | and between | bein |
+| [havdalah-hamavdil-w9](m/israeli/word/havdalah-hamavdil-w9.mp3) | קֹדֶשׁ | sanctity, holiness | kodesh |
+| [havdalah-opening-w1](m/israeli/word/havdalah-opening-w1.mp3) | הִנֵּה | here is, here’s; lo, behold; used as a copula | hineh |
+| [havdalah-opening-w10](m/israeli/word/havdalah-opening-w10.mp3) | יָהּ | the LORD | yah |
+| [havdalah-opening-w11](m/israeli/word/havdalah-opening-w11.mp3) | אֲדֹנָי | the LORD | adonai |
+| [havdalah-opening-w12](m/israeli/word/havdalah-opening-w12.mp3) | וַיְהִי | and he has become | vayhi |
+| [havdalah-opening-w13](m/israeli/word/havdalah-opening-w13.mp3) | לִי | to me | li |
+| [havdalah-opening-w14](m/israeli/word/havdalah-opening-w14.mp3) | לִישׁוּעָה׃ | for salvation | lishu'ah |
+| [havdalah-opening-w15](m/israeli/word/havdalah-opening-w15.mp3) | וּשְׁאַבְתֶּם | and you will draw | ushe'avtem |
+| [havdalah-opening-w16](m/israeli/word/havdalah-opening-w16.mp3) | מַיִם | water | mayim |
+| [havdalah-opening-w17](m/israeli/word/havdalah-opening-w17.mp3) | בְּשָׂשׁוֹן | with joy | besashon |
+| [havdalah-opening-w18](m/israeli/word/havdalah-opening-w18.mp3) | מִמַּעַיְנֵי | from the springs of | mima'aynei |
+| [havdalah-opening-w19](m/israeli/word/havdalah-opening-w19.mp3) | הַיְשׁוּעָה׃ | salvation | hayshu'ah |
+| [havdalah-opening-w2](m/israeli/word/havdalah-opening-w2.mp3) | אֵל | god; strength | el |
+| [havdalah-opening-w20](m/israeli/word/havdalah-opening-w20.mp3) | לַאֲדֹנָי | to the LORD | la'adonai |
+| [havdalah-opening-w21](m/israeli/word/havdalah-opening-w21.mp3) | הַיְשׁוּעָה | salvation | hayshu'ah |
+| [havdalah-opening-w22](m/israeli/word/havdalah-opening-w22.mp3) | עַל | on, on top of; on; about | al |
+| [havdalah-opening-w23](m/israeli/word/havdalah-opening-w23.mp3) | עַמְּךָ | your people | amekha |
+| [havdalah-opening-w24](m/israeli/word/havdalah-opening-w24.mp3) | בִרְכָתֶךָ | your blessing | virkhatekha |
+| [havdalah-opening-w25](m/israeli/word/havdalah-opening-w25.mp3) | סֶּלָה׃ | Selah | selah |
+| [havdalah-opening-w26](m/israeli/word/havdalah-opening-w26.mp3) | אֲדֹנָי | the LORD | adonai |
+| [havdalah-opening-w27](m/israeli/word/havdalah-opening-w27.mp3) | צְבָאוֹת | of hosts | tzeva'ot |
+| [havdalah-opening-w28](m/israeli/word/havdalah-opening-w28.mp3) | עִמָּנוּ | with us | imanu |
+| [havdalah-opening-w29](m/israeli/word/havdalah-opening-w29.mp3) | מִשְׂגָּב | a stronghold | misgav |
+| [havdalah-opening-w3](m/israeli/word/havdalah-opening-w3.mp3) | יְשׁוּעָתִי | my salvation | yeshu'ati |
+| [havdalah-opening-w30](m/israeli/word/havdalah-opening-w30.mp3) | לָנוּ | for us | lanu |
+| [havdalah-opening-w31](m/israeli/word/havdalah-opening-w31.mp3) | אֱלֹהֵי | God of | elohei |
+| [havdalah-opening-w32](m/israeli/word/havdalah-opening-w32.mp3) | יַעֲקֹב | Jacob | ya'akov |
+| [havdalah-opening-w33](m/israeli/word/havdalah-opening-w33.mp3) | סֶלָה׃ | Selah | selah |
+| [havdalah-opening-w34](m/israeli/word/havdalah-opening-w34.mp3) | אֲדֹנָי | the LORD | adonai |
+| [havdalah-opening-w35](m/israeli/word/havdalah-opening-w35.mp3) | צְבָאוֹת | of hosts | tzeva'ot |
+| [havdalah-opening-w36](m/israeli/word/havdalah-opening-w36.mp3) | אַשְׁרֵי | happy is/was/will be | ashrei |
+| [havdalah-opening-w37](m/israeli/word/havdalah-opening-w37.mp3) | אָדָם | a man, a human | adam |
+| [havdalah-opening-w38](m/israeli/word/havdalah-opening-w38.mp3) | בֹּטֵחַ | trusts | boteach |
+| [havdalah-opening-w39](m/israeli/word/havdalah-opening-w39.mp3) | בָּךְ׃ | in you | bakh |
+| [havdalah-opening-w4](m/israeli/word/havdalah-opening-w4.mp3) | אֶבְטַח | I will trust | evtach |
+| [havdalah-opening-w40](m/israeli/word/havdalah-opening-w40.mp3) | אֲדֹנָי | the LORD | adonai |
+| [havdalah-opening-w41](m/israeli/word/havdalah-opening-w41.mp3) | הוֹשִׁיעָה | save | hoshi'ah |
+| [havdalah-opening-w42](m/israeli/word/havdalah-opening-w42.mp3) | הַמֶּלֶךְ | the King | hamelekh |
+| [havdalah-opening-w43](m/israeli/word/havdalah-opening-w43.mp3) | יַעֲנֵנוּ | will answer us | ya'anenu |
+| [havdalah-opening-w44](m/israeli/word/havdalah-opening-w44.mp3) | בְּיוֹם | on the day | beyom |
+| [havdalah-opening-w45](m/israeli/word/havdalah-opening-w45.mp3) | קָרְאֵנוּ׃ | we call | kare'enu |
+| [havdalah-opening-w46](m/israeli/word/havdalah-opening-w46.mp3) | לַיְּהוּדִים | the Jews | layehudim |
+| [havdalah-opening-w47](m/israeli/word/havdalah-opening-w47.mp3) | הָיְתָה | had | hayetah |
+| [havdalah-opening-w48](m/israeli/word/havdalah-opening-w48.mp3) | אוֹרָה | light | orah |
+| [havdalah-opening-w49](m/israeli/word/havdalah-opening-w49.mp3) | וְשִׂמְחָה | and gladness | vesimchah |
+| [havdalah-opening-w5](m/israeli/word/havdalah-opening-w5.mp3) | וְלֹא | and not | velo |
+| [havdalah-opening-w50](m/israeli/word/havdalah-opening-w50.mp3) | וְשָׂשׁוֹן | and joy | vesashon |
+| [havdalah-opening-w51](m/israeli/word/havdalah-opening-w51.mp3) | וִיקָר | and honour | vikar |
+| [havdalah-opening-w52](m/israeli/word/havdalah-opening-w52.mp3) | כֵּן | yes; thus, so | ken |
+| [havdalah-opening-w53](m/israeli/word/havdalah-opening-w53.mp3) | תִּהְיֶה | may it be | tihyeh |
+| [havdalah-opening-w54](m/israeli/word/havdalah-opening-w54.mp3) | לָנוּ׃ | for us | lanu |
+| [havdalah-opening-w55](m/israeli/word/havdalah-opening-w55.mp3) | כּוֹס | cup; glass; little owl | kos |
+| [havdalah-opening-w56](m/israeli/word/havdalah-opening-w56.mp3) | יְשׁוּעוֹת | salvations | yeshu'ot |
+| [havdalah-opening-w57](m/israeli/word/havdalah-opening-w57.mp3) | אֶשָּׂא | I will lift | esa |
+| [havdalah-opening-w58](m/israeli/word/havdalah-opening-w58.mp3) | וּבְשֵׁם | and in the name of | uveshem |
+| [havdalah-opening-w59](m/israeli/word/havdalah-opening-w59.mp3) | אֲדֹנָי | the LORD | adonai |
+| [havdalah-opening-w6](m/israeli/word/havdalah-opening-w6.mp3) | אֶפְחָד׃ | I will be afraid | efchad |
+| [havdalah-opening-w60](m/israeli/word/havdalah-opening-w60.mp3) | אֶקְרָא׃ | I will call | ekra |
+| [havdalah-opening-w7](m/israeli/word/havdalah-opening-w7.mp3) | כִּי | because, for, since; that; when, as, at the time that | ki |
+| [havdalah-opening-w8](m/israeli/word/havdalah-opening-w8.mp3) | עָזִּי | my strength | azi |
+| [havdalah-opening-w9](m/israeli/word/havdalah-opening-w9.mp3) | וְזִמְרָת | and my song | vezimrat |
 | [numbers-01-f](m/israeli/word/numbers-01-f.mp3) | אַחַת | one (f.) | achat |
 | [numbers-01-m](m/israeli/word/numbers-01-m.mp3) | אֶחָד | one | echad |
 | [numbers-02-f](m/israeli/word/numbers-02-f.mp3) | שְׁתַּיִם | two (f.) | shtayim |
@@ -2680,7 +2756,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli reading lines
 
-423 English labels; 0 UNKNOWN.
+491 English labels; 0 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -3005,10 +3081,78 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [brich-shmei](m/israeli/line/brich-shmei.mp3) | בְּרִיךְ שְׁמֵהּ דְּמָרֵא עָלְמָא בְּרִיךְ כִּתְרָךְ וְאַתְרָךְ יְהֵא רְעוּתָךְ עִם עַמָּךְ יִשְׂרָאֵל לְעָלַם וּפֻרְקַן יְמִינָךְ אַחֲזֵי לְעַמָּךְ בְּבֵית מַקְדְּשָׁךְ וּלְאַמְטוּיֵי לָנָא מִטּוּב נְהוֹרָךְ וּלְקַבֵּל צְלוֹתָנָא בְּרַחֲמִין יְהֵא רַעֲוָא קֳדָמָךְ דְּתוֹרִיךְ לָן חַיִּין בְּטִיבוּ וְלֶהֱוֵי אֲנָא פְקִידָא בְּגוֹ צַדִּיקַיָּא לְמִרְחַם עָלַי וּלְמִנְטַר יָתִי וְיַת־כָּל־דִּי־לִי וְדִי־לְעַמָּךְ יִשְׂרָאֵל אַנְתְּ הוּא זָן לְכֹלָּא וּמְפַרְנֵס לְכֹלָּא אַנְתְּ הוּא שַׁלִּיט עַל־כֹּלָּא אַנְתְּ הוּא דְּשַׁלִּיט עַל־מַלְכַיָּא וּמַלְכוּתָא דִּילָךְ הִיא אֲנָא עַבְדָּא דְקֻדְשָׁא בְּרִיךְ הוּא דְּסָגִידְנָא קַמֵּהּ וּמִקַּמֵּי דִּיקַר אוֹרַיְתֵהּ בְּכָל־עִדָּן וְעִדָּן לָא עַל־אֱנָשׁ רָחִיצְנָא וְלָא עַל־בַּר־אֱלָהִין סָמִיכְנָא אֶלָּא בֵּאלָהָא דִשְׁמַיָּא דְּהוּא אֱלָהָא קְשׁוֹט וְאוֹרַיְתֵהּ קְשׁוֹט וּנְבִיאוֹהִי קְשׁוֹט וּמַסְגֵּא לְמֶעְבַּד טָבְוָן וּקְשׁוֹט בֵּהּ אֲנָא רָחִיץ וְלִשְׁמֵהּ קַדִּישָׁא יַקִּירָא אֲנָא אֵמַר תֻּשְׁבְּחָן יְהֵא רַעֲוָא קֳדָמָךְ דְּתִפְתַּח לִבָּאי בְּאוֹרַיְתָא וְתַשְׁלִים מִשְׁאֲלִין דְּלִבָּאי וְלִבָּא דְכָל־עַמָּךְ יִשְׂרָאֵל לְטָב וּלְחַיִּין וְלִשְׁלָם׃ | Blessed is the name of the Master of the world; blessed is your crown and your place. May your good will be with your people Israel for ever; show your people the redemption of your right hand in your Temple, bring us of the goodness of your light, and accept our prayer in mercy. May it be your will to lengthen our life in goodness, and let me be counted among the righteous, so that you have mercy on me and guard me and all that is mine and your people Israel's. You feed and sustain all; you rule over all; you rule over kings, and the kingdom is yours. I am a servant of the Holy One, blessed be he, before whom and before whose glorious Torah I bow at every time. Not in any person do I trust, and not on any angel do I rely, but on the God of heaven, who is the God of truth, whose Torah is truth and whose prophets are truth, and who abounds in deeds of goodness and truth. In him I trust, and to his holy and glorious name I utter praises. May it be your will to open my heart to Torah, to fulfil the requests of my heart and the heart of all your people Israel, for good, for life and for peace. | berikh shemeh demare alema berikh kitrakh ve'atrakh yehe re'utakh im amakh yisra'el le'alam ufurkan yeminakh achazei le'amakh beveit makdeshakh ule'amtuyei lana mituv nehorakh ulekabel tzelotana berachamin yehe ra'ava kodamakh detorikh lan chayin betivu velehevei ana fekida bego tzadikaya lemircham alai ulemintar yati veyat-kol-di-li vedi-le'amakh yisra'el ant hu zan lekhola umefarnes lekhola ant hu shalit al-kola ant hu deshalit al-malkhaya umalkhuta dilakh hi ana avda dekudsha berikh hu desagidena kameh umikamei dikar orayteh bekhol-idan ve'idan la al-enash rachitzena vela al-bar-elahin samikhena ela belaha dishmaya dehu elaha keshot ve'orayteh keshot unevi'ohi keshot umasge lemebad tavevan ukeshot beh ana rachitz velishmeh kadisha yakira ana emar tushbechan yehe ra'ava kodamakh detiftach libay be'orayta vetashlim mish'alin delibay veliba dekhal-amakh yisra'el letav ulechayin velishlam |
 | [cafe-01](m/israeli/line/cafe-01.mp3) | שֻׁלְחָן לִשְׁנַיִם, בְּבַקָּשָׁה | a table for two, please | shulchan lishnayim, bevakashah |
 | [cafe-02](m/israeli/line/cafe-02.mp3) | אֶפְשָׁר לִרְאוֹת אֶת הַתַּפְרִיט? | can I see the menu? | efshar lir'ot et hatafrit? |
+| [cafe-03-f](m/israeli/line/cafe-03-f.mp3) | אֲנִי רוֹצָה קָפֶה | I would like a coffee | ani rotzah kafeh |
+| [cafe-03-m](m/israeli/line/cafe-03-m.mp3) | אֲנִי רוֹצֶה קָפֶה | I would like a coffee | ani rotzeh kafeh |
+| [cafe-04](m/israeli/line/cafe-04.mp3) | קָפֶה הָפוּךְ | latte-style milky coffee (lit. upside-down coffee) | kafeh hafukh |
+| [cafe-06](m/israeli/line/cafe-06.mp3) | קָפֶה שָׁחוֹר | black coffee | kafeh shachor |
+| [cafe-07](m/israeli/line/cafe-07.mp3) | קָפֶה עִם חָלָב | coffee with milk | kafeh im chalav |
+| [cafe-08](m/israeli/line/cafe-08.mp3) | תֵּה עִם נַעֲנָע | tea with mint | teh im na'ana |
+| [cafe-10](m/israeli/line/cafe-10.mp3) | מַיִם קָרִים, בְּבַקָּשָׁה | cold water, please | mayim karim, bevakashah |
+| [cafe-14](m/israeli/line/cafe-14.mp3) | אֶפְשָׁר לְהַזְמִין? | can I order? | efshar lehazmin? |
+| [cafe-15](m/israeli/line/cafe-15.mp3) | אֶפְשָׁר עוֹד אֶחָד? | can I have another one? | efshar od echad? |
+| [cafe-21](m/israeli/line/cafe-21.mp3) | טָעִים מְאֹד | very tasty | ta'im me'od |
+| [cafe-22-f](m/israeli/line/cafe-22-f.mp3) | אֲנִי צִמְחוֹנִית | I'm vegetarian | ani tzimchonit |
+| [cafe-22-m](m/israeli/line/cafe-22-m.mp3) | אֲנִי צִמְחוֹנִי | I'm vegetarian | ani tzimchoni |
+| [cafe-23-f](m/israeli/line/cafe-23-f.mp3) | אֲנִי טִבְעוֹנִית | I'm vegan | ani tiv'onit |
+| [cafe-23-m](m/israeli/line/cafe-23-m.mp3) | אֲנִי טִבְעוֹנִי | I'm vegan | ani tiv'oni |
+| [cafe-24-f](m/israeli/line/cafe-24-f.mp3) | אֲנִי אָלֶרְגִּית לְ | I'm allergic to ... | ani alergit le |
+| [cafe-24-m](m/israeli/line/cafe-24-m.mp3) | אֲנִי אָלֶרְגִּי לְ | I'm allergic to ... | ani alergi le |
+| [cafe-25](m/israeli/line/cafe-25.mp3) | לֶאֱכֹל כָּאן אוֹ לָקַחַת? | eat here or take away? | le'ekhol kan o lakachat? |
+| [cafe-26](m/israeli/line/cafe-26.mp3) | הַחֶשְׁבּוֹן, בְּבַקָּשָׁה | the bill, please | hacheshbon, bevakashah |
+| [cafe-27](m/israeli/line/cafe-27.mp3) | אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס? | can I pay by card? | efshar leshalem bekhartis? |
 | [candle-shabbat](m/israeli/line/candle-shabbat.mp3) | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת׃ | Blessed are you, LORD our God, king of the world, who made us holy with his commandments and commanded us to light the lamp of Shabbat. | barukh atah adonai eloheinu melekh ha'olam asher kideshanu bemitzvotav vetzivanu lehadlik ner shel shabat |
+| [directions-01](m/israeli/line/directions-01.mp3) | אֵיפֹה ...? | where is ...? | eifoh ...? |
+| [directions-02](m/israeli/line/directions-02.mp3) | אֵיךְ מַגִּיעִים לְ...? | how do you get to ...? | eikh magi'im le...? |
+| [directions-03](m/israeli/line/directions-03.mp3) | זֶה רָחוֹק? | is it far? | zeh rachok? |
+| [directions-04](m/israeli/line/directions-04.mp3) | זֶה קָרוֹב | it's near | zeh karov |
+| [directions-08-f](m/israeli/line/directions-08-f.mp3) | לְכִי יָשָׁר | go straight | lekhi yashar |
+| [directions-08-m](m/israeli/line/directions-08-m.mp3) | לֵךְ יָשָׁר | go straight | lekh yashar |
+| [directions-09-f](m/israeli/line/directions-09-f.mp3) | פְּנִי שְׂמֹאלָה | turn left | peni semolah |
+| [directions-09-m](m/israeli/line/directions-09-m.mp3) | פְּנֵה שְׂמֹאלָה | turn left | peneh semolah |
+| [directions-10-f](m/israeli/line/directions-10-f.mp3) | פְּנִי יָמִינָה | turn right | peni yaminah |
+| [directions-10-m](m/israeli/line/directions-10-m.mp3) | פְּנֵה יָמִינָה | turn right | peneh yaminah |
+| [directions-11](m/israeli/line/directions-11.mp3) | עַל יַד | next to | al yad |
+| [directions-14-f](m/israeli/line/directions-14-f.mp3) | אֲנִי אֲבוּדָה | I'm lost | ani avudah |
+| [directions-14-m](m/israeli/line/directions-14-m.mp3) | אֲנִי אָבוּד | I'm lost | ani avud |
+| [directions-15](m/israeli/line/directions-15.mp3) | אֶפְשָׁר לְהַרְאוֹת לִי עַל הַמַּפָּה? | can you show me on the map? | efshar lehar'ot li al hamapah? |
+| [directions-16](m/israeli/line/directions-16.mp3) | כַּמָּה זְמַן זֶה לוֹקֵחַ? | how long does it take? | kamah zeman zeh lokeach? |
+| [directions-17](m/israeli/line/directions-17.mp3) | אֵיפֹה בֵּית הַחוֹלִים? | where is the hospital? | eifoh beit hacholim? |
+| [directions-18](m/israeli/line/directions-18.mp3) | אֵיפֹה בֵּית הַמִּרְקַחַת? | where is the pharmacy? | eifoh beit hamirkachat? |
+| [directions-19](m/israeli/line/directions-19.mp3) | אֵיפֹה הַמָּלוֹן? | where is the hotel? | eifoh hamalon? |
+| [directions-20](m/israeli/line/directions-20.mp3) | אֵיפֹה הַתַּחֲנָה? | where is the station? | eifoh hatachanah? |
 | [ein-kamocha](m/israeli/line/ein-kamocha.mp3) | אֵין־כָּמוֹךָ בָאֱלֹהִים אֲדֹנָי וְאֵין כְּמַעֲשֶׂיךָ׃ | There is none like unto Thee among the gods, O Lord, And there are no works like Thine. | ein-kamokha va'elohim adonai ve'ein kema'asekha |
 | [etz-chaim](m/israeli/line/etz-chaim.mp3) | עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְכֶיהָ מְאֻשָּׁר׃ דְּרָכֶיהָ דַרְכֵי נֹעַם וְכָל נְתִיבוֹתֶיהָ שָׁלוֹם׃ אֹרֶךְ יָמִים בִּימִינָהּ בִּשְׂמֹאלָהּ עֹשֶׁר וְכָבוֹד׃ אֲדֹנָי חָפֵץ לְמַעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר׃ | It is a tree of life to those who hold fast to it, and those who support it are happy. Its ways are ways of pleasantness and all its paths are peace. Length of days is in its right hand, in its left hand riches and honour. The LORD desired, for the sake of his righteousness, to make the Torah great and glorious. | etz chayim hi lamachazikim bah vetomekheha me'ushar derakheha darkhei no'am vekhol netivoteha shalom orekh yamim biminah bismolah osher vekhavod adonai chafetz lema'an tzidko yagdil torah veyadir |
+| [fillers-05](m/israeli/line/fillers-05.mp3) | לֹא נָכוֹן | not right / wrong | lo nakhon |
+| [fillers-13-f](m/israeli/line/fillers-13-f.mp3) | אֲנִי לֹא יוֹדַעַת | I don't know | ani lo yoda'at |
+| [fillers-13-m](m/israeli/line/fillers-13-m.mp3) | אֲנִי לֹא יוֹדֵעַ | I don't know | ani lo yode'a |
+| [fillers-14-f](m/israeli/line/fillers-14-f.mp3) | אֲנִי לֹא מְבִינָה | I don't understand | ani lo mevinah |
+| [fillers-14-m](m/israeli/line/fillers-14-m.mp3) | אֲנִי לֹא מֵבִין | I don't understand | ani lo mevin |
+| [fillers-15-f](m/israeli/line/fillers-15-f.mp3) | אֲנִי מְבִינָה | I understand | ani mevinah |
+| [fillers-15-m](m/israeli/line/fillers-15-m.mp3) | אֲנִי מֵבִין | I understand | ani mevin |
+| [fillers-16-f](m/israeli/line/fillers-16-f.mp3) | אַתְּ מְדַבֶּרֶת אַנְגְּלִית? | do you speak English? | at medaberet angelit? |
+| [fillers-16-m](m/israeli/line/fillers-16-m.mp3) | אַתָּה מְדַבֵּר אַנְגְּלִית? | do you speak English? | atah medaber angelit? |
+| [fillers-17-f](m/israeli/line/fillers-17-f.mp3) | אֲנִי לֹא מְדַבֶּרֶת עִבְרִית טוֹב | I don't speak Hebrew well | ani lo medaberet ivrit tov |
+| [fillers-17-m](m/israeli/line/fillers-17-m.mp3) | אֲנִי לֹא מְדַבֵּר עִבְרִית טוֹב | I don't speak Hebrew well | ani lo medaber ivrit tov |
+| [fillers-18](m/israeli/line/fillers-18.mp3) | אֶפְשָׁר לְדַבֵּר לְאַט? | can you speak slowly? | efshar ledaber le'at? |
+| [fillers-19](m/israeli/line/fillers-19.mp3) | אֶפְשָׁר לַחֲזֹר עַל זֶה? | can you repeat that? | efshar lachazor al zeh? |
+| [fillers-20](m/israeli/line/fillers-20.mp3) | מָה זֶה? | what is this? | mah zeh? |
+| [fillers-21](m/israeli/line/fillers-21.mp3) | מָה זֶה אוֹמֵר? | what does that mean? | mah zeh omer? |
+| [fillers-22](m/israeli/line/fillers-22.mp3) | אֵיךְ אוֹמְרִים ... בְּעִבְרִית? | how do you say ... in Hebrew? | eikh omerim ... be'ivrit? |
+| [fillers-23](m/israeli/line/fillers-23.mp3) | אֶפְשָׁר לִכְתֹּב אֶת זֶה? | can you write that down? | efshar likhtov et zeh? |
 | [gadlu](m/israeli/line/gadlu.mp3) | גַּדְּלוּ לַאֲדֹנָי אִתִּי וּנְרוֹמְמָה שְׁמוֹ יַחְדָּו׃ | O magnify the LORD with me, And let us exalt His name together. | gadelu la'adonai iti uneromemah shemo yachdav |
+| [greetings-03](m/israeli/line/greetings-03.mp3) | בֹּקֶר טוֹב | good morning | boker tov |
+| [greetings-04](m/israeli/line/greetings-04.mp3) | צָהֳרַיִם טוֹבִים | good afternoon | tzahorayim tovim |
+| [greetings-05](m/israeli/line/greetings-05.mp3) | עֶרֶב טוֹב | good evening | erev tov |
+| [greetings-06](m/israeli/line/greetings-06.mp3) | לַיְלָה טוֹב | good night | laylah tov |
+| [greetings-07](m/israeli/line/greetings-07.mp3) | שַׁבָּת שָׁלוֹם | peaceful Sabbath (greeting from Friday afternoon to Saturday) | shabat shalom |
+| [greetings-08](m/israeli/line/greetings-08.mp3) | שָׁבוּעַ טוֹב | good week | shavu'a tov |
+| [greetings-09](m/israeli/line/greetings-09.mp3) | חַג שָׂמֵחַ | happy holiday | chag sameach |
+| [greetings-10](m/israeli/line/greetings-10.mp3) | שָׁנָה טוֹבָה | happy new year (Rosh Hashana greeting) | shanah tovah |
+| [greetings-11-f](m/israeli/line/greetings-11-f.mp3) | מַה שְׁלוֹמֵךְ? | how are you? | mah shelomekh? |
+| [greetings-11-m](m/israeli/line/greetings-11-m.mp3) | מַה שְׁלוֹמְךָ? | how are you? | mah shelomekha? |
+| [greetings-12](m/israeli/line/greetings-12.mp3) | מָה נִשְׁמָע? | what's up? (lit. what is heard?) | mah nishma? |
+| [greetings-13](m/israeli/line/greetings-13.mp3) | מָה קוֹרֶה? | what's happening? | mah koreh? |
+| [greetings-14](m/israeli/line/greetings-14.mp3) | הַכֹּל בְּסֵדֶר | everything is OK | hakol beseder |
 | [haftarah-after-l1](m/israeli/line/haftarah-after-l1.mp3) | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם צוּר כָּל־הָעוֹלָמִים צַדִּיק בְּכָל־הַדּוֹרוֹת הָאֵל הַנֶּאֱמָן הָאֹמֵר וְעֹשֶׂה הַמְדַבֵּר וּמְקַיֵּם שֶׁכָּל־דְּבָרָיו אֱמֶת וָצֶדֶק נֶאֱמָן אַתָּה הוּא אֲדֹנָי אֱלֹהֵינוּ וְנֶאֱמָנִים דְּבָרֶיךָ וְדָבָר אֶחָד מִדְּבָרֶיךָ אָחוֹר לֹא יָשׁוּב רֵיקָם כִּי אֵל מֶלֶךְ נֶאֱמָן וְרַחֲמָן אָתָּה בָּרוּךְ אַתָּה אֲדֹנָי הָאֵל הַנֶּאֱמָן בְּכָל־דְּבָרָיו׃ | Blessed are you, LORD our God, king of the world, rock of all the worlds, righteous in all generations, the faithful God who says and does, who speaks and fulfils, all of whose words are true and just. You are faithful, LORD our God, and your words are faithful, and not one of your words returns empty, for you are a faithful and merciful God and king. Blessed are you, LORD, the God who is faithful in all his words. | barukh atah adonai eloheinu melekh ha'olam tzur kol-ha'olamim tzadik bekhol-hadorot ha'el hane'eman ha'omer ve'oseh hamdaber umekayem shekol-devarav emet vatzedek ne'eman atah hu adonai eloheinu vene'emanim devarekha vedavar echad midevarekha achor lo yashuv reikam ki el melekh ne'eman verachaman atah barukh atah adonai ha'el hane'eman bekhol-devarav |
 | [haftarah-after-l2](m/israeli/line/haftarah-after-l2.mp3) | רַחֵם עַל צִיּוֹן כִּי הִיא בֵּית חַיֵּינוּ וְלַעֲלוּבַת נֶפֶשׁ תּוֹשִׁיעַ בִּמְהֵרָה בְיָמֵינוּ בָּרוּךְ אַתָּה אֲדֹנָי מְשַׂמֵּחַ צִיּוֹן בְּבָנֶיהָ׃ | Have mercy on Zion, for it is the home of our life, and save the one with a grieving soul quickly in our days. Blessed are you, LORD, who gladdens Zion through her children. | rachem al tziyon ki hi beit chayeinu vela'aluvat nefesh toshi'a bimherah veyameinu barukh atah adonai mesameach tziyon bevaneha |
 | [haftarah-after-l3](m/israeli/line/haftarah-after-l3.mp3) | שַׂמְּחֵנוּ אֲדֹנָי אֱלֹהֵינוּ בְּאֵלִיָהוּ הַנָּבִיא עַבְדָּךְ וּבְמַלְכוּת בֵּית דָּוִד מְשִׁיחָךְ בִּמְהֵרָה יָבֹא וְיָגֵל לִבֵּנוּ עַל כִּסְאוֹ לֹא יֵשֵׁב זָר וְלֹא יִנְחֲלוּ עוֹד אֲחֵרִים אֶת כְּבוֹדוֹ כִּי בְשֵׁם קָדְשְׁךָ נִשְׁבַּעְתָּ לּוֹ שֶׁלֹּא יִכְבֶּה נֵרוֹ לְעוֹלָם וָעֶד בָּרוּךְ אַתָּה אֲדֹנָי מָגֵן דָּוִד׃ | Gladden us, LORD our God, with Elijah the prophet your servant and with the kingdom of the house of David your anointed; may he come quickly and make our heart rejoice. On his throne let no stranger sit, and let others not inherit his glory any more, for by your holy name you swore to him that his light would never go out. Blessed are you, LORD, shield of David. | samechenu adonai eloheinu be'eliyahu hanavi avdakh uvemalkhut beit david meshichakh bimherah yavo veyagel libenu al kis'o lo yeshev zar velo yinchalu od acherim et kevodo ki veshem kadshekha nishbata lo shelo yikhbeh nero le'olam va'ed barukh atah adonai magen david |
@@ -3110,4 +3254,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 3464 produced clips in INDEX.csv have an English label; 2 UNKNOWN. Filenames and IDs are unchanged.
+All 3608 produced clips in INDEX.csv have an English label; 2 UNKNOWN. Filenames and IDs are unchanged.

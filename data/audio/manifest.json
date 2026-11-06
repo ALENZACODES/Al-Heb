@@ -12812,8 +12812,8 @@
     "kind": "line",
     "id": "shema-1",
     "text": "שְׁמַע יִשְׂרָאֵל אֲדֹנָי אֱלֹהֵינוּ אֲדֹנָי אֶחָד׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -13706,8 +13706,8 @@
     "kind": "line",
     "id": "shema-vahavta-l1",
     "text": "שְׁמַע יִשְׂרָאֵל אֲדֹנָי אֱלֹהֵינוּ אֲדֹנָי אֶחָד׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -13772,8 +13772,8 @@
     "kind": "line",
     "id": "shema-vahavta-l2",
     "text": "וְאָהַבְתָּ אֵת אֲדֹנָי אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -13838,8 +13838,8 @@
     "kind": "line",
     "id": "shema-vahavta-l3",
     "text": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -13904,8 +13904,8 @@
     "kind": "line",
     "id": "shema-vahavta-l4",
     "text": "וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -13970,8 +13970,8 @@
     "kind": "line",
     "id": "shema-vahavta-l5",
     "text": "וּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -14036,8 +14036,8 @@
     "kind": "line",
     "id": "shema-vahavta-l6",
     "text": "וּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -14174,8 +14174,8 @@
     "kind": "line",
     "id": "shema-2",
     "text": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -14462,8 +14462,8 @@
     "kind": "line",
     "id": "mah-tovu-1",
     "text": "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -14606,8 +14606,8 @@
     "kind": "line",
     "id": "mi-chamocha-1",
     "text": "מִי־כָמֹכָה בָּאֵלִם אֲדֹנָי מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -14750,8 +14750,8 @@
     "kind": "line",
     "id": "num-12-13",
     "text": "אֵל נָא רְפָא נָא לָהּ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -16520,8 +16520,8 @@
     "kind": "line",
     "id": "modeh-ani-1",
     "text": "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -18218,8 +18218,8 @@
     "kind": "line",
     "id": "malchutcha",
     "text": "מַלְכוּתְךָ מַלְכוּת כָּל־עֹלָמִים וּמֶמְשֶׁלְתְּךָ בְּכָל־דּוֹר וָדוֹר׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -19700,8 +19700,8 @@
     "kind": "line",
     "id": "kiddush-zachor-l2",
     "text": "שֵׁשֶׁת יָמִים תַּעֲבֹד וְעָשִׂיתָ כָּל־מְלַאכְתֶּךָ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -19766,8 +19766,8 @@
     "kind": "line",
     "id": "kiddush-zachor-l3",
     "text": "וְיוֹם הַשְּׁבִיעִי שַׁבָּת לַאֲדֹנָי אֱלֹהֶיךָ לֹא־תַעֲשֶׂה כָל־מְלָאכָה אַתָּה וּבִנְךָ־וּבִתֶּךָ עַבְדְּךָ וַאֲמָתְךָ וּבְהֶמְתֶּךָ וְגֵרְךָ אֲשֶׁר בִּשְׁעָרֶיךָ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -19832,8 +19832,8 @@
     "kind": "line",
     "id": "kiddush-zachor-l4",
     "text": "כִּי שֵׁשֶׁת־יָמִים עָשָׂה אֲדֹנָי אֶת־הַשָּׁמַיִם וְאֶת־הָאָרֶץ אֶת־הַיָּם וְאֶת־כָּל־אֲשֶׁר־בָּם וַיָּנַח בַּיּוֹם הַשְּׁבִיעִי עַל־כֵּן בֵּרַךְ אֲדֹנָי אֶת־יוֹם הַשַׁבָּת וַיְקַדְּשֵׁהוּ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -21284,8 +21284,8 @@
     "kind": "line",
     "id": "lecha-hashem",
     "text": "לְךָ אֲדֹנָי הַגְּדֻלָּה וְהַגְּבוּרָה וְהַתִּפְאֶרֶת וְהַנֵּצַח וְהַהוֹד כִּי כֹל בַּשָּׁמַיִם וּבָאָרֶץ׃ לְךָ אֲדֹנָי הַמַּמְלָכָה וְהַמִּתְנַשֵּׂא לְכֹל לְרֹאשׁ׃ רוֹמְמוּ אֲדֹנָי אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לַהֲדֹם רַגְלָיו קָדוֹשׁ הוּא׃ רוֹמְמוּ אֲדֹנָי אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לְהַר קָדְשׁוֹ כִּי קָדוֹשׁ אֲדֹנָי אֱלֹהֵינוּ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -22241,8 +22241,8 @@
     "kind": "line",
     "id": "amidah-yihyu",
     "text": "יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ אֲדֹנָי צוּרִי וְגוֹאֲלִי׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -22496,8 +22496,8 @@
     "kind": "line",
     "id": "oseh-shalom",
     "text": "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -22988,8 +22988,8 @@
     "kind": "line",
     "id": "lecha-dodi-1-l1",
     "text": "לְכָה דוֹדִי לִקְרַאת כַּלָּה פְּנֵי שַׁבָּת נְקַבְּלָה׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -24806,8 +24806,8 @@
     "kind": "line",
     "id": "mi-sheberach-opening",
     "text": "מִי שֶׁבֵּרַךְ אֲבוֹתֵינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -25814,8 +25814,8 @@
     "kind": "line",
     "id": "shehecheyanu",
     "text": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁהֶחֱיָינוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {
@@ -26102,8 +26102,8 @@
     "kind": "line",
     "id": "maoz-tzur-1",
     "text": "מָעוֹז צוּר יְשׁוּעָתִי לְךָ נָאֶה לְשַׁבֵּחַ תִּכּוֹן בֵּית תְּפִלָּתִי וְשָׁם תּוֹדָה נְזַבֵּחַ לְעֵת תָּכִין מַטְבֵּחַ מִצָּר הַמְנַבֵּחַ אָז אֶגְמוֹר בְּשִׁיר מִזְמוֹר חֲנֻכַּת הַמִּזְבֵּחַ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-line"
   },
   {

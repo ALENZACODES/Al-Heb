@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book5-p05.mp3"
    },
    "illustration": "a small bright kitchen, one plant on the counter, morning light.",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book5-p07.mp3"
    },
    "illustration": "a simple bed with a folded blanket, a small lamp beside it.",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book5-p08.mp3"
    },
    "illustration": "a wide window with sunlight pooling on the floorboards.",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book5-p10.mp3"
    },
    "illustration": "the room at golden hour, calm and spare, one cup on the table.",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book5-p11.mp3"
    },
    "illustration": "the book left open on the table, a ribbon marking the page.",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -170,10 +170,10 @@
     "m": "audio/m/israeli/book/book5-p12.mp3"
    },
    "illustration": "the house from outside at dusk, the living-room window warm with light.",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   }
  ],
- "hasImages": false,
+ "hasImages": true,
  "hasAudio": false
 }

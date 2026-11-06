@@ -19,9 +19,9 @@
    "titleEn": "Roots of Silver",
    "level": "Grade 1",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": false,
-   "picturedPages": 11,
+   "picturedPages": 12,
    "audioPages": 8
   },
   {
@@ -55,9 +55,9 @@
    "titleEn": "The New Home",
    "level": "Grade 1",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": false,
-   "picturedPages": 6,
+   "picturedPages": 12,
    "audioPages": 0
   }
  ]

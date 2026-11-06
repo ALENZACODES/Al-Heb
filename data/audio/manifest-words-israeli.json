@@ -44886,7 +44886,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "you, thou"
+  "english": "you, thou",
+  "phonetic": "atah"
  },
  {
   "path": "audio/f/israeli/word/h36d595e4.mp3",
@@ -44896,10 +44897,11 @@
   "id": "h36d595e4",
   "text": "אַתָּה",
   "ipa": "a.ˈta",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "you, thou"
+  "english": "you, thou",
+  "phonetic": "atah"
  },
  {
   "path": "audio/m/israeli/word/h1ef19acb.mp3",
@@ -45202,7 +45204,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a yoke; servitude, subjugation"
+  "english": "a yoke; servitude, subjugation",
+  "phonetic": "ol"
  },
  {
   "path": "audio/f/israeli/word/h277eae86.mp3",
@@ -45212,10 +45215,11 @@
   "id": "h277eae86",
   "text": "עֹל",
   "ipa": "ˈol",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "a yoke; servitude, subjugation"
+  "english": "a yoke; servitude, subjugation",
+  "phonetic": "ol"
  },
  {
   "path": "audio/m/israeli/word/ha8f1d06f.mp3",
@@ -45646,7 +45650,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "what; that which, the thing that; that (followed by שֶׁ־)"
+  "english": "what; that which, the thing that; that (followed by שֶׁ־)",
+  "phonetic": "mah"
  },
  {
   "path": "audio/f/israeli/word/h364cadf4.mp3",
@@ -45656,10 +45661,11 @@
   "id": "h364cadf4",
   "text": "מָה",
   "ipa": "ˈma",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "what; that which, the thing that; that (followed by שֶׁ־)"
+  "english": "what; that which, the thing that; that (followed by שֶׁ־)",
+  "phonetic": "mah"
  },
  {
   "path": "audio/m/israeli/word/h39d32f55.mp3",
@@ -46300,7 +46306,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "first of all, first"
+  "english": "first of all, first",
+  "phonetic": "reshit"
  },
  {
   "path": "audio/f/israeli/word/h2a58afab.mp3",
@@ -46310,10 +46317,11 @@
   "id": "h2a58afab",
   "text": "רֵאשִׁית",
   "ipa": "ʁe.ˈʃit",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "first of all, first"
+  "english": "first of all, first",
+  "phonetic": "reshit"
  },
  {
   "path": "audio/m/israeli/word/h8913b4db.mp3",
@@ -46560,7 +46568,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to be; to happen, take place, occur"
+  "english": "to be; to happen, take place, occur",
+  "phonetic": "hayah"
  },
  {
   "path": "audio/f/israeli/word/h2cd963e3.mp3",
@@ -46570,10 +46579,11 @@
   "id": "h2cd963e3",
   "text": "הָיָה",
   "ipa": "ha.ˈja",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to be; to happen, take place, occur"
+  "english": "to be; to happen, take place, occur",
+  "phonetic": "hayah"
  },
  {
   "path": "audio/m/israeli/word/h28a30a60.mp3",
@@ -46586,7 +46596,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to say, tell; to intend; to mean"
+  "english": "to say, tell; to intend; to mean",
+  "phonetic": "amar"
  },
  {
   "path": "audio/f/israeli/word/h28a30a60.mp3",
@@ -46596,10 +46607,11 @@
   "id": "h28a30a60",
   "text": "אָמַר",
   "ipa": "a.ˈmaʁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to say, tell; to intend; to mean"
+  "english": "to say, tell; to intend; to mean",
+  "phonetic": "amar"
  },
  {
   "path": "audio/m/israeli/word/hf22f36ee.mp3",
@@ -46846,7 +46858,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to lift; to bear, carry, support; to endure"
+  "english": "to lift; to bear, carry, support; to endure",
+  "phonetic": "nasa"
  },
  {
   "path": "audio/f/israeli/word/h3676c260.mp3",
@@ -46856,10 +46869,11 @@
   "id": "h3676c260",
   "text": "נָשָׂא",
   "ipa": "na.ˈsa",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to lift; to bear, carry, support; to endure"
+  "english": "to lift; to bear, carry, support; to endure",
+  "phonetic": "nasa"
  },
  {
   "path": "audio/m/israeli/word/h75de47f9.mp3",
@@ -46952,7 +46966,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to live (to be alive, to have life); to live"
+  "english": "to live (to be alive, to have life); to live",
+  "phonetic": "chai"
  },
  {
   "path": "audio/f/israeli/word/h2d58afb3.mp3",
@@ -46962,10 +46977,11 @@
   "id": "h2d58afb3",
   "text": "חַי",
   "ipa": "ˈχaj",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to live (to be alive, to have life); to live"
+  "english": "to live (to be alive, to have life); to live",
+  "phonetic": "chai"
  },
  {
   "path": "audio/m/israeli/word/hfd4bf43b.mp3",
@@ -47322,7 +47338,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "enough, sufficient, adequate; stop!, enough!, cease!"
+  "english": "enough, sufficient, adequate; stop!, enough!, cease!",
+  "phonetic": "dai"
  },
  {
   "path": "audio/f/israeli/word/h29e4f547.mp3",
@@ -47332,10 +47349,11 @@
   "id": "h29e4f547",
   "text": "דַּי",
   "ipa": "ˈdaj",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "enough, sufficient, adequate; stop!, enough!, cease!"
+  "english": "enough, sufficient, adequate; stop!, enough!, cease!",
+  "phonetic": "dai"
  },
  {
   "path": "audio/m/israeli/word/h708c9d2f.mp3",
@@ -48300,7 +48318,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "earth, soil, land"
+  "english": "earth, soil, land",
+  "phonetic": "adamah"
  },
  {
   "path": "audio/f/israeli/word/h2d90f840.mp3",
@@ -48310,10 +48329,11 @@
   "id": "h2d90f840",
   "text": "אֲדָמָה",
   "ipa": "a.da.ˈma",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "earth, soil, land"
+  "english": "earth, soil, land",
+  "phonetic": "adamah"
  },
  {
   "path": "audio/m/israeli/word/heb070da2.mp3",
@@ -48404,7 +48424,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a miracle; a flag, a standard, a banner; a staff, a pole, a flagpole"
+  "english": "a miracle; a flag, a standard, a banner; a staff, a pole, a flagpole",
+  "phonetic": "nes"
  },
  {
   "path": "audio/f/israeli/word/h3674f19e.mp3",
@@ -48414,10 +48435,11 @@
   "id": "h3674f19e",
   "text": "נֵס",
   "ipa": "ˈnes",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "a miracle; a flag, a standard, a banner; a staff, a pole, a flagpole"
+  "english": "a miracle; a flag, a standard, a banner; a staff, a pole, a flagpole",
+  "phonetic": "nes"
  },
  {
   "path": "audio/m/israeli/word/h1f510ba1.mp3",
@@ -49614,7 +49636,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "cold"
+  "english": "cold",
+  "phonetic": "kar"
  },
  {
   "path": "audio/f/israeli/word/h35a8fcbe.mp3",
@@ -49624,10 +49647,11 @@
   "id": "h35a8fcbe",
   "text": "קַר",
   "ipa": "ˈkaʁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "cold"
+  "english": "cold",
+  "phonetic": "kar"
  },
  {
   "path": "audio/m/israeli/word/h5b57ed79.mp3",
@@ -49850,7 +49874,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "far, distant"
+  "english": "far, distant",
+  "phonetic": "rachok"
  },
  {
   "path": "audio/f/israeli/word/h372b7277.mp3",
@@ -49860,10 +49885,11 @@
   "id": "h372b7277",
   "text": "רָחוֹק",
   "ipa": "ʁa.ˈχok",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "far, distant"
+  "english": "far, distant",
+  "phonetic": "rachok"
  },
  {
   "path": "audio/m/israeli/word/h1f23dde2.mp3",
@@ -50166,7 +50192,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "an end, a finish"
+  "english": "an end, a finish",
+  "phonetic": "sof"
  },
  {
   "path": "audio/f/israeli/word/h2d1e4a74.mp3",
@@ -50176,10 +50203,11 @@
   "id": "h2d1e4a74",
   "text": "סוֹף",
   "ipa": "ˈsof",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "an end, a finish"
+  "english": "an end, a finish",
+  "phonetic": "sof"
  },
  {
   "path": "audio/m/israeli/word/hb5c944d2.mp3",
@@ -50296,7 +50324,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "seed; semen; offspring, descendants, scions"
+  "english": "seed; semen; offspring, descendants, scions",
+  "phonetic": "zera"
  },
  {
   "path": "audio/f/israeli/word/h2f9c8fe9.mp3",
@@ -50306,10 +50335,11 @@
   "id": "h2f9c8fe9",
   "text": "זֶרַע",
   "ipa": "ˈze.ʁa",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "seed; semen; offspring, descendants, scions"
+  "english": "seed; semen; offspring, descendants, scions",
+  "phonetic": "zera"
  },
  {
   "path": "audio/m/israeli/word/h3d1c89af.mp3",
@@ -50426,7 +50456,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "red"
+  "english": "red",
+  "phonetic": "adom"
  },
  {
   "path": "audio/f/israeli/word/h3398235f.mp3",
@@ -50436,10 +50467,11 @@
   "id": "h3398235f",
   "text": "אָדֹם",
   "ipa": "a.ˈdom",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "red"
+  "english": "red",
+  "phonetic": "adom"
  },
  {
   "path": "audio/m/israeli/word/hd4fe4a46.mp3",
@@ -50504,7 +50536,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "together"
+  "english": "together",
+  "phonetic": "yachdav"
  },
  {
   "path": "audio/f/israeli/word/h355e67cb.mp3",
@@ -50514,10 +50547,11 @@
   "id": "h355e67cb",
   "text": "יַחְדָּו",
   "ipa": "jaχ.ˈdav",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "together"
+  "english": "together",
+  "phonetic": "yachdav"
  },
  {
   "path": "audio/m/israeli/word/h8633259a.mp3",
@@ -50556,7 +50590,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "thus (in this way, like so)"
+  "english": "thus (in this way, like so)",
+  "phonetic": "kakhah"
  },
  {
   "path": "audio/f/israeli/word/h3777d988.mp3",
@@ -50566,10 +50601,11 @@
   "id": "h3777d988",
   "text": "כָּכָה",
   "ipa": "ˈka.χa",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "thus (in this way, like so)"
+  "english": "thus (in this way, like so)",
+  "phonetic": "kakhah"
  },
  {
   "path": "audio/m/israeli/word/h725d19e2.mp3",
@@ -50740,7 +50776,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "of, belonging to, owned by, pertaining to"
+  "english": "of, belonging to, owned by, pertaining to",
+  "phonetic": "shel"
  },
  {
   "path": "audio/f/israeli/word/h32c69c06.mp3",
@@ -50750,10 +50787,11 @@
   "id": "h32c69c06",
   "text": "שֶׁל",
   "ipa": "ˈʃel",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "of, belonging to, owned by, pertaining to"
+  "english": "of, belonging to, owned by, pertaining to",
+  "phonetic": "shel"
  },
  {
   "path": "audio/m/israeli/word/hf28ba308.mp3",
@@ -51186,7 +51224,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to use, to make use of"
+  "english": "to use, to make use of",
+  "phonetic": "hishtamesh"
  },
  {
   "path": "audio/f/israeli/word/h326c520d.mp3",
@@ -51196,10 +51235,11 @@
   "id": "h326c520d",
   "text": "הִשְׁתַּמֵּשׁ",
   "ipa": "hiʃ.ta.ˈmeʃ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to use, to make use of"
+  "english": "to use, to make use of",
+  "phonetic": "hishtamesh"
  },
  {
   "path": "audio/m/israeli/word/h2d27796a.mp3",
@@ -51212,7 +51252,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "twenty"
+  "english": "twenty",
+  "phonetic": "esrim"
  },
  {
   "path": "audio/f/israeli/word/h2d27796a.mp3",
@@ -51222,10 +51263,11 @@
   "id": "h2d27796a",
   "text": "עֶשְׂרִים",
   "ipa": "es.ˈʁim",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "twenty"
+  "english": "twenty",
+  "phonetic": "esrim"
  },
  {
   "path": "audio/m/israeli/word/h7efc375e.mp3",
@@ -51368,7 +51410,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to be sated; to be satisfied"
+  "english": "to be sated; to be satisfied",
+  "phonetic": "sava"
  },
  {
   "path": "audio/f/israeli/word/h264da105.mp3",
@@ -51378,10 +51421,11 @@
   "id": "h264da105",
   "text": "שָׂבַע",
   "ipa": "sa.ˈva",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to be sated; to be satisfied"
+  "english": "to be sated; to be satisfied",
+  "phonetic": "sava"
  },
  {
   "path": "audio/m/israeli/word/h524e52f1.mp3",
@@ -51420,7 +51464,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to win (in a game, an election, or the like); to beat (someone), to defeat (someone) (in a game, an election, or the like)"
+  "english": "to win (in a game, an election, or the like); to beat (someone), to defeat (someone) (in a game, an election, or the like)",
+  "phonetic": "nitzeach"
  },
  {
   "path": "audio/f/israeli/word/h35fcbc75.mp3",
@@ -51430,10 +51475,11 @@
   "id": "h35fcbc75",
   "text": "נִצֵּחַ",
   "ipa": "ni.ˈtse.aχ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to win (in a game, an election, or the like); to beat (someone), to defeat (someone) (in a game, an election, or the like)"
+  "english": "to win (in a game, an election, or the like); to beat (someone), to defeat (someone) (in a game, an election, or the like)",
+  "phonetic": "nitzeach"
  },
  {
   "path": "audio/m/israeli/word/h75485886.mp3",
@@ -52000,7 +52046,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to see, to have vision; to observe, look at"
+  "english": "to see, to have vision; to observe, look at",
+  "phonetic": "ra'ah"
  },
  {
   "path": "audio/f/israeli/word/h28ecb454.mp3",
@@ -52010,10 +52057,11 @@
   "id": "h28ecb454",
   "text": "רָאָה",
   "ipa": "ʁa.ˈa",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to see, to have vision; to observe, look at"
+  "english": "to see, to have vision; to observe, look at",
+  "phonetic": "ra'ah"
  },
  {
   "path": "audio/m/israeli/word/h4b81aad7.mp3",
@@ -53026,7 +53074,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "maidservant, female slave, maid, handmaid"
+  "english": "maidservant, female slave, maid, handmaid",
+  "phonetic": "shifchah"
  },
  {
   "path": "audio/f/israeli/word/h2a0d492e.mp3",
@@ -53036,10 +53085,11 @@
   "id": "h2a0d492e",
   "text": "שִׁפְחָה",
   "ipa": "ʃif.ˈχa",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "maidservant, female slave, maid, handmaid"
+  "english": "maidservant, female slave, maid, handmaid",
+  "phonetic": "shifchah"
  },
  {
   "path": "audio/m/israeli/word/h4bff7a16.mp3",
@@ -53262,7 +53312,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Exceptional"
+  "english": "Exceptional",
+  "phonetic": "metzuyan"
  },
  {
   "path": "audio/f/israeli/word/h37034142.mp3",
@@ -53272,10 +53323,11 @@
   "id": "h37034142",
   "text": "מְצֻיָּן",
   "ipa": "me.tsu.ˈjan",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "Exceptional"
+  "english": "Exceptional",
+  "phonetic": "metzuyan"
  },
  {
   "path": "audio/m/israeli/word/h0edcb196.mp3",
@@ -53712,7 +53764,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to return; to repeat"
+  "english": "to return; to repeat",
+  "phonetic": "chazar"
  },
  {
   "path": "audio/f/israeli/word/h320463c0.mp3",
@@ -53722,10 +53775,11 @@
   "id": "h320463c0",
   "text": "חָזַר",
   "ipa": "χa.ˈzaʁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to return; to repeat"
+  "english": "to return; to repeat",
+  "phonetic": "chazar"
  },
  {
   "path": "audio/m/israeli/word/h2adc4b80.mp3",
@@ -53738,7 +53792,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "from, of, from inside; Than, more than; without, without the existence or presence of"
+  "english": "from, of, from inside; Than, more than; without, without the existence or presence of",
+  "phonetic": "mi-"
  },
  {
   "path": "audio/f/israeli/word/h2adc4b80.mp3",
@@ -53748,10 +53803,11 @@
   "id": "h2adc4b80",
   "text": "מִ־",
   "ipa": "ˈmi-",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "from, of, from inside; Than, more than; without, without the existence or presence of"
+  "english": "from, of, from inside; Than, more than; without, without the existence or presence of",
+  "phonetic": "mi-"
  },
  {
   "path": "audio/m/israeli/word/h1414a3a2.mp3",
@@ -54418,7 +54474,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "five"
+  "english": "five",
+  "phonetic": "chamishah"
  },
  {
   "path": "audio/f/israeli/word/h29aadfe4.mp3",
@@ -54428,10 +54485,11 @@
   "id": "h29aadfe4",
   "text": "חֲמִשָּׁה",
   "ipa": "χa.mi.ˈʃa",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "five"
+  "english": "five",
+  "phonetic": "chamishah"
  },
  {
   "path": "audio/m/israeli/word/h15d39df8.mp3",
@@ -54472,7 +54530,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "many, much; Great; Enough"
+  "english": "many, much; Great; Enough",
+  "phonetic": "rav"
  },
  {
   "path": "audio/f/israeli/word/h31e27ee8.mp3",
@@ -54482,10 +54541,11 @@
   "id": "h31e27ee8",
   "text": "רַב",
   "ipa": "ˈʁav",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "many, much; Great; Enough"
+  "english": "many, much; Great; Enough",
+  "phonetic": "rav"
  },
  {
   "path": "audio/m/israeli/word/h31c26fec.mp3",
@@ -54498,7 +54558,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to organize, manage, handle, arrange, set up; to formulate, draw up; to lead (a ceremony)"
+  "english": "to organize, manage, handle, arrange, set up; to formulate, draw up; to lead (a ceremony)",
+  "phonetic": "arakh"
  },
  {
   "path": "audio/f/israeli/word/h31c26fec.mp3",
@@ -54508,10 +54569,11 @@
   "id": "h31c26fec",
   "text": "עָרַךְ",
   "ipa": "a.ˈʁaχ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to organize, manage, handle, arrange, set up; to formulate, draw up; to lead (a ceremony)"
+  "english": "to organize, manage, handle, arrange, set up; to formulate, draw up; to lead (a ceremony)",
+  "phonetic": "arakh"
  },
  {
   "path": "audio/m/israeli/word/h21e009ad.mp3",
@@ -55580,7 +55642,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "high, important; loud"
+  "english": "high, important; loud",
+  "phonetic": "ram"
  },
  {
   "path": "audio/f/israeli/word/h346f78ec.mp3",
@@ -55590,10 +55653,11 @@
   "id": "h346f78ec",
   "text": "רָם",
   "ipa": "ˈʁam",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "high, important; loud"
+  "english": "high, important; loud",
+  "phonetic": "ram"
  },
  {
   "path": "audio/m/israeli/word/h899d2134.mp3",
@@ -56214,7 +56278,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "an examination, check-up, test, trial"
+  "english": "an examination, check-up, test, trial",
+  "phonetic": "bedikah"
  },
  {
   "path": "audio/f/israeli/word/h33f66dda.mp3",
@@ -56224,10 +56289,11 @@
   "id": "h33f66dda",
   "text": "בְּדִיקָה",
   "ipa": "be.di.ˈka",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "an examination, check-up, test, trial"
+  "english": "an examination, check-up, test, trial",
+  "phonetic": "bedikah"
  },
  {
   "path": "audio/m/israeli/word/hea59fdfe.mp3",
@@ -56478,7 +56544,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a base"
+  "english": "a base",
+  "phonetic": "basis"
  },
  {
   "path": "audio/f/israeli/word/h37908437.mp3",
@@ -56488,10 +56555,11 @@
   "id": "h37908437",
   "text": "בָּסִיס",
   "ipa": "ba.ˈsis",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "a base"
+  "english": "a base",
+  "phonetic": "basis"
  },
  {
   "path": "audio/m/israeli/word/hf1200b64.mp3",
@@ -56556,7 +56624,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Broken; Broken, dead"
+  "english": "Broken; Broken, dead",
+  "phonetic": "shavur"
  },
  {
   "path": "audio/f/israeli/word/h28d30511.mp3",
@@ -56566,10 +56635,11 @@
   "id": "h28d30511",
   "text": "שָׁבוּר",
   "ipa": "ʃa.ˈvuʁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "Broken; Broken, dead"
+  "english": "Broken; Broken, dead",
+  "phonetic": "shavur"
  },
  {
   "path": "audio/m/israeli/word/hf31190f0.mp3",
@@ -57136,7 +57206,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "base, pedestal, socket"
+  "english": "base, pedestal, socket",
+  "phonetic": "eden"
  },
  {
   "path": "audio/f/israeli/word/h36fae7b2.mp3",
@@ -57146,10 +57217,11 @@
   "id": "h36fae7b2",
   "text": "אֶדֶן",
   "ipa": "e.ˈden",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "base, pedestal, socket"
+  "english": "base, pedestal, socket",
+  "phonetic": "eden"
  },
  {
   "path": "audio/m/israeli/word/h1797f84f.mp3",
@@ -57190,7 +57262,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "hard (resistant to pressure); hard (difficult); hard"
+  "english": "hard (resistant to pressure); hard (difficult); hard",
+  "phonetic": "kasheh"
  },
  {
   "path": "audio/f/israeli/word/h29ebe493.mp3",
@@ -57200,10 +57273,11 @@
   "id": "h29ebe493",
   "text": "קָשֶׁה",
   "ipa": "ka.ˈʃe",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "hard (resistant to pressure); hard (difficult); hard"
+  "english": "hard (resistant to pressure); hard (difficult); hard",
+  "phonetic": "kasheh"
  },
  {
   "path": "audio/m/israeli/word/habcfc77f.mp3",
@@ -57268,7 +57342,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "place (location or position); place, stead, lieu; the Omnipresent, God"
+  "english": "place (location or position); place, stead, lieu; the Omnipresent, God",
+  "phonetic": "makom"
  },
  {
   "path": "audio/f/israeli/word/h342fd0de.mp3",
@@ -57278,10 +57353,11 @@
   "id": "h342fd0de",
   "text": "מָקוֹם",
   "ipa": "ma.ˈkom",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "place (location or position); place, stead, lieu; the Omnipresent, God"
+  "english": "place (location or position); place, stead, lieu; the Omnipresent, God",
+  "phonetic": "makom"
  },
  {
   "path": "audio/m/israeli/word/h4d5ad9e4.mp3",
@@ -57452,7 +57528,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "thus, in this way"
+  "english": "thus, in this way",
+  "phonetic": "koh"
  },
  {
   "path": "audio/f/israeli/word/h352b83f7.mp3",
@@ -57462,10 +57539,11 @@
   "id": "h352b83f7",
   "text": "כֹּה",
   "ipa": "ˈko",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "thus, in this way"
+  "english": "thus, in this way",
+  "phonetic": "koh"
  },
  {
   "path": "audio/m/israeli/word/h13c6683f.mp3",
@@ -57880,7 +57958,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to believe"
+  "english": "to believe",
+  "phonetic": "he'emin"
  },
  {
   "path": "audio/f/israeli/word/h26a32615.mp3",
@@ -57890,10 +57969,11 @@
   "id": "h26a32615",
   "text": "הֶאֱמִין",
   "ipa": "he.e.ˈmin",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to believe"
+  "english": "to believe",
+  "phonetic": "he'emin"
  },
  {
   "path": "audio/m/israeli/word/ha4794f20.mp3",
@@ -58194,7 +58274,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "fabric, cloth, linen; screen (film or television); liars"
+  "english": "fabric, cloth, linen; screen (film or television); liars",
+  "phonetic": "bad"
  },
  {
   "path": "audio/f/israeli/word/h2b39dcf2.mp3",
@@ -58204,10 +58285,11 @@
   "id": "h2b39dcf2",
   "text": "בַּד",
   "ipa": "ˈbad",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "fabric, cloth, linen; screen (film or television); liars"
+  "english": "fabric, cloth, linen; screen (film or television); liars",
+  "phonetic": "bad"
  },
  {
   "path": "audio/m/israeli/word/h524464c5.mp3",
@@ -58590,7 +58672,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "fitting, suitable; convenient, desirable, worthwhile (impersonal)"
+  "english": "fitting, suitable; convenient, desirable, worthwhile (impersonal)",
+  "phonetic": "keday"
  },
  {
   "path": "audio/f/israeli/word/h32049c3e.mp3",
@@ -58600,10 +58683,11 @@
   "id": "h32049c3e",
   "text": "כְּדַאי",
   "ipa": "ke.ˈdaj",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "fitting, suitable; convenient, desirable, worthwhile (impersonal)"
+  "english": "fitting, suitable; convenient, desirable, worthwhile (impersonal)",
+  "phonetic": "keday"
  },
  {
   "path": "audio/m/israeli/word/h72ac53a6.mp3",
@@ -58772,7 +58856,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to continue, to still do"
+  "english": "to continue, to still do",
+  "phonetic": "himshikh"
  },
  {
   "path": "audio/f/israeli/word/h3312eae8.mp3",
@@ -58782,10 +58867,11 @@
   "id": "h3312eae8",
   "text": "הִמְשִׁיךְ",
   "ipa": "him.ˈʃiχ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to continue, to still do"
+  "english": "to continue, to still do",
+  "phonetic": "himshikh"
  },
  {
   "path": "audio/m/israeli/word/h871db71d.mp3",
@@ -59060,7 +59146,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to touch, lay a hand on; to reach, extend to; to be stricken"
+  "english": "to touch, lay a hand on; to reach, extend to; to be stricken",
+  "phonetic": "naga"
  },
  {
   "path": "audio/f/israeli/word/h32a7c780.mp3",
@@ -59070,10 +59157,11 @@
   "id": "h32a7c780",
   "text": "נָגַע",
   "ipa": "na.ˈɡa",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to touch, lay a hand on; to reach, extend to; to be stricken"
+  "english": "to touch, lay a hand on; to reach, extend to; to be stricken",
+  "phonetic": "naga"
  },
  {
   "path": "audio/m/israeli/word/hfe1ddb27.mp3",
@@ -59244,7 +59332,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to dwell"
+  "english": "to dwell",
+  "phonetic": "dar"
  },
  {
   "path": "audio/f/israeli/word/h2f12d5bf.mp3",
@@ -59254,10 +59343,11 @@
   "id": "h2f12d5bf",
   "text": "דָּר",
   "ipa": "ˈdaʁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to dwell"
+  "english": "to dwell",
+  "phonetic": "dar"
  },
  {
   "path": "audio/m/israeli/word/h729919fd.mp3",
@@ -59532,7 +59622,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "if, should, had"
+  "english": "if, should, had",
+  "phonetic": "ilu"
  },
  {
   "path": "audio/f/israeli/word/h36173537.mp3",
@@ -59542,10 +59633,11 @@
   "id": "h36173537",
   "text": "אִלּוּ",
   "ipa": "i.ˈlu",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "if, should, had"
+  "english": "if, should, had",
+  "phonetic": "ilu"
  },
  {
   "path": "audio/m/israeli/word/hc444e8d9.mp3",
@@ -60664,7 +60756,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to lie down, to be lying down, to recline; to have sex"
+  "english": "to lie down, to be lying down, to recline; to have sex",
+  "phonetic": "shakhav"
  },
  {
   "path": "audio/f/israeli/word/h327ac347.mp3",
@@ -60674,10 +60767,11 @@
   "id": "h327ac347",
   "text": "שָׁכַב",
   "ipa": "ʃa.ˈχav",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to lie down, to be lying down, to recline; to have sex"
+  "english": "to lie down, to be lying down, to recline; to have sex",
+  "phonetic": "shakhav"
  },
  {
   "path": "audio/m/israeli/word/hce5d4d38.mp3",
@@ -61610,7 +61704,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "bag, satchel; case; portfolio"
+  "english": "bag, satchel; case; portfolio",
+  "phonetic": "tik"
  },
  {
   "path": "audio/f/israeli/word/h378062a7.mp3",
@@ -61620,10 +61715,11 @@
   "id": "h378062a7",
   "text": "תִּיק",
   "ipa": "ˈtik",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "bag, satchel; case; portfolio"
+  "english": "bag, satchel; case; portfolio",
+  "phonetic": "tik"
  },
  {
   "path": "audio/m/israeli/word/hb6d6914d.mp3",
@@ -61824,7 +61920,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "lip; lip (rim of an open container); language, speech"
+  "english": "lip; lip (rim of an open container); language, speech",
+  "phonetic": "safah"
  },
  {
   "path": "audio/f/israeli/word/h34d7be76.mp3",
@@ -61834,10 +61931,11 @@
   "id": "h34d7be76",
   "text": "שָׂפָה",
   "ipa": "sa.ˈfa",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "lip; lip (rim of an open container); language, speech"
+  "english": "lip; lip (rim of an open container); language, speech",
+  "phonetic": "safah"
  },
  {
   "path": "audio/m/israeli/word/hf2263f85.mp3",
@@ -61928,7 +62026,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to fall, to drop, to shed; to drop out, to quit"
+  "english": "to fall, to drop, to shed; to drop out, to quit",
+  "phonetic": "nashar"
  },
  {
   "path": "audio/f/israeli/word/h2c1f5534.mp3",
@@ -61938,10 +62037,11 @@
   "id": "h2c1f5534",
   "text": "נָשַׁר",
   "ipa": "na.ˈʃaʁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to fall, to drop, to shed; to drop out, to quit"
+  "english": "to fall, to drop, to shed; to drop out, to quit",
+  "phonetic": "nashar"
  },
  {
   "path": "audio/m/israeli/word/h62b4707b.mp3",
@@ -62774,7 +62874,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to prepare (something)"
+  "english": "to prepare (something)",
+  "phonetic": "hekhin"
  },
  {
   "path": "audio/f/israeli/word/h2f27d2ce.mp3",
@@ -62784,10 +62885,11 @@
   "id": "h2f27d2ce",
   "text": "הֵכִין",
   "ipa": "he.ˈχin",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to prepare (something)"
+  "english": "to prepare (something)",
+  "phonetic": "hekhin"
  },
  {
   "path": "audio/m/israeli/word/hc156c20a.mp3",
@@ -62826,7 +62928,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "hook"
+  "english": "hook",
+  "phonetic": "vav"
  },
  {
   "path": "audio/f/israeli/word/h29a2e2b8.mp3",
@@ -62836,10 +62939,11 @@
   "id": "h29a2e2b8",
   "text": "וָו",
   "ipa": "ˈvav",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "hook"
+  "english": "hook",
+  "phonetic": "vav"
  },
  {
   "path": "audio/m/israeli/word/h16acb4dc.mp3",
@@ -62906,7 +63010,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "estate, territory; legacy; inheritance, estate"
+  "english": "estate, territory; legacy; inheritance, estate",
+  "phonetic": "nachalah"
  },
  {
   "path": "audio/f/israeli/word/h2e1e8caf.mp3",
@@ -62916,10 +63021,11 @@
   "id": "h2e1e8caf",
   "text": "נַחֲלָה",
   "ipa": "na.χa.ˈla",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "estate, territory; legacy; inheritance, estate"
+  "english": "estate, territory; legacy; inheritance, estate",
+  "phonetic": "nachalah"
  },
  {
   "path": "audio/m/israeli/word/h982871fa.mp3",
@@ -63538,7 +63644,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to let in, allow in, admit"
+  "english": "to let in, allow in, admit",
+  "phonetic": "hikhnis"
  },
  {
   "path": "audio/f/israeli/word/h3430ee89.mp3",
@@ -63548,10 +63655,11 @@
   "id": "h3430ee89",
   "text": "הִכְנִיס",
   "ipa": "hiχ.ˈnis",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to let in, allow in, admit"
+  "english": "to let in, allow in, admit",
+  "phonetic": "hikhnis"
  },
  {
   "path": "audio/m/israeli/word/hab527ee7.mp3",
@@ -63824,7 +63932,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to fight, wage war"
+  "english": "to fight, wage war",
+  "phonetic": "nilcham"
  },
  {
   "path": "audio/f/israeli/word/h32580d06.mp3",
@@ -63834,10 +63943,11 @@
   "id": "h32580d06",
   "text": "נִלְחַם",
   "ipa": "nil.ˈχam",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to fight, wage war"
+  "english": "to fight, wage war",
+  "phonetic": "nilcham"
  },
  {
   "path": "audio/m/israeli/word/h5ea1ecdf.mp3",
@@ -63956,7 +64066,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "seventy"
+  "english": "seventy",
+  "phonetic": "shiv'im"
  },
  {
   "path": "audio/f/israeli/word/h2c308e65.mp3",
@@ -63966,10 +64077,11 @@
   "id": "h2c308e65",
   "text": "שִׁבְעִים",
   "ipa": "ʃiv.ˈim",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "seventy"
+  "english": "seventy",
+  "phonetic": "shiv'im"
  },
  {
   "path": "audio/m/israeli/word/h5ba22cfa.mp3",
@@ -64060,7 +64172,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "ox"
+  "english": "ox",
+  "phonetic": "shor"
  },
  {
   "path": "audio/f/israeli/word/h26f014a5.mp3",
@@ -64070,10 +64183,11 @@
   "id": "h26f014a5",
   "text": "שׁוֹר",
   "ipa": "ˈʃoʁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "ox"
+  "english": "ox",
+  "phonetic": "shor"
  },
  {
   "path": "audio/m/israeli/word/hbd8d9038.mp3",
@@ -64924,7 +65038,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to inform, to announce, to make known"
+  "english": "to inform, to announce, to make known",
+  "phonetic": "hodi'a"
  },
  {
   "path": "audio/f/israeli/word/h2b9299a8.mp3",
@@ -64934,10 +65049,11 @@
   "id": "h2b9299a8",
   "text": "הוֹדִיעַ",
   "ipa": "ho.ˈdi.a",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to inform, to announce, to make known"
+  "english": "to inform, to announce, to make known",
+  "phonetic": "hodi'a"
  },
  {
   "path": "audio/m/israeli/word/h0284af7f.mp3",
@@ -65348,7 +65464,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "boxwood, box tree"
+  "english": "boxwood, box tree",
+  "phonetic": "ashur"
  },
  {
   "path": "audio/f/israeli/word/h2eaba841.mp3",
@@ -65358,10 +65475,11 @@
   "id": "h2eaba841",
   "text": "אַשּׁוּר",
   "ipa": "a.ˈʃuʁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "boxwood, box tree"
+  "english": "boxwood, box tree",
+  "phonetic": "ashur"
  },
  {
   "path": "audio/m/israeli/word/h13b46b09.mp3",
@@ -65638,7 +65756,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "used to indicate someone's care or concern about something"
+  "english": "used to indicate someone's care or concern about something",
+  "phonetic": "ikhpat"
  },
  {
   "path": "audio/f/israeli/word/h319721ae.mp3",
@@ -65648,10 +65767,11 @@
   "id": "h319721ae",
   "text": "אִכְפַּת",
   "ipa": "iχ.ˈpat",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "used to indicate someone's care or concern about something"
+  "english": "used to indicate someone's care or concern about something",
+  "phonetic": "ikhpat"
  },
  {
   "path": "audio/m/israeli/word/ha54e1129.mp3",
@@ -65872,7 +65992,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "wig; a face (of a polyhedron); a sidelock"
+  "english": "wig; a face (of a polyhedron); a sidelock",
+  "phonetic": "pe'ah"
  },
  {
   "path": "audio/f/israeli/word/h34aee9cc.mp3",
@@ -65882,10 +66003,11 @@
   "id": "h34aee9cc",
   "text": "פֵּאָה",
   "ipa": "pe.ˈa",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "wig; a face (of a polyhedron); a sidelock"
+  "english": "wig; a face (of a polyhedron); a sidelock",
+  "phonetic": "pe'ah"
  },
  {
   "path": "audio/m/israeli/word/h3e44d72d.mp3",
@@ -66300,7 +66422,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "partner, affiliate, copartner; roommate"
+  "english": "partner, affiliate, copartner; roommate",
+  "phonetic": "shutaf"
  },
  {
   "path": "audio/f/israeli/word/h26e6f8c5.mp3",
@@ -66310,10 +66433,11 @@
   "id": "h26e6f8c5",
   "text": "שֻׁתָּף",
   "ipa": "ʃu.ˈtaf",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "partner, affiliate, copartner; roommate"
+  "english": "partner, affiliate, copartner; roommate",
+  "phonetic": "shutaf"
  },
  {
   "path": "audio/m/israeli/word/h271a18af.mp3",
@@ -66326,7 +66450,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Canaanite; a Canaanite person"
+  "english": "Canaanite; a Canaanite person",
+  "phonetic": "kena'ani"
  },
  {
   "path": "audio/f/israeli/word/h271a18af.mp3",
@@ -66336,10 +66461,11 @@
   "id": "h271a18af",
   "text": "כְּנַעֲנִי",
   "ipa": "ke.na.a.ˈni",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "Canaanite; a Canaanite person"
+  "english": "Canaanite; a Canaanite person",
+  "phonetic": "kena'ani"
  },
  {
   "path": "audio/m/israeli/word/h834701b7.mp3",
@@ -66720,7 +66846,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "turtle, tortoise; mastigure; a kind of carriage"
+  "english": "turtle, tortoise; mastigure; a kind of carriage",
+  "phonetic": "tzav"
  },
  {
   "path": "audio/f/israeli/word/h342c3c55.mp3",
@@ -66730,10 +66857,11 @@
   "id": "h342c3c55",
   "text": "צָב",
   "ipa": "ˈtsav",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "turtle, tortoise; mastigure; a kind of carriage"
+  "english": "turtle, tortoise; mastigure; a kind of carriage",
+  "phonetic": "tzav"
  },
  {
   "path": "audio/m/israeli/word/he21208a3.mp3",
@@ -66902,7 +67030,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "broad bean, fava bean, fava (Vicia faba)"
+  "english": "broad bean, fava bean, fava (Vicia faba)",
+  "phonetic": "pol"
  },
  {
   "path": "audio/f/israeli/word/h27d68eba.mp3",
@@ -66912,10 +67041,11 @@
   "id": "h27d68eba",
   "text": "פּוֹל",
   "ipa": "ˈpol",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "broad bean, fava bean, fava (Vicia faba)"
+  "english": "broad bean, fava bean, fava (Vicia faba)",
+  "phonetic": "pol"
  },
  {
   "path": "audio/m/israeli/word/h9cbc0f35.mp3",
@@ -66954,7 +67084,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "building; building, construction; a conjugation pattern, a construction"
+  "english": "building; building, construction; a conjugation pattern, a construction",
+  "phonetic": "binyan"
  },
  {
   "path": "audio/f/israeli/word/h2c8086bd.mp3",
@@ -66964,10 +67095,11 @@
   "id": "h2c8086bd",
   "text": "בִּנְיָן",
   "ipa": "bin.ˈjan",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "building; building, construction; a conjugation pattern, a construction"
+  "english": "building; building, construction; a conjugation pattern, a construction",
+  "phonetic": "binyan"
  },
  {
   "path": "audio/m/israeli/word/h242d7d42.mp3",
@@ -67352,7 +67484,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "mark; sign (indication); paragraph"
+  "english": "mark; sign (indication); paragraph",
+  "phonetic": "siman"
  },
  {
   "path": "audio/f/israeli/word/h2ce7109c.mp3",
@@ -67362,10 +67495,11 @@
   "id": "h2ce7109c",
   "text": "סִימָן",
   "ipa": "si.ˈman",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "mark; sign (indication); paragraph"
+  "english": "mark; sign (indication); paragraph",
+  "phonetic": "siman"
  },
  {
   "path": "audio/m/israeli/word/h0aed18d2.mp3",
@@ -67458,7 +67592,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "enemy"
+  "english": "enemy",
+  "phonetic": "oyev"
  },
  {
   "path": "audio/f/israeli/word/h333a5dcb.mp3",
@@ -67468,10 +67603,11 @@
   "id": "h333a5dcb",
   "text": "אוֹיֵב",
   "ipa": "o.ˈjev",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "enemy"
+  "english": "enemy",
+  "phonetic": "oyev"
  },
  {
   "path": "audio/m/israeli/word/h14d8720e.mp3",
@@ -67960,7 +68096,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "fact"
+  "english": "fact",
+  "phonetic": "uvdah"
  },
  {
   "path": "audio/f/israeli/word/h2adc37eb.mp3",
@@ -67970,10 +68107,11 @@
   "id": "h2adc37eb",
   "text": "עֻבְדָּה",
   "ipa": "uv.ˈda",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "fact"
+  "english": "fact",
+  "phonetic": "uvdah"
  },
  {
   "path": "audio/m/israeli/word/he0949da8.mp3",
@@ -68696,7 +68834,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a wall, a structure built for defense around a city, castle, etc"
+  "english": "a wall, a structure built for defense around a city, castle, etc",
+  "phonetic": "chomah"
  },
  {
   "path": "audio/f/israeli/word/h293be884.mp3",
@@ -68706,10 +68845,11 @@
   "id": "h293be884",
   "text": "חוֹמָה",
   "ipa": "χo.ˈma",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "a wall, a structure built for defense around a city, castle, etc"
+  "english": "a wall, a structure built for defense around a city, castle, etc",
+  "phonetic": "chomah"
  },
  {
   "path": "audio/m/israeli/word/h3e5d0f9c.mp3",
@@ -69436,7 +69576,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "hunter"
+  "english": "hunter",
+  "phonetic": "tzayad"
  },
  {
   "path": "audio/f/israeli/word/h2d4006ef.mp3",
@@ -69446,10 +69587,11 @@
   "id": "h2d4006ef",
   "text": "צַיָּד",
   "ipa": "tsa.ˈjad",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "hunter"
+  "english": "hunter",
+  "phonetic": "tzayad"
  },
  {
   "path": "audio/m/israeli/word/h65a6c7e5.mp3",
@@ -69986,7 +70128,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "clean; net"
+  "english": "clean; net",
+  "phonetic": "naki"
  },
  {
   "path": "audio/f/israeli/word/h331ea4dc.mp3",
@@ -69996,10 +70139,11 @@
   "id": "h331ea4dc",
   "text": "נָקִי",
   "ipa": "na.ˈki",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "clean; net"
+  "english": "clean; net",
+  "phonetic": "naki"
  },
  {
   "path": "audio/m/israeli/word/hcf4a5632.mp3",
@@ -70222,7 +70366,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "political"
+  "english": "political",
+  "phonetic": "politi"
  },
  {
   "path": "audio/f/israeli/word/h36dea5a7.mp3",
@@ -70232,10 +70377,11 @@
   "id": "h36dea5a7",
   "text": "פּוֹלִיטִי",
   "ipa": "po.li.ˈti",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "political"
+  "english": "political",
+  "phonetic": "politi"
  },
  {
   "path": "audio/m/israeli/word/hf78ea570.mp3",
@@ -70534,7 +70680,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Slightly ill, sickly, weakened; Unhealthy, morbid"
+  "english": "Slightly ill, sickly, weakened; Unhealthy, morbid",
+  "phonetic": "cholani"
  },
  {
   "path": "audio/f/israeli/word/h34530899.mp3",
@@ -70544,10 +70691,11 @@
   "id": "h34530899",
   "text": "חוֹלָנִי",
   "ipa": "χo.la.ˈni",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "Slightly ill, sickly, weakened; Unhealthy, morbid"
+  "english": "Slightly ill, sickly, weakened; Unhealthy, morbid",
+  "phonetic": "cholani"
  },
  {
   "path": "audio/m/israeli/word/hc75b99fe.mp3",

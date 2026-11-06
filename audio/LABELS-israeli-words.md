@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 6530 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 6607 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-6530 English labels; 1933 UNKNOWN.
+6607 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -1960,6 +1960,21 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hfb9cb2bb](f/israeli/word/hfb9cb2bb.mp3) | הֶחְזִיק | to hold, to grab | hechzik |
 | [hfc2573fa](f/israeli/word/hfc2573fa.mp3) | נִמְצָא | to be found; to be discovered; to be present, to be located, to be situated | nimtza |
 | [hfcc1a370](f/israeli/word/hfcc1a370.mp3) | גּוֹרָל | a lot; One's allotted portion, the result of drawing lots; fate, destiny | goral |
+| [hfcd9d9b6](f/israeli/word/hfcd9d9b6.mp3) | יָשַׁב | to sit, to be in a position with the torso upright and the legs supported; to sit, to move into such a position; to settle, to establish a residence | yashav |
+| [hfd3118ed](f/israeli/word/hfd3118ed.mp3) | הִגִּיעַ | to arrive, to get, to reach; to be deserved, to serve someone right | higi'a |
+| [hfd4bf43b](f/israeli/word/hfd4bf43b.mp3) | זָכַר | to remember | zakhar |
+| [hfdbafdf6](f/israeli/word/hfdbafdf6.mp3) | בִּגְלַל | because of, due to [with noun phrase] | biglal |
+| [hfdd2f995](f/israeli/word/hfdd2f995.mp3) | עָנִי | poor; pauper | ani |
+| [hfdfd1efd](f/israeli/word/hfdfd1efd.mp3) | נִרְגַּע | to calm down | nirga |
+| [hfe074a94](f/israeli/word/hfe074a94.mp3) | טֶרֶם | before; not yet | terem |
+| [hfe0c1c1e](f/israeli/word/hfe0c1c1e.mp3) | אִפְשֵׁר | to permit; to permit (an action) | ifsher |
+| [hfe1ddb27](f/israeli/word/hfe1ddb27.mp3) | נָפַל | to fall; to be less the someone or something else; to be dropped | nafal |
+| [hfe4ebf2c](f/israeli/word/hfe4ebf2c.mp3) | אָדָם | a man, a human | adam |
+| [hff7d24c0](f/israeli/word/hff7d24c0.mp3) | רָכַב | to ride (a horse or the like) | rakhav |
+| [hff9ae755](f/israeli/word/hff9ae755.mp3) | לוּחַ | board, tablet, blackboard; plate; table, chart, calendar | luach |
+| [hffc00eb8](f/israeli/word/hffc00eb8.mp3) | מוּזִיקָה | music | muzikah |
+| [hffd88aa2](f/israeli/word/hffd88aa2.mp3) | עָקַב | to follow, tail, track, trace; to watch, observe; to pay attention | akav |
+| [hffd9b904](f/israeli/word/hffd9b904.mp3) | מֵאָה | hundred, one hundred | me'ah |
 | [i-01-w1](f/israeli/word/i-01-w1.mp3) | בָּרְכוּ | UNKNOWN | barkhu |
 | [i-01-w10](f/israeli/word/i-01-w10.mp3) | לְעוֹלָם וָעֶד | UNKNOWN | le'olam va'ed |
 | [i-01-w11](f/israeli/word/i-01-w11.mp3) | וְאָהַבְתָּ | UNKNOWN | ve'ahavta |
@@ -3135,6 +3150,13 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [oseh-shalom-w7](f/israeli/word/oseh-shalom-w7.mp3) | עָלֵינוּ | it is upon us | aleinu |
 | [oseh-shalom-w8](f/israeli/word/oseh-shalom-w8.mp3) | וְעַל | and for | ve'al |
 | [oseh-shalom-w9](f/israeli/word/oseh-shalom-w9.mp3) | כָּל | all, whole, everything | kol |
+| [p0962becf](f/israeli/word/p0962becf.mp3) | אַחַת | one (f.) | achat |
+| [p580df509](f/israeli/word/p580df509.mp3) | בְּבַקָּשָׁה | please / you're welcome | bevakashah |
+| [p71df0447](f/israeli/word/p71df0447.mp3) | שָׁלוֹשׁ | three (f.) | shalosh |
+| [p7f7d7b8f](f/israeli/word/p7f7d7b8f.mp3) | מַיִם | water | mayim |
+| [p92bccc56](f/israeli/word/p92bccc56.mp3) | שְׁתַּיִם | two (f.) | shtayim |
+| [pc34fd630](f/israeli/word/pc34fd630.mp3) | אַרְבַּע | four (f.) | arba |
+| [pefce5ddb](f/israeli/word/pefce5ddb.mp3) | כָּל | all, whole, everything | kol |
 | [politeness-01](f/israeli/word/politeness-01.mp3) | תּוֹדָה | thank you | todah |
 | [politeness-03](f/israeli/word/politeness-03.mp3) | בְּבַקָּשָׁה | please / you're welcome | bevakashah |
 | [politeness-06](f/israeli/word/politeness-06.mp3) | סְלִיחָה | excuse me / sorry | selichah |
@@ -4361,6 +4383,61 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [greetings-20](m/israeli/word/greetings-20.mp3) | לְהִתְרָאוֹת | see you (later) | lehitra'ot |
 | [greetings-25](m/israeli/word/greetings-25.mp3) | בְּהַצְלָחָה | good luck / all the best | behatzlachah |
 | [greetings-26](m/israeli/word/greetings-26.mp3) | לִבְרִיאוּת | bless you (after a sneeze) / to your health | livri'ut |
+| [h0047024c](m/israeli/word/h0047024c.mp3) | תְּרוּפָה | medicine, medication, medicament, drug | terufah |
+| [h0073b076](m/israeli/word/h0073b076.mp3) | פַּרְעֹה | pharaoh | par'oh |
+| [h00bec4fa](m/israeli/word/h00bec4fa.mp3) | לְגַבֵּי | about, regarding, in connection with, with respect to | legabei |
+| [h00ca167b](m/israeli/word/h00ca167b.mp3) | לַחֲלוּטִין | completely, totally | lachalutin |
+| [h00cdb883](m/israeli/word/h00cdb883.mp3) | מְקֻלְקָל | spoiled, rotten (of food or similar); spoiled (of a child); out of order, broken (not functioning properly) | mekulkal |
+| [h00fd9c4f](m/israeli/word/h00fd9c4f.mp3) | פַּעַם | a time; a step, a footstep, a pace; a stroke, a beat, as a heartbeat | pa'am |
+| [h010999c9](m/israeli/word/h010999c9.mp3) | זִקּוּק | distillation, refining; flare, flash, firework, rocket | zikuk |
+| [h012c72d5](m/israeli/word/h012c72d5.mp3) | נֶעֱלַם | to disappear | ne'elam |
+| [h01851b40](m/israeli/word/h01851b40.mp3) | רָצַח | to murder (to kill deliberately) | ratzach |
+| [h01c48de6](m/israeli/word/h01c48de6.mp3) | סָתַם | to stop (a pipe or opening), to stop up, clog, to close or seal; to block; to stuff oneself | satam |
+| [h01ebb4ee](m/israeli/word/h01ebb4ee.mp3) | חֵלֶב | chelev; the best part (of something) | chelev |
+| [h01f4a63f](m/israeli/word/h01f4a63f.mp3) | מַטָּרָה | a target, aim; a cause, a goal, aim | matarah |
+| [h020c4fa8](m/israeli/word/h020c4fa8.mp3) | עַם | a nation, a people | am |
+| [h0210d79f](m/israeli/word/h0210d79f.mp3) | שְׁאֵר | flesh, blood; food, sustenance; kin, relative | she'er |
+| [h0284af7f](m/israeli/word/h0284af7f.mp3) | קֶרֶשׁ | board, plank | keresh |
+| [h02ca8410](m/israeli/word/h02ca8410.mp3) | צָהֹב | yellow (color) | tzahov |
+| [h03763c94](m/israeli/word/h03763c94.mp3) | יַיִן | wine; intoxication | yayin |
+| [h04345345](m/israeli/word/h04345345.mp3) | פִּי | multiplicative particle | pi |
+| [h04c271fe](m/israeli/word/h04c271fe.mp3) | גַּם | also, too, additionally; also, additionally, in addition, further, besides, on top of that; even (though, if) | gam |
+| [h057ec4b3](m/israeli/word/h057ec4b3.mp3) | זָרַק | to throw, to toss; to throw away, to toss out, to discard; to dash, to sprinkle | zarak |
+| [h059e9e22](m/israeli/word/h059e9e22.mp3) | שָׁלַח | to send (someone or something); to move (something) physically away from one's body; to send messengers or letters | shalach |
+| [h064edcbd](m/israeli/word/h064edcbd.mp3) | חָ | ha | cha |
+| [h06f78f5d](m/israeli/word/h06f78f5d.mp3) | בֶּטֶן | abdomen, belly | beten |
+| [h07407da8](m/israeli/word/h07407da8.mp3) | פֶּן | lest, in order that … not, for otherwise | pen |
+| [h0764a400](m/israeli/word/h0764a400.mp3) | עָסוּק | busy | asuk |
+| [h07a5230b](m/israeli/word/h07a5230b.mp3) | פָּגַשׁ | to meet | pagash |
+| [h07aab9ea](m/israeli/word/h07aab9ea.mp3) | מַלְאָךְ | angel; messenger | mal'akh |
+| [h07f9e1d9](m/israeli/word/h07f9e1d9.mp3) | הִצְלִיחַ | to succeed | hitzliach |
+| [h082fa7e3](m/israeli/word/h082fa7e3.mp3) | חָלַק | to divide, to partition, to split; to share; to disagree | chalak |
+| [h0849ff56](m/israeli/word/h0849ff56.mp3) | קֵץ | an end, a finish | ketz |
+| [h08c10040](m/israeli/word/h08c10040.mp3) | נִהֵל | to manage | nihel |
+| [h08e1b712](m/israeli/word/h08e1b712.mp3) | תְּמוּנָה | photograph, photo, picture; image | temunah |
+| [h08f064b2](m/israeli/word/h08f064b2.mp3) | חַטָּאת | a sin; a sin offering | chatat |
+| [h0902557b](m/israeli/word/h0902557b.mp3) | הִגִּיד | to tell, say | higid |
+| [h093f1db7](m/israeli/word/h093f1db7.mp3) | אַלְמָן | widower | alman |
+| [h0986ff35](m/israeli/word/h0986ff35.mp3) | חָמִים | warm | chamim |
+| [h09f2621b](m/israeli/word/h09f2621b.mp3) | שַׁחַת | hay | shachat |
+| [h0a3f1a37](m/israeli/word/h0a3f1a37.mp3) | שְׁטוּת | nonsense, drivel, idiocy, bullcrap, poppycock | shetut |
+| [h0a70642a](m/israeli/word/h0a70642a.mp3) | אַבָּא | father; Father, especially the speaker's own father | aba |
+| [h0a9333f1](m/israeli/word/h0a9333f1.mp3) | דִּיגִיטָלִי | Digital | digitali |
+| [h0a99b68d](m/israeli/word/h0a99b68d.mp3) | זְכוּת | a right, a legal right, a moral right; a privilege; a merit | zekhut |
+| [h0aa6bd95](m/israeli/word/h0aa6bd95.mp3) | גִּיל | age, period; joy, happiness | gil |
+| [h0aeb9756](m/israeli/word/h0aeb9756.mp3) | דָּמַם | to pause | damam |
+| [h0aed18d2](m/israeli/word/h0aed18d2.mp3) | אַחְרָאִי | responsible | achra'i |
+| [h0b842943](m/israeli/word/h0b842943.mp3) | הִיא | she, it; used as an intensifier for a third-person singular feminine subject | hi |
+| [h0c2df2e4](m/israeli/word/h0c2df2e4.mp3) | תְּאֻנָּה | accident (all senses); car wreck | te'unah |
+| [h0c4906f8](m/israeli/word/h0c4906f8.mp3) | טָעוּת | error, mistake | ta'ut |
+| [h0c76d311](m/israeli/word/h0c76d311.mp3) | שָׁכַח | to forget | shakhach |
+| [h0c96b2f5](m/israeli/word/h0c96b2f5.mp3) | בָּחוּר | guy, boy; youth (countable), young man; a young man over 13 who is required to perform mitzvoth but has never married | bachur |
+| [h0cc80aed](m/israeli/word/h0cc80aed.mp3) | טַף | babies, infants, small children; children | taf |
+| [h0cdd730a](m/israeli/word/h0cdd730a.mp3) | אִוָּה | to greatly desire, want, long for, lust for | ivah |
+| [h0e071b5c](m/israeli/word/h0e071b5c.mp3) | יֻדַּע | to be informed; to be made definite, to be put into definite form | yuda |
+| [h0e0c5c6e](m/israeli/word/h0e0c5c6e.mp3) | הִזְדַּמְּנוּת | an opportunity, a chance | hizdamenut |
+| [h0e1d6c8d](m/israeli/word/h0e1d6c8d.mp3) | הִתְגַּעֲגֵעַ | to miss, to long for | hitga'age'a |
+| [h0edcb196](m/israeli/word/h0edcb196.mp3) | אִחוּר | a delay | ichur |
 | [haftarah-after-w1](m/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](m/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](m/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -7136,4 +7213,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 13506 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 13727 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

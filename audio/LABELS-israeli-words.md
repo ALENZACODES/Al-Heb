@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 6892 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 6936 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-6892 English labels; 1933 UNKNOWN.
+6936 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -4723,6 +4723,50 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [h565b3652](m/israeli/word/h565b3652.mp3) | דּוֹקְטוֹר | doctor | doketor |
 | [h568e3e03](m/israeli/word/h568e3e03.mp3) | כִּסֵּא | chair | kise |
 | [h57072da4](m/israeli/word/h57072da4.mp3) | סוֹד | secret | sod |
+| [h572c48d4](m/israeli/word/h572c48d4.mp3) | יְחִידָה | a unit, an organizational unit; a unit, a unit of measure; a unit | yechidah |
+| [h57ed7970](m/israeli/word/h57ed7970.mp3) | מְעַט | little, few (not much) | me'at |
+| [h583b5633](m/israeli/word/h583b5633.mp3) | עִם | with; and also; near to, next to | im |
+| [h58d8d8fe](m/israeli/word/h58d8d8fe.mp3) | מֶלֶךְ | king | melekh |
+| [h59a7d1fc](m/israeli/word/h59a7d1fc.mp3) | גִּבּוֹר | hero; protagonist; strong, powerful | gibor |
+| [h5ad2503a](m/israeli/word/h5ad2503a.mp3) | מִצְרִי | Egyptian (person); Egyptian | mitzri |
+| [h5ae20314](m/israeli/word/h5ae20314.mp3) | דֶּרֶךְ | a road, a path, a way; a journey; a custom | derekh |
+| [h5aed8aaa](m/israeli/word/h5aed8aaa.mp3) | יָכֹל | can, to be able to | yakhol |
+| [h5b150aaf](m/israeli/word/h5b150aaf.mp3) | אוֹר | to shine, be illuminated | or |
+| [h5ba22cfa](m/israeli/word/h5ba22cfa.mp3) | דָּפַק | to knock; to beat; to get even (with someone), to get back (at someone) | dafak |
+| [h5bd1f5e1](m/israeli/word/h5bd1f5e1.mp3) | דֹּב | bear | dov |
+| [h5be380fa](m/israeli/word/h5be380fa.mp3) | אֲבִימֶלֶךְ | a ruler of a Philistine principality or town | avimelekh |
+| [h5bebb792](m/israeli/word/h5bebb792.mp3) | גִּבְעָה | a hill | giv'ah |
+| [h5c2548dc](m/israeli/word/h5c2548dc.mp3) | חַם | Hot | cham |
+| [h5c559f1a](m/israeli/word/h5c559f1a.mp3) | דְּרוֹמִי | South, southern, southerly | deromi |
+| [h5c96df63](m/israeli/word/h5c96df63.mp3) | מָן | manna | man |
+| [h5cae87cc](m/israeli/word/h5cae87cc.mp3) | בָּטַח | to rely on, to have faith in, to depend on | batach |
+| [h5d60ac4a](m/israeli/word/h5d60ac4a.mp3) | הִפְסִיק | to stop, to cease, to desist, to terminate | hifsik |
+| [h5e8154a0](m/israeli/word/h5e8154a0.mp3) | חָצָה | to halve; to split, to divide; to cross | chatzah |
+| [h5ed3483f](m/israeli/word/h5ed3483f.mp3) | אַתֶּם | you, y'all, you guys | atem |
+| [h5f11d31e](m/israeli/word/h5f11d31e.mp3) | טוּב | goodness, virtue | tuv |
+| [h5f7ddcf4](m/israeli/word/h5f7ddcf4.mp3) | חוֹסֶר | lack, absence, deficiency, in- | choser |
+| [h5fa9ade9](m/israeli/word/h5fa9ade9.mp3) | זָקֵן | old person; elder, sage; grandfather | zaken |
+| [h5fc50b7a](m/israeli/word/h5fc50b7a.mp3) | מְכוֹנִית | car | mekhonit |
+| [h603fd1ca](m/israeli/word/h603fd1ca.mp3) | חוּם | Brown, brown-colored; brown | chum |
+| [h60b16793](m/israeli/word/h60b16793.mp3) | פֶּה | mouth | peh |
+| [h60dd9be7](m/israeli/word/h60dd9be7.mp3) | מִיֵּן | to sort | miyen |
+| [h61ba0237](m/israeli/word/h61ba0237.mp3) | אָחוּז | held, grasped; held in place, fastened, fixed; taken proportionally | achuz |
+| [h620aed09](m/israeli/word/h620aed09.mp3) | חַיִל | corps; army; valiance, valor, virtue | chayil |
+| [h62371cee](m/israeli/word/h62371cee.mp3) | קַפִּיטָן | a captain, a skipper; a captain (a military rank); a captain (chief or leader) | kapitan |
+| [h62b4707b](m/israeli/word/h62b4707b.mp3) | שָׂנֵא | to hate | sane |
+| [h62c2a993](m/israeli/word/h62c2a993.mp3) | תַּחַת | below; underneath; in lieu of | tachat |
+| [h637ad9ae](m/israeli/word/h637ad9ae.mp3) | נָשִׁים | women; an order of the Mishnah | nashim |
+| [h640d9686](m/israeli/word/h640d9686.mp3) | קוֹל | voice; sound (see also צליל); vote | kol |
+| [h64706707](m/israeli/word/h64706707.mp3) | חֶשְׁבּוֹן | arithmetic, mathematics; a bill, a check; an account | cheshbon |
+| [h64945368](m/israeli/word/h64945368.mp3) | סָגַר | to close (a door, a window, or the like); to close, close up (a store, a restaurant, or the like); to settle on, agree upon, finalize, or lock in (a date, deal, or plan) | sagar |
+| [h64c48ca3](m/israeli/word/h64c48ca3.mp3) | כָּאן | here, at this place | kan |
+| [h64e266b0](m/israeli/word/h64e266b0.mp3) | אֲמִתִּי | real, true, actual | amiti |
+| [h650c6032](m/israeli/word/h650c6032.mp3) | כִּסָּה | to cover, to hide | kisah |
+| [h6568e5f7](m/israeli/word/h6568e5f7.mp3) | גֵּב | cistern | gev |
+| [h65a6c7e5](m/israeli/word/h65a6c7e5.mp3) | תִּיכוֹן | high school; a median; middle, central | tikhon |
+| [h66252016](m/israeli/word/h66252016.mp3) | אֶחָד | one, one of | echad |
+| [h66c2ffb6](m/israeli/word/h66c2ffb6.mp3) | בָּא | to come; to want; to enter, to go in | ba |
+| [h66f194fe](m/israeli/word/h66f194fe.mp3) | חָנָה | to camp; to park | chanah |
 | [haftarah-after-w1](m/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](m/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](m/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -7498,4 +7542,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 14604 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 14794 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

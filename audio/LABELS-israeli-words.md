@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 7469 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 7517 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-7469 English labels; 1933 UNKNOWN.
+7517 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -5677,6 +5677,54 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hef7b6946](m/israeli/word/hef7b6946.mp3) | מִשְׁטָרָה | police | mishtarah |
 | [hefbbc2c7](m/israeli/word/hefbbc2c7.mp3) | זוֹנָה | female prostitute (who has sex for pay); slut | zonah |
 | [help-01](m/israeli/word/help-01.mp3) | עֶזְרָה! | help! | ezrah! |
+| [hf059f7b7](m/israeli/word/hf059f7b7.mp3) | מַצְחִיק | Funny, amusing, humorous; Stupid, weird | matzchik |
+| [hf07c1580](m/israeli/word/hf07c1580.mp3) | שָׁנָה | year | shanah |
+| [hf09f7879](m/israeli/word/hf09f7879.mp3) | כּוּר | a furnace for melting metals; a nuclear reactor; used figuratively | kur |
+| [hf1200b64](m/israeli/word/hf1200b64.mp3) | חֻלְצָה | shirt | chultzah |
+| [hf12d3f21](m/israeli/word/hf12d3f21.mp3) | רוֹן | joy, elation | ron |
+| [hf148d52b](m/israeli/word/hf148d52b.mp3) | רְאָיָה | proof, evidence | re'ayah |
+| [hf14f89e0](m/israeli/word/hf14f89e0.mp3) | יִבֵּא | to import | yibe |
+| [hf19f0a88](m/israeli/word/hf19f0a88.mp3) | בַּנְק | bank | bank |
+| [hf1ccd0e6](m/israeli/word/hf1ccd0e6.mp3) | אֱלוֹהַּ | a god; God | eloah |
+| [hf1da5ea6](m/israeli/word/hf1da5ea6.mp3) | אֵשׁ | fire | esh |
+| [hf2263f85](m/israeli/word/hf2263f85.mp3) | בִּצֵּעַ | to implement; to carry out, to perform, to execute | bitze'a |
+| [hf228052b](m/israeli/word/hf228052b.mp3) | אַרְצִי | National | artzi |
+| [hf22f36ee](m/israeli/word/hf22f36ee.mp3) | לֶחֶם | bread; grain from which bread is made; food | lechem |
+| [hf28ba308](m/israeli/word/hf28ba308.mp3) | יָדַע | to know (a fact); to know how (to do something); to know (a person or place) | yada |
+| [hf2bba104](m/israeli/word/hf2bba104.mp3) | שָׁם | there | sham |
+| [hf2beda21](m/israeli/word/hf2beda21.mp3) | סַף | threshold, verge; doorstep; limen | saf |
+| [hf2fcef6c](m/israeli/word/hf2fcef6c.mp3) | רְצִינִי | Serious, somber, sober, earnest; Serious, grave, significant | retzini |
+| [hf31190f0](m/israeli/word/hf31190f0.mp3) | פָּנוּי | available, unoccupied, (of a person) single | panuy |
+| [hf31e9426](m/israeli/word/hf31e9426.mp3) | מוּכָן | Ready, prepared; Willing, prepared | mukhan |
+| [hf3892816](m/israeli/word/hf3892816.mp3) | אֵיזֶה | what, which; some, whichever; what | eizeh |
+| [hf3a8608b](m/israeli/word/hf3a8608b.mp3) | טָעַן | to load; to load (a weapon); to charge (a battery) | ta'an |
+| [hf3af4fb9](m/israeli/word/hf3af4fb9.mp3) | תָּמִים | honest, simple, innocent, naive; complete, full (of a period of time); innocent | tamim |
+| [hf3d6a0bb](m/israeli/word/hf3d6a0bb.mp3) | תְּשׁוּבָה | answer, response; repentance; reconciliation | teshuvah |
+| [hf3ec3b23](m/israeli/word/hf3ec3b23.mp3) | כְּמוֹ | like, as | kemo |
+| [hf423b369](m/israeli/word/hf423b369.mp3) | תָּו | character, mark, sign (symbol); note | tav |
+| [hf4544f2a](m/israeli/word/hf4544f2a.mp3) | כַּנָּה | a mount, a stand, a base | kanah |
+| [hf4b5a979](m/israeli/word/hf4b5a979.mp3) | אֵיפֹה | where; the place where; there, here (followed by שֶׁ־) | eifoh |
+| [hf53c9bc7](m/israeli/word/hf53c9bc7.mp3) | כַּמּוּבָן | of course, naturally, certainly | kamuvan |
+| [hf5a50e5d](m/israeli/word/hf5a50e5d.mp3) | אִי | an island; Egyptian jackal (Canis aureus lupaster) | i |
+| [hf5bee50d](m/israeli/word/hf5bee50d.mp3) | לַיְלָה | night; adversity | laylah |
+| [hf5f3eb91](m/israeli/word/hf5f3eb91.mp3) | זָז | to move; to depart, to leave | zaz |
+| [hf60e846a](m/israeli/word/hf60e846a.mp3) | הִסְכִּים | to agree | hiskim |
+| [hf63de22c](m/israeli/word/hf63de22c.mp3) | כֵּן | yes; thus, so | ken |
+| [hf64d1c8d](m/israeli/word/hf64d1c8d.mp3) | כָּלַל | to include (something) (in a group); to include (something) | kalal |
+| [hf68e31d9](m/israeli/word/hf68e31d9.mp3) | הֶעֱלָה | to raise, lift; to bring from a low place to a high place; to offer | he'elah |
+| [hf7607ee6](m/israeli/word/hf7607ee6.mp3) | צִפָּה | to expect; to look forward; to be in store | tzipah |
+| [hf76c8cd2](m/israeli/word/hf76c8cd2.mp3) | אָכֹם | black, brown | akhom |
+| [hf78ea570](m/israeli/word/hf78ea570.mp3) | צְפוֹנִי | north, northern, northerly; the Devil | tzefoni |
+| [hf7d0fb03](m/israeli/word/hf7d0fb03.mp3) | זִיֵּן | to arm (with weapons) | ziyen |
+| [hf8c8316a](m/israeli/word/hf8c8316a.mp3) | שָׁלוֹם | peace; well-being, welfare; rest, quietude | shalom |
+| [hf8d6ef2c](m/israeli/word/hf8d6ef2c.mp3) | גָּמַר | to finish, complete; to cum, ejaculate, have an orgasm; to be through or done | gamar |
+| [hf9047f4b](m/israeli/word/hf9047f4b.mp3) | כּוֹס | cup; glass; little owl | kos |
+| [hf94d4d72](m/israeli/word/hf94d4d72.mp3) | אֵד | a vapour, a fume; a mist | ed |
+| [hf95173f3](m/israeli/word/hf95173f3.mp3) | מִשְׁפָּט | a trial; Law; a judgment, verdict, ruling | mishpat |
+| [hf95a2330](m/israeli/word/hf95a2330.mp3) | נִסָּה | to try, to attempt; to test | nisah |
+| [hf9a1a55b](m/israeli/word/hf9a1a55b.mp3) | שְׁנַיִם | two | shenayim |
+| [hfa69f51c](m/israeli/word/hfa69f51c.mp3) | הִתְרָאָה | to see each other | hitra'ah |
+| [hfa746c05](m/israeli/word/hfa746c05.mp3) | עֲדַיִן | still, yet | adayin |
 | [i-01-w1](m/israeli/word/i-01-w1.mp3) | בָּרְכוּ | UNKNOWN | barkhu |
 | [i-01-w10](m/israeli/word/i-01-w10.mp3) | לְעוֹלָם וָעֶד | UNKNOWN | le'olam va'ed |
 | [i-01-w11](m/israeli/word/i-01-w11.mp3) | וְאָהַבְתָּ | UNKNOWN | ve'ahavta |
@@ -8075,4 +8123,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 16360 produced clips in INDEX.csv have an English label; 2228 UNKNOWN. Filenames and IDs are unchanged.
+All 16546 produced clips in INDEX.csv have an English label; 2366 UNKNOWN. Filenames and IDs are unchanged.

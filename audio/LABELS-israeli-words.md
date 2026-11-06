@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 7222 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 7224 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-7222 English labels; 1933 UNKNOWN.
+7224 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -5053,6 +5053,8 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hadfa84bd](m/israeli/word/hadfa84bd.mp3) | קַל | light (of low weight); light (of low importance); easy (not difficult) | kal |
 | [hae3180a2](m/israeli/word/hae3180a2.mp3) | גָּבֹהַ | high; high, large | gavoha |
 | [hae413d41](m/israeli/word/hae413d41.mp3) | רָעָה | to herd; to graze; to lead, direct on a course, show the way | ra'ah |
+| [haf460aed](m/israeli/word/haf460aed.mp3) | סָךְ | to anoint oneself | sakh |
+| [haf87e61a](m/israeli/word/haf87e61a.mp3) | רְצִינוּת | seriousness | retzinut |
 | [haftarah-after-w1](m/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](m/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](m/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -7828,4 +7830,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 15680 produced clips in INDEX.csv have an English label; 1950 UNKNOWN. Filenames and IDs are unchanged.
+All 15686 produced clips in INDEX.csv have an English label; 1952 UNKNOWN. Filenames and IDs are unchanged.

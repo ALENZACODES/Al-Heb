@@ -20520,8 +20520,8 @@
   "kind": "word",
   "id": "vayehi-binsoa-w3",
   "text": "הָאָרֹן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the ark",
   "phonetic": "ha'aron"
@@ -20546,8 +20546,8 @@
   "kind": "word",
   "id": "vayehi-binsoa-w4",
   "text": "וַיֹאמֶר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and said",
   "phonetic": "vayomer"

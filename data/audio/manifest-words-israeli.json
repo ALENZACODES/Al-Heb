@@ -64517,8 +64517,8 @@
   "id": "haf460aed",
   "text": "סָךְ",
   "ipa": "ˈsaχ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "to anoint oneself",
   "phonetic": "sakh"
@@ -70845,8 +70845,8 @@
   "id": "haf87e61a",
   "text": "רְצִינוּת",
   "ipa": "ʁe.tsi.ˈnut",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "seriousness",
   "phonetic": "retzinut"

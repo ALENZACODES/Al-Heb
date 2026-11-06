@@ -34,5 +34,5 @@ export async function parseResponse(res) {
 }
 export async function synthesize(opts, fetchImpl = fetch) {
   const r = buildRequest(opts);
-  return parseResponse(await fetchImpl(r.url, { method: r.method, headers: r.headers, body: r.body }));
+  return parseResponse(await fetchImpl(r.url, { method: r.method, headers: r.headers, body: r.body, signal: opts.signal }));
 }

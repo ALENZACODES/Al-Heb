@@ -3,6 +3,7 @@ import json,csv,re
 R=Path('/workspace/shared/al-heb/voice-sprint-2026-11-05')
 RPO=Path('/workspace/Al-Heb')
 D=json.loads((RPO/'data/audio/english-glosses.json').read_text())
+assert all(isinstance(v,str) and v and v!='UNKNOWN' for v in D.values()), 'Malformed reviewed gloss'
 files=['data/audio/manifest.json','data/audio/manifest-words-israeli.json','data/audio/manifest-words-sephardi.json','data/audio/manifest-words-ashkenazi.json']
 allrows=[]
 for f in files:

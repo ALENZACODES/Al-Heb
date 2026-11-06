@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 2565 clips. **Reading lines:** 421 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 2588 clips. **Reading lines:** 421 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-2565 English labels; 0 UNKNOWN.
+2588 English labels; 0 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -824,7 +824,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hanukkah-candle-w4](f/israeli/word/hanukkah-candle-w4.mp3) | אֱלֹהֵינוּ | our-God | eloheinu |
 | [hanukkah-candle-w5](f/israeli/word/hanukkah-candle-w5.mp3) | מֶלֶךְ | king | melekh |
 | [hanukkah-candle-w6](f/israeli/word/hanukkah-candle-w6.mp3) | הָעוֹלָם | the world | ha'olam |
-| [hanukkah-candle-w7](f/israeli/word/hanukkah-candle-w7.mp3) | אֲשֶׁר | ,,,,,,,made us holy,with his commandments,and commanded us,to light | asher |
+| [hanukkah-candle-w7](f/israeli/word/hanukkah-candle-w7.mp3) | אֲשֶׁר | who/that | asher |
 | [hanukkah-candle-w8](f/israeli/word/hanukkah-candle-w8.mp3) | קִדְּשָׁנוּ | made us holy | kideshanu |
 | [hanukkah-candle-w9](f/israeli/word/hanukkah-candle-w9.mp3) | בְּמִצְוֹתָיו | with his commandments | bemitzvotav |
 | [hanukkah-nissim-w1](f/israeli/word/hanukkah-nissim-w1.mp3) | בָּרוּךְ | blessed | barukh |
@@ -1363,6 +1363,13 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [oseh-shalom-w7](f/israeli/word/oseh-shalom-w7.mp3) | עָלֵינוּ | it is upon us | aleinu |
 | [oseh-shalom-w8](f/israeli/word/oseh-shalom-w8.mp3) | וְעַל | and for | ve'al |
 | [oseh-shalom-w9](f/israeli/word/oseh-shalom-w9.mp3) | כָּל | all, whole, everything | kol |
+| [politeness-01](f/israeli/word/politeness-01.mp3) | תּוֹדָה | thank you |  |
+| [politeness-03](f/israeli/word/politeness-03.mp3) | בְּבַקָּשָׁה | please / you're welcome |  |
+| [politeness-06](f/israeli/word/politeness-06.mp3) | סְלִיחָה | excuse me / sorry |  |
+| [politeness-08](f/israeli/word/politeness-08.mp3) | כֵּן | yes |  |
+| [politeness-09](f/israeli/word/politeness-09.mp3) | לֹא | no |  |
+| [politeness-10](f/israeli/word/politeness-10.mp3) | אוּלַי | maybe |  |
+| [politeness-11](f/israeli/word/politeness-11.mp3) | בְּטַח | sure / of course |  |
 | [shehecheyanu-w1](f/israeli/word/shehecheyanu-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [shehecheyanu-w10](f/israeli/word/shehecheyanu-w10.mp3) | לַזְּמַן | to the time | lazeman |
 | [shehecheyanu-w11](f/israeli/word/shehecheyanu-w11.mp3) | הַזֶּה׃ | this | hazeh |
@@ -2551,6 +2558,22 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hanerot-halalu-w26](m/israeli/word/hanerot-halalu-w26.mp3) | לְהִשְׁתַּמֵּשׁ | to use | lehishtamesh |
 | [hanerot-halalu-w27](m/israeli/word/hanerot-halalu-w27.mp3) | בָּהֶם | in them | bahem |
 | [hanerot-halalu-w28](m/israeli/word/hanerot-halalu-w28.mp3) | אֶלָּא | but, except | ela |
+| [hanerot-halalu-w29](m/israeli/word/hanerot-halalu-w29.mp3) | לִרְאוֹתָם | to look at them | lir'otam |
+| [hanerot-halalu-w3](m/israeli/word/hanerot-halalu-w3.mp3) | אֲנַחְנוּ | we | anachnu |
+| [hanerot-halalu-w30](m/israeli/word/hanerot-halalu-w30.mp3) | בִּלְבָד | only | bilvad |
+| [hanerot-halalu-w31](m/israeli/word/hanerot-halalu-w31.mp3) | כְּדֵי | sufficient or appropriate for, sufficiently or appropriately for; in order | kedei |
+| [hanerot-halalu-w32](m/israeli/word/hanerot-halalu-w32.mp3) | לְהוֹדוֹת | to thank | lehodot |
+| [hanerot-halalu-w33](m/israeli/word/hanerot-halalu-w33.mp3) | לִשְׁמֶךָ | to your name | lishmekha |
+| [hanerot-halalu-w34](m/israeli/word/hanerot-halalu-w34.mp3) | עַל | on, on top of; on; about | al |
+| [hanerot-halalu-w35](m/israeli/word/hanerot-halalu-w35.mp3) | נִסֶּיךָ | for your miracles | nisekha |
+| [hanerot-halalu-w36](m/israeli/word/hanerot-halalu-w36.mp3) | נִפְלְאוֹתֶיךָ | your wonders | nifle'otekha |
+| [hanerot-halalu-w37](m/israeli/word/hanerot-halalu-w37.mp3) | וִישׁוּעוֹתֶיךָ׃ | and your salvations | vishu'otekha |
+| [hanerot-halalu-w4](m/israeli/word/hanerot-halalu-w4.mp3) | מַדְלִיקִין | light | madlikin |
+| [hanerot-halalu-w5](m/israeli/word/hanerot-halalu-w5.mp3) | עַל | on, on top of; on; about | al |
+| [hanerot-halalu-w6](m/israeli/word/hanerot-halalu-w6.mp3) | הַנִּסִּים | the miracles | hanisim |
+| [hanerot-halalu-w7](m/israeli/word/hanerot-halalu-w7.mp3) | וְעַל | and for | ve'al |
+| [hanerot-halalu-w8](m/israeli/word/hanerot-halalu-w8.mp3) | הַתְּשׁוּעוֹת | the deliverances | hateshu'ot |
+| [hanerot-halalu-w9](m/israeli/word/hanerot-halalu-w9.mp3) | וְעַל | and for | ve'al |
 | [numbers-01-f](m/israeli/word/numbers-01-f.mp3) | אַחַת | one (f.) | achat |
 | [numbers-01-m](m/israeli/word/numbers-01-m.mp3) | אֶחָד | one | echad |
 | [numbers-02-f](m/israeli/word/numbers-02-f.mp3) | שְׁתַּיִם | two (f.) | shtayim |
@@ -3012,4 +3035,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 3366 produced clips in INDEX.csv have an English label; 0 UNKNOWN. Filenames and IDs are unchanged.
+All 3389 produced clips in INDEX.csv have an English label; 0 UNKNOWN. Filenames and IDs are unchanged.

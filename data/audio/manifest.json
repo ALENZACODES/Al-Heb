@@ -57699,7 +57699,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "hello / goodbye / peace"
+  "english": "hello / goodbye / peace",
+  "phonetic": "shalom"
  },
  {
   "path": "audio/f/israeli/word/greetings-01.mp3",
@@ -57726,7 +57727,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "hi"
+  "english": "hi",
+  "phonetic": "hei"
  },
  {
   "path": "audio/f/israeli/word/greetings-02.mp3",
@@ -57753,7 +57755,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "OK / fine / alright"
+  "english": "OK / fine / alright",
+  "phonetic": "beseder"
  },
  {
   "path": "audio/f/israeli/word/greetings-15.mp3",
@@ -57780,7 +57783,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "excellent"
+  "english": "excellent",
+  "phonetic": "metzuyan"
  },
  {
   "path": "audio/f/israeli/word/greetings-16.mp3",
@@ -57807,7 +57811,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "see you (later)"
+  "english": "see you (later)",
+  "phonetic": "lehitra'ot"
  },
  {
   "path": "audio/f/israeli/word/greetings-20.mp3",
@@ -57834,7 +57839,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "good luck / all the best"
+  "english": "good luck / all the best",
+  "phonetic": "behatzlachah"
  },
  {
   "path": "audio/f/israeli/word/greetings-25.mp3",
@@ -57861,7 +57867,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "bless you (after a sneeze) / to your health"
+  "english": "bless you (after a sneeze) / to your health",
+  "phonetic": "livri'ut"
  },
  {
   "path": "audio/f/israeli/word/greetings-26.mp3",
@@ -57897,8 +57904,8 @@
   "kind": "word",
   "id": "politeness-01",
   "text": "תּוֹדָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
   "english": "thank you"
@@ -57923,8 +57930,8 @@
   "kind": "word",
   "id": "politeness-03",
   "text": "בְּבַקָּשָׁה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
   "english": "please / you're welcome"
@@ -57949,8 +57956,8 @@
   "kind": "word",
   "id": "politeness-06",
   "text": "סְלִיחָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
   "english": "excuse me / sorry"
@@ -57975,8 +57982,8 @@
   "kind": "word",
   "id": "politeness-08",
   "text": "כֵּן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
   "english": "yes"
@@ -58001,8 +58008,8 @@
   "kind": "word",
   "id": "politeness-09",
   "text": "לֹא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
   "english": "no"
@@ -58027,8 +58034,8 @@
   "kind": "word",
   "id": "politeness-10",
   "text": "אוּלַי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
   "english": "maybe"
@@ -58053,8 +58060,8 @@
   "kind": "word",
   "id": "politeness-11",
   "text": "בְּטַח",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
   "english": "sure / of course"
@@ -58252,7 +58259,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "so"
+  "english": "so",
+  "phonetic": "az"
  },
  {
   "path": "audio/f/israeli/word/fillers-01.mp3",
@@ -58279,7 +58287,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "well? / come on"
+  "english": "well? / come on",
+  "phonetic": "nu"
  },
  {
   "path": "audio/f/israeli/word/fillers-02.mp3",
@@ -58306,7 +58315,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "OK / well / good"
+  "english": "OK / well / good",
+  "phonetic": "tov"
  },
  {
   "path": "audio/f/israeli/word/fillers-03.mp3",
@@ -58333,7 +58343,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "right / correct"
+  "english": "right / correct",
+  "phonetic": "nakhon"
  },
  {
   "path": "audio/f/israeli/word/fillers-04.mp3",
@@ -58360,7 +58371,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "really?"
+  "english": "really?",
+  "phonetic": "be'emet?"
  },
  {
   "path": "audio/f/israeli/word/fillers-06.mp3",
@@ -58387,7 +58399,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "really / truly / very"
+  "english": "really / truly / very",
+  "phonetic": "mamash"
  },
  {
   "path": "audio/f/israeli/word/fillers-07.mp3",
@@ -58414,7 +58427,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "simply / just"
+  "english": "simply / just",
+  "phonetic": "pashut"
  },
  {
   "path": "audio/f/israeli/word/fillers-08.mp3",
@@ -58441,7 +58455,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "just (because) / for no reason"
+  "english": "just (because) / for no reason",
+  "phonetic": "setam"
  },
  {
   "path": "audio/f/israeli/word/fillers-09.mp3",
@@ -58468,7 +58483,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "actually / in fact"
+  "english": "actually / in fact",
+  "phonetic": "be'etzem"
  },
  {
   "path": "audio/f/israeli/word/fillers-10.mp3",
@@ -58495,7 +58511,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "that is / I mean"
+  "english": "that is / I mean",
+  "phonetic": "kelomar"
  },
  {
   "path": "audio/f/israeli/word/fillers-11.mp3",
@@ -58522,7 +58539,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "but"
+  "english": "but",
+  "phonetic": "aval"
  },
  {
   "path": "audio/f/israeli/word/fillers-12.mp3",
@@ -58549,7 +58567,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "espresso"
+  "english": "espresso",
+  "phonetic": "espereso"
  },
  {
   "path": "audio/f/israeli/word/cafe-05.mp3",
@@ -58576,7 +58595,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "water"
+  "english": "water",
+  "phonetic": "mayim"
  },
  {
   "path": "audio/f/israeli/word/cafe-09.mp3",
@@ -58603,7 +58623,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "beer"
+  "english": "beer",
+  "phonetic": "birah"
  },
  {
   "path": "audio/f/israeli/word/cafe-11.mp3",
@@ -58630,7 +58651,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "wine"
+  "english": "wine",
+  "phonetic": "yayin"
  },
  {
   "path": "audio/f/israeli/word/cafe-12.mp3",
@@ -58657,7 +58679,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "cheers!"
+  "english": "cheers!",
+  "phonetic": "lechayim!"
  },
  {
   "path": "audio/f/israeli/word/cafe-13.mp3",
@@ -58684,7 +58707,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "hummus"
+  "english": "hummus",
+  "phonetic": "chumus"
  },
  {
   "path": "audio/f/israeli/word/cafe-16.mp3",
@@ -58711,7 +58735,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "falafel"
+  "english": "falafel",
+  "phonetic": "falafel"
  },
  {
   "path": "audio/f/israeli/word/cafe-17.mp3",
@@ -58738,7 +58763,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "shakshuka (eggs poached in tomato sauce)"
+  "english": "shakshuka (eggs poached in tomato sauce)",
+  "phonetic": "shakshukah"
  },
  {
   "path": "audio/f/israeli/word/cafe-18.mp3",
@@ -58765,7 +58791,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "pita bread"
+  "english": "pita bread",
+  "phonetic": "pitah"
  },
  {
   "path": "audio/f/israeli/word/cafe-19.mp3",
@@ -58792,7 +58819,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "salad"
+  "english": "salad",
+  "phonetic": "salat"
  },
  {
   "path": "audio/f/israeli/word/cafe-20.mp3",
@@ -59001,7 +59029,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "straight ahead"
+  "english": "straight ahead",
+  "phonetic": "yashar"
  },
  {
   "path": "audio/f/israeli/word/directions-05.mp3",
@@ -59028,7 +59057,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "left"
+  "english": "left",
+  "phonetic": "semolah"
  },
  {
   "path": "audio/f/israeli/word/directions-06.mp3",
@@ -59055,7 +59085,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "right"
+  "english": "right",
+  "phonetic": "yaminah"
  },
  {
   "path": "audio/f/israeli/word/directions-07.mp3",
@@ -59082,7 +59113,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "opposite"
+  "english": "opposite",
+  "phonetic": "mul"
  },
  {
   "path": "audio/f/israeli/word/directions-12.mp3",
@@ -59109,7 +59141,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "on the corner"
+  "english": "on the corner",
+  "phonetic": "bapinah"
  },
  {
   "path": "audio/f/israeli/word/directions-13.mp3",
@@ -60080,7 +60113,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "help!"
+  "english": "help!",
+  "phonetic": "ezrah!"
  },
  {
   "path": "audio/f/israeli/word/help-01.mp3",

@@ -42441,7 +42441,7 @@
   "status": "missing",
   "source": "none",
   "group": "prayer-word",
-  "english": ",,,,,,,made us holy,with his commandments,and commanded us,to light",
+  "english": "who/that",
   "phonetic": "asher"
  },
  {
@@ -42454,7 +42454,7 @@
   "status": "tts",
   "source": "paid-cloud",
   "group": "prayer-word",
-  "english": ",,,,,,,made us holy,with his commandments,and commanded us,to light",
+  "english": "who/that",
   "phonetic": "asher"
  },
  {
@@ -43296,8 +43296,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w3",
   "text": "אֲנַחְנוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "we",
   "phonetic": "anachnu"
@@ -43322,8 +43322,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w4",
   "text": "מַדְלִיקִין",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "light",
   "phonetic": "madlikin"
@@ -43348,8 +43348,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w5",
   "text": "עַל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "on, on top of; on; about",
   "phonetic": "al"
@@ -43374,8 +43374,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w6",
   "text": "הַנִּסִּים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the miracles",
   "phonetic": "hanisim"
@@ -43400,8 +43400,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w7",
   "text": "וְעַל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and for",
   "phonetic": "ve'al"
@@ -43426,8 +43426,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w8",
   "text": "הַתְּשׁוּעוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the deliverances",
   "phonetic": "hateshu'ot"
@@ -43452,8 +43452,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w9",
   "text": "וְעַל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and for",
   "phonetic": "ve'al"
@@ -43972,8 +43972,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w29",
   "text": "לִרְאוֹתָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to look at them",
   "phonetic": "lir'otam"
@@ -43998,8 +43998,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w30",
   "text": "בִּלְבָד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "only",
   "phonetic": "bilvad"
@@ -44024,8 +44024,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w31",
   "text": "כְּדֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "sufficient or appropriate for, sufficiently or appropriately for; in order",
   "phonetic": "kedei"
@@ -44050,8 +44050,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w32",
   "text": "לְהוֹדוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to thank",
   "phonetic": "lehodot"
@@ -44076,8 +44076,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w33",
   "text": "לִשְׁמֶךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to your name",
   "phonetic": "lishmekha"
@@ -44102,8 +44102,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w34",
   "text": "עַל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "on, on top of; on; about",
   "phonetic": "al"
@@ -44128,8 +44128,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w35",
   "text": "נִסֶּיךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "for your miracles",
   "phonetic": "nisekha"
@@ -44154,8 +44154,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w36",
   "text": "נִפְלְאוֹתֶיךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "your wonders",
   "phonetic": "nifle'otekha"
@@ -44180,8 +44180,8 @@
   "kind": "word",
   "id": "hanerot-halalu-w37",
   "text": "וִישׁוּעוֹתֶיךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and your salvations",
   "phonetic": "vishu'otekha"

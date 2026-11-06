@@ -13,6 +13,10 @@ export function correctBeamPath(word, path) {
   const ordered = hebrewLetters(word);
   return Array.isArray(path) && ordered.length === path.length && ordered.every((letter, i) => letter === path[i]);
 }
+export function correctMirrorStep(letters, nextIndex, choice) {
+  return Array.isArray(letters) && !!choice && choice.i === nextIndex &&
+    letters[nextIndex] === choice.letter;
+}
 export function buildMazeDeck(index) {
   const fields = index?.fields || [], rows = index?.rows || [];
   const id = fields.indexOf('id'), he = fields.indexOf('he'), en = fields.indexOf('en');

@@ -5490,6 +5490,38 @@
   "STATE_art_08": {
    "status": "approved",
    "at": "2026-11-06T21:42:20.398Z"
+  },
+  "PLACE_seasons_09": {
+   "status": "approved",
+   "at": "2026-11-06T21:43:49.096Z"
+  },
+  "GRAM_modals_10": {
+   "status": "approved",
+   "at": "2026-11-06T21:43:49.096Z"
+  },
+  "HEAD_one_06": {
+   "status": "approved",
+   "at": "2026-11-06T21:43:49.096Z"
+  },
+  "GRAM_modals_01": {
+   "status": "approved",
+   "at": "2026-11-06T21:43:49.096Z"
+  },
+  "PLACE_tzfat_06": {
+   "status": "approved",
+   "at": "2026-11-06T21:43:49.732Z",
+   "note": "contains_text flag eye-checked at full size Nov 6: no text present (detector false positive)",
+   "forcedDespite": [
+    "contains_text"
+   ]
+  },
+  "PLACE_negev_02": {
+   "status": "approved",
+   "at": "2026-11-06T21:43:49.732Z",
+   "note": "contains_text flag eye-checked at full size Nov 6: no text present (detector false positive)",
+   "forcedDespite": [
+    "contains_text"
+   ]
   }
  }
 }

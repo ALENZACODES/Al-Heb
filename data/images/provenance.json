@@ -61600,6 +61600,322 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "PLACE_seasons_09": {
+   "id": "PLACE_seasons_09",
+   "file": "PLACE_seasons_09.png",
+   "command": 209,
+   "set": "Seasons of the land",
+   "block": "N",
+   "prompt": "Command 209 (Seasons of the land): Almond blossom hills in late winter; red anemones carpeting a field in spring; a wheat field gold before harvest; summer — cicada-hot dry hills and one green oasis; the first rain darkening Jerusalem stone; autumn vineyards turning red and gold; winter snow on the northern hills with a single red-roof house; a storm sea at the Jaffa wall; migrating birds in V-formations over a valley at dawn; the land at rest — an empty field under a huge sky in the seventh-year mood (fallow, peaceful, one tree). After command 209, print the 100-place index: set, place name, file — for the app's atlas page. Image 9 of 10: migrating birds in V-formations over a valley at dawn. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "cc90c2c0173f0aaaa3219ab66715552f890ebd307af1ee94e7856d64d9012bb6",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:43:30.118Z",
+   "sourceFile": "img-0093.png",
+   "sourceFileDate": "2026-11-06T21:43:29.790Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "d4bab2ad2a5f96e4a61a6b7a91b140a2bc034840755b6d29504a70fcadb4d15a",
+   "originalFormat": "PNG",
+   "originalBytes": 167798,
+   "originalFile": "PLACE_seasons_09.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_seasons_09.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 24432
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_tzfat_06": {
+   "id": "PLACE_tzfat_06",
+   "file": "PLACE_tzfat_06.png",
+   "command": 204,
+   "set": "Tzfat & the north",
+   "block": "N",
+   "prompt": "Command 204 (Tzfat & the north): A blue-painted alley with artists' easels left blank; stone synagogues lane at morning light; a mountain town above clouds (the town in mist); candle-lit windows on a steep lane at dusk; the highest hilltop with a citadel ruin; a gallery doorway with pottery outside (blank canvases); Mount Meron green in the distance; a forest of pines on a ridge; a Druze village on a green hill with a market square (no signs); snow dusting the far northern peak (Hermon) over green valleys. Image 6 of 10: a gallery doorway with pottery outside (blank canvases). Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "7903a8e7a99149ad77d9346b8d56c98e514ee212a7ec4e2d4b56c4092560e9bb",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:43:30.118Z",
+   "sourceFile": "img-0821.png",
+   "sourceFileDate": "2026-11-06T21:43:29.740Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "01bb5ac2db9cf3fc8f548ae94a21551d74ca3b8174b8ad6b2e62cf98c49c57ba",
+   "originalFormat": "PNG",
+   "originalBytes": 215076,
+   "originalFile": "PLACE_tzfat_06.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_tzfat_06.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 37618
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "ill",
+      "conf": 72.6,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "GRAM_modals_10": {
+   "id": "GRAM_modals_10",
+   "file": "GRAM_modals_10.png",
+   "command": 217,
+   "set": "Want, need, can",
+   "block": "O",
+   "prompt": "Command 217 (Want, need, can): Want — Noa reaching toward a cake in a window with hearts in her eyes (one small heart shape); need — Ari in rain reaching for an umbrella; can — Rimon lifting a tiny barbell successfully, smiling; cannot — Rimon under the same barbell, flat comic squish (gentle); must — a hand raised at a red traffic light shape (a plain red circle light, no text); may I — a child with a hand half-raised at a table; let's — both narrators pointing the same way at a path; try — Rimon looking at a high step with a determined face; again — a circular pair of gold arrows around a cup (symbol only); first/then — two footprints panels: shoes by a door, then the same shoes on a path. Image 10 of 10: first/then — two footprints panels: shoes by a door, then the same shoes on a path. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "a8a6ec776818e6ca76ce4de799a7cc7bb799da16dbe544068cb23dd12cc9cf85",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:43:30.118Z",
+   "sourceFile": "img-0892.png",
+   "sourceFileDate": "2026-11-06T21:43:29.805Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "fdc7749588ff4bbe466357d7a6ffdbca30ef4efe29b4bec1bb74d1ac69996e23",
+   "originalFormat": "PNG",
+   "originalBytes": 255252,
+   "originalFile": "GRAM_modals_10.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_modals_10.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 27610
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HEAD_one_06": {
+   "id": "HEAD_one_06",
+   "file": "HEAD_one_06.png",
+   "command": 246,
+   "set": "Book chapter headers I",
+   "block": "R",
+   "prompt": "Command 246 (Book chapter headers I): Ten wide 1024×512-style banner scenes (use 1792×1024 and we crop) — a spot scene per book part, no text: letters as landscape — hills shaped like rounded strokes (abstract shapes only, never letterforms); a river of vowels — coloured dots flowing under a bridge (dots only); a market of words — stalls of objects; a city of sentences — houses along a street; a garden of verbs — figures acting among plants; a sea of reading — a boat of an open book on waves; a mountain of fluency — a path switchbacking up; a table of prayer — candles and a book on a cloth; a house of song — musicians on a balcony; a gate opening onto light. Files HEAD_one_01 … _10. Image 6 of 10: a sea of reading — a boat of an open book on waves. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "c9990040d32d6780458ef78f22a47d79e94363d77a973426e554f50f1f614da5",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:43:30.118Z",
+   "sourceFile": "img-0964.png",
+   "sourceFileDate": "2026-11-06T21:43:29.838Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "d71c0f4ee985894de16f911ada47afdfe1bca7637d994bb737dd4833c1cb2cc0",
+   "originalFormat": "PNG",
+   "originalBytes": 133511,
+   "originalFile": "HEAD_one_06.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HEAD_one_06.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 10558
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_negev_02": {
+   "id": "PLACE_negev_02",
+   "file": "PLACE_negev_02.png",
+   "command": 206,
+   "set": "The Negev",
+   "block": "N",
+   "prompt": "Command 206 (The Negev): A vast erosion crater (makhtesh) in bands of colour; a desert town on the crater's rim at sunrise; Bedouin tents and a camel resting in shade; a solar tower glowing in a field of mirrors (distant); acacia trees in a dry wadi; a canyon of red rock with a thin stream; desert agriculture — greenhouse rows in the sand; a night sky of impossible stars over dunes; a Nabataean-style ruined city of carved stone doorways (generic, empty); a lone tree on a hill at Sde Boker-style overlook above a canyon. Image 2 of 10: a desert town on the crater's rim at sunrise. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "68ed409801a2591b6281803a5ccf68a18495cdec8b739dcd47b4ccaf5ce77921",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:43:30.118Z",
+   "sourceFile": "img-1170.png",
+   "sourceFileDate": "2026-11-06T21:43:29.796Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "2f555f7ae955b811852741e406b26a5e1f15f87e5175de57e8ba690506279310",
+   "originalFormat": "PNG",
+   "originalBytes": 153913,
+   "originalFile": "PLACE_negev_02.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_negev_02.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 18780
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "pants",
+      "conf": 22.6,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "GRAM_modals_01": {
+   "id": "GRAM_modals_01",
+   "file": "GRAM_modals_01.png",
+   "command": 217,
+   "set": "Want, need, can",
+   "block": "O",
+   "prompt": "Command 217 (Want, need, can): Want — Noa reaching toward a cake in a window with hearts in her eyes (one small heart shape); need — Ari in rain reaching for an umbrella; can — Rimon lifting a tiny barbell successfully, smiling; cannot — Rimon under the same barbell, flat comic squish (gentle); must — a hand raised at a red traffic light shape (a plain red circle light, no text); may I — a child with a hand half-raised at a table; let's — both narrators pointing the same way at a path; try — Rimon looking at a high step with a determined face; again — a circular pair of gold arrows around a cup (symbol only); first/then — two footprints panels: shoes by a door, then the same shoes on a path. Image 1 of 10: Want — Noa reaching toward a cake in a window with hearts in her eyes (one small heart shape). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "1eaeb373a85601c3eabb37ef6372124fbb7accc488e82c5e373b3ad21c6fdd2a",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:43:30.118Z",
+   "sourceFile": "img-1409.png",
+   "sourceFileDate": "2026-11-06T21:43:29.769Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "620ba3bfa47eb5c4a4bfa664f99c38394f0ec5cb72b0320e004243fc19e3902d",
+   "originalFormat": "PNG",
+   "originalBytes": 271686,
+   "originalFile": "GRAM_modals_01.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_modals_01.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 30532
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

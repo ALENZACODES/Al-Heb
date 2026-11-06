@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 1056,
+ "count": 1062,
  "images": {
   "BADGE_01": {
    "w": 512,
@@ -2200,6 +2200,18 @@
     }
    ]
   },
+  "GRAM_modals_01": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_modals_01.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GRAM_modals_02": {
    "w": 512,
    "h": 512,
@@ -2243,6 +2255,18 @@
     {
      "edge": 512,
      "file": "GRAM_modals_09.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_modals_10": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_modals_10.512.webp",
      "w": 512,
      "h": 512
     }
@@ -2459,6 +2483,18 @@
     {
      "edge": 512,
      "file": "HEAD_one_03.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "HEAD_one_06": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HEAD_one_06.512.webp",
      "w": 512,
      "h": 293
     }
@@ -10816,6 +10852,18 @@
     }
    ]
   },
+  "PLACE_negev_02": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_negev_02.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_negev_03": {
    "w": 512,
    "h": 293,
@@ -10924,6 +10972,18 @@
     }
    ]
   },
+  "PLACE_seasons_09": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_seasons_09.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_telaviv_03": {
    "w": 512,
    "h": 293,
@@ -10967,6 +11027,18 @@
     {
      "edge": 512,
      "file": "PLACE_tzfat_03.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_tzfat_06": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_tzfat_06.512.webp",
      "w": 512,
      "h": 293
     }

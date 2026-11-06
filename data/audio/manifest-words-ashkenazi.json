@@ -18128,8 +18128,8 @@
   "kind": "word",
   "id": "kiddush-zachor-w38",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the LORD",
   "phonetic": "adonai"

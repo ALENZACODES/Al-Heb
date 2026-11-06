@@ -15944,8 +15944,8 @@
   "kind": "word",
   "id": "kedushah-kadosh-w2",
   "text": "זֶה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "this, this one; it; this",
   "phonetic": "zeh"
@@ -15970,8 +15970,8 @@
   "kind": "word",
   "id": "kedushah-kadosh-w3",
   "text": "אֶל־זֶה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "unto another",
   "phonetic": "el-zeh"
@@ -16204,8 +16204,8 @@
   "kind": "word",
   "id": "kedushah-kadosh-w12",
   "text": "כְּבוֹדוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "his glory",
   "phonetic": "kevodo"

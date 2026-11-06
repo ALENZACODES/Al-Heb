@@ -44917,8 +44917,8 @@
   "id": "h1ef19acb",
   "text": "הוּא",
   "ipa": "ˈhu",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "he; used as a copula",
   "phonetic": "hu"
@@ -50209,8 +50209,8 @@
   "id": "h1f23dde2",
   "text": "רָחוֹק",
   "ipa": "ʁa.ˈχok",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "far",
   "phonetic": "rachok"

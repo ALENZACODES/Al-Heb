@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 6676 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 6678 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-6676 English labels; 1933 UNKNOWN.
+6678 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -4507,6 +4507,8 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [h1d7368c3](m/israeli/word/h1d7368c3.mp3) | בַּל | expresses a warning not to do something | bal |
 | [h1d79f7b0](m/israeli/word/h1d79f7b0.mp3) | אֵזוֹר | an area, region, zone; a sector; a girdle | ezor |
 | [h1e92d681](m/israeli/word/h1e92d681.mp3) | שְׁכֶם | shoulder, upper part of the back | shekhem |
+| [h1ef19acb](m/israeli/word/h1ef19acb.mp3) | הוּא | he; used as a copula | hu |
+| [h1f23dde2](m/israeli/word/h1f23dde2.mp3) | רָחוֹק | far | rachok |
 | [haftarah-after-w1](m/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](m/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](m/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -7282,4 +7284,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 13943 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 13949 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

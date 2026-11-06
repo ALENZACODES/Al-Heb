@@ -10718,8 +10718,8 @@
   "kind": "word",
   "id": "adon-olam-1-w14",
   "text": "מֶלֶךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "king",
   "phonetic": "melekh"
@@ -10744,8 +10744,8 @@
   "kind": "word",
   "id": "adon-olam-1-w15",
   "text": "שְׁמוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "his name",
   "phonetic": "shemo"
@@ -10770,8 +10770,8 @@
   "kind": "word",
   "id": "adon-olam-1-w16",
   "text": "נִקְרָא׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to be read; to be called",
   "phonetic": "nikra"
@@ -10796,8 +10796,8 @@
   "kind": "word",
   "id": "adon-olam-1-w17",
   "text": "וְאַחֲרֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and after",
   "phonetic": "ve'acharei"
@@ -54604,7 +54604,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "thousand, one thousand"
+  "english": "thousand, one thousand",
+  "phonetic": "elef"
  },
  {
   "path": "audio/f/sephardi/word/h26154c1a.mp3",
@@ -54617,7 +54618,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "thousand, one thousand"
+  "english": "thousand, one thousand",
+  "phonetic": "elef"
  },
  {
   "path": "audio/m/sephardi/word/h41683f4b.mp3",
@@ -55840,7 +55842,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Noon, midday"
+  "english": "Noon, midday",
+  "phonetic": "tzohorayim"
  },
  {
   "path": "audio/f/sephardi/word/h25aa368e.mp3",
@@ -55853,7 +55856,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "Noon, midday"
+  "english": "Noon, midday",
+  "phonetic": "tzohorayim"
  },
  {
   "path": "audio/m/sephardi/word/h1a8a7259.mp3",
@@ -56156,7 +56160,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "humid; moist, damp"
+  "english": "humid; moist, damp",
+  "phonetic": "lach"
  },
  {
   "path": "audio/f/sephardi/word/h263f168c.mp3",
@@ -56169,7 +56174,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "humid; moist, damp"
+  "english": "humid; moist, damp",
+  "phonetic": "lach"
  },
  {
   "path": "audio/m/sephardi/word/ha5bb33e3.mp3",
@@ -65970,7 +65976,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to anoint with oil"
+  "english": "to anoint with oil",
+  "phonetic": "mashach"
  },
  {
   "path": "audio/f/sephardi/word/h25e14407.mp3",
@@ -65983,7 +65990,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to anoint with oil"
+  "english": "to anoint with oil",
+  "phonetic": "mashach"
  },
  {
   "path": "audio/m/sephardi/word/h17825deb.mp3",
@@ -71080,7 +71088,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "surgical"
+  "english": "surgical",
+  "phonetic": "khiruregi"
  },
  {
   "path": "audio/f/sephardi/word/h254a987e.mp3",
@@ -71093,7 +71102,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "surgical"
+  "english": "surgical",
+  "phonetic": "khiruregi"
  },
  {
   "path": "audio/m/sephardi/word/h02f1f226.mp3",

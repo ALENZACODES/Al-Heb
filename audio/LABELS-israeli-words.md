@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 5701 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 5706 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-5701 English labels; 1933 UNKNOWN.
+5706 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -754,6 +754,11 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [h242d7d42](f/israeli/word/h242d7d42.mp3) | לוֹט | labdanum; the meaning of this term is uncertain. Usually taken to mean | lot |
 | [h24b72cb6](f/israeli/word/h24b72cb6.mp3) | אֵצֶל | at or to the home or office of (a person), or the like; with, in the possession of; Next to, by, alongside | etzel |
 | [h24f17330](f/israeli/word/h24f17330.mp3) | מֵת | to die; to be crazy or mad about something | met |
+| [h254a987e](f/israeli/word/h254a987e.mp3) | כִירוּרְגִּי | surgical | khiruregi |
+| [h25aa368e](f/israeli/word/h25aa368e.mp3) | צׇהֳרַיִם | Noon, midday | tzohorayim |
+| [h25e14407](f/israeli/word/h25e14407.mp3) | מָשַׁח | to anoint with oil | mashach |
+| [h26154c1a](f/israeli/word/h26154c1a.mp3) | אֶלֶף | thousand, one thousand | elef |
+| [h263f168c](f/israeli/word/h263f168c.mp3) | לַח | humid; moist, damp | lach |
 | [haftarah-after-w1](f/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](f/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](f/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -6307,4 +6312,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 11002 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 11016 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

@@ -29828,8 +29828,8 @@
   "kind": "word",
   "id": "sim-shalom-w36",
   "text": "לְבָרֵךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to bless",
   "phonetic": "levarekh"
@@ -29854,8 +29854,8 @@
   "kind": "word",
   "id": "sim-shalom-w37",
   "text": "אֶת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the direct object",
   "phonetic": "et"

@@ -15502,8 +15502,8 @@
   "kind": "word",
   "id": "yehalelu-w10",
   "text": "וַיָּרֶם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and he lifted",
   "phonetic": "vayarem"
@@ -15528,8 +15528,8 @@
   "kind": "word",
   "id": "yehalelu-w11",
   "text": "קֶרֶן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "horn; ray, beam; corner (exterior)",
   "phonetic": "keren"

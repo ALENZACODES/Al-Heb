@@ -281,7 +281,7 @@ export async function mount(root, ctx) {
     const kids = [
       h('h1', { id: 'view-title', tabindex: '-1' }, 'You did it'),
       (() => {
-        const stills = [SCENE.minuteOne, SCENE.minuteOneVariant, SCENE.minuteOneStill03, SCENE.minuteOneStill04, SCENE.minuteOneStill05]
+        const stills = [SCENE.minuteOne, SCENE.minuteOneVariant, SCENE.minuteOneStill03, SCENE.minuteOneStill04, SCENE.minuteOneStill05, SCENE.minuteOneStill06]
           .map((id) => picture(h, ctx, 'id', id, { class: 'scene-art', width: 480 }))
           .filter(Boolean);
         if (!stills.length) return null;
@@ -363,6 +363,7 @@ export async function mount(root, ctx) {
           letterMeet(h, ctx, 'bet', { width: 220 })),
         phase === 'fade' ? picture(h, ctx, 'id', SCENE.niqqudFade, { width: 640, class: 'scene-art' }) : null,
         phase === 'fade' ? picture(h, ctx, 'id', SCENE.niqqudFadeStill, { width: 640, class: 'scene-art' }) : null,
+        phase === 'fade' ? picture(h, ctx, 'id', SCENE.niqqudFadeStill03, { width: 640, class: 'scene-art' }) : null,
         h('p', { class: 'muted' }, 'Under a minute. No hearts. Wrong tiles just ask you to try again.'),
         motivation ? h('p', { class: 'muted' }, `For: ${motivation.label}`) : null,
         h('p', { class: 'fw-target he', lang: 'he', dir: 'rtl', style: 'font-size:2.6rem;text-align:center;margin:0.5rem 0' }, shown),

@@ -33,7 +33,7 @@ const SKIP = (rel) => rel.startsWith('assets/img/') || rel.startsWith('assets/im
 export const FIRST_DAY_LETTERS = ['shin', 'bet', 'lamed', 'vav', 'mem', 'he', 'tav', 'mem-final', 'alef'];
 const KEEP_DATA = new Set(['data/pronunciation/consonants.json', 'data/pronunciation/niqqud.json', 'data/calendar/locations.json', 'data/audio/equivalence.json',
   ...FIRST_DAY_LETTERS.map((id) => `assets/letters/morph/${id}.svg`)]);
-const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'data/nikkudfade/', 'data/gender/', 'data/pronunciation/', 'data/speak/', 'data/israel/', 'data/calendar/', 'data/festivals/', 'data/torahread/', 'data/typing/',
+const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'data/nikkudfade/', 'data/gender/', 'data/pronunciation/', 'data/speak/', 'data/fun/', 'data/israel/', 'data/calendar/', 'data/festivals/', 'data/torahread/', 'data/typing/',
   'data/traditions/', 'data/trope-trainer/', 'data/listen/', 'data/grammar/', 'data/wordtrace/', 'data/corpus/reader/', 'data/corpus/trope/', 'data/curriculum/lessons-intermediate/',
   'assets/screens/', 'assets/screenshots/', 'assets/letters/morph/'];
 const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/morning-verses.json', 'data/curriculum/gender-pairs.json', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json']);

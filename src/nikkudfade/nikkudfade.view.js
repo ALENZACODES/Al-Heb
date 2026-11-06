@@ -23,7 +23,8 @@ export function mount(root, ctx) {
   const status = el('p', { role: 'status', 'aria-live': 'polite', class: 'nf-status' });
   const scene = picture(el, ctx, 'id', SCENE.niqqudFade, { width: 720, class: 'scene-art' });
   const sceneStill = picture(el, ctx, 'id', SCENE.niqqudFadeStill, { width: 720, class: 'scene-art' });
-  wrap.append(h1, ...(scene ? [scene] : []), ...(sceneStill ? [sceneStill] : []), el('p', { class: 'nf-draft' }, DRAFT_NOTE), controls, body, status, el('footer', {}, sourcesLine(el)));
+  const sceneStill03 = picture(el, ctx, 'id', SCENE.niqqudFadeStill03, { width: 720, class: 'scene-art' });
+  wrap.append(h1, ...(scene ? [scene] : []), ...(sceneStill ? [sceneStill] : []), ...(sceneStill03 ? [sceneStill03] : []), el('p', { class: 'nf-draft' }, DRAFT_NOTE), controls, body, status, el('footer', {}, sourcesLine(el)));
   root.append(wrap);
   let alive = true, set = null, sched = DEFAULT_SCHEDULE, st = normalizeState(null), queue = [], idx = 0, revealed = false, answered = false, round = 1, reached = 10, anyWord = false, asking = null;
   const say = (t) => { status.textContent = t; };

@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 562,
+ "count": 568,
  "images": {
   "BG_cafe": {
    "w": 1659,
@@ -1444,6 +1444,24 @@
     }
    ]
   },
+  "GAME_letter_rush_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_letter_rush_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_letter_rush_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
   "GAME_minute_one_celebration": {
    "w": 1254,
    "h": 1254,
@@ -1534,6 +1552,24 @@
     }
    ]
   },
+  "GAME_minute_one_celebration_06": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_minute_one_celebration_06.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_minute_one_celebration_06.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
   "GAME_niqqud_fade": {
    "w": 1254,
    "h": 1254,
@@ -1565,6 +1601,24 @@
     {
      "edge": 1254,
      "file": "GAME_niqqud_fade_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "GAME_niqqud_fade_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_niqqud_fade_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_niqqud_fade_03.1254.webp",
      "w": 1254,
      "h": 1254
     }
@@ -1624,6 +1678,24 @@
     }
    ]
   },
+  "GAME_sofit_sniper_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_sofit_sniper_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_sofit_sniper_04.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
   "GAME_story_episode_02": {
    "w": 1254,
    "h": 1254,
@@ -1637,6 +1709,24 @@
     {
      "edge": 1254,
      "file": "GAME_story_episode_02.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "GAME_story_episode_03": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_story_episode_03.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_story_episode_03.1254.webp",
      "w": 1254,
      "h": 1254
     }
@@ -1727,6 +1817,24 @@
     {
      "edge": 1254,
      "file": "GAME_tradition_detective_03.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "GAME_tradition_detective_04": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_tradition_detective_04.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "GAME_tradition_detective_04.1254.webp",
      "w": 1254,
      "h": 1254
     }
@@ -12739,6 +12847,12 @@
   "L21_shin_print_meet": "Meet-the-letter cartoon for shin.",
   "L22_tav_print_meet": "Meet-the-letter cartoon for tav.",
   "L27_tsadi_final_print_meet": "Meet-the-letter cartoon for tsadi final.",
-  "L18_tsadi_print_meet": "Meet-the-letter cartoon for tsadi."
+  "L18_tsadi_print_meet": "Meet-the-letter cartoon for tsadi.",
+  "GAME_minute_one_celebration_06": "Celebration art for the first Hebrew word, sixth still.",
+  "GAME_letter_rush_04": "Scene for Letter Rush, fourth round.",
+  "GAME_sofit_sniper_04": "Scene for final-letter practice, fourth level.",
+  "GAME_niqqud_fade_03": "Scene for vowel marks fading off pointed Hebrew, third still.",
+  "GAME_tradition_detective_04": "Listening case for telling the reading traditions apart, fourth case.",
+  "GAME_story_episode_03": "Story mode scene, third episode."
  }
 }

@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 1091,
+ "count": 1096,
  "images": {
   "BADGE_01": {
    "w": 512,
@@ -2236,6 +2236,18 @@
     }
    ]
   },
+  "GRAM_link_05": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_link_05.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GRAM_link_06": {
    "w": 512,
    "h": 512,
@@ -3682,6 +3694,18 @@
     }
    ]
   },
+  "HERO_psalms1_09": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HERO_psalms1_09.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "HERO_psalms2_01": {
    "w": 512,
    "h": 292,
@@ -3809,6 +3833,18 @@
     {
      "edge": 512,
      "file": "HERO_sights_07.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "HERO_week_02": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HERO_week_02.512.webp",
      "w": 512,
      "h": 293
     }
@@ -10984,6 +11020,18 @@
     }
    ]
   },
+  "PLACE_galilee_02": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_galilee_02.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_galilee_06": {
    "w": 512,
    "h": 293,
@@ -10991,6 +11039,18 @@
     {
      "edge": 512,
      "file": "PLACE_galilee_06.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_galilee_09": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_galilee_09.512.webp",
      "w": 512,
      "h": 293
     }

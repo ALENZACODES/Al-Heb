@@ -63390,6 +63390,256 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "GRAM_link_05": {
+   "id": "GRAM_link_05",
+   "file": "GRAM_link_05.png",
+   "command": 219,
+   "set": "Connectors & little words",
+   "block": "O",
+   "prompt": "Command 219 (Connectors & little words): And — two baskets joined by a rope; or — a fork in a path with a cake on one side and fruit on the other; but — a sunny picnic with one black cloud; because — rain above, umbrella open below (cause readable); also — a third chair being added to a table of two; only — one gold apple among green apples; already — an empty plate with crumbs and a satisfied Rimon; not yet — a cake in an oven half risen; here — a gold map pin shape over a café table scene (pin as object); there — the same pin small and far on a hill. Image 5 of 10: also — a third chair being added to a table of two. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "c81621d8c37620043eb8919bab554e60b1e1bfc435371215160e90130358fa7e",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:56:11.703Z",
+   "sourceFile": "img-0698.png",
+   "sourceFileDate": "2026-11-06T21:56:10.968Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "bb5850b9f1855241a022ede4dd148a34fe0361f7de87865954574f4cbd97d557",
+   "originalFormat": "PNG",
+   "originalBytes": 252085,
+   "originalFile": "GRAM_link_05.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_link_05.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 23808
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_galilee_02": {
+   "id": "PLACE_galilee_02",
+   "file": "PLACE_galilee_02.png",
+   "command": 203,
+   "set": "Galilee & the Kinneret",
+   "block": "N",
+   "prompt": "Command 203 (Galilee & the Kinneret): A calm freshwater lake at dawn with fishing boats; green hills with wildflowers in spring; an old synagogue of black basalt stones (ruin, respectful, empty); a hot spring steam rising beside the shore; a kibbutz dining hall exterior with lawns; a vineyard on a slope above the lake; Tiberias-style lakeside promenade at evening; banana groves along a road; the Jordan river narrow and green between trees; a hilltop view of the whole lake shaped like a harp. Image 2 of 10: green hills with wildflowers in spring. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "27451f6233c7d3d7ecbb0150c9944bacc9b56f46ca27c32ceb4566d88ca8a68a",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:56:11.703Z",
+   "sourceFile": "img-0739.png",
+   "sourceFileDate": "2026-11-06T21:56:10.929Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "1a2d66b905123636b73447662dff8fd6496a480937ee8b89abc7331cd03d650f",
+   "originalFormat": "PNG",
+   "originalBytes": 170383,
+   "originalFile": "PLACE_galilee_02.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_galilee_02.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 23890
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HERO_psalms1_09": {
+   "id": "HERO_psalms1_09",
+   "file": "HERO_psalms1_09.png",
+   "command": 195,
+   "set": "Psalms heroes I",
+   "block": "M",
+   "prompt": "Command 195 (Psalms heroes I): Psalm 1 — a tree by streams of water; Psalm 8 — a child looking up at a huge starry sky; Psalm 19 — the sun's tent across the heavens, dawn to dusk in one sky; Psalm 23 — a shepherd with a staff beside still waters; Psalm 23 II — a table set in a green valley at evening; Psalm 42 — a deer at a stream in a dry land; Psalm 84 — a swallow's nest under an eave of a great house; Psalm 90 — hands counting grains of sand through an hourglass shape (sand only, abstract); Psalm 92 — a palm tree and a cedar side by side, flourishing; Psalm 100 — gates entered with musicians and dancers (small figures, joyful). Image 9 of 10: Psalm 92 — a palm tree and a cedar side by side, flourishing. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "d40e2286b1297671b3b7132c9544b0afe6568ae221824a4d6d071bf18c9e61c6",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:56:11.703Z",
+   "sourceFile": "img-0770.png",
+   "sourceFileDate": "2026-11-06T21:56:10.944Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "ef13abbc41a3c341243e4a9695b6eb7a1292bd90b37a20b917a038666b677f79",
+   "originalFormat": "PNG",
+   "originalBytes": 215060,
+   "originalFile": "HERO_psalms1_09.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HERO_psalms1_09.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 35014
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HERO_week_02": {
+   "id": "HERO_week_02",
+   "file": "HERO_week_02.png",
+   "command": 199,
+   "set": "Motzei Shabbat & the week opening",
+   "block": "M",
+   "prompt": "Command 199 (Motzei Shabbat & the week opening): Three stars in a deep blue sky over rooftops; a braided candle lit on a table (objects); spices in a small tower box held to the light; a cup overflowing into a saucer by candlelight; hands held to the flame's light (the custom, from behind); a doorway with the week's first lamplight; a market stall opening its shutters on Sunday morning; a bus leaving a station into sunrise; work tools laid ready on a bench; Rimon waving at a calendar page left blank on a kitchen wall. Image 2 of 10: a braided candle lit on a table (objects). Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "7caae3afd012104ae2fda2d31468dc665d8b498ceb2f903c06458e8aa5cf6d93",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:56:11.703Z",
+   "sourceFile": "img-0906.png",
+   "sourceFileDate": "2026-11-06T21:56:10.978Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "77268bfaf900c69e5e9ed5ac7d9e74a94f786b603d5f37133ca16a872e2b14cc",
+   "originalFormat": "PNG",
+   "originalBytes": 125843,
+   "originalFile": "HERO_week_02.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HERO_week_02.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 9280
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_galilee_09": {
+   "id": "PLACE_galilee_09",
+   "file": "PLACE_galilee_09.png",
+   "command": 203,
+   "set": "Galilee & the Kinneret",
+   "block": "N",
+   "prompt": "Command 203 (Galilee & the Kinneret): A calm freshwater lake at dawn with fishing boats; green hills with wildflowers in spring; an old synagogue of black basalt stones (ruin, respectful, empty); a hot spring steam rising beside the shore; a kibbutz dining hall exterior with lawns; a vineyard on a slope above the lake; Tiberias-style lakeside promenade at evening; banana groves along a road; the Jordan river narrow and green between trees; a hilltop view of the whole lake shaped like a harp. Image 9 of 10: the Jordan river narrow and green between trees. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "516bf21df0f44b4362e478126deca96cffba99eed30c5f29ce84ebf0ccf8d005",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:56:11.703Z",
+   "sourceFile": "img-1442.png",
+   "sourceFileDate": "2026-11-06T21:56:10.918Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "38704db1d764f17c70e3a8917e8766be9dc39386f9a843bcdffdcbf55fbd3601",
+   "originalFormat": "PNG",
+   "originalBytes": 170948,
+   "originalFile": "PLACE_galilee_09.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_galilee_09.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 22818
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

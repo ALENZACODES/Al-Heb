@@ -152,10 +152,18 @@ export function createAudio(opts) {
     return !!(vs && vs.length && !vs.some((v) => /^he([-_]|$)/i.test(v.lang || '')));
   }
 
-  function playFile(p) {
+  const RATE = { normal: 1, slow: 0.85, slower: 0.7 };
+  function fileRate(o = {}) {
+    if (typeof o.playbackRate === 'number' && o.playbackRate > 0) return o.playbackRate;
+    if (typeof o.rate === 'number' && o.rate > 0) return o.rate;
+    const key = (settings && settings.playbackRate) || 'normal';
+    return RATE[key] || 1;
+  }
+  function playFile(p, o = {}) {
     return new Promise((resolve) => {
       let a;
       try { a = new AudioCtor(p.url); } catch (e) { resolve({ ok: false, error: String(e) }); return; }
+      try { a.playbackRate = fileRate(o); } catch { /* ignore */ }
       current = { stop: () => { try { a.pause(); } catch { /* ignore */ } resolve({ ok: true, stopped: true }); } };
       a.onended = () => resolve({ ok: true });
       a.onerror = () => resolve({ ok: false, error: 'file-error' });
@@ -173,6 +181,7 @@ export function createAudio(opts) {
       const u = new UtteranceCtor(safe.text);
       u.lang = 'he-IL';
       if (typeof settings.ttsRate === 'number') u.rate = settings.ttsRate;
+      else if (settings && settings.playbackRate && RATE[settings.playbackRate]) u.rate = RATE[settings.playbackRate];
       current = { stop: () => { try { speech.cancel(); } catch { /* ignore */ } resolve({ ok: true, stopped: true }); } };
       u.onend = () => resolve({ ok: true });
       u.onerror = () => resolve({ ok: false, error: 'speech-error' });
@@ -186,7 +195,7 @@ export function createAudio(opts) {
       if (!AudioCtor) {
         p = { ...planWithoutFile(kind, id, o), reason: 'no-audio-support' };
       } else {
-        const r = await playFile(p);
+        const r = await playFile(p, o);
         current = null;
         if (r.ok) return p;
         // file failed to load: fall through to TTS, and say so

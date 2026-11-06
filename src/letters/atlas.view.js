@@ -136,6 +136,24 @@ export function mount(root, ctx = {}) {
     } catch (e) { say(t('atlas.noClip', 'No audio for this one yet.')); }
   }
 
+  /** Lecture packs use aleph/…; atlas letter ids use alef/…. */
+  const LECTURE_ID = { alef: 'aleph' };
+  function lectureBase(tile) {
+    const raw = (tile && (tile.parent || tile.id)) || '';
+    return LECTURE_ID[raw] || raw;
+  }
+  async function hearExplain(tile) {
+    if (!ctx.audio || typeof ctx.audio.play !== 'function') { say(t('atlas.noAudio', 'Audio is not available here.')); return; }
+    const id = lectureBase(tile) + '-explain-en';
+    try {
+      const r = await ctx.audio.play('letter-lecture', id);
+      if (!r || r.source === 'none') say(t('atlas.noClip', 'No audio for this one yet.'));
+      else if (r.source === 'tts-fallback') say(t('atlas.tts', 'Playing a computer voice (no recording yet).'));
+      else say('');
+    } catch (e) { say(t('atlas.noClip', 'No audio for this one yet.')); }
+  }
+
+
   function startQuiz() {
     const pool = state.tiles.filter((x) => x.kind !== 'variant');
     const target = pool[Math.floor(Math.random() * pool.length)];
@@ -219,6 +237,7 @@ export function mount(root, ctx = {}) {
         h('div', { class: 'row' },
           h('button', { onclick: () => hear(sel.soundAudioId) }, t('atlas.hearSound', 'Hear the sound')),
           h('button', { onclick: () => hear(sel.nameAudioId) }, t('atlas.hearName', 'Hear the name')),
+          h('button', { onclick: () => hearExplain(sel) }, t('atlas.hearExplain', 'Hear the explanation')),
           m.altStory && !chained ? h('button', { 'aria-pressed': state.alt, onclick: () => { state.alt = !state.alt; render(); } }, t('atlas.another', 'Another picture')) : null),
         viaParent ? h('p', { class: 'muted', 'data-variant-note': sel.id }, t('atlas.variantNote', sel.name + ' is ' + (cardEntry.name || sel.parent) + ', told apart by its dot, so it shares that letter\u2019s picture below. Sound: ') + (m.sound || sel.soundEn || '') + '.') : null,
         (() => { const me = cardEntry; if (!me) return state.chain ? null : memoryFallback(t); memCard = buildMemoryCard({ entry: me, glyph: viaParent ? (tileById(sel.parent) || {}).glyph || sel.glyph : sel.glyph, tradition: congregationOf(ctx.settings), audio: ctx.audio, t, fetchFn: ctx.fetch }); return memCard.el; })(),

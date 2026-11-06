@@ -91,7 +91,7 @@ const initialText = (summary) => (summary.recorded + summary.tts > 0
 export function createShellAudio({ settings, manifest, loadManifest, loadSummary, createAudio }) {
   let summary = summarizeManifest(manifest || []);
   const inner = createAudio({
-    settings: { get voice() { return settings.get('voice'); }, get congregation() { return settings.get('congregation'); } },
+    settings: { get voice() { return settings.get('voice'); }, get congregation() { return settings.get('congregation'); }, get playbackRate() { return settings.get('playbackRate'); }, get ttsRate() { return settings.get('ttsRate'); } },
     manifest: manifest || [],
   });
   const subs = new Set(), mSubs = new Set();

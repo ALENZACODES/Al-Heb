@@ -146,7 +146,7 @@ export function mount(root, ctx) {
     // Progressive disclosure: only the three basic choices are open. Each group below opens on its own, so no screen shows a long list at once.
     group('calm', 'Calm and quiet', 'Less movement, no sounds, no timers, one thing at a time', calmRows()),
     group('read', 'Reading comfort', 'Text size, spacing and font', readRows()),
-    group('audio', 'Sound', 'For learners who do not use audio', [boolRow('audioFree', AUDIO_FREE_LABEL, AUDIO_FREE_HELP)]),
+    group('audio', 'Sound', 'For learners who do not use audio', [boolRow('audioFree', AUDIO_FREE_LABEL, AUDIO_FREE_HELP), labelled('playbackRate', 'Playback speed', { normal: 'Normal', slow: 'Slow', slower: 'Slower' })]),
     group('look', 'Look and sound', 'Colours, Hebrew letter style and voice', [
     radioGroup('script', 'settings.script'),
     radioGroup('theme', 'settings.theme'),

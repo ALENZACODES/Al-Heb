@@ -29,7 +29,7 @@ export function mount(root, ctx) {
       status.textContent=ok?'Correct direction: next junction.':'Wrong sign: return to the junction.';
       if(ok){round++;void speak(ctx,sign.he);}paint();
     }},heSpan(sign.he,'he game-he-sm')));
-    board.replaceChildren(stage,h('div',{class:'game-taxi-dashboard'},h('span',{},'Navigate to: '),heSpan(wanted.he,'he game-he')),
+    board.replaceChildren(stage,h('div',{class:'game-taxi-dashboard'},h('span',{},'Follow this direction: '+wanted.en)),
       h('div',{class:'game-choices game-rtl-grid',dir:'rtl'},...buttons));
   }
   Promise.all([loadJson('data/corpus/phrasebook.json'),loadGameImages(ctx)]).then(([data,R])=>{

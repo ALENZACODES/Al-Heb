@@ -104,3 +104,10 @@ test('new routes are preview-only and separate from Wave 1', () => {
     assert.equal(r.route?.module,'../games/'+slug+'.view.js');
   }
 });
+
+test('mirror index disallows repeated-letter shortcuts', () => {
+  const letters = ['מ', 'מ', 'ר'];
+  assert.equal(correctMirrorStep(letters, 0, { letter: 'מ', i: 1 }), false);
+  assert.equal(correctMirrorStep(letters, 0, { letter: 'מ', i: 0 }), true);
+  assert.equal(correctMirrorStep(letters, 1, { letter: 'מ', i: 0 }), false);
+});

@@ -281,7 +281,7 @@ export async function mount(root, ctx) {
     const kids = [
       h('h1', { id: 'view-title', tabindex: '-1' }, 'You did it'),
       (() => {
-        const stills = [SCENE.minuteOne, SCENE.minuteOneVariant, SCENE.minuteOneStill03, SCENE.minuteOneStill04, SCENE.minuteOneStill05, SCENE.minuteOneStill06, SCENE.minuteOneStill07]
+        const stills = [SCENE.minuteOne, SCENE.minuteOneVariant, SCENE.minuteOneStill03, SCENE.minuteOneStill04, SCENE.minuteOneStill05, SCENE.minuteOneStill06, SCENE.minuteOneStill07, SCENE.minuteOneStill08, SCENE.minuteOneStill09, SCENE.minuteOneStill11]
           .map((id) => picture(h, ctx, 'id', id, { class: 'scene-art', width: 480 }))
           .filter(Boolean);
         if (!stills.length) return null;

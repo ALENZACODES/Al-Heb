@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 574,
+ "count": 577,
  "images": {
   "BG_cafe": {
    "w": 1659,
@@ -1603,6 +1603,60 @@
      "file": "GAME_minute_one_celebration_07.1254.webp",
      "w": 1254,
      "h": 1254
+    }
+   ]
+  },
+  "GAME_minute_one_celebration_08": {
+   "w": 1312,
+   "h": 1199,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_minute_one_celebration_08.800.webp",
+     "w": 800,
+     "h": 731
+    },
+    {
+     "edge": 1312,
+     "file": "GAME_minute_one_celebration_08.1312.webp",
+     "w": 1312,
+     "h": 1199
+    }
+   ]
+  },
+  "GAME_minute_one_celebration_09": {
+   "w": 1312,
+   "h": 1199,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_minute_one_celebration_09.800.webp",
+     "w": 800,
+     "h": 731
+    },
+    {
+     "edge": 1312,
+     "file": "GAME_minute_one_celebration_09.1312.webp",
+     "w": 1312,
+     "h": 1199
+    }
+   ]
+  },
+  "GAME_minute_one_celebration_11": {
+   "w": 1312,
+   "h": 1199,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_minute_one_celebration_11.800.webp",
+     "w": 800,
+     "h": 731
+    },
+    {
+     "edge": 1312,
+     "file": "GAME_minute_one_celebration_11.1312.webp",
+     "w": 1312,
+     "h": 1199
     }
    ]
   },
@@ -12967,6 +13021,9 @@
   "GAME_sofit_sniper_05": "Scene for final-letter practice, fifth level.",
   "GAME_niqqud_fade_04": "Scene for vowel marks fading off pointed Hebrew, fourth still.",
   "GAME_tradition_detective_05": "Listening case for telling the reading traditions apart, fifth case.",
-  "GAME_story_episode_04": "Story mode scene, fourth episode."
+  "GAME_story_episode_04": "Story mode scene, fourth episode.",
+  "GAME_minute_one_celebration_08": "Celebration art for the first Hebrew word, eighth still.",
+  "GAME_minute_one_celebration_09": "Celebration art for the first Hebrew word, ninth still.",
+  "GAME_minute_one_celebration_11": "Celebration art for the first Hebrew word, eleventh still."
  }
 }

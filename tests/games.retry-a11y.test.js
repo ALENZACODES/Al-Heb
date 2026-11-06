@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { PAIRS, STORE_KEY, mount as mountTug } from '../src/games/tugowar.view.js';
-import { mount as mountCatcher } from '../src/games/vowelcatcher.view.js';
+import { BASKET_MAX, BASKET_MIN, BASKET_STEP, basketPosition, mount as mountCatcher } from '../src/games/vowelcatcher.view.js';
 import { Doc, El } from './wordtrace.fakedom.js';
 
 function environment() {
@@ -17,6 +17,11 @@ function environment() {
     removeEventListener() {},
   };
   globalThis.document.addEventListener = (type, fn) => listeners.push([type, fn]);
+  El.prototype.contains = function (node) {
+    let p = node;
+    while (p) { if (p === this) return true; p = p.parentNode; }
+    return false;
+  };
   globalThis.document.removeEventListener = () => {};
   let frame = null;
   globalThis.requestAnimationFrame = (fn) => { frame = fn; return 1; };
@@ -99,5 +104,48 @@ test('vowel catcher keeps the basket decorative and exposes focusable controls',
   assert.ok(star, 'a still mark is a button when reduced motion is on');
   assert.equal(star.getAttribute('aria-hidden'), null);
   assert.match(star.getAttribute('aria-label'), /^Catch /);
+  stop();
+});
+
+test('basket stops include 4 and 96, and pointer, arrows, and the slider share one value', async () => {
+  assert.equal(basketPosition(4), BASKET_MIN);
+  assert.equal(basketPosition(96), BASKET_MAX);
+  assert.equal(basketPosition(50), 50);
+  assert.equal(basketPosition(58), 58);
+  assert.equal(basketPosition(70), 70);
+  assert.equal((BASKET_MAX - BASKET_MIN) % BASKET_STEP, 0);
+  let x = BASKET_MIN;
+  while (x < BASKET_MAX) x += BASKET_STEP;
+  assert.equal(x, BASKET_MAX);
+  globalThis.matchMedia = () => ({ matches: false, addEventListener() {}, removeEventListener() {} });
+  const { root, listeners } = environment();
+  const stop = mountCatcher(root, { images: { resolve: () => null }, fetchFn: async () => ({ ok: false }) });
+  const place = root.querySelector('input.catcher-place');
+  const basket = root.querySelector('.catcher-basket');
+  assert.equal(place.getAttribute('min'), '4');
+  assert.equal(place.getAttribute('max'), '96');
+  assert.equal(place.getAttribute('step'), '2');
+  assert.equal(place.value, '50');
+  assert.equal(basket.style.insetInlineStart, '50%');
+  const sky = root.querySelector('.catcher-sky');
+  sky.dispatch('pointerdown', { clientX: 700, pointerId: 1 });
+  assert.equal(place.value, '70');
+  assert.equal(place.getAttribute('aria-valuenow'), '70');
+  assert.equal(basket.style.insetInlineStart, '70%');
+  const pause = [...root.querySelectorAll('button')].find((b) => b.textContent === 'Pause');
+  const onKey = listeners.find(([type]) => type === 'keydown')[1];
+  onKey({ key: 'ArrowRight', target: pause, preventDefault() {} });
+  assert.equal(place.value, '72');
+  assert.equal(basket.style.insetInlineStart, '72%');
+  place.value = '96';
+  place.dispatch('input', { target: place });
+  assert.equal(place.value, '96');
+  assert.equal(basket.style.insetInlineStart, '96%');
+  place.value = '4';
+  place.dispatch('input', { target: place });
+  assert.equal(place.value, '4');
+  assert.equal(basket.style.insetInlineStart, '4%');
+  onKey({ key: 'ArrowLeft', target: pause, preventDefault() {} });
+  assert.equal(place.value, '4');
   stop();
 });

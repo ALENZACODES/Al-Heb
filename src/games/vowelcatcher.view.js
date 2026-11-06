@@ -17,6 +17,20 @@ import { sfx } from '../audio/sfx.js';
 /** Best score, play count, last star rating. Device-local, listed on the privacy page. */
 export const STORE_KEY = 'games.vowelcatcher.v1';
 
+/** Basket stops. Step 2 is the largest step that still lands on both 4 and 96. */
+export const BASKET_MIN = 4;
+export const BASKET_MAX = 96;
+export const BASKET_STEP = 2;
+
+/** Snap a percent onto the basket stops. 4 and 96 are both stops. */
+export function basketPosition(raw) {
+  const n = Number(raw);
+  if (!Number.isFinite(n)) return 50;
+  const steps = Math.round((n - BASKET_MIN) / BASKET_STEP);
+  const maxSteps = Math.round((BASKET_MAX - BASKET_MIN) / BASKET_STEP);
+  return BASKET_MIN + Math.max(0, Math.min(maxSteps, steps)) * BASKET_STEP;
+}
+
 // Curated game subset; actual letter and vowel data come from the authoritative JSON files.
 // Unlike the old starter tables, these are IDs, not invented syllable readings.
 const LETTER_IDS = Object.freeze(['shin', 'bet', 'kaf', 'mem', 'resh']);
@@ -148,39 +162,39 @@ export function mount(root, ctx) {
     }));
   }
 
-  // controls: pointer + keys
+  // One position for the graphic and the native range. Pointer, arrows, and the slider all call placeAt.
+  const place = h('input', {
+    type: 'range', class: 'catcher-place', min: String(BASKET_MIN), max: String(BASKET_MAX), value: '50', step: String(BASKET_STEP),
+    'aria-label': 'Basket position', 'aria-valuemin': String(BASKET_MIN), 'aria-valuemax': String(BASKET_MAX), 'aria-valuenow': '50',
+    'aria-valuetext': 'Basket at 50 percent',
+    oninput: (e) => placeAt(e.target.value),
+  });
+  function placeAt(raw) {
+    basketX = basketPosition(raw);
+    basket.style.insetInlineStart = `${basketX}%`;
+    place.value = String(basketX);
+    place.setAttribute('value', String(basketX));
+    place.setAttribute('aria-valuenow', String(basketX));
+    place.setAttribute('aria-valuetext', `Basket at ${basketX} percent`);
+  }
   const move = (clientX) => {
     const r = sky.getBoundingClientRect();
     if (!r.width) return;
-    basketX = Math.max(4, Math.min(96, ((clientX - r.left) / r.width) * 100));
-    basket.style.insetInlineStart = `${basketX}%`;
+    placeAt(((clientX - r.left) / r.width) * 100);
   };
   const pointerMove = (e) => move(e.clientX);
   const pointerDown = (e) => { try { sky.setPointerCapture?.(e.pointerId); } catch { /* already released */ } move(e.clientX); };
   sky.addEventListener('pointermove', pointerMove);
   sky.addEventListener('pointerdown', pointerDown);
-  function nudge(dir) {
-    basketX = Math.max(4, Math.min(96, basketX + dir * 6));
-    basket.style.insetInlineStart = `${basketX}%`;
-    place.setAttribute('aria-valuenow', String(Math.round(basketX)));
-    place.setAttribute('aria-valuetext', `Basket at ${Math.round(basketX)} percent`);
-  }
   const keys = (e) => {
     if (!alive) return;
     if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
-    if (!article.contains(e.target)) return;
-    if (e.target === place) return;
+    if (!article.contains(e.target) || e.target === place) return;
     e.preventDefault();
-    nudge(e.key === 'ArrowLeft' ? -1 : 1);
+    placeAt(basketX + (e.key === 'ArrowLeft' ? -BASKET_STEP : BASKET_STEP));
   };
   document.addEventListener('keydown', keys);
-  basket.style.insetInlineStart = '50%';
-  const place = h('input', {
-    type: 'range', class: 'catcher-place', min: '4', max: '96', value: '50', step: '6',
-    'aria-label': 'Basket position', 'aria-valuemin': '4', 'aria-valuemax': '96', 'aria-valuenow': '50',
-    'aria-valuetext': 'Basket at 50 percent',
-    oninput: (e) => { basketX = Number(e.target.value); basket.style.insetInlineStart = `${basketX}%`; place.setAttribute('aria-valuenow', String(Math.round(basketX))); place.setAttribute('aria-valuetext', `Basket at ${Math.round(basketX)} percent`); },
-  });
+  placeAt(50);
 
   const pauseBtn = h('button', { type: 'button', class: 'btn secondary', 'aria-pressed': 'false', onclick: () => {
     paused = !paused;

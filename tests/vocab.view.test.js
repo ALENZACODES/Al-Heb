@@ -40,7 +40,7 @@ const tier500 = await loadTier(500);
 const mk = (extra = {}) => {
   const root = new N("div"); const store = memStore(extra.store);
   const spoken = [];
-  const ctx = { store, t: (k) => k, settings: { get: (k) => (k === "congregation" ? (extra.cong || "sephardi") : undefined) }, route() {}, query: extra.query || {}, audio: extra.audio };
+  const ctx = { store, t: (k) => k, settings: { get: (k) => (k === "congregation" ? (extra.cong || "sephardi") : k === "voice" ? extra.voice : undefined) }, route() {}, query: extra.query || {}, audio: extra.audio, clipLookup: extra.clipLookup };
   return { root, store, ctx, spoken };
 };
 
@@ -117,7 +117,7 @@ test("browse: draft notice, attribution footer, RTL pointed Hebrew, transliterat
   // no audio engine: no dead Listen button; one honest line with the respelling instead
   assert.equal(btn(lis[0], /Listen/), undefined);
   assert.match(lis[0].text, /No audio yet - say it as written: et/);
-  assert.match(root.text, /Showing 40 of 497 words/);
+  assert.match(root.text, /Showing 40 of 4992 words/);
   // every control has a label
   for (const id of ["vc-tier", "vc-topic", "vc-search"]) assert.ok(root.find((n) => n.tag === "label" && n.attrs.for === id).length === 1);
   un();
@@ -131,7 +131,8 @@ test("browse: show more, search, topic and tier switch", async () => {
   const search = byId(root, "vc-search");
   search.value = "שלום"; await search.fire("input");
   const res = items(root); assert.ok(res.length >= 1);
-  assert.ok(res.every((li) => /שלום|שָׁלוֹם/.test(li.text)));
+  const letters = (s) => s.replace(/[^\u05D0-\u05EA]/g, "");
+  assert.ok(res.every((li) => letters(li.text).includes("שלום")));
   assert.match(root.text, /Showing \d+ of \d+ word/);
   search.value = "zzzzqq"; await search.fire("input");
   assert.equal(items(root).length, 0); assert.match(root.text, /No words match/);
@@ -156,6 +157,30 @@ test("browse: English search is on the gloss; pointed Hebrew search finds the un
   assert.ok(items(root).some((li) => /good/i.test(li.text)));
 });
 
+test("search Hi lists the real transliteration before words that only contain the letters", async () => {
+  const { root, ctx } = mk();
+  mount(root, ctx); await idle(root);
+  const search = byId(root, "vc-search");
+  search.value = "  HI! "; await search.fire("input");
+  assert.match(root.text, /No exact English gloss for “HI!”/);
+  assert.match(root.text, /1 exact transliteration match/);
+  const lis = items(root);
+  assert.match(lis[0].text, /הִיא/);
+  assert.match(lis[0].text, /she, it/);
+  assert.equal(lis[0].attrs["data-band"], "4");
+  assert.match(lis[1].text, /this, this one/);
+  assert.equal(lis[1].attrs["data-band"], "6");
+  const bands = lis.slice(0, 8).map((li) => Number(li.attrs["data-band"]));
+  const firstRelated = bands.findIndex((b) => b > 4);
+  assert.ok(firstRelated > 0);
+  assert.ok(bands.slice(0, firstRelated).every((b) => b <= 4));
+  assert.ok(bands.slice(firstRelated).every((b) => b > 4));
+  search.value = ""; await search.fire("input");
+  assert.match(root.text, /Showing 40 of \d+ words/);
+  search.value = "..."; await search.fire("input");
+  assert.match(root.text, /No words match/);
+});
+
 test("add one word, and a batch, to reviews (stored under srs.vocab)", async () => {
   const { root, ctx, store } = mk();
   mount(root, ctx); await idle(root);
@@ -166,7 +191,7 @@ test("add one word, and a batch, to reviews (stored under srs.vocab)", async () 
   assert.equal(store.m["srs.cards"], undefined);
   await byId(root, "vc-add-all").click();
   assert.equal(Object.keys(store.m["srs.vocab"]).length, 101);
-  assert.match(root.text, /Added 100 words.*390 more/);
+  assert.match(root.text, /Added 100 words.*4874 more/);
   assert.match(root.text, /Review \(101 due\)/);
 });
 
@@ -212,41 +237,48 @@ test("review: keys are ignored before the answer is shown; empty state points to
   assert.equal(b.store.m["srs.vocab"][cardId(tier500[0])].reps, 0);
 });
 
-test("audio: shared button; recording when ctx.audio has the id, device voice reads the caller text (Israeli only), else No audio yet", async () => {
+test("audio: Normal and Slow call play(kind, id) for this voice and tradition, and do not invent a clip", async () => {
+  const { clipKey } = await import("../src/vocab/clips.js");
+  const { DEVICE_LABEL } = await import("../src/shell/audio-access.js");
   const played = [];
-  const audio = { has: (k, id) => id === tier500[0].id, play: async (k, id) => { played.push([k, id]); return { source: "file", entryStatus: "recorded" }; }, stop() {} };
-  const a = mk({ audio });
+  const clip = { id: "i-10-w12", kind: "word", path: "audio/f/sephardi/word/i-10-w12.mp3", status: "tts", source: "paid-cloud", voice: "f", tradition: "sephardi" };
+  const lookup = { clips: { [clipKey(tier500[0].pointed)]: { "f|sephardi": clip } } };
+  const audio = {
+    status: (k, id, o) => ({ source: "file", via: "exact", url: "/" + clip.path, path: clip.path, id, voice: o.voice, tradition: o.tradition, entryStatus: "tts", entrySource: "paid-cloud" }),
+    play: async (k, id, o) => { played.push({ k, id, o: { ...o } }); return { source: "file", voice: o.voice, tradition: o.tradition, entryStatus: "tts", entrySource: "paid-cloud" }; },
+    stop() {},
+  };
+  const a = mk({ audio, voice: "f", cong: "sephardi", clipLookup: lookup });
   mount(a.root, a.ctx); await idle(a.root);
   const lis = items(a.root);
-  await btn(lis[0], /Listen/).click();
-  assert.deepEqual(played, [["word", tier500[0].id]]);
-  assert.equal(btn(lis[1], /Listen/), undefined, "no dead button for a word with no sound");
-  assert.match(lis[1].text, /No audio yet/);
+  assert.equal(btn(lis[0], /Listen/), undefined);
+  await btn(lis[0], /^Slow$/).click();
+  assert.equal(played.length, 1);
+  assert.equal(played[0].k, "word");
+  assert.equal(played[0].id, "i-10-w12");
+  assert.equal(played[0].o.voice, "f");
+  assert.equal(played[0].o.tradition, "sephardi");
+  assert.equal(played[0].o.rate, "slow");
+  assert.equal(played[0].o.text, undefined, "a missing or extra line is not passed as text");
+  assert.doesNotMatch(lis[0].text, /Playing/);
+  await btn(lis[0], /^Normal$/).click();
+  assert.equal(played[1].o.rate, "normal");
+  assert.equal(played[1].id, "i-10-w12");
+  assert.equal(btn(lis[1], /^Slow$/), undefined);
+  assert.match(lis[1].text, /No clip for/);
 
-  // the real player: the word is not in the recording list, so the device voice reads the word's own pointed text
-  const { createAudio } = await import("../src/audio/player.js");
-  const utter = [];
-  class Utt { constructor(t) { this.text = t; } }
-  const sp = (langs) => ({ getVoices: () => langs.map((lang) => ({ lang })), cancel() {}, speak: (u) => { utter.push(u); queueMicrotask(() => u.onend?.()); } });
-  const real = (cong, langs) => createAudio({ settings: { voice: "m", congregation: cong }, manifest: [], AudioCtor: class {}, speech: sp(langs), UtteranceCtor: Utt });
-  const b = mk({ cong: "israeli", audio: real("israeli", ["he-IL"]) });
+  const refused = [];
+  const wrong = {
+    status: () => ({ source: "file", via: "equivalent", fileTradition: "israeli", voice: "f", tradition: "sephardi", id: "other-word", url: "/audio/f/israeli/word/other.mp3" }),
+    play: async (...args) => { refused.push(args); return { source: "file" }; },
+    stop() {},
+  };
+  const b = mk({ audio: wrong, voice: "f", cong: "sephardi", clipLookup: lookup });
   mount(b.root, b.ctx); await idle(b.root);
-  const b1 = btn(items(b.root)[1], /Listen/);
-  assert.equal(b1.attrs["data-audio-state"], "device"); assert.match(b1.attrs["aria-label"], /Device voice, not a recorded teacher/);
-  await b1.click();
-  assert.equal(utter.length, 1); assert.equal(utter[0].lang, "he-IL"); assert.equal(utter[0].text, tier500[1].pointed.replace(/־/g, " "));
-
-  // Ashkenazi setting: the device voice is Israeli only, so no button; the respelling is offered instead
-  const c = mk({ cong: "ashkenazi", audio: real("ashkenazi", ["he-IL"]) });
-  mount(c.root, c.ctx); await idle(c.root);
-  assert.equal(btn(items(c.root)[1], /Listen/), undefined);
-  assert.match(items(c.root)[1].text, /No audio yet/);
-
-  // only non-Hebrew voices: no button
-  const d = mk({ cong: "israeli", audio: real("israeli", ["en-US"]) });
-  mount(d.root, d.ctx); await idle(d.root);
-  assert.equal(btn(items(d.root)[0], /Listen/), undefined);
-  assert.equal(utter.length, 1);
+  await btn(items(b.root)[0], /^Slow$/).click();
+  assert.deepEqual(refused, [], "another tradition's file is not played");
+  assert.match(items(b.root)[0].text, /No clip for/);
+  assert.ok(!items(b.root)[0].text.includes(DEVICE_LABEL));
 });
 
 test("load failure shows an alert with retry; unmount stops late renders", async () => {

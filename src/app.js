@@ -188,6 +188,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   const root = document.getElementById('main');
   if (!quiet) navFocusOwed = true;
   if (quiet && root.contains(document.activeElement) && document.activeElement.id) heldFocusId = document.activeElement.id; // a quiet re-render must not drop focus the learner already has (kept across a quiet render that a second one supersedes)
+  if (!quiet) { try { ctxBase?.audio?.stop?.(); } catch { /* nothing was playing */ } }
   try { unmount(); } catch (e) { console.warn('unmount failed', e); }
   unmount = () => {};
   const { route, params, query, path } = match;
@@ -284,6 +285,15 @@ async function boot() {
   for (const t of ['pointerdown', 'keydown', 'touchend']) document.addEventListener(t, unlockOnce, true);
   available = availableRoutes(VIEW_FILES);
   wireSoundStatus(audio);
+  for (const btn of document.querySelectorAll('.sound-rate')) {
+    btn.addEventListener('click', () => {
+      const rate = btn.getAttribute('data-rate') === 'slow' ? 'slow' : 'normal';
+      settings.set({ clipRate: rate });
+      for (const b of document.querySelectorAll('.sound-rate')) b.setAttribute('aria-pressed', String(b === btn));
+    });
+  }
+  const savedRate = settings.get('clipRate') === 'slow' ? 'slow' : 'normal';
+  for (const b of document.querySelectorAll('.sound-rate')) b.setAttribute('aria-pressed', String(b.getAttribute('data-rate') === savedRate));
   import('./shell/audio-access.js').then((m) => { soundBar = m.wireSoundBar(audio); }).catch(() => {});
   let router;
   let images = null;

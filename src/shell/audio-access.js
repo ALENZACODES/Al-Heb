@@ -68,9 +68,11 @@ export function audioButton(h, ctx, o) {
         if (ctx.audio.ensureManifest) await ctx.audio.ensureManifest();
         const now = audioAccess(ctx.audio, kind, id, opt);
         if (now.level === 'none') { note.textContent = respelling ? `${NO_AUDIO}. Say it as written: ${respelling}` : NO_AUDIO; return; }
-        note.textContent = now.label;
         const r = await ctx.audio.play(kind, id, opt);
-        if (r && r.source === 'none') note.textContent = `${NO_AUDIO}${respelling ? `. Say it as written: ${respelling}` : ''}`;
+        if (r?.stopped) note.textContent = 'Sound stopped.';
+        else if (r?.ended && r.source === 'file') note.textContent = 'Sound finished.';
+        else if (r && r.source === 'none') note.textContent = `${NO_AUDIO}${respelling ? `. Say it as written: ${respelling}` : ''}`;
+        else if (r?.fileError) note.textContent = 'The recording did not load.';
       } catch { note.textContent = NO_AUDIO; }
     } }, h('span', { 'aria-hidden': 'true' }, '▶'), ' ', label);
   const wrap = h('span', { class: 'audio-wrap' }, btn, ' ', note);

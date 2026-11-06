@@ -8,7 +8,7 @@ export const shardPath = (tradition) => `data/audio/manifest-words-${tradition}.
 /**
  * @param {{ fetch: Function, audio: {extend?: Function}, settings: {get:Function, subscribe?:Function},
  *           onState?: (s:{state:string, tradition:string, loaded:string|null, note:string}) => void }} o
- * state: 'idle' | 'loading' | 'loaded' | 'fallback' (sephardi shard absent, israeli used) | 'offline'
+ * state: 'idle' | 'loading' | 'loaded' | 'missing' (this pronunciation has no word list) | 'offline'
  */
 export function createShardLoader({ fetch, audio, settings, onState = () => {} }) {
   const loaded = new Map();   // tradition -> true (entries already given to the player; extend is not repeated)
@@ -37,11 +37,12 @@ export function createShardLoader({ fetch, audio, settings, onState = () => {} }
     if (!SHARD_TRADITIONS.includes(tradition)) { emit({ state: 'idle', tradition, loaded: null, note: '' }); return last; }
     if (loaded.has(tradition)) { emit({ state: 'loaded', tradition, loaded: tradition, note: '' }); return last; }
     emit({ state: 'loading', tradition, loaded: null, note: '' });
-    let r = await fetchShard(tradition);
-    let used = tradition;
-    if (r.missing && tradition === 'sephardi') { // no sephardi recordings: use the israeli shard; the player keeps its mismatch warning
-      used = 'israeli';
-      if (loaded.has('israeli')) r = { list: null }; else r = await fetchShard('israeli');
+    const r = await fetchShard(tradition);
+    const used = tradition;
+    if (r.missing) {
+      if (my !== seq) return last;
+      emit({ state: 'missing', tradition, loaded: null, note: 'No word-clip list for this pronunciation on this copy.' });
+      return last;
     }
     if (my !== seq) return last; // the setting changed while this was in flight
     if (r.list !== undefined) {
@@ -82,8 +83,7 @@ export async function warmShardAfterInstall({ fetch, settings, serviceWorker, ti
       });
     }
     if (!serviceWorker.controller) return 'unavailable';
-    let res = await fetch(shardPath(tradition));
-    if (res.status === 404 && tradition === 'sephardi') res = await fetch(shardPath('israeli'));
+    const res = await fetch(shardPath(tradition));
     if (!res.ok) return 'unavailable';
     await res.arrayBuffer?.();
     return 'warmed';

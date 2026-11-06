@@ -39,6 +39,20 @@ export function describeResult(r, congregation = 'israeli') {
   return { mode: 'none', text: `No sound: ${REASONS[r.reason] || r.reason || r.error || 'unavailable'}.` };
 }
 
+/** Status from a real media event. Clicking Play does not produce this line. */
+export function playbackLine(ev, plan = ev || {}) {
+  const who = `${plan.voice === 'm' ? 'man' : 'woman'}, ${TRAD[plan.fileTradition || plan.tradition] || plan.tradition || 'Israeli'}`;
+  const speed = ev?.rate === 0.7 ? ' Slow, 0.7×.' : ' Normal speed.';
+  if (ev?.type === 'playing' && (plan.source === 'file' || ev?.source === 'file')) {
+    return { mode: 'file', text: `Playing: ${fileLabel(plan.entryStatus, plan.fileTradition || plan.tradition, plan.entrySource)} (${who}).${speed}` };
+  }
+  if (ev?.type === 'playing') return { mode: 'tts', text: `Playing with this device's Hebrew voice.${speed}` };
+  if (ev?.type === 'ended') return { mode: 'idle', text: 'Sound finished.' };
+  if (ev?.type === 'error') return { mode: 'none', text: 'No sound: the recording did not load.' };
+  if (ev?.type === 'stopped') return { mode: 'idle', text: 'Sound stopped.' };
+  return { mode: 'none', text: 'No sound: unavailable.' };
+}
+
 /**
  * iOS/Safari audio unlock. Mobile Safari only lets a page make sound after a user gesture, and the FIRST sound call must be
  * synchronous inside that gesture (our play() awaits the manifest first, so its first call is too late). This primes every engine
@@ -96,7 +110,11 @@ const initialText = (summary) => (summary.recorded > 0
 export function createShellAudio({ settings, manifest, loadManifest, loadSummary, createAudio }) {
   let summary = summarizeManifest(manifest || []);
   const inner = createAudio({
-    settings: { get voice() { return settings.get('voice'); }, get congregation() { return settings.get('congregation'); } },
+    settings: {
+      get voice() { return settings.get('voice'); },
+      get congregation() { return settings.get('congregation'); },
+      get clipRate() { return settings.get('clipRate'); },
+    },
     manifest: manifest || [],
   });
   const subs = new Set(), mSubs = new Set();
@@ -139,6 +157,8 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
   const gate = (r, kind, id) => (mstate === 'checking' && r.source !== 'file' ? checking(kind, id) : r);
 
   let speechDepth = 0;
+  let playEpoch = 0;
+  let playsInFlight = 0;
   const speechBegin = () => {
     speechDepth += 1;
     mediaPolicy.setSpeech(true);
@@ -151,7 +171,13 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
   };
   return {
     ...inner,
-    stop() { speechDepth = 0; mediaPolicy.clearSpeech(); gameMusic.setSpeech(false); return inner.stop(); },
+    stop() {
+      playEpoch += 1;
+      speechDepth = 0; mediaPolicy.clearSpeech(); gameMusic.setSpeech(false);
+      const r = inner.stop();
+      if (r?.interrupted || playsInFlight > 0) publish({ mode: 'idle', text: 'Sound stopped.' });
+      return r;
+    },
     /** call synchronously inside the first user gesture (see createAudioUnlock); safe to call again */
     unlock: createAudioUnlock(globalThis),
     get summary() { return summary; },
@@ -172,15 +198,25 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
     has: (kind, id, o) => { need(kind); return inner.has(kind, id, opts(o)); },
     async play(kind, id, o) {
       need(kind);
-      await settle();
-      const o2 = opts(o);
-      publish(describeResult(inner.status(kind, id, o2)));      // what WILL be used, before it speaks
-      speechBegin();
+      const epoch = playEpoch;
+      playsInFlight += 1;
       try {
-        const r = await inner.play(kind, id, o2);
-        publish(describeResult(r));
-        return r;
-      } finally { speechEnd(); }
+        await settle();
+        if (epoch !== playEpoch) return { source: 'none', stopped: true, reason: 'stopped' };
+        const o2 = opts(o);
+        speechBegin();
+        let fromMedia = false;
+        try {
+          const r = await inner.play(kind, id, { ...o2, onMedia(ev) {
+            fromMedia = true;
+            if (epoch !== playEpoch) return;
+            publish(playbackLine(ev));
+          } });
+          if (epoch !== playEpoch) return { ...r, stopped: true };
+          if (!fromMedia || r?.source === 'tts-fallback' || r?.source === 'none' || r?.fileError) publish(describeResult(r));
+          return r;
+        } finally { speechEnd(); }
+      } finally { playsInFlight = Math.max(0, playsInFlight - 1); }
     },
     async playSequence(items, so) {
       for (const it of items) need(Array.isArray(it) ? it[0] : it && it.kind);

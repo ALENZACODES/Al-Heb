@@ -112,6 +112,13 @@ test('player alias: one-line prayer record resolves to its line clip only when t
   const a = createAudio({ settings: { voice: 'm', congregation: 'israeli' }, manifest: m, AudioCtor: function () {}, speech: null });
   const s = a.status('prayer', rec.id);
   assert.equal(s.source, 'file'); assert.equal(s.via, 'alias'); assert.match(s.path, new RegExp(`/${target[0]}/${target[1]}\\.mp3$`));
-  const none = createAudio({ settings: { voice: 'm', congregation: 'israeli' }, manifest, AudioCtor: function () {}, speech: null });
+  const stripped = manifest.map((e) => (e.voice === 'm' && e.tradition === 'israeli' && e.kind === target[0] && e.id === target[1] ? { ...e, status: 'missing' } : e));
+  const none = createAudio({ settings: { voice: 'm', congregation: 'israeli' }, manifest: stripped, AudioCtor: function () {}, speech: null });
   assert.notEqual(none.status('prayer', rec.id).source, 'file');
+  const live = createAudio({ settings: { voice: 'm', congregation: 'israeli' }, manifest, AudioCtor: function () {}, speech: null });
+  const liveHit = live.status('prayer', rec.id);
+  assert.equal(liveHit.via, 'alias');
+  assert.equal(liveHit.voice, 'm');
+  assert.equal(liveHit.tradition, 'israeli');
+  assert.equal(liveHit.source, 'file');
 });

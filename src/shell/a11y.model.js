@@ -68,7 +68,7 @@ export const CONTROLS = [
  * Settings in settings.js that are NOT accessibility settings (learning, content or privacy choices). The gate test requires every key
  * in DEFAULTS to be in CONTROLS or here, so a new key forces a decision.
  */
-export const NOT_A11Y = Object.freeze(['voice', 'congregation', 'israelTrack', 'showUnapprovedImages', 'script', 'lat', 'lon', 'gender', 'goal', 'onboarded', 'browserVoiceAnyway', 'writeGodAsGd']);
+export const NOT_A11Y = Object.freeze(['voice', 'congregation', 'israelTrack', 'showUnapprovedImages', 'script', 'lat', 'lon', 'gender', 'goal', 'onboarded', 'browserVoiceAnyway', 'writeGodAsGd', 'clipRate']);
 
 /** Controls whose key exists in this build's settings.js, grouped in GROUPS order (empty groups dropped). */
 export function visibleGroups(defaults = DEFAULTS) {

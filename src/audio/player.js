@@ -13,6 +13,12 @@ import { speechSafeText } from '../shell/names.js';
 // guarantee gender or tradition (browser voices expose neither); results say so via `voiceGuaranteed`.
 // Results always carry `source`: 'file' | 'tts-fallback' | 'none'.
 
+/** Shared clip speed. Only these two rates exist: normal, and the beginner slow speed. */
+export function clipPlaybackRate(value) {
+  if (value === 'slow' || value === 0.7) return 0.7;
+  return 1;
+}
+
 /** A speechSynthesis voice that is actually Hebrew, or null. An empty list is null, not "try the default voice". */
 export function hebrewSynthesisVoice(speech) {
   if (!speech || typeof speech.getVoices !== 'function') return null;
@@ -167,17 +173,31 @@ export function createAudio(opts) {
     return !hebrewVoice();
   }
 
+  function emitMedia(p, type) {
+    try {
+      p.onMedia?.({
+        type, rate: p.rate, source: p.source, voice: p.voice,
+        tradition: p.fileTradition || p.tradition, fileTradition: p.fileTradition,
+        entryStatus: p.entryStatus, entrySource: p.entrySource,
+      });
+    } catch { /* a listener must not break playback */ }
+  }
+
   function playFile(p) {
     return new Promise((resolve) => {
       let a;
       try { a = new AudioCtor(p.url); } catch (e) { resolve({ ok: false, error: String(e) }); return; }
-      current = { stop: () => { try { a.pause(); } catch { /* ignore */ } resolve({ ok: true, stopped: true }); } };
-      a.onended = () => resolve({ ok: true });
-      a.onerror = () => resolve({ ok: false, error: 'file-error' });
+      try { a.playbackRate = p.rate; } catch { /* a fake element may not allow the rate */ }
+      let settled = false;
+      const finish = (result) => { if (settled) return; settled = true; resolve(result); };
+      current = { stop: () => { try { a.pause(); } catch { /* ignore */ } emitMedia(p, 'stopped'); finish({ ok: true, stopped: true }); } };
+      a.onplaying = () => emitMedia(p, 'playing');
+      a.onended = () => { emitMedia(p, 'ended'); finish({ ok: true, ended: true }); };
+      a.onerror = () => { emitMedia(p, 'error'); finish({ ok: false, error: 'file-error' }); };
       try {
         const r = a.play();
-        if (r && typeof r.catch === 'function') r.catch(() => resolve({ ok: false, error: 'play-rejected' }));
-      } catch { resolve({ ok: false, error: 'play-threw' }); }
+        if (r && typeof r.catch === 'function') r.catch(() => { emitMedia(p, 'error'); finish({ ok: false, error: 'play-rejected' }); });
+      } catch { emitMedia(p, 'error'); finish({ ok: false, error: 'play-threw' }); }
     });
   }
 
@@ -191,36 +211,42 @@ export function createAudio(opts) {
       const u = new UtteranceCtor(safe.text);
       u.lang = /^he([-_]|$)/i.test(voice.lang || '') ? voice.lang : 'he-IL';
       try { u.voice = voice; } catch { /* a fake utterance may be frozen */ }
-      if (typeof settings.ttsRate === 'number') u.rate = settings.ttsRate;
-      current = { stop: () => { try { speech.cancel(); } catch { /* ignore */ } resolve({ ok: true, stopped: true }); } };
-      u.onend = () => resolve({ ok: true });
-      u.onerror = () => resolve({ ok: false, error: 'speech-error' });
+      u.rate = p.rate;
+      try { u.onstart = () => emitMedia(p, 'playing'); } catch { /* ignore */ }
+      current = { stop: () => { try { speech.cancel(); } catch { /* ignore */ } emitMedia(p, 'stopped'); resolve({ ok: true, stopped: true }); } };
+      u.onend = () => { emitMedia(p, 'ended'); resolve({ ok: true, ended: true }); };
+      u.onerror = () => { emitMedia(p, 'error'); resolve({ ok: false, error: 'speech-error' }); };
       try { speech.speak(u); } catch { resolve({ ok: false, error: 'speech-threw' }); }
     });
   }
 
+  function withRate(p, o) {
+    return { ...p, rate: clipPlaybackRate(o.rate ?? settings.clipRate ?? settings.ttsRate), onMedia: o.onMedia };
+  }
+
   async function play(kind, id, o = {}) {
-    let p = plan(kind, id, o);
+    let p = withRate(plan(kind, id, o), o);
     if (p.source === 'file') {
       if (!AudioCtor) {
         p = { ...planWithoutFile(kind, id, o), reason: 'no-audio-support' };
       } else {
         const r = await playFile(p);
         current = null;
-        if (r.ok) return p;
+        if (r.ok) return { ...p, ...(r.stopped ? { stopped: true } : {}), ...(r.ended ? { ended: true } : {}) };
         // file failed to load: fall through to TTS, and say so
-        const alt = planWithoutFile(kind, id, o);
+        const alt = withRate(planWithoutFile(kind, id, o), o);
         return { ...alt, reason: alt.reason || r.error, fileError: r.error, triedPath: p.path, ...(alt.source === 'tts-fallback' ? await speakResult(alt) : {}) };
       }
     }
-    if (p.source === 'tts-fallback') { const r = await speakResult(p); return { ...p, ...r }; }
+    if (p.source === 'tts-fallback') { const r = await speakResult(p); return { ...p, ...r, ...(r.ended ? { ended: true } : {}) }; }
     return p;
   }
 
   async function speakResult(p) {
     const r = await speak(p);
     current = null;
-    return r.ok ? {} : { source: 'none', reason: r.error };
+    if (!r.ok) return { source: 'none', reason: r.error, stopped: !!r.stopped };
+    return { ended: !!r.ended, stopped: !!r.stopped };
   }
 
   function planWithoutFile(kind, rawId, o) {
@@ -254,8 +280,11 @@ export function createAudio(opts) {
 
   function stop() {
     stopped++;
-    if (current) { const c = current; current = null; c.stop(); }
+    const c = current;
+    current = null;
+    if (c) c.stop();
     if (speech && typeof speech.cancel === 'function') { try { speech.cancel(); } catch { /* ignore */ } }
+    return { interrupted: !!c };
   }
 
   return {

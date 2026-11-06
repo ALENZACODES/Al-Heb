@@ -346,9 +346,10 @@ test('shard loader: loads only the learner tradition, re-loads on change, falls 
   L.watch(); cong = 'israeli'; subs[0](null, ['congregation']); await new Promise((r) => setTimeout(r, 0));
   assert.equal(calls.at(-1), 'data/audio/manifest-words-israeli.json');
   assert.equal(player.status('word', 'a', { tradition: 'israeli' }).source, 'file');
-  // sephardi: shard absent -> israeli shard already loaded, state fallback, no throw
+  // sephardi shard absent: do not load the Israeli list in its place
   cong = 'sephardi'; const r = await L.load();
-  assert.equal(r.state, 'fallback'); assert.equal(r.loaded, 'israeli');
+  assert.equal(r.state, 'missing'); assert.equal(r.loaded, null);
+  assert.equal(player.status('word', 'a', { tradition: 'sephardi' }).source === 'file', false);
   // offline with nothing cached: graceful note, never throws
   const L2 = createShardLoader({ fetch: fakeFetch, audio: createAudio({ settings: { voice: 'f' }, manifest: [], speech: null }), settings: { get: () => 'ashkenazi' } });
   offline = true; const r2 = await L2.load();

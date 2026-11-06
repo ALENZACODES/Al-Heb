@@ -26,7 +26,7 @@ export const LOCAL_ONLY = [
 
 /** localStorage keys (all written with the prefix "alef:"). `file` is one source file that defines or uses the key. */
 export const STORE_KEYS = [
-  ['settings', 'Settings: language, script, theme, accessibility options (as listed on the Accessibility screen), voice, pronunciation style, your gender for Hebrew forms (optional), saved latitude and longitude, and whether optional game music is on, with its volume, mute and track', 'src/shell/settings.js'],
+  ['settings', 'Settings: language, script, theme, accessibility options (as listed on the Accessibility screen), voice, pronunciation style, clip speed (normal or 0.7×), your gender for Hebrew forms (optional), saved latitude and longitude, and whether optional game music is on, with its volume, mute and track', 'src/shell/settings.js'],
   ['onboarding.v1', 'Setup answers and plan', 'src/onboarding/model.js'],
   ['onboarding.v1.dailyGoal', 'Daily goal', 'src/home/today.js'],
   ['backup.reminder.v1', 'When you last downloaded a backup file, and "Not now" on the backup reminder', 'src/shell/backup-reminder.js'],

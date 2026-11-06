@@ -64,14 +64,6 @@ test('volume clamps and missing/error/unknown files silently no-op', () => {
   assert.equal(p.player.play('click'), false);
   assert.ok(Object.hasOwn(SFX_FILES, 'click'));
 });
-test('unmounted game does not play, and no Audio environment does not throw', () => {
-  const p = make(); const leave = p.connect(); leave();
-  assert.equal(p.player.play('click'), false);
-  const silent = createSfxController({ makeAudio: () => { throw new Error('no audio'); }, reducedMotion: () => false });
-  silent.enter({ settings: { get: k => k === 'soundEffects' } });
-  assert.equal(silent.play('pop'), false);
-});
-
 test('curated Kenney manifest exposes all 30 stable keys without preloading them', () => {
   const expected = [
     'back', 'bubble_pop', 'catch', 'click', 'click_hard', 'click_soft',
@@ -83,5 +75,13 @@ test('curated Kenney manifest exposes all 30 stable keys without preloading them
   assert.deepEqual(Object.keys(SFX_FILES).sort(), expected.sort());
   assert.equal(HOT_SFX.length, 10);
   assert.ok(HOT_SFX.every((name) => Object.hasOwn(SFX_FILES, name)));
-  assert.ok(Object.values(SFX_FILES).every((name) => /^[a-z_]+\\.mp3$/.test(name)));
+  assert.ok(Object.values(SFX_FILES).every((name) => /^[a-z_]+\.mp3$/.test(name)));
+  assert.equal(Object.keys(SFX_FILES).length, 30);
+});
+test('unmounted game does not play, and no Audio environment does not throw', () => {
+  const p = make(); const leave = p.connect(); leave();
+  assert.equal(p.player.play('click'), false);
+  const silent = createSfxController({ makeAudio: () => { throw new Error('no audio'); }, reducedMotion: () => false });
+  silent.enter({ settings: { get: k => k === 'soundEffects' } });
+  assert.equal(silent.play('pop'), false);
 });

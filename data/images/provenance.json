@@ -62116,6 +62116,306 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "GRAM_modals_07": {
+   "id": "GRAM_modals_07",
+   "file": "GRAM_modals_07.png",
+   "command": 217,
+   "set": "Want, need, can",
+   "block": "O",
+   "prompt": "Command 217 (Want, need, can): Want — Noa reaching toward a cake in a window with hearts in her eyes (one small heart shape); need — Ari in rain reaching for an umbrella; can — Rimon lifting a tiny barbell successfully, smiling; cannot — Rimon under the same barbell, flat comic squish (gentle); must — a hand raised at a red traffic light shape (a plain red circle light, no text); may I — a child with a hand half-raised at a table; let's — both narrators pointing the same way at a path; try — Rimon looking at a high step with a determined face; again — a circular pair of gold arrows around a cup (symbol only); first/then — two footprints panels: shoes by a door, then the same shoes on a path. Image 7 of 10: let's — both narrators pointing the same way at a path. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "ee1629ba1a85008583470e04490ca48e9cd948815dff5a88de4bddaa204ed8a9",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:46:04.834Z",
+   "sourceFile": "img-0177.png",
+   "sourceFileDate": "2026-11-06T21:46:04.517Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "1b7f9e8f343277209b955cf1f8d2c1df4604c04665c020a670b6fb0830837dc8",
+   "originalFormat": "PNG",
+   "originalBytes": 286832,
+   "originalFile": "GRAM_modals_07.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_modals_07.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 34224
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_eilat_03": {
+   "id": "PLACE_eilat_03",
+   "file": "PLACE_eilat_03.png",
+   "command": 207,
+   "set": "Eilat & the Red Sea",
+   "block": "N",
+   "prompt": "Command 207 (Eilat & the Red Sea): Coral reef seen through clear water with coloured fish (underwater, stylised); a glass-bottom boat over the reef; red granite mountains behind a bay; a desert island fort in the sea (distant); palm beach with shade sails; a marina of small sailboats; a flamingo lagoon at a salt flat; snorkellers' fins and masks above bright water; a night market lane of lights (no signs); the bay at dawn with four countries' shores suggested only by distant hills (no flags, no labels). Image 3 of 10: red granite mountains behind a bay. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "03742f8ec8e5c55b161c4489325cd415f7dba8ddb79996310bd97ecd878d43cf",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:46:04.834Z",
+   "sourceFile": "img-0696.png",
+   "sourceFileDate": "2026-11-06T21:46:04.417Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "4c606005c4822d309d5beb4289b9790bd76adefca9d33d499c84509461296445",
+   "originalFormat": "PNG",
+   "originalBytes": 162398,
+   "originalFile": "PLACE_eilat_03.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_eilat_03.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 20288
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_seasons_02": {
+   "id": "PLACE_seasons_02",
+   "file": "PLACE_seasons_02.png",
+   "command": 209,
+   "set": "Seasons of the land",
+   "block": "N",
+   "prompt": "Command 209 (Seasons of the land): Almond blossom hills in late winter; red anemones carpeting a field in spring; a wheat field gold before harvest; summer — cicada-hot dry hills and one green oasis; the first rain darkening Jerusalem stone; autumn vineyards turning red and gold; winter snow on the northern hills with a single red-roof house; a storm sea at the Jaffa wall; migrating birds in V-formations over a valley at dawn; the land at rest — an empty field under a huge sky in the seventh-year mood (fallow, peaceful, one tree). After command 209, print the 100-place index: set, place name, file — for the app's atlas page. Image 2 of 10: red anemones carpeting a field in spring. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "e2e6f8aeff72322425bf1e1419918c7d03c04eafeafdfc7348735309065d032f",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:46:04.834Z",
+   "sourceFile": "img-0899.png",
+   "sourceFileDate": "2026-11-06T21:46:04.520Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "e6a163475a18e1f4b96b3a0c28bc8838bee14ce8388432a7819d28449d9a9737",
+   "originalFormat": "PNG",
+   "originalBytes": 195872,
+   "originalFile": "PLACE_seasons_02.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_seasons_02.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 32816
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_ask_06": {
+   "id": "GRAM_ask_06",
+   "file": "GRAM_ask_06.png",
+   "command": 214,
+   "set": "Questions",
+   "block": "O",
+   "prompt": "Command 214 (Questions): A giant gold question-mark SHAPE made of ribbon floating over a market stall (shape only, no letters — a sculptural question mark is a symbol, allowed as an object); who — Rimon peeking from behind three doors; where — one scene: Ari looking for something, with a table, an open box and a shelf all in frame; when — Noa pointing at a blank clock and a blank calendar; what — hands open over three covered dishes; why — a child pointing at rain; how many — hands counting pomegranate seeds; how — a puzzled look at a folded paper crane; which — two doors, one gold one blue, hand hovering; whose — a lost glove held up to a crowd. Image 6 of 10: why — a child pointing at rain. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "3aad93939e3dd73fd879fab9504b70531d03094968ddb9a3443f99d50c468710",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:46:04.834Z",
+   "sourceFile": "img-1060.png",
+   "sourceFileDate": "2026-11-06T21:46:04.532Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "664da0356667ed44101d1d1b0817afae18cdbfde169f6a259b2d41b47de0e028",
+   "originalFormat": "PNG",
+   "originalBytes": 267846,
+   "originalFile": "GRAM_ask_06.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_ask_06.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 29694
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_there_10": {
+   "id": "GRAM_there_10",
+   "file": "GRAM_there_10.png",
+   "command": 216,
+   "set": "There is / there isn't",
+   "block": "O",
+   "prompt": "Command 216 (There is / there isn't): A table with a cat on it (there is); the same table empty with Rimon shrugging (there isn't); a fridge open with milk inside; the same fridge with one empty shelf circled by light (nothing there); a garden with a hidden bird (find-it); a sky with no clouds and a puzzled bird; a pocket turned out empty; a pocket with coins (blank); a chair with a siddur left on it (someone was here); an empty chair by a set table (someone missing). Image 10 of 10: an empty chair by a set table (someone missing). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "133bc2d7e6f6ee86330d1d1ae5f8049321ba9540341bf84e6a2c33cd3e2dfc5f",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:46:04.834Z",
+   "sourceFile": "img-1155.png",
+   "sourceFileDate": "2026-11-06T21:46:04.535Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "fb3565e77a51744eb5ad54b96b6a07877e5a9fdfb63b70f35382ecda0d3080cd",
+   "originalFormat": "PNG",
+   "originalBytes": 209435,
+   "originalFile": "GRAM_there_10.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_there_10.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 13318
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_there_01": {
+   "id": "GRAM_there_01",
+   "file": "GRAM_there_01.png",
+   "command": 216,
+   "set": "There is / there isn't",
+   "block": "O",
+   "prompt": "Command 216 (There is / there isn't): A table with a cat on it (there is); the same table empty with Rimon shrugging (there isn't); a fridge open with milk inside; the same fridge with one empty shelf circled by light (nothing there); a garden with a hidden bird (find-it); a sky with no clouds and a puzzled bird; a pocket turned out empty; a pocket with coins (blank); a chair with a siddur left on it (someone was here); an empty chair by a set table (someone missing). Image 1 of 10: A table with a cat on it (there is). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "b4f81b141532841beeab1da79d37d1e7e9f833daba3d00bc9b3a71b7d74a117b",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:46:04.834Z",
+   "sourceFile": "img-1360.png",
+   "sourceFileDate": "2026-11-06T21:46:04.523Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "9a010ce9ff562e94b603932221842e1808b1bde5a7329c5298e6dc23b52037f0",
+   "originalFormat": "PNG",
+   "originalBytes": 211513,
+   "originalFile": "GRAM_there_01.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_there_01.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 14594
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

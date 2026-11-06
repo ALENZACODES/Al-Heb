@@ -2,6 +2,7 @@
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, speak, resultsCard } from './engine.js';
 import { loadJson } from '../grammar/loader.js';
+import { sfx } from '../audio/sfx.js';
 
 export const STORE_KEY = 'games.memorypalace.v1';
 export function buildStations(letters, R) {
@@ -21,6 +22,7 @@ export function recallStation(route, index, id) {
   return !!route[index] && route[index].id === id;
 }
 export function mount(root, ctx) {
+  const leaveSfx = sfx.enter(ctx);
   let alive = true, pool = [], stations = [], route = [], phase = 'study', index = 0, session, R;
   const studied = new Set();
   const status = h('p', { role: 'status', 'aria-live': 'polite' }, 'Resolving courtyard stations…');
@@ -37,10 +39,11 @@ export function mount(root, ctx) {
   function tap(s) {
     if (!alive) return;
     void speak(ctx, s.he);
-    if (phase === 'study') { studied.add(s.id); paint(); return; }
+    if (phase === 'study') { if (!studied.has(s.id)) sfx.play('pluck'); studied.add(s.id); paint(); return; }
     if (phase !== 'recall') return;
     const ok = recallStation(route, index, s.id);
     session.answer(ok);
+    sfx.play(ok ? 'success' : 'error');
     if (ok) index++;
     if (index === route.length) {
       phase = 'done';
@@ -87,6 +90,7 @@ export function mount(root, ctx) {
       status.textContent = 'At least five approved letter pictures are needed. No unresolved stations are shown.'; return;
     }
     start();
+    sfx.play('swoosh');
   }).catch(() => { if (alive) status.textContent = 'Station data unavailable. Try again when online.'; });
-  return () => { alive = false; };
+  return () => { alive = false; leaveSfx(); };
 }

@@ -1,6 +1,7 @@
 // Game 2 — Laser Mirror Maze: the beam must traverse actual Hebrew letters in RTL order.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, resultsCard } from './engine.js';
+import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.lasermaze.v1';
 export const hebrewLetters = (word) => Array.from(String(word || '').normalize('NFD')).filter(c => /[\u05D0-\u05EA]/u.test(c));
@@ -16,6 +17,7 @@ export function buildMazeDeck(index) {
     hebrewLetters(r[he]).length <= 5).map(r => ({ id: r[id], he: r[he], en: r[en] }));
 }
 export function mount(root, ctx) {
+  const leaveSfx = sfx.enter(ctx);
   let alive = true, deck = [], images = null, round = 0, selected = [], used = [];
   let session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 6 });
   const status = h('p', { class: 'game-status', role: 'status', 'aria-live': 'polite' }, 'Loading Hebrew beam targets…');
@@ -42,7 +44,7 @@ export function mount(root, ctx) {
           if (!alive || used.includes(choice.i)) return;
           const expected = letters[selected.length];
           const ok = expected === choice.letter;
-          session.answer(ok);
+          session.answer(ok); sfx.play(ok ? 'success' : 'miss');
           if (ok) { selected.push(choice.letter); used.push(choice.i); }
           status.textContent = ok ? 'Beam reflected to the next RTL letter.' : 'Wrong mirror: RTL path rejected.';
           if (selected.length === letters.length) { round++; selected = []; used = []; }
@@ -57,5 +59,5 @@ export function mount(root, ctx) {
     if (deck.length < 8) { status.textContent = 'Not enough real word targets.'; return; }
     paint();
   }).catch(() => { if (alive) status.textContent = 'Vocabulary unavailable.'; });
-  return () => { alive = false; };
+  return () => { alive = false; leaveSfx(); };
 }

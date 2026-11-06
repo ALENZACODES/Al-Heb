@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 6815 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 6818 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-6815 English labels; 1933 UNKNOWN.
+6818 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -4646,6 +4646,9 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [h3fbb59c8](m/israeli/word/h3fbb59c8.mp3) | קָדַם | to precede, to come before | kadam |
 | [h40319b13](m/israeli/word/h40319b13.mp3) | יַמִּי | marine, of the sea | yami |
 | [h404d10ed](m/israeli/word/h404d10ed.mp3) | פֶּרֶד | mule, hinny; dried pomegranate seeds; odd number | pered |
+| [h40502f8d](m/israeli/word/h40502f8d.mp3) | לִפְנֵי | before, in advance of, prior to; before, in front of, facing; ago | lifnei |
+| [h40790488](m/israeli/word/h40790488.mp3) | הֶחְזִיר | to return, restore | hechzir |
+| [h40e5a2de](m/israeli/word/h40e5a2de.mp3) | אַיֵּה | where | ayeh |
 | [haftarah-after-w1](m/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](m/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](m/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -7421,4 +7424,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 14370 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 14379 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

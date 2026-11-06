@@ -46849,8 +46849,8 @@
   "id": "h40502f8d",
   "text": "לִפְנֵי",
   "ipa": "lif.ˈne",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "before, in advance of, prior to; before, in front of, facing; ago",
   "phonetic": "lifnei"
@@ -61353,8 +61353,8 @@
   "id": "h40e5a2de",
   "text": "אַיֵּה",
   "ipa": "a.ˈje",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "where",
   "phonetic": "ayeh"
@@ -63453,8 +63453,8 @@
   "id": "h40790488",
   "text": "הֶחְזִיר",
   "ipa": "heχ.ˈziʁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
   "english": "to return, restore",
   "phonetic": "hechzir"

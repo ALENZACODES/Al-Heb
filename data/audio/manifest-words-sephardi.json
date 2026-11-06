@@ -17764,8 +17764,8 @@
   "kind": "word",
   "id": "kiddush-zachor-w24",
   "text": "בִּשְׁעָרֶיךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "within your gates",
   "phonetic": "bish'arekha"
@@ -17790,8 +17790,8 @@
   "kind": "word",
   "id": "kiddush-zachor-w25",
   "text": "כִּי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "because, for, since; that; when, as, at the time that",
   "phonetic": "ki"
@@ -17816,8 +17816,8 @@
   "kind": "word",
   "id": "kiddush-zachor-w26",
   "text": "שֵׁשֶׁת־יָמִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "six days",
   "phonetic": "sheshet-yamim"

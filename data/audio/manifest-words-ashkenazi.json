@@ -42958,8 +42958,8 @@
   "kind": "word",
   "id": "shehecheyanu-w1",
   "text": "בָּרוּךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "blessed",
   "phonetic": "barukh"
@@ -43192,8 +43192,8 @@
   "kind": "word",
   "id": "shehecheyanu-w10",
   "text": "לַזְּמַן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to the time",
   "phonetic": "lazeman"
@@ -43218,8 +43218,8 @@
   "kind": "word",
   "id": "shehecheyanu-w11",
   "text": "הַזֶּה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "this",
   "phonetic": "hazeh"

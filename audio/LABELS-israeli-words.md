@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 4377 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 4386 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-4377 English labels; 759 UNKNOWN.
+4386 English labels; 768 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -1638,6 +1638,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [il08-w1](f/israeli/word/il08-w1.mp3) | כַּמָּה זֶה עוֹלֶה | UNKNOWN | kamah zeh oleh |
 | [il08-w2](f/israeli/word/il08-w2.mp3) | יָקָר | UNKNOWN | yakar |
 | [il08-w3](f/israeli/word/il08-w3.mp3) | זוֹל | UNKNOWN | zol |
+| [il08-w4](f/israeli/word/il08-w4.mp3) | אֲנִי רוֹצֶה | UNKNOWN | ani rotzeh |
 | [il08-w5](f/israeli/word/il08-w5.mp3) | יֵשׁ | UNKNOWN | yesh |
 | [il08-w6](f/israeli/word/il08-w6.mp3) | אֵין | UNKNOWN | ein |
 | [il09-w1](f/israeli/word/il09-w1.mp3) | מְזֻמָּן | UNKNOWN | mezuman |
@@ -1710,6 +1711,14 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [il21-w3](f/israeli/word/il21-w3.mp3) | אֲנִי מַעֲדִיף | UNKNOWN | ani ma'adif |
 | [il21-w4](f/israeli/word/il21-w4.mp3) | מַסְכִּים | UNKNOWN | maskim |
 | [il21-w5](f/israeli/word/il21-w5.mp3) | לֹא מַסְכִּים | UNKNOWN | lo maskim |
+| [il22-w1](f/israeli/word/il22-w1.mp3) | הַלּוֹ | UNKNOWN | halo |
+| [il22-w2](f/israeli/word/il22-w2.mp3) | לְהִתְקַשֵּׁר | UNKNOWN | lehitkasher |
+| [il22-w3](f/israeli/word/il22-w3.mp3) | פְּגִישָׁה | UNKNOWN | pegishah |
+| [il22-w4](f/israeli/word/il22-w4.mp3) | לְקַבֵּעַ | UNKNOWN | lekabe'a |
+| [il22-w5](f/israeli/word/il22-w5.mp3) | הוֹדָעָה | UNKNOWN | hoda'ah |
+| [il23-w1](f/israeli/word/il23-w1.mp3) | רֹאשׁ | UNKNOWN | rosh |
+| [il23-w2](f/israeli/word/il23-w2.mp3) | חַיִּים | UNKNOWN | chayim |
+| [il23-w3](f/israeli/word/il23-w3.mp3) | מַה שְׁלוֹמְךָ | UNKNOWN | mah shelomekha |
 | [kaddish-1-w1](f/israeli/word/kaddish-1-w1.mp3) | יִתְגַּדַּל | may it be magnified | yitgadal |
 | [kaddish-1-w10](f/israeli/word/kaddish-1-w10.mp3) | מַלְכוּתֵהּ | his kingdom | malkhuteh |
 | [kaddish-1-w11](f/israeli/word/kaddish-1-w11.mp3) | בְּחַיֵּיכוֹן | in your lifetime | bechayeikhon |
@@ -4983,4 +4992,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 7035 produced clips in INDEX.csv have an English label; 759 UNKNOWN. Filenames and IDs are unchanged.
+All 7061 produced clips in INDEX.csv have an English label; 768 UNKNOWN. Filenames and IDs are unchanged.

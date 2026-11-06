@@ -3,6 +3,7 @@
 // Syllable-to-recording timestamps are not available; the registry's audio sync gate remains open.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, resultsCard } from './engine.js';
+import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.karaokebeat.v1';
 export function buildCadenceDeck(phrasebook) {
@@ -15,6 +16,7 @@ export function cadenceIsComplete(record, taps) {
   return !!record?.tokens?.length && taps === record.tokens.length;
 }
 export function mount(root, ctx) {
+  const leaveSfx = sfx.enter(ctx);
   let alive = true, deck = [], round = 0, beats = 0, previous = 0, intervals = [];
   let session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 5 });
   const status = h('p', { class:'game-status', role:'status', 'aria-live':'polite' }, 'Loading sourced speaking phrases…');
@@ -47,7 +49,7 @@ export function mount(root, ctx) {
         const mean = intervals.length ? intervals.reduce((a,b)=>a+b,0)/intervals.length : 0;
         const variation = mean > 0 ? Math.max(...intervals.map(t=>Math.abs(t-mean)/mean)) : 1;
         const ok = intervals.length >= 2 && mean >= 180 && mean <= 1800 && variation <= 0.4;
-        session.answer(ok); status.textContent = ok ?
+        session.answer(ok); sfx.play(ok ? 'success' : 'miss'); status.textContent = ok ?
           'Consistent manual tempo; no recording synchronization assessed.' :
           'Try a steadier manual rhythm.';
         if (ok) round++;
@@ -66,5 +68,5 @@ export function mount(root, ctx) {
     if (deck.length < 4) { status.textContent = 'Insufficient non-sacred phrase records.'; return; }
     paint();
   }).catch(()=>{ if(alive) status.textContent='Source phrases unavailable.'; });
-  return ()=>{alive=false;};
+  return ()=>{alive=false; leaveSfx();};
 }

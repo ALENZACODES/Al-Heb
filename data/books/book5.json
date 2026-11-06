@@ -42,7 +42,7 @@
     "m": "audio/m/israeli/book/book5-p03.mp3"
    },
    "illustration": "close-up of a single book resting neatly on the wooden surface.",
-   "hasImg": false
+   "hasImg": true
   },
   {
    "n": 4,
@@ -55,7 +55,7 @@
     "m": "audio/m/israeli/book/book5-p04.mp3"
    },
    "illustration": "comfortable shoes near a wooden chair; someone settled, at peace.",
-   "hasImg": false
+   "hasImg": true
   },
   {
    "n": 5,
@@ -81,7 +81,7 @@
     "m": "audio/m/israeli/book/book5-p06.mp3"
    },
    "illustration": "the chair pulled up to the oak table, ready.",
-   "hasImg": false
+   "hasImg": true
   },
   {
    "n": 7,

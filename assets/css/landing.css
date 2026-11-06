@@ -63,3 +63,37 @@ body:has(.showcase) .card.onboarding::before { display: none; }
   border: 1.5px solid #d9a441; font-weight: 700;
 }
 .show-cta .show-btn2:hover { background: rgba(10, 26, 14, 0.88); color: #ffe9a8; }
+
+/* Site footer — attribution on every page. */
+.site-footer {
+  text-align: center; padding: 1.4rem 1rem 2.2rem; margin-top: 1rem;
+  border-top: 1px solid rgba(217,164,65,.35); color: #7a7565; font-size: .92rem;
+}
+/* Interactive try panel on the first screen. */
+.show-try {
+  margin-top: .8rem; padding: 1rem 1.1rem 1.1rem; border-radius: 16px;
+  background: linear-gradient(180deg, #17351e, #10240f);
+  border: 1.5px solid #d9a441; color: #f6f1e7; text-align: center;
+}
+.show-try-title { margin: 0 0 .4rem; font-weight: 800; color: #e8c97a; letter-spacing: .04em; }
+.show-slots { margin: .2rem 0 .7rem; font-size: 2.6rem; line-height: 1.1; }
+.show-slot {
+  display: inline-block; min-width: 3rem; margin: 0 .3rem; padding: .1rem .2rem;
+  border-bottom: 3px solid rgba(217,164,65,.6); color: #e8c97a;
+}
+.show-slot.filled { color: #fff8e7; animation: show-pop .35s ease-out; }
+@keyframes show-pop { 0% { transform: scale(1.35); } 100% { transform: scale(1); } }
+.show-letters { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; }
+.show-letter-btn {
+  display: flex; flex-direction: column; align-items: center; gap: .1rem;
+  min-width: 4.4rem; padding: .5rem .4rem .45rem; border-radius: 12px; cursor: pointer;
+  background: rgba(246,241,231,.07); border: 1px solid rgba(217,164,65,.55); color: #f6f1e7;
+  transition: transform .12s ease, border-color .12s ease, background .12s ease;
+}
+.show-letter-btn:hover, .show-letter-btn:focus-visible { transform: translateY(-2px); border-color: #d9a441; background: rgba(217,164,65,.16); }
+.show-letter-btn:active { transform: scale(.96); }
+.show-letter-glyph { font-size: 1.9rem; line-height: 1.1; }
+.show-letter-name { font-size: .78rem; color: #d8e2c4; }
+.show-try-status { margin: .7rem auto 0; max-width: 32rem; color: #e9e4cf; min-height: 1.4em; }
+.show-again { margin-top: .6rem; }
+@media (prefers-reduced-motion: reduce) { .show-slot.filled { animation: none; } .show-letter-btn { transition: none; } }

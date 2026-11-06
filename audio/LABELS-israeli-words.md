@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 5112 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 5116 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-5112 English labels; 1494 UNKNOWN.
+5116 English labels; 1498 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -4255,6 +4255,10 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [i-43-w8](m/israeli/word/i-43-w8.mp3) | מְזֻמָּן | UNKNOWN | mezuman |
 | [i-43-w9](m/israeli/word/i-43-w9.mp3) | שַׂקִּית | UNKNOWN | sakit |
 | [i-44-w1](m/israeli/word/i-44-w1.mp3) | שָׁבוּר | UNKNOWN | shavur |
+| [i-44-w10](m/israeli/word/i-44-w10.mp3) | דָּחוּף | UNKNOWN | dachuf |
+| [i-44-w11](m/israeli/word/i-44-w11.mp3) | עֶזְרָה | UNKNOWN | ezrah |
+| [i-44-w12](m/israeli/word/i-44-w12.mp3) | תּוֹר | UNKNOWN | tor |
+| [i-44-w2](m/israeli/word/i-44-w2.mp3) | מַנְעוּל | UNKNOWN | man'ul |
 | [kaddish-1-w1](m/israeli/word/kaddish-1-w1.mp3) | יִתְגַּדַּל | may it be magnified | yitgadal |
 | [kaddish-1-w10](m/israeli/word/kaddish-1-w10.mp3) | מַלְכוּתֵהּ | his kingdom | malkhuteh |
 | [kaddish-1-w11](m/israeli/word/kaddish-1-w11.mp3) | בְּחַיֵּיכוֹן | in your lifetime | bechayeikhon |
@@ -5718,4 +5722,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 9225 produced clips in INDEX.csv have an English label; 1494 UNKNOWN. Filenames and IDs are unchanged.
+All 9238 produced clips in INDEX.csv have an English label; 1498 UNKNOWN. Filenames and IDs are unchanged.

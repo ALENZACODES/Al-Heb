@@ -17387,8 +17387,8 @@
   "kind": "word",
   "id": "kiddush-zachor-w9",
   "text": "כָּל־מְלַאכְתֶּךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "all your work",
   "phonetic": "kol-melakhtekha"
@@ -31375,8 +31375,8 @@
   "kind": "word",
   "id": "lecha-dodi-1-w1",
   "text": "לְכָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "come",
   "phonetic": "lekhah"
@@ -31609,8 +31609,8 @@
   "kind": "word",
   "id": "lecha-dodi-1-w10",
   "text": "בְּדִבּוּר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "in an utterance",
   "phonetic": "bedibur"
@@ -31635,8 +31635,8 @@
   "kind": "word",
   "id": "lecha-dodi-1-w11",
   "text": "אֶחָד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "one",
   "phonetic": "echad"

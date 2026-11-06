@@ -59005,12 +59005,13 @@
   "kind": "word",
   "id": "i-44-w2",
   "text": "מַנְעוּל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h77db1172",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "man'ul"
  },
  {
   "path": "audio/f/israeli/word/i-44-w2.mp3",
@@ -59233,12 +59234,13 @@
   "kind": "word",
   "id": "i-44-w10",
   "text": "דָּחוּף",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "heede8c51",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "dachuf"
  },
  {
   "path": "audio/f/israeli/word/i-44-w10.mp3",
@@ -59262,12 +59264,13 @@
   "kind": "word",
   "id": "i-44-w11",
   "text": "עֶזְרָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h9a52f49b",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ezrah"
  },
  {
   "path": "audio/f/israeli/word/i-44-w11.mp3",
@@ -59291,12 +59294,13 @@
   "kind": "word",
   "id": "i-44-w12",
   "text": "תּוֹר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h87abbddd",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "tor"
  },
  {
   "path": "audio/f/israeli/word/i-44-w12.mp3",

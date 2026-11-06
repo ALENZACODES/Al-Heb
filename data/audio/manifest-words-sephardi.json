@@ -8797,7 +8797,9 @@
   "text": "אֲדוֹן",
   "status": "tts",
   "source": "paid-cloud",
-  "group": "prayer-word"
+  "group": "prayer-word",
+  "english": "UNKNOWN",
+  "phonetic": "adon"
  },
  {
   "path": "audio/m/sephardi/word/adon-olam-1-w2.mp3",

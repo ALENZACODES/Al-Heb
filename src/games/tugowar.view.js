@@ -60,15 +60,14 @@ export function mount(root, ctx) {
     const order = [0, 1, 2].sort(() => 0.5 - Math.random());
     current = { pair, answer: pair };
     const img = imgOf(R, 'id', pair.img);
-    board.replaceChildren(
-      h('p', { class: 'game-prompt' }, 'Opposite of ', heSpan(pair[0], 'he game-he'), ` (${pair[1]} — ${pair[2]})?`),
-      img ? h('img', { class: 'game-card-img', src: img.src, alt: img.alt, width: img.width, height: img.height }) : null,
-      h('div', { class: 'game-choices' }, ...order.map((i) => {
+    const kids = [h('p', { class: 'game-prompt' }, 'Opposite of ', heSpan(pair[0], 'he game-he'), ` (${pair[1]} — ${pair[2]})?`)];
+    if (img) kids.push(h('img', { class: 'game-card-img', src: img.src, alt: img.alt, width: img.width, height: img.height }));
+    kids.push(h('div', { class: 'game-choices' }, ...order.map((i) => {
         const c = choices[i];
         return h('button', { type: 'button', class: 'btn secondary game-choice', onclick: () => answer(c) },
           heSpan(c[3], 'he game-he-sm'), h('span', { class: 'muted' }, ` ${c[4]} · ${c[5]}`));
-      })),
-    );
+      })));
+    board.replaceChildren(...kids);
     status.textContent = `Round ${round} of ${ROUNDS} · Score ${session.score} · Streak ${session.streak}`;
     paintRope();
   }

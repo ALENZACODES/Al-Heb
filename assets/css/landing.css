@@ -56,3 +56,10 @@ body:has(.showcase) .card.onboarding::before { display: none; }
   .show-hero-text { animation: none; }
   .show-tile { transition: none; }
 }
+
+/* Hero secondary button: keep the gold label legible on the photo. */
+.show-cta .show-btn2 {
+  color: #ffe9a8; background: rgba(10, 26, 14, 0.72);
+  border: 1.5px solid #d9a441; font-weight: 700;
+}
+.show-cta .show-btn2:hover { background: rgba(10, 26, 14, 0.88); color: #ffe9a8; }

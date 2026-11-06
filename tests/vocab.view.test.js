@@ -360,3 +360,19 @@ test("cards show the pointed form, never the lemma spelling, when they differ", 
   assert.equal(he.text, diff.pointed);
   assert.ok(!li.find((n) => n.attrs.lang === "he").some((n) => n.text === diff.lemma));
 });
+
+test("review: an approved word picture is the cue, and the Hebrew stays hidden until the answer", async () => {
+  const e = tier500.find((x) => x.pointed) || tier500[0];
+  const cards = addCards({}, [e], 0).cards;
+  const { root, ctx } = mk({ store: { "srs.vocab": cards }, query: { review: "1" } });
+  ctx.img = (h, spec) => spec.id === e.id ? h("img", { alt: "a cup on a table", loading: "lazy", src: "assets/img/gen/example.webp", "data-img-id": spec.id }) : null;
+  mount(root, ctx); await idle(root);
+  const q = byId(root, "vc-q");
+  assert.equal(q.attrs["data-cue"], "picture");
+  assert.equal(q.find((n) => n.tag === "img").length, 1);
+  assert.equal(q.text.includes(e.pointed || e.lemma), false);
+  assert.equal(q.text.includes(e.gloss), false);
+  await byId(root, "vc-show").click();
+  assert.ok(root.text.includes(e.pointed || e.lemma));
+  assert.ok(root.text.includes(e.gloss));
+});

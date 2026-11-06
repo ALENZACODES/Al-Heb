@@ -14,6 +14,7 @@ import { plural } from '../shell/plural.js';
 import { audioButton } from '../shell/audio-access.js';
 import { uiEnglish } from '../shell/names.js';
 import { sourcesLine } from '../shell/sources.js';
+import { wordReviewCue } from '../img/cue.js';
 
 const PAGE = 40;          // cards rendered per page
 const ADD_LIMIT = 100;    // words added to reviews per click
@@ -299,8 +300,10 @@ export function mount(root, ctx) {
     if (rv.pos >= rv.queue.length) { summary(); return; }
     const id = rv.queue[rv.pos], e = rv.byTier[id.slice(CARD_PREFIX.length)];
     rv.revealed = false; rv.current = e;
-    const prompt = el('div', { class: 'card vc-card', tabindex: '-1', id: 'vc-q', role: 'group', 'aria-label': `Word ${rv.pos + 1} of ${rv.queue.length}` },
-      el('p', { class: 'vc-meta' }, `Word ${rv.pos + 1} of ${rv.queue.length}. Say what it means, then check.`), heWord(e, 'vc-big'));
+    const cue = wordReviewCue(el, ctx.img, e, { n: rv.pos + 1, total: rv.queue.length });
+    rv.cue = cue.mode;
+    const prompt = el('div', { class: 'card vc-card', tabindex: '-1', id: 'vc-q', role: 'group', 'aria-label': `Word ${rv.pos + 1} of ${rv.queue.length}`, 'data-cue': cue.mode },
+      ...cue.nodes, ...(cue.mode === 'text' ? [heWord(e, 'vc-big')] : []));
     const reveal = el('button', { type: 'button', class: 'btn', id: 'vc-show', onclick: () => showAnswer(prompt, reveal) }, 'Show answer');
     body.replaceChildren(prompt, el('div', { class: 'row' }, reveal));
     focusNode(prompt);
@@ -308,7 +311,7 @@ export function mount(root, ctx) {
   function showAnswer(prompt, reveal) {
     const e = rv.current; rv.revealed = true;
     reveal.remove?.();
-    const answer = el('div', { class: 'vc-answer', 'aria-live': 'polite' }, ctx.img?.(el, { kind: 'word', id: e.id, class: 'vc-pic', width: 400 }), el('p', { class: 'vc-gloss', tabindex: '-1', id: 'vc-a' }, ...glossNodes(e.gloss)), metaLine(e), ...noteLines(e), translitLine(e), el('div', { class: 'row' }, listenButton(e)));
+    const answer = el('div', { class: 'vc-answer', 'aria-live': 'polite' }, ...(rv.cue === 'picture' ? [heWord(e, 'vc-big')] : []), el('p', { class: 'vc-gloss', tabindex: '-1', id: 'vc-a' }, ...glossNodes(e.gloss)), metaLine(e), ...noteLines(e), translitLine(e), el('div', { class: 'row' }, listenButton(e)));
     const rate = el('div', { class: 'vc-rate', role: 'group', 'aria-label': 'How well did you remember it?' },
       ...RATINGS.map(([r, name, hint]) => el('button', { type: 'button', class: 'btn' + (r === 3 ? '' : ' secondary'), 'data-rating': String(r), 'aria-label': `${name} (${r}): ${hint}`, onclick: () => rate_(r) }, `${name} (${r})`)));
     prompt.append(answer); body.append(rate);

@@ -46,6 +46,7 @@ export const STORE_KEYS = [
   ['intermediate.v1', 'Intermediate lessons progress', 'src/curriculum/intermediate.view.js'],
   ['service.prefs', 'Follow-the-service choices (order, tradition, whether to show transliteration)', 'src/service/service.view.js'],
   ['progress.milestones.v1', 'Which progress milestones you have reached, and when', 'src/progress/store.js'],
+  ['awards.v1', 'Awards on this device: practice-game activity, the name typed for a certificate sample, and any objective assessment evidence stored later. Lesson completion is not copied here. There is no account.', 'src/awards/record.js'],
   ['__meta', 'Storage format version number only (no learner data; left out of backups)', 'src/store.js'],
   ['firstday.progress', 'First 10 minutes progress', 'src/firstday/model.js'],
   ['firstday.ladder', 'Pointed-to-unpointed ladder', 'src/firstday/ladder.view.js'],

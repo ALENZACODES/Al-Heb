@@ -28,6 +28,7 @@ export const ROUTES = [
   { name: 'fade',     pattern: '/fade',          module: '../curriculum/learn.view.js', title: 'Fade-out recall',  owner: 'lane1', group: 'learn', quick: 'nav.fade',     query: { fade: '1' },        needs: 'curriculum/fade.view.js' },
   { name: 'fadeline', pattern: '/fade/:id',      module: '../curriculum/learn.view.js', title: 'Fade-out recall',  owner: 'lane1', paramQuery: { id: 'fade' },                                                       needs: 'curriculum/fade.view.js' },
   { name: 'progress', pattern: '/progress', module: '../progress/progress.view.js', tier: 'v0', title: 'Progress', owner: 'lane10', group: 'learn', quick: 'nav.progress' },
+  { name: 'awards', pattern: '/awards', module: '../awards/gallery.view.js', title: 'Awards and certificate', owner: 'awards', optional: true, group: 'progress', quick: 'nav.route.awards' },
   { name: 'wordtrace', pattern: '/words/trace', module: '../wordtrace/wordtrace.view.js', title: 'Trace words', owner: 'lane2', optional: true, quick: 'nav.wordtrace' },
   { name: 'israel',    pattern: '/israel',      module: '../israel/israel.view.js', title: 'Sound like a local', owner: 'lane10', optional: true, group: 'learn', quick: 'nav.israel' },
   { name: 'israelsec', pattern: '/israel/:sec', module: '../israel/israel.view.js', title: 'Sound like a local', owner: 'lane10', paramQuery: { sec: 'sec' } },

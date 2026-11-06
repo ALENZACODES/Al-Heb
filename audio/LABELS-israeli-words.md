@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 3400 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 3409 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-3400 English labels; 4 UNKNOWN.
+3409 English labels; 4 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -3416,6 +3416,15 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [vahavta-2-w15](m/israeli/word/vahavta-2-w15.mp3) | וּבְלֶכְתְּךָ | and when you walk | uvelekhtekha |
 | [vahavta-2-w16](m/israeli/word/vahavta-2-w16.mp3) | בַדֶּרֶךְ | on the way | vaderekh |
 | [vahavta-2-w17](m/israeli/word/vahavta-2-w17.mp3) | וּבְשָׁכְבְּךָ | and when you lie down | uveshakhbekha |
+| [vahavta-2-w18](m/israeli/word/vahavta-2-w18.mp3) | וּבְקוּמֶךָ׃ | and when you rise | uvekumekha |
+| [vahavta-2-w2](m/israeli/word/vahavta-2-w2.mp3) | הַדְּבָרִים | the words | hadevarim |
+| [vahavta-2-w3](m/israeli/word/vahavta-2-w3.mp3) | הָאֵלֶּה | these | ha'eleh |
+| [vahavta-2-w4](m/israeli/word/vahavta-2-w4.mp3) | אֲשֶׁר | your God | asher |
+| [vahavta-2-w5](m/israeli/word/vahavta-2-w5.mp3) | אָנֹכִי | with all your heart | anokhi |
+| [vahavta-2-w6](m/israeli/word/vahavta-2-w6.mp3) | מְצַוְּךָ | I command you | metzavekha |
+| [vahavta-2-w7](m/israeli/word/vahavta-2-w7.mp3) | הַיּוֹם | and with all your might | hayom |
+| [vahavta-2-w8](m/israeli/word/vahavta-2-w8.mp3) | עַל־לְבָבֶךָ׃ | upon your heart | al-levavekha |
+| [vahavta-2-w9](m/israeli/word/vahavta-2-w9.mp3) | וְשִׁנַּנְתָּם | and you shall teach them | veshinantam |
 
 ## Israeli reading lines
 
@@ -4006,4 +4015,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 4394 produced clips in INDEX.csv have an English label; 18 UNKNOWN. Filenames and IDs are unchanged.
+All 4409 produced clips in INDEX.csv have an English label; 19 UNKNOWN. Filenames and IDs are unchanged.

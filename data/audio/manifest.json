@@ -13170,10 +13170,11 @@
   "kind": "line",
   "id": "bless-priestly-1",
   "text": "יְבָרֶכְךָ אֲדֹנָי וְיִשְׁמְרֶךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "The LORD bless thee, and keep thee;"
+  "english": "The LORD bless thee, and keep thee;",
+  "phonetic": "yevorekhkho adonoy veyishmerekho"
  },
  {
   "path": "audio/m/israeli/prayer/bless-priestly-1.mp3",
@@ -17419,10 +17420,11 @@
   "kind": "line",
   "id": "avot-1",
   "text": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא אֵל עֶלְיוֹן גּוֹמֵל חֲסָדִים טוֹבִים קוֹנֵה הַכֹּל וְזוֹכֵר חַסְדֵּי אָבוֹת וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַעַן שְׁמוֹ בְּאַהֲבָה׃ מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "Blessed are you, LORD our God and God of our ancestors, God of Abraham, God of Isaac and God of Jacob; the great, mighty and awesome God, God Most High, who bestows loving-kindnesses, creates all things, remembers the kindnesses of the ancestors, and brings a redeemer to their children's children for the sake of his name, in love. King, helper, saviour and shield."
+  "english": "Blessed are you, LORD our God and God of our ancestors, God of Abraham, God of Isaac and God of Jacob; the great, mighty and awesome God, God Most High, who bestows loving-kindnesses, creates all things, remembers the kindnesses of the ancestors, and brings a redeemer to their children's children for the sake of his name, in love. King, helper, saviour and shield.",
+  "phonetic": "barukh atah adonai eloheinu velohei avoteinu elohei avraham elohei yitzchak velohei ya'akov ha'el hagadol hagibor vehanora el elyon gomel chasadim tovim koneh hakol vezokher chasdei avot umevi go'el livnei veneihem lema'an shemo be'ahavah melekh ozer umoshi'a umagen"
  },
  {
   "path": "audio/f/ashkenazi/line/avot-1.mp3",
@@ -18133,10 +18135,11 @@
   "kind": "line",
   "id": "adon-olam-1-l4",
   "text": "וְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "vehu hoyoh vehu hoveh vehu yihyeh besif'oroh"
  },
  {
   "path": "audio/m/israeli/line/adon-olam-1-l5.mp3",
@@ -21574,10 +21577,11 @@
   "kind": "line",
   "id": "ashrei-84-5",
   "text": "אַשְׁרֵי יוֹשְׁבֵי בֵיתֶךָ עוֹד יְהַלְלוּךָ סֶּלָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "Happy are they that dwell in Thy house, they are ever praising Thee. Selah"
+  "english": "Happy are they that dwell in Thy house, they are ever praising Thee. Selah",
+  "phonetic": "ashrei yoshevei veitekha od yehalelukha selah"
  },
  {
   "path": "audio/f/ashkenazi/line/ashrei-84-5.mp3",
@@ -22196,10 +22200,11 @@
   "kind": "line",
   "id": "ashrei-145-16",
   "text": "פּוֹתֵחַ אֶת־יָדֶךָ וּמַשְׂבִּיעַ לְכָל־חַי רָצוֹן׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "Thou openest Thy hand, And satisfiest every living thing with favour."
+  "english": "Thou openest Thy hand, And satisfiest every living thing with favour.",
+  "phonetic": "poteach et-yadekha umasbi'a lekhol-chai ratzon"
  },
  {
   "path": "audio/f/ashkenazi/line/ashrei-145-16.mp3",
@@ -23896,10 +23901,11 @@
   "kind": "line",
   "id": "avot-closing",
   "text": "מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן בָּרוּךְ אַתָּה אֲדֹנָי מָגֵן אַבְרָהָם׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
-  "english": "King, helper, saviour and shield. Blessed are you, LORD, shield of Abraham."
+  "english": "King, helper, saviour and shield. Blessed are you, LORD, shield of Abraham.",
+  "phonetic": "melekh ozer umoshi'a umagen barukh atah adonai magen avraham"
  },
  {
   "path": "audio/f/ashkenazi/line/avot-closing.mp3",

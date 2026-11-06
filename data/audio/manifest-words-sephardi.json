@@ -35860,8 +35860,8 @@
   "kind": "word",
   "id": "haftarah-after-w10",
   "text": "בְּכָל־הַדּוֹרוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "in all generations",
   "phonetic": "bekhol-hadorot"
@@ -38200,8 +38200,8 @@
   "kind": "word",
   "id": "haftarah-after-w100",
   "text": "אַתָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "you, thou",
   "phonetic": "atah"
@@ -38226,8 +38226,8 @@
   "kind": "word",
   "id": "haftarah-after-w101",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the LORD",
   "phonetic": "adonai"
@@ -50868,7 +50868,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "horn; ray, beam; corner (exterior)"
+  "english": "horn; ray, beam; corner (exterior)",
+  "phonetic": "keren"
  },
  {
   "path": "audio/f/sephardi/word/hb082296c.mp3",
@@ -50881,7 +50882,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "horn; ray, beam; corner (exterior)"
+  "english": "horn; ray, beam; corner (exterior)",
+  "phonetic": "keren"
  },
  {
   "path": "audio/m/sephardi/word/hb8a7e485.mp3",
@@ -53568,7 +53570,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "well, so"
+  "english": "well, so",
+  "phonetic": "nu"
  },
  {
   "path": "audio/f/sephardi/word/hb2147419.mp3",
@@ -53581,7 +53584,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "well, so"
+  "english": "well, so",
+  "phonetic": "nu"
  },
  {
   "path": "audio/m/sephardi/word/h620aed09.mp3",
@@ -59114,7 +59118,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "and"
+  "english": "and",
+  "phonetic": "ve-"
  },
  {
   "path": "audio/f/sephardi/word/hb21be276.mp3",
@@ -59127,7 +59132,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "and"
+  "english": "and",
+  "phonetic": "ve-"
  },
  {
   "path": "audio/m/sephardi/word/h32049c3e.mp3",
@@ -61244,7 +61250,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "introduces a subordinate clause, that, which, who"
+  "english": "introduces a subordinate clause, that, which, who",
+  "phonetic": "de-"
  },
  {
   "path": "audio/f/sephardi/word/hb1265621.mp3",
@@ -61257,7 +61264,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "introduces a subordinate clause, that, which, who"
+  "english": "introduces a subordinate clause, that, which, who",
+  "phonetic": "de-"
  },
  {
   "path": "audio/m/sephardi/word/hdea05db5.mp3",

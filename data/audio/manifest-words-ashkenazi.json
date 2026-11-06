@@ -34976,8 +34976,8 @@
   "kind": "word",
   "id": "haftarah-before-w2",
   "text": "אַתָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "you, thou",
   "phonetic": "atah"
@@ -35392,8 +35392,8 @@
   "kind": "word",
   "id": "haftarah-before-w18",
   "text": "הַבּוֹחֵר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "who chooses",
   "phonetic": "habocher"
@@ -35418,8 +35418,8 @@
   "kind": "word",
   "id": "haftarah-before-w19",
   "text": "בַּתּוֹרָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "with the Torah",
   "phonetic": "batorah"
@@ -35444,8 +35444,8 @@
   "kind": "word",
   "id": "haftarah-before-w20",
   "text": "וּבְמֹשֶׁה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and with Moses",
   "phonetic": "uvemosheh"
@@ -50868,7 +50868,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "horn; ray, beam; corner (exterior)"
+  "english": "horn; ray, beam; corner (exterior)",
+  "phonetic": "keren"
  },
  {
   "path": "audio/f/ashkenazi/word/hb082296c.mp3",
@@ -50881,7 +50882,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "horn; ray, beam; corner (exterior)"
+  "english": "horn; ray, beam; corner (exterior)",
+  "phonetic": "keren"
  },
  {
   "path": "audio/m/ashkenazi/word/hb8a7e485.mp3",
@@ -53568,7 +53570,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "well, so"
+  "english": "well, so",
+  "phonetic": "nu"
  },
  {
   "path": "audio/f/ashkenazi/word/hb2147419.mp3",
@@ -53581,7 +53584,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "well, so"
+  "english": "well, so",
+  "phonetic": "nu"
  },
  {
   "path": "audio/m/ashkenazi/word/h620aed09.mp3",
@@ -59114,7 +59118,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "and"
+  "english": "and",
+  "phonetic": "ve-"
  },
  {
   "path": "audio/f/ashkenazi/word/hb21be276.mp3",
@@ -59127,7 +59132,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "and"
+  "english": "and",
+  "phonetic": "ve-"
  },
  {
   "path": "audio/m/ashkenazi/word/h32049c3e.mp3",
@@ -61244,7 +61250,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "introduces a subordinate clause, that, which, who"
+  "english": "introduces a subordinate clause, that, which, who",
+  "phonetic": "de-"
  },
  {
   "path": "audio/f/ashkenazi/word/hb1265621.mp3",
@@ -61257,7 +61264,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "introduces a subordinate clause, that, which, who"
+  "english": "introduces a subordinate clause, that, which, who",
+  "phonetic": "de-"
  },
  {
   "path": "audio/m/ashkenazi/word/hdea05db5.mp3",

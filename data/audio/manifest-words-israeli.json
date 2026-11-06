@@ -50868,7 +50868,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "horn; ray, beam; corner (exterior)"
+  "english": "horn; ray, beam; corner (exterior)",
+  "phonetic": "keren"
  },
  {
   "path": "audio/f/israeli/word/hb082296c.mp3",
@@ -50878,10 +50879,11 @@
   "id": "hb082296c",
   "text": "קֶרֶן",
   "ipa": "ke.ˈʁen",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "horn; ray, beam; corner (exterior)"
+  "english": "horn; ray, beam; corner (exterior)",
+  "phonetic": "keren"
  },
  {
   "path": "audio/m/israeli/word/hb8a7e485.mp3",
@@ -53568,7 +53570,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "well, so"
+  "english": "well, so",
+  "phonetic": "nu"
  },
  {
   "path": "audio/f/israeli/word/hb2147419.mp3",
@@ -53578,10 +53581,11 @@
   "id": "hb2147419",
   "text": "נוּ",
   "ipa": "ˈnu",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "well, so"
+  "english": "well, so",
+  "phonetic": "nu"
  },
  {
   "path": "audio/m/israeli/word/h620aed09.mp3",
@@ -59114,7 +59118,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "and"
+  "english": "and",
+  "phonetic": "ve-"
  },
  {
   "path": "audio/f/israeli/word/hb21be276.mp3",
@@ -59124,10 +59129,11 @@
   "id": "hb21be276",
   "text": "וְ־",
   "ipa": "ˈve-",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "and"
+  "english": "and",
+  "phonetic": "ve-"
  },
  {
   "path": "audio/m/israeli/word/h32049c3e.mp3",
@@ -61244,7 +61250,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "introduces a subordinate clause, that, which, who"
+  "english": "introduces a subordinate clause, that, which, who",
+  "phonetic": "de-"
  },
  {
   "path": "audio/f/israeli/word/hb1265621.mp3",
@@ -61254,10 +61261,11 @@
   "id": "hb1265621",
   "text": "דְּ־",
   "ipa": "ˈde-",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "introduces a subordinate clause, that, which, who"
+  "english": "introduces a subordinate clause, that, which, who",
+  "phonetic": "de-"
  },
  {
   "path": "audio/m/israeli/word/hdea05db5.mp3",

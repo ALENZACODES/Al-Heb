@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 6228 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 6232 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-6228 English labels; 1933 UNKNOWN.
+6232 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -1657,6 +1657,10 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [havdalah-spices-w7](f/israeli/word/havdalah-spices-w7.mp3) | בּוֹרֵא | creator | bore |
 | [havdalah-spices-w8](f/israeli/word/havdalah-spices-w8.mp3) | מִינֵי | kinds of | minei |
 | [havdalah-spices-w9](f/israeli/word/havdalah-spices-w9.mp3) | בְשָׂמִים׃ | spices | vesamim |
+| [hb082296c](f/israeli/word/hb082296c.mp3) | קֶרֶן | horn; ray, beam; corner (exterior) | keren |
+| [hb1265621](f/israeli/word/hb1265621.mp3) | דְּ־ | introduces a subordinate clause, that, which, who | de- |
+| [hb2147419](f/israeli/word/hb2147419.mp3) | נוּ | well, so | nu |
+| [hb21be276](f/israeli/word/hb21be276.mp3) | וְ־ | and | ve- |
 | [help-01](f/israeli/word/help-01.mp3) | עֶזְרָה! | help! | ezrah! |
 | [i-01-w1](f/israeli/word/i-01-w1.mp3) | בָּרְכוּ | UNKNOWN | barkhu |
 | [i-01-w10](f/israeli/word/i-01-w10.mp3) | לְעוֹלָם וָעֶד | UNKNOWN | le'olam va'ed |
@@ -6834,4 +6838,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 12589 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 12600 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

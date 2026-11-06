@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 5116 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 5183 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-5116 English labels; 1498 UNKNOWN.
+5183 English labels; 1565 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -4259,6 +4259,73 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [i-44-w11](m/israeli/word/i-44-w11.mp3) | עֶזְרָה | UNKNOWN | ezrah |
 | [i-44-w12](m/israeli/word/i-44-w12.mp3) | תּוֹר | UNKNOWN | tor |
 | [i-44-w2](m/israeli/word/i-44-w2.mp3) | מַנְעוּל | UNKNOWN | man'ul |
+| [i-44-w3](m/israeli/word/i-44-w3.mp3) | דֶּלֶת | UNKNOWN | delet |
+| [i-44-w4](m/israeli/word/i-44-w4.mp3) | חַשְׁמַל | UNKNOWN | chashmal |
+| [i-44-w5](m/israeli/word/i-44-w5.mp3) | חַשְׁמַלַּאי | UNKNOWN | chashmalay |
+| [i-44-w6](m/israeli/word/i-44-w6.mp3) | מְקָרֵר | UNKNOWN | mekarer |
+| [i-44-w7](m/israeli/word/i-44-w7.mp3) | קִיר | UNKNOWN | kir |
+| [i-44-w8](m/israeli/word/i-44-w8.mp3) | בַּעַל הַבַּיִת | UNKNOWN | ba'al habayit |
+| [i-44-w9](m/israeli/word/i-44-w9.mp3) | מָתַי? | UNKNOWN | matai? |
+| [i-45-w1](m/israeli/word/i-45-w1.mp3) | מִשְׁלוֹחַ | UNKNOWN | mishloach |
+| [i-45-w10](m/israeli/word/i-45-w10.mp3) | כַּמָּה זְמַן | UNKNOWN | kamah zeman |
+| [i-45-w11](m/israeli/word/i-45-w11.mp3) | טָעִים | UNKNOWN | ta'im |
+| [i-45-w12](m/israeli/word/i-45-w12.mp3) | תּוֹדָה | UNKNOWN | todah |
+| [i-45-w2](m/israeli/word/i-45-w2.mp3) | הַזְמָנָה | UNKNOWN | hazmanah |
+| [i-45-w3](m/israeli/word/i-45-w3.mp3) | שָׁלִיחַ | UNKNOWN | shaliach |
+| [i-45-w4](m/israeli/word/i-45-w4.mp3) | פִּיצָה | UNKNOWN | pitzah |
+| [i-45-w5](m/israeli/word/i-45-w5.mp3) | כְּתֹבֶת | UNKNOWN | ketovet |
+| [i-45-w6](m/israeli/word/i-45-w6.mp3) | קוֹמָה | UNKNOWN | komah |
+| [i-45-w7](m/israeli/word/i-45-w7.mp3) | דֶּלֶת | UNKNOWN | delet |
+| [i-45-w8](m/israeli/word/i-45-w8.mp3) | סָלָט | UNKNOWN | salat |
+| [i-45-w9](m/israeli/word/i-45-w9.mp3) | מַיִם | UNKNOWN | mayim |
+| [i-46-w1](m/israeli/word/i-46-w1.mp3) | חֵרוּם | UNKNOWN | cherum |
+| [i-46-w10](m/israeli/word/i-46-w10.mp3) | אָבַד לִי | UNKNOWN | avad li |
+| [i-46-w11](m/israeli/word/i-46-w11.mp3) | הַדַּרְכּוֹן | UNKNOWN | hadarkon |
+| [i-46-w12](m/israeli/word/i-46-w12.mp3) | טֶלֶפוֹן | UNKNOWN | telefon |
+| [i-46-w2](m/israeli/word/i-46-w2.mp3) | מִשְׁטָרָה | UNKNOWN | mishtarah |
+| [i-46-w3](m/israeli/word/i-46-w3.mp3) | אַמְבּוּלַנְס | UNKNOWN | ambulans |
+| [i-46-w4](m/israeli/word/i-46-w4.mp3) | סַכָּנָה | UNKNOWN | sakanah |
+| [i-46-w5](m/israeli/word/i-46-w5.mp3) | דָּחוּף | UNKNOWN | dachuf |
+| [i-46-w6](m/israeli/word/i-46-w6.mp3) | שְׂרֵפָה | UNKNOWN | serefah |
+| [i-46-w7](m/israeli/word/i-46-w7.mp3) | גַּנָּב | UNKNOWN | ganav |
+| [i-46-w8](m/israeli/word/i-46-w8.mp3) | עֶזְרָה! | UNKNOWN | ezrah! |
+| [i-46-w9](m/israeli/word/i-46-w9.mp3) | רוֹפֵא | UNKNOWN | rofe |
+| [i-47-w1](m/israeli/word/i-47-w1.mp3) | חֲדָשׁוֹת | UNKNOWN | chadashot |
+| [i-47-w10](m/israeli/word/i-47-w10.mp3) | אֶתְמוֹל | UNKNOWN | etmol |
+| [i-47-w11](m/israeli/word/i-47-w11.mp3) | אֵין | UNKNOWN | ein |
+| [i-47-w12](m/israeli/word/i-47-w12.mp3) | יֵשׁ | UNKNOWN | yesh |
+| [i-47-w2](m/israeli/word/i-47-w2.mp3) | מֶמְשָׁלָה | UNKNOWN | memshalah |
+| [i-47-w3](m/israeli/word/i-47-w3.mp3) | בְּחִירוֹת | UNKNOWN | bechirot |
+| [i-47-w4](m/israeli/word/i-47-w4.mp3) | מִלְחָמָה | UNKNOWN | milchamah |
+| [i-47-w5](m/israeli/word/i-47-w5.mp3) | שָׁלוֹם | UNKNOWN | shalom |
+| [i-47-w6](m/israeli/word/i-47-w6.mp3) | מְחִיר | UNKNOWN | mechir |
+| [i-47-w7](m/israeli/word/i-47-w7.mp3) | רִבִּית | UNKNOWN | ribit |
+| [i-47-w8](m/israeli/word/i-47-w8.mp3) | הַיּוֹם | UNKNOWN | hayom |
+| [i-48-w1](m/israeli/word/i-48-w1.mp3) | חֶשְׁבּוֹן | UNKNOWN | cheshbon |
+| [i-48-w10](m/israeli/word/i-48-w10.mp3) | הַלְוָאָה | UNKNOWN | halva'ah |
+| [i-48-w11](m/israeli/word/i-48-w11.mp3) | כֶּסֶף | UNKNOWN | kesef |
+| [i-48-w12](m/israeli/word/i-48-w12.mp3) | בַּנְק | UNKNOWN | bank |
+| [i-48-w2](m/israeli/word/i-48-w2.mp3) | מִסְפָּר | UNKNOWN | mispar |
+| [i-48-w3](m/israeli/word/i-48-w3.mp3) | חֲתִימָה | UNKNOWN | chatimah |
+| [i-48-w4](m/israeli/word/i-48-w4.mp3) | שֵׁם | UNKNOWN | shem |
+| [i-48-w5](m/israeli/word/i-48-w5.mp3) | כְּתֹבֶת | UNKNOWN | ketovet |
+| [i-48-w6](m/israeli/word/i-48-w6.mp3) | טֶלֶפוֹן | UNKNOWN | telefon |
+| [i-48-w7](m/israeli/word/i-48-w7.mp3) | הַיּוֹם | UNKNOWN | hayom |
+| [i-48-w8](m/israeli/word/i-48-w8.mp3) | שָׁנָה | UNKNOWN | shanah |
+| [i-48-w9](m/israeli/word/i-48-w9.mp3) | חֹדֶשׁ | UNKNOWN | chodesh |
+| [i-49-w1](m/israeli/word/i-49-w1.mp3) | הוֹדָעָה | UNKNOWN | hoda'ah |
+| [i-49-w10](m/israeli/word/i-49-w10.mp3) | שׁוֹלֵחַ | UNKNOWN | sholeach |
+| [i-49-w11](m/israeli/word/i-49-w11.mp3) | רֶגַע | UNKNOWN | rega |
+| [i-49-w12](m/israeli/word/i-49-w12.mp3) | בְּסֵדֶר | UNKNOWN | beseder |
+| [i-49-w2](m/israeli/word/i-49-w2.mp3) | תְּמוּנָה | UNKNOWN | temunah |
+| [i-49-w3](m/israeli/word/i-49-w3.mp3) | פְּרוֹפִיל | UNKNOWN | perofil |
+| [i-49-w4](m/israeli/word/i-49-w4.mp3) | סִיסְמָה | UNKNOWN | sisemah |
+| [i-49-w5](m/israeli/word/i-49-w5.mp3) | אִינְטֶרְנֶט | UNKNOWN | ineternet |
+| [i-49-w6](m/israeli/word/i-49-w6.mp3) | טֶלֶפוֹן | UNKNOWN | telefon |
+| [i-49-w7](m/israeli/word/i-49-w7.mp3) | חָבֵר | UNKNOWN | chaver |
+| [i-49-w8](m/israeli/word/i-49-w8.mp3) | חֲבֵרָה | UNKNOWN | chaverah |
+| [i-49-w9](m/israeli/word/i-49-w9.mp3) | אֶפְשָׁר לִשְׁלֹחַ | UNKNOWN | efshar lishloach |
+| [i-50-w1](m/israeli/word/i-50-w1.mp3) | שַׁבָּת שָׁלוֹם | UNKNOWN | shabat shalom |
 | [kaddish-1-w1](m/israeli/word/kaddish-1-w1.mp3) | יִתְגַּדַּל | may it be magnified | yitgadal |
 | [kaddish-1-w10](m/israeli/word/kaddish-1-w10.mp3) | מַלְכוּתֵהּ | his kingdom | malkhuteh |
 | [kaddish-1-w11](m/israeli/word/kaddish-1-w11.mp3) | בְּחַיֵּיכוֹן | in your lifetime | bechayeikhon |
@@ -5722,4 +5789,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 9238 produced clips in INDEX.csv have an English label; 1498 UNKNOWN. Filenames and IDs are unchanged.
+All 9439 produced clips in INDEX.csv have an English label; 1565 UNKNOWN. Filenames and IDs are unchanged.

@@ -1,0 +1,45 @@
+// Game 14 — symptom phrases are matched only to source-provided language exercises.
+import { h, heSpan } from '../shell/ui.js';
+import { createSession, shuffled, loadGameImages, imgOf, speak, resultsCard } from './engine.js';
+import { loadJson } from '../grammar/loader.js';
+export const STORE_KEY='games.petclinic.v1';
+export function buildClinicDeck(lesson) {
+  const match=lesson?.exercises?.find(x=>x.id==='I-14-e02' && x.type==='match');
+  const aid=lesson?.exercises?.find(x=>x.id==='I-14-e05' && x.type==='produce');
+  if(!match?.pairs || !aid?.options)return [];
+  return match.pairs.map(pair=>{
+    const tool=aid.options.find(option=>option.includes(pair.he));
+    return tool ? {id:pair.he, symptom:pair.he, en:pair.en, tool} : null;
+  }).filter(Boolean);
+}
+export function clinicMatches(caseItem,toolPhrase) {
+  return !!caseItem && caseItem.tool===toolPhrase && toolPhrase.includes(caseItem.symptom);
+}
+export const ANIMALS=Object.freeze(['STORY_noah_01','STORY_noah_02','STORY_noah_03']);
+export function mount(root,ctx) {
+  let alive=true,deck=[],images=null,round=0,session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:3});
+  const status=h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading symptom-language case records…');
+  const board=h('div',{class:'game-board'});
+  const article=h('article',{class:'card game-card game-petclinic'},h('h1',{id:'view-title'},'Pet Clinic Helper'),
+    h('p',{},'Language role-play only: match a Hebrew symptom to its exact source exercise phrase. Not veterinary advice.'),
+    h('p',{class:'muted'},'Source lesson is an unreviewed teaching draft.'),status,board);
+  root.replaceChildren(article);
+  function paint(){
+    if(!alive||!article.isConnected)return;
+    if(round>=deck.length){board.replaceChildren(resultsCard(h,heSpan,session,{title:'Clinic language practice complete',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:3});paint();}}));return;}
+    const caseItem=deck[round],picture=imgOf(images,'id',ANIMALS[round%ANIMALS.length]);
+    const scene=h('div',{class:'game-clinic-scene'},picture?h('img',{src:picture.src,alt:picture.alt,width:picture.width,height:picture.height,class:'game-card-img','data-img-id':picture.id}):null);
+    const options=shuffled(deck.map(x=>x.tool)).map(phrase=>h('button',{type:'button',class:'btn secondary game-choice',onclick:()=>{
+      const ok=clinicMatches(caseItem,phrase);session.answer(ok);
+      status.textContent=ok?'Phrase matches the actual source symptom.':'That phrase refers to a different symptom.';
+      if(ok){round++;void speak(ctx,caseItem.symptom);}paint();
+    }},heSpan(phrase,'he game-he-sm')));
+    board.replaceChildren(scene,h('p',{},'Symptom term: '),heSpan(caseItem.symptom,'he game-he'),
+      h('div',{class:'game-choices game-rtl-grid'},...options));
+  }
+  Promise.all([loadJson('data/curriculum/lessons-intermediate/I-14.json'),loadGameImages(ctx)]).then(([data,R])=>{
+    if(!alive||!article.isConnected)return;deck=shuffled(buildClinicDeck(data));images=R;
+    if(deck.length<3){status.textContent='Missing exact symptom/phrase pairs; no cases generated.';return;}paint();
+  }).catch(()=>{if(alive)status.textContent='Symptom phrases unavailable.';});
+  return ()=>{alive=false;};
+}

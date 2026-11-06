@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 3518 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 3540 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-3518 English labels; 4 UNKNOWN.
+3540 English labels; 4 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -3534,6 +3534,28 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [yigdal-w13](m/israeli/word/yigdal-w13.mp3) | כְּיִחוּדוֹ | like his unity | keyichudo |
 | [yigdal-w14](m/israeli/word/yigdal-w14.mp3) | נֶעְלָם | hidden | nelam |
 | [yigdal-w15](m/israeli/word/yigdal-w15.mp3) | וְגַם | and also | vegam |
+| [yigdal-w16](m/israeli/word/yigdal-w16.mp3) | אֵין | there is not, there are not; used in expressing non-possession in the present tense; not, is not, are not | ein |
+| [yigdal-w17](m/israeli/word/yigdal-w17.mp3) | סוֹף | an end, a finish | sof |
+| [yigdal-w18](m/israeli/word/yigdal-w18.mp3) | לְאַחְדּוּתוֹ׃ | to his oneness | le'achduto |
+| [yigdal-w19](m/israeli/word/yigdal-w19.mp3) | אֵין | there is not, there are not; used in expressing non-possession in the present tense; not, is not, are not | ein |
+| [yigdal-w2](m/israeli/word/yigdal-w2.mp3) | אֱלֹהִים | a god | elohim |
+| [yigdal-w20](m/israeli/word/yigdal-w20.mp3) | לוֹ | to him | lo |
+| [yigdal-w21](m/israeli/word/yigdal-w21.mp3) | דְמוּת | the form | demut |
+| [yigdal-w22](m/israeli/word/yigdal-w22.mp3) | הַגּוּף | of the body | haguf |
+| [yigdal-w23](m/israeli/word/yigdal-w23.mp3) | וְאֵינוֹ | and is not | ve'eino |
+| [yigdal-w24](m/israeli/word/yigdal-w24.mp3) | גוּף | a body | guf |
+| [yigdal-w25](m/israeli/word/yigdal-w25.mp3) | לֹא | not; no | lo |
+| [yigdal-w26](m/israeli/word/yigdal-w26.mp3) | נַעֲרֹךְ | can be compared | na'arokh |
+| [yigdal-w27](m/israeli/word/yigdal-w27.mp3) | אֵלָיו | to him | elav |
+| [yigdal-w28](m/israeli/word/yigdal-w28.mp3) | קְדֻשָּׁתוֹ׃ | his holiness | kedushato |
+| [yigdal-w29](m/israeli/word/yigdal-w29.mp3) | קַדְמוֹן | ancient; ancestor; ancient, archaic, primal, primeval, primordial, aboriginal | kadmon |
+| [yigdal-w3](m/israeli/word/yigdal-w3.mp3) | חַי | to live (to be alive, to have life); to live | chai |
+| [yigdal-w30](m/israeli/word/yigdal-w30.mp3) | לְכָל־דָּבָר | to everything | lekhol-davar |
+| [yigdal-w31](m/israeli/word/yigdal-w31.mp3) | אֲשֶׁר | introduces a subordinate clause | asher |
+| [yigdal-w32](m/israeli/word/yigdal-w32.mp3) | נִבְרָא | to be created | nivra |
+| [yigdal-w33](m/israeli/word/yigdal-w33.mp3) | רִאשׁוֹן | first; earliest; best | rishon |
+| [yigdal-w34](m/israeli/word/yigdal-w34.mp3) | וְאֵין | and no | ve'ein |
+| [yigdal-w35](m/israeli/word/yigdal-w35.mp3) | רֵאשִׁית | first of all, first | reshit |
 
 ## Israeli reading lines
 
@@ -4124,4 +4146,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 4824 produced clips in INDEX.csv have an English label; 4 UNKNOWN. Filenames and IDs are unchanged.
+All 4866 produced clips in INDEX.csv have an English label; 4 UNKNOWN. Filenames and IDs are unchanged.

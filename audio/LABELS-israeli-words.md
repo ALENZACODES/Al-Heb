@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 4070 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 4079 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-4070 English labels; 452 UNKNOWN.
+4079 English labels; 461 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -1403,6 +1403,15 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [i-35-w10](f/israeli/word/i-35-w10.mp3) | בֵּרַךְ | UNKNOWN | berakh |
 | [i-35-w11](f/israeli/word/i-35-w11.mp3) | וַיְקַדְּשֵׁהוּ | UNKNOWN | vaykadeshehu |
 | [i-35-w12](f/israeli/word/i-35-w12.mp3) | שַׁבָּת | UNKNOWN | shabat |
+| [i-35-w2](f/israeli/word/i-35-w2.mp3) | בְּרִית עוֹלָם | UNKNOWN | berit olam |
+| [i-35-w3](f/israeli/word/i-35-w3.mp3) | אוֹת | UNKNOWN | ot |
+| [i-35-w4](f/israeli/word/i-35-w4.mp3) | זָכוֹר | UNKNOWN | zakhor |
+| [i-35-w5](f/israeli/word/i-35-w5.mp3) | לְקַדְּשׁוֹ | UNKNOWN | lekadesho |
+| [i-35-w6](f/israeli/word/i-35-w6.mp3) | שֵׁשֶׁת יָמִים | UNKNOWN | sheshet yamim |
+| [i-35-w7](f/israeli/word/i-35-w7.mp3) | הַשְּׁבִיעִי | UNKNOWN | hashevi'i |
+| [i-35-w8](f/israeli/word/i-35-w8.mp3) | יַיִן | UNKNOWN | yayin |
+| [i-35-w9](f/israeli/word/i-35-w9.mp3) | לֶחֶם | UNKNOWN | lechem |
+| [i-36-w1](f/israeli/word/i-36-w1.mp3) | עֲבוֹדָה | UNKNOWN | avodah |
 | [kaddish-1-w1](f/israeli/word/kaddish-1-w1.mp3) | יִתְגַּדַּל | may it be magnified | yitgadal |
 | [kaddish-1-w10](f/israeli/word/kaddish-1-w10.mp3) | מַלְכוּתֵהּ | his kingdom | malkhuteh |
 | [kaddish-1-w11](f/israeli/word/kaddish-1-w11.mp3) | בְּחַיֵּיכוֹן | in your lifetime | bechayeikhon |
@@ -4676,4 +4685,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 6122 produced clips in INDEX.csv have an English label; 452 UNKNOWN. Filenames and IDs are unchanged.
+All 6149 produced clips in INDEX.csv have an English label; 461 UNKNOWN. Filenames and IDs are unchanged.

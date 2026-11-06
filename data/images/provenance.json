@@ -62416,6 +62416,164 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "L22_tav_cursive_noa": {
+   "id": "L22_tav_cursive_noa",
+   "file": "L22_tav_cursive_noa.png",
+   "command": 59,
+   "set": "letter_22_tav_cursive",
+   "block": "C",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. CHARACTER SHEET B 'Noa': a friendly Israeli woman around 32, shoulder-length wavy dark hair, olive skin, terracotta blouse, small gold hoop earrings; expression warm and confident. Noa writing on a blank cafe order pad, pen mid-stroke, page empty. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "b2e77e52a6e6963a4758b992f44c9fbdfb35fb6cd007244f8c1635af9c5d5371",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:47:37.529Z",
+   "sourceFile": "img-1207.png",
+   "sourceFileDate": "2026-11-06T21:47:37.036Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "dfc9b52f002f8371a173312224bf9bb6a0a2ccf4f3038a759b4294b6231c1631",
+   "originalFormat": "PNG",
+   "originalBytes": 250562,
+   "originalFile": "L22_tav_cursive_noa.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "L22_tav_cursive_noa.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 23966
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_place_08": {
+   "id": "GRAM_place_08",
+   "file": "GRAM_place_08.png",
+   "command": 210,
+   "set": "Prepositions — place",
+   "block": "O",
+   "prompt": "Command 210 (Prepositions — place): Rimon on a chair; Rimon under the chair; Rimon inside a box; Rimon beside the box; Rimon behind a curtain (paws visible); Rimon in front of a door; Rimon between two books; a cup on a table vs the same cup under the table (2 images); one wide image of a lane with a house at the far end — Ari small beside the far house and a second Ari large close to the viewer beside an identical near house (distance readable in a single frame). Image 8 of 10: a cup on a table vs the same cup under the table (first of 2). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "ee1b065d634567dff76ec709004af7dca76ad7c48fc88db79f6896d4e686c667",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:47:37.529Z",
+   "sourceFile": "img-1365.png",
+   "sourceFileDate": "2026-11-06T21:47:37.097Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "8a5c21a5a25e318a83aabfa327b9fa3ebc0eccaff4c011202d34615c9ad8d75e",
+   "originalFormat": "PNG",
+   "originalBytes": 347200,
+   "originalFile": "GRAM_place_08.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_place_08.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 51988
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "222",
+      "conf": 82.3,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "GRAM_place_09": {
+   "id": "GRAM_place_09",
+   "file": "GRAM_place_09.png",
+   "command": 210,
+   "set": "Prepositions — place",
+   "block": "O",
+   "prompt": "Command 210 (Prepositions — place): Rimon on a chair; Rimon under the chair; Rimon inside a box; Rimon beside the box; Rimon behind a curtain (paws visible); Rimon in front of a door; Rimon between two books; a cup on a table vs the same cup under the table (2 images); one wide image of a lane with a house at the far end — Ari small beside the far house and a second Ari large close to the viewer beside an identical near house (distance readable in a single frame). Image 9 of 10: a cup on a table vs the same cup under the table (second of 2). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "1e4587af5947ec87d7c5bf7541ce7c8e7e14604a1d9f3681443ee92de5aab3e7",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:47:37.529Z",
+   "sourceFile": "img-1392.png",
+   "sourceFileDate": "2026-11-06T21:47:37.103Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "8e640a6da2283fe199a8cce8366a47a7654399d35426b2c671e03af22f0ec3d5",
+   "originalFormat": "PNG",
+   "originalBytes": 191091,
+   "originalFile": "GRAM_place_09.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_place_09.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 8670
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

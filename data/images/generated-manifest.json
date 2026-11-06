@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 1072,
+ "count": 1075,
  "images": {
   "BADGE_01": {
    "w": 512,
@@ -2447,6 +2447,30 @@
     {
      "edge": 512,
      "file": "GRAM_place_07.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_place_08": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_place_08.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_place_09": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_place_09.512.webp",
      "w": 512,
      "h": 512
     }
@@ -7543,6 +7567,18 @@
      "file": "L21_shin_print_v3.1254.webp",
      "w": 1254,
      "h": 1254
+    }
+   ]
+  },
+  "L22_tav_cursive_noa": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "L22_tav_cursive_noa.512.webp",
+     "w": 512,
+     "h": 512
     }
    ]
   },

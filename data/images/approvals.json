@@ -5562,6 +5562,22 @@
   "GRAM_there_01": {
    "status": "approved",
    "at": "2026-11-06T21:46:16.085Z"
+  },
+  "L22_tav_cursive_noa": {
+   "status": "approved",
+   "at": "2026-11-06T21:47:51.802Z"
+  },
+  "GRAM_place_09": {
+   "status": "approved",
+   "at": "2026-11-06T21:47:51.802Z"
+  },
+  "GRAM_place_08": {
+   "status": "approved",
+   "at": "2026-11-06T21:47:52.723Z",
+   "note": "contains_text flag eye-checked at full size Nov 6: no text present (detector false positive)",
+   "forcedDespite": [
+    "contains_text"
+   ]
   }
  }
 }

@@ -14590,8 +14590,8 @@
   "kind": "line",
   "id": "bless-priestly-1",
   "text": "יְבָרֶכְךָ אֲדֹנָי וְיִשְׁמְרֶךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "The LORD bless thee, and keep thee;",
   "phonetic": "yevarekhkha adonai veyishmerekha"
@@ -14752,8 +14752,8 @@
   "kind": "line",
   "id": "bless-priestly-2",
   "text": "יָאֵר אֲדֹנָי פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "The LORD make His face to shine upon thee, and be gracious unto thee;",
   "phonetic": "ya'er adonai panav elekha vichuneka"
@@ -14914,8 +14914,8 @@
   "kind": "line",
   "id": "bless-priestly-3",
   "text": "יִשָּׂא אֲדֹנָי פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "The LORD lift up His countenance upon thee, and give thee peace.",
   "phonetic": "yisa adonai panav elekha veyasem lekha shalom"
@@ -15744,8 +15744,8 @@
   "kind": "line",
   "id": "vahavta-full-l2",
   "text": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "And these words, which I command thee this day, shall be upon thy heart;",
   "phonetic": "vehayu hadevarim ha'eleh asher anokhi metzavekha hayom al-levavekha"
@@ -15822,8 +15822,8 @@
   "kind": "line",
   "id": "vahavta-full-l3",
   "text": "וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "and thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thy house, and when thou walkest by the way, and when thou liest down, and when thou risest up.",
   "phonetic": "veshinantam levanekha vedibarta bam beshivtekha beveitekha uvelekhtekha vaderekh uveshakhbekha uvekumekha"
@@ -15900,8 +15900,8 @@
   "kind": "line",
   "id": "vahavta-full-l4",
   "text": "וּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "And thou shalt bind them for a sign upon thy hand, and they shall be for frontlets between thine eyes.",
   "phonetic": "ukeshartam le'ot al-yadekha vehayu letotafot bein einekha"
@@ -15978,8 +15978,8 @@
   "kind": "line",
   "id": "vahavta-full-l5",
   "text": "וּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "And thou shalt write them upon the door-posts of thy house, and upon thy gates.",
   "phonetic": "ukhetavtam al-mezuzot beitekha uvish'arekha"
@@ -16828,8 +16828,8 @@
   "kind": "line",
   "id": "bless-formula-1",
   "text": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Blessed are you, LORD our God, king of the world,",
   "phonetic": "barukh atah adonai eloheinu melekh ha'olam"
@@ -18844,8 +18844,8 @@
   "kind": "line",
   "id": "amidah-lips",
   "text": "אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "My Lord, open my lips, and my mouth will declare your praise.",
   "phonetic": "adonai sefatai tiftach ufi yagid tehilatekha"
@@ -19006,8 +19006,8 @@
   "kind": "line",
   "id": "avot-1",
   "text": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא אֵל עֶלְיוֹן גּוֹמֵל חֲסָדִים טוֹבִים קוֹנֵה הַכֹּל וְזוֹכֵר חַסְדֵּי אָבוֹת וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַעַן שְׁמוֹ בְּאַהֲבָה׃ מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Blessed are you, LORD our God and God of our ancestors, God of Abraham, God of Isaac and God of Jacob; the great, mighty and awesome God, God Most High, who bestows loving-kindnesses, creates all things, remembers the kindnesses of the ancestors, and brings a redeemer to their children's children for the sake of his name, in love. King, helper, saviour and shield.",
   "phonetic": "barukh atah adonai eloheinu velohei avoteinu elohei avraham elohei yitzchak velohei ya'akov ha'el hagadol hagibor vehanora el elyon gomel chasadim tovim koneh hakol vezokher chasdei avot umevi go'el livnei veneihem lema'an shemo be'ahavah melekh ozer umoshi'a umagen"
@@ -19168,8 +19168,8 @@
   "kind": "line",
   "id": "aleinu-1",
   "text": "עָלֵינוּ לְשַׁבֵּחַ לַאֲדוֹן הַכֹּל לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית שֶׁלֹּא עָשָׂנוּ כְּגוֹיֵי הָאֲרָצוֹת וְלֹא שָׂמָנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה שֶׁלֹּא שָׂם חֶלְקֵנוּ כָּהֶם וְגוֹרָלֵנוּ כְּכָל־הֲמוֹנָם שֶׁהֵם מִשְׁתַּחֲוִים לָהֶבֶל וָרִיק וּמִתְפַּלְּלִים אֶל־אֵל לֹא יוֹשִׁיעַ וַאֲנַחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא שֶׁהוּא נוֹטֶה שָׁמַיִם וְיוֹסֵד אָרֶץ וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַיִם מִמַּעַל וּשְׁכִינַת עֻזּוֹ בְּגָבְהֵי מְרוֹמִים הוּא אֱלֹהֵינוּ וְאֵין עוֹד אַחֵר אֱמֶת מַלְכֵּנוּ וְאֶפֶס זוּלָתוֹ כַּכָּתוּב בַּתּוֹרָה וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל־לְבָבֶךָ כִּי אֲדֹנָי הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל־הָאָרֶץ מִתָּחַת אֵין עוֹד׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "It is our duty to praise the Master of all, to ascribe greatness to the Creator of the beginning: that he has not made us like the nations of the lands and has not placed us like the families of the earth, that he has not set our portion like theirs nor our lot like all their multitude. For they bow to vanity and emptiness and pray to a god who does not save; but we bow before the King of kings of kings, the Holy One, blessed be he, who stretches out the heavens and founds the earth, whose seat of glory is in the heavens above and the presence of his might in the loftiest heights. He is our God; there is no other. Truly he is our king; there is nothing besides him. As it is written in the Torah: \"You shall know this day and take it to heart that the LORD is God, in the heavens above and on the earth beneath; there is no other.\"",
   "phonetic": "aleinu leshabeach la'adon hakol latet gedulah leyotzer bereshit shelo asanu kegoyei ha'aratzot velo samanu kemishpechot ha'adamah shelo sam chelkenu kahem vegoralenu kekhol-hamonam shehem mishtachavim lahevel varik umitpalelim el-el lo yoshi'a va'anachnu mishtachavim lifnei melekh malkhei hamelakhim hakadosh barukh hu shehu noteh shamayim veyosed aretz umoshav yekaro bashamayim mima'al ushekhinat uzo begavehei meromim hu eloheinu ve'ein od acher emet malkenu ve'efes zulato kakatuv batorah veyadata hayom vahashevota el-levavekha ki adonai hu ha'elohim bashamayim mima'al ve'al-ha'aretz mitachat ein od"
@@ -19479,8 +19479,8 @@
   "kind": "line",
   "id": "adon-olam-1-l1",
   "text": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Lord of the world, who reigned before any form was created.",
   "phonetic": "adon olam asher malakh beterem kol yetzir nivra"
@@ -19492,8 +19492,8 @@
   "kind": "line",
   "id": "adon-olam-1-l1",
   "text": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Lord of the world, who reigned before any form was created.",
   "phonetic": "adon olam asher malakh beterem kol yetzir nivra"
@@ -19557,8 +19557,8 @@
   "kind": "line",
   "id": "adon-olam-1-l2",
   "text": "לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "At the time when all was made by his will, then \"King\" was his name proclaimed.",
   "phonetic": "le'et na'asah vecheftzo kol azai melekh shemo nikra"
@@ -19570,8 +19570,8 @@
   "kind": "line",
   "id": "adon-olam-1-l2",
   "text": "לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "At the time when all was made by his will, then \"King\" was his name proclaimed.",
   "phonetic": "le'et na'asah vecheftzo kol azai melekh shemo nikra"
@@ -19635,8 +19635,8 @@
   "kind": "line",
   "id": "adon-olam-1-l3",
   "text": "וְאַחֲרֵי כִּכְלוֹת הַכֹּל לְבַדּוֹ יִמְלֹךְ נוֹרָא׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "And after all things have ended, he alone, the awesome one, will reign.",
   "phonetic": "ve'acharei kikhlot hakol levado yimlokh nora"
@@ -19648,8 +19648,8 @@
   "kind": "line",
   "id": "adon-olam-1-l3",
   "text": "וְאַחֲרֵי כִּכְלוֹת הַכֹּל לְבַדּוֹ יִמְלֹךְ נוֹרָא׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "And after all things have ended, he alone, the awesome one, will reign.",
   "phonetic": "ve'acharei kikhlot hakol levado yimlokh nora"
@@ -19713,8 +19713,8 @@
   "kind": "line",
   "id": "adon-olam-1-l4",
   "text": "וְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "And he was, and he is, and he will be, in glory.",
   "phonetic": "vehu hayah vehu hoveh vehu yihyeh betif'arah"
@@ -19726,8 +19726,8 @@
   "kind": "line",
   "id": "adon-olam-1-l4",
   "text": "וְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "And he was, and he is, and he will be, in glory.",
   "phonetic": "vehu hayah vehu hoveh vehu yihyeh betif'arah"
@@ -19791,8 +19791,8 @@
   "kind": "line",
   "id": "adon-olam-1-l5",
   "text": "וְהוּא אֶחָד וְאֵין שֵׁנִי לְהַמְשִׁיל לוֹ לְהַחְבִּירָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "And he is one, and there is no second, to compare to him or to join with him.",
   "phonetic": "vehu echad ve'ein sheni lehamshil lo lehachbirah"
@@ -19804,8 +19804,8 @@
   "kind": "line",
   "id": "adon-olam-1-l5",
   "text": "וְהוּא אֶחָד וְאֵין שֵׁנִי לְהַמְשִׁיל לוֹ לְהַחְבִּירָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "And he is one, and there is no second, to compare to him or to join with him.",
   "phonetic": "vehu echad ve'ein sheni lehamshil lo lehachbirah"
@@ -19869,8 +19869,8 @@
   "kind": "line",
   "id": "adon-olam-1-l6",
   "text": "בְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Without beginning, without end; to him belong the power and the dominion.",
   "phonetic": "beli reshit beli takhlit velo ha'oz vehamisrah"
@@ -19882,8 +19882,8 @@
   "kind": "line",
   "id": "adon-olam-1-l6",
   "text": "בְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Without beginning, without end; to him belong the power and the dominion.",
   "phonetic": "beli reshit beli takhlit velo ha'oz vehamisrah"
@@ -19947,8 +19947,8 @@
   "kind": "line",
   "id": "adon-olam-1-l7",
   "text": "וְהוּא אֵלִי וְחַי גוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "And he is my God, and my living redeemer, and the rock of my portion in time of distress.",
   "phonetic": "vehu eli vechai go'ali vetzur chevli be'et tzarah"
@@ -19960,8 +19960,8 @@
   "kind": "line",
   "id": "adon-olam-1-l7",
   "text": "וְהוּא אֵלִי וְחַי גוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "And he is my God, and my living redeemer, and the rock of my portion in time of distress.",
   "phonetic": "vehu eli vechai go'ali vetzur chevli be'et tzarah"
@@ -20025,8 +20025,8 @@
   "kind": "line",
   "id": "adon-olam-1-l8",
   "text": "וְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "And he is my banner and my refuge, the portion of my cup on the day I call.",
   "phonetic": "vehu nisi umanos li menat kosi beyom ekra"
@@ -20038,8 +20038,8 @@
   "kind": "line",
   "id": "adon-olam-1-l8",
   "text": "וְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "And he is my banner and my refuge, the portion of my cup on the day I call.",
   "phonetic": "vehu nisi umanos li menat kosi beyom ekra"
@@ -20103,8 +20103,8 @@
   "kind": "line",
   "id": "adon-olam-1-l9",
   "text": "בְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישָׁן וְאָעִירָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Into his hand I commit my spirit, when I sleep and when I wake.",
   "phonetic": "beyado afkid ruchi be'et ishan ve'a'irah"
@@ -20116,8 +20116,8 @@
   "kind": "line",
   "id": "adon-olam-1-l9",
   "text": "בְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישָׁן וְאָעִירָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Into his hand I commit my spirit, when I sleep and when I wake.",
   "phonetic": "beyado afkid ruchi be'et ishan ve'a'irah"
@@ -20181,8 +20181,8 @@
   "kind": "line",
   "id": "adon-olam-1-l10",
   "text": "וְעִם רוּחִי גְּוִיָּתִי אֲדֹנָי לִי וְלֹא אִירָא׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "And with my spirit, my body too: the LORD is with me and I will not fear.",
   "phonetic": "ve'im ruchi geviyati adonai li velo ira"
@@ -20194,8 +20194,8 @@
   "kind": "line",
   "id": "adon-olam-1-l10",
   "text": "וְעִם רוּחִי גְּוִיָּתִי אֲדֹנָי לִי וְלֹא אִירָא׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "And with my spirit, my body too: the LORD is with me and I will not fear.",
   "phonetic": "ve'im ruchi geviyati adonai li velo ira"
@@ -20974,8 +20974,8 @@
   "kind": "line",
   "id": "birkat-hamazon-1",
   "text": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַזָּן אֶת הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ בְּחֵן בְּחֶסֶד וּבְרַחֲמִים הוּא נוֹתֵן לֶחֶם לְכָל בָּשָׂר כִּי לְעוֹלָם חַסְדּוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Blessed are you, LORD our God, king of the world, who feeds the whole world, all of it, in his goodness, with grace, kindness and mercy. He gives bread to all flesh, for his kindness is for ever.",
   "phonetic": "barukh atah adonai eloheinu melekh ha'olam hazan et ha'olam kulo betuvo bechen bechesed uverachamim hu noten lechem lekhol basar ki le'olam chasdo"
@@ -21447,8 +21447,8 @@
   "kind": "line",
   "id": "adonai-oz",
   "text": "אֲדֹנָי עֹז לְעַמּוֹ יִתֵּן אֲדֹנָי יְבָרֵךְ אֶת־עַמּוֹ בַשָּׁלוֹם׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "The LORD will give strength unto His people; The LORD will bless his people with peace.",
   "phonetic": "adonai oz le'amo yiten adonai yevarekh et-amo vashalom"
@@ -21460,8 +21460,8 @@
   "kind": "line",
   "id": "adonai-oz",
   "text": "אֲדֹנָי עֹז לְעַמּוֹ יִתֵּן אֲדֹנָי יְבָרֵךְ אֶת־עַמּוֹ בַשָּׁלוֹם׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "The LORD will give strength unto His people; The LORD will bless his people with peace.",
   "phonetic": "adonai oz le'amo yiten adonai yevarekh et-amo vashalom"
@@ -21810,8 +21810,8 @@
   "kind": "line",
   "id": "yehalelu-l1",
   "text": "יְהַלְלוּ אֶת־שֵׁם אֲדֹנָי כִּי־נִשְׂגָּב שְׁמוֹ לְבַדּוֹ הוֹדוֹ עַל־אֶרֶץ וְשָׁמָיִם׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Let them praise the name of the LORD, For His name alone is exalted; His glory is above the earth and heaven.",
   "phonetic": "yehalelu et-shem adonai ki-nisgav shemo levado hodo al-eretz veshamayim"
@@ -21888,8 +21888,8 @@
   "kind": "line",
   "id": "yehalelu-l2",
   "text": "וַיָּרֶם קֶרֶן לְעַמּוֹ תְּהִלָּה לְכָל־חֲסִידָיו לִבְנֵי יִשְׂרָאֵל עַם־קְרֹבוֹ הַלְלוּ־יָהּ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "And He hath lifted up a horn for His people, A praise for all His saints, Even for the children of Israel, a people near unto Him. Hallelujah.",
   "phonetic": "vayarem keren le'amo tehilah lekhol-chasidav livnei yisra'el am-kerovo halelu-yah"
@@ -23308,8 +23308,8 @@
   "kind": "line",
   "id": "ashrei-84-5",
   "text": "אַשְׁרֵי יוֹשְׁבֵי בֵיתֶךָ עוֹד יְהַלְלוּךָ סֶּלָה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Happy are they that dwell in Thy house, they are ever praising Thee. Selah",
   "phonetic": "ashrei yoshevei veitekha od yehalelukha selah"
@@ -23470,8 +23470,8 @@
   "kind": "line",
   "id": "ashrei-144-15",
   "text": "אַשְׁרֵי הָעָם שֶׁכָּכָה לּוֹ אַשְׁרֵי הָעָם שֶׁאֲדֹנָי אֱלֹהָיו׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Happy is the people that is in such a case. Yea, happy is the people whose God is the LORD.",
   "phonetic": "ashrei ha'am shekakhah lo ashrei ha'am she'adonai elohav"
@@ -23632,8 +23632,8 @@
   "kind": "line",
   "id": "ashrei-145-1-3-l1",
   "text": "תְּהִלָּה לְדָוִד אֲרוֹמִמְךָ אֱלוֹהַי הַמֶּלֶךְ וַאֲבָרֲכָה שִׁמְךָ לְעוֹלָם וָעֶד׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "[A Psalm of] praise; of David. I will extol Thee, my God, O King; And I will bless Thy name for ever and ever.",
   "phonetic": "tehilah ledavid aromimkha elohai hamelekh va'avarakhah shimkha le'olam va'ed"
@@ -23710,8 +23710,8 @@
   "kind": "line",
   "id": "ashrei-145-1-3-l2",
   "text": "בְּכָל־יוֹם אֲבָרֲכֶךָּ וַאֲהַלְלָה שִׁמְךָ לְעוֹלָם וָעֶד׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Every day will I bless Thee; And I will praise Thy name for ever and ever.",
   "phonetic": "bekhol-yom avarakheka va'ahalelah shimkha le'olam va'ed"
@@ -23788,8 +23788,8 @@
   "kind": "line",
   "id": "ashrei-145-1-3-l3",
   "text": "גָּדוֹל אֲדֹנָי וּמְהֻלָּל מְאֹד וְלִגְדֻלָּתוֹ אֵין חֵקֶר׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Great is the LORD, and highly to be praised; And His greatness is unsearchable.",
   "phonetic": "gadol adonai umehulal me'od veligdulato ein cheker"
@@ -23950,8 +23950,8 @@
   "kind": "line",
   "id": "ashrei-145-16",
   "text": "פּוֹתֵחַ אֶת־יָדֶךָ וּמַשְׂבִּיעַ לְכָל־חַי רָצוֹן׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Thou openest Thy hand, And satisfiest every living thing with favour.",
   "phonetic": "poteach et-yadekha umasbi'a lekhol-chai ratzon"
@@ -24690,8 +24690,8 @@
   "kind": "line",
   "id": "vayehi-binsoa",
   "text": "וַיְהִי בִּנְסֹעַ הָאָרֹן וַיֹאמֶר מֹשֶׁה קוּמָה אֲדֹנָי וְיָפֻצוּ אֹיְבֶיךָ וְיָנֻסוּ מְשַׂנְאֶיךָ מִפָּנֶיךָ׃ כִּי מִצִּיּוֹן תֵּצֵא תוֹרָה וּדְבַר אֲדֹנָי מִירוּשָׁלָםִ׃ בָּרוּךְ שֶׁנָּתַן תּוֹרָה לְעַמּוֹ יִשְׂרָאֵל בִּקְדֻשָּׁתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "And it was, when the ark set out, Moses said: Arise, LORD, and let your enemies be scattered, and let those who hate you flee before you. For from Zion will go forth Torah, and the word of the LORD from Jerusalem. Blessed is the one who gave the Torah to his people Israel in his holiness.",
   "phonetic": "vayhi binso'a ha'aron vayomer mosheh kumah adonai veyafutzu oyevekha veyanusu mesan'ekha mipanekha ki mitziyon tetze torah udevar adonai mirushalami barukh shenatan torah le'amo yisra'el bikdushato"
@@ -25014,8 +25014,8 @@
   "kind": "line",
   "id": "vezot-hatorah",
   "text": "וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל׃ עַל פִּי אֲדֹנָי בְּיַד מֹשֶׁה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "This is the Torah that Moses set before the children of Israel, by the word of the LORD, by the hand of Moses.",
   "phonetic": "vezot hatorah asher sam mosheh lifnei benei yisra'el al pi adonai beyad mosheh"
@@ -25714,8 +25714,8 @@
   "kind": "line",
   "id": "avot-closing",
   "text": "מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן בָּרוּךְ אַתָּה אֲדֹנָי מָגֵן אַבְרָהָם׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "King, helper, saviour and shield. Blessed are you, LORD, shield of Abraham.",
   "phonetic": "melekh ozer umoshi'a umagen barukh atah adonai magen avraham"
@@ -25876,8 +25876,8 @@
   "kind": "line",
   "id": "amidah-yihyu",
   "text": "יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ אֲדֹנָי צוּרִי וְגוֹאֲלִי׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "May the words of my mouth and the thoughts of my heart be acceptable before you, LORD, my rock and my redeemer.",
   "phonetic": "yihyu leratzon imrei fi vehegyon libi lefanekha adonai tzuri vego'ali"
@@ -26038,8 +26038,8 @@
   "kind": "line",
   "id": "amidah-elohai-netzor",
   "text": "אֱלֹהַי נְצוֹר לְשׁוֹנִי מֵרָע וּשְׂפָתַי מִדַּבֵּר מִרְמָה וְלִמְקַלְלַי נַפְשִׁי תִדּוֹם וְנַפְשִׁי כֶּעָפָר לַכֹּל תִּהְיֶה פְּתַח לִבִּי בְּתוֹרָתֶךָ וּבְמִצְוֹתֶיךָ תִּרְדֹּף נַפְשִׁי וְכֹל הַחוֹשְׁבִים עָלַי רָעָה מְהֵרָה הָפֵר עֲצָתָם וְקַלְקֵל מַחֲשַׁבְתָּם׃ עֲשֵׂה לְמַעַן שְׁמֶךָ עֲשֵׂה לְמַעַן יְמִינֶךָ עֲשֵׂה לְמַעַן קְדֻשָּׁתֶךָ עֲשֵׂה לְמַעַן תּוֹרָתֶךָ לְמַעַן יֵחָלְצוּן יְדִידֶיךָ הוֹשִׁיעָה יְמִינְךָ וַעֲנֵנִי׃ יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ אֲדֹנָי צוּרִי וְגוֹאֲלִי׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "My God, guard my tongue from evil and my lips from speaking deceit. To those who curse me, let my soul be silent; let my soul be like dust to all. Open my heart to your Torah, and let my soul pursue your commandments. As for all who plan evil against me, quickly annul their counsel and frustrate their plans. Act for the sake of your name; act for the sake of your right hand; act for the sake of your holiness; act for the sake of your Torah. That your beloved may be rescued, save with your right hand and answer me. May the words of my mouth and the thoughts of my heart be acceptable before you, LORD, my rock and my redeemer.",
   "phonetic": "elohai netzor leshoni mera usefatai midaber mirmah velimkalelai nafshi tidom venafshi ke'afar lakol tihyeh petach libi betoratekha uvemitzvotekha tirdof nafshi vekhol hachoshevim alai ra'ah meherah hafer atzatam vekalkel machashavtam aseh lema'an shemekha aseh lema'an yeminekha aseh lema'an kedushatekha aseh lema'an toratekha lema'an yechaltzun yedidekha hoshi'ah yeminekha va'aneni yihyu leratzon imrei fi vehegyon libi lefanekha adonai tzuri vego'ali"
@@ -27030,8 +27030,8 @@
   "kind": "line",
   "id": "yigdal-l1",
   "text": "יִגְדַּל אֱלֹהִים חַי וְיִשְׁתַּבַּח נִמְצָא וְאֵין עֵת אֶל מְצִיאוּתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "May the living God be magnified and praised; he exists, and his existence is not bound by time.",
   "phonetic": "yigdal elohim chai veyishtabach nimtza ve'ein et el metzi'uto"
@@ -27108,8 +27108,8 @@
   "kind": "line",
   "id": "yigdal-l2",
   "text": "אֶחָד וְאֵין יָחִיד כְּיִחוּדוֹ נֶעְלָם וְגַם אֵין סוֹף לְאַחְדּוּתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "He is one, and there is no unity like his unity; hidden, and without end to his oneness.",
   "phonetic": "echad ve'ein yachid keyichudo nelam vegam ein sof le'achduto"
@@ -27121,8 +27121,8 @@
   "kind": "line",
   "id": "yigdal-l2",
   "text": "אֶחָד וְאֵין יָחִיד כְּיִחוּדוֹ נֶעְלָם וְגַם אֵין סוֹף לְאַחְדּוּתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "He is one, and there is no unity like his unity; hidden, and without end to his oneness.",
   "phonetic": "echad ve'ein yachid keyichudo nelam vegam ein sof le'achduto"
@@ -27186,8 +27186,8 @@
   "kind": "line",
   "id": "yigdal-l3",
   "text": "אֵין לוֹ דְמוּת הַגּוּף וְאֵינוֹ גוּף לֹא נַעֲרֹךְ אֵלָיו קְדֻשָּׁתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "He has no bodily form and is not a body; his holiness cannot be compared.",
   "phonetic": "ein lo demut haguf ve'eino guf lo na'arokh elav kedushato"
@@ -27199,8 +27199,8 @@
   "kind": "line",
   "id": "yigdal-l3",
   "text": "אֵין לוֹ דְמוּת הַגּוּף וְאֵינוֹ גוּף לֹא נַעֲרֹךְ אֵלָיו קְדֻשָּׁתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "He has no bodily form and is not a body; his holiness cannot be compared.",
   "phonetic": "ein lo demut haguf ve'eino guf lo na'arokh elav kedushato"
@@ -27264,8 +27264,8 @@
   "kind": "line",
   "id": "yigdal-l4",
   "text": "קַדְמוֹן לְכָל־דָּבָר אֲשֶׁר נִבְרָא רִאשׁוֹן וְאֵין רֵאשִׁית לְרֵאשִׁיתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "He preceded everything that was created; first, and with no beginning to his beginning.",
   "phonetic": "kadmon lekhol-davar asher nivra rishon ve'ein reshit lereshito"
@@ -27277,8 +27277,8 @@
   "kind": "line",
   "id": "yigdal-l4",
   "text": "קַדְמוֹן לְכָל־דָּבָר אֲשֶׁר נִבְרָא רִאשׁוֹן וְאֵין רֵאשִׁית לְרֵאשִׁיתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "He preceded everything that was created; first, and with no beginning to his beginning.",
   "phonetic": "kadmon lekhol-davar asher nivra rishon ve'ein reshit lereshito"
@@ -27342,8 +27342,8 @@
   "kind": "line",
   "id": "yigdal-l5",
   "text": "הִנּוֹ אֲדוֹן עוֹלָם לְכָל־נוֹצָר יוֹרֶה גְדֻלָּתוֹ וּמַלְכוּתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Behold, he is master of the world to every creature; he shows his greatness and his sovereignty.",
   "phonetic": "hino adon olam lekhol-notzar yoreh gedulato umalkhuto"
@@ -27355,8 +27355,8 @@
   "kind": "line",
   "id": "yigdal-l5",
   "text": "הִנּוֹ אֲדוֹן עוֹלָם לְכָל־נוֹצָר יוֹרֶה גְדֻלָּתוֹ וּמַלְכוּתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Behold, he is master of the world to every creature; he shows his greatness and his sovereignty.",
   "phonetic": "hino adon olam lekhol-notzar yoreh gedulato umalkhuto"
@@ -27420,8 +27420,8 @@
   "kind": "line",
   "id": "yigdal-l6",
   "text": "שֶׁפַע נְבוּאָתוֹ נְתָנוֹ אֶל אַנְשֵׁי סְגֻלָּתוֹ וְתִפְאַרְתּוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "The abundance of his prophecy he gave to the people he treasured and who are his glory.",
   "phonetic": "shefa nevu'ato netano el anshei segulato vetif'arto"
@@ -27433,8 +27433,8 @@
   "kind": "line",
   "id": "yigdal-l6",
   "text": "שֶׁפַע נְבוּאָתוֹ נְתָנוֹ אֶל אַנְשֵׁי סְגֻלָּתוֹ וְתִפְאַרְתּוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "The abundance of his prophecy he gave to the people he treasured and who are his glory.",
   "phonetic": "shefa nevu'ato netano el anshei segulato vetif'arto"
@@ -27498,8 +27498,8 @@
   "kind": "line",
   "id": "yigdal-l7",
   "text": "לֹא קָם בְּיִשְׂרָאֵל כְּמֹשֶׁה עוֹד נָבִיא וּמַבִּיט אֶת־תְּמוּנָתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "No one has arisen in Israel like Moses, a prophet who beheld his likeness.",
   "phonetic": "lo kam beyisra'el kemosheh od navi umabit et-temunato"
@@ -27511,8 +27511,8 @@
   "kind": "line",
   "id": "yigdal-l7",
   "text": "לֹא קָם בְּיִשְׂרָאֵל כְּמֹשֶׁה עוֹד נָבִיא וּמַבִּיט אֶת־תְּמוּנָתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "No one has arisen in Israel like Moses, a prophet who beheld his likeness.",
   "phonetic": "lo kam beyisra'el kemosheh od navi umabit et-temunato"
@@ -27576,8 +27576,8 @@
   "kind": "line",
   "id": "yigdal-l8",
   "text": "תּוֹרַת אֱמֶת נָתַן לְעַמּוֹ אֵל עַל יַד נְבִיאוֹ נֶאֱמַן בֵּיתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "A Torah of truth God gave to his people through his prophet, trusted in his house.",
   "phonetic": "torat emet natan le'amo el al yad nevi'o ne'eman beito"
@@ -27589,8 +27589,8 @@
   "kind": "line",
   "id": "yigdal-l8",
   "text": "תּוֹרַת אֱמֶת נָתַן לְעַמּוֹ אֵל עַל יַד נְבִיאוֹ נֶאֱמַן בֵּיתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "A Torah of truth God gave to his people through his prophet, trusted in his house.",
   "phonetic": "torat emet natan le'amo el al yad nevi'o ne'eman beito"
@@ -27654,8 +27654,8 @@
   "kind": "line",
   "id": "yigdal-l9",
   "text": "לֹא יַחֲלִיף הָאֵל וְלֹא יָמִיר דָּתוֹ לְעוֹלָמִים לְזוּלָתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "God will not alter or exchange his law, for ever, for any other.",
   "phonetic": "lo yachalif ha'el velo yamir dato le'olamim lezulato"
@@ -27667,8 +27667,8 @@
   "kind": "line",
   "id": "yigdal-l9",
   "text": "לֹא יַחֲלִיף הָאֵל וְלֹא יָמִיר דָּתוֹ לְעוֹלָמִים לְזוּלָתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "God will not alter or exchange his law, for ever, for any other.",
   "phonetic": "lo yachalif ha'el velo yamir dato le'olamim lezulato"
@@ -27732,8 +27732,8 @@
   "kind": "line",
   "id": "yigdal-l10",
   "text": "צוֹפֶה וְיוֹדֵעַ סְתָרֵינוּ מַבִּיט לְסוֹף דָּבָר בְּקַדְמָתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "He watches and knows our secrets; he sees the end of a matter at its beginning.",
   "phonetic": "tzofeh veyode'a setareinu mabit lesof davar bekadmato"
@@ -27810,8 +27810,8 @@
   "kind": "line",
   "id": "yigdal-l11",
   "text": "גּוֹמֵל לְאִישׁ חֶסֶד כְּמִפְעָלוֹ נוֹתֵן לְרָשָׁע רָע כְּרִשְׁעָתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "He repays a person with kindness according to his deeds; he gives the wicked evil according to his wickedness.",
   "phonetic": "gomel le'ish chesed kemif'alo noten lerasha ra kerish'ato"
@@ -27888,8 +27888,8 @@
   "kind": "line",
   "id": "yigdal-l12",
   "text": "יִשְׁלַח לְקֵץ הַיָּמִין מְשִׁיחֵנוּ לִפְדּוֹת מְחַכֵּי קֵץ יְשׁוּעָתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "At the end of days he will send our anointed one, to redeem those who await the end of his salvation.",
   "phonetic": "yishlach leketz hayamin meshichenu lifdot mechakei ketz yeshu'ato"
@@ -27966,8 +27966,8 @@
   "kind": "line",
   "id": "yigdal-l13",
   "text": "מֵתִים יְחַיֶּה אֵל בְּרֹב חַסְדּוֹ בָּרוּךְ עֲדֵי עַד שֵׁם תְּהִלָּתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "God will revive the dead in his great kindness; blessed for ever is his praised name.",
   "phonetic": "metim yechayeh el berov chasdo barukh adei ad shem tehilato"
@@ -27979,8 +27979,8 @@
   "kind": "line",
   "id": "yigdal-l13",
   "text": "מֵתִים יְחַיֶּה אֵל בְּרֹב חַסְדּוֹ בָּרוּךְ עֲדֵי עַד שֵׁם תְּהִלָּתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "God will revive the dead in his great kindness; blessed for ever is his praised name.",
   "phonetic": "metim yechayeh el berov chasdo barukh adei ad shem tehilato"
@@ -28122,8 +28122,8 @@
   "kind": "line",
   "id": "zimun-opening-l1",
   "text": "רַבּוֹתַי נְבָרֵךְ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Gentlemen, let us bless.",
   "phonetic": "rabotai nevarekh"
@@ -28135,8 +28135,8 @@
   "kind": "line",
   "id": "zimun-opening-l1",
   "text": "רַבּוֹתַי נְבָרֵךְ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Gentlemen, let us bless.",
   "phonetic": "rabotai nevarekh"
@@ -28200,8 +28200,8 @@
   "kind": "line",
   "id": "zimun-opening-l2",
   "text": "יְהִי שֵׁם אֲדֹנָי מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "May the name of the LORD be blessed from now and for ever.",
   "phonetic": "yehi shem adonai mevorakh me'atah ve'ad-olam"
@@ -28213,8 +28213,8 @@
   "kind": "line",
   "id": "zimun-opening-l2",
   "text": "יְהִי שֵׁם אֲדֹנָי מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "May the name of the LORD be blessed from now and for ever.",
   "phonetic": "yehi shem adonai mevorakh me'atah ve'ad-olam"
@@ -43141,10 +43141,11 @@
   "kind": "word",
   "id": "i-01-w2",
   "text": "הַמְּבֹרָךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "hamevorakh"
  },
  {
   "path": "audio/m/israeli/word/i-01-w3.mp3",
@@ -43165,10 +43166,11 @@
   "kind": "word",
   "id": "i-01-w3",
   "text": "שְׁמַע",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shema"
  },
  {
   "path": "audio/m/israeli/word/i-01-w4.mp3",
@@ -43190,11 +43192,12 @@
   "kind": "word",
   "id": "i-01-w4",
   "text": "יִשְׂרָאֵל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p41545921",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yisra'el"
  },
  {
   "path": "audio/m/israeli/word/i-01-w5.mp3",
@@ -43216,11 +43219,12 @@
   "kind": "word",
   "id": "i-01-w5",
   "text": "אֱלֹהֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p29823ceb",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "eloheinu"
  },
  {
   "path": "audio/m/israeli/word/i-01-w6.mp3",
@@ -43241,10 +43245,11 @@
   "kind": "word",
   "id": "i-01-w6",
   "text": "אֶחָד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "echad"
  },
  {
   "path": "audio/m/israeli/word/i-01-w7.mp3",
@@ -43266,11 +43271,12 @@
   "kind": "word",
   "id": "i-01-w7",
   "text": "שֵׁם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h65a05fb2",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shem"
  },
  {
   "path": "audio/m/israeli/word/i-01-w8.mp3",
@@ -43291,10 +43297,11 @@
   "kind": "word",
   "id": "i-01-w8",
   "text": "כְּבוֹד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kevod"
  },
  {
   "path": "audio/m/israeli/word/i-01-w9.mp3",
@@ -43316,11 +43323,12 @@
   "kind": "word",
   "id": "i-01-w9",
   "text": "מַלְכוּתוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "pc8f262be",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "malkhuto"
  },
  {
   "path": "audio/m/israeli/word/i-01-w10.mp3",
@@ -43341,10 +43349,11 @@
   "kind": "word",
   "id": "i-01-w10",
   "text": "לְעוֹלָם וָעֶד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "le'olam va'ed"
  },
  {
   "path": "audio/m/israeli/word/i-01-w11.mp3",
@@ -43366,11 +43375,12 @@
   "kind": "word",
   "id": "i-01-w11",
   "text": "וְאָהַבְתָּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "pd4b665ac",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ve'ahavta"
  },
  {
   "path": "audio/m/israeli/word/i-01-w12.mp3",
@@ -43392,11 +43402,12 @@
   "kind": "word",
   "id": "i-01-w12",
   "text": "לְבָבְךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p2bee7060",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "levavekha"
  },
  {
   "path": "audio/m/israeli/word/i-02-w1.mp3",
@@ -43418,11 +43429,12 @@
   "kind": "word",
   "id": "i-02-w1",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p996ad12f",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "adonai"
  },
  {
   "path": "audio/m/israeli/word/i-02-w2.mp3",
@@ -43443,10 +43455,11 @@
   "kind": "word",
   "id": "i-02-w2",
   "text": "שְׂפָתַי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "sefatai"
  },
  {
   "path": "audio/m/israeli/word/i-02-w3.mp3",
@@ -43467,10 +43480,11 @@
   "kind": "word",
   "id": "i-02-w3",
   "text": "תִּפְתָּח",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "tiftach"
  },
  {
   "path": "audio/m/israeli/word/i-02-w4.mp3",
@@ -43491,10 +43505,11 @@
   "kind": "word",
   "id": "i-02-w4",
   "text": "אֲבוֹתֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "avoteinu"
  },
  {
   "path": "audio/m/israeli/word/i-02-w5.mp3",
@@ -43516,11 +43531,12 @@
   "kind": "word",
   "id": "i-02-w5",
   "text": "אַבְרָהָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p86e5156c",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "avraham"
  },
  {
   "path": "audio/m/israeli/word/i-02-w6.mp3",
@@ -43542,11 +43558,12 @@
   "kind": "word",
   "id": "i-02-w6",
   "text": "יִצְחָק",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p728a4c88",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yitzchak"
  },
  {
   "path": "audio/m/israeli/word/i-02-w7.mp3",
@@ -43568,11 +43585,12 @@
   "kind": "word",
   "id": "i-02-w7",
   "text": "יַעֲקֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p07b88d14",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ya'akov"
  },
  {
   "path": "audio/m/israeli/word/i-02-w8.mp3",
@@ -43593,10 +43611,11 @@
   "kind": "word",
   "id": "i-02-w8",
   "text": "הַגָּדוֹל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "hagadol"
  },
  {
   "path": "audio/m/israeli/word/i-02-w9.mp3",
@@ -43617,10 +43636,11 @@
   "kind": "word",
   "id": "i-02-w9",
   "text": "הַגִּבּוֹר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "hagibor"
  },
  {
   "path": "audio/m/israeli/word/i-02-w10.mp3",
@@ -43641,10 +43661,11 @@
   "kind": "word",
   "id": "i-02-w10",
   "text": "וְהַנּוֹרָא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "vehanora"
  },
  {
   "path": "audio/m/israeli/word/i-02-w11.mp3",
@@ -43666,11 +43687,12 @@
   "kind": "word",
   "id": "i-02-w11",
   "text": "מָגֵן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h344eb438",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "magen"
  },
  {
   "path": "audio/m/israeli/word/i-02-w12.mp3",
@@ -43692,11 +43714,12 @@
   "kind": "word",
   "id": "i-02-w12",
   "text": "קָדוֹשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h39244df3",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kadosh"
  },
  {
   "path": "audio/m/israeli/word/i-02-w13.mp3",
@@ -43717,10 +43740,11 @@
   "kind": "word",
   "id": "i-02-w13",
   "text": "כְּבוֹדוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kevodo"
  },
  {
   "path": "audio/m/israeli/word/i-02-w14.mp3",
@@ -43741,10 +43765,11 @@
   "kind": "word",
   "id": "i-02-w14",
   "text": "מִמְּקוֹמוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "mimekomo"
  },
  {
   "path": "audio/m/israeli/word/i-02-w15.mp3",
@@ -43765,10 +43790,11 @@
   "kind": "word",
   "id": "i-02-w15",
   "text": "יִמְלֹךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yimlokh"
  },
  {
   "path": "audio/m/israeli/word/i-03-w1.mp3",
@@ -43790,11 +43816,12 @@
   "kind": "word",
   "id": "i-03-w1",
   "text": "תּוֹרָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h16b7af50",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "torah"
  },
  {
   "path": "audio/m/israeli/word/i-03-w2.mp3",
@@ -43815,10 +43842,11 @@
   "kind": "word",
   "id": "i-03-w2",
   "text": "סֵפֶר תּוֹרָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "sefer torah"
  },
  {
   "path": "audio/m/israeli/word/i-03-w3.mp3",
@@ -43840,11 +43868,12 @@
   "kind": "word",
   "id": "i-03-w3",
   "text": "עֲלִיָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h8c045649",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "aliyah"
  },
  {
   "path": "audio/m/israeli/word/i-03-w4.mp3",
@@ -43865,10 +43894,11 @@
   "kind": "word",
   "id": "i-03-w4",
   "text": "נוֹתֵן הַתּוֹרָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "noten hatorah"
  },
  {
   "path": "audio/m/israeli/word/i-03-w5.mp3",
@@ -43889,10 +43919,11 @@
   "kind": "word",
   "id": "i-03-w5",
   "text": "גַּדְּלוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "gadelu"
  },
  {
   "path": "audio/m/israeli/word/i-03-w6.mp3",
@@ -43913,10 +43944,11 @@
   "kind": "word",
   "id": "i-03-w6",
   "text": "הַגְּדֻלָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "hagedulah"
  },
  {
   "path": "audio/m/israeli/word/i-03-w7.mp3",
@@ -43937,10 +43969,11 @@
   "kind": "word",
   "id": "i-03-w7",
   "text": "וְזֹאת הַתּוֹרָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "vezot hatorah"
  },
  {
   "path": "audio/m/israeli/word/i-03-w8.mp3",
@@ -43961,10 +43994,11 @@
   "kind": "word",
   "id": "i-03-w8",
   "text": "עֵץ חַיִּים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "etz chayim"
  },
  {
   "path": "audio/m/israeli/word/i-03-w9.mp3",
@@ -43985,10 +44019,11 @@
   "kind": "word",
   "id": "i-03-w9",
   "text": "הֲשִׁיבֵנוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "hashivenu"
  },
  {
   "path": "audio/m/israeli/word/i-03-w10.mp3",
@@ -44009,10 +44044,11 @@
   "kind": "word",
   "id": "i-03-w10",
   "text": "חַדֵּשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chadesh"
  },
  {
   "path": "audio/m/israeli/word/i-03-w11.mp3",
@@ -44033,10 +44069,11 @@
   "kind": "word",
   "id": "i-03-w11",
   "text": "יָמֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yameinu"
  },
  {
   "path": "audio/m/israeli/word/i-03-w12.mp3",
@@ -44057,10 +44094,11 @@
   "kind": "word",
   "id": "i-03-w12",
   "text": "כְּקֶדֶם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kekedem"
  },
  {
   "path": "audio/m/israeli/word/i-04-w1.mp3",
@@ -44082,11 +44120,12 @@
   "kind": "word",
   "id": "i-04-w1",
   "text": "אָמֵן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "hebf7495d",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "amen"
  },
  {
   "path": "audio/m/israeli/word/i-04-w2.mp3",
@@ -44107,10 +44146,11 @@
   "kind": "word",
   "id": "i-04-w2",
   "text": "שְׁמֵהּ רַבָּא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shemeh raba"
  },
  {
   "path": "audio/m/israeli/word/i-04-w3.mp3",
@@ -44131,10 +44171,11 @@
   "kind": "word",
   "id": "i-04-w3",
   "text": "בְּעָלְמָא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "be'alema"
  },
  {
   "path": "audio/m/israeli/word/i-04-w4.mp3",
@@ -44156,11 +44197,12 @@
   "kind": "word",
   "id": "i-04-w4",
   "text": "יִשְׂרָאֵל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p41545921",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yisra'el"
  },
  {
   "path": "audio/m/israeli/word/i-04-w5.mp3",
@@ -44181,10 +44223,11 @@
   "kind": "word",
   "id": "i-04-w5",
   "text": "וְאִמְרוּ אָמֵן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ve'imru amen"
  },
  {
   "path": "audio/m/israeli/word/i-04-w6.mp3",
@@ -44205,10 +44248,11 @@
   "kind": "word",
   "id": "i-04-w6",
   "text": "מְבָרַךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "mevarakh"
  },
  {
   "path": "audio/m/israeli/word/i-04-w7.mp3",
@@ -44229,10 +44273,11 @@
   "kind": "word",
   "id": "i-04-w7",
   "text": "בְּרִיךְ הוּא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "berikh hu"
  },
  {
   "path": "audio/m/israeli/word/i-04-w8.mp3",
@@ -44253,10 +44298,11 @@
   "kind": "word",
   "id": "i-04-w8",
   "text": "שְׁלָמָא רַבָּא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shelama raba"
  },
  {
   "path": "audio/m/israeli/word/i-04-w9.mp3",
@@ -44277,10 +44323,11 @@
   "kind": "word",
   "id": "i-04-w9",
   "text": "עוֹשֶׂה שָׁלוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "oseh shalom"
  },
  {
   "path": "audio/m/israeli/word/i-04-w10.mp3",
@@ -44302,11 +44349,12 @@
   "kind": "word",
   "id": "i-04-w10",
   "text": "עָלֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p52c330da",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "aleinu"
  },
  {
   "path": "audio/m/israeli/word/i-05-w1.mp3",
@@ -44328,11 +44376,12 @@
   "kind": "word",
   "id": "i-05-w1",
   "text": "נֵר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h64fb7d35",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ner"
  },
  {
   "path": "audio/m/israeli/word/i-05-w2.mp3",
@@ -44354,11 +44403,12 @@
   "kind": "word",
   "id": "i-05-w2",
   "text": "יַיִן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h03763c94",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yayin"
  },
  {
   "path": "audio/m/israeli/word/i-05-w3.mp3",
@@ -44380,11 +44430,12 @@
   "kind": "word",
   "id": "i-05-w3",
   "text": "בּוֹרֵא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "pbcc9b4c6",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "bore"
  },
  {
   "path": "audio/m/israeli/word/i-05-w4.mp3",
@@ -44405,10 +44456,11 @@
   "kind": "word",
   "id": "i-05-w4",
   "text": "פְּרִי הַגָּפֶן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "peri hagafen"
  },
  {
   "path": "audio/m/israeli/word/i-05-w5.mp3",
@@ -44430,11 +44482,12 @@
   "kind": "word",
   "id": "i-05-w5",
   "text": "לֶחֶם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "hf22f36ee",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "lechem"
  },
  {
   "path": "audio/m/israeli/word/i-05-w6.mp3",
@@ -44455,10 +44508,11 @@
   "kind": "word",
   "id": "i-05-w6",
   "text": "הַמּוֹצִיא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "hamotzi"
  },
  {
   "path": "audio/m/israeli/word/i-05-w7.mp3",
@@ -44479,10 +44533,11 @@
   "kind": "word",
   "id": "i-05-w7",
   "text": "מִן הָאָרֶץ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "min ha'aretz"
  },
  {
   "path": "audio/m/israeli/word/i-05-w8.mp3",
@@ -44503,10 +44558,11 @@
   "kind": "word",
   "id": "i-05-w8",
   "text": "הַשְּׁבִיעִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "hashevi'i"
  },
  {
   "path": "audio/m/israeli/word/i-05-w9.mp3",
@@ -44527,10 +44583,11 @@
   "kind": "word",
   "id": "i-05-w9",
   "text": "מְקַדֵּשׁ הַשַּׁבָּת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "mekadesh hashabat"
  },
  {
   "path": "audio/m/israeli/word/i-05-w10.mp3",
@@ -44551,10 +44608,11 @@
   "kind": "word",
   "id": "i-05-w10",
   "text": "זָכוֹר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "zakhor"
  },
  {
   "path": "audio/m/israeli/word/i-05-w11.mp3",
@@ -44575,10 +44633,11 @@
   "kind": "word",
   "id": "i-05-w11",
   "text": "וְשָׁמְרוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "veshamru"
  },
  {
   "path": "audio/m/israeli/word/i-05-w12.mp3",
@@ -44599,10 +44658,11 @@
   "kind": "word",
   "id": "i-05-w12",
   "text": "לְחַיִּים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "lechayim"
  },
  {
   "path": "audio/m/israeli/word/i-05-w13.mp3",
@@ -44624,11 +44684,12 @@
   "kind": "word",
   "id": "i-05-w13",
   "text": "שַׁבָּת שָׁלוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p425f3263",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shabat shalom"
  },
  {
   "path": "audio/m/israeli/word/i-06-w1.mp3",
@@ -44650,11 +44711,12 @@
   "kind": "word",
   "id": "i-06-w1",
   "text": "כּוֹס",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "hf9047f4b",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kos"
  },
  {
   "path": "audio/m/israeli/word/i-06-w2.mp3",
@@ -44676,11 +44738,12 @@
   "kind": "word",
   "id": "i-06-w2",
   "text": "יְשׁוּעָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h4299f50f",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yeshu'ah"
  },
  {
   "path": "audio/m/israeli/word/i-06-w3.mp3",
@@ -44872,11 +44935,12 @@
   "kind": "word",
   "id": "i-06-w10",
   "text": "חֹשֶׁךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h82e76dfb",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "choshekh"
  },
  {
   "path": "audio/m/israeli/word/i-06-w11.mp3",
@@ -44898,11 +44962,12 @@
   "kind": "word",
   "id": "i-06-w11",
   "text": "שָׁבוּעַ טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p67242f56",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shavu'a tov"
  },
  {
   "path": "audio/m/israeli/word/i-07-w1.mp3",

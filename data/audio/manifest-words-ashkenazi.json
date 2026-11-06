@@ -8795,8 +8795,8 @@
     "kind": "word",
     "id": "adon-olam-1-w1",
     "text": "אֲדוֹן",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {

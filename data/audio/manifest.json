@@ -65623,7 +65623,8 @@
   "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "pbf0df268",
-  "phonetic": "lakh"
+  "phonetic": "lakh",
+  "english": "UNKNOWN"
  },
  {
   "path": "audio/m/sephardi/word/r10-w3.mp3",
@@ -65644,10 +65645,11 @@
   "kind": "word",
   "id": "r10-w3",
   "text": "אַתָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h36d595e4"
+  "vocabId": "h36d595e4",
+  "phonetic": "atah"
  },
  {
   "path": "audio/m/sephardi/word/r11-w1.mp3",
@@ -65667,9 +65669,10 @@
   "kind": "word",
   "id": "r11-w1",
   "text": "אֶת",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "et"
  },
  {
   "path": "audio/m/sephardi/word/r11-w2.mp3",
@@ -65690,10 +65693,11 @@
   "kind": "word",
   "id": "r11-w2",
   "text": "מֶלֶךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h58d8d8fe"
+  "vocabId": "h58d8d8fe",
+  "phonetic": "melekh"
  },
  {
   "path": "audio/m/sephardi/word/r12-w1.mp3",
@@ -65714,10 +65718,11 @@
   "kind": "word",
   "id": "r12-w1",
   "text": "בֵּן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h4aa6ad2a"
+  "vocabId": "h4aa6ad2a",
+  "phonetic": "ben"
  },
  {
   "path": "audio/m/sephardi/word/r12-w2.mp3",
@@ -65737,9 +65742,10 @@
   "kind": "word",
   "id": "r12-w2",
   "text": "שָׁנָה",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "shanah"
  },
  {
   "path": "audio/m/sephardi/word/r12-w3.mp3",
@@ -65759,9 +65765,10 @@
   "kind": "word",
   "id": "r12-w3",
   "text": "אָנִי",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "ani"
  },
  {
   "path": "audio/m/sephardi/word/r12-w4.mp3",
@@ -65782,10 +65789,11 @@
   "kind": "word",
   "id": "r12-w4",
   "text": "אָמֵן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "hebf7495d"
+  "vocabId": "hebf7495d",
+  "phonetic": "amen"
  },
  {
   "path": "audio/m/sephardi/word/r13-w1.mp3",
@@ -65806,10 +65814,11 @@
   "kind": "word",
   "id": "r13-w1",
   "text": "הוּא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h1ef19acb"
+  "vocabId": "h1ef19acb",
+  "phonetic": "hu"
  },
  {
   "path": "audio/m/sephardi/word/r13-w2.mp3",
@@ -65830,10 +65839,11 @@
   "kind": "word",
   "id": "r13-w2",
   "text": "שׁוּב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h99a070bb"
+  "vocabId": "h99a070bb",
+  "phonetic": "shuv"
  },
  {
   "path": "audio/m/sephardi/word/r13-w3.mp3",
@@ -65854,10 +65864,11 @@
   "kind": "word",
   "id": "r13-w3",
   "text": "כֻּלָּם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h14eb0d0c"
+  "vocabId": "h14eb0d0c",
+  "phonetic": "kulam"
  },
  {
   "path": "audio/m/sephardi/word/r14-w1.mp3",
@@ -65878,10 +65889,11 @@
   "kind": "word",
   "id": "r14-w1",
   "text": "בְּרָכָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h93295b86"
+  "vocabId": "h93295b86",
+  "phonetic": "berakhah"
  },
  {
   "path": "audio/m/sephardi/word/r14-w2.mp3",
@@ -65902,10 +65914,11 @@
   "kind": "word",
   "id": "r14-w2",
   "text": "בְּרֵאשִׁית",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p98cfc62f"
+  "vocabId": "p98cfc62f",
+  "phonetic": "bereshit"
  },
  {
   "path": "audio/m/sephardi/word/r14-w3.mp3",
@@ -65926,10 +65939,11 @@
   "kind": "word",
   "id": "r14-w3",
   "text": "לְךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "pb9484fba"
+  "vocabId": "pb9484fba",
+  "phonetic": "lekha"
  },
  {
   "path": "audio/m/sephardi/word/r14-w4.mp3",
@@ -65950,10 +65964,11 @@
   "kind": "word",
   "id": "r14-w4",
   "text": "וְאָנִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p797dfc5a"
+  "vocabId": "p797dfc5a",
+  "phonetic": "ve'ani"
  },
  {
   "path": "audio/m/sephardi/word/r15-w1.mp3",
@@ -65974,10 +65989,11 @@
   "kind": "word",
   "id": "r15-w1",
   "text": "יְבָרֶכְךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "pfe83972b"
+  "vocabId": "pfe83972b",
+  "phonetic": "yevarekhkha"
  },
  {
   "path": "audio/m/sephardi/word/r15-w2.mp3",
@@ -65998,10 +66014,11 @@
   "kind": "word",
   "id": "r15-w2",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p6584b7dc"
+  "vocabId": "p6584b7dc",
+  "phonetic": "adonai"
  },
  {
   "path": "audio/m/sephardi/word/r15-w3.mp3",
@@ -66022,10 +66039,11 @@
   "kind": "word",
   "id": "r15-w3",
   "text": "וְיִשְׁמְרֶךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p67b402d0"
+  "vocabId": "p67b402d0",
+  "phonetic": "veyishmerekha"
  },
  {
   "path": "audio/m/sephardi/word/r16-w1.mp3",
@@ -66046,10 +66064,11 @@
   "kind": "word",
   "id": "r16-w1",
   "text": "פֶּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h60b16793"
+  "vocabId": "h60b16793",
+  "phonetic": "peh"
  },
  {
   "path": "audio/m/sephardi/word/r16-w2.mp3",
@@ -66069,9 +66088,10 @@
   "kind": "word",
   "id": "r16-w2",
   "text": "אַף",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "af"
  },
  {
   "path": "audio/m/sephardi/word/r16-w3.mp3",
@@ -66092,10 +66112,11 @@
   "kind": "word",
   "id": "r16-w3",
   "text": "פָּנָיו",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p176bc3b2"
+  "vocabId": "p176bc3b2",
+  "phonetic": "panav"
  },
  {
   "path": "audio/m/sephardi/word/r17-w1.mp3",
@@ -66115,9 +66136,10 @@
   "kind": "word",
   "id": "r17-w1",
   "text": "חַי",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "chai"
  },
  {
   "path": "audio/m/sephardi/word/r17-w2.mp3",
@@ -66138,10 +66160,11 @@
   "kind": "word",
   "id": "r17-w2",
   "text": "חָכָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "he2c1284d"
+  "vocabId": "he2c1284d",
+  "phonetic": "chakham"
  },
  {
   "path": "audio/m/sephardi/word/r17-w3.mp3",
@@ -66162,10 +66185,11 @@
   "kind": "word",
   "id": "r17-w3",
   "text": "רוּחַ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "hfb819565"
+  "vocabId": "hfb819565",
+  "phonetic": "ruach"
  },
  {
   "path": "audio/m/sephardi/word/r18-w1.mp3",
@@ -66185,9 +66209,10 @@
   "kind": "word",
   "id": "r18-w1",
   "text": "אֶחָד",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "echad"
  },
  {
   "path": "audio/m/sephardi/word/r18-w2.mp3",
@@ -66208,10 +66233,11 @@
   "kind": "word",
   "id": "r18-w2",
   "text": "גָּדוֹל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "hdd2bd792"
+  "vocabId": "hdd2bd792",
+  "phonetic": "gadol"
  },
  {
   "path": "audio/m/sephardi/word/r18-w3.mp3",
@@ -66232,10 +66258,11 @@
   "kind": "word",
   "id": "r18-w3",
   "text": "גַּן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "ha5babfe9"
+  "vocabId": "ha5babfe9",
+  "phonetic": "gan"
  },
  {
   "path": "audio/m/sephardi/word/r18-w4.mp3",
@@ -66255,9 +66282,10 @@
   "kind": "word",
   "id": "r18-w4",
   "text": "דֶּרֶךְ",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "derekh"
  },
  {
   "path": "audio/m/sephardi/word/r19-w1.mp3",
@@ -66277,9 +66305,10 @@
   "kind": "word",
   "id": "r19-w1",
   "text": "שְׁמַע",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "shema"
  },
  {
   "path": "audio/m/sephardi/word/r19-w2.mp3",
@@ -66300,10 +66329,11 @@
   "kind": "word",
   "id": "r19-w2",
   "text": "עַם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h020c4fa8"
+  "vocabId": "h020c4fa8",
+  "phonetic": "am"
  },
  {
   "path": "audio/m/sephardi/word/r19-w3.mp3",
@@ -66324,10 +66354,11 @@
   "kind": "word",
   "id": "r19-w3",
   "text": "עוֹלָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "ha39cf3c9"
+  "vocabId": "ha39cf3c9",
+  "phonetic": "olam"
  },
  {
   "path": "audio/m/sephardi/word/r20-w1.mp3",
@@ -66348,10 +66379,11 @@
   "kind": "word",
   "id": "r20-w1",
   "text": "סֵפֶר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h231c624a"
+  "vocabId": "h231c624a",
+  "phonetic": "sefer"
  },
  {
   "path": "audio/m/sephardi/word/r20-w2.mp3",
@@ -66372,10 +66404,11 @@
   "kind": "word",
   "id": "r20-w2",
   "text": "יִשְׂרָאֵל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p41545921"
+  "vocabId": "p41545921",
+  "phonetic": "yisra'el"
  },
  {
   "path": "audio/m/sephardi/word/r20-w3.mp3",
@@ -66396,10 +66429,11 @@
   "kind": "word",
   "id": "r20-w3",
   "text": "שִׂמְחָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h3612be9c"
+  "vocabId": "h3612be9c",
+  "phonetic": "simchah"
  },
  {
   "path": "audio/m/sephardi/word/r21-w1.mp3",
@@ -66420,10 +66454,11 @@
   "kind": "word",
   "id": "r21-w1",
   "text": "אֱלֹהִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h6b853dd5"
+  "vocabId": "h6b853dd5",
+  "phonetic": "elohim"
  },
  {
   "path": "audio/m/sephardi/word/r21-w2.mp3",
@@ -66444,10 +66479,11 @@
   "kind": "word",
   "id": "r21-w2",
   "text": "אֱמֶת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "he5c23387"
+  "vocabId": "he5c23387",
+  "phonetic": "emet"
  },
  {
   "path": "audio/m/sephardi/word/r21-w3.mp3",
@@ -66467,9 +66503,10 @@
   "kind": "word",
   "id": "r21-w3",
   "text": "אֲנִי",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "ani"
  },
  {
   "path": "audio/m/sephardi/word/r21-w4.mp3",
@@ -66490,10 +66527,11 @@
   "kind": "word",
   "id": "r21-w4",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p996ad12f"
+  "vocabId": "p996ad12f",
+  "phonetic": "adonai"
  },
  {
   "path": "audio/m/sephardi/word/r21-w5.mp3",
@@ -66514,10 +66552,11 @@
   "kind": "word",
   "id": "r21-w5",
   "text": "אֳנִיָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h12353001"
+  "vocabId": "h12353001",
+  "phonetic": "oniyah"
  },
  {
   "path": "audio/m/sephardi/word/r22-w1.mp3",
@@ -66537,9 +66576,10 @@
   "kind": "word",
   "id": "r22-w1",
   "text": "שְׁמַע",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "shema"
  },
  {
   "path": "audio/m/sephardi/word/r22-w2.mp3",
@@ -66560,10 +66600,11 @@
   "kind": "word",
   "id": "r22-w2",
   "text": "יִשְׂרָאֵל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p41545921"
+  "vocabId": "p41545921",
+  "phonetic": "yisra'el"
  },
  {
   "path": "audio/m/sephardi/word/r22-w3.mp3",
@@ -66584,10 +66625,11 @@
   "kind": "word",
   "id": "r22-w3",
   "text": "אֱלֹהֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p29823ceb"
+  "vocabId": "p29823ceb",
+  "phonetic": "eloheinu"
  },
  {
   "path": "audio/m/sephardi/word/r22-w4.mp3",
@@ -66607,9 +66649,10 @@
   "kind": "word",
   "id": "r22-w4",
   "text": "אֶחָד",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "echad"
  },
  {
   "path": "audio/m/sephardi/word/r23-w1.mp3",
@@ -66630,10 +66673,11 @@
   "kind": "word",
   "id": "r23-w1",
   "text": "זֶה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h67c6be75"
+  "vocabId": "h67c6be75",
+  "phonetic": "zeh"
  },
  {
   "path": "audio/m/sephardi/word/r23-w2.mp3",
@@ -66653,9 +66697,10 @@
   "kind": "word",
   "id": "r23-w2",
   "text": "טוֹב",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "tov"
  },
  {
   "path": "audio/m/sephardi/word/r23-w3.mp3",
@@ -66676,10 +66721,11 @@
   "kind": "word",
   "id": "r23-w3",
   "text": "זָהָב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h761c6cb9"
+  "vocabId": "h761c6cb9",
+  "phonetic": "zahav"
  },
  {
   "path": "audio/m/sephardi/word/r23-w4.mp3",
@@ -66700,10 +66746,11 @@
   "kind": "word",
   "id": "r23-w4",
   "text": "טַל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "hb91b91be"
+  "vocabId": "hb91b91be",
+  "phonetic": "tal"
  },
  {
   "path": "audio/m/sephardi/word/r24-w1.mp3",
@@ -66724,10 +66771,11 @@
   "kind": "word",
   "id": "r24-w1",
   "text": "צֶדֶק",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h35207b27"
+  "vocabId": "h35207b27",
+  "phonetic": "tzedek"
  },
  {
   "path": "audio/m/sephardi/word/r24-w2.mp3",
@@ -66748,10 +66796,11 @@
   "kind": "word",
   "id": "r24-w2",
   "text": "אֶרֶץ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "hd82a3079"
+  "vocabId": "hd82a3079",
+  "phonetic": "eretz"
  },
  {
   "path": "audio/m/sephardi/word/r24-w3.mp3",
@@ -66772,10 +66821,11 @@
   "kind": "word",
   "id": "r24-w3",
   "text": "קוֹל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h640d9686"
+  "vocabId": "h640d9686",
+  "phonetic": "kol"
  },
  {
   "path": "audio/m/sephardi/word/r24-w4.mp3",
@@ -66796,10 +66846,11 @@
   "kind": "word",
   "id": "r24-w4",
   "text": "קָדוֹשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h39244df3"
+  "vocabId": "h39244df3",
+  "phonetic": "kadosh"
  },
  {
   "path": "audio/m/sephardi/word/r24-w5.mp3",
@@ -66820,10 +66871,11 @@
   "kind": "word",
   "id": "r24-w5",
   "text": "צְדָקָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h967f68e9"
+  "vocabId": "h967f68e9",
+  "phonetic": "tzedakah"
  },
  {
   "path": "audio/m/sephardi/word/r25-w1.mp3",
@@ -66844,10 +66896,11 @@
   "kind": "word",
   "id": "r25-w1",
   "text": "יָאֵר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p58f69180"
+  "vocabId": "p58f69180",
+  "phonetic": "ya'er"
  },
  {
   "path": "audio/m/sephardi/word/r25-w2.mp3",
@@ -66868,10 +66921,11 @@
   "kind": "word",
   "id": "r25-w2",
   "text": "פָּנָיו",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p176bc3b2"
+  "vocabId": "p176bc3b2",
+  "phonetic": "panav"
  },
  {
   "path": "audio/m/sephardi/word/r25-w3.mp3",
@@ -66892,10 +66946,11 @@
   "kind": "word",
   "id": "r25-w3",
   "text": "אֵלֶיךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p0494a8ee"
+  "vocabId": "p0494a8ee",
+  "phonetic": "elekha"
  },
  {
   "path": "audio/m/sephardi/word/r25-w4.mp3",
@@ -66916,10 +66971,11 @@
   "kind": "word",
   "id": "r25-w4",
   "text": "וִיחֻנֶּךָּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p65b86295"
+  "vocabId": "p65b86295",
+  "phonetic": "vichuneka"
  },
  {
   "path": "audio/m/sephardi/word/r26-w1.mp3",
@@ -66940,10 +66996,11 @@
   "kind": "word",
   "id": "r26-w1",
   "text": "יִשָּׂא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p64e66aea"
+  "vocabId": "p64e66aea",
+  "phonetic": "yisa"
  },
  {
   "path": "audio/m/sephardi/word/r26-w2.mp3",
@@ -66964,10 +67021,11 @@
   "kind": "word",
   "id": "r26-w2",
   "text": "וְיָשֵׂם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p459412f0"
+  "vocabId": "p459412f0",
+  "phonetic": "veyasem"
  },
  {
   "path": "audio/m/sephardi/word/r26-w3.mp3",
@@ -66988,10 +67046,11 @@
   "kind": "word",
   "id": "r26-w3",
   "text": "שָׁלוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "hf8c8316a"
+  "vocabId": "hf8c8316a",
+  "phonetic": "shalom"
  },
  {
   "path": "audio/m/sephardi/word/r27-w1.mp3",
@@ -67012,10 +67071,11 @@
   "kind": "word",
   "id": "r27-w1",
   "text": "בִּרְכַּת כֹּהֲנִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "pbc01a362"
+  "vocabId": "pbc01a362",
+  "phonetic": "birkat kohanim"
  },
  {
   "path": "audio/m/sephardi/word/r28-w1.mp3",
@@ -67036,10 +67096,11 @@
   "kind": "word",
   "id": "r28-w1",
   "text": "בָּרוּךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h70669df5"
+  "vocabId": "h70669df5",
+  "phonetic": "barukh"
  },
  {
   "path": "audio/m/sephardi/word/r28-w2.mp3",
@@ -67060,10 +67121,11 @@
   "kind": "word",
   "id": "r28-w2",
   "text": "אַתָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h36d595e4"
+  "vocabId": "h36d595e4",
+  "phonetic": "atah"
  },
  {
   "path": "audio/m/sephardi/word/r28-w3.mp3",
@@ -67084,10 +67146,11 @@
   "kind": "word",
   "id": "r28-w3",
   "text": "אֱלֹהֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p29823ceb"
+  "vocabId": "p29823ceb",
+  "phonetic": "eloheinu"
  },
  {
   "path": "audio/m/sephardi/word/r28-w4.mp3",
@@ -67108,10 +67171,11 @@
   "kind": "word",
   "id": "r28-w4",
   "text": "מֶלֶךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h58d8d8fe"
+  "vocabId": "h58d8d8fe",
+  "phonetic": "melekh"
  },
  {
   "path": "audio/m/sephardi/word/r28-w5.mp3",
@@ -67132,10 +67196,11 @@
   "kind": "word",
   "id": "r28-w5",
   "text": "הָעוֹלָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "pc7b573ce"
+  "vocabId": "pc7b573ce",
+  "phonetic": "ha'olam"
  },
  {
   "path": "audio/m/sephardi/word/r29-w1.mp3",
@@ -67156,10 +67221,11 @@
   "kind": "word",
   "id": "r29-w1",
   "text": "יִשְׁמְרֶךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p0147cc70"
+  "vocabId": "p0147cc70",
+  "phonetic": "yishmerekha"
  },
  {
   "path": "audio/m/sephardi/word/r29-w2.mp3",
@@ -67180,10 +67246,11 @@
   "kind": "word",
   "id": "r29-w2",
   "text": "מִשְׁפָּט",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "hf95173f3"
+  "vocabId": "hf95173f3",
+  "phonetic": "mishpat"
  },
  {
   "path": "audio/m/sephardi/word/r29-w3.mp3",
@@ -67204,10 +67271,11 @@
   "kind": "word",
   "id": "r29-w3",
   "text": "תִּשְׁמְעוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p0cf7314a"
+  "vocabId": "p0cf7314a",
+  "phonetic": "tishme'u"
  },
  {
   "path": "audio/m/sephardi/word/r29-w4.mp3",
@@ -67228,10 +67296,11 @@
   "kind": "word",
   "id": "r29-w4",
   "text": "וּבְכָל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p133cac9a"
+  "vocabId": "p133cac9a",
+  "phonetic": "uvekhol"
  },
  {
   "path": "audio/m/sephardi/word/r30-w1.mp3",
@@ -67252,10 +67321,11 @@
   "kind": "word",
   "id": "r30-w1",
   "text": "בָּרוּךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h70669df5"
+  "vocabId": "h70669df5",
+  "phonetic": "barukh"
  },
  {
   "path": "audio/m/sephardi/word/r30-w2.mp3",
@@ -67276,10 +67346,11 @@
   "kind": "word",
   "id": "r30-w2",
   "text": "כָּתַב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h5d30bc42"
+  "vocabId": "h5d30bc42",
+  "phonetic": "katav"
  },
  {
   "path": "audio/m/sephardi/word/r30-w3.mp3",
@@ -67300,10 +67371,11 @@
   "kind": "word",
   "id": "r30-w3",
   "text": "שְׁמֵהּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "pb8600a56"
+  "vocabId": "pb8600a56",
+  "phonetic": "shemeh"
  },
  {
   "path": "audio/m/sephardi/word/r30-w4.mp3",
@@ -80535,7 +80607,8 @@
   "status": "tts",
   "source": "paid-cloud",
   "group": "lesson-word",
-  "phonetic": "hashiveinu"
+  "phonetic": "hashiveinu",
+  "english": "UNKNOWN"
  },
  {
   "path": "audio/f/ashkenazi/word/i-03-w9.mp3",
@@ -80635,10 +80708,11 @@
   "kind": "word",
   "id": "i-04-w1",
   "text": "אָמֵן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "hebf7495d"
+  "vocabId": "hebf7495d",
+  "phonetic": "omein"
  },
  {
   "path": "audio/f/ashkenazi/word/i-04-w1.mp3",
@@ -80661,9 +80735,10 @@
   "kind": "word",
   "id": "i-04-w2",
   "text": "שְׁמֵהּ רַבָּא",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "shemeih rabo"
  },
  {
   "path": "audio/f/ashkenazi/word/i-04-w2.mp3",
@@ -80685,9 +80760,10 @@
   "kind": "word",
   "id": "i-04-w3",
   "text": "בְּעָלְמָא",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "be'olemo"
  },
  {
   "path": "audio/f/ashkenazi/word/i-04-w3.mp3",
@@ -80709,10 +80785,11 @@
   "kind": "word",
   "id": "i-04-w4",
   "text": "יִשְׂרָאֵל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p41545921"
+  "vocabId": "p41545921",
+  "phonetic": "yisro'eil"
  },
  {
   "path": "audio/f/ashkenazi/word/i-04-w4.mp3",
@@ -80735,9 +80812,10 @@
   "kind": "word",
   "id": "i-04-w5",
   "text": "וְאִמְרוּ אָמֵן",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "ve'imru omein"
  },
  {
   "path": "audio/f/ashkenazi/word/i-04-w5.mp3",
@@ -80759,9 +80837,10 @@
   "kind": "word",
   "id": "i-04-w6",
   "text": "מְבָרַךְ",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "mevorakh"
  },
  {
   "path": "audio/f/ashkenazi/word/i-04-w6.mp3",
@@ -80783,9 +80862,10 @@
   "kind": "word",
   "id": "i-04-w7",
   "text": "בְּרִיךְ הוּא",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "berikh hu"
  },
  {
   "path": "audio/f/ashkenazi/word/i-04-w7.mp3",
@@ -80807,9 +80887,10 @@
   "kind": "word",
   "id": "i-04-w8",
   "text": "שְׁלָמָא רַבָּא",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "shelomo rabo"
  },
  {
   "path": "audio/f/ashkenazi/word/i-04-w8.mp3",
@@ -80831,9 +80912,10 @@
   "kind": "word",
   "id": "i-04-w9",
   "text": "עוֹשֶׂה שָׁלוֹם",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "oseh sholom"
  },
  {
   "path": "audio/f/ashkenazi/word/i-04-w9.mp3",
@@ -80855,10 +80937,11 @@
   "kind": "word",
   "id": "i-04-w10",
   "text": "עָלֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p52c330da"
+  "vocabId": "p52c330da",
+  "phonetic": "oleinu"
  },
  {
   "path": "audio/f/ashkenazi/word/i-04-w10.mp3",
@@ -80881,10 +80964,11 @@
   "kind": "word",
   "id": "i-05-w1",
   "text": "נֵר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h64fb7d35"
+  "vocabId": "h64fb7d35",
+  "phonetic": "neir"
  },
  {
   "path": "audio/f/ashkenazi/word/i-05-w1.mp3",
@@ -80907,10 +80991,11 @@
   "kind": "word",
   "id": "i-05-w2",
   "text": "יַיִן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h03763c94"
+  "vocabId": "h03763c94",
+  "phonetic": "yayin"
  },
  {
   "path": "audio/f/ashkenazi/word/i-05-w2.mp3",
@@ -80933,10 +81018,11 @@
   "kind": "word",
   "id": "i-05-w3",
   "text": "בּוֹרֵא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "pbcc9b4c6"
+  "vocabId": "pbcc9b4c6",
+  "phonetic": "borei"
  },
  {
   "path": "audio/f/ashkenazi/word/i-05-w3.mp3",
@@ -80959,9 +81045,10 @@
   "kind": "word",
   "id": "i-05-w4",
   "text": "פְּרִי הַגָּפֶן",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "peri hagofen"
  },
  {
   "path": "audio/f/ashkenazi/word/i-05-w4.mp3",
@@ -80983,10 +81070,11 @@
   "kind": "word",
   "id": "i-05-w5",
   "text": "לֶחֶם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "hf22f36ee"
+  "vocabId": "hf22f36ee",
+  "phonetic": "lechem"
  },
  {
   "path": "audio/f/ashkenazi/word/i-05-w5.mp3",
@@ -81009,9 +81097,10 @@
   "kind": "word",
   "id": "i-05-w6",
   "text": "הַמּוֹצִיא",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "hamotzi"
  },
  {
   "path": "audio/f/ashkenazi/word/i-05-w6.mp3",
@@ -81033,9 +81122,10 @@
   "kind": "word",
   "id": "i-05-w7",
   "text": "מִן הָאָרֶץ",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "min ho'oretz"
  },
  {
   "path": "audio/f/ashkenazi/word/i-05-w7.mp3",
@@ -81057,9 +81147,10 @@
   "kind": "word",
   "id": "i-05-w8",
   "text": "הַשְּׁבִיעִי",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "hashevi'i"
  },
  {
   "path": "audio/f/ashkenazi/word/i-05-w8.mp3",
@@ -81081,9 +81172,10 @@
   "kind": "word",
   "id": "i-05-w9",
   "text": "מְקַדֵּשׁ הַשַּׁבָּת",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "mekadeish hashabos"
  },
  {
   "path": "audio/f/ashkenazi/word/i-05-w9.mp3",
@@ -81105,9 +81197,10 @@
   "kind": "word",
   "id": "i-05-w10",
   "text": "זָכוֹר",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "zokhor"
  },
  {
   "path": "audio/f/ashkenazi/word/i-05-w10.mp3",
@@ -81129,9 +81222,10 @@
   "kind": "word",
   "id": "i-05-w11",
   "text": "וְשָׁמְרוּ",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "veshomru"
  },
  {
   "path": "audio/f/ashkenazi/word/i-05-w11.mp3",
@@ -81153,9 +81247,10 @@
   "kind": "word",
   "id": "i-05-w12",
   "text": "לְחַיִּים",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "lechayim"
  },
  {
   "path": "audio/f/ashkenazi/word/i-05-w12.mp3",
@@ -81177,10 +81272,11 @@
   "kind": "word",
   "id": "i-05-w13",
   "text": "שַׁבָּת שָׁלוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p425f3263"
+  "vocabId": "p425f3263",
+  "phonetic": "shabos sholom"
  },
  {
   "path": "audio/f/ashkenazi/word/i-05-w13.mp3",
@@ -81203,10 +81299,11 @@
   "kind": "word",
   "id": "i-06-w1",
   "text": "כּוֹס",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "hf9047f4b"
+  "vocabId": "hf9047f4b",
+  "phonetic": "kos"
  },
  {
   "path": "audio/f/ashkenazi/word/i-06-w1.mp3",
@@ -81229,10 +81326,11 @@
   "kind": "word",
   "id": "i-06-w2",
   "text": "יְשׁוּעָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h4299f50f"
+  "vocabId": "h4299f50f",
+  "phonetic": "yeshu'oh"
  },
  {
   "path": "audio/f/ashkenazi/word/i-06-w2.mp3",
@@ -81255,9 +81353,10 @@
   "kind": "word",
   "id": "i-06-w3",
   "text": "בְשָׂמִים",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "vesomim"
  },
  {
   "path": "audio/f/ashkenazi/word/i-06-w3.mp3",
@@ -81279,9 +81378,10 @@
   "kind": "word",
   "id": "i-06-w4",
   "text": "מִינֵי",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "minei"
  },
  {
   "path": "audio/f/ashkenazi/word/i-06-w4.mp3",
@@ -81303,9 +81403,10 @@
   "kind": "word",
   "id": "i-06-w5",
   "text": "מְאוֹרֵי הָאֵשׁ",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "me'orei ho'eish"
  },
  {
   "path": "audio/f/ashkenazi/word/i-06-w5.mp3",
@@ -81327,9 +81428,10 @@
   "kind": "word",
   "id": "i-06-w6",
   "text": "הַמַּבְדִּיל",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "hamavdil"
  },
  {
   "path": "audio/f/ashkenazi/word/i-06-w6.mp3",
@@ -81351,10 +81453,11 @@
   "kind": "word",
   "id": "i-06-w7",
   "text": "קֹדֶשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h6a0c1de1"
+  "vocabId": "h6a0c1de1",
+  "phonetic": "kodesh"
  },
  {
   "path": "audio/f/ashkenazi/word/i-06-w7.mp3",
@@ -81377,9 +81480,10 @@
   "kind": "word",
   "id": "i-06-w8",
   "text": "לְחוֹל",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "lechol"
  },
  {
   "path": "audio/f/ashkenazi/word/i-06-w8.mp3",
@@ -81401,9 +81505,10 @@
   "kind": "word",
   "id": "i-06-w9",
   "text": "אוֹר",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "or"
  },
  {
   "path": "audio/f/ashkenazi/word/i-06-w9.mp3",
@@ -81425,10 +81530,11 @@
   "kind": "word",
   "id": "i-06-w10",
   "text": "חֹשֶׁךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h82e76dfb"
+  "vocabId": "h82e76dfb",
+  "phonetic": "choshekh"
  },
  {
   "path": "audio/f/ashkenazi/word/i-06-w10.mp3",
@@ -81451,10 +81557,11 @@
   "kind": "word",
   "id": "i-06-w11",
   "text": "שָׁבוּעַ טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p67242f56"
+  "vocabId": "p67242f56",
+  "phonetic": "shovu'a tov"
  },
  {
   "path": "audio/f/ashkenazi/word/i-06-w11.mp3",
@@ -81477,9 +81584,10 @@
   "kind": "word",
   "id": "i-07-w1",
   "text": "כִּי לְעוֹלָם חַסְדּוֹ",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "ki le'olom chasdo"
  },
  {
   "path": "audio/f/ashkenazi/word/i-07-w1.mp3",
@@ -81501,9 +81609,10 @@
   "kind": "word",
   "id": "i-07-w2",
   "text": "הַלְלוּ־יָהּ",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "halelu-yoh"
  },
  {
   "path": "audio/f/ashkenazi/word/i-07-w2.mp3",
@@ -81525,9 +81634,10 @@
   "kind": "word",
   "id": "i-07-w3",
   "text": "יֹאמַר נָא יִשְׂרָאֵל",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "yomar no yisro'eil"
  },
  {
   "path": "audio/f/ashkenazi/word/i-07-w3.mp3",
@@ -81549,9 +81659,10 @@
   "kind": "word",
   "id": "i-07-w4",
   "text": "אָנָּא אֲדֹנָי הוֹשִׁיעָה נָא",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "ono adonoy hoshi'oh no"
  },
  {
   "path": "audio/f/ashkenazi/word/i-07-w4.mp3",
@@ -81573,9 +81684,10 @@
   "kind": "word",
   "id": "i-07-w5",
   "text": "זֶה הַיּוֹם עָשָׂה אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "zeh hayom osoh adonoy"
  },
  {
   "path": "audio/f/ashkenazi/word/i-07-w5.mp3",
@@ -81597,9 +81709,10 @@
   "kind": "word",
   "id": "i-07-w6",
   "text": "מִן הַמֵּצַר קָרָאתִי יָּהּ",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "min hameitzar korosi yoh"
  },
  {
   "path": "audio/f/ashkenazi/word/i-07-w6.mp3",
@@ -81621,9 +81734,10 @@
   "kind": "word",
   "id": "i-07-w7",
   "text": "אֵלִי אַתָּה",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "eili atoh"
  },
  {
   "path": "audio/f/ashkenazi/word/i-07-w7.mp3",
@@ -81645,9 +81759,10 @@
   "kind": "word",
   "id": "i-07-w8",
   "text": "אֲדֹנָי לִי לֹא אִירָא",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "adonoy li lo iro"
  },
  {
   "path": "audio/f/ashkenazi/word/i-07-w8.mp3",
@@ -81669,9 +81784,10 @@
   "kind": "word",
   "id": "i-07-w9",
   "text": "לֹא לָנוּ אֲדֹנָי לֹא לָנוּ",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "lo lonu adonoy lo lonu"
  },
  {
   "path": "audio/f/ashkenazi/word/i-07-w9.mp3",
@@ -81693,9 +81809,10 @@
   "kind": "word",
   "id": "i-07-w10",
   "text": "הַלְלוּ אֶת־אֲדֹנָי כָּל־גּוֹיִם",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "halelu es-adonoy kol-goyim"
  },
  {
   "path": "audio/f/ashkenazi/word/i-07-w10.mp3",
@@ -81717,9 +81834,10 @@
   "kind": "word",
   "id": "i-07-w11",
   "text": "כּוֹס יְשׁוּעוֹת אֶשָּׂא",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "kos yeshu'os eso"
  },
  {
   "path": "audio/f/ashkenazi/word/i-07-w11.mp3",
@@ -81741,10 +81859,11 @@
   "kind": "word",
   "id": "i-08-w1",
   "text": "עָלֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p52c330da"
+  "vocabId": "p52c330da",
+  "phonetic": "oleinu"
  },
  {
   "path": "audio/f/ashkenazi/word/i-08-w1.mp3",
@@ -81767,10 +81886,11 @@
   "kind": "word",
   "id": "i-08-w2",
   "text": "לְשַׁבֵּחַ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "p2f6563bf"
+  "vocabId": "p2f6563bf",
+  "phonetic": "leshabeiach"
  },
  {
   "path": "audio/f/ashkenazi/word/i-08-w2.mp3",
@@ -81793,9 +81913,10 @@
   "kind": "word",
   "id": "i-08-w3",
   "text": "לַאֲדוֹן הַכֹּל",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "la'adon hakol"
  },
  {
   "path": "audio/f/ashkenazi/word/i-08-w3.mp3",
@@ -81817,9 +81938,10 @@
   "kind": "word",
   "id": "i-08-w4",
   "text": "גְּדֻלָּה",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "geduloh"
  },
  {
   "path": "audio/f/ashkenazi/word/i-08-w4.mp3",
@@ -81841,9 +81963,10 @@
   "kind": "word",
   "id": "i-08-w5",
   "text": "וַאֲנַחְנוּ",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "va'anachnu"
  },
  {
   "path": "audio/f/ashkenazi/word/i-08-w5.mp3",
@@ -81865,9 +81988,10 @@
   "kind": "word",
   "id": "i-08-w6",
   "text": "מִשְׁתַּחֲוִים",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "mishtachavim"
  },
  {
   "path": "audio/f/ashkenazi/word/i-08-w6.mp3",
@@ -81889,9 +82013,10 @@
   "kind": "word",
   "id": "i-08-w7",
   "text": "מֶלֶךְ מַלְכֵי הַמְּלָכִים",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "melekh malkhei hamelokhim"
  },
  {
   "path": "audio/f/ashkenazi/word/i-08-w7.mp3",
@@ -81913,9 +82038,10 @@
   "kind": "word",
   "id": "i-08-w8",
   "text": "הַקָּדוֹשׁ בָּרוּךְ הוּא",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "hakodosh borukh hu"
  },
  {
   "path": "audio/f/ashkenazi/word/i-08-w8.mp3",
@@ -81937,10 +82063,11 @@
   "kind": "word",
   "id": "i-08-w9",
   "text": "שָׁמַיִם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "hb6ae069f"
+  "vocabId": "hb6ae069f",
+  "phonetic": "shomayim"
  },
  {
   "path": "audio/f/ashkenazi/word/i-08-w9.mp3",
@@ -81963,9 +82090,10 @@
   "kind": "word",
   "id": "i-08-w10",
   "text": "אָרֶץ",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "oretz"
  },
  {
   "path": "audio/f/ashkenazi/word/i-08-w10.mp3",
@@ -81987,10 +82115,11 @@
   "kind": "word",
   "id": "i-08-w11",
   "text": "אֱמֶת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "he5c23387"
+  "vocabId": "he5c23387",
+  "phonetic": "emes"
  },
  {
   "path": "audio/f/ashkenazi/word/i-08-w11.mp3",
@@ -82013,9 +82142,10 @@
   "kind": "word",
   "id": "i-08-w12",
   "text": "אֵין עוֹד",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "ein od"
  },
  {
   "path": "audio/f/ashkenazi/word/i-08-w12.mp3",
@@ -82037,9 +82167,10 @@
   "kind": "word",
   "id": "i-09-w1",
   "text": "אֲדוֹן עוֹלָם",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "adon olom"
  },
  {
   "path": "audio/f/ashkenazi/word/i-09-w1.mp3",
@@ -82061,10 +82192,11 @@
   "kind": "word",
   "id": "i-09-w2",
   "text": "מָלַךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "heba57078"
+  "vocabId": "heba57078",
+  "phonetic": "molakh"
  },
  {
   "path": "audio/f/ashkenazi/word/i-09-w2.mp3",
@@ -82087,10 +82219,11 @@
   "kind": "word",
   "id": "i-09-w3",
   "text": "מֶלֶךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h58d8d8fe"
+  "vocabId": "h58d8d8fe",
+  "phonetic": "melekh"
  },
  {
   "path": "audio/f/ashkenazi/word/i-09-w3.mp3",
@@ -82113,9 +82246,10 @@
   "kind": "word",
   "id": "i-09-w4",
   "text": "שְׁמוֹ",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "shemo"
  },
  {
   "path": "audio/f/ashkenazi/word/i-09-w4.mp3",
@@ -82137,10 +82271,11 @@
   "kind": "word",
   "id": "i-09-w5",
   "text": "נִקְרָא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "vocabId": "h40bd6f51"
+  "vocabId": "h40bd6f51",
+  "phonetic": "nikro"
  },
  {
   "path": "audio/f/ashkenazi/word/i-09-w5.mp3",
@@ -82163,9 +82298,10 @@
   "kind": "word",
   "id": "i-09-w6",
   "text": "וְהוּא הָיָה",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "vehu hoyoh"
  },
  {
   "path": "audio/f/ashkenazi/word/i-09-w6.mp3",
@@ -82187,9 +82323,10 @@
   "kind": "word",
   "id": "i-09-w7",
   "text": "וְהוּא הֹוֶה",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "vehu hoveh"
  },
  {
   "path": "audio/f/ashkenazi/word/i-09-w7.mp3",
@@ -82211,9 +82348,10 @@
   "kind": "word",
   "id": "i-09-w8",
   "text": "וְהוּא יִהְיֶה",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "vehu yihyeh"
  },
  {
   "path": "audio/f/ashkenazi/word/i-09-w8.mp3",
@@ -82259,9 +82397,10 @@
   "kind": "word",
   "id": "i-09-w10",
   "text": "וְאֵין שֵׁנִי",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "ve'ein sheini"
  },
  {
   "path": "audio/f/ashkenazi/word/i-09-w10.mp3",
@@ -82283,9 +82422,10 @@
   "kind": "word",
   "id": "i-09-w11",
   "text": "בְּלִי רֵאשִׁית",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "beli reishis"
  },
  {
   "path": "audio/f/ashkenazi/word/i-09-w11.mp3",
@@ -82307,9 +82447,10 @@
   "kind": "word",
   "id": "i-09-w12",
   "text": "גּוֹאֲלִי",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "go'ali"
  },
  {
   "path": "audio/f/ashkenazi/word/i-09-w12.mp3",
@@ -82331,9 +82472,10 @@
   "kind": "word",
   "id": "i-09-w13",
   "text": "רוּחִי",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "ruchi"
  },
  {
   "path": "audio/f/ashkenazi/word/i-09-w13.mp3",
@@ -82355,9 +82497,10 @@
   "kind": "word",
   "id": "i-09-w14",
   "text": "אִישַׁן",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "ishan"
  },
  {
   "path": "audio/f/ashkenazi/word/i-09-w14.mp3",
@@ -82379,9 +82522,10 @@
   "kind": "word",
   "id": "i-09-w15",
   "text": "וְאָעִירָה",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "ve'o'iroh"
  },
  {
   "path": "audio/f/ashkenazi/word/i-09-w15.mp3",
@@ -82403,9 +82547,10 @@
   "kind": "word",
   "id": "i-09-w16",
   "text": "לֹא אִירָא",
-  "status": "missing",
-  "source": "none",
-  "group": "lesson-word"
+  "status": "tts",
+  "source": "paid-cloud",
+  "group": "lesson-word",
+  "phonetic": "lo iro"
  },
  {
   "path": "audio/f/ashkenazi/word/i-09-w16.mp3",

@@ -12,5 +12,6 @@
     "test:browser": "node tools/test/run.mjs browser",
     "test:all": "node tools/test/run.mjs all",
     "test:profile": "node tools/test/profile.mjs"
-  }
+  },
+  "license": "UNLICENSED"
 }

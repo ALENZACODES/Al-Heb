@@ -16977,8 +16977,8 @@
   "kind": "line",
   "id": "mah-tovu-1",
   "text": "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "How goodly are thy tents, O Jacob, Thy dwellings, O Israel!",
   "phonetic": "mah-tovu ohalekha ya'akov mishkenotekha yisra'el"
@@ -17139,8 +17139,8 @@
   "kind": "line",
   "id": "mi-chamocha-1",
   "text": "מִי־כָמֹכָה בָּאֵלִם אֲדֹנָי מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Who is like unto Thee, O LORD, among the mighty? Who is like unto Thee, glorious in holiness, Fearful in praises, doing wonders?",
   "phonetic": "mi-khamokhah ba'elim adonai mi kamokhah nedar bakodesh nora tehilot oseh fele"
@@ -17301,8 +17301,8 @@
   "kind": "line",
   "id": "num-12-13",
   "text": "אֵל נָא רְפָא נָא לָהּ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "God, please, heal her, please.",
   "phonetic": "el na refa na lah"
@@ -19317,8 +19317,8 @@
   "kind": "line",
   "id": "modeh-ani-1",
   "text": "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "I give thanks before you, living and enduring king, that you have returned my soul to me in mercy; great is your faithfulness.",
   "phonetic": "modeh ani lefanekha melekh chai vekayam shehechezarta bi nishmati bechemlah rabah emunatekha"
@@ -21285,8 +21285,8 @@
   "kind": "line",
   "id": "malchutcha",
   "text": "מַלְכוּתְךָ מַלְכוּת כָּל־עֹלָמִים וּמֶמְשֶׁלְתְּךָ בְּכָל־דּוֹר וָדוֹר׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Thy kingdom is a kingdom for all ages, And Thy dominion endureth throughout all generations.",
   "phonetic": "malkhutekha malkhut kol-olamim umemsheltekha bekhol-dor vador"
@@ -27004,8 +27004,8 @@
   "kind": "line",
   "id": "yigdal-l1",
   "text": "יִגְדַּל אֱלֹהִים חַי וְיִשְׁתַּבַּח נִמְצָא וְאֵין עֵת אֶל מְצִיאוּתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "May the living God be magnified and praised; he exists, and his existence is not bound by time.",
   "phonetic": "yigdal elohim chai veyishtabach nimtza ve'ein et el metzi'uto"
@@ -27082,8 +27082,8 @@
   "kind": "line",
   "id": "yigdal-l2",
   "text": "אֶחָד וְאֵין יָחִיד כְּיִחוּדוֹ נֶעְלָם וְגַם אֵין סוֹף לְאַחְדּוּתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "He is one, and there is no unity like his unity; hidden, and without end to his oneness.",
   "phonetic": "echad ve'ein yachid keyichudo nelam vegam ein sof le'achduto"
@@ -27706,8 +27706,8 @@
   "kind": "line",
   "id": "yigdal-l10",
   "text": "צוֹפֶה וְיוֹדֵעַ סְתָרֵינוּ מַבִּיט לְסוֹף דָּבָר בְּקַדְמָתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "He watches and knows our secrets; he sees the end of a matter at its beginning.",
   "phonetic": "tzofeh veyode'a setareinu mabit lesof davar bekadmato"
@@ -27784,8 +27784,8 @@
   "kind": "line",
   "id": "yigdal-l11",
   "text": "גּוֹמֵל לְאִישׁ חֶסֶד כְּמִפְעָלוֹ נוֹתֵן לְרָשָׁע רָע כְּרִשְׁעָתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "He repays a person with kindness according to his deeds; he gives the wicked evil according to his wickedness.",
   "phonetic": "gomel le'ish chesed kemif'alo noten lerasha ra kerish'ato"
@@ -27862,8 +27862,8 @@
   "kind": "line",
   "id": "yigdal-l12",
   "text": "יִשְׁלַח לְקֵץ הַיָּמִין מְשִׁיחֵנוּ לִפְדּוֹת מְחַכֵּי קֵץ יְשׁוּעָתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "At the end of days he will send our anointed one, to redeem those who await the end of his salvation.",
   "phonetic": "yishlach leketz hayamin meshichenu lifdot mechakei ketz yeshu'ato"
@@ -27940,8 +27940,8 @@
   "kind": "line",
   "id": "yigdal-l13",
   "text": "מֵתִים יְחַיֶּה אֵל בְּרֹב חַסְדּוֹ בָּרוּךְ עֲדֵי עַד שֵׁם תְּהִלָּתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "God will revive the dead in his great kindness; blessed for ever is his praised name.",
   "phonetic": "metim yechayeh el berov chasdo barukh adei ad shem tehilato"
@@ -28875,8 +28875,8 @@
   "kind": "line",
   "id": "mi-sheberach-opening",
   "text": "מִי שֶׁבֵּרַךְ אֲבוֹתֵינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "He who blessed our ancestors Abraham, Isaac and Jacob",
   "phonetic": "mi sheberakh avoteinu avraham yitzchak veya'akov"
@@ -30333,8 +30333,8 @@
   "kind": "line",
   "id": "maoz-tzur-1",
   "text": "מָעוֹז צוּר יְשׁוּעָתִי לְךָ נָאֶה לְשַׁבֵּחַ תִּכּוֹן בֵּית תְּפִלָּתִי וְשָׁם תּוֹדָה נְזַבֵּחַ לְעֵת תָּכִין מַטְבֵּחַ מִצָּר הַמְנַבֵּחַ אָז אֶגְמוֹר בְּשִׁיר מִזְמוֹר חֲנֻכַּת הַמִּזְבֵּחַ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-line",
   "english": "Rock of my salvation, to praise you is fitting. Restore my house of prayer, and there we will bring a thanksgiving offering. When you have prepared the slaughter of the barking foe, then I shall complete with a song of psalm the dedication of the altar.",
   "phonetic": "ma'oz tzur yeshu'ati lekha na'eh leshabeach tikon beit tefilati vesham todah nezabeach le'et takhin matbeach mitzar hamnabeach az egmor beshir mizmor chanukat hamizbeach"
@@ -48889,12 +48889,13 @@
   "kind": "word",
   "id": "i-17-w6",
   "text": "חֲנָיָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hd7b6e838",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chanayah"
  },
  {
   "path": "audio/m/israeli/word/i-17-w7.mp3",
@@ -48917,12 +48918,13 @@
   "kind": "word",
   "id": "i-17-w7",
   "text": "חוֹזֶה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hadd284cb",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chozeh"
  },
  {
   "path": "audio/m/israeli/word/i-17-w8.mp3",
@@ -48944,11 +48946,12 @@
   "kind": "word",
   "id": "i-17-w8",
   "text": "בַּעַל הַבַּיִת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ba'al habayit"
  },
  {
   "path": "audio/m/israeli/word/i-17-w9.mp3",
@@ -48970,11 +48973,12 @@
   "kind": "word",
   "id": "i-17-w9",
   "text": "וַעַד בַּיִת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "va'ad bayit"
  },
  {
   "path": "audio/m/israeli/word/i-17-w10.mp3",
@@ -49133,11 +49137,12 @@
   "kind": "word",
   "id": "i-18-w1",
   "text": "צָבָא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "tzava"
  },
  {
   "path": "audio/m/israeli/word/i-18-w2.mp3",
@@ -49382,12 +49387,13 @@
   "kind": "word",
   "id": "i-18-w10",
   "text": "יַאלְלָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h89be12e3",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yalelah"
  },
  {
   "path": "audio/m/israeli/word/i-18-w11.mp3",
@@ -49410,12 +49416,13 @@
   "kind": "word",
   "id": "i-18-w11",
   "text": "סַבָּבָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "p9a26e069",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "sabavah"
  },
  {
   "path": "audio/m/israeli/word/i-18-w12.mp3",
@@ -49438,12 +49445,13 @@
   "kind": "word",
   "id": "i-18-w12",
   "text": "אַחִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "pb100e90c",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "achi"
  },
  {
   "path": "audio/m/israeli/word/i-18-w13.mp3",
@@ -49466,12 +49474,13 @@
   "kind": "word",
   "id": "i-18-w13",
   "text": "חֲבָל עַל הַזְּמַן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "p4e01b1a2",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chaval al hazeman"
  },
  {
   "path": "audio/m/israeli/word/i-18-w14.mp3",

@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 3842 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 3851 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-3842 English labels; 224 UNKNOWN.
+3851 English labels; 233 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -1175,6 +1175,15 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [i-17-w3](f/israeli/word/i-17-w3.mp3) | חֲדָרִים | UNKNOWN | chadarim |
 | [i-17-w4](f/israeli/word/i-17-w4.mp3) | קוֹמָה | UNKNOWN | komah |
 | [i-17-w5](f/israeli/word/i-17-w5.mp3) | מִרְפֶּסֶת | UNKNOWN | mirpeset |
+| [i-17-w6](f/israeli/word/i-17-w6.mp3) | חֲנָיָה | UNKNOWN | chanayah |
+| [i-17-w7](f/israeli/word/i-17-w7.mp3) | חוֹזֶה | UNKNOWN | chozeh |
+| [i-17-w8](f/israeli/word/i-17-w8.mp3) | בַּעַל הַבַּיִת | UNKNOWN | ba'al habayit |
+| [i-17-w9](f/israeli/word/i-17-w9.mp3) | וַעַד בַּיִת | UNKNOWN | va'ad bayit |
+| [i-18-w1](f/israeli/word/i-18-w1.mp3) | צָבָא | UNKNOWN | tzava |
+| [i-18-w10](f/israeli/word/i-18-w10.mp3) | יַאלְלָה | UNKNOWN | yalelah |
+| [i-18-w11](f/israeli/word/i-18-w11.mp3) | סַבָּבָה | UNKNOWN | sabavah |
+| [i-18-w12](f/israeli/word/i-18-w12.mp3) | אַחִי | UNKNOWN | achi |
+| [i-18-w13](f/israeli/word/i-18-w13.mp3) | חֲבָל עַל הַזְּמַן | UNKNOWN | chaval al hazeman |
 | [kaddish-1-w1](f/israeli/word/kaddish-1-w1.mp3) | יִתְגַּדַּל | may it be magnified | yitgadal |
 | [kaddish-1-w10](f/israeli/word/kaddish-1-w10.mp3) | מַלְכוּתֵהּ | his kingdom | malkhuteh |
 | [kaddish-1-w11](f/israeli/word/kaddish-1-w11.mp3) | בְּחַיֵּיכוֹן | in your lifetime | bechayeikhon |
@@ -4448,4 +4457,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 5477 produced clips in INDEX.csv have an English label; 224 UNKNOWN. Filenames and IDs are unchanged.
+All 5499 produced clips in INDEX.csv have an English label; 233 UNKNOWN. Filenames and IDs are unchanged.

@@ -57391,8 +57391,8 @@
   "kind": "word",
   "id": "cafe-05",
   "text": "אֶסְפְּרֶסוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
   "english": "UNKNOWN"

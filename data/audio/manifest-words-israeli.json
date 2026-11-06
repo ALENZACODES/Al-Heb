@@ -52116,7 +52116,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "needing, in need of (something)"
+  "english": "needing, in need of (something)",
+  "phonetic": "tzarikh"
  },
  {
   "path": "audio/f/israeli/word/h4b81aad7.mp3",
@@ -52126,10 +52127,11 @@
   "id": "h4b81aad7",
   "text": "צָרִיךְ",
   "ipa": "tsa.ˈʁiχ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "needing, in need of (something)"
+  "english": "needing, in need of (something)",
+  "phonetic": "tzarikh"
  },
  {
   "path": "audio/m/israeli/word/h8ba0beaa.mp3",
@@ -53152,7 +53154,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "saintly, pious; righteous; tzaddik"
+  "english": "saintly, pious; righteous; tzaddik",
+  "phonetic": "tzadik"
  },
  {
   "path": "audio/f/israeli/word/h4bff7a16.mp3",
@@ -53162,10 +53165,11 @@
   "id": "h4bff7a16",
   "text": "צַדִּיק",
   "ipa": "tsa.ˈdik",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "saintly, pious; righteous; tzaddik"
+  "english": "saintly, pious; righteous; tzaddik",
+  "phonetic": "tzadik"
  },
  {
   "path": "audio/m/israeli/word/h18108dff.mp3",
@@ -57436,7 +57440,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "for, for the sake of, for the benefit of, in order for"
+  "english": "for, for the sake of, for the benefit of, in order for",
+  "phonetic": "bishvil"
  },
  {
   "path": "audio/f/israeli/word/h4d5ad9e4.mp3",
@@ -57446,10 +57451,11 @@
   "id": "h4d5ad9e4",
   "text": "בִּשְׁבִיל",
   "ipa": "biʃ.ˈvil",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "for, for the sake of, for the benefit of, in order for"
+  "english": "for, for the sake of, for the benefit of, in order for",
+  "phonetic": "bishvil"
  },
  {
   "path": "audio/m/israeli/word/hba8920a3.mp3",
@@ -60362,7 +60368,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "around"
+  "english": "around",
+  "phonetic": "saviv"
  },
  {
   "path": "audio/f/israeli/word/h4cedaa9e.mp3",
@@ -60372,10 +60379,11 @@
   "id": "h4cedaa9e",
   "text": "סָבִיב",
   "ipa": "sa.ˈviv",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "around"
+  "english": "around",
+  "phonetic": "saviv"
  },
  {
   "path": "audio/m/israeli/word/hd499f4c4.mp3",
@@ -60442,7 +60450,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to finish, to complete"
+  "english": "to finish, to complete",
+  "phonetic": "siyem"
  },
  {
   "path": "audio/f/israeli/word/h4d33d20c.mp3",
@@ -60452,10 +60461,11 @@
   "id": "h4d33d20c",
   "text": "סִיֵּם",
   "ipa": "si.ˈjem",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to finish, to complete"
+  "english": "to finish, to complete",
+  "phonetic": "siyem"
  },
  {
   "path": "audio/m/israeli/word/hc559dcdc.mp3",

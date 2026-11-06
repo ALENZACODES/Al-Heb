@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 5856 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 5861 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-5856 English labels; 1933 UNKNOWN.
+5861 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -909,6 +909,11 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [h4a3da4c1](f/israeli/word/h4a3da4c1.mp3) | חֵץ | arrow | chetz |
 | [h4aa6ad2a](f/israeli/word/h4aa6ad2a.mp3) | בֵּן | son; a direct male descendant; a guy, a boy | ben |
 | [h4b14c918](f/israeli/word/h4b14c918.mp3) | לַק | nail polish | lak |
+| [h4b81aad7](f/israeli/word/h4b81aad7.mp3) | צָרִיךְ | needing, in need of (something) | tzarikh |
+| [h4bff7a16](f/israeli/word/h4bff7a16.mp3) | צַדִּיק | saintly, pious; righteous; tzaddik | tzadik |
+| [h4cedaa9e](f/israeli/word/h4cedaa9e.mp3) | סָבִיב | around | saviv |
+| [h4d33d20c](f/israeli/word/h4d33d20c.mp3) | סִיֵּם | to finish, to complete | siyem |
+| [h4d5ad9e4](f/israeli/word/h4d5ad9e4.mp3) | בִּשְׁבִיל | for, for the sake of, for the benefit of, in order for | bishvil |
 | [haftarah-after-w1](f/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](f/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](f/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -6462,4 +6467,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 11461 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 11475 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

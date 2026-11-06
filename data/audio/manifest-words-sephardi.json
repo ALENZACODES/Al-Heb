@@ -8248,8 +8248,8 @@
   "kind": "word",
   "id": "aleinu-1-w8",
   "text": "בְּרֵאשִׁית",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "in the beginning",
   "phonetic": "bereshit"
@@ -8274,8 +8274,8 @@
   "kind": "word",
   "id": "aleinu-1-w9",
   "text": "שֶׁלֹּא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "that he has not",
   "phonetic": "shelo"
@@ -27124,8 +27124,8 @@
   "kind": "word",
   "id": "amidah-elohai-netzor-w1",
   "text": "אֱלֹהַי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "my God",
   "phonetic": "elohai"
@@ -27358,8 +27358,8 @@
   "kind": "word",
   "id": "amidah-elohai-netzor-w10",
   "text": "תִדּוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "be silent",
   "phonetic": "tidom"
@@ -27384,8 +27384,8 @@
   "kind": "word",
   "id": "amidah-elohai-netzor-w11",
   "text": "וְנַפְשִׁי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and my soul",
   "phonetic": "venafshi"
@@ -52116,7 +52116,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "needing, in need of (something)"
+  "english": "needing, in need of (something)",
+  "phonetic": "tzarikh"
  },
  {
   "path": "audio/f/sephardi/word/h4b81aad7.mp3",
@@ -52129,7 +52130,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "needing, in need of (something)"
+  "english": "needing, in need of (something)",
+  "phonetic": "tzarikh"
  },
  {
   "path": "audio/m/sephardi/word/h8ba0beaa.mp3",
@@ -53152,7 +53154,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "saintly, pious; righteous; tzaddik"
+  "english": "saintly, pious; righteous; tzaddik",
+  "phonetic": "tzadik"
  },
  {
   "path": "audio/f/sephardi/word/h4bff7a16.mp3",
@@ -53165,7 +53168,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "saintly, pious; righteous; tzaddik"
+  "english": "saintly, pious; righteous; tzaddik",
+  "phonetic": "tzadik"
  },
  {
   "path": "audio/m/sephardi/word/h18108dff.mp3",
@@ -57436,7 +57440,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "for, for the sake of, for the benefit of, in order for"
+  "english": "for, for the sake of, for the benefit of, in order for",
+  "phonetic": "bishvil"
  },
  {
   "path": "audio/f/sephardi/word/h4d5ad9e4.mp3",
@@ -57449,7 +57454,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "for, for the sake of, for the benefit of, in order for"
+  "english": "for, for the sake of, for the benefit of, in order for",
+  "phonetic": "bishvil"
  },
  {
   "path": "audio/m/sephardi/word/hba8920a3.mp3",
@@ -60362,7 +60368,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "around"
+  "english": "around",
+  "phonetic": "saviv"
  },
  {
   "path": "audio/f/sephardi/word/h4cedaa9e.mp3",
@@ -60375,7 +60382,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "around"
+  "english": "around",
+  "phonetic": "saviv"
  },
  {
   "path": "audio/m/sephardi/word/hd499f4c4.mp3",
@@ -60442,7 +60450,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to finish, to complete"
+  "english": "to finish, to complete",
+  "phonetic": "siyem"
  },
  {
   "path": "audio/f/sephardi/word/h4d33d20c.mp3",
@@ -60455,7 +60464,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to finish, to complete"
+  "english": "to finish, to complete",
+  "phonetic": "siyem"
  },
  {
   "path": "audio/m/sephardi/word/hc559dcdc.mp3",

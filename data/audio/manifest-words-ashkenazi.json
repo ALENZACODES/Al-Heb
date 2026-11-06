@@ -7182,8 +7182,8 @@
   "kind": "word",
   "id": "avot-1-w4",
   "text": "אֱלֹהֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "our-God",
   "phonetic": "eloheinu"
@@ -7208,8 +7208,8 @@
   "kind": "word",
   "id": "avot-1-w5",
   "text": "וֵאלֹהֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and God of",
   "phonetic": "velohei"
@@ -8014,8 +8014,8 @@
   "kind": "word",
   "id": "avot-1-w36",
   "text": "וּמוֹשִׁיעַ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and saviour",
   "phonetic": "umoshi'a"
@@ -8040,8 +8040,8 @@
   "kind": "word",
   "id": "avot-1-w37",
   "text": "וּמָגֵן׃",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "and shield",
   "phonetic": "umagen"
@@ -52116,7 +52116,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "needing, in need of (something)"
+  "english": "needing, in need of (something)",
+  "phonetic": "tzarikh"
  },
  {
   "path": "audio/f/ashkenazi/word/h4b81aad7.mp3",
@@ -52129,7 +52130,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "needing, in need of (something)"
+  "english": "needing, in need of (something)",
+  "phonetic": "tzarikh"
  },
  {
   "path": "audio/m/ashkenazi/word/h8ba0beaa.mp3",
@@ -53152,7 +53154,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "saintly, pious; righteous; tzaddik"
+  "english": "saintly, pious; righteous; tzaddik",
+  "phonetic": "tzadik"
  },
  {
   "path": "audio/f/ashkenazi/word/h4bff7a16.mp3",
@@ -53165,7 +53168,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "saintly, pious; righteous; tzaddik"
+  "english": "saintly, pious; righteous; tzaddik",
+  "phonetic": "tzadik"
  },
  {
   "path": "audio/m/ashkenazi/word/h18108dff.mp3",
@@ -57436,7 +57440,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "for, for the sake of, for the benefit of, in order for"
+  "english": "for, for the sake of, for the benefit of, in order for",
+  "phonetic": "bishvil"
  },
  {
   "path": "audio/f/ashkenazi/word/h4d5ad9e4.mp3",
@@ -57449,7 +57454,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "for, for the sake of, for the benefit of, in order for"
+  "english": "for, for the sake of, for the benefit of, in order for",
+  "phonetic": "bishvil"
  },
  {
   "path": "audio/m/ashkenazi/word/hba8920a3.mp3",
@@ -60362,7 +60368,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "around"
+  "english": "around",
+  "phonetic": "saviv"
  },
  {
   "path": "audio/f/ashkenazi/word/h4cedaa9e.mp3",
@@ -60375,7 +60382,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "around"
+  "english": "around",
+  "phonetic": "saviv"
  },
  {
   "path": "audio/m/ashkenazi/word/hd499f4c4.mp3",
@@ -60442,7 +60450,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to finish, to complete"
+  "english": "to finish, to complete",
+  "phonetic": "siyem"
  },
  {
   "path": "audio/f/ashkenazi/word/h4d33d20c.mp3",
@@ -60455,7 +60464,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to finish, to complete"
+  "english": "to finish, to complete",
+  "phonetic": "siyem"
  },
  {
   "path": "audio/m/ashkenazi/word/hc559dcdc.mp3",

@@ -32,22 +32,24 @@ export function mount(root,ctx) {
     if(!alive||!article.isConnected)return;
     if(round>=8){board.replaceChildren(resultsCard(h,heSpan,session,{title:'Sonar course complete',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});void paint();}}));return;}
     const group=groups[round%groups.length],target=group[round%group.length],choices=shuffled(group).slice(0,4);
+    let heard = false;
     if(!choices.includes(target))choices[0]=target;
     const gateButtons=shuffled(choices).map(option=>{
       const pic=imgOf(R,'word',option.id);
       const b=h('button',{type:'button',class:'btn secondary game-choice game-sonar-gate',onclick:()=>{
-        if(!alive)return;
+        if(!alive || !heard)return;
         const ok=gateMatches(target,option);session.answer(ok);
         status.textContent=ok?'Sonar gate unlocked.':'Wrong vowel points: gate closed.';
         if(ok)round++;void paint();
       }},heSpan(option.he,'he game-he-sm'));
+      b.disabled = true;
       if(pic)b.append(h('img',{src:pic.src,alt:pic.alt,width:pic.width,height:pic.height,class:'game-card-img','data-img-id':pic.id}));
       return b;
     });
     const listen=h('button',{type:'button',class:'btn',onclick:async()=>{
       status.textContent='Playing exact indexed recording…';
-      const heard=await playRecordedClip(ctx,'word',target.id);
-      if(alive)status.textContent=heard?'Choose the spelling you heard.':'No recording available; scoring is disabled.';
+      heard=await playRecordedClip(ctx,'word',target.id);
+      if(alive){status.textContent=heard?'Choose the spelling you heard.':'No recording available; scoring is disabled.'; if(heard) { gateButtons.forEach(b => b.disabled = false); } }
     }},'Play sonar word');
     board.replaceChildren(h('div',{class:'game-sonar-stage'},h('p',{},'Same unpointed spelling; choose by sound.'),
       heSpan(target.unpointed,'he game-he'),listen,h('div',{class:'game-choices game-rtl-grid'},...gateButtons)));

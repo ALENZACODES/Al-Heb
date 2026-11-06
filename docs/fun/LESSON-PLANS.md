@@ -1,93 +1,75 @@
-# ALEF — Beginner lesson ladder (letters → words → lines → prayer karaoke)
+# ALEF — Beginner ladder (LOCKED to t1039u first-open)
 
-**Freeze:** same cast, same production voices. Curriculum novelty = sequence, activities, exit tests.  
-**Audio path kinds** (production): `letter` · `letter-lecture` · `syllable` · `word` · `line` · `prayer` · (future) `phrase`. Resolve as `audio/<voice>/<tradition>/<kind>/<id>.mp3`.  
-**Draft:** not yet teacher-reviewed. Mark learner-facing claims as practised, not “mastered.”
-
----
-
-## Ladder overview
-
-| Stage | Focus | Typical days | Exit gate |
-|-------|--------|--------------|-----------|
-| L0 | First open + Shin doorway | Day 1 | 1 spoken turn logged |
-| L1 | Letters (print + sofit later) | Days 1–5 | Name + sound 10 letters under 60s |
-| L2 | Vowels + pointed syllables | Days 3–8 | Read 8 pointed syllables aloud |
-| L3 | Words (pointed → bare) | Days 5–14 | Read 12 words; 6 bare |
-| L4 | Blessing / prayer lines | Days 10–21 | Keep place for 1 full line karaoke Follow |
-| L5 | Prayer karaoke Perform | Days 18+ | Personal best on Modeh Ani or Shema line set |
-
-Spacing: every session pulls **~70% due/weak, 30% new** (engine rule from Fun plan).
+**Entry:** Minute One `#/firstwin` (build **אבא**) before any long ask.  
+**Registers:** joyful drills vs reverent prayer (no XP/mascots on sacred text).  
+**Audio kinds:** `letter` · `letter-lecture` · `syllable` · `word` · `line` · `prayer` → `audio/<m|f>/<tradition>/<kind>/<id>.mp3`.  
+**Freeze:** cast + production voices unchanged; ALEF cream/navy colors.
 
 ---
 
-## L0 — Doorway (ties to FIRST-OPEN)
-- **Goal:** Habit of Hear → Say → Done without product vocabulary overload.  
-- **Activities:** (1) Hear Shin (2) Say Shin (3) Mark outcome.  
-- **Audio:** `letter/shin` (tradition from settings).  
-- **Exit:** 1 completed spoken turn (`speak.v1` or `firstday.progress` win).
+## Stage map
 
-## L1 — Letters
-- **Goal:** Instant recognition of core letters (start: ש ל ו מ ה א ב ת נ ר; add sofit ם ן ך ף ץ after base forms).  
-- **Activities:**  
-  1. **Letter Rush micro** — 60s tap-the-called-letter (Identity: must hear/see the name).  
-  2. **Trace + say** — existing `#/letters` trace, then Say.  
-  3. **Sofit Sniper intro** — only after finals introduced; last-letter blank.  
-- **Audio kinds:** `letter`, `letter-lecture` (Atlas “Hear the explanation”).  
-- **Exit test:** 10/12 correct in Letter Rush; sofit not required yet.
+| Stage | Name | First session energy | Exit |
+|-------|------|----------------------|------|
+| L0 | Minute One — אבא | Joyful build &lt;60s | Word built + fade + Day-1 streak offered |
+| L1 | Letters | Joyful | 10 letters named under 60s |
+| L2 | Vowels + syllables | Joyful | 8 pointed syllables read |
+| L3 | Words + fade | Joyful | 12 pointed + 6 bare |
+| L4 | Blessing lines | **Shift toward reverent** | Keep place on 1 line (Follow) |
+| L5 | Prayer karaoke | **Reverent quiet** | Perform personal best; no XP fireworks on Amen |
 
-## L2 — Vowels + syllables
-- **Goal:** Kamatz, patach, tzere, segol, holam, hirik, shuruk/kubutz as reading tools.  
-- **Activities:**  
-  1. Vowel board (`#/sounds` / vowelboard) with Hear.  
-  2. Syllable chips — build CV from letter+vowel.  
-  3. Shva Detective lite — mark speaking vs silent shva on a short word.  
-- **Audio:** `syllable`, `letter`.  
-- **Exit:** Read 8 pointed syllables; self-mark or compare-own-recording only (no vendor grading claim).
+---
 
-## L3 — Words
-- **Goal:** Read real words; begin fade to unpointed.  
-- **Activities:**  
-  1. Firstday / onramp words (שלום, שם, מה…).  
-  2. **Niqqud Fade Act 1–2** on a 5-word set.  
-  3. Word Sprint 90s on due queue (`#/sprint`).  
+## L0 — Minute One (replaces questionnaire-first onboarding)
+- **Goal:** Own Hebrew’s first five minutes; learner *builds* אַבָּא from א+ב+א.  
+- **Activities:** (1) tile build (2) niqqud on → fade (3) Hear → optional Say.  
+- **Audio:** `letter/alef`, `letter/bet`, `word` id for abba when present (Israeli default for cold start).  
+- **Exit:** Finish-order celebration (haptic → word → accuracy/time → Day-1 streak → share card → Save equal-weight).  
+- **No:** hearts, account wall, paywall, tradition essay, tour.
+
+## L1 — Letters (joyful)
+- **Goal:** Instant recognition; sofit later.  
+- **Activities:** Letter Rush 60s; Trace; Atlas lecture.  
+- **Audio:** `letter`, `letter-lecture`.  
+- **Exit:** 10/12 Rush. Seeds OK.
+
+## L2 — Vowels + syllables (joyful)
+- **Goal:** Niqqud as helpers, not crutches forever.  
+- **Activities:** Vowel board; syllable chips; shva lite.  
+- **Audio:** `syllable`.  
+- **Exit:** 8 syllables aloud.
+
+## L3 — Words + fade (joyful)
+- **Goal:** Pointed → bare.  
+- **Activities:** Word Sprint; Dimmer Acts 1–2; Say-it five.  
 - **Audio:** `word`.  
-- **Exit:** 12 pointed words + 6 bare (hint allowed on ≤2).
+- **Exit:** 12 + 6 bare.
 
-## L4 — Lines
-- **Goal:** Keep place in a blessing line; rhythm without shame.  
-- **Activities:**  
-  1. Read line Follow mode (highlight if available; else chunked Hear).  
-  2. Echo the line (shadow tab in `#/speak`).  
-  3. Tradition honesty card — same line label Israeli/Sephardi/Ashkenazi; text mode OK until audio lands.  
-- **Audio:** `line` (per tradition folders as they fill).  
-- **Exit:** Complete 1 line in Follow without losing place (learner self-mark “kept up”).
+## L4 — Lines (register shift)
+- **Goal:** Keep place; calm confidence.  
+- **Activities:** Follow-mode line; shadow; Tradition Detective *text* OK until audio fills.  
+- **Audio:** `line` per tradition as ready.  
+- **Exit:** One Follow line. Light seeds only off sacred close.
 
-## L5 — Prayer karaoke
-- **Goal:** Service-ready confidence on a short prayer (Modeh Ani → Shema fragment).  
-- **Activities:**  
-  1. Karaoke **Follow** (unscored).  
-  2. Karaoke **Perform** (personal score: flow + place-keeping; kind rubric).  
-  3. Hazzan Mode lite — recording drops one clause.  
-- **Audio:** `line` / `prayer` Israeli first; Sephardi/Ashkenazi when pending=0.  
-- **Exit:** Perform score ≥ personal threshold (calibrate later; start with “finished without pause-shame” + optional compare).
+## L5 — Prayer karaoke (reverent)
+- **Goal:** Service-ready without gamifying holiness.  
+- **Activities:** Follow → Perform → optional Hazzan; end with gratitude line, not confetti.  
+- **Audio:** `line`/`prayer`.  
+- **Exit:** Personal improvement note. **No XP, no Rimon dance, no streak burst on the prayer itself** — streak may tick from engaged time quietly.
 
 ---
 
-## Sample 7-day beginner week (5–10 min/day)
+## Sample week (after L0)
 
-| Day | Lesson | Three activities | Exit crumb |
-|-----|--------|------------------|------------|
-| 1 | L0→L1 Shin+Lamed | Hear/Say/Done; Letter Rush 60s; Trace | Spoken turn + 2 letters |
-| 2 | L1 Mem+He+Vav | Rush; Trace; Atlas lecture clip | 5 letters named |
-| 3 | L2 Kamatz+Holam | Vowel board; syllables; read שלום | 1 real word |
-| 4 | L3 Word set A | Sprint; Fade Act1; Say it daily 5 | 5 words due logged |
-| 5 | L3→L4 Mah/Sham | Build tiles; line Follow Modeh Ani L1 | Kept place once |
-| 6 | L4 Tradition card | Detective text round; line echo; Quiet listen | Name 1 tradition cue |
-| 7 | Review | Orchard match; Sprint ghost; Shabbat-aware rest if applicable | Week map stone lit |
+| Day | Focus | Register |
+|-----|--------|----------|
+| 1 | L0 אבא + 2 more letters | Joyful |
+| 2 | L1 Rush + Trace | Joyful |
+| 3 | L2 vowels; read שלום | Joyful |
+| 4 | L3 Sprint + Fade | Joyful |
+| 5 | L4 Modeh Ani Follow | Reverent-leaning |
+| 6 | Detective + review | Joyful listen |
+| 7 | Rest / Shabbat-aware OR Quiet listen | Reverent/calm |
 
-## Mapping to existing routes
-`#/welcome` · `#/firstday` · `#/letters` · `#/sounds` · `#/sprint` · `#/speak` · `#/fade` / `#/nikkudfade` · `#/tradition-quiz` · `#/read` · `#/learn` · `#/morning`
-
-## Image / cast rule
-Any new scene art → Claude brief → ChatGPT pipeline, dual score ≥9.2; no Hebrew/numerals in images. Leave big batches for that pipeline.
+## Personalise (after Save gate)
+Tradition, goal, minutes — short `#/welcome` personalise step or Settings. Busuu-style: show “Your plan starts &lt;date&gt;” once, then Home doorway.

@@ -1,0 +1,27 @@
+{
+  "v": 1,
+  "status": "draft",
+  "id": "minute-one-abba",
+  "formula": "TRY_SAVE_PERSONALISE",
+  "lock": "t1039u",
+  "targetSeconds": 60,
+  "word": {
+    "id": "abba",
+    "hePointed": "אַבָּא",
+    "heBare": "אבא",
+    "gloss": "dad / papa",
+    "letters": ["alef", "bet", "alef"],
+    "glyphs": ["א", "ב", "א"],
+    "audio": { "kind": "word", "id": "abba" }
+  },
+  "tray": [
+    { "id": "alef", "he": "א", "name": "Alef" },
+    { "id": "bet", "he": "ב", "name": "Bet" }
+  ],
+  "beats": 7,
+  "noHearts": true,
+  "defaultTradition": "israeli",
+  "shareLine": "My first Hebrew word on ALEF",
+  "savePrompt": "Save your progress",
+  "saveEqual": ["Create profile", "Later"]
+}

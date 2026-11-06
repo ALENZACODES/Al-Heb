@@ -196,7 +196,15 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     root.replaceChildren(h('section', { class: 'card' }, h('h1', { id: 'view-title', tabindex: '-1' }, t('notfound.title')), h('p', { class: 'mono' }, path), h('a', { class: 'btn', href: '#/' }, t('nav.home'))));
     renderNav(null); document.title = `${t('notfound.title')} - ALEF`; return finish();
   }
-  if (route.name === 'home' && !settings.get('onboarded')) { ctxBase.route('/welcome'); return; }
+  if (route.name === 'home' && !settings.get('onboarded')) {
+    let fw = null; try { fw = store.get('firstwin.v1'); } catch {}
+    ctxBase.route(fw && fw.done ? '/welcome' : '/firstwin');
+    return;
+  }
+  if (route.name === 'welcome' && !settings.get('onboarded')) {
+    let fw = null; try { fw = store.get('firstwin.v1'); } catch {}
+    if (!fw || !fw.done) { ctxBase.route('/firstwin'); return; }
+  }
   renderNav(route.name);
   document.title = route.name === 'home' ? 'ALEF' : `${route.title} - ALEF`;
   const ctx = { ...ctxBase, params, query, path, routeName: route.name };

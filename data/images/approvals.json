@@ -5638,6 +5638,18 @@
    "forcedDespite": [
     "contains_text"
    ]
+  },
+  "HEAD_two_07": {
+   "status": "approved",
+   "at": "2026-11-06T21:53:06.812Z"
+  },
+  "PLACE_telaviv_09": {
+   "status": "approved",
+   "at": "2026-11-06T21:53:06.812Z"
+  },
+  "BADGE_06": {
+   "status": "approved",
+   "at": "2026-11-06T21:53:06.812Z"
   }
  }
 }

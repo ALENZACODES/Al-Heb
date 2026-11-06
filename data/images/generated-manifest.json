@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 1088,
+ "count": 1091,
  "images": {
   "BADGE_01": {
    "w": 512,
@@ -35,6 +35,18 @@
     {
      "edge": 512,
      "file": "BADGE_05.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "BADGE_06": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "BADGE_06.512.webp",
      "w": 512,
      "h": 512
     }
@@ -2663,6 +2675,18 @@
     {
      "edge": 512,
      "file": "HEAD_two_06.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "HEAD_two_07": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HEAD_two_07.512.webp",
      "w": 512,
      "h": 293
     }
@@ -11291,6 +11315,18 @@
     {
      "edge": 512,
      "file": "PLACE_telaviv_07.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_telaviv_09": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_telaviv_09.512.webp",
      "w": 512,
      "h": 293
     }

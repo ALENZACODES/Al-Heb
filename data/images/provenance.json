@@ -63240,6 +63240,156 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "HEAD_two_07": {
+   "id": "HEAD_two_07",
+   "file": "HEAD_two_07.png",
+   "command": 247,
+   "set": "Book chapter headers II",
+   "block": "R",
+   "prompt": "Command 247 (Book chapter headers II): Ten more banners: a bridge of translation between two shores; a workshop of writing — pens and blank pages as carpentry; a lighthouse of listening — sound arcs from a tower; a train of travel phrases crossing a plain; a kitchen of grammar — ingredients becoming a meal; a orchard of blessings — fruit trees in rows; a night sky of psalms — stars over a shepherd; a museum of holidays — doors in a row, each with a seasonal object; a harbour of arrival — boats coming in at dawn; a final banner — all the earlier motifs tiny along one horizon at sunrise. Files HEAD_two_01 … _10. Image 7 of 10: a night sky of psalms — stars over a shepherd. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "13fdec2fbd025171fb344f9ddfba0ce7435b80b78c53dbfc181d74da8c5dcbc4",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:52:56.405Z",
+   "sourceFile": "img-0478.png",
+   "sourceFileDate": "2026-11-06T21:52:55.805Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "98af3a0ddd91364dbfd8099502a59c70495a8ccc2867b0396d71d8710fe039c2",
+   "originalFormat": "PNG",
+   "originalBytes": 175066,
+   "originalFile": "HEAD_two_07.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HEAD_two_07.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 25600
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_telaviv_09": {
+   "id": "PLACE_telaviv_09",
+   "file": "PLACE_telaviv_09.png",
+   "command": 201,
+   "set": "Tel Aviv–Jaffa",
+   "block": "N",
+   "prompt": "Command 201 (Tel Aviv–Jaffa): A white Bauhaus building with curved balconies; a beach boulevard with palms and cyclists; an old port with fishing boats (Jaffa side); a clock tower on a rise above old streets (clock face blank, hands only); a flea-market lane of furniture and rugs (no signs); a boulevard of ficus trees with benches; a beach at sunset with a lifeguard tower; a modern tower cluster seen from the beach (distant, generic); a café row under awnings at night with string lights; a hilltop view where the old port meets the new skyline across the bay. Image 9 of 10: a café row under awnings at night with string lights. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "acff447262b51a852cb081de568c320d55559a65a6c591195f44d436ad134896",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:52:56.405Z",
+   "sourceFile": "img-0574.png",
+   "sourceFileDate": "2026-11-06T21:52:55.813Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "fd5e9c133807fc97dfbfe231d6e112d08c829b30845083546937e30f764ff1c5",
+   "originalFormat": "PNG",
+   "originalBytes": 217278,
+   "originalFile": "PLACE_telaviv_09.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_telaviv_09.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 38152
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "BADGE_06": {
+   "id": "BADGE_06",
+   "file": "BADGE_06.png",
+   "command": 97,
+   "set": "badges",
+   "block": "F",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Round enamel-pin style level badge 6 of 8: a shofar. Same ring and ribbon on every badge; colour progression cream > gold > blue > red across levels (level 6). No text, letters or numerals anywhere in the image.",
+   "promptSha256": "530a68aaf39b5759fb3e6a28d7a605eb774118c2c73c295c7dc0e8570237472a",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:52:56.405Z",
+   "sourceFile": "img-0809.png",
+   "sourceFileDate": "2026-11-06T21:52:55.821Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "8ae38a04a0a7d67e45545a7f7132c8034921ff82ddc984c24894030adf53aaa6",
+   "originalFormat": "PNG",
+   "originalBytes": 255081,
+   "originalFile": "BADGE_06.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "BADGE_06.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 24930
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

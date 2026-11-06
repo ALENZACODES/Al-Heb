@@ -35366,8 +35366,8 @@
   "kind": "word",
   "id": "haftarah-before-w17",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the LORD",
   "phonetic": "adonai"
@@ -35392,8 +35392,8 @@
   "kind": "word",
   "id": "haftarah-before-w18",
   "text": "הַבּוֹחֵר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "who chooses",
   "phonetic": "habocher"
@@ -35418,8 +35418,8 @@
   "kind": "word",
   "id": "haftarah-before-w19",
   "text": "בַּתּוֹרָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "with the Torah",
   "phonetic": "batorah"
@@ -56038,7 +56038,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "infant, baby (male)"
+  "english": "infant, baby (male)",
+  "phonetic": "tinok"
  },
  {
   "path": "audio/f/sephardi/word/hd522984d.mp3",
@@ -56051,7 +56052,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "infant, baby (male)"
+  "english": "infant, baby (male)",
+  "phonetic": "tinok"
  },
  {
   "path": "audio/m/sephardi/word/h18b1e15c.mp3",
@@ -62732,7 +62734,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to saddle, to attach a saddle"
+  "english": "to saddle, to attach a saddle",
+  "phonetic": "ikef"
  },
  {
   "path": "audio/f/sephardi/word/hd502ab04.mp3",
@@ -62745,7 +62748,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to saddle, to attach a saddle"
+  "english": "to saddle, to attach a saddle",
+  "phonetic": "ikef"
  },
  {
   "path": "audio/m/sephardi/word/h761f6283.mp3",
@@ -72410,7 +72414,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "assembled, installed; made, composed, consisting; complicated, complex"
+  "english": "assembled, installed; made, composed, consisting; complicated, complex",
+  "phonetic": "murkav"
  },
  {
   "path": "audio/f/sephardi/word/hd51b5d78.mp3",
@@ -72423,7 +72428,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "assembled, installed; made, composed, consisting; complicated, complex"
+  "english": "assembled, installed; made, composed, consisting; complicated, complex",
+  "phonetic": "murkav"
  },
  {
   "path": "audio/m/sephardi/word/h254a987e.mp3",

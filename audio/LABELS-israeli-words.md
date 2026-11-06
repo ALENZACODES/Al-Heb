@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 6380 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 6383 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-6380 English labels; 1933 UNKNOWN.
+6383 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -1809,6 +1809,9 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hd4c8080b](f/israeli/word/hd4c8080b.mp3) | אָנָּא | please | ana |
 | [hd4d192c8](f/israeli/word/hd4d192c8.mp3) | סוֹכֵן | an agent; an official serving in a house or palace | sokhen |
 | [hd4fe4a46](f/israeli/word/hd4fe4a46.mp3) | אֹרֶךְ | length (in time or space) | orekh |
+| [hd502ab04](f/israeli/word/hd502ab04.mp3) | אִכֵּף | to saddle, to attach a saddle | ikef |
+| [hd51b5d78](f/israeli/word/hd51b5d78.mp3) | מֻרְכָּב | assembled, installed; made, composed, consisting; complicated, complex | murkav |
+| [hd522984d](f/israeli/word/hd522984d.mp3) | תִּינוֹק | infant, baby (male) | tinok |
 | [help-01](f/israeli/word/help-01.mp3) | עֶזְרָה! | help! | ezrah! |
 | [i-01-w1](f/israeli/word/i-01-w1.mp3) | בָּרְכוּ | UNKNOWN | barkhu |
 | [i-01-w10](f/israeli/word/i-01-w10.mp3) | לְעוֹלָם וָעֶד | UNKNOWN | le'olam va'ed |
@@ -6986,4 +6989,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 13048 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 13057 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

@@ -56038,7 +56038,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "infant, baby (male)"
+  "english": "infant, baby (male)",
+  "phonetic": "tinok"
  },
  {
   "path": "audio/f/israeli/word/hd522984d.mp3",
@@ -56048,10 +56049,11 @@
   "id": "hd522984d",
   "text": "תִּינוֹק",
   "ipa": "ti.ˈnok",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "infant, baby (male)"
+  "english": "infant, baby (male)",
+  "phonetic": "tinok"
  },
  {
   "path": "audio/m/israeli/word/h18b1e15c.mp3",
@@ -62732,7 +62734,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to saddle, to attach a saddle"
+  "english": "to saddle, to attach a saddle",
+  "phonetic": "ikef"
  },
  {
   "path": "audio/f/israeli/word/hd502ab04.mp3",
@@ -62742,10 +62745,11 @@
   "id": "hd502ab04",
   "text": "אִכֵּף",
   "ipa": "i.ˈkef",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to saddle, to attach a saddle"
+  "english": "to saddle, to attach a saddle",
+  "phonetic": "ikef"
  },
  {
   "path": "audio/m/israeli/word/h761f6283.mp3",
@@ -72410,7 +72414,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "assembled, installed; made, composed, consisting; complicated, complex"
+  "english": "assembled, installed; made, composed, consisting; complicated, complex",
+  "phonetic": "murkav"
  },
  {
   "path": "audio/f/israeli/word/hd51b5d78.mp3",
@@ -72420,10 +72425,11 @@
   "id": "hd51b5d78",
   "text": "מֻרְכָּב",
   "ipa": "muʁ.ˈkav",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "assembled, installed; made, composed, consisting; complicated, complex"
+  "english": "assembled, installed; made, composed, consisting; complicated, complex",
+  "phonetic": "murkav"
  },
  {
   "path": "audio/m/israeli/word/h254a987e.mp3",

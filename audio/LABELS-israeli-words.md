@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 7224 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 7332 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-7224 English labels; 1933 UNKNOWN.
+7332 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -5055,6 +5055,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hae413d41](m/israeli/word/hae413d41.mp3) | רָעָה | to herd; to graze; to lead, direct on a course, show the way | ra'ah |
 | [haf460aed](m/israeli/word/haf460aed.mp3) | סָךְ | to anoint oneself | sakh |
 | [haf87e61a](m/israeli/word/haf87e61a.mp3) | רְצִינוּת | seriousness | retzinut |
+| [hafedf16c](m/israeli/word/hafedf16c.mp3) | פָּגַע | to hurt or injure (someone or something); to meet; to entreat, to intercede | paga |
 | [haftarah-after-w1](m/israeli/word/haftarah-after-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [haftarah-after-w10](m/israeli/word/haftarah-after-w10.mp3) | בְּכָל־הַדּוֹרוֹת | in all generations | bekhol-hadorot |
 | [haftarah-after-w100](m/israeli/word/haftarah-after-w100.mp3) | אַתָּה | you, thou | atah |
@@ -5431,6 +5432,113 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [havdalah-spices-w7](m/israeli/word/havdalah-spices-w7.mp3) | בּוֹרֵא | creator | bore |
 | [havdalah-spices-w8](m/israeli/word/havdalah-spices-w8.mp3) | מִינֵי | kinds of | minei |
 | [havdalah-spices-w9](m/israeli/word/havdalah-spices-w9.mp3) | בְשָׂמִים׃ | spices | vesamim |
+| [hb082296c](m/israeli/word/hb082296c.mp3) | קֶרֶן | horn; ray, beam; corner (exterior) | keren |
+| [hb1265621](m/israeli/word/hb1265621.mp3) | דְּ־ | introduces a subordinate clause, that, which, who | de- |
+| [hb2147419](m/israeli/word/hb2147419.mp3) | נוּ | well, so | nu |
+| [hb21be276](m/israeli/word/hb21be276.mp3) | וְ־ | and | ve- |
+| [hb2ae1b9a](m/israeli/word/hb2ae1b9a.mp3) | תּוֹצָאָה | a result, an outcome, an effect | totza'ah |
+| [hb3377769](m/israeli/word/hb3377769.mp3) | הוּסַף | to be added | husaf |
+| [hb33d863f](m/israeli/word/hb33d863f.mp3) | בְּתוֹךְ | inside, within, in the middle of; into; among | betokh |
+| [hb3b4c47b](m/israeli/word/hb3b4c47b.mp3) | לְאֻמִּי | National | le'umi |
+| [hb3fb7693](m/israeli/word/hb3fb7693.mp3) | תְּרוּמָה | heave offering; contribution; offering | terumah |
+| [hb43259df](m/israeli/word/hb43259df.mp3) | בְּלִי | without | beli |
+| [hb4ac356a](m/israeli/word/hb4ac356a.mp3) | יָפֶה | beautiful, comely, fair, goodly, pleasant | yafeh |
+| [hb4ccc0e9](m/israeli/word/hb4ccc0e9.mp3) | עֵדָה | a group (as in ethnic group); a company assembled together by appointment | edah |
+| [hb5913147](m/israeli/word/hb5913147.mp3) | נֶפֶשׁ | a soul, psyche; life; a person (human being) | nefesh |
+| [hb59c5cdb](m/israeli/word/hb59c5cdb.mp3) | שִׂיחָה | conversation; negotiation, talk | sichah |
+| [hb5c944d2](m/israeli/word/hb5c944d2.mp3) | עָרַב | to guarantee, promise vow; to wane (end, i.e. a time period); to be pleasant, pretty | arav |
+| [hb5cf3549](m/israeli/word/hb5cf3549.mp3) | אַט | slowly | at |
+| [hb5f05782](m/israeli/word/hb5f05782.mp3) | בִּקֵּשׁ | to ask for, request; to seek, strive for | bikesh |
+| [hb65cf584](m/israeli/word/hb65cf584.mp3) | צוּרָה | shape (appearance or outline), form, figure; way, method, fashion | tzurah |
+| [hb694815f](m/israeli/word/hb694815f.mp3) | נֶהֱדָר | great, wonderful; beautiful, lovely | nehedar |
+| [hb6d6914d](m/israeli/word/hb6d6914d.mp3) | כִּפֵּר | to cover; to pardon sin, forgive; to obtain forgiveness | kiper |
+| [hb7b1fae7](m/israeli/word/hb7b1fae7.mp3) | עוֹר | skin; hide, leather | or |
+| [hb7b6cc8b](m/israeli/word/hb7b6cc8b.mp3) | כִּי | because, for, since; that; when, as, at the time that | ki |
+| [hb814461b](m/israeli/word/hb814461b.mp3) | יָרֹק | green | yarok |
+| [hb88ee2ce](m/israeli/word/hb88ee2ce.mp3) | הָפַךְ | to turn about, to turn over, to invert, to flip, to change; to become | hafakh |
+| [hb8a7e485](m/israeli/word/hb8a7e485.mp3) | מְחִיר | a (good or service's) price, cost; a price, a cost | mechir |
+| [hb8b78e51](m/israeli/word/hb8b78e51.mp3) | בְּ־ | in (a place or time); with; Among | be- |
+| [hb8cb40c1](m/israeli/word/hb8cb40c1.mp3) | גִּדּוּל | growing, growth; tumor; crop | gidul |
+| [hb9151e6b](m/israeli/word/hb9151e6b.mp3) | יוֹשֵׁב | inhabitant | yoshev |
+| [hb9165e1d](m/israeli/word/hb9165e1d.mp3) | בָּרַח | to run away | barach |
+| [hb91b24f9](m/israeli/word/hb91b24f9.mp3) | מַר | bitter (having an acrid taste); Mister; master | mar |
+| [hb92cbff2](m/israeli/word/hb92cbff2.mp3) | רָשַׁם | to inscribe, to write down, to note, to make a note | rasham |
+| [hb988b556](m/israeli/word/hb988b556.mp3) | נָקַם | to take revenge, to avenge | nakam |
+| [hb9aef784](m/israeli/word/hb9aef784.mp3) | אֵל | god; strength | el |
+| [hb9b267e3](m/israeli/word/hb9b267e3.mp3) | עָמַד | to stand; to stand, to be located; to stand still, stop | amad |
+| [hba22ae3e](m/israeli/word/hba22ae3e.mp3) | חֶסֶד | loving kindness, benevolence, goodness; shame, reproach | chesed |
+| [hba7a3175](m/israeli/word/hba7a3175.mp3) | וִדֵּא | to verify, confirm, ascertain, authenticate | vide |
+| [hba8920a3](m/israeli/word/hba8920a3.mp3) | חֻשַּׁב | to be calculated | chushav |
+| [hba9521db](m/israeli/word/hba9521db.mp3) | הִזְמִין | to invite; to order | hizmin |
+| [hba98874f](m/israeli/word/hba98874f.mp3) | נָכוֹן | right, correct | nakhon |
+| [hbab9e498](m/israeli/word/hbab9e498.mp3) | דָּאַג | to worry (about something), to be concerned (about something) | da'ag |
+| [hbb24a2a3](m/israeli/word/hbb24a2a3.mp3) | שִׂחֵק | to play; to act | sichek |
+| [hbb7445e6](m/israeli/word/hbb7445e6.mp3) | תּוֹעֵבָה | abomination; abominable (custom, thing), abomination | to'evah |
+| [hbb8f0628](m/israeli/word/hbb8f0628.mp3) | לָבַשׁ | to wear (an article of clothing); to put on (an article of clothing) | lavash |
+| [hbbbfa9a7](m/israeli/word/hbbbfa9a7.mp3) | סֶרֶט | ribbon; film | seret |
+| [hbc8677f5](m/israeli/word/hbc8677f5.mp3) | נִסָּיוֹן | attempt; experiment; experience | nisaivon |
+| [hbd0751bc](m/israeli/word/hbd0751bc.mp3) | פָּנִים | face; interior | panim |
+| [hbd079057](m/israeli/word/hbd079057.mp3) | קְצָת | a little, a bit, a little bit | ketzat |
+| [hbd118cf1](m/israeli/word/hbd118cf1.mp3) | עוֹף | poultry (the meat from a domestic fowl), usually chicken | of |
+| [hbd15d64c](m/israeli/word/hbd15d64c.mp3) | יֹפִי | beauty | yofi |
+| [hbd2244c0](m/israeli/word/hbd2244c0.mp3) | קְטֹרֶת | incense | ketoret |
+| [hbd47566a](m/israeli/word/hbd47566a.mp3) | נִכְנַס | to enter; to enter (a state) [with ל־ (l'-) ‘to’]; to bump into, to collide (someone or something) [with ב־ (b'-) ‘in’] | nikhnas |
+| [hbd8c77c5](m/israeli/word/hbd8c77c5.mp3) | קָרַב | to approach | karav |
+| [hbd8d9038](m/israeli/word/hbd8d9038.mp3) | מַדּוּעַ | why | madu'a |
+| [hbe379d1f](m/israeli/word/hbe379d1f.mp3) | הִיסְטוֹרְיָה | history | hisetoreyah |
+| [hbe6de4ee](m/israeli/word/hbe6de4ee.mp3) | הֵבִיא | to bring; to quote, to cite | hevi |
+| [hbe71a2e7](m/israeli/word/hbe71a2e7.mp3) | הוֹד | majesty; splendour, freshness, beauty | hod |
+| [hbea3a906](m/israeli/word/hbea3a906.mp3) | יָשַׁן | to sleep, to be asleep | yashan |
+| [hbea613f7](m/israeli/word/hbea613f7.mp3) | הֵרֵעַ | to worsen, make worse; to deal unkindly with, harm, do evil to | here'a |
+| [hbf6ba8bf](m/israeli/word/hbf6ba8bf.mp3) | תִּקֵּן | to repair; to correct; to improve, rehabilitate | tiken |
+| [hbfda1ccb](m/israeli/word/hbfda1ccb.mp3) | חָזָק | Strong (healthy, capable of producing much physical force); Strong (sturdy, hard, capable of withstanding much physical force); Strong (powerful, having much force) | chazak |
+| [hc008b0a9](m/israeli/word/hc008b0a9.mp3) | דְּבַשׁ | honey | devash |
+| [hc014796a](m/israeli/word/hc014796a.mp3) | שֶׁ־ | introduces a subordinate clause | she- |
+| [hc0616a4b](m/israeli/word/hc0616a4b.mp3) | אֹזֶן | ear | ozen |
+| [hc06c43b6](m/israeli/word/hc06c43b6.mp3) | טוֹב | good, fair, fine; kind; goodness, fairness | tov |
+| [hc086f897](m/israeli/word/hc086f897.mp3) | מֹתֶק | sweetness | motek |
+| [hc09d494d](m/israeli/word/hc09d494d.mp3) | טָהוֹר | pure | tahor |
+| [hc0a3c428](m/israeli/word/hc0a3c428.mp3) | רֹחַב | width | rochav |
+| [hc11f62ec](m/israeli/word/hc11f62ec.mp3) | אָמוּר | supposed to, meant to, should, believed | amur |
+| [hc156c20a](m/israeli/word/hc156c20a.mp3) | הֵרִים | to pick up; to raise | herim |
+| [hc162425b](m/israeli/word/hc162425b.mp3) | אַךְ | but; only; now, just, hardly | akh |
+| [hc1aff898](m/israeli/word/hc1aff898.mp3) | רָחֵל | ewe | rachel |
+| [hc26a7ce3](m/israeli/word/hc26a7ce3.mp3) | נִחֵשׁ | to guess; to hypothesise, to speculate | nichesh |
+| [hc3060738](m/israeli/word/hc3060738.mp3) | נָטוּי | Extended, stretched forth; Bent, leaning, bowing; inflected, declined | natuy |
+| [hc30c99f6](m/israeli/word/hc30c99f6.mp3) | חִכָּה | to wait, wait for | chikah |
+| [hc3279140](m/israeli/word/hc3279140.mp3) | הִסְבִּיר | to explain; to clarify | hisbir |
+| [hc33f7702](m/israeli/word/hc33f7702.mp3) | מוֹחַ | mind; brain | moach |
+| [hc35a1f96](m/israeli/word/hc35a1f96.mp3) | חֹמֶר | a homer, a former Hebrew unit of dry volume, about equal to 230 L or 6½ bushels; material, substance, stuff, matter, chemical agent; clay, (especially architecture) mortar | chomer |
+| [hc35fb5dd](m/israeli/word/hc35fb5dd.mp3) | חִפֵּשׂ | to look for, search for, seek | chipes |
+| [hc3a83879](m/israeli/word/hc3a83879.mp3) | אֵבֶר | limb, organ; penis; pinion, wing | ever |
+| [hc427aff6](m/israeli/word/hc427aff6.mp3) | יָרֵחַ | Moon | yareach |
+| [hc43effe9](m/israeli/word/hc43effe9.mp3) | דָּם | blood | dam |
+| [hc444e8d9](m/israeli/word/hc444e8d9.mp3) | יְכֹלֶת | ability, capability, power | yekholet |
+| [hc44a3fa8](m/israeli/word/hc44a3fa8.mp3) | רִאשׁוֹן | first; earliest; best | rishon |
+| [hc480edcd](m/israeli/word/hc480edcd.mp3) | סָר | to turn, to turn aside; to depart | sar |
+| [hc4e2b459](m/israeli/word/hc4e2b459.mp3) | פָּנָה | to face; to turn; to address, speak to | panah |
+| [hc559dcdc](m/israeli/word/hc559dcdc.mp3) | הִצִּיל | to save, to rescue | hitzil |
+| [hc5862de6](m/israeli/word/hc5862de6.mp3) | אֶצְבַּע | finger; forefinger | etzba |
+| [hc5a2dfc8](m/israeli/word/hc5a2dfc8.mp3) | אִיֵּם | to threaten | iyem |
+| [hc5d024c3](m/israeli/word/hc5d024c3.mp3) | קָרוֹב | close, near | karov |
+| [hc5e933f4](m/israeli/word/hc5e933f4.mp3) | שַׁיָּךְ | belonging (to), owned (by); relevant, pertinent | shayakh |
+| [hc5ed2600](m/israeli/word/hc5ed2600.mp3) | לֵוִי | Levite | levi |
+| [hc637d8a6](m/israeli/word/hc637d8a6.mp3) | דּוֹר | generation | dor |
+| [hc639d04f](m/israeli/word/hc639d04f.mp3) | צַד | a side; a side, an aspect | tzad |
+| [hc6597ed8](m/israeli/word/hc6597ed8.mp3) | נְקֻדָּה | point; dot; full stop, period | nekudah |
+| [hc6c367ff](m/israeli/word/hc6c367ff.mp3) | עָבַד | to work, labor; to work, operate, function; to work on, convince, improve | avad |
+| [hc6cdec2b](m/israeli/word/hc6cdec2b.mp3) | דּוֹד | uncle | dod |
+| [hc7113076](m/israeli/word/hc7113076.mp3) | דַּבָּר | leader | dabar |
+| [hc73b1b96](m/israeli/word/hc73b1b96.mp3) | דַּל | weak, poor | dal |
+| [hc75b99fe](m/israeli/word/hc75b99fe.mp3) | קִדְמִי | front | kidmi |
+| [hc7da2ad4](m/israeli/word/hc7da2ad4.mp3) | גָּד | luck | gad |
+| [hc81786d2](m/israeli/word/hc81786d2.mp3) | קָרָה | to happen, occur, go on | karah |
+| [hc89b2d29](m/israeli/word/hc89b2d29.mp3) | רִאשׁוֹנִי | Initial, primary, first, starting; Prime | rishoni |
+| [hc8a77ebe](m/israeli/word/hc8a77ebe.mp3) | דַּעַת | mind; understanding | da'at |
+| [hc8c1466c](m/israeli/word/hc8c1466c.mp3) | מוֹרֶה | teacher, instructor, educator (a man who teaches); rebellious | moreh |
+| [hc8e03f62](m/israeli/word/hc8e03f62.mp3) | רוֹפֵא | medical doctor, physician | rofe |
+| [hc8edded2](m/israeli/word/hc8edded2.mp3) | הֶחְלִיט | to opt, choose, decide | hechlit |
+| [hc91c0d80](m/israeli/word/hc91c0d80.mp3) | הַר | mountain (mass of earth and rock) | har |
 | [help-01](m/israeli/word/help-01.mp3) | עֶזְרָה! | help! | ezrah! |
 | [i-01-w1](m/israeli/word/i-01-w1.mp3) | בָּרְכוּ | UNKNOWN | barkhu |
 | [i-01-w10](m/israeli/word/i-01-w10.mp3) | לְעוֹלָם וָעֶד | UNKNOWN | le'olam va'ed |
@@ -7830,4 +7938,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 15686 produced clips in INDEX.csv have an English label; 1952 UNKNOWN. Filenames and IDs are unchanged.
+All 15936 produced clips in INDEX.csv have an English label; 2024 UNKNOWN. Filenames and IDs are unchanged.

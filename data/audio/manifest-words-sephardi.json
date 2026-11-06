@@ -41580,8 +41580,8 @@
   "kind": "word",
   "id": "havdalah-hamavdil-w3",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "the LORD",
   "phonetic": "adonai"
@@ -41606,8 +41606,8 @@
   "kind": "word",
   "id": "havdalah-hamavdil-w4",
   "text": "אֱלֹהֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "to the ordinary",
   "phonetic": "eloheinu"
@@ -52992,7 +52992,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to be found; to be discovered; to be present, to be located, to be situated"
+  "english": "to be found; to be discovered; to be present, to be located, to be situated",
+  "phonetic": "nimtza"
  },
  {
   "path": "audio/f/sephardi/word/hfc2573fa.mp3",
@@ -53005,7 +53006,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to be found; to be discovered; to be present, to be located, to be situated"
+  "english": "to be found; to be discovered; to be present, to be located, to be situated",
+  "phonetic": "nimtza"
  },
  {
   "path": "audio/m/sephardi/word/h3dfe9831.mp3",
@@ -61376,7 +61378,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to hold, to grab"
+  "english": "to hold, to grab",
+  "phonetic": "hechzik"
  },
  {
   "path": "audio/f/sephardi/word/hfb9cb2bb.mp3",
@@ -61389,7 +61392,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to hold, to grab"
+  "english": "to hold, to grab",
+  "phonetic": "hechzik"
  },
  {
   "path": "audio/m/sephardi/word/h8aa6404d.mp3",
@@ -70748,7 +70752,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a lot; One's allotted portion, the result of drawing lots; fate, destiny"
+  "english": "a lot; One's allotted portion, the result of drawing lots; fate, destiny",
+  "phonetic": "goral"
  },
  {
   "path": "audio/f/sephardi/word/hfcc1a370.mp3",
@@ -70761,7 +70766,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a lot; One's allotted portion, the result of drawing lots; fate, destiny"
+  "english": "a lot; One's allotted portion, the result of drawing lots; fate, destiny",
+  "phonetic": "goral"
  },
  {
   "path": "audio/m/sephardi/word/h68581174.mp3",

@@ -52992,7 +52992,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to be found; to be discovered; to be present, to be located, to be situated"
+  "english": "to be found; to be discovered; to be present, to be located, to be situated",
+  "phonetic": "nimtza"
  },
  {
   "path": "audio/f/israeli/word/hfc2573fa.mp3",
@@ -53002,10 +53003,11 @@
   "id": "hfc2573fa",
   "text": "נִמְצָא",
   "ipa": "nim.ˈtsa",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to be found; to be discovered; to be present, to be located, to be situated"
+  "english": "to be found; to be discovered; to be present, to be located, to be situated",
+  "phonetic": "nimtza"
  },
  {
   "path": "audio/m/israeli/word/h3dfe9831.mp3",
@@ -61376,7 +61378,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to hold, to grab"
+  "english": "to hold, to grab",
+  "phonetic": "hechzik"
  },
  {
   "path": "audio/f/israeli/word/hfb9cb2bb.mp3",
@@ -61386,10 +61389,11 @@
   "id": "hfb9cb2bb",
   "text": "הֶחְזִיק",
   "ipa": "heχ.ˈzik",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "to hold, to grab"
+  "english": "to hold, to grab",
+  "phonetic": "hechzik"
  },
  {
   "path": "audio/m/israeli/word/h8aa6404d.mp3",
@@ -70748,7 +70752,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a lot; One's allotted portion, the result of drawing lots; fate, destiny"
+  "english": "a lot; One's allotted portion, the result of drawing lots; fate, destiny",
+  "phonetic": "goral"
  },
  {
   "path": "audio/f/israeli/word/hfcc1a370.mp3",
@@ -70758,10 +70763,11 @@
   "id": "hfcc1a370",
   "text": "גּוֹרָל",
   "ipa": "ɡo.ˈʁal",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-word",
-  "english": "a lot; One's allotted portion, the result of drawing lots; fate, destiny"
+  "english": "a lot; One's allotted portion, the result of drawing lots; fate, destiny",
+  "phonetic": "goral"
  },
  {
   "path": "audio/m/israeli/word/h68581174.mp3",

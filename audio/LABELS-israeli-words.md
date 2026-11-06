@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 6527 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 6530 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-6527 English labels; 1933 UNKNOWN.
+6530 English labels; 1933 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -1957,6 +1957,9 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hfb7bf5f4](f/israeli/word/hfb7bf5f4.mp3) | לוּל | chicken coop; shaft, pit | lul |
 | [hfb819565](f/israeli/word/hfb819565.mp3) | רוּחַ | wind, a wind | ruach |
 | [hfb8d7482](f/israeli/word/hfb8d7482.mp3) | רֵיחַ | odor, scent, smell; trace, residue, iota | reiach |
+| [hfb9cb2bb](f/israeli/word/hfb9cb2bb.mp3) | הֶחְזִיק | to hold, to grab | hechzik |
+| [hfc2573fa](f/israeli/word/hfc2573fa.mp3) | נִמְצָא | to be found; to be discovered; to be present, to be located, to be situated | nimtza |
+| [hfcc1a370](f/israeli/word/hfcc1a370.mp3) | גּוֹרָל | a lot; One's allotted portion, the result of drawing lots; fate, destiny | goral |
 | [i-01-w1](f/israeli/word/i-01-w1.mp3) | בָּרְכוּ | UNKNOWN | barkhu |
 | [i-01-w10](f/israeli/word/i-01-w10.mp3) | לְעוֹלָם וָעֶד | UNKNOWN | le'olam va'ed |
 | [i-01-w11](f/israeli/word/i-01-w11.mp3) | וְאָהַבְתָּ | UNKNOWN | ve'ahavta |
@@ -7133,4 +7136,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 13498 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.
+All 13506 produced clips in INDEX.csv have an English label; 1933 UNKNOWN. Filenames and IDs are unchanged.

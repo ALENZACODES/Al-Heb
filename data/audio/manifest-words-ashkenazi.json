@@ -16386,8 +16386,8 @@
   "kind": "word",
   "id": "kedushah-yimloch-w4",
   "text": "אֱלֹהַיִךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "your God",
   "phonetic": "elohayikh"
@@ -16412,8 +16412,8 @@
   "kind": "word",
   "id": "kedushah-yimloch-w5",
   "text": "צִיּוֹן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "Zion",
   "phonetic": "tziyon"
@@ -16438,8 +16438,8 @@
   "kind": "word",
   "id": "kedushah-yimloch-w6",
   "text": "לְדֹר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "prayer-word",
   "english": "for a generation",
   "phonetic": "ledor"
@@ -52992,7 +52992,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to be found; to be discovered; to be present, to be located, to be situated"
+  "english": "to be found; to be discovered; to be present, to be located, to be situated",
+  "phonetic": "nimtza"
  },
  {
   "path": "audio/f/ashkenazi/word/hfc2573fa.mp3",
@@ -53005,7 +53006,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to be found; to be discovered; to be present, to be located, to be situated"
+  "english": "to be found; to be discovered; to be present, to be located, to be situated",
+  "phonetic": "nimtza"
  },
  {
   "path": "audio/m/ashkenazi/word/h3dfe9831.mp3",
@@ -61376,7 +61378,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to hold, to grab"
+  "english": "to hold, to grab",
+  "phonetic": "hechzik"
  },
  {
   "path": "audio/f/ashkenazi/word/hfb9cb2bb.mp3",
@@ -61389,7 +61392,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "to hold, to grab"
+  "english": "to hold, to grab",
+  "phonetic": "hechzik"
  },
  {
   "path": "audio/m/ashkenazi/word/h8aa6404d.mp3",
@@ -70748,7 +70752,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a lot; One's allotted portion, the result of drawing lots; fate, destiny"
+  "english": "a lot; One's allotted portion, the result of drawing lots; fate, destiny",
+  "phonetic": "goral"
  },
  {
   "path": "audio/f/ashkenazi/word/hfcc1a370.mp3",
@@ -70761,7 +70766,8 @@
   "status": "missing",
   "source": "none",
   "group": "vocab-word",
-  "english": "a lot; One's allotted portion, the result of drawing lots; fate, destiny"
+  "english": "a lot; One's allotted portion, the result of drawing lots; fate, destiny",
+  "phonetic": "goral"
  },
  {
   "path": "audio/m/ashkenazi/word/h68581174.mp3",

@@ -36674,11 +36674,12 @@
   "kind": "word",
   "id": "r22-w2",
   "text": "יִשְׂרָאֵל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p41545921",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yisra'el"
  },
  {
   "path": "audio/m/israeli/word/r22-w3.mp3",
@@ -36700,11 +36701,12 @@
   "kind": "word",
   "id": "r22-w3",
   "text": "אֱלֹהֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "p29823ceb",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "eloheinu"
  },
  {
   "path": "audio/m/israeli/word/r22-w4.mp3",
@@ -36725,10 +36727,11 @@
   "kind": "word",
   "id": "r22-w4",
   "text": "אֶחָד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "echad"
  },
  {
   "path": "audio/m/israeli/word/r23-w1.mp3",
@@ -36750,11 +36753,12 @@
   "kind": "word",
   "id": "r23-w1",
   "text": "זֶה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h67c6be75",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "zeh"
  },
  {
   "path": "audio/m/israeli/word/r23-w2.mp3",
@@ -36775,10 +36779,11 @@
   "kind": "word",
   "id": "r23-w2",
   "text": "טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "tov"
  },
  {
   "path": "audio/m/israeli/word/r23-w3.mp3",
@@ -36800,11 +36805,12 @@
   "kind": "word",
   "id": "r23-w3",
   "text": "זָהָב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h761c6cb9",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "zahav"
  },
  {
   "path": "audio/m/israeli/word/r23-w4.mp3",
@@ -36826,11 +36832,12 @@
   "kind": "word",
   "id": "r23-w4",
   "text": "טַל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "hb91b91be",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "tal"
  },
  {
   "path": "audio/m/israeli/word/r24-w1.mp3",
@@ -36852,11 +36859,12 @@
   "kind": "word",
   "id": "r24-w1",
   "text": "צֶדֶק",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "h35207b27",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "tzedek"
  },
  {
   "path": "audio/m/israeli/word/r24-w2.mp3",
@@ -36878,11 +36886,12 @@
   "kind": "word",
   "id": "r24-w2",
   "text": "אֶרֶץ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "vocabId": "hd82a3079",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "eretz"
  },
  {
   "path": "audio/m/israeli/word/r24-w3.mp3",

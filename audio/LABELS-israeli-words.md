@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 4452 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 4461 clips. **Reading lines:** 580 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-4452 English labels; 834 UNKNOWN.
+4461 English labels; 843 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -2207,6 +2207,15 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [r21-w4](f/israeli/word/r21-w4.mp3) | אֲדֹנָי | UNKNOWN | adonai |
 | [r21-w5](f/israeli/word/r21-w5.mp3) | אֳנִיָּה | UNKNOWN | oniyah |
 | [r22-w1](f/israeli/word/r22-w1.mp3) | שְׁמַע | UNKNOWN | shema |
+| [r22-w2](f/israeli/word/r22-w2.mp3) | יִשְׂרָאֵל | UNKNOWN | yisra'el |
+| [r22-w3](f/israeli/word/r22-w3.mp3) | אֱלֹהֵינוּ | UNKNOWN | eloheinu |
+| [r22-w4](f/israeli/word/r22-w4.mp3) | אֶחָד | UNKNOWN | echad |
+| [r23-w1](f/israeli/word/r23-w1.mp3) | זֶה | UNKNOWN | zeh |
+| [r23-w2](f/israeli/word/r23-w2.mp3) | טוֹב | UNKNOWN | tov |
+| [r23-w3](f/israeli/word/r23-w3.mp3) | זָהָב | UNKNOWN | zahav |
+| [r23-w4](f/israeli/word/r23-w4.mp3) | טַל | UNKNOWN | tal |
+| [r24-w1](f/israeli/word/r24-w1.mp3) | צֶדֶק | UNKNOWN | tzedek |
+| [r24-w2](f/israeli/word/r24-w2.mp3) | אֶרֶץ | UNKNOWN | eretz |
 | [shehecheyanu-w1](f/israeli/word/shehecheyanu-w1.mp3) | בָּרוּךְ | blessed | barukh |
 | [shehecheyanu-w10](f/israeli/word/shehecheyanu-w10.mp3) | לַזְּמַן | to the time | lazeman |
 | [shehecheyanu-w11](f/israeli/word/shehecheyanu-w11.mp3) | הַזֶּה׃ | this | hazeh |
@@ -5058,4 +5067,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 7260 produced clips in INDEX.csv have an English label; 834 UNKNOWN. Filenames and IDs are unchanged.
+All 7286 produced clips in INDEX.csv have an English label; 843 UNKNOWN. Filenames and IDs are unchanged.

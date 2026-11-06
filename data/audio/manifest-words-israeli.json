@@ -4714,8 +4714,8 @@
     "kind": "word",
     "id": "candle-shabbat-w9",
     "text": "בְּמִצְוֹתָיו",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {
@@ -12370,8 +12370,8 @@
     "kind": "word",
     "id": "ein-kamocha-w1",
     "text": "אֵין־כָּמוֹךָ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word"
   },
   {

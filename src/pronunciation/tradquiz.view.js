@@ -55,7 +55,7 @@ export function mount(root, ctx) {
     setBody(
       h('p', {}, `${QUESTIONS} questions. A reading is shown; pick the tradition it belongs to. Wrong answers are never held against you: you see why and move on.`),
       h('p', { class: 'tq-flag' }, NOTE),
-      h('p', { id: 'tq-setting' }, `Your setting is ${LABELS[mine()]}. The quiz covers all three traditions whatever your setting; your own is marked in the answers.${' This quiz has no audio for any tradition.'}`),
+      h('p', { id: 'tq-setting' }, `Your setting is ${LABELS[mine()]}. The quiz covers all three traditions whatever your setting; your own is marked in the answers. ${ctx?.audio?.summary?.recorded ? 'When a tradition has recordings on this device, listen rounds can use them; otherwise this stays a reading quiz.' : 'Recordings are still arriving for some traditions — this round is a reading quiz, labelled honestly.'}`),
       stored.rounds ? h('p', {}, `Rounds played: ${stored.rounds}. Best score: ${stored.best} of ${stored.last?.total ?? QUESTIONS}. Last: ${stored.last?.score} of ${stored.last?.total}.`) : null,
       weak.length ? h('div', {}, h('p', {}, 'Worth another look:'), h('ul', {}, weak.map((w) => h('li', {}, reasons.codes[w.code].text)))) : null,
       btn('Start', start, { 'data-act': 'start' }),

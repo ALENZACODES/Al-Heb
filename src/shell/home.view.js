@@ -77,12 +77,23 @@ export function mount(root, ctx) {
     const get = async (k) => { try { const v = await store.get(k); return v ?? null; } catch { return null; } };
     const [firstday, onboarding, placement, dailyGoal, speak, typing, compare] = await Promise.all([get(FIRSTDAY_PROGRESS_KEY), get(ONBOARDING_KEY), get(PLACEMENT_KEY), get(DAILY_GOAL_KEY), get(PRACTICE_KEYS.speak), get(PRACTICE_KEYS.typing), get(PRACTICE_KEYS.compare)]);
     if (!alive) return;
+    if (!globalThis.__alefTodaysMixCatalog) {
+      try {
+        const res = await fetch('data/fun/todays-mix.json', { cache: 'no-cache' });
+        if (res.ok) globalThis.__alefTodaysMixCatalog = await res.json();
+      } catch { /* offline / missing — Mix stays hidden */ }
+    }
     let goalNow = dailyGoal;
     const draw = () => {
+      const attempts = Array.isArray(speak?.attempts) ? speak.attempts : [];
+      const spokenTurns = attempts.filter((a) => a && (a.outcome === 'said' || a.outcome === 'help' || a.kind === 'say')).length;
+      const distinctDays = new Set(attempts.map((a) => (a?.at || a?.day || '').toString().slice(0, 10)).filter(Boolean)).size;
       const today = buildToday({
       completedIds: Object.keys(st.completed), lessons: cur.lessons, goal: settings.get('goal'), available: cur.available,
       dueCount: srs?.due ? srs.due(Object.values(st.cards), new Date()).length : 0, streak: st.streak,
       firstday, onboarding, placement, hasRoute: ctx.hasRoute, daysAway: daysAway({ last: st.rawStreak?.last, cards: st.cards }), reviewedToday: reviewedToday(st.cards), dailyGoal: goalNow, speak, typing, compare,
+      speakStats: { spokenTurns, distinctDays },
+      mixCatalog: globalThis.__alefTodaysMixCatalog || null,
       });
       renderRest(today.firstRun);
       todayHost.replaceChildren(renderToday(today, t, (m) => { goalNow = m; try { store.set(DAILY_GOAL_KEY, m); } catch { /* best effort */ } const wasOpen = todayHost.querySelector('#today-goal-box')?.open === true; draw(); const box = todayHost.querySelector('#today-goal-box'); if (box && wasOpen) box.open = true; /* the redraw makes a new, closed <details>; a hidden button cannot take focus */ const b = todayHost.querySelector(`[data-goal="${m}"]`); b?.focus?.(); goalStatus.textContent = `Daily goal: ${m} minutes.`; }, { calm: calmOn(ctx), showStreak: streakVisible(ctx) }));

@@ -7,6 +7,7 @@ import { openStart } from '../placement/model.js';
 import { ROUTES } from '../shell/router.js';
 import { tierOf } from '../shell/nav-model.js';
 import { nextPerTrack } from './nextlesson.js';
+import { mixUnlocked, composeMix } from './todaysmix.js';
 
 export const FIRSTDAY_PROGRESS_KEY = 'firstday.progress';
 export const ONBOARDING_KEY = 'onboarding.v1';
@@ -105,6 +106,10 @@ export function buildToday(o) {
     streak,
     dailyGoal: normalizeDailyGoal(o.dailyGoal), more,
     morning: ok('morning') ? { href: '#/morning', label: "Today's morning verse" + previewTag('morning') } : null,
+    // Progressive depth: Mix is computed only when caller passes speakStats that clear the reveal gate.
+    mix: (!firstRun && mixUnlocked(o.speakStats || {}) && o.mixCatalog)
+      ? composeMix(o.mixCatalog, { goal, hasRoute: o.hasRoute, rng: o.rng })
+      : null,
   };
 }
 
@@ -140,6 +145,11 @@ export function renderToday(today, t, onGoal, opts = {}) {
     h('h2', { id: 'h-today' }, t('home.today')),
     why ? h('p', { class: 'today-why' }, why) : null,
     today.primary ? h('p', { class: 'today-main' }, h('a', { class: 'btn', id: 'today-continue', href: today.primary.href, style: 'display:block;text-align:center;font-size:1.15rem;padding:0.9rem 1rem;font-weight:700' }, today.primary.label)) : null,
+    today.mix && today.mix.tiles?.length ? h('div', { class: 'today-mix', id: 'today-mix' },
+      h('h3', { class: 'muted', id: 'today-mix-h' }, today.mix.title),
+      h('p', { class: 'muted small' }, today.mix.blurb),
+      h('p', { class: 'today-mix-tiles' }, ...today.mix.tiles.flatMap((tile, i) => [i ? ' · ' : '', h('a', { href: tile.href, 'data-mix': tile.id }, `${tile.title} (${tile.minutes} min)`)])),
+      today.mix.tiles[0] ? h('p', {}, h('a', { class: 'btn secondary', id: 'today-mix-start', href: today.mix.tiles[0].href }, today.mix.startLabel)) : null) : null,
     h('p', { id: 'today-due', class: 'muted' }, today.due.count === 0 ? dueText : (today.primary?.kind === 'review' ? dueText : '')),
     !calm && (sec.length || moreLinks.length) ? h('p', { id: 'today-more', class: 'today-secondary' }, ...[...sec, ...moreLinks.map((m) => h('a', { href: m.href }, m.label))].flatMap((n, i) => [i ? ' \u00b7 ' : '', n])) : null,
     // the streak line stays hidden until there is something to say: a streak of 2 or more days (or a paused one that reached 2)

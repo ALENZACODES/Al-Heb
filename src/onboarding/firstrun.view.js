@@ -59,6 +59,8 @@ export function mount(root, ctx) {
 
   // ---- Stage 1 ----
   function renderLetters() {
+    // Progressive-depth doorway: one calm lead; no game chrome on first paint.
+    const doorway = h('p', { class: 'muted ob-doorway', id: 'ob-doorway' }, 'One minute at a time. First we learn how you want to use Hebrew — then you say your first sound.');
     let picked = null;
     const prevGoal = settings.get('goal') || null;
     let goal = GOAL_CHOICES.some((g) => g.id === prevGoal) ? prevGoal : 'read'; // preselected: the current setting (default read), so a learner who skips it gets the old flow
@@ -79,7 +81,7 @@ export function mount(root, ctx) {
       say(`Saved. Your starting point is ${answerById(picked).start === '/placement' ? 'the placement check' : 'your first 10 minutes'}.${israelNow ? ' Israeli pronunciation is set; change it in Settings.' : ''}`);
       go(israelNow ? 'plan' : 'congregation');
     };
-    body.replaceChildren(form, h('p', { class: 'muted' }, 'Your answer is saved only on this device. ', h('a', { href: '#/how' }, 'How this works'), '. ', h('a', { href: '#/accessibility', id: 'ob-a11y-link' }, 'Accessibility options'), '.'));
+    body.replaceChildren(doorway, form, h('p', { class: 'muted' }, 'Your answer is saved only on this device. ', h('a', { href: '#/how' }, 'How this works'), '. ', h('a', { href: '#/accessibility', id: 'ob-a11y-link' }, 'Accessibility options'), '.'));
   }
 
   // ---- Stage 2 ----

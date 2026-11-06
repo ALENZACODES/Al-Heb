@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 2737 clips. **Reading lines:** 491 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 2815 clips. **Reading lines:** 513 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-2737 English labels; 2 UNKNOWN.
+2815 English labels; 2 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -2723,6 +2723,84 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [havdalah-opening-w7](m/israeli/word/havdalah-opening-w7.mp3) | כִּי | because, for, since; that; when, as, at the time that | ki |
 | [havdalah-opening-w8](m/israeli/word/havdalah-opening-w8.mp3) | עָזִּי | my strength | azi |
 | [havdalah-opening-w9](m/israeli/word/havdalah-opening-w9.mp3) | וְזִמְרָת | and my song | vezimrat |
+| [havdalah-spices-w1](m/israeli/word/havdalah-spices-w1.mp3) | בָּרוּךְ | blessed | barukh |
+| [havdalah-spices-w2](m/israeli/word/havdalah-spices-w2.mp3) | אַתָּה | you, thou | atah |
+| [havdalah-spices-w3](m/israeli/word/havdalah-spices-w3.mp3) | אֲדֹנָי | the LORD | adonai |
+| [havdalah-spices-w4](m/israeli/word/havdalah-spices-w4.mp3) | אֱלֹהֵינוּ | our-God | eloheinu |
+| [havdalah-spices-w5](m/israeli/word/havdalah-spices-w5.mp3) | מֶלֶךְ | king | melekh |
+| [havdalah-spices-w6](m/israeli/word/havdalah-spices-w6.mp3) | הָעוֹלָם | the world | ha'olam |
+| [havdalah-spices-w7](m/israeli/word/havdalah-spices-w7.mp3) | בּוֹרֵא | creator | bore |
+| [havdalah-spices-w8](m/israeli/word/havdalah-spices-w8.mp3) | מִינֵי | kinds of | minei |
+| [havdalah-spices-w9](m/israeli/word/havdalah-spices-w9.mp3) | בְשָׂמִים׃ | spices | vesamim |
+| [kaddish-1-w1](m/israeli/word/kaddish-1-w1.mp3) | יִתְגַּדַּל | may it be magnified | yitgadal |
+| [kaddish-1-w10](m/israeli/word/kaddish-1-w10.mp3) | מַלְכוּתֵהּ | his kingdom | malkhuteh |
+| [kaddish-1-w11](m/israeli/word/kaddish-1-w11.mp3) | בְּחַיֵּיכוֹן | in your lifetime | bechayeikhon |
+| [kaddish-1-w12](m/israeli/word/kaddish-1-w12.mp3) | וּבְיוֹמֵיכוֹן | and in your days | uveyomeikhon |
+| [kaddish-1-w13](m/israeli/word/kaddish-1-w13.mp3) | וּבְחַיֵּי | and in the lifetime | uvechayei |
+| [kaddish-1-w14](m/israeli/word/kaddish-1-w14.mp3) | דְכָל־בֵּית | of all the house | dekhal-beit |
+| [kaddish-1-w15](m/israeli/word/kaddish-1-w15.mp3) | יִשְׂרָאֵל | Israel | yisra'el |
+| [kaddish-1-w16](m/israeli/word/kaddish-1-w16.mp3) | בַּעֲגָלָא | speedily | ba'agala |
+| [kaddish-1-w17](m/israeli/word/kaddish-1-w17.mp3) | וּבִזְמַן | and in a time | uvizman |
+| [kaddish-1-w18](m/israeli/word/kaddish-1-w18.mp3) | קָרִיב | soon | kariv |
+| [kaddish-1-w19](m/israeli/word/kaddish-1-w19.mp3) | וְאִמְרוּ | and say | ve'imru |
+| [kaddish-1-w2](m/israeli/word/kaddish-1-w2.mp3) | וְיִתְקַדַּשׁ | and sanctified | veyitkadash |
+| [kaddish-1-w20](m/israeli/word/kaddish-1-w20.mp3) | אָמֵן׃ | used to express agreement with what was just stated | amen |
+| [kaddish-1-w21](m/israeli/word/kaddish-1-w21.mp3) | יְהֵא | may | yehe |
+| [kaddish-1-w22](m/israeli/word/kaddish-1-w22.mp3) | שְׁמֵהּ | His name (Aramaic) | shemeh |
+| [kaddish-1-w23](m/israeli/word/kaddish-1-w23.mp3) | רַבָּא | great | raba |
+| [kaddish-1-w24](m/israeli/word/kaddish-1-w24.mp3) | מְבָרַךְ | be blessed | mevarakh |
+| [kaddish-1-w25](m/israeli/word/kaddish-1-w25.mp3) | לְעָלַם | for ever | le'alam |
+| [kaddish-1-w26](m/israeli/word/kaddish-1-w26.mp3) | וּלְעָלְמֵי | and for eternities | ule'alemei |
+| [kaddish-1-w27](m/israeli/word/kaddish-1-w27.mp3) | עָלְמַיָּא | eternities | alemaya |
+| [kaddish-1-w28](m/israeli/word/kaddish-1-w28.mp3) | יִתְבָּרַךְ | blessed | yitbarakh |
+| [kaddish-1-w29](m/israeli/word/kaddish-1-w29.mp3) | וְיִשְׁתַּבַּח | and praised | veyishtabach |
+| [kaddish-1-w3](m/israeli/word/kaddish-1-w3.mp3) | שְׁמֵהּ | His name (Aramaic) | shemeh |
+| [kaddish-1-w30](m/israeli/word/kaddish-1-w30.mp3) | וְיִתְפָּאַר | and glorified | veyitpa'ar |
+| [kaddish-1-w31](m/israeli/word/kaddish-1-w31.mp3) | וְיִתְרוֹמַם | and exalted | veyitromam |
+| [kaddish-1-w32](m/israeli/word/kaddish-1-w32.mp3) | וְיִתְנַשֵּׂא | and extolled | veyitnase |
+| [kaddish-1-w33](m/israeli/word/kaddish-1-w33.mp3) | וְיִתְהַדָּר | and honoured | veyithadar |
+| [kaddish-1-w34](m/israeli/word/kaddish-1-w34.mp3) | וְיִתְעַלֶּה | and raised | veyit'aleh |
+| [kaddish-1-w35](m/israeli/word/kaddish-1-w35.mp3) | וְיִתְהַלָּל | and lauded | veyithalal |
+| [kaddish-1-w36](m/israeli/word/kaddish-1-w36.mp3) | שְׁמֵהּ | His name (Aramaic) | shemeh |
+| [kaddish-1-w37](m/israeli/word/kaddish-1-w37.mp3) | דְקוּדְשָׁא | of the Holy One | dekudesha |
+| [kaddish-1-w38](m/israeli/word/kaddish-1-w38.mp3) | בְּרִיךְ | blessed | berikh |
+| [kaddish-1-w39](m/israeli/word/kaddish-1-w39.mp3) | הוּא | he; used as a copula | hu |
+| [kaddish-1-w4](m/israeli/word/kaddish-1-w4.mp3) | רַבָּא | great | raba |
+| [kaddish-1-w40](m/israeli/word/kaddish-1-w40.mp3) | לְעֵלָּא | beyond | le'ela |
+| [kaddish-1-w41](m/israeli/word/kaddish-1-w41.mp3) | מִן־כָּל־בִּרְכָתָא | all the blessings | min-kol-birkhata |
+| [kaddish-1-w42](m/israeli/word/kaddish-1-w42.mp3) | וְשִׁירָתָא | and songs | veshirata |
+| [kaddish-1-w43](m/israeli/word/kaddish-1-w43.mp3) | תֻּשְׁבְּחָתָא | praises | tushbechata |
+| [kaddish-1-w44](m/israeli/word/kaddish-1-w44.mp3) | וְנֶחָמָתָא | and consolations | venechamata |
+| [kaddish-1-w45](m/israeli/word/kaddish-1-w45.mp3) | דַּאֲמִירָן | that are uttered | da'amiran |
+| [kaddish-1-w46](m/israeli/word/kaddish-1-w46.mp3) | בְּעָלְמָא | in the world | be'alema |
+| [kaddish-1-w47](m/israeli/word/kaddish-1-w47.mp3) | וְאִמְרוּ | and say | ve'imru |
+| [kaddish-1-w48](m/israeli/word/kaddish-1-w48.mp3) | אָמֵן׃ | used to express agreement with what was just stated | amen |
+| [kaddish-1-w49](m/israeli/word/kaddish-1-w49.mp3) | יְהֵא | may there be | yehe |
+| [kaddish-1-w5](m/israeli/word/kaddish-1-w5.mp3) | אָמֵן | used to express agreement with what was just stated | amen |
+| [kaddish-1-w50](m/israeli/word/kaddish-1-w50.mp3) | שְׁלָמָא | peace | shelama |
+| [kaddish-1-w51](m/israeli/word/kaddish-1-w51.mp3) | רַבָּא | great | raba |
+| [kaddish-1-w52](m/israeli/word/kaddish-1-w52.mp3) | מִן־שְׁמַיָּא | from heaven | min-shemaya |
+| [kaddish-1-w53](m/israeli/word/kaddish-1-w53.mp3) | וְחַיִּים | and life | vechayim |
+| [kaddish-1-w54](m/israeli/word/kaddish-1-w54.mp3) | עָלֵינוּ | it is upon us | aleinu |
+| [kaddish-1-w55](m/israeli/word/kaddish-1-w55.mp3) | וְעַל־כָּל־יִשְׂרָאֵל | and for all Israel | ve'al-kol-yisra'el |
+| [kaddish-1-w56](m/israeli/word/kaddish-1-w56.mp3) | וְאִמְרוּ | and say | ve'imru |
+| [kaddish-1-w57](m/israeli/word/kaddish-1-w57.mp3) | אָמֵן׃ | used to express agreement with what was just stated | amen |
+| [kaddish-1-w58](m/israeli/word/kaddish-1-w58.mp3) | עוֹשֶׂה | who makes | oseh |
+| [kaddish-1-w59](m/israeli/word/kaddish-1-w59.mp3) | שָׁלוֹם | peace | shalom |
+| [kaddish-1-w6](m/israeli/word/kaddish-1-w6.mp3) | בְּעָלְמָא | in the world | be'alema |
+| [kaddish-1-w60](m/israeli/word/kaddish-1-w60.mp3) | בִּמְרוֹמָיו | in his high places | bimromav |
+| [kaddish-1-w61](m/israeli/word/kaddish-1-w61.mp3) | הוּא | he; used as a copula | hu |
+| [kaddish-1-w62](m/israeli/word/kaddish-1-w62.mp3) | יַעֲשֶׂה | may he make | ya'aseh |
+| [kaddish-1-w63](m/israeli/word/kaddish-1-w63.mp3) | שָׁלוֹם | peace | shalom |
+| [kaddish-1-w64](m/israeli/word/kaddish-1-w64.mp3) | עָלֵינוּ | it is upon us | aleinu |
+| [kaddish-1-w65](m/israeli/word/kaddish-1-w65.mp3) | וְעַל | and for | ve'al |
+| [kaddish-1-w66](m/israeli/word/kaddish-1-w66.mp3) | כָּל | all, whole, everything | kol |
+| [kaddish-1-w67](m/israeli/word/kaddish-1-w67.mp3) | יִשְׂרָאֵל | Israel | yisra'el |
+| [kaddish-1-w68](m/israeli/word/kaddish-1-w68.mp3) | וְאִמְרוּ | and say | ve'imru |
+| [kaddish-1-w69](m/israeli/word/kaddish-1-w69.mp3) | אָמֵן׃ | used to express agreement with what was just stated | amen |
+| [kaddish-1-w7](m/israeli/word/kaddish-1-w7.mp3) | דִּי־בְרָא | that he created | di-vera |
+| [kaddish-1-w8](m/israeli/word/kaddish-1-w8.mp3) | כִרְעוּתֵהּ | by his will | khir'uteh |
+| [kaddish-1-w9](m/israeli/word/kaddish-1-w9.mp3) | וְיַמְלִיךְ | and may he establish | veyamlikh |
 | [numbers-01-f](m/israeli/word/numbers-01-f.mp3) | אַחַת | one (f.) | achat |
 | [numbers-01-m](m/israeli/word/numbers-01-m.mp3) | אֶחָד | one | echad |
 | [numbers-02-f](m/israeli/word/numbers-02-f.mp3) | שְׁתַּיִם | two (f.) | shtayim |
@@ -2756,7 +2834,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli reading lines
 
-491 English labels; 0 UNKNOWN.
+513 English labels; 0 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -3153,6 +3231,16 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [greetings-12](m/israeli/line/greetings-12.mp3) | מָה נִשְׁמָע? | what's up? (lit. what is heard?) | mah nishma? |
 | [greetings-13](m/israeli/line/greetings-13.mp3) | מָה קוֹרֶה? | what's happening? | mah koreh? |
 | [greetings-14](m/israeli/line/greetings-14.mp3) | הַכֹּל בְּסֵדֶר | everything is OK | hakol beseder |
+| [greetings-17](m/israeli/line/greetings-17.mp3) | לֹא רַע | not bad | lo ra |
+| [greetings-18](m/israeli/line/greetings-18.mp3) | כָּכָה כָּכָה | so-so | kakhah kakhah |
+| [greetings-19](m/israeli/line/greetings-19.mp3) | נָעִים מְאֹד | nice to meet you | na'im me'od |
+| [greetings-21](m/israeli/line/greetings-21.mp3) | יוֹם נָעִים | have a nice day | yom na'im |
+| [greetings-22-f](m/israeli/line/greetings-22-f.mp3) | בְּרוּכָה הַבָּאָה | welcome (to one person) | berukhah haba'ah |
+| [greetings-22-m](m/israeli/line/greetings-22-m.mp3) | בָּרוּךְ הַבָּא | welcome (to one person) | barukh haba |
+| [greetings-23](m/israeli/line/greetings-23.mp3) | בְּרוּכִים הַבָּאִים | welcome (to several people) | berukhim haba'im |
+| [greetings-24](m/israeli/line/greetings-24.mp3) | מַזָּל טוֹב | congratulations / good luck | mazal tov |
+| [greetings-27-f](m/israeli/line/greetings-27-f.mp3) | תִּשְׁמְרִי עַל עַצְמֵךְ | take care of yourself | tishmeri al atzmekh |
+| [greetings-27-m](m/israeli/line/greetings-27-m.mp3) | תִּשְׁמֹר עַל עַצְמְךָ | take care of yourself | tishmor al atzmekha |
 | [haftarah-after-l1](m/israeli/line/haftarah-after-l1.mp3) | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם צוּר כָּל־הָעוֹלָמִים צַדִּיק בְּכָל־הַדּוֹרוֹת הָאֵל הַנֶּאֱמָן הָאֹמֵר וְעֹשֶׂה הַמְדַבֵּר וּמְקַיֵּם שֶׁכָּל־דְּבָרָיו אֱמֶת וָצֶדֶק נֶאֱמָן אַתָּה הוּא אֲדֹנָי אֱלֹהֵינוּ וְנֶאֱמָנִים דְּבָרֶיךָ וְדָבָר אֶחָד מִדְּבָרֶיךָ אָחוֹר לֹא יָשׁוּב רֵיקָם כִּי אֵל מֶלֶךְ נֶאֱמָן וְרַחֲמָן אָתָּה בָּרוּךְ אַתָּה אֲדֹנָי הָאֵל הַנֶּאֱמָן בְּכָל־דְּבָרָיו׃ | Blessed are you, LORD our God, king of the world, rock of all the worlds, righteous in all generations, the faithful God who says and does, who speaks and fulfils, all of whose words are true and just. You are faithful, LORD our God, and your words are faithful, and not one of your words returns empty, for you are a faithful and merciful God and king. Blessed are you, LORD, the God who is faithful in all his words. | barukh atah adonai eloheinu melekh ha'olam tzur kol-ha'olamim tzadik bekhol-hadorot ha'el hane'eman ha'omer ve'oseh hamdaber umekayem shekol-devarav emet vatzedek ne'eman atah hu adonai eloheinu vene'emanim devarekha vedavar echad midevarekha achor lo yashuv reikam ki el melekh ne'eman verachaman atah barukh atah adonai ha'el hane'eman bekhol-devarav |
 | [haftarah-after-l2](m/israeli/line/haftarah-after-l2.mp3) | רַחֵם עַל צִיּוֹן כִּי הִיא בֵּית חַיֵּינוּ וְלַעֲלוּבַת נֶפֶשׁ תּוֹשִׁיעַ בִּמְהֵרָה בְיָמֵינוּ בָּרוּךְ אַתָּה אֲדֹנָי מְשַׂמֵּחַ צִיּוֹן בְּבָנֶיהָ׃ | Have mercy on Zion, for it is the home of our life, and save the one with a grieving soul quickly in our days. Blessed are you, LORD, who gladdens Zion through her children. | rachem al tziyon ki hi beit chayeinu vela'aluvat nefesh toshi'a bimherah veyameinu barukh atah adonai mesameach tziyon bevaneha |
 | [haftarah-after-l3](m/israeli/line/haftarah-after-l3.mp3) | שַׂמְּחֵנוּ אֲדֹנָי אֱלֹהֵינוּ בְּאֵלִיָהוּ הַנָּבִיא עַבְדָּךְ וּבְמַלְכוּת בֵּית דָּוִד מְשִׁיחָךְ בִּמְהֵרָה יָבֹא וְיָגֵל לִבֵּנוּ עַל כִּסְאוֹ לֹא יֵשֵׁב זָר וְלֹא יִנְחֲלוּ עוֹד אֲחֵרִים אֶת כְּבוֹדוֹ כִּי בְשֵׁם קָדְשְׁךָ נִשְׁבַּעְתָּ לּוֹ שֶׁלֹּא יִכְבֶּה נֵרוֹ לְעוֹלָם וָעֶד בָּרוּךְ אַתָּה אֲדֹנָי מָגֵן דָּוִד׃ | Gladden us, LORD our God, with Elijah the prophet your servant and with the kingdom of the house of David your anointed; may he come quickly and make our heart rejoice. On his throne let no stranger sit, and let others not inherit his glory any more, for by your holy name you swore to him that his light would never go out. Blessed are you, LORD, shield of David. | samechenu adonai eloheinu be'eliyahu hanavi avdakh uvemalkhut beit david meshichakh bimherah yavo veyagel libenu al kis'o lo yeshev zar velo yinchalu od acherim et kevodo ki veshem kadshekha nishbata lo shelo yikhbeh nero le'olam va'ed barukh atah adonai magen david |
@@ -3169,6 +3257,18 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [havdalah-hamavdil](m/israeli/line/havdalah-hamavdil.mp3) | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַמַּבְדִּיל בֵּין קֹדֶשׁ לְחוֹל וּבֵין אוֹר לְחֹשֶׁךְ וּבֵין יִשְׂרָאֵל לָעַמִּים וּבֵין יוֹם הַשְּׁבִיעִי לְשֵׁשֶׁת יְמֵי הַמַּעֲשֶׂה בָּרוּךְ אַתָּה אֲדֹנָי הַמַּבְדִּיל בֵּין קֹדֶשׁ לְחוֹל׃ | Blessed are you, LORD our God, king of the world, who separates between holy and ordinary, between light and darkness, between Israel and the nations, between the seventh day and the six days of work. Blessed are you, LORD, who separates between holy and ordinary. | barukh atah adonai eloheinu melekh ha'olam hamavdil bein kodesh lechol uvein or lechoshekh uvein yisra'el la'amim uvein yom hashevi'i lesheshet yemei hama'aseh barukh atah adonai hamavdil bein kodesh lechol |
 | [havdalah-opening](m/israeli/line/havdalah-opening.mp3) | הִנֵּה אֵל יְשׁוּעָתִי אֶבְטַח וְלֹא אֶפְחָד׃ כִּי עָזִּי וְזִמְרָת יָהּ אֲדֹנָי וַיְהִי לִי לִישׁוּעָה׃ וּשְׁאַבְתֶּם מַיִם בְּשָׂשׁוֹן מִמַּעַיְנֵי הַיְשׁוּעָה׃ לַאֲדֹנָי הַיְשׁוּעָה עַל עַמְּךָ בִרְכָתֶךָ סֶּלָה׃ אֲדֹנָי צְבָאוֹת עִמָּנוּ מִשְׂגָּב לָנוּ אֱלֹהֵי יַעֲקֹב סֶלָה׃ אֲדֹנָי צְבָאוֹת אַשְׁרֵי אָדָם בֹּטֵחַ בָּךְ׃ אֲדֹנָי הוֹשִׁיעָה הַמֶּלֶךְ יַעֲנֵנוּ בְּיוֹם קָרְאֵנוּ׃ לַיְּהוּדִים הָיְתָה אוֹרָה וְשִׂמְחָה וְשָׂשׁוֹן וִיקָר כֵּן תִּהְיֶה לָנוּ׃ כּוֹס יְשׁוּעוֹת אֶשָּׂא וּבְשֵׁם אֲדֹנָי אֶקְרָא׃ | Behold, God is my salvation; I will trust and not be afraid, for the LORD God is my strength and my song, and he has become my salvation. You will draw water with joy from the springs of salvation. Salvation belongs to the LORD; your blessing is upon your people, Selah. The LORD of hosts is with us; the God of Jacob is our stronghold, Selah. LORD of hosts, happy is the one who trusts in you. LORD, save; may the King answer us on the day we call. The Jews had light and gladness, joy and honour; so may it be for us. I will lift the cup of salvation and call on the name of the LORD. | hineh el yeshu'ati evtach velo efchad ki azi vezimrat yah adonai vayhi li lishu'ah ushe'avtem mayim besashon mima'aynei hayshu'ah la'adonai hayshu'ah al amekha virkhatekha selah adonai tzeva'ot imanu misgav lanu elohei ya'akov selah adonai tzeva'ot ashrei adam boteach bakh adonai hoshi'ah hamelekh ya'anenu beyom kare'enu layehudim hayetah orah vesimchah vesashon vikar ken tihyeh lanu kos yeshu'ot esa uveshem adonai ekra |
 | [havdalah-spices](m/israeli/line/havdalah-spices.mp3) | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא מִינֵי בְשָׂמִים׃ | Blessed are you, LORD our God, king of the world, who creates kinds of spices. | barukh atah adonai eloheinu melekh ha'olam bore minei vesamim |
+| [help-02-f](m/israeli/line/help-02-f.mp3) | אֲנִי צְרִיכָה רוֹפֵא | I need a doctor | ani tzerikhah rofe |
+| [help-02-m](m/israeli/line/help-02-m.mp3) | אֲנִי צָרִיךְ רוֹפֵא | I need a doctor | ani tzarikh rofe |
+| [help-03-f](m/israeli/line/help-03-f.mp3) | תִּקְרְאִי לַמִּשְׁטָרָה | call the police | tikre'i lamishtarah |
+| [help-03-m](m/israeli/line/help-03-m.mp3) | תִּקְרָא לַמִּשְׁטָרָה | call the police | tikra lamishtarah |
+| [help-04-f](m/israeli/line/help-04-f.mp3) | תִּקְרְאִי לְאַמְבּוּלַנְס | call an ambulance | tikre'i le'ambulans |
+| [help-04-m](m/israeli/line/help-04-m.mp3) | תִּקְרָא לְאַמְבּוּלַנְס | call an ambulance | tikra le'ambulans |
+| [help-05](m/israeli/line/help-05.mp3) | אָבַד לִי הַדַּרְכּוֹן | I lost my passport | avad li hadarkon |
+| [help-06](m/israeli/line/help-06.mp3) | אָבַד לִי הַטֶּלֶפוֹן | I lost my phone | avad li hatelefon |
+| [help-07-f](m/israeli/line/help-07-f.mp3) | אֲנִי לֹא מַרְגִּישָׁה טוֹב | I don't feel well | ani lo margishah tov |
+| [help-07-m](m/israeli/line/help-07-m.mp3) | אֲנִי לֹא מַרְגִּישׁ טוֹב | I don't feel well | ani lo margish tov |
+| [help-08](m/israeli/line/help-08.mp3) | יֵשׁ לִי כְּאֵב רֹאשׁ | I have a headache | yesh li ke'ev rosh |
+| [help-09](m/israeli/line/help-09.mp3) | אֶפְשָׁר לְהִשְׁתַּמֵּשׁ בַּטֶּלֶפוֹן שֶׁלְּךָ? | can I use your phone? | efshar lehishtamesh batelefon shelekha? |
 | [kaddish-1-l1](m/israeli/line/kaddish-1-l1.mp3) | יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא אָמֵן | Magnified and sanctified be his great name. (Amen.) | yitgadal veyitkadash shemeh raba amen |
 | [kaddish-1-l2](m/israeli/line/kaddish-1-l2.mp3) | בְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן׃ | In the world that he created by his will; may he establish his kingdom in your lifetime and in your days and in the lifetime of all the house of Israel, speedily and soon; and say: Amen. | be'alema di-vera khir'uteh veyamlikh malkhuteh bechayeikhon uveyomeikhon uvechayei dekhal-beit yisra'el ba'agala uvizman kariv ve'imru amen |
 | [kaddish-1-l3](m/israeli/line/kaddish-1-l3.mp3) | יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא | May his great name be blessed for ever and for all eternities. | yehe shemeh raba mevarakh le'alam ule'alemei alemaya |
@@ -3254,4 +3354,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 3608 produced clips in INDEX.csv have an English label; 2 UNKNOWN. Filenames and IDs are unchanged.
+All 3708 produced clips in INDEX.csv have an English label; 2 UNKNOWN. Filenames and IDs are unchanged.

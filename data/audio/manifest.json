@@ -28804,11 +28804,12 @@
   "kind": "line",
   "id": "greetings-17",
   "text": "לֹא רַע",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "not bad"
+  "english": "not bad",
+  "phonetic": "lo ra"
  },
  {
   "path": "audio/f/israeli/line/greetings-17.mp3",
@@ -28831,11 +28832,12 @@
   "kind": "line",
   "id": "greetings-18",
   "text": "כָּכָה כָּכָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "so-so"
+  "english": "so-so",
+  "phonetic": "kakhah kakhah"
  },
  {
   "path": "audio/f/israeli/line/greetings-18.mp3",
@@ -28858,11 +28860,12 @@
   "kind": "line",
   "id": "greetings-19",
   "text": "נָעִים מְאֹד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "nice to meet you"
+  "english": "nice to meet you",
+  "phonetic": "na'im me'od"
  },
  {
   "path": "audio/f/israeli/line/greetings-19.mp3",
@@ -28885,11 +28888,12 @@
   "kind": "line",
   "id": "greetings-21",
   "text": "יוֹם נָעִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "have a nice day"
+  "english": "have a nice day",
+  "phonetic": "yom na'im"
  },
  {
   "path": "audio/f/israeli/line/greetings-21.mp3",
@@ -28912,11 +28916,12 @@
   "kind": "line",
   "id": "greetings-22-m",
   "text": "בָּרוּךְ הַבָּא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "welcome (to one person)"
+  "english": "welcome (to one person)",
+  "phonetic": "barukh haba"
  },
  {
   "path": "audio/f/israeli/line/greetings-22-m.mp3",
@@ -28939,11 +28944,12 @@
   "kind": "line",
   "id": "greetings-22-f",
   "text": "בְּרוּכָה הַבָּאָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "welcome (to one person)"
+  "english": "welcome (to one person)",
+  "phonetic": "berukhah haba'ah"
  },
  {
   "path": "audio/f/israeli/line/greetings-22-f.mp3",
@@ -28966,11 +28972,12 @@
   "kind": "line",
   "id": "greetings-23",
   "text": "בְּרוּכִים הַבָּאִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "welcome (to several people)"
+  "english": "welcome (to several people)",
+  "phonetic": "berukhim haba'im"
  },
  {
   "path": "audio/f/israeli/line/greetings-23.mp3",
@@ -28993,11 +29000,12 @@
   "kind": "line",
   "id": "greetings-24",
   "text": "מַזָּל טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "congratulations / good luck"
+  "english": "congratulations / good luck",
+  "phonetic": "mazal tov"
  },
  {
   "path": "audio/f/israeli/line/greetings-24.mp3",
@@ -29020,11 +29028,12 @@
   "kind": "line",
   "id": "greetings-27-m",
   "text": "תִּשְׁמֹר עַל עַצְמְךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "take care of yourself"
+  "english": "take care of yourself",
+  "phonetic": "tishmor al atzmekha"
  },
  {
   "path": "audio/f/israeli/line/greetings-27-m.mp3",
@@ -29047,11 +29056,12 @@
   "kind": "line",
   "id": "greetings-27-f",
   "text": "תִּשְׁמְרִי עַל עַצְמֵךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "take care of yourself"
+  "english": "take care of yourself",
+  "phonetic": "tishmeri al atzmekh"
  },
  {
   "path": "audio/f/israeli/line/greetings-27-f.mp3",
@@ -32535,11 +32545,12 @@
   "kind": "line",
   "id": "help-02-m",
   "text": "אֲנִי צָרִיךְ רוֹפֵא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I need a doctor"
+  "english": "I need a doctor",
+  "phonetic": "ani tzarikh rofe"
  },
  {
   "path": "audio/f/israeli/line/help-02-m.mp3",
@@ -32562,11 +32573,12 @@
   "kind": "line",
   "id": "help-02-f",
   "text": "אֲנִי צְרִיכָה רוֹפֵא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I need a doctor"
+  "english": "I need a doctor",
+  "phonetic": "ani tzerikhah rofe"
  },
  {
   "path": "audio/f/israeli/line/help-02-f.mp3",
@@ -32589,11 +32601,12 @@
   "kind": "line",
   "id": "help-03-m",
   "text": "תִּקְרָא לַמִּשְׁטָרָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "call the police"
+  "english": "call the police",
+  "phonetic": "tikra lamishtarah"
  },
  {
   "path": "audio/f/israeli/line/help-03-m.mp3",
@@ -32616,11 +32629,12 @@
   "kind": "line",
   "id": "help-03-f",
   "text": "תִּקְרְאִי לַמִּשְׁטָרָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "call the police"
+  "english": "call the police",
+  "phonetic": "tikre'i lamishtarah"
  },
  {
   "path": "audio/f/israeli/line/help-03-f.mp3",
@@ -32643,11 +32657,12 @@
   "kind": "line",
   "id": "help-04-m",
   "text": "תִּקְרָא לְאַמְבּוּלַנְס",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "call an ambulance"
+  "english": "call an ambulance",
+  "phonetic": "tikra le'ambulans"
  },
  {
   "path": "audio/f/israeli/line/help-04-m.mp3",
@@ -32670,11 +32685,12 @@
   "kind": "line",
   "id": "help-04-f",
   "text": "תִּקְרְאִי לְאַמְבּוּלַנְס",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "call an ambulance"
+  "english": "call an ambulance",
+  "phonetic": "tikre'i le'ambulans"
  },
  {
   "path": "audio/f/israeli/line/help-04-f.mp3",
@@ -32697,11 +32713,12 @@
   "kind": "line",
   "id": "help-05",
   "text": "אָבַד לִי הַדַּרְכּוֹן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I lost my passport"
+  "english": "I lost my passport",
+  "phonetic": "avad li hadarkon"
  },
  {
   "path": "audio/f/israeli/line/help-05.mp3",
@@ -32724,11 +32741,12 @@
   "kind": "line",
   "id": "help-06",
   "text": "אָבַד לִי הַטֶּלֶפוֹן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I lost my phone"
+  "english": "I lost my phone",
+  "phonetic": "avad li hatelefon"
  },
  {
   "path": "audio/f/israeli/line/help-06.mp3",
@@ -32751,11 +32769,12 @@
   "kind": "line",
   "id": "help-07-m",
   "text": "אֲנִי לֹא מַרְגִּישׁ טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I don't feel well"
+  "english": "I don't feel well",
+  "phonetic": "ani lo margish tov"
  },
  {
   "path": "audio/f/israeli/line/help-07-m.mp3",
@@ -32778,11 +32797,12 @@
   "kind": "line",
   "id": "help-07-f",
   "text": "אֲנִי לֹא מַרְגִּישָׁה טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I don't feel well"
+  "english": "I don't feel well",
+  "phonetic": "ani lo margishah tov"
  },
  {
   "path": "audio/f/israeli/line/help-07-f.mp3",
@@ -32805,11 +32825,12 @@
   "kind": "line",
   "id": "help-08",
   "text": "יֵשׁ לִי כְּאֵב רֹאשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "I have a headache"
+  "english": "I have a headache",
+  "phonetic": "yesh li ke'ev rosh"
  },
  {
   "path": "audio/f/israeli/line/help-08.mp3",
@@ -32832,11 +32853,12 @@
   "kind": "line",
   "id": "help-09",
   "text": "אֶפְשָׁר לְהִשְׁתַּמֵּשׁ בַּטֶּלֶפוֹן שֶׁלְּךָ?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "can I use your phone?"
+  "english": "can I use your phone?",
+  "phonetic": "efshar lehishtamesh batelefon shelekha?"
  },
  {
   "path": "audio/f/israeli/line/help-09.mp3",

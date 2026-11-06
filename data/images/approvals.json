@@ -4838,6 +4838,29 @@
    "forcedDespite": [
     "contains_text"
    ]
+  },
+  "VOC_shabbat_10": {
+   "status": "approved",
+   "at": "2026-11-06T12:57:18.027Z",
+   "note": "Eye-checked against its prompt: scene match"
+  },
+  "PLACE_jerusalem_01": {
+   "status": "approved",
+   "at": "2026-11-06T12:57:18.027Z",
+   "note": "Eye-checked against its prompt: scene match"
+  },
+  "PLACE_tzfat_01": {
+   "status": "approved",
+   "at": "2026-11-06T12:57:18.027Z",
+   "note": "Eye-checked against its prompt: scene match"
+  },
+  "PLACE_everyday_01": {
+   "status": "approved",
+   "at": "2026-11-06T12:57:18.626Z",
+   "note": "Eye-checked at full size: no text anywhere; detector flagged vineyard rows/window grids",
+   "forcedDespite": [
+    "contains_text"
+   ]
   }
  }
 }

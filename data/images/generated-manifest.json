@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 914,
+ "count": 918,
  "images": {
   "BG_cafe": {
    "w": 1659,
@@ -9436,6 +9436,42 @@
     }
    ]
   },
+  "PLACE_everyday_01": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_everyday_01.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_jerusalem_01": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_jerusalem_01.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_tzfat_01": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_tzfat_01.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "STORY_abraham_01": {
    "w": 1659,
    "h": 948,
@@ -16237,6 +16273,18 @@
      "file": "VOC_numbers_10.1254.webp",
      "w": 1254,
      "h": 1254
+    }
+   ]
+  },
+  "VOC_shabbat_10": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "VOC_shabbat_10.512.webp",
+     "w": 512,
+     "h": 512
     }
    ]
   },

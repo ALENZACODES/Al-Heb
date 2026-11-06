@@ -54388,6 +54388,214 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "PLACE_everyday_01": {
+   "id": "PLACE_everyday_01",
+   "file": "PLACE_everyday_01.png",
+   "command": 208,
+   "set": "Coast, valleys & everyday Israel",
+   "block": "N",
+   "prompt": "Command 208 (Coast, valleys & everyday Israel): A shady moshav lane with citrus groves; a water tower in a farming town square; a railway crossing in the Jezreel valley with green fields; the Carmel forest after rain, green and misted; a beach town promenade in winter with one kite; an Arab village on a Galilee hill with a minaret silhouette and church tower in one frame (both distant, respectful); a Haredi neighbourhood street at Friday afternoon rush (people small, modest dress, no signs); a university campus lawn with students on the grass (books blank); a hospital entrance with a garden (no signs); a small town's main street at the blue hour. Image 1 of 10: A shady moshav lane with citrus groves. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "c37f0105388cde0f16a1f9e033d80eb0ffd532e41433c59755006ee856653575",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:56:58.617Z",
+   "sourceFile": "PLACE_everyday_01.png",
+   "sourceFileDate": "2026-11-06T12:56:58.121Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "23ad79c6785e3d93a54faa1777c9c65ac8d54d5e73fd80760492ae31091b43ad",
+   "originalFormat": "PNG",
+   "originalBytes": 199571,
+   "originalFile": "PLACE_everyday_01.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_everyday_01.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 32744
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "del",
+      "conf": 61.3,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "PLACE_jerusalem_01": {
+   "id": "PLACE_jerusalem_01",
+   "file": "PLACE_jerusalem_01.png",
+   "command": 200,
+   "set": "Jerusalem beyond the courtyard",
+   "block": "N",
+   "prompt": "Command 200 (Jerusalem beyond the courtyard): A narrow stepped alley of golden stone; rooftops and domes seen from a terrace (distant, generic); an ancient city gate with people passing small beneath; a market lane of spice pyramids in baskets (no signs); the walls at sunset from across a valley; a courtyard with an old olive tree and laundry lines; stone steps worn smooth leading up between houses; a small synagogue courtyard with a lemon tree; a watchtower view over hills at dawn; night — warm windows scattered over the dark hillside city. Image 1 of 10: A narrow stepped alley of golden stone. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "d002292e7e75923b5b42e5d46e5c9853d8a001d1feb6118cdba7c7a507deeb12",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:56:58.617Z",
+   "sourceFile": "PLACE_jerusalem_01.png",
+   "sourceFileDate": "2026-11-06T12:56:58.118Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "73445f80324a404a7383df745ad70c1919cbf8f71d6489c2e0cdcdd1e258edf0",
+   "originalFormat": "PNG",
+   "originalBytes": 247565,
+   "originalFile": "PLACE_jerusalem_01.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_jerusalem_01.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 51996
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_tzfat_01": {
+   "id": "PLACE_tzfat_01",
+   "file": "PLACE_tzfat_01.png",
+   "command": 204,
+   "set": "Tzfat & the north",
+   "block": "N",
+   "prompt": "Command 204 (Tzfat & the north): A blue-painted alley with artists' easels left blank; stone synagogues lane at morning light; a mountain town above clouds (the town in mist); candle-lit windows on a steep lane at dusk; the highest hilltop with a citadel ruin; a gallery doorway with pottery outside (blank canvases); Mount Meron green in the distance; a forest of pines on a ridge; a Druze village on a green hill with a market square (no signs); snow dusting the far northern peak (Hermon) over green valleys. Image 1 of 10: A blue-painted alley with artists' easels left blank. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "1b439a01920141b9233d4d3cd6ef4ebbcd953f052c46b7e09cbf46765b460ca0",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:56:58.617Z",
+   "sourceFile": "PLACE_tzfat_01.png",
+   "sourceFileDate": "2026-11-06T12:56:58.120Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "6326064f56abdb2bc6783aff05816e87539fb3236a7ae60be27b6106733a6c3b",
+   "originalFormat": "PNG",
+   "originalBytes": 232648,
+   "originalFile": "PLACE_tzfat_01.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_tzfat_01.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 43116
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "VOC_shabbat_10": {
+   "id": "VOC_shabbat_10",
+   "file": "VOC_shabbat_10.png",
+   "command": 90,
+   "set": "vocab_shabbat",
+   "block": "E",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One centred image: a family around the table (small, from above). No people unless the item is an action. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "8f9bfddab1741ecf0442d30eda020d674b88335b7dd63cb5072a4ba2558679ed",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T12:56:58.617Z",
+   "sourceFile": "VOC_shabbat_10.png",
+   "sourceFileDate": "2026-11-06T12:56:58.116Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "09ebd2e76537ddf60f299f7163edccc24573881ca8a24c2eb3a8be29f7a52df7",
+   "originalFormat": "PNG",
+   "originalBytes": 347118,
+   "originalFile": "VOC_shabbat_10.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "VOC_shabbat_10.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 53246
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

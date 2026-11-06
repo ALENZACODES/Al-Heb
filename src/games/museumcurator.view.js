@@ -34,8 +34,8 @@ export function mount(root,ctx){
     }},shelf));
     board.replaceChildren(artifact,h('div',{class:'game-choices'},...shelves));
   }
-  Promise.all([loadJson('data/curriculum/lessons-intermediate/I-27.json'),loadGameImages(ctx)]).then(([data,R])=>{
-    if(!alive||!article.isConnected)return;deck=shuffled(buildMuseumDeck(data));R=R;
+  Promise.all([loadJson('data/curriculum/lessons-intermediate/I-27.json'),loadGameImages(ctx)]).then(([data,images])=>{
+    if(!alive||!article.isConnected)return;deck=shuffled(buildMuseumDeck(data));R=images;
     if(deck.length<4){status.textContent='No adequate inflected possessive form set.';return;}paint();
   }).catch(()=>{if(alive)status.textContent='Museum morphology unavailable.';});
   return ()=>{alive=false;};

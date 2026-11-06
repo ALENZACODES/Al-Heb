@@ -67,7 +67,25 @@ test('assessment adapter rejects completion flags, self-marks, legacy progress, 
   assert.equal(itemSatisfied([acceptAssessmentEvent(event()).evidence], 'letter:shin'), true);
   const dup = withEvidence(withEvidence(emptyRecord(), event()).record, event());
   assert.equal(dup.duplicate, true);
+  assert.equal(dup.accepted, true);
+  assert.equal(dup.evidence.correct, true);
   assert.equal(dup.record.evidence.length, 1);
+  const again = withEvidence(dup.record, event());
+  assert.equal(again.accepted, true);
+  assert.equal(again.duplicate, true);
+  assert.equal(again.record.evidence.length, 1);
+  const conflict = withEvidence(dup.record, event({ correct: false, at: T + 5 }));
+  assert.equal(conflict.accepted, false);
+  assert.equal(conflict.duplicate, false);
+  assert.equal(conflict.reason, 'evidence-conflict');
+  assert.equal(conflict.record.evidence.length, 1);
+  assert.equal(conflict.record.evidence[0].correct, true);
+  assert.equal(conflict.evidence.correct, true);
+  assert.equal(itemSatisfied(conflict.record.evidence, 'letter:shin'), true);
+  const otherItem = withEvidence(dup.record, event({ itemId: 'letter:bet', evidenceId: event().evidenceId }));
+  assert.equal(otherItem.accepted, false);
+  assert.equal(otherItem.reason, 'evidence-conflict');
+  assert.equal(otherItem.record.evidence[0].itemId, 'letter:shin');
   const rejected = withEvidence(emptyRecord(), { completed: true });
   assert.equal(rejected.accepted, false);
   assert.equal(rejected.record.evidence.length, 0);
@@ -77,6 +95,9 @@ test('certificate rule can pass only with reviewed criteria and objective hits, 
   const items = rubric.items.slice(0, 2);
   const evidence = items.map((it, i) => acceptAssessmentEvent(event({ itemId: it.id, evidenceId: 'obj-item-' + i + 'xx' })).evidence);
   assert.equal(evaluateProposedCertificate({ criteriaReviewed: true, items, evidence }).issuable, true);
+  assert.equal(evaluateProposedCertificate({ criteriaReviewed: true, confirmed: false, items, evidence }).issuable, false);
+  assert.equal(evaluateProposedCertificate({ criteriaReviewed: true, confirmed: false, items, evidence }).reason, 'criteria-not-confirmed');
+  assert.equal(evaluateProposedCertificate({ criteriaReviewed: true, confirmed: false, items, evidence }).confirmed, false);
   assert.equal(evaluateProposedCertificate({ criteriaReviewed: true, items, evidence: evidence.map((e) => ({ ...e, correct: false })) }).issuable, false);
   assert.equal(evaluateProposedCertificate({ criteriaReviewed: false, items, evidence }).reason, 'criteria-awaiting-review');
   assert.equal(evaluateProposedCertificate({ criteriaReviewed: true, items: [], evidence }).reason, 'no-criteria');
@@ -87,7 +108,33 @@ test('certificate rule can pass only with reviewed criteria and objective hits, 
   assert.equal(decision.issuable, false);
   assert.equal(decision.reason, 'criteria-awaiting-review');
   assert.equal(decision.criteriaReviewed, false);
+  assert.equal(decision.confirmed, false);
   assert.equal(decision.satisfied, rubric.items.length);
+  const reviewedButUnconfirmed = evaluateProposedCertificate({ criteriaReviewed: true, confirmed: false, items: rubric.items, evidence: full });
+  assert.equal(reviewedButUnconfirmed.issuable, false);
+  assert.equal(reviewedButUnconfirmed.reason, 'criteria-not-confirmed');
+  assert.equal(reviewedButUnconfirmed.satisfied, rubric.items.length);
+});
+
+test('draft r01-r09 proposal records known bars and does not approve them', () => {
+  assert.equal(rubric.confirmed, false);
+  assert.equal(rubric.criteriaReviewed, false);
+  assert.equal(rubric.items.length, 40);
+  assert.ok(rubric.items.every((it) => it.questionId === undefined && it.status === 'proposed'));
+  const r04 = lessons.lessons.find((l) => l.id === 'r04');
+  const early = lessons.lessons.filter((l) => ['r01', 'r02', 'r03'].includes(l.id));
+  const letters = new Set(early.flatMap((l) => l.letters || []));
+  const vowels = new Set(early.flatMap((l) => l.vowels || []));
+  assert.match(r04.goals.join(' '), /6 letters, 3 vowels/);
+  assert.equal(letters.size, 6);
+  assert.equal(vowels.size, 5);
+  const shabbat = rubric.items.find((it) => it.he === 'שַׁבָּת');
+  assert.equal(shabbat.id, 'word:r02:1');
+  assert.deepEqual(shabbat.lessonIds, ['r02', 'r04']);
+  assert.equal(rubric.items.some((it) => it.id === 'word:r04:1'), false);
+  assert.equal(rubric.items.find((it) => it.he === 'שַׁבָּת שָׁלוֹם').id, 'word:r04:3');
+  assert.equal(rubric.items.filter((it) => it.kind === 'line' && it.lessonIds[0] === 'r05').length, 3);
+  assert.ok(rubric.items.find((it) => it.id === 'vowel:shin-dot'));
 });
 
 test('lesson completion, self-report, and forged certificates do not become awards', () => {

@@ -76,33 +76,39 @@ export function planPractice(record, games, now) {
 }
 
 /**
- * Pure certificate rule. criteriaReviewed must be exactly true, and every item needs an
- * objective correct event. An empty item list does not pass. This function does not write.
+ * Pure certificate rule. `criteriaReviewed` must be exactly true, and every item needs an
+ * objective correct event. An empty item list does not pass. `confirmed: false` never issues,
+ * even when the reviewed flag is true. Omitting `confirmed` leaves the older pure check in place
+ * for a hypothetical call. This function does not write, and the page does not use it to issue.
  */
-export function evaluateProposedCertificate({ criteriaReviewed, items, evidence }) {
+export function evaluateProposedCertificate({ criteriaReviewed, confirmed, items, evidence }) {
   const required = Array.isArray(items) ? items : [];
   const ev = Array.isArray(evidence) ? evidence : [];
   const satisfied = required.filter((it) => it && itemSatisfied(ev, it.id));
   const missing = required.filter((it) => it && !itemSatisfied(ev, it.id));
   const base = { satisfied: satisfied.length, required: required.length, missingIds: missing.map((it) => it.id) };
-  if (!required.length) return { issuable: false, reason: 'no-criteria', ...base };
-  if (criteriaReviewed !== true) return { issuable: false, reason: 'criteria-awaiting-review', ...base };
-  if (missing.length) return { issuable: false, reason: 'evidence-missing', ...base };
-  return { issuable: true, reason: 'objective-evidence', ...base };
+  if (!required.length) return { issuable: false, confirmed: false, reason: 'no-criteria', ...base };
+  if (criteriaReviewed !== true) return { issuable: false, confirmed: false, reason: 'criteria-awaiting-review', ...base };
+  if (missing.length) return { issuable: false, confirmed: confirmed === true, reason: 'evidence-missing', ...base };
+  if (confirmed === false) return { issuable: false, confirmed: false, reason: 'criteria-not-confirmed', ...base };
+  return { issuable: true, confirmed: confirmed === true, reason: 'objective-evidence', ...base };
 }
 
 /**
  * Certificate decision for the page. The review flag is the shipped constant, not an argument
- * and not a field in the learner record. Passing a rubric copy with criteriaReviewed true
- * does not issue a certificate.
+ * and not a field in the learner record. `confirmed` stays false: criteria are not approved.
+ * A false confirmed value cannot be issuable, including if a caller treats the review constant as true.
  */
 export function certificateDecision(record, rubric) {
   const items = Array.isArray(rubric?.items) ? rubric.items : [];
   const evidence = cleanRecord(record).record.evidence;
   const shipped = CRITERIA_REVIEWED === true && REVIEW_STATUS === 'reviewed';
-  const decision = evaluateProposedCertificate({ criteriaReviewed: shipped, items, evidence });
+  const decision = evaluateProposedCertificate({ criteriaReviewed: shipped, confirmed: false, items, evidence });
+  const issuable = decision.issuable === true && decision.confirmed === true;
   return {
     ...decision,
+    issuable,
+    reason: issuable ? decision.reason : (decision.reason === 'objective-evidence' ? 'criteria-not-confirmed' : decision.reason),
     reviewStatus: REVIEW_STATUS,
     criteriaReviewed: CRITERIA_REVIEWED,
     confirmed: false,

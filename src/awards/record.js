@@ -65,7 +65,12 @@ export function cleanRecord(raw) {
   for (const ev of evidence) {
     const decision = acceptAssessmentEvent(ev);
     if (!decision.accepted) { notes.push('dropped-evidence:' + decision.reason); continue; }
-    if (seen.has(decision.evidence.evidenceId)) { notes.push('duplicate-evidence'); continue; }
+    if (seen.has(decision.evidence.evidenceId)) {
+      const prior = record.evidence.find((e) => e.evidenceId === decision.evidence.evidenceId);
+      notes.push(sameEvidence(prior, decision.evidence) ? 'duplicate-evidence' : 'evidence-conflict');
+      if (prior && !sameEvidence(prior, decision.evidence)) notes.push('duplicate-evidence');
+      continue;
+    }
     seen.add(decision.evidence.evidenceId);
     record.evidence.push(decision.evidence);
   }
@@ -108,13 +113,17 @@ export function writeAwards(store, record) {
   }
 }
 
-/** Store one accepted event. Same evidenceId is a no-op. Rejected events do not change the record. */
+/** Store one accepted event. An identical evidenceId is a no-op. A different payload with that id is refused. */
 export function withEvidence(record, event) {
   const base = cleanRecord(record).record;
   const decision = acceptAssessmentEvent(event);
   if (!decision.accepted) return { record: base, accepted: false, reason: decision.reason, duplicate: false };
-  if (base.evidence.some((e) => e.evidenceId === decision.evidence.evidenceId)) {
-    return { record: base, accepted: true, duplicate: true, evidence: decision.evidence };
+  const stored = base.evidence.find((e) => e.evidenceId === decision.evidence.evidenceId);
+  if (stored) {
+    if (sameEvidence(stored, decision.evidence)) {
+      return { record: base, accepted: true, duplicate: true, evidence: stored };
+    }
+    return { record: base, accepted: false, duplicate: false, reason: 'evidence-conflict', evidence: stored };
   }
   return {
     record: { ...base, evidence: [...base.evidence, decision.evidence] },
@@ -122,6 +131,12 @@ export function withEvidence(record, event) {
     duplicate: false,
     evidence: decision.evidence,
   };
+}
+
+function sameEvidence(a, b) {
+  if (!a || !b) return false;
+  return a.kind === b.kind && a.rubricId === b.rubricId && a.itemId === b.itemId && a.correct === b.correct
+    && a.trust === b.trust && a.source === b.source && a.evidenceId === b.evidenceId && a.at === b.at;
 }
 
 export function withDisplayName(record, name, now) {

@@ -1,4 +1,6 @@
-// Read-only adapter for a future assessment owner.
+// The caller chooses `source` and `trust`. This function only compares those strings to two literals.
+// It does not identify the caller. A match is not proof that an assessment engine produced the event.
+// Accepted events are data on this device. This module does not send them anywhere.
 //
 // Call acceptAssessmentEvent with one checked item result. withEvidence (in record.js)
 // is the only way that result is stored, and only after this function accepts it.

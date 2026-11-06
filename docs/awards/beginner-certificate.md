@@ -44,7 +44,23 @@ Rejected: `completed`, `lessonComplete`, `selfMarked`, `win`, `xp`, `passed`, an
 
 There is no function that turns a completion flag into an award. The page does not offer a control that submits a fake pass.
 
-`evaluateProposedCertificate` is the pure rule (reviewed flag and every item correct). The page calls `certificateDecision`, which forces the shipped flag.
+`evaluateProposedCertificate` is a pure check. The page calls `certificateDecision`, which passes `confirmed: false` and does not issue. `confirmed: false` is not issuable even when `criteriaReviewed` is passed as true. That flag is not approval. `CRITERIA_REVIEWED` stays false.
+
+`source` and `trust` on an event are strings the caller wrote. Comparing them to `assessment-engine` and `objective` does not identify the caller and is not authentication. Stored evidence is local-only in `awards.v1`. It has no learner id, no key, and no network send. Copying the record to another browser is still just local data. This document does not claim the record can detect tampering.
+
+## Proposal for MAIN criteria review
+
+Not adopted. Do not treat this section as a reviewed standard, and do not flip `CRITERIA_REVIEWED`.
+
+Independent QA of the draft white belt (`lessons.json` status `draft-needs-native-review`) found three different bars and two addressing gaps. A later review has to pick one list before any engine scores against it.
+
+1. Belt sentence in `data/curriculum/belts.json`: reads Shabbat Shalom; Shin, Bet, Tav, Lamed, final-Mem, Vav; kamatz, patach, cholam, dagesh.
+2. Lesson r04 goal text says "6 letters, 3 vowels". Lessons r01–r03 list 6 letters and 5 vowel-array entries, because r01 also lists `shin-dot` on the vowels array.
+3. The derived proposal is 40 items: 11 letters, 7 vowel-array entries, 19 words, and 3 Priestly Blessing line ids. It follows the lesson graph, not the shorter belt sentence.
+
+Item reuse: `שַׁבָּת` is only `word:r02:1` (r04 references that id). `שָׁלוֹם` is only `word:r03:1` (r04 and r05 reference it). The greeting phrase is `word:r04:3`. An event for `word:r04:1` is a different id and is not a proposal item. A correction worth reviewing, not applied here: bind a word item to the reviewed Hebrew string and gloss, not only to `word:<lesson>:<index>`.
+
+Question ids: no proposed item has `questionId`. The r05 line text says a tap that you heard the line does not count, but an event has no question id, so the parser cannot tell that sentence from any other `correct: true`. A correction worth reviewing, not applied here: a future evidence schema should name the checked prompt. This lane does not add that field and does not issue from line items.
 
 ## Activity and mastery
 

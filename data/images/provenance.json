@@ -56312,6 +56312,356 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "PLACE_negev_10": {
+   "id": "PLACE_negev_10",
+   "file": "PLACE_negev_10.png",
+   "command": 206,
+   "set": "The Negev",
+   "block": "N",
+   "prompt": "Command 206 (The Negev): A vast erosion crater (makhtesh) in bands of colour; a desert town on the crater's rim at sunrise; Bedouin tents and a camel resting in shade; a solar tower glowing in a field of mirrors (distant); acacia trees in a dry wadi; a canyon of red rock with a thin stream; desert agriculture — greenhouse rows in the sand; a night sky of impossible stars over dunes; a Nabataean-style ruined city of carved stone doorways (generic, empty); a lone tree on a hill at Sde Boker-style overlook above a canyon. Image 10 of 10: a lone tree on a hill at Sde Boker-style overlook above a canyon. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "d67061a81b3ece32a2133c173657811115a110a75fc2850868c81a43282ec041",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:25:34.519Z",
+   "sourceFile": "img-0059.png",
+   "sourceFileDate": "2026-11-06T21:25:34.156Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "910a3b204e53c0bf80c5995cce42022b2651dbe14f457d9bb2e929497e65a3f2",
+   "originalFormat": "PNG",
+   "originalBytes": 203099,
+   "originalFile": "PLACE_negev_10.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_negev_10.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 34460
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_everyday_07": {
+   "id": "PLACE_everyday_07",
+   "file": "PLACE_everyday_07.png",
+   "command": 208,
+   "set": "Coast, valleys & everyday Israel",
+   "block": "N",
+   "prompt": "Command 208 (Coast, valleys & everyday Israel): A shady moshav lane with citrus groves; a water tower in a farming town square; a railway crossing in the Jezreel valley with green fields; the Carmel forest after rain, green and misted; a beach town promenade in winter with one kite; an Arab village on a Galilee hill with a minaret silhouette and church tower in one frame (both distant, respectful); a Haredi neighbourhood street at Friday afternoon rush (people small, modest dress, no signs); a university campus lawn with students on the grass (books blank); a hospital entrance with a garden (no signs); a small town's main street at the blue hour. Image 7 of 10: a Haredi neighbourhood street at Friday afternoon rush (people small, modest dress, no signs). Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "571854a61a70fc04d995ca82c8d19c7e3ef5750fa7ea47dbc253adf928e0995e",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:25:34.519Z",
+   "sourceFile": "img-0460.png",
+   "sourceFileDate": "2026-11-06T21:25:34.191Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "c92a159c83ce37379fc9dc5ce6b5c7b4df2e4b7ee85a296df839e0b368aa0b4e",
+   "originalFormat": "PNG",
+   "originalBytes": 250044,
+   "originalFile": "PLACE_everyday_07.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "PLACE_everyday_07.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 48146
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_modals_09": {
+   "id": "GRAM_modals_09",
+   "file": "GRAM_modals_09.png",
+   "command": 217,
+   "set": "Want, need, can",
+   "block": "O",
+   "prompt": "Command 217 (Want, need, can): Want — Noa reaching toward a cake in a window with hearts in her eyes (one small heart shape); need — Ari in rain reaching for an umbrella; can — Rimon lifting a tiny barbell successfully, smiling; cannot — Rimon under the same barbell, flat comic squish (gentle); must — a hand raised at a red traffic light shape (a plain red circle light, no text); may I — a child with a hand half-raised at a table; let's — both narrators pointing the same way at a path; try — Rimon looking at a high step with a determined face; again — a circular pair of gold arrows around a cup (symbol only); first/then — two footprints panels: shoes by a door, then the same shoes on a path. Image 9 of 10: again — a circular pair of gold arrows around a cup (symbol only). Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "c83ae99f3f4c433c1717b9989e4155ad9ee58a72b6e1a291986cae1039a93a44",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:25:34.519Z",
+   "sourceFile": "img-0648.png",
+   "sourceFileDate": "2026-11-06T21:25:34.142Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "c139407c6dba6cfce54bace9e5f0358cb21890dc05775d28e06b27c92d7b4514",
+   "originalFormat": "PNG",
+   "originalBytes": 227661,
+   "originalFile": "GRAM_modals_09.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_modals_09.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 16946
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_ask_05": {
+   "id": "GRAM_ask_05",
+   "file": "GRAM_ask_05.png",
+   "command": 214,
+   "set": "Questions",
+   "block": "O",
+   "prompt": "Command 214 (Questions): A giant gold question-mark SHAPE made of ribbon floating over a market stall (shape only, no letters — a sculptural question mark is a symbol, allowed as an object); who — Rimon peeking from behind three doors; where — one scene: Ari looking for something, with a table, an open box and a shelf all in frame; when — Noa pointing at a blank clock and a blank calendar; what — hands open over three covered dishes; why — a child pointing at rain; how many — hands counting pomegranate seeds; how — a puzzled look at a folded paper crane; which — two doors, one gold one blue, hand hovering; whose — a lost glove held up to a crowd. Image 5 of 10: what — hands open over three covered dishes. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "6af5a4c152b3b49cf8ed7a76d3f6460c48c36e428aea6600465d1ade7498c142",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:25:34.519Z",
+   "sourceFile": "img-0655.png",
+   "sourceFileDate": "2026-11-06T21:25:34.099Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "6cb3236d33ca33fca2d72be4d9d87c6fd849b2db541e5de570c24f766831a63a",
+   "originalFormat": "PNG",
+   "originalBytes": 242243,
+   "originalFile": "GRAM_ask_05.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_ask_05.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 22116
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_move_02": {
+   "id": "GRAM_move_02",
+   "file": "GRAM_move_02.png",
+   "command": 211,
+   "set": "Prepositions — movement",
+   "block": "O",
+   "prompt": "Command 211 (Prepositions — movement): Rimon jumping into a box; Rimon climbing out of the box; a ball rolling across a table; a bird flying over a wall; a fish swimming through a hoop of seaweed; Ari walking toward Noa with a gift; Noa walking away from a door waving; a cat slipping between two chair legs; water pouring from a jug into a glass; a letter (blank envelope) going into a post box. Image 2 of 10: Rimon climbing out of the box. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "cff51f49ee3a2fa65c49e2cccfd4f998203d4e7e37923d2a1810fb057b9ff5e2",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:25:34.519Z",
+   "sourceFile": "img-0749.png",
+   "sourceFileDate": "2026-11-06T21:25:34.137Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "aa3365dda4791036474883308c86201d7e730a779f5f3aad0e1af590f5011d0b",
+   "originalFormat": "PNG",
+   "originalBytes": 210625,
+   "originalFile": "GRAM_move_02.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_move_02.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 12710
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HERO_week_07": {
+   "id": "HERO_week_07",
+   "file": "HERO_week_07.png",
+   "command": 199,
+   "set": "Motzei Shabbat & the week opening",
+   "block": "M",
+   "prompt": "Command 199 (Motzei Shabbat & the week opening): Three stars in a deep blue sky over rooftops; a braided candle lit on a table (objects); spices in a small tower box held to the light; a cup overflowing into a saucer by candlelight; hands held to the flame's light (the custom, from behind); a doorway with the week's first lamplight; a market stall opening its shutters on Sunday morning; a bus leaving a station into sunrise; work tools laid ready on a bench; Rimon waving at a calendar page left blank on a kitchen wall. Image 7 of 10: a market stall opening its shutters on Sunday morning. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "a9a307abd8fd679ec219116b60aad2b5ef93d31fd1de3f44fe26b375caaf2b8b",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:25:34.519Z",
+   "sourceFile": "img-1037.png",
+   "sourceFileDate": "2026-11-06T21:25:34.096Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "5e94974ca2626f0c244d1352480957d1ef2f901b3ed029a2d2d3d98c6c651fe0",
+   "originalFormat": "PNG",
+   "originalBytes": 223274,
+   "originalFile": "HERO_week_07.png",
+   "width": 512,
+   "height": 293,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "HERO_week_07.512.webp",
+     "width": 512,
+     "height": 293,
+     "bytes": 44180
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "GRAM_modals_02": {
+   "id": "GRAM_modals_02",
+   "file": "GRAM_modals_02.png",
+   "command": 217,
+   "set": "Want, need, can",
+   "block": "O",
+   "prompt": "Command 217 (Want, need, can): Want — Noa reaching toward a cake in a window with hearts in her eyes (one small heart shape); need — Ari in rain reaching for an umbrella; can — Rimon lifting a tiny barbell successfully, smiling; cannot — Rimon under the same barbell, flat comic squish (gentle); must — a hand raised at a red traffic light shape (a plain red circle light, no text); may I — a child with a hand half-raised at a table; let's — both narrators pointing the same way at a path; try — Rimon looking at a high step with a determined face; again — a circular pair of gold arrows around a cup (symbol only); first/then — two footprints panels: shoes by a door, then the same shoes on a path. Image 2 of 10: need — Ari in rain reaching for an umbrella. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "2132070a1130df5833b1d5197b9deb9b3e24a89dd9f6b89146d9d7a1f1154a5e",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-06T21:25:34.519Z",
+   "sourceFile": "img-1448.png",
+   "sourceFileDate": "2026-11-06T21:25:34.168Z",
+   "matchedBy": "assignment-csv",
+   "originalSha256": "506218c2bfd30e905f10126c21e1bababdb82b14560bf5cb3a4c75f908498c10",
+   "originalFormat": "PNG",
+   "originalBytes": 264448,
+   "originalFile": "GRAM_modals_02.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "GRAM_modals_02.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 29716
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

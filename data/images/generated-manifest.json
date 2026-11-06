@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 952,
+ "count": 959,
  "images": {
   "BADGE_03": {
    "w": 512,
@@ -1888,6 +1888,18 @@
     }
    ]
   },
+  "GRAM_ask_05": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_ask_05.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
   "GRAM_ask_09": {
    "w": 512,
    "h": 512,
@@ -1907,6 +1919,42 @@
     {
      "edge": 512,
      "file": "GRAM_link_01.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_modals_02": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_modals_02.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_modals_09": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_modals_09.512.webp",
+     "w": 512,
+     "h": 512
+    }
+   ]
+  },
+  "GRAM_move_02": {
+   "w": 512,
+   "h": 512,
+   "files": [
+    {
+     "edge": 512,
+     "file": "GRAM_move_02.512.webp",
      "w": 512,
      "h": 512
     }
@@ -2897,6 +2945,18 @@
     {
      "edge": 512,
      "file": "HERO_sights_06.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "HERO_week_07": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "HERO_week_07.512.webp",
      "w": 512,
      "h": 293
     }
@@ -9772,6 +9832,18 @@
     }
    ]
   },
+  "PLACE_everyday_07": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_everyday_07.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
   "PLACE_everyday_08": {
    "w": 512,
    "h": 293,
@@ -9827,6 +9899,18 @@
     {
      "edge": 512,
      "file": "PLACE_negev_06.512.webp",
+     "w": 512,
+     "h": 293
+    }
+   ]
+  },
+  "PLACE_negev_10": {
+   "w": 512,
+   "h": 293,
+   "files": [
+    {
+     "edge": 512,
+     "file": "PLACE_negev_10.512.webp",
      "w": 512,
      "h": 293
     }

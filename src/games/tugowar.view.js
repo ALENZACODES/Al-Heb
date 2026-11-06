@@ -3,41 +3,43 @@
 // for the other side. First side to drag the marker past its line wins;
 // otherwise the closer side wins after 10 rounds.
 //
-// Images: the header band shows OPP_two_04 (sapling vs old olive tree —
-// young/old, the game's own first pair). Per-card pictures resolve through
-// the games engine when the QB lane fills PAIRS[].img with real index ids
-// (kind 'id'); a card with no picture falls back to the large Hebrew word,
-// so the game is fully playable today and gets richer as images land.
-// Data: PAIRS is the starter set; the production wiring swaps it for the
-// opposites rows of data/vocab + theme packs (see the registry brief).
+// Images are indexed Opposites pictures: packs I and II, plus the five gap fills.
+// Old/new stays on OPP_two_05. Every pair has an img id.
 
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, loadGameImages, imgOf, pull, pick, resultsCard } from './engine.js';
+import { sfx } from '../audio/sfx.js';
+
+/** Best score, play count, last star rating. Device-local, listed on the privacy page. */
+export const STORE_KEY = 'games.tugowar.v1';
 
 // [hebrew, transliteration, gloss, oppositeHebrew, oppositeTranslit, oppositeGloss]
 export const PAIRS = Object.freeze([
-  ['גָּדוֹל', 'gadol', 'big', 'קָטָן', 'katan', 'small'],
-  ['חַם', 'cham', 'hot', 'קַר', 'kar', 'cold'],
-  ['לָבָן', 'lavan', 'white', 'שָׁחֹר', 'shachor', 'black'],
-  ['גָּבוֹהַּ', 'gavoha', 'tall / high', 'נָמוּךְ', 'namukh', 'low'],
-  ['מָהִיר', 'mahir', 'fast', 'אִטִּי', 'iti', 'slow'],
-  ['יָקָר', 'yakar', 'expensive', 'זוֹל', 'zol', 'cheap'],
-  ['חָזָק', 'chazak', 'strong', 'חַלָּשׁ', 'chalash', 'weak'],
-  ['שָׂמֵחַ', 'sameach', 'happy', 'עָצוּב', 'atzuv', 'sad'],
-  ['יָשָׁן', 'yashan', 'old (thing)', 'חָדָשׁ', 'chadash', 'new'],
-  ['קָרוֹב', 'karov', 'near', 'רָחוֹק', 'rachok', 'far'],
-  ['מָלֵא', 'male', 'full', 'רֵיק', 'reik', 'empty'],
-  ['אוֹר', 'or', 'light', 'חֹשֶׁךְ', 'choshekh', 'darkness'],
+  Object.assign(['גָּדוֹל', 'gadol', 'big', 'קָטָן', 'katan', 'small'], { img: 'OPP_one_01' }),
+  Object.assign(['חַם', 'cham', 'hot', 'קַר', 'kar', 'cold'], { img: 'OPP_two_01' }),
+  Object.assign(['לָבָן', 'lavan', 'white', 'שָׁחֹר', 'shachor', 'black'], { img: 'OPP_gap_white_black' }),
+  Object.assign(['גָּבוֹהַּ', 'gavoha', 'tall / high', 'נָמוּךְ', 'namukh', 'low'], { img: 'OPP_one_02' }),
+  Object.assign(['מָהִיר', 'mahir', 'fast', 'אִטִּי', 'iti', 'slow'], { img: 'OPP_two_02' }),
+  Object.assign(['יָקָר', 'yakar', 'expensive', 'זוֹל', 'zol', 'cheap'], { img: 'OPP_gap_expensive_cheap' }),
+  Object.assign(['חָזָק', 'chazak', 'strong', 'חַלָּשׁ', 'chalash', 'weak'], { img: 'OPP_gap_strong_weak' }),
+  Object.assign(['שָׂמֵחַ', 'sameach', 'happy', 'עָצוּב', 'atzuv', 'sad'], { img: 'OPP_gap_happy_sad' }),
+  Object.assign(['יָשָׁן', 'yashan', 'old (thing)', 'חָדָשׁ', 'chadash', 'new'], { img: 'OPP_two_05' }),
+  Object.assign(['קָרוֹב', 'karov', 'near', 'רָחוֹק', 'rachok', 'far'], { img: 'OPP_gap_near_far' }),
+  Object.assign(['מָלֵא', 'male', 'full', 'רֵיק', 'reik', 'empty'], { img: 'OPP_one_08' }),
+  Object.assign(['אוֹר', 'or', 'light', 'חֹשֶׁךְ', 'choshekh', 'darkness'], { img: 'OPP_two_03' }),
 ]);
 
 const ROUNDS = 10;
 
 export function mount(root, ctx) {
-  const session = createSession({ store: ctx?.store, storeKey: 'games.tugowar.v1', par: 8 });
+  const leaveSfx = sfx.enter(ctx);
+  const session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 8 });
   let R = null;
   let pos = 0; // rope position: -1 (theirs) .. +1 (yours)
   let round = 0;
   let current = null; // {pair, choices, answer}
+  let timer = 0;
+  let alive = true;
 
   const stage = h('div', { class: 'game-stage tug' });
   const status = h('p', { class: 'game-status', role: 'status', 'aria-live': 'polite' }, 'Pull the rope: match the opposite.');
@@ -60,29 +62,47 @@ export function mount(root, ctx) {
     const order = [0, 1, 2].sort(() => 0.5 - Math.random());
     current = { pair, answer: pair };
     const img = imgOf(R, 'id', pair.img);
-    const kids = [h('p', { class: 'game-prompt' }, 'Opposite of ', heSpan(pair[0], 'he game-he'), ` (${pair[1]} — ${pair[2]})?`)];
-    if (img) kids.push(h('img', { class: 'game-card-img', src: img.src, alt: img.alt, width: img.width, height: img.height }));
-    kids.push(h('div', { class: 'game-choices' }, ...order.map((i) => {
-        const c = choices[i];
-        return h('button', { type: 'button', class: 'btn secondary game-choice', onclick: () => answer(c) },
-          heSpan(c[3], 'he game-he-sm'), h('span', { class: 'muted' }, ` ${c[4]} · ${c[5]}`));
-      })));
-    board.replaceChildren(...kids);
+    // replaceChildren stringifies a null child as the text "null", so omit the picture node.
+    const nodes = [h('p', { class: 'game-prompt' }, 'Opposite of ', heSpan(pair[0], 'he game-he'), ` (${pair[1]} — ${pair[2]})?`)];
+    if (img) nodes.push(h('img', { class: 'game-card-img', src: img.src, alt: img.alt, width: img.width, height: img.height, 'data-img-id': img.id }));
+    nodes.push(h('div', { class: 'game-choices' }, ...order.map((i) => {
+      const c = choices[i];
+      return h('button', { type: 'button', class: 'btn secondary game-choice', onclick: () => answer(c) },
+        heSpan(c[3], 'he game-he-sm'), h('span', { class: 'muted' }, ` ${c[4]} · ${c[5]}`));
+    })));
+    board.replaceChildren(...nodes);
     status.textContent = `Round ${round} of ${ROUNDS} · Score ${session.score} · Streak ${session.streak}`;
     paintRope();
   }
 
+  function nextRoundImage() {
+    const picture = current && imgOf(R, 'id', current.pair.img);
+    if (!picture || board.querySelector('.game-card-img')) return;
+    const prompt = board.querySelector('.game-prompt');
+    if (prompt) prompt.after(h('img', {
+      class: 'game-card-img', src: picture.src, alt: picture.alt,
+      width: picture.width, height: picture.height, 'data-img-id': picture.id,
+    }));
+  }
+
   function answer(choice) {
+    if (!alive || !current) return;
+    const pair = current.pair;
     const ok = choice === current.answer;
+    current = null;
     session.answer(ok);
     pos = pull(pos, ok ? 1 : -1, 0.14);
-    status.textContent = ok ? `Yes — ${current.pair[0]} × ${current.pair[3]}. Your team pulls!` : `Not that one. The opposite of ${current.pair[0]} is ${current.pair[3]}.`;
+    sfx.play('tick');
+    sfx.play(ok ? 'success' : 'miss');
+    status.textContent = ok ? `Yes — ${pair[0]} × ${pair[3]}. Your team pulls!` : `Not that one. The opposite of ${pair[0]} is ${pair[3]}.`;
     paintRope();
-    setTimeout(nextRound, ok ? 450 : 1100);
+    clearTimeout(timer);
+    timer = setTimeout(() => { if (alive) nextRound(); }, ok ? 450 : 1100);
   }
 
   function finish() {
     const won = pos > 0;
+    if (won) sfx.play('streak');
     board.replaceChildren(resultsCard(h, heSpan, session, {
       title: won ? 'Your team wins the tug!' : 'Noa\'s team takes this one',
       onAgain: () => { pos = 0; round = 0; nextRound(); },
@@ -96,7 +116,7 @@ export function mount(root, ctx) {
       h('p', { class: 'muted' }, 'Match the Hebrew opposite. Every right answer pulls the rope your way; a miss pulls it theirs.'),
       ropeWrap, status, board));
   paintRope();
-  loadGameImages(ctx).then((r) => { R = r; });
+  loadGameImages(ctx).then((r) => { if (alive) { R = r; if (current) nextRoundImage(); } });
   nextRound();
-  return () => {};
+  return () => { alive = false; clearTimeout(timer); leaveSfx(); };
 }

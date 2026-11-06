@@ -4861,6 +4861,31 @@
    "forcedDespite": [
     "contains_text"
    ]
+  },
+  "OPP_gap_happy_sad": {
+   "status": "approved",
+   "at": "2026-11-06T17:58:00.000Z",
+   "note": "Eye-checked full-size: clean flat illustration, no text. From the games enrichment set."
+  },
+  "OPP_gap_white_black": {
+   "status": "approved",
+   "at": "2026-11-06T17:58:00.000Z",
+   "note": "Eye-checked full-size: clean flat illustration, no text. From the games enrichment set."
+  },
+  "OPP_gap_expensive_cheap": {
+   "status": "approved",
+   "at": "2026-11-06T17:58:00.000Z",
+   "note": "Eye-checked full-size: clean flat illustration, no text. From the games enrichment set."
+  },
+  "OPP_gap_near_far": {
+   "status": "approved",
+   "at": "2026-11-06T17:58:00.000Z",
+   "note": "Eye-checked full-size: clean flat illustration, no text. From the games enrichment set."
+  },
+  "OPP_gap_strong_weak": {
+   "status": "approved",
+   "at": "2026-11-06T17:58:00.000Z",
+   "note": "Eye-checked full-size: clean flat illustration, no text. From the games enrichment set."
   }
  }
 }

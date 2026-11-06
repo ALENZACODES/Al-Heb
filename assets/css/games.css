@@ -29,3 +29,30 @@
 .catcher-basket { position: absolute; bottom: 4%; translate: -50% 0; font-size: 3rem; font-weight: 700;
   color: #f6f1e7; background: rgba(217,164,65,.16); border: 2px solid #d9a441; border-radius: 12px;
   padding: .1rem .8rem; line-height: 1.15; pointer-events: none; }
+
+/* Data-backed vowel HUD and indexed niqqud illustrations. */
+.game-catcher-hud { display: flex; gap: .75rem; align-items: center; min-height: 4rem; }
+.game-catcher-letter-img { width: 76px; height: 76px; object-fit: contain; }
+.game-catcher-mark-img { width: 58px; height: 58px; object-fit: contain; filter: drop-shadow(0 0 6px rgba(232,201,122,.6)); }
+
+
+/* Wave 1: objects and mechanics only. Cast and voices frozen. */
+.prefix-scene { background-size:cover; border-radius:1rem; padding:1rem; }
+.prefix-bubbles { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; min-height:10rem; align-items:center; }
+.prefix-bubble { border:3px solid #1F3A5F; border-radius:50%; width:5rem; height:5rem; background:#F6F1E7; color:#1F3A5F; display:grid; place-content:center; cursor:pointer; animation:prefix-float 3s ease-in-out infinite alternate; }
+.prefix-bubble:nth-child(even) { animation-delay:-1.5s; border-color:#B0373B; }
+.prefix-pedestal { text-align:center; padding:1rem; border-bottom:8px solid #D9A441; }
+@keyframes prefix-float { to { transform:translateY(-12px); } }
+@media (prefers-reduced-motion:reduce) { .prefix-bubble { animation:none; } }
+
+.palace-courtyard { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:1rem; padding:1rem; background-size:cover; }
+.palace-station { border:3px solid #6B7F3A; border-radius:1rem; background:#F6F1E7; color:#1F3A5F; padding:.5rem; cursor:pointer; min-height:150px; }
+.palace-station img { width:100%; height:120px; object-fit:contain; }
+.palace-active { outline:5px solid #D9A441; outline-offset:3px; opacity:1; }
+
+.pinball-table { position:relative; height:420px; max-width:500px; margin:1rem auto; border:6px solid #1F3A5F; border-radius:3rem 3rem 1rem 1rem; background:#F6F1E7; background-size:cover; overflow:hidden; direction:ltr; }
+.pinball-targets { position:absolute; top:12%; left:5%; width:90%; display:flex; justify-content:space-around; }
+.pinball-bumper { width:65px; height:65px; border-radius:50%; border:3px solid #6B7F3A; background:#F6F1E7; color:#1F3A5F; cursor:pointer; }
+.pinball-bumper[aria-pressed="true"] { outline:4px solid #D9A441; outline-offset:3px; }
+.pinball-ball { position:absolute; width:16px; height:16px; transform:translate(-50%,-50%); background:#B0373B; border:2px solid #2B2B2B; border-radius:50%; pointer-events:none; }
+.prefix-bubble:focus-visible,.palace-station:focus-visible,.pinball-bumper:focus-visible { outline:4px solid #D9A441; outline-offset:4px; }

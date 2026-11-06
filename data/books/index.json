@@ -43,9 +43,9 @@
    "titleEn": "Good Night, Tel Aviv",
    "level": "Grade 1",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 11,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {

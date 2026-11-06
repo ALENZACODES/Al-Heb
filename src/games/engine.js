@@ -4,9 +4,9 @@
 // route, t, hasRoute }. Everything defensive: a game must still play in
 // pure text if the image resolver or the audio player is unavailable.
 //
-// Integration (see README-INTEGRATION.md): the QB lane wires
-// loadGameImages(ctx) to src/img/index.js (loadImageResolver) and hands the
-// resulting resolver to mountGame(); until then games run text-only.
+// Images: loadGameImages uses ctx.images when the shell already built it,
+// otherwise src/img/index.js (which calls src/img/resolve.js). A missing
+// resolver returns null and the game stays text-only.
 
 /** Fisher-Yates shuffle, returns a new array. */
 export function shuffled(arr, rnd = Math.random) {
@@ -67,12 +67,15 @@ export function createSession({ store = null, storeKey = '', par = 10 } = {}) {
  */
 export async function loadGameImages(ctx) {
   try {
+    // The shell already builds this resolver in app.js and puts it on ctx.images.
+    // A game opened without that (a test, or a failed boot) loads it the same way.
+    if (ctx?.images && typeof ctx.images.resolve === 'function') return ctx.images;
     const m = await import('../img/index.js');
     const R = await m.loadImageResolver({
-      fetchFn: ctx?.fetchFn, settings: ctx?.settings,
+      fetchFn: ctx?.fetchFn || ctx?.fetch, settings: ctx?.settings,
       base: 'assets/img', indexUrl: 'data/img/index.json', approvalsUrl: 'data/images/approvals.json',
     });
-    return R;
+    return R && typeof R.resolve === 'function' ? R : null;
   } catch { return null; }
 }
 

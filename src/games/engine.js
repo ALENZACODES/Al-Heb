@@ -85,21 +85,44 @@ export function imgOf(R, kind, id, opts = {}) {
 }
 
 /**
- * Speak a Hebrew line through the app audio player when it can, else no-op.
- * Uses the same clip-index contract as the letter views.
+ * Honest line when a game cannot play a recorded Hebrew clip.
+ * Never invites the device to guess in another language.
  */
-export async function speak(ctx, hebrew, { tradition = 'israeli', voice = 'f' } = {}) {
+export function speechFallbackMessage(result) {
+  const reason = result?.reason || result?.fileError || result?.error || 'no-clip';
+  if (result?.source === 'file' && !result.fileError) return '';
+  if (result?.source === 'tts-fallback') return "Played with this device's Hebrew voice, not a recording.";
+  if (reason === 'no-hebrew-browser-voice' || reason === 'file-error') {
+    return 'No Hebrew recording played. This device will not speak another language. The words stay on screen.';
+  }
+  if (reason === 'play-rejected' || reason === 'network' || reason === 'play-threw' || reason === 'no-audio-support') {
+    return 'The recording could not be reached. Nothing was spoken in another language. The words stay on screen.';
+  }
+  return 'No recorded Hebrew clip for this line. The words stay on screen.';
+}
+
+/**
+ * Recorded clip first, through ctx.audio.play(kind, id). There is no clip-index module.
+ * A missing file, a 404, or a network error does not fall through to a non-Hebrew voice.
+ * Without a real kind and id, the line stays text. The game keeps working either way.
+ */
+export async function speak(ctx, hebrew, opts = {}) {
+  const report = (result) => {
+    const message = speechFallbackMessage(result);
+    if (message && typeof opts.onStatus === 'function') opts.onStatus(message);
+    const spoken = result?.source === 'file' || result?.source === 'tts-fallback';
+    return { ...(result || {}), spoken, message };
+  };
+  const audio = ctx?.audio;
+  if (!audio || typeof audio.play !== 'function' || !opts.kind || !opts.id) {
+    return report({ source: 'none', reason: 'no-clip' });
+  }
   try {
-    if (!ctx?.audio?.playClipFor) return false;
-    const idxMod = await import('../audio/clip-index.js');
-    const idx = await idxMod.loadClipIndex({ fetchFn: ctx.fetchFn });
-    const line = idxMod.lineFor(idx, hebrew);
-    if (!line) return false;
-    const v = idxMod.chooseVariant(line, { tradition, voice });
-    if (!v) return false;
-    await ctx.audio.playClipFor(v.clipKey, { kind: 'line', hebrew });
-    return true;
-  } catch { return false; }
+    const result = await audio.play(opts.kind, opts.id, { text: typeof hebrew === 'string' ? hebrew : '' });
+    return report(result || { source: 'none', reason: 'no-clip' });
+  } catch {
+    return report({ source: 'none', reason: 'network' });
+  }
 }
 
 /** Standard end-of-game card: score, stars, best, play again, back to Learn. */

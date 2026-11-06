@@ -13,6 +13,15 @@ import { speechSafeText } from '../shell/names.js';
 // guarantee gender or tradition (browser voices expose neither); results say so via `voiceGuaranteed`.
 // Results always carry `source`: 'file' | 'tts-fallback' | 'none'.
 
+/** A speechSynthesis voice that is actually Hebrew, or null. An empty list is null, not "try the default voice". */
+export function hebrewSynthesisVoice(speech) {
+  if (!speech || typeof speech.getVoices !== 'function') return null;
+  let voices;
+  try { voices = speech.getVoices(); } catch { return null; }
+  if (!Array.isArray(voices)) return null;
+  return voices.find((v) => /^he([-_]|$)/i.test(String(v?.lang || ''))) || null;
+}
+
 /** Must stay identical to normalizeId in tools/audio/hebrew_data.mjs (a test checks this). */
 export function normalizeId(s) {
   return String(s).toLowerCase().replace(/[^a-z0-9._-]+/g, '-').replace(/^-+|-+$/g, '');
@@ -130,14 +139,14 @@ export function createAudio(opts) {
     if (stand) return stand;
     const text = (exact && exact.text) || textBy.get(`${kind}|${id}`) || (typeof o.text === 'string' && o.text.trim() ? o.text : '');
     if (!text) return { source: 'none', reason: 'unknown-item', kind, id, voice, tradition };
+    const safe = speechSafeText(text);
+    if (!safe.ok) return { source: 'none', reason: safe.reason || 'unresolved-liturgical-name', kind, id, voice, tradition, text };
     if (!speech || !UtteranceCtor) return { source: 'none', reason: 'no-speech-synthesis', kind, id, voice, tradition };
     if (tradition !== 'israeli' && !allowMismatchedTts && !o.allowMismatchedTts) {
       // Web Speech reads Modern Israeli Hebrew only; do not present it as sephardi/ashkenazi audio.
       return { source: 'none', reason: 'tts-pronunciation-mismatch', kind, id, voice, tradition, text };
     }
     if (noHebrewVoice()) return { source: 'none', reason: 'no-hebrew-browser-voice', kind, id, voice, tradition, text };
-    const safe = speechSafeText(text);
-    if (!safe.ok) return { source: 'none', reason: safe.reason || 'unresolved-liturgical-name', kind, id, voice, tradition, text };
     return {
       source: 'tts-fallback', text: safe.text, kind, id, voice, tradition,
       voiceGuaranteed: false, // browser voice gender/tradition cannot be selected reliably
@@ -145,11 +154,17 @@ export function createAudio(opts) {
     };
   }
 
-  /** True only when the browser lists voices and none is Hebrew (an empty list is unknown, so it is not a refusal). */
+  /** A listed voice whose language tag is Hebrew. Anything else, including an empty list, is not proof of Hebrew. */
+  function hebrewVoice() { return hebrewSynthesisVoice(speech); }
+
+  /**
+   * True when this browser must not speak.
+   * An empty voice list used to count as "unknown" and the default system voice then read Hebrew in Dutch, English, or Arabic.
+   * No getVoices function stays unknown at plan time; speak() still refuses to talk.
+   */
   function noHebrewVoice() {
     if (!speech || typeof speech.getVoices !== 'function') return false;
-    const vs = speech.getVoices();
-    return !!(vs && vs.length && !vs.some((v) => /^he([-_]|$)/i.test(v.lang || '')));
+    return !hebrewVoice();
   }
 
   function playFile(p) {
@@ -170,8 +185,12 @@ export function createAudio(opts) {
     return new Promise((resolve) => {
       const safe = speechSafeText(p.text);
       if (!safe.ok) { resolve({ ok: false, error: safe.reason || 'unresolved-liturgical-name' }); return; }
+      const voice = hebrewVoice();
+      // lang="he-IL" alone does not choose the voice. A Dutch or English default will still speak.
+      if (!voice) { resolve({ ok: false, error: 'no-hebrew-browser-voice' }); return; }
       const u = new UtteranceCtor(safe.text);
-      u.lang = 'he-IL';
+      u.lang = /^he([-_]|$)/i.test(voice.lang || '') ? voice.lang : 'he-IL';
+      try { u.voice = voice; } catch { /* a fake utterance may be frozen */ }
       if (typeof settings.ttsRate === 'number') u.rate = settings.ttsRate;
       current = { stop: () => { try { speech.cancel(); } catch { /* ignore */ } resolve({ ok: true, stopped: true }); } };
       u.onend = () => resolve({ ok: true });
@@ -211,11 +230,11 @@ export function createAudio(opts) {
     const tradition = israeliOnly.has(`${kind}|${id}`) ? 'israeli' : c2.tradition;
     const text = textBy.get(`${kind}|${id}`) || (typeof o.text === 'string' && o.text.trim() ? o.text : '');
     if (!text) return { source: 'none', reason: 'unknown-item', kind, id, voice, tradition };
+    const safe = speechSafeText(text);
+    if (!safe.ok) return { source: 'none', reason: safe.reason || 'unresolved-liturgical-name', kind, id, voice, tradition, text };
     if (!speech || !UtteranceCtor) return { source: 'none', reason: 'no-speech-synthesis', kind, id, voice, tradition };
     if (tradition !== 'israeli' && !allowMismatchedTts && !o.allowMismatchedTts) return { source: 'none', reason: 'tts-pronunciation-mismatch', kind, id, voice, tradition, text };
     if (noHebrewVoice()) return { source: 'none', reason: 'no-hebrew-browser-voice', kind, id, voice, tradition, text };
-    const safe = speechSafeText(text);
-    if (!safe.ok) return { source: 'none', reason: safe.reason || 'unresolved-liturgical-name', kind, id, voice, tradition, text };
     return { source: 'tts-fallback', text: safe.text, kind, id, voice, tradition, voiceGuaranteed: false, mismatch: tradition !== 'israeli' };
   }
 

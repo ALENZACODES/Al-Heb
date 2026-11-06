@@ -68,7 +68,7 @@ test("audio hooks work with the real player and its speech fallback", async () =
   const a = createAudio({ settings: { voice: "m", congregation: "israeli" }, manifest: [], speech, UtteranceCtor: function (t) { this.text = t; } });
   a.extend(M.audioEntries(first10, ladder));
   assert.equal(a.has("word", "firstday-shalom"), false);
-  assert.equal(a.status("word", "firstday-shalom").source, "tts-fallback");
+  assert.equal(a.status("word", "firstday-shalom").reason, "no-hebrew-browser-voice");
 });
 
 test("ladder: 20 steps, stages never go backwards, unpointed steps show no points", () => {

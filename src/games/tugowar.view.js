@@ -144,5 +144,5 @@ export function mount(root, ctx) {
   paintRope();
   loadGameImages(ctx).then((r) => { if (alive) { R = r; if (current) nextRoundImage(); } });
   nextRound();
-  return () => { alive = false; clearTimeout(timer); document.removeEventListener('keydown', onKey); leaveSfx(); };
+  return () => { alive = false; clearTimeout(timer); document.removeEventListener('keydown', onKey); try { ctx?.audio?.stop?.(); } catch { /* already gone */ } leaveSfx(); };
 }

@@ -27,10 +27,11 @@ export function mount(root, ctx) {
   const studied = new Set();
   const wrongThisStop = new Set();
   const status = h('p', { role: 'status', 'aria-live': 'polite' }, 'Resolving courtyard stations…');
+  const speechNote = h('p', { class: 'muted', 'data-speech': 'palace' });
   const board = h('div', { class: 'game-board' });
   root.replaceChildren(h('article', { class: 'card game-card' },
     h('h1', { id: 'view-title', tabindex: '-1' }, 'The Memory Palace Courtyard'),
-    h('p', {}, 'Study each letter picture, walk the ordered route, then recall its stops.'), status, board));
+    h('p', {}, 'Study each letter picture, walk the ordered route, then recall its stops.'), status, speechNote, board));
   function start() {
     session = createSession({ par: 5 });
     const distinct = new Set();
@@ -39,7 +40,7 @@ export function mount(root, ctx) {
   }
   function tap(s) {
     if (!alive) return;
-    void speak(ctx, s.he);
+    void speak(ctx, s.he, { kind: 'letter', id: s.letterId, onStatus: (m) => { speechNote.textContent = m; } });
     if (phase === 'study') { if (!studied.has(s.id)) sfx.play('pluck'); studied.add(s.id); paint(); return; }
     if (phase !== 'recall') return;
     if (wrongThisStop.has(s.id)) {
@@ -80,7 +81,7 @@ export function mount(root, ctx) {
     } else if (phase === 'route') {
       status.replaceChildren(`Stop ${index + 1} of ${route.length}: `, heSpan(route[index].he), ` ${route[index].name}`);
       nodes.push(h('button', { type: 'button', class: 'btn', onclick: () => {
-        void speak(ctx, route[index].he);
+        void speak(ctx, route[index].he, { kind: 'letter', id: route[index].letterId, onStatus: (m) => { speechNote.textContent = m; } });
         index++;
         if (index === route.length) { phase = 'recall'; index = 0; }
         paint();
@@ -99,5 +100,5 @@ export function mount(root, ctx) {
     start();
     sfx.play('swoosh');
   }).catch(() => { if (alive) status.textContent = 'Station data unavailable. Try again when online.'; });
-  return () => { alive = false; leaveSfx(); };
+  return () => { alive = false; try { ctx?.audio?.stop?.(); } catch { /* already gone */ } leaveSfx(); };
 }

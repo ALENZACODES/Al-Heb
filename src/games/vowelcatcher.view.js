@@ -78,6 +78,7 @@ export function mount(root, ctx) {
   const reducedMotion = !!globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
 
   const announce = h('p', { class: 'game-status', role: 'status', 'aria-live': 'polite' });
+  const speechNote = h('p', { class: 'muted', 'data-speech': 'catcher' });
   const sky = h('div', { class: 'catcher-sky' });
   const basket = h('div', { class: 'catcher-basket', 'aria-hidden': 'true' });
   const hud = h('div', { class: 'game-catcher-hud' });
@@ -89,7 +90,8 @@ export function mount(root, ctx) {
     targetsDone++;
     announce.replaceChildren(`Target ${targetsDone} of ${TARGETS_PER_GAME}: catch ${target.name} for `,
       heSpan(letter.glyph + target.point, 'he game-he-sm'), '.');
-    speak(ctx, letter.glyph + target.point).catch(() => {});
+    // The syllable has no clip id. Do not speak the bare letter and call it the vowel.
+    void speak(ctx, letter.glyph + target.point, { onStatus: (m) => { if (alive) speechNote.textContent = m; } });
   }
 
   function spawn(now) {
@@ -175,7 +177,7 @@ export function mount(root, ctx) {
       h('p', { class: 'muted' }, reducedMotion
         ? 'Reduced motion is on. Tap the named mark. The marks stay still.'
         : 'Catch the named niqqud mark. Move with your finger, mouse, or arrow keys, or tap a mark.'),
-      h('div', { class: 'row' }, pauseBtn), hud, announce, board);
+      h('div', { class: 'row' }, pauseBtn), hud, announce, speechNote, board);
   root.replaceChildren(article);
   Promise.all([loadDeck(ctx), loadGameImages(ctx)]).then(([deck, images]) => {
     if (!alive || !article.isConnected) return;
@@ -201,6 +203,7 @@ export function mount(root, ctx) {
     document.removeEventListener('keydown', keys);
     sky.removeEventListener('pointermove', pointerMove);
     sky.removeEventListener('pointerdown', pointerDown);
+    try { ctx?.audio?.stop?.(); } catch { /* already gone */ }
     leaveSfx();
     if (liveCleanup.get(root) === stop) liveCleanup.delete(root);
   };

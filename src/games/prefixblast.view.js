@@ -24,11 +24,12 @@ export function mount(root, ctx) {
   const leaveSfx = sfx.enter(ctx);
   let alive = true, deck = [], R = null, index = 0, session;
   const status = h('p', { role: 'status', 'aria-live': 'polite' }, 'Loading attested phrases…');
+  const speechNote = h('p', { class: 'muted', 'data-speech': 'prefix' });
   const board = h('div', { class: 'game-board' });
   root.replaceChildren(h('article', { class: 'card game-card' },
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Bubble Pop Prefix Blast'),
     h('p', {}, 'Pop the prefix that gives the requested meaning. A miss leaves the phrase unfinished.'),
-    h('p', { class: 'muted' }, 'Preview: corpus-attested study aid; native review pending.'), status, board));
+    h('p', { class: 'muted' }, 'Preview: corpus-attested study aid; native review pending.'), status, speechNote, board));
   function start() {
     session = createSession({ par: Math.min(8, deck.length) });
     deck = shuffled(deck).slice(0, 10); index = 0; paint();
@@ -61,7 +62,7 @@ export function mount(root, ctx) {
         sfx.play('success');
         if (session.streak >= 3 && session.streak % 3 === 0) sfx.play('streak');
         index++;
-        void speak(ctx, phrase);
+        void speak(ctx, phrase, { onStatus: (m) => { speechNote.textContent = m; } });
         paint();
       } }, heSpan(p.id), h('span', {}, p.name));
       return button;
@@ -77,5 +78,5 @@ export function mount(root, ctx) {
     if (!deck.length) { status.textContent = 'No usable attested prefix records available.'; return; }
     start();
   }).catch(() => { if (alive) status.textContent = 'Phrase data unavailable. Try again when online.'; });
-  return () => { alive = false; leaveSfx(); };
+  return () => { alive = false; try { ctx?.audio?.stop?.(); } catch { /* already gone */ } leaveSfx(); };
 }

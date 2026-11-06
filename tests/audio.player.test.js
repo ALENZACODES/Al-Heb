@@ -12,7 +12,7 @@ class FakeAudio {
 }
 function fakeSpeech(voices = []) {
   const s = { spoken: [], cancelled: 0, getVoices: () => voices,
-    speak(u) { s.spoken.push({ text: u.text, lang: u.lang }); queueMicrotask(() => u.onend?.()); }, cancel() { s.cancelled++; } };
+    speak(u) { s.spoken.push({ text: u.text, lang: u.lang, voiceLang: u.voice?.lang || '' }); queueMicrotask(() => u.onend?.()); }, cancel() { s.cancelled++; } };
   return s;
 }
 class FakeUtterance { constructor(t) { this.text = t; } }
@@ -34,11 +34,12 @@ test('exact file wins and reports source file', async () => {
   assert.equal(audio.has('letter', 'bet'), true);
 });
 
-test('never swaps man for woman: only female file exists, male requested -> tts-fallback, not the f file', async () => {
-  const { audio } = make([e('m', 'israeli', 'letter', 'bet'), e('f', 'israeli', 'letter', 'bet', 'recorded')], { voice: 'm', congregation: 'israeli' });
+test('never swaps man for woman: only female file exists, male requested -> not the f file, and no speech without a Hebrew voice', async () => {
+  const { audio, speech } = make([e('m', 'israeli', 'letter', 'bet'), e('f', 'israeli', 'letter', 'bet', 'recorded')], { voice: 'm', congregation: 'israeli' });
   const r = await audio.play('letter', 'bet');
-  assert.equal(r.source, 'tts-fallback'); assert.equal(r.voiceGuaranteed, false);
+  assert.equal(r.source, 'none'); assert.equal(r.reason, 'no-hebrew-browser-voice');
   assert.deepEqual(FakeAudio.log, []);
+  assert.equal(speech.spoken.length, 0);
   assert.equal(audio.has('letter', 'bet'), false);
 });
 
@@ -59,11 +60,11 @@ test('tradition override per call', async () => {
   assert.equal(r.source, 'file'); assert.equal(r.tradition, 'ashkenazi');
 });
 
-test('tts fallback uses he-IL and pointed text for israeli', async () => {
-  const { audio, speech } = make([e('m', 'israeli', 'letter', 'bet')], { voice: 'm', congregation: 'israeli' });
+test('tts fallback uses the Hebrew voice and pointed text for israeli', async () => {
+  const { audio, speech } = make([e('m', 'israeli', 'letter', 'bet')], { voice: 'm', congregation: 'israeli' }, { speech: fakeSpeech([{ lang: 'he-IL', name: 'Hebrew' }, { lang: 'nl-NL', name: 'Dutch' }]) });
   const r = await audio.play('letter', 'bet');
   assert.equal(r.source, 'tts-fallback'); assert.equal(r.mismatch, false);
-  assert.deepEqual(speech.spoken, [{ text: 'בֵּית', lang: 'he-IL' }]);
+  assert.deepEqual(speech.spoken, [{ text: 'בֵּית', lang: 'he-IL', voiceLang: 'he-IL' }]);
 });
 
 test('no TTS for ashkenazi by default (would be wrong pronunciation); allowed when opted in and flagged', async () => {
@@ -71,7 +72,7 @@ test('no TTS for ashkenazi by default (would be wrong pronunciation); allowed wh
   let { audio } = make(m, { voice: 'm', congregation: 'ashkenazi' });
   let r = await audio.play('word', 'x');
   assert.equal(r.source, 'none'); assert.equal(r.reason, 'tts-pronunciation-mismatch');
-  ({ audio } = make(m, { voice: 'm', congregation: 'ashkenazi' }, { opts: { allowMismatchedTts: true } }));
+  ({ audio } = make(m, { voice: 'm', congregation: 'ashkenazi' }, { opts: { allowMismatchedTts: true }, speech: fakeSpeech([{ lang: 'he-IL' }]) }));
   r = await audio.play('word', 'x');
   assert.equal(r.source, 'tts-fallback'); assert.equal(r.mismatch, true);
 });
@@ -93,12 +94,17 @@ test('hebrew browser voice present -> fallback allowed', async () => {
   assert.equal((await audio.play('letter', 'bet')).source, 'tts-fallback');
 });
 
-test('file that fails to load falls back to TTS and reports it', async () => {
-  const { audio, speech } = make([e('m', 'israeli', 'letter', 'bet', 'recorded')], { voice: 'm' });
-  FakeAudio.failUrls.add('/app/audio/m/israeli/letter/bet.mp3');
-  const r = await audio.play('letter', 'bet');
-  assert.equal(r.source, 'tts-fallback'); assert.equal(r.fileError, 'file-error');
-  assert.equal(speech.spoken.length, 1);
+test('a clip that 404s does not speak when the only voices are empty or not Hebrew', async () => {
+  const row = [e('m', 'israeli', 'letter', 'bet', 'recorded')];
+  for (const voices of [[], [{ lang: 'nl-NL' }, { lang: 'en-US' }, { lang: 'ar' }]]) {
+    const { audio, speech } = make(row, { voice: 'm' }, { speech: fakeSpeech(voices) });
+    FakeAudio.failUrls.add('/app/audio/m/israeli/letter/bet.mp3');
+    const r = await audio.play('letter', 'bet');
+    assert.equal(r.source, 'none');
+    assert.equal(r.reason, 'no-hebrew-browser-voice');
+    assert.equal(r.fileError, 'file-error');
+    assert.equal(speech.spoken.length, 0);
+  }
 });
 
 test('status() predicts without playing; reads settings live', async () => {
@@ -106,7 +112,7 @@ test('status() predicts without playing; reads settings live', async () => {
   const { audio } = make([e('m', 'israeli', 'letter', 'bet', 'recorded'), e('f', 'israeli', 'letter', 'bet')], settings);
   assert.equal(audio.status('letter', 'bet').source, 'file');
   settings.voice = 'f';
-  assert.equal(audio.status('letter', 'bet').source, 'tts-fallback');
+  assert.notEqual(audio.status('letter', 'bet').source, 'file');
   assert.deepEqual(FakeAudio.log, []);
 });
 

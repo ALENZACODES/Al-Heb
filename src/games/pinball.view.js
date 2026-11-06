@@ -46,6 +46,7 @@ export function mount(root, ctx) {
   let alive = true, raf = 0, last = 0, deck = [], R = null, choices = [], expected, aim = 1, rounds = 0, session, running = false, paused = false;
   const ball = { x: 50, y: 90, vx: 0, vy: 0, armed: false };
   const status = h('p', { role: 'status', 'aria-live': 'polite' }, 'Loading letter records…');
+  const speechNote = h('p', { class: 'muted', 'data-speech': 'pinball' });
   const board = h('div', { class: 'game-board' });
   const table = h('div', { class: 'pinball-table', 'aria-label': 'Pinball table' });
   const marble = h('div', { class: 'pinball-ball', 'aria-hidden': 'true' });
@@ -69,7 +70,7 @@ export function mount(root, ctx) {
   controls.append(pauseBtn);
   root.replaceChildren(h('article', { class: 'card game-card' },
     h('h1', { id: 'view-title', tabindex: '-1' }, 'The Hebrew Pinball Bouncer'),
-    h('p', {}, 'Find the named Hebrew letter. Tap its bumper to aim, then press a flipper. Only matching shots score. Keyboard: arrows aim; Space launches.'), status, board));
+    h('p', {}, 'Find the named Hebrew letter. Tap its bumper to aim, then press a flipper. Only matching shots score. Keyboard: arrows aim; Space launches.'), status, speechNote, board));
   function newRound() {
     expected = shuffled(deck)[0];
     choices = shuffled([expected, ...shuffled(deck.filter(r => r.id !== expected.id)).slice(0, 2)])
@@ -100,7 +101,7 @@ export function mount(root, ctx) {
       session.answer(hit.correct);
       sfx.play(hit.correct ? 'collect' : 'miss');
       const letter = choices.find(c => c.id === hit.id);
-      if (letter) void speak(ctx, letter.he);
+      if (letter) void speak(ctx, letter.he, { kind: 'letter', id: letter.id, onStatus: (m) => { speechNote.textContent = m; } });
       resetBall();
       if (hit.correct) rounds++;
       if (rounds >= 8) {
@@ -128,5 +129,5 @@ export function mount(root, ctx) {
     if (deck.length < 3) { status.textContent = 'At least three complete letter records are required.'; return; }
     start();
   }).catch(() => { if (alive) status.textContent = 'Letter data unavailable. Try again when online.'; });
-  return () => { alive = false; running = false; cancelAnimationFrame(raf); window.removeEventListener('keydown', key); leaveSfx(); };
+  return () => { alive = false; running = false; cancelAnimationFrame(raf); window.removeEventListener('keydown', key); try { ctx?.audio?.stop?.(); } catch { /* already gone */ } leaveSfx(); };
 }

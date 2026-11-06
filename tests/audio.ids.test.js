@@ -101,7 +101,7 @@ test('player + real manifest: phrasebook ignores congregation (plays the israeli
   assert.equal(audio.status('word', readWord).reason, 'tts-pronunciation-mismatch');
   // israel-only item with congregation=ashkenazi falls back to israeli TTS (not refused) when no file
   const q = audio.status('word', 'anchor-bet');
-  assert.equal(q.source, 'tts-fallback'); assert.equal(q.mismatch, false);
+  assert.equal(q.source, 'none'); assert.equal(q.reason, 'no-hebrew-browser-voice');
 });
 
 test('player alias: one-line prayer record resolves to its line clip only when that file exists', () => {

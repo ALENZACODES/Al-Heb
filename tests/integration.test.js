@@ -181,13 +181,19 @@ test('shell audio: honest status text for tts, file and refusal; manifest summar
   assert.match(describeResult({ source: 'none', reason: 'no-hebrew-browser-voice' }).text, /no Hebrew voice/);
   const s = summarizeManifest(manifest); assert.equal(s.recorded, 0); assert.equal(s.tts, manifest.filter((e) => e.status === 'tts' || e.status === 'synthetic-unreviewed').length); assert.ok(manifest.every((e) => e.status !== 'recorded')); assert.equal(s.total, manifest.length);
 });
-test('shell audio: sephardi learner gets the labelled browser voice (not silence) unless they opt out', async () => {
-  const spoken = []; const speech = { speak(u) { spoken.push(u.text); setTimeout(() => u.onend(), 0); }, cancel() {} };
+test('shell audio: a Sephardi learner hears a Hebrew device voice only when one is installed', async () => {
+  const spoken = []; const speech = { getVoices: () => [{ lang: 'he-IL' }, { lang: 'nl-NL' }], speak(u) { spoken.push({ text: u.text, voiceLang: u.voice?.lang || '' }); setTimeout(() => u.onend(), 0); }, cancel() {} };
   const mk = (anyway) => createShellAudio({ settings: { get: (k) => ({ voice: 'f', congregation: 'sephardi', browserVoiceAnyway: anyway })[k] }, manifest,
     createAudio: (o) => createAudio({ ...o, speech, UtteranceCtor: class { constructor(t) { this.text = t; } } }) });
   const on = mk(true); const seen = []; on.subscribe((st) => seen.push(st.mode));
   await on.play('letter', 'alef');
-  assert.deepEqual(spoken, ['אָלֶף']); assert.equal(on.state.mode, 'tts'); assert.match(on.state.text, /not Sephardi/);
+  assert.deepEqual(spoken, [{ text: 'אָלֶף', voiceLang: 'he-IL' }]); assert.equal(on.state.mode, 'tts'); assert.match(on.state.text, /not Sephardi/);
+  spoken.length = 0;
+  const dutch = { getVoices: () => [{ lang: 'nl-NL' }], speak(u) { spoken.push(u.text); setTimeout(() => u.onend(), 0); }, cancel() {} };
+  const wrong = createShellAudio({ settings: { get: (k) => ({ voice: 'f', congregation: 'israeli', browserVoiceAnyway: true })[k] }, manifest,
+    createAudio: (o) => createAudio({ ...o, speech: dutch, UtteranceCtor: class { constructor(t) { this.text = t; } } }) });
+  const missed = await wrong.play('letter', 'alef');
+  assert.equal(missed.source, 'none'); assert.equal(spoken.length, 0);
   const off = mk(false); await off.play('letter', 'bet');
   assert.equal(off.state.mode, 'none'); assert.match(off.state.text, /only reads Israeli pronunciation/);
   assert.equal(off.has('letter', 'alef'), false, 'has() is true only for real files');

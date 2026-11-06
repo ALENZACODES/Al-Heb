@@ -54,6 +54,8 @@ Matte, polished, and foil are locked layout slots from the art direction. None i
 
 Store key: `awards.v1`. Local only. No account, no email, no server copy. The sample PDF is watermarked `SAMPLE / NOT EARNED` and is not stored as an earned certificate.
 
-## Certificate layout
+## Certificate face
 
-Landscape warm ivory page, deep-sea-blue geometric rings, a fine gold rule, a blank name panel, and a geometric seal. Print margin is 40 points. Temporary. Not an accreditation and not a copied crest or ribbon.
+The printable sheet and the PDF use the same short face: ALEF, Beginner reading, Proposed completion, the learner's name, the preview date, one sentence that ALEF is an independent course and the sample is not a diploma or an accredited credential, and the line "Temporary layout." SAMPLE / NOT EARNED is on the sheet as a banner and as large page text.
+
+Approved artwork: 0. That count sits beside the preview on the Awards page. The longer notes — no signature, no verification website, local-only file, not tamper-proof — are in the page disclosure "Record, storage, and what this sample is not" (`SAMPLE_PAGE_NOTES` in `src/awards/certificate.js`) and in this document. They are not printed on the certificate face.

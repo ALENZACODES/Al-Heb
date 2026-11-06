@@ -40,25 +40,26 @@ export function sampleModel(o = {}) {
     dateLabel: `Preview date: ${formatPreviewDate(o.now ?? Date.now())}`,
     brand: 'ALEF',
     subtitle: 'Beginner reading',
-    kicker: 'Sample layout only',
-    artNote: ART_NOTE,
+    kicker: 'Proposed completion',
+    artNote: 'Temporary layout.',
     artAccepted: ART_ACCEPTED,
-    statement: [
-      'This is a sample of how an ALEF beginner reading certificate would look.',
-      'It is not earned. It does not say that this person can read Hebrew,',
-      'finished the white-belt lessons, or passed a checked assessment.',
-    ],
-    disclaimers: [
-      'SAMPLE / NOT EARNED',
-      'ALEF is an independent Hebrew course. It is not a university, not an accredited programme, and not a professional certificate body.',
-      'This layout is original to ALEF. It is not a diploma and it does not represent any school or institute.',
-      'No teacher, rabbi, or examiner has signed this sample. The seal is a temporary geometric drawing, not a seal of office.',
-      'There is no verification website. This sample has no code that could prove it.',
-      'A saved PDF stays in your files. ALEF does not keep a copy on a server. The file is not a secure or tamper-proof document.',
-      'Approved artwork: none yet. These drawings are temporary stand-ins.',
-    ],
+    /** One sentence on the printable face. */
+    disclaimer: 'ALEF is an independent Hebrew course. This sample is not a diploma and not an accredited credential.',
+    statement: [],
+    disclaimers: [],
   };
 }
+
+/** Long notes for the page and the docs. They are not drawn on the certificate face or the PDF. */
+export const SAMPLE_PAGE_NOTES = Object.freeze([
+  'Approved artwork: 0. No image file has been accepted. The border and seal are a temporary layout, not final art.',
+  'This sample does not say the named person can read Hebrew, finished the white-belt lessons, or passed a checked assessment. Saving or printing it does not store an earned certificate.',
+  'The name is a label you typed. It is not a signature and not an account.',
+  'No teacher, rabbi, or examiner has signed this sample. The seal is a temporary geometric drawing, not a seal of office.',
+  'There is no verification website, and this sample has no code that could prove it.',
+  'A saved PDF stays in your files. ALEF does not keep a copy on a server. The file is not a secure or tamper-proof document.',
+  ART_NOTE,
+]);
 
 /** Learner-facing share blurb. Always says the sheet is a sample. */
 export function shareText(model) {
@@ -139,80 +140,59 @@ export function renderCertificatePdf(model) {
   const watermark = modelNeedsWatermark(model);
   const name = model.nameEntered ? model.displayName : '';
   const cmds = [];
+  const place = (font, size, y, text) => {
+    const x = Math.max(margin + 16, (width - String(text).length * size * 0.52) / 2);
+    cmds.push(`BT /${font} ${size} Tf ${SEA} rg 1 0 0 1 ${x.toFixed(1)} ${y} Tm ${pdfLiteral(text)} Tj ET`);
+  };
   cmds.push(`${IVORY} rg`);
   cmds.push(`0 0 ${width} ${height} re f`);
   const edge = [];
-  for (let x = 78; x <= width - 78; x += 26) { edge.push([x, 36], [x, height - 36]); }
-  for (let y = 70; y <= height - 70; y += 26) { edge.push([36, y], [width - 36, y]); }
-  circles(cmds, edge, 14);
+  for (let x = 90; x <= width - 90; x += 36) { edge.push([x, 28], [x, height - 28]); }
+  for (let y = 80; y <= height - 80; y += 36) { edge.push([28, y], [width - 28, y]); }
+  circles(cmds, edge, 10);
   cmds.push(`${IVORY} rg`);
-  cmds.push(`${margin + 22} ${margin + 22} ${width - 2 * (margin + 22)} ${height - 2 * (margin + 22)} re f`);
+  cmds.push(`${margin + 18} ${margin + 18} ${width - 2 * (margin + 18)} ${height - 2 * (margin + 18)} re f`);
   cmds.push(`${SEA} RG`);
-  cmds.push('2.2 w');
+  cmds.push('2 w');
   cmds.push(`${margin} ${margin} ${width - 2 * margin} ${height - 2 * margin} re S`);
   cmds.push(`${GOLD} RG`);
-  cmds.push('0.8 w');
-  cmds.push(`${margin + 10} ${margin + 10} ${width - 2 * (margin + 10)} ${height - 2 * (margin + 10)} re S`);
+  cmds.push('0.7 w');
+  cmds.push(`${margin + 8} ${margin + 8} ${width - 2 * (margin + 8)} ${height - 2 * (margin + 8)} re S`);
   if (watermark) {
-    cmds.push('0.72 g');
-    cmds.push('BT /F2 42 Tf');
-    cmds.push('0.9511 -0.3090 0.3090 0.9511 250 250 Tm');
+    cmds.push('0.58 g');
+    cmds.push('BT /F2 40 Tf');
+    cmds.push('0.9659 -0.2588 0.2588 0.9659 250 390 Tm');
     cmds.push(`${pdfLiteral('SAMPLE')} Tj`);
-    cmds.push('0 -1.2 Td');
+    cmds.push('0 -1.15 Td');
     cmds.push(`${pdfLiteral('NOT EARNED')} Tj`);
     cmds.push('ET');
     cmds.push(`${SEA} rg`);
-    cmds.push(`120 548 602 26 re f`);
+    cmds.push('168 512 506 26 re f');
     cmds.push('0.98 0.96 0.92 rg');
-    cmds.push('BT /F2 12 Tf 1 0 0 1 300 556 Tm');
-    cmds.push(`${pdfLiteral('SAMPLE / NOT EARNED')} Tj`);
-    cmds.push('ET');
+    cmds.push('BT /F2 13 Tf 1 0 0 1 336 520 Tm');
+    cmds.push(`${pdfLiteral('SAMPLE / NOT EARNED')} Tj ET`);
   }
-  cmds.push(`${SEA} RG 1 w`);
-  cmds.push('118 430 28 0 360 arc S');
-  cmds.push('118 430 18 0 360 arc S');
-  cmds.push('104 416 28 28 re S');
-  cmds.push(`${SEA} rg`);
-  cmds.push('BT');
-  cmds.push('/F1 8 Tf');
-  cmds.push('1 0 0 1 78 392 Tm');
-  cmds.push(`${pdfLiteral('Temporary geometric seal')} Tj`);
-  cmds.push('1 0 0 1 86 380 Tm');
-  cmds.push(`${pdfLiteral('Approved artwork: none yet')} Tj`);
-  cmds.push('/F2 22 Tf');
-  cmds.push('1 0 0 1 250 500 Tm');
-  cmds.push(`${pdfLiteral(model.brand || 'ALEF')} Tj`);
-  cmds.push('/F2 14 Tf');
-  cmds.push('1 0 0 1 250 478 Tm');
-  cmds.push(`${pdfLiteral(model.subtitle || 'Beginner reading')} Tj`);
-  cmds.push('/F1 10 Tf');
-  cmds.push('1 0 0 1 250 460 Tm');
-  cmds.push(`${pdfLiteral(model.kicker || 'Sample layout only')} Tj`);
-  cmds.push('1 0 0 1 250 430 Tm');
-  cmds.push(`${pdfLiteral('Name')} Tj`);
-  cmds.push('ET');
+  cmds.push(`${SEA} RG 1.1 w`);
+  cmds.push('421 455 16 0 360 arc S');
+  cmds.push('421 455 10 0 360 arc S');
+  cmds.push('413 447 16 16 re S');
+  place('F2', 26, 408, model.brand || 'ALEF');
+  place('F2', 16, 378, model.subtitle || 'Beginner reading');
+  place('F1', 12, 354, model.kicker || 'Proposed completion');
+  const shown = name || '';
+  let namePt = 28;
+  while (namePt > 14 && shown.length * namePt * 0.52 > width - 160) namePt -= 1;
   cmds.push(`${GOLD} RG 0.9 w`);
-  cmds.push('250 368 500 40 re S');
-  cmds.push(`${SEA} rg`);
-  cmds.push('BT');
-  if (name) {
-    cmds.push('/F2 16 Tf');
-    cmds.push(`1 0 0 1 264 382 Tm ${pdfLiteral(name)} Tj`);
+  cmds.push('230 292 m 612 292 l S');
+  if (shown) place('F2', namePt, 306, shown);
+  else place('F1', 12, 308, 'Name');
+  place('F1', 11, 262, model.dateLabel || '');
+  let y = 228;
+  for (const line of wrap(model.disclaimer || '', 72)) {
+    place('F1', 11, y, line);
+    y -= 16;
   }
-  cmds.push('/F1 10 Tf');
-  cmds.push(`1 0 0 1 250 348 Tm ${pdfLiteral(model.dateLabel || '')} Tj`);
-  cmds.push('/F1 8 Tf');
-  cmds.push(`1 0 0 1 250 334 Tm ${pdfLiteral(model.artNote || ART_NOTE)} Tj`);
-  let y = 312;
-  const body = [...(model.statement || []), ...(model.disclaimers || [])];
-  for (const paragraph of body) {
-    for (const line of wrap(paragraph, 92)) {
-      cmds.push(`1 0 0 1 72 ${y} Tm ${pdfLiteral(line)} Tj`);
-      y -= 12;
-    }
-    y -= 3;
-  }
-  cmds.push('ET');
+  place('F1', 10, y - 10, model.artNote || 'Temporary layout.');
   const stream = cmds.join('\n');
   return buildPdf(stream, width, height);
 }
@@ -244,13 +224,13 @@ function buildPdf(stream, width, height) {
 /** Edge rings for the HTML frame. Original geometry, not a copied security pattern. */
 export function renderGuilloche() {
   const circles = [];
-  for (let x = 40; x <= 960; x += 48) {
-    circles.push(svgNode('circle', { cx: String(x), cy: '28', r: '16', fill: 'none', stroke: 'currentColor', 'stroke-width': '1.25' }));
-    circles.push(svgNode('circle', { cx: String(x), cy: '672', r: '16', fill: 'none', stroke: 'currentColor', 'stroke-width': '1.25' }));
+  for (let x = 36; x <= 964; x += 70) {
+    circles.push(svgNode('circle', { cx: String(x), cy: '22', r: '12', fill: 'none', stroke: 'currentColor', 'stroke-width': '1' }));
+    circles.push(svgNode('circle', { cx: String(x), cy: '678', r: '12', fill: 'none', stroke: 'currentColor', 'stroke-width': '1' }));
   }
-  for (let y = 60; y <= 660; y += 48) {
-    circles.push(svgNode('circle', { cx: '28', cy: String(y), r: '16', fill: 'none', stroke: 'currentColor', 'stroke-width': '1.25' }));
-    circles.push(svgNode('circle', { cx: '972', cy: String(y), r: '16', fill: 'none', stroke: 'currentColor', 'stroke-width': '1.25' }));
+  for (let y = 50; y <= 650; y += 70) {
+    circles.push(svgNode('circle', { cx: '22', cy: String(y), r: '12', fill: 'none', stroke: 'currentColor', 'stroke-width': '1' }));
+    circles.push(svgNode('circle', { cx: '978', cy: String(y), r: '12', fill: 'none', stroke: 'currentColor', 'stroke-width': '1' }));
   }
   return svgNode('svg', {
     class: 'aw-guilloche', viewBox: '0 0 1000 700', 'aria-hidden': 'true', focusable: 'false',
@@ -279,19 +259,14 @@ export function renderCertificate(h, model) {
   renderGuilloche(),
   watermark ? h('p', { class: 'aw-cert-banner', id: 'aw-cert-banner', tabindex: '-1' }, model.watermark) : null,
   h('div', { class: 'aw-cert-frame' },
-  watermark ? h('p', { class: 'aw-watermark', 'aria-hidden': 'true', 'data-watermark': '1' }, 'SAMPLE NOT EARNED') : null,
-    h('div', { class: 'aw-seal-block' },
-      renderSeal(h),
-      h('p', { class: 'aw-seal-note' }, 'Temporary seal'),
-      h('p', { class: 'aw-seal-note' }, 'Artwork: none yet')),
-    h('div', { class: 'aw-cert-main' },
-      h('p', { class: 'aw-brand' }, model.brand),
-      h('h2', { id: 'aw-cert-title' }, model.subtitle),
-      h('p', { class: 'aw-kicker' }, model.kicker),
-      h('p', { class: 'aw-name-label' }, 'Name'),
-      h('div', { class: 'aw-name-panel', 'data-name-panel': '1' }, ...panelKids),
-      h('p', { class: 'aw-date' }, model.dateLabel),
-      h('p', { class: 'aw-art-note' }, model.artNote),
-      ...(model.statement || []).map((line) => h('p', { class: 'aw-statement' }, line)),
-      h('ul', { class: 'aw-disc' }, ...(model.disclaimers || []).map((line) => h('li', {}, line))))));
+    watermark ? h('p', { class: 'aw-watermark', 'aria-hidden': 'true', 'data-watermark': '1' }, 'SAMPLE NOT EARNED') : null,
+    renderSeal(h),
+    h('p', { class: 'aw-brand' }, model.brand),
+    h('h2', { id: 'aw-cert-title' }, model.subtitle),
+    h('p', { class: 'aw-kicker' }, model.kicker),
+    h('p', { class: 'aw-name-label' }, 'Name'),
+    h('div', { class: 'aw-name-panel', 'data-name-panel': '1' }, ...panelKids),
+    h('p', { class: 'aw-date' }, model.dateLabel),
+    h('p', { class: 'aw-disclaimer' }, model.disclaimer || ''),
+    h('p', { class: 'aw-art-note' }, model.artNote || 'Temporary layout.')));
 }

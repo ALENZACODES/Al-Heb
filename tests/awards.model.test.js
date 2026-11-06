@@ -181,6 +181,10 @@ test('sample PDF is landscape, watermarked, and does not turn a sample into an i
   assert.match(text, /SAMPLE/);
   assert.match(text, /NOT EARNED/);
   assert.match(text, /Ada <script>/);
+  assert.match(text, /Proposed completion/);
+  assert.match(text, /Temporary layout/);
+  assert.match(text, /independent Hebrew course/);
+  assert.doesNotMatch(text, /tamper-proof|verification website|seal of office/);
   assert.doesNotMatch(text, /\/JavaScript|mailto:|FMVA|\bCFI\b/);
   assert.doesNotMatch(text, /is an accredited|accredited by|university diploma/);
   const marked = renderCertificatePdf({ ...sampleModel({ now: T }), issuable: true, sample: true, displayName: 'Ada' });
@@ -199,7 +203,7 @@ test('sample PDF is landscape, watermarked, and does not turn a sample into an i
   assert.match(Buffer.from(hebrew).toString('latin1'), /\?/);
   assert.equal(pdfLiteral('a(b)\\c'), '(a\\(b\\)\\\\c)');
   const hex = createHash('sha256').update(bytes).digest('hex');
-  assert.equal(hex, '9a47ca4123b8a66d293c7b39668f05877985479b9aaddd34d8691869805f735e');
+  assert.equal(hex, 'd6802e256846f737ef0e561b9431254ef4efcf6998d9d6d6cbf493b8c1f690e7');
 });
 
 test('trust notes name real source files, and this lane does not award from them', () => {

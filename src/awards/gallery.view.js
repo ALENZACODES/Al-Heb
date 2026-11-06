@@ -11,7 +11,7 @@ import {
   badgeRows, certificateDecision, completionText, evidenceLabel, masterySlots, settleAwards,
 } from './eligibility.js';
 import {
-  MAIL_OFFER, PDF_FILENAME, pdfNameNote, renderCertificate, renderCertificatePdf, sampleModel, shareAvailability, shareText,
+  MAIL_OFFER, PDF_FILENAME, SAMPLE_PAGE_NOTES, pdfNameNote, renderCertificate, renderCertificatePdf, sampleModel, shareAvailability, shareText,
 } from './certificate.js';
 
 const CSS = `
@@ -41,33 +41,34 @@ const CSS = `
 .aw-links a { display: inline-flex; align-items: center; min-block-size: 48px; padding-inline: .4rem; }
 .aw-group { margin: .8rem 0; }
 .aw-group h3 { font-size: 1rem; }
-.aw-cert { position: relative; overflow: hidden; color: #0c3a4d; background: #f3ecdf; border: 14px solid #0c3a4d; box-shadow: inset 0 0 0 1px #a7843f; padding: 1.35rem 1.15rem 1rem; max-inline-size: 100%; }
-.aw-cert-frame { position: relative; z-index: 1; display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; background: #f3ecdf; margin: 1.15rem .4rem .2rem; padding: .2rem; }
-.aw-guilloche { position: absolute; inset: 0; width: 100%; height: 100%; color: #0c3a4d; opacity: .85; pointer-events: none; }
-.aw-cert-banner { position: relative; z-index: 2; margin: 0 0 .6rem; background: #0c3a4d; color: #f3ecdf; text-align: center; font-weight: 800; letter-spacing: .08em; padding: .45rem .6rem; }
-.aw-watermark { position: absolute; z-index: 2; inset: 34% 0 auto 0; text-align: center; font-size: clamp(1.6rem, 5vw, 2.8rem); font-weight: 800; letter-spacing: .14em; color: #0c3a4d; opacity: .22; transform: rotate(-12deg); pointer-events: none; }
-.aw-seal-block { text-align: center; }
-.aw-seal { display: block; margin-inline: auto; color: #0c3a4d; }
-.aw-brand { margin: 0; font-size: 1.8rem; letter-spacing: .18em; font-weight: 700; }
-.aw-kicker, .aw-seal-note, .aw-art-note, .aw-date { margin: .15rem 0; }
-.aw-name-label { margin: .6rem 0 .2rem; font-weight: 700; }
-.aw-name-panel { min-block-size: 3.2rem; border: 1px solid #a7843f; padding: .45rem .7rem; background: transparent; }
-.aw-name { margin: 0; font-size: 1.35rem; font-weight: 700; overflow-wrap: anywhere; }
-.aw-name-empty { margin: 0; }
-.aw-statement, .aw-disc { margin: .35rem 0; }
-.aw-disc { padding-inline-start: 1.1rem; }
-.aw-seal { color: #0c3a4d; }
+.aw-cert { position: relative; color: #0c3a4d; background: #f3ecdf; border: 12px solid #0c3a4d; box-shadow: inset 0 0 0 1px #a7843f; padding: 1.15rem 2.2rem 1.6rem; max-inline-size: 56rem; margin-inline: auto; text-align: center; }
+.aw-cert-frame { position: relative; z-index: 1; background: #f3ecdf; margin: 1.4rem 1.2rem .4rem; padding: .2rem 1rem 1rem; }
+.aw-guilloche { position: absolute; inset: 0; width: 100%; height: 100%; color: #0c3a4d; opacity: .45; pointer-events: none; }
+.aw-cert-banner { position: relative; z-index: 2; margin: 0 auto .4rem; max-inline-size: 28rem; background: #0c3a4d; color: #f3ecdf; text-align: center; font-weight: 800; letter-spacing: .12em; padding: .55rem .8rem; }
+.aw-watermark { position: absolute; z-index: 2; inset: 42% 0 auto 0; text-align: center; font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 800; letter-spacing: .16em; color: #0c3a4d; opacity: .2; transform: rotate(-14deg); pointer-events: none; }
+.aw-seal { display: block; margin: .2rem auto .35rem; color: #0c3a4d; }
+.aw-brand { margin: 0; font-size: 2.1rem; letter-spacing: .32em; font-weight: 700; }
+.aw-cert h2 { margin: .15rem 0; font-size: 1.35rem; font-weight: 700; }
+.aw-kicker { margin: 0 0 1.1rem; letter-spacing: .04em; }
+.aw-name-label { margin: 0; font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; }
+.aw-name-panel { min-block-size: 3.4rem; margin: .35rem auto 0; max-inline-size: 28rem; border: 0; border-bottom: 1px solid #a7843f; padding: .2rem .4rem .45rem; background: transparent; }
+.aw-name { margin: 0; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; line-height: 1.15; overflow-wrap: anywhere; }
+.aw-name-empty { margin: .35rem 0 0; font-size: .95rem; }
+.aw-date { margin: .85rem 0 .35rem; }
+.aw-disclaimer { max-inline-size: 34rem; margin: .8rem auto .35rem; }
+.aw-art-note { margin: .2rem 0 0; font-size: .9rem; }
 .aw-actions { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
 .aw-actions button { padding: .4rem .8rem; border: 2px solid currentColor; background: transparent; color: inherit; }
 .aw-actions button:disabled { border-style: dashed; cursor: not-allowed; }
 @media (max-width: 720px) {
-  .aw-cert-frame { grid-template-columns: 1fr; }
+  .aw-cert { aspect-ratio: auto; padding: 1rem .8rem 1.4rem; }
+  .aw-cert-frame { margin: 1rem .2rem .2rem; }
 }
 @media print {
   @page { size: A4 landscape; margin: 12mm; }
   body * { visibility: hidden; }
   .aw-cert, .aw-cert * { visibility: visible; }
-  .aw-cert { position: absolute; inset: 0; box-shadow: none; }
+  .aw-cert { position: absolute; inset: 8mm; aspect-ratio: auto; max-inline-size: none; box-shadow: none; }
   .aw-noprint { display: none !important; }
   .aw-watermark, .aw-cert-banner { visibility: visible; }
 }
@@ -290,14 +291,18 @@ export async function mount(root, ctx) {
       h('p', { 'data-badge': 'beginner-completion', 'data-state': 'locked' }, completionText(rubric ? settled.decision : { satisfied: 0, required: 0 }))),
     h('section', { 'aria-labelledby': 'award-h-cert' },
       h('h2', { id: 'award-h-cert' }, 'Sample certificate'),
-      h('p', {}, 'The sheet below is a sample. It is marked SAMPLE / NOT EARNED. Showing it does not store an earned certificate. The name panel stays blank until you type a name. That name is a label for the sample, not a signature and not an account.'),
+      h('p', {}, 'The sheet below is a sample layout for a proposed beginner reading completion. It is marked SAMPLE / NOT EARNED. The name you type is only a label on that sample.'),
+      h('p', { id: 'award-art-count' }, 'Approved artwork: 0. No final artwork is accepted.'),
       h('p', {}, MAIL_OFFER.text),
       h('div', { class: 'aw-noprint' },
         h('label', { for: 'award-name' }, 'Name to show on the sample'),
         h('div', {}, input, ' ', saveName),
         h('div', { class: 'aw-actions' }, jump, printBtn, downloadBtn, shareBtn),
         shareOk.shareSheet ? null : h('p', {}, 'Share is not available in this browser. Download the PDF and share the file yourself. ALEF does not send it.')),
-      certHost),
+      certHost,
+      h('details', { id: 'award-sample-notes', class: 'aw-noprint' },
+        h('summary', {}, 'Record, storage, and what this sample is not'),
+        h('ul', {}, ...SAMPLE_PAGE_NOTES.map((line) => h('li', {}, line))))),
     h('section', { 'aria-labelledby': 'award-h-why' },
       h('h2', { id: 'award-h-why' }, 'Why lesson marks are not used'),
       checklist,

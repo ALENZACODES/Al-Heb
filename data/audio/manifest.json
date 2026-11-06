@@ -55445,12 +55445,13 @@
   "kind": "word",
   "id": "i-36-w2",
   "text": "מִשְׂרָד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hc293ad54",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "misrad"
  },
  {
   "path": "audio/m/israeli/word/i-36-w3.mp3",
@@ -55473,12 +55474,13 @@
   "kind": "word",
   "id": "i-36-w3",
   "text": "פְּגִישָׁה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h0aeef906",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "pegishah"
  },
  {
   "path": "audio/m/israeli/word/i-36-w4.mp3",
@@ -55501,12 +55503,13 @@
   "kind": "word",
   "id": "i-36-w4",
   "text": "מְנַהֵל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h19abcc7f",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "menahel"
  },
  {
   "path": "audio/m/israeli/word/i-36-w5.mp3",
@@ -55529,12 +55532,13 @@
   "kind": "word",
   "id": "i-36-w5",
   "text": "לָקוֹחַ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h731dbce2",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "lakoach"
  },
  {
   "path": "audio/m/israeli/word/i-36-w6.mp3",
@@ -55557,12 +55561,13 @@
   "kind": "word",
   "id": "i-36-w6",
   "text": "מַעֲסִיק",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h70e3d8d3",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ma'asik"
  },
  {
   "path": "audio/m/israeli/word/i-36-w7.mp3",
@@ -55585,12 +55590,13 @@
   "kind": "word",
   "id": "i-36-w7",
   "text": "רֵאָיוֹן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h328ae702",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "re'aivon"
  },
  {
   "path": "audio/m/israeli/word/i-36-w8.mp3",
@@ -55613,12 +55619,13 @@
   "kind": "word",
   "id": "i-36-w8",
   "text": "הוֹדָעָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hff2f5141",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "hoda'ah"
  },
  {
   "path": "audio/m/israeli/word/i-36-w9.mp3",
@@ -55641,12 +55648,13 @@
   "kind": "word",
   "id": "i-36-w9",
   "text": "מָחָר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "he1c16e99",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "machar"
  },
  {
   "path": "audio/m/israeli/word/i-36-w10.mp3",
@@ -55669,12 +55677,13 @@
   "kind": "word",
   "id": "i-36-w10",
   "text": "הַיּוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h5350449f",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "hayom"
  },
  {
   "path": "audio/m/israeli/word/i-36-w11.mp3",
@@ -55696,11 +55705,12 @@
   "kind": "word",
   "id": "i-36-w11",
   "text": "עוֹבֵד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "oved"
  },
  {
   "path": "audio/m/israeli/word/i-36-w12.mp3",
@@ -55722,11 +55732,12 @@
   "kind": "word",
   "id": "i-36-w12",
   "text": "רֶגַע",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "rega"
  },
  {
   "path": "audio/m/israeli/word/i-37-w1.mp3",
@@ -55749,12 +55760,13 @@
   "kind": "word",
   "id": "i-37-w1",
   "text": "אוּנִיבֶרְסִיטָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hd53982bf",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "universitah"
  },
  {
   "path": "audio/m/israeli/word/i-37-w2.mp3",
@@ -55777,12 +55789,13 @@
   "kind": "word",
   "id": "i-37-w2",
   "text": "מוֹרֶה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hc8c1466c",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "moreh"
  },
  {
   "path": "audio/m/israeli/word/i-37-w3.mp3",
@@ -55804,11 +55817,12 @@
   "kind": "word",
   "id": "i-37-w3",
   "text": "מְרַצֶּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "meratzeh"
  },
  {
   "path": "audio/m/israeli/word/i-37-w4.mp3",
@@ -55831,12 +55845,13 @@
   "kind": "word",
   "id": "i-37-w4",
   "text": "פְּרוֹפֶסוֹר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h6a5b4bd8",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "perofesor"
  },
  {
   "path": "audio/m/israeli/word/i-37-w5.mp3",
@@ -55859,12 +55874,13 @@
   "kind": "word",
   "id": "i-37-w5",
   "text": "מִבְחָן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h5f517008",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "mivchan"
  },
  {
   "path": "audio/m/israeli/word/i-37-w6.mp3",
@@ -55887,12 +55903,13 @@
   "kind": "word",
   "id": "i-37-w6",
   "text": "שִׁעוּר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hc4654a6b",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shi'ur"
  },
  {
   "path": "audio/m/israeli/word/i-37-w7.mp3",
@@ -55915,12 +55932,13 @@
   "kind": "word",
   "id": "i-37-w7",
   "text": "סֵפֶר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h231c624a",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "sefer"
  },
  {
   "path": "audio/m/israeli/word/i-37-w8.mp3",
@@ -55943,12 +55961,13 @@
   "kind": "word",
   "id": "i-37-w8",
   "text": "מִלְגָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h16a54d9c",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "milgah"
  },
  {
   "path": "audio/m/israeli/word/i-37-w9.mp3",
@@ -55970,11 +55989,12 @@
   "kind": "word",
   "id": "i-37-w9",
   "text": "קוֹרֵס",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kores"
  },
  {
   "path": "audio/m/israeli/word/i-37-w10.mp3",
@@ -55997,12 +56017,13 @@
   "kind": "word",
   "id": "i-37-w10",
   "text": "הַיּוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h5350449f",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "hayom"
  },
  {
   "path": "audio/m/israeli/word/i-37-w11.mp3",
@@ -56025,12 +56046,13 @@
   "kind": "word",
   "id": "i-37-w11",
   "text": "מָחָר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "he1c16e99",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "machar"
  },
  {
   "path": "audio/m/israeli/word/i-37-w12.mp3",
@@ -56053,12 +56075,13 @@
   "kind": "word",
   "id": "i-37-w12",
   "text": "חָבֵר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h2280b9b6",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chaver"
  },
  {
   "path": "audio/m/israeli/word/i-38-w1.mp3",
@@ -56080,11 +56103,12 @@
   "kind": "word",
   "id": "i-38-w1",
   "text": "יָפֶה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yafeh"
  },
  {
   "path": "audio/m/israeli/word/i-38-w2.mp3",
@@ -56107,12 +56131,13 @@
   "kind": "word",
   "id": "i-38-w2",
   "text": "חָמוּד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h4105e713",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chamud"
  },
  {
   "path": "audio/m/israeli/word/i-38-w3.mp3",
@@ -56135,12 +56160,13 @@
   "kind": "word",
   "id": "i-38-w3",
   "text": "מִסְעָדָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h6d121ed3",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "mis'adah"
  },
  {
   "path": "audio/m/israeli/word/i-38-w4.mp3",
@@ -56163,12 +56189,13 @@
   "kind": "word",
   "id": "i-38-w4",
   "text": "סֶרֶט",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hbbbfa9a7",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "seret"
  },
  {
   "path": "audio/m/israeli/word/i-38-w5.mp3",
@@ -56191,12 +56218,13 @@
   "kind": "word",
   "id": "i-38-w5",
   "text": "חָבֵר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h2280b9b6",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chaver"
  },
  {
   "path": "audio/m/israeli/word/i-38-w6.mp3",
@@ -56219,12 +56247,13 @@
   "kind": "word",
   "id": "i-38-w6",
   "text": "חֲבֵרָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "he4ad156c",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chaverah"
  },
  {
   "path": "audio/m/israeli/word/i-38-w7.mp3",
@@ -56246,11 +56275,12 @@
   "kind": "word",
   "id": "i-38-w7",
   "text": "אֶפְשָׁר לָצֵאת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "efshar latzet"
  },
  {
   "path": "audio/m/israeli/word/i-38-w8.mp3",
@@ -56273,12 +56303,13 @@
   "kind": "word",
   "id": "i-38-w8",
   "text": "בֶּאֱמֶת?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "p877578e9",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "be'emet?"
  },
  {
   "path": "audio/m/israeli/word/i-38-w9.mp3",
@@ -56300,11 +56331,12 @@
   "kind": "word",
   "id": "i-38-w9",
   "text": "מָתַי?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "matai?"
  },
  {
   "path": "audio/m/israeli/word/i-38-w10.mp3",
@@ -56327,12 +56359,13 @@
   "kind": "word",
   "id": "i-38-w10",
   "text": "הָעֶרֶב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h876d966b",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "ha'erev"
  },
  {
   "path": "audio/m/israeli/word/i-38-w11.mp3",
@@ -56355,12 +56388,13 @@
   "kind": "word",
   "id": "i-38-w11",
   "text": "מָחָר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "he1c16e99",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "machar"
  },
  {
   "path": "audio/m/israeli/word/i-38-w12.mp3",
@@ -56382,11 +56416,12 @@
   "kind": "word",
   "id": "i-38-w12",
   "text": "בְּשִׂמְחָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "besimchah"
  },
  {
   "path": "audio/m/israeli/word/i-39-w1.mp3",
@@ -56409,12 +56444,13 @@
   "kind": "word",
   "id": "i-39-w1",
   "text": "מְכוֹנִית",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h5fc50b7a",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "mekhonit"
  },
  {
   "path": "audio/m/israeli/word/i-39-w2.mp3",
@@ -56437,12 +56473,13 @@
   "kind": "word",
   "id": "i-39-w2",
   "text": "כְּבִישׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h9d3d8331",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kevish"
  },
  {
   "path": "audio/m/israeli/word/i-39-w3.mp3",
@@ -56465,12 +56502,13 @@
   "kind": "word",
   "id": "i-39-w3",
   "text": "תַּמְרוּר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h049ff339",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "tamrur"
  },
  {
   "path": "audio/m/israeli/word/i-39-w4.mp3",
@@ -56493,12 +56531,13 @@
   "kind": "word",
   "id": "i-39-w4",
   "text": "דֶּלֶק",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h9c60c651",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "delek"
  },
  {
   "path": "audio/m/israeli/word/i-39-w5.mp3",
@@ -56521,12 +56560,13 @@
   "kind": "word",
   "id": "i-39-w5",
   "text": "חֲנָיָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hd7b6e838",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chanayah"
  },
  {
   "path": "audio/m/israeli/word/i-39-w6.mp3",
@@ -56549,12 +56589,13 @@
   "kind": "word",
   "id": "i-39-w6",
   "text": "מָנוֹעַ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h411fe0c1",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "mano'a"
  },
  {
   "path": "audio/m/israeli/word/i-39-w7.mp3",
@@ -56577,12 +56618,13 @@
   "kind": "word",
   "id": "i-39-w7",
   "text": "צְמִיג",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h550cdc9e",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "tzemig"
  },
  {
   "path": "audio/m/israeli/word/i-39-w8.mp3",
@@ -56605,12 +56647,13 @@
   "kind": "word",
   "id": "i-39-w8",
   "text": "נָתִיב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hba3a74f8",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "nativ"
  },
  {
   "path": "audio/m/israeli/word/i-39-w9.mp3",
@@ -56633,12 +56676,13 @@
   "kind": "word",
   "id": "i-39-w9",
   "text": "רִמְזוּר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h96dd5fec",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "rimzur"
  },
  {
   "path": "audio/m/israeli/word/i-39-w10.mp3",
@@ -56661,12 +56705,13 @@
   "kind": "word",
   "id": "i-39-w10",
   "text": "יָשָׁר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h38dc1dcd",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yashar"
  },
  {
   "path": "audio/m/israeli/word/i-39-w11.mp3",
@@ -56688,11 +56733,12 @@
   "kind": "word",
   "id": "i-39-w11",
   "text": "עֲצֹר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "atzor"
  },
  {
   "path": "audio/m/israeli/word/i-39-w12.mp3",
@@ -56715,12 +56761,13 @@
   "kind": "word",
   "id": "i-39-w12",
   "text": "לְאַט",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h2d8a8058",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "le'at"
  },
  {
   "path": "audio/m/israeli/word/i-40-w1.mp3",
@@ -56743,12 +56790,13 @@
   "kind": "word",
   "id": "i-40-w1",
   "text": "טִיּוּל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h6f66cc99",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "tiyul"
  },
  {
   "path": "audio/m/israeli/word/i-40-w2.mp3",
@@ -56771,12 +56819,13 @@
   "kind": "word",
   "id": "i-40-w2",
   "text": "מַסְלוּל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hd1c3a40b",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "maslul"
  },
  {
   "path": "audio/m/israeli/word/i-40-w3.mp3",
@@ -56799,12 +56848,13 @@
   "kind": "word",
   "id": "i-40-w3",
   "text": "הַר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hc91c0d80",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "har"
  },
  {
   "path": "audio/m/israeli/word/i-40-w4.mp3",
@@ -56827,12 +56877,13 @@
   "kind": "word",
   "id": "i-40-w4",
   "text": "נַחַל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hd0bb45f0",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "nachal"
  },
  {
   "path": "audio/m/israeli/word/i-40-w5.mp3",
@@ -56855,12 +56906,13 @@
   "kind": "word",
   "id": "i-40-w5",
   "text": "שְׁבִיל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h8ccd0ca9",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shevil"
  },
  {
   "path": "audio/m/israeli/word/i-40-w6.mp3",
@@ -56883,12 +56935,13 @@
   "kind": "word",
   "id": "i-40-w6",
   "text": "מַיִם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "p7f7d7b8f",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "mayim"
  },
  {
   "path": "audio/m/israeli/word/i-40-w7.mp3",
@@ -56911,12 +56964,13 @@
   "kind": "word",
   "id": "i-40-w7",
   "text": "מִפָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hb63f1e69",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "mipah"
  },
  {
   "path": "audio/m/israeli/word/i-40-w8.mp3",
@@ -56939,12 +56993,13 @@
   "kind": "word",
   "id": "i-40-w8",
   "text": "כּוֹבַע",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h60aa7df9",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kova"
  },
  {
   "path": "audio/m/israeli/word/i-40-w9.mp3",
@@ -56967,12 +57022,13 @@
   "kind": "word",
   "id": "i-40-w9",
   "text": "שֶׁמֶשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h86027352",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "shemesh"
  },
  {
   "path": "audio/m/israeli/word/i-40-w10.mp3",
@@ -56995,12 +57051,13 @@
   "kind": "word",
   "id": "i-40-w10",
   "text": "חַם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h5c2548dc",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "cham"
  },
  {
   "path": "audio/m/israeli/word/i-40-w11.mp3",
@@ -57022,11 +57079,12 @@
   "kind": "word",
   "id": "i-40-w11",
   "text": "רָחוֹק",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "rachok"
  },
  {
   "path": "audio/m/israeli/word/i-40-w12.mp3",
@@ -57048,11 +57106,12 @@
   "kind": "word",
   "id": "i-40-w12",
   "text": "קָרוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "karov"
  },
  {
   "path": "audio/m/israeli/word/i-41-w1.mp3",
@@ -57075,12 +57134,13 @@
   "kind": "word",
   "id": "i-41-w1",
   "text": "חוֹף",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hde2302bb",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chof"
  },
  {
   "path": "audio/m/israeli/word/i-41-w2.mp3",
@@ -57103,12 +57163,13 @@
   "kind": "word",
   "id": "i-41-w2",
   "text": "יָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h4692cd32",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "yam"
  },
  {
   "path": "audio/m/israeli/word/i-41-w3.mp3",
@@ -57131,12 +57192,13 @@
   "kind": "word",
   "id": "i-41-w3",
   "text": "חוֹל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "hf5492299",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chol"
  },
  {
   "path": "audio/m/israeli/word/i-41-w4.mp3",
@@ -57327,12 +57389,13 @@
   "kind": "word",
   "id": "i-41-w10",
   "text": "כּוֹבַע",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "h60aa7df9",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "kova"
  },
  {
   "path": "audio/m/israeli/word/i-41-w11.mp3",
@@ -57355,12 +57418,13 @@
   "kind": "word",
   "id": "i-41-w11",
   "text": "בֶּגֶד",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "he1a5e616",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "beged"
  },
  {
   "path": "audio/m/israeli/word/i-41-w12.mp3",
@@ -57383,12 +57447,13 @@
   "kind": "word",
   "id": "i-41-w12",
   "text": "סַכָּנָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "he9067edb",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "sakanah"
  },
  {
   "path": "audio/m/israeli/word/i-42-w1.mp3",

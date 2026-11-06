@@ -29763,11 +29763,12 @@
   "kind": "line",
   "id": "cafe-01",
   "text": "שֻׁלְחָן לִשְׁנַיִם, בְּבַקָּשָׁה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "a table for two, please"
+  "english": "a table for two, please",
+  "phonetic": "shulchan lishnayim, bevakashah"
  },
  {
   "path": "audio/f/israeli/line/cafe-01.mp3",
@@ -29790,11 +29791,12 @@
   "kind": "line",
   "id": "cafe-02",
   "text": "אֶפְשָׁר לִרְאוֹת אֶת הַתַּפְרִיט?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "can I see the menu?"
+  "english": "can I see the menu?",
+  "phonetic": "efshar lir'ot et hatafrit?"
  },
  {
   "path": "audio/f/israeli/line/cafe-02.mp3",
@@ -58987,7 +58989,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "where to?"
+  "english": "where to?",
+  "phonetic": "le'an?"
  },
  {
   "path": "audio/f/israeli/word/taxi-02.mp3",
@@ -58996,11 +58999,12 @@
   "kind": "word",
   "id": "taxi-02",
   "text": "לְאָן?",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "where to?"
+  "english": "where to?",
+  "phonetic": "le'an?"
  },
  {
   "path": "audio/m/israeli/word/taxi-05.mp3",
@@ -59013,7 +59017,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "to the hotel"
+  "english": "to the hotel",
+  "phonetic": "lamalon"
  },
  {
   "path": "audio/f/israeli/word/taxi-05.mp3",
@@ -59022,11 +59027,12 @@
   "kind": "word",
   "id": "taxi-05",
   "text": "לַמָּלוֹן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "to the hotel"
+  "english": "to the hotel",
+  "phonetic": "lamalon"
  },
  {
   "path": "audio/m/israeli/word/taxi-06.mp3",
@@ -59039,7 +59045,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "to the Western Wall"
+  "english": "to the Western Wall",
+  "phonetic": "lakotel"
  },
  {
   "path": "audio/f/israeli/word/taxi-06.mp3",
@@ -59048,11 +59055,12 @@
   "kind": "word",
   "id": "taxi-06",
   "text": "לַכּוֹתֶל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "to the Western Wall"
+  "english": "to the Western Wall",
+  "phonetic": "lakotel"
  },
  {
   "path": "audio/m/israeli/word/directions-05.mp3",
@@ -60054,11 +60062,12 @@
   "kind": "word",
   "id": "small-talk-15-m",
   "text": "תִּרְגַּע",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "tirga"
  },
  {
   "path": "audio/m/israeli/word/small-talk-15-f.mp3",
@@ -60108,11 +60117,12 @@
   "kind": "word",
   "id": "small-talk-18-m",
   "text": "חָבֵר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "phonetic": "chaver"
  },
  {
   "path": "audio/m/israeli/word/small-talk-18-f.mp3",
@@ -60125,7 +60135,8 @@
   "source": "none",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "friend"
+  "english": "friend",
+  "phonetic": "chaverah"
  },
  {
   "path": "audio/f/israeli/word/small-talk-18-f.mp3",
@@ -60134,11 +60145,12 @@
   "kind": "word",
   "id": "small-talk-18-f",
   "text": "חֲבֵרָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "phrasebook",
   "scope": "israeli-only",
-  "english": "friend"
+  "english": "friend",
+  "phonetic": "chaverah"
  },
  {
   "path": "audio/m/israeli/word/help-01.mp3",

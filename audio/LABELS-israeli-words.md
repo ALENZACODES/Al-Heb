@@ -4,7 +4,7 @@ Read the Hebrew **right to left: ←**. Its English meaning is below it; the pho
 
 The stable filenames and stable audio IDs remain unchanged. `m` is Ari; `f` is Noa. The same word is listed once per voice recording.
 
-**Words:** 2612 clips. **Reading lines:** 421 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
+**Words:** 2661 clips. **Reading lines:** 423 clips. English and phonetic labels are also available in [INDEX.csv](INDEX.csv) for every produced clip in the branch.
 
 Phonetics use the project’s siddur-style Latin transliteration (for example, `ch` for the throat sound, `kh` for the similar guttural sound, `tz` for צ, and `sh` for שׁ). Hebrew pronunciation is authoritative; Latin spelling is a learner aid.
 
@@ -12,7 +12,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli words
 
-2612 English labels; 0 UNKNOWN.
+2661 English labels; 2 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -1541,6 +1541,12 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [sim-shalom-w8](f/israeli/word/sim-shalom-w8.mp3) | עָלֵינוּ | it is upon us | aleinu |
 | [sim-shalom-w9](f/israeli/word/sim-shalom-w9.mp3) | וְעַל | and upon | ve'al |
 | [small-talk-15-f](f/israeli/word/small-talk-15-f.mp3) | תִּרְגְּעִי | chill / calm down | tirge'i |
+| [small-talk-15-m](f/israeli/word/small-talk-15-m.mp3) | תִּרְגַּע | UNKNOWN | tirga |
+| [small-talk-18-f](f/israeli/word/small-talk-18-f.mp3) | חֲבֵרָה | friend | chaverah |
+| [small-talk-18-m](f/israeli/word/small-talk-18-m.mp3) | חָבֵר | UNKNOWN | chaver |
+| [taxi-02](f/israeli/word/taxi-02.mp3) | לְאָן? | where to? | le'an? |
+| [taxi-05](f/israeli/word/taxi-05.mp3) | לַמָּלוֹן | to the hotel | lamalon |
+| [taxi-06](f/israeli/word/taxi-06.mp3) | לַכּוֹתֶל | to the Western Wall | lakotel |
 | [torah-barchu-w1](f/israeli/word/torah-barchu-w1.mp3) | בָּרְכוּ | bless | barkhu |
 | [torah-barchu-w2](f/israeli/word/torah-barchu-w2.mp3) | אֶת | the direct object | et |
 | [torah-barchu-w3](f/israeli/word/torah-barchu-w3.mp3) | אֲדֹנָי | the LORD | adonai |
@@ -2598,6 +2604,49 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [hanukkah-candle-w6](m/israeli/word/hanukkah-candle-w6.mp3) | הָעוֹלָם | the world | ha'olam |
 | [hanukkah-candle-w7](m/israeli/word/hanukkah-candle-w7.mp3) | אֲשֶׁר | who/that | asher |
 | [hanukkah-candle-w8](m/israeli/word/hanukkah-candle-w8.mp3) | קִדְּשָׁנוּ | made us holy | kideshanu |
+| [hanukkah-candle-w9](m/israeli/word/hanukkah-candle-w9.mp3) | בְּמִצְוֹתָיו | with his commandments | bemitzvotav |
+| [hanukkah-nissim-w1](m/israeli/word/hanukkah-nissim-w1.mp3) | בָּרוּךְ | blessed | barukh |
+| [hanukkah-nissim-w10](m/israeli/word/hanukkah-nissim-w10.mp3) | בַּיָּמִים | in the days | bayamim |
+| [hanukkah-nissim-w11](m/israeli/word/hanukkah-nissim-w11.mp3) | הָהֵם | those | hahem |
+| [hanukkah-nissim-w12](m/israeli/word/hanukkah-nissim-w12.mp3) | בַּזְּמַן | at the time | bazeman |
+| [hanukkah-nissim-w13](m/israeli/word/hanukkah-nissim-w13.mp3) | הַזֶּה׃ | this | hazeh |
+| [hanukkah-nissim-w2](m/israeli/word/hanukkah-nissim-w2.mp3) | אַתָּה | you, thou | atah |
+| [hanukkah-nissim-w3](m/israeli/word/hanukkah-nissim-w3.mp3) | אֲדֹנָי | the LORD | adonai |
+| [hanukkah-nissim-w4](m/israeli/word/hanukkah-nissim-w4.mp3) | אֱלֹהֵינוּ | our-God | eloheinu |
+| [hanukkah-nissim-w5](m/israeli/word/hanukkah-nissim-w5.mp3) | מֶלֶךְ | king | melekh |
+| [hanukkah-nissim-w6](m/israeli/word/hanukkah-nissim-w6.mp3) | הָעוֹלָם | the world | ha'olam |
+| [hanukkah-nissim-w7](m/israeli/word/hanukkah-nissim-w7.mp3) | שֶׁעָשָׂה | who performed | she'asah |
+| [hanukkah-nissim-w8](m/israeli/word/hanukkah-nissim-w8.mp3) | נִסִּים | miracles | nisim |
+| [hanukkah-nissim-w9](m/israeli/word/hanukkah-nissim-w9.mp3) | לַאֲבוֹתֵינוּ | for our ancestors | la'avoteinu |
+| [hashivenu-w1](m/israeli/word/hashivenu-w1.mp3) | הֲשִׁיבֵנוּ | Turn us | hashivenu |
+| [hashivenu-w2](m/israeli/word/hashivenu-w2.mp3) | אֲדֹנָי | the LORD | adonai |
+| [hashivenu-w3](m/israeli/word/hashivenu-w3.mp3) | אֵלֶיךָ | toward you | elekha |
+| [hashivenu-w4](m/israeli/word/hashivenu-w4.mp3) | וְנָשׁוּבָה | and we shall return | venashuvah |
+| [hashivenu-w5](m/israeli/word/hashivenu-w5.mp3) | חַדֵּשׁ | Renew | chadesh |
+| [hashivenu-w6](m/israeli/word/hashivenu-w6.mp3) | יָמֵינוּ | our days | yameinu |
+| [hashivenu-w7](m/israeli/word/hashivenu-w7.mp3) | כְּקֶדֶם׃ | as of old | kekedem |
+| [havdalah-flame-w1](m/israeli/word/havdalah-flame-w1.mp3) | בָּרוּךְ | blessed | barukh |
+| [havdalah-flame-w2](m/israeli/word/havdalah-flame-w2.mp3) | אַתָּה | you, thou | atah |
+| [havdalah-flame-w3](m/israeli/word/havdalah-flame-w3.mp3) | אֲדֹנָי | the LORD | adonai |
+| [havdalah-flame-w4](m/israeli/word/havdalah-flame-w4.mp3) | אֱלֹהֵינוּ | our-God | eloheinu |
+| [havdalah-flame-w5](m/israeli/word/havdalah-flame-w5.mp3) | מֶלֶךְ | king | melekh |
+| [havdalah-flame-w6](m/israeli/word/havdalah-flame-w6.mp3) | הָעוֹלָם | the world | ha'olam |
+| [havdalah-flame-w7](m/israeli/word/havdalah-flame-w7.mp3) | בּוֹרֵא | creator | bore |
+| [havdalah-flame-w8](m/israeli/word/havdalah-flame-w8.mp3) | מְאוֹרֵי | the lights of | me'orei |
+| [havdalah-flame-w9](m/israeli/word/havdalah-flame-w9.mp3) | הָאֵשׁ׃ | the fire | ha'esh |
+| [havdalah-hamavdil-w1](m/israeli/word/havdalah-hamavdil-w1.mp3) | בָּרוּךְ | who separates | barukh |
+| [havdalah-hamavdil-w10](m/israeli/word/havdalah-hamavdil-w10.mp3) | לְחוֹל | to the nations | lechol |
+| [havdalah-hamavdil-w11](m/israeli/word/havdalah-hamavdil-w11.mp3) | וּבֵין | and between | uvein |
+| [havdalah-hamavdil-w12](m/israeli/word/havdalah-hamavdil-w12.mp3) | אוֹר | to shine, be illuminated | or |
+| [havdalah-hamavdil-w13](m/israeli/word/havdalah-hamavdil-w13.mp3) | לְחֹשֶׁךְ | to darkness | lechoshekh |
+| [havdalah-hamavdil-w14](m/israeli/word/havdalah-hamavdil-w14.mp3) | וּבֵין | to six | uvein |
+| [havdalah-hamavdil-w15](m/israeli/word/havdalah-hamavdil-w15.mp3) | יִשְׂרָאֵל | days of | yisra'el |
+| [havdalah-hamavdil-w16](m/israeli/word/havdalah-hamavdil-w16.mp3) | לָעַמִּים | work | la'amim |
+| [havdalah-hamavdil-w17](m/israeli/word/havdalah-hamavdil-w17.mp3) | וּבֵין | and between | uvein |
+| [havdalah-hamavdil-w18](m/israeli/word/havdalah-hamavdil-w18.mp3) | יוֹם | day | yom |
+| [havdalah-hamavdil-w19](m/israeli/word/havdalah-hamavdil-w19.mp3) | הַשְּׁבִיעִי | the seventh | hashevi'i |
+| [havdalah-hamavdil-w2](m/israeli/word/havdalah-hamavdil-w2.mp3) | אַתָּה | you, thou | atah |
+| [havdalah-hamavdil-w20](m/israeli/word/havdalah-hamavdil-w20.mp3) | לְשֵׁשֶׁת | who separates | lesheshet |
 | [numbers-01-f](m/israeli/word/numbers-01-f.mp3) | אַחַת | one (f.) | achat |
 | [numbers-01-m](m/israeli/word/numbers-01-m.mp3) | אֶחָד | one | echad |
 | [numbers-02-f](m/israeli/word/numbers-02-f.mp3) | שְׁתַּיִם | two (f.) | shtayim |
@@ -2631,7 +2680,7 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Israeli reading lines
 
-421 English labels; 0 UNKNOWN.
+423 English labels; 0 UNKNOWN.
 
 | file | hebrew | english | phonetic |
 | --- | --- | --- | --- |
@@ -2954,6 +3003,8 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 | [bless-priestly-2](m/israeli/line/bless-priestly-2.mp3) | יָאֵר אֲדֹנָי פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃ | The LORD make His face to shine upon thee, and be gracious unto thee; | ya'er adonai panav elekha vichuneka |
 | [bless-priestly-3](m/israeli/line/bless-priestly-3.mp3) | יִשָּׂא אֲדֹנָי פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃ | The LORD lift up His countenance upon thee, and give thee peace. | yisa adonai panav elekha veyasem lekha shalom |
 | [brich-shmei](m/israeli/line/brich-shmei.mp3) | בְּרִיךְ שְׁמֵהּ דְּמָרֵא עָלְמָא בְּרִיךְ כִּתְרָךְ וְאַתְרָךְ יְהֵא רְעוּתָךְ עִם עַמָּךְ יִשְׂרָאֵל לְעָלַם וּפֻרְקַן יְמִינָךְ אַחֲזֵי לְעַמָּךְ בְּבֵית מַקְדְּשָׁךְ וּלְאַמְטוּיֵי לָנָא מִטּוּב נְהוֹרָךְ וּלְקַבֵּל צְלוֹתָנָא בְּרַחֲמִין יְהֵא רַעֲוָא קֳדָמָךְ דְּתוֹרִיךְ לָן חַיִּין בְּטִיבוּ וְלֶהֱוֵי אֲנָא פְקִידָא בְּגוֹ צַדִּיקַיָּא לְמִרְחַם עָלַי וּלְמִנְטַר יָתִי וְיַת־כָּל־דִּי־לִי וְדִי־לְעַמָּךְ יִשְׂרָאֵל אַנְתְּ הוּא זָן לְכֹלָּא וּמְפַרְנֵס לְכֹלָּא אַנְתְּ הוּא שַׁלִּיט עַל־כֹּלָּא אַנְתְּ הוּא דְּשַׁלִּיט עַל־מַלְכַיָּא וּמַלְכוּתָא דִּילָךְ הִיא אֲנָא עַבְדָּא דְקֻדְשָׁא בְּרִיךְ הוּא דְּסָגִידְנָא קַמֵּהּ וּמִקַּמֵּי דִּיקַר אוֹרַיְתֵהּ בְּכָל־עִדָּן וְעִדָּן לָא עַל־אֱנָשׁ רָחִיצְנָא וְלָא עַל־בַּר־אֱלָהִין סָמִיכְנָא אֶלָּא בֵּאלָהָא דִשְׁמַיָּא דְּהוּא אֱלָהָא קְשׁוֹט וְאוֹרַיְתֵהּ קְשׁוֹט וּנְבִיאוֹהִי קְשׁוֹט וּמַסְגֵּא לְמֶעְבַּד טָבְוָן וּקְשׁוֹט בֵּהּ אֲנָא רָחִיץ וְלִשְׁמֵהּ קַדִּישָׁא יַקִּירָא אֲנָא אֵמַר תֻּשְׁבְּחָן יְהֵא רַעֲוָא קֳדָמָךְ דְּתִפְתַּח לִבָּאי בְּאוֹרַיְתָא וְתַשְׁלִים מִשְׁאֲלִין דְּלִבָּאי וְלִבָּא דְכָל־עַמָּךְ יִשְׂרָאֵל לְטָב וּלְחַיִּין וְלִשְׁלָם׃ | Blessed is the name of the Master of the world; blessed is your crown and your place. May your good will be with your people Israel for ever; show your people the redemption of your right hand in your Temple, bring us of the goodness of your light, and accept our prayer in mercy. May it be your will to lengthen our life in goodness, and let me be counted among the righteous, so that you have mercy on me and guard me and all that is mine and your people Israel's. You feed and sustain all; you rule over all; you rule over kings, and the kingdom is yours. I am a servant of the Holy One, blessed be he, before whom and before whose glorious Torah I bow at every time. Not in any person do I trust, and not on any angel do I rely, but on the God of heaven, who is the God of truth, whose Torah is truth and whose prophets are truth, and who abounds in deeds of goodness and truth. In him I trust, and to his holy and glorious name I utter praises. May it be your will to open my heart to Torah, to fulfil the requests of my heart and the heart of all your people Israel, for good, for life and for peace. | berikh shemeh demare alema berikh kitrakh ve'atrakh yehe re'utakh im amakh yisra'el le'alam ufurkan yeminakh achazei le'amakh beveit makdeshakh ule'amtuyei lana mituv nehorakh ulekabel tzelotana berachamin yehe ra'ava kodamakh detorikh lan chayin betivu velehevei ana fekida bego tzadikaya lemircham alai ulemintar yati veyat-kol-di-li vedi-le'amakh yisra'el ant hu zan lekhola umefarnes lekhola ant hu shalit al-kola ant hu deshalit al-malkhaya umalkhuta dilakh hi ana avda dekudsha berikh hu desagidena kameh umikamei dikar orayteh bekhol-idan ve'idan la al-enash rachitzena vela al-bar-elahin samikhena ela belaha dishmaya dehu elaha keshot ve'orayteh keshot unevi'ohi keshot umasge lemebad tavevan ukeshot beh ana rachitz velishmeh kadisha yakira ana emar tushbechan yehe ra'ava kodamakh detiftach libay be'orayta vetashlim mish'alin delibay veliba dekhal-amakh yisra'el letav ulechayin velishlam |
+| [cafe-01](m/israeli/line/cafe-01.mp3) | שֻׁלְחָן לִשְׁנַיִם, בְּבַקָּשָׁה | a table for two, please | shulchan lishnayim, bevakashah |
+| [cafe-02](m/israeli/line/cafe-02.mp3) | אֶפְשָׁר לִרְאוֹת אֶת הַתַּפְרִיט? | can I see the menu? | efshar lir'ot et hatafrit? |
 | [candle-shabbat](m/israeli/line/candle-shabbat.mp3) | בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת׃ | Blessed are you, LORD our God, king of the world, who made us holy with his commandments and commanded us to light the lamp of Shabbat. | barukh atah adonai eloheinu melekh ha'olam asher kideshanu bemitzvotav vetzivanu lehadlik ner shel shabat |
 | [ein-kamocha](m/israeli/line/ein-kamocha.mp3) | אֵין־כָּמוֹךָ בָאֱלֹהִים אֲדֹנָי וְאֵין כְּמַעֲשֶׂיךָ׃ | There is none like unto Thee among the gods, O Lord, And there are no works like Thine. | ein-kamokha va'elohim adonai ve'ein kema'asekha |
 | [etz-chaim](m/israeli/line/etz-chaim.mp3) | עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְכֶיהָ מְאֻשָּׁר׃ דְּרָכֶיהָ דַרְכֵי נֹעַם וְכָל נְתִיבוֹתֶיהָ שָׁלוֹם׃ אֹרֶךְ יָמִים בִּימִינָהּ בִּשְׂמֹאלָהּ עֹשֶׁר וְכָבוֹד׃ אֲדֹנָי חָפֵץ לְמַעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר׃ | It is a tree of life to those who hold fast to it, and those who support it are happy. Its ways are ways of pleasantness and all its paths are peace. Length of days is in its right hand, in its left hand riches and honour. The LORD desired, for the sake of his righteousness, to make the Torah great and glorious. | etz chayim hi lamachazikim bah vetomekheha me'ushar derakheha darkhei no'am vekhol netivoteha shalom orekh yamim biminah bismolah osher vekhavod adonai chafetz lema'an tzidko yagdil torah veyadir |
@@ -3059,4 +3110,4 @@ English is aligned from the project’s vocabulary, phrasebook and corpus transl
 
 ## Validation
 
-All 3413 produced clips in INDEX.csv have an English label; 0 UNKNOWN. Filenames and IDs are unchanged.
+All 3464 produced clips in INDEX.csv have an English label; 2 UNKNOWN. Filenames and IDs are unchanged.

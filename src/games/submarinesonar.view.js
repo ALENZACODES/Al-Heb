@@ -28,7 +28,7 @@ export function mount(root,ctx) {
   const status = h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading recorded sonar targets…');
   const board = h('div',{class:'game-board'});
   const article = h('article',{class:'card game-card game-submarinesonar'},h('h1',{id:'view-title'},'Submarine Sonar Vowels'),
-    h('p',{},'Listen to an actual Hebrew word recording, then steer through its exact pointed spelling.'), status,board);
+    h('p',{},'Hear the word spoken aloud, then steer through its exact pointed spelling.'), status,board);
   root.replaceChildren(article);
   async function paint(feedback) {
     if(!alive||!article.isConnected)return;

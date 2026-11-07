@@ -327,3 +327,27 @@
   .show-portal { transition: none !important; }
   .show-portal:hover { transform: none; }
 }
+
+
+/* Wide cinema is scoped to Home/Welcome; lessons and forms keep their original,
+   readable narrow measure. The photographed tree deserves room on desktop. */
+main:has(.showcase) {
+  max-inline-size: min(100%, 78rem);
+  padding-inline: clamp(.65rem, 2vw, 1.2rem);
+}
+main:has(.showcase) #home-today-host,
+main:has(.showcase) #home-rest,
+main:has(.showcase) #home-dests-host {
+  max-inline-size: 59rem;
+  margin-inline: auto;
+}
+main:has(.showcase) .show-hero-text {
+  padding: clamp(1.1rem, 2.7vw, 2.15rem) clamp(1.15rem, 3.5vw, 2.6rem);
+}
+main:has(.showcase) .show-hero {
+  border-radius: 19px;
+  box-shadow: 0 17px 46px rgba(43,43,43,.23);
+}
+@media (prefers-reduced-motion: reduce) {
+  main:has(.showcase) .show-hero { box-shadow: none; }
+}

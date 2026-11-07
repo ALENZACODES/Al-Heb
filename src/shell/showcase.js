@@ -38,7 +38,7 @@ const PORTALS = [
 
 function portalsNode(has) {
   return h('section', { class: 'show-portals', 'aria-labelledby': 'show-portals-title' },
-    h('h2', { id: 'show-portals-title', class: 'show-section-title' }, 'Choose your first doorway'),
+    h('p', { id: 'show-portals-title', class: 'show-section-title' }, 'Choose your first doorway'),
     h('p', { class: 'show-portals-intro' }, 'Begin anywhere. Every doorway is open, and you can always return.'),
     h('ul', { class: 'show-portal-grid' }, ...PORTALS.filter(([name]) => has(name)).map(([, href, title, summary, scene]) =>
       h('li', {},

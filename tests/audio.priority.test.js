@@ -24,10 +24,14 @@ test('priority.mjs --check says the CSV files are current', () => {
   const r = spawnSync(process.execPath, [path.join(root, 'tools/audio/priority.mjs'), '--check'], { encoding: 'utf8' });
   assert.equal(r.status, 0, r.stderr);
 });
-test('the list has the stated columns and ranks 1..500 with unique ids', () => {
+test('the list has the stated columns and ranks 1..N with unique ids', () => {
+  // N is the number of Israeli man-voice word entries still missing audio, capped
+  // at DEFAULT_TOP — once the library is nearly complete N is small (4 on 2026-11-07),
+  // not 500. Ranks are 1..N whatever N is.
+  assert.ok(rows.length <= DEFAULT_TOP, `list has ${rows.length} rows, over the ${DEFAULT_TOP} cap`);
+  assert.ok(rows.length > 0, 'the priority list is empty: nothing is missing');
   assert.deepEqual(Object.keys(rows[0]), ROW_COLS);
-  assert.equal(rows.length, DEFAULT_TOP);
-  assert.deepEqual(rows.map((r) => Number(r.rank)), Array.from({ length: DEFAULT_TOP }, (_, i) => i + 1));
+  assert.deepEqual(rows.map((r) => Number(r.rank)), Array.from({ length: rows.length }, (_, i) => i + 1));
   assert.equal(new Set(rows.map((r) => r.id)).size, rows.length);
 });
 test('every row is a missing Israeli man-voice word entry and its Hebrew is the manifest text, byte for byte', () => {
@@ -51,8 +55,12 @@ test('nothing human-only, held back, Priestly Blessing or flagged is listed', ()
   assert.ok(HELD_BACK_IDS.has('hf1da5ea6'));
   const data = loadData(root);
   const { rows: all, excluded } = compute(data);
-  assert.ok(!all.some((r) => r.id === 'hf1da5ea6'));
-  assert.ok(excluded.some((r) => r.id === 'hf1da5ea6'));
+  // No held-back id is ever ranked. A held-back id that is still missing must
+  // also show up in the excluded list with a reason; one that already has audio
+  // (hf1da5ea6 has a clip since the 2026-11-07 landings) is in neither list.
+  for (const id of HELD_BACK_IDS) assert.ok(!all.some((r) => r.id === id), id);
+  const missingHeldBack = [...HELD_BACK_IDS].filter((id) => data.manifest.find((e) => e.id === id)?.status === 'missing');
+  for (const id of missingHeldBack) assert.ok(excluded.some((r) => r.id === id), id);
   const ex = parseCsv(read(OUT_EXCLUDED));
   assert.equal(ex.length, excluded.length);
   assert.ok(ex.every((r) => r.reasons), 'every excluded row says why');
@@ -71,15 +79,19 @@ test('scores are non-increasing down the list and the tier bands do not overlap'
   }
 });
 test('first-day and v0 lesson words come before everything else in the real list', () => {
+  // Tiers appear in tier order (T1 band, then T2, ...). A band with no missing
+  // words is simply absent — once every first-day word has audio there is no
+  // T1 row and the list starts at T3, which is still correctly ordered.
+  const order = Object.fromEntries(TIERS.map((t, i) => [t.id, i]));
   const tiers = rows.map((r) => r.tier);
-  assert.equal(tiers[0], 'T1');
-  const lastT2 = tiers.lastIndexOf('T2'); const firstT3 = tiers.indexOf('T3');
-  assert.ok(lastT2 < firstT3);
-  assert.ok(rows.slice(0, 5).some((r) => r.id === 'r01-w1'), 'the first-day word of r01 is near the top');
+  for (let i = 1; i < tiers.length; i++) assert.ok(order[tiers[i]] >= order[tiers[i - 1]], `${rows[i].id}: tier ${tiers[i]} outranks the row above`);
+  if (tiers.includes('T1')) assert.equal(tiers[0], 'T1');
+  const r01 = rows.findIndex((r) => r.id === 'r01-w1');
+  if (r01 !== -1) assert.ok(r01 < 5, 'the first-day word of r01 is near the top');
 });
 test('the batch files match the generator manifest header and the ranked slices, with no Hebrew of their own', () => {
   const files = fs.readdirSync(path.join(root, BATCH_DIR)).filter((f) => /^batch-\d+\.csv$/.test(f)).sort();
-  assert.equal(files.length, Math.ceil(DEFAULT_TOP / DEFAULT_BATCH));
+  assert.equal(files.length, Math.ceil(rows.length / DEFAULT_BATCH));
   const seen = [];
   files.forEach((f, n) => {
     const text = read(`${BATCH_DIR}/${f}`);

@@ -20,7 +20,7 @@ Each round has five words. The learner can choose the first 24, all 240, or one 
 
 ## Nine suggested skill bands
 
-The games hub `#/games` retains the existing **25 games** and adds Word Finder as the 26th. All have a visible suggested **Level 1–9** label:
+The games hub `#/games` retains the 24 currently listed original games, keeps the unfinished Echo Chamber directly accessible without advertising it, and adds Word Finder as the 25th listed game. All have a visible suggested **Level 1–9** label:
 
 | Level | Learning intent |
 | --- | --- |

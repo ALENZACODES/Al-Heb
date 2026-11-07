@@ -1,9 +1,9 @@
-// A living, ancient Tree of Life. The source is the project's existing fine-art
-// homepage tree, not a cartoon made from geometric SVG circles and straight limbs.
+// A living, ancient Tree of Life. The source is a clean, photo-real ancient-tree artwork cropped without any baked-in
+// text or UI, not a cartoon made from geometric SVG circles and straight limbs.
 // Motion stays in CSS: slow camera drift, constellations and one travelling light ray.
 import { h } from './ui.js';
 
-export const ANCIENT_TREE_SRC = 'assets/img/gen/HERO_home_tree.webp';
+export const ANCIENT_TREE_SRC = 'assets/img/gen/HERO_tree_of_life_realistic.webp';
 export const ANCIENT_TREE_DESCRIPTION =
   'An immense, centuries-old olive Tree of Life with a massive hollow, tightly twisted weathered trunk, ' +
   'long exposed roots gripping stone, and silver-green branches beneath a golden astral sky.';
@@ -61,7 +61,7 @@ export function astralTreeNode() {
   const scene = h('div', { class: 'astral-scene', role: 'img', 'aria-label': ANCIENT_TREE_DESCRIPTION },
     h('div', { class: 'astral-photo-motion', 'aria-hidden': 'true' },
       h('img', { class: 'astral-tree-photo', src: ANCIENT_TREE_SRC, alt: '',
-        width: '1600', height: '914', loading: 'eager', decoding: 'async' })),
+        width: '900', height: '455', loading: 'eager', decoding: 'async' })),
     h('div', { class: 'astral-nightfall', 'aria-hidden': 'true' }),
     h('div', { class: 'astral-stars', 'aria-hidden': 'true' }),
     h('div', { class: 'astral-ray', 'aria-hidden': 'true' }),

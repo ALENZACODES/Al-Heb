@@ -1,6 +1,6 @@
 {
  "schema": "alef-speak-pairs/1",
- "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Answers come from the source niqqud; a wrong point there makes a wrong answer here. No recorded clips exist yet; the browser voice is the only sound.",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Answers come from the source niqqud; a wrong point there makes a wrong answer here. No recorded teacher exists; the sound is the browser voice, or for a few words a synthetic clip nobody has reviewed.",
  "contrasts": [
   {
    "id": "bet-vet",
@@ -554,7 +554,7 @@
    "contrast": "bet-vet",
    "type": "sound",
    "he": "יָשַׁב",
-   "en": "to sit, to be in a position with the torso upright and the legs supported",
+   "en": "to sit; to live (somewhere)",
    "translit": "yashav",
    "answer": "v",
    "slot": 2,
@@ -2437,7 +2437,7 @@
    "contrast": "kamatz",
    "type": "sound",
    "he": "אֹהֶל",
-   "en": "a collective term for all that covers a dead body or that a dead body covers",
+   "en": "tent",
    "translit": "ohel",
    "answer": "o",
    "slot": 0,
@@ -3076,7 +3076,7 @@
    "contrast": "shin-sin",
    "type": "sound",
    "he": "שֶׁל",
-   "en": "of, belonging to, owned by, pertaining to",
+   "en": "of; belonging to",
    "translit": "shel",
    "answer": "sh",
    "slot": 0,

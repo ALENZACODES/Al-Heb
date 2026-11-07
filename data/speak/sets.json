@@ -1,6 +1,6 @@
 {
  "schema": "alef-speak-sets/1",
- "generated": "2026-11-04",
+ "generated": "2026-11-07",
  "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
  "count": 60,
  "sets": [

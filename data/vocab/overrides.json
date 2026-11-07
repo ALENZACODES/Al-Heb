@@ -1529,6 +1529,103 @@
    "tags": [
     "function"
    ]
+  },
+  "vcae66f69": {
+   "rank": 13,
+   "lemma": "של",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. Wiktionary שֶׁל: of, belonging to. The longer \"owned by, pertaining to\" is the same sense, shortened for learners. https://en.wiktionary.org/wiki/%D7%A9%D7%9C",
+   "gloss": "of; belonging to"
+  },
+  "v4114852f": {
+   "rank": 105,
+   "lemma": "ישב",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. Pa'al יָשַׁב. \"to sit\" is the head sense; \"to live (somewhere)\" restates this record's own alt \"to settle, to establish a residence\", not a different verb. https://en.wiktionary.org/wiki/%D7%99%D7%A9%D7%91",
+   "gloss": "to sit; to live (somewhere)"
+  },
+  "v4ac4f0b7": {
+   "rank": 197,
+   "lemma": "הבין",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. הֵבִין is the hifil \"to understand\". The extra clauses repeat that sense. https://en.wiktionary.org/wiki/%D7%94%D7%91%D7%99%D7%9F",
+   "gloss": "to understand"
+  },
+  "v35d3a7b7": {
+   "rank": 256,
+   "lemma": "דאג",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. Pa'al דָּאַג \"to worry\". \"to be concerned\" is the same sense. https://en.wiktionary.org/wiki/%D7%93%D7%90%D7%92",
+   "gloss": "to worry"
+  },
+  "vd0415735": {
+   "rank": 562,
+   "lemma": "פחד",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. Pa'al פָּחַד, not the pi'el פִּחֵד entry. Shortened from the same fear sense. https://en.wiktionary.org/wiki/%D7%A4%D7%97%D7%93",
+   "gloss": "to fear; to be afraid"
+  },
+  "v8c6c5fb3": {
+   "rank": 638,
+   "lemma": "בלתי",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. בִּלְתִּי head senses kept. Secondary \"unless / until\" clauses were not promoted. https://en.wiktionary.org/wiki/%D7%91%D7%9C%D7%AA%D7%99",
+   "gloss": "not; except; without"
+  },
+  "v9305ab6d": {
+   "rank": 728,
+   "lemma": "נפגש",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. Nif'al נִפְגַּשׁ \"to meet\". Voice is unchanged. https://en.wiktionary.org/wiki/%D7%A0%D7%A4%D7%92%D7%A9",
+   "gloss": "to meet (with someone)"
+  },
+  "vfdf8dca8": {
+   "rank": 847,
+   "lemma": "אכפת",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. Impersonal אִכְפַּת ל־. Wiktionary examples are \"do you care\" / \"I don't care\". https://en.wiktionary.org/wiki/%D7%90%D7%9B%D7%A4%D7%AA",
+   "gloss": "(it) matters; (one) cares"
+  },
+  "v849e335c": {
+   "rank": 858,
+   "lemma": "הא",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. הָא is an interjection. Wiktionary: \"ha! (an exclamation of triumph or discovery)\" and \"behold!, this, here is\" (already this record's alt). The CSV label \"ha! (exclamation)\" was widened to keep both senses. https://en.wiktionary.org/wiki/%D7%94%D7%90",
+   "gloss": "ha! (an exclamation of triumph or discovery); behold"
+  },
+  "vd6ce87d6": {
+   "rank": 883,
+   "lemma": "חמר",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. Same pointing חֹמֶר. Wiktionary חומר modern sense is \"material, substance\"; clay/mortar and the homer measure stay in alt. The 230 L figure is Wiktionary's and was already on this record. https://en.wiktionary.org/wiki/%D7%97%D7%95%D7%9E%D7%A8",
+   "gloss": "material; substance"
+  },
+  "vbb4d8260": {
+   "rank": 896,
+   "lemma": "אמן",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker review. The bare gloss \"amen\" repeats the transliteration and the audit marks it circular. Wiktionary defines אָמֵן as the agreement response \"amen\"; the English word means \"so be it\". https://en.wiktionary.org/wiki/%D7%90%D7%9E%D7%9F https://en.wiktionary.org/wiki/amen",
+   "gloss": "amen (so be it)"
+  },
+  "va164890d": {
+   "rank": 1765,
+   "lemma": "גאון",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. גָּאוֹן. Wiktionary: biblical pride, the Gaon title, and modern genius. genius and pride were already alts. https://en.wiktionary.org/wiki/%D7%92%D7%90%D7%95%D7%9F",
+   "gloss": "genius; pride (Gaon: title of Babylonian academy heads)"
+  },
+  "ve23877c7": {
+   "rank": 2050,
+   "lemma": "עמר",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. עֹמֶר / עומר. Wiktionary: sheaf, a small dry measure, and the Omer. Sheaf and \"the Omer\" were already alts. The CSV \"about 2.2 litres\" is not applied; Wiktionary says about 2.3 L and the litre figure is an estimate. https://en.wiktionary.org/wiki/%D7%A2%D7%95%D7%9E%D7%A8",
+   "gloss": "omer (a sheaf; a small biblical dry measure; the Omer count)"
+  },
+  "vba281962": {
+   "rank": 3918,
+   "lemma": "חצפה",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. חֻצְפָּה. Wiktionary: \"chutzpah; audacity; shameless confidence\". The CSV word \"impudence\" was not copied. https://en.wiktionary.org/wiki/%D7%97%D7%95%D7%A6%D7%A4%D7%94",
+   "gloss": "audacity; shameless confidence (chutzpah)"
+  },
+  "v051f2189": {
+   "rank": 4680,
+   "lemma": "שיך",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. שֵׁיךְ is the loanword sheikh, not שַׁיָּךְ \"belonging\". https://en.wiktionary.org/wiki/sheikh",
+   "gloss": "sheikh (an Arab tribal or religious leader)"
+  },
+  "v9d548ac6": {
+   "rank": 4999,
+   "lemma": "נקוד",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. נִקּוּד / ניקוד. Wiktionary: the vowel-point system, and uncountable \"scoring\" (already this record's alt). https://en.wiktionary.org/wiki/%D7%A0%D7%99%D7%A7%D7%95%D7%93 The full build's noun keyword rule matches the English word \"point\" and would file this under Math/Measurements; topic is held at Misc Nouns.",
+   "gloss": "vowel points (the marks that show vowels in Hebrew text); scoring",
+   "topic": "Misc Nouns"
   }
  },
  "additions": [

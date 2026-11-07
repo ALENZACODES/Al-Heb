@@ -21,7 +21,7 @@
    "id": "h6ad3ddd8",
    "he": "סֵדֶר",
    "translit": "seder",
-   "en": "order, the state of being well-arranged, in the sense of putting things in order",
+   "en": "order, arrangement; the Passover seder",
    "kind": "word",
    "audioId": "i-29-w4",
    "source": "data/vocab/words.json"
@@ -57,7 +57,7 @@
    "id": "h3c9f9b9b",
    "he": "אֹהֶל",
    "translit": "ohel",
-   "en": "a collective term for all that covers a dead body or that a dead body covers",
+   "en": "tent",
    "kind": "word",
    "audioId": "h3c9f9b9b",
    "source": "data/vocab/words.json"

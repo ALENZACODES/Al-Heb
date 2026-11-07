@@ -105,7 +105,9 @@ export function applyCorrections(root = ROOT, { dry = false } = {}) {
   const byId = new Map(wordsDoc.words.map((w) => [w.id, w]));
   const report = { applied: [], already: [], conflicts: [], files: {} };
   const todoSet = new Map(); const todoRemove = new Set(); const todoAdd = []; let rerank = null;
+  const fieldChains = new Map();
   const eq = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+  const planSet = (id, field, value) => { (todoSet.get(id) || todoSet.set(id, {}).get(id))[field] = value; };
   for (const c of list) {
     const w = byId.get(c.id);
     if (c.field === RERANK) { rerank = c; continue; }
@@ -118,10 +120,34 @@ export function applyCorrections(root = ROOT, { dry = false } = {}) {
       if (!w) { report.already.push(c); continue; }
       if (w.he === c.old.he && w.pos === c.old.pos && w.frequencyRank === c.old.frequencyRank) { todoRemove.add(c.id); report.applied.push(c); } else report.conflicts.push({ ...c, current: { he: w.he, pos: w.pos, frequencyRank: w.frequencyRank } });
     } else {
-      if (!w) { report.conflicts.push({ ...c, current: 'record missing' }); continue; }
-      if (eq(getF(w, c.field) ?? null, c.new)) report.already.push(c);
-      else if (eq(getF(w, c.field) ?? null, c.old)) { (todoSet.get(c.id) || todoSet.set(c.id, {}).get(c.id))[c.field] = c.new; report.applied.push(c); } else report.conflicts.push({ ...c, current: getF(w, c.field) ?? null });
+      const k = c.id + '\0' + c.field;
+      if (!fieldChains.has(k)) fieldChains.set(k, []);
+      fieldChains.get(k).push(c);
     }
+  }
+  // A later correction for the same id and field may continue an earlier one (each old equals the previous new).
+  // The current value may sit at any step. Earlier steps are already applied; the last new is what gets written.
+  // An unlinked repeat is still checked one step at a time, so a real conflict is not hidden.
+  for (const chain of fieldChains.values()) {
+    const c0 = chain[0];
+    const w = byId.get(c0.id);
+    if (!w) { for (const c of chain) report.conflicts.push({ ...c, current: 'record missing' }); continue; }
+    let cur = getF(w, c0.field) ?? null;
+    const linked = chain.every((c, i) => i === 0 || eq(c.old, chain[i - 1].new));
+    if (!linked) {
+      for (const c of chain) {
+        if (eq(cur, c.new)) report.already.push(c);
+        else if (eq(cur, c.old)) { planSet(c.id, c.field, c.new); cur = c.new; report.applied.push(c); }
+        else report.conflicts.push({ ...c, current: cur });
+      }
+      continue;
+    }
+    if (eq(cur, chain[chain.length - 1].new)) { for (const c of chain) report.already.push(c); continue; }
+    const idx = chain.findIndex((c) => eq(cur, c.old));
+    if (idx < 0) { for (const c of chain) report.conflicts.push({ ...c, current: cur }); continue; }
+    planSet(c0.id, c0.field, chain[chain.length - 1].new);
+    for (let i = 0; i < idx; i++) report.already.push(chain[i]);
+    for (let i = idx; i < chain.length; i++) report.applied.push(chain[i]);
   }
   if (report.conflicts.length) return report;
 

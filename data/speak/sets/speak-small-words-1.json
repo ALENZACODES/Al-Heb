@@ -12,7 +12,7 @@
    "id": "h7c9d2ffe",
    "he": "אֵת",
    "translit": "et",
-   "en": "used to introduce a semantically definite direct object",
+   "en": "(marks a definite direct object; not translated)",
    "kind": "word",
    "audioId": "vahavta-1-w2",
    "source": "data/vocab/words.json"
@@ -75,7 +75,7 @@
    "id": "h32c69c06",
    "he": "שֶׁל",
    "translit": "shel",
-   "en": "of, belonging to, owned by, pertaining to",
+   "en": "of; belonging to",
    "kind": "word",
    "audioId": "candle-shabbat-w13",
    "source": "data/vocab/words.json"

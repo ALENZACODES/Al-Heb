@@ -1,19 +1,10 @@
 {
   "version": 1,
-  "source": "chatgpt-2026-11-05 + overnight DECISIONS 2026-11-06",
+  "source": "picture set, 2026-11-05 + overnight DECISIONS 2026-11-06",
   "ship": [],
-  "style_break_atlas_only": [
-    "pe-final-meet.png",
-    "qof-meet.png",
-    "resh-meet.png"
-  ],
-  "unreviewed_hold": [
-    "shin-meet.png",
-    "tav-meet.png",
-    "tsadi-final-meet.png",
-    "tsadi-meet.png"
-  ],
-  "note": "ship=[] \u2014 keep all 27 on GitHub as drafts. pe-final/qof/resh atlas-only (no regen). shin/tav/tsadi/tsadi-final hold.",
+  "style_break_atlas_only": [],
+  "unreviewed_hold": [],
+  "note": "Reviewed 2026-11-07: all 7 flagged letters cleared (see review_2026_11_07). pe-final ships as-is by owner decision 2026-11-07. ship=[] unchanged — the PNG originals stay drafts on GitHub; learner screens display the approved WebP copies.",
   "images": {
     "aleph-meet.png": {
       "file": "aleph-meet.png",
@@ -179,7 +170,7 @@
       "file": "pe-final-meet.png",
       "path": "assets/letter-cartoons/batch03/pe-final-meet.png",
       "batch": "batch03",
-      "status": "style_break_atlas_only",
+      "status": "usable_draft_on_github",
       "approved": false,
       "regen_forbidden": true
     },
@@ -187,7 +178,7 @@
       "file": "qof-meet.png",
       "path": "assets/letter-cartoons/batch03/qof-meet.png",
       "batch": "batch03",
-      "status": "style_break_atlas_only",
+      "status": "usable_draft_on_github",
       "approved": false,
       "regen_forbidden": true
     },
@@ -195,7 +186,7 @@
       "file": "resh-meet.png",
       "path": "assets/letter-cartoons/batch03/resh-meet.png",
       "batch": "batch03",
-      "status": "style_break_atlas_only",
+      "status": "usable_draft_on_github",
       "approved": false,
       "regen_forbidden": true
     },
@@ -203,7 +194,7 @@
       "file": "shin-meet.png",
       "path": "assets/letter-cartoons/batch03/shin-meet.png",
       "batch": "batch03",
-      "status": "unreviewed_hold",
+      "status": "usable_draft_on_github",
       "approved": false,
       "regen_forbidden": true
     },
@@ -211,7 +202,7 @@
       "file": "tav-meet.png",
       "path": "assets/letter-cartoons/batch03/tav-meet.png",
       "batch": "batch03",
-      "status": "unreviewed_hold",
+      "status": "usable_draft_on_github",
       "approved": false,
       "regen_forbidden": true
     },
@@ -219,7 +210,7 @@
       "file": "tsadi-final-meet.png",
       "path": "assets/letter-cartoons/batch03/tsadi-final-meet.png",
       "batch": "batch03",
-      "status": "unreviewed_hold",
+      "status": "usable_draft_on_github",
       "approved": false,
       "regen_forbidden": true
     },
@@ -227,10 +218,26 @@
       "file": "tsadi-meet.png",
       "path": "assets/letter-cartoons/batch03/tsadi-meet.png",
       "batch": "batch03",
-      "status": "unreviewed_hold",
+      "status": "usable_draft_on_github",
       "approved": false,
       "regen_forbidden": true
     }
   },
-  "freeze_cast": true
+  "freeze_cast": true,
+  "review_2026_11_07": {
+    "cleared_from_unreviewed_hold": [
+      "shin-meet.png",
+      "tav-meet.png",
+      "tsadi-meet.png",
+      "tsadi-final-meet.png"
+    ],
+    "cleared_from_style_break_atlas_only": [
+      "qof-meet.png",
+      "resh-meet.png",
+      "pe-final-meet.png"
+    ],
+    "verdicts": "shin, tav, tsadi, tsadi-final, resh: pass — glyphs correct, props mirror the letter shapes, cast/framing/mascot on-style; the resh style-break flag did not hold up on inspection.",
+    "qof": "The inspection did NOT clear this one: the drawn leg was a thick slanted detached slab and the roof ballooned diagonally — a qof/pe-final muddle (owner's call, 2026-11-07). The letter inside its box was replaced with the textbook form in the app's own typeface, thickened to the set's weight; the rest of the picture is pixel-identical.",
+    "pe_final": "Letter correct; composition outlier (figure cropped by the left frame edge; letter-blob prop instead of a real-world object). Ships as-is — owner decision 2026-11-07. regen_forbidden stands; no regen ordered."
+  }
 }

@@ -8,6 +8,7 @@ import { warningAfterWrongTap } from './interference.js';
 import { audioButton } from '../shell/audio-access.js';
 import { letterSound, congregationOf } from '../pronunciation/forTradition.js';
 import { loadMemoryChain, entryFor, buildMemoryCard, memoryFallback } from './memorycard.js';
+import { letterMeet } from '../img/scenes.js';
 
 const DATA = (name) => new URL('../../data/letters/' + name, import.meta.url).href;
 const PRON = (name) => new URL('../../data/pronunciation/' + name, import.meta.url).href;
@@ -216,6 +217,7 @@ export function mount(root, ctx = {}) {
       const cardEntry = own || viaParent, chained = !!cardEntry;
       const panel = h('div', { class: 'panel', 'data-detail': sel.id },
         ctx.img?.(h, { kind: 'letter', id: sel.id, script: state.script, variant: state.alt ? 'alt' : undefined, width: 600, class: 'at-pic' }),
+        letterMeet(h, ctx, sel.id, { width: 600, class: 'at-meet' }),
         h('div', { class: 'row' },
           h('span', { class: 'big', dir: 'rtl', lang: 'he' }, sel.glyph),
           h('div', {}, h('strong', {}, sel.name), h('br'), h('span', {}, (sel.ipa ? '/' + sel.ipa + '/  ' : '') + (m.soundAnchor || sel.soundEn || '')),

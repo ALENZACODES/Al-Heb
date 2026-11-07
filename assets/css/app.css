@@ -186,6 +186,8 @@ label.btn:has(+ input[type=file]:focus-visible) { outline: 3px solid var(--focus
 .alef-img{display:block;height:auto;max-width:100%;border-radius:.5rem}
 .vc-pic,.th-pic{width:100%;max-width:14rem}
 .at-pic{width:100%;max-width:18rem;margin:0 auto .5rem}
+.at-meet{width:100%;max-width:18rem;margin:0 auto .5rem}
+.letter-meet{height:auto;max-width:100%}
 .l-scene,.fv-pic{width:100%;max-width:36rem;margin:0 0 .75rem}
 .pl-pic{max-width:9rem;margin:0 auto .5rem}
 /* Teachers band (src/shell/companions.js): Ari and Noa on every screen, posed for the page. */

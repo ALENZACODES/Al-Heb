@@ -1623,8 +1623,9 @@
   "v9d548ac6": {
    "rank": 4999,
    "lemma": "נקוד",
-   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. נִקּוּד / ניקוד. Wiktionary: the vowel-point system, and uncountable \"scoring\" (already this record's alt). https://en.wiktionary.org/wiki/%D7%A0%D7%99%D7%A7%D7%95%D7%93",
-   "gloss": "vowel points (the marks that show vowels in Hebrew text); scoring"
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. נִקּוּד / ניקוד. Wiktionary: the vowel-point system, and uncountable \"scoring\" (already this record's alt). https://en.wiktionary.org/wiki/%D7%A0%D7%99%D7%A7%D7%95%D7%93 The full build's noun keyword rule matches the English word \"point\" and would file this under Math/Measurements; topic is held at Misc Nouns.",
+   "gloss": "vowel points (the marks that show vowels in Hebrew text); scoring",
+   "topic": "Misc Nouns"
   }
  },
  "additions": [

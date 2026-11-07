@@ -1,12 +1,14 @@
-// A living, ancient Tree of Life. The source is a clean, photo-real ancient-tree artwork cropped without any baked-in
-// text or UI, not a cartoon made from geometric SVG circles and straight limbs.
-// Motion stays in CSS: slow camera drift, constellations and one travelling light ray.
+// The ALEF opening: a real, deeply weathered Tree of Life at olive harvest.
+// Original, text-free artwork; all Hebrew, prayers and controls remain live DOM.
+// Motion is limited to CSS atmosphere and gentle compositor-friendly parallax.
 import { h } from './ui.js';
 
-export const ANCIENT_TREE_SRC = 'assets/img/gen/HERO_tree_of_life_realistic.webp';
+export const ANCIENT_TREE_SRC = 'assets/img/gen/HERO_olive_harvest_astral.1600.webp';
+export const ANCIENT_TREE_MOBILE_SRC = 'assets/img/gen/HERO_olive_harvest_astral.900.webp';
 export const ANCIENT_TREE_DESCRIPTION =
-  'An immense, centuries-old olive Tree of Life with a massive hollow, tightly twisted weathered trunk, ' +
-  'long exposed roots gripping stone, and silver-green branches beneath a golden astral sky.';
+  'An enormous ancient olive tree with weathered twisting roots at sunset, ripe olives, ' +
+  'hand-thrown clay harvest vessels, a shofar resting on stone, an oil lamp and pomegranates ' +
+  'beneath a star-filled sky. Light spreads over distant Jerusalem hills.';
 
 const mounted = new Set();
 let observer = null;
@@ -60,10 +62,15 @@ function enableSceneMotion() {
 export function astralTreeNode() {
   const scene = h('div', { class: 'astral-scene', role: 'img', 'aria-label': ANCIENT_TREE_DESCRIPTION },
     h('div', { class: 'astral-photo-motion', 'aria-hidden': 'true' },
-      h('img', { class: 'astral-tree-photo', src: ANCIENT_TREE_SRC, alt: '',
-        width: '900', height: '455', loading: 'eager', decoding: 'async' })),
+      h('picture', { class: 'astral-tree-picture' },
+        h('source', { media: '(max-width: 600px)', srcset: ANCIENT_TREE_MOBILE_SRC, type: 'image/webp' }),
+        h('img', { class: 'astral-tree-photo', src: ANCIENT_TREE_SRC, alt: '',
+          width: '1600', height: '900', loading: 'eager', decoding: 'async',
+          fetchpriority: 'high' }))),
     h('div', { class: 'astral-nightfall', 'aria-hidden': 'true' }),
+    h('div', { class: 'astral-harvest-halo', 'aria-hidden': 'true' }),
     h('div', { class: 'astral-stars', 'aria-hidden': 'true' }),
+    h('div', { class: 'astral-harvest-motes', 'aria-hidden': 'true' }),
     h('div', { class: 'astral-ray', 'aria-hidden': 'true' }),
     h('div', { class: 'astral-ground-light', 'aria-hidden': 'true' })
   );

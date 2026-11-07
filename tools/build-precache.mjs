@@ -22,7 +22,10 @@ const SKIP = (rel) => rel.startsWith('assets/img/') || rel.startsWith('assets/im
 // buys nothing offline). sw.js already stale-while-revalidates every same-origin non-media GET into the runtime cache, so these files
 // are cached the first time a learner opens the page that needs them, or all at once from "Use ALEF offline" -> Download everything
 // (they are listed in precache-manifest.js as ALEF_ON_DEMAND; src/shell/offline.js ON_DEMAND_GROUPS names them for the learner).
-// Source code under src/ is never deferred (its import graph is shared with the v0 routes). Everything NOT listed here stays in the install.
+// Source code under src/ is never deferred, EXCEPT lazy route modules the router loads with dynamic import():
+// src/games/ (preview games) and src/books/ (little books). The service worker runtime-caches them on first
+// view, so first install stays the v0 core only (fix #4: first-install precache under 4 MiB; #8 groups).
+// Everything NOT listed here stays in the install.
 // Letter memory pictures (assets/letters/morph/<id>.svg, 4 to 5 KB each, 28 files, about 125 KB): data/letters/memory-chain.json and the code stay installed (the card
 // works from text alone); only the pictures of the letters a learner meets on day one are installed: the first-day on-ramp (shin, bet), the older
 // first-ten preview (shin, lamed, vav, mem, he), lessons r01 to r03 (shin, bet, tav, lamed, final mem, vav) and alef (the first card the letters pages show). The other pictures (and sin.svg, which no
@@ -33,8 +36,20 @@ const KEEP_DATA = new Set(['data/pronunciation/consonants.json', 'data/pronuncia
   ...FIRST_DAY_LETTERS.map((id) => `assets/letters/morph/${id}.svg`)]);
 const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'data/nikkudfade/', 'data/gender/', 'data/pronunciation/', 'data/speak/', 'data/israel/', 'data/calendar/', 'data/festivals/', 'data/torahread/', 'data/typing/',
   'data/traditions/', 'data/trope-trainer/', 'data/listen/', 'data/grammar/', 'data/wordtrace/', 'data/corpus/reader/', 'data/corpus/trope/', 'data/curriculum/lessons-intermediate/',
-  'assets/screens/', 'assets/screenshots/', 'assets/letters/morph/'];
-const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json']);
+  'assets/screens/', 'assets/screenshots/', 'assets/letters/morph/',
+  // Large image sets: runtime-cached on first view (and listed for "Download everything"), never installed up front (fix #4 / R39).
+  'assets/chatgpt-overnight/', 'assets/letter-cartoons/', 'assets/books/', 'assets/speak-hold/', 'assets/speak-candidates/',
+  // Lazy preview-route code + book content + image indexes: fetched on first view, runtime-cached (fix #4; #8 groups).
+  'src/games/', 'src/books/', 'data/books/', 'data/images/'];
+const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json',
+  // Non-v0 data (the integration test's must-install list is the v0 offline contract; these are fetched on first use, then runtime-cached).
+  'data/audio/english-glosses.json',
+  'data/corpus/prayer-meta.json', 'data/corpus/torah-service-guide.json', 'data/corpus/gaps.json',
+  'data/curriculum/dialogues.json', 'data/curriculum/gender-pairs.json', 'data/curriculum/loanwords.json', 'data/curriculum/prompts.json', 'data/curriculum/word-vocab-map.json',
+  'data/firstday/minute-one.json', 'data/homepage/prayers.json', 'data/morning-verses.json',
+  'data/letters/art-concept-map.json', 'data/letters/keyboard-si1452.json',
+  // Cursive display font: only fetched when the cursive script setting is on (font-display: swap falls back otherwise).
+  'assets/fonts/web/gveret-levin.woff2']);
 export const isOnDemand = (rel) => !KEEP_DATA.has(rel) && (ON_DEMAND_FILES.has(rel) || /^data\/curriculum\/resource-concepts-/.test(rel) || ON_DEMAND_PREFIXES.some((p) => rel.startsWith(p)));
 const DATA_ONLY_JSON = (rel) => !rel.startsWith('data/') || rel.endsWith('.json');
 

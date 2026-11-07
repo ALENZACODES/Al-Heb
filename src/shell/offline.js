@@ -57,6 +57,14 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-intermediate", label: "Intermediate lessons and class track", test: /^data\/curriculum\//, approxMB: 0.6 },
   { id: "od-letter-pictures", label: "Letter memory pictures (the rest of the alphabet)", test: /^assets\/letters\/morph\//, approxMB: 0.09 },
   { id: "od-screens", label: "Install-prompt screenshots", test: /^assets\/screen(s|shots)\//, approxMB: 0.5 },
+  { id: "od-pictures", label: "Book, story and speaking-practice pictures", test: /^assets\/(chatgpt-overnight|letter-cartoons|books|speak-hold|speak-candidates)\//, approxMB: 123.45 },
+  { id: "od-games", label: "Games (code for the preview games)", test: /^src\/games\//, approxMB: 0.13 },
+  { id: "od-books", label: "Little books (code and book texts)", test: /^(src\/books|data\/books)\//, approxMB: 0.04 },
+  { id: "od-images", label: "Picture approvals and word cues", test: /^data\/images\//, approxMB: 0.20 },
+  { id: "od-letters", label: "Letter art concepts and keyboard layout", test: /^data\/letters\//, approxMB: 0.08 },
+  { id: "od-home", label: "Home prayers and morning verses", test: /^(data\/homepage\/|data\/morning-verses\.json)/, approxMB: 0.09 },
+  { id: "od-firstday", label: "First-day minute-one data", test: /^data\/firstday\//, approxMB: 0.00 },
+  { id: "od-fonts", label: "Cursive display font (used only with the cursive script setting)", test: /^assets\/fonts\//, approxMB: 0.03 },
 ]);
 /** Group a list of ALEF_ON_DEMAND paths into optional-download entries ({id,label,urls,approxMB}); empty groups are dropped. */
 export function onDemandGroups(onDemand = []) {

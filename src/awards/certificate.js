@@ -2,7 +2,8 @@
 // Temporary foil-style seal only. Accepted artwork: 0. Not a final art file.
 // Every HTML and PDF drawing says SAMPLE / NOT EARNED. That mark is not taken from the caller.
 // Not a degree, not an accredited qualification, no signature, no verification URL.
-// Certificate No. SAMPLE-0001 is a sample internal reference, not an accreditation number.
+// Cert # is last initial, then first initial, then the America/Toronto preview date.
+// It is a sample internal reference. The same name and date can collide. It is not checked.
 // PDF text uses the standard PDF serif Times (supplied by the viewer). HTML uses Frank Ruhl Libre,
 // SIL OFL 1.1, already shipped in assets/fonts. No new font file is added.
 
@@ -34,11 +35,71 @@ export const FACE = Object.freeze({
   forWord: 'for',
   course: 'Beginner Hebrew Foundations',
   sampleLine: 'Sample design \u2014 completion has not been assessed or awarded.',
-  certNo: 'Certificate No. SAMPLE-0001',
   certNote: 'Sample internal reference',
   footer: 'Independent learning programme \u00b7 Not an accredited qualification',
   temporary: 'Temporary layout',
 });
+
+/** Shown when the display name or the preview instant cannot form the sample reference. */
+export const CERT_REF_INCOMPLETE = 'Cert # incomplete';
+
+/**
+ * America/Toronto calendar date for a preview instant, YYYYMMDD.
+ * Only a finite number is accepted, so the day does not follow the machine timezone.
+ * @param {number} now
+ * @returns {string}
+ */
+export function torontoDateStamp(now) {
+  if (typeof now !== 'number' || !Number.isFinite(now)) return '';
+  const d = new Date(now);
+  if (Number.isNaN(d.getTime())) return '';
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/Toronto',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(d);
+  const pick = (type) => parts.find((p) => p.type === type)?.value || '';
+  const year = pick('year');
+  const month = pick('month');
+  const day = pick('day');
+  if (!/^\d{4}$/.test(year) || !/^\d{2}$/.test(month) || !/^\d{2}$/.test(day)) return '';
+  return year + month + day;
+}
+
+/** First Unicode letter in a token, uppercased. Empty when the token has no letter. */
+function tokenInitial(token) {
+  const found = String(token).match(/\p{L}/u);
+  return found ? found[0].toUpperCase() : '';
+}
+
+/**
+ * Last-token initial, then first-token initial.
+ * The first whitespace-separated token is the given-name token and the last is the family-name token.
+ * Tokens between them are ignored. One token, or a token with no letter, is not a pair of initials.
+ * @param {string} name
+ * @returns {string}
+ */
+export function certificateInitials(name) {
+  const tokens = String(name ?? '').trim().split(/\s+/).filter(Boolean);
+  if (tokens.length < 2) return '';
+  const first = tokenInitial(tokens[0]);
+  const last = tokenInitial(tokens[tokens.length - 1]);
+  if (!first || !last) return '';
+  return last + first;
+}
+
+/**
+ * Sample internal reference. Callers cannot supply a different number.
+ * @param {string} name
+ * @param {number} now
+ */
+export function certificateReference(name, now) {
+  const initials = certificateInitials(name);
+  const stamp = torontoDateStamp(now);
+  if (!initials || !stamp) return CERT_REF_INCOMPLETE;
+  return `Cert # ${initials}-${stamp}`;
+}
 
 export const MAIL_OFFER = Object.freeze({
   available: false,
@@ -51,6 +112,7 @@ export const MAIL_OFFER = Object.freeze({
  */
 export function sampleModel(o = {}) {
   const name = sanitizeName(o.displayName);
+  const at = o.now === undefined ? Date.now() : o.now;
   return {
     sample: true,
     issuable: false,
@@ -58,7 +120,8 @@ export function sampleModel(o = {}) {
     watermark: SAMPLE_MARK,
     displayName: name,
     nameEntered: !!name,
-    dateLabel: `Preview date: ${formatPreviewDate(o.now ?? Date.now())}`,
+    previewAt: typeof at === 'number' && Number.isFinite(at) ? at : null,
+    dateLabel: `Preview date: ${formatPreviewDate(at)}`,
     brand: FACE.issuer,
     subtitle: FACE.subheading,
     kicker: FACE.course,
@@ -74,7 +137,7 @@ export function sampleModel(o = {}) {
 /** Long notes for the page and the docs. They are not drawn on the certificate face or the PDF. */
 export const SAMPLE_PAGE_NOTES = Object.freeze([
   'Approved artwork: 0. No image file has been accepted. The eggshell ground and seal are a temporary layout, not final art.',
-  'Certificate No. SAMPLE-0001 is a sample internal reference on this layout. It is not an accreditation number.',
+  'Cert # is a sample internal reference built from the display name and the America/Toronto date of this preview. The same name and date share it. It is not unique, not checked, and not an accreditation number.',
   'This sample does not say the named person can read Hebrew, finished the white-belt lessons, or passed a checked assessment. Saving or printing it does not store an earned certificate.',
   'The name is a label you typed. It is not a signature and not an account.',
   'No teacher, rabbi, or examiner has signed this sample. The seal is a temporary geometric drawing, not a seal of office.',
@@ -135,9 +198,6 @@ const GRAIN_DARK = '0.86 0.78 0.64';
 const GRAIN_LIGHT = '0.99 0.96 0.90';
 const INK = '0.14 0.11 0.09';
 const RULE = '0.55 0.48 0.40';
-const RED = '0.48 0.14 0.16';
-const GOLD = '0.62 0.48 0.25';
-const BRONZE = '0.42 0.30 0.16';
 const WELL = '0.90 0.82 0.68';
 /** Liberation Serif advances, which match Times. Index 0 is U+0020. Units are thousandths of the size. */
 const ROMAN = [250,333,408,500,500,833,778,180,333,333,500,564,250,333,250,278,500,500,500,500,500,500,500,500,500,500,278,278,564,564,564,444,921,722,667,667,722,611,556,722,722,333,389,722,611,889,722,722,556,722,667,556,611,722,722,944,722,722,611,333,278,333,469,500,333,444,500,444,500,444,333,500,500,278,278,500,278,778,500,500,500,500,333,389,278,500,500,722,500,500,444,480,200,480,541];
@@ -211,32 +271,74 @@ function paperGrain(cmds, width, height) {
   }
 }
 
-/** Temporary foil-style stamp. Original geometry. No letters, no office claim. */
+const GOLD_DEEP = '0.42 0.28 0.10';
+const GOLD_MID = '0.62 0.45 0.18';
+const GOLD_ANTIQUE = '0.78 0.60 0.28';
+const GOLD_LIGHT = '0.93 0.82 0.52';
+const RELIEF = '0.30 0.20 0.08';
+
+function scallopPoints(cx, cy, radius, amp, lobes, steps, dx, dy) {
+  const pts = [];
+  for (let i = 0; i <= steps; i++) {
+    const t = (Math.PI * 2 * i) / steps;
+    const r = radius + amp * Math.sin(lobes * t);
+    pts.push([cx + dx + r * Math.cos(t), cy + dy + r * Math.sin(t)]);
+  }
+  return pts;
+}
+
+function tracePath(cmds, pts, op) {
+  const n = (v) => v.toFixed(2);
+  cmds.push(`${n(pts[0][0])} ${n(pts[0][1])} m`);
+  for (let i = 1; i < pts.length; i++) cmds.push(`${n(pts[i][0])} ${n(pts[i][1])} l`);
+  cmds.push(`h ${op}`);
+}
+
+/** Key on a small block. Original geometry. No crown, no letters, no office claim. */
+function drawKey(cmds, cx, cy, color, weight) {
+  cmds.push(`${color} rg`);
+  cmds.push(`${(cx - 4.2).toFixed(2)} ${(cy - 9.6).toFixed(2)} 8.4 1.7 re f`);
+  cmds.push(`${color} RG ${weight} w`);
+  strokeCircle(cmds, cx, cy + 4.4, 3.4);
+  cmds.push(`${cx.toFixed(2)} ${(cy + 1.0).toFixed(2)} m ${cx.toFixed(2)} ${(cy - 7.6).toFixed(2)} l S`);
+  cmds.push(`${cx.toFixed(2)} ${(cy - 3.2).toFixed(2)} m ${(cx + 4.4).toFixed(2)} ${(cy - 3.2).toFixed(2)} l S`);
+  cmds.push(`${cx.toFixed(2)} ${(cy - 6.0).toFixed(2)} m ${(cx + 3.3).toFixed(2)} ${(cy - 6.0).toFixed(2)} l S`);
+}
+
+/** Temporary antique-gold stamp. Same size as the previous seal so the face layout stays. */
 function drawSeal(cmds, cx, cy) {
   cmds.push(`${WELL} rg`);
   fillCircle(cmds, cx, cy, 40);
-  cmds.push(`${BRONZE} RG 1.15 w`);
-  strokeCircle(cmds, cx + 0.9, cy - 0.8, 36);
-  strokeCircle(cmds, cx + 0.9, cy - 0.8, 31);
-  cmds.push(`${RED} RG 1.7 w`);
-  strokeCircle(cmds, cx, cy, 36);
-  cmds.push(`${GOLD} RG 0.9 w`);
-  strokeCircle(cmds, cx, cy, 33);
-  cmds.push(`${GOLD} rg`);
-  for (let i = 0; i < 16; i++) {
-    const a = (Math.PI * 2 * i) / 16;
-    fillCircle(cmds, cx + Math.cos(a) * 29.2, cy + Math.sin(a) * 29.2, 1.15);
+  cmds.push(`${RELIEF} rg`);
+  tracePath(cmds, scallopPoints(cx, cy, 34.2, 2.15, 18, 144, 1.15, -1.1), 'f');
+  cmds.push(`${GOLD_ANTIQUE} rg`);
+  tracePath(cmds, scallopPoints(cx, cy, 34.2, 2.15, 18, 144, 0, 0), 'f');
+  cmds.push(`${GOLD_MID} rg`);
+  fillCircle(cmds, cx, cy, 25.5);
+  cmds.push(`${GOLD_DEEP} rg`);
+  fillCircle(cmds, cx + 0.45, cy - 0.5, 21.6);
+  cmds.push(`${RELIEF} RG 0.32 w`);
+  for (let i = 0; i < 48; i++) {
+    const a = (Math.PI * 2 * i) / 48;
+    const x1 = cx + Math.cos(a) * 22.4;
+    const y1 = cy + Math.sin(a) * 22.4;
+    const x2 = cx + Math.cos(a) * 31.6;
+    const y2 = cy + Math.sin(a) * 31.6;
+    cmds.push(`${x1.toFixed(2)} ${y1.toFixed(2)} m ${x2.toFixed(2)} ${y2.toFixed(2)} l S`);
   }
-  cmds.push(`${RED} RG 1.05 w`);
-  strokeCircle(cmds, cx, cy, 24);
-  cmds.push(`${GOLD} RG 1.25 w`);
-  cmds.push(`${cx} ${cy + 16} m ${cx + 16} ${cy} l ${cx} ${cy - 16} l ${cx - 16} ${cy} l h S`);
-  cmds.push(`${RED} RG 1.05 w`);
-  cmds.push(`${cx - 7} ${cy - 7} 14 14 re S`);
-  cmds.push(`${RED} rg`);
-  fillCircle(cmds, cx, cy, 2.5);
-  cmds.push(`${GOLD} RG 0.45 w`);
-  strokeCircle(cmds, cx - 0.4, cy + 0.5, 33.4);
+  cmds.push(`${GOLD_DEEP} RG 1.05 w`);
+  tracePath(cmds, scallopPoints(cx, cy, 32.6, 1.9, 18, 144, 0, 0), 'S');
+  cmds.push(`${GOLD_LIGHT} RG 0.5 w`);
+  tracePath(cmds, scallopPoints(cx, cy, 34.8, 2.05, 18, 144, -0.35, 0.4), 'S');
+  cmds.push(`${GOLD_DEEP} RG 0.75 w`);
+  strokeCircle(cmds, cx, cy, 25.4);
+  cmds.push(`${GOLD_LIGHT} RG 0.4 w`);
+  strokeCircle(cmds, cx - 0.3, cy + 0.35, 24.8);
+  cmds.push(`${GOLD_ANTIQUE} rg`);
+  fillCircle(cmds, cx, cy, 11.2);
+  drawKey(cmds, cx + 0.45, cy - 0.45, RELIEF, 1.15);
+  drawKey(cmds, cx - 0.35, cy + 0.4, GOLD_LIGHT, 0.85);
+  drawKey(cmds, cx, cy, RELIEF, 1.05);
 }
 
 /** Shrink a long name onto one line, or two lines if it still will not fit. */
@@ -292,7 +394,7 @@ export function renderCertificatePdf(model) {
   cmds.push(`${RULE} RG 0.6 w ${width / 2 - 220} 330 m ${width / 2 + 220} 330 l S`);
   place(cmds, 'F1', 10, 318, FACE.sampleLine);
   drawSeal(cmds, width / 2, 262);
-  place(cmds, 'F2', 11, 200, FACE.certNo);
+  place(cmds, 'F2', 11, 200, certificateReference(name, model && model.previewAt));
   place(cmds, 'F1', 8, 186, FACE.certNote);
   place(cmds, 'F1', 9, 168, FACE.footer);
   if (date) place(cmds, 'F1', 10, 152, date);
@@ -385,7 +487,7 @@ export function renderCertificate(h, _model) {
     h('p', { class: 'aw-course' }, FACE.course),
     h('p', { class: 'aw-sample-line' }, FACE.sampleLine),
     h('div', { class: 'aw-seal-wrap' }, renderSeal(h)),
-    h('p', { class: 'aw-cert-no' }, FACE.certNo),
+    h('p', { class: 'aw-cert-no' }, certificateReference(model.nameEntered ? model.displayName : '', model.previewAt)),
     h('p', { class: 'aw-cert-note' }, FACE.certNote),
     h('p', { class: 'aw-footer' }, FACE.footer),
     h('p', { class: 'aw-date' }, model.dateLabel || ''),

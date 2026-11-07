@@ -15,6 +15,7 @@ import {
 import { TRUST_LIMITS } from '../src/awards/trust.js';
 import {
   modelNeedsWatermark, PDF_PAGE, pdfLiteral, renderCertificatePdf, sampleModel, fitName,
+  certificateInitials, certificateReference, torontoDateStamp, CERT_REF_INCOMPLETE,
 } from '../src/awards/certificate.js';
 import { ART_ACCEPTED, ART_FILES, GAME_RIMS } from '../src/awards/icons.js';
 
@@ -241,6 +242,44 @@ test('old, corrupt, and unreadable storage fail closed', () => {
   assert.equal(kept.visit, 'return');
 });
 
+test('sample Cert # uses last then first initial and the Toronto preview date', () => {
+  const noon = Date.UTC(2026, 10, 6, 12, 0, 0);
+  assert.equal(certificateInitials('John Khan'), 'KJ');
+  assert.equal(certificateInitials('Ada Learner'), 'LA');
+  assert.equal(certificateInitials('Mary Ann Smith'), 'SM');
+  assert.equal(certificateInitials('Élodie Renée'), 'RÉ');
+  assert.equal(certificateInitials('דוד כהן'), 'כד');
+  assert.equal(certificateInitials('Ada'), '');
+  assert.equal(certificateInitials(''), '');
+  assert.equal(certificateInitials('   '), '');
+  assert.equal(certificateInitials('123 ???'), '');
+  assert.equal(torontoDateStamp(noon), '20261106');
+  assert.equal(torontoDateStamp(Date.UTC(2026, 10, 6, 4, 0, 0)), '20261105');
+  assert.equal(torontoDateStamp(Date.UTC(2026, 10, 6, 5, 0, 0)), '20261106');
+  assert.equal(torontoDateStamp(NaN), '');
+  assert.equal(torontoDateStamp(undefined), '');
+  assert.equal(torontoDateStamp('2026-11-06'), '');
+  assert.equal(certificateReference('John Khan', noon), 'Cert # KJ-20261106');
+  assert.equal(certificateReference('Ada Learner', noon), 'Cert # LA-20261106');
+  assert.equal(certificateReference('Ada', noon), CERT_REF_INCOMPLETE);
+  assert.equal(certificateReference('', noon), CERT_REF_INCOMPLETE);
+  assert.equal(certificateReference('Ada Learner', NaN), CERT_REF_INCOMPLETE);
+  assert.equal(certificateReference('Ada Learner', undefined), CERT_REF_INCOMPLETE);
+  const ignored = renderCertificatePdf({
+    ...sampleModel({ displayName: 'Ada Learner', now: noon }),
+    certNo: 'Accreditation No. 999',
+    sample: false,
+    issuable: true,
+  });
+  const text = Buffer.from(ignored).toString('latin1');
+  assert.match(text, /Cert # LA-20261106/);
+  assert.match(text, /Sample internal reference/);
+  assert.doesNotMatch(text, /Accreditation No|SAMPLE-0001/);
+  const hebrew = Buffer.from(renderCertificatePdf(sampleModel({ displayName: 'דוד כהן', now: noon }))).toString('latin1');
+  assert.match(hebrew, /Cert # \?\?-20261106/);
+  assert.match(hebrew, /SAMPLE \/ NOT EARNED/);
+});
+
 test('sample PDF is landscape, watermarked, and does not turn a sample into an issued file', () => {
   assert.equal(ART_ACCEPTED, 0);
   assert.equal(ART_FILES.certificateFrame, null);
@@ -263,9 +302,9 @@ test('sample PDF is landscape, watermarked, and does not turn a sample into an i
   assert.match(text, /Not an accredited qualification/);
   assert.match(text, /Beginner Hebrew Foundations/);
   assert.match(text, /ALEF is Key Foundation/);
-  assert.match(text, /Certificate No\. SAMPLE-0001/);
+  assert.match(text, /Cert # SA-20261106/);
   assert.match(text, /Sample internal reference/);
-  assert.doesNotMatch(text, /CE#|Accreditation No|continuing-education|continuing education/);
+  assert.doesNotMatch(text, /CE#|Accreditation No|SAMPLE-0001|continuing-education|continuing education/);
   assert.doesNotMatch(text, /FMVA|CFI|Corporate Finance/);
   assert.doesNotMatch(text, /tamper-proof|verification website|seal of office/);
   assert.doesNotMatch(text, /\/JavaScript|mailto:|FMVA|\bCFI\b/);
@@ -304,7 +343,7 @@ test('sample PDF is landscape, watermarked, and does not turn a sample into an i
   assert.match(Buffer.from(hebrew).toString('latin1'), /\?/);
   assert.equal(pdfLiteral('a(b)\\c'), '(a\\(b\\)\\\\c)');
   const hex = createHash('sha256').update(bytes).digest('hex');
-  assert.equal(hex, '85b71190f034f104fc9b2b3930f2d604cc9bc0ed69d93597b29446d397904833');
+  assert.equal(hex, 'e7c5c323e549109345ab9a6de20e0556f0ae47a9e829177dbb72c8d8cd851714');
 });
 
 test('trust notes name real source files, and this lane does not award from them', () => {

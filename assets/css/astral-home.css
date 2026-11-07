@@ -77,18 +77,38 @@
   transform: translate3d(0,var(--tree-shift,0px),0);
   animation: astral-photo-drift 25s ease-in-out 2s infinite alternate;
 }
+.astral-tree-picture { display: block; width: 100%; height: 100%; }
 .astral-tree-photo {
   display: block; width: 100%; height: 100%; object-fit: cover;
   object-position: 53% 50%; transform: scale(1.035);
-  filter: brightness(.82) contrast(1.18) saturate(.77);
+  /* Retain the rich grain of the oak-aged olive bark and painted clay: no blur. */
+  filter: brightness(1.015) contrast(1.055) saturate(1.035);
   animation: astral-ancient-reveal 2s cubic-bezier(.19,.63,.24,1) both;
 }
 .astral-nightfall {
   position: absolute; inset: 0; pointer-events: none;
+  /* Preserve the original sky and olive-harvest materials. */
   background: linear-gradient(180deg,
-    rgba(31,58,95,.64) 0%, rgba(31,58,95,.30) 37%,
-    rgba(31,58,95,.13) 69%, rgba(43,43,43,.40) 100%);
-  mix-blend-mode: multiply;
+    rgba(31,58,95,.27) 0%, rgba(31,58,95,.07) 34%,
+    rgba(31,58,95,.03) 70%, rgba(43,43,43,.21) 100%);
+}
+.astral-harvest-halo {
+  position: absolute; inset: 0; pointer-events: none; opacity: .62;
+  background: radial-gradient(circle at 57% 31%, rgba(217,164,65,.23), transparent 36%),
+              radial-gradient(ellipse at 30% 58%, rgba(217,164,65,.10), transparent 58%);
+  animation: astral-harvest-breathe 14s ease-in-out infinite alternate;
+}
+.astral-harvest-motes {
+  position: absolute; inset: -3%; pointer-events: none; opacity: .64;
+  background:
+    radial-gradient(circle at 14% 36%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 23% 61%, #F6F1E7 0 1px, transparent 2px),
+    radial-gradient(circle at 37% 15%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 54% 41%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 65% 76%, #F6F1E7 0 1px, transparent 2px),
+    radial-gradient(circle at 79% 34%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 88% 61%, #F6F1E7 0 1px, transparent 2px);
+  animation: astral-motes-drift 17s ease-in-out infinite alternate;
 }
 .astral-stars {
   position: absolute; inset: -5%; pointer-events: none;
@@ -120,6 +140,14 @@
 .astral-scene[data-paused="1"] *, .astral-scene[data-paused="1"]::before, .astral-scene[data-paused="1"]::after {
   animation-play-state: paused !important;
 }
+@keyframes astral-harvest-breathe {
+  from { opacity: .36; transform: scale(1); }
+  to { opacity: .68; transform: scale(1.025); }
+}
+@keyframes astral-motes-drift {
+  from { opacity: .35; transform: translate3d(-5px,9px,0); }
+  to { opacity: .72; transform: translate3d(8px,-11px,0); }
+}
 @keyframes astral-ancient-reveal {
   0% { opacity: .2; transform: scale(1.14) translateY(9px); }
   100% { opacity: 1; transform: scale(1.035) translateY(0); }
@@ -139,7 +167,7 @@
 }
 @media (max-width: 600px) {
   .astral-scene { height: clamp(260px, 68vw, 345px); }
-  .astral-tree-photo { object-position: 60% 53%; }
+  .astral-tree-photo { object-position: 42% 53%; }
   .prayer-veil-stars { opacity: .6; }
 }
 @media (prefers-reduced-motion: reduce) {

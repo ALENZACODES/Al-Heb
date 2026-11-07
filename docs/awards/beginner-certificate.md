@@ -50,7 +50,7 @@ There is no function that turns a completion flag into an award. The page does n
 
 Every PDF and HTML certificate from this module is a sample. The banner and the diagonal both say SAMPLE / NOT EARNED. A caller watermark such as EARNED is ignored. Passing `sample: false` or `issuable: true` still prints that mark. There is no non-sample export until a separate issuance design is reviewed.
 
-Matching the 40 shipped ids is not a content check and not approval. The evaluator still accepts those ids when the Hebrew, gloss, or requirement text on the items has been rewritten. It does not authenticate evidence. `CRITERIA_REVIEWED` stays false.
+Matching the 40 shipped ids is not a content check and not approval. The evaluator still accepts those ids when the Hebrew, gloss, or requirement text on the items has been rewritten. It does not authenticate evidence. `CRITERIA_REVIEWED` stays false. That choice is unresolved and is not treated as a reviewed rubric.
 
 ## Unresolved choices
 
@@ -83,6 +83,8 @@ Store key: `awards.v1`. Local only. No account, no email, no server copy. The sa
 
 ## Certificate face
 
-The printable sheet and the PDF use the same short face: ALEF, Beginner reading, Proposed completion, the learner's name, the preview date, one sentence that ALEF is an independent course and the sample is not a diploma or an accredited credential, and the line "Temporary layout." SAMPLE / NOT EARNED is on the sheet as a banner and as large page text.
+The printable sheet, the screen preview, and the PDF share one landscape hierarchy: a small ALEF wordmark, a large ALEF heading, Certificate of Completion, Presented to, the learner's name, for, Beginner Hebrew Foundations between thin rules, one sample sentence, a temporary red geometric seal, and the footer "Independent learning programme · Not an accredited qualification". SAMPLE / NOT EARNED is a single line at the top and a single line at the bottom. Those two lines do not sit on top of each other or on the name.
 
-Approved artwork: 0. That count sits beside the preview on the Awards page. The longer notes — no signature, no verification website, local-only file, not tamper-proof — are in the page disclosure "Record, storage, and what this sample is not" (`SAMPLE_PAGE_NOTES` in `src/awards/certificate.js`) and in this document. They are not printed on the certificate face.
+HTML uses Frank Ruhl Libre, already shipped under SIL OFL 1.1 (`assets/fonts/FONTS.md`, `assets/fonts/web/frank-ruhl-libre.woff2`). The PDF uses the standard PDF serif Times with WinAnsi encoding, which the viewer supplies. Centering uses the Times advance widths. No new font file was added, and no paid font service is used.
+
+Approved artwork: 0. The seal is a temporary geometric drawing. The longer notes stay in the page disclosure and in this document.

@@ -14,7 +14,7 @@ import {
 } from '../src/awards/eligibility.js';
 import { TRUST_LIMITS } from '../src/awards/trust.js';
 import {
-  modelNeedsWatermark, PDF_PAGE, pdfLiteral, renderCertificatePdf, sampleModel,
+  modelNeedsWatermark, PDF_PAGE, pdfLiteral, renderCertificatePdf, sampleModel, fitName,
 } from '../src/awards/certificate.js';
 import { ART_ACCEPTED, ART_FILES, GAME_RIMS } from '../src/awards/icons.js';
 
@@ -252,40 +252,55 @@ test('sample PDF is landscape, watermarked, and does not turn a sample into an i
   assert.match(text, /MediaBox \[0 0 841\.89 595\.28\]/);
   assert.match(text, /SAMPLE/);
   assert.match(text, /NOT EARNED/);
+  assert.equal((text.match(/\(SAMPLE \/ NOT EARNED\)/g) || []).length, 2);
+  assert.match(text, /Times-Roman/);
+  assert.match(text, /Times-Bold/);
+  assert.match(text, /WinAnsiEncoding/);
+  assert.doesNotMatch(text, /Helvetica|0\.9659|\sarc\s/);
   assert.match(text, /Ada <script>/);
-  assert.match(text, /Proposed completion/);
+  assert.match(text, /Certificate of Completion/);
   assert.match(text, /Temporary layout/);
-  assert.match(text, /independent Hebrew course/);
+  assert.match(text, /Not an accredited qualification/);
+  assert.match(text, /Beginner Hebrew Foundations/);
+  assert.doesNotMatch(text, /FMVA|CFI|Corporate Finance/);
   assert.doesNotMatch(text, /tamper-proof|verification website|seal of office/);
   assert.doesNotMatch(text, /\/JavaScript|mailto:|FMVA|\bCFI\b/);
   assert.doesNotMatch(text, /is an accredited|accredited by|university diploma/);
   const marked = renderCertificatePdf({ ...sampleModel({ now: T }), issuable: true, sample: true, displayName: 'Ada' });
   assert.match(Buffer.from(marked).toString('latin1'), /SAMPLE/);
   assert.equal(modelNeedsWatermark(sampleModel()), true);
-  const issued = renderCertificatePdf({
+  const long = 'A'.repeat(80);
+  const fitted = fitName(long, PDF_PAGE.width - 120);
+  assert.equal(fitted.lines.length, 1);
+  assert.ok(fitted.size >= 11);
+  const longPdf = Buffer.from(renderCertificatePdf(sampleModel({ displayName: long, now: T }))).toString('latin1');
+  assert.match(longPdf, /SAMPLE \/ NOT EARNED/);
+  assert.match(longPdf, /AAAA/);
+  const hostile = renderCertificatePdf({
     displayName: 'Ada',
     nameEntered: true,
     sample: false,
     issuable: true,
     earned: true,
+    watermark: 'EARNED',
     kicker: 'Record',
     brand: 'ALEF',
     subtitle: 'Beginner reading',
-    disclaimer: 'Kept on this device.',
+    disclaimer: 'Caller prose beside the watermark.',
     artNote: 'Temporary layout.',
     dateLabel: 'Preview date: 6 November 2026 UTC',
   });
-  const issuedText = Buffer.from(issued).toString('latin1');
-  assert.match(issuedText, /SAMPLE/);
-  assert.match(issuedText, /NOT EARNED/);
+  const hostileText = Buffer.from(hostile).toString('latin1');
+  assert.match(hostileText, /SAMPLE \/ NOT EARNED/);
+  assert.doesNotMatch(hostileText, /\(EARNED\)/);
   assert.equal(modelNeedsWatermark(undefined), true);
   assert.equal(modelNeedsWatermark(null), true);
-  assert.equal(modelNeedsWatermark({ sample: false, issuable: true }), true);
+  assert.equal(modelNeedsWatermark({ sample: false, issuable: true, watermark: 'EARNED' }), true);
   const hebrew = renderCertificatePdf(sampleModel({ displayName: 'שלום', now: T }));
   assert.match(Buffer.from(hebrew).toString('latin1'), /\?/);
   assert.equal(pdfLiteral('a(b)\\c'), '(a\\(b\\)\\\\c)');
   const hex = createHash('sha256').update(bytes).digest('hex');
-  assert.equal(hex, 'd6802e256846f737ef0e561b9431254ef4efcf6998d9d6d6cbf493b8c1f690e7');
+  assert.equal(hex, '1318c3eb006297f8862bce534379bb570f898899545c92644ddbc32b7fbdab45');
 });
 
 test('trust notes name real source files, and this lane does not award from them', () => {

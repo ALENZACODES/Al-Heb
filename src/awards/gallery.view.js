@@ -41,34 +41,35 @@ const CSS = `
 .aw-links a { display: inline-flex; align-items: center; min-block-size: 48px; padding-inline: .4rem; }
 .aw-group { margin: .8rem 0; }
 .aw-group h3 { font-size: 1rem; }
-.aw-cert { position: relative; color: #0c3a4d; background: #f3ecdf; border: 12px solid #0c3a4d; box-shadow: inset 0 0 0 1px #a7843f; padding: 1.15rem 2.2rem 1.6rem; max-inline-size: 56rem; margin-inline: auto; text-align: center; }
-.aw-cert-frame { position: relative; z-index: 1; background: #f3ecdf; margin: 1.4rem 1.2rem .4rem; padding: .2rem 1rem 1rem; }
-.aw-guilloche { position: absolute; inset: 0; width: 100%; height: 100%; color: #0c3a4d; opacity: .45; pointer-events: none; }
-.aw-cert-banner { position: relative; z-index: 2; margin: 0 auto .4rem; max-inline-size: 28rem; background: #0c3a4d; color: #f3ecdf; text-align: center; font-weight: 800; letter-spacing: .12em; padding: .55rem .8rem; }
-.aw-watermark { position: absolute; z-index: 2; inset: 42% 0 auto 0; text-align: center; font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 800; letter-spacing: .16em; color: #0c3a4d; opacity: .2; transform: rotate(-14deg); pointer-events: none; }
-.aw-seal { display: block; margin: .2rem auto .35rem; color: #0c3a4d; }
-.aw-brand { margin: 0; font-size: 2.1rem; letter-spacing: .32em; font-weight: 700; }
-.aw-cert h2 { margin: .15rem 0; font-size: 1.35rem; font-weight: 700; }
-.aw-kicker { margin: 0 0 1.1rem; letter-spacing: .04em; }
-.aw-name-label { margin: 0; font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; }
-.aw-name-panel { min-block-size: 3.4rem; margin: .35rem auto 0; max-inline-size: 28rem; border: 0; border-bottom: 1px solid #a7843f; padding: .2rem .4rem .45rem; background: transparent; }
-.aw-name { margin: 0; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; line-height: 1.15; overflow-wrap: anywhere; }
-.aw-name-empty { margin: .35rem 0 0; font-size: .95rem; }
-.aw-date { margin: .85rem 0 .35rem; }
-.aw-disclaimer { max-inline-size: 34rem; margin: .8rem auto .35rem; }
-.aw-art-note { margin: .2rem 0 0; font-size: .9rem; }
+.aw-cert { position: relative; color: #1c1c1c; background: #fbfbfa; border: 1px solid #9a9a9a; padding: 1.4rem 2.4rem 1.2rem; max-inline-size: 56rem; margin-inline: auto; text-align: center; font-family: "Frank Ruhl Libre", "Times New Roman", Times, "DejaVu Serif", serif; }
+.aw-cert-frame { position: relative; z-index: 1; background: transparent; margin: .4rem 0 0; padding: 0 1rem .2rem; }
+.aw-cert-banner, .aw-watermark { margin: .2rem 0; letter-spacing: .14em; font-weight: 700; font-size: .95rem; color: #1c1c1c; background: transparent; }
+.aw-wordmark { margin: .8rem 0 .1rem; font-size: .8rem; letter-spacing: .42em; }
+.aw-brand { margin: 0; font-size: clamp(2.6rem, 6vw, 4.2rem); letter-spacing: .18em; font-weight: 700; line-height: 1.05; }
+.aw-cert h2 { margin: .35rem 0 .9rem; font-size: 1.15rem; font-weight: 500; letter-spacing: .04em; }
+.aw-presented, .aw-for { margin: .35rem 0; font-size: .95rem; }
+.aw-name-panel { min-block-size: 2.6rem; margin: .2rem auto .35rem; max-inline-size: 36rem; border: 0; padding: 0 .4rem; background: transparent; }
+.aw-name { margin: 0; font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; line-height: 1.2; overflow-wrap: anywhere; }
+.aw-name-empty { margin: .2rem 0 0; font-size: .95rem; }
+.aw-course { margin: .15rem auto .45rem; max-inline-size: 36rem; font-size: 1.35rem; font-weight: 700; border-block: 1px solid #9a9a9a; padding: .45rem 0; }
+.aw-sample-line { margin: .7rem auto .4rem; max-inline-size: 36rem; font-size: .95rem; }
+.aw-seal { display: block; width: 64px; height: 64px; margin: .35rem auto .2rem; color: #7a1f24; }
+.aw-footer { margin: .15rem auto; max-inline-size: 36rem; font-size: .85rem; }
+.aw-date { margin: .15rem 0; font-size: .95rem; }
+.aw-art-note { margin: 0 0 .35rem; font-size: .78rem; }
 .aw-actions { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
 .aw-actions button { padding: .4rem .8rem; border: 2px solid currentColor; background: transparent; color: inherit; }
 .aw-actions button:disabled { border-style: dashed; cursor: not-allowed; }
 @media (max-width: 720px) {
-  .aw-cert { aspect-ratio: auto; padding: 1rem .8rem 1.4rem; }
-  .aw-cert-frame { margin: 1rem .2rem .2rem; }
+  .aw-cert { padding: 1rem .7rem 1.1rem; }
+  .aw-brand { letter-spacing: .08em; }
+  .aw-wordmark { letter-spacing: .28em; }
 }
 @media print {
   @page { size: A4 landscape; margin: 12mm; }
   body * { visibility: hidden; }
   .aw-cert, .aw-cert * { visibility: visible; }
-  .aw-cert { position: absolute; inset: 8mm; aspect-ratio: auto; max-inline-size: none; box-shadow: none; }
+  .aw-cert { position: absolute; inset: 8mm; max-inline-size: none; box-shadow: none; background: #fbfbfa; color: #1c1c1c; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .aw-noprint { display: none !important; }
   .aw-watermark, .aw-cert-banner { visibility: visible; }
 }

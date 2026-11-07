@@ -34,9 +34,11 @@ test('first visit explains evidence, locks mastery, and watermarks the sample', 
   assert.match(text, /Name panel empty/);
   const face = root.querySelector('#award-certificate').textContent;
   assert.match(face, /SAMPLE \/ NOT EARNED/);
-  assert.match(face, /Proposed completion/);
+  assert.match(face, /Certificate of Completion/);
   assert.match(face, /Temporary layout/);
-  assert.match(face, /independent Hebrew course/);
+  assert.match(face, /Not an accredited qualification/);
+  assert.match(face, /Beginner Hebrew Foundations/);
+  assert.match(face, /Presented to/);
   assert.doesNotMatch(face, /tamper-proof|verification website|seal of office/);
   const notes = root.querySelector('#award-sample-notes').textContent;
   assert.match(notes, /Approved artwork: 0/);
@@ -163,4 +165,19 @@ test('direct HTML caller cannot replace the sample watermark with EARNED', async
   assert.equal(node.querySelector('#aw-cert-banner').textContent, 'SAMPLE / NOT EARNED');
   assert.doesNotMatch(node.querySelector('#aw-cert-banner').textContent, /^EARNED$/);
   assert.equal(shareText({ watermark: 'EARNED' }).startsWith('SAMPLE / NOT EARNED'), true);
+  const longName = `${'A'.repeat(70)}<script>`;
+  const longNode = renderCertificate(h, {
+    ...sampleModel({ now: T }),
+    displayName: longName,
+    nameEntered: true,
+    watermark: 'EARNED',
+    sample: false,
+  });
+  assert.equal(longNode.querySelector('[data-cert-name]').textContent, longName);
+  assert.equal(longNode.querySelector('[data-cert-name]').queryAll('script').length, 0);
+  assert.equal(longNode.querySelector('#aw-cert-banner').textContent, SAMPLE_MARK);
+  const style = readFileSync(new URL('../src/awards/gallery.view.js', import.meta.url), 'utf8');
+  assert.match(style, /Frank Ruhl Libre/);
+  assert.match(style, /@page \{ size: A4 landscape/);
+  assert.match(style, /max-width: 720px/);
 });

@@ -1,7 +1,9 @@
-// Sample certificate. Landscape, warm ivory, deep-sea-blue geometric rings, a fine gold rule,
-// and an original geometric seal. Temporary vectors only. Accepted artwork: 0.
-// The sample is watermarked SAMPLE / NOT EARNED and is not a certificate.
-// No accreditation, no signature, no verification URL, no copied crest or ribbon.
+// Sample certificate. Pale paper, centered serif, original wording.
+// Temporary geometric seal only. Accepted artwork: 0.
+// Every HTML and PDF drawing says SAMPLE / NOT EARNED. That mark is not taken from the caller.
+// Not a degree, not an accredited qualification, no signature, no verification URL.
+// PDF text uses the standard PDF serif Times (supplied by the viewer). HTML uses Frank Ruhl Libre,
+// SIL OFL 1.1, already shipped in assets/fonts. No new font file is added.
 
 import { ART_ACCEPTED, ART_NOTE, renderSeal, svgNode } from './icons.js';
 import { sanitizeName } from './record.js';
@@ -20,6 +22,19 @@ export const SAMPLE_MARK = 'SAMPLE / NOT EARNED';
 /** A4 landscape, points. Margins stay at or beyond PRINT_MARGIN. */
 export const PDF_PAGE = Object.freeze({ width: 841.89, height: 595.28, margin: 40 });
 export const PRINT_MARGIN = 40;
+
+/** Face copy. Fixed so a caller cannot swap in a degree title or another institution. */
+export const FACE = Object.freeze({
+  wordmark: 'ALEF',
+  heading: 'ALEF',
+  subheading: 'Certificate of Completion',
+  presented: 'Presented to',
+  forWord: 'for',
+  course: 'Beginner Hebrew Foundations',
+  sampleLine: 'Sample design \u2014 completion has not been assessed or awarded.',
+  footer: 'Independent learning programme \u00b7 Not an accredited qualification',
+  temporary: 'Temporary layout',
+});
 
 export const MAIL_OFFER = Object.freeze({
   available: false,
@@ -40,13 +55,13 @@ export function sampleModel(o = {}) {
     displayName: name,
     nameEntered: !!name,
     dateLabel: `Preview date: ${formatPreviewDate(o.now ?? Date.now())}`,
-    brand: 'ALEF',
-    subtitle: 'Beginner reading',
-    kicker: 'Proposed completion',
-    artNote: 'Temporary layout.',
+    brand: FACE.heading,
+    subtitle: FACE.subheading,
+    kicker: FACE.course,
+    artNote: FACE.temporary,
     artAccepted: ART_ACCEPTED,
-    /** One sentence on the printable face. */
-    disclaimer: 'ALEF is an independent Hebrew course. This sample is not a diploma and not an accredited credential.',
+    disclaimer: FACE.footer,
+    sampleLine: FACE.sampleLine,
     statement: [],
     disclaimers: [],
   };
@@ -87,23 +102,12 @@ export function pdfLiteral(text) {
     const c = ch.codePointAt(0);
     if (ch === '\\' || ch === '(' || ch === ')') out += '\\' + ch;
     else if (c >= 32 && c <= 126) out += ch;
+    else if (c === 0x2014) out += '\\227';
+    else if (c === 0x2013) out += '\\226';
     else if (c >= 160 && c <= 255) out += '\\' + c.toString(8).padStart(3, '0');
     else out += '?';
   }
   return '(' + out + ')';
-}
-
-function wrap(text, width) {
-  const words = String(text).split(/\s+/).filter(Boolean);
-  const lines = [];
-  let line = '';
-  for (const word of words) {
-    const next = line ? line + ' ' + word : word;
-    if (next.length > width && line) { lines.push(line); line = word; }
-    else line = next;
-  }
-  if (line) lines.push(line);
-  return lines;
 }
 
 /** Every PDF from this helper is a sample. There is no non-sample export until a reviewed issuance design exists. */
@@ -121,82 +125,121 @@ export function pdfNameNote(name) {
   return '';
 }
 
-const IVORY = '0.953 0.925 0.875';
-const SEA = '0.047 0.227 0.302';
-const GOLD = '0.655 0.518 0.247';
+const PAPER = '0.988 0.986 0.980';
+const INK = '0.12 0.12 0.12';
+const RULE = '0.62 0.62 0.62';
+const SEAL = '0.48 0.10 0.13';
+/** Liberation Serif advances, which match Times. Index 0 is U+0020. Units are thousandths of the size. */
+const ROMAN = [250,333,408,500,500,833,778,180,333,333,500,564,250,333,250,278,500,500,500,500,500,500,500,500,500,500,278,278,564,564,564,444,921,722,667,667,722,611,556,722,722,333,389,722,611,889,722,722,556,722,667,556,611,722,722,944,722,722,611,333,278,333,469,500,333,444,500,444,500,444,333,500,500,278,278,500,278,778,500,500,500,500,333,389,278,500,500,722,500,500,444,480,200,480,541];
+const BOLD = [250,333,555,500,500,1000,833,278,333,333,500,570,250,333,250,278,500,500,500,500,500,500,500,500,500,500,333,333,570,570,570,500,930,722,667,722,722,667,611,778,778,389,500,778,667,944,722,778,611,778,722,556,667,722,722,1000,722,722,667,333,278,333,581,500,333,500,556,444,556,444,333,500,556,278,333,556,278,833,556,500,556,556,444,389,333,556,500,722,500,500,444,394,220,394,520];
 
-function circles(cmds, points, r) {
-  cmds.push(`${SEA} RG`);
-  cmds.push('0.6 w');
-  for (const [x, y] of points) cmds.push(`${x} ${y} ${r} 0 360 arc S`);
+function unitWidth(ch, bold) {
+  const c = ch.codePointAt(0);
+  if (c >= 32 && c <= 126) return (bold ? BOLD : ROMAN)[c - 32];
+  if (c === 0x2014) return 1000;
+  if (c === 0x2013) return 500;
+  if (c === 0x00B7) return 333;
+  return 500;
+}
+
+function textWidth(text, size, bold = false) {
+  let w = 0;
+  for (const ch of String(text)) w += unitWidth(ch, bold) / 1000 * size;
+  return w;
+}
+
+function placeTracked(cmds, font, size, y, text, trackingEm) {
+  const bold = font === 'F2';
+  const tracking = size * trackingEm;
+  const chars = [...String(text)];
+  const width = chars.reduce((sum, ch) => sum + textWidth(ch, size, bold), 0) + tracking * Math.max(0, chars.length - 1);
+  let x = (PDF_PAGE.width - width) / 2;
+  if (x < PDF_PAGE.margin) x = PDF_PAGE.margin;
+  for (const ch of chars) {
+    place(cmds, font, size, y, ch, INK, x);
+    x += textWidth(ch, size, bold) + tracking;
+  }
+}
+
+function place(cmds, font, size, y, text, color = INK, x) {
+  const left = x == null ? (PDF_PAGE.width - textWidth(text, size, font === 'F2')) / 2 : x;
+  cmds.push(`BT /${font} ${size} Tf ${color} rg 1 0 0 1 ${left.toFixed(1)} ${y} Tm ${pdfLiteral(text)} Tj ET`);
+}
+
+function strokeCircle(cmds, cx, cy, r) {
+  const k = 0.5522847498 * r;
+  const n = (v) => v.toFixed(2);
+  cmds.push(`${n(cx + r)} ${n(cy)} m`);
+  cmds.push(`${n(cx + r)} ${n(cy + k)} ${n(cx + k)} ${n(cy + r)} ${n(cx)} ${n(cy + r)} c`);
+  cmds.push(`${n(cx - k)} ${n(cy + r)} ${n(cx - r)} ${n(cy + k)} ${n(cx - r)} ${n(cy)} c`);
+  cmds.push(`${n(cx - r)} ${n(cy - k)} ${n(cx - k)} ${n(cy - r)} ${n(cx)} ${n(cy - r)} c`);
+  cmds.push(`${n(cx + k)} ${n(cy - r)} ${n(cx + r)} ${n(cy - k)} ${n(cx + r)} ${n(cy)} c`);
+  cmds.push('S');
+}
+
+/** Shrink a long name onto one line, or two lines if it still will not fit. */
+export function fitName(name, maxWidth) {
+  const raw = String(name || '').slice(0, 160);
+  if (!raw) return { size: 22, lines: [] };
+  let size = 26;
+  while (size > 11 && textWidth(raw, size, true) > maxWidth) size -= 1;
+  if (textWidth(raw, size, true) <= maxWidth) return { size, lines: [raw] };
+  const lines = [];
+  let line = '';
+  for (const ch of raw) {
+    const next = line + ch;
+    if (line && textWidth(next, 11, true) > maxWidth) {
+      lines.push(line);
+      line = ch;
+      if (lines.length === 2) return { size: 11, lines };
+    } else line = next;
+  }
+  if (line) lines.push(line);
+  return { size: 11, lines };
 }
 
 /**
- * One-page landscape certificate PDF.
- * Sample and any non-issued model include SAMPLE / NOT EARNED as a solid band and as large page text.
- * @param {ReturnType<typeof sampleModel>} model
+ * One-page landscape certificate PDF. Face copy is fixed. SAMPLE / NOT EARNED is drawn once
+ * at the top and once near the bottom, never rotated and never on top of another line.
+ * @param {object} model
  * @returns {Uint8Array}
  */
 export function renderCertificatePdf(model) {
   const { width, height, margin } = PDF_PAGE;
-  const watermark = modelNeedsWatermark(model);
-  const name = model.nameEntered ? model.displayName : '';
+  const name = model && model.nameEntered ? String(model.displayName || '') : '';
+  const date = model && model.dateLabel ? String(model.dateLabel) : '';
   const cmds = [];
-  const place = (font, size, y, text) => {
-    const x = Math.max(margin + 16, (width - String(text).length * size * 0.52) / 2);
-    cmds.push(`BT /${font} ${size} Tf ${SEA} rg 1 0 0 1 ${x.toFixed(1)} ${y} Tm ${pdfLiteral(text)} Tj ET`);
-  };
-  cmds.push(`${IVORY} rg`);
-  cmds.push(`0 0 ${width} ${height} re f`);
-  const edge = [];
-  for (let x = 90; x <= width - 90; x += 36) { edge.push([x, 28], [x, height - 28]); }
-  for (let y = 80; y <= height - 80; y += 36) { edge.push([28, y], [width - 28, y]); }
-  circles(cmds, edge, 10);
-  cmds.push(`${IVORY} rg`);
-  cmds.push(`${margin + 18} ${margin + 18} ${width - 2 * (margin + 18)} ${height - 2 * (margin + 18)} re f`);
-  cmds.push(`${SEA} RG`);
-  cmds.push('2 w');
+  cmds.push(`${PAPER} rg 0 0 ${width} ${height} re f`);
+  cmds.push(`${RULE} RG 0.6 w`);
   cmds.push(`${margin} ${margin} ${width - 2 * margin} ${height - 2 * margin} re S`);
-  cmds.push(`${GOLD} RG`);
-  cmds.push('0.7 w');
-  cmds.push(`${margin + 8} ${margin + 8} ${width - 2 * (margin + 8)} ${height - 2 * (margin + 8)} re S`);
-  if (watermark) {
-    cmds.push('0.58 g');
-    cmds.push('BT /F2 40 Tf');
-    cmds.push('0.9659 -0.2588 0.2588 0.9659 250 390 Tm');
-    cmds.push(`${pdfLiteral('SAMPLE')} Tj`);
-    cmds.push('0 -1.15 Td');
-    cmds.push(`${pdfLiteral('NOT EARNED')} Tj`);
-    cmds.push('ET');
-    cmds.push(`${SEA} rg`);
-    cmds.push('168 512 506 26 re f');
-    cmds.push('0.98 0.96 0.92 rg');
-    cmds.push('BT /F2 13 Tf 1 0 0 1 336 520 Tm');
-    cmds.push(`${pdfLiteral('SAMPLE / NOT EARNED')} Tj ET`);
+  if (modelNeedsWatermark(model)) place(cmds, 'F2', 11, 532, SAMPLE_MARK);
+  placeTracked(cmds, 'F1', 10, 500, FACE.wordmark, 0.42);
+  placeTracked(cmds, 'F2', 46, 448, FACE.heading, 0.06);
+  place(cmds, 'F1', 14, 408, FACE.subheading);
+  place(cmds, 'F1', 12, 370, FACE.presented);
+  const fitted = fitName(name, width - 120);
+  if (fitted.lines.length === 1) place(cmds, 'F2', fitted.size, 326, fitted.lines[0]);
+  else if (fitted.lines.length > 1) {
+    place(cmds, 'F2', fitted.size, 338, fitted.lines[0]);
+    place(cmds, 'F2', fitted.size, 320, fitted.lines[1]);
   }
-  cmds.push(`${SEA} RG 1.1 w`);
-  cmds.push('421 455 16 0 360 arc S');
-  cmds.push('421 455 10 0 360 arc S');
-  cmds.push('413 447 16 16 re S');
-  place('F2', 26, 408, model.brand || 'ALEF');
-  place('F2', 16, 378, model.subtitle || 'Beginner reading');
-  place('F1', 12, 354, model.kicker || 'Proposed completion');
-  const shown = name || '';
-  let namePt = 28;
-  while (namePt > 14 && shown.length * namePt * 0.52 > width - 160) namePt -= 1;
-  cmds.push(`${GOLD} RG 0.9 w`);
-  cmds.push('230 292 m 612 292 l S');
-  if (shown) place('F2', namePt, 306, shown);
-  else place('F1', 12, 308, 'Name');
-  place('F1', 11, 262, model.dateLabel || '');
-  let y = 228;
-  for (const line of wrap(model.disclaimer || '', 72)) {
-    place('F1', 11, y, line);
-    y -= 16;
-  }
-  place('F1', 10, y - 10, model.artNote || 'Temporary layout.');
-  const stream = cmds.join('\n');
-  return buildPdf(stream, width, height);
+  cmds.push(`${RULE} RG 0.6 w ${width / 2 - 220} 258 m ${width / 2 + 220} 258 l S`);
+  place(cmds, 'F1', 12, 278, FACE.forWord);
+  place(cmds, 'F2', 18, 230, FACE.course);
+  cmds.push(`${RULE} RG 0.6 w ${width / 2 - 220} 208 m ${width / 2 + 220} 208 l S`);
+  place(cmds, 'F1', 11, 190, FACE.sampleLine);
+  const sealX = width / 2;
+  const sealY = 152;
+  cmds.push(`${SEAL} RG 1.15 w`);
+  strokeCircle(cmds, sealX, sealY, 18);
+  strokeCircle(cmds, sealX, sealY, 12);
+  cmds.push(`${sealX - 6} ${sealY - 6} 12 12 re S`);
+  cmds.push(`${SEAL} rg ${sealX - 1.4} ${sealY - 1.4} 2.8 2.8 re f`);
+  place(cmds, 'F1', 10, 118, FACE.footer);
+  if (date) place(cmds, 'F1', 11, 100, date);
+  place(cmds, 'F1', 8, 84, FACE.temporary);
+  if (modelNeedsWatermark(model)) place(cmds, 'F2', 11, 64, SAMPLE_MARK);
+  return buildPdf(cmds.join('\n'), width, height);
 }
 
 function buildPdf(stream, width, height) {
@@ -206,8 +249,8 @@ function buildPdf(stream, width, height) {
     '<< /Type /Pages /Count 1 /Kids [3 0 R] >>',
     `<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${width} ${height}] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>`,
     `<< /Length ${stream.length} >>\nstream\n${stream}\nendstream`,
-    '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>',
-    '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>',
+    '<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>',
+    '<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>',
   ];
   let out = '%PDF-1.4\n%\xE2\xE3\xCF\xD3\n';
   const offsets = [0];
@@ -244,7 +287,8 @@ export function renderGuilloche() {
  * HTML certificate. The learner's name is a text node inside a blank panel.
  * @param {Function} h
  */
-export function renderCertificate(h, model) {
+export function renderCertificate(h, _model) {
+  const model = _model || {};
   const name = h('p', { class: 'aw-name', 'data-cert-name': '1' });
   name.textContent = model.displayName || '';
   const panelKids = [name];
@@ -257,17 +301,19 @@ export function renderCertificate(h, model) {
     'data-layout': 'landscape',
     'aria-labelledby': 'aw-cert-title',
   },
-  renderGuilloche(),
   h('p', { class: 'aw-cert-banner', id: 'aw-cert-banner', tabindex: '-1' }, SAMPLE_MARK),
   h('div', { class: 'aw-cert-frame' },
-    h('p', { class: 'aw-watermark', 'aria-hidden': 'true', 'data-watermark': '1' }, SAMPLE_MARK),
-    renderSeal(h),
-    h('p', { class: 'aw-brand' }, model.brand),
-    h('h2', { id: 'aw-cert-title' }, model.subtitle),
-    h('p', { class: 'aw-kicker' }, model.kicker),
-    h('p', { class: 'aw-name-label' }, 'Name'),
+    h('p', { class: 'aw-wordmark' }, FACE.wordmark),
+    h('p', { class: 'aw-brand' }, FACE.heading),
+    h('h2', { id: 'aw-cert-title' }, FACE.subheading),
+    h('p', { class: 'aw-presented' }, FACE.presented),
     h('div', { class: 'aw-name-panel', 'data-name-panel': '1' }, ...panelKids),
-    h('p', { class: 'aw-date' }, model.dateLabel),
-    h('p', { class: 'aw-disclaimer' }, model.disclaimer || ''),
-    h('p', { class: 'aw-art-note' }, model.artNote || 'Temporary layout.')));
+    h('p', { class: 'aw-for' }, FACE.forWord),
+    h('p', { class: 'aw-course' }, FACE.course),
+    h('p', { class: 'aw-sample-line' }, FACE.sampleLine),
+    h('div', { class: 'aw-seal-wrap' }, renderSeal(h)),
+    h('p', { class: 'aw-footer' }, FACE.footer),
+    h('p', { class: 'aw-date' }, model.dateLabel || ''),
+    h('p', { class: 'aw-art-note' }, FACE.temporary),
+    h('p', { class: 'aw-watermark', 'aria-hidden': 'true', 'data-watermark': '1' }, SAMPLE_MARK)));
 }

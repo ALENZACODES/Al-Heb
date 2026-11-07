@@ -1,6 +1,6 @@
 // Sample certificate. Warm eggshell paper, centered serif, original wording.
 // Temporary foil-style seal only. Accepted artwork: 0. Not a final art file.
-// Every HTML and PDF drawing says SAMPLE / NOT EARNED. That mark is not taken from the caller.
+// Every HTML and PDF drawing says Design proof. That label is not taken from the caller.
 // Not a degree, not an accredited qualification, no signature, no verification URL.
 // Cert # is last initial, then first initial, then the America/Toronto preview date.
 // It is a sample internal reference. The same name and date can collide. It is not checked.
@@ -18,9 +18,9 @@ export function formatPreviewDate(now) {
   return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()} UTC`;
 }
 
-export const PDF_FILENAME = 'alef-beginner-certificate-SAMPLE.pdf';
-/** Fixed sample mark. Callers cannot replace it with an earned claim. */
-export const SAMPLE_MARK = 'SAMPLE / NOT EARNED';
+export const PDF_FILENAME = 'alef-certificate-DESIGN-PROOF.pdf';
+/** One face label. Callers cannot replace it with an earned claim. */
+export const DESIGN_PROOF = 'Design proof';
 /** A4 landscape, points. Margins stay at or beyond PRINT_MARGIN. */
 export const PDF_PAGE = Object.freeze({ width: 841.89, height: 595.28, margin: 40 });
 export const PRINT_MARGIN = 40;
@@ -117,7 +117,7 @@ export function sampleModel(o = {}) {
     sample: true,
     issuable: false,
     earned: false,
-    watermark: SAMPLE_MARK,
+    watermark: DESIGN_PROOF,
     displayName: name,
     nameEntered: !!name,
     previewAt: typeof at === 'number' && Number.isFinite(at) ? at : null,
@@ -136,7 +136,8 @@ export function sampleModel(o = {}) {
 
 /** Long notes for the page and the docs. They are not drawn on the certificate face or the PDF. */
 export const SAMPLE_PAGE_NOTES = Object.freeze([
-  'Approved artwork: 0. No image file has been accepted. The eggshell ground and seal are a temporary layout, not final art.',
+  'Approved artwork: 0. No image file has been accepted. The eggshell ground and the crimson seal are a temporary layout, not final art.',
+  'The sheet is marked Design proof. That label does not mean a certificate was issued.',
   'Cert # is a sample internal reference built from the display name and the America/Toronto date of this preview. The same name and date share it. It is not unique, not checked, and not an accreditation number.',
   'This sample does not say the named person can read Hebrew, finished the white-belt lessons, or passed a checked assessment. Saving or printing it does not store an earned certificate.',
   'The name is a label you typed. It is not a signature and not an account.',
@@ -148,7 +149,7 @@ export const SAMPLE_PAGE_NOTES = Object.freeze([
 
 /** Learner-facing share blurb. Ignores any caller watermark. */
 export function shareText(_model) {
-  return `${SAMPLE_MARK}. Not an earned certificate. ALEF does not email this and does not upload it.`;
+  return `${DESIGN_PROOF}. Not an earned certificate. Completion has not been assessed or awarded. ALEF does not email this and does not upload it.`;
 }
 
 export function shareAvailability(nav) {
@@ -271,74 +272,48 @@ function paperGrain(cmds, width, height) {
   }
 }
 
-const GOLD_DEEP = '0.42 0.28 0.10';
-const GOLD_MID = '0.62 0.45 0.18';
-const GOLD_ANTIQUE = '0.78 0.60 0.28';
-const GOLD_LIGHT = '0.93 0.82 0.52';
-const RELIEF = '0.30 0.20 0.08';
+const CRIMSON = '0.62 0.08 0.12';
+const CRIMSON_DEEP = '0.36 0.04 0.07';
+const CRIMSON_INK = '0.24 0.03 0.05';
+const CRIMSON_LIGHT = '0.78 0.28 0.30';
 
-function scallopPoints(cx, cy, radius, amp, lobes, steps, dx, dy) {
-  const pts = [];
-  for (let i = 0; i <= steps; i++) {
-    const t = (Math.PI * 2 * i) / steps;
-    const r = radius + amp * Math.sin(lobes * t);
-    pts.push([cx + dx + r * Math.cos(t), cy + dy + r * Math.sin(t)]);
+/** Letters stand on the upper arc with their tops outward. Original issuer wording only. */
+function placeRingText(cmds, cx, cy, radius, text, size) {
+  const chars = [...text];
+  const gap = size * 0.14;
+  const widths = chars.map((ch) => textWidth(ch, size, true));
+  const total = widths.reduce((sum, w) => sum + w, 0) + gap * Math.max(0, chars.length - 1);
+  let angle = Math.PI / 2 + total / (2 * radius);
+  for (let i = 0; i < chars.length; i++) {
+    const w = widths[i];
+    const mid = angle - w / (2 * radius);
+    const ox = cx + radius * Math.cos(mid);
+    const oy = cy + radius * Math.sin(mid);
+    const a = Math.sin(mid);
+    const b = -Math.cos(mid);
+    const c = Math.cos(mid);
+    const d = Math.sin(mid);
+    const leftX = ox - (w / 2) * a;
+    const leftY = oy - (w / 2) * b;
+    cmds.push(`BT /F2 ${size} Tf ${CRIMSON_INK} rg ${a.toFixed(4)} ${b.toFixed(4)} ${c.toFixed(4)} ${d.toFixed(4)} ${leftX.toFixed(2)} ${leftY.toFixed(2)} Tm ${pdfLiteral(chars[i])} Tj ET`);
+    angle -= (w + gap) / radius;
   }
-  return pts;
 }
 
-function tracePath(cmds, pts, op) {
-  const n = (v) => v.toFixed(2);
-  cmds.push(`${n(pts[0][0])} ${n(pts[0][1])} m`);
-  for (let i = 1; i < pts.length; i++) cmds.push(`${n(pts[i][0])} ${n(pts[i][1])} l`);
-  cmds.push(`h ${op}`);
-}
-
-/** Key on a small block. Original geometry. No crown, no letters, no office claim. */
-function drawKey(cmds, cx, cy, color, weight) {
-  cmds.push(`${color} rg`);
-  cmds.push(`${(cx - 4.2).toFixed(2)} ${(cy - 9.6).toFixed(2)} 8.4 1.7 re f`);
-  cmds.push(`${color} RG ${weight} w`);
-  strokeCircle(cmds, cx, cy + 4.4, 3.4);
-  cmds.push(`${cx.toFixed(2)} ${(cy + 1.0).toFixed(2)} m ${cx.toFixed(2)} ${(cy - 7.6).toFixed(2)} l S`);
-  cmds.push(`${cx.toFixed(2)} ${(cy - 3.2).toFixed(2)} m ${(cx + 4.4).toFixed(2)} ${(cy - 3.2).toFixed(2)} l S`);
-  cmds.push(`${cx.toFixed(2)} ${(cy - 6.0).toFixed(2)} m ${(cx + 3.3).toFixed(2)} ${(cy - 6.0).toFixed(2)} l S`);
-}
-
-/** Temporary antique-gold stamp. Same size as the previous seal so the face layout stays. */
+/** Temporary crimson stamp. Original ring lettering and center word. Not approved artwork. */
 function drawSeal(cmds, cx, cy) {
-  cmds.push(`${WELL} rg`);
-  fillCircle(cmds, cx, cy, 40);
-  cmds.push(`${RELIEF} rg`);
-  tracePath(cmds, scallopPoints(cx, cy, 34.2, 2.15, 18, 144, 1.15, -1.1), 'f');
-  cmds.push(`${GOLD_ANTIQUE} rg`);
-  tracePath(cmds, scallopPoints(cx, cy, 34.2, 2.15, 18, 144, 0, 0), 'f');
-  cmds.push(`${GOLD_MID} rg`);
-  fillCircle(cmds, cx, cy, 25.5);
-  cmds.push(`${GOLD_DEEP} rg`);
-  fillCircle(cmds, cx + 0.45, cy - 0.5, 21.6);
-  cmds.push(`${RELIEF} RG 0.32 w`);
-  for (let i = 0; i < 48; i++) {
-    const a = (Math.PI * 2 * i) / 48;
-    const x1 = cx + Math.cos(a) * 22.4;
-    const y1 = cy + Math.sin(a) * 22.4;
-    const x2 = cx + Math.cos(a) * 31.6;
-    const y2 = cy + Math.sin(a) * 31.6;
-    cmds.push(`${x1.toFixed(2)} ${y1.toFixed(2)} m ${x2.toFixed(2)} ${y2.toFixed(2)} l S`);
-  }
-  cmds.push(`${GOLD_DEEP} RG 1.05 w`);
-  tracePath(cmds, scallopPoints(cx, cy, 32.6, 1.9, 18, 144, 0, 0), 'S');
-  cmds.push(`${GOLD_LIGHT} RG 0.5 w`);
-  tracePath(cmds, scallopPoints(cx, cy, 34.8, 2.05, 18, 144, -0.35, 0.4), 'S');
-  cmds.push(`${GOLD_DEEP} RG 0.75 w`);
-  strokeCircle(cmds, cx, cy, 25.4);
-  cmds.push(`${GOLD_LIGHT} RG 0.4 w`);
-  strokeCircle(cmds, cx - 0.3, cy + 0.35, 24.8);
-  cmds.push(`${GOLD_ANTIQUE} rg`);
-  fillCircle(cmds, cx, cy, 11.2);
-  drawKey(cmds, cx + 0.45, cy - 0.45, RELIEF, 1.15);
-  drawKey(cmds, cx - 0.35, cy + 0.4, GOLD_LIGHT, 0.85);
-  drawKey(cmds, cx, cy, RELIEF, 1.05);
+  cmds.push(`${CRIMSON_DEEP} rg`);
+  fillCircle(cmds, cx + 0.9, cy - 0.8, 38);
+  cmds.push(`${CRIMSON} rg`);
+  fillCircle(cmds, cx, cy, 38);
+  cmds.push(`${CRIMSON_LIGHT} RG 0.55 w`);
+  strokeCircle(cmds, cx - 0.45, cy + 0.5, 36.4);
+  cmds.push(`${CRIMSON_DEEP} RG 1.5 w`);
+  strokeCircle(cmds, cx, cy, 32);
+  cmds.push(`${CRIMSON_DEEP} RG 0.7 w`);
+  strokeCircle(cmds, cx, cy, 22);
+  placeRingText(cmds, cx, cy, 26.4, 'KEY FOUNDATION', 6);
+  place(cmds, 'F2', 9, cy - 3, 'ALEF', CRIMSON_INK);
 }
 
 /** Shrink a long name onto one line, or two lines if it still will not fit. */
@@ -363,8 +338,7 @@ export function fitName(name, maxWidth) {
 }
 
 /**
- * One-page landscape certificate PDF. Face copy is fixed. SAMPLE / NOT EARNED is drawn once
- * at the top and once near the bottom, never rotated and never on top of another line.
+ * One-page landscape certificate PDF. Face copy is fixed. Design proof is drawn once.
  * @param {object} model
  * @returns {Uint8Array}
  */
@@ -377,7 +351,6 @@ export function renderCertificatePdf(model) {
   paperGrain(cmds, width, height);
   cmds.push(`${RULE} RG 0.6 w`);
   cmds.push(`${margin} ${margin} ${width - 2 * margin} ${height - 2 * margin} re S`);
-  if (modelNeedsWatermark(model)) place(cmds, 'F2', 10, 540, SAMPLE_MARK);
   placeTracked(cmds, 'F1', 9, 526, FACE.wordmark, 0.42);
   place(cmds, 'F2', 22, 496, FACE.issuer);
   place(cmds, 'F1', 13, 468, FACE.subheading);
@@ -392,14 +365,11 @@ export function renderCertificatePdf(model) {
   cmds.push(`${RULE} RG 0.6 w ${width / 2 - 220} 368 m ${width / 2 + 220} 368 l S`);
   place(cmds, 'F2', 15, 346, FACE.course);
   cmds.push(`${RULE} RG 0.6 w ${width / 2 - 220} 330 m ${width / 2 + 220} 330 l S`);
-  place(cmds, 'F1', 10, 318, FACE.sampleLine);
-  drawSeal(cmds, width / 2, 262);
+  drawSeal(cmds, width / 2, 258);
   place(cmds, 'F2', 11, 200, certificateReference(name, model && model.previewAt));
-  place(cmds, 'F1', 8, 186, FACE.certNote);
-  place(cmds, 'F1', 9, 168, FACE.footer);
-  if (date) place(cmds, 'F1', 10, 152, date);
-  place(cmds, 'F1', 8, 136, FACE.temporary);
-  if (modelNeedsWatermark(model)) place(cmds, 'F2', 10, 112, SAMPLE_MARK);
+  place(cmds, 'F1', 9, 178, FACE.footer);
+  if (date) place(cmds, 'F1', 10, 160, date);
+  if (modelNeedsWatermark(model)) place(cmds, 'F1', 9, 138, DESIGN_PROOF);
   return buildPdf(cmds.join('\n'), width, height);
 }
 
@@ -476,7 +446,6 @@ export function renderCertificate(h, _model) {
     'aria-labelledby': 'aw-cert-title',
   },
   renderPaperGrain(),
-  h('p', { class: 'aw-cert-banner', id: 'aw-cert-banner', tabindex: '-1' }, SAMPLE_MARK),
   h('div', { class: 'aw-cert-frame' },
     h('p', { class: 'aw-wordmark' }, FACE.wordmark),
     h('p', { class: 'aw-issuer' }, FACE.issuer),
@@ -485,12 +454,9 @@ export function renderCertificate(h, _model) {
     h('div', { class: 'aw-name-panel', 'data-name-panel': '1' }, ...panelKids),
     h('p', { class: 'aw-for' }, FACE.forWord),
     h('p', { class: 'aw-course' }, FACE.course),
-    h('p', { class: 'aw-sample-line' }, FACE.sampleLine),
     h('div', { class: 'aw-seal-wrap' }, renderSeal(h)),
     h('p', { class: 'aw-cert-no' }, certificateReference(model.nameEntered ? model.displayName : '', model.previewAt)),
-    h('p', { class: 'aw-cert-note' }, FACE.certNote),
     h('p', { class: 'aw-footer' }, FACE.footer),
     h('p', { class: 'aw-date' }, model.dateLabel || ''),
-    h('p', { class: 'aw-art-note' }, FACE.temporary),
-    h('p', { class: 'aw-watermark', 'aria-hidden': 'true', 'data-watermark': '1' }, SAMPLE_MARK)));
+    h('p', { class: 'aw-design-proof', id: 'aw-design-proof', tabindex: '-1', 'data-watermark': '1' }, DESIGN_PROOF)));
 }

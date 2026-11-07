@@ -48,7 +48,7 @@ There is no function that turns a completion flag into an award. The page does n
 
 `source` and `trust` on an event are strings the caller wrote. Comparing them to `assessment-engine` and `objective` does not identify the caller and is not authentication. Evidence from a different `rubricId` does not satisfy an item. Stored evidence is local-only in `awards.v1`. It has no learner id, no key, and no network send. Copying the record to another browser is still just local data. This document does not claim the record can detect tampering.
 
-Every PDF and HTML certificate from this module is a sample. The banner and the diagonal both say SAMPLE / NOT EARNED. A caller watermark such as EARNED is ignored. Passing `sample: false` or `issuable: true` still prints that mark. There is no non-sample export until a separate issuance design is reviewed.
+Every PDF and HTML certificate from this module is a design proof. The face carries one label, Design proof. A caller watermark such as EARNED is ignored. Passing `sample: false` or `issuable: true` still prints that label. There is no earned export until a separate issuance design is reviewed. The file name is `alef-certificate-DESIGN-PROOF.pdf`.
 
 Matching the 40 shipped ids is not a content check and not approval. The evaluator still accepts those ids when the Hebrew, gloss, or requirement text on the items has been rewritten. It does not authenticate evidence. `CRITERIA_REVIEWED` stays false. That choice is unresolved and is not treated as a reviewed rubric.
 
@@ -79,15 +79,15 @@ Practice badges `game-session` and `game-return` read play counts already saved 
 
 Matte, polished, and foil are locked layout slots from the art direction. None is earned. The other programme games are not badge sources here.
 
-Store key: `awards.v1`. Local only. No account, no email, no server copy. The sample PDF is watermarked `SAMPLE / NOT EARNED` and is not stored as an earned certificate.
+Store key: `awards.v1`. Local only. No account, no email, no server copy. The PDF is marked Design proof and is not stored as an earned certificate.
 
 ## Certificate face
 
-The printable sheet, the screen preview, and the PDF share one landscape hierarchy on warm eggshell stock with a fine grain: a small ALEF wordmark for the learning programme, the issuer line "ALEF is Key Foundation", Certificate of Completion, Presented to, the learner's name, for, Beginner Hebrew Foundations between thin rules, one sample sentence, a temporary antique-gold geometric seal, the sample reference `Cert #`, and "Sample internal reference". The footer remains "Independent learning programme · Not an accredited qualification". SAMPLE / NOT EARNED is a single line at the top and a single line at the bottom. Those two lines do not sit on the name.
+The printable sheet, the screen preview, and the PDF share one landscape hierarchy on warm eggshell stock with a fine grain: a small ALEF wordmark for the learning programme, the issuer line "ALEF is Key Foundation", Certificate of Completion, Presented to, the learner's name, for, Beginner Hebrew Foundations between thin rules, a temporary crimson circular seal, and the sample reference `Cert #`. The footer remains "Independent learning programme · Not an accredited qualification", then the preview date, then one line: Design proof.
 
 `Cert #` is built only from the display name and the preview instant. The first whitespace-separated token is the given-name token and the last is the family-name token. Tokens between them are ignored. The reference is the last token's first Unicode letter, then the first token's first Unicode letter, then a hyphen and the America/Toronto calendar date `YYYYMMDD`. Ada Learner at 12:00 UTC on 6 November 2026 is `Cert # LA-20261106`. A single name, a missing name, a token with no letter, or an invalid instant is `Cert # incomplete`. The same name and date share one reference, so it is not unique. It is not checked, and it is not an accreditation number. The learner can edit the display name. The printed preview-date line stays in UTC. The `Cert #` date uses America/Toronto so the calendar day does not follow the machine timezone.
 
-Key Foundation is a display name on this sample. It is not a claim of a registered charity, company, or accreditation. The seal is a temporary key-and-block drawing. It is not a royal arms, a state crest, or a sign of endorsement. Approved artwork remains 0.
+Key Foundation is a display name on this sample. It is not a claim of a registered charity, company, or accreditation. The seal is a temporary crimson stamp with the words KEY FOUNDATION on the ring and ALEF in the center. It is not a royal arms, a state crest, or a sign of endorsement. Approved artwork remains 0.
 
 HTML uses Frank Ruhl Libre, already shipped under SIL OFL 1.1 (`assets/fonts/FONTS.md`, `assets/fonts/web/frank-ruhl-libre.woff2`). The PDF uses the standard PDF serif Times with WinAnsi encoding, which the viewer supplies. The eggshell grain and the seal are drawn in the PDF content, not only in the page CSS. No new font file was added, and no paid font service is used.
 

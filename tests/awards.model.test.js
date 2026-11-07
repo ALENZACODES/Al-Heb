@@ -273,11 +273,12 @@ test('sample Cert # uses last then first initial and the Toronto preview date', 
   });
   const text = Buffer.from(ignored).toString('latin1');
   assert.match(text, /Cert # LA-20261106/);
-  assert.match(text, /Sample internal reference/);
-  assert.doesNotMatch(text, /Accreditation No|SAMPLE-0001/);
+  assert.match(text, /Design proof/);
+  assert.equal((text.match(/\(Design proof\)/g) || []).length, 1);
+  assert.doesNotMatch(text, /SAMPLE \/ NOT EARNED|Sample internal reference|Accreditation No|SAMPLE-0001/);
   const hebrew = Buffer.from(renderCertificatePdf(sampleModel({ displayName: 'דוד כהן', now: noon }))).toString('latin1');
   assert.match(hebrew, /Cert # \?\?-20261106/);
-  assert.match(hebrew, /SAMPLE \/ NOT EARNED/);
+  assert.match(hebrew, /Design proof/);
 });
 
 test('sample PDF is landscape, watermarked, and does not turn a sample into an issued file', () => {
@@ -289,35 +290,34 @@ test('sample PDF is landscape, watermarked, and does not turn a sample into an i
   const text = Buffer.from(bytes).toString('latin1');
   assert.match(text, /^%PDF-1\.4/);
   assert.match(text, /MediaBox \[0 0 841\.89 595\.28\]/);
-  assert.match(text, /SAMPLE/);
-  assert.match(text, /NOT EARNED/);
-  assert.equal((text.match(/\(SAMPLE \/ NOT EARNED\)/g) || []).length, 2);
+  assert.match(text, /Design proof/);
+  assert.equal((text.match(/\(Design proof\)/g) || []).length, 1);
+  assert.doesNotMatch(text, /SAMPLE \/ NOT EARNED|Temporary layout|Sample internal reference/);
   assert.match(text, /Times-Roman/);
   assert.match(text, /Times-Bold/);
   assert.match(text, /WinAnsiEncoding/);
   assert.doesNotMatch(text, /Helvetica|0\.9659|\sarc\s/);
   assert.match(text, /Ada <script>/);
   assert.match(text, /Certificate of Completion/);
-  assert.match(text, /Temporary layout/);
   assert.match(text, /Not an accredited qualification/);
   assert.match(text, /Beginner Hebrew Foundations/);
   assert.match(text, /ALEF is Key Foundation/);
   assert.match(text, /Cert # SA-20261106/);
-  assert.match(text, /Sample internal reference/);
   assert.doesNotMatch(text, /CE#|Accreditation No|SAMPLE-0001|continuing-education|continuing education/);
   assert.doesNotMatch(text, /FMVA|CFI|Corporate Finance/);
   assert.doesNotMatch(text, /tamper-proof|verification website|seal of office/);
   assert.doesNotMatch(text, /\/JavaScript|mailto:|FMVA|\bCFI\b/);
   assert.doesNotMatch(text, /is an accredited|accredited by|university diploma/);
   const marked = renderCertificatePdf({ ...sampleModel({ now: T }), issuable: true, sample: true, displayName: 'Ada' });
-  assert.match(Buffer.from(marked).toString('latin1'), /SAMPLE/);
+  assert.match(Buffer.from(marked).toString('latin1'), /Design proof/);
   assert.equal(modelNeedsWatermark(sampleModel()), true);
   const long = 'A'.repeat(80);
   const fitted = fitName(long, PDF_PAGE.width - 120);
   assert.equal(fitted.lines.length, 1);
   assert.ok(fitted.size >= 11);
   const longPdf = Buffer.from(renderCertificatePdf(sampleModel({ displayName: long, now: T }))).toString('latin1');
-  assert.match(longPdf, /SAMPLE \/ NOT EARNED/);
+  assert.match(longPdf, /Design proof/);
+  assert.doesNotMatch(longPdf, /SAMPLE \/ NOT EARNED/);
   assert.match(longPdf, /AAAA/);
   const hostile = renderCertificatePdf({
     displayName: 'Ada',
@@ -334,8 +334,9 @@ test('sample PDF is landscape, watermarked, and does not turn a sample into an i
     dateLabel: 'Preview date: 6 November 2026 UTC',
   });
   const hostileText = Buffer.from(hostile).toString('latin1');
-  assert.match(hostileText, /SAMPLE \/ NOT EARNED/);
-  assert.doesNotMatch(hostileText, /\(EARNED\)/);
+  assert.match(hostileText, /Design proof/);
+  assert.equal((hostileText.match(/\(Design proof\)/g) || []).length, 1);
+  assert.doesNotMatch(hostileText, /\(EARNED\)|SAMPLE \/ NOT EARNED/);
   assert.equal(modelNeedsWatermark(undefined), true);
   assert.equal(modelNeedsWatermark(null), true);
   assert.equal(modelNeedsWatermark({ sample: false, issuable: true, watermark: 'EARNED' }), true);
@@ -343,7 +344,7 @@ test('sample PDF is landscape, watermarked, and does not turn a sample into an i
   assert.match(Buffer.from(hebrew).toString('latin1'), /\?/);
   assert.equal(pdfLiteral('a(b)\\c'), '(a\\(b\\)\\\\c)');
   const hex = createHash('sha256').update(bytes).digest('hex');
-  assert.equal(hex, 'e7c5c323e549109345ab9a6de20e0556f0ae47a9e829177dbb72c8d8cd851714');
+  assert.equal(hex, '6ab5d1f0d79d32c71828b4ff9a4d16044d4dd93df241f6aa1d4713c542c1ea7b');
 });
 
 test('trust notes name real source files, and this lane does not award from them', () => {

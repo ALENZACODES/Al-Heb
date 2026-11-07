@@ -28,20 +28,21 @@ test('first visit explains evidence, locks mastery, and watermarks the sample', 
   assert.match(text, /Evidence missing/);
   assert.match(text, /Confirmed criteria: none/);
   assert.match(text, /awaiting-review/);
-  assert.match(text, /SAMPLE \/ NOT EARNED/);
+  assert.match(text, /Design proof/);
+  assert.match(text, /has not been assessed/);
   assert.match(text, /Name panel empty/);
   assert.match(text, /Approved artwork: 0/);
   assert.match(text, /Name panel empty/);
   const face = root.querySelector('#award-certificate').textContent;
-  assert.match(face, /SAMPLE \/ NOT EARNED/);
+  assert.match(face, /Design proof/);
+  assert.doesNotMatch(face, /SAMPLE \/ NOT EARNED/);
   assert.match(face, /Certificate of Completion/);
-  assert.match(face, /Temporary layout/);
+  assert.doesNotMatch(face, /Temporary layout|Sample internal reference|has not been assessed|has passed/);
   assert.match(face, /Not an accredited qualification/);
   assert.match(face, /Beginner Hebrew Foundations/);
   assert.match(face, /Presented to/);
   assert.match(face, /ALEF is Key Foundation/);
   assert.match(face, /Cert # incomplete/);
-  assert.match(face, /Sample internal reference/);
   assert.doesNotMatch(face, /CE#|Accreditation No|SAMPLE-0001|continuing-education|continuing education/);
   assert.doesNotMatch(face, /tamper-proof|verification website|seal of office/);
   const notes = root.querySelector('#award-sample-notes').textContent;
@@ -69,8 +70,8 @@ test('first visit explains evidence, locks mastery, and watermarks the sample', 
   const style = root.querySelector('style').textContent;
   assert.match(style, /@media print/);
   assert.match(style, /landscape/);
-  assert.match(style, /\.aw-cert-banner/);
-  assert.doesNotMatch(style, /aw-watermark\{display:\s*none|aw-cert-banner\{display:\s*none/);
+  assert.match(style, /\.aw-design-proof/);
+  assert.doesNotMatch(style, /aw-design-proof\{display:\s*none/);
   const ids = ['award-name', 'award-save-name', 'award-jump', 'award-print', 'award-download', 'award-share'];
   const nodes = ids.map((id) => root.querySelector('#' + id));
   assert.ok(nodes.every(Boolean));
@@ -100,7 +101,7 @@ test('a typed name is escaped, a saved name survives reload, and the sample stay
   assert.equal(again.root.querySelector('[data-cert-name]').textContent, '<img src=x onerror=alert(1)> & "quotes"');
   assert.equal(again.root.querySelector('.aw-name-empty'), null);
   await again.root.querySelector('#award-jump').click();
-  assert.equal(globalThis.__focus, again.root.querySelector('#aw-cert-banner'));
+  assert.equal(globalThis.__focus, again.root.querySelector('#aw-design-proof'));
 });
 
 test('wrong answers, self-marks, and legacy completion never certify; games record activity only', async () => {
@@ -116,7 +117,8 @@ test('wrong answers, self-marks, and legacy completion never certify; games reco
   assert.equal(root.querySelector('[data-badge="game-return"]').getAttribute('data-state'), 'earned');
   assert.equal(root.querySelector('[data-badge="beginner-completion"]').getAttribute('data-state'), 'locked');
   assert.match(root.querySelector('[data-badge="beginner-completion"]').textContent, /Locked/);
-  assert.match(text, /SAMPLE \/ NOT EARNED/);
+  assert.match(text, /Design proof/);
+  assert.doesNotMatch(root.querySelector('#award-certificate').textContent, /SAMPLE \/ NOT EARNED/);
   assert.equal(store.m[AWARDS_KEY].awards['beginner-completion'], undefined);
   assert.equal(store.m[AWARDS_KEY].awards['mastery-foil'], undefined);
   const pdfs = [];
@@ -129,13 +131,14 @@ test('wrong answers, self-marks, and legacy completion never certify; games reco
   await again.root.querySelector('#award-share').click();
   assert.equal(printed, 1);
   assert.equal(pdfs.length, 1);
-  assert.equal(pdfs[0].filename, 'alef-beginner-certificate-SAMPLE.pdf');
+  assert.equal(pdfs[0].filename, 'alef-certificate-DESIGN-PROOF.pdf');
   const pdf = Buffer.from(pdfs[0].bytes).toString('latin1');
-  assert.match(pdf, /SAMPLE/);
-  assert.match(pdf, /NOT EARNED/);
+  assert.match(pdf, /Design proof/);
+  assert.doesNotMatch(pdf, /SAMPLE \/ NOT EARNED/);
   assert.match(pdf, /841\.89 595\.28/);
   assert.equal(shared.length, 1);
-  assert.match(shared[0].text, /SAMPLE \/ NOT EARNED/);
+  assert.match(shared[0].text, /Design proof/);
+  assert.match(shared[0].text, /has not been assessed/);
   assert.equal(shared[0].files, undefined);
   assert.equal(again.store.m[AWARDS_KEY].certificateEarned, undefined);
 });
@@ -146,14 +149,14 @@ test('storage denied and a second reload do not invent an earned certificate', a
   assert.match(text, /refused to save/);
   assert.match(text, /Nothing new was marked earned/);
   assert.equal(root.querySelector('[data-badge="game-session"]').getAttribute('data-state'), 'locked');
-  assert.match(text, /SAMPLE \/ NOT EARNED/);
+  assert.match(text, /Design proof/);
   const src = readFileSync(new URL('../src/awards/gallery.view.js', import.meta.url), 'utf8');
   assert.doesNotMatch(src, /mailto:|innerHTML|fetch\(/);
 });
 
 test('direct HTML caller cannot replace the sample watermark with EARNED', async () => {
   const { h } = await import('../src/shell/ui.js');
-  const { renderCertificate, sampleModel, shareText, SAMPLE_MARK } = await import('../src/awards/certificate.js');
+  const { renderCertificate, sampleModel, shareText, DESIGN_PROOF } = await import('../src/awards/certificate.js');
   const node = renderCertificate(h, {
     ...sampleModel({ displayName: 'QA', now: T }),
     nameEntered: true,
@@ -164,11 +167,11 @@ test('direct HTML caller cannot replace the sample watermark with EARNED', async
   });
   assert.equal(node.getAttribute('data-sample'), 'true');
   assert.equal(node.getAttribute('data-earned'), 'false');
-  assert.equal(node.querySelector('#aw-cert-banner').textContent, SAMPLE_MARK);
-  assert.equal(node.querySelector('[data-watermark]').textContent, SAMPLE_MARK);
-  assert.equal(node.querySelector('#aw-cert-banner').textContent, 'SAMPLE / NOT EARNED');
-  assert.doesNotMatch(node.querySelector('#aw-cert-banner').textContent, /^EARNED$/);
-  assert.equal(shareText({ watermark: 'EARNED' }).startsWith('SAMPLE / NOT EARNED'), true);
+  assert.equal(node.querySelector('#aw-design-proof').textContent, DESIGN_PROOF);
+  assert.equal(node.querySelector('[data-watermark]').textContent, 'Design proof');
+  assert.equal(node.queryAll('[data-watermark]').length, 1);
+  assert.doesNotMatch(node.textContent, /SAMPLE \/ NOT EARNED|\bEARNED\b|has passed/);
+  assert.equal(shareText({ watermark: 'EARNED' }).startsWith('Design proof'), true);
   const longName = `${'A'.repeat(70)}<script>`;
   const longNode = renderCertificate(h, {
     ...sampleModel({ now: T }),
@@ -179,12 +182,12 @@ test('direct HTML caller cannot replace the sample watermark with EARNED', async
   });
   assert.equal(longNode.querySelector('[data-cert-name]').textContent, longName);
   assert.equal(longNode.querySelector('[data-cert-name]').queryAll('script').length, 0);
-  assert.equal(longNode.querySelector('#aw-cert-banner').textContent, SAMPLE_MARK);
+  assert.equal(longNode.querySelector('#aw-design-proof').textContent, DESIGN_PROOF);
   const style = readFileSync(new URL('../src/awards/gallery.view.js', import.meta.url), 'utf8');
   assert.match(node.textContent, /ALEF is Key Foundation/);
   assert.match(node.textContent, /Cert # incomplete/);
-  assert.match(node.textContent, /Sample internal reference/);
-  assert.doesNotMatch(node.textContent, /CE#|Accreditation No|SAMPLE-0001/);
+  assert.match(node.textContent, /Design proof/);
+  assert.doesNotMatch(node.textContent, /Sample internal reference|CE#|Accreditation No|SAMPLE-0001/);
   const escaped = renderCertificate(h, {
     ...sampleModel({ now: T }),
     displayName: 'Ada <script>alert(1)</script>',

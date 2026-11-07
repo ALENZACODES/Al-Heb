@@ -42,7 +42,7 @@
 @keyframes prayer-light { from { transform: translate(-50%,-50%) scale(.72); opacity: .2; } to { transform: translate(-50%,-50%) scale(1); opacity: 1; } }
 
 /* The photo-realistic reading of an ancient tree is deliberate: no primitive
-   vector canopy, no toy-fruit circles, no new media and no moving typography. */
+   vector canopy, no toy-fruit circles, one local WebP asset and no moving typography. */
 .show-hero { display: block; min-height: 0; overflow: hidden; background: #1F3A5F; border-color: #D9A441; }
 .show-hero::after { content: none; animation: none; }
 .show-hero-text {

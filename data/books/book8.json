@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book8-p01.mp3"
    },
    "illustration": "a white Bauhaus street under hard sunlight, palm shadows",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book8-p02.mp3"
    },
    "illustration": "heat shimmer on asphalt, a man fanning himself with a newspaper",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book8-p03.mp3"
    },
    "illustration": "a pharmacy thermometer sign reading high, people in the shade",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book8-p04.mp3"
    },
    "illustration": "a young man at a kiosk pointing at a fridge of bottles",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book8-p05.mp3"
    },
    "illustration": "a sweating water bottle, condensation drops",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book8-p06.mp3"
    },
    "illustration": "the man at an ice cream counter, dozens of colours",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book8-p07.mp3"
    },
    "illustration": "a pistachio ice cream cone starting to drip",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book8-p08.mp3"
    },
    "illustration": "the man at the water's edge, one toe in",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book8-p09.mp3"
    },
    "illustration": "the man floating happily in bright blue water",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book8-p10.mp3"
    },
    "illustration": "orange sunset over the sea, silhouettes on the promenade",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book8-p11.mp3"
    },
    "illustration": "the man in a damp t-shirt hugging himself in a breeze",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book8-p12.mp3"
    },
    "illustration": "the man wrapped in a towel, grinning, city lights coming on",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   }
  ]

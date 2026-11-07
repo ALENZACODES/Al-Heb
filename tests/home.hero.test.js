@@ -37,6 +37,9 @@ test('home and welcome show the tree hero, not the book page', () => {
   assert.equal(welcome.querySelector('#view-title').textContent.replace(/\s+/g, ' ').trim(), 'Welcome to ALEF אלף');
   const css = readFileSync(new URL('../assets/css/landing.css', import.meta.url), 'utf8');
   assert.doesNotMatch(css, /@keyframes|animation:/);
+  assert.equal(home.querySelector('.show-hero-shade'), null, 'the painting is not covered by a shade');
+  assert.match(css, /\.show-hero-img \{[^}]*height: auto/);
+  assert.doesNotMatch(css, /object-fit:\s*cover/);
   const book = readFileSync(new URL('../src/shell/home-hero.js', import.meta.url), 'utf8');
   assert.doesNotMatch(book, /BOOK2_p01/);
 });

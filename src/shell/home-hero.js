@@ -10,7 +10,6 @@ export function homeHeroNode(ctx) {
   const books = ROUTES.some((r) => r.name === 'books') && (typeof ctx?.hasRoute === 'function' ? !!ctx.hasRoute('books') : true);
   return h('section', { class: 'show-hero', 'aria-label': 'The Tree of Knowledge' },
     h('img', { class: 'show-hero-img', src: HOME_HERO_SRC, alt: HOME_HERO_ALT, width: '1600', height: '914', loading: 'eager', decoding: 'async' }),
-    h('div', { class: 'show-hero-shade', 'aria-hidden': 'true' }),
     h('div', { class: 'show-hero-text' },
       h('p', { class: 'show-kicker' }, 'The Tree of Knowledge'),
       h('p', { class: 'show-title' }, 'Learn to read ', heSpan('עִבְרִית'), ' — Hebrew'),

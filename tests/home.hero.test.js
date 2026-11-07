@@ -6,40 +6,36 @@ import { mount as mountHome } from '../src/shell/home.view.js';
 import { mount as mountWelcome } from '../src/onboarding/firstrun.view.js';
 import { createSettings } from '../src/shell/settings.js';
 import { t } from '../src/shell/i18n.js';
-import { HOME_HERO_ALT, HOME_HERO_SRC } from '../src/shell/home-hero.js';
 
 const ctxFor = () => {
   const store = memStore();
   return { store, settings: createSettings(store), t, hasRoute: () => true, route() {}, installPrompt: { available: () => false } };
 };
 
-function hero(root) {
-  const img = root.querySelector('.show-hero-img');
-  assert.ok(img, 'hero image');
-  return img;
-}
-
-test('home and welcome show the tree hero, not the book page', () => {
+test('home and welcome place the living Tree of Knowledge above original text, panels and tiles', () => {
   const home = new N('div');
   mountHome(home, ctxFor());
   const welcome = new N('div');
   mountWelcome(welcome, ctxFor());
   for (const root of [home, welcome]) {
-    const img = hero(root);
-    assert.equal(img.attrs.src, HOME_HERO_SRC);
-    assert.equal(img.attrs.alt, HOME_HERO_ALT);
-    assert.equal(img.attrs.loading, 'eager');
-    assert.doesNotMatch(img.attrs.alt, /Jerusalem stone courtyard/);
+    assert.equal(root.querySelector('.show-hero-img'), null, 'hero uses no image file');
+    const scene = root.querySelector('.astral-scene');
+    assert.ok(scene, 'the astral hero scene exists');
+    assert.ok(scene.querySelector('svg'), 'SVG tree exists');
+    assert.ok(scene.querySelector('.astral-growth'), 'tree has a growing branch layer');
+    assert.ok(scene.querySelector('.astral-fruits'), 'pomegranates are built in SVG');
+    const hero = root.querySelector('.show-hero');
+    assert.equal(hero.children[0], scene, 'tree is above text, never covers it');
+    assert.ok(root.querySelector('.show-try'), 'first word panel unchanged');
+    assert.ok(root.querySelector('.show-grid'), 'existing destination tiles remain');
+    assert.ok(root.querySelector('.show-stats'), 'existing numbers remain');
     assert.equal(root.querySelector('.show-hero a.show-btn').attrs.href, '#/firstday');
-    assert.equal(root.querySelector('a.show-btn2'), null, 'no books route on this branch');
+    assert.equal(root.querySelector('.show-hero a.show-btn2').attrs.href, '#/books');
   }
   assert.equal(home.queryAll('h1').length, 1);
   assert.equal(welcome.querySelector('#view-title').textContent.replace(/\s+/g, ' ').trim(), 'Welcome to ALEF אלף');
-  const css = readFileSync(new URL('../assets/css/landing.css', import.meta.url), 'utf8');
-  assert.doesNotMatch(css, /@keyframes|animation:/);
-  assert.equal(home.querySelector('.show-hero-shade'), null, 'the painting is not covered by a shade');
-  assert.match(css, /\.show-hero-img \{[^}]*height: auto/);
-  assert.doesNotMatch(css, /object-fit:\s*cover/);
-  const book = readFileSync(new URL('../src/shell/home-hero.js', import.meta.url), 'utf8');
-  assert.doesNotMatch(book, /BOOK2_p01/);
+  const css = readFileSync(new URL('../assets/css/astral-home.css', import.meta.url), 'utf8');
+  assert.match(css, /prefers-reduced-motion:\s*reduce/);
+  assert.match(css, /astral-scene\[data-paused="1"\]/);
+  assert.match(css, /@keyframes astral-grow/);
 });

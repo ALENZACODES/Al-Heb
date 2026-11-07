@@ -12,7 +12,9 @@ import { fileURLToPath } from 'node:url';
 import { computeManifest, manifestText } from '../build-precache.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
-export const LIMITS = { maxFileBytes: 25 * 1024 * 1024, maxFiles: 20000 }; // developers.cloudflare.com/pages/platform/limits, read 2026-11-03
+export const LIMITS = { maxFileBytes: 25 * 1024 * 1024 }; // developers.cloudflare.com/pages/platform/limits, read 2026-11-03
+// No maxFiles: the host is Render, which has no file cap (fix #5). The old Cloudflare Pages Free cap (20,000)
+// cannot hold a build that must ship ~19,800 audio clips, so the count is reported, never failed on.
 
 /** Runtime files that are not in the precache list but that the app or the host needs. Each is [path-or-dir, why]. */
 export const EXTRAS = [
@@ -84,9 +86,9 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
   const r = makeDist({ out: opt('--out', 'dist'), img: args.includes('--with-img') });
   console.log(`dist ready: ${r.dist}`);
-  console.log(`files ${r.files} / ${LIMITS.maxFiles} allowed; total ${mib(r.bytes)}; precache ${r.precacheFiles} files, ${mib(r.precacheBytes)} (version ${r.version})`);
+  console.log(`files ${r.files} (no host file-count cap; Render); total ${mib(r.bytes)}; precache ${r.precacheFiles} files, ${mib(r.precacheBytes)} (version ${r.version})`);
   console.log('by folder:'); for (const [g, v] of r.groups) console.log(`  ${g.padEnd(28)} ${String(v.files).padStart(5)} files  ${mib(v.bytes).padStart(11)}`);
   console.log('largest files (limit ' + mib(LIMITS.maxFileBytes) + ' each):'); for (const l of r.largest) console.log(`  ${l.rel}  ${mib(l.bytes)}`);
-  if (r.files > LIMITS.maxFiles || r.largest[0].bytes > LIMITS.maxFileBytes) { console.error('OVER A CLOUDFLARE PAGES LIMIT'); process.exit(1); }
+  if (r.largest[0].bytes > LIMITS.maxFileBytes) { console.error('OVER THE 25 MiB PER-FILE LIMIT'); process.exit(1); }
   console.log('Next: node tools/deploy/check-deploy.mjs');
 }

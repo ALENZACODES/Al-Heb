@@ -14,7 +14,10 @@ import { brotliDecompressSync } from 'node:zlib';
 import { MIME as BASE_MIME } from '../serve.mjs';
 
 const REPO = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
-const LIMITS = { maxFileBytes: 25 * 1024 * 1024, maxFiles: 20000, maxHeaderRules: 100, maxHeaderLen: 2000 }; // Cloudflare Pages limits page, read 2026-11-03
+const LIMITS = { maxFileBytes: 25 * 1024 * 1024, maxHeaderRules: 100, maxHeaderLen: 2000 }; // Cloudflare Pages limits page, read 2026-11-03
+// No file-count limit here: the host is Render, which has no file cap (fix #5). The old Cloudflare Pages Free
+// cap was 20,000 files per site; this build ships ~20,800 files, almost all of them audio clips the tests
+// require to ship (every mp3 on disk ships — see tests/deploy.test.js), so the count is reported, never failed on.
 const MIME = { ...BASE_MIME, '.wasm': 'application/wasm', '.traineddata': 'application/octet-stream', '.md': 'text/markdown; charset=utf-8' };
 
 // ---------- _headers parsing and matching (Cloudflare semantics: every matching rule applies, same header joined with ", ", "! Name" detaches)
@@ -137,10 +140,9 @@ export async function runChecks(root) {
 
   check('_headers sets Content-Type application/manifest+json for /manifest.webmanifest explicitly (the local server has a built-in MIME map, so this is checked on the file, not just the response)', headersFor(rules, '/manifest.webmanifest').get('content-type')?.value === 'application/manifest+json');
 
-  // limits (Cloudflare Pages: 20,000 files per site on the Free plan, 25 MiB per file)
+  // limits (Cloudflare Pages: 25 MiB per file; file count is reported in the summary, not limited — the host is Render, no file cap; fix #5)
   const files = walk(root); const sizes = files.map((f) => ({ f, b: statSync(join(root, f)).size }));
   const big = sizes.reduce((a, s) => (s.b > a.b ? s : a), { b: 0 });
-  check(`file count within ${LIMITS.maxFiles} (Cloudflare Pages Free)`, files.length <= LIMITS.maxFiles, `${files.length} files`);
   check('every file within 25 MiB (Cloudflare Pages)', big.b <= LIMITS.maxFileBytes, `largest ${big.f} ${(big.b / 1048576).toFixed(2)} MiB`);
   const total = sizes.reduce((a, s) => a + s.b, 0);
   const none = files.filter((f) => cacheRuleCount(rules, '/' + f) > 1);

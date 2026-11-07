@@ -21,11 +21,11 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   const out = args.includes('--out') ? args[args.indexOf('--out') + 1] : 'dist';
   const r = makeDist({ out, img: args.includes('--with-img') });
   console.log(`dist ready: ${r.dist}`);
-  console.log(`files ${r.files} / ${LIMITS.maxFiles}; total ${mib(r.bytes)}; precache ${r.precacheFiles} files, ${mib(r.precacheBytes)} (version ${r.version})`);
+  console.log(`files ${r.files} (no host file-count cap; Render); total ${mib(r.bytes)}; precache ${r.precacheFiles} files, ${mib(r.precacheBytes)} (version ${r.version})`);
   for (const [g, v] of r.groups) console.log(`  ${g.padEnd(28)} ${String(v.files).padStart(5)} files ${mib(v.bytes).padStart(11)}`);
   console.log('largest: ' + r.largest.map((l) => `${l.rel} ${mib(l.bytes)}`).join('; '));
   const { list, missing } = missingPrecache(r.dist);
   if (missing.length) { console.error(`MISSING from dist (${missing.length} of ${list.length} precache URLs): ${missing.slice(0, 10).join(', ')}`); process.exit(1); }
   console.log(`precache check: all ${list.length} URLs exist in dist`);
-  if (r.files > LIMITS.maxFiles || r.largest[0].bytes > LIMITS.maxFileBytes) { console.error('OVER A CLOUDFLARE PAGES LIMIT'); process.exit(1); }
+  if (r.largest[0].bytes > LIMITS.maxFileBytes) { console.error('OVER THE 25 MiB PER-FILE LIMIT'); process.exit(1); }
 }

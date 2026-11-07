@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { MODEH_ANI, prayerKey, pickPrayer } from '../src/shell/prayer-veil.js';
+import { MODEH_ANI, prayerKey, pickPrayer, prayerAudioPath } from '../src/shell/prayer-veil.js';
 
 const data = JSON.parse(readFileSync(new URL('../data/homepage/prayers.json', import.meta.url), 'utf8'));
 const bank = data.prayers;
@@ -42,4 +42,14 @@ test('opening card has a hard timeout, skip controls and ready signal before the
   const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
   assert.match(html, /id="alef-prayer-veil"/);
   assert.match(html, /id="alef-prayer-skip"/);
+});
+
+test('veil audio map: prayerAudioPath resolves by bank position and voice, null when unmapped', () => {
+  const fake = { prayers: bank, audio: { '1': { m: 'audio/homepage/veil-001-m.mp3', f: 'audio/homepage/veil-001-f.mp3' } } };
+  assert.equal(prayerAudioPath(fake, bank[0], 'f'), 'audio/homepage/veil-001-f.mp3');
+  assert.equal(prayerAudioPath(fake, bank[0], 'm'), 'audio/homepage/veil-001-m.mp3');
+  assert.equal(prayerAudioPath(fake, bank[1], 'f'), null); // position 2 unmapped
+  assert.equal(prayerAudioPath({ prayers: bank }, bank[0], 'f'), null); // a bank without an audio map
+  assert.equal(prayerAudioPath(null, bank[0], 'f'), null);
+  assert.equal(prayerAudioPath(fake, MODEH_ANI, 'f'), 'audio/homepage/veil-001-f.mp3'); // fallback matches bank[0] by key
 });

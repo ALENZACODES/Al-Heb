@@ -68,3 +68,33 @@ test('storage notice banner appears when the store cannot save and hides when it
   const ok = createStore({ storage: createMemoryStorage(), window: null }); const d2 = fakeDoc(); mountStorageNotice(ok, { document: d2.doc }); assert.equal(d2.bar().hidden, true);
   rm(); assert.equal(bar.removed, true);
 });
+
+test('boot-apply: a worker already waiting at startup is applied without a click when the option is on', async () => {
+  const f = fakeSW(); f.reg.waiting = f.waiting;
+  const h = watchForUpdates(f.g, { checkEveryMs: 0, applyWaitingAtBoot: true, bootApplyDelayMs: 1 }); await tick();
+  assert.equal(h.state(), 'waiting');
+  await new Promise((r) => setTimeout(r, 30));
+  assert.deepEqual(f.posted, [{ type: 'SKIP_WAITING' }]); // applied on its own: the relaunch remedy works
+  h.stop();
+});
+
+test('boot-apply stays off without the option: a waiting worker at startup is banner-only', async () => {
+  const f = fakeSW(); f.reg.waiting = f.waiting;
+  const h = watchForUpdates(f.g, { checkEveryMs: 0, bootApplyDelayMs: 1 }); await tick();
+  await new Promise((r) => setTimeout(r, 30));
+  assert.deepEqual(f.posted, []); assert.equal(f.reloads(), 0);
+  h.stop();
+});
+
+test('boot-apply never touches an update that installs mid-session', async () => {
+  const f = fakeSW(); // no waiting worker at startup
+  const h = watchForUpdates(f.g, { checkEveryMs: 0, applyWaitingAtBoot: true, bootApplyDelayMs: 1 }); await tick();
+  const w = { state: 'installing', ls: {}, addEventListener(t, fn) { (this.ls[t] ||= []).push(fn); } };
+  f.reg.installing = w;
+  f.reg.listeners.updatefound(); // a new worker appears during the session
+  w.state = 'installed'; (w.ls.statechange || []).forEach((fn) => fn());
+  assert.equal(h.state(), 'waiting');
+  await new Promise((r) => setTimeout(r, 30));
+  assert.deepEqual(f.posted, []); assert.equal(f.reloads(), 0); // banner path only, as designed
+  h.stop();
+});

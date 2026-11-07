@@ -1,5 +1,9 @@
 // @ts-check
-// Update UX: notice that a new service worker is installed and offer "Reload", never reloading by itself.
+// Update UX: notice that a new service worker is installed and offer "Reload", never reloading by itself mid-session.
+// One exception, boot-apply: a worker that is ALREADY waiting when the app starts is applied at once
+// (startUpdateBanner opts in), because at startup nothing is in progress yet — that is what makes the
+// "close ALEF and open it again" remedy actually deliver the update (owner report, Nov 7 2026: on the
+// owner's phone, updates sat waiting behind the banner and the newest build 'never arrived').
 //
 // HOW IN-PROGRESS WORK SURVIVES (and what does not):
 //  - Progress, settings and SRS cards live in localStorage (src/store.js writes synchronously on every change), so a reload loses none.
@@ -37,9 +41,19 @@ export function watchForUpdates(g = globalThis, opt = {}) {
   const inert = { supported: false, state: () => "idle", onChange: () => () => {}, check: async () => false, apply: async () => {}, stop() {} };
   if (!swc) return /** @type {any} */ (inert);
 
+  let bootWorker = null; // the worker that was already waiting when this page loaded (boot-apply target)
   const track = (r) => {
     if (!r) return; reg = r;
-    if (r.waiting && hadController) { waiting = r.waiting; set("waiting"); }
+    if (r.waiting && hadController) {
+      waiting = r.waiting; set("waiting");
+      // Boot-apply: this worker finished installing in a PREVIOUS session, so no exercise can be in
+      // progress yet. Apply exactly this worker, after first paint; if a newer worker has taken its
+      // place as `waiting` by then, leave it to the banner instead (that one is a mid-session arrival).
+      if (opt.applyWaitingAtBoot && !bootWorker) {
+        bootWorker = r.waiting;
+        setT(() => { if (state === "waiting" && waiting === bootWorker) doApply(); }, opt.bootApplyDelayMs ?? 900);
+      }
+    }
     r.addEventListener?.("updatefound", () => {
       const w = r.installing; if (!w) return;
       w.addEventListener?.("statechange", () => {
@@ -61,22 +75,24 @@ export function watchForUpdates(g = globalThis, opt = {}) {
     interval = si(() => { check(); }, opt.checkEveryMs ?? 3600000);
   }
 
+  const doApply = async (o = {}) => {
+    for (const h of [...(opt.beforeReload || []), ...(o.beforeReload || [])]) { try { await h(); } catch { /* a hook must not block the reload */ } }
+    if (state === "waiting" && waiting) {
+      reloading = true;
+      try { waiting.postMessage(SKIP_WAITING_MESSAGE); } catch { reloading = false; set("stalled"); return; }
+      // the page reloads on controllerchange; if the worker ignores the message (an older sw.js without the handler) say so instead of hanging
+      stallTimer = setT(() => { if (reloading) { reloading = false; set("stalled"); } }, STALL_MS);
+      return;
+    }
+    try { g.location?.reload?.(); } catch { /* ignore */ }
+  };
+
   return {
     supported: true,
     state: () => state,
     onChange(fn) { subs.add(fn); return () => subs.delete(fn); },
     check,
-    async apply(o = {}) {
-      for (const h of [...(opt.beforeReload || []), ...(o.beforeReload || [])]) { try { await h(); } catch { /* a hook must not block the reload */ } }
-      if (state === "waiting" && waiting) {
-        reloading = true;
-        try { waiting.postMessage(SKIP_WAITING_MESSAGE); } catch { reloading = false; set("stalled"); return; }
-        // the page reloads on controllerchange; if the worker ignores the message (an older sw.js without the handler) say so instead of hanging
-        stallTimer = setT(() => { if (reloading) { reloading = false; set("stalled"); } }, STALL_MS);
-        return;
-      }
-      try { g.location?.reload?.(); } catch { /* ignore */ }
-    },
+    apply: (o) => doApply(o),
     stop() { swc.removeEventListener?.("controllerchange", onControllerChange); if (stallTimer != null) clrT(stallTimer); if (interval != null) (opt.clearInterval ?? ((h) => globalThis.clearInterval(h)))(interval); subs.clear(); },
   };
 }
@@ -161,7 +177,7 @@ export function mountStorageNotice(store, opt = {}) {
 export function startUpdateBanner(opt = {}) {
   try {
     const st = opt.store ?? globalThis.alef?.store; let rmN = () => {}; try { if (st) rmN = mountStorageNotice(st, opt); } catch { /* ignore */ }
-    const handle = watchForUpdates(globalThis, opt); const rmB = mountUpdateBanner(handle, opt);
+    const handle = watchForUpdates(globalThis, { applyWaitingAtBoot: true, ...opt }); const rmB = mountUpdateBanner(handle, opt);
     return { handle, remove() { rmB(); rmN(); } };
   } catch { return { handle: null, remove() {} }; }
 }

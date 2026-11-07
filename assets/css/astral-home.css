@@ -38,6 +38,16 @@
   padding: .55rem .95rem; font: inherit; font-size: .85rem; cursor: pointer;
 }
 .prayer-skip:focus-visible { outline: 3px solid #D9A441; outline-offset: 3px; }
+.prayer-listen {
+  position: absolute; bottom: max(1.2rem, env(safe-area-inset-bottom)); inset-inline-start: 1.2rem; z-index: 2;
+  background: transparent; color: #F6F1E7; border: 1px solid #D9A441; border-radius: 40px;
+  padding: .55rem .95rem; font: inherit; font-size: .85rem; cursor: pointer;
+}
+.prayer-listen:focus-visible { outline: 3px solid #D9A441; outline-offset: 3px; }
+.prayer-audio-note {
+  position: absolute; bottom: calc(max(1.2rem, env(safe-area-inset-bottom)) + 3.1rem); inset-inline: 0; z-index: 2;
+  margin: 0; text-align: center; color: #F6F1E7; opacity: .78; font-size: .78rem;
+}
 @keyframes prayer-stars { from { transform: translateY(-5px); opacity: .55; } to { transform: translateY(5px); opacity: 1; } }
 @keyframes prayer-light { from { transform: translate(-50%,-50%) scale(.72); opacity: .2; } to { transform: translate(-50%,-50%) scale(1); opacity: 1; } }
 

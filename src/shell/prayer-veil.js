@@ -23,6 +23,26 @@ export function pickPrayer(bank, previous = '', random = Math.random) {
   return pool[n];
 }
 
+/** Clip for a bank prayer, or null. data.audio maps 1-based bank positions ("1".."80") to {m, f} paths. */
+export function prayerAudioPath(data, chosen, voice) {
+  if (!data || !Array.isArray(data.prayers) || !chosen) return null;
+  const idx = data.prayers.findIndex((p) => prayerKey(p) === prayerKey(chosen));
+  if (idx < 0) return null;
+  const entry = data.audio?.[String(idx + 1)];
+  const path = entry?.[voice === 'm' ? 'm' : 'f'];
+  return typeof path === 'string' && path.trim() ? path : null;
+}
+
+/** The learner's voice pick + audio-free flag, read from the same store record the app writes.
+ *  The veil runs before the app boots, so it reads localStorage directly and degrades to defaults. */
+function readAudioPrefs() {
+  try {
+    const raw = localStorage.getItem('alef:settings');
+    const s = raw ? JSON.parse(raw) : {};
+    return { voice: s?.voice === 'm' ? 'm' : 'f', audioFree: s?.audioFree === true };
+  } catch { return { voice: 'f', audioFree: false }; }
+}
+
 function luckyNumber() {
   try {
     const values = new Uint32Array(1);
@@ -38,15 +58,49 @@ function initPrayerVeil() {
   if (!veil) return;
   const he = document.getElementById('alef-prayer-he');
   const en = document.getElementById('alef-prayer-en');
+  const listenBtn = document.getElementById('alef-prayer-listen');
+  const audioNote = document.getElementById('alef-prayer-audio-note');
   const maxMs = readLocal(VISIT_KEY) ? 800 : 2200;
   writeLocal(VISIT_KEY, '1');
   let closed = false;
   let deadline = null;
+  let audio = null, audioPath = '', holding = false;
   const reduce = globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches === true;
+
+  function stopAudio() {
+    try { if (audio) { audio.pause(); audio.removeAttribute('src'); audio.load?.(); } } catch { /* ignore */ }
+  }
+  // Listening holds the veil open past its usual few seconds; it leaves shortly after the clip ends.
+  function holdForAudio() {
+    if (closed || holding) return;
+    holding = true;
+    clearTimeout(deadline);
+    document.removeEventListener('alef:ready', onReady);
+  }
+  function releaseAfter(ms) {
+    if (closed) return;
+    clearTimeout(deadline);
+    deadline = setTimeout(() => dismiss(true), ms);
+  }
+  listenBtn?.addEventListener('click', (e) => {
+    e.stopPropagation(); // a veil click dismisses; the Listen button must not
+    if (closed || !audioPath) return;
+    holdForAudio();
+    try {
+      if (!audio) audio = new Audio();
+      if (!audio.paused && !audio.ended) { audio.pause(); audio.currentTime = 0; releaseAfter(800); return; }
+      if (audio.getAttribute('src') !== audioPath) audio.src = audioPath;
+      audio.onended = () => releaseAfter(1000);
+      audio.onerror = () => { if (listenBtn) listenBtn.hidden = true; if (audioNote) audioNote.hidden = true; releaseAfter(800); };
+      const p = audio.play();
+      if (p?.catch) p.catch(() => releaseAfter(800));
+    } catch { releaseAfter(800); }
+  });
 
   function dismiss(now = false) {
     if (closed) return;
     closed = true;
+    stopAudio();
     clearTimeout(deadline);
     document.removeEventListener('alef:ready', onReady);
     document.removeEventListener('keydown', onKey);
@@ -65,11 +119,13 @@ function initPrayerVeil() {
   // Local same-origin JSON in the PWA precache. Do not block boot on network.
   Promise.resolve().then(async () => {
     let chosen = MODEH_ANI;
+    let bankData = null;
     try {
       const response = await fetch(new URL('../../data/homepage/prayers.json', import.meta.url));
       if (!response.ok) throw new Error('prayer bank unavailable');
       const data = await response.json();
       if (!Array.isArray(data.prayers) || data.prayers.length !== 80) throw new Error('unreviewed or incomplete prayer bank');
+      bankData = data;
       chosen = pickPrayer(data.prayers, readLocal(LAST_KEY), luckyNumber);
     } catch { /* the supplied Modeh Ani is the single safe fallback */ }
     if (closed) return;
@@ -77,6 +133,11 @@ function initPrayerVeil() {
     en.textContent = chosen.en;
     veil.dataset.prayerReady = '1';
     writeLocal(LAST_KEY, prayerKey(chosen));
+    try {
+      const prefs = readAudioPrefs();
+      const path = prefs.audioFree ? null : prayerAudioPath(bankData, chosen, prefs.voice);
+      if (path && listenBtn) { audioPath = path; listenBtn.hidden = false; if (audioNote) audioNote.hidden = false; }
+    } catch { /* audio is an addition; the veil still works without it */ }
   });
 }
 

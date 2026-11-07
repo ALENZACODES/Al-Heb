@@ -8,8 +8,10 @@ import { hapticsOn, soundOn } from '../src/curriculum/exercises.session.js';
 const memStore = () => { const m = {}; return { get: (k, d) => (k in m ? m[k] : d), set: (k, v) => { m[k] = v; }, m }; };
 
 test('new boolean keys exist with false defaults and accept only booleans', () => {
+  // soundEffects is the exception: ON by default since Nov 7 2026 (owner decision — silent games read as broken).
+  assert.equal(DEFAULTS.soundEffects, true, 'soundEffects defaults on');
   for (const k of ['writeGodAsGd', 'haptics', 'soundEffects', 'showUnapprovedImages']) {
-    assert.equal(DEFAULTS[k], false, k);
+    if (k !== 'soundEffects') assert.equal(DEFAULTS[k], false, k);
     assert.deepEqual(validate(k, true), { ok: true, value: true });
     assert.deepEqual(validate(k, false), { ok: true, value: false });
     assert.equal(validate(k, 'true').ok, false, k + ' rejects a string');
@@ -31,7 +33,7 @@ test('the exercise-feel hooks read exactly these key names', () => {
   const ctx = (v) => ({ settings: createSettings(memStore()), sfx: { play() {} }, ...v });
   const win = { navigator: { vibrate() {} }, matchMedia: () => ({ matches: false }) };
   const c = ctx({});
-  assert.equal(hapticsOn(c, win), false); assert.equal(soundOn(c), false);
+  assert.equal(hapticsOn(c, win), false); assert.equal(soundOn(c), true); // soundEffects defaults on (Nov 7 2026)
   c.settings.set({ haptics: true, soundEffects: true });
   assert.equal(hapticsOn(c, win), true); assert.equal(soundOn(c), true);
 });
@@ -66,7 +68,8 @@ test('Settings screen renders one checkbox row per new key, showUnapprovedImages
   for (const k of ['writeGodAsGd', 'haptics', 'soundEffects', 'showUnapprovedImages']) {
     const box = root.querySelector('#s-' + k);
     assert.ok(box && box.attrs.type === 'checkbox', k + ' row exists');
-    assert.equal(box.attrs.checked, undefined, k + ' starts unchecked');
+    if (k === 'soundEffects') assert.ok('checked' in box.attrs, 'soundEffects starts checked (defaults on)');
+    else assert.equal(box.attrs.checked, undefined, k + ' starts unchecked');
     for (const f of box.ls.change) f({ target: { checked: true } });
     assert.equal(settings.get(k), true, k + ' saved');
   }

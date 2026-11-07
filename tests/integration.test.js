@@ -41,7 +41,7 @@ test('router table: module files for lane 8 exist; others are in the contract pa
 });
 test('settings defaults and validation', () => {
   // Each lane adds its own settings keys, so this checks the long-standing defaults one by one instead of the whole object (new keys have their own tests).
-  const expectedDefaults = { voice: 'f', congregation: 'sephardi', israelTrack: false, script: 'print', theme: 'auto', lat: null, lon: null, gender: null, goal: 'read', onboarded: false, browserVoiceAnyway: true, showUnapprovedImages: false, writeGodAsGd: false, haptics: false, soundEffects: false, gender: null };
+  const expectedDefaults = { voice: 'f', congregation: 'sephardi', israelTrack: false, script: 'print', theme: 'auto', lat: null, lon: null, gender: null, goal: 'read', onboarded: false, browserVoiceAnyway: true, showUnapprovedImages: false, writeGodAsGd: false, haptics: false, soundEffects: true, gender: null };
   for (const [k, v] of Object.entries(expectedDefaults)) assert.deepEqual(DEFAULTS[k], v, 'default for ' + k);
   const s = createSettings(createStore({ storage: createMemoryStorage() }));
   assert.equal(s.congregation, 'sephardi');

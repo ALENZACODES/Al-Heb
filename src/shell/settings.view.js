@@ -126,7 +126,7 @@ export function mount(root, ctx) {
     boolRow('shortSession', 'Short sessions', 'Lessons come in small parts. Your place is saved after each part, so you can stop and come back to the same spot.'),
     boolRow('showStreak', 'Show my streak', 'Turn this off to hide streak lines. Missing a day never removes lessons or review cards.'),
     boolRow('haptics', 'Vibrate on answers', 'Only on devices that can vibrate. Always off in calm mode.'),
-    boolRow('soundEffects', 'Sound effects on answers', 'No sound effect files are included yet, so this does nothing for now. Always off in calm mode.')];
+    boolRow('soundEffects', 'Sound effects on answers', 'Short sounds on answers and in games. Always off in calm mode.')];
   const readRows = () => [
     h('p', { class: 'muted' }, 'Changes apply at once. These use fonts already on your device. We have not tested them with groups of readers, so try them and keep what feels easy for you.'),
     labelled('readFont', 'Font', { default: 'Standard', clear: 'System font (Verdana or similar)' }),

@@ -23,7 +23,7 @@ export const DEFAULTS = Object.freeze({
   browserVoiceAnyway: true, // let the browser voice (Israeli pronunciation) speak even when another tradition is selected; the UI flags it
   writeGodAsGd: false, // write the English divine name as "G-d" in UI and translation text (names.englishGod); a personal custom, off by default
   haptics: false,      // vibration on exercise feedback (exercises.session.js hapticsOn); opt-in, never under reduced motion
-  soundEffects: false, // sound on exercise feedback (exercises.session.js soundOn); opt-in; needs ctx.sfx from the shell
+  soundEffects: true,  // sound on exercise feedback and in games (exercises.session.js soundOn); ON by default (owner decision, Nov 7 2026: silent games read as broken); calm mode and audio-free still force silence; needs ctx.sfx from the shell
   // Calm and reading comfort (src/shell/comfort.js). All off or normal by default; none asks anything about the person.
   calmMode: false,     // no animation, no sound effects, no vibration, no streak or timer pressure; one thing at a time
   shortSession: false, // lessons are shown in small parts (about 2 to 3 minutes each) and your place is saved after every part

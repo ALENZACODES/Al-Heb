@@ -251,6 +251,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     document.body.dataset.route = route?.name ?? 'notfound';
     try { syncGameMusic(route, settings); } catch (e) { console.warn('game music bar failed', e); }
     document.body.dataset.ready = '1';
+    document.dispatchEvent(new Event('alef:ready'));
     shownFirstResolve();
   }
 }

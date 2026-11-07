@@ -3,6 +3,7 @@
 // destination, shown on Welcome (first run) and Home. Pure presentation —
 // every tile links to an existing route; counts are the app's real numbers.
 import { h, heSpan } from './ui.js';
+import { astralTreeNode } from './astral-tree.js';
 
 const TILES = [
   ['firstday', '#/firstday', 'Your First 10 Minutes', 'עֲשָׂרָה', 'Build your first word, letter by letter'],
@@ -87,8 +88,7 @@ export function showcaseNode(ctx) {
       h('span', { class: 'show-tile-hook' }, hook))));
   return h('section', { class: 'showcase', 'aria-label': 'Explore ALEF' },
     h('div', { class: 'show-hero' },
-      h('img', { class: 'show-hero-img', src: 'assets/books/book2/BOOK2_p01.jpg', alt: 'An ancient olive tree in a golden Jerusalem stone courtyard', loading: 'eager' }),
-      h('div', { class: 'show-hero-shade' }),
+      astralTreeNode(),
       h('div', { class: 'show-hero-text' },
         h('p', { class: 'show-kicker' }, 'The Tree of Knowledge'),
         h('p', { class: 'show-title' }, 'Learn to read ', heSpan('עִבְרִית'), ' — Hebrew'),

@@ -1,5 +1,6 @@
 // Pure helpers for the vocabulary screen (no DOM).
 import { newCard } from '../curriculum/srs.js';
+import { rankEntries } from './rank.js';
 
 export const TIER_LABEL = { 500: 'Words 1-500', 1000: 'Words 501-1,000', 2000: 'Words 1,001-2,000', 5000: 'Words 2,001-5,000' };
 export const CARD_PREFIX = 'vocab:';
@@ -9,21 +10,22 @@ export const VOCAB_CARDS_KEY = 'srs.vocab'; // { [cardId]: srs card + {tier, top
 export function stripPoints(s) {
   return String(s ?? '').normalize('NFD').replace(/[֑-ׇ־]/g, '').replace(/[‎‏"'`]/g, '').normalize('NFC');
 }
-const HEB = /[֐-׿]/;
-
-/** @param {{lemma:string,pointed?:string|null,gloss:string,pos:string,topic:string}[]} entries */
-export function filterEntries(entries, { topic = '', query = '' } = {}) {
-  const q = String(query).trim();
-  const he = HEB.test(q);
-  const hq = he ? stripPoints(q) : '';
-  const eq = he ? '' : q.toLowerCase();
-  return entries.filter((e) => {
-    if (topic && e.topic !== topic) return false;
-    if (!q) return true;
-    if (he) return stripPoints(e.lemma).includes(hq) || stripPoints(e.pointed).includes(hq);
-    return e.gloss.toLowerCase().includes(eq);
-  });
+/**
+ * Topic filter, then relevance order.
+ * An empty or whitespace-only query keeps the list order.
+ * A query that is only punctuation matches nothing (it is not used as a regular expression).
+ * `translitOf(entry)` is the tradition spelling the screen is showing; omit it to use `entry.translit` when present.
+ * @param {{lemma:string,pointed?:string|null,gloss:string,pos:string,topic:string,translit?:string}[]} entries
+ */
+export function filterEntries(entries, { topic = '', query = '', translitOf } = {}) {
+  let list = entries;
+  if (topic) list = list.filter((e) => e.topic === topic);
+  const raw = String(query ?? '');
+  if (!raw.trim()) return list;
+  return rankEntries(list, raw, translitOf).map((x) => x.entry);
 }
+
+export { fold, rankEntries, matchBand, BAND, EXACT_MAX, isExactBand, isShortQuery, keepBand } from './rank.js';
 
 export const cardId = (e) => CARD_PREFIX + e.id;
 

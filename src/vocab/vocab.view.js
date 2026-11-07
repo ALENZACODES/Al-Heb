@@ -8,12 +8,19 @@ import { el, heText, tr, storeGet, storeSet } from '../curriculum/dom.js';
 import { review, due, MS_DAY } from '../curriculum/srs.js';
 import { transliterate } from '../pronunciation/transliterate.js';
 import { loadTier, TIER_BANDS } from './loader.js';
-import { TIER_LABEL, POS_LABEL, VOCAB_CARDS_KEY, filterEntries, stripPoints, addCards, cardId, CARD_PREFIX } from './model.js';
+import { TIER_LABEL, POS_LABEL, VOCAB_CARDS_KEY, stripPoints, addCards, cardId, CARD_PREFIX, rankEntries, isExactBand, isShortQuery, keepBand, fold, BAND } from './model.js';
+import { aliasHits, aliasNote } from './aliases.js';
 import { isFunction } from './vocab.js';
 import { plural } from '../shell/plural.js';
-import { audioButton } from '../shell/audio-access.js';
+import { NO_AUDIO, DEVICE_LABEL } from '../shell/audio-access.js';
+import { isAudioFree } from '../shell/audiofree.js';
 import { uiEnglish } from '../shell/names.js';
 import { sourcesLine } from '../shell/sources.js';
+import { loadJson } from '../speak/loader.js';
+import { lookupClip, planIsExactFile, clipCaption, unavailableLine, CLIP_RATES, SPEED_BUTTONS, CHECKING } from './clips.js';
+
+/** Shown under the search box. The 5,000 glosses are not rewritten by this screen. */
+export const SENSE_NOTE = 'A greeting search such as hi or hello can lead with a word whose stored gloss is different. That lead is labelled, and the gloss on the card is not changed. An exact transliteration is labelled separately. For a short search, words that only contain those letters stay hidden until you ask for them. Glosses in the 5,000-word list are the stored sense, often only the first dictionary sense.';
 
 const PAGE = 40;          // cards rendered per page
 const ADD_LIMIT = 100;    // words added to reviews per click
@@ -25,14 +32,22 @@ export const TAG_FILTERS = [['', 'All kinds of words'], ['prayer', 'Prayer'], ['
 export const FN_TOPIC = '__function';
 /** Words that "Add to reviews" in bulk skips: forms of another word and rare senses. A single card's own button still adds them. */
 export const skippedInBulk = (e) => !!e.isForm || hasTag(e, 'rare-sense');
-/** Browse filter beyond model.filterEntries: tag, word forms, and topic (function words have no real topic; they form their own group). */
-export function applyFilters(entries, { tag = '', topic = '', showForms = false, query = '' } = {}) {
+/** Browse filter: tag, word forms, and topic, then relevance order. Returns {entry, band}. */
+export function applyRanked(entries, { tag = '', topic = '', showForms = false, query = '', broad = false } = {}, translitOf) {
   let out = entries;
   if (!showForms) out = out.filter((e) => !e.isForm);
   if (tag) out = out.filter((e) => hasTag(e, tag));
   if (topic === FN_TOPIC) out = out.filter(isFunction);
   else if (topic) out = out.filter((e) => !isFunction(e) && e.topic === topic);
-  return filterEntries(out, { query });
+  const ranked = rankEntries(out, query, translitOf);
+  const aliases = aliasHits(out, query, fold);
+  const aliasIds = new Set(aliases.map((x) => x.entry.id));
+  const merged = [...aliases, ...ranked.filter((x) => !aliasIds.has(x.entry.id))];
+  return merged.filter((x) => keepBand(x.band, query, broad));
+}
+/** Same rows as applyRanked, entries only, for callers that do not need the band. */
+export function applyFilters(entries, sel) {
+  return applyRanked(entries, sel).map((x) => x.entry);
 }
 const TRAD = { israeli: 'Israeli', sephardi: 'Sephardi', ashkenazi: 'Ashkenazi' };
 
@@ -58,6 +73,7 @@ const CSS = `
 .alef-vocab .vc-check{display:flex;align-items:center;gap:.5rem;min-block-size:var(--tap,48px)}
 .alef-vocab .vc-check input{inline-size:1.5rem;block-size:1.5rem}
 .alef-vocab .vc-check label{margin:0;font-weight:600}
+.alef-vocab .vc-speed{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
 .alef-vocab .vc-badge{display:inline-block;border:1px solid currentColor;border-radius:6px;padding:0 .4rem;font-size:.85rem;font-weight:700}
 .alef-vocab .vc-forms{display:flex;flex-wrap:wrap;gap:.25rem .75rem;align-items:baseline}
 .alef-vocab .vc-forms span[lang=he]{font-size:1.2rem}
@@ -108,10 +124,62 @@ export function mount(root, ctx) {
   async function loadCards() { const c = await storeGet(ctx, VOCAB_CARDS_KEY, {}); cards = Array.isArray(c) ? Object.fromEntries(c.filter((x) => x?.id).map((x) => [x.id, x])) : (c || {}); refreshModeLabel(); }
   async function saveCards(next) { cards = next; await storeSet(ctx, VOCAB_CARDS_KEY, next); refreshModeLabel(); }
 
-  // ---- audio: the shared button (src/shell/audio-access.js). A recording when the list has one; else the device voice reads the
-  // word's own pointed text (Israeli only, labelled as such); else "No audio yet" with the respelling. Nothing is spoken here directly.
-  const listenButton = (e) => audioButton(el, ctx, { kind: 'word', id: e.id, text: String(e.pointed || e.lemma || '').replace(/־/g, ' '),
-    label: 'Listen', name: e.gloss, respelling: translitFor(e, tradition()) || undefined });
+  // ---- audio: ctx.audio.play(kind, id, { voice, tradition, rate }) for this word's own manifest id.
+  // No other id, and no options.text, is sent when a clip is missing.
+  // 'slow' is 0.7× only after the shared player in PR #20 (8f37d4ba) is merged. The sound bar, not this card, says "Playing", and only from a playing event.
+  let clipLookup = ctx?.clipLookup || null;
+  let clipPromise = null;
+  const ensureClips = () => {
+    if (clipLookup || !ctx?.audio) return Promise.resolve(clipLookup);
+    if (!clipPromise) clipPromise = loadJson('data/vocab/clip-lookup.json').then((j) => { clipLookup = j; return j; }).catch(() => null);
+    return clipPromise;
+  };
+  const voiceSetting = () => { const v = ctx?.settings?.get?.('voice'); return v === 'm' || v === 'f' ? v : ''; };
+  const swapNode = (node, next) => {
+    if (!next) return;
+    if (typeof node?.replaceWith === 'function') { node.replaceWith(next); return; }
+    const p = node?.parent; if (!p?.children) return;
+    const i = p.children.indexOf(node); if (i >= 0) { next.parent = p; p.children.splice(i, 1, next); }
+  };
+  const soundControls = (text, name, respelling) => {
+    if (isAudioFree(ctx)) return el('span', { class: 'audio-off', hidden: '' });
+    if (!ctx?.audio) return el('span', { class: 'audio-none muted', 'data-audio-state': 'none' }, NO_AUDIO, respelling ? ` - say it as written: ${respelling}` : '');
+    const voice = voiceSetting();
+    const trad = tradition();
+    if (!clipLookup) {
+      const hold = el('span', { class: 'audio-none muted', 'data-audio-state': 'checking' }, 'Checking audio...');
+      ensureClips().then(() => { if (alive) swapNode(hold, soundControls(text, name, respelling)); }).catch(() => {});
+      return hold;
+    }
+    const clip = lookupClip(clipLookup, text, voice, trad);
+    if (!clip) return el('span', { class: 'audio-none muted', 'data-audio-state': 'none' }, unavailableLine(voice, trad));
+    const note = el('span', { class: 'audio-chip muted', role: 'status', 'aria-live': 'polite' }, clipCaption(clip));
+    const play = async (rateId) => {
+      if (!CLIP_RATES.includes(rateId) || typeof ctx.audio.play !== 'function') { note.textContent = unavailableLine(voice, trad); return; }
+      const opts = { voice, tradition: trad, rate: rateId, allowMismatchedTts: false };
+      try {
+        if (ctx.audio.ensureManifest) await ctx.audio.ensureManifest();
+        let plan = ctx.audio.status?.(clip.kind, clip.id, { voice, tradition: trad, allowMismatchedTts: false });
+        if (plan?.reason === CHECKING && ctx.audio.ensureManifest) {
+          await ctx.audio.ensureManifest();
+          plan = ctx.audio.status?.(clip.kind, clip.id, { voice, tradition: trad, allowMismatchedTts: false });
+        }
+        if (!planIsExactFile(plan, { voice, tradition: trad, id: clip.id })) { note.textContent = unavailableLine(voice, trad); return; }
+        try { ctx.audio.stop?.(); } catch { /* ignore */ }
+        const r = await ctx.audio.play(clip.kind, clip.id, opts);
+        if (!r || r.source === 'none' || r.fileError) note.textContent = unavailableLine(voice, trad);
+        else if (r.source === 'tts-fallback') note.textContent = DEVICE_LABEL;
+        else note.textContent = clipCaption({ ...clip, status: r.entryStatus || clip.status, source: r.entrySource || clip.source, tradition: r.tradition || clip.tradition, voice: r.voice || clip.voice });
+      } catch { note.textContent = unavailableLine(voice, trad); }
+    };
+    return el('span', { class: 'vc-speed', role: 'group', 'aria-label': `Play the clip for ${name}` },
+      ...SPEED_BUTTONS.map(([rateId, label]) => el('button', {
+        type: 'button', class: 'btn secondary', 'data-rate': rateId, 'data-audio': `${clip.kind}/${clip.id}`, 'data-audio-state': 'file',
+        'aria-label': `${label}: ${name}`, onclick: () => play(rateId),
+      }, label)),
+      note);
+  };
+  const listenButton = (e) => soundControls(String(e.pointed || e.lemma || ''), e.gloss || '', translitFor(e, tradition()) || '');
   const heWord = (e, cls) => e.pointed ? heText(e.pointed, cls) : heText(e.lemma, cls);
   const translitLine = (e) => {
     const tl = translitFor(e, tradition());
@@ -130,6 +198,14 @@ export function mount(root, ctx) {
     return out;
   };
   const label = (e) => [`${e.pointed || e.lemma} (`, ...glossNodes(e.gloss), ')'];
+  const translitCache = new Map();
+  const translitOf = (e) => {
+    const key = tradition() + '\n' + (e.pointed || '');
+    if (translitCache.has(key)) return translitCache.get(key);
+    const v = translitFor({ pointed: e.pointed || null }, tradition());
+    translitCache.set(key, v);
+    return v;
+  };
   const metaLine = (e) => {
     const kind = isFunction(e) ? `function word${e.fn ? ` (${e.fn})` : ''}` : e.topic;
     const extra = [];
@@ -165,7 +241,7 @@ export function mount(root, ctx) {
   const showWord = (w) => { sel.tier = 'all'; sel.topic = ''; sel.tag = ''; sel.showForms = true; sel.query = stripPoints(w.lemma); setMode('browse'); };
 
   // ---- browse
-  const sel = { tier: 'all', topic: '', tag: '', showForms: false, query: '' };
+  const sel = { tier: 'all', topic: '', tag: '', showForms: false, broad: false, query: '' };
   let gen = 0;
   async function entriesFor(tierSel) {
     const tiers = tierSel === 'all' ? TIER_BANDS : [Number(tierSel)];
@@ -183,22 +259,27 @@ export function mount(root, ctx) {
     const formsBox = el('input', { id: 'vc-forms', type: 'checkbox' });
     if (sel.showForms) formsBox.setAttribute('checked', '');
     formsBox.checked = sel.showForms;
+    const broadBox = el('input', { id: 'vc-broad', type: 'checkbox' });
+    if (sel.broad) broadBox.setAttribute('checked', '');
+    broadBox.checked = sel.broad;
     const heading = el('h2', { class: 'vc-group' }); heading.hidden = true; // filled (and shown) by renderRows only for the function-words group; hidden until then so no empty heading exists while words load
-    const search = el('input', { id: 'vc-search', type: 'search', dir: 'auto', autocomplete: 'off', placeholder: 'שלום or hello' });
+    const search = el('input', { id: 'vc-search', type: 'search', dir: 'auto', autocomplete: 'off', placeholder: 'שלום or hello or hi' });
     search.value = sel.query;
-    const status = el('p', { role: 'status', 'aria-live': 'polite', class: 'muted' }, 'Loading words…');
+    const sense = el('p', { id: 'vc-sense', class: 'muted' }, SENSE_NOTE);
+    const status = el('p', { id: 'vc-status', role: 'status', 'aria-live': 'polite', class: 'muted' }, 'Loading words…');
     const addRow = el('div', { class: 'row' });
-    const list = el('ul', { class: 'vc-list', 'aria-label': 'Words' });
+    const list = el('ul', { id: 'vc-list', class: 'vc-list', 'aria-label': 'Words' });
     const moreRow = el('div', { class: 'row' });
     body.replaceChildren(
       el('div', { class: 'vc-controls' },
         el('div', {}, el('label', { for: 'vc-tier' }, 'Tier'), tierSel),
         el('div', {}, el('label', { for: 'vc-topic' }, 'Topic'), topicSel),
         el('div', {}, el('label', { for: 'vc-tag' }, 'Kind of word'), tagSel),
-        el('div', {}, el('label', { for: 'vc-search' }, 'Search (Hebrew with or without vowel points, or English)'), search)),
+        el('div', {}, el('label', { for: 'vc-search' }, 'Search (Hebrew with or without vowel points, English, or transliteration)'), search)),
       el('div', { class: 'vc-check' }, el('label', { for: 'vc-forms' }, formsBox, ' Show word forms (spellings that are only a form of another word)')),
-      status, addRow, heading, list, moreRow);
-    let all = [], matches = [], shown = 0;
+      el('div', { class: 'vc-check' }, el('label', { for: 'vc-broad' }, broadBox, ' Also show words that only contain these letters')),
+      sense, status, addRow, heading, list, moreRow);
+    let all = [], ranked = [], matches = [], shown = 0, hiddenNoise = 0;
 
     const fillTopics = () => {
       const topics = [...new Set(all.filter((e) => !isFunction(e)).map((e) => e.topic))].sort();
@@ -206,13 +287,21 @@ export function mount(root, ctx) {
       if (!topics.includes(sel.topic) && sel.topic !== FN_TOPIC) sel.topic = '';
       topicSel.value = sel.topic;
     };
-    const cardItem = (e) => {
+    const cardItem = (row) => {
+      const e = row.entry;
+      const band = row.band;
+      const alias = row.alias;
+      const bandAttr = band == null ? '' : String(band);
       const inRev = !!cards[cardId(e)];
       const add = el('button', { type: 'button', class: 'btn secondary', 'aria-label': inRev ? `In reviews: ${e.gloss}` : `Add to reviews: ${e.gloss}`, ...(inRev ? { disabled: true } : {}),
         onclick: async () => { const r = addCards(cards, [e], Date.now()); await saveCards(r.cards); add.setAttribute('disabled', ''); add.textContent = 'In reviews'; add.setAttribute('aria-label', `In reviews: ${e.gloss}`); updateAdd(); } }, inRev ? 'In reviews' : 'Add to reviews');
-      return el('li', { class: 'card vc-card', 'data-id': e.id },
+      const match = band === BAND.alias ? 'alias' : band === BAND.translit ? 'translit' : (band != null && band <= BAND.sense) ? 'gloss' : (band === BAND.hebrew) ? 'hebrew' : (band == null ? '' : 'related');
+      return el('li', { class: 'card vc-card', 'data-id': e.id, 'data-kind': 'word', 'data-band': bandAttr, 'data-match': match },
         ctx.img?.(el, { kind: 'word', id: e.id, class: 'vc-pic', width: 400 }),
-        heWord(e, 'vc-he'), el('p', { tabindex: '-1', class: 'vc-gloss' }, ...glossNodes(e.gloss)), metaLine(e), ...noteLines(e), translitLine(e),
+        heWord(e, 'vc-he'), el('p', { tabindex: '-1', class: 'vc-gloss' }, ...glossNodes(e.gloss)),
+        alias ? el('p', { class: 'vc-alias' }, aliasNote(alias)) : null,
+        band === BAND.translit ? el('p', { class: 'vc-meta' }, 'Transliteration match. This is not an English gloss.') : null,
+        metaLine(e), ...noteLines(e), translitLine(e),
         el('div', { class: 'row' }, listenButton(e), add));
     };
     const updateAdd = () => {
@@ -230,22 +319,48 @@ export function mount(root, ctx) {
         el('span', { class: 'muted' }, `(${what}${sel.query ? ', matching your search' : ''})`),
         skipped ? el('p', { class: 'muted' }, `${skipped} word form${skipped === 1 ? '' : 's'} and rare-sense word${skipped === 1 ? '' : 's'} in this list are skipped here; use a card's own button to add one.`) : null].filter(Boolean));
     };
+    const statusText = () => {
+      const q = sel.query.trim();
+      if (!q) return `Showing ${shown} of ${ranked.length} word${ranked.length === 1 ? '' : 's'}.`;
+      if (!ranked.length && !hiddenNoise) return 'No words match. Try fewer letters, or another tier or topic.';
+      const aliasN = ranked.filter((x) => x.band === BAND.alias).length;
+      const glossN = ranked.filter((x) => x.band != null && x.band >= BAND.gloss && x.band <= BAND.sense).length;
+      const heN = ranked.filter((x) => x.band === BAND.hebrew).length;
+      const tlN = ranked.filter((x) => x.band === BAND.translit).length;
+      const relW = ranked.filter((x) => x.band != null && x.band > BAND.translit).length;
+      let s = '';
+      if (aliasN) s += `${aliasN} English greeting ${aliasN === 1 ? 'match' : 'matches'} (the stored gloss is not that English word). `;
+      if (glossN) s += `${glossN} exact gloss ${glossN === 1 ? 'match' : 'matches'}. `;
+      else if (!aliasN) s += `No exact English gloss for “${q}” in the 5,000-word list. `;
+      if (heN) s += `${heN} exact Hebrew ${heN === 1 ? 'match' : 'matches'}. `;
+      if (tlN) s += `${tlN} transliteration ${tlN === 1 ? 'match' : 'matches'} (not an English gloss). `;
+      if (relW) s += `${relW} related (those letters sit inside another word). `;
+      if (hiddenNoise) s += `${hiddenNoise} more words only contain those letters. Tick “Also show words that only contain these letters” to list them. `;
+      s += `Showing ${shown} of ${ranked.length} word${ranked.length === 1 ? '' : 's'}.`;
+      return s;
+    };
     const renderRows = (keep) => {
       const n = keep ? Math.max(shown, PAGE) : PAGE;
-      shown = Math.min(n, matches.length);
+      shown = Math.min(n, ranked.length);
       heading.textContent = sel.topic === FN_TOPIC || sel.tag === 'function' ? 'Function words (closed class; topic does not apply)' : '';
-      heading.hidden = !heading.textContent; // no empty h2 for the ordinary (ungrouped) list
-      list.replaceChildren(...matches.slice(0, shown).map(cardItem));
-      status.textContent = matches.length ? `Showing ${shown} of ${matches.length} word${matches.length === 1 ? '' : 's'}.` : 'No words match. Try fewer letters, or another tier or topic.';
-      moreRow.replaceChildren(...(shown < matches.length ? [el('button', { type: 'button', class: 'btn secondary', id: 'vc-more', onclick: () => {
-        const from = shown; shown = Math.min(shown + PAGE, matches.length);
-        list.append(...matches.slice(from, shown).map(cardItem));
-        status.textContent = `Showing ${shown} of ${matches.length} ${plural(matches.length, 'word')}.`;
-        if (shown >= matches.length) moreRow.replaceChildren();
+      heading.hidden = !heading.textContent;
+      list.replaceChildren(...ranked.slice(0, shown).map(cardItem));
+      status.textContent = statusText();
+      moreRow.replaceChildren(...(shown < ranked.length ? [el('button', { type: 'button', class: 'btn secondary', id: 'vc-more', onclick: () => {
+        const from = shown; shown = Math.min(shown + PAGE, ranked.length);
+        list.append(...ranked.slice(from, shown).map(cardItem));
+        status.textContent = statusText();
+        if (shown >= ranked.length) moreRow.replaceChildren();
         focusNode(list.children?.[from]?.querySelector?.('.vc-gloss'));
-      } }, `Show ${Math.min(PAGE, matches.length - shown)} more`)] : []));
+      } }, `Show ${Math.min(PAGE, ranked.length - shown)} more`)] : []));
     };
-    const refilter = () => { matches = applyFilters(all, sel); renderRows(false); updateAdd(); };
+    const refilter = () => {
+      const full = applyRanked(all, { ...sel, broad: true }, translitOf);
+      ranked = sel.broad ? full : applyRanked(all, sel, translitOf);
+      hiddenNoise = Math.max(0, full.length - ranked.length);
+      matches = ranked.map((x) => x.entry);
+      renderRows(false); updateAdd();
+    };
     const reload = async () => {
       const id = ++gen; status.textContent = 'Loading words…'; list.replaceChildren(); moreRow.replaceChildren(); addRow.replaceChildren();
       try { all = await entriesFor(sel.tier); } catch (err) {
@@ -257,6 +372,7 @@ export function mount(root, ctx) {
     };
     tagSel.addEventListener('change', () => { sel.tag = tagSel.value; refilter(); });
     formsBox.addEventListener('change', () => { sel.showForms = !!formsBox.checked; refilter(); });
+    broadBox.addEventListener('change', () => { sel.broad = !!broadBox.checked; refilter(); });
     tierSel.addEventListener('change', () => { sel.tier = tierSel.value; sel.topic = ''; reload(); });
     topicSel.addEventListener('change', () => { sel.topic = topicSel.value; refilter(); });
     search.addEventListener('input', () => { sel.query = search.value; refilter(); });

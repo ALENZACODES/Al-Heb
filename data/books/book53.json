@@ -1,0 +1,177 @@
+{
+ "id": "book53",
+ "titleHe": "הַמַּאֲפִיָּה",
+ "titleTranslit": "Ha-Ma'afiyah",
+ "titleEn": "The Bakery",
+ "level": "Beginner 3",
+ "pages": [
+  {
+   "n": 1,
+   "he": "אַרְבַּע בַּבֹּקֶר. הַמַּאֲפִיָּה.",
+   "translit": "Arba ba-boker. Ha-ma'afiyah.",
+   "en": "Four in the morning. The bakery.",
+   "img": "assets/books/book53/BOOK53_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book53-p01.mp3",
+    "m": "audio/m/israeli/book/book53-p01.mp3"
+   },
+   "illustration": "a lit bakery window on a dark street",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "אַבְרָהָם מְכִין לֶחֶם.",
+   "translit": "Avraham mechin lechem.",
+   "en": "Avraham makes bread.",
+   "img": "assets/books/book53/BOOK53_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book53-p02.mp3",
+    "m": "audio/m/israeli/book/book53-p02.mp3"
+   },
+   "illustration": "a baker kneading, forearms floury",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "אַרְבָּעִים שָׁנָה, כָּל יוֹם.",
+   "translit": "Arba'im shanah, kol yom.",
+   "en": "Forty years, every day.",
+   "img": "assets/books/book53/BOOK53_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book53-p03.mp3",
+    "m": "audio/m/israeli/book/book53-p03.mp3"
+   },
+   "illustration": "a yellowed photo on the wall: the same man, young, same bakery",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "הַבֵּן שֶׁלּוֹ לֹא רוֹצֶה אֶת הַמַּאֲפִיָּה.",
+   "translit": "Ha-ben shelo lo rotzeh et ha-ma'afiyah.",
+   "en": "His son does not want the bakery.",
+   "img": "assets/books/book53/BOOK53_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book53-p04.mp3",
+    "m": "audio/m/israeli/book/book53-p04.mp3"
+   },
+   "illustration": "a framed graduation photo, a city far away",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "\"אֲנִי הָאַחֲרוֹן,\" חוֹשֵׁב אַבְרָהָם.",
+   "translit": "\"Ani ha-acharon,\" choshev Avraham.",
+   "en": "\"I am the last,\" thinks Avraham.",
+   "img": "assets/books/book53/BOOK53_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book53-p05.mp3",
+    "m": "audio/m/israeli/book/book53-p05.mp3"
+   },
+   "illustration": "the baker alone with the ovens",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "נַעֲרָה נִכְנֶסֶת.",
+   "translit": "Na'arah nichneset.",
+   "en": "A young woman comes in.",
+   "img": "assets/books/book53/BOOK53_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book53-p06.mp3",
+    "m": "audio/m/israeli/book/book53-p06.mp3"
+   },
+   "illustration": "a woman in her twenties with a notebook",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "\"אֶפְשָׁר לִלְמֹד?\"",
+   "translit": "\"Efshar lilmod?\"",
+   "en": "\"Can I learn?\"",
+   "img": "assets/books/book53/BOOK53_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book53-p07.mp3",
+    "m": "audio/m/israeli/book/book53-p07.mp3"
+   },
+   "illustration": "her eager face, flour in the air",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "אַבְרָהָם לֹא עוֹנֶה.",
+   "translit": "Avraham lo oneh.",
+   "en": "Avraham doesn't answer.",
+   "img": "assets/books/book53/BOOK53_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book53-p08.mp3",
+    "m": "audio/m/israeli/book/book53-p08.mp3"
+   },
+   "illustration": "the baker looking at her, then at the dough",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "הוּא נוֹתֵן לָהּ סִינָר.",
+   "translit": "Hu noten lah sinar.",
+   "en": "He gives her an apron.",
+   "img": "assets/books/book53/BOOK53_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book53-p09.mp3",
+    "m": "audio/m/israeli/book/book53-p09.mp3"
+   },
+   "illustration": "an old apron passed over the counter",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "הִיא לוֹמֶדֶת לָלוּשׁ.",
+   "translit": "Hi lomedet lalush.",
+   "en": "She learns to knead.",
+   "img": "assets/books/book53/BOOK53_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book53-p10.mp3",
+    "m": "audio/m/israeli/book/book53-p10.mp3"
+   },
+   "illustration": "her hands in dough, his hands guiding",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "שִׁשָּׁה חֳדָשִׁים. הַלֶּחֶם שֶׁלָּהּ טוֹב.",
+   "translit": "Shishah chodashim. Ha-lechem shelah tov.",
+   "en": "Six months. Her bread is good.",
+   "img": "assets/books/book53/BOOK53_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book53-p11.mp3",
+    "m": "audio/m/israeli/book/book53-p11.mp3"
+   },
+   "illustration": "a loaf, golden, his approving nod",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "אַבְרָהָם לֹא הָאַחֲרוֹן.",
+   "translit": "Avraham lo ha-acharon.",
+   "en": "Avraham is not the last.",
+   "img": "assets/books/book53/BOOK53_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book53-p12.mp3",
+    "m": "audio/m/israeli/book/book53-p12.mp3"
+   },
+   "illustration": "the two of them at the counter at dawn, the first customer",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

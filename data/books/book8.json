@@ -1,0 +1,177 @@
+{
+ "id": "book8",
+ "titleHe": "חַם וְקַר",
+ "titleTranslit": "Cham Ve-Kar",
+ "titleEn": "Hot and Cold",
+ "level": "Beginner 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "תֵּל אָבִיב. קַיִץ.",
+   "translit": "Tel Aviv. Kayitz.",
+   "en": "Tel Aviv. Summer.",
+   "img": "assets/books/book8/BOOK8_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book8-p01.mp3",
+    "m": "audio/m/israeli/book/book8-p01.mp3"
+   },
+   "illustration": "a white Bauhaus street under hard sunlight, palm shadows",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "חַם.",
+   "translit": "Cham.",
+   "en": "Hot.",
+   "img": "assets/books/book8/BOOK8_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book8-p02.mp3",
+    "m": "audio/m/israeli/book/book8-p02.mp3"
+   },
+   "illustration": "heat shimmer on asphalt, a man fanning himself with a newspaper",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "חַם מְאוֹד.",
+   "translit": "Cham me'od.",
+   "en": "Very hot.",
+   "img": "assets/books/book8/BOOK8_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book8-p03.mp3",
+    "m": "audio/m/israeli/book/book8-p03.mp3"
+   },
+   "illustration": "a pharmacy thermometer sign reading high, people in the shade",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "רוֹנִי רוֹצֶה מַיִם.",
+   "translit": "Roni rotzeh mayim.",
+   "en": "Roni wants water.",
+   "img": "assets/books/book8/BOOK8_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book8-p04.mp3",
+    "m": "audio/m/israeli/book/book8-p04.mp3"
+   },
+   "illustration": "a young man at a kiosk pointing at a fridge of bottles",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "מַיִם קָרִים.",
+   "translit": "Mayim karim.",
+   "en": "Cold water.",
+   "img": "assets/books/book8/BOOK8_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book8-p05.mp3",
+    "m": "audio/m/israeli/book/book8-p05.mp3"
+   },
+   "illustration": "a sweating water bottle, condensation drops",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "רוֹנִי רוֹצֶה גְּלִידָה.",
+   "translit": "Roni rotzeh glidah.",
+   "en": "Roni wants ice cream.",
+   "img": "assets/books/book8/BOOK8_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book8-p06.mp3",
+    "m": "audio/m/israeli/book/book8-p06.mp3"
+   },
+   "illustration": "the man at an ice cream counter, dozens of colours",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "גְּלִידָה קָרָה.",
+   "translit": "Glidah karah.",
+   "en": "Cold ice cream.",
+   "img": "assets/books/book8/BOOK8_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book8-p07.mp3",
+    "m": "audio/m/israeli/book/book8-p07.mp3"
+   },
+   "illustration": "a pistachio ice cream cone starting to drip",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "הַיָּם קַר?",
+   "translit": "Ha-yam kar?",
+   "en": "Is the sea cold?",
+   "img": "assets/books/book8/BOOK8_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book8-p08.mp3",
+    "m": "audio/m/israeli/book/book8-p08.mp3"
+   },
+   "illustration": "the man at the water's edge, one toe in",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "לֹא! הַיָּם חַם.",
+   "translit": "Lo! Ha-yam cham.",
+   "en": "No! The sea is warm.",
+   "img": "assets/books/book8/BOOK8_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book8-p09.mp3",
+    "m": "audio/m/israeli/book/book8-p09.mp3"
+   },
+   "illustration": "the man floating happily in bright blue water",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "עֶרֶב.",
+   "translit": "Erev.",
+   "en": "Evening.",
+   "img": "assets/books/book8/BOOK8_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book8-p10.mp3",
+    "m": "audio/m/israeli/book/book8-p10.mp3"
+   },
+   "illustration": "orange sunset over the sea, silhouettes on the promenade",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "עַכְשָׁו קַר.",
+   "translit": "Achshav kar.",
+   "en": "Now it is cold.",
+   "img": "assets/books/book8/BOOK8_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book8-p11.mp3",
+    "m": "audio/m/israeli/book/book8-p11.mp3"
+   },
+   "illustration": "the man in a damp t-shirt hugging himself in a breeze",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "חַם וְקַר. זֶה תֵּל אָבִיב.",
+   "translit": "Cham ve-kar. Zeh Tel Aviv.",
+   "en": "Hot and cold. That's Tel Aviv.",
+   "img": "assets/books/book8/BOOK8_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book8-p12.mp3",
+    "m": "audio/m/israeli/book/book8-p12.mp3"
+   },
+   "illustration": "the man wrapped in a towel, grinning, city lights coming on",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

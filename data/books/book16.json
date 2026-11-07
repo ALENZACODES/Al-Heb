@@ -1,0 +1,177 @@
+{
+ "id": "book16",
+ "titleHe": "שֻׁלְחָן שַׁבָּת",
+ "titleTranslit": "Shulchan Shabat",
+ "titleEn": "Shabbat Table",
+ "level": "Beginner 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "יוֹם שִׁישִׁי.",
+   "translit": "Yom shishi.",
+   "en": "Friday.",
+   "img": "assets/books/book16/BOOK16_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book16-p01.mp3",
+    "m": "audio/m/israeli/book/book16-p01.mp3"
+   },
+   "illustration": "a kitchen bright with afternoon light, pots on every burner",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "אִמָּא מְבַשֶּׁלֶת.",
+   "translit": "Ima mevashelet.",
+   "en": "Mom cooks.",
+   "img": "assets/books/book16/BOOK16_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book16-p02.mp3",
+    "m": "audio/m/israeli/book/book16-p02.mp3"
+   },
+   "illustration": "a woman stirring a big pot, apron on",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "אַבָּא קוֹנֶה חַלָּה.",
+   "translit": "Aba koneh chalah.",
+   "en": "Dad buys challah.",
+   "img": "assets/books/book16/BOOK16_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book16-p03.mp3",
+    "m": "audio/m/israeli/book/book16-p03.mp3"
+   },
+   "illustration": "a man at a bakery with two braided loaves",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "הַשֻּׁלְחָן יָפֶה.",
+   "translit": "Ha-shulchan yafeh.",
+   "en": "The table is beautiful.",
+   "img": "assets/books/book16/BOOK16_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book16-p04.mp3",
+    "m": "audio/m/israeli/book/book16-p04.mp3"
+   },
+   "illustration": "a white tablecloth, candles, wine, flowers",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "הַנֵּרוֹת.",
+   "translit": "Ha-nerot.",
+   "en": "The candles.",
+   "img": "assets/books/book16/BOOK16_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book16-p05.mp3",
+    "m": "audio/m/israeli/book/book16-p05.mp3"
+   },
+   "illustration": "two candles being lit, hands circling the flames",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "הַיַּיִן.",
+   "translit": "Ha-yayin.",
+   "en": "The wine.",
+   "img": "assets/books/book16/BOOK16_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book16-p06.mp3",
+    "m": "audio/m/israeli/book/book16-p06.mp3"
+   },
+   "illustration": "a silver cup filled to the brim",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "הַחַלָּה.",
+   "translit": "Ha-chalah.",
+   "en": "The challah.",
+   "img": "assets/books/book16/BOOK16_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book16-p07.mp3",
+    "m": "audio/m/israeli/book/book16-p07.mp3"
+   },
+   "illustration": "the cover lifted off the two loaves",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "כֻּלָּם יוֹשְׁבִים.",
+   "translit": "Kulam yoshvim.",
+   "en": "Everyone sits.",
+   "img": "assets/books/book16/BOOK16_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book16-p08.mp3",
+    "m": "audio/m/israeli/book/book16-p08.mp3"
+   },
+   "illustration": "the family around the table, three generations",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "\"שַׁבָּת שָׁלוֹם!\"",
+   "translit": "\"Shabat shalom!\"",
+   "en": "\"Shabbat shalom!\"",
+   "img": "assets/books/book16/BOOK16_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book16-p09.mp3",
+    "m": "audio/m/israeli/book/book16-p09.mp3"
+   },
+   "illustration": "raised cups, smiles all around",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "מָרָק חַם.",
+   "translit": "Marak cham.",
+   "en": "Hot soup.",
+   "img": "assets/books/book16/BOOK16_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book16-p10.mp3",
+    "m": "audio/m/israeli/book/book16-p10.mp3"
+   },
+   "illustration": "a bowl of golden chicken soup, steam",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "אוֹכְלִים, מְדַבְּרִים, צוֹחֲקִים.",
+   "translit": "Ochlim, medabrim, tzochakim.",
+   "en": "Eating, talking, laughing.",
+   "img": "assets/books/book16/BOOK16_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book16-p11.mp3",
+    "m": "audio/m/israeli/book/book16-p11.mp3"
+   },
+   "illustration": "the table mid-meal, hands gesturing, a child under the table",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "שָׁלוֹם, שַׁבָּת.",
+   "translit": "Shalom, Shabat.",
+   "en": "Hello, Shabbat.",
+   "img": "assets/books/book16/BOOK16_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book16-p12.mp3",
+    "m": "audio/m/israeli/book/book16-p12.mp3"
+   },
+   "illustration": "the candles burning low, the room warm and quiet",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

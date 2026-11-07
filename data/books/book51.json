@@ -1,0 +1,177 @@
+{
+ "id": "book51",
+ "titleHe": "אֲרוּחַת עֶרֶב לִשְׁנַיִם",
+ "titleTranslit": "Aruchat Erev Li-Shnayim",
+ "titleEn": "Dinner for Two",
+ "level": "Beginner 3",
+ "pages": [
+  {
+   "n": 1,
+   "he": "עוֹמֶר מְבַשֵּׁל. פַּעַם רִאשׁוֹנָה.",
+   "translit": "Omer mevashel. Pa'am rishonah.",
+   "en": "Omer cooks. For the first time.",
+   "img": "assets/books/book51/BOOK51_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book51-p01.mp3",
+    "m": "audio/m/israeli/book/book51-p01.mp3"
+   },
+   "illustration": "a man in a kitchen with a cookbook open and three screens showing recipes",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "מָאיָה בָּאָה בְּשָׁעָה שֶׁבַע.",
+   "translit": "Maya ba'ah be-sha'ah sheva.",
+   "en": "Maya comes at seven.",
+   "img": "assets/books/book51/BOOK51_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book51-p02.mp3",
+    "m": "audio/m/israeli/book/book51-p02.mp3"
+   },
+   "illustration": "a clock reading 5:30, panic in his eyes",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "הוּא קוֹרֵא אֶת הַמַּתְכּוֹן.",
+   "translit": "Hu koreh et ha-matkon.",
+   "en": "He reads the recipe.",
+   "img": "assets/books/book51/BOOK51_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book51-p03.mp3",
+    "m": "audio/m/israeli/book/book51-p03.mp3"
+   },
+   "illustration": "finger on a line, lips moving",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "\"בָּצָל.\" הוּא חוֹתֵךְ. הוּא בּוֹכֶה.",
+   "translit": "\"Batzal.\" Hu chotech. Hu bocheh.",
+   "en": "\"Onion.\" He chops. He cries.",
+   "img": "assets/books/book51/BOOK51_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book51-p04.mp3",
+    "m": "audio/m/israeli/book/book51-p04.mp3"
+   },
+   "illustration": "tears streaming, knife in hand",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "\"שׁוּם.\" יוֹתֵר מִדַּי שׁוּם.",
+   "translit": "\"Shum.\" Yoter midai shum.",
+   "en": "\"Garlic.\" Too much garlic.",
+   "img": "assets/books/book51/BOOK51_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book51-p05.mp3",
+    "m": "audio/m/israeli/book/book51-p05.mp3"
+   },
+   "illustration": "a whole head of garlic going in",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "מַשֶּׁהוּ נִשְׂרַף.",
+   "translit": "Mashehu nisraf.",
+   "en": "Something burns.",
+   "img": "assets/books/book51/BOOK51_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book51-p06.mp3",
+    "m": "audio/m/israeli/book/book51-p06.mp3"
+   },
+   "illustration": "smoke from a pan, the alarm beeping",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "הוּא פּוֹתֵחַ אֶת הַחַלּוֹן.",
+   "translit": "Hu pote'ach et ha-chalon.",
+   "en": "He opens the window.",
+   "img": "assets/books/book51/BOOK51_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book51-p07.mp3",
+    "m": "audio/m/israeli/book/book51-p07.mp3"
+   },
+   "illustration": "smoke pouring out, a neighbour staring",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "שֶׁבַע. דְּפִיקָה בַּדֶּלֶת.",
+   "translit": "Sheva. Dfikah ba-delet.",
+   "en": "Seven. A knock at the door.",
+   "img": "assets/books/book51/BOOK51_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book51-p08.mp3",
+    "m": "audio/m/israeli/book/book51-p08.mp3"
+   },
+   "illustration": "the clock, the door, his apron stained, hair wild",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "מָאיָה נִכְנֶסֶת. הִיא מְרִיחָה.",
+   "translit": "Maya nichneset. Hi merichah.",
+   "en": "Maya comes in. She sniffs.",
+   "img": "assets/books/book51/BOOK51_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book51-p09.mp3",
+    "m": "audio/m/israeli/book/book51-p09.mp3"
+   },
+   "illustration": "the woman sniffing the smoky air",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "\"שׁוּם?\"",
+   "translit": "\"Shum?\"",
+   "en": "\"Garlic?\"",
+   "img": "assets/books/book51/BOOK51_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book51-p10.mp3",
+    "m": "audio/m/israeli/book/book51-p10.mp3"
+   },
+   "illustration": "her raised eyebrow",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "\"הַרְבֵּה שׁוּם.\"",
+   "translit": "\"Harbeh shum.\"",
+   "en": "\"A lot of garlic.\"",
+   "img": "assets/books/book51/BOOK51_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book51-p11.mp3",
+    "m": "audio/m/israeli/book/book51-p11.mp3"
+   },
+   "illustration": "the man's embarrassed shrug",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "הֵם מַזְמִינִים פִּיצָה. הַלַּיְלָה טוֹב.",
+   "translit": "Hem mazminim pitzah. Ha-lailah tov.",
+   "en": "They order pizza. The night is good.",
+   "img": "assets/books/book51/BOOK51_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book51-p12.mp3",
+    "m": "audio/m/israeli/book/book51-p12.mp3"
+   },
+   "illustration": "the two on the floor with a pizza box, candles, laughing",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

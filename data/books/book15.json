@@ -1,0 +1,177 @@
+{
+ "id": "book15",
+ "titleHe": "מִי מִתְקַשֵּׁר?",
+ "titleTranslit": "Mi Mitkasher?",
+ "titleEn": "Who Is Calling?",
+ "level": "Beginner 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "לַיְלָה.",
+   "translit": "Lailah.",
+   "en": "Night.",
+   "img": "assets/books/book15/BOOK15_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book15-p01.mp3",
+    "m": "audio/m/israeli/book/book15-p01.mp3"
+   },
+   "illustration": "a dark bedroom, a phone lighting up on the nightstand",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "הַטֶּלֶפוֹן מְצַלְצֵל.",
+   "translit": "Ha-telefon metzaltzel.",
+   "en": "The phone rings.",
+   "img": "assets/books/book15/BOOK15_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book15-p02.mp3",
+    "m": "audio/m/israeli/book/book15-p02.mp3"
+   },
+   "illustration": "the phone vibrating toward the edge of the table",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "דָּוִד קָם.",
+   "translit": "David kam.",
+   "en": "David gets up.",
+   "img": "assets/books/book15/BOOK15_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book15-p03.mp3",
+    "m": "audio/m/israeli/book/book15-p03.mp3"
+   },
+   "illustration": "a man fumbling for the phone, squinting",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "מִי זֶה?",
+   "translit": "Mi zeh?",
+   "en": "Who is it?",
+   "img": "assets/books/book15/BOOK15_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book15-p04.mp3",
+    "m": "audio/m/israeli/book/book15-p04.mp3"
+   },
+   "illustration": "an unknown number on the screen",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "\"הַלּוֹ?\"",
+   "translit": "\"Halo?\"",
+   "en": "\"Hello?\"",
+   "img": "assets/books/book15/BOOK15_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book15-p05.mp3",
+    "m": "audio/m/israeli/book/book15-p05.mp3"
+   },
+   "illustration": "the man answering with a hoarse voice",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "שֶׁקֶט.",
+   "translit": "Sheket.",
+   "en": "Silence.",
+   "img": "assets/books/book15/BOOK15_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book15-p06.mp3",
+    "m": "audio/m/israeli/book/book15-p06.mp3"
+   },
+   "illustration": "the man listening, nothing, a clock reading 3:12",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "\"מִי מְדַבֵּר?\"",
+   "translit": "\"Mi medaber?\"",
+   "en": "\"Who is speaking?\"",
+   "img": "assets/books/book15/BOOK15_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book15-p07.mp3",
+    "m": "audio/m/israeli/book/book15-p07.mp3"
+   },
+   "illustration": "the man sitting up, now alert",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "\"סַבָּא?\"",
+   "translit": "\"Saba?\"",
+   "en": "\"Grandpa?\"",
+   "img": "assets/books/book15/BOOK15_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book15-p08.mp3",
+    "m": "audio/m/israeli/book/book15-p08.mp3"
+   },
+   "illustration": "an old man's face in a thought bubble",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "\"דָּוִד! בֹּקֶר טוֹב!\"",
+   "translit": "\"David! Boker tov!\"",
+   "en": "\"David! Good morning!\"",
+   "img": "assets/books/book15/BOOK15_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book15-p09.mp3",
+    "m": "audio/m/israeli/book/book15-p09.mp3"
+   },
+   "illustration": "the grandfather in bright sunlight far away, coffee in hand",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "\"סַבָּא, פֹּה לַיְלָה.\"",
+   "translit": "\"Saba, poh lailah.\"",
+   "en": "\"Grandpa, here it is night.\"",
+   "img": "assets/books/book15/BOOK15_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book15-p10.mp3",
+    "m": "audio/m/israeli/book/book15-p10.mp3"
+   },
+   "illustration": "the man pointing at the dark window",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "\"אוֹי. סְלִיחָה.\"",
+   "translit": "\"Oy. Slichah.\"",
+   "en": "\"Oh. Sorry.\"",
+   "img": "assets/books/book15/BOOK15_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book15-p11.mp3",
+    "m": "audio/m/israeli/book/book15-p11.mp3"
+   },
+   "illustration": "the grandfather slapping his forehead",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "דָּוִד צוֹחֵק. \"לַיְלָה טוֹב, סַבָּא.\"",
+   "translit": "David tzochek. \"Lailah tov, Saba.\"",
+   "en": "David laughs. \"Good night, Grandpa.\"",
+   "img": "assets/books/book15/BOOK15_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book15-p12.mp3",
+    "m": "audio/m/israeli/book/book15-p12.mp3"
+   },
+   "illustration": "the man lying back down, smiling, phone on his chest",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

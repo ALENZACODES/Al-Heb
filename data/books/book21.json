@@ -1,0 +1,177 @@
+{
+ "id": "book21",
+ "titleHe": "יַיִן אָדֹם, יַיִן לָבָן",
+ "titleTranslit": "Yayin Adom, Yayin Lavan",
+ "titleEn": "Red Wine, White Wine",
+ "level": "Beginner 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "חֲנוּת יַיִן.",
+   "translit": "Chanut yayin.",
+   "en": "A wine shop.",
+   "img": "assets/books/book21/BOOK21_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book21-p01.mp3",
+    "m": "audio/m/israeli/book/book21-p01.mp3"
+   },
+   "illustration": "a narrow wine shop with wooden shelves",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "עוֹמֶר לֹא יוֹדֵעַ.",
+   "translit": "Omer lo yode'a.",
+   "en": "Omer doesn't know.",
+   "img": "assets/books/book21/BOOK21_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book21-p02.mp3",
+    "m": "audio/m/israeli/book/book21-p02.mp3"
+   },
+   "illustration": "a man staring at a wall of bottles, lost",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "יַיִן אָדֹם?",
+   "translit": "Yayin adom?",
+   "en": "Red wine?",
+   "img": "assets/books/book21/BOOK21_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book21-p03.mp3",
+    "m": "audio/m/israeli/book/book21-p03.mp3"
+   },
+   "illustration": "his hand on a red bottle",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "יַיִן לָבָן?",
+   "translit": "Yayin lavan?",
+   "en": "White wine?",
+   "img": "assets/books/book21/BOOK21_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book21-p04.mp3",
+    "m": "audio/m/israeli/book/book21-p04.mp3"
+   },
+   "illustration": "his other hand on a white bottle",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "הַמּוֹכֶרֶת בָּאָה.",
+   "translit": "Ha-mocheret ba'ah.",
+   "en": "The saleswoman comes.",
+   "img": "assets/books/book21/BOOK21_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book21-p05.mp3",
+    "m": "audio/m/israeli/book/book21-p05.mp3"
+   },
+   "illustration": "a woman in an apron approaching with a smile",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "\"מָה אוֹכְלִים?\"",
+   "translit": "\"Mah ochlim?\"",
+   "en": "\"What are you eating?\"",
+   "img": "assets/books/book21/BOOK21_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book21-p06.mp3",
+    "m": "audio/m/israeli/book/book21-p06.mp3"
+   },
+   "illustration": "the saleswoman with a questioning gesture",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "\"דָּגִים.\"",
+   "translit": "\"Dagim.\"",
+   "en": "\"Fish.\"",
+   "img": "assets/books/book21/BOOK21_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book21-p07.mp3",
+    "m": "audio/m/israeli/book/book21-p07.mp3"
+   },
+   "illustration": "a thought bubble of grilled fish with lemon",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "\"אָז לָבָן.\"",
+   "translit": "\"Az lavan.\"",
+   "en": "\"Then white.\"",
+   "img": "assets/books/book21/BOOK21_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book21-p08.mp3",
+    "m": "audio/m/israeli/book/book21-p08.mp3"
+   },
+   "illustration": "the saleswoman handing him a chilled bottle",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "\"וְהִיא אוֹהֶבֶת אָדֹם.\"",
+   "translit": "\"Ve-hi ohevet adom.\"",
+   "en": "\"And she likes red.\"",
+   "img": "assets/books/book21/BOOK21_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book21-p09.mp3",
+    "m": "audio/m/israeli/book/book21-p09.mp3"
+   },
+   "illustration": "the man hesitating, picturing a woman holding a red glass",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "\"אָז גַּם אָדֹם.\"",
+   "translit": "\"Az gam adom.\"",
+   "en": "\"Then red too.\"",
+   "img": "assets/books/book21/BOOK21_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book21-p10.mp3",
+    "m": "audio/m/israeli/book/book21-p10.mp3"
+   },
+   "illustration": "the saleswoman adding a second bottle, winking",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "עוֹמֶר קוֹנֶה שְׁנַיִם.",
+   "translit": "Omer koneh shnayim.",
+   "en": "Omer buys two.",
+   "img": "assets/books/book21/BOOK21_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book21-p11.mp3",
+    "m": "audio/m/israeli/book/book21-p11.mp3"
+   },
+   "illustration": "two bottles wrapped in paper",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "עֶרֶב טוֹב.",
+   "translit": "Erev tov.",
+   "en": "A good evening.",
+   "img": "assets/books/book21/BOOK21_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book21-p12.mp3",
+    "m": "audio/m/israeli/book/book21-p12.mp3"
+   },
+   "illustration": "a candlelit table, two glasses, one red, one white",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

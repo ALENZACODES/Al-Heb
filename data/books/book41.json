@@ -1,0 +1,177 @@
+{
+ "id": "book41",
+ "titleHe": "אַרְבָּעִים",
+ "titleTranslit": "Arba'im",
+ "titleEn": "Forty",
+ "level": "Beginner 2",
+ "pages": [
+  {
+   "n": 1,
+   "he": "דָּוִד בֶּן אַרְבָּעִים הַיּוֹם.",
+   "translit": "David ben arba'im ha-yom.",
+   "en": "David is forty today.",
+   "img": "assets/books/book41/BOOK41_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book41-p01.mp3",
+    "m": "audio/m/israeli/book/book41-p01.mp3"
+   },
+   "illustration": "a man looking in the mirror, finding a grey hair",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "\"אַרְבָּעִים,\" הוּא אוֹמֵר לַמַּרְאָה.",
+   "translit": "\"Arba'im,\" hu omer la-mar'ah.",
+   "en": "\"Forty,\" he says to the mirror.",
+   "img": "assets/books/book41/BOOK41_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book41-p02.mp3",
+    "m": "audio/m/israeli/book/book41-p02.mp3"
+   },
+   "illustration": "close on his face, raised eyebrow",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "הַמַּרְאָה לֹא עוֹנָה.",
+   "translit": "Ha-mar'ah lo onah.",
+   "en": "The mirror doesn't answer.",
+   "img": "assets/books/book41/BOOK41_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book41-p03.mp3",
+    "m": "audio/m/israeli/book/book41-p03.mp3"
+   },
+   "illustration": "the mirror, the man, silence",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "הוּא לֹא רוֹצֶה מְסִבָּה.",
+   "translit": "Hu lo rotzeh mesibah.",
+   "en": "He doesn't want a party.",
+   "img": "assets/books/book41/BOOK41_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book41-p04.mp3",
+    "m": "audio/m/israeli/book/book41-p04.mp3"
+   },
+   "illustration": "a text: no party please",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "הוּא רוֹצֶה שֶׁקֶט.",
+   "translit": "Hu rotzeh sheket.",
+   "en": "He wants quiet.",
+   "img": "assets/books/book41/BOOK41_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book41-p05.mp3",
+    "m": "audio/m/israeli/book/book41-p05.mp3"
+   },
+   "illustration": "the man alone with a book and tea",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "הוּא הוֹלֵךְ לַיָּם.",
+   "translit": "Hu holech la-yam.",
+   "en": "He goes to the sea.",
+   "img": "assets/books/book41/BOOK41_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book41-p06.mp3",
+    "m": "audio/m/israeli/book/book41-p06.mp3"
+   },
+   "illustration": "walking along an empty beach",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "הוּא שׂוֹחֶה.",
+   "translit": "Hu socheh.",
+   "en": "He swims.",
+   "img": "assets/books/book41/BOOK41_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book41-p07.mp3",
+    "m": "audio/m/israeli/book/book41-p07.mp3"
+   },
+   "illustration": "floating on his back, sky above",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "הוּא חוֹשֵׁב עַל הַחַיִּים.",
+   "translit": "Hu choshev al ha-chayim.",
+   "en": "He thinks about life.",
+   "img": "assets/books/book41/BOOK41_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book41-p08.mp3",
+    "m": "audio/m/israeli/book/book41-p08.mp3"
+   },
+   "illustration": "the man on the sand, chin on his knees, thoughtful",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "הַחַיִּים טוֹבִים.",
+   "translit": "Ha-chayim tovim.",
+   "en": "Life is good.",
+   "img": "assets/books/book41/BOOK41_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book41-p09.mp3",
+    "m": "audio/m/israeli/book/book41-p09.mp3"
+   },
+   "illustration": "a slow smile",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "הוּא חוֹזֵר הַבַּיְתָה.",
+   "translit": "Hu chozer ha-baitah.",
+   "en": "He goes back home.",
+   "img": "assets/books/book41/BOOK41_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book41-p10.mp3",
+    "m": "audio/m/israeli/book/book41-p10.mp3"
+   },
+   "illustration": "his apartment door, key turning",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "\"הַפְתָּעָה!\"",
+   "translit": "\"Hafta'ah!\"",
+   "en": "\"Surprise!\"",
+   "img": "assets/books/book41/BOOK41_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book41-p11.mp3",
+    "m": "audio/m/israeli/book/book41-p11.mp3"
+   },
+   "illustration": "every friend and relative bursting out, balloons",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "בְּסֵדֶר. גַּם מְסִבָּה.",
+   "translit": "Beseder. Gam mesibah.",
+   "en": "Fine. A party too.",
+   "img": "assets/books/book41/BOOK41_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book41-p12.mp3",
+    "m": "audio/m/israeli/book/book41-p12.mp3"
+   },
+   "illustration": "the man laughing, a cake with a 4 and a 0",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

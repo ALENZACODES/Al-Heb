@@ -1,0 +1,177 @@
+{
+ "id": "book42",
+ "titleHe": "נַהַג הַמּוֹנִית",
+ "titleTranslit": "Nahag Ha-Monit",
+ "titleEn": "The Taxi Driver",
+ "level": "Beginner 2",
+ "pages": [
+  {
+   "n": 1,
+   "he": "מוֹנִית. לַיְלָה.",
+   "translit": "Monit. Lailah.",
+   "en": "A taxi. Night.",
+   "img": "assets/books/book42/BOOK42_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book42-p01.mp3",
+    "m": "audio/m/israeli/book/book42-p01.mp3"
+   },
+   "illustration": "a taxi at a stand under a streetlight",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "הַנַּהָג: אַבְרָהָם.",
+   "translit": "Ha-nahag: Avraham.",
+   "en": "The driver: Avraham.",
+   "img": "assets/books/book42/BOOK42_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book42-p02.mp3",
+    "m": "audio/m/israeli/book/book42-p02.mp3"
+   },
+   "illustration": "an older driver with a moustache and a radio",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "שִׁירָה עוֹלָה.",
+   "translit": "Shira olah.",
+   "en": "Shira gets in.",
+   "img": "assets/books/book42/BOOK42_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book42-p03.mp3",
+    "m": "audio/m/israeli/book/book42-p03.mp3"
+   },
+   "illustration": "a woman sliding into the back seat",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "\"לְאָן?\"",
+   "translit": "\"Le'an?\"",
+   "en": "\"Where to?\"",
+   "img": "assets/books/book42/BOOK42_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book42-p04.mp3",
+    "m": "audio/m/israeli/book/book42-p04.mp3"
+   },
+   "illustration": "the driver looking in the mirror",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "\"לִשְׂדֵה הַתְּעוּפָה.\"",
+   "translit": "\"Li-sdeh ha-te'ufah.\"",
+   "en": "\"To the airport.\"",
+   "img": "assets/books/book42/BOOK42_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book42-p05.mp3",
+    "m": "audio/m/israeli/book/book42-p05.mp3"
+   },
+   "illustration": "a suitcase on her lap",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "\"טִיסָה?\"",
+   "translit": "\"Tisah?\"",
+   "en": "\"A flight?\"",
+   "img": "assets/books/book42/BOOK42_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book42-p06.mp3",
+    "m": "audio/m/israeli/book/book42-p06.mp3"
+   },
+   "illustration": "the driver pulling out",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "\"כֵּן. אֲנִי עוֹזֶבֶת.\"",
+   "translit": "\"Ken. Ani ozevet.\"",
+   "en": "\"Yes. I'm leaving.\"",
+   "img": "assets/books/book42/BOOK42_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book42-p07.mp3",
+    "m": "audio/m/israeli/book/book42-p07.mp3"
+   },
+   "illustration": "the woman looking out at the passing city",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "\"לְכַמָּה זְמַן?\"",
+   "translit": "\"Le-kamah zman?\"",
+   "en": "\"For how long?\"",
+   "img": "assets/books/book42/BOOK42_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book42-p08.mp3",
+    "m": "audio/m/israeli/book/book42-p08.mp3"
+   },
+   "illustration": "the driver's eyes in the mirror",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "\"אֲנִי לֹא יוֹדַעַת.\"",
+   "translit": "\"Ani lo yoda'at.\"",
+   "en": "\"I don't know.\"",
+   "img": "assets/books/book42/BOOK42_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book42-p09.mp3",
+    "m": "audio/m/israeli/book/book42-p09.mp3"
+   },
+   "illustration": "the woman's reflection in the window",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "אַבְרָהָם שׁוֹתֵק.",
+   "translit": "Avraham shotek.",
+   "en": "Avraham is silent.",
+   "img": "assets/books/book42/BOOK42_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book42-p10.mp3",
+    "m": "audio/m/israeli/book/book42-p10.mp3"
+   },
+   "illustration": "the highway, the lights, quiet",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "וְאָז: \"תַּחְזְרִי. תָּמִיד חוֹזְרִים.\"",
+   "translit": "Ve-az: \"Tachzeri. Tamid chozrim.\"",
+   "en": "And then: \"Come back. People always come back.\"",
+   "img": "assets/books/book42/BOOK42_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book42-p11.mp3",
+    "m": "audio/m/israeli/book/book42-p11.mp3"
+   },
+   "illustration": "the driver speaking gently, hands on the wheel",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "שִׁירָה מְחַיֶּכֶת. \"אוּלַי.\"",
+   "translit": "Shira mechayechet. \"Ulai.\"",
+   "en": "Shira smiles. \"Maybe.\"",
+   "img": "assets/books/book42/BOOK42_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book42-p12.mp3",
+    "m": "audio/m/israeli/book/book42-p12.mp3"
+   },
+   "illustration": "the taxi at the terminal, the woman stepping out into the lights",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

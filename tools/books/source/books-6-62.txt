@@ -1,0 +1,802 @@
+# ALEF little books 6 to 62: adult beginner readers.
+# Format: "## id | titleHe | titleTranslit | titleEn | band" then one page per line: "he | translit | en | illustration".
+# Bands: A = 2 to 3 words a page, B = 3 to 5, C = 4 to 6 (sometimes two short sentences).
+# All stories are original. Drafts: no native speaker has reviewed the Hebrew or the pointing.
+
+## book6 | קָפֶה קֹדֶם | Kafeh Kodem | Coffee First | A
+בֹּקֶר. | Boker. | Morning. | dim bedroom, grey light at the window, phone alarm glowing on the nightstand
+דָּנָה עֲיֵפָה. | Dana ayefah. | Dana is tired. | a woman in her thirties sitting up in bed, hair messy, eyes half closed
+דָּנָה רוֹצָה קָפֶה. | Dana rotzah kafeh. | Dana wants coffee. | the woman shuffling to a small kitchen in a bathrobe
+אֵין קָפֶה! | Ein kafeh! | There is no coffee! | an empty coffee jar held upside down, one bean falling out
+אֵין חָלָב. | Ein chalav. | There is no milk. | open fridge, bare shelves, a single lemon
+דָּנָה הוֹלֶכֶת. | Dana holechet. | Dana goes out. | the woman pulling a coat over pajamas, keys in hand
+הַקָּפֶה בַּפִּנָּה. | Ha-kafeh ba-pinah. | The café is on the corner. | a small corner café with a striped awning, morning street
+קָפֶה, בְּבַקָּשָׁה. | Kafeh, bevakashah. | Coffee, please. | the woman at the counter, barista smiling, espresso machine steaming
+קָפֶה חַם. | Kafeh cham. | Hot coffee. | close-up of a paper cup, steam curling, hands around it
+קָפֶה טוֹב. | Kafeh tov. | Good coffee. | the woman with eyes closed, first sip, pure relief
+עַכְשָׁו בֹּקֶר טוֹב. | Achshav boker tov. | Now it is a good morning. | the woman walking back along a sunny street, cup in hand
+קָפֶה קֹדֶם. | Kafeh kodem. | Coffee first. | the coffee cup on a desk beside a laptop, sunlight, the day begins
+
+## book7 | אֵיפֹה הַמַּפְתֵּחַ? | Eifoh Ha-Mafteach? | Where Is the Key? | A
+יוֹסִי בָּא הַבַּיְתָה. | Yossi ba ha-baitah. | Yossi comes home. | a man in his forties at an apartment door at dusk, grocery bag in arm
+אֵיפֹה הַמַּפְתֵּחַ? | Eifoh ha-mafteach? | Where is the key? | the man patting his coat pockets, puzzled
+לֹא בַּתִּיק. | Lo ba-tik. | Not in the bag. | an open messenger bag on the floor, papers spilling out
+לֹא בַּמְּעִיל. | Lo ba-me'il. | Not in the coat. | the coat turned inside out, pockets hanging empty
+לֹא בָּאוֹטוֹ. | Lo ba-oto. | Not in the car. | the man peering through a car window in the parking lot
+יוֹסִי מִתְקַשֵּׁר. | Yossi mitkasher. | Yossi calls. | the man on the phone in the stairwell, one hand on his forehead
+"מָאיָה, יֵשׁ לָךְ מַפְתֵּחַ?" | "Maya, yesh lach mafteach?" | "Maya, do you have a key?" | split frame: the man on the stairs, a woman at an office desk answering
+"לֹא. סְלִיחָה." | "Lo. Slichah." | "No. Sorry." | the woman shrugging apologetically into her phone
+יוֹסִי יוֹשֵׁב. | Yossi yoshev. | Yossi sits down. | the man sitting on the stairs, groceries beside him, a cat watching
+הַשָּׁכֵן בָּא. | Ha-shachen ba. | The neighbour comes. | an older neighbour climbing the stairs with a dog
+"הַמַּפְתֵּחַ בַּדֶּלֶת!" | "Ha-mafteach ba-delet!" | "The key is in the door!" | the neighbour pointing: the key sitting in the lock the whole time
+יוֹסִי צוֹחֵק. | Yossi tzochek. | Yossi laughs. | the man laughing with his head back, neighbour grinning, dog wagging
+
+## book8 | חַם וְקַר | Cham Ve-Kar | Hot and Cold | A
+תֵּל אָבִיב. קַיִץ. | Tel Aviv. Kayitz. | Tel Aviv. Summer. | a white Bauhaus street under hard sunlight, palm shadows
+חַם. | Cham. | Hot. | heat shimmer on asphalt, a man fanning himself with a newspaper
+חַם מְאוֹד. | Cham me'od. | Very hot. | a pharmacy thermometer sign reading high, people in the shade
+רוֹנִי רוֹצֶה מַיִם. | Roni rotzeh mayim. | Roni wants water. | a young man at a kiosk pointing at a fridge of bottles
+מַיִם קָרִים. | Mayim karim. | Cold water. | a sweating water bottle, condensation drops
+רוֹנִי רוֹצֶה גְּלִידָה. | Roni rotzeh glidah. | Roni wants ice cream. | the man at an ice cream counter, dozens of colours
+גְּלִידָה קָרָה. | Glidah karah. | Cold ice cream. | a pistachio ice cream cone starting to drip
+הַיָּם קַר? | Ha-yam kar? | Is the sea cold? | the man at the water's edge, one toe in
+לֹא! הַיָּם חַם. | Lo! Ha-yam cham. | No! The sea is warm. | the man floating happily in bright blue water
+עֶרֶב. | Erev. | Evening. | orange sunset over the sea, silhouettes on the promenade
+עַכְשָׁו קַר. | Achshav kar. | Now it is cold. | the man in a damp t-shirt hugging himself in a breeze
+חַם וְקַר. זֶה תֵּל אָבִיב. | Cham ve-kar. Zeh Tel Aviv. | Hot and cold. That's Tel Aviv. | the man wrapped in a towel, grinning, city lights coming on
+
+## book9 | כֵּן, לֹא, אוּלַי | Ken, Lo, Ulai | Yes, No, Maybe | A
+תָּמָר יוֹשֶׁבֶת. | Tamar yoshevet. | Tamar sits. | a woman at a kitchen table at night, laptop open, tea going cold
+יֵשׁ מִכְתָּב. | Yesh michtav. | There is a letter. | an email on the screen, subject line glowing
+עֲבוֹדָה חֲדָשָׁה. | Avodah chadashah. | A new job. | the email says offer, a company logo, a map pin in another city
+בְּחֵיפָה. | Be-Cheifah. | In Haifa. | Haifa's terraced hillside and bay seen from above
+כֵּן? | Ken? | Yes? | the woman nodding slowly, hand on her chin
+לֹא? | Lo? | No? | the woman shaking her head, looking at family photos on the fridge
+אוּלַי. | Ulai. | Maybe. | the woman pacing, the cat watching from the counter
+תָּמָר מִתְקַשֶּׁרֶת לְאִמָּא. | Tamar mitkasheret le-Ima. | Tamar calls her mother. | phone to her ear, late-night window reflection
+"אִמָּא, מָה אַתְּ אוֹמֶרֶת?" | "Ima, mah at omeret?" | "Mom, what do you say?" | split frame: an older woman in a robe answering with a smile
+"אַתְּ יוֹדַעַת." | "At yoda'at." | "You know." | the mother's knowing look, a raised eyebrow
+תָּמָר כּוֹתֶבֶת. | Tamar kotevet. | Tamar writes. | her fingers on the keyboard, one word typed: yes
+כֵּן. | Ken. | Yes. | the woman closing the laptop, a small smile, the window showing dawn
+
+## book10 | בַּשּׁוּק | Ba-Shuk | At the Market | A
+שׁוּק הַכַּרְמֶל. | Shuk Ha-Carmel. | Carmel Market. | a crowded covered market, striped awnings, produce stalls
+עוֹמֶר הוֹלֵךְ לַשּׁוּק. | Omer holech la-shuk. | Omer goes to the market. | a man with a canvas bag entering the market
+עַגְבָנִיּוֹת! | Agvaniyot! | Tomatoes! | a mountain of red tomatoes, vendor shouting
+מְלָפְפוֹנִים! | Melafefonim! | Cucumbers! | crates of cucumbers, a hand picking one
+"כַּמָּה זֶה?" | "Kamah zeh?" | "How much is this?" | the man holding up a bunch of grapes, vendor with a scale
+"עֶשֶׂר שְׁקָלִים." | "Eser shkalim." | "Ten shekels." | the vendor holding up ten fingers, grinning
+"יָקָר!" | "Yakar!" | "Expensive!" | the man with mock horror, hand on heart
+"בְּסֵדֶר, שְׁמוֹנֶה." | "Beseder, shmoneh." | "Fine, eight." | the vendor laughing, waving him in
+עוֹמֶר קוֹנֶה. | Omer koneh. | Omer buys. | coins passing hands, grapes going into the bag
+לֶחֶם חַם. | Lechem cham. | Hot bread. | a bakery stall, pita stacked, steam rising
+זֵיתִים וּגְבִינָה. | Zeitim u-gvinah. | Olives and cheese. | bowls of green and black olives, a wheel of white cheese
+הַתִּיק מָלֵא. עוֹמֶר שָׂמֵחַ. | Ha-tik maleh. Omer sameach. | The bag is full. Omer is happy. | the man walking out with a bulging bag, eating a grape
+
+## book11 | הָאוֹטוֹבּוּס מְאַחֵר | Ha-Otobus Me'acher | The Bus Is Late | A
+תַּחֲנַת אוֹטוֹבּוּס. | Tachanat otobus. | A bus stop. | a bus shelter on a busy road, morning, a few people waiting
+שִׁירָה מְחַכָּה. | Shira mechakah. | Shira waits. | a woman in office clothes checking her watch
+הָאוֹטוֹבּוּס לֹא בָּא. | Ha-otobus lo ba. | The bus does not come. | the empty road stretching away, heat haze
+שִׁירָה מְחַכָּה עוֹד. | Shira mechakah od. | Shira waits more. | the woman leaning on the pole, phone at ten percent
+אִישׁ זָקֵן מְחַכֶּה. | Ish zaken mechakeh. | An old man waits. | an elderly man with a cane sitting calmly on the bench
+"הָאוֹטוֹבּוּס מְאַחֵר," הוּא אוֹמֵר. | "Ha-otobus me'acher," hu omer. | "The bus is late," he says. | the old man speaking, unbothered
+"תָּמִיד," אוֹמֶרֶת שִׁירָה. | "Tamid," omeret Shira. | "Always," says Shira. | the woman rolling her eyes with a half-smile
+הַזָּקֵן נוֹתֵן לָהּ סוּכָּרִיָּה. | Ha-zaken noten lah sukariyah. | The old man gives her a candy. | a wrinkled hand offering a wrapped candy
+שִׁירָה צוֹחֶקֶת. | Shira tzocheket. | Shira laughs. | the woman laughing, candy in hand
+הִנֵּה הָאוֹטוֹבּוּס! | Hineh ha-otobus! | Here is the bus! | a green bus rounding the corner, doors opening
+שִׁירָה עוֹלָה. | Shira olah. | Shira gets on. | the woman stepping up, tapping her card
+הַזָּקֵן מְנַפְנֵף. | Ha-zaken menafnef. | The old man waves. | the old man waving from the bench, seen through the bus window
+
+## book12 | בֹּקֶר טוֹב, תֵּל אָבִיב | Boker Tov, Tel Aviv | Good Morning, Tel Aviv | A
+שֵׁשׁ בַּבֹּקֶר. | Shesh ba-boker. | Six in the morning. | an empty boulevard, pale sky, sprinklers on
+הַשֶּׁמֶשׁ עוֹלָה. | Ha-shemesh olah. | The sun rises. | sun lifting over rooftops with water tanks and solar panels
+הַיָּם שָׁקֵט. | Ha-yam shaket. | The sea is quiet. | flat silver sea, one swimmer
+אֵיתָן רָץ. | Eitan ratz. | Eitan runs. | a man jogging along the promenade
+כֶּלֶב רָץ. | Kelev ratz. | A dog runs. | a happy dog running ahead of him on a leash
+אוֹפַנַּיִם. | Ofanayim. | Bicycles. | riders on the bike lane, one with a surfboard
+הַקָּפֶה פָּתוּחַ. | Ha-kafeh patuach. | The café is open. | a barista raising the shutter of a corner café
+"בֹּקֶר טוֹב!" | "Boker tov!" | "Good morning!" | the barista waving at the jogger
+"בֹּקֶר אוֹר!" | "Boker or!" | "Morning of light!" | the jogger answering with a thumbs up
+הָעִיר קָמָה. | Ha-ir kamah. | The city wakes up. | shutters opening, a bus, a fruit stand being set up
+רַעַשׁ. | Ra'ash. | Noise. | horns, a scooter, a man shouting into a phone, pigeons
+בֹּקֶר טוֹב, תֵּל אָבִיב. | Boker tov, Tel Aviv. | Good morning, Tel Aviv. | the jogger and the dog at the water's edge, city behind them
+
+## book13 | יֵשׁ לִי, אֵין לִי | Yesh Li, Ein Li | I Have, I Don't Have | A
+נָדָב בַּבַּיִת. | Nadav ba-bayit. | Nadav is at home. | a man in a small bright apartment, plants everywhere
+יֵשׁ לִי בַּיִת. | Yesh li bayit. | I have a home. | the man looking around his flat with quiet satisfaction
+יֵשׁ לִי חָתוּל. | Yesh li chatul. | I have a cat. | a grey cat on the windowsill
+יֵשׁ לִי עֲבוֹדָה. | Yesh li avodah. | I have a job. | a laptop with a video call grid open
+אֵין לִי זְמַן. | Ein li zman. | I don't have time. | a wall calendar covered in notes
+אֵין לִי אוֹטוֹ. | Ein li oto. | I don't have a car. | a bus pass and a helmet on a hook
+יֵשׁ לִי אוֹפַנַּיִם. | Yesh li ofanayim. | I have a bicycle. | a bicycle leaning in the hallway
+אֵין לִי כֶּסֶף. | Ein li kesef. | I don't have money. | an open wallet with a receipt and one coin
+יֵשׁ לִי חֲבֵרִים. | Yesh li chaverim. | I have friends. | a phone buzzing with a group chat full of messages
+יֵשׁ לִי יוֹם שִׁישִׁי. | Yesh li yom shishi. | I have Friday. | the man in a hammock on a tiny balcony
+אֵין לִי כְּלוּם? לֹא. | Ein li klum? Lo. | Do I have nothing? No. | the man counting on his fingers, smiling
+יֵשׁ לִי הַכֹּל. | Yesh li ha-kol. | I have everything. | the man, the cat, the bicycle and the sunset through the window
+
+## book14 | הֶחָתוּל עוֹבֵד מֵהַבַּיִת | He-Chatul Oved Me-Ha-Bayit | The Cat Works From Home | A
+לֵאָה עוֹבֶדֶת מֵהַבַּיִת. | Leah ovedet me-ha-bayit. | Leah works from home. | a woman at a desk by a window, headphones on
+גַּם הֶחָתוּל. | Gam he-chatul. | So does the cat. | an orange cat sitting squarely on the keyboard
+"לֹא, חָתוּל!" | "Lo, chatul!" | "No, cat!" | the woman lifting the cat off the keyboard
+הֶחָתוּל יוֹשֵׁב. | He-chatul yoshev. | The cat sits. | the cat sitting on the printed report, unbothered
+הֶחָתוּל יָשֵׁן. | He-chatul yashen. | The cat sleeps. | the cat asleep across the mouse pad
+פְּגִישָׁה! | Pgishah! | A meeting! | a video call ringing on screen
+לֵאָה מְדַבֶּרֶת. | Leah medaberet. | Leah speaks. | the woman presenting to a grid of faces
+הֶחָתוּל גַּם מְדַבֵּר. | He-chatul gam medaber. | The cat also speaks. | the cat's face filling the webcam, mouth open mid-meow
+כֻּלָּם צוֹחֲקִים. | Kulam tzochakim. | Everyone laughs. | the grid of coworkers laughing
+הַבּוֹס אוֹמֵר: "חָתוּל יָפֶה." | Ha-bos omer: "Chatul yafeh." | The boss says: "Nice cat." | the boss's tile, a grey-haired man smiling
+לֵאָה שְׂמֵחָה. | Leah smechah. | Leah is happy. | the woman relieved, hand on chest
+הֶחָתוּל יָשֵׁן עוֹד. | He-chatul yashen od. | The cat sleeps some more. | the cat curled on the warm laptop, screen dimmed
+
+## book15 | מִי מִתְקַשֵּׁר? | Mi Mitkasher? | Who Is Calling? | A
+לַיְלָה. | Lailah. | Night. | a dark bedroom, a phone lighting up on the nightstand
+הַטֶּלֶפוֹן מְצַלְצֵל. | Ha-telefon metzaltzel. | The phone rings. | the phone vibrating toward the edge of the table
+דָּוִד קָם. | David kam. | David gets up. | a man fumbling for the phone, squinting
+מִי זֶה? | Mi zeh? | Who is it? | an unknown number on the screen
+"הַלּוֹ?" | "Halo?" | "Hello?" | the man answering with a hoarse voice
+שֶׁקֶט. | Sheket. | Silence. | the man listening, nothing, a clock reading 3:12
+"מִי מְדַבֵּר?" | "Mi medaber?" | "Who is speaking?" | the man sitting up, now alert
+"סַבָּא?" | "Saba?" | "Grandpa?" | an old man's face in a thought bubble
+"דָּוִד! בֹּקֶר טוֹב!" | "David! Boker tov!" | "David! Good morning!" | the grandfather in bright sunlight far away, coffee in hand
+"סַבָּא, פֹּה לַיְלָה." | "Saba, poh lailah." | "Grandpa, here it is night." | the man pointing at the dark window
+"אוֹי. סְלִיחָה." | "Oy. Slichah." | "Oh. Sorry." | the grandfather slapping his forehead
+דָּוִד צוֹחֵק. "לַיְלָה טוֹב, סַבָּא." | David tzochek. "Lailah tov, Saba." | David laughs. "Good night, Grandpa." | the man lying back down, smiling, phone on his chest
+
+## book16 | שֻׁלְחָן שַׁבָּת | Shulchan Shabat | Shabbat Table | A
+יוֹם שִׁישִׁי. | Yom shishi. | Friday. | a kitchen bright with afternoon light, pots on every burner
+אִמָּא מְבַשֶּׁלֶת. | Ima mevashelet. | Mom cooks. | a woman stirring a big pot, apron on
+אַבָּא קוֹנֶה חַלָּה. | Aba koneh chalah. | Dad buys challah. | a man at a bakery with two braided loaves
+הַשֻּׁלְחָן יָפֶה. | Ha-shulchan yafeh. | The table is beautiful. | a white tablecloth, candles, wine, flowers
+הַנֵּרוֹת. | Ha-nerot. | The candles. | two candles being lit, hands circling the flames
+הַיַּיִן. | Ha-yayin. | The wine. | a silver cup filled to the brim
+הַחַלָּה. | Ha-chalah. | The challah. | the cover lifted off the two loaves
+כֻּלָּם יוֹשְׁבִים. | Kulam yoshvim. | Everyone sits. | the family around the table, three generations
+"שַׁבָּת שָׁלוֹם!" | "Shabat shalom!" | "Shabbat shalom!" | raised cups, smiles all around
+מָרָק חַם. | Marak cham. | Hot soup. | a bowl of golden chicken soup, steam
+אוֹכְלִים, מְדַבְּרִים, צוֹחֲקִים. | Ochlim, medabrim, tzochakim. | Eating, talking, laughing. | the table mid-meal, hands gesturing, a child under the table
+שָׁלוֹם, שַׁבָּת. | Shalom, Shabat. | Hello, Shabbat. | the candles burning low, the room warm and quiet
+
+## book17 | גֶּשֶׁם בְּחֵיפָה | Geshem Be-Cheifah | Rain in Haifa | A
+חֵיפָה. חֹרֶף. | Cheifah. Choref. | Haifa. Winter. | grey clouds over the Carmel hillside and the bay
+גֶּשֶׁם. | Geshem. | Rain. | rain streaking a bus window
+הַרְבֵּה גֶּשֶׁם. | Harbeh geshem. | A lot of rain. | a steep street turned into a stream
+לְיָעֵל אֵין מִטְרִיָּה. | Le-Yael ein mitriyah. | Yael has no umbrella. | a woman under a shop awning, soaked
+יָעֵל רָצָה. | Yael ratzah. | Yael runs. | the woman sprinting between awnings, bag over her head
+הִיא רְטֻבָּה. | Hi retubah. | She is wet. | dripping hair, smudged mascara, laughing anyway
+קָפֶה! | Kafeh! | A café! | a warm lit café window glowing in the rain
+יָעֵל נִכְנֶסֶת. | Yael nichneset. | Yael goes in. | the door opening, a bell ringing, warmth
+"שׁוֹקוֹ חַם, בְּבַקָּשָׁה." | "Shoko cham, bevakashah." | "Hot chocolate, please." | the counter, a barista nodding
+הִיא יוֹשֶׁבֶת לְיַד הַחַלּוֹן. | Hi yoshevet le-yad ha-chalon. | She sits by the window. | the woman at a window seat, mug in both hands
+הַגֶּשֶׁם יָפֶה. | Ha-geshem yafeh. | The rain is beautiful. | rain on glass, city lights blurred behind it
+בִּפְנִים חַם. | Bifnim cham. | Inside it is warm. | the woman's reflection in the window, steam rising from the mug
+
+## book18 | עִיר גְּדוֹלָה, דִּירָה קְטַנָּה | Ir Gdolah, Dirah Ktanah | Big City, Small Apartment | A
+תֵּל אָבִיב עִיר גְּדוֹלָה. | Tel Aviv ir gdolah. | Tel Aviv is a big city. | towers and old buildings crowded together, seen from above
+הַדִּירָה שֶׁל רוֹנִי קְטַנָּה. | Ha-dirah shel Roni ktanah. | Roni's apartment is small. | a studio: bed, desk, kitchenette in one view
+קְטַנָּה מְאוֹד. | Ktanah me'od. | Very small. | the man touching both walls with outstretched arms
+הַמִּטָּה פֹּה. | Ha-mitah poh. | The bed is here. | a bed folded up against the wall
+הַמִּטְבָּח פֹּה. | Ha-mitbach poh. | The kitchen is here. | a two-burner stove under a lofted bed
+הַשֻּׁלְחָן? גַּם פֹּה. | Ha-shulchan? Gam poh. | The table? Also here. | a table that folds down from the wall
+יֵשׁ חַלּוֹן גָּדוֹל. | Yesh chalon gadol. | There is a big window. | a tall window with the city spread out
+יֵשׁ מִרְפֶּסֶת קְטַנָּה. | Yesh mirpeset ktanah. | There is a small balcony. | a balcony just big enough for one chair and a basil plant
+רוֹנִי שׁוֹתֶה קָפֶה בַּמִּרְפֶּסֶת. | Roni shoteh kafeh ba-mirpeset. | Roni drinks coffee on the balcony. | the man with coffee, feet on the railing
+הוּא רוֹאֶה אֶת הַיָּם. | Hu ro'eh et ha-yam. | He sees the sea. | a sliver of blue between two buildings
+הַדִּירָה קְטַנָּה. | Ha-dirah ktanah. | The apartment is small. | the room again, tidy and bright
+הָעוֹלָם גָּדוֹל. | Ha-olam gadol. | The world is big. | the man on the balcony, the whole city and sea beyond
+
+## book19 | מָה הַשָּׁעָה? | Mah Ha-Sha'ah? | What Time Is It? | A
+"מָה הַשָּׁעָה?" | "Mah ha-sha'ah?" | "What time is it?" | a man in bed asking, half asleep, a woman already dressed
+"שֶׁבַע." | "Sheva." | "Seven." | a wall clock reading seven
+"מְאֻחָר!" | "Me'uchar!" | "Late!" | the man leaping out of bed
+הוּא מִתְלַבֵּשׁ מַהֵר. | Hu mitlabesh maher. | He gets dressed fast. | one sock on, shirt half buttoned
+אֵין זְמַן לְקָפֶה. | Ein zman le-kafeh. | No time for coffee. | a sad glance at the coffee maker
+הוּא רָץ לָאוֹטוֹבּוּס. | Hu ratz la-otobus. | He runs to the bus. | running down the stairs two at a time
+בָּאוֹטוֹבּוּס: "מָה הַשָּׁעָה?" | Ba-otobus: "Mah ha-sha'ah?" | On the bus: "What time is it?" | asking a teenager with headphones
+"שֶׁבַע וָחֵצִי." | "Sheva va-chetzi." | "Seven thirty." | the teenager showing his phone screen
+הוּא מַגִּיעַ לַמִּשְׂרָד. | Hu magi'a la-misrad. | He arrives at the office. | an office lobby, out of breath
+הַמִּשְׂרָד סָגוּר. | Ha-misrad sagur. | The office is closed. | dark glass doors, lights off
+הַיּוֹם שַׁבָּת. | Ha-yom Shabat. | Today is Saturday. | the man staring at the calendar on his phone
+הוּא הוֹלֵךְ לְקָפֶה. | Hu holech le-kafeh. | He goes for coffee. | the man strolling slowly to a café, relieved
+
+## book20 | הַכֶּלֶב רוֹצֶה לָלֶכֶת | Ha-Kelev Rotzeh Lalechet | The Dog Wants to Go Out | A
+שֵׁשׁ בַּבֹּקֶר. | Shesh ba-boker. | Six in the morning. | a dark apartment, a dog's nose at the bedroom door
+הַכֶּלֶב קָם. | Ha-kelev kam. | The dog gets up. | a big friendly dog stretching
+מָאיָה לֹא קָמָה. | Maya lo kamah. | Maya does not get up. | a woman with the blanket over her head
+הַכֶּלֶב רוֹצֶה לָלֶכֶת. | Ha-kelev rotzeh lalechet. | The dog wants to go out. | the dog with the leash in its mouth
+הַכֶּלֶב מְחַכֶּה. | Ha-kelev mechakeh. | The dog waits. | the dog sitting perfectly still, staring
+הַכֶּלֶב לֹא מְחַכֶּה. | Ha-kelev lo mechakeh. | The dog does not wait. | the dog jumping onto the bed
+"בְּסֵדֶר, בְּסֵדֶר!" | "Beseder, beseder!" | "Okay, okay!" | the woman sitting up, hair wild
+הֵם הוֹלְכִים. | Hem holchim. | They go. | woman and dog on an empty street at dawn
+הַכֶּלֶב שָׂמֵחַ. | Ha-kelev sameach. | The dog is happy. | the dog trotting, tail high
+מָאיָה גַּם. | Maya gam. | Maya too. | the woman smiling despite herself, coffee from a kiosk
+הֵם רוֹאִים אֶת הַשֶּׁמֶשׁ. | Hem ro'im et ha-shemesh. | They see the sunrise. | sun coming up over rooftops, the two of them watching
+"תּוֹדָה, כֶּלֶב." | "Todah, kelev." | "Thank you, dog." | the woman crouched, hugging the dog
+
+## book21 | יַיִן אָדֹם, יַיִן לָבָן | Yayin Adom, Yayin Lavan | Red Wine, White Wine | A
+חֲנוּת יַיִן. | Chanut yayin. | A wine shop. | a narrow wine shop with wooden shelves
+עוֹמֶר לֹא יוֹדֵעַ. | Omer lo yode'a. | Omer doesn't know. | a man staring at a wall of bottles, lost
+יַיִן אָדֹם? | Yayin adom? | Red wine? | his hand on a red bottle
+יַיִן לָבָן? | Yayin lavan? | White wine? | his other hand on a white bottle
+הַמּוֹכֶרֶת בָּאָה. | Ha-mocheret ba'ah. | The saleswoman comes. | a woman in an apron approaching with a smile
+"מָה אוֹכְלִים?" | "Mah ochlim?" | "What are you eating?" | the saleswoman with a questioning gesture
+"דָּגִים." | "Dagim." | "Fish." | a thought bubble of grilled fish with lemon
+"אָז לָבָן." | "Az lavan." | "Then white." | the saleswoman handing him a chilled bottle
+"וְהִיא אוֹהֶבֶת אָדֹם." | "Ve-hi ohevet adom." | "And she likes red." | the man hesitating, picturing a woman holding a red glass
+"אָז גַּם אָדֹם." | "Az gam adom." | "Then red too." | the saleswoman adding a second bottle, winking
+עוֹמֶר קוֹנֶה שְׁנַיִם. | Omer koneh shnayim. | Omer buys two. | two bottles wrapped in paper
+עֶרֶב טוֹב. | Erev tov. | A good evening. | a candlelit table, two glasses, one red, one white
+
+## book22 | בַּבַּנְק | Ba-Bank | At the Bank | A
+הַבַּנְק. | Ha-bank. | The bank. | a bank branch with glass doors and a ticket machine
+שִׁירָה לוֹקַחַת מִסְפָּר. | Shira lokachat mispar. | Shira takes a number. | a hand pulling a paper ticket: 87
+מִסְפָּר שְׁמוֹנִים וָשֶׁבַע. | Mispar shmonim va-sheva. | Number eighty-seven. | the ticket in her hand
+עַכְשָׁו: עֶשְׂרִים. | Achshav: esrim. | Now: twenty. | the display board showing 20
+שִׁירָה יוֹשֶׁבֶת. | Shira yoshevet. | Shira sits. | rows of chairs, people waiting, a child drawing
+שִׁירָה קוֹרֵאת. | Shira koret. | Shira reads. | the woman reading a paperback
+שִׁירָה יְשֵׁנָה. | Shira yeshenah. | Shira sleeps. | her head tilted, book on her lap
+"שְׁמוֹנִים וָשֶׁבַע!" | "Shmonim va-sheva!" | "Eighty-seven!" | the board flashing 87, a clerk calling out
+שִׁירָה קָמָה מַהֵר. | Shira kamah maher. | Shira gets up fast. | the woman jolting awake, book falling
+"שָׁלוֹם, אֲנִי רוֹצָה..." | "Shalom, ani rotzah..." | "Hello, I want..." | the woman at the counter, the clerk smiling
+"סְלִיחָה, הַמַּחְשֵׁב לֹא עוֹבֵד." | "Slichah, ha-machshev lo oved." | "Sorry, the computer isn't working." | the clerk pointing at a frozen screen
+שִׁירָה לוֹקַחַת מִסְפָּר. | Shira lokachat mispar. | Shira takes a number. | the woman pulling a new ticket, deadpan
+
+## book23 | יָם בַּבֹּקֶר | Yam Ba-Boker | Sea in the Morning | A
+הַיָּם. | Ha-yam. | The sea. | a wide calm sea at first light
+אֵין אֲנָשִׁים. | Ein anashim. | There are no people. | an empty beach, footprints only
+יֵשׁ אִישׁ אֶחָד. | Yesh ish echad. | There is one man. | an older man in a swim cap walking to the water
+הוּא שׂוֹחֶה כָּל יוֹם. | Hu socheh kol yom. | He swims every day. | the man wading in, calm
+חֹרֶף, קַיִץ. | Choref, kayitz. | Winter, summer. | split frame: grey waves and bright sun, the same man
+הַמַּיִם קָרִים. | Ha-mayim karim. | The water is cold. | his face as the water reaches his chest
+הוּא שׂוֹחֶה. | Hu socheh. | He swims. | steady strokes, far out
+הוּא רוֹאֶה דָּג. | Hu ro'eh dag. | He sees a fish. | a silver fish beneath the surface
+הוּא רוֹאֶה אֶת הָעִיר. | Hu ro'eh et ha-ir. | He sees the city. | the skyline from the water, tiny and gold
+הוּא יוֹצֵא. | Hu yotzeh. | He comes out. | the man walking out, dripping, towel waiting
+קָפֶה שָׁחֹר. | Kafeh shachor. | Black coffee. | a thermos cup on the sand
+יוֹם טוֹב מַתְחִיל. | Yom tov matchil. | A good day begins. | the man sitting on the sand facing the sun
+
+## book24 | עָיֵף | Ayef | Tired | A
+אֵיתָן עָיֵף. | Eitan ayef. | Eitan is tired. | a man slumped at an office desk, late afternoon
+עָיֵף מְאוֹד. | Ayef me'od. | Very tired. | his head on the keyboard, letters filling the screen
+הוּא שׁוֹתֶה קָפֶה. | Hu shoteh kafeh. | He drinks coffee. | a third empty cup joining two others
+עֲדַיִן עָיֵף. | Adayin ayef. | Still tired. | yawning at the screen
+הוּא הוֹלֵךְ הַבַּיְתָה. | Hu holech ha-baitah. | He goes home. | the man on a bus with his eyes closed
+הוּא אוֹכֵל. | Hu ochel. | He eats. | eating cereal standing at the counter
+הוּא רוֹאֶה טֶלֶוִיזְיָה. | Hu ro'eh televizyah. | He watches television. | the sofa, the glow, his eyes half shut
+הוּא יָשֵׁן עַל הַסַּפָּה. | Hu yashen al ha-sapah. | He sleeps on the couch. | asleep in his work clothes, remote on his chest
+הַטֶּלֶפוֹן מְצַלְצֵל. | Ha-telefon metzaltzel. | The phone rings. | the phone buzzing on the floor
+"אֵיתָן, בָּא לָרוּץ?" | "Eitan, ba larutz?" | "Eitan, want to run?" | a friend in running gear on a video call
+"לֹא. אֲנִי יָשֵׁן." | "Lo. Ani yashen." | "No. I'm sleeping." | the man answering with eyes closed
+לַיְלָה טוֹב, אֵיתָן. | Lailah tov, Eitan. | Good night, Eitan. | the man asleep, the TV still on, the cat on his feet
+
+## book25 | הַפְּגִישָׁה | Ha-Pgishah | The Interview | B
+לְדָנָה יֵשׁ פְּגִישָׁה. | Le-Dana yesh pgishah. | Dana has a meeting. | a woman in a blazer checking herself in a hallway mirror
+פְּגִישַׁת עֲבוֹדָה. | Pgishat avodah. | A job interview. | a glass office tower, she looks up at it
+הִיא קְצָת לְחוּצָה. | Hi ktzat lechutzah. | She is a bit nervous. | her hand smoothing her jacket, a deep breath
+הִיא נִכְנֶסֶת. | Hi nichneset. | She goes in. | the elevator doors opening on a bright open office
+"שָׁלוֹם, אֲנִי דָּנָה." | "Shalom, ani Dana." | "Hello, I'm Dana." | a firm handshake with a woman in her fifties
+"שָׁלוֹם, אֲנִי נוּרִית. שְׁבִי." | "Shalom, ani Nurit. Shvi." | "Hello, I'm Nurit. Sit." | the interviewer gesturing to a chair
+"מָה אַתְּ עוֹשָׂה?" | "Mah at osah?" | "What do you do?" | the interviewer with a notepad
+"אֲנִי מְעַצֶּבֶת." | "Ani me'atzevet." | "I'm a designer." | the woman opening a tablet of designs
+"יָפֶה מְאוֹד." | "Yafeh me'od." | "Very nice." | the interviewer nodding at the screen
+"לָמָּה פֹּה?" | "Lamah poh?" | "Why here?" | the interviewer leaning forward
+"כִּי אֲנִי אוֹהֶבֶת אֶת הָעֲבוֹדָה שֶׁלָּכֶם." | "Ki ani ohevet et ha-avodah shelachem." | "Because I love your work." | the woman speaking with warmth, pointing at a poster on the wall
+הַפְּגִישָׁה טוֹבָה. | Ha-pgishah tovah. | The meeting goes well. | the two women laughing, coffee cups
+
+## book26 | הַשָּׁכֵן שֶׁלִּי | Ha-Shachen Sheli | My Neighbour | B
+יֵשׁ לִי שָׁכֵן חָדָשׁ. | Yesh li shachen chadash. | I have a new neighbour. | moving boxes outside the apartment next door
+אֲנִי לֹא מַכִּיר אוֹתוֹ. | Ani lo makir oto. | I don't know him. | the narrator peeking through a door crack
+הוּא שׁוֹמֵעַ מוּסִיקָה. | Hu shome'a musikah. | He listens to music. | music notes drifting through a wall
+מוּסִיקָה חֲזָקָה. | Musikah chazakah. | Loud music. | a picture frame rattling
+בַּלַּיְלָה. | Ba-lailah. | At night. | the narrator in bed with a pillow over his head, 1 a.m.
+אֲנִי כּוֹעֵס. | Ani ko'es. | I am angry. | the narrator stomping to the door
+אֲנִי דּוֹפֵק בַּדֶּלֶת. | Ani dofek ba-delet. | I knock on the door. | a fist on the neighbour's door
+הַשָּׁכֵן פּוֹתֵחַ. | Ha-shachen pote'ach. | The neighbour opens. | a young man in an apron, flour on his face
+"סְלִיחָה! אֲנִי אוֹפֶה." | "Slichah! Ani ofeh." | "Sorry! I'm baking." | a kitchen behind him full of trays of bread
+"בַּלַּיְלָה?" | "Ba-lailah?" | "At night?" | the narrator confused
+"אֲנִי אוֹפֶה. זֹאת הָעֲבוֹדָה שֶׁלִּי." | "Ani ofeh. Zot ha-avodah sheli." | "I'm a baker. It's my job." | the baker shrugging, holding out a warm roll
+עַכְשָׁו יֵשׁ לִי לֶחֶם כָּל בֹּקֶר. | Achshav yesh li lechem kol boker. | Now I have bread every morning. | a paper bag of bread hanging on the narrator's door handle
+
+## book27 | פָלָאפֶל אוֹ שַׁוַּארְמָה? | Falafel O Shawarma? | Falafel or Shawarma? | B
+צָהֳרַיִם. | Tzohorayim. | Noon. | a busy lunch street, two food stands side by side
+רוֹנִי רָעֵב. | Roni ra'ev. | Roni is hungry. | a man clutching his stomach dramatically
+פָלָאפֶל אוֹ שַׁוַּארְמָה? | Falafel o shawarma? | Falafel or shawarma? | the two signs, one green, one red
+הַפָלָאפֶל זוֹל. | Ha-falafel zol. | The falafel is cheap. | a price sign, a smiling vendor frying balls
+הַשַּׁוַּארְמָה טְעִימָה. | Ha-shawarma te'imah. | The shawarma is tasty. | meat turning on a spit, a knife shaving slices
+רוֹנִי חוֹשֵׁב. | Roni choshev. | Roni thinks. | the man frozen between the two stands, people passing
+הוּא חוֹשֵׁב עוֹד. | Hu choshev od. | He thinks more. | a queue forming behind him, annoyed faces
+"נוּ, אַחִי!" | "Nu, achi!" | "Come on, man!" | a man behind him throwing up his hands
+"פָלָאפֶל. לֹא, שַׁוַּארְמָה." | "Falafel. Lo, shawarma." | "Falafel. No, shawarma." | the man pointing left, then right
+הַמּוֹכֵר צוֹחֵק. | Ha-mocher tzochek. | The vendor laughs. | the vendor leaning on the counter, amused
+"חֲצִי חֲצִי?" | "Chatzi chatzi?" | "Half and half?" | the vendor holding a pita with both fillings
+רוֹנִי שָׂמֵחַ. כֻּלָּם שְׂמֵחִים. | Roni sameach. Kulam smechim. | Roni is happy. Everyone is happy. | the man biting the pita, the queue finally moving
+
+## book28 | הַמָּטוֹס | Ha-Matos | The Plane | B
+שְׂדֵה הַתְּעוּפָה. | Sdeh ha-te'ufah. | The airport. | a busy terminal, departures board
+תָּמָר נוֹסַעַת לְלוֹנְדוֹן. | Tamar nosa'at le-London. | Tamar is flying to London. | a woman with a suitcase and passport
+הַתִּיק כָּבֵד. | Ha-tik kaved. | The bag is heavy. | her suitcase on the scale, the number too high
+"סְלִיחָה, יוֹתֵר מִדַּי." | "Slichah, yoter midai." | "Sorry, too much." | the check-in agent pointing at the scale
+תָּמָר פּוֹתַחַת אֶת הַתִּיק. | Tamar potachat et ha-tik. | Tamar opens the bag. | the suitcase open on the floor, clothes everywhere
+שְׁלוֹשָׁה סְפָרִים. | Shloshah sfarim. | Three books. | three thick books held up
+נַעֲלַיִם. עוֹד נַעֲלַיִם. | Na'alayim. Od na'alayim. | Shoes. More shoes. | four pairs of shoes in a row
+הִיא לוֹבֶשֶׁת מְעִיל. | Hi loveshet me'il. | She puts on a coat. | the woman now wearing a coat, scarf and hat indoors
+וְעוֹד מְעִיל. | Ve-od me'il. | And another coat. | a second coat over the first, waddling
+עַכְשָׁו בְּסֵדֶר! | Achshav beseder! | Now it's fine! | the scale reading just under the limit, agent amused
+תָּמָר עוֹלָה לַמָּטוֹס. | Tamar olah la-matos. | Tamar boards the plane. | the woman in two coats squeezing down the aisle
+חַם לָהּ. | Cham lah. | She is hot. | sweating in her seat, fanning herself with the safety card
+
+## book29 | פְּגִישָׁה רִאשׁוֹנָה | Pgishah Rishonah | First Date | B
+לְעוֹמֶר יֵשׁ פְּגִישָׁה. | Le-Omer yesh pgishah. | Omer has a date. | a man checking his phone outside a café at dusk
+פְּגִישָׁה רִאשׁוֹנָה. | Pgishah rishonah. | A first date. | a chat on his phone: see you at 8
+הוּא לָבַשׁ חֻלְצָה חֲדָשָׁה. | Hu lavash chultzah chadashah. | He wore a new shirt. | a crisp blue shirt, tag still on the sleeve
+הִיא בָּאָה. | Hi ba'ah. | She arrives. | a woman with a bicycle helmet under her arm, smiling
+"שָׁלוֹם, אֲנִי מָאיָה." | "Shalom, ani Maya." | "Hi, I'm Maya." | a handshake that becomes a half-hug, awkward and warm
+הֵם יוֹשְׁבִים. | Hem yoshvim. | They sit. | a small table, two menus
+הוּא לֹא יוֹדֵעַ מָה לוֹמַר. | Hu lo yode'a mah lomar. | He doesn't know what to say. | the man opening his mouth, nothing coming out
+הִיא רוֹאָה אֶת הַתָּג. | Hi ro'ah et ha-tag. | She sees the tag. | her eyes on the price tag on his sleeve
+הִיא צוֹחֶקֶת. | Hi tzocheket. | She laughs. | the woman laughing, hand over her mouth
+הוּא צוֹחֵק גַּם. | Hu tzochek gam. | He laughs too. | the man red-faced, pulling off the tag
+עַכְשָׁו קַל. | Achshav kal. | Now it is easy. | the two of them talking with their hands, plates arriving
+פְּגִישָׁה שְׁנִיָּה? כֵּן. | Pgishah shniyah? Ken. | A second date? Yes. | the two walking off, the bicycle between them
+
+## book30 | חֲדַר כֹּשֶׁר | Chadar Kosher | The Gym | B
+חֲדַר כֹּשֶׁר. | Chadar kosher. | The gym. | a gym with mirrors and machines, early morning
+יוֹסִי בָּא בַּפַּעַם הָרִאשׁוֹנָה. | Yossi ba ba-pa'am ha-rishonah. | Yossi comes for the first time. | a man in brand new sneakers looking lost
+הַכֹּל חָדָשׁ. | Ha-kol chadash. | Everything is new. | shiny machines, a confusing panel of buttons
+הוּא עוֹלֶה עַל הַמַּכְשִׁיר. | Hu oleh al ha-machshir. | He gets on the machine. | climbing onto a treadmill
+הַמַּכְשִׁיר מָהִיר. | Ha-machshir mahir. | The machine is fast. | the belt racing, his legs a blur
+מָהִיר מְאוֹד! | Mahir me'od! | Very fast! | the man clinging to the handles
+הוּא לוֹחֵץ עַל כַּפְתּוֹר. | Hu lochetz al kaftor. | He presses a button. | a finger jabbing a red button
+הַמַּכְשִׁיר עוֹצֵר. | Ha-machshir otzer. | The machine stops. | the man lurching forward, then still
+אִשָּׁה לְיָדוֹ מְחַיֶּכֶת. | Ishah le-yado mechayechet. | A woman next to him smiles. | a fit older woman on the next treadmill, amused
+"יוֹם רִאשׁוֹן?" | "Yom rishon?" | "First day?" | her raised eyebrow
+"כֵּן." | "Ken." | "Yes." | the man wiping his forehead, sheepish
+"גַּם אֲנִי. לִפְנֵי עֶשְׂרִים שָׁנָה." | "Gam ani. Lifnei esrim shanah." | "Me too. Twenty years ago." | the woman winking, running easily
+
+## book31 | הַמָּרָק שֶׁל סָבְתָא | Ha-Marak Shel Savta | Grandma's Soup | B
+סָבְתָא מְבַשֶּׁלֶת מָרָק. | Savta mevashelet marak. | Grandma cooks soup. | a grandmother at a stove, a huge pot
+כָּל יוֹם שִׁישִׁי. | Kol yom shishi. | Every Friday. | a calendar with every Friday circled
+נָדָב שׁוֹאֵל: "מָה בִּפְנִים?" | Nadav sho'el: "Mah bifnim?" | Nadav asks: "What's inside?" | a grown grandson leaning over the pot
+"עוֹף." | "Of." | "Chicken." | chicken going into the pot
+"גֶּזֶר." | "Gezer." | "Carrot." | orange carrot coins
+"בָּצָל." | "Batzal." | "Onion." | an onion being chopped, grandma not crying
+"וּמָה עוֹד?" | "U-mah od?" | "And what else?" | the grandson sniffing, puzzled
+סָבְתָא לֹא אוֹמֶרֶת. | Savta lo omeret. | Grandma doesn't say. | the grandmother with a sly smile, finger on her lips
+"זֶה סוֹד." | "Zeh sod." | "It's a secret." | a small unlabelled jar in her hand
+נָדָב טוֹעֵם. | Nadav to'em. | Nadav tastes. | the grandson with a spoon, eyes closing
+"סָבְתָא, זֶה הַמָּרָק הֲכִי טוֹב." | "Savta, zeh ha-marak hachi tov." | "Grandma, this is the best soup." | the grandson hugging her from the side
+"אֲנִי יוֹדַעַת." | "Ani yoda'at." | "I know." | the grandmother ladling a bowl, proud
+
+## book32 | אֲבוּדָה בִּירוּשָׁלַיִם | Avudah Bi-Yerushalayim | Lost in Jerusalem | B
+יְרוּשָׁלַיִם. הָעִיר הָעַתִּיקָה. | Yerushalayim. Ha-ir ha-atikah. | Jerusalem. The Old City. | narrow stone alleys, arches, golden light
+לֵאָה הוֹלֶכֶת. | Leah holechet. | Leah walks. | a woman with a paper map in a crowded alley
+יָמִינָה. שְׂמֹאלָה. | Yeminah. Smolah. | Right. Left. | the alley forking, signs in three languages
+שׁוּב יָמִינָה. | Shuv yeminah. | Right again. | the same spice shop appearing twice
+הִיא אֲבוּדָה. | Hi avudah. | She is lost. | the woman turning the map upside down
+הִיא שׁוֹאֶלֶת אִישׁ. | Hi sho'elet ish. | She asks a man. | a shopkeeper in a doorway with tea
+"אֵיפֹה הַכֹּתֶל?" | "Eifoh ha-Kotel?" | "Where is the Western Wall?" | the woman pointing at the map
+"יָשָׁר, יָשָׁר, וְאָז יָמִינָה." | "Yashar, yashar, ve-az yeminah." | "Straight, straight, then right." | the man gesturing down the alley
+הִיא הוֹלֶכֶת יָשָׁר. | Hi holechet yashar. | She walks straight. | down a long stepped alley
+מַדְרֵגוֹת. הַרְבֵּה מַדְרֵגוֹת. | Madregot. Harbeh madregot. | Stairs. Many stairs. | a steep stone staircase
+וְאָז: אוֹר. | Ve-az: or. | And then: light. | the alley opening onto a wide bright plaza
+הִיא לֹא אֲבוּדָה. | Hi lo avudah. | She is not lost. | the woman standing still before the great wall, people praying
+
+## book33 | הַטֶּלֶפוֹן הֶחָדָשׁ | Ha-Telefon He-Chadash | The New Phone | B
+לְדָוִד יֵשׁ טֶלֶפוֹן חָדָשׁ. | Le-David yesh telefon chadash. | David has a new phone. | a man opening a sleek box
+הַטֶּלֶפוֹן יָפֶה. | Ha-telefon yafeh. | The phone is beautiful. | the glossy phone held up to the light
+הַטֶּלֶפוֹן חָכָם. | Ha-telefon chacham. | The phone is smart. | the screen lit with dozens of apps
+דָּוִד לֹא. | David lo. | David is not. | the man staring at it, finger hovering
+"אֵיפֹה הַכַּפְתּוֹר?" | "Eifoh ha-kaftor?" | "Where is the button?" | turning the phone over looking for a button
+אֵין כַּפְתּוֹר. | Ein kaftor. | There is no button. | a smooth glass slab
+הַטֶּלֶפוֹן מְדַבֵּר. | Ha-telefon medaber. | The phone talks. | a voice assistant waveform on the screen
+"שָׁלוֹם, דָּוִד." | "Shalom, David." | "Hello, David." | the man startled, holding it at arm's length
+"מִי זֶה?!" | "Mi zeh?!" | "Who is that?!" | the man looking around the room
+הַנֶּכְדָּה בָּאָה. | Ha-nechdah ba'ah. | The granddaughter comes. | a teenager rolling her eyes affectionately
+"סַבָּא, תֵּן לִי." | "Saba, ten li." | "Grandpa, give it to me." | her hand out
+שְׁתֵּי דַּקּוֹת. הַכֹּל עוֹבֵד. | Shtei dakot. Ha-kol oved. | Two minutes. Everything works. | the grandfather video-calling his sister, delighted
+
+## book34 | מִשְׁמֶרֶת לַיְלָה | Mishmeret Lailah | Night Shift | B
+שְׁמוֹנֶה בָּעֶרֶב. | Shmoneh ba-erev. | Eight in the evening. | a hospital entrance at night, lights on
+יָעֵל מַתְחִילָה לַעֲבֹד. | Yael matchilah la'avod. | Yael starts work. | a nurse pulling on her badge, coffee in hand
+הִיא אָחוֹת. | Hi achot. | She is a nurse. | the nurse at a station with monitors
+הַלַּיְלָה שָׁקֵט. | Ha-lailah shaket. | The night is quiet. | a dim corridor, soft lights
+וְאָז: לֹא. | Ve-az: lo. | And then: not. | three call lights blinking at once
+חֶדֶר שָׁלוֹשׁ. חֶדֶר שֶׁבַע. | Cheder shalosh. Cheder sheva. | Room three. Room seven. | the nurse hurrying between doors
+אִישׁ זָקֵן לֹא יָשֵׁן. | Ish zaken lo yashen. | An old man can't sleep. | an elderly patient sitting up in bed
+"סַפְּרִי לִי מַשֶּׁהוּ." | "Sapri li mashehu." | "Tell me something." | the man asking gently
+יָעֵל מְסַפֶּרֶת עַל הַיָּם. | Yael mesaperet al ha-yam. | Yael tells him about the sea. | the nurse on the edge of the bed, hands shaping waves
+הוּא יָשֵׁן. | Hu yashen. | He sleeps. | the man asleep, peaceful
+שֵׁשׁ בַּבֹּקֶר. הַשֶּׁמֶשׁ. | Shesh ba-boker. Ha-shemesh. | Six in the morning. The sun. | sunlight through the ward windows
+יָעֵל הוֹלֶכֶת הַבַּיְתָה לִישֹׁן. | Yael holechet ha-baitah lishon. | Yael goes home to sleep. | the nurse walking out as the city wakes, yawning
+
+## book35 | הַגַּן עַל הַגַּג | Ha-Gan Al Ha-Gag | The Garden on the Roof | B
+בִּנְיָן יָשָׁן בְּתֵל אָבִיב. | Binyan yashan be-Tel Aviv. | An old building in Tel Aviv. | a peeling four-storey building, laundry on balconies
+עַל הַגַּג: כְּלוּם. | Al ha-gag: klum. | On the roof: nothing. | a bare concrete roof, water tanks, pigeons
+שִׁירָה רוֹצָה גַּן. | Shira rotzah gan. | Shira wants a garden. | a woman on the roof, hands on hips, imagining
+הִיא מְבִיאָה אֲדָמָה. | Hi mevi'ah adamah. | She brings soil. | carrying heavy bags up the stairs
+הִיא מְבִיאָה עֲצִיצִים. | Hi mevi'ah atzitzim. | She brings pots. | a row of terracotta pots
+הִיא שׁוֹתֶלֶת. | Hi shotelet. | She plants. | hands in the dirt, seedlings
+עַגְבָנִיָּה. נַעְנַע. בָּזִילִיקוּם. | Agvaniyah. Na'na. Bazilikum. | Tomato. Mint. Basil. | three labelled pots
+הַשְּׁכֵנִים רוֹאִים. | Ha-shchenim ro'im. | The neighbours see. | heads popping up from the stairwell
+"אֶפְשָׁר לַעֲזֹר?" | "Efshar la'azor?" | "Can we help?" | an old man with a watering can, a kid with a shovel
+עַכְשָׁו כֻּלָּם עַל הַגַּג. | Achshav kulam al ha-gag. | Now everyone is on the roof. | neighbours planting together, a radio playing
+קַיִץ. עַגְבָנִיּוֹת אֲדֻמּוֹת. | Kayitz. Agvaniyot adumot. | Summer. Red tomatoes. | ripe tomatoes, the roof green
+הַגַּג הוּא גַּן. | Ha-gag hu gan. | The roof is a garden. | the whole roof lush at sunset, neighbours eating together
+
+## book36 | רוֹפְאָה, אֲנִי בְּסֵדֶר | Rof'ah, Ani Beseder | Doctor, I'm Fine | B
+אֵיתָן לֹא מַרְגִּישׁ טוֹב. | Eitan lo margish tov. | Eitan doesn't feel well. | a man on the couch under a blanket, tissues
+"אֲנִי בְּסֵדֶר," הוּא אוֹמֵר. | "Ani beseder," hu omer. | "I'm fine," he says. | the man waving off his partner, sneezing
+הוּא לֹא בְּסֵדֶר. | Hu lo beseder. | He is not fine. | red nose, thermometer in mouth
+הוּא הוֹלֵךְ לָרוֹפְאָה. | Hu holech la-rof'ah. | He goes to the doctor. | a clinic waiting room, he's slumped in a chair
+"מָה כּוֹאֵב?" | "Mah ko'ev?" | "What hurts?" | the doctor, a woman with a stethoscope
+"כְּלוּם. אֲנִי בְּסֵדֶר." | "Klum. Ani beseder." | "Nothing. I'm fine." | the man insisting, then coughing
+הָרוֹפְאָה מִסְתַּכֶּלֶת. | Ha-rof'ah mistakelet. | The doctor looks. | the doctor with a flashlight, checking his throat
+"אַתָּה לֹא בְּסֵדֶר." | "Atah lo beseder." | "You are not fine." | the doctor's flat expression
+"יֵשׁ לְךָ שַׁפַּעַת." | "Yesh lecha shapa'at." | "You have the flu." | a prescription pad
+"מִטָּה. מָרָק. תֵּה." | "Mitah. Marak. Teh." | "Bed. Soup. Tea." | three icons: bed, soup, tea
+אֵיתָן בַּבַּיִת, בַּמִּטָּה. | Eitan ba-bayit, ba-mitah. | Eitan is at home, in bed. | the man tucked in with soup and tea, partner smug
+"בְּסֵדֶר. אֲנִי לֹא בְּסֵדֶר." | "Beseder. Ani lo beseder." | "Fine. I'm not fine." | the man admitting it, half asleep
+
+## book37 | יוֹם שִׁישִׁי | Yom Shishi | Friday | B
+יוֹם שִׁישִׁי בַּבֹּקֶר. | Yom shishi ba-boker. | Friday morning. | a sunny street, people with bags and flowers
+הָעִיר מְהִירָה. | Ha-ir mehirah. | The city is fast. | shoppers rushing, a market in full swing
+כֻּלָּם קוֹנִים. | Kulam konim. | Everyone is buying. | overflowing bags, a man with a cake box
+כֻּלָּם מְבַשְּׁלִים. | Kulam mevashlim. | Everyone is cooking. | open windows, steam, pots in every kitchen
+נֹעָה לֹא. | Noa lo. | Not Noa. | a woman in a hammock reading
+נֹעָה שׁוֹתָה קָפֶה בַּמִּרְפֶּסֶת. | Noa shotah kafeh ba-mirpeset. | Noa drinks coffee on the balcony. | the woman watching the busy street from above
+אַחַר הַצָּהֳרַיִם. | Achar ha-tzohorayim. | Afternoon. | the sun lower, the street emptying
+הָעִיר שְׁקֵטָה. | Ha-ir shketah. | The city is quiet. | shuttered shops, a cat on a warm car
+נֹעָה הוֹלֶכֶת לַיָּם. | Noa holechet la-yam. | Noa goes to the sea. | the woman with a towel walking down to the beach
+הַשֶּׁמֶשׁ יוֹרֶדֶת. | Ha-shemesh yoredet. | The sun sets. | the sun touching the sea
+הַחֲבֵרִים בָּאִים. | Ha-chaverim ba'im. | The friends come. | friends arriving on the sand with a guitar and food
+שַׁבָּת שָׁלוֹם, תֵּל אָבִיב. | Shabat shalom, Tel Aviv. | Shabbat shalom, Tel Aviv. | the group on the beach at dusk, candles in the sand
+
+## book38 | לֶחֶם וּמֶלַח | Lechem U-Melach | Bread and Salt | B
+דִּירָה חֲדָשָׁה. | Dirah chadashah. | A new apartment. | an empty apartment, boxes, afternoon light
+תָּמָר וְעוֹמֶר עוֹבְרִים. | Tamar ve-Omer ovrim. | Tamar and Omer move in. | a couple carrying a mattress through a door
+הַרְבֵּה קוּפְסָאוֹת. | Harbeh kufsa'ot. | Many boxes. | a tower of boxes labelled kitchen, books, more books
+אֵין כִּסְאוֹת. | Ein kis'ot. | No chairs. | the couple sitting on boxes eating pizza
+אֵין אוֹר בַּמִּטְבָּח. | Ein or ba-mitbach. | No light in the kitchen. | a bare wire where a lamp should be
+יֵשׁ גֶּשֶׁם בִּפְנִים? | Yesh geshem bifnim? | Is there rain inside? | a drip from the ceiling into a pot
+"אוֹי." | "Oy." | "Oh no." | the two staring up at the stain
+דְּפִיקָה בַּדֶּלֶת. | Dfikah ba-delet. | A knock at the door. | the door, knuckles
+הַשְּׁכֵנָה. לֶחֶם וּמֶלַח. | Ha-shchenah. Lechem u-melach. | The neighbour. Bread and salt. | an older woman holding a loaf and a small dish of salt
+"בְּרוּכִים הַבָּאִים." | "Bruchim ha-ba'im." | "Welcome." | the neighbour smiling warmly
+"וְהַגֶּשֶׁם? זֶה תָּמִיד. יֵשׁ לִי אִינְסְטָלָטוֹר." | "Ve-ha-geshem? Zeh tamid. Yesh li instalator." | "And the leak? It always does that. I have a plumber." | the neighbour glancing at the drip, waving a phone number
+הַבַּיִת הֶחָדָשׁ מַתְחִיל. | Ha-bayit he-chadash matchil. | The new home begins. | the three eating bread with salt on the boxes, laughing
+
+## book39 | פְּקָק | Pkak | Traffic Jam | B
+שֶׁבַע וָחֵצִי. כְּבִישׁ אַיָּלוֹן. | Sheva va-chetzi. Kvish Ayalon. | Seven thirty. The Ayalon highway. | a highway packed with cars, towers behind
+פְּקָק. | Pkak. | Traffic jam. | bumper to bumper, red tail lights
+יוֹסִי בָּאוֹטוֹ. | Yossi ba-oto. | Yossi is in the car. | a man gripping the wheel, radio on
+הָאוֹטוֹ לֹא זָז. | Ha-oto lo zaz. | The car doesn't move. | the speedometer at zero
+הוּא שׁוֹמֵעַ חֲדָשׁוֹת. | Hu shome'a chadashot. | He listens to the news. | the radio: traffic report
+"פְּקָק בְּאַיָּלוֹן," אוֹמֵר הָרַדְיוֹ. | "Pkak be-Ayalon," omer ha-radyo. | "Traffic jam on the Ayalon," says the radio. | the man giving the radio a look
+"תּוֹדָה," אוֹמֵר יוֹסִי. | "Todah," omer Yossi. | "Thanks," says Yossi. | deadpan
+הוּא רוֹאֶה אִישׁ בָּאוֹטוֹ לְיָדוֹ. | Hu ro'eh ish ba-oto le-yado. | He sees a man in the car next to him. | the neighbouring driver, also stuck
+הָאִישׁ שָׁר. | Ha-ish shar. | The man is singing. | the other driver belting out a song, eyes closed
+יוֹסִי צוֹחֵק. | Yossi tzochek. | Yossi laughs. | the man laughing despite himself
+גַּם יוֹסִי שָׁר. | Gam Yossi shar. | Yossi sings too. | both drivers singing in their cars, windows down
+הַפְּקָק אָרֹךְ. הַשִּׁיר יָפֶה. | Ha-pkak aroch. Ha-shir yafeh. | The jam is long. The song is beautiful. | a whole lane of singing drivers at sunrise
+
+## book40 | הַמִּכְתָּב | Ha-Michtav | The Letter | B
+יֵשׁ מִכְתָּב בַּתֵּבָה. | Yesh michtav ba-tevah. | There is a letter in the mailbox. | a hand pulling an envelope from a dented mailbox
+מִכְתָּב אֲמִתִּי. עַל נְיָר. | Michtav amiti. Al niyar. | A real letter. On paper. | a cream envelope with a handwritten address
+לֵאָה מִסְתַּכֶּלֶת. | Leah mistakelet. | Leah looks. | a woman turning it over, no return address
+מִי כּוֹתֵב מִכְתָּבִים הַיּוֹם? | Mi kotev michtavim ha-yom? | Who writes letters today? | her puzzled face
+הִיא פּוֹתַחַת. | Hi potachat. | She opens it. | tearing the envelope carefully
+כְּתַב יָד יָפֶה. | Ktav yad yafeh. | Beautiful handwriting. | looping blue ink on the page
+"לֵאָה שֶׁלִּי," | "Leah sheli," | "My Leah," | the first line of the letter
+הִיא קוֹרֵאת לְאַט. | Hi koret le'at. | She reads slowly. | the woman sitting down on the stairs
+הַמִּכְתָּב מֵהַסָּבָא שֶׁלָּהּ. | Ha-michtav me-ha-saba shelah. | The letter is from her grandfather. | a photo of an old man tucked in the fold
+הוּא כָּתַב לִפְנֵי שָׁנָה. | Hu katav lifnei shanah. | He wrote it a year ago. | a date at the top, a year back
+"פִּתְחִי כְּשֶׁאַתְּ בַּת שְׁלוֹשִׁים." | "Pitchi kshe-at bat shloshim." | "Open when you are thirty." | the words on the envelope flap
+הַיּוֹם יוֹם הַהֻלֶּדֶת שֶׁלָּהּ. | Ha-yom yom ha-huledet shelah. | Today is her birthday. | the woman on the stairs, letter to her chest, eyes shining
+
+## book41 | אַרְבָּעִים | Arba'im | Forty | B
+דָּוִד בֶּן אַרְבָּעִים הַיּוֹם. | David ben arba'im ha-yom. | David is forty today. | a man looking in the mirror, finding a grey hair
+"אַרְבָּעִים," הוּא אוֹמֵר לַמַּרְאָה. | "Arba'im," hu omer la-mar'ah. | "Forty," he says to the mirror. | close on his face, raised eyebrow
+הַמַּרְאָה לֹא עוֹנָה. | Ha-mar'ah lo onah. | The mirror doesn't answer. | the mirror, the man, silence
+הוּא לֹא רוֹצֶה מְסִבָּה. | Hu lo rotzeh mesibah. | He doesn't want a party. | a text: no party please
+הוּא רוֹצֶה שֶׁקֶט. | Hu rotzeh sheket. | He wants quiet. | the man alone with a book and tea
+הוּא הוֹלֵךְ לַיָּם. | Hu holech la-yam. | He goes to the sea. | walking along an empty beach
+הוּא שׂוֹחֶה. | Hu socheh. | He swims. | floating on his back, sky above
+הוּא חוֹשֵׁב עַל הַחַיִּים. | Hu choshev al ha-chayim. | He thinks about life. | the man on the sand, chin on his knees, thoughtful
+הַחַיִּים טוֹבִים. | Ha-chayim tovim. | Life is good. | a slow smile
+הוּא חוֹזֵר הַבַּיְתָה. | Hu chozer ha-baitah. | He goes back home. | his apartment door, key turning
+"הַפְתָּעָה!" | "Hafta'ah!" | "Surprise!" | every friend and relative bursting out, balloons
+בְּסֵדֶר. גַּם מְסִבָּה. | Beseder. Gam mesibah. | Fine. A party too. | the man laughing, a cake with a 4 and a 0
+
+## book42 | נַהַג הַמּוֹנִית | Nahag Ha-Monit | The Taxi Driver | B
+מוֹנִית. לַיְלָה. | Monit. Lailah. | A taxi. Night. | a taxi at a stand under a streetlight
+הַנַּהָג: אַבְרָהָם. | Ha-nahag: Avraham. | The driver: Avraham. | an older driver with a moustache and a radio
+שִׁירָה עוֹלָה. | Shira olah. | Shira gets in. | a woman sliding into the back seat
+"לְאָן?" | "Le'an?" | "Where to?" | the driver looking in the mirror
+"לִשְׂדֵה הַתְּעוּפָה." | "Li-sdeh ha-te'ufah." | "To the airport." | a suitcase on her lap
+"טִיסָה?" | "Tisah?" | "A flight?" | the driver pulling out
+"כֵּן. אֲנִי עוֹזֶבֶת." | "Ken. Ani ozevet." | "Yes. I'm leaving." | the woman looking out at the passing city
+"לְכַמָּה זְמַן?" | "Le-kamah zman?" | "For how long?" | the driver's eyes in the mirror
+"אֲנִי לֹא יוֹדַעַת." | "Ani lo yoda'at." | "I don't know." | the woman's reflection in the window
+אַבְרָהָם שׁוֹתֵק. | Avraham shotek. | Avraham is silent. | the highway, the lights, quiet
+וְאָז: "תַּחְזְרִי. תָּמִיד חוֹזְרִים." | Ve-az: "Tachzeri. Tamid chozrim." | And then: "Come back. People always come back." | the driver speaking gently, hands on the wheel
+שִׁירָה מְחַיֶּכֶת. "אוּלַי." | Shira mechayechet. "Ulai." | Shira smiles. "Maybe." | the taxi at the terminal, the woman stepping out into the lights
+
+## book43 | לוֹמֵד עִבְרִית | Lomed Ivrit | Learning Hebrew | B
+מַארְק לוֹמֵד עִבְרִית. | Mark lomed ivrit. | Mark is learning Hebrew. | a man at a kitchen table with flashcards
+הוּא בֶּן חֲמִשִּׁים. | Hu ben chamishim. | He is fifty. | reading glasses, a determined face
+הָאוֹתִיּוֹת קָשׁוֹת. | Ha-otiyot kashot. | The letters are hard. | a page of letters, some circled, some crossed out
+מִיָּמִין לִשְׂמֹאל. | Mi-yamin li-smol. | From right to left. | his finger moving across a line, an arrow drawn above
+"בֵּית אוֹ וֵית?" | "Bet o vet?" | "Bet or vet?" | two letters side by side, one with a dot
+הוּא לֹא מֵבִין. | Hu lo mevin. | He doesn't understand. | the man rubbing his eyes
+הוּא רוֹצֶה לְהַפְסִיק. | Hu rotzeh lehafsik. | He wants to quit. | the book closed, pushed away
+הוּא שׁוֹמֵעַ שִׁיר בָּרַדְיוֹ. | Hu shome'a shir ba-radyo. | He hears a song on the radio. | a radio on the counter
+הוּא מֵבִין מִלָּה אַחַת. | Hu mevin milah achat. | He understands one word. | his head lifting, eyes wide
+"אַהֲבָה." | "Ahavah." | "Love." | the word written large on his flashcard
+הוּא פּוֹתֵחַ אֶת הַסֵּפֶר. | Hu pote'ach et ha-sefer. | He opens the book. | the book open again, pencil in hand
+עוֹד מִלָּה. וְעוֹד אַחַת. | Od milah. Ve-od achat. | Another word. And another. | the table covered with cards, the man smiling
+
+## book44 | הַקָּפֶה בַּפִּנָּה | Ha-Kafeh Ba-Pinah | The Café on the Corner | C
+בַּפִּנָּה יֵשׁ קָפֶה קָטָן. | Ba-pinah yesh kafeh katan. | On the corner there is a small café. | a tiny café with three tables, a tree beside it
+הַבְּעָלִים: אָדָם וְרִינָה. | Ha-be'alim: Adam ve-Rinah. | The owners: Adam and Rina. | a couple behind the counter, flour and espresso
+כָּל בֹּקֶר אוֹתָם אֲנָשִׁים. | Kol boker otam anashim. | Every morning the same people. | regulars at their tables: a student, a retiree, a courier
+הַסְּטוּדֶנְטִית לוֹמֶדֶת. | Ha-studentit lomedet. | The student studies. | a young woman with a laptop and three empty cups
+הַזָּקֵן קוֹרֵא עִתּוֹן. | Ha-zaken koreh iton. | The old man reads a newspaper. | an old man behind a newspaper, dog under the table
+הַשַּׁלִּיחַ שׁוֹתֶה מַהֵר. | Ha-shaliach shoteh maher. | The courier drinks fast. | a courier gulping espresso, helmet on
+יוֹם אֶחָד הַקָּפֶה סָגוּר. | Yom echad ha-kafeh sagur. | One day the café is closed. | a handwritten sign on the door, the regulars outside confused
+"מָה קָרָה?" | "Mah karah?" | "What happened?" | the three regulars looking at each other
+רִינָה חוֹלָה. אָדָם בַּבַּיִת. | Rinah cholah. Adam ba-bayit. | Rina is sick. Adam is at home. | a note taped to the glass
+הַסְּטוּדֶנְטִית פּוֹתַחַת אֶת הַדֶּלֶת. | Ha-studentit potachat et ha-delet. | The student opens the door. | the student with a spare key the owners once gave her
+הַזָּקֵן מְכִין קָפֶה. הַשַּׁלִּיחַ מֵבִיא לֶחֶם. | Ha-zaken mechin kafeh. Ha-shaliach mevi lechem. | The old man makes coffee. The courier brings bread. | the three running the café, badly and happily
+הַקָּפֶה פָּתוּחַ. | Ha-kafeh patuach. | The café is open. | the sign flipped to open, a line forming
+
+## book45 | יוֹם חֹפֶשׁ | Yom Chofesh | A Day Off | C
+יוֹם חֹפֶשׁ. בְּלִי עֲבוֹדָה. | Yom chofesh. Bli avodah. | A day off. No work. | a phone face down, an unmade bed, sunlight
+נָדָב לֹא יוֹדֵעַ מָה לַעֲשׂוֹת. | Nadav lo yode'a mah la'asot. | Nadav doesn't know what to do. | a man standing in his kitchen in pajamas
+הוּא בּוֹדֵק אֶת הַמֵּייל. | Hu bodek et ha-meil. | He checks his email. | thumb hovering over the mail icon
+לֹא! יוֹם חֹפֶשׁ. | Lo! Yom chofesh. | No! A day off. | the phone going into a drawer
+הוּא הוֹלֵךְ בָּרְחוֹב בְּלִי תָּכְנִית. | Hu holech ba-rechov bli tochnit. | He walks the street with no plan. | wandering with hands in pockets, looking up at balconies
+הוּא מוֹצֵא חֲנוּת סְפָרִים. | Hu motzeh chanut sfarim. | He finds a bookshop. | a cluttered secondhand bookshop
+הוּא קוֹנֶה סֵפֶר יָשָׁן. | Hu koneh sefer yashan. | He buys an old book. | a worn hardcover with a torn jacket
+הוּא יוֹשֵׁב בַּגַּן. | Hu yoshev ba-gan. | He sits in the park. | a bench under a ficus tree
+הוּא קוֹרֵא. הַזְּמַן עוֹבֵר. | Hu koreh. Ha-zman over. | He reads. Time passes. | the shadow of the tree moving across the bench
+יֶלֶד שׁוֹאֵל: "מָה אַתָּה קוֹרֵא?" | Yeled sho'el: "Mah atah koreh?" | A child asks: "What are you reading?" | a small boy with a ball
+"סֵפֶר עַל אִישׁ שֶׁאֵין לוֹ תָּכְנִית." | "Sefer al ish she-ein lo tochnit." | "A book about a man with no plan." | the man showing the cover
+"נִשְׁמָע טוֹב," אוֹמֵר הַיֶּלֶד. | "Nishma tov," omer ha-yeled. | "Sounds good," says the boy. | the boy running off, the man smiling at the book
+
+## book46 | הַמִּשְׂרָד | Ha-Misrad | The Office | C
+מִשְׂרָד קָטָן בְּקוֹמָה שֵׁשׁ. | Misrad katan be-komah shesh. | A small office on the sixth floor. | an open-plan office with five desks and a whiteboard
+חֲמִשָּׁה אֲנָשִׁים. רַעְיוֹן אֶחָד. | Chamishah anashim. Ra'ayon echad. | Five people. One idea. | the team around a whiteboard covered in arrows
+מָאיָה הִיא הַמְּנַהֶלֶת. | Maya hi ha-menahelet. | Maya is the manager. | a woman with a marker, listening
+"הַלָּקוֹחַ בָּא בְּשָׁעָה עֶשֶׂר." | "Ha-lako'ach ba be-sha'ah eser." | "The client comes at ten." | the clock reading 9:40
+הַמַּחְשֵׁב לֹא עוֹבֵד. | Ha-machshev lo oved. | The computer isn't working. | a laptop with a spinning wheel, panic
+"מִי יוֹדֵעַ לְתַקֵּן?" | "Mi yode'a letaken?" | "Who knows how to fix it?" | everyone looking at everyone
+אֵיתָן מְנַסֶּה. לֹא עוֹבֵד. | Eitan menaseh. Lo oved. | Eitan tries. It doesn't work. | a man hammering keys
+הַמְּנַקֶּה נִכְנָס. | Ha-menakeh nichnas. | The cleaner comes in. | an older man with a mop
+הוּא מִסְתַּכֵּל. הוּא לוֹחֵץ עַל כַּפְתּוֹר. | Hu mistakel. Hu lochetz al kaftor. | He looks. He presses a button. | the cleaner leaning over, pressing one key
+עוֹבֵד. | Oved. | It works. | the screen alive, the team cheering
+"תּוֹדָה! מָה הַשֵּׁם שֶׁלְּךָ?" | "Todah! Mah ha-shem shelcha?" | "Thank you! What's your name?" | the manager shaking the cleaner's hand
+"מֹשֶׁה. פַּעַם הָיִיתִי מְהַנְדֵּס." | "Moshe. Pa'am hayiti mehandes." | "Moshe. I was once an engineer." | the cleaner smiling modestly, the clock striking ten
+
+## book47 | הַקּוּפְסָה הָאַחֲרוֹנָה | Ha-Kufsah Ha-Achronah | The Last Box | C
+הַבַּיִת שֶׁל אִמָּא רֵיק. | Ha-bayit shel Ima reik. | Mom's house is empty. | an old house, bare walls with picture outlines
+הִיא עוֹבֶרֶת לְדִירָה קְטַנָּה. | Hi overet le-dirah ktanah. | She is moving to a small apartment. | an older woman directing movers
+יוֹסִי עוֹזֵר. | Yossi ozer. | Yossi helps. | her grown son taping a box
+יֵשׁ קוּפְסָה אַחַת אַחֲרוֹנָה. | Yesh kufsah achat achronah. | There is one last box. | a battered box in the middle of the floor
+"מָה בִּפְנִים?" | "Mah bifnim?" | "What's inside?" | the son kneeling by it
+"לֹא יוֹדַעַת. פְּתַח." | "Lo yoda'at. Ptach." | "I don't know. Open it." | the mother shrugging
+תְּמוּנוֹת. | Tmunot. | Photographs. | a stack of old photos spilling out
+יוֹסִי בֶּן שָׁלוֹשׁ. יוֹסִי בֶּן עֶשֶׂר. | Yossi ben shalosh. Yossi ben eser. | Yossi at three. Yossi at ten. | two faded photos: a toddler, a boy with a bike
+אַבָּא צָעִיר. | Aba tza'ir. | Dad, young. | a photo of a young man laughing, same nose as the son
+אִמָּא יוֹשֶׁבֶת עַל הָרִצְפָּה. | Ima yoshevet al ha-ritzpah. | Mom sits on the floor. | the mother cross-legged among photos
+הֵם מִסְתַּכְּלִים שָׁעָה. | Hem mistaklim sha'ah. | They look for an hour. | the light shifting, movers waiting at the door
+הַקּוּפְסָה הָאַחֲרוֹנָה בָּאָה אִתָּם. | Ha-kufsah ha-achronah ba'ah itam. | The last box comes with them. | the mother in the moving truck, the box on her lap
+
+## book48 | הַחֲתֻנָּה | Ha-Chatunah | The Wedding | C
+חֲתֻנָּה בַּגָּלִיל. | Chatunah ba-Galil. | A wedding in the Galilee. | an outdoor venue, olive trees, string lights
+תָּמָר וְאֵיתָן מִתְחַתְּנִים. | Tamar ve-Eitan mitchatnim. | Tamar and Eitan are getting married. | the couple under a chuppah
+הַמִּשְׁפָּחָה שֶׁל תָּמָר מִמָּרוֹקוֹ. | Ha-mishpachah shel Tamar mi-Maroko. | Tamar's family is from Morocco. | aunts in embroidered kaftans, trays of sweets
+הַמִּשְׁפָּחָה שֶׁל אֵיתָן מִפּוֹלִין. | Ha-mishpachah shel Eitan mi-Polin. | Eitan's family is from Poland. | uncles in dark suits, a grandmother with a cane
+שְׁתֵּי מִשְׁפָּחוֹת. שְׁתֵּי שָׂפוֹת. | Shtei mishpachot. Shtei safot. | Two families. Two languages. | two tables, animated conversation across the gap
+אַף אֶחָד לֹא מֵבִין אַף אֶחָד. | Af echad lo mevin af echad. | Nobody understands anybody. | hands gesturing, confused smiles
+וְאָז: מוּסִיקָה. | Ve-az: musikah. | And then: music. | a band striking up, a darbuka and a clarinet
+סָבְתָא מִמָּרוֹקוֹ רוֹקֶדֶת. | Savta mi-Maroko rokedet. | The grandmother from Morocco dances. | an elderly woman dancing with her arms up
+סָבָא מִפּוֹלִין רוֹקֵד. | Saba mi-Polin roked. | The grandfather from Poland dances. | an old man kicking up his heels
+הֵם רוֹקְדִים בְּיַחַד. | Hem rokdim be-yachad. | They dance together. | the two elders dancing, everyone clapping
+כֻּלָּם מְבִינִים. | Kulam mevinim. | Everyone understands. | the whole crowd in one circle
+מַזָּל טוֹב! | Mazal tov! | Congratulations! | the couple lifted on chairs, confetti
+
+## book49 | הַמִּדְבָּר בַּלַּיְלָה | Ha-Midbar Ba-Lailah | The Desert at Night | C
+הַנֶּגֶב. הַמִּדְבָּר. | Ha-Negev. Ha-midbar. | The Negev. The desert. | an endless rocky plain, a jeep track
+דָּנָה וְרוֹנִי נוֹסְעִים דָּרוֹמָה. | Dana ve-Roni nos'im daromah. | Dana and Roni drive south. | a dusty car, windows down
+אֵין קְלִיטָה. | Ein klitah. | No signal. | a phone with no bars, held up to the sky
+"טוֹב," אוֹמֶרֶת דָּנָה. | "Tov," omeret Dana. | "Good," says Dana. | the woman tossing the phone in the back seat
+הֵם מְקִימִים אֹהֶל. | Hem mekimim ohel. | They put up a tent. | a small tent against a huge red cliff
+הַשֶּׁמֶשׁ יוֹרֶדֶת. הַכֹּל אָדֹם. | Ha-shemesh yoredet. Ha-kol adom. | The sun sets. Everything is red. | the cliffs glowing crimson
+וְאָז קַר. קַר מְאוֹד. | Ve-az kar. Kar me'od. | And then cold. Very cold. | the two wrapped in blankets, breath visible
+אֵשׁ קְטַנָּה. תֵּה. | Esh ktanah. Teh. | A small fire. Tea. | a campfire, a blackened kettle
+הֵם מִסְתַּכְּלִים לְמַעְלָה. | Hem mistaklim lemalah. | They look up. | two faces lit by firelight, tilted to the sky
+כּוֹכָבִים. מִילְיוֹנִים. | Kochavim. Milyonim. | Stars. Millions. | the Milky Way across the whole sky
+אַף אֶחָד לֹא מְדַבֵּר. | Af echad lo medaber. | Nobody speaks. | the silhouettes, the fire, the stars
+הַמִּדְבָּר מְדַבֵּר. | Ha-midbar medaber. | The desert speaks. | the tent tiny under the sky, a shooting star
+
+## book50 | רָצָה בַּפַּארְק | Ratzah Ba-Park | Running in the Park | C
+פַּארְק הַיַּרְקוֹן. שֵׁשׁ בַּבֹּקֶר. | Park Ha-Yarkon. Shesh ba-boker. | Yarkon Park. Six in the morning. | a river path lined with eucalyptus, mist
+לֵאָה רָצָה. לְאַט. | Leah ratzah. Le'at. | Leah runs. Slowly. | a woman jogging, red-faced, headphones
+זֶה הַשָּׁבוּעַ הָרִאשׁוֹן שֶׁלָּהּ. | Zeh ha-shavu'a ha-rishon shelah. | It is her first week. | a running app showing day 4
+כֻּלָּם עוֹבְרִים אוֹתָהּ. | Kulam ovrim otah. | Everyone passes her. | lean runners streaming past, a kid on a scooter too
+גַּם אִישׁ בֶּן שְׁמוֹנִים. | Gam ish ben shmonim. | Even an eighty-year-old man. | an old man in a headband gliding by
+הִיא רוֹצָה לַעֲצֹר. | Hi rotzah la'atzor. | She wants to stop. | bent over, hands on knees
+הִיא לֹא עוֹצֶרֶת. | Hi lo otzeret. | She doesn't stop. | one more step, jaw set
+הַנָּהָר. הַבַּרְוָזִים. | Ha-nahar. Ha-barvazim. | The river. The ducks. | ducks paddling alongside her
+הָאִישׁ בֶּן הַשְּׁמוֹנִים מְחַכֶּה בַּגֶּשֶׁר. | Ha-ish ben ha-shmonim mechakeh ba-gesher. | The eighty-year-old waits at the bridge. | the old man stretching on a footbridge
+"פַּעַם רִאשׁוֹנָה?" | "Pa'am rishonah?" | "First time?" | his kind look
+"שָׁבוּעַ רִאשׁוֹן." | "Shavu'a rishon." | "First week." | her gasping answer
+"יוֹפִי. מָחָר שׁוּב." | "Yofi. Machar shuv." | "Great. Again tomorrow." | the two walking off the bridge together, sun up
+
+## book51 | אֲרוּחַת עֶרֶב לִשְׁנַיִם | Aruchat Erev Li-Shnayim | Dinner for Two | C
+עוֹמֶר מְבַשֵּׁל. פַּעַם רִאשׁוֹנָה. | Omer mevashel. Pa'am rishonah. | Omer cooks. For the first time. | a man in a kitchen with a cookbook open and three screens showing recipes
+מָאיָה בָּאָה בְּשָׁעָה שֶׁבַע. | Maya ba'ah be-sha'ah sheva. | Maya comes at seven. | a clock reading 5:30, panic in his eyes
+הוּא קוֹרֵא אֶת הַמַּתְכּוֹן. | Hu koreh et ha-matkon. | He reads the recipe. | finger on a line, lips moving
+"בָּצָל." הוּא חוֹתֵךְ. הוּא בּוֹכֶה. | "Batzal." Hu chotech. Hu bocheh. | "Onion." He chops. He cries. | tears streaming, knife in hand
+"שׁוּם." יוֹתֵר מִדַּי שׁוּם. | "Shum." Yoter midai shum. | "Garlic." Too much garlic. | a whole head of garlic going in
+מַשֶּׁהוּ נִשְׂרַף. | Mashehu nisraf. | Something burns. | smoke from a pan, the alarm beeping
+הוּא פּוֹתֵחַ אֶת הַחַלּוֹן. | Hu pote'ach et ha-chalon. | He opens the window. | smoke pouring out, a neighbour staring
+שֶׁבַע. דְּפִיקָה בַּדֶּלֶת. | Sheva. Dfikah ba-delet. | Seven. A knock at the door. | the clock, the door, his apron stained, hair wild
+מָאיָה נִכְנֶסֶת. הִיא מְרִיחָה. | Maya nichneset. Hi merichah. | Maya comes in. She sniffs. | the woman sniffing the smoky air
+"שׁוּם?" | "Shum?" | "Garlic?" | her raised eyebrow
+"הַרְבֵּה שׁוּם." | "Harbeh shum." | "A lot of garlic." | the man's embarrassed shrug
+הֵם מַזְמִינִים פִּיצָה. הַלַּיְלָה טוֹב. | Hem mazminim pitzah. Ha-lailah tov. | They order pizza. The night is good. | the two on the floor with a pizza box, candles, laughing
+
+## book52 | הַתְּמוּנָה הַיְּשָׁנָה | Ha-Tmunah Ha-Yeshanah | The Old Photo | C
+יָעֵל מוֹצֵאת תְּמוּנָה בָּרְחוֹב. | Yael motzet tmunah ba-rechov. | Yael finds a photo in the street. | a black-and-white photo on wet pavement
+תְּמוּנָה יְשָׁנָה. שָׁחֹר-לָבָן. | Tmunah yeshanah. Shachor-lavan. | An old photo. Black and white. | the photo close up: a young couple by the sea, 1950s clothes
+אִישׁ וְאִשָּׁה עַל הַחוֹף. | Ish ve-ishah al ha-chof. | A man and a woman on the beach. | the couple laughing, a lifeguard tower behind
+מֵאָחוֹר כָּתוּב: "1956". | Me-achor katuv: "1956". | On the back it says: "1956". | pencil writing on the back
+מִי הֵם? | Mi hem? | Who are they? | the woman turning the photo over and over
+יָעֵל שָׂמָה אֶת הַתְּמוּנָה בָּאִינְטֶרְנֶט. | Yael samah et ha-tmunah ba-internet. | Yael posts the photo online. | a post: does anyone know these people?
+אַלְפֵי אֲנָשִׁים רוֹאִים. | Alfei anashim ro'im. | Thousands of people see it. | share counts climbing
+יוֹם אֶחָד: הוֹדָעָה. | Yom echad: hoda'ah. | One day: a message. | a notification: that's my grandmother
+"זֹאת סָבְתָא שֶׁלִּי. וְסָבָא." | "Zot savta sheli. Ve-saba." | "That's my grandmother. And grandfather." | a man's message with a heart
+הֵם נִפְגָּשִׁים בְּבֵית קָפֶה. | Hem nifgashim be-veit kafeh. | They meet in a café. | Yael and a man her age at a table, the photo between them
+הוּא מְסַפֵּר: הֵם הָיוּ נְשׂוּאִים שִׁשִּׁים שָׁנָה. | Hu mesaper: hem hayu nesu'im shishim shanah. | He tells her: they were married sixty years. | the grandson speaking, eyes bright
+הַתְּמוּנָה חוֹזֶרֶת הַבַּיְתָה. | Ha-tmunah chozeret ha-baitah. | The photo goes home. | the photo in a frame on a shelf beside a newer one of the grandson and Yael
+
+## book53 | הַמַּאֲפִיָּה | Ha-Ma'afiyah | The Bakery | C
+אַרְבַּע בַּבֹּקֶר. הַמַּאֲפִיָּה. | Arba ba-boker. Ha-ma'afiyah. | Four in the morning. The bakery. | a lit bakery window on a dark street
+אַבְרָהָם מְכִין לֶחֶם. | Avraham mechin lechem. | Avraham makes bread. | a baker kneading, forearms floury
+אַרְבָּעִים שָׁנָה, כָּל יוֹם. | Arba'im shanah, kol yom. | Forty years, every day. | a yellowed photo on the wall: the same man, young, same bakery
+הַבֵּן שֶׁלּוֹ לֹא רוֹצֶה אֶת הַמַּאֲפִיָּה. | Ha-ben shelo lo rotzeh et ha-ma'afiyah. | His son does not want the bakery. | a framed graduation photo, a city far away
+"אֲנִי הָאַחֲרוֹן," חוֹשֵׁב אַבְרָהָם. | "Ani ha-acharon," choshev Avraham. | "I am the last," thinks Avraham. | the baker alone with the ovens
+נַעֲרָה נִכְנֶסֶת. | Na'arah nichneset. | A young woman comes in. | a woman in her twenties with a notebook
+"אֶפְשָׁר לִלְמֹד?" | "Efshar lilmod?" | "Can I learn?" | her eager face, flour in the air
+אַבְרָהָם לֹא עוֹנֶה. | Avraham lo oneh. | Avraham doesn't answer. | the baker looking at her, then at the dough
+הוּא נוֹתֵן לָהּ סִינָר. | Hu noten lah sinar. | He gives her an apron. | an old apron passed over the counter
+הִיא לוֹמֶדֶת לָלוּשׁ. | Hi lomedet lalush. | She learns to knead. | her hands in dough, his hands guiding
+שִׁשָּׁה חֳדָשִׁים. הַלֶּחֶם שֶׁלָּהּ טוֹב. | Shishah chodashim. Ha-lechem shelah tov. | Six months. Her bread is good. | a loaf, golden, his approving nod
+אַבְרָהָם לֹא הָאַחֲרוֹן. | Avraham lo ha-acharon. | Avraham is not the last. | the two of them at the counter at dawn, the first customer
+
+## book54 | מִתְקַשֵּׁר לְאִמָּא | Mitkasher Le-Ima | Calling Mom | C
+דָּוִד גָּר בְּבֶּרְלִין. | David gar be-Berlin. | David lives in Berlin. | a grey apartment block, a bicycle, a man at a window
+אִמָּא שֶׁלּוֹ גָּרָה בִּבְאֵר שֶׁבַע. | Ima shelo garah bi-V'er Sheva. | His mother lives in Be'er Sheva. | a sunny low house, a lemon tree
+כָּל יוֹם רִאשׁוֹן הוּא מִתְקַשֵּׁר. | Kol yom rishon hu mitkasher. | Every Sunday he calls. | a phone, a calendar with Sundays marked
+"מָה נִשְׁמָע, אִמָּא?" | "Mah nishma, Ima?" | "How are you, Mom?" | the man on a video call, his mother's face filling the screen
+"בְּסֵדֶר. אָכַלְתָּ?" | "Beseder. Achalta?" | "Fine. Did you eat?" | the mother squinting into the camera
+"אָכַלְתִּי." | "Achalti." | "I ate." | the man hiding an empty plate
+"מָה אָכַלְתָּ?" | "Mah achalta?" | "What did you eat?" | the mother's unimpressed face
+"לֶחֶם." | "Lechem." | "Bread." | a sad slice of bread
+שֶׁקֶט. | Sheket. | Silence. | the mother's silence, louder than words
+"אֲנִי שׁוֹלַחַת לְךָ חֲבִילָה." | "Ani sholachat lecha chavilah." | "I am sending you a package." | the mother already packing a box: spices, cookies, a jar
+שָׁבוּעַ אַחֲרֵי: חֲבִילָה. | Shavu'a acharei: chavilah. | A week later: a package. | the box arriving in Berlin, smelling of home
+בֶּרְלִין מְרִיחָה כְּמוֹ בְּאֵר שֶׁבַע. | Berlin merichah kmo Be'er Sheva. | Berlin smells like Be'er Sheva. | the man eating cookies at his window, eyes closed
+
+## book55 | שֶׁלֶג בִּירוּשָׁלַיִם | Sheleg Bi-Yerushalayim | Snow in Jerusalem | C
+יְרוּשָׁלַיִם. יָנוּאָר. | Yerushalayim. Yanu'ar. | Jerusalem. January. | grey sky over stone buildings
+הָרַדְיוֹ אוֹמֵר: "שֶׁלֶג מָחָר." | Ha-radyo omer: "Sheleg machar." | The radio says: "Snow tomorrow." | a radio, a family gathered round it
+אַף אֶחָד לֹא מַאֲמִין. | Af echad lo ma'amin. | Nobody believes it. | shrugging neighbours on a stairwell
+בַּבֹּקֶר: לָבָן. | Ba-boker: lavan. | In the morning: white. | the city under snow, domes and roofs white
+הַכֹּל סָגוּר. | Ha-kol sagur. | Everything is closed. | shuttered shops, no buses
+הַיְּלָדִים בַּחוּץ. | Ha-yeladim ba-chutz. | The children are outside. | kids in mismatched gloves and plastic bags on their feet
+גַּם הַמְּבֻגָּרִים. | Gam ha-mevugarim. | The adults too. | grown men throwing snowballs in suits
+שִׁירָה בּוֹנָה אִישׁ שֶׁלֶג. | Shira bonah ish sheleg. | Shira builds a snowman. | a woman rolling a lopsided snowball
+אִישׁ שֶׁלֶג קָטָן. עָקוּם. | Ish sheleg katan. Akum. | A small snowman. Crooked. | a tiny leaning snowman with an olive for a nose
+הִיא נוֹתֶנֶת לוֹ כִּפָּה. | Hi notenet lo kipah. | She gives it a kippah. | a knitted kippah on the snowman's head
+בַּצָּהֳרַיִם: שֶׁמֶשׁ. | Ba-tzohorayim: shemesh. | At noon: sun. | sunlight breaking through, drips everywhere
+אִישׁ הַשֶּׁלֶג הוֹלֵךְ. הַכִּפָּה נִשְׁאֶרֶת. | Ish ha-sheleg holech. Ha-kipah nish'eret. | The snowman goes. The kippah stays. | a puddle, the kippah on the wet stone, the woman smiling
+
+## book56 | הָרַכֶּבֶת לְחֵיפָה | Ha-Rakevet Le-Cheifah | The Train to Haifa | C
+תַּחֲנַת הָרַכֶּבֶת. שָׁעָה שֶׁבַע. | Tachanat ha-rakevet. Sha'ah sheva. | The train station. Seven o'clock. | a platform, commuters, a train pulling in
+נָדָב נוֹסֵעַ לְחֵיפָה. | Nadav nose'a le-Cheifah. | Nadav is going to Haifa. | a man with a backpack boarding
+הָרַכֶּבֶת מְלֵאָה. | Ha-rakevet mele'ah. | The train is full. | standing room only, elbows
+הוּא עוֹמֵד. | Hu omed. | He stands. | the man holding a strap, swaying
+לְיָדוֹ: חַיֶּלֶת יְשֵׁנָה. | Le-yado: chayelet yeshenah. | Next to him: a soldier, asleep. | a young woman in uniform asleep sitting up, huge bag
+מֵאָחוֹר: אִישׁ מְדַבֵּר בַּטֶּלֶפוֹן. | Me-achor: ish medaber ba-telefon. | Behind: a man talking on the phone. | a loud man gesturing with a phone
+מֵאָחוֹר יוֹתֵר: תִּינוֹק בּוֹכֶה. | Me-achor yoter: tinok bocheh. | Further back: a baby crying. | a tired mother with a wailing baby
+הַיָּם מִיָּמִין. | Ha-yam mi-yamin. | The sea on the right. | the window: blue sea rushing past
+נָדָב מִסְתַּכֵּל עַל הַיָּם. | Nadav mistakel al ha-yam. | Nadav looks at the sea. | his face calm, reflected in the glass
+הַתִּינוֹק מַפְסִיק לִבְכּוֹת. | Ha-tinok mafsik livkot. | The baby stops crying. | the baby staring at the sea too, mouth open
+כֻּלָּם מִסְתַּכְּלִים עַל הַיָּם. | Kulam mistaklim al ha-yam. | Everyone looks at the sea. | the whole car turned toward the window, silent
+חֵיפָה. הַכַּרְמֶל. יוֹרְדִים. | Cheifah. Ha-Carmel. Yordim. | Haifa. The Carmel. Everyone gets off. | the platform under the green mountain
+
+## book57 | יוֹם רִאשׁוֹן | Yom Rishon | Sunday | C
+יוֹם רִאשׁוֹן. | Yom rishon. | Sunday. | an alarm clock, a man groaning
+בְּיִשְׂרָאֵל, יוֹם רִאשׁוֹן הוּא יוֹם עֲבוֹדָה. | Be-Yisrael, yom rishon hu yom avodah. | In Israel, Sunday is a workday. | a packed bus, suits, coffee cups
+מַארְק חָדָשׁ בָּאָרֶץ. | Mark chadash ba-aretz. | Mark is new in the country. | a man with visibly foreign confusion
+הוּא לֹא מֵבִין. | Hu lo mevin. | He doesn't understand. | the man looking at a calendar, counting days
+"יוֹם רִאשׁוֹן? עֲבוֹדָה?" | "Yom rishon? Avodah?" | "Sunday? Work?" | his disbelief
+"כֵּן," אוֹמֵר הַבּוֹס. "וְיוֹם שִׁישִׁי חֹפֶשׁ." | "Ken," omer ha-bos. "Ve-yom shishi chofesh." | "Yes," says the boss. "And Friday is off." | the boss shrugging cheerfully
+מַארְק חוֹשֵׁב. | Mark choshev. | Mark thinks. | gears turning over his head
+יוֹם רִאשׁוֹן: עֲבוֹדָה. יוֹם שִׁישִׁי: יָם. | Yom rishon: avodah. Yom shishi: yam. | Sunday: work. Friday: beach. | a split image, desk and beach
+"זֶה בְּסֵדֶר," הוּא אוֹמֵר. | "Zeh beseder," hu omer. | "That's fine," he says. | his slow approving nod
+אַחֲרֵי שָׁנָה הוּא חוֹזֵר לְקָנָדָה. | Acharei shanah hu chozer le-Kanadah. | After a year he goes back to Canada. | a snowy street, a maple leaf flag
+יוֹם רִאשׁוֹן בַּבֹּקֶר הוּא הוֹלֵךְ לַמִּשְׂרָד. | Yom rishon ba-boker hu holech la-misrad. | Sunday morning he goes to the office. | the man at a locked dark office in the snow
+סָגוּר. הוּא צוֹחֵק. | Sagur. Hu tzochek. | Closed. He laughs. | the man laughing alone in the snow, breath visible
+
+## book58 | הַסִּפְרִיָּה | Ha-Sifriyah | The Library | C
+הַסִּפְרִיָּה הָעִירוֹנִית. | Ha-sifriyah ha-ironit. | The city library. | a quiet reading hall, tall windows
+שֶׁקֶט. | Sheket. | Quiet. | a sign: quiet please, a librarian's glance
+רוֹנִי בָּא כָּל יוֹם. | Roni ba kol yom. | Roni comes every day. | a man at the same table, same chair
+הוּא לֹא קוֹרֵא. | Hu lo koreh. | He doesn't read. | an open book he isn't looking at
+הוּא מְחַפֵּשׂ עֲבוֹדָה. | Hu mechapes avodah. | He is looking for a job. | a laptop with job listings, a worn CV
+הַסַּפְרָנִית רוֹאָה. | Ha-safranit ro'ah. | The librarian sees. | a librarian watching kindly over her glasses
+יוֹם אֶחָד הִיא שָׂמָה סֵפֶר עַל הַשֻּׁלְחָן. | Yom echad hi samah sefer al ha-shulchan. | One day she puts a book on his table. | a slim book placed silently
+"אֵיךְ לִכְתֹּב קוֹרוֹת חַיִּים." | "Eich lichtov korot chayim." | "How to Write a CV." | the title on the cover
+רוֹנִי צוֹחֵק בְּשֶׁקֶט. | Roni tzochek be-sheket. | Roni laughs quietly. | the man covering his mouth
+הוּא קוֹרֵא. הוּא כּוֹתֵב מֵחָדָשׁ. | Hu koreh. Hu kotev me-chadash. | He reads. He writes it again. | the CV reworked, red pen everywhere
+שְׁבוּעַיִם אַחֲרֵי: טֶלֶפוֹן. | Shvu'ayim acharei: telefon. | Two weeks later: a phone call. | his phone lighting up in the hall, a rush to the door
+הוּא מֵבִיא לָהּ פְּרָחִים. בְּשֶׁקֶט. | Hu mevi lah prachim. Be-sheket. | He brings her flowers. Quietly. | a bouquet set on the librarian's desk, a thumbs up
+
+## book59 | מְכִינִים חוּמוּס | Mechinim Chumus | Making Hummus | C
+חוּמוּס. אֹכֶל פָּשׁוּט. | Chumus. Ochel pashut. | Hummus. Simple food. | a bowl of hummus with olive oil and paprika
+יָעֵל רוֹצָה לְהָכִין בַּבַּיִת. | Yael rotzah lehachin ba-bayit. | Yael wants to make it at home. | a woman with a bag of dried chickpeas
+גַּרְגְּרֵי חוּמוּס. לַיְלָה בַּמַּיִם. | Gargerei chumus. Lailah ba-mayim. | Chickpeas. A night in water. | a bowl of chickpeas soaking on the counter
+בַּבֹּקֶר: מְבַשְּׁלִים. | Ba-boker: mevashlim. | In the morning: cook. | a pot bubbling, foam skimmed
+שְׁעָתַיִם. | Sha'atayim. | Two hours. | the clock, the woman reading nearby
+טְחִינָה. לִימוֹן. שׁוּם. מֶלַח. | Tchinah. Limon. Shum. Melach. | Tahini. Lemon. Garlic. Salt. | four ingredients lined up
+הִיא טוֹחֶנֶת. | Hi tochenet. | She blends. | a food processor whirring
+הִיא טוֹעֶמֶת. | Hi to'emet. | She tastes. | a finger in the bowl, a thinking face
+"לֹא כְּמוֹ בַּשּׁוּק." | "Lo kmo ba-shuk." | "Not like at the market." | the market hummus stall pictured in her mind
+הִיא מְנַסָּה שׁוּב. עוֹד לִימוֹן. | Hi menasah shuv. Od limon. | She tries again. More lemon. | squeezing a lemon
+עֲדַיִן לֹא. אֲבָל טוֹב. | Adayin lo. Aval tov. | Still not. But good. | her satisfied shrug
+פִּיתָה חַמָּה. חוּמוּס בַּבַּיִת. | Pitah chamah. Chumus ba-bayit. | Warm pita. Hummus at home. | a bowl, a pita, a window with afternoon light
+
+## book60 | הָאַרְנָק | Ha-Arnak | The Lost Wallet | C
+אֵיתָן מְחַפֵּשׂ אֶת הָאַרְנָק. | Eitan mechapes et ha-arnak. | Eitan looks for his wallet. | a man turning out pockets at a kiosk, coffee in hand
+אֵין אַרְנָק. | Ein arnak. | No wallet. | empty pockets
+הוּא חוֹזֵר לַקָּפֶה. לֹא שָׁם. | Hu chozer la-kafeh. Lo sham. | He goes back to the café. Not there. | the barista shaking her head
+הוּא חוֹזֵר לַתַּחֲנָה. לֹא שָׁם. | Hu chozer la-tachanah. Lo sham. | He goes back to the bus stop. Not there. | the empty bench, a pigeon
+בָּאַרְנָק: כֶּסֶף, כַּרְטִיסִים, תְּמוּנָה שֶׁל הַבַּת. | Ba-arnak: kesef, kartisim, tmunah shel ha-bat. | In the wallet: money, cards, a photo of his daughter. | a thought bubble of the wallet's contents
+הַתְּמוּנָה. זֶה מָה שֶׁכּוֹאֵב. | Ha-tmunah. Zeh mah she-ko'ev. | The photo. That's what hurts. | the man sitting heavily on a step
+בָּעֶרֶב: הַטֶּלֶפוֹן. | Ba-erev: ha-telefon. | In the evening: the phone. | an unknown number calling
+"שָׁלוֹם? מָצָאתִי אַרְנָק." | "Shalom? Matzati arnak." | "Hello? I found a wallet." | a teenager's voice, a bubble of the wallet in a hand
+"אֵיפֹה אַתָּה?" | "Eifoh atah?" | "Where are you?" | the man jumping up
+הֵם נִפְגָּשִׁים בַּתַּחֲנָה. | Hem nifgashim ba-tachanah. | They meet at the station. | a boy of sixteen holding out the wallet
+הַכֹּל בִּפְנִים. גַּם הַתְּמוּנָה. | Ha-kol bifnim. Gam ha-tmunah. | Everything is inside. Even the photo. | the man checking, relief
+אֵיתָן נוֹתֵן לוֹ אֶת הַכֶּסֶף. הַיֶּלֶד לֹא לוֹקֵחַ. | Eitan noten lo et ha-kesef. Ha-yeled lo loke'ach. | Eitan offers him the money. The boy won't take it. | the boy waving it away, both smiling
+
+## book61 | לַיְלָה בְּתֵל אָבִיב | Lailah Be-Tel Aviv | Night in Tel Aviv | C
+אַחַת בַּלַּיְלָה. | Achat ba-lailah. | One in the morning. | a neon street, scooters, people everywhere
+הָעִיר לֹא יְשֵׁנָה. | Ha-ir lo yeshenah. | The city doesn't sleep. | open bars, a falafel stand, music spilling out
+נֹעָה גּוֹמֶרֶת לַעֲבֹד. | Noa gomeret la'avod. | Noa finishes work. | a bartender untying her apron
+הִיא עֲיֵפָה אֲבָל לֹא רוֹצָה לִישֹׁן. | Hi ayefah aval lo rotzah lishon. | She is tired but doesn't want to sleep. | the woman stretching outside the bar, looking at the sky
+הִיא הוֹלֶכֶת לַיָּם. | Hi holechet la-yam. | She walks to the sea. | dark streets opening to the beach
+הַחוֹף רֵיק. | Ha-chof reik. | The beach is empty. | sand, dark water, distant lights
+לֹא לְגַמְרֵי. | Lo legamrei. | Not completely. | a few figures: a guitar player, a couple, a man with a dog
+אִישׁ זָקֵן מְטַיֵּל עִם כֶּלֶב. | Ish zaken metayel im kelev. | An old man walks with a dog. | the man and dog at the water's edge
+"לַיְלָה טוֹב," הוּא אוֹמֵר. | "Lailah tov," hu omer. | "Good night," he says. | the man tipping his cap
+"בֹּקֶר טוֹב," אוֹמֶרֶת נֹעָה. | "Boker tov," omeret Noa. | "Good morning," says Noa. | her grin, the first grey light on the horizon
+שְׁנֵיהֶם צוֹדְקִים. | Shneihem tzodkim. | They are both right. | the sky half dark, half light
+הַיָּם לֹא אוֹמֵר כְּלוּם. | Ha-yam lo omer klum. | The sea says nothing. | the waves, the woman sitting, the dog running
+
+## book62 | שָׁנָה בְּיִשְׂרָאֵל | Shanah Be-Yisrael | One Year in Israel | C
+לִפְנֵי שָׁנָה: מַארְק בָּא לְיִשְׂרָאֵל. | Lifnei shanah: Mark ba le-Yisrael. | A year ago: Mark came to Israel. | a man with two suitcases at the airport exit, overwhelmed
+הוּא לֹא יָדַע מִלָּה. | Hu lo yada milah. | He didn't know a word. | Hebrew signs swirling around him
+הוּא אָמַר "שָׁלוֹם" לַכֹּל. | Hu amar "shalom" la-kol. | He said "shalom" to everything. | the man saying shalom to a cat, a bus, a fridge
+הוּא קָנָה לֶחֶם עִם הַיָּדַיִם. | Hu kanah lechem im ha-yadayim. | He bought bread with his hands. | pointing at a loaf, holding up fingers
+הוּא נָסַע בָּאוֹטוֹבּוּס הַלֹּא נָכוֹן. | Hu nasa ba-otobus ha-lo nachon. | He took the wrong bus. | a bus heading into the desert, his face at the window
+הוּא לָמַד כָּל יוֹם. | Hu lamad kol yom. | He studied every day. | flashcards on a bus, on a beach, in bed
+הוּא עָשָׂה טְעוּיוֹת. הַרְבֵּה. | Hu asah te'uyot. Harbeh. | He made mistakes. Many. | a crowd laughing kindly at something he said
+אֲנָשִׁים תִּקְּנוּ אוֹתוֹ. | Anashim tiknu oto. | People corrected him. | a vendor gently repeating a word
+הַיּוֹם הוּא בַּשּׁוּק. | Ha-yom hu ba-shuk. | Today he is at the market. | the man at a stall, confident
+"כַּמָּה זֶה?" "עֶשֶׂר." "יָקָר! שְׁמוֹנֶה." | "Kamah zeh?" "Eser." "Yakar! Shmoneh." | "How much?" "Ten." "Expensive! Eight." | bargaining, both grinning
+הַמּוֹכֵר צוֹחֵק: "אַתָּה יִשְׂרְאֵלִי." | Ha-mocher tzochek: "Atah Yisre'eli." | The vendor laughs: "You're Israeli." | the vendor slapping his shoulder
+מַארְק מְחַיֵּךְ. שָׁנָה אַחַת. | Mark mechayech. Shanah achat. | Mark smiles. One year. | the man walking home with a full bag, the city in gold light

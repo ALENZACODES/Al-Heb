@@ -1,0 +1,177 @@
+{
+ "id": "book25",
+ "titleHe": "הַפְּגִישָׁה",
+ "titleTranslit": "Ha-Pgishah",
+ "titleEn": "The Interview",
+ "level": "Beginner 2",
+ "pages": [
+  {
+   "n": 1,
+   "he": "לְדָנָה יֵשׁ פְּגִישָׁה.",
+   "translit": "Le-Dana yesh pgishah.",
+   "en": "Dana has a meeting.",
+   "img": "assets/books/book25/BOOK25_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book25-p01.mp3",
+    "m": "audio/m/israeli/book/book25-p01.mp3"
+   },
+   "illustration": "a woman in a blazer checking herself in a hallway mirror",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "פְּגִישַׁת עֲבוֹדָה.",
+   "translit": "Pgishat avodah.",
+   "en": "A job interview.",
+   "img": "assets/books/book25/BOOK25_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book25-p02.mp3",
+    "m": "audio/m/israeli/book/book25-p02.mp3"
+   },
+   "illustration": "a glass office tower, she looks up at it",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "הִיא קְצָת לְחוּצָה.",
+   "translit": "Hi ktzat lechutzah.",
+   "en": "She is a bit nervous.",
+   "img": "assets/books/book25/BOOK25_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book25-p03.mp3",
+    "m": "audio/m/israeli/book/book25-p03.mp3"
+   },
+   "illustration": "her hand smoothing her jacket, a deep breath",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "הִיא נִכְנֶסֶת.",
+   "translit": "Hi nichneset.",
+   "en": "She goes in.",
+   "img": "assets/books/book25/BOOK25_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book25-p04.mp3",
+    "m": "audio/m/israeli/book/book25-p04.mp3"
+   },
+   "illustration": "the elevator doors opening on a bright open office",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "\"שָׁלוֹם, אֲנִי דָּנָה.\"",
+   "translit": "\"Shalom, ani Dana.\"",
+   "en": "\"Hello, I'm Dana.\"",
+   "img": "assets/books/book25/BOOK25_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book25-p05.mp3",
+    "m": "audio/m/israeli/book/book25-p05.mp3"
+   },
+   "illustration": "a firm handshake with a woman in her fifties",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "\"שָׁלוֹם, אֲנִי נוּרִית. שְׁבִי.\"",
+   "translit": "\"Shalom, ani Nurit. Shvi.\"",
+   "en": "\"Hello, I'm Nurit. Sit.\"",
+   "img": "assets/books/book25/BOOK25_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book25-p06.mp3",
+    "m": "audio/m/israeli/book/book25-p06.mp3"
+   },
+   "illustration": "the interviewer gesturing to a chair",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "\"מָה אַתְּ עוֹשָׂה?\"",
+   "translit": "\"Mah at osah?\"",
+   "en": "\"What do you do?\"",
+   "img": "assets/books/book25/BOOK25_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book25-p07.mp3",
+    "m": "audio/m/israeli/book/book25-p07.mp3"
+   },
+   "illustration": "the interviewer with a notepad",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "\"אֲנִי מְעַצֶּבֶת.\"",
+   "translit": "\"Ani me'atzevet.\"",
+   "en": "\"I'm a designer.\"",
+   "img": "assets/books/book25/BOOK25_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book25-p08.mp3",
+    "m": "audio/m/israeli/book/book25-p08.mp3"
+   },
+   "illustration": "the woman opening a tablet of designs",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "\"יָפֶה מְאוֹד.\"",
+   "translit": "\"Yafeh me'od.\"",
+   "en": "\"Very nice.\"",
+   "img": "assets/books/book25/BOOK25_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book25-p09.mp3",
+    "m": "audio/m/israeli/book/book25-p09.mp3"
+   },
+   "illustration": "the interviewer nodding at the screen",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "\"לָמָּה פֹּה?\"",
+   "translit": "\"Lamah poh?\"",
+   "en": "\"Why here?\"",
+   "img": "assets/books/book25/BOOK25_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book25-p10.mp3",
+    "m": "audio/m/israeli/book/book25-p10.mp3"
+   },
+   "illustration": "the interviewer leaning forward",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "\"כִּי אֲנִי אוֹהֶבֶת אֶת הָעֲבוֹדָה שֶׁלָּכֶם.\"",
+   "translit": "\"Ki ani ohevet et ha-avodah shelachem.\"",
+   "en": "\"Because I love your work.\"",
+   "img": "assets/books/book25/BOOK25_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book25-p11.mp3",
+    "m": "audio/m/israeli/book/book25-p11.mp3"
+   },
+   "illustration": "the woman speaking with warmth, pointing at a poster on the wall",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "הַפְּגִישָׁה טוֹבָה.",
+   "translit": "Ha-pgishah tovah.",
+   "en": "The meeting goes well.",
+   "img": "assets/books/book25/BOOK25_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book25-p12.mp3",
+    "m": "audio/m/israeli/book/book25-p12.mp3"
+   },
+   "illustration": "the two women laughing, coffee cups",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

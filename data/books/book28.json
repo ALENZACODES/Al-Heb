@@ -1,0 +1,177 @@
+{
+ "id": "book28",
+ "titleHe": "הַמָּטוֹס",
+ "titleTranslit": "Ha-Matos",
+ "titleEn": "The Plane",
+ "level": "Beginner 2",
+ "pages": [
+  {
+   "n": 1,
+   "he": "שְׂדֵה הַתְּעוּפָה.",
+   "translit": "Sdeh ha-te'ufah.",
+   "en": "The airport.",
+   "img": "assets/books/book28/BOOK28_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book28-p01.mp3",
+    "m": "audio/m/israeli/book/book28-p01.mp3"
+   },
+   "illustration": "a busy terminal, departures board",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "תָּמָר נוֹסַעַת לְלוֹנְדוֹן.",
+   "translit": "Tamar nosa'at le-London.",
+   "en": "Tamar is flying to London.",
+   "img": "assets/books/book28/BOOK28_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book28-p02.mp3",
+    "m": "audio/m/israeli/book/book28-p02.mp3"
+   },
+   "illustration": "a woman with a suitcase and passport",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "הַתִּיק כָּבֵד.",
+   "translit": "Ha-tik kaved.",
+   "en": "The bag is heavy.",
+   "img": "assets/books/book28/BOOK28_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book28-p03.mp3",
+    "m": "audio/m/israeli/book/book28-p03.mp3"
+   },
+   "illustration": "her suitcase on the scale, the number too high",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "\"סְלִיחָה, יוֹתֵר מִדַּי.\"",
+   "translit": "\"Slichah, yoter midai.\"",
+   "en": "\"Sorry, too much.\"",
+   "img": "assets/books/book28/BOOK28_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book28-p04.mp3",
+    "m": "audio/m/israeli/book/book28-p04.mp3"
+   },
+   "illustration": "the check-in agent pointing at the scale",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "תָּמָר פּוֹתַחַת אֶת הַתִּיק.",
+   "translit": "Tamar potachat et ha-tik.",
+   "en": "Tamar opens the bag.",
+   "img": "assets/books/book28/BOOK28_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book28-p05.mp3",
+    "m": "audio/m/israeli/book/book28-p05.mp3"
+   },
+   "illustration": "the suitcase open on the floor, clothes everywhere",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "שְׁלוֹשָׁה סְפָרִים.",
+   "translit": "Shloshah sfarim.",
+   "en": "Three books.",
+   "img": "assets/books/book28/BOOK28_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book28-p06.mp3",
+    "m": "audio/m/israeli/book/book28-p06.mp3"
+   },
+   "illustration": "three thick books held up",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "נַעֲלַיִם. עוֹד נַעֲלַיִם.",
+   "translit": "Na'alayim. Od na'alayim.",
+   "en": "Shoes. More shoes.",
+   "img": "assets/books/book28/BOOK28_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book28-p07.mp3",
+    "m": "audio/m/israeli/book/book28-p07.mp3"
+   },
+   "illustration": "four pairs of shoes in a row",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "הִיא לוֹבֶשֶׁת מְעִיל.",
+   "translit": "Hi loveshet me'il.",
+   "en": "She puts on a coat.",
+   "img": "assets/books/book28/BOOK28_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book28-p08.mp3",
+    "m": "audio/m/israeli/book/book28-p08.mp3"
+   },
+   "illustration": "the woman now wearing a coat, scarf and hat indoors",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "וְעוֹד מְעִיל.",
+   "translit": "Ve-od me'il.",
+   "en": "And another coat.",
+   "img": "assets/books/book28/BOOK28_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book28-p09.mp3",
+    "m": "audio/m/israeli/book/book28-p09.mp3"
+   },
+   "illustration": "a second coat over the first, waddling",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "עַכְשָׁו בְּסֵדֶר!",
+   "translit": "Achshav beseder!",
+   "en": "Now it's fine!",
+   "img": "assets/books/book28/BOOK28_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book28-p10.mp3",
+    "m": "audio/m/israeli/book/book28-p10.mp3"
+   },
+   "illustration": "the scale reading just under the limit, agent amused",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "תָּמָר עוֹלָה לַמָּטוֹס.",
+   "translit": "Tamar olah la-matos.",
+   "en": "Tamar boards the plane.",
+   "img": "assets/books/book28/BOOK28_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book28-p11.mp3",
+    "m": "audio/m/israeli/book/book28-p11.mp3"
+   },
+   "illustration": "the woman in two coats squeezing down the aisle",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "חַם לָהּ.",
+   "translit": "Cham lah.",
+   "en": "She is hot.",
+   "img": "assets/books/book28/BOOK28_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book28-p12.mp3",
+    "m": "audio/m/israeli/book/book28-p12.mp3"
+   },
+   "illustration": "sweating in her seat, fanning herself with the safety card",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

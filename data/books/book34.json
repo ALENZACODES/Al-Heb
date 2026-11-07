@@ -1,0 +1,177 @@
+{
+ "id": "book34",
+ "titleHe": "מִשְׁמֶרֶת לַיְלָה",
+ "titleTranslit": "Mishmeret Lailah",
+ "titleEn": "Night Shift",
+ "level": "Beginner 2",
+ "pages": [
+  {
+   "n": 1,
+   "he": "שְׁמוֹנֶה בָּעֶרֶב.",
+   "translit": "Shmoneh ba-erev.",
+   "en": "Eight in the evening.",
+   "img": "assets/books/book34/BOOK34_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book34-p01.mp3",
+    "m": "audio/m/israeli/book/book34-p01.mp3"
+   },
+   "illustration": "a hospital entrance at night, lights on",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "יָעֵל מַתְחִילָה לַעֲבֹד.",
+   "translit": "Yael matchilah la'avod.",
+   "en": "Yael starts work.",
+   "img": "assets/books/book34/BOOK34_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book34-p02.mp3",
+    "m": "audio/m/israeli/book/book34-p02.mp3"
+   },
+   "illustration": "a nurse pulling on her badge, coffee in hand",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "הִיא אָחוֹת.",
+   "translit": "Hi achot.",
+   "en": "She is a nurse.",
+   "img": "assets/books/book34/BOOK34_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book34-p03.mp3",
+    "m": "audio/m/israeli/book/book34-p03.mp3"
+   },
+   "illustration": "the nurse at a station with monitors",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "הַלַּיְלָה שָׁקֵט.",
+   "translit": "Ha-lailah shaket.",
+   "en": "The night is quiet.",
+   "img": "assets/books/book34/BOOK34_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book34-p04.mp3",
+    "m": "audio/m/israeli/book/book34-p04.mp3"
+   },
+   "illustration": "a dim corridor, soft lights",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "וְאָז: לֹא.",
+   "translit": "Ve-az: lo.",
+   "en": "And then: not.",
+   "img": "assets/books/book34/BOOK34_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book34-p05.mp3",
+    "m": "audio/m/israeli/book/book34-p05.mp3"
+   },
+   "illustration": "three call lights blinking at once",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "חֶדֶר שָׁלוֹשׁ. חֶדֶר שֶׁבַע.",
+   "translit": "Cheder shalosh. Cheder sheva.",
+   "en": "Room three. Room seven.",
+   "img": "assets/books/book34/BOOK34_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book34-p06.mp3",
+    "m": "audio/m/israeli/book/book34-p06.mp3"
+   },
+   "illustration": "the nurse hurrying between doors",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "אִישׁ זָקֵן לֹא יָשֵׁן.",
+   "translit": "Ish zaken lo yashen.",
+   "en": "An old man can't sleep.",
+   "img": "assets/books/book34/BOOK34_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book34-p07.mp3",
+    "m": "audio/m/israeli/book/book34-p07.mp3"
+   },
+   "illustration": "an elderly patient sitting up in bed",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "\"סַפְּרִי לִי מַשֶּׁהוּ.\"",
+   "translit": "\"Sapri li mashehu.\"",
+   "en": "\"Tell me something.\"",
+   "img": "assets/books/book34/BOOK34_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book34-p08.mp3",
+    "m": "audio/m/israeli/book/book34-p08.mp3"
+   },
+   "illustration": "the man asking gently",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "יָעֵל מְסַפֶּרֶת עַל הַיָּם.",
+   "translit": "Yael mesaperet al ha-yam.",
+   "en": "Yael tells him about the sea.",
+   "img": "assets/books/book34/BOOK34_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book34-p09.mp3",
+    "m": "audio/m/israeli/book/book34-p09.mp3"
+   },
+   "illustration": "the nurse on the edge of the bed, hands shaping waves",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "הוּא יָשֵׁן.",
+   "translit": "Hu yashen.",
+   "en": "He sleeps.",
+   "img": "assets/books/book34/BOOK34_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book34-p10.mp3",
+    "m": "audio/m/israeli/book/book34-p10.mp3"
+   },
+   "illustration": "the man asleep, peaceful",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "שֵׁשׁ בַּבֹּקֶר. הַשֶּׁמֶשׁ.",
+   "translit": "Shesh ba-boker. Ha-shemesh.",
+   "en": "Six in the morning. The sun.",
+   "img": "assets/books/book34/BOOK34_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book34-p11.mp3",
+    "m": "audio/m/israeli/book/book34-p11.mp3"
+   },
+   "illustration": "sunlight through the ward windows",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "יָעֵל הוֹלֶכֶת הַבַּיְתָה לִישֹׁן.",
+   "translit": "Yael holechet ha-baitah lishon.",
+   "en": "Yael goes home to sleep.",
+   "img": "assets/books/book34/BOOK34_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book34-p12.mp3",
+    "m": "audio/m/israeli/book/book34-p12.mp3"
+   },
+   "illustration": "the nurse walking out as the city wakes, yawning",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

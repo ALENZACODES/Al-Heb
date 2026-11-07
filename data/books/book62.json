@@ -1,0 +1,177 @@
+{
+ "id": "book62",
+ "titleHe": "שָׁנָה בְּיִשְׂרָאֵל",
+ "titleTranslit": "Shanah Be-Yisrael",
+ "titleEn": "One Year in Israel",
+ "level": "Beginner 3",
+ "pages": [
+  {
+   "n": 1,
+   "he": "לִפְנֵי שָׁנָה: מַארְק בָּא לְיִשְׂרָאֵל.",
+   "translit": "Lifnei shanah: Mark ba le-Yisrael.",
+   "en": "A year ago: Mark came to Israel.",
+   "img": "assets/books/book62/BOOK62_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book62-p01.mp3",
+    "m": "audio/m/israeli/book/book62-p01.mp3"
+   },
+   "illustration": "a man with two suitcases at the airport exit, overwhelmed",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "הוּא לֹא יָדַע מִלָּה.",
+   "translit": "Hu lo yada milah.",
+   "en": "He didn't know a word.",
+   "img": "assets/books/book62/BOOK62_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book62-p02.mp3",
+    "m": "audio/m/israeli/book/book62-p02.mp3"
+   },
+   "illustration": "Hebrew signs swirling around him",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "הוּא אָמַר \"שָׁלוֹם\" לַכֹּל.",
+   "translit": "Hu amar \"shalom\" la-kol.",
+   "en": "He said \"shalom\" to everything.",
+   "img": "assets/books/book62/BOOK62_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book62-p03.mp3",
+    "m": "audio/m/israeli/book/book62-p03.mp3"
+   },
+   "illustration": "the man saying shalom to a cat, a bus, a fridge",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "הוּא קָנָה לֶחֶם עִם הַיָּדַיִם.",
+   "translit": "Hu kanah lechem im ha-yadayim.",
+   "en": "He bought bread with his hands.",
+   "img": "assets/books/book62/BOOK62_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book62-p04.mp3",
+    "m": "audio/m/israeli/book/book62-p04.mp3"
+   },
+   "illustration": "pointing at a loaf, holding up fingers",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "הוּא נָסַע בָּאוֹטוֹבּוּס הַלֹּא נָכוֹן.",
+   "translit": "Hu nasa ba-otobus ha-lo nachon.",
+   "en": "He took the wrong bus.",
+   "img": "assets/books/book62/BOOK62_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book62-p05.mp3",
+    "m": "audio/m/israeli/book/book62-p05.mp3"
+   },
+   "illustration": "a bus heading into the desert, his face at the window",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "הוּא לָמַד כָּל יוֹם.",
+   "translit": "Hu lamad kol yom.",
+   "en": "He studied every day.",
+   "img": "assets/books/book62/BOOK62_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book62-p06.mp3",
+    "m": "audio/m/israeli/book/book62-p06.mp3"
+   },
+   "illustration": "flashcards on a bus, on a beach, in bed",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "הוּא עָשָׂה טְעוּיוֹת. הַרְבֵּה.",
+   "translit": "Hu asah te'uyot. Harbeh.",
+   "en": "He made mistakes. Many.",
+   "img": "assets/books/book62/BOOK62_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book62-p07.mp3",
+    "m": "audio/m/israeli/book/book62-p07.mp3"
+   },
+   "illustration": "a crowd laughing kindly at something he said",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "אֲנָשִׁים תִּקְּנוּ אוֹתוֹ.",
+   "translit": "Anashim tiknu oto.",
+   "en": "People corrected him.",
+   "img": "assets/books/book62/BOOK62_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book62-p08.mp3",
+    "m": "audio/m/israeli/book/book62-p08.mp3"
+   },
+   "illustration": "a vendor gently repeating a word",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "הַיּוֹם הוּא בַּשּׁוּק.",
+   "translit": "Ha-yom hu ba-shuk.",
+   "en": "Today he is at the market.",
+   "img": "assets/books/book62/BOOK62_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book62-p09.mp3",
+    "m": "audio/m/israeli/book/book62-p09.mp3"
+   },
+   "illustration": "the man at a stall, confident",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "\"כַּמָּה זֶה?\" \"עֶשֶׂר.\" \"יָקָר! שְׁמוֹנֶה.\"",
+   "translit": "\"Kamah zeh?\" \"Eser.\" \"Yakar! Shmoneh.\"",
+   "en": "\"How much?\" \"Ten.\" \"Expensive! Eight.\"",
+   "img": "assets/books/book62/BOOK62_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book62-p10.mp3",
+    "m": "audio/m/israeli/book/book62-p10.mp3"
+   },
+   "illustration": "bargaining, both grinning",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "הַמּוֹכֵר צוֹחֵק: \"אַתָּה יִשְׂרְאֵלִי.\"",
+   "translit": "Ha-mocher tzochek: \"Atah Yisre'eli.\"",
+   "en": "The vendor laughs: \"You're Israeli.\"",
+   "img": "assets/books/book62/BOOK62_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book62-p11.mp3",
+    "m": "audio/m/israeli/book/book62-p11.mp3"
+   },
+   "illustration": "the vendor slapping his shoulder",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "מַארְק מְחַיֵּךְ. שָׁנָה אַחַת.",
+   "translit": "Mark mechayech. Shanah achat.",
+   "en": "Mark smiles. One year.",
+   "img": "assets/books/book62/BOOK62_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book62-p12.mp3",
+    "m": "audio/m/israeli/book/book62-p12.mp3"
+   },
+   "illustration": "the man walking home with a full bag, the city in gold light",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

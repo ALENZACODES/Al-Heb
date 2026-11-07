@@ -1,0 +1,177 @@
+{
+ "id": "book36",
+ "titleHe": "רוֹפְאָה, אֲנִי בְּסֵדֶר",
+ "titleTranslit": "Rof'ah, Ani Beseder",
+ "titleEn": "Doctor, I'm Fine",
+ "level": "Beginner 2",
+ "pages": [
+  {
+   "n": 1,
+   "he": "אֵיתָן לֹא מַרְגִּישׁ טוֹב.",
+   "translit": "Eitan lo margish tov.",
+   "en": "Eitan doesn't feel well.",
+   "img": "assets/books/book36/BOOK36_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book36-p01.mp3",
+    "m": "audio/m/israeli/book/book36-p01.mp3"
+   },
+   "illustration": "a man on the couch under a blanket, tissues",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "\"אֲנִי בְּסֵדֶר,\" הוּא אוֹמֵר.",
+   "translit": "\"Ani beseder,\" hu omer.",
+   "en": "\"I'm fine,\" he says.",
+   "img": "assets/books/book36/BOOK36_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book36-p02.mp3",
+    "m": "audio/m/israeli/book/book36-p02.mp3"
+   },
+   "illustration": "the man waving off his partner, sneezing",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "הוּא לֹא בְּסֵדֶר.",
+   "translit": "Hu lo beseder.",
+   "en": "He is not fine.",
+   "img": "assets/books/book36/BOOK36_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book36-p03.mp3",
+    "m": "audio/m/israeli/book/book36-p03.mp3"
+   },
+   "illustration": "red nose, thermometer in mouth",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "הוּא הוֹלֵךְ לָרוֹפְאָה.",
+   "translit": "Hu holech la-rof'ah.",
+   "en": "He goes to the doctor.",
+   "img": "assets/books/book36/BOOK36_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book36-p04.mp3",
+    "m": "audio/m/israeli/book/book36-p04.mp3"
+   },
+   "illustration": "a clinic waiting room, he's slumped in a chair",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "\"מָה כּוֹאֵב?\"",
+   "translit": "\"Mah ko'ev?\"",
+   "en": "\"What hurts?\"",
+   "img": "assets/books/book36/BOOK36_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book36-p05.mp3",
+    "m": "audio/m/israeli/book/book36-p05.mp3"
+   },
+   "illustration": "the doctor, a woman with a stethoscope",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "\"כְּלוּם. אֲנִי בְּסֵדֶר.\"",
+   "translit": "\"Klum. Ani beseder.\"",
+   "en": "\"Nothing. I'm fine.\"",
+   "img": "assets/books/book36/BOOK36_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book36-p06.mp3",
+    "m": "audio/m/israeli/book/book36-p06.mp3"
+   },
+   "illustration": "the man insisting, then coughing",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "הָרוֹפְאָה מִסְתַּכֶּלֶת.",
+   "translit": "Ha-rof'ah mistakelet.",
+   "en": "The doctor looks.",
+   "img": "assets/books/book36/BOOK36_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book36-p07.mp3",
+    "m": "audio/m/israeli/book/book36-p07.mp3"
+   },
+   "illustration": "the doctor with a flashlight, checking his throat",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "\"אַתָּה לֹא בְּסֵדֶר.\"",
+   "translit": "\"Atah lo beseder.\"",
+   "en": "\"You are not fine.\"",
+   "img": "assets/books/book36/BOOK36_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book36-p08.mp3",
+    "m": "audio/m/israeli/book/book36-p08.mp3"
+   },
+   "illustration": "the doctor's flat expression",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "\"יֵשׁ לְךָ שַׁפַּעַת.\"",
+   "translit": "\"Yesh lecha shapa'at.\"",
+   "en": "\"You have the flu.\"",
+   "img": "assets/books/book36/BOOK36_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book36-p09.mp3",
+    "m": "audio/m/israeli/book/book36-p09.mp3"
+   },
+   "illustration": "a prescription pad",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "\"מִטָּה. מָרָק. תֵּה.\"",
+   "translit": "\"Mitah. Marak. Teh.\"",
+   "en": "\"Bed. Soup. Tea.\"",
+   "img": "assets/books/book36/BOOK36_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book36-p10.mp3",
+    "m": "audio/m/israeli/book/book36-p10.mp3"
+   },
+   "illustration": "three icons: bed, soup, tea",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "אֵיתָן בַּבַּיִת, בַּמִּטָּה.",
+   "translit": "Eitan ba-bayit, ba-mitah.",
+   "en": "Eitan is at home, in bed.",
+   "img": "assets/books/book36/BOOK36_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book36-p11.mp3",
+    "m": "audio/m/israeli/book/book36-p11.mp3"
+   },
+   "illustration": "the man tucked in with soup and tea, partner smug",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "\"בְּסֵדֶר. אֲנִי לֹא בְּסֵדֶר.\"",
+   "translit": "\"Beseder. Ani lo beseder.\"",
+   "en": "\"Fine. I'm not fine.\"",
+   "img": "assets/books/book36/BOOK36_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book36-p12.mp3",
+    "m": "audio/m/israeli/book/book36-p12.mp3"
+   },
+   "illustration": "the man admitting it, half asleep",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

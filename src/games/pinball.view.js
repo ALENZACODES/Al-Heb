@@ -43,7 +43,7 @@ export function stepBall(ball, dt, targets, expectedId) {
 }
 export function mount(root, ctx) {
   const leaveSfx = sfx.enter(ctx);
-  let alive = true, raf = 0, last = 0, deck = [], R = null, choices = [], expected, aim = 1, rounds = 0, session, running = false, paused = false;
+  let alive = true, raf = 0, last = 0, deck = [], R = null, choices = [], expected, aim = 1, rounds = 0, session, running = false, paused = false, barObserver = null;
   const ball = { x: 50, y: 90, vx: 0, vy: 0, armed: false };
   const status = h('p', { role: 'status', 'aria-live': 'polite' }, 'Loading letter records…');
   const speechNote = h('p', { class: 'muted', 'data-speech': 'pinball' });
@@ -84,12 +84,33 @@ export function mount(root, ctx) {
     [...targets.children].forEach((e, i) => e.setAttribute('aria-pressed', String(i === aim)));
   }
   function resetBall() { Object.assign(ball, { x: 50, y: 90, vx: 0, vy: 0, armed: false }); }
+  // The phone tab bar is fixed. A notice above the table can leave only a strip of it on screen, under that bar.
+  // Scroll the whole table up so the flippers and bumpers clear the bar. The bar stays, and the artwork size stays.
+  function revealTable() {
+    try {
+      if (!alive || !table.isConnected || typeof table.getBoundingClientRect !== 'function' || typeof table.scrollIntoView !== 'function') return;
+      const nav = document.querySelector?.('.site-nav');
+      if (!nav || typeof nav.getBoundingClientRect !== 'function' || typeof getComputedStyle !== 'function') return;
+      const pos = getComputedStyle(nav).position;
+      if (pos !== 'fixed' && pos !== 'sticky') return;
+      if (table.getBoundingClientRect().bottom > nav.getBoundingClientRect().top - 4) table.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+    } catch { /* tests have no page layout */ }
+  }
+  function watchSoundBar() {
+    if (barObserver || typeof ResizeObserver !== 'function') return;
+    const bar = document.querySelector?.('.sound-bar');
+    if (!bar) return;
+    barObserver = new ResizeObserver(() => revealTable());
+    try { barObserver.observe(bar); } catch { barObserver = null; }
+  }
   function start() {
     session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 6 }); rounds = 0; last = 0; resetBall(); running = true;
     table.replaceChildren(targets, marble);
     const image = imgOf(R, 'id', 'GAME_pinball_table');
     if (image) table.style.backgroundImage = `url("${image.src}")`;
     board.replaceChildren(controls, table); newRound();
+    revealTable();
+    watchSoundBar();
     cancelAnimationFrame(raf); raf = requestAnimationFrame(tick);
   }
   function tick(now) {
@@ -129,5 +150,5 @@ export function mount(root, ctx) {
     if (deck.length < 3) { status.textContent = 'At least three complete letter records are required.'; return; }
     start();
   }).catch(() => { if (alive) status.textContent = 'Letter data unavailable. Try again when online.'; });
-  return () => { alive = false; running = false; cancelAnimationFrame(raf); window.removeEventListener('keydown', key); try { ctx?.audio?.stop?.(); } catch { /* already gone */ } leaveSfx(); };
+  return () => { alive = false; running = false; cancelAnimationFrame(raf); try { barObserver?.disconnect(); } catch { /* already gone */ } window.removeEventListener('keydown', key); try { ctx?.audio?.stop?.(); } catch { /* already gone */ } leaveSfx(); };
 }

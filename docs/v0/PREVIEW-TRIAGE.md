@@ -72,6 +72,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `syllabus` | keep | Syllabus and goals; target for `time-budget`. |
 | `time-budget` | hide | Planning numbers; belongs inside `syllabus`. |
 | `daily` | keep | Daily goal and quests. |
+| `awards` | keep | Practice-game activity and a sample beginner certificate. Not a lesson score. |
 
 ## First session path (unchanged)
 

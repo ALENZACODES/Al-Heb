@@ -163,6 +163,9 @@ export function img(h, spec) {
     class: spec.class ? `alef-img ${spec.class}` : 'alef-img',
     src: r.src, width: r.width, height: r.height, loading: 'lazy', decoding: 'async',
     alt: spec.decorative ? '' : r.alt, sizes: spec.sizes, 'data-img-id': r.id, ...(r.approved ? {} : { 'data-unapproved': '' }),
-    style: `aspect-ratio:${r.width}/${r.height};max-width:100%;height:auto`,
+    // No inline max-width: the stylesheet's .alef-img rule carries max-width:100%,
+    // and the per-class caps (.at-pic, .vc-pic, .pl-pic, ...) are declared after it
+    // so they can win. An inline max-width here would silently override them all.
+    style: `aspect-ratio:${r.width}/${r.height};height:auto`,
   });
 }

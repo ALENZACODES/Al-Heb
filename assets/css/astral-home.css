@@ -70,6 +70,9 @@
 
 .astral-scene {
   position: relative; width: 100%; height: clamp(280px, 48vw, 500px);
+  /* Short landscape screens (fold half-open, dual panes, landscape tablets):
+     the width-driven height alone would push the hero words off-screen. */
+  max-height: 58vh;
   background: linear-gradient(180deg, #1E4634 0%, #6B7F3A 55%, #D9A441 100%);
   isolation: isolate; overflow: hidden;
 }

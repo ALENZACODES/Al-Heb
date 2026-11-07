@@ -49,7 +49,7 @@ Local, before anything else (these can be run locally; **John does** everything 
 
 ## CSP consequences (decide before launch)
 The CSP allows only `'self'`, `blob:` and `data:`, plus `http://127.0.0.1:*` and `http://localhost:*` for the optional local translation helper. Required relaxations, all explained in `_headers`: `style-src 'unsafe-inline'` (inline style attributes set from JavaScript, and `offline.html`), `script-src 'wasm-unsafe-eval'` (Tesseract WebAssembly), `worker-src blob:`.
-Blocked on purpose: the optional online vowel service (Dicta Nakdan, `src/photo/engines/web.js`, off by default, sends recognised text to a third party and has no confirmed terms) and the Google Vision URL named in the same file. If John wants Nakdan, add `https://nakdan-u2-1a.loadbalancer.dicta.org.il` to `connect-src` in `_headers`; that breaks the "no third-party origins" promise in the privacy text, so it is a product decision.
+Removed 2026-11-07 (fix #16): the optional online vowel service (Dicta Nakdan) and the Google Vision URL named in `src/photo/engines/web.js` were deleted from the code, because this CSP blocked both hosts and the vowel service has no confirmed terms. Nothing in the app calls a third-party origin now; the local translation helper (`http://127.0.0.1:*`, `http://localhost:*`) is the only non-`'self'` connect-src entry.
 Cache policy: no file name is content-hashed, so nothing is `immutable`. Code and data revalidate on every load (a 304 is cheap); fonts, icons, workbook PDFs and the OCR runtime are cached for one week. A hashed-name rule is stubbed at the end of `_headers`.
 
 ## Capacitor wrapper: review of docs/CAPACITOR.md

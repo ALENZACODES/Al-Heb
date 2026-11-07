@@ -2,7 +2,7 @@
 // ctx (from lane 8): {settings, store, audio, route, t, photoEngines?, registry?, photoLocalServer?}.
 //   ctx.photoEngines  optional engine bundle override (tests/demo: the mock bundle shows a "demo engine" banner).
 //   default           real engines from ./engines/index.js: in-browser tesseract.js (vendored, lazy ~5 MB download on first photo),
-//                     optional online vowels via Dicta Nakdan (OFF until the user ticks the box), optional local translation helper
+//                     no online vowelizer in this build (removed 2026-11-07, fix #16), optional local translation helper
 //                     if ctx.photoLocalServer is set (see tools/ocr-server.mjs).
 // Accuracy on real photos is UNMEASURED (synthetic benchmark only: docs/photo/BENCHMARK.md). The UI says so.
 import { runPipeline } from './pipeline.js';
@@ -50,8 +50,9 @@ export function mount(root, ctx = {}) {
   wrap.append(el('p', { class: 'photo-accuracy', role: 'note', style: 'border-left:4px solid #b26a00;padding:0.4em 0.8em;background:rgba(178,106,0,0.10)' }, ACCURACY_NOTICE));
   wrap.append(el('p', { class: 'photo-scope' }, 'Printed text only. Handwriting is not supported.'));
   if (!forced) wrap.append(el('p', { class: 'photo-privacy' }, 'The photo is read on this device (first use downloads about 5 MB of OCR data, then it is cached). It is not uploaded. Accuracy on real photos has not been measured yet: check what was read against the page.'));
-  // Online vowels (Dicta) are not offered: CSP connect-src in _headers does not list Dicta, so the call cannot work on the hosted site.
-  if (!forced) wrap.append(el('p', { class: 'photo-online-off muted', role: 'note' }, 'Adding vowels online is not available in this build. Unpointed text stays as read on this device.'));
+  // No online vowelizer in this build: unpointed text stays as read on this device (prayer lines that match the
+  // built-in texts still show their stored pointing).
+  if (!forced) wrap.append(el('p', { class: 'photo-online-off muted', role: 'note' }, 'No online vowel service in this build. Unpointed text stays as read on this device.'));
   const helperInput = el('input', { type: 'url', id: 'photo-helper', placeholder: 'http://127.0.0.1:8787', 'aria-label': 'Helper address (this computer only), for local translation, optional', style: 'width:14em' });
   const helperMsg = el('span', { class: 'photo-helper-msg', role: 'status' });
   if (!forced) wrap.append(el('details', { class: 'photo-translate-setup' },
@@ -161,7 +162,7 @@ export function mount(root, ctx = {}) {
         if (typed && !isLocalHelperUrl(typed)) { helperMsg.textContent = ' Only an address on this computer (localhost or 127.0.0.1) is accepted; translation stays off.'; }
         else helperMsg.textContent = '';
         const helperUrl = typed && isLocalHelperUrl(typed) ? typed : (ctx.photoLocalServer || null);
-        engines = createPhotoEngines({ online: false, localServerUrl: helperUrl,
+        engines = createPhotoEngines({ localServerUrl: helperUrl,
           onProgress: (m) => { if (m?.status) status.textContent = `${m.status}${typeof m.progress === 'number' ? ` ${Math.round(m.progress * 100)}%` : ''}`; } });
         activeEngines = engines;
       }

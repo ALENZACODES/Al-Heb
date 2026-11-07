@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { runPipeline, composeEngines, MACHINE_TRANSLATION_LABEL } from '../src/photo/pipeline.js';
 import { createMockEngine } from '../src/photo/engines/mock.js';
-import { createNakdanVowelizer, parseNakdanResponse, nakdanRequest, tesseractWordsToBoxes, createTesseractOcr, visionResponseToBoxes, createVisionOcr, createLibreTranslate, createPhonikudPlaceholder, describeAdapters } from '../src/photo/engines/web.js';
+import { tesseractWordsToBoxes, createTesseractOcr, createLibreTranslate, createPhonikudPlaceholder, describeAdapters } from '../src/photo/engines/web.js';
 import { buildCards } from '../src/photo/scan.view.js';
 
 test('sign mode with the mock engine: order, vowelize, syllables, labelled machine translation', async () => {
@@ -90,20 +90,8 @@ test('buildCards: pure card model for the view', async () => {
 });
 
 // ---- adapters: no real network; injected fakes and dry mode ----
-test('Nakdan adapter: dry mode sends nothing; injected fetch is used; parser accepts the real shape (see photo.engines.test.js for recorded live data)', async () => {
-  let called = 0;
-  const f = async () => { called++; return { ok: true, json: async () => ({ data: [{ str: 'שלום', sep: false, nakdan: { word: 'שלום', options: [{ w: 'שָׁ|לוֹם' }] } }, { str: ' ', sep: true, nakdan: { word: ' ', options: [], sep: true } }] }) }; };
-  const dry = await createNakdanVowelizer({ fetch: f, dry: true }).vowelize('שלום');
-  assert.equal(dry.dry, true);
-  assert.equal(called, 0);
-  assert.equal(dry.request.body.data, 'שלום');
-  const live = await createNakdanVowelizer({ fetch: f }).vowelize('שלום');
-  assert.equal(called, 1);
-  assert.equal(live, 'שָׁלוֹם ');
-  assert.throws(() => parseNakdanResponse([]), /no data array/);
-  assert.equal(nakdanRequest('x').method, 'POST');
-  await assert.rejects(() => createNakdanVowelizer({ fetch: async () => ({ ok: false, status: 500 }) }).vowelize('x'), /HTTP 500/);
-});
+// (fix #16, 2026-11-07: the online vowelizer and cloud-vision adapters were removed — their hosts were blocked
+// by the site CSP and the vowel service publishes no terms. No test here may reintroduce them.)
 test('Tesseract adapter: box conversion and injected module (fake)', async () => {
   const data = { words: [{ text: ' שלום ', confidence: 90, bbox: { x0: 10, y0: 20, x1: 60, y1: 50 } }, { text: '', bbox: { x0: 0, y0: 0, x1: 1, y1: 1 } }] };
   assert.deepEqual(tesseractWordsToBoxes(data), [{ text: 'שלום', x: 10, y: 20, w: 50, h: 30, conf: 90 }]);
@@ -111,14 +99,6 @@ test('Tesseract adapter: box conversion and injected module (fake)', async () =>
   assert.equal((await createTesseractOcr({ Tesseract: fake }).ocr('img')).length, 1);
   assert.equal((await createTesseractOcr({ dry: true }).ocr('img')).dry, true);
   await assert.rejects(() => createTesseractOcr({}).ocr('img'), /not provided/);
-});
-test('Vision adapter: response conversion (SYNTHETIC response) and dry mode never calls fetch', async () => {
-  const resp = { responses: [{ fullTextAnnotation: { pages: [{ blocks: [{ paragraphs: [{ words: [{ symbols: [{ text: 'ש' }, { text: 'ם' }], boundingBox: { vertices: [{ x: 5, y: 5 }, { x: 25, y: 5 }, { x: 25, y: 20 }, { x: 5, y: 20 }] } }] }] }] }] } }] };
-  assert.deepEqual(visionResponseToBoxes(resp), [{ text: 'שם', x: 5, y: 5, w: 20, h: 15 }]);
-  const o = createVisionOcr({ fetch: () => { throw new Error('must not be called'); }, dry: true, apiKey: 'SECRET' });
-  const d = await o.ocr('img');
-  assert.equal(d.dry, true);
-  assert.equal(JSON.stringify(d).includes('SECRET'), false);
 });
 test('LibreTranslate-compatible adapter: dry + injected fetch; result is later labelled machine translation by the pipeline', async () => {
   const t = createLibreTranslate({ dry: true, apiKey: 'K' });
@@ -134,6 +114,6 @@ test('LibreTranslate-compatible adapter: dry + injected fetch; result is later l
 test('Phonikud placeholder is inert; describeAdapters lists every adapter as unverified/placeholder', () => {
   assert.equal(createPhonikudPlaceholder().ipa, undefined);
   const d = describeAdapters();
-  assert.equal(d.length, 5);
-  assert.ok(d.every((x) => /unverified|placeholder|dicta-nakdan/.test(x)));
+  assert.equal(d.length, 3);
+  assert.ok(d.every((x) => /unverified|placeholder/.test(x)));
 });

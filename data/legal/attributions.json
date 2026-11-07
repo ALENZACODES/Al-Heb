@@ -353,20 +353,6 @@
       "auditRef": "CONTENT-LICENCE-AUDIT.md#audio-voices"
     },
     {
-      "id": "dicta-nakdan",
-      "name": "Dicta Nakdan online vowel service (optional, off by default)",
-      "group": "services",
-      "usedFor": "Optional third-party call from the photo feature; not content shipped in the app",
-      "licence": "No terms could be read (repo note)",
-      "licenceUrl": "https://dicta.org.il",
-      "commercialUse": "unknown",
-      "shareAlike": false,
-      "attributionText": "Optional vowel service: Dicta (dicta.org.il).",
-      "perItemCredit": false,
-      "status": "unverified",
-      "auditRef": "CONTENT-LICENCE-AUDIT.md#dicta-nakdan"
-    },
-    {
       "id": "project-original",
       "name": "Project-written content (phrasebook, glosses, lessons text, guides, book text, code)",
       "group": "project",

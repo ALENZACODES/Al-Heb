@@ -1,35 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
-import { parseNakdanResponse, nakdanRequest, createNakdanVowelizer, NAKDAN_DEFAULT_URL } from '../src/photo/engines/web.js';
 import { autoNormalize, normalizeContrast, contrastSpan, targetSize, boxBlur } from '../src/photo/preprocess.js';
 import { wordsFromData, createBrowserTesseract } from '../src/photo/engines/tesseract-browser.js';
 import { createLocalServer } from '../src/photo/engines/local-server.js';
 import { createPhotoEngines } from '../src/photo/engines/index.js';
 import { createLane3ShvaClassifier, loadLane3Shva, syllabifyWord } from '../src/photo/syllabify.js';
 import { runPipeline } from '../src/photo/pipeline.js';
-
-const fx = JSON.parse(readFileSync(new URL('../data/photo/_fixtures/nakdan-recorded.json', import.meta.url), 'utf8'));
-
-test('nakdan: recorded live responses (2026-11-04) parse to pointed Hebrew', () => {
-  const got = Object.fromEntries(fx.cases.map((c) => [c.input, parseNakdanResponse(c.response)]));
-  assert.equal(got['שלום'], 'שָׁלוֹם'.normalize('NFC'));
-  assert.equal(got['ברוך הבא'], 'בָּרוּךְ הַבָּא'.normalize('NFC')); // separator token kept, '|' prefix marker dropped
-  assert.equal(got['פתוח סגור'], 'פָּתוּחַ סָגוּר'.normalize('NFC'));
-  assert.ok(!Object.values(got).some((v) => v.includes('|')));
-  assert.throws(() => parseNakdanResponse({}), /no data array/);
-});
-test('nakdan: request shape matches what the web client sends; adapter works with an injected fetch', async () => {
-  const req = nakdanRequest('שלום');
-  assert.equal(req.url, NAKDAN_DEFAULT_URL);
-  assert.deepEqual(Object.keys(req.body).sort(), ['addmorph', 'data', 'genre', 'keepmetagim', 'keepqq', 'nodageshdefmem', 'patachma', 'task', 'useTokenization']);
-  let seen;
-  const v = createNakdanVowelizer({ fetch: async (url, init) => { seen = { url, body: JSON.parse(init.body) }; return { ok: true, json: async () => fx.cases[0].response }; } });
-  assert.equal(await v.vowelize('שלום'), 'שָׁלוֹם'.normalize('NFC'));
-  assert.equal(seen.body.task, 'nakdan'); assert.equal(seen.body.data, 'שלום');
-  const bad = createNakdanVowelizer({ fetch: async () => ({ ok: false, status: 500 }) });
-  await assert.rejects(bad.vowelize('x'), /HTTP 500/);
-});
 
 test('preprocess: low-contrast image is stretched, good-contrast image is left alone, polarity kept', () => {
   const mk = (lo, hi, w = 60, h = 20) => { const d = new Uint8ClampedArray(w * h * 4); for (let i = 0; i < w * h; i++) { const v = (i % w) % 10 < 3 ? lo : hi; d[i * 4] = d[i * 4 + 1] = d[i * 4 + 2] = v; d[i * 4 + 3] = 255; } return { data: d, width: w, height: h }; };
@@ -72,18 +49,22 @@ test('local-server adapter: posts to the right paths, surfaces server errors', a
   assert.equal(log[0][0], 'http://127.0.0.1:9/translate');
 });
 
-test('provider: nothing that leaves the device is enabled by default; opt-ins add disclosure + parts', () => {
+test('provider: nothing that leaves the device is enabled by default; the local helper opt-in adds disclosure + parts; no online vowelizer exists', () => {
   const base = createPhotoEngines({ tesseractLoader: async () => ({}) });
   assert.equal(base.demo, false); assert.equal(typeof base.ocr, 'function');
   assert.equal(base.vowelize, undefined); assert.equal(base.translate, undefined); assert.deepEqual(base.disclosure, []);
-  const full = createPhotoEngines({ online: true, localServerUrl: 'http://127.0.0.1:8787', tesseractLoader: async () => ({}) });
-  assert.equal(typeof full.vowelize, 'function'); assert.equal(typeof full.translate, 'function');
-  assert.ok(full.disclosure.some((d) => /Dicta/.test(d)));
+  const full = createPhotoEngines({ localServerUrl: 'http://127.0.0.1:8787', tesseractLoader: async () => ({}) });
+  assert.equal(full.vowelize, undefined); assert.equal(typeof full.translate, 'function');
+  assert.ok(full.disclosure.some((d) => /helper/.test(d)));
+  assert.ok(!full.disclosure.some((d) => /Dicta|nakdan/i.test(d)));
+  // fix #16 regression: the removed `online` option cannot re-enable a third-party vowelizer
+  const ignored = createPhotoEngines({ online: true, tesseractLoader: async () => ({}) });
+  assert.equal(ignored.vowelize, undefined); assert.deepEqual(ignored.disclosure, []);
 });
 
-test('pipeline with engines shaped like the real ones: OCR boxes -> Nakdan -> syllables -> machine translation label', async () => {
-  const engines = { name: 't', names: { vowelize: 'dicta-nakdan' }, ocr: async () => [{ text: 'ברוך', x: 100, y: 0, w: 40, h: 20 }, { text: 'הבא', x: 50, y: 0, w: 40, h: 20 }],
-    vowelize: createNakdanVowelizer({ fetch: async () => ({ ok: true, json: async () => fx.cases[2].response }) }).vowelize,
+test('pipeline with engines shaped like the real ones: OCR boxes -> vowelize -> syllables -> machine translation label', async () => {
+  const engines = { name: 't', names: { vowelize: 'stub-vowelizer' }, ocr: async () => [{ text: 'ברוך', x: 100, y: 0, w: 40, h: 20 }, { text: 'הבא', x: 50, y: 0, w: 40, h: 20 }],
+    vowelize: async (text) => (text === 'ברוך הבא' ? 'בָּרוּךְ הַבָּא' : text),
     translate: async () => ({ text: 'welcome', engine: 'x' }) };
   const r = await runPipeline({}, engines, { mode: 'sign' });
   assert.equal(r.lines[0].pointed, 'בָּרוּךְ הַבָּא'.normalize('NFC'));

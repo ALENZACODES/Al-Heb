@@ -1,10 +1,10 @@
 # Photo feature: engines, status, and benchmark protocol (Lane 6)
 
-**Status in one line (updated round 2, 2026-11-04):** the scan view now runs a REAL in-browser Tesseract (vendored tesseract.js 7 + `heb`, about 5 MB, lazy) and an opt-in online vowelizer (Dicta Nakdan, live-tested). Both were measured only on SYNTHETIC rendered images (see `BENCHMARK.md`: app engine 88.4% consonant character accuracy there with deskew, 85.2% before). **Accuracy on real photos is unknown.** Translation exists only through an optional local helper (Argos, `tools/ocr-server.mjs`); the default browser setup has none. No IPA engine. The mock engine remains for tests/demo (`ctx.photoEngines`).
+**Status in one line (updated 2026-11-07):** the scan view now runs a REAL in-browser Tesseract (vendored tesseract.js 7 + `heb`, about 5 MB, lazy). The online vowelizer was removed 2026-11-07 (fix #16): its host was blocked by the site CSP and no terms could be read. The Tesseract engine was measured only on SYNTHETIC rendered images (see `BENCHMARK.md`: app engine 88.4% consonant character accuracy there with deskew, 85.2% before). **Accuracy on real photos is unknown.** Translation exists only through an optional local helper (Argos, `tools/ocr-server.mjs`); the default browser setup has none. No IPA engine. The mock engine remains for tests/demo (`ctx.photoEngines`).
 
 Round 3 adds: deskew in the default browser OCR (88.4% synthetic char accuracy, was 85.2%; BENCHMARK.md), `src/photo/word-card.js` (letters + names, syllables, 3-tradition transliteration via lane 3, audio hook), an always-visible accuracy notice, a per-line 'translation unavailable offline' message and an opt-in localhost-only translation helper box (docs/photo/TRANSLATION.md).
 
-Round 2 adds: `src/photo/engines/index.js` (provider `createPhotoEngines`), `tesseract-browser.js`, `local-server.js`, `src/photo/preprocess.js`, corrected Nakdan adapter in `web.js`, lane-3 shva adapter in `syllabify.js` (`loadLane3Shva`, passed to `runPipeline` as `shvaClassifier`).
+Round 2 adds: `src/photo/engines/index.js` (provider `createPhotoEngines`), `tesseract-browser.js`, `local-server.js`, `src/photo/preprocess.js`, lane-3 shva adapter in `syllabify.js` (`loadLane3Shva`, passed to `runPipeline` as `shvaClassifier`).
 
 ## What exists
 
@@ -27,7 +27,7 @@ Round 2 adds: `src/photo/engines/index.js` (provider `createPhotoEngines`), `tes
 - `translate(text) -> string | {text, engine}`. Optional. The pipeline always labels the result `machine translation` (`english.label`, `english.machineTranslation === true`). Text taken from the corpus registry is labelled `corpus translation`.
 - Bundle: `{name, demo?, names?, ocr, vowelize?, ipa?, translate?}`; `composeEngines()` builds one. Supply it as `ctx.photoEngines` (lane 8 must pass it; default is the mock).
 
-Adapters: `node src/photo/engines/web.js --dry` prints what each would send. Run live: Nakdan only (Vision and LibreTranslate adapters are still unexercised).
+Adapters: `node src/photo/engines/web.js --dry` prints what each would send. The online vowelizer and cloud-vision adapters were removed 2026-11-07 (fix #16); LibreTranslate is still unexercised.
 
 ## Engine matrix
 
@@ -41,12 +41,12 @@ Adapters: `node src/photo/engines/web.js --dry` prints what each would send. Run
 | Surya | OCR + reading order | Apache-2.0 repo, "90+ languages"; weights license (believed OpenRAIL-M with revenue threshold) | Weights license UNVERIFIED; no adapter |
 | kraken | OCR (historical) | Apache-2.0 | Not evaluated |
 | EasyOCR | OCR | Believed no Hebrew | UNVERIFIED |
-| Google Cloud Vision | cloud OCR | Hebrew believed supported; first 1,000 units/month free then ~USD 1.50/1,000 | UNVERIFIED. Adapter + response converter written (synthetic response only). Sends photo off device |
+| Google Cloud Vision | cloud OCR | Hebrew believed supported; first 1,000 units/month free then ~USD 1.50/1,000 | Adapter removed 2026-11-07 (fix #16): its host was blocked by the site CSP; no key ever existed. Sends photo off device, so it would need disclosure + a key to return |
 | Azure Read | cloud OCR | Believed Hebrew print; F0 ~5,000 tx/month | UNVERIFIED, no adapter |
 | AWS Textract | cloud OCR | Believed Latin-only | UNVERIFIED, not planned |
 | Apple Vision `VNRecognizeTextRequest` | iOS OCR | Believed no Hebrew through iOS 18 | UNVERIFIED; check `supportedRecognitionLanguages` at runtime on a device |
 | Vision LLMs (GPT, Gemini and similar) | OCR | Print read well, niqqud inconsistent (anecdotal) | UNMEASURED |
-| Dicta Nakdan API | vowelizer | Endpoint used by nakdan.dicta.org.il | RUN live 2026-11-04: shape confirmed, 94.4% agreement with phrasebook pointing (30 phrases). Adapter corrected and wired behind an opt-in checkbox. **No terms/rate limit found: ask Dicta before shipping** |
+| Dicta Nakdan API | vowelizer | Endpoint used by nakdan.dicta.org.il | Removed 2026-11-07 (fix #16): its host was blocked by the site CSP and no terms could be read. Was run live 2026-11-04: shape confirmed, 94.4% agreement with phrasebook pointing (30 phrases); the measurement is kept in BENCHMARK.md |
 | nakdimon / unikud (MIT) | self-hosted vowelizer | Exist | Not wired |
 | Phonikud | IPA + stress | CC BY 4.0 code, ONNX + Python; no JS runtime | Placeholder only (`createPhonikudPlaceholder`, inert) |
 | ML Kit on-device Translation | he->en | Hebrew `he` listed (59 languages) | Verified listing; native Capacitor plugin, no JS adapter here |
@@ -59,7 +59,7 @@ Adapters: `node src/photo/engines/web.js --dry` prints what each would send. Run
 ## Recommended pipeline (hypothesis, to be settled by the benchmark)
 
 1. **Prayer page:** OCR consonants -> `orderLines` -> `matchPrayer` against `registry.json` -> show the *canonical pointed text from the corpus*, syllables, recorded audio, `corpus translation`. Accuracy depends only on the match, not on OCR reading niqqud. If no match >= threshold (default 0.75, **untuned**), fall back to the sign path with a warning.
-2. **Sign/menu:** OCR -> `orderLines` -> vowelize (Nakdan, online) -> `syllabifyWord` -> optional IPA -> per-syllable audio (recorded if present, else browser voice, flagged) -> translation labelled `machine translation`.
+2. **Sign/menu:** OCR -> `orderLines` -> vowelize (no online provider in this build; unpointed text stays as read except where a demo/mock engine supplies pointing) -> `syllabifyWord` -> optional IPA -> per-syllable audio (recorded if present, else browser voice, flagged) -> translation labelled `machine translation`.
 3. **OCR bundle decision** is open: Tesseract.js WASM (small, offline, niqqud weak) vs paddleocr-hebrew ONNX (heavier, Latin/digit handling) vs cloud (privacy, key, cost). Decide from the benchmark below, not from this document.
 4. Print only. Handwriting (ktav yad) OCR is out of scope.
 

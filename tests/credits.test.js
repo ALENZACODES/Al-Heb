@@ -82,26 +82,28 @@ test('privacy: renders every flow and every store key, with the not-legal-advice
   assert.match(text(root), /Delete all my data/);
 });
 
-test('privacy: never claims "nothing leaves your device", and the Dicta flow is marked as sending user data', () => {
+test('privacy: never claims "nothing leaves your device"; no third-party flow remains', () => {
   const root = newRoot(doc); privacy.mount(root, { t: (k) => k });
   assert.doesNotMatch(text(root), /nothing leaves your device|never leaves your device/i);
-  assert.equal(root.querySelector('#flow-dicta').getAttribute('data-sends-user-data'), 'true');
+  assert.equal(root.querySelector('#flow-dicta'), null); // fix #16: the online vowel service was removed
   assert.equal(root.querySelector('#flow-own-site').getAttribute('data-sends-user-data'), 'false');
+  assert.equal(root.querySelector('#flow-local-helper').getAttribute('data-sends-user-data'), 'false');
+  assert.equal(root.querySelector('#flow-speech-recognition').getAttribute('data-sends-user-data'), 'true');
 });
 
-test('privacy facts match the source: Dicta is opt-in and the only third-party URL fetched; CSP and push key as stated', () => {
+test('privacy facts match the source: no third-party vowel/vision fetch exists; CSP and push key as stated', () => {
   const web = read('src/photo/engines/web.js'); const idx = read('src/photo/engines/index.js'); const scan = read('src/photo/scan.view.js');
-  assert.match(web, /sendsTextOffDevice: true/);
-  assert.match(idx, /if \(online\) \{ parts\.vowelize = createNakdanVowelizer/);
-  assert.match(scan, /online: false/);
+  // fix #16: the adapters are gone — no host, URL, factory or constant for them may remain in the file
+  assert.doesNotMatch(web, /nakdan-u2-1a|vision\.googleapis|createVisionOcr|createNakdanVowelizer|NAKDAN_DEFAULT_URL|VISION_URL|nakdanRequest|parseNakdanResponse|visionRequest|visionResponseToBoxes/);
+  assert.doesNotMatch(idx.replace(/\/\/.*$/gm, ''), /web\.js|createNakdanVowelizer|createVisionOcr|online/);
+  assert.doesNotMatch(scan, /online:|Dicta|Nakdan|nakdan-u2-1a|vision\.googleapis/);
   assert.doesNotMatch(scan, /id: 'photo-online'|onlineBox/);
-  assert.match(scan, /Adding vowels online is not available/);
+  assert.match(scan, /No online vowel service in this build/);
   const src = []; const walk = (d) => { for (const n of fs.readdirSync(path.join(ROOT, d), { withFileTypes: true })) { const p = `${d}/${n.name}`; if (n.isDirectory()) walk(p); else if (n.name.endsWith('.js')) src.push(p); } };
   walk('src');
-  // only photo/engines/index.js imports the web adapters (Dicta); the Vision/translate adapters are unused
-  assert.deepEqual(src.filter((p) => /from '\.\/web\.js'/.test(read(p)) && p.startsWith('src/photo/engines/')), ['src/photo/engines/index.js']);
-  assert.deepEqual(src.filter((p) => /web\.js['"]/.test(read(p)) && !p.startsWith('src/shell/privacy') && !p.startsWith('src/photo/engines/web')), ['src/photo/engines/index.js']);
-  assert.doesNotMatch(read('src/photo/engines/index.js'), /createVisionOcr|createLibreTranslate/);
+  // nothing in src/ imports the web adapters any more, and no shipped file names either blocked host
+  assert.deepEqual(src.filter((p) => /web\.js['"]/.test(read(p)) && !p.startsWith('src/photo/engines/web')), []);
+  for (const p of src) assert.doesNotMatch(read(p).replace(/\/\/.*$/gm, ''), /nakdan-u2-1a|vision\.googleapis|dicta\.org\.il/, p);
   // no analytics/beacons/cookies anywhere in the shipped source
   for (const p of src) assert.doesNotMatch(read(p).replace(/\/\/.*$/gm, ''), /sendBeacon|document\.cookie|gtag\(|analytics\.js|new WebSocket|new XMLHttpRequest/, p);
   const hd = read('_headers');

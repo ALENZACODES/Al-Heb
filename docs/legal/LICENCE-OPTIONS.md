@@ -76,7 +76,6 @@ Reading `commercialUse` and `shareAlike` from `data/legal/attributions.json`. No
 | edot-hamizrach-shaliehsaboo | Siddur Edot HaMizrach via Sefaria | CC0 on one row, unknown on another; provenance unclear (15 records) |
 | sefaria-platform | Sefaria terms | Not read |
 | generated-images | image tools | Terms and copyrightability uncertain |
-| dicta-nakdan | Dicta online vowel service | No terms read; off by default, blocked by the site CSP |
 | lessons-unstated-licence | `data/curriculum/lessons.json` (117 vocab records) | No licence stated anywhere |
 
 **Yes-with-conditions (credit and notices only; no SA, no NC)**: tatoeba (CC BY 2.0 FR, per-sentence credit), hebcal-fixtures (CC BY 4.0; file appears to ship), the six font families (SIL OFL 1.1; keep notices; Alef has a Reserved Font Name and is not shipped), dejavu-outlines (Bitstream notice), tesseract-js and tessdata-heb (Apache-2.0; heb model status unverified), xkb-si1452 (permissive per a repo note, unverified).

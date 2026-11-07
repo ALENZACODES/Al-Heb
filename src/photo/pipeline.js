@@ -3,7 +3,7 @@
 //
 // ENGINE INTERFACES (all may be sync or async):
 //   ocr(image)        -> Box[]            required. Box = {text,x,y,w,h} in image pixels (origin top-left).
-//   vowelize(text)    -> string           optional. Unpointed Hebrew -> pointed Hebrew (e.g. Dicta Nakdan adapter).
+//   vowelize(text)    -> string           optional. Unpointed Hebrew -> pointed Hebrew (e.g. the mock lexicon in tests/demo).
 //   ipa(pointed)      -> string|null      optional. Phonikud placeholder; absent in this build.
 //   translate(text)   -> string | {text, engine?}   optional. Hebrew -> English. ALWAYS labelled "machine translation".
 // Engine bundle: {name?, demo?: boolean, ocr, vowelize?, ipa?, translate?, names?:{ocr?,vowelize?,...}}

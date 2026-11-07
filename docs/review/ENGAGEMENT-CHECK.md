@@ -19,8 +19,8 @@ Every `fetch`, `XMLHttpRequest`, `sendBeacon`, `WebSocket`, `EventSource`, `impo
 | Target | Where | Sends user data? | Justification / status |
 | --- | --- | --- | --- |
 | Relative same-origin URLs (lesson, corpus, vocab, grammar, trope, pronunciation, audio, workbook manifest, morning verses, registry) | ~30 `fetch(url)` sites, `sw.js` | No (GET, no body) | Needed to load content. `sw.js` returns early for any other origin (line 37). |
-| `https://nakdan-u2-1a.loadbalancer.dicta.org.il/api` | `src/photo/engines/web.js`, created only in `src/photo/engines/index.js` when `online` is true | Yes: recognised Hebrew text from a scan (not the photo) | Opt-in tick box on the Scan screen, off by default. The CSP in `_headers` does not list it, so it should be blocked on the deployed site (read, not tested live). |
-| `https://vision.googleapis.com/v1/images:annotate` | `src/photo/engines/web.js` (`VISION_URL`, `createVisionOcr`) | Would send a photo | Nothing in `src/` calls `createVisionOcr` (grep, 0 callers). Dead code. Not in the CSP. |
+| ~~`https://nakdan-u2-1a.loadbalancer.dicta.org.il/api`~~ | ~~`src/photo/engines/web.js`, created only in `src/photo/engines/index.js` when `online` is true~~ | ~~Yes: recognised Hebrew text from a scan (not the photo)~~ | REMOVED 2026-11-07 (fix #16): the adapter and its wiring were deleted; the site CSP blocked the host and no terms could be read. |
+| ~~`https://vision.googleapis.com/v1/images:annotate`~~ | ~~`src/photo/engines/web.js` (`VISION_URL`, `createVisionOcr`)~~ | ~~Would send a photo~~ | REMOVED 2026-11-07 (fix #16): the adapter was deleted; nothing in `src/` ever called it and no key existed. |
 | `http://127.0.0.1:8787`, `http://localhost:5000` | `src/photo/engines/local-server.js`, `createLibreTranslate` | Text/photo, to the learner's own machine | `local-server.js` refuses non-loopback hosts. `createLibreTranslate` has no caller in `src/`. |
 | Browser speech recogniser | `src/speak/recognizer.js` | Decided by the browser | Disclosed in the privacy screen. |
 | External `<a href>` links (Wiktionary, kaikki.org, FrequencyWords, CC licence) | `src/vocab/vocab.view.js` | No (user clicks a link) | Credits only. |
@@ -30,7 +30,7 @@ None of the engagement code (`src/morning`, `streak.js`, `notify*.js`, `reminder
 ### Privacy table match
 
 There is no privacy table under `docs/legal/`. `docs/legal/ROUTES.md` only holds the route wiring lines, and `DECISIONS-FOR-JOHN.md` lists "privacy policy" as an open item for John. The table lives in `src/shell/privacy.view.js` (`FLOWS`, `LOCAL_ONLY`, `STORE_KEYS`), and `tests/credits.test.js` checks it against the source (passes, 65-test run above).
-Compared by hand to the list above: FLOWS has own-site, dicta, local-helper and speech-recognition, which matches every live target. It does not list the Vision and LibreTranslate adapters, but the page says in prose that the Vision adapter exists and nothing creates it, and the grep agrees. The reminders row ("no push server... push key is empty") matches `notify.js`. The `streak` and `morning.prefs` / `notify.prefs` keys: `streak` is in `STORE_KEYS`; I did not check that the other two reminder keys are listed, so that is open.
+Compared by hand to the list above: FLOWS has own-site, local-helper and speech-recognition, which matches every live target (the dicta flow was removed with the adapter, 2026-11-07, fix #16). The LibreTranslate adapter is not listed in FLOWS, but it has no caller in `src/` and only targets the learner's own machine (loopback), and the grep agrees. The reminders row ("no push server... push key is empty") matches `notify.js`. The `streak` and `morning.prefs` / `notify.prefs` keys: `streak` is in `STORE_KEYS`; I did not check that the other two reminder keys are listed, so that is open.
 
 ## 2. Notification permission timing
 

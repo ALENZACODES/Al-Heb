@@ -1,7 +1,7 @@
 // Game 10. Cast and production voices stay untouched.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, speak, resultsCard } from './engine.js';
-import { loadGrammarData } from '../grammar/loader.js';
+import { loadGrammarData, loadJson } from '../grammar/loader.js';
 import { buildTopics } from '../grammar/model.js';
 import { sfx } from '../audio/sfx.js';
 
@@ -15,6 +15,18 @@ export function buildPrefixDeck(data) {
   const nouns = new Set((data.words || []).filter(w => w.pos === 'noun' && !w.hidden).map(w => w.id));
   return [...topics.article.items.map(r => ({ ...r, prefix: 'ה' })), ...topics.prefixes.items]
     .filter(r => nouns.has(r.wordId) && r.he && r.baseHe && r.meaning && PREFIXES.some(p => p.id === r.prefix));
+}
+// The deck also ships prebuilt (data/games/prefix-deck.json, ~2 KB): the full
+// grammar path pulls the 7 MB word pool before a single bubble can render,
+// which stalled the game ~20 s on phones (owner report, Nov 7 2026). The
+// prebuilt file is generated from buildPrefixDeck itself; if it is missing
+// or empty, fall back to building the deck from the full grammar data.
+export async function loadDeck() {
+  try {
+    const d = await loadJson('data/games/prefix-deck.json');
+    if (Array.isArray(d?.deck) && d.deck.length) return d.deck;
+  } catch { /* fall through to the full build */ }
+  return buildPrefixDeck(await loadGrammarData());
 }
 // A miss returns no phrase. Never concatenate a guessed prefix to a noun.
 export function completePrefix(record, prefix) {
@@ -73,9 +85,9 @@ export function mount(root, ctx) {
     board.replaceChildren(scene);
     status.textContent = `Phrase ${index + 1} of ${deck.length} · Score ${session.score} · Streak ${session.streak}`;
   }
-  Promise.all([loadGrammarData(), loadGameImages(ctx)]).then(([data, images]) => {
+  Promise.all([loadDeck(), loadGameImages(ctx)]).then(([built, images]) => {
     if (!alive) return;
-    R = images; deck = buildPrefixDeck(data);
+    R = images; deck = built;
     if (!deck.length) { status.textContent = 'No usable attested prefix records available.'; return; }
     start();
   }).catch(() => { if (alive) status.textContent = 'Phrase data unavailable. Try again when online.'; });

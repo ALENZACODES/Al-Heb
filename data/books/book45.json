@@ -1,0 +1,177 @@
+{
+ "id": "book45",
+ "titleHe": "יוֹם חֹפֶשׁ",
+ "titleTranslit": "Yom Chofesh",
+ "titleEn": "A Day Off",
+ "level": "Beginner 3",
+ "pages": [
+  {
+   "n": 1,
+   "he": "יוֹם חֹפֶשׁ. בְּלִי עֲבוֹדָה.",
+   "translit": "Yom chofesh. Bli avodah.",
+   "en": "A day off. No work.",
+   "img": "assets/books/book45/BOOK45_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book45-p01.mp3",
+    "m": "audio/m/israeli/book/book45-p01.mp3"
+   },
+   "illustration": "a phone face down, an unmade bed, sunlight",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "נָדָב לֹא יוֹדֵעַ מָה לַעֲשׂוֹת.",
+   "translit": "Nadav lo yode'a mah la'asot.",
+   "en": "Nadav doesn't know what to do.",
+   "img": "assets/books/book45/BOOK45_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book45-p02.mp3",
+    "m": "audio/m/israeli/book/book45-p02.mp3"
+   },
+   "illustration": "a man standing in his kitchen in pajamas",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "הוּא בּוֹדֵק אֶת הַמֵּייל.",
+   "translit": "Hu bodek et ha-meil.",
+   "en": "He checks his email.",
+   "img": "assets/books/book45/BOOK45_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book45-p03.mp3",
+    "m": "audio/m/israeli/book/book45-p03.mp3"
+   },
+   "illustration": "thumb hovering over the mail icon",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "לֹא! יוֹם חֹפֶשׁ.",
+   "translit": "Lo! Yom chofesh.",
+   "en": "No! A day off.",
+   "img": "assets/books/book45/BOOK45_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book45-p04.mp3",
+    "m": "audio/m/israeli/book/book45-p04.mp3"
+   },
+   "illustration": "the phone going into a drawer",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "הוּא הוֹלֵךְ בָּרְחוֹב בְּלִי תָּכְנִית.",
+   "translit": "Hu holech ba-rechov bli tochnit.",
+   "en": "He walks the street with no plan.",
+   "img": "assets/books/book45/BOOK45_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book45-p05.mp3",
+    "m": "audio/m/israeli/book/book45-p05.mp3"
+   },
+   "illustration": "wandering with hands in pockets, looking up at balconies",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "הוּא מוֹצֵא חֲנוּת סְפָרִים.",
+   "translit": "Hu motzeh chanut sfarim.",
+   "en": "He finds a bookshop.",
+   "img": "assets/books/book45/BOOK45_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book45-p06.mp3",
+    "m": "audio/m/israeli/book/book45-p06.mp3"
+   },
+   "illustration": "a cluttered secondhand bookshop",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "הוּא קוֹנֶה סֵפֶר יָשָׁן.",
+   "translit": "Hu koneh sefer yashan.",
+   "en": "He buys an old book.",
+   "img": "assets/books/book45/BOOK45_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book45-p07.mp3",
+    "m": "audio/m/israeli/book/book45-p07.mp3"
+   },
+   "illustration": "a worn hardcover with a torn jacket",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "הוּא יוֹשֵׁב בַּגַּן.",
+   "translit": "Hu yoshev ba-gan.",
+   "en": "He sits in the park.",
+   "img": "assets/books/book45/BOOK45_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book45-p08.mp3",
+    "m": "audio/m/israeli/book/book45-p08.mp3"
+   },
+   "illustration": "a bench under a ficus tree",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "הוּא קוֹרֵא. הַזְּמַן עוֹבֵר.",
+   "translit": "Hu koreh. Ha-zman over.",
+   "en": "He reads. Time passes.",
+   "img": "assets/books/book45/BOOK45_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book45-p09.mp3",
+    "m": "audio/m/israeli/book/book45-p09.mp3"
+   },
+   "illustration": "the shadow of the tree moving across the bench",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "יֶלֶד שׁוֹאֵל: \"מָה אַתָּה קוֹרֵא?\"",
+   "translit": "Yeled sho'el: \"Mah atah koreh?\"",
+   "en": "A child asks: \"What are you reading?\"",
+   "img": "assets/books/book45/BOOK45_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book45-p10.mp3",
+    "m": "audio/m/israeli/book/book45-p10.mp3"
+   },
+   "illustration": "a small boy with a ball",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "\"סֵפֶר עַל אִישׁ שֶׁאֵין לוֹ תָּכְנִית.\"",
+   "translit": "\"Sefer al ish she-ein lo tochnit.\"",
+   "en": "\"A book about a man with no plan.\"",
+   "img": "assets/books/book45/BOOK45_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book45-p11.mp3",
+    "m": "audio/m/israeli/book/book45-p11.mp3"
+   },
+   "illustration": "the man showing the cover",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "\"נִשְׁמָע טוֹב,\" אוֹמֵר הַיֶּלֶד.",
+   "translit": "\"Nishma tov,\" omer ha-yeled.",
+   "en": "\"Sounds good,\" says the boy.",
+   "img": "assets/books/book45/BOOK45_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book45-p12.mp3",
+    "m": "audio/m/israeli/book/book45-p12.mp3"
+   },
+   "illustration": "the boy running off, the man smiling at the book",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

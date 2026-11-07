@@ -1,0 +1,177 @@
+{
+ "id": "book29",
+ "titleHe": "פְּגִישָׁה רִאשׁוֹנָה",
+ "titleTranslit": "Pgishah Rishonah",
+ "titleEn": "First Date",
+ "level": "Beginner 2",
+ "pages": [
+  {
+   "n": 1,
+   "he": "לְעוֹמֶר יֵשׁ פְּגִישָׁה.",
+   "translit": "Le-Omer yesh pgishah.",
+   "en": "Omer has a date.",
+   "img": "assets/books/book29/BOOK29_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book29-p01.mp3",
+    "m": "audio/m/israeli/book/book29-p01.mp3"
+   },
+   "illustration": "a man checking his phone outside a café at dusk",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "פְּגִישָׁה רִאשׁוֹנָה.",
+   "translit": "Pgishah rishonah.",
+   "en": "A first date.",
+   "img": "assets/books/book29/BOOK29_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book29-p02.mp3",
+    "m": "audio/m/israeli/book/book29-p02.mp3"
+   },
+   "illustration": "a chat on his phone: see you at 8",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "הוּא לָבַשׁ חֻלְצָה חֲדָשָׁה.",
+   "translit": "Hu lavash chultzah chadashah.",
+   "en": "He wore a new shirt.",
+   "img": "assets/books/book29/BOOK29_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book29-p03.mp3",
+    "m": "audio/m/israeli/book/book29-p03.mp3"
+   },
+   "illustration": "a crisp blue shirt, tag still on the sleeve",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "הִיא בָּאָה.",
+   "translit": "Hi ba'ah.",
+   "en": "She arrives.",
+   "img": "assets/books/book29/BOOK29_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book29-p04.mp3",
+    "m": "audio/m/israeli/book/book29-p04.mp3"
+   },
+   "illustration": "a woman with a bicycle helmet under her arm, smiling",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "\"שָׁלוֹם, אֲנִי מָאיָה.\"",
+   "translit": "\"Shalom, ani Maya.\"",
+   "en": "\"Hi, I'm Maya.\"",
+   "img": "assets/books/book29/BOOK29_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book29-p05.mp3",
+    "m": "audio/m/israeli/book/book29-p05.mp3"
+   },
+   "illustration": "a handshake that becomes a half-hug, awkward and warm",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "הֵם יוֹשְׁבִים.",
+   "translit": "Hem yoshvim.",
+   "en": "They sit.",
+   "img": "assets/books/book29/BOOK29_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book29-p06.mp3",
+    "m": "audio/m/israeli/book/book29-p06.mp3"
+   },
+   "illustration": "a small table, two menus",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "הוּא לֹא יוֹדֵעַ מָה לוֹמַר.",
+   "translit": "Hu lo yode'a mah lomar.",
+   "en": "He doesn't know what to say.",
+   "img": "assets/books/book29/BOOK29_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book29-p07.mp3",
+    "m": "audio/m/israeli/book/book29-p07.mp3"
+   },
+   "illustration": "the man opening his mouth, nothing coming out",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "הִיא רוֹאָה אֶת הַתָּג.",
+   "translit": "Hi ro'ah et ha-tag.",
+   "en": "She sees the tag.",
+   "img": "assets/books/book29/BOOK29_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book29-p08.mp3",
+    "m": "audio/m/israeli/book/book29-p08.mp3"
+   },
+   "illustration": "her eyes on the price tag on his sleeve",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "הִיא צוֹחֶקֶת.",
+   "translit": "Hi tzocheket.",
+   "en": "She laughs.",
+   "img": "assets/books/book29/BOOK29_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book29-p09.mp3",
+    "m": "audio/m/israeli/book/book29-p09.mp3"
+   },
+   "illustration": "the woman laughing, hand over her mouth",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "הוּא צוֹחֵק גַּם.",
+   "translit": "Hu tzochek gam.",
+   "en": "He laughs too.",
+   "img": "assets/books/book29/BOOK29_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book29-p10.mp3",
+    "m": "audio/m/israeli/book/book29-p10.mp3"
+   },
+   "illustration": "the man red-faced, pulling off the tag",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "עַכְשָׁו קַל.",
+   "translit": "Achshav kal.",
+   "en": "Now it is easy.",
+   "img": "assets/books/book29/BOOK29_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book29-p11.mp3",
+    "m": "audio/m/israeli/book/book29-p11.mp3"
+   },
+   "illustration": "the two of them talking with their hands, plates arriving",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "פְּגִישָׁה שְׁנִיָּה? כֵּן.",
+   "translit": "Pgishah shniyah? Ken.",
+   "en": "A second date? Yes.",
+   "img": "assets/books/book29/BOOK29_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book29-p12.mp3",
+    "m": "audio/m/israeli/book/book29-p12.mp3"
+   },
+   "illustration": "the two walking off, the bicycle between them",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

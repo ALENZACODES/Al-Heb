@@ -1,0 +1,177 @@
+{
+ "id": "book33",
+ "titleHe": "הַטֶּלֶפוֹן הֶחָדָשׁ",
+ "titleTranslit": "Ha-Telefon He-Chadash",
+ "titleEn": "The New Phone",
+ "level": "Beginner 2",
+ "pages": [
+  {
+   "n": 1,
+   "he": "לְדָוִד יֵשׁ טֶלֶפוֹן חָדָשׁ.",
+   "translit": "Le-David yesh telefon chadash.",
+   "en": "David has a new phone.",
+   "img": "assets/books/book33/BOOK33_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book33-p01.mp3",
+    "m": "audio/m/israeli/book/book33-p01.mp3"
+   },
+   "illustration": "a man opening a sleek box",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "הַטֶּלֶפוֹן יָפֶה.",
+   "translit": "Ha-telefon yafeh.",
+   "en": "The phone is beautiful.",
+   "img": "assets/books/book33/BOOK33_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book33-p02.mp3",
+    "m": "audio/m/israeli/book/book33-p02.mp3"
+   },
+   "illustration": "the glossy phone held up to the light",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "הַטֶּלֶפוֹן חָכָם.",
+   "translit": "Ha-telefon chacham.",
+   "en": "The phone is smart.",
+   "img": "assets/books/book33/BOOK33_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book33-p03.mp3",
+    "m": "audio/m/israeli/book/book33-p03.mp3"
+   },
+   "illustration": "the screen lit with dozens of apps",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "דָּוִד לֹא.",
+   "translit": "David lo.",
+   "en": "David is not.",
+   "img": "assets/books/book33/BOOK33_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book33-p04.mp3",
+    "m": "audio/m/israeli/book/book33-p04.mp3"
+   },
+   "illustration": "the man staring at it, finger hovering",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "\"אֵיפֹה הַכַּפְתּוֹר?\"",
+   "translit": "\"Eifoh ha-kaftor?\"",
+   "en": "\"Where is the button?\"",
+   "img": "assets/books/book33/BOOK33_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book33-p05.mp3",
+    "m": "audio/m/israeli/book/book33-p05.mp3"
+   },
+   "illustration": "turning the phone over looking for a button",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "אֵין כַּפְתּוֹר.",
+   "translit": "Ein kaftor.",
+   "en": "There is no button.",
+   "img": "assets/books/book33/BOOK33_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book33-p06.mp3",
+    "m": "audio/m/israeli/book/book33-p06.mp3"
+   },
+   "illustration": "a smooth glass slab",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "הַטֶּלֶפוֹן מְדַבֵּר.",
+   "translit": "Ha-telefon medaber.",
+   "en": "The phone talks.",
+   "img": "assets/books/book33/BOOK33_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book33-p07.mp3",
+    "m": "audio/m/israeli/book/book33-p07.mp3"
+   },
+   "illustration": "a voice assistant waveform on the screen",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "\"שָׁלוֹם, דָּוִד.\"",
+   "translit": "\"Shalom, David.\"",
+   "en": "\"Hello, David.\"",
+   "img": "assets/books/book33/BOOK33_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book33-p08.mp3",
+    "m": "audio/m/israeli/book/book33-p08.mp3"
+   },
+   "illustration": "the man startled, holding it at arm's length",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "\"מִי זֶה?!\"",
+   "translit": "\"Mi zeh?!\"",
+   "en": "\"Who is that?!\"",
+   "img": "assets/books/book33/BOOK33_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book33-p09.mp3",
+    "m": "audio/m/israeli/book/book33-p09.mp3"
+   },
+   "illustration": "the man looking around the room",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "הַנֶּכְדָּה בָּאָה.",
+   "translit": "Ha-nechdah ba'ah.",
+   "en": "The granddaughter comes.",
+   "img": "assets/books/book33/BOOK33_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book33-p10.mp3",
+    "m": "audio/m/israeli/book/book33-p10.mp3"
+   },
+   "illustration": "a teenager rolling her eyes affectionately",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "\"סַבָּא, תֵּן לִי.\"",
+   "translit": "\"Saba, ten li.\"",
+   "en": "\"Grandpa, give it to me.\"",
+   "img": "assets/books/book33/BOOK33_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book33-p11.mp3",
+    "m": "audio/m/israeli/book/book33-p11.mp3"
+   },
+   "illustration": "her hand out",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "שְׁתֵּי דַּקּוֹת. הַכֹּל עוֹבֵד.",
+   "translit": "Shtei dakot. Ha-kol oved.",
+   "en": "Two minutes. Everything works.",
+   "img": "assets/books/book33/BOOK33_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book33-p12.mp3",
+    "m": "audio/m/israeli/book/book33-p12.mp3"
+   },
+   "illustration": "the grandfather video-calling his sister, delighted",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

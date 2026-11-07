@@ -1,0 +1,177 @@
+{
+ "id": "book31",
+ "titleHe": "הַמָּרָק שֶׁל סָבְתָא",
+ "titleTranslit": "Ha-Marak Shel Savta",
+ "titleEn": "Grandma's Soup",
+ "level": "Beginner 2",
+ "pages": [
+  {
+   "n": 1,
+   "he": "סָבְתָא מְבַשֶּׁלֶת מָרָק.",
+   "translit": "Savta mevashelet marak.",
+   "en": "Grandma cooks soup.",
+   "img": "assets/books/book31/BOOK31_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book31-p01.mp3",
+    "m": "audio/m/israeli/book/book31-p01.mp3"
+   },
+   "illustration": "a grandmother at a stove, a huge pot",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "כָּל יוֹם שִׁישִׁי.",
+   "translit": "Kol yom shishi.",
+   "en": "Every Friday.",
+   "img": "assets/books/book31/BOOK31_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book31-p02.mp3",
+    "m": "audio/m/israeli/book/book31-p02.mp3"
+   },
+   "illustration": "a calendar with every Friday circled",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "נָדָב שׁוֹאֵל: \"מָה בִּפְנִים?\"",
+   "translit": "Nadav sho'el: \"Mah bifnim?\"",
+   "en": "Nadav asks: \"What's inside?\"",
+   "img": "assets/books/book31/BOOK31_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book31-p03.mp3",
+    "m": "audio/m/israeli/book/book31-p03.mp3"
+   },
+   "illustration": "a grown grandson leaning over the pot",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "\"עוֹף.\"",
+   "translit": "\"Of.\"",
+   "en": "\"Chicken.\"",
+   "img": "assets/books/book31/BOOK31_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book31-p04.mp3",
+    "m": "audio/m/israeli/book/book31-p04.mp3"
+   },
+   "illustration": "chicken going into the pot",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "\"גֶּזֶר.\"",
+   "translit": "\"Gezer.\"",
+   "en": "\"Carrot.\"",
+   "img": "assets/books/book31/BOOK31_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book31-p05.mp3",
+    "m": "audio/m/israeli/book/book31-p05.mp3"
+   },
+   "illustration": "orange carrot coins",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "\"בָּצָל.\"",
+   "translit": "\"Batzal.\"",
+   "en": "\"Onion.\"",
+   "img": "assets/books/book31/BOOK31_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book31-p06.mp3",
+    "m": "audio/m/israeli/book/book31-p06.mp3"
+   },
+   "illustration": "an onion being chopped, grandma not crying",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "\"וּמָה עוֹד?\"",
+   "translit": "\"U-mah od?\"",
+   "en": "\"And what else?\"",
+   "img": "assets/books/book31/BOOK31_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book31-p07.mp3",
+    "m": "audio/m/israeli/book/book31-p07.mp3"
+   },
+   "illustration": "the grandson sniffing, puzzled",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "סָבְתָא לֹא אוֹמֶרֶת.",
+   "translit": "Savta lo omeret.",
+   "en": "Grandma doesn't say.",
+   "img": "assets/books/book31/BOOK31_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book31-p08.mp3",
+    "m": "audio/m/israeli/book/book31-p08.mp3"
+   },
+   "illustration": "the grandmother with a sly smile, finger on her lips",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "\"זֶה סוֹד.\"",
+   "translit": "\"Zeh sod.\"",
+   "en": "\"It's a secret.\"",
+   "img": "assets/books/book31/BOOK31_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book31-p09.mp3",
+    "m": "audio/m/israeli/book/book31-p09.mp3"
+   },
+   "illustration": "a small unlabelled jar in her hand",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "נָדָב טוֹעֵם.",
+   "translit": "Nadav to'em.",
+   "en": "Nadav tastes.",
+   "img": "assets/books/book31/BOOK31_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book31-p10.mp3",
+    "m": "audio/m/israeli/book/book31-p10.mp3"
+   },
+   "illustration": "the grandson with a spoon, eyes closing",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "\"סָבְתָא, זֶה הַמָּרָק הֲכִי טוֹב.\"",
+   "translit": "\"Savta, zeh ha-marak hachi tov.\"",
+   "en": "\"Grandma, this is the best soup.\"",
+   "img": "assets/books/book31/BOOK31_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book31-p11.mp3",
+    "m": "audio/m/israeli/book/book31-p11.mp3"
+   },
+   "illustration": "the grandson hugging her from the side",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "\"אֲנִי יוֹדַעַת.\"",
+   "translit": "\"Ani yoda'at.\"",
+   "en": "\"I know.\"",
+   "img": "assets/books/book31/BOOK31_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book31-p12.mp3",
+    "m": "audio/m/israeli/book/book31-p12.mp3"
+   },
+   "illustration": "the grandmother ladling a bowl, proud",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

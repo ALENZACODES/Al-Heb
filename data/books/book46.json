@@ -1,0 +1,177 @@
+{
+ "id": "book46",
+ "titleHe": "הַמִּשְׂרָד",
+ "titleTranslit": "Ha-Misrad",
+ "titleEn": "The Office",
+ "level": "Beginner 3",
+ "pages": [
+  {
+   "n": 1,
+   "he": "מִשְׂרָד קָטָן בְּקוֹמָה שֵׁשׁ.",
+   "translit": "Misrad katan be-komah shesh.",
+   "en": "A small office on the sixth floor.",
+   "img": "assets/books/book46/BOOK46_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book46-p01.mp3",
+    "m": "audio/m/israeli/book/book46-p01.mp3"
+   },
+   "illustration": "an open-plan office with five desks and a whiteboard",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "חֲמִשָּׁה אֲנָשִׁים. רַעְיוֹן אֶחָד.",
+   "translit": "Chamishah anashim. Ra'ayon echad.",
+   "en": "Five people. One idea.",
+   "img": "assets/books/book46/BOOK46_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book46-p02.mp3",
+    "m": "audio/m/israeli/book/book46-p02.mp3"
+   },
+   "illustration": "the team around a whiteboard covered in arrows",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "מָאיָה הִיא הַמְּנַהֶלֶת.",
+   "translit": "Maya hi ha-menahelet.",
+   "en": "Maya is the manager.",
+   "img": "assets/books/book46/BOOK46_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book46-p03.mp3",
+    "m": "audio/m/israeli/book/book46-p03.mp3"
+   },
+   "illustration": "a woman with a marker, listening",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "\"הַלָּקוֹחַ בָּא בְּשָׁעָה עֶשֶׂר.\"",
+   "translit": "\"Ha-lako'ach ba be-sha'ah eser.\"",
+   "en": "\"The client comes at ten.\"",
+   "img": "assets/books/book46/BOOK46_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book46-p04.mp3",
+    "m": "audio/m/israeli/book/book46-p04.mp3"
+   },
+   "illustration": "the clock reading 9:40",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "הַמַּחְשֵׁב לֹא עוֹבֵד.",
+   "translit": "Ha-machshev lo oved.",
+   "en": "The computer isn't working.",
+   "img": "assets/books/book46/BOOK46_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book46-p05.mp3",
+    "m": "audio/m/israeli/book/book46-p05.mp3"
+   },
+   "illustration": "a laptop with a spinning wheel, panic",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "\"מִי יוֹדֵעַ לְתַקֵּן?\"",
+   "translit": "\"Mi yode'a letaken?\"",
+   "en": "\"Who knows how to fix it?\"",
+   "img": "assets/books/book46/BOOK46_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book46-p06.mp3",
+    "m": "audio/m/israeli/book/book46-p06.mp3"
+   },
+   "illustration": "everyone looking at everyone",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "אֵיתָן מְנַסֶּה. לֹא עוֹבֵד.",
+   "translit": "Eitan menaseh. Lo oved.",
+   "en": "Eitan tries. It doesn't work.",
+   "img": "assets/books/book46/BOOK46_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book46-p07.mp3",
+    "m": "audio/m/israeli/book/book46-p07.mp3"
+   },
+   "illustration": "a man hammering keys",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "הַמְּנַקֶּה נִכְנָס.",
+   "translit": "Ha-menakeh nichnas.",
+   "en": "The cleaner comes in.",
+   "img": "assets/books/book46/BOOK46_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book46-p08.mp3",
+    "m": "audio/m/israeli/book/book46-p08.mp3"
+   },
+   "illustration": "an older man with a mop",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "הוּא מִסְתַּכֵּל. הוּא לוֹחֵץ עַל כַּפְתּוֹר.",
+   "translit": "Hu mistakel. Hu lochetz al kaftor.",
+   "en": "He looks. He presses a button.",
+   "img": "assets/books/book46/BOOK46_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book46-p09.mp3",
+    "m": "audio/m/israeli/book/book46-p09.mp3"
+   },
+   "illustration": "the cleaner leaning over, pressing one key",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "עוֹבֵד.",
+   "translit": "Oved.",
+   "en": "It works.",
+   "img": "assets/books/book46/BOOK46_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book46-p10.mp3",
+    "m": "audio/m/israeli/book/book46-p10.mp3"
+   },
+   "illustration": "the screen alive, the team cheering",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "\"תּוֹדָה! מָה הַשֵּׁם שֶׁלְּךָ?\"",
+   "translit": "\"Todah! Mah ha-shem shelcha?\"",
+   "en": "\"Thank you! What's your name?\"",
+   "img": "assets/books/book46/BOOK46_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book46-p11.mp3",
+    "m": "audio/m/israeli/book/book46-p11.mp3"
+   },
+   "illustration": "the manager shaking the cleaner's hand",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "\"מֹשֶׁה. פַּעַם הָיִיתִי מְהַנְדֵּס.\"",
+   "translit": "\"Moshe. Pa'am hayiti mehandes.\"",
+   "en": "\"Moshe. I was once an engineer.\"",
+   "img": "assets/books/book46/BOOK46_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book46-p12.mp3",
+    "m": "audio/m/israeli/book/book46-p12.mp3"
+   },
+   "illustration": "the cleaner smiling modestly, the clock striking ten",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

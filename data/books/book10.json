@@ -1,0 +1,177 @@
+{
+ "id": "book10",
+ "titleHe": "בַּשּׁוּק",
+ "titleTranslit": "Ba-Shuk",
+ "titleEn": "At the Market",
+ "level": "Beginner 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "שׁוּק הַכַּרְמֶל.",
+   "translit": "Shuk Ha-Carmel.",
+   "en": "Carmel Market.",
+   "img": "assets/books/book10/BOOK10_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book10-p01.mp3",
+    "m": "audio/m/israeli/book/book10-p01.mp3"
+   },
+   "illustration": "a crowded covered market, striped awnings, produce stalls",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "עוֹמֶר הוֹלֵךְ לַשּׁוּק.",
+   "translit": "Omer holech la-shuk.",
+   "en": "Omer goes to the market.",
+   "img": "assets/books/book10/BOOK10_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book10-p02.mp3",
+    "m": "audio/m/israeli/book/book10-p02.mp3"
+   },
+   "illustration": "a man with a canvas bag entering the market",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "עַגְבָנִיּוֹת!",
+   "translit": "Agvaniyot!",
+   "en": "Tomatoes!",
+   "img": "assets/books/book10/BOOK10_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book10-p03.mp3",
+    "m": "audio/m/israeli/book/book10-p03.mp3"
+   },
+   "illustration": "a mountain of red tomatoes, vendor shouting",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "מְלָפְפוֹנִים!",
+   "translit": "Melafefonim!",
+   "en": "Cucumbers!",
+   "img": "assets/books/book10/BOOK10_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book10-p04.mp3",
+    "m": "audio/m/israeli/book/book10-p04.mp3"
+   },
+   "illustration": "crates of cucumbers, a hand picking one",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "\"כַּמָּה זֶה?\"",
+   "translit": "\"Kamah zeh?\"",
+   "en": "\"How much is this?\"",
+   "img": "assets/books/book10/BOOK10_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book10-p05.mp3",
+    "m": "audio/m/israeli/book/book10-p05.mp3"
+   },
+   "illustration": "the man holding up a bunch of grapes, vendor with a scale",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "\"עֶשֶׂר שְׁקָלִים.\"",
+   "translit": "\"Eser shkalim.\"",
+   "en": "\"Ten shekels.\"",
+   "img": "assets/books/book10/BOOK10_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book10-p06.mp3",
+    "m": "audio/m/israeli/book/book10-p06.mp3"
+   },
+   "illustration": "the vendor holding up ten fingers, grinning",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "\"יָקָר!\"",
+   "translit": "\"Yakar!\"",
+   "en": "\"Expensive!\"",
+   "img": "assets/books/book10/BOOK10_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book10-p07.mp3",
+    "m": "audio/m/israeli/book/book10-p07.mp3"
+   },
+   "illustration": "the man with mock horror, hand on heart",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "\"בְּסֵדֶר, שְׁמוֹנֶה.\"",
+   "translit": "\"Beseder, shmoneh.\"",
+   "en": "\"Fine, eight.\"",
+   "img": "assets/books/book10/BOOK10_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book10-p08.mp3",
+    "m": "audio/m/israeli/book/book10-p08.mp3"
+   },
+   "illustration": "the vendor laughing, waving him in",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "עוֹמֶר קוֹנֶה.",
+   "translit": "Omer koneh.",
+   "en": "Omer buys.",
+   "img": "assets/books/book10/BOOK10_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book10-p09.mp3",
+    "m": "audio/m/israeli/book/book10-p09.mp3"
+   },
+   "illustration": "coins passing hands, grapes going into the bag",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "לֶחֶם חַם.",
+   "translit": "Lechem cham.",
+   "en": "Hot bread.",
+   "img": "assets/books/book10/BOOK10_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book10-p10.mp3",
+    "m": "audio/m/israeli/book/book10-p10.mp3"
+   },
+   "illustration": "a bakery stall, pita stacked, steam rising",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "זֵיתִים וּגְבִינָה.",
+   "translit": "Zeitim u-gvinah.",
+   "en": "Olives and cheese.",
+   "img": "assets/books/book10/BOOK10_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book10-p11.mp3",
+    "m": "audio/m/israeli/book/book10-p11.mp3"
+   },
+   "illustration": "bowls of green and black olives, a wheel of white cheese",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "הַתִּיק מָלֵא. עוֹמֶר שָׂמֵחַ.",
+   "translit": "Ha-tik maleh. Omer sameach.",
+   "en": "The bag is full. Omer is happy.",
+   "img": "assets/books/book10/BOOK10_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book10-p12.mp3",
+    "m": "audio/m/israeli/book/book10-p12.mp3"
+   },
+   "illustration": "the man walking out with a bulging bag, eating a grape",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

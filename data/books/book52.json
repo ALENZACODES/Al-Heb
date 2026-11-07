@@ -1,0 +1,177 @@
+{
+ "id": "book52",
+ "titleHe": "הַתְּמוּנָה הַיְּשָׁנָה",
+ "titleTranslit": "Ha-Tmunah Ha-Yeshanah",
+ "titleEn": "The Old Photo",
+ "level": "Beginner 3",
+ "pages": [
+  {
+   "n": 1,
+   "he": "יָעֵל מוֹצֵאת תְּמוּנָה בָּרְחוֹב.",
+   "translit": "Yael motzet tmunah ba-rechov.",
+   "en": "Yael finds a photo in the street.",
+   "img": "assets/books/book52/BOOK52_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book52-p01.mp3",
+    "m": "audio/m/israeli/book/book52-p01.mp3"
+   },
+   "illustration": "a black-and-white photo on wet pavement",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "תְּמוּנָה יְשָׁנָה. שָׁחֹר-לָבָן.",
+   "translit": "Tmunah yeshanah. Shachor-lavan.",
+   "en": "An old photo. Black and white.",
+   "img": "assets/books/book52/BOOK52_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book52-p02.mp3",
+    "m": "audio/m/israeli/book/book52-p02.mp3"
+   },
+   "illustration": "the photo close up: a young couple by the sea, 1950s clothes",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "אִישׁ וְאִשָּׁה עַל הַחוֹף.",
+   "translit": "Ish ve-ishah al ha-chof.",
+   "en": "A man and a woman on the beach.",
+   "img": "assets/books/book52/BOOK52_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book52-p03.mp3",
+    "m": "audio/m/israeli/book/book52-p03.mp3"
+   },
+   "illustration": "the couple laughing, a lifeguard tower behind",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "מֵאָחוֹר כָּתוּב: \"1956\".",
+   "translit": "Me-achor katuv: \"1956\".",
+   "en": "On the back it says: \"1956\".",
+   "img": "assets/books/book52/BOOK52_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book52-p04.mp3",
+    "m": "audio/m/israeli/book/book52-p04.mp3"
+   },
+   "illustration": "pencil writing on the back",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "מִי הֵם?",
+   "translit": "Mi hem?",
+   "en": "Who are they?",
+   "img": "assets/books/book52/BOOK52_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book52-p05.mp3",
+    "m": "audio/m/israeli/book/book52-p05.mp3"
+   },
+   "illustration": "the woman turning the photo over and over",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "יָעֵל שָׂמָה אֶת הַתְּמוּנָה בָּאִינְטֶרְנֶט.",
+   "translit": "Yael samah et ha-tmunah ba-internet.",
+   "en": "Yael posts the photo online.",
+   "img": "assets/books/book52/BOOK52_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book52-p06.mp3",
+    "m": "audio/m/israeli/book/book52-p06.mp3"
+   },
+   "illustration": "a post: does anyone know these people?",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "אַלְפֵי אֲנָשִׁים רוֹאִים.",
+   "translit": "Alfei anashim ro'im.",
+   "en": "Thousands of people see it.",
+   "img": "assets/books/book52/BOOK52_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book52-p07.mp3",
+    "m": "audio/m/israeli/book/book52-p07.mp3"
+   },
+   "illustration": "share counts climbing",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "יוֹם אֶחָד: הוֹדָעָה.",
+   "translit": "Yom echad: hoda'ah.",
+   "en": "One day: a message.",
+   "img": "assets/books/book52/BOOK52_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book52-p08.mp3",
+    "m": "audio/m/israeli/book/book52-p08.mp3"
+   },
+   "illustration": "a notification: that's my grandmother",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "\"זֹאת סָבְתָא שֶׁלִּי. וְסָבָא.\"",
+   "translit": "\"Zot savta sheli. Ve-saba.\"",
+   "en": "\"That's my grandmother. And grandfather.\"",
+   "img": "assets/books/book52/BOOK52_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book52-p09.mp3",
+    "m": "audio/m/israeli/book/book52-p09.mp3"
+   },
+   "illustration": "a man's message with a heart",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "הֵם נִפְגָּשִׁים בְּבֵית קָפֶה.",
+   "translit": "Hem nifgashim be-veit kafeh.",
+   "en": "They meet in a café.",
+   "img": "assets/books/book52/BOOK52_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book52-p10.mp3",
+    "m": "audio/m/israeli/book/book52-p10.mp3"
+   },
+   "illustration": "Yael and a man her age at a table, the photo between them",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "הוּא מְסַפֵּר: הֵם הָיוּ נְשׂוּאִים שִׁשִּׁים שָׁנָה.",
+   "translit": "Hu mesaper: hem hayu nesu'im shishim shanah.",
+   "en": "He tells her: they were married sixty years.",
+   "img": "assets/books/book52/BOOK52_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book52-p11.mp3",
+    "m": "audio/m/israeli/book/book52-p11.mp3"
+   },
+   "illustration": "the grandson speaking, eyes bright",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "הַתְּמוּנָה חוֹזֶרֶת הַבַּיְתָה.",
+   "translit": "Ha-tmunah chozeret ha-baitah.",
+   "en": "The photo goes home.",
+   "img": "assets/books/book52/BOOK52_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book52-p12.mp3",
+    "m": "audio/m/israeli/book/book52-p12.mp3"
+   },
+   "illustration": "the photo in a frame on a shelf beside a newer one of the grandson and Yael",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

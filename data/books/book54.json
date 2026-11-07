@@ -1,0 +1,177 @@
+{
+ "id": "book54",
+ "titleHe": "מִתְקַשֵּׁר לְאִמָּא",
+ "titleTranslit": "Mitkasher Le-Ima",
+ "titleEn": "Calling Mom",
+ "level": "Beginner 3",
+ "pages": [
+  {
+   "n": 1,
+   "he": "דָּוִד גָּר בְּבֶּרְלִין.",
+   "translit": "David gar be-Berlin.",
+   "en": "David lives in Berlin.",
+   "img": "assets/books/book54/BOOK54_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book54-p01.mp3",
+    "m": "audio/m/israeli/book/book54-p01.mp3"
+   },
+   "illustration": "a grey apartment block, a bicycle, a man at a window",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "אִמָּא שֶׁלּוֹ גָּרָה בִּבְאֵר שֶׁבַע.",
+   "translit": "Ima shelo garah bi-V'er Sheva.",
+   "en": "His mother lives in Be'er Sheva.",
+   "img": "assets/books/book54/BOOK54_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book54-p02.mp3",
+    "m": "audio/m/israeli/book/book54-p02.mp3"
+   },
+   "illustration": "a sunny low house, a lemon tree",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "כָּל יוֹם רִאשׁוֹן הוּא מִתְקַשֵּׁר.",
+   "translit": "Kol yom rishon hu mitkasher.",
+   "en": "Every Sunday he calls.",
+   "img": "assets/books/book54/BOOK54_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book54-p03.mp3",
+    "m": "audio/m/israeli/book/book54-p03.mp3"
+   },
+   "illustration": "a phone, a calendar with Sundays marked",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "\"מָה נִשְׁמָע, אִמָּא?\"",
+   "translit": "\"Mah nishma, Ima?\"",
+   "en": "\"How are you, Mom?\"",
+   "img": "assets/books/book54/BOOK54_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book54-p04.mp3",
+    "m": "audio/m/israeli/book/book54-p04.mp3"
+   },
+   "illustration": "the man on a video call, his mother's face filling the screen",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "\"בְּסֵדֶר. אָכַלְתָּ?\"",
+   "translit": "\"Beseder. Achalta?\"",
+   "en": "\"Fine. Did you eat?\"",
+   "img": "assets/books/book54/BOOK54_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book54-p05.mp3",
+    "m": "audio/m/israeli/book/book54-p05.mp3"
+   },
+   "illustration": "the mother squinting into the camera",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "\"אָכַלְתִּי.\"",
+   "translit": "\"Achalti.\"",
+   "en": "\"I ate.\"",
+   "img": "assets/books/book54/BOOK54_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book54-p06.mp3",
+    "m": "audio/m/israeli/book/book54-p06.mp3"
+   },
+   "illustration": "the man hiding an empty plate",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "\"מָה אָכַלְתָּ?\"",
+   "translit": "\"Mah achalta?\"",
+   "en": "\"What did you eat?\"",
+   "img": "assets/books/book54/BOOK54_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book54-p07.mp3",
+    "m": "audio/m/israeli/book/book54-p07.mp3"
+   },
+   "illustration": "the mother's unimpressed face",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "\"לֶחֶם.\"",
+   "translit": "\"Lechem.\"",
+   "en": "\"Bread.\"",
+   "img": "assets/books/book54/BOOK54_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book54-p08.mp3",
+    "m": "audio/m/israeli/book/book54-p08.mp3"
+   },
+   "illustration": "a sad slice of bread",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "שֶׁקֶט.",
+   "translit": "Sheket.",
+   "en": "Silence.",
+   "img": "assets/books/book54/BOOK54_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book54-p09.mp3",
+    "m": "audio/m/israeli/book/book54-p09.mp3"
+   },
+   "illustration": "the mother's silence, louder than words",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "\"אֲנִי שׁוֹלַחַת לְךָ חֲבִילָה.\"",
+   "translit": "\"Ani sholachat lecha chavilah.\"",
+   "en": "\"I am sending you a package.\"",
+   "img": "assets/books/book54/BOOK54_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book54-p10.mp3",
+    "m": "audio/m/israeli/book/book54-p10.mp3"
+   },
+   "illustration": "the mother already packing a box: spices, cookies, a jar",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "שָׁבוּעַ אַחֲרֵי: חֲבִילָה.",
+   "translit": "Shavu'a acharei: chavilah.",
+   "en": "A week later: a package.",
+   "img": "assets/books/book54/BOOK54_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book54-p11.mp3",
+    "m": "audio/m/israeli/book/book54-p11.mp3"
+   },
+   "illustration": "the box arriving in Berlin, smelling of home",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "בֶּרְלִין מְרִיחָה כְּמוֹ בְּאֵר שֶׁבַע.",
+   "translit": "Berlin merichah kmo Be'er Sheva.",
+   "en": "Berlin smells like Be'er Sheva.",
+   "img": "assets/books/book54/BOOK54_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book54-p12.mp3",
+    "m": "audio/m/israeli/book/book54-p12.mp3"
+   },
+   "illustration": "the man eating cookies at his window, eyes closed",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

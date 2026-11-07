@@ -1,0 +1,177 @@
+{
+ "id": "book20",
+ "titleHe": "הַכֶּלֶב רוֹצֶה לָלֶכֶת",
+ "titleTranslit": "Ha-Kelev Rotzeh Lalechet",
+ "titleEn": "The Dog Wants to Go Out",
+ "level": "Beginner 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "שֵׁשׁ בַּבֹּקֶר.",
+   "translit": "Shesh ba-boker.",
+   "en": "Six in the morning.",
+   "img": "assets/books/book20/BOOK20_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book20-p01.mp3",
+    "m": "audio/m/israeli/book/book20-p01.mp3"
+   },
+   "illustration": "a dark apartment, a dog's nose at the bedroom door",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "הַכֶּלֶב קָם.",
+   "translit": "Ha-kelev kam.",
+   "en": "The dog gets up.",
+   "img": "assets/books/book20/BOOK20_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book20-p02.mp3",
+    "m": "audio/m/israeli/book/book20-p02.mp3"
+   },
+   "illustration": "a big friendly dog stretching",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "מָאיָה לֹא קָמָה.",
+   "translit": "Maya lo kamah.",
+   "en": "Maya does not get up.",
+   "img": "assets/books/book20/BOOK20_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book20-p03.mp3",
+    "m": "audio/m/israeli/book/book20-p03.mp3"
+   },
+   "illustration": "a woman with the blanket over her head",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "הַכֶּלֶב רוֹצֶה לָלֶכֶת.",
+   "translit": "Ha-kelev rotzeh lalechet.",
+   "en": "The dog wants to go out.",
+   "img": "assets/books/book20/BOOK20_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book20-p04.mp3",
+    "m": "audio/m/israeli/book/book20-p04.mp3"
+   },
+   "illustration": "the dog with the leash in its mouth",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "הַכֶּלֶב מְחַכֶּה.",
+   "translit": "Ha-kelev mechakeh.",
+   "en": "The dog waits.",
+   "img": "assets/books/book20/BOOK20_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book20-p05.mp3",
+    "m": "audio/m/israeli/book/book20-p05.mp3"
+   },
+   "illustration": "the dog sitting perfectly still, staring",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "הַכֶּלֶב לֹא מְחַכֶּה.",
+   "translit": "Ha-kelev lo mechakeh.",
+   "en": "The dog does not wait.",
+   "img": "assets/books/book20/BOOK20_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book20-p06.mp3",
+    "m": "audio/m/israeli/book/book20-p06.mp3"
+   },
+   "illustration": "the dog jumping onto the bed",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "\"בְּסֵדֶר, בְּסֵדֶר!\"",
+   "translit": "\"Beseder, beseder!\"",
+   "en": "\"Okay, okay!\"",
+   "img": "assets/books/book20/BOOK20_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book20-p07.mp3",
+    "m": "audio/m/israeli/book/book20-p07.mp3"
+   },
+   "illustration": "the woman sitting up, hair wild",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "הֵם הוֹלְכִים.",
+   "translit": "Hem holchim.",
+   "en": "They go.",
+   "img": "assets/books/book20/BOOK20_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book20-p08.mp3",
+    "m": "audio/m/israeli/book/book20-p08.mp3"
+   },
+   "illustration": "woman and dog on an empty street at dawn",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "הַכֶּלֶב שָׂמֵחַ.",
+   "translit": "Ha-kelev sameach.",
+   "en": "The dog is happy.",
+   "img": "assets/books/book20/BOOK20_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book20-p09.mp3",
+    "m": "audio/m/israeli/book/book20-p09.mp3"
+   },
+   "illustration": "the dog trotting, tail high",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "מָאיָה גַּם.",
+   "translit": "Maya gam.",
+   "en": "Maya too.",
+   "img": "assets/books/book20/BOOK20_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book20-p10.mp3",
+    "m": "audio/m/israeli/book/book20-p10.mp3"
+   },
+   "illustration": "the woman smiling despite herself, coffee from a kiosk",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "הֵם רוֹאִים אֶת הַשֶּׁמֶשׁ.",
+   "translit": "Hem ro'im et ha-shemesh.",
+   "en": "They see the sunrise.",
+   "img": "assets/books/book20/BOOK20_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book20-p11.mp3",
+    "m": "audio/m/israeli/book/book20-p11.mp3"
+   },
+   "illustration": "sun coming up over rooftops, the two of them watching",
+   "hasImg": false,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "\"תּוֹדָה, כֶּלֶב.\"",
+   "translit": "\"Todah, kelev.\"",
+   "en": "\"Thank you, dog.\"",
+   "img": "assets/books/book20/BOOK20_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book20-p12.mp3",
+    "m": "audio/m/israeli/book/book20-p12.mp3"
+   },
+   "illustration": "the woman crouched, hugging the dog",
+   "hasImg": false,
+   "hasAudio": false
+  }
+ ]
+}

@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book6-p01.mp3"
    },
    "illustration": "dim bedroom, grey light at the window, phone alarm glowing on the nightstand",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book6-p02.mp3"
    },
    "illustration": "a woman in her thirties sitting up in bed, hair messy, eyes half closed",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book6-p03.mp3"
    },
    "illustration": "the woman shuffling to a small kitchen in a bathrobe",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book6-p04.mp3"
    },
    "illustration": "an empty coffee jar held upside down, one bean falling out",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book6-p05.mp3"
    },
    "illustration": "open fridge, bare shelves, a single lemon",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book6-p06.mp3"
    },
    "illustration": "the woman pulling a coat over pajamas, keys in hand",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book6-p07.mp3"
    },
    "illustration": "a small corner café with a striped awning, morning street",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book6-p08.mp3"
    },
    "illustration": "the woman at the counter, barista smiling, espresso machine steaming",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book6-p09.mp3"
    },
    "illustration": "close-up of a paper cup, steam curling, hands around it",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book6-p10.mp3"
    },
    "illustration": "the woman with eyes closed, first sip, pure relief",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book6-p11.mp3"
    },
    "illustration": "the woman walking back along a sunny street, cup in hand",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book6-p12.mp3"
    },
    "illustration": "the coffee cup on a desk beside a laptop, sunlight, the day begins",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   }
  ]

@@ -22,8 +22,8 @@ test('home and welcome place the living Tree of Knowledge above original text, p
     const scene = root.querySelector('.astral-scene');
     assert.ok(scene, 'the astral hero scene exists');
     assert.ok(scene.querySelector('svg'), 'SVG tree exists');
-    assert.ok(scene.querySelector('.astral-growth'), 'tree has a growing branch layer');
-    assert.ok(scene.querySelector('.astral-fruits'), 'pomegranates are built in SVG');
+    assert.ok(scene.all((n) => n.attrs?.class === 'astral-growth').length, 'tree has a growing branch layer');
+    assert.ok(scene.all((n) => n.attrs?.class === 'astral-fruits').length, 'pomegranates are built in SVG');
     const hero = root.querySelector('.show-hero');
     assert.equal(hero.children[0], scene, 'tree is above text, never covers it');
     assert.ok(root.querySelector('.show-try'), 'first word panel unchanged');

@@ -9,7 +9,7 @@
 
 1. **First paint.** Home and Welcome render without awaiting optional image-approval data. Deep-linked lessons keep their existing resolver path. The resolver fills in the shared context after the first home paint.
 2. **Prayer on first pixels.** The supplied Modeh Ani Hebrew/English fallback is present directly in `index.html`, so the opening is not a blank veil before the asynchronous 80-prayer bank arrives. The existing bank selection, no-repeat storage and short dismiss timer remain intact. With JavaScript off, the veil is hidden so the no-script warning is readable.
-3. **Ancient olive-harvest artwork.** Preserve the approved cinematic 1600/900 px WebPs and their still/reduced-motion behaviour. Four live home navigation links reuse *different crops of that same local image*, with no extra icon library or download. No UI text is embedded in image pixels. The words and links remain available when images do not load.
+3. **Ancient olive-harvest artwork.** Preserve the approved cinematic 1600/900 px WebPs and their still/reduced-motion behaviour. Four live home navigation links now pair two dedicated clean artifact pictures (carved clay for Word Finder, shofar and pomegranates for Games) with two responsive harvest-image crops for Books and Prayers, without an icon library or additional remote requests. No UI text is embedded in image pixels. The words and links remain available when images do not load.
 4. **Beginner route.** Integrate the 240-word Day-0 Word Finder and its 25-listed-game/9-level catalogue into one release candidate. The first 24 word choices were selected from entries with existing female/male Israeli synthetic audio slots, although actual playback may still fail if media are unavailable or settings disable sound.
 5. **Truth in labels.** Remove the unsubstantiated “19,466 voice clips” homepage claim. Use the grounded counts: 25 listed games across nine levels, 240 first words, five story books, three traditions. These are catalogue quantities, not a claim that a learner has heard a native recording or that all content is reviewed.
 6. **Progress accuracy.** Count a Word Finder round only when five words are completed; retain credit for each correct headword if a learner leaves early.
@@ -19,7 +19,7 @@
 
 - **CI:** recent GitHub Actions runs have failed before publishing usable step logs, so `node tools/test/run.mjs unit` and full browser/screen-reader tiers **have not been run here**. No green release claim is authorised.
 - **Offline generation:** `precache-manifest.js` and `src/shell/views.generated.js` are generated artifacts. The new Word Finder view should be included in the next run of `node tools/build-precache.mjs`; neither file has been hand-edited. First-install offline access to the new route is therefore not verified.
-- **Visual QA:** different crops reuse one panoramic photograph, not four individually commissioned object photographs. Real Android/iOS responsive, contrast, landscape, 200%-zoom, and 60 fps checks remain required.
+- **Visual QA:** two dedicated cultural-object photographs now distinguish Words and Games; Books and Prayers still reuse the harvest panoramic photograph. Real Android/iOS responsive, contrast, landscape, 200%-zoom, and 60 fps checks remain required.
 - **Content:** 240 word records are sourced from the existing lexicon; simplified English classroom cues are editorial and **not native-teacher reviewed**. A word in the dictionary is not proof that every requested audio file plays.
 - **Human voice:** current project summaries show synthetic assets but no human-teacher recordings. The interface must continue to distinguish device voices, synthetic files and unavailable speech.
 - **Publication:** the repository README states that hosting has not been deployed. A GitHub branch does not mean that the public homepage is live.
@@ -79,3 +79,12 @@ These changes were made directly on the review branch, without relying on the sc
 - PR #30 remains a review candidate. The site is not certified as production-ready and no production merge or deployment was made.
 
 **Site credit remains John Khan.** Source-licence acknowledgements and GitHub's recorded commit authors/timestamps are separate from the app's public attribution and are not falsely removed or renamed.
+
+### Dedicated portal image follow-up
+
+The four doorway links remain ordinary accessible DOM anchors. The Word Finder and Games doorway backgrounds now use distinct, text-free local WebP files rather than enlarging different areas of the same panorama:
+
+- `assets/img/gen/PORTAL_words_clay.webp`: 600 × 450, 43,470 bytes, an olive-tree and fired-clay harvest composition with carved stone.
+- `assets/img/gen/PORTAL_games_shofar.webp`: 600 × 450, 50,590 bytes, a resting shofar and pomegranates beneath the ancient roots.
+
+Both assets were visually inspected, checked for RIFF/WEBP structure and stripped of EXIF/XMP metadata. The site keeps the original landmark/tree artwork for the Books and Prayers doorways and reduced-motion compatibility. No character artwork or audio was altered.

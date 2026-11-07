@@ -15544,12 +15544,18 @@
   "kind": "prayer",
   "id": "vahavta-2",
   "text": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-whole",
   "optional": true,
   "english": "And these words, which I command thee this day, shall be upon thy heart;\nand thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thy house, and when thou walkest by the way, and when thou liest down, and when thou risest up.",
-  "phonetic": "vehayu hadevarim ha'eleh asher anokhi metzavekha hayom al-levavekha veshinantam levanekha vedibarta bam beshivtekha beveitekha uvelekhtekha vaderekh uveshakhbekha uvekumekha"
+  "phonetic": "vehayu hadevarim ha'eleh asher anokhi metzavekha hayom al-levavekha veshinantam levanekha vedibarta bam beshivtekha beveitekha uvelekhtekha vaderekh uveshakhbekha uvekumekha",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "ar-XA-Wavenet-B",
+   "speakingRate": 1.33
+  }
  },
  {
   "path": "audio/m/ashkenazi/prayer/vahavta-2.mp3",
@@ -16018,12 +16024,18 @@
   "kind": "prayer",
   "id": "vahavta-full",
   "text": "וְאָהַבְתָּ אֵת אֲדֹנָי אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃ וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃ וּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃ וּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-whole",
   "optional": true,
   "english": "And thou shalt love the LORD thy God with all thy heart, and with all thy soul, and with all thy might.\nAnd these words, which I command thee this day, shall be upon thy heart;\nand thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thy house, and when thou walkest by the way, and when thou liest down, and when thou risest up.\nAnd thou shalt bind them for a sign upon thy hand, and they shall be for frontlets between thine eyes.\nAnd thou shalt write them upon the door-posts of thy house, and upon thy gates.",
-  "phonetic": "ve'ahavta et adonai elohekha bekhol-levavekha uvekhol-nafshekha uvekhol-me'odekha vehayu hadevarim ha'eleh asher anokhi metzavekha hayom al-levavekha veshinantam levanekha vedibarta bam beshivtekha beveitekha uvelekhtekha vaderekh uveshakhbekha uvekumekha ukeshartam le'ot al-yadekha vehayu letotafot bein einekha ukhetavtam al-mezuzot beitekha uvish'arekha"
+  "phonetic": "ve'ahavta et adonai elohekha bekhol-levavekha uvekhol-nafshekha uvekhol-me'odekha vehayu hadevarim ha'eleh asher anokhi metzavekha hayom al-levavekha veshinantam levanekha vedibarta bam beshivtekha beveitekha uvelekhtekha vaderekh uveshakhbekha uvekumekha ukeshartam le'ot al-yadekha vehayu letotafot bein einekha ukhetavtam al-mezuzot beitekha uvish'arekha",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "ar-XA-Wavenet-B",
+   "speakingRate": 1.33
+  }
  },
  {
   "path": "audio/m/ashkenazi/prayer/vahavta-full.mp3",
@@ -16570,12 +16582,18 @@
   "kind": "prayer",
   "id": "shema-vahavta",
   "text": "שְׁמַע יִשְׂרָאֵל אֲדֹנָי אֱלֹהֵינוּ אֲדֹנָי אֶחָד׃ וְאָהַבְתָּ אֵת אֲדֹנָי אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃ וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃ וּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃ וּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-whole",
   "optional": true,
   "english": "HEAR, O ISRAEL: THE LORD OUR GOD, THE LORD IS ONE.\nAnd thou shalt love the LORD thy God with all thy heart, and with all thy soul, and with all thy might.\nAnd these words, which I command thee this day, shall be upon thy heart;\nand thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thy house, and when thou walkest by the way, and when thou liest down, and when thou risest up.\nAnd thou shalt bind them for a sign upon thy hand, and they shall be for frontlets between thine eyes.\nAnd thou shalt write them upon the door-posts of thy house, and upon thy gates.",
-  "phonetic": "shema yisra'el adonai eloheinu adonai echad ve'ahavta et adonai elohekha bekhol-levavekha uvekhol-nafshekha uvekhol-me'odekha vehayu hadevarim ha'eleh asher anokhi metzavekha hayom al-levavekha veshinantam levanekha vedibarta bam beshivtekha beveitekha uvelekhtekha vaderekh uveshakhbekha uvekumekha ukeshartam le'ot al-yadekha vehayu letotafot bein einekha ukhetavtam al-mezuzot beitekha uvish'arekha"
+  "phonetic": "shema yisra'el adonai eloheinu adonai echad ve'ahavta et adonai elohekha bekhol-levavekha uvekhol-nafshekha uvekhol-me'odekha vehayu hadevarim ha'eleh asher anokhi metzavekha hayom al-levavekha veshinantam levanekha vedibarta bam beshivtekha beveitekha uvelekhtekha vaderekh uveshakhbekha uvekumekha ukeshartam le'ot al-yadekha vehayu letotafot bein einekha ukhetavtam al-mezuzot beitekha uvish'arekha",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "ar-XA-Wavenet-B",
+   "speakingRate": 1.33
+  }
  },
  {
   "path": "audio/m/ashkenazi/prayer/shema-vahavta.mp3",
@@ -17698,12 +17716,18 @@
   "kind": "prayer",
   "id": "kiddush-gen-2-1-3",
   "text": "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃ וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה׃ וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ שָׁבַת מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת׃",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-whole",
   "optional": true,
   "english": "And the heaven and the earth were finished, and all the host of them.\nAnd on the seventh day God finished His work which He had made; and He rested on the seventh day from all His work which He had made.\nAnd God blessed the seventh day, and hallowed it; because that in it He rested from all His work which God in creating had made.",
-  "phonetic": "vaykhulu hashamayim veha'aretz vekhol-tzeva'am vaykhal elohim bayom hashevi'i melakhto asher asah vayishbot bayom hashevi'i mikol-melakhto asher asah vayvarekh elohim et-yom hashevi'i vaykadesh oto ki vo shavat mikol-melakhto asher-bara elohim la'asot"
+  "phonetic": "vaykhulu hashamayim veha'aretz vekhol-tzeva'am vaykhal elohim bayom hashevi'i melakhto asher asah vayishbot bayom hashevi'i mikol-melakhto asher asah vayvarekh elohim et-yom hashevi'i vaykadesh oto ki vo shavat mikol-melakhto asher-bara elohim la'asot",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "ar-XA-Wavenet-B",
+   "speakingRate": 1.33
+  }
  },
  {
   "path": "audio/m/ashkenazi/prayer/kiddush-gen-2-1-3.mp3",
@@ -18586,12 +18610,18 @@
   "kind": "prayer",
   "id": "torah-barchu",
   "text": "בָּרְכוּ אֶת אֲדֹנָי הַמְּבֹרָךְ׃ בָּרוּךְ אֲדֹנָי הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-whole",
   "optional": true,
   "english": "Bless the LORD, the blessed one.\nBlessed is the LORD, the blessed one, for ever and ever.",
-  "phonetic": "barkhu et adonai hamevorakh barukh adonai hamevorakh le'olam va'ed"
+  "phonetic": "barkhu et adonai hamevorakh barukh adonai hamevorakh le'olam va'ed",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "ar-XA-Wavenet-B",
+   "speakingRate": 1.33
+  }
  },
  {
   "path": "audio/m/ashkenazi/prayer/torah-barchu.mp3",
@@ -20246,12 +20276,18 @@
   "kind": "prayer",
   "id": "adon-olam-1",
   "text": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃ לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃ וְאַחֲרֵי כִּכְלוֹת הַכֹּל לְבַדּוֹ יִמְלֹךְ נוֹרָא׃ וְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃ וְהוּא אֶחָד וְאֵין שֵׁנִי לְהַמְשִׁיל לוֹ לְהַחְבִּירָה׃ בְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה׃ וְהוּא אֵלִי וְחַי גוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃ וְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃ בְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישָׁן וְאָעִירָה׃ וְעִם רוּחִי גְּוִיָּתִי אֲדֹנָי לִי וְלֹא אִירָא׃",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
   "group": "prayer-whole",
   "optional": true,
   "english": "Lord of the world, who reigned before any form was created.\nAt the time when all was made by his will, then \"King\" was his name proclaimed.\nAnd after all things have ended, he alone, the awesome one, will reign.\nAnd he was, and he is, and he will be, in glory.\nAnd he is one, and there is no second, to compare to him or to join with him.\nWithout beginning, without end; to him belong the power and the dominion.\nAnd he is my God, and my living redeemer, and the rock of my portion in time of distress.\nAnd he is my banner and my refuge, the portion of my cup on the day I call.\nInto his hand I commit my spirit, when I sleep and when I wake.\nAnd with my spirit, my body too: the LORD is with me and I will not fear.",
-  "phonetic": "adon olam asher malakh beterem kol yetzir nivra le'et na'asah vecheftzo kol azai melekh shemo nikra ve'acharei kikhlot hakol levado yimlokh nora vehu hayah vehu hoveh vehu yihyeh betif'arah vehu echad ve'ein sheni lehamshil lo lehachbirah beli reshit beli takhlit velo ha'oz vehamisrah vehu eli vechai go'ali vetzur chevli be'et tzarah vehu nisi umanos li menat kosi beyom ekra beyado afkid ruchi be'et ishan ve'a'irah ve'im ruchi geviyati adonai li velo ira"
+  "phonetic": "adon olam asher malakh beterem kol yetzir nivra le'et na'asah vecheftzo kol azai melekh shemo nikra ve'acharei kikhlot hakol levado yimlokh nora vehu hayah vehu hoveh vehu yihyeh betif'arah vehu echad ve'ein sheni lehamshil lo lehachbirah beli reshit beli takhlit velo ha'oz vehamisrah vehu eli vechai go'ali vetzur chevli be'et tzarah vehu nisi umanos li menat kosi beyom ekra beyado afkid ruchi be'et ishan ve'a'irah ve'im ruchi geviyati adonai li velo ira",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": 1
+  }
  },
  {
   "path": "audio/m/sephardi/prayer/adon-olam-1.mp3",
@@ -20876,12 +20912,18 @@
   "kind": "prayer",
   "id": "kaddish-1",
   "text": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא אָמֵן בְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן׃ יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא לְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחָמָתָא דַּאֲמִירָן בְּעָלְמָא וְאִמְרוּ אָמֵן׃ יְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃ עוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
   "group": "prayer-whole",
   "optional": true,
   "english": "Magnified and sanctified be his great name. (Amen.)\nIn the world that he created by his will; may he establish his kingdom in your lifetime and in your days and in the lifetime of all the house of Israel, speedily and soon; and say: Amen.\nMay his great name be blessed for ever and for all eternities.\nBlessed, praised, glorified, exalted, extolled, honoured, raised and lauded be the name of the Holy One, blessed be he,\nbeyond all the blessings and songs, praises and consolations that are uttered in the world; and say: Amen.\nMay there be great peace from heaven, and life, for us and for all Israel; and say: Amen.\nHe who makes peace in his high places, may he make peace for us and for all Israel; and say: Amen.",
-  "phonetic": "yitgadal veyitkadash shemeh raba amen be'alema di-vera khir'uteh veyamlikh malkhuteh bechayeikhon uveyomeikhon uvechayei dekhal-beit yisra'el ba'agala uvizman kariv ve'imru amen yehe shemeh raba mevarakh le'alam ule'alemei alemaya yitbarakh veyishtabach veyitpa'ar veyitromam veyitnase veyithadar veyit'aleh veyithalal shemeh dekudesha berikh hu le'ela min-kol-birkhata veshirata tushbechata venechamata da'amiran be'alema ve'imru amen yehe shelama raba min-shemaya vechayim aleinu ve'al-kol-yisra'el ve'imru amen oseh shalom bimromav hu ya'aseh shalom aleinu ve'al kol yisra'el ve'imru amen"
+  "phonetic": "yitgadal veyitkadash shemeh raba amen be'alema di-vera khir'uteh veyamlikh malkhuteh bechayeikhon uveyomeikhon uvechayei dekhal-beit yisra'el ba'agala uvizman kariv ve'imru amen yehe shemeh raba mevarakh le'alam ule'alemei alemaya yitbarakh veyishtabach veyitpa'ar veyitromam veyitnase veyithadar veyit'aleh veyithalal shemeh dekudesha berikh hu le'ela min-kol-birkhata veshirata tushbechata venechamata da'amiran be'alema ve'imru amen yehe shelama raba min-shemaya vechayim aleinu ve'al-kol-yisra'el ve'imru amen oseh shalom bimromav hu ya'aseh shalom aleinu ve'al kol yisra'el ve'imru amen",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": 1
+  }
  },
  {
   "path": "audio/m/sephardi/prayer/kaddish-1.mp3",
@@ -21940,12 +21982,18 @@
   "kind": "prayer",
   "id": "yehalelu",
   "text": "יְהַלְלוּ אֶת־שֵׁם אֲדֹנָי כִּי־נִשְׂגָּב שְׁמוֹ לְבַדּוֹ הוֹדוֹ עַל־אֶרֶץ וְשָׁמָיִם׃ וַיָּרֶם קֶרֶן לְעַמּוֹ תְּהִלָּה לְכָל־חֲסִידָיו לִבְנֵי יִשְׂרָאֵל עַם־קְרֹבוֹ הַלְלוּ־יָהּ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-whole",
   "optional": true,
   "english": "Let them praise the name of the LORD, For His name alone is exalted; His glory is above the earth and heaven.\nAnd He hath lifted up a horn for His people, A praise for all His saints, Even for the children of Israel, a people near unto Him. Hallelujah.",
-  "phonetic": "yehalelu et-shem adonai ki-nisgav shemo levado hodo al-eretz veshamayim vayarem keren le'amo tehilah lekhol-chasidav livnei yisra'el am-kerovo halelu-yah"
+  "phonetic": "yehalelu et-shem adonai ki-nisgav shemo levado hodo al-eretz veshamayim vayarem keren le'amo tehilah lekhol-chasidav livnei yisra'el am-kerovo halelu-yah",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "ar-XA-Wavenet-B",
+   "speakingRate": 1.33
+  }
  },
  {
   "path": "audio/m/ashkenazi/prayer/yehalelu.mp3",
@@ -22828,12 +22876,18 @@
   "kind": "prayer",
   "id": "kiddush-veshamru",
   "text": "וְשָׁמְרוּ בְנֵי־יִשְׂרָאֵל אֶת־הַשַּׁבָּת לַעֲשׂוֹת אֶת־הַשַּׁבָּת לְדֹרֹתָם בְּרִית עוֹלָם׃ בֵּינִי וּבֵין בְּנֵי יִשְׂרָאֵל אוֹת הִוא לְעֹלָם כִּי־שֵׁשֶׁת יָמִים עָשָׂה אֲדֹנָי אֶת־הַשָּׁמַיִם וְאֶת־הָאָרֶץ וּבַיּוֹם הַשְּׁבִיעִי שָׁבַת וַיִּנָּפַשׁ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-whole",
   "optional": true,
   "english": "Wherefore the children of Israel shall keep the sabbath, to observe the sabbath throughout their generations, for a perpetual covenant.\nIt is a sign between Me and the children of Israel for ever; for in six days the LORD made heaven and earth, and on the seventh day He ceased from work and rested.’",
-  "phonetic": "veshamru venei-yisra'el et-hashabat la'asot et-hashabat ledorotam berit olam beini uvein benei yisra'el ot hiv le'olam ki-sheshet yamim asah adonai et-hashamayim ve'et-ha'aretz uvayom hashevi'i shavat vayinafash"
+  "phonetic": "veshamru venei-yisra'el et-hashabat la'asot et-hashabat ledorotam berit olam beini uvein benei yisra'el ot hiv le'olam ki-sheshet yamim asah adonai et-hashamayim ve'et-ha'aretz uvayom hashevi'i shavat vayinafash",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "ar-XA-Wavenet-B",
+   "speakingRate": 1.33
+  }
  },
  {
   "path": "audio/m/ashkenazi/prayer/kiddush-veshamru.mp3",
@@ -23224,12 +23278,18 @@
   "kind": "prayer",
   "id": "kiddush-zachor",
   "text": "זָכוֹר אֶת־יוֹם הַשַׁבָּת לְקַדְּשׁוֹ שֵׁשֶׁת יָמִים תַּעֲבֹד וְעָשִׂיתָ כָּל־מְלַאכְתֶּךָ וְיוֹם הַשְּׁבִיעִי שַׁבָּת לַאֲדֹנָי אֱלֹהֶיךָ לֹא־תַעֲשֶׂה כָל־מְלָאכָה אַתָּה וּבִנְךָ־וּבִתֶּךָ עַבְדְּךָ וַאֲמָתְךָ וּבְהֶמְתֶּךָ וְגֵרְךָ אֲשֶׁר בִּשְׁעָרֶיךָ כִּי שֵׁשֶׁת־יָמִים עָשָׂה אֲדֹנָי אֶת־הַשָּׁמַיִם וְאֶת־הָאָרֶץ אֶת־הַיָּם וְאֶת־כָּל־אֲשֶׁר־בָּם וַיָּנַח בַּיּוֹם הַשְּׁבִיעִי עַל־כֵּן בֵּרַךְ אֲדֹנָי אֶת־יוֹם הַשַׁבָּת וַיְקַדְּשֵׁהוּ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-whole",
   "optional": true,
   "english": "Remember the sabbath day, to keep it holy.\nSix days shalt thou labour, and do all thy work;\nbut the seventh day is a sabbath unto the LORD thy God, in it thou shalt not do any manner of work, thou, nor thy son, nor thy daughter, nor thy man-servant, nor thy maid-servant, nor thy cattle, nor thy stranger that is within thy gates;\nfor in six days the LORD made heaven and earth, the sea, and all that in them is, and rested on the seventh day; wherefore the LORD blessed the sabbath day, and hallowed it.",
-  "phonetic": "zakhor et-yom hashabat lekadesho sheshet yamim ta'avod ve'asita kol-melakhtekha veyom hashevi'i shabat la'adonai elohekha lo-ta'aseh khol-melakhah atah uvinkha-uvitekha avdekha va'amatekha uvehemtekha vegerekha asher bish'arekha ki sheshet-yamim asah adonai et-hashamayim ve'et-ha'aretz et-hayam ve'et-kol-asher-bam vayanach bayom hashevi'i al-ken berakh adonai et-yom hashabat vaykadeshehu"
+  "phonetic": "zakhor et-yom hashabat lekadesho sheshet yamim ta'avod ve'asita kol-melakhtekha veyom hashevi'i shabat la'adonai elohekha lo-ta'aseh khol-melakhah atah uvinkha-uvitekha avdekha va'amatekha uvehemtekha vegerekha asher bish'arekha ki sheshet-yamim asah adonai et-hashamayim ve'et-ha'aretz et-hayam ve'et-kol-asher-bam vayanach bayom hashevi'i al-ken berakh adonai et-yom hashabat vaykadeshehu",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "ar-XA-Wavenet-B",
+   "speakingRate": 1.33
+  }
  },
  {
   "path": "audio/m/ashkenazi/prayer/kiddush-zachor.mp3",
@@ -24580,12 +24640,18 @@
   "kind": "prayer",
   "id": "shir-hamaalot",
   "text": "שִׁיר הַמַּעֲלוֹת בְּשׁוּב אֲדֹנָי אֶת־שִׁיבַת צִיּוֹן הָיִינוּ כְּחֹלְמִים׃ אָז יִמָּלֵא שְׂחוֹק פִּינוּ וּלְשׁוֹנֵנוּ רִנָּה אָז יֹאמְרוּ בַגּוֹיִם הִגְדִּיל אֲדֹנָי לַעֲשׂוֹת עִם־אֵלֶּה׃ הִגְדִּיל אֲדֹנָי לַעֲשׂוֹת עִמָּנוּ הָיִינוּ שְׂמֵחִים׃ שׁוּבָה אֲדֹנָי אֶת־שְׁבִיתֵנוּ כַּאֲפִיקִים בַּנֶּגֶב׃ הַזֹּרְעִים בְּדִמְעָה בְּרִנָּה יִקְצֹרוּ׃ הָלוֹךְ יֵלֵךְ וּבָכֹה נֹשֵׂא מֶשֶׁךְ־הַזָּרַע בֹּא־יָבוֹא בְרִנָּה נֹשֵׂא אֲלֻמֹּתָיו׃",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-whole",
   "optional": true,
   "english": "A Song of Ascents. When the LORD brought back those that returned to Zion, We were like unto them that dream.\nThen was our mouth filled with laughter, and our tongue with singing; then said they among the nations: 'The LORD hath done great things with these.'\nThe LORD hath done great things with us; we are rejoiced.\nTurn our captivity, O LORD, as the streams in the dry land.\nThey that sow in tears Shall reap in joy.\nThough he goeth on his way weeping that beareth the measure of seed, He shall come home with joy, bearing his sheaves.",
-  "phonetic": "shir hama'alot beshuv adonai et-shivat tziyon hayinu kecholemim az yimale sechok pinu uleshonenu rinah az yomru vagoyim higdil adonai la'asot im-eleh higdil adonai la'asot imanu hayinu semechim shuvah adonai et-shevitenu ka'afikim banegev hazore'im bedim'ah berinah yiktzoru halokh yelekh uvakhoh nose meshekh-hazara bo-yavo verinah nose alumotav"
+  "phonetic": "shir hama'alot beshuv adonai et-shivat tziyon hayinu kecholemim az yimale sechok pinu uleshonenu rinah az yomru vagoyim higdil adonai la'asot im-eleh higdil adonai la'asot imanu hayinu semechim shuvah adonai et-shevitenu ka'afikim banegev hazore'im bedim'ah berinah yiktzoru halokh yelekh uvakhoh nose meshekh-hazara bo-yavo verinah nose alumotav",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "ar-XA-Wavenet-B",
+   "speakingRate": 1.33
+  }
  },
  {
   "path": "audio/m/ashkenazi/prayer/shir-hamaalot.mp3",
@@ -26518,12 +26584,18 @@
   "kind": "prayer",
   "id": "sim-shalom",
   "text": "שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה חֵן וָחֶסֶד וְרַחֲמִים עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל עַמֶּךָ בָּרְכֵנוּ אָבִינוּ כֻּלָּנוּ כְּאֶחָד בְּאוֹר פָּנֶיךָ כִּי בְאוֹר פָּנֶיךָ נָתַתָּ לָּנוּ אֲדֹנָי אֱלֹהֵינוּ תּוֹרַת חַיִּים וְאַהֲבַת חֶסֶד וּצְדָקָה וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם וְטוֹב בְּעֵינֶיךָ לְבָרֵךְ אֶת עַמְּךָ יִשְׂרָאֵל בְּכָל־עֵת וּבְכָל־שָׁעָה בִּשְׁלוֹמֶךָ׃ בָּרוּךְ אַתָּה אֲדֹנָי הַמְבָרֵךְ אֶת־עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם׃",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-whole",
   "optional": true,
   "english": "Grant peace, goodness and blessing, grace, kindness and mercy upon us and upon all Israel your people. Bless us, our father, all of us as one, with the light of your face; for by the light of your face you gave us, LORD our God, a Torah of life, love of kindness, righteousness, blessing, mercy, life and peace. And may it be good in your eyes to bless your people Israel at every time and every hour with your peace.\nBlessed are you, LORD, who blesses his people Israel with peace.",
-  "phonetic": "sim shalom tovah uverakhah chen vachesed verachamim aleinu ve'al kol-yisra'el amekha barekhenu avinu kulanu ke'echad be'or panekha ki ve'or panekha natata lanu adonai eloheinu torat chayim ve'ahavat chesed utzedakah uverakhah verachamim vechayim veshalom vetov be'einekha levarekh et amekha yisra'el bekhol-et uvekhol-sha'ah bishlomekha barukh atah adonai hamvarekh et-amo yisra'el bashalom"
+  "phonetic": "sim shalom tovah uverakhah chen vachesed verachamim aleinu ve'al kol-yisra'el amekha barekhenu avinu kulanu ke'echad be'or panekha ki ve'or panekha natata lanu adonai eloheinu torat chayim ve'ahavat chesed utzedakah uverakhah verachamim vechayim veshalom vetov be'einekha levarekh et amekha yisra'el bekhol-et uvekhol-sha'ah bishlomekha barukh atah adonai hamvarekh et-amo yisra'el bashalom",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "ar-XA-Wavenet-B",
+   "speakingRate": 1.33
+  }
  },
  {
   "path": "audio/m/ashkenazi/prayer/sim-shalom.mp3",
@@ -26920,12 +26992,18 @@
   "kind": "prayer",
   "id": "lecha-dodi-1",
   "text": "לְכָה דוֹדִי לִקְרַאת כַּלָּה פְּנֵי שַׁבָּת נְקַבְּלָה׃ שָׁמוֹר וְזָכוֹר בְּדִבּוּר אֶחָד הִשְׁמִיעָנוּ אֵל הַמְיוּחָד אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד לְשֵׁם וּלְתִפְאֶרֶת וְלִתְהִלָּה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-whole",
   "optional": true,
   "english": "Come, my beloved, to meet the bride; let us welcome the presence of Shabbat.\n\"Keep\" and \"remember\" in a single utterance, the one God made us hear; the LORD is one and his name is one, for renown, for glory and for praise.",
-  "phonetic": "lekhah dodi likrat kalah penei shabat nekabelah shamor vezakhor bedibur echad hishmi'anu el hamyuchad adonai echad ushemo echad leshem uletif'eret velithilah"
+  "phonetic": "lekhah dodi likrat kalah penei shabat nekabelah shamor vezakhor bedibur echad hishmi'anu el hamyuchad adonai echad ushemo echad leshem uletif'eret velithilah",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "ar-XA-Wavenet-B",
+   "speakingRate": 1.33
+  }
  },
  {
   "path": "audio/m/ashkenazi/prayer/lecha-dodi-1.mp3",
@@ -28004,12 +28082,18 @@
   "kind": "prayer",
   "id": "yigdal",
   "text": "יִגְדַּל אֱלֹהִים חַי וְיִשְׁתַּבַּח נִמְצָא וְאֵין עֵת אֶל מְצִיאוּתוֹ׃ אֶחָד וְאֵין יָחִיד כְּיִחוּדוֹ נֶעְלָם וְגַם אֵין סוֹף לְאַחְדּוּתוֹ׃ אֵין לוֹ דְמוּת הַגּוּף וְאֵינוֹ גוּף לֹא נַעֲרֹךְ אֵלָיו קְדֻשָּׁתוֹ׃ קַדְמוֹן לְכָל־דָּבָר אֲשֶׁר נִבְרָא רִאשׁוֹן וְאֵין רֵאשִׁית לְרֵאשִׁיתוֹ׃ הִנּוֹ אֲדוֹן עוֹלָם לְכָל־נוֹצָר יוֹרֶה גְדֻלָּתוֹ וּמַלְכוּתוֹ׃ שֶׁפַע נְבוּאָתוֹ נְתָנוֹ אֶל אַנְשֵׁי סְגֻלָּתוֹ וְתִפְאַרְתּוֹ׃ לֹא קָם בְּיִשְׂרָאֵל כְּמֹשֶׁה עוֹד נָבִיא וּמַבִּיט אֶת־תְּמוּנָתוֹ׃ תּוֹרַת אֱמֶת נָתַן לְעַמּוֹ אֵל עַל יַד נְבִיאוֹ נֶאֱמַן בֵּיתוֹ׃ לֹא יַחֲלִיף הָאֵל וְלֹא יָמִיר דָּתוֹ לְעוֹלָמִים לְזוּלָתוֹ׃ צוֹפֶה וְיוֹדֵעַ סְתָרֵינוּ מַבִּיט לְסוֹף דָּבָר בְּקַדְמָתוֹ׃ גּוֹמֵל לְאִישׁ חֶסֶד כְּמִפְעָלוֹ נוֹתֵן לְרָשָׁע רָע כְּרִשְׁעָתוֹ׃ יִשְׁלַח לְקֵץ הַיָּמִין מְשִׁיחֵנוּ לִפְדּוֹת מְחַכֵּי קֵץ יְשׁוּעָתוֹ׃ מֵתִים יְחַיֶּה אֵל בְּרֹב חַסְדּוֹ בָּרוּךְ עֲדֵי עַד שֵׁם תְּהִלָּתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
   "group": "prayer-whole",
   "optional": true,
   "english": "May the living God be magnified and praised; he exists, and his existence is not bound by time.\nHe is one, and there is no unity like his unity; hidden, and without end to his oneness.\nHe has no bodily form and is not a body; his holiness cannot be compared.\nHe preceded everything that was created; first, and with no beginning to his beginning.\nBehold, he is master of the world to every creature; he shows his greatness and his sovereignty.\nThe abundance of his prophecy he gave to the people he treasured and who are his glory.\nNo one has arisen in Israel like Moses, a prophet who beheld his likeness.\nA Torah of truth God gave to his people through his prophet, trusted in his house.\nGod will not alter or exchange his law, for ever, for any other.\nHe watches and knows our secrets; he sees the end of a matter at its beginning.\nHe repays a person with kindness according to his deeds; he gives the wicked evil according to his wickedness.\nAt the end of days he will send our anointed one, to redeem those who await the end of his salvation.\nGod will revive the dead in his great kindness; blessed for ever is his praised name.",
-  "phonetic": "yigdal elohim chai veyishtabach nimtza ve'ein et el metzi'uto echad ve'ein yachid keyichudo nelam vegam ein sof le'achduto ein lo demut haguf ve'eino guf lo na'arokh elav kedushato kadmon lekhol-davar asher nivra rishon ve'ein reshit lereshito hino adon olam lekhol-notzar yoreh gedulato umalkhuto shefa nevu'ato netano el anshei segulato vetif'arto lo kam beyisra'el kemosheh od navi umabit et-temunato torat emet natan le'amo el al yad nevi'o ne'eman beito lo yachalif ha'el velo yamir dato le'olamim lezulato tzofeh veyode'a setareinu mabit lesof davar bekadmato gomel le'ish chesed kemif'alo noten lerasha ra kerish'ato yishlach leketz hayamin meshichenu lifdot mechakei ketz yeshu'ato metim yechayeh el berov chasdo barukh adei ad shem tehilato"
+  "phonetic": "yigdal elohim chai veyishtabach nimtza ve'ein et el metzi'uto echad ve'ein yachid keyichudo nelam vegam ein sof le'achduto ein lo demut haguf ve'eino guf lo na'arokh elav kedushato kadmon lekhol-davar asher nivra rishon ve'ein reshit lereshito hino adon olam lekhol-notzar yoreh gedulato umalkhuto shefa nevu'ato netano el anshei segulato vetif'arto lo kam beyisra'el kemosheh od navi umabit et-temunato torat emet natan le'amo el al yad nevi'o ne'eman beito lo yachalif ha'el velo yamir dato le'olamim lezulato tzofeh veyode'a setareinu mabit lesof davar bekadmato gomel le'ish chesed kemif'alo noten lerasha ra kerish'ato yishlach leketz hayamin meshichenu lifdot mechakei ketz yeshu'ato metim yechayeh el berov chasdo barukh adei ad shem tehilato",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": 1
+  }
  },
  {
   "path": "audio/m/sephardi/prayer/yigdal.mp3",
@@ -28018,12 +28102,18 @@
   "kind": "prayer",
   "id": "yigdal",
   "text": "יִגְדַּל אֱלֹהִים חַי וְיִשְׁתַּבַּח נִמְצָא וְאֵין עֵת אֶל מְצִיאוּתוֹ׃ אֶחָד וְאֵין יָחִיד כְּיִחוּדוֹ נֶעְלָם וְגַם אֵין סוֹף לְאַחְדּוּתוֹ׃ אֵין לוֹ דְמוּת הַגּוּף וְאֵינוֹ גוּף לֹא נַעֲרֹךְ אֵלָיו קְדֻשָּׁתוֹ׃ קַדְמוֹן לְכָל־דָּבָר אֲשֶׁר נִבְרָא רִאשׁוֹן וְאֵין רֵאשִׁית לְרֵאשִׁיתוֹ׃ הִנּוֹ אֲדוֹן עוֹלָם לְכָל־נוֹצָר יוֹרֶה גְדֻלָּתוֹ וּמַלְכוּתוֹ׃ שֶׁפַע נְבוּאָתוֹ נְתָנוֹ אֶל אַנְשֵׁי סְגֻלָּתוֹ וְתִפְאַרְתּוֹ׃ לֹא קָם בְּיִשְׂרָאֵל כְּמֹשֶׁה עוֹד נָבִיא וּמַבִּיט אֶת־תְּמוּנָתוֹ׃ תּוֹרַת אֱמֶת נָתַן לְעַמּוֹ אֵל עַל יַד נְבִיאוֹ נֶאֱמַן בֵּיתוֹ׃ לֹא יַחֲלִיף הָאֵל וְלֹא יָמִיר דָּתוֹ לְעוֹלָמִים לְזוּלָתוֹ׃ צוֹפֶה וְיוֹדֵעַ סְתָרֵינוּ מַבִּיט לְסוֹף דָּבָר בְּקַדְמָתוֹ׃ גּוֹמֵל לְאִישׁ חֶסֶד כְּמִפְעָלוֹ נוֹתֵן לְרָשָׁע רָע כְּרִשְׁעָתוֹ׃ יִשְׁלַח לְקֵץ הַיָּמִין מְשִׁיחֵנוּ לִפְדּוֹת מְחַכֵּי קֵץ יְשׁוּעָתוֹ׃ מֵתִים יְחַיֶּה אֵל בְּרֹב חַסְדּוֹ בָּרוּךְ עֲדֵי עַד שֵׁם תְּהִלָּתוֹ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-whole",
   "optional": true,
   "english": "May the living God be magnified and praised; he exists, and his existence is not bound by time.\nHe is one, and there is no unity like his unity; hidden, and without end to his oneness.\nHe has no bodily form and is not a body; his holiness cannot be compared.\nHe preceded everything that was created; first, and with no beginning to his beginning.\nBehold, he is master of the world to every creature; he shows his greatness and his sovereignty.\nThe abundance of his prophecy he gave to the people he treasured and who are his glory.\nNo one has arisen in Israel like Moses, a prophet who beheld his likeness.\nA Torah of truth God gave to his people through his prophet, trusted in his house.\nGod will not alter or exchange his law, for ever, for any other.\nHe watches and knows our secrets; he sees the end of a matter at its beginning.\nHe repays a person with kindness according to his deeds; he gives the wicked evil according to his wickedness.\nAt the end of days he will send our anointed one, to redeem those who await the end of his salvation.\nGod will revive the dead in his great kindness; blessed for ever is his praised name.",
-  "phonetic": "yigdal elohim chai veyishtabach nimtza ve'ein et el metzi'uto echad ve'ein yachid keyichudo nelam vegam ein sof le'achduto ein lo demut haguf ve'eino guf lo na'arokh elav kedushato kadmon lekhol-davar asher nivra rishon ve'ein reshit lereshito hino adon olam lekhol-notzar yoreh gedulato umalkhuto shefa nevu'ato netano el anshei segulato vetif'arto lo kam beyisra'el kemosheh od navi umabit et-temunato torat emet natan le'amo el al yad nevi'o ne'eman beito lo yachalif ha'el velo yamir dato le'olamim lezulato tzofeh veyode'a setareinu mabit lesof davar bekadmato gomel le'ish chesed kemif'alo noten lerasha ra kerish'ato yishlach leketz hayamin meshichenu lifdot mechakei ketz yeshu'ato metim yechayeh el berov chasdo barukh adei ad shem tehilato"
+  "phonetic": "yigdal elohim chai veyishtabach nimtza ve'ein et el metzi'uto echad ve'ein yachid keyichudo nelam vegam ein sof le'achduto ein lo demut haguf ve'eino guf lo na'arokh elav kedushato kadmon lekhol-davar asher nivra rishon ve'ein reshit lereshito hino adon olam lekhol-notzar yoreh gedulato umalkhuto shefa nevu'ato netano el anshei segulato vetif'arto lo kam beyisra'el kemosheh od navi umabit et-temunato torat emet natan le'amo el al yad nevi'o ne'eman beito lo yachalif ha'el velo yamir dato le'olamim lezulato tzofeh veyode'a setareinu mabit lesof davar bekadmato gomel le'ish chesed kemif'alo noten lerasha ra kerish'ato yishlach leketz hayamin meshichenu lifdot mechakei ketz yeshu'ato metim yechayeh el berov chasdo barukh adei ad shem tehilato",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "ar-XA-Wavenet-B",
+   "speakingRate": 1.33
+  }
  },
  {
   "path": "audio/m/ashkenazi/prayer/yigdal.mp3",
@@ -28258,12 +28348,18 @@
   "kind": "prayer",
   "id": "zimun-opening",
   "text": "רַבּוֹתַי נְבָרֵךְ׃ יְהִי שֵׁם אֲדֹנָי מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם׃",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-whole",
   "optional": true,
   "english": "Gentlemen, let us bless.\nMay the name of the LORD be blessed from now and for ever.",
-  "phonetic": "rabotai nevarekh yehi shem adonai mevorakh me'atah ve'ad-olam"
+  "phonetic": "rabotai nevarekh yehi shem adonai mevorakh me'atah ve'ad-olam",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "ar-XA-Wavenet-B",
+   "speakingRate": 1.33
+  }
  },
  {
   "path": "audio/m/ashkenazi/prayer/zimun-opening.mp3",
@@ -28802,12 +28898,18 @@
   "kind": "prayer",
   "id": "haftarah-after",
   "text": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם צוּר כָּל־הָעוֹלָמִים צַדִּיק בְּכָל־הַדּוֹרוֹת הָאֵל הַנֶּאֱמָן הָאֹמֵר וְעֹשֶׂה הַמְדַבֵּר וּמְקַיֵּם שֶׁכָּל־דְּבָרָיו אֱמֶת וָצֶדֶק נֶאֱמָן אַתָּה הוּא אֲדֹנָי אֱלֹהֵינוּ וְנֶאֱמָנִים דְּבָרֶיךָ וְדָבָר אֶחָד מִדְּבָרֶיךָ אָחוֹר לֹא יָשׁוּב רֵיקָם כִּי אֵל מֶלֶךְ נֶאֱמָן וְרַחֲמָן אָתָּה בָּרוּךְ אַתָּה אֲדֹנָי הָאֵל הַנֶּאֱמָן בְּכָל־דְּבָרָיו׃ רַחֵם עַל צִיּוֹן כִּי הִיא בֵּית חַיֵּינוּ וְלַעֲלוּבַת נֶפֶשׁ תּוֹשִׁיעַ בִּמְהֵרָה בְיָמֵינוּ בָּרוּךְ אַתָּה אֲדֹנָי מְשַׂמֵּחַ צִיּוֹן בְּבָנֶיהָ׃ שַׂמְּחֵנוּ אֲדֹנָי אֱלֹהֵינוּ בְּאֵלִיָהוּ הַנָּבִיא עַבְדָּךְ וּבְמַלְכוּת בֵּית דָּוִד מְשִׁיחָךְ בִּמְהֵרָה יָבֹא וְיָגֵל לִבֵּנוּ עַל כִּסְאוֹ לֹא יֵשֵׁב זָר וְלֹא יִנְחֲלוּ עוֹד אֲחֵרִים אֶת כְּבוֹדוֹ כִּי בְשֵׁם קָדְשְׁךָ נִשְׁבַּעְתָּ לּוֹ שֶׁלֹּא יִכְבֶּה נֵרוֹ לְעוֹלָם וָעֶד בָּרוּךְ אַתָּה אֲדֹנָי מָגֵן דָּוִד׃ עַל הַתּוֹרָה וְעַל הָעֲבוֹדָה וְעַל הַנְּבִיאִים וְעַל יוֹם הַשַּׁבָּת הַזֶּה שֶׁנָּתַתָּ לָּנוּ אֲדֹנָי אֱלֹהֵינוּ לִקְדֻשָּׁה וְלִמְנוּחָה לְכָבוֹד וּלְתִפְאָרֶת עַל הַכֹּל אֲדֹנָי אֱלֹהֵינוּ אֲנַחְנוּ מוֹדִים לָךְ וּמְבָרְכִים אוֹתָךְ יִתְבָּרַךְ שִׁמְךָ בְּפִי כָּל־חַי תָּמִיד לְעוֹלָם וָעֶד בָּרוּךְ אַתָּה אֲדֹנָי מְקַדֵּשׁ הַשַּׁבָּת אָמֵן׃",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
   "group": "prayer-whole",
   "optional": true,
   "english": "Blessed are you, LORD our God, king of the world, rock of all the worlds, righteous in all generations, the faithful God who says and does, who speaks and fulfils, all of whose words are true and just. You are faithful, LORD our God, and your words are faithful, and not one of your words returns empty, for you are a faithful and merciful God and king. Blessed are you, LORD, the God who is faithful in all his words.\nHave mercy on Zion, for it is the home of our life, and save the one with a grieving soul quickly in our days. Blessed are you, LORD, who gladdens Zion through her children.\nGladden us, LORD our God, with Elijah the prophet your servant and with the kingdom of the house of David your anointed; may he come quickly and make our heart rejoice. On his throne let no stranger sit, and let others not inherit his glory any more, for by your holy name you swore to him that his light would never go out. Blessed are you, LORD, shield of David.\nFor the Torah, and for the service, and for the prophets, and for this Shabbat day which you gave us, LORD our God, for holiness and rest, for honour and glory. For all this, LORD our God, we thank you and bless you. May your name be blessed by every living being, always, for ever. Blessed are you, LORD, who makes the Shabbat holy.",
-  "phonetic": "barukh atah adonai eloheinu melekh ha'olam tzur kol-ha'olamim tzadik bekhol-hadorot ha'el hane'eman ha'omer ve'oseh hamdaber umekayem shekol-devarav emet vatzedek ne'eman atah hu adonai eloheinu vene'emanim devarekha vedavar echad midevarekha achor lo yashuv reikam ki el melekh ne'eman verachaman atah barukh atah adonai ha'el hane'eman bekhol-devarav rachem al tziyon ki hi beit chayeinu vela'aluvat nefesh toshi'a bimherah veyameinu barukh atah adonai mesameach tziyon bevaneha samechenu adonai eloheinu be'eliyahu hanavi avdakh uvemalkhut beit david meshichakh bimherah yavo veyagel libenu al kis'o lo yeshev zar velo yinchalu od acherim et kevodo ki veshem kadshekha nishbata lo shelo yikhbeh nero le'olam va'ed barukh atah adonai magen david al hatorah ve'al ha'avodah ve'al hanevi'im ve'al yom hashabat hazeh shenatata lanu adonai eloheinu likdushah velimnuchah lekhavod uletif'aret al hakol adonai eloheinu anachnu modim lakh umevarekhim otakh yitbarakh shimkha befi kol-chai tamid le'olam va'ed barukh atah adonai mekadesh hashabat amen"
+  "phonetic": "barukh atah adonai eloheinu melekh ha'olam tzur kol-ha'olamim tzadik bekhol-hadorot ha'el hane'eman ha'omer ve'oseh hamdaber umekayem shekol-devarav emet vatzedek ne'eman atah hu adonai eloheinu vene'emanim devarekha vedavar echad midevarekha achor lo yashuv reikam ki el melekh ne'eman verachaman atah barukh atah adonai ha'el hane'eman bekhol-devarav rachem al tziyon ki hi beit chayeinu vela'aluvat nefesh toshi'a bimherah veyameinu barukh atah adonai mesameach tziyon bevaneha samechenu adonai eloheinu be'eliyahu hanavi avdakh uvemalkhut beit david meshichakh bimherah yavo veyagel libenu al kis'o lo yeshev zar velo yinchalu od acherim et kevodo ki veshem kadshekha nishbata lo shelo yikhbeh nero le'olam va'ed barukh atah adonai magen david al hatorah ve'al ha'avodah ve'al hanevi'im ve'al yom hashabat hazeh shenatata lanu adonai eloheinu likdushah velimnuchah lekhavod uletif'aret al hakol adonai eloheinu anachnu modim lakh umevarekhim otakh yitbarakh shimkha befi kol-chai tamid le'olam va'ed barukh atah adonai mekadesh hashabat amen",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": 1
+  }
  },
  {
   "path": "audio/m/sephardi/prayer/haftarah-after.mp3",
@@ -90361,5 +90463,2005 @@
   "group": "explain-he",
   "english": "תָּו · Tav (TAHV) — Hebrew explanation",
   "phonetic": "TAHV"
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-00ae83908b7d.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-00ae83908b7d",
+  "text": "גַּם כִּי־אֵלֵךְ בְּגֵיא צַלְמָוֶת לֹא־אִירָא רָע כִּי־אַתָּה עִמָּדִי שִׁבְטְךָ וּמִשְׁעַנְתֶּךָ הֵמָּה יְנַחֲמֻנִי׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Yea, though I walk through the valley of the shadow of death, I will fear no evil, for Thou art with me; Thy rod and Thy staff, they comfort me.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-00ae83908b7d.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-00ae83908b7d",
+  "text": "גַּם כִּי־אֵלֵךְ בְּגֵיא צַלְמָוֶת לֹא־אִירָא רָע כִּי־אַתָּה עִמָּדִי שִׁבְטְךָ וּמִשְׁעַנְתֶּךָ הֵמָּה יְנַחֲמֻנִי׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Yea, though I walk through the valley of the shadow of death, I will fear no evil, for Thou art with me; Thy rod and Thy staff, they comfort me.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-ea09113ec7bf.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-ea09113ec7bf",
+  "text": "כִּי רֶגַע בְּאַפּוֹ חַיִּים בִּרְצוֹנוֹ בָּעֶרֶב יָלִין בֶּכִי וְלַבֹּקֶר רִנָּה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "For His anger is but for a moment, His favour is for a life-time; weeping may tarry for the night, but joy cometh in the morning.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-ea09113ec7bf.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-ea09113ec7bf",
+  "text": "כִּי רֶגַע בְּאַפּוֹ חַיִּים בִּרְצוֹנוֹ בָּעֶרֶב יָלִין בֶּכִי וְלַבֹּקֶר רִנָּה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "For His anger is but for a moment, His favour is for a life-time; weeping may tarry for the night, but joy cometh in the morning.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-f6cbc1f3a0b3.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-f6cbc1f3a0b3",
+  "text": "סוּר מֵרָע וַעֲשֵׂה־טוֹב בַּקֵּשׁ שָׁלוֹם וְרָדְפֵהוּ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Depart from evil, and do good; Seek peace, and pursue it.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-f6cbc1f3a0b3.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-f6cbc1f3a0b3",
+  "text": "סוּר מֵרָע וַעֲשֵׂה־טוֹב בַּקֵּשׁ שָׁלוֹם וְרָדְפֵהוּ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Depart from evil, and do good; Seek peace, and pursue it.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-eb6330f9f504.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-eb6330f9f504",
+  "text": "אֱלֹהִים לָנוּ מַחֲסֶה וָעֹז עֶזְרָה בְצָרוֹת נִמְצָא מְאֹד׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "God is our refuge and strength, A very present help in trouble.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-eb6330f9f504.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-eb6330f9f504",
+  "text": "אֱלֹהִים לָנוּ מַחֲסֶה וָעֹז עֶזְרָה בְצָרוֹת נִמְצָא מְאֹד׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "God is our refuge and strength, A very present help in trouble.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-93f010c5b607.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-93f010c5b607",
+  "text": "הַרְפּוּ וּדְעוּ כִּי־אָנֹכִי אֱלֹהִים אָרוּם בַּגּוֹיִם אָרוּם בָּאָרֶץ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "'Let be, and know that I am God; I will be exalted among the nations, I will be exalted in the earth.'",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-93f010c5b607.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-93f010c5b607",
+  "text": "הַרְפּוּ וּדְעוּ כִּי־אָנֹכִי אֱלֹהִים אָרוּם בַּגּוֹיִם אָרוּם בָּאָרֶץ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "'Let be, and know that I am God; I will be exalted among the nations, I will be exalted in the earth.'",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-f8f659967b74.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-f8f659967b74",
+  "text": "לֵב טָהוֹר בְּרָא־לִי אֱלֹהִים וְרוּחַ נָכוֹן חַדֵּשׁ בְּקִרְבִּי׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Create me a clean heart, O God; and renew a stedfast spirit within me.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-f8f659967b74.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-f8f659967b74",
+  "text": "לֵב טָהוֹר בְּרָא־לִי אֱלֹהִים וְרוּחַ נָכוֹן חַדֵּשׁ בְּקִרְבִּי׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Create me a clean heart, O God; and renew a stedfast spirit within me.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-c1c8c411cc69.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-c1c8c411cc69",
+  "text": "לִמְנוֹת יָמֵינוּ כֵּן הוֹדַע וְנָבִא לְבַב חָכְמָה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "So teach us to number our days, That we may get us a heart of wisdom.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-c1c8c411cc69.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-c1c8c411cc69",
+  "text": "לִמְנוֹת יָמֵינוּ כֵּן הוֹדַע וְנָבִא לְבַב חָכְמָה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "So teach us to number our days, That we may get us a heart of wisdom.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-89e956ba02f2.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-89e956ba02f2",
+  "text": "יֹשֵׁב בְּסֵתֶר עֶלְיוֹן בְּצֵל שַׁדַּי יִתְלוֹנָן׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "O thou that dwellest in the covert of the Most High, And abidest in the shadow of the Almighty;",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-89e956ba02f2.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-89e956ba02f2",
+  "text": "יֹשֵׁב בְּסֵתֶר עֶלְיוֹן בְּצֵל שַׁדַּי יִתְלוֹנָן׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "O thou that dwellest in the covert of the Most High, And abidest in the shadow of the Almighty;",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-1400b4b42d2a.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-1400b4b42d2a",
+  "text": "אוֹדְךָ עַל כִּי נוֹרָאוֹת נִפְלֵיתִי נִפְלָאִים מַעֲשֶׂיךָ וְנַפְשִׁי יֹדַעַת מְאֹד׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "I will give thanks unto Thee, for I am fearfully and wonderfully made; Wonderful are Thy works; and that my soul knoweth right well.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-1400b4b42d2a.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-1400b4b42d2a",
+  "text": "אוֹדְךָ עַל כִּי נוֹרָאוֹת נִפְלֵיתִי נִפְלָאִים מַעֲשֶׂיךָ וְנַפְשִׁי יֹדַעַת מְאֹד׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "I will give thanks unto Thee, for I am fearfully and wonderfully made; Wonderful are Thy works; and that my soul knoweth right well.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-18316c18e26c.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-18316c18e26c",
+  "text": "הָרֹפֵא לִשְׁבוּרֵי לֵב וּמְחַבֵּשׁ לְעַצְּבוֹתָם׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Who healeth the broken in heart, And bindeth up their wounds.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-18316c18e26c.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-18316c18e26c",
+  "text": "הָרֹפֵא לִשְׁבוּרֵי לֵב וּמְחַבֵּשׁ לְעַצְּבוֹתָם׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Who healeth the broken in heart, And bindeth up their wounds.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-4c6ffa0ace3f.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-4c6ffa0ace3f",
+  "text": "כֹּל הַנְּשָׁמָה תְּהַלֵּל יָהּ הַלְלוּ־יָהּ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Let every thing that hath breath praise the LORD. Hallelujah.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-4c6ffa0ace3f.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-4c6ffa0ace3f",
+  "text": "כֹּל הַנְּשָׁמָה תְּהַלֵּל יָהּ הַלְלוּ־יָהּ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Let every thing that hath breath praise the LORD. Hallelujah.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-7b2bbd0d124a.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-7b2bbd0d124a",
+  "text": "אַךְ אֶל־אֱלֹהִים דּוּמִיָּה נַפְשִׁי מִמֶּנּוּ יְשׁוּעָתִי׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Only for God doth my soul wait in stillness; From Him cometh my salvation.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-7b2bbd0d124a.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-7b2bbd0d124a",
+  "text": "אַךְ אֶל־אֱלֹהִים דּוּמִיָּה נַפְשִׁי מִמֶּנּוּ יְשׁוּעָתִי׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Only for God doth my soul wait in stillness; From Him cometh my salvation.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-64efcd3d7f85.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-64efcd3d7f85",
+  "text": "מִן־הַמֵּצַר קָרָאתִי יָּהּ עָנָנִי בַמֶּרְחָב יָהּ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Out of my straits I called upon the LORD; He answered me with great enlargement.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-64efcd3d7f85.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-64efcd3d7f85",
+  "text": "מִן־הַמֵּצַר קָרָאתִי יָּהּ עָנָנִי בַמֶּרְחָב יָהּ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Out of my straits I called upon the LORD; He answered me with great enlargement.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-882a34ee86ef.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-882a34ee86ef",
+  "text": "גַּל־עֵינַי וְאַבִּיטָה נִפְלָאוֹת מִתּוֹרָתֶךָ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Open Thou mine eyes, that I may behold wondrous things out of Thy law.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-882a34ee86ef.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-882a34ee86ef",
+  "text": "גַּל־עֵינַי וְאַבִּיטָה נִפְלָאוֹת מִתּוֹרָתֶךָ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Open Thou mine eyes, that I may behold wondrous things out of Thy law.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-8a552fe85865.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-8a552fe85865",
+  "text": "בְּכָל־דְּרָכֶיךָ דָעֵהוּ וְהוּא יְיַשֵּׁר אֹרְחֹתֶיךָ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "In all thy ways acknowledge Him, And He will direct thy paths.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-8a552fe85865.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-8a552fe85865",
+  "text": "בְּכָל־דְּרָכֶיךָ דָעֵהוּ וְהוּא יְיַשֵּׁר אֹרְחֹתֶיךָ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "In all thy ways acknowledge Him, And He will direct thy paths.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-aac1be62946e.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-aac1be62946e",
+  "text": "אַשְׁרֵי אָדָם מָצָא חָכְמָה וְאָדָם יָפִיק תְּבוּנָה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Happy is the man that findeth wisdom, And the man that obtaineth understanding.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-aac1be62946e.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-aac1be62946e",
+  "text": "אַשְׁרֵי אָדָם מָצָא חָכְמָה וְאָדָם יָפִיק תְּבוּנָה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Happy is the man that findeth wisdom, And the man that obtaineth understanding.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-7ee4e8f03c1b.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-7ee4e8f03c1b",
+  "text": "דְּרָכֶיהָ דַרְכֵי־נֹעַם וְכָל־נְתִיבוֹתֶיהָ שָׁלוֹם׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Her ways are ways of pleasantness, And all her paths are peace.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-7ee4e8f03c1b.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-7ee4e8f03c1b",
+  "text": "דְּרָכֶיהָ דַרְכֵי־נֹעַם וְכָל־נְתִיבוֹתֶיהָ שָׁלוֹם׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Her ways are ways of pleasantness, And all her paths are peace.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-b59bc4a3df81.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-b59bc4a3df81",
+  "text": "רֵאשִׁית חָכְמָה קְנֵה חָכְמָה וּבְכָל־קִנְיָנְךָ קְנֵה בִינָה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "The beginning of wisdom is: Get wisdom; Yea, with all thy getting get understanding.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-b59bc4a3df81.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-b59bc4a3df81",
+  "text": "רֵאשִׁית חָכְמָה קְנֵה חָכְמָה וּבְכָל־קִנְיָנְךָ קְנֵה בִינָה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "The beginning of wisdom is: Get wisdom; Yea, with all thy getting get understanding.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-5d5436fa28f1.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-5d5436fa28f1",
+  "text": "מִכָּל־מִשְׁמָר נְצֹר לִבֶּךָ כִּי־מִמֶּנּוּ תּוֹצְאוֹת חַיִּים׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Above all that thou guardest keep thy heart; For out of it are the issues of life.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-5d5436fa28f1.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-5d5436fa28f1",
+  "text": "מִכָּל־מִשְׁמָר נְצֹר לִבֶּךָ כִּי־מִמֶּנּוּ תּוֹצְאוֹת חַיִּים׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Above all that thou guardest keep thy heart; For out of it are the issues of life.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-7eb7833cfac9.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-7eb7833cfac9",
+  "text": "שִׂנְאָה תְּעוֹרֵר מְדָנִים וְעַל כָּל־פְּשָׁעִים תְּכַסֶּה אַהֲבָה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Hatred stirreth up strifes; but love covereth all transgressions.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-7eb7833cfac9.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-7eb7833cfac9",
+  "text": "שִׂנְאָה תְּעוֹרֵר מְדָנִים וְעַל כָּל־פְּשָׁעִים תְּכַסֶּה אַהֲבָה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Hatred stirreth up strifes; but love covereth all transgressions.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-cd8715dc66cb.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-cd8715dc66cb",
+  "text": "נֶפֶשׁ־בְּרָכָה תְדֻשָּׁן וּמַרְוֶה גַּם־הוּא יוֹרֶא׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "The beneficent soul shall be made rich, and he that satisfieth abundantly shall be satisfied also himself.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-cd8715dc66cb.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-cd8715dc66cb",
+  "text": "נֶפֶשׁ־בְּרָכָה תְדֻשָּׁן וּמַרְוֶה גַּם־הוּא יוֹרֶא׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "The beneficent soul shall be made rich, and he that satisfieth abundantly shall be satisfied also himself.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-8e6ca0303a31.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-8e6ca0303a31",
+  "text": "דְּאָגָה בְלֶב־אִישׁ יַשְׁחֶנָּה וְדָבָר טוֹב יְשַׂמְּחֶנָּה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Care in the heart of a man boweth it down; But a good word maketh it glad.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-8e6ca0303a31.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-8e6ca0303a31",
+  "text": "דְּאָגָה בְלֶב־אִישׁ יַשְׁחֶנָּה וְדָבָר טוֹב יְשַׂמְּחֶנָּה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Care in the heart of a man boweth it down; But a good word maketh it glad.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-bc2a13a1987e.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-bc2a13a1987e",
+  "text": "מַעֲנֶה־רַּךְ יָשִׁיב חֵמָה וּדְבַר־עֶצֶב יַעֲלֶה־אָף׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "A soft answer turneth away wrath; But a grievous word stirreth up anger.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-bc2a13a1987e.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-bc2a13a1987e",
+  "text": "מַעֲנֶה־רַּךְ יָשִׁיב חֵמָה וּדְבַר־עֶצֶב יַעֲלֶה־אָף׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "A soft answer turneth away wrath; But a grievous word stirreth up anger.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-82fa981e6968.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-82fa981e6968",
+  "text": "לֵב שָׂמֵחַ יֵיטִב פָּנִים וּבְעַצְּבַת־לֵב רוּחַ נְכֵאָה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "A merry heart maketh a cheerful countenance; But by sorrow of heart the spirit is broken.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-82fa981e6968.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-82fa981e6968",
+  "text": "לֵב שָׂמֵחַ יֵיטִב פָּנִים וּבְעַצְּבַת־לֵב רוּחַ נְכֵאָה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "A merry heart maketh a cheerful countenance; But by sorrow of heart the spirit is broken.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-d32399fc75b5.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-d32399fc75b5",
+  "text": "צוּף־דְּבַשׁ אִמְרֵי־נֹעַם מָתוֹק לַנֶּפֶשׁ וּמַרְפֵּא לָעָצֶם׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Pleasant words are as a honeycomb, Sweet to the soul, and health to the bones.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-d32399fc75b5.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-d32399fc75b5",
+  "text": "צוּף־דְּבַשׁ אִמְרֵי־נֹעַם מָתוֹק לַנֶּפֶשׁ וּמַרְפֵּא לָעָצֶם׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Pleasant words are as a honeycomb, Sweet to the soul, and health to the bones.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-5a901eb376c6.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-5a901eb376c6",
+  "text": "לֵב שָׂמֵחַ יֵיטִב גֵּהָה וְרוּחַ נְכֵאָה תְּיַבֶּשׁ־גָּרֶם׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "A merry heart is a good medicine; But a broken spirit drieth the bones.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-5a901eb376c6.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-5a901eb376c6",
+  "text": "לֵב שָׂמֵחַ יֵיטִב גֵּהָה וְרוּחַ נְכֵאָה תְּיַבֶּשׁ־גָּרֶם׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "A merry heart is a good medicine; But a broken spirit drieth the bones.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-36eb6f7ee426.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-36eb6f7ee426",
+  "text": "חֲנֹךְ לַנַּעַר עַל־פִּי דַרְכּוֹ גַּם כִּי־יַזְקִין לֹא־יָסוּר מִמֶּנָּה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Train up a child in the way he should go, And even when he is old, he will not depart from it.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-36eb6f7ee426.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-36eb6f7ee426",
+  "text": "חֲנֹךְ לַנַּעַר עַל־פִּי דַרְכּוֹ גַּם כִּי־יַזְקִין לֹא־יָסוּר מִמֶּנָּה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Train up a child in the way he should go, And even when he is old, he will not depart from it.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-9757566edcda.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-9757566edcda",
+  "text": "בַּרְזֶל בְּבַרְזֶל יָחַד וְאִישׁ יַחַד פְּנֵי־רֵעֵהוּ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Iron sharpeneth iron; So a man sharpeneth the countenance of his friend.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-9757566edcda.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-9757566edcda",
+  "text": "בַּרְזֶל בְּבַרְזֶל יָחַד וְאִישׁ יַחַד פְּנֵי־רֵעֵהוּ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Iron sharpeneth iron; So a man sharpeneth the countenance of his friend.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-3a081e6d2550.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-3a081e6d2550",
+  "text": "פִּיהָ פָּתְחָה בְחָכְמָה וְתוֹרַת חֶסֶד עַל־לְשׁוֹנָהּ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "She openeth her mouth with wisdom; And the law of kindness is on her tongue.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-3a081e6d2550.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-3a081e6d2550",
+  "text": "פִּיהָ פָּתְחָה בְחָכְמָה וְתוֹרַת חֶסֶד עַל־לְשׁוֹנָהּ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "She openeth her mouth with wisdom; And the law of kindness is on her tongue.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/israeli/prayer/bank80-c366741b90c4.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-c366741b90c4",
+  "text": "אֶרֶךְ אַפַּיִם רַב־תְּבוּנָה וּקְצַר־רוּחַ מֵרִים אִוֶּלֶת׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "He that is slow to anger is of great understanding; But he that is hasty of spirit exalteth folly.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Kore",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/m/israeli/prayer/bank80-c366741b90c4.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "prayer",
+  "id": "bank80-c366741b90c4",
+  "text": "אֶרֶךְ אַפַּיִם רַב־תְּבוּנָה וּקְצַר־רוּחַ מֵרִים אִוֶּלֶת׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "He that is slow to anger is of great understanding; But he that is hasty of spirit exalteth folly.",
+  "synth": {
+   "origin": "google-chirp",
+   "reviewed": false,
+   "voiceName": "he-IL-Chirp3-HD-Charon",
+   "speakingRate": null
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-00ae83908b7d.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-00ae83908b7d",
+  "text": "גַּם כִּי־אֵלֵךְ בְּגֵיא צַלְמָוֶת לֹא־אִירָא רָע כִּי־אַתָּה עִמָּדִי שִׁבְטְךָ וּמִשְׁעַנְתֶּךָ הֵמָּה יְנַחֲמֻנִי׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Yea, though I walk through the valley of the shadow of death, I will fear no evil, for Thou art with me; Thy rod and Thy staff, they comfort me.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-00ae83908b7d.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-00ae83908b7d",
+  "text": "גַּם כִּי־אֵלֵךְ בְּגֵיא צַלְמָוֶת לֹא־אִירָא רָע כִּי־אַתָּה עִמָּדִי שִׁבְטְךָ וּמִשְׁעַנְתֶּךָ הֵמָּה יְנַחֲמֻנִי׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Yea, though I walk through the valley of the shadow of death, I will fear no evil, for Thou art with me; Thy rod and Thy staff, they comfort me.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-ea09113ec7bf.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-ea09113ec7bf",
+  "text": "כִּי רֶגַע בְּאַפּוֹ חַיִּים בִּרְצוֹנוֹ בָּעֶרֶב יָלִין בֶּכִי וְלַבֹּקֶר רִנָּה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "For His anger is but for a moment, His favour is for a life-time; weeping may tarry for the night, but joy cometh in the morning.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-ea09113ec7bf.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-ea09113ec7bf",
+  "text": "כִּי רֶגַע בְּאַפּוֹ חַיִּים בִּרְצוֹנוֹ בָּעֶרֶב יָלִין בֶּכִי וְלַבֹּקֶר רִנָּה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "For His anger is but for a moment, His favour is for a life-time; weeping may tarry for the night, but joy cometh in the morning.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-eb6330f9f504.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-eb6330f9f504",
+  "text": "אֱלֹהִים לָנוּ מַחֲסֶה וָעֹז עֶזְרָה בְצָרוֹת נִמְצָא מְאֹד׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "God is our refuge and strength, A very present help in trouble.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-eb6330f9f504.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-eb6330f9f504",
+  "text": "אֱלֹהִים לָנוּ מַחֲסֶה וָעֹז עֶזְרָה בְצָרוֹת נִמְצָא מְאֹד׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "God is our refuge and strength, A very present help in trouble.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-93f010c5b607.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-93f010c5b607",
+  "text": "הַרְפּוּ וּדְעוּ כִּי־אָנֹכִי אֱלֹהִים אָרוּם בַּגּוֹיִם אָרוּם בָּאָרֶץ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "'Let be, and know that I am God; I will be exalted among the nations, I will be exalted in the earth.'",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-93f010c5b607.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-93f010c5b607",
+  "text": "הַרְפּוּ וּדְעוּ כִּי־אָנֹכִי אֱלֹהִים אָרוּם בַּגּוֹיִם אָרוּם בָּאָרֶץ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "'Let be, and know that I am God; I will be exalted among the nations, I will be exalted in the earth.'",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-f8f659967b74.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-f8f659967b74",
+  "text": "לֵב טָהוֹר בְּרָא־לִי אֱלֹהִים וְרוּחַ נָכוֹן חַדֵּשׁ בְּקִרְבִּי׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Create me a clean heart, O God; and renew a stedfast spirit within me.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-f8f659967b74.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-f8f659967b74",
+  "text": "לֵב טָהוֹר בְּרָא־לִי אֱלֹהִים וְרוּחַ נָכוֹן חַדֵּשׁ בְּקִרְבִּי׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Create me a clean heart, O God; and renew a stedfast spirit within me.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-c1c8c411cc69.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-c1c8c411cc69",
+  "text": "לִמְנוֹת יָמֵינוּ כֵּן הוֹדַע וְנָבִא לְבַב חָכְמָה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "So teach us to number our days, That we may get us a heart of wisdom.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-c1c8c411cc69.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-c1c8c411cc69",
+  "text": "לִמְנוֹת יָמֵינוּ כֵּן הוֹדַע וְנָבִא לְבַב חָכְמָה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "So teach us to number our days, That we may get us a heart of wisdom.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-89e956ba02f2.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-89e956ba02f2",
+  "text": "יֹשֵׁב בְּסֵתֶר עֶלְיוֹן בְּצֵל שַׁדַּי יִתְלוֹנָן׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "O thou that dwellest in the covert of the Most High, And abidest in the shadow of the Almighty;",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-89e956ba02f2.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-89e956ba02f2",
+  "text": "יֹשֵׁב בְּסֵתֶר עֶלְיוֹן בְּצֵל שַׁדַּי יִתְלוֹנָן׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "O thou that dwellest in the covert of the Most High, And abidest in the shadow of the Almighty;",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-4c6ffa0ace3f.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-4c6ffa0ace3f",
+  "text": "כֹּל הַנְּשָׁמָה תְּהַלֵּל יָהּ הַלְלוּ־יָהּ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Let every thing that hath breath praise the LORD. Hallelujah.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-4c6ffa0ace3f.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-4c6ffa0ace3f",
+  "text": "כֹּל הַנְּשָׁמָה תְּהַלֵּל יָהּ הַלְלוּ־יָהּ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Let every thing that hath breath praise the LORD. Hallelujah.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-7b2bbd0d124a.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-7b2bbd0d124a",
+  "text": "אַךְ אֶל־אֱלֹהִים דּוּמִיָּה נַפְשִׁי מִמֶּנּוּ יְשׁוּעָתִי׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Only for God doth my soul wait in stillness; From Him cometh my salvation.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-7b2bbd0d124a.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-7b2bbd0d124a",
+  "text": "אַךְ אֶל־אֱלֹהִים דּוּמִיָּה נַפְשִׁי מִמֶּנּוּ יְשׁוּעָתִי׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Only for God doth my soul wait in stillness; From Him cometh my salvation.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-64efcd3d7f85.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-64efcd3d7f85",
+  "text": "מִן־הַמֵּצַר קָרָאתִי יָּהּ עָנָנִי בַמֶּרְחָב יָהּ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Out of my straits I called upon the LORD; He answered me with great enlargement.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-64efcd3d7f85.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-64efcd3d7f85",
+  "text": "מִן־הַמֵּצַר קָרָאתִי יָּהּ עָנָנִי בַמֶּרְחָב יָהּ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Out of my straits I called upon the LORD; He answered me with great enlargement.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-882a34ee86ef.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-882a34ee86ef",
+  "text": "גַּל־עֵינַי וְאַבִּיטָה נִפְלָאוֹת מִתּוֹרָתֶךָ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Open Thou mine eyes, that I may behold wondrous things out of Thy law.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-882a34ee86ef.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-882a34ee86ef",
+  "text": "גַּל־עֵינַי וְאַבִּיטָה נִפְלָאוֹת מִתּוֹרָתֶךָ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Open Thou mine eyes, that I may behold wondrous things out of Thy law.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-aac1be62946e.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-aac1be62946e",
+  "text": "אַשְׁרֵי אָדָם מָצָא חָכְמָה וְאָדָם יָפִיק תְּבוּנָה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Happy is the man that findeth wisdom, And the man that obtaineth understanding.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-aac1be62946e.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-aac1be62946e",
+  "text": "אַשְׁרֵי אָדָם מָצָא חָכְמָה וְאָדָם יָפִיק תְּבוּנָה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Happy is the man that findeth wisdom, And the man that obtaineth understanding.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-7ee4e8f03c1b.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-7ee4e8f03c1b",
+  "text": "דְּרָכֶיהָ דַרְכֵי־נֹעַם וְכָל־נְתִיבוֹתֶיהָ שָׁלוֹם׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Her ways are ways of pleasantness, And all her paths are peace.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-7ee4e8f03c1b.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-7ee4e8f03c1b",
+  "text": "דְּרָכֶיהָ דַרְכֵי־נֹעַם וְכָל־נְתִיבוֹתֶיהָ שָׁלוֹם׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Her ways are ways of pleasantness, And all her paths are peace.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-7eb7833cfac9.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-7eb7833cfac9",
+  "text": "שִׂנְאָה תְּעוֹרֵר מְדָנִים וְעַל כָּל־פְּשָׁעִים תְּכַסֶּה אַהֲבָה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Hatred stirreth up strifes; but love covereth all transgressions.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-7eb7833cfac9.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-7eb7833cfac9",
+  "text": "שִׂנְאָה תְּעוֹרֵר מְדָנִים וְעַל כָּל־פְּשָׁעִים תְּכַסֶּה אַהֲבָה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Hatred stirreth up strifes; but love covereth all transgressions.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-cd8715dc66cb.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-cd8715dc66cb",
+  "text": "נֶפֶשׁ־בְּרָכָה תְדֻשָּׁן וּמַרְוֶה גַּם־הוּא יוֹרֶא׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "The beneficent soul shall be made rich, and he that satisfieth abundantly shall be satisfied also himself.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-cd8715dc66cb.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-cd8715dc66cb",
+  "text": "נֶפֶשׁ־בְּרָכָה תְדֻשָּׁן וּמַרְוֶה גַּם־הוּא יוֹרֶא׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "The beneficent soul shall be made rich, and he that satisfieth abundantly shall be satisfied also himself.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-8e6ca0303a31.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-8e6ca0303a31",
+  "text": "דְּאָגָה בְלֶב־אִישׁ יַשְׁחֶנָּה וְדָבָר טוֹב יְשַׂמְּחֶנָּה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Care in the heart of a man boweth it down; But a good word maketh it glad.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-8e6ca0303a31.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-8e6ca0303a31",
+  "text": "דְּאָגָה בְלֶב־אִישׁ יַשְׁחֶנָּה וְדָבָר טוֹב יְשַׂמְּחֶנָּה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Care in the heart of a man boweth it down; But a good word maketh it glad.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-d32399fc75b5.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-d32399fc75b5",
+  "text": "צוּף־דְּבַשׁ אִמְרֵי־נֹעַם מָתוֹק לַנֶּפֶשׁ וּמַרְפֵּא לָעָצֶם׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Pleasant words are as a honeycomb, Sweet to the soul, and health to the bones.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-d32399fc75b5.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-d32399fc75b5",
+  "text": "צוּף־דְּבַשׁ אִמְרֵי־נֹעַם מָתוֹק לַנֶּפֶשׁ וּמַרְפֵּא לָעָצֶם׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Pleasant words are as a honeycomb, Sweet to the soul, and health to the bones.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-5a901eb376c6.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-5a901eb376c6",
+  "text": "לֵב שָׂמֵחַ יֵיטִב גֵּהָה וְרוּחַ נְכֵאָה תְּיַבֶּשׁ־גָּרֶם׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "A merry heart is a good medicine; But a broken spirit drieth the bones.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-5a901eb376c6.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-5a901eb376c6",
+  "text": "לֵב שָׂמֵחַ יֵיטִב גֵּהָה וְרוּחַ נְכֵאָה תְּיַבֶּשׁ־גָּרֶם׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "A merry heart is a good medicine; But a broken spirit drieth the bones.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-36eb6f7ee426.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-36eb6f7ee426",
+  "text": "חֲנֹךְ לַנַּעַר עַל־פִּי דַרְכּוֹ גַּם כִּי־יַזְקִין לֹא־יָסוּר מִמֶּנָּה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Train up a child in the way he should go, And even when he is old, he will not depart from it.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-36eb6f7ee426.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-36eb6f7ee426",
+  "text": "חֲנֹךְ לַנַּעַר עַל־פִּי דַרְכּוֹ גַּם כִּי־יַזְקִין לֹא־יָסוּר מִמֶּנָּה׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Train up a child in the way he should go, And even when he is old, he will not depart from it.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/f/ashkenazi/prayer/bank80-9757566edcda.mp3",
+  "voice": "f",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-9757566edcda",
+  "text": "בַּרְזֶל בְּבַרְזֶל יָחַד וְאִישׁ יַחַד פְּנֵי־רֵעֵהוּ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Iron sharpeneth iron; So a man sharpeneth the countenance of his friend.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-G",
+   "speakingRate": 1.15
+  }
+ },
+ {
+  "path": "audio/m/ashkenazi/prayer/bank80-9757566edcda.mp3",
+  "voice": "m",
+  "tradition": "ashkenazi",
+  "kind": "prayer",
+  "id": "bank80-9757566edcda",
+  "text": "בַּרְזֶל בְּבַרְזֶל יָחַד וְאִישׁ יַחַד פְּנֵי־רֵעֵהוּ׃",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
+  "group": "prayer-excerpt",
+  "optional": true,
+  "excerpt": true,
+  "english": "Iron sharpeneth iron; So a man sharpeneth the countenance of his friend.",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "de-DE-Wavenet-H",
+   "speakingRate": 1.15
+  }
  }
 ]

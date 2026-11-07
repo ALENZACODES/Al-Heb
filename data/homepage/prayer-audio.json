@@ -1,0 +1,200 @@
+{
+ "note": "Israeli woman and man clips whose spoken text is this opening entry, or the already-approved Adonai reading of that same registry verse. Other traditions are not listed. A missing voice is silence, not a fallback.",
+ "clips": [
+  {
+   "he": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃",
+   "f": "audio/f/israeli/line/bless-priestly-1.mp3",
+   "m": "audio/m/israeli/line/bless-priestly-1.mp3"
+  },
+  {
+   "he": "יָאֵר יְהוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃",
+   "f": "audio/f/israeli/line/bless-priestly-2.mp3",
+   "m": "audio/m/israeli/line/bless-priestly-2.mp3"
+  },
+  {
+   "he": "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃",
+   "f": "audio/f/israeli/line/bless-priestly-3.mp3",
+   "m": "audio/m/israeli/line/bless-priestly-3.mp3"
+  },
+  {
+   "he": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃",
+   "f": "audio/f/israeli/line/shema-1.mp3",
+   "m": "audio/m/israeli/line/shema-1.mp3"
+  },
+  {
+   "he": "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃",
+   "f": "audio/f/israeli/line/mah-tovu-1.mp3",
+   "m": "audio/m/israeli/line/mah-tovu-1.mp3"
+  },
+  {
+   "he": "אֵין־כָּמוֹךָ בָאֱלֹהִים אֲדֹנָי וְאֵין כְּמַעֲשֶׂיךָ׃",
+   "f": "audio/f/israeli/line/ein-kamocha.mp3",
+   "m": "audio/m/israeli/line/ein-kamocha.mp3"
+  },
+  {
+   "he": "יְהוָה עֹז לְעַמּוֹ יִתֵּן יְהוָה יְבָרֵךְ אֶת־עַמּוֹ בַשָּׁלוֹם׃",
+   "f": "audio/f/israeli/line/adonai-oz.mp3",
+   "m": "audio/m/israeli/line/adonai-oz.mp3"
+  },
+  {
+   "he": "גַּדְּלוּ לַיהוָה אִתִּי וּנְרוֹמְמָה שְׁמוֹ יַחְדָּו׃",
+   "f": "audio/f/israeli/line/gadlu.mp3",
+   "m": "audio/m/israeli/line/gadlu.mp3"
+  },
+  {
+   "he": "הֲשִׁיבֵנוּ יְהוָה אֵלֶיךָ וְנָשׁוּבָה חַדֵּשׁ יָמֵינוּ כְּקֶדֶם׃",
+   "f": "audio/f/israeli/line/hashivenu.mp3",
+   "m": "audio/m/israeli/line/hashivenu.mp3"
+  },
+  {
+   "he": "יִמְלֹךְ יְהוָה לְעוֹלָם אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר הַלְלוּ־יָהּ׃",
+   "f": "audio/f/israeli/line/kedushah-yimloch.mp3",
+   "m": "audio/m/israeli/line/kedushah-yimloch.mp3"
+  },
+  {
+   "he": "אַשְׁרֵי יוֹשְׁבֵי בֵיתֶךָ עוֹד יְהַלְלוּךָ סֶּלָה׃",
+   "f": "audio/f/israeli/line/ashrei-84-5.mp3",
+   "m": "audio/m/israeli/line/ashrei-84-5.mp3"
+  },
+  {
+   "he": "אַשְׁרֵי הָעָם שֶׁכָּכָה לּוֹ אַשְׁרֵי הָעָם שֶׁיֲהוָה אֱלֹהָיו׃",
+   "f": "audio/f/israeli/line/ashrei-144-15.mp3",
+   "m": "audio/m/israeli/line/ashrei-144-15.mp3"
+  },
+  {
+   "he": "פּוֹתֵחַ אֶת־יָדֶךָ וּמַשְׂבִּיעַ לְכָל־חַי רָצוֹן׃",
+   "f": "audio/f/israeli/line/ashrei-145-16.mp3",
+   "m": "audio/m/israeli/line/ashrei-145-16.mp3"
+  },
+  {
+   "he": "סוּר מֵרָע וַעֲשֵׂה־טוֹב בַּקֵּשׁ שָׁלוֹם וְרָדְפֵהוּ׃",
+   "f": "audio/f/israeli/prayer/bank80-f6cbc1f3a0b3.mp3",
+   "m": "audio/m/israeli/prayer/bank80-f6cbc1f3a0b3.mp3"
+  },
+  {
+   "he": "אֱלֹהִים לָנוּ מַחֲסֶה וָעֹז עֶזְרָה בְצָרוֹת נִמְצָא מְאֹד׃",
+   "f": "audio/f/israeli/prayer/bank80-eb6330f9f504.mp3",
+   "m": "audio/m/israeli/prayer/bank80-eb6330f9f504.mp3"
+  },
+  {
+   "he": "לֵב טָהוֹר בְּרָא־לִי אֱלֹהִים וְרוּחַ נָכוֹן חַדֵּשׁ בְּקִרְבִּי׃",
+   "f": "audio/f/israeli/prayer/bank80-f8f659967b74.mp3",
+   "m": "audio/m/israeli/prayer/bank80-f8f659967b74.mp3"
+  },
+  {
+   "he": "לִמְנוֹת יָמֵינוּ כֵּן הוֹדַע וְנָבִא לְבַב חָכְמָה׃",
+   "f": "audio/f/israeli/prayer/bank80-c1c8c411cc69.mp3",
+   "m": "audio/m/israeli/prayer/bank80-c1c8c411cc69.mp3"
+  },
+  {
+   "he": "יֹשֵׁב בְּסֵתֶר עֶלְיוֹן בְּצֵל שַׁדַּי יִתְלוֹנָן׃",
+   "f": "audio/f/israeli/prayer/bank80-89e956ba02f2.mp3",
+   "m": "audio/m/israeli/prayer/bank80-89e956ba02f2.mp3"
+  },
+  {
+   "he": "הַזֹּרְעִים בְּדִמְעָה בְּרִנָּה יִקְצֹרוּ׃",
+   "f": "audio/f/israeli/line/shir-hamaalot-l5.mp3",
+   "m": "audio/m/israeli/line/shir-hamaalot-l5.mp3"
+  },
+  {
+   "he": "הָרֹפֵא לִשְׁבוּרֵי לֵב וּמְחַבֵּשׁ לְעַצְּבוֹתָם׃",
+   "f": "audio/f/israeli/prayer/bank80-18316c18e26c.mp3",
+   "m": "audio/m/israeli/prayer/bank80-18316c18e26c.mp3"
+  },
+  {
+   "he": "כֹּל הַנְּשָׁמָה תְּהַלֵּל יָהּ הַלְלוּ־יָהּ׃",
+   "f": "audio/f/israeli/prayer/bank80-4c6ffa0ace3f.mp3",
+   "m": "audio/m/israeli/prayer/bank80-4c6ffa0ace3f.mp3"
+  },
+  {
+   "he": "אַךְ אֶל־אֱלֹהִים דּוּמִיָּה נַפְשִׁי מִמֶּנּוּ יְשׁוּעָתִי׃",
+   "f": "audio/f/israeli/prayer/bank80-7b2bbd0d124a.mp3",
+   "m": "audio/m/israeli/prayer/bank80-7b2bbd0d124a.mp3"
+  },
+  {
+   "he": "מִן־הַמֵּצַר קָרָאתִי יָּהּ עָנָנִי בַמֶּרְחָב יָהּ׃",
+   "f": "audio/f/israeli/prayer/bank80-64efcd3d7f85.mp3",
+   "m": "audio/m/israeli/prayer/bank80-64efcd3d7f85.mp3"
+  },
+  {
+   "he": "גַּל־עֵינַי וְאַבִּיטָה נִפְלָאוֹת מִתּוֹרָתֶךָ׃",
+   "f": "audio/f/israeli/prayer/bank80-882a34ee86ef.mp3",
+   "m": "audio/m/israeli/prayer/bank80-882a34ee86ef.mp3"
+  },
+  {
+   "he": "בְּכָל־דְּרָכֶיךָ דָעֵהוּ וְהוּא יְיַשֵּׁר אֹרְחֹתֶיךָ׃",
+   "f": "audio/f/israeli/prayer/bank80-8a552fe85865.mp3",
+   "m": "audio/m/israeli/prayer/bank80-8a552fe85865.mp3"
+  },
+  {
+   "he": "אַשְׁרֵי אָדָם מָצָא חָכְמָה וְאָדָם יָפִיק תְּבוּנָה׃",
+   "f": "audio/f/israeli/prayer/bank80-aac1be62946e.mp3",
+   "m": "audio/m/israeli/prayer/bank80-aac1be62946e.mp3"
+  },
+  {
+   "he": "דְּרָכֶיהָ דַרְכֵי־נֹעַם וְכָל־נְתִיבוֹתֶיהָ שָׁלוֹם׃",
+   "f": "audio/f/israeli/prayer/bank80-7ee4e8f03c1b.mp3",
+   "m": "audio/m/israeli/prayer/bank80-7ee4e8f03c1b.mp3"
+  },
+  {
+   "he": "רֵאשִׁית חָכְמָה קְנֵה חָכְמָה וּבְכָל־קִנְיָנְךָ קְנֵה בִינָה׃",
+   "f": "audio/f/israeli/prayer/bank80-b59bc4a3df81.mp3",
+   "m": "audio/m/israeli/prayer/bank80-b59bc4a3df81.mp3"
+  },
+  {
+   "he": "מִכָּל־מִשְׁמָר נְצֹר לִבֶּךָ כִּי־מִמֶּנּוּ תּוֹצְאוֹת חַיִּים׃",
+   "f": "audio/f/israeli/prayer/bank80-5d5436fa28f1.mp3",
+   "m": "audio/m/israeli/prayer/bank80-5d5436fa28f1.mp3"
+  },
+  {
+   "he": "שִׂנְאָה תְּעוֹרֵר מְדָנִים וְעַל כָּל־פְּשָׁעִים תְּכַסֶּה אַהֲבָה׃",
+   "f": "audio/f/israeli/prayer/bank80-7eb7833cfac9.mp3",
+   "m": "audio/m/israeli/prayer/bank80-7eb7833cfac9.mp3"
+  },
+  {
+   "he": "נֶפֶשׁ־בְּרָכָה תְדֻשָּׁן וּמַרְוֶה גַּם־הוּא יוֹרֶא׃",
+   "f": "audio/f/israeli/prayer/bank80-cd8715dc66cb.mp3",
+   "m": "audio/m/israeli/prayer/bank80-cd8715dc66cb.mp3"
+  },
+  {
+   "he": "דְּאָגָה בְלֶב־אִישׁ יַשְׁחֶנָּה וְדָבָר טוֹב יְשַׂמְּחֶנָּה׃",
+   "f": "audio/f/israeli/prayer/bank80-8e6ca0303a31.mp3",
+   "m": "audio/m/israeli/prayer/bank80-8e6ca0303a31.mp3"
+  },
+  {
+   "he": "מַעֲנֶה־רַּךְ יָשִׁיב חֵמָה וּדְבַר־עֶצֶב יַעֲלֶה־אָף׃",
+   "f": "audio/f/israeli/prayer/bank80-bc2a13a1987e.mp3",
+   "m": "audio/m/israeli/prayer/bank80-bc2a13a1987e.mp3"
+  },
+  {
+   "he": "לֵב שָׂמֵחַ יֵיטִב פָּנִים וּבְעַצְּבַת־לֵב רוּחַ נְכֵאָה׃",
+   "f": "audio/f/israeli/prayer/bank80-82fa981e6968.mp3",
+   "m": "audio/m/israeli/prayer/bank80-82fa981e6968.mp3"
+  },
+  {
+   "he": "צוּף־דְּבַשׁ אִמְרֵי־נֹעַם מָתוֹק לַנֶּפֶשׁ וּמַרְפֵּא לָעָצֶם׃",
+   "f": "audio/f/israeli/prayer/bank80-d32399fc75b5.mp3",
+   "m": "audio/m/israeli/prayer/bank80-d32399fc75b5.mp3"
+  },
+  {
+   "he": "לֵב שָׂמֵחַ יֵיטִב גֵּהָה וְרוּחַ נְכֵאָה תְּיַבֶּשׁ־גָּרֶם׃",
+   "f": "audio/f/israeli/prayer/bank80-5a901eb376c6.mp3",
+   "m": "audio/m/israeli/prayer/bank80-5a901eb376c6.mp3"
+  },
+  {
+   "he": "בַּרְזֶל בְּבַרְזֶל יָחַד וְאִישׁ יַחַד פְּנֵי־רֵעֵהוּ׃",
+   "f": "audio/f/israeli/prayer/bank80-9757566edcda.mp3",
+   "m": "audio/m/israeli/prayer/bank80-9757566edcda.mp3"
+  },
+  {
+   "he": "פִּיהָ פָּתְחָה בְחָכְמָה וְתוֹרַת חֶסֶד עַל־לְשׁוֹנָהּ׃",
+   "f": "audio/f/israeli/prayer/bank80-3a081e6d2550.mp3",
+   "m": "audio/m/israeli/prayer/bank80-3a081e6d2550.mp3"
+  },
+  {
+   "he": "אֶרֶךְ אַפַּיִם רַב־תְּבוּנָה וּקְצַר־רוּחַ מֵרִים אִוֶּלֶת׃",
+   "f": "audio/f/israeli/prayer/bank80-c366741b90c4.mp3",
+   "m": "audio/m/israeli/prayer/bank80-c366741b90c4.mp3"
+  }
+ ]
+}

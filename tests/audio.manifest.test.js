@@ -65,17 +65,21 @@ function tmpRoot(files) {
   return root;
 }
 
-test('status becomes recorded/tts only when a file exists; meta sidecar sets provenance', () => {
+test('a file without a trusted sidecar stays missing; a synthetic sidecar is not a human recording', () => {
   const root = tmpRoot({
     'audio/m/israeli/letter/bet.mp3': 'x',
     'audio/f/israeli/letter/bet.mp3': 'x',
-    'audio/f/israeli/letter/bet.mp3.meta.json': JSON.stringify({ status: 'tts', source: 'tts:azure' }),
+    'audio/f/israeli/letter/bet.mp3.meta.json': JSON.stringify({ status: 'synthetic-unreviewed', source: 'tts-hebrew', synthetic: true }),
+    'audio/m/israeli/letter/alef.mp3': 'x',
+    'audio/m/israeli/letter/alef.mp3.meta.json': JSON.stringify({ status: 'recorded', human_recording: true, source: 'declared-only' }),
   });
-  const { entries } = buildEntries({ root });
-  const get = (v) => entries.find((e) => e.path === `audio/${v}/israeli/letter/bet.mp3`);
-  assert.equal(get('m').status, 'recorded'); assert.match(get('m').source, /unverified/);
-  assert.equal(get('f').status, 'tts'); assert.equal(get('f').source, 'tts:azure');
-  assert.equal(entries.filter((e) => e.status !== 'missing').length, 2);
+  const { entries, warnings } = buildEntries({ root });
+  const get = (v, id = 'bet') => entries.find((e) => e.path === `audio/${v}/israeli/letter/${id}.mp3`);
+  assert.equal(get('m').status, 'missing'); assert.equal(get('m').source, 'none');
+  assert.equal(get('f').status, 'synthetic-unreviewed'); assert.equal(get('f').source, 'tts-hebrew');
+  assert.equal(get('m', 'alef').status, 'missing', 'a recorded label without reader, consent, rights, and hash stays missing');
+  assert.ok(warnings.some((w) => w.includes('no provenance sidecar')));
+  assert.equal(entries.filter((e) => e.status === 'recorded').length, 0);
 });
 
 test('reads other lanes when present: corpus, curriculum, niqqud; skips bad ids; applies equivalence rules', () => {
@@ -154,5 +158,5 @@ test('vocab ids: every mapped or Listen-pool vocab id has a word entry for every
   const ids = new Set([...Object.values(map), ...buildPool(words, cfg).map((w) => w.id)]);
   for (const id of ids) for (const t of ['israeli', 'sephardi', 'ashkenazi']) for (const v of ['m', 'f']) assert.ok(have.has(`${v}|${t}|${id}`), `${v}/${t}/${id}`);
   assert.ok(manifest.filter((x) => x.group === 'vocab-alias').every((e) => /^word\/[a-z0-9._-]+-w\d+$/.test(e.aliasOf)));
-  assert.ok(manifest.filter((x) => x.group === 'vocab-alias' || x.group === 'vocab-extra').every((e) => e.status === 'missing' || e.status === 'recorded' || e.status === 'tts'));
+  assert.ok(manifest.filter((x) => x.group === 'vocab-alias' || x.group === 'vocab-extra').every((e) => e.status === 'missing' || e.status === 'recorded' || e.status === 'tts' || e.status === 'synthetic-unreviewed'));
 });

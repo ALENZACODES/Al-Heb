@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { MODEH_ANI, prayerKey, pickPrayer } from '../src/shell/prayer-veil.js';
+import { autoplayAllowed, clipFor, createEntryPlayback } from '../src/shell/prayer-audio.js';
 
 const data = JSON.parse(readFileSync(new URL('../data/homepage/prayers.json', import.meta.url), 'utf8'));
 const bank = data.prayers;
@@ -42,4 +43,36 @@ test('opening card has a hard timeout, skip controls and ready signal before the
   const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
   assert.match(html, /id="alef-prayer-veil"/);
   assert.match(html, /id="alef-prayer-skip"/);
+  assert.match(html, /id="alef-prayer-play"/);
+});
+
+test('an opening entry plays only its own Israeli clip, and a blocked start is not another voice', async () => {
+  const catalog = JSON.parse(readFileSync(new URL('../data/homepage/prayer-audio.json', import.meta.url), 'utf8'));
+  const covered = catalog.clips.filter((c) => c.f && c.m);
+  assert.ok(covered.length > 0);
+  for (const clip of covered) {
+    assert.equal(clipFor(catalog, clip.he, 'f'), clip.f);
+    assert.equal(clipFor(catalog, clip.he, 'm'), clip.m);
+    assert.equal(clipFor(catalog, clip.he, 'sephardi'), null);
+    assert.match(clip.f, /^audio\/f\/israeli\//);
+    assert.match(clip.m, /^audio\/m\/israeli\//);
+  }
+  assert.equal(clipFor(catalog, 'אין קטע כזה', 'f'), null);
+  assert.equal(autoplayAllowed({ audioFree: true }), false);
+  assert.equal(autoplayAllowed({ calmMode: true }), false);
+  assert.equal(autoplayAllowed({ soundEffects: false }), false);
+  assert.equal(autoplayAllowed({ soundEffects: true, voice: 'm' }), true);
+  const blocked = createEntryPlayback({
+    path: covered[0].f,
+    AudioCtor: class { play() { return Promise.reject(new Error('autoplay')); } load() {} pause() {} removeAttribute() {} addEventListener() {} },
+  });
+  assert.deepEqual(await blocked.start(), { ok: false, reason: 'autoplay-blocked' });
+  const plays = [];
+  const ok = createEntryPlayback({
+    path: covered[0].m,
+    AudioCtor: class { constructor(src) { plays.push(src); this.paused = false; } play() { this.paused = false; return Promise.resolve(); } pause() { this.paused = true; } load() {} removeAttribute() {} addEventListener() {} },
+  });
+  assert.equal((await ok.start()).ok, true);
+  ok.stop();
+  assert.deepEqual(plays, [covered[0].m]);
 });

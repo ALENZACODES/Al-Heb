@@ -293,12 +293,13 @@ test('sample PDF is landscape, watermarked, and does not turn a sample into an i
   assert.match(text, /Design proof/);
   assert.equal((text.match(/\(Design proof\)/g) || []).length, 1);
   assert.doesNotMatch(text, /SAMPLE \/ NOT EARNED|Temporary layout|Sample internal reference/);
-  assert.match(text, /Times-Roman/);
-  assert.match(text, /Times-Bold/);
+  assert.match(text, /FrankRuhlLibre/);
+  assert.match(text, /FontFile2/);
   assert.match(text, /WinAnsiEncoding/);
-  assert.doesNotMatch(text, /Helvetica|0\.9659|\sarc\s/);
+  assert.doesNotMatch(text, /Times-Roman|Times-Bold|Helvetica|0\.9659|\sarc\s/);
   assert.match(text, /Ada <script>/);
-  assert.match(text, /Certificate of Completion/);
+  assert.match(text, /CERTIFICATE OF COMPLETION/);
+  assert.match(text, /PRESENTED TO/);
   assert.match(text, /Not an accredited qualification/);
   assert.match(text, /Beginner Hebrew Foundations/);
   assert.match(text, /ALEF is Key Foundation/);
@@ -344,7 +345,7 @@ test('sample PDF is landscape, watermarked, and does not turn a sample into an i
   assert.match(Buffer.from(hebrew).toString('latin1'), /\?/);
   assert.equal(pdfLiteral('a(b)\\c'), '(a\\(b\\)\\\\c)');
   const hex = createHash('sha256').update(bytes).digest('hex');
-  assert.equal(hex, '6ab5d1f0d79d32c71828b4ff9a4d16044d4dd93df241f6aa1d4713c542c1ea7b');
+  assert.equal(hex, '714f7e2e95f38b223d531ed770894dfe5aea114885ee3b1fc9698ac0bfaa31a2');
 });
 
 test('trust notes name real source files, and this lane does not award from them', () => {

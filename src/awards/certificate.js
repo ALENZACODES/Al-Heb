@@ -4,11 +4,12 @@
 // Not a degree, not an accredited qualification, no signature, no verification URL.
 // Cert # is last initial, then first initial, then the America/Toronto preview date.
 // It is a sample internal reference. The same name and date can collide. It is not checked.
-// PDF text uses the standard PDF serif Times (supplied by the viewer). HTML uses Frank Ruhl Libre,
-// SIL OFL 1.1, already shipped in assets/fonts. No new font file is added.
+// HTML and the PDF both use Frank Ruhl Libre, SIL OFL 1.1, already in assets/fonts.
+// The PDF embeds Latin static instances of that file. No new typeface and no paid font.
 
 import { ART_ACCEPTED, ART_NOTE, renderSeal, svgNode } from './icons.js';
 import { sanitizeName } from './record.js';
+import { PROOF_BOLD, PROOF_REGULAR } from './proof-font.js';
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
@@ -200,16 +201,15 @@ const GRAIN_LIGHT = '0.99 0.96 0.90';
 const INK = '0.14 0.11 0.09';
 const RULE = '0.55 0.48 0.40';
 const WELL = '0.90 0.82 0.68';
-/** Liberation Serif advances, which match Times. Index 0 is U+0020. Units are thousandths of the size. */
-const ROMAN = [250,333,408,500,500,833,778,180,333,333,500,564,250,333,250,278,500,500,500,500,500,500,500,500,500,500,278,278,564,564,564,444,921,722,667,667,722,611,556,722,722,333,389,722,611,889,722,722,556,722,667,556,611,722,722,944,722,722,611,333,278,333,469,500,333,444,500,444,500,444,333,500,500,278,278,500,278,778,500,500,500,500,333,389,278,500,500,722,500,500,444,480,200,480,541];
-const BOLD = [250,333,555,500,500,1000,833,278,333,333,500,570,250,333,250,278,500,500,500,500,500,500,500,500,500,500,333,333,570,570,570,500,930,722,667,722,722,667,611,778,778,389,500,778,667,944,722,778,611,778,722,556,667,722,722,1000,722,722,667,333,278,333,581,500,333,500,556,444,556,444,333,500,556,278,333,556,278,833,556,500,556,556,444,389,333,556,500,722,500,500,444,394,220,394,520];
+const WAVE = '0.70 0.62 0.50';
+const BOLD_FACE = Object.freeze({ ...PROOF_BOLD, psName: 'FrankRuhlLibre-Bold' });
 
 function unitWidth(ch, bold) {
   const c = ch.codePointAt(0);
-  if (c >= 32 && c <= 126) return (bold ? BOLD : ROMAN)[c - 32];
+  const table = bold ? BOLD_FACE.widths : PROOF_REGULAR.widths;
+  if (c >= 32 && c <= 255) return table[c - 32] || 500;
   if (c === 0x2014) return 1000;
   if (c === 0x2013) return 500;
-  if (c === 0x00B7) return 333;
   return 500;
 }
 
@@ -264,7 +264,7 @@ function paperGrain(cmds, width, height) {
     s = (Math.imul(s, 1664525) + 1013904223) >>> 0;
     return s / 4294967296;
   };
-  for (let i = 0; i < 720; i++) {
+  for (let i = 0; i < 220; i++) {
     const x = 24 + next() * (width - 48);
     const y = 24 + next() * (height - 48);
     const w = 0.28 + next() * 0.62;
@@ -300,19 +300,74 @@ function placeRingText(cmds, cx, cy, radius, text, size) {
   }
 }
 
-/** Temporary crimson stamp. Original ring lettering and center word. Not approved artwork. */
+function inkRand(seed) {
+  let s = seed >>> 0;
+  return () => {
+    s = (Math.imul(s, 1664525) + 1013904223) >>> 0;
+    return s / 4294967296;
+  };
+}
+
+/** Faint sweeping curves in the margins. Low contrast, kept off the name. */
+function paperWaves(cmds, width, height) {
+  const stroke = (pts) => {
+    const n = (v) => v.toFixed(2);
+    cmds.push(`${WAVE} RG 0.45 w`);
+    cmds.push(`${n(pts[0][0])} ${n(pts[0][1])} m`);
+    for (let i = 1; i < pts.length; i++) cmds.push(`${n(pts[i][0])} ${n(pts[i][1])} l`);
+    cmds.push('S');
+  };
+  const band = (y, amp, cycles) => {
+    const pts = [];
+    for (let i = 0; i <= 48; i++) {
+      const t = i / 48;
+      pts.push([48 + t * (width - 96), y + Math.sin(t * Math.PI * 2 * cycles) * amp]);
+    }
+    stroke(pts);
+  };
+  band(height - 28, 5.5, 1.5);
+  band(height - 18, 3.5, 2.2);
+  band(26, 5, 1.6);
+  band(16, 3.2, 2.4);
+  cmds.push(`${WAVE} RG 0.4 w`);
+  for (const [ox, oy] of [[0, 0], [width, 0], [0, height], [width, height]]) {
+    for (const r of [78, 108, 138]) strokeCircle(cmds, ox, oy, r);
+  }
+}
+
+/** Temporary crimson stamp with uneven ink. Lettering stays on top. Not approved artwork. */
 function drawSeal(cmds, cx, cy) {
-  cmds.push(`${CRIMSON_DEEP} rg`);
-  fillCircle(cmds, cx + 0.9, cy - 0.8, 38);
+  const next = inkRand(0x51A9C);
   cmds.push(`${CRIMSON} rg`);
   fillCircle(cmds, cx, cy, 38);
-  cmds.push(`${CRIMSON_LIGHT} RG 0.55 w`);
-  strokeCircle(cmds, cx - 0.45, cy + 0.5, 36.4);
-  cmds.push(`${CRIMSON_DEEP} RG 1.5 w`);
-  strokeCircle(cmds, cx, cy, 32);
-  cmds.push(`${CRIMSON_DEEP} RG 0.7 w`);
+  cmds.push('/GsSoft gs');
+  cmds.push(`${CRIMSON_DEEP} rg`);
+  fillCircle(cmds, cx + 1.5, cy - 1.2, 37.2);
+  for (let i = 0; i < 16; i++) {
+    const a = next() * Math.PI * 2;
+    const rad = 8 + next() * 24;
+    fillCircle(cmds, cx + Math.cos(a) * rad, cy + Math.sin(a) * rad, 1.1 + next() * 2.4);
+  }
+  cmds.push('/GsBleed gs');
+  for (let i = 0; i < 18; i++) {
+    const a = next() * Math.PI * 2;
+    const rad = 36 + next() * 6;
+    fillCircle(cmds, cx + Math.cos(a) * rad, cy + Math.sin(a) * rad, 0.5 + next() * 1.3);
+  }
+  cmds.push('/GsSolid gs');
+  cmds.push(`${PAPER} rg`);
+  for (let i = 0; i < 22; i++) {
+    const a = next() * Math.PI * 2;
+    const rad = 30 + next() * 8;
+    fillCircle(cmds, cx + Math.cos(a) * rad, cy + Math.sin(a) * rad, 0.35 + next() * 0.7);
+  }
+  cmds.push(`${CRIMSON_LIGHT} RG 0.5 w`);
+  strokeCircle(cmds, cx - 0.7, cy + 0.6, 36.2);
+  cmds.push(`${CRIMSON_DEEP} RG 1.35 w`);
+  strokeCircle(cmds, cx + 0.3, cy - 0.2, 31.6);
+  cmds.push(`${CRIMSON_DEEP} RG 0.65 w`);
   strokeCircle(cmds, cx, cy, 22);
-  placeRingText(cmds, cx, cy, 26.4, 'KEY FOUNDATION', 6);
+  placeRingText(cmds, cx, cy, 26.2, 'KEY FOUNDATION', 5.6);
   place(cmds, 'F2', 9, cy - 3, 'ALEF', CRIMSON_INK);
 }
 
@@ -320,7 +375,7 @@ function drawSeal(cmds, cx, cy) {
 export function fitName(name, maxWidth) {
   const raw = String(name || '').slice(0, 160);
   if (!raw) return { size: 22, lines: [] };
-  let size = 26;
+  let size = 30;
   while (size > 11 && textWidth(raw, size, true) > maxWidth) size -= 1;
   if (textWidth(raw, size, true) <= maxWidth) return { size, lines: [raw] };
   const lines = [];
@@ -349,22 +404,23 @@ export function renderCertificatePdf(model) {
   const cmds = [];
   cmds.push(`${PAPER} rg 0 0 ${width} ${height} re f`);
   paperGrain(cmds, width, height);
-  cmds.push(`${RULE} RG 0.6 w`);
+  paperWaves(cmds, width, height);
+  cmds.push(`${RULE} RG 0.45 w`);
   cmds.push(`${margin} ${margin} ${width - 2 * margin} ${height - 2 * margin} re S`);
-  placeTracked(cmds, 'F1', 9, 526, FACE.wordmark, 0.42);
-  place(cmds, 'F2', 22, 496, FACE.issuer);
-  place(cmds, 'F1', 13, 468, FACE.subheading);
-  place(cmds, 'F1', 11, 444, FACE.presented);
+  placeTracked(cmds, 'F1', 8, 526, FACE.wordmark, 0.46);
+  place(cmds, 'F2', 26, 492, FACE.issuer);
+  place(cmds, 'F1', 9, 466, FACE.subheading.toUpperCase());
+  place(cmds, 'F1', 8, 444, FACE.presented.toUpperCase());
   const fitted = fitName(name, width - 120);
   if (fitted.lines.length === 1) place(cmds, 'F2', fitted.size, 416, fitted.lines[0]);
   else if (fitted.lines.length > 1) {
     place(cmds, 'F2', fitted.size, 426, fitted.lines[0]);
     place(cmds, 'F2', fitted.size, 410, fitted.lines[1]);
   }
-  place(cmds, 'F1', 11, 384, FACE.forWord);
-  cmds.push(`${RULE} RG 0.6 w ${width / 2 - 220} 368 m ${width / 2 + 220} 368 l S`);
-  place(cmds, 'F2', 15, 346, FACE.course);
-  cmds.push(`${RULE} RG 0.6 w ${width / 2 - 220} 330 m ${width / 2 + 220} 330 l S`);
+  place(cmds, 'F1', 8, 384, FACE.forWord.toUpperCase());
+  cmds.push(`${RULE} RG 0.4 w ${width / 2 - 220} 368 m ${width / 2 + 220} 368 l S`);
+  place(cmds, 'F2', 16, 346, FACE.course);
+  cmds.push(`${RULE} RG 0.4 w ${width / 2 - 220} 330 m ${width / 2 + 220} 330 l S`);
   drawSeal(cmds, width / 2, 258);
   place(cmds, 'F2', 11, 200, certificateReference(name, model && model.previewAt));
   place(cmds, 'F1', 9, 178, FACE.footer);
@@ -373,28 +429,77 @@ export function renderCertificatePdf(model) {
   return buildPdf(cmds.join('\n'), width, height);
 }
 
+function latin1Bytes(s) {
+  const u = new Uint8Array(s.length);
+  for (let i = 0; i < s.length; i++) u[i] = s.charCodeAt(i) & 255;
+  return u;
+}
+
+function fontProgram(info) {
+  const bin = atob(info.base64);
+  const u = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i) & 255;
+  return u;
+}
+
+function fontDict(info, descriptorId) {
+  return `<< /Type /Font /Subtype /TrueType /BaseFont /${info.psName} /Encoding /WinAnsiEncoding /FirstChar 32 /LastChar 255 /Widths [${info.widths.join(' ')}] /FontDescriptor ${descriptorId} 0 R >>`;
+}
+
+function fontDescriptor(info, fileId) {
+  const [a, b, c, d] = info.bbox;
+  return `<< /Type /FontDescriptor /FontName /${info.psName} /Flags 34 /FontBBox [${a} ${b} ${c} ${d}] /ItalicAngle 0 /Ascent ${info.ascent} /Descent ${info.descent} /CapHeight ${info.capHeight} /StemV 90 /FontFile2 ${fileId} 0 R >>`;
+}
+
 function buildPdf(stream, width, height) {
-  const objects = [
-    null,
-    '<< /Type /Catalog /Pages 2 0 R >>',
-    '<< /Type /Pages /Count 1 /Kids [3 0 R] >>',
-    `<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${width} ${height}] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>`,
-    `<< /Length ${stream.length} >>\nstream\n${stream}\nendstream`,
-    '<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>',
-    '<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>',
-  ];
-  let out = '%PDF-1.4\n%\xE2\xE3\xCF\xD3\n';
-  const offsets = [0];
-  for (let i = 1; i < objects.length; i++) {
-    offsets[i] = out.length;
-    out += `${i} 0 obj\n${objects[i]}\nendobj\n`;
+  const regular = fontProgram(PROOF_REGULAR);
+  const bold = fontProgram(BOLD_FACE);
+  const textObjects = {
+    1: '<< /Type /Catalog /Pages 2 0 R >>',
+    2: '<< /Type /Pages /Count 1 /Kids [3 0 R] >>',
+    3: `<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${width} ${height}] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> /ExtGState 11 0 R >> >>`,
+    5: fontDict(PROOF_REGULAR, 7),
+    6: fontDict(BOLD_FACE, 9),
+    7: fontDescriptor(PROOF_REGULAR, 8),
+    9: fontDescriptor(BOLD_FACE, 10),
+    11: '<< /GsSolid << /Type /ExtGState /ca 1 /CA 1 >> /GsSoft << /Type /ExtGState /ca 0.4 /CA 0.4 >> /GsBleed << /Type /ExtGState /ca 0.62 /CA 0.62 >> >>',
+  };
+  const parts = [];
+  let size = 0;
+  const push = (u) => { parts.push(u); const at = size; size += u.length; return at; };
+  push(latin1Bytes('%PDF-1.4\n%\xE2\xE3\xCF\xD3\n'));
+  const offsets = [];
+  const beginObj = (i) => { offsets[i] = push(latin1Bytes(`${i} 0 obj\n`)); };
+  const endObj = () => { push(latin1Bytes('\nendobj\n')); };
+  for (let i = 1; i <= 11; i++) {
+    beginObj(i);
+    if (i === 4) {
+      const streamBytes = latin1Bytes(stream);
+      push(latin1Bytes(`<< /Length ${streamBytes.length} >>\nstream\n`));
+      push(streamBytes);
+      push(latin1Bytes('\nendstream'));
+    } else if (i === 8) {
+      push(latin1Bytes(`<< /Length ${regular.length} /Length1 ${regular.length} >>\nstream\n`));
+      push(regular);
+      push(latin1Bytes('\nendstream'));
+    } else if (i === 10) {
+      push(latin1Bytes(`<< /Length ${bold.length} /Length1 ${bold.length} >>\nstream\n`));
+      push(bold);
+      push(latin1Bytes('\nendstream'));
+    } else {
+      push(latin1Bytes(textObjects[i]));
+    }
+    endObj();
   }
-  const xref = out.length;
-  out += `xref\n0 ${objects.length}\n`;
-  out += '0000000000 65535 f \n';
-  for (let i = 1; i < objects.length; i++) out += `${String(offsets[i]).padStart(10, '0')} 00000 n \n`;
-  out += `trailer\n<< /Size ${objects.length} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF\n`;
-  return latin1(out);
+  const xref = size;
+  let xrefText = `xref\n0 12\n0000000000 65535 f \n`;
+  for (let i = 1; i <= 11; i++) xrefText += `${String(offsets[i]).padStart(10, '0')} 00000 n \n`;
+  xrefText += `trailer\n<< /Size 12 /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF\n`;
+  push(latin1Bytes(xrefText));
+  const out = new Uint8Array(size);
+  let at = 0;
+  for (const part of parts) { out.set(part, at); at += part.length; }
+  return out;
 }
 
 /** Edge rings for the HTML frame. Original geometry, not a copied security pattern. */
@@ -412,6 +517,30 @@ export function renderGuilloche() {
     class: 'aw-guilloche', viewBox: '0 0 1000 700', 'aria-hidden': 'true', focusable: 'false',
     'data-art': 'temporary', 'data-accepted': String(ART_ACCEPTED),
   }, circles);
+}
+
+/** Faint eggshell curves. Temporary vector ground, not an image file. */
+function renderWaves() {
+  const wave = (y, amp, cycles) => {
+    let d = '';
+    for (let i = 0; i <= 40; i++) {
+      const t = i / 40;
+      const x = 2 + t * 96;
+      const yy = y + Math.sin(t * Math.PI * 2 * cycles) * amp;
+      d += i === 0 ? `M${x.toFixed(1)} ${yy.toFixed(1)}` : ` L${x.toFixed(1)} ${yy.toFixed(1)}`;
+    }
+    return svgNode('path', { d, fill: 'none', stroke: '#8a7860', 'stroke-width': '0.28' });
+  };
+  const arcs = [];
+  for (const [cx, cy] of [[0, 0], [100, 0], [0, 70], [100, 70]]) {
+    for (const r of [6, 9, 12]) {
+      arcs.push(svgNode('circle', { cx: String(cx), cy: String(cy), r: String(r), fill: 'none', stroke: '#8a7860', 'stroke-width': '0.25' }));
+    }
+  }
+  return svgNode('svg', {
+    class: 'aw-waves', viewBox: '0 0 100 70', preserveAspectRatio: 'none',
+    'aria-hidden': 'true', focusable: 'false',
+  }, [wave(1.6, 0.7, 1.5), wave(3.4, 0.45, 2.2), wave(66.2, 0.7, 1.6), wave(68, 0.45, 2.3), ...arcs]);
 }
 
 /** Fine grain over the eggshell ground. Temporary layout, not an image file. */
@@ -446,6 +575,7 @@ export function renderCertificate(h, _model) {
     'aria-labelledby': 'aw-cert-title',
   },
   renderPaperGrain(),
+  renderWaves(),
   h('div', { class: 'aw-cert-frame' },
     h('p', { class: 'aw-wordmark' }, FACE.wordmark),
     h('p', { class: 'aw-issuer' }, FACE.issuer),

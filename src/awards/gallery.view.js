@@ -42,15 +42,16 @@ const CSS = `
 .aw-group { margin: .8rem 0; }
 .aw-group h3 { font-size: 1rem; }
 .aw-cert { position: relative; color: #241c16; background-color: #f3ead5; background-image: radial-gradient(rgba(110, 82, 42, .16) .6px, transparent .7px), radial-gradient(rgba(255, 248, 230, .45) .5px, transparent .65px); background-size: 3px 3px, 5px 5px; background-position: 0 0, 1px 2px; border: 1px solid #b7a88a; padding: 1.2rem 2.2rem 1rem; max-inline-size: 56rem; margin-inline: auto; text-align: center; font-family: "Frank Ruhl Libre", "Times New Roman", Times, "DejaVu Serif", serif; overflow: visible; }
-.aw-paper { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .22; pointer-events: none; z-index: 0; }
+.aw-paper, .aw-waves { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+.aw-paper { opacity: .16; }
 .aw-cert-frame { position: relative; z-index: 1; background: transparent; margin: .2rem 0 0; padding: 0 1rem .2rem; }
 .aw-design-proof { position: relative; z-index: 1; margin: .45rem 0 .15rem; letter-spacing: .12em; font-weight: 600; font-size: .82rem; color: #241c16; }
-.aw-wordmark { margin: .55rem 0 .05rem; font-size: .78rem; letter-spacing: .42em; }
-.aw-issuer { margin: 0; font-size: clamp(1.45rem, 3.6vw, 2.15rem); font-weight: 700; letter-spacing: .03em; line-height: 1.15; }
-.aw-cert h2 { margin: .3rem 0 .55rem; font-size: 1.12rem; font-weight: 500; letter-spacing: .04em; }
-.aw-presented, .aw-for { margin: .28rem 0; font-size: .95rem; }
+.aw-wordmark { margin: .55rem 0 .05rem; font-size: .72rem; letter-spacing: .46em; font-variant: small-caps; }
+.aw-issuer { margin: 0; font-size: clamp(1.75rem, 4.2vw, 2.55rem); font-weight: 700; letter-spacing: .045em; line-height: 1.12; }
+.aw-cert h2 { margin: .35rem 0 .45rem; font-size: .95rem; font-weight: 500; letter-spacing: .18em; font-variant: small-caps; }
+.aw-presented, .aw-for { margin: .28rem 0; font-size: .82rem; letter-spacing: .16em; font-variant: small-caps; font-weight: 500; }
 .aw-name-panel { min-block-size: 2.4rem; margin: .1rem auto .2rem; max-inline-size: 36rem; border: 0; padding: 0 .4rem; background: transparent; }
-.aw-name { margin: 0; font-size: clamp(1.45rem, 3.6vw, 2.2rem); font-weight: 700; line-height: 1.2; overflow-wrap: anywhere; }
+.aw-name { margin: 0; font-size: clamp(1.9rem, 4.8vw, 2.85rem); font-weight: 700; line-height: 1.15; overflow-wrap: anywhere; }
 .aw-name-empty { margin: .2rem 0 0; font-size: .95rem; }
 .aw-course { margin: .1rem auto .35rem; max-inline-size: 36rem; font-size: 1.28rem; font-weight: 700; border-block: 1px solid #b7a88a; padding: .4rem 0; }
 .aw-sample-line { margin: .55rem auto .25rem; max-inline-size: 36rem; font-size: .95rem; }

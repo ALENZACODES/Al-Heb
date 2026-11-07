@@ -95,3 +95,159 @@ button.catcher-star { pointer-events: auto; background: transparent; border: 0; 
 }
 
 .game-arch-option-svg{width:100px;max-width:24vw;height:88px;display:block;color:#1f3a5f}
+
+/* Day-zero Word Finder: oversized targets, calm feedback, no time pressure. */
+.wf-game { background: #F6F1E7; color: #2B2B2B; }
+.wf-game .muted { color: #1F3A5F; }
+.wf-eyebrow { font-weight: 800; letter-spacing: .14em; font-size: .72rem; color: #6B7F3A; }
+.wf-game h1 { font-size: clamp(1.5rem, 5vw, 2.1rem); color: #1F3A5F; margin: .35rem 0 .55rem; }
+.wf-game h1 .he { font-size: .82em; }
+.wf-intro { font-size: 1.03rem; line-height: 1.5; max-width: 44rem; }
+.wf-progress { display: grid; gap: .4rem; margin: 1rem 0 .65rem; }
+.wf-progress-label { font-size: .9rem; font-weight: 700; color: #1F3A5F; }
+.wf-track { display: block; height: 11px; border-radius: 999px; overflow: hidden;
+  background: #F6F1E7; border: 1px solid #6B7F3A; }
+.wf-track-fill { display: block; height: 100%; border-radius: inherit; background: #6B7F3A;
+  transition: width .24s ease; min-width: 0; }
+.wf-status { font-weight: 750; color: #1F3A5F; min-height: 1.3em; margin: .65rem 0 .2rem; }
+.wf-sound { font-size: .85rem; min-height: 1.2em; margin: .2rem 0 .65rem; }
+.wf-stage { margin-top: .65rem; }
+.wf-word-card { border-radius: 22px; padding: clamp(1rem, 3.5vw, 1.8rem);
+  border: 2px solid #D9A441; background: #1F3A5F; color: #F6F1E7; text-align: center;
+  box-shadow: 0 9px 24px rgba(31,58,95,.1); }
+.wf-step { font-weight: 800; font-size: .86rem; text-transform: uppercase;
+  letter-spacing: .06em; margin: 0 0 .7rem; color: #D9A441; }
+.wf-word-large { margin: .45rem auto; }
+.wf-hebrew { display: inline-block; font-size: clamp(3rem, 11vw, 5rem); line-height: 1.4;
+  font-family: "Frank Ruhl Libre", serif; color: #F6F1E7; }
+.wf-say { margin: .5rem 0; line-height: 1.45; }
+.wf-translation { margin: .45rem 0; font-weight: 780; font-size: clamp(1.25rem,4vw,1.85rem); }
+.wf-usage { margin: .7rem auto 0; max-width: 30rem; font-size: .95rem; line-height: 1.5; color: #F6F1E7; }
+.wf-actions { display: flex; justify-content: center; gap: .7rem; flex-wrap: wrap; margin: 1rem 0; }
+.wf-actions .btn { min-height: 53px; min-width: min(11rem,100%); }
+.wf-reassure { text-align: center; color: #1F3A5F; margin: .7rem auto 1rem; }
+.wf-next { display: block; margin: 1rem auto .2rem; min-height: 56px; width: min(100%,24rem);
+  font-size: 1.05rem; font-weight: 750; background: #D9A441; border-color: #D9A441; color: #2B2B2B; }
+.wf-find-header { text-align: center; border-radius: 17px; border: 1.5px solid #D9A441;
+  padding: 1.1rem; background: #1F3A5F; color: #F6F1E7; }
+.wf-find-header .wf-step { color: #D9A441; }
+.wf-prompt { font-size: clamp(1.4rem,4vw,1.9rem); line-height: 1.35; margin: .35rem 0; }
+.wf-choices { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .6rem; margin: 1rem 0; }
+.wf-choice { display: flex; justify-content: center; align-items: center; flex-direction: column; gap: .25rem;
+  min-width: 0; min-height: clamp(105px,20vw,145px); padding: 1rem .4rem; cursor: pointer;
+  border-radius: 18px; background: #F6F1E7; border: 2px solid #6B7F3A; color: #1F3A5F;
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease; }
+.wf-choice:hover,.wf-choice:focus-visible { transform: translateY(-2px); border-color: #D9A441;
+  box-shadow: 0 0 0 3px rgba(217,164,65,.28); }
+.wf-choice-he { font-family: "Frank Ruhl Libre",serif; font-size: clamp(1.7rem,5.5vw,2.8rem); line-height: 1.35; }
+.wf-choice-hint { font-size: .78rem; }
+.wf-choice.wf-glow { background: #1F3A5F; border-color: #D9A441; color: #F6F1E7;
+  box-shadow: 0 0 0 3px rgba(217,164,65,.34); }
+.wf-choice.wf-not-yet { opacity: .5; cursor: default; }
+.wf-hint { margin-top: .65rem; line-height: 1.55; }
+.wf-hint-he { display: inline-block; margin-inline-start: .4rem; color: #D9A441; font-size: 1.6rem; }
+.wf-show,.wf-back { margin: .35rem; min-height: 48px; }
+.wf-explore { margin: 1.25rem 0 0; padding: 1rem; border: 1px solid #6B7F3A;
+  border-radius: 15px; background: #F6F1E7; }
+.wf-explore summary { cursor: pointer; font-weight: 700; color: #1F3A5F; }
+.wf-topic-list { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .8rem; }
+.wf-topic { border: 1px solid #6B7F3A; border-radius: 14px; background: #F6F1E7; color: #1F3A5F;
+  padding: .65rem .8rem; min-height: 46px; font: inherit; cursor: pointer; }
+.wf-topic[aria-pressed="true"] { border: 2px solid #D9A441; background: #1F3A5F; color: #F6F1E7; }
+.wf-source { font-size: .78rem; line-height: 1.5; margin-top: 1rem; }
+.wf-complete { text-align: center; padding: 1.2rem; border-radius: 20px; border: 2px solid #D9A441; }
+.wf-complete h2 { color: #1F3A5F; }
+.wf-finish-symbol { font-size: 3rem; color: #D9A441; margin: .4rem 0; }
+.wf-level-section { margin-top: 1.4rem; }
+.wf-level-section h2 { font-size: 1.23rem; margin-bottom: .25rem; }
+.wf-level-section .show-grid { margin-top: .55rem; }
+.wf-game-level { display: inline-block; font-size: .72rem; letter-spacing: .09em; font-weight: 800;
+  color: #D9A441; margin-bottom: .35rem; }
+.wf-level-tile { min-height: 120px; }
+.wf-featured-game { border: 2px solid #D9A441; }
+.wf-try-first { display: inline-block; margin-top: .6rem; color: #F6F1E7; font-weight: 800; }
+@media (max-width: 440px) {
+  .wf-choices { grid-template-columns: 1fr; gap: .5rem; }
+  .wf-choice { min-height: 78px; }
+  .wf-game .wf-actions { flex-direction: column; }
+  .wf-actions .btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wf-track-fill,.wf-choice { transition: none !important; transform: none !important; }
+}
+
+
+/* Day-zero materials: the learner meets Hebrew through stone, ink and
+   hand-thrown clay rather than a generic quiz symbol or animated mascot.
+   The image is the already-shipped clean olive-harvest scene. */
+.wf-artifact {
+  position: relative;
+  height: clamp(110px, 23vw, 190px);
+  border: 1.5px solid #D9A441;
+  border-radius: 15px;
+  margin: .6rem 0 1rem;
+  background-image:
+    linear-gradient(90deg, rgba(31,58,95,.19), rgba(31,58,95,.05)),
+    url("../img/gen/HERO_olive_harvest_astral.1600.webp");
+  background-position: center, 0% 61%;
+  background-size: cover, 160% auto;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.wf-artifact::after {
+  content: "";
+  position: absolute; inset: 0; pointer-events: none;
+  box-shadow: inset 0 0 0 4px rgba(246,241,231,.12);
+  border-radius: inherit;
+}
+.wf-game .wf-word-card {
+  background: linear-gradient(160deg, #1F3A5F, #2B2B2B);
+  border: 2px solid #D9A441;
+  border-radius: 16px;
+  box-shadow: inset 0 0 0 4px rgba(246,241,231,.035);
+}
+.wf-game .wf-choice {
+  border: 1.5px solid #D9A441;
+  border-radius: 13px;
+  background:
+    radial-gradient(circle at 15% 12%, rgba(217,164,65,.16), transparent 48%),
+    linear-gradient(160deg, #F6F1E7, rgba(217,164,65,.19));
+  box-shadow: 0 6px 14px rgba(43,43,43,.11), inset 0 0 0 3px rgba(31,58,95,.035);
+}
+.wf-game .wf-choice:focus-visible {
+  border-color: #1F3A5F;
+  outline: 3px solid #D9A441;
+  outline-offset: 3px;
+}
+.wf-game .wf-choice.wf-glow {
+  background: #1F3A5F; color: #F6F1E7;
+  border-color: #D9A441;
+}
+.wf-game .wf-hear,.wf-game .wf-meaning {
+  border-radius: 12px;
+  font-weight: 750;
+}
+.wf-game .wf-next {
+  border-radius: 13px;
+  box-shadow: 0 4px 0 rgba(43,43,43,.2);
+}
+.wf-game .wf-next:active { transform: translateY(2px); box-shadow: 0 2px 0 rgba(43,43,43,.2); }
+.wf-games-hub .wf-level-section {
+  border-block-start: 1px solid rgba(217,164,65,.6);
+  padding-block-start: 1rem;
+}
+.wf-games-hub .wf-level-section h2 {
+  font-family: Georgia, 'Frank Ruhl Libre', serif;
+  color: var(--fg);
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+@media (max-width: 600px) {
+  .wf-artifact {
+    background-image:
+      linear-gradient(90deg, rgba(31,58,95,.19), rgba(31,58,95,.05)),
+      url("../img/gen/HERO_olive_harvest_astral.900.webp");
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wf-game .wf-next:active { transform: none; }
+}

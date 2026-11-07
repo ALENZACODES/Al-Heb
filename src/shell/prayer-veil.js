@@ -70,12 +70,15 @@ function initPrayerVeil() {
   function stopAudio() {
     try { if (audio) { audio.pause(); audio.removeAttribute('src'); audio.load?.(); } } catch { /* ignore */ }
   }
-  // Listening holds the veil open past its usual few seconds; it leaves shortly after the clip ends.
+  // Only an explicit Listen tap may extend the short opening. A missing
+  // media "ended" event must never strand the learner behind the veil.
+  const MAX_LISTEN_HOLD_MS = 18000;
   function holdForAudio() {
     if (closed || holding) return;
     holding = true;
     clearTimeout(deadline);
     document.removeEventListener('alef:ready', onReady);
+    deadline = setTimeout(() => dismiss(true), MAX_LISTEN_HOLD_MS);
   }
   function releaseAfter(ms) {
     if (closed) return;

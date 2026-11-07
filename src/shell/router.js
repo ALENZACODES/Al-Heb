@@ -45,6 +45,7 @@ export const ROUTES = [
   { name: 'books', pattern: '/books', module: '../books/books.view.js', title: 'Little books', owner: 'books', optional: true },
   { name: 'book', pattern: '/book/:id', module: '../books/book.view.js', title: 'Read a book', owner: 'books', paramQuery: { id: 'book' } },
   { name: 'games', pattern: '/games', module: '../games/games.view.js', title: 'Games', tier: 'preview', owner: 'games' },
+  { name: 'wordfinder', pattern: '/wordfinder', module: '../games/wordfinder.view.js', title: 'Hebrew Word Finder — Level 1', tier: 'preview', owner: 'games' },
   { name: 'tugowar', pattern: '/tugowar', module: '../games/tugowar.view.js', title: 'Antonym Tug-of-War', tier: 'preview', owner: 'games' },
   { name: 'vowelcatcher', pattern: '/vowelcatcher', module: '../games/vowelcatcher.view.js', title: 'Vowel Catcher', tier: 'preview', owner: 'games' },
   { name: 'pinball', pattern: '/pinball', module: '../games/pinball.view.js', title: 'The Hebrew Pinball Bouncer', tier: 'preview', owner: 'games' },
@@ -70,8 +71,6 @@ export const ROUTES = [
   { name: 'submarinesonar', pattern: '/submarinesonar', module: '../games/submarinesonar.view.js', tier: 'preview', title: 'Submarine Sonar Vowels', owner: 'games' },
   { name: 'rhymelab', pattern: '/rhymelab', module: '../games/rhymelab.view.js', tier: 'preview', title: 'Hebrew Rhyme Laboratory', owner: 'games' },
   { name: 'bumperverbs', pattern: '/bumperverbs', module: '../games/bumperverbs.view.js', tier: 'preview', title: 'Bumper Car Verb Conjugations', owner: 'games' },
-  // Natural-name aliases (external review, Nov 7 2026): the names a learner or a
-  // shared link would guess resolve to their games instead of a dead end.
   { name: 'bumpercar', pattern: '/bumpercar', module: '../games/bumperverbs.view.js', tier: 'preview', title: 'Bumper Car Verb Conjugations', owner: 'games' },
   { name: 'traintrack', pattern: '/traintrack', module: '../games/trainswitch.view.js', tier: 'preview', title: 'Train Track Switchboard', owner: 'games' },
   { name: 'weatherpresenter', pattern: '/weatherpresenter', module: '../games/weatherstudio.view.js', tier: 'preview', title: 'Weather Presenter Studio', owner: 'games' },

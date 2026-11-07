@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
-import { ANCIENT_TREE_SRC, ANCIENT_TREE_DESCRIPTION } from '../src/shell/astral-tree.js';
+import { ANCIENT_TREE_SRC, ANCIENT_TREE_MOBILE_SRC, ANCIENT_TREE_DESCRIPTION } from '../src/shell/astral-tree.js';
 import { N, memStore } from './torahread.fakedom.js';
 import { mount as mountHome } from '../src/shell/home.view.js';
 import { mount as mountWelcome } from '../src/onboarding/firstrun.view.js';
@@ -29,6 +29,13 @@ test('home and welcome place the ancient Tree of Life above original text, panel
     assert.ok(photo, 'original aged tree artwork exists');
     assert.equal(photo.attrs.src, ANCIENT_TREE_SRC);
     assert.equal(photo.attrs.loading, 'eager');
+    const mobile = scene.querySelector('source');
+    assert.ok(mobile, 'mobile image is chosen by a picture source');
+    assert.equal(mobile.attrs.srcset, ANCIENT_TREE_MOBILE_SRC);
+    assert.equal(mobile.attrs.media, '(max-width: 600px)');
+    assert.ok(existsSync(new URL('../' + ANCIENT_TREE_MOBILE_SRC, import.meta.url)), 'mobile artwork must ship with ALEF');
+    assert.ok(scene.querySelector('.astral-harvest-motes'), 'harvest motes animate separately from the image');
+    assert.ok(scene.querySelector('.astral-harvest-halo'), 'subtle warm light is layered in CSS');
     assert.equal(scene.attrs['aria-label'], ANCIENT_TREE_DESCRIPTION);
     assert.ok(existsSync(new URL('../' + ANCIENT_TREE_SRC, import.meta.url)), 'artwork must ship with ALEF');
     assert.ok(scene.querySelector('.astral-ray'), 'moving light remains');

@@ -7,6 +7,7 @@ import { astralTreeNode } from './astral-tree.js';
 
 const TILES = [
   ['firstday', '#/firstday', 'Your First 10 Minutes', 'עֲשָׂרָה', 'Build your first word, letter by letter'],
+  ['wordfinder', '#/wordfinder', 'Hebrew Word Finder · Level 1', 'מִלָּה', 'Hear, see and find your first real words — no Hebrew experience needed'],
   ['letters', '#/letters', 'Letters', 'אָלֶף־בֵּית', 'All 27 letters — sounded, traced, remembered'],
   ['books', '#/books', 'Little Books', 'סְפָרִים', '5 story books, 60 pages, every page voiced'],
   ['games', '#/games', 'All the Games', 'מִשְׂחָקִים', 'Every game in one place — letters, words, roots and rhymes'],
@@ -24,6 +25,29 @@ const TILES = [
   ['torahreader', '#/torahreader', 'Torah Reader', 'תּוֹרָה', 'Read the weekly portion aloud'],
 ];
 
+
+// Four photographed entrances. The same cached harvest artwork supplies four
+// distinct, carefully chosen crops; no new requests, icon sprites or labels
+// baked into images. The links and all words remain accessible DOM content.
+const PORTALS = [
+  ['wordfinder', '#/wordfinder', 'Start with words', 'Hear, find, understand — 240 gentle first words', 'clay'],
+  ['books', '#/books', 'Open a little book', 'Read an illustrated story at your own pace', 'wood'],
+  ['games', '#/games', 'Enter the games', 'Explore games across Levels 1–9', 'harvest'],
+  ['read', '#/read', 'Read the prayers', 'Hebrew first, English beneath; go line by line', 'sky'],
+];
+
+function portalsNode(has) {
+  return h('section', { class: 'show-portals', 'aria-labelledby': 'show-portals-title' },
+    h('p', { id: 'show-portals-title', class: 'show-section-title' }, 'Choose your first doorway'),
+    h('p', { class: 'show-portals-intro' }, 'Begin anywhere. Every doorway is open, and you can always return.'),
+    h('ul', { class: 'show-portal-grid' }, ...PORTALS.filter(([name]) => has(name)).map(([, href, title, summary, scene]) =>
+      h('li', {},
+        h('a', { class: 'show-portal show-portal--' + scene, href },
+          h('span', { class: 'show-portal-art', 'aria-hidden': 'true' }),
+          h('span', { class: 'show-portal-copy' },
+            h('span', { class: 'show-portal-title' }, title),
+            h('span', { class: 'show-portal-note' }, summary)))))));
+}
 
 const TRY_LETTERS = [
   ['\u05D0', 'alef', 'a'], ['\u05D1', 'bet', 'b'], ['\u05D2', 'gimel', 'g'],
@@ -98,7 +122,10 @@ export function showcaseNode(ctx) {
           h('a', { class: 'btn show-btn', href: '#/firstday' }, 'Start your first 10 minutes'),
           ' ',
           h('a', { class: 'btn secondary show-btn2', href: '#/books' }, 'Read a story book')))),
+    portalsNode(has),
     tryPanel(),
-    h('p', { class: 'show-stats' }, '75 lessons \u00b7 5,000 words \u00b7 19,466 voice clips \u00b7 5 voiced story books \u00b7 3 traditions'),
-    h('ul', { class: 'show-grid' }, ...tiles));
+    h('p', { class: 'show-stats' }, 'Games across 9 levels · 240 first words · 5 story books · 3 Hebrew traditions'),
+    h('details', { class: 'show-all-destinations', ...(ctx?.routeName === 'home' ? { open: true } : {}) },
+      h('summary', {}, 'Explore all ALEF destinations'),
+      h('ul', { class: 'show-grid' }, ...tiles)));
 }

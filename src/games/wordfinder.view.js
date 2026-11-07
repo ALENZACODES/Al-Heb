@@ -32,6 +32,18 @@ export function mount(root, ctx) {
       '240 sourced words · 5 words per gentle round · vocabulary preview, not yet checked by a native Hebrew educator.')));
 
   const current = () => deck[index];
+  // Replacing the choice grid otherwise drops keyboard focus after a miss or hint.
+  function focusStage(selector) {
+    const target = stage.querySelector(selector);
+    try { target?.focus?.({ preventScroll: true }); }
+    catch { try { target?.focus?.(); } catch { /* no focus API in small test DOM */ } }
+  }
+  function focusNextChoice() {
+    const candidates = stage.querySelectorAll?.('button.wf-choice') || stage.queryAll?.('button.wf-choice') || [];
+    const next = [...candidates].find((node) => node.getAttribute('disabled') === null);
+    try { next?.focus?.({ preventScroll: true }); }
+    catch { try { next?.focus?.(); } catch { /* unsupported focus API */ } }
+  }
   const audioOff = () => isAudioFree(ctx);
   function persist(word) {
     found = recordFound(found, word.id, bank);
@@ -105,6 +117,7 @@ export function mount(root, ctx) {
       wrong.add(word.id);
       status.textContent = 'Good try! That is another word. You can try again, or tap “Show me”.';
       paint(false);
+      focusNextChoice();
       return;
     }
     persist(target);
@@ -113,6 +126,7 @@ export function mount(root, ctx) {
     status.textContent = 'You found it! There is no penalty for trying.';
     sound.textContent = '';
     paint();
+    focusStage('button.wf-next');
   }
   function nextWord() {
     if (phase !== 'found') return;
@@ -125,6 +139,8 @@ export function mount(root, ctx) {
     hint = false; wrong = new Set(); roundChoices = [];
     sound.textContent = '';
     paint();
+    if (phase === 'done') focusStage('button.wf-next');
+    else focusStage('button.wf-hear');
   }
   function menuNode() {
     const themes = [...new Set(bank.map((word) => word.theme))];
@@ -180,8 +196,8 @@ export function mount(root, ctx) {
             disabled: wrong.has(choice.id),
             onclick: () => choose(choice)
           }, heSpan(choice.he, 'he wf-choice-he'), wrong.has(choice.id) ? h('span', { class: 'wf-choice-hint' }, 'Try another') : null))),
-        h('button', { type: 'button', class: 'btn secondary wf-show', onclick: () => { hint = true; status.textContent = 'A little help: the matching shapes are highlighted in gold.'; paint(false); } }, 'Show me a hint'),
-        h('button', { type: 'button', class: 'btn secondary wf-back', onclick: () => { phase = 'learn'; paint(); } }, 'Look at the word again'));
+        h('button', { type: 'button', class: 'btn secondary wf-show', onclick: () => { hint = true; status.textContent = 'A little help: the matching shapes are highlighted in gold.'; paint(false); focusStage('button.wf-glow'); } }, 'Show me a hint'),
+        h('button', { type: 'button', class: 'btn secondary wf-back', onclick: () => { phase = 'learn'; paint(); focusStage('button.wf-next'); } }, 'Look at the word again'));
     } else if (phase === 'found') {
       stage.replaceChildren(
         wordCard(word, '✦ You found it!'),

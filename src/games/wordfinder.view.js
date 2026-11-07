@@ -24,6 +24,7 @@ export function mount(root, ctx) {
   root.replaceChildren(h('article', { class: 'card game-card wf-game' },
     h('div', { class: 'wf-eyebrow' }, 'LEVEL 1 OF 9 · START FROM ZERO'),
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Hebrew Word Finder ', heSpan('מִלָּה')),
+    h('div', { class: 'wf-artifact', 'aria-hidden': 'true' }),
     h('p', { class: 'wf-intro' }, 'Never heard Hebrew before? You belong here. Listen, look at the letters, then find the same word. You do not need to read yet.'),
     h('p', { class: 'muted' }, 'Hebrew reads right to left ←. The dots help with sounds. Every word has an English meaning.'),
     progress, status, sound, stage, more,
@@ -72,8 +73,8 @@ export function mount(root, ctx) {
   }
   function hearingButtons(word) {
     return h('div', { class: 'wf-actions' },
-      h('button', { type: 'button', class: 'btn wf-hear', onclick: () => void hebrewReadAloud(word) }, '🔊 Hear Hebrew'),
-      h('button', { type: 'button', class: 'btn secondary wf-meaning', onclick: () => englishReadAloud(word) }, '🔈 Hear meaning'));
+      h('button', { type: 'button', class: 'btn wf-hear', onclick: () => void hebrewReadAloud(word) }, 'Hear the Hebrew'),
+      h('button', { type: 'button', class: 'btn secondary wf-meaning', onclick: () => englishReadAloud(word) }, 'Hear the meaning'));
   }
   function wordCard(word, heading) {
     return h('section', { class: 'wf-word-card' },

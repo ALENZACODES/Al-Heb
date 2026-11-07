@@ -29,12 +29,12 @@
   <link rel="preload" href="assets/fonts/web/frank-ruhl-libre.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
-  <div id="alef-prayer-veil" class="prayer-veil" role="region" aria-label="Opening prayer">
+  <div id="alef-prayer-veil" class="prayer-veil" role="region" aria-label="Opening prayer" data-prayer-ready="1">
     <div class="prayer-veil-stars" aria-hidden="true"></div>
     <div class="prayer-veil-glow" aria-hidden="true"></div>
     <div class="prayer-words">
-      <p id="alef-prayer-he" class="prayer-he" lang="he" dir="rtl"></p>
-      <p id="alef-prayer-en" class="prayer-en" lang="en"></p>
+      <p id="alef-prayer-he" class="prayer-he" lang="he" dir="rtl">מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם, שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה. רַבָּה אֱמוּנָתֶךָ</p>
+      <p id="alef-prayer-en" class="prayer-en" lang="en">I thank You, living and eternal King, for returning my soul to me with compassion. Great is Your faithfulness.</p>
     </div>
     <p class="prayer-audio-note" id="alef-prayer-audio-note" hidden>Synthetic voice (Israeli), not a recorded teacher.</p>
     <button type="button" class="prayer-listen" id="alef-prayer-listen" hidden>Listen to this prayer</button>
@@ -49,7 +49,7 @@
   <main id="main" tabindex="-1" aria-live="off"><p class="muted">Loading ALEF…</p></main>
   <footer class="site-footer"><p>Made by John Khan &middot; &copy; 2026 John Khan. All rights reserved.</p></footer>
   <div id="announcer" class="visually-hidden" role="status" aria-live="polite"></div>
-  <noscript><p class="card">ALEF needs JavaScript enabled.</p></noscript>
+  <noscript><style>#alef-prayer-veil{display:none}</style><p class="card">ALEF needs JavaScript enabled.</p></noscript>
   <script type="module" src="src/shell/prayer-veil.js"></script>
   <script type="module" src="src/app.js"></script>
   <script type="module" src="src/shell/install-notice.js"></script>

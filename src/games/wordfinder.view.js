@@ -80,8 +80,8 @@ export function mount(root, ctx) {
     return h('section', { class: 'wf-word-card' },
       h('p', { class: 'wf-step' }, heading),
       h('div', { class: 'wf-word-large' }, heSpan(word.he, 'he wf-hebrew')),
-      h('p', { class: 'wf-say' }, 'Say it: ', h('strong', {}, word.translit)),
       h('p', { class: 'wf-translation' }, word.en),
+      h('p', { class: 'wf-say' }, 'Say it: ', h('strong', {}, word.translit)),
       h('p', { class: 'wf-usage' }, 'Where you use it: ' + word.use));
   }
   function newRound(nextTopic = topic) {

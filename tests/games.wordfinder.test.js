@@ -102,3 +102,29 @@ test('Day-0 view loads a lesson, asks a three-card find question, and saves only
   assert.ok(root.querySelector('.wf-word-card'), 'next learn card appears');
   unmount();
 });
+
+
+test('keyboard focus moves to a usable choice after a miss, then to the answer on a hint', async () => {
+  const root = new N('div');
+  const store = memStore();
+  const unmount = mount(root, {
+    store, settings: { get: () => false },
+    fetchFn: async () => ({ ok: true, json: async () => bankData }),
+    audio: { play: async () => ({ source: 'none', reason: 'no-clip' }) },
+  });
+  await tick(40);
+  await root.querySelector('button.wf-next').click();
+  const wrong = root.queryAll('button.wf-choice').find((b) => !b.textContent.includes(bank[0].he));
+  await wrong.click();
+  const remaining = root.queryAll('button.wf-choice');
+  assert.ok(remaining.some((b) => b.focused && b.attrs.disabled === undefined),
+    'after a miss, a usable choice receives keyboard focus');
+  assert.equal(store.get(STORE_KEY), undefined, 'a miss grants no progress');
+  await root.querySelector('button.wf-show').click();
+  const answer = root.querySelector('button.wf-glow');
+  assert.ok(answer?.focused, 'after the hint, the highlighted answer receives keyboard focus');
+  await answer.click();
+  assert.equal(store.get(STORE_KEY).found.length, 1, 'the user must still select the answer');
+  assert.ok(root.querySelector('button.wf-next')?.focused, 'the next action is keyboard-reachable after success');
+  unmount();
+});

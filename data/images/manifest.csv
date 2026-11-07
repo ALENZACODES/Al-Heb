@@ -1810,3 +1810,28 @@ GAME_weatherstudio_env.png,game_scenes,0,W,1920,1280,generated,"Flat vector game
 GAME_barter_env.png,game_scenes,0,W,2736,912,generated,"Flat vector game backdrop in the ALEF house palette (deep greens, gold, olive, cream); no text, letters or numerals."
 GAME_echochamber_env.png,game_scenes,0,W,1920,1280,generated,"Flat vector game backdrop in the ALEF house palette (deep greens, gold, olive, cream); no text, letters or numerals."
 MASCOT_rimon.png,mascot,0,W,1600,1600,generated,"Flat vector game backdrop in the ALEF house palette (deep greens, gold, olive, cream); no text, letters or numerals."
+BADGE_streak-2.png,awards_medallions,0,W,1600,1600,generated,Day Two medallion: a sprout with two leaves.
+BADGE_streak-3.png,awards_medallions,0,W,1600,1600,generated,Day Three medallion: a seedling with three leaves.
+BADGE_streak-4.png,awards_medallions,0,W,1600,1600,generated,Day Four medallion: a young branch with four leaves.
+BADGE_streak-5.png,awards_medallions,0,W,1920,1280,generated,Day Five medallion: a branch with five leaves and one bud.
+BADGE_streak-6.png,awards_medallions,0,W,1600,1600,generated,Day Six medallion: a leafy shoot with six leaves.
+BADGE_streak-7.png,awards_medallions,0,W,1600,1600,generated,One Week medallion: an olive branch.
+BADGE_streak-14.png,awards_medallions,0,W,1600,1600,generated,Two Weeks medallion: a small olive tree.
+BADGE_streak-30.png,awards_medallions,0,W,1600,1600,generated,One Month medallion: a ripe pomegranate.
+BADGE_streak-100.png,awards_medallions,0,W,1920,1280,generated,Hundred Days medallion: a full olive tree.
+BADGE_streak-180.png,awards_medallions,0,W,1600,1600,generated,Half Year medallion: a crown over an olive branch.
+BADGE_streak-365.png,awards_medallions,0,W,1920,1280,generated,One Year medallion: the Tree of Life.
+BADGE_first-day.png,awards_medallions,0,W,1600,1600,generated,First Steps medallion: a footprint beside a sprouting seed.
+BADGE_goal-met.png,awards_medallions,0,W,1600,1600,generated,Daily Goal medallion: a sun over a full ring.
+BADGE_games-5.png,awards_medallions,0,W,1600,1600,generated,Gamer medallion: a game controller with an olive branch.
+BADGE_yolo.png,awards_medallions,0,W,1600,1600,generated,YOLO medallion: a shooting star over a wave.
+BADGE_cafe-master.png,awards_medallions,0,W,1600,1600,generated,Cafe Master medallion: a coffee cup with an olive sprig.
+BADGE_market-master.png,awards_medallions,0,W,1600,1600,generated,Market Master medallion: a balance scale with fruit.
+BADGE_letter-master.png,awards_medallions,0,W,1920,1280,generated,Letter Master medallion: a golden flame.
+BADGE_word-collector.png,awards_medallions,0,W,1600,1600,generated,Word Collector medallion: an open book with rising leaves.
+BADGE_prayer-voice.png,awards_medallions,0,W,1600,1600,generated,Prayer Voice medallion: a dove over sound rings.
+BADGE_cantorial-fan.png,awards_medallions,0,W,1600,1600,generated,Cantorial Fan medallion: a gramophone with a gold disc.
+BADGE_book-finisher.png,awards_medallions,0,W,1600,1600,generated,Book Finisher medallion: a stack of books with a bookmark.
+BADGE_early-bird.png,awards_medallions,0,W,1600,1600,generated,Early Bird medallion: a bird on a branch at sunrise.
+BADGE_night-owl.png,awards_medallions,0,W,1920,1280,generated,Night Owl medallion: an owl under a crescent moon.
+BADGE_root-digger.png,awards_medallions,0,W,1600,1600,generated,Root Digger medallion: roots under a small tree.

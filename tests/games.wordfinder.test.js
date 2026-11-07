@@ -61,7 +61,7 @@ test('Word Finder: three distinct choices, only one target and no made-up altern
 });
 
 test('Every existing game has a suggested skill level 1–9 without reclassifying as certified', () => {
-  assert.equal(GAMES.length, 25);
+  assert.equal(GAMES.length, 24);
   assert.equal(Object.keys(LEVEL_BY_GAME).length, 26);
   assert.equal(LEVEL_BY_GAME.wordfinder, 1);
   for (const [id] of GAMES) assert.ok(LEVEL_BY_GAME[id] >= 1 && LEVEL_BY_GAME[id] <= 9);

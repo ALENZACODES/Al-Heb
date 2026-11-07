@@ -115,3 +115,69 @@ decision, so the More sheet stays short and the first session stays coherent (we
 `welcome` -> `firstday` (five small steps; the pronunciation style and what sound to expect are named at the top) -> `learn`
 (r01 onward) -> `letters` / `atlas` -> `progress`. None of these is hidden or merged. Settings holds backup, restore and delete;
 Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP-REMINDER.md`).
+| `phrases` | keep | Phrase browser over existing records. |
+| `listen-shelf` | keep | Listening shelf; needs recordings. |
+| `books` | keep | Little books shelf; readers are drafts until native review. |
+| `games` | keep | The games hub; every game is reached from here. |
+| `letterchomp` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `fallingletters` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `lettertwins` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `soundsnap` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `lookalikes` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `alefbetrun` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `finalfive` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `letterdrop` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `vowelstack` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `syllablesnake` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `wordbuilder` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `meltdown` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `flapvowel` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `bingoletters` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `wordsearch` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `minicross` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `wordmaze` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `scramble` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `bubbleword` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `trueornot` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `lettercrush` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `lettersudoku` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `quizladder` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `speedtype` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `gendersplit` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `pluralpop` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `sentencetrain` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `noahseven` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `tenwords` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `mitzvot613` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `wordfinder` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `tugowar` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `vowelcatcher` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `pinball` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `prefixblast` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `memorypalace` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `shabbatrush` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `typewriter` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `petclinic` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `trainswitch` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `weatherstudio` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `rentalagent` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `echochamber` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `museumcurator` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `karaokebeat` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `archbuilder` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `lasermaze` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `roottree` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `letterbridge` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `shadowcraft` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `ciphergrid` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `shuktaxi` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `barter` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `submarinesonar` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `rhymelab` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `bumperverbs` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `bumpercar` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `traintrack` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `weatherpresenter` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `karaoke` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `cipher` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `fleamarket` | keep | Game; reached from the `games` hub. Preview until native review of its words. |

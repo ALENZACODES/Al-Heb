@@ -4,6 +4,8 @@
 import { h, heSpan } from '../shell/ui.js';
 import { LEVEL_DESCRIPTIONS } from './wordfinder.model.js';
 import { loadGameImages, imgOf, GAME_ENV } from './engine.js';
+import { ARCADE_GAMES } from './arcade.catalog.js';
+import { gameOfTheDay, dayKey, ARCADE_KEY } from './arcade.model.js';
 
 /** Hub id -> GAME_ENV key, for the games whose backdrop key differs from the route id. */
 export const HUB_ENV_KEY = Object.freeze({
@@ -68,10 +70,11 @@ export const LEVEL_BY_GAME = Object.freeze({
   barter: 8,
   karaokebeat: 8,
   bumperverbs: 9,
+  ...Object.fromEntries(ARCADE_GAMES.map((x) => [x.id, x.level])),
 });
 
-export function mount(root) {
-  const original = new Map(GAMES.map(([id, title, hook]) => [id, { id, title, hook }]));
+export function mount(root, ctx) {
+  const original = new Map([...GAMES, ...ARCADE_GAMES.map((x) => [x.id, x.title, x.tag])].map(([id, title, hook]) => [id, { id, title, hook }]));
   const items = [{ id: 'wordfinder', title: 'Hebrew Word Finder', hook: 'No Hebrew experience needed: hear, look, find and learn 240 short words' }, ...original.values()];
   const thumbs = [];
   const sections = LEVEL_DESCRIPTIONS.map((intro, i) => {
@@ -95,6 +98,7 @@ export function mount(root) {
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Hebrew Games ', heSpan('מִשְׂחָקִים')),
     h('p', {}, 'Completely new to Hebrew? Start at Level 1. Every level is open; you can play at your pace.'),
     h('p', { class: 'muted' }, 'These are suggested challenge levels, not placement tests or CEFR certifications. Games and vocabulary remain preview content, with native review pending.'),
+    arcadeCard(ctx),
     ...sections);
   root.replaceChildren(article);
   // Card thumbnails from each game's own backdrop art, plus Rimon the mascot
@@ -112,4 +116,16 @@ export function mount(root) {
       article.children[1] || null);
   }).catch(() => {});
   return () => {};
+}
+
+/** The arcade strip: today's featured quick game, the learner's streak, and the count of arcade games. */
+function arcadeCard(ctx) {
+  const today = gameOfTheDay(ARCADE_GAMES.map((x) => x.id), dayKey());
+  const game = ARCADE_GAMES.find((x) => x.id === today) || ARCADE_GAMES[0];
+  let arc = null; try { arc = ctx?.store?.get?.(ARCADE_KEY) || null; } catch { arc = null; }
+  const streak = arc?.streak || 0;
+  return h('section', { class: 'card wf-arcade-card', 'aria-labelledby': 'wf-arcade-h' },
+    h('h2', { id: 'wf-arcade-h' }, 'Arcade · today\'s game'),
+    h('p', {}, h('a', { class: 'btn', href: '#/' + game.id + '?daily=1' }, game.title + ' ', heSpan(game.titleHe)), ' ', h('span', { class: 'muted' }, game.tag + '. Same board for everyone today; play it as the daily challenge.')),
+    h('p', { class: 'muted' }, streak ? `Your arcade streak: ${streak} day${streak === 1 ? '' : 's'}. Play any arcade game today to keep it.` : 'Play any arcade game today to start a streak. Thirty quick games, five levels each, badges for bests and perfect rounds.'));
 }

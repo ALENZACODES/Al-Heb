@@ -41,7 +41,11 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   // Large image sets: runtime-cached on first view (and listed for "Download everything"), never installed up front (fix #4 / R39).
   'assets/chatgpt-overnight/', 'assets/letter-cartoons/', 'assets/books/', 'assets/speak-hold/', 'assets/speak-candidates/',
   // Lazy preview-route code + book content + image indexes: fetched on first view, runtime-cached (fix #4; #8 groups).
-  'src/games/', 'src/books/', 'data/books/', 'data/images/'];
+  'src/games/', 'src/books/', 'data/books/', 'data/images/',
+  // Game data (word bank, prefix deck, arcade lists, the laws): fetched when a game first opens, runtime-cached.
+  'data/games/',
+  // Preview-route view code (pronunciation styles, vocabulary browser): not v0, fetched on first view, runtime-cached.
+  'src/traditions/', 'src/vocab/'];
 const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifest-kind-word.json', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json',
   // Non-v0 data (the integration test's must-install list is the v0 offline contract; these are fetched on first use, then runtime-cached).
   'data/audio/english-glosses.json',
@@ -49,6 +53,8 @@ const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifes
   'data/games/firstwords.json',
   // Awards gallery view: route code only (the router loads views lazily; its engine files stay installed), fetched when Awards first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB after the 25-badge engine landed).
   'src/awards/gallery.view.js',
+  // Arcade stylesheet: preview-game styling, fetched with the first arcade game and runtime-cached (first install stays under 3.95 MiB).
+  'assets/css/arcade.css',
   'data/corpus/prayer-meta.json', 'data/corpus/torah-service-guide.json', 'data/corpus/gaps.json',
   'data/curriculum/dialogues.json', 'data/curriculum/gender-pairs.json', 'data/curriculum/loanwords.json', 'data/curriculum/prompts.json', 'data/curriculum/word-vocab-map.json',
   'data/firstday/minute-one.json', 'data/homepage/prayers.json', 'data/morning-verses.json',

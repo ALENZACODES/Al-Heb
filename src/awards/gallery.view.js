@@ -41,35 +41,43 @@ const CSS = `
 .aw-links a { display: inline-flex; align-items: center; min-block-size: 48px; padding-inline: .4rem; }
 .aw-group { margin: .8rem 0; }
 .aw-group h3 { font-size: 1rem; }
-.aw-cert { position: relative; color: #1c1c1c; background: #fbfbfa; border: 1px solid #9a9a9a; padding: 1.4rem 2.4rem 1.2rem; max-inline-size: 56rem; margin-inline: auto; text-align: center; font-family: "Frank Ruhl Libre", "Times New Roman", Times, "DejaVu Serif", serif; }
-.aw-cert-frame { position: relative; z-index: 1; background: transparent; margin: .4rem 0 0; padding: 0 1rem .2rem; }
-.aw-cert-banner, .aw-watermark { margin: .2rem 0; letter-spacing: .14em; font-weight: 700; font-size: .95rem; color: #1c1c1c; background: transparent; }
-.aw-wordmark { margin: .8rem 0 .1rem; font-size: .8rem; letter-spacing: .42em; }
-.aw-brand { margin: 0; font-size: clamp(2.6rem, 6vw, 4.2rem); letter-spacing: .18em; font-weight: 700; line-height: 1.05; }
-.aw-cert h2 { margin: .35rem 0 .9rem; font-size: 1.15rem; font-weight: 500; letter-spacing: .04em; }
-.aw-presented, .aw-for { margin: .35rem 0; font-size: .95rem; }
-.aw-name-panel { min-block-size: 2.6rem; margin: .2rem auto .35rem; max-inline-size: 36rem; border: 0; padding: 0 .4rem; background: transparent; }
-.aw-name { margin: 0; font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; line-height: 1.2; overflow-wrap: anywhere; }
+.aw-cert { position: relative; color: #241c16; background-color: #f3ead5; background-image: radial-gradient(rgba(110, 82, 42, .16) .6px, transparent .7px), radial-gradient(rgba(255, 248, 230, .45) .5px, transparent .65px); background-size: 3px 3px, 5px 5px; background-position: 0 0, 1px 2px; border: 1px solid #b7a88a; padding: 1.2rem 2.2rem 1rem; max-inline-size: 56rem; margin-inline: auto; text-align: center; font-family: "Frank Ruhl Libre", "Times New Roman", Times, "DejaVu Serif", serif; overflow: visible; }
+.aw-paper { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .22; pointer-events: none; z-index: 0; }
+.aw-cert-frame { position: relative; z-index: 1; background: transparent; margin: .2rem 0 0; padding: 0 1rem .2rem; }
+.aw-cert-banner, .aw-watermark { position: relative; z-index: 1; margin: .15rem 0; letter-spacing: .14em; font-weight: 700; font-size: .95rem; color: #241c16; background: transparent; }
+.aw-wordmark { margin: .55rem 0 .05rem; font-size: .78rem; letter-spacing: .42em; }
+.aw-issuer { margin: 0; font-size: clamp(1.45rem, 3.6vw, 2.15rem); font-weight: 700; letter-spacing: .03em; line-height: 1.15; }
+.aw-cert h2 { margin: .3rem 0 .55rem; font-size: 1.12rem; font-weight: 500; letter-spacing: .04em; }
+.aw-presented, .aw-for { margin: .28rem 0; font-size: .95rem; }
+.aw-name-panel { min-block-size: 2.4rem; margin: .1rem auto .2rem; max-inline-size: 36rem; border: 0; padding: 0 .4rem; background: transparent; }
+.aw-name { margin: 0; font-size: clamp(1.45rem, 3.6vw, 2.2rem); font-weight: 700; line-height: 1.2; overflow-wrap: anywhere; }
 .aw-name-empty { margin: .2rem 0 0; font-size: .95rem; }
-.aw-course { margin: .15rem auto .45rem; max-inline-size: 36rem; font-size: 1.35rem; font-weight: 700; border-block: 1px solid #9a9a9a; padding: .45rem 0; }
-.aw-sample-line { margin: .7rem auto .4rem; max-inline-size: 36rem; font-size: .95rem; }
-.aw-seal { display: block; width: 64px; height: 64px; margin: .35rem auto .2rem; color: #7a1f24; }
-.aw-footer { margin: .15rem auto; max-inline-size: 36rem; font-size: .85rem; }
-.aw-date { margin: .15rem 0; font-size: .95rem; }
-.aw-art-note { margin: 0 0 .35rem; font-size: .78rem; }
+.aw-course { margin: .1rem auto .35rem; max-inline-size: 36rem; font-size: 1.28rem; font-weight: 700; border-block: 1px solid #b7a88a; padding: .4rem 0; }
+.aw-sample-line { margin: .55rem auto .25rem; max-inline-size: 36rem; font-size: .95rem; }
+.aw-seal { display: block; width: 132px; height: 132px; margin: .15rem auto .05rem; }
+.aw-cert-no { margin: .15rem 0 0; font-size: 1rem; font-weight: 700; letter-spacing: .03em; }
+.aw-cert-note { margin: 0 0 .2rem; font-size: .78rem; }
+.aw-footer { margin: .1rem auto; max-inline-size: 36rem; font-size: .85rem; }
+.aw-date { margin: .1rem 0; font-size: .95rem; }
+.aw-art-note { margin: 0 0 .25rem; font-size: .78rem; }
 .aw-actions { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
 .aw-actions button { padding: .4rem .8rem; border: 2px solid currentColor; background: transparent; color: inherit; }
 .aw-actions button:disabled { border-style: dashed; cursor: not-allowed; }
 @media (max-width: 720px) {
-  .aw-cert { padding: 1rem .7rem 1.1rem; }
-  .aw-brand { letter-spacing: .08em; }
+  .aw-cert { padding: 1rem .7rem 1rem; }
   .aw-wordmark { letter-spacing: .28em; }
+  .aw-issuer { letter-spacing: .01em; }
+  .aw-seal { width: 112px; height: 112px; }
 }
 @media print {
-  @page { size: A4 landscape; margin: 12mm; }
+  @page { size: A4 landscape; margin: 10mm; }
   body * { visibility: hidden; }
   .aw-cert, .aw-cert * { visibility: visible; }
-  .aw-cert { position: absolute; inset: 8mm; max-inline-size: none; box-shadow: none; background: #fbfbfa; color: #1c1c1c; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .aw-cert { position: absolute; inset: 6mm; max-inline-size: none; box-shadow: none; color: #241c16; background-color: #f3ead5; background-image: radial-gradient(rgba(110, 82, 42, .16) .6px, transparent .7px), radial-gradient(rgba(255, 248, 230, .45) .5px, transparent .65px); -webkit-print-color-adjust: exact; print-color-adjust: exact; padding: .45rem 1rem .35rem; }
+  .aw-issuer { font-size: 1.55rem; }
+  .aw-seal { width: 96px; height: 96px; }
+  .aw-cert h2, .aw-presented, .aw-for, .aw-sample-line { margin-block: .12rem; }
+  .aw-course { padding-block: .22rem; }
   .aw-noprint { display: none !important; }
   .aw-watermark, .aw-cert-banner { visibility: visible; }
 }

@@ -1,7 +1,8 @@
-// Sample certificate. Pale paper, centered serif, original wording.
-// Temporary geometric seal only. Accepted artwork: 0.
+// Sample certificate. Warm eggshell paper, centered serif, original wording.
+// Temporary foil-style seal only. Accepted artwork: 0. Not a final art file.
 // Every HTML and PDF drawing says SAMPLE / NOT EARNED. That mark is not taken from the caller.
 // Not a degree, not an accredited qualification, no signature, no verification URL.
+// Certificate No. SAMPLE-0001 is a sample internal reference, not an accreditation number.
 // PDF text uses the standard PDF serif Times (supplied by the viewer). HTML uses Frank Ruhl Libre,
 // SIL OFL 1.1, already shipped in assets/fonts. No new font file is added.
 
@@ -27,11 +28,14 @@ export const PRINT_MARGIN = 40;
 export const FACE = Object.freeze({
   wordmark: 'ALEF',
   heading: 'ALEF',
+  issuer: 'ALEF is Key Foundation',
   subheading: 'Certificate of Completion',
   presented: 'Presented to',
   forWord: 'for',
   course: 'Beginner Hebrew Foundations',
   sampleLine: 'Sample design \u2014 completion has not been assessed or awarded.',
+  certNo: 'Certificate No. SAMPLE-0001',
+  certNote: 'Sample internal reference',
   footer: 'Independent learning programme \u00b7 Not an accredited qualification',
   temporary: 'Temporary layout',
 });
@@ -55,7 +59,7 @@ export function sampleModel(o = {}) {
     displayName: name,
     nameEntered: !!name,
     dateLabel: `Preview date: ${formatPreviewDate(o.now ?? Date.now())}`,
-    brand: FACE.heading,
+    brand: FACE.issuer,
     subtitle: FACE.subheading,
     kicker: FACE.course,
     artNote: FACE.temporary,
@@ -69,7 +73,8 @@ export function sampleModel(o = {}) {
 
 /** Long notes for the page and the docs. They are not drawn on the certificate face or the PDF. */
 export const SAMPLE_PAGE_NOTES = Object.freeze([
-  'Approved artwork: 0. No image file has been accepted. The border and seal are a temporary layout, not final art.',
+  'Approved artwork: 0. No image file has been accepted. The eggshell ground and seal are a temporary layout, not final art.',
+  'Certificate No. SAMPLE-0001 is a sample internal reference on this layout. It is not an accreditation number.',
   'This sample does not say the named person can read Hebrew, finished the white-belt lessons, or passed a checked assessment. Saving or printing it does not store an earned certificate.',
   'The name is a label you typed. It is not a signature and not an account.',
   'No teacher, rabbi, or examiner has signed this sample. The seal is a temporary geometric drawing, not a seal of office.',
@@ -125,10 +130,15 @@ export function pdfNameNote(name) {
   return '';
 }
 
-const PAPER = '0.988 0.986 0.980';
-const INK = '0.12 0.12 0.12';
-const RULE = '0.62 0.62 0.62';
-const SEAL = '0.48 0.10 0.13';
+const PAPER = '0.953 0.918 0.835';
+const GRAIN_DARK = '0.86 0.78 0.64';
+const GRAIN_LIGHT = '0.99 0.96 0.90';
+const INK = '0.14 0.11 0.09';
+const RULE = '0.55 0.48 0.40';
+const RED = '0.48 0.14 0.16';
+const GOLD = '0.62 0.48 0.25';
+const BRONZE = '0.42 0.30 0.16';
+const WELL = '0.90 0.82 0.68';
 /** Liberation Serif advances, which match Times. Index 0 is U+0020. Units are thousandths of the size. */
 const ROMAN = [250,333,408,500,500,833,778,180,333,333,500,564,250,333,250,278,500,500,500,500,500,500,500,500,500,500,278,278,564,564,564,444,921,722,667,667,722,611,556,722,722,333,389,722,611,889,722,722,556,722,667,556,611,722,722,944,722,722,611,333,278,333,469,500,333,444,500,444,500,444,333,500,500,278,278,500,278,778,500,500,500,500,333,389,278,500,500,722,500,500,444,480,200,480,541];
 const BOLD = [250,333,555,500,500,1000,833,278,333,333,500,570,250,333,250,278,500,500,500,500,500,500,500,500,500,500,333,333,570,570,570,500,930,722,667,722,722,667,611,778,778,389,500,778,667,944,722,778,611,778,722,556,667,722,722,1000,722,722,667,333,278,333,581,500,333,500,556,444,556,444,333,500,556,278,333,556,278,833,556,500,556,556,444,389,333,556,500,722,500,500,444,394,220,394,520];
@@ -166,15 +176,67 @@ function place(cmds, font, size, y, text, color = INK, x) {
   cmds.push(`BT /${font} ${size} Tf ${color} rg 1 0 0 1 ${left.toFixed(1)} ${y} Tm ${pdfLiteral(text)} Tj ET`);
 }
 
-function strokeCircle(cmds, cx, cy, r) {
+function circleOps(cx, cy, r) {
   const k = 0.5522847498 * r;
   const n = (v) => v.toFixed(2);
-  cmds.push(`${n(cx + r)} ${n(cy)} m`);
-  cmds.push(`${n(cx + r)} ${n(cy + k)} ${n(cx + k)} ${n(cy + r)} ${n(cx)} ${n(cy + r)} c`);
-  cmds.push(`${n(cx - k)} ${n(cy + r)} ${n(cx - r)} ${n(cy + k)} ${n(cx - r)} ${n(cy)} c`);
-  cmds.push(`${n(cx - r)} ${n(cy - k)} ${n(cx - k)} ${n(cy - r)} ${n(cx)} ${n(cy - r)} c`);
-  cmds.push(`${n(cx + k)} ${n(cy - r)} ${n(cx + r)} ${n(cy - k)} ${n(cx + r)} ${n(cy)} c`);
-  cmds.push('S');
+  return [
+    `${n(cx + r)} ${n(cy)} m`,
+    `${n(cx + r)} ${n(cy + k)} ${n(cx + k)} ${n(cy + r)} ${n(cx)} ${n(cy + r)} c`,
+    `${n(cx - k)} ${n(cy + r)} ${n(cx - r)} ${n(cy + k)} ${n(cx - r)} ${n(cy)} c`,
+    `${n(cx - r)} ${n(cy - k)} ${n(cx - k)} ${n(cy - r)} ${n(cx)} ${n(cy - r)} c`,
+    `${n(cx + k)} ${n(cy - r)} ${n(cx + r)} ${n(cy - k)} ${n(cx + r)} ${n(cy)} c`,
+  ];
+}
+
+function strokeCircle(cmds, cx, cy, r) {
+  cmds.push(...circleOps(cx, cy, r), 'S');
+}
+
+function fillCircle(cmds, cx, cy, r) {
+  cmds.push(...circleOps(cx, cy, r), 'f');
+}
+
+/** Deterministic fine grain so the PDF stock is not a flat fill. */
+function paperGrain(cmds, width, height) {
+  let s = 0xA5E11;
+  const next = () => {
+    s = (Math.imul(s, 1664525) + 1013904223) >>> 0;
+    return s / 4294967296;
+  };
+  for (let i = 0; i < 720; i++) {
+    const x = 24 + next() * (width - 48);
+    const y = 24 + next() * (height - 48);
+    const w = 0.28 + next() * 0.62;
+    cmds.push(`${next() > 0.62 ? GRAIN_LIGHT : GRAIN_DARK} rg ${x.toFixed(2)} ${y.toFixed(2)} ${w.toFixed(2)} ${(w * (0.7 + next() * 0.5)).toFixed(2)} re f`);
+  }
+}
+
+/** Temporary foil-style stamp. Original geometry. No letters, no office claim. */
+function drawSeal(cmds, cx, cy) {
+  cmds.push(`${WELL} rg`);
+  fillCircle(cmds, cx, cy, 40);
+  cmds.push(`${BRONZE} RG 1.15 w`);
+  strokeCircle(cmds, cx + 0.9, cy - 0.8, 36);
+  strokeCircle(cmds, cx + 0.9, cy - 0.8, 31);
+  cmds.push(`${RED} RG 1.7 w`);
+  strokeCircle(cmds, cx, cy, 36);
+  cmds.push(`${GOLD} RG 0.9 w`);
+  strokeCircle(cmds, cx, cy, 33);
+  cmds.push(`${GOLD} rg`);
+  for (let i = 0; i < 16; i++) {
+    const a = (Math.PI * 2 * i) / 16;
+    fillCircle(cmds, cx + Math.cos(a) * 29.2, cy + Math.sin(a) * 29.2, 1.15);
+  }
+  cmds.push(`${RED} RG 1.05 w`);
+  strokeCircle(cmds, cx, cy, 24);
+  cmds.push(`${GOLD} RG 1.25 w`);
+  cmds.push(`${cx} ${cy + 16} m ${cx + 16} ${cy} l ${cx} ${cy - 16} l ${cx - 16} ${cy} l h S`);
+  cmds.push(`${RED} RG 1.05 w`);
+  cmds.push(`${cx - 7} ${cy - 7} 14 14 re S`);
+  cmds.push(`${RED} rg`);
+  fillCircle(cmds, cx, cy, 2.5);
+  cmds.push(`${GOLD} RG 0.45 w`);
+  strokeCircle(cmds, cx - 0.4, cy + 0.5, 33.4);
 }
 
 /** Shrink a long name onto one line, or two lines if it still will not fit. */
@@ -210,35 +272,32 @@ export function renderCertificatePdf(model) {
   const date = model && model.dateLabel ? String(model.dateLabel) : '';
   const cmds = [];
   cmds.push(`${PAPER} rg 0 0 ${width} ${height} re f`);
+  paperGrain(cmds, width, height);
   cmds.push(`${RULE} RG 0.6 w`);
   cmds.push(`${margin} ${margin} ${width - 2 * margin} ${height - 2 * margin} re S`);
-  if (modelNeedsWatermark(model)) place(cmds, 'F2', 11, 532, SAMPLE_MARK);
-  placeTracked(cmds, 'F1', 10, 500, FACE.wordmark, 0.42);
-  placeTracked(cmds, 'F2', 46, 448, FACE.heading, 0.06);
-  place(cmds, 'F1', 14, 408, FACE.subheading);
-  place(cmds, 'F1', 12, 370, FACE.presented);
+  if (modelNeedsWatermark(model)) place(cmds, 'F2', 10, 540, SAMPLE_MARK);
+  placeTracked(cmds, 'F1', 9, 526, FACE.wordmark, 0.42);
+  place(cmds, 'F2', 22, 496, FACE.issuer);
+  place(cmds, 'F1', 13, 468, FACE.subheading);
+  place(cmds, 'F1', 11, 444, FACE.presented);
   const fitted = fitName(name, width - 120);
-  if (fitted.lines.length === 1) place(cmds, 'F2', fitted.size, 326, fitted.lines[0]);
+  if (fitted.lines.length === 1) place(cmds, 'F2', fitted.size, 416, fitted.lines[0]);
   else if (fitted.lines.length > 1) {
-    place(cmds, 'F2', fitted.size, 338, fitted.lines[0]);
-    place(cmds, 'F2', fitted.size, 320, fitted.lines[1]);
+    place(cmds, 'F2', fitted.size, 426, fitted.lines[0]);
+    place(cmds, 'F2', fitted.size, 410, fitted.lines[1]);
   }
-  cmds.push(`${RULE} RG 0.6 w ${width / 2 - 220} 258 m ${width / 2 + 220} 258 l S`);
-  place(cmds, 'F1', 12, 278, FACE.forWord);
-  place(cmds, 'F2', 18, 230, FACE.course);
-  cmds.push(`${RULE} RG 0.6 w ${width / 2 - 220} 208 m ${width / 2 + 220} 208 l S`);
-  place(cmds, 'F1', 11, 190, FACE.sampleLine);
-  const sealX = width / 2;
-  const sealY = 152;
-  cmds.push(`${SEAL} RG 1.15 w`);
-  strokeCircle(cmds, sealX, sealY, 18);
-  strokeCircle(cmds, sealX, sealY, 12);
-  cmds.push(`${sealX - 6} ${sealY - 6} 12 12 re S`);
-  cmds.push(`${SEAL} rg ${sealX - 1.4} ${sealY - 1.4} 2.8 2.8 re f`);
-  place(cmds, 'F1', 10, 118, FACE.footer);
-  if (date) place(cmds, 'F1', 11, 100, date);
-  place(cmds, 'F1', 8, 84, FACE.temporary);
-  if (modelNeedsWatermark(model)) place(cmds, 'F2', 11, 64, SAMPLE_MARK);
+  place(cmds, 'F1', 11, 384, FACE.forWord);
+  cmds.push(`${RULE} RG 0.6 w ${width / 2 - 220} 368 m ${width / 2 + 220} 368 l S`);
+  place(cmds, 'F2', 15, 346, FACE.course);
+  cmds.push(`${RULE} RG 0.6 w ${width / 2 - 220} 330 m ${width / 2 + 220} 330 l S`);
+  place(cmds, 'F1', 10, 318, FACE.sampleLine);
+  drawSeal(cmds, width / 2, 262);
+  place(cmds, 'F2', 11, 200, FACE.certNo);
+  place(cmds, 'F1', 8, 186, FACE.certNote);
+  place(cmds, 'F1', 9, 168, FACE.footer);
+  if (date) place(cmds, 'F1', 10, 152, date);
+  place(cmds, 'F1', 8, 136, FACE.temporary);
+  if (modelNeedsWatermark(model)) place(cmds, 'F2', 10, 112, SAMPLE_MARK);
   return buildPdf(cmds.join('\n'), width, height);
 }
 
@@ -283,6 +342,19 @@ export function renderGuilloche() {
   }, circles);
 }
 
+/** Fine grain over the eggshell ground. Temporary layout, not an image file. */
+function renderPaperGrain() {
+  return svgNode('svg', {
+    class: 'aw-paper', viewBox: '0 0 100 100', preserveAspectRatio: 'none',
+    'aria-hidden': 'true', focusable: 'false',
+  }, [
+    svgNode('filter', { id: 'aw-paper-grain' }, [
+      svgNode('feTurbulence', { type: 'fractalNoise', baseFrequency: '0.9', numOctaves: '2', seed: '4', stitchTiles: 'stitch' }),
+    ]),
+    svgNode('rect', { width: '100%', height: '100%', filter: 'url(#aw-paper-grain)' }),
+  ]);
+}
+
 /**
  * HTML certificate. The learner's name is a text node inside a blank panel.
  * @param {Function} h
@@ -301,10 +373,11 @@ export function renderCertificate(h, _model) {
     'data-layout': 'landscape',
     'aria-labelledby': 'aw-cert-title',
   },
+  renderPaperGrain(),
   h('p', { class: 'aw-cert-banner', id: 'aw-cert-banner', tabindex: '-1' }, SAMPLE_MARK),
   h('div', { class: 'aw-cert-frame' },
     h('p', { class: 'aw-wordmark' }, FACE.wordmark),
-    h('p', { class: 'aw-brand' }, FACE.heading),
+    h('p', { class: 'aw-issuer' }, FACE.issuer),
     h('h2', { id: 'aw-cert-title' }, FACE.subheading),
     h('p', { class: 'aw-presented' }, FACE.presented),
     h('div', { class: 'aw-name-panel', 'data-name-panel': '1' }, ...panelKids),
@@ -312,6 +385,8 @@ export function renderCertificate(h, _model) {
     h('p', { class: 'aw-course' }, FACE.course),
     h('p', { class: 'aw-sample-line' }, FACE.sampleLine),
     h('div', { class: 'aw-seal-wrap' }, renderSeal(h)),
+    h('p', { class: 'aw-cert-no' }, FACE.certNo),
+    h('p', { class: 'aw-cert-note' }, FACE.certNote),
     h('p', { class: 'aw-footer' }, FACE.footer),
     h('p', { class: 'aw-date' }, model.dateLabel || ''),
     h('p', { class: 'aw-art-note' }, FACE.temporary),

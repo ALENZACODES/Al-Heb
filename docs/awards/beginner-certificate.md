@@ -83,8 +83,10 @@ Store key: `awards.v1`. Local only. No account, no email, no server copy. The sa
 
 ## Certificate face
 
-The printable sheet, the screen preview, and the PDF share one landscape hierarchy: a small ALEF wordmark, a large ALEF heading, Certificate of Completion, Presented to, the learner's name, for, Beginner Hebrew Foundations between thin rules, one sample sentence, a temporary red geometric seal, and the footer "Independent learning programme · Not an accredited qualification". SAMPLE / NOT EARNED is a single line at the top and a single line at the bottom. Those two lines do not sit on top of each other or on the name.
+The printable sheet, the screen preview, and the PDF share one landscape hierarchy on warm eggshell stock with a fine grain: a small ALEF wordmark for the learning programme, the issuer line "ALEF is Key Foundation", Certificate of Completion, Presented to, the learner's name, for, Beginner Hebrew Foundations between thin rules, one sample sentence, a temporary foil-style geometric seal, "Certificate No. SAMPLE-0001", and "Sample internal reference". The footer remains "Independent learning programme · Not an accredited qualification". SAMPLE / NOT EARNED is a single line at the top and a single line at the bottom. Those two lines do not sit on the name.
 
-HTML uses Frank Ruhl Libre, already shipped under SIL OFL 1.1 (`assets/fonts/FONTS.md`, `assets/fonts/web/frank-ruhl-libre.woff2`). The PDF uses the standard PDF serif Times with WinAnsi encoding, which the viewer supplies. Centering uses the Times advance widths. No new font file was added, and no paid font service is used.
+Key Foundation is a display name on this sample. It is not a claim of a registered charity, company, or accreditation. Certificate No. SAMPLE-0001 is an internal reference for the sample layout. It is not an accreditation number, and it does not identify an earned certificate.
+
+HTML uses Frank Ruhl Libre, already shipped under SIL OFL 1.1 (`assets/fonts/FONTS.md`, `assets/fonts/web/frank-ruhl-libre.woff2`). The PDF uses the standard PDF serif Times with WinAnsi encoding, which the viewer supplies. The eggshell grain and the seal are drawn in the PDF content, not only in the page CSS. No new font file was added, and no paid font service is used.
 
 Approved artwork: 0. The seal is a temporary geometric drawing. The longer notes stay in the page disclosure and in this document.

@@ -39,6 +39,10 @@ test('first visit explains evidence, locks mastery, and watermarks the sample', 
   assert.match(face, /Not an accredited qualification/);
   assert.match(face, /Beginner Hebrew Foundations/);
   assert.match(face, /Presented to/);
+  assert.match(face, /ALEF is Key Foundation/);
+  assert.match(face, /Certificate No\. SAMPLE-0001/);
+  assert.match(face, /Sample internal reference/);
+  assert.doesNotMatch(face, /CE#|Accreditation No|continuing-education|continuing education/);
   assert.doesNotMatch(face, /tamper-proof|verification website|seal of office/);
   const notes = root.querySelector('#award-sample-notes').textContent;
   assert.match(notes, /Approved artwork: 0/);
@@ -177,7 +181,12 @@ test('direct HTML caller cannot replace the sample watermark with EARNED', async
   assert.equal(longNode.querySelector('[data-cert-name]').queryAll('script').length, 0);
   assert.equal(longNode.querySelector('#aw-cert-banner').textContent, SAMPLE_MARK);
   const style = readFileSync(new URL('../src/awards/gallery.view.js', import.meta.url), 'utf8');
+  assert.match(node.textContent, /ALEF is Key Foundation/);
+  assert.match(node.textContent, /Certificate No\. SAMPLE-0001/);
+  assert.match(node.textContent, /Sample internal reference/);
+  assert.doesNotMatch(node.textContent, /CE#|Accreditation No/);
   assert.match(style, /Frank Ruhl Libre/);
+  assert.match(style, /#f3ead5/);
   assert.match(style, /@page \{ size: A4 landscape/);
   assert.match(style, /max-width: 720px/);
 });

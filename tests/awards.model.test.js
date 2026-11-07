@@ -262,6 +262,10 @@ test('sample PDF is landscape, watermarked, and does not turn a sample into an i
   assert.match(text, /Temporary layout/);
   assert.match(text, /Not an accredited qualification/);
   assert.match(text, /Beginner Hebrew Foundations/);
+  assert.match(text, /ALEF is Key Foundation/);
+  assert.match(text, /Certificate No\. SAMPLE-0001/);
+  assert.match(text, /Sample internal reference/);
+  assert.doesNotMatch(text, /CE#|Accreditation No|continuing-education|continuing education/);
   assert.doesNotMatch(text, /FMVA|CFI|Corporate Finance/);
   assert.doesNotMatch(text, /tamper-proof|verification website|seal of office/);
   assert.doesNotMatch(text, /\/JavaScript|mailto:|FMVA|\bCFI\b/);
@@ -300,7 +304,7 @@ test('sample PDF is landscape, watermarked, and does not turn a sample into an i
   assert.match(Buffer.from(hebrew).toString('latin1'), /\?/);
   assert.equal(pdfLiteral('a(b)\\c'), '(a\\(b\\)\\\\c)');
   const hex = createHash('sha256').update(bytes).digest('hex');
-  assert.equal(hex, '1318c3eb006297f8862bce534379bb570f898899545c92644ddbc32b7fbdab45');
+  assert.equal(hex, '85b71190f034f104fc9b2b3930f2d604cc9bc0ed69d93597b29446d397904833');
 });
 
 test('trust notes name real source files, and this lane does not award from them', () => {

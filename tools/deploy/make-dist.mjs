@@ -31,6 +31,8 @@ export const EXTRAS = [
   ['assets/img', 'illustrations: only shipped with --with-img (16 MiB of placeholders); the two hero files named literally in src/ ship always via their own entries below'],
   ['assets/img/gen/HERO_tree_of_life_realistic.webp', 'home astral-tree hero, named literally in src/shell/astral-tree.js (fix #11); runtime-cached on first view, not precached'],
   ['assets/img/gen/HERO_home_tree.webp', 'Welcome hero, named literally in src/shell/home-hero.js (fix #11); runtime-cached on first view, not precached'],
+  ['assets/img/gen/HERO_olive_harvest_astral.1600.webp', 'olive-harvest home hero (large), named literally in src/shell/astral-tree.js; runtime-cached on first view, not precached'],
+  ['assets/img/gen/HERO_olive_harvest_astral.900.webp', 'olive-harvest home hero (small), named literally in src/shell/astral-tree.js; runtime-cached on first view, not precached'],
   ['preview/loops', 'preview-tier daily goal, rhythm, quests and progress page: loaded on demand, not in the first-install list'],
   ['audio', 'recorded clips, when they exist (audio/<voice>/<tradition>/<kind>/<id>.mp3)'],
 ];

@@ -66,7 +66,8 @@ export function mount(root, ctx) {
   const goalStatus = h('p', { id: 'today-goal-status', class: 'visually-hidden', role: 'status', 'aria-live': 'polite' });
   root.replaceChildren(h('div', { class: 'stack' },
     h('header', {}, h('h1', { id: 'view-title', tabindex: '-1' }, h('span', {}, t('app.name')), ' ', heSpan('אלף')), h('p', { class: 'muted' }, t('app.tagline'))),
-    showcaseNode(ctx), destHost, todayHost, backupHost, goalStatus, restHost));
+    showcaseNode(ctx), destHost, todayHost, backupHost, goalStatus, restHost,
+    h('footer', { class: 'site-footer' }, h('p', {}, 'Made by John Khan · © 2026 John Khan. All rights reserved.'))));
 
   // Lane 1 data (fetch-based loaders; modules shared with the Learn screen). Best effort: a missing module leaves the placeholder.
   // The Today card only reads other modules' stores (curriculum progress, SRS cards, streak, firstday.progress, onboarding.v1, placement.v1).

@@ -12,6 +12,7 @@ import { isRealProgressWrite } from './shell/persist-gate.js';
 import { fetchFullManifest, fetchAudioSummary, afterPaint } from './shell/audio-manifest.js';
 import { h, heSpan, unavailableCard } from './shell/ui.js';
 import { loadImageResolver, img as imgEl } from './img/resolve.js';
+import { updateCompanions } from './shell/companions.js';
 import { applyMotor, MOTOR_KEYS } from './shell/motor.js';
 import { gameMusic } from './audio/music.js';
 import { mountGameMusic, syncGameMusic } from './audio/music-bar.js';
@@ -249,6 +250,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     heldFocusId = '';
     if (!quiet) { live.textContent = document.title; if (scrollKeeper) scrollKeeper.arrive(location.hash); else window.scrollTo(0, 0); lastHashShown = location.hash; }
     document.body.dataset.route = route?.name ?? 'notfound';
+    try { updateCompanions(route?.name, { R: ctx.images, voice: ctx.settings?.get?.('voice') }); } catch (e) { console.warn('companions band failed', e); } // Ari and Noa on every screen; a band fault must not break the view
     try { syncGameMusic(route, settings); } catch (e) { console.warn('game music bar failed', e); }
     document.body.dataset.ready = '1';
     document.dispatchEvent(new Event('alef:ready'));
@@ -264,7 +266,9 @@ async function boot() {
   const audio = await makeAudio();
   gameMusic.usePrefs({
     readPrefs: () => ({
-      want: settings.get('gameMusic') === true,
+      // Music starts with the game by default, like sound effects (owner
+      // order, Nov 7 2026). Only an explicit off in the music bar is kept.
+      want: settings.get('gameMusic') !== false,
       muted: settings.get('gameMusicMuted') === true,
       volume: settings.get('gameMusicVolume'),
       trackId: settings.get('gameMusicTrack'),
@@ -298,11 +302,28 @@ async function boot() {
   import('./shell/audio-access.js').then((m) => { soundBar = m.wireSoundBar(audio); }).catch(() => {});
   let router;
   let images = null;
-  try { images = await loadImageResolver((u) => fetch(u).then((r) => { if (!r.ok) throw new Error(String(r.status)); return r.json(); }), { settings }); } catch { images = null; }
+  const resolveImages = () => loadImageResolver((u) => fetch(u).then((r) => {
+    if (!r.ok) throw new Error(String(r.status));
+    return r.json();
+  }), { settings });
+  // The Home and Welcome tree does not use the optional image resolver.
+  // Let the first route paint before fetching image approvals; deep-linked
+  // lessons still receive the resolver before mounting as before.
+  const firstIsHome = !location.hash || location.hash === '#/' || location.hash === '#/welcome';
+  if (!firstIsHome) {
+    try { images = await resolveImages(); } catch { images = null; }
+  }
   const ctxBase = { settings, store, audio, route: (p) => { scrollKeeper?.markForward(); router.go(p); }, t, installPrompt, hasRoute: (name) => available.has(name), images, img: (hh, spec) => (images ? imgEl(hh, { R: images, ...spec }) : null) };
   router = createRouter((m) => { show(m, ctxBase); });
   window.alef = { settings, store, audio, router }; // debugging handle
   router.start();
+  if (firstIsHome) {
+    // Deferring the optional resolver avoids blocking the hero and the first
+    // usable lesson. A later route sees the loaded resolver in the shared ctx.
+    shownFirst.then(() => afterPaint(async () => {
+      try { images = await resolveImages(); ctxBase.images = images; try { updateCompanions(document.body.dataset.route, { R: images, voice: settings.get('voice') }); } catch { /* band fills on next navigation */ } } catch { images = null; }
+    })).catch(() => {});
+  }
   import('./shell/boot-hooks.js').then((m) => m.armReminders(ctxBase)).catch(() => {});
   import('./morning/boot.js').then((m) => m.startMorning({ store, audio })).catch(() => {});
   scheduleManifest(audio);

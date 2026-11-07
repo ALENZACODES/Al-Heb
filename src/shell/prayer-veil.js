@@ -2,6 +2,7 @@
 // The visual never holds the application after its first-route ready event.
 export const MODEH_ANI = Object.freeze({
   he: 'מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם, שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה. רַבָּה אֱמוּנָתֶךָ',
+  tr: 'Modeh ani lefanecha, Melech chai vekayam, shehechezarta bi nishmati bechemla. Raba emunatecha.',
   en: 'I thank You, living and eternal King, for returning my soul to me with compassion. Great is Your faithfulness.',
   source: 'Traditional Modeh Ani — exact wording supplied in the ALEF homepage brief; edition collation pending.'
 });
@@ -57,12 +58,14 @@ function initPrayerVeil() {
   const veil = document.getElementById('alef-prayer-veil');
   if (!veil) return;
   const he = document.getElementById('alef-prayer-he');
+  const tr = document.getElementById('alef-prayer-tr');
   const en = document.getElementById('alef-prayer-en');
   const listenBtn = document.getElementById('alef-prayer-listen');
   const audioNote = document.getElementById('alef-prayer-audio-note');
-  const maxMs = readLocal(VISIT_KEY) ? 800 : 2200;
   writeLocal(VISIT_KEY, '1');
   let closed = false;
+  let rendered = false;
+  let readySeen = false;
   let deadline = null;
   let audio = null, audioPath = '', holding = false;
   const reduce = globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches === true;
@@ -70,12 +73,15 @@ function initPrayerVeil() {
   function stopAudio() {
     try { if (audio) { audio.pause(); audio.removeAttribute('src'); audio.load?.(); } } catch { /* ignore */ }
   }
-  // Listening holds the veil open past its usual few seconds; it leaves shortly after the clip ends.
+  // Only an explicit Listen tap may extend the short opening. A missing
+  // media "ended" event must never strand the learner behind the veil.
+  const MAX_LISTEN_HOLD_MS = 18000;
   function holdForAudio() {
     if (closed || holding) return;
     holding = true;
     clearTimeout(deadline);
     document.removeEventListener('alef:ready', onReady);
+    deadline = setTimeout(() => dismiss(true), MAX_LISTEN_HOLD_MS);
   }
   function releaseAfter(ms) {
     if (closed) return;
@@ -108,13 +114,17 @@ function initPrayerVeil() {
     veil.classList.add('prayer-veil--leaving');
     setTimeout(() => veil.remove(), 150);
   }
-  function onReady() { dismiss(); }
+  function onReady() { if (!rendered) { readySeen = true; return; } dismiss(); }
   function onKey(e) { if (e.key === 'Escape') dismiss(true); }
   veil.addEventListener('click', () => dismiss(true));
   document.addEventListener('keydown', onKey);
   document.addEventListener('alef:ready', onReady, { once: true });
-  deadline = setTimeout(() => dismiss(true), maxMs);
-  if (document.body.dataset.ready === '1') dismiss();
+  // Failsafe only: never trap the learner if the bank fetch hangs. The real
+  // dwell starts when the prayer actually renders (below) — a blessing that
+  // vanishes before it can be read or heard is worse than none (owner
+  // report, Nov 7 2026: the veil closed before anyone could tap Listen).
+  deadline = setTimeout(() => dismiss(true), 12000);
+  if (document.body.dataset.ready === '1') readySeen = true;
 
   // Local same-origin JSON in the PWA precache. Do not block boot on network.
   Promise.resolve().then(async () => {
@@ -130,8 +140,11 @@ function initPrayerVeil() {
     } catch { /* the supplied Modeh Ani is the single safe fallback */ }
     if (closed) return;
     he.textContent = chosen.he;
+    if (tr) { tr.textContent = chosen.tr || ''; tr.hidden = !chosen.tr; }
     en.textContent = chosen.en;
     veil.dataset.prayerReady = '1';
+    rendered = true;
+    if (!holding) releaseAfter(readySeen ? 2500 : 6000);
     writeLocal(LAST_KEY, prayerKey(chosen));
     try {
       const prefs = readAudioPrefs();

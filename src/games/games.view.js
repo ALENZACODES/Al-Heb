@@ -2,6 +2,7 @@
 // home page linked only five of the twenty-five games and the rest were
 // reachable solely by typing their address (owner report, Nov 7 2026).
 import { h, heSpan } from '../shell/ui.js';
+import { LEVEL_DESCRIPTIONS } from './wordfinder.model.js';
 
 export const GAMES = Object.freeze([
   ['tugowar', 'Antonym Tug-of-War', 'Pull the rope with opposites'],
@@ -20,9 +21,7 @@ export const GAMES = Object.freeze([
   ['trainswitch', 'Train Track Switchboard', 'Switch the trains to the right words'],
   ['weatherstudio', 'Weather Presenter Studio', 'Present the forecast in Hebrew'],
   ['rentalagent', 'Apartment Rental Agent', 'Match renters to homes'],
-  // Acoustic Echo Chamber is unlisted until it has playable minimal pairs
-  // (external review, Nov 7 2026: a navigable dead end is worse than no page).
-  // Its route stays alive for direct links; restore this row when it can play.
+  // Echo Chamber remains available by direct link, not in the catalogue until audible pairs pass review.
   ['museumcurator', 'The Museum Curator', 'Sort the artefacts by their words'],
   ['karaokebeat', 'The Karaoke Beat Matcher', 'Match the word to the beat'],
   ['shadowcraft', 'Shadow Craft', 'Match the word to its shadow'],
@@ -33,15 +32,57 @@ export const GAMES = Object.freeze([
   ['rhymelab', 'Hebrew Rhyme Laboratory', 'Find the words that rhyme'],
 ]);
 
+/** Practical entry labels, not CEFR equivalences or claims of verified mastery. */
+export const LEVEL_BY_GAME = Object.freeze({
+  wordfinder: 1,
+  archbuilder: 1,
+  vowelcatcher: 2,
+  pinball: 2,
+  memorypalace: 2,
+  letterbridge: 2,
+  shadowcraft: 2,
+  tugowar: 3,
+  echochamber: 3,
+  museumcurator: 3,
+  petclinic: 3,
+  submarinesonar: 3,
+  prefixblast: 4,
+  typewriter: 4,
+  trainswitch: 4,
+  shuktaxi: 5,
+  rhymelab: 5,
+  lasermaze: 6,
+  shabbatrush: 6,
+  weatherstudio: 7,
+  rentalagent: 7,
+  ciphergrid: 7,
+  roottree: 8,
+  barter: 8,
+  karaokebeat: 8,
+  bumperverbs: 9,
+});
+
 export function mount(root) {
-  const tiles = GAMES.map(([name, title, hook]) =>
-    h('li', {}, h('a', { class: 'show-tile', href: `#/${name}` },
-      h('span', { class: 'show-tile-title' }, title, ' ', heSpan('מִשְׂחָק')),
-      h('span', { class: 'show-tile-hook' }, hook))));
-  root.replaceChildren(h('article', { class: 'card' },
-    h('h1', { id: 'view-title', tabindex: '-1' }, 'Games ', heSpan('מִשְׂחָקִים')),
-    h('p', {}, `All ${GAMES.length} games in one place — letters, words, roots, rhymes and prefixes, played with real Hebrew.`),
-    h('p', { class: 'muted' }, 'Preview: study aids from attested words and phrases; native review pending.'),
-    h('ul', { class: 'show-grid' }, ...tiles)));
+  const original = new Map(GAMES.map(([id, title, hook]) => [id, { id, title, hook }]));
+  const items = [{ id: 'wordfinder', title: 'Hebrew Word Finder', hook: 'No Hebrew experience needed: hear, look, find and learn 240 short words' }, ...original.values()];
+  const sections = LEVEL_DESCRIPTIONS.map((intro, i) => {
+    const level = i + 1;
+    const games = items.filter((item) => LEVEL_BY_GAME[item.id] === level);
+    return h('section', { class: 'wf-level-section', 'aria-labelledby': 'wf-level-' + level },
+      h('h2', { id: 'wf-level-' + level }, 'Level ' + level + ' of 9', level === 1 ? ' · Start here' : ''),
+      h('p', { class: 'muted' }, intro),
+      h('ul', { class: 'show-grid wf-game-grid' }, ...games.map(({ id, title, hook }) =>
+        h('li', {},
+          h('a', { class: 'show-tile wf-level-tile' + (id === 'wordfinder' ? ' wf-featured-game' : ''), href: '#/' + id },
+            h('span', { class: 'wf-game-level' }, 'LEVEL ' + level + ' / 9'),
+            h('span', { class: 'show-tile-title' }, title, ' ', heSpan('מִשְׂחָק')),
+            h('span', { class: 'show-tile-hook' }, hook),
+            id === 'wordfinder' ? h('span', { class: 'wf-try-first' }, 'Start with five words →') : null)))));
+  });
+  root.replaceChildren(h('article', { class: 'card wf-games-hub' },
+    h('h1', { id: 'view-title', tabindex: '-1' }, 'Hebrew Games ', heSpan('מִשְׂחָקִים')),
+    h('p', {}, 'Completely new to Hebrew? Start at Level 1. Every level is open; you can play at your pace.'),
+    h('p', { class: 'muted' }, 'These are suggested challenge levels, not placement tests or CEFR certifications. Games and vocabulary remain preview content, with native review pending.'),
+    ...sections));
   return () => {};
 }

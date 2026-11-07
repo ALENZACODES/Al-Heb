@@ -58,7 +58,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-letter-pictures", label: "Letter memory pictures (the rest of the alphabet)", test: /^assets\/letters\/morph\//, approxMB: 0.09 },
   { id: "od-screens", label: "Install-prompt screenshots", test: /^assets\/screen(s|shots)\//, approxMB: 0.5 },
   { id: "od-pictures", label: "Book, story and speaking-practice pictures", test: /^assets\/(chatgpt-overnight|letter-cartoons|books|speak-hold|speak-candidates)\//, approxMB: 123.45 },
-  { id: "od-games", label: "Games (code for the preview games)", test: /^src\/games\//, approxMB: 0.13 },
+  { id: "od-games", label: "Games (preview-game code and word data)", test: /^(src\/games\/|data\/games\/)/, approxMB: 0.18 },
   { id: "od-books", label: "Little books (code and book texts)", test: /^(src\/books|data\/books)\//, approxMB: 0.04 },
   { id: "od-images", label: "Picture approvals and word cues", test: /^data\/images\//, approxMB: 0.20 },
   { id: "od-letters", label: "Letter art concepts and keyboard layout", test: /^data\/letters\//, approxMB: 0.08 },

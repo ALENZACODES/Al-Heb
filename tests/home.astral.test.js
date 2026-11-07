@@ -12,11 +12,13 @@ test('opening prayer bank is exactly 80 distinct pointed, sourced Hebrew and Eng
   assert.equal(new Set(bank.map((p) => p.he)).size, 80);
   assert.ok(bank.some((p) => p.he === MODEH_ANI.he));
   for (const p of bank) {
-    assert.deepEqual(Object.keys(p).sort(), ['en', 'he', 'source']);
+    assert.deepEqual(Object.keys(p).sort(), ['en', 'he', 'source', 'tr']);
     assert.match(p.he, /[\u05B0-\u05C7]/);
     assert.match(p.he, /[\u05D0-\u05EA]/);
     assert.ok(p.en.length > 10);
     assert.ok(p.source.length > 12);
+    assert.ok(typeof p.tr === 'string' && p.tr.length > 5, 'every blessing carries phonetic English');
+    assert.match(p.tr, /^[A-Za-z]/);
   }
 });
 
@@ -33,7 +35,7 @@ test('random picker excludes the previous prayer without biasing an eligible can
 
 test('opening card has a hard timeout, skip controls and ready signal before the app route', () => {
   const src = readFileSync(new URL('../src/shell/prayer-veil.js', import.meta.url), 'utf8');
-  assert.match(src, /\? 800 : 2200/);
+  assert.match(src, /\? 2500 : 6000/);
   assert.match(src, /document\.addEventListener\('alef:ready'/);
   assert.match(src, /veil\.addEventListener\('click'/);
   assert.match(src, /prefers-reduced-motion/);
@@ -41,6 +43,7 @@ test('opening card has a hard timeout, skip controls and ready signal before the
   assert.match(boot, /dispatchEvent\(new Event\('alef:ready'\)\)/);
   const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
   assert.match(html, /id="alef-prayer-veil"/);
+  assert.match(html, /id="alef-prayer-tr"/);
   assert.match(html, /id="alef-prayer-skip"/);
 });
 

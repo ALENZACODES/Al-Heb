@@ -32,6 +32,7 @@
 .prayer-veil[data-prayer-ready="1"] .prayer-words { opacity: 1; transform: none; }
 .prayer-he { font-family: 'Frank Ruhl Libre', serif; font-weight: 600; line-height: 1.55; font-size: clamp(1.6rem, 4.3vw, 2.65rem); color: #F6F1E7; }
 .prayer-en { margin: .65rem auto 0; max-width: 37rem; font-size: clamp(.91rem, 2.2vw, 1.08rem); line-height: 1.5; color: #F6F1E7; opacity: .89; }
+.prayer-tr { margin: .55rem auto 0; max-width: 37rem; font-size: clamp(1rem, 2.6vw, 1.22rem); line-height: 1.5; font-style: italic; color: #E8C87A; }
 .prayer-skip {
   position: absolute; bottom: max(1.2rem, env(safe-area-inset-bottom)); inset-inline-end: 1.2rem; z-index: 2;
   background: transparent; color: #F6F1E7; border: 1px solid #D9A441; border-radius: 40px;
@@ -77,18 +78,38 @@
   transform: translate3d(0,var(--tree-shift,0px),0);
   animation: astral-photo-drift 25s ease-in-out 2s infinite alternate;
 }
+.astral-tree-picture { display: block; width: 100%; height: 100%; }
 .astral-tree-photo {
   display: block; width: 100%; height: 100%; object-fit: cover;
   object-position: 53% 50%; transform: scale(1.035);
-  filter: brightness(.82) contrast(1.18) saturate(.77);
+  /* Retain the rich grain of the oak-aged olive bark and painted clay: no blur. */
+  filter: brightness(1.015) contrast(1.055) saturate(1.035);
   animation: astral-ancient-reveal 2s cubic-bezier(.19,.63,.24,1) both;
 }
 .astral-nightfall {
   position: absolute; inset: 0; pointer-events: none;
+  /* Preserve the original sky and olive-harvest materials. */
   background: linear-gradient(180deg,
-    rgba(31,58,95,.64) 0%, rgba(31,58,95,.30) 37%,
-    rgba(31,58,95,.13) 69%, rgba(43,43,43,.40) 100%);
-  mix-blend-mode: multiply;
+    rgba(31,58,95,.27) 0%, rgba(31,58,95,.07) 34%,
+    rgba(31,58,95,.03) 70%, rgba(43,43,43,.21) 100%);
+}
+.astral-harvest-halo {
+  position: absolute; inset: 0; pointer-events: none; opacity: .62;
+  background: radial-gradient(circle at 57% 31%, rgba(217,164,65,.23), transparent 36%),
+              radial-gradient(ellipse at 30% 58%, rgba(217,164,65,.10), transparent 58%);
+  animation: astral-harvest-breathe 14s ease-in-out infinite alternate;
+}
+.astral-harvest-motes {
+  position: absolute; inset: -3%; pointer-events: none; opacity: .64;
+  background:
+    radial-gradient(circle at 14% 36%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 23% 61%, #F6F1E7 0 1px, transparent 2px),
+    radial-gradient(circle at 37% 15%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 54% 41%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 65% 76%, #F6F1E7 0 1px, transparent 2px),
+    radial-gradient(circle at 79% 34%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 88% 61%, #F6F1E7 0 1px, transparent 2px);
+  animation: astral-motes-drift 17s ease-in-out infinite alternate;
 }
 .astral-stars {
   position: absolute; inset: -5%; pointer-events: none;
@@ -120,6 +141,14 @@
 .astral-scene[data-paused="1"] *, .astral-scene[data-paused="1"]::before, .astral-scene[data-paused="1"]::after {
   animation-play-state: paused !important;
 }
+@keyframes astral-harvest-breathe {
+  from { opacity: .36; transform: scale(1); }
+  to { opacity: .68; transform: scale(1.025); }
+}
+@keyframes astral-motes-drift {
+  from { opacity: .35; transform: translate3d(-5px,9px,0); }
+  to { opacity: .72; transform: translate3d(8px,-11px,0); }
+}
 @keyframes astral-ancient-reveal {
   0% { opacity: .2; transform: scale(1.14) translateY(9px); }
   100% { opacity: 1; transform: scale(1.035) translateY(0); }
@@ -139,7 +168,7 @@
 }
 @media (max-width: 600px) {
   .astral-scene { height: clamp(260px, 68vw, 345px); }
-  .astral-tree-photo { object-position: 60% 53%; }
+  .astral-tree-photo { object-position: 42% 53%; }
   .prayer-veil-stars { opacity: .6; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -149,4 +178,190 @@
   .prayer-words { transform: none; }
   .astral-photo-motion { transform: none !important; }
   .astral-tree-photo { transform: none !important; }
+}
+
+
+/* ALEF crafted entryways. Every photograph is a different framing of the
+   already-loaded, locally stored olive-harvest hero — no external image,
+   generic icon library, hidden text, or new image download. */
+.show-portals {
+  margin: 1.2rem 0 1rem;
+  padding: clamp(.85rem, 2.5vw, 1.3rem);
+  border: 1px solid rgba(217,164,65,.6);
+  border-radius: 18px;
+  color: #2B2B2B;
+  background: linear-gradient(160deg, #F6F1E7, rgba(217,164,65,.11) 100%);
+}
+.show-section-title {
+  margin: 0;
+  font-family: Georgia, 'Frank Ruhl Libre', serif;
+  font-size: clamp(1.3rem, 3vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: #1F3A5F;
+}
+.show-portals-intro {
+  margin: .35rem 0 1rem;
+  max-width: 45rem;
+  line-height: 1.5;
+  color: #2B2B2B;
+}
+.show-portal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(.55rem, 1.6vw, 1rem);
+  margin: 0; padding: 0; list-style: none;
+}
+.show-portal-grid li { min-width: 0; }
+.show-portal {
+  position: relative; display: flex; flex-direction: column;
+  overflow: hidden; text-decoration: none; height: 100%;
+  border: 1px solid #D9A441; border-radius: 15px;
+  background: #1F3A5F; color: #F6F1E7;
+  box-shadow: 0 6px 20px rgba(43,43,43,.19);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.show-portal:hover, .show-portal:focus-visible {
+  transform: translateY(-3px); border-color: #F6F1E7;
+  box-shadow: 0 12px 27px rgba(43,43,43,.28);
+}
+.show-portal-art {
+  display: block; position: relative; aspect-ratio: 4/3; width: 100%;
+  background-image: linear-gradient(180deg,
+    rgba(31,58,95,.05) 30%,rgba(31,58,95,.20) 70%,rgba(31,58,95,.65) 100%),
+    url("../img/gen/HERO_olive_harvest_astral.1600.webp");
+  background-repeat: no-repeat;
+  background-size: cover, 220% auto;
+}
+.show-portal--clay .show-portal-art { background-position: center, 0% 70%; }
+.show-portal--wood .show-portal-art { background-position: center, 36% 25%; }
+.show-portal--harvest .show-portal-art { background-position: center, 67% 95%; }
+.show-portal--sky .show-portal-art { background-position: center, 100% 35%; }
+/* Dedicated, text-free historical-artifact photography instead of repeated scenery. */
+.show-portal--clay .show-portal-art {
+  background-image: linear-gradient(180deg,rgba(31,58,95,.02) 28%,rgba(31,58,95,.22) 67%,rgba(31,58,95,.53) 100%),
+    url("../img/gen/PORTAL_words_clay.webp");
+  background-position: center, center;
+  background-size: cover, cover;
+}
+.show-portal--harvest .show-portal-art {
+  background-image: linear-gradient(180deg,rgba(31,58,95,.02) 28%,rgba(31,58,95,.24) 70%,rgba(31,58,95,.57) 100%),
+    url("../img/gen/PORTAL_games_shofar.webp");
+  background-position: center, center;
+  background-size: cover, cover;
+}
+.show-portal-copy {
+  display: flex; flex: 1; flex-direction: column; gap: .38rem;
+  padding: .8rem .8rem 1rem;
+  border-top: 1px solid rgba(217,164,65,.7);
+  background: linear-gradient(150deg, #1F3A5F, rgba(43,43,43,.92));
+}
+.show-portal-title {
+  display: block;
+  font-family: Georgia, 'Frank Ruhl Libre', serif;
+  font-size: clamp(1.03rem, 2vw, 1.24rem);
+  font-weight: 700;
+  line-height: 1.2; color: #F6F1E7;
+}
+.show-portal-note {
+  display: block; font-size: .83rem; line-height: 1.5;
+  color: #F6F1E7; opacity: .92;
+}
+.show-stats {
+  margin: 1rem 0;
+  padding: .85rem .75rem;
+  border-block: 1px solid rgba(217,164,65,.5);
+  background: #F6F1E7;
+  color: #1F3A5F;
+  font-weight: 700;
+  font-size: .9rem;
+  line-height: 1.6;
+  letter-spacing: .025em;
+}
+.show-try {
+  padding: clamp(1rem, 2.6vw, 1.6rem);
+  border: 2px solid #D9A441;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 92% 7%, rgba(217,164,65,.19), transparent 34%),
+    linear-gradient(140deg, #1F3A5F, #2B2B2B);
+  box-shadow: inset 0 0 0 4px rgba(246,241,231,.035);
+}
+.show-try-title {
+  font-family: Georgia, 'Frank Ruhl Libre', serif;
+  font-size: clamp(1.2rem, 3vw, 1.55rem);
+  letter-spacing: normal; color: #F6F1E7;
+}
+.show-try .show-letter-btn {
+  min-width: 4.4rem; min-height: 58px;
+  border: 1.5px solid #D9A441; background: rgba(246,241,231,.09);
+}
+.show-try .show-letter-btn:focus-visible { outline: 3px solid #F6F1E7; outline-offset: 3px; }
+.show-all-destinations {
+  border: 1px solid rgba(217,164,65,.65);
+  border-radius: 14px;
+  padding: .85rem 1rem;
+  background: #F6F1E7;
+}
+.show-all-destinations summary {
+  color: #1F3A5F; font-weight: 750;
+  padding: .25rem 0;
+  cursor: pointer; font-size: 1.04rem;
+}
+.show-all-destinations[open] summary { margin-bottom: .6rem; }
+.show-all-destinations .show-grid { margin-bottom: .2rem; }
+.show-all-destinations .show-tile {
+  background: linear-gradient(160deg, #1F3A5F, #2B2B2B);
+  border-color: rgba(217,164,65,.6);
+}
+.show-all-destinations .show-tile-title { color: #F6F1E7; }
+.show-all-destinations .show-tile-hook { color: #F6F1E7; opacity: .85; }
+.show-portals :is(a,button):focus-visible,
+.show-all-destinations summary:focus-visible {
+  outline: 3px solid #D9A441; outline-offset: 3px;
+}
+@media (max-width: 920px) {
+  .show-portal-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 600px) {
+  .show-portal-art {
+    background-image: linear-gradient(180deg,
+      rgba(31,58,95,.05) 30%,rgba(31,58,95,.2) 70%,rgba(31,58,95,.65)),
+      url("../img/gen/HERO_olive_harvest_astral.900.webp");
+  }
+  .show-portal-grid { gap: .6rem; }
+  .show-portal-copy { padding: .72rem; }
+  .show-portal-note { font-size: .8rem; }
+}
+@media (max-width: 380px) {
+  .show-portal-grid { grid-template-columns: 1fr; }
+  .show-portal-art { aspect-ratio: 1.85/1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .show-portal { transition: none !important; }
+  .show-portal:hover { transform: none; }
+}
+
+
+/* Wide cinema is scoped to Home/Welcome; lessons and forms keep their original,
+   readable narrow measure. The photographed tree deserves room on desktop. */
+main:has(.showcase) {
+  max-inline-size: min(100%, 78rem);
+  padding-inline: clamp(.65rem, 2vw, 1.2rem);
+}
+main:has(.showcase) #home-today-host,
+main:has(.showcase) #home-rest,
+main:has(.showcase) #home-dests-host {
+  max-inline-size: 59rem;
+  margin-inline: auto;
+}
+main:has(.showcase) .show-hero-text {
+  padding: clamp(1.1rem, 2.7vw, 2.15rem) clamp(1.15rem, 3.5vw, 2.6rem);
+}
+main:has(.showcase) .show-hero {
+  border-radius: 19px;
+  box-shadow: 0 17px 46px rgba(43,43,43,.23);
+}
+@media (prefers-reduced-motion: reduce) {
+  main:has(.showcase) .show-hero { box-shadow: none; }
 }

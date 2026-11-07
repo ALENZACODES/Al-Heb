@@ -569,6 +569,114 @@
    "source": "vocab5k",
    "alt": "A lemon.",
    "basis": "VOC_numbers_01 is one lemon. It was drawn for the number one, but the picture is a lemon, so it is not paired with the word one."
+  },
+  "h50cf3648": {
+   "asset": "GAME_prefix_day",
+   "gloss": "day",
+   "he": "יוֹם",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A sun rising over low hills.",
+   "basis": "Sunrise over low hills, no clock. This is day (יום), not the sun word and not the older sun blot."
+  },
+  "v4b1f7879": {
+   "asset": "GAME_prefix_day",
+   "gloss": "day",
+   "he": "יוֹם",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A sun rising over low hills.",
+   "basis": "Same day picture for the five-thousand-word יום entry."
+  },
+  "ha39cf3c9": {
+   "asset": "GAME_prefix_world",
+   "gloss": "world",
+   "he": "עוֹלָם",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A distant horizon of sky, land and water.",
+   "basis": "A far panorama. This is world (עולם), not the close soil picture used for earth."
+  },
+  "h2d90f840": {
+   "asset": "GAME_prefix_earth",
+   "gloss": "earth, soil, land",
+   "he": "אֲדָמָה",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "Close plough furrows in soil.",
+   "basis": "Furrows of soil. This is earth/soil (אדמה), not the distant world horizon."
+  },
+  "h4700de9c": {
+   "asset": "GAME_prefix_light",
+   "gloss": "light, visible light",
+   "he": "אוֹר",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A single lit lamp on a plain surface.",
+   "basis": "One lamp, no sun and no person. This is light (אור)."
+  },
+  "h58d8d8fe": {
+   "asset": "GAME_prefix_king",
+   "gloss": "king",
+   "he": "מֶלֶךְ",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "An empty throne with a crown and no person.",
+   "basis": "Empty throne and a crown. No figure and no sacred object. This is king (מלך)."
+  },
+  "h51ed2ee5": {
+   "asset": "GAME_prefix_life",
+   "gloss": "life",
+   "he": "חַיִּים",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A seedling in soil.",
+   "basis": "A seedling. This is life (חיים), not a person."
+  },
+  "v216ac014": {
+   "asset": "GAME_prefix_world",
+   "gloss": "world",
+   "he": "עוֹלָם",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A distant horizon of sky, land and water.",
+   "basis": "Same picture for the matching five-thousand-word entry."
+  },
+  "vd4782306": {
+   "asset": "GAME_prefix_earth",
+   "gloss": "earth, soil, land",
+   "he": "אֲדָמָה",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "Close plough furrows in soil.",
+   "basis": "Same picture for the matching five-thousand-word entry."
+  },
+  "vc91fc0e3": {
+   "asset": "GAME_prefix_light",
+   "gloss": "light, visible light",
+   "he": "אוֹר",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A single lit lamp on a plain surface.",
+   "basis": "Same picture for the matching five-thousand-word entry."
+  },
+  "v6af84384": {
+   "asset": "GAME_prefix_king",
+   "gloss": "king",
+   "he": "מֶלֶךְ",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "An empty throne with a crown and no person.",
+   "basis": "Same picture for the matching five-thousand-word entry."
+  },
+  "vbf41d95c": {
+   "asset": "GAME_prefix_life",
+   "gloss": "life",
+   "he": "חַיִּים",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A seedling in soil.",
+   "basis": "Same picture for the matching five-thousand-word entry."
   }
  },
  "rejected": [

@@ -2,7 +2,7 @@
  "version": 1,
  "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
  "dir": "gen",
- "count": 583,
+ "count": 593,
  "images": {
   "BG_cafe": {
    "w": 1659,
@@ -1783,6 +1783,144 @@
      "file": "GAME_niqqud_fade_05.1254.webp",
      "w": 1254,
      "h": 1254
+    }
+   ]
+  },
+  "GAME_pinball_table": {
+   "w": 1000,
+   "h": 840,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_pinball_table.800.webp",
+     "w": 800,
+     "h": 672
+    }
+   ]
+  },
+  "GAME_prefix_blast_stage": {
+   "w": 1600,
+   "h": 1200,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_prefix_blast_stage.800.webp",
+     "w": 800,
+     "h": 600
+    },
+    {
+     "edge": 1600,
+     "file": "GAME_prefix_blast_stage.1600.webp",
+     "w": 1600,
+     "h": 1200
+    }
+   ]
+  },
+  "GAME_prefix_day": {
+   "w": 1200,
+   "h": 1200,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_prefix_day.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1200,
+     "file": "GAME_prefix_day.1200.webp",
+     "w": 1200,
+     "h": 1200
+    }
+   ]
+  },
+  "GAME_prefix_earth": {
+   "w": 1200,
+   "h": 1200,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_prefix_earth.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1200,
+     "file": "GAME_prefix_earth.1200.webp",
+     "w": 1200,
+     "h": 1200
+    }
+   ]
+  },
+  "GAME_prefix_king": {
+   "w": 1200,
+   "h": 1200,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_prefix_king.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1200,
+     "file": "GAME_prefix_king.1200.webp",
+     "w": 1200,
+     "h": 1200
+    }
+   ]
+  },
+  "GAME_prefix_life": {
+   "w": 1200,
+   "h": 1200,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_prefix_life.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1200,
+     "file": "GAME_prefix_life.1200.webp",
+     "w": 1200,
+     "h": 1200
+    }
+   ]
+  },
+  "GAME_prefix_light": {
+   "w": 1200,
+   "h": 1200,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_prefix_light.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1200,
+     "file": "GAME_prefix_light.1200.webp",
+     "w": 1200,
+     "h": 1200
+    }
+   ]
+  },
+  "GAME_prefix_world": {
+   "w": 1200,
+   "h": 1200,
+   "files": [
+    {
+     "edge": 800,
+     "file": "GAME_prefix_world.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1200,
+     "file": "GAME_prefix_world.1200.webp",
+     "w": 1200,
+     "h": 1200
     }
    ]
   },
@@ -4607,6 +4745,42 @@
     {
      "edge": 1254,
      "file": "NUM_time_10.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "OPP_expensive_cheap": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "OPP_expensive_cheap.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "OPP_expensive_cheap.1254.webp",
+     "w": 1254,
+     "h": 1254
+    }
+   ]
+  },
+  "OPP_near_far": {
+   "w": 1254,
+   "h": 1254,
+   "files": [
+    {
+     "edge": 800,
+     "file": "OPP_near_far.800.webp",
+     "w": 800,
+     "h": 800
+    },
+    {
+     "edge": 1254,
+     "file": "OPP_near_far.1254.webp",
      "w": 1254,
      "h": 1254
     }
@@ -13138,6 +13312,16 @@
   "GAME_niqqud_fade_05": "Scene for vowel marks fading off pointed Hebrew, fifth still.",
   "GAME_tradition_detective_06": "Listening case for telling the reading traditions apart, sixth case.",
   "GAME_story_episode_05": "Story mode scene, fifth episode.",
-  "GAME_minute_one_celebration_12": "Celebration art for the first Hebrew word, twelfth still."
+  "GAME_minute_one_celebration_12": "Celebration art for the first Hebrew word, twelfth still.",
+  "OPP_expensive_cheap": "A jewelled crown beside a plain paper cup.",
+  "OPP_near_far": "A large lighthouse beside a small lighthouse across the water.",
+  "GAME_pinball_table": "Pinball table backdrop with three identical wells and a quiet lane.",
+  "GAME_prefix_blast_stage": "Prefix Blast stage with a darker upper field and a pale lower field.",
+  "GAME_prefix_day": "A sun rising over low hills.",
+  "GAME_prefix_world": "A distant horizon of sky, land and water.",
+  "GAME_prefix_earth": "Close plough furrows in soil.",
+  "GAME_prefix_light": "A single lit lamp on a plain surface.",
+  "GAME_prefix_king": "An empty throne with a crown and no person.",
+  "GAME_prefix_life": "A seedling in soil."
  }
 }

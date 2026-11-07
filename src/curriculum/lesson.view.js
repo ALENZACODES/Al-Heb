@@ -17,6 +17,7 @@ import { RESUME_KEY, getResume, setResume, clearResume } from "./chunks.js";
 import { storeGet, storeSet, showSaveFailure } from "./dom.js";
 import { hookLine, hookNode } from "../letters/hookline.js";
 import { letterMeet, picture } from "../img/scenes.js";
+import { oppositeFor } from "../img/opposites.js";
 import { celebrateWin } from "../motion/alive.js";
 import { mountChunkedLesson } from "./lesson.parts.js";
 import { loadWordVocabMap } from "./review.view.js";
@@ -114,13 +115,19 @@ export function mountLesson(root, ctx, lessonId) {
             el("div", { class: "muted" }, vowelEnglish(V, congregation))),
           el("div", { class: "alef-item-actions" }, playButton(ctx, "vowel", id, `Listen to ${V?.name || id}`, note)));
       }))));
-    if (lesson.words.length) parts.push(section("l-words", "Words", el("ul", { class: "alef-items" },
+    if (lesson.words.length) {
+      const pair = oppositeFor(lesson.words);
+      parts.push(section("l-words", "Words",
+      pair ? picture(el, ctx, "id", pair.id, { class: "scene-art", width: 480 }) : null,
+      pair ? el("p", { class: "muted" }, `Picture for this pair: ${pair.glosses.join(" and ")}.`) : null,
+      el("ul", { class: "alef-items" },
       ...lesson.words.map((w, i) => el("li", { class: "alef-item", "data-live": "word" },
         picture(el, ctx, "word", wordVocab[`${lesson.id}:${i + 1}`] || w.vocabId || w.id, { class: "word-pic", width: 400 }),
         heText(w.he, "alef-he alef-word"),
         // a pointed word gets its respelling as text (a screen reader may have no Hebrew voice); the English meaning stays first
         el("div", { class: "alef-item-body" }, el("span", {}, w.en), hookNode(el, hookLine(c.chain, congregation, { he: w.he })), (() => { const r = respell(w.he, congregation); return r ? el("div", { class: "muted alef-respell", lang: "en" }, `Sounds like: ${r} (${LABELS[congregation] || congregation} style)`) : null; })()),
         el("div", { class: "alef-item-actions" }, playButton(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${w.en}`, note)))))));
+    }
     if (lesson.prayerLines.length) parts.push(section("l-lines", "Prayer lines", el("ul", { class: "alef-items" },
       ...lesson.prayerLines.map((id) => {
         const r = c.corpus.get(id);

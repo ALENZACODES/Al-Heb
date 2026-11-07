@@ -82,7 +82,7 @@ test('every cue matches its vocabulary entry, one picture per word, and rejected
     for (const id of [row.wordId, ...(row.also || [])]) {
       const hit = R.resolve('word', id);
       assert.notEqual(hit?.id, row.asset, `${id} must not use ${row.asset}`);
-      assert.equal(hit, null, id);
+      if (!book.cues[id]) assert.equal(hit, null, id);
     }
   }
   for (const gap of book.gaps) assert.equal([...byAsset.keys()].includes(gap.asset), false, gap.asset);
@@ -95,6 +95,31 @@ test('held stills are not cues, and the cue file stays out of the install precac
   const pre = read('precache-manifest.js');
   assert.equal(pre.includes('word-cues.json'), false);
   assert.equal(pre.includes('assets/img/gen/'), false);
+});
+
+test('pinball and prefix blast use the new backgrounds and the six noun cues stay distinct', () => {
+  const table = R.resolve('id', 'GAME_pinball_table');
+  const stage = R.resolve('id', 'GAME_prefix_blast_stage');
+  assert.equal(table?.approved, true);
+  assert.equal(stage?.approved, true);
+  assert.equal(HE.test(table.alt), false);
+  assert.equal(HE.test(stage.alt), false);
+  const day = R.resolve('word', 'h50cf3648');
+  const world = R.resolve('word', 'ha39cf3c9');
+  const earth = R.resolve('word', 'h2d90f840');
+  const king = R.resolve('word', 'h58d8d8fe');
+  assert.equal(day.id, 'GAME_prefix_day');
+  assert.equal(world.id, 'GAME_prefix_world');
+  assert.equal(earth.id, 'GAME_prefix_earth');
+  assert.notEqual(world.id, earth.id);
+  assert.equal(king.id, 'GAME_prefix_king');
+  assert.equal(HE.test(king.alt), false);
+  assert.match(king.alt, /throne/i);
+  assert.equal(R.resolve('word', 'h86027352').id, 'VOC_colours_09');
+  const router = read('src/shell/router.js');
+  for (const path of ['/pinball', '/prefixblast', '/memorypalace', '/vowelcatcher', '/tugowar']) {
+    assert.equal(router.includes(`pattern: '${path}'`), false, path);
+  }
 });
 
 test('lesson review still shows a word picture only after the answer is revealed', () => {

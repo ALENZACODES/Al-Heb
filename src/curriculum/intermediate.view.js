@@ -19,6 +19,8 @@ import { sequenceExercises, fairProduceOptions, createSession, feedbackText, fir
 import { progressBar, summaryNode } from "./exercises.ui.js";
 import { respell } from "../pronunciation/forTradition.js";
 import { uiEnglish } from "../shell/names.js";
+import { picture } from "../img/scenes.js";
+import { oppositeFor } from "../img/opposites.js";
 
 /** English shown to the learner honours the writeGodAsGd setting (display only; grading uses the raw data). */
 const G = (ctx, text) => (typeof text === "string" ? uiEnglish(ctx, text) : text);
@@ -288,6 +290,8 @@ function mountLesson(root, ctx, id) {
       el("section", { class: "card", "aria-labelledby": "i-goals" }, el("h2", { id: "i-goals" }, "Goals"), el("ul", {}, ...lesson.goals.map((g) => el("li", {}, G(ctx, g))))),
       el("section", { class: "card", "aria-labelledby": "i-words" }, el("h2", { id: "i-words" }, "Words"),
         el("p", { class: "muted" }, lesson.track === "israel" ? "Pronunciation lines are the Israeli form." : `Pronunciation lines follow your tradition setting (${trad}).`),
+        (() => { const pair = oppositeFor(lesson.words); return pair ? picture(el, ctx, "id", pair.id, { class: "scene-art", width: 480 }) : null; })(),
+        (() => { const pair = oppositeFor(lesson.words); return pair ? el("p", { class: "muted" }, `Picture for this pair: ${pair.glosses.join(" and ")}.`) : null; })(),
         el("ul", { class: "alef-items" }, ...lesson.words.map((w, i) => el("li", { class: "alef-item" }, heText(w.he, "alef-he alef-word"),
           el("div", { class: "alef-item-body" }, el("span", {}, G(ctx, w.en)), el("div", { class: "alef-pron muted", "data-pron": "1" }, pronLine(w, trad))),
           el("div", { class: "alef-item-actions" }, playBtn(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${G(ctx, w.en)}`, note, lesson)))))),

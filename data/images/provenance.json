@@ -58234,6 +58234,539 @@
     "ocr_not_run"
    ],
    "humanApproved": true
+  },
+  "GAME_pinball_table": {
+   "id": "GAME_pinball_table",
+   "file": "GAME_pinball_table.png",
+   "command": 9074,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "Pinball table backdrop with three identical wells and a quiet lane. No text.",
+   "promptSha256": "353dc6f6a576d650d95894b09f2c610a785031ed130be26a287a24341fd3ea41",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-07T01:58:36.183Z",
+   "sourceFile": "GAME_pinball_table.webp",
+   "sourceFileDate": "2026-11-07T01:58:03.488Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "217f5319bf0f8043e2972fe4f23b77588099a4793c9c71ded583d3a05048cf8d",
+   "originalFormat": "WEBP",
+   "originalBytes": 19918,
+   "originalFile": "GAME_pinball_table.webp",
+   "width": 1000,
+   "height": 840,
+   "expected": {
+    "w": 1000,
+    "h": 840
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_pinball_table.800.webp",
+     "width": 800,
+     "height": 672,
+     "bytes": 20828
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "tesseract CLI not found"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "GAME_prefix_blast_stage": {
+   "id": "GAME_prefix_blast_stage",
+   "file": "GAME_prefix_blast_stage.png",
+   "command": 9075,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "Prefix Blast stage",
+   "promptSha256": "85591259aedd6201e04efe9cdc820f71f7f06524405ca6484803544aaf961d80",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-07T01:58:36.183Z",
+   "sourceFile": "GAME_prefix_blast_stage.webp",
+   "sourceFileDate": "2026-11-07T01:58:03.488Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "d3517254f37cb7553aba9559e8dcf808be5ec2aa93bd534d7d38589a11b4327c",
+   "originalFormat": "WEBP",
+   "originalBytes": 11258,
+   "originalFile": "GAME_prefix_blast_stage.webp",
+   "width": 1600,
+   "height": 1200,
+   "expected": {
+    "w": 1600,
+    "h": 1200
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_prefix_blast_stage.800.webp",
+     "width": 800,
+     "height": 600,
+     "bytes": 6346
+    },
+    {
+     "edge": 1600,
+     "file": "GAME_prefix_blast_stage.1600.webp",
+     "width": 1600,
+     "height": 1200,
+     "bytes": 12892
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "tesseract CLI not found"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "GAME_prefix_day": {
+   "id": "GAME_prefix_day",
+   "file": "GAME_prefix_day.png",
+   "command": 9076,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "A sun rising over low hills. No clock and no text.",
+   "promptSha256": "5772ab7f1964b8a6ec04eafe08441cf5fbd855e2f9495c6faefec60fb4e85168",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-07T01:58:36.183Z",
+   "sourceFile": "GAME_prefix_day.webp",
+   "sourceFileDate": "2026-11-07T01:58:03.488Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "3e83598deab48a5ccc54d7b53b49653a33dcc8352c105505529cf2ba7bea0159",
+   "originalFormat": "WEBP",
+   "originalBytes": 12550,
+   "originalFile": "GAME_prefix_day.webp",
+   "width": 1200,
+   "height": 1200,
+   "expected": {
+    "w": 1200,
+    "h": 1200
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_prefix_day.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 7768
+    },
+    {
+     "edge": 1200,
+     "file": "GAME_prefix_day.1200.webp",
+     "width": 1200,
+     "height": 1200,
+     "bytes": 11956
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "tesseract CLI not found"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "GAME_prefix_earth": {
+   "id": "GAME_prefix_earth",
+   "file": "GAME_prefix_earth.png",
+   "command": 9078,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "Close plough furrows in soil. No text.",
+   "promptSha256": "e65309615c67aefa8d6344b38b2c7f554425c57f0666bf6501b69494f5382730",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-07T01:58:36.183Z",
+   "sourceFile": "GAME_prefix_earth.webp",
+   "sourceFileDate": "2026-11-07T01:58:03.492Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "7173167992a6acf94782678e1bd3bc5e4dca35e7aff979649e8275b0a2ce29aa",
+   "originalFormat": "WEBP",
+   "originalBytes": 14518,
+   "originalFile": "GAME_prefix_earth.webp",
+   "width": 1200,
+   "height": 1200,
+   "expected": {
+    "w": 1200,
+    "h": 1200
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_prefix_earth.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 8652
+    },
+    {
+     "edge": 1200,
+     "file": "GAME_prefix_earth.1200.webp",
+     "width": 1200,
+     "height": 1200,
+     "bytes": 14322
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "tesseract CLI not found"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "GAME_prefix_king": {
+   "id": "GAME_prefix_king",
+   "file": "GAME_prefix_king.png",
+   "command": 9080,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "An empty throne with a crown and no person. No text.",
+   "promptSha256": "32c2d9e67a16dd9b61cf498063dcdefb1b7bb1bb80e31fdc8cd47bbf3396f61b",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-07T01:58:36.183Z",
+   "sourceFile": "GAME_prefix_king.webp",
+   "sourceFileDate": "2026-11-07T01:58:03.492Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "2f5e47ea6b2ce43cbf7c1212eb6c5009e9c7ee28e82a9651772c367c3825488e",
+   "originalFormat": "WEBP",
+   "originalBytes": 17560,
+   "originalFile": "GAME_prefix_king.webp",
+   "width": 1200,
+   "height": 1200,
+   "expected": {
+    "w": 1200,
+    "h": 1200
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_prefix_king.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 11112
+    },
+    {
+     "edge": 1200,
+     "file": "GAME_prefix_king.1200.webp",
+     "width": 1200,
+     "height": 1200,
+     "bytes": 17120
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "tesseract CLI not found"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "GAME_prefix_life": {
+   "id": "GAME_prefix_life",
+   "file": "GAME_prefix_life.png",
+   "command": 9081,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "A seedling in soil. No text.",
+   "promptSha256": "e6eff8ebdc2e449f0601187d1b6f4daf55bde33a0e1259279a7015a79ed5196a",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-07T01:58:36.183Z",
+   "sourceFile": "GAME_prefix_life.webp",
+   "sourceFileDate": "2026-11-07T01:58:03.496Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "538427f8c7a661c7bbbc88de62844be42f58e57c4a2c89dd89f2907476ebe1b6",
+   "originalFormat": "WEBP",
+   "originalBytes": 14250,
+   "originalFile": "GAME_prefix_life.webp",
+   "width": 1200,
+   "height": 1200,
+   "expected": {
+    "w": 1200,
+    "h": 1200
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_prefix_life.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 8766
+    },
+    {
+     "edge": 1200,
+     "file": "GAME_prefix_life.1200.webp",
+     "width": 1200,
+     "height": 1200,
+     "bytes": 13796
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "tesseract CLI not found"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "GAME_prefix_light": {
+   "id": "GAME_prefix_light",
+   "file": "GAME_prefix_light.png",
+   "command": 9079,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "A single lit lamp on a plain surface. No text.",
+   "promptSha256": "551b3a9772d83fc991a169ec6fcde17dfb547206a2a133348ede0035d8bba87a",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-07T01:58:36.183Z",
+   "sourceFile": "GAME_prefix_light.webp",
+   "sourceFileDate": "2026-11-07T01:58:03.492Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "e994195e5b93e4bcd204e84e12c8dc398abaca61eccd99ba521312273b89239c",
+   "originalFormat": "WEBP",
+   "originalBytes": 16048,
+   "originalFile": "GAME_prefix_light.webp",
+   "width": 1200,
+   "height": 1200,
+   "expected": {
+    "w": 1200,
+    "h": 1200
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_prefix_light.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 9958
+    },
+    {
+     "edge": 1200,
+     "file": "GAME_prefix_light.1200.webp",
+     "width": 1200,
+     "height": 1200,
+     "bytes": 15448
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "tesseract CLI not found"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "GAME_prefix_world": {
+   "id": "GAME_prefix_world",
+   "file": "GAME_prefix_world.png",
+   "command": 9077,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "A distant horizon of sky",
+   "promptSha256": "147ed7dfa22a18d362f81c69f37a9b028ea42f66c1df0ee21936d85dc97d41b4",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-07T01:58:36.183Z",
+   "sourceFile": "GAME_prefix_world.webp",
+   "sourceFileDate": "2026-11-07T01:58:03.492Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "5c8e78d46a2bb362c67241f5594bcc5f21981d82dca5d61a1b8cded692bc734e",
+   "originalFormat": "WEBP",
+   "originalBytes": 12884,
+   "originalFile": "GAME_prefix_world.webp",
+   "width": 1200,
+   "height": 1200,
+   "expected": {
+    "w": 1200,
+    "h": 1200
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GAME_prefix_world.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 7958
+    },
+    {
+     "edge": 1200,
+     "file": "GAME_prefix_world.1200.webp",
+     "width": 1200,
+     "height": 1200,
+     "bytes": 12398
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "tesseract CLI not found"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "OPP_expensive_cheap": {
+   "id": "OPP_expensive_cheap",
+   "file": "OPP_expensive_cheap.png",
+   "command": 9072,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "A jewelled crown beside a plain paper cup. No text.",
+   "promptSha256": "c9617cce5148b1cf8c53d0a534d89badc8a0a91c6dac902cc9599b14f45dbc71",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-07T01:58:36.183Z",
+   "sourceFile": "OPP_expensive_cheap.png",
+   "sourceFileDate": "2026-11-07T01:58:03.496Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "68af3270cdae449fe78c6737cc60f99e6d5abc98e79af2812920c508a428e097",
+   "originalFormat": "PNG",
+   "originalBytes": 1395969,
+   "originalFile": "OPP_expensive_cheap.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "OPP_expensive_cheap.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 48744
+    },
+    {
+     "edge": 1254,
+     "file": "OPP_expensive_cheap.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 83688
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "tesseract CLI not found"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "OPP_near_far": {
+   "id": "OPP_near_far",
+   "file": "OPP_near_far.png",
+   "command": 9073,
+   "set": "game_scenes",
+   "block": "G",
+   "prompt": "A large lighthouse beside a small lighthouse across the water. No text.",
+   "promptSha256": "cdf828a31a00bb46f9c39b5cee0afa1001b2ac7249b66a59aeef44504a82515c",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-07T01:58:36.183Z",
+   "sourceFile": "OPP_near_far.png",
+   "sourceFileDate": "2026-11-07T01:58:03.496Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "b7f6e70b1ca72f3a0ce68a7ca7506071a687995bcd0cc7a369f45f706ecb86dd",
+   "originalFormat": "PNG",
+   "originalBytes": 1283740,
+   "originalFile": "OPP_near_far.png",
+   "width": 1254,
+   "height": 1254,
+   "expected": {
+    "w": 1254,
+    "h": 1254
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "OPP_near_far.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 27738
+    },
+    {
+     "edge": 1254,
+     "file": "OPP_near_far.1254.webp",
+     "width": 1254,
+     "height": 1254,
+     "bytes": 47538
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "tesseract CLI not found"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
   }
  }
 }

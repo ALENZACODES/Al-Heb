@@ -1,9 +1,11 @@
 // ALEF opening prayer veil: one sourced entry per real page load.
 // The veil holds for its full dwell (6 s for a returning learner, 9 s on a
-// first visit, longer while its prayer plays), counted from the moment the
-// prayer actually renders — never from load timing — so the blessing can be
-// read and heard; the app's ready event never dismisses it early — only the
-// dwell timer, a tap, Skip, Escape or the 12 s failsafe close it.
+// first visit, longer while its prayer plays), counted from the LATER of the
+// prayer rendering and the app's ready signal — never from load timing — so a
+// first visit that spends seconds installing the offline copy does not eat
+// the dwell (owner report, Nov 7 2026: the veil closed within ~4 s of the
+// page settling); only the dwell timer, a tap, Skip, Escape or the 12 s
+// failsafe close it.
 export const MODEH_ANI = Object.freeze({
   he: 'מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם, שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה. רַבָּה אֱמוּנָתֶךָ',
   tr: 'Modeh ani lefanecha, Melech chai vekayam, shehechezarta bi nishmati bechemla. Raba emunatecha.',
@@ -12,6 +14,8 @@ export const MODEH_ANI = Object.freeze({
 });
 const LAST_KEY = 'alef:opening-prayer:last:v1';
 const VISIT_KEY = 'alef:opening-prayer:seen:v1';
+/** Count of opening prayers actually heard: the Awards engine reads this. */
+export const LISTEN_COUNT_KEY = 'alef:opening-prayer:listens:v1';
 
 export function prayerKey(p) { return p.he; }
 
@@ -93,6 +97,12 @@ function initPrayerVeil() {
     clearTimeout(deadline);
     deadline = setTimeout(() => dismiss(true), ms);
   }
+  // Start the dwell only once the prayer is rendered AND the app is ready to
+  // be read: on a slow first visit the render lands seconds before the page
+  // settles, and counting from render alone ate the dwell.
+  function arm() {
+    if (rendered && readySeen && !holding && !closed) releaseAfter(firstVisit ? 9000 : 6000);
+  }
   listenBtn?.addEventListener('click', (e) => {
     e.stopPropagation(); // a veil click dismisses; the Listen button must not
     if (closed || !audioPath) return;
@@ -104,7 +114,13 @@ function initPrayerVeil() {
       audio.onended = () => releaseAfter(1000);
       audio.onerror = () => { if (listenBtn) listenBtn.hidden = true; if (audioNote) audioNote.hidden = true; releaseAfter(800); };
       const p = audio.play();
-      if (p?.catch) p.catch(() => releaseAfter(800));
+      if (p?.then) {
+        p.then(() => {
+          // Playback started: the learner heard this prayer. (A failed play
+          // never counts — the catch below leaves the count alone.)
+          try { writeLocal(LISTEN_COUNT_KEY, String((parseInt(readLocal(LISTEN_COUNT_KEY), 10) || 0) + 1)); } catch { /* private mode */ }
+        }).catch(() => releaseAfter(800));
+      } else if (p?.catch) p.catch(() => releaseAfter(800));
     } catch { releaseAfter(800); }
   });
 
@@ -119,7 +135,7 @@ function initPrayerVeil() {
     veil.classList.add('prayer-veil--leaving');
     setTimeout(() => veil.remove(), 150);
   }
-  function onReady() { readySeen = true; }
+  function onReady() { readySeen = true; arm(); }
   function onKey(e) { if (e.key === 'Escape') dismiss(true); }
   veil.addEventListener('click', () => dismiss(true));
   document.addEventListener('keydown', onKey);
@@ -149,7 +165,7 @@ function initPrayerVeil() {
     en.textContent = chosen.en;
     veil.dataset.prayerReady = '1';
     rendered = true;
-    if (!holding) releaseAfter(firstVisit ? 9000 : 6000);
+    arm();
     writeLocal(LAST_KEY, prayerKey(chosen));
     try {
       const prefs = readAudioPrefs();

@@ -37,7 +37,15 @@ test('opening card has a hard timeout, skip controls and ready signal before the
   const src = readFileSync(new URL('../src/shell/prayer-veil.js', import.meta.url), 'utf8');
   assert.match(src, /\? 9000 : 6000/);
   assert.match(src, /document\.addEventListener\('alef:ready'/);
-  assert.match(src, /veil\.addEventListener\('click'/);
+  // The dwell starts only once the prayer has rendered AND the app is ready:
+  // a slow first visit installs the offline copy before the page settles, and
+  // counting from render alone ate the dwell (owner report, Nov 7 2026).
+  assert.match(src, /rendered && readySeen && !holding && !closed/);
+  assert.match(src, /rendered = true;\s*\n\s*arm\(\);/);
+  // A started Listen play counts toward the prayer-voice medallion; a failed
+  // play never counts.
+  assert.match(src, /LISTEN_COUNT_KEY/);
+  assert.match(src, /p\.then\(\(\) => \{\s*\n\s*\/\/ Playback started/);
   assert.match(src, /prefers-reduced-motion/);
   const boot = readFileSync(new URL('../src/app.js', import.meta.url), 'utf8');
   assert.match(boot, /dispatchEvent\(new Event\('alef:ready'\)\)/);

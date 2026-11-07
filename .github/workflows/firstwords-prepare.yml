@@ -1,0 +1,30 @@
+name: Prepare Level 1 Word Finder branch
+on:
+  push:
+    branches:
+      - chatgpt/games-first-words-levels-2026-11-07
+permissions:
+  contents: write
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with: { node-version: 22 }
+      - name: Regenerate offline manifest and view list from checked-out files
+        run: node tools/build-precache.mjs
+      - name: Commit only generator outputs, never hand edit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add precache-manifest.js src/shell/views.generated.js
+          if ! git diff --cached --quiet; then
+            git commit -m 'Regenerate offline files for Word Finder'
+            git push origin HEAD:refs/heads/chatgpt/games-first-words-levels-2026-11-07
+          fi
+      - name: Test Word Finder model and interactive view
+        run: node --test tests/games.wordfinder.test.js
+      - name: Test unit tier
+        run: node tools/test/run.mjs unit

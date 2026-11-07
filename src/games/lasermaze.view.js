@@ -1,4 +1,5 @@
 // Game 2 — Laser Mirror Maze: the beam must traverse actual Hebrew letters in RTL order.
+// (Title corrected Nov 7 2026: it previously read "Laser Mirror Laser Maze".)
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, resultsCard, envNode, GAME_ENV, roundStatus, placeBoard } from './engine.js';
 import { sfx } from '../audio/sfx.js';
@@ -32,7 +33,7 @@ export function mount(root, ctx) {
   const status = h('p', { class: 'game-status', role: 'status', 'aria-live': 'polite' }, 'Loading Hebrew beam targets…');
   const board = h('div', { class: 'game-board' });
   const article = h('article', { class: 'card game-card game-lasermaze' },
-    h('h1', { id: 'view-title' }, 'Laser Mirror Laser Maze'),
+    h('h1', { id: 'view-title' }, 'Laser Mirror Maze'),
     h('p', {}, 'Direct the beam through the letters in their true right-to-left reading order.'), status, board);
   root.replaceChildren(article);
   function paint(feedback) {

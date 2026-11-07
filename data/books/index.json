@@ -127,9 +127,9 @@
    "titleEn": "The Bus Is Late",
    "level": "Beginner 1",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": false,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 0
   },
   {

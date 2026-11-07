@@ -90,7 +90,7 @@ export function showcaseNode(ctx) {
     h('div', { class: 'show-hero' },
       astralTreeNode(),
       h('div', { class: 'show-hero-text' },
-        h('p', { class: 'show-kicker' }, 'The Tree of Knowledge'),
+        h('p', { class: 'show-kicker' }, 'The Tree of Life'),
         h('p', { class: 'show-title' }, 'Learn to read ', heSpan('עִבְרִית'), ' — Hebrew'),
         h('p', { class: 'show-sub' }, 'Prayers, Torah and everyday Israel. A few minutes a day, in your own tradition\u2019s voice.'),
         h('p', { class: 'show-cta' },

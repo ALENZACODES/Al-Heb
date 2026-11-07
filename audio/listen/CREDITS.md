@@ -7,3 +7,9 @@ Public-domain files are early commercial recordings published before 1926. CC BY
 Playback files are the original Vorbis bytes. `cc_asael_genesis_noah_ashkenaz.ogg` is those same bytes under an `.ogg` name; the Commons original is `.oga` (also stored here).
 
 Each item's Commons page is linked from the Sacred listen screen.
+
+## Enhanced copies (2026-11-07)
+The playback files in this folder were enhanced for clarity (gentle denoise, de-click, and loudness
+levelling) from the original recordings; the unmodified originals are preserved in `originals/`.
+For CC BY-SA items the enhanced file is an adaptation under the same licence; the performer and
+source credits in the catalogue are unchanged.

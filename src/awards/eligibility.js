@@ -53,7 +53,7 @@ export const COMPLETION_BADGE = Object.freeze({
  * "streak"), the learner's daily goal, and the same saved game plays the
  * practice badges use. Thresholds read the LONGEST streak, so an earned
  * medallion never un-earns when a later streak is shorter. Activity, not
- * mastery — the same honesty rule as the practice badges.
+ * mastery — the same honesty rule as the practice medallions.
  */
 export const MILESTONE_BADGES = Object.freeze([
   {

@@ -171,3 +171,7 @@ test('hook wiring: the intermediate lesson summary loads the card on demand, onl
   const src = fs.readFileSync(path.join(ROOT, 'src/curriculum/intermediate.view.js'), 'utf8');
   assert.match(src, /if \(all\) import\("\.\.\/\.\.\/preview\/loops\/hook\.js"\)/); assert.doesNotMatch(src, /^import .*preview\/loops/m);
 });
+test('badge wiring: the daily page loads the badge module on demand, only when the page mounts', () => {
+  const src = fs.readFileSync(path.join(ROOT, 'preview/loops/daily.view.js'), 'utf8');
+  assert.match(src, /import\('\.\/badges\.view\.js'\)/); assert.doesNotMatch(src, /^import .*badges\.view\.js/m);
+});

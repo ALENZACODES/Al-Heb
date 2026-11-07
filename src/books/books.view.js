@@ -31,16 +31,16 @@ export async function mount(root, ctx) {
     } else {
       cover.append(heSpan(b.titleHe, "book-cover-title"));
     }
-    const badges = [];
-    badges.push(b.hasImages ? "Pictures ready" : (b.picturedPages ? `Pictures ${b.picturedPages} of ${b.pageCount}` : "Pictures coming"));
-    badges.push(b.hasAudio ? "Voices ready" : (b.audioPages ? `Voices ${b.audioPages} of ${b.pageCount} pages` : "Voices coming"));
+    const marks = [];
+    marks.push(b.hasImages ? "Pictures ready" : (b.picturedPages ? `Pictures ${b.picturedPages} of ${b.pageCount}` : "Pictures coming"));
+    marks.push(b.hasAudio ? "Voices ready" : (b.audioPages ? `Voices ${b.audioPages} of ${b.pageCount} pages` : "Voices coming"));
     const card = h("a", { class: "card book-card", href: `#/book/${b.id}` },
       cover,
       h("div", { class: "book-meta" },
         heSpan(b.titleHe, "book-title-he"),
         h("span", { class: "book-title-en" }, `${b.titleTranslit} — ${b.titleEn}`),
         h("span", { class: "muted" }, `${b.level} · ${b.pageCount} pages`),
-        h("span", { class: "book-badges" }, badges.join(" · "))));
+        h("span", { class: "book-badges" }, marks.join(" · "))));
     wrap.append(card);
   }
 }

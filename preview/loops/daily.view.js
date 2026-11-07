@@ -6,7 +6,6 @@ import { streakVisible, quietNow } from '../../src/shell/comfort.js';
 import { GOALS, load, save, withGoal, withQuests } from './store.js';
 import { refresh, buildModel, describe, applyRepair, dayKey } from './sync.js';
 import { ringSVG } from './points.js';
-import { CSS as BADGE_CSS, loadCatalog, settle, newBadgeNode, shelfNode, copyText } from './badges.view.js';
 import { ensureStyle } from './celebrate.js';
 
 export const CSS = `
@@ -28,7 +27,7 @@ export const CSS = `
 .lp table { border-collapse: collapse; inline-size: 100%; }
 .lp th, .lp td { text-align: start; padding: .3rem .4rem; border-top: 1px solid var(--border); font-weight: normal; }
 .lp progress { inline-size: 6rem; block-size: .8rem; accent-color: var(--accent); }
-` + BADGE_CSS;
+`;
 
 const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
 
@@ -38,7 +37,7 @@ export function mount(root, ctx) {
   const status = h('p', { class: 'muted', role: 'status', 'aria-live': 'polite' });
   const main = h('div', { class: 'lp' });
   const newHost = h('div', {}), badgeHost = h('div', {});
-  let catalog = null, catalogTried = false;
+  let catalog = null, catalogTried = false, badges = null;
   const style = h('style', {}); style.textContent = CSS;
   root.replaceChildren(style, h('h1', { id: 'view-title', tabindex: '-1' }, 'Daily goal and quests'),
     h('p', { class: 'muted' }, 'A gentle daily layer on top of your lessons. Everything here is kept on this device only, nothing is sent anywhere, and nothing here ever stops you from learning. Draft: not tried with learners yet.'), status, newHost, main);
@@ -93,19 +92,22 @@ export function mount(root, ctx) {
     if (focusId) { const el = root.querySelector ? root.querySelector('#' + focusId) : null; if (el && el.focus) el.focus(); }
   }
   function renderBadges() {
-    if (!catalog) { badgeHost.replaceChildren(catalogTried ? h('section', { class: 'card' }, h('h2', {}, 'Badges'), h('p', {}, 'The badge list could not be read right now. Your badges are kept on this device and will show next time.')) : h('section', { class: 'card' }, h('h2', {}, 'Badges'), h('p', { class: 'muted' }, 'Loading badges.'))); return; }
+    if (!badges || !catalog) { badgeHost.replaceChildren(catalogTried ? h('section', { class: 'card' }, h('h2', {}, 'Badges'), h('p', {}, 'The badge list could not be read right now. Your badges are kept on this device and will show next time.')) : h('section', { class: 'card' }, h('h2', {}, 'Badges'), h('p', { class: 'muted' }, 'Loading badges.'))); return; }
     const offline = typeof navigator !== 'undefined' && navigator.onLine === false;
-    const s = settle(store, catalog, now(), { offline });
+    const s = badges.settle(store, catalog, now(), { offline });
     if (!s) { badgeHost.replaceChildren(); return; }
-    badgeHost.replaceChildren(shelfNode(h, s, { onCopy: async (text) => { status.textContent = (await copyText(text)) ? 'Badge summary copied.' : 'Copying is not available here. The text is in the box above, so you can select and copy it.'; } }));
+    badgeHost.replaceChildren(badges.shelfNode(h, s, { onCopy: async (text) => { status.textContent = (await badges.copyText(text)) ? 'Badge summary copied.' : 'Copying is not available here. The text is in the box above, so you can select and copy it.'; } }));
     const soundOn = !!(ctx && ctx.settings && ctx.settings.get && ctx.settings.get('soundEffects') === true);
-    const { node, plan } = newBadgeNode(h, s, { quiet: quietNow(ctx && ctx.settings), soundOn, level: 2 });
+    const { node, plan } = badges.newBadgeNode(h, s, { quiet: quietNow(ctx && ctx.settings), soundOn, level: 2 });
     if (node) {
       ensureStyle(globalThis.document); newHost.replaceChildren(node);
       if (plan.sound && ctx && ctx.sfx && typeof ctx.sfx.play === 'function') { try { ctx.sfx.play(plan.sound); } catch { /* no sound is fine */ } }
     }
   }
   render();
-  loadCatalog(ctx).then((c) => { catalog = c; catalogTried = true; renderBadges(); }).catch(() => { catalogTried = true; renderBadges(); });
+  // The badge module and its catalogue load on demand when this page mounts, so opening any
+  // other page never pulls them in. The badge styles arrive with the module. If the module or
+  // the catalogue cannot be read, the page says so calmly and nothing throws.
+  import('./badges.view.js').then((m) => { badges = m; style.textContent += m.CSS; return m.loadCatalog(ctx); }).then((c) => { catalog = c; catalogTried = true; renderBadges(); }).catch(() => { catalogTried = true; renderBadges(); });
   return () => {};
 }

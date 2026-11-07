@@ -210,7 +210,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   try { mod = await loadRouteModule(route); }
   catch (err) {
     if (token !== navToken) return;
-    unavailableCard(root, { title: route.title, t, module: route.module, error: err?.message });
+    unavailableCard(root, { title: route.title, t, module: route.module, error: err?.message, kind: 'error' });
     root.removeAttribute('aria-busy'); return finish();
   }
   if (token !== navToken) return;

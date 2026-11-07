@@ -492,7 +492,8 @@
   "text": "אֵת",
   "status": "missing",
   "source": "none",
-  "group": "prayer-word"
+  "group": "prayer-word",
+  "aliasOf": "word/shema-vahavta-w8"
  },
  {
   "path": "audio/f/ashkenazi/word/vahavta-1-w2.mp3",
@@ -1084,7 +1085,8 @@
   "text": "אֵת",
   "status": "missing",
   "source": "none",
-  "group": "prayer-word"
+  "group": "prayer-word",
+  "aliasOf": "word/shema-vahavta-w8"
  },
  {
   "path": "audio/f/ashkenazi/word/vahavta-full-w2.mp3",
@@ -2062,8 +2064,8 @@
   "kind": "word",
   "id": "shema-vahavta-w8",
   "text": "אֵת",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-word"
  },
  {
@@ -3522,7 +3524,8 @@
   "text": "אֵל",
   "status": "missing",
   "source": "none",
-  "group": "prayer-word"
+  "group": "prayer-word",
+  "aliasOf": "word/avot-1-w17"
  },
  {
   "path": "audio/f/ashkenazi/word/num-12-13-w1.mp3",
@@ -6654,8 +6657,8 @@
   "kind": "word",
   "id": "avot-1-w17",
   "text": "אֵל",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-word"
  },
  {
@@ -9156,8 +9159,8 @@
   "kind": "word",
   "id": "modeh-ani-1-w10",
   "text": "בְּחֶמְלָה",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-word"
  },
  {
@@ -18015,8 +18018,8 @@
   "kind": "word",
   "id": "shir-hamaalot-w34",
   "text": "בְּדִמְעָה",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-word",
   "english": "in tears"
  },
@@ -19885,7 +19888,8 @@
   "text": "עַל",
   "status": "missing",
   "source": "none",
-  "group": "prayer-word"
+  "group": "prayer-word",
+  "aliasOf": "word/haftarah-after-w104"
  },
  {
   "path": "audio/f/ashkenazi/word/vezot-hatorah-w9.mp3",
@@ -27369,8 +27373,8 @@
   "kind": "word",
   "id": "kiddush-shabbat-eve-w14",
   "text": "בְּאַהֲבָה",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-word",
   "english": "in love"
  },
@@ -27381,8 +27385,8 @@
   "kind": "word",
   "id": "kiddush-shabbat-eve-w14",
   "text": "בְּאַהֲבָה",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-word",
   "english": "in love"
  },
@@ -28395,7 +28399,8 @@
   "text": "אֵל",
   "status": "missing",
   "source": "none",
-  "group": "prayer-word"
+  "group": "prayer-word",
+  "aliasOf": "word/avot-1-w17"
  },
  {
   "path": "audio/f/ashkenazi/word/lecha-dodi-1-w13.mp3",
@@ -28763,7 +28768,8 @@
   "text": "אֶל",
   "status": "missing",
   "source": "none",
-  "group": "prayer-word"
+  "group": "prayer-word",
+  "aliasOf": "word/yigdal-w47"
  },
  {
   "path": "audio/f/ashkenazi/word/yigdal-w8.mp3",
@@ -29667,8 +29673,8 @@
   "kind": "word",
   "id": "yigdal-w47",
   "text": "אֶל",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-word"
  },
  {
@@ -30039,7 +30045,8 @@
   "text": "אֵל",
   "status": "missing",
   "source": "none",
-  "group": "prayer-word"
+  "group": "prayer-word",
+  "aliasOf": "word/avot-1-w17"
  },
  {
   "path": "audio/f/ashkenazi/word/yigdal-w63.mp3",
@@ -30061,7 +30068,8 @@
   "text": "עַל",
   "status": "missing",
   "source": "none",
-  "group": "prayer-word"
+  "group": "prayer-word",
+  "aliasOf": "word/haftarah-after-w104"
  },
  {
   "path": "audio/f/ashkenazi/word/yigdal-w64.mp3",
@@ -30959,7 +30967,8 @@
   "text": "אֵל",
   "status": "missing",
   "source": "none",
-  "group": "prayer-word"
+  "group": "prayer-word",
+  "aliasOf": "word/avot-1-w17"
  },
  {
   "path": "audio/f/ashkenazi/word/yigdal-w102.mp3",
@@ -32713,7 +32722,8 @@
   "text": "אֵל",
   "status": "missing",
   "source": "none",
-  "group": "prayer-word"
+  "group": "prayer-word",
+  "aliasOf": "word/avot-1-w17"
  },
  {
   "path": "audio/f/ashkenazi/word/haftarah-after-w35.mp3",
@@ -32989,7 +32999,8 @@
   "text": "עַל",
   "status": "missing",
   "source": "none",
-  "group": "prayer-word"
+  "group": "prayer-word",
+  "aliasOf": "word/haftarah-after-w104"
  },
  {
   "path": "audio/f/ashkenazi/word/haftarah-after-w47.mp3",
@@ -33715,7 +33726,8 @@
   "text": "עַל",
   "status": "missing",
   "source": "none",
-  "group": "prayer-word"
+  "group": "prayer-word",
+  "aliasOf": "word/haftarah-after-w104"
  },
  {
   "path": "audio/f/ashkenazi/word/haftarah-after-w78.mp3",
@@ -34317,8 +34329,8 @@
   "kind": "word",
   "id": "haftarah-after-w104",
   "text": "עַל",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-word"
  },
  {
@@ -34743,7 +34755,8 @@
   "text": "עַל",
   "status": "missing",
   "source": "none",
-  "group": "prayer-word"
+  "group": "prayer-word",
+  "aliasOf": "word/haftarah-after-w104"
  },
  {
   "path": "audio/f/ashkenazi/word/haftarah-after-w122.mp3",
@@ -35407,7 +35420,8 @@
   "text": "אֵל",
   "status": "missing",
   "source": "none",
-  "group": "prayer-word"
+  "group": "prayer-word",
+  "aliasOf": "word/avot-1-w17"
  },
  {
   "path": "audio/f/ashkenazi/word/havdalah-opening-w2.mp3",
@@ -35877,7 +35891,8 @@
   "text": "עַל",
   "status": "missing",
   "source": "none",
-  "group": "prayer-word"
+  "group": "prayer-word",
+  "aliasOf": "word/haftarah-after-w104"
  },
  {
   "path": "audio/f/ashkenazi/word/havdalah-opening-w22.mp3",
@@ -36483,8 +36498,8 @@
   "kind": "word",
   "id": "havdalah-opening-w48",
   "text": "אוֹרָה",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-word",
   "english": "light"
  },
@@ -36495,8 +36510,8 @@
   "kind": "word",
   "id": "havdalah-opening-w48",
   "text": "אוֹרָה",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "prayer-word",
   "english": "light"
  },
@@ -38813,7 +38828,8 @@
   "text": "עַל",
   "status": "missing",
   "source": "none",
-  "group": "prayer-word"
+  "group": "prayer-word",
+  "aliasOf": "word/haftarah-after-w104"
  },
  {
   "path": "audio/f/ashkenazi/word/hanerot-halalu-w5.mp3",
@@ -39003,7 +39019,8 @@
   "text": "עַל",
   "status": "missing",
   "source": "none",
-  "group": "prayer-word"
+  "group": "prayer-word",
+  "aliasOf": "word/haftarah-after-w104"
  },
  {
   "path": "audio/f/ashkenazi/word/hanerot-halalu-w13.mp3",
@@ -39495,7 +39512,8 @@
   "text": "עַל",
   "status": "missing",
   "source": "none",
-  "group": "prayer-word"
+  "group": "prayer-word",
+  "aliasOf": "word/haftarah-after-w104"
  },
  {
   "path": "audio/f/ashkenazi/word/hanerot-halalu-w34.mp3",
@@ -40274,7 +40292,8 @@
   "ipa": "ˈejs",
   "status": "missing",
   "source": "none",
-  "group": "vocab-word"
+  "group": "vocab-word",
+  "aliasOf": "word/shema-vahavta-w8"
  },
  {
   "path": "audio/f/ashkenazi/word/h7c9d2ffe.mp3",
@@ -40284,8 +40303,8 @@
   "id": "h7c9d2ffe",
   "text": "אֵת",
   "ipa": "ˈejs",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "vocab-word"
  },
  {
@@ -40418,7 +40437,8 @@
   "ipa": "ˈejl",
   "status": "missing",
   "source": "none",
-  "group": "vocab-word"
+  "group": "vocab-word",
+  "aliasOf": "word/avot-1-w17"
  },
  {
   "path": "audio/f/ashkenazi/word/hb9aef784.mp3",
@@ -40428,8 +40448,8 @@
   "id": "hb9aef784",
   "text": "אֵל",
   "ipa": "ˈejl",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "vocab-word"
  },
  {
@@ -40466,7 +40486,8 @@
   "ipa": "ˈal",
   "status": "missing",
   "source": "none",
-  "group": "vocab-word"
+  "group": "vocab-word",
+  "aliasOf": "word/haftarah-after-w104"
  },
  {
   "path": "audio/f/ashkenazi/word/h7d05bcca.mp3",
@@ -40476,8 +40497,8 @@
   "id": "h7d05bcca",
   "text": "עַל",
   "ipa": "ˈal",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "vocab-word"
  },
  {
@@ -40488,8 +40509,8 @@
   "id": "h277eae86",
   "text": "עֹל",
   "ipa": "ˈojl",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "vocab-word"
  },
  {
@@ -40500,8 +40521,8 @@
   "id": "h277eae86",
   "text": "עֹל",
   "ipa": "ˈojl",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "vocab-word"
  },
  {
@@ -40538,7 +40559,8 @@
   "ipa": "ˈel",
   "status": "missing",
   "source": "none",
-  "group": "vocab-word"
+  "group": "vocab-word",
+  "aliasOf": "word/yigdal-w47"
  },
  {
   "path": "audio/f/ashkenazi/word/h68843f80.mp3",
@@ -40548,8 +40570,8 @@
   "id": "h68843f80",
   "text": "אֶל",
   "ipa": "ˈel",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "vocab-word"
  },
  {
@@ -40596,8 +40618,8 @@
   "id": "h9d36c656",
   "text": "אַל",
   "ipa": "ˈal",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "vocab-word"
  },
  {
@@ -41076,8 +41098,8 @@
   "id": "h9c8ddecf",
   "text": "בַּיִת",
   "ipa": "ˈba.jis",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "vocab-word"
  },
  {
@@ -43320,8 +43342,8 @@
   "id": "h2d90f840",
   "text": "אֲדָמָה",
   "ipa": "a.ˈdɔ.mə",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "vocab-word"
  },
  {
@@ -43332,8 +43354,8 @@
   "id": "h2d90f840",
   "text": "אֲדָמָה",
   "ipa": "a.ˈdɔ.mə",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "vocab-word"
  },
  {
@@ -49068,8 +49090,8 @@
   "id": "h769a6c3e",
   "text": "אַרְבָּעָה",
   "ipa": "ar.ˈbɔ.ə",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "vocab-word"
  },
  {
@@ -49356,8 +49378,8 @@
   "id": "h6b636d7b",
   "text": "אֲרוּחָה",
   "ipa": "a.ˈru.xə",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "vocab-word"
  },
  {
@@ -50544,8 +50566,8 @@
   "id": "h33f66dda",
   "text": "בְּדִיקָה",
   "ipa": "bə.ˈdi.kə",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "vocab-word"
  },
  {
@@ -61020,8 +61042,8 @@
   "id": "hd492fef5",
   "text": "אַשְׁמָה",
   "ipa": "ˈaʃ.mə",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "vocab-word"
  },
  {

@@ -43,19 +43,24 @@ test('device-voice line: never says the learner chose it (it is on by default); 
   assert.match(read('src/shell/settings.js'), /browserVoiceAnyway: true/, 'the default is on, which is why the wording must not claim a choice');
 });
 
-test('Man/Woman: Settings and How this works say what is true, and the data proves it', () => {
-  // the data: every clip is Man + Israeli; the player gives a clip for Man + Israeli and none for Woman, Sephardi or Ashkenazi
+test('Man/Woman: a clip plays only for its own voice and tradition, and the wording does not call it a recording', () => {
   assert.ok(clips.length > 0 && clips.length === summary.tts);
-  for (const e of clips) assert.ok(e.voice === 'm' && e.tradition === 'israeli', `${e.kind}/${e.id} is ${e.voice}/${e.tradition}: update the Man/Woman wording (src/shell/audio-truth.js audioTruthDetail)`);
-  const e = clips[0];
-  const at = (voice, congregation) => createAudio({ settings: { voice, congregation }, manifest: all, AudioCtor: class {}, speech: null }).status(e.kind, e.id);
-  assert.equal(at('m', 'israeli').source, 'file', 'Man + Israeli plays a clip');
-  for (const [v, c] of [['f', 'israeli'], ['m', 'sephardi'], ['m', 'ashkenazi'], ['f', 'sephardi']]) assert.notEqual(at(v, c).source, 'file', `${v}/${c} has no clip`);
-  // the words: count read from the summary, Man (Ari) named, no "does not change the sound yet"
+  for (const e of clips) {
+    assert.notEqual(e.status, 'recorded', `${e.path} is not a human recording`);
+    assert.ok(e.voice === 'm' || e.voice === 'f', e.path);
+    assert.ok(['israeli', 'sephardi', 'ashkenazi'].includes(e.tradition), e.path);
+  }
+  const house = all.find((e) => e.id === 'h9c8ddecf' && e.voice === 'f' && e.tradition === 'sephardi');
+  assert.equal(house.status, 'synthetic-unreviewed');
+  const at = (voice, congregation, id) => createAudio({ settings: { voice, congregation }, manifest: all, AudioCtor: class {}, speech: null }).status('word', id);
+  assert.equal(at('f', 'sephardi', 'h9c8ddecf').source, 'file', 'Woman + Sephardi plays the house clip');
+  assert.notEqual(at('m', 'sephardi', 'h9c8ddecf').source, 'file', 'Man + Sephardi has no house clip');
+  assert.equal(at('f', 'israeli', 'h9c8ddecf').source, 'file', 'the Israeli woman house clip stays on its own row');
+  assert.notEqual(at('m', 'ashkenazi', 'h9c8ddecf').source, 'file', 'Man + Ashkenazi house was not in the package');
   const d = audioTruthDetail(summary);
-  assert.ok(d.includes(`All ${summary.tts.toLocaleString('en-US')} use the Man (Ari) voice`), d);
-  assert.match(d, /only for Man with the Israeli style/);
-  assert.match(d, /device voice.*never changed by it/);
+  assert.match(d, /not swapped for a different voice or tradition/);
+  assert.match(d, /Israeli style has not been verified/);
+  assert.doesNotMatch(d, /native|recorded by|All .* use the Man \(Ari\) voice/i);
   for (const text of [plain('settingsIntro'), d, read('src/shell/how.view.js')]) {
     assert.doesNotMatch(text, /does not change the sound yet|saved for later|cannot change it yet/);
   }

@@ -1,18 +1,6 @@
 {
  "status": "synthetic-unreviewed",
- "source": "outside-synthetic",
- "synth": {
-  "origin": "outside-synthetic",
-  "reviewed": false,
-  "redistributionCleared": false,
-  "licence": "unknown: not cleared",
-  "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
-  "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
-  "inputSha256": "89a7b9e10fde03673fb51a6150c564ec5be4cf7ea303dab37fc5ba3fbf93b1bc",
-  "ingestedAt": "2026-11-05T15:07:41.325Z",
-  "ingestedBy": "tools/audio/ingest.mjs"
- },
+ "source": "tts-hebrew",
  "reviewed": false,
- "redistributionCleared": false,
- "note": "Synthetic clip from an outside source (provenance and licence not verified). Not a human recording. No human has listened to it; whether the speech is correct Hebrew is unknown. Converted by tools/audio/ingest.mjs (original file name and tags not kept)."
+ "note": "Existing synthetic clip from ELIGIBLE-EXISTING-GAME-AUDIO. textSource hebrew. No native review and no new synthesis."
 }

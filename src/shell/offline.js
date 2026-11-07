@@ -25,6 +25,7 @@ export const GROUPS = Object.freeze([
   { id: "progress", label: "Progress, class track and sharing", test: /^(src\/progress\/|data\/progress\/|src\/awards\/|src\/classtrack\/|data\/classtrack\/|src\/teacher\/|src\/traditions\/|data\/traditions\/)/, route: "#/progress" },
   { id: "practice", label: "Vowel points, roots, gender, record-and-compare, review-spacing preview, known-word checker, syllabus and time budget", test: /^(src\/(nikkudfade|roots|genderdrill|recordcompare|hebrewtext|fsrs|knownwords|coursemap)\/)/, route: "#/nikkud-fade" },
   { id: "phrases", label: "Common phrases and sentences", test: /^(src\/phrases\/|data\/phrases\/)/, route: "#/phrases" },
+  { id: "games", label: "Hebrew games", test: /^src\/games\//, route: "#/learn" },
   { id: "shell", label: "App shell, settings and install", test: /^(index\.html|offline\.html|manifest\.webmanifest|src\/(app|store)\.js|src\/shell\/|src\/img\/|data\/img\/|data\/images\/|data\/legal\/|src\/audio\/|data\/audio\/|src\/onboarding\/|data\/onboarding\/|assets\/)/, route: "#/" },
 ]);
 export const groupOf = (path) => GROUPS.find((g) => g.test.test(path))?.id || "other";

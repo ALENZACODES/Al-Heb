@@ -49,3 +49,33 @@ An independent fake-DOM five-word interaction run found five correct words, gran
 The draft PR is <https://github.com/ALENZACODES/Al-Heb/pull/30>. The branch has been reconciled with the 7 November main truth pass (laser/sonar titles, route aliases, OCR copy, game unlisting) and is Git-mergeable, but it must remain a draft. The latest connected CI run is <https://github.com/ALENZACODES/Al-Heb/actions/runs/42349174248>, which reported failure before providing useful execution steps. Do not label it green.
 
 **Next gates in order:** repair the GitHub Actions runner; regenerate the two offline artifacts with the project generator; run the full unit and browser tiers; manually validate 320/390 px phones and screen readers; check the 24 starter words with real clip playback; only then seek John Khan's explicit merge/publish approval.
+
+
+## Manual integration and regression addendum — 7 November 2026
+
+These changes were made directly on the review branch, without relying on the scheduled review.
+
+### Integration
+- Brought the current main audio-only changes into the review branch by a two-parent merge commit, preserving all upstream additions without overwriting the site changes. At the time of reconciliation, the branch was 0 commits behind main and draft PR #30 was mergeable.
+- Manually regenerated `src/shell/views.generated.js` from the actual repository's `src` Git tree, using the same sorted `*.view.js` selection and output format as `tools/build-precache.mjs`. The inventory changed from 111 to 112 views, adding only `games/wordfinder.view.js`. No other route disappeared.
+- Added a regression gate comparing every local `ROUTES` module with the generated view inventory. Route audit: **126 routes, 112 generated views, 0 missing local modules, 0 duplicate names/patterns**.
+
+### Interaction and accessibility corrections
+- When Word Finder redraws a wrong answer, a usable answer button now receives focus; after `Show me a hint`, the highlighted answer receives focus; after success, the next action receives focus. A new regression exercises the focus and credit boundaries.
+- An explicit prayer-audio request can outlast the ordinary 2.2-second/0.8-second loading-veil deadline, but now has an **18-second maximum hold**. If the media element never emits `ended`, the veil is removed and playback is stopped. Without a Listen tap, the original short deadlines remain unchanged.
+- The supplied Modeh Ani fallback and 80-entry prayer-bank selection are unchanged.
+
+### Manual evidence (targeted, not full-browser)
+- **11/11** manually executed Word Finder interaction checks passed in a source-level JavaScript DOM harness: original-word display, recorded-audio interface call, three choices, wrong-answer boundary, focus restoration, hint restoration, correct-answer save, five-word completion, and one-round accounting.
+- **7/7** manually executed prayer-veil checks passed with a simulated indefinitely pending audio playback: bank readiness, available Listen control, initial 2.2-second deadline, playback start, 18-second fail-safe, veil removal and audio shutdown.
+- **11/11** route and homepage checks passed: all 126 routes present and unique, generated view inventory, four working home portal destinations, live first-word builder, responsive picture node, and absence of the old unsupported clip-count claim.
+- **720** model-generated three-choice rounds checked across the 240-word bank with no duplicate Hebrew choices; 80 prior-prayer candidates each checked at three random selection points without an immediate repeat.
+- Both local harvest WebPs were opened: **1600 × 900 / 278,040 bytes** and **900 × 507 / 100,068 bytes**. Neither carried EXIF or XMP chunks.
+
+### Remaining release gates
+- GitHub Actions job records still show failures with no executable steps or usable job logs; those are *not* equivalent to unit or browser test failures. The underlying runner failure cannot be identified from the available job-step data.
+- `precache-manifest.js` still requires the **actual** `node tools/build-precache.mjs` run on a complete checkout to include the new first-word module, its model, and data; it was not edited by hand. First-install offline Word Finder remains unverified.
+- Full Node unit tier, full Chromium accessibility/browser tier, physical-phone rendering/60-fps performance, actual audio playback, and native-Hebrew instructional review remain open.
+- PR #30 remains a review candidate. The site is not certified as production-ready and no production merge or deployment was made.
+
+**Site credit remains John Khan.** Source-licence acknowledgements and GitHub's recorded commit authors/timestamps are separate from the app's public attribution and are not falsely removed or renamed.

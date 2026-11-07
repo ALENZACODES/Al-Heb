@@ -41,7 +41,7 @@ const { loadContent } = await import("../src/curriculum/content.js");
 const { parseCardId } = await import("../src/curriculum/progress.js");
 const { newCard, review } = await import("../src/curriculum/srs.js");
 
-const manifest = readJson("data/audio/manifest.json");
+const manifest = [...readJson("data/audio/manifest.json"), ...readJson("data/audio/manifest-kind-word.json")];
 const niqqud = readJson("data/pronunciation/niqqud.json");
 const ladder = await ladderMod.loadLadder();
 const mk = (n) => ladder.levels[n - 1];

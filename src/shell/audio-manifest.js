@@ -1,6 +1,8 @@
-// Core audio manifest (data/audio/manifest.json, ~1.3 MB) is NOT needed to paint the first route, so it loads after first paint.
+// Core audio manifest (data/audio/manifest.json, ~1.5 MB) is NOT needed to paint the first route, so it loads after first paint.
+// Its kind=word entries live in data/audio/manifest-kind-word.json (~1.1 MB, same budget reason) and load with it.
 // Pure of DOM: fetch is injected. The result is fed to player.extend() by the shell audio wrapper (see audio.js).
 export const MANIFEST_URL = 'data/audio/manifest.json';
+export const WORD_MANIFEST_URL = 'data/audio/manifest-kind-word.json';
 
 /** Fetch + validate the core manifest. Rejects (never returns junk) so the caller can show an honest "unavailable" state. */
 export async function fetchCoreManifest(fetchFn, url = MANIFEST_URL) {
@@ -9,6 +11,12 @@ export async function fetchCoreManifest(fetchFn, url = MANIFEST_URL) {
   const list = await res.json(); // e.g. offline.html answering a JSON request throws here
   if (!Array.isArray(list)) throw new Error('audio manifest is not a list');
   return list;
+}
+
+/** Fetch the core manifest plus its kind=word shard and return the combined list (the same entries the core used to hold alone). */
+export async function fetchFullManifest(fetchFn, coreUrl = MANIFEST_URL, wordUrl = WORD_MANIFEST_URL) {
+  const [core, words] = await Promise.all([fetchCoreManifest(fetchFn, coreUrl), fetchCoreManifest(fetchFn, wordUrl)]);
+  return [...core, ...words];
 }
 
 /** Fetch the tiny shipped clip-count summary; rejects on anything but {recorded:number, tts:number}. */

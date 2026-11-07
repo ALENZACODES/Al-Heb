@@ -9,7 +9,7 @@ import { t, tHe } from './shell/i18n.js';
 import { createShellAudio } from './shell/audio.js';
 import { createShardLoader, warmShardAfterInstall } from './shell/audio-shards.js';
 import { isRealProgressWrite } from './shell/persist-gate.js';
-import { fetchCoreManifest, fetchAudioSummary, afterPaint } from './shell/audio-manifest.js';
+import { fetchFullManifest, fetchAudioSummary, afterPaint } from './shell/audio-manifest.js';
 import { h, heSpan, unavailableCard } from './shell/ui.js';
 import { loadImageResolver, img as imgEl } from './img/resolve.js';
 import { applyMotor, MOTOR_KEYS } from './shell/motor.js';
@@ -24,7 +24,7 @@ async function makeAudio() {
   try {
     const m = await import('./audio/player.js');
     if (typeof m.createAudio !== 'function') throw new Error('player unavailable');
-    return createShellAudio({ settings, loadManifest: () => fetchCoreManifest((u) => fetch(u)), loadSummary: () => fetchAudioSummary((u) => fetch(u)), createAudio: m.createAudio });
+    return createShellAudio({ settings, loadManifest: () => fetchFullManifest((u) => fetch(u)), loadSummary: () => fetchAudioSummary((u) => fetch(u)), createAudio: m.createAudio });
   } catch (e) { console.warn('lane 4 audio player not used:', e?.message); }
   return (await import('./shell/audio-stub.js')).createStubAudio({ settings }); // fallback only: loaded when the player is unavailable
 }

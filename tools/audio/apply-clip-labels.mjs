@@ -14,6 +14,7 @@ import { normalizeId } from './hebrew_data.mjs';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const FILES = [
   'data/audio/manifest.json',
+  'data/audio/manifest-kind-word.json',
   'data/audio/manifest-words-israeli.json',
   'data/audio/manifest-words-sephardi.json',
   'data/audio/manifest-words-ashkenazi.json',

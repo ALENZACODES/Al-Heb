@@ -7,7 +7,10 @@ import { buildClipLookup } from '../../src/vocab/clips.js';
 const root = join(dirname(fileURLToPath(import.meta.url)), '../..');
 
 export function lookupFromDisk(rootDir = root) {
-  const rows = JSON.parse(readFileSync(join(rootDir, 'data/audio/manifest.json'), 'utf8'));
+  const rows = ['data/audio/manifest.json', 'data/audio/manifest-kind-word.json'].flatMap((rel) => {
+    const p = join(rootDir, rel);
+    return existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : [];
+  });
   return buildClipLookup(rows, (p) => existsSync(join(rootDir, p)));
 }
 

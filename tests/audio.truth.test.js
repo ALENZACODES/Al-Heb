@@ -14,7 +14,7 @@ const json = (p) => JSON.parse(read(p));
 const summary = json('data/audio/summary.json');
 const SHARDS = ['israeli', 'sephardi', 'ashkenazi'].map((t) => `data/audio/manifest-words-${t}.json`);
 const listOf = (m) => (Array.isArray(m) ? m : (m.entries || m.clips || Object.values(m)));
-const all = [json('data/audio/manifest.json'), ...SHARDS.map(json)].flatMap(listOf);
+const all = [json('data/audio/manifest.json'), json('data/audio/manifest-kind-word.json'), ...SHARDS.map(json)].flatMap(listOf);
 
 test('summary.json matches the manifests: total, recorded and synthetic counts', () => {
   assert.equal(summary.total, all.length);

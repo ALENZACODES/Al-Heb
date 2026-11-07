@@ -74,7 +74,7 @@ test('corpus: registry ids unique with text and source, prayer-meta covers exact
 });
 
 test('audio manifests: no duplicate path, canonical path shape, and every id maps to an owning item', () => {
-  const all = [rd('data/audio/manifest.json'), ...['ashkenazi', 'israeli', 'sephardi'].map((t) => rd(`data/audio/manifest-words-${t}.json`))].flat();
+  const all = [rd('data/audio/manifest.json'), rd('data/audio/manifest-kind-word.json'), ...['ashkenazi', 'israeli', 'sephardi'].map((t) => rd(`data/audio/manifest-words-${t}.json`))].flat();
   assert.deepEqual(dups(all.map((a) => a.path)), []);
   const kid = new Set(all.map((a) => `${a.kind}/${a.id}`));
   const lessonWord = new Set(); for (const l of lessons) (l.words || []).forEach((w, i) => lessonWord.add(`${l.id.toLowerCase()}-w${i + 1}`));

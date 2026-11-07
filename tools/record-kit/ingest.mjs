@@ -35,7 +35,7 @@ export function decode(file) {
   const b = r.stdout; return new Float32Array(b.buffer, b.byteOffset, Math.floor(b.length / 4));
 }
 
-const manifestShards = (root) => ['data/audio/manifest.json', ...['israeli', 'sephardi', 'ashkenazi'].map((t) => `data/audio/manifest-words-${t}.json`)].filter((r) => fs.existsSync(path.join(root, r)));
+const manifestShards = (root) => ['data/audio/manifest.json', 'data/audio/manifest-kind-word.json', ...['israeli', 'sephardi', 'ashkenazi'].map((t) => `data/audio/manifest-words-${t}.json`)].filter((r) => fs.existsSync(path.join(root, r)));
 
 /** Read an export (zip or folder) into [{name, data}]; refuses path traversal. */
 export function readExport(input) {

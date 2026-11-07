@@ -17,7 +17,7 @@ import { checkMp3 } from './post.mjs';
 
 export const SHARDS = ['israeli', 'sephardi', 'ashkenazi'];
 export function manifestFiles(root) {
-  return ['data/audio/manifest.json', ...SHARDS.map((t) => `data/audio/manifest-words-${t}.json`)].filter((r) => fs.existsSync(path.join(root, r)));
+  return ['data/audio/manifest.json', 'data/audio/manifest-kind-word.json', ...SHARDS.map((t) => `data/audio/manifest-words-${t}.json`)].filter((r) => fs.existsSync(path.join(root, r)));
 }
 
 export function update({ root = REPO_ROOT, work = defaultWork(), reportPath, copy = true, dry = false, allowMock = false, now = () => new Date().toISOString() } = {}) {

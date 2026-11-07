@@ -49,7 +49,7 @@ async function load(route, { blockManifest = false, heavy = false } = {}) {
     window.__lt = []; try { new PerformanceObserver((l) => { for (const e of l.getEntries()) window.__lt.push([e.startTime, e.duration]); }).observe({ type: 'longtask', buffered: true }); } catch { /* unsupported */ }
     try { performance.setResourceTimingBufferSize(3000); } catch { /* ignore */ }
   });
-  if (blockManifest || args.includes('--block-manifest')) await ctx.route(/data\/audio\/manifest(-words-[a-z]+)?\.json/, (r) => r.abort());
+  if (blockManifest || args.includes('--block-manifest')) await ctx.route(/data\/audio\/manifest(-words-[a-z]+|-kind-word)?\.json/, (r) => r.abort());
   const page = await ctx.newPage(); const errors = [];
   page.on('pageerror', (e) => errors.push(e.message.split('\n')[0]));
   const cdp = await ctx.newCDPSession(page);

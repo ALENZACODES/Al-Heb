@@ -122,7 +122,7 @@ test('garden anchor: the nun-final word has the pointing of the word list, every
   const he = gardens[0].he;
   assert.equal(gardens[0].id, MAP.garden.wordList.id);
   assert.equal(MN.letters.find((x) => x.id === 'nun-final').word, he);
-  const am = rd('data/audio/manifest.json');
+  const am = [...rd('data/audio/manifest.json'), ...rd('data/audio/manifest-kind-word.json')];
   const anchors = (Array.isArray(am) ? am : am.entries || am.items || Object.values(am).find(Array.isArray)).filter((e) => e.id === 'anchor-nun-final');
   assert.ok(anchors.length >= 1);
   for (const e of anchors) assert.equal(e.text, he);

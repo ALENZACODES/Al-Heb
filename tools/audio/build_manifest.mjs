@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-// Builds data/audio/manifest.json (array of {path, voice, tradition, kind, id, text, ipa?, status, source, equivalentTo?}).
+// Builds data/audio/manifest.json (core) + data/audio/manifest-kind-word.json (kind=word entries) + the per-tradition
+// data/audio/manifest-words-<tradition>.json shards (array of {path, voice, tradition, kind, id, text, ipa?, status, source, equivalentTo?}).
 // Reads other lanes' data when present; skips gracefully when absent. Status is "missing" until a file exists under audio/.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -266,14 +267,18 @@ export function buildEntries({ root = ROOT, existsFn, ...opts } = {}) {
 
 // Size budget: the eagerly loaded data/audio/manifest.json must stay under 2 MiB. Reader word clips (group 'prayer-word', one per word of
 // every corpus record, x2 voices x3 traditions) are ~70% of all entries, so they live in lazily loaded per-tradition shards
-// data/audio/manifest-words-<tradition>.json. Everything else (letters, vowels, syllables, lines, prayers, lesson/phrasebook/anchor words) is core.
+// data/audio/manifest-words-<tradition>.json. The core manifest's own kind=word entries (lesson/phrasebook/anchor words, ~3,800 rows)
+// live in data/audio/manifest-kind-word.json, fetched with the core after first paint (see src/shell/audio-manifest.js).
+// Everything else (letters, vowels, syllables, lines, prayers) is core.
 export const SHARD_GROUPS = ['prayer-word', 'vocab-word', 'vocab-alias', 'vocab-extra'];
 export const SHARD_GROUP = 'prayer-word';
+export const WORD_SHARD_FILE = 'data/audio/manifest-kind-word.json';
 export function splitEntries(entries) {
-  const core = entries.filter((e) => !SHARD_GROUPS.includes(e.group));
+  const core = entries.filter((e) => !SHARD_GROUPS.includes(e.group) && e.kind !== 'word');
+  const wordShard = entries.filter((e) => !SHARD_GROUPS.includes(e.group) && e.kind === 'word');
   const shards = {};
   for (const t of TRADITIONS) shards[t] = entries.filter((e) => SHARD_GROUPS.includes(e.group) && e.tradition === t);
-  return { core, shards };
+  return { core, wordShard, shards };
 }
 // Tiny precached summary (a few bytes) so the shell can still say "no recordings exist" when the big core manifest is not available offline.
 export const SUMMARY_FILE = 'data/audio/summary.json';
@@ -283,8 +288,8 @@ export const shardFile = (t) => `data/audio/manifest-words-${t}.json`;
 export function main(argv = process.argv.slice(2)) {
   const check = argv.includes('--check');
   const { entries, notes, warnings } = buildEntries();
-  const { core, shards } = splitEntries(entries);
-  const files = [['data/audio/manifest.json', JSON.stringify(core, null, 1) + '\n'], ...TRADITIONS.map((t) => [shardFile(t), JSON.stringify(shards[t], null, 1) + '\n']),
+  const { core, wordShard, shards } = splitEntries(entries);
+  const files = [['data/audio/manifest.json', JSON.stringify(core, null, 1) + '\n'], [WORD_SHARD_FILE, JSON.stringify(wordShard, null, 1) + '\n'], ...TRADITIONS.map((t) => [shardFile(t), JSON.stringify(shards[t], null, 1) + '\n']),
     [SUMMARY_FILE, JSON.stringify(summaryOf(entries)) + '\n']];
   if (check) {
     for (const [rel, text] of files) {
@@ -298,7 +303,7 @@ export function main(argv = process.argv.slice(2)) {
   for (const [rel, text] of files) { fs.writeFileSync(path.join(ROOT, rel), text); console.log(`${rel}: ${(Buffer.byteLength(text) / 1048576).toFixed(2)} MiB`); }
   const counts = {};
   for (const e of entries) counts[`${e.kind}/${e.status}`] = (counts[`${e.kind}/${e.status}`] || 0) + 1;
-  console.log(`wrote ${entries.length} entries (${core.length} core + ${entries.length - core.length} in word shards)`);
+  console.log(`wrote ${entries.length} entries (${core.length} core + ${wordShard.length} kind-word + ${entries.length - core.length - wordShard.length} in tradition shards)`);
   console.log(notes.join('\n')); console.log(JSON.stringify(counts));
   for (const w of warnings) console.warn('warning:', w);
 }

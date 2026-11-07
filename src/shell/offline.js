@@ -50,7 +50,7 @@ export function optionalGroups(tradition = "sephardi") {
 export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-practice", label: "Vowel-point, root, gender, known-word and record-and-compare practice data", test: /^data\/(nikkudfade|roots|gender|knownwords)\//, approxMB: 1.2 },
   { id: "od-vocab", label: "Vocabulary data and theme packs", test: /^data\/vocab\//, approxMB: 5.9 },
-  { id: "od-audio-index", label: "Audio clip list (core)", test: /^data\/audio\//, approxMB: 1.8 },
+  { id: "od-audio-index", label: "Audio clip list (core)", test: /^data\/audio\//, approxMB: 2.6 },
   { id: "od-pronunciation", label: "Sounds and pronunciation data", test: /^data\/pronunciation\//, approxMB: 0.8 },
   { id: "od-speak", label: "Speaking, Israel dialogues, listening, typing, word tracing", test: /^data\/(speak|israel|listen|typing|wordtrace)\//, approxMB: 0.5 },
   { id: "od-reading", label: "Reading, festivals, calendar, grammar and pronunciation-style data", test: /^data\/(corpus|torahread|festivals|calendar|grammar|traditions|trope-trainer)\//, approxMB: 0.5 },

@@ -247,7 +247,7 @@ test('drillQueue and drillQuestion: ten items, one per pair, pair questions play
 test('build.mjs is deterministic: rebuilding in memory gives the committed sets', async () => {
   const B = await import('../src/speak/build.mjs');
   const words = rd('data/vocab/words.json').words, packs = rd('data/vocab/packs.json').packs;
-  const mt = B.manifestTextMap([rd('data/audio/manifest.json'), rd('data/audio/manifest-words-israeli.json')]);
+  const mt = B.manifestTextMap([rd('data/audio/manifest.json'), rd('data/audio/manifest-kind-word.json'), rd('data/audio/manifest-words-israeli.json')]);
   const built = B.buildSets({ words, packs, manifestTexts: mt });
   assert.equal(built.length, 60);
   assert.deepEqual(built.map((s) => s.id), rd('data/speak/sets.json').sets.map((s) => s.id));

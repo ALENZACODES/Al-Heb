@@ -404,10 +404,11 @@ async function loadManifestFile(rel) {
   try { return await loadJSON(rel); } catch { return null; }
 }
 
-/** Core catalogue plus per-tradition word shards. A shard that fails to load is skipped, which can only hide a clip (shown as "No audio yet"), never substitute one. */
+/** Core catalogue plus the kind-word shard and the per-tradition word shards. A shard that fails to load is skipped, which can only hide a clip (shown as "No audio yet"), never substitute one. */
 export async function loadAudioManifest() {
   const core = await loadJSON('data/audio/manifest.json');
-  const parts = [core];
+  const words = await loadManifestFile('data/audio/manifest-kind-word.json');
+  const parts = [core, ...(Array.isArray(words) ? [words] : [])];
   for (const t of TRADITIONS) {
     const shard = await loadManifestFile(`data/audio/manifest-words-${t}.json`);
     if (Array.isArray(shard)) parts.push(shard);

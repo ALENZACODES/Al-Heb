@@ -9,8 +9,10 @@ export function createStubAudio({ settings } = {}) {
     if (!texts) {
       texts = {};
       try {
-        const r = await fetch('data/audio/manifest.json');
-        if (r.ok) for (const e of await r.json()) texts[`${e.kind}:${e.id}`] ??= e.text;
+        for (const u of ['data/audio/manifest.json', 'data/audio/manifest-kind-word.json']) {
+          const r = await fetch(u);
+          if (r.ok) for (const e of await r.json()) texts[`${e.kind}:${e.id}`] ??= e.text;
+        }
       } catch { /* manifest not available */ }
     }
     return texts[`${kind}:${id}`];

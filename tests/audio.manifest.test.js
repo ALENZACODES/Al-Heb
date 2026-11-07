@@ -100,18 +100,22 @@ test('reads other lanes when present: corpus, curriculum, niqqud; skips bad ids;
   assert.ok(warnings.some((w) => w.includes('noheb')));
 });
 
-test('size budget: core manifest and every word shard stay under 2 MiB; shards hold only reader word clips and are current', () => {
+test('size budget: core manifest, the kind-word shard and every word shard stay under 2 MiB; shards hold only reader word clips and are current', () => {
   const MiB = 1048576;
   const core = JSON.parse(fs.readFileSync(new URL('../data/audio/manifest.json', import.meta.url), 'utf8'));
   assert.ok(fs.statSync(new URL('../data/audio/manifest.json', import.meta.url)).size < 2 * MiB, 'core manifest < 2 MiB');
   assert.ok(core.every((e) => !['prayer-word', 'vocab-word', 'vocab-alias', 'vocab-extra'].includes(e.group)), 'core has no reader or donor-script word clips');
+  assert.ok(core.every((e) => e.kind !== 'word'), 'core has no kind=word entries: they live in manifest-kind-word.json');
+  const wordShard = JSON.parse(fs.readFileSync(new URL('../data/audio/manifest-kind-word.json', import.meta.url), 'utf8'));
+  assert.ok(fs.statSync(new URL('../data/audio/manifest-kind-word.json', import.meta.url)).size < 2 * MiB, 'kind-word shard < 2 MiB');
+  assert.ok(wordShard.length > 1000 && wordShard.every((e) => e.kind === 'word'), 'kind-word shard holds only kind=word entries');
   for (const t of ['israeli', 'sephardi', 'ashkenazi']) {
     const f = new URL(`../data/audio/manifest-words-${t}.json`, import.meta.url);
     assert.ok(fs.statSync(f).size < 2 * MiB, `${t} shard < 2 MiB`);
     const sh = JSON.parse(fs.readFileSync(f, 'utf8'));
     assert.ok(sh.length > 1000 && sh.every((e) => ['prayer-word', 'vocab-word', 'vocab-alias', 'vocab-extra'].includes(e.group) && e.tradition === t));
   }
-  assert.equal(manifest.length, core.length + 3 * JSON.parse(fs.readFileSync(new URL('../data/audio/manifest-words-israeli.json', import.meta.url), 'utf8')).length);
+  assert.equal(manifest.length, core.length + wordShard.length + 3 * JSON.parse(fs.readFileSync(new URL('../data/audio/manifest-words-israeli.json', import.meta.url), 'utf8')).length);
 });
 
 test('every id in every donor recording script resolves to a missing manifest entry with the right kind/voice/tradition path', () => {

@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book11-p01.mp3"
    },
    "illustration": "a bus shelter on a busy road, morning, a few people waiting",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book11-p02.mp3"
    },
    "illustration": "a woman in office clothes checking her watch",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book11-p03.mp3"
    },
    "illustration": "the empty road stretching away, heat haze",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book11-p04.mp3"
    },
    "illustration": "the woman leaning on the pole, phone at ten percent",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book11-p05.mp3"
    },
    "illustration": "an elderly man with a cane sitting calmly on the bench",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book11-p06.mp3"
    },
    "illustration": "the old man speaking, unbothered",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book11-p07.mp3"
    },
    "illustration": "the woman rolling her eyes with a half-smile",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book11-p08.mp3"
    },
    "illustration": "a wrinkled hand offering a wrapped candy",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book11-p09.mp3"
    },
    "illustration": "the woman laughing, candy in hand",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book11-p10.mp3"
    },
    "illustration": "a green bus rounding the corner, doors opening",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book11-p11.mp3"
    },
    "illustration": "the woman stepping up, tapping her card",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book11-p12.mp3"
    },
    "illustration": "the old man waving from the bench, seen through the bus window",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

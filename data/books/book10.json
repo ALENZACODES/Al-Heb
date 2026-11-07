@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book10-p01.mp3"
    },
    "illustration": "a crowded covered market, striped awnings, produce stalls",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book10-p02.mp3"
    },
    "illustration": "a man with a canvas bag entering the market",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book10-p03.mp3"
    },
    "illustration": "a mountain of red tomatoes, vendor shouting",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book10-p04.mp3"
    },
    "illustration": "crates of cucumbers, a hand picking one",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book10-p05.mp3"
    },
    "illustration": "the man holding up a bunch of grapes, vendor with a scale",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book10-p06.mp3"
    },
    "illustration": "the vendor holding up ten fingers, grinning",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book10-p07.mp3"
    },
    "illustration": "the man with mock horror, hand on heart",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book10-p08.mp3"
    },
    "illustration": "the vendor laughing, waving him in",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book10-p09.mp3"
    },
    "illustration": "coins passing hands, grapes going into the bag",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book10-p10.mp3"
    },
    "illustration": "a bakery stall, pita stacked, steam rising",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book10-p11.mp3"
    },
    "illustration": "bowls of green and black olives, a wheel of white cheese",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book10-p12.mp3"
    },
    "illustration": "the man walking out with a bulging bag, eating a grape",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

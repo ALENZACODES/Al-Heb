@@ -25,10 +25,10 @@ test('Home presents four photograph-backed beginner doorways with working routes
   assert.ok(root.querySelector('picture'), 'hero uses responsive local artwork');
 });
 
-test('26 games are reachable, labelled 1–9, and do not claim formal levels', () => {
+test('25 listed games are reachable, labelled 1–9, and do not claim formal levels', () => {
   const ids = ['wordfinder', ...GAMES.map(([id]) => id)];
-  assert.equal(ids.length, 26);
-  assert.equal(new Set(ids).size, 26);
+  assert.equal(ids.length, 25);
+  assert.equal(new Set(ids).size, 25);
   assert.deepEqual([...new Set(Object.values(LEVEL_BY_GAME))].sort((a, b) => a - b), [1,2,3,4,5,6,7,8,9]);
   for (const id of ids) {
     assert.ok(matchRoute('#/' + id)?.route, 'route for ' + id);

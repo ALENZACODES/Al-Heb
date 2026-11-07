@@ -58,7 +58,7 @@ export function updateCompanions(routeName, { R = null, voice = 'f' } = {}) {
     }
   }
   const names = h('span', { class: 'comp-names' }, `${order.map((w) => NAMES[w]).join(' and ')} — your teachers`);
-  names.style.color = '#1F3A5F';
+  names.style.color = '#1E4634';
   kids.push(names);
   slot.replaceChildren(...kids);
 }

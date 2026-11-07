@@ -3,7 +3,7 @@
   position: fixed; inset: 0; z-index: 9999; display: grid;
   place-items: center; overflow: hidden; isolation: isolate;
   padding: max(1.5rem, env(safe-area-inset-top)) 1.1rem max(1.5rem, env(safe-area-inset-bottom));
-  background: #1F3A5F; color: #F6F1E7; text-align: center;
+  background: #1E4634; color: #F6F1E7; text-align: center;
   transition: opacity .15s ease; cursor: pointer;
 }
 .prayer-veil--leaving { opacity: 0; pointer-events: none; }
@@ -54,10 +54,10 @@
 
 /* The photo-realistic reading of an ancient tree is deliberate: no primitive
    vector canopy, no toy-fruit circles, one local WebP asset and no moving typography. */
-.show-hero { display: block; min-height: 0; overflow: hidden; background: #1F3A5F; border-color: #D9A441; }
+.show-hero { display: block; min-height: 0; overflow: hidden; background: #1E4634; border-color: #D9A441; }
 .show-hero::after { content: none; animation: none; }
 .show-hero-text {
-  position: relative; z-index: 2; background: #1F3A5F; color: #F6F1E7;
+  position: relative; z-index: 2; background: #1E4634; color: #F6F1E7;
   padding: 1rem 1.25rem 1.2rem; animation: none;
 }
 .show-hero-text .show-kicker { color: #D9A441; }
@@ -65,12 +65,12 @@
 .show-hero-text .show-sub { color: #F6F1E7; }
 .show-hero-text .show-btn { color: #2B2B2B; background: #D9A441; border-color: #D9A441; }
 .show-hero-text .show-btn2, .show-hero-text .show-btn2:hover {
-  color: #F6F1E7; background: #1F3A5F; border-color: #D9A441;
+  color: #F6F1E7; background: #1E4634; border-color: #D9A441;
 }
 
 .astral-scene {
   position: relative; width: 100%; height: clamp(280px, 48vw, 500px);
-  background: linear-gradient(180deg, #1F3A5F 0%, #6B7F3A 55%, #D9A441 100%);
+  background: linear-gradient(180deg, #1E4634 0%, #6B7F3A 55%, #D9A441 100%);
   isolation: isolate; overflow: hidden;
 }
 .astral-photo-motion {
@@ -198,7 +198,7 @@
   font-size: clamp(1.3rem, 3vw, 1.9rem);
   font-weight: 700;
   line-height: 1.25;
-  color: #1F3A5F;
+  color: #1E4634;
 }
 .show-portals-intro {
   margin: .35rem 0 1rem;
@@ -217,7 +217,7 @@
   position: relative; display: flex; flex-direction: column;
   overflow: hidden; text-decoration: none; height: 100%;
   border: 1px solid #D9A441; border-radius: 15px;
-  background: #1F3A5F; color: #F6F1E7;
+  background: #1E4634; color: #F6F1E7;
   box-shadow: 0 6px 20px rgba(43,43,43,.19);
   transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
@@ -254,7 +254,7 @@
   display: flex; flex: 1; flex-direction: column; gap: .38rem;
   padding: .8rem .8rem 1rem;
   border-top: 1px solid rgba(217,164,65,.7);
-  background: linear-gradient(150deg, #1F3A5F, rgba(43,43,43,.92));
+  background: linear-gradient(150deg, #1E4634, rgba(43,43,43,.92));
 }
 .show-portal-title {
   display: block;
@@ -272,7 +272,7 @@
   padding: .85rem .75rem;
   border-block: 1px solid rgba(217,164,65,.5);
   background: #F6F1E7;
-  color: #1F3A5F;
+  color: #1E4634;
   font-weight: 700;
   font-size: .9rem;
   line-height: 1.6;
@@ -284,7 +284,7 @@
   border-radius: 20px;
   background:
     radial-gradient(circle at 92% 7%, rgba(217,164,65,.19), transparent 34%),
-    linear-gradient(140deg, #1F3A5F, #2B2B2B);
+    linear-gradient(140deg, #1E4634, #2B2B2B);
   box-shadow: inset 0 0 0 4px rgba(246,241,231,.035);
 }
 .show-try-title {
@@ -304,14 +304,14 @@
   background: #F6F1E7;
 }
 .show-all-destinations summary {
-  color: #1F3A5F; font-weight: 750;
+  color: #1E4634; font-weight: 750;
   padding: .25rem 0;
   cursor: pointer; font-size: 1.04rem;
 }
 .show-all-destinations[open] summary { margin-bottom: .6rem; }
 .show-all-destinations .show-grid { margin-bottom: .2rem; }
 .show-all-destinations .show-tile {
-  background: linear-gradient(160deg, #1F3A5F, #2B2B2B);
+  background: linear-gradient(160deg, #1E4634, #2B2B2B);
   border-color: rgba(217,164,65,.6);
 }
 .show-all-destinations .show-tile-title { color: #F6F1E7; }

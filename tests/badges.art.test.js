@@ -67,7 +67,7 @@ test('art: colour pairs reach 3:1 against the card and page in the light, dark a
     assert.ok(ratio(t['accent-fg'], t.accent) >= 4.5, `${name}: picture on the filled hexagon`);
   }
   const css = fs.readFileSync(path.join(ROOT, 'assets/css/app.css'), 'utf8').match(/:root \{[^}]*\}/)[0];
-  for (const [k, hex] of [['accent', '#1f3a5f'], ['card', '#fffaf0'], ['accent-fg', '#fffaf0'], ['muted', '#5a6275']]) {
+  for (const [k, hex] of [['accent', '#1e4634'], ['card', '#fffaf0'], ['accent-fg', '#fffaf0'], ['muted', '#5a6656']]) {
     assert.ok(css.includes(`--${k}: ${hex}`), `fallback colour for --${k} matches the light theme`);
     assert.ok(fs.readFileSync(path.join(ROOT, 'preview/loops/badges.art.js'), 'utf8').includes(`var(--${k},${hex})`));
   }

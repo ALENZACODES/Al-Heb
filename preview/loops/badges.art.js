@@ -5,7 +5,7 @@
 // drawn under the picture. A badge that is not earned yet is a dashed outline. The only text inside a picture is a plain
 // letter, on the two badges that are about letters.
 export const STROKE = 6;
-const V = { accent: 'var(--accent,#1f3a5f)', card: 'var(--card,#fffaf0)', accentFg: 'var(--accent-fg,#fffaf0)', muted: 'var(--muted,#5a6275)' };
+const V = { accent: 'var(--accent,#1e4634)', card: 'var(--card,#fffaf0)', accentFg: 'var(--accent-fg,#fffaf0)', muted: 'var(--muted,#5a6656)' };
 
 const GLYPHS = Object.freeze({
   wave: 'M28 50Q39 34 50 50T72 50',

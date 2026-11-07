@@ -1,6 +1,7 @@
 // ALEF opening prayer veil: one sourced entry per real page load.
-// The veil holds for its full dwell (2.5 s for a returning learner, 6 s on a
-// first visit, longer while its prayer plays) so the blessing can actually be
+// The veil holds for its full dwell (6 s for a returning learner, 9 s on a
+// first visit, longer while its prayer plays), counted from the moment the
+// prayer actually renders — never from load timing — so the blessing can be
 // read and heard; the app's ready event never dismisses it early — only the
 // dwell timer, a tap, Skip, Escape or the 12 s failsafe close it.
 export const MODEH_ANI = Object.freeze({
@@ -65,6 +66,7 @@ function initPrayerVeil() {
   const en = document.getElementById('alef-prayer-en');
   const listenBtn = document.getElementById('alef-prayer-listen');
   const audioNote = document.getElementById('alef-prayer-audio-note');
+  const firstVisit = !readLocal(VISIT_KEY);
   writeLocal(VISIT_KEY, '1');
   let closed = false;
   let rendered = false;
@@ -147,7 +149,7 @@ function initPrayerVeil() {
     en.textContent = chosen.en;
     veil.dataset.prayerReady = '1';
     rendered = true;
-    if (!holding) releaseAfter(readySeen ? 2500 : 6000);
+    if (!holding) releaseAfter(firstVisit ? 9000 : 6000);
     writeLocal(LAST_KEY, prayerKey(chosen));
     try {
       const prefs = readAudioPrefs();

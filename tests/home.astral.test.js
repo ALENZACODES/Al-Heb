@@ -35,7 +35,7 @@ test('random picker excludes the previous prayer without biasing an eligible can
 
 test('opening card has a hard timeout, skip controls and ready signal before the app route', () => {
   const src = readFileSync(new URL('../src/shell/prayer-veil.js', import.meta.url), 'utf8');
-  assert.match(src, /\? 2500 : 6000/);
+  assert.match(src, /\? 9000 : 6000/);
   assert.match(src, /document\.addEventListener\('alef:ready'/);
   assert.match(src, /veil\.addEventListener\('click'/);
   assert.match(src, /prefers-reduced-motion/);

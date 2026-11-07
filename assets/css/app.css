@@ -1,16 +1,16 @@
 /* ALEF base styles. Logical properties throughout (RTL-aware). Fonts: assets/css/fonts.css (self-hosted OFL). */
 :root {
-  --bg: #f6efe0; --fg: #1d2433; --muted: #5a6275; --card: #fffaf0; --border: #d9cdb3;
-  --accent: #1f3a5f; --accent-fg: #fffaf0; --focus: #b45309; --warn-bg: #fff1c2; --warn-fg: #5b4200;
+  --bg: #f6efe0; --fg: #1c2a1e; --muted: #5a6656; --card: #fffaf0; --border: #d9cdb3;
+  --accent: #1e4634; --accent-fg: #fffaf0; --focus: #b45309; --warn-bg: #fff1c2; --warn-fg: #5b4200;
   --font-ui: "Heebo", system-ui, -apple-system, "Segoe UI", "DejaVu Sans", sans-serif;
   --font-he: "Frank Ruhl Libre", "Ezra SIL", "SBL Hebrew", "FreeSerif", "DejaVu Serif", serif;
   --font-he-cursive: "Gveret Levin", "FreeSans", "DejaVu Sans", cursive;
   --tap: 48px; --radius: 12px; --gap: 1rem;
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) { --bg: #111722; --fg: #ece7da; --muted: #a3abbd; --card: #1a2231; --border: #2e3850; --accent: #8fb4ee; --accent-fg: #0d1420; --focus: #fbbf24; --warn-bg: #3d3210; --warn-fg: #f5d98a; }
+  :root:not([data-theme="light"]) { --bg: #101a13; --fg: #ece7da; --muted: #a9b3a4; --card: #18251c; --border: #2c4234; --accent: #9ec49a; --accent-fg: #0c1710; --focus: #fbbf24; --warn-bg: #3d3210; --warn-fg: #f5d98a; }
 }
-:root[data-theme="dark"] { --bg: #111722; --fg: #ece7da; --muted: #a3abbd; --card: #1a2231; --border: #2e3850; --accent: #8fb4ee; --accent-fg: #0d1420; --focus: #fbbf24; --warn-bg: #3d3210; --warn-fg: #f5d98a; color-scheme: dark; }
+:root[data-theme="dark"] { --bg: #101a13; --fg: #ece7da; --muted: #a9b3a4; --card: #18251c; --border: #2c4234; --accent: #9ec49a; --accent-fg: #0c1710; --focus: #fbbf24; --warn-bg: #3d3210; --warn-fg: #f5d98a; color-scheme: dark; }
 :root[data-theme="light"] { color-scheme: light; }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }

@@ -39,7 +39,7 @@ const CSS = `
 .wt button[disabled]{opacity:.55;cursor:default}
 .wt .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}
 .wt .notice{background:var(--warn-bg,#fff4e0);color:var(--warn-fg,#3a2a00);border:1px solid #e0b060;border-radius:8px;padding:8px 10px;font-size:.9rem;margin:6px 0}
-.wt .muted{color:var(--muted,#5a6275);font-size:.9rem}
+.wt .muted{color:var(--muted,#5a6656);font-size:.9rem}
 .wt .target{font-size:2.6rem;line-height:1.3;margin:4px 0}
 .wt .strip{display:grid;direction:rtl;gap:8px;margin:8px 0}
 .wt .cell{border:3px solid var(--border,#ccd);border-radius:12px;background:var(--card,#fff);padding:3px;min-width:0}

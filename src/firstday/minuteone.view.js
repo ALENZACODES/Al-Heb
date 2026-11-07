@@ -170,7 +170,7 @@ export async function mount(root, ctx) {
       dots.push(h('span', {
         class: i <= activeIdx ? 'fw-dot on' : 'fw-dot',
         'aria-hidden': 'true',
-        style: `display:inline-block;width:0.55rem;height:0.55rem;border-radius:50%;margin:0 0.2rem;background:${i <= activeIdx ? 'var(--accent,#1f3a5f)' : '#cfc4b0'}`,
+        style: `display:inline-block;width:0.55rem;height:0.55rem;border-radius:50%;margin:0 0.2rem;background:${i <= activeIdx ? 'var(--accent,#1e4634)' : '#cfc4b0'}`,
       }));
     }
     return h('p', { class: 'fw-progress', style: 'text-align:center;margin:0.25rem 0 0.75rem', 'aria-label': `Step ${activeIdx + 1} of ${total}` }, ...dots);

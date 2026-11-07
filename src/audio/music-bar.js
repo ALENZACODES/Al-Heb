@@ -8,7 +8,7 @@ const CSS = `
 #game-music[hidden]{display:none}
 #game-music .row{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
 #game-music button,#game-music select,#game-music input{min-block-size:44px}
-#game-music button:focus-visible,#game-music select:focus-visible,#game-music input:focus-visible{outline:3px solid #1F3A5F;outline-offset:2px}
+#game-music button:focus-visible,#game-music select:focus-visible,#game-music input:focus-visible{outline:3px solid #1E4634;outline-offset:2px}
 #game-music .status{margin:0}
 `;
 

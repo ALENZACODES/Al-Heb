@@ -100,6 +100,19 @@ export const GAME_ENV = Object.freeze({
   typewriter: 'GAME_typewriter_env',
   vowels: 'GAME_vowel_catcher_env',
   karaoke: 'GAME_karaoke_listen',
+  ciphergrid: 'GAME_ciphergrid_env',
+  petclinic: 'GAME_petclinic_env',
+  trainswitch: 'GAME_trainswitch_env',
+  wordfinder: 'GAME_wordfinder_env',
+  letterbridge: 'GAME_letterbridge_env',
+  museumcurator: 'GAME_museumcurator_env',
+  rentalagent: 'GAME_rentalagent_env',
+  rhymelab: 'GAME_rhymelab_env',
+  roottree: 'GAME_roottree_env',
+  tugowar: 'GAME_tugowar_env',
+  weatherstudio: 'GAME_weatherstudio_env',
+  barter: 'GAME_barter_env',
+  echochamber: 'GAME_echochamber_env',
 });
 
 /** replaceChildren drops nulls, so a missing picture does not become the text "null" or throw. */

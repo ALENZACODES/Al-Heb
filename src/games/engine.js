@@ -113,6 +113,8 @@ export const GAME_ENV = Object.freeze({
   weatherstudio: 'GAME_weatherstudio_env',
   barter: 'GAME_barter_env',
   echochamber: 'GAME_echochamber_env',
+  pinball: 'GAME_pinball_table',
+  prefixblast: 'GAME_prefix_blast_stage',
 });
 
 /** replaceChildren drops nulls, so a missing picture does not become the text "null" or throw. */

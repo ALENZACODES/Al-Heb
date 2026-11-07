@@ -24,7 +24,7 @@ export function mount(root,ctx) {
   const board=h('div',{class:'game-board'});
   const article=h('article',{class:'card game-card game-petclinic'},h('h1',{id:'view-title'},'Pet Clinic Helper'),
     h('p',{},'Language role-play only: match a Hebrew symptom to its exact source exercise phrase. Not veterinary advice.'),
-    h('p',{class:'muted'},'Source lesson is an unreviewed teaching draft. No clinic picture is shown: the approved set has no clinic image, and story art is not used in its place.'),status,board);
+    h('p',{class:'muted'},'Source lesson is an unreviewed teaching draft. The scene above is a backdrop, not a word cue.'),status,board);
   root.replaceChildren(article);
   // The clinic-room backdrop made for this game (approved art, decorative only —
   // never a word cue). A missing picture leaves the page as it was.

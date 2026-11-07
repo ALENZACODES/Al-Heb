@@ -6,7 +6,7 @@ import { LEVEL_DESCRIPTIONS } from './wordfinder.model.js';
 import { loadGameImages, imgOf, GAME_ENV } from './engine.js';
 
 /** Hub id -> GAME_ENV key, for the games whose backdrop key differs from the route id. */
-const ENV_KEY = Object.freeze({
+export const HUB_ENV_KEY = Object.freeze({
   archbuilder: 'arch', bumperverbs: 'bumper', lasermaze: 'laser', memorypalace: 'palace',
   shabbatrush: 'shabbat', shadowcraft: 'shadow', shuktaxi: 'taxi', submarinesonar: 'sonar',
   typewriter: 'typewriter', vowelcatcher: 'vowels', karaokebeat: 'karaoke',
@@ -81,7 +81,7 @@ export function mount(root) {
       h('h2', { id: 'wf-level-' + level }, 'Level ' + level + ' of 9', level === 1 ? ' · Start here' : ''),
       h('p', { class: 'muted' }, intro),
       h('ul', { class: 'show-grid wf-game-grid' }, ...games.map(({ id, title, hook }) => {
-        const envId = GAME_ENV[ENV_KEY[id] || id];
+        const envId = GAME_ENV[HUB_ENV_KEY[id] || id];
         const a = h('a', { class: 'show-tile wf-level-tile' + (id === 'wordfinder' ? ' wf-featured-game' : ''), href: '#/' + id },
           h('span', { class: 'wf-game-level' }, 'LEVEL ' + level + ' / 9'),
           h('span', { class: 'show-tile-title' }, title, ' ', heSpan('מִשְׂחָק')),

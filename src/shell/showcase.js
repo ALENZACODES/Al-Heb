@@ -4,6 +4,7 @@
 // every tile links to an existing route; counts are the app's real numbers.
 import { h, heSpan } from './ui.js';
 import { astralTreeNode } from './astral-tree.js';
+import { loadGameImages, imgOf } from '../games/engine.js';
 
 const TILES = [
   ['firstday', '#/firstday', 'Your First 10 Minutes', 'עֲשָׂרָה', 'Build your first word, letter by letter'],
@@ -113,18 +114,26 @@ export function showcaseNode(ctx) {
     h('li', {}, h('a', { class: 'show-tile', href },
       h('span', { class: 'show-tile-title' }, title, ' ', heSpan(he)),
       h('span', { class: 'show-tile-hook' }, hook))));
+  const heroText = h('div', { class: 'show-hero-text' },
+    h('p', { class: 'show-kicker' }, 'The Tree of Life'),
+    h('p', { class: 'show-title' }, 'Learn to read ', heSpan('עִבְרִית'), ' — Hebrew'),
+    h('p', { class: 'show-sub' }, 'Prayers, Torah and everyday Israel. A few minutes a day, in your own tradition\u2019s voice.'),
+    h('p', { class: 'show-cta' },
+      h('a', { class: 'btn show-btn', href: '#/firstday' }, 'Start your first 10 minutes'),
+      ' ',
+      h('a', { class: 'btn secondary show-btn2', href: '#/books' }, 'Read a story book')));
+  // Rimon beside the hero copy. The image resolver loads lazily on first
+  // paint, so a synchronous ctx.img read is empty on the first visit — fetch
+  // the mascot when the resolver is ready and insert it then. A missing
+  // picture leaves the hero exactly as it was.
+  loadGameImages(ctx).then((R) => {
+    const im = R ? imgOf(R, 'id', 'MASCOT_rimon') : null;
+    if (im?.src && heroText.isConnected) heroText.appendChild(h('img', { class: 'show-mascot', src: im.src, alt: im.alt, width: im.width, height: im.height }));
+  }).catch(() => {});
   return h('section', { class: 'showcase', 'aria-label': 'Explore ALEF' },
     h('div', { class: 'show-hero' },
       astralTreeNode(),
-      h('div', { class: 'show-hero-text' },
-        h('p', { class: 'show-kicker' }, 'The Tree of Life'),
-        h('p', { class: 'show-title' }, 'Learn to read ', heSpan('עִבְרִית'), ' — Hebrew'),
-        h('p', { class: 'show-sub' }, 'Prayers, Torah and everyday Israel. A few minutes a day, in your own tradition\u2019s voice.'),
-        h('p', { class: 'show-cta' },
-          h('a', { class: 'btn show-btn', href: '#/firstday' }, 'Start your first 10 minutes'),
-          ' ',
-          h('a', { class: 'btn secondary show-btn2', href: '#/books' }, 'Read a story book')),
-        ctx?.img ? ctx.img(h, { kind: 'id', id: 'MASCOT_rimon', decorative: true, width: 300, class: 'show-mascot' }) : null)),
+      heroText),
     portalsNode(has),
     tryPanel(),
     h('p', { class: 'show-stats' }, 'Games across 9 levels · 240 first words · 62 story books · 3 Hebrew traditions'),

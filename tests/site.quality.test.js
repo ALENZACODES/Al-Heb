@@ -4,7 +4,9 @@ import { readFileSync } from 'node:fs';
 import { N } from './torahread.fakedom.js';
 import { showcaseNode } from '../src/shell/showcase.js';
 import { matchRoute, ROUTES } from '../src/shell/router.js';
-import { GAMES, LEVEL_BY_GAME } from '../src/games/games.view.js';
+import { GAMES, LEVEL_BY_GAME, HUB_ENV_KEY } from '../src/games/games.view.js';
+import { GAME_ENV } from '../src/games/engine.js';
+import { createImageResolver } from '../src/img/resolve.js';
 import { assertWordBank, nextRound } from '../src/games/wordfinder.model.js';
 import { ANCIENT_TREE_SRC, ANCIENT_TREE_MOBILE_SRC } from '../src/shell/astral-tree.js';
 
@@ -34,6 +36,27 @@ test('25 listed games are reachable, labelled 1–9, and do not claim formal lev
     assert.ok(matchRoute('#/' + id)?.route, 'route for ' + id);
     assert.ok(LEVEL_BY_GAME[id] >= 1 && LEVEL_BY_GAME[id] <= 9, id);
   }
+});
+
+test('every games-hub card has a backdrop scene that resolves approved', () => {
+  const idx = JSON.parse(read('data/img/index.json'));
+  const approvals = JSON.parse(read('data/images/approvals.json'));
+  const R = createImageResolver({ index: idx, approvals, showUnapproved: false });
+  const ids = ['wordfinder', ...GAMES.map(([id]) => id)];
+  assert.equal(ids.length, 25);
+  for (const id of ids) {
+    const envId = GAME_ENV[HUB_ENV_KEY[id] || id];
+    assert.ok(envId, 'hub card has a scene: ' + id);
+    const im = R.resolve('id', envId);
+    assert.ok(im?.src, 'scene resolves approved: ' + id + ' -> ' + envId);
+  }
+});
+
+test('home hero loads Rimon when the image resolver is ready (not a sync read)', () => {
+  const src = read('src/shell/showcase.js');
+  assert.match(src, /loadGameImages\(ctx\)\.then/);
+  assert.match(src, /MASCOT_rimon/);
+  assert.doesNotMatch(src, /ctx\?\.img \? ctx\.img/);
 });
 
 test('24 audio-first headwords use existing Israeli male and female audio indices', () => {

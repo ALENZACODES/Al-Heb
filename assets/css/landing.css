@@ -1,0 +1,35 @@
+/* Homepage and Welcome hero only. Scoped to .show-hero so the rest of the app keeps its own styles.
+   Static on purpose: no shimmer and no entrance motion. */
+.show-hero {
+  position: relative; border-radius: 18px; overflow: hidden;
+  border: 1.5px solid #d9a441; box-shadow: 0 18px 50px rgba(0,0,0,.35);
+  min-height: 340px; display: flex; align-items: flex-end;
+  background: #16301c; margin: 0 0 1rem;
+}
+.show-hero-img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: 50% 38%;
+}
+/* The phone frame is nearly square, so cover cuts the sides. Shift toward the trunk. */
+@media (max-width: 720px) {
+  .show-hero-img { object-position: 84% 38%; }
+}
+.show-hero-shade {
+  position: absolute; inset: 0; pointer-events: none;
+  /* Text starts about a third of the way down this 340px frame, on the pale sky.
+     The band is dark there so the cream title and gold kicker clear 4.5:1.
+     The top of the frame stays open so the crown of the tree remains visible. */
+  background: linear-gradient(180deg, rgba(15,36,19,0) 12%, rgba(15,36,19,.78) 34%, rgba(15,36,19,.9) 58%, rgba(15,36,19,.96) 100%);
+}
+.show-hero-text { position: relative; z-index: 1; padding: 1.1rem 1.25rem 1.25rem; color: #f6f1e7; max-width: 40rem; }
+.show-kicker { margin: 0 0 .3rem; letter-spacing: .22em; text-transform: uppercase; font-size: .78rem; font-weight: 700; color: #e8c97a; }
+.show-title { margin: 0; font-size: clamp(1.7rem, 5.5vw, 2.6rem); line-height: 1.08; font-weight: 800; color: #fff8e7; }
+.show-sub { margin: .5rem 0 .9rem; max-width: 34rem; color: #e9e4cf; font-size: 1.02rem; }
+.show-cta { margin: 0; display: flex; flex-wrap: wrap; gap: .6rem; }
+.show-hero .show-btn { background: #d9a441; border-color: #d9a441; color: #122a17; font-weight: 700; }
+.show-hero .show-btn:hover { background: #e8c97a; border-color: #e8c97a; color: #122a17; }
+.show-hero .show-btn2 {
+  color: #ffe9a8; background: rgba(10, 26, 14, 0.72);
+  border: 1.5px solid #d9a441; font-weight: 700;
+}
+.show-hero .show-btn2:hover { background: rgba(10, 26, 14, 0.88); color: #ffe9a8; }

@@ -8,6 +8,7 @@
  * ctx used: settings.get/set(patch), store.get/set, route, t, hasRoute. Test extras: ctx.onboardingData {plans, lessons}, ctx.clock.now.
  */
 import { h, heSpan } from '../shell/ui.js';
+import { homeHeroNode } from '../shell/home-hero.js';
 import { loadOnboardingData } from './loader.js';
 import { STORE_KEY, PLACEMENT_KEY, LETTERS_QUESTION, LETTER_ANSWERS, DENOMINATIONS, PRONUNCIATIONS, SETTINGS_KEY_PRONUNCIATION,
   GOAL_QUESTION, GOAL_CHOICES, normalize, answerLetters, setDenomination, setMinutes, setStep, suggestedPronunciation, answerById, placementLesson, buildPlan } from './model.js';
@@ -29,7 +30,7 @@ export function mount(root, ctx) {
   const body = h('div', { class: 'ob-body' });
   const status = h('p', { role: 'status', 'aria-live': 'polite', class: 'muted', id: 'ob-status' });
   const guide = typeof ctx.img === 'function' ? ctx.img(h, { kind: 'id', id: 'CHAR_ari_neutral', class: 'ob-guide', width: 280 }) : null;
-  root.replaceChildren(h('article', { class: 'card onboarding' }, h1, guide, body, status));
+  root.replaceChildren(homeHeroNode(ctx), h('article', { class: 'card onboarding' }, h1, guide, body, status));
   const say = (m) => { status.textContent = m; };
   const focus = (n) => { try { n?.focus?.({ preventScroll: true }); } catch { try { n?.focus?.(); } catch { /* ignore */ } } };
   const save = () => { try { store.set(STORE_KEY, rec); } catch { /* best effort */ } };

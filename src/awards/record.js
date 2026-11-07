@@ -10,8 +10,14 @@ export const RECORD_VERSION = 1;
 
 /** Practice badges this record may keep. Completion and certificate ids are never kept. */
 export const PRACTICE_AWARD_IDS = Object.freeze(['game-session', 'game-return']);
-/** Daily/streak medallions this record may keep (src/awards/eligibility.js MILESTONE_BADGES). */
-export const MILESTONE_AWARD_IDS = Object.freeze(['first-day', 'streak-3', 'streak-7', 'streak-30', 'goal-met', 'games-5']);
+/** Daily, streak and mastery medallions this record may keep (src/awards/eligibility.js MILESTONE_BADGES). */
+export const MILESTONE_AWARD_IDS = Object.freeze([
+  'first-day', 'goal-met', 'games-5',
+  'streak-2', 'streak-3', 'streak-4', 'streak-5', 'streak-6', 'streak-7', 'streak-14', 'streak-30',
+  'streak-100', 'streak-180', 'streak-365',
+  'yolo', 'cafe-master', 'market-master', 'letter-master', 'word-collector', 'prayer-voice',
+  'cantorial-fan', 'book-finisher', 'early-bird', 'night-owl', 'root-digger',
+]);
 const PRACTICE = new Set([...PRACTICE_AWARD_IDS, ...MILESTONE_AWARD_IDS]);
 
 export function emptyRecord() {
@@ -32,6 +38,38 @@ function cleanBasis(basis) {
   }
   if (basis.kind === 'daily-goal') {
     return { kind: 'daily-goal', goalMinutes: Number.isInteger(basis.goalMinutes) && basis.goalMinutes > 0 ? basis.goalMinutes : 5 };
+  }
+  if (basis.kind === 'prayer-listens') {
+    return { kind: 'prayer-listens', count: Number.isInteger(basis.count) && basis.count > 0 ? basis.count : 0 };
+  }
+  if (basis.kind === 'letters-met') {
+    return { kind: 'letters-met', count: Number.isInteger(basis.count) && basis.count > 0 ? basis.count : 0 };
+  }
+  if (basis.kind === 'word-cards') {
+    return { kind: 'word-cards', count: Number.isInteger(basis.count) && basis.count > 0 ? basis.count : 0 };
+  }
+  if (basis.kind === 'shelf-listens') {
+    return { kind: 'shelf-listens', count: Number.isInteger(basis.count) && basis.count > 0 ? basis.count : 0 };
+  }
+  if (basis.kind === 'books-finished') {
+    return { kind: 'books-finished', count: Number.isInteger(basis.count) && basis.count > 0 ? basis.count : 0 };
+  }
+  if (basis.kind === 'first-attempt') {
+    return {
+      kind: 'first-attempt',
+      key: typeof basis.key === 'string' && basis.key.startsWith('games.') ? basis.key : '',
+      stars: basis.stars === 3 ? 3 : 0,
+    };
+  }
+  if (basis.kind === 'dialogue-done') {
+    return { kind: 'dialogue-done', id: basis.id === 'd-cafe' ? 'd-cafe' : '' };
+  }
+  if (basis.kind === 'day-start') {
+    return {
+      kind: 'day-start',
+      date: typeof basis.date === 'string' && /^\d{4}-\d\d-\d\d$/.test(basis.date) ? basis.date : '',
+      hour: Number.isInteger(basis.hour) && basis.hour >= 0 && basis.hour <= 23 ? basis.hour : -1,
+    };
   }
   if (basis.kind !== 'game-plays') return { kind: 'game-plays', sessions: [] };
   const sessions = Array.isArray(basis.sessions) ? basis.sessions : [];

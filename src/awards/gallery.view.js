@@ -1,10 +1,14 @@
 // Awards page. Practice medallions record saved game sessions (activity, not mastery).
 // The beginner certificate sample is watermarked and is not stored as earned.
-// Temporary vectors only. Approved artwork: none yet.
+// Medallions show their approved medallion picture when the image resolver
+// has one for the badge id (BADGE_<id>); the temporary vector is the fallback
+// and stays wherever no approved picture resolves. Certificate artwork: none yet.
 import { h } from '../shell/ui.js';
 import { GAME_STORE_KEYS } from './observe.js';
 import { ART_NOTE, renderMedallion } from './icons.js';
 import { loadBeginnerRubric } from './rubric.js';
+import { img as imgEl } from '../img/resolve.js';
+import { loadImageResolver } from '../img/index.js';
 import { EVIDENCE_SUMMARY, TRUST_LIMITS } from './trust.js';
 import { readAwards, withDisplayName, writeAwards } from './record.js';
 import {
@@ -31,6 +35,9 @@ const CSS = `
 .aw-state { display: flex; flex-wrap: wrap; gap: .4rem .8rem; align-items: center; font-weight: 700; margin: 0 0 .35rem; }
 .aw-state-text { border: 2px solid currentColor; padding: .1rem .45rem; }
 .aw-badge[data-state="locked"] .aw-state-text { border-style: dashed; }
+.aw-art { display: block; inline-size: 64px; block-size: 64px; }
+.aw-badge-art { inline-size: 64px; block-size: 64px; border-radius: 50%; object-fit: cover; display: block; }
+.aw-badge[data-state="locked"] .aw-badge-art { filter: grayscale(1); opacity: .55; }
 .aw-req { margin: .25rem 0; }
 .aw-finish { font-weight: 700; }
 .aw-finish-activity .aw-med-disc { fill-opacity: .15; }
@@ -82,6 +89,46 @@ const CSS = `
   .aw-watermark, .aw-cert-banner { visibility: visible; }
 }
 `;
+
+function badgeArtSlot(h, row) {
+  return h('span', { class: 'aw-art', 'data-badge-art': row.id },
+    renderMedallion(h, {
+      glyph: row.state === 'earned' ? 'activity' : 'lock',
+      state: row.state,
+      finish: 'activity',
+      game: 'none',
+    }));
+}
+
+/**
+ * Fill medallion slots with approved badge pictures. The resolver only
+ * returns a picture whose file exists and is approved; anything else leaves
+ * the vector fallback in place. Locked medallions show the picture in
+ * greyscale (see CSS); the state is also a word, never colour alone.
+ */
+async function fillBadgeArt(rootEl, ctx, h, alive) {
+  const slots = [...(rootEl.querySelectorAll?.('[data-badge-art]') || [])];
+  if (!slots.length) return;
+  let R = ctx?.images || null;
+  for (const slot of slots) {
+    if (alive && !alive()) return;
+    const id = 'BADGE_' + slot.getAttribute('data-badge-art');
+    let node = null;
+    try { node = ctx?.img ? ctx.img(h, { kind: 'id', id, decorative: true, width: 300, class: 'aw-badge-art' }) : null; } catch { node = null; }
+    if (!node && !R) {
+      try {
+        R = await loadImageResolver({
+          fetchFn: ctx?.fetchFn || ctx?.fetch, settings: ctx?.settings,
+          base: 'assets/img', indexUrl: 'data/img/index.json', approvalsUrl: 'data/images/approvals.json',
+        });
+      } catch { R = null; }
+    }
+    if (!node && R) {
+      try { node = imgEl(h, { R, kind: 'id', id, decorative: true, width: 300, class: 'aw-badge-art' }); } catch { node = null; }
+    }
+    if (node && slot.isConnected !== false) slot.replaceChildren(node);
+  }
+}
 
 function storageLine(save) {
   if (!save || save.saved === false) return 'This browser refused to save Awards. Nothing new was marked earned. You can still read this page.';
@@ -286,18 +333,27 @@ export async function mount(root, ctx) {
         h('p', {}, row.detail))))),
       h('p', {}, 'Only these five games already save a play count. Other games are not badge sources here.'),
       h('ul', { class: 'aw-links' }, ...GAME_STORE_KEYS.map((g) => h('li', {}, h('a', { class: 'aw-link', href: g.href }, g.title))))),
+    h('section', { 'aria-labelledby': 'award-h-ladder' },
+      h('h2', { id: 'award-h-ladder' }, 'Streak ladder'),
+      h('p', {}, 'One medallion per rung, from two counted days to a full year. The picture grows like a tree instead of showing a number. Days are counted by the streak engine, with Shabbat and festival days frozen so they never break the chain. They are activity, not mastery. Locked and earned are written in words, not by colour alone.'),
+      h('ul', { class: 'aw-gallery' }, ...rows.filter((r) => r.category === 'milestones' && r.section === 'ladder').map((row) => h('li', {
+        class: 'aw-badge', 'data-state': row.state, 'data-badge': row.id, 'data-category': 'ladder',
+      },
+      badgeArtSlot(h, row),
+      h('div', {},
+        h('h3', {}, row.name),
+        h('p', { class: 'aw-state', 'data-state': row.state },
+          h('span', { class: 'aw-state-text' }, row.stateText),
+          h('span', {}, 'Streak')),
+        h('p', { class: 'aw-req' }, row.requirement),
+        h('p', {}, row.detail)))))),
     h('section', { 'aria-labelledby': 'award-h-milestones' },
-      h('h2', { id: 'award-h-milestones' }, 'Daily and milestones'),
-      h('p', {}, 'These medallions record days the app itself counted: engaged minutes, streaks with rest days frozen, your daily goal, and the five practice games. They are activity, not mastery. Locked and earned are written in words, not by colour alone.'),
-      h('ul', { class: 'aw-gallery' }, ...rows.filter((r) => r.category === 'milestones').map((row) => h('li', {
+      h('h2', { id: 'award-h-milestones' }, 'Milestones and mastery'),
+      h('p', {}, 'These medallions record things the app itself counted: a first study day, your daily goal, prayers heard, letters and words in your review decks, sets finished, and days that started early or late. A medallion whose record does not exist yet says so and stays locked. They are activity, not mastery. Locked and earned are written in words, not by colour alone.'),
+      h('ul', { class: 'aw-gallery' }, ...rows.filter((r) => r.category === 'milestones' && r.section !== 'ladder').map((row) => h('li', {
         class: 'aw-badge', 'data-state': row.state, 'data-badge': row.id, 'data-category': 'milestones',
       },
-      renderMedallion(h, {
-        glyph: row.state === 'earned' ? 'activity' : 'lock',
-        state: row.state,
-        finish: 'activity',
-        game: 'none',
-      }),
+      badgeArtSlot(h, row),
       h('div', {},
         h('h3', {}, row.name),
         h('p', { class: 'aw-state', 'data-state': row.state },
@@ -338,6 +394,8 @@ export async function mount(root, ctx) {
         h('summary', {}, 'Where those marks are written'),
         h('ul', {}, ...TRUST_LIMITS.map((row) => h('li', {}, h('p', {}, row.limit), h('p', {}, `${row.path} (${row.symbol})`)))))),
   );
+
+  fillBadgeArt(page, ctx, h, () => alive).catch(() => { /* the vector fallback stays */ });
 
   return () => { alive = false; root.replaceChildren(); };
 }

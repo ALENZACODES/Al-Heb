@@ -10,9 +10,13 @@ import { acceptAssessmentEvent, itemSatisfied, REJECTED_SOURCES } from '../src/a
 import { GAME_STORE_KEYS, observeGames } from '../src/awards/observe.js';
 import { AWARDS_KEY, cleanRecord, emptyRecord, readAwards, withEvidence, writeAwards } from '../src/awards/record.js';
 import {
-  badgeRows, certificateDecision, evaluateProposedCertificate, masterySlots, planMilestones, planPractice, settleAwards,
+  MILESTONE_BADGES, STREAK_LADDER, badgeRows, certificateDecision, evaluateProposedCertificate, masterySlots, planMilestones, planPractice, settleAwards,
 } from '../src/awards/eligibility.js';
-import { observeStreak } from '../src/awards/observe.js';
+import {
+  EXTRA_GAME_STORE_KEYS, observeBadgeEvidence, observeFirstAttempt, observePrayerListens, observeStreak,
+} from '../src/awards/observe.js';
+import { MILESTONE_AWARD_IDS } from '../src/awards/record.js';
+import { DAYSTART_KEY, stampDayStart } from '../src/awards/daystart.js';
 import { dayKey } from '../src/curriculum/streak.js';
 import { TRUST_LIMITS } from '../src/awards/trust.js';
 import {
@@ -334,10 +338,10 @@ test('milestones: streak thresholds grant by the LONGEST streak and never un-ear
   const none = planMilestones(emptyRecord(), { anyDay: false, best: 0, goalMet: false, goalMinutes: 5 }, { sessions: [] }, T);
   assert.deepEqual(none.newly, []);
   const three = planMilestones(emptyRecord(), { anyDay: true, best: 3, goalMet: false, goalMinutes: 5 }, { sessions: [] }, T);
-  assert.deepEqual([...three.newly].sort(), ['first-day', 'streak-3']);
+  assert.deepEqual([...three.newly].sort(), ['first-day', 'streak-2', 'streak-3']);
   assert.equal(three.record.awards['streak-3'].basis.best, 3);
   const month = planMilestones(emptyRecord(), { anyDay: true, best: 30, goalMet: true, goalMinutes: 10 }, { sessions: [] }, T);
-  assert.deepEqual([...month.newly].sort(), ['first-day', 'goal-met', 'streak-3', 'streak-30', 'streak-7']);
+  assert.deepEqual([...month.newly].sort(), ['first-day', 'goal-met', 'streak-14', 'streak-2', 'streak-3', 'streak-30', 'streak-4', 'streak-5', 'streak-6', 'streak-7']);
   assert.equal(month.record.awards['goal-met'].basis.goalMinutes, 10);
   const again = planMilestones(month.record, { anyDay: true, best: 1, goalMet: false, goalMinutes: 5 }, { sessions: [] }, T + 1000);
   assert.deepEqual(again.newly, []);
@@ -373,4 +377,185 @@ test('milestones: observeStreak honours a stored daily goal and defaults to 5', 
   const noGoal = observeStreak(mem({ streak: { v: 2, count: 1, best: 1, last: '2026-11-05', todayDate: dayKey(T), todaySeconds: 660 } }), T);
   assert.equal(noGoal.goalMinutes, 5);
   assert.equal(noGoal.goalMet, true);
+});
+
+// ---------------------------------------------------------------------------
+// The 25 medallions (owner's order, Nov 7 2026): streak ladder + themed set.
+// ---------------------------------------------------------------------------
+
+test('25 medallions: the catalogue and the record allowlist carry the same 25 ids', () => {
+  assert.equal(MILESTONE_BADGES.length, 25);
+  assert.deepEqual(STREAK_LADDER, [2, 3, 4, 5, 6, 7, 14, 30, 100, 180, 365]);
+  const ids = MILESTONE_BADGES.map((b) => b.id).sort();
+  assert.deepEqual(ids, [...MILESTONE_AWARD_IDS].sort());
+  assert.equal(MILESTONE_BADGES.filter((b) => b.section === 'ladder').length, 11);
+  assert.equal(MILESTONE_BADGES.filter((b) => b.section === 'mastery').length, 14);
+  // every catalogue badge survives cleanRecord with a well-formed basis
+  for (const badge of MILESTONE_BADGES) {
+    const kept = cleanRecord({ v: 1, awards: { [badge.id]: { at: T, basis: { kind: 'streak-record', best: 1 } } } });
+    assert.ok(kept.record.awards[badge.id], badge.id + ' is kept by cleanRecord');
+  }
+});
+
+test('ladder: thresholds grant rung by rung from the LONGEST streak', () => {
+  const two = planMilestones(emptyRecord(), { anyDay: true, best: 2 }, { sessions: [] }, T);
+  assert.deepEqual([...two.newly].sort(), ['first-day', 'streak-2']);
+  const fortnight = planMilestones(emptyRecord(), { anyDay: true, best: 14 }, { sessions: [] }, T);
+  assert.deepEqual([...fortnight.newly].sort(), ['first-day', 'streak-14', 'streak-2', 'streak-3', 'streak-4', 'streak-5', 'streak-6', 'streak-7']);
+  const year = planMilestones(emptyRecord(), { anyDay: true, best: 365 }, { sessions: [] }, T);
+  for (const days of STREAK_LADDER) assert.ok(year.record.awards['streak-' + days], 'streak-' + days);
+  const later = planMilestones(year.record, { anyDay: true, best: 1 }, { sessions: [] }, T + 1000);
+  assert.deepEqual(later.newly, []);
+  assert.ok(later.record.awards['streak-365'], 'a shorter later streak does not un-earn the year medallion');
+});
+
+test('prayer-voice: the veil listen counter grants at 10 heard prayers, never for failed plays', () => {
+  assert.equal(observePrayerListens(mem({ 'opening-prayer:listens:v1': 9 })), 9);
+  assert.equal(observePrayerListens(mem({ 'opening-prayer:listens:v1': '10' })), 10);
+  assert.equal(observePrayerListens(mem({ 'opening-prayer:listens:v1': 'junk' })), 0);
+  const nine = settleAwards(mem({ 'opening-prayer:listens:v1': 9 }), rubric, T);
+  assert.equal(nine.record.awards['prayer-voice'], undefined);
+  const ten = settleAwards(mem({ 'opening-prayer:listens:v1': 10 }), rubric, T);
+  assert.ok(ten.record.awards['prayer-voice']);
+  assert.deepEqual(ten.record.awards['prayer-voice'].basis, { kind: 'prayer-listens', count: 10 });
+});
+
+test('letter-master: 27 letter cards in the review deck grant; 26 do not', () => {
+  const letters = ['alef', 'bet', 'gimel', 'dalet', 'he', 'vav', 'zayin', 'chet', 'tet', 'yod', 'kaf', 'kaf-final', 'lamed', 'mem', 'mem-final', 'nun', 'nun-final', 'samekh', 'ayin', 'pe', 'pe-final', 'tsadi', 'tsadi-final', 'qof', 'resh', 'shin', 'tav'];
+  assert.equal(letters.length, 27);
+  const deck = (n) => Object.fromEntries(letters.slice(0, n).map((l) => ['letter:' + l, { id: 'letter:' + l }]));
+  const almost = settleAwards(mem({ 'srs.cards': deck(26) }), rubric, T);
+  assert.equal(almost.record.awards['letter-master'], undefined);
+  const all = settleAwards(mem({ 'srs.cards': deck(27) }), rubric, T);
+  assert.ok(all.record.awards['letter-master']);
+  assert.deepEqual(all.record.awards['letter-master'].basis, { kind: 'letters-met', count: 27 });
+});
+
+test('word-collector: lesson word cards and vocabulary cards add up to 500', () => {
+  const words = (prefix, n, base) => Object.fromEntries(Array.from({ length: n }, (_, i) => [prefix + (base + i), {}]));
+  const store = mem({ 'srs.cards': words('word:w', 120, 0), 'srs.vocab': words('vocab:', 379, 0) });
+  assert.equal(observeBadgeEvidence(store).wordCards, 499);
+  assert.equal(settleAwards(store, rubric, T).record.awards['word-collector'], undefined);
+  store.m['srs.vocab']['vocab:499'] = {};
+  const full = settleAwards(store, rubric, T);
+  assert.ok(full.record.awards['word-collector']);
+  assert.deepEqual(full.record.awards['word-collector'].basis, { kind: 'word-cards', count: 500 });
+});
+
+test('market-master and root-digger: one saved finished session of the set game grants', () => {
+  const none = settleAwards(mem({ 'games.barter.v1': { plays: 0 }, 'games.roottree.v1': {} }), rubric, T);
+  assert.equal(none.record.awards['market-master'], undefined);
+  assert.equal(none.record.awards['root-digger'], undefined);
+  const done = settleAwards(mem({ 'games.barter.v1': { plays: 1, best: 40, lastStars: 2 }, 'games.roottree.v1': { plays: 2, best: 55, lastStars: 3 } }), rubric, T);
+  assert.ok(done.record.awards['market-master']);
+  assert.ok(done.record.awards['root-digger']);
+});
+
+test('yolo: only a record of exactly one finished session with three stars proves a first attempt', () => {
+  assert.deepEqual(observeFirstAttempt(mem({ 'games.tugowar.v1': { plays: 1, lastStars: 3 } })), { found: true, key: 'games.tugowar.v1', stars: 3 });
+  assert.equal(observeFirstAttempt(mem({ 'games.tugowar.v1': { plays: 1, lastStars: 2 } })).found, false);
+  assert.equal(observeFirstAttempt(mem({ 'games.tugowar.v1': { plays: 2, lastStars: 3 } })).found, false);
+  assert.equal(observeFirstAttempt(mem({ 'games.tugowar.v1': { plays: 1 } })).found, false);
+  const store = mem({ 'games.barter.v1': { plays: 1, best: 60, lastStars: 3 } });
+  const granted = settleAwards(store, rubric, T);
+  assert.ok(granted.record.awards.yolo);
+  assert.deepEqual(granted.record.awards.yolo.basis, { kind: 'first-attempt', key: 'games.barter.v1', stars: 3 });
+  store.m['games.barter.v1'] = { plays: 5, best: 60, lastStars: 1 };
+  const later = settleAwards(store, rubric, T + 1000);
+  assert.ok(later.record.awards.yolo, 'once granted, later plays do not un-earn YOLO');
+});
+
+test('honest locks: themed badges with no writer yet grant nothing from unrelated records', () => {
+  const store = mem({
+    'curriculum.progress': { completed: { r01: T } },
+    streak: { v: 2, count: 1, best: 1, last: '2026-11-05', todayDate: dayKey(T), todaySeconds: 60 },
+  });
+  const settled = settleAwards(store, rubric, T);
+  for (const id of ['cafe-master', 'cantorial-fan', 'book-finisher', 'early-bird', 'night-owl', 'prayer-voice', 'letter-master', 'word-collector']) {
+    assert.equal(settled.record.awards[id], undefined, id + ' stays locked without its record');
+  }
+  const rows = badgeRows(settled.record, settled.games, settled.decision);
+  assert.match(rows.find((r) => r.id === 'cafe-master').detail, /do not yet record/);
+  assert.match(rows.find((r) => r.id === 'book-finisher').detail, /last page/);
+  assert.match(rows.find((r) => r.id === 'cantorial-fan').detail, /does not yet record/);
+});
+
+test('future writers: when the named records land, the same readers grant without new code', () => {
+  const store = mem({
+    'dialogues.done.v1': { 'd-cafe': T },
+    'listen.shelf.v1': { a: 1, b: 2, c: 1, d: 1, e: 3 },
+    'books.finished.v1': { book1: T, book2: T, book3: T, book4: T, book5: T },
+  });
+  const settled = settleAwards(store, rubric, T);
+  assert.ok(settled.record.awards['cafe-master']);
+  assert.deepEqual(settled.record.awards['cafe-master'].basis, { kind: 'dialogue-done', id: 'd-cafe' });
+  assert.ok(settled.record.awards['cantorial-fan']);
+  assert.deepEqual(settled.record.awards['cantorial-fan'].basis, { kind: 'shelf-listens', count: 5 });
+  assert.ok(settled.record.awards['book-finisher']);
+  const twoBooks = mem({ 'books.finished.v1': { book1: T, book2: T } });
+  assert.equal(settleAwards(twoBooks, rubric, T).record.awards['book-finisher'], undefined);
+});
+
+test('day-start stamp: first opening of the day is kept, and early/late counted days grant', () => {
+  const store = mem();
+  const morning = new Date(2026, 10, 6, 7, 15).getTime();
+  const stamp = stampDayStart(store, morning);
+  assert.deepEqual(stamp, { date: '2026-11-06', firstAt: morning });
+  assert.deepEqual(store.m[DAYSTART_KEY], stamp);
+  const again = stampDayStart(store, new Date(2026, 10, 6, 21, 40).getTime());
+  assert.deepEqual(again, stamp, 'a later opening the same day does not move the stamp');
+  const nextDay = stampDayStart(store, new Date(2026, 10, 7, 9, 0).getTime());
+  assert.equal(nextDay.date, '2026-11-07');
+
+  const earlyStore = mem({
+    [DAYSTART_KEY]: { date: '2026-11-06', firstAt: morning },
+    streak: { v: 2, count: 1, best: 1, last: '2026-11-06', todayDate: '2026-11-06', todaySeconds: 300, doneDates: ['2026-11-06'] },
+  });
+  const early = settleAwards(earlyStore, rubric, new Date(2026, 10, 6, 12, 0).getTime());
+  assert.ok(early.record.awards['early-bird']);
+  assert.equal(early.record.awards['night-owl'], undefined);
+
+  const lateStore = mem({
+    [DAYSTART_KEY]: { date: '2026-11-06', firstAt: new Date(2026, 10, 6, 22, 30).getTime() },
+    streak: { v: 2, count: 1, best: 1, last: '2026-11-06', todayDate: '2026-11-06', todaySeconds: 300, doneDates: ['2026-11-06'] },
+  });
+  const late = settleAwards(lateStore, rubric, new Date(2026, 10, 6, 23, 0).getTime());
+  assert.ok(late.record.awards['night-owl']);
+  assert.equal(late.record.awards['early-bird'], undefined);
+
+  const uncounted = mem({
+    [DAYSTART_KEY]: { date: '2026-11-06', firstAt: morning },
+    streak: { v: 2, count: 0, best: 0, last: null, todayDate: '2026-11-06', todaySeconds: 30 },
+  });
+  const noDay = settleAwards(uncounted, rubric, new Date(2026, 10, 6, 12, 0).getTime());
+  assert.equal(noDay.record.awards['early-bird'], undefined, 'an early opening that never became a counted day does not grant');
+});
+
+test('record hygiene: new basis kinds are sanitised and forged ones fall back', () => {
+  const kept = cleanRecord({
+    v: 1,
+    awards: {
+      'prayer-voice': { at: T, basis: { kind: 'prayer-listens', count: 12 } },
+      'yolo': { at: T, basis: { kind: 'first-attempt', key: 'games.barter.v1', stars: 3 } },
+      'early-bird': { at: T, basis: { kind: 'day-start', date: '2026-11-06', hour: 7 } },
+      'cafe-master': { at: T, basis: { kind: 'dialogue-done', id: 'd-restaurant' } },
+      'word-collector': { at: T, basis: { kind: 'word-cards', count: -4 } },
+    },
+  });
+  assert.deepEqual(kept.record.awards['prayer-voice'].basis, { kind: 'prayer-listens', count: 12 });
+  assert.deepEqual(kept.record.awards.yolo.basis, { kind: 'first-attempt', key: 'games.barter.v1', stars: 3 });
+  assert.deepEqual(kept.record.awards['early-bird'].basis, { kind: 'day-start', date: '2026-11-06', hour: 7 });
+  assert.deepEqual(kept.record.awards['cafe-master'].basis, { kind: 'dialogue-done', id: '' }, 'only the café dialogue is a valid dialogue basis');
+  assert.deepEqual(kept.record.awards['word-collector'].basis, { kind: 'word-cards', count: 0 });
+  const forged = cleanRecord({ v: 1, awards: { 'streak-365': { at: T, basis: { kind: 'self-report', best: 365 } } } });
+  assert.equal(forged.record.awards['streak-365'].basis.kind, 'game-plays', 'an unknown basis kind never survives as claimed evidence');
+});
+
+test('gallery source: medallion art comes from the resolver with the vector as fallback', () => {
+  const src = readFileSync(new URL('../src/awards/gallery.view.js', import.meta.url), 'utf8');
+  assert.match(src, /BADGE_/);
+  assert.match(src, /data-badge-art/);
+  assert.match(src, /renderMedallion/);
+  assert.match(src, /Streak ladder/);
+  assert.match(src, /Milestones and mastery/);
 });

@@ -10,7 +10,7 @@ export const GAMES = Object.freeze([
   ['prefixblast', 'Bubble Pop Prefix Blast', 'Pop the right prefix bubbles'],
   ['memorypalace', 'The Memory Palace Courtyard', 'A courtyard that remembers words'],
   ['archbuilder', 'Hebrew Arch-Builder', 'Build each letter stroke by stroke'],
-  ['lasermaze', 'Laser Mirror Laser Maze', 'Bounce the beam to the target word'],
+  ['lasermaze', 'Laser Mirror Maze', 'Bounce the beam to the target word'],
   ['letterbridge', 'Letter Bridge Builder', 'Bridge the gap letter by letter'],
   ['roottree', 'Hebrew Root Tree Cultivator', 'Grow words from their roots'],
   ['bumperverbs', 'Bumper Car Verb Conjugations', 'Bump the right verb form'],
@@ -20,7 +20,9 @@ export const GAMES = Object.freeze([
   ['trainswitch', 'Train Track Switchboard', 'Switch the trains to the right words'],
   ['weatherstudio', 'Weather Presenter Studio', 'Present the forecast in Hebrew'],
   ['rentalagent', 'Apartment Rental Agent', 'Match renters to homes'],
-  ['echochamber', 'Acoustic Echo Chamber', 'Hear it, echo it back'],
+  // Acoustic Echo Chamber is unlisted until it has playable minimal pairs
+  // (external review, Nov 7 2026: a navigable dead end is worse than no page).
+  // Its route stays alive for direct links; restore this row when it can play.
   ['museumcurator', 'The Museum Curator', 'Sort the artefacts by their words'],
   ['karaokebeat', 'The Karaoke Beat Matcher', 'Match the word to the beat'],
   ['shadowcraft', 'Shadow Craft', 'Match the word to its shadow'],

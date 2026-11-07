@@ -53,7 +53,7 @@ export function mount(root, ctx) {
         li('The opening prayer slot on the home screen is a placeholder pending review by clergy or an educator.'),
         li('Letter stroke data for tracing is a draft, not validated by a native writer or a school model.'),
         li('The survival phrasebook was written for this project and needs native review.'),
-        li('Photo scan uses a demo engine, not real OCR; do not rely on it to read a real page.'),
+        li('Photo scan runs real OCR on your device (tesseract.js, downloaded once, about 5 MB, at first use). Like any OCR it can misread — check important text against the page itself.'),
         li('Not tested on iOS or Android devices, or with a screen reader.'))),
 
     sec('privacy', '5. Privacy: your data stays on your device',
@@ -61,7 +61,7 @@ export function mount(root, ctx) {
         li('Settings, completed lessons, review cards and your streak are stored in your browser\'s local storage on this device. There is no account, no server-side profile and no analytics in this build.'),
         li('The app\'s own requests go only to the site that serves it (pages, fonts, data files, audio files when they exist).'),
         li('Location is optional, used only to compute candle-lighting times on your device, and you can clear it in Settings.'),
-        li('Photo scan: the default engine in this build is a local demo; no photo is uploaded.'),
+        li('Photo scan: recognition runs on this device with tesseract.js; no photo is uploaded.'),
         li('You can download a backup file from Settings and restore it on another device. Clearing site data erases your progress.'))),
 
     h('p', {}, h('a', { class: 'btn secondary', href: '#/about' }, 'Credits and licences'), ' ', h('a', { class: 'btn secondary', href: '#/' }, 'Home'))));

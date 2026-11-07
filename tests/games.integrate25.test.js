@@ -13,7 +13,7 @@ export const GAME_ROUTES = Object.freeze([
   ['museumcurator', '/museumcurator', 'The Museum Curator'],
   ['karaokebeat', '/karaokebeat', 'The Karaoke Beat Matcher'],
   ['archbuilder', '/archbuilder', 'Hebrew Arch-Builder'],
-  ['lasermaze', '/lasermaze', 'Laser Mirror Laser Maze'],
+  ['lasermaze', '/lasermaze', 'Laser Mirror Maze'],
   ['roottree', '/roottree', 'Hebrew Root Tree Cultivator'],
   ['letterbridge', '/letterbridge', 'Letter Bridge Builder'],
   ['shadowcraft', '/shadowcraft', 'Shadow Craft'],

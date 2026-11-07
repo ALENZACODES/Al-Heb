@@ -60,7 +60,7 @@ export const ROUTES = [
   { name: 'museumcurator', pattern: '/museumcurator', module: '../games/museumcurator.view.js', tier: 'preview', title: 'The Museum Curator', owner: 'games' },
   { name: 'karaokebeat', pattern: '/karaokebeat', module: '../games/karaokebeat.view.js', tier: 'preview', title: 'The Karaoke Beat Matcher', owner: 'games' },
   { name: 'archbuilder', pattern: '/archbuilder', module: '../games/archbuilder.view.js', tier: 'preview', title: 'Hebrew Arch-Builder', owner: 'games' },
-  { name: 'lasermaze', pattern: '/lasermaze', module: '../games/lasermaze.view.js', tier: 'preview', title: 'Laser Mirror Laser Maze', owner: 'games' },
+  { name: 'lasermaze', pattern: '/lasermaze', module: '../games/lasermaze.view.js', tier: 'preview', title: 'Laser Mirror Maze', owner: 'games' },
   { name: 'roottree', pattern: '/roottree', module: '../games/roottree.view.js', tier: 'preview', title: 'Hebrew Root Tree Cultivator', owner: 'games' },
   { name: 'letterbridge', pattern: '/letterbridge', module: '../games/letterbridge.view.js', tier: 'preview', title: 'Letter Bridge Builder', owner: 'games' },
   { name: 'shadowcraft', pattern: '/shadowcraft', module: '../games/shadowcraft.view.js', tier: 'preview', title: 'Shadow Craft', owner: 'games' },
@@ -70,6 +70,14 @@ export const ROUTES = [
   { name: 'submarinesonar', pattern: '/submarinesonar', module: '../games/submarinesonar.view.js', tier: 'preview', title: 'Submarine Sonar Vowels', owner: 'games' },
   { name: 'rhymelab', pattern: '/rhymelab', module: '../games/rhymelab.view.js', tier: 'preview', title: 'Hebrew Rhyme Laboratory', owner: 'games' },
   { name: 'bumperverbs', pattern: '/bumperverbs', module: '../games/bumperverbs.view.js', tier: 'preview', title: 'Bumper Car Verb Conjugations', owner: 'games' },
+  // Natural-name aliases (external review, Nov 7 2026): the names a learner or a
+  // shared link would guess resolve to their games instead of a dead end.
+  { name: 'bumpercar', pattern: '/bumpercar', module: '../games/bumperverbs.view.js', tier: 'preview', title: 'Bumper Car Verb Conjugations', owner: 'games' },
+  { name: 'traintrack', pattern: '/traintrack', module: '../games/trainswitch.view.js', tier: 'preview', title: 'Train Track Switchboard', owner: 'games' },
+  { name: 'weatherpresenter', pattern: '/weatherpresenter', module: '../games/weatherstudio.view.js', tier: 'preview', title: 'Weather Presenter Studio', owner: 'games' },
+  { name: 'karaoke', pattern: '/karaoke', module: '../games/karaokebeat.view.js', tier: 'preview', title: 'The Karaoke Beat Matcher', owner: 'games' },
+  { name: 'cipher', pattern: '/cipher', module: '../games/ciphergrid.view.js', tier: 'preview', title: 'Cipher Decryption Grid', owner: 'games' },
+  { name: 'fleamarket', pattern: '/fleamarket', module: '../games/barter.view.js', tier: 'preview', title: 'The Israeli Flea Market Barter', owner: 'games' },
   { name: 'timedread', pattern: '/timedread', module: '../timedread/timedread.view.js', title: 'Timed read-aloud', owner: 'timedread', optional: true, quick: 'nav.timedread' },
   { name: 'share', pattern: '/share', module: '../teacher/teacher.view.js', title: 'Share my progress', owner: 'teacher', optional: true, quick: 'nav.share', query: { mode: 'share' } },
   { name: 'classsummary', pattern: '/classsummary', module: '../teacher/teacher.view.js', title: 'Class summary', owner: 'teacher', optional: true, quick: 'nav.classsummary', query: { mode: 'class' } },

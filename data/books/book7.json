@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book7-p01.mp3"
    },
    "illustration": "a man in his forties at an apartment door at dusk, grocery bag in arm",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book7-p02.mp3"
    },
    "illustration": "the man patting his coat pockets, puzzled",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book7-p03.mp3"
    },
    "illustration": "an open messenger bag on the floor, papers spilling out",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book7-p04.mp3"
    },
    "illustration": "the coat turned inside out, pockets hanging empty",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book7-p05.mp3"
    },
    "illustration": "the man peering through a car window in the parking lot",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book7-p06.mp3"
    },
    "illustration": "the man on the phone in the stairwell, one hand on his forehead",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book7-p07.mp3"
    },
    "illustration": "split frame: the man on the stairs, a woman at an office desk answering",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book7-p08.mp3"
    },
    "illustration": "the woman shrugging apologetically into her phone",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book7-p09.mp3"
    },
    "illustration": "the man sitting on the stairs, groceries beside him, a cat watching",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book7-p10.mp3"
    },
    "illustration": "an older neighbour climbing the stairs with a dog",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book7-p11.mp3"
    },
    "illustration": "the neighbour pointing: the key sitting in the lock the whole time",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book7-p12.mp3"
    },
    "illustration": "the man laughing with his head back, neighbour grinning, dog wagging",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": false
   }
  ]

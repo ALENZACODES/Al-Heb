@@ -1,0 +1,708 @@
+{
+  "title": "ChatGPT / OpenAI image inventory \u2014 Al-Heb",
+  "generated_at": "2026-11-06T06:15:27.759022+00:00",
+  "zone": "America/Toronto",
+  "freeze": "No Ari/Noa/Rimon face regen; no production voice swaps; Vertex QA/labels only",
+  "counts": {
+    "letter_cartoon_current_png": 27,
+    "letter_cartoon_archive_png": 20,
+    "speak_candidate_png": 12,
+    "speak_prompt_txt": 12,
+    "already_on_github_dirs": 3
+  },
+  "rows": [
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch01/aleph-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1556719,
+      "sha256_16": "cd2f5a413201ed91",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch01/aleph-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch01/bet-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1604550,
+      "sha256_16": "02baba8529a47a0b",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch01/bet-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch01/chet-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1513814,
+      "sha256_16": "139101bb9f92aeac",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch01/chet-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch01/dalet-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1453472,
+      "sha256_16": "053765df8aaa5e80",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch01/dalet-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch01/gimel-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1458119,
+      "sha256_16": "bd530e5c0e7f4a43",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch01/gimel-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch01/he-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1442119,
+      "sha256_16": "01e7773756be3c5b",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch01/he-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch01/tet-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1436287,
+      "sha256_16": "f6cc2f1fa4e02e6a",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch01/tet-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch01/vav-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1471169,
+      "sha256_16": "7bb4936fc1f85961",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch01/vav-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch01/yod-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1488343,
+      "sha256_16": "089f1bd2bec970cb",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch01/yod-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch01/zayin-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1397357,
+      "sha256_16": "76588fdac4495e61",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch01/zayin-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch01/batch01-manifest.json",
+      "kind": "manifest",
+      "bytes": 1546,
+      "sha256_16": "1a44275dcf0f20be",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch01/batch01-manifest.json",
+      "notes": ""
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/ayin-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1007308,
+      "sha256_16": "5431620ffe16537f",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch02/ayin-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/kaf-final-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 996455,
+      "sha256_16": "cb2078ecf7fbb883",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch02/kaf-final-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/kaf-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 986500,
+      "sha256_16": "d41f292b9fcbc860",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch02/kaf-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/lamed-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1021727,
+      "sha256_16": "07df2322c0c6a081",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch02/lamed-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/mem-final-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 981541,
+      "sha256_16": "217cfa384ea29912",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch02/mem-final-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/mem-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1004659,
+      "sha256_16": "0c075a2b16134e88",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch02/mem-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/nun-final-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1013401,
+      "sha256_16": "1602a39c86019c9a",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch02/nun-final-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/nun-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1019886,
+      "sha256_16": "0a2906bc412e2b60",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch02/nun-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/pe-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1009644,
+      "sha256_16": "4e2f8e232fb811a1",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch02/pe-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/samekh-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 997850,
+      "sha256_16": "d016f1766d5ba6d2",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch02/samekh-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/batch02-manifest.json",
+      "kind": "manifest",
+      "bytes": 5300,
+      "sha256_16": "c5f593dd6bf8bb0e",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch02/batch02-manifest.json",
+      "notes": ""
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch03/pe-final-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1786767,
+      "sha256_16": "1396556bdcae64ae",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch03/pe-final-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch03/qof-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1561987,
+      "sha256_16": "4f0d863ec70ca62b",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch03/qof-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch03/resh-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1585639,
+      "sha256_16": "86616a5d294b3a2d",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch03/resh-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch03/shin-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1652004,
+      "sha256_16": "6e8c6e6365947d85",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch03/shin-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch03/tav-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1602463,
+      "sha256_16": "ddd2352ff3f7cfca",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch03/tav-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch03/tsadi-final-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1672520,
+      "sha256_16": "6a70bfcec4c64886",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch03/tsadi-final-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch03/tsadi-meet.png",
+      "kind": "letter-cartoon-current",
+      "bytes": 1687214,
+      "sha256_16": "9c3cb85f1bccabf3",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch03/tsadi-meet.png",
+      "notes": "ChatGPT meet-the-letter"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch03/batch03-manifest.json",
+      "kind": "manifest",
+      "bytes": 1118,
+      "sha256_16": "18c9e1a928ffca26",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/batch03/batch03-manifest.json",
+      "notes": ""
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift/ayin-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 208601,
+      "sha256_16": "5fde61a0c4e14ff5",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift/ayin-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift/kaf-final-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 189732,
+      "sha256_16": "fbb8fab35907fb4e",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift/kaf-final-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift/kaf-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 199741,
+      "sha256_16": "9e07a704665026fb",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift/kaf-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift/lamed-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 196048,
+      "sha256_16": "8dd3184202325a27",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift/lamed-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift/mem-final-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 187224,
+      "sha256_16": "4c24f676ccc50514",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift/mem-final-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift/mem-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 205371,
+      "sha256_16": "e6237062d227f1b4",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift/mem-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift/nun-final-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 194046,
+      "sha256_16": "67b02bb17dd332ef",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift/nun-final-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift/nun-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 192529,
+      "sha256_16": "9cd540e23cc9d5e9",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift/nun-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift/pe-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 199839,
+      "sha256_16": "19510fbb96b28e0d",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift/pe-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift/samekh-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 210190,
+      "sha256_16": "c6268f38af94a408",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift/samekh-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift-2/ayin-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 555849,
+      "sha256_16": "78fbf8999d053865",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift-2/ayin-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift-2/kaf-final-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 512664,
+      "sha256_16": "2f754309760b6693",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift-2/kaf-final-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift-2/kaf-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 547421,
+      "sha256_16": "88c7c4993809f146",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift-2/kaf-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift-2/lamed-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 540689,
+      "sha256_16": "25e3499f568274cc",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift-2/lamed-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift-2/mem-final-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 491279,
+      "sha256_16": "0d2891dcfc8003b0",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift-2/mem-final-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift-2/mem-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 588693,
+      "sha256_16": "b4126580a1414f86",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift-2/mem-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift-2/nun-final-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 493331,
+      "sha256_16": "d1b54dc74eb9173b",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift-2/nun-final-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift-2/nun-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 502513,
+      "sha256_16": "19ea750c578b4cae",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift-2/nun-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift-2/pe-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 536358,
+      "sha256_16": "7b777dbd7db9664a",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift-2/pe-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift-2/samekh-meet.png",
+      "kind": "letter-cartoon-archive",
+      "bytes": 550819,
+      "sha256_16": "b14c27f20c7b8a9e",
+      "committed_planned": true,
+      "remote_path": "assets/letter-cartoons/_archive/prev-cast-drift-2/samekh-meet.png",
+      "notes": "superseded; audit only"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/speak-images-2026-11-05/SPEAK_01_street_falafel.png",
+      "kind": "speak-candidate",
+      "bytes": 1647898,
+      "sha256_16": "092b73d1e178ef3a",
+      "committed_planned": true,
+      "remote_path": "assets/speak-candidates/SPEAK_01_street_falafel.png",
+      "notes": "0-approved; blocked-on-John"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/speak-images-2026-11-05/SPEAK_02_street_bus_ticket.png",
+      "kind": "speak-candidate",
+      "bytes": 2122116,
+      "sha256_16": "fbed122c23dcc139",
+      "committed_planned": true,
+      "remote_path": "assets/speak-candidates/SPEAK_02_street_bus_ticket.png",
+      "notes": "0-approved; blocked-on-John"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/speak-images-2026-11-05/SPEAK_03_street_directions.png",
+      "kind": "speak-candidate",
+      "bytes": 1935287,
+      "sha256_16": "66c22d4841f8f108",
+      "committed_planned": true,
+      "remote_path": "assets/speak-candidates/SPEAK_03_street_directions.png",
+      "notes": "0-approved; blocked-on-John"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/speak-images-2026-11-05/SPEAK_04_table_shabbat.png",
+      "kind": "speak-candidate",
+      "bytes": 1957237,
+      "sha256_16": "2a2df0b94ddecab7",
+      "committed_planned": true,
+      "remote_path": "assets/speak-candidates/SPEAK_04_table_shabbat.png",
+      "notes": "0-approved; blocked-on-John"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/speak-images-2026-11-05/SPEAK_05_table_welcome.png",
+      "kind": "speak-candidate",
+      "bytes": 2012785,
+      "sha256_16": "29c7ac0849df13cb",
+      "committed_planned": true,
+      "remote_path": "assets/speak-candidates/SPEAK_05_table_welcome.png",
+      "notes": "0-approved; blocked-on-John"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/speak-images-2026-11-05/SPEAK_06_sanctuary_quiet.png",
+      "kind": "speak-candidate",
+      "bytes": 1809208,
+      "sha256_16": "17d0466fea332978",
+      "committed_planned": true,
+      "remote_path": "assets/speak-candidates/SPEAK_06_sanctuary_quiet.png",
+      "notes": "0-approved; blocked-on-John"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/speak-images-2026-11-05/SPEAK_07_sanctuary_together.png",
+      "kind": "speak-candidate",
+      "bytes": 1832559,
+      "sha256_16": "dfb49d1ab89fb443",
+      "committed_planned": true,
+      "remote_path": "assets/speak-candidates/SPEAK_07_sanctuary_together.png",
+      "notes": "0-approved; blocked-on-John"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/speak-images-2026-11-05/SPEAK_08_street_taxi.png",
+      "kind": "speak-candidate",
+      "bytes": 1880718,
+      "sha256_16": "b1a755d062001ae9",
+      "committed_planned": true,
+      "remote_path": "assets/speak-candidates/SPEAK_08_street_taxi.png",
+      "notes": "0-approved; blocked-on-John"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/speak-images-2026-11-05/SPEAK_09_cafe_order.png",
+      "kind": "speak-candidate",
+      "bytes": 1984214,
+      "sha256_16": "0e790a36b7bbeac6",
+      "committed_planned": true,
+      "remote_path": "assets/speak-candidates/SPEAK_09_cafe_order.png",
+      "notes": "0-approved; blocked-on-John"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/speak-images-2026-11-05/SPEAK_10_market_pomegranates.png",
+      "kind": "speak-candidate",
+      "bytes": 1822276,
+      "sha256_16": "8aba4136e8ba9dc0",
+      "committed_planned": true,
+      "remote_path": "assets/speak-candidates/SPEAK_10_market_pomegranates.png",
+      "notes": "0-approved; blocked-on-John"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/speak-images-2026-11-05/SPEAK_11_sound_card.png",
+      "kind": "speak-candidate",
+      "bytes": 1552340,
+      "sha256_16": "80e892c56f37090f",
+      "committed_planned": true,
+      "remote_path": "assets/speak-candidates/SPEAK_11_sound_card.png",
+      "notes": "0-approved; blocked-on-John"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/speak-images-2026-11-05/SPEAK_12_your_turn.png",
+      "kind": "speak-candidate",
+      "bytes": 1752612,
+      "sha256_16": "efb616adb3407113",
+      "committed_planned": true,
+      "remote_path": "assets/speak-candidates/SPEAK_12_your_turn.png",
+      "notes": "0-approved; blocked-on-John"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/chatgpt-images-one-by-one/01-SPEAK_01_street_falafel.png.txt",
+      "kind": "speak-prompt",
+      "bytes": 1627,
+      "sha256_16": "d25a33df57d28a52",
+      "committed_planned": false,
+      "remote_path": "(box only; prompts not committed as app assets)",
+      "notes": "ops prompts"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/chatgpt-images-one-by-one/02-SPEAK_02_street_bus_ticket.png.txt",
+      "kind": "speak-prompt",
+      "bytes": 1600,
+      "sha256_16": "a594feda4b756931",
+      "committed_planned": false,
+      "remote_path": "(box only; prompts not committed as app assets)",
+      "notes": "ops prompts"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/chatgpt-images-one-by-one/03-SPEAK_03_street_directions.png.txt",
+      "kind": "speak-prompt",
+      "bytes": 1593,
+      "sha256_16": "dd6bc8d2cd532e23",
+      "committed_planned": false,
+      "remote_path": "(box only; prompts not committed as app assets)",
+      "notes": "ops prompts"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/chatgpt-images-one-by-one/04-SPEAK_04_table_shabbat.png.txt",
+      "kind": "speak-prompt",
+      "bytes": 1603,
+      "sha256_16": "33e95bf5625bd4ef",
+      "committed_planned": false,
+      "remote_path": "(box only; prompts not committed as app assets)",
+      "notes": "ops prompts"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/chatgpt-images-one-by-one/05-SPEAK_05_table_welcome.png.txt",
+      "kind": "speak-prompt",
+      "bytes": 1581,
+      "sha256_16": "430ece20c8679c7c",
+      "committed_planned": false,
+      "remote_path": "(box only; prompts not committed as app assets)",
+      "notes": "ops prompts"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/chatgpt-images-one-by-one/06-SPEAK_06_sanctuary_quiet.png.txt",
+      "kind": "speak-prompt",
+      "bytes": 1671,
+      "sha256_16": "b395c75700a9db18",
+      "committed_planned": false,
+      "remote_path": "(box only; prompts not committed as app assets)",
+      "notes": "ops prompts"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/chatgpt-images-one-by-one/07-SPEAK_07_sanctuary_together.png.txt",
+      "kind": "speak-prompt",
+      "bytes": 1599,
+      "sha256_16": "59972512826f5ec1",
+      "committed_planned": false,
+      "remote_path": "(box only; prompts not committed as app assets)",
+      "notes": "ops prompts"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/chatgpt-images-one-by-one/08-SPEAK_08_street_taxi.png.txt",
+      "kind": "speak-prompt",
+      "bytes": 1594,
+      "sha256_16": "b9dadaa4994fafcb",
+      "committed_planned": false,
+      "remote_path": "(box only; prompts not committed as app assets)",
+      "notes": "ops prompts"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/chatgpt-images-one-by-one/09-SPEAK_09_cafe_order.png.txt",
+      "kind": "speak-prompt",
+      "bytes": 1569,
+      "sha256_16": "2ef11a4fd6d36d48",
+      "committed_planned": false,
+      "remote_path": "(box only; prompts not committed as app assets)",
+      "notes": "ops prompts"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/chatgpt-images-one-by-one/10-SPEAK_10_market_pomegranates.png.txt",
+      "kind": "speak-prompt",
+      "bytes": 1629,
+      "sha256_16": "680c8150a2068ed6",
+      "committed_planned": false,
+      "remote_path": "(box only; prompts not committed as app assets)",
+      "notes": "ops prompts"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/chatgpt-images-one-by-one/11-SPEAK_11_sound_card.png.txt",
+      "kind": "speak-prompt",
+      "bytes": 1607,
+      "sha256_16": "b775b2e6793b4416",
+      "committed_planned": false,
+      "remote_path": "(box only; prompts not committed as app assets)",
+      "notes": "ops prompts"
+    },
+    {
+      "box_path": "/workspace/shared/al-heb/chatgpt-images-one-by-one/12-SPEAK_12_your_turn.png.txt",
+      "kind": "speak-prompt",
+      "bytes": 1604,
+      "sha256_16": "2d085a0fe4fb8530",
+      "committed_planned": false,
+      "remote_path": "(box only; prompts not committed as app assets)",
+      "notes": "ops prompts"
+    },
+    {
+      "box_path": "/workspace/Al-Heb/assets/img/gen",
+      "kind": "codex-openai-gen-webp",
+      "bytes": null,
+      "sha256_16": null,
+      "committed_planned": true,
+      "remote_path": "assets/img/gen/*",
+      "notes": "1828 files already tracked; Codex/OpenAI provenance"
+    },
+    {
+      "box_path": "/workspace/Al-Heb/docs/drafts/images-review",
+      "kind": "draft-review-png",
+      "bytes": null,
+      "sha256_16": null,
+      "committed_planned": true,
+      "remote_path": "docs/drafts/images-review/img-*.png",
+      "notes": "1500 tracked draft contact-sheet copies"
+    },
+    {
+      "box_path": "/workspace/Al-Heb/assets/img/refs",
+      "kind": "refs",
+      "bytes": null,
+      "sha256_16": null,
+      "committed_planned": true,
+      "remote_path": "assets/img/refs/*",
+      "notes": "54 refs already tracked"
+    }
+  ]
+}

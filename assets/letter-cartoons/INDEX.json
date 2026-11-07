@@ -1,0 +1,236 @@
+{
+  "version": 1,
+  "source": "chatgpt-2026-11-05 + overnight DECISIONS 2026-11-06",
+  "ship": [],
+  "style_break_atlas_only": [
+    "pe-final-meet.png",
+    "qof-meet.png",
+    "resh-meet.png"
+  ],
+  "unreviewed_hold": [
+    "shin-meet.png",
+    "tav-meet.png",
+    "tsadi-final-meet.png",
+    "tsadi-meet.png"
+  ],
+  "note": "ship=[] \u2014 keep all 27 on GitHub as drafts. pe-final/qof/resh atlas-only (no regen). shin/tav/tsadi/tsadi-final hold.",
+  "images": {
+    "aleph-meet.png": {
+      "file": "aleph-meet.png",
+      "path": "assets/letter-cartoons/batch01/aleph-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "bet-meet.png": {
+      "file": "bet-meet.png",
+      "path": "assets/letter-cartoons/batch01/bet-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "chet-meet.png": {
+      "file": "chet-meet.png",
+      "path": "assets/letter-cartoons/batch01/chet-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "dalet-meet.png": {
+      "file": "dalet-meet.png",
+      "path": "assets/letter-cartoons/batch01/dalet-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "gimel-meet.png": {
+      "file": "gimel-meet.png",
+      "path": "assets/letter-cartoons/batch01/gimel-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "he-meet.png": {
+      "file": "he-meet.png",
+      "path": "assets/letter-cartoons/batch01/he-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "tet-meet.png": {
+      "file": "tet-meet.png",
+      "path": "assets/letter-cartoons/batch01/tet-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "vav-meet.png": {
+      "file": "vav-meet.png",
+      "path": "assets/letter-cartoons/batch01/vav-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "yod-meet.png": {
+      "file": "yod-meet.png",
+      "path": "assets/letter-cartoons/batch01/yod-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "zayin-meet.png": {
+      "file": "zayin-meet.png",
+      "path": "assets/letter-cartoons/batch01/zayin-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "ayin-meet.png": {
+      "file": "ayin-meet.png",
+      "path": "assets/letter-cartoons/batch02/ayin-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "kaf-final-meet.png": {
+      "file": "kaf-final-meet.png",
+      "path": "assets/letter-cartoons/batch02/kaf-final-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "kaf-meet.png": {
+      "file": "kaf-meet.png",
+      "path": "assets/letter-cartoons/batch02/kaf-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "lamed-meet.png": {
+      "file": "lamed-meet.png",
+      "path": "assets/letter-cartoons/batch02/lamed-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "mem-final-meet.png": {
+      "file": "mem-final-meet.png",
+      "path": "assets/letter-cartoons/batch02/mem-final-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "mem-meet.png": {
+      "file": "mem-meet.png",
+      "path": "assets/letter-cartoons/batch02/mem-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "nun-final-meet.png": {
+      "file": "nun-final-meet.png",
+      "path": "assets/letter-cartoons/batch02/nun-final-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "nun-meet.png": {
+      "file": "nun-meet.png",
+      "path": "assets/letter-cartoons/batch02/nun-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "pe-meet.png": {
+      "file": "pe-meet.png",
+      "path": "assets/letter-cartoons/batch02/pe-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "samekh-meet.png": {
+      "file": "samekh-meet.png",
+      "path": "assets/letter-cartoons/batch02/samekh-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "pe-final-meet.png": {
+      "file": "pe-final-meet.png",
+      "path": "assets/letter-cartoons/batch03/pe-final-meet.png",
+      "batch": "batch03",
+      "status": "style_break_atlas_only",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "qof-meet.png": {
+      "file": "qof-meet.png",
+      "path": "assets/letter-cartoons/batch03/qof-meet.png",
+      "batch": "batch03",
+      "status": "style_break_atlas_only",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "resh-meet.png": {
+      "file": "resh-meet.png",
+      "path": "assets/letter-cartoons/batch03/resh-meet.png",
+      "batch": "batch03",
+      "status": "style_break_atlas_only",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "shin-meet.png": {
+      "file": "shin-meet.png",
+      "path": "assets/letter-cartoons/batch03/shin-meet.png",
+      "batch": "batch03",
+      "status": "unreviewed_hold",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "tav-meet.png": {
+      "file": "tav-meet.png",
+      "path": "assets/letter-cartoons/batch03/tav-meet.png",
+      "batch": "batch03",
+      "status": "unreviewed_hold",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "tsadi-final-meet.png": {
+      "file": "tsadi-final-meet.png",
+      "path": "assets/letter-cartoons/batch03/tsadi-final-meet.png",
+      "batch": "batch03",
+      "status": "unreviewed_hold",
+      "approved": false,
+      "regen_forbidden": true
+    },
+    "tsadi-meet.png": {
+      "file": "tsadi-meet.png",
+      "path": "assets/letter-cartoons/batch03/tsadi-meet.png",
+      "batch": "batch03",
+      "status": "unreviewed_hold",
+      "approved": false,
+      "regen_forbidden": true
+    }
+  },
+  "freeze_cast": true
+}

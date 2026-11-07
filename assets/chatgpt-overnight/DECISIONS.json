@@ -1,0 +1,115 @@
+{
+  "date": "2026-11-06",
+  "source_thread": "https://chatgpt.com/c/6aed705d-9b44-83ea-852b-517cb7af5b28",
+  "status": "recommendations_only",
+  "release_threshold": 9.2,
+  "ship": {
+    "speak": [],
+    "letter_cartoons": []
+  },
+  "candidate": {
+    "speak": [
+      "SPEAK_04_table_shabbat.png",
+      "SPEAK_05_table_welcome.png",
+      "SPEAK_08_street_taxi.png"
+    ]
+  },
+  "unreviewed_hold": {
+    "speak": [
+      "SPEAK_01_street_falafel.png",
+      "SPEAK_02_street_bus_ticket.png",
+      "SPEAK_03_street_directions.png",
+      "SPEAK_06_sanctuary_quiet.png",
+      "SPEAK_07_sanctuary_together.png",
+      "SPEAK_09_cafe_order.png",
+      "SPEAK_10_market_pomegranates.png",
+      "SPEAK_11_sound_card.png",
+      "SPEAK_12_your_turn.png"
+    ],
+    "letter_cartoons": [
+      "shin-meet.png",
+      "tav-meet.png",
+      "tsadi-final-meet.png",
+      "tsadi-meet.png"
+    ]
+  },
+  "style_break_atlas_only": [
+    "pe-final-meet.png",
+    "qof-meet.png",
+    "resh-meet.png"
+  ],
+  "sephardi_top_15": [
+    {
+      "id": "sephardi:modeh-ani-1",
+      "action": "human_listen_first"
+    },
+    {
+      "id": "sephardi:shema-vahavta-l4",
+      "action": "human_listen_first"
+    },
+    {
+      "id": "sephardi:shema-vahavta-l6",
+      "action": "human_listen_first"
+    },
+    {
+      "id": "sephardi:kedushah-kadosh",
+      "action": "human_listen_first"
+    },
+    {
+      "id": "sephardi:yigdal-l3",
+      "action": "human_listen_first"
+    },
+    {
+      "id": "sephardi:kiddush-zachor-l2",
+      "action": "human_listen_first"
+    },
+    {
+      "id": "sephardi:havdalah-hamavdil",
+      "action": "human_listen_first"
+    },
+    {
+      "id": "sephardi:lecha-hashem",
+      "action": "human_listen_first"
+    },
+    {
+      "id": "sephardi:adon-olam-1-l9",
+      "action": "human_listen_first"
+    },
+    {
+      "id": "sephardi:adon-olam-1-l7",
+      "action": "re_render_wavenet_same_id"
+    },
+    {
+      "id": "sephardi:ashrei-145-16",
+      "action": "re_render_wavenet_same_id"
+    },
+    {
+      "id": "sephardi:avot-closing",
+      "action": "re_render_wavenet_same_id"
+    },
+    {
+      "id": "sephardi:etz-chaim",
+      "action": "re_render_wavenet_same_id"
+    },
+    {
+      "id": "sephardi:hamotzi",
+      "action": "re_render_wavenet_same_id"
+    },
+    {
+      "id": "sephardi:haftarah-after-l3",
+      "action": "re_render_wavenet_same_id"
+    }
+  ],
+  "first_open": {
+    "denomination": "neutral; no audience inferred",
+    "niqqud": "visible; automatic fade awaits teacher/John approval",
+    "shabbat": "reuse existing preferences; no new reminder/streak policy"
+  },
+  "production_audio_auto_replace": false,
+  "freeze_faces": [
+    "Ari",
+    "Noa",
+    "Rimon"
+  ],
+  "caveat": "No canonical character sheet supplied; ChatGPT references to supplied wardrobe/character descriptions are unverified. No production changes performed."
+}

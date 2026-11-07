@@ -1,0 +1,144 @@
+{
+  "v": 2,
+  "status": "draft",
+  "id": "minute-one-abba",
+  "formula": "TRY_SAVE_PERSONALISE",
+  "lock": "t1040u",
+  "targetSeconds": 60,
+  "splash": {
+    "hePointed": "שָׁלוֹם",
+    "heBare": "שלום",
+    "gloss": "peace",
+    "line": "You just heard your first Hebrew word. No sign-up.",
+    "audio": {
+      "kind": "word",
+      "id": "firstday-shalom",
+      "text": "שָׁלוֹם"
+    },
+    "assembleMs": 1800
+  },
+  "motivations": [
+    {
+      "id": "prayer",
+      "label": "Prayer & sacred text",
+      "hint": "Your first build stays אַבָּא; later units open toward blessings.",
+      "promiseTarget": "decode the Shema unaided"
+    },
+    {
+      "id": "talk",
+      "label": "Talk in Israel",
+      "hint": "Street Hebrew after the first win.",
+      "promiseTarget": "order coffee and greet people unaided"
+    },
+    {
+      "id": "family",
+      "label": "Family & heritage",
+      "hint": "Family words first — אַבָּא today, אִמָּא tomorrow.",
+      "promiseTarget": "read family blessings unaided"
+    },
+    {
+      "id": "bible",
+      "label": "Read the Bible in Hebrew",
+      "hint": "Decode biblical words after the builder.",
+      "promiseTarget": "decode a short biblical line unaided"
+    }
+  ],
+  "levels": [
+    {
+      "id": "zero",
+      "label": "Not yet — start me at zero"
+    },
+    {
+      "id": "slow",
+      "label": "I can decode, slowly"
+    },
+    {
+      "id": "read",
+      "label": "I can read already"
+    }
+  ],
+  "commitments": [
+    {
+      "id": "3",
+      "minutes": 3,
+      "label": "3 minutes — a taste",
+      "daysOut": 28
+    },
+    {
+      "id": "5",
+      "minutes": 5,
+      "label": "5 minutes — steady",
+      "daysOut": 21,
+      "default": true
+    },
+    {
+      "id": "10",
+      "minutes": 10,
+      "label": "10 minutes — serious",
+      "daysOut": 14
+    }
+  ],
+  "word": {
+    "id": "abba",
+    "hePointed": "אַבָּא",
+    "heBare": "אבא",
+    "gloss": "dad / papa",
+    "letters": [
+      "alef",
+      "bet",
+      "alef"
+    ],
+    "glyphs": [
+      "א",
+      "ב",
+      "א"
+    ],
+    "audio": {
+      "kind": "word",
+      "id": "abba"
+    }
+  },
+  "nextWord": {
+    "id": "ima",
+    "hePointed": "אִמָּא",
+    "heBare": "אמא",
+    "gloss": "mum / mom",
+    "tease": "Tomorrow, one thing is left open… אִמָּא (ima, Mum) completes the family."
+  },
+  "gratitude": "Thank you for the letters that became a word.",
+  "streakCopy": "Day 1 of your seder is lit. A missed day never shames you — your place stays held.",
+  "niqqudNote": "Dots help you read — they'll fade as you get stronger.",
+  "tray": [
+    {
+      "id": "alef",
+      "he": "א",
+      "name": "Alef"
+    },
+    {
+      "id": "bet",
+      "he": "ב",
+      "name": "Bet"
+    }
+  ],
+  "beats": 7,
+  "noHearts": true,
+  "defaultTradition": "israeli",
+  "shareLine": "My first Hebrew word on ALEF",
+  "savePrompt": "Save your progress",
+  "saveEqual": [
+    "Create profile",
+    "Later"
+  ],
+  "draftArt": {
+    "note": "ChatGPT drafts per overnight DECISIONS. ship=[]. Candidates/hold only.",
+    "decisions": "docs/fun/OVERNIGHT-DECISIONS-2026-11-06.json",
+    "letterCartoons": {
+      "alef": "assets/letter-cartoons/batch01/aleph-meet.png",
+      "bet": "assets/letter-cartoons/batch01/bet-meet.png"
+    },
+    "speakCandidatesIndex": "data/images/speak-candidates.json",
+    "speakHoldIndex": "data/images/speak-hold.json",
+    "letterCartoonsIndex": "data/images/letter-cartoons-chatgpt.json",
+    "showHoldRequiresUnlock": true
+  }
+}

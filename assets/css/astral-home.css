@@ -41,7 +41,8 @@
 @keyframes prayer-stars { from { transform: translateY(-5px); opacity: .55; } to { transform: translateY(5px); opacity: 1; } }
 @keyframes prayer-light { from { transform: translate(-50%,-50%) scale(.72); opacity: .2; } to { transform: translate(-50%,-50%) scale(1); opacity: 1; } }
 
-/* The scene sits ABOVE the original headline and CTAs, never over them. */
+/* The photo-realistic reading of an ancient tree is deliberate: no primitive
+   vector canopy, no toy-fruit circles, one local WebP asset and no moving typography. */
 .show-hero { display: block; min-height: 0; overflow: hidden; background: #1F3A5F; border-color: #D9A441; }
 .show-hero::after { content: none; animation: none; }
 .show-hero-text {
@@ -57,65 +58,78 @@
 }
 
 .astral-scene {
-  position: relative; width: 100%; height: clamp(240px, 45vw, 460px);
-  background: linear-gradient(180deg, #1F3A5F 0%, #1F3A5F 55%, #D9A441 100%);
+  position: relative; width: 100%; height: clamp(280px, 48vw, 500px);
+  background: linear-gradient(180deg, #1F3A5F 0%, #6B7F3A 55%, #D9A441 100%);
   isolation: isolate; overflow: hidden;
+}
+.astral-photo-motion {
+  position: absolute; inset: -4%; overflow: hidden;
+  transform: translate3d(0,var(--tree-shift,0px),0);
+  animation: astral-photo-drift 25s ease-in-out 2s infinite alternate;
+}
+.astral-tree-photo {
+  display: block; width: 100%; height: 100%; object-fit: cover;
+  object-position: 53% 50%; transform: scale(1.035);
+  filter: brightness(.82) contrast(1.18) saturate(.77);
+  animation: astral-ancient-reveal 2s cubic-bezier(.19,.63,.24,1) both;
+}
+.astral-nightfall {
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg,
+    rgba(31,58,95,.64) 0%, rgba(31,58,95,.30) 37%,
+    rgba(31,58,95,.13) 69%, rgba(43,43,43,.40) 100%);
+  mix-blend-mode: multiply;
 }
 .astral-stars {
   position: absolute; inset: -5%; pointer-events: none;
   background:
-    radial-gradient(circle at 7% 24%, #F6F1E7 0 1px, transparent 2px),
-    radial-gradient(circle at 16% 60%, #D9A441 0 1px, transparent 2px),
-    radial-gradient(circle at 25% 19%, #F6F1E7 0 1px, transparent 2px),
-    radial-gradient(circle at 34% 52%, #D9A441 0 1px, transparent 2px),
-    radial-gradient(circle at 43% 10%, #F6F1E7 0 1px, transparent 2px),
-    radial-gradient(circle at 58% 28%, #F6F1E7 0 1px, transparent 2px),
-    radial-gradient(circle at 69% 11%, #D9A441 0 1px, transparent 2px),
-    radial-gradient(circle at 81% 49%, #F6F1E7 0 1px, transparent 2px),
-    radial-gradient(circle at 90% 16%, #D9A441 0 1px, transparent 2px),
-    radial-gradient(circle at 96% 67%, #F6F1E7 0 1px, transparent 2px);
-  animation: astral-stars-drift 20s ease-in-out infinite alternate; opacity: .83;
+    radial-gradient(circle at 7% 18%, #F6F1E7 0 1px, transparent 2px),
+    radial-gradient(circle at 18% 56%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 26% 12%, #F6F1E7 0 1px, transparent 2px),
+    radial-gradient(circle at 36% 49%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 46% 8%, #F6F1E7 0 1px, transparent 2px),
+    radial-gradient(circle at 58% 30%, #F6F1E7 0 1px, transparent 2px),
+    radial-gradient(circle at 70% 15%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 83% 43%, #F6F1E7 0 1px, transparent 2px),
+    radial-gradient(circle at 93% 20%, #D9A441 0 1px, transparent 2px);
+  animation: astral-stars-drift 20s ease-in-out infinite alternate;
+  opacity: .65;
 }
 .astral-ray {
   position: absolute; z-index: 2; top: -20%; bottom: -20%; left: -25%;
-  width: 42%; pointer-events: none; opacity: .55;
-  background: linear-gradient(90deg, transparent, rgba(217,164,65,.23), transparent);
+  width: 42%; pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(217,164,65,.25), transparent);
   transform: skewX(-17deg) translateX(-150%);
   animation: astral-ray-pass 13s ease-in-out infinite;
 }
-.astral-svg {
-  display: block; position: absolute; inset: 0; width: 100%; height: 100%;
-  transform: translate3d(0,var(--tree-shift,0px),0); will-change: transform;
+.astral-ground-light {
+  position: absolute; inset: 55% 0 0; pointer-events: none;
+  background: radial-gradient(ellipse at 58% 100%, rgba(217,164,65,.17), transparent 68%);
+  opacity: .85;
 }
-.astral-growth {
-  transform-box: view-box; transform-origin: 50% 96%;
-  animation: astral-grow 2s cubic-bezier(.24,.65,.24,1) both;
+.astral-scene[data-paused="1"] *, .astral-scene[data-paused="1"]::before, .astral-scene[data-paused="1"]::after {
+  animation-play-state: paused !important;
 }
-body:not([data-ready="1"]) .astral-growth { animation-play-state: paused; }
-.astral-leaf-cluster {
-  transform-box: fill-box; transform-origin: center bottom;
-  animation: astral-canopy 7.5s ease-in-out infinite alternate;
-  animation-delay: var(--leaf-delay, 0s);
+@keyframes astral-ancient-reveal {
+  0% { opacity: .2; transform: scale(1.14) translateY(9px); }
+  100% { opacity: 1; transform: scale(1.035) translateY(0); }
 }
-.astral-fruit {
-  transform-box: fill-box; transform-origin: center top;
-  animation: astral-pomegranate 6s ease-in-out infinite alternate;
-  animation-delay: var(--fruit-delay, 0s);
+@keyframes astral-photo-drift {
+  from { transform: translate3d(0,var(--tree-shift,0px),0) scale(1); }
+  to { transform: translate3d(0,var(--tree-shift,0px),0) scale(1.025); }
 }
-.astral-scene[data-paused="1"] *, .astral-scene[data-paused="1"]::before, .astral-scene[data-paused="1"]::after { animation-play-state: paused !important; }
-@keyframes astral-grow {
-  0% { transform: scaleY(.04) scaleX(.4); opacity: .15; }
-  65% { opacity: 1; }
-  100% { transform: scale(1); opacity: 1; }
+@keyframes astral-stars-drift {
+  from { transform: translate3d(0,-5px,0); opacity: .35; }
+  to { transform: translate3d(0,7px,0); opacity: .75; }
 }
-@keyframes astral-canopy { from { transform: translate3d(-3px,1px,0) rotate(-1deg); opacity: .84; } to { transform: translate3d(3px,-1px,0) rotate(1deg); opacity: 1; } }
-@keyframes astral-pomegranate { from { transform: rotate(-3deg); opacity: .83; } to { transform: rotate(3deg); opacity: 1; } }
-@keyframes astral-stars-drift { from { transform: translate3d(0,-5px,0); opacity: .5; } to { transform: translate3d(0,7px,0); opacity: .95; } }
-@keyframes astral-ray-pass { 0%,20% { transform: skewX(-17deg) translateX(-160%); opacity: 0; } 42% { opacity: .55; } 72%,100% { transform: skewX(-17deg) translateX(340%); opacity: 0; } }
-
+@keyframes astral-ray-pass {
+  0%,20% { transform: skewX(-17deg) translateX(-160%); opacity: 0; }
+  42% { opacity: .48; }
+  72%,100% { transform: skewX(-17deg) translateX(340%); opacity: 0; }
+}
 @media (max-width: 600px) {
-  .astral-scene { height: clamp(228px, 64vw, 320px); }
-  .astral-extra { display: none; } /* cap mobile canopy groups and fruit clusters */
+  .astral-scene { height: clamp(260px, 68vw, 345px); }
+  .astral-tree-photo { object-position: 60% 53%; }
   .prayer-veil-stars { opacity: .6; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -123,5 +137,6 @@ body:not([data-ready="1"]) .astral-growth { animation-play-state: paused; }
   .prayer-veil *, .show-hero, .show-hero-text { animation: none !important; transition: none !important; }
   .prayer-veil-glow { transform: translate(-50%, -50%); }
   .prayer-words { transform: none; }
-  .astral-svg { transform: none !important; will-change: auto; }
+  .astral-photo-motion { transform: none !important; }
+  .astral-tree-photo { transform: none !important; }
 }

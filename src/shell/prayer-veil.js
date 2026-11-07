@@ -8,7 +8,7 @@ export const MODEH_ANI = Object.freeze({
 const LAST_KEY = 'alef:opening-prayer:last:v1';
 const VISIT_KEY = 'alef:opening-prayer:seen:v1';
 
-export function prayerKey(p) { return p.he + '|' + p.source; }
+export function prayerKey(p) { return p.he; }
 
 /** Does not mutate the bank. If there are 2+ candidates, never repeats the previous one. */
 export function pickPrayer(bank, previous = '', random = Math.random) {
@@ -42,7 +42,6 @@ function initPrayerVeil() {
   writeLocal(VISIT_KEY, '1');
   let closed = false;
   let deadline = null;
-  let removal = null;
   const reduce = globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches === true;
 
   function dismiss(now = false) {
@@ -53,7 +52,7 @@ function initPrayerVeil() {
     document.removeEventListener('keydown', onKey);
     if (now || reduce) { veil.remove(); return; }
     veil.classList.add('prayer-veil--leaving');
-    removal = setTimeout(() => veil.remove(), 150);
+    setTimeout(() => veil.remove(), 150);
   }
   function onReady() { dismiss(); }
   function onKey(e) { if (e.key === 'Escape') dismiss(true); }

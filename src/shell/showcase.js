@@ -19,7 +19,7 @@ const TILES = [
   ['memorypalace', '#/memorypalace', 'Memory Palace', 'מִשְׂחָק', 'Games — a courtyard that remembers words'],
   ['sprint', '#/sprint', 'Word Sprint', 'מִלִּים', 'Fast rounds with real words'],
   ['read', '#/read', 'Read the Prayers', 'תְּפִלָּה', 'The siddur line by line, at your pace'],
-  ['vocab', '#/vocab', '5,000 Words', 'מִלּוֹן', 'The whole vocabulary, searchable'],
+  ['vocab', '#/vocab', 'Dictionary — 5,000 Words', 'מִלּוֹן', 'The whole vocabulary, searchable'],
   ['speak', '#/speak', 'Speak & Listen', 'דַּבֵּר', 'Say it out loud and be understood'],
   ['traditions', '#/traditions', 'Three Traditions', 'מָסוֹרֶת', 'Israeli, Sephardi, Ashkenazi — hear the difference'],
   ['morning', '#/morning', 'Start with God', 'מוֹדֶה אֲנִי', 'Modeh Ani and a verse, every morning'],
@@ -114,21 +114,24 @@ export function showcaseNode(ctx) {
     h('li', {}, h('a', { class: 'show-tile', href },
       h('span', { class: 'show-tile-title' }, title, ' ', heSpan(he)),
       h('span', { class: 'show-tile-hook' }, hook))));
+  const mascotBox = h('div', { class: 'show-mascot-box' });
   const heroText = h('div', { class: 'show-hero-text' },
+    h('div', { class: 'show-hero-copy' },
     h('p', { class: 'show-kicker' }, 'The Tree of Life'),
     h('p', { class: 'show-title' }, 'Learn to read ', heSpan('עִבְרִית'), ' — Hebrew'),
     h('p', { class: 'show-sub' }, 'Prayers, Torah and everyday Israel. A few minutes a day, in your own tradition\u2019s voice.'),
     h('p', { class: 'show-cta' },
       h('a', { class: 'btn show-btn', href: '#/firstday' }, 'Start your first 10 minutes'),
       ' ',
-      h('a', { class: 'btn secondary show-btn2', href: '#/books' }, 'Read a story book')));
+      h('a', { class: 'btn secondary show-btn2', href: '#/books' }, 'Read a story book'))),
+    mascotBox);
   // Rimon beside the hero copy. The image resolver loads lazily on first
   // paint, so a synchronous ctx.img read is empty on the first visit — fetch
   // the mascot when the resolver is ready and insert it then. A missing
   // picture leaves the hero exactly as it was.
   loadGameImages(ctx).then((R) => {
     const im = R ? imgOf(R, 'id', 'MASCOT_rimon') : null;
-    if (im?.src && heroText.isConnected) heroText.appendChild(h('img', { class: 'show-mascot', src: im.src, alt: im.alt, width: im.width, height: im.height }));
+    if (im?.src && mascotBox.isConnected) mascotBox.appendChild(h('img', { class: 'show-mascot', src: im.src, alt: im.alt, width: im.width, height: im.height }));
   }).catch(() => {});
   return h('section', { class: 'showcase', 'aria-label': 'Explore ALEF' },
     h('div', { class: 'show-hero' },

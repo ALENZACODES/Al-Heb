@@ -38,3 +38,14 @@ The site footer remains exactly: “Made by John Khan · © 2026 John Khan. All 
 - Direct phone acceptance: first-visit/return-visit prayer, tap-to-skip, Word Finder five-word cycle, all four doorways, Enter/Space keyboard controls, photo crop at 320 px, no auto-spoken material, offline state, reduced motion
 
 Until those gates run successfully, this work remains **a feature-branch release candidate**.
+
+
+## Isolated checks performed on 7 November 2026
+
+A source-level JavaScript harness (not a full-browser test) returned **24 passes / 0 failures** for script syntax, the immediate prayer fallback, 80 unique prayers and no-repeat selection, 240 unique words, 24 male/female Israeli lookup entries, four homepage navigation doorways, and progress through the full 240-word bank. After the main-branch truth corrections were reconciled, another **20 passes / 0 failures** covered module syntax, CSS brace balance, six route aliases, honest game labels, and removal of the unavailable Echo Chamber from the advertised catalogue.
+
+An independent fake-DOM five-word interaction run found five correct words, granted **no** progress on an incorrect choice, sent the Hebrew playback request through the unchanged `word` audio interface, and saved **one** completed round rather than five. Those results are useful **partial evidence**, not proof of real-device playback, cross-browser rendering, full unit-suite success or sacred-text correctness.
+
+The draft PR is <https://github.com/ALENZACODES/Al-Heb/pull/30>. The branch has been reconciled with the 7 November main truth pass (laser/sonar titles, route aliases, OCR copy, game unlisting) and is Git-mergeable, but it must remain a draft. The latest connected CI run is <https://github.com/ALENZACODES/Al-Heb/actions/runs/42349174248>, which reported failure before providing useful execution steps. Do not label it green.
+
+**Next gates in order:** repair the GitHub Actions runner; regenerate the two offline artifacts with the project generator; run the full unit and browser tiers; manually validate 320/390 px phones and screen readers; check the 24 starter words with real clip playback; only then seek John Khan's explicit merge/publish approval.

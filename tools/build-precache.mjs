@@ -47,6 +47,8 @@ const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifes
   'data/audio/english-glosses.json',
   // Word Finder bank (51 KB): preview-game data, fetched when the game first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB).
   'data/games/firstwords.json',
+  // Awards gallery view: route code only (the router loads views lazily; its engine files stay installed), fetched when Awards first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB after the 25-badge engine landed).
+  'src/awards/gallery.view.js',
   'data/corpus/prayer-meta.json', 'data/corpus/torah-service-guide.json', 'data/corpus/gaps.json',
   'data/curriculum/dialogues.json', 'data/curriculum/gender-pairs.json', 'data/curriculum/loanwords.json', 'data/curriculum/prompts.json', 'data/curriculum/word-vocab-map.json',
   'data/firstday/minute-one.json', 'data/homepage/prayers.json', 'data/morning-verses.json',

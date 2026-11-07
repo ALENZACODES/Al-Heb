@@ -78,14 +78,6 @@
       "theme": "Food & drinks"
     },
     {
-      "id": "h9c8ddecf",
-      "he": "בַּיִת",
-      "translit": "bayit",
-      "en": "house / home",
-      "use": "Use this when talking about where you live.",
-      "theme": "Around the home"
-    },
-    {
       "id": "h231c624a",
       "he": "סֵפֶר",
       "translit": "sefer",
@@ -94,20 +86,20 @@
       "theme": "Around the home"
     },
     {
-      "id": "h1a3574d3",
-      "he": "יָד",
-      "translit": "yad",
-      "en": "hand",
-      "use": "Use this when naming the body or what you wear.",
-      "theme": "Body & clothing"
+      "id": "h35be21c5",
+      "he": "חָלָב",
+      "translit": "chalav",
+      "en": "milk",
+      "use": "Use this when eating, drinking or ordering food.",
+      "theme": "Food & drinks"
     },
     {
-      "id": "h50cf3648",
-      "he": "יוֹם",
-      "translit": "yom",
-      "en": "day",
-      "use": "Use this when telling time or counting.",
-      "theme": "Time & numbers"
+      "id": "hf9047f4b",
+      "he": "כּוֹס",
+      "translit": "kos",
+      "en": "cup",
+      "use": "Use this when eating, drinking or ordering food.",
+      "theme": "Food & drinks"
     },
     {
       "id": "hf5bee50d",
@@ -124,14 +116,6 @@
       "en": "tea",
       "use": "Use this when eating, drinking or ordering food.",
       "theme": "Food & drinks"
-    },
-    {
-      "id": "hd2fac0d2",
-      "he": "עֵץ",
-      "translit": "etz",
-      "en": "tree",
-      "use": "Use this when talking about animals and nature.",
-      "theme": "Animals & outdoors"
     },
     {
       "id": "h18108dff",
@@ -158,14 +142,6 @@
       "theme": "Food & drinks"
     },
     {
-      "id": "h80d6f3f0",
-      "he": "פָּרָה",
-      "translit": "parah",
-      "en": "cow",
-      "use": "Use this when talking about animals and nature.",
-      "theme": "Animals & outdoors"
-    },
-    {
       "id": "h4692cd32",
       "he": "יָם",
       "translit": "yam",
@@ -188,6 +164,78 @@
       "en": "good",
       "use": "Use this to say what something is like.",
       "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "h9f3caed1",
+      "he": "מִשְׁפָּחָה",
+      "translit": "mishpachah",
+      "en": "family",
+      "use": "Use this when talking about family and people.",
+      "theme": "Family & people"
+    },
+    {
+      "id": "h80c0273d",
+      "he": "דֶּלֶת",
+      "translit": "delet",
+      "en": "door (portal of entry)",
+      "use": "Use this to name things you find at home.",
+      "theme": "Around the home"
+    },
+    {
+      "id": "h155e306b",
+      "he": "אֶחָד",
+      "translit": "echad",
+      "en": "one",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h4fed6814",
+      "he": "רֹאשׁ",
+      "translit": "rosh",
+      "en": "head",
+      "use": "Use this when naming the body or what you wear.",
+      "theme": "Body & clothing"
+    },
+    {
+      "id": "h9c8ddecf",
+      "he": "בַּיִת",
+      "translit": "bayit",
+      "en": "house / home",
+      "use": "Use this when talking about where you live.",
+      "theme": "Around the home"
+    },
+    {
+      "id": "h1a3574d3",
+      "he": "יָד",
+      "translit": "yad",
+      "en": "hand",
+      "use": "Use this when naming the body or what you wear.",
+      "theme": "Body & clothing"
+    },
+    {
+      "id": "h50cf3648",
+      "he": "יוֹם",
+      "translit": "yom",
+      "en": "day",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "hd2fac0d2",
+      "he": "עֵץ",
+      "translit": "etz",
+      "en": "tree",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "h80d6f3f0",
+      "he": "פָּרָה",
+      "translit": "parah",
+      "en": "cow",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
     },
     {
       "id": "h4f61c9d1",
@@ -258,14 +306,6 @@
       "he": "סָבְתָא",
       "translit": "saveta",
       "en": "grandmother",
-      "use": "Use this when talking about family and people.",
-      "theme": "Family & people"
-    },
-    {
-      "id": "h9f3caed1",
-      "he": "מִשְׁפָּחָה",
-      "translit": "mishpachah",
-      "en": "family",
       "use": "Use this when talking about family and people.",
       "theme": "Family & people"
     },
@@ -350,14 +390,6 @@
       "theme": "Family & people"
     },
     {
-      "id": "h35be21c5",
-      "he": "חָלָב",
-      "translit": "chalav",
-      "en": "milk",
-      "use": "Use this when eating, drinking or ordering food.",
-      "theme": "Food & drinks"
-    },
-    {
       "id": "hc008b0a9",
       "he": "דְּבַשׁ",
       "translit": "devash",
@@ -418,14 +450,6 @@
       "he": "יַיִן",
       "translit": "yayin",
       "en": "wine",
-      "use": "Use this when eating, drinking or ordering food.",
-      "theme": "Food & drinks"
-    },
-    {
-      "id": "hf9047f4b",
-      "he": "כּוֹס",
-      "translit": "kos",
-      "en": "cup",
       "use": "Use this when eating, drinking or ordering food.",
       "theme": "Food & drinks"
     },
@@ -514,14 +538,6 @@
       "he": "סַכִּין",
       "translit": "sakin",
       "en": "knife, blade",
-      "use": "Use this to name things you find at home.",
-      "theme": "Around the home"
-    },
-    {
-      "id": "h80c0273d",
-      "he": "דֶּלֶת",
-      "translit": "delet",
-      "en": "door (portal of entry)",
       "use": "Use this to name things you find at home.",
       "theme": "Around the home"
     },
@@ -878,14 +894,6 @@
       "theme": "Time & numbers"
     },
     {
-      "id": "h155e306b",
-      "he": "אֶחָד",
-      "translit": "echad",
-      "en": "one",
-      "use": "Use this when telling time or counting.",
-      "theme": "Time & numbers"
-    },
-    {
       "id": "hf9a1a55b",
       "he": "שְׁנַיִם",
       "translit": "shenayim",
@@ -1220,14 +1228,6 @@
       "en": "always, regularly",
       "use": "Use this to say what something is like.",
       "theme": "Descriptions & feelings"
-    },
-    {
-      "id": "h4fed6814",
-      "he": "רֹאשׁ",
-      "translit": "rosh",
-      "en": "head",
-      "use": "Use this when naming the body or what you wear.",
-      "theme": "Body & clothing"
     },
     {
       "id": "h60b16793",
@@ -1925,5 +1925,6 @@
       "use": "Use this to talk about what someone does.",
       "theme": "Everyday actions"
     }
-  ]
+  ],
+  "starterAudioSelection": "The first 24 headwords have existing Israeli female/male audio entries in the project's clip lookup; playback still depends on the actual device/network and can be synthetic."
 }

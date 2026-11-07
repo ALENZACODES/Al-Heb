@@ -10,11 +10,14 @@ The header marks the set `ASSEMBLED_FOR_REVIEW`, **not clergy-reviewed**. Curren
 
 The veil releases on the first route's `alef:ready` event, or immediately on tap, skip-button activation, or Escape. The absolute fail-open deadline is 2,200 ms on a first visit and 800 ms on later visits; a fade-out of at most 150 ms applies when it exits before that deadline. No promise from the prayer fetch is awaited by app boot. Reduced motion is a still prayer card with no transitions.
 
-## Living hero
+## Living hero — realism correction
 
-`src/shell/astral-tree.js` constructs the sky, trunk, branches, olive/gold canopy and pomegranates as inline SVG plus two CSS atmosphere layers; no images, videos, CDNs, external requests, character art, audio, or framework. It sits **above** the original hero headline, two CTAs, word-builder panel, stats and destination tiles; these are kept as functional DOM elements. The tree grows in two seconds and then the canopy, fruit, ray and stars drift at deliberately slow frequencies.
+**Recommitted 2026-11-07.** The first implementation built a stylised SVG tree from thick strokes, ellipses and graphic pomegranates. It was rejected as cartoon-like. The replacement uses ALEF's already-existing fine-art `assets/img/gen/HERO_home_tree.webp` for a colossal, ancient, naturally weathered olive tree: hollow bark, thick twisting limbs, gnarled knots, sprawling roots against rock and dense leaves. The title now reads **The Tree of Life**, not Tree of Knowledge. That artwork is painterly rather than a literal photograph; the improvement is substantial in anatomical realism, but a fully photoreal output still requires a separately approved, text-free photographic source. No source image is modified or newly added in this commit.
 
-Only transforms and opacity animate. A shared `IntersectionObserver` pauses off-screen scenes, `visibilitychange` pauses hidden tabs, and one throttled `requestAnimationFrame` per scroll/resize update provides ±9 px parallax. Small screens omit three canopy groups and two fruit clusters; no per-leaf animation loops run. There is no gyroscope permission or orientation tracking. When `prefers-reduced-motion` is set, CSS turns off all animations/transitions, and parallax remains still. The tree scene is described as one accessible image; its many ornamental parts are hidden from accessibility navigation.
+The art gets a two-second atmospheric camera arrival with subtle colour grading. A transparent navy nightfall, sparse stars, soft moving golden light and slow photo parallax provide depth without geometric/cartoon branches or floating circles. The entire tree is one pre-existing locally shipped image; no CDN, framework, new image download, character artwork, or audio is introduced. Source text, original CTA links, word-builder, stats, books, games, footer and other navigation are untouched.
+
+Only opacity/transform animate; star and ray layers are compositor-friendly. A shared `IntersectionObserver` pauses all scene movement offscreen, `visibilitychange` pauses in background tabs, and scroll listeners throttle parallax updates to one animation frame. Mobile uses a different crop to keep the ancient trunk prominent. Reduced-motion users get a static artwork and a still prayer card.
+
 
 ## Build, QA and publishing
 

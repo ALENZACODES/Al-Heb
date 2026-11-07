@@ -77,10 +77,10 @@ test('home view: first run shows Today with Continue -> #/firstday; existing sec
   assert.equal(JSON.stringify(store.m), before, 'mounting Home writes nothing');
   un();
 });
-test('home view: baby-step layout for a new learner (Today card, four destinations, More; no prayer card, no streak, no tile wall)', async () => {
+test('home view: baby-step layout for a new learner (Today card, five destinations, More; no prayer card, no streak, no tile wall)', async () => {
   const { root, ctx } = mk();
   const un = mount(root, ctx); await waitFor(() => root.querySelector('#today-continue'));
-  assert.deepEqual(root.queryAll('.home-dests a').map((a) => a.attrs.href), ['#/letters', '#/vocab', '#/read', '#/progress']);
+  assert.deepEqual(root.queryAll('.home-dests a').map((a) => a.attrs.href), ['#/letters', '#/vocab', '#/read', '#/progress', '#/calendar']);
   assert.ok(root.querySelector('#home-more'), 'More button');
   assert.equal(root.querySelector('.opening'), null, 'opening prayer draft card is not on a new learner Home');
   assert.equal(root.querySelector('#today-streak'), null);

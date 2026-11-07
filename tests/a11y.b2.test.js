@@ -52,7 +52,7 @@ test('scheduler view: choices change the table, pressed state follows, the first
   await btn(root, /^95%$/).click(); assert.equal(btn(root, /^95%$/).attrs['aria-pressed'], 'true');
   assert.deepEqual(store.m, {}); assert.match(root.textContent, /does NOT|nothing here changes them/i); un();
 });
-test('every new route is registered as preview with a nav string, in a section, and v0 stays at 15 routes', async () => {
+test('every new route is registered as preview with a nav string, in a section, and v0 stays at 19 routes', async () => {
   const { ROUTES } = await import('../src/shell/router.js'); const { SECTION_ROUTES } = await import('../src/shell/nav-model.js');
   const strings = rd('src/shell/nav.strings.js');
   for (const n of ['scheduler', 'known-words', 'syllabus', 'time-budget']) {
@@ -60,5 +60,5 @@ test('every new route is registered as preview with a nav string, in a section, 
     assert.ok(Object.values(SECTION_ROUTES).some((l) => l.includes(n)), `${n} in a nav section`); assert.ok(strings.includes(`'nav.route.${n}'`));
     assert.ok(readFileSync(new URL('../src/shell/' + r.module, import.meta.url)), 'module exists');
   }
-  assert.equal(ROUTES.filter((r) => r.tier === 'v0').length, 15);
+  assert.equal(ROUTES.filter((r) => r.tier === 'v0').length, 19);
 });

@@ -156,9 +156,9 @@ test('targets: every button in the page uses the shared btn class (48 px tap siz
   for (const m of src.matchAll(/h\('button', \{[^}]*class: ([^,]+),/g)) assert.match(m[1], /btn/);
   assert.match(src, /summary \{ min-block-size: var\(--tap, 48px\)/);
 });
-test('routes: /daily is one preview route outside the first install, v0 stays at 15, and the key is registered everywhere', async () => {
+test('routes: /daily is one preview route outside the first install, v0 stays at 19, and the key is registered everywhere', async () => {
   const { ROUTES, matchRoute } = await import('../src/shell/router.js');
-  assert.equal(ROUTES.filter((r) => r.tier === 'v0').length, 15); const r = ROUTES.find((x) => x.name === 'daily');
+  assert.equal(ROUTES.filter((r) => r.tier === 'v0').length, 19); const r = ROUTES.find((x) => x.name === 'daily');
   assert.equal(r.tier, 'preview'); assert.equal(matchRoute('#/daily').route.name, 'daily'); assert.ok(fs.existsSync(path.resolve(ROOT, 'src/shell', r.module)));
   const { computeManifest } = await import('../tools/build-precache.mjs'); const m = computeManifest(ROOT);
   assert.ok(![...m.files, ...m.onDemand].some((f) => f.startsWith('preview/')), 'preview/loops is not in the precache lists');

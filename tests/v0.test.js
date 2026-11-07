@@ -70,29 +70,30 @@ test('More sheet DOM (fake DOM): preview group is last, collapsed, labelled hone
   // The one documented exception (docs/v0/SCOPE.md): the Accessibility page, a preview page, also has a quick row under Settings.
   for (const g of groups.slice(0, -1).filter((x) => x.getAttribute('data-quick') !== 'accessibility')) { assert.notEqual(g.getAttribute('data-section'), 'preview'); for (const a of g.queryAll('a')) assert.equal(by(a.getAttribute('href').slice(2) === '' ? 'home' : ROUTES.find((r) => '#' + r.pattern === a.getAttribute('href'))?.name)?.tier, 'v0'); }
   const links = pv.queryAll('a').map((a) => a.getAttribute('href'));
-  assert.ok(links.includes('#/calendar') && links.includes('#/read') && !links.includes('#/settings'));
+  assert.ok(!links.includes('#/calendar') && links.includes('#/read') && !links.includes('#/settings'));
   assert.ok(pv.queryAll('.menu-preview-note').length >= 4, 'one note per section');
   assert.ok(pv.queryAll('.menu-preview-note').every((p) => /Not reviewed yet/.test(p.textContent)));
-  renderMenu(list, { routes: ROUTES, available: ALL, current: 'calendar' });
+  renderMenu(list, { routes: ROUTES, available: ALL, current: 'read' });
   const pv2 = list.children[list.children.length - 1];
   assert.equal(pv2.children[0].getAttribute('open'), '', 'open on a preview page');
-  assert.equal(pv2.querySelector('a[href="#/calendar"]').getAttribute('aria-current'), 'page');
+  assert.equal(pv2.querySelector('a[href="#/read"]').getAttribute('aria-current'), 'page');
 });
 test('search still finds preview pages and labels them; v0 pages carry no label', () => {
   const idx = buildPageIndex(ROUTES, ALL, t, () => '', (id) => t('nav.section.' + id));
-  assert.equal(idx.find((e) => e.name === 'calendar').tier, 'preview');
+  assert.equal(idx.find((e) => e.name === 'calendar').tier, 'v0');
+  assert.equal(idx.find((e) => e.name === 'read').tier, 'preview');
   assert.equal(idx.find((e) => e.name === 'progress').tier, 'v0');
-  assert.ok(searchPages(idx, 'calendar').some((e) => e.name === 'calendar' && e.tier === 'preview'));
+  assert.ok(searchPages(idx, 'calendar').some((e) => e.name === 'calendar' && e.tier === 'v0'));
   assert.ok(searchablePages(ROUTES, ALL).some((r) => r.tier === 'preview'));
   assert.ok(en['search.preview']);
 });
 test('preview banner (fake DOM): appears on a preview route, not on a v0 route, never stacks, is cleared on a v0 route', () => {
   const main = new N('main');
   main.append(new N('h1'));
-  assert.equal(needsBanner(by('learn')), false); assert.equal(needsBanner(by('calendar')), true); assert.equal(needsBanner(null), false);
+  assert.equal(needsBanner(by('learn')), false); assert.equal(needsBanner(by('calendar')), false); assert.equal(needsBanner(by('read')), true); assert.equal(needsBanner(null), false);
   assert.equal(mountPreviewBanner(main, by('learn')), null);
   assert.equal(main.queryAll(BANNER_SELECTOR).length, 0);
-  const el = mountPreviewBanner(main, by('calendar'));
+  const el = mountPreviewBanner(main, by('read'));
   assert.ok(el); assert.equal(main.children[0], el, 'banner is first in main');
   assert.equal(el.getAttribute('data-tier'), 'preview'); assert.equal(el.getAttribute('role'), 'note');
   assert.ok(el.textContent.startsWith('Preview: unreviewed, may change'));

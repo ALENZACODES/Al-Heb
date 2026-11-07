@@ -33,10 +33,11 @@ test('nav at 320 and 390 px: <=5 controls (v0 only), current marked, More menu b
       const groups = await page.locator('#nav-more > li.nav-group').count(); assert.equal(groups, 4, 'Learn, Progress, More and the Preview group');
       assert.equal(await page.locator('#nav-more > li.nav-group:last-child').getAttribute('data-section'), 'preview');
       assert.equal(await page.locator('#nav-more li[data-section="preview"] > details[open]').count(), 0, 'Preview group starts collapsed');
-      assert.equal(await page.locator('#nav-more li[data-section="preview"] a[href="#/calendar"]').isVisible(), false, 'collapsed preview links are hidden');
-      assert.equal(await page.locator('#nav-more > li:not([data-section="preview"]) a[href="#/calendar"]').count(), 0, 'preview pages are not in the open groups');
+      assert.equal(await page.locator('#nav-more li[data-section="preview"] a[href="#/read"]').isVisible(), false, 'collapsed preview links are hidden');
+      assert.equal(await page.locator('#nav-more li[data-section="preview"] a[href="#/calendar"]').count(), 0, 'v0 pages are not in the Preview group');
+      assert.equal(await page.locator('#nav-more > li:not([data-section="preview"]) a[href="#/calendar"]').count(), 1, 'calendar sits in an open group');
       await page.locator('#nav-more li[data-section="preview"] summary').click();
-      assert.ok(await page.locator('#nav-more li[data-section="preview"] a[href="#/calendar"]').isVisible(), 'expanded Preview group lists calendar');
+      assert.ok(await page.locator('#nav-more li[data-section="preview"] a[href="#/read"]').isVisible(), 'expanded Preview group lists read');
       await page.locator('#nav-more li[data-section="preview"] summary').click();
       await page.locator('#nav-more li[data-section="more"] summary').click();
       assert.ok(await page.locator('#nav-more a[href="#/search"]').isVisible());
@@ -51,7 +52,7 @@ test('nav at 320 and 390 px: <=5 controls (v0 only), current marked, More menu b
       await page.goto(base + '#/settings'); await page.waitForSelector('body[data-route="settings"]');
       assert.equal(await page.locator('#more-btn[data-current]').count(), 1);
       assert.equal(await page.locator('main .preview-banner').count(), 0, 'no banner on a v0 route');
-      await page.goto(base + '#/calendar'); await page.waitForSelector('body[data-route="calendar"]');
+      await page.goto(base + '#/read'); await page.waitForSelector('body[data-route="read"]');
       assert.equal(await page.locator('main .preview-banner').count(), 1, 'banner on a preview route');
       assert.equal(await page.locator('main > :first-child').getAttribute('class'), 'preview-banner muted', 'banner is at the top of the page');
       assert.ok((await page.locator('main .preview-banner').innerText()).startsWith('Preview: unreviewed, may change'));

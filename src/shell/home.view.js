@@ -18,12 +18,12 @@ export function mount(root, ctx) {
   let alive = true;
   const todayHost = h('div', { id: 'home-today-host' }, h('section', { class: 'card today', 'aria-labelledby': 'h-today' }, h('h2', { id: 'h-today' }, t('home.today')), h('p', { class: 'muted' }, t('home.today.none'))));
 
-  // Baby-step Home (docs/v0/SCOPE.md): a new learner sees the Today card, four destinations and a More button, nothing else.
+  // Baby-step Home (docs/v0/SCOPE.md): a new learner sees the Today card, five destinations and a More button, nothing else.
   // Everything below the Today card is drawn by renderRest() once the Today model says whether this is a first run.
   const restHost = h('div', { class: 'stack', id: 'home-rest' });
-  const DESTS = [['letters', 'letters', 'Letters'], ['vocab', 'vocab', 'Words'], ['read', 'read', 'Read'], ['progress', 'progress', 'Progress']];
+  const DESTS = [['letters', 'letters', 'Letters'], ['vocab', 'vocab', 'Dictionary'], ['read', 'read', 'Read'], ['progress', 'progress', 'Progress'], ['calendar', 'calendar', 'Calendar']];
   const openMenu = (e) => { e?.stopPropagation?.(); /* the shell closes the sheet on any outside click, including this one */ const b2 = globalThis.document?.getElementById?.('more-btn'); if (b2) b2.click(); else if (ctx.route) ctx.route('/settings'); };
-  // A beginner sees the four destinations (Letters first) in one short row directly under the title, ABOVE the Today card, so Letters is on the
+  // A beginner sees the five destinations (Letters first) in one short row directly under the title, ABOVE the Today card, so Letters is on the
   // first screen of a phone (at 375x667 the old "Go to" card started at y=570 and its first tile at y=621, under the tab bar).
   const destHost = h('div', { id: 'home-dests-host' });
   const babyDests = () => h('nav', { 'aria-labelledby': 'h-quick' }, h('h2', { id: 'h-quick', class: 'visually-hidden' }, t('home.quick')),

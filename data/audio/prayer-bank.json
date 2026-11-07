@@ -1,0 +1,675 @@
+{
+ "note": "The homepage bank has 79 scriptural verses and one Modeh Ani text. It is not 80 complete prayers. Rows here are only the verses that have synthetic audio. Modeh Ani, unbound sacred-name verses, and queued Sephardi slots are absent. English is the source translation. No pronunciation was invented.",
+ "entries": [
+  {
+   "id": "bank80-00ae83908b7d",
+   "he": "גַּם כִּי־אֵלֵךְ בְּגֵיא צַלְמָוֶת לֹא־אִירָא רָע כִּי־אַתָּה עִמָּדִי שִׁבְטְךָ וּמִשְׁעַנְתֶּךָ הֵמָּה יְנַחֲמֻנִי׃",
+   "english": "Yea, though I walk through the valley of the shadow of death, I will fear no evil, for Thou art with me; Thy rod and Thy staff, they comfort me.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-ea09113ec7bf",
+   "he": "כִּי רֶגַע בְּאַפּוֹ חַיִּים בִּרְצוֹנוֹ בָּעֶרֶב יָלִין בֶּכִי וְלַבֹּקֶר רִנָּה׃",
+   "english": "For His anger is but for a moment, His favour is for a life-time; weeping may tarry for the night, but joy cometh in the morning.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-f6cbc1f3a0b3",
+   "he": "סוּר מֵרָע וַעֲשֵׂה־טוֹב בַּקֵּשׁ שָׁלוֹם וְרָדְפֵהוּ׃",
+   "english": "Depart from evil, and do good; Seek peace, and pursue it.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-eb6330f9f504",
+   "he": "אֱלֹהִים לָנוּ מַחֲסֶה וָעֹז עֶזְרָה בְצָרוֹת נִמְצָא מְאֹד׃",
+   "english": "God is our refuge and strength, A very present help in trouble.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-93f010c5b607",
+   "he": "הַרְפּוּ וּדְעוּ כִּי־אָנֹכִי אֱלֹהִים אָרוּם בַּגּוֹיִם אָרוּם בָּאָרֶץ׃",
+   "english": "'Let be, and know that I am God; I will be exalted among the nations, I will be exalted in the earth.'",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-f8f659967b74",
+   "he": "לֵב טָהוֹר בְּרָא־לִי אֱלֹהִים וְרוּחַ נָכוֹן חַדֵּשׁ בְּקִרְבִּי׃",
+   "english": "Create me a clean heart, O God; and renew a stedfast spirit within me.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-c1c8c411cc69",
+   "he": "לִמְנוֹת יָמֵינוּ כֵּן הוֹדַע וְנָבִא לְבַב חָכְמָה׃",
+   "english": "So teach us to number our days, That we may get us a heart of wisdom.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-89e956ba02f2",
+   "he": "יֹשֵׁב בְּסֵתֶר עֶלְיוֹן בְּצֵל שַׁדַּי יִתְלוֹנָן׃",
+   "english": "O thou that dwellest in the covert of the Most High, And abidest in the shadow of the Almighty;",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-1400b4b42d2a",
+   "he": "אוֹדְךָ עַל כִּי נוֹרָאוֹת נִפְלֵיתִי נִפְלָאִים מַעֲשֶׂיךָ וְנַפְשִׁי יֹדַעַת מְאֹד׃",
+   "english": "I will give thanks unto Thee, for I am fearfully and wonderfully made; Wonderful are Thy works; and that my soul knoweth right well.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-18316c18e26c",
+   "he": "הָרֹפֵא לִשְׁבוּרֵי לֵב וּמְחַבֵּשׁ לְעַצְּבוֹתָם׃",
+   "english": "Who healeth the broken in heart, And bindeth up their wounds.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-4c6ffa0ace3f",
+   "he": "כֹּל הַנְּשָׁמָה תְּהַלֵּל יָהּ הַלְלוּ־יָהּ׃",
+   "english": "Let every thing that hath breath praise the LORD. Hallelujah.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-7b2bbd0d124a",
+   "he": "אַךְ אֶל־אֱלֹהִים דּוּמִיָּה נַפְשִׁי מִמֶּנּוּ יְשׁוּעָתִי׃",
+   "english": "Only for God doth my soul wait in stillness; From Him cometh my salvation.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-64efcd3d7f85",
+   "he": "מִן־הַמֵּצַר קָרָאתִי יָּהּ עָנָנִי בַמֶּרְחָב יָהּ׃",
+   "english": "Out of my straits I called upon the LORD; He answered me with great enlargement.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-882a34ee86ef",
+   "he": "גַּל־עֵינַי וְאַבִּיטָה נִפְלָאוֹת מִתּוֹרָתֶךָ׃",
+   "english": "Open Thou mine eyes, that I may behold wondrous things out of Thy law.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-8a552fe85865",
+   "he": "בְּכָל־דְּרָכֶיךָ דָעֵהוּ וְהוּא יְיַשֵּׁר אֹרְחֹתֶיךָ׃",
+   "english": "In all thy ways acknowledge Him, And He will direct thy paths.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-aac1be62946e",
+   "he": "אַשְׁרֵי אָדָם מָצָא חָכְמָה וְאָדָם יָפִיק תְּבוּנָה׃",
+   "english": "Happy is the man that findeth wisdom, And the man that obtaineth understanding.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-7ee4e8f03c1b",
+   "he": "דְּרָכֶיהָ דַרְכֵי־נֹעַם וְכָל־נְתִיבוֹתֶיהָ שָׁלוֹם׃",
+   "english": "Her ways are ways of pleasantness, And all her paths are peace.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-b59bc4a3df81",
+   "he": "רֵאשִׁית חָכְמָה קְנֵה חָכְמָה וּבְכָל־קִנְיָנְךָ קְנֵה בִינָה׃",
+   "english": "The beginning of wisdom is: Get wisdom; Yea, with all thy getting get understanding.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-5d5436fa28f1",
+   "he": "מִכָּל־מִשְׁמָר נְצֹר לִבֶּךָ כִּי־מִמֶּנּוּ תּוֹצְאוֹת חַיִּים׃",
+   "english": "Above all that thou guardest keep thy heart; For out of it are the issues of life.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-7eb7833cfac9",
+   "he": "שִׂנְאָה תְּעוֹרֵר מְדָנִים וְעַל כָּל־פְּשָׁעִים תְּכַסֶּה אַהֲבָה׃",
+   "english": "Hatred stirreth up strifes; but love covereth all transgressions.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-cd8715dc66cb",
+   "he": "נֶפֶשׁ־בְּרָכָה תְדֻשָּׁן וּמַרְוֶה גַּם־הוּא יוֹרֶא׃",
+   "english": "The beneficent soul shall be made rich, and he that satisfieth abundantly shall be satisfied also himself.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-8e6ca0303a31",
+   "he": "דְּאָגָה בְלֶב־אִישׁ יַשְׁחֶנָּה וְדָבָר טוֹב יְשַׂמְּחֶנָּה׃",
+   "english": "Care in the heart of a man boweth it down; But a good word maketh it glad.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-bc2a13a1987e",
+   "he": "מַעֲנֶה־רַּךְ יָשִׁיב חֵמָה וּדְבַר־עֶצֶב יַעֲלֶה־אָף׃",
+   "english": "A soft answer turneth away wrath; But a grievous word stirreth up anger.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-82fa981e6968",
+   "he": "לֵב שָׂמֵחַ יֵיטִב פָּנִים וּבְעַצְּבַת־לֵב רוּחַ נְכֵאָה׃",
+   "english": "A merry heart maketh a cheerful countenance; But by sorrow of heart the spirit is broken.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-d32399fc75b5",
+   "he": "צוּף־דְּבַשׁ אִמְרֵי־נֹעַם מָתוֹק לַנֶּפֶשׁ וּמַרְפֵּא לָעָצֶם׃",
+   "english": "Pleasant words are as a honeycomb, Sweet to the soul, and health to the bones.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-5a901eb376c6",
+   "he": "לֵב שָׂמֵחַ יֵיטִב גֵּהָה וְרוּחַ נְכֵאָה תְּיַבֶּשׁ־גָּרֶם׃",
+   "english": "A merry heart is a good medicine; But a broken spirit drieth the bones.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-36eb6f7ee426",
+   "he": "חֲנֹךְ לַנַּעַר עַל־פִּי דַרְכּוֹ גַּם כִּי־יַזְקִין לֹא־יָסוּר מִמֶּנָּה׃",
+   "english": "Train up a child in the way he should go, And even when he is old, he will not depart from it.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-9757566edcda",
+   "he": "בַּרְזֶל בְּבַרְזֶל יָחַד וְאִישׁ יַחַד פְּנֵי־רֵעֵהוּ׃",
+   "english": "Iron sharpeneth iron; So a man sharpeneth the countenance of his friend.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ],
+    [
+     "f",
+     "ashkenazi"
+    ],
+    [
+     "m",
+     "ashkenazi"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-3a081e6d2550",
+   "he": "פִּיהָ פָּתְחָה בְחָכְמָה וְתוֹרַת חֶסֶד עַל־לְשׁוֹנָהּ׃",
+   "english": "She openeth her mouth with wisdom; And the law of kindness is on her tongue.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ]
+   ]
+  },
+  {
+   "id": "bank80-c366741b90c4",
+   "he": "אֶרֶךְ אַפַּיִם רַב־תְּבוּנָה וּקְצַר־רוּחַ מֵרִים אִוֶּלֶת׃",
+   "english": "He that is slow to anger is of great understanding; But he that is hasty of spirit exalteth folly.",
+   "excerpt": true,
+   "coverage": "verse or selected entry, not a complete liturgical work",
+   "onlySlots": [
+    [
+     "f",
+     "israeli"
+    ],
+    [
+     "m",
+     "israeli"
+    ]
+   ]
+  }
+ ]
+}

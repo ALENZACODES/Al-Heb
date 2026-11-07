@@ -1,0 +1,8 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-hebrew",
+ "synthetic": true,
+ "reviewed": false,
+ "sha256": "eabba1940ebc43bb5b061bb41614a03f38d75d21de737ae71402bcaa792365f8",
+ "note": "Israeli bank entry excerpt, not a complete liturgical work. Google synthetic voice. Latin pronunciation, when stored, is an unreviewed draft, not a native pronunciation."
+}

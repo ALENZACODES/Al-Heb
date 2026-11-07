@@ -1,0 +1,8 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled",
+ "synthetic": true,
+ "reviewed": false,
+ "sha256": "c3c8acd3dedf7330bcd5fb753de6d6775e0fa076d625cd3292a90a6fe8c63699",
+ "note": "Ashkenazi vocabulary clip. The Hebrew entry is the vocab5000 pointed text. The engine soundword is not stored as a pronunciation. Not a human recording."
+}

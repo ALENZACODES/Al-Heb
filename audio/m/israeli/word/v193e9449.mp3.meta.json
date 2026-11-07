@@ -1,0 +1,8 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-hebrew",
+ "synthetic": true,
+ "reviewed": false,
+ "sha256": "03a3d36ad44acc4263ac115800c15d8c6895bd8c01632abd3f97b131ac929bb0",
+ "note": "Vocabulary clip for an existing vocab5000 entry. Google synthetic voice. Gloss is the existing vocab5000 gloss. Not a human recording."
+}

@@ -1,0 +1,8 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled",
+ "synthetic": true,
+ "reviewed": false,
+ "sha256": "4750bc08d685643892d65215e3cb95d9e428e6be75f0c2c66c3fa3d3f95578fa",
+ "note": "Ashkenazi reading of one bank verse, not a complete liturgical work. Google synthetic voice at rate 1.15. Not a human recording and not native-reviewed."
+}

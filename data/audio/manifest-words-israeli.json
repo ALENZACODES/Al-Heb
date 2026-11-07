@@ -82260,5 +82260,707 @@
   "group": "vocab-alias",
   "aliasOf": "word/il21-w1",
   "english": "I think that..."
+ },
+ {
+  "path": "audio/f/israeli/word/v7f64097f.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v7f64097f",
+  "text": "בֹּקֶר",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "morning",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/m/israeli/word/v7f64097f.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v7f64097f",
+  "text": "בֹּקֶר",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "morning",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-B",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/f/israeli/word/v905b1db4.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v905b1db4",
+  "text": "שְׁנִיָּה",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "second (unit of time); moment",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/m/israeli/word/v905b1db4.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v905b1db4",
+  "text": "שְׁנִיָּה",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "second (unit of time); moment",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-B",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/f/israeli/word/ve6f0ccc5.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "ve6f0ccc5",
+  "text": "פֶּרֶק",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "chapter, section; joint",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/m/israeli/word/ve6f0ccc5.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "ve6f0ccc5",
+  "text": "פֶּרֶק",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "chapter, section; joint",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-B",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/f/israeli/word/v040e9391.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v040e9391",
+  "text": "אִמֵּת",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "to authenticate, to verify",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/m/israeli/word/v040e9391.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v040e9391",
+  "text": "אִמֵּת",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "to authenticate, to verify",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-B",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/f/israeli/word/va68ecfe2.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "va68ecfe2",
+  "text": "נָס",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "to flee",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/m/israeli/word/va68ecfe2.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "va68ecfe2",
+  "text": "נָס",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "to flee",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-B",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/f/israeli/word/v7f219ebf.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v7f219ebf",
+  "text": "רֹב",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "majority, most",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/m/israeli/word/v7f219ebf.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v7f219ebf",
+  "text": "רֹב",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "majority, most",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-B",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/f/israeli/word/v8639c1e2.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v8639c1e2",
+  "text": "שִׁעֵר",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "to assume, suppose, imagine",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/m/israeli/word/v8639c1e2.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v8639c1e2",
+  "text": "שִׁעֵר",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "to assume, suppose, imagine",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-B",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/f/israeli/word/v448e91b1.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v448e91b1",
+  "text": "לִמֵּד",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "to teach",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/m/israeli/word/v448e91b1.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v448e91b1",
+  "text": "לִמֵּד",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "to teach",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-B",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/f/israeli/word/vee5620b6.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "vee5620b6",
+  "text": "הַרְבֵּה",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "a lot of, many, much",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/m/israeli/word/vee5620b6.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "vee5620b6",
+  "text": "הַרְבֵּה",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "a lot of, many, much",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-B",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/f/israeli/word/v3b6df3f7.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v3b6df3f7",
+  "text": "נֶגַע",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "plague",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/m/israeli/word/v3b6df3f7.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v3b6df3f7",
+  "text": "נֶגַע",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "plague",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-B",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/f/israeli/word/ve664e4ff.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "ve664e4ff",
+  "text": "קִיֵּם",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "to bring into existence, create",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/m/israeli/word/ve664e4ff.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "ve664e4ff",
+  "text": "קִיֵּם",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "to bring into existence, create",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-B",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/f/israeli/word/v1672f7ae.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v1672f7ae",
+  "text": "כְּלָל",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "at all",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/m/israeli/word/v1672f7ae.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v1672f7ae",
+  "text": "כְּלָל",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "at all",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-B",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/f/israeli/word/v2aa32e77.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v2aa32e77",
+  "text": "שִׁלֵּחַ",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "to send out, expel",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/m/israeli/word/v2aa32e77.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v2aa32e77",
+  "text": "שִׁלֵּחַ",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "to send out, expel",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-B",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/f/israeli/word/v982e6537.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v982e6537",
+  "text": "גַּב",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "back (of the body)",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/m/israeli/word/v982e6537.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v982e6537",
+  "text": "גַּב",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "back (of the body)",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-B",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/f/israeli/word/v86a86065.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v86a86065",
+  "text": "יִחֵד",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "to designate, to set aside, to dedicate",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/m/israeli/word/v86a86065.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v86a86065",
+  "text": "יִחֵד",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "to designate, to set aside, to dedicate",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-B",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/f/israeli/word/v1af81d96.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v1af81d96",
+  "text": "מֹר",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "myrrh",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/m/israeli/word/v1af81d96.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v1af81d96",
+  "text": "מֹר",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "myrrh",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-B",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/f/israeli/word/vce8b490a.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "vce8b490a",
+  "text": "הֶעֱבִיר",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "to hand over, transmit, bring or take across, transfer, pass",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/m/israeli/word/vce8b490a.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "vce8b490a",
+  "text": "הֶעֱבִיר",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "to hand over, transmit, bring or take across, transfer, pass",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-B",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/f/israeli/word/v193e9449.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v193e9449",
+  "text": "פִּקֵּד",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "to command, to oversee",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/m/israeli/word/v193e9449.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v193e9449",
+  "text": "פִּקֵּד",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "to command, to oversee",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-B",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/f/israeli/word/vc4f6426e.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "vc4f6426e",
+  "text": "אֶפֶס",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "zero (digit)",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/m/israeli/word/vc4f6426e.mp3",
+  "voice": "m",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "vc4f6426e",
+  "text": "אֶפֶס",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "zero (digit)",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-B",
+   "speakingRate": 1
+  }
+ },
+ {
+  "path": "audio/f/israeli/word/v4e0fa1cb.mp3",
+  "voice": "f",
+  "tradition": "israeli",
+  "kind": "word",
+  "id": "v4e0fa1cb",
+  "text": "יוֹם חֲמִישִׁי",
+  "status": "synthetic-unreviewed",
+  "source": "tts-hebrew",
+  "group": "vocab-extra",
+  "english": "Thursday",
+  "synth": {
+   "origin": "google-wavenet",
+   "reviewed": false,
+   "voiceName": "he-IL-Wavenet-A",
+   "speakingRate": 1
+  }
  }
 ]

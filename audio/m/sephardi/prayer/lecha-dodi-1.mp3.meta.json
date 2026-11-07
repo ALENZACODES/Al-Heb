@@ -1,0 +1,8 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled",
+ "synthetic": true,
+ "reviewed": false,
+ "sha256": "b421b1de1e55e8453dcc826e1ae1b8c771dc8e27e0cc7352672e4c3690915ce0",
+ "note": "Male Sephardi full-prayer clip from the exact-13 pack. Google synthetic voice at rate 1.33. Not a human recording and not native-reviewed."
+}

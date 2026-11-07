@@ -1,0 +1,500 @@
+{
+ "note": "Opening entries with no matching Israeli file for the listed voice. Do not substitute another tradition or a browser voice. These are the screen texts to record, not a claim that each is a complete prayer.",
+ "count": 41,
+ "gaps": [
+  {
+   "index": 1,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם, שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה. רַבָּה אֱמוּנָתֶךָ",
+   "en": "I thank You, living and eternal King, for returning my soul to me with compassion. Great is Your faithfulness.",
+   "source": "Traditional Modeh Ani; exact Hebrew and English supplied in the 2026-11-06 ALEF homepage brief (independent pre-1929 siddur collation pending).",
+   "sacredName": false,
+   "production": "Israeli woman he-IL-Chirp3-HD-Kore and man he-IL-Chirp3-HD-Charon, rate 1, this exact pointed text. Not a complete-prayer claim."
+  },
+  {
+   "index": 15,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "שִׁוִּיתִי יְהוָה לְנֶגְדִּי תָמִיד כִּי מִימִינִי בַּל־אֶמּוֹט׃",
+   "en": "I have set the LORD always before me; Surely He is at my right hand, I shall not be moved.",
+   "source": "ALEF data/morning-verses.json, Psalms 16:8 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 16,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "קַוֵּה אֶל־יְהוָה חֲזַק וְיַאֲמֵץ לִבֶּךָ וְקַוֵּה אֶל־יְהוָה׃",
+   "en": "Wait on the LORD; Be strong, and let thy heart take courage; Yea, wait thou for the LORD.",
+   "source": "ALEF data/morning-verses.json, Psalms 27:14 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 17,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "טַעֲמוּ וּרְאוּ כִּי־טוֹב יְהוָה אַשְׁרֵי הַגֶּבֶר יֶחֱסֶה־בּוֹ׃",
+   "en": "O consider and see that the LORD is good; Happy is the man that taketh refuge in Him.",
+   "source": "ALEF data/morning-verses.json, Psalms 34:9 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 19,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "בְּטַח בַּיהוָה וַעֲשֵׂה־טוֹב שְׁכָן־אֶרֶץ וּרְעֵה אֱמוּנָה׃",
+   "en": "Trust in the LORD, and do good; dwell in the land, and cherish faithfulness.",
+   "source": "ALEF data/morning-verses.json, Psalms 37:3 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": false,
+   "production": "Israeli woman he-IL-Chirp3-HD-Kore and man he-IL-Chirp3-HD-Charon, rate 1, this exact pointed text. Not a complete-prayer claim."
+  },
+  {
+   "index": 24,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "טוֹב לְהֹדוֹת לַיהוָה וּלְזַמֵּר לְשִׁמְךָ עֶלְיוֹן׃",
+   "en": "It is a good thing to give thanks unto the LORD, And to sing praises unto Thy name, O Most High;",
+   "source": "ALEF data/morning-verses.json, Psalms 92:2 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": false,
+   "production": "Israeli woman he-IL-Chirp3-HD-Kore and man he-IL-Chirp3-HD-Charon, rate 1, this exact pointed text. Not a complete-prayer claim."
+  },
+  {
+   "index": 25,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "עִבְדוּ אֶת־יְהוָה בְּשִׂמְחָה בֹּאוּ לְפָנָיו בִּרְנָנָה׃",
+   "en": "Serve the LORD with gladness; come before His presence with singing.",
+   "source": "ALEF data/morning-verses.json, Psalms 100:2 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 26,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "כִּי־טוֹב יְהוָה לְעוֹלָם חַסְדּוֹ וְעַד־דֹּר וָדֹר אֱמוּנָתוֹ׃",
+   "en": "For the LORD is good; His mercy endureth for ever; and His faithfulness unto all generations.",
+   "source": "ALEF data/morning-verses.json, Psalms 100:5 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 27,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "הוֹדוּ לַיהוָה כִּי־טוֹב כִּי לְעוֹלָם חַסְדּוֹ׃",
+   "en": "'O give thanks unto the LORD, for He is good, For His mercy endureth for ever.",
+   "source": "ALEF data/morning-verses.json, Psalms 118:1 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": false,
+   "production": "Israeli woman he-IL-Chirp3-HD-Kore and man he-IL-Chirp3-HD-Charon, rate 1, this exact pointed text. Not a complete-prayer claim."
+  },
+  {
+   "index": 28,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "זֶה־הַיּוֹם עָשָׂה יְהוָה נָגִילָה וְנִשְׂמְחָה בוֹ׃",
+   "en": "This is the day which the LORD hath made; We will rejoice and be glad in it.",
+   "source": "ALEF data/morning-verses.json, Psalms 118:24 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 29,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "עֶזְרִי מֵעִם יְהוָה עֹשֵׂה שָׁמַיִם וָאָרֶץ׃",
+   "en": "My help cometh from the LORD, Who made heaven and earth.",
+   "source": "ALEF data/morning-verses.json, Psalms 121:2 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 30,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "יְהוָה יִשְׁמָר־צֵאתְךָ וּבוֹאֶךָ מֵעַתָּה וְעַד־עוֹלָם׃",
+   "en": "The LORD shall guard thy going out and thy coming in, From this time forth and for ever.",
+   "source": "ALEF data/morning-verses.json, Psalms 121:8 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 32,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "טוֹב־יְהוָה לַכֹּל וְרַחֲמָיו עַל־כָּל־מַעֲשָׂיו׃",
+   "en": "The LORD is good to all; And His tender mercies are over all His works.",
+   "source": "ALEF data/morning-verses.json, Psalms 145:9 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 33,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "קָרוֹב יְהוָה לְכָל־קֹרְאָיו לְכֹל אֲשֶׁר יִקְרָאֻהוּ בֶאֱמֶת׃",
+   "en": "The LORD is nigh unto all them that call upon Him, To all that call upon Him in truth.",
+   "source": "ALEF data/morning-verses.json, Psalms 145:18 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 36,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "דְּרָכֶיךָ יְהוָה הוֹדִיעֵנִי אֹרְחוֹתֶיךָ לַמְּדֵנִי׃",
+   "en": "Show me Thy ways, O LORD; teach me Thy paths.",
+   "source": "ALEF data/morning-verses.json, Psalms 25:4 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 37,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "קָרוֹב יְהוָה לְנִשְׁבְּרֵי־לֵב וְאֶת־דַּכְּאֵי־רוּחַ יוֹשִׁיעַ׃",
+   "en": "The LORD is nigh unto them that are of a broken heart, And saveth such as are of a contrite spirit.",
+   "source": "ALEF data/morning-verses.json, Psalms 34:19 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 39,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "לְכוּ נְרַנְּנָה לַיהוָה נָרִיעָה לְצוּר יִשְׁעֵנוּ׃",
+   "en": "O come, let us sing unto the LORD; Let us shout for joy to the Rock of our salvation.",
+   "source": "ALEF data/morning-verses.json, Psalms 95:1 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": false,
+   "production": "Israeli woman he-IL-Chirp3-HD-Kore and man he-IL-Chirp3-HD-Charon, rate 1, this exact pointed text. Not a complete-prayer claim."
+  },
+  {
+   "index": 40,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "מִמִּזְרַח־שֶׁמֶשׁ עַד־מְבוֹאוֹ מְהֻלָּל שֵׁם יְהוָה׃",
+   "en": "From the rising of the sun unto the going down thereof The LORD'S name is to be praised.",
+   "source": "ALEF data/morning-verses.json, Psalms 113:3 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 43,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "קִוִּיתִי יְהוָה קִוְּתָה נַפְשִׁי וְלִדְבָרוֹ הוֹחָלְתִּי׃",
+   "en": "I wait for the LORD, my soul doth wait, and in His word do I hope.",
+   "source": "ALEF data/morning-verses.json, Psalms 130:5 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 44,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "גָּדוֹל יְהוָה וּמְהֻלָּל מְאֹד וְלִגְדֻלָּתוֹ אֵין חֵקֶר׃",
+   "en": "Great is the LORD, and highly to be praised; And His greatness is unsearchable.",
+   "source": "ALEF data/morning-verses.json, Psalms 145:3 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 45,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "חִזְקוּ וְיַאֲמֵץ לְבַבְכֶם כָּל־הַמְיַחֲלִים לַיהוָה׃",
+   "en": "Be strong, and let your heart take courage, All ye that wait for the LORD.",
+   "source": "ALEF data/morning-verses.json, Psalms 31:25 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": false,
+   "production": "Israeli woman he-IL-Chirp3-HD-Kore and man he-IL-Chirp3-HD-Charon, rate 1, this exact pointed text. Not a complete-prayer claim."
+  },
+  {
+   "index": 46,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "בְּטַח אֶל־יְהוָה בְּכָל־לִבֶּךָ וְאֶל־בִּינָתְךָ אַל־תִּשָּׁעֵן׃",
+   "en": "Trust in the LORD with all thy heart, And lean not upon thine own understanding.",
+   "source": "ALEF data/morning-verses.json, Proverbs 3:5 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 57,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "גֹּל אֶל־יְהוָה מַעֲשֶׂיךָ וְיִכֹּנוּ מַחְשְׁבֹתֶיךָ׃",
+   "en": "Commit thy works unto the LORD, And thy thoughts shall be established.",
+   "source": "ALEF data/morning-verses.json, Proverbs 16:3 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 60,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "מִגְדַּל־עֹז שֵׁם יְהוָה בּוֹ־יָרוּץ צַדִּיק וְנִשְׂגָּב׃",
+   "en": "The name of the LORD is a strong tower: The righteous runneth into it, and is set up on high.",
+   "source": "ALEF data/morning-verses.json, Proverbs 18:10 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 61,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "רַבּוֹת מַחֲשָׁבוֹת בְּלֶב־אִישׁ וַעֲצַת יְהוָה הִיא תָקוּם׃",
+   "en": "There are many devices in a man’s heart; But the counsel of the LORD, that shall stand.",
+   "source": "ALEF data/morning-verses.json, Proverbs 19:21 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 64,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "שֶׁקֶר הַחֵן וְהֶבֶל הַיֹּפִי אִשָּׁה יִרְאַת־יְהוָה הִיא תִתְהַלָּל׃",
+   "en": "Grace is deceitful, and beauty is vain; But a woman that feareth the LORD, she shall be praised.",
+   "source": "ALEF data/morning-verses.json, Proverbs 31:30 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 66,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "טוֹב אֶרֶךְ אַפַּיִם מִגִּבּוֹר וּמֹשֵׁל בְּרוּחוֹ מִלֹּכֵד עִיר׃",
+   "en": "He that is slow to anger is better than the mighty; And he that ruleth his spirit than he that taketh a city.",
+   "source": "ALEF data/morning-verses.json, Proverbs 16:32 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": false,
+   "production": "Israeli woman he-IL-Chirp3-HD-Kore and man he-IL-Chirp3-HD-Charon, rate 1, this exact pointed text. Not a complete-prayer claim."
+  },
+  {
+   "index": 67,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "בְּכָל־עֵת אֹהֵב הָרֵעַ וְאָח לְצָרָה יִוָּלֵד׃",
+   "en": "A friend loveth at all times, And a brother is born for adversity.",
+   "source": "ALEF data/morning-verses.json, Proverbs 17:17 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": false,
+   "production": "Israeli woman he-IL-Chirp3-HD-Kore and man he-IL-Chirp3-HD-Charon, rate 1, this exact pointed text. Not a complete-prayer claim."
+  },
+  {
+   "index": 68,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "מָוֶת וְחַיִּים בְּיַד־לָשׁוֹן וְאֹהֲבֶיהָ יֹאכַל פִּרְיָהּ׃",
+   "en": "Death and life are in the power of the tongue; And they that indulge it shall eat the fruit thereof.",
+   "source": "ALEF data/morning-verses.json, Proverbs 18:21 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": false,
+   "production": "Israeli woman he-IL-Chirp3-HD-Kore and man he-IL-Chirp3-HD-Charon, rate 1, this exact pointed text. Not a complete-prayer claim."
+  },
+  {
+   "index": 69,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "שְׁמַע עֵצָה וְקַבֵּל מוּסָר לְמַעַן תֶּחְכַּם בְּאַחֲרִיתֶךָ׃",
+   "en": "Hear counsel, and receive instruction, That thou mayest be wise in thy latter end.",
+   "source": "ALEF data/morning-verses.json, Proverbs 19:20 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": false,
+   "production": "Israeli woman he-IL-Chirp3-HD-Kore and man he-IL-Chirp3-HD-Charon, rate 1, this exact pointed text. Not a complete-prayer claim."
+  },
+  {
+   "index": 70,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "רֹדֵף צְדָקָה וָחָסֶד יִמְצָא חַיִּים צְדָקָה וְכָבוֹד׃",
+   "en": "He that followeth after righteousness and mercy Findeth life, prosperity, and honour.",
+   "source": "ALEF data/morning-verses.json, Proverbs 21:21 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": false,
+   "production": "Israeli woman he-IL-Chirp3-HD-Kore and man he-IL-Chirp3-HD-Charon, rate 1, this exact pointed text. Not a complete-prayer claim."
+  },
+  {
+   "index": 71,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "מְכַסֶּה פְשָׁעָיו לֹא יַצְלִיחַ וּמוֹדֶה וְעֹזֵב יְרֻחָם׃",
+   "en": "He that covereth his transgressions shall not prosper; But whoso confesseth and forsaketh them shall obtain mercy.",
+   "source": "ALEF data/morning-verses.json, Proverbs 28:13 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": false,
+   "production": "Israeli woman he-IL-Chirp3-HD-Kore and man he-IL-Chirp3-HD-Charon, rate 1, this exact pointed text. Not a complete-prayer claim."
+  },
+  {
+   "index": 72,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "אַל־תִּמְנַע־טוֹב מִבְּעָלָיו בִּהְיוֹת לְאֵל יָדְךָ לַעֲשׂוֹת׃",
+   "en": "Withhold not good from him to whom it is due, When it is in the power of thy hand to do it.",
+   "source": "ALEF data/morning-verses.json, Proverbs 3:27 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": false,
+   "production": "Israeli woman he-IL-Chirp3-HD-Kore and man he-IL-Chirp3-HD-Charon, rate 1, this exact pointed text. Not a complete-prayer claim."
+  },
+  {
+   "index": 73,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "יָבֵשׁ חָצִיר נָבֵל צִיץ וּדְבַר־אֱלֹהֵינוּ יָקוּם לְעוֹלָם׃",
+   "en": "The grass withereth, the flower fadeth; But the word of our God shall stand for ever.’",
+   "source": "ALEF data/morning-verses.json, Isaiah 40:8 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": false,
+   "production": "Israeli woman he-IL-Chirp3-HD-Kore and man he-IL-Chirp3-HD-Charon, rate 1, this exact pointed text. Not a complete-prayer claim."
+  },
+  {
+   "index": 74,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "קוּמִי אוֹרִי כִּי בָא אוֹרֵךְ וּכְבוֹד יְהוָה עָלַיִךְ זָרָח׃",
+   "en": "Arise, shine, for thy light is come, And the glory of the LORD is risen upon thee.",
+   "source": "ALEF data/morning-verses.json, Isaiah 60:1 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 75,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "יֵצֶר סָמוּךְ תִּצֹּר שָׁלוֹם שָׁלוֹם כִּי בְךָ בָּטוּחַ׃",
+   "en": "The mind stayed on Thee Thou keepest in perfect peace; Because it trusteth in Thee.",
+   "source": "ALEF data/morning-verses.json, Isaiah 26:3 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": false,
+   "production": "Israeli woman he-IL-Chirp3-HD-Kore and man he-IL-Chirp3-HD-Charon, rate 1, this exact pointed text. Not a complete-prayer claim."
+  },
+  {
+   "index": 76,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "נַחֲמוּ נַחֲמוּ עַמִּי יֹאמַר אֱלֹהֵיכֶם׃",
+   "en": "Comfort ye, comfort ye My people, saith your God.",
+   "source": "ALEF data/morning-verses.json, Isaiah 40:1 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": false,
+   "production": "Israeli woman he-IL-Chirp3-HD-Kore and man he-IL-Chirp3-HD-Charon, rate 1, this exact pointed text. Not a complete-prayer claim."
+  },
+  {
+   "index": 77,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "דִּרְשׁוּ יְהוָה בְּהִמָּצְאוֹ קְרָאֻהוּ בִּהְיוֹתוֹ קָרוֹב׃",
+   "en": "Seek ye the LORD while He may be found, Call ye upon Him while He is near;",
+   "source": "ALEF data/morning-verses.json, Isaiah 55:6 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 78,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "בָּרוּךְ הַגֶּבֶר אֲשֶׁר יִבְטַח בַּיהוָה וְהָיָה יְהוָה מִבְטַחוֹ׃",
+   "en": "Blessed is the man that trusteth in the LORD, And whose trust the LORD is.",
+   "source": "ALEF data/morning-verses.json, Jeremiah 17:7 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": true,
+   "production": "Do not record the four-letter name. Needs the existing Adonai spoken form authorized for this exact verse before an Israeli clip."
+  },
+  {
+   "index": 79,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "כִּי־קָרוֹב אֵלֶיךָ הַדָּבָר מְאֹד בְּפִיךָ וּבִלְבָבְךָ לַעֲשֹׂתוֹ׃",
+   "en": "But the word is very nigh unto thee, in thy mouth, and in thy heart, that thou mayest do it.",
+   "source": "ALEF data/morning-verses.json, Deuteronomy 30:14 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": false,
+   "production": "Israeli woman he-IL-Chirp3-HD-Kore and man he-IL-Chirp3-HD-Charon, rate 1, this exact pointed text. Not a complete-prayer claim."
+  },
+  {
+   "index": 80,
+   "voices": [
+    "f",
+    "m"
+   ],
+   "he": "וַאֲהַבְתֶּם אֶת־הַגֵּר כִּי־גֵרִים הֱיִיתֶם בְּאֶרֶץ מִצְרָיִם׃",
+   "en": "Love ye therefore the stranger; for ye were strangers in the land of Egypt.",
+   "source": "ALEF data/morning-verses.json, Deuteronomy 10:19 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending).",
+   "sacredName": false,
+   "production": "Israeli woman he-IL-Chirp3-HD-Kore and man he-IL-Chirp3-HD-Charon, rate 1, this exact pointed text. Not a complete-prayer claim."
+  }
+ ],
+ "sacredNameEntries": 23,
+ "recordableEntries": 18
+}

@@ -1,0 +1,8 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-hebrew",
+ "synthetic": true,
+ "reviewed": false,
+ "sha256": "63450c042535fe4b363962b99f71eb27be596c42c72905ddfba34b8d89692b3e",
+ "note": "Existing Israeli checkpoint clip (Google synthetic, rate 1). Not a human recording and not native-reviewed."
+}

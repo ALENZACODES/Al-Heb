@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 // Builds data/audio/manifest.json (array of {path, voice, tradition, kind, id, text, ipa?, status, source, equivalentTo?}).
-// Reads other lanes' data when present; skips gracefully when absent. Status is "missing" until a file exists under audio/.
+// Reads other lanes' data when present; skips gracefully when absent.
+// A file on disk is not a human recording. Status stays "missing" unless a sidecar says the clip is synthetic,
+// or a human binding (reader, consent, rights, and the file hash) is present. Existence alone never counts.
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -229,23 +231,43 @@ export function buildEntries({ root = ROOT, existsFn, ...opts } = {}) {
   const rules = (eq.data && eq.data.rules) || [];
 
   // --- expand to voice x tradition
+  const bank = readJson(root, 'data/audio/prayer-bank.json');
+  notes.push(bank.note);
+  for (const it of listItems(bank.data && (bank.data.entries || bank.data))) {
+    if (!it || it.excerpt !== true) { warnings.push('prayer-bank: skipped a row that is not marked as an excerpt'); continue; }
+    add('prayer', it.id, it.he, 'prayer-bank', {
+      group: 'prayer-excerpt', optional: true, english: it.english, excerpt: true,
+      phoneticByTradition: it.phoneticByTradition,
+      onlySlots: Array.isArray(it.onlySlots) && it.onlySlots.length ? it.onlySlots : [['f', 'israeli'], ['m', 'israeli']],
+    });
+  }
+
   const out = [];
   for (const b of base) for (const voice of VOICES) for (const tradition of (b.israeliOnly ? ['israeli'] : TRADITIONS)) {
+    if (Array.isArray(b.onlySlots) && !b.onlySlots.some(([v, t]) => v === voice && t === tradition)) continue;
     const p = audioPath(voice, tradition, b.kind, b.id);
     const e = { path: p, voice, tradition, kind: b.kind, id: b.id, text: b.text };
     const ipa = (b.ipa && b.ipa[tradition]) || (b.ipaAll && b.ipaAll[tradition]);
     if (ipa) e.ipa = ipa;
     let status = 'missing', source = 'none', synth = null;
     if (exists(p)) {
-      status = 'recorded'; source = 'file-present-provenance-unverified';
       const metaRel = `${p}.meta.json`;
-      if (exists(metaRel)) {
+      if (!exists(metaRel)) {
+        warnings.push(`${p}: file present with no provenance sidecar; left missing, not recorded`);
+      } else {
         try {
           const m = JSON.parse(fs.readFileSync(path.join(root, metaRel), 'utf8'));
-          if (m.status === 'recorded' || isSyntheticStatus(m.status)) status = m.status;
-          if (m.source) source = String(m.source);
-          // How a synthetic clip was made (written by tools/tts/manifest_update.mjs); never for a human clip.
-          if (isSyntheticStatus(m.status) && m.synth && typeof m.synth === 'object') synth = m.synth;
+          const synthetic = isSyntheticStatus(m.status) || m.synthetic === true;
+          const human = m.status === 'recorded' && m.human_recording === true && typeof m.reader_id === 'string' && m.reader_id.length > 0
+            && m.rights_verified === true && m.consent_verified === true && typeof m.sha256 === 'string' && /^[0-9a-f]{64}$/.test(m.sha256);
+          if (synthetic) {
+            status = isSyntheticStatus(m.status) ? m.status : 'synthetic-unreviewed';
+            if (m.source) source = String(m.source);
+            if (isSyntheticStatus(status) && m.synth && typeof m.synth === 'object') synth = m.synth;
+          } else if (human) {
+            status = 'recorded';
+            source = m.source ? String(m.source) : 'verified-human';
+          } else warnings.push(`${metaRel}: sidecar is not a synthetic label or a verified human binding; left missing`);
         } catch { warnings.push(`${metaRel}: unreadable`); }
       }
     }
@@ -255,6 +277,10 @@ export function buildEntries({ root = ROOT, existsFn, ...opts } = {}) {
     if (b.optional) e.optional = true;
     if (b.aliasOf) e.aliasOf = b.aliasOf;
     if (b.vocabId) e.vocabId = b.vocabId;
+    if (b.english) e.english = b.english;
+    const phonetic = b.phoneticByTradition && b.phoneticByTradition[tradition];
+    if (phonetic) e.phonetic = phonetic;
+    if (b.excerpt === true) e.excerpt = true;
     const eqTo = rules.filter((r) => r.to !== tradition && r.from === tradition
       && (!r.kinds || r.kinds.includes(b.kind)) && (!r.ids || r.ids.includes(b.id))).map((r) => r.to);
     if (eqTo.length) e.equivalentTo = [...new Set(eqTo)];

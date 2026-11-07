@@ -188,6 +188,15 @@ label.btn:has(+ input[type=file]:focus-visible) { outline: 3px solid var(--focus
 .at-pic{width:100%;max-width:18rem;margin:0 auto .5rem}
 .l-scene,.fv-pic{width:100%;max-width:36rem;margin:0 0 .75rem}
 .pl-pic{max-width:9rem;margin:0 auto .5rem}
+/* Teachers band (src/shell/companions.js): Ari and Noa on every screen, posed for the page. */
+.companions{display:flex;align-items:center;gap:.55rem;padding:.5rem 1rem 0}
+.companions .comp-pic{width:3rem;height:3rem;object-fit:cover;border-radius:50%}
+.companions .comp-names{font-size:.85rem;opacity:.75}
+/* Settings voice-picker portraits (settings.view.js). */
+.teacher-row{display:flex;gap:1.25rem;margin:.25rem 0 .5rem}
+.teacher{margin:0;text-align:center}
+.teacher-pic{width:7rem;height:7rem;object-fit:cover;border-radius:1rem}
+.teacher figcaption{font-size:.85rem;margin-top:.3rem}
 /* Reviewer mode (settings.showUnapprovedImages): visible outline on pictures that are not approved. */
 .alef-img[data-unapproved]{outline:3px dashed #c2410c;outline-offset:2px}
 

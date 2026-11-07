@@ -142,6 +142,9 @@ export function mount(root, ctx) {
     readinessNode(h, { fetchFn: ctx.readinessFetch }), // plain "what is ready and what is not" (src/shell/readiness.js)
     status, // right under the backup buttons so a confirmation is visible without scrolling
     radioGroup('voice', 'settings.voice'),
+    h('div', { class: 'teacher-row', id: 's-teachers' },
+      h('figure', { class: 'teacher' }, ctx.img?.(h, { kind: 'id', id: 'CHAR_noa_listen', width: 300, class: 'teacher-pic' }) ?? null, h('figcaption', {}, 'Noa — the woman’s voice')),
+      h('figure', { class: 'teacher' }, ctx.img?.(h, { kind: 'id', id: 'CHAR_ari_listen', width: 300, class: 'teacher-pic' }) ?? null, h('figcaption', {}, 'Ari — the man’s voice'))),
     h('p', { class: 'muted', id: 's-pron-help' }, 'Pronunciation style is the way Hebrew sounds are said. It changes the sounds you hear and read. Pick the one your synagogue or teacher uses.'),
     radioGroup('congregation', 'settings.congregation'),
     radioGroup('goal', 'settings.goal'),

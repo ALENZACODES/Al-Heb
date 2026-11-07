@@ -34,6 +34,7 @@ export function mount(root, ctx) {
   function renderStart(prev) {
     set(
       ctx.img?.(el, { kind: 'id', id: 'CHAR_ari_neutral', decorative: true, width: 300, class: 'pl-pic' }),
+      ctx.img?.(el, { kind: 'id', id: 'CHAR_noa_neutral', decorative: true, width: 300, class: 'pl-pic' }),
       el('p', { class: 'draft-flag', role: 'note' }, DRAFT_NOTE),
       el('p', {}, `Up to ${items.length} short questions, easiest first. It stops early if several answers in a row are missed. "Not sure" is always fine.`),
       prev ? el('p', {}, `Last suggestion: lesson ${prev.lesson}.`) : null,

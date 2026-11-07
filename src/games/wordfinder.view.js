@@ -34,7 +34,6 @@ export function mount(root, ctx) {
   const audioOff = () => isAudioFree(ctx);
   function persist(word) {
     found = recordFound(found, word.id, bank);
-    found.rounds++;
     try { ctx?.store?.set?.(STORE_KEY, found); } catch { /* private mode: session remains playable */ }
   }
   function updateProgress() {
@@ -117,8 +116,11 @@ export function mount(root, ctx) {
   function nextWord() {
     if (phase !== 'found') return;
     index++;
-    if (index >= deck.length) phase = 'done';
-    else phase = 'learn';
+    if (index >= deck.length) {
+      phase = 'done';
+      found = { ...found, rounds: found.rounds + 1 };
+      try { ctx?.store?.set?.(STORE_KEY, found); } catch { /* learner can continue without persistence */ }
+    } else phase = 'learn';
     hint = false; wrong = new Set(); roundChoices = [];
     sound.textContent = '';
     paint();

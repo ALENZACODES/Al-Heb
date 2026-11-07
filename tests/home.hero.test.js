@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
+import { ANCIENT_TREE_SRC, ANCIENT_TREE_DESCRIPTION } from '../src/shell/astral-tree.js';
 import { N, memStore } from './torahread.fakedom.js';
 import { mount as mountHome } from '../src/shell/home.view.js';
 import { mount as mountWelcome } from '../src/onboarding/firstrun.view.js';
@@ -12,18 +13,26 @@ const ctxFor = () => {
   return { store, settings: createSettings(store), t, hasRoute: () => true, route() {}, installPrompt: { available: () => false } };
 };
 
-test('home and welcome place the living Tree of Knowledge above original text, panels and tiles', () => {
+const rootText = (root) => root.textContent;
+
+test('home and welcome place the ancient Tree of Life above original text, panels and tiles', () => {
   const home = new N('div');
   mountHome(home, ctxFor());
   const welcome = new N('div');
   mountWelcome(welcome, ctxFor());
   for (const root of [home, welcome]) {
-    assert.equal(root.querySelector('.show-hero-img'), null, 'hero uses no image file');
+    assert.equal(root.querySelector('.show-hero-img'), null, 'old book hero is gone');
     const scene = root.querySelector('.astral-scene');
     assert.ok(scene, 'the astral hero scene exists');
-    assert.ok(scene.querySelector('svg'), 'SVG tree exists');
-    assert.ok(scene.all((n) => n.attrs?.class === 'astral-growth').length, 'tree has a growing branch layer');
-    assert.ok(scene.all((n) => n.attrs?.class === 'astral-fruits').length, 'pomegranates are built in SVG');
+    assert.equal(scene.querySelector('svg'), null, 'no geometric cartoon tree');
+    const photo = scene.querySelector('img.astral-tree-photo');
+    assert.ok(photo, 'original aged tree artwork exists');
+    assert.equal(photo.attrs.src, ANCIENT_TREE_SRC);
+    assert.equal(photo.attrs.loading, 'eager');
+    assert.equal(scene.attrs['aria-label'], ANCIENT_TREE_DESCRIPTION);
+    assert.ok(existsSync(new URL('../' + ANCIENT_TREE_SRC, import.meta.url)), 'artwork must ship with ALEF');
+    assert.ok(scene.querySelector('.astral-ray'), 'moving light remains');
+    assert.ok(scene.querySelector('.astral-stars'), 'night sky remains');
     const hero = root.querySelector('.show-hero');
     assert.equal(hero.children[0], scene, 'tree is above text, never covers it');
     assert.ok(root.querySelector('.show-try'), 'first word panel unchanged');
@@ -37,5 +46,9 @@ test('home and welcome place the living Tree of Knowledge above original text, p
   const css = readFileSync(new URL('../assets/css/astral-home.css', import.meta.url), 'utf8');
   assert.match(css, /prefers-reduced-motion:\s*reduce/);
   assert.match(css, /astral-scene\[data-paused="1"\]/);
-  assert.match(css, /@keyframes astral-grow/);
+  assert.match(css, /@keyframes astral-ancient-reveal/);
+  assert.match(css, /\.astral-tree-photo/);
+  const tree = readFileSync(new URL('../src/shell/astral-tree.js', import.meta.url), 'utf8');
+  assert.doesNotMatch(tree, /s\('ellipse'|s\('circle'|makeTree\(/);
+  assert.match(rootText(home), /The Tree of Life/);
 });

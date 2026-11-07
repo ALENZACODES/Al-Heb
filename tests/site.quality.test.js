@@ -109,3 +109,23 @@ test('the generated view inventory covers every local route, including Day-0 Wor
     assert.ok(have.has(path), route.name + ' has a generated view: ' + path);
   }
 });
+
+
+test('first-day words and games use dedicated clean, local cultural-object artwork', () => {
+  const css = read('assets/css/astral-home.css');
+  const assets = [
+    'assets/img/gen/PORTAL_words_clay.webp',
+    'assets/img/gen/PORTAL_games_shofar.webp',
+  ];
+  for (const path of assets) {
+    const bytes = readFileSync(new URL('../' + path, import.meta.url));
+    assert.equal(bytes.toString('ascii', 0, 4), 'RIFF', path);
+    assert.equal(bytes.toString('ascii', 8, 12), 'WEBP', path);
+    assert.ok(bytes.length > 20000 && bytes.length < 80000, 'lightweight portal artwork: ' + path);
+    assert.ok(!bytes.includes(Buffer.from('EXIF')), 'no EXIF payload: ' + path);
+    assert.ok(!bytes.includes(Buffer.from('XMP ')), 'no XMP chunk: ' + path);
+    assert.ok(css.includes(path.replace('assets/img/', '../img/')), 'visible CSS background: ' + path);
+  }
+  assert.ok(css.includes('.show-portal--clay .show-portal-art'));
+  assert.ok(css.includes('.show-portal--harvest .show-portal-art'));
+});

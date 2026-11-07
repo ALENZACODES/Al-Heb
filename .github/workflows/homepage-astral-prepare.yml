@@ -1,0 +1,28 @@
+name: Astral homepage branch prepare
+on:
+  push:
+    branches:
+      - chatgpt/homepage-astral-2026-11-07
+permissions:
+  contents: write
+jobs:
+  generate-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with: { node-version: 22 }
+      - name: Regenerate exactly the project's way
+        run: node tools/build-precache.mjs
+      - name: Commit only generated outputs to this feature branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add precache-manifest.js src/shell/views.generated.js
+          if ! git diff --cached --quiet; then
+            git commit -m 'Regenerate homepage precache and view inventory'
+            git push origin HEAD:refs/heads/chatgpt/homepage-astral-2026-11-07
+          fi
+      - name: Unit tier
+        run: node tools/test/run.mjs unit

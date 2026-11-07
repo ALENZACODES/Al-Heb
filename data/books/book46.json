@@ -17,7 +17,7 @@
    },
    "illustration": "an open-plan office with five desks and a whiteboard",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 2,
@@ -31,7 +31,7 @@
    },
    "illustration": "the team around a whiteboard covered in arrows",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 3,
@@ -45,7 +45,7 @@
    },
    "illustration": "a woman with a marker, listening",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 4,
@@ -59,7 +59,7 @@
    },
    "illustration": "the clock reading 9:40",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 5,
@@ -73,7 +73,7 @@
    },
    "illustration": "a laptop with a spinning wheel, panic",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 6,
@@ -87,7 +87,7 @@
    },
    "illustration": "everyone looking at everyone",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 7,
@@ -101,7 +101,7 @@
    },
    "illustration": "a man hammering keys",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 8,
@@ -115,7 +115,7 @@
    },
    "illustration": "an older man with a mop",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 9,
@@ -129,7 +129,7 @@
    },
    "illustration": "the cleaner leaning over, pressing one key",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 10,
@@ -143,7 +143,7 @@
    },
    "illustration": "the screen alive, the team cheering",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 11,
@@ -157,7 +157,7 @@
    },
    "illustration": "the manager shaking the cleaner's hand",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 12,
@@ -171,7 +171,7 @@
    },
    "illustration": "the cleaner smiling modestly, the clock striking ten",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   }
  ]
 }

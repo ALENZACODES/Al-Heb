@@ -17,7 +17,7 @@
    },
    "illustration": "a bus shelter on a busy road, morning, a few people waiting",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 2,
@@ -31,7 +31,7 @@
    },
    "illustration": "a woman in office clothes checking her watch",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 3,
@@ -45,7 +45,7 @@
    },
    "illustration": "the empty road stretching away, heat haze",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 4,
@@ -59,7 +59,7 @@
    },
    "illustration": "the woman leaning on the pole, phone at ten percent",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 5,
@@ -73,7 +73,7 @@
    },
    "illustration": "an elderly man with a cane sitting calmly on the bench",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 6,
@@ -87,7 +87,7 @@
    },
    "illustration": "the old man speaking, unbothered",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 7,
@@ -101,7 +101,7 @@
    },
    "illustration": "the woman rolling her eyes with a half-smile",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 8,
@@ -115,7 +115,7 @@
    },
    "illustration": "a wrinkled hand offering a wrapped candy",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 9,
@@ -129,7 +129,7 @@
    },
    "illustration": "the woman laughing, candy in hand",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 10,
@@ -143,7 +143,7 @@
    },
    "illustration": "a green bus rounding the corner, doors opening",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 11,
@@ -157,7 +157,7 @@
    },
    "illustration": "the woman stepping up, tapping her card",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 12,
@@ -171,7 +171,7 @@
    },
    "illustration": "the old man waving from the bench, seen through the bus window",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   }
  ]
 }

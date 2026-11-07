@@ -17,7 +17,7 @@
    },
    "illustration": "a man at a kitchen table with flashcards",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 2,
@@ -31,7 +31,7 @@
    },
    "illustration": "reading glasses, a determined face",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 3,
@@ -45,7 +45,7 @@
    },
    "illustration": "a page of letters, some circled, some crossed out",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 4,
@@ -59,7 +59,7 @@
    },
    "illustration": "his finger moving across a line, an arrow drawn above",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 5,
@@ -73,7 +73,7 @@
    },
    "illustration": "two letters side by side, one with a dot",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 6,
@@ -87,7 +87,7 @@
    },
    "illustration": "the man rubbing his eyes",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 7,
@@ -101,7 +101,7 @@
    },
    "illustration": "the book closed, pushed away",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 8,
@@ -115,7 +115,7 @@
    },
    "illustration": "a radio on the counter",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 9,
@@ -129,7 +129,7 @@
    },
    "illustration": "his head lifting, eyes wide",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 10,
@@ -143,7 +143,7 @@
    },
    "illustration": "the word written large on his flashcard",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 11,
@@ -157,7 +157,7 @@
    },
    "illustration": "the book open again, pencil in hand",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 12,
@@ -171,7 +171,7 @@
    },
    "illustration": "the table covered with cards, the man smiling",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   }
  ]
 }

@@ -17,7 +17,7 @@
    },
    "illustration": "a grey apartment block, a bicycle, a man at a window",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 2,
@@ -31,7 +31,7 @@
    },
    "illustration": "a sunny low house, a lemon tree",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 3,
@@ -45,7 +45,7 @@
    },
    "illustration": "a phone, a calendar with Sundays marked",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 4,
@@ -59,7 +59,7 @@
    },
    "illustration": "the man on a video call, his mother's face filling the screen",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 5,
@@ -73,7 +73,7 @@
    },
    "illustration": "the mother squinting into the camera",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 6,
@@ -87,7 +87,7 @@
    },
    "illustration": "the man hiding an empty plate",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 7,
@@ -101,7 +101,7 @@
    },
    "illustration": "the mother's unimpressed face",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 8,
@@ -115,7 +115,7 @@
    },
    "illustration": "a sad slice of bread",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 9,
@@ -129,7 +129,7 @@
    },
    "illustration": "the mother's silence, louder than words",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 10,
@@ -143,7 +143,7 @@
    },
    "illustration": "the mother already packing a box: spices, cookies, a jar",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 11,
@@ -157,7 +157,7 @@
    },
    "illustration": "the box arriving in Berlin, smelling of home",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 12,
@@ -171,7 +171,7 @@
    },
    "illustration": "the man eating cookies at his window, eyes closed",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   }
  ]
 }

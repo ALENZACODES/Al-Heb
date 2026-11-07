@@ -17,7 +17,7 @@
    },
    "illustration": "a quiet reading hall, tall windows",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 2,
@@ -31,7 +31,7 @@
    },
    "illustration": "a sign: quiet please, a librarian's glance",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 3,
@@ -45,7 +45,7 @@
    },
    "illustration": "a man at the same table, same chair",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 4,
@@ -59,7 +59,7 @@
    },
    "illustration": "an open book he isn't looking at",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 5,
@@ -73,7 +73,7 @@
    },
    "illustration": "a laptop with job listings, a worn CV",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 6,
@@ -87,7 +87,7 @@
    },
    "illustration": "a librarian watching kindly over her glasses",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 7,
@@ -101,7 +101,7 @@
    },
    "illustration": "a slim book placed silently",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 8,
@@ -115,7 +115,7 @@
    },
    "illustration": "the title on the cover",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 9,
@@ -129,7 +129,7 @@
    },
    "illustration": "the man covering his mouth",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 10,
@@ -143,7 +143,7 @@
    },
    "illustration": "the CV reworked, red pen everywhere",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 11,
@@ -157,7 +157,7 @@
    },
    "illustration": "his phone lighting up in the hall, a rush to the door",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 12,
@@ -171,7 +171,7 @@
    },
    "illustration": "a bouquet set on the librarian's desk, a thumbs up",
    "hasImg": false,
-   "hasAudio": false
+   "hasAudio": true
   }
  ]
 }

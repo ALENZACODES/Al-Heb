@@ -17,7 +17,7 @@
    },
    "illustration": "dim bedroom, grey light at the window, phone alarm glowing on the nightstand",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 2,
@@ -31,7 +31,7 @@
    },
    "illustration": "a woman in her thirties sitting up in bed, hair messy, eyes half closed",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 3,
@@ -45,7 +45,7 @@
    },
    "illustration": "the woman shuffling to a small kitchen in a bathrobe",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 4,
@@ -59,7 +59,7 @@
    },
    "illustration": "an empty coffee jar held upside down, one bean falling out",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 5,
@@ -73,7 +73,7 @@
    },
    "illustration": "open fridge, bare shelves, a single lemon",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 6,
@@ -87,7 +87,7 @@
    },
    "illustration": "the woman pulling a coat over pajamas, keys in hand",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 7,
@@ -101,7 +101,7 @@
    },
    "illustration": "a small corner café with a striped awning, morning street",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 8,
@@ -115,7 +115,7 @@
    },
    "illustration": "the woman at the counter, barista smiling, espresso machine steaming",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 9,
@@ -129,7 +129,7 @@
    },
    "illustration": "close-up of a paper cup, steam curling, hands around it",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 10,
@@ -143,7 +143,7 @@
    },
    "illustration": "the woman with eyes closed, first sip, pure relief",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 11,
@@ -157,7 +157,7 @@
    },
    "illustration": "the woman walking back along a sunny street, cup in hand",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "n": 12,
@@ -171,7 +171,7 @@
    },
    "illustration": "the coffee cup on a desk beside a laptop, sunlight, the day begins",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": true
   }
  ]
 }

@@ -68,9 +68,9 @@
    "level": "Beginner 1",
    "pageCount": 12,
    "hasImages": true,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 12,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book7",
@@ -80,9 +80,9 @@
    "level": "Beginner 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book8",
@@ -92,9 +92,9 @@
    "level": "Beginner 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book9",
@@ -104,9 +104,9 @@
    "level": "Beginner 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book10",
@@ -116,9 +116,9 @@
    "level": "Beginner 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book11",
@@ -128,9 +128,9 @@
    "level": "Beginner 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book12",
@@ -140,9 +140,9 @@
    "level": "Beginner 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book13",
@@ -152,9 +152,9 @@
    "level": "Beginner 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book14",
@@ -164,9 +164,9 @@
    "level": "Beginner 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book15",
@@ -176,9 +176,9 @@
    "level": "Beginner 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book16",
@@ -188,9 +188,9 @@
    "level": "Beginner 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book17",
@@ -200,9 +200,9 @@
    "level": "Beginner 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book18",
@@ -212,9 +212,9 @@
    "level": "Beginner 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book19",
@@ -224,9 +224,9 @@
    "level": "Beginner 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book20",
@@ -236,9 +236,9 @@
    "level": "Beginner 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book21",
@@ -248,9 +248,9 @@
    "level": "Beginner 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book22",
@@ -260,9 +260,9 @@
    "level": "Beginner 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book23",
@@ -272,9 +272,9 @@
    "level": "Beginner 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book24",
@@ -284,9 +284,9 @@
    "level": "Beginner 1",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book25",
@@ -296,9 +296,9 @@
    "level": "Beginner 2",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book26",
@@ -308,9 +308,9 @@
    "level": "Beginner 2",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book27",
@@ -320,9 +320,9 @@
    "level": "Beginner 2",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book28",
@@ -332,9 +332,9 @@
    "level": "Beginner 2",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book29",
@@ -344,9 +344,9 @@
    "level": "Beginner 2",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book30",
@@ -356,9 +356,9 @@
    "level": "Beginner 2",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book31",
@@ -368,9 +368,9 @@
    "level": "Beginner 2",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book32",
@@ -380,9 +380,9 @@
    "level": "Beginner 2",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book33",
@@ -392,9 +392,9 @@
    "level": "Beginner 2",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book34",
@@ -404,9 +404,9 @@
    "level": "Beginner 2",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book35",
@@ -416,9 +416,9 @@
    "level": "Beginner 2",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book36",
@@ -428,9 +428,9 @@
    "level": "Beginner 2",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book37",
@@ -440,9 +440,9 @@
    "level": "Beginner 2",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book38",
@@ -452,9 +452,9 @@
    "level": "Beginner 2",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book39",
@@ -464,9 +464,9 @@
    "level": "Beginner 2",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book40",
@@ -476,9 +476,9 @@
    "level": "Beginner 2",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book41",
@@ -488,9 +488,9 @@
    "level": "Beginner 2",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book42",
@@ -500,9 +500,9 @@
    "level": "Beginner 2",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book43",
@@ -512,9 +512,9 @@
    "level": "Beginner 2",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book44",
@@ -524,9 +524,9 @@
    "level": "Beginner 3",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book45",
@@ -536,9 +536,9 @@
    "level": "Beginner 3",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book46",
@@ -548,9 +548,9 @@
    "level": "Beginner 3",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book47",
@@ -560,9 +560,9 @@
    "level": "Beginner 3",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book48",
@@ -572,9 +572,9 @@
    "level": "Beginner 3",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book49",
@@ -584,9 +584,9 @@
    "level": "Beginner 3",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book50",
@@ -596,9 +596,9 @@
    "level": "Beginner 3",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book51",
@@ -608,9 +608,9 @@
    "level": "Beginner 3",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book52",
@@ -620,9 +620,9 @@
    "level": "Beginner 3",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book53",
@@ -632,9 +632,9 @@
    "level": "Beginner 3",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book54",
@@ -644,9 +644,9 @@
    "level": "Beginner 3",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book55",
@@ -656,9 +656,9 @@
    "level": "Beginner 3",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book56",
@@ -668,9 +668,9 @@
    "level": "Beginner 3",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book57",
@@ -680,9 +680,9 @@
    "level": "Beginner 3",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book58",
@@ -692,9 +692,9 @@
    "level": "Beginner 3",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book59",
@@ -704,9 +704,9 @@
    "level": "Beginner 3",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book60",
@@ -716,9 +716,9 @@
    "level": "Beginner 3",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book61",
@@ -728,9 +728,9 @@
    "level": "Beginner 3",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   },
   {
    "id": "book62",
@@ -740,9 +740,9 @@
    "level": "Beginner 3",
    "pageCount": 12,
    "hasImages": false,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 0,
-   "audioPages": 0
+   "audioPages": 12
   }
  ]
 }

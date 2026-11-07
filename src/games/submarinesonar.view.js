@@ -63,7 +63,11 @@ export function mount(root,ctx) {
     if(!alive||!article.isConnected)return;R=images;
     groups=shuffled(buildSonarDeck(data).filter(g=>g.some(w=>hasRecordedClip(ctx,'word',w.id))))
       .map(g=>g.filter(w=>hasRecordedClip(ctx,'word',w.id))).filter(g=>g.length>=2);
-    if(!groups.length){status.textContent='No exact pair of recorded pointed spellings. Sonar rounds are disabled.';return;}
+    if(!groups.length){
+      status.textContent='No exact pair of recorded pointed spellings. Sonar rounds are disabled.';
+      placeBoard(board, envNode(h, R, GAME_ENV.sonar));
+      return;
+    }
     void paint();
   }).catch(()=>{if(alive)status.textContent='Sonar word data unavailable.';});
   return ()=>{alive=false; leaveSfx();ctx?.audio?.stop?.();};

@@ -79,7 +79,9 @@ export function mount(root,ctx) {
     deadline=nextShabbatSunset(new Date(),location);
     if(!deadline){status.textContent='Sunset calculation unavailable.';return;}
     if(!CATEGORIES.every(c=>hasRecordedClip(ctx,'word',c.clipId))){
-      status.textContent='Recorded Hebrew category call-outs unavailable. No guessing rounds.';return;
+      status.textContent='Recorded Hebrew category call-outs unavailable. No guessing rounds.';
+      placeBoard(board, envNode(h, R, GAME_ENV.shabbat));
+      return;
     }
     if(!deck.some(r=>r.topic==='food-drink')||!deck.some(r=>r.topic==='home-things')){
       status.textContent='Collectible vocabulary missing.';return;

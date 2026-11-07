@@ -151,9 +151,9 @@
    "titleEn": "I Have, I Don't Have",
    "level": "Beginner 1",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": false,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 0
   },
   {

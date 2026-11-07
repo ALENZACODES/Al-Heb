@@ -21,4 +21,4 @@ git config user.name "John Khan"
 git config user.email "johnnykhan1@gmail.com"
 ```
 
-Commits merged through the GitHub web UI or API carry the account's no-reply address instead; `.mailmap` folds those back to the same identity in `git log` and `git shortlog`. Do not add co-author trailers, and keep tool, assistant and model names out of commit messages, branch names and files (`node tools/meta/scan.mjs --text` checks the files). Branches are named `john/<topic>-<date>`.
+Commits merged through the GitHub web UI or API carry the account's no-reply address instead; `.mailmap` folds those back to the same identity in `git log` and `git shortlog`. Do not add co-author trailers, and keep tool, assistant and model names out of commit messages, branch names and files (`node tools/meta/scan.mjs --text` checks the files). Branches are named `john/<topic>-<date>`. Strays from earlier workflows are tidied with `sh tools/git/branch-cleanup.sh` (dry run) and `--apply`: a branch main already contains is deleted, anything else is renamed to `john/…` so its work and open pull request survive.

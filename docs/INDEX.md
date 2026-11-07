@@ -121,7 +121,7 @@ copies and 764 draft animation poses, none approved and none wired into the app)
 | [`INDEX.md`](INDEX.md) | Docs index |
 | [`NEXT-STEPS-JOHN.md`](NEXT-STEPS-JOHN.md) | Next steps that only John can do |
 | [`NOTES.md`](NOTES.md) | Maintenance notes — 2026-11-04 |
-| [`STATUS.md`](STATUS.md) | ALEF status (counts re-run 2026-11-05 on `main` 0f0daea; prose sections below carry their own dates) |
+| [`STATUS.md`](STATUS.md) | ALEF status (counts re-run 2026-11-07 on `main` 6334857; prose sections below carry their own dates) |
 | [`TOOLING.md`](TOOLING.md) | Dev tooling record (Round 2) |
 | [`homepage-astral.md`](homepage-astral.md) | ALEF homepage — astral Tree of Knowledge (branch candidate) |
 | [`homepage-olive-harvest.md`](homepage-olive-harvest.md) | ALEF opening — ancient olive harvest under the stars |

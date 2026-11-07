@@ -11,3 +11,14 @@ node tools/meta/scan.mjs --text
 ```
 
 `npm test` is the fast unit tier. The CI workflow on `main` also runs the browser tier and the `build-dist` job. See [README.md](README.md) and [docs/INDEX.md](docs/INDEX.md).
+
+## Commit authorship
+
+Every commit is authored by the maintainer under one identity:
+
+```sh
+git config user.name "John Khan"
+git config user.email "johnnykhan1@gmail.com"
+```
+
+Commits merged through the GitHub web UI or API carry the account's no-reply address instead; `.mailmap` folds those back to the same identity in `git log` and `git shortlog`. Do not add co-author trailers, and keep tool, assistant and model names out of commit messages, branch names and files (`node tools/meta/scan.mjs --text` checks the files). Branches are named `john/<topic>-<date>`.

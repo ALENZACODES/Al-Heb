@@ -82,6 +82,7 @@ export const STORE_KEYS = [
   ['alef.audioBannerSeen.v1', 'Whether you dismissed the audio notice (saved under this exact name, without the "alef:" prefix)', 'src/shell/audio-access.js'],
   ['alef.storage-notice.v1', 'Storage notice state and whether you dismissed it (saved under this exact name, without the "alef:" prefix)', 'src/shell/install-notice.js'],
   ['alef.scroll.v1', 'Scroll position per screen, so Back returns you to the same place. Unlike every other row it is kept in sessionStorage, not localStorage: it is tied to this browser tab and is gone when the tab closes. Each entry is named by the screen address, so a term typed on the Search screen can appear in an entry name (exact name, without the "alef:" prefix)', 'src/shell/scroll-restore.js'],
+  ['awards.v1', 'Awards on this device: practice-game activity, the name typed for a certificate sample, and any objective assessment evidence stored later. Lesson completion is not copied here. There is no account.', 'src/awards/record.js'],
 ];
 
 const table = (caption, head, rows) => h('div', { class: 'table-wrap', role: 'region', 'aria-label': caption, tabindex: '0' }, h('table', { class: 'priv-table' }, h('caption', {}, caption),

@@ -11,6 +11,7 @@ export const NAV_EN = {
   'nav.section.progress.desc': 'What you have done, what to review, and the Jewish calendar.',
   'nav.section.more.desc': 'Settings, search, install, offline use, credits and privacy.',
   'nav.more': 'More', 'nav.search': 'Search', 'nav.menu.label': 'All sections',
+  'nav.phrases': 'Common phrases',
   'nav.route.nikkud-fade': 'Vowel marks, fading out',
   'nav.route.roots': 'Roots and verb families',
   'nav.route.gender-drill': 'Gender drill',

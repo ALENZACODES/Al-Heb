@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 // Post-process rendered WAV -> final MP3, named exactly like the manifest paths: <out>/audio/<voice>/<tradition>/<kind>/<id>.mp3
 //   node tools/tts/post.mjs [--plan tools/tts/plan.json] [--work ~/alef-tts-work] [--limit N] [--force]
-// Per clip: trim leading/trailing silence, EBU R128 loudness normalise to -16 LUFS (two-pass loudnorm, TP -1.5 dBTP, LRA 11),
-// mono, 44.1 kHz, CBR 64 kbps MP3, ALL metadata stripped (no ID3, no Xing/Info header, no encoder string), then verified with ffprobe. --jobs N runs N ffmpeg pipelines in parallel (default half the CPUs).
+// Per clip: trim leading/trailing silence (80 ms kept at each end), EBU R128 loudness normalise to -16 LUFS (two-pass loudnorm, TP -1 dBTP, LRA 11),
+// mono, 44.1 kHz, CBR 96 kbps MP3, ALL metadata stripped (no ID3, no Xing/Info header, no encoder string), then verified with ffprobe. --jobs N runs N ffmpeg pipelines in parallel (default half the CPUs).
 // Resumable: an MP3 newer than its WAV is skipped. Needs ffmpeg + ffprobe on PATH (override with FFMPEG / FFPROBE).
 import fs from 'node:fs';
 import path from 'node:path';
@@ -11,10 +11,12 @@ import os from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { TTS_DIR, defaultWork, parseArgs, clipPath } from './lib.mjs';
 
-export const TARGET = { I: -16, TP: -1.5, LRA: 11 };
+export const TARGET = { I: -16, TP: -1, LRA: 11 };
+export const BITRATE_K = 96; // CBR kbps; 96 kbps = 12,000 bytes/s
+export const EDGE_SILENCE_S = 0.08; // silence kept at the head and at the tail
 const FF = () => process.env.FFMPEG || 'ffmpeg';
 const FP = () => process.env.FFPROBE || 'ffprobe';
-export const TRIM = 'silenceremove=start_periods=1:start_threshold=-50dB:start_silence=0.05,areverse,silenceremove=start_periods=1:start_threshold=-50dB:start_silence=0.08,areverse';
+export const TRIM = `silenceremove=start_periods=1:start_threshold=-50dB:start_silence=${EDGE_SILENCE_S},areverse,silenceremove=start_periods=1:start_threshold=-50dB:start_silence=${EDGE_SILENCE_S},areverse`;
 const run = (cmd, args) => spawnSync(cmd, args, { encoding: 'utf8', maxBuffer: 1 << 26 });
 const runAsync = (cmd, args, binary = false) => new Promise((resolve) => {
   const p = spawn(cmd, args); const out = [], err = [];
@@ -43,7 +45,7 @@ export async function encode(wav, outMp3, j) {
   const tmp = outMp3 + '.part.mp3';
   const r = await runAsync(FF(), ['-hide_banner', '-loglevel', 'error', '-y', '-i', wav, '-af', `${TRIM},${ln}`, '-ar', '44100', '-ac', '1',
     '-map_metadata', '-1', '-map_chapters', '-1', '-fflags', '+bitexact', '-flags:a', '+bitexact',
-    '-c:a', 'libmp3lame', '-b:a', '64k', '-reservoir', '0', '-write_xing', '0', '-id3v2_version', '0', '-write_id3v1', '0', tmp]);
+    '-c:a', 'libmp3lame', '-b:a', `${BITRATE_K}k`, '-reservoir', '0', '-write_xing', '0', '-id3v2_version', '0', '-write_id3v1', '0', tmp]);
   if (r.status !== 0) throw new Error(`ffmpeg encode failed for ${wav}: ${(r.stderr || '').slice(-300)}`);
   // -reservoir 0 keeps every frame self-contained, so the padding can be zeroed without changing a sample (with the reservoir on, it cannot).
   // libmp3lame writes its version string ("LAME3.100", sometimes cut short) into the padding of EVERY frame, even with bitexact flags.

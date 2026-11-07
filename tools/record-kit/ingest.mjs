@@ -5,7 +5,7 @@
 // Validation per clip: name follows audio/<m|f>/<tradition>/<kind>/<id>.<ext>; the path (as .mp3) exists in data/audio/manifest*.json; the file
 // decodes; duration 0.25 to 30 s; no clipping (peak >= -0.1 dBFS) and not silent (errors reject the clip); quiet or a mismatch with the page's
 // manifest.csv (duration, peak, voice, tradition) is a warning. consent.json must exist with every required box ticked, else nothing is accepted.
-// --apply: runs the same chain as tools/tts/post.mjs (trim, two-pass loudnorm to -16 LUFS, mono 44.1 kHz CBR MP3, all metadata stripped, verified),
+// --apply: runs the same chain as tools/tts/post.mjs (trim to 80 ms head and tail, two-pass loudnorm to -16 LUFS, true peak -1 dBTP, mono 44.1 kHz CBR 96 kbps MP3, all metadata stripped, verified),
 // stages MP3s under <work>/<donor>/audio/, copies accepted ones into <root>/audio/ with a .meta.json sidecar (status "recorded"), and sets the
 // manifest entry to status "recorded". Consent files are copied to <work>/<donor>/consent/ and are NEVER copied into the repo (they hold a real name).
 // Same-text copies: some lesson-word ids (r04-w1, r04-w2, r05-w1, ...) have exactly the pointed text of another word with the same voice and

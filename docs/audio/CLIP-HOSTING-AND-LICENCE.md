@@ -45,12 +45,12 @@ Three per-clip figures exist. They differ because they measure different things:
 | b | 7.3 KiB | tool-measured average reported in [`INGEST-REPORT-88-tool.md`](INGEST-REPORT-88-tool.md) (written when 5 more were applied; the report does not say which clips it averages) |
 | c | about 12.9 KiB | 1.1 MB for the 87 clips as stated in the owner's request (the first report says 1.1 MB for 82 MP3 plus 82 sidecar files). Includes sidecar files and disk block rounding, so it is an upper bound for the MP3s alone. Not re-measured here: `audio/` is not in the working copy used to write this sheet. |
 
-The tool's own conversion setting is 64 kbps mono, which is 8,000 bytes per second, about 7.8 KiB per second. The 87 clips run roughly 0.3 to 1.8 s each (reports), which is consistent with figure a and b.
+Those 87 clips were encoded at 64 kbps mono, which is 8,000 bytes per second, about 7.8 KiB per second. They run roughly 0.3 to 1.8 s each (reports), which is consistent with figure a and b. New clips from `tools/tts/post.mjs` are 96 kbps CBR (12,000 bytes per second), -16 LUFS, true peak -1 dBTP, with 80 ms of silence kept at each end.
 
 **Formulas** (all KiB, divide by 1024 for MiB):
 
 - Size of N clips of one kind: `S = N x s`.
-- Mixed set: `S = Nw x sw + Nl x sl + Np x sp`, with words `sw` from the table above, and, as an **assumption not measured by anything in the repo**, lines about 4 s (`sl` = 32 KiB) and prayers about 8 s (`sp` = 64 KiB) at 8 KiB per second. Every measured clip so far is a single word, so extrapolating word-sized numbers to lines and prayers is the weakest part of this table.
+- Mixed set: `S = Nw x sw + Nl x sl + Np x sp`, with words `sw` from the table above, and, as an **assumption not measured by anything in the repo**, lines about 4 s (`sl` = 32 KiB) and prayers about 8 s (`sp` = 64 KiB) at 8 KiB per second (the 64 kbps rate of the measured clips; a new encode at 96 kbps is 12 KB per second). Every measured clip so far is a single word, so extrapolating word-sized numbers to lines and prayers is the weakest part of this table.
 
 | Set | N | at a (6.6) | at b (7.3) | at c (12.9) |
 |---|---:|---:|---:|---:|

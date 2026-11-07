@@ -132,7 +132,7 @@ test('apply: converts, strips tags, neutral names, synthetic-unreviewed + proven
       const e = m.find((x) => x.path === p); const f = path.join(root, p);
       assert.equal(e.status, 'synthetic-unreviewed'); assert.equal(e.source, OUTSIDE_SOURCE); assert.ok(isSyntheticStatus(e.status)); assert.notEqual(e.status, 'recorded');
       assert.equal(e.synth.origin, OUTSIDE_SOURCE); assert.equal(e.synth.reviewed, false); assert.equal(e.synth.redistributionCleared, false); assert.equal(e.synth.batch, 'fixture batch');
-      assert.ok(checkMp3(f).ok, 'mono 44.1 kHz mp3 with no tags or encoder string: ' + checkMp3(f).problems.join());
+      const probed = checkMp3(f); assert.ok(probed.ok, 'mono 44.1 kHz mp3 with no tags or encoder string: ' + probed.problems.join()); assert.ok(probed.info.bit_rate >= 80000 && probed.info.bit_rate <= 112000, `bitrate ${probed.info.bit_rate}`);
       const side = fs.readFileSync(`${f}.meta.json`, 'utf8'); const sj = JSON.parse(side);
       assert.equal(sj.status, 'synthetic-unreviewed'); assert.equal(sj.reviewed, false); assert.deepEqual(sj.synth, e.synth);
       assert.ok(!/r01-w1\.wav|f_israeli|somegen/.test(side), 'original file names and tags are not copied');
@@ -201,7 +201,7 @@ test('size budget: over budget flags exit code 1 and --apply refuses', async () 
     assert.equal(r.budget.over, true); assert.equal(r.exitCode, 1); assert.match(report(r), /OVER BUDGET/);
     const ap = await run({ input: inp, root, apply: true, thresholds: { budgetMb: 0.001 } });
     assert.match(ap.errors.join(), /budget/); assert.equal(ap.applied, 0); assert.ok(!fs.existsSync(path.join(root, 'audio')));
-    const ok = await run({ input: inp, root, tryConvert: 0 }); assert.equal(ok.budget.over, false); assert.ok(ok.budget.newEstimatedBytes > 8000 && ok.budget.newEstimatedBytes < 20000, String(ok.budget.newEstimatedBytes));
+    const ok = await run({ input: inp, root, tryConvert: 0 }); assert.equal(ok.budget.over, false); assert.ok(ok.budget.newEstimatedBytes > 16000 && ok.budget.newEstimatedBytes < 24000, String(ok.budget.newEstimatedBytes));
   } finally { rm(root); rm(inp); }
 });
 

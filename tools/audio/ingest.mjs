@@ -14,7 +14,7 @@
 // WHAT IT NEVER DOES: write status "recorded" (a human recording); touch an entry that is "recorded" or "synthetic-reviewed"; change anything without --apply;
 // judge whether the speech is correct Hebrew (no tool can; a native listener must).
 // Matching is by FILE NAME and FOLDERS to the manifest id (rules in matchFile / docs/audio/INGEST-CLIPS.md). Never guesses: unmatched and ambiguous files are reported.
-// Delivery format = the repo's: mono 44.1 kHz 64 kbps MP3, loudness -16 LUFS, all metadata stripped (same encoder as tools/tts/post.mjs).
+// Delivery format = the repo's: mono 44.1 kHz 96 kbps MP3, loudness -16 LUFS, true peak -1 dBTP, 80 ms of silence at each end, all metadata stripped (same encoder as tools/tts/post.mjs).
 // Needs ffmpeg + ffprobe for anything but reading .wav files; without them the report says what could not be checked and --apply refuses to convert.
 import fs from 'node:fs';
 import os from 'node:os';
@@ -24,7 +24,7 @@ import { spawn, spawnSync } from 'node:child_process';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { loadManifestFull } from './manifest_io.mjs';
 import { manifestFiles } from '../tts/manifest_update.mjs';
-import { measure, encode, checkMp3, integratedLufs, TARGET } from '../tts/post.mjs';
+import { measure, encode, checkMp3, integratedLufs, TARGET, BITRATE_K, EDGE_SILENCE_S } from '../tts/post.mjs';
 import { parseCsv, parseArgs, stripNiqqud } from '../tts/lib.mjs';
 import { HUMAN_ONLY_GROUPS } from './coverage.mjs';
 import { computeManifest } from '../build-precache.mjs';
@@ -358,7 +358,8 @@ export function deliveryAudit(root = ROOT) {
 // ---------- the run ----------
 const sha256 = (f) => crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
 function dirBytes(dir) { let n = 0; if (!fs.existsSync(dir)) return 0; for (const x of fs.readdirSync(dir, { withFileTypes: true })) { const p = path.join(dir, x.name); if (x.isDirectory()) n += dirBytes(p); else if (/\.(mp3|m4a|ogg|wav)$/i.test(x.name)) n += fs.statSync(p).size; } return n; }
-const estBytes = (a) => Math.max(0, Math.round(((a?.duration ?? 0) - (a?.m ? Math.min(a.m.leadSec, 99) + Math.min(a.m.trailSec, 99) : 0) + 0.13) * 8000)); // 64 kbps = 8000 B/s
+const BYTES_PER_SEC = BITRATE_K * 1000 / 8; // 96 kbps = 12000 B/s
+const estBytes = (a) => Math.max(0, Math.round(((a?.duration ?? 0) - (a?.m ? Math.min(a.m.leadSec, 99) + Math.min(a.m.trailSec, 99) : 0) + EDGE_SILENCE_S * 2) * BYTES_PER_SEC));
 
 /**
  * Core pipeline. opts: { input, root, apply, listing, voice, tradition, kind, thresholds..., jobs, tryConvert, batch, batchNote, strict, replace, allowHumanOnly, now }
@@ -531,10 +532,10 @@ export function report(res, o = {}) {
     L.push(`- peak dBFS: ${stats((r) => r.a.m.peakDb)}`, `- clips with metadata/tags that conversion strips: ${ok.filter((r) => r.a.tags.length).length}`, '');
   }
   const b = res.budget;
-  L.push('## Size budget', '', `- already under audio/: ${mb(b.existingBytes)} MB; new clips (${res.apply ? 'written' : 'estimated at 64 kbps'}): ${mb(b.newEstimatedBytes)} MB; total ${b.totalMb.toFixed(1)} MB against a budget of ${b.budgetMb} MB: **${b.over ? 'OVER BUDGET' : 'within budget'}**`);
+  L.push('## Size budget', '', `- already under audio/: ${mb(b.existingBytes)} MB; new clips (${res.apply ? 'written' : `estimated at ${BITRATE_K} kbps`}): ${mb(b.newEstimatedBytes)} MB; total ${b.totalMb.toFixed(1)} MB against a budget of ${b.budgetMb} MB: **${b.over ? 'OVER BUDGET' : 'within budget'}**`);
   if (b.avgKb) L.push(`- average ${b.avgKb.toFixed(1)} KB per clip; if all ${b.entries} manifest entries had a clip of this size, about ${b.fullManifestEstimateMb.toFixed(0)} MB (a projection, not a measurement)`);
   L.push(`- per-clip cap ${b.perClipMaxKb} KB. The ${b.budgetMb} MB budget is this tool's default, not a hosting-platform limit; committing clips to git makes the repository history grow by that much permanently.`, '');
-  if (res.convertSample) { const c = res.convertSample; L.push('## Conversion sample (scratch folder, deleted)', '', `- ${c.ok} of ${c.n} sample clips converted and passed the metadata check (mono 44.1 kHz 64 kbps MP3, no tags, no encoder string); measured ${c.measuredBytes} B against estimated ${c.estimatedBytes} B; loudness after: ${c.sample.map((s) => (s.lufs == null ? 'n/a' : s.lufs.toFixed(1))).join(', ')} LUFS (target ${TARGET.I})`); for (const s of c.sample) if (!s.ok) L.push(`- FAILED sample: ${s.problems.join('; ')}`); L.push(''); }
+  if (res.convertSample) { const c = res.convertSample; L.push('## Conversion sample (scratch folder, deleted)', '', `- ${c.ok} of ${c.n} sample clips converted and passed the metadata check (mono 44.1 kHz ${BITRATE_K} kbps MP3, no tags, no encoder string); measured ${c.measuredBytes} B against estimated ${c.estimatedBytes} B; loudness after: ${c.sample.map((s) => (s.lufs == null ? 'n/a' : s.lufs.toFixed(1))).join(', ')} LUFS (target ${TARGET.I})`); for (const s of c.sample) if (!s.ok) L.push(`- FAILED sample: ${s.problems.join('; ')}`); L.push(''); }
   if (res.delivery) { L.push('## Delivery checks (precache and service worker)', ''); for (const i of res.delivery.items) L.push(`- ${i.ok ? 'OK' : 'PROBLEM'}: ${i.text}`); L.push(''); }
   for (const e of res.errors) L.push(`**ERROR:** ${e}`, '');
   if (res.apply) L.push(`## Applied`, '', `- ${res.applied} clip(s) written to audio/, each with a \`.meta.json\` sidecar; manifest entries set to status \`${INGEST_STATUS}\`, source \`${res.origin === 'respelled' ? RESPELLED_SOURCE : OUTSIDE_SOURCE}\`, provenance in \`synth\` (not reviewed, licence not cleared). Next: \`node tools/audio/build_manifest.mjs --check\`, \`node tools/build-precache.mjs\`, run the tests, commit.`, '');

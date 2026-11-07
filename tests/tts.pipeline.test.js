@@ -9,7 +9,7 @@ import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { audioPath } from '../tools/audio/hebrew_data.mjs';
-import { checkMp3, integratedLufs } from '../tools/tts/post.mjs';
+import { checkMp3, integratedLufs, TARGET, BITRATE_K, EDGE_SILENCE_S, TRIM } from '../tools/tts/post.mjs';
 import { parseCsv, stripNiqqud, TTS_STATUS } from '../tools/tts/lib.mjs';
 import { buildPlan } from '../tools/tts/plan.mjs';
 import { update } from '../tools/tts/manifest_update.mjs';
@@ -21,6 +21,15 @@ const ok = have('python3', ['--version']) && have('ffmpeg', ['-version']) && hav
 const opts = { skip: ok ? false : 'python3/ffmpeg/ffprobe not available' };
 
 const WORDS = ['שָׁלוֹם', 'בֹּקֶר', 'תּוֹדָה', 'בְּבַקָּשָׁה', 'מַיִם', 'לֶחֶם', 'בַּיִת', 'סֵפֶר', 'יֶלֶד', 'יַלְדָּה', 'אַבָּא', 'אִמָּא', 'שֶׁמֶשׁ', 'יָרֵחַ', 'כּוֹכָב', 'עֵץ', 'פֶּרַח', 'שָׁמַיִם', 'אָרֶץ', 'דֶּרֶךְ'];
+
+test('post encode targets are -16 LUFS, -1 dBTP, 96 kbps, 80 ms at each end', () => {
+  assert.equal(TARGET.I, -16);
+  assert.equal(TARGET.TP, -1);
+  assert.equal(TARGET.LRA, 11);
+  assert.equal(BITRATE_K, 96);
+  assert.equal(EDGE_SILENCE_S, 0.08);
+  assert.deepEqual([...TRIM.matchAll(/start_silence=([0-9.]+)/g)].map((m) => Number(m[1])), [0.08, 0.08]);
+});
 
 function fixture() {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'alef-tts-'));
@@ -61,7 +70,11 @@ test('mock pipeline: 20 clips, 1 deliberately wrong clip is rejected, human clip
     assert.ok(fs.existsSync(f), f);
     const c = checkMp3(f);
     assert.ok(c.ok, `${i.id}: ${c.problems}`);
-    if (i.order % 5 === 1) { const lufs = integratedLufs(f); assert.ok(lufs !== null && Math.abs(lufs + 16) < 1.5, `${i.id} loudness ${lufs}`); }
+    if (i.order % 5 === 1) {
+      const lufs = integratedLufs(f);
+      assert.ok(lufs !== null && Math.abs(lufs + 16) < 1.5, `${i.id} loudness ${lufs}`);
+      assert.ok(c.info.bit_rate >= 80000 && c.info.bit_rate <= 112000, `${i.id} bitrate ${c.info.bit_rate}`);
+    }
   }
 
   run('python3', [path.join(T, 'verify.py'), '--mock', '--plan', plan, '--work', work, '--report', report]);

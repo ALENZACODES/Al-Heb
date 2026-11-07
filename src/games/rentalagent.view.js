@@ -28,19 +28,24 @@ export function mount(root,ctx) {
     h('p',{},'Inspect property features in Hebrew; select the listing that meets the requested feature.'),
     h('p',{class:'muted'},'These are synthetic feature cards, not real offers. Air conditioning vocabulary unavailable in this source.'),status,board);
   root.replaceChildren(article);
-  function paint(){
+  function paint(feedback){
     if(!alive||!article.isConnected)return;
-    if(round>=8){board.replaceChildren(resultsCard(h,heSpan,session,{title:'Listing search finished',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:5});paint();}}));return;}
+    if(round>=8){
+      status.textContent='Listing search finished.';
+      board.replaceChildren(resultsCard(h,heSpan,session,{title:'Listing search finished',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:5});paint();}}));
+      return;
+    }
     const pool=features.filter(f=>['floor','balcony','parking','room'].includes(f.id)),target=pool[round%pool.length];
     const others=shuffled(pool.filter(f=>f.id!==target.id)).slice(0,2);
     if(others.length<2){status.textContent='Insufficient real rental feature alternatives.';return;}
+    status.textContent=feedback||`Listing ${round+1} of 8: find ${target.en}.`;
     const listings=shuffled([target,...others]).map((feature,i)=>({id:'listing-'+i,features:[feature]}));
     const choices=listings.map(listing=>{
       const feature=listing.features[0],picture=imgOf(R,'id',ART[feature.id]);
       const button=h('button',{type:'button',class:'btn secondary game-rental-listing',onclick:()=>{
         const ok=listingMatches(listing,target);session.answer(ok); sfx.play(ok ? 'success' : 'miss');
-        status.textContent=ok?'Listing satisfies the requested feature.':'Listing lacks that Hebrew feature.';
-        if(ok)round++;paint();
+        if(ok){round++;paint();}
+        else paint('Listing lacks that Hebrew feature.');
       }},heSpan(feature.he,'he game-he-sm'));
       if(picture)button.append(h('img',{class:'game-card-img',src:picture.src,alt:picture.alt,
         width:picture.width,height:picture.height,'data-img-id':picture.id}));

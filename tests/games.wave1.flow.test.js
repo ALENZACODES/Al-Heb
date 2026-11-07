@@ -16,6 +16,10 @@ const flush = async f => {
   for (let n = 0; n < 200 && !f(); n++) await new Promise(r => setTimeout(r, 5));
   assert.ok(f(), 'async view became ready');
 };
+function memoryStore() {
+  const mem = new Map();
+  return { get: (k) => mem.get(k), set: (k, v) => mem.set(k, v), mem };
+}
 function environment() {
   const doc = new Doc(); globalThis.document = doc;
   El.prototype.append = function (...nodes) { for (const n of nodes) this.appendChild(typeof n === 'object' ? n : doc.createTextNode(String(n))); };
@@ -41,8 +45,9 @@ test('all Wave 1 routes remain preview and load the assigned modules', () => {
 });
 test('prefix plays through without images/audio, rejects misses, and replay resets score', async () => {
   const { root } = environment();
+  const store = memoryStore();
   const deck = prefix.buildPrefixDeck({ words: json('data/vocab/words.json').words, registry: json('data/corpus/registry.json').entries });
-  const stop = prefix.mount(root, { images: absentImages });
+  const stop = prefix.mount(root, { images: absentImages, store });
   await flush(() => root.querySelector('.prefix-bubble'));
   let count = 0;
   while (root.querySelector('.prefix-bubble')) {
@@ -57,11 +62,19 @@ test('prefix plays through without images/audio, rejects misses, and replay rese
     choices.find(b => b.querySelector('[lang=he]').textContent === rec.prefix).click(); count++;
   }
   assert.equal(count, 10); assert.ok(root.querySelector('.game-results'));
-  button(root, 'Play again').click(); assert.match(root.querySelector('[role=status]').textContent, /Score 0/);
+  assert.equal(root.querySelector('[role=status]').textContent, 'Prefix round complete.');
+  const saved = store.get(prefix.STORE_KEY);
+  assert.equal(saved.plays, 1);
+  assert.match(root.textContent, new RegExp(`Your best on this device: ${saved.best} \\(played 1 time\\)`));
+  button(root, 'Play again').click();
+  assert.match(root.querySelector('[role=status]').textContent, /Score 0/);
+  assert.equal(store.get(prefix.STORE_KEY).plays, 1, 'a new round does not count as another finished game');
   stop();
 });
 test('courtyard study, ordered route and recall reach results; missing resolver exposes no hotspots', async () => {
-  const { root } = environment(); const stop = palace.mount(root, { images: R });
+  const { root } = environment();
+  const store = memoryStore();
+  const stop = palace.mount(root, { images: R, store });
   await flush(() => root.querySelector('.palace-station'));
   for (const b of root.querySelectorAll('.palace-station')) b.click();
   button(root, 'Walk the route').click();
@@ -72,14 +85,19 @@ test('courtyard study, ordered route and recall reach results; missing resolver 
     const ids = stations.filter(s => s.he === he).map(s => s.id);
     root.querySelectorAll('.palace-station').find(b => ids.includes(b.getAttribute('data-img-id'))).click();
   }
-  assert.ok(root.querySelector('.game-results')); stop();
+  assert.ok(root.querySelector('.game-results'));
+  assert.equal(root.querySelector('[role=status]').textContent, 'Courtyard route recalled.');
+  assert.equal(store.get(palace.STORE_KEY).plays, 1);
+  assert.match(root.textContent, /Your best on this device:/);
+  stop();
   const noPictures = palace.mount(root, { images: absentImages });
   await flush(() => root.textContent.includes('No unresolved stations'));
   assert.equal(root.querySelectorAll('.palace-station').length, 0); noPictures();
 });
 test('DOM flippers finish eight matching shots; replay and navigation cancel physics and keys', async () => {
   const env = environment(), { root } = env;
-  const stop = pinball.mount(root, { images: absentImages });
+  const store = memoryStore();
+  const stop = pinball.mount(root, { images: absentImages, store });
   await flush(() => root.querySelector('.pinball-bumper'));
   for (let n = 0; n < 8; n++) {
     const text = root.querySelector('[role=status]').textContent;
@@ -89,6 +107,9 @@ test('DOM flippers finish eight matching shots; replay and navigation cancel phy
     for (let frame = 0; frame < 100 && root.querySelector('[role=status]').textContent.startsWith('Shot launched'); frame++) env.step();
   }
   assert.ok(root.querySelector('.game-results')); assert.equal(env.frames.size, 0);
+  assert.equal(root.querySelector('[role=status]').textContent, 'Table complete.');
+  assert.equal(store.get(pinball.STORE_KEY).plays, 1);
+  assert.match(root.textContent, /Your best on this device:/);
   assert.equal(root.querySelectorAll('canvas').length, 0);
   button(root, 'Play again').click(); assert.equal(env.frames.size, 1);
   stop(); assert.equal(env.frames.size, 0); assert.equal(env.listeners.size, 0);

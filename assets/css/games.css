@@ -74,8 +74,8 @@ button.catcher-star { pointer-events: auto; background: transparent; border: 0; 
 .game-arch-svg {width:100%;max-height:280px;color:#1f3a5f;border:1px solid #d9a441;border-radius:12px;}
 .game-bridge-span {font-size:2.5rem;text-align:center;color:#6b7f3a;transform-origin:center;transition:transform .2s;}
 .game-bridge-broken {color:#b0373b;transform:rotate(-13deg) translateY(.6rem);text-decoration:line-through;}
-.game-shadow-glyph {font-size:5rem;color:#2b2b2b;filter:blur(1.2px) drop-shadow(12px 9px 4px rgba(0,0,0,.65));}
-.game-shadow-reference {max-width:80px;height:auto;object-fit:contain;filter:brightness(0);}
+.game-env {display:block;width:100%;height:auto;border-radius:14px;margin:0 0 .75rem}
+.game-shadow-glyph {font-size:5rem;color:transparent;text-shadow:10px 12px 0 #2b2b2b}
 .game-train-track,.game-rush-lane,.game-karaoke-tokens {min-height:4.5rem;gap:.5rem}
 .game-train-car,.game-rush-collectible,.game-sonar-gate,.game-rhyme-tube,
 .game-rental-listing,.game-museum-shelf,.game-bumper-car {min-width:8rem;min-height:3.25rem}

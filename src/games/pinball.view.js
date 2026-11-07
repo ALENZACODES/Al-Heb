@@ -85,7 +85,7 @@ export function mount(root, ctx) {
   }
   function resetBall() { Object.assign(ball, { x: 50, y: 90, vx: 0, vy: 0, armed: false }); }
   function start() {
-    session = createSession({ par: 6 }); rounds = 0; last = 0; resetBall(); running = true;
+    session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 6 }); rounds = 0; last = 0; resetBall(); running = true;
     table.replaceChildren(targets, marble);
     const image = imgOf(R, 'id', 'GAME_pinball_table');
     if (image) table.style.backgroundImage = `url("${image.src}")`;

@@ -7,6 +7,7 @@ import { due as dueCards } from "./srs.js";
 import { buildChoiceQuestions } from "./exercises.session.js";
 import { mountQuiz, summaryNode } from "./exercises.ui.js";
 import { wordAudioId } from "./progress.js";
+import { oppositeFor } from "../img/opposites.js";
 import { playButton } from "./audio-ui.js";
 import { saySound, respell, LABELS } from "../pronunciation/forTradition.js";
 import { loadSoundTextData, letterSoundText, vowelSoundText, soundTextNode } from "../pronunciation/soundtext.js";
@@ -66,8 +67,9 @@ export function mountLesson(root, ctx, lessonId) {
     if (lesson.letters.length) parts.push(section("l-letters", "Letters", el("ul", { class: "alef-items" },
       ...lesson.letters.map((id) => {
         const L = c.letters.get(id);
+        const meet = typeof ctx.img === "function" ? ctx.img(el, { kind: "letter", id, role: "meet", class: "letter-meet", width: 160 }) : null;
         return el("li", { class: "alef-item" },
-          heText(L?.he || "?", "alef-he alef-big"),
+          meet, heText(L?.he || "?", "alef-he alef-big"),
           el("div", { class: "alef-item-body" }, el("strong", {}, L?.name || id), " ", L?.nameHe ? heText(L.nameHe) : null,
             el("div", { class: "muted" }, saySound(c.consonants?.get(id), congregation, { fallbackEn: L?.sound?.en || "" })),
             hookNode(el, hookLine(c.chain, congregation, { letterId: id }))),
@@ -109,6 +111,11 @@ export function mountLesson(root, ctx, lessonId) {
             el("div", { class: "muted" }, vowelEnglish(V, congregation))),
           el("div", { class: "alef-item-actions" }, playButton(ctx, "vowel", id, `Listen to ${V?.name || id}`, note)));
       }))));
+    const pair = oppositeFor(lesson.words);
+    if (pair && typeof ctx.img === "function") {
+      const pic = ctx.img(el, { kind: "id", id: pair.id, class: "scene-art", width: 480 });
+      if (pic) parts.push(section("l-opposites", "This pair", pic, el("p", { class: "muted" }, `Picture for this pair: ${pair.glosses.join(" and ")}.`)));
+    }
     if (lesson.words.length) parts.push(section("l-words", "Words", el("ul", { class: "alef-items" },
       ...lesson.words.map((w, i) => el("li", { class: "alef-item" },
         heText(w.he, "alef-he alef-word"),

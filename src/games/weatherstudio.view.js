@@ -24,16 +24,21 @@ export function mount(root,ctx) {
     h('p',{},'Choose the Hebrew forecast phrase matching the presenter cue.'),
     h('p',{class:'muted'},'Phrase source: intermediate lesson I-24 (draft); corpus attestation/native review pending.'),status,board);
   root.replaceChildren(article);
-  function paint() {
+  function paint(feedback) {
     if(!alive||!article.isConnected)return;
-    if(round>=deck.length){board.replaceChildren(resultsCard(h,heSpan,session,{title:'Weather presentation complete',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:4});paint();}}));return;}
+    if(round>=deck.length){
+      status.textContent='Weather presentation complete.';
+      board.replaceChildren(resultsCard(h,heSpan,session,{title:'Weather presentation complete',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:4});paint();}}));
+      return;
+    }
     const row=deck[round],pic=imgOf(images,row.img.kind,row.img.id);
+    status.textContent=feedback||`Forecast ${round+1} of ${deck.length}: choose the Hebrew line for this cue.`;
     const stage=h('div',{class:'game-weather-stage'},h('p',{},row.en));
     if(pic)stage.append(h('img',{src:pic.src,alt:pic.alt,width:pic.width,height:pic.height,class:'game-card-img','data-img-id':pic.id}));
     const options=shuffled(row.options).map(option=>h('button',{type:'button',class:'btn secondary game-choice',onclick:()=>{
       const ok=weatherMatch(row,option);session.answer(ok); sfx.play(ok ? 'success' : 'miss');
-      status.textContent=ok?'Correct source script read.':'That line describes another forecast.';
-      if(ok){round++;void speak(ctx,option);}paint();
+      if(ok){round++;void speak(ctx,option);paint();}
+      else paint('That line describes another forecast.');
     }},heSpan(option,'he game-he-sm')));
     board.replaceChildren(stage,h('div',{class:'game-choices game-rtl-grid',dir:'rtl'},...options));
   }

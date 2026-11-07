@@ -1,0 +1,27 @@
+/* Homepage and Welcome hero only. The painting is shown whole, with the words
+   on a solid panel underneath it. No shade over the tree, and no motion. */
+.show-hero {
+  display: flex; flex-direction: column;
+  border-radius: 18px; overflow: hidden;
+  border: 1.5px solid #d9a441;
+  background: #122a17; margin: 0 0 1rem;
+}
+.show-hero-img {
+  display: block; width: 100%; height: auto;
+  background: #f3efe4;
+}
+.show-hero-text {
+  background: #122a17; color: #f6f1e7;
+  padding: 1rem 1.25rem 1.15rem;
+}
+.show-kicker { margin: 0 0 .3rem; letter-spacing: .22em; text-transform: uppercase; font-size: .78rem; font-weight: 700; color: #e8c97a; }
+.show-title { margin: 0; font-size: clamp(1.7rem, 5.5vw, 2.6rem); line-height: 1.08; font-weight: 800; color: #fff8e7; }
+.show-sub { margin: .5rem 0 .9rem; max-width: 34rem; color: #e9e4cf; font-size: 1.02rem; }
+.show-cta { margin: 0; display: flex; flex-wrap: wrap; gap: .6rem; }
+.show-hero .show-btn { background: #d9a441; border-color: #d9a441; color: #122a17; font-weight: 700; }
+.show-hero .show-btn:hover { background: #e8c97a; border-color: #e8c97a; color: #122a17; }
+.show-hero .show-btn2 {
+  color: #ffe9a8; background: #0a1a0e;
+  border: 1.5px solid #d9a441; font-weight: 700;
+}
+.show-hero .show-btn2:hover { background: #122a17; color: #ffe9a8; }

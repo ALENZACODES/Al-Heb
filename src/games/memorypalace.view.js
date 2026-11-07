@@ -33,7 +33,7 @@ export function mount(root, ctx) {
     h('h1', { id: 'view-title', tabindex: '-1' }, 'The Memory Palace Courtyard'),
     h('p', {}, 'Study each letter picture, walk the ordered route, then recall its stops.'), status, speechNote, board));
   function start() {
-    session = createSession({ par: 5 });
+    session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 5 });
     const distinct = new Set();
     stations = shuffled(pool).filter(s => !distinct.has(s.letterId) && distinct.add(s.letterId)).slice(0, 5);
     route = shuffled(stations); phase = 'study'; index = 0; studied.clear(); paint();
@@ -54,6 +54,7 @@ export function mount(root, ctx) {
     else wrongThisStop.add(s.id);
     if (index === route.length) {
       phase = 'done';
+      status.textContent = 'Courtyard route recalled.';
       board.replaceChildren(resultsCard(h, heSpan, session, { title: 'Courtyard route recalled', onAgain: start }));
     } else {
       paint();

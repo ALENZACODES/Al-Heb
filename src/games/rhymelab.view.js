@@ -1,6 +1,6 @@
 // Game 21 — rhyme keys are computed from source transliteration, no fabricated phonology.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, imgOf, hasRecordedClip, playRecordedClip, resultsCard } from './engine.js';
+import { createSession, shuffled, loadGameImages, imgOf, hasRecordedClip, playRecordedClip, resultsCard, roundStatus } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.rhymelab.v1';
@@ -29,9 +29,12 @@ export function mount(root,ctx) {
   const article=h('article',{class:'card game-card game-rhymelab'},h('h1',{id:'view-title'},'Hebrew Rhyme Laboratory'),
     h('p',{},'Hear a recorded word and find the real transliteration-ending match.'),status,board);
   root.replaceChildren(article);
-  function paint(){
+  function paint(feedback){
     if(!alive||!article.isConnected)return;
-    if(round>=8){board.replaceChildren(resultsCard(h,heSpan,session,{title:'Rhyme experiment complete',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});paint();}}));return;}
+    if(round>=8){
+      roundStatus(status,'','Rhyme experiment complete.');
+      board.replaceChildren(resultsCard(h,heSpan,session,{title:'Rhyme experiment complete',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});paint();}}));return;}
+    roundStatus(status,feedback,`Pair ${round+1} of 8: play the recorded word.`);
     const word=deck[round%deck.length];
     const match=shuffled(deck.filter(x=>rhymes(x,word)))[0];
     const misses=shuffled(deck.filter(x=>x.id!==word.id && x.key!==word.key)).slice(0,2);
@@ -42,8 +45,8 @@ export function mount(root,ctx) {
       const b=h('button',{type:'button',class:'btn secondary game-rhyme-tube',disabled:true,onclick:()=>{
         if(!heard)return;
         const ok=rhymes(word,item);session.answer(ok); sfx.play(ok ? 'success' : 'miss');
-        status.textContent=ok?'The source endings rhyme.':'Different ending. Listen again.';
-        if(ok)round++;paint();
+        if(ok){round++;paint();}
+        else paint('Different ending. Listen again.');
       }},heSpan(item.he,'he game-he-sm'));
       if(pic)b.append(h('img',{src:pic.src,alt:pic.alt,class:'game-card-img','data-img-id':pic.id,width:pic.width,height:pic.height}));
       return b;

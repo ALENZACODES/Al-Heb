@@ -31,12 +31,13 @@ export function mount(root, ctx) {
     h('p', {}, 'Pop the prefix that gives the requested meaning. A miss leaves the phrase unfinished.'),
     h('p', { class: 'muted' }, 'Preview: corpus-attested study aid; native review pending.'), status, speechNote, board));
   function start() {
-    session = createSession({ par: Math.min(8, deck.length) });
+    session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: Math.min(8, deck.length) });
     deck = shuffled(deck).slice(0, 10); index = 0; paint();
   }
   function paint() {
     if (!alive) return;
     if (index >= deck.length) {
+      status.textContent = 'Prefix round complete.';
       board.replaceChildren(resultsCard(h, heSpan, session, { title: 'Prefix round complete', onAgain: start }));
       return;
     }

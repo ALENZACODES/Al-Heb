@@ -23,16 +23,21 @@ export function mount(root,ctx){
     h('p',{},'Read the inflected Hebrew artifact inscription and sort it by the possessor suffix.'),
     h('p',{class:'muted'},'Source phrases are a draft lesson and require educator review; no unrelated artifact art is substituted.'),status,board);
   root.replaceChildren(article);
-  function paint(){
+  function paint(feedback){
     if(!alive||!article.isConnected)return;
-    if(round>=deck.length){board.replaceChildren(resultsCard(h,heSpan,session,{title:'Museum exhibits sorted',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:4});paint();}}));return;}
+    if(round>=deck.length){
+      status.textContent='Museum exhibits sorted.';
+      board.replaceChildren(resultsCard(h,heSpan,session,{title:'Museum exhibits sorted',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:4});paint();}}));
+      return;
+    }
     const item=deck[round],pic=imgOf(R,'id',item.img);
+    status.textContent=feedback||`Exhibit ${round+1} of ${deck.length}: sort this inscription.`;
     const artifact=h('div',{class:'game-museum-artifact'},heSpan(item.he,'he game-he'));
     if(pic)artifact.append(h('img',{src:pic.src,alt:pic.alt,width:pic.width,height:pic.height,'data-img-id':pic.id,class:'game-card-img'}));
     const shelves=['my','your','his'].map(shelf=>h('button',{type:'button',class:'btn secondary game-museum-shelf',onclick:()=>{
       const ok=suffixShelf(item,shelf);session.answer(ok); sfx.play(ok ? 'success' : 'miss');
-      status.textContent=ok?'Inflected form placed on its correct shelf.':'Incorrect possessive suffix shelf.';
-      if(ok){round++;void speak(ctx,item.he);}paint();
+      if(ok){round++;void speak(ctx,item.he);paint();}
+      else paint('Incorrect possessive suffix shelf.');
     }},shelf));
     board.replaceChildren(artifact,h('div',{class:'game-choices'},...shelves));
   }

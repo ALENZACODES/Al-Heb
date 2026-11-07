@@ -1,6 +1,6 @@
 // Game 2 — Laser Mirror Maze: the beam must traverse actual Hebrew letters in RTL order.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, imgOf, resultsCard } from './engine.js';
+import { createSession, shuffled, loadGameImages, imgOf, resultsCard, envNode, GAME_ENV, roundStatus, placeBoard } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.lasermaze.v1';
@@ -35,15 +35,17 @@ export function mount(root, ctx) {
     h('h1', { id: 'view-title' }, 'Laser Mirror Laser Maze'),
     h('p', {}, 'Direct the beam through the letters in their true right-to-left reading order.'), status, board);
   root.replaceChildren(article);
-  function paint() {
+  function paint(feedback) {
     if (!alive || !article.isConnected) return;
     if (round >= 8) {
+      roundStatus(status, '', 'RTL maze solved.');
       board.replaceChildren(resultsCard(h, heSpan, session, { title: 'RTL maze solved', onAgain: () => {
         round = 0; selected = []; used = []; session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 6 }); paint();
       } }));
       return;
     }
     const item = deck[round % deck.length], letters = hebrewLetters(item.he), image = imgOf(images, 'word', item.id);
+    roundStatus(status, feedback, `Word ${round + 1} of 8: mirror ${selected.length + 1} of ${letters.length}.`);
     const target = h('div', { class: 'game-laser-target' }, heSpan(item.he, 'he game-he'), h('p', {}, item.en));
     if (image) target.append(h('img', { class: 'game-card-img', src: image.src, alt: image.alt,
       width: image.width, height: image.height, 'data-img-id': image.id }));
@@ -53,12 +55,12 @@ export function mount(root, ctx) {
           if (!alive || used.includes(choice.i)) return;
           const ok = correctBeamStep(item.he, choice.i, selected.length);
           session.answer(ok); sfx.play(ok ? 'success' : 'miss');
-          if (ok) { selected.push(choice.letter); used.push(choice.i); }
-          status.textContent = ok ? 'Beam reflected to the next RTL letter.' : 'Wrong mirror: RTL path rejected.';
+          if (!ok) { paint('Wrong mirror: RTL path rejected.'); return; }
+          selected.push(choice.letter); used.push(choice.i);
           if (selected.length === letters.length) { round++; selected = []; used = []; }
           paint();
         } }, heSpan(choice.letter, 'he game-he-sm')));
-    board.replaceChildren(target, h('p', {}, 'Path ' + selected.length + ' of ' + letters.length),
+    placeBoard(board, envNode(h, images, GAME_ENV.laser), target, h('p', {}, 'Path ' + selected.length + ' of ' + letters.length),
       h('div', { class: 'game-choices game-rtl-grid', dir: 'rtl' }, ...buttons));
   }
   Promise.all([loadJson('data/vocab/index.json'), loadGameImages(ctx)]).then(([data, R]) => {

@@ -16,6 +16,7 @@ import { playButton } from "./audio-ui.js";
 import { saySound } from "../pronunciation/forTradition.js";
 import { hookLine, hookNode } from "../letters/hookline.js";
 import { RESUME_KEY, planChunks, getResume, setResume, clearResume, statsFromResults } from "./chunks.js";
+import { oppositeFor } from "../img/opposites.js";
 
 const A_ID = /^I-\d{2}$/;
 const MAX_PER_STEP = 2;
@@ -52,7 +53,8 @@ export function mountChunkedLesson(root, ctx, lessonId) {
     const section = (id, title, ...kids) => el("section", { class: "card", "aria-labelledby": id }, el("h2", { id }, title), ...kids);
     const letterItem = (id) => {
       const L = c.letters.get(id);
-      return el("li", { class: "alef-item" }, heText(L?.he || "?", "alef-he alef-big"),
+      const meet = typeof ctx.img === "function" ? ctx.img(el, { kind: "letter", id, role: "meet", class: "letter-meet", width: 160 }) : null;
+      return el("li", { class: "alef-item" }, meet, heText(L?.he || "?", "alef-he alef-big"),
         el("div", { class: "alef-item-body" }, el("strong", {}, L?.name || id), " ", L?.nameHe ? heText(L.nameHe) : null,
           el("div", { class: "muted" }, saySound(c.consonants?.get(id), congregation, { fallbackEn: L?.sound?.en || "" })),
           hookNode(el, hookLine(c.chain, congregation, { letterId: id }))),
@@ -83,7 +85,11 @@ export function mountChunkedLesson(root, ctx, lessonId) {
       const L = groupOf(chunk.items, "letter"), V = groupOf(chunk.items, "vowel"), W = groupOf(chunk.items, "word"), P = groupOf(chunk.items, "line");
       if (L.length) out.push(section("l-letters", L.length === 1 ? "Letter" : "Letters", el("ul", { class: "alef-items" }, ...L.map((x) => letterItem(x.id)))));
       if (V.length) out.push(section("l-vowels", "Vowels and marks", el("ul", { class: "alef-items" }, ...V.map((x) => vowelItem(x.id)))));
-      if (W.length) out.push(section("l-words", W.length === 1 ? "Word" : "Words", el("ul", { class: "alef-items" }, ...W.map((x) => wordItem(x.i)))));
+      if (W.length) {
+        const pair = oppositeFor(W.map((x) => lesson.words[x.i]));
+        const pic = pair && typeof ctx.img === "function" ? ctx.img(el, { kind: "id", id: pair.id, class: "scene-art", width: 480 }) : null;
+        out.push(section("l-words", W.length === 1 ? "Word" : "Words", pic, pic ? el("p", { class: "muted" }, `Picture for this pair: ${pair.glosses.join(" and ")}.`) : null, el("ul", { class: "alef-items" }, ...W.map((x) => wordItem(x.i)))));
+      }
       if (P.length) out.push(section("l-lines", "Prayer lines", el("ul", { class: "alef-items" }, ...P.map((x) => lineItem(x.id)))));
       return out;
     };

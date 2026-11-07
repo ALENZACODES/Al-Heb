@@ -11,7 +11,7 @@
 // when the stage leaves the document, and mount returns a cleanup.
 
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, speak, loadGameImages, imgOf, resultsCard } from './engine.js';
+import { createSession, speak, loadGameImages, imgOf, resultsCard, envNode, GAME_ENV } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 
 /** Best score, play count, last star rating. Device-local, listed on the privacy page. */
@@ -97,6 +97,7 @@ export function mount(root, ctx) {
   const basket = h('div', { class: 'catcher-basket', 'aria-hidden': 'true' });
   const hud = h('div', { class: 'game-catcher-hud' });
   sky.append(basket);
+  const envHost = h('div', { class: 'game-env-host' });
   const board = h('div', { class: 'game-board' }, sky);
 
   function newTarget() {
@@ -207,7 +208,7 @@ export function mount(root, ctx) {
       h('p', { class: 'muted' }, reducedMotion
         ? 'Reduced motion is on. The marks stay still. Tab to a mark and press it, or move the basket and pause.'
         : 'Catch the named niqqud mark. Tab to Move and Pause, or to a mark. Arrow keys move the basket while this game is focused.'),
-      h('div', { class: 'row' }, pauseBtn, place), hud, announce, speechNote, board);
+      h('div', { class: 'row' }, pauseBtn, place), hud, announce, speechNote, envHost, board);
   root.replaceChildren(article);
   Promise.all([loadDeck(ctx), loadGameImages(ctx)]).then(([deck, images]) => {
     if (!alive || !article.isConnected) return;
@@ -216,6 +217,8 @@ export function mount(root, ctx) {
       announce.textContent = 'Vowel data unavailable. Try again when the course data is loaded.';
       return;
     }
+    const skyline = envNode(h, images, GAME_ENV.vowels);
+    if (skyline) envHost.replaceChildren(skyline);
     letter = LETTERS[Math.floor(Math.random() * LETTERS.length)];
     basket.replaceChildren(heSpan(letter.glyph));
     const picture = imgOf(R, letter.img.kind, letter.img.id, letter.img.opts);

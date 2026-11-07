@@ -251,3 +251,5 @@ button.catcher-star { pointer-events: auto; background: transparent; border: 0; 
 @media (prefers-reduced-motion: reduce) {
   .wf-game .wf-next:active { transform: none; }
 }
+.wf-game-thumb { display:block; width:100%; height:auto; border-radius:10px; margin-bottom:.55rem; }
+.wf-hub-mascot { float:right; width:88px; height:88px; margin:.25rem 0 .5rem 1rem; }

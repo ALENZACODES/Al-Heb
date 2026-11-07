@@ -3,6 +3,14 @@
 // reachable solely by typing their address (owner report, Nov 7 2026).
 import { h, heSpan } from '../shell/ui.js';
 import { LEVEL_DESCRIPTIONS } from './wordfinder.model.js';
+import { loadGameImages, imgOf, GAME_ENV } from './engine.js';
+
+/** Hub id -> GAME_ENV key, for the games whose backdrop key differs from the route id. */
+const ENV_KEY = Object.freeze({
+  archbuilder: 'arch', bumperverbs: 'bumper', lasermaze: 'laser', memorypalace: 'palace',
+  shabbatrush: 'shabbat', shadowcraft: 'shadow', shuktaxi: 'taxi', submarinesonar: 'sonar',
+  typewriter: 'typewriter', vowelcatcher: 'vowels', karaokebeat: 'karaoke',
+});
 
 export const GAMES = Object.freeze([
   ['tugowar', 'Antonym Tug-of-War', 'Pull the rope with opposites'],
@@ -65,24 +73,43 @@ export const LEVEL_BY_GAME = Object.freeze({
 export function mount(root) {
   const original = new Map(GAMES.map(([id, title, hook]) => [id, { id, title, hook }]));
   const items = [{ id: 'wordfinder', title: 'Hebrew Word Finder', hook: 'No Hebrew experience needed: hear, look, find and learn 240 short words' }, ...original.values()];
+  const thumbs = [];
   const sections = LEVEL_DESCRIPTIONS.map((intro, i) => {
     const level = i + 1;
     const games = items.filter((item) => LEVEL_BY_GAME[item.id] === level);
     return h('section', { class: 'wf-level-section', 'aria-labelledby': 'wf-level-' + level },
       h('h2', { id: 'wf-level-' + level }, 'Level ' + level + ' of 9', level === 1 ? ' · Start here' : ''),
       h('p', { class: 'muted' }, intro),
-      h('ul', { class: 'show-grid wf-game-grid' }, ...games.map(({ id, title, hook }) =>
-        h('li', {},
-          h('a', { class: 'show-tile wf-level-tile' + (id === 'wordfinder' ? ' wf-featured-game' : ''), href: '#/' + id },
-            h('span', { class: 'wf-game-level' }, 'LEVEL ' + level + ' / 9'),
-            h('span', { class: 'show-tile-title' }, title, ' ', heSpan('מִשְׂחָק')),
-            h('span', { class: 'show-tile-hook' }, hook),
-            id === 'wordfinder' ? h('span', { class: 'wf-try-first' }, 'Start with five words →') : null)))));
+      h('ul', { class: 'show-grid wf-game-grid' }, ...games.map(({ id, title, hook }) => {
+        const envId = GAME_ENV[ENV_KEY[id] || id];
+        const a = h('a', { class: 'show-tile wf-level-tile' + (id === 'wordfinder' ? ' wf-featured-game' : ''), href: '#/' + id },
+          h('span', { class: 'wf-game-level' }, 'LEVEL ' + level + ' / 9'),
+          h('span', { class: 'show-tile-title' }, title, ' ', heSpan('מִשְׂחָק')),
+          h('span', { class: 'show-tile-hook' }, hook),
+          id === 'wordfinder' ? h('span', { class: 'wf-try-first' }, 'Start with five words →') : null);
+        if (envId) thumbs.push({ a, envId });
+        return h('li', {}, a);
+      })));
   });
-  root.replaceChildren(h('article', { class: 'card wf-games-hub' },
+  const article = h('article', { class: 'card wf-games-hub' },
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Hebrew Games ', heSpan('מִשְׂחָקִים')),
     h('p', {}, 'Completely new to Hebrew? Start at Level 1. Every level is open; you can play at your pace.'),
     h('p', { class: 'muted' }, 'These are suggested challenge levels, not placement tests or CEFR certifications. Games and vocabulary remain preview content, with native review pending.'),
-    ...sections));
+    ...sections);
+  root.replaceChildren(article);
+  // Card thumbnails from each game's own backdrop art, plus Rimon the mascot
+  // beside the title. Approved art only; a game with no approved scene keeps
+  // its text-only card, exactly as before.
+  loadGameImages({}).then((R) => {
+    if (!R || !article.isConnected) return;
+    for (const { a, envId } of thumbs) {
+      const im = imgOf(R, 'id', envId);
+      if (im?.src) a.prepend(h('img', { class: 'wf-game-thumb', src: im.src, alt: '', width: im.width, height: im.height, loading: 'lazy' }));
+    }
+    const mascot = imgOf(R, 'id', 'MASCOT_rimon');
+    if (mascot?.src) article.insertBefore(
+      h('img', { class: 'wf-hub-mascot', src: mascot.src, alt: mascot.alt, width: mascot.width, height: mascot.height }),
+      article.children[1] || null);
+  }).catch(() => {});
   return () => {};
 }

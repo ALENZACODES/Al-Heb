@@ -7,7 +7,7 @@
 // Old/new stays on OPP_two_05. Every pair has an img id.
 
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, loadGameImages, imgOf, pull, pick, resultsCard } from './engine.js';
+import { createSession, loadGameImages, envNode, GAME_ENV, imgOf, pull, pick, resultsCard } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 
 /** Best score, play count, last star rating. Device-local, listed on the privacy page. */
@@ -116,7 +116,7 @@ export function mount(root, ctx) {
       h('p', { class: 'muted' }, 'Match the Hebrew opposite. Every right answer pulls the rope your way; a miss pulls it theirs.'),
       ropeWrap, status, board));
   paintRope();
-  loadGameImages(ctx).then((r) => { if (alive) { R = r; if (current) nextRoundImage(); } });
+  loadGameImages(ctx).then((r) => { if (alive) { R = r; const env = envNode(h, R, GAME_ENV.tugowar); if (env) status.parentElement?.insertBefore(env, status); if (current) nextRoundImage(); } });
   nextRound();
   return () => { alive = false; clearTimeout(timer); leaveSfx(); };
 }

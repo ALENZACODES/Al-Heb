@@ -1,6 +1,6 @@
 // Game 20 — point-to-unpointed cipher over source-verified corpus lines.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, resultsCard, roundStatus } from './engine.js';
+import { createSession, shuffled, resultsCard, roundStatus, loadGameImages, envNode, GAME_ENV } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 import { stripPoints } from '../typing/typing.js';
@@ -23,6 +23,13 @@ export function mount(root, ctx) {
     h('h1', { id: 'view-title' }, 'Cipher Decryption Grid'),
     h('p', {}, 'Find the authentic pointed form of this unpointed corpus line.'), status, board);
   root.replaceChildren(article);
+  // The cipher-desk backdrop made for this game (approved art, decorative
+  // only — never a cue). A missing picture leaves the page as it was.
+  loadGameImages(ctx).then((R) => {
+    if (!alive) return;
+    const env = envNode(h, R, GAME_ENV.ciphergrid);
+    if (env) article.insertBefore(env, status);
+  }).catch(() => {});
   function paint(feedback) {
     if (!alive || !article.isConnected) return;
     if (round >= 8) {
@@ -34,7 +41,7 @@ export function mount(root, ctx) {
     const other = shuffled(deck.filter(r => r.id !== row.id && r.unpointed !== row.unpointed)).slice(0, 2);
     if (other.length < 2) { status.textContent = 'Not enough distinct corpus lines.'; return; }
     roundStatus(status, feedback, `Line ${round + 1} of 8: choose the pointed source.`);
-    // No manuscript asset ID exists in this index: keep an explicit text-only stage.
+    // No manuscript asset ID exists in this index: the prompt stage itself stays text-only (the scene above the status line is a backdrop, not a cue).
     const prompt = h('div', { class: 'game-cipher-prompt' }, heSpan(row.unpointed, 'he game-he'));
     const options = shuffled([row, ...other]).map(opt => h('button', {
       type: 'button', class: 'btn secondary game-choice', onclick: () => {

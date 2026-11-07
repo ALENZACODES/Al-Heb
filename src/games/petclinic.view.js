@@ -1,6 +1,6 @@
 // Game 14 — symptom phrases are matched only to source-provided language exercises.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, speak, resultsCard } from './engine.js';
+import { createSession, shuffled, speak, resultsCard, loadGameImages, envNode, GAME_ENV } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY='games.petclinic.v1';
@@ -26,6 +26,13 @@ export function mount(root,ctx) {
     h('p',{},'Language role-play only: match a Hebrew symptom to its exact source exercise phrase. Not veterinary advice.'),
     h('p',{class:'muted'},'Source lesson is an unreviewed teaching draft. No clinic picture is shown: the approved set has no clinic image, and story art is not used in its place.'),status,board);
   root.replaceChildren(article);
+  // The clinic-room backdrop made for this game (approved art, decorative only —
+  // never a word cue). A missing picture leaves the page as it was.
+  loadGameImages(ctx).then((R) => {
+    if (!alive) return;
+    const env = envNode(h, R, GAME_ENV.petclinic);
+    if (env) article.insertBefore(env, status);
+  }).catch(() => {});
   function paint(feedback){
     if(!alive||!article.isConnected)return;
     if(round>=deck.length){

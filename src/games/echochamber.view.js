@@ -1,6 +1,6 @@
 // Game 24 — exact one-consonant minimal-pair contrast, never random distractors.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, imgOf, hasRecordedClip, playRecordedClip, resultsCard, roundStatus } from './engine.js';
+import { createSession, shuffled, loadGameImages, envNode, GAME_ENV, imgOf, hasRecordedClip, playRecordedClip, resultsCard, roundStatus } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY='games.echochamber.v1';
@@ -52,6 +52,13 @@ export function mount(root,ctx){
   const article=h('article',{class:'card game-card game-echochamber'},h('h1',{id:'view-title'},'Acoustic Echo Chamber'),
     h('p',{},'Hear two real words differing in one consonant; choose the exact recorded word.'),status,board);
   root.replaceChildren(article);
+  // The echo-canyon backdrop made for this game (approved art, decorative only —
+  // never a word cue). A missing picture leaves the page as it was.
+  loadGameImages(ctx).then((R) => {
+    if (!alive) return;
+    const env = envNode(h, R, GAME_ENV.echochamber);
+    if (env) article.insertBefore(env, status);
+  }).catch(() => {});
   function paint(feedback){
     if(!alive||!article.isConnected)return;
     if(round>=Math.min(8,deck.length)){

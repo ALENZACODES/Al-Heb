@@ -1,6 +1,6 @@
 // Game 12 — shop arithmetic from numerals attested in the app's phrasebook.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, imgOf, speak, resultsCard, roundStatus, placeBoard } from './engine.js';
+import { createSession, shuffled, loadGameImages, envNode, GAME_ENV, imgOf, speak, resultsCard, roundStatus, placeBoard } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.barter.v1';
@@ -22,6 +22,13 @@ export function mount(root,ctx){
   const article=h('article',{class:'card game-card game-barter'},h('h1',{id:'view-title'},'The Israeli Flea Market Barter'),
     h('p',{},'Read the Hebrew number. Make a counteroffer at your exact budget, below the asking price.'),status,board);
   root.replaceChildren(article);
+  // The market-stall backdrop made for this game (approved art, decorative only —
+  // never a word cue). A missing picture leaves the page as it was.
+  loadGameImages(ctx).then((R) => {
+    if (!alive) return;
+    const env = envNode(h, R, GAME_ENV.barter);
+    if (env) article.insertBefore(env, status);
+  }).catch(() => {});
   function paint(feedback){
     if(!alive||!article.isConnected)return;
     if(round>=8){

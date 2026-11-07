@@ -365,3 +365,4 @@ main:has(.showcase) .show-hero {
 @media (prefers-reduced-motion: reduce) {
   main:has(.showcase) .show-hero { box-shadow: none; }
 }
+.show-mascot { width:96px; margin-top:.75rem; }

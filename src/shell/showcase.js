@@ -123,10 +123,11 @@ export function showcaseNode(ctx) {
         h('p', { class: 'show-cta' },
           h('a', { class: 'btn show-btn', href: '#/firstday' }, 'Start your first 10 minutes'),
           ' ',
-          h('a', { class: 'btn secondary show-btn2', href: '#/books' }, 'Read a story book')))),
+          h('a', { class: 'btn secondary show-btn2', href: '#/books' }, 'Read a story book')),
+        ctx?.img ? ctx.img(h, { kind: 'id', id: 'MASCOT_rimon', decorative: true, width: 300, class: 'show-mascot' }) : null)),
     portalsNode(has),
     tryPanel(),
-    h('p', { class: 'show-stats' }, 'Games across 9 levels · 240 first words · 5 story books · 3 Hebrew traditions'),
+    h('p', { class: 'show-stats' }, 'Games across 9 levels · 240 first words · 62 story books · 3 Hebrew traditions'),
     h('details', { class: 'show-all-destinations', ...(ctx?.routeName === 'home' ? { open: true } : {}) },
       h('summary', {}, 'Explore all ALEF destinations'),
       h('ul', { class: 'show-grid' }, ...tiles)));

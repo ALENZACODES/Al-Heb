@@ -1,6 +1,6 @@
 // Game 16 — cultivated branches are sourced only from recorded root families.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, imgOf, resultsCard, roundStatus } from './engine.js';
+import { createSession, shuffled, loadGameImages, envNode, GAME_ENV, imgOf, resultsCard, roundStatus } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.roottree.v1';
@@ -21,6 +21,13 @@ export function mount(root, ctx) {
     h('p', {}, 'Grow a branch only with a verb listed under the displayed Hebrew root.'),
     h('p', { class: 'muted' }, 'Family assignments are dictionary-derived and await Hebrew-editor review.'), status, board);
   root.replaceChildren(article);
+  // The root-tree backdrop made for this game (approved art, decorative only —
+  // never a word cue). A missing picture leaves the page as it was.
+  loadGameImages(ctx).then((R) => {
+    if (!alive) return;
+    const env = envNode(h, R, GAME_ENV.roottree);
+    if (env) article.insertBefore(env, status);
+  }).catch(() => {});
   function paint(feedback) {
     if (!alive || !article.isConnected) return;
     if (round >= 8) {

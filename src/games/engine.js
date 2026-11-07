@@ -120,10 +120,11 @@ export function placeBoard(board, ...nodes) {
   board.replaceChildren(...nodes.filter((n) => n != null));
 }
 
-/** A visible environment picture, or null when the resolver has nothing approved for this id. */
+/** A visible environment picture, or null when the resolver has nothing approved for this id.
+ * The returned id must be the scene asked for: a backdrop is never a word cue's picture. */
 export function envNode(h, R, id) {
   const image = imgOf(R, 'id', id);
-  if (!image?.src) return null;
+  if (!image?.src || image.id !== id) return null;
   return h('img', {
     class: 'game-env', src: image.src, alt: image.alt, width: image.width, height: image.height, 'data-img-id': image.id,
   });

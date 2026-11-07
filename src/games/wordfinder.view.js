@@ -1,7 +1,7 @@
 // Hebrew Word Finder: day-zero word recognition with a real sourced lexicon.
 // One tap to hear, one tap to find. No timers, typing, lives or penalties.
 import { h, heSpan } from '../shell/ui.js';
-import { speak } from './engine.js';
+import { speak, loadGameImages, envNode, GAME_ENV } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { isAudioFree } from '../shell/audiofree.js';
 import { STORE_KEY, TOPIC_FIRST, TOPIC_ALL, ROUND_SIZE,
@@ -30,6 +30,15 @@ export function mount(root, ctx) {
     progress, status, sound, stage, more,
     h('p', { class: 'muted wf-source' },
       '240 sourced words · 5 words per gentle round · vocabulary preview, not yet checked by a native Hebrew educator.')));
+
+  // The treasure-map backdrop made for this game (approved art, decorative
+  // only — never a word cue). A missing picture leaves the page as it was.
+  loadGameImages(ctx).then((R) => {
+    if (!alive) return;
+    const env = envNode(h, R, GAME_ENV.wordfinder);
+    const host = status.parentElement;
+    if (env && host) host.insertBefore(env, status);
+  }).catch(() => {});
 
   const current = () => deck[index];
   // Replacing the choice grid otherwise drops keyboard focus after a miss or hint.

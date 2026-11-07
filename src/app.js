@@ -298,11 +298,28 @@ async function boot() {
   import('./shell/audio-access.js').then((m) => { soundBar = m.wireSoundBar(audio); }).catch(() => {});
   let router;
   let images = null;
-  try { images = await loadImageResolver((u) => fetch(u).then((r) => { if (!r.ok) throw new Error(String(r.status)); return r.json(); }), { settings }); } catch { images = null; }
+  const resolveImages = () => loadImageResolver((u) => fetch(u).then((r) => {
+    if (!r.ok) throw new Error(String(r.status));
+    return r.json();
+  }), { settings });
+  // The Home and Welcome tree does not use the optional image resolver.
+  // Let the first route paint before fetching image approvals; deep-linked
+  // lessons still receive the resolver before mounting as before.
+  const firstIsHome = !location.hash || location.hash === '#/' || location.hash === '#/welcome';
+  if (!firstIsHome) {
+    try { images = await resolveImages(); } catch { images = null; }
+  }
   const ctxBase = { settings, store, audio, route: (p) => { scrollKeeper?.markForward(); router.go(p); }, t, installPrompt, hasRoute: (name) => available.has(name), images, img: (hh, spec) => (images ? imgEl(hh, { R: images, ...spec }) : null) };
   router = createRouter((m) => { show(m, ctxBase); });
   window.alef = { settings, store, audio, router }; // debugging handle
   router.start();
+  if (firstIsHome) {
+    // Deferring the optional resolver avoids blocking the hero and the first
+    // usable lesson. A later route sees the loaded resolver in the shared ctx.
+    shownFirst.then(() => afterPaint(async () => {
+      try { images = await resolveImages(); ctxBase.images = images; } catch { images = null; }
+    })).catch(() => {});
+  }
   import('./shell/boot-hooks.js').then((m) => m.armReminders(ctxBase)).catch(() => {});
   import('./morning/boot.js').then((m) => m.startMorning({ store, audio })).catch(() => {});
   scheduleManifest(audio);

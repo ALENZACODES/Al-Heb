@@ -1,5 +1,5 @@
 {
-  "_header": "Traditional public-domain Tanakh and prayer texts, assembled for review. Not clergy-reviewed. Pointed Hebrew and existing English copied verbatim; no new Hebrew composition, re-pointing or edits. Modeh Ani is supplied verbatim by the project brief, with pre-1929 siddur collation pending. English biblical renderings: JPS 1917 (public domain). Some verses from the existing ALEF morning corpus require external collation before a VERIFIED editorial mark.",
+  "_header": "Traditional public-domain Tanakh and prayer texts, assembled for review. Not clergy-reviewed. Pointed Hebrew and existing English copied verbatim; no new Hebrew composition, re-pointing or edits. Modeh Ani is supplied verbatim by the project brief, with pre-1929 siddur collation pending. English biblical renderings: JPS 1917 (public domain). Some verses from the existing ALEF morning corpus require external collation before a VERIFIED editorial mark. Non-Modeh entries are short (at most 70 Unicode code units) for a compact phone display.",
   "reviewStatus": "ASSEMBLED_FOR_REVIEW",
   "prayers": [
     {
@@ -28,29 +28,14 @@
       "source": "Unicode/XML Leningrad Codex (UXLC) 2.6: Deuteronomy 6:4 (copied verbatim from ALEF data/corpus/registry.json; https://tanach.us/Books/Deuteronomy.xml). English: JPS 1917, public domain."
     },
     {
-      "he": "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃",
-      "en": "And thou shalt love the LORD thy God with all thy heart, and with all thy soul, and with all thy might.",
-      "source": "Unicode/XML Leningrad Codex (UXLC) 2.6: Deuteronomy 6:5 (copied verbatim from ALEF data/corpus/registry.json; https://tanach.us/Books/Deuteronomy.xml). English: JPS 1917, public domain."
-    },
-    {
       "he": "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃",
       "en": "How goodly are thy tents, O Jacob, Thy dwellings, O Israel!",
       "source": "Unicode/XML Leningrad Codex (UXLC) 2.6: Numbers 24:5 (copied verbatim from ALEF data/corpus/registry.json; https://tanach.us/Books/Numbers.xml). English: JPS 1917, public domain."
     },
     {
-      "he": "מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃",
-      "en": "Who is like unto Thee, O LORD, among the mighty? Who is like unto Thee, glorious in holiness, Fearful in praises, doing wonders?",
-      "source": "Unicode/XML Leningrad Codex (UXLC) 2.6: Exodus 15:11 (copied verbatim from ALEF data/corpus/registry.json; https://tanach.us/Books/Exodus.xml). English: JPS 1917, public domain."
-    },
-    {
       "he": "אֵין־כָּמוֹךָ בָאֱלֹהִים אֲדֹנָי וְאֵין כְּמַעֲשֶׂיךָ׃",
       "en": "There is none like unto Thee among the gods, O Lord, And there are no works like Thine.",
       "source": "Unicode/XML Leningrad Codex (UXLC) 2.6: Psalm 86:8 (copied verbatim from ALEF data/corpus/registry.json; https://tanach.us/Books/Psalms.xml). English: JPS 1917, public domain."
-    },
-    {
-      "he": "מַלְכוּתְךָ מַלְכוּת כָּל־עֹלָמִים וּמֶמְשֶׁלְתְּךָ בְּכָל־דּוֹר וָדוֹר׃",
-      "en": "Thy kingdom is a kingdom for all ages, And Thy dominion endureth throughout all generations.",
-      "source": "Unicode/XML Leningrad Codex (UXLC) 2.6: Psalm 145:13 (copied verbatim from ALEF data/corpus/registry.json; https://tanach.us/Books/Psalms.xml). English: JPS 1917, public domain."
     },
     {
       "he": "יְהוָה עֹז לְעַמּוֹ יִתֵּן יְהוָה יְבָרֵךְ אֶת־עַמּוֹ בַשָּׁלוֹם׃",
@@ -66,11 +51,6 @@
       "he": "הֲשִׁיבֵנוּ יְהוָה אֵלֶיךָ וְנָשׁוּבָה חַדֵּשׁ יָמֵינוּ כְּקֶדֶם׃",
       "en": "Turn Thou us unto Thee, O LORD, and we shall be turned; Renew our days as of old.",
       "source": "Unicode/XML Leningrad Codex (UXLC) 2.6: Lamentations 5:21 (copied verbatim from ALEF data/corpus/registry.json; https://tanach.us/Books/Lamentations.xml). English: JPS 1917, public domain."
-    },
-    {
-      "he": "וְקָרָא זֶה אֶל־זֶה וְאָמַר קָדוֹשׁ קָדוֹשׁ קָדוֹשׁ יְהוָה צְבָאוֹת מְלֹא כָל־הָאָרֶץ כְּבוֹדוֹ׃",
-      "en": "And one called unto another, and said: Holy, holy, holy, is the LORD of hosts; The whole earth is full of His glory.",
-      "source": "Unicode/XML Leningrad Codex (UXLC) 2.6: Isaiah 6:3 (copied verbatim from ALEF data/corpus/registry.json; https://tanach.us/Books/Isaiah.xml). English: JPS 1917, public domain."
     },
     {
       "he": "יִמְלֹךְ יְהוָה לְעוֹלָם אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר הַלְלוּ־יָהּ׃",
@@ -98,29 +78,9 @@
       "source": "ALEF data/morning-verses.json, Psalms 16:8 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
     },
     {
-      "he": "יִהְיוּ־לְרָצוֹן אִמְרֵי־פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ יְהוָה צוּרִי וְגֹאֲלִי׃",
-      "en": "Let the words of my mouth and the meditation of my heart be acceptable before Thee, O LORD, my Rock, and my Redeemer.",
-      "source": "ALEF data/morning-verses.json, Psalms 19:15 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
-    },
-    {
-      "he": "גַּם כִּי־אֵלֵךְ בְּגֵיא צַלְמָוֶת לֹא־אִירָא רָע כִּי־אַתָּה עִמָּדִי שִׁבְטְךָ וּמִשְׁעַנְתֶּךָ הֵמָּה יְנַחֲמֻנִי׃",
-      "en": "Yea, though I walk through the valley of the shadow of death, I will fear no evil, for Thou art with me; Thy rod and Thy staff, they comfort me.",
-      "source": "ALEF data/morning-verses.json, Psalms 23:4 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
-    },
-    {
-      "he": "אַחַת שָׁאַלְתִּי מֵאֵת־יְהוָה אוֹתָהּ אֲבַקֵּשׁ שִׁבְתִּי בְּבֵית־יְהוָה כָּל־יְמֵי חַיַּי לַחֲזוֹת בְּנֹעַם־יְהוָה וּלְבַקֵּר בְּהֵיכָלוֹ׃",
-      "en": "One thing have I asked of the LORD, that will I seek after: That I may dwell in the house of the LORD all the days of my life, To behold the graciousness of the LORD, and to visit early in His temple.",
-      "source": "ALEF data/morning-verses.json, Psalms 27:4 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
-    },
-    {
       "he": "קַוֵּה אֶל־יְהוָה חֲזַק וְיַאֲמֵץ לִבֶּךָ וְקַוֵּה אֶל־יְהוָה׃",
       "en": "Wait on the LORD; Be strong, and let thy heart take courage; Yea, wait thou for the LORD.",
       "source": "ALEF data/morning-verses.json, Psalms 27:14 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
-    },
-    {
-      "he": "כִּי רֶגַע בְּאַפּוֹ חַיִּים בִּרְצוֹנוֹ בָּעֶרֶב יָלִין בֶּכִי וְלַבֹּקֶר רִנָּה׃",
-      "en": "For His anger is but for a moment, His favour is for a life-time; weeping may tarry for the night, but joy cometh in the morning.",
-      "source": "ALEF data/morning-verses.json, Psalms 30:6 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
     },
     {
       "he": "טַעֲמוּ וּרְאוּ כִּי־טוֹב יְהוָה אַשְׁרֵי הַגֶּבֶר יֶחֱסֶה־בּוֹ׃",
@@ -143,19 +103,9 @@
       "source": "ALEF data/morning-verses.json, Psalms 46:2 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
     },
     {
-      "he": "הַרְפּוּ וּדְעוּ כִּי־אָנֹכִי אֱלֹהִים אָרוּם בַּגּוֹיִם אָרוּם בָּאָרֶץ׃",
-      "en": "'Let be, and know that I am God; I will be exalted among the nations, I will be exalted in the earth.'",
-      "source": "ALEF data/morning-verses.json, Psalms 46:11 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
-    },
-    {
       "he": "לֵב טָהוֹר בְּרָא־לִי אֱלֹהִים וְרוּחַ נָכוֹן חַדֵּשׁ בְּקִרְבִּי׃",
       "en": "Create me a clean heart, O God; and renew a stedfast spirit within me.",
       "source": "ALEF data/morning-verses.json, Psalms 51:12 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
-    },
-    {
-      "he": "הַשְׁלֵךְ עַל־יְהוָה יְהָבְךָ וְהוּא יְכַלְכְּלֶךָ לֹא־יִתֵּן לְעוֹלָם מוֹט לַצַּדִּיק׃",
-      "en": "Cast thy burden upon the LORD, and He will sustain thee; He will never suffer the righteous to be moved.",
-      "source": "ALEF data/morning-verses.json, Psalms 55:23 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
     },
     {
       "he": "לִמְנוֹת יָמֵינוּ כֵּן הוֹדַע וְנָבִא לְבַב חָכְמָה׃",
@@ -183,11 +133,6 @@
       "source": "ALEF data/morning-verses.json, Psalms 100:5 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
     },
     {
-      "he": "רֵאשִׁית חָכְמָה יִרְאַת יְהוָה שֵׂכֶל טוֹב לְכָל־עֹשֵׂיהֶם תְּהִלָּתוֹ עֹמֶדֶת לָעַד׃",
-      "en": "The fear of the LORD is the beginning of wisdom; A good understanding have all they that do thereafter; His praise endureth for ever.",
-      "source": "ALEF data/morning-verses.json, Psalms 111:10 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
-    },
-    {
       "he": "הוֹדוּ לַיהוָה כִּי־טוֹב כִּי לְעוֹלָם חַסְדּוֹ׃",
       "en": "'O give thanks unto the LORD, for He is good, For His mercy endureth for ever.",
       "source": "ALEF data/morning-verses.json, Psalms 118:1 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
@@ -211,11 +156,6 @@
       "he": "הַזֹּרְעִים בְּדִמְעָה בְּרִנָּה יִקְצֹרוּ׃",
       "en": "They that sow in tears Shall reap in joy.",
       "source": "ALEF data/morning-verses.json, Psalms 126:5 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
-    },
-    {
-      "he": "אוֹדְךָ עַל כִּי נוֹרָאוֹת נִפְלֵיתִי נִפְלָאִים מַעֲשֶׂיךָ וְנַפְשִׁי יֹדַעַת מְאֹד׃",
-      "en": "I will give thanks unto Thee, for I am fearfully and wonderfully made; Wonderful are Thy works; and that my soul knoweth right well.",
-      "source": "ALEF data/morning-verses.json, Psalms 139:14 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
     },
     {
       "he": "טוֹב־יְהוָה לַכֹּל וְרַחֲמָיו עַל־כָּל־מַעֲשָׂיו׃",
@@ -258,11 +198,6 @@
       "source": "ALEF data/morning-verses.json, Psalms 95:1 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
     },
     {
-      "he": "מָה־רַבּוּ מַעֲשֶׂיךָ יְהוָה כֻּלָּם בְּחָכְמָה עָשִׂיתָ מָלְאָה הָאָרֶץ קִנְיָנֶךָ׃",
-      "en": "How manifold are Thy works, O LORD! In wisdom hast Thou made them all; The earth is full of Thy creatures.",
-      "source": "ALEF data/morning-verses.json, Psalms 104:24 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
-    },
-    {
       "he": "מִמִּזְרַח־שֶׁמֶשׁ עַד־מְבוֹאוֹ מְהֻלָּל שֵׁם יְהוָה׃",
       "en": "From the rising of the sun unto the going down thereof The LORD'S name is to be praised.",
       "source": "ALEF data/morning-verses.json, Psalms 113:3 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
@@ -286,11 +221,6 @@
       "he": "גָּדוֹל יְהוָה וּמְהֻלָּל מְאֹד וְלִגְדֻלָּתוֹ אֵין חֵקֶר׃",
       "en": "Great is the LORD, and highly to be praised; And His greatness is unsearchable.",
       "source": "ALEF data/morning-verses.json, Psalms 145:3 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
-    },
-    {
-      "he": "אֵלֶּה בָרֶכֶב וְאֵלֶּה בַסּוּסִים וַאֲנַחְנוּ בְּשֵׁם־יְהוָה אֱלֹהֵינוּ נַזְכִּיר׃",
-      "en": "Some trust in chariots, and some in horses; But we will make mention of the name of the LORD our God.",
-      "source": "ALEF data/morning-verses.json, Psalms 20:8 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
     },
     {
       "he": "חִזְקוּ וְיַאֲמֵץ לְבַבְכֶם כָּל־הַמְיַחֲלִים לַיהוָה׃",
@@ -378,11 +308,6 @@
       "source": "ALEF data/morning-verses.json, Proverbs 19:21 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
     },
     {
-      "he": "חֲנֹךְ לַנַּעַר עַל־פִּי דַרְכּוֹ גַּם כִּי־יַזְקִין לֹא־יָסוּר מִמֶּנָּה׃",
-      "en": "Train up a child in the way he should go, And even when he is old, he will not depart from it.",
-      "source": "ALEF data/morning-verses.json, Proverbs 22:6 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
-    },
-    {
       "he": "בַּרְזֶל בְּבַרְזֶל יָחַד וְאִישׁ יַחַד פְּנֵי־רֵעֵהוּ׃",
       "en": "Iron sharpeneth iron; So a man sharpeneth the countenance of his friend.",
       "source": "ALEF data/morning-verses.json, Proverbs 27:17 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
@@ -401,6 +326,81 @@
       "he": "אֶרֶךְ אַפַּיִם רַב־תְּבוּנָה וּקְצַר־רוּחַ מֵרִים אִוֶּלֶת׃",
       "en": "He that is slow to anger is of great understanding; But he that is hasty of spirit exalteth folly.",
       "source": "ALEF data/morning-verses.json, Proverbs 14:29 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
+    },
+    {
+      "he": "טוֹב אֶרֶךְ אַפַּיִם מִגִּבּוֹר וּמֹשֵׁל בְּרוּחוֹ מִלֹּכֵד עִיר׃",
+      "en": "He that is slow to anger is better than the mighty; And he that ruleth his spirit than he that taketh a city.",
+      "source": "ALEF data/morning-verses.json, Proverbs 16:32 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
+    },
+    {
+      "he": "בְּכָל־עֵת אֹהֵב הָרֵעַ וְאָח לְצָרָה יִוָּלֵד׃",
+      "en": "A friend loveth at all times, And a brother is born for adversity.",
+      "source": "ALEF data/morning-verses.json, Proverbs 17:17 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
+    },
+    {
+      "he": "מָוֶת וְחַיִּים בְּיַד־לָשׁוֹן וְאֹהֲבֶיהָ יֹאכַל פִּרְיָהּ׃",
+      "en": "Death and life are in the power of the tongue; And they that indulge it shall eat the fruit thereof.",
+      "source": "ALEF data/morning-verses.json, Proverbs 18:21 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
+    },
+    {
+      "he": "שְׁמַע עֵצָה וְקַבֵּל מוּסָר לְמַעַן תֶּחְכַּם בְּאַחֲרִיתֶךָ׃",
+      "en": "Hear counsel, and receive instruction, That thou mayest be wise in thy latter end.",
+      "source": "ALEF data/morning-verses.json, Proverbs 19:20 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
+    },
+    {
+      "he": "רֹדֵף צְדָקָה וָחָסֶד יִמְצָא חַיִּים צְדָקָה וְכָבוֹד׃",
+      "en": "He that followeth after righteousness and mercy Findeth life, prosperity, and honour.",
+      "source": "ALEF data/morning-verses.json, Proverbs 21:21 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
+    },
+    {
+      "he": "מְכַסֶּה פְשָׁעָיו לֹא יַצְלִיחַ וּמוֹדֶה וְעֹזֵב יְרֻחָם׃",
+      "en": "He that covereth his transgressions shall not prosper; But whoso confesseth and forsaketh them shall obtain mercy.",
+      "source": "ALEF data/morning-verses.json, Proverbs 28:13 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
+    },
+    {
+      "he": "אַל־תִּמְנַע־טוֹב מִבְּעָלָיו בִּהְיוֹת לְאֵל יָדְךָ לַעֲשׂוֹת׃",
+      "en": "Withhold not good from him to whom it is due, When it is in the power of thy hand to do it.",
+      "source": "ALEF data/morning-verses.json, Proverbs 3:27 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
+    },
+    {
+      "he": "יָבֵשׁ חָצִיר נָבֵל צִיץ וּדְבַר־אֱלֹהֵינוּ יָקוּם לְעוֹלָם׃",
+      "en": "The grass withereth, the flower fadeth; But the word of our God shall stand for ever.’",
+      "source": "ALEF data/morning-verses.json, Isaiah 40:8 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
+    },
+    {
+      "he": "קוּמִי אוֹרִי כִּי בָא אוֹרֵךְ וּכְבוֹד יְהוָה עָלַיִךְ זָרָח׃",
+      "en": "Arise, shine, for thy light is come, And the glory of the LORD is risen upon thee.",
+      "source": "ALEF data/morning-verses.json, Isaiah 60:1 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
+    },
+    {
+      "he": "יֵצֶר סָמוּךְ תִּצֹּר שָׁלוֹם שָׁלוֹם כִּי בְךָ בָּטוּחַ׃",
+      "en": "The mind stayed on Thee Thou keepest in perfect peace; Because it trusteth in Thee.",
+      "source": "ALEF data/morning-verses.json, Isaiah 26:3 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
+    },
+    {
+      "he": "נַחֲמוּ נַחֲמוּ עַמִּי יֹאמַר אֱלֹהֵיכֶם׃",
+      "en": "Comfort ye, comfort ye My people, saith your God.",
+      "source": "ALEF data/morning-verses.json, Isaiah 40:1 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
+    },
+    {
+      "he": "דִּרְשׁוּ יְהוָה בְּהִמָּצְאוֹ קְרָאֻהוּ בִּהְיוֹתוֹ קָרוֹב׃",
+      "en": "Seek ye the LORD while He may be found, Call ye upon Him while He is near;",
+      "source": "ALEF data/morning-verses.json, Isaiah 55:6 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
+    },
+    {
+      "he": "בָּרוּךְ הַגֶּבֶר אֲשֶׁר יִבְטַח בַּיהוָה וְהָיָה יְהוָה מִבְטַחוֹ׃",
+      "en": "Blessed is the man that trusteth in the LORD, And whose trust the LORD is.",
+      "source": "ALEF data/morning-verses.json, Jeremiah 17:7 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
+    },
+    {
+      "he": "כִּי־קָרוֹב אֵלֶיךָ הַדָּבָר מְאֹד בְּפִיךָ וּבִלְבָבְךָ לַעֲשֹׂתוֹ׃",
+      "en": "But the word is very nigh unto thee, in thy mouth, and in thy heart, that thou mayest do it.",
+      "source": "ALEF data/morning-verses.json, Deuteronomy 30:14 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
+    },
+    {
+      "he": "וַאֲהַבְתֶּם אֶת־הַגֵּר כִּי־גֵרִים הֱיִיתֶם בְּאֶרֶץ מִצְרָיִם׃",
+      "en": "Love ye therefore the stranger; for ye were strangers in the land of Egypt.",
+      "source": "ALEF data/morning-verses.json, Deuteronomy 10:19 (pointed Hebrew from existing project corpus; English: JPS 1917, public domain; external source collation pending)."
     }
   ]
 }

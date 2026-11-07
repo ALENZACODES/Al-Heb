@@ -6,7 +6,7 @@
   "hebrew-in-gloss": 0,
   "verb-gloss-form": 3,
   "duplicate-lemma-pointed": 62,
-  "circular-gloss": 27,
+  "circular-gloss": 21,
   "furtive-patach-translit": 0
  },
  "hits": {
@@ -242,7 +242,7 @@
     "key": "נח|נָח",
     "lemma": "נח",
     "pointed": "נָח",
-    "detail": "396:verb:to rest / 2543:adj:resting"
+    "detail": "396:verb:to rest / 2544:adj:resting"
    },
    {
     "key": "קרוב|קָרוֹב",
@@ -266,7 +266,7 @@
     "key": "רעה|רָעָה",
     "lemma": "רעה",
     "pointed": "רָעָה",
-    "detail": "492:verb:to herd / 2532:noun:something bad"
+    "detail": "492:verb:to herd / 2533:noun:something bad"
    },
    {
     "key": "יפה|יָפֶה",
@@ -427,12 +427,6 @@
   ],
   "circular-gloss": [
    {
-    "key": "v849e335c",
-    "lemma": "הא",
-    "pointed": "הָא",
-    "detail": "ha! = ha"
-   },
-   {
     "key": "v390aa9b9",
     "lemma": "בנק",
     "pointed": "בַּנְק",
@@ -443,18 +437,6 @@
     "lemma": "גנרל",
     "pointed": "גֶּנֶרָל",
     "detail": "general = general"
-   },
-   {
-    "key": "va164890d",
-    "lemma": "גאון",
-    "pointed": "גָּאוֹן",
-    "detail": "Gaon = ga'on"
-   },
-   {
-    "key": "ve23877c7",
-    "lemma": "עמר",
-    "pointed": "עֹמֶר",
-    "detail": "omer = omer"
    },
    {
     "key": "vdee4ee61",
@@ -497,12 +479,6 @@
     "lemma": "אגו",
     "pointed": "אֶגוֹ",
     "detail": "ego = ego"
-   },
-   {
-    "key": "vba281962",
-    "lemma": "חצפה",
-    "pointed": "חֻצְפָּה",
-    "detail": "chutzpah = chutzpah"
    },
    {
     "key": "v1d519995",
@@ -565,12 +541,6 @@
     "detail": "sushi = sushi"
    },
    {
-    "key": "v051f2189",
-    "lemma": "שיך",
-    "pointed": "שֵׁיךְ",
-    "detail": "sheikh = sheikh"
-   },
-   {
     "key": "va7a80a91",
     "lemma": "אלמנט",
     "pointed": "אֵלֵמֶנְט",
@@ -581,12 +551,6 @@
     "lemma": "סלמון",
     "pointed": "סַלְמוֹן",
     "detail": "salmon = salmon"
-   },
-   {
-    "key": "v9d548ac6",
-    "lemma": "נקוד",
-    "pointed": "נִקּוּד",
-    "detail": "nikud = nikud"
    }
   ],
   "furtive-patach-translit": []

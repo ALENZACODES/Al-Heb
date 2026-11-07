@@ -6,7 +6,7 @@
   "removed": 2,
   "translit": 173,
   "forms": 1,
-  "glosses": 54,
+  "glosses": 74,
   "hidden": 4,
   "examples": 56,
   "ipa": 23,
@@ -4341,6 +4341,170 @@
    "old": null,
    "new": "sort ranked records by min(modernRank, 1.5 x readRank), ties by old frequencyRank then id; ranks 1..n contiguous; level from the build bands",
    "reason": "Applies the build_words.mjs ranking rule to the records added or patched above and to the two modernRank corrections, then renumbers frequencyRank and level; unchanged records keep their order. The two gaps left by the removed duplicates are closed."
+  },
+  {
+   "id": "h32c69c06",
+   "field": "en",
+   "old": "of, belonging to, owned by, pertaining to",
+   "new": "of; belonging to",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. Wiktionary שֶׁל: of, belonging to. The longer \"owned by, pertaining to\" is the same sense, shortened for learners. https://en.wiktionary.org/wiki/%D7%A9%D7%9C"
+  },
+  {
+   "id": "h6ad3ddd8",
+   "field": "en",
+   "old": "order, the state of being well-arranged, in the sense of putting things in order",
+   "new": "order, arrangement; the Passover seder",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. vocab5000 override v3bb3aed6 already has this gloss. words.json still had the dictionary-ese sense. Passover seder is the record alt \"seder\". https://en.wiktionary.org/wiki/%D7%A1%D7%93%D7%A8"
+  },
+  {
+   "id": "hfcd9d9b6",
+   "field": "en",
+   "old": "to sit, to be in a position with the torso upright and the legs supported",
+   "new": "to sit; to live (somewhere)",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. Pa'al יָשַׁב. \"to sit\" is the head sense; \"to live (somewhere)\" restates this record's own alt \"to settle, to establish a residence\", not a different verb. https://en.wiktionary.org/wiki/%D7%99%D7%A9%D7%91"
+  },
+  {
+   "id": "h3c9f9b9b",
+   "field": "en",
+   "old": "a collective term for all that covers a dead body or that a dead body covers",
+   "new": "tent",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. vocab5000 override v2c5ab4f5 already glosses the ordinary word tent. words.json still had the ritual covering sense, which moves to alt. https://en.wiktionary.org/wiki/%D7%90%D7%94%D7%9C"
+  },
+  {
+   "id": "h3c9f9b9b",
+   "field": "alt",
+   "old": [
+    "ohel"
+   ],
+   "new": [
+    "a collective term for all that covers a dead body or that a dead body covers"
+   ],
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. vocab5000 override v2c5ab4f5 already glosses the ordinary word tent. words.json still had the ritual covering sense, which moves to alt. https://en.wiktionary.org/wiki/%D7%90%D7%94%D7%9C"
+  },
+  {
+   "id": "hd83852fd",
+   "field": "en",
+   "old": "to understand, to have understanding, to be one who understands",
+   "new": "to understand",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. הֵבִין is the hifil \"to understand\". The extra clauses repeat that sense. https://en.wiktionary.org/wiki/%D7%94%D7%91%D7%99%D7%9F"
+  },
+  {
+   "id": "hbab9e498",
+   "field": "en",
+   "old": "to worry (about something), to be concerned (about something)",
+   "new": "to worry",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. Pa'al דָּאַג \"to worry\". \"to be concerned\" is the same sense. https://en.wiktionary.org/wiki/%D7%93%D7%90%D7%92"
+  },
+  {
+   "id": "h1694966b",
+   "field": "en",
+   "old": "to fear, to be scared, afraid, frightened of (a person or thing)",
+   "new": "to fear; to be afraid",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. Pa'al פָּחַד, not the pi'el פִּחֵד entry. Shortened from the same fear sense. https://en.wiktionary.org/wiki/%D7%A4%D7%97%D7%93"
+  },
+  {
+   "id": "hca9b72dd",
+   "field": "en",
+   "old": "not, except, without, unless, besides, because not, until, etc",
+   "new": "not; except; without",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. בִּלְתִּי head senses kept. Secondary \"unless / until\" clauses were not promoted. https://en.wiktionary.org/wiki/%D7%91%D7%9C%D7%AA%D7%99"
+  },
+  {
+   "id": "h83e50730",
+   "field": "en",
+   "old": "to meet (with someone), to have a meeting with, to meet (intentionally)",
+   "new": "to meet (with someone)",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. Nif'al נִפְגַּשׁ \"to meet\". Voice is unchanged. https://en.wiktionary.org/wiki/%D7%A0%D7%A4%D7%92%D7%A9"
+  },
+  {
+   "id": "h319721ae",
+   "field": "en",
+   "old": "used to indicate someone's care or concern about something",
+   "new": "(it) matters; (one) cares",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. Impersonal אִכְפַּת ל־. Wiktionary examples are \"do you care\" / \"I don't care\". https://en.wiktionary.org/wiki/%D7%90%D7%9B%D7%A4%D7%AA"
+  },
+  {
+   "id": "hcd00a615",
+   "field": "en",
+   "old": "ha!",
+   "new": "ha! (an exclamation of triumph or discovery); behold",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. הָא is an interjection. Wiktionary: \"ha! (an exclamation of triumph or discovery)\" and \"behold!, this, here is\" (already this record's alt). The CSV label \"ha! (exclamation)\" was widened to keep both senses. https://en.wiktionary.org/wiki/%D7%94%D7%90"
+  },
+  {
+   "id": "hc35a1f96",
+   "field": "en",
+   "old": "a homer, a former Hebrew unit of dry volume, about equal to 230 L or 6½ bushels",
+   "new": "material; substance",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. Same pointing חֹמֶר. Wiktionary חומר modern sense is \"material, substance\"; clay/mortar and the homer measure stay in alt. The 230 L figure is Wiktionary's and was already on this record. https://en.wiktionary.org/wiki/%D7%97%D7%95%D7%9E%D7%A8"
+  },
+  {
+   "id": "hc35a1f96",
+   "field": "alt",
+   "old": [
+    "material, substance, stuff, matter, chemical agent",
+    "clay, (especially architecture) mortar"
+   ],
+   "new": [
+    "clay, (especially architecture) mortar",
+    "a homer, a former Hebrew unit of dry volume, about equal to 230 L or 6½ bushels"
+   ],
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. Same pointing חֹמֶר. Wiktionary חומר modern sense is \"material, substance\"; clay/mortar and the homer measure stay in alt. The 230 L figure is Wiktionary's and was already on this record. https://en.wiktionary.org/wiki/%D7%97%D7%95%D7%9E%D7%A8"
+  },
+  {
+   "id": "hebf7495d",
+   "field": "en",
+   "old": "used to express agreement with what was just stated",
+   "new": "amen",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. Interjection אָמֵן. \"used to express agreement\" is the dictionary-ese for amen. https://en.wiktionary.org/wiki/%D7%90%D7%9E%D7%9F"
+  },
+  {
+   "id": "h7c9d2ffe",
+   "field": "en",
+   "old": "used to introduce a semantically definite direct object",
+   "new": "(marks a definite direct object; not translated)",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. This id is the object-marker particle (words rank 1, vocab5000 v279bb5ac rank 1), which already has this gloss. The CSV rank 1462 is the noun shovel v0200bfe7 and is not this correction. Alt \"to, with\" is left in place. https://en.wiktionary.org/wiki/%D7%90%D7%AA"
+  },
+  {
+   "id": "h8f6da72d",
+   "field": "en",
+   "old": "Gaon",
+   "new": "genius; pride (Gaon: title of Babylonian academy heads)",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. גָּאוֹן. Wiktionary: biblical pride, the Gaon title, and modern genius. genius and pride were already alts. https://en.wiktionary.org/wiki/%D7%92%D7%90%D7%95%D7%9F"
+  },
+  {
+   "id": "h795e3a35",
+   "field": "en",
+   "old": "omer",
+   "new": "omer (a sheaf; a small biblical dry measure; the Omer count)",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. עֹמֶר / עומר. Wiktionary: sheaf, a small dry measure, and the Omer. Sheaf and \"the Omer\" were already alts. The CSV \"about 2.2 litres\" is not applied; Wiktionary says about 2.3 L and the litre figure is an estimate. https://en.wiktionary.org/wiki/%D7%A2%D7%95%D7%9E%D7%A8"
+  },
+  {
+   "id": "hbbe95c0d",
+   "field": "en",
+   "old": "chutzpah",
+   "new": "audacity; shameless confidence (chutzpah)",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. חֻצְפָּה. Wiktionary: \"chutzpah; audacity; shameless confidence\". The CSV word \"impudence\" was not copied. https://en.wiktionary.org/wiki/%D7%97%D7%95%D7%A6%D7%A4%D7%94"
+  },
+  {
+   "id": "h82329da7",
+   "field": "en",
+   "old": "sheikh",
+   "new": "sheikh (an Arab tribal or religious leader)",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. שֵׁיךְ is the loanword sheikh, not שַׁיָּךְ \"belonging\". https://en.wiktionary.org/wiki/sheikh"
+  },
+  {
+   "id": "h5c0abbc6",
+   "field": "en",
+   "old": "nikud",
+   "new": "vowel points (the marks that show vowels in Hebrew text); scoring",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. נִקּוּד / ניקוד. Wiktionary: the vowel-point system, and uncountable \"scoring\" (already this record's alt). https://en.wiktionary.org/wiki/%D7%A0%D7%99%D7%A7%D7%95%D7%93"
+  },
+  {
+   "id": "hebf7495d",
+   "field": "en",
+   "old": "amen",
+   "new": "amen (so be it)",
+   "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker review. The bare gloss \"amen\" repeats the transliteration and the audit marks it circular. Wiktionary defines אָמֵן as the agreement response \"amen\"; the English word means \"so be it\". https://en.wiktionary.org/wiki/%D7%90%D7%9E%D7%9F https://en.wiktionary.org/wiki/amen"
   }
  ]
 }

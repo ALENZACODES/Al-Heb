@@ -48,7 +48,7 @@
    "id": "hd83852fd",
    "he": "הֵבִין",
    "translit": "hevin",
-   "en": "to understand, to have understanding, to be one who understands",
+   "en": "to understand",
    "kind": "word",
    "audioId": "hd83852fd",
    "source": "data/vocab/words.json"
@@ -66,7 +66,7 @@
    "id": "hbab9e498",
    "he": "דָּאַג",
    "translit": "da'ag",
-   "en": "to worry (about something), to be concerned (about something)",
+   "en": "to worry",
    "kind": "word",
    "audioId": "hbab9e498",
    "source": "data/vocab/words.json"

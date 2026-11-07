@@ -1,7 +1,7 @@
 {
  "schema": 1,
  "source": "data/vocab/words.json",
- "note": "Pointed forms and glosses are copied from the vocabulary file; nothing here is hand-written Hebrew. Unreviewed by a Hebrew teacher. Look-alike (ambiguous) = another word with the same unpointed spelling and different points within the 1500 most frequent modern words: 66 of 240 flagged. unlock = lesson number from the vocabulary file (r08 -> 8).",
+ "note": "Pointed forms and glosses are copied from the vocabulary file; nothing here is hand-written Hebrew. Unreviewed by a Hebrew teacher. Look-alike (ambiguous) = another word with the same unpointed spelling and different points within the 1500 most frequent modern words: 67 of 240 flagged. unlock = lesson number from the vocabulary file (r08 -> 8).",
  "rivalRank": 1500,
  "count": 240,
  "items": [
@@ -102,6 +102,18 @@
     "en": "a yoke",
     "modernRank": 303
    }
+  },
+  {
+   "id": "h32c69c06",
+   "he": "שֶׁל",
+   "unpointed": "של",
+   "translit": "shel",
+   "en": "of; belonging to",
+   "pos": "prep",
+   "level": "A1",
+   "modernRank": 10,
+   "unlock": 11,
+   "ambiguous": false
   },
   {
    "id": "hf63de22c",
@@ -407,7 +419,7 @@
     "id": "h6ad3ddd8",
     "he": "סֵדֶר",
     "translit": "seder",
-    "en": "order, the state of being well-arranged, in the sense of putting things in order",
+    "en": "order, arrangement; the Passover seder",
     "modernRank": 59
    }
   },
@@ -710,6 +722,25 @@
     "translit": "chavar",
     "en": "to join (person), to join in, to team up with, to join forces with",
     "modernRank": 646
+   }
+  },
+  {
+   "id": "h6ad3ddd8",
+   "he": "סֵדֶר",
+   "unpointed": "סדר",
+   "translit": "seder",
+   "en": "order, arrangement; the Passover seder",
+   "pos": "noun",
+   "level": "A1",
+   "modernRank": 59,
+   "unlock": 20,
+   "ambiguous": true,
+   "rival": {
+    "id": "hdbd6764a",
+    "he": "סִדֵּר",
+    "translit": "sider",
+    "en": "to organize",
+    "modernRank": 36
    }
   },
   {
@@ -1827,6 +1858,18 @@
    "ambiguous": false
   },
   {
+   "id": "hd83852fd",
+   "he": "הֵבִין",
+   "unpointed": "הבין",
+   "translit": "hevin",
+   "en": "to understand",
+   "pos": "verb",
+   "level": "A1",
+   "modernRank": 147,
+   "unlock": 12,
+   "ambiguous": false
+  },
+  {
    "id": "h0e071b5c",
    "he": "יֻדַּע",
    "unpointed": "ידע",
@@ -2309,6 +2352,18 @@
    "level": "A1",
    "modernRank": 188,
    "unlock": 24,
+   "ambiguous": false
+  },
+  {
+   "id": "hbab9e498",
+   "he": "דָּאַג",
+   "unpointed": "דאג",
+   "translit": "da'ag",
+   "en": "to worry",
+   "pos": "verb",
+   "level": "A1",
+   "modernRank": 189,
+   "unlock": 18,
    "ambiguous": false
   },
   {
@@ -3298,54 +3353,6 @@
     "en": "film, sheet",
     "modernRank": 1325
    }
-  },
-  {
-   "id": "hc086f897",
-   "he": "מֹתֶק",
-   "unpointed": "מתק",
-   "translit": "motek",
-   "en": "sweetness",
-   "pos": "noun",
-   "level": "A1",
-   "modernRank": 270,
-   "unlock": 24,
-   "ambiguous": false
-  },
-  {
-   "id": "h64e266b0",
-   "he": "אֲמִתִּי",
-   "unpointed": "אמתי",
-   "translit": "amiti",
-   "en": "real, true, actual",
-   "pos": "adj",
-   "level": "A1",
-   "modernRank": 271,
-   "unlock": 21,
-   "ambiguous": false
-  },
-  {
-   "id": "h12364093",
-   "he": "הִצְטָרֵךְ",
-   "unpointed": "הצטרך",
-   "translit": "hitztarekh",
-   "en": "to need",
-   "pos": "verb",
-   "level": "A1",
-   "modernRank": 272,
-   "unlock": 24,
-   "ambiguous": false
-  },
-  {
-   "id": "hfdbafdf6",
-   "he": "בִּגְלַל",
-   "unpointed": "בגלל",
-   "translit": "biglal",
-   "en": "because of, due to [with noun phrase]",
-   "pos": "prep",
-   "level": "A1",
-   "modernRank": 273,
-   "unlock": 18,
-   "ambiguous": false
   }
  ]
 }

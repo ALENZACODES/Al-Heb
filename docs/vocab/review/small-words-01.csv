@@ -1,5 +1,5 @@
 ﻿id,hebrew,niqqud,translit,gloss,pos,gender,source,flags,reviewer_ok,reviewer_note
-h7c9d2ffe,את,אֵת,et,used to introduce a semantically definite direct object,prep,,wiktionary,homograph gloss-machine licence-missing needs-review,,
+h7c9d2ffe,את,אֵת,et,(marks a definite direct object; not translated),prep,,wiktionary,homograph licence-missing needs-review,,
 he9919e02,ל,לְ־,le,to,prep,,wiktionary,licence-missing needs-review,,
 h67c6be75,זה,זֶה,zeh,"this, this one",pron,,wiktionary,licence-missing needs-review,,
 h103e7d27,אני,אֲנִי,ani,I,pron,,wiktionary,homograph licence-missing needs-review,,
@@ -7,7 +7,7 @@ ha8f1d06f,אשר,אֲשֶׁר,asher,introduces a subordinate clause,conj,,wiktio
 h364cadf4,מה,מָה,mah,what,pron,,wiktionary,licence-missing needs-review,,
 h7d05bcca,על,עַל,al,"on, on top of",prep,,wiktionary,homograph licence-missing,,
 h1ef19acb,הוא,הוּא,hu,he,pron,,wiktionary,homograph licence-missing needs-review,,
-h32c69c06,של,שֶׁל,shel,"of, belonging to, owned by, pertaining to",prep,,wiktionary,gloss-machine licence-missing,,
+h32c69c06,של,שֶׁל,shel,of; belonging to,prep,,wiktionary,licence-missing,,
 h68843f80,אל,אֶל,el,"to, towards, into",prep,,wiktionary,homograph licence-missing needs-review,,
 hb7b6cc8b,כי,כִּי,ki,"because, for, since",conj,,wiktionary,homograph licence-missing needs-review,,
 h0f231144,אם,אִם,im,"if, whether",conj,,wiktionary,homograph licence-missing needs-review,,

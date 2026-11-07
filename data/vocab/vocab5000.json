@@ -449,7 +449,7 @@
 "needsPointing":false,
 "pos":"prep",
 "topic":"Misc Nouns",
-"gloss":"of, belonging to, owned by, pertaining to",
+"gloss":"of; belonging to",
 "tier":500,
 "id":"vcae66f69",
 "proofread":false,
@@ -492,7 +492,8 @@
 "pointed":"שֶׁלָּנוּ",
 "label":"1pl"
 }
-]
+],
+"overridden":true
 },
 {
 "rank":14,
@@ -2530,7 +2531,7 @@
 "needsPointing":false,
 "pos":"verb",
 "topic":"Verbs",
-"gloss":"to sit, to be in a position with the torso upright and the legs supported",
+"gloss":"to sit; to live (somewhere)",
 "tier":500,
 "id":"v4114852f",
 "proofread":false,
@@ -2540,7 +2541,8 @@
 "sourceRank":105,
 "sameSpelling":[
 "v2afa8070"
-]
+],
+"overridden":true
 },
 {
 "rank":106,
@@ -4315,14 +4317,15 @@
 "needsPointing":false,
 "pos":"verb",
 "topic":"Verbs",
-"gloss":"to understand, to have understanding, to be one who understands",
+"gloss":"to understand",
 "tier":500,
 "id":"v4ac4f0b7",
 "proofread":false,
 "pointedSource":"wiktionary",
 "readList":true,
 "curatedCore":false,
-"sourceRank":197
+"sourceRank":197,
+"overridden":true
 },
 {
 "rank":198,
@@ -5416,14 +5419,15 @@
 "needsPointing":false,
 "pos":"verb",
 "topic":"Verbs",
-"gloss":"to worry (about something), to be concerned (about something)",
+"gloss":"to worry",
 "tier":500,
 "id":"v35d3a7b7",
 "proofread":false,
 "pointedSource":"wiktionary",
 "readList":true,
 "curatedCore":false,
-"sourceRank":256
+"sourceRank":256,
+"overridden":true
 },
 {
 "rank":257,
@@ -11084,7 +11088,7 @@
 "needsPointing":false,
 "pos":"verb",
 "topic":"Verbs",
-"gloss":"to fear, to be scared, afraid, frightened of (a person or thing)",
+"gloss":"to fear; to be afraid",
 "tier":1000,
 "id":"vd0415735",
 "proofread":false,
@@ -11095,7 +11099,8 @@
 "sameSpelling":[
 "vd5de0470",
 "v51e2d554"
-]
+],
+"overridden":true
 },
 {
 "rank":563,
@@ -12436,7 +12441,7 @@
 "needsPointing":false,
 "pos":"adv",
 "topic":"Misc Nouns",
-"gloss":"not, except, without, unless, besides, because not, until, etc",
+"gloss":"not; except; without",
 "tier":1000,
 "id":"v8c6c5fb3",
 "proofread":false,
@@ -12447,7 +12452,8 @@
 "fn":"adverb",
 "tags":[
 "function"
-]
+],
+"overridden":true
 },
 {
 "rank":639,
@@ -14035,14 +14041,15 @@
 "needsPointing":false,
 "pos":"verb",
 "topic":"Verbs",
-"gloss":"to meet (with someone), to have a meeting with, to meet (intentionally)",
+"gloss":"to meet (with someone)",
 "tier":1000,
 "id":"v9305ab6d",
 "proofread":false,
 "pointedSource":"wiktionary",
 "readList":true,
 "curatedCore":false,
-"sourceRank":718
+"sourceRank":718,
+"overridden":true
 },
 {
 "rank":729,
@@ -16178,14 +16185,15 @@
 "needsPointing":false,
 "pos":"adv",
 "topic":"Adjectives",
-"gloss":"used to indicate someone's care or concern about something",
+"gloss":"(it) matters; (one) cares",
 "tier":1000,
 "id":"vfdf8dca8",
 "proofread":false,
 "pointedSource":"wiktionary",
 "readList":false,
 "curatedCore":false,
-"sourceRank":824
+"sourceRank":824,
+"overridden":true
 },
 {
 "rank":848,
@@ -16361,7 +16369,7 @@
 "needsPointing":false,
 "pos":"intj",
 "topic":"Misc Nouns",
-"gloss":"ha!",
+"gloss":"ha! (an exclamation of triumph or discovery); behold",
 "tier":1000,
 "id":"v849e335c",
 "proofread":false,
@@ -16375,7 +16383,8 @@
 ],
 "sameSpelling":[
 "va4b7d8ca"
-]
+],
+"overridden":true
 },
 {
 "rank":859,
@@ -16808,7 +16817,7 @@
 "needsPointing":false,
 "pos":"noun",
 "topic":"Math/Measurements",
-"gloss":"homer, a former Hebrew unit of dry volume, about equal to 230 L or 6½ bushels",
+"gloss":"material; substance",
 "tier":1000,
 "id":"vd6ce87d6",
 "proofread":false,
@@ -16822,7 +16831,8 @@
 "sameSpelling":[
 "v0f20972e",
 "ve2a2eb93"
-]
+],
+"overridden":true
 },
 {
 "rank":884,
@@ -17052,7 +17062,7 @@
 "needsPointing":false,
 "pos":"intj",
 "topic":"Misc Nouns",
-"gloss":"used to express agreement with what was just stated",
+"gloss":"amen (so be it)",
 "tier":1000,
 "id":"vbb4d8260",
 "proofread":false,
@@ -17068,7 +17078,8 @@
 "v1bb4b48e",
 "vc24b24b4",
 "vee566004"
-]
+],
+"overridden":true
 },
 {
 "rank":897,
@@ -32293,14 +32304,15 @@
 "needsPointing":false,
 "pos":"noun",
 "topic":"Society",
-"gloss":"Gaon",
+"gloss":"genius; pride (Gaon: title of Babylonian academy heads)",
 "tier":2000,
 "id":"va164890d",
 "proofread":false,
 "pointedSource":"wiktionary",
 "readList":true,
 "curatedCore":false,
-"sourceRank":1736
+"sourceRank":1736,
+"overridden":true
 },
 {
 "rank":1766,
@@ -37161,7 +37173,7 @@
 "needsPointing":false,
 "pos":"noun",
 "topic":"Misc Nouns",
-"gloss":"omer",
+"gloss":"omer (a sheaf; a small biblical dry measure; the Omer count)",
 "tier":5000,
 "id":"ve23877c7",
 "proofread":false,
@@ -37171,7 +37183,8 @@
 "sourceRank":2020,
 "tags":[
 "biblical"
-]
+],
+"overridden":true
 },
 {
 "rank":2051,
@@ -68797,14 +68810,15 @@
 "needsPointing":false,
 "pos":"noun",
 "topic":"Misc Nouns",
-"gloss":"chutzpah",
+"gloss":"audacity; shameless confidence (chutzpah)",
 "tier":5000,
 "id":"vba281962",
 "proofread":false,
 "pointedSource":"wiktionary",
 "readList":false,
 "curatedCore":false,
-"sourceRank":3892
+"sourceRank":3892,
+"overridden":true
 },
 {
 "rank":3919,
@@ -81510,7 +81524,7 @@
 "needsPointing":false,
 "pos":"noun",
 "topic":"People",
-"gloss":"sheikh",
+"gloss":"sheikh (an Arab tribal or religious leader)",
 "tier":5000,
 "id":"v051f2189",
 "proofread":false,
@@ -81520,7 +81534,8 @@
 "sourceRank":4659,
 "sameSpelling":[
 "v80953939"
-]
+],
+"overridden":true
 },
 {
 "rank":4681,
@@ -86871,14 +86886,15 @@
 "needsPointing":false,
 "pos":"noun",
 "topic":"Misc Nouns",
-"gloss":"nikud",
+"gloss":"vowel points (the marks that show vowels in Hebrew text); scoring",
 "tier":5000,
 "id":"v9d548ac6",
 "proofread":false,
 "pointedSource":"wiktionary",
 "readList":false,
 "curatedCore":false,
-"sourceRank":4979
+"sourceRank":4979,
+"overridden":true
 },
 {
 "rank":5000,

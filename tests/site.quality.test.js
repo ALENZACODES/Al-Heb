@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { N } from './torahread.fakedom.js';
 import { showcaseNode } from '../src/shell/showcase.js';
-import { matchRoute } from '../src/shell/router.js';
+import { matchRoute, ROUTES } from '../src/shell/router.js';
 import { GAMES, LEVEL_BY_GAME } from '../src/games/games.view.js';
 import { assertWordBank, nextRound } from '../src/games/wordfinder.model.js';
 import { ANCIENT_TREE_SRC, ANCIENT_TREE_MOBILE_SRC } from '../src/shell/astral-tree.js';
@@ -95,4 +95,17 @@ test('optional prayer audio has a finite escape hatch and cannot trap the openin
   assert.match(veil, /deadline = setTimeout\(\(\) => dismiss\(true\), MAX_LISTEN_HOLD_MS\)/);
   assert.match(veil, /function releaseAfter\(ms\)/);
   assert.match(veil, /if \(now \|\| reduce\) \{ veil\.remove\(\); return; \}/);
+});
+
+
+test('the generated view inventory covers every local route, including Day-0 Word Finder', () => {
+  const generated = read('src/shell/views.generated.js');
+  const list = JSON.parse(/VIEW_FILES = (\[[^\n]+\]);/.exec(generated)?.[1] || '[]');
+  const have = new Set(list);
+  assert.ok(have.has('games/wordfinder.view.js'), 'Word Finder is in the deployed module inventory');
+  for (const route of ROUTES) {
+    if (!route.module || route.module.startsWith('../../')) continue;
+    const path = route.module.replace(/^\.\//, 'shell/').replace(/^\.\.\//, '');
+    assert.ok(have.has(path), route.name + ' has a generated view: ' + path);
+  }
 });

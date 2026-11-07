@@ -56,3 +56,40 @@
 .pinball-bumper[aria-pressed="true"] { outline:4px solid #D9A441; outline-offset:3px; }
 .pinball-ball { position:absolute; width:16px; height:16px; transform:translate(-50%,-50%); background:#B0373B; border:2px solid #2B2B2B; border-radius:50%; pointer-events:none; }
 .prefix-bubble:focus-visible,.palace-station:focus-visible,.pinball-bumper:focus-visible { outline:4px solid #D9A441; outline-offset:4px; }
+
+
+/* Remaining games — neutral shared mechanics; no production cast artwork modified. */
+.game-card .game-choices {display:flex;flex-wrap:wrap;gap:.7rem;align-items:stretch}
+.game-card .game-choice {min-height:52px;white-space:normal}
+.game-rtl-grid {direction:rtl}
+.game-arch-reference,.game-laser-target,.game-root-branch,.game-bridge-entry,.game-shadow-stage,
+.game-cipher-prompt,.game-taxi-dashboard,.game-barter-stall,.game-clinic-scene,
+.game-rental-requirement,.game-bumper-dashboard,.game-train-station,.game-museum-artifact,
+.game-weather-stage,.game-sonar-stage,.game-rhyme-lab,.game-karaoke-tokens {
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem;
+  border-radius:14px;padding:1rem;background:rgba(31,58,95,.07);margin:.75rem 0;
+}
+.game-arch-svg {width:100%;max-height:280px;color:#1f3a5f;border:1px solid #d9a441;border-radius:12px;}
+.game-bridge-span {font-size:2.5rem;text-align:center;color:#6b7f3a;transform-origin:center;transition:transform .2s;}
+.game-bridge-broken {color:#b0373b;transform:rotate(-13deg) translateY(.6rem);text-decoration:line-through;}
+.game-shadow-glyph {font-size:5rem;color:#2b2b2b;filter:blur(1.2px) drop-shadow(12px 9px 4px rgba(0,0,0,.65));}
+.game-shadow-reference {max-width:80px;height:auto;object-fit:contain;filter:brightness(0);}
+.game-train-track,.game-rush-lane,.game-karaoke-tokens {min-height:4.5rem;gap:.5rem}
+.game-train-car,.game-rush-collectible,.game-sonar-gate,.game-rhyme-tube,
+.game-rental-listing,.game-museum-shelf,.game-bumper-car {min-width:8rem;min-height:3.25rem}
+.game-typewriter-keyboard {display:grid;gap:.4rem;max-width:42rem;margin:1rem auto}
+.game-typewriter-row {display:flex;flex-wrap:wrap;justify-content:center;gap:.3rem}
+.game-typewriter-key {min-width:44px;min-height:48px;border-radius:8px;border:1px solid #8d969e;background:#f6f1e7;color:#1f3a5f}
+.game-typewriter-key small {display:block;font-size:.65rem}
+.game-conveyor-track {overflow:hidden;border:2px solid #6b7f3a;border-radius:12px;padding:1rem}
+.game-conveyor-box {display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.8rem;animation:game-conveyor-move 3s ease-in-out infinite alternate}
+@keyframes game-conveyor-move {from {transform:translateX(-12%)} to {transform:translateX(12%)}}
+.game-karaoke-token {border-radius:7px;padding:.25rem .4rem;opacity:.6}
+.game-karaoke-current {background:#d9a441;color:#1f3a5f;opacity:1;font-weight:700;outline:2px solid #1f3a5f}
+.game-rush-timer {font-variant-numeric:tabular-nums;font-size:1.05rem;font-weight:700}
+@media (prefers-reduced-motion:reduce) {
+ .game-conveyor-box {animation:none}
+ .game-bridge-span {transition:none}
+}
+
+.game-arch-option-svg{width:100px;max-width:24vw;height:88px;display:block;color:#1f3a5f}

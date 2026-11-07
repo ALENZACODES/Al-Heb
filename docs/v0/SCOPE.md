@@ -21,9 +21,13 @@ One line per route; the backtick name is the route `name` in `ROUTES` (the test 
 - `about` (/about) - what ALEF is.
 - `credits` (/credits) - credits and licences.
 - `privacy` (/privacy) - privacy notes (local-only data).
+- `terms` (/terms) - terms and rights: ownership, and the credit roll (music and sounds, historic recordings, text sources, fonts, the synthetic-voice note).
 - `install` (/install) - how to install the app on a phone.
 - `offline` (/offline) - using the app offline.
 - `search` (/search) - page, letter and word search (finds preview pages too, labelled "Preview").
+- `calendar` (/calendar) - the Hebrew calendar: Shabbat times, festivals and the weekly portion (promoted 2026-11-07 at the owner's order: the page worked but sat buried in the Preview group, so learners could not find it).
+- `festivals` (/festivals) - this week in the Jewish year (promoted with the calendar, 2026-11-07).
+- `festival` (/festivals/:id) - one festival's words (the calendar family's detail page, promoted with it).
 
 Why these: they are the shortest path a new learner takes (welcome, first day, lessons, letters, review, progress), plus the pages a
 first release cannot ship without (settings with backup/restore/delete, about, credits, privacy, install, offline, search).

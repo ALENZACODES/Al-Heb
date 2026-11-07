@@ -66,6 +66,14 @@ export function createMusicController({
       error = `${row.title} is not available.`;
       emit();
     });
+    // The status follows the element, not the request (audit D-44): only the element's own
+    // 'playing' event may call the phase playing, and only while this node is still current.
+    created.addEventListener?.('playing', () => {
+      if (audio === created && allowed()) { phase = 'playing'; emit(); }
+    });
+    created.addEventListener?.('pause', () => {
+      if (audio === created && (phase === 'playing' || phase === 'starting') && allowed()) { phase = 'paused'; emit(); }
+    });
     return audio;
   }
   function start() {
@@ -74,6 +82,10 @@ export function createMusicController({
     if (!node) return false;
     node.volume = prefs.volume;
     error = '';
+    // 'starting' is set before play() because the element may fire 'playing' synchronously
+    // inside play(); the event listener is what may then move the phase to 'playing'.
+    phase = 'starting';
+    emit();
     try {
       const pending = node.play?.();
       if (pending && typeof pending.catch === 'function') {
@@ -85,8 +97,6 @@ export function createMusicController({
       emit();
       return false;
     }
-    phase = 'playing';
-    emit();
     return true;
   }
   return {

@@ -105,10 +105,13 @@ function showTwin(kind) {
     if (!node && globalThis.document?.body) {
       node = globalThis.document.createElement('p');
       node.id = 'media-twin';
+      node.setAttribute('class', 'visually-hidden');
       node.setAttribute('role', 'status');
       node.setAttribute('aria-live', 'polite');
       globalThis.document.body.append(node);
     }
+    // The twin is a status line for assistive tech only; it must never show as stray text (audit D-45).
+    if (node && node.getAttribute?.('class') !== 'visually-hidden') node.setAttribute('class', 'visually-hidden');
     if (node) node.textContent = text;
   } catch { /* a missing status line must not block the game */ }
 }

@@ -4,9 +4,11 @@ import { gameMusic, musicContextFor } from './music.js';
 import { mediaPolicy } from './policy.js';
 
 const CSS = `
-#game-music{position:static;z-index:auto;clear:both;margin:1rem 0 0;padding:.75rem 1rem;background:var(--card,#fff);border:1px solid var(--line,#d7d0c4);border-radius:.75rem;display:grid;gap:.5rem;scroll-margin-block:1rem}
+#game-music{position:static;z-index:auto;clear:both;margin:1rem 0 0;padding:.4rem .6rem;font-size:.85rem;background:var(--card,#fff);border:1px solid var(--line,#d7d0c4);border-radius:.75rem;display:grid;gap:.35rem;scroll-margin-block:1rem}
 #game-music[hidden]{display:none}
+#game-music .music-hint{margin:0;font-size:.78rem}
 #game-music .row{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+#game-music input[type="range"]{width:5.5rem}
 #game-music button,#game-music select,#game-music input{min-block-size:44px}
 #game-music button:focus-visible,#game-music select:focus-visible,#game-music input:focus-visible{outline:3px solid #1E4634;outline-offset:2px}
 #game-music .status{margin:0}
@@ -32,9 +34,11 @@ function paint(state) {
       ? state.error
       : mediaPolicy.quiet() ? 'Music stays off for the first minute.'
         : state.phase === 'playing' ? 'Music is playing.'
-          : state.phase === 'blocked' ? 'Music stays off on this screen.'
-            : state.phase === 'paused' && state.speech ? 'Music is paused while speech plays.'
-              : 'Music is off.';
+          : state.phase === 'starting' ? 'Music is starting.'
+            : state.phase === 'blocked' ? 'Music stays off on this screen.'
+              : state.phase === 'paused' && state.speech ? 'Music is paused while speech plays.'
+                : state.phase === 'paused' ? 'Music is paused.'
+                  : 'Music is off.';
   }
 }
 
@@ -48,7 +52,7 @@ export function mountGameMusic(parent = document.body) {
   }
   const tracks = gameMusic.tracks;
   root = h('aside', { id: 'game-music', hidden: true, 'aria-label': 'Game music' },
-    h('p', {}, 'Optional secular music for games. It stays off until you turn it on, and it does not play during prayer or sacred listening.'),
+    h('p', { class: 'music-hint' }, 'Optional secular music for games. It stays off until you turn it on, and it does not play during prayer or sacred listening.'),
     h('div', { class: 'row' },
       h('button', { type: 'button', class: 'btn', 'data-music': 'toggle', 'aria-pressed': 'false', onclick: () => {
         const now = gameMusic.snapshot();
@@ -58,9 +62,8 @@ export function mountGameMusic(parent = document.body) {
       h('button', { type: 'button', class: 'btn secondary', 'data-music': 'mute', 'aria-pressed': 'false', onclick: () => gameMusic.mute(!gameMusic.snapshot().muted) }, 'Mute'),
       h('label', {}, 'Track ', h('select', { 'data-music': 'track', onchange: (e) => gameMusic.choose(e.target.value) },
         ...tracks.map((t) => h('option', { value: t.id }, t.title)))),
-      h('label', {}, 'Volume ', h('input', { 'data-music': 'volume', type: 'range', min: '0', max: '1', step: '0.05', value: '0.4', oninput: (e) => gameMusic.volume(Number(e.target.value)) }))),
-    h('p', { class: 'muted' }, 'Music loops by Kenney (kenney.nl), CC0 1.0.'),
-    h('p', { class: 'status', 'data-music': 'status', role: 'status' }, 'Music is off.'));
+      h('label', {}, 'Volume ', h('input', { 'data-music': 'volume', type: 'range', min: '0', max: '1', step: '0.05', value: '0.4', oninput: (e) => gameMusic.volume(Number(e.target.value)) })),
+      h('span', { class: 'status', 'data-music': 'status', role: 'status' }, 'Music is off.')));
   parent.append(root);
   if (!wired) { wired = true; gameMusic.subscribe(paint); }
   return root;

@@ -16,11 +16,14 @@ export const SECTION_ROUTES = {
   learn: ['home', 'firstday', 'wordfinder', 'learn', 'letters', 'atlas', 'letter', 'sounds', 'rules', 'rules-page', 'loanwords', 'loanword', 'spotit', 'checkpoint',
     'ladder', 'fade', 'fadeline', 'scaffold', 'gender', 'roles', 'firstday-ladder', 'vocab', 'vocab-themes', 'sprint', 'wordtrace', 'dialogues', 'dialogue', 'phrases', 'phrase',
     'israel', 'israelsec', 'intermediate', 'intermediatelesson', 'grammar', 'grammartopic', 'typing', 'classtrack', 'classtrackweek', 'classtrackmode',
-    'soundgap', 'vowelboard', 'niqquddial', 'dottile', 'syllablechips', 'nikkud-fade', 'roots', 'gender-drill', 'scheduler', 'known-words'],
-  read: ['read', 'text', 'torahread', 'torahreadsec', 'torahreader', 'service', 'trope', 'timedread', 'morning', 'scan'],
+    'soundgap', 'vowelboard', 'niqquddial', 'dottile', 'syllablechips', 'nikkud-fade', 'roots', 'gender-drill', 'scheduler', 'known-words',
+    'games', 'tugowar', 'vowelcatcher', 'pinball', 'prefixblast', 'memorypalace', 'shabbatrush', 'typewriter', 'petclinic', 'trainswitch', 'weatherstudio',
+    'rentalagent', 'echochamber', 'museumcurator', 'karaokebeat', 'archbuilder', 'lasermaze', 'roottree', 'letterbridge', 'shadowcraft', 'ciphergrid',
+    'shuktaxi', 'barter', 'submarinesonar', 'rhymelab', 'bumperverbs', 'bumpercar', 'traintrack', 'weatherpresenter', 'karaoke', 'cipher', 'fleamarket'],
+  read: ['read', 'text', 'torahread', 'torahreadsec', 'torahreader', 'service', 'trope', 'timedread', 'morning', 'scan', 'books', 'book', 'listen-shelf'],
   speak: ['speak', 'listen', 'compare', 'tradition-quiz', 'read-my-way', 'traditions', 'traditions-guide', 'traditions-hear', 'record-compare'],
   progress: ['progress', 'awards', 'placement', 'calendar', 'festivals', 'festival', 'reminders', 'share', 'classsummary', 'syllabus', 'time-budget', 'daily'],
-  more: ['search', 'settings', 'accessibility', 'workbook', 'install', 'offline', 'about', 'how', 'credits', 'privacy', 'welcome'],
+  more: ['search', 'settings', 'accessibility', 'workbook', 'install', 'offline', 'about', 'how', 'credits', 'privacy', 'terms', 'welcome'],
 };
 
 /** Route name -> section id. */
@@ -30,7 +33,7 @@ export const ROUTE_SECTION = Object.fromEntries(Object.entries(SECTION_ROUTES).f
 export const PARENT = {
   letter: 'letters', loanword: 'loanwords', spotit: 'learn', dialogue: 'dialogues', phrase: 'phrases', fadeline: 'fade', israelsec: 'israel',
   classtrackweek: 'classtrack', classtrackmode: 'classtrack', festival: 'festivals', 'rules-page': 'rules', intermediatelesson: 'intermediate',
-  grammartopic: 'grammar', text: 'read', torahreadsec: 'torahread',
+  grammartopic: 'grammar', text: 'read', torahreadsec: 'torahread', book: 'books',
 };
 
 /** Hidden from the menu (still searchable): first-run onboarding. */
@@ -40,7 +43,11 @@ const MENU_HIDDEN = new Set(['welcome']);
  * "More ways to learn" so a new learner meets fewer half-finished screens. They still open by direct link, still carry the Preview
  * banner and are still found by search (labelled Preview). Only preview routes may be listed here (tests/v0.test.js).
  */
-export const PREVIEW_HIDDEN = new Set(['scheduler', 'known-words', 'time-budget', 'classsummary', 'torahreader', 'niqquddial', 'dottile', 'nikkud-fade', 'record-compare']);
+export const PREVIEW_HIDDEN = new Set(['scheduler', 'known-words', 'time-budget', 'classsummary', 'torahreader', 'niqquddial', 'dottile', 'nikkud-fade', 'record-compare',
+  // The individual games stay out of the More sheet (the Games hub is the one listed door); search still finds each by name.
+  'tugowar', 'vowelcatcher', 'pinball', 'prefixblast', 'memorypalace', 'shabbatrush', 'typewriter', 'petclinic', 'trainswitch', 'weatherstudio',
+  'rentalagent', 'echochamber', 'museumcurator', 'karaokebeat', 'archbuilder', 'lasermaze', 'roottree', 'letterbridge', 'shadowcraft', 'ciphergrid',
+  'shuktaxi', 'barter', 'submarinesonar', 'rhymelab', 'bumperverbs', 'bumpercar', 'traintrack', 'weatherpresenter', 'karaoke', 'cipher', 'fleamarket']);
 
 export const isStatic = (r) => !r.pattern.includes(':');
 /** Release tier of a route: 'v0' only when router.js says so; anything else is 'preview'. */

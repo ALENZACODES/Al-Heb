@@ -28,6 +28,34 @@ export async function mount(root, ctx) {
   root.append(h("h1", {}, book.titleEn));
   root.append(h("p", { class: "muted" }, `${book.titleTranslit} · ${book.level} · ${book.pages.length} pages`));
 
+  // The shelf index (best effort) names the next book for the last-page hand-off.
+  const shelf = await fetchJson(ctx, "data/books/index.json").catch(() => null);
+  const shelfBooks = Array.isArray(shelf?.books) ? shelf.books : [];
+  const nextBook = shelfBooks[shelfBooks.findIndex((b) => b.id === id) + 1] || null;
+
+  // Reading place, shared with the shelf and the awards engine: books.v1 holds the last page
+  // reached per book (and when its last page was first reached); books.finished.v1 is the
+  // finished map the Book Finisher award reads. Best effort, like every other writer.
+  let writtenPage = -1, wroteFinished = false;
+  const recordProgress = async () => {
+    const last = book.pages.length - 1;
+    if (page === writtenPage && !(page === last && !wroteFinished)) return;
+    try {
+      const all = (await ctx.store.get("books.v1")) || {};
+      const entry = all[id] && typeof all[id] === "object" ? all[id] : {};
+      entry.lastPage = page;
+      if (page === last && !entry.finishedAt) entry.finishedAt = Date.now();
+      all[id] = entry;
+      await ctx.store.set("books.v1", all);
+      writtenPage = page;
+      if (page === last && entry.finishedAt) {
+        const fin = (await ctx.store.get("books.finished.v1")) || {};
+        if (!fin[id]) { fin[id] = entry.finishedAt; await ctx.store.set("books.finished.v1", fin); }
+        wroteFinished = true;
+      }
+    } catch { /* progress is an addition; the reading never waits on it */ }
+  };
+
   let page = 0;
   const stage = h("div", { class: "book-stage" });
   const dots = h("div", { class: "book-dots", role: "tablist", "aria-label": "Pages" });
@@ -67,6 +95,15 @@ export async function mount(root, ctx) {
     if (page === book.pages.length - 1) next.setAttribute("disabled", "");
     stage.append(h("div", { class: "book-nav" }, prev,
       h("span", { class: "muted" }, `Page ${page + 1} of ${book.pages.length}`), next));
+
+    if (page === book.pages.length - 1) {
+      stage.append(h("p", { class: "book-finished" }, `You finished ${book.titleEn}.`));
+      if (nextBook) {
+        stage.append(h("p", {}, h("a", { class: "btn secondary", href: `#/book/${nextBook.id}` },
+          `Next book: ${nextBook.titleTranslit} — ${nextBook.titleEn}`)));
+      }
+    }
+    recordProgress();
 
     book.pages.forEach((_, i) => {
       const d = h("button", { type: "button", class: "book-dot" + (i === page ? " on" : ""),

@@ -73,6 +73,42 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `time-budget` | hide | Planning numbers; belongs inside `syllabus`. |
 | `daily` | keep | Daily goal and quests. |
 | `awards` | keep | Practice-game activity and a sample beginner certificate. Not a lesson score. |
+| `phrases` | keep | Common phrases and sentences; supports the speaking goal. |
+| `books` | keep | The little-books shelf; listed in the Preview group so the books can be found. |
+| `listen-shelf` | keep | The Sacred Listen shelf; listed in the Preview group so the recordings can be found. |
+| `games` | keep | The games hub; listed in the Preview group as the one door to all the games. |
+| `wordfinder` | keep | The first game; linked from Home and the showcase. |
+| `tugowar` | hide | A game; reached from the games hub, and search finds it by name. |
+| `vowelcatcher` | hide | A game; reached from the games hub, and search finds it by name. |
+| `pinball` | hide | A game; reached from the games hub, and search finds it by name. |
+| `prefixblast` | hide | A game; reached from the games hub, and search finds it by name. |
+| `memorypalace` | hide | A game; reached from the games hub, and search finds it by name. |
+| `shabbatrush` | hide | A game; reached from the games hub, and search finds it by name. |
+| `typewriter` | hide | A game; reached from the games hub, and search finds it by name. |
+| `petclinic` | hide | A game; reached from the games hub, and search finds it by name. |
+| `trainswitch` | hide | A game; reached from the games hub, and search finds it by name. |
+| `weatherstudio` | hide | A game; reached from the games hub, and search finds it by name. |
+| `rentalagent` | hide | A game; reached from the games hub, and search finds it by name. |
+| `echochamber` | hide | A game; reached from the games hub, and search finds it by name. |
+| `museumcurator` | hide | A game; reached from the games hub, and search finds it by name. |
+| `karaokebeat` | hide | A game; reached from the games hub, and search finds it by name. |
+| `archbuilder` | hide | A game; reached from the games hub, and search finds it by name. |
+| `lasermaze` | hide | A game; reached from the games hub, and search finds it by name. |
+| `roottree` | hide | A game; reached from the games hub, and search finds it by name. |
+| `letterbridge` | hide | A game; reached from the games hub, and search finds it by name. |
+| `shadowcraft` | hide | A game; reached from the games hub, and search finds it by name. |
+| `ciphergrid` | hide | A game; reached from the games hub, and search finds it by name. |
+| `shuktaxi` | hide | A game; reached from the games hub, and search finds it by name. |
+| `barter` | hide | A game; reached from the games hub, and search finds it by name. |
+| `submarinesonar` | hide | A game; reached from the games hub, and search finds it by name. |
+| `rhymelab` | hide | A game; reached from the games hub, and search finds it by name. |
+| `bumperverbs` | hide | A game; reached from the games hub, and search finds it by name. |
+| `bumpercar` | hide | An alias of `bumperverbs`; reached from the games hub, and search finds it by name. |
+| `traintrack` | hide | An alias of `trainswitch`; reached from the games hub, and search finds it by name. |
+| `weatherpresenter` | hide | An alias of `weatherstudio`; reached from the games hub, and search finds it by name. |
+| `karaoke` | hide | An alias of `karaokebeat`; reached from the games hub, and search finds it by name. |
+| `cipher` | hide | An alias of `ciphergrid`; reached from the games hub, and search finds it by name. |
+| `fleamarket` | hide | An alias of `barter`; reached from the games hub, and search finds it by name. |
 
 ## First session path (unchanged)
 

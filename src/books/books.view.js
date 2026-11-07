@@ -21,6 +21,9 @@ export async function mount(root, ctx) {
     wrap.append(h("p", { class: "muted" }, "The bookshelf could not be loaded just now."));
     return;
   }
+  // Reading place written by the reader (books.v1): a finished book says so on its card.
+  let places = {};
+  try { places = (await ctx.store.get("books.v1")) || {}; } catch { /* the shelf works without it */ }
   for (const b of data.books) {
     const cover = h("div", { class: "book-cover" });
     if (b.hasImages) {
@@ -34,6 +37,7 @@ export async function mount(root, ctx) {
     const marks = [];
     marks.push(b.hasImages ? "Pictures ready" : (b.picturedPages ? `Pictures ${b.picturedPages} of ${b.pageCount}` : "Pictures coming"));
     marks.push(b.hasAudio ? "Voices ready" : (b.audioPages ? `Voices ${b.audioPages} of ${b.pageCount} pages` : "Voices coming"));
+    if (places[b.id] && places[b.id].finishedAt) marks.push("Finished");
     const card = h("a", { class: "card book-card", href: `#/book/${b.id}` },
       cover,
       h("div", { class: "book-meta" },

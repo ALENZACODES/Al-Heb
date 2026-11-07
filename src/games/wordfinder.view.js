@@ -56,8 +56,10 @@ export function mount(root, ctx) {
       const speech = new Ctor(word.en + '. ' + word.use);
       speech.lang = 'en-CA';
       speech.rate = 0.85;
+      speech.onstart = () => { if (alive && current()?.id === word.id) sound.textContent = 'English meaning playing through your device voice.'; };
+      speech.onerror = () => { if (alive && current()?.id === word.id) sound.textContent = 'English read-aloud was unavailable. The meaning stays on the card.'; };
+      sound.textContent = 'Requesting an English device voice…';
       synth.speak(speech);
-      sound.textContent = 'English meaning read by your device, not a recorded teacher.';
     } catch { sound.textContent = 'English read-aloud unavailable. The meaning is written above.'; }
   }
   async function hebrewReadAloud(word) {
@@ -102,7 +104,6 @@ export function mount(root, ctx) {
     if (word.id !== target.id) {
       wrong.add(word.id);
       status.textContent = 'Good try! That is another word. You can try again, or tap “Show me”.';
-      sfx.play('miss');
       paint(false);
       return;
     }
@@ -174,7 +175,6 @@ export function mount(root, ctx) {
             type: 'button',
             class: 'wf-choice' + (hint && choice.id === word.id ? ' wf-glow' : '') + (wrong.has(choice.id) ? ' wf-not-yet' : ''),
             disabled: wrong.has(choice.id),
-            'aria-label': 'Hebrew option ' + choice.he,
             onclick: () => choose(choice)
           }, heSpan(choice.he, 'he wf-choice-he'), wrong.has(choice.id) ? h('span', { class: 'wf-choice-hint' }, 'Try another') : null))),
         h('button', { type: 'button', class: 'btn secondary wf-show', onclick: () => { hint = true; status.textContent = 'A little help: the matching shapes are highlighted in gold.'; paint(false); } }, 'Show me a hint'),
